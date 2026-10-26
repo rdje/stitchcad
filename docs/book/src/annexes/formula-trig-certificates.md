@@ -239,7 +239,52 @@ inverse_certificate_witness.py reproduces it from complete metadata, without rep
 reader. Later budget checks can use this source-gated witness instead of repeating full coverage
 after every ordinary feature. The full reader remains available for deliberate re-verification.
 
-This closes inverse population coverage. A concrete native atan/atan2 algorithm still needs its
-own signed branches, axes, private-width reduction, error and workspace argument, then focused
-implementation evidence. The stronger angular margin may permit a smaller fixed budget; none
-is admitted by this certificate step. Production tangent and whole formula execution remain open.
+This closes inverse population coverage. The concrete algorithm plan below uses its stronger
+margin; native implementation evidence still follows. Production tangent and whole execution remain open.
+
+## Admitted atan/atan2 runtime plan
+
+Work unit0287 admits576 fractional bits, five half-angle steps and64 directed terms against the
+verified2^-540-turn threshold margin. The plan instrument checks the compact witness's exact
+profile and five source hashes. This is not a new language input limit or precision-refusal rule.
+
+Atan's internal ppm Ratio becomes real n/(1,000,000*d). Atan2 forms y/x privately from two
+homogeneous Length or Ratio operands; it never constructs a public128-bit Ratio intermediate.
+The private products fit256 bits, covered by the certificate. Fold positive slopes above1 by
+reciprocal, then complement the base turn against1/4. Atan restores its sign. Atan2 reconstructs
+its first quadrant, complements against1/2 for negative x, then restores y's sign.
+
+Axes use exact values. Zero y with negative x gives+180 degrees; a small negative y may round
+to-180. Both-zero atan2 refuses formula_domain. The functions preserve the signed principal
+answer without direction modulo, checking actual argument kinds before value special cases.
+
+At scale S=2^576, enclose the folded rational by outward integer division. Each step applies
+x/(1+sqrt(1+x^2)). For the radical's lower scaled input N_lo, integer Newton computes its
+floor root r. For upper input N_hi, r+ceil((N_hi-r^2)/(2r)) is a valid upper root bound.
+Squaring it proves containment. This needs one bounded Newton solve per half-angle step.
+
+All root inputs are in[S^2,2S^2]. Newton starts at2S and decreases above the floor root.
+Its error recurrence e_next<=floor(e^2/(2S))+1 reaches at most1 after11 updates; one exact
+floor-root step and a stopping test give at most13 divisions. No iteration cutoff is introduced.
+
+If the current scaled x width is at most11, its square width is at most2w+2, radical width
+at mostw+2, and next x width at mostw/2+(w+2)/4+2<=11. Upper endpoints halve; after five
+steps they are at most S/32. The direct alternating atan series then has initial power width11,
+later powers width3, and total64-term interval width at most328 units including its tail.
+The tail is smaller than(1/32)^129/129<2^-645, hence smaller than one576-bit unit.
+
+The base turn equals16*atan(final)/pi. Its outward quotient width is below4096 scaled units,
+or2^-564 turns. Exact complements and sign preserve that width. It is narrower than the certified
+distance from every rounding threshold, so exact half-away rounding of its magnitude endpoint
+times360,000,000 gives the true nearest microdegree. No libm, adaptive precision failure or
+premature public-width refusal is involved. All intermediate magnitudes are below2^1154.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/atan_runtime_plan.py
+```
+
+This focused model passes14 atan and16 atan2 comparisons against an independent768-bit
+rational-addition/series oracle, two zero-vector refusals, four standard-library integer-root
+comparisons and two insufficient-budget controls. The oracle uses a distinct pi identity and
+no Newton/half-angle reduction. Exact inequalities support the whole admitted argument family;
+the sample checks support transcription. Native code and platform evidence are still pending.

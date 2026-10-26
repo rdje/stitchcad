@@ -514,37 +514,35 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part389.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.b`
   Status: `done`
-  Goal: complete45M native inverse population from frozen controller sources; full reader, cost/margin/hash evidence, then commit.
-  Work unit0286 owns390 whole0285 protection task,391 oldest canonical-length lesson,258 ledger before growth.
-  Invoke unchanged inverse_threshold_certificate.py --workers4, resume200k; no critical source edits.
-  Verify all450 chunks with default complete reader. Retain exact coverage/strict gaps/source and
-  payload root/cost metadata; inverse runtime/branches remain .b.2.c, tangent separate.
-  All outputs stay in protected target/inverse_threshold_certificate/0284; do not hand off during job.
-  Also own crates/sc-core/tests/fixtures/inverse_rounding_certificate.tsv: compact verified
-  population/margin/digest/source witness for later budget checks without repeating the full run.
-  Witness adapter: docs/tasks/artifacts/formula_structure/inverse_certificate_witness.py,
-  tracked pure stdout metadata producer; it supplements and never replaces full payload reading.
-  Acceptance0286:
-  - [x] REPRODUCE:200k partial/control evidence existed;45M complete population remained unverified.
-  - [x] ROOT CAUSE0286: inverse_threshold_certificate.py --workers4 resumes2 chunks and completes45M/450, rc=0; all targets require actual source-locked coverage.
-  - [x] FIX: run frozen producer to completion; retain full data/provenance and compact tracked witness, no native API or precision limit.
-  - [x] ADDRESSED0286: python3 -I -B docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py COMPLETE45M/450 exact gaps/hash/coverage/order pass, rc=0; frozen sources/binary exact.
-  - [x] NO REGRESSION0286: full reader terminal0/lock absent/child registry empty; inverse_certificate_witness.py reproduces fixture byte-exactly, rc=0. Min>2^104 derives phase margin>2^-540; native budget not admitted. Broad .5d.4/pre-push.
-  - [x] LOCKSTEP:390/391/258 exact Git/hash/public bytes, rc=0; book/decision/live match complete proof. G1still5/18; .b.2.c next, tangent/AST/platform open.
-  Verification: rc=0; Commit: STITCHCAD-G1-0286.
+  Goal:0286 complete45M/450/full reader and compact witness verified; native budget still separate.
+  Paths: docs/tasks/artifacts/formula_structure/inverse_certificate_witness.py;crates/sc-core/tests/fixtures/inverse_rounding_certificate.tsv
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part392.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.h`
   Status: `done`
   Goal:0285 retained forward/inverse stores protected; actual census/omission/restoration and policy controls pass0.
   Paths: docs/tasks/artifacts/artifact_cleanup/cleanup.py;docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part390.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
-  Status: `pending`
+  Status: `done`
   Goal: native atan/atan2 branch/reduction/error/workspace admission before production code.
   Candidate study after full certificate: exact reciprocal/quarter/quadrant folding, fixed-point
   half-angle roots and atan series. Prove integer Newton termination and directed error/workspace;
   compare independent rational addition/series oracles. Scratch consistency checks are not admission.
   Planned producer: docs/tasks/artifacts/formula_structure/atan_runtime_plan.py; keep original
   atan2 signed endpoints/zero-axis rules and no intermediate public128-bit ratio construction.
+  Work unit0287 owns392 whole0286 task,393 oldest scalar-model lesson,259 ledger before growth.
+  Additional paths: docs/decisions/decision_atan-runtime.md;knowledge-map/subsystems.md
+  Use source-gated compact witness; derive runtime precision from verified angular margin.
+  Before new record, compact redundant curated-map Markdown styling with every token/path/order
+  retained, no cap/schema/exclusion change. Decision/index/map/book/live sync; focused model only.
+  Acceptance0287:
+  - [x] REPRODUCE: full inverse certificate existed, native error/workspace/branch plan remained unadmitted.
+  - [x] ROOT CAUSE0287: python3 -I -B docs/tasks/artifacts/formula_structure/atan_runtime_plan.py proves width<2^-564/workspace<2^1154/Newton<=13 against source-gated margin540, rc=0; concrete bounded construction closes the plan gap.
+  - [x] FIX:576-bit exact folds/five half angles/one Newton+algebraic upper per step/direct64-term interval; no new dependency/input or precision refusal.
+  - [x] ADDRESSED0287: same command oracle atan14/atan216/zero-vector2/root4/insufficient2 pass, rc=0. Actual principal axes/endpoints retained; native code next.
+  - [x] NO REGRESSION0287: same source/profile gates and independent root/addition controls pass, rc=0; curated map text/path/order equals prior text after styling removal, Python comparison rc=0. No critical certificate/runtime source edits; broad .5d.4/pre-push.
+  - [x] LOCKSTEP:392/393/259 exact Git/hash/public bytes, rc=0; decision/index/map/book/live align. G1still5/18; production .5d.3.3.1, source/AST/platform remain open.
+  Verification: rc=0; Commit: STITCHCAD-G1-0287.
 - ID: `G1-SLICE.5d.1.2.2.2.c`
   Status: `done`
   Goal:0279 admits exact sin/cos folding/512-bit64-term error/workspace plan; native next.
@@ -608,6 +606,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.3.3`
   Status: `pending`
   Goal: correctly rounded atan/atan2 under .5d.1.2.2 plan.
+- ID: `G1-SLICE.5d.3.3.1`
+  Status: `pending`
+  Goal: native atan/atan2 under admitted .b.2.c plan; actual kinds/zero vector/signed axes/full-width hard midpoint fixtures.
 
 - ID: `G1-SLICE.5d.4`
   Status: `pending`

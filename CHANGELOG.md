@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0286 — complete inverse threshold population
+## STITCHCAD-G1-0287 — bounded native inverse algorithm plan
 
-.5d.1.2.2.2.b.2.b.2.b: complete45M/450 and independent full reader pass, rc=0; compact source-gated witness reproduces exactly.
-Derived phase margin>2^-540; native budget/admission still next.390/391/258 retain whole history; book/live sync.
+.5d.1.2.2.2.b.2.c: admit bounded576-bit inverse plan; independent atan14/atan216/zero2/root4/insufficient2 pass, rc=0.
+Native code next;392/393/259 retain whole history. Map styling compacted without text/path loss; decision/book/live sync.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -462,3 +462,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part257](docs/history/stitchcad-changelog-part257.md) | whole0284 | 5 lines, 320 bytes, sha256:6a2ce4f6… |
 
 | [part258](docs/history/stitchcad-changelog-part258.md) | whole0285 | 5 lines, 319 bytes, sha256:368f1fbb… |
+
+| [part259](docs/history/stitchcad-changelog-part259.md) | whole0286 | 5 lines, 307 bytes, sha256:1db1bbbb… |

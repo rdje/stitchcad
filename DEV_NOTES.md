@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — bounded native inverse algorithm plan
+
+0287 .5d.1.2.2.2.b.2.c admits576-bit/five-half-angle/64-term atan/atan2 after source-gating the
+complete inverse witness. One Newton floor root plus an algebraic upper enclosure per step gives
+fixed work; proved13 Newton divisions, turn width<2^-564, magnitudes<2^1154. Actual signed branches,
+axes/negative rounded endpoint and private256-bit slope remain explicit. Focused oracle14/16,
+zero-vector2/root4/insufficient2 checks pass0. Native code next; no runtime/platform verdict claimed.
+392/393/259 retain whole prior task/scalar lesson/ledger. Curated-map styling removes36 bytes with
+all text/path/order exact; new record fits fixed cap. Promotion: decision_atan-runtime.md owns proof.
+
 ## _(2026-10-26 UTC)_ — complete inverse threshold population
 
 0286 .5d.1.2.2.2.b.2.b.2.b completes45M/450 chunks and the independent full reader, rc=0.
@@ -318,23 +328,8 @@ passes0. No full runtime evaluator/context/approval or broad/platform verdict is
 Whole0262 scope, closed arithmetic parent and ledger retain341/342/235; book/live align.
 Promotion declined: this implements the existing sourced metadata/canonical scalar contract.
 
-## _(2026-10-25 UTC)_ — canonical scalar content and focused lint repair
-
-0262 .5e.1.2 adds immutable canonical scalar declarations with exact authored kind/state/provenance.
-Length uses its validated domain; Angle retains raw signed turns, Ratio signed ppm, Count nonnegative
-signed storage and Boolean false/true. Area has only a Derived formula, no authored result. Unknown/
-derived carry observation/formula identities. Kind mismatch, evidence inventory and Area-state refusals
-retain actual witnesses; replacing a cloned definition leaves prior content unchanged.
-
-Focused scalar5/0 and original length8/0 pass. Inspection spots an explicit panic in0261's adapter test;
-selected Clippy initially stops in the library: manual multiple/ceil idioms and a large read error.
-Use standard integer methods, and store only the sealed LengthInput view fields; metadata reconstructs
-its original name/origin/ids/canonical borrow without the unrelated general source enum. The error keeps
-its exact canonical reason/source chain, without boxing or suppression. Replace the test panic with an
-asserted variant/inspection. Selected Clippy2 targets passes0; affected scalar/value/length/numeric/root
-native5+8+3+6+4=26/0 pass. These repairs expand focused checks; no broad campaign is run.
-Whole0261/closed static parent/ledger retain339/340/234. Promotion declined: existing canonical state,
-formula kind and repository lint contracts suffice; book/live record the new public API and repairs.
+[Complete canonical scalar-content lesson](docs/history/stitchcad-devnotes-part393.md) retains
+its original model, lint repair, validation and promotion decision.
 
 [Complete canonical length authored-read lesson](docs/history/stitchcad-devnotes-part391.md) retains
 its actual source/state behavior, validation and promotion decision.

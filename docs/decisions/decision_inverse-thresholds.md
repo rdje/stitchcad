@@ -2,10 +2,13 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-26`
-- **Status:** `active`; bounded feasibility only, no full population or native inverse admission
+- **Status:** `active`; full45M verified0286; native plan admitted0287, implementation pending
 - **Owner / source:** engineer proposal, G1-SLICE.5d.1.2.2.2.b.2.a; complete proof .b/.c
 
 answers: "what bounds inverse-function rounding work?" · "does the inverse cohort admit atan or atan2?"
+
+Current algorithm admission: [bounded atan/atan2 plan](decision_atan-runtime.md). The historical
+cohort alone admits no runtime method; complete coverage and the separate error proof are required.
 
 ## Decision
 
