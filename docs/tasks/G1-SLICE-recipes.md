@@ -489,8 +489,30 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_forward_certificate.py
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part374.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: inverse first-octant generator and full45M threshold proof; split before implementation.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2.a`
+  Status: `done`
+  Goal:0282 bounded inverse threshold/Farey feasibility cohort, not full45M/runtime admission.
+  Own381 whole0281 task,382 oldest arc implementation lesson,254 ledger before growth.
+  Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py;docs/decisions/decision_inverse-thresholds.md
+  Candidate640-bit directed sin/cos quotient,64 terms,2^-600-turn bands/Q_slope256. Check exact
+  algebraic tangents, independent Fraction atan enclosure and rational/wide-band refusals.
+  Decision/index/map/book/live sync; full coverage and native inverse error/workspace stay separate.
+  Acceptance0282:
+  - [x] REPRODUCE: inverse45M generator/usable margin unverified; forward proof covers another function family.
+  - [x] ROOT CAUSE0282: python3 -I -B docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py derives640bit/64terms/Q256 profile and checks128!>2^640, rc=0; inverse target bands need their own slope proof.
+  - [x] FIX: directed sin/cos quotient and exact gaps over bounded inverse cohort, explicit pi input.
+  - [x] ADDRESSED0282: same command38 bands/algebraic4/Fraction-atan2/negative2 pass, rc=0; scope inverse_feasibility_cohort_only, no full45M/native admission.
+  - [x] NO REGRESSION0282: same controls pass, rc=0; runpy import with Path.read_text patched to refuse passes, rc=0. Existing forward/runtime sources unchanged; broad proof .5d.4/pre-push.
+  - [x] LOCKSTEP:381/382/254 exact Git/hash/public reads, rc=0; decision/index/map/book/live match scope. G1still5/18; full inverse .b/native .c/tangent open.
+  Verification: rc=0; Commit: STITCHCAD-G1-0282.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2.b`
+  Status: `pending`
+  Goal: after successful cohort, full45M certificate with bounded local chunks/source lock and independent exact reader; consider native producer for cost.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
+  Status: `pending`
+  Goal: native atan/atan2 branch/reduction/error/workspace admission before production code.
 - ID: `G1-SLICE.5d.1.2.2.2.c`
   Status: `done`
   Goal:0279 admits exact sin/cos folding/512-bit64-term error/workspace plan; native next.

@@ -76,8 +76,8 @@ restriction or a silently substituted numeric answer.
 
 Inverse angle rounding has45 million half-microdegree thresholds in its first octant after
 sign/quadrant/reciprocal symmetry. Exact atan2 slopes can require256-bit denominators in private
-workspace; a planned tangent-of-angle-band certificate must account for that bound. This initial
-forward cohort implements neither that generator nor its complete coverage. Axes, poles and
+workspace; a tangent-of-angle-band certificate must account for that bound. Its bounded generator
+cohort is available below; complete inverse coverage remains open. Axes, poles and
 signed principal branches still need their existing exact rules. Tangent's much larger output
 threshold population retains a separate practical resource obligation.
 
@@ -142,3 +142,25 @@ insufficient profiles. Full-width rational/turn/near-axis cases are included. Th
 derivation; they are not themselves native or cross-platform evidence. The
 [native API and focused fixture results](formula-rationals.md#correctly-rounded-sine-and-cosine)
 are available separately. Sourced sin/cos calls are also available; whole execution and broader integration stay owned.
+
+## Inverse certificate feasibility
+
+The inverse experiment encloses tangent over a2^-600-turn band on either side of each
+half-microdegree target, using640-bit directed sine/cosine intervals and their quotient.
+The candidate uses64 terms with the certified pi input; its positive cosine denominator and
+alternating tail are checked. Strict rational-gap predicates use Q=(2^128-1)^2, covering the
+private full-width atan2 slope. These are experimental certificate parameters.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py
+```
+
+Work unit0282 passes38 sampled bands, four independent algebraic tangent enclosures and two
+exact Fraction-arctangent checks. The controls reject a band containing rational tan45=1 and
+a deliberately wide band. The project-local report under target/trig_inverse_feasibility/0282/
+explicitly says inverse_feasibility_cohort_only, retaining exact endpoints and source hashes.
+
+This is neither complete45-million-threshold coverage nor a native atan/atan2 implementation.
+Full coverage needs its own resumable certificate and exact reader. Native sign/reciprocal/
+quadrant/axis/principal-branch handling, error and workspace remain separate admission work.
+Production tangent has a separate resource obligation; this experiment does not close it.

@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0281 — sourced sine/cosine value calls
+## STITCHCAD-G1-0282 — inverse threshold certificate feasibility
 
-.5e.3.6: sourced sin/cos retain real input/call contributions through exact axes/cancellation/storage/T1; native6/0 and selected strict lint pass, rc=0.
-Full AST and inverse/tangent remain open;379/380/253 retain whole task/lesson/ledger; book/live sync.
+.5d.1.2.2.2.b.2.a: inverse38/algebraic4/Fraction-atan2/negative2 controls pass, rc=0; no full45M/native admission.
+Candidate decision/book/live retain exact scope;381/382/254 retain whole task/lesson/ledger.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -452,3 +452,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part252](docs/history/stitchcad-changelog-part252.md) | whole0279 | 5 lines, 307 bytes, sha256:c27c2447… |
 
 | [part253](docs/history/stitchcad-changelog-part253.md) | whole0280 | 5 lines, 305 bytes, sha256:50272c6f… |
+
+| [part254](docs/history/stitchcad-changelog-part254.md) | whole0281 | 5 lines, 314 bytes, sha256:4716c6a7… |

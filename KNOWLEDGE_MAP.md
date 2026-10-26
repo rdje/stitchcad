@@ -75,6 +75,7 @@
 - [`governance-two-review-paths-and-the-unnamed-roles`](docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md)
 - [`history-windows-retain-self-contained-bytes`](docs/decisions/decision_history-windows-retain-self-contained-bytes.md)
 - [`i18n-one-message-system-fluent`](docs/decisions/decision_i18n-one-message-system-fluent.md)
+- [`inverse-thresholds`](docs/decisions/decision_inverse-thresholds.md)
 - [`knowledge-map-entries-are-orientation-sized`](docs/decisions/decision_knowledge-map-entries-are-orientation-sized.md)
 - [`length-declarations-retain-state-and-provenance`](docs/decisions/decision_length-declarations-retain-state-and-provenance.md)
 - [`literals`](docs/decisions/decision_literals.md)

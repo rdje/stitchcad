@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — inverse threshold certificate feasibility
+
+0282 .5d.1.2.2.2.b.2.a tests640-bit64-term directed sine/cosine quotients over2^-600-turn bands.
+Inverse38-band cohort/algebraic4/Fraction-atan2/negative2 controls pass, rc=0; pure import performs
+no data reads. The exact factorial/width argument supports the prototype, not a native budget.
+Complete45M/source-locked reader .b and native branch/error/workspace .c remain open; tangent
+stays separate.381/382/254 retain whole0281 task/old arc lesson/ledger exact Git/hash/public bytes.
+Book/live align; G1still5/18. Promotion: decision_inverse-thresholds.md retains proposal, parameters,
+independent controls and explicit admission gaps. No existing forward proof/runtime source changes.
+
 ## _(2026-10-26 UTC)_ — sourced sine/cosine calls
 
 0281 .5e.3.6 adds supplied-value checked_sin/checked_cos adapters over the certified native kernels.
@@ -318,17 +328,8 @@ scopes retain332/334; oldest whole journal group333 and ledger231 release fixed-
 Book/live pointers align; no application behavior or broad audit changed. Promotion declined:
 existing history-window decision remains authoritative; this is another execution of its contract.
 
-## _(2026-10-25 UTC)_ — certified exact signed arc-length values
-
-0258 .5d.3.1 implements signed/full-turn arc_length with the certified640-bit pi endpoint,
-898/924-bit product workspace and shared exact wide half-away rounding. Metadata checks actual
-kinds before zero handling; final width/scalar refusals retain measured bits or rounded value.
-One selected command passes arc2/0 with23 independent alternate-identity/hard-midpoint rows,
-numeric6/0 and library67/0 including compiled-constant/certificate reproduction. The library target
-included existing units; future commands filter its certificate test. No broad/platform pass claimed.
-No dependency, angle modulo or binding narrowing added; source provenance remains .5e.3.
-Whole0257 task/ledger retained331/230; book/live/pointers align. Promotion: numerical decision
-records the implementation scope alongside its certificate. History reaches64 MD; pack before more retention.
+[Complete certified arc implementation lesson](docs/history/stitchcad-devnotes-part382.md) retains
+its original scope, verification and promotion decision.
 
 [Complete bounded arc certificate/approved UI lesson](docs/history/stitchcad-devnotes-part380.md) retains
 its full proof, director requirements, verification and promotion decisions.
