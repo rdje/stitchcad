@@ -31,8 +31,8 @@ pub use ease_set::{EaseBinding, EaseSet, EaseSetContext, EaseSetDefinition, Ease
 
 mod size_membership;
 pub use size_membership::{
-    SizeLabel, SizeMember, SizeMembership, SizeMembershipDefinition, SizeMembershipError,
-    SizeSetReference, SizeSystem,
+    SizeFormulaContext, SizeFormulaContextError, SizeLabel, SizeMember, SizeMembership,
+    SizeMembershipDefinition, SizeMembershipError, SizeSetReference, SizeSystem,
 };
 
 mod size_chart;

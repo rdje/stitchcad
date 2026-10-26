@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0265 — core size context frames and exact reserved reads
+## STITCHCAD-G1-0266 — actual pinned membership to formula size values
 
-.5e.1.5.1: supplied pinned source/range checks, exact wide Count/Boolean and named missing context.
-Native5/0 and selected strict Clippy0 pass. Actual authored-membership derivation remains .2; no axis/currentness claim.
+.5e.1.5.2: expected pin before selected-id lookup; derive actual authored ordinal/count/base and retain
+canonical borrows. Native5/0 and selected strict Clippy0 pass; D70/global registry/full SizeSet proof unchanged.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -420,3 +420,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part236](docs/history/stitchcad-changelog-part236.md) | whole0263 | 4 lines, 274 bytes, sha256:2138cbcc… |
 
 | [part237](docs/history/stitchcad-changelog-part237.md) | whole0264 | 4 lines, 295 bytes, sha256:f4684655… |
+
+| [part238](docs/history/stitchcad-changelog-part238.md) | whole0265 | 4 lines, 297 bytes, sha256:9531ba4e… |

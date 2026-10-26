@@ -4,6 +4,9 @@ use sc_core::ontology::EntityId;
 use sc_units::Count;
 use std::collections::BTreeSet;
 
+mod formula;
+pub use formula::{SizeFormulaContext, SizeFormulaContextError};
+
 /// Pinned SizeSet identity and authored revision; not a current-registry certificate.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub struct SizeSetReference {

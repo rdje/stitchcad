@@ -63,8 +63,9 @@ and derived evaluation remain pending.
 now provide fixed numerical/geometric values and class-checked optional format/importer/physical
 providers. Missing optional values refuse with their actual name/context label.
 [Core size-context frames](annexes/formula-runtime-validation.md#core-size-context-frames) now read
-structurally checked supplied ordinal/count/base values or named absence. Derivation from actual
-authored membership/pin remains the next bridge; axes and full SizeSet proof remain pending.
+structurally checked supplied ordinal/count/base values or named absence. The
+[actual membership bridge](spec/size-membership.md#formula-size-context) now derives them from
+immutable authored order/base after explicit pin matching. Axes and full SizeSet proof remain pending.
 
 ## Planned workflows
 

@@ -52,12 +52,65 @@ separate obligation; unverified mapping data remains unknown when it is introduc
 | `SizeMember` | Stable member identity and label |
 | `SizeMembershipDefinition` | Authored reference/system/order/base input |
 | `SizeMembership` | Immutable validated membership foundation |
+| `SizeFormulaContext` | Actual membership/member borrows and derived core size values |
+| `SizeFormulaContextError` | Pinned-reference/member/ordinal/core-frame refusal |
 | `SizeMembershipError` | Label, empty/duplicate membership, base, lookup or revision refusal |
 
 Identity and exact-label queries borrow the member from the authored list. The base query borrows the
 explicit base member. Structured errors retain set, member, label or overflowing revision information;
 no missing lookup silently selects a first member. Private representation prevents unchecked reordering
 or blank-label mutation; definition inputs can be cloned and explicitly reconstructed.
+
+## Formula size context
+
+SizeMembership::formula_context(expected_reference, selected_member_id) now derives the three
+reserved size values from the actual immutable authored record. It compares the caller's explicit
+expected set id/revision first, then finds the selected stable id in the original member vector.
+The one-based ordinal is position+1; size_count is the member count; is_base_size compares the
+selected id with the explicitly authored base. Labels and SizeSystem intent enter no computation.
+No sort, numeric label parse, positional base selection or default member is permitted.
+
+```rust
+use sc_core::{ontology::EntityId, recipe::{FormulaRational, FormulaSizeName}};
+use sc_measure::{SizeLabel, SizeMember, SizeMembership, SizeMembershipDefinition,
+    SizeSetReference, SizeSystem};
+use sc_units::Count;
+
+let expected = SizeSetReference { id: EntityId::from_bits(1), revision: Count::new(0) };
+let member = |id, label: &str| SizeMember { id: EntityId::from_bits(id),
+    label: SizeLabel::new(label.to_owned()).expect("nonblank label") };
+let membership = SizeMembership::new(SizeMembershipDefinition {
+    reference: expected, system: SizeSystem::Custom,
+    members: vec![member(11, "42"), member(12, "0012"), member(13, "2XL")],
+    base: EntityId::from_bits(12),
+}).expect("authored order/base");
+let context = membership.formula_context(expected, EntityId::from_bits(11)).expect("exact pin/member");
+assert_eq!(context.member().label.as_str(), "42");
+assert_eq!(context.read(FormulaSizeName::Index).expect("ordinal").numeric_value()
+    .expect("Count").rational(), FormulaRational::ONE);
+assert_eq!(context.read(FormulaSizeName::IsBaseSize).expect("present false").boolean(), Some(false));
+```
+
+SizeFormulaContext retains the actual membership/member borrows and exposes its core-only
+FormulaSizeContext through context(). Source retains actual set/revision/selected/base identities.
+A reordered validated replacement changes the new snapshot's ordinal, with stable member/base ids;
+the prior view retains its prior pin and values. Passing the old pin to the replacement refuses.
+A singleton reads index/count1 and base true, including at initial or maximum Count revisions.
+Human labels reused across sets never substitute for stable identity. Counts are widened before
+one-based arithmetic; binding storage is checked later by the core's existing boundary.
+
+SizeFormulaContextError returns ReferenceMismatch with both actual/requested pins and selected id
+before any missing-member result. An absent selected id retains SizeMembershipError::MissingMember;
+ordinal/core-frame failures propagate without arithmetic wrapping or a substituted member/value. Standard error
+sources retain the actual underlying membership/core refusal. Debug omits human labels; explicit
+member access retains them for presentation.
+
+Matching the supplied pin is not global registry/currentness certification, complete SizeSet,
+axes/charts/break/path readiness, profile transformation or release approval. D70 stays unchanged.
+The dependency remains sc-measure to sc-core; core imports no measurement implementation.
+Five focused formula_size_membership_contract tests pass: all designation intents/actual pointer
+borrows, pin-before-member priority, authored reorder/stable base, singleton revision boundaries and
+same-label cross-set refusal. Selected strict Clippy passes; broad/platform proof remains deferred.
 
 ## Verification and current boundary
 

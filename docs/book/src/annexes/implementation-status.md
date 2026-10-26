@@ -77,4 +77,6 @@ current counts are derived from current test execution rather than inferred from
 
 | Explicit reserved tolerance contexts | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.4 | [Intrinsic/optional providers](formula-runtime-validation.md#explicit-tolerance-contexts); source approval/execution follows |
 
-| Core size-context frames/reads | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.5.1 | [Supplied source/range values](formula-runtime-validation.md#core-size-context-frames); canonical membership bridge follows |
+| Core size-context frames/reads | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.5.1 | [Supplied source/range values](formula-runtime-validation.md#core-size-context-frames); actual membership bridge below |
+
+| Authored membership to size context | §3.1/§3.4; G1 | sc-measure membership; G1-SLICE.5e.1.5.2 | [Exact pin/member/order bridge](../spec/size-membership.md#formula-size-context); axes/global registry follow |

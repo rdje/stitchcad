@@ -561,29 +561,30 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: crates/sc-core/src/recipe/context.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_tolerance_context_contract.rs
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part345.md).
 - ID: `G1-SLICE.5e.1.5`
-  Status: `in_progress`
+  Status: `done`
   Goal: pinned authored-membership size_index/size_count/is_base_size, without labels or axes.
   Children .1 core range/source/value context; .2 actual sc-measure membership bridge. D70 unchanged.
 - ID: `G1-SLICE.5e.1.5.1`
   Status: `done`
-  Goal:0265 core size source/range/value frame and unsigned Count bridge.
+  Goal: core size source/range/value frame and wide Count bridge verified0265.
   Paths: crates/sc-core/src/recipe/context.rs;crates/sc-core/src/recipe/context/size.rs;crates/sc-core/src/recipe/semantic.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs
   Additional paths: crates/sc-core/tests/formula_size_context_contract.rs
-- [x] REPRODUCE:0265 5b8af44 has size metadata without a value context; git source read, rc=0.
-- [x] ROOT CAUSE:0265 supplied source/range facts differ from canonical membership/currentness;
-  one-based range and identity base plus wide Count avoid inference/narrowing. Native5/0, rc=0.
-- [x] FIX: closed size roles; immutable checked frame, exact Count/Boolean/source and named absence.
-- [x] ADDRESSED:0265 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_size_context_contract:5 pass/0 fail, rc=0.
-- [x] NO REGRESSION:0265 role closure/false/missing/pins/invalid/full-width/binding controls pass0;
-  cargo clippy --offline -p sc-core --test formula_size_context_contract -- -D warnings, rc=0.
-  Canonical membership bridge .2; full registry/axes/broad .5g/pre-push remain owned.
-- [x] LOCKSTEP:345/346/237 whole Git/public records and book render rc=0; live/book align.
-  Promotion declined: existing formula3.1/membership/binding contracts; no actual membership claim.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part347.md).
 - ID: `G1-SLICE.5e.1.5.2`
-  Status: `pending`
-  Goal: derive context from actual immutable sc-measure membership/pinned reference and selected id;
-  preserve authored order/base under reorder, no label parsing or axis selection.
+  Status: `done`
+  Goal:0266 actual pinned membership/selected-id bridge to exact core size reads.
+  Paths: crates/sc-measure/src/size_membership.rs;crates/sc-measure/src/size_membership/formula.rs;crates/sc-measure/src/lib.rs;crates/sc-measure/tests/formula_size_membership_contract.rs
+- [x] REPRODUCE:0266 bf8f4c2 has core supplied frames but no actual membership bridge; source read rc=0.
+- [x] ROOT CAUSE:0266 canonical vector/base/pin differ from label/ordinal inference; actual borrowed
+  membership and explicit expected reference supply the values. Focused native5/0, rc=0.
+- [x] FIX: expected pin before selected-id lookup, exact ordinal/count/base, original borrows and causes.
+- [x] ADDRESSED:0266 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-measure
+  --test formula_size_membership_contract:5 pass/0 fail, rc=0.
+- [x] NO REGRESSION:0266 all intents/pins/reorder/base/singleton/cross-set identities pass0; cargo
+  clippy --offline -p sc-measure --test formula_size_membership_contract -- -D warnings, rc=0.
+  D70/current-registry/full SizeSet/path and broad .5g/pre-push remain owned, not inferred here.
+- [x] LOCKSTEP:347/238 whole Git/public records and book render rc=0; live/book/frontier align.
+  Promotion declined: existing authored-order/pin/base/formula3.1 contracts govern this bridge.
 - ID: `G1-SLICE.5e.2`
   Status: `pending`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.

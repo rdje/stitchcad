@@ -181,8 +181,8 @@ FormulaSizeContext::new takes a supplied FormulaSizeContextSource and unsigned12
 The source retains set id, exact Count revision, selected member id and explicit base id. Validation
 refuses set/member-or-base aliases first, then empty/out-of-range one-based counts, then a singleton
 whose selected member differs from its base. This validates supplied structural facts. It does not
-prove actual authored membership/order, pin currentness, axes, charts or path readiness. The host
-membership bridge remains G1-SLICE.5e.1.5.2; D70's axis decision is unchanged.
+prove actual authored membership/order, pin currentness, axes, charts or path readiness. The [membership bridge](../spec/size-membership.md#formula-size-context) now derives the actual
+authored source/order/count/base after matching the expected pin. D70's axis decision is unchanged.
 
 ```rust
 use sc_core::{ontology::EntityId, recipe::{FormulaSizeContext, FormulaSizeContextSource,
@@ -212,8 +212,9 @@ count and base from the actual immutable authored membership and compare its exp
 
 The focused formula_size_context_contract target passes five tests for role closure, absence,
 source/Count/false/base behavior, exact invalid witnesses/priority, wide binding refusal and immutable
-replacement. Selected strict Clippy passes; full membership/registry/axis and broad/platform proof
-remain their distinct owners.
+replacement. Selected strict Clippy passes. Actual authored membership/pin derivation is available through the
+[sc-measure bridge](../spec/size-membership.md#formula-size-context); global registry/axis/path and
+broad/platform proofs remain their distinct owners.
 
 ## Reference runtime assertion controls
 
