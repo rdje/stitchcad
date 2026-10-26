@@ -56,6 +56,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Session handoff evidence](governance.md#handoff-evidence-before-clearing-a-session)
 - [Grammar, operators and functions](spec/formula-language/grammar.md)
 - [Implementation status and requirement owners](annexes/implementation-status.md)
+- [Typed evaluation requests](spec/evaluation-requests.md)
 - [Instantiation paths](spec/instantiation-paths.md)
 - [Interchange and the envelope](spec/glossary/interchange-and-envelope.md)
 - [Interchange dialects](spec/interchange-dialects.md)

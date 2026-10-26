@@ -731,24 +731,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   .4 concrete artifact requests/closure; .5 candidate/human approval requests; .6 combined schema review.
 - ID: `G1-SLICE.6.2.2.c.2.1`
   Status: `done`
-  Goal:0322 promote exact selected-profile pin to sc-core, enabling command inputs without reversing dependency DAG.
-  Own sc-core/src/ontology/profile_pin.rs and ontology/mod.rs; measure size_set_resolution/profile.rs aliases,
-  existing profile-pin compatibility tests, existing profile chapter/availability/status map and live/task docs.
-  Core SelectedProfilePin/Definition/Error/Field share the existing fields/validation; sc-measure legacy names
-  alias those exact types. Preserve opaque spelling, distinct schema/content versions and DeferredToG4 boundary.
-  Human Display prefix becomes selected-profile wording; no grammar/default/registry/authority/execution claim.
-  Own476 whole0321 task/oldest0298 lesson and294 ledger from13b12b8; exact Git/hash/public before retirement.
-  Focus actual alias interoperability and original pin/composite contracts; selected strict lint/fmt/publication.
-  - [x] ROOT CAUSE (WHY + WHERE): core command layer cannot import dependent measure; shared pin removes cycle.
-    Public type aliases compile, preserve exact objects and prior field semantics; native focused35/0, rc=0.
-  - [x] ADDRESSED: shared core pin and four legacy aliases; interoperability and original pin/current composite
-    contracts pass4+21+10/0; strict core/measure lint/fmt/book/publication74/87 pass; rc=0.
-  - [x] NO REGRESSION: original blank/opaque/G4/current path behavior retained; no dependency changes or handlers.
-   476/294 whole13b12b8 Git intervals/hash/public equality pass; progress6/18 unchanged; rc=0.
-  Commit0322; next .6.2.2.c.2.2. Broad CI remains G1 integration/pre-push, not rerun for this promotion.
+  Goal:0322 shared exact core profile pin; [whole implementation/proofs](../history/stitchcad-devnotes-part477.md).
 - ID: `G1-SLICE.6.2.2.c.2.2`
-  Status: `pending`
-  Goal: exact evaluation snapshot context and concrete EvaluateInstance/GradeSize inputs from canonical paths.
+  Status: `done`
+  Goal:0323 exact shared snapshot context and distinct concrete regeneration/grade-rule requests.
+  Own core command snapshot/evaluation/query modules/reexports and evaluation/query/catalog focused tests.
+  Snapshot holds exact Design/revision/actor; query legacy context aliases shared type; no mutation key/group.
+  Regeneration names member/set revision, explicit garment/MTM chart and logical or factory-resolved input.
+  Actual chart bindings supply the measurement tables and (MTM) Ease; never duplicate canonical mapping/value state.
+  Factory input pins all three profile labels and resolved-parameter identity, conferring no validation proof.
+  Logical mode preserves factory-free design evaluation; missing required quantities remain errors, never defaults.
+  GradeSize names base Instance, rule table and exact target member/set breaks; recipe/profile not substituted.
+  IDs are claims resolved against actual current records at execution; no new results/handlers/auth or readiness.
+  Own evaluation-request book chapter/SUMMARY/topic index, command-layer context crosslinks and publication map.
+  Own477 whole0322 task/0300-0299 lessons/prior governance and command verification receipts,295 ledger from a423713,
+  with exact committed source/hash/public-reader verification before retirement; preserve current rules/anchors.
+  Focus native request/query/catalog contracts, strict selected lint/fmt/book/scoped publication; broad CI later.
+  - [x] ROOT CAUSE (WHY + WHERE): canonical paths require distinct actual inputs; shared snapshot prevents
+    divergent query/evaluation revision semantics. Native evaluation3/query2/catalog2 pass; rc=0.
+  - [x] ADDRESSED: concrete chart/profile or base/rules/target inputs retain exact claims; core strict selected
+    lint/fmt/book/publication75 chapters/88 entries pass; rc=0. No lookup/value extraction/handler introduced.
+  - [x] NO REGRESSION: existing query and normative catalog2+2 pass; beyond128-bit Design counters and Count
+    set revisions retained.477/295 wholea423713 source/hash/public equality pass; rc=0.
+  Commit0323; next .6.2.2.c.2.3. Lesson promotion declined: applies existing canonical contracts, no new policy.
+  Broad CI/engine/authority/physical signoff retain G1 integration/pre-push and later gate owners.
 - ID: `G1-SLICE.6.2.2.c.2.3`
   Status: `pending`
   Goal: actual selected-profile ResolveProfile input, preserving source snapshots and symbolic parameter boundaries.

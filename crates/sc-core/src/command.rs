@@ -1,22 +1,29 @@
-//! Typed declarations of the command contract, for discovery before payloads and handlers land.
+//! Typed command inputs and catalog metadata; handlers and authenticated grants remain separate.
 //!
 //! Catalog membership declares a command; it does not make a handler available or grant authority.
 //! Execution, scoped authorization, transactions and workflow parity remain separate bus owners.
 
 mod construction;
 mod context;
+mod evaluation;
 mod payload;
 mod query;
+mod snapshot;
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
     DesignRevision,
+};
+pub use evaluation::{
+    CommandEvaluation, EvaluateInstance, EvaluationPayload, EvaluationProfile, GradeSize,
+    RegenerationChart, SizeMemberTarget,
 };
 pub use payload::{
     AssignMaterial, AssignMaterialError, ChangeMeasurement, CommandMutation, MutationPayload,
     PieceSelection, PieceSelectionError,
 };
 pub use query::{CommandQuery, CommandQueryContext, QueryPayload};
+pub use snapshot::CommandSnapshotContext;
 
 /// The five command classes fixed by the shared command-layer contract.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]

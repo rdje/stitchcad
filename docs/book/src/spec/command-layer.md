@@ -113,14 +113,11 @@ human approval, never an agent-held grant. Mutation previews still need only ins
 reports the permission required to issue the declared command itself. Payloads, authenticated
 actors/scopes, structural checks, revisions, transactions and actual workflow parity remain G1.6.
 
-The focused native catalog target reads the actual normative table and compares every identity,
-order, class, authority, reversibility and undo grouping. It also checks strict lookup and release
-preparation versus human approval. This supports core metadata consistency; it proves no handler
-availability, authenticated authority enforcement or executed UI/API/MCP workflow.
+Historical focused verification receipts remain complete in `docs/history/stitchcad-devnotes-part477.md`.
 
 ### Implemented initial query requests
 
-`CommandQueryContext` now carries the explicit Design identity, unauthenticated actor/principal claim
+`CommandQueryContext` aliases the shared `CommandSnapshotContext`, which carries the explicit Design identity, unauthenticated actor/principal claim
 and exact requested `DesignRevision`. The revision is mandatory, including revision0 and exact values
 beyond128 bits; no query silently chooses a latest snapshot. Currentness and scoped inspect authority
 must be checked by execution. Queries carry no mutation replay key or undo-group membership.
@@ -141,13 +138,8 @@ let request = CommandQuery::new(CommandQueryContext::new(id(1),
 assert_eq!(request.command_id(), CommandId::WalkSeamSpan);
 ```
 
-Two focused query contracts cover exact revisions, actor/principal roles, unchanged context/targets,
-identity and inspect/reversibility/undo metadata; the two normative catalog contracts also pass.
-Selected strict lint/fmt, command census and book checks pass. These are request schemas; no piece-list
-result, geometric seam walk, authenticated authority, revision validation or observable cache is
-produced by constructing them. Artifact-specific GetUncertaintyClosure and the other command classes
-remain owned by G1-SLICE.6.2.2.c.2. Its closure must use the concrete requested artifact's actual
-dependencies ([release §8](release-contract.md)), rather than all unknowns in a Design.
+Artifact-specific closure and remaining command schemas follow their canonical input contracts.
+See [evaluation requests](evaluation-requests.md) for shared snapshots and both instantiation paths.
 
 ### Implemented mutation context
 
@@ -181,11 +173,6 @@ represent zero; from_counter preserves an explicit u128 value; successor() compu
 without changing the source or committing a command. It continues beyond u128::MAX without wrap or
 a new revision limit. Decimal Display retains the exact value; the wire/persistence schema is still
 owned by its later implementation. Undo's revision restoration remains §3, not an automatic increment.
-
-The focused context target checks distinct agent/principal identities, mandatory retry identity,
-explicit versus standalone groups, immutable snapshots and exact counters beyond u128. This is
-request metadata only: actual design membership/currentness, authenticated authority, payloads,
-idempotency replay and atomic group execution remain G1-SLICE.6.2.2.b/.6.3/.6.5/.6.6 work.
 
 ### Implemented initial mutation payloads
 

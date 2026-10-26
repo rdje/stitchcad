@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — distinct instantiation requests
+
+0323 .6.2.2.c.2.2 shares Design/actor/exact-revision snapshot; legacy query context remains same type.
+Regeneration binds explicit garment/MTM chart inputs and logical or exact factory resolution selection;
+grade rules retain imported/base Instance, rule table and target set/member/break revision. No execution.
+Native evaluation3/query2/catalog2, selected strict lint/fmt/book/publication75-88 pass0;477/295 exacta423713.
+Promotion: existing two-path/SizeSet/command contracts; no new policy. G1still6/18, profile schema next.
+
 ## _(2026-10-26 UTC)_ — shared exact selected-profile pin
 
 0322 .6.2.2.c.2.1 moves the immutable selected pin to core; measure names alias all four shared types.
@@ -209,25 +217,8 @@ choice pending against axis-only. Book/decision/PLANNING and resume pointers exp
 Source rg review0/book0;428/429/273/430 wholee77742e Git/hash/public exact0. No code/model change;
 G1still5/18. Promotion declined: no adopted policy, pending ruling kept in the existing SizeSet record.
 
-## _(2026-10-26 UTC)_ — pinned canonical query requests
-
-0300 .6.2.2.c.1 adds immutable Design/actor/exact-revision query context and GetPieceList/WalkSeamSpan
-payloads. Variant determines identity; canonical span supplies its own sewing content. No mutation
-retry/group fields, result, geometry, mutable cache or grant. Native query2+catalog2 pass0, including
-revisions beyond128bits and actor/principal roles; selected strict lint/fmt/census17/5/5/0/book0.
-426/427/272 retain whole198bbb1 Git/hash/public bytes. G1still5/18. Remaining classes/uncertainty closure
-follow concrete artifact dependencies under .c.2; canonical signed breaks/SizeSet .4c.3d next.
-Promotion: existing command decision extended, no new policy. Broad checks remain deferred.
-
-## _(2026-10-26 UTC)_ — paired sewing split intent
-
-0299 .6.2.2.b.2.b implements the D226 SplitSeamSpan request: actual canonical span identity plus two
-explicit named A/B EdgeAnchors. Each original edge/rational parameter survives; no inferred mapping,
-result id or copied ease/stops. Canonical copies/ranges/direction/ease/stops and interior paired cuts
-remain registry/geometry/execution obligations. Native construction4+prior payload3 pass0; strict
-selected lint/fmt/census17/5/5/0/book0.424/425/271 whole5e15254 Git/hash/public bytes retained exactly.
-All five mutation schemas now available; no handler or split result claim. G1still5/18. Next .6.2.2.c
-other command classes. Promotion: existing command decision extended; no new policy. Broad gate deferred.
+[Complete query/paired-split lessons](docs/history/stitchcad-devnotes-part477.md) preserve
+their original contracts, focused evidence, promotion and remaining execution owners.
 
 [Complete member-point lesson](docs/history/stitchcad-devnotes-part476.md) retains
 its original D70/coverage/current-source contracts, checks and promotion decision.

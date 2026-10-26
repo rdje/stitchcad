@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0322 .6.2.2.c.2.1 shares exact SelectedProfilePin in sc-core; legacy sc-measure names alias identical types.
-- Original labels/blank errors/G4 boundary preserved; human Display prefix now selected profile pin.
-- Native pin4+garment21+MTM10 pass0; selected strict lint/fmt/book/publication74-87 pass0.
--476/294 whole13b12b8 source/hash/public exact0. NEXT .6.2.2.c.2.2 concrete evaluation snapshot/targets.
-- G1 In Progress6/18 unchanged; runtime/evaluator/bus/storage/app/release still owned later.
+-0323 .6.2.2.c.2.2 adds shared exact snapshot and distinct regeneration/grade-rule request inputs.
+- Query context aliases shared type; garment/MTM charts supply original measurement/Ease bindings.
+- Explicit logical/factory pin+resolved parameters; grading names base/rules/target break snapshot; handlers later.
+- Native evaluation3/query2/catalog2 and selected strict lint/fmt/book/publication75-88 pass0;477/295 exacta423713.
+- NEXT .6.2.2.c.2.3 ResolveProfile schema. G1 In Progress6/18 unchanged; remaining engine/bus/app/release owned later.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

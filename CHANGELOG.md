@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0322 — shared selected-profile pin
+## STITCHCAD-G1-0323 — distinct typed instantiation requests
 
-Core owns the exact immutable profile/schema/content pin; measure's public names remain type aliases.
-Pin4/garment21/MTM10, strict selected lint/fmt/book/publication pass0;476/294 whole13b12b8 exact.
-G1 .6.2.2.c.2.1 done; progress6/18 unchanged; execution and profile registry validation remain later.
+Shared exact snapshot preserves query compatibility. Regeneration names chart/profile selections;
+grading retains base Instance/rules/target breaks. Native3+2+2/lint/fmt/book/publication75-88 pass0.
+477/295 wholea423713 source/hash/public exact0; G1 .6.2.2.c.2.2 done, progress6/18 unchanged.
 
 # Sealed archive — earlier slices
+
+| [part295](docs/history/stitchcad-changelog-part295.md) | whole0322 | 6 lines, 357 bytes, sha256:41bd774e… |
 
 | [part294](docs/history/stitchcad-changelog-part294.md) | whole0321 | 6 lines, 388 bytes, sha256:9b4e1a20… |
 

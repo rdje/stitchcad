@@ -327,26 +327,16 @@ read recovered logical records and retain their order, uniqueness,
 coverage, descriptor and pointer checks. Generalizing coverage/pointers to other ledgers remains
 SPINE.19's separate obligation. Content integrity proves neither semantic truth nor physical signoff.
 
-The complete first/second/third transition and observed runner receipts are retained in
-`docs/history/stitchcad-devnotes-part460.md`. Public `prove-source windowN` compares each named
-capture source when available; offline logical reads do not require Git history. Watched controls
-check exact read/materialized bytes, newest digests/member/catalog/collision refusals and misleading
-titles. Editing catalog prose can preserve inventory yet must fail committed immutability guards.
-These tooling proofs grant no garment or physical production signoff.
+Historical transition and runner receipts remain complete in `docs/history/stitchcad-devnotes-part477.md`.
+Use the public archive reader; historical build evidence grants no physical approval.
 
 **Correction — D141.** Window3's retained catalog has a historical heading saying “window 2”.
 Its filename, source revision, manifest, payload and member headings identify window3. The sealed
 catalog remains unchanged; use its manifest identity when reviewing that window. Watched controls
 check current catalog labels and require this correction for the immutable legacy heading.
 
-The fourth-window transition and its failed/repaired runner evidence are retained exactly. Read
-that complete historical record with the published archive CLI; the current reader still supports
-source reconstruction for window4:
-
-```bash
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part163.md
-bash scripts/history_archive.sh prove-source window4
-```
+Historical transition and runner receipts remain complete in `docs/history/stitchcad-devnotes-part477.md`.
+Use the public archive reader; historical build evidence grants no physical approval.
 
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text
@@ -421,53 +411,12 @@ faults and workflow step order. The device-refusal case uses explicitly simulate
 no file to another volume. Local directory identity is measured, and .h1.v must observe the actual
 runner's effective paths and job/step verdicts before D143 closes.
 
-At repaired d5dd11f, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/37157386833/job/111303492309)
-succeeded on all eight steps and the [Rust job](https://github.com/rdje/stitchcad/actions/runs/37157386892/job/111303492427)
-succeeded on all eleven, including strict Clippy1.99,663 tests/56 result groups and the three-library
-WASM build. The runner's effective environment and locality command confirmed all four checkout-local
-stores on the checkout volume. D142/D143 are closed by observed evidence under .h1.v; these build
-results do not establish independent product or physical approval. Original failed-run verdicts remain.
-
-
-Window5 and window6 captured60 and58 complete raw files from c91cdf5 and80f3a299.
-Their exact original transitions, optional source-comparison examples and observed runner receipts
-are retained together in the complete historical record below. Ordinary retrieval needs no Git.
-
-```bash
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part215.md
-bash scripts/history_archive.sh prove-source window5
-bash scripts/history_archive.sh prove-source window6
-```
-
-Those runner receipts remain historical build evidence. They establish neither domain signoff
-nor physical approval; the director's400-commit cadence governs current unpublished changes.
-
-Window7 captures57 full files from6d93d3d. Its isolated fixture reads/materializes all424 logical
-records exactly; previous six windows and logical addresses stay unchanged. Use
-`bash scripts/history_archive.sh prove-source window7` for the optional Git comparison.
-Normal retrieval remains offline. Fixed bounds stay; runner evidence awaits the400-commit cadence.
-Committed catalog prose edits are refused.
-
-Window8 captured57 complete raw records from0f223cb. Its full transition, optional source
-comparison, whole-record retention and post-recording refusal evidence remain unchanged.
-Retrieve the complete record with the public reader:
-
-```bash
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part245.md
-```
-
-Original addresses and prior windows stay available offline; runner evidence follows the400-commit cadence.
+Historical transition and runner receipts remain complete in `docs/history/stitchcad-devnotes-part477.md`.
+Use the public archive reader; historical build evidence grants no physical approval.
 
 ### Ninth retention window
 
-Window9 retains56 complete files; its full transition/evidence narrative remains in the logical
-record docs/history/stitchcad-devnotes-part335.md. Existing identities, byte-exact retrieval and
-all fixed bounds remain unchanged. Retrieve or optionally compare the capture source:
-
-```bash
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part335.md
-bash scripts/history_archive.sh prove-source window9
-```
+Its complete transition/proof and retrieval commands remain in the same record.
 
 ### Local producer profile
 
