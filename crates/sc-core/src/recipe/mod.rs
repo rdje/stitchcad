@@ -8,7 +8,8 @@
 //! Standalone let/assert statements preserve closed annotations, full-source spans and operand
 //! refusals without binding or evaluating. Complete recipes retain authored order, global spans and
 //! the fixed statement bound. Whole statement/recipe input normalization preserves metadata and
-//! contextual literal refusals. Owned expression/statement/recipe bytes preserve typed identity;
+//! contextual literal refusals. Immutable recipe documents own original source and syntax identity.
+//! Owned expression/statement/recipe bytes preserve typed identity;
 //! Closed kind/origin/reserved-context metadata and immutable source locators are available;
 //! initial namespaces retain sources, reject collisions and resolve exact names; ordered metadata scopes
 //! retain actual prior let declarations; closed operator/built-in/selector kind signatures and typed wanted-kind catalogs are available.
@@ -88,6 +89,9 @@ pub use normalized_recipe::{
 
 mod canonical_recipe;
 pub use canonical_recipe::{FormulaCanonicalRecipe, FormulaCanonicalStatement};
+
+mod document;
+pub use document::{FormulaRecipeDocument, FormulaRecipeDocumentError};
 
 mod semantic;
 pub use semantic::{

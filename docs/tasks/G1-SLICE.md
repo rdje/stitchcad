@@ -798,33 +798,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0346 owned CanonicalInputs; [whole scope/proof](../history/stitchcad-devnotes-part498.md).
 - ID: `G1-SLICE.6.4.2.b`
   Status: `done`
-  Goal: immutable DesignStructure owns explicit identity/revision, CanonicalInputs, PieceInventory,
-  CutPlan and IdentityLedger. Check cross-role owned ids and revalidate copies against actual Pieces;
-  retain exact authored inputs/history/registrations and historical references with visible repairs.
-  No auto registration, source/evidence truth, geometry, full Design, bus or release readiness claim.
-  Own focused native/privacy/lint/book/API sync and complete0346 continuity498 before cap growth.
-  Existing D250 and full integration verification retain their later owners.
-  - [x] REPRODUCE / ISSUE: separately validated inputs/Pieces/copies/ledger have no joint owner;
-    new native stale-quantity/orientation/missing-Piece cases require current composition refusals.
-  - [x] ROOT CAUSE (WHY + WHERE): CutPlan::new validates its supplied Pieces only; independently
-    replacing that inventory does not carry the prior proof. DesignStructure reuses this constructor;
-    cargo test -p sc-core --test design_structure_contract gives8 passed/0 failed, rc=0, including
-    stale quantity/orientation/missing-Piece refusals in target/design-structure-native-0347.log.
-  - [x] FIX: private exact definition, shared canonical getters, complete owned-id census with role/index
-    witnesses; current copies validated, historical Piece references and registration choices retained.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    design_structure_contract gives8/0, rc=0, target/design-structure-native-0347.log.
-  - [x] NO REGRESSION: privacy compile-fail2/strict selected Clippy/fmt/book/publication pass0,
-    target/design-structure-*-0347.log. D250132 failure rows exactly baseline, delta0; census rc=1.
-  - [x] LOCKSTEP: API vocabulary/status/notes/index/pointer aligned; prior0346 continuity498 compares4
-    exact Git spans0. Caps unchanged; G1still6/18. Initial test's private-field typo corrected/excluded.
-    promotion: declined (existing structural/identity/core-source decisions). Commit0347; recipe ownership
-    .6.4.2.c next; source registries .d before .3 readiness. Full Design/bus/integration/CI remains later.
+  Goal:0347 immutable DesignStructure; [whole scope/proof](../history/stitchcad-devnotes-part499.md).
 - ID: `G1-SLICE.6.4.2.c`
-  Status: `pending`
+  Status: `done`
   Goal: owned immutable authored recipe source and actual normalized/canonical syntax views without
   self-referential storage, invented source spans, execution or static-check proof. Reuse parser and
   literal normalization contracts; retain typed refusal and private replacement boundaries.
+  FormulaRecipeDocument owns exact source and typed canonical identity; normalized() reuses actual
+  parser/converter with source-borrowed views and typed syntax/literal refusals, no self-reference.
+  Own focused native/privacy/lint/book/API checks, D253 stale phase prose and whole0347 continuity499.
+  - [x] REPRODUCE / ISSUE: existing normalized arenas borrow original source. New document lifetime
+    compile-fail checks refuse detached views2/0, rc=0, target/recipe-document-privacy-0348.log.
+  - [x] ROOT CAUSE (WHY + WHERE): canonical recipe bytes retain identity but not source spans/spelling;
+    formula_recipe_document_contract compares distinct source/equal identity and original source spans,
+    native7 passed/0 failed, rc=0, target/recipe-document-native-0348.log.
+  - [x] FIX: immutable owned exact source/typed canonical identity; normalized() uses actual parser/
+    converter, retaining source borrowing and original typed syntax/literal refusals, without self-reference.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    formula_recipe_document_contract gives7/0, rc=0; source/order/errors/empty/detached edits/Debug exact.
+  - [x] NO REGRESSION: privacy2/strict selected Clippy/fmt/book/publication77/107/1444/2359 pass0;
+    target/recipe-document-*-0348.log. D250132 baseline rows exactly equal, delta0; full census rc=1.
+  - [x] LOCKSTEP: API vocabulary/phase map/D253/status/index/pointer aligned; continuity499 compares3
+    Git spans0; caps unchanged. Test conditional syntax/panic-lint setup corrected/excluded. G1still6/18;
+    promotion: declined (canonical identity/source contracts). Commit0348; source registries .2.d next.
+    No whole Design/static-name/numeric execution/readiness/integration/CI claim.
 - ID: `G1-SLICE.6.4.2.d`
   Status: `pending`
   Goal: exact current source/metadata identity registries across canonical input domains, preserving

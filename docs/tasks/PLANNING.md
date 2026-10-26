@@ -1126,6 +1126,16 @@ Current feature may proceed with this explicit baseline gap; no full glossary/CI
 
 Verified D251/D252 scope corrections retained whole in [part498](../history/stitchcad-devnotes-part498.md).
 
+## D253 — recipe-input phase footer still defers available static/numeric APIs
+
+Reproduce: rg "arithmetic .5c follows|Numerical binding/evaluation|numeric binding still require" in
+annexes/formula-recipe-inputs.md; compare core checked_recipe/bound/numeric public APIs and native
+contract receipts0346/0347. Header D252 is corrected, but footer/route prose still calls implemented
+binding/static/numeric foundations future work. Impact: readers receive contradictory capability
+status. Owner G1-SLICE.6.4.2.c, P2 fixed0348: phase map separates implemented scoped APIs from pending
+whole execution/platform acceptance; original input-review proof boundaries retained. Book/publication
+77chapters/107API rows/1444source/2359rendered links pass0, target/recipe-document-publication-0348.log.
+
 ## Active continuity followup
 
 - **D223** — optional ledger continuity modes retain raw-file/closed-graph assumptions.

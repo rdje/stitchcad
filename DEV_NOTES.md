@@ -3,19 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-26 UTC)_ — owned structural Design component
+## _(2026-10-26 UTC)_ — owned original recipe source
 
-0347 DesignStructure privately owns explicit identity/revision, canonical inputs, pair-consistent Pieces,
-physical copies and exact topology journal/registrations. An owned-id census distinguishes role/index
-from referenced ids; then existing CutPlan validation rechecks actual Pieces. A plan built against old
-quantity/mirroring cannot carry its old proof into current composition. Original objects/order survive.
-Historical Pieces are deliberately not reconstructed against current live edges: deleted ranges must
-remain inspectable repair content. No registration, copy or revision is generated. Empty drafts accept;
-source/evidence truth, recipe/metadata/garment registries, complete readiness and execution remain later.
-Native8/privacy2/strict selected lint/fmt/book/publication pass0. D250's132 glossary rows remain baseline,
-delta0; no full glossary/CI pass. Whole0346 continuity498 compares4 exact Git spans0. Shortened repeated
-normative Piece/range prose with all existing examples/boundaries retained. Promotion: existing structural,
-identity and core-source decisions. G1still6/18; .6.4.2.c recipe ownership next, .d source bindings follows.
+0348 FormulaRecipeDocument owns exact source String and typed canonical recipe identity after existing
+parser/literal acceptance. Borrowed normalized arenas cannot live inside that object without a
+self-reference; normalized() instead reuses the actual parser/converter and returns source-borrowed
+views with original spans. It propagates typed errors without panic or invented source positions.
+Formatting/unit aliases can share canonical identity while document equality preserves exact text.
+Empty drafts accept; unknown calls, duplicate names and incompatible kinds remain syntax content,
+not static or execution proof. No canonical identity is used as a source reader or numeric certificate.
+Native7/privacy2/strict selected lint/fmt/book/publication pass0. D253 footer/phase map now distinguishes
+available static/numeric foundations from pending execution/platform acceptance; historical proof scope
+stays intact. D250132 glossary rows remain baseline, delta0. Whole0347 continuity499 matches3 exact Git
+spans. Promotion: existing canonical identity/source contracts. G1still6/18; current source registries
+.6.4.2.d follow. Full Design/readiness/execution/integration/CI remains unverified.
+
+[Whole0347 structural ownership lesson](docs/history/stitchcad-devnotes-part499.md) retains exact scope/proofs.
 
 [Whole0346 canonical input lesson](docs/history/stitchcad-devnotes-part498.md) retains exact scope/proof boundaries.
 

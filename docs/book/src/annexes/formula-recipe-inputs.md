@@ -225,6 +225,35 @@ cargo test -p sc-core --test formula_canonical_recipe_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py
 ```
 
+## Owned authored recipe document
+
+`FormulaRecipeDocument::new(source)` owns exact source text and its typed canonical identity after
+complete parsing/literal conversion. Empty drafts accept. source() borrows original whitespace/text;
+canonical() borrows identity bytes. Document equality retains exact spelling: 2.5 cm and25 mm can
+have equal canonical identities while differently authored documents remain distinct.
+
+normalized() reuses the actual parser/converter to return source-borrowed arenas with original spans;
+it stores no self-reference and generates no spans from canonical bytes. Views cannot outlive the
+document. Repeated calls preserve state; typed syntax/literal refusals propagate without fallback.
+Private fields require a new validated replacement. Debug exposes byte counts, not customer text.
+
+```rust
+use sc_core::recipe::FormulaRecipeDocument;
+let document = FormulaRecipeDocument::new("let width: length = 2.5 cm".into())?;
+let view = document.normalized()?;
+assert_eq!(&view.canonical_form(), document.canonical());
+assert_eq!(view.statements()[0].name(), "width");
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+This owns syntax, without proving names/kinds, executing operators or certifying Design readiness.
+Duplicate/unbound names and incompatible kinds remain inspectable until static checking.
+
+| API token | Meaning here |
+| --- | --- |
+| `FormulaRecipeDocument` | Immutable original text and typed syntax identity |
+| `FormulaRecipeDocumentError` | Original Syntax or Literal refusal with nested source context |
+
 ## Verification scope
 
 Eight public contracts check sixteen independently authored statement/header/operand-byte rows,
@@ -342,26 +371,16 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_referen
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
 ```
 
-This closes the scoped normalization/identity review. The full syntax milestone .5a.4 is complete;
-static kind proofs are implemented; numerical implementation remains .5c–.5g, as mapped below.
-The formula contract §9's product numeric/cross-platform and
-refusal requirements remain open; this review grants no execution, geometry or release approval.
-
-Numerical binding/evaluation, typed project hashes,
-storage/recovery, geometry, command/API/MCP control and production approval retain their task owners.
-This input API supplies none of those later results or approvals.
+The scoped input/identity review and syntax milestone .5a.4 are complete. Static proofs and numeric
+foundations now exist separately; these historical input checks do not establish whole execution,
+geometry, storage/recovery, command/API/MCP control, cross-platform results or production approval.
 
 ## Syntax milestone and the route to execution
 
-The syntax milestone G1-SLICE.5a.4 closes syntax, literal inputs and canonical identity. A recipe
-can now be inspected and compared reproducibly. It still cannot compute garment dimensions.
-The source you author uses -x and x ^ 2; (- child) and (^2 child) are canonical serializer output,
-with child standing for the operand. Display glyphs remain presentation, outside machine parsing.
-
-The proof map below names public test families under crates/sc-core/tests/. Their independently
-authored fixtures/reference checks verify these scoped obligations. Prior exclusive fault runners
-supply actual compiled assertion failures; the milestone reruns the seven coupled input faults
-and confirms exact source restoration. It does not claim to rerun every earlier fault family.
+Syntax and identity can be inspected reproducibly, without executing a garment. Source uses -x and
+x ^ 2; (- child) and (^2 child) are canonical output, and display glyphs stay outside parsing.
+The public test families below retain independent fixtures/references. The milestone reran seven
+coupled input faults with exact restoration, without rerunning every earlier fault family.
 
 | Requirement | Public contract family | Reviewed scope |
 | --- | --- | --- |
@@ -379,33 +398,28 @@ and confirms exact source restoration. It does not claim to rerun every earlier 
 | Owned statement/recipe identity and typed text collisions | formula_canonical_recipe_contract | Empty wrapper, ordered metadata/operands and domain distinction |
 | Actual worked/refusal population and all first excesses | formula_recipe_input_review | 21 statements/25 operands; 3 syntax and 10 deferred semantic refusals |
 
-The machine/display/canonical distinctions, span availability and all four language limits remain
-specified by the [grammar](../spec/formula-language/grammar.md) and
-[contract](../spec/formula-language.md). Rational width128 applies to literal conversion now;
-exact result width and numeric binding still require execution implementation. Privacy checks cover
-Debug/error shape; explicitly requesting canonical bytes reveals customer formula content.
-The full milestone runs native fmt/clippy/tests, the three-library WASM build, every diagnostic
-probe suite and the doctrine gate. WASM compilation is not a real-browser execution certificate.
+The [grammar](../spec/formula-language/grammar.md) and [contract](../spec/formula-language.md) retain
+machine/display/canonical distinctions, original spans and four language limits. Input width128 and
+[numeric width/domain/binding APIs](formula-rationals.md) are implemented at their distinct stages.
+Explicit source/identity access reveals customer content; Debug/errors omit it. The completed syntax
+milestone ran native checks, three-library WASM compilation, probes and doctrine gates. Compilation
+supplies no real-browser execution certificate.
 
-### Remaining implementation owners
+### Implementation and remaining owners
 
-| Stage | Owner | Required result before closure |
+| Stage | Owner | Current boundary |
 | --- | --- | --- |
-| Names and static kinds | G1-SLICE.5b | All origins/reserved names/signatures; validate both branches before computing any value |
-| Exact arithmetic and bindings | G1-SLICE.5c | Reduced rational width, per-result domains, explicit quantization and once-rounded signed storage |
-| Irrational functions | G1-SLICE.5d | True-value nearest-quantum result, principal branches/poles and algorithm-independent proof |
-| Execution and replay | G1-SLICE.5e | Taken-only computation, uncertainty/tolerances, atomic results, declaration order and dependency validation |
-| Construction operations | G1-SLICE.5f | Complete typed v1 operation list, prior geometry dependencies and selectors through G2/G3 contracts |
-| Full formula acceptance | G1-SLICE.5g | Product examples/refusals/fixture agreement and observed two-platform byte reproducibility |
+| Names/static kinds | G1-SLICE.5b | Whole-recipe proofs and coupled static review implemented |
+| Exact arithmetic/bindings | G1-SLICE.5c | Scoped APIs implemented; coupled/platform verification remains tracked |
+| Irrational functions | G1-SLICE.5d | Root/arc/sin/cos/inverse APIs available; tangent and complete coupled proof pending |
+| Execution/replay | G1-SLICE.5e | Taken-only computation, uncertainty/tolerances and atomic results pending |
+| Construction operations | G1-SLICE.5f | Typed operation/dependency bridge and G2/G3 selectors pending |
+| Full formula acceptance | G1-SLICE.5g | Product examples/refusals and observed two-platform bytes pending |
 
-Each stage has owned children in docs/tasks/G1-SLICE-recipes.md. Static obligation review,
-scoped checks and [whole recipe proofs](formula-checked-recipes.md) are implemented; coupled whole
-review .5b.4b is complete; arithmetic .5c follows.
-Unknown inputs retain declared kinds but no invented numeric value. Factory artifact blocking
-remains G4's policy; size-axis integration remains .4c.2 under the confirmed D70 rule. Command atomicity/localization (.6),
-typed project fields/digests and cycle loading (.7), API/MCP (.9), browser execution (.12), geometry
-(G2/G3) and human production approval (G7) remain separately required. Closing syntax closes none
-of these later obligations.
+Children in docs/tasks/G1-SLICE-recipes.md and its execution sibling own remaining work. Unknown
+inputs gain no numeric fallback. Structural SizeSet inputs exist under D70; executed size mapping,
+G4 policy, command atomicity/localization (.6), storage/digests/cycle loading (.7), API/MCP (.9),
+browser execution (.12), G2/G3 geometry and G7 human approval remain separately required.
 
 ## Pure input-review and phase reference guards
 
