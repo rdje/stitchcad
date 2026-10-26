@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`
+- **Status:** `active`; typed catalog metadata implemented0291, bus handlers pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -73,3 +73,12 @@ the wrong undo unit and needs its own contract; (2) evidence from G1 that a boun
 chosen without a persistence-format change, which moves the bound into the storage contract; (3) a
 threat model (roadmap §10, G5+) that permits a non-stdio MCP surface, which re-opens how authority is
 carried across a network boundary but not what the levels are.
+
+## First native command foundation0291
+
+G1-SLICE.6.1 adds sc-core CommandId discovery with all17 declared identities and typed class,
+required-authority, reversibility and undo-grouping metadata. Exact lookup has no trim/case aliases.
+The focused native target compares every row against the normative book table and passes2/0;
+strict selected Clippy/fmt and command census17/5/5/0 failures pass, rc=0.
+Metadata confers no authenticated grant or handler availability. Payloads, scoped authority,
+aggregate mutation, transactions, retry/audit, history and cancellation retain .6.2–.6.9 ownership.

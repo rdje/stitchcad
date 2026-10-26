@@ -3,7 +3,7 @@ name = "sc-core"
 version = "0.1.0"
 edition.workspace = true
 license.workspace = true
-description = "StitchCAD garment ontology, authored inputs, statically checked formula recipes, exact numeric operators and binding value conversion. Recipe execution and command bus follow."
+description = "StitchCAD garment ontology, authored inputs, statically checked formulas, exact numeric values and typed command catalog. Recipe and command execution follow."
 repository.workspace = true
 
 [lints]

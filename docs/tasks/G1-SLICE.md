@@ -585,7 +585,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.6`
-  Status: `pending`
+  Status: `in_progress`
   Goal: command bus (§4.4) — typed validated commands, atomic groups, preview/commit, revision
   preconditions, idempotency keys, structured errors, progress for long operations, and the
   undo/redo granularity decided at G0.
@@ -615,6 +615,47 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
   Layer execution scope: `.3c.4b.1` models lining but its `require_in_scope()` returns env_lining.
   Apply envelope refusals before requested construction execution; inspection preserves modelled content.
+
+- ID: `G1-SLICE.6.1`
+  Status: `done`
+  Goal:0291 typed declared command catalog/class/authority/reversibility/undo metadata, checked against book.
+  Paths: crates/sc-core/src/command.rs;crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml;crates/sc-core/tests/command_catalog_contract.rs
+  Own402 whole0290 task,403 oldest0266 lesson,263 whole0290 ledger,404 whole closed population subtree before growth.
+  Also own capture_window14.py/.doctrine/history_archive/window14.json/windows.json/docs/history/
+  and archive-reader book: fixed64-file reader refused after403; pack only committed b49128e sources.
+  Metadata only; no handler/authorization/transaction availability claim. Focused native/lint/book.
+  Acceptance0291:
+  - [x] REPRODUCE: normative command table existed without native typed discovery metadata.
+  - [x] ROOT CAUSE0291: local_environment.py -- cargo test -p sc-core --test command_catalog_contract:2/0, rc=0; actual book17-row comparison closes catalog binding.
+  - [x] FIX: immutable IDs/class/permission/reversibility/undo metadata and exact lookup; no handlers or grants implied.
+  - [x] ADDRESSED0291: same native2/0 plus command-layer census17/5/5/0 failures, rc=0; strict names and release distinction pass.
+  - [x] NO REGRESSION0291: selected lib/test strict Clippy/fmt pass, rc=0; capture_window14.py source/materialize/public50 exact, prior13 unchanged, rc=0. No archive cap/reader changes; broad integration/pre-push.
+  - [x] LOCKSTEP:402/403/404/263 whole Git/hash/public exact, rc=0; book build rc=0. Fixed64 limit triggered at403, resolved by packing committed50. G1still5/18; README/live align.
+  Promotion declined: implementation of existing command contract; no new policy. Commit: STITCHCAD-G1-0291.
+- ID: `G1-SLICE.6.2`
+  Status: `pending`
+  Goal: typed payload/envelope, actor/revision/key/group/effect identities and actual canonical argument contracts.
+- ID: `G1-SLICE.6.3`
+  Status: `pending`
+  Goal: core-scoped authority/grant validation, human-only approval, actual actor/principal and denial tests.
+- ID: `G1-SLICE.6.4`
+  Status: `pending`
+  Goal: privately mutated design aggregate; actual reference/pair/sewing/pocket/closure/layer readiness.
+- ID: `G1-SLICE.6.5`
+  Status: `pending`
+  Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.
+- ID: `G1-SLICE.6.6`
+  Status: `pending`
+  Goal: actual revision preconditions, idempotency replay and append-only actor audit trail.
+- ID: `G1-SLICE.6.7`
+  Status: `pending`
+  Goal: bounded semantic undo/redo, original actor/revision restoration and explicit dropped-history report.
+- ID: `G1-SLICE.6.8`
+  Status: `pending`
+  Goal: typed progress/cancellation with no partial state/artifact; explicit resource bounds.
+- ID: `G1-SLICE.6.9`
+  Status: `pending`
+  Goal: coupled actual bus acceptance/private-mutator compile failures; workflow registry feeds G1.9/G5 parity.
 
 - ID: `G1-SLICE.7`
   Status: `pending`

@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — typed declared command catalog
+
+0291 .6.1 exposes17 stable command IDs with typed class, required permission, reversibility and
+undo grouping. Native tests compare the actual book table, not another manually authored registry;
+strict lookup and preparation/approval separation pass2/0. Selected strict Clippy/fmt, command
+census17/5/5/0 failures and book pass0. Catalog metadata grants no authority or handler availability.
+Before code, retaining403 exceeded the fixed64-file reader bound. Window14 packs50 committed
+full files from b49128e:93940 bytes to27917 bytes; source/materialization/public reads exact,
+prior13 unchanged. Reader/caps unchanged;402/403/404/263 whole records retained exactly.
+The artifact-output guard correctly refused a tracked installation; normal owned file edits
+installed the proven payload without activating stores. Frozen capture14 is not a current-HEAD rerun.
+G1still5/18; .6.2–.6.9 own remaining bus execution, tangent practical plan stays P1 .d.2.
+Promotion declined: existing command contract, no new cross-cutting policy.
+
 ## _(2026-10-26 UTC)_ — exact tangent range and certificate boundary
 
 0290 .5d.1.2.2.2.d.1 derives nonpole distance>=90M/(U+1),148-bit rounded tangent magnitude
@@ -299,61 +313,49 @@ verdict. The stale LIVE_STATUS “sums next” note was reproduced by reading it
 to actual full-evaluation scope in this leaf. Whole0266 task/ledger retain348/239 with exact Git/
 hash/public reads; book/live align. Promotion declined: existing numeric and binding contracts.
 
-## _(2026-10-26 UTC)_ — derive reserved size values from actual pinned membership
+[Complete pinned size-membership lesson](docs/history/stitchcad-devnotes-part403.md) retains
+its original authored-order bridge, exact pins, validation and promotion decision.
 
-0266 .5e.1.5.2 matches the explicit expected set/revision before selected-id lookup. The canonical
-immutable member vector supplies position/count, and the authored base id supplies Boolean identity;
-no label parse, sort, positional base or designation-system measurement is inferred. The view retains
-actual membership/member borrows beside the core snapshot. Wrong pins/members and ordinal/core
-failures propagate actual keys/causes without arithmetic wrapping or substitution.
-
-Focused native5/0 and selected strict Clippy0 pass: all five designation intents/pointer borrows,
-ref-before-member priority, explicit reorder/stable base/old-view preservation, singleton revision
-boundaries and same-label cross-set refusal. Membership-to-core direction is preserved; no registry
-currentness, axes/complete SizeSet/path/profile/approval proof is claimed. The bounded .5e.1.5 family
-is complete; broader .5e and D70 remain open. Whole0265 scope/ledger retain347/238; book/live align.
-Promotion declined: existing authored-order/pin/base and formula3.1 contracts govern this bridge.
-
-[Complete supplied size-frame lesson](docs/history/stitchcad-devnotes-part399.md) retains
+[Complete supplied size-frame lesson](docs/history/window14.md#stitchcad-devnotes-part399md) retains
 its original identity/range/storage boundaries, checks and promotion decision.
 
-[Complete explicit tolerance-context lesson](docs/history/stitchcad-devnotes-part397.md) retains
+[Complete explicit tolerance-context lesson](docs/history/window14.md#stitchcad-devnotes-part397md) retains
 its original provider/absence behavior, focused checks and promotion decision.
 
-[Complete general scalar authored-read lesson](docs/history/stitchcad-devnotes-part395.md) retains
+[Complete general scalar authored-read lesson](docs/history/window14.md#stitchcad-devnotes-part395md) retains
 its original identity checks, lifetime repair, validation and promotion decision.
 
-[Complete canonical scalar-content lesson](docs/history/stitchcad-devnotes-part393.md) retains
+[Complete canonical scalar-content lesson](docs/history/window14.md#stitchcad-devnotes-part393md) retains
 its original model, lint repair, validation and promotion decision.
 
-[Complete canonical length authored-read lesson](docs/history/stitchcad-devnotes-part391.md) retains
+[Complete canonical length authored-read lesson](docs/history/window14.md#stitchcad-devnotes-part391md) retains
 its actual source/state behavior, validation and promotion decision.
 
-[Complete exact trig midpoint/resource lesson](docs/history/stitchcad-devnotes-part387.md) retains
+[Complete exact trig midpoint/resource lesson](docs/history/window14.md#stitchcad-devnotes-part387md) retains
 its original theorem/proof, resource boundary and promotion decision.
 
-[Complete twelfth archive packing lesson](docs/history/stitchcad-devnotes-part384.md) retains
+[Complete twelfth archive packing lesson](docs/history/window14.md#stitchcad-devnotes-part384md) retains
 its original scope, source/read validation and promotion decision.
 
-[Complete certified arc implementation lesson](docs/history/stitchcad-devnotes-part382.md) retains
+[Complete certified arc implementation lesson](docs/history/window14.md#stitchcad-devnotes-part382md) retains
 its original scope, verification and promotion decision.
 
-[Complete bounded arc certificate/approved UI lesson](docs/history/stitchcad-devnotes-part380.md) retains
+[Complete bounded arc certificate/approved UI lesson](docs/history/window14.md#stitchcad-devnotes-part380md) retains
 its full proof, director requirements, verification and promotion decisions.
 
-[Complete hypot numeric kernel lesson](docs/history/stitchcad-devnotes-part377.md) retains
+[Complete hypot numeric kernel lesson](docs/history/window14.md#stitchcad-devnotes-part377md) retains
 its original implementation, validation and promotion decision.
 
-[Complete sqrt numeric kernel lesson](docs/history/stitchcad-devnotes-part375.md) retains
+[Complete sqrt numeric kernel lesson](docs/history/window14.md#stitchcad-devnotes-part375md) retains
 its original implementation, validation and promotion decision.
 
-[Complete bounded root-family plan lesson](docs/history/stitchcad-devnotes-part373.md) retains
+[Complete bounded root-family plan lesson](docs/history/window14.md#stitchcad-devnotes-part373md) retains
 its original derivation, oracle plan, bounds and promotion decision.
 
-[Complete binding conversion lesson](docs/history/stitchcad-devnotes-part371.md) retains
+[Complete binding conversion lesson](docs/history/window14.md#stitchcad-devnotes-part371md) retains
 its original scope, validation and promotion decision.
 
-[Complete round_to lesson](docs/history/stitchcad-devnotes-part368.md) retains
+[Complete round_to lesson](docs/history/window14.md#stitchcad-devnotes-part368md) retains
 its original scope, validation and promotion decision.
 
 [Complete exact built-in lesson](docs/history/window13.md#stitchcad-devnotes-part366md) retains

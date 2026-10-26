@@ -76,12 +76,12 @@ The original working execution block was copied byte-for-byte; later entries rem
   Status: `done`
   Goal: actual per-node kind/role/source/callee certificates verified0275, native6+7/docs8.
   Paths: crates/sc-core/src/recipe/checked.rs;crates/sc-core/src/recipe/checked/nodes.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_checked_node_contract.rs
-  Acceptance: [whole scope/six proof boxes/book-map repair](../history/stitchcad-devnotes-part367.md).
+  Acceptance: [whole scope/six proof boxes/book-map repair](../history/window14.md#stitchcad-devnotes-part367md).
 - ID: `G1-SLICE.5e.2.h13`
   Status: `done`
   Goal:0276 window13 packs52 whole records; prior12/source/read/materialization exact.
   Paths: docs/history/;.doctrine/history_archive/;docs/tasks/artifacts/history_archive/capture_window13.py
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part370.md).
+  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part370md).
   Retention0277, owned .5d.1.2.2.2.a:
   - [x] ROOT CAUSE0277: git show3d97348:docs/tasks/G1-SLICE-execution.md interval5838:8312 is whole2474B, Python hash comparison rc=0.
   - [x] ADDRESSED0277: retained370 body/source/hash exact, Python comparison rc=0.
@@ -143,7 +143,7 @@ The original working execution block was copied byte-for-byte; later entries rem
   Status: `done`
   Goal:0281 sourced sin/cos exact-axis/storage/T1 propagation native6/0/lint0.
   Paths: crates/sc-core/src/recipe/evaluated/calls.rs;crates/sc-core/tests/formula_evaluated_calls_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part381.md).
+  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part381md).
   Retention0282, owned .5d.1.2.2.2.b.2.a:
   - [x] ROOT CAUSE0282: git show83de197 whole sourced sincos node retained381; Python source/hash comparison rc=0.
   - [x] ADDRESSED0282: complete node381/source/hash byte equality, Python comparison rc=0.
@@ -153,7 +153,7 @@ The original working execution block was copied byte-for-byte; later entries rem
   Status: `done`
   Goal:0289 sourced inverse exact axes/both operand sources/storage/T1/kind priority verified8/0/lint0.
   Paths: crates/sc-core/src/recipe/evaluated/calls.rs;crates/sc-core/tests/formula_evaluated_calls_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part398.md).
+  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part398md).
   Retention0290 owned .5d.1.2.2.2.d.1:
   - [x] ROOT CAUSE0290: git showcbbfb7c whole0289 task retained398; Python source/hash comparison rc=0.
   - [x] ADDRESSED0290: whole node/source/hash exact in398, Python comparison rc=0.

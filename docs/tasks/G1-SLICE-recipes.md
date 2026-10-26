@@ -478,77 +478,54 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0277 finite forward certificate cohort38/controls verified; production admission remains open.
   Paths: docs/tasks/artifacts/formula_structure/finite_threshold_feasibility.py;docs/decisions/decision_finite-threshold-feasibility.md
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part372.md).
+  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part372md).
 - ID: `G1-SLICE.5d.1.2.2.2.b`
   Status: `done`
-  Goal: if .a succeeds, complete and independently verify the full applicable threshold population.
-  No cohort/throughput extrapolation becomes all-input proof; retain coverage, margins and costs.
+  Goal: complete forward1M/inverse45M and inverse plan; [whole subtree/proofs](../history/stitchcad-devnotes-part404.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.1`
   Status: `done`
-  Goal:0278 complete1M forward bands/100 chunks and independent exact gap reader pass0.
-  Paths: docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_forward_certificate.py
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part374.md).
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2`
   Status: `done`
-  Goal: inverse first-octant generator and full45M threshold proof; split before implementation.
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.a`
   Status: `done`
-  Goal:0282 inverse38/algebraic4/Fraction-atan2/negative2 feasibility controls pass0.
-  Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py;docs/decisions/decision_inverse-thresholds.md
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part383.md).
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b`
   Status: `done`
-  Goal: after successful cohort, full45M certificate with bounded local chunks/source lock and independent exact reader; consider native producer for cost.
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.1`
   Status: `done`
-  Goal:0283 native10035/Python-band67/invalid-input5/lint0; bounded chunk only.
-  Paths: crates/sc-core/examples/inverse_threshold_chunk.rs;docs/tasks/artifacts/formula_structure/native_inverse_probe.py
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part386.md).
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2`
   Status: `done`
-  Goal: after .1, source-locked complete45M controller/checkpoints/exact reader and full coverage evidence.
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.a`
   Status: `done`
-  Goal:0284 guarded controller/reader200k partial/resume/control checks pass0; full45M remains open.
-  Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part389.md).
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.b`
   Status: `done`
-  Goal:0286 complete45M/450/full reader and compact witness verified; native budget still separate.
-  Paths: docs/tasks/artifacts/formula_structure/inverse_certificate_witness.py;crates/sc-core/tests/fixtures/inverse_rounding_certificate.tsv
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part392.md).
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.h`
   Status: `done`
-  Goal:0285 retained forward/inverse stores protected; actual census/omission/restoration and policy controls pass0.
-  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup.py;docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part390.md).
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
   Status: `done`
-  Goal:0287 bounded576-bit/five-half/64-term atan/atan2 plan admitted; native next.
-  Paths: docs/tasks/artifacts/formula_structure/atan_runtime_plan.py;docs/decisions/decision_atan-runtime.md
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part394.md).
+  Goal: verified; whole scope/provenance in retained404 above.
 - ID: `G1-SLICE.5d.1.2.2.2.c`
   Status: `done`
   Goal:0279 admits exact sin/cos folding/512-bit64-term error/workspace plan; native next.
   Paths: docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py;docs/decisions/decision_finite-threshold-feasibility.md
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part376.md).
+  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part376md).
 
 - ID: `G1-SLICE.5d.1.2.2.2.d.1`
   Status: `done`
-  Goal:0290 characterize tangent pole distance/output range/threshold coverage before runtime plan.
-  Paths: docs/tasks/artifacts/formula_structure/tangent_resource_profile.py;docs/decisions/fact_trig-midpoints-and-resource-bound.md
-  Own398 whole0289 source task,399 oldest0265 lesson,262 whole0289 ledger before live growth.
-  Also own400 whole0280 summary/retention and401 whole0288 summary/retention before task growth.
-  Exact arithmetic/independent small-domain enumeration and width witness; no production admission.
-  Sync formula spec/book/live; retain separate P1 practical rounding/resource owner .d.2.
-  Acceptance0290:
-  - [x] REPRODUCE: existing certificates cover different tangent thresholds; no tangent plan admitted.
-  - [x] ROOT CAUSE0290: tangent_resource_profile.py exact pole/range/2^128-level characterization passes, rc=0; finite sine enumeration does not transfer.
-  - [x] FIX: derive actual128-bit input pole distance and148-bit output bound; retain overflow/pole distinction and P1 plan owner.
-  - [x] ADDRESSED0290: same command8798 independent distances/586 poles/2 negative controls and full-width overflow witness pass, rc=0.
-  - [x] NO REGRESSION0290: same exact controls rc=0; no native/certificate edits; runtime admission stays .d.2, broad .5d.4/pre-push.
-  - [x] LOCKSTEP:398/399/400/401/262 exact Git/hash/public bytes rc=0; book build rc=0. Formula availability corrected; G1still5/18.
-  Promotion declined: scoped derivation extends existing midpoint fact; no policy change. Commit: STITCHCAD-G1-0290.
+  Goal:0290 exact tangent pole/range/coverage characterization8798/586/2 pass0; practical .d.2 pending.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part402.md).
+  Retention0291 owned .6.1:
+  - [x] ROOT CAUSE0291: git showb49128e whole0290 task/population subtree retained402/404; Python source/hash comparison rc=0.
+  - [x] ADDRESSED0291: whole source/hash exact in402/404, Python comparison rc=0.
+  - [x] NO REGRESSION0291: scripts/history_archive.py --root . read402/404 whole public files exact, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5d.1.2.2.2.d.2`
   Status: `pending`
   Goal: P1 practical all-input tangent rounding/termination/resource plan before .5d.3.2.2.
@@ -599,7 +576,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.3.2.1`
   Status: `done`
   Goal:0280 native sin/cos verified3/0; original scope379, whole retention below.
-  Acceptance: [whole summary/provenance](../history/stitchcad-devnotes-part400.md).
+  Acceptance: [whole summary/provenance](../history/window14.md#stitchcad-devnotes-part400md).
 - ID: `G1-SLICE.5d.3.2.2`
   Status: `pending`
   Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
@@ -609,7 +586,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.3.3.1`
   Status: `done`
   Goal:0288 native inverses verified3/0; original scope396, whole retention below.
-  Acceptance: [whole summary/provenance](../history/stitchcad-devnotes-part401.md).
+  Acceptance: [whole summary/provenance](../history/window14.md#stitchcad-devnotes-part401md).
 - ID: `G1-SLICE.5d.4`
   Status: `pending`
   Goal: coupled complete irrational function proof and error/provenance review.
@@ -697,7 +674,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 ## Syntax milestone verification receipts
 
-[Whole committed receipts](../history/stitchcad-devnotes-part378.md) retain every original verdict and limit.
+[Whole committed receipts](../history/window14.md#stitchcad-devnotes-part378md) retain every original verdict and limit.
 
 ### `G1-SLICE.5b.1a` — complete finite static signature evidence
 
@@ -887,16 +864,16 @@ is required before completeness claims. No direct producer is executed with ambi
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.m1`
   Status: `done`
   Goal:0123 two Ease native entries adopted shared guards; actual faults/restoration retained.
-  Acceptance: [whole scope/receipts](../history/stitchcad-devnotes-part388.md).
+  Acceptance: [whole scope/receipts](../history/window14.md#stitchcad-devnotes-part388md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h`
   Status: `done`
   Goal:0124 whole native guard record/lesson retention verified, fixed caps preserved.
-  Acceptance: [whole scope/receipts](../history/stitchcad-devnotes-part385.md).
+  Acceptance: [whole scope/receipts](../history/window14.md#stitchcad-devnotes-part385md).
 
 ### G1-SLICE.5b.4c.h2.b.p.n.h
 
-[Whole original protocol and receipts](../history/stitchcad-devnotes-part385.md) retained byte-exact.
+[Whole original protocol and receipts](../history/window14.md#stitchcad-devnotes-part385md) retained byte-exact.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.m2`
   Status: `done`

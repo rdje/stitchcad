@@ -90,6 +90,34 @@ Validation happens once, in the command layer, and every adapter gets it for fre
 against per-front-end validation: three validators drift, and the drift is visible only to the user whose
 front-end has the looser one.
 
+### Implemented typed catalog
+
+The sc-core command module now exposes CommandId::ALL and exact from_token lookup for the17
+declared commands in §1.1. Each identity supplies its class, required authority, reversibility and
+undo granularity as typed metadata. Stable tokens are independent of localized labels. Lookup
+does not trim, case-fold or invent aliases; unknown names return None.
+
+```rust
+use sc_core::command::{CommandId, CommandClass, CommandAuthority, CommandUndoGranularity};
+let command = CommandId::from_token("ChangeMeasurement").expect("declared command");
+assert_eq!(command.class(), CommandClass::Mutation);
+assert_eq!(command.required_authority(), CommandAuthority::Commit);
+assert_eq!(command.undo_granularity(), CommandUndoGranularity::PerMeasurement);
+assert_eq!(CommandId::from_token("changemeasurement"), None);
+assert_eq!(CommandId::ApprovePackage.required_authority(), CommandAuthority::Approve);
+```
+
+This is declaration discovery. Catalog membership does not advertise an executable handler,
+construct a payload, grant authority or perform a transaction. Approve is required metadata for
+human approval, never an agent-held grant. Mutation previews still need only inspect; the catalog
+reports the permission required to issue the declared command itself. Payloads, authenticated
+actors/scopes, structural checks, revisions, transactions and actual workflow parity remain G1.6.
+
+The focused native catalog target reads the actual normative table and compares every identity,
+order, class, authority, reversibility and undo grouping. It also checks strict lookup and release
+preparation versus human approval. This supports core metadata consistency; it proves no handler
+availability, authenticated authority enforcement or executed UI/API/MCP workflow.
+
 ## 3. Atomic groups, and the granularity of undo
 
 **One undo reverses one atomic group, never part of one.** A group is the unit a user means: "add a dart"
@@ -340,8 +368,9 @@ No UI implementation or extra broad verification is started by this DBIQNP note.
   and reversibility against the vocabularies §1 and §7 declare; compares §7's five levels with the five
   roadmap §7.8 names, in both directions; and refuses a parity column with no declared source.
   `run_command_layer_probes.sh` is its ground truth.
-- **No command in this chapter exists yet.** The set is a contract for `G1-SLICE.6`, and the census checks
-  the *specification's* closure, not an implementation's; a command added at G1 is a row here first.
+- **Typed catalog metadata is implemented; command handlers remain pending.** The set is a contract for
+  `G1-SLICE.6`. The census checks specification closure; the native catalog target compares metadata.
+  Neither establishes command execution. A new command is a row here first.
 - **The parity table is empty on purpose**, as the canvas spike's results are: its columns and generation
   rule are normative now, its rows are G5's evidence, and a table filled in before the adapters exist would
   be a claim about software nobody has written.

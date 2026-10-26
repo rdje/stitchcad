@@ -4,6 +4,10 @@ Historical records keep stable logical names when their physical Markdown files 
 The reader validates the complete backing archive before listing, reading or materializing records.
 It uses Python3.9+ and the standard library; ordinary retrieval needs no historical Git objects.
 
+Window14 retains50 complete committed records from b49128e, packed before command-catalog work
+exceeded the fixed64-file working bound. Source comparison, exact materialization and every public
+read passed; prior13 windows remain unchanged. Retrieval commands and capacity limits are unchanged.
+
 ```bash
 bash scripts/history_archive.sh list
 bash scripts/history_archive.sh read docs/history/stitchcad-changelog-part1.md
