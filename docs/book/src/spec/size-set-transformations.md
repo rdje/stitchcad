@@ -2,7 +2,7 @@
 
 > **Status:** G1-SLICE.4c.4 is implementing immutable transformation intent in `sc-measure`.
 > Selected profile labels, resolution-origin metadata and state-bearing label/base declarations are
-> executable, together with canonical break-scaling and chart-replacement bindings. The aggregate follows. G4 owns actual profile lookup,
+> executable, together with canonical break/chart bindings and an immutable resolution-intent aggregate. G4 owns actual profile lookup,
 > constraints, precedence and resolution;
 > G3 owns numeric instantiation. This page extends [Size sets §9](size-sets.md#9-ownership-reference-and-override).
 
@@ -189,14 +189,28 @@ failures. The source-only methods return `ChartContextRequired` for an authored 
 chart ID never certifies its target. Unknown/Derived declarations have no authored binding and
 retain their original observation/evaluation refusals. Evidence and numeric states are not upgraded.
 
-## What remains to be implemented
+## Immutable resolution intent
 
-The next bounded slice adds an immutable aggregate retaining the original reference and ordered
-transformations. Numeric inputs
-must remain canonical rather than copied into a second independent state/value record.
+`SizeSetResolutionIntentDefinition` combines an immutable `origin` and an authored ordered
+`transformations` vector. `SizeSetResolutionIntent` retains their exact profile/schema/content pin,
+original/resolved references, provenance and every declaration/state. An empty vector records no
+declared override. Unresolved declarations remain representable without inventing a payload.
 
-Origin metadata and authored declarations are not a transformed SizeSet or transformed geometry.
-No profile is executed, no chart or break is numerically altered, and no Design reference, saved
-revision, approval or release artifact is changed by these constructors. Full precedence, hard
-restrictions, execution/equivalence, serialization and release checks retain their G3/G4 and
-integration owners.
+```rust,ignore
+let intent = SizeSetResolutionIntent::new_with_context(
+    SizeSetResolutionIntentDefinition { origin, transformations }, &context,
+)?;
+```
+
+Use `new`/`validate_current` with source inputs when no authored chart replacement needs candidates;
+use `new_with_context`/`validate_current_with_context` for actual replacement targets. Each declaration
+rechecks the original source pin and current bindings. Original typed errors remain in the error
+chain, with the failing transformation ID. Duplicate declaration IDs and collisions with resolved
+identity/origin provenance refuse. A resolved target cannot alias supplied candidate charts or a
+transformation's source record. No source is retargeted and no authored vector is sorted.
+
+The aggregate records locally valid intent. Declaration order is retained, while G4 owns precedence,
+conflicts and composition; collecting declarations does not certify their combined effect. Numeric
+states stay canonical. These constructors execute no profile, multiplication, chart change or Design
+revision; they produce no resolved geometry, storage, approval or release artifact. G3/G4 and
+integration owners retain application, equivalence, global freshness, evidence truth and serialization.

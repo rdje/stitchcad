@@ -19,3 +19,7 @@ mod chart_replacement;
 pub use chart_replacement::{
     SizeSetChartReplacement, SizeSetChartReplacementContext, SizeSetReplacementCharts,
 };
+mod intent;
+pub use intent::{
+    SizeSetResolutionIntent, SizeSetResolutionIntentDefinition, SizeSetResolutionIntentError,
+};

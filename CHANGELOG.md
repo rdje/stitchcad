@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0316 — due generated-artifact cleanup
+## STITCHCAD-G1-0317 — immutable SizeSet resolution intent
 
-Fresh plan removes4 trees/1046 strays,1163 files/10476333108B; independent1050-path absence/tracked
-bytes and52008 preserved entries pass0 before regeneration. Book0;464/465/288 retention exact0.
-G1still5/18; immutable intent aggregate next. Next cleanup due2026-10-27 13:40UTC.
+Exact origin/profile and authored declarations retain order/states; current source/candidate and ID conflicts recheck.
+No transformations applied. Garment21+MTM10/lint/fmt/book pass0;466/467/289 whole2165f7f retention exact0.
+G1still5/18; profile intent scope review next; full gates remain integration/pre-push.
 
 # Sealed archive — earlier slices
+
+| [part289](docs/history/stitchcad-changelog-part289.md) | whole0316 | 6 lines, 337 bytes, sha256:b3089f8f… |
 
 | [part288](docs/history/stitchcad-changelog-part288.md) | whole0315 | 6 lines, 388 bytes, sha256:4427fc96… |
 

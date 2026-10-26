@@ -615,3 +615,287 @@ fn independently_valid_candidate_is_rechecked_in_actual_source_observation_conte
         },
     );
 }
+
+fn origin(inputs: SizeSetInputs<'_>, resolved: u128, provenance: u128) -> SizeSetResolutionOrigin {
+    SizeSetResolutionOrigin::new(
+        SizeSetResolutionOriginDefinition {
+            source: inputs.reference(),
+            resolved: SizeSetReference {
+                id: id(resolved),
+                revision: Count::new(0),
+            },
+            provenance: id(provenance),
+            profile: SizeSetProfilePin::new(SizeSetProfilePinDefinition {
+                profile_id: "acme-cmt-pt".to_owned(),
+                schema_version: "2.0".to_owned(),
+                content_version: "1.3.0".to_owned(),
+            })
+            .expect("exact selected profile"),
+        },
+        inputs,
+    )
+    .expect("actual source and allocated target")
+}
+#[test]
+fn immutable_resolution_intent_keeps_order_all_domains_and_unresolved_states_without_application() {
+    use sc_core::value::{
+        ScalarInputKind as Kind, ScalarInputState as State, ScalarInputValue as Value,
+    };
+    let mut f = Fixture::new(MeasurementKind::Garment);
+    f.scalars.push(scalar_factor(
+        Kind::Ratio,
+        State::Assumed {
+            value: Value::from_ratio_ppm(1_100_000),
+            assumption: id(4100),
+        },
+    ));
+    let before = f.membership.clone();
+    with_parts(
+        &f,
+        Options {
+            complete_breaks: true,
+            ..Options::default()
+        },
+        |chart, chart_context, breaks, break_context| {
+            let inputs = GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("actual source")
+                .into();
+            let mut d = chart.definition().clone();
+            d.id = id(2010);
+            let candidate = SizeChart::new(d, chart_context).expect("current chart");
+            let charts = [&candidate];
+            let context = SizeSetChartReplacementContext::new(
+                inputs,
+                SizeSetReplacementCharts::Garment(&charts),
+            )
+            .expect("current candidates");
+            let mut transformations = Vec::new();
+            for (identity, kind, state) in [
+                (
+                    2102,
+                    SizeSetTransformationKind::LabelMapping,
+                    SizeSetTransformationState::Known {
+                        value: mapping(&[(3, "Small")]),
+                        evidence: vec![id(4000)],
+                    },
+                ),
+                (
+                    2101,
+                    SizeSetTransformationKind::BaseSubstitution,
+                    SizeSetTransformationState::Preference {
+                        value: SizeSetTransformationValue::BaseSubstitution(id(4)),
+                        provenance: id(4001),
+                    },
+                ),
+                (
+                    2103,
+                    SizeSetTransformationKind::BreakScaling,
+                    assumed(SizeSetTransformationValue::BreakScaling(SizeBreakScaling {
+                        size_break: id(700),
+                        factor: id(160),
+                    })),
+                ),
+                (
+                    2104,
+                    SizeSetTransformationKind::ChartReplacement,
+                    assumed(SizeSetTransformationValue::ChartReplacement(
+                        SizeSetChartReplacement::Garment(id(2010)),
+                    )),
+                ),
+                (
+                    2105,
+                    SizeSetTransformationKind::BaseSubstitution,
+                    SizeSetTransformationState::Derived { formula: id(4002) },
+                ),
+                (
+                    2106,
+                    SizeSetTransformationKind::LabelMapping,
+                    SizeSetTransformationState::Unknown {
+                        observation: id(4003),
+                    },
+                ),
+            ] {
+                let mut d = definition(state);
+                d.id = id(identity);
+                d.kind = kind;
+                transformations.push(
+                    SizeSetTransformation::new_with_context(d, &context)
+                        .expect("original declaration"),
+                );
+            }
+            let authored = SizeSetResolutionIntentDefinition {
+                origin: origin(inputs, 2050, 3000),
+                transformations,
+            };
+            let result = SizeSetResolutionIntent::new_with_context(authored.clone(), &context)
+                .expect("immutable intent");
+            assert_eq!(result.definition(), &authored);
+            assert_eq!(
+                result
+                    .definition()
+                    .transformations
+                    .iter()
+                    .map(|t| t.definition().id)
+                    .collect::<Vec<_>>(),
+                [2102, 2101, 2103, 2104, 2105, 2106].map(id)
+            );
+            assert_eq!(result.validate_current_with_context(&context), Ok(()));
+            let required = SizeSetResolutionIntentError::Transformation {
+                transformation: id(2104),
+                issue: Box::new(SizeSetTransformationError::ChartContextRequired),
+            };
+            assert_eq!(result.validate_current(inputs), Err(required.clone()));
+            assert_eq!(
+                SizeSetResolutionIntent::new(authored, inputs),
+                Err(required)
+            );
+            let empty =
+                SizeSetChartReplacementContext::new(inputs, SizeSetReplacementCharts::Garment(&[]))
+                    .expect("explicit empty inventory");
+            let refusal = result
+                .validate_current_with_context(&empty)
+                .expect_err("candidate no longer supplied");
+            assert!(refusal.source().is_some());
+            assert_eq!(
+                refusal,
+                SizeSetResolutionIntentError::Transformation {
+                    transformation: id(2104),
+                    issue: Box::new(SizeSetTransformationError::MissingChart(id(2010)))
+                }
+            );
+            assert_eq!(f.membership, before);
+            assert_eq!(chart.id(), id(600));
+        },
+    );
+}
+#[test]
+fn intent_refuses_cross_record_identity_aliases_and_revalidates_candidate_namespace() {
+    let f = Fixture::new(MeasurementKind::Garment);
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs = GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("source")
+                .into();
+            let mut d = definition(SizeSetTransformationState::Unknown {
+                observation: id(4000),
+            });
+            d.id = id(2100);
+            let declaration =
+                SizeSetTransformation::new(d.clone(), inputs).expect("original unresolved intent");
+            for (resolved, provenance, transformations, identity) in [
+                (
+                    2050,
+                    3000,
+                    vec![declaration.clone(), declaration.clone()],
+                    2100,
+                ),
+                (2100, 3000, vec![declaration.clone()], 2100),
+                (2050, 2100, vec![declaration.clone()], 2100),
+            ] {
+                let authored = SizeSetResolutionIntentDefinition {
+                    origin: origin(inputs, resolved, provenance),
+                    transformations,
+                };
+                assert_eq!(
+                    SizeSetResolutionIntent::new(authored, inputs),
+                    Err(SizeSetResolutionIntentError::DuplicateIdentity(id(
+                        identity
+                    )))
+                );
+            }
+            d.source = id(2050);
+            let source_alias =
+                SizeSetTransformation::new(d.clone(), inputs).expect("source existence deferred");
+            assert_eq!(
+                SizeSetResolutionIntent::new(
+                    SizeSetResolutionIntentDefinition {
+                        origin: origin(inputs, 2050, 3000),
+                        transformations: vec![source_alias],
+                    },
+                    inputs
+                ),
+                Err(SizeSetResolutionIntentError::DuplicateIdentity(id(2050)))
+            );
+            let mut chart_d = chart.definition().clone();
+            chart_d.id = id(2010);
+            let candidate = SizeChart::new(chart_d, chart_context).expect("candidate");
+            let charts = [&candidate];
+            let context = SizeSetChartReplacementContext::new(
+                inputs,
+                SizeSetReplacementCharts::Garment(&charts),
+            )
+            .expect("candidates");
+            assert_eq!(
+                SizeSetResolutionIntent::new_with_context(
+                    SizeSetResolutionIntentDefinition {
+                        origin: origin(inputs, 2010, 3000),
+                        transformations: vec![],
+                    },
+                    &context
+                ),
+                Err(SizeSetResolutionIntentError::DuplicateIdentity(id(2010)))
+            );
+            d.id = id(2010);
+            d.source = id(3000);
+            let candidate_alias = SizeSetTransformation::new(d, inputs)
+                .expect("source-only inventory lacks candidate");
+            assert_eq!(
+                SizeSetResolutionIntent::new_with_context(
+                    SizeSetResolutionIntentDefinition {
+                        origin: origin(inputs, 2050, 3000),
+                        transformations: vec![candidate_alias],
+                    },
+                    &context
+                ),
+                Err(SizeSetResolutionIntentError::Transformation {
+                    transformation: id(2010),
+                    issue: Box::new(SizeSetTransformationError::DuplicateIdentity(id(2010))),
+                })
+            );
+        },
+    );
+}
+#[test]
+fn no_override_and_unresolved_chart_intents_preserve_explicit_origin_without_requiring_candidates()
+{
+    let f = Fixture::new(MeasurementKind::Garment);
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs = GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("source")
+                .into();
+            let original = origin(inputs, 2050, 3000);
+            let empty = SizeSetResolutionIntent::new(
+                SizeSetResolutionIntentDefinition {
+                    origin: original.clone(),
+                    transformations: vec![],
+                },
+                inputs,
+            )
+            .expect("explicit no declared override");
+            assert_eq!(empty.definition().origin, original);
+            assert!(empty.definition().transformations.is_empty());
+            let mut d = definition(SizeSetTransformationState::Unknown {
+                observation: id(4000),
+            });
+            d.kind = SizeSetTransformationKind::ChartReplacement;
+            let unresolved = SizeSetTransformation::new(d, inputs).expect("no authored target");
+            let result = SizeSetResolutionIntent::new(
+                SizeSetResolutionIntentDefinition {
+                    origin: original,
+                    transformations: vec![unresolved.clone()],
+                },
+                inputs,
+            )
+            .expect("unresolved intent remains representable");
+            assert_eq!(result.definition().transformations, [unresolved]);
+            assert!(
+                matches!(result.definition().transformations[0].authored_value(), Err(SizeSetTransformationReadError::RequiresObservation { observation, .. }) if observation == id(4000))
+            );
+        },
+    );
+}

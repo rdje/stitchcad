@@ -10,7 +10,7 @@
 //! axes have explicit ordered values over borrowed canonical inputs. Complete member points require
 //! at least one authored axis. Individual signed breaks bind explicit axes/POMs/adjacent pairs;
 //! explicit required dimensions and current adjacent coverage are implemented. SizeSet composition
-//! and resolution contracts follow in owned slices. Garment input views compose shared current
+//! and immutable profile transformation intent preserve original sources. Garment inputs compose current
 //! snapshots with typed structural path requirements. MTM views preserve canonical body/Ease inputs
 //! and explicit singleton grading refusal; numeric execution and persistence remain separate.
 #![forbid(unsafe_code)]
@@ -72,6 +72,7 @@ pub use size_set_resolution::{
     SizeBreakScaling, SizeBreakScalingInputs, SizeLabelMapping, SizeSetChartReplacement,
     SizeSetChartReplacementContext, SizeSetProfilePin, SizeSetProfilePinDefinition,
     SizeSetProfilePinError, SizeSetProfilePinField, SizeSetReplacementCharts,
+    SizeSetResolutionIntent, SizeSetResolutionIntentDefinition, SizeSetResolutionIntentError,
     SizeSetResolutionOrigin, SizeSetResolutionOriginDefinition, SizeSetResolutionOriginError,
     SizeSetTransformation, SizeSetTransformationDefinition, SizeSetTransformationError,
     SizeSetTransformationKind, SizeSetTransformationReadError, SizeSetTransformationState,

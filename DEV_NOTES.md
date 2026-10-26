@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — immutable SizeSet resolution intent
+
+0317 .4c.4.4 retains exact origin/profile/target plus ordered declarations across all four domains/five states.
+Source/candidate bindings revalidate; duplicate/cross-record aliases refuse. Empty/unresolved intent stays
+explicit, original inputs unchanged. Garment21+MTM10 pass0; selected strict lint/fmt/book0. No combined
+profile effect/application/evidence truth claim.466/467/289 whole2165f7f Git/hash/public exact0.
+G1still5/18; .4.5 scope review next. Promotion: existing SizeSet decision; broad gates remain integration/pre-push.
+
 ## _(2026-10-26 UTC)_ — due generated-artifact cleanup
 
 0316 .4c.4.cleanup5 applies fresh35e2650 plan with explicit idle-CUA after D232 repair.4 trees/1046
@@ -235,16 +243,8 @@ replacements may update source, which execution must validate against current re
 then verified0/untracked. No registry/auth/handler claim; remaining payloads stay .b.2/.c.
 Promotion declined: existing canonical/command contracts, no new policy.
 
-## _(2026-10-26 UTC)_ — typed mutation metadata and exact revisions
-
-0293 .6.2.2.a adds immutable mutation context: design, actor/principal claim, expected revision,
-mandatory typed retry key and optional typed group. Claims confer no authenticated identity or grant.
-Revision successors use private exact integers beyond128 bits without changing their source; no
-undocumented counter cap, clock or wire-format promise. Native2/0 preserves full identities,
-agent/principal separation, groups and immutable large counters; selected strict lint/fmt, command
-census17/5/5/0 and book pass0.409/410/265 retain whole history; G1still5/18.
-Payloads/currentness/auth/replay/transactions remain later owners. Promotion declined: existing
-command metadata contract; its decision records the chosen representation and boundary.
+[Complete typed mutation metadata lesson](docs/history/stitchcad-devnotes-part467.md) retains
+its original exact revision/retry/actor/group contracts, checks and promotion decision.
 
 [Complete terminal ID exhaustion lesson](docs/history/stitchcad-devnotes-part465.md) retains
 its original atomic failure/nonreuse contracts, checks and promotion decision.

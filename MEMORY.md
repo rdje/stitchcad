@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0316 .4c.4.cleanup5 completes due artifact cleanup after explicit attestation repair0315/D232.
-- Removed4 trees/1046 strays,1163 files/10476333108B;1050 selected absent and tracked bytes exact before regeneration.
-- Independent52008 preservation entries incl15 symlink metadata/certificate manifests exact0; skipped1032 unsafe.
-- NEXT .4c.4.4: immutable origin + authored transformation intent aggregate; feature27-test proof remains current.
--464/465/288 whole35e2650 Git/hash/public exact0; book rebuild0. Cleanup next due2026-10-27 13:40UTC.
+-0317 .4c.4.4 adds immutable exact origin/profile + ordered transformation intent, retaining all states/domains.
+- Actual source/candidate revalidation and cross-record IDs checked; empty/unresolved intent preserved, no application.
+- Focused garment21+MTM10 pass0; selected strict lint/fmt/book0. NEXT .4c.4.5 bounded scope/currentness review.
+-466/467/289 whole2165f7f Git/hash/public exact0; book aggregate1199676B, fixed cap unchanged.
+-0316 cleanup verified1050 selected absent/52008 preservation entries exact0; next due2026-10-27 13:40UTC.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

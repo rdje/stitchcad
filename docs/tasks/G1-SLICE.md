@@ -518,29 +518,29 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0314.
 - ID: `G1-SLICE.4c.4.cleanup5`
   Status: `done`
-  Goal:0316 due daily safe generated-artifact cleanup after0314, without touching retained proof stores.
-  Own docs/ARTIFACT_CLEANUP.md, governance upkeep/latest summary and live/task pointers; generated audit under
-  target/artifact_cleanup_audit/feature-20261026-retry; initial plan/diagnostics remain retained.
-  D232 repaired0315; use fresh committed producer/HEAD and explicit apply --idle-cua when no UI call/result pending.
-  Inspect selected/skipped paths and proof-store exclusions before removal. Apply requires no live project job,
-  exact source/HEAD/plan fingerprints; immediate independent residue/tracked-byte census before regeneration.
-  Preserve prior audit records/certificate manifests exactly. Book rebuild only after absence proof.
-  Broad CI not warranted for artifact-only cleanup; original feature27-test evidence remains current.
-  Own464 whole0315 repair task,465 oldest0292 lesson and288 ledger from35e2650; exact Git/hash/public
-  before retirement after apply/residue proof. Update bounded live docs and book cleanup invocation.
-  - [x] ROOT CAUSE (WHY + WHERE): prior run2026-10-25 13:16UTC due; frozen1050-path safe plan/protected exclusions rc=0.
-  - [x] ADDRESSED: cleanup.py apply feature-20261026-retry --idle-cua removes4 trees/1046 strays,1163 files/10476333108B rc=0.
-  - [x] NO REGRESSION: independent before-regeneration1050 absence/tracked fingerprint/52008 preserved entries incl15 links rc=0.
-  Verification: result.json and independent-post.json exact counts;1032 unsafe skipped; book rebuild rc=0.
-  464/465/288 whole committed35e2650 Git interval/hash/public equality rc=0. LIVE_STATUS G1still5/18.
-  Commit: STITCHCAD-G1-0316; next .4c.4.4, cleanup due2026-10-27 13:40UTC. No native/full CI rerun warranted.
+  Goal:0316 due cleanup verified residue/preservation/book0; [whole scope/proofs](../history/stitchcad-devnotes-part466.md).
+  Commit: STITCHCAD-G1-0316.
 - ID: `G1-SLICE.4c.4.cleanup5.a`
   Status: `done`
   Goal:0315 D232 attestation repair; focused controls/book0; [whole scope/proofs](../history/stitchcad-devnotes-part464.md).
   Commit: STITCHCAD-G1-0315.
 - ID: `G1-SLICE.4c.4.4`
-  Status: `pending`
-  Goal: immutable resolved SizeSet intent combines origin and authored transformations without applying/mutating source.
+  Status: `done`
+  Goal:0317 immutable resolution intent combines selected-profile origin and ordered authored transformations.
+  Own size_set_resolution/intent.rs, root/module/lib exports, garment support/MTM composite tests,
+  book transformation/main, SizeSet decision and live/task docs. New/revalidate source-only and explicit
+  chart-context constructors retain original typed errors and all states without application or merging.
+  Preserve authored order/empty no-override intent; every declaration pins original source inputs. Reject
+  duplicate transformation IDs and aliases with resolved identity/origin provenance; resolved target cannot
+  alias candidate charts or transformation source records. No profile/global freshness/precedence claim.
+  Own466 whole0316 cleanup task,467 oldest0293 lesson and289 ledger from2165f7f; exact Git/hash/public
+  before retirement. Focused aggregate/state/current-source/context tests, selected strict lint/fmt/book.
+  - [x] ROOT CAUSE (WHY + WHERE): SizeSet §9 requires immutable original/profile/transformation origin; API/lib check rc=0.
+  - [x] ADDRESSED: cargo test -p sc-measure --test garment_size_set_inputs_contract --test mtm_size_set_inputs_contract gives31/0 rc=0.
+  - [x] NO REGRESSION: original composite/path/state/binding cases included; selected strict clippy/fmt/book rc=0.
+  Verification: garment21+MTM10, empty/unresolved/order/aliases/stale source/context original typed chains rc=0;
+  466/467/289 whole committed Git interval/hash/public byte equality rc=0. LIVE_STATUS G1still5/18.
+  Commit: STITCHCAD-G1-0317. Next .4c.4.5 bounded scope review; full gates integration/pre-push.
 - ID: `G1-SLICE.4c.4.5`
   Status: `pending`
   Goal: bounded profile intent/currentness/provenance scope review; actual G4 precedence/resolution stays separate.

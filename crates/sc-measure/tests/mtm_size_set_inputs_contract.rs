@@ -466,3 +466,115 @@ fn body_ease_chart_replacement_uses_original_current_context_and_keeps_mtm_path_
         },
     );
 }
+
+#[test]
+fn resolution_intent_rechecks_original_and_transformation_pins_against_current_mtm_revision() {
+    let mut f = Fixture::new();
+    let (old_origin, old_transformation) = with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs: SizeSetInputs<'_> =
+                MtmSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                    .expect("source")
+                    .into();
+            let origin = SizeSetResolutionOrigin::new(
+                SizeSetResolutionOriginDefinition {
+                    source: inputs.reference(),
+                    resolved: SizeSetReference {
+                        id: id(2050),
+                        revision: sc_units::Count::new(0),
+                    },
+                    provenance: id(3000),
+                    profile: SizeSetProfilePin::new(SizeSetProfilePinDefinition {
+                        profile_id: "profile".to_owned(),
+                        schema_version: "schema".to_owned(),
+                        content_version: "content".to_owned(),
+                    })
+                    .expect("explicit pin"),
+                },
+                inputs,
+            )
+            .expect("original pin");
+            let transformation = SizeSetTransformation::new(
+                SizeSetTransformationDefinition {
+                    id: id(2100),
+                    reference: inputs.reference(),
+                    source: id(3001),
+                    kind: SizeSetTransformationKind::BaseSubstitution,
+                    state: SizeSetTransformationState::Unknown {
+                        observation: id(4000),
+                    },
+                },
+                inputs,
+            )
+            .expect("original declaration pin");
+            (origin, transformation)
+        },
+    );
+    let previous = f.membership.reference();
+    let mut updated = f.membership.definition().clone();
+    updated.reference = previous.next_revision().expect("next exact revision");
+    f.membership = SizeMembership::new(updated).expect("updated actual membership");
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs: SizeSetInputs<'_> =
+                MtmSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                    .expect("updated snapshot")
+                    .into();
+            let refusal = SizeSetResolutionIntent::new(
+                SizeSetResolutionIntentDefinition {
+                    origin: old_origin.clone(),
+                    transformations: vec![],
+                },
+                inputs,
+            )
+            .expect_err("stale origin");
+            assert!(refusal.source().is_some());
+            assert_eq!(
+                refusal,
+                SizeSetResolutionIntentError::Origin(Box::new(
+                    SizeSetResolutionOriginError::SourceMismatch {
+                        expected: previous,
+                        actual: inputs.reference()
+                    }
+                ))
+            );
+            let mut current = old_origin.definition().clone();
+            current.source = inputs.reference();
+            let current =
+                SizeSetResolutionOrigin::new(current, inputs).expect("explicit current origin");
+            assert_eq!(
+                SizeSetResolutionIntent::new(
+                    SizeSetResolutionIntentDefinition {
+                        origin: current.clone(),
+                        transformations: vec![old_transformation]
+                    },
+                    inputs
+                ),
+                Err(SizeSetResolutionIntentError::Transformation {
+                    transformation: id(2100),
+                    issue: Box::new(SizeSetTransformationError::SourceMismatch {
+                        expected: previous,
+                        actual: inputs.reference()
+                    })
+                })
+            );
+            let empty = SizeSetResolutionIntent::new(
+                SizeSetResolutionIntentDefinition {
+                    origin: current,
+                    transformations: vec![],
+                },
+                inputs,
+            )
+            .expect("current no-override intent");
+            assert_eq!(empty.validate_current(inputs), Ok(()));
+            assert!(matches!(
+                inputs.validate_inputs_for(SizeInstantiationPath::GradeRules),
+                Err(SizeSetInputError::Mtm(_))
+            ));
+        },
+    );
+}

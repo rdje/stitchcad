@@ -189,3 +189,8 @@ metadata, membership/axes/breaks. Candidate composites revalidate actual binding
 duplicate/substituted identities and retain draft/path rules. Authored replacement needs explicit
 context; Unknown/Derived remain payload-less. Source charts/references and canonical states stay
 unchanged. G4 profile resolution and G3 application/equivalence remain separate.
+
+G1-SLICE.4c.4.4 adds immutable origin plus ordered transformation intent, retaining exact selected
+profile pins, original/resolved refs and all states. Source/candidate bindings revalidate; cross-record
+identity aliases refuse. Empty no-override and unresolved intent remain representable. Each claim
+targets original inputs; G4 owns combined conflicts/precedence/application, with no resolved result claim.
