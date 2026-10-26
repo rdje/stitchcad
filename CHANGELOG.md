@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0334 — current release input schemas reviewed
+## STITCHCAD-G1-0335 — one typed core command input
 
-- Both concrete release payloads match normative rows; exact candidate/scope claims preserve detached approval.
-- Changed native release6/0, unchanged library/other9 proofs retained; strict lint/fmt/book/pub76-99/census0.
--488/306 whole5a30f12 source/hash/public exact0; actual handlers/auth remain. G1still6/18; schema review next.
+- CommandRequest preserves all five family inputs and derives identity; exact claims/mutation-only metadata remain.
+- Native request2/catalog2/query2/release6, strict lint/fmt/book/pub76-100/census17-5-5-0 pass0; D241 wording fixed.
+-489/307/145 whole3419ed3 exact0; .6.2 input scope done, .6.3 actual authorization next. G1still6/18.
 
 # Sealed archive — earlier slices
+
+| [part307](docs/history/stitchcad-changelog-part307.md) | whole0334 | 6 lines, 399 bytes, sha256:659480ad… |
 
 | [part306](docs/history/stitchcad-changelog-part306.md) | whole0333 | 6 lines, 382 bytes, sha256:211f9b42… |
 

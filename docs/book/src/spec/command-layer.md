@@ -1,8 +1,8 @@
 # The command layer
 
 > **Status:** normative specification, gate **G0** (roadmap §4.4, which requires undo/redo semantics to be
-> defined *at G0*, and §7.8 for the authority levels). Implemented by `sc-api` from gate G1
-> (leaves `G1-SLICE.6`, `G1-SLICE.10`), with workflow parity proven at G5. Terms are defined in the
+> defined *at G0*, and §7.8 for the authority levels). Implemented in `sc-core` from gate G1
+> (leaf `G1-SLICE.6`); `sc-api` adapts transports, with workflow parity proven at G5. Terms are in the
 > [glossary](glossary.md); the diagnostics follow the [internationalization](i18n-architecture.md)
 > chapter's identity rule.
 
@@ -97,23 +97,35 @@ declared commands in §1.1. Each identity supplies its class, required authority
 undo granularity as typed metadata. Stable tokens are independent of localized labels. Lookup
 does not trim, case-fold or invent aliases; unknown names return None.
 
-```rust
-use sc_core::command::{CommandId, CommandClass, CommandAuthority, CommandUndoGranularity};
-let command = CommandId::from_token("ChangeMeasurement").expect("declared command");
-assert_eq!(command.class(), CommandClass::Mutation);
-assert_eq!(command.required_authority(), CommandAuthority::Commit);
-assert_eq!(command.undo_granularity(), CommandUndoGranularity::PerMeasurement);
-assert_eq!(CommandId::from_token("changemeasurement"), None);
-assert_eq!(CommandId::ApprovePackage.required_authority(), CommandAuthority::Approve);
-```
-
 This is declaration discovery. Catalog membership does not advertise an executable handler,
 construct a payload, grant authority or perform a transaction. Approve is required metadata for
 human approval, never an agent-held grant. Mutation previews still need only inspect; the catalog
-reports the permission required to issue the declared command itself. Payloads, authenticated
-actors/scopes, structural checks, revisions, transactions and actual workflow parity remain G1.6.
+reports the permission required to issue the declared command itself. Typed inputs are available below;
+authenticated actors/scopes, structural checks, revisions, transactions and workflow parity remain G1.6.
 
 Historical focused verification receipts remain complete in `docs/history/stitchcad-devnotes-part477.md`.
+
+### One typed request surface
+
+`CommandRequest` retains one original `CommandQuery`, `CommandMutation`, `CommandEvaluation`,
+`CommandArtifact` or `CommandRelease`. `command_id()` derives identity through the concrete payload;
+`design()`, `actor()` and `expected_revision()` expose original claims. Revisions are borrowed unchanged.
+`mutation_context()` borrows retry/group metadata only for mutations; other families return `None`.
+
+```rust
+use sc_core::{command::{CommandRequest, CommandQuery, CommandSnapshotContext,
+    CommandActorClaim, DesignRevision, QueryPayload, CommandId}, ontology::EntityId};
+let request = CommandRequest::Query(CommandQuery::new(CommandSnapshotContext::new(
+    EntityId::from_bits(1), CommandActorClaim::Human(EntityId::from_bits(2)),
+    DesignRevision::initial()), QueryPayload::GetPieceList));
+assert_eq!(request.command_id(), CommandId::GetPieceList);
+assert_eq!(request.mutation_context(), None);
+```
+
+All17 declared commands have typed inputs; evaluation/artifact/release details remain in their
+linked chapters. This shared in-process input is not a wire schema or an executable bus.
+Core authorization must authenticate callers and validate grants/current sources before handlers run.
+An agent can submit an approval intent as untrusted data; only authenticated human authority can accept it.
 
 ### Implemented initial query requests
 
@@ -176,7 +188,7 @@ owned by its later implementation. Undo's revision restoration remains §3, not 
 
 ### Implemented initial mutation payloads
 
-MutationPayload carries ChangeMeasurement, AssignMaterial, CloseDart or AddNotch. CommandMutation binds that
+MutationPayload carries ChangeMeasurement, AssignMaterial, SplitSeamSpan, CloseDart and AddNotch. CommandMutation binds that
 concrete payload to CommandMutationContext. Its command_id() is derived from the variant; there is
 no separate caller-supplied command identity that could misclassify the request. These are typed
 request shapes; handlers and current registry/authority checks remain later bus work.
@@ -211,11 +223,6 @@ local reason predicate used by canonical Piece construction rejects blank unreso
 AssignMaterialError retains the original whitespace. A nonblank reason is kept exactly. Material
 existence, kind and truth still need the actual registry and provenance checks.
 
-The focused payload target covers all five canonical states, immutable context binding, exact
-identity/source retention, original selection order/first duplicate and shared material rules.
-That target covers the first two schemas, with no command execution or approval claim. Remaining mutation
-schemas are owned by G1-SLICE.6.2.2.b; other command classes remain .6.2.2.c.
-
 CloseDart and AddNotch payloads are also available. CloseDart names the canonical dart: the bus
 resolves its held closing operation, intake and references rather than accepting copied geometry
 or a replacement intake. The target's existence/currentness and the operation's kind remain
@@ -227,10 +234,6 @@ exactly; no physical profile value or default is supplied. The request carries n
 definition_with_id composes a canonical NotchDefinition with an explicit identity supplied by the
 executing bus. It allocates nothing: the bus must allocate a fresh id and validate the actual
 piece, current anchor and profile obligations before accepting the new entity.
-
-The focused construction-payload target checks both identities, exact anchors/all bindings and
-two explicit allocated identities without caching one in the request. The earlier measurement/
-material target stays green. All five declared mutation schemas are now available; handlers remain pending.
 
 Director ruling2026-10-26 resolves D226: SplitSeamSpan splits the paired sewing correspondence
 at explicit cuts on both sides. G1-SLICE.6.2.2.b.2.b implements `SplitSeamSpan::new(span, side_a, side_b)`.
@@ -248,9 +251,7 @@ The actual target supplies copy/range ownership, direction, signed ease/distribu
 stops. The request neither duplicates those records nor supplies new result identities. Before any
 mutation, execution must resolve the current span and cuts, establish strict interior paired cuts,
 preserve reference/ease/stop obligations and allocate lineage-preserving outputs atomically. The payload
-does not edit a drafting edge or produce a split result. Four construction tests and the three existing
-measurement/material tests pass; selected strict lint/fmt and book checks pass. The canonical mutation
-variant supplies CommandId::SplitSeamSpan; no caller-provided command identity can retag it.
+creates no split result or geometry edit. All five mutation schemas are available; execution remains pending.
 
 ## 3. Atomic groups, and the granularity of undo
 

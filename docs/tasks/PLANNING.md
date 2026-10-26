@@ -1091,20 +1091,17 @@ Closed D237 report and complete0325 correction evidence remain whole in
 Closed D238 report and complete0327 correction evidence remain whole in
 [part143](../history/stitchcad-defects-part143.md). Current release identity boundary D239 follows.
 
-## D239 — detached approval boundary adopted
+Closed D239/D240 reports and complete0331 repair evidence remain whole in
+[part145](../history/stitchcad-defects-part145.md). Detached binding/records remain current.
 
-Whole diagnosis/ruling0330 is retained in [part144](../history/stitchcad-defects-part144.md).
-Owner G1-SLICE.6.2.2.c.2.5.2, P1 fixed0331: roadmap/book/decision keep a fixed approval_binding;
-separate immutable authenticated human/scope/date records bind exact candidate identity. No post-hash edit.
-- [x] ROOT CAUSE0331: old clauses lacked transition; historical witness3 and C7-null red reproduce, rc=0.
-- [x] ADDRESSED0331: ruled placement/field semantics aligned; focused release probes25/0, book/publication76/95 rc=0.
-- [x] NO REGRESSION0331: census9/6/8/0, original14 arms retained, Rust unchanged; no product approval, rc=0.
+## D241 — command overview lagged current core request schemas
 
-## D240 — release census accepted duplicate manifest field tokens
-
-Reproduce copied book with duplicated design_revision row: old C1 reports10 fields/0 failures, suite24/1.
-Root: membership comparison ignored repeated machine IDs. Impact: ambiguous field declarations passed.
-Owner G1-SLICE.6.2.2.c.2.5.2, P2 fixed0331 with uniqueness check and actual refusal arm; final25/0.
+Reproduce3419ed3 command-layer introduction: bus assigned to sc-api; mutation paragraph omits SplitSeamSpan
+and says completed schemas remain later. Current core types and active command decision contradict both.
+Root: introductory/early implementation text was not reconciled after family additions; reader can infer
+wrong ownership or missing inputs. Owner G1-SLICE.6.2.2.c.2.6, P2 fixed0335: core ownership and all17 input scope now align.
+Native request2/catalog2/query2/release6 and command census17/5/5/0, strict lint/book/publication76/100
+pass rc=0; normative command table unchanged. No executed bus or adapter parity claimed. Closed.
 
 ## Active continuity followup
 

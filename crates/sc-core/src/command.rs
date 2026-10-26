@@ -15,6 +15,7 @@ mod plot;
 mod print;
 mod query;
 mod release;
+mod request;
 mod snapshot;
 mod tech_pack;
 pub use approval::{ApprovalScopeTarget, ApprovePackage};
@@ -40,6 +41,7 @@ pub use plot::ExportPlt;
 pub use print::ExportPdf;
 pub use query::{CommandQuery, CommandQueryContext, QueryPayload};
 pub use release::{CommandRelease, PrepareRelease, PrepareReleaseError, ReleasePayload};
+pub use request::CommandRequest;
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};
 

@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0334 .6.2.2.c.2.5.5 closes current release input schemas; both concrete payloads match normative book rows.
-- Candidate/snapshot and exact identity/scope claims retain detached approval boundary; actual handlers/auth remain.
-- Changed release6/0; library identical5a30f12/other9 proofs retained. Strict lint/fmt/book/pub76-99/census0.
--488/306 whole5a30f12 source/hash/public exact0. NEXT .6.2.2.c.2.6 combined schema/source/permission review.
-- G0 MostlyDone/closure unapproved; G1 In Progress6/18 unchanged. Actor claims confer no approval authority.
+-0335 .6.2.2.c.2.6 completes shared CommandRequest/all17 typed inputs; .6.2 input scope done.
+- Five original families retain exact claims/borrowed revisions; mutation retry/group metadata stays mutation-only.
+- Native request2/catalog2/query2/release6 pass0; strict lint/fmt/book/pub76-100/census17-5-5-0 pass0.
+-489/307/145 whole3419ed3 source/hash/public exact0; D241 book ownership/payload wording fixed. NEXT .6.3 auth.
+- G0 MostlyDone/closure unapproved; G1 In Progress6/18 unchanged. No handler, grant or human approval claimed.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

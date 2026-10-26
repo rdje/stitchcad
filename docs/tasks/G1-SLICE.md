@@ -644,7 +644,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Paths: crates/sc-core/src/command.rs;crates/sc-core/tests/command_catalog_contract.rs
   Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part405md).
 - ID: `G1-SLICE.6.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: typed payload/envelope, actor/revision/key/group/effect identities and actual canonical argument contracts.
 - ID: `G1-SLICE.6.2.1`
   Status: `done`
@@ -652,7 +652,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Paths: crates/sc-core/src/ontology/id.rs;crates/sc-core/tests/id_exhaustion_contract.rs
   Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part409md).
 - ID: `G1-SLICE.6.2.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: bounded command envelope/principal/identity contract and actual typed payload schema, after D225.
 - ID: `G1-SLICE.6.2.2.a`
   Status: `done`
@@ -683,7 +683,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0296 unique metadata receipt preserves1184214; same-invocation commit/clear/check guard.
   Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part419md).
 - ID: `G1-SLICE.6.2.2.c`
-  Status: `in_progress`
+  Status: `done`
   Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.
   Children .c.1 current canonical piece/seam queries; .c.2 concrete artifact-dependent closure and remaining classes.
 - ID: `G1-SLICE.6.2.2.c.1`
@@ -692,7 +692,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part428md).
   Commit: STITCHCAD-G1-0300.
 - ID: `G1-SLICE.6.2.2.c.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: concrete evaluation/artifact/release schemas and artifact-specific GetUncertaintyClosure target.
   After canonical SizeSet/profile/artifact input work; follow actual contracts, no generic argument-map substitutes.
   Release closure depends on requested artifact's actual dependency set; no entire-design or guessed-kind closure.
@@ -746,24 +746,27 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0333 exact candidate/scope approval intent; [whole scope/proofs](../history/stitchcad-devnotes-part488.md).
 - ID: `G1-SLICE.6.2.2.c.2.5.5`
   Status: `done`
-  Goal:0334 combined ruled release input review; actual two-payload construction matches normative release rows.
-  Own existing release native target, release-book scope and parent/frontier/live records. Verify candidate
-  content/snapshot, exact opaque identity/scope claims, generate versus human-only approve and detached boundary.
-  New native row coverage watches concrete schemas; actual hashing/auth/subject/scope/date/records still handlers.
-  Reuse0333 unchanged library/other9 focused proof; changed native release target, strict selected lint/fmt,
-  book/publication/census. No real approval or full bus/exit claim. Full CI stays integration/pre-push.
-  Own488 whole0333 task/oldest0310 lesson and306 ledger from5a30f12, exact source/hash/public before retirement.
-  Close .2.5 input scope only; next .2.6 combined schema/source/permission review before actual .6.3 authority.
-  - [x] ROOT CAUSE (WHY + WHERE): final ruled release input inventory requires concrete schema coverage;
-    native release6/0 constructs both normative commands and checks exact class identity; rc=0.
-  - [x] ADDRESSED: candidate/approval inputs retain content, snapshots and exact identity/scope claims;
-    selected strict lint/fmt/book/publication76/99/census9/6/8/0 pass; rc=0.
-  - [x] NO REGRESSION: library byte-identical5a30f12, other9 focused proofs retained;488/306 exact Git/hash/
-    public equality pass. No approval/hash/date/record execution claimed; rc=0.
-  Commit0334; .2.5 input scope done. Promotion declined: existing ruled boundary; full CI integration/pre-push.
+  Goal:0334 combined release schema review; [whole scope/proofs](../history/stitchcad-devnotes-part489.md).
 - ID: `G1-SLICE.6.2.2.c.2.6`
-  Status: `pending`
-  Goal: bounded current schema/source/permission metadata review before actual authorization/handlers .6.3+.
+  Status: `done`
+  Goal:0335 unified typed CommandRequest and current schema/source/permission review before .6.3 authority.
+  Own core command request module/reexports, focused native request target and publication map; preserve
+  all five original family values, derived identity, Design/actor/exact revision and mutation-only metadata.
+  No transport codec, authenticated grant, transaction or handler implied. Review concrete17 inventory and
+  family proofs against canonical book/roadmap4.4/7.8/10; close .6.2 input scope only if all children satisfy it.
+  D241 stale book introduction assigns bus to sc-api and old payload paragraphs omit completed schemas;
+  reproduce against current core types/decision owner. Own correction and PLANNING report, no policy change.
+  Own489 whole0334 task/0311–0312 lessons/prior book example and proof paragraphs,307 ledger and145 D239/D240 closed reports
+  from3419ed3; verify original Git intervals/hash/public equality before retirement. Keep current contracts.
+  Focused request/catalog/release/query plus selected lint/fmt/book/publication/command census; full CI
+  remains integration/pre-push. No app, authenticated approval or complete bus/G1 exit claim.
+  - [x] ROOT CAUSE (WHY + WHERE): one bus input must retain actual family schema/claims rather than an
+    adapter argument map; native request2/catalog2/query2/release6 pass12/0; rc=0.
+  - [x] ADDRESSED: shared typed request preserves payload-derived identity, Design/actor/exact borrowed
+    revision and mutation-only context; selected strict lint/fmt/book/publication76/100 pass; rc=0.
+  - [x] NO REGRESSION: normative17-row table identical3419ed3 and family implementations unchanged;
+    command census17/5/5/0 and489/307/145 source/hash/public equality pass. D241 corrected; rc=0.
+  Commit0335; .6.2 input scope complete, .6.3 actual authority next. Promotion: existing command decision.
 - ID: `G1-SLICE.6.3`
   Status: `pending`
   Goal: core-scoped authority/grant validation, human-only approval, actual actor/principal and denial tests.

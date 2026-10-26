@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; catalog/request foundations through0300 implemented, bus handlers pending
+- **Status:** `active`; all17 typed request schemas and shared core input implemented; bus handlers pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -109,3 +109,9 @@ payloads. Variant-derived identity stays query/inspect; no mutation replay/group
 Native query2/0 plus catalog2/0 check original contexts/targets and metadata, including exact revision
 values beyond128 bits. Artifact-specific uncertainty closure follows actual concrete artifact inputs;
 this foundation produces no result, geometric walk, mutable cache or authenticated authority.
+
+0335 .6.2.2.c.2.6 completes the shared in-process CommandRequest over five original family values.
+Identity is payload-derived; Design/actor/revision and mutation-only retry/group metadata are preserved.
+Core owns authorization and invariants; sc-api is an adapter. No wire codec, grant or handler follows
+from constructing data. Evaluation/artifact/release schemas, including D239 detached approval intent,
+are now present; actual source validation, execution and human approval remain .6.3+ obligations.

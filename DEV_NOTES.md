@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — one typed command input surface
+
+0335 .6.2.2.c.2.6 wraps all five original families with payload-derived identity and exact shared claims.
+Revision/mutation context borrows retain original objects; no codec, grant, handler or new retry/group allocation.
+Native request2/catalog2/query2/release6 pass0; strict selected lint/fmt/book/pub76-100/census17-5-5-0 pass0.
+Normative table identical3419ed3; other family implementations unchanged. D241 stale book ownership/input text fixed.
+489/307/145 whole3419ed3 exact0. Promotion: existing command decision; .6.2 input scope done, .6.3 auth next.
+
 ## _(2026-10-26 UTC)_ — release input-schema review
 
 0334 .6.2.2.c.2.5.5 closes two concrete release inputs against normative book rows; changed target6/0.
@@ -183,21 +191,11 @@ Missing break/factor and wrong role/kind refuse; all canonical states and zero/n
 Garment15+MTM8 pass0; selected strict lint/fmt/book0; value-less scaling observation/evaluation check0.
 454/455/456/285 whole62aea02 Git/hash/public exact0. G1still5/18; chart replacement .3.2 next. Promotion: existing SizeSet decision extended; G3/G4 own multiplication, constraints and truth; broad gates later.
 
-## _(2026-10-26 UTC)_ — authored label and base transformation intent
+[Complete label/base intent lesson](docs/history/stitchcad-devnotes-part489.md) retains
+original input/validation boundaries, exact source and focused proofs.
 
-0312 .4c.4.2 validates exact source/domain, identity/evidence and explicit member label/base payloads.
-Partial mappings preserve vector/member order and exact labels; final collisions refuse, swaps work.
-Five states retain evidence/assumption/request/provenance/formula; Unknown/Derived lack payloads.
-Garment13+MTM8 pass0; strict selected lint/fmt/book0. Source stays unchanged, MTM grading still refuses.
-452/453/284 whole214c80a Git/hash/public exact0. G1still5/18; canonical break/chart bindings .3 next.
-Promotion: existing SizeSet decision extended; execution/registry/evidence truth and broad gates retain later owners.
-
-## _(2026-10-26 UTC)_ — selected profile pin and immutable SizeSet origin
-
-0311 .4c.4.1 retains exact distinct profile/schema/content labels, with G4 validation explicit.
-Origin checks actual source revision and separate target against garment/MTM record identities;
-no source mutation, allocator or transformed output. Pin3+garment8+MTM7 pass0; strict lint/fmt/book0.
-450/451/283 whole5a87ed0 Git/hash/public exact0. G1still5/18; .4.2 payloads next. Promotion: existing SizeSet decision; broad checks remain integration/pre-push.
+[Complete immutable SizeSet origin lesson](docs/history/stitchcad-devnotes-part489.md) retains
+original implementation, verification and remaining execution owners.
 
 [Complete chart/body/break scope lesson](docs/history/stitchcad-devnotes-part488.md) retains
 its original acceptance, retained proof, fixes and remaining intent/execution boundaries.
