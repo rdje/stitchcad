@@ -26,6 +26,27 @@ Every semantic entity carries an **entity id**: a ULID, assigned once at creatio
 re-derived from content. Ids are stable across saves, grades and exports, which is what makes evidence,
 approvals and manifests able to name a specific object.
 
+The implemented injected IdGenerator returns Result<EntityId, IdError>. Allocation is fallible:
+the deterministic generator issues its final available128-bit identity once, then returns
+IdError::Exhausted on every later call. It never wraps to zero or repeats an earlier identity.
+An explicit from_start(0) still begins a separate deterministic sequence at zero; new() begins at1.
+Production clock/entropy sources remain injected rather than read by domain code.
+
+```rust
+use sc_core::ontology::{DeterministicIdGenerator, EntityId, IdError, IdGenerator};
+let mut ids = DeterministicIdGenerator::from_start(u128::MAX);
+assert_eq!(ids.next_id(), Ok(EntityId::from_bits(u128::MAX)));
+assert_eq!(ids.next_id(), Err(IdError::Exhausted));
+assert_eq!(ids.next_id(), Err(IdError::Exhausted));
+```
+
+Declare/split/merge/reverse/delete/offset validate their arguments before allocation. An allocator
+refusal returns LedgerError::IdGeneration with the original IdError and its standard error source,
+leaving the journal, live-edge set and registrations unchanged. This supports deterministic retry
+and preserves valid operation identities; command-level transactions remain a separate layer.
+The focused exhaustion target checks terminal boundaries, all six edits with two actual allocator
+errors, unchanged complete state and precondition-before-allocation ordering.
+
 Geometric sub-entities are addressed through **stable topological references**, not indices:
 
 - `EdgeRef` — an edge of a piece boundary, of a hole, or of an internal construction line, identified

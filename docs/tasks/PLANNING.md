@@ -1109,6 +1109,12 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   with original successful comparisons intact; actual absence-guard and Git-scope omissions fail their
   independent assertions. Native retention/source proofs pass; no committed windows changed. Closed.
 
+- **D225** — deterministic ID allocation wraps at u128::MAX, violating monotonic nonreuse.
+  Reproduce: from_start(u128::MAX), call next_id twice; the counter uses wrapping_add and yields MAX then0.
+  Owner/schedule: G1-SLICE.6.2.1, P1 fixed0292 before envelopes. Red101→focused3/0; terminal typed
+  exhaustion and original error propagation preserve all six edits' complete ledger state. Unit10/0,
+  affected target compilation and selected strict lint pass0. All actual callers migrated. Closed.
+
 - **D222** — live D217 retained-record check depends on raw archive paths.
   Census: d217_probe.py retained() declares/reads physical303/304/208 while run_handoff_probes.sh calls
   it as a current check. All three are currently raw and retrievable; no present missing-file failure

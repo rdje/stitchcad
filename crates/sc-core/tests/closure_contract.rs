@@ -29,7 +29,7 @@ fn fixture() -> Fixture {
     };
     let piece = Piece::new(
         PieceDefinition {
-            id: ids.next_id(),
+            id: ids.next_id().expect("test ID capacity"),
             boundary: vec![directed(0)],
             holes: vec![],
             construction_lines: vec![directed(1), directed(2), directed(3)],

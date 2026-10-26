@@ -618,23 +618,33 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 - ID: `G1-SLICE.6.1`
   Status: `done`
-  Goal:0291 typed declared command catalog/class/authority/reversibility/undo metadata, checked against book.
-  Paths: crates/sc-core/src/command.rs;crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml;crates/sc-core/tests/command_catalog_contract.rs
-  Own402 whole0290 task,403 oldest0266 lesson,263 whole0290 ledger,404 whole closed population subtree before growth.
-  Also own capture_window14.py/.doctrine/history_archive/window14.json/windows.json/docs/history/
-  and archive-reader book: fixed64-file reader refused after403; pack only committed b49128e sources.
-  Metadata only; no handler/authorization/transaction availability claim. Focused native/lint/book.
-  Acceptance0291:
-  - [x] REPRODUCE: normative command table existed without native typed discovery metadata.
-  - [x] ROOT CAUSE0291: local_environment.py -- cargo test -p sc-core --test command_catalog_contract:2/0, rc=0; actual book17-row comparison closes catalog binding.
-  - [x] FIX: immutable IDs/class/permission/reversibility/undo metadata and exact lookup; no handlers or grants implied.
-  - [x] ADDRESSED0291: same native2/0 plus command-layer census17/5/5/0 failures, rc=0; strict names and release distinction pass.
-  - [x] NO REGRESSION0291: selected lib/test strict Clippy/fmt pass, rc=0; capture_window14.py source/materialize/public50 exact, prior13 unchanged, rc=0. No archive cap/reader changes; broad integration/pre-push.
-  - [x] LOCKSTEP:402/403/404/263 whole Git/hash/public exact, rc=0; book build rc=0. Fixed64 limit triggered at403, resolved by packing committed50. G1still5/18; README/live align.
-  Promotion declined: implementation of existing command contract; no new policy. Commit: STITCHCAD-G1-0291.
+  Goal:0291 typed17-command catalog/book2/0/lint0 and exact window14 packing verified.
+  Paths: crates/sc-core/src/command.rs;crates/sc-core/tests/command_catalog_contract.rs
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part405.md).
 - ID: `G1-SLICE.6.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: typed payload/envelope, actor/revision/key/group/effect identities and actual canonical argument contracts.
+- ID: `G1-SLICE.6.2.1`
+  Status: `done`
+  Goal:0292 own D225 generator exhaustion before command identities; reproduce MAX→0 wrap then typed refusal.
+  Paths: crates/sc-core/src/ontology/id.rs;crates/sc-core/src/ontology/topology.rs;crates/sc-core/src/ontology/mod.rs
+  Own affected crates/sc-core tests/callers and crates/sc-core/tests/id_exhaustion_contract.rs.
+  Additional source caller: crates/sc-core/src/ontology/reference.rs.
+  Audit actual call sites; make allocation fallible and preserve ledger state on exhaustion.
+  Own405 whole0291 catalog task,406 oldest0267 lesson,264 whole0291 ledger before live growth.
+  Also own407 whole sourced-call summaries/retentions and408 whole archive13 summary/retention.
+  Focused allocator/ledger boundary checks and affected compile/lint; book/live/identity decision sync.
+  Acceptance0292:
+  - [x] REPRODUCE: native id_exhaustion_contract fails101 with MAX→0, before the fix.
+  - [x] ROOT CAUSE0292: cargo test -p sc-core --test id_exhaustion_contract red101; wrapping_add and infallible IdGenerator could not represent exhaustion.
+  - [x] FIX: fallible allocation, terminal optional counter and original error propagation before six ledger edits; actual callers migrated.
+  - [x] ADDRESSED0292: same focused target3/0, rc=0; MAX/MAX-1 terminal cases, twelve allocator refusals and six precondition-priority cases preserve complete state.
+  - [x] NO REGRESSION0292: ontology::id unit10/0; sc-core --all-targets --no-run and selected lib/changed-test strict Clippy/fmt pass, rc=0. No full runtime suite; integration/pre-push owns broad checks.
+  - [x] LOCKSTEP:405/406/407/408/264 whole Git/hash/public exact rc=0; book build rc=0. D225 closed, G1still5/18; no persisted identity change.
+  Promotion declined: repair to existing nonreuse contract. Commit: STITCHCAD-G1-0292.
+- ID: `G1-SLICE.6.2.2`
+  Status: `pending`
+  Goal: bounded command envelope/principal/identity contract and actual typed payload schema, after D225.
 - ID: `G1-SLICE.6.3`
   Status: `pending`
   Goal: core-scoped authority/grant validation, human-only approval, actual actor/principal and denial tests.

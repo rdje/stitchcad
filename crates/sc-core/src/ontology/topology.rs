@@ -37,7 +37,7 @@ use std::collections::{BTreeMap, BTreeSet};
 
 use sc_units::{Length, UnitError};
 
-use super::id::{EntityId, IdGenerator};
+use super::id::{EntityId, IdError, IdGenerator};
 use super::rational::Rational;
 use super::reference::{EdgeRef, LocalTag, Param};
 
@@ -642,6 +642,8 @@ impl fmt::Display for ReleaseReadiness {
 /// house diagnostic convention (`sc-units`' `UnitError`, `.3a`'s `IdError`/`ParamError`).
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum LedgerError {
+    /// The injected allocator refused before this edit changed the ledger.
+    IdGeneration(IdError),
     /// The edit named an edge that is not live — never declared, or already consumed by a split, a
     /// merge, an offset or a delete.
     NotLive {
@@ -706,6 +708,7 @@ pub enum LedgerError {
 impl fmt::Display for LedgerError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::IdGeneration(error) => write!(f, "identity allocation refused: {error}"),
             Self::NotLive { edge } => write!(
                 f,
                 "{edge} is not a live edge: never declared, or already consumed by an edit (ontology §1.1)"
@@ -742,7 +745,14 @@ impl fmt::Display for LedgerError {
     }
 }
 
-impl std::error::Error for LedgerError {}
+impl std::error::Error for LedgerError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::IdGeneration(error) => Some(error),
+            _ => None,
+        }
+    }
+}
 
 /// The identity contract's state: an append-only journal of topology edits, the live-edge set that
 /// journal implies, and the references consumers have registered against it.
@@ -808,6 +818,8 @@ impl IdentityLedger {
     ///
     /// [`LedgerError::NoEdges`] when `count` is zero, [`LedgerError::TooManyEdges`] when it exceeds
     /// [`MAX_EDGES_PER_OPERATION`].
+    ///
+    /// An injected allocator refusal returns [`LedgerError::IdGeneration`] before state changes.
     pub fn declare_edges(
         &mut self,
         ids: &mut impl IdGenerator,
@@ -819,7 +831,7 @@ impl IdentityLedger {
         if count > MAX_EDGES_PER_OPERATION {
             return Err(LedgerError::TooManyEdges { count });
         }
-        let operation = ids.next_id();
+        let operation = ids.next_id().map_err(LedgerError::IdGeneration)?;
         let mut edges = Vec::new();
         for slot in 0..count {
             // `count` is bounded by `MAX_EDGES_PER_OPERATION`, far inside `u32`, so the conversion
@@ -845,6 +857,8 @@ impl IdentityLedger {
     ///
     /// [`LedgerError::NotLive`] when `source` is not live, [`LedgerError::SplitAtEndpoint`] when `at`
     /// is `0` or `1`.
+    ///
+    /// An injected allocator refusal returns [`LedgerError::IdGeneration`] before state changes.
     pub fn split(
         &mut self,
         ids: &mut impl IdGenerator,
@@ -857,7 +871,7 @@ impl IdentityLedger {
         if at == Param::START || at == Param::END {
             return Err(LedgerError::SplitAtEndpoint { at });
         }
-        let operation = ids.next_id();
+        let operation = ids.next_id().map_err(LedgerError::IdGeneration)?;
         let fragments = SplitFragments {
             first: EdgeRef::new(operation, LocalTag::FIRST),
             second: EdgeRef::new(operation, LocalTag::new(1)),
@@ -889,6 +903,8 @@ impl IdentityLedger {
     ///
     /// [`LedgerError::NotLive`] for a source that is not live, [`LedgerError::MergeSameEdge`] when both
     /// sides name one edge, [`LedgerError::NonPositiveLength`] for a length that is zero or negative.
+    ///
+    /// An injected allocator refusal returns [`LedgerError::IdGeneration`] before state changes.
     pub fn merge(
         &mut self,
         ids: &mut impl IdGenerator,
@@ -918,7 +934,7 @@ impl IdentityLedger {
                 length: second_length,
             });
         }
-        let operation = ids.next_id();
+        let operation = ids.next_id().map_err(LedgerError::IdGeneration)?;
         let merged = EdgeRef::new(operation, LocalTag::FIRST);
         self.live.remove(&first);
         self.live.remove(&second);
@@ -943,6 +959,8 @@ impl IdentityLedger {
     /// # Errors
     ///
     /// [`LedgerError::NotLive`] when `edge` is not live.
+    ///
+    /// An injected allocator refusal returns [`LedgerError::IdGeneration`] before state changes.
     pub fn reverse(
         &mut self,
         ids: &mut impl IdGenerator,
@@ -951,7 +969,7 @@ impl IdentityLedger {
         if !self.is_live(edge) {
             return Err(LedgerError::NotLive { edge });
         }
-        let operation = ids.next_id();
+        let operation = ids.next_id().map_err(LedgerError::IdGeneration)?;
         self.push(operation, TopologyEdit::Reverse { edge });
         Ok(operation)
     }
@@ -963,6 +981,8 @@ impl IdentityLedger {
     /// # Errors
     ///
     /// [`LedgerError::NotLive`] when `edge` is not live.
+    ///
+    /// An injected allocator refusal returns [`LedgerError::IdGeneration`] before state changes.
     pub fn delete(
         &mut self,
         ids: &mut impl IdGenerator,
@@ -971,7 +991,7 @@ impl IdentityLedger {
         if !self.is_live(edge) {
             return Err(LedgerError::NotLive { edge });
         }
-        let operation = ids.next_id();
+        let operation = ids.next_id().map_err(LedgerError::IdGeneration)?;
         self.live.remove(&edge);
         self.push(operation, TopologyEdit::Delete { edge });
         Ok(operation)
@@ -991,6 +1011,8 @@ impl IdentityLedger {
     /// empty, [`LedgerError::TooManyEdges`] beyond [`MAX_EDGES_PER_OPERATION`],
     /// [`LedgerError::IntervalsUnordered`] when a pair overlaps or descends. (An empty interval is
     /// refused earlier, by [`OffsetInterval::new`].)
+    ///
+    /// An injected allocator refusal returns [`LedgerError::IdGeneration`] before state changes.
     pub fn offset(
         &mut self,
         ids: &mut impl IdGenerator,
@@ -1016,7 +1038,7 @@ impl IdentityLedger {
                 });
             }
         }
-        let operation = ids.next_id();
+        let operation = ids.next_id().map_err(LedgerError::IdGeneration)?;
         let mut fragments = Vec::with_capacity(intervals.len());
         for (slot, interval) in intervals.iter().enumerate() {
             // Bounded above, as in `declare_edges`: the conversion cannot fail, and the map keeps the
@@ -1549,7 +1571,7 @@ mod tests {
             "a refused edit records nothing"
         );
         assert_eq!(
-            ids.next_id(),
+            ids.next_id().unwrap(),
             EntityId::from_bits(1),
             "a refused edit consumes no identity, so a failing script replays like a passing one"
         );
@@ -1582,7 +1604,7 @@ mod tests {
             LedgerError::NotLive { .. }
         ));
         assert_eq!(
-            ids.next_id(),
+            ids.next_id().unwrap(),
             EntityId::from_bits(2),
             "only the declaration minted; every refusal consumed nothing"
         );

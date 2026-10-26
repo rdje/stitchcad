@@ -240,11 +240,11 @@ mod tests {
     #[test]
     fn references_built_from_a_deterministic_generator_are_reproducible() {
         let mut g = DeterministicIdGenerator::new();
-        let e1 = EdgeRef::new(g.next_id(), LocalTag::FIRST);
-        let e2 = EdgeRef::new(g.next_id(), LocalTag::FIRST);
+        let e1 = EdgeRef::new(g.next_id().expect("test ID capacity"), LocalTag::FIRST);
+        let e2 = EdgeRef::new(g.next_id().expect("test ID capacity"), LocalTag::FIRST);
         let mut h = DeterministicIdGenerator::new();
-        let f1 = EdgeRef::new(h.next_id(), LocalTag::FIRST);
-        let f2 = EdgeRef::new(h.next_id(), LocalTag::FIRST);
+        let f1 = EdgeRef::new(h.next_id().expect("test ID capacity"), LocalTag::FIRST);
+        let f2 = EdgeRef::new(h.next_id().expect("test ID capacity"), LocalTag::FIRST);
         assert_eq!(
             (e1, e2),
             (f1, f2),

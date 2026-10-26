@@ -27,7 +27,7 @@ fn fixture() -> (PieceDefinition, IdentityLedger, DeterministicIdGenerator) {
         })
         .collect::<Vec<_>>();
     let definition = PieceDefinition {
-        id: ids.next_id(),
+        id: ids.next_id().expect("test ID capacity"),
         boundary: directed.iter().take(4).copied().collect(),
         holes: vec![directed.iter().skip(4).take(3).copied().collect()],
         construction_lines: directed.iter().skip(7).copied().collect(),
@@ -358,7 +358,7 @@ fn endpoint_inventory_cannot_certify_the_interior_of_an_edge_range() {
 fn the_reference_skirts_cut_once_pair_members_print_their_own_handedness() {
     // D56: reference-skirt §6 has separate L/R back Piece entities, each cut once.
     let (mut right, mut ledger, mut ids) = fixture();
-    let left_id = ids.next_id();
+    let left_id = ids.next_id().expect("test ID capacity");
     let mut left = right.clone();
     left.id = left_id;
     let left_edges = ledger.declare_edges(&mut ids, 8).unwrap();

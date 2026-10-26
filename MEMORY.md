@@ -4,13 +4,15 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0291 .6.1 complete: typed17-command catalog/class/authority/reversibility/undo metadata; no handlers/grants.
-- Native book-table2/0, selected strict Clippy/fmt, command census17/5/5/0, book pass0. G1still5/18.
-- Next .6.2: inspect actual payload/actor/revision/group contracts; own bounded envelope slice before code.
-- .6.3–.6.9 track authority/aggregate/transactions/retry/audit/history/progress/final bus acceptance.
-- Window14 packs50 complete b49128e raw records:93940B→27917B, source/materialize/public exact; prior13 unchanged.
-- Frozen capture_window14.py is a historical source producer; do not rerun current HEAD.
--402/403/404/263 whole0290 task/0266 lesson/closed population subtree/0290 ledger exact Git/hash/public.
+-0292 .6.2.1 complete: D225 MAX→0 wrap reproduced red101, fixed terminal typed ID exhaustion.
+- IdGenerator::next_id now Result<EntityId,IdError>; all actual callers migrated.
+- Six allocating ledger edits preserve full state/original IdError/source; preconditions first.
+- Focused3/0, id units10/0, sc-core all-target compile-only and selected strict Clippy/fmt/book pass0.
+- Next .6.2.2: inspect/own bounded command envelope/principal/identity and actual payload contracts.
+- Catalog0291 native17 identities/book2/0 available; handlers/auth grants/transactions remain later .6.
+- Window14 packs50 b49128e raw records:93940B→27917B, source/materialize/public exact; prior13 unchanged.
+- Frozen capture_window14.py is a historical producer, not a current-HEAD rerun.
+-405/406/407/408/264 retain whole0291 task/0267 lesson/closed source summaries/archive13/0291 ledger exactly.
 - Tangent .5d.1.2.2.2.d.1 gives distance>=90M/(U+1),148bit output; focused8798/586/2 pass0.
 - Practical tangent rounding plan P1 .d.2 pending; no domain narrowing, cutoff or borrowed certificate.
 -0288 native inverse3/0 with27/54 oracle values;0289 sourced inverse call target8/0/lint0.

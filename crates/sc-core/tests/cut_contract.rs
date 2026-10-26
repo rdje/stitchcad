@@ -236,12 +236,12 @@ fn injected_identity_sequences_replay_copy_definitions_byte_for_byte() {
         let mut ids = DeterministicIdGenerator::new();
         vec![
             CutCopyDefinition {
-                id: ids.next_id(),
+                id: ids.next_id().expect("test ID capacity"),
                 piece: piece.id(),
                 orientation: CopyOrientation::Authored,
             },
             CutCopyDefinition {
-                id: ids.next_id(),
+                id: ids.next_id().expect("test ID capacity"),
                 piece: piece.id(),
                 orientation: CopyOrientation::Authored,
             },

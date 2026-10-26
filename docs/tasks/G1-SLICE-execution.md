@@ -79,13 +79,11 @@ The original working execution block was copied byte-for-byte; later entries rem
   Acceptance: [whole scope/six proof boxes/book-map repair](../history/window14.md#stitchcad-devnotes-part367md).
 - ID: `G1-SLICE.5e.2.h13`
   Status: `done`
-  Goal:0276 window13 packs52 whole records; prior12/source/read/materialization exact.
-  Paths: docs/history/;.doctrine/history_archive/;docs/tasks/artifacts/history_archive/capture_window13.py
-  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part370md).
-  Retention0277, owned .5d.1.2.2.2.a:
-  - [x] ROOT CAUSE0277: git show3d97348:docs/tasks/G1-SLICE-execution.md interval5838:8312 is whole2474B, Python hash comparison rc=0.
-  - [x] ADDRESSED0277: retained370 body/source/hash exact, Python comparison rc=0.
-  - [x] NO REGRESSION0277: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part370.md returns whole file byte-exact, Python comparison rc=0; no reader change.
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part408.md).
+  Retention0292 owned .6.2.1:
+  - [x] ROOT CAUSE0292: git show6662298 whole sourced-call/archive13 records retained407/408; Python byte/hash comparison rc=0.
+  - [x] ADDRESSED0292: whole source/hash exact in407/408, Python comparison rc=0.
+  - [x] NO REGRESSION0292: scripts/history_archive.py --root . read407/408 whole public files exact, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5e.2.4`
   Status: `pending`
   Goal: bounded source-order expression execution consuming actual node proofs and sourced values.
@@ -141,20 +139,7 @@ The original working execution block was copied byte-for-byte; later entries rem
 
 - ID: `G1-SLICE.5e.3.6`
   Status: `done`
-  Goal:0281 sourced sin/cos exact-axis/storage/T1 propagation native6/0/lint0.
-  Paths: crates/sc-core/src/recipe/evaluated/calls.rs;crates/sc-core/tests/formula_evaluated_calls_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part381md).
-  Retention0282, owned .5d.1.2.2.2.b.2.a:
-  - [x] ROOT CAUSE0282: git show83de197 whole sourced sincos node retained381; Python source/hash comparison rc=0.
-  - [x] ADDRESSED0282: complete node381/source/hash byte equality, Python comparison rc=0.
-  - [x] NO REGRESSION0282: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part381.md whole file exact, Python comparison rc=0; no reader change.
-
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part407.md).
 - ID: `G1-SLICE.5e.3.7`
   Status: `done`
-  Goal:0289 sourced inverse exact axes/both operand sources/storage/T1/kind priority verified8/0/lint0.
-  Paths: crates/sc-core/src/recipe/evaluated/calls.rs;crates/sc-core/tests/formula_evaluated_calls_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part398md).
-  Retention0290 owned .5d.1.2.2.2.d.1:
-  - [x] ROOT CAUSE0290: git showcbbfb7c whole0289 task retained398; Python source/hash comparison rc=0.
-  - [x] ADDRESSED0290: whole node/source/hash exact in398, Python comparison rc=0.
-  - [x] NO REGRESSION0290: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part398.md exact whole file, Python comparison rc=0; no reader change.
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part407.md).

@@ -155,9 +155,11 @@ fn crockford_value(b: u8) -> Result<u8, IdError> {
     Ok(v)
 }
 
-/// Every way an id can fail to be built or parsed.
+/// Every way an id can fail to be built, parsed or allocated.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IdError {
+    /// No unused identity remains in the generator's sequence.
+    Exhausted,
     /// The millisecond timestamp does not fit the ULID's 48 bits.
     TimestampOverflow {
         /// The offending value.
@@ -183,6 +185,7 @@ pub enum IdError {
 impl fmt::Display for IdError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::Exhausted => f.write_str("entity id generator exhausted; no identity allocated"),
             Self::TimestampOverflow { value } => write!(
                 f,
                 "timestamp {value} ms exceeds the ULID's {TIMESTAMP_BITS}-bit maximum {MAX_TIMESTAMP_MS}"
@@ -212,33 +215,37 @@ impl std::error::Error for IdError {}
 /// The command bus (`G1-SLICE.6`, the only mutation path) holds the production generator; domain code takes
 /// ids from whatever generator it is given and never reads a clock directly.
 pub trait IdGenerator {
-    /// The next id. Implementations must return distinct, monotonically non-decreasing ids so that creation
-    /// order is preserved (the property ULID's layout exists to give).
-    fn next_id(&mut self) -> EntityId;
+    /// The next unused id, strictly increasing within this generator's sequence.
+    ///
+    /// # Errors
+    /// Refuses allocation when the generator cannot supply a valid unused identity. Exhaustion
+    /// must never wrap, repeat an earlier identity or silently substitute another sequence.
+    fn next_id(&mut self) -> Result<EntityId, IdError>;
 }
 
 /// A reproducible generator: a counter over the id's bits, with no clock and no entropy.
 ///
 /// Two runs that create the same objects in the same order get byte-identical ids, which is what makes
 /// recipe re-evaluation and CLI replay deterministic (ontology §9, `G1-SLICE.10`). The ids it produces are
-/// well-formed `u128` values with a zero timestamp half — valid identities, just not wall-clock ones, which
-/// is exactly right for a test or a replay that must not depend on when it ran.
+/// well-formed `u128` values from the explicit seed, without reading a wall clock. The numeric counter
+/// may fill either ULID field; replay depends on its seed and call order, not when it ran.
 #[derive(Clone, Copy, Debug)]
 pub struct DeterministicIdGenerator {
-    next: u128,
+    next: Option<u128>,
 }
 
 impl DeterministicIdGenerator {
     /// A generator whose first id is `1` (never the nil id `0`).
     #[must_use]
     pub const fn new() -> Self {
-        Self { next: 1 }
+        Self { next: Some(1) }
     }
 
     /// A generator whose first id is `start`, for tests that need a specific sequence.
+    /// Issues the maximum value once; subsequent allocation returns IdError::Exhausted.
     #[must_use]
     pub const fn from_start(start: u128) -> Self {
-        Self { next: start }
+        Self { next: Some(start) }
     }
 }
 
@@ -249,12 +256,10 @@ impl Default for DeterministicIdGenerator {
 }
 
 impl IdGenerator for DeterministicIdGenerator {
-    fn next_id(&mut self) -> EntityId {
-        let id = EntityId::from_bits(self.next);
-        // Wrapping is unreachable in practice (2^128 ids), and a wrap would still be deterministic; the
-        // generator never panics, per the workspace lints.
-        self.next = self.next.wrapping_add(1);
-        id
+    fn next_id(&mut self) -> Result<EntityId, IdError> {
+        let value = self.next.ok_or(IdError::Exhausted)?;
+        self.next = value.checked_add(1);
+        Ok(EntityId::from_bits(value))
     }
 }
 
@@ -342,8 +347,8 @@ mod tests {
         let mut b = DeterministicIdGenerator::new();
         let mut prev: Option<EntityId> = None;
         for _ in 0..5 {
-            let ia = a.next_id();
-            let ib = b.next_id();
+            let ia = a.next_id().expect("test ID capacity");
+            let ib = b.next_id().expect("test ID capacity");
             assert_eq!(ia, ib, "the replay property: same generator, same ids");
             assert_eq!(
                 ia.to_string(),
@@ -363,7 +368,10 @@ mod tests {
     #[test]
     fn the_generator_never_emits_the_nil_id_first() {
         let mut g = DeterministicIdGenerator::new();
-        assert_ne!(g.next_id(), EntityId::from_bits(0));
+        assert_ne!(
+            g.next_id().expect("test ID capacity"),
+            EntityId::from_bits(0)
+        );
     }
 
     #[test]

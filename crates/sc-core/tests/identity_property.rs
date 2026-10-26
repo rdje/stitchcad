@@ -236,8 +236,8 @@ fn a_deterministic_generator_reproduces_its_sequence() {
     let mut b = DeterministicIdGenerator::new();
     let mut last: Option<EntityId> = None;
     for _ in 0..CASES {
-        let ia = a.next_id();
-        let ib = b.next_id();
+        let ia = a.next_id().expect("test ID capacity");
+        let ib = b.next_id().expect("test ID capacity");
         assert_eq!(ia, ib, "two fresh generators agree");
         assert_eq!(
             ia.to_string(),

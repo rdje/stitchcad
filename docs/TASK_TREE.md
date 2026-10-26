@@ -79,7 +79,7 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-**`G1-SLICE.6.1`** adds typed command metadata; payloads .6.2 next. Tangent .5d.1.2.2.2.d.2 stays P1.
+**`G1-SLICE.6.2.1`** fixes D225 ID exhaustion; envelope contract .6.2.2 next. Tangent .5d.1.2.2.2.d.2 stays P1.
 [Execution frontier](tasks/G1-SLICE-execution.md) resumes at .5e.2.4; D70 ruling remains pending.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.

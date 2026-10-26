@@ -5,11 +5,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
-## STITCHCAD-G1-0291 — typed declared command catalog
+## STITCHCAD-G1-0292 — terminal identity allocation and atomic refusal
 
-.6.1: native17-command metadata/discovery matches actual book table, focused2/0/lint/census/book pass0.
-Window14 packs50 byte-exact committed files; prior13 unchanged.402/403/404/263 retain whole history.
-No handlers/grants claimed; payloads/authority/transactions remain owned. G1still5/18.
+.6.2.1 closes D225 MAX→0 wrap: typed terminal exhaustion and original allocator errors before six ledger edits.
+Focused3/0, id10/0, affected target compilation/selected lint/fmt/book pass0; all callers migrated.
+405/406/407/408/264 retain whole history. Command envelopes next; no persisted identity change.
+
+| [part264](docs/history/stitchcad-changelog-part264.md) | whole0291 | 6 lines, 350 bytes, sha256:ccd9ded0… |
 
 | [part263](docs/history/stitchcad-changelog-part263.md) | whole0290 | 5 lines, 290 bytes, sha256:9382f49f… |
 

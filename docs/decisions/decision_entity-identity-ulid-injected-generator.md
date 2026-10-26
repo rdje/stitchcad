@@ -41,3 +41,15 @@ from content** (ontology §1).
 - A persisted id is never regenerated; identity is stable across saves, grades and exports (ontology §1).
 - Related: [[decision_property-tests-dependency-free-recorded-seed]] (the same dependency-free discipline),
   [[decision_ontology-invariants-structural-g1-geometric-g2]] (the leaf this enables).
+
+## Exhaustion repair0292
+
+D225 reproduced from_start(u128::MAX) returning MAX then0 because wrapping_add advanced an
+infallible counter. The public IdGenerator allocation boundary now returns Result<EntityId, IdError>.
+Deterministic allocation keeps an optional next value, issues MAX once, then returns Exhausted
+permanently. No identity is fabricated, repeated or silently moved to another sequence.
+All actual callers handle the result. Six allocating ledger edits propagate the original IdError
+as LedgerError::IdGeneration, including the standard error chain, before any ledger mutation.
+Their existing argument/precondition priority is retained. new() still starts at1; explicit seed0
+remains a valid separate deterministic sequence. This corrects implementation to the original
+nonreuse contract and introduces no clock, entropy dependency or persisted format change.

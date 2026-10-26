@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — terminal ID exhaustion and atomic ledger refusal
+
+0292 .6.2.1 owns D225: from_start(MAX) yielded MAX then0; the public regression failed101.
+Infallible allocation plus wrapping_add violated nonreuse. IdGenerator now returns Result;
+the optional deterministic counter emits its final value once then permanent Exhausted. All actual
+callers handle allocation; six ledger edits propagate original IdError/source before mutation.
+Focused3/0 checks terminal seeds, twelve original allocator errors and six precondition priorities
+against complete ledger equality. Existing id units10/0, affected all-target compile-only and
+selected lib/changed-test strict Clippy/fmt/book pass0. Broader runtime/platform checks deferred.
+405/406/407/408/264 retain whole history; G1still5/18, no persisted identity/clock change.
+Promotion declined: repair to the existing nonreuse contract; identity decision documents the API.
+
 ## _(2026-10-26 UTC)_ — typed declared command catalog
 
 0291 .6.1 exposes17 stable command IDs with typed class, required permission, reversibility and
@@ -299,19 +311,8 @@ unions/immutability and supplied condition/taken-branch examples without claimin
 Whole0267/.o.h task scopes, oldest whole journal group and0267 ledger retain349–351/240 with exact
 Git/hash/public reads. Book/live sync; promotion declined: existing formula4.2 and D121 contracts.
 
-## _(2026-10-26 UTC)_ — exact canonical and stored numeric reads
-
-0267 .5e.1.6 converts canonical scalar payloads or once-rounded bindings into exact numeric values.
-Actual kinds/internal integer units survive, including signed raw turns and i64 MIN; no second
-rounding, ppm scaling, modulo or pre-binding fraction appears. Boolean false/true both refuse
-numeric conversion. The caller retains its original source/state wrapper and binding provenance;
-these source-free conversions invent no identity, statement context or approval.
-
-Five focused native tests and selected strict Clippy pass0. The previous test output was lost at
-compaction; OS-visible census found no remaining check, then the focused rerun established this
-verdict. The stale LIVE_STATUS “sums next” note was reproduced by reading its row and corrected
-to actual full-evaluation scope in this leaf. Whole0266 task/ledger retain348/239 with exact Git/
-hash/public reads; book/live align. Promotion declined: existing numeric and binding contracts.
+[Complete canonical/stored numeric-read lesson](docs/history/stitchcad-devnotes-part406.md) retains
+its original exact conversion boundaries, source separation, checks and promotion decision.
 
 [Complete pinned size-membership lesson](docs/history/stitchcad-devnotes-part403.md) retains
 its original authored-order bridge, exact pins, validation and promotion decision.
