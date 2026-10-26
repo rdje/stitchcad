@@ -92,11 +92,9 @@ deep-campaign pass is claimed. The activation-omission parser control has a focu
 
 ## Guarded migration tooling
 
-The v2 installer prepares two complete same-volume directory trees before touching live storage.
-It verifies the source HEAD, producer identities, exact source population and candidate bytes.
-A flushed journal precedes the first rename. Each directory rename is atomic; the two-directory
-transaction requires idle readers. Ordinary archive commands must wait until installation or
-recovery finishes. This is a maintenance operation, separate from ordinary read/materialize commands.
+The v2 installer verifies source HEAD, producer identities and exact source/candidate bytes before
+staging both trees on the repository volume. A flushed journal precedes the first rename.
+Each directory rename is atomic; keep readers idle until installation or recovery finishes.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/history_archive/v2_migration.py prepare target/history-v2-migration
@@ -114,4 +112,9 @@ This protocol handles interrupted processes; no machine power-loss guarantee is 
 The original v1 refusal producer runs unchanged against a reconstructed retained-v1 fixture after
 repacking. Only its Git HEAD observations are pinned to that original capture. Public window checks
 separate logical records from opaque backing members, and ledger pointers accept original catalog
-routes while counting only changelog records. Live installation remains the next owned slice.
+routes while counting only changelog records. The live archive now uses v2; remaining older
+verification-client adapters are owned by capacity.2.c.2.b.
+
+The commands above describe the one-time v1 transition: preparation requires a v1 source and a fresh
+workspace. Recovery requires its original source HEAD and recognized archive bytes. Later records
+or commits intentionally refuse that rollback path; retained original trees remain evidence.

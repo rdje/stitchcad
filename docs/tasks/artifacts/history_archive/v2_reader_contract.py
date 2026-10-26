@@ -193,17 +193,18 @@ def main():
                 profile['plan_producer'](ROOT, **plan)
                 path.unlink()
         args = [sys.executable, '-I', '-B', str(READER), '--root', str(fixture)]
-        assert subprocess.check_output([*args, 'list'], cwd=ROOT).decode().splitlines() == sorted(records)
+        offline = dict(os.environ, PATH='')
+        assert subprocess.check_output([*args, 'list'], cwd=ROOT, env=offline).decode().splitlines() == sorted(records)
         for name in [sorted(records)[0], sorted(records)[-1]]:
-            assert subprocess.check_output([*args, 'read', name], cwd=ROOT) == records[name]
-        materialization = subprocess.run([*args, 'materialize', 'target/decoded'], cwd=ROOT, capture_output=True)
+            assert subprocess.check_output([*args, 'read', name], cwd=ROOT, env=offline) == records[name]
+        materialization = subprocess.run([*args, 'materialize', 'target/decoded'], cwd=ROOT, capture_output=True, env=offline)
         assert materialization.returncode == 0, (materialization.stdout, materialization.stderr)
         materialized = {path.relative_to(fixture / 'target/decoded').as_posix(): path.read_bytes()
                         for path in (fixture / 'target/decoded').rglob('*.md')}
         assert materialized == records
         check('restored', {}, None)
         assert all(path.read_bytes() == data for path, data in frozen.items()), 'source drift'
-        print('v2 reader: %d calibrated cases/0 failures; native tar and public materialization %d records exact; sources unchanged' % (count, len(records)))
+        print('v2 reader: %d calibrated cases/0 failures; native tar and public materialization %d records exact; Git absent from public PATH; sources unchanged' % (count, len(records)))
     finally:
         profile['plan_producer'](ROOT, **plan)
         present = list(work.rglob('*'))

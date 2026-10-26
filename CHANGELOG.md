@@ -3,260 +3,58 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0342 — guarded archive installer and consumers
+## STITCHCAD-G1-0343 — install bounded flat-v2 retention
 
-- Add exact-source staging, journaled directory swaps and fail-closed recovery; keep original trees for rollback.
-- Adapt retained catalog/member consumers and preserve the original v1 refusal producer in an exact fixture.
-- D245 fixed; installer16 controls/native tar/947 materialized bytes, original v1 refusals28 and POINTER16 pass0.
-- Fixed documentation caps blocked the first hook; complete transition receipts retained below and duplicate book history curated.
-- Live archive remains v1; current-HEAD installation/494 is capacity.2.c.2. G1 remains6/18; full CI deferred.
-
-
-### Transitional receipt — byte guard0341
-
-Complete source retained until capacity.2.c.2 seals494 after packing.
-Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/tasks/G1-SLICE.md bytes 29257–30837; 1580 bytes, sha256:b0948c049bdcfa0f8809e17762455d766fd74d2bf947e3c7838bf8ba3443ba71.
-
-```text
-- ID: `G1-SLICE.RETENTION-CAPACITY.2.b`
-  Status: `done`
-  Goal:0341 exact v1->v2 committed logical/backing/catalog byte guard and v2 future immutability.
-  Own reader extended CLI/read-backing/cohort and legacy source proofs, guarded fixture producer and focused
-  controls; retain original v1 CLI/success predicates behind declared dispatch and shared metadata authority.
-  Use current committed source for positive transition; old prototype must fail missing-current-record checks.
-  D244 owns actual fixture-relative tree query0/79 discrepancy and failed-show absence control; fix root
-  scope with --full-tree before source/transition acceptance. No live backing change. Keep bounded transitional receipts in existing changelog sections until .c/494;
-  only duplicate note navigation may be pruned. Book/decision/pointers stay aligned; full CI pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): v2 relocation must preserve committed logical/backing/catalog bytes;
-    D244 actual fixture0/79 query and compiled full-tree omission control are reproduced/refused, rc=0.
-  - [x] ADDRESSED: transition45/0, all33 public backings exact, current947 cohort/source and legacy48 proofs
-    pass; old946 prototype refuses missing committed data. Extended help and v1 backing check pass, rc=0.
-  - [x] NO REGRESSION: reader22/0, original v1 purity/CLI/metadata controls, syntax/book/pub77/103 pass;
-    whole0340 Git/hash/copy exact; live947/64/16 remains v1 with no relocation, rc=0.
-  Commit0341; promotion: existing history decision. .2.c finalizes install/consumers, then packs before494.
-```
-
-
-### Transitional receipt — D244 complete report
-
-Complete source retained until capacity.2.c.2 seals494 after packing.
-Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/tasks/PLANNING.md bytes 84541–85213; 672 bytes, sha256:a8dca282772787c042537722f2a035868ffc98bcaf88196a26064d2dab7352fa.
-
-```text
-## D244 — fixture-relative Git tree pathspecs hid repository files
-
-Native git -C target/history_capacity/0339-final ls-tree reports0 history entries/absent master;
---full-tree reports79 and the existing master. Root: tree pathspecs inherited fixture cwd prefix.
-Impact: v2 source comparisons fail; a controlled failed show can make the shared absence check
-misobserve a present master from a fixture. Normal root queries/data are unchanged; no data loss claimed.
-Owner G1-SLICE.RETENTION-CAPACITY.2.b, P1 fixed0341: explicit full-tree source/absence queries.
-Actual failed-show fixture and compiled flag omission are watched; transition45/0 and source947/33/16 pass0.
-
-```
-
-
-### Transitional receipt — D245 complete report
-
-Complete source retained until capacity.2.c.2 seals494 after packing.
-Pre-commit0342 source, docs/tasks/PLANNING.md bytes 85213–86051; 838 bytes, sha256:5708c7a7094ba9c1ae253141800413cdb174d85cee351323b96835ba563e87b8.
-
-```text
-## D245 — changelog pointer helper rejects other retained record rows
-
-Reproduce: python3 -I -B docs/tasks/artifacts/changelog/changelog_pointers.py . . returns1,
-rejecting four real devnotes part490–493 links in CHANGELOG's retained index. The v1 path
-recognizer only admits changelog rows although the live index contains whole task/lesson receipts.
-Impact: an unrelated valid retained-record row makes POINTER fail; the migration consumer check
-exposed it before installation. Owner G1-SLICE.RETENTION-CAPACITY.2.c.1, P2 immediate repair:
-validate other registered records while counting only changelog records; retain unknown-target reds.
-Fixed0342: original real invocation now passes;16 independent pointer verdicts include valid catalog/logical
-lesson rows and an unknown lesson refusal, rc=0, target/ledger-pointer-0342.log.
-
-```
-
-
-### Transitional receipt — archive reader historical proof 3787
-
-Complete source retained until capacity.2.c.2 seals494 after packing.
-Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/book/src/annexes/archive-reader.md bytes 3789–4834; 1045 bytes, sha256:a650f98a1982cbd967cbccc77091e2c8d1d0cc4d98de5095736c979878ee1c05.
-
-```text
-The original first producing effect is trapped with stores absent. The original pure function
-bodies and complete CLI body remain exact through declared planning, root-validation and child-
-environment adapters. Successful committed-history comparison predicates also remain exact.
-Captured materialization checks every planned file and directory, fresh effect checks, prepared
-stores and exact output bytes. Fourteen physical refusals and eight actual compiled body faults
-test source/output/store/parent authority, activation, rechecks and HEAD evidence. Device observations
-are simulated in private fixtures.
-
-The native mode separately executes public materialization, overwrite refusal, committed retention
-and window11 source reconstruction. Every logical output byte, backing file and producer source
-must match; owned fixtures are removed. Both Python3.9 and3.14 are checked. Full schema, decompression,
-membership and capacity controls remain in the [governance contract](../governance.md#12-historical-records-and-bounded-retention).
-
-```
-
-
-### Transitional receipt — archive reader historical proof 319
-
-Complete source retained until capacity.2.c.2 seals494 after packing.
-Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/book/src/annexes/archive-reader.md bytes 319–615; 296 bytes, sha256:df38c5631f7b24e45a71da6dd9d433229247f1b8a171e61d3959eb38818ebddc.
-
-```text
-Window14 retains50 complete committed records from b49128e, packed before command-catalog work
-exceeded the fixed64-file working bound. Source comparison, exact materialization and every public
-read passed; prior13 windows remain unchanged. Retrieval commands and capacity limits are unchanged.
-
-```
-
-
-### Transitional receipt — ninth window navigation
-
-Complete source retained until capacity.2.c.2 seals494 after packing.
-Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/book/src/governance.md bytes 32080–32189; 109 bytes, sha256:fd8524863abec5e6c40f6f567eef8109e27b925a4037221a716e6a2ab79f7113.
-
-```text
-### Ninth retention window
-
-Its complete transition/proof and retrieval commands remain in the same record.
-
-```
-
-
-### Transitional receipt — audit and thirteenth window navigation
-
-Complete source retained until capacity.2.c.2 seals494 after packing.
-Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/book/src/governance.md bytes 32501–33122; 621 bytes, sha256:80b69859ef956947ef7811fbbdc3c9f3b31fa9fa62ca6ce07e3c737aace56458.
-
-```text
-### Producer-audit record retention
-
-Complete audit-retention receipts are preserved in `docs/history/stitchcad-devnotes-part459.md`.
-Original task headings retain exact record links; current requirements stay live. Public retrieval
-preserves complete committed source intervals and separators. Earlier windows and fixed bounds remain unchanged.
-
-### Thirteenth retention window
-
-Its complete transition/proof/retrieval narrative is preserved in logical record
-`docs/history/stitchcad-devnotes-part474.md`. Use the published archive reader; original addresses
-and all earlier immutable backing windows remain unchanged.
-
-```
-
-## STITCHCAD-G1-0341 — exact versioned archive byte guards
-
-- Preserve committed logical/backing/catalog bytes across relocation; add public backing access and source proofs.
-- D244 fixed with actual/compiled scope controls; transition45/0, public33 exact, reader22/0 and v1 compatibility pass0.
-- Candidate947 accepted/older946 refused; live v1 unchanged. Book/pub77-103 pass0; whole0340 receipt below, .2.c next.
-
-## STITCHCAD-G1-0340 — bounded flat-v2 reader support
-
-- Strict record/backing kinds, old metadata bindings and complete byte budgets; live storage/guards remain v1.
-- V2 22 calibrated/0 with native tar/public946 materialized exact; original v1 purity/CLI/metadata and28 probes pass0.
-- Book/pub77-103 pass0; complete0339 task preserved below, no new raw file. .2.b source/byte guards next; G1still6/18.
-
-### Transitional receipt — flat reader0340
-
-Complete committed task, retained here until capacity.2.c seals494 after packing.
-Source: 072af62dc5bf4b0b6c2da5d1aed40c64303f96d8, docs/tasks/G1-SLICE.md bytes 29072–30507; 1435 bytes, sha256:51f4e07cfd237bd1733b4945ec8a874ab9976854ce347956b0473b51e19f5683.
-
-```text
-- ID: `G1-SLICE.RETENTION-CAPACITY.2.a`
-  Status: `done`
-  Goal:0340 bounded read-only v2 decoding, strict kinds/legacy catalogs/opaque backing accounting.
-  Own reader and focused v2 controls plus existing readonly compatibility projections where version dispatch
-  changes syntax. Preserve exact original v1 functions/behavior. No committed-guard exception or live migration.
-  Own bounded live notes/navigation curation while64 raw files prohibit another seal; keep every existing
-  lesson and record byte. Close prototype receipt may move whole into its existing bounded changelog entry,
-  with Git/hash/equality proof, until .c retires transition receipts into494 after packing. Full CI pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): v1 cannot read candidate v2; explicit dispatch retains original v1
-    AST/CLI/purity. Fixture orphan/destination-exists diagnostics traced to incomplete staging; final22/0, rc=0.
-  - [x] ADDRESSED: strict schemas/kinds/legacy identity and complete budgets; native tar/public materialization
-    all946 candidate records exact. No recursive old-payload decoding, no live transition; rc=0.
-  - [x] NO REGRESSION: original readonly/CLI/metadata controls and28 v1 probes pass; whole0339 Git/hash/
-    copy exact in bounded CHANGELOG, archived lessons unchanged; book/pub77/103 and syntax pass, rc=0.
-  Commit0340; promotion: existing history decision. .2.b guard/source CLI next; .2.c packs before494.
-```
-
-## STITCHCAD-G1-0339 — bounded retention continuation measured
-
-- Sourcead3f8fc prototype packs946 records/33 exact backings into4 windows, preserves16 catalogs; native tar979 exact.
-- All existing caps fit; guarded producer/syntax/book/pub77-103 pass0, v1 refusal1/unknownarg2 expected.
--493 whole source/hash/public0; live947/64/16 unchanged protocol. Draft migration contract recorded, capacity.2 next.
-
-### Transitional receipt — capacity feasibility0339
-
-This complete committed task remains here until capacity.2.c seals the transition after packing.
-Source: 65e36fd287d7381da579902e03ef07dc3a2b7e76, docs/tasks/G1-SLICE.md bytes 28468–30590; 2122 bytes, sha256:6b008e2056ab66981cb5f9b385beff8202cfa9424164ea48bf8003833e0f99f3.
-
-```text
-- ID: `G1-SLICE.RETENTION-CAPACITY.1`
-  Status: `done`
-  Goal:0339 falsify bounded v2 flat re-packing at committedad3f8fc before choosing a migration.
-  Own guarded historical capacity probe under artifacts/history_archive and one fresh target fixture.
-  Preserve logical record bytes, original v1 master/manifests/payloads as opaque evidence and16 unchanged
-  physical catalogs. Prototype active manifests/payloads/catalogs are separate same-volume outputs only.
-  Count all bytes including legacy evidence against decoded/resident limits; preserve all per-file/member/
-  window/control/working bounds. Native OS tar via PATH is a required read-only independent archive oracle.
-  Actual current reader must refuse candidate v2; no live schema/guard/backing change or adoption here.
-  Own493 whole0338 task/ledger/oldest0317 lesson and closed proof receipts if book room requires; exact
-  source/hash/public before retirement. This uses last raw slot; .2 must pack committed source before another seal.
-  Next .2 implements/tests explicit v1->v2 immutable-byte transition only if measured caps fit; otherwise
-  own a concrete blocker/alternative. No cap rise or silent committed-window exception. Full CI pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): v1 has16 immutable windows, source63 raw slots; new format refuses1.
-    Guarded source-bound prototype preserves every original member; native OS tar979 exact, rc=0.
-  - [x] ADDRESSED: four candidate windows keep all existing caps: decoded3583027B/47932 lines,
-    resident1966510B, active controls221328B, max gzip851673B. Probe failures0; rc=0.
-  - [x] NO REGRESSION: original source bytes unchanged,493 whole Git/hash/public exact; live v1
-    census947/64/16, book/pub77/103 and syntax pass. Unknown arg2/stdout empty expected; rc=0.
-  Commit0339; existing history decision records feasibility/draft transition, no live protocol adopted.
-  Frozen producer retention_capacity_probe.py requiresad3f8fc; output target/history_capacity/0339-final/report.json.
-  Next capacity.2 before another seal; immutable-byte compatibility/caps/offline/source controls are mandatory.
-```
+- Install source55ed18e in four v2 windows; preserve all947 old logical records/33 backing files/16 catalogs exactly.
+- Retain original trees for recovery; repair78 live links and seal whole0339–0342 receipts/task/lessons in494.
+- Focused v2 refusal22/native tar/materialization948, retention/source proofs and public window961/0 pass.
+- Legacy verification-client adapters remain immediate .c.2.b; full integration/CI deferred. G1still6/18.
 
 # Sealed archive — earlier slices
 
-| [part493](docs/history/stitchcad-devnotes-part493.md) | whole0338 ledger/task and prior lesson/receipt | 46 lines, 3481 bytes, sha256:565061ce… |
+| [part494](docs/history/stitchcad-devnotes-part494.md) | whole0339–0342 transition receipts/task/lessons | 265 lines, 17959 bytes, sha256:9bdbdd08… |
 
-| [part492](docs/history/stitchcad-devnotes-part492.md) | whole0337 ledger/task and prior lessons/proofs | 51 lines, 4461 bytes, sha256:c3a44f28… |
+| [part493](docs/history/window20.md#stitchcad-devnotes-part493md) | whole0338 ledger/task and prior lesson/receipt | 46 lines, 3481 bytes, sha256:565061ce… |
 
-| [part491](docs/history/stitchcad-devnotes-part491.md) | whole0336 ledger/task and prior lessons/proofs | 107 lines, 9103 bytes, sha256:8743e7d7… |
+| [part492](docs/history/window20.md#stitchcad-devnotes-part492md) | whole0337 ledger/task and prior lessons/proofs | 51 lines, 4461 bytes, sha256:c3a44f28… |
 
-| [part490](docs/history/stitchcad-devnotes-part490.md) | whole0335 ledger/task and prior lessons/proofs | 68 lines, 5673 bytes, sha256:7b008353… |
+| [part491](docs/history/window20.md#stitchcad-devnotes-part491md) | whole0336 ledger/task and prior lessons/proofs | 107 lines, 9103 bytes, sha256:8743e7d7… |
 
-| [part307](docs/history/stitchcad-changelog-part307.md) | whole0334 | 6 lines, 399 bytes, sha256:659480ad… |
+| [part490](docs/history/window20.md#stitchcad-devnotes-part490md) | whole0335 ledger/task and prior lessons/proofs | 68 lines, 5673 bytes, sha256:7b008353… |
 
-| [part306](docs/history/stitchcad-changelog-part306.md) | whole0333 | 6 lines, 382 bytes, sha256:211f9b42… |
+| [part307](docs/history/window18.md#stitchcad-changelog-part307md) | whole0334 | 6 lines, 399 bytes, sha256:659480ad… |
 
-| [part305](docs/history/stitchcad-changelog-part305.md) | whole0332 | 6 lines, 399 bytes, sha256:720bc151… |
+| [part306](docs/history/window18.md#stitchcad-changelog-part306md) | whole0333 | 6 lines, 382 bytes, sha256:211f9b42… |
 
-| [part304](docs/history/stitchcad-changelog-part304.md) | whole0331 | 6 lines, 395 bytes, sha256:f116aa6d… |
+| [part305](docs/history/window18.md#stitchcad-changelog-part305md) | whole0332 | 6 lines, 399 bytes, sha256:720bc151… |
 
-| [part303](docs/history/stitchcad-changelog-part303.md) | whole0330 | 6 lines, 369 bytes, sha256:1e0ab832… |
+| [part304](docs/history/window18.md#stitchcad-changelog-part304md) | whole0331 | 6 lines, 395 bytes, sha256:f116aa6d… |
 
-| [part302](docs/history/stitchcad-changelog-part302.md) | whole0329 | 6 lines, 383 bytes, sha256:2cc586ff… |
+| [part303](docs/history/window18.md#stitchcad-changelog-part303md) | whole0330 | 6 lines, 369 bytes, sha256:1e0ab832… |
 
-| [part301](docs/history/stitchcad-changelog-part301.md) | whole0328 | 6 lines, 372 bytes, sha256:8c724c41… |
+| [part302](docs/history/window18.md#stitchcad-changelog-part302md) | whole0329 | 6 lines, 383 bytes, sha256:2cc586ff… |
 
-| [part300](docs/history/stitchcad-changelog-part300.md) | whole0327 | 6 lines, 389 bytes, sha256:75de9577… |
+| [part301](docs/history/window18.md#stitchcad-changelog-part301md) | whole0328 | 6 lines, 372 bytes, sha256:8c724c41… |
 
-| [part299](docs/history/stitchcad-changelog-part299.md) | whole0326 | 6 lines, 380 bytes, sha256:332bd419… |
+| [part300](docs/history/window18.md#stitchcad-changelog-part300md) | whole0327 | 6 lines, 389 bytes, sha256:75de9577… |
 
-| [part298](docs/history/stitchcad-changelog-part298.md) | whole0325 | 6 lines, 387 bytes, sha256:702b0db9… |
+| [part299](docs/history/window17.md#stitchcad-changelog-part299md) | whole0326 | 6 lines, 380 bytes, sha256:332bd419… |
 
-| [part297](docs/history/stitchcad-changelog-part297.md) | whole0324 | 6 lines, 341 bytes, sha256:e6312a2d… |
+| [part298](docs/history/window17.md#stitchcad-changelog-part298md) | whole0325 | 6 lines, 387 bytes, sha256:702b0db9… |
 
-| [part296](docs/history/stitchcad-changelog-part296.md) | whole0323 | 6 lines, 358 bytes, sha256:eaa69b20… |
+| [part297](docs/history/window17.md#stitchcad-changelog-part297md) | whole0324 | 6 lines, 341 bytes, sha256:e6312a2d… |
 
-| [part295](docs/history/stitchcad-changelog-part295.md) | whole0322 | 6 lines, 357 bytes, sha256:41bd774e… |
+| [part296](docs/history/window17.md#stitchcad-changelog-part296md) | whole0323 | 6 lines, 358 bytes, sha256:eaa69b20… |
 
-| [part294](docs/history/stitchcad-changelog-part294.md) | whole0321 | 6 lines, 388 bytes, sha256:9b4e1a20… |
+| [part295](docs/history/window17.md#stitchcad-changelog-part295md) | whole0322 | 6 lines, 357 bytes, sha256:41bd774e… |
 
-| [part293](docs/history/stitchcad-changelog-part293.md) | whole0320 | 6 lines, 379 bytes, sha256:ebea1460… |
+| [part294](docs/history/window17.md#stitchcad-changelog-part294md) | whole0321 | 6 lines, 388 bytes, sha256:9b4e1a20… |
 
-| [part292](docs/history/stitchcad-changelog-part292.md) | whole0319 | 6 lines, 363 bytes, sha256:a521793d… |
+| [part293](docs/history/window17.md#stitchcad-changelog-part293md) | whole0320 | 6 lines, 379 bytes, sha256:ebea1460… |
 
-| [part291](docs/history/stitchcad-changelog-part291.md) | whole0318 | 6 lines, 379 bytes, sha256:03d89223… |
+| [part292](docs/history/window17.md#stitchcad-changelog-part292md) | whole0319 | 6 lines, 363 bytes, sha256:a521793d… |
+
+| [part291](docs/history/window17.md#stitchcad-changelog-part291md) | whole0318 | 6 lines, 379 bytes, sha256:03d89223… |
 
 | [part290](docs/history/window16.md#stitchcad-changelog-part290md) | whole0317 | 6 lines, 376 bytes, sha256:dd50514d… |
 

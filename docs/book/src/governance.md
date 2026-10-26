@@ -421,23 +421,21 @@ The [build and command reference](build-and-checks.md) documents guarded default
 explicit toolchain setup and the launcher that prepares storage before Make starts. Primary
 entry points are verified under G1-SLICE.5b.4c.h2.a; the standalone producer audit remains open.
 
-### Current retention window
+### Current retention windows
 
-All16 immutable v1 windows remain installed; window16's complete source/read/materialization receipt
-is preserved in `docs/history/stitchcad-devnotes-part493.md`. Logical addresses and fixed caps remain.
-Its frozen capture producer requires the original HEAD. Current readers can still run:
+The source55ed18e migration uses four flat-v2 windows17–20. They retain all947 preexisting
+logical records and33 exact original v1 control/payload files. All16 legacy catalogs remain physical
+and byte-exact. Opaque original payloads are evidence; ordinary reads do not recursively expand them.
+Record `docs/history/stitchcad-devnotes-part494.md` preserves complete0339–0342 transition receipts,
+the installer task and engineering lessons. Original logical names and all independent caps remain.
 
 ```bash
+bash scripts/history_archive.sh prove-source window17
 bash scripts/history_archive.sh prove-source window16
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part468.md
+bash scripts/history_archive.sh read-backing .doctrine/history_archive/windows.json
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part494.md
 ```
 
-### Capacity continuation under implementation
-
-The historical0339 probe packs946 logical records plus33 exact v1 backing files into four candidate
-windows, preserving16 physical catalogs. Native tar recovers all979 members exactly; all existing
-caps fit, including3583027 decoded bytes with evidence and221328 active control bytes.
-V2 read/refusal/materialization checks pass; live storage remains v1.
-Candidate byte and source checks pass; guarded installer/recovery and consumer controls now pass.
-Capacity.2.c.2 owns live installation at committed HEAD; live storage remains v1.
-D244 fixes fixture Git path scope.
+The public reader accepts both schemas. The migration passed focused byte/source, native-tar,
+materialization and v2 refusal checks. Original-v1 verification adapters remain owned by
+G1-SLICE.RETENTION-CAPACITY.2.c.2.b before product work resumes; full integration/CI stays deferred.

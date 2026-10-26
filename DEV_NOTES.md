@@ -3,39 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-26 UTC)_ — guarded archive installation tooling
+## _(2026-10-26 UTC)_ — installed flat-v2 retention
 
-0342 adds source-pinned same-volume staging, a flushed journal, directory swaps and explicit recovery.
-Each rename is atomic; readers must be idle across the transaction. Original source trees remain in
-local backups, and unknown recovery bytes refuse. No power-loss or live-installation claim is made.
-D245 exposed valid devnotes rows rejected by the changelog-only pointer classifier; other retained
-records are validated without entering changelog counts. Legacy v1 fixture sources remain unchanged.
-Installer16 controls/public947/native tar, original v1 refusals28 and POINTER16 pass0; book/publication0.
-Only duplicate historical navigation below was curated; all original lesson records remain retained.
-Promotion: existing history decision. G1 remains6/18; installation and494 belong to capacity.2.c.2.
+0343 installs four source55ed18e windows with947 old logical records/33 original backings/16 catalogs exact.
+Original directory trees remain in the same-volume transaction backup; recovery refuses later drift.
+Sealed494 retains whole committed transition receipts, installer task and four lessons, with exact source
+intervals.78 maintained links now reach new catalog headings; historical logical names are unchanged.
+V2 refusal22/native tar/public materialization948 pass0; source/reader evidence is recorded in the leaf.
+Remaining legacy verification adapters are immediate .c.2.b before .6.4; no full integration/CI claim.
+Promotion: existing history decision. G1 remains6/18; all independent archive/document caps unchanged.
 
-## _(2026-10-26 UTC)_ — exact versioned archive byte guards
-
-0341 capacity.2.b adds relocation/future/raw byte guards and legacy/cohort/read-backing CLI; no live install.
-D244 real fixture queries0/79/present-master refusal fixed with full-tree; compiled omission is watched.
-Transition45/0, public33 backings exact, v2 reader22/0, original v1 compatibility pass0; candidate947 accepted.
-Old946 prototype refuses missing current record; live947/64/16 unchanged. Whole0340 task exact in CHANGELOG.
-Promotion: existing history decision; book/pub77-103 and syntax0. .2.c installation/consumers next, G1still6/18.
-
-## _(2026-10-26 UTC)_ — bounded flat-v2 reader
-
-0340 capacity.2.a strictly decodes kinds/legacy bindings and counts all evidence; old payloads stay compressed.
-V2 22 calibrated/0, native tar/public materialization946 exact; v1 pure AST/CLI/metadata and28 probes pass0.
-Fixture fixes: virtual payload directory entries reconciled; full planned copy target remains absent until child.
-No live relocation/guard exception;947/64/16 unchanged. Whole0339 task exact in CHANGELOG until494.
-Promotion: existing history decision; duplicate navigation only pruned. Book/pub77-103 pass0, .2.b next.
-
-## _(2026-10-26 UTC)_ — bounded retention continuation feasibility
-
-0339 capacity.1 sourcead3f8fc: native tar979 exact,946 records/33 old backings/16 unchanged catalogs in4 candidates.
-All unchanged caps fit: decoded3583027B, resident1966510B, active controls221328B; no live adoption.
-Guarded producer/syntax/book/pub77-103 pass0; v1 refusal1/unknownarg2 expected.493 whole source/hash/public0.
-Live v1 now947/64/16, no Rust change. Promotion: existing history decision; capacity.2 migration next, G1still6/18.
+[Whole0339–0342 transition lessons](docs/history/stitchcad-devnotes-part494.md) retain original proofs and promotion decisions.
 
 ## _(2026-10-26 UTC)_ — native authority scope review
 
@@ -205,67 +183,67 @@ still called intent pending; whole prior receipt retained468 and current paragra
 fb53a44; reuse31-test/strict lint/fmt proof. Book/five rendered anchors/navigation pass0;468/290/139
 wholefb53a44 Git/hash/public exact0, history63/64. G1still5/18; .4c.5 next. Promotion: SizeSet decision extended.
 
-[Complete immutable profile intent lesson](docs/history/stitchcad-devnotes-part493.md) retains
+[Complete immutable profile intent lesson](docs/history/window20.md#stitchcad-devnotes-part493md) retains
 original four-domain/five-state validation and numeric/profile/approval boundaries.
 
-[Complete0316 cleanup lesson](docs/history/stitchcad-devnotes-part492.md) retains
+[Complete0316 cleanup lesson](docs/history/window20.md#stitchcad-devnotes-part492md) retains
 exact deletion/preservation receipts, due date and next feature owner.
 
-[Complete explicit cleanup attestation lesson](docs/history/stitchcad-devnotes-part491.md) retains
+[Complete explicit cleanup attestation lesson](docs/history/window20.md#stitchcad-devnotes-part491md) retains
 D232 reproduction/repair, original dispatch/protection receipts and SPINE.23r boundary.
 
-[Complete chart replacement lesson](docs/history/stitchcad-devnotes-part491.md) retains
+[Complete chart replacement lesson](docs/history/window20.md#stitchcad-devnotes-part491md) retains
 original source/candidate validation, exact proofs and execution obligations.
 
-[Complete break-scaling intent lesson](docs/history/stitchcad-devnotes-part490.md) retains
+[Complete break-scaling intent lesson](docs/history/window20.md#stitchcad-devnotes-part490md) retains
 original canonical states, reference checks and remaining numeric execution obligations.
 
-[Complete label/base intent lesson](docs/history/stitchcad-devnotes-part489.md) retains
+[Complete label/base intent lesson](docs/history/window20.md#stitchcad-devnotes-part489md) retains
 original input/validation boundaries, exact source and focused proofs.
 
-[Complete immutable SizeSet origin lesson](docs/history/stitchcad-devnotes-part489.md) retains
+[Complete immutable SizeSet origin lesson](docs/history/window20.md#stitchcad-devnotes-part489md) retains
 original implementation, verification and remaining execution owners.
 
-[Complete chart/body/break scope lesson](docs/history/stitchcad-devnotes-part488.md) retains
+[Complete chart/body/break scope lesson](docs/history/window20.md#stitchcad-devnotes-part488md) retains
 its original acceptance, retained proof, fixes and remaining intent/execution boundaries.
 
-[Complete MTM fixture-plan integration lesson](docs/history/stitchcad-devnotes-part487.md)
+[Complete MTM fixture-plan integration lesson](docs/history/window20.md#stitchcad-devnotes-part487md)
 retains original D230/D231 reproduction, exact producer/input proofs and remaining verification owners.
 
-[Complete unified SizeSet input lesson](docs/history/stitchcad-devnotes-part486.md) retains
+[Complete unified SizeSet input lesson](docs/history/window20.md#stitchcad-devnotes-part486md) retains
 its original family/provenance/current-reference contracts and focused native proof.
 
-[Complete MTM composite-input lesson](docs/history/stitchcad-devnotes-part485.md) retains
+[Complete MTM composite-input lesson](docs/history/window20.md#stitchcad-devnotes-part485md) retains
 its original body/Ease/Design-source, path and focused-proof boundaries.
 
-[Complete garment composite-input lesson](docs/history/stitchcad-devnotes-part484.md) retains
+[Complete garment composite-input lesson](docs/history/window20.md#stitchcad-devnotes-part484md) retains
 its original canonical source/path contracts, focused checks and remaining proof boundaries.
 
-[Complete fifteenth-window lesson](docs/history/stitchcad-devnotes-part483.md) retains
+[Complete fifteenth-window lesson](docs/history/window20.md#stitchcad-devnotes-part483md) retains
 its original immutable source/packing/refusal proofs, D229 correction and continuation.
 
-[Complete required-break coverage lesson](docs/history/stitchcad-devnotes-part482.md) retains
+[Complete required-break coverage lesson](docs/history/window20.md#stitchcad-devnotes-part482md) retains
 its original draft/explicit-gap/current-source contracts, checks and promotion.
 
-[Complete signed-break and approved-key lessons](docs/history/stitchcad-devnotes-part480.md)
+[Complete signed-break and approved-key lessons](docs/history/window20.md#stitchcad-devnotes-part480md)
 retain their original D228 contract, numeric-state boundaries and focused proof.
 
-[Complete break-key review lesson](docs/history/stitchcad-devnotes-part479.md) retains
+[Complete break-key review lesson](docs/history/window20.md#stitchcad-devnotes-part479md) retains
 its original D228 witness, pending ruling and ownership; the later approved key remains implemented.
 
-[Complete query/paired-split lessons](docs/history/stitchcad-devnotes-part477.md) preserve
+[Complete query/paired-split lessons](docs/history/window20.md#stitchcad-devnotes-part477md) preserve
 their original contracts, focused evidence, promotion and remaining execution owners.
 
-[Complete member-point lesson](docs/history/stitchcad-devnotes-part476.md) retains
+[Complete member-point lesson](docs/history/window20.md#stitchcad-devnotes-part476md) retains
 its original D70/coverage/current-source contracts, checks and promotion decision.
 
-[Complete explicit-axis lesson](docs/history/stitchcad-devnotes-part472.md) retains
+[Complete explicit-axis lesson](docs/history/window20.md#stitchcad-devnotes-part472md) retains
 its original role/kind/order/state contracts, checks and promotion decision.
 
-[Complete receipt-correction lesson](docs/history/stitchcad-devnotes-part470.md) retains
+[Complete receipt-correction lesson](docs/history/window20.md#stitchcad-devnotes-part470md) retains
 its original unread-result/duplicate metadata repair, checks and promotion decision.
 
-[Complete dart/notch intent lesson](docs/history/stitchcad-devnotes-part469.md) retains
+[Complete dart/notch intent lesson](docs/history/window20.md#stitchcad-devnotes-part469md) retains
 its original canonical targets/director rulings, checks and promotion decision.
 
 [Complete measurement/material intent lesson](docs/history/window16.md#stitchcad-devnotes-part468md) retains

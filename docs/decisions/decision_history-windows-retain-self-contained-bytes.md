@@ -115,3 +115,14 @@ this maintenance entry alone owns the two fixed archive directory renames after 
 Ledger consumers resolve retained original catalogs and distinguish non-changelog receipts. V1 refusal
 sources stay unchanged in a reconstructed fixture with explicit capture-pinned Git observations.
 Tooling support does not install the candidate; capacity.2.c.2 owns current-HEAD preparation and use.
+
+## Installed transition0343
+
+Capacity.2.c.2.a installs source55ed18e as windows17–20, retaining947 prior records,33 exact original
+backings and16 unchanged catalogs. Original directory trees remain in the same-volume transaction
+backup. Live links use new catalog headings; whole0339–0342 receipts/task/lessons are retained494.
+Ordinary read/list/materialize still need no Git or network. Source and committed-byte proofs remain
+explicit Git operations. All independent caps are unchanged; subsequent raw records consume them.
+Existing v1-only verification-client assumptions are owned by immediate capacity.2.c.2.b before
+product work; focused migration proof does not claim full integration/CI. Later archive edits or HEAD
+changes correctly refuse the source-pinned recovery command; the backup remains exact evidence.

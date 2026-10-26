@@ -2,8 +2,9 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
-- Active: G1-SLICE.RETENTION-CAPACITY.2.c.2 in docs/tasks/G1-SLICE.md.
-- Next: prepare at committed installer HEAD, verify/install/recover under .c.2, retain whole transition
-  receipts in494 after packing, then resume product .6.4. Latest completed unit:0342 (see CHANGELOG).
-- Live storage remains v1. No uncommitted work after the0342 commit workflow.
-- No director decision pending; no background job remains from0342 checks.
+- Active: G1-SLICE.RETENTION-CAPACITY.2.c.2.b in docs/tasks/G1-SLICE.md.
+- Next: adapt remaining v1-only archive verification clients, then close retention parent and resume
+  product .6.4. Installed-byte leaf .a is0343; complete transition continuity is retained494.
+- Public window961/0 is terminal: target/v2-window-0343.log. Original trees:
+  target/history-v2-live-0343/installation/backup/ (source55ed18e).
+- No uncommitted work after0343 workflow; no director decision pending. Full integration/CI deferred.

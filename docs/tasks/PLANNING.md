@@ -1080,29 +1080,29 @@ Closed D229-D232 reports and verified repair evidence are retained whole in
 [part139](../history/window16.md#stitchcad-defects-part139md). Current doc frontier repair D233 follows below.
 
 Closed D233/D234 reports and verified repair evidence remain whole in
-[part140](../history/stitchcad-defects-part140.md). D235 current overview repair follows.
+[part140](../history/window18.md#stitchcad-defects-part140md). D235 current overview repair follows.
 
 Closed D235/D236 reports and complete0321 evidence remain whole in
-[part141](../history/stitchcad-defects-part141.md). Current trig status correction D237 follows.
+[part141](../history/window18.md#stitchcad-defects-part141md). Current trig status correction D237 follows.
 
 Closed D237 report and complete0325 correction evidence remain whole in
-[part142](../history/stitchcad-defects-part142.md). Current membership wording correction D238 follows.
+[part142](../history/window18.md#stitchcad-defects-part142md). Current membership wording correction D238 follows.
 
 Closed D238 report and complete0327 correction evidence remain whole in
-[part143](../history/stitchcad-defects-part143.md). Current release identity boundary D239 follows.
+[part143](../history/window18.md#stitchcad-defects-part143md). Current release identity boundary D239 follows.
 
 Closed D239/D240 reports and complete0331 repair evidence remain whole in
-[part145](../history/stitchcad-defects-part145.md). Detached binding/records remain current.
+[part145](../history/window18.md#stitchcad-defects-part145md). Detached binding/records remain current.
 
 Closed D241 command overview report and0335 verification remain whole in
-[part491](../history/stitchcad-devnotes-part491.md). Current core ownership/input boundary remains.
+[part491](../history/window20.md#stitchcad-devnotes-part491md). Current core ownership/input boundary remains.
 
 Closed D242/D243 reports and0337 verification remain whole in
-[part492](../history/stitchcad-devnotes-part492.md); current authorization rejects duplicate grant IDs.
+[part492](../history/window20.md#stitchcad-devnotes-part492md); current authorization rejects duplicate grant IDs.
 
-D244 fixed0341; [complete report](../../CHANGELOG.md#transitional-receipt--d244-complete-report) retained until494.
+D244 fixed0341; [complete report](../history/stitchcad-devnotes-part494.md) retained until494.
 
-D245 fixed0342; [complete report](../../CHANGELOG.md#transitional-receipt--d245-complete-report) retained until494.
+D245 fixed0342; [complete report](../history/stitchcad-devnotes-part494.md) retained until494.
 
 ## Active continuity followup
 
