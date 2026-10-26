@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0302 — adopt the explicit size-break key
+## STITCHCAD-G1-0303 — canonical signed adjacent size breaks
 
-Director approves axis + named POM/dimension + adjacent member pair, preserving canonical signed Length state/source.
-D228 semantic blocker closed; book/decision/live sync and book0. Whole431/432/274 retention exact.
-No break implementation claim; G1 remains5/18. Sourced declarations .4c.3d.1 next.
+SizeBreak validates explicit axis/POM/ordered adjacent pair and borrows original canonical signed Length state/source.
+Native break5+axes5/0, selected strict lint/fmt/book0; whole433/434/275 retention exact. Zero/negative/uneven
+steps and all states remain explicit. G1 remains5/18; required coverage/composite readiness follow.
 
 # Sealed archive — earlier slices
+
+| [part275](docs/history/stitchcad-changelog-part275.md) | whole0302 | 6 lines, 361 bytes, sha256:fe6e3333… |
 
 | [part274](docs/history/stitchcad-changelog-part274.md) | whole0301 | 6 lines, 364 bytes, sha256:ac747382… |
 

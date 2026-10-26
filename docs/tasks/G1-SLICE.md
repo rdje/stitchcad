@@ -435,17 +435,31 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.3d.0`
   Status: `done`
-  Goal:0302 adopt director2026-10-26 D228 ruling: explicit axis + named POM/dimension + adjacent member pair.
-  Each delta borrows its canonical signed Length state/source; no dimension/axis/value inferred.
-  Prior ambiguity/source witness: [whole0301 review](../history/stitchcad-devnotes-part431.md).
-  Acceptance0302:
-  - [x] ROOT CAUSE0302: director approves the exact D228 recommendation; prior witness/source/hash retained431, public read rc=0.
-  - [x] ADDRESSED0302: normative SizeSet field/§6/§7 and existing decision/PLANNING adopt the same key; source review rc=0.
-  - [x] NO REGRESSION0302: book build rc=0;431/432/274 whole5b13daf Git/hash/public reads exact rc=0; no code/schema implementation claim.
-  Promotion: existing SizeSet decision updated. Commit: STITCHCAD-G1-0302. Next .3d.1 implements sourced declarations.
+  Goal:0302 D228 key approved; [whole ruling/evidence](../history/stitchcad-devnotes-part433.md).
+  Commit: STITCHCAD-G1-0302.
 - ID: `G1-SLICE.4c.3d.1`
+  Status: `done`
+  Goal:0303 immutable signed break declarations keyed by actual axis, named measurement binding and authored adjacent pair.
+  Paths: crates/sc-measure/src/size_break.rs;crates/sc-measure/src/size_break/;crates/sc-measure/src/size_axis/source.rs;
+  crates/sc-measure/src/lib.rs;crates/sc-measure/Cargo.toml;crates/sc-measure/tests/size_break_contract.rs; book/decision/live docs.
+  Shared canonical inventory retains delta/source/state; actual membership/axes/table/measurement contexts and exact pins
+  validate references, adjacency and saved dimension binding. Reject metadata/source conflicts, never subtract chart values.
+  Focused native break/axis targets, selected lint/fmt/book. Own433 whole0302 task,434 oldest0278 lesson,275 ledger
+  from7e0ca8d with whole Git/hash/public comparisons before retirement. Collection/composite readiness follows children.
+  Acceptance0303:
+  - [x] ROOT CAUSE0303: rg definitions -> size_break.rs:13/34, context.rs:15/117 and table.rs:9, rc=0; canonical binding and authored adjacency explicit.
+  - [x] ADDRESSED0303: cargo test -p sc-measure --test size_break_contract --test size_axes_contract ->5+5 passed/0 failed, rc=0; signed values/all states/current sources and key refusals.
+  - [x] NO REGRESSION0303: selected lib/two-test strict Clippy rc=0; fmt rc=0; book rc=0; original source/error borrows and cross-inventory conflicts checked.
+  - [x] LOCKSTEP0303:433/434/275 whole7e0ca8d Git/hash/public exact rc=0; book/decision/live align, no coverage/path-readiness claim.
+  Promotion: existing SizeSet decision extended. Commit: STITCHCAD-G1-0303. Next .3d.2 required break coverage.
+- ID: `G1-SLICE.4c.3d.2`
   Status: `pending`
-  Goal: implement sourced signed adjacent break declarations after D228, then collection/composite children.
+  Goal: explicit required axis/dimension inventory and per-adjacent-pair break coverage; partial drafts remain explicit;
+  missing dimension/pair diagnostic, singleton MTM path-2 refusal, exact current break/source pins.
+- ID: `G1-SLICE.4c.3d.3`
+  Status: `pending`
+  Goal: composite membership/axes/garment-or-MTM chart/break inputs and typed structural path readiness;
+  no generated equivalence, profile execution or physical/release certification.
 
 - ID: `G1-SLICE.4c.3e`
   Status: `pending`
@@ -922,7 +936,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.4c.3d.1` | `pending` | Sourced signed breaks under the approved D228 key |
+| **next** | `G1-SLICE.4c.3d.2` | `pending` | Explicit required dimensions and adjacent-pair break coverage |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

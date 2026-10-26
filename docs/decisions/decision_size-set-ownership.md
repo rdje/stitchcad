@@ -129,3 +129,10 @@ Each signed Length delta borrows its original canonical state/source/provenance.
 defines adjacency; dimensions, axis associations and values are never inferred from labels or charts.
 G1-SLICE.4c.3d.0 resolves the semantic gap; .3d.1 implements declarations before collection/composition.
 The whole original conflict/witness remains retained431; the choice itself does not certify readiness.
+
+G1-SLICE.4c.3d.1 now implements individual declarations over actual membership/axes and a named
+measurement-table binding. Ordered member adjacency is checked without sorting; scalar state/source
+is borrowed from a dedicated canonical Length record, with original Unknown/Derived read refusals.
+Cross-inventory identities/content are consistent before lookup; same-id delta replacements retain
+the actual current state/source. Five break plus five axis contracts pass. Required coverage and
+composite/path readiness remain .3d.2/.3; declared deltas are not generated equivalence evidence.

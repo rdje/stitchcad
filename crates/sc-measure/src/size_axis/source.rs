@@ -86,6 +86,30 @@ impl<'a> SizeAxisSourceContext<'a> {
         self.records.contains_key(&identity)
     }
 
+    pub(crate) fn length(&self, identity: EntityId) -> Option<&'a LengthDeclaration> {
+        match self.records.get(&identity)? {
+            Record::Length(value) => Some(*value),
+            Record::Scalar(_) => None,
+        }
+    }
+
+    pub(crate) fn conflicts_with(
+        &self,
+        context: &crate::MeasurementTableContext<'_>,
+    ) -> Option<EntityId> {
+        self.records.iter().find_map(|(id, record)| {
+            let conflict = context.current_measurement(*id).is_some()
+                || (context.records().contains(*id)
+                    && match record {
+                        Record::Length(value) => {
+                            context.records().current_declaration(*id) != Some(*value)
+                        }
+                        Record::Scalar(_) => true,
+                    });
+            conflict.then_some(*id)
+        })
+    }
+
     pub(super) fn resolve<'v>(
         &self,
         axis: EntityId,

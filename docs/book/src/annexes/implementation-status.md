@@ -69,6 +69,10 @@ Operator/built-in/selector signatures, typed wanted catalogs and initial-scope e
 and current-statement checks are available. The [coupled review](formula-static-validation.md#coupled-public-static-review)
 verifies their public behavior and the actual reference; [whole recipe proofs](formula-checked-recipes.md) are available; coupled whole review is verified at .5b.4b.
 
+Individual [signed size breaks](../spec/size-sets.md#executable-individual-breaks--g1-slice4c3d1) now bind
+actual axes, named measurement dimensions and authored adjacent member pairs, borrowing canonical
+Length state/source. Required coverage and composite SizeSet/path readiness remain .4c.3d.2/.3.
+
 ## Remaining proofs
 
 The [trig threshold certificates](formula-trig-certificates.md) cover all1M forward and45M inverse

@@ -110,6 +110,61 @@ delta are explicit: no label parsing, chart subtraction, inferred dimension, imp
 of first axis supplies missing data. G1-SLICE.4c.3d.1 implements this ruled key; chart/break coverage,
 path readiness and full SizeSet composition follow in separately owned children.
 
+### Executable individual breaks — G1-SLICE.4c.3d.1
+
+`sc-measure::SizeBreak` now implements that key over actual current records. Its editable definition
+contains a stable break id, exact SizeSet reference, axis id, ordered `from`/`to` member ids, named
+dimension-table id, exact `MeasurementBinding` and canonical signed Length delta id. The dimension
+binding retains measurement identity, token, body/garment domain and declaration identity. A same-token
+peer or same-name axis does not replace that explicitly authored dimension.
+
+Build `SizeBreakContext` from the actual membership, complete axes, shared numeric source inventory,
+named measurement table and measurement-record context. Include break delta declarations in the same
+`SizeAxisSourceContext` that supplies numeric axis values. Construction validates current axes/table
+metadata and rejects conflicting content or record roles across the supplied canonical inventories.
+Identical canonical Length content may be shared across them. Metadata identities cannot alias the
+set, members, axes, values, table or canonical records. These are local snapshot checks; the caller
+still owes actual Design/registry currentness, source truth and approval.
+
+Given those explicit records, a declaration looks like this (ids below are authored fixture identities):
+
+```rust
+use sc_measure::{MeasurementBinding, SizeBreak, SizeBreakDefinition};
+// `context` contains the actual current records; `waist` is its named measurement.
+let definition = SizeBreakDefinition {
+    id: break_id, reference: context.membership().reference(),
+    axis: house_size_axis_id, from: size_s_id, to: size_m_id,
+    dimension_table: design_measurements_id,
+    dimension: MeasurementBinding::from(waist), delta: waist_break_declaration_id,
+};
+let step = SizeBreak::new(definition, &context).expect("explicit current adjacent break");
+let source = step.delta(&context).expect("original canonical delta record");
+// State/source/provenance stay on `source`; Unknown/Derived need no numeric fallback.
+let result = step.authored_value(&context); // may require observation or formula evaluation
+```
+
+The same axis/member pair can carry a separate hip binding and delta. For example, waist+4cm and
+hip+5cm are independent records. The next adjacent pair can author waist+5cm; no uniform range is
+assumed. An explicit zero means zero, and a negative Length remains signed. These are authored
+inputs, not proof that the chart differences or generated geometry agree with them.
+
+`delta` returns the original canonical `LengthDeclaration`; `dimension` borrows the actual current
+measurement. Known, Assumed, Unknown, Preference and Derived retain their original state/source and
+provenance. `authored_value` preserves the original observation/formula refusal as an error source.
+There is no independently cached numeric result. A general scalar record cannot silently replace
+the dedicated Length declaration role even when its kind is Length.
+
+Every break query rechecks its explicit key against the supplied immutable context. The context must
+be reconstructed for replacement records. Pin, axis, table and dimension changes refuse; both member
+identities must exist and form an immediate ordered pair in `members`. Reversing or skipping members
+refuses, independently of their labels or axis-value order. A same-id canonical delta replacement is
+borrowed with its actual current source/state; the earlier immutable snapshot remains unchanged.
+
+Five focused break contracts plus the five axes contracts pass, with selected strict lint/formatting
+and book build. This establishes individual declarations. Required axis/dimension inventories,
+complete adjacent-pair coverage, singleton grading refusal and composite SizeSet/path readiness
+remain G1-SLICE.4c.3d.2/.3; one valid declaration does not certify those later contracts.
+
 ## 7. Multi-dimensional systems
 
 Director ruling2026-10-26 resolves D70: every complete SizeSet requires at least one authored axis,

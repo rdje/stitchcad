@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0302 .4c.3d.0 records approved D228: explicit axis+named POM/dimension+adjacent member pair.
-- Signed Length delta retains original canonical state/source; no axis/dimension/value inferred.
-- D228 semantic blocker closed; normative book/SizeSet decision/PLANNING agree. No break code yet.
-- NEXT .4c.3d.1: implement sourced signed adjacent break declarations; own paths before changes.
-- Book0;431/432/274 whole5b13daf Git/hash/public exact0; .3d parent resumed in progress.
+-0303 .4c.3d.1 implements explicit axis/POM/dimension/adjacent-pair break declarations under approved D228.
+- Exact current pins/bindings/adjacency and cross-inventory identity/content validated; delta is an original Length borrow.
+- Native break5+axes5 pass0; selected strict lib/two-test lint/fmt/book0. Signed zero/negative/uneven and all states retained.
+- NEXT .4c.3d.2: explicit required dimension inventory and adjacent-pair coverage; composite/path readiness .3d.3 follows.
+-433/434/275 whole7e0ca8d Git/hash/public exact0; no full coverage/grading/geometry or release claim.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
 - Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
@@ -44,4 +44,4 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D156/D223 audits deferred; D224/D225/D227 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background job or pending director question after0302. Derive push count, never carry it manually.
+- No background job or pending director question after0303. Derive push count, never carry it manually.

@@ -8,7 +8,8 @@
 //! garment chart observations borrow current member/POM inputs. Chart collections validate exact
 //! Design/member coverage. MTM charts retain custom single-member body/Ease inputs. Individual size
 //! axes have explicit ordered values over borrowed canonical inputs. Complete member points require
-//! at least one authored axis. Breaks and resolution contracts follow in owned slices.
+//! at least one authored axis. Individual signed breaks bind explicit axes/POMs/adjacent pairs;
+//! complete coverage, SizeSet composition and resolution contracts follow in owned slices.
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
@@ -48,6 +49,9 @@ pub use size_axes::{
     SizeAxes, SizeAxesDefinition, SizeAxesError, SizeAxisCoordinate, SizeMemberPoint,
     SizeMemberPointView,
 };
+
+mod size_break;
+pub use size_break::{SizeBreak, SizeBreakContext, SizeBreakDefinition, SizeBreakError};
 
 mod size_chart;
 pub use size_chart::{

@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — canonical signed adjacent break declarations
+
+0303 .4c.3d.1 implements D228 keys over actual axis/member/table/measurement bindings. Delta borrows
+its dedicated canonical signed Length; no chart subtraction/cache/default. All states, source updates,
+zero/negative/uneven steps and distinct waist/hip dimensions survive. Contexts reject ambiguous IDs or
+disagreeing shared canonical content/roles. Every query validates the original key/current snapshot;
+reordered/nonadjacent members and changed bindings refuse with original nested errors. Native break5
+plus axes5 pass0; selected strict lint/fmt/book0.433/434/275 whole7e0ca8d Git/hash/public exact0.
+G1still5/18; required coverage .3d.2 and composite/path readiness .3d.3 remain. Promotion: existing
+SizeSet decision extended; broad integration/platform proof deferred to milestone/pre-push.
+
 ## _(2026-10-26 UTC)_ — explicit break-dimension key approved
 
 0302 .4c.3d.0 adopts the director's D228 recommendation: explicit axis, named POM/dimension and
@@ -266,17 +277,8 @@ Sin/cos code next .5d.3.2.1; tangent/inverse remain separate, broad proof .5d.4/
 task/sqrt lesson/ledger retain374/375/251 with exact Git/hash/public reads. Promotion: threshold
 decision records admitted algorithm/bounds, primary sources, proof and actual verification limits.
 
-## _(2026-10-26 UTC)_ — full forward-threshold certificate
-
-0278 .5d.1.2.2.2.b.1 adds a source-locked resumable producer and independent exact payload reader.
-One10k checkpoint passed; the complete-reader refused its partial manifest, and resume rechecked
-that checkpoint before continuing. Distinct oracle/negative controls and three malformed row
-controls pass0. Full1M/100 chunks and independent reader pass, rc=0; all strict margins positive.
-208MB payload and per-chunk cost/source/hash records stay local and reproducible. The reader checks gap arithmetic, hashes and
-coverage; it does not independently recompute asin intervals. Native error/workspace .c, inverse45M
-and tangent remain open. Whole0277 task/old root-plan lesson/ledger retain372/373/250 byte-exact,
-with all three public reads equal, rc=0. Promotion: existing threshold decision records the exact
-format, source identity, checkpoint/coverage boundary and separate interval-proof obligation.
+[Complete forward-threshold certificate lesson](docs/history/stitchcad-devnotes-part434.md) retains
+its original producer/reader/source/coverage evidence, checks and promotion decision.
 
 [Complete finite-threshold feasibility lesson](docs/history/stitchcad-devnotes-part432.md) retains
 its original populations/profile/proof boundaries, checks and promotion decision.
