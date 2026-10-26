@@ -550,18 +550,237 @@ def materialization_file_plan(profile, destination, output):
                              directories=(destination, output.parent), output_files=(output,))
 
 
-def guard_committed(root):
-    """Windows already retained at HEAD cannot disappear or be silently changed."""
+
+def _uses_v2(root):
+    document, _ = load_json(root, MASTER, 8192)
+    return type(document) is dict and type(document.get('version')) is int and document['version'] == 2
+
+
+def _git_blob(root, revision, path, maximum):
+    require(revision == 'HEAD' or (type(revision) is str and REV.fullmatch(revision)), 'invalid source revision')
+    text(path, 200)
+    require(path == MASTER or SEGMENT.fullmatch(path) or
+            re.fullmatch(r'\.doctrine/history_archive/window[1-9][0-9]*\.json', path) or
+            re.fullmatch(r'docs/history/window[1-9][0-9]*\.md', path) or
+            re.fullmatch(r'docs/history/payloads/[0-9a-f]{64}\.tar\.gz', path), 'invalid source path')
+    environment = metadata_environment(root)
+    object_name = revision + ':' + path
+    size = subprocess.run(['git', '-C', str(root), 'cat-file', '-s', object_name],
+                          capture_output=True, check=True, env=environment).stdout
+    require(re.fullmatch(rb'[0-9]{1,20}\n', size) and int(size) <= maximum, 'Git source byte bound exceeded')
+    data = subprocess.run(['git', '-C', str(root), 'show', object_name],
+                          capture_output=True, check=True, env=environment).stdout
+    require(len(data) == int(size), 'Git source size mismatch')
+    return data
+
+
+def _git_paths(root, revision):
+    require(type(revision) is str and REV.fullmatch(revision), 'invalid source revision')
+    result = subprocess.run(['git', '-C', str(root), 'ls-tree', '--full-tree', '-r', '--name-only', revision, '--', 'docs/history'],
+                            capture_output=True, check=True, env=metadata_environment(root)).stdout
+    require(len(result) <= 1048576, 'Git source path inventory bound exceeded')
+    return {path for path in result.decode().splitlines() if SEGMENT.fullmatch(path)}
+
+
+def _head_revision(root):
+    data = subprocess.run(['git', '-C', str(root), 'rev-parse', '--verify', 'HEAD'],
+                          capture_output=True, check=True, env=metadata_environment(root)).stdout.decode().strip()
+    require(REV.fullmatch(data), 'invalid HEAD revision')
+    return data
+
+
+def _legacy_records(backings):
+    """Explicit source/transition proof only; ordinary flat-v2 reads never expand old payloads."""
+    original = json.loads(backings[MASTER], object_pairs_hook=no_duplicate_keys)
+    records = {}
+    total, lines = 0, 0
+    for name in original['windows']:
+        manifest = json.loads(backings[name], object_pairs_hook=no_duplicate_keys)
+        expected = {row['path']: row for row in manifest['members']}
+        with gzip.GzipFile(fileobj=io.BytesIO(backings[manifest['payload']])) as stream:
+            raw = stream.read(TAR_BYTES + 1)
+        require(len(raw) <= TAR_BYTES, 'legacy source tar bound exceeded')
+        seen, directories = set(), set()
+        with tarfile.open(fileobj=io.BytesIO(raw), mode='r:') as archive:
+            for member in archive:
+                require(member.name not in seen, 'duplicate legacy source tar member')
+                seen.add(member.name)
+                if member.isdir():
+                    require(member.name in ('docs', 'docs/history'), 'unexpected legacy source directory')
+                    directories.add(member.name)
+                    continue
+                require(member.type in (tarfile.REGTYPE, tarfile.AREGTYPE) and member.name in expected,
+                        'unexpected/unsafe legacy source member')
+                row = expected[member.name]
+                require(member.size == row['bytes'], 'legacy source member size mismatch')
+                stream = archive.extractfile(member)
+                require(stream is not None, 'unreadable legacy source member')
+                with stream:
+                    data = stream.read(160001)
+                require(record_stats(data) == (row['lines'], row['bytes'], row['sha256']), 'legacy source member identity mismatch')
+                require(member.name not in records, 'duplicate legacy source identity')
+                records[member.name] = data
+                total += len(data)
+                lines += data.count(b'\n')
+                require(total <= MAX_BYTES and lines <= MAX_LINES, 'legacy source aggregate bound exceeded')
+            require(not raw[archive.offset:].strip(b'\0'), 'unparsed legacy source tar tail')
+        require(seen == set(expected) | directories, 'legacy source membership mismatch')
+    return records
+
+
+def _v1_source_snapshot(root, revision, backings, catalogs):
+    require(_git_blob(root, revision, MASTER, 8192) == backings[MASTER], 'source legacy master mismatch')
+    for path, data in backings.items():
+        require(_git_blob(root, revision, path, _backing_limit(path)) == data, 'source backing reconstruction mismatch: ' + path)
+    records = _legacy_records(backings)
+    for path in _git_paths(root, revision):
+        require(path not in records, 'source raw/packed duplicate')
+        records[path] = _git_blob(root, revision, path, 160000)
+        record_stats(records[path])
+    original_catalogs = {}
+    for path in catalogs:
+        original_catalogs[path] = _git_blob(root, revision, path, 160000)
+        require(original_catalogs[path] == bounded_read(local_path(root, path), 160000), 'source legacy catalog mismatch')
+    content = [*records.values(), *original_catalogs.values()]
+    require(sum(map(len, content)) <= MAX_BYTES and sum(data.count(b'\n') for data in content) <= MAX_LINES,
+            'source history aggregate bound exceeded')
+    return records
+
+
+def backing_inventory(root):
+    """Original retained control/payload bytes; plain byte retrieval does not need historical Git."""
+    if _uses_v2(root):
+        return _inventory_v2(root)[2]
+    inventory(root)
+    paths = {MASTER}
+    for name in master(root):
+        manifest, _ = load_json(root, name, 65536)
+        paths.update((name, manifest['payload']))
+    return {path: bounded_read(local_path(root, path), _backing_limit(path)) for path in paths}
+
+
+def _v2_source_proof(root, window):
+    records, _pressure, backings, manifests = _inventory_v2(root)
+    path = '.doctrine/history_archive/' + window + '.json'
+    if path not in manifests:
+        require(path in backings and path != MASTER and path.endswith('.json'), 'unknown window')
+        manifest = json.loads(backings[path], object_pairs_hook=no_duplicate_keys)
+        revision = manifest['source_revision']
+        expected = _git_paths(root, revision)
+        require(expected == {row['path'] for row in manifest['members']}, 'source snapshot membership mismatch')
+        for name in expected:
+            require(records[name] == _git_blob(root, revision, name, 160000), 'source reconstruction mismatch: ' + name)
+        return len(expected), 0, 0
+    manifest = manifests[path]
+    revision = manifest['source_revision']
+    original = json.loads(_git_blob(root, revision, MASTER, 8192), object_pairs_hook=no_duplicate_keys)
+    if type(original.get('version')) is int and original['version'] == 1:
+        legacy_catalogs = {row['path'] for row in _master_v2(root)[0]['legacy_catalogs']}
+        expected = _v1_source_snapshot(root, revision, backings, legacy_catalogs)
+        cohort = {row['path']: row for value in manifests.values() if value['source_revision'] == revision
+                  for row in value['members']}
+        require(set(cohort) == set(expected) | set(backings), 'source cohort membership mismatch')
+        for name, data in expected.items():
+            require(cohort[name]['kind'] == 'record' and records[name] == data, 'source reconstruction mismatch: ' + name)
+        for name in backings:
+            require(cohort[name]['kind'] == 'backing', 'source cohort backing kind mismatch')
+        return len(expected), len(backings), len(legacy_catalogs)
+    require(type(original.get('version')) is int and original['version'] == 2, 'unsupported source schema')
+    expected = _git_paths(root, revision)
+    require(expected == {row['path'] for row in manifest['members']} and
+            all(row['kind'] == 'record' for row in manifest['members']), 'source snapshot membership mismatch')
+    for name in expected:
+        require(records[name] == _git_blob(root, revision, name, 160000), 'source reconstruction mismatch: ' + name)
+    return len(expected), 0, 0
+
+
+def _guard_v2(root, old, saved_master):
+    records, _pressure, backings, manifests = _inventory_v2(root)
+    document = _master_v2(root)[0]
+    if type(old.get('version')) is int and old['version'] == 1:
+        require(backings[MASTER] == saved_master, 'committed legacy master changed')
+        revision = _head_revision(root)
+        catalogs = {row['path'] for row in document['legacy_catalogs']}
+        original = _v1_source_snapshot(root, revision, backings, catalogs)
+        require(set(original) <= set(records), 'committed logical record missing')
+        require(all(records[name] == data for name, data in original.items()), 'committed logical record changed')
+        initial = [value for value in manifests.values() if any(row['kind'] == 'backing' for row in value['members'])]
+        require(initial and len({value['source_revision'] for value in initial}) == 1, 'ambiguous transition source')
+        _v2_source_proof(root, initial[0]['id'])
+        return
+    fields(old, 'version windows legacy_catalogs')
+    require(type(old['version']) is int and old['version'] == 2, 'unsupported committed archive schema')
+    require(old['legacy_catalogs'] == document['legacy_catalogs'], 'committed legacy catalog descriptors changed')
+    require(set(old['windows']) <= set(document['windows']), 'committed window removed')
+    for path in old['windows']:
+        original = _git_blob(root, 'HEAD', path, 65536)
+        require(bounded_read(local_path(root, path), 65536) == original, 'committed manifest changed')
+        manifest = json.loads(original, object_pairs_hook=no_duplicate_keys)
+        for retained in (manifest['payload'], manifest['catalog']):
+            bound = 1048576 if retained == manifest['payload'] else 160000
+            require(bounded_read(local_path(root, retained), bound) == _git_blob(root, 'HEAD', retained, bound),
+                    'committed retained file changed')
+
+
+def _guard_raw_records(root):
+    records, _pressure = inventory(root)
+    revision = _head_revision(root)
+    for path in _git_paths(root, revision):
+        require(path in records, 'committed raw record missing')
+        require(records[path] == _git_blob(root, revision, path, 160000), 'committed raw record changed')
+
+
+def _extended_cli():
+    """Explicit added operations; original ordinary CLI stays unchanged below this adapter."""
+    if not any(value in ('read-backing', 'prove-source', '-h', '--help') for value in sys.argv[1:]):
+        return False
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', required=True, type=Path)
+    parser.add_argument('command', choices=['verify', 'verify-retention', 'list', 'read', 'materialize', 'prove-source', 'read-backing'])
+    parser.add_argument('argument', nargs='?')
+    args = parser.parse_args()
+    if args.command not in ('read-backing', 'prove-source'):
+        return False
+    root = archive_root(args.root)
+    if args.command == 'read-backing':
+        backings = backing_inventory(root)
+        require(args.argument in backings, 'unknown backing identity')
+        sys.stdout.buffer.write(backings[args.argument])
+        return True
+    if not _uses_v2(root):
+        return False
+    require(args.argument is not None and re.fullmatch(r'window[1-9][0-9]*', args.argument), 'window id required')
+    records, backings, catalogs = _v2_source_proof(root, args.argument)
+    print('archive source proof: %d byte-identical full files; %d original backings; %d legacy catalogs; 0 missing/extra' %
+          (records, backings, catalogs))
+    return True
+
+
+def _committed_master(root):
+    """Observe HEAD metadata with the original fail-closed absence/Git authority checks."""
     root = archive_root(root)
     result = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + MASTER], capture_output=True,
                             check=False, env=metadata_environment(root))
     if result.returncode:
-        absence = subprocess.run(['git', '-C', str(root), 'ls-tree', '--name-only', 'HEAD', '--', MASTER],
+        absence = subprocess.run(['git', '-C', str(root), 'ls-tree', '--full-tree', '--name-only', 'HEAD', '--', MASTER],
                                  capture_output=True, check=False, env=metadata_environment(root))
         require(absence.returncode == 0 and absence.stdout == b'', 'committed HEAD metadata unavailable')
         return  # independently observed first transition; source reconstruction is separately proved
+    return result
+
+
+def guard_committed(root):
+    """Preserve every committed byte, including an explicit validated v1-to-v2 relocation."""
+    root = archive_root(root)
+    result = _committed_master(root)
+    if result is None:
+        return
     old = json.loads(result.stdout, object_pairs_hook=no_duplicate_keys)
     current = master(root)
+    if _uses_v2(root):
+        _guard_v2(root, old, result.stdout)
+        _guard_raw_records(root)
+        return
     require(set(old['windows']) <= set(current), 'committed window removed')
     for path in old['windows']:
         saved = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + path], capture_output=True,
@@ -572,9 +791,12 @@ def guard_committed(root):
             saved_bytes = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + retained], capture_output=True,
                                          check=True, env=metadata_environment(root)).stdout
             require(local_path(root, retained).read_bytes() == saved_bytes, 'committed retained file changed')
+    _guard_raw_records(root)
 
 
 def main():
+    if _extended_cli():
+        return
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', required=True, type=Path)
     parser.add_argument('command', choices=['verify', 'verify-retention', 'list', 'read', 'materialize', 'prove-source'])

@@ -300,6 +300,7 @@ application does not depend on Python. A shallow checkout needs no older Git obj
 
 ```bash
 bash scripts/history_archive.sh list
+bash scripts/history_archive.sh read-backing .doctrine/history_archive/windows.json
 bash scripts/history_archive.sh read docs/history/stitchcad-changelog-part1.md
 bash scripts/history_archive.sh read docs/history/stitchcad-defects-part1.md
 bash scripts/history_archive.sh materialize target/history-review
@@ -452,5 +453,6 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part468.md
 The historical0339 probe packs946 logical records plus33 exact v1 backing files into four candidate
 windows, preserving16 physical catalogs. Native tar recovers all979 members exactly; all existing
 caps fit, including3583027 decoded bytes with evidence and221328 active control bytes.
-The v2 decoder passes isolated refusal/materialization checks; live storage remains v1.
-Capacity.2.b/.c own source/immutable-byte guards and migration before any live retirement. No ceiling rises.
+V2 read/refusal/materialization checks pass; live storage remains v1.
+Candidate byte and source checks pass; capacity.2.c owns installation.
+D244 fixes fixture Git path scope.

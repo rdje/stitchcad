@@ -3,11 +3,40 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0341 — exact versioned archive byte guards
+
+- Preserve committed logical/backing/catalog bytes across relocation; add public backing access and source proofs.
+- D244 fixed with actual/compiled scope controls; transition45/0, public33 exact, reader22/0 and v1 compatibility pass0.
+- Candidate947 accepted/older946 refused; live v1 unchanged. Book/pub77-103 pass0; whole0340 receipt below, .2.c next.
+
 ## STITCHCAD-G1-0340 — bounded flat-v2 reader support
 
 - Strict record/backing kinds, old metadata bindings and complete byte budgets; live storage/guards remain v1.
 - V2 22 calibrated/0 with native tar/public946 materialized exact; original v1 purity/CLI/metadata and28 probes pass0.
 - Book/pub77-103 pass0; complete0339 task preserved below, no new raw file. .2.b source/byte guards next; G1still6/18.
+
+### Transitional receipt — flat reader0340
+
+Complete committed task, retained here until capacity.2.c seals494 after packing.
+Source: 072af62dc5bf4b0b6c2da5d1aed40c64303f96d8, docs/tasks/G1-SLICE.md bytes 29072–30507; 1435 bytes, sha256:51f4e07cfd237bd1733b4945ec8a874ab9976854ce347956b0473b51e19f5683.
+
+```text
+- ID: `G1-SLICE.RETENTION-CAPACITY.2.a`
+  Status: `done`
+  Goal:0340 bounded read-only v2 decoding, strict kinds/legacy catalogs/opaque backing accounting.
+  Own reader and focused v2 controls plus existing readonly compatibility projections where version dispatch
+  changes syntax. Preserve exact original v1 functions/behavior. No committed-guard exception or live migration.
+  Own bounded live notes/navigation curation while64 raw files prohibit another seal; keep every existing
+  lesson and record byte. Close prototype receipt may move whole into its existing bounded changelog entry,
+  with Git/hash/equality proof, until .c retires transition receipts into494 after packing. Full CI pre-push.
+  - [x] ROOT CAUSE (WHY + WHERE): v1 cannot read candidate v2; explicit dispatch retains original v1
+    AST/CLI/purity. Fixture orphan/destination-exists diagnostics traced to incomplete staging; final22/0, rc=0.
+  - [x] ADDRESSED: strict schemas/kinds/legacy identity and complete budgets; native tar/public materialization
+    all946 candidate records exact. No recursive old-payload decoding, no live transition; rc=0.
+  - [x] NO REGRESSION: original readonly/CLI/metadata controls and28 v1 probes pass; whole0339 Git/hash/
+    copy exact in bounded CHANGELOG, archived lessons unchanged; book/pub77/103 and syntax pass, rc=0.
+  Commit0340; promotion: existing history decision. .2.b guard/source CLI next; .2.c packs before494.
+```
 
 ## STITCHCAD-G1-0339 — bounded retention continuation measured
 

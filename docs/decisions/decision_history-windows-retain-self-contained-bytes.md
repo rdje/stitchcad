@@ -90,3 +90,16 @@ Only duplicate DEV_NOTES navigation is curated; original archived lesson bodies 
 
 The v2 reader validates retained JSON metadata and binds original logical identities; compressed
 legacy payloads remain opaque and are never recursively decompressed during ordinary reading.
+
+## Transition guard support0341
+
+Capacity.2.b adds read-backing for original control/payload bytes, legacy and initial-cohort source
+proofs, and exact old logical/backing/catalog preservation before v1->v2 relocation is accepted.
+Future v2 manifests/payloads/catalogs and legacy descriptor rows remain pinned; raw committed records
+also retain exact Git bytes in both formats. Ordinary reads/backing retrieval remain independent of Git.
+The shared metadata absence check remains fail-closed. D244 exposed fixture-relative Git pathspecs:
+actual listing0/79 and master absent/present. Explicit --full-tree fixes the source/absence queries;
+a controlled failed show and actual compiled omission reproduce/refuse the old behavior.
+The guarded v2_migration.py prepare command creates a fresh source-pinned candidate only.45 transition
+controls and33 public backing comparisons pass; the older946-record prototype correctly refuses
+against the newer947-record HEAD. No live archive has moved; installation remains capacity.2.c.

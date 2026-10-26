@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — exact versioned archive byte guards
+
+0341 capacity.2.b adds relocation/future/raw byte guards and legacy/cohort/read-backing CLI; no live install.
+D244 real fixture queries0/79/present-master refusal fixed with full-tree; compiled omission is watched.
+Transition45/0, public33 backings exact, v2 reader22/0, original v1 compatibility pass0; candidate947 accepted.
+Old946 prototype refuses missing current record; live947/64/16 unchanged. Whole0340 task exact in CHANGELOG.
+Promotion: existing history decision; book/pub77-103 and syntax0. .2.c installation/consumers next, G1still6/18.
+
 ## _(2026-10-26 UTC)_ — bounded flat-v2 reader
 
 0340 capacity.2.a strictly decodes kinds/legacy bindings and counts all evidence; old payloads stay compressed.
@@ -370,15 +378,6 @@ its original implementation, validation and promotion decision.
 its original derivation, oracle plan, bounds and promotion decision.
 
 [Complete binding conversion lesson](docs/history/window14.md#stitchcad-devnotes-part371md) retains
-its original scope, validation and promotion decision.
-
-[Complete round_to lesson](docs/history/window14.md#stitchcad-devnotes-part368md) retains
-its original scope, validation and promotion decision.
-
-[Complete exact built-in lesson](docs/history/window13.md#stitchcad-devnotes-part366md) retains
-its original scope, validation and promotion decision.
-
-[Complete unary/comparison lesson](docs/history/window13.md#stitchcad-devnotes-part364md) retains
 its original scope, validation and promotion decision.
 
 [Complete binary-operator/numeric-domain lessons](docs/history/window13.md#stitchcad-devnotes-part362md) retain

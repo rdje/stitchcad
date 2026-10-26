@@ -493,22 +493,23 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Keep all caps/v1 behavior/frozen producers. Pack committed64-file baseline before creating494.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.a`
   Status: `done`
-  Goal:0340 bounded read-only v2 decoding, strict kinds/legacy catalogs/opaque backing accounting.
-  Own reader and focused v2 controls plus existing readonly compatibility projections where version dispatch
-  changes syntax. Preserve exact original v1 functions/behavior. No committed-guard exception or live migration.
-  Own bounded live notes/navigation curation while64 raw files prohibit another seal; keep every existing
-  lesson and record byte. Close prototype receipt may move whole into its existing bounded changelog entry,
-  with Git/hash/equality proof, until .c retires transition receipts into494 after packing. Full CI pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): v1 cannot read candidate v2; explicit dispatch retains original v1
-    AST/CLI/purity. Fixture orphan/destination-exists diagnostics traced to incomplete staging; final22/0, rc=0.
-  - [x] ADDRESSED: strict schemas/kinds/legacy identity and complete budgets; native tar/public materialization
-    all946 candidate records exact. No recursive old-payload decoding, no live transition; rc=0.
-  - [x] NO REGRESSION: original readonly/CLI/metadata controls and28 v1 probes pass; whole0339 Git/hash/
-    copy exact in bounded CHANGELOG, archived lessons unchanged; book/pub77/103 and syntax pass, rc=0.
-  Commit0340; promotion: existing history decision. .2.b guard/source CLI next; .2.c packs before494.
+  Goal:0340 bounded v2 reader verified; [whole transitional receipt](../../CHANGELOG.md#transitional-receipt--flat-reader0340).
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.b`
-  Status: `pending`
-  Goal: exact committed v1->v2 byte guard, legacy backing access and old/new optional source proofs.
+  Status: `done`
+  Goal:0341 exact v1->v2 committed logical/backing/catalog byte guard and v2 future immutability.
+  Own reader extended CLI/read-backing/cohort and legacy source proofs, guarded fixture producer and focused
+  controls; retain original v1 CLI/success predicates behind declared dispatch and shared metadata authority.
+  Use current committed source for positive transition; old prototype must fail missing-current-record checks.
+  D244 owns actual fixture-relative tree query0/79 discrepancy and failed-show absence control; fix root
+  scope with --full-tree before source/transition acceptance. No live backing change. Keep bounded transitional receipts in existing changelog sections until .c/494;
+  only duplicate note navigation may be pruned. Book/decision/pointers stay aligned; full CI pre-push.
+  - [x] ROOT CAUSE (WHY + WHERE): v2 relocation must preserve committed logical/backing/catalog bytes;
+    D244 actual fixture0/79 query and compiled full-tree omission control are reproduced/refused, rc=0.
+  - [x] ADDRESSED: transition45/0, all33 public backings exact, current947 cohort/source and legacy48 proofs
+    pass; old946 prototype refuses missing committed data. Extended help and v1 backing check pass, rc=0.
+  - [x] NO REGRESSION: reader22/0, original v1 purity/CLI/metadata controls, syntax/book/pub77/103 pass;
+    whole0340 Git/hash/copy exact; live947/64/16 remains v1 with no relocation, rc=0.
+  Commit0341; promotion: existing history decision. .2.c finalizes install/consumers, then packs before494.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c`
   Status: `pending`
   Goal: guarded atomic copy/verify/use/delete migration with rollback; offline/materialization/current consumers

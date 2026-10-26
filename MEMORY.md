@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0340 capacity.2.a adds strict flat-v2 read/list/materialize; original v1 functions retained behind dispatch.
-- V2 22 calibrated/0, native tar/public materialization946 exact; original v1 purity/CLI/metadata and28 probes pass0.
-- Live v1 still947 logical/64 working/16 windows; no backing/control relocation or guard exception. G1still6/18.
-- Whole0339 task moved Git/hash/byte-exact into its CHANGELOG entry until494; only redundant lesson navigation pruned.
-- NEXT capacity.2.b committed/source/backing controls, then .2.c migration before another seal. Frozen ad3f8fc probe unchanged.
+-0341 capacity.2.b adds exact relocation/future byte guards, read-backing and legacy/cohort source proofs.
+- D244 fixed: fixture Git trees require --full-tree. Transition45/0, public33 backings exact, v2 reader22/0 and v1 compatibility pass0.
+- Prepared947-record candidate source072af62 passes; old946 prototype refuses missing committed data. Live v1 stays947/64/16.
+- Whole0340 task Git/hash-exact in its CHANGELOG section until494; book/pub77-103 pass0. G1still6/18, G0 closure unapproved.
+- NEXT capacity.2.c: finalize guarded install/consumers, prepare at current committed HEAD, verify/swap/rollback, then seal494 after packing. No install yet.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

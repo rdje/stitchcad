@@ -161,6 +161,12 @@ def original_cli_controls():
                       and any(isinstance(target, ast.Name) and target.id == 'root' for target in node.targets))
 
     class Project(ast.NodeTransformer):
+        def visit_If(self, node):
+            if isinstance(node.test, ast.Call) and isinstance(node.test.func, ast.Name) and node.test.func.id in {
+                    '_uses_v2', '_extended_cli'}:
+                return None  # Added version/operation branches have their own native controls.
+            return self.generic_visit(node)
+
         def visit_Assign(self, node):
             if any(isinstance(target, ast.Name) and target.id == 'profile' for target in node.targets):
                 return None
@@ -170,7 +176,7 @@ def original_cli_controls():
 
         def visit_Expr(self, node):
             if isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name) and node.value.func.id in {
-                    'materialization_plan', 'materialization_file_plan'}:
+                    'materialization_plan', 'materialization_file_plan', '_guard_raw_records'}:
                 return None
             return self.generic_visit(node)
 
@@ -285,7 +291,7 @@ def metadata_cases(source=None):
             return subprocess.CompletedProcess(command, 128, b'', b'controlled unavailable HEAD')
         if command[3] == 'show':
             return subprocess.CompletedProcess(command, 128, b'', b'controlled unreadable object')
-        assert command == ['git', '-C', str(ROOT), 'ls-tree', '--name-only', 'HEAD', '--', ns['MASTER']]
+        assert command == ['git', '-C', str(ROOT), 'ls-tree', '--full-tree', '--name-only', 'HEAD', '--', ns['MASTER']]
         return subprocess.CompletedProcess(command, 0, b'' if situation == 'absent' else ns['MASTER'].encode() + b'\n')
 
     try:
