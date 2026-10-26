@@ -524,7 +524,7 @@ front door uses the public archive list as its complete query contract, with an 
 navigation link and recent-record table. Active task nodes stay live; public source/read/materialization
 and file-inventory comparisons verify retrieval without raising the fixed bounds.
 
-### Current retention window
+### Thirteenth retention window
 
 Window 13 captures 52 complete records from `87d0987` at the unchanged limit of 64 working files.
 Its 107786 original bytes are retained in a 31312-byte payload. The fresh local fixture has no
@@ -539,4 +539,19 @@ The complete window 12 narrative remains available through the [archive reader](
 bash scripts/history_archive.sh prove-source window13
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part365.md
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part369.md  # complete window 12 narrative
+```
+
+### Current retention window
+
+Window15 captures50 whole raw records from `ba41e9a`:90265B retained in a24702B payload.
+Source proof reports50 byte-identical files/0 missing-extra; public reads and materialization match.
+Prior14 backing windows remain byte-exact. Fixed64-file bound, reader and schema are unchanged.
+
+D229 corrects the stale Current label; the complete window13 narrative remains above. Window14
+is retained as earlier backing. The frozen `capture_window15.py` requires its original source HEAD;
+use the public reader against later trees:
+
+```bash
+bash scripts/history_archive.sh prove-source window15
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part435.md
 ```

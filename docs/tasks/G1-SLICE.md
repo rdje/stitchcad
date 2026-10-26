@@ -226,7 +226,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.3c.2b.2`
   Status: `done`
-  Goal: completed copy-addressed sewing contract; [whole scope/proofs](../history/stitchcad-devnotes-part430.md).
+  Goal: completed copy-addressed sewing contract; [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part430md).
 
 - ID: `G1-SLICE.3c.3`
   Status: `done`
@@ -384,13 +384,13 @@ metadata signoff unchanged; the named table slice follows.
 - ID: `G1-SLICE.4c.2.1`
   Status: `done`
   Goal:0297 individual axes verified5/0/lint/fmt/book0.
-  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part422.md).
+  Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part422md).
   Commit: STITCHCAD-G1-0297.
 
 - ID: `G1-SLICE.4c.2.2`
   Status: `done`
   Goal:0298 complete axis/member points verified5+5/0/lint/fmt/book0.
-  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part424.md).
+  Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part424md).
   Commit: STITCHCAD-G1-0298.
 
 - ID: `G1-SLICE.4c.3`
@@ -435,32 +435,38 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.3d.0`
   Status: `done`
-  Goal:0302 D228 key approved; [whole ruling/evidence](../history/stitchcad-devnotes-part433.md).
+  Goal:0302 D228 key approved; [whole ruling/evidence](../history/window15.md#stitchcad-devnotes-part433md).
   Commit: STITCHCAD-G1-0302.
 - ID: `G1-SLICE.4c.3d.1`
   Status: `done`
-  Goal:0303 individual signed breaks verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part435.md).
+  Goal:0303 individual signed breaks verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part435md).
   Commit: STITCHCAD-G1-0303.
 - ID: `G1-SLICE.4c.3d.2`
   Status: `done`
-  Goal: explicit required axis/dimension inventory and per-adjacent-pair break coverage; partial drafts remain explicit;
-  missing dimension/pair diagnostic, singleton MTM path-2 refusal, exact current break/source pins.
-  Unit0304 paths: crates/sc-measure/src/size_breaks.rs;crates/sc-measure/src/size_breaks/;
-  crates/sc-measure/src/size_break/context.rs;crates/sc-measure/src/lib.rs;crates/sc-measure/tests/size_breaks_contract.rs;
-  crates/sc-measure/tests/support/size_break_fixture.rs;crates/sc-measure/tests/size_break_contract.rs; book/decision/live docs.
-  Partial drafts allowed; coverage never inferred from available records or chart arithmetic. Preserve authored vectors,
-  all states and actual declarations. Own435 whole0303 task,436 oldest0279 lesson,276 ledger from28caa22; whole Git/hash/public proof.
-  Focused new/affected native tests, selected strict lint/fmt/book; full CI deferred to integration/pre-push.
-  Acceptance0304:
-  - [x] ROOT CAUSE0304: rg required/available declarations -> size_breaks.rs:10/40/51 and coverage83/110, rc=0; independent requirements, no inferred dimensions.
-  - [x] ADDRESSED0304: cargo test -p sc-measure --test size_breaks_contract --test size_break_contract ->5+5 passed/0 failed, rc=0; exact gaps/duplicates/singletons/current sources.
-  - [x] NO REGRESSION0304: selected lib/two-test strict Clippy rc=0 after unused fixture imports removed; fmt rc=0; book rc=0. Shared validation preserves prior declaration tests.
-  - [x] LOCKSTEP0304:435/436/276 whole28caa22 Git/hash/public exact rc=0; book/decision/live aligned. No numeric grading or composite readiness claim.
-  Promotion: existing SizeSet decision extended. Commit: STITCHCAD-G1-0304. Next .3d.3 composition; archive working64 requires window15 before further retirements.
+  Goal:0304 required break coverage verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part437.md).
+  Commit: STITCHCAD-G1-0304.
 - ID: `G1-SLICE.4c.3d.3`
   Status: `pending`
   Goal: composite membership/axes/garment-or-MTM chart/break inputs and typed structural path readiness;
   no generated equivalence, profile execution or physical/release certification.
+
+- ID: `G1-SLICE.4c.3d.3.h15`
+  Status: `done`
+  Goal:0305 fixed-bound history prerequisite before composite SizeSet growth. Capture all50 committed raw files
+  at ba41e9a into immutable window15, preserving prior14 windows and public logical source/materialization bytes.
+  Paths: docs/tasks/artifacts/history_archive/capture_window15.py;.doctrine/history_archive/windows.json;
+  .doctrine/history_archive/window15.json;docs/history/window15.md;docs/history/payloads/; captured raw files.
+  Own437 whole0304 task,438 oldest0280 lesson,277 ledger and439 whole closed bounds-proof scope fromba41e9a.
+  Retarget only maintained Markdown retrieval links, never sealed records/producers. No cap/reader/schema change.
+  Own D229: governance current-window label stayed13 after14; retain the old narrative and advance current guidance.
+  Focused new capture/source/materialization/public comparisons, prior backing equality, retention and book checks.
+  Acceptance0305:
+  - [x] ROOT CAUSE0305: capture_window15.py sourceba41e9a requires50 raw/14 catalogs=64; source checks rc=0. D229 source master14/current book13, transition governance delta0.
+  - [x] ADDRESSED0305: tracked capture/source/materialization/all50 public reads exact rc=0;90265B->24702B, payloadcc8deffb…; prior14 backing byte-equal rc=0.
+  - [x] NO REGRESSION0305: source proof50 exact/0 missing-extra, fixture851 materialized, retention855 logical/19 working, book rc=0; reader/schema/caps unchanged.
+  - [x] LOCKSTEP0305:437/438/277/439 wholeba41e9a Git/hash/public exact rc=0; maintained links route current catalog; D229 preserves old narrative and fixes current guidance.
+  Promotion declined: existing immutable archive contract, no new policy. Commit: STITCHCAD-G1-0305; composition .3d.3 resumes next.
+
 
 - ID: `G1-SLICE.4c.3e`
   Status: `pending`
@@ -643,7 +649,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0291 typed17-command catalog/book2/0/lint0 and exact window14 packing verified.
   Paths: crates/sc-core/src/command.rs;crates/sc-core/tests/command_catalog_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part405.md).
+  Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part405md).
 - ID: `G1-SLICE.6.2`
   Status: `in_progress`
   Goal: typed payload/envelope, actor/revision/key/group/effect identities and actual canonical argument contracts.
@@ -651,7 +657,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0292 D225 terminal allocation/atomic ledger refusal verified3/10/compile/lint0.
   Paths: crates/sc-core/src/ontology/id.rs;crates/sc-core/tests/id_exhaustion_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part409.md).
+  Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part409md).
 - ID: `G1-SLICE.6.2.2`
   Status: `in_progress`
   Goal: bounded command envelope/principal/identity contract and actual typed payload schema, after D225.
@@ -659,30 +665,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0293 actor/revision/retry/group context verified native2/0/lint/census/book0.
   Paths: crates/sc-core/src/command/context.rs;crates/sc-core/tests/command_context_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part411.md).
+  Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part411md).
 - ID: `G1-SLICE.6.2.2.b`
   Status: `done`
   Goal: concrete typed command payload schemas from actual canonical interfaces, no caller placeholders.
 - ID: `G1-SLICE.6.2.2.b.1`
   Status: `done`
   Goal:0294 measurement/material schemas verified native3/0/lint/census/book0.
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part414.md).
+  Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part414md).
 - ID: `G1-SLICE.6.2.2.b.2`
   Status: `done`
   Goal: remaining SplitSeamSpan/CloseDart/AddNotch schemas from published canonical references and creation rules.
 - ID: `G1-SLICE.6.2.2.b.2.a`
   Status: `done`
   Goal:0295 construction intents and D70/D226 rulings verified2+3/0/lint/book0 in1184214.
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part417.md).
+  Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part417md).
 - ID: `G1-SLICE.6.2.2.b.2.b`
   Status: `done`
   Goal:0299 paired sewing split schema verified4+3/0/lint/fmt/census/book0.
-  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part426.md).
+  Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part426md).
   Commit: STITCHCAD-G1-0299.
 - ID: `G1-SLICE.6.2.2.b.2.a.receipt`
   Status: `done`
   Goal:0296 unique metadata receipt preserves1184214; same-invocation commit/clear/check guard.
-  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part419.md).
+  Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part419md).
 - ID: `G1-SLICE.6.2.2.c`
   Status: `in_progress`
   Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.
@@ -690,7 +696,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 - ID: `G1-SLICE.6.2.2.c.1`
   Status: `done`
   Goal:0300 pinned piece/seam queries verified2+2/0/lint/fmt/census/book0.
-  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part428.md).
+  Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part428md).
   Commit: STITCHCAD-G1-0300.
 - ID: `G1-SLICE.6.2.2.c.2`
   Status: `pending`
@@ -919,134 +925,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.i.k`
   Status: `done`
-  Goal: STITCHCAD-G1-0150 owns blocking map-label containment before the new output/delegation evidence sibling.
-  Acceptance: preserve every generated task/decision target, order, source coverage and path CLI; remove only redundant label extensions, fixed caps and hooks/checker behavior retained; actual regeneration/publication/census/coverage proof before .p.o.i.
-
-- [x] REPRODUCE / ISSUE: map-navigation-baseline.log current8190B+planned62B sibling exceeds fixed8192B ceiling;72 original target/CLI identities frozen, rc=0.
-- [x] ROOT CAUSE (WHY + WHERE): gen_knowledge_map.sh repeats .md suffixes in72 labels; map-navigation-proof.log actual output7974B and identical ordered targets, rc=0; only label expansion changes.
-- [x] FIX: shorten both task/decision labels while retaining complete destination filenames, sorting, exclusions, --print-map-path behavior and source coverage; actual regeneration/source catalogs match, rc=0.
-- [x] ADDRESSED (verified): map-navigation-proof.log independent filesystem catalogs/all72 destinations/order exact/current7974B/prospective sibling fits8192B, rc=0; check_knowledge_map.sh fresh render identical, rc=0.
-- [x] NO REGRESSION: publication probes:45 pass/0 fail; producer-census9/9/4 and228 Git paths/287 checks; coverage9/ledger9+pointer13 all terminal0 consumed, rc=0, map-publication/census/coverage/ledger logs; no Rust/producer storage/grammar change.
-- [x] LOCKSTEP: book/notes/changelog/map/MEMORY/frontier synced to .p.o.i; fixed caps preserved; source render and published path CLI exact, rc=0. promotion: declined (existing bounded projections/full navigation preservation). Final staged gate13green, rc=0, map-staged-gate.log.
-
-[Output/delegation division and owned repair groups](G1-SLICE-producers.md).
-[Completed producer verification](G1-SLICE-producer-proof.md).
-[Completed native mode verification](G1-SLICE-runtime-proof.md).
-
-## Current Frontier
-
-| Order | Leaf | Status | Why next |
-| --- | --- | --- | --- |
-| **next** | `G1-SLICE.4c.3d.3` | `pending` | Composite current SizeSet inputs; pack history before growth |
-
-[Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
-
-[Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
-retains exact D72/D67 diagnostics and ownership.
-
-## Decisions
-
-[Historical design boundaries](G1-SLICE-journal.md#ontology-design-decisions--preserved-from-f70edf7)
-retain exact committed notes and their canonical decision links. D84 director ruling preserves signed/
-multi-turn formula values and normalizes entity directions; [decision](../decisions/decision_angles.md).
-.5a.3b.3c verification is complete. SizeSet axes/member points are implemented at .4c.2 under the confirmed D70 rule.
-
-## Open Questions
-
-- Which spike runs first, browser (`.12`) or canvas (`.13`)? They share fixtures; decided at gate
-  entry, and `.12` is the gate's named exit clause so it wins a tie.
-
-## Blockers
-
-- D70 minimum authored-axis rule is implemented by .4c.2; full SizeSet remains .4c.3/.4. D83/D84 scoped reference review
-  is complete; production literal/binding/evaluation proof remains separate.
-- D131 decision/repair .5b.2c.1b verified under engineering delegation2026-10-03; actual source
-  arguments are documented before product namespace .2c.2. No diagnostic decision blocker.
-
-## Acceptance Checklist
-
-[Dimension payload checklist](G1-SLICE-names.md#dimension-payload-checklist--5b3c2b1) records0095.
-
-[Call lookup checklist](G1-SLICE-names.md#call-lookup-checklist--5b3c2a) records0094.
-
-[Completed wanted-kind checklist](G1-SLICE-names.md#wanted-kind-catalog-checklist--5b3c1) retained.
-
-[Completed built-in signature checklist](G1-SLICE-names.md#built-in-signatures-checklist--5b3b) retained.
-
-[Completed D134/D135 checklist](G1-SLICE-names.md#d134d135-guidance-checklist--5b3a1) retained.
-
-[Exact completed operator signatures checklist](G1-SLICE-names.md#completed-operator-signatures-checklist--preserved-from-dc346b4) retained.
-
-### G1-SLICE.5b.2d.2 — actual ordered declaration metadata
-
-[Exact checklist](G1-SLICE-names.md#completed-ordered-scopes-checklist--preserved-from-63c0c7d) retained.
-
-### G1-SLICE.5b.2d.1 — exact initial metadata reads
-
-[Exact checklist](G1-SLICE-names.md#completed-exact-initial-reads-checklist--preserved-from-19900d0) retained.
-
-### G1-SLICE.5b.2c.2 — checked initial product namespace
-
-[Exact checklist](G1-SLICE-names.md#completed-initial-namespace-checklist--preserved-from-4e0d0bf) retained.
-
-### G1-SLICE.5b.2c.1b — delegated binding diagnostic sources
-
-[Exact checklist](G1-SLICE-measurements.md#completed-binding-source-decision-checklist--preserved-from-1972f57) retained.
-
-### G1-SLICE.5b.2c.1a — reserved diagnostic conflict reproduction/proposal
-
-[Exact checklist](G1-SLICE-constructions.md#completed-reserved-diagnostic-proposal-checklist--preserved-from-862c0d9) retained.
-
-### G1-SLICE.5b.2b — immutable sourced declarations
-
-[Exact completed checklist](G1-SLICE-constructions.md#completed-declaration-checklist--preserved-from-db19b90) retained.
-
-
-[Exact completed metadata checklist](G1-SLICE-constructions.md#completed-product-metadata-checklist--preserved-from-cfd0748) retained.
-
-[Exact completed records](G1-SLICE-measurements.md#completed-recognition-and-provenance-checklists--preserved-from-d7a421e) retained.
-
-Current code evidence is fresh, ticked and tool-backed in its owning leaf. Future ontology changes
-also run glossary/API, feature and publication checks. Prior checklists and authoring rules remain in
-[retained navigation](G1-SLICE-journal.md#acceptance-navigation--retained-during-g1-0052),
-[formula evidence](G1-SLICE-formulas.md) and [object evidence](G1-SLICE-evidence.md).
-
-Completed lexical/expression/numeric/identity protocols, checklists and commit journals remain in
-[formula evidence](G1-SLICE-formulas.md), [numeric journal](G1-SLICE-journal.md) and
-[identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
-
-[Exact completed static review checklist](G1-SLICE-canonical.md#completed-static-review-checklist--preserved-from-b2c4d6e) retained.
-
-### `G1-SLICE.5b.1b.2` — whole reference static preflight
-
-[Exact checklist](G1-SLICE-measurements.md#completed-whole-preflight-checklist--preserved-from-862c0d9) retained.
-
-### G1-SLICE.5e.1a — D122/D127/D128 origin/context reads
-
-[Exact completed checklist](G1-SLICE-checked-recipes.md#completed-origin-checklist--retained-from-c91cdf5).
-
-[Exact completed assertion checklist](G1-SLICE-measurements.md#completed-assertion-checklist--preserved-from-dab0ee4) retained.
-
-## Verification and commit logs
-
-[Exact earlier receipts](G1-SLICE-names.md#earlier-root-receipts--preserved-from2bdcd31) retained.
-Current retention receipts live in the .h0 owning recipe node/names checklist.
-
-## Changelog
-
-- `2026-10-02`: full syntax/input/identity milestone closes .5a; .5b–.5g remain owned and pending.
-- promotion: declined (routine contract review, current-status repair and existing containment).
-
-- `2026-10-02`: .5b.1 signature child .1a closes; independent full kind/arity/tolerance/envelope
-  matrix verifies two reference repairs. Namespace/preflight .1b and full static closure .1c follow.
-
-- `2026-10-02`: .5b.1b.0v records both exact-head CI jobs/steps success and newest window3 refusal; STITCHCAD-G1-0075. Next P0 SPINE.23, then namespace.
-
-- `2026-10-02`: .5b.1b.1/STITCHCAD-G1-0076 repairs reference namespace/header phase; static1139/13 actual reds. D119 whole preflight next.
-- `2026-10-02`: .5b.1b.2/STITCHCAD-G1-0077 repairs whole preflight/measurement D119/D123;196 cases/14 actual reds. .1b done, .1c next.
-- `2026-10-02` (UTC): .5b.1c.1/STITCHCAD-G1-0078 maps static obligations, fixes D126; D124 diagnostic ruling .1c.2, D125 runtime .5e.3.
-- `2026-10-02` (UTC): .5e.3a/STITCHCAD-G1-0079 fixes D125 reference assertions;262 cases/eight actual reds. D124 pending, D122 independent next.
-- `2026-10-02` (UTC): .5e.1a/STITCHCAD-G1-0080 fixes D122/D127/D128 reference origin/context reads;1466 cases/thirteen actual reds. Next D121; D124 pending.
+  Goal: completed immutable bounds proof; [whole scope/evidence](../history/stitchcad-devnotes-part439.md).
 
 - ID: `G1-SLICE.5e.1a.h`
   Status: `done`

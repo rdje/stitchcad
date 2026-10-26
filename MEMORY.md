@@ -4,12 +4,12 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0304 .4c.3d.2 implements explicit required dimensions/available break inventories and current exact gap reporting.
-- Partial drafts preserve absence; duplicates/undeclared cells refuse; singletons refuse grading even with no gaps.
-- Unknown/Derived remain present declarations with original reads; current membership/key errors precede coverage.
-- Native collection5+declaration5 pass0; selected strict lib/two-test lint/fmt/book0; shared fixture preserves original tests.
-- NEXT .4c.3d.3 composite SizeSet inputs. Working history64 requires a window15 capture from stable HEAD before growth.
--435/436/276 whole28caa22 Git/hash/public exact0.0303/28caa22 implements original sourced signed break declarations.
+-0305 .4c.3d.3.h15 complete: window15 packs50 ba41e9a raw records90265B->24702B; prior14 backing unchanged.
+- Source/public/materialization all50 exact0; fixture851 recovered; installed retention855 logical/19 working, book0.
+-437/438/277/439 wholeba41e9a Git/hash/public exact0. D229 stale book-current label fixed, old narrative retained.
+- NEXT .4c.3d.3: composite current membership/axes/garment-or-MTM chart/break inputs and structural path readiness.
+-0304/ba41e9a required dimensions/available breaks/current exact gaps; native collection5+declaration5/lint/fmt/book0.
+- Partial drafts explicit, singleton grading refused; Unknown/Derived preserve original reads.0303/28caa22 individual breaks.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
 - Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
@@ -39,10 +39,10 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - Frozen170 build inputs/producer remain byte-exact provenance; unrelated library changes allowed.
 - Compact inverse_rounding_certificate.tsv source-gates five files; angular margin>2^-540.
 - atan_runtime_plan.py envelope/oracle controls pass0; width<2^-564/workspace<2^1154/Newton<=13.
-- Window14 sourceb49128e packs50 raw records93940B->27917B; prior13 unchanged; source/public exact.
-- capture_window14.py is a FROZEN historical producer, not a current-HEAD rerun.
+- Window15 payloadcc8deffb5866dc1d55decd954dd7a411decc6a49577f41dcd0fdeedf7d6aa8b7 retains sourceba41e9a.
+- capture_window14.py and capture_window15.py are FROZEN historical producers, not current-HEAD reruns.
 - Cleanup protection0285 guards both certificate stores; due2026-10-26 13:16UTC, do not reset early.
 - D156/D223 audits deferred; D224/D225/D227 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background job or pending director question after0304. Derive push count, never carry it manually.
+- No background job or pending director question after0305. Derive push count, never carry it manually.

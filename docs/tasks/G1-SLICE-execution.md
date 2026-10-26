@@ -16,28 +16,28 @@ The original working execution block was copied byte-for-byte; later entries rem
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.1.1`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.2`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.3`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.4`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.5`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.5.1`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.5.2`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.6`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
   Retention0297 owned .4c.2.1:
   - [x] ROOT CAUSE0297: git show3c85204 whole completed input-adapter summaries retained421; Python byte/hash comparison rc=0.
   - [x] ADDRESSED0297: whole source/hash exact in421, Python comparison rc=0.
@@ -51,16 +51,16 @@ The original working execution block was copied byte-for-byte; later entries rem
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.2.1`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part416.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part416md).
 - ID: `G1-SLICE.5e.2.2`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part416.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part416md).
 - ID: `G1-SLICE.5e.2.3`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part416.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part416md).
 - ID: `G1-SLICE.5e.2.h13`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part416.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part416md).
   Retention0295 owned .6.2.2.b.2.a:
   - [x] ROOT CAUSE0295: git showe95fa7a whole four execution-prerequisite summaries retained416; Python byte/hash comparison rc=0.
   - [x] ADDRESSED0295: whole source/hash exact in416, Python comparison rc=0.
@@ -87,19 +87,19 @@ The original working execution block was copied byte-for-byte; later entries rem
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.3.1`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part413md).
 - ID: `G1-SLICE.5e.3.2`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part413md).
 - ID: `G1-SLICE.5e.3.3`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part413md).
 - ID: `G1-SLICE.5e.3.4`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part413md).
 - ID: `G1-SLICE.5e.3.5`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part413md).
   Retention0294 owned .6.2.2.b.1:
   - [x] ROOT CAUSE0294: git show4e98649 whole five completed adapter summaries retained413; Python byte/hash comparison rc=0.
   - [x] ADDRESSED0294: whole source/hash exact in413, Python comparison rc=0.
@@ -114,7 +114,13 @@ The original working execution block was copied byte-for-byte; later entries rem
 
 - ID: `G1-SLICE.5e.3.6`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part407.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part407md).
 - ID: `G1-SLICE.5e.3.7`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part407.md).
+  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part407md).
+
+## Window15 retrieval routing —0305
+
+- [x] ROOT CAUSE0305: stable ba41e9a capture has50 raw records at64 working files; capture_window15.py rc=0.
+- [x] ADDRESSED0305: source proof50 byte-identical/0 missing-extra and all50 public reads exact, rc=0; links route to the new catalog.
+- [x] NO REGRESSION0305: prior14 backing byte-equal; materialized851 logical records/public bodies exact, rc=0; semantic task/evidence unchanged.

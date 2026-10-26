@@ -481,7 +481,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part372md).
 - ID: `G1-SLICE.5d.1.2.2.2.b`
   Status: `done`
-  Goal: complete forward1M/inverse45M and inverse plan; [whole subtree/proofs](../history/stitchcad-devnotes-part404.md).
+  Goal: complete forward1M/inverse45M and inverse plan; [whole subtree/proofs](../history/window15.md#stitchcad-devnotes-part404md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.1`
   Status: `done`
   Goal: verified; whole scope/provenance in retained404 above.
@@ -521,7 +521,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.1.2.2.2.d.1`
   Status: `done`
   Goal:0290 exact tangent pole/range/coverage characterization8798/586/2 pass0; practical .d.2 pending.
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part402.md).
+  Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part402md).
   Retention0291 owned .6.1:
   - [x] ROOT CAUSE0291: git showb49128e whole0290 task/population subtree retained402/404; Python source/hash comparison rc=0.
   - [x] ADDRESSED0291: whole source/hash exact in402/404, Python comparison rc=0.
@@ -1042,3 +1042,9 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
   Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part350md).
 
 Output/delegation division and groups continue in [the bounded producer sibling](G1-SLICE-producers.md).
+
+## Window15 retrieval routing —0305
+
+- [x] ROOT CAUSE0305: stable ba41e9a capture has50 raw records at64 working files; capture_window15.py rc=0.
+- [x] ADDRESSED0305: source proof50 byte-identical/0 missing-extra and all50 public reads exact, rc=0; links route to the new catalog.
+- [x] NO REGRESSION0305: prior14 backing byte-equal; materialized851 logical records/public bodies exact, rc=0; semantic task/evidence unchanged.

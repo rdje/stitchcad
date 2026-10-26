@@ -3,41 +3,43 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0304 — explicit required break coverage
+## STITCHCAD-G1-0305 — fifteenth immutable history window
 
-SizeBreaks preserves independent required dimensions/available declarations; exact current gaps and singleton grading refusal.
-Native collection5+declaration5/0, selected strict lint/fmt/book0; whole435/436/276 retention exact. Unknowns stay
-unresolved and duplicate/undeclared cells refuse. G1 remains5/18; composite SizeSet inputs next.
+All50 committed raw files pack90265B->24702B with exact source/public/materialized bytes; prior14 unchanged.
+Retention855 logical/19 working and book0; whole437/438/277/439 source retention exact. D229 fixes the stale
+current-window book label while preserving its old narrative. No product behavior change; G1 remains5/18.
 
 # Sealed archive — earlier slices
 
-| [part276](docs/history/stitchcad-changelog-part276.md) | whole0303 | 6 lines, 394 bytes, sha256:07bc26e6… |
+| [part277](docs/history/stitchcad-changelog-part277.md) | whole0304 | 6 lines, 399 bytes, sha256:cb53c33e… |
 
-| [part275](docs/history/stitchcad-changelog-part275.md) | whole0302 | 6 lines, 361 bytes, sha256:fe6e3333… |
+| [part276](docs/history/window15.md#stitchcad-changelog-part276md) | whole0303 | 6 lines, 394 bytes, sha256:07bc26e6… |
 
-| [part274](docs/history/stitchcad-changelog-part274.md) | whole0301 | 6 lines, 364 bytes, sha256:ac747382… |
+| [part275](docs/history/window15.md#stitchcad-changelog-part275md) | whole0302 | 6 lines, 361 bytes, sha256:fe6e3333… |
 
-| [part273](docs/history/stitchcad-changelog-part273.md) | whole0300 | 6 lines, 375 bytes, sha256:028a6e02… |
+| [part274](docs/history/window15.md#stitchcad-changelog-part274md) | whole0301 | 6 lines, 364 bytes, sha256:ac747382… |
 
-| [part272](docs/history/stitchcad-changelog-part272.md) | whole0299 | 6 lines, 348 bytes, sha256:2611e18e… |
+| [part273](docs/history/window15.md#stitchcad-changelog-part273md) | whole0300 | 6 lines, 375 bytes, sha256:028a6e02… |
 
-| [part271](docs/history/stitchcad-changelog-part271.md) | whole0298 | 6 lines, 377 bytes, sha256:c6d24c13… |
+| [part272](docs/history/window15.md#stitchcad-changelog-part272md) | whole0299 | 6 lines, 348 bytes, sha256:2611e18e… |
 
-| [part270](docs/history/stitchcad-changelog-part270.md) | whole0297 | 6 lines, 350 bytes, sha256:43dce1b8… |
+| [part271](docs/history/window15.md#stitchcad-changelog-part271md) | whole0298 | 6 lines, 377 bytes, sha256:c6d24c13… |
 
-| [part269](docs/history/stitchcad-changelog-part269.md) | whole0296 | 6 lines, 334 bytes, sha256:026487eb… |
+| [part270](docs/history/window15.md#stitchcad-changelog-part270md) | whole0297 | 6 lines, 350 bytes, sha256:43dce1b8… |
 
-| [part268](docs/history/stitchcad-changelog-part268.md) | whole0295 | 6 lines, 352 bytes, sha256:3636af5f… |
+| [part269](docs/history/window15.md#stitchcad-changelog-part269md) | whole0296 | 6 lines, 334 bytes, sha256:026487eb… |
 
-| [part267](docs/history/stitchcad-changelog-part267.md) | whole0294 | 6 lines, 360 bytes, sha256:ca19a138… |
+| [part268](docs/history/window15.md#stitchcad-changelog-part268md) | whole0295 | 6 lines, 352 bytes, sha256:3636af5f… |
 
-| [part266](docs/history/stitchcad-changelog-part266.md) | whole0293 | 6 lines, 324 bytes, sha256:564069d8… |
+| [part267](docs/history/window15.md#stitchcad-changelog-part267md) | whole0294 | 6 lines, 360 bytes, sha256:ca19a138… |
 
-| [part265](docs/history/stitchcad-changelog-part265.md) | whole0292 | 6 lines, 385 bytes, sha256:aae9c8cf… |
+| [part266](docs/history/window15.md#stitchcad-changelog-part266md) | whole0293 | 6 lines, 324 bytes, sha256:564069d8… |
 
-| [part264](docs/history/stitchcad-changelog-part264.md) | whole0291 | 6 lines, 350 bytes, sha256:ccd9ded0… |
+| [part265](docs/history/window15.md#stitchcad-changelog-part265md) | whole0292 | 6 lines, 385 bytes, sha256:aae9c8cf… |
 
-| [part263](docs/history/stitchcad-changelog-part263.md) | whole0290 | 5 lines, 290 bytes, sha256:9382f49f… |
+| [part264](docs/history/window15.md#stitchcad-changelog-part264md) | whole0291 | 6 lines, 350 bytes, sha256:ccd9ded0… |
+
+| [part263](docs/history/window15.md#stitchcad-changelog-part263md) | whole0290 | 5 lines, 290 bytes, sha256:9382f49f… |
 
 | [part262](docs/history/window14.md#stitchcad-changelog-part262md) | whole0289 | 6 lines, 318 bytes, sha256:619cd47f… |
 

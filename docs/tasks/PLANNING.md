@@ -444,7 +444,7 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
 - **D70** — resolved by director2026-10-26: every complete SizeSet requires at least one authored axis.
   Names/ordered values are explicit, never inferred. Normative field/§7 and ownership record align.
   Owner/schedule: G1-SLICE.4c.2 next after current command-payload slice; axes code remains pending.
-  [Whole original conflict/reproduction](../history/stitchcad-defects-part137.md) retained exactly. Closed.
+  [Whole original conflict/reproduction](../history/window15.md#stitchcad-defects-part137md) retained exactly. Closed.
 
 D71 and D72 are sealed in [`stitchcad-defects-part14.md`](../history/window2.md#stitchcad-defects-part14md).
 G1-SLICE.4d.1 fixes stale book status and the archive probe's production-sized fixture; source/rendered
@@ -1076,6 +1076,15 @@ axis + explicit POM/dimension + adjacent member pair, retaining each canonical s
 state/source. Semantic conflict closed; declaration/coverage/composite implementation remains .3d.
 Whole original ruling-review evidence is retained431. No break implementation is claimed by the ruling.
 
+## D229 — current book retention label lagged the actual archive
+
+At sourceba41e9a, the master ends in window14 while governance's Current retention window section
+still names13. Reproduce: git show ba41e9a for the master and governance; 6662298 governance delta0.
+Impact: the reviewer's book presents an old current archive, though logical records are intact.
+Owner/schedule: G1-SLICE.4c.3d.3.h15, P2 fixed0305 during required packing. Preserve the complete
+window13 narrative under its historical heading; publish current15/source/retrieval boundaries.
+Focused source comparison0/book0 and byte-exact retention proofs verify the correction; no data loss.
+
 ## Active continuity followup
 
 - **D223** — optional ledger continuity modes retain raw-file/closed-graph assumptions.
@@ -1166,3 +1175,9 @@ Whole original ruling-review evidence is retained431. No break implementation is
   Evidence: protected admission-glossary-head.txt; prior D155 establishes the same repair pattern.
   D217/D218 remain here until ordinary sealing by SPINE.19; both repairs are verified.
   No extra history window is opened for these live closure receipts.
+
+## Window15 retrieval routing —0305
+
+- [x] ROOT CAUSE0305: stable ba41e9a capture has50 raw records at64 working files; capture_window15.py rc=0.
+- [x] ADDRESSED0305: source proof50 byte-identical/0 missing-extra and all50 public reads exact, rc=0; links route to the new catalog.
+- [x] NO REGRESSION0305: prior14 backing byte-equal; materialized851 logical records/public bodies exact, rc=0; semantic task/evidence unchanged.

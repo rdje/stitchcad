@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — fifteenth immutable history window
+
+0305 .4c.3d.3.h15 frees the fixed64-file working boundary before composite SizeSet work. Frozen
+sourceba41e9a capture packs all50 raw records90265B into24702B payloadcc8deffb…; all50 source/public/
+materialized bytes exact0, prior14 backing unchanged. Fixture851 records materialized; installed
+retention855 logical/19 working passes0 after437/438/277/439 whole source/hash/public retirements.
+Only maintained links retarget; sealed bytes/producers and reader/schema/caps unchanged. D229 found
+source master14 while book Current label13 (transition governance delta0); old narrative retained,
+current15 guidance/book0 now correct. No product behavior/count change; G1still5/18, composition next.
+Promotion declined: existing archive protocol, identities/catalogs hold storage evidence; no new policy.
+
 ## _(2026-10-26 UTC)_ — explicit required break coverage
 
 0304 .4c.3d.2 separates ordered required axis/dimension bindings from available declarations. Partial
@@ -264,59 +275,49 @@ axis outputs; no synthetic AST/derived-source result is claimed. Full execution 
 remain open. Whole0280 node/old arc+UI lesson/ledger retain379/380/253 exact Git/hash/public bytes;
 book/live sync, G1still5/18. Promotion declined: existing source-set/class/native contracts unchanged.
 
-## _(2026-10-26 UTC)_ — correctly rounded native sine/cosine values
+[Complete native forward-kernel lesson](docs/history/stitchcad-devnotes-part438.md) retains
+its original exact reduction/evaluation/rounding evidence, checks and promotion decision.
 
-0280 .5d.3.2.1 implements the admitted private full-width folding/512-bit64-term plan and exposes
-checked_sin/checked_cos. Exact axes and canonical zero bypass series; all other results use the
-certified lower endpoint's exact ppm rounding. Kind refusals retain actual call/operand. Shared
-pi limbs and reproduction test move intact to pi.rs, with arc behavior preserved. Native3/0 covers
-44 independent angles/88 outputs and live oracle reproduction; shared pi1/0 and arc2/0 pass, rc=0.
-The oracle uses distinct pi identity/direct768-bit powers/factorials over signed principal turns,
-including hard threshold neighbors. Selected strict lint exposed7 existing arc fixture indexing
-warnings; checked array destructuring fixes the owned defect, arc2/0 and lint now pass0. Whole0279
-task/hypot lesson/closed syntax receipts/ledger retain376–378/252 byte-exact. Book/live sync; source
-calls/full execution/platform proof remain owned. Promotion: threshold decision records native scope.
-
-[Complete bounded forward-plan lesson](docs/history/stitchcad-devnotes-part436.md) retains
+[Complete bounded forward-plan lesson](docs/history/window15.md#stitchcad-devnotes-part436md) retains
 its original reduction/budget/rounding derivation, checks and promotion decision.
 
-[Complete forward-threshold certificate lesson](docs/history/stitchcad-devnotes-part434.md) retains
+[Complete forward-threshold certificate lesson](docs/history/window15.md#stitchcad-devnotes-part434md) retains
 its original producer/reader/source/coverage evidence, checks and promotion decision.
 
-[Complete finite-threshold feasibility lesson](docs/history/stitchcad-devnotes-part432.md) retains
+[Complete finite-threshold feasibility lesson](docs/history/window15.md#stitchcad-devnotes-part432md) retains
 its original populations/profile/proof boundaries, checks and promotion decision.
 
-[Complete thirteenth-window lesson](docs/history/stitchcad-devnotes-part429.md) retains
+[Complete thirteenth-window lesson](docs/history/window15.md#stitchcad-devnotes-part429md) retains
 its original population/source/materialization evidence, checks and promotion decision.
 
-[Complete per-node static-certificate lesson](docs/history/stitchcad-devnotes-part427.md) retains
+[Complete per-node static-certificate lesson](docs/history/window15.md#stitchcad-devnotes-part427md) retains
 its original node/role/target evidence, defects, checks and promotion decision.
 
-[Complete checked runtime-sequence lesson](docs/history/stitchcad-devnotes-part425.md) retains
+[Complete checked runtime-sequence lesson](docs/history/window15.md#stitchcad-devnotes-part425md) retains
 its original bounded execution ownership, source obligations, checks and promotion decision.
 
-[Complete lazy supplied-value conditional lesson](docs/history/stitchcad-devnotes-part423.md) retains
+[Complete lazy supplied-value conditional lesson](docs/history/window15.md#stitchcad-devnotes-part423md) retains
 its original kind/laziness/source/refusal behavior, checks and promotion decision.
 
-[Complete named assertion-outcome lesson](docs/history/stitchcad-devnotes-part420.md) retains
+[Complete named assertion-outcome lesson](docs/history/window15.md#stitchcad-devnotes-part420md) retains
 its original actual identity/context/source results, checks and promotion decision.
 
-[Complete sourced named-tolerance lesson](docs/history/stitchcad-devnotes-part418.md) retains
+[Complete sourced named-tolerance lesson](docs/history/window15.md#stitchcad-devnotes-part418md) retains
 its original exact comparison/source/limit behavior, checks and promotion decision.
 
-[Complete sourced numeric-call lesson](docs/history/stitchcad-devnotes-part415.md) retains
+[Complete sourced numeric-call lesson](docs/history/window15.md#stitchcad-devnotes-part415md) retains
 its original operand/call propagation, actual failures, checks and promotion decision.
 
-[Complete sourced scalar-operator/binding lesson](docs/history/stitchcad-devnotes-part412.md) retains
+[Complete sourced scalar-operator/binding lesson](docs/history/window15.md#stitchcad-devnotes-part412md) retains
 its original exact-flow/source behavior, typed failures, checks and promotion decision.
 
-[Complete immutable approximation-source lesson](docs/history/stitchcad-devnotes-part410.md) retains
+[Complete immutable approximation-source lesson](docs/history/window15.md#stitchcad-devnotes-part410md) retains
 its original call inventory, source-only T1 boundary, checks and promotion decision.
 
-[Complete canonical/stored numeric-read lesson](docs/history/stitchcad-devnotes-part406.md) retains
+[Complete canonical/stored numeric-read lesson](docs/history/window15.md#stitchcad-devnotes-part406md) retains
 its original exact conversion boundaries, source separation, checks and promotion decision.
 
-[Complete pinned size-membership lesson](docs/history/stitchcad-devnotes-part403.md) retains
+[Complete pinned size-membership lesson](docs/history/window15.md#stitchcad-devnotes-part403md) retains
 its original authored-order bridge, exact pins, validation and promotion decision.
 
 [Complete supplied size-frame lesson](docs/history/window14.md#stitchcad-devnotes-part399md) retains
