@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — detached approval boundary adopted
+
+0331 .6.2.2.c.2.5.2 aligns roadmap9/book/decision with approved D239: fixed binding, separate human/scope/date record.
+C7 placement guards reject inline/self/missing/agent claims. Null sentinel red23/1 fixed; D240 duplicate-key
+red24/1 fixed by C1 uniqueness. Final focused25/0, witness3/census9-6-8-0/book/publication76-95 pass0.
+485/303/144 whole120cc6e source/hash/public exact0; Rust unchanged, no product hash or approval implemented.
+Promotion: existing indexed release decision records adoption. G1still6/18; candidate input schema next.
+
 ## _(2026-10-26 UTC)_ — release approval identity ruling
 
 0330 .6.2.2.c.2.5.1 finds D239: actual approval fields versus immutable hashed candidate lack transition semantics.
@@ -199,16 +207,8 @@ from numeric/physical/global-currentness/storage/approval proof.444/445/280 whol
 public exact0. .3d implementation closes; .3e scope review next, profiles .4 later. G1still5/18.
 Promotion: existing SizeSet decision extended; broad verification remains its integration/pre-push owner.
 
-## _(2026-10-26 UTC)_ — composite MTM body/Ease SizeSet inputs
-
-0307 .4c.3d.3.2 composes the actual custom singleton/axis/body-Ease chart/break inputs. Shared
-snapshot/identity checks now serve both chart families. Complete mappings enable regeneration
-inputs; grading retains the original chart/member GradeRulesUnsupported after current validation,
-even for drafts or empty gaps. Body/Ease values remain original and uncomputed. New MTM5, original
-MTM15 and garment5 pass0; selected strict lint/fmt/book0. The original fixture is shared unchanged,
-with scoped test-only helper/import cleanup.442/443/279 whole4ae9650 Git/hash/public exact0.
-G1still5/18; unified family/path review .3.3 next. Promotion: existing SizeSet decision extended;
-actual numeric execution, persistence and broad integration proof remain their later owners.
+[Complete MTM composite-input lesson](docs/history/stitchcad-devnotes-part485.md) retains
+its original body/Ease/Design-source, path and focused-proof boundaries.
 
 [Complete garment composite-input lesson](docs/history/stitchcad-devnotes-part484.md) retains
 its original canonical source/path contracts, focused checks and remaining proof boundaries.

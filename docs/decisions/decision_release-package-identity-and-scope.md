@@ -22,7 +22,7 @@ Four rules, each closing a door that would otherwise be opened by convenience:
    never widens by inference; widening is a new evidence record, and a production claim names its scope in
    the same sentence as the claim.
 4. **Approval is a human act.** An agent may inspect, propose, commit and generate, and may assemble the
-   evidence an approval needs; a package whose approver field is not a human identity is invalid.
+   evidence an approval needs; a detached approval record must name an authenticated human.
 
 ## The alternative each rejected
 
@@ -64,33 +64,25 @@ translation layer rather than the contract; (2) evidence from the G6 pilot that 
 read as a defect report by cutting rooms, which would move those cells to `block` — stricter, never
 looser, because loosening is how an unobserved value reaches fabric.
 
-## D239 ruling — detached approval, coordinated adoption next
+## D239 adopted — detached approval records
 
-Owner: G1-SLICE.6.2.2.c.2.5.1, opened2026-10-26 before release request schemas.
-Director2026-10-26 selected “Separate immutable approval records (Recommended)”. Option A is the ruling;
-G1-SLICE.6.2.2.c.2.5.2 owns coordinated roadmap/book/census adoption next. The four invariants above remain.
+Director2026-10-26 selected “Separate immutable approval records (Recommended)”; coordinated adoption
+is G1-SLICE.6.2.2.c.2.5.2. Original source/diagnosis is retained whole in
+`docs/history/stitchcad-devnotes-part484.md`; full prior proposal/alternative/ruling in
+`docs/history/stitchcad-devnotes-part485.md`.
 
-Roadmap9 includes approver/scope/date in the immutable manifest. Release chapter1/3 generates a candidate
-first, then approves its existing manifest digest; chapter2 permits unresolved fields until available.
-Filling an unresolved approval field after hashing changes manifest bytes and therefore the fixture's
-digest. Neither this record nor the chapter says whether those values are prebound or stored outside
-that immutable subject. The list census compares vocabulary, not that lifecycle. Source clauses are
-retained whole in docs/history/stitchcad-devnotes-part484.md.
+The ninth manifest field is `approval_binding`, a fixed `{"kind":"detached"}` descriptor. It contains
+neither actual human/scope/date values nor a changing record list or self digest. The candidate's
+identity still hashes the complete immutable manifest, all artifact hashes included.
+A separate immutable record carries exact `package_identity`, authenticated human `approver`, reviewed
+`scope` and human-act `date`. Approval appends that record; it never edits the candidate. Receipt
+transport is outside the content identity. Withdrawal is another record. Record fields cannot confer
+human authority; the core must validate actual authenticated identity, grant, scope and subject.
 
-**Recommended option A — detached immutable approval records.** Keep a stable approval-binding descriptor
-in the manifest; resolve actual human/scope/date through separate immutable records bound to the
-candidate's exact identity. ApprovePackage appends such a record and never rewrites the candidate.
-The descriptor does not embed its own package digest. Changed content still creates a new candidate;
-approval withdrawal remains a separate record. Clarify roadmap/book/census field semantics together.
-An approval record is related to the content package; attaching a receipt for transport must not
-silently change the identity being approved. No real approval is created by this proposal.
+Sealed validation results stay frozen; later acceptance records bind that same identity externally.
+No state or approval silently carries to a changed candidate. The existing ladder, scope narrowing,
+evidence and unknown-policy obligations remain. No actual package or G0 closure is approved here.
 
-**Alternative B — prospective metadata fixed before final hashing.** Prepare a new candidate containing
-exact prospective human/scope/date, then have that human approve its final digest. Confirmation cannot
-fill an unresolved field or edit a prebound value. A change requires another candidate and review;
-metadata alone still grants no approval. Actual identity/scope/date must match the eventual human act.
-
-The guarded standalone approval_identity_probe.py under docs/tasks/artifacts/release_contract reproduces
-three synthetic transitions. Its SHA256/JSON serialization is diagnostic only; it chooses no production
-hash algorithm or canonical format. Both options preserve immutable subjects and human-only approval,
-and the director chose A before input/persistence contracts are frozen. The probe itself adopts no policy.
+The historical approval_identity_probe.py reproduces why filling metadata after hashing changes
+identity; its alternative fixtures are historical, not additional supported protocols. Its SHA256/JSON
+choice is diagnostic only. Production hash/date/canonical encodings retain their implementation owners.

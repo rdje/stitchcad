@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0330 — detached approval identity ruling
+## STITCHCAD-G1-0331 — detached approval boundary adopted
 
-D239's post-hash approval-field mutation reproduced; director chose separate immutable approval records.
-Witness3/CLI refusal/census9-6-8-0/book/publication76-95 pass;484/302/143 whole22ab074 retained exact.
-.6.2.2.c.2.5.1 done; coordinated adoption next. G0 reason records pending adoption; G1 remains6/18.
+D239 ruling aligned across roadmap/book/decision and C7; human approval records bind unchanged candidate identity.
+Focused25/0 includes null and D240 duplicate-field refusals; witness3/census9-6-8-0/book/publication76-95 pass.
+485/303/144 exact120cc6e; .6.2.2.c.2.5.2 done, G1still6/18; actual release/approval implementation later.
 
 # Sealed archive — earlier slices
+
+| [part303](docs/history/stitchcad-changelog-part303.md) | whole0330 | 6 lines, 369 bytes, sha256:1e0ab832… |
 
 | [part302](docs/history/stitchcad-changelog-part302.md) | whole0329 | 6 lines, 383 bytes, sha256:2cc586ff… |
 

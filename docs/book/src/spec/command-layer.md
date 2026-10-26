@@ -327,7 +327,7 @@ are enforced in the core, not in a tool manifest, so an adapter cannot widen one
 | `approve` | `ApprovePackage` | be held by an agent at all |
 
 - **`approve` is human-only** and no graph mutation can manufacture it
-  ([release §7](release-contract.md)): a package whose approver is not a human identity is invalid, and an
+  ([release §7](release-contract.md)): an approval record whose approver is not an authenticated human is invalid, and an
   agent holding every other level still cannot produce one.
 - **Authority is scoped, and a scope narrows.** A grant names the commands, the design and the duration;
   an agent acting under it carries the granting human's identity in the audit trail as the actor's
@@ -527,6 +527,6 @@ No UI implementation or extra broad verification is started by this DBIQNP note.
   and reports the replay; a cancelled long operation leaves no partial state.
 - A preview changes nothing observable, including the revision counter.
 - An agent holding `inspect`, `propose`, `commit` and `generate` still cannot produce an approved package,
-  and a package whose approver is not a human identity is refused.
+  and an approval record whose approver is not an authenticated human is refused.
 - The parity table is generated from the registry and the command table: a workflow with no test id is not
   marked present, and an `absent` cell with no reason and no owning leaf fails the generation.

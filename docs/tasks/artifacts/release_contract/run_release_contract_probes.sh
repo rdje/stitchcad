@@ -24,6 +24,7 @@
 #   DISPOSITION-UNUSED a declared disposition no cell carries → C4
 #   DIAGNOSTIC         a token named that neither §9 nor the envelope declares → C5
 #   LINK               a citation of a clause the target does not carry → C6
+#   APPROVAL-*         declared approval placement/binding/subject/human/scope/date faults → C7
 #   CONTROL            an unrelated prose edit → still green
 #   MISSING            an absent chapter REFUSES (exit 2) instead of reporting green
 #
@@ -125,6 +126,23 @@ if [ "$rc" -eq 1 ] && grep -q "attributes 'design intention' to roadmap §9" <<<
   ok FIELD-INVENTED "a field wearing the roadmap's authority without its wording is refused (exit=$rc)"
 else
   bad FIELD-INVENTED "an invented manifest field was accepted (exit=$rc)" "$out"
+fi
+
+# ---------------------------------------------------------------- FIELD-DUPLICATE (C1)
+B="$(book field_duplicate)"
+python3 -I -B - "$(CH "$B")" <<'PYDUPLICATE'
+import pathlib, sys
+p = pathlib.Path(sys.argv[1]); text = p.read_text(encoding='utf-8')
+rows = [line for line in text.splitlines(keepends=True) if line.startswith('| `design_revision` |')]
+if len(rows) != 1:
+    raise SystemExit('mutation REFUSED — ambiguous design revision row')
+p.write_text(text.replace(rows[0], rows[0] + rows[0], 1), encoding='utf-8')
+PYDUPLICATE
+out="$(run "$B")"; rc=$?
+if [ "$rc" -eq 1 ] && grep -q 'C1 duplicate manifest field token' <<<"$out"; then
+  ok FIELD-DUPLICATE "duplicate stable manifest field refused (exit=$rc)"
+else
+  bad FIELD-DUPLICATE "duplicate manifest field accepted (exit=$rc)" "$out"
 fi
 
 # ---------------------------------------------------------------- LADDER-ORDER (C2)
@@ -231,6 +249,72 @@ if [ "$rc" -eq 1 ] && grep -q 'cites §16, which ../governance.md has no heading
   ok LINK "a citation of a clause the target does not carry is refused (exit=$rc)"
 else
   bad LINK "a dead clause citation was accepted (exit=$rc)" "$out"
+fi
+
+# ---------------------------------------------------------------- APPROVAL placement (C7)
+mutate_approval() {
+  python3 -I -B - "$1" "$2" <<'PYAPPROVAL'
+import json, pathlib, re, sys
+p, mode = pathlib.Path(sys.argv[1]), sys.argv[2]
+s = p.read_text(encoding='utf-8')
+pattern = r'(<!-- approval-placement-v1 -->\s*```json\s*\n)(.*?)(\n```)'
+matches = list(re.finditer(pattern, s, re.S))
+if len(matches) != 1:
+    raise SystemExit('mutation REFUSED — missing/ambiguous approval skeleton')
+m = matches[0]
+value = json.loads(m.group(2))
+record = value['approval_record']
+if mode == 'null_placement':
+    value = None
+elif mode == 'binding_kind':
+    value['manifest']['approval_binding']['kind'] = 'inline'
+elif mode == 'self_digest':
+    value['manifest']['approval_binding']['package_identity'] = 'candidate_identity'
+elif mode == 'human_inline':
+    value['manifest']['approver'] = record.pop('approver')
+elif mode == 'missing_subject':
+    del record['package_identity']
+elif mode == 'agent_approver':
+    record['approver'] = 'agent_actor'
+elif mode == 'missing_scope':
+    del record['scope']
+elif mode == 'missing_date':
+    del record['date']
+else:
+    raise SystemExit('mutation REFUSED — unknown approval case')
+changed = json.dumps(value, indent=2)
+if changed == m.group(2):
+    raise SystemExit('mutation REFUSED — unchanged approval case')
+p.write_text(s[:m.start(2)] + changed + s[m.end(2):], encoding='utf-8')
+PYAPPROVAL
+}
+for mode in null_placement binding_kind self_digest human_inline missing_subject agent_approver missing_scope missing_date; do
+  B="$(book "approval_$mode")"
+  mutate_approval "$(CH "$B")" "$mode" || bad "APPROVAL-$mode" "mutation did not apply" ""
+  out="$(run "$B")"; rc=$?
+  if [ "$rc" -eq 1 ] && grep -q 'C7 ' <<<"$out"; then
+    ok "APPROVAL-$mode" "declared approval boundary violation refused (exit=$rc)"
+  else
+    bad "APPROVAL-$mode" "boundary violation accepted (exit=$rc)" "$out"
+  fi
+done
+B="$(book approval_marker)"
+mutate "$(CH "$B")" '<!-- approval-placement-v1 -->' '<!-- approval-placement-absent -->' \
+  || bad APPROVAL-MARKER "mutation did not apply" ""
+out="$(run "$B")"; rc=$?
+if [ "$rc" -eq 1 ] && grep -q 'C7 ' <<<"$out"; then
+  ok APPROVAL-MARKER "missing typed placement declaration refused (exit=$rc)"
+else
+  bad APPROVAL-MARKER "missing placement declaration accepted (exit=$rc)" "$out"
+fi
+B="$(book approval_legacy_field)"
+mutate "$(CH "$B")" '| `approval_binding` | approval binding |' '| `approver_scope_date` | approval binding |' \
+  || bad APPROVAL-LEGACY-FIELD "mutation did not apply" ""
+out="$(run "$B")"; rc=$?
+if [ "$rc" -eq 1 ] && grep -q 'C7 ' <<<"$out"; then
+  ok APPROVAL-LEGACY-FIELD "legacy inline field name refused (exit=$rc)"
+else
+  bad APPROVAL-LEGACY-FIELD "legacy field name accepted (exit=$rc)" "$out"
 fi
 
 # ---------------------------------------------------------------- CONTROL

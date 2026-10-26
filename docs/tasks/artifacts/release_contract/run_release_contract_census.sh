@@ -23,6 +23,7 @@
 #   C5 diagnostics every `release_*` / `env_*` token the chapter names is declared by its §9 or by the
 #                  envelope's §10, and every §9 row names the arguments its diagnostic carries.
 #   C6 references  every link resolves, and a `§n` inside a link names a heading the target carries.
+#   C7 approval    fixed detached binding; exact subject/human/scope/date live outside the manifest.
 # ADVISORY, printed and never a failure:
 #   A1 the manifest, the ladder and the matrix as this run read them, so a human can eyeball the whole
 #      contract instead of trusting the summary line.
@@ -55,7 +56,7 @@ done
 command -v python3 >/dev/null 2>&1 || { echo "release-contract census: REFUSED — python3 not found" >&2; exit 2; }
 
 python3 - "$CHAPTER" "$ONTOLOGY" "$MATRIX" "$ROADMAP" <<'PY'
-import pathlib, re, sys
+import json, pathlib, re, sys
 
 CHAPTER, ONTOLOGY, MATRIX, ROADMAP = sys.argv[1:5]
 fails = 0
@@ -203,6 +204,11 @@ if len(hdr) < 4:
     bad("C1 the chapter's §2 table is not `Field | Roadmap §9 field | Carries | Source`")
 chapter_fields = [norm(r[1]) for r in rows if len(r) >= 2]
 c1 = 0
+machine_fields = [debacktick(row[0]) for row in rows if row]
+for field in sorted(set(machine_fields)):
+    if machine_fields.count(field) != 1:
+        bad('C1 duplicate manifest field token %r' % field)
+        c1 += 1
 for f in roadmap_fields:
     if f not in chapter_fields:
         bad("C1 the roadmap names the manifest field %r and §2 carries no row quoting it" % f); c1 += 1
@@ -215,6 +221,43 @@ for r in rows:
         bad("C1 the manifest field %r has no source or no content" % debacktick(r[0])); c1 += 1
 print("-- C1 the manifest is the roadmap's list")
 print("  fields: %d · breaches: %d" % (len(manifest_rows), c1))
+
+# ── C7 the director-ruled approval placement, not a production hash/authentication proof ───
+c7 = 0
+field_names = [debacktick(row[0]) for row in manifest_rows if row]
+if field_names.count('approval_binding') != 1 or 'approver_scope_date' in field_names:
+    bad('C7 the manifest requires one approval_binding field, not inline approver_scope_date')
+    c7 += 1
+marker = '<!-- approval-placement-v1 -->'
+blocks = re.findall(re.escape(marker) + r'\s*```json\s*\n(.*?)\n```', read(CHAPTER), re.S)
+placement = None
+placement_parsed = False
+if len(blocks) != 1:
+    bad('C7 approval placement requires exactly one marked JSON skeleton')
+    c7 += 1
+else:
+    try:
+        placement = json.loads(blocks[0])
+        placement_parsed = True
+    except json.JSONDecodeError:
+        bad('C7 approval placement skeleton is not valid JSON')
+        c7 += 1
+if placement_parsed:
+    if type(placement) is not dict or set(placement) != {'manifest', 'approval_record'}:
+        bad('C7 approval placement must separate manifest and approval_record')
+        c7 += 1
+    else:
+        expected_manifest = {'approval_binding': {'kind': 'detached'}}
+        if placement['manifest'] != expected_manifest:
+            bad('C7 immutable manifest projection permits only the fixed detached binding')
+            c7 += 1
+        expected_record = {'package_identity': 'candidate_identity', 'approver': 'authenticated_human',
+                           'scope': 'reviewed_scope', 'date': 'human_act_date'}
+        if placement['approval_record'] != expected_record:
+            bad('C7 detached approval record requires exact candidate/human/scope/act-date type labels')
+            c7 += 1
+print('-- C7 immutable subject and detached approval placement')
+print('  breaches: %d' % c7)
 
 # ── C2 the ladder, in order ───────────────────────────────────────────────────────────────
 hdr, rows = table_in(CH["5"], "State")
@@ -328,7 +371,7 @@ for r in manifest_rows:
 for r in m_rows:
     print("  · matrix %-30s %s" % (r[0].strip()[:30], " | ".join(debacktick(c) for c in r[1:])))
 
-total = c1 + c2 + c3 + c4 + c5 + c6
+total = c1 + c2 + c3 + c4 + c5 + c6 + c7
 print("release-contract census: %d manifest fields / %d states / %d matrix rows / %d failure(s)"
       % (len(manifest_rows), len(chapter_states), len(m_rows), total))
 sys.exit(1 if total else 0)

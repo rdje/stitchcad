@@ -1091,20 +1091,20 @@ Closed D237 report and complete0325 correction evidence remain whole in
 Closed D238 report and complete0327 correction evidence remain whole in
 [part143](../history/stitchcad-defects-part143.md). Current release identity boundary D239 follows.
 
-## D239 — approval data versus immutable manifest identity is unspecified
+## D239 — detached approval boundary adopted
 
-At22ab074, roadmap9 and release2 include approver/scope/date in the immutable manifest; release1/3
-approve a preexisting candidate by its manifest digest. The active decision fixes immutability but
-specifies neither prebinding these values nor detached approval storage. Filling unresolved metadata
-post-hash changes bytes/identity. Root: field/list closure never defined that lifecycle boundary.
-Impact: release input/approval schemas cannot be frozen safely. Owner G1-SLICE.6.2.2.c.2.5.1,
-P1 now; .2 adopts director ruling before .3/.4 implementation. Recommend detached immutable approval
-records bound to unchanged digest; alternative prebinds exact prospective metadata before final hash.
-Historical source clauses484; synthetic witness is diagnostic only, not a product hash or actual approval.
-Director2026-10-26 chose detached immutable approval records; .2 coordinates adoption next.
-- [x] ROOT CAUSE0330: current clauses and guarded synthetic3 show post-hash fill changes identity; rc=0.
-- [x] ADDRESSED0330: director chose detached records; existing decision/book record ruling, adoption owned .2; rc=0.
-- [x] NO REGRESSION0330: census9/6/8/0/book/publication76-95 pass; Rust unchanged; full fix awaits adoption, rc=0.
+Whole diagnosis/ruling0330 is retained in [part144](../history/stitchcad-defects-part144.md).
+Owner G1-SLICE.6.2.2.c.2.5.2, P1 fixed0331: roadmap/book/decision keep a fixed approval_binding;
+separate immutable authenticated human/scope/date records bind exact candidate identity. No post-hash edit.
+- [x] ROOT CAUSE0331: old clauses lacked transition; historical witness3 and C7-null red reproduce, rc=0.
+- [x] ADDRESSED0331: ruled placement/field semantics aligned; focused release probes25/0, book/publication76/95 rc=0.
+- [x] NO REGRESSION0331: census9/6/8/0, original14 arms retained, Rust unchanged; no product approval, rc=0.
+
+## D240 — release census accepted duplicate manifest field tokens
+
+Reproduce copied book with duplicated design_revision row: old C1 reports10 fields/0 failures, suite24/1.
+Root: membership comparison ignored repeated machine IDs. Impact: ambiguous field declarations passed.
+Owner G1-SLICE.6.2.2.c.2.5.2, P2 fixed0331 with uniqueness check and actual refusal arm; final25/0.
 
 ## Active continuity followup
 

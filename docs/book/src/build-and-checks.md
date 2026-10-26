@@ -297,30 +297,10 @@ classifiers/36 captures/204 refusals pass. Every real failed body has current ma
 two public acceptance guards/full703 close D184 and the four-family D179. See the
 [whole-proof verification](annexes/formula-checked-recipes.md#verification-and-remaining-authority).
 
-Checked statement plans four current inputs, twenty-three diagnostic files and three mutable
-implementation sources; classifier-only plans zero files/mutables/native effects. Two complete
-captures/ten physical refusals/twenty mode faults preserve all twenty-two source bindings and
-count-limited replacements, including both canonical-owner sites. Current thread macro evidence
-refuses nonthread notes, with a legacy-regex fault. All three read-only sources admit three links
-each and unused log aliases without native/source/output effects. Exclusive twenty-two real
-faults match authored failed sets; every failed body reaches a current macro. Four D183 public
-preconditions guard acceptance/refusal before extraction. Seventy-two inputs, sixty-three
-unchanged production Rust files, twenty-three local logs and the current full seven-test artifact
-remain exact. Full formatting/strict Clippy/fifty-nine native groups/seven-hundred-three tests pass.
-D179 all four bounded canonical/checked classifiers fixed at .n08.4; D156 continues.
-
-Checked expression plans two current inputs, seventeen diagnostic files and one mutable source.
-Classifier-only declares zero files/mutables/native effects. Two complete captures/six physical
-refusals/thirteen mode faults preserve all sixteen ordered cases, including both callee-priority
-replacements; omitted second-step bytes refuse before dispatch. Thread-only current macro evidence
-and an independent legacy-regex fault reject nonthread notes. Copied readonly input/unused aliases
-cause no native or file-write effects. Sixteen exclusive real faults match authored failed-test
-sets; every failed body reaches a current macro. D182's two measured dependency/conditional
-extraction paths now assert acceptance first. Seventy-two inputs/sixty-three unchanged production
-Rust files/seventeen local logs/current full seven-test executable remain exact. Full formatting,
-strict Clippy and fifty-nine native groups/seven-hundred-three tests pass. D181 grammar availability
-now names implemented statement/whole proofs; formal grammar stays. D179 checked expression fixed;
-checked statement/recipe are also repaired; the bounded D179 closure is verified.
+Complete checked statement/expression plan, macro/dispatch/fault and restoration receipts remain in
+`docs/history/stitchcad-devnotes-part485.md`. Current source/output declarations, alias refusals,
+count-limited changes and restored-artifact requirements follow the shared producer profile below;
+these retained campaigns certify their captured scope, not later product execution.
 
 Canonical expression plans seven inputs: implementation/current test/three imported TSVs/literal
 annex/worked examples. Ordinary mode declares twenty diagnostic files; coupled mode declares four;

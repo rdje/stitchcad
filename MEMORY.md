@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0330 .6.2.2.c.2.5.1 diagnoses D239 manifest/approval identity boundary; director chose detached immutable approval records.
-- Stable manifest binding and separate human/scope/date record bind unchanged candidate digest; coordinated adoption next.
-- Guarded synthetic3/CLI-refusal, existing release census9/6/8/0 and book/publication76-95 pass0; Rust unchanged22ab074.
--484/302/143 whole22ab074 source/hash/public exact0. NEXT .6.2.2.c.2.5.2 adopt ruling in roadmap/book/decision/census.
-- G0 MostlyDone reason notes adoption pending/closure unapproved; G1 In Progress6/18 unchanged. No question pending.
+-0331 .6.2.2.c.2.5.2 adopts D239: fixed approval_binding kind=detached; separate identity/human/scope/date records.
+- Roadmap/book/decision/census agree; focused probes25/0 include null-parser and D240 duplicate-field reds/fixes.
+- Historical witness3/census9-6-8-0/book/publication76-95 pass0; Rust unchanged120cc6e, no actual approval.
+-485/303/144 whole120cc6e source/hash/public exact0. NEXT .6.2.2.c.2.5.3 concrete release candidate request inputs.
+- G0 MostlyDone/closure unapproved; D239 adoption done. G1 In Progress6/18 unchanged; no director question pending.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

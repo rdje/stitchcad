@@ -10,7 +10,7 @@
 | Term | What it means | Canonical object | Also called | Machine token |
 | --- | --- | --- | --- | --- |
 | acceptance state | one rung of the ladder an artifact climbs: generated → checked → inspected → imported → evaluated → approved | [release §5](../release-contract.md) | maturity level, validation stage | — |
-| approval ⚠ | a human act, bound to a package's identity; an agent may prepare evidence but never approve | [release §3](../release-contract.md) | signoff, release approval, *Freigabe* | → `approve` |
+| approval ⚠ | a separate immutable human record bound to package identity; agents prepare evidence, never approve | [release §3](../release-contract.md) | signoff, release approval, *Freigabe* | → `approve` |
 | artifact policy matrix | the table deciding what an unresolved unknown blocks, per artifact kind | [release §8](../release-contract.md) | export policy, unknown policy | — |
 | assumed ⚠ | a value taken on a recorded human assumption: exportable, but it is not evidence | [ontology §5](../ontology.md) | recorded assumption, "taken as" | `assumed` |
 | conservative default | a plausible value substituted for an observation — **forbidden** by this product's contract | roadmap §8.3 | safe default, fallback | — |
@@ -31,7 +31,7 @@
 | preference | an overridable default that carries its provenance, unlike an invented value | [ontology §5](../ontology.md) | default, house preference | `preference` |
 | production release | the artifact class a factory cuts from, and the strictest column of the policy matrix | [release §8](../release-contract.md) | release, production package, *Produktionsfreigabe* | — |
 | provenance | where a value came from, recorded with it — a source, a profile, an assumption, a formula | [ontology §2.2](../ontology.md) | origin, lineage, source, *Herkunft* | `provenance` |
-| release package | the immutable set of artifacts plus manifest that a factory receives | [release §1](../release-contract.md) | package, delivery, signoff package | — |
+| release package | the immutable content set of artifacts/manifest; detached approvals bind its identity | [release §1](../release-contract.md) | package, delivery, signoff package | — |
 | stale-ification ⚠ | any input or artifact change makes a prior approval void; approval is never inherited silently | [release §3](../release-contract.md) | invalidation, approval expiry | — |
 | scope (of an approval) | the tuple a claim is true over: garment, material, target system, size range, artifact set | [release §6](../release-contract.md) | claim scope, tested envelope | — |
 | sidecar | a provenance file exported beside an artifact, naming what was unresolved and what it would change | [release §8](../release-contract.md) | provenance sidecar, gap report | `sidecar` |

@@ -652,13 +652,13 @@ provenance — never a substitute for observation (§2.3).
 - Package = immutable manifest: design revision, inputs (measurements,
   materials), resolved profile versions, concrete sizes/pieces, engine +
   exporter config, artifact hashes, validation results, unresolved
-  assumptions + dispositions, approver + scope + date.
-- Approval binds to package identity; any input/artifact change creates a
-  new candidate and stale-ifies prior approval — never inherits it silently.
-- Package completeness is checked against the declared construction (all
-  pieces, multiplicities, sizes, cut instructions, material assignments,
-  companion files). A geometrically valid DXF missing a piece is an invalid
-  package.
+  assumptions + dispositions, approval binding.
+- Approval is a separate immutable human/scope/date record bound to package
+  identity; it never edits the manifest. Changed inputs/artifacts create a
+  new candidate; approval is never inherited.
+- Completeness follows declared construction: pieces, multiplicities, sizes,
+  cut instructions, materials and companion files. Valid DXF missing a piece
+  is an invalid package.
 - Human approval is deliberate and scoped; agents prepare evidence, never
   approve.
 - Acceptance states are graduated: generated → internally checked →
@@ -966,16 +966,16 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
 - D95 (2026-10-02): exact128-bit literals, i64 bindings; G1-SLICE.5a.3b.3b.3, `docs/decisions/decision_literals.md`.
 
 **Amended by director instruction (v0.4):**
-- §7.8/§10 and the §14 MCP risk replace stdio-only/G5+ timing with
-  evidence-based admission for local stdio, local HTTP, remote HTTP and
-  private bridges. The director requested amending this restriction after
-  reviewing ChatGPT/Codex connection options. Source and rationale:
+- §7.8/§10/§14 replace stdio-only/G5+ timing with per-profile evidence for
+  local stdio/HTTP, remote HTTP and private bridges; authority, opt-in,
+  human-only approval, injection handling and actor trace remain. Source:
   `docs/decisions/decision_mcp-transports.md`; owner `G1-SLICE.9.transport.policy`.
-  The engineer authored and applied this amendment under that instruction;
-  no runtime profile is certified by this policy change. Core-scoped
-  authority, human-only approval, injected-data handling and actor trace
-  remain requirements. G1 owns profile implementation/admission evidence;
-  G5 owns host UI/workflow parity, and G6 hardens security and reliability.
+  Full prior application/admission receipt: `docs/history/stitchcad-devnotes-part485.md`.
+**Director clarification within v0.4; scope/exits unchanged:**
+- D239/§9: immutable candidate keeps a stable approval binding; detached
+  human/scope/date records bind its identity without editing it. Director
+  accepted the engineer's recommendation. Source: `docs/decisions/decision_release-package-identity-and-scope.md`;
+  owner `G1-SLICE.6.2.2.c.2.5.2`.
 
 ---
 

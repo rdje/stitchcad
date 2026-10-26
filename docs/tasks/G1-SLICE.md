@@ -131,21 +131,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.3c.1`
   Status: `done`
-  Goal: immutable `Piece` content, directed cyclic edge loops, complete printed labels, explicit
-  material assignment or unresolved state, and visible `GeometricValidation::DeferredToG2`.
-  Signoff finding (owned here): `make book` warns that release §6's literal `<receiver>` and
-  `<version>` scope placeholders are interpreted as unclosed HTML tags. Their rendered content is
-  hidden instead of showing the intended scope example. Reproduce in `target/piece-book.log`;
-  fix by code-formatting the literal placeholders and verify the rendered HTML escapes them.
-  Acceptance: empty/repeated loops, missing edges, zero multiplicity, invalid fold declarations and
-  incomplete labels are typed refusals; no public mutation bypasses validation; identity-ledger edits
-  do not rewrite the piece's references and endpoint resolution exposes orphaned references; geometric
-  winding, simplicity, containment and endpoint closure remain explicitly deferred. Rust checks, the
-  wasm cross-build and mdBook build pass.
-  Verification: 12 contract tests, privacy compile-fail test, `make check`, `make wasm`,
-  warning-free `make book`, feature/release censuses and staged doctrine gate green.
-  Commit: `STITCHCAD-G1-0006`
-
+  Goal: Structural Piece contract complete; [whole scope/proofs](../history/stitchcad-devnotes-part485.md).
 - ID: `G1-SLICE.3c.1a`
   Status: `done`
   Goal: fix D56 — the shipped piece cut plan cannot represent the reference skirt's separate
@@ -748,29 +734,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   .4 human approval inputs; .5 combined release-schema review before .2.6.
 - ID: `G1-SLICE.6.2.2.c.2.5.1`
   Status: `done`
-  Goal:0330 diagnose D239 before release schema freeze; publish concrete independent transition witness/options.
-  Roadmap9/book1-3 put approver/scope/date in immutable hashed manifest yet approval follows candidate hashing.
-  Existing decision supplies no lifecycle boundary; list census cannot decide this transition. Filling values
-  after hashing changes identity. Prebinding or detached records need an explicit normative choice.
-  Own read-only synthetic approval_identity_probe.py, existing release decision pending section, book warning,
-  PLANNING and live/task pointer; SHA256 witness is diagnostic only, no product hash or approval adopted.
-  Recommend detached immutable approval records bound to unchanged candidate digest; alternative prebinds
-  exact prospective human/scope/date before final candidate hashing/review. Director chose A; adopt under .2.
-  Own484 whole0329 task/0306 lesson/closed sewing-side task/prior release census receipt and original
-  release1-3/roadmap9/decision rules,302 ledger and143 closed D238
-  report from22ab074; exact Git/hash/public before retirement. Focus witness, existing census/book/navigation;
-  no release implementation, real approval, whole CI or numeric campaign.
-  - [x] ROOT CAUSE (WHY + WHERE): roadmap9/release1-3/active rules lack identity transition; synthetic3 cases
-    reproduce changed bytes/digest after filling approval fields. Existing list census9/6/8/0 stays green; rc=0.
-  - [x] ADDRESSED: director2026-10-26 chose “Separate immutable approval records (Recommended)”; canonical
-    decision records ruling and coordinated .2 adoption. Witness/arg refusal/book/publication76-95 pass; rc=0.
-  - [x] NO REGRESSION: git diff22ab074 over crates/Cargo empty; no real approval, product hash choice or release
-    implementation.484/302/143 whole source/hash/public exact; local producer guards before outputs; rc=0.
-  Commit0330; next .2 adoption, no director question pending. G0 MostlyDone reason updated; G1still6/18.
-  New record promotion declined: existing indexed release decision owns D239 under its approval-binding answer.
+  Goal: 0330 D239 diagnosed/director detached-record ruling recorded; [whole scope/proofs](../history/stitchcad-devnotes-part485.md).
 - ID: `G1-SLICE.6.2.2.c.2.5.2`
-  Status: `pending`
-  Goal: adopt director's D239 identity/approval-boundary ruling across roadmap/book/decision/census before schemas.
+  Status: `done`
+  Goal:0331 adopt approved D239 detached-record boundary across roadmap/book/decision/census and focused probes.
+  Own ROADMAP9/disposition, release/command chapters/glossary/decision, census C7/probes and live/task records.
+  Immutable content manifest keeps approval_binding kind=detached, never human values or self digest;
+  external immutable record names exact candidate identity/authenticated human/scope/act date. Transport
+  receipt is separate from content identity; acceptance views/late records do not rewrite sealed fields.
+  Preserve all nine roadmap field obligations, human-only grants, scope/ladder/unknown rules and no inheritance.
+  Census checks placement/type skeleton; targeted copied-book faults exercise misplaced/missing fields and
+  binding corruption without product approval/hash-algorithm adoption. Existing list diagnostics stay exact; own D240 duplicate manifest-token refusal/control, found in C1.
+  Own485 whole0330 task/0307 lesson/closed Piece task/prior checked statement-expression build receipts,
+  prior D239 proposal and full v0.4 disposition receipt,303 ledger and144 D239 diagnosis snapshot from120cc6e;
+  source/hash/public before
+  retirement. Condense only closed receipts, keep current guard/transport requirements and fixed caps.
+  Focus current census/release probe suite/historical witness/book/publication; no workspace/numeric campaign.
+  - [x] ROOT CAUSE (WHY + WHERE): ruled D239 placement lacked enforcement; C7 null red23/1 and D240 duplicate
+    token red24/1 reproduce actual guard gaps. Parsing-success flag/C1 uniqueness repair them; rc=0.
+  - [x] ADDRESSED: roadmap/book/glossary/command/decision and stable detached skeleton align; focused release
+    probes25/0, witness3, census9/6/8/0, book/publication76 chapters/95 entries pass; rc=0.
+  - [x] NO REGRESSION: original14 verdict arms retained; Rust unchanged120cc6e;485/303/144 whole Git/hash/public
+    exact. Fixed caps hold; no runtime hash/auth/date codec or real approval claimed; rc=0.
+  Commit0331; next .2.5.3 candidate inputs. D239/D240 closed at declared-spec/checker scope; full CI integration/pre-push.
+  New record promotion declined: indexed release decision already owns this ruling and its adopted field placement.
 - ID: `G1-SLICE.6.2.2.c.2.5.3`
   Status: `pending`
   Goal: concrete nonempty canonical artifact candidate-preparation inputs under the ruled identity boundary.

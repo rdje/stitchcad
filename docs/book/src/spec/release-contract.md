@@ -14,7 +14,8 @@ what a claim **is evidence for** (a scope, never a certificate).
 ## 1. What a release package is
 
 A package is an **immutable set**: the artifacts, the manifest that describes them, and the evidence
-records the manifest cites. Three properties are normative:
+records the manifest cites. Detached approval records are related to this content package, not
+additional members of its hashed subject. Three properties are normative:
 
 - **A package is a candidate until a human approves it.** Generating artifacts produces a candidate with
   an identity; approval is a separate act that binds to that identity (§3).
@@ -38,27 +39,45 @@ lists.
 | `sizes_and_pieces` | concrete sizes/pieces | the size set at a revision, and per size the piece list with multiplicity, pairing, fold and material | size sets §2, ontology §4.1 |
 | `engine_and_exporter_config` | engine + exporter config | the generator's version, the target token and every axis value, the tessellation bound, the canonicalizer's version | [interchange §1, §10](interchange-dialects.md) |
 | `artifact_hashes` | artifact hashes | one digest per artifact file, with its byte length | this chapter §3 |
-| `validation_results` | validation results | every check that ran, its verdict, its tolerance class and the acceptance state it earned | §5, units §3 |
+| `validation_results` | validation results | frozen sealing-time checks, verdicts, tolerance classes and earned states | §5, units §3 |
 | `unresolved_assumptions` | unresolved assumptions + dispositions | every `assumed` and `unknown` value the package depends on, with its state, its owner and its disposition | ontology §5, §8 below |
-| `approver_scope_date` | approver + scope + date | the human identity that approved, the scope the approval covers, and the date | §3, §6, §7 |
+| `approval_binding` | approval binding | fixed detached binding; actual human/scope/date live in identity-bound approval records | §3, §6, §7 |
 
 Two rules keep the manifest honest rather than merely long:
 
 - **No field is optional and no field is prose.** Each is a stable token with a typed value; a field
   whose value is not available is present and unresolved, never absent, because an absent field and an
   empty one are different claims and only one of them is checkable.
-- **Nothing derived from a wall clock enters except the approval date**, which is a human act and is
-  recorded as one (ontology §7's canonicalization rule).
+- The manifest takes no generated wall-clock value. The human act's date belongs to its detached
+  approval record (ontology §7's canonicalization rule).
 
 ## 3. Identity, approval and stale-ification
-
-**D239 — ruling accepted:** approval records stay separate and immutable, bound to the unchanged
-candidate digest. The manifest keeps a stable binding. Legacy field wording below awaits coordinated
-roadmap/book/census adoption at G1-SLICE.6.2.2.c.2.5.2 before release input schemas.
 
 **A package's identity is the digest of its canonical manifest**, which includes every artifact hash, so
 the identity changes if any byte of any artifact changes. Approval binds to that identity and to nothing
 else — not to a design, not to a style number, not to "the latest".
+
+D239's director ruling fixes `approval_binding` as a stable detached descriptor. It contains no human
+values, record list or self digest. A separate immutable approval record names the exact candidate,
+authenticated human, reviewed scope and date of that human act. No record means no approval.
+This normative placement skeleton uses type labels, not actual identities or a chosen hash encoding:
+
+<!-- approval-placement-v1 -->
+```json
+{
+  "manifest": {"approval_binding": {"kind": "detached"}},
+  "approval_record": {
+    "package_identity": "candidate_identity",
+    "approver": "authenticated_human",
+    "scope": "reviewed_scope",
+    "date": "human_act_date"
+  }
+}
+```
+
+ApprovePackage appends the record without rewriting the manifest or artifact set. Attaching a receipt
+for delivery does not put its bytes into that content identity. Withdrawal appends another record;
+prior records remain readable. Values in a record cannot grant human authority by themselves.
 
 - **Any input or artifact change creates a new candidate** and stale-ifies the prior approval. A stale
   approval is not deleted: it remains as a record of what was approved, when, by whom and over what
@@ -109,8 +128,9 @@ Three rules make the ladder a ladder:
   rung, because a claim that skips one is a claim about evidence nobody has.
 - **A state belongs to a package identity.** A new candidate starts at `generated`; states do not carry
   over, for the same reason approvals do not (§3).
-- **A state is not a property of a design, a factory or a product.** It is a property of one package, and
-  the only generalization available is the scope rule in §6.
+- **A state is not a property of a design, a factory or a product.** It belongs to one package; §6 bounds
+  generalization. Sealing-time results stay frozen. Later acceptance/approval records name that exact
+  identity externally; advancing the acceptance view never rewrites the manifest.
 
 ## 6. Scope, and how it narrows
 
@@ -139,8 +159,8 @@ acceptance record and every approval names its scope, and a scope is a tuple, no
 **Approval is a human act.** An agent — including this repository's own AI co-users — may inspect,
 propose, commit and generate, and it may assemble the evidence an approval needs; it may not approve.
 
-- The approver field names a human identity. A package whose approver is an agent, a service account or
-  a role nobody holds is invalid: `release_approver_not_human`.
+- The detached record's approver names an authenticated human. An agent, service account or vacant
+  role cannot approve: `release_approver_not_human`.
 - Approval is **deliberate and scoped**: it names the scope it covers (§6), so an approval is never
   broader than the sentence that records it.
 - The authority levels themselves — inspect / propose / commit / generate / approve — are command-layer
@@ -221,8 +241,8 @@ a partial package ([envelope §10](feature-matrix.md)).
 
 ## 10. Verification status of the claims in this chapter
 
-- The list census compares fields, ladder and policy vocabulary with roadmap9/8.2.
-  Original receipt: `docs/history/stitchcad-devnotes-part484.md`; these checks do not decide D239's transition.
+- The census compares fields, ladder and policy vocabulary with roadmap9/8.2 and guards D239's declared placement.
+  Original list-only receipt: `docs/history/stitchcad-devnotes-part484.md`; C7 checks the skeleton, not runtime hashing/authentication.
 - **The policy matrix's cells, the four dispositions, the diagnostics, the scope axes and every rule in
   §3–§8 are project decisions**, reasoned with the alternative each rejected in
   `docs/decisions/decision_release-package-identity-and-scope.md`. The roadmap publishes the matrix as an
@@ -252,7 +272,7 @@ a partial package ([envelope §10](feature-matrix.md)).
   reference fixture as it moves through G2's harness.
 - A scope widens only by a new evidence record; two overlapping acceptances produce a claim over the
   intersection and refuse the union.
-- A package whose approver field is not a human identity is invalid, whatever else it carries.
+- An approval record whose approver is not an authenticated human is invalid.
 - The policy matrix is consulted only for `unknown`, the dependency closure is recorded with the
   package, and an irrelevant unknown does not block an unrelated export while a relevant one does.
 - A `derived` value takes the strictest disposition of its inputs, so no derivation launders a `block`
