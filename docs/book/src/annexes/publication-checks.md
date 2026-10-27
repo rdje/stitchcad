@@ -1,15 +1,13 @@
 # Publication checks and renderer authority
 
-The publication instrument builds this book, checks its navigation and current API/status map,
-and runs copied-fixture refusal controls. Run it from the repository root:
+Build the book and check navigation, current API/status and copied-fixture refusals from the root:
 
 ```bash
 python3 -I -B docs/tasks/artifacts/book_publication/book_publication.py
 ```
 
-The public output stays at `docs/book/book/`. This Python entry owns its guarded renderer path;
-the remaining shell/platform audit is `G1-SLICE.5b.4c.h2.b.s`. The raw Make book recipe and
-`docs/book/book.toml` retain their existing interfaces. D156 remains open for other producers.
+Output stays at `docs/book/book/`; this entry owns guarded rendering. Shell/platform audit remains
+`G1-SLICE.5b.4c.h2.b.s`, D156 other producers. Raw Make and `docs/book/book.toml` interfaces remain.
 
 ## Before the renderer starts
 
@@ -67,12 +65,10 @@ This is renderer validation. The subsequent publication check verifies chapter/i
 learning order, source/rendered links and anchors, and the scoped status map. Numerical, sewing,
 runtime and approval correctness remain with their canonical contracts and later gates.
 
-Temporary fixture roots similarly validate the full copied population before creation. Complete
-teardown populations are checked before recursive deletion, including on exceptional exit.
-Fixture mutations declare their mutable files before writes. Pure `check`, `rows` and
-`formula_scope` calls activate no producer and preserve caller/source bytes. Continuity retrieves
-logical archive records through the public reader, retaining exact predecessor bytes and ordered
-task/window membership across rollover.
+Fixtures validate complete copied populations before creation and teardown before recursive deletion,
+also on exceptions. Mutations declare writable files first. Pure `check`/`rows`/`formula_scope` calls
+produce nothing and preserve caller/source bytes. The public archive reader retains exact predecessor
+bytes and ordered task/window membership through rollover.
 
 These identifiers belong to the publication Python module/configuration:
 
@@ -96,8 +92,11 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_publication_builder_con
 python3 -I -B docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py
 ```
 
-Those controls use intercepted renderer children for fault safety; real mdBook execution remains
-the publication entry above. Compiled production-body omissions must trigger independent assertion
-failures. Device/index failures are controlled observations, without off-volume writes or Git index
-mutation. The environment probe runner watches both contracts; `make probes` also runs the actual
-publication entry. See [build and checks](../build-and-checks.md) for local stores and remaining audit scope.
+These controls intercept renderer children for fault safety; the publication entry runs real mdBook.
+Compiled production-body omissions must trigger independent assertion failures. Device/index controls
+write neither off-volume nor to Git. Environment probes watch both contracts; `make probes` also runs
+the publication entry. See [build/checks](../build-and-checks.md) for local stores and remaining audits.
+
+The maintained-book reader passes23 candidate/native controls and2 optimized refusal checks: exact
+Git baseline/delta/content, fresh task ownership, bounded parts and complete SUMMARY. Default-gate
+installation remains G1-SLICE.6.5.book.2; current aggregate caps still apply. Committed proof follows.

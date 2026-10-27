@@ -2,19 +2,21 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
--0415 complete: bus staging/safe leaves owned; D277 narrows my0412 broad envelope Rustdoc to
- geometry/operations within authorized execution, native auth1/scope3/fmt0; behavior unchanged.
- Whole completed .6.4 subtree/0414 scopes564 retain4 exact Git spans/all98 live ids; book/retention/
- publication/size0. At d0481b5 book1199996B/all80 files, four bytes headroom: maintained-reference
- design adopted in containment decision; original caps stay until complete replacement guard lands.
-- NEXT .6.5.book.1 strict bounded contract/readonly checker and candidate/native Git refusal controls,
- then .book.2 atomic integration/authoring/classification and .book.3 committed acceptance. Read local
- LIVE_DOCUMENT_SIZE_CONTAINMENT.md maintained-reference contract and adoption decision. Use current
- repo Git read-only and ordinary target candidate fixtures; never create/amend another Git repo.
- Exact fresh authority, complete bounded navigation/parts, no stale/reused/banked/same-size bypass.
- Then .6.5.2 private bus/candidates, .3 actual handlers (resolve .5e/.5f dependencies), .4 transactions,
- .5 scoped acceptance; .6.6–.9 revisions/history/cancellation/integration. Full PNT, commit each leaf;
- derive push cadence. G1still6/18, D250132 after .6.9; runtime/app/physical/release proof remains.
+-0416 complete: strict maintained-book reader/native23/optimized2/wc+SHA/AST0 pass; not installed.
+ Bounded UTF-8 JSONL header/one record8192/6144B, fixed parts/index, complete depth-three SUMMARY,
+ exact content/counts/native baseline/delta/newly completed task. Isolated caller Git context, bounded
+ native children/reaping. Initial Unicode/wrong-row probe fixed. Ordinary target fixtures only, no
+ other Git repo created/amended. Whole0415/D271–D277 scopes565 retain4 exact spans; book/retention/
+ publication/size0. Current caps/class/default gate stay until atomic replacement .book.2.
+- NEXT .6.5.book.2: reader docs/tasks/artifacts/live_doc_size/maintained_reference.py and its contract;
+ add guarded authoring command/current JSONL, wire unconditional existing LIVE-DOC-SIZE/CI path,
+ atomically set book lifecycle maintained_reference and explicit aggregate targets inapplicable.
+ Preserve part700L/40960B/440B, SUMMARY120L/8192B/240B and all content/nav; exact fresh owner from
+ baseline pending/absent to resulting done. CLI --candidate uses ordinary project-local trees only.
+ Committed mode binds latest control-change first parent; actual postcommit proof remains .2/.3.
+ No simulation may be reported as observed committed proof. Then .book.3 scoped acceptance before
+ .6.5.2 bus candidates, .3 actual handlers (.5e/.5f deps), .4 transactions, .5 acceptance. Full PNT,
+ derive push cadence; G1still6/18, D250132 after .6.9, runtime/app/physical/release remain owned.
 - Cleanup0408 applied2026-10-27 13:41UTC:4 trees/403 logs/53930 files/1751160158B;
  selected407 absent before regeneration,989257 preservation entries exact,1032 unsafe retained.
  Audit target/artifact_cleanup_audit/feature-20261027-garment/; next due2026-10-28 13:41UTC.

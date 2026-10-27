@@ -3,19 +3,23 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — bus staging and maintained-book design
+## _(2026-10-27 UTC)_ — strict maintained-book reader before adoption
 
-0415 records authorized bus stages and concrete handler/evaluator dependencies before code. D277
-corrects my0412 unqualified "before other checks" envelope Rustdoc: within authorized execution,
-scope precedes geometry/operations; authentication/effect-boundary authorization remain required.
-Native auth1/garment-scope3/affected fmt0; behavior unchanged. Book census at d0481b5 is1199996B,
-all80 files; current fixed ceiling leaves4B and repeatedly forces prose squeezing. Adopt maintained
-reference contract by information role, as the local source doctrine requires: bounded parts/index,
-complete navigation and exact fresh owned baseline/delta/content authority. Existing caps stay until
-replacement/integration/native committed acceptance .6.5.book.1–.3 land. No new guard is claimed.
-Promotion: containment adoption decision. Whole completed .6.4 tree/0414 scopes564 preserves4 exact
-Git spans/all98 live ids; retention/book/publication/size0. Actual bus/evaluator/runtime/app/physical/
-release remain owned. No other Git repository is created/amended; tests will read this repo's Git.
+0416 implements a readonly schema-1 reader, not yet wired into the gate. Bounded UTF-8 JSONL header/
+record (8192/6144B), frozen parts/index, complete depth-three SUMMARY, framed content SHA/counts and
+fresh native Git baseline/delta/newly completed owner prevent stale/reused/banked/same-size authority.
+Native Git context is isolated from caller overrides; bounded output/time and reaping leave no child.
+Native23/O-optimized2 controls pass0, independent wc/SHA match, AST0/assert0. Native4 rerun checks
+first-parent query/manifest modes/duplicates/watchdog-start child reaping; uninstalled root refuses2. Initial17-test run
+exposed invalid-Unicode handling and a probe changing the wrong lifecycle row; raw JSONL extents and
+exact row mutation fix both. Fixed candidates exceed old files/lines/bytes with valid parts/index;
+links/hardlinks/FIFO/marker-only boundaries refuse. Fresh fixture-only owner makes controls reusable
+past this commit. Ordinary target candidates/read-only actual Git only; no other Git repo created.
+Whole0415/D271–D277 scopes565 retain4 exact spans, retention/book/publication/size0. Promotion:
+containment adoption decision. Actual committed-mode proof/authoring/atomic class+gate switch remain
+.book.2/.3; existing caps still enforce. Bus/runtime/physical/release proof remains separately owned.
+
+[Whole0415 staging/book design lesson](docs/history/stitchcad-devnotes-part565.md) retains capacity evidence, D277 and implementation ownership.
 
 [Whole0414 aggregate lesson](docs/history/stitchcad-devnotes-part564.md) retains native2/privacy12 and unused-Piece repair proof.
 

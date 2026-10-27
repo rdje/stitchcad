@@ -101,3 +101,27 @@ Tests use ordinary candidate directories under target and read this repo's Git; 
 created or amended. Committed-mode proof is scheduled after atomic adoption, never simulated as an
 observed commit verdict. Exact control schema/bounds, index grammar and hash framing land in .book.1;
 .book.2 wires producer/checker/classification atomically; .book.3 closes actual committed acceptance.
+
+Fresh authority also binds its owner: absent/pending/active at the baseline, completed in the resulting
+task tree. A previously completed owner cannot be reused for a new record. One bounded current record
+replaces a growing authorization ledger; exact content digests prevent banking future headroom even
+for zero-count-delta edits. "Signed delta" means signed integer file/line/byte changes, not invented
+cryptographic or human approval. First-parent Git binding works for merges without treating a prior
+content match as new authority. Existing Python3.9+ CI/full-history checkout supports this local tool.
+
+answers: "what does the maintained-book reader prove before its default-gate installation?"
+
+0416 implements the bounded UTF-8 JSONL header/one-record contract:8192 control bytes,6144 raw record
+bytes, one record and fixed schema/limits. Parts/index keep their original bounds and complete
+depth-three SUMMARY. Exact framed content/counts/native baseline, signed integer deltas and newly
+completed task ownership refuse same-size substitution and stale/reused/banked authority. Optional
+missing Git paths differ from Git errors. Caller Git configuration/directory/index/object overrides
+are excluded without mutating the parent; native children have bounded output/time and are reaped.
+Candidate/native23 plus optimized2 controls pass, with independent wc/SHA calibration. Tests never
+initialize another Git repo; their fresh owner exists only in ordinary target candidates. This is
+reader proof only: current class/caps/gate remain, and actual committed acceptance follows .book.2/.3.
+
+Native manifest duplicates/links/submodules refuse; watchdog startup failure still reaps the actual
+owned child. Native-contract4 rerun checks the direct first-parent query. Git and the OS null device
+are host dependencies; no project-owned stores/logs are written there. Uninstalled default invocation
+refuses missing control, rather than advertising gate adoption or committed-state verification.

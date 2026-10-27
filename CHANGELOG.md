@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0415 — plan bus stages and maintained-book containment
+## STITCHCAD-G1-0416 — verify strict maintained-book reader before adoption
 
-- Correct D277: scope guards precede geometry/operations within authorized execution, preserving behavior.
-- Native auth1/garment-scope3/fmt/book/publication/size pass0; completed98-node .6.4 tree/0414 scopes564 retained.
-- Own safe bus slices and maintained-reference book contract; current caps stay until replacement guard passes.
+- Bound JSONL control, part/index/navigation, exact content/counts and fresh Git/task authority.
+- Native23/optimized2/independent wc+SHA/AST pass0; ordinary target candidates, no other Git repo writes.
+- Current gate/class/caps unchanged; authoring/atomic integration/committed acceptance follow. Whole0415 proof565.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -30,6 +30,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part565](docs/history/stitchcad-devnotes-part565.md) | whole0415 bus/book design/lesson/ledger/D271–D277 | 57 lines, 4864 bytes, sha256:acc2866a… |
 | [part564](docs/history/stitchcad-devnotes-part564.md) | whole completed structural/input/garment tree/0414 scopes | 348 lines, 19551 bytes, sha256:835cf568… |
 | [part563](docs/history/stitchcad-devnotes-part563.md) | whole0413 garment acceptance/lesson/ledger/retirement | 41 lines, 3344 bytes, sha256:ef3c35e3… |
 | [part562](docs/history/stitchcad-devnotes-part562.md) | whole garment-owner subtree/0412 lesson/ledger/retirement | 75 lines, 5445 bytes, sha256:43ddf7ad… |

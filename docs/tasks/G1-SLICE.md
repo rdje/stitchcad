@@ -934,33 +934,31 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   .4 atomic preview/commit/groups; .5 scoped feature acceptance. Revision/replay/audit .6.6 follows.
 - ID: `G1-SLICE.6.5.1`
   Status: `done`
-  Goal:0415 safe bus staging/ownership plan, D277 scope wording and maintained-book design authority.
-  - [x] REPRODUCE / ISSUE: rg "before its other checks" at HEADd0481b5 garment_scope.rs:1 hit rc=0;
-    native file census1199996/1200000 book bytes/all80 files rc=0; four bytes before mandatory new docs.
-  - [x] ROOT CAUSE (WHY + WHERE): source/Git review rc=0:D277 introduced0412 unqualified scope order
-    despite existing auth-before-handler contract. Growing unique product prose needs the source
-    doctrine's maintained-reference class, not archival treatment or repeated word-level trimming.
-  - [x] FIX: cargo test -p sc-core --test command_authorization_contract request_claims_cannot_authenticate_or_change_session_role_initiator_or_principal:
-    1 passed rc=0; narrow Rustdoc/book to geometry/operations within authorized execution. Bus stages
-    and exact owned book-contract implementation/integration/acceptance leaves recorded; not installed.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract garment_scope:3 passed rc=0;
-    original scope/auth causes preserved, no executable behavior changed. Concrete handler/evaluator
-    dependencies must be resolved under .6.5.3; no fake success or caller-minted commit token.
-  - [x] NO REGRESSION: affected cargo fmt check/native4/book/publication/size rc=0; existing book
-    80-file/20000-line/1200000-byte caps remain. New aggregate authority guard is pending .book.1–.3.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part564.md:4 spans rc=0;
-    retention rc=0; all98 completed .6.4 nodes retained. Promotion: containment adoption decision.
-    No cross-repo writes or neutral-package adoption. Full bus/runtime/physical/release proof remains.
+  Goal:0415 bus staging/book design/D277 correction; [whole proof](../history/stitchcad-devnotes-part565.md).
 - ID: `G1-SLICE.6.5.book`
-  Status: `pending`
+  Status: `in_progress`
   Goal: unique product mdBook maintained-reference contract, source policy lifecycle; preserve complete
   direct navigation and current per-part/index bounds. Exact baseline/content digest and fresh owned
   signed deltas for every aggregate change, refuse stale/reused/banked authority; no arbitrary cap rise.
   Children .1 bounded registry/readonly checker+native Git refusal controls; .2 integrate/atomic adoption;
   .3 focused feature acceptance before bus product work. Full neutral package remains unadopted.
 - ID: `G1-SLICE.6.5.book.1`
-  Status: `pending`
-  Goal: strict bounded maintained-book contract/fresh change authority reader and independent fixtures.
+  Status: `done`
+  Goal:0416 bounded readonly maintained-book reader and native candidate/refusal controls, not installed.
+  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/live_doc_size/maintained_reference_contract.py:
+    23 tests OK rc=0; unique book growth needs exact new authority without waiving parts/navigation.
+  - [x] ROOT CAUSE (WHY + WHERE): native wc/SHA-256/real-Git controls rc=0:counts alone miss same-size
+    substitution; optional absence differs from Git errors; raw bytes need direct extents. First17-test run:1 failure/1 error rc=1, resolved Unicode and wrong-row probe.
+  - [x] FIX: final23 controls rc=0:bounded UTF-8 JSONL header/record (8192/6144B), frozen parts/index,
+    complete depth-three SUMMARY, framed content SHA/counts, exact Git baseline/delta/newly completed task. Native child output/time bounded and reaped; caller Git context cannot redirect it.
+  - [x] ADDRESSED: same23 rc=0:raw-record inclusive/refusal boundary, malformed/unknown/bool records,
+    missing/escaped/duplicate chapters, links/hardlinks/FIFO/marker-only boundary, stale/reused owner,
+    banked delta/same-size edit, native failure/watchdog-start reaping, duplicate/mode manifests, parent-environment/read-only snapshots; fixed candidates exceed legacy aggregates under original part/index limits.
+  - [x] NO REGRESSION: python3 -I -B -O same contract two named delta/native-failure cases:2 OK rc=0;
+    reader/probe AST parse0/assert0 rc=0; native-contract4 rerun/first-parent query rc=0; uninstalled
+    root CLI typed refusal rc=2; fixture-only owner stays absent from real trees, preserving reusable probes. No Git repository initialized/amended; ordinary target fixtures only.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part565.md:4 spans rc=0;
+    retention/book/publication/size rc=0. Promotion: containment adoption decision. Current gate/caps stay; .book.2 atomic integration/producer and .3 committed acceptance remain.
 - ID: `G1-SLICE.6.5.book.2`
   Status: `pending`
   Goal: integrate checker/CI hook, authoring command and exact current-book classification atomically.
