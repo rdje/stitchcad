@@ -888,49 +888,45 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0369 combined structural topology readiness; [whole scope/proof](../history/stitchcad-devnotes-part521.md).
 - ID: `G1-SLICE.6.4.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: current sewing copy/landmark targets and actual length-valued declaration sources.
   Children .1 current graph copy/range/stop revalidation; .2 actual formula length metadata and explicit
   G4 Profile-role boundary; .3 private owned sewing/root/landmark scope; .4 focused combined acceptance.
 - ID: `G1-SLICE.6.4.4.1`
   Status: `done`
-  Goal:0370 current graph source revalidation; [whole scope/proof](../history/stitchcad-devnotes-part522.md).
+  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
 - ID: `G1-SLICE.6.4.4.2`
   Status: `done`
-  Goal:0371 actual amount metadata/G4 role boundary; [whole scope/proof](../history/stitchcad-devnotes-part523.md).
+  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
 - ID: `G1-SLICE.6.4.4.3`
   Status: `done`
-  Goal: private sewing/root/landmark ownership, complete ids and current source/readiness scope.
-  Children .a private exact ownership/global ids, retaining inspectable held repairs; .b current
-  every-landmark/graph/amount source query. Neither component certifies geometry or release.
+  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
 - ID: `G1-SLICE.6.4.4.3.a`
   Status: `done`
-  Goal:0372 private sewing/input ownership; [whole scope/proof](../history/stitchcad-devnotes-part524.md).
+  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
 - ID: `G1-SLICE.6.4.4.3.b`
   Status: `done`
-  Goal: every current semantic landmark, actual graph scope and amount declarations over owned root.
-  Own current query over complete ids/root, every actual landmark's current Piece/anchor (unused
-  included), original graph validator and actual amount metadata. Preserve original typed causes,
-  raw choice/repair evidence and G4 deferral; no blanket execution/release readiness. Retain523/524 scope.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract sewing_current_:
-    5/0 rc=0; unused anchors/Pieces, stale copies and wrong amount kinds remain actual current obligations.
-  - [x] ROOT CAUSE (WHY + WHERE): native5/0 rc=0 via local_environment.py; ownership and
-    metadata-only amount success cannot validate complete current landmark/graph source contexts.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings:rc=0; complete root/current
-    landmark, graph and declaration pipeline; exact original causes and raw choice/repair rules retained.
-  - [x] ADDRESSED: cargo test -p sc-core --doc design::sewing_state:: gives3/0 rc=0;
-    actual borrowed views cannot outlive owner. Native5 checks concrete Anchor/Graph/Amount source downcasts.
-  - [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:rc=0;
-    fmt/unchanged original validator diff pass0; glossary132 failures rc=1, exact D250 rows compare rc=0.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/137/1455/2402 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part524.md:4 exact spans rc=0.
-    promotion: existing sewing decision answer extended. Completed STITCHCAD-G1-0373.
-    .4.4 focused combined sewing acceptance next; numeric/physical/full integration/CI remain separate.
+  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
 - ID: `G1-SLICE.6.4.4.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: focused combined sewing/current amount and private ownership acceptance before garment families.
+  Own three exact existing ownership/unused-source/borrowed-profile filters and unchanged-source
+  privacy proof retention; whole closed sewing subtree/0373 continuity525. No broad integration gate.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract
+    sewing_owner_refuses_graph_span_and_landmark_aliases_with_actual_root_positions -- --exact:1/0 rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): git diff --exit-code HEAD -- crates:empty rc=0;
+    current metadata/source acceptance remains narrower than complete numeric/physical execution.
+  - [x] FIX: cargo test -p sc-measure --test design_inputs_contract
+    sewing_current_sources_validate_unused_landmark_anchors_and_keep_the_concrete_original_cause -- --exact:1/0 rc=0.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract
+    sewing_current_sources_return_actual_borrowed_amounts_and_preserve_profile_deferral -- --exact:1/0 rc=0.
+  - [x] NO REGRESSION: git diff --exit-code HEAD -- crates:rc=0; 0373 native5/privacy3/
+    lint/fmt proofs retained unchanged. D154/D250 remain with original owners, no broad CI claim.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/137 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part525.md:3 exact spans rc=0.
+    promotion: declined (focused closure of existing sewing decision). Completed STITCHCAD-G1-0374.
 - ID: `G1-SLICE.6.4.5`
-  Status: `pending`
+  Status: `in_progress`
   Goal: current pocket/closure/notion/layer/declaration sources with explicit geometric deferrals.
 - ID: `G1-SLICE.6.4.6`
   Status: `pending`

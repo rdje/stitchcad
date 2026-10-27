@@ -3,14 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0373 — validate complete current owned sewing sources
+## STITCHCAD-G1-0374 — close focused sewing component acceptance
 
-- Check every owned landmark, graph copy/range/stop source and actual amount metadata against one root.
-- Keep original concrete causes, raw repair/choice rules and visible G4 deferral; return borrowed views.
-- Native5/privacy3/lint/fmt/book/publication pass0; D250132 unchanged, whole0372/ambiguity continuity524.
-- Focused combined review next; full Design/numeric/physical/integration/CI remains separate.
+- Three exact ownership/current unused-source/borrowed-profile cases pass; Rust unchanged from0373.
+- Close implemented sewing/source scope, retaining explicit G4 and full execution/physical deferrals.
+- Book/publication pass; closed0370–0373 subtree/0373 retained whole525. Garment families next, broad CI later.
 
 # Sealed archive — earlier slices
+
+| [part525](docs/history/stitchcad-devnotes-part525.md) | closed0370–0373 sewing subtree and0373 | 55 lines, 4220 bytes, sha256:a40a0898… |
 
 | [part524](docs/history/stitchcad-devnotes-part524.md) | whole0372 and historical ambiguity proof | 70 lines, 5073 bytes, sha256:91e9eb9e… |
 

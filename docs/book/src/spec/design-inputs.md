@@ -455,3 +455,6 @@ registrations, ranges and allocations stay unchanged. Profile roles remain visib
 returned amount views; current source success does not resolve numeric values or physical profiles.
 Whole Piece topology readiness remains the separate structural report. Geometry, full Design
 execution, assembly completeness and release remain separately owned obligations.
+
+Focused acceptance covers actual owner aliases, unused landmark repairs and borrowed amount/Profile
+metadata. Numeric, geometric, runtime and release verification remains separate.
