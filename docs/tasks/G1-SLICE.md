@@ -81,37 +81,10 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.3a`
   Status: `done`
-  Goal: the identity layer in `sc-core` (ontology §1) — `EntityId` (a dependency-free ULID), the
-  injected `IdGenerator`, `EdgeRef`/`PointRef` (the entity id of the creating operation plus a
-  persistent local tag), and the bounded exact rational parameter `t` in `[0, 1]`.
-  Acceptance: an `EntityId` round-trips its 26-character Crockford form and orders lexicographically
-  by creation; a deterministic `IdGenerator` reproduces ids byte-for-byte (the replay property);
-  the parameter is exact under `+ − × ÷` with reduction, carries a total order and an
-  `in_unit_interval` predicate, and reports overflow / division-by-zero as typed diagnostics; the
-  crate still compiles for `wasm32-unknown-unknown`.
-  Verification: recorded below — 40 tests green (31 unit, 9 property), `make wasm` cross-builds
-  `sc-core`, every criterion re-derived in the `### G1-SLICE.3a` checklist.
-  Commit: `STITCHCAD-G1-0004`
-  Design: `decision_entity-identity-ulid-injected-generator.md`,
-  `decision_edge-parameter-bounded-exact-rational.md`.
-
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.3b`
   Status: `done`
-  Goal: the persistent-identity contract (ontology §1.1) — reference resolution under split, merge,
-  reverse, delete and offset-fragmentation, and the `RepairTask` an orphaned reference becomes. No
-  silent reassignment.
-  Acceptance: reference stability is a tested property under split/merge/reverse — a reference at the
-  split point resolves to both fragments and the consumer states which it wants, merge recomputes the
-  parameter by arc length, reverse maps `t` to `1 − t`; a deleted edge's references become visible
-  `RepairTask`s naming the reference, the orphaning edit and the candidate resolutions; a design with
-  unresolved references is savable and inspectable but cannot be released.
-  Verification: recorded below — 62 unit + 8 contract-property + 9 identity-property tests green,
-  `make wasm` cross-builds `sc-core`, every criterion re-derived in the `### G1-SLICE.3b` checklist.
-  Commit: `STITCHCAD-G1-0005`
-  Design: `decision_reference-resolution-journal-fold.md` (recorded before the code, per the `.3`
-  decomposition's discipline), inheriting `decision_entity-identity-ulid-injected-generator.md` and
-  `decision_edge-parameter-bounded-exact-rational.md`.
-
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.3c`
   Status: `done`
   Goal: the geometry-bearing object types (ontology §4) — `Piece`, `SeamSpan`/`SewingGraph`, `Notch`,
@@ -889,45 +862,72 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0369 combined structural topology readiness; [whole scope/proof](../history/stitchcad-devnotes-part521.md).
 - ID: `G1-SLICE.6.4.4`
   Status: `done`
-  Goal: current sewing copy/landmark targets and actual length-valued declaration sources.
-  Children .1 current graph copy/range/stop revalidation; .2 actual formula length metadata and explicit
-  G4 Profile-role boundary; .3 private owned sewing/root/landmark scope; .4 focused combined acceptance.
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.6.4.4.1`
   Status: `done`
-  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.6.4.4.2`
   Status: `done`
-  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.6.4.4.3`
   Status: `done`
-  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.6.4.4.3.a`
   Status: `done`
-  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.6.4.4.3.b`
   Status: `done`
-  Goal:0370–0373 sewing/input scope; [whole subtree/proof](../history/stitchcad-devnotes-part525.md).
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.6.4.4.4`
   Status: `done`
-  Goal: focused combined sewing/current amount and private ownership acceptance before garment families.
-  Own three exact existing ownership/unused-source/borrowed-profile filters and unchanged-source
-  privacy proof retention; whole closed sewing subtree/0373 continuity525. No broad integration gate.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract
-    sewing_owner_refuses_graph_span_and_landmark_aliases_with_actual_root_positions -- --exact:1/0 rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): git diff --exit-code HEAD -- crates:empty rc=0;
-    current metadata/source acceptance remains narrower than complete numeric/physical execution.
-  - [x] FIX: cargo test -p sc-measure --test design_inputs_contract
-    sewing_current_sources_validate_unused_landmark_anchors_and_keep_the_concrete_original_cause -- --exact:1/0 rc=0.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract
-    sewing_current_sources_return_actual_borrowed_amounts_and_preserve_profile_deferral -- --exact:1/0 rc=0.
-  - [x] NO REGRESSION: git diff --exit-code HEAD -- crates:rc=0; 0373 native5/privacy3/
-    lint/fmt proofs retained unchanged. D154/D250 remain with original owners, no broad CI claim.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/137 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part525.md:3 exact spans rc=0.
-    promotion: declined (focused closure of existing sewing decision). Completed STITCHCAD-G1-0374.
+  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.6.4.5`
   Status: `in_progress`
   Goal: current pocket/closure/notion/layer/declaration sources with explicit geometric deferrals.
+  Own garment child planning, original pocket/notion anchor error chains and continuity526.
+  Children .1 owned/current Pockets; .2 notion/Closure instances; .3 layers/Hem; .4 other construction
+  sources; .5 coupled root ownership/current declarations; .6 focused complete component acceptance.
+  Keep existing G3/G4/typed-operation owners explicit; numeric ids cannot invent logical metadata.
+- ID: `G1-SLICE.6.4.5.1`
+  Status: `in_progress`
+  Goal: actual Pocket inventory, current placement and every component contour; opening scope stays G3.
+  Children .a original pocket/notion anchor causes; .b owned collection/current component coverage.
+- ID: `G1-SLICE.6.4.5.1.a`
+  Status: `done`
+  Goal: D258/D259 original nested AnchorError sources for Pocket/NotionPlacement; focused red/green,
+  preserve all validation behavior and data-only evidence; book/census/whole526 continuity.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test pocket_contract
+    pocket_position_error_keeps_original_anchor_cause -- --exact:0/1 rc=101; notion equivalent0/1 rc=101.
+  - [x] ROOT CAUSE (WHY + WHERE): both exact native red controls fail at source() None;
+    original PocketError/NotionPlacementError empty Error impls drop nested cause chains, rc=101 each.
+  - [x] FIX: cargo clippy -p sc-core --test pocket_contract --test notion_contract -- -D warnings:rc=0;
+    expose actual AnchorError by borrow/as_ref, preserving concrete type and original data.
+  - [x] ADDRESSED: cargo test -p sc-core --test pocket_contract
+    pocket_position_error_keeps_original_anchor_cause -- --exact:1/0 rc=0; notion equivalent1/0 rc=0.
+  - [x] NO REGRESSION: python3 -I -B Git-source comparison: all non-Error-impl bytes unchanged
+    in both production modules rc=0; fmt0, glossary132 failures rc=1, exact D250 rows compare rc=0.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/137/1454/2401 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part526.md:5 exact spans rc=0.
+    promotion: declined (local standard Error repairs; canonical D258/D259).
+    Completed STITCHCAD-G1-0375; .1.b Pocket collection/current components next, broad CI later.
+- ID: `G1-SLICE.6.4.5.1.b`
+  Status: `in_progress`
+  Goal: private actual Pocket collection/current plan, targets and all component held intervals.
+- ID: `G1-SLICE.6.4.5.2`
+  Status: `pending`
+  Goal: actual notion/Closure collection, every instance/placement and known declaration roles.
+- ID: `G1-SLICE.6.4.5.3`
+  Status: `pending`
+  Goal: actual layers/Hem current sources, materials and known declaration roles; explicit lining refusal.
+- ID: `G1-SLICE.6.4.5.4`
+  Status: `pending`
+  Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.
+- ID: `G1-SLICE.6.4.5.5`
+  Status: `pending`
+  Goal: couple actual garment ownership with single-root state and complete owned identity scope.
+- ID: `G1-SLICE.6.4.5.6`
+  Status: `pending`
+  Goal: focused complete current garment/component acceptance before .6.4.6 aggregate review.
 - ID: `G1-SLICE.6.4.6`
   Status: `pending`
   Goal: focused coupled aggregate and public-mutator privacy acceptance; full runtime integration later.

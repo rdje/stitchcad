@@ -87,7 +87,14 @@ impl fmt::Display for NotionPlacementError {
         }
     }
 }
-impl std::error::Error for NotionPlacementError {}
+impl std::error::Error for NotionPlacementError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::Anchor(issue) => Some(issue),
+            _ => None,
+        }
+    }
+}
 impl NotionPlacement {
     /// Validate born-live anchoring, original copy/owner binding and complete owned direction.
     /// # Errors

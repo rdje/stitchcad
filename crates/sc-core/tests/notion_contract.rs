@@ -412,3 +412,31 @@ fn current_anchor_ownership_is_checked_against_updated_piece_content_not_its_id_
         ))
     );
 }
+
+#[test]
+fn notion_anchor_error_keeps_original_anchor_cause() {
+    use std::error::Error;
+    let mut f = fixture();
+    let input = f.placement_input();
+    let placement = f.placement(input).unwrap();
+    f.ledger.delete(&mut f.ids, input.anchor.edge).unwrap();
+    let issue = placement
+        .validate_current(&f.plan(), &f.piece, &f.ledger)
+        .unwrap_err();
+    let actual = match &issue {
+        NotionPlacementError::Anchor(anchor) => anchor,
+        _ => panic!("original notion anchor error"),
+    };
+    assert!(matches!(actual, AnchorError::CurrentUnresolved { .. }));
+    let cause = issue
+        .source()
+        .expect("original AnchorError must remain in standard error chain");
+    assert!(core::ptr::eq(
+        cause
+            .downcast_ref::<AnchorError>()
+            .expect("concrete anchor cause"),
+        actual
+    ));
+    assert!(!cause.is::<Box<AnchorError>>());
+    assert_eq!(placement.definition(), &input);
+}

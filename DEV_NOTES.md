@@ -3,15 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — focused complete sewing component acceptance
+## _(2026-10-27 UTC)_ — original garment anchor error causes
 
-0374 closes implemented sewing/input scope with three exact ownership/unused-source/borrowed-profile
-filters, each1/0 rc=0. Rust is unchanged from3bd83f9; its native5/privacy3/strict lint/fmt proofs remain
-applicable. Current metadata/source checks preserve held data, original concrete causes and explicit
-G4 Profile deferral. Structural topology and full numeric/physical/execution/release proof remain
-separate. Book/scoped publication pass0;525 retains whole closed0370–0373 subtree and0373 lesson/
-ledger in3 exact Git spans0. D154/D250 stay open as owned. Promotion declined: existing sewing
-contract closure. Current garment families/declarations next; broad integration/CI deferred.
+0375 fixes D258/D259: PocketError::Position(Box<AnchorError>) and NotionPlacementError::Anchor
+retained real nested failures, but empty standard Error impls returned no source. Actual deleted-anchor
+controls each red0/1 rc101, then green1/0 rc0 after borrowing the exact original AnchorError; both
+concrete downcast and pointer identity are preserved, rather than exposing Box as the cause type.
+All production bytes outside the two Error impls are identical to4d5a4a4. Placement validation/data
+and range evidence behavior stay unchanged; no invented cause wraps data-only RangeResolution.
+Strict affected lint/fmt/book/publication79/137 pass0; D250132 exact prior rows.526 preserves whole
+closed identity/sewing task scopes,0374 and historical recipe-phase proof in5 exact Git spans0.
+Promotion declined: localized standard Error contract repairs; canonical reports close D258/D259.
+Pocket collection/current components next; full integration/CI remains deferred.
+
+[Complete sewing-component acceptance lesson](docs/history/stitchcad-devnotes-part526.md) retains
+its original scope, checks and promotion decision.
 
 [Complete current sewing-source lesson](docs/history/stitchcad-devnotes-part525.md) retains
 its original scope, checks and promotion decision.

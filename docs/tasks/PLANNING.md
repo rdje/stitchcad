@@ -1141,3 +1141,28 @@ Verified D255 concrete source correction retained whole in [part511](../history/
 Verified D256 concrete composite sources retained whole in [part513](../history/stitchcad-devnotes-part513.md).
 
 Verified D257 availability correction retained whole in [part516](../history/stitchcad-devnotes-part516.md).
+
+## D258 — Pocket position error hid its original anchor cause (fixed0375)
+
+Before repair, PocketError::Position retained Box<AnchorError> but the empty Error impl returned None.
+Repro: cargo test -p sc-core --test pocket_contract pocket_position_error_keeps_original_anchor_cause
+-- --exact: red0/1 rc=101, green1/0 rc=0 via local_environment.py; target/garment-anchor-pocket-*-0375.log.
+Fix: source() exposes the original concrete AnchorError, same pointer/data, rather than Box type.
+Impact was lost standard diagnostic chaining; enum data/validation remained intact. P2; owner
+G1-SLICE.6.4.5.1.a. Closed with focused check; full CI remains integration/pre-push.
+
+## D259 — Notion placement error hid its original anchor cause (fixed0375)
+
+Before repair, NotionPlacementError::Anchor held AnchorError but the empty Error impl returned None.
+Repro: cargo test -p sc-core --test notion_contract notion_anchor_error_keeps_original_anchor_cause
+-- --exact: red0/1 rc=101, green1/0 rc=0; target/garment-anchor-notion-*-0375.log. source() now returns
+that exact original concrete cause. Diagnostic chaining is repaired without rewriting placement data
+or treating RangeResolution as an error. P2; owner G1-SLICE.6.4.5.1.a. Closed with focused check.
+
+0375 shared verification (D258/D259):
+- [x] ROOT CAUSE: both exact cargo test pocket/notion anchor-source controls returned0/1 rc=101;
+  source() returned None despite the original nested AnchorError.
+- [x] ADDRESSED: the same two exact cargo test controls returned1/0 rc=0 each after repair;
+  original concrete type/pointer/data retained, Box cause refused.
+- [x] NO REGRESSION: cargo clippy -p sc-core --test pocket_contract --test notion_contract
+  -- -D warnings rc=0; production non-Error-impl Git-source bytes identical rc=0.

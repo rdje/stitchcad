@@ -29,6 +29,10 @@ resolved point remains uniquely owned. A split-point choice or deletion is `Curr
 raw point evidence. Birth validation retains the existing live-edge requirement and its original
 `BornUnresolved` errors; Notch and TurnPoint behavior remains unchanged.
 
+NotionPlacementError anchor refusals retain the original concrete AnchorError in the standard
+std::error::Error::source chain. Automatic diagnostic consumers can reach its original repair data;
+this changes neither placement validation nor data-only range evidence into a nested error.
+
 `anchor_resolution()` and `direction_resolution()` expose independent raw point/range evidence
 without choosing or rewriting input. Lost orientation interiors remain visible even when both
 original endpoints survive. Complete live endpoints around a foreign merged middle do not establish

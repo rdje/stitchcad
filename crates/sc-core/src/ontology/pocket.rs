@@ -120,7 +120,14 @@ impl fmt::Display for PocketError {
         }
     }
 }
-impl std::error::Error for PocketError {}
+impl std::error::Error for PocketError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::Position(issue) => Some(issue.as_ref()),
+            _ => None,
+        }
+    }
+}
 impl Pocket {
     /// Validate explicit composition targets, live owned birth position and whole orientation.
     /// # Errors

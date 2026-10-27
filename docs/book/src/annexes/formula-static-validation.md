@@ -177,93 +177,27 @@ Historical4192 payload cases, examples and sixteen compiled fault controls are p
 
 ## Whole recipe before execution
 
-A recipe must pass static checking in its entirety before its first statement computes a value.
-Whole-source syntax/structure, literal inputs and ordered static inference are separate phases.
-Each completes for the entire source before the next starts. For example,
-`let bad:length=missing` followed by `assert late:eps_chord=1 mm==1 mm` refuses the later
-syntax error, without looking up missing. A late invalid annotation, input literal or structural
-limit likewise prevents earlier static checking. Syntax/structure also precedes literal conversion:
-an earlier `let first:count=340282366920938463463374607431768211456` cannot hide a later
-invalid assertion class, open parenthesis or structural bound. Both literal magnitude and structure
-can raise formula_domain, so the token alone does not prove phase agreement. Source order remains
-within each phase; whole-source lexical validation and raw annotation priority remain intact.
-
-The reference parses each identified statement once into raw number/unit leaves, preserving original
-spans. A separate iterative traversal normalizes every literal, including untaken branches, into
-checked operand tuples. Static checks reuse those normalized owners. After every input succeeds,
-it checks names/kinds in source order and publishes prior
-let metadata. It returns a complete tuple plan after all checks; no accepted prefix escapes.
-Detached static_statement still validates only its own statement. This reference tuple plan has
-no canonical product identity and grants no numerical/geometry execution authority.
+Whole source syntax/structure, all literal inputs and ordered name/kind inference finish in that
+order before execution. A later syntax/input refusal prevents earlier inference; no accepted plan
+prefix escapes. Static validity does not guarantee numeric availability or a computable result.
+The reference's tuple plan is instrumentation; current [product whole recipe proofs](formula-checked-recipes.md)
+retain actual source/identity/dependency metadata separately. D154's remaining reference ordinal
+repair retains its live owner below.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/whole_phase_contract.py --mutations
-```
-
-The [pure reference guards](formula-recipe-inputs.md#pure-input-review-and-phase-reference-guards)
-cover imports, borrowed calls and the in-memory mutation mode.
-
-D148's584 independent controls combine earlier missing-name, kind, callee, input-collision and
-reserved-name errors with later malformed syntax, invalid annotations, literal width and node/
-conditional/4096-statement bounds. Traces verify all input finishes before static inference or
-prior-binding publication, original operand tuple identity, one parse per statement and real
-spans/ordinals. Eleven actual compiled faults trigger body assertions; source stays unchanged.
-Numerical/provider/state access is trapped. Grammar and accepted limits remain unchanged.
-For example, with width declared as length:
-
-```
-let first: length = width / 0
-let last: count = width
-```
-
-The last statement has a kind error. The reference refuses formula_dimension without executing
-the first statement; its zero divisor therefore never reaches numerical evaluation. With the last
-statement removed, the recipe is statically valid and its division refusal belongs to execution.
-Static validity says that names and kinds fit; it does not promise that values can be computed.
-
-The reference's preflight method accepts original recipe source and initial declaration pairs.
-It locates top-level let/assert boundaries without treating newlines as statement terminators,
-preserves the original source slices and literal spacing, and checks statements in authored order.
-Each accepted let contributes only kind/origin metadata to the next statement's local namespace.
-Forward/self references fail, both conditional branches are checked, and assertion labels introduce
-no binding. Bare expressions remain available to the instrument's individual-expression tests;
-the whole-recipe grammar admits only let/assert statements. Empty recipes are accepted.
-
-The plan is returned as one tuple after every statement passes; a late error returns no accepted
-prefix and never changes the caller's declarations. This reference plan is an instrument result,
-not the future immutable typed product graph. Parsing still performs canonical literal-input
-conversion. Preflight never reads input values, states, context availability or physical geometry,
-and never calls numerical evaluation, binding storage or geometry resolution.
-
-```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations
 ```
 
-Complete196-case/consumer/fault receipts remain in `docs/history/stitchcad-devnotes-part491.md`.
-
-The copied-book instrument plans the complete current book and every selected copy, log and
-existing deletion candidate before it activates local stores. An unknown fixture file or directory,
-a symlink, a hardlinked output, or an effective input that a copy would replace causes refusal
-before creation, deletion or delegation. Empty selected parts directories are protected too.
-Pure contracts() validates only its ten reference inputs and never activates stores; borrowed
-consumer_contracts(verbose=False) produces only the two late-error copies, and measurement_contract()
-produces only its ceiling copy. Each copy is rechecked immediately before replacement and before use.
-
-The real shell replay retains the prepared store environment and the caller's effective
-FORMULA_CONTRACT, FORMULA_GRAMMAR, FORMULA_EXAMPLES, FORMULA_FIXTURE and FORMULA_PARTS_DIR selectors.
-Its FORMULA_BOOK remains this repository's book, as before. Source inspection and child dispatch use
-the same selector snapshot. These locality controls leave the recipe grammar and196 cases unchanged;
-intercepted child output is dispatch evidence. The separate real replay supplies numerical evidence.
-
-Recipe size is measured from the accepted worked plan:21 statements. The13 separate refusal
-candidates are not appended to that recipe. D123 formerly combined them into34, falsely refusing
-a copied book with a25-statement ceiling. That independent control now passes, while restoring
-the old aggregate formula in memory causes a named assertion failure. The normative ceiling
-remains4096; the smaller value is used only to falsify the measurement in a copied book.
-
-D119's reference ordering and D123's measurement defects are repaired at .5b.1b.2. Product sourced namespaces, kind signatures, scoped checks and immutable whole recipe proofs are implemented. Reference numeric provenance
-is [verified separately](formula-runtime-validation.md#approximation-contributions-and-admissible-classes); reference origin/context routing is verified at .5e.1a. Static checking cannot settle
-those execution obligations.
+Copied-book controls plan all selected effective inputs/outputs before stores activate, refuse unsafe
+replacement/deletion candidates and recheck copies before replacement/use. Pure reference contracts
+remain store-free; real replay retains the prepared environment and exact caller selectors. These
+controls do not change the grammar or numerical evidence scope. The worked recipe has21 statements;
+its13 separate refusals never count toward that plan. The normative statement ceiling remains4096.
+Historical D119/D123/D148 examples, phase/locality controls and source receipts are retained whole in
+`docs/history/stitchcad-devnotes-part526.md`; retrieve with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part526.md`.
+Reference provenance/runtime routing and physical geometry retain their separately owned proofs.
 
 ## Complete static review and remaining contracts
 

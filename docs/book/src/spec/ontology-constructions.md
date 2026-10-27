@@ -219,6 +219,11 @@ Historical anchors may resolve after split/reversal, while a split choice or del
 visible refusal. Orientation cannot hide foreign or deleted middle geometry behind valid ends.
 Authored direction is separate from the copy's reflected geometry, which remains G2/V1 work.
 
+PocketError position refusals expose the original concrete AnchorError through the standard
+std::error::Error::source chain. Its pointer and raw repair data are retained, without boxing the
+cause behind another dynamic Box type. RangeResolution remains inspectable data, not an invented
+error cause. Placement behavior, definitions and physical opening deferrals are unchanged.
+
 `component(copy, plan, pieces)` borrows the current canonical Piece, including its labels/material
 and raw contour repair evidence. Reordering components does not change the queried target.
 Replacing a same-id Piece changes the newly observed metadata without rewriting old Pocket intent.

@@ -552,3 +552,31 @@ fn current_position_ownership_uses_piece_content_instead_of_identity_only() {
         matches!(pocket.validate_current(&plan,&f.pieces,&f.ledger),Err(PocketError::Position(e)) if matches!(*e,AnchorError::AnchorOutsidePiece{..}))
     );
 }
+
+#[test]
+fn pocket_position_error_keeps_original_anchor_cause() {
+    use std::error::Error;
+    let mut f = fixture();
+    let input = f.input();
+    let pocket = f.pocket(input.clone()).unwrap();
+    f.ledger.delete(&mut f.ids, input.position.edge).unwrap();
+    let issue = pocket
+        .validate_current(&f.plan(), &f.pieces, &f.ledger)
+        .unwrap_err();
+    let actual = match &issue {
+        PocketError::Position(anchor) => anchor.as_ref(),
+        _ => panic!("original position error"),
+    };
+    assert!(matches!(actual, AnchorError::CurrentUnresolved { .. }));
+    let cause = issue
+        .source()
+        .expect("original AnchorError must remain in standard error chain");
+    assert!(core::ptr::eq(
+        cause
+            .downcast_ref::<AnchorError>()
+            .expect("concrete anchor cause"),
+        actual
+    ));
+    assert!(!cause.is::<Box<AnchorError>>());
+    assert_eq!(pocket.definition(), &input);
+}

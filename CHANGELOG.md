@@ -3,13 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0374 — close focused sewing component acceptance
+## STITCHCAD-G1-0375 — preserve original garment anchor error causes
 
-- Three exact ownership/current unused-source/borrowed-profile cases pass; Rust unchanged from0373.
-- Close implemented sewing/source scope, retaining explicit G4 and full execution/physical deferrals.
-- Book/publication pass; closed0370–0373 subtree/0373 retained whole525. Garment families next, broad CI later.
+- Fix D258/D259 Pocket/NotionPlacement standard error chains to expose exact concrete AnchorError.
+- Each actual deleted-anchor control red101/green0; all non-Error-impl production bytes unchanged.
+- Affected lint/fmt/book/publication pass0; D250132 unchanged. Whole identity/sewing/0374/phase proof526.
+- Pocket collection/current component scope next; full integration/CI remains separate.
 
 # Sealed archive — earlier slices
+
+| [part526](docs/history/stitchcad-devnotes-part526.md) | closed identity/sewing scopes,0374 and recipe-phase proof | 178 lines, 12535 bytes, sha256:0385cb8d… |
 
 | [part525](docs/history/stitchcad-devnotes-part525.md) | closed0370–0373 sewing subtree and0373 | 55 lines, 4220 bytes, sha256:a40a0898… |
 
