@@ -1181,9 +1181,16 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
 ## D271–D275 — current causes, census and native size controls
 [Whole Dart/census0397](../history/stitchcad-devnotes-part547.md); [D273/current0401](../history/stitchcad-devnotes-part551.md);
-[D274/D275 red/green0403](../history/stitchcad-devnotes-part554.md); [whole retirement0407](../history/stitchcad-devnotes-part556.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part556.md:4 spans
-  rc=0; complete0406 scopes retained before retirement.
-- [x] ADDRESSED: same rc=0; exact whole0406 task/lesson/ledger/retirement retained.
-- [x] NO REGRESSION: garment native9/privacy2/strict affected lint/fmt/book/publication/size/retention
-  rc=0; complete declarations/envelope remain .5.c/.d, full integration later.
+[D274/D275 red/green0403](../history/stitchcad-devnotes-part554.md); [whole retirement0408](../history/stitchcad-devnotes-part557.md).
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part557.md:5 spans
+  rc=0; complete0407 scopes/prior defect row retained before retirement.
+- [x] ADDRESSED: same rc=0; whole0407 task/lesson/ledger/retirement/live row preserved.
+- [x] NO REGRESSION: guarded cleanup407 selections/53930 files/1751160158B, independent preservation
+  989257 entries and407 absent rc=0; book/size0. D276 source correction owned next .5.d.1.
+
+## D276 — introduced modelled-Fly documentation claim
+P2, owned .6.4.5.5.d.1; fix immediately after cleanup0408 before .5.c. Root garment Rustdoc/book
+incorrectly groups Fly with modelled Lining. closure.rs Closure::new calls require_in_scope before
+instance checks; existing closure_contract fly_scope_refusal_precedes_geometry_and_names_requested_closure_gap_and_gate
+proves env_fly/G7 birth refusal. Tracked edits waited for frozen cleanup apply; pending audit evidence
+retained in target/artifact_cleanup_audit/feature-20261027-garment/pending-findings.json. No API relaxation.

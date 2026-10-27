@@ -65,7 +65,7 @@ not treat an empty census as proof of idleness. The checker uses its default str
 not infer that CUA is idle. Cleanup's original plan/apply argument interface is unchanged.
 
 After a real run, inspect selected-path residue without activating the producer launcher, which
-would recreate scratch. Update the single latest cadence entry in docs/ARTIFACT_CLEANUP.md and
+would recreate scratch. Overwrite the latest cleanup record in docs/ARTIFACT_CLEANUP.md and
 commit its owned task. Rebuild native/WASM/book outputs and run the appropriate controls only
 after the immediate residue proof. All roots and examples remain relocatable.
 

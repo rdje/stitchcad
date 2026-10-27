@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0407 — validate complete current garment sources
+## STITCHCAD-G1-0408 — complete guarded daily artifact cleanup
 
-- Recheck whole root/sewing and every garment-family source/target/Material assignment, including unused/empty context.
-- Preserve exact original locations/causes/raw repairs; missing Material never coerces from numeric metadata.
-- Native9/privacy2/core+measure strict lint/fmt pass0; late Hem, unused failures and unchanged modelled scope covered.
-- Book source order/boundaries and whole0406 proof556 synchronized; declarations/envelope/physical/release proof remains.
+- Remove4 ignored trees/403 root logs,53930 files/1751160158B;407 selected paths absent before regeneration.
+- OS handoff clear; tracked inputs and989257 preservation records unchanged. Unsafe caches/proofs/stores retained.
+- Latest cleanup record/book instructions synchronized; whole0407 scopes/prior defect row557 retain5 exact Git spans.
+- Own D276 introduced modelled-Fly documentation error; correct next .5.d.1 before declaration composition.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part557](docs/history/stitchcad-devnotes-part557.md) | whole0407 sources/lesson/ledger/retirement/live defect row | 49 lines, 4457 bytes, sha256:15000edd… |
 | [part556](docs/history/stitchcad-devnotes-part556.md) | whole0406 garment ownership/lesson/ledger/retirement | 49 lines, 4234 bytes, sha256:90a4a45a… |
 | [part555](docs/history/stitchcad-devnotes-part555.md) | whole construction subtree/0404–0405 lessons/ledger/retirement | 109 lines, 7932 bytes, sha256:54f514ab… |
 | [part554](docs/history/stitchcad-devnotes-part554.md) | whole0403 grain/allowance/lesson/ledger/D274–D275 | 69 lines, 5869 bytes, sha256:5be72d70… |

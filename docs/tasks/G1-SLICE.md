@@ -901,36 +901,42 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `in_progress`
   Goal: coupled garment ownership/current declarations over one canonical root.
   Children .a immutable admission/global owned ids; .b current sources; .c complete declarations;
-  .d requested execution envelope. Final scoped acceptance .6 before aggregate review .6.4.6.
+  .d requested execution envelope; .cleanup1 daily cleanup. Final scoped acceptance .6/aggregate .6.4.6.
 - ID: `G1-SLICE.6.4.5.5.a`
   Status: `done`
   Goal:0406 exact garment/root ownership; [whole proof](../history/stitchcad-devnotes-part556.md).
 - ID: `G1-SLICE.6.4.5.5.b`
   Status: `done`
-  Goal:0407 complete current garment sources/targets/Material assignments with original causes.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_:
-    9 passed rc=0; unused failures in sewing and every garment family refuse without empty shortcuts.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:ownership admission preserves held content;
-    compose actual validators in owned/input, sewing, Pocket, notion, Closure, layer/Material, Hem,
-    construction order without promoting prior success to a current certificate.
-  - [x] FIX: same native9 rc=0; whole-root current traversal with original typed family wrappers/
-    standard cause chains; no repair, retarget, partial success or cached validity.
-  - [x] ADDRESSED: same native9 rc=0; full Pocket component loss, unused notions/layers, missing Closure
-    target, all family original-cause equality/downcasts, missing Material despite parameter presence,
-    source-before-assignment priority, later Hem index1 after earlier success and current host drift.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::garment:2 privacy rc=0; core --lib and
-    measure --test design_inputs_contract strict Clippy/affected fmt rc=0. Modelled Lining remains
-    source-valid while execution deferred; Unknown/unresolved intent and all objects stay unchanged.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part556.md:4 spans rc=0;
-    retention/book/publication/size rc=0; original book facts retained. Promotion: Design host decision.
-    Complete declarations .c/requested envelope .d/global feature/runtime/physical/release proof remain.
+  Goal:0407 complete current garment sources; [whole proof](../history/stitchcad-devnotes-part557.md).
 - ID: `G1-SLICE.6.4.5.5.c`
   Status: `pending`
   Goal: complete typed actual garment declarations/operations over single current canonical root;
   reuse adapters after full current preflight, even empty/unused scope, no partial views.
 - ID: `G1-SLICE.6.4.5.5.d`
   Status: `pending`
-  Goal: apply original Lining/Fly requested-execution envelope independently of source/geometry proof.
+  Goal: original Lining execution envelope and pre-construction Fly refusal, independent of geometry.
+  Children .1 D276 scope correction before .c; .2 requested envelope.
+- ID: `G1-SLICE.6.4.5.5.d.1`
+  Status: `pending`
+  Goal: P2 D276 correct introduced modelled-Fly claim in garment Rustdoc/book; Closure::new already
+  refuses Fly before immutable object creation. Native closure_contract fly_scope_refusal controls
+  precede correction; no constructor relaxation. Activate immediately after clean cleanup0408 commit.
+- ID: `G1-SLICE.6.4.5.5.d.2`
+  Status: `pending`
+  Goal: requested modelled Lining scope and original public Fly refusal diagnostics, no geometry proof.
+- ID: `G1-SLICE.6.4.5.5.cleanup1`
+  Status: `done`
+  Goal:0408 director-required daily guarded cleanup, applied2026-10-27 13:41UTC after clean0407.
+  - [x] ROOT CAUSE: cleanup.py plan target/artifact_cleanup_audit/feature-20261027-garment:
+    407 candidates/1032 skips rc=0; selected4 trees +403 root logs, all regenerable/ignored.
+  - [x] ADDRESSED: same producer apply --idle-cua:handoff OK,53930 files/1751160158B removed,
+    residue0/tracked_change false rc=0. Protected proof/package/backup stores not selected.
+  - [x] NO REGRESSION: preserve.py after:989257 entries (978746 files/555 symlinks) exact and407
+    selected paths absent rc=0 before regeneration; native Rust release/deps census0,1251 incremental
+    artifact paths retained as unsafe. Archive557 receipts5 spans/book/size rc=0. A new Root-doc link
+    failed SOURCE_LINK before commit; keep the existing plain canonical record path, publication rc=0.
+    Promotion declined: existing guarded cleanup rules unchanged. D276 P2 captured/owned .5.d.1,
+    correct introduced Fly wording next before .5.c; never edit frozen tracked inputs mid-apply.
 - ID: `G1-SLICE.6.4.5.6`
   Status: `pending`
   Goal: focused complete current garment/component acceptance before .6.4.6 aggregate review.

@@ -3,19 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — complete current garment sources and assignments
+## _(2026-10-27 UTC)_ — guarded daily cleanup and pending scope correction
 
-0407 rechecks global ownership/current inputs, sewing, Pockets, notions, Closures, layers/Material
-assignments, Hems and constructions. Original validators retain unused/empty obligations, locations,
-raw repairs and concrete standard causes. Missing Material cannot coerce from parameter metadata;
-layer-source failure precedes assignments. No object/reference is rewritten or successful prefix/
-validity cache published. Native9 includes all represented family causes, full component loss,
-unused sources, later Hem index1, exact error equality/downcasts, host drift and unchanged modelled
-Lining/Unknown/unresolved intent. Privacy2/core+measure strict lint/fmt0; fixture index typed usize
-after inference refusal. Whole0406 scopes556 retain4 exact Git spans; retention/book/publication/
-size0. Existing book facts retained with repetition tightened. Promotion: Design host decision.
-Complete declaration roles .c, requested execution envelope .d and global feature/runtime/physical/
-release proof remain explicitly separate; modelled Lining current sources do not grant execution.
+0408 applied the reviewed frozen plan at13:41UTC after OS-visible handoff OK. Removed4 regenerable
+ignored trees/403 root logs:53930 files/1751160158B;407 selected paths absent, cleanup changed no
+tracked bytes. Independent before/after snapshot preserves989257 entries (978746 regular hashes,
+555 symlinks), package/dependency stores, certificates and original generation-install backup.
+1032 unsafe/uncertain entries retained; Rust release/deps artifact census0, incremental1251 kept.
+Immediate residue proof ran before any regeneration. Whole0407 scopes/prior live defect row557
+retain5 exact Git spans; book/size0. Promotion declined: settled cleanup rules unchanged.
+D276 found reading the next adapter: my garment Rustdoc/book incorrectly grouped Fly with modelled
+Lining, while Closure::new rejects Fly before creation. Frozen inputs prevented an immediate tracked
+edit; audit capture saved first, tracked .5.d.1 now owns correction immediately after this commit,
+before .5.c. Actual constructor remains unchanged; native public Fly scope control is the oracle.
+
+[Whole0407 current garment lesson](docs/history/stitchcad-devnotes-part557.md) retains full source/assignment order and original error proofs.
 
 [Whole0406 garment ownership lesson](docs/history/stitchcad-devnotes-part556.md) retains exact components, global namespace and current-input priority proofs.
 
