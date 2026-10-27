@@ -2,13 +2,15 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-27`
-- **Status:** `active` — active v3 read/cutover authority; authoring/resource acceptance remains owned.
+- **Status:** `active` — active v3 read/cutover authority; authoring available; client/resource acceptance remains owned.
 - **Owner / source:** G1-SLICE.6.4.5.capacity.apply; director delegates the decision and requires
   signoff/production quality.0391 selects self-contained retrieval over conditional Git receipts.
 
 answers: "how does retained history grow after the first aggregate budget is full?" · "why eight generations?" · "which archive guarantees remain unchanged?"
 
 answers: "what pins source and recovery audit during generation cutover?"
+
+answers: "how do append and explicit seal preserve a complete cohort across generations?"
 
 ## Authority and scope
 
@@ -72,8 +74,8 @@ near capacity, an owned new retention decision is required before further retire
   removed seals, changed old bytes, links, foreign volumes and unclassified physical files refuse.
 - Preserve public logical addresses and inventory's return shape. A generation control records its
   exact windows and legacy catalogs; the root pins its bytes. All but the last descriptor are sealed.
-  Appending windows changes only the active control/root. Opening another generation seals its
-  predecessor after committed raw capture. Initial transition may assign existing raw records to
+  Appending windows changes only the active control/root. Opening another generation seals indexed bytes; remaining unsealed drafts retain exact bytes
+  in the new active group. Initial transition may assign existing raw records to
   generation2 while generation1 preserves the original packed cohort and exact v2 master.
 - Validate schemas, complete membership, per-file identities and each independent budget. Decode one
   flat tar level; never recursively expand retained compressed evidence or call filesystem extraction APIs.
@@ -101,3 +103,14 @@ trees remain backed up. Runtime guards remain active under Python -O; owner leng
 before effects. This proves process-interruption recovery, not hardware power-loss durability.
 Authoring/sealing, current-client/permanent-smoke and full-budget resource acceptance remain immediate
 G1-SLICE.6.4.5.capacity.apply.accept work before returning to garment intent.
+
+## Authoring0393
+
+Append greedily captures the largest sorted raw prefix fitting the actual compressed/tar and group
+budgets; a full group seals before the remaining committed snapshot continues in a new group. All
+prior indexed bytes and sealed descriptors remain exact. Same-revision source proof compares the
+complete cohort across every new window/group. Explicit seal opens an empty active group before a
+new retirement; uncaptured drafts remain unsealed and byte-exact. Empty seals and slot9 refuse before
+workspace activation. Capture of one record is valid in v3; original v2 two-record rules remain fixed.
+Git proof admits only exact generation1..8 control paths; committed-v3 HEAD fixtures exercise that
+branch independently of the initial v2 transition. Client/resource feature acceptance remains open.

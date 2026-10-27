@@ -41,6 +41,12 @@ def identity(path, data, kind=None):
     return result
 
 
+def source_bound(path, reader):
+    if re.fullmatch(r'\.doctrine/history_archive/generation[1-8]\.json', path):
+        return 8192
+    return 160000 if path.endswith('.md') else reader['_backing_limit'](path)
+
+
 def packet(items):
     output = io.BytesIO()
     with tarfile.open(fileobj=output, mode='w', format=tarfile.USTAR_FORMAT) as archive:
@@ -106,7 +112,7 @@ def prepare(work):
     original = {path.relative_to(ROOT).as_posix(): path.read_bytes() for path in sources
                 if path.is_relative_to(ROOT / 'docs/history') or path.is_relative_to(ROOT / '.doctrine/history_archive')}
     for path, data in original.items():
-        bound = 160000 if path.endswith('.md') else reader['_backing_limit'](path)
+        bound = source_bound(path, reader)
         require(reader['_git_blob'](ROOT, revision, path, bound) == data, 'source drift: ' + path)
     backings = reader['backing_inventory'](ROOT)
     catalogs = {}
@@ -126,7 +132,7 @@ def prepare(work):
 
 
 def write_prepared(work, profile, reader, sources, revision, pressure, original, files, records,
-                   backings, commands, legacy_catalogs, extra_report=None):
+                   backings, commands, legacy_catalogs, extra_report=None, *, source_root=ROOT):
     """Share the original fully planned candidate writes and exact-byte proofs between modes."""
     candidate = work / 'candidate'
     source_file = work / 'source.json'
@@ -161,7 +167,7 @@ def write_prepared(work, profile, reader, sources, revision, pressure, original,
         subprocess.run([sys.executable, '-I', '-B', str(READER), '--root', str(candidate), *operation],
                        cwd=ROOT, check=True)
     require(reader['_head_revision'](ROOT) == revision, 'source HEAD changed during preparation')
-    require(all(((ROOT / path).read_bytes() == data for path, data in original.items())), 'source archive changed during preparation')
+    require(all(((source_root / path).read_bytes() == data for path, data in original.items())), 'source archive changed during preparation')
     report = {'source_revision': revision, 'candidate_pressure': reader['inventory'](candidate)[1],
               'logical_records': len(records), 'original_backings': len(backings),
               'legacy_catalogs': legacy_catalogs, 'live_installed': False}
@@ -205,33 +211,170 @@ def append_files(original, master, names, revision, created, owner):
     return files, window
 
 
-def append(work, owner):
-    """Prepare current committed v2 raw records for the existing journaled installer, without live writes."""
+def generation_descriptor(files, path, engine):
+    group = json.loads(files[path])
+    names = {path, *(row['path'] for row in group['legacy_catalogs'])}
+    for name in group['windows']:
+        manifest = json.loads(files[name])
+        names.update((name, manifest['payload'], manifest['catalog']))
+    row = identity(path, files[path])
+    row['tree_sha256'] = engine['tree_identity']({name: (len(files[name]), digest(files[name])) for name in names})
+    return row
+
+
+def group_fits(files, path):
+    """Pre-effect accounting of a fully indexed group; source metadata was already decoded/verified."""
+    group = json.loads(files[path])
+    decoded_bytes = decoded_lines = 0
+    controls = [files[path]]
+    resident = len(files[path])
+    markdown = len(group['windows']) + len(group['legacy_catalogs'])
+    for name in group['windows']:
+        control = files[name]
+        value = json.loads(control)
+        controls.append(control)
+        catalog, payload = files[value['catalog']], files[value['payload']]
+        resident += len(control) + len(catalog) + len(payload)
+        decoded_bytes += len(catalog) + sum(row['bytes'] for row in value['members'])
+        decoded_lines += catalog.count(b'\n') + sum(row['lines'] for row in value['members'])
+    for row in group['legacy_catalogs']:
+        data = files[row['path']]
+        resident += len(data)
+        decoded_bytes += len(data)
+        decoded_lines += data.count(b'\n')
+    return (len(files[path]) <= 8192 and len(group['windows']) <= 16 and markdown <= 64
+            and decoded_bytes <= 4_000_000 and decoded_lines <= 60_000 and resident <= 4_000_000
+            and all(len(data) <= 65536 for data in controls)
+            and sum(map(len, controls)) <= 262144
+            and sum(data.count(b'\n') for data in controls) <= 20000)
+
+
+def generation_window(number, items, revision, created, owner):
+    """A deterministic flat packet and compact catalog; never writes or extracts files."""
+    packed = packet(items)
+    window = 'window%d' % number
+    path = '.doctrine/history_archive/' + window + '.json'
+    catalog = 'docs/history/' + window + '.md'
+    payload = 'docs/history/payloads/' + digest(packed) + '.tar.gz'
+    manifest = dict(version=2, id=window, source_revision=revision, created=created, owner=owner,
+                    reason='Complete committed raw snapshot, split across bounded immutable windows and generations.',
+                    payload=payload, payload_sha256=digest(packed), catalog=catalog,
+                    members=[identity(name, data, kind) for name, data, kind in items])
+    text = '# Retained history — window %d\n\nSource `%s`; owner `%s`.\n\n' % (number, revision, owner)
+    text += 'Full-file identities are in the manifest; logical bytes stay immutable. Offline list/read/materialize.\n\n'
+    text += ''.join('### %s\n\n' % Path(name).name for name, _data, _kind in items)
+    return path, {path: document(manifest), catalog: text.encode(), payload: packed}
+
+
+def generation_append_files(original, master, names, revision, created, owner, engine, segment):
+    """Pure bounded authoring: consume all committed drafts, preserving every prior indexed byte.
+
+    Drafts are unsealed, so remaining drafts may move to the next active generation. Existing
+    indexed files never move. Choose the largest sorted prefix that fits the current group; a
+    full group is sealed before the remaining cohort is captured in a new group.
+    """
+    require(type(master['version']) is int and master['version'] == 3, 'v3 append source required')
+    raw = {name for name in original if segment.fullmatch(name)}
+    require(set(names) == raw and 1 <= len(names) <= 64, 'complete bounded committed raw snapshot required')
+    files = dict(original)
+    remaining = [(name, files.pop(name), 'record') for name in sorted(names)]
+    rows = [dict(row) for row in master['generations']]
+    number = max(int(Path(name).stem.removeprefix('window')) for row in rows
+                 for name in json.loads(files[row['path']])['windows']) + 1
+    windows = []
+    original_active = rows[-1]['path']
+    while remaining:
+        control = rows[-1]['path']
+        group = json.loads(files[control])
+        choice = None
+        if len(group['windows']) < 16:
+            for count in range(min(256, len(remaining)), 0, -1):
+                try:
+                    path, additions = generation_window(number, remaining[:count], revision, created, owner)
+                except ValueError as error:
+                    if str(error) not in ('candidate tar bound exceeded', 'candidate compressed bound exceeded'):
+                        raise
+                    continue
+                require(not set(additions).intersection(files), 'append destination already exists')
+                update = document(dict(group, windows=[*group['windows'], path]))
+                proposed = dict(files, **additions)
+                proposed[control] = update
+                if group_fits(proposed, control):
+                    choice = count, path, proposed
+                    break
+        if choice is None:
+            require(bool(group['windows']), 'one bounded record cannot fit an empty generation')
+            require(len(rows) < 8, 'finite generation capacity exhausted; new retention decision required')
+            rows[-1] = generation_descriptor(files, control, engine)
+            control = '.doctrine/history_archive/generation%d.json' % (len(rows) + 1)
+            require(control not in files, 'generation destination already exists')
+            files[control] = document(dict(version=2, windows=[], legacy_catalogs=[]))
+            rows.append(generation_descriptor(files, control, engine))
+            continue
+        count, path, files = choice
+        rows[-1] = generation_descriptor(files, control, engine)
+        windows.append(Path(path).stem)
+        del remaining[:count]
+        number += 1
+    files[MASTER] = document(dict(version=3, generations=rows))
+    require(len(files[MASTER]) <= 8192, 'generation index bound exceeded')
+    require(all(files[name] == data for name, data in original.items()
+                if name not in raw and name not in (MASTER, original_active)), 'append changed original indexed bytes')
+    return files, windows
+
+
+def seal_files(original, master, engine):
+    """Freeze indexed bytes and open an empty active group; unsealed drafts keep their exact bytes."""
+    require(type(master['version']) is int and master['version'] == 3, 'seal requires a v3 source')
+    rows = [dict(row) for row in master['generations']]
+    require(len(rows) < 8, 'finite generation capacity exhausted; new retention decision required')
+    require(bool(json.loads(original[rows[-1]['path']])['windows']), 'cannot seal an empty generation')
+    files = dict(original)
+    control = '.doctrine/history_archive/generation%d.json' % (len(rows) + 1)
+    require(control not in files, 'generation destination already exists')
+    files[control] = document(dict(version=2, windows=[], legacy_catalogs=[]))
+    files[MASTER] = document(dict(version=3, generations=[*rows, generation_descriptor(files, control, engine)]))
+    return files
+
+
+def append(work, owner, *, seal=False, source_root=ROOT):
+    """Prepare all committed v2/v3 raw records for the journaled installer, without live writes."""
     require(isinstance(owner, str) and re.fullmatch('[A-Za-z0-9][A-Za-z0-9_.-]{0,79}', owner), 'explicit task owner required')
     profile = runpy.run_path(str(PROFILE))
     profile['plan_producer'](ROOT, sources=(Path(__file__), INSTALLER, READER, PROFILE), directories=(work,))
     reader = runpy.run_path(str(READER))
-    sources = (Path(__file__), INSTALLER, *reader['backing_sources'](ROOT, profile))
+    sources = (Path(__file__), INSTALLER, *reader['backing_sources'](source_root, profile))
     profile['plan_producer'](ROOT, sources=sources, directories=(work,))
     require(not work.exists(), 'fresh append workspace required')
     revision = reader['_head_revision'](ROOT)
-    master = json.loads((ROOT / MASTER).read_bytes())
-    require(master['version'] == 2, 'append requires a v2 source')
-    records, pressure = reader['inventory'](ROOT)
-    original = {path.relative_to(ROOT).as_posix(): path.read_bytes() for path in sources
-                if path.is_relative_to(ROOT / 'docs/history') or path.is_relative_to(ROOT / '.doctrine/history_archive')}
+    master = json.loads((source_root / MASTER).read_bytes())
+    require(type(master['version']) is int and master['version'] in (2, 3), 'append requires a v2/v3 source')
+    records, pressure = reader['inventory'](source_root)
+    original = {path.relative_to(source_root).as_posix(): path.read_bytes() for path in sources
+                if path.is_relative_to(source_root / 'docs/history') or path.is_relative_to(source_root / '.doctrine/history_archive')}
     for path, data in original.items():
-        bound = 160000 if path.endswith('.md') else reader['_backing_limit'](path)
+        bound = source_bound(path, reader)
         require(reader['_git_blob'](ROOT, revision, path, bound) == data, 'source drift: ' + path)
     names = reader['_git_paths'](ROOT, revision)
     created = subprocess.check_output(['git', '-C', str(ROOT), 'show', '-s', '--format=%cs', revision],
                                       env=reader['metadata_environment'](ROOT)).decode().strip()
     datetime.date.fromisoformat(created)
-    files, window = append_files(original, master, names, revision, created, owner)
-    backings = reader['backing_inventory'](ROOT)
+    if seal:
+        files, windows = seal_files(original, master, reader['generation_reader']()), []
+    elif master['version'] == 3:
+        files, windows = generation_append_files(original, master, names, revision, created, owner,
+                                                 reader['generation_reader'](), reader['SEGMENT'])
+    else:
+        files, window = append_files(original, master, names, revision, created, owner)
+        windows = [window]
+    backings = reader['backing_inventory'](source_root)
+    report = {'owner': owner, 'new_windows': windows, 'packed_records': 0 if seal else len(names), 'seal_only': seal}
+    if master['version'] == 2:
+        report['new_window'] = windows[0]  # Preserve the published v2 report field.
     write_prepared(work, profile, reader, sources, revision, pressure, original, files, records,
-                   backings, [['verify-retention'], ['prove-source', window]], len(master['legacy_catalogs']),
-                   {'new_window': window, 'packed_records': len(names)})
+                   backings, [['verify-retention'], *[['prove-source', window] for window in windows]],
+                   len(reader['flat_legacy_catalogs'](source_root)), report,
+                   source_root=source_root)
 
 
 def generations(work, owner):
@@ -249,7 +392,7 @@ def generations(work, owner):
     require(json.loads(original[MASTER])['version'] == 2, 'generation transition requires v2 source')
     records, pressure = reader['inventory'](ROOT)
     for path, data in original.items():
-        bound = 160000 if path.endswith('.md') else reader['_backing_limit'](path)
+        bound = source_bound(path, reader)
         require(reader['_git_blob'](ROOT, revision, path, bound) == data, 'source drift: ' + path)
     files = dict(original)
     first, active = ('.doctrine/history_archive/generation%d.json' % n for n in (1, 2))
@@ -257,16 +400,7 @@ def generations(work, owner):
     files[first] = original[MASTER]
     files[active] = document({'version': 2, 'windows': [], 'legacy_catalogs': []})
     engine = reader['generation_reader']()
-    descriptors = []
-    for path in (first, active):
-        group = json.loads(files[path])
-        names = {path, *(row['path'] for row in group['legacy_catalogs'])}
-        for name in group['windows']:
-            manifest = json.loads(files[name])
-            names.update((name, manifest['payload'], manifest['catalog']))
-        row = identity(path, files[path])
-        row['tree_sha256'] = engine['tree_identity']({name: (len(files[name]), digest(files[name])) for name in names})
-        descriptors.append(row)
+    descriptors = [generation_descriptor(files, path, engine) for path in (first, active)]
     files[MASTER] = document({'version': 3, 'generations': descriptors})
     write_prepared(work, profile, reader, sources, revision, pressure, original, files, records,
                    reader['backing_inventory'](ROOT), [['verify-retention'], ['prove-source', 'window17'],
@@ -276,15 +410,15 @@ def generations(work, owner):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('operation', choices=['prepare', 'append', 'generations'])
+    parser.add_argument('operation', choices=['prepare', 'append', 'generations', 'seal'])
     parser.add_argument('workspace', help='fresh repository-relative target/ directory')
     parser.add_argument('--owner', help='explicit owning task leaf for append/generation maintenance')
     args = parser.parse_args()
     require(args.workspace.startswith('target/') and '..' not in Path(args.workspace).parts, 'workspace must be repository-relative target/')
     if args.operation == 'generations':
         generations(ROOT / args.workspace, args.owner)
-    elif args.operation == 'append':
-        append(ROOT / args.workspace, args.owner)
+    elif args.operation in ('append', 'seal'):
+        append(ROOT / args.workspace, args.owner, seal=args.operation == 'seal')
     else:
         require(args.owner is None, 'owner applies only to append or generations')
         prepare(ROOT / args.workspace)

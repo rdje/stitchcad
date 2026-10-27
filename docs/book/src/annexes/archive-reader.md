@@ -1,7 +1,7 @@
 # Historical archive reader
 
 Records keep stable logical names after packing. Python3.9+ validates the complete archive before
-list/read/materialize using only its standard library; ordinary retrieval needs no historical Git.
+list/read/materialize with its standard library; retrieval needs no historical Git or network.
 
 ```bash
 bash scripts/history_archive.sh list
@@ -9,8 +9,8 @@ bash scripts/history_archive.sh read docs/history/stitchcad-changelog-part1.md
 bash scripts/history_archive.sh verify
 ```
 
-Read emits complete original bytes, including the sealed descriptor. Materialize writes all logical
-records in sorted order beneath a fresh destination; repeating the command refuses overwrite:
+Read emits complete original bytes, including the seal. Materialize writes all records in sorted
+order beneath a fresh destination; repeating it refuses overwrite:
 
 ```bash
 bash scripts/history_archive.sh materialize target/history-review
@@ -23,14 +23,14 @@ nested Git boundaries, other volumes and invalid destination kinds refuse.
 
 ## Materialization authority
 
-Before effects, materialization declares code/profile/physical inputs and every output file/directory,
-including implicit parents. Prepared stores/caller settings survive. Store overlap with the archive
-or output tree refuses before activation, preventing unplanned entries.
+Materialization declares code/profile/physical inputs and every output file/directory, including
+implicit parents, before effects. Prepared stores/caller settings survive. Store overlap with archive
+or output refuses before activation.
 
-Creation and exclusive opens recheck authority; bytes are never rewritten and existing destinations
-are never overwritten. An I/O failure may leave a partial fresh review copy. Normal artifact cleanup
-owns disposable copies. Imported validation and CLI list/read/verify remain read-only: no producer
-profile load, store activation, directories or children. Invalid unused stores remain irrelevant.
+Creation/exclusive opens recheck authority; bytes and existing destinations are never overwritten.
+I/O failure may leave a partial review copy for artifact cleanup. Imported validation and CLI
+list/read/verify load no producer profile, activate no stores and create no directories/children.
+Invalid unused stores remain irrelevant.
 
 ## Committed-history evidence
 
@@ -39,20 +39,19 @@ bash scripts/history_archive.sh verify-retention
 bash scripts/history_archive.sh prove-source window11
 ```
 
-These proofs need local Git objects. Git children validate inputs, clear repository/config overrides
-and disable optional locks, without store activation or caller changes. Committed windows retain exact
-Git bytes. Initial absence requires a successful independent HEAD-tree query: failed observation,
-unavailable/present-unreadable metadata refuses. Initial source reconstruction remains required.
+Proofs need local Git objects. Children validate inputs, clear repository/config overrides and disable
+optional locks, preserving stores/caller state. Committed windows retain exact Git bytes. Initial absence
+needs an independent successful HEAD-tree query; failed observation/unavailable/unreadable metadata
+refuses. Initial source reconstruction remains required.
 
 ## Bounded generations (version3)
 
 An ordered index pins each generation's control and a domain-separated digest of every indexed
-physical file. A changed manifest, payload or catalog cannot preserve that tree identity. Generation1
+physical file, including manifests, payloads and catalogs. Generation1
 keeps the exact old v2 master, original windows,16 legacy catalogs and33 opaque backing files. Old
-compressed evidence is never recursively activated. Logical addresses and public inventory shape stay
-stable; list/read/materialize work without historical Git or network access.
+compressed evidence is never recursively activated. Public inventory shape stays stable.
 
-At most eight generations are admitted, each independently bounded:
+Eight generations maximum, each bounded:
 
 | Generation bound | Value |
 | --- | --- |
@@ -64,14 +63,13 @@ At most eight generations are admitted, each independently bounded:
 | Control bytes / lines | 262,144 / 20,000 |
 
 The index is at most 8,192 bytes. Derived totals are 32,000,000 decoded bytes/480,000 lines and 32,008,192
-resident bytes. These bound storage/decode, not observed process-memory or unlimited growth.
+resident bytes. These bound storage/decode, not process memory.
 
 All but the last generation are sealed. New raw drafts belong only to the active group and remain
 unsealed until capture; all committed raw records still retain exact bytes. Orphans, shared ownership,
 duplicate identities, links, malformed indices and reordered/removed seals refuse. Earlier v1/v2
-schemas retain their original4MB/60000-line rules. Another retention decision is required before the
-finite generation envelope is exhausted. Active-generation authoring and resource/current-client
-acceptance remain the immediate continuation; read/cutover support alone does not close that work.
+schemas retain their original4MB/60000-line rules. Exhaustion requires a new retention decision. Append/seal authoring is implemented; current-client/permanent smoke
+and full-budget resource acceptance remain open.
 
 ## Independent controls
 
@@ -79,56 +77,61 @@ acceptance remain the immediate continuation; read/cutover support alone does no
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py --real
 python3 -I -B docs/tasks/artifacts/history_archive/v3_reader_contract.py
+python3 -I -B docs/tasks/artifacts/history_archive/v3_authoring_contract.py
 ```
 
-The v3 fixture reconstructs its frozen cohort through logical bytes, preserving predicates as history
-grows. Native tar/tree-hash oracles and full-current retention checks remain separate.
+V3 fixtures reconstruct the frozen cohort through logical bytes as history grows. Native tar/tree-hash
+oracles and full-current retention checks remain separate.
 
 ## Refusal fixture maintenance
 
-Refusal producers declare copied inputs, fault payloads, resident fixtures and recovered outputs before
-effects. Original sources/populations stay fixed; valid prepared stores survive and overlapping stores
-refuse before activation. Creation/copy/write/unlink/child/removal boundaries recheck authority. A known
-local-payload symlink fixture has exact lexical removal authority and a nonfollowing remover; other
-links/unknown entries refuse. Protected cleanup covers interrupted setup; Git context stays project-scoped.
+Refusal producers declare copied inputs, fault payloads, fixtures and recovered outputs before effects.
+Sources/populations stay fixed; prepared stores survive and overlaps refuse before activation. All
+creation/copy/write/unlink/child/removal boundaries recheck authority. The known payload-symlink fixture
+has lexical removal authority and a nonfollowing remover; other links/unknown entries refuse. Protected
+cleanup covers interrupted setup; Git context stays project-scoped.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
 ```
 
-The native entry preserves28 original calibrated cases. The companion captures plans/effects and
-simulates child responses, proving dispatch separately. Its --deep and further physical/body
-calibration remain .f.fixture-verification under the [checking policy](checking-policy.md); no full
-campaign pass is claimed. The activation-omission parser has a focused regression. Historical traps
+The native entry preserves28 original calibrated cases. The companion captures plans/effects with
+simulated child responses, proving dispatch separately. Its --deep and physical/body calibration
+remain .f.fixture-verification under the [checking policy](checking-policy.md); no full campaign pass.
+The activation-omission parser has a focused regression. Historical traps
 use capture-pinned v1 backings: only deliberate raw-read faults receive exact logical substitution;
 the original missing-public-read assertion remains. Legacy catalogs/non-changelog rows stay valid.
 
 ## Guarded migration tooling
 
-The installer pins HEAD, formatter, installer, both reader dependencies and environment profile. It
-checks exact source/candidate identities, including byte/line counts. A flushed journal binds the
-complete preparation audit before the first rename. Individual directory renames are atomic; keep
-readers idle until installation/recovery finishes. This proves process interruption, not power loss.
+Installation pins HEAD, formatter, installer, both readers and environment profile, checking exact
+source/candidate hashes and byte/line counts. The flushed journal binds the complete audit before
+renaming. Directory renames are individually atomic. Keep readers idle until installation/recovery
+finishes; process interruption is proved, power loss is unproved.
 
-Use a fresh workspace and choose a preparation matching the source schema. Owner ids name an actual
-leaf (1–80 characters). Append requires committed raw records within bounds. Guards survive Python -O.
+Use a fresh workspace and match the source schema. Name an actual owning leaf (1–80 characters).
+Append requires committed bounded raw records. Guards survive Python -O.
 
 ```bash
-# v1 to v2:
-python3 -I -B docs/tasks/artifacts/history_archive/v2_migration.py prepare target/history-transition
-# v2 raw capture:
-python3 -I -B docs/tasks/artifacts/history_archive/v2_migration.py append target/history-transition --owner G1-SLICE.6.4.5.3.d.2.a
-# One-time v2 to v3:
-python3 -I -B docs/tasks/artifacts/history_archive/v2_migration.py generations target/history-transition --owner G1-SLICE.6.4.5.capacity.apply.cutover
-# After the chosen preparation:
-python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py install target/history-transition
-# After interruption, before archive use:
-python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py recover target/history-transition
+archive_tools=docs/tasks/artifacts/history_archive
+archive_owner=G1-SLICE.6.4.5.capacity.apply.accept.authoring
+# Choose ONE preparation:
+python3 -I -B "$archive_tools/v2_migration.py" prepare target/history-transition # v1 to v2
+python3 -I -B "$archive_tools/v2_migration.py" append target/history-transition --owner "$archive_owner" # v2/v3 capture
+python3 -I -B "$archive_tools/v2_migration.py" generations target/history-transition --owner "$archive_owner" # v2 to v3
+python3 -I -B "$archive_tools/v2_migration.py" seal target/history-transition --owner "$archive_owner" # v3 rollover
+# Install; after interruption, recover before archive use:
+python3 -I -B "$archive_tools/v2_install.py" install target/history-transition
+python3 -I -B "$archive_tools/v2_install.py" recover target/history-transition
 ```
 
-Recovery classifies both trees before effects, accepting only exact original/staged/installed states.
-Source, candidate, code, audit, journal or HEAD drift refuses, including later records/commits. Original
-trees remain backed up; the candidate survives rollback. Incomplete staging has not changed live storage.
-Append preserves complete committed raw bytes and old windows. Headings navigate; manifests retain
-full identities. Packing grants no capacity: stop before an oversized retirement.
+Recovery classifies both trees before effects: only exact original/staged/installed states qualify.
+Source/candidate/code/audit/journal/HEAD drift, including later records/commits, refuses. Originals stay
+backed up; rollback preserves the candidate. Incomplete staging leaves live storage unchanged.
+V3 append captures all committed raw records in sorted bounded windows. It fills the active group,
+then seals indexed bytes and opens another if any budget blocks the next window. Explicit seal opens
+a group before retirement, carrying unsealed drafts byte-exact. Empty seals and slot9 refuse before
+workspace creation. Source proof compares the whole same-revision cohort across groups/windows.
+V3 accepts one record; v2 retains its one-window/two-record rules. Catalog headings navigate; manifests
+give full identities. Packing grants no capacity: stop before an oversized retirement.

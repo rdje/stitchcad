@@ -594,6 +594,7 @@ def _git_blob(root, revision, path, maximum):
     require(revision == 'HEAD' or (type(revision) is str and REV.fullmatch(revision)), 'invalid source revision')
     text(path, 200)
     require(path == MASTER or SEGMENT.fullmatch(path) or
+            re.fullmatch(r'\.doctrine/history_archive/generation[1-8]\.json', path) or
             re.fullmatch(r'\.doctrine/history_archive/window[1-9][0-9]*\.json', path) or
             re.fullmatch(r'docs/history/window[1-9][0-9]*\.md', path) or
             re.fullmatch(r'docs/history/payloads/[0-9a-f]{64}\.tar\.gz', path), 'invalid source path')
@@ -721,8 +722,14 @@ def _v2_source_proof(root, window):
         return len(expected), len(backings), len(legacy_catalogs)
     require(type(original.get('version')) is int and original['version'] in (2, 3), 'unsupported source schema')
     expected = _git_paths(root, revision)
-    require(expected == {row['path'] for row in manifest['members']} and
-            all(row['kind'] == 'record' for row in manifest['members']), 'source snapshot membership mismatch')
+    members = manifest['members']
+    if original['version'] == 3:
+        # One complete committed snapshot may require several bounded windows/generations.
+        members = [row for value in manifests.values() if value['source_revision'] == revision
+                   for row in value['members']]
+    require(expected == {row['path'] for row in members} and
+            len(members) == len(expected) and all(row['kind'] == 'record' for row in members),
+            'source snapshot membership mismatch')
     for name in expected:
         require(records[name] == _git_blob(root, revision, name, 160000), 'source reconstruction mismatch: ' + name)
     return len(expected), 0, 0

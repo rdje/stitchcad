@@ -3,22 +3,23 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-27 UTC)_ — bounded generation authoring and committed-v3 evidence
+
+0393 captures all committed raw records, splitting payloads and filling bounded groups before ordered
+rollover. Explicit seal opens an active group before retirement; unsealed drafts retain exact bytes.
+Existing indexed files/sealed descriptors never move or change. Slot9 and empty seals refuse before
+workspace activation. Complete same-revision source proof spans all windows/groups. One record works
+in v3; original v2 formatter/two-record/report rules remain. Native10 source/candidate controls and4
+pure refusals pass0, including actual GitHEAD full preparation and independent OS tar byte oracles.
+D268 post-commit v3 retention failed closed: generation paths were missing from Git/source bounds;
+old=v2 pre-commit proof exercised only transition. Exact generation1..8 rules now pass native committed
+HEAD proof. Reader46, budget25/runtime4, old6 decoder/2 formatter AST and4-span542 pass0. No Root
+archive install in this slice. Promotion: history-generations decision. Client/permanent transaction
+smoke and full-budget resources remain immediate; full CI/platform integration remains deferred.
+
 [Whole0391 lesson](docs/history/stitchcad-devnotes-part541.md) retains its scope, budget proof and authority.
 
-## _(2026-10-27 UTC)_ — source-pinned v3 generation cutover
-
-0392 installs two bounded generations, retaining every994 prior record/33 opaque backing and all
-physical bytes, including the old v2 master as generation1. Whole physical tree hashes protect seals;
-ordinary reads remain profile-free/Git-free. Source HEAD/code/audit/journal and both tree images are pinned.
-D263 plans/ledger schema, D264 self-installer pin and D265 audit binding/bounded journal corrected.
-D266 owner81 late effects and D267 -O missing-owner admission were reproduced without Root changes;
-27 producer assertions became unconditional checks. Budget25/runtime4, reader46, transaction26 and v2
-reader22 pass0; actual self-hash/journal omissions admit faulty fixtures, proving the controls discriminate.
-A shared mutable fault map had re-signed a negative case; independent descriptor comparison identified
-fixture aliasing, then immutable case snapshots fixed it. Old decoder AST/formatter bytes remain exact.
-Original trees stay target/history-generations-0392g/installation/backup; later541/HEAD drift rightly
-refuses old recovery.541 retains8 exact Git spans. Promotion: history-generations decision. Authoring,
-current-client/permanent smoke/full-budget resource acceptance follows; full platform/CI proof is deferred.
+[Whole0392 cutover lesson](docs/history/stitchcad-devnotes-part542.md) retains source/guard repairs and acceptance limits.
 
 ## _(2026-10-27 UTC)_ — retention policy boundary
 

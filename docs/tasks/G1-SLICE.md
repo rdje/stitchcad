@@ -889,25 +889,31 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0391 finite generation authority; [whole proof](../history/stitchcad-devnotes-part541.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.cutover`
   Status: `done`
-  Goal:0392 strict v3 decoder, source/immutable guards and source-pinned journaled cutover.
-  - [x] REPRODUCE / ISSUE: generation_budget.py:3999898B/102B headroom rc=0; next full retirement blocked.
-    D266 normal owner81 refused1 after effects; D267 -O missing owner admitted0 with effects; Root unchanged.
-  - [x] ROOT CAUSE (WHY + WHERE): source/Git inspection rc=0; global budget coupled to single generation;
-    D263 helper/source plans, D264 installer identity, D265 audit binding, D266/267 runtime guards absent.
-  - [x] FIX: generation_budget.py --self-test:25 budget+4 runtime controls rc=0; all27 assertions replaced.
-    Old published v2 formatter output byte comparison rc=0; source hash/old decoder AST comparisons0.
-  - [x] ADDRESSED: v3_reader_contract.py target/history-generations-0392f/candidate:46 physical controls0;
-    v2_install_contract.py target/history-generations-0392g:26/0 rc=0, real interruptions and2 body omissions.
-    v2_install.py install same workspace rc=0; all original files/backup trees byte-exact; master sealed1.
-  - [x] NO REGRESSION: v2_reader_contract.py:22/0 rc=0; original v1/v2 decoders AST unchanged0;
-    v3 profile-free API/Git-free CLI, native tar/tree hashes and full materialization exact. No Rust changes.
-  - [x] LOCKSTEP: book/publication/size and history_archive.sh verify-retention rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part541.md:8 exact Git spans rc=0.
-    Promotion: decision_history-generations.md. Authoring/current-client/resource acceptance remains .accept.
+  Goal:0392 installed bounded v3; [whole proof](../history/stitchcad-devnotes-part542.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept`
+  Status: `in_progress`
+  Goal: v3 authoring, current clients/permanent transaction smoke and resource proof before product .4.
+- ID: `G1-SLICE.6.4.5.capacity.apply.accept.authoring`
+  Status: `done`
+  Goal:0393 bounded complete-snapshot append, immutable seals/rollover and multi-window source proof.
+  - [x] REPRODUCE / ISSUE: history_archive.sh verify-retention after b951604:refused1 invalid source path;
+    append target/history-authoring-red-0393 refused1 invalid backing path; no workspace created.
+  - [x] ROOT CAUSE (WHY + WHERE): Git/source diagnostic rc=0: committed-v3 generation paths absent
+    from _git_blob/source bounds; pre-commit old=v2 followed the transition branch. D268 owned/corrected.
+  - [x] FIX: v3_authoring_contract.py:10 physical source/candidate controls and4 early pure refusals0;
+    actual HEAD full preparation/source proof, cross-group multi-window cohort and native tar bytes exact.
+  - [x] ADDRESSED: history_archive.sh verify-retention:996 records/4013358 decodedB rc=0;
+    existing seals/indexed bytes preserved; payload/decoded/line/window/control rollover, slot9 refusal.
+  - [x] NO REGRESSION: v3_reader_contract.py:46 physical controls rc=0; generation_budget.py --self-test:
+    25 budget+4 runtime0; AST comparison:6 old decoder/2 formatter bodies exact0. No Rust changes.
+  - [x] LOCKSTEP: transition_receipts.py --record542:4 exact Git spans0; book/publication/size rc=0.
+    Promotion: decision_history-generations.md. Current-client/permanent smoke/resource proof remains.
+- ID: `G1-SLICE.6.4.5.capacity.apply.accept.clients`
   Status: `pending`
-  Goal: v3 append/sealing, current clients/permanent transaction smoke and full-budget resource proof
-  before product .4; no complete feature/platform/CI verdict yet.
+  Goal: preserve existing refusal predicates on v3; permanent current-source transaction smoke.
+- ID: `G1-SLICE.6.4.5.capacity.apply.accept.resources`
+  Status: `pending`
+  Goal: eight full groups and isolated resource measurements; feature acceptance before product .4.
 - ID: `G1-SLICE.6.4.5.4`
   Status: `pending`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.

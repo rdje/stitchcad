@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0392 — install byte-exact bounded history generations
+## STITCHCAD-G1-0393 — author bounded append and ordered generation seals
 
-- Strict v3 index/tree seals; every994 prior record/33 opaque backing and all source bytes retained.
-- Reader46/transaction26/v2 reader22 pass0; real interruptions, native oracles, Git-free/profile-free reads.
-- D263–D267 plans/hash/journal/early-owner/optimization guards repaired; actual omission/admission controls.
-- First new continuity541 safely stored; whole0391/proposal/0389/D263/retirement retained in8 exact spans.
-- Authoring, current clients and full-budget resources remain immediate work; G1still6/18, full CI deferred.
+- Complete raw snapshots split across bounded payloads/groups; explicit seal carries unsealed drafts.
+- Exact old indexed bytes/seals persist; slot9/empty seal refuse before effects. Cohort source proof spans groups.
+- D268 committed-v3 Git/source path rules corrected; native10/pure4, reader46, budget25/runtime4 pass0.
+- Whole0392 evidence542 has4 exact Git spans0; client/permanent transaction/resource acceptance remains open.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -32,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part542](docs/history/stitchcad-devnotes-part542.md) | whole0392 cutover/lesson/ledger/D263–D267 | 63 lines, 5599 bytes, sha256:be63d3c1… |
 | [part541](docs/history/stitchcad-devnotes-part541.md) | whole0391/proposal/0389/D263/retirement | 71 lines, 5223 bytes, sha256:15e05162… |
 
 | [part540](docs/history/stitchcad-devnotes-part540.md) | 23 lines, 1908 bytes, sha256:643cd825… |
