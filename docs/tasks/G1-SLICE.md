@@ -909,29 +909,29 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0407 complete current garment sources; [whole proof](../history/stitchcad-devnotes-part557.md).
 - ID: `G1-SLICE.6.4.5.5.c`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete typed actual garment declarations over one current root, no partial views.
   Children .1 actual logical Pocket opening adapter; .2 unified original adapters after full preflight.
 - ID: `G1-SLICE.6.4.5.5.c.1`
   Status: `done`
-  Goal:0410 actual logical Pocket opening borrows after complete current input-root checks.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract pocket_opening:
-    2 passed rc=0; logical ids match actual Length/Count/parameter ids without scalar conversion.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:PocketOpening already owns distinct logical
-    declaration/Profile roles; borrow original field/object/canonical owner, no new value vocabulary.
-  - [x] FIX: same native2 plus shared construction_and_garment_ownership_rechecks_whole_root_before_empty_scope:
-    1 passed rc=0; whole-root preflight even empty, authored index, exact fields and original deferrals.
-  - [x] ADDRESSED: native3 rc=0:actual pointers/order, logical aliases, origin-only Debug, missing current
-    sources remain inspectable, empty scope and host drift retain original typed cause without views.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::pockets:1 lifetime rc=0; core --lib /
-    measure --test design_inputs_contract strict Clippy and affected fmt rc=0; Pocket source unchanged.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part559.md:4 spans rc=0;
-    retention/book/publication/size rc=0; original book facts retained. Promotion: Design host decision.
-    Unified whole-current garment declarations .c.2, requested envelope .d.2/full integration remain.
+  Goal:0410 original logical Pocket opening views; [whole proof](../history/stitchcad-devnotes-part560.md).
 - ID: `G1-SLICE.6.4.5.5.c.2`
-  Status: `pending`
-  Goal: whole-current garment preflight before original sewing/Pocket/Closure/layer/Hem/construction/
-  Gather declaration adapters in actual family order; original errors, no partial collection.
+  Status: `done`
+  Goal:0411 whole-current garment declarations; existing actual role adapters, no partial views.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_declarations:
+    3 passed rc=0; actual seven-component fixture needs one current-source/metadata query.
+  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:standalone adapters preserve original distinct
+    semantics but do not jointly preflight actual garment sources or pair Material/offset per layer.
+  - [x] FIX: same native3 plus construction_and_garment_ownership_rechecks_whole_root_before_empty_scope:
+    1 passed rc=0; validate_current precedes existing adapters, exact family/authored role order.
+  - [x] ADDRESSED: native4 rc=0:all19 actual roles/objects/canonical pointers, assigned/unresolved
+    Material borrows, origin-only Debug, late missing/wrong-kind metadata, source priority/typed chains,
+    empty scope/host drift; definitions unchanged and no accepted prefix.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::garment_declarations:1 lifetime rc=0;
+    core --lib / measure --test design_inputs_contract strict Clippy and affected fmt rc=0.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part560.md:4 spans rc=0;
+    retention/book/publication/size rc=0. Existing book facts/examples retained; Design host decision
+    promotion. Requested envelope .d.2/scoped .6/aggregate .6.4.6/full integration remain owned.
 - ID: `G1-SLICE.6.4.5.5.d`
   Status: `in_progress`
   Goal: original Lining execution envelope and pre-construction Fly refusal, independent of geometry.

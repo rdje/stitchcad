@@ -3,18 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — original logical Pocket opening declarations
+## _(2026-10-27 UTC)_ — complete borrowed garment declaration views
 
-0410 rechecks the whole current input root even for empty Pocket scope, then borrows original
-Pocket/opening, authored index and single canonical owner. Declaration/Profile ids remain logical
-despite matching Length/Count/parameter ids. G3 opening/G4 Profile deferrals and None-as-absence
-remain original; Debug exposes source tag only. Native2 plus shared host-drift control1, lifetime1,
-core+measure strict lint/fmt pass0. Missing placement/component sources stay inspectable through this
-metadata-only API; no scalar, physical vocabulary/value/default or release certificate is created.
-Whole0409/D276 scopes559 retain4 exact Git spans; retention/book/publication/size0. Original book
-facts retained with repetition tightened. Promotion: Design host decision. Unified current garment
-query .c.2 must preflight actual whole garment sources before publishing any role views; .d.2 and
-full Design/runtime/physical/release proof remain owned.
+0411 validates the actual whole garment before reusing existing sewing/Pocket/Closure/layer/Hem/
+construction/Gather adapters. Uniform outer views borrow the sole canonical owner; each layer pairs
+original Material/unresolved-reason and offset adapters by exact actual identity, never truncating.
+Native3 plus shared host-drift control1 pass0:19 original roles/pointers/order, assigned/unresolved
+Materials, missing/wrong-kind late metadata, current-source priority and concrete cause chains;
+objects unchanged, no partial views. Lifetime1/core+measure strict lint/fmt pass0. Origin-only Debug,
+Unknown/Derived and logical/G3/G4 roles stay intact; no domain/operation/execution/physical certificate.
+Whole0410 scopes560 preserve4 exact Git spans; retention/book/publication/size0. Book facts/examples
+retained through prose tightening. Promotion: Design host decision. Envelope .d.2/scoped .6/aggregate
+.6.4.6/full Design/runtime/physical/release remain owned; G1still6/18.
+
+[Whole0410 Pocket opening lesson](docs/history/stitchcad-devnotes-part560.md) retains logical-role, root-priority and borrowing proofs.
 
 [Whole0409 D276 lesson](docs/history/stitchcad-devnotes-part559.md) retains original introduced claims, unchanged constructor and native before/after proof.
 

@@ -2,19 +2,15 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
--0410 .6.4.5.5.c.1 complete: original Pocket/opening/index/current canonical views after whole-root
- preflight even empty. Logical declaration/Profile ids retain G3/G4 deferrals despite numeric ids;
- exact pointers/order and origin-only Debug. Native3/lifetime1/core+measure strict lint/fmt/book/
- publication pass0. Metadata-only query does not certify current Pocket placement/components.
- Whole0409/D276 task/lesson/ledger/retirement559 exact4 Git spans; book original facts retained.
-- NEXT .6.4.5.5.c.2 unified garment declaration views after DesignGarment.validate_current.
- Reuse existing adapters: sewing amounts, Pocket openings, Closure fields, layer offsets, Hem roles,
- construction intake/closing, Gather joined signed source, grain/allowance fields. Preserve actual
- family/authored role order; no partial output if a late declaration fails. All views borrow actual
- objects and same canonical owner; logical ids never coerce. Use original concrete generic causes.
- NotionPlacement has only source placement fields; hardware size roles remain actual Closure fields.
- Existing Closure declaration adapter refuses Fly; no immutable modelled Fly is admitted.
-- Then .5.d.2 requested envelope, .6 component acceptance, .6.4.6 aggregate/privacy. Current garment
+-0411 complete: DesignGarment.declarations checks whole current sources before existing actual
+ sewing/Pocket/Closure/layer/Hem/construction/Gather role adapters. One canonical owner; exact paired
+ layer Material/offset, original role order/typed late causes, no partial output. Native4/lifetime1/
+ core+measure strict lint/fmt/book/publication/size0. Whole0410 scopes560 retain4 exact Git spans.
+- NEXT .6.4.5.5.d.2 requested execution envelope. Read actual original scope contracts first:
+ modelled Lining can enter immutable ownership and pass source/declaration queries but execution
+ refuses env_lining/G7. Fly definitions are request input; Closure::new refuses env_fly/G7 before
+ any immutable Fly exists. Preserve named original causes and deterministic pre-geometry scope.
+- Then .6 component acceptance, .6.4.6 aggregate/privacy. Current garment
  sources0407 pass native9/privacy2/strict lint/fmt. D276 fixed0409 via native Fly refusal before/after,
  constructor unchanged. Full Design/bus/runtime/application/physical/release proof open. Full PNT,
  commit each leaf; no early push, derive cadence. G1still6/18; D250132 after .6.9; D154 open.

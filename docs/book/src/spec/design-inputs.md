@@ -65,11 +65,10 @@ cargo test -p sc-core --test design_metadata_contract
 
 ## Actual measurement host
 
-MeasurementInputs implements the port with owned landmarks, procedures, measurements, tables,
-Ease mappings and sets, in that order and their authored order within each family. Referenced
-canonical/evidence ids are excluded. Whole validation uses its actual current validators, including
-unused mappings and compression permission. Measurement bindings use actual metadata and the
-borrowed record context; a general scalar peer cannot replace a dedicated length target.
+MeasurementInputs lists owned landmarks/procedures/measurements/tables/Ease mappings/sets in family/
+authored order, excluding canonical/evidence uses. Whole current checks include unused mappings and
+compression permission. Bindings use actual metadata/borrowed record context; general scalars cannot
+replace dedicated lengths.
 
 | API or variant | Meaning |
 | --- | --- |
@@ -86,19 +85,18 @@ cargo test -p sc-measure --test measurement_inputs_contract
 
 ## Owned common SizeSet metadata
 
-SizeSetMetadata owns membership, axes/member points, required dimensions/available breaks and Design
-table id. Chart families reuse it; values/measurement/Ease metadata keep their original owners.
-Empty break drafts do not establish coverage; full Design composition remains separate.
+SizeSetMetadata owns members, axes/member points, required dimensions/available breaks and Design
+table id, reused by chart families. Values/measurement/Ease retain their owners; empty break drafts
+prove no coverage or full Design composition.
 
 new(definition, &canonical, &inputs) checks canonical/measurement/Ease ids, then authored set/member/
 axis/value/break ids, including unselected tables. References stay uses. Actual current input/context/
 axes/break validators require the exact Design table; equal-content peers cannot replace missing ids.
 Replacement canonical inputs are rechecked.
 
-with_context validates whole scope before a temporary SizeBreakContext callback. Only owned results
-may escape; no self-reference/value/state cache is stored. Original Unknown/Derived declarations stay
-borrowed. Failure skips the callback with original cause; break errors expose concrete SizeBreakError
-(including MissingDelta), not its allocation wrapper (D255).
+with_context checks whole scope before temporary SizeBreakContext: only owned results escape,
+Unknown/Derived stay borrowed, with no self-reference/value/state cache. Failure skips the callback,
+retaining original concrete SizeBreakError (including MissingDelta), unboxed as source (D255).
 
 | API or variant | Meaning |
 | --- | --- |
@@ -207,21 +205,19 @@ cargo test -p sc-measure --test size_set_inventory_contract
 
 ## Actual combined Design sources
 
-DesignSources owns MeasurementInputs and SizeSetInventory through DesignSourcesDefinition, with no
-canonical values or borrowed contexts stored. new(definition, &canonical) reuses complete actual
-inventory/current checks. DesignSourcesError preserves SizeSets or Measurement typed causes.
-Shared definition()/measurements()/size_sets() access supplies no mutator.
+DesignSourcesDefinition supplies owned MeasurementInputs/SizeSetInventory to DesignSources, without
+stored canonical values/contexts. new(definition, &canonical) repeats complete inventory/current
+checks; DesignSourcesError retains typed SizeSets/Measurement causes. definition()/measurements()/
+size_sets() are shared, without mutators.
 
-The core metadata catalog lists actual measurement/Ease records, then each set's common/chart sources.
-Canonical and evidence references are excluded. Each category's index counts authored records across
-the host; no enum ordering or numeric type selects a role. Core DesignMetadata adds its original
-whole-host/current/object-membership guards before returning actual canonical measurement records.
-Direct measurement binding remains targeted. Replacement inputs recheck unselected sources too.
+The catalog lists measurement/Ease then each set's common/chart sources, excluding canonical/evidence
+uses. Category indices count authored host records; enum order/numeric type selects no role.
+DesignMetadata checks whole-host currentness/object membership before lending canonical measurement
+records; direct binding stays targeted. Replacement inputs recheck unselected sources.
 
-DesignSizeSetHost::validate_size_set requires actual current sources and the exact external id/
-revision. A present numeric id cannot replace missing set metadata. This readonly facet adds no
-path coverage or profile value resolution. Physical Profile resolution retains its G4 owner,
-including coincident numeric ids. Full Design composition and integration remain later work.
+DesignSizeSetHost::validate_size_set requires current sources/exact external id/revision, never bare
+numeric ids. This readonly facet proves no path coverage, Profile values or full Design integration;
+physical Profile resolution stays G4 despite numeric-id matches.
 
 | API | Meaning |
 | --- | --- |
@@ -234,18 +230,18 @@ cargo test -p sc-measure --test design_sources_contract
 
 ## Owned core input composition
 
-DesignInputs owns structure, parameters, exact recipe document, Materials and checked metadata host;
-structure alone owns CanonicalInputs. Provided refs are checked below, selected names explicitly.
-Sewing/garment currentness and readiness remain separate.
+DesignInputs owns structure, parameters, exact recipe, Materials and checked metadata host; only
+structure owns CanonicalInputs. Provided refs/selected names need explicit checks below;
+sewing/garment currentness/readiness remain separate.
 
 Ownership visits structure (Design/canonical/Pieces/copies/operations), parameters, Materials, then
 higher metadata. Retired creators still own ids; evidence/formula/material refs remain uses.
 DuplicateIdentity retains both original DesignInputsPositions.
 
-Then actual parameter targets, all Material properties/Piece assignments and sources are rechecked
-against this canonical owner; past standalone success cannot substitute. Unresolved assignments/
-uncertainty and held Piece repairs survive without reconstruction against edited history. Recipe
-text/canonical syntax stays exact; unbound names need later binding/checking.
+Current parameter targets, all Material properties/Piece assignments/sources are rechecked against
+this canonical owner; past checks cannot substitute. Unresolved assignments/uncertainty/held Piece
+repairs survive edited history without reconstruction. Recipe text/canonical syntax stays exact;
+unbound names need binding/checking.
 
 | API or variant | Meaning |
 | --- | --- |
@@ -253,9 +249,8 @@ text/canonical syntax stays exact; unbound names need later binding/checking.
 | `DesignInputsPosition` | Structure, Parameter, Material or Source original ownership position |
 | `DesignInputsError` | DuplicateIdentity or original Parameters, Materials, Sources, References typed cause |
 
-Shared getters/identities() expose actual ownership; validate_current() repeats scoped checks.
-id()/revision() preserve the structure's identity/counter. Debug omits customer content; composition
-stores no borrowed context:
+Shared getters/identities() expose owners; validate_current() repeats checks. id()/revision() retain
+structure identity/counter. Debug omits customer content; no context is stored:
 
 ```rust
 use sc_core::{design::{DesignInputs, DesignInputsDefinition, DesignInputsError,
@@ -350,23 +345,21 @@ physical claims and readiness retain their existing owners. Human labels never b
 
 ## Implemented input composition acceptance
 
-The focused composition review checks actual selected declarations/origins/canonical pointers,
-incoherent table/Ease/SizeSet scope, and held Piece references after deletion. Source objects and
-private/shared access remain unchanged from the namespace implementation's native/privacy checks.
-Input ownership and source currentness do not imply that topology is ready: a deleted held edge
-remains inspectable with its original unresolved point and uncovered interval evidence. Construction
-never repairs, registers or reattaches it implicitly. Point/whole-range readiness uses the separate structural report.
+Composition checks cover selected declarations/origins/canonical pointers, incoherent table/Ease/
+SizeSet scope and held Piece references after deletion; namespace native/privacy checks retain original
+objects/shared access. A deleted held edge keeps its unresolved point/uncovered intervals: ownership/
+current inputs grant no topology readiness or implicit repair/registration/reattachment. Point/whole-range
+readiness uses the separate structural report.
 
-This closes the implemented source/input component scope. Full Design assembly still needs current
-sewing/garment sources and readiness; runtime commands, geometry, physical validation, storage,
-integration and release retain their task owners. D154's reference ordinal and D250's baseline
-vocabulary repairs remain open under their existing owners; this review closes neither.
+This closes source/input components; full Design sewing/garment readiness, runtime, geometry,
+physical validation, storage, integration/release and owned D154 reference-ordinal/D250 vocabulary
+repairs remain open.
 
 ## Actual sewing amount declarations
 
-DesignInputs.sewing_amount_declarations(&graph) validates the whole current root, then borrows
-DesignSewingAmount per actual authored span/canonical owner. Metadata checks supply no graph copy/
-range/stop, global id, numeric, physical ease or release proof.
+DesignInputs.sewing_amount_declarations(&graph) checks the whole current root before borrowing
+DesignSewingAmount per authored span/canonical owner. It certifies no copy/range/stop, global id,
+numeric/physical ease or release.
 
 Explicit signed amounts borrow the span's Length. Formula(id) requires actual DesignParameter/
 current Length binding: parameter5001 may target dedicated length10; Formula(5001) retains both
@@ -384,17 +377,15 @@ Explicit/formula/profile origins remain distinct.
 | `DesignSewingDeclarationError` | Current Inputs cause, missing parameter or FormulaKind mismatch |
 | `MissingFormulaParameter` | Formula identity has no actual Design parameter metadata |
 
-Count returns FormulaKind with actual kind/span/parameter. Late failures return no prefix; current
-root errors retain concrete causes. Views borrow graph/root lifetimes without rewriting spans/
-allocations. SewingGraph checks sources; DesignSewing below checks owned joins. Profile grammar/type/
-state/physical resolution remains G4.
+Count returns FormulaKind(kind/span/parameter); late failures yield no prefix. Original root causes
+and graph/root borrows remain, without rewriting spans/allocations. SewingGraph checks sources;
+DesignSewing checks owned joins. Profile grammar/type/state/physical resolution stays G4.
 
 ## Private sewing/input ownership
 
-DesignSewing::new(DesignSewingDefinition { inputs, graph, landmarks }) owns exact DesignInputs,
-original SewingGraph and complete SewingLandmarks. Private storage/shared definition()/inputs()/
-graph()/landmarks() provide no mutator. The root alone owns canonical inputs; no context/replacement
-graph is stored.
+DesignSewing::new(DesignSewingDefinition { inputs, graph, landmarks }) privately owns exact inputs,
+graph and complete landmarks. Shared definition()/inputs()/graph()/landmarks() supply no mutator;
+only the root owns canonical inputs, without stored context/replacement graph.
 
 Before root validation, ownership visits original input positions, graph, landmarks and authored
 spans. Graph5000 cannot alias Design, span5001 parameter5001, or landmark90000 retired operation90000.
@@ -408,10 +399,10 @@ labels provide no identity/ownership.
 | `DesignSewingPosition` | Original input, graph, landmark or span ownership position |
 | `DesignSewingError` | Complete ownership or original current-root cause |
 
-Admission retains held references for inspection/explicit repair. Replacing copy96000 with96010
-leaves96000 inspectable; current graph validation returns MissingCopy. Piece topology may remain ready
-in its own scope. No seam is reassigned or born-valid graph/landmark reconstructed against later
-history. Ownership grants no current sewing, numeric, Profile, geometric, execution or release proof.
+Admission retains held references for inspection/explicit repair: replacing copy96000 with96010 leaves
+96000 inspectable but current graph returns MissingCopy, despite possibly ready Piece topology. No seam
+reassignment or graph/landmark reconstruction follows later history. Ownership certifies no current
+sewing, numeric/Profile/geometric/execution/release result.
 
 ## Current sources over the owned sewing state
 
@@ -419,22 +410,18 @@ DesignSewing.validate_current() checks owned ids/current root, every landmark Pi
 graph against actual copies/Pieces/landmarks/ledger, then all amounts. amount_declarations() applies
 the same checks before borrowing exact objects, without partial views after late failure.
 
-Unused landmark loss retains AnchorError; absent Piece returns MissingLandmarkPiece before graph
-lookup. Renamed copies retain SewingError despite healthy amount metadata; Count amounts return
-DesignSewingDeclarationError after graph validation. Wrappers expose original concrete causes through
-`Error::source()`.
+Unused landmark loss retains AnchorError; absent Piece yields MissingLandmarkPiece before graph lookup.
+Renamed copies retain SewingError despite healthy amounts; Count amounts yield DesignSewingDeclarationError
+after graph validation. `Error::source()` exposes original concrete causes.
 
 | Variant | Meaning |
 | --- | --- |
 | `MissingLandmarkPiece` | Actual owned landmark's held source Piece is absent |
 
-Existing raw anchor/graph choice/repair rules preserve stored data, registrations, ranges and
-allocations. Profile amounts stay DeferredToG4; source success resolves no numbers/profiles. Whole
-Piece topology has its separate report; geometry, full Design execution, assembly and release remain
-separately owned.
-
-Focused checks cover owner aliases, unused landmark repairs and amount/Profile borrows;
-numeric/geometric/runtime/release proof remains separate.
+Raw anchor/graph choice/repair rules preserve data, registrations, ranges/allocations. Profile amounts
+stay DeferredToG4; source success resolves no numbers/profiles. Whole Piece reports, geometry, full
+Design execution/assembly/release remain separately owned. Focused checks cover owner aliases,
+unused landmark repairs and amount/Profile borrows.
 
 ## Joined Gather declarations
 
@@ -442,10 +429,9 @@ numeric/geometric/runtime/release proof remains separate.
 let views = sewing.gather_declarations(&constructions)?;
 ```
 
-Whole-current sewing root/landmarks/graph/amounts precede all supplied construction sources, even
-without Gathers. Authored views borrow actual Gather/position/side/span DeclaredEase, existing
-DesignSewingAmount and canonical owner. closing_operation() stays logical despite numeric-id matches;
-Debug shows side only.
+Whole-current sewing root/landmarks/graph/amounts precede all construction sources, even without
+Gathers. Views borrow authored Gather/position/side/span DeclaredEase, DesignSewingAmount and canonical
+owner. closing_operation() stays logical despite numeric-id matches; Debug shows side only.
 
 A-minus-B remains signed: +5 mm permits gathering A; −3 mm permits B. No negated amount/allocation
 copy, fallback or resolved sign is produced. Derived/formula and Profile origins remain unread/
@@ -467,22 +453,22 @@ let garment = DesignGarment::new(DesignGarmentDefinition {
 })?;
 ```
 
-This owns exact DesignSewing and Pocket/NotionPlacement/Closure/Layer/Hem/Construction inventories.
-Shared getters preserve actual immutable objects/sole canonical owner. identities() visits sewing,
-Pockets, notions, Closures/instances, layers, Hems, constructions in authored/family order. Closure instances and retired root creators
-own ids; Piece/copy/parameter/Profile/operation uses never create owners. DuplicateIdentity returns
-first/repeated locations before current root-input validation; Inputs retains its original error chain.
+This privately owns exact DesignSewing and Pocket/NotionPlacement/Closure/Layer/Hem/Construction
+inventories; shared getters retain original objects/sole canonical owner. identities() visits sewing,
+Pockets, notions, Closures/instances, layers, Hems, constructions in family/authored order. Instances/
+retired creators own ids; Piece/copy/parameter/Profile/operation references stay uses. DuplicateIdentity
+retains first/repeated locations before root-input checks; Inputs keeps its original cause chain.
 
-Admission keeps empty drafts, damage and modelled Lining without rebuilding objects. Fly refuses
-env_fly/G7 in Closure::new before an object exists. Debug shows counts; admission proves no source/
-declaration joins, execution scope, geometry, resolved physical values, completeness or release.
+Admission retains drafts/damage/modelled Lining unchanged. Fly refuses env_fly/G7 in Closure::new
+before birth. Debug shows counts; admission certifies no source/declaration joins, execution scope,
+geometry, resolved physical values, completeness or release.
 
 | API token | Meaning |
 | --- | --- |
 | `DesignGarmentDefinition` | Exact seven-component owned input |
 | `DesignGarment` | Private garment owner over one sewing/input root |
-| `DesignGarmentPosition` | Original sewing/family/nested-instance ownership location |
-| `DesignGarmentError` | Ownership/input or original sewing/garment family cause |
+| `DesignGarmentPosition` | Original family/nested owner location |
+| `DesignGarmentError` | Original ownership/input/family cause |
 
 ### Complete current garment sources
 
@@ -496,3 +482,29 @@ without partial success, retargeting or cache. Parameter ids cannot supply missi
 sources precede assignment checks. Later Hem damage refuses after earlier success. Unknown/unresolved
 content stays held; Lining sources may pass while execution refuses. Declaration roles, envelope,
 geometry, resolved physical values and release remain separate.
+
+### Complete garment declaration views
+
+```rust,ignore
+let views = garment.declarations()?;
+for view in views {
+    let canonical = view.canonical_inputs(); // sole root
+    let original_role = view.source();       // original adapter
+}
+```
+
+Whole-current garment validation precedes even empty views. Order: sewing amounts, Pocket openings,
+Closure fields, paired layer Material/offset, Hem depth/fold, Dart/Tuck/Pleat intake/closing, joined
+Gathers, grain/allowance roles. Adapters borrow original objects/positions/roles/canonical owner;
+notions supply placement sources, Closures hardware sizes. Each layer pairs its exact assigned Material
+or unresolved reason with offset intent; missing adapters refuse truncation. Debug shows origins only.
+
+Late failures keep concrete causes, no prefix: allowance Formula(2000) refuses bare Count2000;
+current sewing damage wins first. Unknown/Derived/logical ids/G3/G4 deferrals stay unchanged/unread.
+Domain/operation resolution, execution scope, geometry/conservation/physical/release remain separate.
+
+| API token | Meaning |
+| --- | --- |
+| `DesignGarmentDeclaration` | Original role/canonical borrow |
+| `DesignGarmentDeclarationSource` | Typed family; paired layer views |
+| `DesignGarmentDeclarationError` | Current/metadata cause or missing layer pair |

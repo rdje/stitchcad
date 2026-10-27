@@ -1182,8 +1182,8 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 ## D271–D276 — original causes, native controls and Fly correction
 [D271/D272](../history/stitchcad-devnotes-part547.md), [D273](../history/stitchcad-devnotes-part551.md),
 [D274/D275](../history/stitchcad-devnotes-part554.md), [D276 corrected0409](../history/stitchcad-devnotes-part559.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part559.md:4 spans
-  rc=0; complete0409 scopes retained before retirement.
-- [x] ADDRESSED: same rc=0; whole D276 task/lesson/ledger/retirement preserved.
-- [x] NO REGRESSION: Pocket-opening native3/lifetime1/core+measure strict lint/fmt/book/publication/
-  size/retention rc=0; complete declarations .5.c.2/envelope .d.2/full integration remain.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part560.md:4 spans
+  rc=0; complete0410 scopes retained before retirement.
+- [x] ADDRESSED: same rc=0; whole Pocket task/lesson/ledger/retirement preserved.
+- [x] NO REGRESSION: unified garment native4/lifetime1/core+measure strict lint/fmt/book/publication/
+  size/retention rc=0; requested envelope .d.2/full integration remain.

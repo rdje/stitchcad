@@ -21,6 +21,8 @@ answers: "can modelled Lining and Fly both enter immutable garment ownership?"
 
 answers: "can Pocket opening declarations become scalars when their ids match canonical inputs?"
 
+answers: "does the complete garment declaration query preserve original role adapters and late causes without partial views?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -146,3 +148,13 @@ never convert to scalars; original G3 opening/G4 Profile deferrals remain and No
 Profile field. Debug exposes source tag only. No physical opening vocabulary/value/default, current
 Pocket placement/component proof or release readiness is supplied; domain/operation resolution
 retains its recipe/G3/G4 owners. Unified garment joins remain the following .c.2 step.
+
+## Unified current garment declarations — G1-SLICE.6.4.5.5.c.2
+
+DesignGarment.declarations first checks the complete current garment, then reuses original sewing,
+Pocket, Closure, layer, Hem, construction and joined Gather adapters in family/authored role order.
+One outer borrow retains the sole canonical owner. Each actual layer pairs its original assigned
+Material/unresolved reason with offset intent; missing adapters refuse rather than truncate. Late
+metadata failures expose original concrete causes without partial views. Unknown/Derived/logical
+roles and G3/G4 deferrals remain unchanged; Debug is origin-only. Current sources precede metadata;
+domain/operation resolution, execution envelope, geometry/conservation and release remain separate.

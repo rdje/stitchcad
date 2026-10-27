@@ -2234,6 +2234,10 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
     })
     .expect("whole immutable owner before controlled drift");
     assert!(garment.validate_current().is_ok());
+    assert!(garment
+        .declarations()
+        .expect("whole current empty garment declarations")
+        .is_empty());
     let sewing = garment.sewing();
     let state = sewing.inputs();
     let layers = LayerInventory::new(vec![], vec![], vec![]).expect("explicit empty layers");
@@ -2291,6 +2295,13 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
             .validate_current()
             .expect_err("recheck whole current root"),
         admission
+    );
+    let declaration_error = garment
+        .declarations()
+        .expect_err("whole garment preflight before empty views");
+    assert_eq!(
+        declaration_error,
+        sc_core::design::DesignGarmentDeclarationError::Garment(Box::new(admission.clone()))
     );
     let mut collision = garment.definition().clone();
     collision.pockets = garment_ownership::pocket_with_id(id(5000));
@@ -2354,3 +2365,6 @@ mod garment_current;
 
 #[path = "support/pocket_opening_declarations.rs"]
 mod pocket_opening_declarations;
+
+#[path = "support/garment_declarations.rs"]
+mod garment_declarations;

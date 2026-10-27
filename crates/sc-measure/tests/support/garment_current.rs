@@ -36,7 +36,10 @@ fn empty_graph(definition: &mut DesignGarmentDefinition<DesignSources>) {
     .expect("actual empty graph");
     definition.sewing = DesignSewing::new(sewing).expect("exact current owner");
 }
-fn lose_edge(definition: &mut DesignGarmentDefinition<DesignSources>, piece_index: usize) {
+pub(super) fn lose_edge(
+    definition: &mut DesignGarmentDefinition<DesignSources>,
+    piece_index: usize,
+) {
     let mut sewing = definition.sewing.definition().clone();
     let mut inputs = sewing.inputs.definition().clone();
     let mut structure = inputs.structure.definition().clone();
