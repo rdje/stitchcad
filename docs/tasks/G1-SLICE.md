@@ -894,23 +894,24 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   .e actual intake/angle/width/profile/operation declarations (split as needed); .f focused acceptance.
 - ID: `G1-SLICE.6.4.5.4.a`
   Status: `done`
-  Goal:0397 current Dart/Tuck/Pleat owner/full sources; original birth order and typed current causes.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test dart_contract
-    current_apex_error_chain_retains_the_original_anchor_cause:0 passed/1 failed rc=101, source None.
-  - [x] ROOT CAUSE (WHY + WHERE): Git/source review rc=0:empty Dart Error impl; original birth/range
-    rules needed current-owner entry points. Reversal keeps an id live; split creates historical sources.
-  - [x] FIX: cargo test -p sc-core --test dart_contract --test fold_contract:15+12 passed rc=0;
-    shared rules, held-owner guards, current historical apex and original AnchorError chain implemented.
-  - [x] ADDRESSED: same27 native contracts rc=0:historical split/reversal, later lost interior with live
-    ends, split-apex choice, substituted owner and mixed-invalid constructor priority; held content exact.
-  - [x] NO REGRESSION: original cases remain in27/0; cargo clippy -p sc-core --test dart_contract
-    --test fold_contract -- -D warnings and cargo fmt -p sc-core -- --check rc=0. D271/D272 corrected.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part546.md:6 spans0;
-    retention/book/publication/size rc=0; tree census10 lanes/13 trees/17 siblings/0 unowned/orphan/dead0.
-    Promotion: ontology structural decision. Current Gather/other families/declarations/full joins remain.
+  Goal:0397 current Dart/fold sources; [whole proof](../history/stitchcad-devnotes-part547.md).
 - ID: `G1-SLICE.6.4.5.4.b`
-  Status: `pending`
-  Goal: current Gather graph/span/side/copy/Piece references and original canonical ease source.
+  Status: `done`
+  Goal:0398 selected current Gather joins and exact borrowed canonical signed-ease source.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test gather_contract:15 passed rc=0;
+    current_intake_requires_the_held_copy_even_when_the_graph_query_still_succeeds passes: existing
+    graph-only query stays valid after a separate plan loses the original copy.
+  - [x] ROOT CAUSE (WHY + WHERE): Git/source review rc=0:constructor rules and independent target
+    queries needed a selected current join and borrowed view; complete graph/Design validation stays separate.
+  - [x] FIX: cargo test -p sc-core --test gather_contract:15 passed rc=0; shared rules, held-owner guard,
+    current intake query and all-context lifetime implemented without copied source values/states.
+  - [x] ADDRESSED: same15 native contracts rc=0:exact declaration pointer and signed side for explicit/formula/profile
+    origins; missing copy, same-Piece retarget, wrong owner and both lost interiors refuse before a view.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc ontology::gather:2 compile-fail contracts rc=0;
+    affected strict Clippy/fmt rc=0; original target/sign helper bytes exact0. Old cases remain in15.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part547.md:4 spans0;
+    retention/book/publication/size rc=0; book prefix/suffix outside Gather byte-exact after Layer restore.
+    Promotion: ontology structural decision. Grain/allowance/collections/declarations/full joins remain.
 - ID: `G1-SLICE.6.4.5.4.c`
   Status: `pending`
   Goal: current grain/print/allowance full sources and original held owner roles.

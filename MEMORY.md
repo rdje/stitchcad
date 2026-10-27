@@ -2,19 +2,20 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
--0397 .6.4.5.4.a complete: current Dart/Tuck/Pleat held-owner/full-source checks. Native Dart15/fold12,
- affected strict Clippy/fmt/book/publication pass0. Original constructor order/held content preserved.
-- D271 actual AnchorError chain fixed after native source-None failure; D272 stale live sibling16
- removed in favor of derived census17. Whole0396/syntax/SizeSet parent scopes546 have6 exact Git spans;
- original children and all three evidence links retained, census0 unowned/orphan/dead. No broader gate.
-- Next .6.4.5.4.b: current Gather graph/span/side/copy/Piece joins and borrowed original signed ease.
- Read gather.rs, actual SewingGraph/CutPlan/DesignSewing, gather_contract and book before editing.
- Share existing rules and retain typed causes; no independent Gather intake/state, fallback or execution.
-- .4.c grain/allowance current sources; .d ordered six-family owner/current scope; .e actual typed
- declaration/operation borrows (split safely); .f focused component acceptance; .5 coupled garment root.
-- Current Dart uses validate_current_anchor; birth keeps validate_anchor. Reversal preserves edge id;
- split retires it. Current queries never choose endpoints or rewrite raw references/repairs.
-- Retention generation feature0396 complete, old bytes/4M local caps retained; full CI/deep/platform proof
- separately owned. No old source-bound rollback over later records. Archive pressure rederive by verify.
-- G1still6/18; D250132 after .6.9; D154 open. Full PNT continues, commit each leaf. No jobs remain.
-- Cleanup due2026-10-27 13:40UTC. Derive push cadence, no early push.
+-0398 .6.4.5.4.b complete: selected Gather current owner/graph/span/copy/sign/full ranges, with exact
+ borrowed signed-ease declaration and all supplied contexts held by result lifetime. Native15/doc2,
+ affected strict lint/fmt/book/publication pass0; old target/sign helpers byte-exact.
+- Current joins return no view for missing copy, same-Piece copy retarget or repaired attachment/
+ direction; graph-only source query retains independent meaning. Whole graph spans/stops/landmarks/
+ allocation and complete Design must use actual parent validators (DesignSewing validates the graph).
+- Whole0397 scopes547 have4 exact Git spans; book Layer introduction restored after broad marker,
+ every prefix/suffix byte outside Gather exact. No background jobs; tree clean after commit workflow.
+- Next .6.4.5.4.c: current Grainline and SeamAllowance held owners/full sources. Read both modules,
+ original tests/book/structural/profile decisions; share original rules and preserve authored direction,
+ angle/width/profile origins and raw endpoint/interior evidence without values or execution.
+- Then .4.d owned six-family ordered scope; .4.e actual typed declaration/operation borrows (split
+ safely); .4.f focused component acceptance. .5 couples garment/global root identity. Full PNT continues.
+- Retention generations0396 complete;4M local bounds, finite8 groups, original bytes retained.
+ No old source-bound rollback over later records. Archive pressure rederive by verify-retention.
+- G1still6/18; D250132 after .6.9; D154 open; full CI/deep/platform integration separately owned.
+- Cleanup due2026-10-27 13:40UTC. Derive push cadence; no early push.

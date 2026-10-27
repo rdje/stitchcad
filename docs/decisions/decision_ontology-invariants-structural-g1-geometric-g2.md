@@ -13,6 +13,8 @@ answers: "can Pocket placement certify every component interval?" · "how do Poc
 
 answers: "does current Dart validation require its historical apex edge to stay live?" · "do current folds retain held owners and full interior repair evidence?"
 
+answers: "does a current Gather intake view check the physical copy and hold all current contexts?"
+
 ## The fact / decision
 
 At gate **G1**, `sc-core`'s ontology types enforce the invariants that need **no 2D predicate**: a `Piece`'s
@@ -142,3 +144,13 @@ remain unchanged. Dart Apex errors expose their original AnchorError through Err
 repairs that earlier empty chain. These methods resolve no numeric/profile/operation value and confer
 no geometric, intake-conservation or release proof. Owned collections, typed declaration borrows and
 complete garment/Design joins remain subsequent .4/.5 work.
+
+## Current Gather joins — G1-SLICE.6.4.5.4.b
+
+Gather current validation preserves its original Piece, graph/span/side-copy and explicit signed-ease
+rules, then checks complete attachment/direction sources. The joined current intake query returns
+only the actual existing span declaration after those checks; every supplied context stays borrowed
+while the view is used. No independently copied amount/state, symbolic fallback or resolved sign is
+introduced. Standalone plan and graph queries keep their original independent meanings. Whole graph
+spans, stops, landmarks/distributions and complete Design ownership remain their actual validators'
+obligations. No numeric, physical intake or release certificate follows selected current joins.

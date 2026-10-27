@@ -578,5 +578,135 @@ fn a_changed_explicit_ease_sign_is_detected_by_current_target_queries() {
         differential: negative,
     };
     assert_eq!(gather.intake_source(&changed), Err(expected.clone()));
+    assert_eq!(
+        gather.current_intake_source(f.pieces.first().unwrap(), &f.plan, &changed, &f.ledger),
+        Err(expected.clone())
+    );
     assert_eq!(gather.profile_binding_validation(&changed), Err(expected));
+}
+
+#[test]
+fn current_intake_borrows_the_exact_graph_declaration_and_keeps_signed_side_origins() {
+    for side in [SeamSideId::A, SeamSideId::B] {
+        let signed = if side == SeamSideId::A { 5_000 } else { -5_000 };
+        for amount in [
+            EaseAmount::Explicit(Length::from_micrometres(signed).unwrap()),
+            EaseAmount::Formula(id(900)),
+            EaseAmount::Profile(ProfileParameterRef::new(id(901))),
+        ] {
+            let mut f = fixture();
+            f.span_mut().ease.amount = amount;
+            let graph = f.graph(&[]).unwrap();
+            let input = f.gather_definition(side);
+            let gather = f.gather(input.clone(), &graph).unwrap();
+            let piece = f
+                .pieces
+                .iter()
+                .find(|piece| piece.id() == gather.piece())
+                .unwrap();
+            let source = gather
+                .current_intake_source(piece, &f.plan, &graph, &f.ledger)
+                .unwrap();
+            assert!(std::ptr::eq(
+                source.declaration,
+                &graph.spans().first().unwrap().definition().ease
+            ));
+            assert_eq!(source.declaration.amount, amount);
+            assert_eq!(source.gathered_side, side);
+            assert_eq!(gather.definition(), &input);
+        }
+    }
+}
+
+#[test]
+fn current_intake_requires_the_held_copy_even_when_the_graph_query_still_succeeds() {
+    let f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let gather = f
+        .gather(f.gather_definition(SeamSideId::A), &graph)
+        .unwrap();
+    let missing = CutPlan::new(
+        f.plan
+            .copies()
+            .iter()
+            .map(|copy| {
+                let mut definition = *copy.definition();
+                if definition.id == id(200) {
+                    definition.id = id(205);
+                }
+                definition
+            })
+            .collect(),
+        &f.pieces,
+    )
+    .unwrap();
+    assert!(gather.intake_source(&graph).is_ok());
+    assert_eq!(
+        gather.current_intake_source(f.pieces.first().unwrap(), &missing, &graph, &f.ledger),
+        Err(GatherError::MissingCopy(id(200)))
+    );
+}
+
+#[test]
+fn current_gather_rejects_substituted_piece_and_same_piece_side_copy_retargeting() {
+    let mut f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let gather = f
+        .gather(f.gather_definition(SeamSideId::A), &graph)
+        .unwrap();
+    let mut definition = f.pieces.first().unwrap().definition().clone();
+    definition.id = id(999);
+    let other = Piece::new(definition, &f.ledger).unwrap();
+    assert_eq!(
+        gather.validate_current(&other, &f.plan, &graph, &f.ledger),
+        Err(GatherError::WrongPiece {
+            held: id(100),
+            provided: id(999)
+        })
+    );
+    f.span_mut().a.copy = id(201);
+    let changed = f.graph(&[]).unwrap();
+    assert_eq!(
+        gather.current_intake_source(f.pieces.first().unwrap(), &f.plan, &changed, &f.ledger),
+        Err(GatherError::CopyBindingChanged {
+            held: id(200),
+            current: id(201)
+        })
+    );
+    assert_eq!(gather.definition().copy, id(200));
+}
+
+#[test]
+fn current_intake_refuses_attachment_or_direction_interior_repairs_without_partial_source() {
+    for role in [
+        GatherReferenceRole::Attachment,
+        GatherReferenceRole::Direction,
+    ] {
+        let mut f = fixture();
+        let graph = f.graph(&[]).unwrap();
+        let input = f.gather_definition(SeamSideId::A);
+        let gather = f.gather(input.clone(), &graph).unwrap();
+        gather
+            .validate_current(f.pieces.first().unwrap(), &f.plan, &graph, &f.ledger)
+            .unwrap();
+        let range = match role {
+            GatherReferenceRole::Attachment => f.span().a.range,
+            GatherReferenceRole::Direction => input.direction.range,
+        };
+        let first = f.ledger.split(&mut f.ids, range.edge(), t(1, 3)).unwrap();
+        let second = f.ledger.split(&mut f.ids, first.second(), t(1, 2)).unwrap();
+        f.ledger.delete(&mut f.ids, second.first()).unwrap();
+        let evidence = f.ledger.resolve_range(range);
+        assert!(evidence.start().resolved().is_some() && evidence.end().resolved().is_some());
+        assert_eq!(evidence.repairs().count(), 1);
+        assert!(gather.intake_source(&graph).is_ok());
+        assert_eq!(
+            gather.current_intake_source(f.pieces.first().unwrap(), &f.plan, &graph, &f.ledger),
+            Err(GatherError::UnresolvedReference {
+                role,
+                evidence: Box::new(evidence)
+            })
+        );
+        assert_eq!(gather.definition(), &input);
+    }
 }

@@ -3,20 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — current Dart/Tuck/Pleat source validation
+## _(2026-10-27 UTC)_ — selected current Gather joins and borrowed intake
 
-0397 adds current held-owner/full-source checks while sharing original intake/list/range rules and
-constructor refusal order. Dart current apex follows the journal; birth still requires a live edge.
-Split choices and lost interiors remain typed raw evidence; equal geometry with another Piece id
-cannot retarget content. Closing/profile/formula declarations remain unread; geometry stays deferred.
-D271 reproduced native0/1 rc101:empty Dart Error::source hid its actual AnchorError. Original nested
-cause now exposed. A fixture assumed reversal retires identity; published ledger semantics showed
-reversal preserves it, then split/reversal correctly exercised historical validation. Dart15/fold12,
-affected strict lint/fmt/book/publication pass0. D272 volatile live sibling16 was stale against native
-17; notes now delegate the tally to the derived census. Whole0396/retirement/syntax/SizeSet parent
-scopes546 retain6 exact Git spans; all three evidence-sibling links and child graph remain, census
-10 lanes/13 trees/17 siblings/0 unowned/orphan/dead0. Promotion: ontology structural decision. Gather,
-grain/allowance, owned families, typed declarations and coupled garment/global identities remain next.
+0398 shares original Gather target/sign/range rules between birth and current validation; held Piece
+identity must match. The joined intake query returns the exact graph's DeclaredEase only after current
+copy/attachment/direction checks pass. Graph-only queries keep their independent meaning. All supplied
+contexts remain borrowed while the view is used; source amounts/states are neither copied nor resolved.
+Native15 covers signed sides/origins, absent held copy, same-Piece copy retarget, substituted owner and
+both lost interiors with live endpoints;2 compile-fail/lint/fmt pass0. Original target/sign helpers stay
+byte-exact. Whole graph spans/stops/landmarks/allocation and full Design checks remain their actual
+owners; no readiness/execution claim. A broad book section marker reached the Layer introduction;
+3619B restored from Git, and every byte outside Gather is exact. Whole0397 scopes547 retain4 exact
+Git spans; retention/book/publication/size0. Promotion: ontology structural decision. Grain/allowance,
+owned family scope, declaration roles and coupled root identity remain next.
+
+[Whole0397 current Dart/fold lesson](docs/history/stitchcad-devnotes-part547.md) retains source/priority/chain fixes and census evidence.
 
 [Whole0396 feature lesson](docs/history/stitchcad-devnotes-part546.md) retains scoped acceptance and remaining integration ownership.
 

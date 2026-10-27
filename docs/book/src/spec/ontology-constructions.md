@@ -90,44 +90,53 @@ executes a fold, establishes physical shape/count or certifies production readin
 | `FoldError` | Owner, intake, empty/duplicate-line or unresolved/foreign-source refusal |
 | `FoldReferenceRole` | Original fold-list index or authored direction |
 
-**Gather (`G1-SLICE.3c.4a.2b`).** A Gather binds a sewing graph, span, selected side and held
-physical-copy identity, plus an explicit directed reference and closing-operation id. There is no
-independently authored gather intake or second hidden allocation: `intake_source()` borrows the
-span's existing DeclaredEase, retaining the raw signed A-minus-B source and selected gathered side.
-Uniform, weighted and between-notch allocations therefore stay the canonical graph declaration.
+**Gather (`G1-SLICE.3c.4a.2b`).** Immutable `GatherDefinition` content binds graph, span,
+selected side, held physical-copy id, directed gathering reference and closing-operation id.
+`intake_source()` borrows the span's existing DeclaredEase, including its Uniform, weighted or
+between-notch allocation and signed A-minus-B origin. Gather stores no second intake/allocation,
+formula/profile value or uncertainty state.
 
-For example, a span declaring A-minus-B = +5 000 µm permits gathering A; −5 000 µm permits gathering
-B. Explicit wrong-sign selection is refused, and an authored zero is legal no-op intent. Formula or
-profile sources provide no value/default; their resolved sign and actual walking/shortening must be
-verified later. Borrowing a declaration is not evidence that material has physically shortened.
+A-minus-B = +5 000 µm permits gathering A; −5 000 µm permits B. Wrong-sign explicit selection refuses;
+authored zero is legal no-op intent. Formula/profile origins supply no value/default. Resolved sign,
+walking and actual shortening remain later proof obligations.
 
-`Gather::new` requires the named graph/span/side-copy binding, a current CutPlan copy belonging to
-the source Piece, and complete owned attachment/direction intervals with unique endpoints. A copy
-change on the span returns `CopyBindingChanged`, even when the new copy shares the same Piece/source
-range. A missing graph/span/copy or reassigned Piece is a typed target refusal. A replacement copy
-cannot inherit an old gather. The held graph/span/copy ids remain visible in the immutable definition.
+`Gather::new` checks graph/span/side-copy binding, a current CutPlan copy belonging to the named
+Piece, and complete owned attachment/direction intervals with unique endpoints. Changing a span to
+another copy returns CopyBindingChanged even with identical Piece/range. Missing targets or a
+reassigned copy refuse; another copy never inherits held Gather identity.
 
-`copy()` checks the current plan; `intake_source()` checks the current graph/span/copy binding and
-explicit ease sign. Those are independent target queries: the graph query alone does not assert a
-copy is still present in a separately changed plan. `attachment_resolution()` and
-`direction_resolution()` expose current raw interval/endpoint and directed evidence, including
-interior deletions and split choices. A removed middle stays visible despite live endpoints; no
-repair selects another span/copy by convention. Global Design validation must check all current
-registries and the source graph's landmarks/bindings too; these queries do not grant release readiness.
+Independent `copy()` validates the current plan. `intake_source()` validates graph/span/copy binding
+and explicit sign, without checking a separately changed plan. `attachment_resolution()` and
+`direction_resolution()` retain raw interval/endpoint evidence and composed traversal. Lost interiors
+remain repairs despite live endpoints; no query chooses another span/copy or rewrites held content.
 
-Every Gather reports `GeometricValidation::DeferredToG2` and `IntakeValidation::DeferredToG2AndG3`.
-A present profile ease source reports `ProfileBindingValidation::DeferredToG4`; the descriptor caches
-no profile values/states. G2/G3 executes the required typed closing operation, walks actual intervals
-and proves realized intake/allocation. Operation/parameter existence/kinds remain `.5`/`.6` and G4
-obligations. All four intake kinds now have structural APIs; none certifies physical closing behavior.
+**Current Gather joins (`G1-SLICE.6.4.5.4.b`).** `validate_current()` requires the original Piece
+id, then the original graph/span/copy/sign and complete source rules. `current_intake_source()`
+returns the exact graph declaration only after those selected current checks pass. A graph-only
+intake query can still succeed after a plan loses the held copy; this joined query refuses it.
+Attachment or direction repairs return the actual role and complete evidence, without a partial view.
+All supplied contexts stay borrowed while the result is used, preventing replacement of the plan,
+Piece, graph or ledger under that view.
 
-| API token | Meaning in the gather implementation |
+Use the actual selected Piece from the current inventory. Validate whole graph spans, stops,
+landmarks and allocation bindings separately; the selected Gather query cannot certify them:
+
+```rust,ignore
+graph.validate_current(&plan, &pieces, &landmarks, &ledger)?;
+let intake = gather.current_intake_source(&piece, &plan, &graph, &ledger)?;
+```
+
+Gather retains `GeometricValidation::DeferredToG2`, `IntakeValidation::DeferredToG2AndG3` and
+`ProfileBindingValidation::DeferredToG4` for present profile ease. G2/G3 executes the required typed
+closing operation and proves realized intake/allocation. Operation/parameter existence/kinds remain
+.5/.6/G4 obligations. No current source query grants whole Design, physical or release readiness.
+
+| API token | Gather meaning |
 | --- | --- |
-| `GatherDefinition` | Editable graph/span/side/copy binding, direction and operation intent |
-| `GatherError` | Typed changed/missing target, wrong sign or invalid reference refusal |
-| `GatherIntakeSource` | Borrowed signed canonical ease declaration with selected gathered side |
-| `GatherReferenceRole` | Attachment or authored direction field |
-| `CopyBindingChanged` | Selected span side no longer names the held physical copy |
+| `GatherDefinition` | Editable graph/span/side/copy, direction and operation binding |
+| `GatherError` | Current owner/target/sign or complete source refusal |
+| `GatherIntakeSource` | Borrowed signed canonical ease declaration and selected side |
+| `GatherReferenceRole` | Attachment or authored direction |
 
 **Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable layer types share
 editable `LayerDefinition` input and structural validation. A definition names its served Piece,

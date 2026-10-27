@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0397 — validate current Dart/Tuck/Pleat owners and complete sources
+## STITCHCAD-G1-0398 — validate selected current Gather joins before borrowing intake
 
-- Historical/current Dart apex and all directed fold sources retain original owners, order and repair evidence.
-- D271 original AnchorError chain repaired; D272 volatile sibling tally corrected; native15+12/lint/fmt pass0.
-- Mixed-invalid input preserves birth refusal priority. No numeric/profile/closing-operation execution.
-- Whole continuity546 retains6 exact Git spans and sibling graph; book current-source examples updated.
+- Preserve held owner/copy and full attachment/direction sources; borrow exact graph declaration only after checks.
+- View lifetimes hold all supplied contexts; formula/profile origins stay unread and whole graph validation stays separate.
+- Native15/compile-fail2/strict lint/fmt pass0; original helper and unrelated book bytes exact.
+- Whole0397 evidence547 retains4 exact Git spans; current-source examples and scope documented.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part547](docs/history/stitchcad-devnotes-part547.md) | whole0397 Dart/fold/lesson/ledger/D271–D272 | 51 lines, 4366 bytes, sha256:bc36c3de… |
 | [part546](docs/history/stitchcad-devnotes-part546.md) | whole0396/retirement/syntax/SizeSet parents | 71 lines, 5361 bytes, sha256:40e26a2a… |
 | [part545](docs/history/stitchcad-devnotes-part545.md) | whole0395 resources/lesson/ledger/D270 | 51 lines, 4351 bytes, sha256:a34637eb… |
 | [part544](docs/history/stitchcad-devnotes-part544.md) | whole0394 clients/lesson/ledger/D269 | 52 lines, 4402 bytes, sha256:bf349af8… |

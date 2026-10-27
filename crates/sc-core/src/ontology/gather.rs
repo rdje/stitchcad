@@ -56,6 +56,13 @@ pub struct Gather {
 /// Structural/target refusal; symbolic sign, walking and conserved intake remain G2/G3/G4.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum GatherError {
+    /// Current validation cannot substitute another Piece for the original owner.
+    WrongPiece {
+        /// Original held Piece.
+        held: EntityId,
+        /// Supplied current Piece.
+        provided: EntityId,
+    },
     /// The provided graph is not the held graph.
     WrongGraph {
         /// Held identity.
@@ -108,6 +115,12 @@ pub enum GatherError {
 impl fmt::Display for GatherError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::WrongPiece { held, provided } => {
+                write!(
+                    f,
+                    "gather held Piece {held} differs from current Piece {provided}"
+                )
+            }
             Self::WrongGraph { held, provided } => {
                 write!(f, "gather graph {held} does not match provided {provided}")
             }
@@ -152,12 +165,43 @@ impl Gather {
         graph: &SewingGraph,
         ledger: &IdentityLedger,
     ) -> Result<Self, GatherError> {
-        let span = held_span(&definition, graph)?;
-        held_copy(definition.copy, piece.id(), plan)?;
-        let attachment = side(span, definition.side);
+        let gather = Self {
+            piece: piece.id(),
+            definition,
+        };
+        gather.validate_current(piece, plan, graph, ledger)?;
+        Ok(gather)
+    }
+    /// Recheck the original owner, graph/span/side-copy binding, explicit sign and full sources.
+    ///
+    /// Uses the original structural rules and retains held content and raw repairs. The supplied
+    /// graph's other spans, stops and distribution rules need their own whole-current validation;
+    /// this selected-Gather query grants no whole Design, numeric or physical readiness.
+    ///
+    /// # Errors
+    /// Returns the original owner/target/sign refusal, then first attachment or direction cause.
+    pub fn validate_current(
+        &self,
+        piece: &Piece,
+        plan: &CutPlan,
+        graph: &SewingGraph,
+        ledger: &IdentityLedger,
+    ) -> Result<(), GatherError> {
+        if self.piece != piece.id() {
+            return Err(GatherError::WrongPiece {
+                held: self.piece,
+                provided: piece.id(),
+            });
+        }
+        let span = held_span(&self.definition, graph)?;
+        held_copy(self.definition.copy, self.piece, plan)?;
+        let attachment = side(span, self.definition.side);
         for (role, range) in [
             (GatherReferenceRole::Attachment, attachment.range),
-            (GatherReferenceRole::Direction, definition.direction.range),
+            (
+                GatherReferenceRole::Direction,
+                self.definition.direction.range,
+            ),
         ] {
             let evidence = ledger.resolve_range(range);
             if !evidence.has_full_coverage()
@@ -176,10 +220,32 @@ impl Gather {
                 });
             }
         }
-        Ok(Self {
-            piece: piece.id(),
-            definition,
-        })
+        Ok(())
+    }
+    /// Borrow this Gather's actual signed span declaration after all selected current joins pass.
+    /// Every supplied context remains borrowed while the result is used; no source value is copied.
+    ///
+    /// ```compile_fail
+    /// fn replace(gather: &sc_core::ontology::Gather, piece: &sc_core::ontology::Piece,
+    ///     plan: &sc_core::ontology::CutPlan, graph: &sc_core::ontology::SewingGraph,
+    ///     mut ledger: sc_core::ontology::IdentityLedger) {
+    ///     let source = gather.current_intake_source(piece, plan, graph, &ledger).unwrap();
+    ///     ledger = sc_core::ontology::IdentityLedger::new();
+    ///     let _still_borrowed = source;
+    /// }
+    /// ```
+    ///
+    /// # Errors
+    /// Returns the original current owner/target/sign/source cause without returning a partial view.
+    pub fn current_intake_source<'a>(
+        &'a self,
+        piece: &'a Piece,
+        plan: &'a CutPlan,
+        graph: &'a SewingGraph,
+        ledger: &'a IdentityLedger,
+    ) -> Result<GatherIntakeSource<'a>, GatherError> {
+        self.validate_current(piece, plan, graph, ledger)?;
+        self.intake_source(graph)
     }
     /// Stable construction identity.
     #[must_use]
