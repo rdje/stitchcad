@@ -128,7 +128,8 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignGarmentError<E>
 /// Admission checks every owned id, then current root inputs. It does not certify current garment
 /// targets/sources; use `validate_current` for structural source/assignment checks. Declaration roles,
 /// requested execution scope, geometry, global completeness and physical/release readiness stay
-/// separate. Modelled Lining/Fly retain their execution deferrals.
+/// separate. Modelled Lining retains its execution deferral; `Closure::new` refuses Fly before
+/// creating an immutable Closure, so a Fly request does not enter this owner.
 /// ```compile_fail
 /// fn edit<H>(value: &mut sc_core::design::DesignGarment<H>, hems: sc_core::ontology::HemInventory) {
 ///     value.definition.hems = hems;

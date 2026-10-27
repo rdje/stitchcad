@@ -17,6 +17,8 @@ answers: "how does garment admission preserve exact families, nested owned ident
 
 answers: "does complete garment current validation include unused families and original Material target roles?"
 
+answers: "can modelled Lining and Fly both enter immutable garment ownership?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -123,3 +125,13 @@ Material targets cannot coerce from numeric metadata; layer sources precede assi
 Objects remain unchanged and success uncached. Modelled Lining can pass current sources without
 execution support. Complete declarations, execution envelope, geometry/resolved domains and release
 remain separate .5.c/.d/later-gate obligations.
+
+## Lining modelling differs from Fly birth refusal — D276
+
+Lining::new can retain structural modelled content; its requested-execution scope remains env_lining/
+G7. Closure::new instead invokes definition.require_in_scope before instance/domain/target checks:
+Fly returns original OutsideEnvelope/FlyDeferred with closure/trousers-gap ids, env_fly and G7 before
+an immutable Closure exists, even with no instances or invalid source context. Thus safe public APIs
+cannot admit modelled Fly into DesignGarment. Unsupported Fly definitions remain inspectable request
+input. D276 corrects newly introduced grouped Lining/Fly Rustdoc/book wording; constructor behavior
+and all original refusal priority remain unchanged.

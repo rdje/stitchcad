@@ -473,9 +473,9 @@ Pockets, notions, Closures/instances, layers, Hems, constructions in authored/fa
 own ids; Piece/copy/parameter/Profile/operation uses never create owners. DuplicateIdentity returns
 first/repeated locations before current root-input validation; Inputs retains its original error chain.
 
-Admission retains empty drafts, damage and modelled Lining/Fly without rebuilding born objects.
-Debug shows counts. Ownership/current inputs prove no garment source/declaration joins, execution
-scope, geometry, resolved physical values, full completeness or release approval.
+Admission keeps empty drafts, damage and modelled Lining without rebuilding objects. Fly refuses
+env_fly/G7 in Closure::new before an object exists. Debug shows counts; admission proves no source/
+declaration joins, execution scope, geometry, resolved physical values, completeness or release.
 
 | API token | Meaning |
 | --- | --- |

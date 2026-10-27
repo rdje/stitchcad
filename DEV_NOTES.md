@@ -3,19 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — guarded daily cleanup and pending scope correction
+## _(2026-10-27 UTC)_ — correct introduced modelled-Fly wording
 
-0408 applied the reviewed frozen plan at13:41UTC after OS-visible handoff OK. Removed4 regenerable
-ignored trees/403 root logs:53930 files/1751160158B;407 selected paths absent, cleanup changed no
-tracked bytes. Independent before/after snapshot preserves989257 entries (978746 regular hashes,
-555 symlinks), package/dependency stores, certificates and original generation-install backup.
-1032 unsafe/uncertain entries retained; Rust release/deps artifact census0, incremental1251 kept.
-Immediate residue proof ran before any regeneration. Whole0407 scopes/prior live defect row557
-retain5 exact Git spans; book/size0. Promotion declined: settled cleanup rules unchanged.
-D276 found reading the next adapter: my garment Rustdoc/book incorrectly grouped Fly with modelled
-Lining, while Closure::new rejects Fly before creation. Frozen inputs prevented an immediate tracked
-edit; audit capture saved first, tracked .5.d.1 now owns correction immediately after this commit,
-before .5.c. Actual constructor remains unchanged; native public Fly scope control is the oracle.
+0409 fixes D276: my0406 garment Rustdoc/book grouped modelled Lining with Fly without checking
+Closure::new's distinct existing admission guard. Git0c129f0 confirms both introduced claims; native
+fly_scope_refusal control passes1/0 before/after and proves env_fly/G7 precedes even empty instances/
+invalid source context, retaining closure/trousers-gap ids. Corrected wording admits modelled Lining;
+unsupported Fly definitions remain request input and no immutable Fly object is born. Constructor
+file byte-unchanged, affected fmt/book/publication/size0; no API/runtime change. Whole0408 cleanup/
+D276 opening/prior live row558 retains5 exact Git spans, retention0. Promotion: Design host decision.
+Original construction semantics stay enforced; .5.c declarations and .d.2 requested envelope remain.
+
+[Whole0408 cleanup lesson](docs/history/stitchcad-devnotes-part558.md) retains preservation/residue proofs and D276 discovery/capture.
 
 [Whole0407 current garment lesson](docs/history/stitchcad-devnotes-part557.md) retains full source/assignment order and original error proofs.
 

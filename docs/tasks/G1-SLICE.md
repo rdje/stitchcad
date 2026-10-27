@@ -913,30 +913,32 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal: complete typed actual garment declarations/operations over single current canonical root;
   reuse adapters after full current preflight, even empty/unused scope, no partial views.
 - ID: `G1-SLICE.6.4.5.5.d`
-  Status: `pending`
+  Status: `in_progress`
   Goal: original Lining execution envelope and pre-construction Fly refusal, independent of geometry.
   Children .1 D276 scope correction before .c; .2 requested envelope.
 - ID: `G1-SLICE.6.4.5.5.d.1`
-  Status: `pending`
-  Goal: P2 D276 correct introduced modelled-Fly claim in garment Rustdoc/book; Closure::new already
-  refuses Fly before immutable object creation. Native closure_contract fly_scope_refusal controls
-  precede correction; no constructor relaxation. Activate immediately after clean cleanup0408 commit.
+  Status: `done`
+  Goal:0409 P2 D276 corrected introduced modelled-Fly Rustdoc/book claim; constructor unchanged.
+  - [x] REPRODUCE / ISSUE: git show 0c129f0:crates/sc-core/src/design/garment.rs and matching book:
+    original grouped Lining/Fly claims rc=0; cargo test -p sc-core --test closure_contract
+    fly_scope_refusal_precedes_geometry_and_names_requested_closure_gap_and_gate:1 passed rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): source/Git/native review rc=0:my0406 wording generalized Lining's
+    modelled-content admission to Fly despite Closure::new's existing require_in_scope birth guard.
+  - [x] FIX: same native Fly control before/after correction:1/0 rc=0; Rustdoc/book now separate
+    modelled Lining from pre-object env_fly/G7 refusal, without weakening constructor or instance order.
+  - [x] ADDRESSED: same native1 rc=0:even empty instances/invalid contexts refuse named Fly cause,
+    closure/trousers-gap ids and G7. Definition input stays inspectable; immutable Fly is not admitted.
+  - [x] NO REGRESSION: git diff --exit-code -- crates/sc-core/src/ontology/closure.rs rc=0;
+    affected cargo fmt check/native1/book/publication/size rc=0. No functional Rust/API change.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part558.md:5 spans rc=0;
+    complete cleanup/D276 opening/old live row retained; retention rc=0. Promotion: Design host decision.
+    Resume .5.c; requested envelope .d.2/component .6/full runtime/physical/release remain owned.
 - ID: `G1-SLICE.6.4.5.5.d.2`
   Status: `pending`
   Goal: requested modelled Lining scope and original public Fly refusal diagnostics, no geometry proof.
 - ID: `G1-SLICE.6.4.5.5.cleanup1`
   Status: `done`
-  Goal:0408 director-required daily guarded cleanup, applied2026-10-27 13:41UTC after clean0407.
-  - [x] ROOT CAUSE: cleanup.py plan target/artifact_cleanup_audit/feature-20261027-garment:
-    407 candidates/1032 skips rc=0; selected4 trees +403 root logs, all regenerable/ignored.
-  - [x] ADDRESSED: same producer apply --idle-cua:handoff OK,53930 files/1751160158B removed,
-    residue0/tracked_change false rc=0. Protected proof/package/backup stores not selected.
-  - [x] NO REGRESSION: preserve.py after:989257 entries (978746 files/555 symlinks) exact and407
-    selected paths absent rc=0 before regeneration; native Rust release/deps census0,1251 incremental
-    artifact paths retained as unsafe. Archive557 receipts5 spans/book/size rc=0. A new Root-doc link
-    failed SOURCE_LINK before commit; keep the existing plain canonical record path, publication rc=0.
-    Promotion declined: existing guarded cleanup rules unchanged. D276 P2 captured/owned .5.d.1,
-    correct introduced Fly wording next before .5.c; never edit frozen tracked inputs mid-apply.
+  Goal:0408 guarded daily cleanup/D276 capture; [whole proof](../history/stitchcad-devnotes-part558.md).
 - ID: `G1-SLICE.6.4.5.6`
   Status: `pending`
   Goal: focused complete current garment/component acceptance before .6.4.6 aggregate review.

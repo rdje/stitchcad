@@ -1179,18 +1179,13 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 [Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
-## D271–D275 — current causes, census and native size controls
-[Whole Dart/census0397](../history/stitchcad-devnotes-part547.md); [D273/current0401](../history/stitchcad-devnotes-part551.md);
-[D274/D275 red/green0403](../history/stitchcad-devnotes-part554.md); [whole retirement0408](../history/stitchcad-devnotes-part557.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part557.md:5 spans
-  rc=0; complete0407 scopes/prior defect row retained before retirement.
-- [x] ADDRESSED: same rc=0; whole0407 task/lesson/ledger/retirement/live row preserved.
-- [x] NO REGRESSION: guarded cleanup407 selections/53930 files/1751160158B, independent preservation
-  989257 entries and407 absent rc=0; book/size0. D276 source correction owned next .5.d.1.
-
-## D276 — introduced modelled-Fly documentation claim
-P2, owned .6.4.5.5.d.1; fix immediately after cleanup0408 before .5.c. Root garment Rustdoc/book
-incorrectly groups Fly with modelled Lining. closure.rs Closure::new calls require_in_scope before
-instance checks; existing closure_contract fly_scope_refusal_precedes_geometry_and_names_requested_closure_gap_and_gate
-proves env_fly/G7 birth refusal. Tracked edits waited for frozen cleanup apply; pending audit evidence
-retained in target/artifact_cleanup_audit/feature-20261027-garment/pending-findings.json. No API relaxation.
+## D271–D276 — original causes, native controls and Fly scope correction
+[D271/D272](../history/stitchcad-devnotes-part547.md), [D273](../history/stitchcad-devnotes-part551.md),
+[D274/D275](../history/stitchcad-devnotes-part554.md), [D276 original report/cleanup](../history/stitchcad-devnotes-part558.md).
+D276 P2 fixed0409 .5.d.1. Git0c129f0 introduced grouped modelled Lining/Fly wording. Actual Closure::new
+already refuses Fly before instances/source context; native named Fly control1/0 before/after rc=0.
+Correct Rustdoc/book without constructor change; Lining remains modelled, Fly definition is request input.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part558.md:5 exact
+  Git spans rc=0; complete0408 task/lesson/ledger/D276 report/prior live defect row retained.
+- [x] ADDRESSED: same rc=0; whole scopes preserved; native Fly control1/0 and untouched constructor rc=0.
+- [x] NO REGRESSION: native1/fmt/book/publication/size/retention rc=0; .5.c/.d.2/full integration remain.
