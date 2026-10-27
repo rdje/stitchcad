@@ -1,7 +1,8 @@
-//! Typed inputs, core authorization and the first executable read over private actual ownership.
+//! Typed inputs, core authorization and metadata operations over private actual ownership.
 //!
 //! Catalog membership declares a command; it does not make a handler available or grant authority.
-//! Transport authentication, mutation execution, transactions and workflow parity remain owned.
+//! In-process metadata read/preview/group commit/undo are implemented. Other handlers, transport
+//! authentication, persistence and workflow parity remain owned.
 
 mod approval;
 mod artifact;
@@ -33,11 +34,13 @@ pub use authorization::{
     CommandGrantRejection,
 };
 pub use bus::{
-    CommandAuditEntry, CommandBus, CommandBusError, CommandDifferenceError, CommandGroupCommit,
-    CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference, CommandGroupPreview,
-    CommandGroupPreviewError, CommandGroupPreviewStep, CommandIdentityError, CommandLengthChange,
-    CommandMaterialChange, CommandMaterialPreview, CommandMeasurementPreview, CommandNotchPreview,
-    CommandPieceList, CommandPreview, CommandPreviewError, CommandResult, CommandRevisionChange,
+    CommandAuditEntry, CommandAuditSequence, CommandBus, CommandBusError, CommandDifferenceError,
+    CommandGroupCommit, CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference,
+    CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep,
+    CommandHistoryAuditEntry, CommandHistoryChange, CommandHistoryError, CommandHistoryResult,
+    CommandIdentityError, CommandLengthChange, CommandMaterialChange, CommandMaterialPreview,
+    CommandMeasurementPreview, CommandNotchPreview, CommandPieceList, CommandPreview,
+    CommandPreviewError, CommandResult, CommandRevisionChange,
 };
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{

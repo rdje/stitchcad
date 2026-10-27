@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Measurement/Material/Notch individual/group metadata preview/atomic in-memory commit implemented; persistence/undo pending
+- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Measurement/Material/Notch metadata preview/atomic commit/bounded actual undo-redo implemented; persistence/full bus pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -118,9 +118,9 @@ answers: "how can undo restore counters without accepting stale branch requests?
 snapshot1, then current.successor gives a distinct snapshot1 that accepts the old revision precondition.
 Undo must preserve a separate maximum-issued counter; new authoring allocates above it, while undo/
 redo restore original snapshots/counters. Original counter/identity restoration remains unchanged.
-This is a preventative P1 finding, not implemented undo proof. Runtime fix/native branch refusal is
-owned immediately by .6.7.1.3; storage/reopen .7 must retain issuance independently of undo history.
-The read-only tracked model probe and native-source guards pass; actual undo/reopen acceptance is pending.
+The model probe is diagnosis, not runtime proof. Runtime fix/native branch refusal is verified0437
+under .6.7.1.3; storage/reopen .7 must still retain issuance independently of undo history.
+The read-only model probe remains diagnosis. Native in-memory traversal/branch acceptance passes0437; storage/reopen proof remains pending.
 
 ## History intent and operator0436
 
@@ -131,4 +131,20 @@ Explicit membership then Design must match; operator/revision may differ from or
 Both complete actor/principal claims remain untrusted and exact; original payloads/keys/order remain.
 Native schema3/privacy1/lint/fmt pass. Runtime must authenticate current operator for every original
 command scope, bind the exact accepted record/current revision/key and enforce bounded atomic effects.
-Input construction is no history capability; traversal/action audit and D285 runtime fix remain pending.
+Input construction is no history capability; apply_history separately enforces traversal/action audit and D285 issuance.
+
+## Actual bounded snapshot history0437
+
+answers: "how does undo preserve complete original semantics?" · "how are history effects authorized and ordered?"
+
+G1-SLICE.6.7.1.3 moves actual predecessor/current models through bounded alternatives; no inverse is
+reconstructed. Explicit finite depth/action limits, exact operation replay and shared complete-actor
+key scope preserve append-only original/action records. Bind the complete submitted original to its
+accepted record and selected stack top, authenticate current operator across every original command
+scope, validate actual current/alternative models, preflight allocations and refresh authority at effects.
+Original author remains distinct from current operator. Report oldest undo eviction/discarded redo.
+Model counters restore, while maximum-issued authoring revision/entity ids never rewind. Global exact
+audit sequence orders authoring/Undo/Redo independently of timestamps and restored counters; stale
+witnesses share actual event ordering. Native bus37 (prior30/history7), privacy7/lint/fmt cover this
+metadata subset, including D285 undo0/new2/old1 refusal and pointer/canonical roundtrip. Storage/reopen
+must persist issuance/order; work/cancellation and deeper/full acceptance remain separately owned.

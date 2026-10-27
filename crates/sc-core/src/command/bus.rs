@@ -29,8 +29,12 @@ mod group_difference;
 pub use group_difference::CommandGroupDifference;
 mod execution;
 pub use execution::{
-    CommandAuditEntry, CommandGroupCommit, CommandGroupCommitError, CommandGroupCommitResult,
-    CommandRevisionChange,
+    CommandAuditEntry, CommandAuditSequence, CommandGroupCommit, CommandGroupCommitError,
+    CommandGroupCommitResult, CommandRevisionChange,
+};
+mod history;
+pub use history::{
+    CommandHistoryAuditEntry, CommandHistoryChange, CommandHistoryError, CommandHistoryResult,
 };
 
 /// Actual inspect-preview subset; reports carry semantic changes, never an owned candidate model.
@@ -143,12 +147,13 @@ impl std::error::Error for CommandBusError {
 /// Private actual garment ownership and executable command dispatch over a trusted host dependency.
 ///
 /// The application installs the authenticated authority provider; submitted requests cannot replace
-/// it. Construction claims no permission, source freshness or physical/geometry readiness. Only
+/// it. Construction claims no permission, source freshness or physical/geometry readiness.
 /// The execute entry point supports GetPieceList; ChangeMeasurement, AssignMaterial and AddNotch prepare
 /// private metadata inspect-previews, individually or in ordered atomic-group previews.
 /// Recipe evaluation remains separate.
 /// Explicit finite edit capacity enables atomic metadata-group publication and in-memory replay/audit.
-/// Persistence, undo, resource/work bounds and full integration remain separate implementation work.
+/// Explicit history bounds enable actual whole-model undo/redo and an independent action audit.
+/// Persistence, resource/work bounds and full integration remain separate implementation work.
 /// There is no model getter, mutable borrow, state replacement or caller-minted commit capability.
 ///
 /// ```compile_fail
@@ -196,11 +201,18 @@ impl std::error::Error for CommandBusError {
 ///     bus.journal = None;
 /// }
 /// ```
+/// ```compile_fail
+/// use sc_core::command::CommandBus;
+/// fn erase_history_and_action_audit<H, A>(bus: &mut CommandBus<H, A>) {
+///     bus.history = None;
+/// }
+/// ```
 pub struct CommandBus<H, A> {
     state: DesignGarment<H>,
     authority: A,
     identities: identity::IdentityReserve,
     journal: Option<execution::CommandJournal>,
+    history: Option<history::History<H>>,
 }
 
 impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
@@ -259,6 +271,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             authority,
             identities: identity::IdentityReserve::default(),
             journal: None,
+            history: None,
         }
     }
 
@@ -280,6 +293,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             authority,
             identities,
             journal: None,
+            history: None,
         })
     }
 

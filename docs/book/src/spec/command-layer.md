@@ -131,8 +131,8 @@ authenticated humans may accept.
 ### Implemented execution
 
 The [execution guide](command-execution.md) covers the private actual garment owner, authorized
-GetPieceList read and AssignMaterial inspect-preview with examples and proof boundaries.
-Mutation publication, other handlers, retry/history and adapter parity remain pending.
+GetPieceList read, Measurement/Material/Notch previews, atomic metadata-group commit/replay/audit
+and bounded actual-snapshot undo/redo. Other handlers, persistence and adapter parity remain pending.
 
 ### Implemented initial query requests
 
@@ -199,7 +199,7 @@ MutationPayload carries ChangeMeasurement, AssignMaterial, SplitSeamSpan, CloseD
 concrete payload to CommandMutationContext. Its command_id() is derived from the variant; there is
 no separate caller-supplied command identity that could misclassify the request. These are typed
 request shapes. The [execution guide](command-execution.md) distinguishes implemented queries and
-current metadata previews from pending mutation publication.
+metadata preview/atomic publication and bounded history from other pending handlers and integration.
 
 ChangeMeasurement carries the measurement metadata identity and an immutable replacement
 LengthDeclaration. Measurement and declaration identities are distinct. The replacement retains
@@ -284,12 +284,12 @@ Restoring a revision counter must also restore the exact snapshot that counter n
 after undo must never reuse a counter that named a different snapshot: an old optimistic precondition
 would then match different content. Undo must preserve a separate maximum-issued counter for fresh
 authoring; redo restores the original snapshot/counter. Storage/reopen must retain that issuance
-state independently of the noncanonical undo stack. This D285 requirement is owned by G1-SLICE.6.7.1
-and G1-SLICE.7; native undo/branch/reopen acceptance is still pending.
+state independently of the noncanonical undo stack. Metadata undo/branch native checks pass under
+G1-SLICE.6.7.1; D285 storage/reopen acceptance remains owned and pending in G1-SLICE.7.
 
 The [typed group-input guide](command-execution.md#typed-mutation-group-inputs) covers implemented
-request consistency, sequential metadata previews and atomic metadata-group publication. Persistence
-and undo/redo remain their later implementation work.
+request consistency, sequential metadata previews, atomic metadata-group publication and bounded
+actual-snapshot undo/redo. Persistence, other handlers and broader integration remain later work.
 
 ## 4. Preview and commit
 

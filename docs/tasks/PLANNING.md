@@ -9,14 +9,17 @@
 - Owner: repo-local workflow
 
 ## D285 — restored revision reused by a different undo branch
-P1 latent integrity risk; owner G1-SLICE.6.7.1, in_progress. Restore counter then current.successor
-can admit an old snapshot precondition against different content. Maximum-issued revision must survive undo.
+P1 runtime portion fixed0437 (G1-SLICE.6.7.1.3); persistence/reopen remains owned/pending in G1-SLICE.7.
 - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py: pinned
-  native contract model reuses1, stale precondition matches; separate maximum-issued gives2, rc=0.
-- [x] ADDRESSED: diagnosis scope only: revision_branch_probe.py records1/2 counterexample rc=0; runtime fix .6.7.1.3 pending.
-- [x] NO REGRESSION: producer AST parsed rc=0; git diff --quiet HEAD -- crates rc=0; product code unchanged.
-Persistence must restore maximum-issued revision; owned with actual storage/reopen in G1-SLICE.7.
+  native contract model reuses1 for distinct content and accepts old1, rc=0; diagnosis retained588.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:37 passed rc=0;
+  actual undo0/new branch2/next unused id/old1 refusal and ordered Undo/branch witnesses verified.
+- [x] NO REGRESSION: cargo test -p sc-core --doc command::bus:7 passed rc=0; strict selected Clippy/fmt rc=0.
+Storage must restore maximum-issued revision/audit sequence independently of noncanonical undo history.
 D283/D284 remain fixed; [whole correction/proofs](../history/stitchcad-devnotes-part581.md).
+
+D286 P2 fixed0437, owner G1-SLICE.6.7.1.3: three native ce5fce9 module/book intro clauses falsely said metadata publication/history pending.
+Scoped prior/current census3/0 rc=0; corrected actual metadata scope, native bus37/rendered publication verify it.
 
 ## Goal
 

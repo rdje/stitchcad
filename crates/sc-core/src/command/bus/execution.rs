@@ -1,7 +1,9 @@
 //! Atomic in-memory metadata publication; replay/audit are private to this owner's lifetime.
 use super::{
-    difference, CommandBus, CommandGroupPreview, CommandGroupPreviewError, CommandPreviewError,
+    difference, CommandBus, CommandGroupPreview, CommandGroupPreviewError, CommandHistoryChange,
+    CommandPreviewError,
 };
+use crate::command::CommandHistoryDirection;
 use crate::{
     command::{
         CommandActorClaim, CommandAuthoritySource, CommandAuthorizationMode, CommandGroupId,
@@ -13,11 +15,26 @@ use crate::{
 use core::{fmt, num::NonZeroUsize};
 use std::{collections::TryReserveError, time::SystemTime};
 
-/// Actual accepted metadata changes at one exact successor revision; no geometry/release verdict.
+/// Exact chronological effect identity within this owner, independent of restored model revisions.
+#[derive(Clone, Debug, Default, PartialEq, Eq, PartialOrd, Ord)]
+pub struct CommandAuditSequence(DesignRevision);
+impl CommandAuditSequence {
+    pub(super) fn successor(&self) -> Self {
+        Self(self.0.successor())
+    }
+}
+impl fmt::Display for CommandAuditSequence {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        fmt::Display::fmt(&self.0, f)
+    }
+}
+
+/// Actual accepted metadata changes at one freshly issued revision; no geometry/release verdict.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct CommandGroupCommit {
     changes: CommandGroupPreview,
     revision: DesignRevision,
+    history: CommandHistoryChange,
 }
 impl CommandGroupCommit {
     /// Original base-revision step/net report from actual validated preparation.
@@ -30,17 +47,28 @@ impl CommandGroupCommit {
     pub const fn revision(&self) -> &DesignRevision {
         &self.revision
     }
+    /// Actual oldest undo eviction and redo-branch discard caused by this new authoring act.
+    #[must_use]
+    pub const fn history(&self) -> &CommandHistoryChange {
+        &self.history
+    }
 }
 
 /// Immutable append-only record for one accepted authoring group, never an undo-history record.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct CommandAuditEntry {
+    sequence: CommandAuditSequence,
     request: CommandMutationGroup,
     commit: CommandGroupCommit,
     grant: EntityId,
     checked_at: SystemTime,
 }
 impl CommandAuditEntry {
+    /// Actual chronological effect sequence; exact retries retain their original value.
+    #[must_use]
+    pub const fn sequence(&self) -> &CommandAuditSequence {
+        &self.sequence
+    }
     /// Exact original contexts, arguments, keys and order, including within-group aliases.
     #[must_use]
     pub const fn request(&self) -> &CommandMutationGroup {
@@ -90,12 +118,18 @@ impl CommandGroupCommitResult {
 pub(super) struct CommandJournal {
     limit: NonZeroUsize,
     initial_revision: DesignRevision,
-    entries: Vec<CommandAuditEntry>,
+    maximum_revision: DesignRevision,
+    pub(super) sequence: CommandAuditSequence,
+    pub(super) entries: Vec<CommandAuditEntry>,
 }
 
-/// Actual authoring group that advanced this owner's represented revision.
+/// Actual accepted authoring or history action that changed the represented snapshot.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct CommandRevisionChange {
+    /// Actual common authoring/history effect order, independent of timestamps or restored counters.
+    pub sequence: CommandAuditSequence,
+    /// Undo/Redo traversal, or None for a fresh authoring group.
+    pub direction: Option<CommandHistoryDirection>,
     /// Original accepted containing group.
     pub group: CommandGroupId,
     /// Actual resulting revision from that group.
@@ -109,13 +143,13 @@ pub struct CommandRevisionChange {
 pub enum CommandGroupCommitError<E> {
     /// Original authority, binding, member or final semantic-integrity cause.
     Preparation(Box<CommandGroupPreviewError<E>>),
-    /// Exact revision mismatch with actual intervening authoring groups available in this owner.
+    /// Exact revision mismatch with actual ordered state-change events available in this owner.
     Precondition {
         /// Original group/revision mismatch retaining exact requested/current counters.
         issue: Box<CommandGroupPreviewError<E>>,
         /// Earliest revision for which this in-memory journal records subsequent changes.
         history_from: DesignRevision,
-        /// Actual accepted advances after the requested revision, in original commit order.
+        /// Actual state-change events after that snapshot's original creation, in audit order.
         changes: Vec<CommandRevisionChange>,
     },
     /// This owner lacks an explicit finite audit capacity.
@@ -146,7 +180,7 @@ pub enum CommandGroupCommitError<E> {
         /// Explicit host-configured maximum accepted groups.
         limit: usize,
     },
-    /// Actual journal allocation refusal before publication.
+    /// Actual journal/history allocation refusal before publication.
     JournalAllocation {
         /// Requested group.
         group: CommandGroupId,
@@ -160,7 +194,7 @@ pub enum CommandGroupCommitError<E> {
         /// Actual prepared consumption count.
         consumed: usize,
     },
-    /// Original actual successor-revision model validation/integrity cause.
+    /// Original actual freshly issued revision model validation/integrity cause.
     Revision {
         /// Requested group.
         group: CommandGroupId,
@@ -193,7 +227,8 @@ impl<E> From<CommandGroupPreviewError<E>> for CommandGroupCommitError<E> {
 impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// Install an edit-capable in-memory owner with an explicit finite accepted-group count bound.
     /// The journal starts empty and never discards accepted audit/replay entries. A full journal
-    /// refuses new groups. Persistence, byte/work limits and undo remain separate owners.
+    /// refuses new groups. with_edit_history adds bounded traversal; persistence and byte/work
+    /// limits remain separate owners.
     /// Construction confers no authority; each effect requires fresh complete Commit permission.
     /// # Errors
     /// Returns the original identity-reserve configuration cause before installing the owner.
@@ -207,6 +242,8 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
         bus.journal = Some(CommandJournal {
             limit: maximum_groups,
             initial_revision: bus.state.inputs().revision().clone(),
+            maximum_revision: bus.state.inputs().revision().clone(),
+            sequence: CommandAuditSequence::default(),
             entries: Vec::new(),
         });
         Ok(bus)
@@ -220,14 +257,62 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         self.journal.is_some() && super::preparation::handler_available(command)
     }
 
-    /// Commit the complete supported metadata group atomically at the exact successor revision.
+    pub(super) fn revision_witness(
+        &self,
+        journal: &CommandJournal,
+        requested: &DesignRevision,
+    ) -> (DesignRevision, Vec<CommandRevisionChange>) {
+        let origin = if requested > &journal.maximum_revision {
+            None
+        } else {
+            Some(
+                journal
+                    .entries
+                    .iter()
+                    .find(|entry| entry.commit.revision() == requested)
+                    .map(|entry| entry.sequence.clone())
+                    .unwrap_or_default(),
+            )
+        };
+        let mut changes: Vec<_> = journal
+            .entries
+            .iter()
+            .filter(|entry| {
+                origin
+                    .as_ref()
+                    .is_some_and(|sequence| &entry.sequence > sequence)
+            })
+            .map(|entry| CommandRevisionChange {
+                sequence: entry.sequence.clone(),
+                direction: None,
+                group: entry.request.id(),
+                revision: entry.commit.revision().clone(),
+                commands: entry
+                    .commit
+                    .changes()
+                    .steps()
+                    .iter()
+                    .filter(|step| step.replay_of().is_none())
+                    .map(|step| step.command())
+                    .collect(),
+            })
+            .collect();
+        if let Some(history) = self.history.as_ref() {
+            changes.extend(history.changes_after(origin.as_ref()));
+        }
+        changes.sort_by(|left, right| left.sequence.cmp(&right.sequence));
+        (journal.initial_revision.clone(), changes)
+    }
+
+    /// Commit the complete supported metadata group atomically at a freshly issued revision.
     /// Fresh whole-group authority precedes Design binding and replay lookup. Exact original replay
     /// returns the first result even after the current revision advances; another request under the
     /// same group id or overlapping actor/key refuses. No partial-group replay or edit is accepted.
-    /// A new group stages actual candidates, validates the successor-revision model and preflights
+    /// New authoring advances the maximum-issued revision, independently of undo-restored counters.
+    /// A new group stages actual candidates, validates the freshly issued model and preflights
     /// reserve/journal allocation, then refreshes complete Commit authority at the effect boundary.
     /// No fallible operation or host callback lies between model/reserve/journal publication steps.
-    /// This in-memory lifetime supplies no storage, physical/geometry, undo or transport certificate.
+    /// This in-memory lifetime supplies no storage, physical/geometry or transport certificate.
     /// # Errors
     /// Returns original authority/Design, missing edit configuration, replay conflict, exact revision,
     /// capacity, candidate/revision/allocation or final fresh authority refusal before publication.
@@ -255,6 +340,18 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         }
         for (index, mutation) in group.mutations().iter().enumerate() {
             let key = mutation.context().idempotency_key();
+            if let Some(action) = self
+                .history
+                .as_ref()
+                .and_then(|history| history.action_with_key(group.context().actor(), key))
+            {
+                return Err(CommandGroupCommitError::KeyConflict {
+                    group: group.id(),
+                    index,
+                    key,
+                    previous: action.request().original().id(),
+                });
+            }
             if let Some(first) = journal.entries.iter().find(|entry| {
                 entry.actor() == group.context().actor()
                     && entry
@@ -272,27 +369,11 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             }
         }
         self.require_group_revision(group).map_err(|issue| {
-            let requested = group.context().expected_revision();
-            let changes = journal
-                .entries
-                .iter()
-                .filter(|entry| entry.commit.revision() > requested)
-                .map(|entry| CommandRevisionChange {
-                    group: entry.request.id(),
-                    revision: entry.commit.revision().clone(),
-                    commands: entry
-                        .commit
-                        .changes()
-                        .steps()
-                        .iter()
-                        .filter(|step| step.replay_of().is_none())
-                        .map(|step| step.command())
-                        .collect(),
-                })
-                .collect();
+            let (history_from, changes) =
+                self.revision_witness(journal, group.context().expected_revision());
             CommandGroupCommitError::Precondition {
                 issue: Box::new(issue),
-                history_from: journal.initial_revision.clone(),
+                history_from,
                 changes,
             }
         })?;
@@ -304,7 +385,8 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         }
         let prepared = self.stage_group(group)?;
         let (candidate, changes, consumed) = prepared.into_parts();
-        let revision = self.state.inputs().revision().successor();
+        let revision = journal.maximum_revision.successor();
+        let sequence = journal.sequence.successor();
         let state = at_revision(&candidate, revision.clone()).map_err(|issue| {
             CommandGroupCommitError::Revision {
                 group: group.id(),
@@ -326,10 +408,25 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 group: group.id(),
                 issue,
             })?;
+        let history = self
+            .history
+            .as_mut()
+            .map(|history| history.prepare_commit())
+            .transpose()
+            .map_err(|issue| CommandGroupCommitError::JournalAllocation {
+                group: group.id(),
+                issue,
+            })?
+            .unwrap_or_default();
         let checked = self.authorize_group(group, CommandAuthorizationMode::Execute)?;
         let entry = CommandAuditEntry {
+            sequence: sequence.clone(),
             request: group.clone(),
-            commit: CommandGroupCommit { changes, revision },
+            commit: CommandGroupCommit {
+                changes,
+                revision: revision.clone(),
+                history,
+            },
             grant: checked.grant(),
             checked_at: checked.checked_at(),
         };
@@ -345,8 +442,14 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         // host until all fields/record are published: even a host Drop cannot interrupt their update.
         let previous = core::mem::replace(&mut self.state, state);
         self.identities = identities;
+        journal.maximum_revision = revision;
+        journal.sequence = sequence;
         journal.entries.push(entry);
-        drop(previous);
+        if let Some(history) = self.history.as_mut() {
+            history.record_commit(previous, group.id());
+        } else {
+            drop(previous);
+        }
         Ok(result)
     }
 }

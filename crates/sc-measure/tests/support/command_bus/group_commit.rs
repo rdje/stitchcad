@@ -11,10 +11,10 @@ use sc_core::{
 };
 use std::{error::Error as StdError, num::NonZeroUsize};
 
-fn group_id(value: u128) -> CommandGroupId {
+pub(super) fn group_id(value: u128) -> CommandGroupId {
     CommandGroupId::from_entity_id(id(value))
 }
-fn mutation(
+pub(super) fn mutation(
     design: EntityId,
     revision: DesignRevision,
     group: u128,
@@ -32,10 +32,10 @@ fn mutation(
         payload,
     )
 }
-fn group(group: u128, members: Vec<CommandMutation>) -> CommandMutationGroup {
+pub(super) fn group(group: u128, members: Vec<CommandMutation>) -> CommandMutationGroup {
     CommandMutationGroup::new(group_id(group), members).expect("actual exact common claims")
 }
-fn material(piece: EntityId, reason: &str) -> MutationPayload {
+pub(super) fn material(piece: EntityId, reason: &str) -> MutationPayload {
     MutationPayload::AssignMaterial(
         AssignMaterial::new(
             PieceSelection::new(vec![piece]).expect("original target"),
@@ -44,7 +44,7 @@ fn material(piece: EntityId, reason: &str) -> MutationPayload {
         .expect("actual explicit intent"),
     )
 }
-fn capacity(value: usize) -> NonZeroUsize {
+pub(super) fn capacity(value: usize) -> NonZeroUsize {
     NonZeroUsize::new(value).expect("explicit finite host capacity")
 }
 

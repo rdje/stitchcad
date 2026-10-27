@@ -41,7 +41,7 @@ authorization token. Already delivered read data does not become a revocable cap
 Inspection remains available for modelled physical deferrals and held topology repairs. Reading the
 authored inventory does not validate those sources or certify geometry, envelope support or release
 readiness. Individual/group metadata previews and commits are described below. Other handlers,
-persistence, undo and runtime/adapter parity remain separately owned implementation work.
+persistence and runtime/adapter parity remain separately owned implementation work.
 
 ## Actual Material assignment preview
 
@@ -348,7 +348,7 @@ let result = bus.commit_group(&group)?;
 let accepted = result.entry();
 assert_eq!(accepted.actor(), group.context().actor());
 assert_eq!(accepted.request(), &group);
-assert_eq!(accepted.commit().revision(), &group.context().expected_revision().successor());
+assert!(accepted.commit().revision() > group.context().expected_revision());
 let actual_changes = accepted.commit().changes();
 ```
 
@@ -368,12 +368,16 @@ or applied. Another actor has its own key namespace. Group ids remain unique wit
 Within-group exact aliases retain the preview semantics above and consume no extra identity.
 
 For a new request, the exact revision precondition precedes capacity and candidate work. Precondition
-retains the original requested/current CommandGroupPreviewError and available actual intervening groups,
-their resulting revisions and first-occurrence command identities in commit order. history_from names
-the owner's initial revision: earlier activity is not fabricated. A future requested revision has no
-intervening advances. These records describe this in-memory owner, without a persisted history claim.
+retains the original requested/current CommandGroupPreviewError and available actual state-change
+events after that snapshot's original creation. Their common audit sequence orders fresh authoring,
+Undo and Redo even when counters restore or trusted timestamps repeat. Each witness retains group,
+resulting revision, direction and effective original commands. history_from names the owner's initial
+revision; earlier activity is not fabricated. A future requested revision has no intervening events.
+These records describe this in-memory owner, without a persisted history claim.
 
-The actual sequential candidate is rebuilt at the exact successor revision through the original
+New authoring issues the exact successor of the separate maximum-issued counter. Undo/redo restore
+the original snapshot counter while leaving issuance intact; a new branch therefore skips previously
+issued snapshot counters. The actual candidate is rebuilt at its freshly issued revision through the original
 structural/input/sewing/garment constructors and complete current validation. An exhaustive context
 comparison permits only that revision change; canonical values, Pieces, landmarks and all other
 fields remain equal to the prepared candidate. Unknown/Derived declarations remain authored state,
@@ -386,7 +390,7 @@ with no fallible operation or host callback between those moves. The old source 
 until all fields and the audit record are installed. A later candidate failure or effect-boundary
 revocation leaves the original represented model, revision, unused identities and accepted records intact.
 
-CommandAuditEntry retains the exact original request, initiating actor/principal, actual accepted
+CommandAuditEntry retains its exact chronological effect sequence, original request, initiating actor/principal, actual accepted
 step/net report, resulting revision, final complete grant and trusted observation time. It is append-only
 for this owner's lifetime. The authorized commit/replay result returns its own immutable entry;
 there is no unauthenticated general history/model getter. The audit and replay registry are not undo
@@ -398,10 +402,10 @@ accepted-group count; payload bytes, work/cancellation limits and allocation fau
 their later resource/acceptance owners. JournalAllocation retains an actual preflight allocation error.
 The six native commit cases cover actual metadata/revision/reserve publication, original actor/result,
 later failure, retry/capacity/conflicts, permission separation and revocation at the second check.
-Full command integration, persistence/reopen, undo/redo, other mutation handlers, adapters and actual
+Full command integration, persistence/reopen, other mutation handlers, adapters and actual
 recipe/geometry/physical evaluation remain pending.
 
-## Typed history operation inputs — runtime pending
+## Typed history operation inputs
 
 CommandHistoryRequest::new(context, original_group, direction) owns a current operation context and
 the exact original CommandMutationGroup. CommandHistoryDirection is Undo or Redo. The context
@@ -430,7 +434,76 @@ check rejects replacing the original group directly. Constructor success does no
 claim, bind an accepted audit record, establish a current revision, grant authority or traverse history.
 Runtime must authenticate the current operator over all original command scopes, check the exact
 accepted original group, current revision and operation key, then enforce bounded atomic traversal.
-The three native schema cases/privacy check are focused input proof. Actual undo/redo, separate
-revision issuance for D285, dropped-history/action-audit behavior and native branch/reopen proof remain
-their explicitly pending implementation tasks.
+The three native schema cases/privacy check are focused input proof. Actual bounded traversal and
+native D285 branch checks are described below; storage/reopen proof remains pending.
+
+## Bounded actual-snapshot undo and redo
+
+with_edit_history installs explicit NonZeroUsize bounds for accepted authoring groups, reversible
+history depth and accepted history actions. History starts empty. with_edit_capacity supports authoring
+without traversal; apply_history then returns NotConfigured. The host chooses each finite bound.
+
+```rust
+let mut bus = CommandBus::with_edit_history(
+    garment, trusted_authority, reserved_identities,
+    maximum_authoring_groups, undo_depth, maximum_history_actions,
+)?;
+// Commit returned the exact original group and its accepted revision.
+let undo = CommandHistoryRequest::new(
+    current_operator_context, original_group.clone(), CommandHistoryDirection::Undo,
+)?;
+let result = bus.apply_history(&undo)?;
+assert_eq!(result.entry().original_actor(), original_group.context().actor());
+assert_eq!(result.entry().operator(), undo.context().actor());
+let restored_revision = result.entry().revision();
+```
+
+Each committed group moves its actual predecessor model into the bounded undo stack. Undo and Redo
+swap whole actual owned alternatives between the current owner and the two stacks. They preserve the
+complete original model, held references, host, semantic identities and represented revision. Native
+roundtrip checks verify original and accepted Piece-slice addresses as well as canonical declarations,
+assignment values and counters. No inverse is reconstructed from a display diff. Issued entity ids and
+the maximum-issued authoring counter never rewind, and a redo is not a new authoring act.
+
+The supplied original group must equal the complete accepted authoring record and be the next group
+on the selected stack. Unknown, changed and out-of-order groups retain GroupNotAccepted, GroupConflict
+and NotCurrent; an empty selected stack retains Empty. Current revision must match the operation
+context exactly. Precondition carries the original mismatch and common ordered state-change witnesses.
+No partial traversal or record is accepted when any check refuses.
+
+The current operator is authenticated against the actual installed source for every original command
+scope, initially and at the final effect boundary. The authorization-only group keeps original command
+payloads and uses the current operator context; the full supplied original is then bound to the actual
+accepted record. A human with complete Commit scope can traverse an agent-authored group. The original
+agent author/principal remains unchanged in the result/audit. A grant covering only Material cannot
+also undo a Notch in that group. Partial grants cannot combine coverage.
+
+Before effects, the bus checks the explicit current and alternative envelopes/current sources and
+preflights the destination stack and immutable action-record allocation. Exclusive model/stack/action
+moves contain no fallible operation or host callback. Original authoring audit/replay records remain
+intact. History keys share the Design/complete-operator namespace with authoring keys: exact operation
+retry returns its first immutable result with is_replay=true, while different direction/context/group
+under the same accepted key returns KeyConflict. Exact replay refreshes authority before current
+revision, stack or capacity checks and changes no model or audit sequence.
+
+CommandHistoryAuditEntry retains the exact operation, current operator, original author, before/restored
+revisions, effective original commands, final complete grant/time and common exact audit sequence.
+Authoring and history sequences advance only for new accepted effects, independently of wall clocks
+and restored model counters. A full action journal refuses a new traversal with ActionLimit; existing
+records are never dropped to make room, and exact authorized replay still works.
+
+When a new authoring act exceeds undo depth, commit.history().dropped_undo() names the oldest lost
+undo group. A new branch also reports discarded_redo() in redo application order. Dropped alternatives
+are discarded only after the complete model/reserve/journal/stacks transition. Their original authoring
+audit/replay and accepted history-action records remain available to exact authorized retries.
+
+The native D285 case commits snapshot1, undoes to snapshot0, then creates different content at freshly
+issued revision2 and the next unused entity id. An old request for snapshot1 refuses; its witnesses
+include Undo and the new branch in exact audit order. Storage must persist/restore issuance and audit
+ordering independently of noncanonical undo history; actual reopen proof remains G1-SLICE.7 work.
+
+Seven native history cases plus the prior30 bus cases pass focused checks. Compiler privacy rejects
+direct stack/action-journal erasure. Persistence/reopen, payload/work/cancellation bounds, deeper
+source/allocation fault acceptance, full command integration and recipe/geometry/physical proof remain
+separately owned; metadata history supplies no broader certificate.
 

@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0436
+## Current leaf acceptance —0437
 
-- [x] ROOT CAUSE: git show HEAD:crates/sc-core/src/command.rs | rg prints original group exports
-  rc=0; a history intent must retain both current operator context and exact original authoring group.
-- [x] ADDRESSED: cargo test -p sc-core --test command_history_contract:3 passed rc=0; exact operator/
-  original author/order/revision/key, direction differences and first group/Design refusal preserved.
-- [x] NO REGRESSION: cargo clippy -p sc-core --test command_history_contract -- -D warnings:finished
-  rc=0; cargo test -p sc-core --doc command::history:1 passed rc=0; selected fmt --check rc=0.
+- [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py: old1
+  matches distinct content rc=0; actual snapshots and separate issuance/order must survive traversal.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:37 passed rc=0;
+  prior30/history7 verify actual model/IDs/counter/operator/replay/bounds and D285 in-memory branch fix.
+- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; cargo test -p sc-core --doc
+  command::bus:7 passed rc=0. Full/deeper acceptance and storage/reopen remain explicitly owned.
 
 ## Goal
 
@@ -740,7 +740,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal: actual paired SplitSeamSpan handler: recover native range/ease/stop/lineage interfaces and
   explicit A/B-cut contract first; own any real recipe/geometry dependencies without fabricated checks.
 - ID: `G1-SLICE.6.5.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: authorized candidate preview, effect-boundary revalidation and whole-group atomic publication.
   Implemented metadata handlers can share staging now; paired split/Dart retain real recipe/geometry
   dependencies in .3. Native sewing EaseValidation explicitly defers realization to G2/G3.
@@ -777,16 +777,16 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `pending`
   Goal: scoped actual transaction/failure-context/rollback acceptance; full bus review .6.9 later.
 - ID: `G1-SLICE.6.6`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual revision preconditions, idempotency replay and append-only actor audit trail.
 - ID: `G1-SLICE.6.6.1`
   Status: `done`
   Goal:0434 atomic metadata commit/replay/audit; [whole scope/proofs](../history/stitchcad-devnotes-part586.md).
 - ID: `G1-SLICE.6.7`
-  Status: `in_progress`
+  Status: `done`
   Goal: bounded semantic undo/redo, original actor/revision restoration and explicit dropped-history report.
 - ID: `G1-SLICE.6.7.1`
-  Status: `in_progress`
+  Status: `done`
   Goal: explicit bounded metadata-group undo/redo with original semantic identities/revisions/actor,
   declared dropped-history reporting, fresh effect authority/current-source checks and atomic failure.
   Keep append-only original audit/replay independent; never rewind/reuse issued entity identities.
@@ -795,37 +795,46 @@ All98 completed ids/statuses and original proof pointers remain live there.
   and allocate fresh edits above it. Native branch/stale-request proof is required before closure.
 - ID: `G1-SLICE.6.7.1.1`
   Status: `done`
-  Goal:0435 D285 diagnosis; [whole scope/proofs](../history/stitchcad-devnotes-part587.md); runtime fix pending.
+  Goal:0435 D285 diagnosis; [whole scope/proofs](../history/stitchcad-devnotes-part587.md); runtime verified0437, reopen pending.
 - ID: `G1-SLICE.6.7.1.2`
   Status: `done`
-  Goal:0436 typed immutable history direction/current operator context/exact original group,
-  explicit membership and Design consistency; original author/order/revision/keys never rewritten.
-  - [x] REPRODUCE / ISSUE: git show HEAD:crates/sc-core/src/command.rs | rg -n prints original group
-    exports rc=0; operator/current-operation metadata must remain separate from original authoring data.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test command_history_contract:3 passed rc=0;
-    original group authority/revision cannot stand in for the current operation's actor/revision/key.
-  - [x] FIX: cargo clippy -p sc-core --test command_history_contract -- -D warnings:finished rc=0;
-    private owned original/context/direction, explicit original group membership then exact Design check.
-  - [x] ADDRESSED: cargo test -p sc-core --test command_history_contract:3 passed rc=0; full role/
-    principal distinction, exact counters beyond128 bits, original order/repeated keys and typed refusals.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc command::history:1 passed rc=0; selected strict
-    Clippy/fmt --check rc=0. Direction/key differences remain input data, not accepted replay/effects.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part587.md:3 exact
-    Git spans rc=0; whole0435 diagnosis retained with native-runtime proof still explicitly pending.
-  Cargo commands use scripts/local_environment.py. Promotion: indexed command-layer decision.
-  Native publication80 chapters/159 scoped API rows/1466 source links/2449 rendered links rc=0;
-  retention1041/global71 fits rc=0.
-  Constructor grants no authority/current snapshot/audit binding/model/replay or undo capability;
-  actual bounded traversal, action audit and D285 fix/native acceptance remain .6.7.1.3/.7.
+  Goal:0436 typed history input; [whole scope/proofs](../history/stitchcad-devnotes-part588.md).
 - ID: `G1-SLICE.6.7.1.3`
-  Status: `pending`
-  Goal: bounded actual whole-model undo/redo, separate non-rewinding maximum-issued revisions (D285),
-  fresh current operator authority over original commands, exact operation retry and append-only action
-  audit. Preserve original author/group/IDs/revisions; bounded drop/redo-branch reports and atomic failure.
-  Native original-branch request must refuse after undo/new edit; no issued ID may be rewound/reused.
+  Status: `done`
+  Goal:0437 bounded actual whole-model undo/redo, separate maximum-issued revision (D285), current
+  operator authority, exact operation replay/append-only action audit and explicit reversibility loss.
+  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py:
+    pinned native counter/undo/equality model reuses1 and accepts old precondition, rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py
+    rc=0; restoring counters plus current.successor reuses
+    snapshot identity. Whole actual alternatives and separate issuance/order preserve complete semantics.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
+    bounded actual alternatives, separate original/current actors, finite action audit/shared keys,
+    non-rewinding maximum-issued revisions and exact chronological authoring/history event sequences.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:37 passed rc=0;
+    prior30/history7 prove actual pointer/canonical roundtrip, human operator/agent author, scope/bounds/
+    retry/conflict, final authority rollback, old1 refusal after undo0/new2 and next unused entity id.
+    Actual Undo/new-branch witnesses retain audit2/3 order despite restored counters/repeated timestamps.
+  - [x] NO REGRESSION: prior30 pass within37 rc=0; selected strict lint/fmt rc=0; cargo test -p
+    sc-core --doc command::bus:7 passed rc=0, including direct history/action-journal erasure refusal.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part588.md:4 exact
+    Git spans rc=0; whole0436/D285 diagnosis retained. README/book/status/defect/pointer/decision aligned.
+  Native publication80 chapters/159 scoped API rows/1466 source links/2450 rendered links rc=0;
+  retention1042/global72 fits rc=0; final core check after export/doc alignment rc=0.
+  Cargo commands use scripts/local_environment.py. Promotion: indexed command-layer decision. D285
+  runtime portion verified; storage/reopen .7 remains open.
+  D286 P2 owned here: native ce5fce9 command module/book execution intros still label implemented
+  metadata publication/replay/history pending. Scoped prior/current census3/0 rc=0; corrected module/
+  book scope, actual native bus37 and rendered publication verify the fix. D286 closed; product code unchanged by wording. Payload/work/cancellation .6.8, deeper
+  current/alternative source/allocation acceptance .6.5.5 and full .6.9 remain pending; no broader proof.
 - ID: `G1-SLICE.6.8`
-  Status: `pending`
+  Status: `in_progress`
   Goal: typed progress/cancellation with no partial state/artifact; explicit resource bounds.
+- ID: `G1-SLICE.6.8.1`
+  Status: `pending`
+  Goal: recover concrete metadata preparation/publication work/progress/cancellation seams, then
+  implement explicit finite operation control preserving fresh authority, original causes and atomic
+  cancellation/refusal. Use actual bounded work units/current models; no fabricated wall-clock proof.
 - ID: `G1-SLICE.6.9`
   Status: `pending`
   Goal: coupled actual bus acceptance/private-mutator compile failures; workflow registry feeds G1.9/G5 parity.
@@ -843,7 +852,8 @@ All98 completed ids/statuses and original proof pointers remain live there.
   preservation, crash-consistent atomic multi-file commits, autosave/recovery, and the repository
   trait with the named WASM (files + IndexedDB) backend.
   D285: persist/restore the maximum-issued revision separately from restored undo state; a reopened
-  Design must never reissue an earlier snapshot revision. Native reopen/branch acceptance required.
+  Design must never reissue an earlier snapshot revision. Restore common audit sequence too; native
+  reopen/branch acceptance required. In-memory branch proof passes0437; persisted proof remains open.
   Typed formula expression/statement/recipe identity fields and digest domains must stay framed;
   .3f.1a decision requires cross-kind bind/recipe call-collision controls before storage or hashing.
   Acceptance: forced-interruption and failed-migration recovery are tested, not asserted; a

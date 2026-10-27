@@ -3,15 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — current history operator and original authoring intent
+## _(2026-10-27 UTC)_ — bounded actual snapshots and non-rewinding issuance
 
-0436 .6.7.1.2 owns current operator/revision/key separately from exact original group and direction.
-Explicit original membership precedes Design consistency; full actor/principal, original revision,
-order/payloads/aliases stay exact. Immutable getters/private fields confer no authority or effect.
-Native history3/privacy1/selected strict lint/fmt pass. Promotion: command-layer decision. Runtime
-traversal/action audit and D285 maximum-issued revision/native branch proof remain .6.7.1.3; reopen .7.
+0437 .6.7.1.3 moves whole actual models through bounded undo/redo alternatives, preserving original
+hosts/semantics/IDs/counters. Current operator authority is separate from the accepted original author.
+Finite action audit/exact retry share authoring key scope; drops/branches report lost reversibility
+without erasing records. Maximum-issued revisions and global exact audit order never rewind.
+Native bus37 (prior30/history7), privacy7/strict lint/fmt pass: D285 branch2 refuses old1 after undo0;
+actual pointer/canonical roundtrip, scope/revocation/bounds/replay also pass. Promotion: command-layer
+record. D285 storage/reopen remains .7; resource/full/source-allocation acceptance remains separately owned.
 
-[Whole0435 D285 diagnosis scope/lesson/ledger](docs/history/stitchcad-devnotes-part587.md) retains the model/native-proof boundary.
+[Whole0436 and D285 diagnosis ledger](docs/history/stitchcad-devnotes-part588.md) retain exact native source evidence.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 
