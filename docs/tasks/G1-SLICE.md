@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0442
+## Current leaf acceptance —0443
 
-- [x] ROOT CAUSE: python3 -I -B native HEAD reserve/caller census prints remaining.to_vec() on every
-  new accepted group, including count0 rc=0; resource cost scaled with unused reserve, not creation.
-- [x] ADDRESSED: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0; cargo test -p sc-measure
-  --test design_inputs_contract command_bus:46 passed rc=0, including actual ID/replay/history/cancel cases.
-- [x] NO REGRESSION: selected core lib/native contract strict Clippy and cargo fmt check finished rc=0;
-  expanded independent cursor/last128-bit/exhaustion/prefix overflow checks pass without suppression.
+- [x] ROOT CAUSE: python3 -I -B native HEAD Design export assertions print no resource meter/sink rc=0;
+  logical dynamic content needs explicit units without claiming allocator RSS, time or actual traversal.
+- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:6 passed rc=0; exact UTF-8,
+  cumulative axes, first-refusal latch across ignored/later/zero charges and platform/u64 extremes verified.
+- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; cargo test -p sc-core --doc design::resource:
+  4 passed rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0.
 
 ## Goal
 
@@ -807,39 +807,55 @@ All98 completed ids/statuses and original proof pointers remain live there.
   source-copy count does not bound per-copy size, validation/allocation work or retained journal bytes.
 - ID: `G1-SLICE.6.8.2.2.2.1`
   Status: `done`
-  Goal:0442 D290 remove complete unused-reserve copies on publication; D291 standalone Notch setup fix.
-  One immutable Arc-backed reserved identity slice remains for this bus lifetime. A checked forward
-  consumed prefix and independent borrowed stage cursors preserve exact generator order/exhaustion.
-  Publication prepares only shared-handle/prefix metadata, even for zero creation; no public reserve
-  getter, refill, request override, undo rewind or identity reuse. Initial conversion/storage stays explicit.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native HEAD reserve/caller census prints remaining.to_vec()
-    for every new accepted group, including count0 rc=0; this is source proof of a backing copy, not a
-    measured latency/allocator benchmark. Actual semantic cases already existed and remain the oracle.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part593.md:
-    4 exact Git spans rc=0; prior slice removed repeated H copies, while identity.after_consuming still
-    independently copied every unused reserved ID before effects, regardless of actual creation count.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings:finished rc=0; shared immutable backing,
-    checked prefix addition/range and concrete Skip<slice::Iter> staging remove publication backing copies.
-  - [x] ADDRESSED: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0, expanded for zero/
-    partial/full consumption, independent prefix-local counts, unchanged original and overflow/range refusal.
-    cargo test -p sc-measure --test design_inputs_contract command_bus:46 passed rc=0; actual source-copy,
-    original ID order, exhaustion, grouped alias, cancellation/replay, undo/redo and branch nonreuse retained.
-  - [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished
-    rc=0; selected cargo fmt check rc=0. Source census prints one shared handle/checked prefix, no backing
-    Vec copy rc=0; no total allocation-free publication, timing or initial-conversion bound is claimed.
-  - [x] LOCKSTEP: python3 -I -B native prior/current Notch example census:policy-install0/1 rc=0;
-    D291 standalone preview now installs explicit policy before use. Book/pointer/frontier/lesson/indexed
-    decision aligned; whole0441/D289 proof593, retention1047 logical/77 aggregate working Markdown rc=0.
-  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
-  Native book/publication81 chapters/159 scoped API rows/1474 source links/2470 rendered links rc=0;
-  maintained-reference82 files/18090 lines/1262878 bytes owner .6.8.2.2.2.1 rc=0.
-  Backing includes consumed IDs and stays allocated for bus lifetime; this deliberate bounded-initial-
-  backing tradeoff removes reserve-size-dependent per-commit copies. Remaining model/initial/retained
-  resource dimensions .6.8.2.2.2.2, deeper source/allocation .6.5.5 and full .6.9 stay owned/deferred.
+  Goal:0442 shared reserve/D290/D291; [whole scope/proofs](../history/stitchcad-devnotes-part594.md).
 - ID: `G1-SLICE.6.8.2.2.2.2`
+  Status: `in_progress`
+  Goal: explicit actual dynamic-model/retained-state admission from public immutable contracts:
+  cumulative collection entries, logical UTF-8 field bytes and unbounded counter bits. Preserve original
+  model/authority failures, refuse before costly preparation, and distinguish logical content from RSS/time.
+- ID: `G1-SLICE.6.8.2.2.2.2.1`
+  Status: `done`
+  Goal:0443 explicit logical collection-entry/UTF-8-text/unbounded-counter-bit limits, demand and meter.
+  A sealed data-only charging sink exposes no policy setter/reset/finish/model/publication capability.
+  Preserve exact first refusal across ignored/later/zero charges and refuse finish after any failure.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native HEAD Design export assertions print no resource
+    meter/sink rc=0; prior work bounds submitted metadata inputs/copy requests, not logical model content.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part594.md:
+    3 exact Git spans rc=0; whole0442 scope/lesson/ledger retains its explicit remaining model boundary.
+    An empty data meter/declared demand alone cannot prove exhaustive model/source traversal or runtime admission.
+  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
+    positive explicit maxima, constant-state accounting, remaining-room guards, static field/index locations
+    and first-refusal latch; producers receive only the sealed sink, not concrete replaceable policy state.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:6 passed rc=0; exact3 entries/
+    5 UTF-8 bytes/129 bits, independent maxima, original counts/locations, cross-unit/zero latch and
+    platform/u64 exact maximum/successor refusal verified without clipping or overflowing arithmetic.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::resource:4 passed rc=0; external policy/state
+    writes, foreign sink implementation and producer finish fail compilation. Selected cargo fmt check
+    rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0.
+  - [x] LOCKSTEP: whole0442 proof594 retained unchanged with3 exact Git spans rc=0; book/pointer/frontier/
+    lesson/indexed decision aligned. Actual core/source visitors .2/.3 and runtime prospective admission .4
+    remain owned/pending, along with deeper .6.5.5 and full .6.9. No actual bus enforcement claim.
+  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Native book/publication81 chapters/159 scoped API rows/1475 source links/2472 rendered links rc=0;
+  maintained-reference82 files/18162 lines/1267199 bytes owner .6.8.2.2.2.2.1 rc=0.
+  Retention1048 logical/78 aggregate working Markdown rc=0; active generation fits64/group.
+  Logical fields count without backing deduplication; no total allocator RSS/capacity, host-internal
+  algorithm-time, raw-ingress or model-validity certificate. An honest exhaustive producer is a trusted
+  integration obligation; the charging sink supplies no arbitrary-host security boundary.
+- ID: `G1-SLICE.6.8.2.2.2.2.2`
   Status: `pending`
-  Goal: bound remaining model/retained-state work from public immutable contracts, including source
-  validation/data sizes, allocation/retained audit history and future raw ingress before exposure.
+  Goal: exhaustive actual core-model dynamic-content visitor with original typed locations and bounded
+  precharge before nested traversal; cover every owned collection/text/counter field without inferred data.
+- ID: `G1-SLICE.6.8.2.2.2.2.3`
+  Status: `pending`
+  Goal: actual immutable source-host resource port and sc-measure producer through published readonly
+  contracts; include all owned source collection/text/counter fields, no dishonest-host security claim.
+- ID: `G1-SLICE.6.8.2.2.2.2.4`
+  Status: `pending`
+  Goal: install explicit immutable model policy and admit actual current/prospective metadata shapes
+  before costly validation/cloning; retain original authority/cause/cancel/replay/undo and finite-state bounds.
+  Bound logical model content and related retained-state composition; separate raw ingress, allocator peaks,
+  per-host algorithm time and future numeric/file/decompression/geometry work with exact owners.
 
 - ID: `G1-SLICE.6.9`
   Status: `pending`

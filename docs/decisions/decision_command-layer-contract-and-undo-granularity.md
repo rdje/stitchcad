@@ -157,3 +157,14 @@ backing without copying unused IDs, and history never rewinds issuance. Cursor1/
 selected lint/fmt pass. Initial backing including consumed IDs remains allocated for bus lifetime;
 this trades finite initial retention for removal of per-commit backing copies, not a total resource,
 initial-conversion or timing certificate. D291's standalone preview explicitly installs operation policy.
+
+## First-refusal logical dynamic-content contract0443
+
+answers: "how does a resource producer charge work without replacing the active policy?"
+
+G1-SLICE.6.8.2.2.2.2.1 defines positive collection-entry/UTF-8-text/unbounded-counter-bit limits and a
+constant-state first-refusal meter in the Design domain. Precheck remaining room before arithmetic;
+retain exact first counts/location across ignored/later/zero charges and finish. Give producers only a
+sealed charging trait object, with no concrete-policy setter/reset/finish/model operation. Contract6/
+privacy4/lint/fmt pass. Actual exhaustive core/source producers and runtime model admission remain .2/.3/.4;
+this contract proves no model traversal, allocator RSS/time or dishonest-host security boundary.

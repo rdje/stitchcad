@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — shared reserve backing and forward-only publication
+## _(2026-10-27 UTC)_ — first-refusal logical-content accounting contract
 
-0442 .6.8.2.2.2.1 fixes D290: native source/caller census shows remaining.to_vec() even for count0,
-not a latency benchmark. Share immutable reserved-ID backing and check forward prefix addition/range;
-independent borrowed cursors keep local counts/exhaustion. Expanded cursor1 and actual bus46 pass;
-strict selected core/native lint/fmt pass. D291 standalone Notch example now installs explicit policy,
-native prior/current setup census0/1. Promotion: command-layer record. Initial backing, including
-consumed IDs, remains for bus lifetime; no total resource/initial allocation claim. Remaining model/
-retained work .6.8.2.2.2.2, deeper .6.5.5/full .6.9; whole0441/D289 scope/lesson/ledger retained593.
+0443 .6.8.2.2.2.2.1 adds explicit positive logical collection-entry/UTF-8-text/unbounded-counter-bit
+limits and a constant-state meter. Remaining-room checks preserve exact attempted components; the
+first refusal persists across ignored/later/zero charges and finish. A sealed charging trait object
+exposes no policy reset, concrete-state replacement or model/publication handle. Contract6/privacy4/
+strict selected lint/fmt pass; actual bus source unchanged. Promotion: command-layer record. Actual
+core/source traversal .2/.3 and runtime admission .4 remain; no RSS/time/actual-model-walk certificate.
+Whole0442 reserve/D290/D291 scope/lesson/ledger retained594 with3 exact native Git spans.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

@@ -46,6 +46,7 @@ mod inputs;
 mod layers;
 mod parameters;
 mod pockets;
+mod resource;
 mod sewing;
 mod sewing_state;
 mod topology;
@@ -83,6 +84,10 @@ pub use parameters::{
     DesignParameters,
 };
 pub use pockets::DesignPocketOpeningDeclaration;
+pub use resource::{
+    DesignResourceCount, DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits,
+    DesignResourceLocation, DesignResourceMeter, DesignResourceScope, DesignResourceSink,
+};
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use sewing_state::{
     DesignSewing, DesignSewingDefinition, DesignSewingError, DesignSewingPosition,

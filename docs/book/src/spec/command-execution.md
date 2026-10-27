@@ -547,3 +547,7 @@ Candidate reconstruction now copies the trusted source host once per actual non-
 once for a new commit's fresh revision. Exact replay and actual Undo/Redo require no reconstruction
 copy. The [resource-control guide](command-operation-control.md#source-host-copy-work) records the
 native copy-count proof and its limits. There are46 focused bus cases; total resource proof remains owned.
+
+The [logical dynamic-content meter](command-operation-control.md#logical-dynamic-content-accounting-contract)
+is a separate Design-domain data contract. Actual model/source traversal and runtime model-policy
+installation remain pending; the meter alone supplies no additional execution or model-validity proof.

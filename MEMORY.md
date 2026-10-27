@@ -2,24 +2,23 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
-- Next G1-SLICE.6.8.2.2.2.2: derive remaining model/initial/retained-state resource dimensions through
-  public host contracts. Per-copy data/time, source validation, initial conversion and retained bytes remain.
-- 0442 .6.8.2.2.2.1 fixes D290: after_consuming previously recopied every unused ID even for count0.
-  Share immutable initial reserve backing and publish a checked forward-only consumed prefix. Concrete
-  independent stage cursors preserve local consumption/exhaustion; Undo/Redo/replay cannot rewind IDs.
-  Initial backing including consumed IDs remains allocated for bus lifetime; no total memory/time claim.
-  Expanded cursor1/native bus46/strict core/native lint/fmt pass. D291 standalone Notch setup fixed0/1.
-- 0441 D289 source-host copies remain1 per actual candidate, plus1 fresh revision; aliases/replay/
-  actual Undo/Redo copy no H. Native actual source proof and private extraction privacy3/4/4 established.
-- 0440 D287 evidence quota/D288 metadata fixed. Positive immutable host policy bounds original
-  members/targets/UTF-8 reasons/Known evidence refs, aliases included. Costly entries admit before
-  source/model/authority/progress. Cheap authorized Piece reads need no policy; raw ingress excluded.
-- 0439 pre-effect cooperative cancellation remains. Closed audit/result copies precede ReadyToPublish
-  and fresh final effect authority; no observer/large payload prep follows it. No hidden default/override.
+- Next G1-SLICE.6.8.2.2.2.2.2: actual core-model logical-resource visitor; precharge collection length
+  before nested traversal and cover every owned collection/text/unbounded-counter field with exact locations.
+  Actual source-host port/producer .3 and prospective shape/runtime policy .4 remain pending under same parent.
+- 0443 .1 adds DesignResourceLimits/demand/meter and sealed DesignResourceSink. Explicit positive
+  collection-entry/UTF-8-text/counter-bit maxima, no default. Remaining-room guards preserve components;
+  first refusal persists across ignored/later/zero charges and finish. Producer cannot reset concrete
+  meter policy or finish through its sink. Contract6/privacy4/strict selected lint/fmt pass; bus unchanged.
+  This is logical data accounting, no actual model walk, runtime gate, RSS/time or dishonest-host proof.
+- 0442 D290 shared immutable initial reserve/forward prefix and D291 Notch setup remain verified.
+  Initial backing including consumed IDs stays for bus lifetime; cursor1/native bus46/lint/fmt established.
+- 0441 D289 copies remain1 H per non-alias candidate plus1 fresh revision; replay/Undo/Redo copy none.
+  D287 evidence quota/D288 package metadata fixed0440. Existing metadata policy/progress/cancel stays;
+  closed audit/result copies precede ReadyToPublish/final authority. No default/request/observer override.
 - D285 runtime undo0/new2/old1 refusal verified; .7 must persist maximum-issued revision/common audit
   order separately from undo. Deeper source/allocation .6.5.5/full .6.9 acceptance remains deferred.
-- Whole0441/D289 retained593 with4 exact native Git spans; whole0440/D287/D288/older decisions592.
-  D284 working archive counts AGGREGATE: after593 global77=21 sealed catalogs+56 active raw;
+- Whole0442 reserve/D290/D291 scope/lesson/ledger594 has3 exact native Git spans; whole0441/D289593.
+  D284 archive counts AGGREGATE: after594 global78=21 sealed catalogs+57 active raw;
   limits64/group and192 aggregate. No packing needed/performed. D283 named publication summary canonical.
 - G1still6/18; recipe .5e/.5f, paired split/Dart .6.5.3, publication .4 and bus .6.9 owned. Canonical
   garment task graph remains docs/tasks/G1-SLICE-garment.md with98 completed ids/proof pointers.

@@ -190,6 +190,74 @@ publication copies. It does not certify initial conversion peaks or total memory
 is the expanded native identity-cursor case plus the46 actual bus cases, with strict selected lint
 and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 work.
 
+## Logical dynamic-content accounting contract
+
+DesignResourceLimits and DesignResourceMeter live in the Design domain, independent of command
+authority. They provide a data-only accounting contract. Actual exhaustive model/source producers
+and command-bus enforcement are pending; this meter is not yet a runtime model-admission gate.
+
+| Unit | Exact declared accounting |
+| --- | --- |
+| collection_entries | entries in logical owned dynamic collections, including nested collections and reference vectors |
+| text_bytes | exact UTF-8 bytes of logical owned text fields, without shared-backing deduplication |
+| counter_bits | actual magnitude bits of logical unbounded counters; fixed-width numeric values are outside this unit |
+
+The host supplies explicit positive maxima: NonZeroUsize for collection entries/text bytes and
+NonZeroU64 for counter bits. There is no default. These are logical content units, not allocator RSS,
+capacity overhead, a wall-clock deadline or evidence that the model is valid. A model producer must
+precharge a collection's exact length before walking nested entries, charge every logical text field
+and account for actual unbounded-counter magnitudes without serializing or cloning the counters.
+
+For example, these are three demonstration charges; no actual Design is inspected:
+
+```rust
+let mut meter = DesignResourceMeter::new(DesignResourceLimits::new(
+    maximum_collection_entries, maximum_text_bytes, maximum_counter_bits,
+));
+{
+    let sink: &mut dyn DesignResourceSink = &mut meter;
+    let location = DesignResourceLocation {
+        scope: DesignResourceScope::SourceHost,
+        field: "example.entries",
+        index: None,
+    };
+    sink.charge_entries(2, location)?;
+    sink.charge_text("é", DesignResourceLocation {
+        field: "example.label", index: Some(0), ..location
+    })?;
+    sink.charge_counter_bits(129, DesignResourceLocation {
+        field: "example.revision", ..location
+    })?;
+}
+let declared = meter.finish()?;
+assert_eq!(declared.collection_entries(), 2);
+assert_eq!(declared.text_bytes(), 2);
+assert_eq!(declared.counter_bits(), 129);
+```
+
+DesignResourceScope identifies Structure, Inputs, Sewing, Garment or SourceHost. Locations retain a
+static schema field token and optional original zero-based authored index. They contain no copied
+user label/value or model handle. Count refusals retain CollectionEntries or TextBytes, the explicit
+maximum, successful preceding count, exact attempted amount and location. CounterBits retains its
+original u64 components and location. Remaining-room comparisons precede addition, so even an
+attempt whose sum would exceed the platform/u64 range remains an exact typed refusal.
+
+The first refusal is latched. Every later charge, including an empty/zero charge in another unit,
+returns that same original error; finish also refuses even if a producer ignored an earlier error.
+No partial successful demand escapes on finish after failure. Empty charged demand remains data;
+it does not certify that a model was traversed. The meter retains counts/locations and no model text.
+
+A producer receives only a mutable DesignResourceSink trait object. The sink is sealed, with charging
+methods and no policy setter, reset, finish or model/publication operation. The concrete meter's policy
+and state are private. This prevents replacement through the supplied charging capability; an honest,
+exhaustive producer remains an integration obligation, not a security claim against dishonest host code.
+
+Six native contract cases and four compiler privacy/sealing cases pass, with strict selected lint and
+formatting. The actual core visitor is G1-SLICE.6.8.2.2.2.2.2, the actual immutable source-host producer
+is .3, and prospective shape/runtime installation is .4 under the same parent. Source truth, raw
+input decoding, allocator peaks, host algorithm time and future solver/file/decompression/geometry
+work remain distinct obligations. The existing metadata bus has not changed its runtime behavior.
+
 Focused runtime evidence comprises37 earlier bus cases, eight runtime-control cases and one actual
 source-copy case:46 passing cases. The evidence-input slice established six pure admission/fraction
 cases and control privacy. The copy slice passes strict selected lint/formatting and11 affected
