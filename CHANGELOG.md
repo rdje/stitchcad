@@ -3,12 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0412 — enforce original explicit garment envelope
+## STITCHCAD-G1-0413 — close scoped garment component acceptance
 
-- Delegate original Closure definitions then layer scope before requested execution, independent of geometry.
-- Preserve named Lining/Fly causes and pre-birth Fly refusal; inspection stays available without substitution.
-- Native4/core+measure strict lint/fmt/book/publication/size pass0; whole0411 proof561 retained.
-- Scoped/coupled acceptance and full runtime/physical/release proof remain owned; G1still6/18.
+- All17 actual garment/Pocket native controls and3 garment privacy/lifetime rustdocs pass0; census agrees.
+- No Rust/test changes; whole owner subtree/0412 proof562 retained with all10 live ids.
+- Book distinguishes scoped component checks from pending aggregate/runtime/physical/release proof.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +30,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part562](docs/history/stitchcad-devnotes-part562.md) | whole garment-owner subtree/0412 lesson/ledger/retirement | 75 lines, 5445 bytes, sha256:43ddf7ad… |
 | [part561](docs/history/stitchcad-devnotes-part561.md) | whole0411 unified declarations/lesson/ledger/retirement | 45 lines, 3732 bytes, sha256:57ad44a6… |
 | [part560](docs/history/stitchcad-devnotes-part560.md) | whole0410 Pocket opening/lesson/ledger/retirement | 44 lines, 3749 bytes, sha256:204e3848… |
 | [part559](docs/history/stitchcad-devnotes-part559.md) | whole0409 D276 correction/lesson/ledger/retirement | 44 lines, 3823 bytes, sha256:c2f6aaf3… |

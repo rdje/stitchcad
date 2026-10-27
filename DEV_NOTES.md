@@ -3,17 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — original requested garment envelope
+## _(2026-10-27 UTC)_ — scoped garment component acceptance
 
-0412 require_in_scope delegates authored actual Closure definitions then complete original layer
-scope, independently of host/current sources/metadata/geometry. Native3 plus shared host-drift1 pass0:
-modelled Lining remains inspectable but refuses original env_lining/G7 with layer/family/index/served
-Piece and concrete chain, even damaged geometry. Supported/empty scope proves no currentness. Actual
-Fly request retains pre-birth env_fly/G7/Closure/gap refusal even empty instances/invalid geometry;
-no immutable Fly is modelled, constructor unchanged. Strict core+measure lint/fmt0. No physical/
-execution completeness or release proof follows. Whole0411 scopes561 preserve4 exact Git spans;
-retention/book/publication/size0. Original book facts/examples retained through tighter prose.
-Promotion: Design host decision. Scoped .6/aggregate .6.4.6/full runtime/physical/release remain owned.
+0413 runs all15 current garment native controls plus2 Pocket opening controls:17 pass0. Independent
+source annotations count ownership4/current4/declarations3/scope3/shared-host1/Pocket2; exact garment
+rustdoc filter passes3 privacy/lifetime cases, source census2+1 agrees. Existing family-specific
+acceptance stays linked; no Rust/test changes. Whole owner subtree/0412 lesson/ledger/retirement562
+preserves4 exact Git spans and all10 live ids; retention/book/publication/size0. Promotion declined:
+existing Design host decision already owns semantics; exact scoped run stays in leaf. Aggregate
+.6.4.6 and full bus/runtime/application/physical/release remain pending, G1still6/18.
+
+[Whole0412 envelope lesson](docs/history/stitchcad-devnotes-part562.md) retains original scope/cause and pre-birth Fly proofs.
 
 [Whole0411 unified declarations lesson](docs/history/stitchcad-devnotes-part561.md) retains actual roles, pairs, borrows and late-cause proofs.
 

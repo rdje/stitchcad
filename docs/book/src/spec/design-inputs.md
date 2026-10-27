@@ -516,8 +516,8 @@ garment.require_in_scope()?; // original Closure guards, then distinct layer fam
 garment.declarations()?;    // complete current sources/metadata; separate obligations
 ```
 
-The first modelled Lining retains its actual id/family/index, served Piece, env_lining/G7 and original
-cause chain, even with damaged sources. Inspection stays available. Fly definitions retain env_fly/G7
+Lining keeps actual id/family/index/served Piece/env_lining/G7/original causes despite damage;
+inspection stays available. Fly definitions retain env_fly/G7
 and Closure/trousers-gap ids; Closure::new refuses before birth, even with empty instances/invalid
 geometry. Scope success certifies no current inputs, logical domains, operations, geometry, physical
 support, completeness or release. Empty scope and host drift require their separate current checks.
@@ -525,3 +525,5 @@ support, completeness or release. Empty scope and host drift require their separ
 | API token | Meaning |
 | --- | --- |
 | `DesignGarmentEnvelopeError` | Original Closure/layer envelope cause and authored context |
+
+Garment:17 native/3 privacy-lifetime pass; aggregate/runtime/physical/release proof pending.

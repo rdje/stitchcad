@@ -756,7 +756,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.6.4.5`
-  Status: `in_progress`
+  Status: `done`
   Goal: current pocket/closure/notion/layer/declaration sources with explicit geometric deferrals.
   Own garment child planning, original pocket/notion anchor error chains and continuity526.
   Children .1 owned/current Pockets; .2 notion/Closure instances; .3 layers/Hem; .4 other construction
@@ -899,55 +899,51 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.5`
   Status: `done`
-  Goal: coupled garment ownership/current declarations over one canonical root.
-  Children .a immutable admission/global owned ids; .b current sources; .c complete declarations;
-  .d requested execution envelope; .cleanup1 daily cleanup. Final scoped acceptance .6/aggregate .6.4.6.
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.a`
   Status: `done`
-  Goal:0406 exact garment/root ownership; [whole proof](../history/stitchcad-devnotes-part556.md).
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.b`
   Status: `done`
-  Goal:0407 complete current garment sources; [whole proof](../history/stitchcad-devnotes-part557.md).
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.c`
   Status: `done`
-  Goal: complete typed actual garment declarations over one current root, no partial views.
-  Children .1 actual logical Pocket opening adapter; .2 unified original adapters after full preflight.
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.c.1`
   Status: `done`
-  Goal:0410 original logical Pocket opening views; [whole proof](../history/stitchcad-devnotes-part560.md).
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.c.2`
   Status: `done`
-  Goal:0411 complete borrowed garment declarations; [whole proof](../history/stitchcad-devnotes-part561.md).
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.d`
   Status: `done`
-  Goal: original Lining execution envelope and pre-construction Fly refusal, independent of geometry.
-  Children .1 D276 scope correction before .c; .2 requested envelope.
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.d.1`
   Status: `done`
-  Goal:0409 D276 Fly birth/documentation boundary; [whole proof](../history/stitchcad-devnotes-part559.md).
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.d.2`
   Status: `done`
-  Goal:0412 original explicit requested garment envelope, independently of current sources/geometry.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_scope:
-    3 passed rc=0; real current garment supports inspection while modelled Lining refuses execution.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:original ClosureDefinition guard is pre-birth;
-    LayerInventory scope is separate from structural/source validation. Delegate both without inference.
-  - [x] FIX: same native3 plus construction_and_garment_ownership_rechecks_whole_root_before_empty_scope:
-    1 passed rc=0; root require_in_scope checks authored Closure definitions then complete layer scope.
-  - [x] ADDRESSED: native4 rc=0:original Lining id/family/index/served Piece/env_lining/G7/concrete
-    chains, damaged sources cannot mask scope, supported/empty scope proves no currentness; host drift
-    stays separate. Actual Fly request refuses env_fly/G7/Closure/gap before birth, even invalid context.
-  - [x] NO REGRESSION: core --lib / measure --test design_inputs_contract strict Clippy and affected
-    cargo fmt rc=0; git diff --exit-code -- crates/sc-core/src/ontology/closure.rs rc=0; no constructor change.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part561.md:4 spans rc=0;
-    retention/book/publication/size rc=0. Original book facts/examples retained; Design host decision
-    promotion. Scoped component .6/aggregate .6.4.6/full runtime/physical/release proof remain owned.
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.5.cleanup1`
   Status: `done`
-  Goal:0408 guarded daily cleanup/D276 capture; [whole proof](../history/stitchcad-devnotes-part558.md).
+  Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.6`
-  Status: `pending`
-  Goal: focused complete current garment/component acceptance before .6.4.6 aggregate review.
+  Status: `done`
+  Goal:0413 scoped complete garment acceptance; previous family acceptance remains linked above.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_:
+    15 passed rc=0; complete actual ownership/current/declaration/envelope controls after implementation.
+  - [x] ROOT CAUSE (WHY + WHERE): independent source annotation census rc=0:ownership4/current4/
+    declarations3/scope3 plus shared host drift1 =15; Pocket opening2 and garment compile_fail2+1.
+  - [x] FIX: same native15 plus cargo test -p sc-measure --test design_inputs_contract pocket_opening:
+    2 passed rc=0;17 distinct controls over original actual components/canonical owner.
+  - [x] ADDRESSED: native17 rc=0:complete owner/source order, global collisions, original role/pointer
+    borrows, late/unused/empty failures and concrete causes; named Lining/pre-birth Fly scope intact.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::garment:3 privacy/lifetime controls rc=0;
+    git diff --exit-code -- crates rc=0; no production/test changes or broadened release claims.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part562.md:4 spans rc=0;
+    retention/book/publication/size rc=0. All10 subtree ids retained. Promotion declined: existing
+    Design host decision covers semantics; exact scoped acceptance stays here. Aggregate .6.4.6,
+    bus/runtime/application/physical/release proof remain independently owned; G1still6/18.
 - ID: `G1-SLICE.6.4.6`
   Status: `pending`
   Goal: focused coupled aggregate and public-mutator privacy acceptance; full runtime integration later.
