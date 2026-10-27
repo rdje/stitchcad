@@ -1179,15 +1179,10 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 [Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
-## D271–D278 — retained causes, controls and scope corrections
-[Whole0417 retirement](../history/stitchcad-devnotes-part567.md) preserves prior reports and proofs.
-
-## D279/D280 — newline measurement and exact Git storage
-D279 P3: native awk counts441 for440 content bytes plus CRLF; adopted contract excludes terminal CR.
-D280 P2: native git hash-object with core.autocrlf=true changes CRLF bytes before object storage, so
-working-tree authority can disagree after commit. Owner G1-SLICE.6.5.book.3 fixes both in0418.
-Reproduce: newline_contract.py --baseline gives6 native subcase failures rc=1; corrected3 tests pass0.
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part567.md:4 exact
-  Git spans rc=0; whole0417 scopes/retirement preserved; native awk/Git localizes both defects.
-- [x] ADDRESSED: newline_contract.py:3 tests OK rc=0; raw bytes preserved and effective policy checked.
-- [x] NO REGRESSION: reader23/authoring8/probes7/0/book/publication/retention rc=0; product proof stays owned.
+## D271–D280 — retained causes and verified corrections
+[Whole retirement/proofs](../history/stitchcad-devnotes-part568.md); input, source, newline and storage fixes retained.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part568.md:4 exact
+  Git spans rc=0; complete maintained-book subtree/0418 lesson/ledger/prior corrections preserved.
+- [x] ADDRESSED: same rc=0; all completed node ids/pointers retained, no historical evidence lost.
+- [x] NO REGRESSION: retention/book/publication/native bus5/privacy2/strict selected lint/fmt rc=0;
+  product integration/runtime/physical/release proof remains owned.

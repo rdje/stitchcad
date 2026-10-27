@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0418 — close scoped book adoption and correct newline storage
+## STITCHCAD-G1-0419 — own the actual bus and execute authorized Piece-list reads
 
-- Actual03460b0 committed-mode verification passes; reader23/authoring8/native newline3 pass0.
-- Fix D279 CRLF content width and D280 Git clean-byte drift; effective storage attributes enforced.
-- Preserve raw source bytes, bounded semantic parts/index and exact fresh change authority.
-- Whole0417 evidence/retirement567 retains4 exact Git spans; broader product/release proof stays owned.
+- Private actual garment/installed authority source; fresh authorization and exact Design/revision.
+- Borrow original complete Piece inventory/order/Material intent; preserve repair/deferred inspection.
+- Other handlers explicitly unavailable. Native5/privacy2/selected lint/fmt/book/publication pass0.
+- Whole book subtree/0418 proof568 retains4 exact spans; candidates/mutations/full product proof pending.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part568](docs/history/stitchcad-devnotes-part568.md) | whole book subtree/0418 lesson/ledger/D271–D280 | 60 lines, 4759 bytes, sha256:9ab6cbbd… |
 | [part567](docs/history/stitchcad-devnotes-part567.md) | whole0417 installation/lesson/ledger/D271–D278 | 54 lines, 4970 bytes, sha256:754fd688… |
 | [part566](docs/history/stitchcad-devnotes-part566.md) | whole0416 reader/lesson/ledger/retirement/prior live row | 49 lines, 4879 bytes, sha256:746371c2… |
 | [part565](docs/history/stitchcad-devnotes-part565.md) | whole0415 bus/book design/lesson/ledger/D271–D277 | 57 lines, 4864 bytes, sha256:acc2866a… |

@@ -12,7 +12,7 @@
 //! Borrowed formula lexing/expression/ordered-statement syntax, literal normalization and canonical
 //! expression/statement/recipe identity, sourced metadata and initial namespaces, exact reads, ordered scopes, operator/built-in/selector signatures and typed wanted catalogs are
 //! implemented in [`recipe`]. Complete static recipe validation, exact numeric operators and binding
-//! conversion and typed command requests are available; evaluation and bus execution follow. New numeric features carry focused
+//! conversion, typed command requests and authorized Piece-list reads are available; evaluation and mutation execution follow. New numeric features carry focused
 //! native evidence; broader/platform verification remains owned by G1-SLICE.5c.4 and the pre-push gate.
 //!
 //! What lands here, and when:
@@ -23,7 +23,7 @@
 //! | `value` | canonical length declarations with authored state/source/provenance; no unknown fallback or cached derived result | `G1-SLICE.4a.1` |
 //! | `name` | immutable ASCII lower-snake tokens, refusing grammar keywords; binding authority stays with the namespace owner | `G1-SLICE.4a.2a` |
 //! | `recipe` | syntax/identity, sourced metadata, whole static recipe checking, exact numeric operators and binding conversion; execution follows | `G1-SLICE.5a/.5b/.5c`; remaining `G1-SLICE.5` |
-//! | `command` | typed catalog/context and initial payloads; authority and transaction execution follow | `G0-CONTRACT.17`, `G1-SLICE.6` |
+//! | `command` | typed catalog/requests, trusted-host authorization, private actual owner and Piece-list read; transactions follow | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |
 //!
 //! Entity numerical storage uses [`sc_units`]: lengths are signed `i64` micrometres and entity
@@ -39,7 +39,7 @@ pub mod ontology;
 /// Immutable structural Design ownership; complete aggregate and execution follow.
 pub mod design;
 
-/// Typed declared command identities and contract metadata; execution handlers follow.
+/// Typed inputs, trusted-host authorization and private owned execution; mutation handlers follow.
 pub mod command;
 
 /// Stable machine identifiers, distinct from localized display names and scalar text values.

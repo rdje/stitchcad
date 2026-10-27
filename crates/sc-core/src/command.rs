@@ -1,11 +1,12 @@
-//! Typed command inputs and core authorization over trusted host identity/grant snapshots.
+//! Typed inputs, core authorization and the first executable read over private actual ownership.
 //!
 //! Catalog membership declares a command; it does not make a handler available or grant authority.
-//! Transport authentication, execution, transactions and workflow parity remain separate owners.
+//! Transport authentication, mutation execution, transactions and workflow parity remain owned.
 
 mod approval;
 mod artifact;
 mod authorization;
+mod bus;
 mod construction;
 mod context;
 mod evaluation;
@@ -28,6 +29,7 @@ pub use authorization::{
     CommandAuthorizationError, CommandAuthorizationMode, CommandGrantRefusal,
     CommandGrantRejection,
 };
+pub use bus::{CommandBus, CommandBusError, CommandPieceList, CommandResult};
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,

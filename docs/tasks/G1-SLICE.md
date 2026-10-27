@@ -937,35 +937,38 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0415 bus staging/book design/D277 correction; [whole proof](../history/stitchcad-devnotes-part565.md).
 - ID: `G1-SLICE.6.5.book`
   Status: `done`
-  Goal: unique product mdBook maintained-reference contract, source policy lifecycle; preserve complete
-  direct navigation and current per-part/index bounds. Exact baseline/content digest and fresh owned
-  signed deltas for every aggregate change, refuse stale/reused/banked authority; no arbitrary cap rise.
-  Completed0416–0418:bounded reader/native refusals, guarded authoring/atomic adoption and scoped
-  acceptance before bus product work. Full neutral package remains unadopted.
+  Goal: completed maintained-book scope; [whole proof](../history/stitchcad-devnotes-part568.md).
 - ID: `G1-SLICE.6.5.book.1`
   Status: `done`
-  Goal:0416 strict reader23/optimized2/native controls; [whole proof](../history/stitchcad-devnotes-part566.md).
+  Goal: completed maintained-book scope; [whole proof](../history/stitchcad-devnotes-part566.md).
 - ID: `G1-SLICE.6.5.book.2`
   Status: `done`
-  Goal:0417 installed guarded authority/D278; [whole proof](../history/stitchcad-devnotes-part567.md).
+  Goal: completed maintained-book scope; [whole proof](../history/stitchcad-devnotes-part567.md).
 - ID: `G1-SLICE.6.5.book.3`
   Status: `done`
-  Goal:0418 scoped adoption acceptance, D279 CRLF width and D280 exact Git storage-byte correction.
-  - [x] REPRODUCE / ISSUE: newline_contract.py --baseline:6 native subcase failures rc=1, expected;
-    awk441 vs440; Git changes CRLF object ids. Actual03460b0 committed-mode verification rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): native awk/Git probe rc=0:width includes CR; Git cleans raw bytes
-    after hashing. No root attributes existed. Ordinary target fixtures, same Git metadata read-only.
-  - [x] FIX: newline_contract.py:3 tests OK rc=0; one CR excluded from width, raw wc unchanged;
-    effective text/filter/ident/encoding attributes must be unset; writer freezes root policy.
-  - [x] ADDRESSED: maintained_reference_contract.py:23 tests OK rc=0; authoring contract8 OK rc=0;
-    native conversion settings preserve exact bytes; malformed/effective transformation refuses.
-  - [x] NO REGRESSION: live-doc-size probes7/0 (numeric17/overlap2), AST/bash/book/publication/retention
-    and git diff --check rc=0; source-neutral policy body unchanged. Full product proof remains owned.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part567.md:4 exact
-    Git spans rc=0; complete0417 proof retained; book/decision/live records sync. G1 remains6/18.
+  Goal: completed maintained-book scope; [whole proof](../history/stitchcad-devnotes-part568.md).
 - ID: `G1-SLICE.6.5.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: private actual aggregate/candidate ownership and semantic diffs, no caller-minted commit token.
+- ID: `G1-SLICE.6.5.2.a`
+  Status: `done`
+  Goal:0419 private actual bus and authorized GetPieceList; no model getter/publication token.
+  - [x] REPRODUCE / ISSUE: native git grep at41400cd:0 CommandBus matches/rc=1 expected; gap confirmed rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): native catalog/authorization/input census rc=0:no executable owner;
+    command::bus now binds one actual garment/installed trusted provider, not caller-issued authority.
+  - [x] FIX: cargo test -p sc-measure --test design_inputs_contract command_bus:5 passed rc=0;
+    auth then actual Design/revision; original Piece slice/order/material intent, typed unavailable failures.
+  - [x] ADDRESSED: same native5 rc=0; fresh revocation/actor checks, exact beyond128 revision refusal,
+    original cause, no reconstruction; metadata inspection preserves damaged/deferred source intent.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc command::bus:2 compile-fail passed; selected Clippy/fmt rc=0.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part568.md:4 spans rc=0;
+    book/publication/retention rc=0, docs/decision synced. Candidate/mutation/runtime/release proof remains.
+- ID: `G1-SLICE.6.5.2.b`
+  Status: `pending`
+  Goal: private candidate and identity-allocation isolation through actual mutation handler dependency.
+- ID: `G1-SLICE.6.5.2.c`
+  Status: `pending`
+  Goal: exact actual semantic changes; preserve canonical identity/order/logical source distinctions.
 - ID: `G1-SLICE.6.5.3`
   Status: `pending`
   Goal: original canonical mutation handlers; subdivide actual interfaces/evaluator dependencies first.

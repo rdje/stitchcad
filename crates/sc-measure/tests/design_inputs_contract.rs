@@ -2377,3 +2377,6 @@ mod garment_scope;
 
 #[path = "support/coupled_aggregate.rs"]
 mod coupled_aggregate;
+
+#[path = "support/command_bus.rs"]
+mod command_bus;

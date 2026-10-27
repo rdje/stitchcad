@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | D156/D223/D263 audits and D250 owned; D278–D280 source/newline/storage corrected. Maintained-book scoped guards and actual committed verification pass; broader product proof remains |
 | G0 — product & semantic contract | Mostly Done | Contract reviewed; D239 detached-approval boundary adopted and checked. Evaluation-seat exception remains; human closure **unapproved**. Earlier exit census18 met/1 not met |
-| G1 — executable architecture slice | In Progress | 6/18 leaves done. Structural inputs, numeric/read foundations, all17 command schemas and trusted-host core authorization available. Full evaluator/bus/storage/app pending; focused checks, integration/release proof later |
+| G1 — executable architecture slice | In Progress | 6/18 leaves done. Structural inputs, numeric/read foundations, all17 schemas, trusted-host authorization and private-bus Piece-list read available. Full evaluator/mutations/storage/app pending; focused checks, integration/release proof later |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |
@@ -25,4 +25,4 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G7 — scoped production declaration | Not Started | 7 leaves: independent review, envelope statement, semver policy, upgrade/rollback, channels, governance |
 | V1 — assembly visualization | Not Started | parallel, never blocks a G-gate; 7 leaves: mesh, ease-aware stitching, net-line binding, arrangement, viewport, blinded validation |
 | V2 — physically validated simulation | Not Started | parallel, uncapped; 6 leaves: `sc-sim` out of the default build, XPBD research, labelled approximation, calibration + observables, evidence-gated exit |
-| Product code (`crates/`) | In Progress | Units, ontology, measurement/formula/numeric and command APIs; owned sewing/garment components and current construction source checks. Full execution/app/physical/release proof pending; focused native checks |
+| Product code (`crates/`) | In Progress | Units, ontology, measurement/formula/numeric and command APIs with authorized Piece-list reads; owned sewing/garment components/current source checks. Full execution/app/physical/release proof pending; focused native checks |

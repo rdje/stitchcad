@@ -22,7 +22,8 @@ The G0 semantic contract has been reviewed; human closure remains unapproved. G1
 ontology, measurement inputs and borrowed/normalized formula syntax with owned identities,
 sourced namespaces and complete immutable recipe kind proofs. Whole-factory review checks source dependencies.
 Exact numeric and binding APIs plus canonical scalar state models are available.
-Scalar reads, tolerance/size contexts and typed command requests are available; full execution is pending.
+Scalar reads, tolerance/size contexts, typed requests and authorized Piece-list reads are available;
+full evaluation and mutation execution remain pending.
 [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks verified progress; the mdBook explains implemented behavior and remaining proof boundaries.
 
 ## Audience and scope

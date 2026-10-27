@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; all17 typed inputs and trusted-host core authorization implemented; bus handlers pending
+- **Status:** `active`; all17 typed inputs, trusted-host authorization and actual Piece-list read implemented; mutation handlers pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -122,3 +122,17 @@ Agents cannot hold/issue approval; mutation preview needs inspect. Transport pro
 sessions and validate human grant issuance; submitted claims never become their own authority source.
 Returned decisions describe a snapshot, not future execution or approval; effects must reauthorize and
 validate actual sources/revisions, subjects/evidence/scope. No handler, human record or server is claimed.
+
+answers: "which commands actually execute over the private owned Design?"
+
+0419 .6.5.2.a installs CommandBus with the actual DesignGarment and trusted application authority
+source, neither replaceable by a request. Only GetPieceList executes. Every read freshly authorizes,
+then binds actual Design and exact revision; original typed auth causes and both context values
+survive refusals. The original authored Piece slice/revision are borrowed, with no reconstruction,
+normalization, defaults, observable model cache or revision changes. Privacy/lifetime controls prevent
+replacement and escaping borrows; earlier results do not authorize a later call after revocation.
+Inspection may show held repairs and modelled physical deferrals without certifying readiness.
+Native5 on real sc-measure schemas/privacy2/strict selected lint/fmt pass0; installed actual03460b0
+and41400cd book committed checks pass0. Whole book subtree/0418 evidence568 retains4 exact Git spans.
+Candidates/allocation/semantic diffs follow .6.5.2.b/.c; handlers/evaluator dependencies, effect-boundary
+publication, replay/audit/history, runtime and UI/API/MCP parity remain owned. No mutation executes.

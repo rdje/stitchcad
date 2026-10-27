@@ -3,18 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — exact byte storage and scoped book acceptance
+## _(2026-10-27 UTC)_ — private owner and first actual command read
 
-D279/D280: newline_contract.py --baseline reproduces6 native subcase failures rc=1:terminal CR is
-counted as content and Git autocrlf rewrites bytes after authority hashing. Corrected3 controls pass0:
-strip one CR for width only; retain raw wc/digests; explicitly unset Git text/filter/ident/encoding
-for governed Markdown/control and require effective native attributes. Freeze root policy during
-recording; no source normalization. Native hash-object never writes objects; fixtures are ordinary
-project-local directories using this same repo's Git read-only. Hash-object resolves --path against
-cwd, so baseline reproduction selects both fixture cwd/worktree; check-attr alone is insufficient.
-Reader23/authoring8 pass0; actual03460b0 committed-mode verification passes0. Scoped acceptance keeps
-runtime/semantic/physical/release proof separately owned. Whole0417 retirement567:4 exact spans0.
-Promotion: containment decision. Probes7/0 (numeric17/overlap2), AST/bash/book/publication/retention0.
+0419 owns the actual DesignGarment and trusted authority source inside CommandBus. Exact GetPieceList
+reads authenticate afresh before binding Design/revision; return original borrowed Piece order,
+multiplicity/pairing/Material intent without cloning/reconstruction or mutation. Authoritative grant
+revocation affects the next call; a prior read is no commit/authority token. Other handlers refuse
+explicitly rather than executing a placeholder. Native5 exercises actual sc-measure source schemas,
+wrong actor/Design/exact beyond128 revision, original causes, stable addresses and repair/deferral
+inspection. Privacy/lifetime2 and strict selected Clippy/fmt pass0. Metadata is not source/geometry/
+physical readiness; candidates/allocation/diffs/handlers/history/parity stay owned. Book/reference
+sync and whole maintained-book subtree/0418 retirement568 preserve4 exact spans; book/publication/
+retention0. Promotion: command-layer decision, actual execution vs catalog distinction.
+
+[Whole0418 byte-storage/adoption lesson](docs/history/stitchcad-devnotes-part568.md) retains original native before/after and scoped acceptance.
 
 [Whole0417 installation/D278 lesson](docs/history/stitchcad-devnotes-part567.md) retains complete guarded authoring, native source and integration proof.
 
