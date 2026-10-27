@@ -1139,3 +1139,11 @@ Historical window15/16 routing/pointer receipts remain whole in
 Verified D255 concrete source correction retained whole in [part511](../history/stitchcad-devnotes-part511.md).
 
 Verified D256 concrete composite sources retained whole in [part513](../history/stitchcad-devnotes-part513.md).
+
+## D257 — source ownership guide retains superseded availability claims
+
+P2; owner G1-SLICE.6.4.2.d.4.3.c.3.c, fixed0364. Repro: rg 'MTM/unified|ownership and full Design'
+in docs/book/src/spec/design-inputs.md and 'Combined source-host/Design' in the host decision.
+0360 footer still defers MTM/combined sources implemented0361/0363; appended sections left older
+claims stale. Impact: book readers receive conflicting availability. Correct those scopes and the
+implementation row; retain physical/execution/integration deferrals. Exact existing contracts verify scope.

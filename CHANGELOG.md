@@ -11,15 +11,18 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0363 — expose actual combined Design sources through core readonly facets
 
-- Own exact measurement/set sources and expose complete typed metadata roles plus actual external set id/revision validation.
-- Retain original current validators, typed causes and single canonical values; core remains independent of higher schemas.
-- Native4+8+1/privacy2/strict core and selected-measure lint/fmt/book/publication pass0; no value/context cache or profile lookup.
-- Scoped enum vocabulary restores D250132 exact baseline rows/delta0; whole0362/wanted continuity514 matches4 Git spans.
-- Caps unchanged; G1still6/18. Coupled scope review/full Design/execution/physical/integration/CI remains later.
+## STITCHCAD-G1-0364 — accept scoped source ownership and correct stale availability
+
+- Review actual source pins, explicit singleton families and symbolic Profile deferrals with three exact existing cases.
+- Fix D257: guide/decision/implementation row now name implemented MTM/combined sources while retaining later Design/physical scope.
+- Native3/book/publication pass0; D250132 exact baseline rows/delta0. No runtime change or full integration/CI claim.
+- Whole0363 continuity515 matches3 Git spans; source/SizeSet subtree closes within focused scope; caps unchanged; G1still6/18.
+- Actual Design composition .6.4.2.d.4.4 follows before readiness/execution.
 
 # Sealed archive — earlier slices
+
+| [part515](docs/history/stitchcad-devnotes-part515.md) | whole0363 actual source-host task, lesson and ledger | 48 lines, 4124 bytes, sha256:2015c9a0… |
 
 | [part514](docs/history/stitchcad-devnotes-part514.md) | whole0362 and historical wanted proofs | 86 lines, 6912 bytes, sha256:8e9e8d7c… |
 

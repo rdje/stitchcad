@@ -849,7 +849,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0357 actual MeasurementInputs host; [whole scope/proof](../history/stitchcad-devnotes-part509.md).
 - ID: `G1-SLICE.6.4.2.d.4.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual SizeSet metadata/reference ownership; borrowed membership alone is not a complete set.
   Children .a core exact reference/current-view bridge; .b owned common membership/axis/break sources;
   .c owned chart-family/context composition. Design retains a reference, not an embedded size list.
@@ -860,7 +860,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0359 common SizeSet metadata/D255; [whole scope/proof](../history/stitchcad-devnotes-part511.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual owned chart-family sources/context composition, then complete reference/source acceptance.
   Children .1 owned garment sources; .2 owned MTM sources; .3 unified external source-host acceptance.
 - ID: `G1-SLICE.6.4.2.d.4.3.c.1`
@@ -870,7 +870,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0361 owned MTM sources/D256; [whole scope/proof](../history/stitchcad-devnotes-part513.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: unified actual external set sources and exact Design-reference/host acceptance.
   Children .a owned unified inventory; .b actual measurement/set source-host port; .c coupled acceptance.
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.a`
@@ -878,24 +878,23 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0362 owned external set inventory; [whole scope/proof](../history/stitchcad-devnotes-part514.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.b`
   Status: `done`
-  Goal: actual combined sources and readonly core metadata/exact-SizeSet facets; no reverse dependency.
-  - [x] REPRODUCE / ISSUE: actual source roles must include complete set metadata, not canonical
-    numeric presence; cargo test -p sc-measure --test design_sources_contract gives4/0 rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): core needs an immutable higher provider and exact external-pin
-    facet; cargo test -p sc-measure --test design_sources_contract gives4/0 rc=0;
-    core metadata8/available-break1 also pass0, target/design-sources-*-0363.log.
-  - [x] FIX: private actual sources, complete typed stable catalog/current checks and original causes;
-    native4+8+1 rc=0 proves actual canonical borrows, unselected-source refusal and numeric-role separation.
-  - [x] ADDRESSED: selected native13/privacy2 pass0; cargo test -p sc-measure --doc
-    design_sources::DesignSources rc=0 preserves private/shared source ownership.
-  - [x] NO REGRESSION: strict core/selected-measure Clippy/fmt/book/publication79/123/1457/2397
-    pass0; C1 generic-kind row corrected to preserve D250132 exact baseline rows, glossary rc=1.
-  - [x] LOCKSTEP: book/API/decision/status/index/pointer aligned; transition_receipts.py514
-    compares4 exact Git spans rc=0, whole0362/wanted proofs; caps unchanged; G1still6/18.
-    promotion: promoted to docs/decisions/decision_design-host.md. Commit0363; .3.c scope acceptance next.
+  Goal:0363 actual combined core source facets; [whole scope/proof](../history/stitchcad-devnotes-part515.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.c`
-  Status: `pending`
-  Goal: coupled actual host/selected external reference acceptance, preserving profile-role deferrals.
+  Status: `done`
+  Goal: scoped actual family/pin/profile-deferral acceptance; correct D257 stale availability.
+  - [x] REPRODUCE / ISSUE: rg finds superseded MTM/combined-host deferrals; git log -S traces
+    the footer to18541af, actual implementations b70f01b/b0c43c9, rc=0. D257 owned/fixed here.
+  - [x] ROOT CAUSE (WHY + WHERE): appended APIs left older availability footers intact; exact
+    source pin/family/symbolic cargo test filters pass1 each/0 failures rc=0, target/source-acceptance-*-0364.log.
+  - [x] FIX: guide/decision/implementation row name actual owners and retain later Design/physical
+    boundaries; native3/0 rc=0 preserves exact source pins, singleton provenance and G4 deferrals.
+  - [x] ADDRESSED: exact design_sources_contract pin, size_set_inventory_contract family and
+    notch_contract symbolic filters pass1 each rc=0 through local_environment.py; Rust unchanged.
+  - [x] NO REGRESSION: book/publication79/123/1457/2397 pass0; D250132 exact baseline
+    rows/delta0, glossary rc=1. Full root/execution/physical/integration/CI retains existing later owners.
+  - [x] LOCKSTEP: docs/defect/status/index/pointer aligned; transition_receipts.py515 compares3
+    exact Git spans rc=0. Source/SizeSet subtree closes within focused scope; caps unchanged; G1still6/18.
+    promotion: declined (existing ownership/profile-boundary rules). Commit0364; .d.4.4 Design composition next.
 - ID: `G1-SLICE.6.4.2.d.4.4`
   Status: `pending`
   Goal: compose actual owned Design sources, identity scopes and focused binding/privacy acceptance.

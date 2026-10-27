@@ -8,7 +8,7 @@ requires the named contracts and later proof owners.
 
 | Family | Roadmap | Public source and verification | Book contract |
 | --- | --- | --- | --- |
-| Owned metadata port | §3.1/§4.4; G1 | sc-core design; G1-SLICE.6.4.2.d.4.1 | [Current host guards](../spec/design-inputs.md); actual MeasurementInputs adapter available; full Design follows |
+| Owned source metadata | §3.1/§4.4; G1 | sc-core/sc-measure; G1-SLICE.6.4.2.d.4.3 | [Actual sources and exact set pins](../spec/design-inputs.md); focused ownership checks; full Design follows |
 | Units/tolerances | §4.2; G0/G1 | sc-units; G1-SLICE.2/.5a.3c.1 | [Numerical contract](../spec/units-and-tolerances.md), [wide rounding](numeric-rounding.md) |
 | Declared command catalog | §4.4/§7.8; G1 | sc-core command; G1-SLICE.6.1 | [Typed discovery](../spec/command-layer.md#implemented-typed-catalog); handlers/authority execution follow |
 | Initial query requests | §4.4; G1 | sc-core command; G1-SLICE.6.2.2.c.1 | [Pinned piece/seam intents](../spec/command-layer.md#implemented-initial-query-requests); auth/handlers follow |

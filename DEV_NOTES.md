@@ -3,28 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual combined source host through readonly core facets
+## _(2026-10-27 UTC)_ — scoped source/SizeSet acceptance and availability alignment
 
-0363 DesignSources privately owns actual MeasurementInputs and SizeSetInventory over explicit core
-canonical inputs. DesignMetadataHost lists exact actual owned metadata in original order, excluding
-canonical/evidence refs; added set/member/axis/value/break/chart/observation categories retain per-
-category authored indices across sets. A small category counter adds no semantic kind ordering.
-DesignSizeSetHost validates exact external refs through the actual complete current inventory.
-The core stays independent of higher schemas. Actual host current checks include unselected sources;
-direct measurement binding remains targeted, while DesignMetadata adds its whole-host and actual
-canonical-object guards. No context/value cache, profile lookup or readiness token is introduced.
-Native4 actual source/core8 existing/available-break1 pass0. Cases compare the exact26-row catalog,
-actual body pointers, full source refusal after replacement, canonical-id collisions and absent set
-metadata despite numeric presence. Privacy2/strict core and selected-measure lint/fmt/book/publication
-pass0. An initial generic category row declared SizeAxis/SizeBreak globally and hid2 D250 rows;
-scoping those names as enum variants restores the exact132 baseline, delta0; glossary rc=1.
-Continuity514 compares4 Git spans for whole0362 and historical wanted proof; functional guidance
-remains public. Caps unchanged; G1still6/18. Promotion: core-host decision records exact-set facet.
-.6.4.2.d.4.3.c.3.c scoped coupled acceptance next; full Design/execution/physical/profile/integration/CI
-remains unverified. G4 physical resolution still owns coincident numeric/profile roles.
+0364 reviews actual one-way source ownership, exact external pins, explicit garment/MTM provenance
+and unchanged physical Profile deferrals. Three existing exact filters pass1 each/0 failures: actual
+source pin vs numeric presence, both singleton families sharing actual canonical records, and symbolic
+Notch refs without physical quantities. This is focused structural/current-source acceptance, not
+full Design, evaluator, evidence, physical, integration or release proof. Source/SizeSet subtree closes;
+actual core/root composition .6.4.2.d.4.4 follows before readiness. G1 remains6/18.
+D257: guide common/garment footers and host decision still deferred implemented chart-family/combined
+ownership. git log -S traces the footer to0360; MTM/source implementations landed0361/0363. Appending
+new sections left conflicting old claims. Corrected earlier scopes and implementation-status row,
+retaining full Design/execution/physical/integration deferrals. D257 logged/owned/fixed in this leaf.
+Book/publication pass0; D250132 exact baseline rows/delta0, glossary rc=1. Whole0363 continuity515
+compares3 exact Git spans. Caps unchanged. Promotion declined: existing ownership/Profile rules.
+No new Rust algorithm, value lookup, broad verification or CI verdict is implied by this review.
 
 
-[Complete external SizeSet inventory lesson](docs/history/stitchcad-devnotes-part514.md) retains
+[Complete actual combined source-host lesson](docs/history/stitchcad-devnotes-part515.md) retains
 its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review

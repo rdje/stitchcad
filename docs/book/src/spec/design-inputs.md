@@ -90,8 +90,8 @@ cargo test -p sc-measure --test measurement_inputs_contract
 ## Owned common SizeSet metadata
 
 SizeSetMetadata owns exact membership, axes/member points, required dimensions/available breaks
-and an explicit Design table id. This is the common external SizeSet source component; chart-family
-ownership and full Design composition follow. Canonical values and measurement/Ease metadata stay
+and an explicit Design table id. Chart-family owners below reuse this common source component;
+full Design composition follows. Canonical values and measurement/Ease metadata stay
 in their original supplied owners. Empty break inventories can be valid drafts, without coverage.
 
 new(definition, &canonical, &inputs) checks all owned ids across canonical/measurement/Ease records,
@@ -141,7 +141,7 @@ Owned results may return; local views/contexts cannot escape.
 Partial chart/break drafts remain valid. validate_inputs_for requires the original structural
 coverage for Regeneration or GradeRules; it computes no geometry or unknown quantity. reference()
 retains the actual set/revision, identities() lists owned ids, and Debug reveals observation count.
-MTM/unified source-host composition and full Design/execution remain later owners.
+MTM and unified source hosts have separate contracts below; full Design/execution remain later owners.
 
 ```bash
 cargo test -p sc-measure --test garment_size_set_contract

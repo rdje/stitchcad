@@ -22,8 +22,8 @@ object membership; semantic correctness of the metadata-to-target relation belon
 implementation. Canonical replacement triggers current validation, without remembered success.
 
 MeasurementInputs now implements the port using actual owned records and original validators.
-Combined source-host/Design assembly and remaining cross-component identity scopes retain their
-following task children. Logical profile refs
+Full Design assembly and remaining cross-component identity scopes retain their task children.
+Logical profile refs
 and evaluation context pins keep their G4 deferrals even if canonical numeric ids happen to coincide.
 No lookup through a label, fallback value, profile selection, readiness or execution follows admission.
 
