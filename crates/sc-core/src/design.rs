@@ -43,6 +43,7 @@ mod host;
 mod inputs;
 mod layers;
 mod parameters;
+mod pockets;
 mod sewing;
 mod sewing_state;
 mod topology;
@@ -75,6 +76,7 @@ pub use parameters::{
     DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,
     DesignParameters,
 };
+pub use pockets::DesignPocketOpeningDeclaration;
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use sewing_state::{
     DesignSewing, DesignSewingDefinition, DesignSewingError, DesignSewingPosition,

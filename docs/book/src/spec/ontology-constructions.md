@@ -329,10 +329,9 @@ declaration existence/kind/domain/state and current composition registries befor
 profile fields report `DeferredToG4`; absence means only no profile field. Geometry/executed finishing
 remain G2/G3; every Hem retains `GeometricValidation::DeferredToG2`.
 
-`Hem::validate_current(piece, ledger, facing)` checks the original owner, depth domain, whole finish
-edge and original current Facing target in that order. Construction shares these rules. Facing
-validation borrows the actual object's current validator without cloning its definition. A healthy
-Facing and two live finish endpoints cannot conceal a deleted finish interior; held input stays intact.
+`Hem::validate_current(piece, ledger, facing)` shares birth rules: original owner, depth, whole finish,
+current Facing. It borrows the actual Facing validator without cloned definitions. Healthy Facing/
+finish endpoints cannot hide a deleted interior; held input stays intact.
 
 | API token | Meaning in the Hem implementation |
 | --- | --- |
@@ -410,17 +409,15 @@ copy/expected Piece ids. A pocket on `front-left` may use `bag-left`/`bag-right`
 distinct physical objects share pattern geometry. The served copy may explicitly be a component;
 G1 infers no construction support or recipe-cycle correctness.
 
-`Pocket::new` requires current copies/Pieces, unambiguous Piece ids, unique component copy ids,
-a live owned birth anchor and complete owned orientation intervals with uniquely resolved ends.
-`validate_current()` repeats target and placement checks. Removing a copy does not select its
-peer; assigning the same copy id to a different source Piece fails its explicit source guard.
-Historical anchors may resolve after split/reversal, while a split choice or deletion remains a
-visible refusal. Orientation cannot hide foreign or deleted middle geometry behind valid ends.
-Authored direction is separate from the copy's reflected geometry, which remains G2/V1 work.
+`Pocket::new` requires actual copies/unique Piece ids, unique component copies, a live owned anchor
+and complete owned orientation with unique ends. `validate_current()` repeats target/placement checks:
+missing copies never select peers; same-copy Piece reassignment refuses. Historical split/reversal
+may resolve, but choices/deletions stay visible. Live ends cannot hide foreign/lost middles.
+Direction remains separate from reflected geometry (G2/V1).
 
-PocketError position failures expose original AnchorError through `Error::source()`, retaining its
-pointer/raw repair data without dynamic Box indirection. RangeResolution stays data; placement,
-definitions and opening deferrals are unchanged.
+PocketError positions expose original AnchorError/pointer/repair data through `Error::source()`
+without dynamic Box wrapping. RangeResolution stays data; placement/definitions/opening deferrals
+are unchanged.
 
 `component(copy, plan, pieces)` borrows current Piece labels/material/raw contour evidence. Reordering
 components preserves targets; same-id replacement exposes current metadata without rewriting intent.
@@ -448,6 +445,21 @@ after named envelope checks. Profile openings add `Some(ProfileBindingValidation
 | `UnresolvedOrientation` | Raw incomplete interval or endpoint-choice evidence |
 | `OrientationOutsidePiece` | Some current orientation interval is foreign to the served Piece |
 
+### Original Pocket opening declarations
+
+```rust,ignore
+let openings = inputs.pocket_opening_declarations(&pockets)?;
+```
+
+The whole current input root is checked before views, even empty scope. Each view borrows authored
+index, actual Pocket/opening and canonical owner. Logical declaration/Profile ids retain original
+G3/G4 deferrals despite numeric matches. Debug shows origin only; placement/components, declaration
+domains/dependencies, physical opening and release remain separate.
+
+| API token | Meaning |
+| --- | --- |
+| `DesignPocketOpeningDeclaration` | Actual Pocket/opening/index/canonical borrow with original deferrals |
+
 ## Owned Pocket collection and current component intervals
 
 PocketInventory::new(pockets) owns exact authored order; duplicate ids retain first/repeated positions
@@ -459,11 +471,9 @@ let pockets = PocketInventory::new(vec![left_pocket, right_pocket])?;
 pockets.validate_current(&current_plan, &current_pieces, &ledger)?;
 ```
 
-The current query first revalidates the complete CutPlan against actual current Pieces, then each
-Pocket's targets/placement, then every authored component's full held intervals: boundary, holes and
-construction lines. Constructor success and individual component lookup cannot replace these checks.
-A plan built for cut-two cannot remain current after the same-id Pieces change to cut-four, even if
-each Pocket reference still finds its old copy. The original CutPlanError is retained as its cause.
+The query revalidates complete CutPlan/Pieces, each Pocket's targets/placement, then full component
+boundary/hole/construction intervals. Birth or component lookup cannot substitute: cut-two changing
+to cut-four refuses despite surviving copy refs, retaining original CutPlanError.
 
 Split a bag edge into thirds and delete its middle: placement/both endpoints may still resolve.
 ComponentRange retains actual Pocket/component copy/source Piece/edge position and live/repair/live
@@ -488,4 +498,4 @@ profile resolution G4 and physical geometry G2. Existing Pocket deferral queries
 Global identity joins with the rest of Design remain separate. See
 [the public source](../../../../crates/sc-core/src/ontology/pocket_inventory.rs).
 
-These layer/Hem APIs are component contracts; complete Design ownership and coupled acceptance remain pending.
+Layer/Hem components still require complete Design acceptance.

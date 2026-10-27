@@ -3,11 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0409 — correct D276 modelled-Fly documentation error
+## STITCHCAD-G1-0410 — borrow original logical Pocket opening declarations
 
-- Distinguish modelled Lining from Closure::new's existing pre-object Fly refusal in garment Rustdoc/book.
-- Native named Fly control passes1/0 before/after; constructor unchanged, env_fly/G7 and priority retained.
-- Book/fmt/publication/size synchronized; whole0408 cleanup/D276 opening/live defect row558 retained.
+- Whole-current-input preflight precedes actual Pocket/opening/index/canonical views, including empty scope.
+- Preserve logical declaration/Profile roles and G3/G4 deferrals despite numeric aliases; Debug hides authored content.
+- Native3/lifetime1/core+measure strict lint/fmt pass0; source/current-placement and physical readiness remain separate.
+- Book API/example and whole0409/D276 proof559 synchronized; unified current garment declarations follow.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -30,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part559](docs/history/stitchcad-devnotes-part559.md) | whole0409 D276 correction/lesson/ledger/retirement | 44 lines, 3823 bytes, sha256:c2f6aaf3… |
 | [part558](docs/history/stitchcad-devnotes-part558.md) | whole0408 cleanup/lesson/ledger/D276/live defect row | 50 lines, 4381 bytes, sha256:d730d802… |
 | [part557](docs/history/stitchcad-devnotes-part557.md) | whole0407 sources/lesson/ledger/retirement/live defect row | 49 lines, 4457 bytes, sha256:15000edd… |
 | [part556](docs/history/stitchcad-devnotes-part556.md) | whole0406 garment ownership/lesson/ledger/retirement | 49 lines, 4234 bytes, sha256:90a4a45a… |

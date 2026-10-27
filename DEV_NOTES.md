@@ -3,16 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — correct introduced modelled-Fly wording
+## _(2026-10-27 UTC)_ — original logical Pocket opening declarations
 
-0409 fixes D276: my0406 garment Rustdoc/book grouped modelled Lining with Fly without checking
-Closure::new's distinct existing admission guard. Git0c129f0 confirms both introduced claims; native
-fly_scope_refusal control passes1/0 before/after and proves env_fly/G7 precedes even empty instances/
-invalid source context, retaining closure/trousers-gap ids. Corrected wording admits modelled Lining;
-unsupported Fly definitions remain request input and no immutable Fly object is born. Constructor
-file byte-unchanged, affected fmt/book/publication/size0; no API/runtime change. Whole0408 cleanup/
-D276 opening/prior live row558 retains5 exact Git spans, retention0. Promotion: Design host decision.
-Original construction semantics stay enforced; .5.c declarations and .d.2 requested envelope remain.
+0410 rechecks the whole current input root even for empty Pocket scope, then borrows original
+Pocket/opening, authored index and single canonical owner. Declaration/Profile ids remain logical
+despite matching Length/Count/parameter ids. G3 opening/G4 Profile deferrals and None-as-absence
+remain original; Debug exposes source tag only. Native2 plus shared host-drift control1, lifetime1,
+core+measure strict lint/fmt pass0. Missing placement/component sources stay inspectable through this
+metadata-only API; no scalar, physical vocabulary/value/default or release certificate is created.
+Whole0409/D276 scopes559 retain4 exact Git spans; retention/book/publication/size0. Original book
+facts retained with repetition tightened. Promotion: Design host decision. Unified current garment
+query .c.2 must preflight actual whole garment sources before publishing any role views; .d.2 and
+full Design/runtime/physical/release proof remain owned.
+
+[Whole0409 D276 lesson](docs/history/stitchcad-devnotes-part559.md) retains original introduced claims, unchanged constructor and native before/after proof.
 
 [Whole0408 cleanup lesson](docs/history/stitchcad-devnotes-part558.md) retains preservation/residue proofs and D276 discovery/capture.
 

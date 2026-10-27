@@ -2262,7 +2262,20 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
         .gather_declarations(&constructions)
         .expect("stable whole context")
         .is_empty());
+    assert!(state
+        .pocket_opening_declarations(garment.pockets())
+        .expect("stable whole root")
+        .is_empty());
     state.sources().host().changed.set(true);
+    let pocket_error = state
+        .pocket_opening_declarations(garment.pockets())
+        .expect_err("whole root before empty opening list");
+    assert!(
+        matches!(&pocket_error, DesignInputsError::Sources(source) if matches!(source.as_ref(), DesignMetadataError::ChangedEntities))
+    );
+    assert!(std::error::Error::source(&pocket_error)
+        .expect("original metadata cause")
+        .is::<DesignMetadataError<DesignSourcesError>>());
     let admission = sc_core::design::DesignGarment::new(garment.definition().clone())
         .expect_err("current whole root admission");
     assert!(
@@ -2338,3 +2351,6 @@ mod garment_ownership;
 
 #[path = "support/garment_current.rs"]
 mod garment_current;
+
+#[path = "support/pocket_opening_declarations.rs"]
+mod pocket_opening_declarations;

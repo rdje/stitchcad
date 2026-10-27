@@ -19,6 +19,8 @@ answers: "does complete garment current validation include unused families and o
 
 answers: "can modelled Lining and Fly both enter immutable garment ownership?"
 
+answers: "can Pocket opening declarations become scalars when their ids match canonical inputs?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -135,3 +137,12 @@ an immutable Closure exists, even with no instances or invalid source context. T
 cannot admit modelled Fly into DesignGarment. Unsupported Fly definitions remain inspectable request
 input. D276 corrects newly introduced grouped Lining/Fly Rustdoc/book wording; constructor behavior
 and all original refusal priority remain unchanged.
+
+## Original logical Pocket openings — G1-SLICE.6.4.5.5.c.1
+
+The input-root query validates whole current sources before even empty Pocket scope, then borrows
+actual Pocket/opening, authored index and sole canonical owner. Logical declaration/Profile identities
+never convert to scalars; original G3 opening/G4 Profile deferrals remain and None means only no
+Profile field. Debug exposes source tag only. No physical opening vocabulary/value/default, current
+Pocket placement/component proof or release readiness is supplied; domain/operation resolution
+retains its recipe/G3/G4 owners. Unified garment joins remain the following .c.2 step.
