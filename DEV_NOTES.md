@@ -3,25 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — one-way owned Design metadata port
+## _(2026-10-27 UTC)_ — actual measurement metadata through the core host
 
-0356 core DesignMetadataHost is implemented by higher immutable metadata owners. DesignMetadata owns
-that host and an identity-only census, not canonical values or borrowed contexts. It checks duplicate
-ids/canonical collisions, revalidates actual host semantics and checks stable observable identities.
-Measurement reads require actual metadata role and the actual canonical dedicated length object;
-equal detached objects and canonical-id-only inference refuse. Original host errors remain typed
-and source-chained. Provider semantic correctness is an explicit integration obligation, not proved
-by the pointer guard. Public shared views grant no mutator; returned borrows retain both owners.
-Native8/privacy3/strict selected lint/fmt/book/publication pass0; D250132 rows exactly baseline, delta0.
-Whole0355 subtree and historical declaration proof section507 compare4 exact Git spans; commands and
-functional guidance remain public. Two map entries now point to TOOLBOX census commands instead of
-duplicating paths; generator unchanged, caps unchanged. Promotion: decision_design-host.md.
-G1still6/18; actual MeasurementInputs adapter .6.4.2.d.4.2 next. Full Design/SizeSet/profile/physical/
-execution/integration/CI is unverified. No reverse dependency or readiness token introduced.
+0357 MeasurementInputs implements DesignMetadataHost using its actual immutable source records.
+The census lists only owned landmarks/procedures/measurements/tables/Ease/sets in authored family
+order, excluding canonical and referenced ids. Whole validation calls existing actual validators;
+selected binding queries use the original record context and Measurement declaration lookup.
+Direct trait binding is targeted; DesignMetadata adds whole-scope/current canonical-object checks.
+No copied values, stored contexts, fallback or reverse dependency. MeasurementHostError retains
+original inventory/context/binding causes and source chains. Actual fixture cases verify11 metadata
+positions, both explicit body/garment targets, unknown state, missing-id non-inference, same-id
+scalar-family refusal and revalidation of forbidden negative amounts in unused mappings.
+Native12/privacy2/strict selected lint/fmt/book/publication pass0. D250132 rows exactly baseline,
+delta0; full glossary rc=1. Whole0356 and historical phase-guard section508 compare4 exact Git spans;
+public guard behavior/current commands remain live. Caps unchanged; G1still6/18. Promotion declined:
+existing core-host decision implemented. .6.4.2.d.4.3 actual SizeSet/reference scope follows; no full
+Design/execution/physical/profile/integration/CI claim.
 
 
-[Complete selected-context/G4 boundary lesson](docs/history/stitchcad-devnotes-part507.md) retains
-its original source scope, checks and promotion decision.
+[Complete core metadata-host lesson](docs/history/stitchcad-devnotes-part508.md) retains
+its original trust boundary, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review
 

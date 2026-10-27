@@ -1,6 +1,10 @@
 //! Whole owned measurement/Ease sources retain current amount, membership and repair obligations.
 #![allow(clippy::expect_used)]
 use sc_core::{
+    design::{
+        DesignHostEntity, DesignHostEntityKind as HostKind, DesignMetadata, DesignMetadataError,
+        DesignMetadataHost,
+    },
     name::MachineToken,
     ontology::EntityId,
     value::{
@@ -12,12 +16,12 @@ use sc_core::{
 use sc_measure::{
     CompressionPermission, Ease, EaseBinding, EaseDefinition, EaseError, EaseSet, EaseSetContext,
     EaseSetDefinition, EaseSetError, EaseSide, FitIntent, Landmark, LandmarkDefinition,
-    Measurement, MeasurementContext, MeasurementDefinition, MeasurementInputs as Inputs,
-    MeasurementInputsDefinition as Definition, MeasurementInputsError as Error,
-    MeasurementInputsPosition as Position, MeasurementInventory, MeasurementInventoryDefinition,
-    MeasurementInventoryPosition as MetadataPosition, MeasurementKind as Kind,
-    MeasurementProcedure, MeasurementProcedureDefinition, MeasurementTable,
-    MeasurementTableContext, MeasurementTableDefinition, MeasurementTableError,
+    Measurement, MeasurementContext, MeasurementDefinition, MeasurementHostError,
+    MeasurementInputs as Inputs, MeasurementInputsDefinition as Definition,
+    MeasurementInputsError as Error, MeasurementInputsPosition as Position, MeasurementInventory,
+    MeasurementInventoryDefinition, MeasurementInventoryPosition as MetadataPosition,
+    MeasurementKind as Kind, MeasurementProcedure, MeasurementProcedureDefinition,
+    MeasurementTable, MeasurementTableContext, MeasurementTableDefinition, MeasurementTableError,
 };
 use sc_units::{Length, Unit};
 
@@ -174,6 +178,133 @@ fn fixture(inputs: &CanonicalInputs) -> Definition {
         eases,
         ease_sets,
     }
+}
+
+#[test]
+fn actual_host_enumerates_only_owned_metadata_and_resolves_exact_canonical_bindings() {
+    let canonical = unknown();
+    let inputs = Inputs::new(fixture(&canonical), &canonical).expect("actual complete sources");
+    let expected = [
+        (10, HostKind::Landmark, 0),
+        (11, HostKind::Landmark, 1),
+        (20, HostKind::Procedure, 0),
+        (21, HostKind::Procedure, 1),
+        (30, HostKind::Measurement, 0),
+        (31, HostKind::Measurement, 1),
+        (40, HostKind::MeasurementTable, 0),
+        (50, HostKind::Ease, 0),
+        (51, HostKind::Ease, 1),
+        (60, HostKind::EaseSet, 0),
+        (61, HostKind::EaseSet, 1),
+    ]
+    .map(|(bits, kind, index)| DesignHostEntity {
+        id: id(bits),
+        kind,
+        index,
+    });
+    let metadata = DesignMetadata::new(inputs, &canonical).expect("actual core host admission");
+    assert_eq!(metadata.entities(), &expected);
+    assert_eq!(metadata.host().entities(), expected);
+    for (measurement, target) in [(30, 1), (31, 2)] {
+        let actual = metadata
+            .measurement_declaration(id(measurement), &canonical)
+            .expect("actual explicit measurement binding");
+        assert!(core::ptr::eq(
+            actual,
+            canonical
+                .length(id(target))
+                .expect("actual canonical length")
+        ));
+        assert_eq!(
+            actual.state(),
+            &LengthState::Unknown {
+                observation: id(901)
+            }
+        );
+    }
+    assert_eq!(
+        DesignMetadataHost::measurement_declaration(metadata.host(), id(1), &canonical),
+        Err(MeasurementHostError::MissingMeasurement { measurement: id(1) })
+    );
+}
+
+#[test]
+fn host_current_read_rechecks_actual_unused_ease_permission_and_retains_original_cause() {
+    let original = unknown();
+    let mut definition = fixture(&original);
+    definition.ease_sets.clear();
+    let metadata = DesignMetadata::new(
+        Inputs::new(definition, &original).expect("actual current sources"),
+        &original,
+    )
+    .expect("original scope admitted");
+    let replacement = canonical(LengthState::Assumed {
+        value: Length::from_micrometres(-1).expect("signed value"),
+        assumption: id(907),
+    });
+    let expected = metadata
+        .host()
+        .validate_current(&replacement)
+        .expect_err("negative forbidden Ease");
+    assert!(matches!(&expected, Error::Ease { ease, .. } if *ease == id(50)));
+    let error = metadata
+        .measurement_declaration(id(30), &replacement)
+        .expect_err("whole host rechecked");
+    assert_eq!(
+        error,
+        DesignMetadataError::Host(MeasurementHostError::Inputs(Box::new(expected.clone())))
+    );
+    use std::error::Error as _;
+    assert_eq!(
+        error
+            .source()
+            .and_then(|source| source.source())
+            .and_then(|source| source.downcast_ref::<Error>()),
+        Some(&expected)
+    );
+    assert!(metadata.measurement_declaration(id(30), &original).is_ok());
+}
+
+#[test]
+fn actual_host_does_not_rescue_missing_dedicated_length_with_general_scalar_peer() {
+    let original = unknown();
+    let metadata = DesignMetadata::new(
+        Inputs::new(fixture(&original), &original).expect("actual original bindings"),
+        &original,
+    )
+    .expect("original host admitted");
+    let replacement = CanonicalInputs::new(
+        original
+            .lengths()
+            .iter()
+            .filter(|record| record.id() != id(1))
+            .cloned()
+            .collect(),
+        vec![
+            ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+                id: id(1),
+                source: id(900),
+                kind: ScalarInputKind::Length,
+                state: ScalarInputState::Unknown {
+                    observation: id(901),
+                },
+            })
+            .expect("same-id general length peer"),
+        ],
+    )
+    .expect("disjoint actual representation families");
+    assert_eq!(
+        DesignMetadataHost::measurement_declaration(metadata.host(), id(30), &replacement),
+        Err(MeasurementHostError::Measurement {
+            measurement: id(30),
+            issue: Box::new(sc_measure::MeasurementError::MissingDeclaration(id(1)))
+        })
+    );
+    assert!(matches!(
+        metadata.measurement_declaration(id(30), &replacement),
+        Err(DesignMetadataError::Host(MeasurementHostError::Inputs(_)))
+    ));
+    assert!(metadata.measurement_declaration(id(30), &original).is_ok());
 }
 
 #[test]

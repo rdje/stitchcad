@@ -4,15 +4,18 @@ Newest first: one section per completed slice, in commit order. Older slices liv
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
 
-## STITCHCAD-G1-0356 — check owned metadata through a one-way core host port
 
-- Add readonly DesignMetadataHost and private DesignMetadata owner with typed current host refusals.
-- Check identity census/canonical disjointness and exact canonical measurement object membership; no inferred values/bindings.
-- Native8/privacy3/strict selected lint/fmt/book/publication pass0; D250132 rows exactly baseline, delta0.
-- Whole0355 subtree/historical declaration proofs507 match4 Git spans; functional commands retained; caps unchanged.
-- G1still6/18; actual measurement adapter next. Full Design/SizeSet/profile/execution/integration/CI remains pending.
+## STITCHCAD-G1-0357 — bind actual measurement metadata through the core host
+
+- Implement the readonly core port with exact MeasurementInputs records, six-family census and original validators.
+- Retain typed host errors; direct binding is targeted, checked DesignMetadata reads validate the whole actual scope.
+- Native12/privacy2/strict selected lint/fmt/book/publication pass0; D250132 rows exactly baseline, delta0.
+- Whole0356 and historical phase guards508 match4 Git spans; current behavior/commands retained; caps unchanged.
+- G1still6/18; actual SizeSet/reference scope next. Full Design/execution/physical/integration/CI remains pending.
 
 # Sealed archive — earlier slices
+
+| [part508](docs/history/stitchcad-devnotes-part508.md) | whole0356 core-host and historical phase guards | 76 lines, 6172 bytes, sha256:b7b854f3… |
 
 | [part507](docs/history/stitchcad-devnotes-part507.md) | whole0355 subtree and historical declaration proofs | 164 lines, 11748 bytes, sha256:21c5f7e5… |
 

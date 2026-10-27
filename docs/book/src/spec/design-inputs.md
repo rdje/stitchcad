@@ -1,8 +1,8 @@
 # Owned Design metadata sources
 
 `DesignMetadata<H>` owns a DesignMetadataHost and its identity census; CanonicalInputs owns values.
-Higher crates implement this core port without reversing dependencies. Actual adaptation and full
-Design assembly follow; admission selects no table, SizeSet or Factory Profile.
+MeasurementInputs implements this core port without reversing dependencies. Full Design assembly
+follows; admission selects no table, SizeSet or Factory Profile.
 
 ## Admission and current reads
 
@@ -58,9 +58,30 @@ Default Debug exposes only the entity count.
 Other Design identities, SizeSet metadata, formula source composition and whole readiness retain
 separate owners. Profile ids, labels and result claims cannot resolve physical fields, including when
 an id coincides with a numeric declaration; [G4 profile boundaries](material-inputs.md) still apply.
-Focused native and privacy checks cover this port; full host/Design execution and integration remain
+Focused native and privacy checks cover this port; full Design execution and integration remain
 unverified. Run the focused contract through the local producer profile:
 
 ```bash
 cargo test -p sc-core --test design_metadata_contract
+```
+
+## Actual measurement host
+
+MeasurementInputs implements the port with owned landmarks, procedures, measurements, tables,
+Ease mappings and sets, in that order and their authored order within each family. Referenced
+canonical/evidence ids are excluded. Whole validation uses its actual current validators, including
+unused mappings and compression permission. Measurement bindings use actual metadata and the
+borrowed record context; a general scalar peer cannot replace a dedicated length target.
+
+| API or variant | Meaning |
+| --- | --- |
+| `MeasurementHostError` | Original typed sc-measure port refusal |
+| `Inputs`, `RecordContext`, `Measurement` | Whole inventory, target context or explicit binding cause |
+| `MissingMeasurement` | Actual measurement metadata is absent |
+
+The direct trait binding method checks the selected declaration/context only. DesignMetadata adds
+whole-scope validation and canonical object membership. No borrowed context is stored.
+
+```bash
+cargo test -p sc-measure --test measurement_inputs_contract
 ```

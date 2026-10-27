@@ -844,28 +844,25 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   SizeSet/reference ownership; .4 owned Design composition and focused coupled acceptance.
 - ID: `G1-SLICE.6.4.2.d.4.1`
   Status: `done`
-  Goal: readonly core host port and private checked metadata owner; actual host validators retain
-  typed errors, owned-id census stays disjoint from canonical values, and measurement reads borrow
-  the actual supplied canonical length. No reverse dependency, inferred binding or profile resolver.
-  Own focused native/privacy/lint/book checks; complete0355/subtree and historical book-proof
-  continuity507 before growth; orientation-only map curation for a dedicated ownership decision.
-  - [x] REPRODUCE / ISSUE: core cannot own higher metadata through a reverse dependency;
-    cargo test -p sc-core --test design_metadata_contract passes8/0, rc=0, target/design-host-native-0356.log.
-  - [x] ROOT CAUSE (WHY + WHERE): standalone metadata claims do not establish canonical membership;
-    detached/equal-id cases in design_metadata_contract pass8/0, rc=0, through local_environment.py.
-  - [x] FIX: private generic host owner, actual current validators and canonical pointer membership;
-    native8/0 rc=0 retains typed causes, authored witnesses and unknown state without inference.
-  - [x] ADDRESSED: selected native8/privacy3 pass0; cargo test -p sc-core --doc design::host::DesignMetadata
-    rc=0 proves private/shared access and context lifetime, target/design-host-privacy-0356.log.
-  - [x] NO REGRESSION: strict selected Clippy/fmt/book/publication pass0; D250132 exact baseline
-    rows/delta0, full glossary rc=1. Full adapter/Design/integration/CI remains deferred.
-  - [x] LOCKSTEP: core port chapter/API/decision/index/pointer aligned; continuity507 compares4
-    exact Git spans rc=0. Map curated from duplicated census paths; ceilings unchanged; G1still6/18.
-    promotion: promoted to docs/decisions/decision_design-host.md. Commit0356; actual adapter .4.2 next.
-    Initial hook refused a323B status row; tightened to315B within320B; no ceiling changed.
+  Goal:0356 checked core metadata-host port; [whole scope/proof](../history/stitchcad-devnotes-part508.md).
 - ID: `G1-SLICE.6.4.2.d.4.2`
-  Status: `pending`
+  Status: `done`
   Goal: implement the port using actual MeasurementInputs metadata, references and current validators.
+  Own exact six-family census, original typed host errors and actual measurement-to-canonical reads;
+  focused existing fixture acceptance/lint/book sync and whole0356/phase-guard continuity508.
+  - [x] REPRODUCE / ISSUE: actual higher metadata must implement the core port without copied values;
+    cargo test -p sc-measure --test measurement_inputs_contract passes12/0 rc=0, target/measurement-host-native-0357.log.
+  - [x] ROOT CAUSE (WHY + WHERE): the core port alone cannot establish measurement-to-target semantics;
+    actual adapter cases in measurement_inputs_contract pass12/0 rc=0 through local_environment.py.
+  - [x] FIX: actual six-family owned census and original current validators/binding queries;
+    native12/0 rc=0 confirms pointer membership, family refusal and unused compression revalidation.
+  - [x] ADDRESSED: selected native12/privacy2 pass0; cargo test -p sc-measure --doc inputs::MeasurementInputs
+    rc=0 retains private/shared ownership; target/measurement-host-privacy-0357.log.
+  - [x] NO REGRESSION: strict selected Clippy/fmt/book/publication79/115/1456/2390 pass0;
+    D250132 exact baseline rows/delta0, glossary rc=1; full Design/execution/integration/CI deferred.
+  - [x] LOCKSTEP: actual adapter chapter/API/decision/index/pointer aligned; continuity508 compares4
+    exact Git spans rc=0. Historical guard receipts retained; caps unchanged; G1still6/18.
+    promotion: declined (implements existing core-host ownership decision). Commit0357; .4.3 SizeSet scope next.
 - ID: `G1-SLICE.6.4.2.d.4.3`
   Status: `pending`
   Goal: actual SizeSet metadata/reference ownership; borrowed membership alone is not a complete set.

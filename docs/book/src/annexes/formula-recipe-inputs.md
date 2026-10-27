@@ -305,20 +305,12 @@ browser execution (.12), G2/G3 geometry and G7 human approval remain separately 
 
 ## Pure input-review and phase reference guards
 
-The input-review reference validates its complete twenty-source population before loading the
-byte-contract provider. It adopts that provider's actual local-environment profile and rechecks
-before reading the worked example chapter and each fixture. Its exported rows(name) validates the
-exact selected path on every call: a regular file on the same workspace volume is accepted,
-including a read-only hard link; a missing file, symlink, directory, outside path or nested Git
-boundary refuses before reading. Valid borrowed fixtures retain their original row values.
-
-The whole-phase reference validates ten sources before loading its namespace provider. Importing
-it only exposes the library; contracts(replacement=None, verbose=True) rechecks before each
-reference load. Ordinary CLI mode runs the original584 controls. --mutations additionally compiles
-all eleven original replacements in memory and requires actual D148 body assertion failures,
-checking source bytes before and after. It writes no source or diagnostic files and starts no child.
-Both libraries retain unrelated caller environment values and argument objects, and neither creates
-stores nor activates the producer environment. Refusals print local-environment: REFUSED and exit2.
+These read-only references validate actual inputs before each provider/fixture read. Regular
+same-volume files, including read-only hard links, are accepted; links, missing/outside paths and
+nested Git boundaries refuse. Import exposes the library without activating stores or children;
+caller environment and arguments remain unchanged. Diagnostic dispatch is separate from real CLI
+behavior. Historical counts, fault sets and complete receipts remain in
+`docs/history/stitchcad-devnotes-part508.md`, retrievable through history_archive.py read.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_reference.py
@@ -326,8 +318,5 @@ python3 -I -B docs/tasks/artifacts/formula_structure/whole_phase_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/whole_phase_contract.py --mutations
 ```
 
-Independent captures retain all original assertions, complete contract bodies, fault tuples and
-argument behavior. Actual guard omissions, provider identity failures, unsafe physical inputs and
-repeated post-import source changes calibrate the boundary separately from real CLI runs. The worked
-review still covers21 statements/25 operands and13 refusals split3 syntax/10 deferred semantic;
-it supplies no independent whole-recipe parser or execution approval.
+The in-memory mutation mode requires actual body assertion failures and exact unchanged source;
+it writes no source/diagnostics and starts no child. This review grants no execution approval.

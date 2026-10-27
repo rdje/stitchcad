@@ -42,6 +42,9 @@ pub use inputs::{
     MeasurementInputsPosition,
 };
 
+mod host;
+pub use host::MeasurementHostError;
+
 mod ease;
 pub use ease::{CompressionPermission, Ease, EaseDefinition, EaseError, EaseSide, FitIntent};
 

@@ -113,3 +113,4 @@ shared canonical input target	spec/measurement-inputs.md	crates/sc-core/src/valu
 Material property sources	spec/material-inputs.md	crates/sc-core/src/ontology/material.rs	Material	G1-SLICE.6.4.2.d.3.2	4.1
 Material collection and Piece assignments	spec/material-inputs.md	crates/sc-core/src/ontology/material_inventory.rs	MaterialInventory	G1-SLICE.6.4.2.d.3.3	4.4
 owned Design metadata port	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignMetadata	G1-SLICE.6.4.2.d.4.1	4.4
+actual measurement host	spec/design-inputs.md	crates/sc-measure/src/host.rs	MeasurementHostError	G1-SLICE.6.4.2.d.4.2	4.4

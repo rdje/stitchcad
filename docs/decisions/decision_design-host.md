@@ -21,8 +21,9 @@ length inventory. Equal identity/content on a detached declaration is insufficie
 object membership; semantic correctness of the metadata-to-target relation belongs to the actual host
 implementation. Canonical replacement triggers current validation, without remembered success.
 
-The first port is not full Design assembly: actual measurement/Ease implementation, SizeSet ownership
-and other cross-component identity scopes retain the following task children. Logical profile refs
+MeasurementInputs now implements the port using actual owned records and original validators.
+The port is not full Design assembly: SizeSet ownership and other cross-component identity scopes
+retain the following task children. Logical profile refs
 and evaluation context pins keep their G4 deferrals even if canonical numeric ids happen to coincide.
 No lookup through a label, fallback value, profile selection, readiness or execution follows admission.
 
