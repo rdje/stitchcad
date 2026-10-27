@@ -69,3 +69,35 @@ silent gap into tracked work.
   the same commit — the note is the record of what is and is not enforced.
 - Related: [[decision_adopted-external-policy-references]] (how external policy is adopted at all),
   [[decision_scaffold-sync-protects-project-content]] (why this file cannot be clobbered by a sync).
+
+## Maintained product book — design adopted by G1-SLICE.6.5.1
+
+answers: "how can the growing product book preserve readable examples without arbitrary aggregate cap increases?"
+
+At d0481b5, the book occupies1199996/1200000 bytes and all80 allowed Markdown files; native file
+census and LIVE-DOC-SIZE agree. Repeated prose tightening now consumes feature work and risks
+readability. The source doctrine classifies unique maintained product/specification prose as
+maintained_reference: govern exact aggregate changes, keeping semantic parts and complete mandatory
+navigation bounded. This is the book's information role, not chronological evidence for an archive.
+
+Adopt that contract locally under .6.5.book: bounded data-only control, exact current content/counts,
+baseline revision/tree identity and signed per-change delta tied to a fresh owning task. Refuse
+inexact/stale/reused/banked authority, same-size content substitution, missing/duplicate/index-external
+chapters, links/foreign paths and oversized parts/index. Preserve all readable current chapters,
+examples, URLs, per-part700L/40960B/440B and SUMMARY120L/8192B/240B bounds. Fix aggregate
+file/line/byte targets as explicitly inapplicable only when the full replacement guard lands atomically.
+Until then, the existing80-file/20000-line/1200000-byte ceilings stay enforced; no cap is raised.
+Full neutral-package/version-retention adoption remains separate. Source policy is already local;
+no project dependency or writes cross repository boundaries. Implementation/refusal/feature acceptance
+are three owned leaves before new bus documentation; this section is design authority, not a claim
+that the new guard has passed or been installed.
+
+The replacement checker is read-only and uses this repository's Git history for freshness. Candidate
+mode requires the exact HEAD baseline; committed mode binds the latest authority-file change to its
+first parent, then checks the current book digest. Unchanged book content may retain its authority;
+returning an old control or changing equal-size content cannot bypass freshness. Authoring writes
+only the project-local control, never source chapters; CI runs the resulting-tree check unconditionally.
+Tests use ordinary candidate directories under target and read this repo's Git; no other Git repo is
+created or amended. Committed-mode proof is scheduled after atomic adoption, never simulated as an
+observed commit verdict. Exact control schema/bounds, index grammar and hash framing land in .book.1;
+.book.2 wires producer/checker/classification atomically; .book.3 closes actual committed acceptance.

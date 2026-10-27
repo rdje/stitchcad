@@ -42,7 +42,8 @@ impl<H: DesignReferenceHost> DesignGarment<H> {
     /// Closure::new before an immutable Closure can exist; this check retains that original guard.
     /// It does not validate ownership, host metadata, sources, logical domains or geometry, read
     /// canonical values, execute operations, or certify physical support/completeness/release.
-    /// Inspect held content freely; an execution path must apply this guard before its other checks.
+    /// Inspect held content freely. Within authorized execution, apply this guard before geometry
+    /// or operation execution; it does not replace authentication or effect-boundary authorization.
     /// # Errors
     /// Returns the first original named scope cause, preserving authored positions and source chains.
     pub fn require_in_scope(&self) -> Result<(), DesignGarmentEnvelopeError> {

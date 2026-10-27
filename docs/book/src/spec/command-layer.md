@@ -97,8 +97,8 @@ declared commands in §1.1. Each identity supplies its class, required authority
 undo granularity as typed metadata. Stable tokens are independent of localized labels. Lookup
 does not trim, case-fold or invent aliases; unknown names return None.
 
-This is declaration discovery. Catalog membership does not advertise an executable handler,
-construct a payload, grant authority or perform a transaction. Approve is required metadata for
+Catalog membership neither advertises a handler nor constructs payloads, grants authority or
+performs transactions. Approve is required metadata for
 human approval, never an agent-held grant. Mutation previews still need only inspect; the catalog
 reports the permission required to issue the declared command itself. Typed inputs are available below;
 authenticated actors/scopes, structural checks, revisions, transactions and workflow parity remain G1.6.
@@ -124,8 +124,9 @@ assert_eq!(request.mutation_context(), None);
 
 All17 declared commands have typed inputs; evaluation/artifact/release details remain in their
 linked chapters. This shared in-process input is not a wire schema or an executable bus.
-Core authorization must authenticate callers and validate grants/current sources before handlers run.
-An agent can submit an approval intent as untrusted data; only authenticated human authority can accept it.
+Authenticate and validate grants/current sources before handlers. Within authorized execution,
+scope precedes geometry; reauthorize at publication. Agent approval intents stay untrusted; only
+authenticated humans may accept.
 
 ### Implemented initial query requests
 

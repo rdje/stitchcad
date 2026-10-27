@@ -1182,8 +1182,18 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 ## D271–D276 — original causes, native controls and Fly correction
 [D271/D272](../history/stitchcad-devnotes-part547.md), [D273](../history/stitchcad-devnotes-part551.md),
 [D274/D275](../history/stitchcad-devnotes-part554.md), [D276 corrected0409](../history/stitchcad-devnotes-part559.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part563.md:4 spans
-  rc=0; whole0413 acceptance/lesson/ledger/retirement retained.
-- [x] ADDRESSED: same rc=0; exact scoped native17/privacy3 and source census preserved.
-- [x] NO REGRESSION: aggregate native2/owner privacy-lifetime12/measure strict lint/fmt/book/publication/
-  size/retention rc=0; actual bus/runtime/physical/release proof remain.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part564.md:4 spans
+  rc=0; completed aggregate subtree/0414 scopes retained.
+- [x] ADDRESSED: same rc=0; whole original proofs and all live node identities preserved.
+- [x] NO REGRESSION: authorization1/garment-scope3/affected fmt/book/publication/size/retention rc=0;
+  bus/book-contract implementation and full runtime/physical/release proof remain.
+
+## D277 — broad envelope Rustdoc implied checks before authentication
+
+P3 corrected0415, owner G1-SLICE.6.5.1. My0412 garment_scope.rs said scope before all other checks;
+source/native auth contract requires identity/grants before handlers. Narrow Rustdoc/book to geometry/
+operations within authorized execution; no runtime behavior changed. Native auth1/scope3/fmt0.
+- [x] ROOT CAUSE: git show d0481b5:crates/sc-core/src/design/garment_scope.rs:1 original phrase rc=0;
+  auth source/book review rc=0 confirms qualification was missing.
+- [x] ADDRESSED: native auth1/garment-scope3 rc=0; original named causes and constructors unchanged.
+- [x] NO REGRESSION: affected fmt/book/publication/size/retention rc=0; .6.5.book and actual bus stay owned.

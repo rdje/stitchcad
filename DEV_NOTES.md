@@ -3,18 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — coupled aggregate and private-owner acceptance
+## _(2026-10-27 UTC)_ — bus staging and maintained-book design
 
-0414 adds2 real aggregate controls: supported current root lends identical canonical objects/report;
-unused third Piece keeps born input after two splits/middle deletion. Garment sources/declarations
-pass and ledger point-only readiness stays Releasable, while the full report retains live ends plus
-three portions/one repair and refuses readiness. All2 pass0. Exact five owner/report rustdoc filters
-pass2+2+3+3+2=12, independent annotations agree. Copy lint corrected, native2 rerun/strict measure
-lint/fmt0; production core unchanged. Whole0413 scopes563 retain4 exact Git spans; retention/book/
-publication/size0. Promotion: Design host decision. Original book facts/examples retained with
-canonical links/tighter sewing prose. Implemented aggregate acceptance closes, without conflating
-source/metadata/scope/topology proofs; actual bus, evaluator/operations, runtime/storage/app/physical/
-release remain owned. G1still6/18; full CI remains pre-push/milestone scope.
+0415 records authorized bus stages and concrete handler/evaluator dependencies before code. D277
+corrects my0412 unqualified "before other checks" envelope Rustdoc: within authorized execution,
+scope precedes geometry/operations; authentication/effect-boundary authorization remain required.
+Native auth1/garment-scope3/affected fmt0; behavior unchanged. Book census at d0481b5 is1199996B,
+all80 files; current fixed ceiling leaves4B and repeatedly forces prose squeezing. Adopt maintained
+reference contract by information role, as the local source doctrine requires: bounded parts/index,
+complete navigation and exact fresh owned baseline/delta/content authority. Existing caps stay until
+replacement/integration/native committed acceptance .6.5.book.1–.3 land. No new guard is claimed.
+Promotion: containment adoption decision. Whole completed .6.4 tree/0414 scopes564 preserves4 exact
+Git spans/all98 live ids; retention/book/publication/size0. Actual bus/evaluator/runtime/app/physical/
+release remain owned. No other Git repository is created/amended; tests will read this repo's Git.
+
+[Whole0414 aggregate lesson](docs/history/stitchcad-devnotes-part564.md) retains native2/privacy12 and unused-Piece repair proof.
 
 [Whole0413 garment acceptance lesson](docs/history/stitchcad-devnotes-part563.md) retains native17/privacy3 and independent census.
 

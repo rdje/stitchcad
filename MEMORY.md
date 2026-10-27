@@ -2,16 +2,19 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
--0414 complete: implemented coupled aggregate acceptance native2/owner privacy-lifetime12 pass0,
- strict measure lint/fmt0, core unchanged. Actual unused third Piece's lost middle keeps live points
- and valid garment sources/roles, but whole-Piece report is not ready (three portions/one repair).
- Always keep topology/source/metadata/scope obligations distinct; no release/execution certificate.
- Whole0413 scopes563 retain4 exact Git spans; book/retention/publication/size0. G1still6/18.
-- NEXT .6.5 actual bus preview/atomic commit/semantic-group rollback. Read roadmap4.4, command-layer
- contract, existing typed requests/authorization/revision/aggregate interfaces; subdivide safe leaves
- before code. Actual evaluator/typed-operation .5e/.5f, .6.6–.9 bus history/cancellation/acceptance,
- runtime/storage/application/physical/release remain owned. Full PNT, commit each leaf; derive push
- cadence, no early push. D250132 after .6.9; D154 open.
+-0415 complete: bus staging/safe leaves owned; D277 narrows my0412 broad envelope Rustdoc to
+ geometry/operations within authorized execution, native auth1/scope3/fmt0; behavior unchanged.
+ Whole completed .6.4 subtree/0414 scopes564 retain4 exact Git spans/all98 live ids; book/retention/
+ publication/size0. At d0481b5 book1199996B/all80 files, four bytes headroom: maintained-reference
+ design adopted in containment decision; original caps stay until complete replacement guard lands.
+- NEXT .6.5.book.1 strict bounded contract/readonly checker and candidate/native Git refusal controls,
+ then .book.2 atomic integration/authoring/classification and .book.3 committed acceptance. Read local
+ LIVE_DOCUMENT_SIZE_CONTAINMENT.md maintained-reference contract and adoption decision. Use current
+ repo Git read-only and ordinary target candidate fixtures; never create/amend another Git repo.
+ Exact fresh authority, complete bounded navigation/parts, no stale/reused/banked/same-size bypass.
+ Then .6.5.2 private bus/candidates, .3 actual handlers (resolve .5e/.5f dependencies), .4 transactions,
+ .5 scoped acceptance; .6.6–.9 revisions/history/cancellation/integration. Full PNT, commit each leaf;
+ derive push cadence. G1still6/18, D250132 after .6.9; runtime/app/physical/release proof remains.
 - Cleanup0408 applied2026-10-27 13:41UTC:4 trees/403 logs/53930 files/1751160158B;
  selected407 absent before regeneration,989257 preservation entries exact,1032 unsafe retained.
  Audit target/artifact_cleanup_audit/feature-20261027-garment/; next due2026-10-28 13:41UTC.
