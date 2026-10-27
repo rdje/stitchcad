@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0424
+## Current leaf acceptance —0425
 
-- [x] ROOT CAUSE: cargo test -p sc-core --lib command::bus::difference:3 passed rc=0;
-  copied intent alone cannot detect unrelated candidate edits or an actual mismatched field.
-- [x] ADDRESSED: cargo test -p sc-core --lib command::bus::difference:3 passed rc=0;
-  actual immutable Pieces/Notches expose valid unrelated label/order/selection/identity changes to refusal.
-- [x] NO REGRESSION: cargo test -p sc-measure --test design_inputs_contract command_bus:14 passed
-  rc=0; selected strict Clippy/fmt and bus privacy3 pass rc=0. Full integration remains .6.9.
+- [x] ROOT CAUSE: cargo test -p sc-core --test canonical_inputs_contract:9 passed rc=0;
+  stable dedicated identity/position must select replacement without append or scalar conversion.
+- [x] ADDRESSED: cargo test -p sc-core --test canonical_inputs_contract:9 passed rc=0;
+  exact source/state, original owner, other records/order and missing/general-scalar refusal checked.
+- [x] NO REGRESSION: selected strict Clippy finished rc=0; cargo test -p sc-core --doc value::inventory:
+  1 passed rc=0; selected fmt --check rc=0; canonical9 includes prior7 cases. Integration remains .6.9.
 
 ## Goal
 
@@ -719,27 +719,40 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0423 private reserve/actual Notch preview; [whole scope/proofs](../history/stitchcad-devnotes-part575.md).
 - ID: `G1-SLICE.6.5.2.c`
   Status: `done`
-  Goal:0424 actual Material/Notch candidate differences, closed unchanged-owner coverage and
-  structured refusal for unrelated context/Piece/order/landmark/intent changes. Publication remains .4.
-  - [x] REPRODUCE / ISSUE: git show c665276:crates/sc-core/src/command/bus/material.rs prints
-    report values copied from original/request before candidate construction, rc=0; whole diff was absent.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --lib command::bus::difference:3 passed
-    rc=0; independently valid label/ordering/unselected edits must not be reported as only Material intent.
-  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
-    exhaustive unchanged-owner definition comparison plus actual candidate assignment/append extraction.
-  - [x] ADDRESSED: cargo test -p sc-core --lib command::bus::difference:3 passed rc=0;
-    no-op/reason bytes, wrong intent, labels/order/unselected changes and actual appended Notch/prefix checked.
-  - [x] NO REGRESSION: cargo test -p sc-measure --test design_inputs_contract command_bus:14 passed
-    rc=0; cargo test -p sc-core --doc command::bus:3 passed rc=0; selected fmt --check rc=0.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part575.md:3 exact
-    Git spans rc=0; whole0423 scope/lesson/ledger and pointers retained. Book/pointer/decision aligned.
-  Book build/publication80 chapters/159 tables/1461 rows/2437 local links rc=0; maintained-reference
-  candidate81 files/17436 lines/1217605 bytes rc=0; verify-retention OK rc=0; git diff --check rc=0.
-  Cargo commands use scripts/local_environment.py. Actual host requires value equality for preview;
-  queries retain original host bound. No public candidate/model/replacement capability is added.
+  Goal:0424 exact actual candidate differences; [whole scope/proofs](../history/stitchcad-devnotes-part576.md).
 - ID: `G1-SLICE.6.5.3`
+  Status: `in_progress`
+  Goal: actual canonical mutation handlers against real source/recipe/geometry interfaces.
+  Children: .1 ChangeMeasurement metadata candidate; later paired-seam and Dart operations must
+  retain actual recipe/geometry dependencies. Metadata preparation confers no evaluator/physical proof.
+- ID: `G1-SLICE.6.5.3.1`
+  Status: `in_progress`
+  Goal: actual ChangeMeasurement binding/canonical replacement/candidate and semantic diff. Recipe
+  reevaluation still requires .5e/.5f; no fabricated evaluator or publication before real dependencies.
+- ID: `G1-SLICE.6.5.3.1.1`
+  Status: `done`
+  Goal:0425 immutable dedicated canonical length replacement, stable existing id/position, exact
+  source/state preserved; original owner/other records unchanged. Actual binding/candidate .1.2 next.
+  - [x] REPRODUCE / ISSUE: git show c027bc9:crates/sc-core/src/value/inventory.rs prints constructor/
+    borrowed-only ownership with no stable replacement operation, rc=0; handler would duplicate copying.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test canonical_inputs_contract:9 passed rc=0;
+    dedicated lengths and general Length-kind scalars are distinct; replacement must target existing owner.
+  - [x] FIX: cargo clippy -p sc-core --test canonical_inputs_contract -- -D warnings:finished rc=0;
+    clone owner/replace matching dedicated record only; typed MissingLength preserves exact requested id.
+  - [x] ADDRESSED: cargo test -p sc-core --test canonical_inputs_contract:9 passed rc=0; new2 cover
+    original order/source/Unknown/Derived/no-op and missing/general-scalar targets, without numeric defaults.
+  - [x] NO REGRESSION: canonical_inputs_contract9 rc=0 includes prior7; cargo test -p sc-core --doc
+    value::inventory:1 passed rc=0; selected strict Clippy/fmt pass rc=0. No domain authority granted.
+  - [x] LOCKSTEP: whole0424 task/lesson/ledger retained576; book/pointer/decision/task/ledger updated.
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part576.md:3 exact Git spans
+    rc=0; retention OK rc=0; book build/publication80 chapters/159 tables/1461 rows/2437 links rc=0.
+    Maintained-reference candidate81 files/17454 lines/1218767 bytes rc=0; integration remains .6.9.
+  Cargo commands use scripts/local_environment.py. No Measurement binding/source truth/evaluation or
+  committed mutation follows from detached value replacement; actual candidate .1.2 retains these duties.
+- ID: `G1-SLICE.6.5.3.1.2`
   Status: `pending`
-  Goal: original canonical mutation handlers; subdivide actual interfaces/evaluator dependencies first.
+  Goal: actual Measurement-to-declaration binding, private candidate/source validation and exact diff;
+  preserve Unknown/Derived and deferred provenance truth/evaluation obligations.
 - ID: `G1-SLICE.6.5.4`
   Status: `pending`
   Goal: authorized candidate preview, effect-boundary revalidation and whole-group atomic publication.

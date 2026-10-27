@@ -3,16 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual candidate semantic differences
+## _(2026-10-27 UTC)_ — stable canonical length replacement
 
-0424 .6.5.2.c derives reports from the validated candidate, checks unchanged garment/input/sewing/
-structure context and permits only selected Material fields or one exact appended Notch. Exhaustive
-owner-definition patterns force comparison coverage when fields are added; source hosts must support
-value equality. No-op omission/order/reason bytes stay exact. Unexpected candidate differences retain
-structured causes and refuse before a report. Focused diff3/bus14/privacy3/lint/fmt check this scope.
-Promotion: command-layer decision; publication and full bus/evaluator/runtime proof remain owned.
+0425 .6.5.3.1.1 clones canonical owner and replaces only an existing dedicated declaration at its
+original id/position. Exact supplied source/Unknown/Derived state survives; every other length/scalar
+and original owner stay unchanged. Missing/general Length-kind scalar targets refuse MissingLength.
+Focused canonical9/privacy1/lint/fmt check component behavior. Promotion: command-layer decision.
+Actual Measurement binding/private candidate .1.2 follows; no authority, evaluation or truth claimed.
 
-[Whole0423 private identity task/lesson/ledger](docs/history/stitchcad-devnotes-part575.md) retains exact proof and predecessor lesson pointers.
+[Whole0424 candidate-difference task/lesson/ledger](docs/history/stitchcad-devnotes-part576.md) retains exact source proofs and prior lesson pointers.
 
 [Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
 

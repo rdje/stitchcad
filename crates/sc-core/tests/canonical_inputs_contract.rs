@@ -51,6 +51,85 @@ fn boolean(identity: u128) -> ScalarInputDeclaration {
 }
 
 #[test]
+fn dedicated_length_replacement_retains_exact_source_state_order_and_original_owner() {
+    let lengths = vec![
+        unknown(9),
+        unknown(3),
+        length(7, LengthState::Derived { formula: id(907) }),
+    ];
+    let scalars = vec![boolean(12)];
+    let inputs =
+        CanonicalInputs::new(lengths.clone(), scalars.clone()).expect("actual ordered owner");
+    for state in [
+        LengthState::Unknown {
+            observation: id(990),
+        },
+        LengthState::Derived { formula: id(991) },
+    ] {
+        let replacement = LengthDeclaration::new(LengthDeclarationDefinition {
+            id: id(3),
+            source: id(992),
+            state,
+        })
+        .expect("actual canonical replacement");
+        let candidate = inputs
+            .with_length_declaration(replacement.clone())
+            .expect("existing dedicated declaration");
+        assert_eq!(
+            candidate
+                .lengths()
+                .iter()
+                .map(LengthDeclaration::id)
+                .collect::<Vec<_>>(),
+            vec![id(9), id(3), id(7)]
+        );
+        assert_eq!(candidate.length(id(3)), Some(&replacement));
+        assert!(
+            candidate
+                .length(id(3))
+                .expect("actual replacement")
+                .authored_value()
+                .is_err(),
+            "unknown/derived never gain a numeric fallback"
+        );
+        assert_eq!(candidate.length(id(9)), inputs.length(id(9)));
+        assert_eq!(candidate.length(id(7)), inputs.length(id(7)));
+        assert_eq!(candidate.scalars(), scalars);
+        assert_eq!(inputs.lengths(), lengths);
+        assert_eq!(inputs.scalars(), scalars);
+    }
+    assert_eq!(
+        inputs
+            .with_length_declaration(unknown(3))
+            .expect("exact no-op"),
+        inputs
+    );
+}
+
+#[test]
+fn dedicated_length_replacement_refuses_absent_and_general_length_kind_without_appending() {
+    let general = scalar(
+        2,
+        Kind::Length,
+        State::Unknown {
+            observation: id(993),
+        },
+    );
+    let inputs =
+        CanonicalInputs::new(vec![unknown(1)], vec![general]).expect("distinct canonical families");
+    let saved = inputs.clone();
+    for identity in [2, 999] {
+        assert_eq!(
+            inputs.with_length_declaration(unknown(identity)),
+            Err(Error::MissingLength {
+                declaration: id(identity)
+            })
+        );
+        assert_eq!(inputs, saved);
+    }
+}
+
+#[test]
 fn authored_families_and_all_states_survive_with_canonical_borrow_identity() {
     let value = Length::from_micrometres(-17).expect("signed fixture length");
     let lengths = vec![

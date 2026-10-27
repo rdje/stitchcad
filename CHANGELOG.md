@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0424 — derive exact differences from actual candidates
+## STITCHCAD-G1-0425 — preserve canonical identity during length replacement
 
-- Compare original and validated candidate across complete implemented owner definitions.
-- Derive exact Material/Notch reports; refuse unrelated context/Piece/order/landmark or intent changes.
-- Exhaustive field patterns require new fields to enter comparison coverage; original state unchanged.
-- Focused diff3/bus14/privacy3/lint/fmt; publication and full integration remain separately owned.
+- Detached replacement updates an existing dedicated declaration at its original position only.
+- Preserve exact source/state/provenance, other lengths/scalars and the original canonical owner.
+- MissingLength refuses absent/general Length-kind scalar targets; no append or numeric fallback.
+- Focused canonical9/privacy1/lint/fmt; actual Measurement binding/candidate remains .6.5.3.1.2.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part576](docs/history/stitchcad-devnotes-part576.md) | whole0424 difference scope/lesson/ledger | 38 lines, 3130 bytes, sha256:e64d6680… |
 | [part575](docs/history/stitchcad-devnotes-part575.md) | whole0423 identity scope/lesson/ledger | 44 lines, 3757 bytes, sha256:37ec11fc… |
 | [part574](docs/history/stitchcad-devnotes-part574.md) | whole0422 Material-preview lesson | 11 lines, 848 bytes, sha256:cdfc5ca0… |
 | [part573](docs/history/stitchcad-devnotes-part573.md) | whole0421 source/storage lesson | 12 lines, 985 bytes, sha256:2b349c15… |

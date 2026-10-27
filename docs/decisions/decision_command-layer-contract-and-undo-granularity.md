@@ -160,3 +160,10 @@ one actual appended object matching intent/staged identity, with complete Piece 
 Reports read candidate values. Unexpected changes retain structured Difference causes and refuse.
 Focused canonical diff3 and real bus14/privacy3/lint/fmt cover this subset; other mutation semantics,
 publication and full bus/evaluator/runtime proof remain owned.
+
+answers: "how does ChangeMeasurement prepare stable canonical declaration replacement?"
+
+0425 .6.5.3.1.1 adds CanonicalInputs::with_length_declaration: existing dedicated id selects one
+original position, retaining exact supplied source/state and all other owned records. MissingLength
+refuses absent/general-scalar targets. The original owner stays unchanged; no binding, authority,
+source truth or evaluation follows from detached replacement. Actual binding/candidate/diff .1.2 follows.

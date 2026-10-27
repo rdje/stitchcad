@@ -102,6 +102,24 @@ scalar stays general: querying its id with length(id) returns None, without conv
 a dedicated length id1 plus general scalar id1 refuses; distinct ids retain all states/provenance.
 This component grants no metadata binding, current Design revision, evidence truth or release readiness.
 
+`with_length_declaration(replacement)` creates a detached owner with one existing dedicated length
+replaced at its original position. The replacement's stable declaration id selects the target; it
+cannot append or rename a record. Exact source identity and authored state/provenance survive,
+including Unknown observation and Derived formula references without numeric fallbacks. Other
+lengths and every general scalar remain identical; the original owner remains unchanged:
+
+```rust
+let candidate_inputs = inputs.with_length_declaration(replacement.clone())?;
+assert_eq!(candidate_inputs.length(replacement.id()), Some(&replacement));
+assert_eq!(candidate_inputs.scalars(), inputs.scalars());
+```
+
+An absent dedicated id returns CanonicalInputsError::MissingLength with that exact id, including
+one owned only as a general Length-kind scalar. An exact no-op remains equal to the original owner.
+This helper prepares detached data; ChangeMeasurement must still resolve the actual measurement's
+binding, validate the containing candidate and obtain command authority before publication. Source
+truth and formula evaluation remain separate obligations.
+
 ## Owned Design parameters
 
 `sc_core::design::DesignParameters::new(definitions, &inputs)` owns named metadata without copying
@@ -147,7 +165,7 @@ rebind. Tokens prove no source truth, value or display text.
 | `LengthDeclaration` | Immutable structurally validated input |
 | `LengthDeclarationError` | Missing/duplicate known-state evidence inventory |
 | `CanonicalInputs` | Immutable owned dedicated-length/general-scalar records |
-| `CanonicalInputsError` | Repeated owned identity with both original positions |
+| `CanonicalInputsError` | Repeated owned identity or absent dedicated replacement target |
 | `CanonicalInputPosition` | Dedicated-length or general-scalar family and index |
 | `DesignParameters` | Immutable ordered named Design parameter registry |
 | `DesignParameterDefinition` | Editable metadata id, token and pinned canonical target |

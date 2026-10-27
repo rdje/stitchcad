@@ -19,9 +19,14 @@ pub enum CanonicalInputPosition {
     },
 }
 
-/// Ownership cannot select a canonical record when a declaration identity is repeated.
+/// Canonical ownership cannot select an unambiguous declaration for construction or replacement.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CanonicalInputsError {
+    /// Replacement names no existing dedicated length; general Length-kind scalars remain distinct.
+    MissingLength {
+        /// Exact requested canonical declaration identity.
+        declaration: EntityId,
+    },
     /// An owned identity occurs twice; neither copy is silently selected or deduplicated.
     DuplicateIdentity {
         /// Actual repeated declaration identity.
@@ -34,15 +39,19 @@ pub enum CanonicalInputsError {
 }
 impl fmt::Display for CanonicalInputsError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        let Self::DuplicateIdentity {
-            identity,
-            first,
-            duplicate,
-        } = self;
-        write!(
-            f,
-            "canonical input {identity} repeats at {duplicate:?}, first supplied at {first:?}"
-        )
+        match self {
+            Self::MissingLength { declaration } => {
+                write!(f, "canonical dedicated length {declaration} is absent")
+            }
+            Self::DuplicateIdentity {
+                identity,
+                first,
+                duplicate,
+            } => {
+                write!(f,
+                "canonical input {identity} repeats at {duplicate:?}, first supplied at {first:?}")
+            }
+        }
     }
 }
 impl std::error::Error for CanonicalInputsError {}
@@ -104,6 +113,29 @@ impl CanonicalInputs {
             }
         }
         Ok(Self { lengths, scalars })
+    }
+
+    /// Return a detached copy with one existing dedicated length replaced at its original position.
+    /// The replacement's identity selects that original record; this never appends, renames, sorts or
+    /// changes general Length-kind scalars. All source/state/provenance bytes remain exactly supplied.
+    /// Original inputs stay unchanged. This validates no measurement binding, source truth, numeric
+    /// evaluation, command authority or publication; those require the actual containing context.
+    /// # Errors
+    /// Returns MissingLength for an absent dedicated identity, including one owned only as a scalar.
+    pub fn with_length_declaration(
+        &self,
+        replacement: LengthDeclaration,
+    ) -> Result<Self, CanonicalInputsError> {
+        let mut candidate = self.clone();
+        let target = candidate
+            .lengths
+            .iter_mut()
+            .find(|declaration| declaration.id() == replacement.id())
+            .ok_or(CanonicalInputsError::MissingLength {
+                declaration: replacement.id(),
+            })?;
+        *target = replacement;
+        Ok(candidate)
     }
 
     /// Exact dedicated length declarations in authored order.
