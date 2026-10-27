@@ -281,8 +281,8 @@ The last three rows are the ones an implementation gets wrong by accident, so th
 undo is a property of the *design*, and neither a derived instance nor a reopened file inherits a history.
 
 The [typed group-input guide](command-execution.md#typed-mutation-group-inputs) covers implemented
-request consistency and actual sequential metadata previews. Mutation publication and undo/redo remain
-their later implementation work.
+request consistency, sequential metadata previews and atomic metadata-group publication. Persistence
+and undo/redo remain their later implementation work.
 
 ## 4. Preview and commit
 
@@ -518,8 +518,8 @@ No UI implementation or extra broad verification is started by this DBIQNP note.
   and reversibility against the vocabularies §1 and §7 declare; compares §7's five levels with the five
   roadmap §7.8 names, in both directions; and refuses a parity column with no declared source.
   `run_command_layer_probes.sh` is its ground truth.
-- **Typed catalog metadata, GetPieceList and three metadata previews are implemented; mutation
-  publication remains pending.** The set is a contract for
+- **Typed catalog metadata, GetPieceList and three metadata handlers with preview/atomic in-memory
+  group publication are implemented; full execution remains pending.** The set is a contract for
   `G1-SLICE.6`. The census checks specification closure; the native catalog target compares metadata.
   Neither establishes command execution. A new command is a row here first.
 - **The parity table is empty on purpose**, as the canvas spike's results are: its columns and generation

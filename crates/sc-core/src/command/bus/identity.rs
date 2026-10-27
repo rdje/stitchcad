@@ -76,6 +76,12 @@ impl IdentityReserve {
             initial_len: self.identities.len(),
         }
     }
+    // Build the publication reserve before changing the original owner. Refuse a bound failure.
+    pub(super) fn after_consuming(&self, count: usize) -> Option<Self> {
+        self.identities.get(count..).map(|remaining| Self {
+            identities: remaining.to_vec(),
+        })
+    }
 }
 
 // An iterator owns its position and borrows immutable values. No Clone contract can alias a cursor.

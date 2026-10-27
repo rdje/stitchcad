@@ -6,8 +6,8 @@ use super::{
 use crate::{
     command::{
         authorize_mutation_group, CommandAuthoritySource, CommandAuthorizationMode,
-        CommandGroupAuthorizationError, CommandGroupId, CommandId, CommandIdempotencyKey,
-        CommandMutationGroup, DesignRevision,
+        CommandGroupAuthorization, CommandGroupAuthorizationError, CommandGroupId, CommandId,
+        CommandIdempotencyKey, CommandMutationGroup, DesignRevision,
     },
     design::{DesignGarment, DesignReferenceHost},
     ontology::EntityId,
@@ -64,7 +64,7 @@ impl CommandGroupPreviewStep {
     }
 }
 
-/// Successful inspect-only group report; all private candidate models have been discarded.
+/// Base-revision metadata report; carries no candidate model or publication capability.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct CommandGroupPreview {
     group: CommandGroupId,
@@ -158,7 +158,7 @@ pub enum CommandGroupPreviewError<E> {
 }
 impl<E: fmt::Debug> fmt::Display for CommandGroupPreviewError<E> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "metadata group preview refused: {self:?}")
+        write!(f, "metadata group preparation refused: {self:?}")
     }
 }
 impl<E: std::error::Error + 'static> std::error::Error for CommandGroupPreviewError<E> {
@@ -194,7 +194,17 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         group: &CommandMutationGroup,
         mode: CommandAuthorizationMode,
     ) -> Result<PreparedGroup<H>, CommandGroupPreviewError<H::Error>> {
-        authorize_mutation_group(group, mode, &self.authority)
+        self.authorize_group(group, mode)?;
+        self.require_group_revision(group)?;
+        self.stage_group(group)
+    }
+
+    pub(super) fn authorize_group<'a>(
+        &self,
+        group: &'a CommandMutationGroup,
+        mode: CommandAuthorizationMode,
+    ) -> Result<CommandGroupAuthorization<'a>, CommandGroupPreviewError<H::Error>> {
+        let checked = authorize_mutation_group(group, mode, &self.authority)
             .map_err(CommandGroupPreviewError::Authorization)?;
         let inputs = self.state.inputs();
         let context = group.context();
@@ -205,6 +215,15 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 current: inputs.id(),
             });
         }
+        Ok(checked)
+    }
+
+    pub(super) fn require_group_revision(
+        &self,
+        group: &CommandMutationGroup,
+    ) -> Result<(), CommandGroupPreviewError<H::Error>> {
+        let inputs = self.state.inputs();
+        let context = group.context();
         if context.expected_revision() != inputs.revision() {
             return Err(CommandGroupPreviewError::RevisionMismatch {
                 group: group.id(),
@@ -212,6 +231,14 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 current: inputs.revision().clone(),
             });
         }
+        Ok(())
+    }
+
+    pub(super) fn stage_group(
+        &self,
+        group: &CommandMutationGroup,
+    ) -> Result<PreparedGroup<H>, CommandGroupPreviewError<H::Error>> {
+        let inputs = self.state.inputs();
         let mut staged = None;
         let mut identities = self.identities.stage();
         let mut firsts = BTreeMap::new();

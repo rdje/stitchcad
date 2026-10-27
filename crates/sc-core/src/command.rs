@@ -32,10 +32,11 @@ pub use authorization::{
     CommandGrantRejection,
 };
 pub use bus::{
-    CommandBus, CommandBusError, CommandDifferenceError, CommandGroupDifference,
-    CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep, CommandIdentityError,
-    CommandLengthChange, CommandMaterialChange, CommandMaterialPreview, CommandMeasurementPreview,
-    CommandNotchPreview, CommandPieceList, CommandPreview, CommandPreviewError, CommandResult,
+    CommandAuditEntry, CommandBus, CommandBusError, CommandDifferenceError, CommandGroupCommit,
+    CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference, CommandGroupPreview,
+    CommandGroupPreviewError, CommandGroupPreviewStep, CommandIdentityError, CommandLengthChange,
+    CommandMaterialChange, CommandMaterialPreview, CommandMeasurementPreview, CommandNotchPreview,
+    CommandPieceList, CommandPreview, CommandPreviewError, CommandResult, CommandRevisionChange,
 };
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{

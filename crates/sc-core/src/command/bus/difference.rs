@@ -1,7 +1,7 @@
 //! Exact actual candidate differences, with closed coverage of every implemented owner definition.
 use super::{CommandLengthChange, CommandMaterialChange};
 use crate::{
-    command::{AddNotch, AssignMaterial, ChangeMeasurement},
+    command::{AddNotch, AssignMaterial, ChangeMeasurement, DesignRevision},
     design::{
         DesignGarment, DesignGarmentDefinition, DesignInputsDefinition, DesignReferenceHost,
         DesignSewingDefinition, DesignStructureDefinition,
@@ -66,6 +66,14 @@ pub(super) fn unchanged_noncanonical_context<H: DesignReferenceHost + PartialEq>
     before: &DesignGarment<H>,
     after: &DesignGarment<H>,
 ) -> Result<(), CommandDifferenceError> {
+    unchanged_noncanonical_context_at_revision(before, after, before.inputs().revision())
+}
+
+pub(super) fn unchanged_noncanonical_context_at_revision<H: DesignReferenceHost + PartialEq>(
+    before: &DesignGarment<H>,
+    after: &DesignGarment<H>,
+    expected_revision: &DesignRevision,
+) -> Result<(), CommandDifferenceError> {
     let DesignGarmentDefinition {
         sewing: _,
         pockets,
@@ -124,13 +132,13 @@ pub(super) fn unchanged_noncanonical_context<H: DesignReferenceHost + PartialEq>
     }
     let DesignStructureDefinition {
         id,
-        revision,
+        revision: _,
         inputs: _,
         pieces: _,
         cut_plan,
         topology,
     } = before.inputs().structure().definition();
-    let original = (id, revision, cut_plan, topology);
+    let original = (id, cut_plan, topology);
     let DesignStructureDefinition {
         id,
         revision,
@@ -139,7 +147,7 @@ pub(super) fn unchanged_noncanonical_context<H: DesignReferenceHost + PartialEq>
         cut_plan,
         topology,
     } = after.inputs().structure().definition();
-    if original != (id, revision, cut_plan, topology) {
+    if original != (id, cut_plan, topology) || revision != expected_revision {
         return Err(CommandDifferenceError::StructuralContext);
     }
     Ok(())

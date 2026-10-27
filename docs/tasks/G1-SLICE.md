@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0433
+## Current leaf acceptance —0434
 
-- [x] ROOT CAUSE: git show HEAD:crates/sc-core/src/command/bus/group.rs | rg shows direct group
-  report return with local candidate dropped, rc=0; original IdentityStage has only remaining iterator.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::group_preview:
-  6 passed rc=0; private final model/report/cursor count compile; selected strict Clippy finished rc=0.
-- [x] NO REGRESSION: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0; cargo test
-  -p sc-core --doc command::bus:5 passed rc=0; selected cargo fmt --check rc=0. Full .6.9 remains deferred.
+- [x] ROOT CAUSE: git show HEAD:crates/sc-core/src/command/bus.rs | rg prints publication/histories
+  absent and only GetPieceList execute dispatch rc=0; private preparations supply no accepted transitions.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:30 passed rc=0;
+  previous24/commit6 prove actual metadata/revision/reserve/audit and exact replay/refusal boundaries.
+- [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished
+  rc=0; cargo test -p sc-core --lib command::bus::difference:5 passed rc=0; selected fmt --check rc=0.
 
 ## Goal
 
@@ -769,25 +769,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0432 sequential metadata-group preview; [whole scope/proofs](../history/stitchcad-devnotes-part584.md).
 - ID: `G1-SLICE.6.5.4.3`
   Status: `done`
-  Goal:0433 private actual final prepared group model/report and concrete consumed cursor count;
-  public preview discards publication-side ownership, without a caller-held mode/model capability.
-  - [x] REPRODUCE / ISSUE: git show HEAD:crates/sc-core/src/command/bus/group.rs | rg -n prints
-    direct Ok(CommandGroupPreview) and dropped local candidate rc=0; identity source has no consumed count.
-  - [x] ROOT CAUSE (WHY + WHERE): native HEAD group/identity source rc=0; later atomic publication
-    needs actual final ownership and concrete consumed reserve prefix, rather than a reconstructed report.
-  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
-    private PreparedGroup/prepare_group retains actual state/report/count and trusted-only mode selection.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::group_preview:
-    6 passed rc=0; actual sequential mixed models, net delta, retry aliases and later failure still pass.
-  - [x] NO REGRESSION: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0, exact cursor
-    counts/final128-bit id/exhaustion/independence; cargo test -p sc-core --doc command::bus:5 passed rc=0;
-    selected fmt --check rc=0. New compiler case refuses direct group preparation with valid generic bounds.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part584.md:3 exact
-    Git spans rc=0; whole0432 scope/lesson/ledger retained. Book/pointer/frontier/lesson aligned.
-  Native publication80 chapters/159 scoped API rows/1465 source links/2446 rendered links rc=0;
-  maintained-reference81 files/17663 lines/1232927 bytes rc=0; retention1038/global68 fits rc=0.
-  Cargo commands use scripts/local_environment.py. Promotion declined: existing private ownership,
-  preview and authority contracts; actual publication/replay/audit follows .6.6.1. Full .6.9 deferred.
+  Goal:0433 private prepared-group ownership; [whole scope/proofs](../history/stitchcad-devnotes-part585.md).
 - ID: `G1-SLICE.6.5.4.retention1`
   Status: `done`
   Goal:0429 D284 count-scope correction, no packing; [whole scope/proofs](../history/stitchcad-devnotes-part581.md).
@@ -798,16 +780,36 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `in_progress`
   Goal: actual revision preconditions, idempotency replay and append-only actor audit trail.
 - ID: `G1-SLICE.6.6.1`
-  Status: `pending`
-  Goal: actual atomic in-memory metadata-group publication with fresh complete Commit authority,
-  exact successor revision and original-request replay/conflict; initiating-actor append-only audit.
-  Explicit finite host-configured commit/audit capacity precedes effects. Prepare/validate revised
-  actual model and allocation preflight before model/reserve/journal transition; no persisted-store claim.
-  Exact group replay refreshes authority and returns original result despite later revision advances;
-  partial/overlapping key reuse cannot repeat edits or publish part of a group. Undo/resource .6.7/.6.8.
+  Status: `done`
+  Goal:0434 actual atomic in-memory metadata-group publication, exact revision/replay and append-only
+  initiating-actor audit, explicit finite accepted-group count and fresh effect-boundary authority.
+  - [x] REPRODUCE / ISSUE: git show HEAD:crates/sc-core/src/command/bus.rs | rg -n prints mutation
+    publication/histories absent and GetPieceList-only execute dispatch rc=0; no accepted metadata edit.
+  - [x] ROOT CAUSE (WHY + WHERE): native HEAD bus source rc=0; effects need actual successor model,
+    concrete remaining reserve, exact original request registry and actor/result audit as one transition.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
+    finite explicit edit constructor, initial/final complete Commit checks, preflight and exclusive moves.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:30 passed rc=0;
+    previous24/commit6 cover actual metadata/revision/IDs/actor, replay after later/full, conflicts/rollback,
+    revision witnesses, permission/configuration refusal and final-check revocation without effects.
+  - [x] NO REGRESSION: previous24 pass within30 rc=0; cargo test -p sc-core --lib
+    command::bus::difference:5 passed rc=0; selected strict Clippy/fmt --check rc=0. No preview effects.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part585.md:3 exact
+    Git spans rc=0; whole0433 retained. README/book/status/pointer/frontier/lesson/decision aligned.
+  Compiler privacy6 passes rc=0; direct replay/audit erasure is refused. Native publication80 chapters/
+  159 scoped API rows/1466 source links/2448 rendered links rc=0; retention1039/global69 fits rc=0.
+  Maintained-reference81 files/17736 lines/1238455 bytes rc=0.
+  Cargo commands use scripts/local_environment.py. Initial test guard moved non-Copy counters;
+  borrow and unused import corrected. Promotion: indexed command-layer decision. Audit/replay cover
+  this owner lifetime only; persistence .7, undo .6.7, work/cancellation .6.8 and full .6.9 remain owned.
 - ID: `G1-SLICE.6.7`
-  Status: `pending`
+  Status: `in_progress`
   Goal: bounded semantic undo/redo, original actor/revision restoration and explicit dropped-history report.
+- ID: `G1-SLICE.6.7.1`
+  Status: `pending`
+  Goal: explicit bounded metadata-group undo/redo with original semantic identities/revisions/actor,
+  declared dropped-history reporting, fresh effect authority/current-source checks and atomic failure.
+  Keep append-only original audit/replay independent; never rewind/reuse issued entity identities.
 - ID: `G1-SLICE.6.8`
   Status: `pending`
   Goal: typed progress/cancellation with no partial state/artifact; explicit resource bounds.

@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0433 — retain prepared whole groups privately
+## STITCHCAD-G1-0434 — commit actual metadata groups with replay and audit
 
-- Keep actual final candidate/report and concrete cursor consumption together inside the bus.
-- Public preview discards publication-side ownership; direct preparation/mode selection stays private.
-- Native group6/identity1/privacy5/selected strict lint/fmt pass; no publication or persisted replay yet.
-- Whole0432 scope, lesson and ledger retained584 with three exact native source intervals.
+- Explicit finite edit capacity; fresh complete Commit authority at entry and immediately before effects.
+- Actual validated successor model/reserve/audit publication; exact whole-group retry returns first result.
+- Group/actor-key conflicts and partial overlap refuse; stale errors name actual available revision advances.
+- Native bus30 (previous24/commit6), diff5 and selected strict lint/fmt pass; whole0433 proof retained585.
+- In-memory scope only; persistence, undo, work/cancellation bounds and complete command integration pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +44,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part585](docs/history/stitchcad-devnotes-part585.md) | whole0433 private group-preparation scope/lesson/ledger | 38 lines, 3136 bytes, sha256:f8e993e6… |
 | [part584](docs/history/stitchcad-devnotes-part584.md) | whole0432 sequential metadata-group scope/lesson/ledger | 42 lines, 3641 bytes, sha256:fd216e2b… |
 | [part583](docs/history/stitchcad-devnotes-part583.md) | whole0431 and command implementation continuity | 161 lines, 12908 bytes, sha256:bfff72b7… |
 | [part582](docs/history/stitchcad-devnotes-part582.md) | whole0430 group-authority scope/lesson/ledger | 37 lines, 3152 bytes, sha256:d469a142… |

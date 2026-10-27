@@ -23,7 +23,8 @@ ontology, measurement inputs and borrowed/normalized formula syntax with owned i
 sourced namespaces and complete immutable recipe kind proofs. Whole-factory review checks source dependencies.
 Exact numeric and binding APIs plus canonical scalar state models are available.
 Scalar reads, tolerance/size contexts, typed requests, authorized Piece-list reads and private
-Measurement/Material/Notch metadata previews include sequential groups; evaluation and mutation publication remain pending.
+Measurement/Material/Notch previews and atomic metadata-group commits include in-memory replay/audit.
+Evaluation, persistence, undo and the full command bus remain pending.
 [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks verified progress; the mdBook explains implemented behavior and remaining proof boundaries.
 
 ## Audience and scope

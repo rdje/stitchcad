@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Measurement/Material/Notch individual/group metadata previews implemented; publication pending
+- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Measurement/Material/Notch individual/group metadata preview/atomic in-memory commit implemented; persistence/undo pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -92,3 +92,20 @@ The final diff reads original/final actual models, permits only successful nonal
 preserves complete other owner fields/order and omits restored values. Native mixed progression,
 restoration/nonempty deltas, exact aliases/conflicts, later anchor/exhaustion, source refresh and
 binding order pass in six group cases. Publication/audit/undo/evaluation remain their later owners.
+
+## In-memory metadata publication0434
+
+answers: "when is a metadata group published?" · "how does exact retry work after revisions advance?" · "what bounds the in-memory audit?"
+
+G1-SLICE.6.6.1 requires explicit finite accepted-group capacity. Complete Commit authority and Design
+binding precede journal lookup. Exact group id plus complete original group equality returns the first
+immutable result after fresh authorization, before revision/capacity checks. Changed same-id groups
+refuse; keys belong to this Design/complete-actor namespace, and cross-group overlap refuses rather
+than replaying or publishing part. Journal entries are never discarded at capacity; new groups refuse.
+New edits require exact current revision; original mismatch carries actual available advances/commands
+and initial journal revision, with no fabricated earlier trail. Prepare/rebuild/current-check the actual
+successor model and reserve/allocation preflight, then refresh complete Commit authority immediately
+before infallible exclusive model/reserve/audit moves. Retain old host through the complete transition.
+One accepted group adds one immutable original actor/request/result/grant/time entry and advances once,
+including net no-op. Exact replay adds neither. Native commit6/previous24/diff5/lint/fmt are focused
+proof. Persistence/reopen, bounded undo, byte/work/cancellation limits and full integration remain owned.

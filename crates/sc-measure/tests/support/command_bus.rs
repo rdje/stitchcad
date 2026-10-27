@@ -54,6 +54,8 @@ impl Host {
     }
 }
 
+#[path = "command_bus/group_commit.rs"]
+mod group_commit;
 #[path = "command_bus/group_preview.rs"]
 mod group_preview;
 #[path = "command_bus/material_preview.rs"]

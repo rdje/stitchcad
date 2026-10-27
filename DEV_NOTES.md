@@ -3,15 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — private whole-group preparation ownership
+## _(2026-10-27 UTC)_ — atomic in-memory metadata commit, replay and audit
 
-0433 .6.5.4.3 retains actual final model/report/concrete consumed identity count in PreparedGroup.
-Public preview consumes/discards model and allocation information. Private mode selection cannot be
-called by request submitters; native group6/identity1/compiler privacy5 and selected strict lint/fmt pass.
-Cursor count changes only on successful yields, including final128-bit id once; exhaustion adds none.
-Promotion declined: existing private ownership/preview/authority contracts; actual publication next.
+0434 .6.6.1 publishes validated successor model/reserve/accepted record only after allocation preflight
+and fresh complete Commit checks at entry/effect. Exact group replay returns its first result despite
+later revisions/full capacity; partial-key/group conflicts refuse. Stale edits retain actual advances
+and journal coverage origin. Explicit finite host capacity refuses new records without discarding old.
+Native bus30 (previous24/commit6), diff5/privacy6 and strict selected lint/fmt pass. Initial test guard moved
+non-Copy counters; borrow and unused import corrected. Promotion: command-layer decision. Persistence,
+undo, payload/work/cancellation bounds and complete integration remain separately owned.
 
-[Whole0432 group-preview scope/lesson/ledger](docs/history/stitchcad-devnotes-part584.md) retains exact native sources.
+[Whole0433 prepared-group scope/lesson/ledger](docs/history/stitchcad-devnotes-part585.md) retains exact native sources.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

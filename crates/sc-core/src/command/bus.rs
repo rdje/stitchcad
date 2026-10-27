@@ -27,6 +27,11 @@ mod group;
 pub use group::{CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep};
 mod group_difference;
 pub use group_difference::CommandGroupDifference;
+mod execution;
+pub use execution::{
+    CommandAuditEntry, CommandGroupCommit, CommandGroupCommitError, CommandGroupCommitResult,
+    CommandRevisionChange,
+};
 
 /// Actual inspect-preview subset; reports carry semantic changes, never an owned candidate model.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -139,10 +144,11 @@ impl std::error::Error for CommandBusError {
 ///
 /// The application installs the authenticated authority provider; submitted requests cannot replace
 /// it. Construction claims no permission, source freshness or physical/geometry readiness. Only
-/// GetPieceList executes at this stage; ChangeMeasurement, AssignMaterial and AddNotch prepare
+/// The execute entry point supports GetPieceList; ChangeMeasurement, AssignMaterial and AddNotch prepare
 /// private metadata inspect-previews, individually or in ordered atomic-group previews.
 /// Recipe evaluation remains separate.
-/// Mutation publication and histories remain absent.
+/// Explicit finite edit capacity enables atomic metadata-group publication and in-memory replay/audit.
+/// Persistence, undo, resource/work bounds and full integration remain separate implementation work.
 /// There is no model getter, mutable borrow, state replacement or caller-minted commit capability.
 ///
 /// ```compile_fail
@@ -184,10 +190,17 @@ impl std::error::Error for CommandBusError {
 ///     let prepared = bus.prepare_group(group, CommandAuthorizationMode::Execute);
 /// }
 /// ```
+/// ```compile_fail
+/// use sc_core::command::CommandBus;
+/// fn erase_replay_and_audit<H, A>(bus: &mut CommandBus<H, A>) {
+///     bus.journal = None;
+/// }
+/// ```
 pub struct CommandBus<H, A> {
     state: DesignGarment<H>,
     authority: A,
     identities: identity::IdentityReserve,
+    journal: Option<execution::CommandJournal>,
 }
 
 impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
@@ -245,6 +258,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             state,
             authority,
             identities: identity::IdentityReserve::default(),
+            journal: None,
         }
     }
 
@@ -265,10 +279,11 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             state,
             authority,
             identities,
+            journal: None,
         })
     }
 
-    /// Actual executable subset, separate from the full typed command catalog.
+    /// Implemented `execute` entry-point subset, separate from `commit_group` and the full catalog.
     #[must_use]
     pub const fn is_available(&self, command: CommandId) -> bool {
         matches!(command, CommandId::GetPieceList)

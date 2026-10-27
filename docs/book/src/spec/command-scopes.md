@@ -110,5 +110,7 @@ Design, required permission and each source grant's first failing zero-based mem
 An empty grant inventory has an empty rejection vector. No candidate is staged during this check.
 The [metadata group preview](command-execution.md#sequential-metadata-group-preview) separately binds
 the actual model/revision, validates successive candidates and handles within-group retry aliases.
-Mutation publication, persisted replay and effect-boundary reauthorization remain their implementation
-owners. Controlled native source tests do not establish transport identity.
+[Metadata commit](command-execution.md#atomic-in-memory-metadata-group-commit) refreshes complete Commit
+authority initially and immediately before new effects. Exact result replay also refreshes authority.
+Persisted replay and adapters remain their implementation owners. Controlled native source tests do
+not establish transport identity.

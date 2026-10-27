@@ -2,7 +2,7 @@
 
 The [command-layer contract](command-layer.md) defines the complete intended surface. This page
 describes the private owner, metadata query and individual or grouped Measurement/Material/Notch
-metadata inspect-previews.
+metadata inspect-previews and atomic in-memory metadata-group commits.
 
 ## First executable read and private ownership
 
@@ -11,8 +11,9 @@ The submitted request cannot replace that provider. There is no public model get
 borrow, replacement method or commit token. Construction moves the original aggregate without
 reconstructing held references. This is an in-process owner; it does not authenticate a transport.
 
-Only GetPieceList currently executes. is_available reports that exact subset independently of the
-17-command typed catalog. Each execute call authorizes against a fresh trusted snapshot, then checks
+execute currently implements GetPieceList; is_available describes that entry point. commit_group
+implements the three metadata mutations when finite edit capacity is configured. Handler availability
+is independent of the17-command typed catalog. Each execute call freshly authorizes, then checks
 the requested Design and exact revision against the private owner. Authorization failures preserve
 their original typed cause. DesignMismatch and RevisionMismatch retain the command and both actual
 and requested values; counters beyond128 bits remain exact. Other authorized, correctly bound
@@ -39,8 +40,8 @@ authorization token. Already delivered read data does not become a revocable cap
 
 Inspection remains available for modelled physical deferrals and held topology repairs. Reading the
 authored inventory does not validate those sources or certify geometry, envelope support or release
-readiness. AssignMaterial inspect-preview is described below. Mutation publication, other handlers,
-idempotency, audit, undo and runtime/adapter parity remain separately owned implementation work.
+readiness. Individual/group metadata previews and commits are described below. Other handlers,
+persistence, undo and runtime/adapter parity remain separately owned implementation work.
 
 ## Actual Material assignment preview
 
@@ -237,8 +238,8 @@ Whole-group preparation also retains its actual final candidate, derived group r
 cursor consumption count in a private PreparedGroup. Public preview consumes it, discards the model
 and allocation information, and returns only the report. A compiler privacy check rejects direct
 preparation, including requests for Execute mode. No caller-supplied prepared object or mode can
-be submitted for publication. Actual publication must perform its own fresh effect authorization,
-revision/replay checks, atomic model/reserve transition and audit obligations.
+be submitted for publication. commit_group performs fresh effect authorization, revision/replay
+checks, atomic model/reserve transition and append-only in-memory audit recording.
 
 ## Typed mutation-group inputs
 
@@ -329,4 +330,74 @@ consume an original identity. Final-model integrity failures retain Difference a
 The six native group cases and existing individual cases are focused checks; complete bus integration
 remains separately owned. Group preview supplies no commit permission, approval token, published state,
 revision advance, audit/undo history, recipe evaluation, geometry or physical-property certificate.
+
+## Atomic in-memory metadata-group commit
+
+CommandBus::with_edit_capacity installs the actual owner, trusted authority source, unused identity
+reserve and an explicit NonZeroUsize maximum accepted-group count. new and with_identities retain
+read/preview behavior and refuse commit_group with EditsNotConfigured. is_commit_available reports
+configured metadata handlers; it supplies no authority, current revision, journal room or valid candidate.
+The host chooses the finite capacity. Construction mints no grant or implicit commit permission.
+
+```rust
+let mut bus = CommandBus::with_edit_capacity(
+    garment, trusted_authority, reserved_identities,
+    NonZeroUsize::new(config.maximum_committed_groups).ok_or(configuration_error)?,
+)?;
+let result = bus.commit_group(&group)?;
+let accepted = result.entry();
+assert_eq!(accepted.actor(), group.context().actor());
+assert_eq!(accepted.request(), &group);
+assert_eq!(accepted.commit().revision(), &group.context().expected_revision().successor());
+let actual_changes = accepted.commit().changes();
+```
+
+A new group requires one complete explicit Commit grant, independently of Inspect. Initial fresh
+authorization and actual Design binding precede private journal lookup. Exact accepted group replay
+returns the first immutable audit/result with is_replay=true, even after later commits advanced the
+current revision or filled capacity. It changes no model, revision, reserve or audit entry. Returned
+grant/time/diagnostics remain those of the original acceptance; they do not certify current sources.
+Every replay refreshes permission. Revocation can refuse a retry that previously succeeded.
+
+Replay identity is the original explicit group id plus complete CommandMutationGroup equality,
+including actor, exact revision, every payload and retry/group context. A different request under an
+accepted group id returns GroupConflict. Across different groups, a key is scoped to this Design
+owner and complete initiating actor/principal. Reusing that actor's accepted key returns KeyConflict
+with requested group/index/key and the previous group; overlapping groups are never partly replayed
+or applied. Another actor has its own key namespace. Group ids remain unique within this owner.
+Within-group exact aliases retain the preview semantics above and consume no extra identity.
+
+For a new request, the exact revision precondition precedes capacity and candidate work. Precondition
+retains the original requested/current CommandGroupPreviewError and available actual intervening groups,
+their resulting revisions and first-occurrence command identities in commit order. history_from names
+the owner's initial revision: earlier activity is not fabricated. A future requested revision has no
+intervening advances. These records describe this in-memory owner, without a persisted history claim.
+
+The actual sequential candidate is rebuilt at the exact successor revision through the original
+structural/input/sewing/garment constructors and complete current validation. An exhaustive context
+comparison permits only that revision change; canonical values, Pieces, landmarks and all other
+fields remain equal to the prepared candidate. Unknown/Derived declarations remain authored state,
+and their source/recipe/physical realization receives no new certificate from publication.
+
+The bus constructs the remaining reserve and preflights space for one audit entry before effects.
+It then refreshes whole-group Commit authority immediately before publication. Under its exclusive
+mutable owner, it moves the validated model, remaining reserve and prepared audit entry together,
+with no fallible operation or host callback between those moves. The old source host is retained
+until all fields and the audit record are installed. A later candidate failure or effect-boundary
+revocation leaves the original represented model, revision, unused identities and accepted records intact.
+
+CommandAuditEntry retains the exact original request, initiating actor/principal, actual accepted
+step/net report, resulting revision, final complete grant and trusted observation time. It is append-only
+for this owner's lifetime. The authorized commit/replay result returns its own immutable entry;
+there is no unauthenticated general history/model getter. The audit and replay registry are not undo
+history. A new accepted group, including a net no-op, advances exactly once and adds one record.
+
+At the configured count bound, JournalFull refuses a new group before staging and drops no old
+audit or replay data. Exact replay remains available after fresh authorization. Capacity bounds
+accepted-group count; payload bytes, work/cancellation limits and allocation fault injection remain
+their later resource/acceptance owners. JournalAllocation retains an actual preflight allocation error.
+The six native commit cases cover actual metadata/revision/reserve publication, original actor/result,
+later failure, retry/capacity/conflicts, permission separation and revocation at the second check.
+Full command integration, persistence/reopen, undo/redo, other mutation handlers, adapters and actual
+recipe/geometry/physical evaluation remain pending.
 
