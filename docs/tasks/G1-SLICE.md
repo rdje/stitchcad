@@ -832,33 +832,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0352 shared CanonicalInputTarget; [whole scope/proof](../history/stitchcad-devnotes-part504.md).
 - ID: `G1-SLICE.6.4.2.d.3.2`
   Status: `done`
-  Goal: immutable Material metadata from ontology6: id/source/name/optional nonblank composition;
-  canonical width and Boolean nap/directional-print/striped/checked targets; optional X/Y Ratio
-  shrinkage sources, treatment reference and explicitly supplied post_grade_pre_export stage.
-  Positive present width is required; Unknown/Derived remains uncached and unapplied. Check actual
-  current families/ids/kinds; no geometry, evidence truth, profile resolution or shrinkage execution.
-  Own native/privacy/lint/new Material book chapter/API/decision sync and whole0352/D228 continuity504,
-  including complete old coupled-input book proof retirement, preserving anchors/current commands.
-  - [x] REPRODUCE / ISSUE: ontology6 properties need current canonical states, not copied flags/values.
-    material_contract missing/kind/width/state cases pass8/0, rc=0, target/material-native-0353.log.
-  - [x] ROOT CAUSE (WHY + WHERE): core has canonical targets but no Material owner. cargo test -p
-    sc-core --test material_contract gives8 passed/0 failed, rc=0; both width families/all value states.
-  - [x] FIX: private exact metadata, typed actual property borrows, positive present/computed width,
-    optional unapplied shrinkage/stage and deferred source truth; native8/0 confirms no numeric defaults.
-    Public view variants are carriers, not standalone role proof; direct Scalar construction cannot
-    claim a Material match. The selected query supplies that check; carrier docs now state the scope.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    material_contract passes8/0, rc=0; exact text/id/family/kind/state/width/refusal/borrow checks.
-  - [x] NO REGRESSION: privacy3/strict selected lint/fmt/book/publication78/112/1450/2375 pass0,
-    target/material-*-0353.log; D250132 exact baseline rows/delta0, glossary rc=1.
-  - [x] LOCKSTEP: Material chapter/API/status/index/pointer aligned; continuity504 matches5 Git spans0,
-    including settled D228 and full old book proof. Caps unchanged; G1still6/18. promotion: promoted to
-    docs/decisions/decision_length-declarations-retain-state-and-provenance.md, answers updated.
-    Commit0353; collection/assignment .3.3 next. Full host/Design/geometry/transformation/CI stays later.
+  Goal:0353 canonical Material properties; [whole scope/proof](../history/stitchcad-devnotes-part505.md).
 - ID: `G1-SLICE.6.4.2.d.3.3`
-  Status: `pending`
-  Goal: actual owned Material collection, current property identities/kinds/state and Piece assignment
-  references, retaining explicit unresolved intent and separate geometry/evidence obligations.
+  Status: `done`
+  Goal: immutable MaterialInventory owns ordered unique Materials, reusing actual current property
+  checks. Targeted/whole Piece assignment queries borrow actual Pieces/Materials or the exact explicit
+  unresolved reason; missing ids/Material-Piece collisions refuse, never matching labels or defaulting.
+  Whole queries check every Material first; targeted queries check only selected scope. No readiness
+  token or source/geometry truth; canonical context remains borrowed while views are used.
+  Own native/privacy/lint/book/API/decision scope sync and complete0353 continuity505 before growth,
+  including the complete historical syntax milestone matrix with current owner/status table retained.
+  - [x] REPRODUCE / ISSUE: assigned metadata needs actual collection targets, not display-name peers;
+    material_inventory_contract missing-id/exact-label cases give8/0, rc=0, target/*native-0354.log.
+  - [x] ROOT CAUSE (WHY + WHERE): standalone Material/Piece constructors cannot check each other's
+    inventories. cargo test -p sc-core --test material_inventory_contract gives8 passed/0 failed, rc=0.
+  - [x] FIX: exact ordered private Materials, current property checks and actual assigned/unresolved
+    views; native8/0 confirms typed missing/collision causes, original reason bytes and canonical borrows.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    material_inventory_contract passes8/0, rc=0, including targeted/full scope and same-label refusal.
+  - [x] NO REGRESSION: privacy3/strict selected lint/fmt/book/publication78/113/1451/2377 pass0,
+    target/material-inventory-*-0354.log; D250132 exact baseline rows/delta0, glossary rc=1.
+  - [x] LOCKSTEP: Material chapter/API/status/index/pointer aligned; continuity505 compares4 Git spans0;
+    historical matrix preserved, current stage owners stay live. Caps unchanged; G1still6/18.
+    promotion: declined (existing Material/source/assignment rules). Commit0354; .3.4 context boundary next.
+    Presence is no readiness token; full host/Design/physical/transformation/integration/CI remains later.
 - ID: `G1-SLICE.6.4.2.d.3.4`
   Status: `pending`
   Goal: selected-host/profile context and symbolic G4 deferrals remain explicit; no Factory Profile

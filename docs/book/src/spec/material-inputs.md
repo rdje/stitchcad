@@ -55,14 +55,37 @@ Shrinkage sources retain separate X/Y targets, treatment reference and explicit 
 intent. None invents zero; requesting an absent shrinkage property refuses. A2% change is20,000ppm,
 not a scale factor generated here. G4-PROFILES.13 owns transformation domains, application and policy.
 
+## Owned collection and Piece assignments
+
+`MaterialInventory::new(materials, &canonical)` owns exact authored order with unique Material ids.
+Even identical duplicates refuse with both original positions. It then validates every actual current
+Material, retaining its original typed cause. Empty inventories and duplicate display names are legal;
+no material or value is generated. materials()/material(id) borrow canonical stored objects.
+
+assignment(piece, &canonical) checks one Piece's Material-id disjointness and its selected target.
+PieceMaterialView returns the actual Piece/Material borrows, or the exact original unresolved reason.
+Assigned means target metadata exists in this scope; width/flags may still be unknown or derived.
+The canonical context remains borrowed while the view is used. Public view variants are data carriers,
+not independent validation certificates. Default Debug hides labels and unresolved reason text.
+
+For example, a Piece assigned id999 with fabric label “Fixture cloth” still refuses when Material100
+has that label. No peer transfers. An explicit “awaiting fabric selection” reason stays unresolved,
+even when only one Material exists. Material/Piece id collisions refuse before whole-query lookups.
+
+assignments(&pieces, &canonical) first validates every Material, then all Piece/Material id collisions,
+then each assignment in authored Piece order. Failure returns no partial vector and rewrites nothing.
+If unused Material200 loses its width target, targeted inspection of a Piece assigned valid100 can
+succeed; the whole query still reports200's original cause. Neither query is artifact-policy closure,
+full Design validation, source truth, geometry or readiness. Other entity roles remain the Design's check.
+
 ## Inspection and proof limits
 
 definition()/target() retain original metadata. property_declaration() checks one current target and
 borrows its record, even an invalid width; validate_current() checks the whole Material. Detached edits require validated replacement. Default
 Material/property-view Debug omits customer text/values; explicit definition/record access exposes them.
 
-Design/G4 still owns source/evidence truth and profile resolution. Collection/assignment, geometry,
-layout/dual grainlines, shrinkage execution and release readiness remain unimplemented here.
+Design/G4 still owns source/evidence truth and profile resolution. Collection/assignment checks above
+supply no geometry, layout/dual grainlines, shrinkage execution or release readiness.
 
 | API token | Meaning here |
 | --- | --- |
@@ -75,5 +98,8 @@ layout/dual grainlines, shrinkage execution and release readiness remain unimple
 | `PostGradePreExport` | Explicit post-grade/pre-export intent; no application |
 | `MaterialTextField` | Required name or supplied composition |
 | `MaterialError` | Actual text/identity/target/kind/width refusal |
+| `MaterialInventory` | Immutable actual ordered Material collection |
+| `MaterialInventoryError` | Duplicate/current Material or Piece assignment cause |
+| `PieceMaterialView` | Actual assigned objects or original unresolved reason |
 
-Focused native8/privacy3 checks cover this component. Whole Design/integration/platform proof remains pending.
+Material fields: native8/privacy3. Collection/assignments: native8/privacy3. Whole Design/integration/platform proof remains pending.

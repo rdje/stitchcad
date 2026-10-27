@@ -275,33 +275,17 @@ These historical input proofs establish no performance, browser, geometry or rel
 
 ## Syntax milestone and the route to execution
 
-Syntax and identity can be inspected reproducibly, without executing a garment. Source uses -x and
-x ^ 2; (- child) and (^2 child) are canonical output, and display glyphs stay outside parsing.
-The public test families below retain independent fixtures/references. The milestone reran seven
-coupled input faults with exact restoration, without rerunning every earlier fault family.
+Syntax/identity remain inspection, not garment execution. Source uses -x and x ^ 2; (- child) and
+(^2 child) are canonical output. Display glyphs stay outside machine parsing.
 
-| Requirement | Public contract family | Reviewed scope |
-| --- | --- | --- |
-| ASCII, identifier spelling, three keywords, longest operators | formula_lex_contract | Borrowed tokens, full-source preflight and exact lexical rules |
-| Decimal syntax, closed units and one-space separator | formula_expression_contract | Original spelling/span; display and exponent notation refused |
-| Precedence, associativity, square payload, comparisons | formula_expression_contract | Explicit ordered trees; non-chaining and unsupported exponent |
-| Ordered calls and all three conditional children | formula_expression_contract | Syntax only; function names/types remain unchecked |
-| Source borrowing, privacy, clone/drop and flat limits | formula_lex_contract / formula_expression_contract | Located refusals, 256 nodes and 16 conditional levels |
-| Exact input conversion, reduction, width and scalar domains | formula_literal_contract | Independent Fraction/Decimal rows and pathological spellings |
-| Every literal position, aliases, raw turns and atomic failure | formula_normalized_contract | Unevaluated whole arena with original metadata |
-| Every expression role, operator/order and exact owned bytes | formula_canonical_contract | Typed identity, explicit extraction, no simplification |
-| Six binding annotations, five assertion classes and operands | formula_statement_contract | Complete headers/global spans; no binding or tolerance resolution |
-| Empty/ordered statement boundaries and 4096 bound | formula_recipe_contract | Full-source consumption; later errors and combined maxima |
-| Every statement input and contextual normalization refusal | formula_normalized_recipe_contract | Both assertion operands; known ordinal and nested Error chain |
-| Owned statement/recipe identity and typed text collisions | formula_canonical_recipe_contract | Empty wrapper, ordered metadata/operands and domain distinction |
-| Actual worked/refusal population and all first excesses | formula_recipe_input_review | 21 statements/25 operands; 3 syntax and 10 deferred semantic refusals |
+The completed milestone's full test-family matrix, limits and proof scope are retained byte-for-byte
+in docs/history/stitchcad-devnotes-part505.md. Current detailed contracts remain in the
+[syntax](formula-syntax.md), [literal](formula-literals.md), [statement](formula-statements.md) and
+[static-proof](formula-checked-recipes.md) annexes; the stage table below retains current remaining work.
 
-The [grammar](../spec/formula-language/grammar.md) and [contract](../spec/formula-language.md) retain
-machine/display/canonical distinctions, original spans and four language limits. Input width128 and
-[numeric width/domain/binding APIs](formula-rationals.md) are implemented at their distinct stages.
-Explicit source/identity access reveals customer content; Debug/errors omit it. The completed syntax
-milestone ran native checks, three-library WASM compilation, probes and doctrine gates. Compilation
-supplies no real-browser execution certificate.
+```bash
+python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part505.md
+```
 
 ### Implementation and remaining owners
 

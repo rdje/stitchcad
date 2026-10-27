@@ -3,15 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0353 — retain canonical Material properties and stage intent
+## STITCHCAD-G1-0354 — own Materials and resolve actual Piece assignment targets
 
-- Add immutable Material metadata with exact typed current width/Boolean/shrinkage sources and no value/state copies.
-- Require positive present/computed width; retain Unknown/Derived drafts, explicit optional X/Y treatment/stage and original refusals.
-- Native8/privacy3/strict selected lint/fmt/book/publication pass0; D250132 glossary rows remain exactly baseline.
-- New Material chapter and canonical-source decision aligned; whole0352/D228 and old book proofs504 match5 Git spans.
-- Caps unchanged; G1still6/18. Collection/assignment next; full host/Design/geometry/transformation/integration/CI pending.
+- Add immutable ordered MaterialInventory with exact current property checks and original typed causes.
+- Targeted/whole assignment views borrow actual objects or original unresolved reasons; missing ids never match labels.
+- Native8/privacy3/strict selected lint/fmt/book/publication pass0; canonical context cannot be replaced while views live.
+- D250132 rows exactly baseline; continuity505 matches4 Git spans; historical matrix/current owner map retained; caps unchanged.
+- G1still6/18; selected-context/G4 boundary next. Assignment presence grants no full Design/physical/readiness/CI proof.
 
 # Sealed archive — earlier slices
+
+| [part505](docs/history/stitchcad-devnotes-part505.md) | whole0353 Material and historical syntax milestone matrix | 80 lines, 7550 bytes, sha256:0d22418e… |
 
 | [part504](docs/history/stitchcad-devnotes-part504.md) | whole0352/D228 and historical coupled-input book proofs | 129 lines, 10712 bytes, sha256:b6281757… |
 

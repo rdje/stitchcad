@@ -3,21 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — canonical Material property metadata
+## _(2026-10-27 UTC)_ — owned Materials and actual Piece assignments
 
-0353 Material owns exact id/source/name/composition and canonical width/flag/shrinkage targets, never
-copied states or numeric facts. Fixed roles check authored target family/kind and actual current
-identity/kind before reading width. Every available Known/Assumed/Preference width must be positive;
-Unknown/Derived stays unapplied, with supplied computed width checked separately. Flags retain actual
-Boolean state, not default false. Optional X/Y Ratio sources retain treatment and explicit supported
-post-grade/pre-export intent; no coordinate, scale or physical transformation is produced.
-Targeted views borrow current declarations and remain inspectable even when full validation refuses;
-metadata/canonical ids stay disjoint. Source/evidence, layout/dual grainline and release remain deferred.
+0354 MaterialInventory owns original ordered Materials, rejects duplicate ids and reuses every current
+Material validator. Targeted assignment queries inspect one actual Piece/selected Material or original
+unresolved reason. Whole queries validate all Materials, then Piece/Material id collisions, then held
+targets. A fabric label exactly matching an existing Material still cannot replace a missing id.
+Unresolved remains explicit even with one available choice; no object or copy is generated. Assigned
+means metadata presence in this scope, with unknown/derived properties still retained, not readiness.
+Returned views borrow actual objects and hold the canonical context borrow; default Debug hides labels/
+reasons. Public variants are carriers, not certificates. Detached replacements cannot mutate storage.
 Native8/privacy3/strict selected lint/fmt/book/publication pass0. D250132 rows remain baseline, delta0.
-Whole0352/D228 and old coupled-input proof504 compare5 Git spans, preserving current commands/anchors.
-Promotion: canonical-source decision gains Material answer/section. New Material chapter reflects actual
-scope; caps unchanged; G1still6/18. Collection/assignment .6.4.2.d.3.3 next, full host/Design/physical/
-transformation/integration/CI pending. Final native assertions require actual view variants before reads.
+Whole0353 and historical syntax matrix505 compare4 Git spans; current stage/owner table stays live.
+Promotion: existing Material/source/assignment rules. Caps unchanged; G1still6/18; .6.4.2.d.3.4 selected
+context/G4 deferrals next. Full host/Design/physical/transformation/integration/CI remains unverified.
+
+[Whole0353 Material metadata lesson](docs/history/stitchcad-devnotes-part505.md) retains exact scope/proofs.
 
 [Whole0352 shared-target lesson](docs/history/stitchcad-devnotes-part504.md) retains exact scope/proofs.
 

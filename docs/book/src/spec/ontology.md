@@ -336,7 +336,7 @@ bounded; all existing examples and local API vocabulary are preserved there.
 | Piece | Immutable content/labels, pair-consistent inventories and owned structural state | G2 geometry; aggregate readiness |
 | Point and range references | Journal resolution, endpoint choices and interval repairs | G2 geometric continuity; design/release validation |
 | Physical cut copies | Explicit identities, exact quantity/orientation plan | G2/V1 physical transforms |
-| Material | Canonical property targets and positive present width | Collection/assignment; source truth; layout; G4 transformation |
+| Material | Canonical properties, owned collection and actual Piece assignments | Source truth; layout; G4 transformation; global Design |
 | Notch | Semantic anchor, symbolic profile bindings | G4 physical geometry/encoding |
 | Sewing graph | Copy-addressed spans, disjoint self-seams, explicit ease and stops | G2/G3 walking; recipe/profile values |
 | SeamAllowance | Per-edge width origins, corner intent, symbolic inclusion | G2 bounded offsets; G4 target policy |
