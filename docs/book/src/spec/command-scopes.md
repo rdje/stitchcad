@@ -78,3 +78,35 @@ identity and observation time. It is a snapshot decision. Execution must reautho
 boundary and validate sources/revision, package identity, reviewed scope and evidence before effects.
 No approval record, package hash or artifact is created. Native tests exercise controlled host
 snapshots; they do not establish transport authentication or a completed command bus.
+
+## Whole mutation-group authorization
+
+authorize_mutation_group(group, mode, trusted_source) reads one fresh consistent snapshot for the
+original typed CommandMutationGroup. Core authenticates its complete common actor claim and checks
+all current grant identities for duplicates before selecting a grant. Each grant must cover every
+original member's exact command, common Design and trusted observation time. The original
+actor/status/permission/scope checks are shared with single-command authorization.
+
+Preview requires Inspect and execution requires Commit for these typed mutations. Permissions remain
+explicit: a Commit grant alone does not authorize an Inspect preview. A grant covering only one
+member cannot combine with another partial grant. If an earlier partial grant fails but a later
+grant covers the entire group, the complete later grant is selected.
+
+```rust,ignore
+let checked = authorize_mutation_group(&group, CommandAuthorizationMode::Preview, &trusted_host)?;
+assert_eq!(checked.required_authority(), CommandAuthority::Inspect);
+let original = checked.group();
+let one_complete_grant = checked.grant();
+```
+
+CommandGroupAuthorization borrows the exact original group and records mode, required permission,
+one grant id and the original trusted time. A compiler lifetime check rejects retaining it after its
+group is destroyed. Repeated calls refresh revocation and expiry; an earlier result remains only its
+old descriptive snapshot. It supplies no future execution capability or handler availability.
+
+CommandGroupAuthorizationError::Source retains the original core unauthenticated, actor or duplicate-
+grant error in its standard source chain. NoMatchingGrant preserves group, verified actor, requested
+Design, required permission and each source grant's first failing zero-based member/command/refusal.
+An empty grant inventory has an empty rejection vector. No candidate is staged during this check.
+Actual model/revision/source binding, retry handling, group execution and effect-boundary reauthorization
+remain their implementation owners. Controlled native source tests do not establish transport identity.

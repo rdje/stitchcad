@@ -3,18 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-D284 corrected0429: v3 aggregate64 is21 sealed catalogs+43 active records; bounds are64/group and192/aggregate.
-No packing was performed or needed. Native decode/independent rg agree; group staging is the frontier.
+## _(2026-10-27 UTC)_ — one complete grant for an entire group
 
-## _(2026-10-27 UTC)_ — exact typed mutation-group metadata
+0430 .6.5.4.2.2.1 authenticates one fresh trusted snapshot and selects one grant covering every
+original mutation. Shared actor/status/permission/scope checks preserve single-command order.
+Original per-grant first failing index/command/refusal survives; partial grants cannot union coverage.
+Returned decision borrows original group and is no execution capability. Native authorization13
+includes original8/group5; lifetime1/strict selected lint/fmt pass. Promotion: command-layer decision.
+D284 remains fixed: archive counts are aggregate; actual per-generation budgets govern retirement.
 
-0428 .6.5.4.2.1 owns a nonempty ordered mutation group, requiring explicit group membership and
-common exact Design/actor/revision. No standalone rewrite, sorting, deduplication or key inference.
-Errors retain first original index/command/expected/requested data; full Actor roles and beyond128
-revision values survive. Native group4/privacy1/strict lint/fmt pass. Input consistency confers no
-current model, grant, replay or execution. Promotion: command-layer decision; real staging follows.
-
-[Whole0427 private-preparation task/lesson/ledger](docs/history/stitchcad-devnotes-part580.md) retains exact source proofs and prior correction pointers.
+[Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 
 [Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
 

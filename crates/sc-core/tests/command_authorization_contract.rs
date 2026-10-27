@@ -1,4 +1,6 @@
 //! Core authorization semantics with an independently controlled trusted host; no transport authentication claim.
+#[path = "support/command_group_authorization.rs"]
+mod group_authorization;
 use sc_core::{
     command::{
         authorize_command, AgentApprovalGrantError, ApprovalScopeTarget, ApprovePackage,

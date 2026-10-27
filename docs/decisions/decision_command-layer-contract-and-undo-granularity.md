@@ -192,3 +192,8 @@ answers: "what does a typed mutation group validate?"
 0428 .6.5.4.2.1 requires nonempty original order and exact explicit group/Design/actor/revision claims;
 preserves payloads/retry keys and first failing index/context. No sorting, grant, replay or execution
 follows. Native group4/privacy1/lint/fmt cover schema scope; sequential private staging follows.
+
+answers: "how is an entire mutation group authorized?"
+0430 .4.2.2.1 requires one fresh trusted snapshot/complete grant for all members, retaining original
+first grant/member refusals. Decisions borrow the group, grant no effect capability and must refresh
+at effects. Single-command checks retain their original order; scope/permission unions refuse.

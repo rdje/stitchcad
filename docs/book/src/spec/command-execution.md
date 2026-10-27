@@ -254,5 +254,6 @@ id(), context() and mutations() expose immutable original data. A compiler check
 member reordering. Any typed mutation payload may be represented, including a handler that is not
 available yet. This is a group input schema, not a new command class or authenticated transaction.
 Constructing it neither grants permission, looks up model targets, proves current revision, returns
-a preview nor executes a group. Sequential private staging and whole-group failure handling follow.
+a preview nor executes a group. [Whole-group authority](command-scopes.md#whole-mutation-group-authorization)
+is a separate core check. Sequential private staging and whole-group failure handling follow.
 

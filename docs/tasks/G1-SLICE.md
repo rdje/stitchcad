@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0429
+## Current leaf acceptance —0430
 
-- [x] ROOT CAUSE: native generation decode/independent rg census:21 sealed catalogs+43 active raw,
-  total64, rc=0; history_generations.inventory sums counters, bound64 per group/192 aggregate.
-- [x] ADDRESSED: git diff --quiet HEAD -- docs/history .doctrine/history_archive rc=0; no data packing
-  occurred. Corrected false resume/frontier dependency and documented the actual counter scope.
-- [x] NO REGRESSION: bash scripts/history_archive.sh verify-retention:1034 logical records OK rc=0;
-  all budgets/identities remain enforced. Documentation-only correction; native book proof follows.
+- [x] ROOT CAUSE: cargo test -p sc-core --test command_authorization_contract:13 passed rc=0;
+  individually covered commands cannot combine partial grants into whole-group authority.
+- [x] ADDRESSED: authorization13 (original8/group5) passes rc=0; later complete grant selection,
+  one snapshot, exact first grant/member causes, identity priority and fresh revocation/expiry checked.
+- [x] NO REGRESSION: selected strict Clippy finished rc=0; original8 authorization cases stay green;
+  cargo test -p sc-core --doc command::group_authorization:1 passed rc=0; selected fmt --check rc=0.
 
 ## Goal
 
@@ -753,47 +753,43 @@ All98 completed ids/statuses and original proof pointers remain live there.
   original reserve cursor and actual failing-command context, no partial accepted result.
 - ID: `G1-SLICE.6.5.4.2.1`
   Status: `done`
-  Goal:0428 exact nonempty typed mutation-group inputs/common claims, no authority or execution.
-  - [x] REPRODUCE / ISSUE: git show 12b23f6:crates/sc-core/src/command/context.rs prints optional
-    membership per standalone context without a validated group owner, rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test command_group_contract:4 passed rc=0;
-    explicit original membership/order and full common actor/Design/revision must remain consistent.
-  - [x] FIX: cargo clippy -p sc-core --test command_group_contract -- -D warnings:finished rc=0;
-    immutable group/common snapshot, per-command checks in input order, exact original error fields.
-  - [x] ADDRESSED: cargo test -p sc-core --test command_group_contract:4 passed rc=0; no mutation/key
-    sorting/dedup, empty/None/wrong membership, mixed Design/actor/revision and first invalid index checked.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc command::group:1 passed rc=0; selected fmt --check/
-    strict Clippy rc=0. All typed mutation payloads remain representable; availability/replay separate.
-  - [x] LOCKSTEP: whole0427 private preparation scope/lesson/ledger retained580; book/pointer/decision
-    updated. transition_receipts.py record580:3 exact Git spans rc=0; retention1034 records/64 working OK rc=0.
-    Native publication80 chapters/159 scoped API rows/1463 source links/2442 rendered links rc=0;
-    maintained-reference81 files/17549 lines/1224998 bytes rc=0. Full bus proof remains .6.9.
-  Cargo commands use scripts/local_environment.py. Consistency confers no authenticated actor,
-  current model/revision, grant, lookup, replay result, preview or execution. .4.2.2 staging follows.
+  Goal:0428 exact typed group metadata; [whole scope/proofs](../history/stitchcad-devnotes-part581.md).
 - ID: `G1-SLICE.6.5.4.2.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: sequential real private candidates with one independent staged reserve cursor; all-or-error
   group report preserving actual failing index/command and no publication/partial accepted result.
+- ID: `G1-SLICE.6.5.4.2.2.1`
+  Status: `done`
+  Goal:0430 fresh whole-group single-complete-grant decision, original source/member refusal context;
+  descriptive only, no actual model lookup or group execution.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test command_authorization_contract:13 passed rc=0;
+    group case separately authorizes both members then proves their two partial grants cannot cover group.
+  - [x] ROOT CAUSE (WHY + WHERE): authorization13 rc=0; per-request selection cannot establish one grant
+    across all members. Shared original actor/status/permission/scope predicates preserve exact semantics.
+  - [x] FIX: cargo clippy -p sc-core --test command_authorization_contract -- -D warnings:finished rc=0;
+    one trusted observation, full identity/duplicate-grant checks, source-ordered per-grant member checks.
+  - [x] ADDRESSED: cargo test -p sc-core --test command_authorization_contract:13 passed rc=0;
+    original8/group5, later whole grant over earlier partial, no unions, inspect/commit distinction/freshness.
+  - [x] NO REGRESSION: original8 authorization cases pass within13 rc=0; cargo test -p sc-core --doc
+    command::group_authorization:1 passed rc=0; strict selected lint/fmt rc=0. No model/allocator effects.
+  - [x] LOCKSTEP: whole0428/0429 and D283/D284 scope/proofs retained581; five exact Git intervals
+    verified rc=0; retention1035/global65 with actual active44 fits unchanged caps rc=0. Book/pointer/decision aligned.
+  Native publication80 chapters/159 scoped API rows/1464 source links/2444 rendered links rc=0;
+  maintained-reference81 files/17587 lines/1227649 bytes rc=0; independent rg raw44/diff check rc=0.
+  Cargo commands use scripts/local_environment.py. Original core identity failures remain in standard
+  source chain; NoMatchingGrant retains each grant's actual first failing index/command/refusal. Decisions
+  borrow the original group, confer no handler availability/capability, and must be refreshed before effects.
+- ID: `G1-SLICE.6.5.4.2.2.2`
+  Status: `pending`
+  Goal: private preparation base/cursor sharing for successive actual staged models without source
+  substitution, reserve advancement or public model handle; retain existing single-preview behavior.
+- ID: `G1-SLICE.6.5.4.2.2.3`
+  Status: `pending`
+  Goal: actual sequential metadata-group preview and final semantic delta/failure context. Integrate
+  exact within-group retry aliases without implying persisted replay; original model/reserve unchanged.
 - ID: `G1-SLICE.6.5.4.retention1`
   Status: `done`
-  Goal:0429 D284 scope diagnosis/correction; original planned packing was unnecessary. Restore
-  group staging .4.2.2, with original archive bytes and fixed limits unchanged.
-  - [x] REPRODUCE / ISSUE: bash scripts/history_archive.sh verify-retention prints64 working Markdown
-    rc=0; incorrect0427/0428 resume instructions treated that aggregate as the active group's64 bound.
-  - [x] ROOT CAUSE (WHY + WHERE): read-only history_generations.describe/decode_group: generation1
-    working21/decoded3984766B and generation2 working43/decoded303365B, rc=0; inventory sums to64.
-    Each generation is bounded64; the aggregate192. Public source/decision already enforce this.
-  - [x] FIX: git diff --quiet HEAD -- docs/history .doctrine/history_archive rc=0; cancel false
-    dependency, correct pointer/reader guide/decision/defect ledger. No authoring/installer invoked.
-  - [x] ADDRESSED: independent rg --files docs/history -g 'stitchcad-*-part*.md' census43 equals actual
-    active raw set, rc=0. Original logical1034/global64 remains correct; pressure inference was wrong.
-  - [x] NO REGRESSION: bash scripts/history_archive.sh verify-retention:1034 records/4288131 decoded
-    bytes OK rc=0; git diff --check rc=0; per-generation/index caps and every archive byte unchanged.
-  - [x] LOCKSTEP: MEMORY/TASK_TREE/book annex/history decision/PLANNING D284/DEV_NOTES/CHANGELOG
-    aligned; native publication80 chapters/159 scoped API rows/1463 source links/2442 rendered links
-    rc=0; maintained-reference81 files/17554 lines/1225404 bytes rc=0. No retirement record or data change.
-  D284 P2 is owned/fixed here. Global working64 comprises21 sealed catalogs and43 active raw records;
-  compare actual group pressure before future capture. Do not change existing finite budgets.
+  Goal:0429 D284 count-scope correction, no packing; [whole scope/proofs](../history/stitchcad-devnotes-part581.md).
 - ID: `G1-SLICE.6.5.5`
   Status: `pending`
   Goal: scoped actual transaction/failure-context/rollback acceptance; full bus review .6.9 later.

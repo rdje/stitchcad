@@ -3,18 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0429 — correct archive working-count scope
+## STITCHCAD-G1-0430 — authorize whole groups with one complete grant
 
-- D284: aggregate64 combines21 sealed catalogs/43 active records; per-group64 and aggregate192 remain fixed.
-- Native decode/independent raw-file census agree; no packing or archive data change was needed.
-- Correct resume/frontier and reader guidance; sequential private group staging is next.
-
-## STITCHCAD-G1-0428 — own exact typed mutation-group metadata
-
-- Nonempty ordered original mutations require explicit common group/Design/actor/revision claims.
-- Preserve exact payloads/retry keys and original error index/context, including beyond128 revisions.
-- Focused group4/privacy1/lint/fmt; no sorting, deduplication, implicit membership or authority.
-- Sequential private staging, replay and group execution remain separately owned.
+- Fresh trusted snapshot and one grant must cover all original mutation members; partial grants cannot union.
+- Preserve original source identity/duplicate-grant failures and per-grant first failing member/refusal.
+- Native authorization13 (original8/group5), lifetime1/lint/fmt; decisions remain descriptive, no execution.
+- Current archive record581 fits actual active-group bounds; D284 aggregate-scope correction retained.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -49,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part581](docs/history/stitchcad-devnotes-part581.md) | whole0428/0429 schema/corrections/proofs | 79 lines, 6583 bytes, sha256:c617daa2… |
 | [part580](docs/history/stitchcad-devnotes-part580.md) | whole0427 private preparation scope/lesson/ledger | 39 lines, 3222 bytes, sha256:556a2815… |
 | [part579](docs/history/stitchcad-devnotes-part579.md) | whole0426 Measurement/D283 scope/lesson/ledger | 51 lines, 4536 bytes, sha256:6c38230d… |
 | [part578](docs/history/stitchcad-devnotes-part578.md) | wholeD281/D282 verified ledger | 15 lines, 1487 bytes, sha256:fdf69ae8… |

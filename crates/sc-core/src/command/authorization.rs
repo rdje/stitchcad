@@ -37,6 +37,60 @@ pub trait CommandAuthoritySource {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_>;
 }
 
+pub(super) fn authenticated_actor(
+    claimed: CommandActorClaim,
+    snapshot: &CommandAuthoritySnapshot<'_>,
+) -> Result<CommandActorClaim, CommandAuthorizationError> {
+    let actor = snapshot
+        .authenticated_actor
+        .ok_or(CommandAuthorizationError::Unauthenticated)?;
+    if claimed != actor {
+        return Err(CommandAuthorizationError::ActorMismatch {
+            claimed,
+            authenticated: actor,
+        });
+    }
+    Ok(actor)
+}
+
+pub(super) fn unique_grants(grants: &[CommandGrant]) -> Result<(), CommandAuthorizationError> {
+    let mut identities = BTreeSet::new();
+    for grant in grants {
+        if !identities.insert(grant.identity()) {
+            return Err(CommandAuthorizationError::DuplicateGrant {
+                grant: grant.identity(),
+            });
+        }
+    }
+    Ok(())
+}
+
+pub(super) fn grant_refusal(
+    grant: &CommandGrant,
+    actor: CommandActorClaim,
+    required: CommandAuthority,
+    design: EntityId,
+    command: CommandId,
+    at: SystemTime,
+) -> Option<CommandGrantRefusal> {
+    if grant.actor() != actor {
+        Some(CommandGrantRefusal::Actor {
+            granted: grant.actor(),
+            authenticated: actor,
+        })
+    } else if grant.status() == CommandGrantStatus::Revoked {
+        Some(CommandGrantRefusal::Revoked)
+    } else if !grant.permissions().contains(&required) {
+        Some(CommandGrantRefusal::Permission { required })
+    } else {
+        grant
+            .scope()
+            .check(design, command, at)
+            .err()
+            .map(CommandGrantRefusal::Scope)
+    }
+}
+
 /// One grant failed a required check. Permissions and scopes from different grants are never mixed.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CommandGrantRefusal {
@@ -165,15 +219,7 @@ pub fn authorize_command<'a>(
     source: &dyn CommandAuthoritySource,
 ) -> Result<CommandAuthorization<'a>, CommandAuthorizationError> {
     let snapshot = source.snapshot();
-    let actor = snapshot
-        .authenticated_actor
-        .ok_or(CommandAuthorizationError::Unauthenticated)?;
-    if request.actor() != actor {
-        return Err(CommandAuthorizationError::ActorMismatch {
-            claimed: request.actor(),
-            authenticated: actor,
-        });
-    }
+    let actor = authenticated_actor(request.actor(), &snapshot)?;
     let command = request.command_id();
     if command == CommandId::ApprovePackage && matches!(actor, CommandActorClaim::Agent { .. }) {
         return Err(CommandAuthorizationError::HumanApprovalRequired { actor });
@@ -187,32 +233,17 @@ pub fn authorize_command<'a>(
             CommandAuthority::Inspect
         }
     };
-    let mut identities = BTreeSet::new();
-    for grant in snapshot.grants {
-        if !identities.insert(grant.identity()) {
-            return Err(CommandAuthorizationError::DuplicateGrant {
-                grant: grant.identity(),
-            });
-        }
-    }
+    unique_grants(snapshot.grants)?;
     let mut rejections = Vec::new();
     for grant in snapshot.grants {
-        let reason = if grant.actor() != actor {
-            Some(CommandGrantRefusal::Actor {
-                granted: grant.actor(),
-                authenticated: actor,
-            })
-        } else if grant.status() == CommandGrantStatus::Revoked {
-            Some(CommandGrantRefusal::Revoked)
-        } else if !grant.permissions().contains(&required) {
-            Some(CommandGrantRefusal::Permission { required })
-        } else {
-            grant
-                .scope()
-                .check(request.design(), command, snapshot.observed_at)
-                .err()
-                .map(CommandGrantRefusal::Scope)
-        };
+        let reason = grant_refusal(
+            grant,
+            actor,
+            required,
+            request.design(),
+            command,
+            snapshot.observed_at,
+        );
         if let Some(reason) = reason {
             rejections.push(CommandGrantRejection {
                 grant: grant.identity(),
