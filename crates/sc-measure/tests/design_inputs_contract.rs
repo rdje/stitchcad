@@ -2374,3 +2374,6 @@ mod garment_declarations;
 
 #[path = "support/garment_scope.rs"]
 mod garment_scope;
+
+#[path = "support/coupled_aggregate.rs"]
+mod coupled_aggregate;

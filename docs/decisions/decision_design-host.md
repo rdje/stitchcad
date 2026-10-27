@@ -25,6 +25,8 @@ answers: "does the complete garment declaration query preserve original role ada
 
 answers: "can damaged garment sources mask an original explicit execution-envelope refusal?"
 
+answers: "can current garment sources and live registered endpoints replace whole-Piece topology readiness?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -169,3 +171,11 @@ actual layer/family/index/served Piece and original concrete causes even with da
 Fly stays pre-birth env_fly/G7 at Closure::new; no immutable Fly is modelled. Scope success proves no
 currentness, logical domains/operations, physical support, completeness or release. Inspection and
 current declarations stay independently available; no supported replacement is supplied.
+
+## Aggregate proof boundaries — G1-SLICE.6.4.6
+
+Actual garment sources/metadata and explicit scope can pass while an unused Piece retains a lost
+interior, despite all registered endpoints resolving and ledger point-only Releasable. The actual
+root's whole-Piece topology report must also pass; it borrows the same owner and retains original
+portions/repairs without reconstruction. These scoped proofs do not supply evaluator/operation,
+geometry, physical or release support. Private-owner/borrow compile refusals preserve the boundary.

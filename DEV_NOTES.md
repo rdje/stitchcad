@@ -3,15 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — scoped garment component acceptance
+## _(2026-10-27 UTC)_ — coupled aggregate and private-owner acceptance
 
-0413 runs all15 current garment native controls plus2 Pocket opening controls:17 pass0. Independent
-source annotations count ownership4/current4/declarations3/scope3/shared-host1/Pocket2; exact garment
-rustdoc filter passes3 privacy/lifetime cases, source census2+1 agrees. Existing family-specific
-acceptance stays linked; no Rust/test changes. Whole owner subtree/0412 lesson/ledger/retirement562
-preserves4 exact Git spans and all10 live ids; retention/book/publication/size0. Promotion declined:
-existing Design host decision already owns semantics; exact scoped run stays in leaf. Aggregate
-.6.4.6 and full bus/runtime/application/physical/release remain pending, G1still6/18.
+0414 adds2 real aggregate controls: supported current root lends identical canonical objects/report;
+unused third Piece keeps born input after two splits/middle deletion. Garment sources/declarations
+pass and ledger point-only readiness stays Releasable, while the full report retains live ends plus
+three portions/one repair and refuses readiness. All2 pass0. Exact five owner/report rustdoc filters
+pass2+2+3+3+2=12, independent annotations agree. Copy lint corrected, native2 rerun/strict measure
+lint/fmt0; production core unchanged. Whole0413 scopes563 retain4 exact Git spans; retention/book/
+publication/size0. Promotion: Design host decision. Original book facts/examples retained with
+canonical links/tighter sewing prose. Implemented aggregate acceptance closes, without conflating
+source/metadata/scope/topology proofs; actual bus, evaluator/operations, runtime/storage/app/physical/
+release remain owned. G1still6/18; full CI remains pre-push/milestone scope.
+
+[Whole0413 garment acceptance lesson](docs/history/stitchcad-devnotes-part563.md) retains native17/privacy3 and independent census.
 
 [Whole0412 envelope lesson](docs/history/stitchcad-devnotes-part562.md) retains original scope/cause and pre-birth Fly proofs.
 

@@ -1182,8 +1182,8 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 ## D271–D276 — original causes, native controls and Fly correction
 [D271/D272](../history/stitchcad-devnotes-part547.md), [D273](../history/stitchcad-devnotes-part551.md),
 [D274/D275](../history/stitchcad-devnotes-part554.md), [D276 corrected0409](../history/stitchcad-devnotes-part559.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part562.md:4 spans
-  rc=0; completed garment-owner subtree/0412 scopes retained before retirement.
-- [x] ADDRESSED: same rc=0; all10 live ids and whole proofs preserved.
-- [x] NO REGRESSION: scoped garment native17/privacy-lifetime3/book/publication/size/retention rc=0;
-  aggregate and full bus/runtime/physical/release proof remain.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part563.md:4 spans
+  rc=0; whole0413 acceptance/lesson/ledger/retirement retained.
+- [x] ADDRESSED: same rc=0; exact scoped native17/privacy3 and source census preserved.
+- [x] NO REGRESSION: aggregate native2/owner privacy-lifetime12/measure strict lint/fmt/book/publication/
+  size/retention rc=0; actual bus/runtime/physical/release proof remain.

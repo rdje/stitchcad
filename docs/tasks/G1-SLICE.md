@@ -628,7 +628,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0338 native authority scope/freshness reviewed; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part493md).
 - ID: `G1-SLICE.6.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: privately mutated design aggregate; actual reference/pair/sewing/pocket/closure/layer readiness.
   Children .1 complete Piece inventory; .2 owned canonical state; .3 point/range readiness;
   .4 sewing/current symbolic amounts; .5 garment families; .6 focused coupled aggregate/privacy acceptance.
@@ -929,24 +929,25 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal: completed garment scope; [whole subtree](../history/stitchcad-devnotes-part562.md).
 - ID: `G1-SLICE.6.4.5.6`
   Status: `done`
-  Goal:0413 scoped complete garment acceptance; previous family acceptance remains linked above.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_:
-    15 passed rc=0; complete actual ownership/current/declaration/envelope controls after implementation.
-  - [x] ROOT CAUSE (WHY + WHERE): independent source annotation census rc=0:ownership4/current4/
-    declarations3/scope3 plus shared host drift1 =15; Pocket opening2 and garment compile_fail2+1.
-  - [x] FIX: same native15 plus cargo test -p sc-measure --test design_inputs_contract pocket_opening:
-    2 passed rc=0;17 distinct controls over original actual components/canonical owner.
-  - [x] ADDRESSED: native17 rc=0:complete owner/source order, global collisions, original role/pointer
-    borrows, late/unused/empty failures and concrete causes; named Lining/pre-birth Fly scope intact.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::garment:3 privacy/lifetime controls rc=0;
-    git diff --exit-code -- crates rc=0; no production/test changes or broadened release claims.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part562.md:4 spans rc=0;
-    retention/book/publication/size rc=0. All10 subtree ids retained. Promotion declined: existing
-    Design host decision covers semantics; exact scoped acceptance stays here. Aggregate .6.4.6,
-    bus/runtime/application/physical/release proof remain independently owned; G1still6/18.
+  Goal:0413 garment17-native/3-privacy acceptance; [whole proof](../history/stitchcad-devnotes-part563.md).
 - ID: `G1-SLICE.6.4.6`
-  Status: `pending`
-  Goal: focused coupled aggregate and public-mutator privacy acceptance; full runtime integration later.
+  Status: `done`
+  Goal:0414 coupled actual structural/input/sewing/garment aggregate and public-owner privacy acceptance.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract coupled_aggregate:
+    2 passed rc=0; actual third unused Piece with registered ends and deleted interior tests the full root.
+  - [x] ROOT CAUSE (WHY + WHERE): native2 rc=0:garment current sources/roles and ledger point-only
+    Releasable remain valid while whole-Piece topology is not ready; these separate APIs must all apply.
+  - [x] FIX: same native2 rc=0:healthy and damaged real aggregates keep exact original objects/sole
+    canonical owner; report includes unused third Piece, both live ends and three portions/one repair.
+  - [x] ADDRESSED: exact sc-core rustdoc filters DesignStructure/topology::DesignTopologyReadiness/
+    inputs::DesignInputs/sewing_state::DesignSewing/garment::DesignGarment:2+2+3+3+2=12 passed rc=0;
+    independent compile_fail annotation census agrees. No public replacement/mutable borrow or escape.
+  - [x] NO REGRESSION: affected measure strict Clippy/fmt and native2 rerun rc=0 after Copy lint
+    correction; git diff --exit-code -- crates/sc-core rc=0. No production behavior changed.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part563.md:4 spans rc=0;
+    retention/book/publication/size rc=0. Original book facts/examples preserved; Design host decision
+    promotion. Implemented aggregate scope closes; .6.5–.9 actual bus and .5e/.5f execution, runtime,
+    application/storage/geometry/physical/release proof remain owned. G1still6/18.
 - ID: `G1-SLICE.6.vocabulary`
   Status: `pending`
   Goal: P2 D250 repair preexisting public API/variant/local token declarations by canonical meaning;
