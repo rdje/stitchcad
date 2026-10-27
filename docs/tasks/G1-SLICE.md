@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0423
+## Current leaf acceptance —0424
 
-- [x] ROOT CAUSE: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0;
-  creation preview needs a separate cursor over owned values, not an external generator/Clone alias.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:14 passed rc=0;
-  actual Notch candidates preserve reserved identities on repeat/refusal and original owned Pieces.
-- [x] NO REGRESSION: selected strict Clippy finished rc=0; prior query/Material tests pass within
-  command_bus14 rc=0. Privacy/fmt and book proof are recorded at .b.3; integration remains .6.9.
+- [x] ROOT CAUSE: cargo test -p sc-core --lib command::bus::difference:3 passed rc=0;
+  copied intent alone cannot detect unrelated candidate edits or an actual mismatched field.
+- [x] ADDRESSED: cargo test -p sc-core --lib command::bus::difference:3 passed rc=0;
+  actual immutable Pieces/Notches expose valid unrelated label/order/selection/identity changes to refusal.
+- [x] NO REGRESSION: cargo test -p sc-measure --test design_inputs_contract command_bus:14 passed
+  rc=0; selected strict Clippy/fmt and bus privacy3 pass rc=0. Full integration remains .6.9.
 
 ## Goal
 
@@ -666,8 +666,9 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal: completed maintained-book scope; [whole proof](../history/stitchcad-devnotes-part568.md).
 - ID: `G1-SLICE.6.5.2`
-  Status: `in_progress`
-  Goal: private actual aggregate/candidate ownership and semantic diffs, no caller-minted commit token.
+  Status: `done`
+  Goal: private actual bus/candidates, isolated explicit identities and actual semantic differences
+  complete for implemented Material/Notch subset. Other mutation semantics remain .6.5.3.
 - ID: `G1-SLICE.6.5.2.a`
   Status: `done`
   Goal:0419 private owner/authorized Piece-list read; [whole proof](../history/stitchcad-devnotes-part569.md).
@@ -715,29 +716,27 @@ All98 completed ids/statuses and original proof pointers remain live there.
   lint suppression; selected strict lint now passes. New test module path fixed from rustfmt diagnostic.
 - ID: `G1-SLICE.6.5.2.b.3`
   Status: `done`
-  Goal:0423 explicit private trusted identity reserve; strict generator order/actual whole ownership
-  disjointness, independent staged cursor, real AddNotch candidate/report. Publication/refill remain owned.
-  - [x] REPRODUCE / ISSUE: git show 93776a2:crates/sc-core/src/command/bus.rs shows no private ids
-    or creation preparation; rc=0. Native AddNotch payload carries no client-supplied result identity.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --lib command::bus::identity:1 passed rc=0;
-    direct generator use/aliased clone would consume original state; immutable value reserve avoids both.
-  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
-    trusted constructor validates ids, stage owns iterator position, actual Notch/sewing/garment checks run.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:14 passed rc=0;
-    repeated previews/bad anchor retain next id; exact original exhaustion/collision/anchor causes survive.
-  - [x] NO REGRESSION: command_bus14 rc=0 includes prior actual reads5/Material5; identity staging1
-    passes rc=0. No publication/history/refill/global persistence claim. Full integration remains .6.9.
-  - [x] LOCKSTEP: DEV_NOTES promotion in identity decision; README/book/live pointer/task/ledger aligned.
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part574.md retains whole0422 lesson;
-    1 exact Git span rc=0; verify-retention OK rc=0. Book build/publication80 chapters/159 tables/
-    1461 rows/2436 local links rc=0; maintained-reference81 files/17409 lines/1215580 bytes rc=0.
-    cargo test -p sc-core --doc command::bus:3 passed rc=0; selected fmt --check rc=0.
-  Cargo invocations use scripts/local_environment.py. Production root supplies reserved output from
-  its injected clock/entropy generator; test/replay uses deterministic generator. Requests cannot mint ids.
-  Empty reserves refuse explicitly. Persistent global nonreuse/refill/publication remain .6.5.4/.6.8/.7.
+  Goal:0423 private reserve/actual Notch preview; [whole scope/proofs](../history/stitchcad-devnotes-part575.md).
 - ID: `G1-SLICE.6.5.2.c`
-  Status: `pending`
-  Goal: exact actual semantic changes; preserve canonical identity/order/logical source distinctions.
+  Status: `done`
+  Goal:0424 actual Material/Notch candidate differences, closed unchanged-owner coverage and
+  structured refusal for unrelated context/Piece/order/landmark/intent changes. Publication remains .4.
+  - [x] REPRODUCE / ISSUE: git show c665276:crates/sc-core/src/command/bus/material.rs prints
+    report values copied from original/request before candidate construction, rc=0; whole diff was absent.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --lib command::bus::difference:3 passed
+    rc=0; independently valid label/ordering/unselected edits must not be reported as only Material intent.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
+    exhaustive unchanged-owner definition comparison plus actual candidate assignment/append extraction.
+  - [x] ADDRESSED: cargo test -p sc-core --lib command::bus::difference:3 passed rc=0;
+    no-op/reason bytes, wrong intent, labels/order/unselected changes and actual appended Notch/prefix checked.
+  - [x] NO REGRESSION: cargo test -p sc-measure --test design_inputs_contract command_bus:14 passed
+    rc=0; cargo test -p sc-core --doc command::bus:3 passed rc=0; selected fmt --check rc=0.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part575.md:3 exact
+    Git spans rc=0; whole0423 scope/lesson/ledger and pointers retained. Book/pointer/decision aligned.
+  Book build/publication80 chapters/159 tables/1461 rows/2437 local links rc=0; maintained-reference
+  candidate81 files/17436 lines/1217605 bytes rc=0; verify-retention OK rc=0; git diff --check rc=0.
+  Cargo commands use scripts/local_environment.py. Actual host requires value equality for preview;
+  queries retain original host bound. No public candidate/model/replacement capability is added.
 - ID: `G1-SLICE.6.5.3`
   Status: `pending`
   Goal: original canonical mutation handlers; subdivide actual interfaces/evaluator dependencies first.

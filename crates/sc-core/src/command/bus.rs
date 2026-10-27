@@ -15,6 +15,8 @@ mod identity;
 pub use identity::CommandIdentityError;
 mod notch;
 pub use notch::CommandNotchPreview;
+mod difference;
+pub use difference::CommandDifferenceError;
 
 /// Actual inspect-preview subset; reports carry semantic changes, never an owned candidate model.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -139,7 +141,7 @@ pub struct CommandBus<H, A> {
     identities: identity::IdentityReserve,
 }
 
-impl<H: DesignReferenceHost + Clone, A: CommandAuthoritySource> CommandBus<H, A> {
+impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
     /// Actual inspect-preview subset, independent of committable/executable handlers.
     #[must_use]
     pub const fn is_preview_available(&self, command: CommandId) -> bool {

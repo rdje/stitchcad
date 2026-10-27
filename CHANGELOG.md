@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0423 — stage private identities for actual Notch preview
+## STITCHCAD-G1-0424 — derive exact differences from actual candidates
 
-- Explicit trusted reserve rejects repeated/reversed ids and collisions anywhere in the actual owner.
-- Private staged iterators preserve the reserve on preview/refusal/exhaustion without provider calls.
-- AddNotch inspect-preview builds/validates a real candidate and reports its exact tentative Notch.
-- Focused bus14/staging1/privacy3/lint/fmt; existing Material/query behavior preserved.
-- No publication/refill/global persistence claim; profile bindings remain DeferredToG4.
+- Compare original and validated candidate across complete implemented owner definitions.
+- Derive exact Material/Notch reports; refuse unrelated context/Piece/order/landmark or intent changes.
+- Exhaustive field patterns require new fields to enter comparison coverage; original state unchanged.
+- Focused diff3/bus14/privacy3/lint/fmt; publication and full integration remain separately owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -44,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part575](docs/history/stitchcad-devnotes-part575.md) | whole0423 identity scope/lesson/ledger | 44 lines, 3757 bytes, sha256:37ec11fc… |
 | [part574](docs/history/stitchcad-devnotes-part574.md) | whole0422 Material-preview lesson | 11 lines, 848 bytes, sha256:cdfc5ca0… |
 | [part573](docs/history/stitchcad-devnotes-part573.md) | whole0421 source/storage lesson | 12 lines, 985 bytes, sha256:2b349c15… |
 | [part572](docs/history/stitchcad-devnotes-part572.md) | whole completed verification/commit journal | 1169 lines, 79693 bytes, sha256:155861ad… |

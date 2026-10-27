@@ -31,7 +31,7 @@ impl CommandNotchPreview {
         &self.notch
     }
 }
-impl<H: DesignReferenceHost + Clone, A: CommandAuthoritySource> CommandBus<H, A> {
+impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
     pub(super) fn preview_notch(
         &self,
         addition: AddNotch,
@@ -58,7 +58,7 @@ impl<H: DesignReferenceHost + Clone, A: CommandAuthoritySource> CommandBus<H, A>
         .map_err(CommandPreviewError::Notch)?;
         let mut garment = self.state.definition().clone();
         let mut sewing = garment.sewing.definition().clone();
-        sewing.landmarks.push(SewingLandmark::Notch(notch.clone()));
+        sewing.landmarks.push(SewingLandmark::Notch(notch));
         garment.sewing =
             DesignSewing::new(sewing).map_err(|e| CommandPreviewError::Sewing(Box::new(e)))?;
         let candidate =
@@ -66,6 +66,20 @@ impl<H: DesignReferenceHost + Clone, A: CommandAuthoritySource> CommandBus<H, A>
         candidate
             .validate_current()
             .map_err(|e| CommandPreviewError::Candidate(Box::new(e)))?;
+        super::difference::unchanged_context(&self.state, &candidate)
+            .map_err(CommandPreviewError::Difference)?;
+        if structure.pieces() != candidate.inputs().structure().pieces() {
+            return Err(CommandPreviewError::Difference(
+                super::CommandDifferenceError::Pieces,
+            ));
+        }
+        let notch = super::difference::added_notch(
+            self.state.sewing().landmarks(),
+            candidate.sewing().landmarks(),
+            addition,
+            identity,
+        )
+        .map_err(CommandPreviewError::Difference)?;
         Ok(CommandNotchPreview {
             design: candidate.inputs().id(),
             revision: candidate.inputs().revision().clone(),

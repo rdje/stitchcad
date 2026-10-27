@@ -139,3 +139,30 @@ reserved identity; a refused anchor consumes none. The proposed identity is tent
 reservation or later publication capability. execute still refuses AddNotch. Model/revision/owned
 reserve stay unchanged, and no history, artifact or approved release is produced.
 
+## Exact candidate differences
+
+Reports are derived from the actual validated candidate before that candidate is discarded.
+The bus compares original garment metadata, sewing graph, input registries/recipe/higher sources,
+Design identity/revision, canonical declarations, cut plan and topology history. The comparisons use
+exhaustive owner-definition patterns: adding a field requires explicitly including it in this coverage.
+Preview hosts therefore implement Clone and PartialEq in addition to DesignReferenceHost; the
+installed sc-measure source owner supplies those value semantics.
+
+For Material assignment, Piece count and identity order must match. Every unselected Piece must be
+identical. A selected Piece may change only its exact Material assignment, which must equal the
+explicit intent; labels, quantities, pairing and held references are compared too. Existing semantic
+landmarks must be identical. Before/after values come from the original and candidate, with changed
+targets in request order and exact no-ops omitted.
+
+For AddNotch, the complete Piece inventory must remain identical. The candidate's landmark inventory
+must contain the original exact prefix followed by one actual Notch. The appended Notch must match
+the requested Piece, exact anchor, all symbolic profile bindings and privately staged identity.
+The report reads that actual appended object. Changes to existing landmarks or other owner content
+refuse. CommandPreviewError::Difference preserves a structured CommandDifferenceError cause identifying
+the failed comparison; an unexpected internal mutation cannot become a successful preview report.
+
+Focused difference checks use real canonical Pieces, ledger and Notches, including unrelated valid
+label changes, reordered Pieces/landmarks, unselected edits and mismatched assignment or Notch identity.
+The existing real-aggregate bus cases still pass. These checks establish the implemented two-operation
+subset; other mutation differences and full integration retain their later owners.
+

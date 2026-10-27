@@ -3,19 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — private reserved identities and Notch preview
+## _(2026-10-27 UTC)_ — actual candidate semantic differences
 
-0423 .6.5.2.b.3 owns explicitly reserved generator ids; checks strict order/complete current ownership.
-Creation stages an independent immutable iterator, with no external provider call or Clone assumption.
-Real AddNotch preview resolves actual Piece/anchor, builds complete sewing/garment candidate and
-returns only exact proposed Notch/base revision. Repetition/refusal leaves reserved ids unchanged.
-Empty reserve returns original exhaustion; profile bindings remain DeferredToG4. Publication/runtime
-refill/persistent global issuance stay owned, with no default counter/entropy source in domain code.
-Focused bus14/staging1/privacy3/strict selected lint/fmt check this scope. Promotion: identity decision.
+0424 .6.5.2.c derives reports from the validated candidate, checks unchanged garment/input/sewing/
+structure context and permits only selected Material fields or one exact appended Notch. Exhaustive
+owner-definition patterns force comparison coverage when fields are added; source hosts must support
+value equality. No-op omission/order/reason bytes stay exact. Unexpected candidate differences retain
+structured causes and refuse before a report. Focused diff3/bus14/privacy3/lint/fmt check this scope.
+Promotion: command-layer decision; publication and full bus/evaluator/runtime proof remain owned.
 
-[Whole0422 private Material-preview lesson](docs/history/stitchcad-devnotes-part574.md) retains its original registry/source/diff and focused proof boundaries.
-
-[Whole0421 canonical task-source/byte-storage lesson](docs/history/stitchcad-devnotes-part573.md) retains original migration controls and exact proof boundaries.
+[Whole0423 private identity task/lesson/ledger](docs/history/stitchcad-devnotes-part575.md) retains exact proof and predecessor lesson pointers.
 
 [Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
 

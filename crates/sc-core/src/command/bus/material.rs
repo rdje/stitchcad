@@ -17,9 +17,9 @@ use core::fmt;
 /// One actual changed Piece assignment, in original request-selection order.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct CommandMaterialChange {
-    piece: EntityId,
-    before: MaterialAssignment,
-    after: MaterialAssignment,
+    pub(super) piece: EntityId,
+    pub(super) before: MaterialAssignment,
+    pub(super) after: MaterialAssignment,
 }
 impl CommandMaterialChange {
     /// Original selected Piece identity.
@@ -85,6 +85,8 @@ pub enum CommandPreviewError<E> {
     Identity(IdError),
     /// Original born-valid anchor/ownership cause for the proposed semantic Notch.
     Notch(NotchError),
+    /// Exact actual candidate comparison found an unpermitted semantic change.
+    Difference(super::CommandDifferenceError),
     /// Original local immutable Piece-replacement cause.
     Piece {
         /// Original selected identity.
@@ -114,6 +116,7 @@ impl<E: fmt::Display> fmt::Display for CommandPreviewError<E> {
             }
             Self::Identity(e) => write!(f, "preview identity: {e}"),
             Self::Notch(e) => write!(f, "preview Notch: {e}"),
+            Self::Difference(e) => write!(f, "preview difference: {e}"),
             Self::Piece { piece, issue } => write!(f, "preview Piece {piece}: {issue}"),
             Self::Pieces(e) => write!(f, "preview Piece inventory: {e}"),
             Self::Structure(e) => write!(f, "preview structure: {e}"),
@@ -132,6 +135,7 @@ impl<E: std::error::Error + 'static> std::error::Error for CommandPreviewError<E
             Self::MissingPiece { .. } => None,
             Self::Identity(e) => Some(e),
             Self::Notch(e) => Some(e),
+            Self::Difference(e) => Some(e),
             Self::Piece { issue, .. } => Some(issue),
             Self::Pieces(e) => Some(e.as_ref()),
             Self::Structure(e) => Some(e.as_ref()),
@@ -156,32 +160,20 @@ impl<H: DesignReferenceHost> MaterialCandidate<H> {
     }
 }
 
-impl<H: DesignReferenceHost + Clone, A: CommandAuthoritySource> CommandBus<H, A> {
+impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
     pub(super) fn preview_material(
         &self,
         assignment: &AssignMaterial,
     ) -> Result<CommandMaterialPreview, CommandPreviewError<H::Error>> {
         let originals = self.state.inputs().structure().pieces().pieces();
-        let mut selected = Vec::new();
         for (index, identity) in assignment.pieces().pieces().iter().copied().enumerate() {
-            let original = originals
+            originals
                 .iter()
                 .find(|piece| piece.id() == identity)
                 .ok_or(CommandPreviewError::MissingPiece {
                     piece: identity,
                     index,
                 })?;
-            selected.push(original);
-        }
-        let mut changes = Vec::new();
-        for original in selected {
-            if &original.definition().material != assignment.material() {
-                changes.push(CommandMaterialChange {
-                    piece: original.id(),
-                    before: original.definition().material.clone(),
-                    after: assignment.material().clone(),
-                });
-            }
         }
         let pieces = originals
             .iter()
@@ -215,6 +207,19 @@ impl<H: DesignReferenceHost + Clone, A: CommandAuthoritySource> CommandBus<H, A>
         state
             .validate_current()
             .map_err(|e| CommandPreviewError::Candidate(Box::new(e)))?;
+        super::difference::unchanged_context(&self.state, &state)
+            .map_err(CommandPreviewError::Difference)?;
+        if self.state.sewing().landmarks() != state.sewing().landmarks() {
+            return Err(CommandPreviewError::Difference(
+                super::CommandDifferenceError::Landmarks,
+            ));
+        }
+        let changes = super::difference::material_changes(
+            originals,
+            state.inputs().structure().pieces().pieces(),
+            assignment,
+        )
+        .map_err(CommandPreviewError::Difference)?;
         Ok(MaterialCandidate { state, changes }.into_report())
     }
 }

@@ -148,3 +148,15 @@ assignments in selection order, omitting no-ops and preserving unresolved reason
 discard leaves the original Piece inventory/revision unchanged; no new identity or publication occurs.
 The report grants no later effect authority. Complete topology, geometry, physical readiness, other
 handlers and atomic publication remain owned; focused native bus10/privacy2/lint/fmt establish this scope.
+
+answers: "how are actual candidate differences kept within an operation's semantics?"
+
+0424 .6.5.2.c compares original and validated candidate using exhaustive owner-definition patterns,
+covering unchanged garment families, sewing graph, inputs/source host, recipe, structural identity/
+revision, canonical declarations, cut plan and ledger. Preview hosts support value equality.
+Material differences permit only selected exact assignment fields; count/order and every other Piece
+field/landmark remain equal. Added Notch differences require the original exact landmark prefix and
+one actual appended object matching intent/staged identity, with complete Piece inventory unchanged.
+Reports read candidate values. Unexpected changes retain structured Difference causes and refuse.
+Focused canonical diff3 and real bus14/privacy3/lint/fmt cover this subset; other mutation semantics,
+publication and full bus/evaluator/runtime proof remain owned.
