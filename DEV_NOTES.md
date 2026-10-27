@@ -3,15 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned current layer families
+## _(2026-10-27 UTC)_ — actual layer Material assignments
 
-0383 owns distinct Facing/Lining/Interfacing families in exact authored orders; local id census keeps
-original kind/position pairs. Typed entries borrow actual objects; every current served Piece/source
-is checked, including unused damaged layers. Modelled lining stays inspectable with original env_lining.
-Native4/privacy2, strict affected lint/fmt/book/publication79/152 pass0; D250132 exact prior rows unchanged.
-Original layer/Hem validators byte-identical.534 retains whole0382/retirement/old pair scope in5 exact
-Git spans0. Promotion declined: existing ownership/current-source rules. Material targets next;
-full Design joins/physical proof/integration/CI remain deferred.
+0384 borrows original typed layers/Materials or exact unresolved reasons; complete current Materials,
+then all owner-id collisions, then exact targets in family order. Unknown/Derived properties unchanged.
+Four native/three privacy controls pass0, including canonical-context lifetime; strict affected lint/fmt/
+book/publication79/153 pass0. Existing inventory methods and Material/layer/Hem validators byte-identical.
+D250132 exact prior rows unchanged.535 retains whole0383/retirement/command-input lesson in5 exact Git
+spans0. Promotion declined: existing actual Material/source rules. Hem/Facing collections next;
+geometry/lining scope/global Design/physical/integration/CI remain separate.
+
+[Complete layer inventory lesson](docs/history/stitchcad-devnotes-part535.md) retains
+its original scope, checks and promotion decision.
 
 [Complete current layer/Hem lesson](docs/history/stitchcad-devnotes-part534.md) retains
 its original scope, checks and promotion decision.
@@ -73,13 +76,8 @@ its original scope, checks and promotion decision.
 [Complete authorization/scope lessons](docs/history/stitchcad-devnotes-part531.md) retain
 their original scopes, checks and promotion decisions.
 
-## _(2026-10-26 UTC)_ — one typed command input surface
-
-0335 .6.2.2.c.2.6 wraps all five original families with payload-derived identity and exact shared claims.
-Revision/mutation context borrows retain original objects; no codec, grant, handler or new retry/group allocation.
-Native request2/catalog2/query2/release6 pass0; strict selected lint/fmt/book/pub76-100/census17-5-5-0 pass0.
-Normative table identical3419ed3; other family implementations unchanged. D241 stale book ownership/input text fixed.
-489/307/145 whole3419ed3 exact0. Promotion: existing command decision; .6.2 input scope done, .6.3 auth next.
+[Complete command-input lesson](docs/history/stitchcad-devnotes-part535.md) retains
+its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — release input-schema review
 

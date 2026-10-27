@@ -141,7 +141,9 @@ pub use layer::{
 };
 
 pub use hem::{Hem, HemDefinition, HemDepth, HemError, HemFoldType, HemMethod};
-pub use layer_inventory::{LayerInventory, LayerInventoryError, LayerInventoryPosition, LayerRef};
+pub use layer_inventory::{
+    LayerInventory, LayerInventoryError, LayerInventoryPosition, LayerMaterialView, LayerRef,
+};
 
 pub use notion::{NotionPlacement, NotionPlacementDefinition, NotionPlacementError};
 pub use notion_inventory::{NotionPlacementInventory, NotionPlacementInventoryError};

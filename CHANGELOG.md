@@ -8,13 +8,16 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0383 — own complete current layer families
 
-- Private authored Facing/Lining/Interfacing orders, local id census and every original served/source target.
-- Original typed entries/causes and separate env_lining; native4/privacy2, lint/fmt/book/publication pass0.
-- D250132 unchanged; whole0382/retirement/pair scope534. Actual layer Material assignments next.
+## STITCHCAD-G1-0384 — borrow actual current layer Material assignments
+
+- Whole current Materials/owner ids before exact family targets; original borrows/reasons/causes retained.
+- Unknown/Derived unchanged; native4/privacy3, strict affected lint/fmt/book/publication79/153 pass0.
+- D250132 unchanged; whole0383/retirement/command-input lesson535. Hem/Facing collections next.
 
 # Sealed archive — earlier slices
+
+| [part535](docs/history/stitchcad-devnotes-part535.md) | whole0383/retirement/command-input lesson | 46 lines, 3650 bytes, sha256:ed44f60b… |
 
 | [part534](docs/history/stitchcad-devnotes-part534.md) | whole0382/retirement and original pair-member scope | 55 lines, 4306 bytes, sha256:d6be5ad4… |
 

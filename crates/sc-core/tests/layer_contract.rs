@@ -660,3 +660,273 @@ fn inventory_keeps_modelled_lining_and_original_scope_cause_independent_of_curre
         &f.definition
     );
 }
+
+fn layer_material_context() -> (
+    sc_core::value::CanonicalInputs,
+    sc_core::ontology::MaterialInventory,
+) {
+    use sc_core::{
+        ontology::{Material, MaterialDefinition, MaterialInventory},
+        value::{
+            CanonicalInputTarget as Target, CanonicalInputs, LengthDeclaration,
+            LengthDeclarationDefinition, LengthState, ScalarInputDeclaration,
+            ScalarInputDeclarationDefinition, ScalarInputKind as Kind, ScalarInputState as State,
+        },
+    };
+    let id = EntityId::from_bits;
+    let canonical = CanonicalInputs::new(
+        vec![LengthDeclaration::new(LengthDeclarationDefinition {
+            id: id(8000),
+            source: id(8100),
+            state: LengthState::Unknown {
+                observation: id(8101),
+            },
+        })
+        .unwrap()],
+        vec![
+            ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+                id: id(8001),
+                source: id(8102),
+                kind: Kind::Boolean,
+                state: State::Unknown {
+                    observation: id(8103),
+                },
+            })
+            .unwrap(),
+            ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+                id: id(8002),
+                source: id(8104),
+                kind: Kind::Length,
+                state: State::Derived { formula: id(8105) },
+            })
+            .unwrap(),
+        ],
+    )
+    .unwrap();
+    let flag = Target::Scalar {
+        declaration: id(8001),
+        kind: Kind::Boolean,
+    };
+    let materials = [
+        (9000, Target::Length(id(8000))),
+        (
+            9001,
+            Target::Scalar {
+                declaration: id(8002),
+                kind: Kind::Length,
+            },
+        ),
+    ]
+    .into_iter()
+    .map(|(identity, width)| {
+        Material::new(
+            MaterialDefinition {
+                id: id(identity),
+                source: id(9100),
+                name: "private identical fabric label".into(),
+                composition: None,
+                width,
+                nap: flag,
+                directional_print: flag,
+                striped: flag,
+                checked: flag,
+                shrinkage: None,
+            },
+            &canonical,
+        )
+        .unwrap()
+    })
+    .collect();
+    let materials = MaterialInventory::new(materials, &canonical).unwrap();
+    (canonical, materials)
+}
+
+#[test]
+fn layer_material_views_keep_actual_family_targets_unknown_properties_and_untrimmed_reasons() {
+    use sc_core::ontology::{
+        LayerMaterialView as View, MaterialProperty, MaterialPropertyDeclaration,
+    };
+    let f = fixture();
+    let (canonical, materials) = layer_material_context();
+    let mut input = f.definition.clone();
+    input.material = MaterialAssignment::Assigned(EntityId::from_bits(9000));
+    let facing = Facing::new(input.clone(), &f.piece, &f.ledger).unwrap();
+    input.id = EntityId::from_bits(702);
+    input.material = MaterialAssignment::Assigned(EntityId::from_bits(9001));
+    let lining = Lining::new(input.clone(), &f.piece, &f.ledger).unwrap();
+    input.id = EntityId::from_bits(703);
+    input.material = MaterialAssignment::Unresolved("  private layer selection pending  ".into());
+    let interfacing = Interfacing::new(input, &f.piece, &f.ledger).unwrap();
+    let layers = LayerInventory::new(vec![facing], vec![lining], vec![interfacing]).unwrap();
+    let original = (canonical.clone(), materials.clone(), layers.clone());
+    let views = layers.material_assignments(&materials, &canonical).unwrap();
+    assert_eq!(views.len(), 3);
+    for (view, (_, actual_layer)) in views.iter().zip(layers.entries()) {
+        assert!(!format!("{view:?}").contains("private"));
+        match view {
+            View::Assigned { layer, material } => {
+                assert!(core::ptr::eq(layer.definition(), actual_layer.definition()));
+                assert!(core::ptr::eq(
+                    *material,
+                    materials.material(material.id()).unwrap()
+                ));
+                let expected = if layer.kind() == LayerKind::Facing {
+                    9000
+                } else {
+                    9001
+                };
+                assert_eq!(material.id(), EntityId::from_bits(expected));
+                match material
+                    .property_declaration(MaterialProperty::Width, &canonical)
+                    .unwrap()
+                {
+                    MaterialPropertyDeclaration::Length(value) => {
+                        assert!(value.authored_value().is_err())
+                    }
+                    MaterialPropertyDeclaration::Scalar(value) => {
+                        assert!(value.authored_value().is_err())
+                    }
+                }
+            }
+            View::Unresolved { layer, reason } => {
+                assert!(core::ptr::eq(layer.definition(), actual_layer.definition()));
+                let MaterialAssignment::Unresolved(actual) = &actual_layer.definition().material
+                else {
+                    panic!("original unresolved reason")
+                };
+                assert_eq!(*reason, "  private layer selection pending  ");
+                assert!(core::ptr::eq(*reason, actual.as_str()));
+            }
+        }
+    }
+    assert!(layers.require_in_scope().is_err());
+    assert_eq!((canonical, materials, layers), original);
+}
+
+#[test]
+fn layer_material_missing_targets_do_not_select_peer_labels_or_numeric_canonical_inputs() {
+    use sc_core::ontology::MaterialInventory;
+    let f = fixture();
+    let (canonical, materials) = layer_material_context();
+    let surviving = materials
+        .material(EntityId::from_bits(9000))
+        .unwrap()
+        .clone();
+    let materials = MaterialInventory::new(vec![surviving], &canonical).unwrap();
+    for missing in [9001, 8000, 8001] {
+        let mut input = f.definition.clone();
+        input.material = MaterialAssignment::Assigned(EntityId::from_bits(missing));
+        let facing = Facing::new(input, &f.piece, &f.ledger).unwrap();
+        let layers = LayerInventory::new(vec![facing.clone()], vec![], vec![]).unwrap();
+        assert_eq!(
+            layers.material_assignments(&materials, &canonical),
+            Err(LayerInventoryError::MissingMaterial {
+                layer: facing.id(),
+                position: LayerInventoryPosition {
+                    kind: LayerKind::Facing,
+                    index: 0
+                },
+                material: EntityId::from_bits(missing),
+            })
+        );
+    }
+}
+
+#[test]
+fn layer_material_owner_collisions_are_checked_before_any_assignment_target_is_selected() {
+    let f = fixture();
+    let (canonical, materials) = layer_material_context();
+    let mut input = f.definition.clone();
+    input.material = MaterialAssignment::Assigned(EntityId::from_bits(9999));
+    let first = Facing::new(input.clone(), &f.piece, &f.ledger).unwrap();
+    input.id = EntityId::from_bits(9000);
+    input.material = MaterialAssignment::Assigned(EntityId::from_bits(9001));
+    let later = Facing::new(input, &f.piece, &f.ledger).unwrap();
+    let layers = LayerInventory::new(vec![first, later.clone()], vec![], vec![]).unwrap();
+    assert_eq!(
+        layers.material_assignments(&materials, &canonical),
+        Err(LayerInventoryError::MaterialIdentityCollision {
+            layer: later.id(),
+            position: LayerInventoryPosition {
+                kind: LayerKind::Facing,
+                index: 1
+            },
+        })
+    );
+}
+
+#[test]
+fn layer_material_queries_check_unused_current_materials_even_when_empty_and_keep_concrete_causes()
+{
+    use sc_core::{
+        ontology::{MaterialError, MaterialInventoryError, MaterialProperty},
+        value::{CanonicalInputs, ScalarInputDeclaration, ScalarInputKind},
+    };
+    use std::error::Error;
+    let f = fixture();
+    let (canonical, materials) = layer_material_context();
+    let mut input = f.definition.clone();
+    input.material = MaterialAssignment::Assigned(EntityId::from_bits(9000));
+    let facing = Facing::new(input, &f.piece, &f.ledger).unwrap();
+    let layers = LayerInventory::new(vec![facing], vec![], vec![]).unwrap();
+    let changed = CanonicalInputs::new(
+        canonical.lengths().to_vec(),
+        canonical
+            .scalars()
+            .iter()
+            .map(|value| {
+                let mut definition = value.definition().clone();
+                if value.id() == EntityId::from_bits(8002) {
+                    definition.kind = ScalarInputKind::Count;
+                }
+                ScalarInputDeclaration::new(definition).unwrap()
+            })
+            .collect(),
+    )
+    .unwrap();
+    for collection in [
+        &layers,
+        &LayerInventory::new(vec![], vec![], vec![]).unwrap(),
+    ] {
+        let issue = collection
+            .material_assignments(&materials, &changed)
+            .unwrap_err();
+        let LayerInventoryError::Materials(actual) = &issue else {
+            panic!("whole current Material cause")
+        };
+        let expected = MaterialError::CanonicalKind {
+            material: EntityId::from_bits(9001),
+            property: MaterialProperty::Width,
+            declaration: EntityId::from_bits(8002),
+            expected: ScalarInputKind::Length,
+            actual: ScalarInputKind::Count,
+        };
+        assert_eq!(
+            actual.as_ref(),
+            &MaterialInventoryError::InvalidMaterial {
+                material: EntityId::from_bits(9001),
+                issue: Box::new(expected)
+            }
+        );
+        let cause = issue.source().unwrap();
+        assert!(core::ptr::eq(
+            cause.downcast_ref::<MaterialInventoryError>().unwrap(),
+            actual.as_ref()
+        ));
+        assert!(!cause.is::<Box<MaterialInventoryError>>());
+        let MaterialInventoryError::InvalidMaterial {
+            issue: original, ..
+        } = actual.as_ref()
+        else {
+            panic!("original typed Material error")
+        };
+        assert!(core::ptr::eq(
+            cause
+                .source()
+                .unwrap()
+                .downcast_ref::<MaterialError>()
+                .unwrap(),
+            original.as_ref()
+        ));
+    }
+}

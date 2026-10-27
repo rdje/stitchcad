@@ -78,6 +78,17 @@ If unused Material200 loses its width target, targeted inspection of a Piece ass
 succeed; the whole query still reports200's original cause. Neither query is artifact-policy closure,
 full Design validation, source truth, geometry or readiness. Other entity roles remain the Design's check.
 
+## Layer assignments
+
+LayerInventory::material_assignments(&materials, &canonical) checks all current Materials, then
+layer/Material id collisions, then exact targets in Facing/Lining/Interfacing order. LayerMaterialView
+borrows original layer/Material objects or the untrimmed unresolved reason, keeping canonical context
+borrowed. Unknown/Derived properties stay unchanged; Debug omits customer text.
+
+Unused Material9001 with a changed width kind blocks even an empty layer query. Missing9001 never
+selects same-label9000 or numeric input8000. Concrete causes survive; no partial vector escapes.
+These metadata views prove neither layer geometry, lining scope, global Design nor physical readiness.
+
 ## Inspection and proof limits
 
 definition()/target() retain original metadata. property_declaration() checks one current target and
@@ -104,5 +115,6 @@ no logical profile references and prove no selected-label/result identity; G4 re
 | `MaterialInventory` | Immutable actual ordered Material collection |
 | `MaterialInventoryError` | Duplicate/current Material or Piece assignment cause |
 | `PieceMaterialView` | Actual assigned objects or original unresolved reason |
+| `LayerMaterialView` | Original typed layer/Material borrows or its exact unresolved reason |
 
-Material fields: native8/privacy3. Collection/assignments: native8/privacy3. Whole Design/integration/platform proof remains pending.
+Material fields: native8/privacy3. Material inventory: native8/privacy3. Layer assignments: native4/lifetime1. Whole Design/integration/platform proof remains pending.

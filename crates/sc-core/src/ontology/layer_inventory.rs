@@ -1,8 +1,10 @@
 //! Owned semantic layer families and their complete current served-Piece/source scope.
 use super::{
     EntityId, Facing, IdentityLedger, Interfacing, LayerDefinition, LayerEnvelopeError, LayerError,
-    LayerKind, Lining, Piece,
+    LayerKind, Lining, Material, MaterialAssignment, MaterialInventory, MaterialInventoryError,
+    Piece,
 };
+use crate::value::CanonicalInputs;
 use core::fmt;
 use std::collections::BTreeMap;
 
@@ -87,6 +89,47 @@ impl<'a> LayerRef<'a> {
     }
 }
 
+/// Original assignment data; direct construction supplies no independent validation certificate.
+/// Query results keep the actual canonical context borrowed while the returned view is used.
+///
+/// ```compile_fail
+/// fn replace(layers: &sc_core::ontology::LayerInventory,
+///     materials: &sc_core::ontology::MaterialInventory, mut canonical: sc_core::value::CanonicalInputs) {
+///     let views = layers.material_assignments(materials, &canonical).unwrap();
+///     canonical = sc_core::value::CanonicalInputs::new(vec![], vec![]).unwrap();
+///     let _still_borrowed = views;
+/// }
+/// ```
+#[derive(Clone, Copy, PartialEq, Eq)]
+pub enum LayerMaterialView<'a> {
+    /// Actual original layer and its exact current Material target; properties may remain unknown.
+    Assigned {
+        /// Original distinct semantic layer.
+        layer: LayerRef<'a>,
+        /// Actual stored Material, without copied property values or state.
+        material: &'a Material,
+    },
+    /// Explicit original unresolved intent, without choosing a Material or default property value.
+    Unresolved {
+        /// Original distinct semantic layer.
+        layer: LayerRef<'a>,
+        /// Original untrimmed reason borrowed from that layer's assignment.
+        reason: &'a str,
+    },
+}
+impl fmt::Debug for LayerMaterialView<'_> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let (layer, state) = match self {
+            Self::Assigned { layer, .. } => (layer, "assigned"),
+            Self::Unresolved { layer, .. } => (layer, "unresolved"),
+        };
+        f.debug_struct("LayerMaterialView")
+            .field("kind", &layer.kind())
+            .field("state", &state)
+            .finish_non_exhaustive()
+    }
+}
+
 /// Original identity/current-source or explicit execution-envelope refusal.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum LayerInventoryError {
@@ -128,6 +171,24 @@ pub enum LayerInventoryError {
         /// Original named envelope cause.
         issue: LayerEnvelopeError,
     },
+    /// Original complete current Material inventory/property cause, including unused Materials.
+    Materials(Box<MaterialInventoryError>),
+    /// A layer identity aliases an actual Material owner; neither role is inferred from its label.
+    MaterialIdentityCollision {
+        /// Exact aliased owned identity.
+        layer: EntityId,
+        /// Original owning family/position.
+        position: LayerInventoryPosition,
+    },
+    /// An assigned Material is absent; peers and numeric canonical inputs never substitute.
+    MissingMaterial {
+        /// Actual layer carrying the assignment.
+        layer: EntityId,
+        /// Original owning family/position.
+        position: LayerInventoryPosition,
+        /// Exact missing Material target.
+        material: EntityId,
+    },
 }
 impl fmt::Display for LayerInventoryError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -161,6 +222,19 @@ impl fmt::Display for LayerInventoryError {
                 position,
                 issue,
             } => write!(f, "layer {layer} at {position:?}: {issue}"),
+            Self::Materials(issue) => write!(f, "layer assignments current Materials: {issue}"),
+            Self::MaterialIdentityCollision { layer, position } => write!(
+                f,
+                "layer {layer} at {position:?} aliases a Material identity"
+            ),
+            Self::MissingMaterial {
+                layer,
+                position,
+                material,
+            } => write!(
+                f,
+                "layer {layer} at {position:?} names absent Material {material}"
+            ),
         }
     }
 }
@@ -169,6 +243,7 @@ impl std::error::Error for LayerInventoryError {
         match self {
             Self::Layer { issue, .. } => Some(issue.as_ref()),
             Self::OutsideEnvelope { issue, .. } => Some(issue),
+            Self::Materials(issue) => Some(issue.as_ref()),
             _ => None,
         }
     }
@@ -179,7 +254,8 @@ impl std::error::Error for LayerInventoryError {
 /// Construction checks ids and preserves original objects, including held damage. Current validation
 /// visits Facing, Lining, then Interfacing and checks every original served Piece and source. Modelled
 /// Lining remains inspectable; require_in_scope is a separate refusal before requested execution.
-/// Material targets, global Design joins and G2/G3/G4 physical/operation proof remain separate.
+/// Material assignment queries are separate from source checks; global Design joins and G2/G3/G4
+/// physical/operation proof remain separate.
 /// Explicit empty families supply no whole Design or assembly readiness claim.
 ///
 /// ```compile_fail
@@ -314,6 +390,50 @@ impl LayerInventory {
                 })?;
         }
         Ok(())
+    }
+    /// Borrow every actual layer's exact Material target or original unresolved reason.
+    ///
+    /// Checks complete current Materials first, then all layer/Material owner-id collisions, then
+    /// assignments in documented family order. Unknown/Derived properties retain their canonical
+    /// states without defaulting. This checks assignment metadata, not current source geometry,
+    /// lining execution scope, other global Design identities or physical/release readiness.
+    ///
+    /// # Errors
+    /// Returns the original whole-Material cause, then owner-id collision or exact missing target.
+    /// No partial view collection escapes a refusal.
+    pub fn material_assignments<'a>(
+        &'a self,
+        materials: &'a MaterialInventory,
+        canonical: &'a CanonicalInputs,
+    ) -> Result<Vec<LayerMaterialView<'a>>, LayerInventoryError> {
+        materials
+            .validate_current(canonical)
+            .map_err(|issue| LayerInventoryError::Materials(Box::new(issue)))?;
+        for (position, layer) in self.entries() {
+            if materials.material(layer.id()).is_some() {
+                return Err(LayerInventoryError::MaterialIdentityCollision {
+                    layer: layer.id(),
+                    position,
+                });
+            }
+        }
+        self.entries()
+            .map(|(position, layer)| match &layer.definition().material {
+                MaterialAssignment::Assigned(identity) => {
+                    let material = materials.material(*identity).ok_or(
+                        LayerInventoryError::MissingMaterial {
+                            layer: layer.id(),
+                            position,
+                            material: *identity,
+                        },
+                    )?;
+                    Ok(LayerMaterialView::Assigned { layer, material })
+                }
+                MaterialAssignment::Unresolved(reason) => {
+                    Ok(LayerMaterialView::Unresolved { layer, reason })
+                }
+            })
+            .collect()
     }
     /// Apply original named scope checks before requested execution, independently of geometry.
     /// Modelled content remains available through shared getters after this refusal.

@@ -167,7 +167,7 @@ Neither successful structural birth nor an envelope check proves geometry or gra
 
 `LayerInventory::new(facings, linings, interfacings)` owns the exact original objects in each
 authored family order. Its id census visits Facing, Lining, then Interfacing. Repeated ids within or
-across families refuse with both original kind/position pairs. No object is sorted or deduplicated.
+across families refuse with both original kind/position pairs.
 Explicit empty families are draft scope and make no whole Design or assembly completeness claim.
 
 `facings()`, `linings()` and `interfacings()` borrow original typed slices. `entries()` visits those
@@ -192,15 +192,15 @@ layers.validate_current(&current_pieces, &ledger)?;
 
 The first Lining produces the original env_lining cause, served Piece and G7 even if its geometry
 also needs repair. The modelled object remains available for inspection; no supported layer is
-substituted. Passing scope certifies neither sources nor geometry. Assigned Material targets,
-global Design identity joins, recipe operations and G2/G3/G4 physical proofs remain separate.
+substituted. Passing scope certifies neither sources nor geometry. Material metadata is checked
+[separately](material-inputs.md#layer-assignments); global ids, recipe operations and physical proof remain separate.
 
 | API token | Layer collection meaning |
 | --- | --- |
 | `LayerInventory` | Private ordered Facing/Lining/Interfacing families and complete current sources |
 | `LayerInventoryPosition` | Original semantic kind and zero-based authored position in that family |
 | `LayerRef` | Shared original distinct layer type, without a validation certificate |
-| `LayerInventoryError` | Duplicate ids/Pieces, missing served owner, original Layer cause or named envelope cause |
+| `LayerInventoryError` | Duplicate ids/Pieces, missing targets, original layer/Material or named envelope causes |
 
 ## Hem: depth, fold binding and current Facing composition
 

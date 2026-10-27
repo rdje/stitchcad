@@ -151,3 +151,4 @@ owned layer current inventory	spec/ontology-constructions.md	crates/sc-core/src/
 owned layer current position	spec/ontology-constructions.md	crates/sc-core/src/ontology/layer_inventory.rs	LayerInventoryPosition	G1-SLICE.6.4.5.3.c.1	4.4
 owned layer current borrow	spec/ontology-constructions.md	crates/sc-core/src/ontology/layer_inventory.rs	LayerRef	G1-SLICE.6.4.5.3.c.1	4.4
 owned layer current refusal	spec/ontology-constructions.md	crates/sc-core/src/ontology/layer_inventory.rs	LayerInventoryError	G1-SLICE.6.4.5.3.c.1	4.4
+actual layer Material assignment borrow	spec/material-inputs.md	crates/sc-core/src/ontology/layer_inventory.rs	LayerMaterialView	G1-SLICE.6.4.5.3.c.2	4.4

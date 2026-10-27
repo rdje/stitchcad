@@ -907,25 +907,26 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Children: .1 owned layer/source inventory; .2 actual Material assignments; .3 owned Hem/Facing joins.
 - ID: `G1-SLICE.6.4.5.3.c.1`
   Status: `done`
-  Goal: private actual Facing/Lining/Interfacing inventory; family order/id census and every current
-  served Piece/source, borrowed typed entries, concrete causes and separate lining scope refusal.
-  Preserve held damage/empty drafts, raw choices and original validators; materials remain .2.
-  Focused native/privacy/lint/book and whole0382 continuity534.
-  - [x] REPRODUCE / ISSUE: python3 Git-source check:30e8361 has no layer inventory rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; individual layer types own no collection-wide
-    id/current-source scope. Original layer/Hem validators remain byte-identical.
-  - [x] FIX: cargo clippy -p sc-core --test layer_contract -- -D warnings:rc=0;
-    private families, borrowed typed entries, every served target/source and separate named scope.
-  - [x] ADDRESSED: cargo test -p sc-core --test layer_contract inventory_:4/0 rc=0;
-    cargo test -p sc-core --doc ontology::layer_inventory:2/0 rc=0.
-  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; source comparison rc=0;
-    glossary132 failures rc=1, exact prior D250 rows compare rc=0. Raw rules/geometry unchanged.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/152/1453/2405 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part534.md:5 exact spans rc=0.
-    promotion: declined (existing ownership/current-source rules). Completed STITCHCAD-G1-0383.
+  Goal:0383 actual layer inventory; [whole proof](../history/stitchcad-devnotes-part535.md).
 - ID: `G1-SLICE.6.4.5.3.c.2`
-  Status: `pending`
+  Status: `done`
   Goal: actual current layer Material targets/unknown properties and original unresolved reasons.
+  Own original layer/Material borrows; whole current Materials first, layer/Material owner-id census,
+  then exact assignment targets/reasons in family order. Preserve unknown values, concrete causes,
+  no partial views and canonical-context lifetime. Geometry/lining/global joins stay separate.
+  Focused native/privacy/lint/book and whole0383 continuity535.
+  - [x] REPRODUCE / ISSUE: python3 Git-source comparison:ada5329 lacks layer assignment query rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): same comparison rc=0; held assigned ids need actual Material
+    targets/current properties. Existing inventory methods and Material/layer/Hem validators unchanged.
+  - [x] FIX: cargo clippy -p sc-core --test layer_contract -- -D warnings:rc=0;
+    whole Materials, owner-id census, exact ordered targets/reasons and concrete original causes.
+  - [x] ADDRESSED: cargo test -p sc-core --test layer_contract layer_material_:4/0 rc=0;
+    cargo test -p sc-core --doc ontology::layer_inventory:3/0 rc=0, including context lifetime.
+  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; source comparison rc=0;
+    glossary132 failures rc=1, exact prior D250 rows compare rc=0. No state/value defaults.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/153/1454/2407 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part535.md:5 exact spans rc=0.
+    promotion: declined (existing actual Material/source rules). Completed STITCHCAD-G1-0384.
 - ID: `G1-SLICE.6.4.5.3.c.3`
   Status: `pending`
   Goal: private owned Hems, complete layers/current sources and stable same-Piece Facing joins.
