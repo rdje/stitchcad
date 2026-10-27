@@ -810,30 +810,33 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   .3 profile/material source contracts; .4 complete identity/source-host composition before .3 readiness.
 - ID: `G1-SLICE.6.4.2.d.1`
   Status: `done`
-  Goal: immutable owned named Design parameters pin exact canonical target family/id/kind. Reuse
-  MachineToken/reserved-name and formula input adapters; unique metadata ids/tokens and canonical-id
-  disjointness. Current lookups borrow actual CanonicalInputs, retain Unknown/Derived state and
-  refuse missing/changed kinds without retargeting or source/evidence truth claims. No reverse dependency.
-  Own native/privacy/lint/book/API sync, whole0348 continuity500 and exact old book proof retirement
-  before cap growth; retain public retrieval instructions and current functional contracts/examples.
-  - [x] REPRODUCE / ISSUE: formula input metadata claims alone do not own named Design parameters;
-    native design_parameters_contract exercises missing/changed targets and duplicate bindings9/0, rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): FormulaDeclaration::input carries ids/kind, while the scalar adapter
-    checks supplied canonical objects. New metadata pins family/id/kind and reuses this actual adapter;
-    cargo test -p sc-core --test design_parameters_contract passes9/0, rc=0, target/*native-0349.log.
-  - [x] FIX: immutable ordered parameters, unique metadata ids/tokens, reserved-name/canonical-id
-    refusals and shared current-target queries. Unknown/Derived states/source remain canonical, uncached.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    design_parameters_contract gives9/0, rc=0; exact role/errors, current false state and family pins.
-  - [x] NO REGRESSION: privacy2/strict selected Clippy/fmt/book/publication77/108/1444/2359 pass0,
-    target/design-parameters-*-0349.log. D250132 rows exactly baseline, delta0; full glossary rc=1.
-  - [x] LOCKSTEP: API vocabulary/status/index/pointer/notes aligned; continuity500 compares6 exact Git
-    source spans0, including both complete old book proof sections. Functional examples/commands retained;
-    caps unchanged, G1still6/18. promotion: declined (canonical source/name/identity contracts). Commit0349;
-    .2.d.2 measurement/Ease follows. Full host composition/Design/readiness/bus/integration/CI remains later.
+  Goal:0349 immutable DesignParameters; [whole scope/proof](../history/stitchcad-devnotes-part501.md).
 - ID: `G1-SLICE.6.4.2.d.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: current measurement/Ease inventories and canonical host links without copied values.
+  Children .a owned measurement/landmark/procedure/table inventories; .b owned Ease/set composition.
+- ID: `G1-SLICE.6.4.2.d.2.a`
+  Status: `done`
+  Goal: immutable MeasurementInventory owns exact metadata/tables; existing contexts check all current
+  targets and cross-family ids. Canonical values stay borrowed; no global Design/source-truth/readiness
+  claim. Own focused checks/docs, D254 package description and complete0349 continuity501.
+  - [x] REPRODUCE / ISSUE: actual inventory tests expose stale local proofs after metadata/context edits;
+    measurement_inventory_contract gives8/0, rc=0, target/measurement-inventory-native-0350.log.
+  - [x] ROOT CAUSE (WHY + WHERE): existing contexts borrow records and tables pin bindings. Same-token
+    peers cannot repair old bindings; native stale-token/domain/missing-target cases pass8/0, rc=0.
+  - [x] FIX: private exact vectors, shared borrows and ordered identity/current-reference checks reuse
+    actual validators; native8/0 confirms no value cache, unit reconversion or nested self-reference.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test
+    measurement_inventory_contract passes8/0, rc=0, including unused metadata and scalar-id collisions.
+  - [x] NO REGRESSION: privacy2/strict selected lint/fmt/book/publication77/109/1444/2360 pass0,
+    target/measurement-inventory-*-0350.log; D250132 exact baseline rows, delta0, glossary rc=1.
+  - [x] LOCKSTEP: D254 cargo metadata/book/API/status/index/pointer aligned, rc=0; continuity501
+    compares3 Git spans0. Caps unchanged; G1still6/18. promotion: declined (canonical-source/table rules).
+    Commit0350; Ease .2.d.2.b next. Full host/Design/readiness/bus/integration/CI remains later.
+- ID: `G1-SLICE.6.4.2.d.2.b`
+  Status: `pending`
+  Goal: owned Ease mappings/sets over actual owned measurement/table metadata, preserving canonical
+  values and explicit compression/current membership checks, without numeric execution claims.
 - ID: `G1-SLICE.6.4.2.d.3`
   Status: `pending`
   Goal: actual profile/material source contracts and selected scope pins, no fabricated truth.

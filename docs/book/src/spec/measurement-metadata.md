@@ -1,17 +1,14 @@
 # Measurement metadata: body quantities and garment POMs
 
-sc-measure implements immutable Measurement metadata and named tables, consuming
-[canonical inputs](measurement-inputs.md). [Per-POM Ease mappings/sets](ease-inputs.md),
-[SizeSet inputs](size-sets.md) and [immutable profile intent](size-set-transformations.md) complete
-the structural family reviewed at G1-SLICE.4d.2. [Ontology §2.1](ontology.md) owns the field contract.
-Earlier metadata work has native/WASM evidence; current additions have focused native contracts.
-Complete runtime-profile proof and the command/API/MCP facade retain their G1 integration owners.
+sc-measure owns immutable metadata/tables over [canonical inputs](measurement-inputs.md).
+[Ease](ease-inputs.md), [SizeSet inputs](size-sets.md) and [profile intent](size-set-transformations.md)
+complete the structural family. [Ontology §2.1](ontology.md) owns its field contract.
 
-Runtime review captured at bf29b03: the [Rust run](https://github.com/rdje/stitchcad/actions/runs/36921077740)
-and [doctrine run](https://github.com/rdje/stitchcad/actions/runs/36921077711) completed successfully;
-job/step queries confirm every step, including strict lint/tests and the three-crate WASM build.
-This is structural/runtime evidence for metadata. Table contracts and cross-compilation are verified
-locally at .4a.3; source/physical/release proof remains deferred.
+At bf29b03, the [Rust](https://github.com/rdje/stitchcad/actions/runs/36921077740) and
+[doctrine](https://github.com/rdje/stitchcad/actions/runs/36921077711) jobs/steps completed successfully,
+including strict checks and three-crate WASM compilation. Tables also have local .4a.3 evidence.
+Current additions carry focused native checks; complete runtime/profile, facade and physical/release
+proof remains with G1 integration and later gates.
 
 ## Content and references
 
@@ -106,10 +103,31 @@ The sequential mutation diagnostic uses the [local producer profile](../build-an
 guards actual source/output inventories and requires current assertion locations plus restored artifacts.
 Complete original mutation/dispatch receipts remain in `docs/history/stitchcad-devnotes-part481.md`.
 
-A valid unknown input can be saved and inspected. An API or future MCP client can query its core state,
-source and required observation without inventing zero or copying a peer's preference. A derived input
-retains its formula and requires the evaluator. Full table structural success does not authorize
-release, prove procedure repeatability or validate the source of a declared Known value.
+Unknown inputs remain inspectable with their observation request; Derived retains its formula.
+API/MCP queries gain no numeric fallback or release authority. The source/repeatability limits below apply.
+
+## Owned current metadata inventory
+
+`MeasurementInventory::new(definition, &inputs)` owns exact landmark/procedure/measurement/table
+vectors without copying declarations/value/state. Census order: lengths, general scalars, landmarks,
+procedures, measurements, tables, each authored. Duplicate
+refusals retain both MeasurementInventoryPosition witnesses; source/target references are uses.
+Tokens remain table-scoped: two distinct tables may bind girth to different measurements.
+
+It then runs existing current-reference checks for every measurement and table, including unused
+measurements. Missing or changed domains refuse with the actual measurement/table id and nested
+cause. An old table never transfers its binding to a same-token peer. Empty drafts accept.
+For example, removing the procedure refuses even with no selected table; a general Length scalar
+cannot replace a dedicated declaration; a same-id body landmark changed to Garment still refuses.
+
+Shared definition()/measurement(id)/table(id) access borrows owned metadata. validate_current(&inputs)
+rechecks the complete inventory after canonical replacement. Same-id state/source edits stay current;
+entered units are not reapplied. record_context(&inputs) builds the existing borrowed target context,
+checking only its identity scope. Keep that returned context alive, then construct MeasurementTableContext
+from the inventory's measurement slice and its borrow. No self-referential context is stored.
+
+Detached edits require validated replacement. No reverse core dependency is added. Full Design/selected
+scopes and Ease composition remain pending; the source/physical/readiness limits below apply.
 
 ## Proof boundaries
 
@@ -133,6 +151,10 @@ cannot replace any of those proofs or the independent production review.
 | `Measurement` | Immutable metadata with current-reference queries |
 | `MeasurementContext` | Unambiguous borrowed canonical inventories |
 | `MeasurementError` | Structural metadata/current-reference refusal |
+| `MeasurementInventory` | Immutable owned metadata/table vectors with current checks |
+| `MeasurementInventoryDefinition` | Authored landmark/procedure/measurement/table inventories |
+| `MeasurementInventoryPosition` | Original family/index in the identity census |
+| `MeasurementInventoryError` | Duplicate owners or original current-reference cause |
 | `EmptyName` | Named metadata lacks nonblank human-readable content |
 | `EmptyProcedureDocumentation` | Procedure has no nonblank documented content |
 | `ReservedInputToken` | Measurement attempts to rebind a built-in formula input |

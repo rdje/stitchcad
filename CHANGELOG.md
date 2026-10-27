@@ -3,15 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0349 — own named Design parameters with current canonical targets
+## STITCHCAD-G1-0350 — own current measurement metadata and tables
 
-- Add immutable DesignParameters: unique ids/tokens, reserved-name/canonical-id refusals and pinned target family/id/kind.
-- Resolve actual current declarations through existing adapters; preserve state/source without cached values or retargeting.
-- Native9/privacy2/strict selected lint/fmt/book/publication pass0. D250132 glossary rows remain exactly baseline.
-- Whole0348/D253 and complete old book input proofs500 match6 Git spans; retrieval/current contracts remain public.
-- Caps unchanged; G1still6/18. Measurement/Ease inventories next; full host/Design/readiness/bus/integration/CI pending.
+- Add immutable MeasurementInventory over exact landmarks/procedures/measurements/tables and borrowed canonical inputs.
+- Check cross-family ids and every current target/binding with actual existing validators; preserve table-scoped tokens.
+- Native8/privacy2/strict selected lint/fmt/book/publication pass0; D254 package metadata corrected and checked.
+- D250132 glossary rows exactly baseline; continuity501 matches3 Git spans; caps unchanged. G1still6/18.
+- Ease/set composition .6.4.2.d.2.b next; full host/Design/readiness/bus/integration/CI remains pending.
 
 # Sealed archive — earlier slices
+
+| [part501](docs/history/stitchcad-devnotes-part501.md) | whole0349 Design parameter task, lesson and ledger | 48 lines, 4317 bytes, sha256:4731b306… |
 
 | [part500](docs/history/stitchcad-devnotes-part500.md) | whole0348 document/D253 and historical book input proofs | 139 lines, 10682 bytes, sha256:3da40349… |
 

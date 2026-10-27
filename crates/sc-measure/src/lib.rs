@@ -3,6 +3,7 @@
 //! G1-SLICE.4a.2b implements immutable metadata and typed current-reference checks. Value, state
 //! and source are borrowed from canonical sc-core length declarations. Caller-authored landmarks
 //! and documented procedures do not certify source truth, physical repeatability or release approval.
+//! MeasurementInventory owns exact metadata/table vectors and reuses complete current checks.
 //! MeasurementTable and individual Ease mappings pin stable bindings over borrowed current records.
 //! Ease sets validate current per-POM mappings/table membership. Size membership is implemented;
 //! garment chart observations borrow current member/POM inputs. Chart collections validate exact
@@ -26,6 +27,12 @@ mod table;
 pub use table::{
     MeasurementBinding, MeasurementTable, MeasurementTableContext, MeasurementTableDefinition,
     MeasurementTableError,
+};
+
+mod inventory;
+pub use inventory::{
+    MeasurementInventory, MeasurementInventoryDefinition, MeasurementInventoryError,
+    MeasurementInventoryPosition,
 };
 
 mod ease;

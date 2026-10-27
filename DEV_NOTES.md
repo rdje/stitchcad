@@ -3,21 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned named Design parameters
+## _(2026-10-27 UTC)_ — owned current measurement inventory
 
-0349 DesignParameters owns immutable metadata id/token/pinned canonical target family and scalar kind.
-Identity/name checks run before target resolution; ids cannot alias canonical declarations, reserved
-inputs cannot bind, and duplicate tokens refuse even for one shared target. Distinct names sharing a
-target and empty drafts remain legal. Current declaration queries reuse the actual scalar adapter;
-dedicated lengths retain their original borrowed representation. Same-id unknown→false preference
-edits read current state/provenance; changed kinds or missing ids refuse rather than retarget peers.
-Complete current validation rechecks metadata/canonical identity disjointness after replacement.
-No value/state cache, source-id equality inference, evidence truth or cross-domain completeness follows.
-Native9/privacy2/strict selected lint/fmt/book/publication pass0. D250132 glossary rows remain baseline,
-delta0. Whole0348/D253 continuity500 matches6 Git spans, including complete historical book identity/input
-proof sections; retrieval instructions and current functionality/examples/commands remain in the book.
-Promotion: existing canonical source/name/identity contracts. Caps unchanged; G1still6/18; measurement/Ease
-inventories .6.4.2.d.2 next. Full host composition/Design/readiness/execution/integration/CI remains later.
+0350 MeasurementInventory owns exact landmark/procedure/measurement/table vectors in sc-measure.
+It checks identities across both canonical families and owned metadata, then reuses every actual
+Measurement/Table current validator. Unused metadata still needs targets; stale table bindings never
+transfer to same-token peers. Table token scope stays local. Canonical values/states/source remain
+borrowed, including same-id edits and original entered units. Contexts are built as borrowed views;
+no nested self-reference is stored. Empty drafts accept; shared access grants no mutator.
+Native8/privacy2/strict selected lint/fmt/book/publication pass0. D254 package description matches actual
+owned metadata/structural SizeSet inputs via cargo metadata, rc=0. D250132 glossary rows remain baseline,
+delta0; no full census pass. Whole0349 continuity501 compares3 Git spans. Promotion: existing canonical
+source/table rules. Caps unchanged; G1still6/18. Ease/set composition .6.4.2.d.2.b follows; full host/
+Design/source truth/readiness/bus/integration/CI remains later.
+
+[Whole0349 parameter ownership lesson](docs/history/stitchcad-devnotes-part501.md) retains exact scope/proofs.
 
 [Whole0348 recipe ownership lesson](docs/history/stitchcad-devnotes-part500.md) retains exact scope/proofs.
 
