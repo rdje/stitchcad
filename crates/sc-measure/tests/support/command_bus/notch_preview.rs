@@ -25,10 +25,10 @@ fn bindings() -> NotchProfileBindings {
         encoding: reference(710006),
     }
 }
-fn owner() -> DesignGarment<DesignSources> {
+pub(super) fn owner() -> DesignGarment<DesignSources> {
     DesignGarment::new(material_preview::definition()).expect("actual supported complete garment")
 }
-fn addition(owner: &DesignGarment<DesignSources>) -> AddNotch {
+pub(super) fn addition(owner: &DesignGarment<DesignSources>) -> AddNotch {
     let piece = owner
         .inputs()
         .structure()
@@ -57,7 +57,7 @@ fn request(design: EntityId, revision: DesignRevision, addition: AddNotch) -> Co
         MutationPayload::AddNotch(addition),
     ))
 }
-fn reserve() -> Vec<EntityId> {
+pub(super) fn reserve() -> Vec<EntityId> {
     let mut generator = DeterministicIdGenerator::from_start(720000);
     vec![
         generator.next_id().expect("reserved identity"),

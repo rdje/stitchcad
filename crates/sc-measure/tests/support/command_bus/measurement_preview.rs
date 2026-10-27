@@ -13,7 +13,7 @@ fn owner() -> DesignGarment<DesignSources> {
     DesignGarment::new(material_preview::definition())
         .expect("actual supported garment/material/source host")
 }
-fn original(owner: &DesignGarment<DesignSources>) -> LengthDeclaration {
+pub(super) fn original(owner: &DesignGarment<DesignSources>) -> LengthDeclaration {
     owner
         .inputs()
         .sources()

@@ -54,6 +54,8 @@ impl Host {
     }
 }
 
+#[path = "command_bus/group_preview.rs"]
+mod group_preview;
 #[path = "command_bus/material_preview.rs"]
 mod material_preview;
 #[path = "command_bus/measurement_preview.rs"]

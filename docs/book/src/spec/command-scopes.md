@@ -108,5 +108,7 @@ CommandGroupAuthorizationError::Source retains the original core unauthenticated
 grant error in its standard source chain. NoMatchingGrant preserves group, verified actor, requested
 Design, required permission and each source grant's first failing zero-based member/command/refusal.
 An empty grant inventory has an empty rejection vector. No candidate is staged during this check.
-Actual model/revision/source binding, retry handling, group execution and effect-boundary reauthorization
-remain their implementation owners. Controlled native source tests do not establish transport identity.
+The [metadata group preview](command-execution.md#sequential-metadata-group-preview) separately binds
+the actual model/revision, validates successive candidates and handles within-group retry aliases.
+Mutation publication, persisted replay and effect-boundary reauthorization remain their implementation
+owners. Controlled native source tests do not establish transport identity.

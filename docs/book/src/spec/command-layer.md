@@ -281,7 +281,8 @@ The last three rows are the ones an implementation gets wrong by accident, so th
 undo is a property of the *design*, and neither a derived instance nor a reopened file inherits a history.
 
 The [typed group-input guide](command-execution.md#typed-mutation-group-inputs) covers implemented
-request consistency. Group execution, publication and undo/redo remain their later implementation work.
+request consistency and actual sequential metadata previews. Mutation publication and undo/redo remain
+their later implementation work.
 
 ## 4. Preview and commit
 

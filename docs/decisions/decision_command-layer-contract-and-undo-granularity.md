@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Measurement/Material/Notch metadata previews implemented; publication pending
+- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Measurement/Material/Notch individual/group metadata previews implemented; publication pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -74,126 +74,21 @@ chosen without a persistence-format change, which moves the bound into the stora
 threat model (roadmap §10, G5+) that permits a non-stdio MCP surface, which re-opens how authority is
 carried across a network boundary but not what the levels are.
 
-## First native command foundation0291
+## Native implementation continuity
 
-G1-SLICE.6.1 adds sc-core CommandId discovery with all17 declared identities and typed class,
-required-authority, reversibility and undo-grouping metadata. Exact lookup has no trim/case aliases.
-The focused native target compares every row against the normative book table and passes2/0;
-strict selected Clippy/fmt and command census17/5/5/0 failures pass, rc=0.
-Metadata confers no authenticated grant or handler availability. Payloads, scoped authority,
-aggregate mutation, transactions, retry/audit, history and cancellation retain .6.2–.6.9 ownership.
+[Whole0291–0430 implementation records](../history/stitchcad-devnotes-part583.md) retain their original answers and proof boundaries.
 
-0293 .6.2.2.a adds immutable mutation context with explicit design, untrusted actor/principal claim,
-expected exact revision, typed retry key and optional group. Initial revision0 has exact successors
-in private BigUint workspace, including beyond128 bits; no undocumented counter limit or clock.
-No wire format, currentness, grant, replay or handler is implied by constructing metadata.
-Focused native2/0 retains full identities/counters and standalone/explicit group semantics.
+## Sequential metadata group preview0432
 
-0294 .6.2.2.b.1 binds ChangeMeasurement/AssignMaterial payloads to that context, deriving command
-identity from the concrete variant. Canonical LengthDeclaration retains all authored states and
-source/provenance. Ordered nonempty distinct PieceSelection and canonical MaterialAssignment share
-the existing nonblank unresolved-reason rule. Actual registry binding, auth and execution remain
-later bus owners. The focused native3/0 target checks those payload boundaries.
+answers: "how do metadata groups stage actual models and retries?" · "how is the net group delta derived?"
 
-0295 .6.2.2.b.2.a adds CloseDart's canonical target and AddNotch's anchor/profile creation fields,
-with an explicitly bus-supplied new identity; native construction2/0 and prior payload3/0 pass.
-Director2026-10-26 resolves D226: SplitSeamSpan splits the sewing correspondence at explicit cuts
-on both sides.0299 .6.2.2.b.2.b supplies the canonical span identity and explicit named A/B EdgeAnchors.
-Original edge/parameter frames survive without inferred correspondence or result identities. The target
-supplies copies, direction, ease and stops; their current validation and lineage-preserving atomic split
-remain execution obligations. Native construction4/0 plus prior payload3/0 pass. All five mutation
-schemas are present; no handler, geometric conservation or authorization is claimed.
-
-0300 .6.2.2.c.1 adds exact snapshot/actor claims for queries and concrete GetPieceList/WalkSeamSpan
-payloads. Variant-derived identity stays query/inspect; no mutation replay/group fields or grants.
-Native query2/0 plus catalog2/0 check original contexts/targets and metadata, including exact revision
-values beyond128 bits. Artifact-specific uncertainty closure follows actual concrete artifact inputs;
-this foundation produces no result, geometric walk, mutable cache or authenticated authority.
-
-0335 .6.2.2.c.2.6 completes the shared in-process CommandRequest over five original family values.
-Identity is payload-derived; Design/actor/revision and mutation-only retry/group metadata are preserved.
-Core owns authorization and invariants; sc-api is an adapter. No wire codec, grant or handler follows
-from constructing data. Evaluation/artifact/release schemas, including D239 detached approval intent,
-are now present; actual source validation, execution and human approval remain .6.3+ obligations.
-
-0337 .6.3.2 checks one trusted host snapshot, matching exact submitted actor/role/principal and one live
-permission/Design/command/time grant. Permissions are explicit; grants never combine to widen coverage.
-Agents cannot hold/issue approval; mutation preview needs inspect. Transport providers must authenticate
-sessions and validate human grant issuance; submitted claims never become their own authority source.
-Returned decisions describe a snapshot, not future execution or approval; effects must reauthorize and
-validate actual sources/revisions, subjects/evidence/scope. No handler, human record or server is claimed.
-
-answers: "which commands actually execute over the private owned Design?"
-
-0419 .6.5.2.a installs CommandBus with the actual DesignGarment and trusted application authority
-source, neither replaceable by a request. Only GetPieceList executes. Every read freshly authorizes,
-then binds actual Design and exact revision; original typed auth causes and both context values
-survive refusals. The original authored Piece slice/revision are borrowed, with no reconstruction,
-normalization, defaults, observable model cache or revision changes. Privacy/lifetime controls prevent
-replacement and escaping borrows; earlier results do not authorize a later call after revocation.
-Inspection may show held repairs and modelled physical deferrals without certifying readiness.
-Native5 on real sc-measure schemas/privacy2/strict selected lint/fmt pass0; installed actual03460b0
-and41400cd book committed checks pass0. Whole book subtree/0418 evidence568 retains4 exact Git spans.
-Candidates/allocation/semantic diffs follow .6.5.2.b/.c; handlers/evaluator dependencies, effect-boundary
-publication, replay/audit/history, runtime and UI/API/MCP parity remain owned. No mutation executes.
-
-answers: "what does an actual Material preview validate and preserve?"
-
-0422 .6.5.2.b.2 prepares an actual private AssignMaterial candidate after fresh inspect authority,
-exact Design/revision binding, explicit envelope and complete current-source checks. All selected
-Piece identities resolve before replacement; original labels, held references and multiplicity remain.
-The actual rebuilt aggregate rechecks current registry/source rules, including assigned Material
-existence. Original typed causes survive. A report carries only Design/base revision and exact changed
-assignments in selection order, omitting no-ops and preserving unresolved reason bytes. Candidate
-discard leaves the original Piece inventory/revision unchanged; no new identity or publication occurs.
-The report grants no later effect authority. Complete topology, geometry, physical readiness, other
-handlers and atomic publication remain owned; focused native bus10/privacy2/lint/fmt establish this scope.
-
-answers: "how are actual candidate differences kept within an operation's semantics?"
-
-0424 .6.5.2.c compares original and validated candidate using exhaustive owner-definition patterns,
-covering unchanged garment families, sewing graph, inputs/source host, recipe, structural identity/
-revision, canonical declarations, cut plan and ledger. Preview hosts support value equality.
-Material differences permit only selected exact assignment fields; count/order and every other Piece
-field/landmark remain equal. Added Notch differences require the original exact landmark prefix and
-one actual appended object matching intent/staged identity, with complete Piece inventory unchanged.
-Reports read candidate values. Unexpected changes retain structured Difference causes and refuse.
-Focused canonical diff3 and real bus14/privacy3/lint/fmt cover this subset; other mutation semantics,
-publication and full bus/evaluator/runtime proof remain owned.
-
-answers: "how does ChangeMeasurement prepare stable canonical declaration replacement?"
-
-0425 .6.5.3.1.1 adds CanonicalInputs::with_length_declaration: existing dedicated id selects one
-original position, retaining exact supplied source/state and all other owned records. MissingLength
-refuses absent/general-scalar targets. The original owner stays unchanged; no binding, authority,
-source truth or evaluation follows from detached replacement. Actual binding/candidate/diff .1.2 follows.
-
-answers: "what does a real ChangeMeasurement metadata preview check?"
-
-0426 .6.5.3.1.2 resolves the actual Measurement role/binding before requiring the original bound
-declaration id. Exact source/state replacement rebuilds and validates the actual candidate; shared
-consumers such as Material width retain their original current-property errors. Canonical diff
-normalization reverts only the selected declaration and compares the full owner, preserving every
-other value/order; other metadata/Pieces/landmarks remain identical. Reports read actual candidate
-values, omit no-ops and confer no publication authority. Unknown/Derived gain no numeric fallback.
-This is metadata preparation; actual recipe execution/source truth remain separately owned.
-
-answers: "which book publication populations were actually checked?"
-D283 correction0426: the producer reports chapters, scoped API rows, source links and rendered links.
-Historical575/576/577 called the middle populations tables/rows; their tuples were correct, labels were not.
-Named PublicationResult/summary now preserve native formatter semantics; no table count was measured.
-
-answers: "who can retain a validated prepared command model?"
-0427 .6.5.4.1 retains actual model/report in a private PreparedCommand; private prepare performs the
-same original checks. Public preview consumes/discards the model; compiler privacy4/real bus18/lint
-pass. This is the existing transaction prerequisite, not publication or completed group execution.
-
-answers: "what does a typed mutation group validate?"
-0428 .6.5.4.2.1 requires nonempty original order and exact explicit group/Design/actor/revision claims;
-preserves payloads/retry keys and first failing index/context. No sorting, grant, replay or execution
-follows. Native group4/privacy1/lint/fmt cover schema scope; sequential private staging follows.
-
-answers: "how is an entire mutation group authorized?"
-0430 .4.2.2.1 requires one fresh trusted snapshot/complete grant for all members, retaining original
-first grant/member refusals. Decisions borrow the group, grant no effect capability and must refresh
-at effects. Single-command checks retain their original order; scope/permission unions refuse.
+G1-SLICE.6.5.4.2.2.3 uses one actual trusted authority snapshot/complete Inspect grant, then binds
+actual Design/exact revision. Each first request consumes the preceding validated candidate and one
+independent concrete reserve cursor. Per-member original guards and typed error sources remain;
+a failure retains original group/index/command and discards every staged candidate/report.
+Within one preview only, complete CommandMutation equality under a repeated key returns the first
+report with replay_of; conflicting reuse refuses before reapplication. No persistent replay is claimed.
+The final diff reads original/final actual models, permits only successful nonalias semantic footprints,
+preserves complete other owner fields/order and omits restored values. Native mixed progression,
+restoration/nonempty deltas, exact aliases/conflicts, later anchor/exhaustion, source refresh and
+binding order pass in six group cases. Publication/audit/undo/evaluation remain their later owners.

@@ -1,7 +1,8 @@
 # Implemented command execution
 
 The [command-layer contract](command-layer.md) defines the complete intended surface. This page
-describes the private owner, metadata query and Measurement/Material/Notch metadata inspect-previews.
+describes the private owner, metadata query and individual or grouped Measurement/Material/Notch
+metadata inspect-previews.
 
 ## First executable read and private ownership
 
@@ -224,12 +225,12 @@ report. Preparation now operates through a private immutable view of the actual 
 one concrete private identity cursor. The three handlers share this view; they cannot substitute an
 authority provider or call a caller-supplied identity generator. A single preview borrows the original
 model and creates an independent reserve cursor, preserving its existing refusal order and reports.
-Later group staging can borrow each preceding validated candidate and pass the same cursor onward:
+Group staging borrows each preceding validated candidate and passes the same cursor onward:
 two successful Notch steps must use successive identities, while another preview starts at the
-original reserve again. Sequential group behavior still requires its own implementation and proof.
+original reserve again. The sequential group API and focused proof are described below.
 
 This internal refactor does not publish a model, expose a replacement capability, advance
-revision/identity allocation or implement group success. Paired seam splitting and Dart execution
+revision/identity allocation. Paired seam splitting and Dart execution
 retain their actual recipe/geometry dependencies; sewing ease realization remains deferred to G2/G3.
 
 ## Typed mutation-group inputs
@@ -262,5 +263,63 @@ member reordering. Any typed mutation payload may be represented, including a ha
 available yet. This is a group input schema, not a new command class or authenticated transaction.
 Constructing it neither grants permission, looks up model targets, proves current revision, returns
 a preview nor executes a group. [Whole-group authority](command-scopes.md#whole-mutation-group-authorization)
-is a separate core check. Sequential private staging and whole-group failure handling follow.
+is a separate core check. The bus combines it with actual private staging as described below.
+
+## Sequential metadata-group preview
+
+CommandBus::preview_group(&group) accepts the same three implemented metadata mutations. One fresh
+trusted authority snapshot and one complete Inspect grant cover every original member, including
+retries. It then binds the common Design and exact revision against the actual private owner.
+DesignMismatch and RevisionMismatch preserve group identity and exact requested/current values.
+An unsupported member remains an actual HandlerUnavailable refusal.
+
+Each first occurrence runs against the preceding actual validated candidate. Every step retains the
+original envelope, full current-source, target, candidate and semantic-difference checks. One independent
+private reserve cursor spans the entire preview; distinct successful AddNotch members use successive
+tentative identities. The original reserve, model and revision remain unchanged, including after a
+later member fails. Candidate models never appear in the returned report.
+
+```rust
+let preview = bus.preview_group(&group)?;
+assert_eq!(preview.group(), group.id());
+assert_eq!(preview.revision(), group.context().expected_revision());
+for (index, step) in preview.steps().iter().enumerate() {
+    // An alias reports its first occurrence; it does not repeat the edit.
+    if let Some(first) = step.replay_of() {
+        assert!(first < index);
+        assert_eq!(step.report(), preview.steps()[first].report());
+    }
+}
+let net_changes = preview.difference();
+```
+
+steps() preserves every submitted position, payload-derived command identity and retry key. A key's
+first request is compared with any later request using complete CommandMutation equality. An exact
+repeat returns the original report and replay_of=Some(first_index), even after intervening commands;
+it does not reapply the edit or allocate a second identity. A different request under the same key
+returns RetryConflict with group, key, first occurrence, conflicting index and command. The alias table
+exists only for this preview call. A separate preview starts again from the actual original owner;
+this is no persisted retry history or cross-group replay guarantee.
+
+difference() compares the actual original and final candidate, rather than concatenating step reports:
+
+- lengths() returns exact changed dedicated declarations in original canonical inventory order,
+  retaining source and Unknown/Derived state. Inventory identities/order and general scalars remain exact.
+- materials() returns exact changed assignments in original Piece inventory order, independently of
+  each request's selection order. All other Piece fields and held references remain exact.
+- notches() returns actual appended Notches in append order, with exact owner, anchor, bindings and
+  tentative identity. Original landmarks remain an exact unchanged prefix; retries add no duplicate.
+
+For example, an assignment changed from A to B and then back to A has two real step reports and no
+net assignment change. The native mixed-group case likewise restores a Measurement declaration while
+adding two distinct Notches and replaying the first Notch request once. Its net delta contains only
+those two Notches, and repeating the entire preview returns the same tentative identities.
+
+A failed member returns CommandGroupPreviewError::Mutation with the original group, zero-based index,
+payload-derived command and complete original CommandPreviewError in the standard error source chain.
+All preceding candidates and reports are discarded. A later invalid anchor or exhausted reserve cannot
+consume an original identity. Final-model integrity failures retain Difference and its original cause.
+The six native group cases and existing individual cases are focused checks; complete bus integration
+remains separately owned. Group preview supplies no commit permission, approval token, published state,
+revision advance, audit/undo history, recipe evaluation, geometry or physical-property certificate.
 

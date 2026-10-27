@@ -23,6 +23,10 @@ mod measurement;
 pub use measurement::{CommandLengthChange, CommandMeasurementPreview};
 mod preparation;
 use preparation::PreparationBase;
+mod group;
+pub use group::{CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep};
+mod group_difference;
+pub use group_difference::CommandGroupDifference;
 
 /// Actual inspect-preview subset; reports carry semantic changes, never an owned candidate model.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -136,7 +140,8 @@ impl std::error::Error for CommandBusError {
 /// The application installs the authenticated authority provider; submitted requests cannot replace
 /// it. Construction claims no permission, source freshness or physical/geometry readiness. Only
 /// GetPieceList executes at this stage; ChangeMeasurement, AssignMaterial and AddNotch prepare
-/// private metadata inspect-previews. Recipe evaluation remains separate.
+/// private metadata inspect-previews, individually or in ordered atomic-group previews.
+/// Recipe evaluation remains separate.
 /// Mutation publication and histories remain absent.
 /// There is no model getter, mutable borrow, state replacement or caller-minted commit capability.
 ///

@@ -3,16 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — private model base and identity cursor
+## _(2026-10-27 UTC)_ — sequential actual metadata-group preview
 
-0431 .6.5.4.2.2.2 moves the three metadata handlers onto an immutable private PreparationBase.
-The bus keeps fresh authority/binding; the base keeps original availability/envelope/current checks.
-Notch receives the concrete independent reserve cursor rather than starting one inside its handler.
-Prepared state/report can be consumed internally for later staging; no public model handle exists.
-Native bus18, identity1, compiler privacy4 and selected strict lint/fmt pass. Actual sequential group
-preview remains the next leaf. Promotion declined: routine internal refactor under existing contracts.
+0432 .6.5.4.2.2.3 prepares each first request from the preceding validated actual model, sharing one
+independent reserve cursor. One fresh snapshot/complete Inspect grant precedes actual Design/revision.
+Exact group-local retry aliases return the first report; different same-key requests fail with context.
+Net diff compares actual original/final models and preserves all other content; restoration omits net
+changes. Later failure discards every candidate/report and leaves original identity allocation intact.
+Native bus24 (original18/group6), strict selected Clippy/fmt pass; initial missing field docs corrected.
+Promotion: existing command-layer decision records staging/retry/net-delta semantics and proof limits.
 
-[Whole0430 group-authority lesson](docs/history/stitchcad-devnotes-part582.md) retains its original proof.
+[Whole0431 base/cursor lesson and0291–0430 decision continuity](docs/history/stitchcad-devnotes-part583.md) retain exact original sources.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

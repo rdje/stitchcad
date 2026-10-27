@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0431 — share the private preparation base and identity cursor
+## STITCHCAD-G1-0432 — preview sequential actual metadata groups
 
-- Three metadata handlers borrow the actual model through one private view; fresh authority stays in the bus.
-- Pass the concrete staged identity cursor explicitly; original single-preview ordering/effects stay unchanged.
-- Native bus18/identity1/privacy4/selected strict lint/fmt pass; sequential group preview follows.
-- Whole0430 scope, lesson and ledger retained582 with three exact native Git source intervals.
+- Fresh whole-group authority/binding; actual successive candidates share one independent identity cursor.
+- Ordered step reports retain explicit exact-retry aliases; conflicting reuse and later failures refuse whole.
+- Actual final semantic delta omits restorations and preserves inventory/owner context; no publication effects.
+- Native bus24 (original18/group6), strict selected lint/fmt pass; full integration remains .6.9.
+- Whole0431 and prior command decision continuity retained583 with four exact native source intervals.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +44,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part583](docs/history/stitchcad-devnotes-part583.md) | whole0431 and command implementation continuity | 161 lines, 12908 bytes, sha256:bfff72b7… |
 | [part582](docs/history/stitchcad-devnotes-part582.md) | whole0430 group-authority scope/lesson/ledger | 37 lines, 3152 bytes, sha256:d469a142… |
 | [part581](docs/history/stitchcad-devnotes-part581.md) | whole0428/0429 schema/corrections/proofs | 79 lines, 6583 bytes, sha256:c617daa2… |
 | [part580](docs/history/stitchcad-devnotes-part580.md) | whole0427 private preparation scope/lesson/ledger | 39 lines, 3222 bytes, sha256:556a2815… |
