@@ -8,7 +8,11 @@ use crate::{
     value::CanonicalInputs,
 };
 
+mod host;
 mod parameters;
+pub use host::{
+    DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError, DesignMetadataHost,
+};
 pub use parameters::{
     DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,
     DesignParameters,

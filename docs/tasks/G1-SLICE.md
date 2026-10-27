@@ -822,47 +822,56 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0351 immutable MeasurementInputs; [whole scope/proof](../history/stitchcad-devnotes-part503.md).
 - ID: `G1-SLICE.6.4.2.d.3`
   Status: `done`
-  Goal: actual material source contracts and explicit profile/context boundary, no fabricated truth.
-  Profile physical resolution remains G4 under the canonical symbolic-binding decision; pins select
-  instantiation context rather than silently binding Design semantic marks to one factory.
-  Children .1 shared canonical targets; .2 Material field contracts; .3 owned material identity/current
-  property/Piece assignment checks; .4 selected-host/profile deferral acceptance before .d.4 composition.
+  Goal:0352–0355 Material/profile source boundary; [whole subtree/proof](../history/stitchcad-devnotes-part507.md).
 - ID: `G1-SLICE.6.4.2.d.3.1`
   Status: `done`
-  Goal:0352 shared CanonicalInputTarget; [whole scope/proof](../history/stitchcad-devnotes-part504.md).
+  Goal:0352 shared canonical targets; [whole subtree/proof](../history/stitchcad-devnotes-part507.md).
 - ID: `G1-SLICE.6.4.2.d.3.2`
   Status: `done`
-  Goal:0353 canonical Material properties; [whole scope/proof](../history/stitchcad-devnotes-part505.md).
+  Goal:0353 canonical Material properties; [whole subtree/proof](../history/stitchcad-devnotes-part507.md).
 - ID: `G1-SLICE.6.4.2.d.3.3`
   Status: `done`
-  Goal:0354 MaterialInventory/assignment queries; [whole scope/proof](../history/stitchcad-devnotes-part506.md).
+  Goal:0354 Material inventory/assignment queries; [whole subtree/proof](../history/stitchcad-devnotes-part507.md).
 - ID: `G1-SLICE.6.4.2.d.3.4`
   Status: `done`
-  Goal: scoped existing-contract acceptance: selected profile/result identities remain evaluation/
-  instantiation request claims; DesignStructure/Material own no implicit factory pin or resolver.
-  Preserve symbolic ProfileParameterRef and visible G4 existence/type/evidence/policy deferrals.
-  Own three focused existing native cases, source/decision/book scope alignment and whole0354
-  continuity506. No new algorithm/test scaffolding, lookup or full profile/evaluator verification.
-  - [x] REPRODUCE / ISSUE: Material/source presence must not become profile resolution. Source review
-    checks DesignStructureDefinition's6 fields, Material target methods and explicit evaluation inputs;
-    existing symbolic Notch case passes1/0, rc=0, target/profile-context-symbolic-0355.log.
-  - [x] ROOT CAUSE (WHY + WHERE): request pins/result ids are claims; logical refs carry no values.
-    Exact regeneration/profile-resolution filters each pass1/0, rc=0, target/profile-context-*-0355.log.
-  - [x] FIX: decision/book state selected-context ownership and G4 deferrals explicitly; unchanged
-    runtime passes3 selected cases/0 failures, rc=0. No new resolver or mirrored constructor tests.
-  - [x] ADDRESSED: cargo test -p sc-core --test command_evaluation_contract with the two exact
-    selection/resolution filters and notch_contract symbolic exact filter each give1 passed/0 failed0.
-  - [x] NO REGRESSION: book/publication78/113/1452/2378 pass0; D250132 exact baseline rows/delta0,
-    full glossary rc=1. Existing Rust behavior unchanged; no broad CI/platform verdict inferred.
-  - [x] LOCKSTEP: source-role decision/answers/book/status/index/pointer aligned; continuity506
-    compares3 exact Git spans0. Caps unchanged; G1still6/18; Material/profile-boundary parent closes.
-    promotion: promoted to docs/decisions/decision_profile-bindings-stay-symbolic-at-g1.md.
-    Commit0355; .d.4 source-host/Design composition next; G4 physical resolution remains its named owner.
+  Goal:0355 selected-context/G4 boundary; [whole subtree/proof](../history/stitchcad-devnotes-part507.md).
 - ID: `G1-SLICE.6.4.2.d.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: complete source-host/identity composition and actual current metadata binding acceptance.
   Keep profile-role deferrals distinct from canonical numeric presence, including coincident ids;
   factory label/result claims cannot authorize physical field resolution.
+  Children .1 checked core metadata-host port; .2 actual measurement/Ease adapter; .3 remaining
+  SizeSet/reference ownership; .4 owned Design composition and focused coupled acceptance.
+- ID: `G1-SLICE.6.4.2.d.4.1`
+  Status: `done`
+  Goal: readonly core host port and private checked metadata owner; actual host validators retain
+  typed errors, owned-id census stays disjoint from canonical values, and measurement reads borrow
+  the actual supplied canonical length. No reverse dependency, inferred binding or profile resolver.
+  Own focused native/privacy/lint/book checks; complete0355/subtree and historical book-proof
+  continuity507 before growth; orientation-only map curation for a dedicated ownership decision.
+  - [x] REPRODUCE / ISSUE: core cannot own higher metadata through a reverse dependency;
+    cargo test -p sc-core --test design_metadata_contract passes8/0, rc=0, target/design-host-native-0356.log.
+  - [x] ROOT CAUSE (WHY + WHERE): standalone metadata claims do not establish canonical membership;
+    detached/equal-id cases in design_metadata_contract pass8/0, rc=0, through local_environment.py.
+  - [x] FIX: private generic host owner, actual current validators and canonical pointer membership;
+    native8/0 rc=0 retains typed causes, authored witnesses and unknown state without inference.
+  - [x] ADDRESSED: selected native8/privacy3 pass0; cargo test -p sc-core --doc design::host::DesignMetadata
+    rc=0 proves private/shared access and context lifetime, target/design-host-privacy-0356.log.
+  - [x] NO REGRESSION: strict selected Clippy/fmt/book/publication pass0; D250132 exact baseline
+    rows/delta0, full glossary rc=1. Full adapter/Design/integration/CI remains deferred.
+  - [x] LOCKSTEP: core port chapter/API/decision/index/pointer aligned; continuity507 compares4
+    exact Git spans rc=0. Map curated from duplicated census paths; ceilings unchanged; G1still6/18.
+    promotion: promoted to docs/decisions/decision_design-host.md. Commit0356; actual adapter .4.2 next.
+    Initial hook refused a323B status row; tightened to315B within320B; no ceiling changed.
+- ID: `G1-SLICE.6.4.2.d.4.2`
+  Status: `pending`
+  Goal: implement the port using actual MeasurementInputs metadata, references and current validators.
+- ID: `G1-SLICE.6.4.2.d.4.3`
+  Status: `pending`
+  Goal: actual SizeSet metadata/reference ownership; borrowed membership alone is not a complete set.
+- ID: `G1-SLICE.6.4.2.d.4.4`
+  Status: `pending`
+  Goal: compose actual owned Design sources, identity scopes and focused binding/privacy acceptance.
 - ID: `G1-SLICE.6.4.3`
   Status: `pending`
   Goal: actual current point and whole-range resolution/repair readiness, including lost interiors.

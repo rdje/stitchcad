@@ -3,15 +3,18 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0355 — preserve selected profile context and symbolic G4 boundaries
 
-- Review owned source/request boundaries: factory labels/result ids remain claims; semantic profile refs carry no physical values.
-- Align profile-binding decision/answers and Material guide; no new resolver, runtime behavior or constructor mirror tests.
-- Three exact existing native cases pass1 each/0 failures; book/publication pass0. D250132 rows remain exactly baseline.
-- Whole0354 continuity506 matches3 Git spans; caps unchanged; G1still6/18. Material/profile-boundary parent closes.
-- Source-host/Design composition .6.4.2.d.4 follows; full evaluation, G4 physical resolution and integration/CI remain pending.
+## STITCHCAD-G1-0356 — check owned metadata through a one-way core host port
+
+- Add readonly DesignMetadataHost and private DesignMetadata owner with typed current host refusals.
+- Check identity census/canonical disjointness and exact canonical measurement object membership; no inferred values/bindings.
+- Native8/privacy3/strict selected lint/fmt/book/publication pass0; D250132 rows exactly baseline, delta0.
+- Whole0355 subtree/historical declaration proofs507 match4 Git spans; functional commands retained; caps unchanged.
+- G1still6/18; actual measurement adapter next. Full Design/SizeSet/profile/execution/integration/CI remains pending.
 
 # Sealed archive — earlier slices
+
+| [part507](docs/history/stitchcad-devnotes-part507.md) | whole0355 subtree and historical declaration proofs | 164 lines, 11748 bytes, sha256:21c5f7e5… |
 
 | [part506](docs/history/stitchcad-devnotes-part506.md) | whole0354 Material collection/assignment task, lesson and ledger | 47 lines, 4192 bytes, sha256:1a7cda6b… |
 

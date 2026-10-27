@@ -3,45 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — selected context stays distinct from owned source presence
+## _(2026-10-27 UTC)_ — one-way owned Design metadata port
 
-0355 reviews the existing public boundary across DesignStructure/Material, selected evaluation inputs
-and symbolic Notch refs. Owned data has no implicit factory selection/resolver. EvaluateInstance and
-ResolveProfile retain explicit labels/result ids as caller claims under evaluation snapshot metadata;
-ProfileParameterRef carries no physical quantity. G4-PROFILES.1/.7/.13 still owns existence/type/
-evidence/policy/physical resolution. Even coincident canonical numeric ids cannot settle that role.
-Three exact existing native filters pass1 each/0 failures: logical/factory with both chart families,
-profile snapshot labels and symbolic shared declarations/G4 deferral. No new algorithm or constructor
-mirror tests. Book/publication pass0; D250132 rows remain baseline, delta0. Whole0354 continuity506
-compares3 Git spans. Promotion: profile-binding decision gains selected-context answer/section.
-Caps unchanged; G1still6/18. .6.4.2.d.3 boundary parent closes; actual host/Design composition .d.4 next.
-No full evaluator/profile/physical/integration/CI claim follows this scoped contract review.
+0356 core DesignMetadataHost is implemented by higher immutable metadata owners. DesignMetadata owns
+that host and an identity-only census, not canonical values or borrowed contexts. It checks duplicate
+ids/canonical collisions, revalidates actual host semantics and checks stable observable identities.
+Measurement reads require actual metadata role and the actual canonical dedicated length object;
+equal detached objects and canonical-id-only inference refuse. Original host errors remain typed
+and source-chained. Provider semantic correctness is an explicit integration obligation, not proved
+by the pointer guard. Public shared views grant no mutator; returned borrows retain both owners.
+Native8/privacy3/strict selected lint/fmt/book/publication pass0; D250132 rows exactly baseline, delta0.
+Whole0355 subtree and historical declaration proof section507 compare4 exact Git spans; commands and
+functional guidance remain public. Two map entries now point to TOOLBOX census commands instead of
+duplicating paths; generator unchanged, caps unchanged. Promotion: decision_design-host.md.
+G1still6/18; actual MeasurementInputs adapter .6.4.2.d.4.2 next. Full Design/SizeSet/profile/physical/
+execution/integration/CI is unverified. No reverse dependency or readiness token introduced.
 
-[Whole0354 Material assignment lesson](docs/history/stitchcad-devnotes-part506.md) retains exact scope/proofs.
 
-[Whole0353 Material metadata lesson](docs/history/stitchcad-devnotes-part505.md) retains exact scope/proofs.
-
-[Whole0352 shared-target lesson](docs/history/stitchcad-devnotes-part504.md) retains exact scope/proofs.
-
-[Whole0351 measurement/Ease lesson](docs/history/stitchcad-devnotes-part503.md) retains exact scope/proofs.
-
-[Whole0350 measurement ownership lesson](docs/history/stitchcad-devnotes-part502.md) retains exact scope/proofs.
-
-[Whole0349 parameter ownership lesson](docs/history/stitchcad-devnotes-part501.md) retains exact scope/proofs.
-
-[Whole0348 recipe ownership lesson](docs/history/stitchcad-devnotes-part500.md) retains exact scope/proofs.
-
-[Whole0347 structural ownership lesson](docs/history/stitchcad-devnotes-part499.md) retains exact scope/proofs.
-
-[Whole0346 canonical input lesson](docs/history/stitchcad-devnotes-part498.md) retains exact scope/proof boundaries.
-
-[Whole0345 Piece inventory lesson](docs/history/stitchcad-devnotes-part497.md) retains exact source/proof and D250 boundary.
-
-[Whole0344 legacy-verifier lesson](docs/history/stitchcad-devnotes-part496.md) retains exact source/proof boundaries.
-
-[Whole0343 migration lesson](docs/history/stitchcad-devnotes-part495.md) retains source/proof boundaries.
-
-[Whole0339–0342 transition lessons](docs/history/stitchcad-devnotes-part494.md) retain original proofs and promotion decisions.
+[Complete selected-context/G4 boundary lesson](docs/history/stitchcad-devnotes-part507.md) retains
+its original source scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review
 

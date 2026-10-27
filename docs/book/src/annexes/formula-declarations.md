@@ -128,82 +128,30 @@ so this example grants no static acceptance or authority to compute a missing va
 
 ## Verification boundary
 
-The public formula_semantic_contract tests independently enumerate all eight kinds, six binding
-conversions, nine origins and eight reserved names with their kind/origin/context/tolerance roles.
-They compare every row of the actual normative tables in both directions and reject repaired
-spellings, unknown names and extra excluded-form reservations. No value context is accepted by
-these metadata methods.
+The semantic and declaration contracts check normative kind/origin/reserved-name tables, exact
+source identities and recipe ordinals. Compile-fail contracts preserve private construction and
+borrow lifetimes. These are metadata and syntax proofs; registry admission, numeric reads and
+physical geometry retain their separate owners. General scalar declarations cannot impersonate
+the dedicated measurement length family.
+
+Run focused contracts through the [local producer profile](../build-and-checks.md#local-producer-profile):
 
 ```bash
 cargo test -p sc-core --test formula_semantic_contract
-python3 -I -B docs/tasks/artifacts/formula_structure/semantic_mutations.py
-```
-
-Run the mutation command alone: it compiles ten original temporary changes and requires failed-body
-panics at current test assertion macros. Its
-[local producer profile](../build-and-checks.md#direct-python-producers) plans eleven logs, one mutable
-implementation and three inputs before reads: implementation, public test and canonical table page.
-Children retain prepared stores and the selected channel. Exact restoration rebuilds all five
-public contracts. Ten real faults match their authored failed-test sets; thirteen frozen inputs and
-six Rust files remain exact. No metadata API or Rust change is needed for this producer repair.
-
-```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/semantic_mutations.py --classifier-only
-```
-
-Classifier-only mode prepares the stores/output directory, validates the same three inputs and checks
-all ten anchors/current assertion sites. It declares zero diagnostic files or mutable sources and
-invokes no native child or source/output write. A copied entry accepts a read-only implementation
-with three hard links and leaves unused log aliases untouched. Independent complete captures,
-eight physical refusals and actual source/mode/restoration omissions watch both modes; captures
-certify dispatch separately from the real native proof. Compiler noise, passed names and labelled
-extraction panics provide no assertion evidence. These metadata proofs grant no runtime acceptance.
-
-The seven public formula_declaration_contract tests cover five canonical length origins/three general scalar domains/six
-annotations, every canonical LengthState, exact geometry refs, all eight reserved names and actual
-recipe ordinals/spans. Boundary4096 and absent4097 are checked; assertion labels and zero ordinals
-declare nothing. Five compile-fail contracts enforce private fields and name/record/recipe lifetimes.
-
-```bash
 cargo test -p sc-core --test formula_declaration_contract
-python3 -I -B docs/tasks/artifacts/formula_structure/declaration_mutations.py
 ```
 
-The direct declaration entry plans its implementation and current public test before any read
-or effect. Ordinary mode declares all twenty-two diagnostics: nineteen fault logs, the scalar-domain
-negative construction log, full native restoration and full declaration-doctest restoration. One
-implementation source is mutable. The nineteen original cases, both scalar-domain replacements,
-complete seven-test Cargo argv, five declaration doctests and prepared child stores remain exact.
+Historical fault sets, dispatch controls, counts and restoration receipts are retained exactly in
+`docs/history/stitchcad-devnotes-part507.md`. Retrieve that record without Git:
 
 ```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/declaration_mutations.py --classifier-only
-python3 -I -B docs/tasks/artifacts/formula_structure/declaration_mutations.py
+python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part507.md
 ```
 
-Classifier-only validates both read-only inputs and prepares the local stores/output directory.
-It checks all original anchors, both scalar-domain boundaries and current macro sites, declares
-zero diagnostic files or mutable sources and invokes no native child or source/output write.
-A copied entry accepts an implementation with three hard links and leaves unused fault, negative,
-native-restoration and doc-restoration aliases untouched. Two complete captures, six physical
-refusals and sixteen independent input/file/mutable/mode/store/restoration/count-two/negative
-selection/restored-doc dispatch omissions watch these plans. Captures certify dispatch separately
-from real native behavior.
-
-A failed body's actual thread panic path, line and byte-column must identify a current assertion
-macro. Custom messages qualify. Nonthread location mentions, compiler/linker noise, unwrap/expect-only
-panics and passed test names refuse. D188's measured nonthread weakness is repaired and watched by
-the independent actual legacy-regex fault. Exclusive replay of all nineteen real faults keeps every
-source-derived failing-test set; every failed body reaches a current macro.
-
-The scalar-domain widening intentionally compiles the actual library and then makes exactly the
-forbidden measurement-construction example compile, so its compile-fail contract fails. The other
-four negative examples remain passing. Exact source restoration rebuilds all seven native contracts
-and all five declaration doctests, including when a fault check fails. Seventy-two frozen inputs,
-sixty-three unchanged production Rust files, unchanged public tests, twenty-two local logs and
-Cargo's current full seven-test executable remain exact. Run native mutations alone and consume
-both restoration phases before another build or probe. Metadata admission, registry validation,
-numeric reads and physical geometry keep their separate owners; these diagnostic repairs change
-no metadata API, grammar or execution authority.
+The maintained semantic_mutations.py and declaration_mutations.py entries under
+`docs/tasks/artifacts/formula_structure/` accept `--classifier-only` for read-only plan checks.
+Run their mutation modes alone and consume source restoration before another build or probe.
+A dispatch capture proves its planned effects separately from actual native behavior.
 
 ## Checked initial namespace
 

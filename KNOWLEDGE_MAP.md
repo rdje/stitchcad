@@ -10,8 +10,8 @@
 - crates/sc-core/src/lib.rs,crates/sc-measure/src/lib.rs;G1-SLICE.3/.4/.5.
 - docs/book/src/SUMMARY.md;G0-CONTRACT/G1-SLICE.4d.1.
 - docs/book/src/spec/formula-language.md;G0-CONTRACT.9/G1-SLICE.5. Census: TOOLBOX.md.
-- docs/book/src/spec/interchange-dialects.md. docs/tasks/artifacts/interchange/run_interchange_census.sh. G0-CONTRACT.10/G2-2D.
-- docs/book/src/spec/feature-matrix.md;docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh. G0-CONTRACT.4.
+- docs/book/src/spec/interchange-dialects.md;G0-CONTRACT.10/G2-2D;TOOLBOX.md census.
+- docs/book/src/spec/feature-matrix.md;G0-CONTRACT.4;TOOLBOX.md census.
 - docs/book/src/spec/glossary/;docs/tasks/artifacts/glossary/run_glossary_census.sh;G0-CONTRACT.1.
 - .doctrine/live_document_size/;scripts/check_live_doc_size.sh. SPINE.4.
 - docs/tasks/artifacts/;`make probes`;ROADMAP.md §11.
@@ -66,6 +66,7 @@
 - [`canonical-expression-spelling`](docs/decisions/decision_canonical-expression-spelling.md)
 - [`command-layer-contract-and-undo-granularity`](docs/decisions/decision_command-layer-contract-and-undo-granularity.md)
 - [`d32-proving-gates-proposed-roadmap-amendment`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)
+- [`design-host`](docs/decisions/decision_design-host.md)
 - [`dim`](docs/decisions/decision_dim.md)
 - [`director-ruling-2026-09-30-four-findings`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
 - [`director-ruling-2026-09-30-no-seats-proceed-unapproved`](docs/decisions/decision_director-ruling-2026-09-30-no-seats-proceed-unapproved.md)
