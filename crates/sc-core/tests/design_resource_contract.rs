@@ -190,3 +190,197 @@ fn empty_meter_finishes_as_zero_data_without_claiming_that_any_model_was_travers
         (0, 0, 0)
     );
 }
+
+fn canonical_fixture() -> sc_core::value::CanonicalInputs {
+    use sc_core::{
+        ontology::EntityId,
+        value::{
+            CanonicalInputs, LengthDeclaration, LengthDeclarationDefinition, LengthState,
+            ScalarInputDeclaration, ScalarInputDeclarationDefinition, ScalarInputKind,
+            ScalarInputState, ScalarInputValue,
+        },
+    };
+    let id = EntityId::from_bits;
+    let states = vec![
+        LengthState::Known {
+            value: sc_units::Length::ZERO,
+            evidence: vec![id(801), id(802)],
+        },
+        LengthState::Assumed {
+            value: sc_units::Length::ZERO,
+            assumption: id(900),
+        },
+        LengthState::Unknown {
+            observation: id(901),
+        },
+        LengthState::Preference {
+            value: sc_units::Length::ZERO,
+            provenance: id(902),
+        },
+        LengthState::Derived { formula: id(903) },
+    ];
+    let lengths = states
+        .into_iter()
+        .zip(1_u128..)
+        .map(|(state, identity)| {
+            LengthDeclaration::new(LengthDeclarationDefinition {
+                id: id(identity),
+                source: id(800),
+                state,
+            })
+            .expect("actual immutable canonical length state")
+        })
+        .collect();
+    let scalar_states = vec![
+        ScalarInputState::Known {
+            value: ScalarInputValue::from_boolean(true),
+            evidence: vec![id(801), id(802)],
+        },
+        ScalarInputState::Assumed {
+            value: ScalarInputValue::from_boolean(false),
+            assumption: id(900),
+        },
+        ScalarInputState::Unknown {
+            observation: id(901),
+        },
+        ScalarInputState::Preference {
+            value: ScalarInputValue::from_boolean(false),
+            provenance: id(902),
+        },
+        ScalarInputState::Derived { formula: id(903) },
+        ScalarInputState::Derived { formula: id(904) },
+    ];
+    let scalars = scalar_states
+        .into_iter()
+        .zip(11_u128..)
+        .map(|(state, identity)| {
+            let kind = if identity == 16 {
+                ScalarInputKind::Area
+            } else {
+                ScalarInputKind::Boolean
+            };
+            ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+                id: id(identity),
+                source: id(800),
+                kind,
+                state,
+            })
+            .expect("actual immutable scalar/derived Area state")
+        })
+        .collect();
+    CanonicalInputs::new(lengths, scalars).expect("actual distinct canonical ownership")
+}
+#[test]
+fn actual_canonical_accounting_preserves_every_authored_state_and_counts_shared_evidence_entries_twice(
+) {
+    let inputs = canonical_fixture();
+    let saved = inputs.clone();
+    let mut meter = Meter::new(limits(15, 1, 1));
+    sc_core::design::charge_canonical_input_resources(&inputs, &mut meter)
+        .expect("actual canonical accounting");
+    let demand = meter
+        .finish()
+        .expect("five lengths, six scalars and two evidence entries in each Known vector");
+    assert_eq!(
+        (
+            demand.collection_entries(),
+            demand.text_bytes(),
+            demand.counter_bits()
+        ),
+        (15, 0, 0)
+    );
+    assert_eq!(
+        inputs, saved,
+        "accounting leaves exact declarations/source/state/value/provenance/order intact"
+    );
+}
+#[test]
+fn actual_scalar_evidence_excess_retains_exact_preceding_count_and_original_scalar_index() {
+    let inputs = canonical_fixture();
+    let saved = inputs.clone();
+    let mut meter = Meter::new(limits(14, 1, 1));
+    let original = Error::Count {
+        unit: Unit::CollectionEntries,
+        maximum: 14,
+        consumed: 13,
+        requested: 2,
+        location: Location {
+            scope: Scope::Structure,
+            field: "canonical.scalars.evidence",
+            index: Some(0),
+        },
+    };
+    assert_eq!(
+        sc_core::design::charge_canonical_input_resources(&inputs, &mut meter),
+        Err(original)
+    );
+    assert_eq!(meter.finish(), Err(original));
+    assert_eq!(inputs, saved);
+}
+#[test]
+fn actual_inventory_precharge_refuses_before_nested_evidence_and_retains_the_first_whole_field() {
+    let inputs = canonical_fixture();
+    let mut meter = Meter::new(limits(4, 1, 1));
+    let original = Error::Count {
+        unit: Unit::CollectionEntries,
+        maximum: 4,
+        consumed: 0,
+        requested: 5,
+        location: Location {
+            scope: Scope::Structure,
+            field: "canonical.lengths",
+            index: None,
+        },
+    };
+    assert_eq!(
+        sc_core::design::charge_canonical_input_resources(&inputs, &mut meter),
+        Err(original)
+    );
+    assert_eq!(meter.finish(), Err(original));
+    let mut evidence = Meter::new(limits(6, 1, 1));
+    let original = Error::Count {
+        unit: Unit::CollectionEntries,
+        maximum: 6,
+        consumed: 5,
+        requested: 2,
+        location: Location {
+            scope: Scope::Structure,
+            field: "canonical.lengths.evidence",
+            index: Some(0),
+        },
+    };
+    assert_eq!(
+        sc_core::design::charge_canonical_input_resources(&inputs, &mut evidence),
+        Err(original)
+    );
+    assert_eq!(evidence.finish(), Err(original));
+}
+#[test]
+fn actual_empty_canonical_scope_composes_with_prior_charges_and_preserves_prior_refusal() {
+    let empty =
+        sc_core::value::CanonicalInputs::new(vec![], vec![]).expect("explicit empty actual scope");
+    let mut meter = Meter::new(limits(1, 2, 1));
+    meter
+        .charge_text("é", location("preceding.label", None))
+        .expect("preceding declared bytes");
+    sc_core::design::charge_canonical_input_resources(&empty, &mut meter)
+        .expect("no canonical dynamic entries");
+    let demand = meter.finish().expect("same cumulative meter");
+    assert_eq!(
+        (
+            demand.collection_entries(),
+            demand.text_bytes(),
+            demand.counter_bits()
+        ),
+        (0, 2, 0)
+    );
+    let mut refused = Meter::new(limits(1, 1, 1));
+    let original = refused
+        .charge_text("é", location("preceding.label", None))
+        .expect_err("first prior refusal");
+    assert_eq!(
+        sc_core::design::charge_canonical_input_resources(&canonical_fixture(), &mut refused),
+        Err(original)
+    );
+    assert_eq!(refused.finish(), Err(original));
+}

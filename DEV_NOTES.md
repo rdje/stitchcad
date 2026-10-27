@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — first-refusal logical-content accounting contract
+## _(2026-10-27 UTC)_ — actual canonical dynamic-content producer
 
-0443 .6.8.2.2.2.2.1 adds explicit positive logical collection-entry/UTF-8-text/unbounded-counter-bit
-limits and a constant-state meter. Remaining-room checks preserve exact attempted components; the
-first refusal persists across ignored/later/zero charges and finish. A sealed charging trait object
-exposes no policy reset, concrete-state replacement or model/publication handle. Contract6/privacy4/
-strict selected lint/fmt pass; actual bus source unchanged. Promotion: command-layer record. Actual
-core/source traversal .2/.3 and runtime admission .4 remain; no RSS/time/actual-model-walk certificate.
-Whole0442 reserve/D290/D291 scope/lesson/ledger retained594 with3 exact native Git spans.
+0444 .6.8.2.2.2.2.2.1 borrows actual canonical Length/Scalar inventories and Known evidence vectors,
+precharges exact lengths and retains authored field/index order. Exhaustive owner/state patterns
+and Copy-value constraints prevent silently omitting new owned payloads. No numeric availability,
+registry, cloning or changed state/provenance. Resource10 (prior6/actual4)/strict selected lint/fmt pass;
+actual mixed-state demand15/0/0, first refusals, empty/prior-error composition and unchanged owner proven.
+Promotion: command-layer record. Other model/source/runtime work remains owned; no whole-model/RSS/
+time/evidence certificate. Whole0443 contract scope/lesson/ledger retained595 with3 exact Git spans.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

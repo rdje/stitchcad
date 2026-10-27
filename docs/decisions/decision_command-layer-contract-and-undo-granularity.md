@@ -168,3 +168,14 @@ retain exact first counts/location across ignored/later/zero charges and finish.
 sealed charging trait object, with no concrete-policy setter/reset/finish/model operation. Contract6/
 privacy4/lint/fmt pass. Actual exhaustive core/source producers and runtime model admission remain .2/.3/.4;
 this contract proves no model traversal, allocator RSS/time or dishonest-host security boundary.
+
+## Actual canonical resource producer0444
+
+answers: "how does logical accounting reach actual canonical declarations without changing state?"
+
+G1-SLICE.6.8.2.2.2.2.2.1 precharges actual canonical length/scalar vectors, then each original Known
+state's evidence-vector length. Exhaustive owner/state patterns and Copy-payload constraints expose
+future dynamic-field obligations. Preserve original order/field/index; do not read availability, clone,
+normalize or inspect registry truth. Native resource10 (prior6/actual4)/lint/fmt verify15/0/0 demand,
+exact first refusals, original owner and empty/prior-error composition. This is a canonical component;
+remaining core/source/runtime, allocator RSS/time and evidence/publication proof stay separately owned.

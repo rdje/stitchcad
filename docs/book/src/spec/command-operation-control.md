@@ -193,8 +193,9 @@ and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 
 ## Logical dynamic-content accounting contract
 
 DesignResourceLimits and DesignResourceMeter live in the Design domain, independent of command
-authority. They provide a data-only accounting contract. Actual exhaustive model/source producers
-and command-bus enforcement are pending; this meter is not yet a runtime model-admission gate.
+authority. They provide a data-only accounting contract. Actual canonical-component accounting is
+implemented below. Remaining model/source producers and command-bus enforcement are pending;
+this meter is not yet a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -252,11 +253,51 @@ methods and no policy setter, reset, finish or model/publication operation. The 
 and state are private. This prevents replacement through the supplied charging capability; an honest,
 exhaustive producer remains an integration obligation, not a security claim against dishonest host code.
 
-Six native contract cases and four compiler privacy/sealing cases pass, with strict selected lint and
+The meter contract established six native cases and four compiler privacy/sealing cases, with strict selected lint and
 formatting. The actual core visitor is G1-SLICE.6.8.2.2.2.2.2, the actual immutable source-host producer
 is .3, and prospective shape/runtime installation is .4 under the same parent. Source truth, raw
 input decoding, allocator peaks, host algorithm time and future solver/file/decompression/geometry
 work remain distinct obligations. The existing metadata bus has not changed its runtime behavior.
+
+## Actual canonical-input accounting
+
+charge_canonical_input_resources borrows an actual CanonicalInputs and charges its existing inventory
+and Known-state evidence vectors into the supplied sink. It creates no replacement declarations,
+looks up no registry, extracts no numeric availability and changes no value/state/provenance/order.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_canonical_input_resources(&canonical_inputs, &mut meter)?;
+let canonical_component = meter.finish()?;
+let actual_entries = canonical_component.collection_entries();
+```
+
+The order is exact: charge the length inventory's full length, visit lengths in authored order and
+charge each Known evidence vector, then do the scalar inventory and its Known evidence vectors.
+Static fields are canonical.lengths, canonical.lengths.evidence, canonical.scalars and
+canonical.scalars.evidence in Structure scope. Inventory charges have no index; evidence charges
+retain the original zero-based declaration index. Reused evidence identities in different declarations
+still occupy entries in both original vectors; accounting does not deduplicate them.
+
+For example, the native actual inventory has five Length declarations covering Known, Assumed,
+Unknown, Preference and Derived, plus six Scalar declarations covering those states and a computed
+Area. The Known length and Known scalar each hold two references, reusing the same identities.
+Demand is15 collection entries (5+2+6+2), zero text bytes and zero unbounded-counter bits.
+Maximum14 refuses at canonical.scalars.evidence, index0, consumed13/requested2. Maximum4 refuses
+first at the full length inventory (consumed0/requested5), before inspecting nested evidence.
+Maximum6 admits those five records then refuses their first two-reference evidence vector.
+
+An exhaustive internal owner view and exhaustive declaration/state patterns require accounting
+updates when a new owned field/state is added. Present fixed value payloads must remain Copy; a new
+owned dynamic payload requires revisiting the producer. Unknown/Derived states remain authored
+states, with no value fallback. Empty actual canonical scope contributes zero entries; an earlier
+meter refusal stays the exact original error, even if this producer's error is ignored.
+
+Four actual canonical cases plus the previous six meter cases pass:10 total, with strict selected
+lint and formatting. The command-bus source remains unchanged. This is canonical-component proof;
+Pieces/topology, parameters/recipe/Materials, sewing/garment, root counter bits, source-host traversal
+and runtime model admission remain separately owned. Finishing this component's meter supplies no
+whole-model, source-truth, allocator RSS/time or publication certificate.
 
 Focused runtime evidence comprises37 earlier bus cases, eight runtime-control cases and one actual
 source-copy case:46 passing cases. The evidence-input slice established six pure admission/fraction

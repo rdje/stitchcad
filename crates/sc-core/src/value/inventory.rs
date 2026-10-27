@@ -138,6 +138,13 @@ impl CanonicalInputs {
         Ok(candidate)
     }
 
+    // Exhaustive borrowed view for Design resource accounting. New owned fields must extend the
+    // accounting contract rather than silently disappearing behind the existing public getters.
+    pub(crate) fn resource_collections(&self) -> (&[LengthDeclaration], &[ScalarInputDeclaration]) {
+        let Self { lengths, scalars } = self;
+        (lengths, scalars)
+    }
+
     /// Exact dedicated length declarations in authored order.
     #[must_use]
     pub fn lengths(&self) -> &[LengthDeclaration] {

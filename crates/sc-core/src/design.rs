@@ -85,8 +85,9 @@ pub use parameters::{
 };
 pub use pockets::DesignPocketOpeningDeclaration;
 pub use resource::{
-    DesignResourceCount, DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits,
-    DesignResourceLocation, DesignResourceMeter, DesignResourceScope, DesignResourceSink,
+    charge_canonical_input_resources, DesignResourceCount, DesignResourceDemand,
+    DesignResourceLimitError, DesignResourceLimits, DesignResourceLocation, DesignResourceMeter,
+    DesignResourceScope, DesignResourceSink,
 };
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use sewing_state::{

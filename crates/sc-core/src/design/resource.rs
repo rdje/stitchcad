@@ -4,6 +4,9 @@ use core::{
     num::{NonZeroU64, NonZeroUsize},
 };
 
+mod canonical;
+pub use canonical::charge_canonical_input_resources;
+
 /// Original top-level model scope of a resource charge; no model data or authority is carried.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DesignResourceScope {

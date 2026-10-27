@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0443
+## Current leaf acceptance —0444
 
-- [x] ROOT CAUSE: python3 -I -B native HEAD Design export assertions print no resource meter/sink rc=0;
-  logical dynamic content needs explicit units without claiming allocator RSS, time or actual traversal.
-- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:6 passed rc=0; exact UTF-8,
-  cumulative axes, first-refusal latch across ignored/later/zero charges and platform/u64 extremes verified.
-- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; cargo test -p sc-core --doc design::resource:
-  4 passed rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0.
+- [x] ROOT CAUSE: python3 -I -B native HEAD canonical/resource assertions print actual length/scalar
+  ownership and earlier meter-only module rc=0; canonical accounting must visit real owned vectors.
+- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:10 passed rc=0; four actual
+  canonical cases cover all authored states, logical shared evidence entries, original limits and no mutation.
+- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; git diff --quiet HEAD --
+  crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior six data-meter cases retain coverage.
 
 ## Goal
 
@@ -815,37 +815,57 @@ All98 completed ids/statuses and original proof pointers remain live there.
   model/authority failures, refuse before costly preparation, and distinguish logical content from RSS/time.
 - ID: `G1-SLICE.6.8.2.2.2.2.1`
   Status: `done`
-  Goal:0443 explicit logical collection-entry/UTF-8-text/unbounded-counter-bit limits, demand and meter.
-  A sealed data-only charging sink exposes no policy setter/reset/finish/model/publication capability.
-  Preserve exact first refusal across ignored/later/zero charges and refuse finish after any failure.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native HEAD Design export assertions print no resource
-    meter/sink rc=0; prior work bounds submitted metadata inputs/copy requests, not logical model content.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part594.md:
-    3 exact Git spans rc=0; whole0442 scope/lesson/ledger retains its explicit remaining model boundary.
-    An empty data meter/declared demand alone cannot prove exhaustive model/source traversal or runtime admission.
-  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
-    positive explicit maxima, constant-state accounting, remaining-room guards, static field/index locations
-    and first-refusal latch; producers receive only the sealed sink, not concrete replaceable policy state.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:6 passed rc=0; exact3 entries/
-    5 UTF-8 bytes/129 bits, independent maxima, original counts/locations, cross-unit/zero latch and
-    platform/u64 exact maximum/successor refusal verified without clipping or overflowing arithmetic.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::resource:4 passed rc=0; external policy/state
-    writes, foreign sink implementation and producer finish fail compilation. Selected cargo fmt check
-    rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0.
-  - [x] LOCKSTEP: whole0442 proof594 retained unchanged with3 exact Git spans rc=0; book/pointer/frontier/
-    lesson/indexed decision aligned. Actual core/source visitors .2/.3 and runtime prospective admission .4
-    remain owned/pending, along with deeper .6.5.5 and full .6.9. No actual bus enforcement claim.
-  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
-  Native book/publication81 chapters/159 scoped API rows/1475 source links/2472 rendered links rc=0;
-  maintained-reference82 files/18162 lines/1267199 bytes owner .6.8.2.2.2.2.1 rc=0.
-  Retention1048 logical/78 aggregate working Markdown rc=0; active generation fits64/group.
-  Logical fields count without backing deduplication; no total allocator RSS/capacity, host-internal
-  algorithm-time, raw-ingress or model-validity certificate. An honest exhaustive producer is a trusted
-  integration obligation; the charging sink supplies no arbitrary-host security boundary.
+  Goal:0443 first-refusal logical resource contract; [whole scope/proofs](../history/stitchcad-devnotes-part595.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: exhaustive actual core-model dynamic-content visitor with original typed locations and bounded
   precharge before nested traversal; cover every owned collection/text/counter field without inferred data.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.1`
+  Status: `done`
+  Goal:0444 actual canonical Length/Scalar inventory and Known evidence-vector resource producer.
+  Exhaustive internal owner view and declaration/state patterns preserve future-field obligations;
+  fixed value payloads must remain Copy. Borrow only, precharge before traversal, no numeric availability,
+  registry lookup, copying, normalization or changed declarations/source/state/value/provenance/order.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native HEAD canonical/resource assertions print actual
+    length/scalar ownership and earlier meter-only module rc=0; this leaf adds the explicit canonical
+    producer to that module rather than treating declared demo charges as an actual model walk.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part595.md:
+    3 exact Git spans rc=0; whole0443 scope/lesson/ledger preserves its actual-visitor-pending boundary.
+    Canonical vectors and per-Known evidence are logical dynamic entries; fixed primitive values are not.
+  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
+    exhaustive borrowed owner view, complete original state matches, Copy-value constraints and length-
+    then-scalar precharge preserve exact first resource location/index without model/authority fabrication.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:10 passed rc=0. Four actual
+    canonical cases verify five Length/all authored states and six Scalars/computed Area, demand15/0/0,
+    reused evidence entries counted twice, max14 scalar-evidence13+2/index0, whole-vector max4 refusal,
+    max6 length-evidence refusal, unchanged input, actual empty scope and prior-error composition.
+  - [x] NO REGRESSION: selected cargo fmt check rc=0; strict selected lint rc=0; git diff --quiet HEAD
+    -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Original six meter cases still pass;
+    runtime policy/enforcement, metadata candidate/source/authority/cancellation paths are unchanged.
+  - [x] LOCKSTEP: whole0443 scope/lesson/ledger595 retained unchanged with3 exact Git spans rc=0;
+    book/pointer/frontier/lesson/indexed decision aligned. Remaining core components .2–.5, source-host
+    .3 and runtime admission .4 stay owned; deeper .6.5.5 and full .6.9 acceptance remain deferred.
+  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Native book/publication81 chapters/159 scoped API rows/1475 source links/2473 rendered links rc=0;
+  maintained-reference82 files/18204 lines/1270093 bytes owner .6.8.2.2.2.2.2.1 rc=0.
+  Retention1049 logical/79 aggregate working Markdown rc=0; active generation fits64/group.
+  This is actual canonical-component accounting, not complete model/source traversal or runtime
+  enforcement, evidence truth, allocator RSS/time or publication authority.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.2`
+  Status: `pending`
+  Goal: actual Piece/copy-plan/topology resource accounting, including all held text/reference/history
+  collections, with exhaustive owner views and bounded precharge; retain historical topology references.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.3`
+  Status: `pending`
+  Goal: actual parameter/recipe/Material resource accounting, including both original/canonical recipe text;
+  no syntax reparse, inferred scalar availability or registry truth claim during accounting.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.4`
+  Status: `pending`
+  Goal: actual sewing/garment-family resource accounting with all nested held fields and original locations.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.5`
+  Status: `pending`
+  Goal: compose actual core root accounting, including exact unbounded represented revision bits, under
+  one cumulative meter; preserve scope-specific original first refusal and no mutation/large preparatory copy.
 - ID: `G1-SLICE.6.8.2.2.2.2.3`
   Status: `pending`
   Goal: actual immutable source-host resource port and sc-measure producer through published readonly
