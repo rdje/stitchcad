@@ -11,6 +11,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Build and check the project](build-and-checks.md)
 - [Body-to-garment Ease intent](spec/ease-inputs.md)
 - [Commands and agent authority](spec/glossary/commands-and-authority.md)
+- [Command execution and Material preview](spec/command-execution.md)
 - [Command scopes and core authorization](spec/command-scopes.md)
 - [Current-reference repairs](spec/ontology-implementation.md)
 - [Draft and complete chart coverage](spec/size-chart-collections.md)

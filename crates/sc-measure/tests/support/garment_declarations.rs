@@ -17,7 +17,7 @@ use sc_core::{
 };
 use sc_measure::DesignSources;
 
-fn assigned_definition() -> DesignGarmentDefinition<DesignSources> {
+pub(super) fn assigned_definition() -> DesignGarmentDefinition<DesignSources> {
     let mut definition = garment_ownership::definition();
     let mut sewing = definition.sewing.definition().clone();
     let mut inputs = sewing.inputs.definition().clone();

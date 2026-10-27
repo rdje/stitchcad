@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; all17 typed inputs, trusted-host authorization and actual Piece-list read implemented; mutation handlers pending
+- **Status:** `active`; all17 typed inputs, trusted-host authorization, actual Piece-list read and Material inspect-preview implemented; publication pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -136,3 +136,15 @@ Native5 on real sc-measure schemas/privacy2/strict selected lint/fmt pass0; inst
 and41400cd book committed checks pass0. Whole book subtree/0418 evidence568 retains4 exact Git spans.
 Candidates/allocation/semantic diffs follow .6.5.2.b/.c; handlers/evaluator dependencies, effect-boundary
 publication, replay/audit/history, runtime and UI/API/MCP parity remain owned. No mutation executes.
+
+answers: "what does an actual Material preview validate and preserve?"
+
+0422 .6.5.2.b.2 prepares an actual private AssignMaterial candidate after fresh inspect authority,
+exact Design/revision binding, explicit envelope and complete current-source checks. All selected
+Piece identities resolve before replacement; original labels, held references and multiplicity remain.
+The actual rebuilt aggregate rechecks current registry/source rules, including assigned Material
+existence. Original typed causes survive. A report carries only Design/base revision and exact changed
+assignments in selection order, omitting no-ops and preserving unresolved reason bytes. Candidate
+discard leaves the original Piece inventory/revision unchanged; no new identity or publication occurs.
+The report grants no later effect authority. Complete topology, geometry, physical readiness, other
+handlers and atomic publication remain owned; focused native bus10/privacy2/lint/fmt establish this scope.

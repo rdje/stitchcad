@@ -3,17 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — canonical task sources and sealed proof bytes
+## _(2026-10-27 UTC)_ — actual private Material preview
 
-0421 D281:root-only lookup refused fresh siblings and accepted a reused done sibling copied to root.
-Old control1 error/1 failure is expected. Bound32 linked family files/98304B, check all historical
-members for reuse, freeze all authoring sources/census; caller edits and prior authority survive drift.
-All98 .6.4 nodes move intact:294L/11636B/sha256:6a753dd7…; exact source/current-id coverage controlled.
-D282 raw archive attrs preserve bytes/blank EOF while ordinary source whitespace stays strict.
-Map8240/8192B forced lifecycle closure:whole completed journal572 retains79693B/1169L; seven current
-nodes remain done,21 current anchors redirected. Neutral generator unchanged; map8185B again.
-Source10 plus targeted graph/journal2, newline5/reader23/author8/AST/bash/coverage pass0. Whole0420/0390/
-journal570/571/572 retains4+2+1 exact spans; final checks in leaf. Promotion: containment/map decisions.
+0422 .6.5.2.b.2 prepares a real AssignMaterial candidate under fresh inspect authority and exact
+Design/revision binding. Explicit envelope and complete current sources precede target resolution.
+Held Piece replacement preserves labels/references; rebuild actual aggregate/current registry and
+return only exact before/after changes in request order, omitting exact no-ops. Discard candidate.
+No entity creation, publication, history or revision advance. Inspect-only native cases retain
+unknown Material flags, exact reasons, missing targets/source chains and unchanged original Pieces.
+Native command_bus10/privacy2/strict selected lint/fmt are the focused checks; full bus proof .6.9.
+Promotion: command-layer decision; assignment metadata is no geometry/physical/release certificate.
+
+[Whole0421 canonical task-source/byte-storage lesson](docs/history/stitchcad-devnotes-part573.md) retains original migration controls and exact proof boundaries.
 
 [Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
 

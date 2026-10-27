@@ -10,6 +10,15 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
+## Current leaf acceptance —0422
+
+- [x] ROOT CAUSE: cargo test -p sc-measure --test design_inputs_contract command_bus:10 passed rc=0;
+  private whole-candidate preparation must bind actual owned registry/sources and fresh inspect authority.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:10 passed rc=0;
+  actual Material preview preserves original Pieces/revision and exact semantic assignment differences.
+- [x] NO REGRESSION: cargo test -p sc-core --doc command::bus:2 passed rc=0; selected strict Clippy
+  and fmt --check pass rc=0; full integration remains .6.9.
+
 ## Goal
 
 The architecture exists as **running code on all three runtime profiles**: the ontology and the
@@ -664,7 +673,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0419 private owner/authorized Piece-list read; [whole proof](../history/stitchcad-devnotes-part569.md).
 - ID: `G1-SLICE.6.5.2.b`
   Status: `in_progress`
-  Goal: private candidate/allocation isolation; task-source/partition dependency precedes next child.
+  Goal: private candidate/allocation isolation; actual Material preview .b.2, fresh-ID staging .b.3 follows.
 - ID: `G1-SLICE.6.5.2.b.1`
   Status: `done`
   Goal:0420 held-reference-preserving Material replacement; [whole proof](../history/stitchcad-devnotes-part570.md).
@@ -683,6 +692,30 @@ All98 completed ids/statuses and original proof pointers remain live there.
     tree coverage10 lanes/13 trees/17 siblings/0 unowned/orphan/dead rc=0. Full product proof remains.
   - [x] LOCKSTEP: transition_receipts.py records570/571/572:4+2+1 exact Git spans rc=0; complete0420/0390/
     journal retained, seven current nodes/21 anchors preserved; map8185B. Retention/book/size/AST/bash/diff0.
+- ID: `G1-SLICE.6.5.2.b.2`
+  Status: `done`
+  Goal:0422 actual private AssignMaterial candidate/inspect preview; complete current registry/source
+  checks and exact Material diff, no publication or new entity allocation. Fresh-ID staging follows .b.3.
+  - [x] REPRODUCE / ISSUE: git show b8693af:crates/sc-core/src/command/bus.rs shows only GetPieceList
+    dispatch/HandlerUnavailable, rc=0; a detached Piece replacement cannot validate a full candidate.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-measure --test design_inputs_contract command_bus:
+    10 passed/0 failed rc=0; real candidate needs actual whole registry/source validators and fresh authority.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings: finished rc=0;
+    private actual candidate plus inspect authorization/binding, original typed causes and exact report.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:10 passed rc=0;
+    inspect-only order/no-op/reasons/missing Piece/Material/envelope/source/revocation; original owner unchanged.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc command::bus:2 passed rc=0; selected fmt --check rc=0;
+    prior actual read5 also pass in command_bus10. Full integration remains .6.9, no publication claim.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part573.md:1 exact Git
+    span rc=0; verify-retention OK rc=0. Book/README/live pointer/decision/lesson aligned; gates below.
+  Book build/publication:80 chapters/159 tables/1461 rows/2435 local links rc=0; maintained-reference
+  candidate81 files/17359 lines/1212157 bytes rc=0. Tree census10 lanes/13 trees/17 siblings/0 gaps rc=0.
+  Checks use scripts/local_environment.py for Cargo. Initial indexing lint refusals corrected without
+  lint suppression; selected strict lint now passes. New test module path fixed from rustfmt diagnostic.
+- ID: `G1-SLICE.6.5.2.b.3`
+  Status: `pending`
+  Goal: private fresh-identity staging for creation candidates, with actual allocation state unchanged
+  on preview/refusal and no caller-supplied identity/publication token; before actual AddNotch handler.
 - ID: `G1-SLICE.6.5.2.c`
   Status: `pending`
   Goal: exact actual semantic changes; preserve canonical identity/order/logical source distinctions.

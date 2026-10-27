@@ -3,6 +3,14 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0422 — preview actual private Material assignments
+
+- Fresh inspect authority and exact Design/revision binding precede private candidate preparation.
+- Complete current sources/registry and explicit envelope guards retain their original error chains.
+- Exact assignment diff follows request order, omits no-ops and preserves unresolved reason text.
+- Native bus10/privacy2/selected lint/fmt; original Pieces/revision unchanged after success/refusal.
+- No publication, new identities, geometry/physical/release certificate; broader bus proof remains owned.
+
 ## STITCHCAD-G1-0421 — preserve task-sibling ownership and sealed proof bytes
 
 - Fresh linked-sibling owners work; prior completed sibling owners cannot be reused through root.
@@ -28,6 +36,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part573](docs/history/stitchcad-devnotes-part573.md) | whole0421 source/storage lesson | 12 lines, 985 bytes, sha256:2b349c15… |
 | [part572](docs/history/stitchcad-devnotes-part572.md) | whole completed verification/commit journal | 1169 lines, 79693 bytes, sha256:155861ad… |
 | [part571](docs/history/stitchcad-devnotes-part571.md) | whole0390 policy-boundary lesson/ledger | 13 lines, 838 bytes, sha256:dc2f2c21… |
 | [part570](docs/history/stitchcad-devnotes-part570.md) | whole0420 replacement/lesson/ledger/prior retirement | 32 lines, 3135 bytes, sha256:9c4a810b… |

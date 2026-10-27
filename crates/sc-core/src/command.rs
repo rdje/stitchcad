@@ -29,7 +29,10 @@ pub use authorization::{
     CommandAuthorizationError, CommandAuthorizationMode, CommandGrantRefusal,
     CommandGrantRejection,
 };
-pub use bus::{CommandBus, CommandBusError, CommandPieceList, CommandResult};
+pub use bus::{
+    CommandBus, CommandBusError, CommandMaterialChange, CommandMaterialPreview, CommandPieceList,
+    CommandPreviewError, CommandResult,
+};
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,

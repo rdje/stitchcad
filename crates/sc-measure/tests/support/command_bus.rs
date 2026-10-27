@@ -25,11 +25,14 @@ struct Host {
 }
 impl Host {
     fn new(design: EntityId) -> Self {
+        Self::with_permissions(design, vec![Permission::Inspect, Permission::Commit])
+    }
+    fn with_permissions(design: EntityId, permissions: Vec<Permission>) -> Self {
         let grant = |status| {
             CommandGrant::new(
                 id(700001),
                 actor(),
-                vec![Permission::Inspect, Permission::Commit],
+                permissions.clone(),
                 CommandScope::new(
                     design,
                     CommandId::ALL.to_vec(),
@@ -50,6 +53,9 @@ impl Host {
         }
     }
 }
+
+#[path = "command_bus/material_preview.rs"]
+mod material_preview;
 impl CommandAuthoritySource for Host {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_> {
         self.reads.set(self.reads.get() + 1);

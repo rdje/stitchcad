@@ -9,6 +9,9 @@ use crate::{
 };
 use core::fmt;
 
+mod material;
+pub use material::{CommandMaterialChange, CommandMaterialPreview, CommandPreviewError};
+
 /// Actual authored Piece inventory at one authorized exact revision; no geometry/readiness verdict.
 /// Values borrow the private bus owner, so they cannot outlive it or become a publication token.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -92,7 +95,8 @@ impl std::error::Error for CommandBusError {
 ///
 /// The application installs the authenticated authority provider; submitted requests cannot replace
 /// it. Construction claims no permission, source freshness or physical/geometry readiness. Only
-/// GetPieceList executes at this stage. Mutations, candidate publication and histories remain absent.
+/// GetPieceList executes at this stage; AssignMaterial can prepare a private inspect-preview.
+/// Mutation publication and histories remain absent.
 /// There is no model getter, mutable borrow, state replacement or caller-minted commit capability.
 ///
 /// ```compile_fail
@@ -142,7 +146,29 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// Returns the original authorization cause, wrong Design, revision mismatch, then unavailable
     /// handler in that order. No mutation is implemented or partially applied by this entry point.
     pub fn execute(&self, request: &CommandRequest) -> Result<CommandResult<'_>, CommandBusError> {
-        authorize_command(request, CommandAuthorizationMode::Execute, &self.authority)
+        self.authorize_bound(request, CommandAuthorizationMode::Execute)?;
+        let command = request.command_id();
+        let inputs = self.state.inputs();
+        match request {
+            CommandRequest::Query(query)
+                if matches!(query.payload(), QueryPayload::GetPieceList) =>
+            {
+                Ok(CommandResult::PieceList(CommandPieceList {
+                    design: inputs.id(),
+                    revision: inputs.revision(),
+                    pieces: inputs.structure().pieces().pieces(),
+                }))
+            }
+            _ => Err(CommandBusError::HandlerUnavailable { command }),
+        }
+    }
+
+    fn authorize_bound(
+        &self,
+        request: &CommandRequest,
+        mode: CommandAuthorizationMode,
+    ) -> Result<(), CommandBusError> {
+        authorize_command(request, mode, &self.authority)
             .map_err(CommandBusError::Authorization)?;
         let command = request.command_id();
         let inputs = self.state.inputs();
@@ -160,17 +186,6 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
                 current: inputs.revision().clone(),
             });
         }
-        match request {
-            CommandRequest::Query(query)
-                if matches!(query.payload(), QueryPayload::GetPieceList) =>
-            {
-                Ok(CommandResult::PieceList(CommandPieceList {
-                    design: inputs.id(),
-                    revision: inputs.revision(),
-                    pieces: inputs.structure().pieces().pieces(),
-                }))
-            }
-            _ => Err(CommandBusError::HandlerUnavailable { command }),
-        }
+        Ok(())
     }
 }
