@@ -3,18 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — private owner and first actual command read
+## _(2026-10-27 UTC)_ — detached Material replacement retains birth history
 
-0419 owns the actual DesignGarment and trusted authority source inside CommandBus. Exact GetPieceList
-reads authenticate afresh before binding Design/revision; return original borrowed Piece order,
-multiplicity/pairing/Material intent without cloning/reconstruction or mutation. Authoritative grant
-revocation affects the next call; a prior read is no commit/authority token. Other handlers refuse
-explicitly rather than executing a placeholder. Native5 exercises actual sc-measure source schemas,
-wrong actor/Design/exact beyond128 revision, original causes, stable addresses and repair/deferral
-inspection. Privacy/lifetime2 and strict selected Clippy/fmt pass0. Metadata is not source/geometry/
-physical readiness; candidates/allocation/diffs/handlers/history/parity stay owned. Book/reference
-sync and whole maintained-book subtree/0418 retirement568 preserve4 exact spans; book/publication/
-retention0. Promotion: command-layer decision, actual execution vs catalog distinction.
+0420 Piece::with_material_assignment clones original fields and changes only material intent.
+Piece::new after a split refuses its retired birth edge, while held history still resolves.
+Reuse has_required_reason, retaining exact nonblank text/ids. No label inference, reference rewrite,
+registration or geometry certification. Native3 checks rebirth refusal vs replacement success,
+all other fields/original owner unchanged, no-op equality, blank reason and exact split/deletion
+range/endpoint evidence with the same ledger. Selected strict Clippy/fmt0. Whole0419 task/lesson/
+ledger/retirement569:4 exact spans; book/publication/size/retention/fmt0. Actual registry/source/currentness/auth/publication
+remain the candidate/command layer's obligations. Promotion: structural-vs-current ontology decision.
+
+[Whole0419 private-owner/read lesson](docs/history/stitchcad-devnotes-part569.md) retains original native5/privacy2/source and execution boundaries.
 
 [Whole0418 byte-storage/adoption lesson](docs/history/stitchcad-devnotes-part568.md) retains original native before/after and scoped acceptance.
 

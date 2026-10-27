@@ -952,20 +952,19 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal: private actual aggregate/candidate ownership and semantic diffs, no caller-minted commit token.
 - ID: `G1-SLICE.6.5.2.a`
   Status: `done`
-  Goal:0419 private actual bus and authorized GetPieceList; no model getter/publication token.
-  - [x] REPRODUCE / ISSUE: native git grep at41400cd:0 CommandBus matches/rc=1 expected; gap confirmed rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): native catalog/authorization/input census rc=0:no executable owner;
-    command::bus now binds one actual garment/installed trusted provider, not caller-issued authority.
-  - [x] FIX: cargo test -p sc-measure --test design_inputs_contract command_bus:5 passed rc=0;
-    auth then actual Design/revision; original Piece slice/order/material intent, typed unavailable failures.
-  - [x] ADDRESSED: same native5 rc=0; fresh revocation/actor checks, exact beyond128 revision refusal,
-    original cause, no reconstruction; metadata inspection preserves damaged/deferred source intent.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc command::bus:2 compile-fail passed; selected Clippy/fmt rc=0.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part568.md:4 spans rc=0;
-    book/publication/retention rc=0, docs/decision synced. Candidate/mutation/runtime/release proof remains.
+  Goal:0419 private owner/authorized Piece-list read; [whole proof](../history/stitchcad-devnotes-part569.md).
 - ID: `G1-SLICE.6.5.2.b`
-  Status: `pending`
+  Status: `in_progress`
   Goal: private candidate and identity-allocation isolation through actual mutation handler dependency.
+- ID: `G1-SLICE.6.5.2.b.1`
+  Status: `done`
+  Goal:0420 immutable detached Piece material replacement; exact held references, no publication.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test piece_contract material_replacement:3 passed rc=0; native rebirth rejects the retired split source.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test piece_contract material_replacement:3 passed rc=0; Piece::new checks live birth edges, held sources retain history.
+  - [x] FIX: cargo test -p sc-core --test piece_contract material_replacement:3 passed rc=0; shared reason predicate, only material changes; other fields/labels/ids exact.
+  - [x] ADDRESSED: cargo test -p sc-core --test piece_contract material_replacement:3 passed rc=0; split/loss evidence, no-op and exact reason retained; original Piece/ledger unchanged.
+  - [x] NO REGRESSION: cargo clippy -p sc-core --test piece_contract -- -D warnings and cargo fmt --package sc-core --check rc=0; no bus/registry/physical execution claim.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part569.md:4 exact spans rc=0; retention/book/publication/size/fmt0, decision/live sync; actual candidate remains .b.
 - ID: `G1-SLICE.6.5.2.c`
   Status: `pending`
   Goal: exact actual semantic changes; preserve canonical identity/order/logical source distinctions.

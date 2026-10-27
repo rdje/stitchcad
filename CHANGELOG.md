@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0419 — own the actual bus and execute authorized Piece-list reads
+## STITCHCAD-G1-0420 — preserve held Piece references in detached Material replacements
 
-- Private actual garment/installed authority source; fresh authorization and exact Design/revision.
-- Borrow original complete Piece inventory/order/Material intent; preserve repair/deferred inspection.
-- Other handlers explicitly unavailable. Native5/privacy2/selected lint/fmt/book/publication pass0.
-- Whole book subtree/0418 proof568 retains4 exact spans; candidates/mutations/full product proof pending.
+- Immutable with_material_assignment changes only Material intent; original fields/labels/ids remain.
+- Preserve split/deletion evidence; no rebirth, normalization, source certification or bus publication.
+- Native3/selected strict Clippy/fmt pass0; whole0419 proof569 retains4 exact Git spans.
+- Actual AssignMaterial candidate/handler/auth/current registry checks remain owned by .6.5.2.b/.3.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part569](docs/history/stitchcad-devnotes-part569.md) | whole0419 bus/read/lesson/ledger/prior retirement | 40 lines, 3387 bytes, sha256:59db8e44… |
 | [part568](docs/history/stitchcad-devnotes-part568.md) | whole book subtree/0418 lesson/ledger/D271–D280 | 60 lines, 4759 bytes, sha256:9ab6cbbd… |
 | [part567](docs/history/stitchcad-devnotes-part567.md) | whole0417 installation/lesson/ledger/D271–D278 | 54 lines, 4970 bytes, sha256:754fd688… |
 | [part566](docs/history/stitchcad-devnotes-part566.md) | whole0416 reader/lesson/ledger/retirement/prior live row | 49 lines, 4879 bytes, sha256:746371c2… |

@@ -332,6 +332,28 @@ impl Piece {
         Ok(Self { definition })
     }
 
+    /// Build a detached immutable replacement, changing only the authored Material assignment.
+    ///
+    /// Every other field and held edge identity stays exact, including references born before later
+    /// topology edits. This is not another birth against a current ledger: it neither retargets nor
+    /// repairs references. The original Piece is unchanged, and no active command-bus state is edited.
+    /// Assigned target existence/currentness, whole Design validity, authority and publication remain
+    /// command-layer checks. Geometric validity remains deferred, as for the original Piece.
+    /// # Errors
+    /// Returns UnexplainedMaterial for a blank unresolved reason, using the constructor's same local
+    /// predicate. Nonblank reason text and assigned identities are retained without normalization.
+    pub fn with_material_assignment(
+        &self,
+        material: MaterialAssignment,
+    ) -> Result<Self, PieceError> {
+        if !material.has_required_reason() {
+            return Err(PieceError::UnexplainedMaterial);
+        }
+        let mut definition = self.definition.clone();
+        definition.material = material;
+        Ok(Self { definition })
+    }
+
     /// Authored content, available by shared reference only.
     #[must_use]
     pub const fn definition(&self) -> &PieceDefinition {

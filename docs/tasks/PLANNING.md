@@ -1180,9 +1180,7 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
 ## D271–D280 — retained causes and verified corrections
-[Whole retirement/proofs](../history/stitchcad-devnotes-part568.md); input, source, newline and storage fixes retained.
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part568.md:4 exact
-  Git spans rc=0; complete maintained-book subtree/0418 lesson/ledger/prior corrections preserved.
-- [x] ADDRESSED: same rc=0; all completed node ids/pointers retained, no historical evidence lost.
-- [x] NO REGRESSION: retention/book/publication/native bus5/privacy2/strict selected lint/fmt rc=0;
-  product integration/runtime/physical/release proof remains owned.
+[Whole retirement/proofs](../history/stitchcad-devnotes-part569.md); prior exact captures remain linked.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part569.md:4 exact Git spans rc=0; whole0419 proof/retirement retained.
+- [x] ADDRESSED: same rc=0; completed bus node and original native5/privacy2/source boundaries remain linked.
+- [x] NO REGRESSION: retention/native replacement3/strict selected Clippy/fmt rc=0; product integration/release remains owned.

@@ -188,3 +188,12 @@ actual id, original family/index and exact nested cause/raw evidence. Results ar
 partial view/reference rewrite/endpoint choice is introduced. D273 repairs SewingError's empty
 standard cause chain for InvalidCutPlan; leaf errors remain terminal. Declaration roles, global
 Design ownership and physical/release proof remain separate .e/.5/later-gate obligations.
+
+answers: "how can a material replacement retain historical Piece references without another birth?"
+
+0420 adds detached Piece::with_material_assignment:change only Material intent, retain all other
+fields/held references and the original Piece. Rebirth against a later ledger would reject a retired
+split source; current point/range repair evidence must survive instead. The existing reason predicate
+retains exact nonblank text/ids. Native3/selected strict Clippy/fmt pass0; whole0419 proof569 retains4
+exact spans. Registry/current-source/auth/publication checks remain command-layer obligations.
+The full API, example and physical boundaries live in docs/book/src/spec/ontology-implementation.md.

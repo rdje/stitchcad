@@ -21,7 +21,7 @@ labels imply no hand or partner. A member cannot name itself.
 
 A cut-on-fold Piece declares exactly one outer-boundary fold edge; other Pieces declare none.
 Cutting side and layer index are explicit. MaterialAssignment is an id or nonblank Unresolved(reason);
-material identity validation awaits the Design material collection. Labels require nonblank name,
+assigned target validation belongs to the Design Material collection. Labels require nonblank name,
 size, fabric and colorway. Quantity, L/R and fold indicators derive from the cut plan:
 
 - One mirrored-pair definition, quantity2: cut two, pair L/R.
@@ -35,6 +35,28 @@ Shared definition() access and editing a clone cannot mutate a validated Piece. 
 boundary, holes and construction lines; endpoint_references() inventories traversal endpoints for
 later atomic bus registration. endpoint_resolutions() exposes current point evidence without
 rewriting held references. Endpoint success alone cannot certify an entire edge.
+
+**Detached Material replacement.** `Piece::with_material_assignment(assignment)` creates an immutable
+replacement while leaving the original Piece unchanged. It changes only the Material assignment;
+identity, boundary/hole/construction references, quantity, pairing, fold/cutting state, layer index
+and every authored label field remain exact. No label or physical property is inferred from a new
+assignment. Nonblank unresolved reason text is preserved, including surrounding whitespace; blank
+text returns the same PieceError::UnexplainedMaterial as initial construction.
+
+```rust
+let candidate = piece.with_material_assignment(MaterialAssignment::Assigned(material_id))?;
+assert_eq!(candidate.id(), piece.id());
+```
+
+This replacement preserves a previously born Piece's reference history. After a split, its original
+edge may be retired while still resolving through the journal; rebuilding it with Piece::new against
+the later ledger would incorrectly ask that historical edge to be live at a new birth. Material
+replacement retains the original references and the same current point/range evidence, including
+visible later losses. It repairs or retargets nothing and still reports geometry deferred to G2.
+It supplies no registry/source/readiness certificate: the actual Design Material collection checks
+assigned targets, and the command layer still owns authorization, current validation and atomic
+publication. Constructing this detached value cannot replace private bus state; AssignMaterial
+execution and private candidate preparation remain pending.
 
 **Whole intervals.** `EdgeRange::new(edge, from, to)` requires exact ascending bounds; whole(edge)
 covers [0,1]. A zero-length anchor is a point. `IdentityLedger::resolve_range` partitions the entire

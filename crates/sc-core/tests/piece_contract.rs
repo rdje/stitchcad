@@ -70,6 +70,95 @@ fn every_required_field_is_retained_and_geometry_is_visibly_deferred() {
 }
 
 #[test]
+fn material_replacement_preserves_born_references_after_a_split_without_rebirth() {
+    let (definition, mut ledger, mut ids) = fixture();
+    let piece = Piece::new(definition.clone(), &ledger).unwrap();
+    let edge = definition.boundary.first().unwrap().edge;
+    ledger
+        .split(
+            &mut ids,
+            edge,
+            Param::new(Rational::new(1, 2).unwrap()).unwrap(),
+        )
+        .unwrap();
+    let mut expected = definition.clone();
+    expected.material = MaterialAssignment::Assigned(EntityId::from_bits(700000));
+    assert_eq!(
+        Piece::new(expected.clone(), &ledger),
+        Err(PieceError::MissingEdge { edge })
+    );
+    let held = piece.range_resolutions(&ledger).collect::<Vec<_>>();
+    let before = ledger.clone();
+    let candidate = piece
+        .with_material_assignment(expected.material.clone())
+        .unwrap();
+    assert_eq!(candidate.definition(), &expected);
+    assert_eq!(piece.definition(), &definition);
+    assert_eq!(
+        candidate.range_resolutions(&ledger).collect::<Vec<_>>(),
+        held
+    );
+    assert_eq!(ledger, before);
+    assert_eq!(
+        candidate.geometric_validation(),
+        GeometricValidation::DeferredToG2
+    );
+}
+
+#[test]
+fn material_replacement_preserves_explicit_reason_text_and_no_op_identity() {
+    let (definition, ledger, _) = fixture();
+    let piece = Piece::new(definition.clone(), &ledger).unwrap();
+    assert_eq!(
+        piece
+            .with_material_assignment(definition.material.clone())
+            .unwrap(),
+        piece
+    );
+    let material = MaterialAssignment::Unresolved("  explicit factory choice pending  ".into());
+    let replacement = piece.with_material_assignment(material.clone()).unwrap();
+    let mut expected = definition.clone();
+    expected.material = material;
+    assert_eq!(replacement.definition(), &expected);
+    assert_eq!(piece.definition(), &definition);
+    for reason in ["", " \t\n "] {
+        assert_eq!(
+            piece.with_material_assignment(MaterialAssignment::Unresolved(reason.into())),
+            Err(PieceError::UnexplainedMaterial)
+        );
+        assert_eq!(piece.definition(), &definition);
+    }
+}
+
+#[test]
+fn material_replacement_does_not_hide_or_repair_later_reference_loss() {
+    let (definition, mut ledger, mut ids) = fixture();
+    let piece = Piece::new(definition.clone(), &ledger).unwrap();
+    let edge = definition.boundary.first().unwrap().edge;
+    for (held, parameter) in piece.endpoint_references() {
+        ledger.register(piece.id(), held, parameter).unwrap();
+    }
+    ledger.delete(&mut ids, edge).unwrap();
+    let before = ledger.clone();
+    let ranges = piece.range_resolutions(&ledger).collect::<Vec<_>>();
+    let endpoints = piece.endpoint_resolutions(&ledger).collect::<Vec<_>>();
+    let candidate = piece
+        .with_material_assignment(MaterialAssignment::Assigned(EntityId::from_bits(700001)))
+        .unwrap();
+    assert_eq!(
+        candidate.range_resolutions(&ledger).collect::<Vec<_>>(),
+        ranges
+    );
+    assert_eq!(
+        candidate.endpoint_resolutions(&ledger).collect::<Vec<_>>(),
+        endpoints
+    );
+    assert_eq!(ledger, before);
+    assert!(!ledger.open_repairs().is_empty());
+    assert_eq!(piece.definition(), &definition);
+}
+
+#[test]
 fn empty_boundary_and_each_empty_hole_name_the_exact_loop() {
     let (mut definition, ledger, _) = fixture();
     let mut empty_boundary = definition.clone();
