@@ -161,6 +161,11 @@ controls8 pass0. Earlier1167-record tracemalloc diagnostic found33324623 current
 cycles; traced Python allocations and whole-process RSS are different observations. No universal
 population/latency/other-platform or hardware power-loss guarantee is inferred. Scoped component gate0396 passes; full integration remains separate.
 
+answers: "does an aggregate working-Markdown count of64 require capture?"
+D284 correction0429: no. Native generation inventory sums group counters for the CLI readout;
+each group is bounded64 and the aggregate192. Source db57efb has21 sealed catalogs/43 active raw
+records, totaling64; independent rg census also finds43 raw files. No actual pressure required packing.
+
 ## Scoped feature closure0396
 
 The registered archive entry passes original legacy28/window1013, budget25/runtime4, reader46,

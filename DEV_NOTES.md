@@ -3,6 +3,9 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+D284 corrected0429: v3 aggregate64 is21 sealed catalogs+43 active records; bounds are64/group and192/aggregate.
+No packing was performed or needed. Native decode/independent rg agree; group staging is the frontier.
+
 ## _(2026-10-27 UTC)_ — exact typed mutation-group metadata
 
 0428 .6.5.4.2.1 owns a nonempty ordered mutation group, requiring explicit group membership and

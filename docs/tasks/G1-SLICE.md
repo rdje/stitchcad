@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0428
+## Current leaf acceptance —0429
 
-- [x] ROOT CAUSE: cargo test -p sc-core --test command_group_contract:4 passed rc=0;
-  atomic group data needs exact nonempty ownership and common claims, distinct from later authority.
-- [x] ADDRESSED: cargo test -p sc-core --test command_group_contract:4 passed rc=0; membership,
-  Design/complete actor/beyond128 revision and first original error index preserve submitted data.
-- [x] NO REGRESSION: selected strict Clippy finished rc=0; cargo test -p sc-core --doc command::group:
-  1 passed rc=0; selected fmt --check rc=0. No bus execution changes; full bus .6.9 remains deferred.
+- [x] ROOT CAUSE: native generation decode/independent rg census:21 sealed catalogs+43 active raw,
+  total64, rc=0; history_generations.inventory sums counters, bound64 per group/192 aggregate.
+- [x] ADDRESSED: git diff --quiet HEAD -- docs/history .doctrine/history_archive rc=0; no data packing
+  occurred. Corrected false resume/frontier dependency and documented the actual counter scope.
+- [x] NO REGRESSION: bash scripts/history_archive.sh verify-retention:1034 logical records OK rc=0;
+  all budgets/identities remain enforced. Documentation-only correction; native book proof follows.
 
 ## Goal
 
@@ -775,10 +775,25 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal: sequential real private candidates with one independent staged reserve cursor; all-or-error
   group report preserving actual failing index/command and no publication/partial accepted result.
 - ID: `G1-SLICE.6.5.4.retention1`
-  Status: `pending`
-  Goal: before the next history retirement, normally pack the64 working records using the published
-  retention workflow; preserve all logical bytes/identities and maintained links, fixed caps unchanged.
-  This is a direct group-staging documentation dependency; do not create record581 before making room.
+  Status: `done`
+  Goal:0429 D284 scope diagnosis/correction; original planned packing was unnecessary. Restore
+  group staging .4.2.2, with original archive bytes and fixed limits unchanged.
+  - [x] REPRODUCE / ISSUE: bash scripts/history_archive.sh verify-retention prints64 working Markdown
+    rc=0; incorrect0427/0428 resume instructions treated that aggregate as the active group's64 bound.
+  - [x] ROOT CAUSE (WHY + WHERE): read-only history_generations.describe/decode_group: generation1
+    working21/decoded3984766B and generation2 working43/decoded303365B, rc=0; inventory sums to64.
+    Each generation is bounded64; the aggregate192. Public source/decision already enforce this.
+  - [x] FIX: git diff --quiet HEAD -- docs/history .doctrine/history_archive rc=0; cancel false
+    dependency, correct pointer/reader guide/decision/defect ledger. No authoring/installer invoked.
+  - [x] ADDRESSED: independent rg --files docs/history -g 'stitchcad-*-part*.md' census43 equals actual
+    active raw set, rc=0. Original logical1034/global64 remains correct; pressure inference was wrong.
+  - [x] NO REGRESSION: bash scripts/history_archive.sh verify-retention:1034 records/4288131 decoded
+    bytes OK rc=0; git diff --check rc=0; per-generation/index caps and every archive byte unchanged.
+  - [x] LOCKSTEP: MEMORY/TASK_TREE/book annex/history decision/PLANNING D284/DEV_NOTES/CHANGELOG
+    aligned; native publication80 chapters/159 scoped API rows/1463 source links/2442 rendered links
+    rc=0; maintained-reference81 files/17554 lines/1225404 bytes rc=0. No retirement record or data change.
+  D284 P2 is owned/fixed here. Global working64 comprises21 sealed catalogs and43 active raw records;
+  compare actual group pressure before future capture. Do not change existing finite budgets.
 - ID: `G1-SLICE.6.5.5`
   Status: `pending`
   Goal: scoped actual transaction/failure-context/rollback acceptance; full bus review .6.9 later.

@@ -3,6 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0429 — correct archive working-count scope
+
+- D284: aggregate64 combines21 sealed catalogs/43 active records; per-group64 and aggregate192 remain fixed.
+- Native decode/independent raw-file census agree; no packing or archive data change was needed.
+- Correct resume/frontier and reader guidance; sequential private group staging is next.
+
 ## STITCHCAD-G1-0428 — own exact typed mutation-group metadata
 
 - Nonempty ordered original mutations require explicit common group/Design/actor/revision claims.

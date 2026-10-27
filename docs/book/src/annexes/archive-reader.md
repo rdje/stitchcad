@@ -65,6 +65,11 @@ Eight generations maximum, each bounded:
 The index is at most 8,192 bytes. Derived totals are 32,000,000 decoded bytes/480,000 lines and 32,008,192
 resident bytes. These bound storage/decode, not process memory.
 
+The verify-retention working-Markdown readout is the aggregate across generations. Each generation
+is independently limited to64; the version3 aggregate limit is192. Sealed catalogs remain charged to
+their own generation, while raw records belong to the active generation. A total of64 therefore does
+not itself require packing. Check actual per-generation pressure before scheduling capture or rollover.
+
 All but the last generation are sealed. New raw drafts belong only to the active group and remain
 unsealed until capture; all committed raw records still retain exact bytes. Orphans, shared ownership,
 duplicate identities, links, malformed indices and reordered/removed seals refuse. Earlier v1/v2

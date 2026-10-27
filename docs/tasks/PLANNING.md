@@ -8,6 +8,12 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
+## D284 — aggregate archive count misread as active pressure
+P2, fixed0429 by G1-SLICE.6.5.4.retention1: total64 is21 sealed+43 active; bounds64/group and192/aggregate.
+- [x] ROOT CAUSE: native generation decode + independent rg census show21/43 and raw43 rc=0; v3 sums counters.
+- [x] ADDRESSED: restore actual group staging frontier; no packing/data rewrite or cap change; git archive diff empty rc=0.
+- [x] NO REGRESSION: public verify-retention1034 records validates all generations; named source/count checks rc=0.
+
 ## D283 — publication count labels
 P2, fixed0426 by G1-SLICE.6.5.3.1.2: manual tuple labels confused scoped API rows/source links with tables/rows.
 - [x] ROOT CAUSE: native411f74d formatter oracle agrees with named check summary rc=0; original labels were correct.
