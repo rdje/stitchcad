@@ -140,37 +140,20 @@ runtime annex; physical geometry and full execution/integration retain their tas
 
 ### Reserved-name diagnostic sources
 
-formula_rebinding has two source-bearing cases, defined in [contract5.2.1](../spec/formula-language.md#521-binding-refusal-sources).
-The reserved_name case carries name, reserved_source and attempted_source. Reserved metadata
-contains role, kind, origin and required_context. It carries no numerical value, availability or
-recipe ordinal. Physical tolerance has origin tolerance and provider profile; those are distinct.
-
-The reference identifies an initial attempt by its real ordered declaration_index, kind and
-origin. This is a locator into caller-supplied metadata, not a canonical record identity claim.
-An attempted recipe let retains its annotation, whole/name spans and an actual ordinal when
-whole preflight supplies it. Detached checking retains local spans and omits the ordinal.
-The recipe_name case retains prior_source and attempted_source; whole preflight additionally
-supplies prior_statement_index and statement_index from the actual accepted earlier binding
-and current statement. An intervening assertion counts toward order but never creates a binding.
-
-For example, an initial measurement declaration named eps_phys refuses with a reserved source
-of kind length, origin tolerance and required_context profile, plus the measurement attempt's
-metadata position. No zero statement index fills an absent location. For a second let width
-after an assertion, the actual indices are1 and3, with global spans for both bindings.
-Detached input metadata claiming recipe origin cannot prove a prior source location; the reference
-reports its known metadata only. Canonical product source locators and namespace validation retain
-their separate .5b.2 scope. Debug/logging policy and localized rendering remain product obligations.
+[Contract5.2.1](../spec/formula-language.md#521-binding-refusal-sources) defines reserved_name and
+recipe_name payloads. Reserved sources retain role/kind/origin/context, without values or invented
+ordinals. Actual prior/current recipe bindings retain their known spans and ordinals; detached
+metadata retains only known locations. Product source locators and ordered scopes keep their own
+validation. Localized rendering remains a product responsibility.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py --mutations
 ```
 
-The producer checks3624 actual argument cases: eight reserved metadata rows, nine-origin/eight-kind
-declarations at three positions through direct and whole entry points; six annotation kinds through
-detached/runtime-static and whole entries; real prior indices and assertion gaps. State/value and
-execution reads are trapped. Nineteen compiled actual field/token/location faults fail body
-assertions; source on disk stays unchanged. D131's delegated decision repairs its argument contract
-without changing grammar or the stable refusal token; independent approval remains unclaimed.
+Historical3624 payload cases, D131 rationale and nineteen compiled fault controls are preserved whole
+in `docs/history/stitchcad-devnotes-part523.md`; retrieve with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part523.md`.
+Independent approval remains unclaimed; static diagnostics supply no physical/runtime result.
 
 ## Ambiguous-name diagnostic sources
 

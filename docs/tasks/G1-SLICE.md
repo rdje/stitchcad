@@ -897,29 +897,34 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0370 current graph source revalidation; [whole scope/proof](../history/stitchcad-devnotes-part522.md).
 - ID: `G1-SLICE.6.4.4.2`
   Status: `done`
-  Goal: actual sewing formula length declarations; keep logical Profile references explicitly deferred to G4.
-  Own metadata-only borrowed per-span amount views over actual Design parameters/canonical inputs:
-  explicit signed length retained; Formula requires actual parameter metadata and Length kind;
-  numeric ids alone cannot bind. Profile stays exact logical ref/DeferredToG4, never a canonical alias.
-  Whole current root validation precedes query; graph/current structural joins remain .3.
-  Focused actual higher-host native/privacy/lint/book; whole0370/static-name proof continuity522.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract sewing_:3/0 rc=0;
-    actual signed/dedicated/general-Length sources, numeric-only ids, Count and coincident Profile controls.
-  - [x] ROOT CAUSE (WHY + WHERE): native3/0 rc=0 via local_environment.py; symbolic
-    graph ids alone carry no parameter role/kind or physical Profile metadata.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings:rc=0; readonly per-span views
-    validate whole root, then exact actual parameter metadata/current Length kind, with no evaluation.
-  - [x] ADDRESSED: cargo test -p sc-core --doc design::sewing:: gives1/0 rc=0; views borrow
-    actual graph/canonical objects and preserve original explicit values and logical Profile deferral.
-  - [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:rc=0;
-    fmt/unchanged ontology-source diff pass0; glossary132 failures rc=1, exact D250 prior rows compare rc=0.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/133/1455/2400 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part522.md:4 exact spans rc=0.
-    promotion: existing sewing decision answer extended. Completed STITCHCAD-G1-0371.
-    .4.3 private owned sewing/root scope next; broad integration/CI remains unverified.
+  Goal:0371 actual amount metadata/G4 role boundary; [whole scope/proof](../history/stitchcad-devnotes-part523.md).
 - ID: `G1-SLICE.6.4.4.3`
   Status: `in_progress`
   Goal: private sewing/root/landmark ownership, complete ids and current source/readiness scope.
+  Children .a private exact ownership/global ids, retaining inspectable held repairs; .b current
+  every-landmark/graph/amount source query. Neither component certifies geometry or release.
+- ID: `G1-SLICE.6.4.4.3.a`
+  Status: `done`
+  Goal: privately own exact DesignInputs, SewingGraph and semantic landmark inventory; complete
+  ownership census before root current validation. Preserve held sewing refs for inspection rather
+  than silently repair/rebuild; current source/readiness query follows .b. Own continuity523.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract sewing_owner_:
+    3/0 rc=0; standalone graph/span/mark ids can alias actual root/parameter/retired creator ownership.
+  - [x] ROOT CAUSE (WHY + WHERE): native3/0 rc=0 via local_environment.py; narrower
+    constructors do not own the complete input/sewing census. All original creator90000 outputs retired.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings:rc=0; private exact root/graph/
+    landmark owner checks all actual ownership positions before original current-root validation.
+  - [x] ADDRESSED: cargo test -p sc-core --doc design::sewing_state:: gives2/0 rc=0;
+    private/shared storage prevents edits. Exact held graph survives copy replacement for inspection.
+  - [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:rc=0;
+    fmt/unchanged prior implementation diff pass0; glossary132 failures rc=1, exact D250 rows compare rc=0.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/137/1455/2401 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part523.md:4 exact spans rc=0.
+    promotion: existing sewing decision answer extended. Completed STITCHCAD-G1-0372.
+    .3.b current all-landmark/graph/amount query next; ownership grants no full readiness.
+- ID: `G1-SLICE.6.4.4.3.b`
+  Status: `in_progress`
+  Goal: every current semantic landmark, actual graph scope and amount declarations over owned root.
 - ID: `G1-SLICE.6.4.4.4`
   Status: `pending`
   Goal: focused combined sewing/current amount and private ownership acceptance before garment families.

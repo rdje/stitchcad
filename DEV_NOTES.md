@@ -3,18 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual sewing amount declaration metadata
+## _(2026-10-27 UTC)_ — private exact sewing/input ownership
 
-0371 sewing_amount_declarations validates the complete current root before borrowing original spans,
-explicit signed Lengths, actual Design parameter/current Length-kind metadata and the canonical owner.
-Dedicated and general scalar Length families stay distinct; no uncertain state/value is evaluated.
-Numeric canonical ids cannot supply parameter metadata. Profile refs remain exact logical roles with
-DeferredToG4, even when their numbers match existing canonical lengths. Current graph/global sewing
-joins remain separate. Late metadata failures retain actual span/parameter/kind and return no prefix.
-Focused higher-host native3/privacy1/core+test strict lint/fmt/book/publication79/133 pass0;
-D250132 exact prior rows, ontology implementation unchanged.522 retains whole0370/static-name proof
-in4 exact Git spans0. Promotion: existing sewing decision answers numeric-role boundaries.
-Private complete sewing/root ownership next; full execution/physical/integration/CI stays unverified.
+0372 DesignSewing owns exact DesignInputs, SewingGraph and complete semantic landmark inventory.
+Global ids retain original root positions then graph/landmarks/spans; uses never become new owners.
+Actual graph/Design, span/parameter and mark/fully retired creator collisions retain both positions.
+The fixture retires every original90000 output so a live-creator-only census cannot pass that control.
+Constructor checks owned ids/current root while preserving held graph refs needed for inspection;
+a copy replacement keeps the original seam and typed current MissingCopy rather than reassigning it.
+Current all-landmark/graph/amount validation follows .3.b; no readiness certificate follows ownership.
+Native3/privacy2/core+test strict lint/fmt/book/publication79/137 pass0; D250132 rows unchanged.
+523 retains whole0371/historical reserved-name proof in4 exact Git spans0. Promotion: existing sewing
+contract answers inspectable drafts. Full Design/execution/physical/integration/CI remains unverified.
+
+[Complete amount-declaration lesson](docs/history/stitchcad-devnotes-part523.md) retains
+its original scope, checks and promotion decision.
 
 [Complete current-sewing graph lesson](docs/history/stitchcad-devnotes-part522.md) retains
 its original scope, checks and promotion decision.

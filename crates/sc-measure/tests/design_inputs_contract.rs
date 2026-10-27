@@ -786,3 +786,226 @@ fn sewing_formula_amount_requires_actual_length_kind_and_keeps_late_original_spa
         }
     );
 }
+
+fn sewing_owner_definition() -> sc_core::design::DesignSewingDefinition<DesignSources> {
+    use sc_core::{
+        design::DesignSewingDefinition,
+        ontology::{EaseAmount, EdgeAnchor, Param, Rational, SewingLandmark, TurnPoint},
+    };
+    let (mut inputs, graph) = with_sewing_graph(fixture(), vec![EaseAmount::Formula(id(5001))]);
+    let structure = inputs.structure();
+    let piece = structure.pieces().pieces().first().expect("actual Piece");
+    let edge = piece.edges().next().expect("actual held edge").edge;
+    let mark = SewingLandmark::Turn(
+        TurnPoint::new(
+            id(98000),
+            EdgeAnchor {
+                edge,
+                param: Param::new(Rational::new(1, 2).expect("half")).expect("valid parameter"),
+            },
+            piece,
+            structure.topology(),
+        )
+        .expect("actual born semantic turn"),
+    );
+    let mut root = inputs.definition().clone();
+    let mut updated = root.structure.definition().clone();
+    let mut edits = sc_core::ontology::DeterministicIdGenerator::from_start(110000);
+    for held in updated
+        .pieces
+        .pieces()
+        .iter()
+        .flat_map(|piece| piece.edges())
+    {
+        updated
+            .topology
+            .split(
+                &mut edits,
+                held.edge,
+                Param::new(Rational::new(1, 3).expect("third")).expect("valid parameter"),
+            )
+            .expect("retire every original output while keeping held graph/landmark references");
+    }
+    assert!(updated
+        .topology
+        .live_edges()
+        .all(|edge| edge.creator() != id(90000)));
+    root.structure = DesignStructure::new(updated).expect("current historical structural snapshot");
+    inputs = DesignInputs::new(root).expect("same actual metadata over updated history");
+    DesignSewingDefinition {
+        inputs,
+        graph,
+        landmarks: vec![mark],
+    }
+}
+
+#[test]
+fn sewing_owner_preserves_exact_root_graph_landmarks_and_single_canonical_inventory() {
+    use sc_core::design::DesignSewing;
+    let definition = sewing_owner_definition();
+    let original = definition.clone();
+    let state = DesignSewing::new(definition).expect("complete actual ownership");
+    assert_eq!(state.definition(), &original);
+    assert!(core::ptr::eq(state.inputs(), &state.definition().inputs));
+    assert!(core::ptr::eq(state.graph(), &state.definition().graph));
+    assert!(core::ptr::eq(
+        state.inputs().inputs(),
+        state.inputs().structure().inputs()
+    ));
+    assert_eq!(state.landmarks(), original.landmarks);
+    let declarations = state
+        .inputs()
+        .sewing_amount_declarations(state.graph())
+        .expect("actual amount metadata");
+    assert!(declarations
+        .iter()
+        .all(|view| core::ptr::eq(view.canonical_inputs(), state.inputs().inputs())));
+    let structure = state.inputs().structure();
+    assert_eq!(
+        state.graph().validate_current(
+            structure.cut_plan(),
+            structure.pieces().pieces(),
+            state.landmarks(),
+            structure.topology()
+        ),
+        Ok(())
+    );
+}
+
+#[test]
+fn sewing_owner_refuses_graph_span_and_landmark_aliases_with_actual_root_positions() {
+    use sc_core::{
+        design::{DesignSewing, DesignSewingError, DesignSewingPosition},
+        ontology::{SewingGraph, SewingGraphDefinition, SewingLandmark, TurnPoint},
+    };
+    for (identity, first, duplicate) in [
+        (
+            5000,
+            DesignInputsPosition::Structure(DesignStructurePosition::Design),
+            DesignSewingPosition::Graph,
+        ),
+        (
+            5001,
+            DesignInputsPosition::Parameter { index: 0 },
+            DesignSewingPosition::Span { index: 0 },
+        ),
+        (
+            90000,
+            DesignInputsPosition::Structure(DesignStructurePosition::Operation { index: 0 }),
+            DesignSewingPosition::Landmark { index: 0 },
+        ),
+    ] {
+        let mut definition = sewing_owner_definition();
+        let structure = definition.inputs.structure();
+        if identity == 90000 {
+            let original = definition.landmarks.first().expect("actual turn");
+            let resolved = original
+                .resolve(structure.topology())
+                .resolved()
+                .expect("current unique landmark position");
+            let anchor = sc_core::ontology::EdgeAnchor {
+                edge: resolved.edge(),
+                param: resolved.param(),
+            };
+            definition.landmarks = vec![SewingLandmark::Turn(
+                TurnPoint::new(
+                    id(identity),
+                    anchor,
+                    structure
+                        .pieces()
+                        .piece(original.piece())
+                        .expect("actual Piece"),
+                    structure.topology(),
+                )
+                .expect("independently valid landmark"),
+            )];
+        } else {
+            let mut spans = definition
+                .graph
+                .spans()
+                .iter()
+                .map(|span| span.definition().clone())
+                .collect::<Vec<_>>();
+            if identity == 5001 {
+                spans.first_mut().expect("actual span").id = id(identity);
+            }
+            definition.graph = SewingGraph::new(
+                SewingGraphDefinition {
+                    id: if identity == 5000 {
+                        id(identity)
+                    } else {
+                        definition.graph.id()
+                    },
+                    spans,
+                },
+                structure.cut_plan(),
+                structure.pieces().pieces(),
+                &definition.landmarks,
+                structure.topology(),
+            )
+            .expect("independently valid sewing graph");
+        }
+        assert_eq!(
+            DesignSewing::new(definition).expect_err("cross-component actual identity collision"),
+            DesignSewingError::DuplicateIdentity {
+                identity: id(identity),
+                first: DesignSewingPosition::Inputs(first),
+                duplicate
+            }
+        );
+    }
+}
+
+#[test]
+fn sewing_owner_preserves_held_graph_for_inspection_after_an_explicit_current_copy_replacement() {
+    use sc_core::design::DesignSewing;
+    let mut definition = sewing_owner_definition();
+    let original_graph = definition.graph.clone();
+    let mut root = definition.inputs.definition().clone();
+    let mut structure = root.structure.definition().clone();
+    structure.cut_plan = CutPlan::new(
+        structure
+            .cut_plan
+            .copies()
+            .iter()
+            .map(|copy| {
+                let mut copy = *copy.definition();
+                if copy.id == id(96000) {
+                    copy.id = id(96010);
+                }
+                copy
+            })
+            .collect(),
+        structure.pieces.pieces(),
+    )
+    .expect("complete explicit replacement copies");
+    root.structure = DesignStructure::new(structure).expect("actual current structure");
+    definition.inputs = DesignInputs::new(root).expect("actual current metadata/root");
+    let state = DesignSewing::new(definition).expect("held sewing draft remains inspectable");
+    assert_eq!(state.graph(), &original_graph);
+    let structure = state.inputs().structure();
+    assert_eq!(
+        state
+            .graph()
+            .missing_copies(structure.cut_plan())
+            .collect::<Vec<_>>(),
+        [id(96000)]
+    );
+    assert_eq!(
+        state.graph().validate_current(
+            structure.cut_plan(),
+            structure.pieces().pieces(),
+            state.landmarks(),
+            structure.topology()
+        ),
+        Err(sc_core::ontology::SewingError::MissingCopy {
+            span: id(97000),
+            side: sc_core::ontology::SeamSideId::A,
+            copy: id(96000)
+        })
+    );
+    assert!(structure
+        .topology_readiness()
+        .expect("independent structural scope")
+        .is_ready());
+}

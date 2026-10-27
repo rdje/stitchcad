@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2b.2`, D35/D57, ontology §4.2, reference skirt §8.
 
-answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?" · "does graph construction authorize replacement sewing sources?" · "can numeric canonical ids supply sewing formula or profile metadata?"
+answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?" · "does graph construction authorize replacement sewing sources?" · "can numeric canonical ids supply sewing formula or profile metadata?" · "can an owned sewing draft preserve damaged held references?"
 
 ## Context
 
@@ -71,3 +71,10 @@ Length-kind canonical targets; dedicated and general scalar families stay distin
 amounts borrow original spans. Logical profile refs remain DeferredToG4 even when numeric canonical
 ids coincide. No numeric value, Profile schema/content role, graph-source join or geometry follows
 this metadata query; owned complete sewing composition remains separate.
+
+DesignSewing now privately owns exact input/graph/landmark objects. Complete owned identities include
+all original root positions, graph, landmarks and spans before current root validation. References
+remain uses. Ownership admission preserves held sewing references after edits for inspection and
+explicit repair, without rebuilding born-valid objects against later contexts. Current graph and
+complete sewing-source readiness stay separate from ownership; a copy replacement does not reassign
+an old seam. No numeric, Profile, geometric, execution or release proof follows construction.

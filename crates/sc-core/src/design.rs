@@ -38,6 +38,7 @@ mod host;
 mod inputs;
 mod parameters;
 mod sewing;
+mod sewing_state;
 mod topology;
 pub use host::{
     DesignFormulaHost, DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
@@ -52,6 +53,9 @@ pub use parameters::{
     DesignParameters,
 };
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
+pub use sewing_state::{
+    DesignSewing, DesignSewingDefinition, DesignSewingError, DesignSewingPosition,
+};
 pub use topology::{DesignPieceTopology, DesignTopologyReadiness};
 
 /// Explicit structural input, with no inferred identity, revision, copy or topology registration.

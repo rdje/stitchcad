@@ -406,3 +406,30 @@ failure returns no accepted prefix of amount views. Current root errors retain c
 Views cannot outlive the actual graph/root objects, and never rewrite spans or allocations. Use the
 separate current SewingGraph validator for structural sources; owned complete sewing joins follow
 this metadata component. Profile declaration grammar/type/state/physical resolution remains G4.
+
+## Private sewing/input ownership
+
+DesignSewing::new(DesignSewingDefinition { inputs, graph, landmarks }) owns the exact implemented
+DesignInputs root, original SewingGraph and complete semantic SewingLandmark inventory. Private
+storage and shared definition()/inputs()/graph()/landmarks() getters provide no mutation path.
+The root remains the only canonical owner; no borrowed context or replacement graph is stored.
+
+Before current root validation, the complete ownership census visits original input positions,
+graph identity, landmarks and spans in authored order. Graph5000 cannot alias the containing Design;
+span5001 cannot alias parameter5001; landmark90000 cannot alias a retired creating operation90000.
+DuplicateIdentity retains both actual DesignSewingPosition values. Referenced copy/parameter/anchor ids
+remain uses and never become extra owners. No label supplies identity or ownership.
+
+| API | Meaning |
+| --- | --- |
+| `DesignSewingDefinition` | Exact authored input root, graph and landmark objects |
+| `DesignSewing` | Private immutable owner of those implemented components |
+| `DesignSewingPosition` | Original input, graph, landmark or span ownership position |
+| `DesignSewingError` | Complete ownership or original current-root cause |
+
+Ownership admission preserves held sewing references for inspection and explicit repair. For example,
+replacing copy96000 with96010 leaves the original graph's96000 reference inspectable; the separate
+current graph validator returns MissingCopy. Structural Piece topology may still be ready in its own
+scope. Nothing reassigns the old seam or reconstructs born-valid graph/landmark objects against a
+later ledger. Complete current sewing/source queries follow this ownership component; construction
+alone supplies no sewing, numeric, Profile, geometry, execution or release readiness certificate.

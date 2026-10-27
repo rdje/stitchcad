@@ -132,3 +132,7 @@ held Design Piece topology evidence	spec/ontology-implementation.md	crates/sc-co
 actual sewing amount metadata	spec/design-inputs.md	crates/sc-core/src/design/sewing.rs	DesignSewingAmount	G1-SLICE.6.4.4.2	4.4
 actual sewing amount source	spec/design-inputs.md	crates/sc-core/src/design/sewing.rs	DesignSewingAmountSource	G1-SLICE.6.4.4.2	4.4
 actual sewing amount declaration refusal	spec/design-inputs.md	crates/sc-core/src/design/sewing.rs	DesignSewingDeclarationError	G1-SLICE.6.4.4.2	4.4
+owned sewing input definition	spec/design-inputs.md	crates/sc-core/src/design/sewing_state.rs	DesignSewingDefinition	G1-SLICE.6.4.4.3.a	4.4
+owned Design sewing input state	spec/design-inputs.md	crates/sc-core/src/design/sewing_state.rs	DesignSewing	G1-SLICE.6.4.4.3.a	4.4
+owned sewing identity position	spec/design-inputs.md	crates/sc-core/src/design/sewing_state.rs	DesignSewingPosition	G1-SLICE.6.4.4.3.a	4.4
+owned sewing input refusal	spec/design-inputs.md	crates/sc-core/src/design/sewing_state.rs	DesignSewingError	G1-SLICE.6.4.4.3.a	4.4
