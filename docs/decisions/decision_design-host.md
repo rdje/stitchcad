@@ -11,6 +11,8 @@ answers: "do construction intake views require actual formula metadata while pre
 
 answers: "do grain and allowance declarations preserve Angle versus Length kinds and logical inclusion policy?"
 
+answers: "how do Gather declaration views retain original signed span ease and current whole contexts?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -86,3 +88,13 @@ its axis without synthesizing an angle. Explicit zero/angle and Profile referenc
 fields; mandatory inclusion stays logical despite numeric aliases. Actual objects retain directed
 print/corner intent. Current sources, global ids, resolved domains/policies and physical/release proof
 remain separate. Original intake/closing behavior is retained through the shared lookup.
+
+## Joined actual Gather declarations — G1-SLICE.6.4.5.4.e.3
+
+The query validates complete current sewing/root/landmark/graph/amount scope, then all supplied
+construction source families even without Gathers. Each view borrows the original Gather, authored
+position, actual span ease/selected side, existing DesignSewingAmount adapter and logical closing
+field. One canonical owner remains; no distribution/value/state or negated intake is copied. Same-Piece
+copy retargeting and late/unused failures retain original typed causes without partial views. Shared
+lifetimes hold both owners; Debug exposes side only. Operation checks/global garment ids, resolved
+intake/conservation and physical/release proof remain later obligations.

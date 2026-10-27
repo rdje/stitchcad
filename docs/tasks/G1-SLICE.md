@@ -883,7 +883,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0401 complete current context/D273; [whole proof](../history/stitchcad-devnotes-part551.md).
 - ID: `G1-SLICE.6.4.5.4.e`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual typed declarations/current root; no role/id coercion.
   Children .1 intake/closing; .2 grain/allowance; .3 joined Gather.
 - ID: `G1-SLICE.6.4.5.4.e.1`
@@ -891,30 +891,25 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0402 actual intake/closing declarations; [whole proof](../history/stitchcad-devnotes-part552.md).
 - ID: `G1-SLICE.6.4.5.4.e.2`
   Status: `done`
-  Goal:0403 typed grain/allowance declarations; D274 concurrent size-check scratch repair owned here.
-  D274/D275 P2 fixed here: isolated checker scratch and actual-row stale-token probe, no cap changes.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract construction_:
-    9 passed rc=0; Angle/Length formulas reject each other's metadata at original later positions.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:grain angles and allowance widths need distinct
-    kinds; shared lookup preserves logical policy/original fields. D274 shared scratch rm -rf raced;
-    concurrent_contract.py --checker target/live-size-d274-baseline.sh reproduces first rc=2/driver1.
-    D275 native probes5pass/2fail rc=1:hardcodedv0.3 failed to mutate actualv0.4 revision field.
-  - [x] FIX: same native9 rc=0; whole-root-first grain alignment then allowance width/inclusion borrows,
-    exact object/field/position/canonical owner and expected/current kind refusals. Native overlap2/0
-    rc=0 after isolated scratch; actual at= mutation retains exact refusal, native probes6/0 rc=0.
-  - [x] ADDRESSED: same native9 rc=0; parallel axis without synthesized angle, exact45°/zero width,
-    dedicated Derived/general Unknown Length, Unknown Angle, absent metadata, Profile numeric aliases,
-    empty host drift/absent current Piece; original intake/closing retained.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::constructions:2 compile-fail rc=0;
-    cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings and affected fmt rc=0;
-    size self-test17/overlap2/native probes6 and shell/Python syntax rc=0.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part552.md:4 spans rc=0;
-    part553.md:4 exact Git spans rc=0; retention/book/publication/size rc=0; book facts retained.
-    Promotion: Design host decision; D274/D275 declined, settled scratch/revision rules unchanged.
-    Gather .e.3/component .f/global joins .5/full CI remain owned.
+  Goal:0403 typed grain/allowance/D274–D275; [whole proof](../history/stitchcad-devnotes-part554.md).
 - ID: `G1-SLICE.6.4.5.4.e.3`
-  Status: `pending`
-  Goal: original Gather signed span ease/closing; current graph/copy/sources.
+  Status: `done`
+  Goal:0404 original signed Gather span/side/amount/closing views over complete current contexts.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract construction_:
+    13 passed rc=0; later same-Piece copy retarget refuses after healthy earlier Gather, no prefix.
+  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:Gather intake belongs to the actual span;
+    reuse existing DesignSewingAmount after whole sewing and complete supplied construction preflights.
+  - [x] FIX: same native13 rc=0; actual Gather/position/side/DeclaredEase/amount adapter/canonical
+    owner and logical closing field borrowed, without copied allocation/value/state or numeric coercion.
+  - [x] ADDRESSED: same native13 rc=0; positive-A/negative-B/zero/formula/Profile exact pointers,
+    unchanged Derived state and unused landmark/amount/construction plus host drift before empty scope;
+    wrappers preserve concrete Sewing/Construction/Gather causes and no partial views.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::gathers:1 compile-fail rc=0;
+    cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings and affected fmt rc=0.
+    Fixture private side helper replaced with published a/b fields; no API visibility changed.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part554.md:4 spans rc=0;
+    retention/book/publication/size rc=0; original book facts retained. Promotion: Design host decision.
+    Component acceptance .f/global garment joins .5/full integration and release remain owned.
 - ID: `G1-SLICE.6.4.5.4.f`
   Status: `pending`
   Goal: focused complete current construction component acceptance before coupled garment .5.

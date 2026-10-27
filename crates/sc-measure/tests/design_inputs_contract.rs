@@ -2196,6 +2196,25 @@ fn construction_intake_grain_allowance_and_layer_offset_recheck_whole_root_befor
         references: definition.references,
     })
     .expect("actual valid root before controlled port drift");
+    let structure = state.structure();
+    let graph = sc_core::ontology::SewingGraph::new(
+        sc_core::ontology::SewingGraphDefinition {
+            id: id(990000),
+            spans: vec![],
+        },
+        structure.cut_plan(),
+        structure.pieces().pieces(),
+        &[],
+        structure.topology(),
+    )
+    .expect("actual empty current sewing context");
+    let sewing = sc_core::design::DesignSewing::new(sc_core::design::DesignSewingDefinition {
+        inputs: state,
+        graph,
+        landmarks: vec![],
+    })
+    .expect("actual current sewing/root owner");
+    let state = sewing.inputs();
     let layers = LayerInventory::new(vec![], vec![], vec![]).expect("explicit empty layers");
     assert!(state
         .layer_offset_declarations(&layers)
@@ -2218,7 +2237,20 @@ fn construction_intake_grain_allowance_and_layer_offset_recheck_whole_root_befor
         .grain_allowance_declarations(&constructions)
         .expect("stable grain/allowance root")
         .is_empty());
+    assert!(sewing
+        .gather_declarations(&constructions)
+        .expect("stable whole context")
+        .is_empty());
     state.sources().host().changed.set(true);
+    let gather_error = sewing
+        .gather_declarations(&constructions)
+        .expect_err("whole root before empty Gather");
+    assert!(
+        matches!(&gather_error, sc_core::design::DesignGatherDeclarationError::Sewing(issue)
+        if matches!(issue.as_ref(), sc_core::design::DesignSewingError::Inputs(inputs)
+            if matches!(inputs.as_ref(), DesignInputsError::Sources(source)
+                if matches!(source.as_ref(), DesignMetadataError::ChangedEntities))))
+    );
     let grain_error = state
         .grain_allowance_declarations(&constructions)
         .expect_err("whole root before empty grain/allowance");
@@ -2245,3 +2277,6 @@ mod construction_intake_declarations;
 
 #[path = "support/construction_grain_allowance_declarations.rs"]
 mod construction_grain_allowance_declarations;
+
+#[path = "support/construction_gather_declarations.rs"]
+mod construction_gather_declarations;

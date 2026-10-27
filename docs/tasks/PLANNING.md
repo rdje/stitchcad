@@ -1179,21 +1179,11 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 [Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
-## D271/D272/D273 — current causes and derived census
-[Whole Dart/census0397](../history/stitchcad-devnotes-part547.md); [whole D273/current0401](../history/stitchcad-devnotes-part551.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part552.md:4 spans
-  rc=0; complete0402 scopes retained before retirement.
-- [x] ADDRESSED: part552/553 receipt commands:4+4 exact Git spans rc=0; whole0402 and closed parents retained.
-- [x] NO REGRESSION: construction native9/lifetime2/strict affected lint/fmt/book/publication/size/
-  retention rc=0; D274 overlap2/self-test17/syntax rc=0; component .4.f, full integration later.
-
-## D274 — concurrent size-check scratch collision
-P2, fixed0403 by .6.4.5.4.e.2. Overlap erased shared measurements:179 false breaches/rc1 or missing
-file/rc2. Tracked native-wc barrier reproduces exact committed baseline49a6272:driver1/first2.
-Unique local mktemp directories/owned EXIT cleanup now pass both2/0; watched probe registered.
-Native self-test17/shell/Python syntax rc=0. No caps/coverage/refusal rules changed.
-
-## D275 — hardcoded stale-revision probe
-P2, fixed0403 by .6.4.5.4.e.2. Native probes5pass/2fail rc=1:REAL-3 substitutedv0.3 but actualv0.4
-left the copy unchanged. Mutating the actual at= field to an absent token now requires exact refusal;
-native probes6pass/0fail rc=0, independent of current version. No baseline/coverage rule changed.
+## D271–D275 — current causes, derived census and native size controls
+[Whole Dart/census0397](../history/stitchcad-devnotes-part547.md); [whole D273/current0401](../history/stitchcad-devnotes-part551.md);
+[whole D274/D275 red/green0403](../history/stitchcad-devnotes-part554.md).
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part554.md:4 spans
+  rc=0; complete0403 scopes retained before retirement.
+- [x] ADDRESSED: same rc=0; whole0403 task/lesson/ledger/D274–D275/retirement retained.
+- [x] NO REGRESSION: construction native13/lifetime1/strict affected lint/fmt/book/publication/size/
+  retention rc=0; complete component acceptance .4.f, full integration later.

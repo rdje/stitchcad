@@ -377,22 +377,18 @@ vocabulary repairs remain open under their existing owners; this review closes n
 
 ## Actual sewing amount declarations
 
-DesignInputs.sewing_amount_declarations(&graph) rechecks the whole current root, then returns one
-borrowed DesignSewingAmount per actual span, in authored order. Each retains the actual span and
-canonical owner. This checks amount metadata only; graph copy/range/stop and global identity joins
-are separate, as are numeric evaluation, physical ease and release readiness.
+DesignInputs.sewing_amount_declarations(&graph) validates the whole current root, then borrows
+DesignSewingAmount per actual authored span/canonical owner. Metadata checks supply no graph copy/
+range/stop, global id, numeric, physical ease or release proof.
 
-An explicit signed amount borrows the original Length from the span. Formula(id) requires actual
-DesignParameter metadata with that id and its current canonical binding, then requires Length kind.
-For example, parameter5001 may target dedicated length10; Formula(5001) retains both identities and
-borrows that exact record. Formula(10) refuses when10 is only a canonical declaration. A general
-scalar Length target is also supported after its existing identity/kind adapter succeeds. Unknown/
-Derived states and sources stay unchanged; no formula value or replacement scalar is generated.
+Explicit signed amounts borrow the span's Length. Formula(id) requires actual DesignParameter/
+current Length binding: parameter5001 may target dedicated length10; Formula(5001) retains both
+identities/the exact record, while bare Formula(10) refuses. General Length works through its existing
+identity/kind adapter. Unknown/Derived source/state stays unchanged, without values/replacement scalars.
 
-Profile(ref) stays a logical target-profile role. profile_validation() returns Some(DeferredToG4)
-for this branch; canonical length10 cannot resolve profile reference10 merely because numbers match.
-Other branches return None from that accessor, without asserting numeric or physical completeness.
-The source view preserves the exact explicit/formula/profile distinction.
+Profile(ref) stays logical with profile_validation() Some(DeferredToG4); length10 cannot resolve
+Profile10 by numeric coincidence. Other branches return None without numeric/physical completeness.
+Explicit/formula/profile origins remain distinct.
 
 | API or variant | Meaning |
 | --- | --- |
@@ -401,23 +397,22 @@ The source view preserves the exact explicit/formula/profile distinction.
 | `DesignSewingDeclarationError` | Current Inputs cause, missing parameter or FormulaKind mismatch |
 | `MissingFormulaParameter` | Formula identity has no actual Design parameter metadata |
 
-A Count parameter refuses with FormulaKind and its actual kind, span and parameter identity. A late
-failure returns no accepted prefix of amount views. Current root errors retain concrete error chains.
-Views cannot outlive the actual graph/root objects, and never rewrite spans or allocations. Use the
-separate current SewingGraph validator for structural sources and DesignSewing below for owned joins. Profile declaration grammar/type/state/physical resolution remains G4.
+Count returns FormulaKind with actual kind/span/parameter. Late failures return no prefix; current
+root errors retain concrete causes. Views borrow graph/root lifetimes without rewriting spans/
+allocations. SewingGraph checks sources; DesignSewing below checks owned joins. Profile grammar/type/
+state/physical resolution remains G4.
 
 ## Private sewing/input ownership
 
-DesignSewing::new(DesignSewingDefinition { inputs, graph, landmarks }) owns the exact implemented
-DesignInputs root, original SewingGraph and complete semantic SewingLandmark inventory. Private
-storage and shared definition()/inputs()/graph()/landmarks() getters provide no mutation path.
-The root remains the only canonical owner; no borrowed context or replacement graph is stored.
+DesignSewing::new(DesignSewingDefinition { inputs, graph, landmarks }) owns exact DesignInputs,
+original SewingGraph and complete SewingLandmarks. Private storage/shared definition()/inputs()/
+graph()/landmarks() provide no mutator. The root alone owns canonical inputs; no context/replacement
+graph is stored.
 
-Before current root validation, the complete ownership census visits original input positions,
-graph identity, landmarks and spans in authored order. Graph5000 cannot alias the containing Design;
-span5001 cannot alias parameter5001; landmark90000 cannot alias a retired creating operation90000.
-DuplicateIdentity retains both actual DesignSewingPosition values. Referenced copy/parameter/anchor ids
-remain uses and never become extra owners. No label supplies identity or ownership.
+Before root validation, ownership visits original input positions, graph, landmarks and authored
+spans. Graph5000 cannot alias Design, span5001 parameter5001, or landmark90000 retired operation90000.
+DuplicateIdentity retains both DesignSewingPositions. Copy/parameter/anchor references are uses;
+labels provide no identity/ownership.
 
 | API | Meaning |
 | --- | --- |
@@ -426,19 +421,16 @@ remain uses and never become extra owners. No label supplies identity or ownersh
 | `DesignSewingPosition` | Original input, graph, landmark or span ownership position |
 | `DesignSewingError` | Complete ownership or original current-root cause |
 
-Ownership admission preserves held sewing references for inspection and explicit repair. For example,
-replacing copy96000 with96010 leaves the original graph's96000 reference inspectable; the separate
-current graph validator returns MissingCopy. Structural Piece topology may still be ready in its own
-scope. Nothing reassigns the old seam or reconstructs born-valid graph/landmark objects against a
-later ledger. Current sewing/source queries are separate from ownership; construction
-alone supplies no sewing, numeric, Profile, geometry, execution or release readiness certificate.
+Admission retains held references for inspection/explicit repair. Replacing copy96000 with96010
+leaves96000 inspectable; current graph validation returns MissingCopy. Piece topology may remain ready
+in its own scope. No seam is reassigned or born-valid graph/landmark reconstructed against later
+history. Ownership grants no current sewing, numeric, Profile, geometric, execution or release proof.
 
 ## Current sources over the owned sewing state
 
-DesignSewing.validate_current() checks complete owned ids/current root, then every landmark's actual
-current Piece and anchor, the original graph against current root copies/Pieces/landmarks/ledger,
-and every actual amount declaration. amount_declarations() performs the same checks before returning
-borrowed views over those exact objects. No partial declaration collection escapes a late failure.
+DesignSewing.validate_current() checks owned ids/current root, every landmark Piece/anchor, original
+graph against actual copies/Pieces/landmarks/ledger, then all amounts. amount_declarations() applies
+the same checks before borrowing exact objects, without partial views after late failure.
 
 Unused landmarks remain owned obligations: deleting material under an unselected turn point returns
 its original AnchorError; removing its Piece returns MissingLandmarkPiece before graph lookup.
@@ -450,11 +442,33 @@ graph and amount wrappers expose the concrete original error through std::error:
 | --- | --- |
 | `MissingLandmarkPiece` | Actual owned landmark's held source Piece is absent |
 
-These queries reuse the existing raw current anchor/graph choice and repair rules. Stored data,
-registrations, ranges and allocations stay unchanged. Profile roles remain visibly DeferredToG4 in
-returned amount views; current source success does not resolve numeric values or physical profiles.
-Whole Piece topology readiness remains the separate structural report. Geometry, full Design
-execution, assembly completeness and release remain separately owned obligations.
+Existing raw anchor/graph choice/repair rules preserve stored data, registrations, ranges and
+allocations. Profile amounts stay DeferredToG4; source success resolves no numbers/profiles. Whole
+Piece topology has its separate report; geometry, full Design execution, assembly and release remain
+separately owned.
 
 Focused acceptance covers actual owner aliases, unused landmark repairs and borrowed amount/Profile
 metadata. Numeric, geometric, runtime and release verification remains separate.
+
+## Joined Gather declarations
+
+```rust,ignore
+let views = sewing.gather_declarations(&constructions)?;
+```
+
+Whole-current sewing root/landmarks/graph/amounts precede all supplied construction sources, even
+without Gathers. Authored views borrow actual Gather/position/side/span DeclaredEase, existing
+DesignSewingAmount and canonical owner. closing_operation() stays logical despite numeric-id matches;
+Debug shows side only.
+
+A-minus-B remains signed: +5 mm permits gathering A; −3 mm permits B. No negated amount/allocation
+copy, fallback or resolved sign is produced. Derived/formula and Profile origins remain unread/
+DeferredToG4. A later same-Piece copy retarget refuses after an earlier healthy Gather, without partial
+views; unused bad landmarks/amounts/constructions also block empty scope. Original concrete cause
+chains remain. Operation checks, global garment/root ids, intake conservation and physical/release
+proof remain separate. Missing exact span metadata refuses instead of substituting or omitting a view.
+
+| API token | Meaning |
+| --- | --- |
+| `DesignGatherDeclaration` | Actual Gather/span/side/amount/closing intent over borrowed current contexts |
+| `DesignGatherDeclarationError` | Original Sewing/Constructions cause or missing exact span amount |

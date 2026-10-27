@@ -36,6 +36,7 @@ impl DesignSizeSetReference {
 
 mod closures;
 mod constructions;
+mod gathers;
 mod hems;
 mod host;
 mod inputs;
@@ -52,6 +53,7 @@ pub use constructions::{
     DesignConstructionDeclaration, DesignConstructionDeclarationError,
     DesignConstructionDeclarationRole, DesignConstructionDeclarationSource,
 };
+pub use gathers::{DesignGatherDeclaration, DesignGatherDeclarationError};
 pub use hems::{
     DesignHemDeclaration, DesignHemDeclarationError, DesignHemDeclarationRole,
     DesignHemDeclarationSource,

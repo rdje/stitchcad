@@ -3,25 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — typed grain and allowance declarations
+## _(2026-10-27 UTC)_ — joined actual Gather declarations
 
-0403 borrows grain alignment then each allowance's width/inclusion after whole-current-root
-preflight, even empty. Common contextual lookup requires actual Angle versus Length metadata,
-without reading Unknown/Derived states or changing representation. Parallel alignment remains an
-actual directed axis without synthesized angle; explicit45°/zero width, corner/print direction and
-logical Profile inclusion remain original intent. Views keep actual fields/objects/positions and
-single canonical owner. Native9 includes previous intake/closing checks, wrong-kind later sources,
-bare numeric ids, logical aliases, absent current Piece and empty host drift; lifetime2/lint/fmt0.
-Whole0402 scopes552 and completed parents553 retain4+4 exact Git spans; retention/book/publication/size0.
-D274 overlapping size checks deleted shared scratch, causing179 false breaches/rc1 or missing file/rc2.
-Native-wc barrier replays committed baseline49a6272:driver1/first2; unique local invocation scratch and
-owned exit cleanup pass2/0. Watched overlap control/self-test17/syntax pass0. D274 promotion declined:
-existing per-run scratch/locality doctrine unchanged; tracked reproduction/correction retained.
-D275 real probe hardcodedv0.3 despite actualv0.4, native5pass/2fail rc1. Actual at= token mutation and
-exact refusal now pass6/0 rc0 including overlap; promotion declined, existing revision rule unchanged. Original book facts
-preserved with repetition tightened. Promotion: Design host decision. Current sources, resolved
-width domains, geometry/policies/global ids and full release proof remain separate; Gather .e.3,
-component .f/global garment-root .5/full CI remain owned.
+0404 validates complete current sewing/root/landmark/graph/amount scope, then all supplied
+construction source families before borrowing authored Gathers, even empty scope. Each view retains
+actual Gather/position, original signed span ease/selected side, existing DesignSewingAmount and
+single canonical owner. Logical closing intent stays borrowed; no value/state/allocation/negation
+copy or partial result is created. Native13 proves actual pointers, signed sides/zero, Derived/
+Profile origins, later same-Piece copy retarget, unused sources and controlled host drift with exact
+original error chains. Lifetime1/strict lint/fmt0; fixture uses public a/b fields after private helper
+compile refusal. Whole0403/D274–D275 scopes554 retain4 exact Git spans; retention/book/publication/
+size0. Original book facts preserved with repetition tightened. Promotion: Design host decision.
+All declaration children .e complete; component .f/global joins .5/full integration/release remain.
+
+[Whole0403 grain/allowance lesson](docs/history/stitchcad-devnotes-part554.md) retains actual roles, D274/D275 and native red/green proofs.
 
 [Whole0402 intake lesson](docs/history/stitchcad-devnotes-part552.md) retains actual fields, current metadata and logical-role proofs.
 
