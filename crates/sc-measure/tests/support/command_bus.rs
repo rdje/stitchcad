@@ -68,6 +68,8 @@ mod material_preview;
 mod measurement_preview;
 #[path = "command_bus/notch_preview.rs"]
 mod notch_preview;
+#[path = "command_bus/resource_copies.rs"]
+mod resource_copies;
 impl CommandAuthoritySource for Host {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_> {
         self.reads.set(self.reads.get() + 1);

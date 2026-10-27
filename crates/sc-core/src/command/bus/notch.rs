@@ -59,7 +59,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
         )
         .map_err(CommandPreviewError::Notch)?;
         let mut garment = self.state.definition().clone();
-        let mut sewing = garment.sewing.definition().clone();
+        let mut sewing = garment.sewing.into_definition();
         sewing.landmarks.push(SewingLandmark::Notch(notch));
         garment.sewing =
             DesignSewing::new(sewing).map_err(|e| CommandPreviewError::Sewing(Box::new(e)))?;

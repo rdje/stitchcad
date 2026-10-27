@@ -8,14 +8,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D287 — submitted Known-state Measurement evidence bypasses input limits
-P1 fixed0440, owner G1-SLICE.6.8.2.1: independent explicit evidence quota counts original vectors/aliases.
-- [x] ROOT CAUSE: cargo test -p sc-core --test command_control_contract known_measurement_evidence:
-  baseline0 passed/1 failed rc=101; prior native quotas admit two references as1 member/1 target/0 bytes.
-- [x] ADDRESSED: cargo test -p sc-core --test command_control_contract:6 passed rc=0; native bus45
-  passed rc=0; all four costly entries refuse evidence excess before authority/progress and leave keys unused.
-- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; control privacy1 passed rc=0.
-D288 P2 fixed0440 same owner: native stale sc-core package-description census1/0 rc=0; actual subset named.
+## D289 — repeated opaque source-host copies during candidate preparation
+P2 fixed0441, owner G1-SLICE.6.8.2.2.1: copied inner owners are consumed through private helpers.
+- [x] ROOT CAUSE: native cargo test -p sc-measure --test design_inputs_contract command_bus::resource_copies:
+  0 passed/1 failed rc=101; actual source-host counts3/3/2 exceed required1/1/1.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:46 passed rc=0;
+  actual individual1/1/1, group preview3/commit4, replay/Undo/Redo0 and original Piece address verified.
+- [x] NO REGRESSION: selected strict Clippy/fmt rc=0; affected compiler privacy3/4/4 passed rc=0.
+D287/D288 fixed0440; [whole native bypass/fix and package metadata proof](../history/stitchcad-devnotes-part592.md).
 D285 runtime fixed0437; persistence/reopen issuance/order remains owned/pending in G1-SLICE.7.
 [Whole D285/D286 diagnosis and verified runtime/claim closure](../history/stitchcad-devnotes-part591.md).
 D283/D284 fixed; [whole correction/proofs](../history/stitchcad-devnotes-part581.md).

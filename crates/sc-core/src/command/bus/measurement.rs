@@ -75,9 +75,9 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
             });
         }
         let mut garment = self.state.definition().clone();
-        let mut sewing = garment.sewing.definition().clone();
-        let mut inputs = sewing.inputs.definition().clone();
-        let mut structure = inputs.structure.definition().clone();
+        let mut sewing = garment.sewing.into_definition();
+        let mut inputs = sewing.inputs.into_definition();
+        let mut structure = inputs.structure.into_definition();
         structure.inputs = structure
             .inputs
             .with_length_declaration(replacement.replacement().clone())

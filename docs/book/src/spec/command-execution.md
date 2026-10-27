@@ -533,6 +533,10 @@ separately owned; metadata history supplies no broader certificate.
 
 [Operation limits and progress](command-operation-control.md) describes installed immutable metadata
 input policy, actual pre-effect progress and atomic cooperative cancellation. The coupled bus now has
-45 focused native cases. Submitted Measurement evidence references have their own explicit quota;
-eight compiler privacy boundaries were previously checked, and control privacy is rechecked. Full integration remains deferred.
+46 focused native cases. Submitted Measurement evidence references have their own explicit quota;
+eight bus privacy boundaries and control privacy were previously checked. Full integration remains deferred.
 
+Candidate reconstruction now copies the trusted source host once per actual non-alias member, plus
+once for a new commit's fresh revision. Exact replay and actual Undo/Redo require no reconstruction
+copy. The [resource-control guide](command-operation-control.md#source-host-copy-work) records the
+native copy-count proof and its limits. There are46 focused bus cases; total resource proof remains owned.

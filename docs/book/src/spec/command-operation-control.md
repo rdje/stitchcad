@@ -148,8 +148,32 @@ Exact replay refreshes authority and emits Replaying before returning the origin
 that retrieval changes no state and does not undo its previously accepted effect. Replay neither
 advances audit sequence nor traverses history again.
 
-Eight native runtime-control cases plus the previous37 command-bus cases pass focused checks.
-Six pure admission/fraction cases and strict selected lint/formatting pass; the existing compiler
-privacy boundaries remain established, with the control privacy case rechecked for this change. Full command integration and deeper source/allocation acceptance
-remain separately owned. These input units do not establish total model/work/memory or future
-numeric/file/decompression/geometry/solver bounds; that remaining resource scope is G1-SLICE.6.8.2.2.
+## Source-host copy work
+
+Private candidate reconstruction requests one copy of the trusted source host for each actual
+non-alias metadata candidate. It consumes the copied nested owners through crate-private helpers
+and rebuilds them through the same validating constructors. Public callers receive no extraction
+method, mutable bus model or replacement capability. Complete source validation and final effect
+authorization remain in place; moving a copied component is not a validation shortcut.
+
+For n actual candidate members, grouped preview needs n reconstruction copies and a new commit
+needs n+1, including its fresh-revision rebuild. Exact aliases add no candidate copy. The explicit
+submitted-member maximum bounds n. Exact accepted replay and actual snapshot Undo/Redo request no
+host reconstruction copy. The native case wraps the actual immutable DesignSources, forwarding
+all public census/binding/reference/current-validation methods and observing only host copies.
+It measures individual counts1/1/1, group preview3, commit4 and replay/Undo/Redo0; Undo also restores
+the original Piece-slice address. Prior native individual counts were3/3/2.
+
+This is a bound on bus-requested source-host copy invocations. It does not bound bytes or time inside
+the trusted host's Clone/validation implementation, remaining core collection copies, total model
+memory, raw input decoding or retained audit/history bytes. Remaining implementation is
+G1-SLICE.6.8.2.2.2. This native source-copy case brings focused bus coverage to46 cases; it is not a
+complete resource, performance or integration certificate.
+
+Focused runtime evidence comprises37 earlier bus cases, eight runtime-control cases and one actual
+source-copy case:46 passing cases. The evidence-input slice established six pure admission/fraction
+cases and control privacy. The copy slice passes strict selected lint/formatting and11 affected
+compiler privacy cases, including refusal of all three private consuming helpers. Full command
+integration and deeper source/allocation acceptance remain separately owned. These input units and
+copy counts do not establish total model/work/memory or future numeric/file/decompression/geometry/
+solver bounds; that remaining resource scope is G1-SLICE.6.8.2.2.2.

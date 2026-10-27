@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0440
+## Current leaf acceptance —0441
 
-- [x] ROOT CAUSE: cargo test -p sc-core --test command_control_contract known_measurement_evidence:
-  baseline0 passed/1 failed rc=101; native three quotas admit two evidence references as1/1/0.
-- [x] ADDRESSED: cargo test -p sc-core --test command_control_contract:6 passed rc=0; cargo test
-  -p sc-measure --test design_inputs_contract command_bus:45 passed rc=0, including all four entry paths.
-- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; cargo test -p sc-core --doc
-  command::control:1 passed rc=0; named native evidence case rechecked1 passed rc=0 after fixture lint fix.
+- [x] ROOT CAUSE: python3 -I -B native HEAD reconstruction census prints redundant nested copies
+ 2/2/1/2 for Measurement/Material/Notch/revision paths rc=0; opaque H was already copied by outer owner.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:46 passed rc=0;
+  actual host individual1/1/1, group preview3/commit4 and replay/Undo/Redo0 copies verified.
+- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; affected DesignStructure/Inputs/Sewing
+  compiler privacy groups3/4/4 passed rc=0, including rejection of all three crate-private extraction helpers.
 
 ## Goal
 
@@ -793,36 +793,47 @@ All98 completed ids/statuses and original proof pointers remain live there.
   or future numeric/file/geometry work. Keep deeper/full verification in .6.5.5/.6.9 until feature closure.
 - ID: `G1-SLICE.6.8.2.1`
   Status: `done`
-  Goal:0440 D287 explicit cumulative Measurement evidence-reference admission; D288 package metadata sync.
-  Fourth positive immutable host maximum counts original Known-state vectors/aliases without copying,
-  deduplication or source lookup. Preserve exact excess context and failed keys; no production default.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test command_control_contract
-    known_measurement_evidence_cannot_bypass_the_explicit_admission_policy:0 passed/1 failed rc=101;
-    native prior three maxima admit two distinct references with1 member/1 target/0 reason bytes.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part591.md:
-    4 exact Git spans rc=0; prior whole0439 policy explicitly bounds only three dimensions. Known-state
-    evidence vector is a separate submitted payload dimension, not a primary metadata target or reason.
-  - [x] FIX: cargo clippy -p sc-core --test command_control_contract -- -D warnings:finished rc=0;
-    explicit fourth constructor maximum, evidence demand/refusal/getters, remaining-room guard and
-    exhaustive authored-state classification; all native call sites explicitly configure the new maximum.
-  - [x] ADDRESSED: cargo test -p sc-core --test command_control_contract:6 passed rc=0; cargo test
-    -p sc-measure --test design_inputs_contract command_bus:45 passed rc=0. Exact bound/cumulative alias
-    excess retained; single/group preview, commit and history refuse before any authority read/progress.
-    Original Piece pointer/revision remain; same authoring/history keys/capacities later succeed, sequence1.
-  - [x] NO REGRESSION: selected sc-measure strict Clippy/fmt finished rc=0; cargo test -p sc-core --doc
-    command::control:1 passed rc=0; native evidence case rechecked1 passed rc=0 after replacing a fixture
-    indexing lint with nonempty first().expect, without suppression. Prior44 native bus cases still pass.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book and native publication:81 chapters/159 scoped API rows/
-    1472 source links/2466 rendered links rc=0. Native D288 prior/current stale-description census1/0 rc=0;
-    sc-core Cargo metadata now names the implemented metadata subset. Retention1045/global75 rc=0.
-  Cargo commands use scripts/local_environment.py. Promotion: indexed command-layer decision.
-  Whole0439/D285/D286 ledger retained591 unchanged. Admission acts on constructed typed input; raw
-  decoding/initial structural construction, whole-model/resource/retained bytes remain .6.8.2.2 work;
-  deeper source/allocation .6.5.5 and full .6.9 remain deferred. G1still6/18, no broader feature proof.
+  Goal:0440 evidence-reference admission/D287/D288; [whole scope/proofs](../history/stitchcad-devnotes-part592.md).
 - ID: `G1-SLICE.6.8.2.2`
+  Status: `in_progress`
+  Goal: bound remaining concrete model/retained-state work through public immutable host contracts;
+  do not label metadata input bounds total memory/CPU. First remove repeated source-host cloning.
+- ID: `G1-SLICE.6.8.2.2.1`
+  Status: `done`
+  Goal:0441 D289 bound source-host copy amplification while preserving actual validating reconstruction.
+  Consume copied Structure/Inputs/Sewing definitions through crate-private methods instead of copying
+  nested ownership again. No public extraction or mutable CommandBus model access; all constructors,
+  original typed source failures and fresh final effect authority remain on the actual paths.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract
+    command_bus::resource_copies:0 passed/1 failed rc=101; actual immutable source-host copies measured
+    [3,3,2] against required [1,1,1] for individual Measurement/Material/Notch previews.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B native HEAD reconstruction census prints redundant
+    nested copies2/2/1/2 in measurement.rs/material.rs/notch.rs/execution.rs rc=0. Outer definition
+    already owns its copied H; cloning nested wrappers recopies the same opaque actual source host.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
+    three consuming crate-private helpers move copied fields through unchanged validating constructors;
+    all four candidate/revision rebuild paths retain actual validators/difference guards and effect ordering.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:46 passed rc=0;
+    real DesignSources/public readonly trait observer verifies individual1/1/1, mixed group preview3,
+    commit4 (fresh revision included), exact alias no copy, replay/Undo/Redo0 and original Piece address.
+    Instrumentation delegates actual source checks/bindings and never supplies a fabricated model/authority.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::DesignStructure:3 passed rc=0;
+    design::inputs::DesignInputs:4 and design::sewing_state::DesignSewing:4 passed rc=0; external extraction
+    remains refused. Selected cargo fmt check rc=0; prior45 actual bus cases retain semantic/failure coverage.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part592.md:5 exact
+    Git spans rc=0; whole0440/D287/D288 and0432–0436 decision continuity retained without editing bytes.
+    Retention1046 logical/76 aggregate working Markdown rc=0. Book/pointer/frontier/lesson/indexed
+    decision aligned; full/deeper .6.9/.6.5.5 acceptance deferred.
+  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Native book/publication81 chapters/159 scoped API rows/1473 source links/2468 rendered links rc=0;
+  maintained-reference82 files/18063 lines/1260706 bytes owner .6.8.2.2.1 rc=0.
+  For n non-alias members the bus requests n host copies for preview and n+1 for a new commit; explicit
+  member policy bounds n. Host-internal copy/validation time/bytes, remaining collection copies, raw
+  ingress and retained-state work remain .6.8.2.2.2. This is no total CPU/memory or integration certificate.
+- ID: `G1-SLICE.6.8.2.2.2`
   Status: `pending`
-  Goal: bound remaining concrete model/retained-state work through public immutable host contracts,
-  before broader exposure. Derive safe dimensions; do not label metadata input bounds total memory/CPU.
+  Goal: derive remaining model/retained-state resource dimensions through actual public contracts;
+  source-copy count does not bound per-copy size, validation/allocation work or retained journal bytes.
 
 - ID: `G1-SLICE.6.9`
   Status: `pending`

@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — explicit submitted evidence-reference admission
+## _(2026-10-27 UTC)_ — bound candidate source-host copy amplification
 
-0440 .6.8.2.1 owns D287: native baseline admits two Known-state evidence references as1 member,
-1 target/0 reason bytes; the desired regression fails101. Control6/bus45 pass0; selected lint/fmt/privacy1 pass0. Add a fourth explicit positive host maximum,
-count cumulative original vectors/aliases before source/model work, retain exact first excess, and
-leave refused keys/capacity unused. Fixture indexing lint corrected with first().expect. No copying or registry truth claim in admission. D288 corrects
-stale sc-core package metadata that deferred already implemented mutations/history. Promotion:
-command-layer record. Typed-input admission excludes raw decoding/construction and whole-model work;
-remaining resource implementation .6.8.2.2, deeper/full acceptance .6.5.5/.6.9. Whole0439/D285/D286 proof591.
+0441 .6.8.2.2.1 fixes D289: native real-source observer measured individual copies3/3/2, regression
+failed101; outer copied owners were cloned again at inner layers. Consume copied Structure/Inputs/
+Sewing definitions privately, rebuilding through all original validators. Native bus46 verifies1/1/1,
+group preview3/commit4, aliases/replay/Undo/Redo0 extra copies and original Piece address after Undo.
+Strict selected lint/fmt and affected privacy3/4/4 pass; no public extraction/mutable model escape.
+Promotion: command-layer record. Copy-call count is bounded, not opaque per-copy bytes/time, total
+model work or retained memory. Remaining .6.8.2.2.2/deeper .6.5.5/full .6.9; whole0440/D287/D288 proof592.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

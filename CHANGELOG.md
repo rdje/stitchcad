@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0440 — bound submitted Measurement evidence references
+## STITCHCAD-G1-0441 — bound source-host copies during candidate reconstruction
 
-- D287: fourth explicit host maximum bounds cumulative Known-state references, including original aliases.
-- Refuse before authority/model work on every costly metadata path; retain exact first excess and unused keys.
-- Native control6/bus45, selected strict lint/fmt/control privacy1 and book/publication pass.
-- D288: sc-core package metadata names implemented metadata operations/history rather than deferring mutations.
-- Whole0439 and D285/D286 ledger retained591 with4 exact native Git spans; complete resource scope remains owned.
+- D289: consume copied inner definitions instead of repeating opaque source-host clones; validators retained.
+- Native real-source copies1/1/1, group preview3/commit4 and replay/Undo/Redo0; bus46 passes.
+- Strict selected lint/fmt and affected compiler privacy3/4/4 pass; extraction remains crate-private.
+- Book scopes invocation-count proof; whole0440/D287/D288 and0432–0436 decision continuity retained592.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -44,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part592](docs/history/stitchcad-devnotes-part592.md) | whole0440/D287/D288 and0432–0436 decision continuity | 113 lines, 9458 bytes, sha256:f4d45166… |
 | [part591](docs/history/stitchcad-devnotes-part591.md) | whole0439 and D285/D286 ledger | 58 lines, 5129 bytes, sha256:d042a55c… |
 | [part590](docs/history/stitchcad-devnotes-part590.md) | whole0438 admission/progress scope/lesson/ledger | 39 lines, 3235 bytes, sha256:ffd7d9a3… |
 | [part589](docs/history/stitchcad-devnotes-part589.md) | whole0437 and0421–0422 completed proofs | 83 lines, 7538 bytes, sha256:8cb71844… |

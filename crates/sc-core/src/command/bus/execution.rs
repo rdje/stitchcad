@@ -558,9 +558,9 @@ fn at_revision<H: DesignReferenceHost + Clone + PartialEq>(
     revision: DesignRevision,
 ) -> Result<DesignGarment<H>, CommandPreviewError<H::Error>> {
     let mut garment = before.definition().clone();
-    let mut sewing = garment.sewing.definition().clone();
-    let mut inputs = sewing.inputs.definition().clone();
-    let mut structure = inputs.structure.definition().clone();
+    let mut sewing = garment.sewing.into_definition();
+    let mut inputs = sewing.inputs.into_definition();
+    let mut structure = inputs.structure.into_definition();
     structure.revision = revision.clone();
     inputs.structure =
         DesignStructure::new(structure).map_err(|e| CommandPreviewError::Structure(Box::new(e)))?;

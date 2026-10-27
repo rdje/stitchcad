@@ -115,6 +115,11 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignSewingError<E> 
 ///     state.definition().landmarks.clear();
 /// }
 /// ```
+/// ```compile_fail
+/// fn extract<H: sc_core::design::DesignReferenceHost>(owned: sc_core::design::DesignSewing<H>) {
+///     let _ = owned.into_definition();
+/// }
+/// ```
 #[derive(Clone, PartialEq, Eq)]
 pub struct DesignSewing<H> {
     definition: DesignSewingDefinition<H>,
@@ -140,6 +145,11 @@ impl<H: DesignReferenceHost> DesignSewing<H> {
     #[must_use]
     pub const fn definition(&self) -> &DesignSewingDefinition<H> {
         &self.definition
+    }
+    // Consume an already owned component during private candidate reconstruction. Callers still
+    // rebuild through validating constructors; this cannot extract from a borrowed bus owner.
+    pub(crate) fn into_definition(self) -> DesignSewingDefinition<H> {
+        self.definition
     }
     /// Exact single owned input/canonical root.
     #[must_use]

@@ -2,23 +2,24 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
-- Next G1-SLICE.6.8.2.2: derive remaining actual model/retained-state work through public immutable
-  host contracts; typed input admission does not bound full model cloning/validation or retained bytes.
-- 0440 .6.8.2.1 fixes D287: Known-state Measurement evidence vectors bypassed prior1/1/0 member/
-  target/reason demand. Native desired regression failed101. Fourth explicit positive host maximum
-  counts cumulative original evidence references, including aliases, with exact first excess context.
-  All four costly entry paths refuse before source/model/authority/progress; refused keys remain unused.
-  D288 fixes stale sc-core package metadata. Raw decoding/initial typed construction remain outside admission.
-- 0439 immutable policy, data-only progress and cooperative cancellation remain. Closed audit/result
+- Next G1-SLICE.6.8.2.2.2: derive remaining actual model/retained-state resource dimensions through
+  public host contracts. Source-copy count does not bound per-copy size/time, validation or retained bytes.
+- 0441 .6.8.2.2.1 fixes D289: actual source-host observer baseline3/3/2 individual copies failed101.
+  Consume copied Structure/Inputs/Sewing definitions crate-privately; retain all actual validators.
+  Native bus46 verifies individual1/1/1, mixed group preview3/commit4, exact alias no extra copy,
+  replay/Undo/Redo0 and original Piece address after Undo. Strict lint/fmt/privacy3/4/4 pass.
+  New helpers grant no public extraction or mutable bus model; one additional copy issues a fresh revision.
+- 0440 D287 evidence quota/D288 package metadata fixes remain. Explicit positive host policy bounds
+  original members/targets/UTF-8 reasons/Known Measurement evidence references, including aliases.
+  All costly entries admit before source/model/authority/progress. Raw decoding/construction excluded.
+- 0439 immutable policy, pre-effect cooperative progress/cancellation remain. Closed record/result
   copies precede ReadyToPublish and final fresh authority; no observer/large payload prep follows it.
-  Cheap authorized Piece reads need no policy; no production defaults or request/observer overrides.
-- Native control6/bus45, selected strict lint/fmt and control privacy pass; full .6.9/publication and
-  deeper source/allocation .6.5.5 remain deferred. D285 runtime undo0/new2/old1 refusal verified;
-  storage/reopen .7 must persist maximum-issued revision/common audit order separately from undo.
-- Whole0439 scope/lesson/ledger and D285/D286 prior ledger retained591 with4 exact Git spans;
-  whole0438 retained590. D284 working archive counts are AGGREGATE: after591 global75=21 sealed
-  catalogs+54 active raw; limits64/group and192 aggregate. No packing needed/performed.
+  Cheap authorized Piece reads need no policy; no production default or request/observer override.
+- D285 runtime undo0/new2/old1 refusal verified; storage/reopen .7 must persist maximum-issued revision/
+  common audit order separately from undo. Deeper source/allocation .6.5.5 and full .6.9 deferred.
+- Whole0440/D287/D288 and0432–0436 decision continuity retained592 with5 exact Git spans;
+  whole0439/D285/D286 retained591. D284 archive counts AGGREGATE: after592 global76=21 sealed catalogs+
+  55 active raw, limits64/group and192 aggregate. No packing needed/performed.
 - G1still6/18. Actual recipe .5e/.5f, paired split/Dart .6.5.3, publication .4 and full bus .6.9 owned.
   Garment graph remains canonical docs/tasks/G1-SLICE-garment.md with98 completed ids/proof pointers.
-- Full PNT continues; derive unpushed count, no early push. Cleanup next due2026-10-28 13:41UTC;
-  docs/ARTIFACT_CLEANUP.md. All project stores/artifacts remain repository-local.
+- Full PNT continues; derive unpushed count, no early push. Cleanup due2026-10-28 13:41UTC; docs/ARTIFACT_CLEANUP.md.

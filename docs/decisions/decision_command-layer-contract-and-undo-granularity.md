@@ -78,60 +78,8 @@ carried across a network boundary but not what the levels are.
 
 [Whole0291–0430 implementation records](../history/stitchcad-devnotes-part583.md) retain their original answers and proof boundaries.
 
-## Sequential metadata group preview0432
-
-answers: "how do metadata groups stage actual models and retries?" · "how is the net group delta derived?"
-
-G1-SLICE.6.5.4.2.2.3 uses one actual trusted authority snapshot/complete Inspect grant, then binds
-actual Design/exact revision. Each first request consumes the preceding validated candidate and one
-independent concrete reserve cursor. Per-member original guards and typed error sources remain;
-a failure retains original group/index/command and discards every staged candidate/report.
-Within one preview only, complete CommandMutation equality under a repeated key returns the first
-report with replay_of; conflicting reuse refuses before reapplication. No persistent replay is claimed.
-The final diff reads original/final actual models, permits only successful nonalias semantic footprints,
-preserves complete other owner fields/order and omits restored values. Native mixed progression,
-restoration/nonempty deltas, exact aliases/conflicts, later anchor/exhaustion, source refresh and
-binding order pass in six group cases. Publication/audit/undo/evaluation remain their later owners.
-
-## In-memory metadata publication0434
-
-answers: "when is a metadata group published?" · "how does exact retry work after revisions advance?" · "what bounds the in-memory audit?"
-
-G1-SLICE.6.6.1 requires explicit finite accepted-group capacity. Complete Commit authority and Design
-binding precede journal lookup. Exact group id plus complete original group equality returns the first
-immutable result after fresh authorization, before revision/capacity checks. Changed same-id groups
-refuse; keys belong to this Design/complete-actor namespace, and cross-group overlap refuses rather
-than replaying or publishing part. Journal entries are never discarded at capacity; new groups refuse.
-New edits require exact current revision; original mismatch carries actual available advances/commands
-and initial journal revision, with no fabricated earlier trail. Prepare/rebuild/current-check the actual
-successor model and reserve/allocation preflight, then refresh complete Commit authority immediately
-before infallible exclusive model/reserve/audit moves. Retain old host through the complete transition.
-One accepted group adds one immutable original actor/request/result/grant/time entry and advances once,
-including net no-op. Exact replay adds neither. Native commit6/previous24/diff5/lint/fmt are focused
-proof. Persistence/reopen, bounded undo, byte/work/cancellation limits and full integration remain owned.
-
-## Revision identity across undo branches — D285
-
-answers: "how can undo restore counters without accepting stale branch requests?"
-
-0435 .6.7.1.1 pins the native57767b0 contract/code and reproduces a counter model: restore0 after
-snapshot1, then current.successor gives a distinct snapshot1 that accepts the old revision precondition.
-Undo must preserve a separate maximum-issued counter; new authoring allocates above it, while undo/
-redo restore original snapshots/counters. Original counter/identity restoration remains unchanged.
-The model probe is diagnosis, not runtime proof. Runtime fix/native branch refusal is verified0437
-under .6.7.1.3; storage/reopen .7 must still retain issuance independently of undo history.
-The read-only model probe remains diagnosis. Native in-memory traversal/branch acceptance passes0437; storage/reopen proof remains pending.
-
-## History intent and operator0436
-
-answers: "how do current history operator and original author remain distinct?"
-
-G1-SLICE.6.7.1.2 owns current operation context/direction and exact original CommandMutationGroup.
-Explicit membership then Design must match; operator/revision may differ from original author/base.
-Both complete actor/principal claims remain untrusted and exact; original payloads/keys/order remain.
-Native schema3/privacy1/lint/fmt pass. Runtime must authenticate current operator for every original
-command scope, bind the exact accepted record/current revision/key and enforce bounded atomic effects.
-Input construction is no history capability; apply_history separately enforces traversal/action audit and D285 issuance.
+[Whole0432–0436 sequential preparation/publication/revision/operator decisions](../history/stitchcad-devnotes-part592.md)
+retain their complete lessons, alternatives, focused proofs and pending boundaries.
 
 ## Actual bounded snapshot history0437
 
@@ -186,3 +134,14 @@ counts and first member/index/command; compare remaining room before adding, wit
 All costly metadata entry paths share this admission before authority/model work. Refused keys remain
 unused. No evidence truth/registry grant is implied. This bounds already typed input, not raw decoding,
 initial construction, whole-model validation/cloning or retained-state memory; those remain separately owned.
+
+## Bound source-host reconstruction copies0441
+
+answers: "why consume copied inner Design owners instead of cloning them again?"
+
+D289 native real-source instrumentation measured individual H copies3/3/2 in Measurement/Material/Notch
+previews. G1-SLICE.6.8.2.2.1 consumes copied Structure/Inputs/Sewing definitions privately and rebuilds
+through unchanged validators. Bus reconstruction now requests one H copy per non-alias candidate and
+one extra for a new revision; replay and actual Undo/Redo request none. Explicit member policy bounds
+candidate count. Native bus46 and privacy3/4/4 verify copy counts and no public extraction. This does
+not bound trusted host-internal bytes/time, all core collection work or retained memory; .6.8.2.2.2 owns those.

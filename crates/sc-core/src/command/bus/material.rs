@@ -88,9 +88,9 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
             })
             .collect::<Result<Vec<_>, _>>()?;
         let mut garment = self.state.definition().clone();
-        let mut sewing = garment.sewing.definition().clone();
-        let mut inputs = sewing.inputs.definition().clone();
-        let mut structure = inputs.structure.definition().clone();
+        let mut sewing = garment.sewing.into_definition();
+        let mut inputs = sewing.inputs.into_definition();
+        let mut structure = inputs.structure.into_definition();
         structure.pieces =
             PieceInventory::new(pieces).map_err(|e| CommandPreviewError::Pieces(Box::new(e)))?;
         inputs.structure = DesignStructure::new(structure)

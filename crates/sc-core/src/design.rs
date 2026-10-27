@@ -186,6 +186,11 @@ impl std::error::Error for DesignStructureError {
 ///     let _mutable: &mut sc_core::ontology::IdentityLedger = &mut state.definition().topology;
 /// }
 /// ```
+/// ```compile_fail
+/// fn extract(owned: sc_core::design::DesignStructure) {
+///     let _ = owned.into_definition();
+/// }
+/// ```
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct DesignStructure {
     definition: DesignStructureDefinition,
@@ -279,6 +284,11 @@ impl DesignStructure {
     #[must_use]
     pub const fn definition(&self) -> &DesignStructureDefinition {
         &self.definition
+    }
+    // Consume an already owned component during private candidate reconstruction. Callers still
+    // rebuild through validating constructors; this cannot extract from a borrowed bus owner.
+    pub(crate) fn into_definition(self) -> DesignStructureDefinition {
+        self.definition
     }
     /// Exact containing Design identity.
     #[must_use]
