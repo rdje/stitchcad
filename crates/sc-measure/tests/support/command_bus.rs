@@ -98,6 +98,7 @@ fn controlled<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
         std::num::NonZeroUsize::MAX,
         std::num::NonZeroUsize::MAX,
         std::num::NonZeroUsize::MAX,
+        std::num::NonZeroUsize::MAX,
     ))
     .expect("one explicit test-host policy installation");
     bus

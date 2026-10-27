@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual immutable admission and cooperative cancellation
+## _(2026-10-27 UTC)_ — explicit submitted evidence-reference admission
 
-0439 .6.8.1.2 enforces one-time explicit metadata policy before private source/model work on all
-costly metadata entry paths. Real phase checkpoints cancel before effects; default methods use unit
-observer. Closed audit/result copies precede ReadyToPublish and final fresh authority; native observer
-revocation there refuses publication. Bus44/privacy8/strict selected lint/fmt pass. Named Stop fixture
-replaces initial complex tuple lint/constructor mismatch, without suppression. Cheap authorized reads
-need no policy; no hidden production default. Promotion: command-layer record. Total model/resource
-bounds .6.8.2 and deeper/full acceptance .6.5.5/.6.9 remain; whole0438 scope/lesson/ledger retained590.
+0440 .6.8.2.1 owns D287: native baseline admits two Known-state evidence references as1 member,
+1 target/0 reason bytes; the desired regression fails101. Control6/bus45 pass0; selected lint/fmt/privacy1 pass0. Add a fourth explicit positive host maximum,
+count cumulative original vectors/aliases before source/model work, retain exact first excess, and
+leave refused keys/capacity unused. Fixture indexing lint corrected with first().expect. No copying or registry truth claim in admission. D288 corrects
+stale sc-core package metadata that deferred already implemented mutations/history. Promotion:
+command-layer record. Typed-input admission excludes raw decoding/construction and whole-model work;
+remaining resource implementation .6.8.2.2, deeper/full acceptance .6.5.5/.6.9. Whole0439/D285/D286 proof591.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

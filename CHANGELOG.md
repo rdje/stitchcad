@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0439 — enforce metadata admission and atomic cooperative cancellation
+## STITCHCAD-G1-0440 — bound submitted Measurement evidence references
 
-- Immutable one-time host policy controls costly metadata preview/commit/history; authorized reads need none.
-- Actual data-only checkpoints preserve semantic state/keys/ids on Cancel; final authority follows Ready.
-- Prepare closed audit/result copies before final boundary; native bus44/privacy8/strict lint/fmt pass.
-- Book/setup/remaining resource scope aligned; whole0438 retained590 with3 exact Git source spans.
+- D287: fourth explicit host maximum bounds cumulative Known-state references, including original aliases.
+- Refuse before authority/model work on every costly metadata path; retain exact first excess and unused keys.
+- Native control6/bus45, selected strict lint/fmt/control privacy1 and book/publication pass.
+- D288: sc-core package metadata names implemented metadata operations/history rather than deferring mutations.
+- Whole0439 and D285/D286 ledger retained591 with4 exact native Git spans; complete resource scope remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +44,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part591](docs/history/stitchcad-devnotes-part591.md) | whole0439 and D285/D286 ledger | 58 lines, 5129 bytes, sha256:d042a55c… |
 | [part590](docs/history/stitchcad-devnotes-part590.md) | whole0438 admission/progress scope/lesson/ledger | 39 lines, 3235 bytes, sha256:ffd7d9a3… |
 | [part589](docs/history/stitchcad-devnotes-part589.md) | whole0437 and0421–0422 completed proofs | 83 lines, 7538 bytes, sha256:8cb71844… |
 | [part588](docs/history/stitchcad-devnotes-part588.md) | whole0436 and D285 diagnosis ledger | 48 lines, 3999 bytes, sha256:2a0714f0… |

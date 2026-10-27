@@ -19,8 +19,13 @@ fn id(value: u128) -> EntityId {
 fn positive(value: usize) -> NonZeroUsize {
     NonZeroUsize::new(value).expect("explicit positive policy/count")
 }
-fn limits(members: usize, targets: usize, bytes: usize) -> Limits {
-    Limits::new(positive(members), positive(targets), positive(bytes))
+fn limits(members: usize, targets: usize, bytes: usize, evidence: usize) -> Limits {
+    Limits::new(
+        positive(members),
+        positive(targets),
+        positive(bytes),
+        positive(evidence),
+    )
 }
 fn mutation(key: u128, payload: MutationPayload) -> CommandMutation {
     CommandMutation::new(
@@ -68,7 +73,7 @@ fn original() -> CommandMutationGroup {
 fn admission_counts_original_aliases_primary_targets_and_utf8_reason_fields_at_exact_bounds() {
     let original = original();
     let saved = original.clone();
-    let policy = limits(3, 5, 8);
+    let policy = limits(3, 5, 8, 1);
     let demand = policy
         .check_group(&original)
         .expect("three submitted members, five target selections, eight reason bytes");
@@ -83,7 +88,7 @@ fn admission_counts_original_aliases_primary_targets_and_utf8_reason_fields_at_e
         "admission preserves contexts/order/alias and all payloads"
     );
     let first = original.mutations().first().expect("original assignment");
-    let single = limits(1, 2, 4)
+    let single = limits(1, 2, 4, 1)
         .check_mutation(first)
         .expect("single mutation demand uses the same exact units");
     assert_eq!(single.members(), 1);
@@ -94,7 +99,7 @@ fn admission_counts_original_aliases_primary_targets_and_utf8_reason_fields_at_e
 #[test]
 fn member_limit_precedes_per_member_target_and_reason_checks_without_deduplicating_aliases() {
     assert_eq!(
-        limits(2, 1, 1).check_group(&original()),
+        limits(2, 1, 1, 1).check_group(&original()),
         Err(Error::Members {
             maximum: 2,
             requested: 3
@@ -106,7 +111,7 @@ fn member_limit_precedes_per_member_target_and_reason_checks_without_deduplicati
 fn per_member_refusals_keep_exact_prior_counts_index_identity_and_unmultiplied_byte_components() {
     let original = original();
     assert_eq!(
-        limits(3, 2, 8).check_group(&original),
+        limits(3, 2, 8, 1).check_group(&original),
         Err(Error::Targets {
             maximum: 2,
             consumed: 2,
@@ -116,7 +121,7 @@ fn per_member_refusals_keep_exact_prior_counts_index_identity_and_unmultiplied_b
         })
     );
     assert_eq!(
-        limits(3, 5, 7).check_group(&original),
+        limits(3, 5, 7, 1).check_group(&original),
         Err(Error::ReasonBytes {
             maximum: 7,
             consumed: 4,
@@ -126,9 +131,14 @@ fn per_member_refusals_keep_exact_prior_counts_index_identity_and_unmultiplied_b
             command: CommandId::AssignMaterial
         })
     );
-    let big = Limits::new(NonZeroUsize::MAX, NonZeroUsize::MAX, NonZeroUsize::MAX)
-        .check_group(&original)
-        .expect("explicit platform-wide policy is preserved without narrowing");
+    let big = Limits::new(
+        NonZeroUsize::MAX,
+        NonZeroUsize::MAX,
+        NonZeroUsize::MAX,
+        NonZeroUsize::MAX,
+    )
+    .check_group(&original)
+    .expect("explicit platform-wide policy is preserved without narrowing");
     assert_eq!(big.reason_bytes(), 8);
 }
 
@@ -157,4 +167,99 @@ fn progress_preserves_phase_local_integer_fraction_and_original_member_without_c
     let ready = CommandProgress::new(Phase::ReadyToPublish, 1, positive(1), None)
         .expect("pre-effect phase data is not publication");
     assert_eq!(ready.member(), None);
+}
+
+#[test]
+fn known_measurement_evidence_cannot_bypass_the_explicit_admission_policy() {
+    let known = LengthDeclaration::new(LengthDeclarationDefinition {
+        id: id(20),
+        source: id(21),
+        state: LengthState::Known {
+            value: sc_units::Length::ZERO,
+            evidence: vec![id(22), id(23)],
+        },
+    })
+    .expect("two distinct actual submitted evidence references");
+    let request = mutation(
+        5,
+        MutationPayload::ChangeMeasurement(ChangeMeasurement::new(id(24), known)),
+    );
+    let saved = request.clone();
+    assert_eq!(
+        limits(1, 1, 1, 1).check_mutation(&request),
+        Err(Error::EvidenceReferences {
+            maximum: 1,
+            consumed: 0,
+            requested: 2,
+            index: 0,
+            command: CommandId::ChangeMeasurement,
+        })
+    );
+    let policy = limits(1, 1, 1, 2);
+    let demand = policy
+        .check_mutation(&request)
+        .expect("exact independent evidence bound");
+    assert_eq!(
+        (demand.members(), demand.targets(), demand.reason_bytes()),
+        (1, 1, 0)
+    );
+    assert_eq!(demand.evidence_references(), 2);
+    assert_eq!(policy.evidence_references(), positive(2));
+    assert_eq!(
+        request, saved,
+        "admission preserves the complete submitted declaration"
+    );
+}
+
+#[test]
+fn evidence_demand_counts_original_aliases_and_preserves_first_cumulative_excess() {
+    let known = LengthDeclaration::new(LengthDeclarationDefinition {
+        id: id(20),
+        source: id(21),
+        state: LengthState::Known {
+            value: sc_units::Length::ZERO,
+            evidence: vec![id(22), id(23)],
+        },
+    })
+    .expect("explicit distinct references");
+    let request = mutation(
+        5,
+        MutationPayload::ChangeMeasurement(ChangeMeasurement::new(id(24), known)),
+    );
+    let group = CommandMutationGroup::new(
+        CommandGroupId::from_entity_id(id(3)),
+        vec![request.clone(), request],
+    )
+    .expect("exact original alias is still submitted input");
+    assert_eq!(
+        limits(2, 2, 1, 3).check_group(&group),
+        Err(Error::EvidenceReferences {
+            maximum: 3,
+            consumed: 2,
+            requested: 2,
+            index: 1,
+            command: CommandId::ChangeMeasurement,
+        })
+    );
+    assert_eq!(
+        limits(2, 2, 1, 4)
+            .check_group(&group)
+            .expect("exact cumulative bound")
+            .evidence_references(),
+        4
+    );
+    assert_eq!(
+        limits(1, 1, 1, 1).check_group(&original()),
+        Err(Error::Members {
+            maximum: 1,
+            requested: 3
+        })
+    );
+    assert_eq!(
+        limits(3, 5, 8, 1)
+            .check_group(&original())
+            .expect("Unknown has no evidence vector")
+            .evidence_references(),
+        0
+    );
 }

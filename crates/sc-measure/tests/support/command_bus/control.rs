@@ -14,8 +14,13 @@ use sc_core::{
 };
 use std::{cell::RefCell, error::Error as StdError};
 
-fn policy(members: usize, targets: usize, bytes: usize) -> CommandOperationLimits {
-    CommandOperationLimits::new(capacity(members), capacity(targets), capacity(bytes))
+fn policy(members: usize, targets: usize, bytes: usize, evidence: usize) -> CommandOperationLimits {
+    CommandOperationLimits::new(
+        capacity(members),
+        capacity(targets),
+        capacity(bytes),
+        capacity(evidence),
+    )
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 struct Stop {
@@ -114,11 +119,11 @@ fn operation_policy_installs_once_and_missing_policy_never_blocks_authorized_pie
         control_error(&error),
         Some(&ControlError::LimitsNotInstalled)
     );
-    bus.install_operation_limits(policy(1, 2, 8))
+    bus.install_operation_limits(policy(1, 2, 8, 1))
         .expect("one trusted policy");
     assert!(bus.is_preview_available(CommandId::AddNotch));
     assert_eq!(
-        bus.install_operation_limits(policy(9, 9, 99)),
+        bus.install_operation_limits(policy(9, 9, 99, 1)),
         Err(ControlError::LimitsAlreadyInstalled)
     );
     let twice = group(800000, vec![single.clone(), single]);
@@ -153,7 +158,7 @@ fn target_and_reason_admission_refuse_before_lookup_authority_progress_or_any_ac
     let reads = Rc::clone(&host.reads);
     let mut bus = CommandBus::with_edit_capacity(owner, host, vec![], capacity(1))
         .expect("one accepted group");
-    bus.install_operation_limits(policy(2, 2, 3))
+    bus.install_operation_limits(policy(2, 2, 3, 1))
         .expect("explicit boundaries");
     let assignment = |selected, material| {
         MutationPayload::AssignMaterial(
@@ -572,4 +577,109 @@ fn unauthorized_requests_emit_no_progress_and_original_target_errors_keep_their_
     assert!(
         matches!(error,GroupError::Mutation {index:0,command:CommandId::AssignMaterial,issue,..} if matches!(*issue,sc_core::command::CommandPreviewError::MissingPiece {piece,index:0} if piece==id(799999)))
     );
+}
+
+#[test]
+fn evidence_admission_precedes_all_costly_entry_paths_and_leaves_refused_keys_available() {
+    use sc_core::{
+        command::ChangeMeasurement,
+        value::{LengthDeclaration, LengthState},
+    };
+    let owner = notch_preview::owner();
+    let design = owner.inputs().id();
+    let revision = owner.inputs().revision().clone();
+    let address = owner.inputs().structure().pieces().pieces().as_ptr();
+    let original = measurement_preview::original(&owner);
+    let mut definition = original.definition().clone();
+    definition.state = LengthState::Known {
+        value: sc_units::Length::ZERO,
+        evidence: vec![id(801010), id(801011)],
+    };
+    let replacement =
+        LengthDeclaration::new(definition).expect("two distinct submitted references");
+    let original_group = group(
+        801000,
+        vec![mutation(
+            design,
+            revision.clone(),
+            801000,
+            801001,
+            MutationPayload::ChangeMeasurement(ChangeMeasurement::new(id(1), replacement)),
+        )],
+    );
+    let host = Host::new(design);
+    let reads = Rc::clone(&host.reads);
+    let mut bus =
+        CommandBus::with_edit_history(owner, host, vec![], capacity(1), capacity(1), capacity(1))
+            .expect("one explicit authoring/history action");
+    bus.install_operation_limits(policy(1, 1, 1, 1))
+        .expect("independent evidence maximum1");
+    let observer = Observer::default();
+    let expected = ControlError::Input(LimitError::EvidenceReferences {
+        maximum: 1,
+        consumed: 0,
+        requested: 2,
+        index: 0,
+        command: CommandId::ChangeMeasurement,
+    });
+    let single = CommandRequest::Mutation(
+        original_group
+            .mutations()
+            .first()
+            .expect("nonempty original group")
+            .clone(),
+    );
+    let error = bus
+        .preview_with_progress(&single, &observer)
+        .expect_err("single input evidence excess");
+    assert_eq!(control_error(&error), Some(&expected));
+    let error = bus
+        .preview_group_with_progress(&original_group, &observer)
+        .expect_err("whole preview excess");
+    assert_eq!(control_error(&error), Some(&expected));
+    let error = bus
+        .commit_group_with_progress(&original_group, &observer)
+        .expect_err("new authoring excess");
+    assert_eq!(control_error(&error), Some(&expected));
+    let traversal = history_request(&original_group, revision.clone(), 801002, Direction::Undo);
+    let error = bus
+        .apply_history_with_progress(&traversal, &observer)
+        .expect_err("evidence before accepted-group lookup");
+    assert_eq!(control_error(&error), Some(&expected));
+    assert_eq!(
+        reads.get(),
+        0,
+        "all four entries admit before authority/private source work"
+    );
+    assert!(observer.events.borrow().is_empty());
+    let CommandResult::PieceList(list) = bus
+        .execute(&query(design, revision.clone(), QueryPayload::GetPieceList))
+        .expect("original untouched owner");
+    assert_eq!(list.pieces().as_ptr(), address);
+    assert_eq!(list.revision(), &revision);
+    let corrected = group(
+        801000,
+        vec![mutation(
+            design,
+            revision,
+            801000,
+            801001,
+            MutationPayload::ChangeMeasurement(ChangeMeasurement::new(id(1), original)),
+        )],
+    );
+    let accepted = bus
+        .commit_group(&corrected)
+        .expect("refusals booked no authoring key or capacity");
+    assert!(!accepted.is_replay());
+    assert_eq!(accepted.entry().sequence().to_string(), "1");
+    let undo = history_request(
+        &corrected,
+        accepted.entry().commit().revision().clone(),
+        801002,
+        Direction::Undo,
+    );
+    assert!(!bus
+        .apply_history(&undo)
+        .expect("refused history key/action capacity remained unused")
+        .is_replay());
 }

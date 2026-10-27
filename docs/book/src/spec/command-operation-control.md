@@ -7,7 +7,7 @@ cooperative atomic cancellation cover individual/group metadata previews, commit
 
 ## Explicit finite metadata admission
 
-CommandOperationLimits::new takes three explicit NonZeroUsize maxima. There is no guessed default.
+CommandOperationLimits::new takes four explicit NonZeroUsize maxima. There is no guessed default.
 check_mutation and check_group borrow original typed inputs and return CommandOperationDemand or
 the first CommandOperationLimitError. They perform no model, registry, authority or history lookup.
 
@@ -16,6 +16,7 @@ the first CommandOperationLimitError. They perform no model, registry, authority
 | members | every original submitted member, including an exact retry alias |
 | targets | one Measurement, selected Material Pieces, or one Notch-owning Piece |
 | reason_bytes | exact UTF-8 unresolved reason bytes for each proposed selected Piece assignment |
+| evidence_references | Known-state evidence references in each submitted Measurement replacement, including aliases |
 
 These are declared metadata input units. They are not observed CPU time, total model memory,
 temporary allocation peaks, numeric complexity, file/decompression bounds or geometry/solver work.
@@ -26,24 +27,40 @@ bytes; their submitted members still count. Admission supplies no handler availa
 // The host supplies all three validated positive maxima explicitly.
 let limits = CommandOperationLimits::new(
     maximum_members, maximum_metadata_targets, maximum_assignment_reason_bytes,
+    maximum_measurement_evidence_references,
 );
 let demand = limits.check_group(&group)?;
 let submitted_members = demand.members();
 let primary_target_selections = demand.targets();
 let proposed_assignment_reason_bytes = demand.reason_bytes();
+let proposed_measurement_evidence_references = demand.evidence_references();
 ```
 
 For example, assign the nonblank reason `é` to two Pieces, change one Measurement, then submit an
 exact alias of that first assignment. The three submitted members contain five target selections
 and eight proposed reason bytes: the reason has two UTF-8 bytes, copied into two proposed assignments
 per submitted assignment member. The alias still counts for input admission; runtime replay semantics
-remain separate. The native contract case admits exactly 3 members, 5 targets and 8 reason bytes.
+remain separate. The native contract case admits exactly 3 members, 5 targets, 8 reason bytes and no evidence references.
 
-Member-count excess is checked first. Then each original member checks targets before reason bytes.
+Member-count excess is checked first. Then each original member checks targets, reason bytes and
+evidence references in that order.
 Members retains maximum/requested counts. Targets retains maximum, preceding count, this member's
 count, original zero-based index and payload-derived command. ReasonBytes retains maximum, preceding
 bytes, selected copy count, exact bytes per copy, original index and command. The exact multiplicative
 components remain available even when a requested total would exceed the platform count range.
+EvidenceReferences retains the configured maximum, exact preceding count, this original member's
+count, index and command. For example, two references in one Known replacement and an exact alias
+have cumulative evidence demand4; maximum3 refuses at index1 with consumed2/requested2.
+
+Known-state evidence is counted by the original vector length, without copying, deduplication or
+source lookup. Assumed, Unknown, Preference and Derived replacements contribute no evidence-vector
+entries. This limit certifies neither existence nor truth of evidence. A corrected request may reuse
+the refused keys because admission adds no authoring/history record or effect. The native runtime
+case refuses this dimension on all four costly entry paths before any authority read or progress.
+
+This API admits already constructed typed inputs. It does not bound raw transport decoding, the
+initial LengthDeclaration structural constructor or allocation before the caller submits the input.
+Those ingress and whole-model dimensions remain separate work; no raw untrusted API is exposed here.
 
 The check compares against remaining room before adding or multiplying. It neither wraps, saturates,
 clips input nor silently deduplicates members. Original contexts, payloads, identities and order remain
@@ -61,11 +78,12 @@ let mut bus = CommandBus::with_edit_capacity(
 )?;
 bus.install_operation_limits(CommandOperationLimits::new(
     maximum_members, maximum_metadata_targets, maximum_assignment_reason_bytes,
+    maximum_measurement_evidence_references,
 ))?;
 let result = bus.commit_group_with_progress(&group, &observer)?;
 ```
 
-All four maxima in this example are host-chosen positive NonZeroUsize values. Installation changes
+All five maxima in this example are host-chosen positive NonZeroUsize values. Installation changes
 no model, grant, revision, reserve, audit or history. A second installation returns
 CommandControlError::LimitsAlreadyInstalled and retains the original policy. Compiler privacy also
 rejects direct policy reset. Missing policy returns LimitsNotInstalled on costly metadata paths.
@@ -130,8 +148,8 @@ Exact replay refreshes authority and emits Replaying before returning the origin
 that retrieval changes no state and does not undo its previously accepted effect. Replay neither
 advances audit sequence nor traverses history again.
 
-Seven native runtime-control cases plus the previous37 command-bus cases pass focused checks, with
-eight compiler privacy cases, strict selected lint and formatting. The four pure admission/fraction
-cases remain separately established. Full command integration and deeper source/allocation acceptance
+Eight native runtime-control cases plus the previous37 command-bus cases pass focused checks.
+Six pure admission/fraction cases and strict selected lint/formatting pass; the existing compiler
+privacy boundaries remain established, with the control privacy case rechecked for this change. Full command integration and deeper source/allocation acceptance
 remain separately owned. These input units do not establish total model/work/memory or future
-numeric/file/decompression/geometry/solver bounds; that remaining resource scope is G1-SLICE.6.8.2.
+numeric/file/decompression/geometry/solver bounds; that remaining resource scope is G1-SLICE.6.8.2.2.

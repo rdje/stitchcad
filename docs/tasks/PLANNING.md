@@ -8,18 +8,17 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D285 — restored revision reused by a different undo branch
-P1 runtime portion fixed0437 (G1-SLICE.6.7.1.3); persistence/reopen remains owned/pending in G1-SLICE.7.
-- [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py: pinned
-  native contract model reuses1 for distinct content and accepts old1, rc=0; diagnosis retained588.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:37 passed rc=0;
-  actual undo0/new branch2/next unused id/old1 refusal and ordered Undo/branch witnesses verified.
-- [x] NO REGRESSION: cargo test -p sc-core --doc command::bus:7 passed rc=0; strict selected Clippy/fmt rc=0.
-Storage must restore maximum-issued revision/audit sequence independently of noncanonical undo history.
-D283/D284 remain fixed; [whole correction/proofs](../history/stitchcad-devnotes-part581.md).
-
-D286 P2 fixed0437, owner G1-SLICE.6.7.1.3: three native ce5fce9 module/book intro clauses falsely said metadata publication/history pending.
-Scoped prior/current census3/0 rc=0; corrected actual metadata scope, native bus37/rendered publication verify it.
+## D287 — submitted Known-state Measurement evidence bypasses input limits
+P1 fixed0440, owner G1-SLICE.6.8.2.1: independent explicit evidence quota counts original vectors/aliases.
+- [x] ROOT CAUSE: cargo test -p sc-core --test command_control_contract known_measurement_evidence:
+  baseline0 passed/1 failed rc=101; prior native quotas admit two references as1 member/1 target/0 bytes.
+- [x] ADDRESSED: cargo test -p sc-core --test command_control_contract:6 passed rc=0; native bus45
+  passed rc=0; all four costly entries refuse evidence excess before authority/progress and leave keys unused.
+- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; control privacy1 passed rc=0.
+D288 P2 fixed0440 same owner: native stale sc-core package-description census1/0 rc=0; actual subset named.
+D285 runtime fixed0437; persistence/reopen issuance/order remains owned/pending in G1-SLICE.7.
+[Whole D285/D286 diagnosis and verified runtime/claim closure](../history/stitchcad-devnotes-part591.md).
+D283/D284 fixed; [whole correction/proofs](../history/stitchcad-devnotes-part581.md).
 
 ## Goal
 

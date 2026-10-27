@@ -174,3 +174,15 @@ Exact replay refreshes entry authority and emits Replaying without new effects. 
 reads require no policy. Native bus44/privacy8/lint/fmt pass, including observer revocation at Ready.
 Input counts and cooperative checkpoints do not prove total model/work/memory or wall-clock bounds;
 .6.8.2 owns the remaining resource implementation, .6.5.5/.6.9 deeper/full acceptance.
+
+## Measurement evidence admission0440
+
+answers: "are submitted Measurement evidence vectors covered by target counts?"
+
+D287 native baseline shows they are independent: a Known replacement carries two references while
+member/target/reason demand stays1/1/0. G1-SLICE.6.8.2.1 adds a fourth explicit positive host maximum
+and cumulative evidence-reference demand/refusal, including exact aliases. Preserve original vectors,
+counts and first member/index/command; compare remaining room before adding, without source lookup.
+All costly metadata entry paths share this admission before authority/model work. Refused keys remain
+unused. No evidence truth/registry grant is implied. This bounds already typed input, not raw decoding,
+initial construction, whole-model validation/cloning or retained-state memory; those remain separately owned.

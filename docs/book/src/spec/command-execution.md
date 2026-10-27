@@ -52,6 +52,7 @@ with host-chosen NonZeroUsize maxima:
 ```rust
 bus.install_operation_limits(CommandOperationLimits::new(
     maximum_members, maximum_metadata_targets, maximum_assignment_reason_bytes,
+    maximum_measurement_evidence_references,
 ))?;
 ```
 
@@ -532,5 +533,6 @@ separately owned; metadata history supplies no broader certificate.
 
 [Operation limits and progress](command-operation-control.md) describes installed immutable metadata
 input policy, actual pre-effect progress and atomic cooperative cancellation. The coupled bus now has
-44 focused native cases; eight compiler privacy checks also pass. Full integration remains deferred.
+45 focused native cases. Submitted Measurement evidence references have their own explicit quota;
+eight compiler privacy boundaries were previously checked, and control privacy is rechecked. Full integration remains deferred.
 
