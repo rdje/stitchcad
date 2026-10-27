@@ -3,109 +3,104 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0387 — append v2 history within working bounds
 
-
-
-
-
-
-
-
-## STITCHCAD-G1-0386 — borrow actual Hem depth and fold declarations
-
-- Original roles/canonical owner; formula depth requires actual Length parameter metadata, no value reads.
-- Explicit zero/logical folds/Profile retain intent; native4/lifetime1, lint/fmt/book/publication pass0.
-- D250132 unchanged; closed collections/0385/binding/release-input proof537. Layer offset borrows next.
+- Explicit-owner, source-pinned v2 raw capture; unchanged journaled installation and all old bytes/caps.
+-44 source records packed;17 transaction controls/native tar/offline recovery, retention/book checks pass0.
+- Live992 logical/3992152 decodedB/22 working; capacity decision owned before unsafe growth. D263 audit deferred.
+- Whole0386/range/sewing evidence538; scoped publication79/159 passes0. G1 remains6/18; no full CI claim.
 
 # Sealed archive — earlier slices
 
-| [part537](docs/history/stitchcad-devnotes-part537.md) | closed layer/Hem/0385/binding/release-input proof | 152 lines, 11222 bytes, sha256:f1742e06… |
+| [part538](docs/history/stitchcad-devnotes-part538.md) | whole0386/retirement and original range/sewing scopes | 81 lines, 6016 bytes, sha256:692babc5… |
 
-| [part536](docs/history/stitchcad-devnotes-part536.md) | whole0384/retirement and historical fixture plans | 102 lines, 7800 bytes, sha256:2d552df5… |
+| [part537](docs/history/window21.md#stitchcad-devnotes-part537md) | closed layer/Hem/0385/binding/release-input proof | 152 lines, 11222 bytes, sha256:f1742e06… |
 
-| [part535](docs/history/stitchcad-devnotes-part535.md) | whole0383/retirement/command-input lesson | 46 lines, 3650 bytes, sha256:ed44f60b… |
+| [part536](docs/history/window21.md#stitchcad-devnotes-part536md) | whole0384/retirement and historical fixture plans | 102 lines, 7800 bytes, sha256:2d552df5… |
 
-| [part534](docs/history/stitchcad-devnotes-part534.md) | whole0382/retirement and original pair-member scope | 55 lines, 4306 bytes, sha256:d6be5ad4… |
+| [part535](docs/history/window21.md#stitchcad-devnotes-part535md) | whole0383/retirement/command-input lesson | 46 lines, 3650 bytes, sha256:ed44f60b… |
 
-| [part533](docs/history/stitchcad-devnotes-part533.md) | whole0381/D261 and historical reference plans | 129 lines, 9600 bytes, sha256:4250bc7e… |
+| [part534](docs/history/window21.md#stitchcad-devnotes-part534md) | whole0382/retirement and original pair-member scope | 55 lines, 4306 bytes, sha256:d6be5ad4… |
 
-| [part532](docs/history/stitchcad-devnotes-part532.md) | closed notion/Closure subtree,0380/retirement | 55 lines, 4128 bytes, sha256:ecb5ac6a… |
+| [part533](docs/history/window21.md#stitchcad-devnotes-part533md) | whole0381/D261 and historical reference plans | 129 lines, 9600 bytes, sha256:4250bc7e… |
 
-| [part531](docs/history/stitchcad-devnotes-part531.md) | whole0379/retirement/fixtures/ontology/authority | 140 lines, 10576 bytes, sha256:0fbcc2a4… |
+| [part532](docs/history/window21.md#stitchcad-devnotes-part532md) | closed notion/Closure subtree,0380/retirement | 55 lines, 4128 bytes, sha256:ecb5ac6a… |
 
-| [part530](docs/history/stitchcad-devnotes-part530.md) | whole0378/retirement/signatures/authority lesson | 105 lines, 7352 bytes, sha256:b62aecf4… |
+| [part531](docs/history/window21.md#stitchcad-devnotes-part531md) | whole0379/retirement/fixtures/ontology/authority | 140 lines, 10576 bytes, sha256:0fbcc2a4… |
 
-| [part529](docs/history/stitchcad-devnotes-part529.md) | whole0377/D260 and historical provider proof | 80 lines, 5602 bytes, sha256:b1260291… |
+| [part530](docs/history/window21.md#stitchcad-devnotes-part530md) | whole0378/retirement/signatures/authority lesson | 105 lines, 7352 bytes, sha256:b62aecf4… |
 
-| [part528](docs/history/stitchcad-devnotes-part528.md) | closed Pocket scope/0376/report retirement | 58 lines, 4681 bytes, sha256:75353404… |
+| [part529](docs/history/window21.md#stitchcad-devnotes-part529md) | whole0377/D260 and historical provider proof | 80 lines, 5602 bytes, sha256:b1260291… |
 
-| [part527](docs/history/stitchcad-devnotes-part527.md) | whole0375 and D258/D259 anchor-cause reports | 63 lines, 4891 bytes, sha256:0978063c… |
+| [part528](docs/history/window21.md#stitchcad-devnotes-part528md) | closed Pocket scope/0376/report retirement | 58 lines, 4681 bytes, sha256:75353404… |
 
-| [part526](docs/history/stitchcad-devnotes-part526.md) | closed identity/sewing scopes,0374 and recipe-phase proof | 178 lines, 12535 bytes, sha256:0385cb8d… |
+| [part527](docs/history/window21.md#stitchcad-devnotes-part527md) | whole0375 and D258/D259 anchor-cause reports | 63 lines, 4891 bytes, sha256:0978063c… |
 
-| [part525](docs/history/stitchcad-devnotes-part525.md) | closed0370–0373 sewing subtree and0373 | 55 lines, 4220 bytes, sha256:a40a0898… |
+| [part526](docs/history/window21.md#stitchcad-devnotes-part526md) | closed identity/sewing scopes,0374 and recipe-phase proof | 178 lines, 12535 bytes, sha256:0385cb8d… |
 
-| [part524](docs/history/stitchcad-devnotes-part524.md) | whole0372 and historical ambiguity proof | 70 lines, 5073 bytes, sha256:91e9eb9e… |
+| [part525](docs/history/window21.md#stitchcad-devnotes-part525md) | closed0370–0373 sewing subtree and0373 | 55 lines, 4220 bytes, sha256:a40a0898… |
 
-| [part523](docs/history/stitchcad-devnotes-part523.md) | whole0371 and historical reserved-name proof | 77 lines, 6068 bytes, sha256:38a8979a… |
+| [part524](docs/history/window21.md#stitchcad-devnotes-part524md) | whole0372 and historical ambiguity proof | 70 lines, 5073 bytes, sha256:91e9eb9e… |
 
-| [part522](docs/history/stitchcad-devnotes-part522.md) | whole0370 and historical static-name proof | 98 lines, 7847 bytes, sha256:a6509185… |
+| [part523](docs/history/window21.md#stitchcad-devnotes-part523md) | whole0371 and historical reserved-name proof | 77 lines, 6068 bytes, sha256:38a8979a… |
 
-| [part521](docs/history/stitchcad-devnotes-part521.md) | whole0369 topology and historical header proof | 67 lines, 5154 bytes, sha256:55df4944… |
+| [part522](docs/history/window21.md#stitchcad-devnotes-part522md) | whole0370 and historical static-name proof | 98 lines, 7847 bytes, sha256:a6509185… |
 
-| [part520](docs/history/stitchcad-devnotes-part520.md) | closed0346–0368 subtree,0368 and static sequence | 167 lines, 10745 bytes, sha256:da4ff17b… |
+| [part521](docs/history/window21.md#stitchcad-devnotes-part521md) | whole0369 topology and historical header proof | 67 lines, 5154 bytes, sha256:55df4944… |
 
-| [part519](docs/history/stitchcad-devnotes-part519.md) | whole0367 selected Design namespace | 40 lines, 3217 bytes, sha256:de4172ed… |
+| [part520](docs/history/window21.md#stitchcad-devnotes-part520md) | closed0346–0368 subtree,0368 and static sequence | 167 lines, 10745 bytes, sha256:da4ff17b… |
 
-| [part518](docs/history/stitchcad-devnotes-part518.md) | whole0366 and historical static review proofs | 92 lines, 7752 bytes, sha256:86ab15c3… |
+| [part519](docs/history/window21.md#stitchcad-devnotes-part519md) | whole0367 selected Design namespace | 40 lines, 3217 bytes, sha256:de4172ed… |
 
-| [part517](docs/history/stitchcad-devnotes-part517.md) | whole0365 and historical coupled-static proofs | 113 lines, 8990 bytes, sha256:c55068eb… |
+| [part518](docs/history/window21.md#stitchcad-devnotes-part518md) | whole0366 and historical static review proofs | 92 lines, 7752 bytes, sha256:86ab15c3… |
 
-| [part516](docs/history/stitchcad-devnotes-part516.md) | whole0364 source subtree/D257 and historical checked-recipe proofs | 127 lines, 9910 bytes, sha256:6b988ecb… |
+| [part517](docs/history/window21.md#stitchcad-devnotes-part517md) | whole0365 and historical coupled-static proofs | 113 lines, 8990 bytes, sha256:c55068eb… |
 
-| [part515](docs/history/stitchcad-devnotes-part515.md) | whole0363 actual source-host task, lesson and ledger | 48 lines, 4124 bytes, sha256:2015c9a0… |
+| [part516](docs/history/window21.md#stitchcad-devnotes-part516md) | whole0364 source subtree/D257 and historical checked-recipe proofs | 127 lines, 9910 bytes, sha256:6b988ecb… |
 
-| [part514](docs/history/stitchcad-devnotes-part514.md) | whole0362 and historical wanted proofs | 86 lines, 6912 bytes, sha256:8e9e8d7c… |
+| [part515](docs/history/window21.md#stitchcad-devnotes-part515md) | whole0363 actual source-host task, lesson and ledger | 48 lines, 4124 bytes, sha256:2015c9a0… |
 
-| [part513](docs/history/stitchcad-devnotes-part513.md) | whole0361/D256, historical call-lookup and handoff/journal proofs | 119 lines, 9481 bytes, sha256:97dc7fab… |
+| [part514](docs/history/window21.md#stitchcad-devnotes-part514md) | whole0362 and historical wanted proofs | 86 lines, 6912 bytes, sha256:8e9e8d7c… |
 
-| [part512](docs/history/stitchcad-devnotes-part512.md) | whole0360 and historical builtin proofs | 74 lines, 6227 bytes, sha256:45321f24… |
+| [part513](docs/history/window21.md#stitchcad-devnotes-part513md) | whole0361/D256, historical call-lookup and handoff/journal proofs | 119 lines, 9481 bytes, sha256:97dc7fab… |
 
-| [part511](docs/history/stitchcad-devnotes-part511.md) | whole0359/D255 and historical operator proofs | 86 lines, 6879 bytes, sha256:90f06614… |
+| [part512](docs/history/window21.md#stitchcad-devnotes-part512md) | whole0360 and historical builtin proofs | 74 lines, 6227 bytes, sha256:45321f24… |
 
-| [part510](docs/history/stitchcad-devnotes-part510.md) | whole0358 and historical ordered-name/routing proofs | 101 lines, 8076 bytes, sha256:ed543243… |
+| [part511](docs/history/window21.md#stitchcad-devnotes-part511md) | whole0359/D255 and historical operator proofs | 86 lines, 6879 bytes, sha256:90f06614… |
 
-| [part509](docs/history/stitchcad-devnotes-part509.md) | whole0357 and historical name-read/SizeSet milestone proofs | 147 lines, 11851 bytes, sha256:f2a5dd2d… |
+| [part510](docs/history/window21.md#stitchcad-devnotes-part510md) | whole0358 and historical ordered-name/routing proofs | 101 lines, 8076 bytes, sha256:ed543243… |
 
-| [part508](docs/history/stitchcad-devnotes-part508.md) | whole0356 core-host and historical phase guards | 76 lines, 6172 bytes, sha256:b7b854f3… |
+| [part509](docs/history/window21.md#stitchcad-devnotes-part509md) | whole0357 and historical name-read/SizeSet milestone proofs | 147 lines, 11851 bytes, sha256:f2a5dd2d… |
 
-| [part507](docs/history/stitchcad-devnotes-part507.md) | whole0355 subtree and historical declaration proofs | 164 lines, 11748 bytes, sha256:21c5f7e5… |
+| [part508](docs/history/window21.md#stitchcad-devnotes-part508md) | whole0356 core-host and historical phase guards | 76 lines, 6172 bytes, sha256:b7b854f3… |
 
-| [part506](docs/history/stitchcad-devnotes-part506.md) | whole0354 Material collection/assignment task, lesson and ledger | 47 lines, 4192 bytes, sha256:1a7cda6b… |
+| [part507](docs/history/window21.md#stitchcad-devnotes-part507md) | whole0355 subtree and historical declaration proofs | 164 lines, 11748 bytes, sha256:21c5f7e5… |
 
-| [part505](docs/history/stitchcad-devnotes-part505.md) | whole0353 Material and historical syntax milestone matrix | 80 lines, 7550 bytes, sha256:0d22418e… |
+| [part506](docs/history/window21.md#stitchcad-devnotes-part506md) | whole0354 Material collection/assignment task, lesson and ledger | 47 lines, 4192 bytes, sha256:1a7cda6b… |
 
-| [part504](docs/history/stitchcad-devnotes-part504.md) | whole0352/D228 and historical coupled-input book proofs | 129 lines, 10712 bytes, sha256:b6281757… |
+| [part505](docs/history/window21.md#stitchcad-devnotes-part505md) | whole0353 Material and historical syntax milestone matrix | 80 lines, 7550 bytes, sha256:0d22418e… |
 
-| [part503](docs/history/stitchcad-devnotes-part503.md) | whole0351 measurement/Ease subtree, lesson and ledger | 52 lines, 4373 bytes, sha256:53cdcb25… |
+| [part504](docs/history/window21.md#stitchcad-devnotes-part504md) | whole0352/D228 and historical coupled-input book proofs | 129 lines, 10712 bytes, sha256:b6281757… |
 
-| [part502](docs/history/stitchcad-devnotes-part502.md) | whole0350/D254 and historical Ease book proofs | 75 lines, 6228 bytes, sha256:9c0404d2… |
+| [part503](docs/history/window21.md#stitchcad-devnotes-part503md) | whole0351 measurement/Ease subtree, lesson and ledger | 52 lines, 4373 bytes, sha256:53cdcb25… |
 
-| [part501](docs/history/stitchcad-devnotes-part501.md) | whole0349 Design parameter task, lesson and ledger | 48 lines, 4317 bytes, sha256:4731b306… |
+| [part502](docs/history/window21.md#stitchcad-devnotes-part502md) | whole0350/D254 and historical Ease book proofs | 75 lines, 6228 bytes, sha256:9c0404d2… |
 
-| [part500](docs/history/stitchcad-devnotes-part500.md) | whole0348 document/D253 and historical book input proofs | 139 lines, 10682 bytes, sha256:3da40349… |
+| [part501](docs/history/window21.md#stitchcad-devnotes-part501md) | whole0349 Design parameter task, lesson and ledger | 48 lines, 4317 bytes, sha256:4731b306… |
 
-| [part499](docs/history/stitchcad-devnotes-part499.md) | whole0347 structural Design task, lesson and ledger | 47 lines, 4093 bytes, sha256:ad9906e3… |
+| [part500](docs/history/window21.md#stitchcad-devnotes-part500md) | whole0348 document/D253 and historical book input proofs | 139 lines, 10682 bytes, sha256:3da40349… |
 
-| [part498](docs/history/stitchcad-devnotes-part498.md) | whole0346 canonical inputs/D251-D252 task, lesson and ledger | 61 lines, 5171 bytes, sha256:56d7ea2b… |
+| [part499](docs/history/window21.md#stitchcad-devnotes-part499md) | whole0347 structural Design task, lesson and ledger | 47 lines, 4093 bytes, sha256:ad9906e3… |
 
-| [part497](docs/history/stitchcad-devnotes-part497.md) | whole0345 Piece inventory/D248-D249 task, lesson and ledger | 63 lines, 5409 bytes, sha256:fab0f6ef… |
+| [part498](docs/history/window21.md#stitchcad-devnotes-part498md) | whole0346 canonical inputs/D251-D252 task, lesson and ledger | 61 lines, 5171 bytes, sha256:56d7ea2b… |
 
-| [part496](docs/history/stitchcad-devnotes-part496.md) | whole retention subtree/D246-D247/0344 lesson and ledger | 106 lines, 8392 bytes, sha256:dbd95028… |
+| [part497](docs/history/window21.md#stitchcad-devnotes-part497md) | whole0345 Piece inventory/D248-D249 task, lesson and ledger | 63 lines, 5409 bytes, sha256:fab0f6ef… |
 
-| [part495](docs/history/stitchcad-devnotes-part495.md) | whole prior closures/0343 migration task, lesson and ledger | 93 lines, 7573 bytes, sha256:90276b75… |
+| [part496](docs/history/window21.md#stitchcad-devnotes-part496md) | whole retention subtree/D246-D247/0344 lesson and ledger | 106 lines, 8392 bytes, sha256:dbd95028… |
 
-| [part494](docs/history/stitchcad-devnotes-part494.md) | whole0339–0342 transition receipts/task/lessons | 265 lines, 17959 bytes, sha256:9bdbdd08… |
+| [part495](docs/history/window21.md#stitchcad-devnotes-part495md) | whole prior closures/0343 migration task, lesson and ledger | 93 lines, 7573 bytes, sha256:90276b75… |
+
+| [part494](docs/history/window21.md#stitchcad-devnotes-part494md) | whole0339–0342 transition receipts/task/lessons | 265 lines, 17959 bytes, sha256:9bdbdd08… |
 
 | [part493](docs/history/window20.md#stitchcad-devnotes-part493md) | whole0338 ledger/task and prior lesson/receipt | 46 lines, 3481 bytes, sha256:565061ce… |
 

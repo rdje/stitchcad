@@ -1,4 +1,4 @@
-"""Prepare a source-pinned flat-v2 candidate; live installation is a separate guarded phase."""
+"""Prepare source-pinned v2 transition/append candidates; installation stays separately guarded."""
 import argparse
 import datetime
 import gzip
@@ -6,6 +6,7 @@ import hashlib
 import io
 import json
 from pathlib import Path
+import re
 import runpy
 import subprocess
 import sys
@@ -109,6 +110,17 @@ def prepare(work):
                                       env=reader['metadata_environment'](ROOT)).decode().strip()
     datetime.date.fromisoformat(created)
     files = candidate_files(records, backings, catalogs, revision, created)
+    commands = [
+        ['verify-retention'], ['prove-source', Path(next(iter(json.loads(files[MASTER])['windows']))).stem],
+        ['prove-source', 'window16'],
+    ]
+    write_prepared(work, profile, reader, sources, revision, pressure, original, files, records,
+                   backings, commands, len(catalogs))
+
+
+def write_prepared(work, profile, reader, sources, revision, pressure, original, files, records,
+                   backings, commands, legacy_catalogs, extra_report=None):
+    """Share the original fully planned candidate writes and exact-byte proofs between modes."""
     candidate = work / 'candidate'
     source_file = work / 'source.json'
     report_file = work / 'prepared.json'
@@ -134,10 +146,6 @@ def prepare(work):
         stream.write(document(audit))
     assert reader['inventory'](candidate)[0] == records
     assert reader['backing_inventory'](candidate) == backings
-    commands = [
-        ['verify-retention'], ['prove-source', Path(next(iter(json.loads(files[MASTER])['windows']))).stem],
-        ['prove-source', 'window16'],
-    ]
     for operation in commands:
         profile['plan_producer'](ROOT, sources=(*sources, *(candidate / name for name in files)))
         subprocess.run([sys.executable, '-I', '-B', str(READER), '--root', str(candidate), *operation],
@@ -146,20 +154,88 @@ def prepare(work):
     assert all((ROOT / path).read_bytes() == data for path, data in original.items())
     report = {'source_revision': revision, 'candidate_pressure': reader['inventory'](candidate)[1],
               'logical_records': len(records), 'original_backings': len(backings),
-              'legacy_catalogs': len(catalogs), 'live_installed': False}
+              'legacy_catalogs': legacy_catalogs, 'live_installed': False}
+    report.update(extra_report or {})
     profile['plan_producer'](ROOT, **plan)
     with report_file.open('xb') as stream:
         stream.write(document(report))
     print(json.dumps(report, sort_keys=True))
 
 
+def append_files(original, master, names, revision, created, owner):
+    """Pure v2 formatter: pack the complete committed raw snapshot; retain old windows byte-exact."""
+    assert master['version'] == 2 and len(master['windows']) < 16, 'v2 append needs an active window slot'
+    assert 2 <= len(names) <= 256, 'append needs two or more bounded committed raw records'
+    files = dict(original)
+    items = [(name, files.pop(name), 'record') for name in sorted(names)]
+    packed = packet(items)
+    assert packed == packet(items), 'append formatter is not reproducible'
+    number = max(int(Path(name).stem.removeprefix('window')) for name in master['windows']) + 1
+    window = 'window%d' % number
+    manifest_path = '.doctrine/history_archive/' + window + '.json'
+    catalog = 'docs/history/' + window + '.md'
+    payload = 'docs/history/payloads/' + digest(packed) + '.tar.gz'
+    assert not {manifest_path, catalog, payload} & set(original), 'append destination already exists'
+    manifest = {
+        'version': 2, 'id': window, 'source_revision': revision,
+        'created': created, 'owner': owner,
+        'reason': 'Committed raw-record append; old windows and all independent bounds remain unchanged.',
+        'payload': payload, 'payload_sha256': digest(packed), 'catalog': catalog,
+        'members': [identity(name, data, kind) for name, data, kind in items],
+    }
+    text = '# Retained history — window %d\n\nSource `%s`; owner `%s`.\n\n' % (number, revision, owner)
+    text += 'Full-file identities are in the manifest; original bytes and logical addresses stay immutable.\n'
+    text += 'Use the published list/read/materialize commands; ordinary retrieval is offline.\n\n'
+    for name, _data, _kind in items:
+        text += '### %s\n\n' % Path(name).name
+    updated = dict(master, windows=[*master['windows'], manifest_path])
+    files.update({MASTER: document(updated), manifest_path: document(manifest),
+                  catalog: text.encode(), payload: packed})
+    assert all(files[name] == data for name, data in original.items() if name != MASTER and name not in names)
+    return files, window
+
+
+def append(work, owner):
+    """Prepare current committed v2 raw records for the existing journaled installer, without live writes."""
+    assert isinstance(owner, str) and re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,159}', owner), 'explicit task owner required'
+    profile = runpy.run_path(str(PROFILE))
+    profile['plan_producer'](ROOT, sources=(Path(__file__), READER, PROFILE), directories=(work,))
+    reader = runpy.run_path(str(READER))
+    sources = (Path(__file__), *reader['backing_sources'](ROOT, profile))
+    profile['plan_producer'](ROOT, sources=sources, directories=(work,))
+    assert not work.exists(), 'fresh append workspace required'
+    revision = reader['_head_revision'](ROOT)
+    master = json.loads((ROOT / MASTER).read_bytes())
+    assert master['version'] == 2, 'append requires a v2 source'
+    records, pressure = reader['inventory'](ROOT)
+    original = {path.relative_to(ROOT).as_posix(): path.read_bytes() for path in sources
+                if path.is_relative_to(ROOT / 'docs/history') or path.is_relative_to(ROOT / '.doctrine/history_archive')}
+    for path, data in original.items():
+        bound = 160000 if path.endswith('.md') else reader['_backing_limit'](path)
+        assert reader['_git_blob'](ROOT, revision, path, bound) == data, 'source drift: ' + path
+    names = reader['_git_paths'](ROOT, revision)
+    created = subprocess.check_output(['git', '-C', str(ROOT), 'show', '-s', '--format=%cs', revision],
+                                      env=reader['metadata_environment'](ROOT)).decode().strip()
+    datetime.date.fromisoformat(created)
+    files, window = append_files(original, master, names, revision, created, owner)
+    backings = reader['backing_inventory'](ROOT)
+    write_prepared(work, profile, reader, sources, revision, pressure, original, files, records,
+                   backings, [['verify-retention'], ['prove-source', window]], len(master['legacy_catalogs']),
+                   {'new_window': window, 'packed_records': len(names)})
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('operation', choices=['prepare'])
+    parser.add_argument('operation', choices=['prepare', 'append'])
     parser.add_argument('workspace', help='fresh repository-relative target/ directory')
+    parser.add_argument('--owner', help='explicit owning task leaf for a v2 append')
     args = parser.parse_args()
     assert args.workspace.startswith('target/') and '..' not in Path(args.workspace).parts
-    prepare(ROOT / args.workspace)
+    if args.operation == 'append':
+        append(ROOT / args.workspace, args.owner)
+    else:
+        assert args.owner is None, 'owner applies only to append'
+        prepare(ROOT / args.workspace)
 
 
 if __name__ == '__main__':

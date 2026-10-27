@@ -3,89 +3,93 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual Hem depth and fold roles
+## _(2026-10-27 UTC)_ — bounded v2 history append
 
-0386 borrows original Hem depth/fold roles and the actual canonical owner after whole-root validation.
-Formula depth joins actual Design parameter/Length metadata; explicit zero, logical folds and Profile
-origins retain intent. Derived/Unknown remain unread; no current geometry or evaluated depth proof.
-Native4/lifetime1, strict core/affected-measure lint/fmt/book/publication79/159 pass0; D250132 exact rows.
-Original declaration/current-validator bytes unchanged.537 retains closed collections/0385/binding/
-release-input lessons in6 exact Git spans0. Promotion declined: settled metadata/physical boundaries.
-Layer offset-operation borrows next; full Design/global/physical/integration/CI remain separate.
+0387 fixes D262: the v1-only preparer could not pack committed raw v2 records at the working64 cap.
+Append requires an explicit leaf/fresh workspace and exact committed archive snapshot; all prior
+windows and legacy bytes stay fixed.44 raw records become21 through the unchanged journaled installer.
+991 prior logical/33 backing bytes exact;17 transaction controls/native tar/offline recovery pass0.
+Restored538 yields992 logical/3992152 decodedB/22 working;7848B remains under the unchanged4000000 cap.
+Book/publication79/159 and6 Git spans pass0. Promotion: bounded-v2-append section in the history decision.
+P1 .6.4.5.capacity owns retention before unsafe growth; P3 D263 helper authority remains a later audit.
+No full producer/integration/CI verdict is claimed. Product layer-offset views follow while capacity permits.
 
-[Complete Hem collection lesson](docs/history/stitchcad-devnotes-part537.md) retains
+[Complete Hem declaration lesson](docs/history/stitchcad-devnotes-part538.md) retains
 its original scope, checks and promotion decision.
 
-[Complete layer Material lesson](docs/history/stitchcad-devnotes-part536.md) retains
+[Complete Hem collection lesson](docs/history/window21.md#stitchcad-devnotes-part537md) retains
 its original scope, checks and promotion decision.
 
-[Complete layer inventory lesson](docs/history/stitchcad-devnotes-part535.md) retains
+[Complete layer Material lesson](docs/history/window21.md#stitchcad-devnotes-part536md) retains
 its original scope, checks and promotion decision.
 
-[Complete current layer/Hem lesson](docs/history/stitchcad-devnotes-part534.md) retains
+[Complete layer inventory lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains
 its original scope, checks and promotion decision.
 
-[Complete D261 Hem cause lesson](docs/history/stitchcad-devnotes-part533.md) retains
+[Complete current layer/Hem lesson](docs/history/window21.md#stitchcad-devnotes-part534md) retains
 its original scope, checks and promotion decision.
 
-[Complete Closure declaration lesson](docs/history/stitchcad-devnotes-part532.md) retains
+[Complete D261 Hem cause lesson](docs/history/window21.md#stitchcad-devnotes-part533md) retains
 its original scope, checks and promotion decision.
 
-[Complete Closure collection lesson](docs/history/stitchcad-devnotes-part531.md) retains
+[Complete Closure declaration lesson](docs/history/window21.md#stitchcad-devnotes-part532md) retains
 its original scope, checks and promotion decision.
 
-[Complete notion collection lesson](docs/history/stitchcad-devnotes-part530.md) retains
+[Complete Closure collection lesson](docs/history/window21.md#stitchcad-devnotes-part531md) retains
 its original scope, checks and promotion decision.
 
-[Complete D260 Closure-cause lesson](docs/history/stitchcad-devnotes-part529.md) retains
+[Complete notion collection lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains
 its original scope, checks and promotion decision.
 
-[Complete Pocket collection/component lesson](docs/history/stitchcad-devnotes-part528.md) retains
+[Complete D260 Closure-cause lesson](docs/history/window21.md#stitchcad-devnotes-part529md) retains
 its original scope, checks and promotion decision.
 
-[Complete D258/D259 anchor-cause lesson](docs/history/stitchcad-devnotes-part527.md) retains
+[Complete Pocket collection/component lesson](docs/history/window21.md#stitchcad-devnotes-part528md) retains
 its original scope, checks and promotion decision.
 
-[Complete sewing-component acceptance lesson](docs/history/stitchcad-devnotes-part526.md) retains
+[Complete D258/D259 anchor-cause lesson](docs/history/window21.md#stitchcad-devnotes-part527md) retains
 its original scope, checks and promotion decision.
 
-[Complete current sewing-source lesson](docs/history/stitchcad-devnotes-part525.md) retains
+[Complete sewing-component acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part526md) retains
 its original scope, checks and promotion decision.
 
-[Complete private sewing/input lesson](docs/history/stitchcad-devnotes-part524.md) retains
+[Complete current sewing-source lesson](docs/history/window21.md#stitchcad-devnotes-part525md) retains
 its original scope, checks and promotion decision.
 
-[Complete amount-declaration lesson](docs/history/stitchcad-devnotes-part523.md) retains
+[Complete private sewing/input lesson](docs/history/window21.md#stitchcad-devnotes-part524md) retains
 its original scope, checks and promotion decision.
 
-[Complete current-sewing graph lesson](docs/history/stitchcad-devnotes-part522.md) retains
+[Complete amount-declaration lesson](docs/history/window21.md#stitchcad-devnotes-part523md) retains
 its original scope, checks and promotion decision.
 
-[Complete combined-topology lesson](docs/history/stitchcad-devnotes-part521.md) retains
+[Complete current-sewing graph lesson](docs/history/window21.md#stitchcad-devnotes-part522md) retains
 its original scope, checks and promotion decision.
 
-[Complete input-composition acceptance lesson](docs/history/stitchcad-devnotes-part520.md) retains
+[Complete combined-topology lesson](docs/history/window21.md#stitchcad-devnotes-part521md) retains
 its original scope, checks and promotion decision.
 
-[Complete selected-input namespace lesson](docs/history/stitchcad-devnotes-part519.md) retains
+[Complete input-composition acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part520md) retains
 its original scope, checks and promotion decision.
 
-[Complete authored-reference lesson](docs/history/stitchcad-devnotes-part518.md) retains
+[Complete selected-input namespace lesson](docs/history/window21.md#stitchcad-devnotes-part519md) retains
 its original scope, checks and promotion decision.
 
-[Complete private Design-input composition lesson](docs/history/stitchcad-devnotes-part517.md) retains
+[Complete authored-reference lesson](docs/history/window21.md#stitchcad-devnotes-part518md) retains
 its original scope, checks and promotion decision.
 
-[Complete native authority review lesson](docs/history/stitchcad-devnotes-part530.md) retains
+[Complete private Design-input composition lesson](docs/history/window21.md#stitchcad-devnotes-part517md) retains
 its original scope, checks and promotion decision.
 
-[Complete authorization/scope lessons](docs/history/stitchcad-devnotes-part531.md) retain
+[Complete native authority review lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains
+its original scope, checks and promotion decision.
+
+[Complete authorization/scope lessons](docs/history/window21.md#stitchcad-devnotes-part531md) retain
 their original scopes, checks and promotion decisions.
 
-[Complete command-input lesson](docs/history/stitchcad-devnotes-part535.md) retains
+[Complete command-input lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains
 its original scope, checks and promotion decision.
 
-[Complete release-input/approval lessons](docs/history/stitchcad-devnotes-part537.md) retain
+[Complete release-input/approval lessons](docs/history/window21.md#stitchcad-devnotes-part537md) retain
 their original scopes, checks and promotion decisions.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs

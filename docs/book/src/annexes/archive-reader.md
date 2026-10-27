@@ -118,3 +118,15 @@ still rejects the missing public read. Legacy catalogs and non-changelog ledger 
 The commands above describe the one-time v1 transition: preparation requires a v1 source and a fresh
 workspace. Recovery requires its original source HEAD and recognized archive bytes. Later records
 or commits intentionally refuse that rollback path; retained original trees remain evidence.
+
+For a v2 append, commit all raw source records first and keep the source within the working bounds.
+Use a fresh workspace and the actual owning leaf:
+
+```bash
+python3 -I -B docs/tasks/artifacts/history_archive/v2_migration.py append target/history-v2-append --owner G1-SLICE.6.4.5.3.d.2.a
+python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py install target/history-v2-append
+```
+
+Preparation packs the complete committed raw snapshot and preserves every old window byte.
+The same idle-reader, recovery and retained-backup rules apply. Catalog headings link records;
+full identities remain in manifests. Packing grants no additional aggregate history capacity.

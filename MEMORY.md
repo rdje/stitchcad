@@ -2,10 +2,11 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
-- Active next: G1-SLICE.6.4.5.3.d.2 in docs/tasks/G1-SLICE.md.
-- Next: borrowed actual layer offset-operation/source intent; preserve existing recipe/G2/G3/scope owners.
-- 0386 borrows original Hem depth/fold/current canonical roles; actual Length parameter metadata,
-  explicit zero/Unknown/Derived/logical/Profile intent retained. Native4/lifetime1/lint/fmt/book0;537.
-- G1still6/18; full Design/execution/physical/integration/CI unverified. D250132 baseline rows repair
-  after .6.9/before integration; D154 ordinal gap open under .5b.4c. D261 fixed0381, retained533.
-- No director decision pending; finish0386 commit workflow before next leaf.
+- Completed0387: D262 bounded v2 append installed window21; all44 source records and old backings exact.
+- Live992 records,22 working,3992152/4000000 decodedB;7848B remains. Caps and reader unchanged.
+- New P1 G1-SLICE.6.4.5.capacity owns retention before unsafe archive growth; never raise caps to land content.
+- Backups target/history-v2-append-0387/installation/backup and original0343 backup retained. Source-bound
+  recovery now intentionally refuses later draft538/HEAD drift. Do not replay old capture against new HEAD.
+- Next .6.4.5.3.d.2.b actual layer-offset borrows, then .e focused component acceptance if capacity permits.
+- P3 D263 helper/CHANGELOG fixture source authority: .f.fixture-verification after .6.9 before integration/push.
+- G1still6/18; D250132 vocabulary after .6.9; D154 open .5b.4c; full integration/CI deferred.

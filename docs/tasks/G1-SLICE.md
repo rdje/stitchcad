@@ -81,13 +81,13 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.3a`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.3b`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.3c`
   Status: `done`
-  Goal:closed structural ontology scope; [whole proof](../history/stitchcad-devnotes-part531.md).
+  Goal:closed structural ontology scope; [whole proof](../history/window21.md#stitchcad-devnotes-part531md).
   Children: `.3c.1`, `.3c.2`, `.3c.3`, `.3c.4`; geometric proof remains G2.
 
 - ID: `G1-SLICE.3c.1`
@@ -95,51 +95,19 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Goal: Structural Piece contract complete; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part485md).
 - ID: `G1-SLICE.3c.1a`
   Status: `done`
-  Goal:original D56 pair-member scope; [whole proof](../history/stitchcad-devnotes-part534.md).
+  Goal:original D56 pair-member scope; [whole proof](../history/window21.md#stitchcad-devnotes-part534md).
 
 - ID: `G1-SLICE.3c.2`
   Status: `done`
-  Goal: first discharge D55 with full-range resolution/repair (endpoints cannot certify an interior);
-  then `SeamSpan` and immutable `SewingGraph`, partial and one-to-many edge ranges, declared ease
-  distribution, direction and stop landmarks; resolve D35's same-piece seam rule against the supported
-  dart and trouser constructions before code.
-  Acceptance: a deleted interior fragment blocks full-range integrity even when endpoints resolve;
-  absent pieces/edges, empty or reversed parameter ranges, duplicate span identities and
-  missing stop references are typed refusals; same-piece seams have an explicit tested contract;
-  edits expose repairs without rewriting authored ranges. Geometric differential checks remain G2.
-  Verification: 18 sewing contracts + existing range/copy/notch suites, strict check, wasm,
-  book, fixture/feature/glossary censuses, ledger probes and staged doctrines green. D35/D57 closed.
-  Commit: `STITCHCAD-G1-0011`
-
-  Children: `.3c.2a` (full-range resolution), `.3c.2b` (sewing graph and D35).
+  Goal:original sewing scope; [whole proof](../history/stitchcad-devnotes-part538.md).
 
 - ID: `G1-SLICE.3c.2a`
   Status: `done`
-  Goal: discharge D55 by folding the entire positive-length interval through the identity journal;
-  expose every surviving fragment, deleted/trimmed interval and arithmetic refusal, preserve traversal
-  order and never rewrite the authored range. Piece full-edge queries consume this contract.
-  Acceptance: D55's middle deletion produces a visible range repair despite resolved endpoints;
-  partial/full ranges survive split/merge/reverse exactly, offset gaps stay visible, every diagnostic
-  names the held range and orphaning operation, and undeclared edges are refused. Endpoint point
-  ambiguity stays governed by `.3b`; full interval coverage is not a geometric or release certification.
-  Verification: 13 range-contract tests + existing suites green; strict clippy, wasm, book,
-  feature census, ledger probes and staged doctrine gate green. D55 closed in defects-part2.
-  Commit: `STITCHCAD-G1-0007`
-  Design: `decision_range-resolution-preserves-entire-interval.md`, recorded before code.
+  Goal:original range/sewing scope; [whole proof](../history/stitchcad-devnotes-part538.md).
 
 - ID: `G1-SLICE.3c.2b`
   Status: `done`
-  Goal: implement the sewing graph content and D35 after `.3c.2a` supplies its range contract.
-  Director decision (D57), `2026-10-01`: every physical cut copy has a stable identity, so its
-  seams can differ. Implement this explicit addressing contract before sewing spans; do not expand
-  an underspecified pattern-only graph by renderer convention. D57 closes after verified code.
-  Acceptance: all `.3c.2` sewing-graph criteria met; range and endpoint ambiguity visible; same-piece
-  seams explicitly specified and tested. Then close the `.3c.2` parent.
-  Verification: 18 sewing contracts + existing range/copy/notch suites, strict check, wasm,
-  book, fixture/feature/glossary censuses, ledger probes and staged doctrines green. D35/D57 closed.
-  Commit: `STITCHCAD-G1-0011`
-
-  Children: `.3c.2b.1` (explicit cut-copy plan), `.3c.2b.2` (sewing spans and D35).
+  Goal:original range/sewing scope; [whole proof](../history/stitchcad-devnotes-part538.md).
 
 - ID: `G1-SLICE.3c.2b.1`
   Status: `done`
@@ -150,31 +118,16 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.3c.3`
   Status: `done`
-  Goal: `Notch`, directed and dual-reference `Grainline`, per-edge derived `SeamAllowance`; profile
-  parameters are identity references rather than invented defaults until G4 supplies parameter states.
-  Acceptance: [complete scope/verification](../history/window12.md#stitchcad-devnotes-part328md).
-  Children: `.3c.3a` (notches), `.3c.3b` (grainlines), `.3c.3c` (allowances).
-
+  Goal:closed scope; [whole proof](../history/window12.md#stitchcad-devnotes-part328md).
 - ID: `G1-SLICE.3c.3a`
   Status: `done`
-  Goal: semantic `Notch` with stable piece/edge/parameter anchoring and symbolic Factory Profile
-  bindings for style, sample/production depth/width and encoding. Bindings carry no scalar values;
-  their validation is visibly `DeferredToG4`, rather than treating an unread profile as resolved.
-  Acceptance: [complete scope/verification](../history/window12.md#stitchcad-devnotes-part328md).
-
+  Goal:closed scope; [whole proof](../history/window12.md#stitchcad-devnotes-part328md).
 - ID: `G1-SLICE.3c.3b`
   Status: `done`
-  Goal: directed `Grainline`, explicit parallel/off-grain angle binding and independent stripe/plaid
-  references, with born-valid anchors and visible resolution/repair after topology edits.
-  Acceptance: [complete scope/verification](../history/window12.md#stitchcad-devnotes-part328md).
-
+  Goal:closed scope; [whole proof](../history/window12.md#stitchcad-devnotes-part328md).
 - ID: `G1-SLICE.3c.3c`
   Status: `done`
-  Goal: per-edge derived allowance descriptors, authored width-parameter origin, explicit corner choice
-  and symbolic per-profile inclusion policy; then close the marks/allowances parent.
-  Acceptance: [complete scope/verification](../history/window12.md#stitchcad-devnotes-part328md).
-
-
+  Goal:closed scope; [whole proof](../history/window12.md#stitchcad-devnotes-part328md).
 - ID: `G1-SLICE.3c.4`
   Status: `done`
   Goal: semantic `Dart`/`Tuck`/`Pleat`/`Gather`, `Hem`, `Facing`/`Lining`/`Interfacing`, `Closure` and
@@ -427,7 +380,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Commit: STITCHCAD-G1-0319.
 - ID: `G1-SLICE.RETENTION-CAPACITY`
   Status: `done`
-  Goal: [whole completed subtree/0344 proof](../history/stitchcad-devnotes-part496.md).
+  Goal: [whole completed subtree/0344 proof](../history/window21.md#stitchcad-devnotes-part496md).
 - ID: `G1-SLICE.RETENTION-CAPACITY.1`
   Status: `done`
   Goal: complete scope/proof retained496.
@@ -738,127 +691,127 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   .4 sewing/current symbolic amounts; .5 garment families; .6 focused coupled aggregate/privacy acceptance.
 - ID: `G1-SLICE.6.4.1`
   Status: `done`
-  Goal:0345 complete Piece companion checks; [whole scope/proof](../history/stitchcad-devnotes-part497.md).
+  Goal:0345 complete Piece companion checks; [whole scope/proof](../history/window21.md#stitchcad-devnotes-part497md).
 - ID: `G1-SLICE.6.4.2`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.a`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.b`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.c`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.1`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.2`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.2.a`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.2.b`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.3`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.3.1`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.3.2`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.3.3`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.3.4`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.1`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.2`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.a`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.b`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.1`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.2`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.a`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.b`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.c`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.4`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.4.a`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.4.b`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.4.c`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.2.d.4.4.d`
   Status: `done`
-  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
+  Goal:0346–0368 input/source scope; [whole subtree/proof](../history/window21.md#stitchcad-devnotes-part520md).
 - ID: `G1-SLICE.6.4.3`
   Status: `done`
-  Goal:0369 combined structural topology readiness; [whole scope/proof](../history/stitchcad-devnotes-part521.md).
+  Goal:0369 combined structural topology readiness; [whole scope/proof](../history/window21.md#stitchcad-devnotes-part521md).
 - ID: `G1-SLICE.6.4.4`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.6.4.4.1`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.6.4.4.2`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.6.4.4.3`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.6.4.4.3.a`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.6.4.4.3.b`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.6.4.4.4`
   Status: `done`
-  Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
+  Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
 - ID: `G1-SLICE.6.4.5`
   Status: `in_progress`
   Goal: current pocket/closure/notion/layer/declaration sources with explicit geometric deferrals.
@@ -868,77 +821,93 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Keep existing G3/G4/typed-operation owners explicit; numeric ids cannot invent logical metadata.
 - ID: `G1-SLICE.6.4.5.1`
   Status: `done`
-  Goal:closed Pocket scope; [whole proof](../history/stitchcad-devnotes-part528.md).
+  Goal:closed Pocket scope; [whole proof](../history/window21.md#stitchcad-devnotes-part528md).
 - ID: `G1-SLICE.6.4.5.1.a`
   Status: `done`
-  Goal:closed Pocket scope; [whole proof](../history/stitchcad-devnotes-part528.md).
+  Goal:closed Pocket scope; [whole proof](../history/window21.md#stitchcad-devnotes-part528md).
 - ID: `G1-SLICE.6.4.5.1.b`
   Status: `done`
-  Goal:closed Pocket scope; [whole proof](../history/stitchcad-devnotes-part528.md).
+  Goal:closed Pocket scope; [whole proof](../history/window21.md#stitchcad-devnotes-part528md).
 - ID: `G1-SLICE.6.4.5.2`
   Status: `done`
-  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
+  Goal:closed notion/Closure scope; [whole proof](../history/window21.md#stitchcad-devnotes-part532md).
 - ID: `G1-SLICE.6.4.5.2.a`
   Status: `done`
-  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
+  Goal:closed notion/Closure scope; [whole proof](../history/window21.md#stitchcad-devnotes-part532md).
 - ID: `G1-SLICE.6.4.5.2.b`
   Status: `done`
-  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
+  Goal:closed notion/Closure scope; [whole proof](../history/window21.md#stitchcad-devnotes-part532md).
 - ID: `G1-SLICE.6.4.5.2.c`
   Status: `done`
-  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
+  Goal:closed notion/Closure scope; [whole proof](../history/window21.md#stitchcad-devnotes-part532md).
 - ID: `G1-SLICE.6.4.5.2.d`
   Status: `done`
-  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
+  Goal:closed notion/Closure scope; [whole proof](../history/window21.md#stitchcad-devnotes-part532md).
 - ID: `G1-SLICE.6.4.5.3`
   Status: `in_progress`
   Goal: actual layers/Hem current sources, materials and known declaration roles; explicit lining refusal.
   Own child planning, original Hem layer causes D261 and whole0380 continuity532.
 - ID: `G1-SLICE.6.4.5.3.a`
   Status: `done`
-  Goal:0381 D261 original Hem layer cause; [whole proof](../history/stitchcad-devnotes-part533.md).
+  Goal:0381 D261 original Hem layer cause; [whole proof](../history/window21.md#stitchcad-devnotes-part533md).
 - ID: `G1-SLICE.6.4.5.3.b`
   Status: `done`
-  Goal:0382 shared current layer/Hem rules; [whole proof](../history/stitchcad-devnotes-part534.md).
+  Goal:0382 shared current layer/Hem rules; [whole proof](../history/window21.md#stitchcad-devnotes-part534md).
 - ID: `G1-SLICE.6.4.5.3.c`
   Status: `done`
-  Goal:closed layer/Hem collections; [whole proof](../history/stitchcad-devnotes-part537.md).
+  Goal:closed layer/Hem collections; [whole proof](../history/window21.md#stitchcad-devnotes-part537md).
 - ID: `G1-SLICE.6.4.5.3.c.1`
   Status: `done`
-  Goal:closed layer/Hem collections; [whole proof](../history/stitchcad-devnotes-part537.md).
+  Goal:closed layer/Hem collections; [whole proof](../history/window21.md#stitchcad-devnotes-part537md).
 - ID: `G1-SLICE.6.4.5.3.c.2`
   Status: `done`
-  Goal:closed layer/Hem collections; [whole proof](../history/stitchcad-devnotes-part537.md).
+  Goal:closed layer/Hem collections; [whole proof](../history/window21.md#stitchcad-devnotes-part537md).
 - ID: `G1-SLICE.6.4.5.3.c.3`
   Status: `done`
-  Goal:closed layer/Hem collections; [whole proof](../history/stitchcad-devnotes-part537.md).
+  Goal:closed layer/Hem collections; [whole proof](../history/window21.md#stitchcad-devnotes-part537md).
 - ID: `G1-SLICE.6.4.5.3.d`
   Status: `in_progress`
   Goal: actual known Hem depth/fold and layer operation roles; preserve logical/G2/G3/G4 owners.
   Children: .1 actual Hem depth/fold metadata; .2 actual layer offset-operation borrows.
 - ID: `G1-SLICE.6.4.5.3.d.1`
   Status: `done`
-  Goal: borrowed actual Hem depth/fold roles after whole current root validation; formula depth
-  requires actual Design parameter/Length kind. Original inline/profile/logical fields, no value
-  defaults or geometry proof; focused native/privacy/lint/book and whole0385 continuity537.
-  - [x] REPRODUCE / ISSUE: python3 Git-source check:71407bd has no Hem declaration views rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; held depth/fold intent lacked actual Design
-    parameter/Length joins. Existing declaration/current-validator bytes unchanged.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and -p sc-measure
-    --test design_inputs_contract -- -D warnings:rc=0 each; original role/source/canonical borrows.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract hem_declarations_:4/0 rc=0;
-    cargo test -p sc-core --doc design::hems:1/0 rc=0.
-  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; source comparison rc=0;
-    glossary132 failures rc=1, exact prior D250 rows compare rc=0. No Hem value reads/defaults.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/159/1454/2409 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part537.md:6 exact spans rc=0.
-    promotion: declined (settled metadata/physical boundaries). Completed STITCHCAD-G1-0386.
+  Goal:0386 actual Hem depth/fold roles; [whole proof](../history/stitchcad-devnotes-part538.md).
 - ID: `G1-SLICE.6.4.5.3.d.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: borrowed actual layer offset-operation/source intent; existing recipe/G2/G3/scope owners.
+  Own exact typed layer/relationship/source borrows after whole current root validation. Preserve
+  family/source order, modelled Lining inspection and original operation ids without numeric coercion.
+  No operation existence/kind/dependency, geometry or execution proof; focused native/lifetime/lint/book.
+  Whole0386 continuity538; complete component acceptance remains .e.
+  D262 append repair closes .a; aggregate-capacity decision .capacity precedes unsafe archive growth.
+- ID: `G1-SLICE.6.4.5.3.d.2.a`
+  Status: `done`
+  Goal:0387 D262 source-pinned v2 append and exact journaled installation; all old bytes/caps fixed.
+  - [x] REPRODUCE / ISSUE: transition_receipts.py --record docs/history/stitchcad-devnotes-part538.md
+    first refused working65>64 rc=1; independent physical census65 rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): Python AST/source check rc=0: old prepare requires v1/16 windows;
+    v2 reader already permits immutable append. The working64 cap correctly refused the new raw file.
+  - [x] FIX: v2_migration.py append target/history-v2-append-0387 --owner G1-SLICE.6.4.5.3.d.2.a:
+    991 logical/33 backing exact,44 raw packed rc=0; existing v2_install.py install same workspace rc=0.
+  - [x] ADDRESSED: v2_install_contract.py target/history-v2-append-0387:17 controls/0 failures rc=0;
+    real interruptions/recovery/offline materialization/native tar/ledger routes. Original trees retained.
+  - [x] NO REGRESSION: history_archive.sh verify/verify-retention/prove-source window21 rc=0;
+    992 logical,3992152 decodedB,22 working;44 source files exact. Reader/installer/old formatter AST
+    unchanged rc=0; append missing-owner and prepare-on-v2 refuse1 before workspace effects.
+  - [x] LOCKSTEP: run_make.sh book and scoped publication79/159/1454/2409 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part538.md:6 exact spans rc=0.
+    Promotion: bounded append decision; D263 fixture authority audit remains separately owned.
+- ID: `G1-SLICE.6.4.5.3.d.2.b`
+  Status: `pending`
+  Goal: actual layer offset-operation/source borrows after whole-root validation; original .d.2 scope.
 - ID: `G1-SLICE.6.4.5.3.e`
   Status: `pending`
   Goal: focused current layer/Hem component acceptance; broader integration after .6.9.
+- ID: `G1-SLICE.6.4.5.capacity`
+  Status: `pending`
+  Goal: P1 retention decision before archive growth exceeds4000000 decodedB; current3992152 leaves7848.
+  Preserve all immutable bytes and independent bounds; do not widen caps to land content. Diagnose
+  feasible retention options and surface any policy authority needed. Product .d.2.b/.e proceeds if safe.
 - ID: `G1-SLICE.6.4.5.4`
   Status: `pending`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.
@@ -1176,5 +1145,5 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 - ID: `G1-SLICE.5e.1a.h`
   Status: `done`
-  Goal: completed handoff evidence/journal retained [whole in513](../history/stitchcad-devnotes-part513.md).
+  Goal: completed handoff evidence/journal retained [whole in513](../history/window21.md#stitchcad-devnotes-part513md).
   Original first-capture identity remains unknown; current OS handoff contract remains in CLAUDE.md.

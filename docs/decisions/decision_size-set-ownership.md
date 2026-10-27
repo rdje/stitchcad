@@ -132,7 +132,7 @@ The whole original conflict/witness remains retained431; the choice itself does 
 
 The individual breaks, required coverage, garment/MTM composition and immutable profile intent
 milestones are implemented. Exact historical assertions, counts and successive scope boundaries
-remain in [continuity509](../history/stitchcad-devnotes-part509.md). Current APIs and examples live
+remain in [continuity509](../history/window21.md#stitchcad-devnotes-part509md). Current APIs and examples live
 in the [SizeSet chapter](../book/src/spec/size-sets.md). Structural currentness/coverage and immutable
 intent remain distinct from numeric execution, G3/G4 application and global Design/release truth.
 

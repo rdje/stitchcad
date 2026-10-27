@@ -82,9 +82,9 @@ than roadmap clauses is expected (a tree may split one clause into several leave
 **`G1-SLICE.4c.3`** chart/body/break structural input scope closes in0310 after D230/D231 repairs.
 Current SizeSet inputs preserve explicit garment/MTM provenance, canonical sources and typed paths.
 0321 closes structural measurement/Ease/SizeSet acceptance; G1 progress6/18.
-0386 borrows actual Hem depth/fold roles; .6.4.5.3.d.2 owns layer offset-operation intent next.
+0387 fixes bounded v2 append; .6.4.5.3.d.2.b owns layer offset-operation intent next.
 D250 baseline glossary declarations remain owned after .6.9 and before integration/pre-push.
-Capacity continuation is complete within unchanged caps; any future aggregate exhaustion needs an owned decision.
+History3992152/4000000 decodedB; P1 .6.4.5.capacity owns retention before unsafe archive growth.
 Command-class schemas follow canonical inputs.
 [Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes and paired split schema are implemented.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per

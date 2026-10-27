@@ -6,6 +6,7 @@
 - **Owner / source:** `SPINE.19.2`; D65 and the adopted archive/atomic-retirement contract.
 
 answers: "how do I retrieve packed historical records?" · "does history retrieval require old Git objects?" · "what bounds archive storage and decompression?"
+answers: "how are committed v2 raw records packed without changing old windows?"
 
 A working archive at its 64-file ceiling blocks the next normal rollover. Consolidate immutable
 records into a content-addressed tar.gz window, with complete per-file identity in a bounded manifest
@@ -135,3 +136,15 @@ remain bound to the original v1 capture and prove complete path/byte membership 
 D246 preserves the original missing-public-read assertion after packing; D247 publishes the legacy entry.
 Focused native3.14 proof closes this retention continuation. Deep fixture/platform/full integration/CI
 remain separately owned. Future aggregate exhaustion still requires a new decision; no cap was raised.
+
+## Bounded v2 append0387
+
+The explicit-owner append mode packs the complete committed raw snapshot into one new v2 window.
+Preparation requires a valid source within existing bounds and a fresh target/ workspace. Every
+physical archive input must match HEAD. Original windows, catalogs, payloads and legacy descriptors
+stay byte-exact. Compact catalog headings preserve navigation; manifests retain full-file identities.
+The existing source-pinned journaled installer owns installation/recovery and keeps original trees.
+Source53bc624 packs44 records into window21; native tar and17 transaction controls pass. Restoring
+draft538 leaves3992152/4000000 decoded bytes: packing frees working slots, not aggregate capacity.
+G1-SLICE.6.4.5.capacity owns a new retention decision before further growth can exceed that cap.
+The installer fixture's helper-source authority audit is separate; no complete producer proof is claimed.

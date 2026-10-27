@@ -1061,7 +1061,7 @@ D215 whole authored report/verified repair retained in [part134](../history/wind
 
 D216 whole authored report/verified repair retained in [part135](../history/window11.md#stitchcad-defects-part135md).
 
-D228 ruled0302: axis + explicit POM/dimension + adjacent member pair. [Whole settled report](../history/stitchcad-devnotes-part504.md); implementation owner G1-SLICE.4c.3d.
+D228 ruled0302: axis + explicit POM/dimension + adjacent member pair. [Whole settled report](../history/window21.md#stitchcad-devnotes-part504md); implementation owner G1-SLICE.4c.3d.
 
 Closed D229-D232 reports and verified repair evidence are retained whole in
 [part139](../history/window16.md#stitchcad-defects-part139md). Current doc frontier repair D233 follows below.
@@ -1087,13 +1087,13 @@ Closed D241 command overview report and0335 verification remain whole in
 Closed D242/D243 reports and0337 verification remain whole in
 [part492](../history/window20.md#stitchcad-devnotes-part492md); current authorization rejects duplicate grant IDs.
 
-D244 fixed0341; [complete report](../history/stitchcad-devnotes-part494.md) retained until494.
+D244 fixed0341; [complete report](../history/window21.md#stitchcad-devnotes-part494md) retained until494.
 
-D245 fixed0342; [complete report](../history/stitchcad-devnotes-part494.md) retained until494.
+D245 fixed0342; [complete report](../history/window21.md#stitchcad-devnotes-part494md) retained until494.
 
-D246/D247 complete reports/0344 closure are retained in [part496](../history/stitchcad-devnotes-part496.md).
+D246/D247 complete reports/0344 closure are retained in [part496](../history/window21.md#stitchcad-devnotes-part496md).
 
-D248/D249 complete reports/0345 closure are retained in [part497](../history/stitchcad-devnotes-part497.md).
+D248/D249 complete reports/0345 closure are retained in [part497](../history/window21.md#stitchcad-devnotes-part497md).
 
 ## D250 — glossary declarations lag implemented public API vocabulary
 
@@ -1111,11 +1111,11 @@ Secondary P3: baseline and current advisory awk-to-head15 pipeline prints a pipe
 source tail pinpoints it, without changing C1's132 rows. Repair under the same owner after C1 closure.
 Current feature may proceed with this explicit baseline gap; no full glossary/CI pass is claimed.
 
-Verified D251/D252 scope corrections retained whole in [part498](../history/stitchcad-devnotes-part498.md).
+Verified D251/D252 scope corrections retained whole in [part498](../history/window21.md#stitchcad-devnotes-part498md).
 
-Verified D253 phase correction retained whole in [part500](../history/stitchcad-devnotes-part500.md).
+Verified D253 phase correction retained whole in [part500](../history/window21.md#stitchcad-devnotes-part500md).
 
-Verified D254 package metadata correction retained whole in [part502](../history/stitchcad-devnotes-part502.md).
+Verified D254 package metadata correction retained whole in [part502](../history/window21.md#stitchcad-devnotes-part502md).
 
 ## Active continuity followup
 
@@ -1130,36 +1130,56 @@ Verified D254 package metadata correction retained whole in [part502](../history
   Preserve exact original intervals/folds/D215/D216/source identities while repairing logical retrieval and
   ordered predecessor preservation; independent refusal/body controls and default regression required. Open.
 
-Verified D217–D225 closure reports retained whole in [part495](../history/stitchcad-devnotes-part495.md);
+Verified D217–D225 closure reports retained whole in [part495](../history/window21.md#stitchcad-devnotes-part495md);
 original unknown descriptor identity remains unknown; current handoff rules remain binding.
 
 Historical window15/16 routing/pointer receipts remain whole in
-[continuity510](../history/stitchcad-devnotes-part510.md); current capacity ownership is G1-SLICE.RETENTION-CAPACITY.
+[continuity510](../history/window21.md#stitchcad-devnotes-part510md); current capacity ownership is G1-SLICE.RETENTION-CAPACITY.
 
-Verified D255 concrete source correction retained whole in [part511](../history/stitchcad-devnotes-part511.md).
+Verified D255 concrete source correction retained whole in [part511](../history/window21.md#stitchcad-devnotes-part511md).
 
-Verified D256 concrete composite sources retained whole in [part513](../history/stitchcad-devnotes-part513.md).
+Verified D256 concrete composite sources retained whole in [part513](../history/window21.md#stitchcad-devnotes-part513md).
 
-Verified D257 availability correction retained whole in [part516](../history/stitchcad-devnotes-part516.md).
+Verified D257 availability correction retained whole in [part516](../history/window21.md#stitchcad-devnotes-part516md).
 
 Verified D258/D259 original Pocket/Notion anchor-source reports and0375 red/green proof remain whole
-in [part527](../history/stitchcad-devnotes-part527.md); current error chains preserve concrete causes.
+in [part527](../history/window21.md#stitchcad-devnotes-part527md); current error chains preserve concrete causes.
 
-[0376 retirement proof](../history/stitchcad-devnotes-part528.md).
+[0376 retirement proof](../history/window21.md#stitchcad-devnotes-part528md).
 
 Verified D260 original Closure-cause report and0377 red/green proof remain whole in
-[part529](../history/stitchcad-devnotes-part529.md); standard chains preserve original causes.
-[0378 report-retirement proof](../history/stitchcad-devnotes-part530.md).
-[0379 report-retirement proof](../history/stitchcad-devnotes-part531.md).
-[0380 report-retirement proof](../history/stitchcad-devnotes-part532.md).
+[part529](../history/window21.md#stitchcad-devnotes-part529md); standard chains preserve original causes.
+[0378 report-retirement proof](../history/window21.md#stitchcad-devnotes-part530md).
+[0379 report-retirement proof](../history/window21.md#stitchcad-devnotes-part531md).
+[0380 report-retirement proof](../history/window21.md#stitchcad-devnotes-part532md).
 
 Verified D261 original Hem layer-cause report and0381 red/green proof remain whole in
-[part533](../history/stitchcad-devnotes-part533.md); current chains preserve the original cause.
-[0382 report-retirement proof](../history/stitchcad-devnotes-part534.md).
-[0383 report-retirement proof](../history/stitchcad-devnotes-part535.md).
-[0384 report-retirement proof](../history/stitchcad-devnotes-part536.md).
-[0385 report-retirement proof](../history/stitchcad-devnotes-part537.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part537.md:
-  6 exact Git spans rc=0; completed0385/older binding/release proof occupied live capacity.
-- [x] ADDRESSED: same receipt rc=0; whole task/lessons/ledger/retirement/plans retained537.
-- [x] NO REGRESSION: scoped publication79/159/1454/2409 rc=0; book rc=0; D250132 exact rows0.
+[part533](../history/window21.md#stitchcad-devnotes-part533md); current chains preserve the original cause.
+[0382 report-retirement proof](../history/window21.md#stitchcad-devnotes-part534md).
+[0383 report-retirement proof](../history/window21.md#stitchcad-devnotes-part535md).
+[0384 report-retirement proof](../history/window21.md#stitchcad-devnotes-part536md).
+[0385 report-retirement proof](../history/window21.md#stitchcad-devnotes-part537md).
+[0386 report-retirement proof](../history/stitchcad-devnotes-part538.md).
+
+## D262 — bounded v2 append preparer (corrected0387)
+
+New draft538 originally made65 resident Markdown files and transition_receipts.py refused1 at64.
+Source inspection: old prepare accepts only v1/16 windows; existing v2 reader already supports append.
+Owner G1-SLICE.6.4.5.3.d.2.a restores working capacity through committed raw capture and existing
+journaled installation.44 source records packed,17 transaction controls pass0; all old bytes/caps fixed.
+Live992 records/3992152 decodedB leaves7848B. Separate P1 owner G1-SLICE.6.4.5.capacity must resolve
+retention before unsafe growth. Packing grants no aggregate capacity; no full integration claim.
+
+## D263 — installer fixture omits helper source authority
+
+Code inspection: v2_install_contract.py calls changelog_pointers.py after constructing sources/frozen
+without that helper or its current CHANGELOG input. Reproduce by inspecting lines31–33 and108–110.
+Effect:17 transaction controls prove bytes/effects, not complete producer authority. P3; owner
+G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification, after .6.9 before integration/pre-push. Repair complete
+helper/input/child plans and calibrate omissions while preserving every original transaction predicate.
+
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part538.md:
+  6 exact Git spans rc=0; completed0386/range/sewing evidence needed live retirement.
+- [x] ADDRESSED: same command rc=0; original bodies/identities remain whole538;44 other records exact21.
+- [x] NO REGRESSION: history_archive.sh verify-retention/prove-source window21:rc=0,44 exactfiles;
+  scoped publication79/159/1454/2409 and book rc=0. Old logical/backing bytes and caps unchanged.
