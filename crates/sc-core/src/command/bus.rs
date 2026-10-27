@@ -175,6 +175,15 @@ impl std::error::Error for CommandBusError {
 ///     let prepared = bus.prepare(request);
 /// }
 /// ```
+/// ```compile_fail
+/// use sc_core::{command::{CommandBus, CommandAuthoritySource, CommandAuthorizationMode,
+///     CommandMutationGroup}, design::DesignReferenceHost};
+/// fn take_prepared_group<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource>(
+///     bus: &CommandBus<H, A>, group: &CommandMutationGroup,
+/// ) {
+///     let prepared = bus.prepare_group(group, CommandAuthorizationMode::Execute);
+/// }
+/// ```
 pub struct CommandBus<H, A> {
     state: DesignGarment<H>,
     authority: A,

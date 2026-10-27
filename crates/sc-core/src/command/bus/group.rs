@@ -9,11 +9,29 @@ use crate::{
         CommandGroupAuthorizationError, CommandGroupId, CommandId, CommandIdempotencyKey,
         CommandMutationGroup, DesignRevision,
     },
-    design::DesignReferenceHost,
+    design::{DesignGarment, DesignReferenceHost},
     ontology::EntityId,
 };
 use core::fmt;
 use std::collections::BTreeMap;
+
+// Actual final validated ownership stays inside the bus, together with its derived report and the
+// concrete cursor's consumed prefix. Public preview discards all publication-side ownership.
+pub(super) struct PreparedGroup<H> {
+    state: DesignGarment<H>,
+    report: CommandGroupPreview,
+    identities_consumed: usize,
+}
+impl<H> PreparedGroup<H> {
+    pub(super) fn into_parts(self) -> (DesignGarment<H>, CommandGroupPreview, usize) {
+        (self.state, self.report, self.identities_consumed)
+    }
+    fn into_report(self) -> CommandGroupPreview {
+        let (state, report, _identities_consumed) = self.into_parts();
+        drop(state);
+        report
+    }
+}
 
 /// One original member's actual first report, or an explicit alias of that first report.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -167,7 +185,16 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         &self,
         group: &CommandMutationGroup,
     ) -> Result<CommandGroupPreview, CommandGroupPreviewError<H::Error>> {
-        authorize_mutation_group(group, CommandAuthorizationMode::Preview, &self.authority)
+        self.prepare_group(group, CommandAuthorizationMode::Preview)
+            .map(PreparedGroup::into_report)
+    }
+
+    pub(super) fn prepare_group(
+        &self,
+        group: &CommandMutationGroup,
+        mode: CommandAuthorizationMode,
+    ) -> Result<PreparedGroup<H>, CommandGroupPreviewError<H::Error>> {
+        authorize_mutation_group(group, mode, &self.authority)
             .map_err(CommandGroupPreviewError::Authorization)?;
         let inputs = self.state.inputs();
         let context = group.context();
@@ -238,12 +265,21 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                     issue,
                 }
             })?;
-        Ok(CommandGroupPreview {
+        let report = CommandGroupPreview {
             group: group.id(),
             design: inputs.id(),
             revision: inputs.revision().clone(),
             steps,
             difference,
+        };
+        // A validated group is nonempty, and the first member cannot be a retry. Successful
+        // preparation therefore always owns a candidate; the fallback preserves the original
+        // owner if that schema invariant is ever broadened to permit an empty no-op group.
+        let state = staged.unwrap_or_else(|| self.state.clone());
+        Ok(PreparedGroup {
+            state,
+            report,
+            identities_consumed: identities.consumed(),
         })
     }
 }

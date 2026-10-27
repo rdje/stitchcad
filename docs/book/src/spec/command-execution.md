@@ -233,6 +233,13 @@ This internal refactor does not publish a model, expose a replacement capability
 revision/identity allocation. Paired seam splitting and Dart execution
 retain their actual recipe/geometry dependencies; sewing ease realization remains deferred to G2/G3.
 
+Whole-group preparation also retains its actual final candidate, derived group report and concrete
+cursor consumption count in a private PreparedGroup. Public preview consumes it, discards the model
+and allocation information, and returns only the report. A compiler privacy check rejects direct
+preparation, including requests for Execute mode. No caller-supplied prepared object or mode can
+be submitted for publication. Actual publication must perform its own fresh effect authorization,
+revision/replay checks, atomic model/reserve transition and audit obligations.
+
 ## Typed mutation-group inputs
 
 CommandMutationGroup::new(group_id, mutations) owns a nonempty original Vec of CommandMutation

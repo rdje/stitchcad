@@ -3,17 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — sequential actual metadata-group preview
+## _(2026-10-27 UTC)_ — private whole-group preparation ownership
 
-0432 .6.5.4.2.2.3 prepares each first request from the preceding validated actual model, sharing one
-independent reserve cursor. One fresh snapshot/complete Inspect grant precedes actual Design/revision.
-Exact group-local retry aliases return the first report; different same-key requests fail with context.
-Net diff compares actual original/final models and preserves all other content; restoration omits net
-changes. Later failure discards every candidate/report and leaves original identity allocation intact.
-Native bus24 (original18/group6), strict selected Clippy/fmt pass; initial missing field docs corrected.
-Promotion: existing command-layer decision records staging/retry/net-delta semantics and proof limits.
+0433 .6.5.4.3 retains actual final model/report/concrete consumed identity count in PreparedGroup.
+Public preview consumes/discards model and allocation information. Private mode selection cannot be
+called by request submitters; native group6/identity1/compiler privacy5 and selected strict lint/fmt pass.
+Cursor count changes only on successful yields, including final128-bit id once; exhaustion adds none.
+Promotion declined: existing private ownership/preview/authority contracts; actual publication next.
 
-[Whole0431 base/cursor lesson and0291–0430 decision continuity](docs/history/stitchcad-devnotes-part583.md) retain exact original sources.
+[Whole0432 group-preview scope/lesson/ledger](docs/history/stitchcad-devnotes-part584.md) retains exact native sources.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

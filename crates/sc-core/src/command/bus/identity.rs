@@ -73,6 +73,7 @@ impl IdentityReserve {
     pub(super) fn stage(&self) -> IdentityStage<'_> {
         IdentityStage {
             remaining: self.identities.iter(),
+            initial_len: self.identities.len(),
         }
     }
 }
@@ -80,6 +81,13 @@ impl IdentityReserve {
 // An iterator owns its position and borrows immutable values. No Clone contract can alias a cursor.
 pub(super) struct IdentityStage<'a> {
     remaining: core::slice::Iter<'a, EntityId>,
+    initial_len: usize,
+}
+impl IdentityStage<'_> {
+    // Only this concrete iterator advances the cursor, so remaining.len() cannot exceed initial_len.
+    pub(super) fn consumed(&self) -> usize {
+        self.initial_len - self.remaining.len()
+    }
 }
 impl IdGenerator for IdentityStage<'_> {
     fn next_id(&mut self) -> Result<EntityId, IdError> {
@@ -99,11 +107,18 @@ mod tests {
         };
         let mut first = reserve.stage();
         let mut independent = reserve.stage();
+        assert_eq!(first.consumed(), 0);
         assert_eq!(first.next_id(), Ok(EntityId::from_bits(7)));
+        assert_eq!(first.consumed(), 1);
         assert_eq!(first.next_id(), Ok(last));
+        assert_eq!(first.consumed(), 2);
         assert_eq!(first.next_id(), Err(IdError::Exhausted));
         assert_eq!(first.next_id(), Err(IdError::Exhausted));
+        assert_eq!(first.consumed(), 2);
+        assert_eq!(independent.consumed(), 0);
         assert_eq!(independent.next_id(), Ok(EntityId::from_bits(7)));
+        assert_eq!(independent.consumed(), 1);
+        assert_eq!(reserve.stage().consumed(), 0);
         assert_eq!(reserve.stage().next_id(), Ok(EntityId::from_bits(7)));
     }
 }
