@@ -140,3 +140,6 @@ owned Pocket current component inventory	spec/ontology-constructions.md	crates/s
 owned Pocket current component refusal	spec/ontology-constructions.md	crates/sc-core/src/ontology/pocket_inventory.rs	PocketInventoryError	G1-SLICE.6.4.5.1.b	4.4
 owned notion placement current inventory	spec/ontology-closures.md	crates/sc-core/src/ontology/notion_inventory.rs	NotionPlacementInventory	G1-SLICE.6.4.5.2.b	4.4
 owned notion placement current refusal	spec/ontology-closures.md	crates/sc-core/src/ontology/notion_inventory.rs	NotionPlacementInventoryError	G1-SLICE.6.4.5.2.b	4.4
+owned Closure current inventory	spec/ontology-closures.md	crates/sc-core/src/ontology/closure_inventory.rs	ClosureInventory	G1-SLICE.6.4.5.2.c	4.4
+owned Closure current owning position	spec/ontology-closures.md	crates/sc-core/src/ontology/closure_inventory.rs	ClosureInventoryPosition	G1-SLICE.6.4.5.2.c	4.4
+owned Closure current refusal	spec/ontology-closures.md	crates/sc-core/src/ontology/closure_inventory.rs	ClosureInventoryError	G1-SLICE.6.4.5.2.c	4.4

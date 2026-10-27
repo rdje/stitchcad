@@ -1149,7 +1149,8 @@ in [part527](../history/stitchcad-devnotes-part527.md); current error chains pre
 
 Verified D260 original Closure-cause report and0377 red/green proof remain whole in
 [part529](../history/stitchcad-devnotes-part529.md); standard chains preserve original causes.
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part529.md:
-  5 exact Git spans rc=0; completed D260 proof occupied live capacity.
-- [x] ADDRESSED: same receipt rc=0; whole report/task/lesson/ledger retained529, current links resolve.
-- [x] NO REGRESSION: scoped publication79/141/1454/2403 rc=0; book build rc=0; D250132 exact rows0.
+[0378 report-retirement proof](../history/stitchcad-devnotes-part530.md).
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part530.md:
+  6 exact Git spans rc=0; completed0378 proof occupied live capacity.
+- [x] ADDRESSED: same receipt rc=0; whole task/lesson/ledger/retirement retained530, links resolve.
+- [x] NO REGRESSION: scoped publication79/144/1454/2404 rc=0; book rc=0; D250132 exact rows0.

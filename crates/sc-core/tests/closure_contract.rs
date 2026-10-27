@@ -2,12 +2,13 @@
 #![allow(clippy::expect_used, clippy::unwrap_used, clippy::panic)]
 use sc_core::ontology::{
     ButtonholeDerivation, ButtonholeValidation, Closure, ClosureDefinition, ClosureEnvelopeError,
-    ClosureError, ClosureInstance, ClosureKind, ClosureLength, ClosurePlacementRole,
-    CopyOrientation, CutCopyDefinition, CutPlan, CuttingSide, DeterministicIdGenerator,
-    DirectedEdge, DirectedRange, Direction, EdgeAnchor, EdgeRange, EntityId, GeometricValidation,
-    IdGenerator, IdentityLedger, LabelText, MaterialAssignment, Mirroring, NotionPlacement,
-    NotionPlacementDefinition, NotionPlacementError, NotionSize, Param, Piece, PieceDefinition,
-    ProfileBindingValidation, ProfileParameterRef, Rational,
+    ClosureError, ClosureInstance, ClosureInventory, ClosureInventoryError,
+    ClosureInventoryPosition, ClosureKind, ClosureLength, ClosurePlacementRole, CopyOrientation,
+    CutCopyDefinition, CutPlan, CuttingSide, DeterministicIdGenerator, DirectedEdge, DirectedRange,
+    Direction, EdgeAnchor, EdgeRange, EntityId, GeometricValidation, IdGenerator, IdentityLedger,
+    LabelText, MaterialAssignment, Mirroring, NotionPlacement, NotionPlacementDefinition,
+    NotionPlacementError, NotionPlacementInventory, NotionPlacementInventoryError, NotionSize,
+    Param, Piece, PieceDefinition, ProfileBindingValidation, ProfileParameterRef, Rational,
 };
 use sc_units::{Count, Length};
 fn t(n: i64, d: i64) -> Param {
@@ -756,4 +757,308 @@ fn closure_placement_error_keeps_original_cause() {
         .unwrap()
         .is::<sc_core::ontology::AnchorError>());
     assert_eq!(closure.definition(), &input);
+}
+
+#[test]
+fn inventory_preserves_closures_order_shared_objects_counts_and_explicit_empty_scope() {
+    let f = fixture();
+    let placements = f.placements();
+    let first = f.closure(f.closure_input(), &placements).unwrap();
+    let mut input = f.closure_input();
+    input.id = EntityId::from_bits(810);
+    input.instances.first_mut().unwrap().id = EntityId::from_bits(812);
+    input.kind = ClosureKind::HookAndBar {
+        hook: NotionSize::Declaration(EntityId::from_bits(813)),
+        bar: NotionSize::Profile(ProfileParameterRef::new(EntityId::from_bits(814))),
+    };
+    let second = f.closure(input, &placements).unwrap();
+    // Reusing targets across distinct Closures keeps the existing per-Closure reuse rule.
+    let inventory = ClosureInventory::new(vec![second.clone(), first.clone()]).unwrap();
+    assert_eq!(inventory.closures(), &[second.clone(), first]);
+    let borrowed = inventory.closure(second.id()).unwrap();
+    assert!(core::ptr::eq(
+        borrowed,
+        inventory.closures().first().unwrap()
+    ));
+    assert_eq!(borrowed.count(), Count::new(1));
+    assert_eq!(
+        borrowed.profile_binding_validation(),
+        Some(ProfileBindingValidation::DeferredToG4)
+    );
+    assert_eq!(
+        borrowed.geometric_validation(),
+        GeometricValidation::DeferredToG2
+    );
+    assert!(inventory.closure(EntityId::from_bits(999)).is_none());
+    let notions = NotionPlacementInventory::new(placements).unwrap();
+    inventory
+        .validate_current(
+            &notions,
+            &f.plan(),
+            std::slice::from_ref(&f.piece),
+            &f.ledger,
+        )
+        .unwrap();
+    let empty = ClosureInventory::new(vec![]).unwrap();
+    assert!(empty.closures().is_empty());
+    empty
+        .validate_current(
+            &NotionPlacementInventory::new(vec![]).unwrap(),
+            &CutPlan::new(vec![], &[]).unwrap(),
+            &[],
+            &f.ledger,
+        )
+        .unwrap();
+}
+
+#[test]
+fn inventory_censuses_closure_and_nested_instance_identities_with_original_positions() {
+    use ClosureInventoryPosition::{Closure as Owner, Instance};
+    let f = fixture();
+    let placements = f.placements();
+    let first = f.closure(f.closure_input(), &placements).unwrap();
+    let original_instance = first.definition().instances.first().unwrap().id;
+    assert_eq!(
+        ClosureInventory::new(vec![first.clone(), first.clone()]),
+        Err(ClosureInventoryError::DuplicateIdentity {
+            identity: first.id(),
+            first: Owner { index: 0 },
+            duplicate: Owner { index: 1 }
+        })
+    );
+    for (closure_id, instance_id, identity, earlier, duplicate) in [
+        (
+            810,
+            original_instance,
+            original_instance,
+            Instance {
+                closure: 0,
+                index: 0,
+            },
+            Instance {
+                closure: 1,
+                index: 0,
+            },
+        ),
+        (
+            802,
+            EntityId::from_bits(812),
+            original_instance,
+            Instance {
+                closure: 0,
+                index: 0,
+            },
+            Owner { index: 1 },
+        ),
+        (
+            810,
+            first.id(),
+            first.id(),
+            Owner { index: 0 },
+            Instance {
+                closure: 1,
+                index: 0,
+            },
+        ),
+    ] {
+        let mut input = f.closure_input();
+        input.id = EntityId::from_bits(closure_id);
+        input.instances.first_mut().unwrap().id = instance_id;
+        let second = f.closure(input, &placements).unwrap();
+        assert_eq!(
+            ClosureInventory::new(vec![first.clone(), second]),
+            Err(ClosureInventoryError::DuplicateIdentity {
+                identity,
+                first: earlier,
+                duplicate
+            })
+        );
+    }
+    let mut input = f.closure_input();
+    input.id = original_instance;
+    let self_alias = f.closure(input, &placements).unwrap();
+    assert_eq!(
+        ClosureInventory::new(vec![self_alias]),
+        Err(ClosureInventoryError::DuplicateIdentity {
+            identity: original_instance,
+            first: Owner { index: 0 },
+            duplicate: Instance {
+                closure: 0,
+                index: 0
+            }
+        })
+    );
+}
+
+#[test]
+fn inventory_checks_unused_notion_sources_even_with_no_closures_and_keeps_concrete_chain() {
+    use std::error::Error;
+    let mut f = fixture();
+    let mut placements = f.placements();
+    let closure = f.closure(f.closure_input(), &placements).unwrap();
+    let mut input = f.placement_input();
+    input.id = EntityId::from_bits(702);
+    input.anchor.edge = f.piece.definition().construction_lines.get(1).unwrap().edge;
+    let unused = f.placement(input).unwrap();
+    f.ledger.delete(&mut f.ids, input.anchor.edge).unwrap();
+    closure
+        .validate_current(
+            &placements,
+            &f.plan(),
+            std::slice::from_ref(&f.piece),
+            &f.ledger,
+        )
+        .unwrap();
+    placements.push(unused.clone());
+    let notions = NotionPlacementInventory::new(placements).unwrap();
+    for closures in [vec![closure.clone()], vec![]] {
+        let inventory = ClosureInventory::new(closures).unwrap();
+        let issue = inventory
+            .validate_current(
+                &notions,
+                &f.plan(),
+                std::slice::from_ref(&f.piece),
+                &f.ledger,
+            )
+            .unwrap_err();
+        let ClosureInventoryError::Notions(actual) = &issue else {
+            panic!("whole notion cause")
+        };
+        assert!(
+            matches!(actual.as_ref(), NotionPlacementInventoryError::Placement { index: 2, placement, .. } if *placement == unused.id())
+        );
+        let cause = issue.source().unwrap();
+        assert!(core::ptr::eq(
+            cause
+                .downcast_ref::<NotionPlacementInventoryError>()
+                .unwrap(),
+            actual.as_ref()
+        ));
+        assert!(!cause.is::<Box<NotionPlacementInventoryError>>());
+        assert!(cause.source().unwrap().is::<NotionPlacementError>());
+        assert!(cause
+            .source()
+            .unwrap()
+            .source()
+            .unwrap()
+            .is::<sc_core::ontology::AnchorError>());
+    }
+    assert_eq!(notions.placement(unused.id()).unwrap().definition(), &input);
+}
+
+#[test]
+fn inventory_checks_later_closure_targets_and_retains_exact_instance_role_and_cause() {
+    use std::error::Error;
+    let f = fixture();
+    let mut placements = f.placements();
+    let first = f.closure(f.closure_input(), &placements).unwrap();
+    for id in [702, 703] {
+        let mut input = f.placement_input();
+        input.id = EntityId::from_bits(id);
+        placements.push(f.placement(input).unwrap());
+    }
+    let mut input = f.closure_input();
+    input.id = EntityId::from_bits(810);
+    input.instances = vec![ClosureInstance {
+        id: EntityId::from_bits(812),
+        first: EntityId::from_bits(702),
+        second: EntityId::from_bits(703),
+    }];
+    let second = f.closure(input.clone(), &placements).unwrap();
+    let inventory = ClosureInventory::new(vec![first.clone(), second.clone()]).unwrap();
+    let removed = EntityId::from_bits(703);
+    placements.retain(|placement| placement.id() != removed);
+    let notions = NotionPlacementInventory::new(placements).unwrap();
+    first
+        .validate_current(
+            notions.placements(),
+            &f.plan(),
+            std::slice::from_ref(&f.piece),
+            &f.ledger,
+        )
+        .unwrap();
+    let issue = inventory
+        .validate_current(
+            &notions,
+            &f.plan(),
+            std::slice::from_ref(&f.piece),
+            &f.ledger,
+        )
+        .unwrap_err();
+    let ClosureInventoryError::Closure {
+        index,
+        closure,
+        issue: actual,
+    } = &issue
+    else {
+        panic!("later Closure cause")
+    };
+    assert_eq!((*index, *closure), (1, second.id()));
+    assert_eq!(
+        actual.as_ref(),
+        &ClosureError::MissingPlacement {
+            instance: EntityId::from_bits(812),
+            role: ClosurePlacementRole::Second,
+            placement: removed
+        }
+    );
+    assert!(core::ptr::eq(
+        issue
+            .source()
+            .unwrap()
+            .downcast_ref::<ClosureError>()
+            .unwrap(),
+        actual.as_ref()
+    ));
+    assert!(!issue.source().unwrap().is::<Box<ClosureError>>());
+    assert_eq!(inventory.closure(second.id()).unwrap().definition(), &input);
+    // Held target loss does not prevent constructing a new inspectable inventory.
+    assert_eq!(
+        ClosureInventory::new(inventory.closures().to_vec()).unwrap(),
+        inventory
+    );
+}
+
+#[test]
+fn inventory_checks_complete_current_plan_even_without_closures_or_notions() {
+    use sc_core::ontology::CutPlanError;
+    use std::error::Error;
+    let f = fixture();
+    let mut definition = f.piece.definition().clone();
+    definition.quantity = 4;
+    let current = Piece::new(definition, &f.ledger).unwrap();
+    let inventory = ClosureInventory::new(vec![]).unwrap();
+    let notions = NotionPlacementInventory::new(vec![]).unwrap();
+    let issue = inventory
+        .validate_current(
+            &notions,
+            &f.plan(),
+            std::slice::from_ref(&current),
+            &f.ledger,
+        )
+        .unwrap_err();
+    let ClosureInventoryError::Notions(actual) = &issue else {
+        panic!("notion inventory cause")
+    };
+    let NotionPlacementInventoryError::CutPlan(plan) = actual.as_ref() else {
+        panic!("complete plan cause")
+    };
+    assert_eq!(
+        plan.as_ref(),
+        &CutPlanError::QuantityMismatch {
+            piece: current.id(),
+            expected: 4,
+            actual: 2
+        }
+    );
+    assert!(core::ptr::eq(
+        issue
+            .source()
+            .unwrap()
+            .source()
+            .unwrap()
+            .downcast_ref::<CutPlanError>()
+            .unwrap(),
+        plan.as_ref()
+    ));
 }

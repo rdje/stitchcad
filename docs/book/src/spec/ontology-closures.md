@@ -145,6 +145,32 @@ This changes neither instance/placement validation nor envelope priority or stor
 | `InvalidPlacement` | Current placement needs repair or fails copy/owner/reference validation |
 | `DeferredToG2` | Structural closure carries no proof of actual hardware or attachment geometry |
 
+## Complete Closure and instance collection
+
+`ClosureInventory::new` owns exact Closures in authored order. Its identity census visits each
+Closure, then its physical instances; duplicate Closure ids, cross-Closure instance ids and
+Closure/instance aliases refuse with both original owning positions. Placement ids remain target
+uses. The existing reuse restriction applies within each Closure; no new restriction is imposed
+across distinct Closures. Counts still derive from each immutable instance list.
+
+`closures()` and `closure(id)` borrow original objects, including targets held across edits.
+Inspection alone supplies no current proof. `validate_current(notions, plan, pieces, ledger)` first
+validates the complete supplied NotionPlacementInventory, then every Closure's original current
+checks in authored order. For example, an unused notion with a deleted anchor blocks this query
+even when every Closure target remains valid. A missing second target in a later Closure instead
+retains that Closure, instance, component role and original ClosureError.
+
+An explicit empty Closure collection still validates all supplied notions and the complete current
+plan. Concrete cause chains remain original; contexts and resolved values are never cached. Global
+Design identity joins, logical declarations, buttonhole operations and G2/G3/G4 proof stay separate.
+The existing constructor's env_fly refusal cannot be bypassed through this collection.
+
+| API token | Collection meaning |
+| --- | --- |
+| `ClosureInventory` | Private ordered actual Closures and complete current placement checks |
+| `ClosureInventoryPosition` | Original Closure or nested instance position in the local id census |
+| `ClosureInventoryError` | DuplicateIdentity positions, whole Notions cause or contextual Closure cause |
+
 ## Button/buttonhole pairs: one canonical length source
 
 `ClosureKind::ButtonAndButtonhole` uses the same stable physical instance/count model. First placement

@@ -3,15 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — complete notion-placement sources
+## _(2026-10-27 UTC)_ — complete Closure and instance sources
 
-0378 owns exact ordered NotionPlacementInventory objects; duplicate ids keep original positions.
-Current queries recheck the complete CutPlan and every original Piece/copy/anchor/full direction,
-including unused placements. Held damage stays inspectable; contexts/values are not cached.
-Five native controls and2 privacy controls pass0; strict affected lint/fmt/book/publication79/141 pass0.
-Original notion/cut validators byte-identical; D250132 exact baseline rows unchanged.529 retains whole
-0377/D260 and historical provider evidence in5 exact Git spans0. Promotion declined: existing current
-source boundary. Closure/instance collection next; full CI/integration remains deferred.
+0379 owns exact ordered ClosureInventory objects; Closure/nested-instance ids share a local census
+with original owning positions. Current queries check whole notions first, then every Closure.
+Unused notion failures and later missing targets keep concrete causes, stable instance and role.
+Five native controls/privacy2 pass0; strict affected lint/fmt/book/publication79/144 pass0. Original
+validators byte-identical; per-Closure reuse and physical/declaration deferrals unchanged. D250132
+exact prior rows unchanged.530 retains whole0378/retirement/signature evidence in6 exact Git spans0.
+Promotion declined: existing ownership/current-source rules. Known declaration roles next; full CI deferred.
+
+[Complete notion collection lesson](docs/history/stitchcad-devnotes-part530.md) retains
+its original scope, checks and promotion decision.
 
 [Complete D260 Closure-cause lesson](docs/history/stitchcad-devnotes-part529.md) retains
 its original scope, checks and promotion decision.
@@ -52,13 +55,8 @@ its original scope, checks and promotion decision.
 [Complete private Design-input composition lesson](docs/history/stitchcad-devnotes-part517.md) retains
 its original scope, checks and promotion decision.
 
-## _(2026-10-26 UTC)_ — native authority scope review
-
-0338 .6.3.3 closes core predicate scope; same request rechecks revoked/expired grants after earlier success.
-Changed auth8/0, libraries identical6ad19c7/other13 proofs retained; strict lint/fmt/book/pub77-103 pass0.
-492 whole6ad19c7 exact Git/hash/public0; retention946 logical/63 working/16 immutable windows pass0.
-No provider, handler, source/revision/evidence or effect proof claimed. .6.4 owns aggregate execution.
-Promotion declined: existing authority decision; capacity P1 next before more seals. G1still6/18.
+[Complete native authority review lesson](docs/history/stitchcad-devnotes-part530.md) retains
+its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — trusted-host core authorization
 

@@ -908,26 +908,26 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0377 D260 original Closure causes; [whole scope/proof](../history/stitchcad-devnotes-part529.md).
 - ID: `G1-SLICE.6.4.5.2.b`
   Status: `done`
-  Goal: private actual notion-placement inventory; complete current copies and every original target.
-  Own exact order/ids, complete actual plan and every owned placement's original Piece/anchor/direction
-  via existing current validators, including unused placements. No stored contexts or implicit retargeting.
-  Preserve raw choice/repair rules, concrete causes and empty draft scope; global ids/size roles separate.
-  Focused native/privacy/lint/book; whole0377/D260 continuity529.
-  - [x] REPRODUCE / ISSUE: python3 Git-source check: dcce067 has no notion inventory rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; individual placements lack collection ownership,
-    complete-plan and unused-placement coverage. Existing notion/cut validators stay byte-identical.
-  - [x] FIX: cargo clippy -p sc-core --test notion_contract -- -D warnings:rc=0; private ordered
-    collection, duplicate positions, original targets and concrete plan/placement causes.
-  - [x] ADDRESSED: cargo test -p sc-core --test notion_contract inventory_:5/0 rc=0;
-    cargo test -p sc-core --doc ontology::notion_inventory:2/0 rc=0.
-  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; glossary132 failures rc=1,
-    exact D250 baseline rows compare rc=0; no validator-rule change.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/141/1454/2403 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part529.md:5 exact spans rc=0.
-    promotion: declined (existing current-source boundary). Completed STITCHCAD-G1-0378.
+  Goal:0378 actual notion collection; [whole scope/proof](../history/stitchcad-devnotes-part530.md).
 - ID: `G1-SLICE.6.4.5.2.c`
-  Status: `pending`
+  Status: `done`
   Goal: private actual Closure inventory, nested instance identities and complete current placements.
+  Own exact ordered objects and local Closure/instance id census with both positions/roles; whole
+  supplied notion inventory first, then every Closure's existing current checks. Preserve held damage,
+  raw queries/error causes and G2/G3/G4 deferrals; global Design joins/declarations remain .d/.5.
+  Focused native/privacy/lint/book and whole0378 continuity530 before next leaf.
+  - [x] REPRODUCE / ISSUE: python3 Git-source check: a50e92d has no Closure inventory rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; individual Closures own no collection-wide
+    nested id census or complete unused notion scope. Original validators byte-identical.
+  - [x] FIX: cargo clippy -p sc-core --test closure_contract -- -D warnings:rc=0;
+    private ordered objects/local nested ids, whole notions then every Closure, concrete causes.
+  - [x] ADDRESSED: cargo test -p sc-core --test closure_contract inventory_:5/0 rc=0;
+    cargo test -p sc-core --doc ontology::closure_inventory:2/0 rc=0.
+  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; glossary132 failures rc=1,
+    exact prior D250 rows compare rc=0; existing per-Closure target reuse rules retained.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/144/1454/2404 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part530.md:6 exact spans rc=0.
+    promotion: declined (existing ownership/current-source rules). Completed STITCHCAD-G1-0379.
 - ID: `G1-SLICE.6.4.5.2.d`
   Status: `pending`
   Goal: actual known Closure declaration roles; preserve existing logical domain/operation deferrals.

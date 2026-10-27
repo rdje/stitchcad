@@ -17,6 +17,7 @@
 //! | [`allowance`] | per-edge width origins, corner intent and symbolic profile inclusion | `.3c.3c` |
 //! | [`anchor`] | shared born-valid semantic anchor checks and typed refusals | `.3c.3a`/`.3c.2b.2` |
 //! | [`closure`] | closure instances, canonical buttonhole source, current targets and explicit fly refusal | `.3c.4c.1b` |
+//! | [`closure_inventory`] | owned Closure/instance identities and complete current placements | `.6.4.5.2.c` |
 //! | [`cut`] | explicit physical-copy identities, complete quantity/orientation validation | `.3c.2b.1` |
 //! | [`dart`] | owned apex/legs, intake provenance and closing-operation intent, deferred conservation | `.3c.4a.1` |
 //! | [`fold`] | distinct tuck/pleat intent, owned fold references and deferred conservation | `.3c.4a.2a` |
@@ -45,6 +46,7 @@
 pub mod allowance;
 pub mod anchor;
 pub mod closure;
+pub mod closure_inventory;
 pub mod cut;
 pub mod dart;
 pub mod fold;
@@ -146,6 +148,7 @@ pub use closure::{
     ClosureEnvelopeError, ClosureError, ClosureInstance, ClosureKind, ClosureLength,
     ClosurePlacementRole, NotionSize,
 };
+pub use closure_inventory::{ClosureInventory, ClosureInventoryError, ClosureInventoryPosition};
 
 pub use pocket::{
     Pocket, PocketDefinition, PocketError, PocketOpening, PocketOpeningValidation, PocketPieceRef,

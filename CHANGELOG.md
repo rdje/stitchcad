@@ -3,13 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0378 — own complete current notion placements
 
-- Private ordered NotionPlacementInventory; complete plan and every original target, including unused.
-- Original concrete causes/raw repair rules; native5/privacy2, lint/fmt/book/publication79/141 pass0.
-- D250132 unchanged; whole0377/D260/provider evidence529. Actual Closure inventory next.
+## STITCHCAD-G1-0379 — own complete current Closures and instances
+
+- Private ordered ClosureInventory; local nested id census and whole notions before all Closure targets.
+- Original concrete causes/positions; native5/privacy2, lint/fmt/book/publication79/144 pass0.
+- D250132 unchanged; whole0378/retirement/signature evidence530. Known declaration roles next.
 
 # Sealed archive — earlier slices
+
+| [part530](docs/history/stitchcad-devnotes-part530.md) | whole0378/retirement/signatures/authority lesson | 105 lines, 7352 bytes, sha256:b62aecf4… |
 
 | [part529](docs/history/stitchcad-devnotes-part529.md) | whole0377/D260 and historical provider proof | 80 lines, 5602 bytes, sha256:b1260291… |
 
