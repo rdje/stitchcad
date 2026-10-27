@@ -211,3 +211,17 @@ Actual expression/recipe execution remains G1-SLICE.5e/.5f; source truth remains
 Inspect-only preparation grants no commit permission. Success and refusal leave the original model,
 canonical values, revision and identity reserve unchanged; execute still refuses ChangeMeasurement.
 
+## Private preparation before group staging
+
+The three metadata handlers now return one private prepared object containing their actual validated
+candidate model and its derived report. The bus's private preparation entry point retains fresh
+authorization, exact binding, explicit envelope/current-source checks and operation-specific difference
+checks. No caller can obtain that object or invoke preparation directly; a compiler privacy check
+rejects that access using the same valid host/authority bounds as the public API.
+
+Public preview consumes the private prepared object, discards its model and returns only the owned
+report. This preserves the existing single-command behavior while providing internal ownership for
+later sequential group staging. It does not publish a model, expose a replacement capability, advance
+revision/identity allocation or implement group success. Paired seam splitting and Dart execution
+retain their actual recipe/geometry dependencies; sewing ease realization remains deferred to G2/G3.
+

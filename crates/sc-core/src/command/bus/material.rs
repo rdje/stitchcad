@@ -1,5 +1,5 @@
 //! Actual private Material candidates; public reports contain no model or publication capability.
-use super::{CommandBus, CommandPreviewError};
+use super::{CommandBus, CommandPreview, CommandPreviewError, PreparedCommand};
 use crate::{
     command::{AssignMaterial, CommandAuthoritySource, DesignRevision},
     design::{DesignGarment, DesignInputs, DesignReferenceHost, DesignSewing, DesignStructure},
@@ -57,26 +57,11 @@ impl CommandMaterialPreview {
     }
 }
 
-// No constructor, model or replacement handle is exposed outside the bus module.
-struct MaterialCandidate<H> {
-    state: DesignGarment<H>,
-    changes: Vec<CommandMaterialChange>,
-}
-impl<H: DesignReferenceHost> MaterialCandidate<H> {
-    fn into_report(self) -> CommandMaterialPreview {
-        CommandMaterialPreview {
-            design: self.state.inputs().id(),
-            revision: self.state.inputs().revision().clone(),
-            changes: self.changes,
-        }
-    }
-}
-
 impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
-    pub(super) fn preview_material(
+    pub(super) fn prepare_material(
         &self,
         assignment: &AssignMaterial,
-    ) -> Result<CommandMaterialPreview, CommandPreviewError<H::Error>> {
+    ) -> Result<PreparedCommand<H>, CommandPreviewError<H::Error>> {
         let originals = self.state.inputs().structure().pieces().pieces();
         for (index, identity) in assignment.pieces().pieces().iter().copied().enumerate() {
             originals
@@ -132,6 +117,14 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             assignment,
         )
         .map_err(CommandPreviewError::Difference)?;
-        Ok(MaterialCandidate { state, changes }.into_report())
+        let report = CommandMaterialPreview {
+            design: state.inputs().id(),
+            revision: state.inputs().revision().clone(),
+            changes,
+        };
+        Ok(PreparedCommand {
+            state,
+            report: CommandPreview::Material(report),
+        })
     }
 }

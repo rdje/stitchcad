@@ -33,6 +33,20 @@ pub enum CommandPreview {
     Notch(CommandNotchPreview),
 }
 
+// Preparation retains the actual validated state and its derived report together. Only the bus
+// module can hold this object; callers receive a report after the private model has been discarded.
+struct PreparedCommand<H> {
+    state: DesignGarment<H>,
+    report: CommandPreview,
+}
+impl<H> PreparedCommand<H> {
+    fn into_report(self) -> CommandPreview {
+        let Self { state, report } = self;
+        drop(state);
+        report
+    }
+}
+
 /// Actual authored Piece inventory at one authorized exact revision; no geometry/readiness verdict.
 /// Values borrow the private bus owner, so they cannot outlive it or become a publication token.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -142,6 +156,15 @@ impl std::error::Error for CommandBusError {
 ///     bus.identities = Default::default();
 /// }
 /// ```
+/// ```compile_fail
+/// use sc_core::{command::{CommandBus, CommandAuthoritySource, CommandRequest},
+///     design::DesignReferenceHost};
+/// fn take_prepared<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource>(
+///     bus: &CommandBus<H, A>, request: &CommandRequest,
+/// ) {
+///     let prepared = bus.prepare(request);
+/// }
+/// ```
 pub struct CommandBus<H, A> {
     state: DesignGarment<H>,
     authority: A,
@@ -168,6 +191,13 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         &self,
         request: &CommandRequest,
     ) -> Result<CommandPreview, CommandPreviewError<H::Error>> {
+        self.prepare(request).map(PreparedCommand::into_report)
+    }
+
+    fn prepare(
+        &self,
+        request: &CommandRequest,
+    ) -> Result<PreparedCommand<H>, CommandPreviewError<H::Error>> {
         self.authorize_bound(request, CommandAuthorizationMode::Preview)
             .map_err(|e| CommandPreviewError::Command(Box::new(e)))?;
         let CommandRequest::Mutation(mutation) = request else {
@@ -191,15 +221,11 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             .validate_current()
             .map_err(|e| CommandPreviewError::Current(Box::new(e)))?;
         match mutation.payload() {
-            MutationPayload::ChangeMeasurement(replacement) => self
-                .preview_measurement(replacement)
-                .map(CommandPreview::Measurement),
-            MutationPayload::AssignMaterial(assignment) => self
-                .preview_material(assignment)
-                .map(CommandPreview::Material),
-            MutationPayload::AddNotch(addition) => {
-                self.preview_notch(*addition).map(CommandPreview::Notch)
+            MutationPayload::ChangeMeasurement(replacement) => {
+                self.prepare_measurement(replacement)
             }
+            MutationPayload::AssignMaterial(assignment) => self.prepare_material(assignment),
+            MutationPayload::AddNotch(addition) => self.prepare_notch(*addition),
             _ => Err(CommandPreviewError::Command(Box::new(
                 CommandBusError::HandlerUnavailable {
                     command: request.command_id(),

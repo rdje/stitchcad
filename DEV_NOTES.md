@@ -3,17 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — real Measurement metadata candidates
+## _(2026-10-27 UTC)_ — private prepared model/report ownership
 
-0426 .6.5.3.1.2 resolves actual metadata binding, keeps its declaration id, rebuilds/validates the
-whole candidate and derives an exact canonical diff. Reverting only the selected declaration in a
-copied inventory proves every other canonical value/order unchanged; other owner fields are checked.
-Real shared Material width rejects known zero with original source chain. Unknown/Derived remain
-unevaluated; source/evidence truth and recipe execution are separate. Shared errors move intact to
-bus/error.rs. Focused bus18/diff5/privacy3/lint/fmt pass. Promotion: command-layer decision.
-D283 corrects mislabeled publication populations; named summary/native formatter agree. Sealed erratum in task.
+0427 .6.5.4.1 retains each actual validated metadata candidate and its exact report in private
+PreparedCommand. Private prepare retains original auth/binding/source/difference checks; public
+preview consumes the object, drops the model and returns the report. No candidate/prepare handle
+is public. Real bus18/privacy4/strict selected lint/fmt pass; group staging/publication remain pending.
+Native sewing ease is explicitly deferred to G2/G3; paired split/Dart keep their real dependencies.
+Promotion: command-layer decision. D283 labeled publication summaries remain canonical.
 
-[Whole0425 canonical-replacement task/lesson/ledger](docs/history/stitchcad-devnotes-part577.md) retains exact source proofs and prior lesson pointers.
+[Whole0426 Measurement/D283 task/lesson/ledger](docs/history/stitchcad-devnotes-part579.md) retains exact source proofs and correction scope.
 
 [Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
 

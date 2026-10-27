@@ -1,5 +1,5 @@
 //! Actual semantic Notch candidate over a separately staged immutable identity reserve.
-use super::{CommandBus, CommandPreviewError};
+use super::{CommandBus, CommandPreview, CommandPreviewError, PreparedCommand};
 use crate::{
     command::{AddNotch, CommandAuthoritySource, DesignRevision},
     design::{DesignGarment, DesignReferenceHost, DesignSewing},
@@ -32,10 +32,10 @@ impl CommandNotchPreview {
     }
 }
 impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
-    pub(super) fn preview_notch(
+    pub(super) fn prepare_notch(
         &self,
         addition: AddNotch,
-    ) -> Result<CommandNotchPreview, CommandPreviewError<H::Error>> {
+    ) -> Result<PreparedCommand<H>, CommandPreviewError<H::Error>> {
         let structure = self.state.inputs().structure();
         let piece = structure
             .pieces()
@@ -80,10 +80,14 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             identity,
         )
         .map_err(CommandPreviewError::Difference)?;
-        Ok(CommandNotchPreview {
+        let report = CommandNotchPreview {
             design: candidate.inputs().id(),
             revision: candidate.inputs().revision().clone(),
             notch,
+        };
+        Ok(PreparedCommand {
+            state: candidate,
+            report: CommandPreview::Notch(report),
         })
     }
 }

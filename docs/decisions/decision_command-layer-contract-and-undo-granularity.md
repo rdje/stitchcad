@@ -182,3 +182,8 @@ answers: "which book publication populations were actually checked?"
 D283 correction0426: the producer reports chapters, scoped API rows, source links and rendered links.
 Historical575/576/577 called the middle populations tables/rows; their tuples were correct, labels were not.
 Named PublicationResult/summary now preserve native formatter semantics; no table count was measured.
+
+answers: "who can retain a validated prepared command model?"
+0427 .6.5.4.1 retains actual model/report in a private PreparedCommand; private prepare performs the
+same original checks. Public preview consumes/discards the model; compiler privacy4/real bus18/lint
+pass. This is the existing transaction prerequisite, not publication or completed group execution.

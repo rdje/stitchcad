@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0426
+## Current leaf acceptance —0427
 
 - [x] ROOT CAUSE: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
-  actual Measurement identity binds a distinct dedicated declaration and shared current consumers.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
-  difference5 rc=0; actual binding/id, exact state/no-op, shared Material failure and unchanged owner checked.
-- [x] NO REGRESSION: selected strict Clippy finished rc=0; cargo test -p sc-core --doc command::bus:
-  3 passed rc=0; selected fmt --check rc=0. Prior bus14 pass within18; full integration remains .6.9.
+  later private group staging needs the actual validated model/report, while public preview discards it.
+- [x] ADDRESSED: cargo test -p sc-core --doc command::bus:4 passed rc=0; valid host/authority bounds
+  still cannot access private prepare or retain a candidate handle. Real bus18 pass rc=0.
+- [x] NO REGRESSION: selected strict Clippy finished rc=0; real bus18 preserve original causes,
+  bindings, canonical diffs, owned model/revision/reserve; selected fmt --check rc=0. Full bus .6.9 later.
 
 ## Goal
 
@@ -734,42 +734,49 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0425 stable detached canonical replacement; [whole scope/proofs](../history/stitchcad-devnotes-part577.md).
 - ID: `G1-SLICE.6.5.3.1.2`
   Status: `done`
-  Goal:0426 actual Measurement binding/id guard, validated private canonical candidate and exact
-  actual diff. Unknown/Derived remain metadata; external truth/recipe execution remain separately owned.
-  - [x] REPRODUCE / ISSUE: git show 411f74d:crates/sc-core/src/command/bus.rs prints preview dispatch
-    for only Material/Notch, rc=0; detached canonical replacement alone supplies no actual Measurement binding.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-measure --test design_inputs_contract command_bus:
-    18 passed rc=0; actual binding and shared consumers must use the single real canonical owner.
-  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
-    bind actual metadata, require original declaration id, validate full candidate and normalize exact diff.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
-    inspect-only Unknown/Derived/no-op, wrong id/missing metadata, original shared width/source chain.
-  - [x] NO REGRESSION: cargo test -p sc-core --lib command::bus::difference:5 passed rc=0;
-    prior bus14 also pass within18; privacy3/selected fmt/strict Clippy pass rc=0. Shared errors moved intact.
-  - [x] LOCKSTEP: whole0425 scope/lesson/ledger retained577; README/book/pointer/status/decision aligned.
-    Original broad handler-pending wording now names actual read/metadata subset. Native archive/book
-    transition_receipts.py records577/578:3+1 exact Git spans rc=0; retention OK rc=0. Named publication
-    summary:80 chapters/159 scoped API rows/1462 source links/2439 rendered links rc=0, equal to native
-    411f74d original formatter. Exact tuple compatibility retained; full publication probes await .6.9.publication/pre-push.
-    Actual expression/recipe/source truth remain .5e/.5f/evidence owners.
-  D283 P2, owned/fixed here: manual tuple labels called159 scoped API rows tables and1461 source
-  links rows. Native check return/main formatter proves the cause; all1031 retained records scanned,
-  exactly575/576/577 affected. Those sealed bytes stay unchanged: read their159 as scoped API rows,
-  1461 as source links and2436/2437 as rendered links. No table-count claim was earned by that check.
-  Correct live0422 labels; return a named PublicationResult/summary to remove tuple decoding from callers. Native
-  wc establishes PLANNING1194 lines and decision184; an ad-hoc print had mislabeled decision184 as
-  planning after variable reuse. Stored planning cap assertion used the correct source; native paths
-  and named producer fields replace those ambiguous diagnostic labels. No retention bytes are edited.
-  Maintained-reference candidate81 files/17501 lines/1221811 bytes rc=0; git diff --check rc=0.
-  Cargo commands use scripts/local_environment.py. New metadata reports confer no effect authority;
-  model/revision/identity reserve unchanged on success/refusal. Full bus integration remains .6.9.
+  Goal:0426 actual bound Measurement metadata/D283; [whole scope/proofs](../history/stitchcad-devnotes-part579.md).
 - ID: `G1-SLICE.6.5.3.2`
   Status: `pending`
   Goal: actual paired SplitSeamSpan handler: recover native range/ease/stop/lineage interfaces and
   explicit A/B-cut contract first; own any real recipe/geometry dependencies without fabricated checks.
 - ID: `G1-SLICE.6.5.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: authorized candidate preview, effect-boundary revalidation and whole-group atomic publication.
+  Implemented metadata handlers can share staging now; paired split/Dart retain real recipe/geometry
+  dependencies in .3. Native sewing EaseValidation explicitly defers realization to G2/G3.
+- ID: `G1-SLICE.6.5.4.1`
+  Status: `done`
+  Goal:0427 actual private validated model/report ownership through preparation; public preview
+  consumes/discards the model. No public prepared handle, publication or group success claimed.
+  - [x] REPRODUCE / ISSUE: git show 25f29c8:crates/sc-core/src/command/bus/measurement.rs prints
+    only report return after actual candidate construction, rc=0; group staging cannot retain that model.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-measure --test design_inputs_contract command_bus:
+    18 passed rc=0; retain same validated state/report internally without exposing a replacement capability.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
+    private PreparedCommand owns state/report, private prepare dispatches all three actual handlers.
+  - [x] ADDRESSED: cargo test -p sc-core --doc command::bus:4 passed rc=0; external generic code with
+    correct host/authority bounds cannot call prepare. Actual public preview still discards the private state.
+  - [x] NO REGRESSION: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed
+    rc=0; selected fmt --check/strict Clippy rc=0. No original state/revision/reserve changes or new public API.
+  - [x] LOCKSTEP: whole0426 Measurement/D283 scope/lesson/ledger retained579; book/pointer/decision
+    synchronized. transition_receipts.py record579:3 exact Git spans rc=0; retention OK rc=0.
+    Native publication:80 chapters/159 scoped API rows/1462 source links/2440 rendered links rc=0.
+    Maintained-reference81 files/17515 lines/1222838 bytes rc=0; full bus .6.9 remains deferred.
+  Cargo commands use scripts/local_environment.py. Native sewing EaseValidation::DeferredToG2AndG3
+  remains explicit: paired split/Dart need real recipe/geometry. Existing transaction prerequisite is safe
+  for the implemented three metadata handlers before that dependent work is executable.
+- ID: `G1-SLICE.6.5.4.2`
+  Status: `pending`
+  Goal: exact atomic group input/context ownership and sequential private staging with independent
+  original reserve cursor and actual failing-command context, no partial accepted result.
+- ID: `G1-SLICE.6.5.4.2.1`
+  Status: `pending`
+  Goal: nonempty typed mutation group, exact original id/order/actor/Design/revision/group context;
+  no authentication or execution implied, preserve retry keys without deciding replay policy.
+- ID: `G1-SLICE.6.5.4.2.2`
+  Status: `pending`
+  Goal: sequential real private candidates with one independent staged reserve cursor; all-or-error
+  group report preserving actual failing index/command and no publication/partial accepted result.
 - ID: `G1-SLICE.6.5.5`
   Status: `pending`
   Goal: scoped actual transaction/failure-context/rollback acceptance; full bus review .6.9 later.

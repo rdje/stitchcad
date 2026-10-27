@@ -1,5 +1,5 @@
 //! Actual bound canonical measurement replacement; recipe evaluation is a separate dependency.
-use super::{CommandBus, CommandPreviewError};
+use super::{CommandBus, CommandPreview, CommandPreviewError, PreparedCommand};
 use crate::{
     command::{ChangeMeasurement, CommandAuthoritySource, DesignRevision},
     design::{DesignGarment, DesignInputs, DesignReferenceHost, DesignSewing, DesignStructure},
@@ -58,10 +58,10 @@ impl CommandMeasurementPreview {
 }
 
 impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
-    pub(super) fn preview_measurement(
+    pub(super) fn prepare_measurement(
         &self,
         replacement: &ChangeMeasurement,
-    ) -> Result<CommandMeasurementPreview, CommandPreviewError<H::Error>> {
+    ) -> Result<PreparedCommand<H>, CommandPreviewError<H::Error>> {
         let inputs = self.state.inputs();
         let bound = inputs
             .sources()
@@ -111,11 +111,15 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             replacement,
         )
         .map_err(CommandPreviewError::Difference)?;
-        Ok(CommandMeasurementPreview {
+        let report = CommandMeasurementPreview {
             design: candidate.inputs().id(),
             revision: candidate.inputs().revision().clone(),
             measurement: replacement.measurement(),
             changes,
+        };
+        Ok(PreparedCommand {
+            state: candidate,
+            report: CommandPreview::Measurement(report),
         })
     }
 }

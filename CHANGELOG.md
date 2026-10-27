@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0426 — preview actual bound Measurement metadata
+## STITCHCAD-G1-0427 — retain validated candidates behind private preparation
 
-- Resolve actual Measurement binding and refuse a different canonical declaration identity.
-- Rebuild the real candidate; retain exact authored state/source and original shared-consumer errors.
-- Derive exact canonical diff; refuse unselected/order/context/Piece/landmark drift, omit no-ops.
-- Focused bus18/diff5/privacy3/lint/fmt; original state unchanged, no publication or recipe evaluation.
-- D283: correct publication metric labels, preserve sealed historical bytes with an explicit erratum; named summaries match original native formatter.
+- Private prepared object owns actual validated model and derived report for all three metadata handlers.
+- Public preview discards the model; callers cannot invoke preparation or obtain a model handle.
+- Focused real bus18/privacy4/lint/fmt; existing semantics and original causes remain unchanged.
+- Group staging/publication and actual recipe/geometry execution remain separately owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -44,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part579](docs/history/stitchcad-devnotes-part579.md) | whole0426 Measurement/D283 scope/lesson/ledger | 51 lines, 4536 bytes, sha256:6c38230d… |
 | [part578](docs/history/stitchcad-devnotes-part578.md) | wholeD281/D282 verified ledger | 15 lines, 1487 bytes, sha256:fdf69ae8… |
 | [part577](docs/history/stitchcad-devnotes-part577.md) | whole0425 canonical replacement scope/lesson/ledger | 37 lines, 3076 bytes, sha256:bb276d57… |
 | [part576](docs/history/stitchcad-devnotes-part576.md) | whole0424 difference scope/lesson/ledger | 38 lines, 3130 bytes, sha256:e64d6680… |
