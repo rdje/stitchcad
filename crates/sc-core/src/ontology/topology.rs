@@ -1233,7 +1233,7 @@ impl IdentityLedger {
     }
 
     /// Resolves and peels a stated split choice at every split point the fold meets.
-    fn resolve_with_choice(
+    pub(crate) fn resolve_with_choice(
         &self,
         edge: EdgeRef,
         param: Param,

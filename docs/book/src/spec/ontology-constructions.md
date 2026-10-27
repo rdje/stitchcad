@@ -253,3 +253,47 @@ authored. Placement/contour geometry reports `GeometricValidation::DeferredToG2`
 | `MissingComponent` | Query names no authored component copy |
 | `UnresolvedOrientation` | Raw incomplete interval or endpoint-choice evidence |
 | `OrientationOutsidePiece` | Some current orientation interval is foreign to the served Piece |
+
+## Owned Pocket collection and current component intervals
+
+PocketInventory::new(pockets) owns exact authored Pocket objects in order. Duplicate identities
+refuse with original first/repeated positions; nothing is sorted, selected or repaired. pockets() and
+pocket(id) return shared original objects. Raw presence supplies no current certificate, and an
+explicitly empty collection supplies no whole Design or assembly completeness claim.
+
+```rust
+let pockets = PocketInventory::new(vec![left_pocket, right_pocket])?;
+pockets.validate_current(&current_plan, &current_pieces, &ledger)?;
+```
+
+The current query first revalidates the complete CutPlan against actual current Pieces, then each
+Pocket's targets/placement, then every authored component's full held intervals: boundary, holes and
+construction lines. Constructor success and individual component lookup cannot replace these checks.
+A plan built for cut-two cannot remain current after the same-id Pieces change to cut-four, even if
+each Pocket reference still finds its old copy. The original CutPlanError is retained as its cause.
+
+For example, split a bag component edge into thirds and delete the middle. Pocket placement and
+both component endpoints can still resolve. The inventory returns ComponentRange for the actual
+Pocket/component copy/source Piece/edge position with live/repair/live evidence. This applies to
+holes and construction lines too, retaining original traversal separately from forward-frame range
+portions. Only an exact source-Piece/edge/parameter registration supplies a saved endpoint choice;
+another consumer cannot choose for the Piece. The canonical ledger resolver applies that choice,
+while the raw range endpoints remain unchanged. A chosen branch that later becomes orphaned blocks
+with its choice-aware endpoint answer alongside the raw interval evidence. No deleted interval is
+sampled away or reattached. The unchanged Pocket remains inspectable.
+
+Every Pocket is checked, including a later one after earlier success. Pocket wrappers preserve the
+concrete original PocketError and its AnchorError chain; component range payloads remain data rather
+than invented Error causes. All failures retain authored positions without an accepted prefix.
+
+| API or variant | Meaning |
+| --- | --- |
+| `PocketInventory` | Private ordered actual Pocket collection with current component-reference checks |
+| `PocketInventoryError` | Duplicate id, current plan/Pocket cause or full component range evidence |
+| `ComponentRange` | Original component interval or endpoint repair/choice with actual locations |
+
+This is current reference coverage, not geometric contour validity. Logical opening declaration
+kind/domain/state/dependencies still belong to recipe/Design validation; opening execution is G3,
+profile resolution G4 and physical geometry G2. Existing Pocket deferral queries stay unchanged.
+Global identity joins with the rest of Design remain separate. See
+[the public source](../../../../crates/sc-core/src/ontology/pocket_inventory.rs).

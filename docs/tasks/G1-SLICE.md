@@ -889,32 +889,37 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   sources; .5 coupled root ownership/current declarations; .6 focused complete component acceptance.
   Keep existing G3/G4/typed-operation owners explicit; numeric ids cannot invent logical metadata.
 - ID: `G1-SLICE.6.4.5.1`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual Pocket inventory, current placement and every component contour; opening scope stays G3.
   Children .a original pocket/notion anchor causes; .b owned collection/current component coverage.
 - ID: `G1-SLICE.6.4.5.1.a`
   Status: `done`
-  Goal: D258/D259 original nested AnchorError sources for Pocket/NotionPlacement; focused red/green,
-  preserve all validation behavior and data-only evidence; book/census/whole526 continuity.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test pocket_contract
-    pocket_position_error_keeps_original_anchor_cause -- --exact:0/1 rc=101; notion equivalent0/1 rc=101.
-  - [x] ROOT CAUSE (WHY + WHERE): both exact native red controls fail at source() None;
-    original PocketError/NotionPlacementError empty Error impls drop nested cause chains, rc=101 each.
-  - [x] FIX: cargo clippy -p sc-core --test pocket_contract --test notion_contract -- -D warnings:rc=0;
-    expose actual AnchorError by borrow/as_ref, preserving concrete type and original data.
-  - [x] ADDRESSED: cargo test -p sc-core --test pocket_contract
-    pocket_position_error_keeps_original_anchor_cause -- --exact:1/0 rc=0; notion equivalent1/0 rc=0.
-  - [x] NO REGRESSION: python3 -I -B Git-source comparison: all non-Error-impl bytes unchanged
-    in both production modules rc=0; fmt0, glossary132 failures rc=1, exact D250 rows compare rc=0.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/137/1454/2401 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part526.md:5 exact spans rc=0.
-    promotion: declined (local standard Error repairs; canonical D258/D259).
-    Completed STITCHCAD-G1-0375; .1.b Pocket collection/current components next, broad CI later.
+  Goal:0375 D258/D259 original anchor causes; [whole scope/proof](../history/stitchcad-devnotes-part527.md).
 - ID: `G1-SLICE.6.4.5.1.b`
-  Status: `in_progress`
+  Status: `done`
   Goal: private actual Pocket collection/current plan, targets and all component held intervals.
+  Own ordered private inventory/duplicate guards, complete actual plan/current Pocket checks and every
+  component Piece full held range (including holes/construction lines). Keep raw direction/repair cause,
+  explicit empty drafts and G3 opening/G4 profile deferrals; global Design ids remain .5.5.
+  Focused native/privacy/lint/book and whole0375/D258/D259 continuity527; no old producer changes.
+  Component endpoints use only exact Piece/edge/parameter saved choices via the canonical ledger helper.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test pocket_contract inventory_:5/0 rc=0;
+    placement/live endpoints can hide component boundary/hole/construction interval loss or stale quantities.
+  - [x] ROOT CAUSE (WHY + WHERE): native5/0 rc=0 via local_environment.py; individual
+    Pocket target checks intentionally omit component contours and complete current copy-plan proof.
+  - [x] FIX: cargo clippy -p sc-core --test pocket_contract -- -D warnings:rc=0; ordered
+    immutable collection/current plan, every Pocket/component and exact owner-specific saved choices.
+  - [x] ADDRESSED: cargo test -p sc-core --doc ontology::pocket_inventory:: gives2/0 rc=0;
+    private/shared data; native5 retains raw plus choice-aware evidence and original concrete causes.
+  - [x] NO REGRESSION: python3 -I -B Git-source comparison: canonical choice resolver body
+    identical rc=0 (crate visibility only); original Pocket/Notion source diff empty0; fmt0.
+    Glossary132 failures rc=1, exact D250 prior rows compare rc=0. Opening/geometry scopes stay deferred.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/139/1454/2402 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part527.md:4 exact spans rc=0.
+    promotion: existing ontology decision answer extended. Completed STITCHCAD-G1-0376.
+    .5.2 actual notion/Closure collections next; full integration/CI remains separate.
 - ID: `G1-SLICE.6.4.5.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual notion/Closure collection, every instance/placement and known declaration roles.
 - ID: `G1-SLICE.6.4.5.3`
   Status: `pending`

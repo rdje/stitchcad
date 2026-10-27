@@ -3,14 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0375 — preserve original garment anchor error causes
+## STITCHCAD-G1-0376 — own Pockets and check every current component interval
 
-- Fix D258/D259 Pocket/NotionPlacement standard error chains to expose exact concrete AnchorError.
-- Each actual deleted-anchor control red101/green0; all non-Error-impl production bytes unchanged.
-- Affected lint/fmt/book/publication pass0; D250132 unchanged. Whole identity/sewing/0374/phase proof526.
-- Pocket collection/current component scope next; full integration/CI remains separate.
+- Validate complete copies, every Pocket placement and component boundary/hole/construction ranges.
+- Honor exact Piece saved endpoint choices; retain raw and choice-aware evidence without repair/reassignment.
+- Native5/privacy2/lint/fmt/book/publication pass0; D250132 unchanged, whole0375/D258/D259 continuity527.
+- Notion/Closure collections next; logical opening, geometry, Profile and global Design scopes stay explicit.
 
 # Sealed archive — earlier slices
+
+| [part527](docs/history/stitchcad-devnotes-part527.md) | whole0375 and D258/D259 anchor-cause reports | 63 lines, 4891 bytes, sha256:0978063c… |
 
 | [part526](docs/history/stitchcad-devnotes-part526.md) | closed identity/sewing scopes,0374 and recipe-phase proof | 178 lines, 12535 bytes, sha256:0385cb8d… |
 

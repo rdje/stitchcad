@@ -7,7 +7,7 @@
   at gate G1 and what `sc-geometry` proves at gate G2 (`docs/book/src/spec/ontology.md` §4.1, §9;
   `docs/tasks/G2-2D.md` leaf `.1`).
 
-answers: "how do Pocket components retain explicit physical-copy and source-Piece references?" · "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" ·
+answers: "can Pocket placement certify every component interval?" · "how do Pocket components retain explicit physical-copy and source-Piece references?" · "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" ·
   "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?" ·
   "how do tucks and pleats retain distinct semantic kinds?" · "can lining be modelled while remaining outside v1 execution scope?" · "how does a faced hem bind a current Facing without duplicating it?"
 
@@ -116,3 +116,15 @@ Opening type retains a logical recipe/Profile declaration with DeferredToG3 reso
 G1 invents no opening vocabulary or support approval. Component queries borrow current Piece
 metadata; Design/G2 must inspect all component contour repairs and geometry before execution/release.
 Known envelope diagnostics remain execution obligations, never silent approximation of an opening.
+
+PocketInventory now owns exact ordered Pocket objects and checks their complete current plan,
+placements and every component Piece's held boundary/hole/construction interval. A successful
+placement or component lookup cannot certify intervals: lost interiors block even with live endpoints.
+Original traversal, raw repairs and typed current causes remain intact. Contexts are borrowed for
+queries, never stored or reconstructed as alternate geometry. Full Design identity joins, logical
+opening declarations and G2/G3/G4 geometry/execution/profile proofs retain their separate owners.
+
+Component endpoints honor only exact source-Piece/edge/parameter saved choices through the existing
+ledger resolver. Raw range answers remain intact; failures retain separate choice-aware lower/upper
+answers. Another consumer's choice cannot authorize a Piece, and a chosen orphaned branch remains a
+repair even if positive-length coverage survives. This supplies no geometric join/continuity proof.

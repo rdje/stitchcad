@@ -136,3 +136,5 @@ owned sewing input definition	spec/design-inputs.md	crates/sc-core/src/design/se
 owned Design sewing input state	spec/design-inputs.md	crates/sc-core/src/design/sewing_state.rs	DesignSewing	G1-SLICE.6.4.4.3.a	4.4
 owned sewing identity position	spec/design-inputs.md	crates/sc-core/src/design/sewing_state.rs	DesignSewingPosition	G1-SLICE.6.4.4.3.a	4.4
 owned sewing input refusal	spec/design-inputs.md	crates/sc-core/src/design/sewing_state.rs	DesignSewingError	G1-SLICE.6.4.4.3.a	4.4
+owned Pocket current component inventory	spec/ontology-constructions.md	crates/sc-core/src/ontology/pocket_inventory.rs	PocketInventory	G1-SLICE.6.4.5.1.b	4.4
+owned Pocket current component refusal	spec/ontology-constructions.md	crates/sc-core/src/ontology/pocket_inventory.rs	PocketInventoryError	G1-SLICE.6.4.5.1.b	4.4

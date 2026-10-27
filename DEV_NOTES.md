@@ -3,18 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — original garment anchor error causes
+## _(2026-10-27 UTC)_ — owned Pocket/current component intervals
 
-0375 fixes D258/D259: PocketError::Position(Box<AnchorError>) and NotionPlacementError::Anchor
-retained real nested failures, but empty standard Error impls returned no source. Actual deleted-anchor
-controls each red0/1 rc101, then green1/0 rc0 after borrowing the exact original AnchorError; both
-concrete downcast and pointer identity are preserved, rather than exposing Box as the cause type.
-All production bytes outside the two Error impls are identical to4d5a4a4. Placement validation/data
-and range evidence behavior stay unchanged; no invented cause wraps data-only RangeResolution.
-Strict affected lint/fmt/book/publication79/137 pass0; D250132 exact prior rows.526 preserves whole
-closed identity/sewing task scopes,0374 and historical recipe-phase proof in5 exact Git spans0.
-Promotion declined: localized standard Error contract repairs; canonical reports close D258/D259.
-Pocket collection/current components next; full integration/CI remains deferred.
+0376 PocketInventory owns exact ordered objects, rejects duplicate ids and rechecks complete current
+copies, each placement and every component boundary/hole/construction interval. Old target success
+and live endpoints cannot hide an interior loss. Late Pocket failures retain actual locations and
+concrete Pocket/Anchor causes; raw range evidence remains data. Exact Piece/edge/parameter saved
+choices use the canonical ledger resolver (body unchanged, crate visibility only); another consumer
+cannot choose for the Piece. Chosen orphaned endpoints block even with surviving positive coverage.
+Native5/privacy2/strict affected lint/fmt/book/publication79/139 pass0; D250132 exact rows. Opening
+roles/G3, physical profiles/G4, geometry/G2 and global Design joins remain separate.527 retains whole
+0375/D258/D259 in4 exact Git spans0. Promotion: existing ontology decision answers component coverage.
+Actual notion/Closure collections next; broad integration/CI stays unverified.
+
+[Complete D258/D259 anchor-cause lesson](docs/history/stitchcad-devnotes-part527.md) retains
+its original scope, checks and promotion decision.
 
 [Complete sewing-component acceptance lesson](docs/history/stitchcad-devnotes-part526.md) retains
 its original scope, checks and promotion decision.

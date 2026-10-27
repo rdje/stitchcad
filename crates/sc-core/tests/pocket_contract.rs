@@ -580,3 +580,300 @@ fn pocket_position_error_keeps_original_anchor_cause() {
     assert!(!cause.is::<Box<AnchorError>>());
     assert_eq!(pocket.definition(), &input);
 }
+
+#[test]
+fn inventory_keeps_authored_objects_exact_ids_and_explicit_empty_scope() {
+    use sc_core::ontology::{PocketInventory, PocketInventoryError};
+    let f = fixture();
+    let first = f.pocket(f.input()).unwrap();
+    let mut second_input = f.input();
+    second_input.id = id(2001);
+    second_input.components.reverse();
+    second_input.opening = PocketOpening::Profile(ProfileParameterRef::new(id(3001)));
+    let second = f.pocket(second_input).unwrap();
+    let original = vec![second, first.clone()];
+    let inventory = PocketInventory::new(original.clone()).unwrap();
+    assert_eq!(inventory.pockets(), original);
+    assert!(core::ptr::eq(
+        inventory.pocket(id(2000)).unwrap(),
+        inventory.pockets().get(1).unwrap()
+    ));
+    assert!(inventory.pocket(id(9999)).is_none());
+    assert_eq!(
+        inventory.validate_current(&f.plan(), &f.pieces, &f.ledger),
+        Ok(())
+    );
+    assert_eq!(
+        inventory.pockets().first().unwrap().opening_validation(),
+        PocketOpeningValidation::DeferredToG3
+    );
+    assert_eq!(
+        inventory
+            .pockets()
+            .first()
+            .unwrap()
+            .profile_binding_validation(),
+        Some(ProfileBindingValidation::DeferredToG4)
+    );
+    assert_eq!(
+        PocketInventory::new(vec![first.clone(), first]),
+        Err(PocketInventoryError::DuplicateIdentity {
+            identity: id(2000),
+            first: 0,
+            duplicate: 1
+        })
+    );
+    let empty = PocketInventory::new(vec![]).unwrap();
+    assert!(empty.pockets().is_empty());
+    assert_eq!(
+        empty.validate_current(&f.plan(), &f.pieces, &f.ledger),
+        Ok(())
+    );
+}
+
+#[test]
+fn inventory_rechecks_complete_current_copies_against_actual_component_quantities() {
+    use sc_core::ontology::{PocketInventory, PocketInventoryError};
+    use std::error::Error;
+    let f = fixture();
+    let pocket = f.pocket(f.input()).unwrap();
+    let old_plan = f.plan();
+    let pieces = f
+        .pieces
+        .iter()
+        .map(|piece| {
+            let mut definition = piece.definition().clone();
+            definition.quantity = 4;
+            Piece::new(definition, &f.ledger).unwrap()
+        })
+        .collect::<Vec<_>>();
+    assert_eq!(
+        pocket.validate_current(&old_plan, &pieces, &f.ledger),
+        Ok(())
+    );
+    let expected = CutPlan::new(
+        old_plan
+            .copies()
+            .iter()
+            .map(|copy| *copy.definition())
+            .collect(),
+        &pieces,
+    )
+    .unwrap_err();
+    let inventory = PocketInventory::new(vec![pocket]).unwrap();
+    let issue = inventory
+        .validate_current(&old_plan, &pieces, &f.ledger)
+        .unwrap_err();
+    assert_eq!(
+        issue,
+        PocketInventoryError::CutPlan(Box::new(expected.clone()))
+    );
+    assert_eq!(
+        issue
+            .source()
+            .unwrap()
+            .downcast_ref::<sc_core::ontology::CutPlanError>(),
+        Some(&expected)
+    );
+}
+
+#[test]
+fn inventory_blocks_component_interior_loss_even_when_placement_and_component_endpoints_stay_valid()
+{
+    use sc_core::ontology::{PocketInventory, PocketInventoryError};
+    for kind in ["boundary", "hole", "construction"] {
+        let mut f = fixture();
+        if kind == "hole" {
+            let mut changed = f.pieces.get(1).unwrap().definition().clone();
+            let mut hole = *changed.construction_lines.first().unwrap();
+            changed
+                .construction_lines
+                .retain(|item| item.edge != hole.edge);
+            hole.direction = Direction::Reversed;
+            changed.holes.push(vec![hole]);
+            *f.pieces.get_mut(1).unwrap() = Piece::new(changed, &f.ledger).unwrap();
+        }
+        let input = f.input();
+        let component = f.pieces.get(1).unwrap();
+        let component_id = component.id();
+        let (held, edge_index) = match kind {
+            "boundary" => (*component.definition().boundary.first().unwrap(), 0),
+            "hole" => (
+                *component
+                    .definition()
+                    .holes
+                    .first()
+                    .unwrap()
+                    .first()
+                    .unwrap(),
+                1,
+            ),
+            _ => (
+                *component.definition().construction_lines.last().unwrap(),
+                3,
+            ),
+        };
+        let pocket = f.pocket(input.clone()).unwrap();
+        let original = pocket.clone();
+        let first = f.ledger.split(&mut f.ids, held.edge, t(1, 3)).unwrap();
+        let second = f.ledger.split(&mut f.ids, first.second(), t(1, 2)).unwrap();
+        f.ledger.delete(&mut f.ids, second.first()).unwrap();
+        assert_eq!(
+            pocket.validate_current(&f.plan(), &f.pieces, &f.ledger),
+            Ok(())
+        );
+        let inventory = PocketInventory::new(vec![pocket]).unwrap();
+        let issue = inventory
+            .validate_current(&f.plan(), &f.pieces, &f.ledger)
+            .unwrap_err();
+        let PocketInventoryError::ComponentRange {
+            pocket,
+            component,
+            copy,
+            piece,
+            edge,
+            direction,
+            evidence,
+            endpoints,
+        } = issue
+        else {
+            panic!("complete actual component interval refusal");
+        };
+        assert_eq!(
+            (pocket, component, copy, piece, edge, direction),
+            (
+                id(2000),
+                0,
+                id(1100),
+                component_id,
+                edge_index,
+                held.direction
+            )
+        );
+        assert_eq!(evidence.held(), EdgeRange::whole(held.edge));
+        assert!(evidence.start().resolved().is_some() && evidence.end().resolved().is_some());
+        assert!(endpoints.iter().all(|answer| answer.resolved().is_some()));
+        assert_eq!(evidence.portions().len(), 3);
+        assert_eq!(evidence.repairs().count(), 1);
+        assert_eq!(inventory.pockets(), &[original]);
+    }
+}
+
+#[test]
+fn inventory_preserves_the_exact_nested_pocket_and_anchor_error_chain_after_current_damage() {
+    use sc_core::ontology::{PocketInventory, PocketInventoryError};
+    use std::error::Error;
+    let mut f = fixture();
+    let first_input = f.input();
+    let first = f.pocket(first_input).unwrap();
+    let mut input = f.input();
+    input.id = id(2001);
+    input.position.edge = f
+        .pieces
+        .first()
+        .unwrap()
+        .definition()
+        .construction_lines
+        .get(1)
+        .unwrap()
+        .edge;
+    let pocket = f.pocket(input.clone()).unwrap();
+    let inventory = PocketInventory::new(vec![first, pocket]).unwrap();
+    f.ledger.delete(&mut f.ids, input.position.edge).unwrap();
+    assert_eq!(
+        inventory
+            .pockets()
+            .first()
+            .unwrap()
+            .validate_current(&f.plan(), &f.pieces, &f.ledger),
+        Ok(())
+    );
+    let issue = inventory
+        .validate_current(&f.plan(), &f.pieces, &f.ledger)
+        .unwrap_err();
+    assert!(
+        matches!(&issue,PocketInventoryError::Pocket { index:1, pocket, issue } if *pocket==id(2001) && matches!(issue.as_ref(),PocketError::Position(_)))
+    );
+    let pocket_cause = issue
+        .source()
+        .unwrap()
+        .downcast_ref::<PocketError>()
+        .unwrap();
+    assert!(!issue.source().unwrap().is::<Box<PocketError>>());
+    assert!(pocket_cause.source().unwrap().is::<AnchorError>());
+    assert_eq!(inventory.pockets().get(1).unwrap().definition(), &input);
+}
+
+#[test]
+fn inventory_component_endpoints_use_only_the_exact_piece_saved_choice_and_keep_raw_evidence() {
+    use sc_core::ontology::{PocketInventory, PocketInventoryError, SplitSide};
+    for matching_owner in [false, true] {
+        let mut f = fixture();
+        let pocket = f.pocket(f.input()).unwrap();
+        let component = f.pieces.get(1).unwrap();
+        let component_id = component.id();
+        let held = component.definition().boundary.first().unwrap().edge;
+        let owner = if matching_owner {
+            component_id
+        } else {
+            id(99999)
+        };
+        f.ledger.register(owner, held, Param::END).unwrap();
+        let peer = *f
+            .ledger
+            .declare_edges(&mut f.ids, 1)
+            .unwrap()
+            .first()
+            .unwrap();
+        let length = Length::from_micrometres(1000).unwrap();
+        let merged = f
+            .ledger
+            .merge(&mut f.ids, held, length, peer, length)
+            .unwrap();
+        let split = f.ledger.split(&mut f.ids, merged, t(1, 2)).unwrap();
+        f.ledger
+            .state_split_choice(owner, held, Param::END, SplitSide::Second)
+            .unwrap();
+        assert!(f
+            .ledger
+            .resolve_registered(owner, held, Param::END)
+            .unwrap()
+            .resolved()
+            .is_some());
+        let raw = f.ledger.resolve_range(EdgeRange::whole(held));
+        assert!(raw.has_full_coverage() && matches!(raw.end(), Resolution::SplitPoint { .. }));
+        let inventory = PocketInventory::new(vec![pocket]).unwrap();
+        if matching_owner {
+            assert_eq!(
+                inventory.validate_current(&f.plan(), &f.pieces, &f.ledger),
+                Ok(())
+            );
+            f.ledger.delete(&mut f.ids, split.second()).unwrap();
+            let issue = inventory
+                .validate_current(&f.plan(), &f.pieces, &f.ledger)
+                .unwrap_err();
+            assert!(
+                matches!(&issue,PocketInventoryError::ComponentRange { evidence,endpoints,.. } if evidence.has_full_coverage() && matches!(endpoints.get(1),Some(Resolution::Unresolved(_))))
+            );
+        } else {
+            let issue = inventory
+                .validate_current(&f.plan(), &f.pieces, &f.ledger)
+                .unwrap_err();
+            assert!(
+                matches!(&issue,PocketInventoryError::ComponentRange { evidence,endpoints,.. } if matches!(evidence.end(),Resolution::SplitPoint { .. }) && matches!(endpoints.get(1),Some(Resolution::SplitPoint { .. })))
+            );
+        }
+        assert_eq!(
+            inventory
+                .pockets()
+                .first()
+                .unwrap()
+                .definition()
+                .components
+                .first()
+                .unwrap()
+                .piece,
+            component_id
+        );
+    }
+}
