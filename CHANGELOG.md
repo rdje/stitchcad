@@ -10,15 +10,18 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0362 — own explicit SizeSet families and validate complete external inventories
 
-- Add owned SizeSet family and private authored inventory with complete cross-set source identity checks.
-- Exact reference queries revalidate all sources and borrow actual id/revision targets; singleton garment provenance stays explicit.
-- Native6+5/privacy3/strict selected lint/fmt/book/publication pass0; moved MTM fixture body exact; D250132 rows baseline.
-- Whole0361/D256/call-lookup/complete historical handoff continuity513 matches6 Git spans; original unknown boundary retained.
-- Caps unchanged; G1still6/18. Actual combined host/full Design/execution/physical/integration/CI remains later.
+## STITCHCAD-G1-0363 — expose actual combined Design sources through core readonly facets
+
+- Own exact measurement/set sources and expose complete typed metadata roles plus actual external set id/revision validation.
+- Retain original current validators, typed causes and single canonical values; core remains independent of higher schemas.
+- Native4+8+1/privacy2/strict core and selected-measure lint/fmt/book/publication pass0; no value/context cache or profile lookup.
+- Scoped enum vocabulary restores D250132 exact baseline rows/delta0; whole0362/wanted continuity514 matches4 Git spans.
+- Caps unchanged; G1still6/18. Coupled scope review/full Design/execution/physical/integration/CI remains later.
 
 # Sealed archive — earlier slices
+
+| [part514](docs/history/stitchcad-devnotes-part514.md) | whole0362 and historical wanted proofs | 86 lines, 6912 bytes, sha256:8e9e8d7c… |
 
 | [part513](docs/history/stitchcad-devnotes-part513.md) | whole0361/D256, historical call-lookup and handoff/journal proofs | 119 lines, 9481 bytes, sha256:97dc7fab… |
 

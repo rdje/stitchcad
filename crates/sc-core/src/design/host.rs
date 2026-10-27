@@ -21,6 +21,20 @@ pub enum DesignHostEntityKind {
     Ease,
     /// Named Ease set.
     EaseSet,
+    /// External SizeSet identity from its canonical membership.
+    SizeSet,
+    /// Actual SizeSet member.
+    SizeMember,
+    /// Authored size axis.
+    SizeAxis,
+    /// Authored axis coordinate value metadata, separate from referenced canonical scalars.
+    SizeAxisValue,
+    /// Authored signed break declaration.
+    SizeBreak,
+    /// Actual garment or MTM chart.
+    SizeChart,
+    /// Actual garment chart observation.
+    SizeChartObservation,
 }
 
 /// Owned metadata identity and its original location, without copied input state.
@@ -65,6 +79,23 @@ pub trait DesignMetadataHost {
         measurement: EntityId,
         canonical: &'a CanonicalInputs,
     ) -> Result<&'a LengthDeclaration, Self::Error>;
+}
+
+/// Additional readonly external-SizeSet facet for actual combined source owners.
+///
+/// Implementations validate the requested exact reference against their actual current complete
+/// source inventory. Presence/coverage/numeric availability remain distinct. This shares the
+/// metadata port's immutable-provider obligation; it supplies no Factory Profile resolution.
+pub trait DesignSizeSetHost: DesignMetadataHost {
+    /// Require the exact Design-authored set id/revision after current source validation.
+    ///
+    /// # Errors
+    /// Returns original current inventory, missing-id or revision-mismatch cause, with no fallback.
+    fn validate_size_set(
+        &self,
+        reference: super::DesignSizeSetReference,
+        canonical: &CanonicalInputs,
+    ) -> Result<(), Self::Error>;
 }
 
 /// Checked source-host refusal, preserving original identities, positions and typed host causes.

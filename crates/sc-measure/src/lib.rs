@@ -63,6 +63,9 @@ pub use size_set_owned::{SizeSet, SizeSetError, SizeSetPosition};
 mod size_set_inventory;
 pub use size_set_inventory::{SizeSetInventory, SizeSetInventoryError, SizeSetInventoryPosition};
 
+mod design_sources;
+pub use design_sources::{DesignSources, DesignSourcesDefinition, DesignSourcesError};
+
 mod ease;
 pub use ease::{CompressionPermission, Ease, EaseDefinition, EaseError, EaseSide, FitIntent};
 

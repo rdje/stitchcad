@@ -3,27 +3,28 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — explicit owned SizeSet inventory and exact current references
+## _(2026-10-27 UTC)_ — actual combined source host through readonly core facets
 
-0362 SizeSet retains actual Garment/Mtm source ownership and delegates original current/path causes.
-SizeSetInventory owns authored order, checking shared input and every owned set source id before
-current semantics. Distinct set identities cannot reuse an axis/member/chart id. Reference queries
-validate the entire current inventory, then require exact id/revision and return the actual object
-with inventory/canonical/metadata borrows retained. Raw identity inspection supplies no current proof.
-Empty explicit inventories mint nothing; canonical declarations can be shared through references.
-Actual MTM and separately authored singleton garment sources use the same canonical inputs and
-matching member labels; their explicit provenance remains distinct. Missing/wrong pins refuse;
-removing a garment-only Count coordinate blocks even a selected still-valid MTM source. Native cases
-also watch duplicate full sets and cross-set axis aliases with exact positions. Shared MTM fixture
-body equals the committed original; its5 original contracts and6 new inventory cases pass0.
-Privacy3/strict selected lint/fmt/book/publication pass0; D250132 exact baseline rows/delta0,
-glossary rc=1. Continuity513 compares6 exact Git spans for whole0361/D256/call-lookup proofs and
-complete historical .5e.1a.h/journal; original unknown-capture boundary remains explicit. Caps
-unchanged; G1still6/18. Promotion declined: existing external-set/context ownership. Actual combined
-source host .6.4.2.d.4.3.c.3.b next; full Design/execution/physical/profile/integration/CI unverified.
+0363 DesignSources privately owns actual MeasurementInputs and SizeSetInventory over explicit core
+canonical inputs. DesignMetadataHost lists exact actual owned metadata in original order, excluding
+canonical/evidence refs; added set/member/axis/value/break/chart/observation categories retain per-
+category authored indices across sets. A small category counter adds no semantic kind ordering.
+DesignSizeSetHost validates exact external refs through the actual complete current inventory.
+The core stays independent of higher schemas. Actual host current checks include unselected sources;
+direct measurement binding remains targeted, while DesignMetadata adds its whole-host and actual
+canonical-object guards. No context/value cache, profile lookup or readiness token is introduced.
+Native4 actual source/core8 existing/available-break1 pass0. Cases compare the exact26-row catalog,
+actual body pointers, full source refusal after replacement, canonical-id collisions and absent set
+metadata despite numeric presence. Privacy2/strict core and selected-measure lint/fmt/book/publication
+pass0. An initial generic category row declared SizeAxis/SizeBreak globally and hid2 D250 rows;
+scoping those names as enum variants restores the exact132 baseline, delta0; glossary rc=1.
+Continuity514 compares4 Git spans for whole0362 and historical wanted proof; functional guidance
+remains public. Caps unchanged; G1still6/18. Promotion: core-host decision records exact-set facet.
+.6.4.2.d.4.3.c.3.c scoped coupled acceptance next; full Design/execution/physical/profile/integration/CI
+remains unverified. G4 physical resolution still owns coincident numeric/profile roles.
 
 
-[Complete owned MTM source/D256 lesson](docs/history/stitchcad-devnotes-part513.md) retains
+[Complete external SizeSet inventory lesson](docs/history/stitchcad-devnotes-part514.md) retains
 its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review

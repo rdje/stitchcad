@@ -875,24 +875,24 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Children .a owned unified inventory; .b actual measurement/set source-host port; .c coupled acceptance.
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.a`
   Status: `done`
-  Goal: explicit owned SizeSet families/inventory with complete current source ids and exact pins.
-  - [x] REPRODUCE / ISSUE: standalone valid sets can alias each other's owned ids; selected
-    cargo test -p sc-measure --test size_set_inventory_contract passes6/0 rc=0, target/*native-0362.log.
-  - [x] ROOT CAUSE (WHY + WHERE): per-set validators have no other set inventory; distinct set ids
-    sharing axis80 refuse with exact both-owner positions, native6/0 rc=0 through local_environment.py.
-  - [x] FIX: explicit owned family, complete private inventory/current checks and actual exact-ref
-    borrows; native6/0 rc=0 retains singleton garment provenance and unselected-source refusal.
-  - [x] ADDRESSED: selected inventory6+MTM5 pass0, target/size-inventory-native-0362.log;
-    shared MTM fixture body equals committed original byte-for-byte, direct Git comparison rc=0.
-  - [x] NO REGRESSION: privacy3/strict selected Clippy/fmt/book/publication79/121/1457/2396
-    pass0; D250132 exact baseline rows/delta0, glossary rc=1; full host/Design/integration/CI later.
-  - [x] LOCKSTEP: book/API/decision/defect/index/pointer aligned; transition_receipts.py513
-    compares6 Git spans rc=0, whole0361/D256/call-lookup and complete historical handoff/journal;
-    original unknown-capture boundary retained. Caps unchanged; G1still6/18.
-    promotion: declined (existing external-set/context ownership). Commit0362; .3.b actual host next.
+  Goal:0362 owned external set inventory; [whole scope/proof](../history/stitchcad-devnotes-part514.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.b`
-  Status: `pending`
-  Goal: actual measurement/set source host under core ports without reverse dependencies/value copies.
+  Status: `done`
+  Goal: actual combined sources and readonly core metadata/exact-SizeSet facets; no reverse dependency.
+  - [x] REPRODUCE / ISSUE: actual source roles must include complete set metadata, not canonical
+    numeric presence; cargo test -p sc-measure --test design_sources_contract gives4/0 rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): core needs an immutable higher provider and exact external-pin
+    facet; cargo test -p sc-measure --test design_sources_contract gives4/0 rc=0;
+    core metadata8/available-break1 also pass0, target/design-sources-*-0363.log.
+  - [x] FIX: private actual sources, complete typed stable catalog/current checks and original causes;
+    native4+8+1 rc=0 proves actual canonical borrows, unselected-source refusal and numeric-role separation.
+  - [x] ADDRESSED: selected native13/privacy2 pass0; cargo test -p sc-measure --doc
+    design_sources::DesignSources rc=0 preserves private/shared source ownership.
+  - [x] NO REGRESSION: strict core/selected-measure Clippy/fmt/book/publication79/123/1457/2397
+    pass0; C1 generic-kind row corrected to preserve D250132 exact baseline rows, glossary rc=1.
+  - [x] LOCKSTEP: book/API/decision/status/index/pointer aligned; transition_receipts.py514
+    compares4 exact Git spans rc=0, whole0362/wanted proofs; caps unchanged; G1still6/18.
+    promotion: promoted to docs/decisions/decision_design-host.md. Commit0363; .3.c scope acceptance next.
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3.c`
   Status: `pending`
   Goal: coupled actual host/selected external reference acceptance, preserving profile-role deferrals.

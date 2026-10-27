@@ -261,3 +261,35 @@ fn replacement_inputs_are_revalidated_before_a_view_is_exposed() {
     assert!(matches!(error, GarmentSizeSetError::Metadata(_)));
     assert_eq!(set.validate_current(&original, &inputs), Ok(()));
 }
+
+#[test]
+fn host_catalog_keeps_available_breaks_as_owned_source_entities() {
+    use sc_core::design::{DesignHostEntity, DesignHostEntityKind, DesignMetadataHost};
+    let (canonical, measurements, definition) = fixture(false, None);
+    let garment = GarmentSizeSet::new(definition, &canonical, &measurements)
+        .expect("actual sources with available break");
+    let size_sets = SizeSetInventory::new(vec![garment.into()], &canonical, &measurements)
+        .expect("actual complete sources");
+    let sources = DesignSources::new(
+        DesignSourcesDefinition {
+            measurements,
+            size_sets,
+        },
+        &canonical,
+    )
+    .expect("actual host");
+    let actual = sources
+        .entities()
+        .into_iter()
+        .filter(|record| record.kind == DesignHostEntityKind::SizeBreak)
+        .collect::<Vec<_>>();
+    assert_eq!(
+        actual,
+        vec![DesignHostEntity {
+            id: id(700),
+            kind: DesignHostEntityKind::SizeBreak,
+            index: 0
+        }]
+    );
+    assert!(!sources.entities().iter().any(|record| record.id == id(100)));
+}

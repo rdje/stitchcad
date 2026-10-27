@@ -37,7 +37,8 @@ impl DesignSizeSetReference {
 mod host;
 mod parameters;
 pub use host::{
-    DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError, DesignMetadataHost,
+    DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
+    DesignMetadataHost, DesignSizeSetHost,
 };
 pub use parameters::{
     DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,

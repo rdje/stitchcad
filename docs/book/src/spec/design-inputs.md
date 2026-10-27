@@ -1,7 +1,7 @@
 # Owned Design metadata sources
 
 `DesignMetadata<H>` owns a DesignMetadataHost and its identity census; CanonicalInputs owns values.
-MeasurementInputs implements this core port without reversing dependencies. Full Design assembly
+MeasurementInputs and DesignSources implement this core port. Full Design assembly
 follows; admission selects no table, SizeSet or Factory Profile.
 
 ## Admission and current reads
@@ -44,9 +44,10 @@ Default Debug exposes only the entity count.
 | API or variant | Meaning |
 | --- | --- |
 | `DesignMetadataHost` | Readonly higher metadata contract with original typed Error |
+| `DesignSizeSetHost` | Additional readonly actual external set id/revision validation facet |
 | `DesignMetadata` | Private checked host owner; admission is scoped to these canonical inputs |
 | `DesignHostEntity` | Actual owned id, family and original within-family index |
-| `DesignHostEntityKind` | Landmark, Procedure, Measurement, MeasurementTable, Ease or EaseSet |
+| `DesignHostEntityKind` | Landmark, Procedure, Measurement, MeasurementTable, Ease, EaseSet, SizeSet, SizeMember, SizeAxis, SizeAxisValue, SizeBreak, SizeChart, SizeChartObservation |
 | `DesignMetadataError` | Current scope or explicit binding refusal |
 | `DuplicateIdentity` | Two actual metadata positions claim one id |
 | `CanonicalIdentityCollision` | Metadata claims a canonical input id |
@@ -213,4 +214,31 @@ not numeric execution, full Design readiness or release. Debug reveals only inve
 
 ```bash
 cargo test -p sc-measure --test size_set_inventory_contract
+```
+
+## Actual combined Design sources
+
+DesignSources owns MeasurementInputs and SizeSetInventory through DesignSourcesDefinition, with no
+canonical values or borrowed contexts stored. new(definition, &canonical) reuses complete actual
+inventory/current checks. DesignSourcesError preserves SizeSets or Measurement typed causes.
+Shared definition()/measurements()/size_sets() access supplies no mutator.
+
+The core metadata catalog lists actual measurement/Ease records, then each set's common/chart sources.
+Canonical and evidence references are excluded. Each category's index counts authored records across
+the host; no enum ordering or numeric type selects a role. Core DesignMetadata adds its original
+whole-host/current/object-membership guards before returning actual canonical measurement records.
+Direct measurement binding remains targeted. Replacement inputs recheck unselected sources too.
+
+DesignSizeSetHost::validate_size_set requires actual current sources and the exact external id/
+revision. A present numeric id cannot replace missing set metadata. This readonly facet adds no
+path coverage or profile value resolution. Physical Profile resolution retains its G4 owner,
+including coincident numeric ids. Full Design composition and integration remain later work.
+
+| API | Meaning |
+| --- | --- |
+| `DesignSources`, `DesignSourcesDefinition` | Private actual combined owner and exact editable construction input |
+| `DesignSourcesError` | Original SizeSets or Measurement cause through core ports |
+
+```bash
+cargo test -p sc-measure --test design_sources_contract
 ```
