@@ -281,34 +281,28 @@ but makes no garment-assembly completeness claim. The contract is recorded in
 | `BetweenNotches` | Allocation between two named notch stops |
 | `StopLandmark` | Semantic stop identity on an explicit side |
 
-**Directed grainlines (`G1-SLICE.3c.3b`).** `Grainline::new` takes a definition, named Piece
-and identity ledger. Immutable content holds directed arrow, explicit alignment and independent
-optional stripe/plaid ranges. Every reference needs complete owned positive intervals and unique
-endpoints. Unknown edges, repairs, ambiguous endpoints and foreign portions are typed field-specific
-refusals. Valid structural references prove neither straightness nor angular alignment.
+**Directed grainlines (`G1-SLICE.3c.3b`).** `Grainline::new` retains immutable arrow, explicit
+alignment and independent optional stripe/plaid ranges against a named Piece/ledger. Complete owned
+positive intervals/unique endpoints are required; unknown, repaired, ambiguous or foreign sources
+return field-specific refusals. References prove no straightness or angular alignment.
 
-`ParallelTo` states codirection. `AtAngle` carries a directed reference and `GrainAngle`: authored
-Angle or formula/profile declaration. 45° bias and 180° antiparallel alignment remain directed intent. Symbolic
-ids provide no angle value. Present profile bindings report DeferredToG4; None means no profile angle
-field. G2 consumes resolved values and proves actual straightness/angle; every grainline reports
-`GeometricValidation::DeferredToG2`.
+`ParallelTo` states codirection; `AtAngle` carries directed reference/`GrainAngle`: authored Angle or
+formula/profile declaration. 45° bias/180° antiparallel are intent; symbolic ids supply no value.
+Present Profile angles report DeferredToG4; None means no such field. G2 consumes resolved values
+and proves straightness/angle; every grain retains `GeometricValidation::DeferredToG2`.
 
-A reversed arrow starts at source parameter 1 and ends at 0. After splitting, directed `portions()`
-visits the second fragment first and composes authored traversal with journal reversal. Reversing
-an edge reflects point parameters and toggles composed traversal without rewriting the held arrow.
-A deleted interior remains an ordered repair despite live endpoints. `evidence()` preserves raw
-whole-range and separate point answers, including split choices; directed `start()`/`end()` select
-only authored endpoints, never a split side.
+A reversed arrow traverses1→0; after split, `portions()` visits second fragment first and composes
+journal reversal. Reversal reflects point parameters/toggles traversal without rewriting the arrow.
+Lost interiors retain ordered repairs despite live ends. `evidence()` keeps raw intervals/separate
+points and split choices; directed `start()`/`end()` select authored endpoints, never a split side.
 
-Stripe/plaid fields are independently directed and validated. Omission is explicit; coincident
-references are legal intent, without angular/print proof. Whole-interval ownership rejects a merged
-foreign remainder after reversal. The structural/geometric boundary remains in the ontology decision.
+Stripe/plaid are independently directed/validated; omission is explicit and coincidence legal without
+angular/print proof. Full ownership rejects reversed merged foreign remainders; see ontology decision.
 
-**Current grain (`G1-SLICE.6.4.5.4.c`).** `validate_current(piece, ledger)` requires the original
-Piece id, then reuses the constructor rules in arrow/alignment/stripe/plaid order. A historical split
-or reversal does not retarget or rewrite content. A later plaid interior loss refuses with its actual
-role and full raw evidence even when earlier sources and both endpoints remain valid. Angle origins
-stay unread; current sources grant no angular, physical or whole Design readiness.
+**Current grain (`G1-SLICE.6.4.5.4.c`).** `validate_current(piece, ledger)` requires the held Piece,
+then constructor rules in arrow/alignment/stripe/plaid order. Historical split/reversal never rewrites
+or retargets. Later plaid loss retains role/raw evidence despite valid earlier sources/live ends.
+Angles stay unread; success grants no angular, physical or whole Design readiness.
 
 | API token | Grainline meaning |
 | --- | --- |
@@ -322,31 +316,26 @@ stay unread; current sources grant no angular, physical or whole Design readines
 | `AtAngle` | Declared angle from directed reference to arrow |
 | `DeferredToG4` | Profile identity without resolved value validation |
 
-**Per-edge allowance descriptors (`G1-SLICE.3c.3c`).** `SeamAllowance::new` holds the named
-Piece's whole edge, width origin, explicit corner and mandatory logical inclusion declaration.
-Unknown/orphaned/ambiguous or foreign current intervals refuse. Owned endpoints cannot conceal a
-foreign middle after merge. `edge_resolution()` retains raw split/merge/reversal/deletion evidence;
-held descriptors never attach themselves to a replacement edge.
+**Per-edge allowances (`G1-SLICE.3c.3c`).** `SeamAllowance::new` retains named Piece/whole edge,
+width origin, explicit corner and required logical inclusion. Unknown/orphaned/ambiguous/foreign
+intervals refuse; owned ends cannot conceal merged foreign middles. `edge_resolution()` retains raw
+split/merge/reversal/deletion evidence; held descriptors never reattach to replacement edges.
 
-Explicit width holds its parameter id and nonnegative Length. Authored zero is legal content,
-without inferring an absent descriptor or default. The fixture's fold/fused interfacing retain absent
-allowances. Formula/profile widths hold declaration ids without values or copied uncertainty. Distinct
-side-seam descriptors may share a 10 000 µm parameter while the hem names 30 000 µm and an envelope
-corner; ids/corner choices remain per edge. Miter, slant, envelope, trim and step are intent, with
-actual offsets deferred to G2.
+Explicit width retains parameter id/nonnegative Length; zero implies neither absence nor default.
+Fixture fold/fused interfacing allowances remain absent. Formula/profile widths retain declarations
+without values/copied uncertainty. Distinct side seams may share10 000 µm while the hem names30 000 µm
+and Envelope; ids/corners stay per edge. Miter/slant/envelope/trim/step remain intent; offsets are G2.
 
-Inclusion is a mandatory ProfileParameterRef. The vocabulary includes `IncludedInContour` and
-`GeneratedDownstream`; two target profiles may resolve one logical declaration differently. G1
-selects no policy, cached flag, global boolean or exported contour. Every descriptor reports
-`ProfileBindingValidation::DeferredToG4` and `GeometricValidation::DeferredToG2`. .5/.6/G4 check
-parameter existence/kinds/values/states; G2-2D.2/.3 owns bounded offsets, corners, logged topology
-repair and pathology tests. The release contract retains preview badges, draft sidecars and production
-blocks for unknown ownership/width. Unread bindings never default; the five-piece fixture/goldens stay unchanged.
+Required ProfileParameterRef inclusion permits `IncludedInContour`/`GeneratedDownstream`; target
+profiles may resolve one declaration differently. G1 supplies no policy/cache/global boolean/contour.
+Every allowance retains `ProfileBindingValidation::DeferredToG4`/`GeometricValidation::DeferredToG2`.
+.5/.6/G4 checks parameter existence/kind/value/state; G2-2D.2/.3 owns bounded offsets/corners, logged
+repairs/pathologies. Release retains preview badges, draft sidecars and production blocks for unknown
+ownership/width. Unread bindings never default; five-piece fixture/goldens remain unchanged.
 
-**Current allowances (`G1-SLICE.6.4.5.4.c`).** `validate_current(piece, ledger)` requires the held
-Piece id, preserves explicit-width validation order and rechecks the complete current whole edge.
-A deleted middle returns the complete original repair despite live endpoints. Width/corner/inclusion
-intent stays unchanged and unresolved; another Piece with identical geometry cannot substitute.
+**Current allowances (`G1-SLICE.6.4.5.4.c`).** `validate_current(piece, ledger)` requires held Piece,
+then original width/whole-edge rules. Lost middles retain complete repairs despite live ends.
+Width/corner/inclusion stays held/unresolved; identical geometry on another Piece cannot substitute.
 
 ```rust,ignore
 grain.validate_current(&piece, &ledger)?;

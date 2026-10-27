@@ -248,6 +248,7 @@ fn exact_roles_borrow_real_objects_and_both_unread_length_families_without_coerc
                 assert!(state.inputs().scalar(*operation).is_some()); // Numeric alias never changes its role.
                 assert_eq!(view.profile_validation(), None);
             }
+            _ => panic!("only intake and closing roles belong to this query"),
         }
         let debug = format!("{view:?}");
         assert!(

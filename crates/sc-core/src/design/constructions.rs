@@ -2,14 +2,15 @@
 use super::{DesignInputs, DesignInputsError, DesignParameter, DesignReferenceHost};
 use crate::{
     ontology::{
-        ConstructionInventory, ConstructionInventoryPosition, ConstructionRef, EntityId,
-        IntakeAmount, ProfileBindingValidation, ProfileParameterRef,
+        AllowanceWidth, ConstructionInventory, ConstructionInventoryPosition, ConstructionRef,
+        DirectedRange, EntityId, GrainAlignment, GrainAngle, IntakeAmount,
+        ProfileBindingValidation, ProfileParameterRef,
     },
     recipe::{FormulaDeclaration, FormulaKind},
     value::CanonicalInputs,
 };
 use core::fmt;
-use sc_units::Length;
+use sc_units::{Angle, Length};
 
 /// Exact original field role, independent of identity spelling or numeric availability.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -18,6 +19,12 @@ pub enum DesignConstructionDeclarationRole {
     Intake,
     /// Required logical closing-operation identity, without operation lookup or scalar conversion.
     ClosingOperation,
+    /// Original parallel or angular grain alignment; no implicit zero angle is generated.
+    GrainAlignment,
+    /// Original nonnegative allowance width intent.
+    AllowanceWidth,
+    /// Required logical per-profile allowance inclusion policy.
+    AllowanceInclusion,
 }
 /// Actual borrowed intent or checked current parameter metadata; no evaluated construction values.
 #[derive(Clone, Copy)]
@@ -40,6 +47,37 @@ pub enum DesignConstructionDeclarationSource<'a> {
     ProfileIntake(&'a ProfileParameterRef),
     /// Exact original operation intent; recipe existence/kind/dependencies remain separate.
     ClosingOperation(&'a EntityId),
+    /// Original parallel directed axis, without inventing an explicit angular value.
+    ParallelAlignment(&'a DirectedRange),
+    /// Original inline angle, without computing alignment geometry.
+    ExplicitAngle(&'a Angle),
+    /// Actual Design parameter and current canonical Angle-kind metadata.
+    FormulaAngle {
+        /// Original actual Design metadata.
+        parameter: &'a DesignParameter,
+        /// Actual Angle declaration with its original state intact.
+        declaration: FormulaDeclaration<'a>,
+    },
+    /// Original logical Profile angle, deferred to G4.
+    ProfileAngle(&'a ProfileParameterRef),
+    /// Original inline parameter id and nonnegative allowance width, including authored zero.
+    ExplicitWidth {
+        /// Original inline identity, without inventing metadata.
+        parameter: &'a EntityId,
+        /// Exact original Length intent.
+        value: &'a Length,
+    },
+    /// Actual Design parameter and current canonical Length-kind width metadata.
+    FormulaWidth {
+        /// Original actual Design metadata.
+        parameter: &'a DesignParameter,
+        /// Actual dedicated/general Length declaration, without reading values.
+        declaration: FormulaDeclaration<'a>,
+    },
+    /// Original logical Profile width, deferred to G4.
+    ProfileWidth(&'a ProfileParameterRef),
+    /// Original required logical Profile policy, never a scalar or selected inclusion flag.
+    AllowanceInclusion(&'a ProfileParameterRef),
 }
 impl fmt::Debug for DesignConstructionDeclarationSource<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -48,6 +86,14 @@ impl fmt::Debug for DesignConstructionDeclarationSource<'_> {
             Self::FormulaIntake { .. } => "FormulaIntake",
             Self::ProfileIntake(_) => "ProfileIntake",
             Self::ClosingOperation(_) => "ClosingOperation",
+            Self::ParallelAlignment(_) => "ParallelAlignment",
+            Self::ExplicitAngle(_) => "ExplicitAngle",
+            Self::FormulaAngle { .. } => "FormulaAngle",
+            Self::ProfileAngle(_) => "ProfileAngle",
+            Self::ExplicitWidth { .. } => "ExplicitWidth",
+            Self::FormulaWidth { .. } => "FormulaWidth",
+            Self::ProfileWidth(_) => "ProfileWidth",
+            Self::AllowanceInclusion(_) => "AllowanceInclusion",
         })
     }
 }
@@ -107,7 +153,10 @@ impl<'a> DesignConstructionDeclaration<'a> {
     #[must_use]
     pub const fn profile_validation(self) -> Option<ProfileBindingValidation> {
         match self.source {
-            DesignConstructionDeclarationSource::ProfileIntake(_) => {
+            DesignConstructionDeclarationSource::ProfileIntake(_)
+            | DesignConstructionDeclarationSource::ProfileAngle(_)
+            | DesignConstructionDeclarationSource::ProfileWidth(_)
+            | DesignConstructionDeclarationSource::AllowanceInclusion(_) => {
                 Some(ProfileBindingValidation::DeferredToG4)
             }
             _ => None,
@@ -213,30 +262,13 @@ impl<H: DesignReferenceHost> DesignInputs<H> {
                     DesignConstructionDeclarationSource::ProfileIntake(reference)
                 }
                 IntakeAmount::Formula(identity) => {
-                    let parameter = self.parameters().parameter(*identity).ok_or(
-                        DesignConstructionDeclarationError::MissingFormulaParameter {
-                            construction: construction.id(),
-                            position,
-                            role: DesignConstructionDeclarationRole::Intake,
-                            parameter: *identity,
-                        },
+                    let (parameter, declaration) = self.construction_formula_declaration(
+                        construction,
+                        position,
+                        DesignConstructionDeclarationRole::Intake,
+                        *identity,
+                        FormulaKind::Length,
                     )?;
-                    let declaration = parameter.declaration(self.inputs()).map_err(|issue| {
-                        DesignConstructionDeclarationError::Inputs(Box::new(
-                            DesignInputsError::Parameters(Box::new(issue)),
-                        ))
-                    })?;
-                    let actual = declaration.kind();
-                    if actual != FormulaKind::Length {
-                        return Err(DesignConstructionDeclarationError::FormulaKind {
-                            construction: construction.id(),
-                            position,
-                            role: DesignConstructionDeclarationRole::Intake,
-                            parameter: *identity,
-                            expected: FormulaKind::Length,
-                            actual,
-                        });
-                    }
                     DesignConstructionDeclarationSource::FormulaIntake {
                         parameter,
                         declaration,
@@ -256,6 +288,152 @@ impl<H: DesignReferenceHost> DesignInputs<H> {
                 canonical: self.inputs(),
                 role: DesignConstructionDeclarationRole::ClosingOperation,
                 source: DesignConstructionDeclarationSource::ClosingOperation(closing),
+            });
+        }
+        Ok(views)
+    }
+
+    /// Resolve actual current metadata with the original contextual role, without a value read.
+    fn construction_formula_declaration<'a>(
+        &'a self,
+        construction: ConstructionRef<'_>,
+        position: ConstructionInventoryPosition,
+        role: DesignConstructionDeclarationRole,
+        identity: EntityId,
+        expected: FormulaKind,
+    ) -> Result<
+        (&'a DesignParameter, FormulaDeclaration<'a>),
+        DesignConstructionDeclarationError<H::Error>,
+    > {
+        let parameter = self.parameters().parameter(identity).ok_or(
+            DesignConstructionDeclarationError::MissingFormulaParameter {
+                construction: construction.id(),
+                position,
+                role,
+                parameter: identity,
+            },
+        )?;
+        let declaration = parameter.declaration(self.inputs()).map_err(|issue| {
+            DesignConstructionDeclarationError::Inputs(Box::new(DesignInputsError::Parameters(
+                Box::new(issue),
+            )))
+        })?;
+        let actual = declaration.kind();
+        if actual != expected {
+            return Err(DesignConstructionDeclarationError::FormulaKind {
+                construction: construction.id(),
+                position,
+                role,
+                parameter: identity,
+                expected,
+                actual,
+            });
+        }
+        Ok((parameter, declaration))
+    }
+
+    /// Borrow grain alignment, then allowance width/inclusion in original family/authored order.
+    ///
+    /// Complete current root validation precedes even empty scope. Parallel alignment retains its
+    /// actual directed axis and creates no angular value. Formula Angle/Length sources require actual
+    /// Design parameter/current canonical metadata of the exact kind, without reading Unknown/Derived
+    /// states. Profile fields stay logical and DeferredToG4; corner and directed-axis intent remain
+    /// available on the actual object. Current sources, global identity, resolved width domains,
+    /// geometric alignment/offsets, profile policies and physical/release proof remain separate.
+    /// # Errors
+    /// Returns the original current-root cause, then first missing/wrong-kind formula parameter.
+    /// No partial collection escapes a refusal.
+    /// ```compile_fail
+    /// fn escape<H: sc_core::design::DesignReferenceHost>(state: sc_core::design::DesignInputs<H>,
+    ///     sources: sc_core::ontology::ConstructionInventory)
+    ///     -> Vec<sc_core::design::DesignConstructionDeclaration<'static>> {
+    ///     state.grain_allowance_declarations(&sources).unwrap()
+    /// }
+    /// ```
+    pub fn grain_allowance_declarations<'a>(
+        &'a self,
+        constructions: &'a ConstructionInventory,
+    ) -> Result<Vec<DesignConstructionDeclaration<'a>>, DesignConstructionDeclarationError<H::Error>>
+    {
+        self.validate_current()
+            .map_err(|issue| DesignConstructionDeclarationError::Inputs(Box::new(issue)))?;
+        let mut views = Vec::new();
+        for (position, construction) in constructions.entries() {
+            let (role, source) = match construction {
+                ConstructionRef::Grainline(grain) => {
+                    let source = match &grain.definition().alignment {
+                        GrainAlignment::ParallelTo(axis) => {
+                            DesignConstructionDeclarationSource::ParallelAlignment(axis)
+                        }
+                        GrainAlignment::AtAngle { angle, .. } => match angle {
+                            GrainAngle::Explicit(value) => {
+                                DesignConstructionDeclarationSource::ExplicitAngle(value)
+                            }
+                            GrainAngle::Profile(reference) => {
+                                DesignConstructionDeclarationSource::ProfileAngle(reference)
+                            }
+                            GrainAngle::Formula(identity) => {
+                                let (parameter, declaration) = self
+                                    .construction_formula_declaration(
+                                        construction,
+                                        position,
+                                        DesignConstructionDeclarationRole::GrainAlignment,
+                                        *identity,
+                                        FormulaKind::Angle,
+                                    )?;
+                                DesignConstructionDeclarationSource::FormulaAngle {
+                                    parameter,
+                                    declaration,
+                                }
+                            }
+                        },
+                    };
+                    (DesignConstructionDeclarationRole::GrainAlignment, source)
+                }
+                ConstructionRef::SeamAllowance(allowance) => {
+                    let source = match &allowance.definition().width {
+                        AllowanceWidth::Explicit { parameter, value } => {
+                            DesignConstructionDeclarationSource::ExplicitWidth { parameter, value }
+                        }
+                        AllowanceWidth::Profile(reference) => {
+                            DesignConstructionDeclarationSource::ProfileWidth(reference)
+                        }
+                        AllowanceWidth::Formula(identity) => {
+                            let (parameter, declaration) = self.construction_formula_declaration(
+                                construction,
+                                position,
+                                DesignConstructionDeclarationRole::AllowanceWidth,
+                                *identity,
+                                FormulaKind::Length,
+                            )?;
+                            DesignConstructionDeclarationSource::FormulaWidth {
+                                parameter,
+                                declaration,
+                            }
+                        }
+                    };
+                    views.push(DesignConstructionDeclaration {
+                        construction,
+                        position,
+                        canonical: self.inputs(),
+                        role: DesignConstructionDeclarationRole::AllowanceWidth,
+                        source,
+                    });
+                    (
+                        DesignConstructionDeclarationRole::AllowanceInclusion,
+                        DesignConstructionDeclarationSource::AllowanceInclusion(
+                            &allowance.definition().inclusion,
+                        ),
+                    )
+                }
+                _ => continue,
+            };
+            views.push(DesignConstructionDeclaration {
+                construction,
+                position,
+                canonical: self.inputs(),
+                role,
+                source,
             });
         }
         Ok(views)

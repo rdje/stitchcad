@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0402 — borrow actual intake and closing declaration roles
+## STITCHCAD-G1-0403 — borrow typed grain and allowance declarations
 
-- Current whole-root preflight precedes Dart/Tuck/Pleat intake/closing views with original typed objects/positions.
-- Require actual Length-kind formula metadata; preserve explicit zero, unread states and logical Profile/operation intent.
-- Native5/lifetime1/strict lint/fmt pass0; current garment sources and full readiness remain separate.
-- Book/API example synchronized; whole0401 subtree/D273/continuity proof551 retains4 exact Git spans.
+- Preserve actual alignment/width/inclusion field roles after whole-current-root validation, even empty.
+- Require Angle versus Length metadata; retain parallel axis, explicit intent and logical Profile policy.
+- Native9/lifetime2/strict lint/fmt pass0; original intake/closing behavior retained through shared metadata lookup.
+- Fix D274 shared scratch race and D275 version-hardcoded stale probe: native red/green, self-test17, real probes6/0.
+- Book/API and whole0402/closed-parent proofs552/553 synchronized; physical/global/release proof remains separate.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +32,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part553](docs/history/stitchcad-devnotes-part553.md) | whole completed units/measurement/SizeSet parents | 43 lines, 2921 bytes, sha256:ee1c7a84… |
+| [part552](docs/history/stitchcad-devnotes-part552.md) | whole0402 intake/lesson/ledger/retirement | 44 lines, 3590 bytes, sha256:ac0cbc9e… |
 | [part551](docs/history/stitchcad-devnotes-part551.md) | whole0401 subtree/lesson/ledger/D273/retirement | 55 lines, 4393 bytes, sha256:d3afdf4f… |
 | [part550](docs/history/stitchcad-devnotes-part550.md) | whole0400 ownership/lesson/ledger/retirement | 43 lines, 3448 bytes, sha256:1e372e5a… |
 | [part549](docs/history/stitchcad-devnotes-part549.md) | whole0399 grain/allowance/lesson/ledger/retirement | 45 lines, 3561 bytes, sha256:105f30c2… |

@@ -3,18 +3,27 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual intake and closing declaration roles
+## _(2026-10-27 UTC)_ — typed grain and allowance declarations
 
-0402 validates the complete current input root before even empty intake scope, then borrows actual
-Dart/Tuck/Pleat intake/closing roles in family/authored order. Views retain original typed object,
-position and single canonical owner. Formula intake requires actual Design metadata/current Length
-kind; dedicated/general Length and Unknown/Derived states remain borrowed/unread. Explicit zero
-retains inline parameter/value, Profile and operation ids stay logical despite numeric aliases.
-Native5 covers exact pointers, absent metadata, later Count, missing current Piece and controlled
-host drift; lifetime1/strict lint/fmt pass0. Current source and metadata queries remain distinct.
-Whole0401 scopes551 retain4 exact Git spans; retention/book/publication/size0. Original book facts
-retained with duplicate wording tightened. Promotion: Design host decision. Grain/allowance .e.2,
-Gather .e.3, component acceptance .f and coupled global garment/root .5 remain; full CI later.
+0403 borrows grain alignment then each allowance's width/inclusion after whole-current-root
+preflight, even empty. Common contextual lookup requires actual Angle versus Length metadata,
+without reading Unknown/Derived states or changing representation. Parallel alignment remains an
+actual directed axis without synthesized angle; explicit45°/zero width, corner/print direction and
+logical Profile inclusion remain original intent. Views keep actual fields/objects/positions and
+single canonical owner. Native9 includes previous intake/closing checks, wrong-kind later sources,
+bare numeric ids, logical aliases, absent current Piece and empty host drift; lifetime2/lint/fmt0.
+Whole0402 scopes552 and completed parents553 retain4+4 exact Git spans; retention/book/publication/size0.
+D274 overlapping size checks deleted shared scratch, causing179 false breaches/rc1 or missing file/rc2.
+Native-wc barrier replays committed baseline49a6272:driver1/first2; unique local invocation scratch and
+owned exit cleanup pass2/0. Watched overlap control/self-test17/syntax pass0. D274 promotion declined:
+existing per-run scratch/locality doctrine unchanged; tracked reproduction/correction retained.
+D275 real probe hardcodedv0.3 despite actualv0.4, native5pass/2fail rc1. Actual at= token mutation and
+exact refusal now pass6/0 rc0 including overlap; promotion declined, existing revision rule unchanged. Original book facts
+preserved with repetition tightened. Promotion: Design host decision. Current sources, resolved
+width domains, geometry/policies/global ids and full release proof remain separate; Gather .e.3,
+component .f/global garment-root .5/full CI remain owned.
+
+[Whole0402 intake lesson](docs/history/stitchcad-devnotes-part552.md) retains actual fields, current metadata and logical-role proofs.
 
 [Whole0401 current-scope lesson](docs/history/stitchcad-devnotes-part551.md) retains complete context, typed causes and D273 proofs.
 

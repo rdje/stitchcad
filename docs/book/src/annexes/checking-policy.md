@@ -1,12 +1,9 @@
 # Checks during feature delivery
 
-The current priority is complete feature implementation. Each feature addition receives one
-small check of the behavior it changes. Select an existing affected unit or contract test;
-add a focused regression when the change needs one. Reuse established test tools.
-
-Broad regression suites, mutation campaigns, full publication probes and repeated platform
-sweeps are deferred to later integration milestones. Full verification remains required before
-an authorized push. A concrete failure or integration risk can justify a wider check sooner.
+Prioritize complete feature implementation. Check each addition with one affected unit/contract
+test; add focused regressions when needed and reuse established tools. Broad regressions, mutations,
+full publication probes and repeated platform sweeps wait for integration milestones. Full gates
+remain mandatory before authorized pushes; concrete failures/risks may warrant wider checks sooner.
 
 Code quality, task ownership, repository-local storage, book updates, commits and automatic
 doctrine hooks remain required. State exactly what was checked and keep unrun verification
@@ -19,11 +16,14 @@ feature implementation. Finish and commit a dirty unit before changing course.
 The product-progress report names implemented capabilities and roadmap acceptance. Maintenance
 progress is reported separately, including maintenance tracked inside a G1 task.
 
-This policy adopts the director's 2026-10-25 ruling. The canonical decision is
-`docs/decisions/decision_product-work-takes-the-frontier.md`; `COMMIT.md` defines the workflow.
+Director2026-10-25 ruling: `docs/decisions/decision_product-work-takes-the-frontier.md`;
+`COMMIT.md` defines the workflow.
 
-Run commit, successful brief clearing and post-condition checks in one shell invocation. When a tool
-reports a running session, consume its terminal result before changing files, retrying the commit or
-selecting another slice. An unread result may already have committed successfully. Before a retry,
-inspect HEAD, Git status and the brief. A failed commit retains its brief for diagnosis; a successful
-one clears it immediately. D227's duplicate receipt led to this explicit operational guard.
+Commit, clear the successful brief and check post-conditions in one shell. Consume any running tool's
+terminal result before edits/retries/another slice: it may already have committed. Before retrying,
+inspect HEAD/status/brief. Failure retains the brief for diagnosis; success clears it immediately.
+D227's duplicate receipt established this guard.
+
+Size checks own unique repository-local scratch, removed on trapped exit. D274's native-wc overlap
+control protects in-flight measurements from another checker's cleanup. D275 mutates the actual
+row's at= token and requires its exact stale-revision refusal. Caps/coverage/refusal rules stay fixed.

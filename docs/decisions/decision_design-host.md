@@ -9,6 +9,8 @@ answers: "how can Design own measurement metadata without a circular dependency?
 
 answers: "do construction intake views require actual formula metadata while preserving logical closing and Profile roles?"
 
+answers: "do grain and allowance declarations preserve Angle versus Length kinds and logical inclusion policy?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -74,3 +76,13 @@ original representations/states. Explicit zero/id/value remain inline intent; lo
 operation ids never coerce to numeric roles. Errors retain actual construction/position/role with
 original current-root causes and no partial collection. Current garment sources, operation checks,
 global ids, resolved nonnegativity/conservation and physical/release proof remain separate.
+
+## Grain and allowance metadata — G1-SLICE.6.4.5.4.e.2
+
+Whole-current-root validation precedes original grain alignment and allowance width/inclusion roles,
+even empty. Common contextual metadata lookup requires actual Design parameter/canonical Angle or
+Length kind; it reads no value/state and never converts representations. Parallel alignment borrows
+its axis without synthesizing an angle. Explicit zero/angle and Profile references remain actual
+fields; mandatory inclusion stays logical despite numeric aliases. Actual objects retain directed
+print/corner intent. Current sources, global ids, resolved domains/policies and physical/release proof
+remain separate. Original intake/closing behavior is retained through the shared lookup.

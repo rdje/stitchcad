@@ -9,8 +9,8 @@
 #   REAL-2  ⭐ delete one row from a COPY of the real registry and the check must refuse that exact
 #           file as an unclassified live surface. Without this arm, "coverage" is a word: a check that
 #           only ever passes on the real tree has never been seen to notice a surface that lost its row.
-#   REAL-3  ⭐ declare a STALE revision in a copy of the real registry (`at=v0.2` where ROADMAP.md says
-#           v0.3) and the check must refuse the roadmap's debt baseline. This is the arm that makes the
+#   REAL-3  ⭐ declare an absent revision token in the actual roadmap row's copied at= field and
+#           require its exact refusal, without assuming a current version (D275). This makes the
 #           baseline revision-aware rather than decorative: a re-based baseline that nobody re-measures
 #           is a silent widening, and only this arm has ever seen the refusal fire on real data.
 #   MISSING a check whose data plane is absent must REFUSE (exit 2), not report green over an absence.
@@ -66,14 +66,28 @@ fi
 
 # ---------------------------------------------------------------- REAL-3: a stale revision baseline
 mkdir -p "$WORK/stale"
-sed '/^roadmap/s/at=v0\.3/at=v0.2/' "$REG/surfaces.tsv" > "$WORK/stale/surfaces.tsv"
+STALE_TOKEN=probe_absent_revision_d275
+if ! awk -F'\t' -v OFS='\t' -v stale="$STALE_TOKEN" '
+  $1=="roadmap" {
+    count=split($20, parts, ";"); found=0
+    for(i=1;i<=count;i++) if(parts[i] ~ /^at=/) {parts[i]="at=" stale; found++}
+    if(found!=1) exit 2
+    debt=parts[1]; for(i=2;i<=count;i++) debt=debt ";" parts[i]
+    $20=debt; changed++
+  }
+  {print}
+  END {if(changed!=1) exit 2}
+' "$REG/surfaces.tsv" > "$WORK/stale/surfaces.tsv"; then
+  bad REAL-3 "cannot mutate exactly one actual roadmap revision field" ""
+fi
 cp "$REG/routes.tsv" "$WORK/stale/routes.tsv"
-grep -q 'at=v0.2' "$WORK/stale/surfaces.tsv" || bad REAL-3 "the arm did not manage to stale the registry copy" ""
+grep -Fq "at=$STALE_TOKEN" "$WORK/stale/surfaces.tsv" || bad REAL-3 "the registry copy was not staled" ""
 out="$(LIVE_DOC_SIZE_REGISTRY="$WORK/stale" bash "$CHECK" 2>&1)"; rc=$?
-if [ "$rc" -ne 0 ] && grep -q 'debt baseline was measured at revision `v0.2`' <<<"$out"; then
+expected="$(printf 'debt baseline was measured at revision `%s`' "$STALE_TOKEN")"
+if [ "$rc" -ne 0 ] && grep -Fq "$expected" <<<"$out"; then
   ok REAL-3 "a baseline measured at a revision the file no longer declares is refused by name (exit=$rc)"
 else
-  bad REAL-3 "a stale revision baseline passed, so `at=` is decoration (exit=$rc)" "$out"
+  bad REAL-3 "the mutated revision lacked its exact refusal (exit=$rc)" "$out"
 fi
 
 # ---------------------------------------------------------------- MISSING: refuse, do not skip
@@ -83,6 +97,14 @@ if [ "$rc" -eq 2 ] && grep -q 'REFUSED' <<<"$out"; then
   ok MISSING "an absent data plane refuses with exit=2 instead of reporting green over nothing"
 else
   bad MISSING "a missing registry did not refuse (exit=$rc)" "$out"
+fi
+
+# D274: one real checker finishes while another remains inside its native measurement call.
+out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/concurrent_contract.py" 2>&1)"; rc=$?
+if [ "$rc" -eq 0 ]; then
+  ok OVERLAP "$out"
+else
+  bad OVERLAP "concurrent invocation scratch is not isolated (exit=$rc)" "$out"
 fi
 
 echo

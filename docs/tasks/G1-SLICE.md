@@ -69,16 +69,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.2`
   Status: `done`
-  Goal: `sc-units` — fixed-point micrometre quantities (i64), the five tolerance classes as
-  distinct types, unit conversions with explicit rounding, rejection of non-finite and
-  dimensionally invalid expressions (implements the `G0-CONTRACT.2` spec).
-  Acceptance: property tests for conversion round-trips and tolerance-class separation; a
-  dimension error is a typed error, never a silent coercion; compiles for `wasm32-unknown-unknown`.
-  Verification: recorded below — `sc-units` was delivered in full by `G0-CONTRACT.18` (commit
-  `eb83f01`); every acceptance criterion re-derived by command in the `### G1-SLICE.2` checklist,
-  and the property-test-framework choice recorded as a layer-C decision.
-  Commit: `STITCHCAD-G1-0002`
-
+  Goal: sc-units0002/G0.18; typed exact units/tolerances and focused acceptance; [whole scope](../history/stitchcad-devnotes-part553.md).
 - ID: `G1-SLICE.3a`
   Status: `done`
   Goal:closed scope; [whole proof](../history/window21.md#stitchcad-devnotes-part526md).
@@ -138,15 +129,8 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
 
 - ID: `G1-SLICE.4`
   Status: `done`
-  Goal: `sc-measure` — MeasurementTable (body vs garment POM, landmarks, source, procedure),
-  Ease as a first-class body→garment mapping with fit intent, and SizeSet (implements
-  `G0-CONTRACT.4`/`.6`).
-  Acceptance: a POM without a landmark or procedure is rejected; ease is queryable per POM;
-  size labels vs order vs base size are distinct fields with tested semantics.
+  Goal: sc-measure0321 structural library; runtime/registry proof remains G1/G3/G4; [whole scope](../history/stitchcad-devnotes-part553.md).
   Children: .4a (measurement declarations/tables), .4b (per-POM ease), .4c (SizeSet), .4d (signoff).
-  Verification: child contracts plus0321 measurement16/table16/Ease14,0320 model25 and unchanged composite31; publication74/87 pass0.
-  Commit: STITCHCAD-G1-0321 (structural library); runtime/application/registry proof remains G1/G3/G4 work.
-
 - ID: `G1-SLICE.4a`
   Status: `done`
   Goal: complete preserved structural contracts/proofs/navigation in [part475](../history/window20.md#stitchcad-devnotes-part475md).
@@ -189,15 +173,8 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
 
 - ID: `G1-SLICE.4c`
   Status: `done`
+  Goal: SizeSet structural/intention children complete; execution/approval later; [whole scope](../history/stitchcad-devnotes-part553.md).
   Children: .4c.1 (membership), .4c.2 (axes), .4c.3 (chart/breaks), .4c.4 (resolution), .4c.5 (review).
-  Goal: SizeSet identity/revision/system, authored ordered labels/base, chart/state/provenance, adjacent
-  breaks and axes; immutable profile resolution/transformation intent per canonical SizeSet decision.
-  Acceptance: label/order/base distinct; path-2 missing-break refusal, MTM of one, no quantities/defaults;
-  profile transformations never mutate Design references; execution/equivalence/approval later owned.
-  Split into safe slices before implementation; preserve every size-sets chapter requirement.
-  Verification: `pending`
-  Commit: `pending`
-
 - ID: `G1-SLICE.4c.1`
   Status: `done`
   Goal: stable authored size membership and checked revision successors.
@@ -312,13 +289,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
 
 - ID: `G1-SLICE.4c.4`
   Status: `done`
-  Goal: immutable resolved SizeSet/profile transformation intent, pinned Design reference/profile revision,
-  typed label mapping/break scaling/base substitution/chart replacement with state/evidence provenance.
-  Acceptance: new resolved object retains original reference and records transformation; no in-place
-  mutation. Execution, precedence/hard restrictions, equivalence and release approval retain later owners.
-  Verification:0311–0317 focused state/binding/aggregate contracts,0318 unchanged-code/book/anchor review pass0.
-  Commit: STITCHCAD-G1-0311–0318 (includes due cleanup/D232 repair); actual G4 execution remains separate.
-
+  Goal: resolved profile intent0311–0318; G4 execution remains separate; [whole scope](../history/stitchcad-devnotes-part553.md).
 - ID: `G1-SLICE.4c.4.1`
   Status: `done`
   Goal:0311 profile pins/origin; focused18/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part452md).
@@ -917,23 +888,30 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Children .1 intake/closing; .2 grain/allowance; .3 joined Gather.
 - ID: `G1-SLICE.6.4.5.4.e.1`
   Status: `done`
-  Goal:0402 actual intake/closing roles over one current canonical owner.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract construction_intake:
-    5 passed rc=0; bare numeric ids10/2000 cannot replace actual formula metadata in all3 families.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:intake/closing are numeric/logical roles;
-    select actual parameter/current canonical declaration without reading values.
-  - [x] FIX: same native5 rc=0; whole-root preflight then ordered typed actual object/field/position/
-    canonical borrows, preserving inline explicit zero and logical Profile/operation aliases.
-  - [x] ADDRESSED: same native5 rc=0; Derived dedicated/Unknown general Length, later Count,
-    missing current Piece and empty-scope host drift retain exact pointers/causes, no partial views.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::constructions:1 compile-fail rc=0;
-    cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings and affected fmt rc=0.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part551.md:4 spans rc=0;
-    retention/book/publication/size rc=0; book facts retained. Promotion: Design host decision.
-    Grain/allowance .e.2, Gather .e.3, component .f, global joins .5 and full CI remain owned.
+  Goal:0402 actual intake/closing declarations; [whole proof](../history/stitchcad-devnotes-part552.md).
 - ID: `G1-SLICE.6.4.5.4.e.2`
-  Status: `pending`
-  Goal: actual grain-angle/allowance width/inclusion declarations, typed kinds/Profile roles.
+  Status: `done`
+  Goal:0403 typed grain/allowance declarations; D274 concurrent size-check scratch repair owned here.
+  D274/D275 P2 fixed here: isolated checker scratch and actual-row stale-token probe, no cap changes.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract construction_:
+    9 passed rc=0; Angle/Length formulas reject each other's metadata at original later positions.
+  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:grain angles and allowance widths need distinct
+    kinds; shared lookup preserves logical policy/original fields. D274 shared scratch rm -rf raced;
+    concurrent_contract.py --checker target/live-size-d274-baseline.sh reproduces first rc=2/driver1.
+    D275 native probes5pass/2fail rc=1:hardcodedv0.3 failed to mutate actualv0.4 revision field.
+  - [x] FIX: same native9 rc=0; whole-root-first grain alignment then allowance width/inclusion borrows,
+    exact object/field/position/canonical owner and expected/current kind refusals. Native overlap2/0
+    rc=0 after isolated scratch; actual at= mutation retains exact refusal, native probes6/0 rc=0.
+  - [x] ADDRESSED: same native9 rc=0; parallel axis without synthesized angle, exact45°/zero width,
+    dedicated Derived/general Unknown Length, Unknown Angle, absent metadata, Profile numeric aliases,
+    empty host drift/absent current Piece; original intake/closing retained.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::constructions:2 compile-fail rc=0;
+    cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings and affected fmt rc=0;
+    size self-test17/overlap2/native probes6 and shell/Python syntax rc=0.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part552.md:4 spans rc=0;
+    part553.md:4 exact Git spans rc=0; retention/book/publication/size rc=0; book facts retained.
+    Promotion: Design host decision; D274/D275 declined, settled scratch/revision rules unchanged.
+    Gather .e.3/component .f/global joins .5/full CI remain owned.
 - ID: `G1-SLICE.6.4.5.4.e.3`
   Status: `pending`
   Goal: original Gather signed span ease/closing; current graph/copy/sources.

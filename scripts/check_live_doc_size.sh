@@ -40,7 +40,7 @@ cd "$ROOT" || exit 1
 REGISTRY="${LIVE_DOC_SIZE_REGISTRY:-.doctrine/live_document_size}"
 SURFACES="$REGISTRY/surfaces.tsv"
 ROUTES="$REGISTRY/routes.tsv"
-SCRATCH="$ROOT/target/doctrine_scratch/live_doc_size"
+SCRATCH_BASE="$ROOT/target/doctrine_scratch"
 LIFECYCLES='bounded_snapshot partitioned_canonical maintained_reference generated_projection rolling_ledger archive_terminal external_terminal frozen_legacy'
 
 for f in "$SURFACES" "$ROUTES"; do
@@ -49,6 +49,14 @@ for f in "$SURFACES" "$ROUTES"; do
     exit 2
   fi
 done
+
+# Each invocation owns its scratch. A concurrent checker must never delete or append to another
+# invocation's parts/measurements (D274); self-tests use the same isolated ownership boundary.
+mkdir -p "$SCRATCH_BASE" || exit 2
+SCRATCH="$(mktemp -d "$SCRATCH_BASE/live_doc_size.XXXXXXXX")" || exit 2
+trap 'rm -rf "$SCRATCH"' EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
 
 # ── measure: emit "sid <TAB> path <TAB> lines <TAB> bytes <TAB> maxline" per part ─────────────
 measure_registry() { # $1 = surfaces.tsv · $2 = output file
@@ -320,7 +328,6 @@ if [ "${1:-}" = "--self-test" ]; then
 fi
 
 # ── the judgement, over the real tree ────────────────────────────────────────────────────────
-rm -rf "$SCRATCH"; mkdir -p "$SCRATCH"
 if [ -n "${LIVE_DOC_SIZE_TRACKED:-}" ]; then
   cp "$LIVE_DOC_SIZE_TRACKED" "$SCRATCH/tracked_md.txt"
 else
@@ -329,5 +336,4 @@ fi
 measure_registry "$SURFACES" "$SCRATCH/measurements.tsv"
 evaluate "$SURFACES" "$ROUTES" "$SCRATCH/measurements.tsv" "$SCRATCH/tracked_md.txt"
 rc=$?
-rm -rf "$SCRATCH"
 exit "$rc"

@@ -186,21 +186,37 @@ Bare numeric ids and Count refuse with actual construction/position/role and no 
 ProfileIntake stays DeferredToG4; None means no profile field. ClosingOperation stays logical despite
 numeric-id matches. Debug omits ids/values. Operation existence/kind/dependencies, current garment
 sources, global ids, resolved intake/conservation and release proof remain separate. Gather ease
-stays on its span; grain/allowance roles follow separately.
+stays on its span.
 
 | API token | Meaning |
 | --- | --- |
 | `DesignConstructionDeclaration` | Actual object/position/canonical owner/field |
-| `DesignConstructionDeclarationRole` | Intake then ClosingOperation |
-| `DesignConstructionDeclarationSource` | ExplicitIntake, FormulaIntake, ProfileIntake, ClosingOperation |
+| `DesignConstructionDeclarationRole` | Intake/closing, grain alignment, allowance width/inclusion |
+| `DesignConstructionDeclarationSource` | Original typed role source; formula metadata or inline/logical intent |
 | `DesignConstructionDeclarationError` | Inputs cause or contextual missing/wrong-kind parameter |
 
-**Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable layer types share
-editable `LayerDefinition` input and structural validation. A definition names its served Piece,
-explicit `LayerOffsetRelationship` and material assignment. The relationship holds a required recipe
-offset-operation id and nonempty directed source ranges in that Piece's frame. The recipe owns offset
-dimensions/input states: descriptors do not cache generated contours, defaults or a second output-Piece
-material state. Recipe/Design must validate the named operation's existence, kind and dependencies.
+### Grain and allowance declarations
+
+```rust,ignore
+let views = inputs.grain_allowance_declarations(&sources)?;
+```
+
+Whole-root preflight and actual object/position/canonical borrows apply, even empty. GrainAlignment roles precede allowances; each allowance yields AllowanceWidth then
+AllowanceInclusion. FormulaAngle requires actual Angle parameter metadata; FormulaWidth requires
+Length (dedicated/general). Bare canonical ids and wrong kinds refuse without partial views;
+Unknown/Derived remain unread.
+
+ParallelAlignment borrows the directed axis without inventing an angle. ExplicitAngle preserves its
+Angle; ProfileAngle stays logical. ExplicitWidth borrows original parameter/Length, including zero;
+ProfileWidth and required AllowanceInclusion retain their exact Profile refs, even with numeric-id
+matches. Profile roles stay DeferredToG4. Axis/stripe/plaid/corner intent stays on the object; no current-source,
+resolved width-domain, alignment/offset, policy or release proof follows.
+
+**Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable types share
+`LayerDefinition`/structural rules: served Piece, `LayerOffsetRelationship`, material assignment.
+The relationship retains recipe offset-operation id/nonempty directed source ranges in that Piece.
+Recipe owns dimensions/input states; descriptors cache no contours/defaults/second output-Piece
+material state. Recipe/Design checks operation existence/kind/dependencies.
 
 For example, an interfacing descriptor can serve the waistband and name an offset operation using
 owned construction ranges for its inner half. The fixture's recipe still supplies the 4.0 × 77.0 cm

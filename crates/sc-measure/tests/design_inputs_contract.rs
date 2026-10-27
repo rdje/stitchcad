@@ -2124,7 +2124,7 @@ fn layer_offset_declarations_do_not_certify_missing_current_served_pieces_or_inf
 }
 
 #[test]
-fn construction_intake_and_layer_offset_declarations_recheck_whole_root_before_even_empty_scope() {
+fn construction_intake_grain_allowance_and_layer_offset_recheck_whole_root_before_empty_scope() {
     use core::cell::Cell;
     use sc_core::{
         design::{DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost},
@@ -2214,7 +2214,18 @@ fn construction_intake_and_layer_offset_declarations_recheck_whole_root_before_e
         .construction_intake_declarations(&constructions)
         .expect("stable root")
         .is_empty());
+    assert!(state
+        .grain_allowance_declarations(&constructions)
+        .expect("stable grain/allowance root")
+        .is_empty());
     state.sources().host().changed.set(true);
+    let grain_error = state
+        .grain_allowance_declarations(&constructions)
+        .expect_err("whole root before empty grain/allowance");
+    assert!(
+        matches!(&grain_error, sc_core::design::DesignConstructionDeclarationError::Inputs(issue)
+        if matches!(issue.as_ref(), DesignInputsError::Sources(source) if matches!(source.as_ref(), DesignMetadataError::ChangedEntities)))
+    );
     let error = state
         .construction_intake_declarations(&constructions)
         .expect_err("whole current root first");
@@ -2231,3 +2242,6 @@ fn construction_intake_and_layer_offset_declarations_recheck_whole_root_before_e
 
 #[path = "support/construction_intake_declarations.rs"]
 mod construction_intake_declarations;
+
+#[path = "support/construction_grain_allowance_declarations.rs"]
+mod construction_grain_allowance_declarations;
