@@ -158,12 +158,35 @@ impl Hem {
         ledger: &IdentityLedger,
         facing: Option<&Facing>,
     ) -> Result<Self, HemError> {
-        if let HemDepth::Explicit { value, .. } = definition.depth {
+        let hem = Self {
+            piece: piece.id(),
+            definition,
+        };
+        hem.validate_current(piece, ledger, facing)?;
+        Ok(hem)
+    }
+    /// Recheck the original owner, complete finish edge and original current Facing target.
+    /// Raw choices/repairs remain explicit; this proves no physical fold or declaration value.
+    /// # Errors
+    /// Returns original owner/depth/edge/Facing causes; a valid Facing alone cannot certify the edge.
+    pub fn validate_current(
+        &self,
+        piece: &Piece,
+        ledger: &IdentityLedger,
+        facing: Option<&Facing>,
+    ) -> Result<(), HemError> {
+        if piece.id() != self.piece {
+            return Err(HemError::WrongPiece {
+                held: self.piece,
+                provided: piece.id(),
+            });
+        }
+        if let HemDepth::Explicit { value, .. } = self.definition.depth {
             if value.as_micrometres() < 0 {
                 return Err(HemError::NegativeDepth(value));
             }
         }
-        let evidence = ledger.resolve_range(EdgeRange::whole(definition.edge));
+        let evidence = self.edge_resolution(ledger);
         if !evidence.has_full_coverage()
             || evidence.start().resolved().is_none()
             || evidence.end().resolved().is_none()
@@ -173,12 +196,8 @@ impl Hem {
         if !range_is_owned(&evidence, piece, ledger) {
             return Err(HemError::OutsidePiece(piece.id()));
         }
-        let hem = Self {
-            piece: piece.id(),
-            definition,
-        };
-        hem.facing(piece, ledger, facing)?;
-        Ok(hem)
+        self.facing(piece, ledger, facing)?;
+        Ok(())
     }
     /// Stable construction identity.
     #[must_use]
@@ -233,12 +252,12 @@ impl Hem {
                 served: current.served_piece(),
             });
         }
-        Facing::new(current.definition().clone(), piece, ledger).map_err(|error| {
-            HemError::InvalidFacing {
+        current
+            .validate_current(piece, ledger)
+            .map_err(|error| HemError::InvalidFacing {
                 facing: held,
                 error,
-            }
-        })?;
+            })?;
         Ok(Some(current))
     }
     /// Actual edge/fold geometry remains unproved; no depth or fold is executed by this descriptor.

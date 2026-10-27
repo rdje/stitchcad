@@ -140,6 +140,11 @@ evidence. Merging owned ends around a foreign middle does not make that source o
 reversal. An interior deletion stays visible; editing cloned material/offset input cannot mutate a
 validated layer. Actual offset shape, bounded error and physical relationships remain G2 obligations.
 
+Each layer's `validate_current(served, ledger)` rechecks its original served owner, material reason
+and every complete owned source through the same rules/order as construction. Historical ranges
+may resolve after edits; a same-id Piece replacement cannot retain ownership of removed content.
+Raw endpoint choices and interior repairs remain explicit. Current validity grants no execution scope.
+
 **Modelled content and execution scope are separate.** The feature matrix's rule 3 permits a lining
 object to be modelled while deferring supported execution. `Lining::new` validates structural content;
 `require_in_scope()` refuses requested v1 execution with `LayerEnvelopeError::LiningDeferred`.
@@ -187,6 +192,11 @@ finish edge, physical fold or release readiness. Recipe/Design validates every d
 kind/domain/state and all current composition registries before execution. Profile fields report
 `DeferredToG4`; absence means only no profile field was authored. Actual fold geometry and executed
 finishing remain G2/G3, and every Hem reports `GeometricValidation::DeferredToG2`.
+
+`Hem::validate_current(piece, ledger, facing)` checks the original owner, depth domain, whole finish
+edge and original current Facing target in that order. Construction shares these rules. Facing
+validation borrows the actual object's current validator without cloning its definition. A healthy
+Facing and two live finish endpoints cannot conceal a deleted finish interior; held input stays intact.
 
 | API token | Meaning in the Hem implementation |
 | --- | --- |

@@ -326,3 +326,83 @@ fn editing_offset_or_material_input_cannot_mutate_any_validated_layer_kind() {
         assert_eq!(object.definition(), &f.definition);
     }
 }
+
+#[test]
+fn current_validation_keeps_all_layer_kinds_and_original_served_owner_after_edits() {
+    let mut f = fixture();
+    let facing = Facing::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let lining = Lining::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let interfacing = Interfacing::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let parts = f
+        .ledger
+        .split(
+            &mut f.ids,
+            f.definition.offset.sources.first().unwrap().range.edge(),
+            t(1, 2),
+        )
+        .unwrap();
+    f.ledger.reverse(&mut f.ids, parts.first()).unwrap();
+    facing.validate_current(&f.piece, &f.ledger).unwrap();
+    lining.validate_current(&f.piece, &f.ledger).unwrap();
+    interfacing.validate_current(&f.piece, &f.ledger).unwrap();
+    assert_eq!(
+        lining.require_in_scope().unwrap_err().diagnostic(),
+        "env_lining"
+    );
+    let mut changed = f.piece.definition().clone();
+    changed.construction_lines.remove(0);
+    let current = Piece::new(changed, &f.ledger).unwrap();
+    let expected = LayerError::SourceOutsidePiece {
+        index: 0,
+        piece: f.piece.id(),
+    };
+    assert_eq!(
+        facing.validate_current(&current, &f.ledger),
+        Err(expected.clone())
+    );
+    assert_eq!(
+        lining.validate_current(&current, &f.ledger),
+        Err(expected.clone())
+    );
+    assert_eq!(
+        interfacing.validate_current(&current, &f.ledger),
+        Err(expected)
+    );
+    assert_eq!(facing.definition(), &f.definition);
+    assert_eq!(lining.definition(), &f.definition);
+    assert_eq!(interfacing.definition(), &f.definition);
+}
+
+#[test]
+fn current_validation_checks_every_layer_source_interior_with_live_endpoints() {
+    let mut f = fixture();
+    let facing = Facing::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let lining = Lining::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let interfacing = Interfacing::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let source = f.definition.offset.sources.get(1).unwrap().range.edge();
+    let parts = f.ledger.split(&mut f.ids, source, t(1, 3)).unwrap();
+    let tail = f.ledger.split(&mut f.ids, parts.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, tail.first()).unwrap();
+    let raw = f
+        .ledger
+        .resolve_range(f.definition.offset.sources.get(1).unwrap().range);
+    assert!(raw.start().resolved().is_some());
+    assert!(raw.end().resolved().is_some());
+    assert!(!raw.has_full_coverage());
+    let expected = LayerError::UnresolvedSource {
+        index: 1,
+        evidence: Box::new(raw),
+    };
+    assert_eq!(
+        facing.validate_current(&f.piece, &f.ledger),
+        Err(expected.clone())
+    );
+    assert_eq!(
+        lining.validate_current(&f.piece, &f.ledger),
+        Err(expected.clone())
+    );
+    assert_eq!(
+        interfacing.validate_current(&f.piece, &f.ledger),
+        Err(expected)
+    );
+}

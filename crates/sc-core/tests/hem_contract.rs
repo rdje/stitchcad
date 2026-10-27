@@ -428,3 +428,61 @@ fn hem_invalid_facing_error_keeps_original_layer_cause() {
     ));
     assert!(!cause.is::<Box<LayerError>>());
 }
+
+#[test]
+fn current_validation_does_not_let_healthy_facing_approve_a_damaged_finish_edge() {
+    let mut f = fixture();
+    let facing = f.facing();
+    let mut input = f.hem_definition();
+    input.method = HemMethod::Faced {
+        facing: facing.id(),
+    };
+    let hem = f.hem(input.clone(), Some(&facing)).unwrap();
+    let parts = f.ledger.split(&mut f.ids, input.edge, t(1, 3)).unwrap();
+    let tail = f.ledger.split(&mut f.ids, parts.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, tail.first()).unwrap();
+    assert!(core::ptr::eq(
+        hem.facing(&f.piece, &f.ledger, Some(&facing))
+            .unwrap()
+            .unwrap(),
+        &facing
+    ));
+    let raw = hem.edge_resolution(&f.ledger);
+    assert!(raw.start().resolved().is_some());
+    assert!(raw.end().resolved().is_some());
+    assert!(!raw.has_full_coverage());
+    assert_eq!(
+        hem.validate_current(&f.piece, &f.ledger, Some(&facing)),
+        Err(HemError::UnresolvedEdge(Box::new(raw)))
+    );
+    assert_eq!(hem.definition(), &input);
+}
+
+#[test]
+fn current_validation_follows_historical_finish_and_checks_original_owner_current_content() {
+    let mut f = fixture();
+    let input = f.hem_definition();
+    let hem = f.hem(input.clone(), None).unwrap();
+    let mut foreign = f.piece.definition().clone();
+    foreign.id = EntityId::from_bits(900);
+    let foreign = Piece::new(foreign, &f.ledger).unwrap();
+    let parts = f.ledger.split(&mut f.ids, input.edge, t(1, 2)).unwrap();
+    f.ledger.reverse(&mut f.ids, parts.first()).unwrap();
+    hem.validate_current(&f.piece, &f.ledger, None).unwrap();
+    assert_eq!(
+        hem.validate_current(&foreign, &f.ledger, None),
+        Err(HemError::WrongPiece {
+            held: f.piece.id(),
+            provided: foreign.id()
+        })
+    );
+    let mut changed = f.piece.definition().clone();
+    changed.boundary = vec![changed.construction_lines.remove(0)];
+    let current = Piece::new(changed, &f.ledger).unwrap();
+    assert!(hem.edge_resolution(&f.ledger).has_full_coverage());
+    assert_eq!(
+        hem.validate_current(&current, &f.ledger, None),
+        Err(HemError::OutsidePiece(f.piece.id()))
+    );
+    assert_eq!(hem.definition(), &input);
+}

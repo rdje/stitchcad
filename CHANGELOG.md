@@ -6,13 +6,16 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0381 — preserve original Hem Facing error cause
 
-- Fix D261 standard source chain; exact original concrete LayerError/pointer retained.
-- Exact control red101/green0; all other production bytes identical; lint/fmt/book/publication pass0.
-- D250132 unchanged; whole notion/Closure subtree/0380/retirement532. Shared layer/Hem validators next.
+## STITCHCAD-G1-0382 — share complete current layer and Hem validation
+
+- Constructors/current queries share original rules; Hem validates actual Facing without cloning.
+- Native11+13 including4 new controls/privacy3+1, strict lint/fmt/book/publication79/148 pass0.
+- D250132 unchanged; whole0381/D261/reference evidence533. Actual owned collections next.
 
 # Sealed archive — earlier slices
+
+| [part533](docs/history/stitchcad-devnotes-part533.md) | whole0381/D261 and historical reference plans | 129 lines, 9600 bytes, sha256:4250bc7e… |
 
 | [part532](docs/history/stitchcad-devnotes-part532.md) | closed notion/Closure subtree,0380/retirement | 55 lines, 4128 bytes, sha256:ecb5ac6a… |
 

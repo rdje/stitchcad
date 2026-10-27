@@ -3,14 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — original Hem Facing error cause
+## _(2026-10-27 UTC)_ — shared current layer and Hem rules
 
-0381 fixes D261: empty HemError Error impl hid the stored InvalidFacing LayerError.
-Actual faced Hem/deleted Facing source exact control red0/1 rc101, green1/0 rc0 after direct borrowing.
-Concrete type/same pointer retained; all production bytes outside Error impl identicaldd4fae3.
-Strict affected lint/fmt/book/publication79/148 pass0; D250132 exact prior rows unchanged.532 retains
-closed notion/Closure subtree/0380/retirement in4 exact Git spans0. Promotion declined: local standard
-Error repair with canonical D261 report. Shared current layer/Hem validators next; full CI deferred.
+0382 exposes current validators for each layer and complete Hem owner/depth/finish/Facing scope.
+Constructors share original rule blocks/order; Hem borrows current Facing validation without cloning.
+Four new controls prove historical/content ownership and interior repairs; all affected native11+13
+and privacy3+1 pass0. Strict affected lint/fmt/book/publication79/148 pass0; D250132 exact rows unchanged.
+Rule blocks retain exact bytes after self substitutions. Lining scope, raw choices and G2/G3/G4 stay
+separate.533 retains whole0381/D261/reference evidence in5 exact Git spans0. Promotion declined:
+existing structural/current boundary. Owned layer/Hem/material collections next; full CI deferred.
+
+[Complete D261 Hem cause lesson](docs/history/stitchcad-devnotes-part533.md) retains
+its original scope, checks and promotion decision.
 
 [Complete Closure declaration lesson](docs/history/stitchcad-devnotes-part532.md) retains
 its original scope, checks and promotion decision.

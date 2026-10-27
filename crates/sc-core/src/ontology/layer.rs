@@ -148,6 +148,12 @@ impl LayerContent {
         served: &Piece,
         ledger: &IdentityLedger,
     ) -> Result<Self, LayerError> {
+        let layer = Self { definition };
+        layer.validate_current(served, ledger)?;
+        Ok(layer)
+    }
+    fn validate_current(&self, served: &Piece, ledger: &IdentityLedger) -> Result<(), LayerError> {
+        let definition = &self.definition;
         if definition.served_piece != served.id() {
             return Err(LayerError::WrongServedPiece {
                 held: definition.served_piece,
@@ -186,7 +192,7 @@ impl LayerContent {
                 });
             }
         }
-        Ok(Self { definition })
+        Ok(())
     }
 }
 /// Immutable facing intent, without generated offset geometry.
@@ -248,6 +254,17 @@ macro_rules! layer_interface {
             #[must_use]
             pub const fn definition(&self) -> &LayerDefinition {
                 &self.0.definition
+            }
+            /// Recheck the original served Piece, material reason and all complete owned sources.
+            /// This neither rewrites held references nor authorizes execution or physical offsets.
+            /// # Errors
+            /// Returns the same [`LayerError`] rules/order as construction against this current context.
+            pub fn validate_current(
+                &self,
+                served: &Piece,
+                ledger: &IdentityLedger,
+            ) -> Result<(), LayerError> {
+                self.0.validate_current(served, ledger)
             }
             /// Current directed evidence in authored source-list order, without rewriting input.
             pub fn source_resolutions<'a>(
