@@ -57,6 +57,29 @@ kinds, not an implicit expansion or a default supplied by a placement.
 | `BornUnresolved` | Birth point requires unique resolution; its existing error contract is retained |
 | `MissingCopy` | Original physical-copy target is absent; a peer is never substituted |
 
+## Complete notion-placement collection
+
+`NotionPlacementInventory::new` owns exact placements in authored order and refuses duplicate ids
+with their first/repeated positions. `placements()` and `placement(id)` borrow original objects;
+lookup alone supplies no current proof. Held damaged references remain inspectable for repair.
+
+`validate_current(plan, pieces, ledger)` first rechecks the complete actual CutPlan, then every
+placement's original Piece, copy, anchor and full direction through the existing current validator.
+It includes placements unused by any Closure. For example, two surviving direction endpoints around
+a deleted interior still refuse; changing quantity from2 to4 also refuses a stale two-copy plan even
+when one placement remains valid. Missing/reassigned sources never select another Piece or copy.
+Raw choice/repair rules remain unchanged. No context or derived placement value is cached.
+
+An explicit empty collection is a draft scope and still checks the supplied complete plan. Global
+Design ids, logical sizes, G2 geometry and G3/G4 physical/profile obligations remain separate.
+
+| API token | Collection meaning |
+| --- | --- |
+| `NotionPlacementInventory` | Private ordered placements with shared inspection/current validation |
+| `NotionPlacementInventoryError` | DuplicateIdentity positions, CutPlan cause, MissingPiece or Placement cause |
+
+Nested plan/placement errors retain original concrete causes through std::error::Error::source().
+
 ## Centred zipper, hook and bar: stable instances and canonical targets
 
 `ClosureDefinition` retains a stable id, explicit `ClosureKind` and a nonempty list of

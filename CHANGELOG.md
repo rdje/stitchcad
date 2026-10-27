@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0377 — preserve original Closure error causes
+## STITCHCAD-G1-0378 — own complete current notion placements
 
-- Fix D260 envelope/placement standard source chains; original concrete objects and Anchor chain retained.
-- Both exact controls red101/green0; other production bytes identical. Lint/fmt/book/publication pass0.
-- D250132 unchanged; closed Pocket/0376/retirement continuity528. Notion-placement collection next.
+- Private ordered NotionPlacementInventory; complete plan and every original target, including unused.
+- Original concrete causes/raw repair rules; native5/privacy2, lint/fmt/book/publication79/141 pass0.
+- D250132 unchanged; whole0377/D260/provider evidence529. Actual Closure inventory next.
 
 # Sealed archive — earlier slices
+
+| [part529](docs/history/stitchcad-devnotes-part529.md) | whole0377/D260 and historical provider proof | 80 lines, 5602 bytes, sha256:b1260291… |
 
 | [part528](docs/history/stitchcad-devnotes-part528.md) | closed Pocket scope/0376/report retirement | 58 lines, 4681 bytes, sha256:75353404… |
 

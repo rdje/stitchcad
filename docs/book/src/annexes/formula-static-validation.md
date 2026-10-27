@@ -75,37 +75,23 @@ owners. No product evaluation or API/MCP release claim follows.
 
 ## Geometry provider argument checking
 
-The reference point provider takes x and y formula sources; its edge provider takes a len source.
-These are operation arguments, not formula constructors. All sources parse before any kind is
-resolved, then all kinds resolve in that order. Each argument must be length before the first value
-is computed. The scoped payload is defined in [contract5.2.4](../spec/formula-language.md#524-geometry-argument-refusals).
-
-| Provider | Argument formulas | Result |
-| --- | --- | --- |
-| point | x:1 mm; y:2 mm | exact coordinates1000/2000µm |
-| point | x:1.0; y:2 deg | formula_dimension; actual ratio/angle, wanted length/length |
-| point | x:1 um / 0; y:1 deg | formula_dimension before the division executes |
-| point | x:1.0; y:missing | formula_unbound_name; all kinds are unavailable |
-| edge | len:1 deg | formula_dimension; actual angle, wanted length |
-| point | x:hypot(3 um,4 um); y:7 um | x contribution hypot; y has no approximation source |
-
-No failed static check changes the provider's result, lazy-cache flag or contribution metadata.
-An invalid or unbound child preserves its own error; a provider mismatch reports every resolved
-argument kind, its real x/y/len position, and required length. An untaken conditional branch still
-has its names checked. Parsing retains literal-input normalization; execution traps cover expression
-evaluation, value reads and geometry callbacks.
+The reference point provider reads x/y formula sources; the edge provider reads len. These are
+operation arguments, not formula constructors. All sources parse, then all kinds resolve in order,
+then every argument must be length before any value is computed. Child errors retain priority;
+provider mismatches retain every resolved kind, actual x/y/len position and required length.
+Untaken branches still have their names checked. Failure leaves result/cache/contributions unchanged.
+The payload contract remains [§5.2.4](../spec/formula-language.md#524-geometry-argument-refusals).
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/geometry_argument_contract.py --mutations
 ```
 
-Complete97-case/75-payload/12-fault local geometry-reference receipts remain in
-`docs/history/stitchcad-devnotes-part491.md`.
-
-D140 is repaired in this local reference adapter. These controls do not validate arbitrary provider
-metadata, persisted graphs, whole-recipe runtime rollback, product operation identity or physical
-geometry. Product selectors/operation-argument execution remains .5f.3b/G2; complete product static
-recipe acceptance is implemented below. The grammar and stable diagnostic token set are unchanged.
+The complete historical examples,97 cases/75 payloads/12 faults and D140 local-adapter scope remain
+whole in `docs/history/stitchcad-devnotes-part529.md`; use
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part529.md`.
+These controls do not prove arbitrary provider metadata, whole runtime rollback, product operation
+identity or physical geometry. Product selectors/operation execution remains .5f.3b/G2; current
+static recipe acceptance is documented below. Grammar and stable diagnostic tokens are unchanged.
 
 ## Binding-header diagnostic arguments
 

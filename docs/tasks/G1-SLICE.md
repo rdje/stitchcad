@@ -905,24 +905,26 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   inventory; .d known declaration roles with existing operation/domain/G3/G4 boundaries.
 - ID: `G1-SLICE.6.4.5.2.a`
   Status: `done`
-  Goal: D260 preserve original envelope/placement causes through ClosureError; exact red/green,
-  unchanged validation/schema, current book/defect records and whole528 continuity.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test closure_contract
-    closure_envelope_error_keeps_original_cause -- --exact:0/1 rc=101; placement equivalent0/1 rc=101.
-  - [x] ROOT CAUSE (WHY + WHERE): both exact native controls returned rc=101 at source() None;
-    empty ClosureError Error impl hid original envelope and boxed placement causes.
-  - [x] FIX: cargo clippy -p sc-core --test closure_contract -- -D warnings:rc=0;
-    borrow concrete original errors, not Box type; no validation/schema changes.
-  - [x] ADDRESSED: both same exact cargo test controls give1/0 rc=0 each; concrete downcast/
-    pointer identity and placement-to-AnchorError chain retained.
-  - [x] NO REGRESSION: python3 -I -B Git-source comparison: all non-Error-impl production
-    bytes identical rc=0; fmt0, glossary132 failures rc=1, exact D250 rows compare rc=0.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/139/1454/2402 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part528.md:4 exact spans rc=0.
-    promotion: declined (local standard Error repair, canonical D260). Completed STITCHCAD-G1-0377.
+  Goal:0377 D260 original Closure causes; [whole scope/proof](../history/stitchcad-devnotes-part529.md).
 - ID: `G1-SLICE.6.4.5.2.b`
-  Status: `in_progress`
+  Status: `done`
   Goal: private actual notion-placement inventory; complete current copies and every original target.
+  Own exact order/ids, complete actual plan and every owned placement's original Piece/anchor/direction
+  via existing current validators, including unused placements. No stored contexts or implicit retargeting.
+  Preserve raw choice/repair rules, concrete causes and empty draft scope; global ids/size roles separate.
+  Focused native/privacy/lint/book; whole0377/D260 continuity529.
+  - [x] REPRODUCE / ISSUE: python3 Git-source check: dcce067 has no notion inventory rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; individual placements lack collection ownership,
+    complete-plan and unused-placement coverage. Existing notion/cut validators stay byte-identical.
+  - [x] FIX: cargo clippy -p sc-core --test notion_contract -- -D warnings:rc=0; private ordered
+    collection, duplicate positions, original targets and concrete plan/placement causes.
+  - [x] ADDRESSED: cargo test -p sc-core --test notion_contract inventory_:5/0 rc=0;
+    cargo test -p sc-core --doc ontology::notion_inventory:2/0 rc=0.
+  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; glossary132 failures rc=1,
+    exact D250 baseline rows compare rc=0; no validator-rule change.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/141/1454/2403 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part529.md:5 exact spans rc=0.
+    promotion: declined (existing current-source boundary). Completed STITCHCAD-G1-0378.
 - ID: `G1-SLICE.6.4.5.2.c`
   Status: `pending`
   Goal: private actual Closure inventory, nested instance identities and complete current placements.

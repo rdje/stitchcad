@@ -3,15 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — original Closure error causes
+## _(2026-10-27 UTC)_ — complete notion-placement sources
 
-0377 fixes D260: ClosureError's empty Error impl hid its original envelope/boxed placement errors.
-Actual Fly/deleted-anchor controls both red0/1 rc101, then green1/0 rc0 after direct cause borrowing.
-Concrete type/pointer and placement-to-AnchorError chain stay original; no dynamic Box erasure.
-All production bytes outside ClosureError Error impl matchfb122a9. Validation/schema/data unchanged.
-Strict affected lint/fmt/book/publication79/139 pass0; D250132 exact prior rows.528 retains closed
-Pocket scope/0376/report retirement in4 exact Git spans0. Promotion declined: local standard Error
-repair with canonical D260 report. Actual notion-placement inventory next; full CI remains deferred.
+0378 owns exact ordered NotionPlacementInventory objects; duplicate ids keep original positions.
+Current queries recheck the complete CutPlan and every original Piece/copy/anchor/full direction,
+including unused placements. Held damage stays inspectable; contexts/values are not cached.
+Five native controls and2 privacy controls pass0; strict affected lint/fmt/book/publication79/141 pass0.
+Original notion/cut validators byte-identical; D250132 exact baseline rows unchanged.529 retains whole
+0377/D260 and historical provider evidence in5 exact Git spans0. Promotion declined: existing current
+source boundary. Closure/instance collection next; full CI/integration remains deferred.
+
+[Complete D260 Closure-cause lesson](docs/history/stitchcad-devnotes-part529.md) retains
+its original scope, checks and promotion decision.
 
 [Complete Pocket collection/component lesson](docs/history/stitchcad-devnotes-part528.md) retains
 its original scope, checks and promotion decision.

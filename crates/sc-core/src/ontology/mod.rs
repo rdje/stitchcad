@@ -27,6 +27,7 @@
 //! | [`material`] | immutable metadata, current typed properties and unapplied shrinkage intent | `.6.4.2.d.3.2` |
 //! | [`material_inventory`] | current Material collection and actual Piece assignment targets/reasons | `.6.4.2.d.3.3` |
 //! | [`notion`] | physical-copy placements, owned anchors/orientation and current target validation | `.3c.4c.1a` |
+//! | [`notion_inventory`] | owned placements and complete current copies/original sources | `.6.4.5.2.b` |
 //! | [`notch`] | immutable semantic anchors and symbolic profile bindings, deferred physical validation | `.3c.3a` |
 //! | [`piece_inventory`] | immutable authored Piece collection; reciprocal opposite-hand/equal-quantity pair checks | `.6.4.1` |
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
@@ -56,6 +57,7 @@ pub mod material;
 pub mod material_inventory;
 pub mod notch;
 pub mod notion;
+pub mod notion_inventory;
 pub mod package_identity;
 pub mod piece;
 pub mod piece_inventory;
@@ -137,6 +139,7 @@ pub use layer::{
 pub use hem::{Hem, HemDefinition, HemDepth, HemError, HemFoldType, HemMethod};
 
 pub use notion::{NotionPlacement, NotionPlacementDefinition, NotionPlacementError};
+pub use notion_inventory::{NotionPlacementInventory, NotionPlacementInventoryError};
 
 pub use closure::{
     ButtonholeDerivation, ButtonholeLengthSource, ButtonholeValidation, Closure, ClosureDefinition,

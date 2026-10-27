@@ -1,11 +1,12 @@
 //! Physical notion placements: stable copy domains, current references and no retargeting.
 #![allow(clippy::expect_used, clippy::unwrap_used, clippy::panic)]
 use sc_core::ontology::{
-    AnchorError, CopyOrientation, CutCopyDefinition, CutPlan, CuttingSide,
+    AnchorError, CopyOrientation, CutCopyDefinition, CutPlan, CutPlanError, CuttingSide,
     DeterministicIdGenerator, DirectedEdge, DirectedRange, Direction, EdgeAnchor, EdgeRange,
     EdgeRef, EntityId, GeometricValidation, IdGenerator, IdentityLedger, LabelText, LocalTag,
     MaterialAssignment, Mirroring, NotionPlacement, NotionPlacementDefinition,
-    NotionPlacementError, Param, Piece, PieceDefinition, RangeIssue, Rational, Resolution,
+    NotionPlacementError, NotionPlacementInventory, NotionPlacementInventoryError, Param, Piece,
+    PieceDefinition, RangeIssue, Rational, Resolution,
 };
 use sc_units::Length;
 fn t(n: i64, d: i64) -> Param {
@@ -439,4 +440,231 @@ fn notion_anchor_error_keeps_original_anchor_cause() {
     ));
     assert!(!cause.is::<Box<AnchorError>>());
     assert_eq!(placement.definition(), &input);
+}
+
+#[test]
+fn inventory_preserves_order_identity_shared_objects_and_explicit_empty_scope() {
+    let f = fixture();
+    let first = f.placement(f.placement_input()).unwrap();
+    let mut input = f.placement_input();
+    input.id = EntityId::from_bits(701);
+    input.copy = EntityId::from_bits(601);
+    input.direction.direction = Direction::Reversed;
+    let second = f.placement(input).unwrap();
+    let inventory = NotionPlacementInventory::new(vec![second.clone(), first.clone()]).unwrap();
+    assert_eq!(inventory.placements(), &[second.clone(), first.clone()]);
+    assert!(core::ptr::eq(
+        inventory.placement(second.id()).unwrap(),
+        inventory.placements().first().unwrap()
+    ));
+    assert!(inventory.placement(EntityId::from_bits(999)).is_none());
+    assert_eq!(
+        NotionPlacementInventory::new(vec![second.clone(), first, second.clone()]),
+        Err(NotionPlacementInventoryError::DuplicateIdentity {
+            identity: second.id(),
+            first: 0,
+            duplicate: 2,
+        })
+    );
+    inventory
+        .validate_current(&f.plan(), std::slice::from_ref(&f.piece), &f.ledger)
+        .unwrap();
+    let empty = NotionPlacementInventory::new(vec![]).unwrap();
+    assert!(empty.placements().is_empty());
+    empty
+        .validate_current(&CutPlan::new(vec![], &[]).unwrap(), &[], &f.ledger)
+        .unwrap();
+    assert_eq!(
+        second.geometric_validation(),
+        GeometricValidation::DeferredToG2
+    );
+}
+
+#[test]
+fn inventory_checks_complete_current_plan_even_when_empty_or_placement_still_valid() {
+    use std::error::Error;
+    let f = fixture();
+    let placement = f.placement(f.placement_input()).unwrap();
+    let inventory = NotionPlacementInventory::new(vec![placement.clone()]).unwrap();
+    let mut definition = f.piece.definition().clone();
+    definition.quantity = 4;
+    let current = Piece::new(definition, &f.ledger).unwrap();
+    placement
+        .validate_current(&f.plan(), &current, &f.ledger)
+        .unwrap();
+    for collection in [&inventory, &NotionPlacementInventory::new(vec![]).unwrap()] {
+        let issue = collection
+            .validate_current(&f.plan(), std::slice::from_ref(&current), &f.ledger)
+            .unwrap_err();
+        let NotionPlacementInventoryError::CutPlan(actual) = &issue else {
+            panic!("complete plan cause")
+        };
+        assert_eq!(
+            actual.as_ref(),
+            &CutPlanError::QuantityMismatch {
+                piece: current.id(),
+                expected: 4,
+                actual: 2
+            }
+        );
+        assert!(core::ptr::eq(
+            issue
+                .source()
+                .unwrap()
+                .downcast_ref::<CutPlanError>()
+                .unwrap(),
+            actual.as_ref()
+        ));
+        assert!(!issue.source().unwrap().is::<Box<CutPlanError>>());
+    }
+}
+
+#[test]
+fn inventory_checks_unused_later_anchor_and_keeps_original_cause_chain() {
+    use std::error::Error;
+    let mut f = fixture();
+    let first = f.placement(f.placement_input()).unwrap();
+    let mut input = f.placement_input();
+    input.id = EntityId::from_bits(701);
+    input.anchor.param = t(3, 4);
+    let second = f.placement(input).unwrap();
+    let branches = f
+        .ledger
+        .split(&mut f.ids, input.anchor.edge, t(1, 2))
+        .unwrap();
+    f.ledger.delete(&mut f.ids, branches.second()).unwrap();
+    // Collection construction preserves the held damaged object for inspection/repair.
+    let inventory = NotionPlacementInventory::new(vec![first.clone(), second.clone()]).unwrap();
+    first
+        .validate_current(&f.plan(), &f.piece, &f.ledger)
+        .unwrap();
+    let issue = inventory
+        .validate_current(&f.plan(), std::slice::from_ref(&f.piece), &f.ledger)
+        .unwrap_err();
+    let NotionPlacementInventoryError::Placement {
+        index,
+        placement,
+        issue: actual,
+    } = &issue
+    else {
+        panic!("later placement cause")
+    };
+    assert_eq!((*index, *placement), (1, second.id()));
+    assert!(matches!(
+        actual.as_ref(),
+        NotionPlacementError::Anchor(AnchorError::CurrentUnresolved { .. })
+    ));
+    let cause = issue.source().unwrap();
+    assert!(core::ptr::eq(
+        cause.downcast_ref::<NotionPlacementError>().unwrap(),
+        actual.as_ref()
+    ));
+    assert!(!cause.is::<Box<NotionPlacementError>>());
+    assert!(cause.source().unwrap().is::<AnchorError>());
+    assert_eq!(
+        inventory.placement(second.id()).unwrap().definition(),
+        &input
+    );
+}
+
+#[test]
+fn inventory_checks_full_unused_direction_despite_live_endpoints() {
+    let mut f = fixture();
+    let first = f.placement(f.placement_input()).unwrap();
+    let mut input = f.placement_input();
+    input.id = EntityId::from_bits(701);
+    input.direction = DirectedRange {
+        range: EdgeRange::whole(f.piece.definition().construction_lines.get(1).unwrap().edge),
+        direction: Direction::Reversed,
+    };
+    let second = f.placement(input).unwrap();
+    let inventory = NotionPlacementInventory::new(vec![first.clone(), second.clone()]).unwrap();
+    let split = f
+        .ledger
+        .split(&mut f.ids, input.direction.range.edge(), t(1, 3))
+        .unwrap();
+    let tail = f.ledger.split(&mut f.ids, split.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, tail.first()).unwrap();
+    first
+        .validate_current(&f.plan(), &f.piece, &f.ledger)
+        .unwrap();
+    let evidence = second.direction_resolution(&f.ledger);
+    assert!(evidence.evidence().start().resolved().is_some());
+    assert!(evidence.evidence().end().resolved().is_some());
+    assert!(!evidence.evidence().has_full_coverage());
+    let issue = inventory
+        .validate_current(&f.plan(), std::slice::from_ref(&f.piece), &f.ledger)
+        .unwrap_err();
+    assert!(
+        matches!(issue, NotionPlacementInventoryError::Placement { index: 1, placement, issue }
+        if placement == second.id() && matches!(issue.as_ref(), NotionPlacementError::UnresolvedDirection(raw) if raw.as_ref() == evidence.evidence()))
+    );
+    assert_eq!(
+        inventory.placement(second.id()).unwrap().definition(),
+        &input
+    );
+}
+
+#[test]
+fn inventory_keeps_original_piece_and_copy_targets_after_current_plan_changes() {
+    let f = fixture();
+    let placement = f.placement(f.placement_input()).unwrap();
+    let inventory = NotionPlacementInventory::new(vec![placement.clone()]).unwrap();
+    let mut definition = f.piece.definition().clone();
+    definition.id = EntityId::from_bits(900);
+    let other = Piece::new(definition, &f.ledger).unwrap();
+    let reassigned = f
+        .plan()
+        .copies()
+        .iter()
+        .map(|copy| CutCopyDefinition {
+            piece: other.id(),
+            ..*copy.definition()
+        })
+        .collect::<Vec<_>>();
+    let other_plan = CutPlan::new(reassigned.clone(), std::slice::from_ref(&other)).unwrap();
+    assert_eq!(
+        inventory.validate_current(&other_plan, std::slice::from_ref(&other), &f.ledger),
+        Err(NotionPlacementInventoryError::MissingPiece {
+            index: 0,
+            placement: placement.id(),
+            piece: f.piece.id()
+        })
+    );
+    let pieces = vec![f.piece.clone(), other];
+    let mut combined = reassigned;
+    combined.extend(f.plan().copies().iter().map(|copy| CutCopyDefinition {
+        id: if copy.orientation() == CopyOrientation::Authored {
+            EntityId::from_bits(602)
+        } else {
+            EntityId::from_bits(603)
+        },
+        ..*copy.definition()
+    }));
+    let plan = CutPlan::new(combined, &pieces).unwrap();
+    assert!(
+        matches!(inventory.validate_current(&plan, &pieces, &f.ledger),
+        Err(NotionPlacementInventoryError::Placement { index: 0, placement: id, issue })
+        if id == placement.id() && matches!(*issue, NotionPlacementError::CopyOutsidePiece { copy, expected, actual }
+            if copy == placement.copy() && expected == placement.piece() && actual == EntityId::from_bits(900)))
+    );
+    let removed = f
+        .plan()
+        .copies()
+        .iter()
+        .map(|copy| CutCopyDefinition {
+            id: if copy.id() == placement.copy() {
+                EntityId::from_bits(604)
+            } else {
+                copy.id()
+            },
+            ..*copy.definition()
+        })
+        .collect();
+    let plan = CutPlan::new(removed, std::slice::from_ref(&f.piece)).unwrap();
+    assert!(
+        matches!(inventory.validate_current(&plan, std::slice::from_ref(&f.piece), &f.ledger),
+        Err(NotionPlacementInventoryError::Placement { issue, .. }) if *issue == NotionPlacementError::MissingCopy(placement.copy()))
+    );
+    assert_eq!(inventory.placement(placement.id()).unwrap(), &placement);
 }

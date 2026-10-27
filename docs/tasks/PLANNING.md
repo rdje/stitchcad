@@ -1147,15 +1147,9 @@ in [part527](../history/stitchcad-devnotes-part527.md); current error chains pre
 
 [0376 retirement proof](../history/stitchcad-devnotes-part528.md).
 
-## D260 — Closure errors hid original envelope/placement causes (fixed0377)
-
-ClosureError's empty Error impl hid stored envelope/placement causes.
-Exact closure_contract tests closure_envelope_error_keeps_original_cause and
-closure_placement_error_keeps_original_cause: red0/1 rc=101 each, green1/0 rc=0 each through
-local_environment.py; target/closure-causes-*-0377.log. Concrete type and same original pointer retained,
-including placement-to-AnchorError chaining. All production bytes outside Error impl identical.
-P2; owner G1-SLICE.6.4.5.2.a. Closed focused; full CI integration/pre-push.
-- [x] ROOT CAUSE: both exact cargo test controls red0/1 rc=101 at missing source(); empty Error impl.
-- [x] ADDRESSED: same controls green1/0 rc=0 each after original cause borrowing/as_ref.
-- [x] NO REGRESSION: cargo clippy -p sc-core --test closure_contract -- -D warnings rc=0;
-  production non-Error-impl Git-source bytes identical rc=0, fmt/book/publication pass0.
+Verified D260 original Closure-cause report and0377 red/green proof remain whole in
+[part529](../history/stitchcad-devnotes-part529.md); standard chains preserve original causes.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part529.md:
+  5 exact Git spans rc=0; completed D260 proof occupied live capacity.
+- [x] ADDRESSED: same receipt rc=0; whole report/task/lesson/ledger retained529, current links resolve.
+- [x] NO REGRESSION: scoped publication79/141/1454/2403 rc=0; book build rc=0; D250132 exact rows0.
