@@ -148,3 +148,15 @@ audit sequence orders authoring/Undo/Redo independently of timestamps and restor
 witnesses share actual event ordering. Native bus37 (prior30/history7), privacy7/lint/fmt cover this
 metadata subset, including D285 undo0/new2/old1 refusal and pointer/canonical roundtrip. Storage/reopen
 must persist issuance/order; work/cancellation and deeper/full acceptance remain separately owned.
+
+## Explicit metadata admission/progress contracts0438
+
+answers: "what do initial operation limits measure?" · "does progress data itself cancel or authorize work?"
+
+G1-SLICE.6.8.1.1 admits original submitted members, primary metadata selections and cumulative proposed
+UTF-8 assignment-reason bytes under explicit positive host limits. Aliases still count. Member excess
+precedes per-member target/byte excess; guard remaining room before arithmetic and retain exact factors.
+Typed phase-local fractions require positive total/completed<=total. Data-only observer returns Continue/
+Cancel and carries no model/authority capability. Native control4/privacy1/lint/fmt pass; runtime bus is
+unchanged. Immutable installation/actual emission/atomic cancellation follow .6.8.1.2. These inputs do
+not prove CPU time, total model memory, allocation peaks, numeric/file/decompression or solver bounds.

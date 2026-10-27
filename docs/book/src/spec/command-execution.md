@@ -507,3 +507,6 @@ direct stack/action-journal erasure. Persistence/reopen, payload/work/cancellati
 source/allocation fault acceptance, full command integration and recipe/geometry/physical proof remain
 separately owned; metadata history supplies no broader certificate.
 
+[Operation limits and progress](command-operation-control.md) defines implemented admission/data
+contracts. Installing those limits and wiring runtime progress/cancellation remain the next slice.
+

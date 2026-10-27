@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0437 — restore actual bounded snapshots without reissuing revisions
+## STITCHCAD-G1-0438 — define explicit metadata admission and progress contracts
 
-- Whole-model undo/redo retains original semantics/hosts/IDs/counters under fresh current-operator authority.
-- Explicit finite depth/action audit; exact operation retry and shared actor-key conflicts preserve original records.
-- Report undo eviction/redo-branch loss; separate maximum-issued revisions and chronological audit order never rewind.
-- Native bus37/history7/privacy7/strict lint/fmt pass; D285 in-memory branch fixed, storage/reopen remains .7.
-- Whole0436 and D285 diagnosis ledger retained588; resource/full/source-allocation acceptance remains owned.
+- Positive host policy for submitted members, primary metadata targets and proposed UTF-8 assignment reasons.
+- Exact per-member refusals and guarded arithmetic; typed phase fractions and data-only continuation decisions.
+- Native control4/privacy1/strict selected lint/fmt pass; runtime installation/cancellation remains .6.8.1.2.
+- Dedicated book guide states data/runtime limits; whole0437/0421–0422 completed proofs retained589.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -44,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part589](docs/history/stitchcad-devnotes-part589.md) | whole0437 and0421–0422 completed proofs | 83 lines, 7538 bytes, sha256:8cb71844… |
 | [part588](docs/history/stitchcad-devnotes-part588.md) | whole0436 and D285 diagnosis ledger | 48 lines, 3999 bytes, sha256:2a0714f0… |
 | [part587](docs/history/stitchcad-devnotes-part587.md) | whole0435 D285 diagnosis scope/lesson/ledger | 36 lines, 2907 bytes, sha256:6efd580d… |
 | [part586](docs/history/stitchcad-devnotes-part586.md) | whole0434 and D283/D284 retained continuity | 49 lines, 4192 bytes, sha256:6cd57452… |

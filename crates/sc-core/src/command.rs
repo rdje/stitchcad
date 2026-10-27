@@ -10,6 +10,7 @@ mod authorization;
 mod bus;
 mod construction;
 mod context;
+mod control;
 mod evaluation;
 mod grading_selection;
 mod grant;
@@ -46,6 +47,10 @@ pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
     DesignRevision,
+};
+pub use control::{
+    CommandOperationDemand, CommandOperationLimitError, CommandOperationLimits, CommandProgress,
+    CommandProgressDecision, CommandProgressError, CommandProgressObserver, CommandProgressPhase,
 };
 pub use evaluation::{
     CommandEvaluation, EvaluateInstance, EvaluationPayload, EvaluationProfile, GradeSize,

@@ -3,17 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — bounded actual snapshots and non-rewinding issuance
+## _(2026-10-27 UTC)_ — explicit admission units and progress-data contract
 
-0437 .6.7.1.3 moves whole actual models through bounded undo/redo alternatives, preserving original
-hosts/semantics/IDs/counters. Current operator authority is separate from the accepted original author.
-Finite action audit/exact retry share authoring key scope; drops/branches report lost reversibility
-without erasing records. Maximum-issued revisions and global exact audit order never rewind.
-Native bus37 (prior30/history7), privacy7/strict lint/fmt pass: D285 branch2 refuses old1 after undo0;
-actual pointer/canonical roundtrip, scope/revocation/bounds/replay also pass. Promotion: command-layer
-record. D285 storage/reopen remains .7; resource/full/source-allocation acceptance remains separately owned.
+0438 .6.8.1.1 adds host-chosen positive member/metadata-target/proposed-reason-byte limits, counting
+original aliases and UTF-8 fields exactly. Remaining-room comparisons precede arithmetic and retain
+unmultiplied excess components. Typed phase fractions refuse completed>total; data-only observer
+returns Continue/Cancel, without model or authority handles. Native control4/privacy1/strict lint/fmt
+pass. Runtime bus unchanged; installation/emission/cancellation .1.2 next. Promotion: command-layer
+record. These units are neither CPU time nor total model memory/peak allocation bounds.
 
-[Whole0436 and D285 diagnosis ledger](docs/history/stitchcad-devnotes-part588.md) retain exact native source evidence.
+[Whole0437 and0421–0422 completed proofs](docs/history/stitchcad-devnotes-part589.md) retain exact native spans; graph ids remain live.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

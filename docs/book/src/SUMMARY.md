@@ -50,6 +50,7 @@
   - [The command layer](spec/command-layer.md)
     - [Implemented execution](spec/command-execution.md)
     - [Scopes and core authorization](spec/command-scopes.md)
+    - [Operation limits and progress](spec/command-operation-control.md)
     - [Typed evaluation requests](spec/evaluation-requests.md)
     - [Typed artifact requests](spec/artifact-requests.md)
   - [Internationalization](spec/i18n-architecture.md)
