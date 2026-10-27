@@ -844,7 +844,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:closed notion/Closure scope; [whole proof](../history/window21.md#stitchcad-devnotes-part532md).
 - ID: `G1-SLICE.6.4.5.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual layers/Hem current sources, materials and known declaration roles; explicit lining refusal.
   Own child planning, original Hem layer causes D261 and whole0380 continuity532.
 - ID: `G1-SLICE.6.4.5.3.a`
@@ -899,8 +899,14 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
     transition_receipts.py --record docs/history/stitchcad-devnotes-part539.md:5 exact spans rc=0.
     Promotion declined: existing metadata/current-source/scope boundaries. Component acceptance .e.
 - ID: `G1-SLICE.6.4.5.3.e`
-  Status: `pending`
-  Goal: focused current layer/Hem component acceptance; broader integration after .6.9.
+  Status: `done`
+  Goal:0389 focused layer/Hem component acceptance; broader integration after .6.9.
+  - [x] ROOT CAUSE: Python Git/source review rc=0: all .3 children implemented; acceptance remained open.
+  - [x] ADDRESSED: cargo test -p sc-core --test layer_contract inventory_:4/0 and hem_contract
+    inventory_:5/0; -p sc-measure --test design_inputs_contract hem_declarations_:4/0 and
+    layer_offset_declarations_:4/0; each rc=0,17 total in target/layer-hem-acceptance-0389.log.
+  - [x] NO REGRESSION: book/publication79/159/1454/2410 rc=0; no Rust/manifest changes.
+  Promotion declined: existing component/current-source/scope rules. Full Design proof remains open.
 - ID: `G1-SLICE.6.4.5.capacity`
   Status: `pending`
   Goal: P1 retention decision before archive growth exceeds4000000 decodedB; current3997359 leaves2641.

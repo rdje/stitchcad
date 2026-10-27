@@ -3,6 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
+
+- Layer inventory4, Hem inventory5 and actual Hem/layer declaration8 checks pass0;17 total.
+- Book clarifies component scope; complete Design/global/physical/integration proof remains pending.
+- No Rust/backing changes. Archive headroom2641B: retention decision precedes further unsafe growth.
+
 ## STITCHCAD-G1-0388 — borrow actual layer offset-operation intent
 
 - Original typed layer/relationship/canonical owner; whole-root preflight includes empty scope.

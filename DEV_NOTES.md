@@ -11,7 +11,8 @@ Numeric input/parameter ids remain operation intent. Modelled Lining is inspecta
 check still refuses env_lining/G7. Current sources, assignments, operation execution and physical proof
 remain separate. Native4/lifetime1/strict affected lint/fmt/book/publication79/159 pass0; D250132 exact.
 Whole D262/0387 proof539 has5 exact Git spans0. Promotion declined: settled metadata/source/scope rules.
-Aggregate3997359/4000000B leaves2641; capacity decision owned. Component acceptance .e next.
+Aggregate3997359/4000000B leaves2641; capacity decision owned.0389 closes .e:17 focused checks pass0;
+full Design/global/physical/runtime/integration proof remains open. No new retention record needed.
 
 [Complete bounded append lesson](docs/history/stitchcad-devnotes-part539.md) retains
 its original source, transaction proof and retention limits.

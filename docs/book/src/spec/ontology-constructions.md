@@ -421,3 +421,5 @@ kind/domain/state/dependencies still belong to recipe/Design validation; opening
 profile resolution G4 and physical geometry G2. Existing Pocket deferral queries stay unchanged.
 Global identity joins with the rest of Design remain separate. See
 [the public source](../../../../crates/sc-core/src/ontology/pocket_inventory.rs).
+
+These layer/Hem APIs are component contracts; complete Design ownership and coupled acceptance remain pending.
