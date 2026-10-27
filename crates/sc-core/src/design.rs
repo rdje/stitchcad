@@ -38,6 +38,7 @@ mod closures;
 mod constructions;
 mod garment;
 mod garment_declarations;
+mod garment_scope;
 mod gathers;
 mod hems;
 mod host;
@@ -62,6 +63,7 @@ pub use garment::{
 pub use garment_declarations::{
     DesignGarmentDeclaration, DesignGarmentDeclarationError, DesignGarmentDeclarationSource,
 };
+pub use garment_scope::DesignGarmentEnvelopeError;
 pub use gathers::{DesignGatherDeclaration, DesignGatherDeclarationError};
 pub use hems::{
     DesignHemDeclaration, DesignHemDeclarationError, DesignHemDeclarationRole,

@@ -898,7 +898,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.5`
-  Status: `in_progress`
+  Status: `done`
   Goal: coupled garment ownership/current declarations over one canonical root.
   Children .a immutable admission/global owned ids; .b current sources; .c complete declarations;
   .d requested execution envelope; .cleanup1 daily cleanup. Final scoped acceptance .6/aggregate .6.4.6.
@@ -917,31 +917,31 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0410 original logical Pocket opening views; [whole proof](../history/stitchcad-devnotes-part560.md).
 - ID: `G1-SLICE.6.4.5.5.c.2`
   Status: `done`
-  Goal:0411 whole-current garment declarations; existing actual role adapters, no partial views.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_declarations:
-    3 passed rc=0; actual seven-component fixture needs one current-source/metadata query.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:standalone adapters preserve original distinct
-    semantics but do not jointly preflight actual garment sources or pair Material/offset per layer.
-  - [x] FIX: same native3 plus construction_and_garment_ownership_rechecks_whole_root_before_empty_scope:
-    1 passed rc=0; validate_current precedes existing adapters, exact family/authored role order.
-  - [x] ADDRESSED: native4 rc=0:all19 actual roles/objects/canonical pointers, assigned/unresolved
-    Material borrows, origin-only Debug, late missing/wrong-kind metadata, source priority/typed chains,
-    empty scope/host drift; definitions unchanged and no accepted prefix.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::garment_declarations:1 lifetime rc=0;
-    core --lib / measure --test design_inputs_contract strict Clippy and affected fmt rc=0.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part560.md:4 spans rc=0;
-    retention/book/publication/size rc=0. Existing book facts/examples retained; Design host decision
-    promotion. Requested envelope .d.2/scoped .6/aggregate .6.4.6/full integration remain owned.
+  Goal:0411 complete borrowed garment declarations; [whole proof](../history/stitchcad-devnotes-part561.md).
 - ID: `G1-SLICE.6.4.5.5.d`
-  Status: `in_progress`
+  Status: `done`
   Goal: original Lining execution envelope and pre-construction Fly refusal, independent of geometry.
   Children .1 D276 scope correction before .c; .2 requested envelope.
 - ID: `G1-SLICE.6.4.5.5.d.1`
   Status: `done`
   Goal:0409 D276 Fly birth/documentation boundary; [whole proof](../history/stitchcad-devnotes-part559.md).
 - ID: `G1-SLICE.6.4.5.5.d.2`
-  Status: `pending`
-  Goal: requested modelled Lining scope and original public Fly refusal diagnostics, no geometry proof.
+  Status: `done`
+  Goal:0412 original explicit requested garment envelope, independently of current sources/geometry.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_scope:
+    3 passed rc=0; real current garment supports inspection while modelled Lining refuses execution.
+  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:original ClosureDefinition guard is pre-birth;
+    LayerInventory scope is separate from structural/source validation. Delegate both without inference.
+  - [x] FIX: same native3 plus construction_and_garment_ownership_rechecks_whole_root_before_empty_scope:
+    1 passed rc=0; root require_in_scope checks authored Closure definitions then complete layer scope.
+  - [x] ADDRESSED: native4 rc=0:original Lining id/family/index/served Piece/env_lining/G7/concrete
+    chains, damaged sources cannot mask scope, supported/empty scope proves no currentness; host drift
+    stays separate. Actual Fly request refuses env_fly/G7/Closure/gap before birth, even invalid context.
+  - [x] NO REGRESSION: core --lib / measure --test design_inputs_contract strict Clippy and affected
+    cargo fmt rc=0; git diff --exit-code -- crates/sc-core/src/ontology/closure.rs rc=0; no constructor change.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part561.md:4 spans rc=0;
+    retention/book/publication/size rc=0. Original book facts/examples retained; Design host decision
+    promotion. Scoped component .6/aggregate .6.4.6/full runtime/physical/release proof remain owned.
 - ID: `G1-SLICE.6.4.5.5.cleanup1`
   Status: `done`
   Goal:0408 guarded daily cleanup/D276 capture; [whole proof](../history/stitchcad-devnotes-part558.md).

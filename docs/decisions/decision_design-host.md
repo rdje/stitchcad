@@ -23,6 +23,8 @@ answers: "can Pocket opening declarations become scalars when their ids match ca
 
 answers: "does the complete garment declaration query preserve original role adapters and late causes without partial views?"
 
+answers: "can damaged garment sources mask an original explicit execution-envelope refusal?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -158,3 +160,12 @@ Material/unresolved reason with offset intent; missing adapters refuse rather th
 metadata failures expose original concrete causes without partial views. Unknown/Derived/logical
 roles and G3/G4 deferrals remain unchanged; Debug is origin-only. Current sources precede metadata;
 domain/operation resolution, execution envelope, geometry/conservation and release remain separate.
+
+## Explicit requested garment envelope — G1-SLICE.6.4.5.5.d.2
+
+Root require_in_scope checks original authored Closure definitions then complete original layer scope
+before execution, without host/source/metadata/geometry validation. Lining retains env_lining/G7,
+actual layer/family/index/served Piece and original concrete causes even with damaged sources.
+Fly stays pre-birth env_fly/G7 at Closure::new; no immutable Fly is modelled. Scope success proves no
+currentness, logical domains/operations, physical support, completeness or release. Inspection and
+current declarations stay independently available; no supported replacement is supplied.

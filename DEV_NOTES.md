@@ -3,18 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — complete borrowed garment declaration views
+## _(2026-10-27 UTC)_ — original requested garment envelope
 
-0411 validates the actual whole garment before reusing existing sewing/Pocket/Closure/layer/Hem/
-construction/Gather adapters. Uniform outer views borrow the sole canonical owner; each layer pairs
-original Material/unresolved-reason and offset adapters by exact actual identity, never truncating.
-Native3 plus shared host-drift control1 pass0:19 original roles/pointers/order, assigned/unresolved
-Materials, missing/wrong-kind late metadata, current-source priority and concrete cause chains;
-objects unchanged, no partial views. Lifetime1/core+measure strict lint/fmt pass0. Origin-only Debug,
-Unknown/Derived and logical/G3/G4 roles stay intact; no domain/operation/execution/physical certificate.
-Whole0410 scopes560 preserve4 exact Git spans; retention/book/publication/size0. Book facts/examples
-retained through prose tightening. Promotion: Design host decision. Envelope .d.2/scoped .6/aggregate
-.6.4.6/full Design/runtime/physical/release remain owned; G1still6/18.
+0412 require_in_scope delegates authored actual Closure definitions then complete original layer
+scope, independently of host/current sources/metadata/geometry. Native3 plus shared host-drift1 pass0:
+modelled Lining remains inspectable but refuses original env_lining/G7 with layer/family/index/served
+Piece and concrete chain, even damaged geometry. Supported/empty scope proves no currentness. Actual
+Fly request retains pre-birth env_fly/G7/Closure/gap refusal even empty instances/invalid geometry;
+no immutable Fly is modelled, constructor unchanged. Strict core+measure lint/fmt0. No physical/
+execution completeness or release proof follows. Whole0411 scopes561 preserve4 exact Git spans;
+retention/book/publication/size0. Original book facts/examples retained through tighter prose.
+Promotion: Design host decision. Scoped .6/aggregate .6.4.6/full runtime/physical/release remain owned.
+
+[Whole0411 unified declarations lesson](docs/history/stitchcad-devnotes-part561.md) retains actual roles, pairs, borrows and late-cause proofs.
 
 [Whole0410 Pocket opening lesson](docs/history/stitchcad-devnotes-part560.md) retains logical-role, root-priority and borrowing proofs.
 

@@ -213,36 +213,30 @@ matches. Profile roles stay DeferredToG4. Axis/stripe/plaid/corner intent stays 
 resolved width-domain, alignment/offset, policy or release proof follows.
 
 **Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable types share
-`LayerDefinition`/structural rules: served Piece, `LayerOffsetRelationship`, material assignment.
-The relationship retains recipe offset-operation id/nonempty directed source ranges in that Piece.
-Recipe owns dimensions/input states; descriptors cache no contours/defaults/second output-Piece
-material state. Recipe/Design checks operation existence/kind/dependencies.
+`LayerDefinition`: served Piece, `LayerOffsetRelationship` (recipe offset-operation id/nonempty owned
+directed ranges), material assignment. Recipe owns dimensions/input states and checks operation
+existence/kind/dependencies with Design; descriptors cache no contours/defaults/output-Piece material.
 
-For example, an interfacing descriptor can serve the waistband and name an offset operation using
-owned construction ranges for its inner half. The fixture's recipe still supplies the 4.0 × 77.0 cm
-finished rectangle and non-sewn fused attachment; this descriptor does not generate or prove it.
-A facing similarly retains its served Piece and recipe relationship, rather than recovering a facing
-from line art. Assigned material holds an entity id whose registry remains a Design check; unresolved
-material carries a nonblank reason without a substitute assignment. The shared local reason check
-preserves the original Piece invariant too.
+For example, waistband interfacing names an offset operation over owned inner-half construction
+ranges; the recipe supplies the 4.0 × 77.0 cm finished rectangle/non-sewn fused attachment, without
+proof/generation by this descriptor. Facing likewise retains Piece/recipe relationship, never inferred
+line art. Assigned Material ids need Design registry checks; unresolved Material needs a nonblank
+reason, without substitution. The shared reason check preserves the original Piece invariant.
 
-Constructors require the held served Piece. Unknown/foreign portions, interval repairs, endpoint
-choices, empty sources and duplicate held intervals return `LayerError`. `source_resolutions()` keeps
-authored order and directed raw range/endpoint evidence. Merged owned ends cannot own a foreign middle,
-even reversed; interior deletions stay visible. Cloned material/offset edits cannot mutate a layer.
-Offset shape, bounded error and physical relationships remain G2 obligations.
+Constructors require the held Piece; unknown/foreign portions, interval repairs, endpoint choices,
+empty sources/duplicate intervals return `LayerError`. `source_resolutions()` preserves authored order/
+directed raw evidence: merged owned ends cannot own foreign middles, even reversed; deletions remain
+visible. Cloned material/offset edits cannot mutate layers. Shape/bounded-error/physical proof stays G2.
 
-Each layer's `validate_current(served, ledger)` rechecks its original served owner, material reason
-and every complete owned source through the same rules/order as construction. Historical ranges
-may resolve after edits; a same-id Piece replacement cannot retain ownership of removed content.
-Raw endpoint choices and interior repairs remain explicit. Current validity grants no execution scope.
+`validate_current(served, ledger)` repeats birth rules/order for original owner, material reason and
+all complete sources. Historical ranges may resolve after edits; same-id Piece replacements cannot
+own removed content. Raw choices/interior repairs stay explicit; current validity grants no scope.
 
-**Modelled content and execution scope are separate** (feature matrix rule 3). `Lining::new` checks
-structure; `require_in_scope()` refuses v1 execution with `LayerEnvelopeError::LiningDeferred`:
-`diagnostic()` env_lining, served-Piece payload, `proving_gate()` G7. G1-SLICE.6 must enforce this
-before execution while retaining inspection; Facing/Interfacing never substitute. They pass only the
-envelope check. Every layer retains `GeometricValidation::DeferredToG2`; structural birth and envelope
-checks prove no geometry or release approval.
+**Modelled content differs from execution scope** (feature matrix rule3). `Lining::new` checks
+structure; `require_in_scope()` refuses v1 with `LayerEnvelopeError::LiningDeferred`, `diagnostic()`
+env_lining, served-Piece payload and `proving_gate()` G7. G1-SLICE.6 enforces this before execution;
+inspection stays available. Facing/Interfacing pass scope without substituting. Every layer retains
+`GeometricValidation::DeferredToG2`; birth/scope prove no geometry/release approval.
 
 | API token | Meaning in the served-layer implementation |
 | --- | --- |
@@ -259,17 +253,14 @@ checks prove no geometry or release approval.
 The census visits Facing/Lining/Interfacing; duplicate ids within/across families retain both original
 kind/position pairs. Empty families are draft scope, without whole Design/assembly completeness.
 
-`facings()`, `linings()` and `interfacings()` borrow original typed slices; `entries()` retains
-family/order/positions with typed LayerRef borrows. `facing(id)` selects only Facing; same-id Lining/
-Interfacing cannot substitute. Inspection retains held damage without current certification.
-Debug shows counts/kind, excluding material reasons and customer sources.
+`facings()`/`linings()`/`interfacings()` lend original typed slices; `entries()` keeps family/order/
+positions through LayerRef. `facing(id)` cannot select same-id Lining/Interfacing. Damaged objects stay
+inspectable without current certification; Debug shows counts/kind, no material reasons/customer sources.
 
-`validate_current(pieces, ledger)` first rejects duplicate Piece identities, then checks every layer's
-original served Piece and complete source list through its existing current validator. Missing owners
-never retarget to another Piece. For example, an unused later Interfacing whose middle interval was
-deleted refuses even when its endpoints and an earlier Facing remain valid. The refusal retains
-that layer's identity, original family/position and concrete LayerError with raw evidence. Current
-contexts are borrowed, never cached, and source references are never rewritten or implicitly chosen.
+`validate_current(pieces, ledger)` rejects duplicate Piece ids, then checks each original served Piece/
+complete source list. Missing owners never retarget: unused later Interfacing with a deleted middle
+refuses despite live endpoints/earlier healthy Facing, retaining layer id/family/position and concrete
+LayerError/raw evidence. Contexts stay borrowed/uncached; refs are never rewritten or implicitly chosen.
 
 Modelled Lining can pass current source validation. Requested execution must check scope first:
 
@@ -291,12 +282,11 @@ global ids, recipe operations and physical proof remain separate.
 
 ### Borrowed offset intent
 
-`inputs.layer_offset_declarations(&layers)?` checks the whole current root, then borrows each
-original layer and offset relationship in Facing/Lining/Interfacing order. `canonical_inputs()`
-retains the actual root owner. Operation ids matching numeric inputs remain operation intent;
-source order/direction remain authored. Empty layers yield no views. Modelled Lining stays
-inspectable; apply `view.layer().require_in_scope()?` before execution. Recipe operation checks,
-current sources, assignments, global ids and physical proof remain separate.
+`inputs.layer_offset_declarations(&layers)?` checks the whole current root before borrowing original
+layer/offset in Facing/Lining/Interfacing order; `canonical_inputs()` retains that owner. Operation ids
+stay logical despite numeric matches; source order/direction stay authored. Empty layers yield no views.
+Lining stays inspectable: apply `view.layer().require_in_scope()?` before execution. Operations/current
+sources/assignments/global ids/physical proof remain separate.
 
 | API token | Meaning |
 | --- | --- |
@@ -304,12 +294,11 @@ current sources, assignments, global ids and physical proof remain separate.
 
 ## Hem: depth, fold binding and current Facing composition
 
-`Hem` retains a stable identity, whole owned finish edge, `HemDepth`, `HemFoldType` and `HemMethod`.
-Depth is an explicit parameter/value, formula declaration or logical target-profile declaration.
-Explicit values are nonnegative: a deliberately authored zero is retained, while negative depth is a
-`HemError::NegativeDepth`. Symbolic bindings supply no zero or other fallback. Fold type is required
-and names a recipe/Design declaration or target-profile declaration; that owner retains its domain,
-uncertainty and selected value. G1 invents no physical fold vocabulary from drawn lines.
+`Hem` retains stable id, whole owned finish edge, `HemDepth`/`HemFoldType`/`HemMethod`. Depth retains
+explicit parameter/value, formula or logical target-profile declaration. Authored zero stays explicit;
+negative values return `HemError::NegativeDepth`; symbolic bindings supply no fallback. Required fold
+type names a recipe/Design or target-profile declaration whose owner retains domain/uncertainty/value.
+G1 invents no physical fold vocabulary from line art.
 
 For example, the reference skirt's 3.0 cm hem intent can retain its authored depth parameter and fold
 binding on the finish edge. This descriptor performs no turning, truing or offset. The fixture's

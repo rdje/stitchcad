@@ -2234,6 +2234,7 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
     })
     .expect("whole immutable owner before controlled drift");
     assert!(garment.validate_current().is_ok());
+    assert_eq!(garment.require_in_scope(), Ok(()));
     assert!(garment
         .declarations()
         .expect("whole current empty garment declarations")
@@ -2296,6 +2297,8 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
             .expect_err("recheck whole current root"),
         admission
     );
+    // Explicit envelope scope is independent of host drift/current-source validation.
+    assert_eq!(garment.require_in_scope(), Ok(()));
     let declaration_error = garment
         .declarations()
         .expect_err("whole garment preflight before empty views");
@@ -2368,3 +2371,6 @@ mod pocket_opening_declarations;
 
 #[path = "support/garment_declarations.rs"]
 mod garment_declarations;
+
+#[path = "support/garment_scope.rs"]
+mod garment_scope;

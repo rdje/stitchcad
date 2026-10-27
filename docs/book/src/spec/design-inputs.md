@@ -508,3 +508,20 @@ Domain/operation resolution, execution scope, geometry/conservation/physical/rel
 | `DesignGarmentDeclaration` | Original role/canonical borrow |
 | `DesignGarmentDeclarationSource` | Typed family; paired layer views |
 | `DesignGarmentDeclarationError` | Current/metadata cause or missing layer pair |
+
+### Requested explicit execution scope
+
+```rust,ignore
+garment.require_in_scope()?; // original Closure guards, then distinct layer families
+garment.declarations()?;    // complete current sources/metadata; separate obligations
+```
+
+The first modelled Lining retains its actual id/family/index, served Piece, env_lining/G7 and original
+cause chain, even with damaged sources. Inspection stays available. Fly definitions retain env_fly/G7
+and Closure/trousers-gap ids; Closure::new refuses before birth, even with empty instances/invalid
+geometry. Scope success certifies no current inputs, logical domains, operations, geometry, physical
+support, completeness or release. Empty scope and host drift require their separate current checks.
+
+| API token | Meaning |
+| --- | --- |
+| `DesignGarmentEnvelopeError` | Original Closure/layer envelope cause and authored context |
