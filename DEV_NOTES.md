@@ -3,16 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — explicit admission units and progress-data contract
+## _(2026-10-27 UTC)_ — actual immutable admission and cooperative cancellation
 
-0438 .6.8.1.1 adds host-chosen positive member/metadata-target/proposed-reason-byte limits, counting
-original aliases and UTF-8 fields exactly. Remaining-room comparisons precede arithmetic and retain
-unmultiplied excess components. Typed phase fractions refuse completed>total; data-only observer
-returns Continue/Cancel, without model or authority handles. Native control4/privacy1/strict lint/fmt
-pass. Runtime bus unchanged; installation/emission/cancellation .1.2 next. Promotion: command-layer
-record. These units are neither CPU time nor total model memory/peak allocation bounds.
-
-[Whole0437 and0421–0422 completed proofs](docs/history/stitchcad-devnotes-part589.md) retain exact native spans; graph ids remain live.
+0439 .6.8.1.2 enforces one-time explicit metadata policy before private source/model work on all
+costly metadata entry paths. Real phase checkpoints cancel before effects; default methods use unit
+observer. Closed audit/result copies precede ReadyToPublish and final fresh authority; native observer
+revocation there refuses publication. Bus44/privacy8/strict selected lint/fmt pass. Named Stop fixture
+replaces initial complex tuple lint/constructor mismatch, without suppression. Cheap authorized reads
+need no policy; no hidden production default. Promotion: command-layer record. Total model/resource
+bounds .6.8.2 and deeper/full acceptance .6.5.5/.6.9 remain; whole0438 scope/lesson/ledger retained590.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

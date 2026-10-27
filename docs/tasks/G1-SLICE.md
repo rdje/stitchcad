@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0438
+## Current leaf acceptance —0439
 
-- [x] ROOT CAUSE: git show HEAD:crates/sc-core/src/command.rs | rg prints original context module
-  rc=0; operation policy/fraction data must be explicit and separate from authority/model capabilities.
-- [x] ADDRESSED: cargo test -p sc-core --test command_control_contract:4 passed rc=0; exact submitted
-  aliases/targets/UTF-8 demand, first original limit context and unmodified phase fractions verified.
-- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; cargo test -p sc-core --doc
-  command::control:1 passed rc=0; git diff --quiet HEAD -- crates/sc-core/src/command/bus* rc=0.
+- [x] ROOT CAUSE: python3 -I -B native HEAD bus assertions print no installed operation policy or
+  runtime observer entry rc=0; data declarations alone neither admit runtime work nor honor cancellation.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:44 passed rc=0;
+  seven runtime cases cover immutable limits, cancellation, actual final revocation and unconsumed keys/ids.
+- [x] NO REGRESSION: strict selected Clippy/fmt finished rc=0; cargo test -p sc-core --doc
+  command::bus:8 passed rc=0, including direct operation-policy reset rejection.
 
 ## Goal
 
@@ -777,36 +777,47 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `in_progress`
   Goal: typed progress/cancellation with no partial state/artifact; explicit resource bounds.
 - ID: `G1-SLICE.6.8.1`
-  Status: `in_progress`
-  Goal: recover concrete metadata preparation/publication work/progress/cancellation seams, then
-  implement explicit finite operation control preserving fresh authority, original causes and atomic
-  cancellation/refusal. Use actual bounded work units/current models; no fabricated wall-clock proof.
+  Status: `done`
+  Goal: explicit metadata input policy and actual pre-effect progress/cancellation; three declared
+  input units are bounded, not total model memory/CPU or future numeric/file/geometry/solver work.
 - ID: `G1-SLICE.6.8.1.1`
   Status: `done`
-  Goal:0438 explicit finite metadata input demand/policy and typed phase fractions/observer decisions;
-  data-only admission grants no authority/model/effect capability or wall-clock/total-memory bound.
-  - [x] REPRODUCE / ISSUE: git show HEAD:crates/sc-core/src/command.rs | rg -n prints original
-    context module rc=0; policy/count/phase declarations must be distinct from an execution result.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test command_control_contract:4 passed rc=0;
-    original aliases and UTF-8 field bytes are distinct from deduped effects, character counts or CPU work.
-  - [x] FIX: cargo clippy -p sc-core --test command_control_contract -- -D warnings:finished rc=0;
-    positive explicit limits, borrowed declared demand/refusals, guarded arithmetic and data-only observer.
-  - [x] ADDRESSED: cargo test -p sc-core --test command_control_contract:4 passed rc=0; exact3/5/8
-    member/target/UTF-8 units, member-first/per-member refusal fields, phase endpoints/overrun retained.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc command::control:1 passed rc=0; strict lint/fmt0;
-    git diff --quiet HEAD -- crates/sc-core/src/command/bus.rs crates/sc-core/src/command/bus rc=0.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part589.md:4 exact
-    Git spans rc=0; whole0437/0421–0422 proof retained without losing ids. New linked book guide,
-    pointer/frontier/lesson/decision aligned. Runtime installation/emission/cancellation .1.2 remains.
-  Native publication81 chapters/159 scoped API rows/1471 source links/2463 rendered links rc=0;
-  retention1043/global73 fits rc=0.
-  Cargo commands use scripts/local_environment.py. Promotion: indexed command-layer decision. Counts
-  are declared metadata input units; no total model memory/CPU/numeric/file/solver or runtime cancel proof.
+  Goal:0438 admission/progress data; [whole scope/proofs](../history/stitchcad-devnotes-part590.md).
 - ID: `G1-SLICE.6.8.1.2`
+  Status: `done`
+  Goal:0439 install immutable host limits once, admit costly metadata entry inputs before private work,
+  emit real phase-local progress and honor cooperative cancellation with no partial semantic effects.
+  Closed audit/result copies precede ReadyToPublish/final fresh authority; no observer or large payload
+  preparation follows that final check. Default methods use unit observer with identical installed policy.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native HEAD bus assertions print no installed operation
+    policy or runtime observer entry rc=0; prior data-only declarations do not control actual runtime.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part590.md:
+    3 exact Git spans rc=0; whole0438 scope/lesson/ledger preserves its explicit runtime-pending boundary.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
+    one-time private policy, original-input admission, real checkpoints and prepared closed final payloads.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:44 passed rc=0;
+    seven control cases cover setup/cheap read, target/byte bounds before source work, single/group
+    preview and commit cancellation after actual staging, alias fractions, Ready cancellation/revocation,
+    history cancellation/retry/replay, unchanged issuance/keys and original unauthorized/target causes.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc command::bus:8 passed rc=0; selected cargo fmt
+    --package sc-core --package sc-measure --check rc=0. Prior37 native bus cases retained explicitly
+    configured test-host policy; no hidden production default. Initial test tuple lint/constructor mismatch
+    corrected with named Stop fixture; no suppression or changed runtime acceptance.
+  - [x] LOCKSTEP: bash scripts/history_archive.sh verify-retention:1044 logical/74 aggregate working
+    Markdown rc=0; active generation remains within64/group, aggregate192. Pointer/frontier/book/README/
+    live status/lesson/indexed decision aligned. Full .6.9 and deeper .6.5.5 acceptance remain deferred.
+  Native book build/publication:81 chapters/159 scoped API rows/1472 source links/2466 rendered links
+  rc=0; maintained-reference candidate82 files/18015 lines/1256963 bytes owner .6.8.1.2 rc=0.
+  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Input admission does not prove total model/work/memory bounds; collection reserved capacity may grow
+  without changing published semantic state. Storage/reopen D285 issuance/audit proof remains .7.
+- ID: `G1-SLICE.6.8.2`
   Status: `pending`
-  Goal: install trusted immutable operation limits once; enforce every costly metadata entry path,
-  emit typed pre-effect progress and honor cancellation without partial model/reserve/audit/history.
-  Preserve original failures and fresh entry/effect authorization; exact retry and finite config remain.
+  Goal: derive additional actual model/numeric/resource work bounds from roadmap and public host
+  contracts before further exposure; three input counts do not bound whole-model validation/cloning,
+  retained journal/history bytes or numeric/file/geometry work. Implement safe explicit policy slices;
+  keep deeper/full verification in .6.5.5/.6.9 until the agreed feature set is complete.
+
 - ID: `G1-SLICE.6.9`
   Status: `pending`
   Goal: coupled actual bus acceptance/private-mutator compile failures; workflow registry feeds G1.9/G5 parity.

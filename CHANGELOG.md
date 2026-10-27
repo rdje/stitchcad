@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0438 — define explicit metadata admission and progress contracts
+## STITCHCAD-G1-0439 — enforce metadata admission and atomic cooperative cancellation
 
-- Positive host policy for submitted members, primary metadata targets and proposed UTF-8 assignment reasons.
-- Exact per-member refusals and guarded arithmetic; typed phase fractions and data-only continuation decisions.
-- Native control4/privacy1/strict selected lint/fmt pass; runtime installation/cancellation remains .6.8.1.2.
-- Dedicated book guide states data/runtime limits; whole0437/0421–0422 completed proofs retained589.
+- Immutable one-time host policy controls costly metadata preview/commit/history; authorized reads need none.
+- Actual data-only checkpoints preserve semantic state/keys/ids on Cancel; final authority follows Ready.
+- Prepare closed audit/result copies before final boundary; native bus44/privacy8/strict lint/fmt pass.
+- Book/setup/remaining resource scope aligned; whole0438 retained590 with3 exact Git source spans.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part590](docs/history/stitchcad-devnotes-part590.md) | whole0438 admission/progress scope/lesson/ledger | 39 lines, 3235 bytes, sha256:ffd7d9a3… |
 | [part589](docs/history/stitchcad-devnotes-part589.md) | whole0437 and0421–0422 completed proofs | 83 lines, 7538 bytes, sha256:8cb71844… |
 | [part588](docs/history/stitchcad-devnotes-part588.md) | whole0436 and D285 diagnosis ledger | 48 lines, 3999 bytes, sha256:2a0714f0… |
 | [part587](docs/history/stitchcad-devnotes-part587.md) | whole0435 D285 diagnosis scope/lesson/ledger | 36 lines, 2907 bytes, sha256:6efd580d… |

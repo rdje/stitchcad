@@ -55,10 +55,10 @@ fn inspect_only_measurement_preview_preserves_exact_source_unknown_derived_and_o
     let pieces = owner.inputs().structure().pieces().pieces().to_vec();
     let design = owner.inputs().id();
     let revision = owner.inputs().revision().clone();
-    let bus = CommandBus::new(
+    let bus = controlled(CommandBus::new(
         owner,
         Host::with_permissions(design, vec![Permission::Inspect]),
-    );
+    ));
     for state in [
         LengthState::Unknown {
             observation: id(740001),
@@ -116,7 +116,7 @@ fn measurement_preview_refuses_rebinding_a_different_canonical_declaration() {
     replacement.id = id(799998);
     let replacement =
         LengthDeclaration::new(replacement).expect("structurally valid wrong identity");
-    let bus = CommandBus::new(owner, Host::new(design));
+    let bus = controlled(CommandBus::new(owner, Host::new(design)));
     assert!(
         matches!(bus.preview(&request(design, revision.clone(), id(1), replacement)),
         Err(CommandPreviewError::MeasurementDeclarationMismatch { measurement, expected, requested })
@@ -133,7 +133,7 @@ fn missing_measurement_preserves_original_metadata_role_error_before_replacement
     let original = original(&owner);
     let design = owner.inputs().id();
     let revision = owner.inputs().revision().clone();
-    let bus = CommandBus::new(owner, Host::new(design));
+    let bus = controlled(CommandBus::new(owner, Host::new(design)));
     let error = bus
         .preview(&request(design, revision, id(799999), original))
         .expect_err("no invented metadata binding");
@@ -168,7 +168,7 @@ fn candidate_revalidates_actual_shared_material_width_and_preserves_failed_owner
         },
     })
     .expect("structural evidence inventory only");
-    let bus = CommandBus::new(owner, Host::new(design));
+    let bus = controlled(CommandBus::new(owner, Host::new(design)));
     let error = bus
         .preview(&request(design, revision.clone(), id(1), replacement))
         .expect_err("actual Material width must remain positive");

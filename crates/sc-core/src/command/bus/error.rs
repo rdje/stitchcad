@@ -13,6 +13,8 @@ use core::fmt;
 /// Original preparation failures, without partial publication or a substitute model.
 #[derive(Debug)]
 pub enum CommandPreviewError<E> {
+    /// Original trusted operation-policy/admission/cancellation refusal.
+    Control(Box<super::CommandControlError>),
     /// Authentication, request binding or unavailable-handler cause.
     Command(Box<CommandBusError>),
     /// Original explicit execution-envelope cause before source/operation work.
@@ -66,6 +68,7 @@ pub enum CommandPreviewError<E> {
 impl<E: fmt::Display> fmt::Display for CommandPreviewError<E> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::Control(e) => write!(f,"preview control: {e}"),
             Self::Command(e) => write!(f, "preview request: {e}"),
             Self::Envelope(e) => write!(f, "preview envelope: {e}"),
             Self::Current(e) => write!(f, "preview current sources: {e}"),
@@ -91,6 +94,7 @@ impl<E: fmt::Display> fmt::Display for CommandPreviewError<E> {
 impl<E: std::error::Error + 'static> std::error::Error for CommandPreviewError<E> {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
+            Self::Control(e) => Some(e.as_ref()),
             Self::Command(e) => Some(e.as_ref()),
             Self::Envelope(e) => Some(e.as_ref()),
             Self::Current(e) | Self::Candidate(e) => Some(e.as_ref()),
@@ -107,5 +111,10 @@ impl<E: std::error::Error + 'static> std::error::Error for CommandPreviewError<E
             Self::Inputs(e) => Some(e.as_ref()),
             Self::Sewing(e) => Some(e.as_ref()),
         }
+    }
+}
+impl<E> From<super::CommandControlError> for CommandPreviewError<E> {
+    fn from(issue: super::CommandControlError) -> Self {
+        Self::Control(Box::new(issue))
     }
 }

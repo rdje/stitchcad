@@ -100,13 +100,15 @@ fn commit_publishes_actual_metadata_once_with_successor_revision_original_actor_
     );
     let host = Host::new(design);
     let reads = Rc::clone(&host.reads);
-    let mut bus = CommandBus::with_edit_capacity(
-        owner,
-        host,
-        vec![id(720000), id(720001), id(720002)],
-        capacity(3),
-    )
-    .expect("explicit configured owner");
+    let mut bus = controlled(
+        CommandBus::with_edit_capacity(
+            owner,
+            host,
+            vec![id(720000), id(720001), id(720002)],
+            capacity(3),
+        )
+        .expect("explicit configured owner"),
+    );
     assert!(bus.is_commit_available(CommandId::AddNotch));
     assert!(!bus.is_commit_available(CommandId::CloseDart));
     let committed = bus
@@ -257,13 +259,15 @@ fn later_candidate_failure_leaves_model_reserve_and_audit_capacity_unchanged() {
             ),
         ],
     );
-    let mut bus = CommandBus::with_edit_capacity(
-        owner,
-        Host::new(design),
-        notch_preview::reserve(),
-        capacity(1),
-    )
-    .expect("one accepted group fits");
+    let mut bus = controlled(
+        CommandBus::with_edit_capacity(
+            owner,
+            Host::new(design),
+            notch_preview::reserve(),
+            capacity(1),
+        )
+        .expect("one accepted group fits"),
+    );
     let error = bus
         .commit_group(&bad)
         .expect_err("later failure refuses whole group");
@@ -346,8 +350,10 @@ fn exact_replay_after_later_commits_returns_first_result_without_rewinding_or_co
     );
     let host = Host::new(design);
     let revoked = Rc::clone(&host.revoked);
-    let mut bus = CommandBus::with_edit_capacity(owner, host, vec![], capacity(2))
-        .expect("two immutable authoring records");
+    let mut bus = controlled(
+        CommandBus::with_edit_capacity(owner, host, vec![], capacity(2))
+            .expect("two immutable authoring records"),
+    );
     let original = bus.commit_group(&first).expect("first edit");
     for _ in 0..3 {
         let replay = bus.commit_group(&first).expect("repeat uses no capacity");
@@ -442,8 +448,10 @@ fn group_and_actor_key_conflicts_never_reapply_or_accept_part_of_another_group()
             material(addition.piece(), "stale"),
         )],
     );
-    let mut bus = CommandBus::with_edit_capacity(owner, Host::new(design), vec![], capacity(3))
-        .expect("actual owner");
+    let mut bus = controlled(
+        CommandBus::with_edit_capacity(owner, Host::new(design), vec![], capacity(3))
+            .expect("actual owner"),
+    );
     bus.commit_group(&first).expect("accepted original");
     assert!(
         matches!(bus.commit_group(&changed),Err(CommitError::GroupConflict {group}) if group==group_id(760040))
@@ -504,30 +512,34 @@ fn commit_requires_explicit_capacity_and_commit_permission_independent_of_inspec
             material(addition.piece(), "actual intent"),
         )],
     );
-    let mut unconfigured = CommandBus::new(owner.clone(), Host::new(design));
+    let mut unconfigured = controlled(CommandBus::new(owner.clone(), Host::new(design)));
     assert!(!unconfigured.is_commit_available(CommandId::AssignMaterial));
     assert!(matches!(
         unconfigured.commit_group(&request),
         Err(CommitError::EditsNotConfigured { .. })
     ));
-    let mut inspect = CommandBus::with_edit_capacity(
-        owner.clone(),
-        Host::with_permissions(design, vec![Permission::Inspect]),
-        vec![],
-        capacity(1),
-    )
-    .expect("configured");
+    let mut inspect = controlled(
+        CommandBus::with_edit_capacity(
+            owner.clone(),
+            Host::with_permissions(design, vec![Permission::Inspect]),
+            vec![],
+            capacity(1),
+        )
+        .expect("configured"),
+    );
     inspect.preview_group(&request).expect("inspect preview");
     assert!(
         matches!(inspect.commit_group(&request),Err(CommitError::Preparation(issue)) if matches!(*issue,GroupError::Authorization(_)))
     );
-    let mut commit = CommandBus::with_edit_capacity(
-        owner,
-        Host::with_permissions(design, vec![Permission::Commit]),
-        vec![],
-        capacity(1),
-    )
-    .expect("configured");
+    let mut commit = controlled(
+        CommandBus::with_edit_capacity(
+            owner,
+            Host::with_permissions(design, vec![Permission::Commit]),
+            vec![],
+            capacity(1),
+        )
+        .expect("configured"),
+    );
     assert!(matches!(
         commit.preview_group(&request),
         Err(GroupError::Authorization(_))
@@ -575,16 +587,18 @@ fn effect_boundary_revocation_refuses_after_preparation_without_any_publication_
     let revoked = Rc::clone(&host.revoked);
     let reads = Rc::clone(&host.reads);
     let revoke_at = Rc::new(Cell::new(Some(2)));
-    let mut bus = CommandBus::with_edit_capacity(
-        owner,
-        BoundaryHost {
-            host,
-            revoke_at: Rc::clone(&revoke_at),
-        },
-        notch_preview::reserve(),
-        capacity(1),
-    )
-    .expect("explicit capacity");
+    let mut bus = controlled(
+        CommandBus::with_edit_capacity(
+            owner,
+            BoundaryHost {
+                host,
+                revoke_at: Rc::clone(&revoke_at),
+            },
+            notch_preview::reserve(),
+            capacity(1),
+        )
+        .expect("explicit capacity"),
+    );
     assert!(
         matches!(bus.commit_group(&request),Err(CommitError::Preparation(issue)) if matches!(*issue,GroupError::Authorization(_)))
     );

@@ -104,6 +104,13 @@ impl CommandGroupPreview {
 /// Original group refusal; no partial accepted report or private candidate escapes.
 #[derive(Debug)]
 pub enum CommandGroupPreviewError<E> {
+    /// Original host policy/admission/cancellation refusal for this complete group.
+    Control {
+        /// Original explicit group identity.
+        group: CommandGroupId,
+        /// Original typed control cause and exact checkpoint when cancelled.
+        issue: Box<super::CommandControlError>,
+    },
     /// Original whole-group authority cause, checked before model inspection.
     Authorization(CommandGroupAuthorizationError),
     /// Common Design claim differs from the actual private owner.
@@ -161,9 +168,18 @@ impl<E: fmt::Debug> fmt::Display for CommandGroupPreviewError<E> {
         write!(f, "metadata group preparation refused: {self:?}")
     }
 }
+impl<E> CommandGroupPreviewError<E> {
+    pub(super) fn control(group: CommandGroupId, issue: super::CommandControlError) -> Self {
+        Self::Control {
+            group,
+            issue: Box::new(issue),
+        }
+    }
+}
 impl<E: std::error::Error + 'static> std::error::Error for CommandGroupPreviewError<E> {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
+            Self::Control { issue, .. } => Some(issue.as_ref()),
             Self::Authorization(issue) => Some(issue),
             Self::Mutation { issue, .. } => Some(issue.as_ref()),
             Self::Difference { issue, .. } => Some(issue),
@@ -179,7 +195,8 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
     /// within this group return the first report explicitly; conflicting reuse refuses. This ephemeral
     /// alias table is discarded with the preview, and supplies no persisted replay or commit approval.
     /// # Errors
-    /// Authority precedes actual Design/revision binding. Then the first member retry/preparation
+    /// Installed policy and pure input admission precede authority and actual Design/revision binding.
+    /// Then the first member retry/preparation
     /// failure retains its original index/command/cause; final semantic comparison may also refuse.
     pub fn preview_group(
         &self,
@@ -194,9 +211,35 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         group: &CommandMutationGroup,
         mode: CommandAuthorizationMode,
     ) -> Result<PreparedGroup<H>, CommandGroupPreviewError<H::Error>> {
+        self.prepare_group_with_progress(group, mode, &())
+    }
+
+    /// Preview actual ordered members with data-only pre-effect progress and cancellation.
+    /// # Errors
+    /// Preserves original preparation causes and trusted policy/admission/cancellation refusals.
+    pub fn preview_group_with_progress(
+        &self,
+        group: &CommandMutationGroup,
+        observer: &dyn crate::command::CommandProgressObserver,
+    ) -> Result<CommandGroupPreview, CommandGroupPreviewError<H::Error>> {
+        self.prepare_group_with_progress(group, CommandAuthorizationMode::Preview, observer)
+            .map(PreparedGroup::into_report)
+    }
+
+    fn prepare_group_with_progress(
+        &self,
+        group: &CommandMutationGroup,
+        mode: CommandAuthorizationMode,
+        observer: &dyn crate::command::CommandProgressObserver,
+    ) -> Result<PreparedGroup<H>, CommandGroupPreviewError<H::Error>> {
+        self.admit_group(group)
+            .map_err(|issue| CommandGroupPreviewError::control(group.id(), issue))?;
         self.authorize_group(group, mode)?;
+        use crate::command::CommandProgressPhase as Phase;
+        super::operation::group_checkpoint(group, observer, Phase::Authorized, 1, 1, None)?;
         self.require_group_revision(group)?;
-        self.stage_group(group)
+        super::operation::group_checkpoint(group, observer, Phase::SnapshotBound, 1, 1, None)?;
+        self.stage_group_with_progress(group, observer)
     }
 
     pub(super) fn authorize_group<'a>(
@@ -234,16 +277,27 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         Ok(())
     }
 
-    pub(super) fn stage_group(
+    pub(super) fn stage_group_with_progress(
         &self,
         group: &CommandMutationGroup,
+        observer: &dyn crate::command::CommandProgressObserver,
     ) -> Result<PreparedGroup<H>, CommandGroupPreviewError<H::Error>> {
         let inputs = self.state.inputs();
         let mut staged = None;
         let mut identities = self.identities.stage();
         let mut firsts = BTreeMap::new();
         let mut steps = Vec::new();
+        use crate::command::CommandProgressPhase as Phase;
         for (index, mutation) in group.mutations().iter().enumerate() {
+            let member = Some((index, mutation.command_id()));
+            super::operation::group_checkpoint(
+                group,
+                observer,
+                Phase::Preparing,
+                index,
+                group.mutations().len(),
+                member,
+            )?;
             let key = mutation.context().idempotency_key();
             if let Some((first, original, report)) = firsts.get(&key) {
                 if mutation != *original {
@@ -261,18 +315,32 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                     replay_of: Some(*first),
                     report: CommandPreview::clone(report),
                 });
+                super::operation::group_checkpoint(
+                    group,
+                    observer,
+                    Phase::Preparing,
+                    index + 1,
+                    group.mutations().len(),
+                    member,
+                )?;
                 continue;
             }
             let base = PreparationBase {
                 state: staged.as_ref().unwrap_or(&self.state),
             };
             let prepared = base
-                .prepare_payload(mutation.payload(), &mut identities)
-                .map_err(|issue| CommandGroupPreviewError::Mutation {
-                    group: group.id(),
-                    index,
-                    command: mutation.command_id(),
-                    issue: Box::new(issue),
+                .prepare_payload(mutation.payload(), &mut identities, observer, member)
+                .map_err(|issue| match issue {
+                    CommandPreviewError::Control(issue) => CommandGroupPreviewError::Control {
+                        group: group.id(),
+                        issue,
+                    },
+                    issue => CommandGroupPreviewError::Mutation {
+                        group: group.id(),
+                        index,
+                        command: mutation.command_id(),
+                        issue: Box::new(issue),
+                    },
                 })?;
             let (state, report) = prepared.into_parts();
             staged = Some(state);
@@ -283,6 +351,14 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 replay_of: None,
                 report,
             });
+            super::operation::group_checkpoint(
+                group,
+                observer,
+                Phase::Preparing,
+                index + 1,
+                group.mutations().len(),
+                member,
+            )?;
         }
         let final_state = staged.as_ref().unwrap_or(&self.state);
         let difference =

@@ -160,3 +160,17 @@ Typed phase-local fractions require positive total/completed<=total. Data-only o
 Cancel and carries no model/authority capability. Native control4/privacy1/lint/fmt pass; runtime bus is
 unchanged. Immutable installation/actual emission/atomic cancellation follow .6.8.1.2. These inputs do
 not prove CPU time, total model memory, allocation peaks, numeric/file/decompression or solver bounds.
+
+## Actual immutable operation control0439
+
+answers: "where does metadata cancellation become effective?" · "may a request widen installed limits?"
+
+G1-SLICE.6.8.1.2 installs policy exactly once with no default or request override. Admit original typed
+metadata input before private source/model work, then emit actual phase-local data-only checkpoints.
+Cancel discards private work without changing semantic model/reserve/audit/history/issuance/keys;
+internal reserved capacity may grow. Prepare closed audit/result copies before ReadyToPublish and
+fresh final complete effect authority. No observer/large preparation follows that authority check.
+Exact replay refreshes entry authority and emits Replaying without new effects. Cheap authorized Piece
+reads require no policy. Native bus44/privacy8/lint/fmt pass, including observer revocation at Ready.
+Input counts and cooperative checkpoints do not prove total model/work/memory or wall-clock bounds;
+.6.8.2 owns the remaining resource implementation, .6.5.5/.6.9 deeper/full acceptance.

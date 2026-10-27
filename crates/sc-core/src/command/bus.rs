@@ -23,6 +23,8 @@ mod measurement;
 pub use measurement::{CommandLengthChange, CommandMeasurementPreview};
 mod preparation;
 use preparation::PreparationBase;
+mod operation;
+pub use operation::CommandControlError;
 mod group;
 pub use group::{CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep};
 mod group_difference;
@@ -207,27 +209,35 @@ impl std::error::Error for CommandBusError {
 ///     bus.history = None;
 /// }
 /// ```
+/// ```compile_fail
+/// use sc_core::command::CommandBus;
+/// fn reset_operation_policy<H, A>(bus: &mut CommandBus<H, A>) {
+///     bus.operation_limits = None;
+/// }
+/// ```
 pub struct CommandBus<H, A> {
     state: DesignGarment<H>,
     authority: A,
     identities: identity::IdentityReserve,
     journal: Option<execution::CommandJournal>,
     history: Option<history::History<H>>,
+    operation_limits: Option<crate::command::CommandOperationLimits>,
 }
 
 impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
-    /// Actual inspect-preview subset, independent of committable/executable handlers.
+    /// Implemented inspect-preview subset with installed operation policy; supplies no authority.
     #[must_use]
     pub const fn is_preview_available(&self, command: CommandId) -> bool {
-        preparation::handler_available(command)
+        self.operation_limits.is_some() && preparation::handler_available(command)
     }
 
     /// Freshly authorize inspect, bind the actual Design/revision and prepare a private candidate.
     /// The original model, revision and reserved identities remain unchanged on success or refusal.
     /// Candidates are discarded; reports are no geometry, physical-property or release certificate.
     /// # Errors
-    /// Refuses authority/binding, unsupported handler, then the original explicit envelope/current
-    /// source cause before target lookup, staged allocation and actual candidate construction.
+    /// Supported metadata first requires installed policy and pure submitted-input admission. Then
+    /// authority/binding, handler and original envelope/current source checks precede target lookup
+    /// and actual candidate construction. No progress or private source access precedes admission.
     pub fn preview(
         &self,
         request: &CommandRequest,
@@ -239,6 +249,32 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         &self,
         request: &CommandRequest,
     ) -> Result<PreparedCommand<H>, CommandPreviewError<H::Error>> {
+        self.prepare_with_progress(request, &())
+    }
+
+    /// Preview with actual phase-local progress and cooperative pre-effect cancellation.
+    /// Explicit installed operation limits still apply; the observer receives no model or authority.
+    /// # Errors
+    /// Preserves original preparation causes and typed setup/input/cancellation refusals.
+    pub fn preview_with_progress(
+        &self,
+        request: &CommandRequest,
+        observer: &dyn crate::command::CommandProgressObserver,
+    ) -> Result<CommandPreview, CommandPreviewError<H::Error>> {
+        self.prepare_with_progress(request, observer)
+            .map(PreparedCommand::into_report)
+    }
+
+    fn prepare_with_progress(
+        &self,
+        request: &CommandRequest,
+        observer: &dyn crate::command::CommandProgressObserver,
+    ) -> Result<PreparedCommand<H>, CommandPreviewError<H::Error>> {
+        if let CommandRequest::Mutation(mutation) = request {
+            if preparation::handler_available(mutation.command_id()) {
+                self.admit_mutation(mutation)?;
+            }
+        }
         self.authorize_bound(request, CommandAuthorizationMode::Preview)
             .map_err(|e| CommandPreviewError::Command(Box::new(e)))?;
         let CommandRequest::Mutation(mutation) = request else {
@@ -248,9 +284,24 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 },
             )));
         };
+        if !preparation::handler_available(mutation.command_id()) {
+            return Err(CommandPreviewError::Command(Box::new(
+                CommandBusError::HandlerUnavailable {
+                    command: mutation.command_id(),
+                },
+            )));
+        }
+        use crate::command::CommandProgressPhase as Phase;
+        operation::checkpoint(observer, Phase::Authorized, 1, 1, None)?;
+        operation::checkpoint(observer, Phase::SnapshotBound, 1, 1, None)?;
+        let member = Some((0, mutation.command_id()));
+        operation::checkpoint(observer, Phase::Preparing, 0, 1, member)?;
         let base = PreparationBase { state: &self.state };
         let mut identities = self.identities.stage();
-        base.prepare_payload(mutation.payload(), &mut identities)
+        let prepared =
+            base.prepare_payload(mutation.payload(), &mut identities, observer, member)?;
+        operation::checkpoint(observer, Phase::Preparing, 1, 1, member)?;
+        Ok(prepared)
     }
 }
 impl<H, A> fmt::Debug for CommandBus<H, A> {
@@ -263,7 +314,8 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// Install the original immutable model and trusted application authority dependency.
     /// This moves the sole owner without reconstructing held references or certifying execution.
     /// The identity reserve is empty; creation previews refuse exhaustion until configured through
-    /// `with_identities` at construction. Material previews and metadata reads allocate no identities.
+    /// `with_identities` at construction. Costly metadata paths also require install_operation_limits;
+    /// authorized Piece inspection needs no policy. Material previews allocate no identities.
     #[must_use]
     pub fn new(state: DesignGarment<H>, authority: A) -> Self {
         Self {
@@ -272,6 +324,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             identities: identity::IdentityReserve::default(),
             journal: None,
             history: None,
+            operation_limits: None,
         }
     }
 
@@ -280,6 +333,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// is private; previews borrow a separate cursor and cannot call or advance an external source.
     /// The application must ensure global nonreuse across buses/restarts; this local check covers
     /// the actual garment and reserve. An empty reserve is valid but creation reports exhaustion.
+    /// Install operation limits separately before costly metadata previews/effects.
     /// # Errors
     /// Refuses non-increasing supplied order, then the first identity already owned by this garment.
     pub fn with_identities(
@@ -294,6 +348,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             identities,
             journal: None,
             history: None,
+            operation_limits: None,
         })
     }
 

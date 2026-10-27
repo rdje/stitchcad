@@ -22,6 +22,8 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
         &self,
         payload: &MutationPayload,
         identities: &mut IdentityStage<'_>,
+        observer: &dyn crate::command::CommandProgressObserver,
+        member: Option<(usize, CommandId)>,
     ) -> Result<PreparedCommand<H>, CommandPreviewError<H::Error>> {
         let command = payload.command_id();
         if !handler_available(command) {
@@ -29,13 +31,17 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
                 CommandBusError::HandlerUnavailable { command },
             )));
         }
+        use crate::command::CommandProgressPhase as Phase;
+        super::operation::checkpoint(observer, Phase::CurrentValidation, 0, 1, member)?;
         self.state
             .require_in_scope()
             .map_err(|e| CommandPreviewError::Envelope(Box::new(e)))?;
         self.state
             .validate_current()
             .map_err(|e| CommandPreviewError::Current(Box::new(e)))?;
-        match payload {
+        super::operation::checkpoint(observer, Phase::CurrentValidation, 1, 1, member)?;
+        super::operation::checkpoint(observer, Phase::CandidateValidation, 0, 1, member)?;
+        let prepared = match payload {
             MutationPayload::ChangeMeasurement(replacement) => {
                 self.prepare_measurement(replacement)
             }
@@ -44,6 +50,8 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
             _ => Err(CommandPreviewError::Command(Box::new(
                 CommandBusError::HandlerUnavailable { command },
             ))),
-        }
+        }?;
+        super::operation::checkpoint(observer, Phase::CandidateValidation, 1, 1, member)?;
+        Ok(prepared)
     }
 }

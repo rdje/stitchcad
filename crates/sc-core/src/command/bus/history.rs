@@ -2,6 +2,7 @@
 use super::{CommandAuditSequence, CommandRevisionChange};
 use super::{CommandBus, CommandGroupPreviewError, CommandPreviewError};
 use crate::command::CommandId;
+use crate::command::{CommandProgressObserver, CommandProgressPhase as Phase};
 use crate::{
     command::{
         CommandActorClaim, CommandAuthoritySource, CommandAuthorizationMode, CommandGroupId,
@@ -114,6 +115,28 @@ impl CommandHistoryResult {
     }
 }
 
+#[derive(Clone)]
+struct PendingHistoryEntry {
+    sequence: CommandAuditSequence,
+    commands: Vec<CommandId>,
+    request: CommandHistoryRequest,
+    before: DesignRevision,
+    revision: DesignRevision,
+}
+impl PendingHistoryEntry {
+    fn finish(self, grant: EntityId, checked_at: SystemTime) -> CommandHistoryAuditEntry {
+        CommandHistoryAuditEntry {
+            sequence: self.sequence,
+            commands: self.commands,
+            request: self.request,
+            before: self.before,
+            revision: self.revision,
+            grant,
+            checked_at,
+        }
+    }
+}
+
 struct HistoryStep<H> {
     group: CommandGroupId,
     alternative: DesignGarment<H>,
@@ -187,6 +210,8 @@ impl<H> History<H> {
 /// Original atomic history refusal; no model/stack/action record is partially published.
 #[derive(Debug)]
 pub enum CommandHistoryError<E> {
+    /// Original trusted operation-policy/admission/cancellation refusal.
+    Control(Box<super::CommandControlError>),
     /// Internal authorization-only group could not preserve the validated submitted metadata.
     RequestInvariant(CommandMutationGroupError),
     /// Original fresh current-operator authority, Design or exact revision refusal.
@@ -249,6 +274,7 @@ impl<E: fmt::Debug> fmt::Display for CommandHistoryError<E> {
 impl<E: std::error::Error + 'static> std::error::Error for CommandHistoryError<E> {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
+            Self::Control(issue) => Some(issue.as_ref()),
             Self::RequestInvariant(issue) => Some(issue),
             Self::Preparation(issue) => Some(issue.as_ref()),
             Self::Precondition { issue, .. } => Some(issue.as_ref()),
@@ -263,12 +289,17 @@ impl<E> From<CommandGroupPreviewError<E>> for CommandHistoryError<E> {
         Self::Preparation(Box::new(issue))
     }
 }
+impl<E> From<super::CommandControlError> for CommandHistoryError<E> {
+    fn from(issue: super::CommandControlError) -> Self {
+        Self::Control(Box::new(issue))
+    }
+}
 
 impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// Install explicit finite authoring count, reversible depth and immutable action count bounds.
     /// Undo history starts empty and is noncanonical; original authoring/action audit entries are
     /// never dropped to make room. New authoring reports oldest undo/redo-branch losses separately.
-    /// This constructor supplies no authority or persistence/reopen guarantee.
+    /// Install operation limits separately before use. This supplies no authority or persistence guarantee.
     /// # Errors
     /// Returns the original identity-reserve configuration cause.
     pub fn with_edit_history(
@@ -298,15 +329,30 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
     /// complete Commit authority immediately before exclusive model/stack/action moves. Original
     /// authoring audit, issued identities and maximum-issued authoring revision never rewind.
     /// # Errors
-    /// Returns original authority/Design, missing configuration, key/original-group conflict, current
+    /// Pure original-group admission precedes authority. Returns policy/admission, original authority/Design,
+    /// missing configuration, key/original-group conflict, current
     /// revision, selected stack/bound, current/alternative validation, allocation or final authority cause.
     pub fn apply_history(
         &mut self,
         request: &CommandHistoryRequest,
     ) -> Result<CommandHistoryResult, CommandHistoryError<H::Error>> {
+        self.apply_history_with_progress(request, &())
+    }
+
+    /// Traverse actual snapshots with typed pre-effect progress and cooperative atomic cancellation.
+    /// Installed immutable operation policy applies to the complete original submitted group.
+    /// # Errors
+    /// Preserves original history causes and typed policy/admission/cancellation refusals.
+    pub fn apply_history_with_progress(
+        &mut self,
+        request: &CommandHistoryRequest,
+        observer: &dyn CommandProgressObserver,
+    ) -> Result<CommandHistoryResult, CommandHistoryError<H::Error>> {
+        self.admit_group(request.original())?;
         let authority_group =
             history_authority_group(request).map_err(CommandHistoryError::RequestInvariant)?;
         self.authorize_group(&authority_group, CommandAuthorizationMode::Execute)?;
+        super::operation::checkpoint(observer, Phase::Authorized, 1, 1, None)?;
         let history = self
             .history
             .as_ref()
@@ -317,6 +363,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             if first.request != *request {
                 return Err(CommandHistoryError::KeyConflict { key });
             }
+            super::operation::checkpoint(observer, Phase::Replaying, 1, 1, None)?;
             return Ok(CommandHistoryResult {
                 entry: first.clone(),
                 replayed: true,
@@ -359,6 +406,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                     changes,
                 }
             })?;
+        super::operation::checkpoint(observer, Phase::SnapshotBound, 1, 1, None)?;
         let direction = request.direction();
         let target = history
             .top(direction)
@@ -374,10 +422,14 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 limit: history.action_limit.get(),
             });
         }
+        super::operation::checkpoint(observer, Phase::CurrentValidation, 0, 1, None)?;
         validate_snapshot(&self.state)
             .map_err(|issue| CommandHistoryError::Current(Box::new(issue)))?;
+        super::operation::checkpoint(observer, Phase::CurrentValidation, 1, 1, None)?;
+        super::operation::checkpoint(observer, Phase::CandidateValidation, 0, 1, None)?;
         validate_snapshot(&target.alternative)
             .map_err(|issue| CommandHistoryError::Alternative(Box::new(issue)))?;
+        super::operation::checkpoint(observer, Phase::CandidateValidation, 1, 1, None)?;
         let before = self.state.inputs().revision().clone();
         let revision = target.alternative.inputs().revision().clone();
         let sequence = journal.sequence.successor();
@@ -389,6 +441,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             .filter(|step| step.replay_of().is_none())
             .map(|step| step.command())
             .collect();
+        super::operation::checkpoint(observer, Phase::AllocationPreflight, 0, 1, None)?;
         let history = self
             .history
             .as_mut()
@@ -407,18 +460,20 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 .try_reserve(1)
                 .map_err(CommandHistoryError::Allocation)?,
         }
-        let checked = self.authorize_group(&authority_group, CommandAuthorizationMode::Execute)?;
-        let entry = CommandHistoryAuditEntry {
+        let pending = PendingHistoryEntry {
             sequence: sequence.clone(),
             commands,
             request: request.clone(),
             before,
             revision,
-            grant: checked.grant(),
-            checked_at: checked.checked_at(),
         };
+        let returned = pending.clone();
+        super::operation::checkpoint(observer, Phase::AllocationPreflight, 1, 1, None)?;
+        super::operation::checkpoint(observer, Phase::ReadyToPublish, 1, 1, None)?;
+        let checked = self.authorize_group(&authority_group, CommandAuthorizationMode::Execute)?;
+        let entry = pending.finish(checked.grant(), checked.checked_at());
         let result = CommandHistoryResult {
-            entry: entry.clone(),
+            entry: returned.finish(checked.grant(), checked.checked_at()),
             replayed: false,
         };
         let history = self

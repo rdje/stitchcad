@@ -112,15 +112,17 @@ fn undo_redo_moves_complete_actual_snapshots_and_preserves_agent_author_under_hu
     );
     let host = operator_host(design, CommandId::ALL.to_vec());
     let session = Rc::clone(&host.actor);
-    let mut bus = CommandBus::with_edit_history(
-        owner,
-        host,
-        notch_preview::reserve(),
-        capacity(4),
-        capacity(2),
-        capacity(6),
-    )
-    .expect("explicit finite author/history/action bounds");
+    let mut bus = controlled(
+        CommandBus::with_edit_history(
+            owner,
+            host,
+            notch_preview::reserve(),
+            capacity(4),
+            capacity(2),
+            capacity(6),
+        )
+        .expect("explicit finite author/history/action bounds"),
+    );
     let accepted = bus
         .commit_group(&original)
         .expect("actual metadata publication");
@@ -286,15 +288,17 @@ fn d285_new_branch_never_reuses_old_snapshot_revision_or_issued_identity_and_old
             MutationPayload::AddNotch(addition),
         )],
     );
-    let mut bus = CommandBus::with_edit_history(
-        owner,
-        Host::new(design),
-        vec![id(720000), id(720001), id(720002)],
-        capacity(4),
-        capacity(3),
-        capacity(6),
-    )
-    .expect("explicit bounds");
+    let mut bus = controlled(
+        CommandBus::with_edit_history(
+            owner,
+            Host::new(design),
+            vec![id(720000), id(720001), id(720002)],
+            capacity(4),
+            capacity(3),
+            capacity(6),
+        )
+        .expect("explicit bounds"),
+    );
     let original = bus
         .commit_group(&first)
         .expect("first distinct snapshot revision1");
@@ -423,15 +427,17 @@ fn bounded_depth_reports_oldest_drop_without_erasing_authoring_audit_or_partial_
             material(addition.piece(), "second"),
         )],
     );
-    let mut bus = CommandBus::with_edit_history(
-        owner,
-        Host::new(design),
-        vec![],
-        capacity(4),
-        capacity(1),
-        capacity(4),
-    )
-    .expect("one reversible group");
+    let mut bus = controlled(
+        CommandBus::with_edit_history(
+            owner,
+            Host::new(design),
+            vec![],
+            capacity(4),
+            capacity(1),
+            capacity(4),
+        )
+        .expect("one reversible group"),
+    );
     let accepted = bus.commit_group(&first).expect("first");
     assert_eq!(accepted.entry().commit().history().dropped_undo(), None);
     let latest = bus.commit_group(&second).expect("second");
@@ -500,9 +506,10 @@ fn history_operation_retry_and_shared_actor_key_namespace_preserve_first_result_
     );
     let host = Host::new(design);
     let revoked = Rc::clone(&host.revoked);
-    let mut bus =
+    let mut bus = controlled(
         CommandBus::with_edit_history(owner, host, vec![], capacity(4), capacity(2), capacity(1))
-            .expect("one immutable history action");
+            .expect("one immutable history action"),
+    );
     bus.commit_group(&original).expect("original accepted");
     let undo = operation(
         &original,
@@ -621,15 +628,17 @@ fn history_binds_complete_original_record_and_current_revision_before_any_stack_
             material(addition.piece(), "not accepted"),
         )],
     );
-    let mut bus = CommandBus::with_edit_history(
-        owner,
-        Host::new(design),
-        vec![],
-        capacity(2),
-        capacity(1),
-        capacity(1),
-    )
-    .expect("one actual reversible group/action");
+    let mut bus = controlled(
+        CommandBus::with_edit_history(
+            owner,
+            Host::new(design),
+            vec![],
+            capacity(2),
+            capacity(1),
+            capacity(1),
+        )
+        .expect("one actual reversible group/action"),
+    );
     bus.commit_group(&original).expect("accepted");
     assert!(
         matches!(bus.apply_history(&operation(&forged,actor(),revision.successor(),790054,Direction::Undo)),Err(HistoryError::GroupConflict {group}) if group==group_id(790050))
@@ -690,18 +699,20 @@ fn history_effect_boundary_revocation_preserves_actual_model_stacks_action_capac
     let reads = Rc::clone(&host.reads);
     let revoked = Rc::clone(&host.revoked);
     let revoke_at = Rc::new(Cell::new(None));
-    let mut bus = CommandBus::with_edit_history(
-        owner,
-        BoundaryHost {
-            host,
-            revoke_at: Rc::clone(&revoke_at),
-        },
-        vec![],
-        capacity(2),
-        capacity(1),
-        capacity(1),
-    )
-    .expect("finite history/action capacity");
+    let mut bus = controlled(
+        CommandBus::with_edit_history(
+            owner,
+            BoundaryHost {
+                host,
+                revoke_at: Rc::clone(&revoke_at),
+            },
+            vec![],
+            capacity(2),
+            capacity(1),
+            capacity(1),
+        )
+        .expect("finite history/action capacity"),
+    );
     bus.commit_group(&original).expect("accepted");
     let CommandResult::PieceList(actual) = bus
         .execute(&inspection(design, actor(), revision.successor()))
@@ -767,15 +778,17 @@ fn current_operator_needs_one_complete_grant_over_every_original_command_scope()
     );
     let host = operator_host(design, vec![CommandId::AssignMaterial]);
     let session = Rc::clone(&host.actor);
-    let mut bus = CommandBus::with_edit_history(
-        owner,
-        host,
-        notch_preview::reserve(),
-        capacity(2),
-        capacity(1),
-        capacity(2),
-    )
-    .expect("finite actual history");
+    let mut bus = controlled(
+        CommandBus::with_edit_history(
+            owner,
+            host,
+            notch_preview::reserve(),
+            capacity(2),
+            capacity(1),
+            capacity(2),
+        )
+        .expect("finite actual history"),
+    );
     bus.commit_group(&original)
         .expect("original agent covers both commands");
     session.set(Some(human()));

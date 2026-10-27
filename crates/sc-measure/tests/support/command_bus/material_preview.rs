@@ -65,7 +65,7 @@ fn inspect_only_preview_reports_actual_changes_in_selection_order_without_public
     let revision = owner.inputs().revision().clone();
     let selected: Vec<_> = pieces.iter().rev().map(Piece::id).collect();
     let host = Host::with_permissions(design, vec![Permission::Inspect]);
-    let bus = CommandBus::new(owner, host);
+    let bus = controlled(CommandBus::new(owner, host));
     let request = assignment(
         design,
         revision.clone(),
@@ -114,7 +114,7 @@ fn exact_noop_is_omitted_and_unresolved_reason_text_is_preserved() {
     let first = pieces.first().expect("target");
     let design = owner.inputs().id();
     let revision = owner.inputs().revision().clone();
-    let bus = CommandBus::new(owner, Host::new(design));
+    let bus = controlled(CommandBus::new(owner, Host::new(design)));
     let noop = assignment(
         design,
         revision.clone(),
@@ -169,7 +169,7 @@ fn missing_later_piece_and_missing_material_keep_original_causes_and_owner() {
     let first = pieces.first().expect("target").id();
     let design = owner.inputs().id();
     let revision = owner.inputs().revision().clone();
-    let bus = CommandBus::new(owner, Host::new(design));
+    let bus = controlled(CommandBus::new(owner, Host::new(design)));
     let absent = assignment(
         design,
         revision.clone(),
@@ -222,7 +222,7 @@ fn preview_reauthorizes_before_binding_or_envelope_and_reports_unsupported_handl
     let host = Host::with_permissions(design, vec![Permission::Inspect]);
     let authenticated = Rc::clone(&host.actor);
     let revoked = Rc::clone(&host.revoked);
-    let bus = CommandBus::new(owner, host);
+    let bus = controlled(CommandBus::new(owner, host));
     let request = assignment(
         design,
         revision.clone(),
@@ -289,7 +289,7 @@ fn envelope_and_current_source_failures_preserve_actual_standard_error_chains() 
             .id()],
         MaterialAssignment::Assigned(id(799998)),
     );
-    let bus = CommandBus::new(owner, Host::new(request.design()));
+    let bus = controlled(CommandBus::new(owner, Host::new(request.design())));
     let issue = bus
         .preview(&request)
         .expect_err("envelope precedes missing Material");
@@ -306,7 +306,7 @@ fn envelope_and_current_source_failures_preserve_actual_standard_error_chains() 
     let pieces = owner.inputs().structure().pieces().pieces().to_vec();
     let design = owner.inputs().id();
     let revision = owner.inputs().revision().clone();
-    let bus = CommandBus::new(owner, Host::new(design));
+    let bus = controlled(CommandBus::new(owner, Host::new(design)));
     let request = assignment(
         design,
         revision.clone(),

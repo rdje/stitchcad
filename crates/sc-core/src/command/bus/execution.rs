@@ -4,6 +4,7 @@ use super::{
     CommandPreviewError,
 };
 use crate::command::CommandHistoryDirection;
+use crate::command::{CommandProgressObserver, CommandProgressPhase as Phase};
 use crate::{
     command::{
         CommandActorClaim, CommandAuthoritySource, CommandAuthorizationMode, CommandGroupId,
@@ -112,6 +113,24 @@ impl CommandGroupCommitResult {
     #[must_use]
     pub const fn is_replay(&self) -> bool {
         self.replayed
+    }
+}
+
+#[derive(Clone)]
+struct PendingAuditEntry {
+    sequence: CommandAuditSequence,
+    request: CommandMutationGroup,
+    commit: CommandGroupCommit,
+}
+impl PendingAuditEntry {
+    fn finish(self, grant: EntityId, checked_at: SystemTime) -> CommandAuditEntry {
+        CommandAuditEntry {
+            sequence: self.sequence,
+            request: self.request,
+            commit: self.commit,
+            grant,
+            checked_at,
+        }
     }
 }
 
@@ -228,7 +247,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// Install an edit-capable in-memory owner with an explicit finite accepted-group count bound.
     /// The journal starts empty and never discards accepted audit/replay entries. A full journal
     /// refuses new groups. with_edit_history adds bounded traversal; persistence and byte/work
-    /// limits remain separate owners.
+    /// limits beyond submitted metadata remain separate owners. Install operation limits before use.
     /// Construction confers no authority; each effect requires fresh complete Commit permission.
     /// # Errors
     /// Returns the original identity-reserve configuration cause before installing the owner.
@@ -250,11 +269,13 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     }
 }
 impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
-    /// Whether this owner has the implemented metadata commit handler and finite edit capacity.
+    /// Whether installed operation policy, implemented handler and finite edit capacity are present.
     /// This does not certify current authority, revision, journal room or candidate validity.
     #[must_use]
     pub fn is_commit_available(&self, command: crate::command::CommandId) -> bool {
-        self.journal.is_some() && super::preparation::handler_available(command)
+        self.operation_limits.is_some()
+            && self.journal.is_some()
+            && super::preparation::handler_available(command)
     }
 
     pub(super) fn revision_witness(
@@ -305,7 +326,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
     }
 
     /// Commit the complete supported metadata group atomically at a freshly issued revision.
-    /// Fresh whole-group authority precedes Design binding and replay lookup. Exact original replay
+    /// Pure input policy admission precedes fresh whole-group authority, Design binding and replay lookup. Exact original replay
     /// returns the first result even after the current revision advances; another request under the
     /// same group id or overlapping actor/key refuses. No partial-group replay or edit is accepted.
     /// New authoring advances the maximum-issued revision, independently of undo-restored counters.
@@ -314,13 +335,35 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
     /// No fallible operation or host callback lies between model/reserve/journal publication steps.
     /// This in-memory lifetime supplies no storage, physical/geometry or transport certificate.
     /// # Errors
-    /// Returns original authority/Design, missing edit configuration, replay conflict, exact revision,
+    /// Returns policy/admission, original authority/Design, missing edit configuration, replay conflict, exact revision,
     /// capacity, candidate/revision/allocation or final fresh authority refusal before publication.
     pub fn commit_group(
         &mut self,
         group: &CommandMutationGroup,
     ) -> Result<CommandGroupCommitResult, CommandGroupCommitError<H::Error>> {
+        self.commit_group_with_progress(group, &())
+    }
+
+    /// Commit with actual pre-effect progress and cooperative atomic cancellation.
+    /// The host installs immutable operation policy once; the observer cannot widen it or return a model.
+    /// # Errors
+    /// Preserves original commit causes and typed policy/admission/cancellation refusals before publication.
+    pub fn commit_group_with_progress(
+        &mut self,
+        group: &CommandMutationGroup,
+        observer: &dyn CommandProgressObserver,
+    ) -> Result<CommandGroupCommitResult, CommandGroupCommitError<H::Error>> {
+        self.admit_group(group)
+            .map_err(|issue| CommandGroupPreviewError::<H::Error>::control(group.id(), issue))?;
         self.authorize_group(group, CommandAuthorizationMode::Execute)?;
+        super::operation::group_checkpoint::<H::Error>(
+            group,
+            observer,
+            Phase::Authorized,
+            1,
+            1,
+            None,
+        )?;
         let journal = self
             .journal
             .as_ref()
@@ -333,6 +376,14 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             if first.request != *group {
                 return Err(CommandGroupCommitError::GroupConflict { group: group.id() });
             }
+            super::operation::group_checkpoint::<H::Error>(
+                group,
+                observer,
+                Phase::Replaying,
+                1,
+                1,
+                None,
+            )?;
             return Ok(CommandGroupCommitResult {
                 entry: first.clone(),
                 replayed: true,
@@ -377,22 +428,54 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 changes,
             }
         })?;
+        super::operation::group_checkpoint::<H::Error>(
+            group,
+            observer,
+            Phase::SnapshotBound,
+            1,
+            1,
+            None,
+        )?;
         if journal.entries.len() >= journal.limit.get() {
             return Err(CommandGroupCommitError::JournalFull {
                 group: group.id(),
                 limit: journal.limit.get(),
             });
         }
-        let prepared = self.stage_group(group)?;
+        let prepared = self.stage_group_with_progress(group, observer)?;
         let (candidate, changes, consumed) = prepared.into_parts();
         let revision = journal.maximum_revision.successor();
         let sequence = journal.sequence.successor();
+        super::operation::group_checkpoint::<H::Error>(
+            group,
+            observer,
+            Phase::CandidateValidation,
+            0,
+            1,
+            None,
+        )?;
         let state = at_revision(&candidate, revision.clone()).map_err(|issue| {
             CommandGroupCommitError::Revision {
                 group: group.id(),
                 issue: Box::new(issue),
             }
         })?;
+        super::operation::group_checkpoint::<H::Error>(
+            group,
+            observer,
+            Phase::CandidateValidation,
+            1,
+            1,
+            None,
+        )?;
+        super::operation::group_checkpoint::<H::Error>(
+            group,
+            observer,
+            Phase::AllocationPreflight,
+            0,
+            1,
+            None,
+        )?;
         let identities = self.identities.after_consuming(consumed).ok_or(
             CommandGroupCommitError::ReserveInvariant {
                 group: group.id(),
@@ -418,8 +501,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 issue,
             })?
             .unwrap_or_default();
-        let checked = self.authorize_group(group, CommandAuthorizationMode::Execute)?;
-        let entry = CommandAuditEntry {
+        let pending = PendingAuditEntry {
             sequence: sequence.clone(),
             request: group.clone(),
             commit: CommandGroupCommit {
@@ -427,11 +509,28 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 revision: revision.clone(),
                 history,
             },
-            grant: checked.grant(),
-            checked_at: checked.checked_at(),
         };
+        let returned = pending.clone();
+        super::operation::group_checkpoint::<H::Error>(
+            group,
+            observer,
+            Phase::AllocationPreflight,
+            1,
+            1,
+            None,
+        )?;
+        super::operation::group_checkpoint::<H::Error>(
+            group,
+            observer,
+            Phase::ReadyToPublish,
+            1,
+            1,
+            None,
+        )?;
+        let checked = self.authorize_group(group, CommandAuthorizationMode::Execute)?;
+        let entry = pending.finish(checked.grant(), checked.checked_at());
         let result = CommandGroupCommitResult {
-            entry: entry.clone(),
+            entry: returned.finish(checked.grant(), checked.checked_at()),
             replayed: false,
         };
         let journal = self

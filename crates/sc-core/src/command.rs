@@ -35,9 +35,9 @@ pub use authorization::{
     CommandGrantRejection,
 };
 pub use bus::{
-    CommandAuditEntry, CommandAuditSequence, CommandBus, CommandBusError, CommandDifferenceError,
-    CommandGroupCommit, CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference,
-    CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep,
+    CommandAuditEntry, CommandAuditSequence, CommandBus, CommandBusError, CommandControlError,
+    CommandDifferenceError, CommandGroupCommit, CommandGroupCommitError, CommandGroupCommitResult,
+    CommandGroupDifference, CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep,
     CommandHistoryAuditEntry, CommandHistoryChange, CommandHistoryError, CommandHistoryResult,
     CommandIdentityError, CommandLengthChange, CommandMaterialChange, CommandMaterialPreview,
     CommandMeasurementPreview, CommandNotchPreview, CommandPieceList, CommandPreview,

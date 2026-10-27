@@ -2,8 +2,8 @@
 
 The [command-layer contract](command-layer.md#6-structured-errors-and-progress) requires bounded
 inputs, declared progress and atomic cancellation. The [execution guide](command-execution.md)
-describes implemented metadata operations. This page currently covers input admission and progress
-data/observer contracts. Runtime installation, emission and cancellation wiring remain pending.
+describes implemented metadata operations. Installed input policy, real pre-effect progress and
+cooperative atomic cancellation cover individual/group metadata previews, commits and history traversal.
 
 ## Explicit finite metadata admission
 
@@ -50,6 +50,39 @@ clips input nor silently deduplicates members. Original contexts, payloads, iden
 unchanged. Private limit fields expose immutable getters; compiler privacy rejects direct widening.
 An admitted demand is data, not authority or a commit capability.
 
+## Install trusted policy once
+
+Every bus starts without operation policy. The trusted composition root must install explicit limits
+before costly metadata operations; no request, observer or constructor supplies a hidden default.
+
+```rust
+let mut bus = CommandBus::with_edit_capacity(
+    garment, trusted_authority, reserved_identities, maximum_committed_groups,
+)?;
+bus.install_operation_limits(CommandOperationLimits::new(
+    maximum_members, maximum_metadata_targets, maximum_assignment_reason_bytes,
+))?;
+let result = bus.commit_group_with_progress(&group, &observer)?;
+```
+
+All four maxima in this example are host-chosen positive NonZeroUsize values. Installation changes
+no model, grant, revision, reserve, audit or history. A second installation returns
+CommandControlError::LimitsAlreadyInstalled and retains the original policy. Compiler privacy also
+rejects direct policy reset. Missing policy returns LimitsNotInstalled on costly metadata paths.
+Authorized GetPieceList inspection remains available without operation policy.
+
+Pure submitted-input admission runs before authority lookup and private model work. It therefore
+can refuse oversized input without consulting the installed source or emitting progress. Within
+policy, original authority, binding, envelope, registry and target failures retain their typed causes.
+An unauthorized request emits no progress. History admission covers the complete submitted original
+group before constructing its current-operator authorization context. Exact aliases count in admission.
+
+The existing preview, preview_group, commit_group and apply_history methods use the unit observer;
+they enforce the same installed policy. Their explicit observer counterparts are preview_with_progress,
+preview_group_with_progress, commit_group_with_progress and apply_history_with_progress. Availability
+queries for preview/commit handlers require installed policy; availability supplies no permission,
+remaining quota or candidate validity.
+
 ## Declared progress fractions
 
 CommandProgress::new takes a CommandProgressPhase, completed count, positive total and optional
@@ -75,9 +108,30 @@ response acknowledges completion. Constructing phase data proves no actual sourc
 CommandProgressObserver receives readonly CommandProgress and returns CommandProgressDecision::Continue
 or Cancel. It cannot return a candidate model, replace an authority provider or mint a publication token.
 The unit observer ignores progress and continues. No measurement values, labels or model handles are
-present in progress data. Runtime must emit actual phases before effects and honor cancellation atomically.
+present in progress data. Actual validation phases surround actual current/candidate validators;
+Preparing counts original submitted members, including exact aliases. Fractions are phase-local,
+not an overall time estimate. Observers must return promptly: checkpoints are cooperative, not
+preemption of a running validator or a wall-clock watchdog.
 
-The four native admission/fraction cases and compiler privacy check pass focused validation, with
-strict selected lint/format checks. Existing bus source is unchanged by this leaf. Installation of
-immutable trusted limits, real progress checkpoints, atomic cancellation/refusal and coupled runtime
-acceptance remain G1-SLICE.6.8.1.2 work. These contracts do not claim that runtime cancellation is wired.
+Returning Cancel produces CommandControlError::Cancelled with the exact observed progress. Private
+staged candidates are discarded. The original model/revision, reserved identities, audit records,
+history stacks, issued counters and accepted keys remain unchanged. Retrying the same refused keys
+can succeed. A cancellation after real candidate validation or after the first staged Notch therefore
+consumes no original identity. Internal reserved collection capacity may grow during allocation preflight;
+it is not published semantic state.
+
+Closed audit records and return payload copies are prepared before the last ReadyToPublish checkpoint.
+Fresh complete effect authorization follows that checkpoint, so observer-triggered revocation refuses
+publication. No observer or large payload preparation runs after that final authorization. Publication
+uses exclusive infallible state moves; cancellation cannot roll back an already published operation.
+ReadyToPublish is preparation progress, not completion; only the successful response confirms effects.
+
+Exact replay refreshes authority and emits Replaying before returning the original record. Cancelling
+that retrieval changes no state and does not undo its previously accepted effect. Replay neither
+advances audit sequence nor traverses history again.
+
+Seven native runtime-control cases plus the previous37 command-bus cases pass focused checks, with
+eight compiler privacy cases, strict selected lint and formatting. The four pure admission/fraction
+cases remain separately established. Full command integration and deeper source/allocation acceptance
+remain separately owned. These input units do not establish total model/work/memory or future
+numeric/file/decompression/geometry/solver bounds; that remaining resource scope is G1-SLICE.6.8.2.

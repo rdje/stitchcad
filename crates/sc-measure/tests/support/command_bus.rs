@@ -54,6 +54,8 @@ impl Host {
     }
 }
 
+#[path = "command_bus/control.rs"]
+mod control;
 #[path = "command_bus/group_commit.rs"]
 mod group_commit;
 #[path = "command_bus/group_preview.rs"]
@@ -88,6 +90,17 @@ fn actor() -> Actor {
 }
 fn garment() -> DesignGarment<DesignSources> {
     DesignGarment::new(garment_ownership::definition()).expect("actual canonical aggregate")
+}
+// Explicit permissive test-host policy preserves the prior semantic cases. Runtime control tests
+// install their own small boundaries; production code has no default operation policy.
+fn controlled<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
+    bus.install_operation_limits(sc_core::command::CommandOperationLimits::new(
+        std::num::NonZeroUsize::MAX,
+        std::num::NonZeroUsize::MAX,
+        std::num::NonZeroUsize::MAX,
+    ))
+    .expect("one explicit test-host policy installation");
+    bus
 }
 fn query(design: EntityId, revision: DesignRevision, payload: QueryPayload) -> CommandRequest {
     CommandRequest::Query(CommandQuery::new(

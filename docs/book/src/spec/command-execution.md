@@ -12,7 +12,7 @@ borrow, replacement method or commit token. Construction moves the original aggr
 reconstructing held references. This is an in-process owner; it does not authenticate a transport.
 
 execute currently implements GetPieceList; is_available describes that entry point. commit_group
-implements the three metadata mutations when finite edit capacity is configured. Handler availability
+implements the three metadata mutations with finite edit capacity and installed operation policy. Handler availability
 is independent of the17-command typed catalog. Each execute call freshly authorizes, then checks
 the requested Design and exact revision against the private owner. Authorization failures preserve
 their original typed cause. DesignMismatch and RevisionMismatch retain the command and both actual
@@ -43,10 +43,27 @@ authored inventory does not validate those sources or certify geometry, envelope
 readiness. Individual/group metadata previews and commits are described below. Other handlers,
 persistence and runtime/adapter parity remain separately owned implementation work.
 
+## Trusted metadata operation policy
+
+Before costly metadata previews, commits or history traversal, the host installs explicit positive
+CommandOperationLimits exactly once. Authorized GetPieceList reads need no policy. For example,
+with host-chosen NonZeroUsize maxima:
+
+```rust
+bus.install_operation_limits(CommandOperationLimits::new(
+    maximum_members, maximum_metadata_targets, maximum_assignment_reason_bytes,
+))?;
+```
+
+Missing policy refuses with CommandControlError::LimitsNotInstalled; attempted replacement returns
+LimitsAlreadyInstalled and retains the original policy. Pure submitted-input admission precedes
+private authority/model work. Actual progress, observer methods, cancellation/retry semantics and
+the precise limits of these metadata bounds are documented in [Operation limits and progress](command-operation-control.md).
+
 ## Actual Material assignment preview
 
 CommandBus::preview now accepts AssignMaterial under fresh inspect authority; commit permission is
-unnecessary. is_preview_available reports ChangeMeasurement, AssignMaterial and AddNotch,
+unnecessary. With installed operation policy, is_preview_available reports the three metadata handlers,
 separately from is_available. All three prepare metadata; recipe/geometry execution remains separate.
 The request carries the actual Design, actor, exact revision, retry key and explicit Piece selection.
 Constructing it grants no authority. With a supported actual garment and trusted provider:
@@ -72,7 +89,8 @@ for change in report.changes() {
 }
 ```
 
-Authorization and exact Design/revision binding run first. Unsupported preview handlers refuse.
+After pure input admission, authorization and exact Design/revision binding precede private work.
+Unsupported preview handlers refuse.
 The explicit garment execution envelope then runs before complete current-source validation and
 target lookup: modelled Lining retains its original env_lining/G7 refusal. Every selected Piece must
 exist; MissingPiece retains its identity and zero-based selection index, including later targets.
@@ -87,7 +105,7 @@ changes. Exact no-ops are omitted; changed targets retain request-selection orde
 from inventory order. The private candidate is discarded. The original Piece inventory and revision
 remain unchanged on success and refusal; no identity, cache, history or publication is created.
 The report contains no candidate model or commit capability. execute still refuses AssignMaterial;
-a future commit must recompute and reauthorize at its own effect boundary.
+commit_group recomputes and reauthorizes at its own effect boundary.
 
 This is current metadata/source validation. It does not evaluate geometry, certify complete unused
 Piece topology, resolve physical properties or approve a release. Focused native tests cover the real
@@ -335,7 +353,8 @@ revision advance, audit/undo history, recipe evaluation, geometry or physical-pr
 
 CommandBus::with_edit_capacity installs the actual owner, trusted authority source, unused identity
 reserve and an explicit NonZeroUsize maximum accepted-group count. new and with_identities retain
-read/preview behavior and refuse commit_group with EditsNotConfigured. is_commit_available reports
+read behavior; previews require installed operation policy. With that policy, owners without edit
+capacity refuse commit_group with EditsNotConfigured. is_commit_available requires both policy and
 configured metadata handlers; it supplies no authority, current revision, journal room or valid candidate.
 The host chooses the finite capacity. Construction mints no grant or implicit commit permission.
 
@@ -344,6 +363,7 @@ let mut bus = CommandBus::with_edit_capacity(
     garment, trusted_authority, reserved_identities,
     NonZeroUsize::new(config.maximum_committed_groups).ok_or(configuration_error)?,
 )?;
+bus.install_operation_limits(limits)?;
 let result = bus.commit_group(&group)?;
 let accepted = result.entry();
 assert_eq!(accepted.actor(), group.context().actor());
@@ -398,8 +418,9 @@ history. A new accepted group, including a net no-op, advances exactly once and 
 
 At the configured count bound, JournalFull refuses a new group before staging and drops no old
 audit or replay data. Exact replay remains available after fresh authorization. Capacity bounds
-accepted-group count; payload bytes, work/cancellation limits and allocation fault injection remain
-their later resource/acceptance owners. JournalAllocation retains an actual preflight allocation error.
+accepted-group count; installed operation policy separately bounds declared metadata input units
+and supports cancellation. Total model/work/memory and allocation fault injection remain their
+resource/acceptance owners. JournalAllocation retains an actual preflight allocation error.
 The six native commit cases cover actual metadata/revision/reserve publication, original actor/result,
 later failure, retry/capacity/conflicts, permission separation and revocation at the second check.
 Full command integration, persistence/reopen, other mutation handlers, adapters and actual
@@ -441,13 +462,15 @@ native D285 branch checks are described below; storage/reopen proof remains pend
 
 with_edit_history installs explicit NonZeroUsize bounds for accepted authoring groups, reversible
 history depth and accepted history actions. History starts empty. with_edit_capacity supports authoring
-without traversal; apply_history then returns NotConfigured. The host chooses each finite bound.
+without traversal; with installed operation policy, apply_history then returns NotConfigured.
+The host chooses each finite bound and installs metadata operation policy separately.
 
 ```rust
 let mut bus = CommandBus::with_edit_history(
     garment, trusted_authority, reserved_identities,
     maximum_authoring_groups, undo_depth, maximum_history_actions,
 )?;
+bus.install_operation_limits(limits)?;
 // Commit returned the exact original group and its accepted revision.
 let undo = CommandHistoryRequest::new(
     current_operator_context, original_group.clone(), CommandHistoryDirection::Undo,
@@ -503,10 +526,11 @@ include Undo and the new branch in exact audit order. Storage must persist/resto
 ordering independently of noncanonical undo history; actual reopen proof remains G1-SLICE.7 work.
 
 Seven native history cases plus the prior30 bus cases pass focused checks. Compiler privacy rejects
-direct stack/action-journal erasure. Persistence/reopen, payload/work/cancellation bounds, deeper
+direct stack/action-journal erasure. Persistence/reopen, complete model/work/memory bounds, deeper
 source/allocation fault acceptance, full command integration and recipe/geometry/physical proof remain
 separately owned; metadata history supplies no broader certificate.
 
-[Operation limits and progress](command-operation-control.md) defines implemented admission/data
-contracts. Installing those limits and wiring runtime progress/cancellation remain the next slice.
+[Operation limits and progress](command-operation-control.md) describes installed immutable metadata
+input policy, actual pre-effect progress and atomic cooperative cancellation. The coupled bus now has
+44 focused native cases; eight compiler privacy checks also pass. Full integration remains deferred.
 

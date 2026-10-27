@@ -74,8 +74,10 @@ fn repeated_inspect_only_notch_preview_keeps_actual_identity_reserve_and_garment
     let pieces = owner.inputs().structure().pieces().pieces().to_vec();
     let address = owner.inputs().structure().pieces().pieces().as_ptr();
     let host = Host::with_permissions(design, vec![Permission::Inspect]);
-    let bus = CommandBus::with_identities(owner, host, reserve())
-        .expect("trusted actual generator reserve");
+    let bus = controlled(
+        CommandBus::with_identities(owner, host, reserve())
+            .expect("trusted actual generator reserve"),
+    );
     let request = request(design, revision.clone(), intent);
     let mut previous = None;
     for _ in 0..3 {
@@ -164,7 +166,7 @@ fn exhausted_reserve_preserves_original_id_error_after_actual_target_lookup() {
     let intent = addition(&owner);
     let design = owner.inputs().id();
     let revision = owner.inputs().revision().clone();
-    let bus = CommandBus::new(owner, Host::new(design));
+    let bus = controlled(CommandBus::new(owner, Host::new(design)));
     let error = bus
         .preview(&request(design, revision.clone(), intent))
         .expect_err("no hidden fallback source");
@@ -205,8 +207,9 @@ fn refused_anchor_does_not_consume_an_identity_before_a_later_valid_preview() {
     .expect_err("actual anchor ownership refusal");
     let design = owner.inputs().id();
     let revision = owner.inputs().revision().clone();
-    let bus =
-        CommandBus::with_identities(owner, Host::new(design), reserve()).expect("actual reserve");
+    let bus = controlled(
+        CommandBus::with_identities(owner, Host::new(design), reserve()).expect("actual reserve"),
+    );
     let error = bus
         .preview(&request(design, revision.clone(), invalid))
         .expect_err("bad candidate anchor");

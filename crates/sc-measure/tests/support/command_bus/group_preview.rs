@@ -93,8 +93,9 @@ fn mixed_group_uses_actual_preceding_models_net_delta_and_one_cursor_with_explic
     let revision = owner.inputs().revision().clone();
     let host = Host::with_permissions(design, vec![Permission::Inspect]);
     let reads = Rc::clone(&host.reads);
-    let bus =
-        CommandBus::with_identities(owner, host, notch_preview::reserve()).expect("actual reserve");
+    let bus = controlled(
+        CommandBus::with_identities(owner, host, notch_preview::reserve()).expect("actual reserve"),
+    );
     let report = bus
         .preview_group(&request)
         .expect("actual sequential candidates");
@@ -199,8 +200,10 @@ fn later_failure_retains_exact_command_and_original_cause_and_discards_all_stage
     ]);
     let valid = group(vec![first]);
     let design = owner.inputs().id();
-    let bus = CommandBus::with_identities(owner, Host::new(design), notch_preview::reserve())
-        .expect("actual reserve");
+    let bus = controlled(
+        CommandBus::with_identities(owner, Host::new(design), notch_preview::reserve())
+            .expect("actual reserve"),
+    );
     let error = bus
         .preview_group(&bad)
         .expect_err("later anchor fails whole group");
@@ -251,8 +254,10 @@ fn conflicting_retry_key_refuses_instead_of_applying_a_different_payload() {
     ]);
     let valid = group(vec![first]);
     let design = owner.inputs().id();
-    let bus = CommandBus::with_identities(owner, Host::new(design), notch_preview::reserve())
-        .expect("actual reserve");
+    let bus = controlled(
+        CommandBus::with_identities(owner, Host::new(design), notch_preview::reserve())
+            .expect("actual reserve"),
+    );
     assert!(
         matches!(bus.preview_group(&bad),Err(GroupError::RetryConflict { group, key, first:0,index:1,command:CommandId::AssignMaterial }) if group==group_id() && key==CommandIdempotencyKey::from_entity_id(id(750030)))
     );
@@ -282,8 +287,9 @@ fn group_preview_refreshes_whole_authority_before_actual_binding_or_member_prepa
     let session = Rc::clone(&host.actor);
     let revoked = Rc::clone(&host.revoked);
     let reads = Rc::clone(&host.reads);
-    let bus =
-        CommandBus::with_identities(owner, host, notch_preview::reserve()).expect("actual reserve");
+    let bus = controlled(
+        CommandBus::with_identities(owner, host, notch_preview::reserve()).expect("actual reserve"),
+    );
     bus.preview_group(&request)
         .expect("first live source observation");
     revoked.set(true);
@@ -335,7 +341,7 @@ fn group_preview_binds_actual_design_then_exact_revision_then_original_handler_f
             MutationPayload::CloseDart(CloseDart::new(id(799998))),
         )]);
         let current = owner.inputs().revision().clone();
-        let bus = CommandBus::new(owner, Host::new(requested));
+        let bus = controlled(CommandBus::new(owner, Host::new(requested)));
         let error = bus
             .preview_group(&request)
             .expect_err("exact binding then actual availability");
@@ -425,7 +431,7 @@ fn final_delta_reads_actual_declarations_and_assignments_in_original_inventory_o
         ),
         MutationPayload::ChangeMeasurement(ChangeMeasurement::new(id(1), length.clone())),
     ));
-    let bus = CommandBus::new(owner, Host::new(design));
+    let bus = controlled(CommandBus::new(owner, Host::new(design)));
     let report = bus
         .preview_group(&request)
         .expect("actual nonempty final delta");
