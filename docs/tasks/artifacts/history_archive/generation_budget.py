@@ -1,9 +1,12 @@
 """Source-bound feasibility for a finite generation archive; never changes live archive bytes."""
 import argparse
+import ast
 import json
+import os
 from pathlib import Path
 import runpy
 import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 READER = ROOT / 'scripts/history_archive.py'
@@ -77,12 +80,36 @@ def controls():
     print('generation budget: %d boundary/oracle/refusal controls; rc=0' % checked)
 
 
+def runtime_controls():
+    producer = Path(__file__).with_name('v2_migration.py')
+    installer = Path(__file__).with_name('v2_install.py')
+    generation = ROOT / 'scripts/history_generations.py'
+    profile = runpy.run_path(str(PROFILE))
+    sources = (Path(__file__), producer, installer, READER, generation, PROFILE)
+    profile['plan_producer'](ROOT, sources=sources)
+    assert not any(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(producer.read_bytes()))), 'production guards must survive -O'
+    for index, (flags, mode, owner) in enumerate(((['-O'], 'generations', None),
+                                                ([], 'append', 'x' * 81),
+                                                (['-O'], 'append', 'x' * 81))):
+        work = ROOT / 'target/generation-guard-controls' / str(os.getpid()) / str(index)
+        assert not work.exists()
+        command = [sys.executable, '-I', '-B', *flags, str(producer), mode, work.relative_to(ROOT).as_posix()]
+        if owner is not None:
+            command += ['--owner', owner]
+        profile['plan_producer'](ROOT, sources=sources, directories=(work,))
+        result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+        assert result.returncode != 0 and 'explicit task owner required' in result.stderr
+        assert not work.exists(), 'invalid owner created a preparation workspace'
+    print('preparer runtime guards: assertion-free body and3 actual early-owner/optimization refusals; rc=0')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     if args.self_test:
         controls()
+        runtime_controls()
         return
     profile = runpy.run_path(str(PROFILE))
     profile['plan_producer'](ROOT, sources=(Path(__file__), PROFILE, READER))

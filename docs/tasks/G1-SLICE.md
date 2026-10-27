@@ -130,18 +130,8 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Goal:closed scope; [whole proof](../history/window12.md#stitchcad-devnotes-part328md).
 - ID: `G1-SLICE.3c.4`
   Status: `done`
-  Goal: semantic `Dart`/`Tuck`/`Pleat`/`Gather`, `Hem`, `Facing`/`Lining`/`Interfacing`, `Closure` and
-  `Pocket` with required content and validated structural references; close the object-type parent.
-  Acceptance: required anchors, operation identities, composition and parameter references are carried;
-  buttonhole size derives from its button rather than a second input; unsupported constructions are
-  refused explicitly; intake conservation stays visibly deferred to G2. Every ontology §4 object has
-  implementation evidence, synchronized book content and wasm-safe tests.
-  Verification: object/support suites 149 contracts; sc-core 260 tests incl. 18 docs; full strict
-  Rust/WASM/book, 22 probe suites, focused censuses/ledger and staged doctrine gates green.
-  Commit: `STITCHCAD-G1-0023`
-
-  Children: `.3c.4a` (intake constructions), `.3c.4b` (hem/layers), `.3c.4c` (closures),
-  `.3c.4d` (pockets and family signoff). Safe child slices preserve the entire §4.3/§4.7 scope.
+  Goal:original construction scope; [whole proof](../history/stitchcad-devnotes-part541.md).
+  Children: .3c.4a/.3c.4b/.3c.4c/.3c.4d remain in the linked sibling below.
 
 [Completed construction child contracts and acceptance evidence](G1-SLICE-constructions.md)
 are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-G1-0023.
@@ -883,44 +873,41 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0388 actual layer offset borrows; [whole proof](../history/stitchcad-devnotes-part540.md).
 - ID: `G1-SLICE.6.4.5.3.e`
   Status: `done`
-  Goal:0389 focused layer/Hem component acceptance; broader integration after .6.9.
-  - [x] ROOT CAUSE: Python Git/source review rc=0: all .3 children implemented; acceptance remained open.
-  - [x] ADDRESSED: cargo test -p sc-core --test layer_contract inventory_:4/0 and hem_contract
-    inventory_:5/0; -p sc-measure --test design_inputs_contract hem_declarations_:4/0 and
-    layer_offset_declarations_:4/0; each rc=0,17 total in target/layer-hem-acceptance-0389.log.
-  - [x] NO REGRESSION: book/publication79/159/1454/2410 rc=0; no Rust/manifest changes.
-  Promotion declined: existing component/current-source/scope rules. Full Design proof remains open.
+  Goal:0389 focused layer/Hem acceptance; [whole proof](../history/stitchcad-devnotes-part541.md).
 - ID: `G1-SLICE.6.4.5.capacity`
   Status: `in_progress`
   Goal: director2026-10-27 delegates decision; preserve self-contained history via bounded generations.
 - ID: `G1-SLICE.6.4.5.capacity.proposal`
   Status: `done`
-  Goal: measure next complete retirement, present bounded retention alternatives; no cap/record changes.
-  Own correction of the obsolete no-archive rationale in the containment adoption note.
-  - [x] ROOT CAUSE: Git/wc diagnostic:3706>2641B rc=0; exact spans in history decision.
-  - [x] ADDRESSED: same diagnostic rc=0; A/B policy proposal committed without changing caps/records.
-  - [x] NO REGRESSION: history_archive.sh verify-retention/book/publication/size rc=0.
-  Promotion: history decision. Completed0390;0391 delegates and selects A.
+  Goal:0390 policy proposal; [whole proof](../history/stitchcad-devnotes-part541.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply`
   Status: `in_progress`
   Goal: self-contained generations; preserve old bytes and per-generation bounds before product .4.
   Children: .design budget/source prototype; .cutover reader/transaction/retention; .accept focused clients.
 - ID: `G1-SLICE.6.4.5.capacity.apply.design`
   Status: `done`
-  Goal:0391 finite topology authority; whole0388 task/parent540. No live cutover.
-  - [x] REPRODUCE / ISSUE: generation_budget.py:3999898 decodedB rc=0; v2 headroom102B.
-  - [x] ROOT CAUSE (WHY + WHERE): same rc=0; aggregate and local reader budgets were coupled.
-  - [x] FIX: generation_budget.py --self-test:25 oracle/boundary/refusal controls rc=0.
-  - [x] ADDRESSED: generation_budget.py:20071898B workload needs8 slots; OS wc exact rc=0.
-  - [x] NO REGRESSION: history_archive.sh verify-retention rc=0; original reader/caps unchanged.
-  - [x] LOCKSTEP: book/publication/size rc=0; transition_receipts.py --record540:2 exact spans0.
-  Promotion: decision_history-generations.md; runtime/transaction proof remains .cutover/.accept.
+  Goal:0391 finite generation authority; [whole proof](../history/stitchcad-devnotes-part541.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.cutover`
-  Status: `pending`
-  Goal: strict v3 generation reader, immutable/source guards, native refusals and journaled cutover.
+  Status: `done`
+  Goal:0392 strict v3 decoder, source/immutable guards and source-pinned journaled cutover.
+  - [x] REPRODUCE / ISSUE: generation_budget.py:3999898B/102B headroom rc=0; next full retirement blocked.
+    D266 normal owner81 refused1 after effects; D267 -O missing owner admitted0 with effects; Root unchanged.
+  - [x] ROOT CAUSE (WHY + WHERE): source/Git inspection rc=0; global budget coupled to single generation;
+    D263 helper/source plans, D264 installer identity, D265 audit binding, D266/267 runtime guards absent.
+  - [x] FIX: generation_budget.py --self-test:25 budget+4 runtime controls rc=0; all27 assertions replaced.
+    Old published v2 formatter output byte comparison rc=0; source hash/old decoder AST comparisons0.
+  - [x] ADDRESSED: v3_reader_contract.py target/history-generations-0392f/candidate:46 physical controls0;
+    v2_install_contract.py target/history-generations-0392g:26/0 rc=0, real interruptions and2 body omissions.
+    v2_install.py install same workspace rc=0; all original files/backup trees byte-exact; master sealed1.
+  - [x] NO REGRESSION: v2_reader_contract.py:22/0 rc=0; original v1/v2 decoders AST unchanged0;
+    v3 profile-free API/Git-free CLI, native tar/tree hashes and full materialization exact. No Rust changes.
+  - [x] LOCKSTEP: book/publication/size and history_archive.sh verify-retention rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part541.md:8 exact Git spans rc=0.
+    Promotion: decision_history-generations.md. Authoring/current-client/resource acceptance remains .accept.
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept`
   Status: `pending`
-  Goal: complete public/offline/recovery/current-client feature acceptance before product .4.
+  Goal: v3 append/sealing, current clients/permanent transaction smoke and full-budget resource proof
+  before product .4; no complete feature/platform/CI verdict yet.
 - ID: `G1-SLICE.6.4.5.4`
   Status: `pending`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.

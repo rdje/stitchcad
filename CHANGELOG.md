@@ -3,11 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0391 — derive bounded self-contained generation authority
+## STITCHCAD-G1-0392 — install byte-exact bounded history generations
 
-- Director delegates retention choice; adopt version3 design with at most8 independently bounded generations.
-- Tracked source/OS wc and25 boundary/oracle/refusal controls pass0; explicit100-slice planning assumption.
-- Original v2 reader/caps/bytes unchanged; no live cutover or resource-runtime claim. Whole0388 task/parent540.
+- Strict v3 index/tree seals; every994 prior record/33 opaque backing and all source bytes retained.
+- Reader46/transaction26/v2 reader22 pass0; real interruptions, native oracles, Git-free/profile-free reads.
+- D263–D267 plans/hash/journal/early-owner/optimization guards repaired; actual omission/admission controls.
+- First new continuity541 safely stored; whole0391/proposal/0389/D263/retirement retained in8 exact spans.
+- Authoring, current clients and full-budget resources remain immediate work; G1still6/18, full CI deferred.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -29,6 +31,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+| [part541](docs/history/stitchcad-devnotes-part541.md) | whole0391/proposal/0389/D263/retirement | 71 lines, 5223 bytes, sha256:15e05162… |
 
 | [part540](docs/history/stitchcad-devnotes-part540.md) | 23 lines, 1908 bytes, sha256:643cd825… |
 

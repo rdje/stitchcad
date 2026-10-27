@@ -3,14 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — finite self-contained generation authority
+[Whole0391 lesson](docs/history/stitchcad-devnotes-part541.md) retains its scope, budget proof and authority.
 
-0391 chooses A under director delegation: version3 will seal old bytes and bound each generation.
-The tracked budget producer measures3999898B and derives20071898B for100 explicitly bounded slices;
-minimum6 slots round to8, with unchanged4MB/60000-line generation limits.25 oracle/refusal controls
-and independent physical OS wc pass0. This is a planning envelope, not parser-memory or cutover proof.
-Two exact Git spans retain whole0388 task/parent540. Live v2 remains unchanged with102B headroom.
-Promotion: decision_history-generations.md. Reader/transaction/current-client proof remains .cutover/.accept.
+## _(2026-10-27 UTC)_ — source-pinned v3 generation cutover
+
+0392 installs two bounded generations, retaining every994 prior record/33 opaque backing and all
+physical bytes, including the old v2 master as generation1. Whole physical tree hashes protect seals;
+ordinary reads remain profile-free/Git-free. Source HEAD/code/audit/journal and both tree images are pinned.
+D263 plans/ledger schema, D264 self-installer pin and D265 audit binding/bounded journal corrected.
+D266 owner81 late effects and D267 -O missing-owner admission were reproduced without Root changes;
+27 producer assertions became unconditional checks. Budget25/runtime4, reader46, transaction26 and v2
+reader22 pass0; actual self-hash/journal omissions admit faulty fixtures, proving the controls discriminate.
+A shared mutable fault map had re-signed a negative case; independent descriptor comparison identified
+fixture aliasing, then immutable case snapshots fixed it. Old decoder AST/formatter bytes remain exact.
+Original trees stay target/history-generations-0392g/installation/backup; later541/HEAD drift rightly
+refuses old recovery.541 retains8 exact Git spans. Promotion: history-generations decision. Authoring,
+current-client/permanent smoke/full-budget resource acceptance follows; full platform/CI proof is deferred.
 
 ## _(2026-10-27 UTC)_ — retention policy boundary
 

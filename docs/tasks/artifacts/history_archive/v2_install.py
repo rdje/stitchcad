@@ -1,4 +1,4 @@
-"""Journaled v1-to-v2 directory swaps; recovery refuses any unrecognized bytes.
+"""Journaled source-pinned archive directory swaps; recovery refuses unrecognized bytes.
 
 Only individual directory renames are atomic. Readers must be idle during installation;
 an interrupted transaction is completed by explicit recovery before ordinary archive use.
@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[4]
 READER = ROOT / 'scripts/history_archive.py'
 PROFILE = ROOT / 'scripts/local_environment.py'
 PRODUCER = Path(__file__).with_name('v2_migration.py')
+GENERATIONS = ROOT / 'scripts/history_generations.py'
 TREES = ('.doctrine/history_archive', 'docs/history')
 
 
@@ -46,9 +47,9 @@ def tree(root, relative):
                     'unsafe transaction file')
             require(path.stat().st_dev == ROOT.stat().st_dev and path.stat().st_size <= 1048576,
                     'transaction file bound')
-            require(len(result) < 128, 'transaction file count bound')
+            require(len(result) < 512, 'transaction file count bound')
             data = path.read_bytes()
-            result[path.relative_to(base).as_posix()] = (len(data), digest(data))
+            result[path.relative_to(base).as_posix()] = (len(data), digest(data), data.count(b'\n'))
     required_directories = {'.'}
     for name in result:
         required_directories.update(parent.as_posix() for parent in Path(name).parents)
@@ -58,7 +59,7 @@ def tree(root, relative):
 
 def expected(rows, relative):
     prefix = relative + '/'
-    return {row['path'][len(prefix):]: (row['bytes'], row['sha256'])
+    return {row['path'][len(prefix):]: (row['bytes'], row['sha256'], row['lines'])
             for row in rows if row['path'].startswith(prefix)}
 
 
@@ -66,17 +67,36 @@ def context(work, destination):
     require(destination == ROOT or destination.is_relative_to(ROOT / 'target'), 'unsafe migration destination')
     profile = runpy.run_path(str(PROFILE))
     profile['workspace'](destination)
-    profile['plan_producer'](ROOT, sources=(Path(__file__), PROFILE, READER, PRODUCER, work / 'source.json'))
+    profile['plan_producer'](ROOT, sources=(Path(__file__), PROFILE, READER, GENERATIONS, PRODUCER, work / 'source.json'))
     reader = runpy.run_path(str(READER))
-    raw = reader['bounded_read'](work / 'source.json', 131072)
+    raw = reader['bounded_read'](work / 'source.json', 1048576)
     audit = json.loads(raw, object_pairs_hook=reader['no_duplicate_keys'])
+    reader['fields'](audit, 'schema_version source_revision producer_sha256 installer_sha256 reader_sha256 generation_reader_sha256 '
+                           'profile_sha256 source_pressure source_files candidate_files')
+    require(type(audit['schema_version']) is int and audit['schema_version'] == 2, 'unsupported transaction audit')
+    require(type(audit['source_pressure']) is list and len(audit['source_pressure']) == 4
+            and all(type(value) is int and 0 <= value <= 32008192 for value in audit['source_pressure']),
+            'invalid source pressure')
+    for key in ('source_files', 'candidate_files'):
+        rows = audit[key]
+        require(type(rows) is list and 1 <= len(rows) <= 512, 'transaction identity count bound')
+        seen = set()
+        for row in rows:
+            reader['fields'](row, 'path lines bytes sha256')
+            reader['_row_identity'](row, maximum=1048576, lines=1048576)
+            path = Path(row['path'])
+            require(not path.is_absolute() and '..' not in path.parts and '.' not in path.parts
+                    and path.as_posix() == row['path'] and row['path'] not in seen
+                    and any(row['path'].startswith(tree + '/') for tree in TREES), 'unsafe transaction identity')
+            seen.add(row['path'])
     require(reader['_head_revision'](ROOT) == audit['source_revision'], 'migration HEAD drift')
-    for path, key in ((PRODUCER, 'producer_sha256'), (READER, 'reader_sha256'), (PROFILE, 'profile_sha256')):
+    for path, key in ((Path(__file__), 'installer_sha256'), (PRODUCER, 'producer_sha256'), (READER, 'reader_sha256'),
+                      (GENERATIONS, 'generation_reader_sha256'), (PROFILE, 'profile_sha256')):
         require(digest(path.read_bytes()) == audit[key], 'migration producer drift')
     for relative in TREES:
         require(tree(work / 'candidate', relative) == expected(audit['candidate_files'], relative),
                 'migration candidate drift')
-    sources = (Path(__file__), PROFILE, READER, PRODUCER, work / 'source.json',
+    sources = (Path(__file__), PROFILE, READER, GENERATIONS, PRODUCER, work / 'source.json',
                *(work / 'candidate' / row['path'] for row in audit['candidate_files']))
     transaction = work / 'installation'
     directories = {transaction, transaction / 'stage', transaction / 'backup'}
@@ -96,7 +116,7 @@ def context(work, destination):
     profile['plan_producer'](ROOT, **plan)
     for relative in TREES:
         profile['directory'](ROOT, (destination / relative).parent.relative_to(ROOT).as_posix())
-    return profile, reader, audit, transaction, plan
+    return profile, reader, audit, transaction, plan, digest(raw)
 
 
 def validate_states(destination, transaction, audit):
@@ -114,9 +134,9 @@ def validate_states(destination, transaction, audit):
 
 
 def recover(work, destination=ROOT):
-    profile, reader, audit, transaction, plan = context(work, destination)
+    profile, reader, audit, transaction, plan, audit_hash = context(work, destination)
     journal = transaction / 'journal.json'
-    require(journal.read_bytes() == journal_bytes(audit, destination), 'transaction journal drift')
+    require(reader['bounded_read'](journal, 8192) == journal_bytes(audit, destination, audit_hash), 'transaction journal drift')
     states = validate_states(destination, transaction, audit)
     for relative, state in reversed(list(zip(TREES, states))):
         live, stage, backup = (base / relative for base in
@@ -132,13 +152,14 @@ def recover(work, destination=ROOT):
     print('v2 recovery: exact original trees restored; candidate and journal retained')
 
 
-def journal_bytes(audit, destination):
+def journal_bytes(audit, destination, audit_hash):
     return (json.dumps({'source_revision': audit['source_revision'],
+                        'source_audit_sha256': audit_hash,
                         'destination': destination.relative_to(ROOT).as_posix()}, sort_keys=True) + '\n').encode()
 
 
 def install(work, destination=ROOT, *, checkpoint=lambda _label: None):
-    profile, reader, audit, transaction, plan = context(work, destination)
+    profile, reader, audit, transaction, plan, audit_hash = context(work, destination)
     require(not transaction.exists(), 'fresh installation transaction required')
     for relative in TREES:
         require(tree(destination, relative) == expected(audit['source_files'], relative), 'migration source drift')
@@ -170,7 +191,7 @@ def install(work, destination=ROOT, *, checkpoint=lambda _label: None):
     require(validate_states(destination, transaction, audit) == [0, 0], 'staged candidate mismatch')
     profile['plan_producer'](ROOT, **plan)
     with (transaction / 'journal.json').open('xb') as stream:
-        stream.write(journal_bytes(audit, destination))
+        stream.write(journal_bytes(audit, destination, audit_hash))
         stream.flush()
         os.fsync(stream.fileno())
     try:

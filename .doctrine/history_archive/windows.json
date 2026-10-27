@@ -1,108 +1,19 @@
 {
-  "version": 2,
-  "windows": [
-    ".doctrine/history_archive/window17.json",
-    ".doctrine/history_archive/window18.json",
-    ".doctrine/history_archive/window19.json",
-    ".doctrine/history_archive/window20.json",
-    ".doctrine/history_archive/window21.json"
-  ],
-  "legacy_catalogs": [
+  "version": 3,
+  "generations": [
     {
-      "path": "docs/history/window1.md",
-      "lines": 267,
-      "bytes": 9965,
-      "sha256": "d3c78a4047ec5870401fdedbb67ac26104e9f6ed5109689ea47698eefac2ee9f"
+      "path": ".doctrine/history_archive/generation1.json",
+      "lines": 108,
+      "bytes": 3155,
+      "sha256": "7c53469039b3d30331cee9332d9bb99f683f5a6a3338318d4bc4669f39b3cd82",
+      "tree_sha256": "95f8293551e9cf2f7583e8d913292a8b97ccc66458bc7e60e46f3323bc935585"
     },
     {
-      "path": "docs/history/window10.md",
-      "lines": 232,
-      "bytes": 8782,
-      "sha256": "836288432ba5eff3570029d940456b17e86387825064296e8c5a73f29b62d3f3"
-    },
-    {
-      "path": "docs/history/window11.md",
-      "lines": 230,
-      "bytes": 8851,
-      "sha256": "3b40a3bd0e6e5611a671e3a310a2c93f20ef4c01b160a14de2c3d2a1964a40b7"
-    },
-    {
-      "path": "docs/history/window12.md",
-      "lines": 224,
-      "bytes": 8379,
-      "sha256": "dcc450f8a47b28f2e4ad64f01964b6ed777137e2511bd1019c8b28faf1e55922"
-    },
-    {
-      "path": "docs/history/window13.md",
-      "lines": 220,
-      "bytes": 8222,
-      "sha256": "4e5b13b2c356088005c8b401145fcf8191b52f5e5abbd5620839d63e4a32ffbd"
-    },
-    {
-      "path": "docs/history/window14.md",
-      "lines": 212,
-      "bytes": 7930,
-      "sha256": "2c280d309a19489c0a36ef7e66e958b03845dfc04ef20293a8b5dc200b88fd61"
-    },
-    {
-      "path": "docs/history/window15.md",
-      "lines": 212,
-      "bytes": 7942,
-      "sha256": "febbe650bf82a7ac3ccf42f2609784ccd0c1aea54bd5669da03cfa725efed51a"
-    },
-    {
-      "path": "docs/history/window16.md",
-      "lines": 204,
-      "bytes": 7660,
-      "sha256": "53f927aa92e58f5e9c185ce488fec109cd45bd8d0bc427279a64275d27e59c3d"
-    },
-    {
-      "path": "docs/history/window2.md",
-      "lines": 264,
-      "bytes": 9860,
-      "sha256": "1d96cfac92cc08b539781d7eda566d20378e9d56828656f208fba5478a7e5187"
-    },
-    {
-      "path": "docs/history/window3.md",
-      "lines": 260,
-      "bytes": 9714,
-      "sha256": "cd8b63df7b1152075b3ba4daf0bf1a1787ec2d17043fb6218460c85386770f21"
-    },
-    {
-      "path": "docs/history/window4.md",
-      "lines": 252,
-      "bytes": 9432,
-      "sha256": "76c05932ebfaa0d42fb7092ea7de77a182f475ec1c8eb3161b82ca293e571276"
-    },
-    {
-      "path": "docs/history/window5.md",
-      "lines": 252,
-      "bytes": 9451,
-      "sha256": "2d449105654a0bcc218a34c9e97ece787eea0768ebba54d5f8f1640dfc01e048"
-    },
-    {
-      "path": "docs/history/window6.md",
-      "lines": 244,
-      "bytes": 9187,
-      "sha256": "67217962b71ef1c794d3b8a84e529b94fc5ee7545784497e7fbec4f6c691b52b"
-    },
-    {
-      "path": "docs/history/window7.md",
-      "lines": 240,
-      "bytes": 9046,
-      "sha256": "b462fd872f85d870a5c546c149cb8de7eb91861d5b20b4e215848a0614c2a030"
-    },
-    {
-      "path": "docs/history/window8.md",
-      "lines": 240,
-      "bytes": 9075,
-      "sha256": "516b3d33d4fcdb6d03a4ad0beb78d15eaecb8ed9c74ea25a20fa587c94730111"
-    },
-    {
-      "path": "docs/history/window9.md",
-      "lines": 236,
-      "bytes": 8923,
-      "sha256": "c78c5cdd45d8ece454f8f64fbff50689267c1b28a6e2ae37d223a90742cfd019"
+      "path": ".doctrine/history_archive/generation2.json",
+      "lines": 5,
+      "bytes": 61,
+      "sha256": "110a77675e5e5de37562bb9994ea8ef0b2c2c4ee358f1521845157c2e288f515",
+      "tree_sha256": "1c572840c48528fccab29827d6f1e48cf63e3008cc97e44d2d92fdbad9fdab07"
     }
   ]
 }

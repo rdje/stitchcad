@@ -28,6 +28,7 @@ SHA = re.compile(r'[0-9a-f]{64}\Z')
 REV = re.compile(r'[0-9a-f]{40}\Z')
 PROJECT = Path(__file__).resolve().parent.parent
 PROFILE_SOURCE = PROJECT / 'scripts/local_environment.py'
+GENERATIONS_SOURCE = PROJECT / 'scripts/history_generations.py'
 
 
 class Refusal(ValueError):
@@ -270,6 +271,9 @@ def _master_v2(root):
 def master(root):
     """Validated active window paths for either schema; the original v1 validator is unchanged."""
     document, _ = load_json(root, MASTER, 8192)
+    if _uses_v3_document(document):
+        _document, _data, groups = generation_reader()['describe'](root, globals())
+        return [path for _row, group, _bytes in groups for path in group['windows']]
     if type(document) is dict and type(document.get('version')) is int and document['version'] == 2:
         return _master_v2(root)[0]['windows']
     return _master_v1(root)
@@ -472,6 +476,9 @@ def _inventory_v2(root):
 def inventory(root):
     """Return verified logical bytes/pressure; v1 and v2 retain the same public return shape."""
     document, _ = load_json(root, MASTER, 8192)
+    if _uses_v3_document(document):
+        records, pressure, _backings, _manifests = generation_reader()['inventory'](root, globals())
+        return records, pressure
     if type(document) is dict and type(document.get('version')) is int and document['version'] == 2:
         records, pressure, _backings, _manifests = _inventory_v2(root)
         return records, pressure
@@ -500,7 +507,7 @@ def load_profile():
 
 def backing_sources(root, profile):
     """Complete nonproducing input validation, independent of unused store settings."""
-    sources = [Path(__file__), PROFILE_SOURCE, root / MASTER]
+    sources = [Path(__file__), PROFILE_SOURCE, GENERATIONS_SOURCE, root / MASTER]
     folders = [root / '.doctrine/history_archive', root / 'docs/history']
     for folder in folders:
         profile['directory'](PROJECT, profile['producer_path'](PROJECT, folder))
@@ -553,7 +560,34 @@ def materialization_file_plan(profile, destination, output):
 
 def _uses_v2(root):
     document, _ = load_json(root, MASTER, 8192)
-    return type(document) is dict and type(document.get('version')) is int and document['version'] == 2
+    return type(document) is dict and type(document.get('version')) is int and document['version'] in (2, 3)
+
+
+def _uses_v3_document(document):
+    return type(document) is dict and type(document.get('version')) is int and document['version'] == 3
+
+
+def generation_reader():
+    """Load the bounded local sibling without activating or loading the producer profile."""
+    source = local_path(PROJECT, 'scripts/history_generations.py')
+    namespace = dict(__file__=str(source), __name__='history_generations')
+    exec(compile(bounded_read(source, 65536), str(source), 'exec'), namespace)
+    return namespace
+
+
+def flat_snapshot(root):
+    document, _ = load_json(root, MASTER, 8192)
+    if _uses_v3_document(document):
+        return generation_reader()['inventory'](root, globals())
+    return _inventory_v2(root)
+
+
+def flat_legacy_catalogs(root):
+    document, _ = load_json(root, MASTER, 8192)
+    if _uses_v3_document(document):
+        _document, _data, groups = generation_reader()['describe'](root, globals())
+        return groups[0][1]['legacy_catalogs']
+    return _master_v2(root)[0]['legacy_catalogs']
 
 
 def _git_blob(root, revision, path, maximum):
@@ -650,7 +684,7 @@ def _v1_source_snapshot(root, revision, backings, catalogs):
 def backing_inventory(root):
     """Original retained control/payload bytes; plain byte retrieval does not need historical Git."""
     if _uses_v2(root):
-        return _inventory_v2(root)[2]
+        return flat_snapshot(root)[2]
     inventory(root)
     paths = {MASTER}
     for name in master(root):
@@ -660,7 +694,7 @@ def backing_inventory(root):
 
 
 def _v2_source_proof(root, window):
-    records, _pressure, backings, manifests = _inventory_v2(root)
+    records, _pressure, backings, manifests = flat_snapshot(root)
     path = '.doctrine/history_archive/' + window + '.json'
     if path not in manifests:
         require(path in backings and path != MASTER and path.endswith('.json'), 'unknown window')
@@ -675,7 +709,7 @@ def _v2_source_proof(root, window):
     revision = manifest['source_revision']
     original = json.loads(_git_blob(root, revision, MASTER, 8192), object_pairs_hook=no_duplicate_keys)
     if type(original.get('version')) is int and original['version'] == 1:
-        legacy_catalogs = {row['path'] for row in _master_v2(root)[0]['legacy_catalogs']}
+        legacy_catalogs = {row['path'] for row in flat_legacy_catalogs(root)}
         expected = _v1_source_snapshot(root, revision, backings, legacy_catalogs)
         cohort = {row['path']: row for value in manifests.values() if value['source_revision'] == revision
                   for row in value['members']}
@@ -685,7 +719,7 @@ def _v2_source_proof(root, window):
         for name in backings:
             require(cohort[name]['kind'] == 'backing', 'source cohort backing kind mismatch')
         return len(expected), len(backings), len(legacy_catalogs)
-    require(type(original.get('version')) is int and original['version'] == 2, 'unsupported source schema')
+    require(type(original.get('version')) is int and original['version'] in (2, 3), 'unsupported source schema')
     expected = _git_paths(root, revision)
     require(expected == {row['path'] for row in manifest['members']} and
             all(row['kind'] == 'record' for row in manifest['members']), 'source snapshot membership mismatch')
@@ -728,6 +762,41 @@ def _guard_raw_records(root):
     for path in _git_paths(root, revision):
         require(path in records, 'committed raw record missing')
         require(records[path] == _git_blob(root, revision, path, 160000), 'committed raw record changed')
+
+
+def _guard_v3(root, old, saved_master):
+    """Keep sealed controls byte-exact and permit only ordered active-window/generation growth."""
+    engine = generation_reader()
+    document, _data, groups = engine['describe'](root, globals())
+    engine['inventory'](root, globals())
+    if type(old.get('version')) is int and old['version'] == 2:
+        require(len(groups) == 2 and groups[0][2] == saved_master, 'initial generation seal differs from v2 source')
+        prior_windows = old['windows']
+    else:
+        prior = engine['descriptors'](old, globals())
+        require(len(prior) <= len(document['generations']), 'committed generation removed')
+        require(prior[:-1] == document['generations'][:len(prior) - 1], 'committed generation seal changed')
+        prior_windows = []
+        for index, row in enumerate(prior):
+            original = _git_blob(root, 'HEAD', row['path'], 8192)
+            require((original.count(b'\n'), len(original), digest(original)) ==
+                    (row['lines'], row['bytes'], row['sha256']), 'committed generation control identity mismatch')
+            previous = json.loads(original, object_pairs_hook=no_duplicate_keys)
+            engine['group_document'](previous, index + 1, index == len(prior) - 1, globals())
+            current = groups[index][1]
+            require(previous['legacy_catalogs'] == current['legacy_catalogs'], 'committed legacy descriptors changed')
+            require(previous['windows'] == current['windows'][:len(previous['windows'])], 'committed window order changed')
+            if index < len(prior) - 1:
+                require(groups[index][2] == original, 'committed sealed control changed')
+            prior_windows.extend(previous['windows'])
+    for path in prior_windows:
+        original = _git_blob(root, 'HEAD', path, 65536)
+        require(bounded_read(local_path(root, path), 65536) == original, 'committed manifest changed')
+        manifest = json.loads(original, object_pairs_hook=no_duplicate_keys)
+        for retained in (manifest['payload'], manifest['catalog']):
+            bound = 1048576 if retained == manifest['payload'] else 160000
+            require(bounded_read(local_path(root, retained), bound) == _git_blob(root, 'HEAD', retained, bound),
+                    'committed retained file changed')
 
 
 def _extended_cli():
@@ -776,11 +845,20 @@ def guard_committed(root):
     if result is None:
         return
     old = json.loads(result.stdout, object_pairs_hook=no_duplicate_keys)
+    require(type(old) is dict and type(old.get('version')) is int and old['version'] in (1, 2, 3),
+            'unsupported committed archive schema')
     current = master(root)
+    document, _ = load_json(root, MASTER, 8192)
+    if _uses_v3_document(document):
+        _guard_v3(root, old, result.stdout)
+        _guard_raw_records(root)
+        return
     if _uses_v2(root):
         _guard_v2(root, old, result.stdout)
         _guard_raw_records(root)
         return
+    require(old['version'] == 1, 'unsupported committed archive schema')
+    fields(old, 'version windows')
     require(set(old['windows']) <= set(current), 'committed window removed')
     for path in old['windows']:
         saved = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + path], capture_output=True,

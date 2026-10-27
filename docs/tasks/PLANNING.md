@@ -1164,17 +1164,30 @@ Verified D261 original Hem layer-cause report and0381 red/green proof remain who
 Verified D262 bounded v2 append report/proof retained whole in
 [part539](../history/stitchcad-devnotes-part539.md); all old bytes/caps unchanged.
 
-## D263 — installer fixture omits helper source authority
+[Original D263 report](../history/stitchcad-devnotes-part541.md) retained whole; corrected0392.
 
-Code inspection: v2_install_contract.py calls changelog_pointers.py after constructing sources/frozen
-without that helper or its current CHANGELOG input. Reproduce by inspecting lines31–33 and108–110.
-Effect:17 transaction controls prove bytes/effects, not complete producer authority. P3; owner
-G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification, after .6.9 before integration/pre-push. Repair complete
-helper/input/child plans and calibrate omissions while preserving every original transaction predicate.
+[0388 retirement proof](../history/stitchcad-devnotes-part541.md).
 
-[0387 retirement proof](../history/stitchcad-devnotes-part539.md).
+## D263–D267 — cutover source/guard repairs0392
 
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part539.md:
-  5 exact Git spans rc=0; completed D262/0387 proof occupied live capacity.
-- [x] ADDRESSED: same command rc=0; whole task/lesson/ledger/report/retirement retained539.
-- [x] NO REGRESSION: book and scoped publication79/159/1454/2410 rc=0; exact D250132 rows compare0.
+D263: installer fixture omitted helper/CHANGELOG/producer/sidecar and complete child sources. Corrected
+lists, frozen-input preservation and ledger-route equality pass in v2_install_contract.py:26/0 rc=0.
+Deep whole-producer authority calibration remains its existing .f.fixture-verification owner after .6.9.
+D264: preparation never pinned installer code. Git7ad3853 inspection confirms missing installer_sha256;
+zero current installer hash now refuses before transaction creation. Actual compiled self-hash omission
+installs the faulty owned fixture, calibrating the refusal. Corrected; same26-control producer rc=0.
+D265: the journal omitted the full audit and read unbounded bytes. Exact audit hash now binds both
+identity lists; whitespace audit drift and8193B journal refuse before recovery changes. A compiled
+binding omission accepts the changed audit and rolls back, proving discrimination. Corrected;26/0 rc=0.
+D266: owner validation admitted81 characters while manifests bound80, creating a workspace before
+refusal. D267: Python -O removed27 assert guards; missing-owner generations returned0 with effects.
+Reproduced target-only; original Root bytes unchanged. All producer guards now unconditional, owner
+bound80 checked before profile/effects. generation_budget.py --self-test:25 budget+4 runtime controls0;
+normal/optimized missing/long owners refuse1 with no workspace. Registered controls; corrected.
+All owned by G1-SLICE.6.4.5.capacity.apply.cutover. No complete integration/platform/CI claim.
+
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part541.md:
+  8 exact Git spans rc=0; completed proof and original D263 report occupied live capacity.
+- [x] ADDRESSED: same command rc=0; original task/lesson/ledger/report/retirement bytes retained541.
+- [x] NO REGRESSION: history_archive.sh verify-retention rc=0; reader46/transaction26/v2 reader22 pass0;
+  scoped book/publication and live-size checks rc=0. Old physical files and both backup trees exact.

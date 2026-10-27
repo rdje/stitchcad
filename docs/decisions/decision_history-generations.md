@@ -2,11 +2,13 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-27`
-- **Status:** `active` — design authority; live cutover remains separately verified work.
+- **Status:** `active` — active v3 read/cutover authority; authoring/resource acceptance remains owned.
 - **Owner / source:** G1-SLICE.6.4.5.capacity.apply; director delegates the decision and requires
   signoff/production quality.0391 selects self-contained retrieval over conditional Git receipts.
 
 answers: "how does retained history grow after the first aggregate budget is full?" · "why eight generations?" · "which archive guarantees remain unchanged?"
+
+answers: "what pins source and recovery audit during generation cutover?"
 
 ## Authority and scope
 
@@ -18,7 +20,13 @@ local, self-contained and independent of historical Git objects. Git is used onl
 committed/source proofs. No archive evidence is replaced by a conditional Git locator.
 
 The root v3 index has at most8 generation descriptors, at most8192 bytes and exact identities for
-the generation controls. Each generation retains these independent limits:
+the generation controls and a domain-separated tree digest covering every indexed physical file.
+Raw drafts remain unsealed; payload/manifest/catalog changes cannot preserve a sealed tree identity.
+The tree stream starts with ASCII `StitchCAD-history-generation-tree-v1` followed by NUL. For each
+indexed physical path in bytewise UTF-8 order, append path/NUL/decimal-byte-size/NUL/lowercase-file-
+SHA256/LF, then SHA256 the complete stream. It includes the generation control, manifests, compressed
+payloads and catalogs; it excludes the root index and uncaptured raw drafts. Paths contain no controls.
+Each generation retains these independent limits:
 
 | Dimension | Inclusive bound |
 | --- | --- |
@@ -68,7 +76,7 @@ near capacity, an owned new retention decision is required before further retire
   predecessor after committed raw capture. Initial transition may assign existing raw records to
   generation2 while generation1 preserves the original packed cohort and exact v2 master.
 - Validate schemas, complete membership, per-file identities and each independent budget. Decode one
-  flat tar level; never recursively expand retained compressed evidence or call extraction APIs.
+  flat tar level; never recursively expand retained compressed evidence or call filesystem extraction APIs.
 - Plan every source/output/child before effects. Source HEAD, all producer dependencies, both original
   trees and candidate must be pinned. Keep exact old trees on the repository volume; refuse unknown
   recovery states. Readers remain idle across the multi-directory transaction.
@@ -83,3 +91,13 @@ explicit membership/path/resource checks beyond extraction filters. The reader c
 [SQLite's atomic-commit description](https://sqlite.org/atomiccommit.html) distinguishes journal and
 filesystem durability assumptions. The existing directory-swap protocol proves process interruption;
 this decision does not confer SQLite's power-loss guarantee on that protocol.
+
+## Cutover0392
+
+Preparation pins HEAD, formatter, installer, reader, generation decoder and environment profile.
+The capped journal binds the exact audit bytes, including both source/candidate identity lists.
+Real interruptions, native byte oracles and self-hash/audit-binding omission controls pass; original
+trees remain backed up. Runtime guards remain active under Python -O; owner length is bounded80
+before effects. This proves process-interruption recovery, not hardware power-loss durability.
+Authoring/sealing, current-client/permanent-smoke and full-budget resource acceptance remain immediate
+G1-SLICE.6.4.5.capacity.apply.accept work before returning to garment intent.

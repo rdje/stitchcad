@@ -10,8 +10,8 @@ master = json.loads((authority / '.doctrine/history_archive/windows.json').read_
 reader = runpy.run_path(str(Path(__file__).resolve().parents[4] / 'scripts/history_archive.py'))
 records = reader['inventory'](authority)[0]
 routes = {}
-manifests = [json.loads((authority / path).read_text()) for path in master['windows']]
-if master['version'] == 2:
+manifests = [json.loads((authority / path).read_text()) for path in reader['master'](authority)]
+if master['version'] in (2, 3):
     backings = reader['backing_inventory'](authority)
     legacy = json.loads(backings[reader['MASTER']])
     manifests.extend(json.loads(backings[path]) for path in legacy['windows'])
