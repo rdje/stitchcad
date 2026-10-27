@@ -35,6 +35,7 @@ impl DesignSizeSetReference {
 }
 
 mod closures;
+mod hems;
 mod host;
 mod inputs;
 mod parameters;
@@ -44,6 +45,10 @@ mod topology;
 pub use closures::{
     DesignClosureDeclaration, DesignClosureDeclarationError, DesignClosureDeclarationRole,
     DesignClosureDeclarationSource,
+};
+pub use hems::{
+    DesignHemDeclaration, DesignHemDeclarationError, DesignHemDeclarationRole,
+    DesignHemDeclarationSource,
 };
 pub use host::{
     DesignFormulaHost, DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,

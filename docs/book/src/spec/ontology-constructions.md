@@ -281,6 +281,37 @@ remain separate. Current structural success grants no assembly or release readin
 | `HemInventory` | Private ordered actual Hems and complete current layer/finish/Facing checks |
 | `HemInventoryError` | Duplicate ids, original Layers cause, missing Piece or contextual Hem cause |
 
+## Borrow actual Hem depth and fold declarations
+
+`DesignInputs::hem_declarations(hems)` first validates the complete current input root, then borrows
+depth and fold-type roles for every actual Hem in authored order. Each view retains its original
+Hem and the root's single canonical input owner. No partial view collection escapes a refusal.
+
+Explicit depth borrows the original parameter id and nonnegative Length intent: authored zero is
+retained without creating a second canonical value or inventing parameter metadata. Formula depth
+must name an actual DesignParameter, then its current canonical Length-kind declaration. Dedicated
+lengths and general Length scalars both work. A bare canonical id refuses MissingFormulaParameter;
+a Count parameter refuses FormulaKind with the actual Hem/id/kind. Unknown and Derived values stay
+unread and unchanged; this query neither evaluates depth nor proves a resolved nonnegative result.
+
+Fold type borrows the original HemFoldType. A logical declaration is not converted into a scalar
+because its id matches a numeric input; its recipe/Profile owner supplies domain, selection and state.
+Profile depth/fold fields remain DeferredToG4. profile_validation() returning None means only that
+role has no Profile field, without readiness approval. Default Debug omits authored ids/values.
+
+For example, an explicit zero-depth intent, a formula over a Derived length and an Unknown general
+Length expose different original sources. A profile-backed fold remains logical even when its id
+matches a stored Length. No physical fold choice, depth fallback or computed finishing is supplied.
+Current finish/Facing/layer sources, Material assignments, global garment ids and G2/G3/G4 physical
+proof remain separate. Original current-root errors keep their concrete standard cause chain.
+
+| API token | Hem declaration meaning |
+| --- | --- |
+| `DesignHemDeclaration` | Borrowed actual Hem, canonical owner, role and original source |
+| `DesignHemDeclarationRole` | Depth then FoldType for each original Hem |
+| `DesignHemDeclarationSource` | ExplicitDepth, FormulaDepth, ProfileDepth or logical FoldType |
+| `DesignHemDeclarationError` | Current Inputs cause or actual missing/wrong-kind formula parameter |
+
 ## Pocket placement and physical composition
 
 `PocketDefinition` binds a served physical copy and its source Piece, a held position anchor,

@@ -10,13 +10,16 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0385 — own complete current Hems and exact Facing joins
 
-- Private authored Hems; whole current layers before every original owner/finish/exact Facing target.
-- Original causes/positions, no substitutions; native5/privacy2, strict lint/fmt/book/publication pass0.
-- D250132 unchanged; whole0384/retirement/fixture plans536. Known Hem/layer declarations next.
+## STITCHCAD-G1-0386 — borrow actual Hem depth and fold declarations
+
+- Original roles/canonical owner; formula depth requires actual Length parameter metadata, no value reads.
+- Explicit zero/logical folds/Profile retain intent; native4/lifetime1, lint/fmt/book/publication pass0.
+- D250132 unchanged; closed collections/0385/binding/release-input proof537. Layer offset borrows next.
 
 # Sealed archive — earlier slices
+
+| [part537](docs/history/stitchcad-devnotes-part537.md) | closed layer/Hem/0385/binding/release-input proof | 152 lines, 11222 bytes, sha256:f1742e06… |
 
 | [part536](docs/history/stitchcad-devnotes-part536.md) | whole0384/retirement and historical fixture plans | 102 lines, 7800 bytes, sha256:2d552df5… |
 

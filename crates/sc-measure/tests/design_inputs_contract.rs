@@ -1631,3 +1631,314 @@ fn closure_declarations_are_metadata_scope_and_do_not_approve_missing_current_pl
         Err(ClosureInventoryError::Closure { .. })
     ));
 }
+
+fn with_hems(
+    definition: DesignInputsDefinition<DesignSources>,
+    fields: Vec<(sc_core::ontology::HemDepth, sc_core::ontology::HemFoldType)>,
+) -> (DesignInputs<DesignSources>, sc_core::ontology::HemInventory) {
+    use sc_core::ontology::{Hem, HemDefinition, HemInventory, HemMethod};
+    let (state, _) = with_sewing_graph(definition, vec![]);
+    let structure = state.structure();
+    let piece = structure
+        .pieces()
+        .pieces()
+        .first()
+        .expect("actual served Piece");
+    let edge = piece.edges().next().expect("actual finish edge").edge;
+    let hems = fields
+        .into_iter()
+        .enumerate()
+        .map(|(index, (depth, fold_type))| {
+            Hem::new(
+                HemDefinition {
+                    id: id(103000 + u128::try_from(index).expect("authored fixture ordinal")),
+                    edge,
+                    depth,
+                    fold_type,
+                    method: HemMethod::Turned,
+                },
+                piece,
+                structure.topology(),
+                None,
+            )
+            .expect("actual born Hem")
+        })
+        .collect();
+    (state, HemInventory::new(hems).expect("actual ordered Hems"))
+}
+
+#[test]
+fn hem_declarations_borrow_original_depth_fold_roles_and_unread_length_sources() {
+    use sc_core::{
+        design::{DesignHemDeclarationRole as Role, DesignHemDeclarationSource as Source},
+        ontology::{HemDepth, HemFoldType, ProfileBindingValidation, ProfileParameterRef},
+        recipe::{FormulaLengthInput, FormulaScalarInput},
+        value::{
+            ScalarInputDeclaration, ScalarInputDeclarationDefinition, ScalarInputKind,
+            ScalarInputState,
+        },
+    };
+    let mut definition = fixture();
+    let mut structure = definition.structure.definition().clone();
+    let mut scalars = structure.inputs.scalars().to_vec();
+    scalars.push(
+        ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+            id: id(2003),
+            source: id(2005),
+            kind: ScalarInputKind::Length,
+            state: ScalarInputState::Unknown {
+                observation: id(2004),
+            },
+        })
+        .expect("actual unknown general Length"),
+    );
+    structure.inputs = CanonicalInputs::new(structure.inputs.lengths().to_vec(), scalars)
+        .expect("single canonical owner");
+    definition.structure = DesignStructure::new(structure).expect("actual current structure");
+    definition.parameters = DesignParameters::new(
+        vec![
+            DesignParameterDefinition {
+                id: id(5001),
+                token: MachineToken::new("hem_length").expect("authored token"),
+                target: DesignParameterTarget::Length(id(12)),
+            },
+            DesignParameterDefinition {
+                id: id(5002),
+                token: MachineToken::new("hem_general").expect("authored token"),
+                target: DesignParameterTarget::Scalar {
+                    declaration: id(2003),
+                    kind: ScalarInputKind::Length,
+                },
+            },
+        ],
+        definition.structure.inputs(),
+    )
+    .expect("actual derived/unknown parameter metadata");
+    let (state, hems) = with_hems(
+        definition,
+        vec![
+            (
+                HemDepth::Explicit {
+                    parameter: id(104000),
+                    value: sc_units::Length::ZERO,
+                },
+                HemFoldType::Declaration(id(2000)),
+            ),
+            (
+                HemDepth::Formula(id(5001)),
+                HemFoldType::Declaration(id(2000)),
+            ),
+            (
+                HemDepth::Formula(id(5002)),
+                HemFoldType::Profile(ProfileParameterRef::new(id(10))),
+            ),
+            (
+                HemDepth::Profile(ProfileParameterRef::new(id(10))),
+                HemFoldType::Profile(ProfileParameterRef::new(id(10))),
+            ),
+        ],
+    );
+    let original = (state.inputs().clone(), hems.clone());
+    let views = state
+        .hem_declarations(&hems)
+        .expect("actual field roles without value reads");
+    assert_eq!(
+        views.iter().map(|view| view.role()).collect::<Vec<_>>(),
+        vec![
+            Role::Depth,
+            Role::FoldType,
+            Role::Depth,
+            Role::FoldType,
+            Role::Depth,
+            Role::FoldType,
+            Role::Depth,
+            Role::FoldType
+        ]
+    );
+    for view in views {
+        assert!(core::ptr::eq(
+            view.hem(),
+            hems.hem(view.hem().id()).expect("original Hem")
+        ));
+        assert!(core::ptr::eq(view.canonical_inputs(), state.inputs()));
+        match view.source() {
+            Source::ExplicitDepth { parameter, value } => {
+                let HemDepth::Explicit {
+                    parameter: actual_id,
+                    value: actual_value,
+                } = &view.hem().definition().depth
+                else {
+                    unreachable!()
+                };
+                assert!(core::ptr::eq(parameter, actual_id));
+                assert!(core::ptr::eq(value, actual_value));
+                assert_eq!(*value, sc_units::Length::ZERO);
+                assert!(state.parameters().parameter(*parameter).is_none());
+                assert_eq!(view.profile_validation(), None);
+            }
+            Source::FormulaDepth {
+                parameter,
+                declaration,
+            } => {
+                assert!(core::ptr::eq(
+                    parameter,
+                    state
+                        .parameters()
+                        .parameter(parameter.id())
+                        .expect("actual metadata")
+                ));
+                if let Some(length) = FormulaLengthInput::from_declaration(declaration) {
+                    assert!(core::ptr::eq(
+                        length.canonical_declaration(),
+                        state.inputs().length(id(12)).expect("actual derived input")
+                    ));
+                    assert!(length.read_authored().is_err());
+                } else {
+                    let canonical = state
+                        .inputs()
+                        .scalar(id(2003))
+                        .expect("actual unknown general input");
+                    let scalar = FormulaScalarInput::from_declaration(declaration, canonical)
+                        .expect("current general Length");
+                    assert!(core::ptr::eq(scalar.canonical_declaration(), canonical));
+                    assert!(scalar.read_authored().is_err());
+                }
+                assert_eq!(view.profile_validation(), None);
+            }
+            Source::ProfileDepth(reference) => {
+                let HemDepth::Profile(actual) = &view.hem().definition().depth else {
+                    unreachable!()
+                };
+                assert!(core::ptr::eq(reference, actual));
+                assert_eq!(
+                    view.profile_validation(),
+                    Some(ProfileBindingValidation::DeferredToG4)
+                );
+            }
+            Source::FoldType(fold) => {
+                assert!(core::ptr::eq(fold, &view.hem().definition().fold_type));
+                assert_eq!(
+                    view.profile_validation(),
+                    if matches!(fold, HemFoldType::Profile(_)) {
+                        Some(ProfileBindingValidation::DeferredToG4)
+                    } else {
+                        None
+                    }
+                );
+            }
+        }
+    }
+    assert_eq!((state.inputs(), &hems), (&original.0, &original.1));
+}
+
+#[test]
+fn hem_declarations_require_actual_parameter_metadata_despite_numeric_presence() {
+    use sc_core::{
+        design::DesignHemDeclarationError as Error,
+        ontology::{HemDepth, HemFoldType},
+    };
+    for numeric_only in [10, 2000] {
+        let (state, hems) = with_hems(
+            fixture(),
+            vec![(
+                HemDepth::Formula(id(numeric_only)),
+                HemFoldType::Declaration(id(2000)),
+            )],
+        );
+        assert_eq!(
+            state
+                .hem_declarations(&hems)
+                .expect_err("canonical id supplies no parameter metadata"),
+            Error::MissingFormulaParameter {
+                hem: id(103000),
+                parameter: id(numeric_only)
+            }
+        );
+    }
+}
+
+#[test]
+fn hem_declarations_keep_the_later_actual_hem_when_formula_kind_is_wrong() {
+    use sc_core::{
+        design::DesignHemDeclarationError as Error,
+        ontology::{HemDepth, HemFoldType},
+        value::ScalarInputKind,
+    };
+    let mut definition = fixture();
+    let mut parameters = definition
+        .parameters
+        .parameters()
+        .iter()
+        .map(|parameter| parameter.definition().clone())
+        .collect::<Vec<_>>();
+    parameters.push(DesignParameterDefinition {
+        id: id(5002),
+        token: MachineToken::new("hem_count").expect("authored token"),
+        target: DesignParameterTarget::Scalar {
+            declaration: id(2000),
+            kind: ScalarInputKind::Count,
+        },
+    });
+    definition.parameters = DesignParameters::new(parameters, definition.structure.inputs())
+        .expect("actual Count parameter");
+    let (state, hems) = with_hems(
+        definition,
+        vec![
+            (
+                HemDepth::Formula(id(5001)),
+                HemFoldType::Declaration(id(2000)),
+            ),
+            (
+                HemDepth::Formula(id(5002)),
+                HemFoldType::Declaration(id(2000)),
+            ),
+        ],
+    );
+    assert_eq!(
+        state
+            .hem_declarations(&hems)
+            .expect_err("Count cannot satisfy depth Length"),
+        Error::FormulaKind {
+            hem: id(103001),
+            parameter: id(5002),
+            actual: sc_core::recipe::FormulaKind::Count
+        }
+    );
+}
+
+#[test]
+fn hem_declarations_are_metadata_scope_and_do_not_approve_missing_current_pieces() {
+    use sc_core::ontology::{
+        HemDepth, HemFoldType, HemInventory, HemInventoryError, LayerInventory,
+    };
+    let (state, hems) = with_hems(
+        fixture(),
+        vec![(
+            HemDepth::Formula(id(5001)),
+            HemFoldType::Declaration(id(2000)),
+        )],
+    );
+    let mut definition = state.definition().clone();
+    let mut structure = definition.structure.definition().clone();
+    structure.pieces = PieceInventory::new(vec![]).expect("explicit current empty Pieces");
+    structure.cut_plan = CutPlan::new(vec![], &[]).expect("explicit current empty copies");
+    definition.structure = DesignStructure::new(structure).expect("actual current structure");
+    let current = DesignInputs::new(definition).expect("actual unchanged canonical metadata");
+    let views = current
+        .hem_declarations(&hems)
+        .expect("metadata stays inspectable");
+    assert_eq!(views.len(), 2);
+    assert_eq!(views.first().expect("original role").hem().id(), id(103000));
+    assert!(matches!(
+        hems.validate_current(
+            &LayerInventory::new(vec![], vec![], vec![]).expect("empty layers"),
+            current.structure().pieces().pieces(),
+            current.structure().topology()
+        ),
+        Err(HemInventoryError::MissingPiece { .. })
+    ));
+    assert!(current
+        .hem_declarations(&HemInventory::new(vec![]).expect("empty Hems"))
+        .expect("explicit empty metadata scope")
+        .is_empty());
+}

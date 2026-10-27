@@ -74,28 +74,16 @@ These plans change no source/reference rule, annotation, vocabulary, grammar or 
 
 ## Binding fixture plans
 
-The numeric binding reader and mutation writer retain their producing-on-load interfaces. Running
-or loading either entry executes its original work. Use the separate binding_fixture.py provider to
-inspect a plan without starting that work: importing this provider and calling binding_plan() validate
-sources, stores, effective selectors and destinations without creating, copying or running anything.
-Its public loaders share the actual local-environment provider and Refusal class.
+The binding reader/writer produce on load; use binding_fixture.py's inert binding_plan() to inspect
+complete validated sources, stores, selectors and destinations without creating or running anything.
+Both producing entries validate loader sources first; the writer checks the whole child plan before
+activation or shell edits. Plans cover the complete copied book, outputs and mutable shell authority.
 
-The producing plan includes every book source, copied directory/file and replay.log inside
-target/formula_binding_source. The writer additionally plans all twelve mutation logs and requests
-mutable-source authority only for the reference shell. Both entries validate their loader sources
-before loading; the writer calls the pure child plan before activation or changing shell bytes.
-Links, nonregular files, another repository, hardlinked outputs and unexpected old fixture entries
-refuse before replacement. Hardlinked mutable shell sources refuse; read-only sources may share an
-inode. Selected files or parts directories inside the replacement tree also refuse, even when
-other selected files point elsewhere. For example, selecting FORMULA_PARTS_DIR inside
-target/formula_binding_source/spec/formula-language refuses before deleting that directory.
-
-The reader refreshes its plan before replacement, copied input reads/edits, the census child and its
-replay log. The writer refreshes before every shell edit, child and log. Its ordinary and final
-restoration paths validate only the writable shell, so an unrelated late output failure cannot strand
-a mutation. Relative selectors resolve from the repository root; prepared stores, unrelated environment
-values and argv remain intact. Overrides can change the authored copied-book verdicts; ordinary commands
-use the complete default copied book. No formula grammar, storage width, rounding or token changes.
+Links, nonregular files, foreign repositories/volumes, hardlinked writable files and unexpected old
+entries refuse before replacement. Selected files/parts inside the replacement tree refuse even if
+other selectors point elsewhere. Read-only sources may share inodes. Refresh plans before copies,
+edits, children and logs. Restore using only the writable source plan, so bad logs cannot strand it.
+Caller argv/environment and repo-relative selectors remain intact; overrides can change fixture verdicts.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/binding_contract.py
@@ -103,33 +91,14 @@ python3 -I -B docs/tasks/artifacts/formula_structure/binding_mutations.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_binding_fixture_contract.py
 ```
 
-The reader supplies80 real Fraction/Decimal controls and actual replay of nineteen bindings with zero
-mismatches. The writer requires all twelve original compiled faults to fail the binding assertions and
-restores the exact shell bytes. Run the writer exclusively, with no overlapping reader, build or gate.
-The watched last command exercises actual module bodies, standalone and producing borrowed loads,
-pure plans, independent provider identities, guard removals and isolated filesystem faults. It proves
-actual mirrored source restoration after a late log refusal. Intercepted children establish dispatch;
-they do not replace the first two commands' real numerical and mutation results.
-
-Invalid standalone or producing borrowed plans print `local-environment: REFUSED — …` and exit2.
-Borrowed pure provider calls raise that provider's Refusal. Unrelated assertions retain their original
-type. This protects reference-verification producers; production evaluation, geometry, API/MCP and
-release signoff remain separate roadmap work.
-
 ## Binding replay plans
 
-The replay reader and its nine-fault writer retain producing-on-load behavior. Their separate
-binding_replay_fixture.py provider is inert on import; fixture_plan() validates the complete plan
-without activation. It reuses the public input loader's tree walker and effective shell selectors,
-with the actual shared provider and Refusal class. Every loader source is checked before delegation.
-
-Each replay() call prepares all book sources, replacement files/directories and replay.log inside
-target/formula_binding_replay. It rechecks the replacement before deleting/copying, copied sources
-before editing the examples or Boolean declaration, sources/selectors before the census child and
-the complete output plan before its log. The formatter's public context is separately rechecked
-before loading. A selected file or FORMULA_PARTS_DIR inside the replacement tree refuses before
-replacement. Unexpected old entries, symlinks, foreign repositories/volumes and nonregular files
-refuse; writable outputs and the writer's shell source must have a single inode link.
+Replay reader/writer entries also produce on load. The separate binding_replay_fixture.py provider
+is inert; fixture_plan() validates without activation and retains the actual provider/Refusal identity.
+Each replay plans complete book sources, replacements, selectors, formatter context and logs before
+effects. Recheck deletion/copy, copied reads/edits, child dispatch and logging. The writer plans its
+whole child and logs before activation, then refreshes each edit/child/log and restores only through
+the writable source plan. Safety/alias/inode/selector rules above also apply to replay.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/binding_replay_contract.py
@@ -137,27 +106,14 @@ python3 -I -B docs/tasks/artifacts/formula_structure/binding_replay_mutations.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_binding_replay_contract.py
 ```
 
-The reader supplies nineteen real consumer/formatter/declaration verdicts: seventeen copied-book
-census calls plus two invalid Boolean display states. The first call adds fifteen independently
-authored valid rows to the seventeen ordinary examples. The following calls check exact refusal
-reasons for wrong values, unit/kind mismatches, opaque bindings and removed Boolean bindability.
-For example, half a square micrometre binds to1 µm² and displays0.00000001 cm²; reading that stored
-binding twice displays0.00000002 cm². A Boolean name retains Boolean kind and controls if().
-
-The writer plans that entire child fixture and all nine logs before activation or a shell change.
-Source edits, children and logs receive fresh plans. Ordinary and final restoration validate only
-the writable shell, preserving exact restoration when a late unrelated log becomes invalid.
-Run the writer alone, without overlapping readers, builds or gates. Prepared stores, unrelated
-environment values, relative caller selectors and argv remain intact; selector overrides may change
-the authored fixture verdicts. Standalone and producing borrowed refusals print the named
-local-environment diagnostic and exit2; borrowed pure plans raise the actual provider's Refusal.
-
-The watched last command executes actual module bodies, guard removals, isolated filesystem faults,
-independent provider loads and mirrored late-log restoration. Its intercepted children establish
-dispatch; the first two commands supply the separate nineteen numerical/display verdicts and nine
-intended compiled assertion failures. No source literals, grammar, display quantum, diagnostic token
-or production engine rule changes; evaluator/geometry/API/MCP/release proof remains separately owned.
-
+Run either writer exclusively and consume exact restoration before another reader/build/gate.
+Producing standalone/borrowed plan refusals print a named local-environment diagnostic and exit2;
+pure borrowed plans raise their actual provider's Refusal. Other assertion errors keep their types.
+Intercepted children prove dispatch separately from actual numeric/display verdicts and compiled faults.
+Complete original input lists, numerical examples, populations, faults and restoration receipts remain
+whole in `docs/history/stitchcad-devnotes-part537.md`; retrieve with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part537.md`.
+No grammar, quantum, rounding, diagnostic, numeric engine or production approval rule changes.
 
 ## Origin and provenance consumer plans
 

@@ -3,15 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned current Hems and exact Facing joins
+## _(2026-10-27 UTC)_ — actual Hem depth and fold roles
 
-0385 owns original ordered HemInventory objects; complete supplied layer sources first, then every
-original owner/full finish/exact Facing through existing validators. Peer/kind/owner substitutions
-refuse; unused layer damage and later lost finish interiors keep concrete original causes/positions.
-Native5/privacy2, strict affected lint/fmt/book/publication79/155 pass0; D250132 exact rows unchanged.
-Original current validators/material queries byte-identical.536 retains whole0384/retirement/fixture
-plans in5 exact Git spans0. Promotion declined: existing current target/ownership rules. Known Hem/
-layer declarations next; Material/scope/global Design/physical/integration/CI remain separate.
+0386 borrows original Hem depth/fold roles and the actual canonical owner after whole-root validation.
+Formula depth joins actual Design parameter/Length metadata; explicit zero, logical folds and Profile
+origins retain intent. Derived/Unknown remain unread; no current geometry or evaluated depth proof.
+Native4/lifetime1, strict core/affected-measure lint/fmt/book/publication79/159 pass0; D250132 exact rows.
+Original declaration/current-validator bytes unchanged.537 retains closed collections/0385/binding/
+release-input lessons in6 exact Git spans0. Promotion declined: settled metadata/physical boundaries.
+Layer offset-operation borrows next; full Design/global/physical/integration/CI remain separate.
+
+[Complete Hem collection lesson](docs/history/stitchcad-devnotes-part537.md) retains
+its original scope, checks and promotion decision.
 
 [Complete layer Material lesson](docs/history/stitchcad-devnotes-part536.md) retains
 its original scope, checks and promotion decision.
@@ -82,20 +85,8 @@ their original scopes, checks and promotion decisions.
 [Complete command-input lesson](docs/history/stitchcad-devnotes-part535.md) retains
 its original scope, checks and promotion decision.
 
-## _(2026-10-26 UTC)_ — release input-schema review
-
-0334 .6.2.2.c.2.5.5 closes two concrete release inputs against normative book rows; changed target6/0.
-Library identical5a30f12; other9 proofs retained, strict lint/fmt/book/publication76-99/census9-6-8-0 pass0.
-488/306 whole5a30f12 exact0; actual authorization, hashing, scope/date/records stay handlers. G1still6/18.
-Promotion declined: existing ruled boundary; combined schema review next, full CI integration/pre-push.
-
-## _(2026-10-26 UTC)_ — exact detached approval intent
-
-0333 .6.2.2.c.2.5.4 adds shared exact opaque algorithm/digest identity; blank/empty fields refuse original content.
-ApprovePackage retains candidate/scope targets under shared claims; metadata requires human-only approve.
-No actor claim authenticates a human, no algorithm/width/hash validity or approval/date/manifest change is produced.
-Native release5/artifact5/query2/catalog2, strict selected lint/fmt/book/publication76-99/census9-6-8-0 pass0.
-487/305 whole022b66d exact0. Promotion declined: existing ruled identity boundary. G1still6/18; release review next.
+[Complete release-input/approval lessons](docs/history/stitchcad-devnotes-part537.md) retain
+their original scopes, checks and promotion decisions.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
