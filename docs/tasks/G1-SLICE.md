@@ -859,7 +859,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0396 scoped archive feature gate; [whole proof](../history/stitchcad-devnotes-part546.md).
 - ID: `G1-SLICE.6.4.5.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.
   Children .a current Dart/Tuck/Pleat; .b Gather joins; .c grain/allowance; .d owned six-family scope;
   .e actual intake/angle/width/profile/operation declarations (split as needed); .f focused acceptance.
@@ -911,8 +911,18 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
     retention/book/publication/size rc=0; original book facts retained. Promotion: Design host decision.
     Component acceptance .f/global garment joins .5/full integration and release remain owned.
 - ID: `G1-SLICE.6.4.5.4.f`
-  Status: `pending`
-  Goal: focused complete current construction component acceptance before coupled garment .5.
+  Status: `done`
+  Goal:0405 scoped construction source/declaration component acceptance, before global garment .5.
+  - [x] ROOT CAUSE: cargo test -p sc-core --test dart_contract --test fold_contract --test gather_contract
+    --test grain_contract --test allowance_contract --test construction_inventory_contract:74 passed rc=0;
+    implementation complete, reverify original/current source contracts before coupled global work.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract construction_:13 passed rc=0;
+    source74 + actual higher-host declarations13 =87 native checks; no whole Design/runtime claim.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc FILTER for ontology::{dart,fold,gather,grain,
+    allowance,construction_inventory}, design::{constructions,gathers}:8 modules/13 privacy-lifetime
+    checks rc=0; compile-fail source census13 agrees; git diff --exit-code -- crates rc=0.
+    Book/size rc=0. Promotion declined: confirms existing source/host boundaries, no new policy/fact.
+    Global garment joins .5, component .6/aggregate .6.4.6 and full integration/CI remain owned.
 - ID: `G1-SLICE.6.4.5.5`
   Status: `pending`
   Goal: couple actual garment ownership with single-root state and complete owned identity scope.

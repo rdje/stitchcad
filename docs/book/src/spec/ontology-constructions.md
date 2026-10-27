@@ -1,8 +1,8 @@
 # Executable garment constructions at G1
 
-Companion to [ontology §4.3/§4.7](ontology.md) and [piece/sewing/mark APIs](ontology-implementation.md).
-G1 retains structural intent. Executed constructions, conserved intake, bounded offsets and released
-receiver outputs require later gates.
+See [ontology §4.3/§4.7](ontology.md) and [piece/sewing/mark APIs](ontology-implementation.md).
+Current construction source/declaration acceptance passes. Executed constructions, conserved intake,
+bounded offsets and receiver release require later gates.
 
 **Dart (`G1-SLICE.3c.4a.1`).** `Dart::new(DartDefinition, Piece, ledger)` retains immutable id,
 intake origin, apex, two directed legs, directed closing/folding reference and closing-operation id.

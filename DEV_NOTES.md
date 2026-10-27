@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-27 UTC)_ — scoped construction component acceptance
+
+0405 closes .6.4.5.4 after unchanged-code acceptance: Dart15/fold12/Gather15/grain12/allowance11/
+ConstructionInventory9 =74 native source contracts, actual higher-host declarations13 =87 total;
+8 directly affected rustdoc filters pass13 privacy/lifetime contracts, matching source census13.
+All rc0; Git crates diff empty0. Book/size0. Source/declaration scope is verified; whole Design/
+global garment/runtime/application/numeric-physical/release proof remains owned by .5/.6 and later
+integration gates. Promotion declined: confirms existing structural/host decisions, no new fact.
+Full PNT proceeds to coupled garment ownership/current joins, decomposed before implementation.
+
 ## _(2026-10-27 UTC)_ — joined actual Gather declarations
 
 0404 validates complete current sewing/root/landmark/graph/amount scope, then all supplied

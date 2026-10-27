@@ -3,6 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0405 — close scoped construction component acceptance
+
+- Unchanged Rust:74 source and13 higher-host declaration contracts pass0;87 native total.
+- Eight affected rustdoc filters pass13 privacy/lifetime checks; independent source census13 agrees.
+- Book reflects scoped acceptance; global garment/Design/runtime/physical/release proof remains pending.
+
 ## STITCHCAD-G1-0404 — borrow joined actual Gather declarations
 
 - Validate whole current sewing and supplied construction contexts before original Gather/span/side/amount/closing views.
