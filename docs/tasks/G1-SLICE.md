@@ -875,15 +875,15 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0389 focused layer/Hem acceptance; [whole proof](../history/stitchcad-devnotes-part541.md).
 - ID: `G1-SLICE.6.4.5.capacity`
-  Status: `in_progress`
+  Status: `done`
   Goal: director2026-10-27 delegates decision; preserve self-contained history via bounded generations.
 - ID: `G1-SLICE.6.4.5.capacity.proposal`
   Status: `done`
   Goal:0390 policy proposal; [whole proof](../history/stitchcad-devnotes-part541.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply`
-  Status: `in_progress`
+  Status: `done`
   Goal: self-contained generations; preserve old bytes and per-generation bounds before product .4.
-  Children: .design budget/source prototype; .cutover reader/transaction/retention; .accept focused clients.
+  Children: .design authority; .cutover strict reader/transaction; .accept authoring/clients/resources/gate.
 - ID: `G1-SLICE.6.4.5.capacity.apply.design`
   Status: `done`
   Goal:0391 finite generation authority; [whole proof](../history/stitchcad-devnotes-part541.md).
@@ -891,7 +891,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0392 installed bounded v3; [whole proof](../history/stitchcad-devnotes-part542.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept`
-  Status: `in_progress`
+  Status: `done`
   Goal: v3 authoring, current clients/permanent transaction smoke and resource proof before product .4.
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.authoring`
   Status: `done`
@@ -901,22 +901,19 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0394 original client predicates/transaction smoke; [whole proof](../history/stitchcad-devnotes-part544.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.resources`
   Status: `done`
-  Goal:0395 eight full groups and isolated CLI resource evidence; component acceptance separately owned.
-  - [x] REPRODUCE / ISSUE: generation_budget.py --self-test:finite8 groups/32000000B derived rc=0;
-    no full-capacity observation yet; D270 archived Apple units conflict with native evidence.
-  - [x] ROOT CAUSE (WHY + WHERE): primary kernel/CPython and native time/getrusage diagnostic rc=0:
-    modern Darwin bytes, Linux KiB; sole waited child isolates actual CLI from fixture construction.
-  - [x] FIX: v3_resource_contract.py:8 unit/inclusive/+1/refusal controls rc=0; native tar reconstructs
-    1330 records/33 backings,8×4000000B/128 windows/192 workingMD/457 files;458 refused0. Sources exact.
-  - [x] ADDRESSED: same:Darwin arm64/Python3.14.7 CLI122470400 RSS bytes/0.270086s rc=0,
-    within predeclared128MiB. Native time121847808B/0.22s; tracked --unit-oracle14729216B exact rc=0.
-  - [x] NO REGRESSION: history_archive.sh verify-retention:998 records/4023832 decodedB rc=0;
-    transition_receipts.py --record544:4 exact Git spans rc=0; no live archive swaps/Rust changes.
-  - [x] LOCKSTEP: book/publication/size rc=0; registered resource regression; promotion:
-    decision_history-generations.md. .accept.feature owns component gate; other-platform/CI deferred.
+  Goal:0395 full capacity/resource evidence; [whole proof](../history/stitchcad-devnotes-part545.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.feature`
-  Status: `pending`
-  Goal: focused archive feature gate after all implementations; close capacity before product .4.
+  Status: `done`
+  Goal:0396 focused archive feature gate after completed implementations; capacity activity closed.
+  - [x] ROOT CAUSE: git log -4 and archive entry source review rc=0:0392–0395 implementation complete;
+    combined component acceptance remained pending, separately from full CI/deep authority campaigns.
+  - [x] ADDRESSED: PYTHONUNBUFFERED=1 bash docs/tasks/artifacts/history_archive/run_history_archive_probes.sh
+    rc=0:legacy28/window1013/budget25+runtime4/reader46/authoring10+4/transaction27+identity all pass.
+    Resource8 controls and8×4M decoded/128 windows/192 workingMD/457 files pass;458 refused before decode.
+    Actual Darwin/Python3.14.7 CLI122716160 RSS bytes/0.320178s; no other-platform or universal SLA claim.
+  - [x] NO REGRESSION: same entry rc=0, exact original/public/source/ledger bytes and real recovery;
+    verify-retention/4-span545/book/publication/size rc=0. Promotion declined: existing authority covers scope.
+    Full CI/deep authority integration remains its owners; resume product .6.4.5.4.
 - ID: `G1-SLICE.6.4.5.4`
   Status: `pending`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.

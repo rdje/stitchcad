@@ -69,7 +69,7 @@ All but the last generation are sealed. New raw drafts belong only to the active
 unsealed until capture; all committed raw records still retain exact bytes. Orphans, shared ownership,
 duplicate identities, links, malformed indices and reordered/removed seals refuse. Earlier v1/v2
 schemas retain their original4MB/60000-line rules. Exhaustion requires a new retention decision. Append/seal/client/transaction checks pass. The full-decode fixture fits128MiB on Darwin/Python3.14.7;
-this regression target is no runtime OS limit or other-platform proof. Component gate pending.
+this regression target is no runtime OS limit or other-platform proof. Scoped component checks pass.
 
 ## Independent controls
 

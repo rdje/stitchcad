@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0395 — verify full decoded generation capacity and isolated CLI resources
+## STITCHCAD-G1-0396 — close scoped self-contained generation feature acceptance
 
-- Native tar confirms8×4000000B groups;128 windows/192 workingMD/457 files;458 refused, originals exact.
-- Darwin arm64/Python3.14.7 actual CLI122470400 RSS bytes/0.270086s within scoped128MiB target.
-- D270 unit evidence corrected locally;8 unit/boundary/refusal controls and native same-child oracle pass0.
-- Whole0394 evidence544 has4 exact Git spans0. Component feature gate next; broader platform/CI deferred.
+- Registered archive entry passes:legacy28/window1013/budget25+runtime4/reader46/authoring10+4/transaction27+identity.
+- Native full-capacity case8×4M/128 windows/192 workingMD/457 files passes;458 refused before decode.
+- Darwin/Python3.14.7 actual CLI122716160 RSS bytes/0.320178s within scoped128MiB target; originals exact.
+- Whole0395 evidence545 has4 exact Git spans0. Capacity closed; garment inputs next. Full CI/platform proof deferred.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part545](docs/history/stitchcad-devnotes-part545.md) | whole0395 resources/lesson/ledger/D270 | 51 lines, 4351 bytes, sha256:a34637eb… |
 | [part544](docs/history/stitchcad-devnotes-part544.md) | whole0394 clients/lesson/ledger/D269 | 52 lines, 4402 bytes, sha256:bf349af8… |
 | [part543](docs/history/stitchcad-devnotes-part543.md) | whole0393 authoring/lesson/ledger/D268 | 49 lines, 4080 bytes, sha256:a54d712a… |
 | [part542](docs/history/stitchcad-devnotes-part542.md) | whole0392 cutover/lesson/ledger/D263–D267 | 63 lines, 5599 bytes, sha256:be63d3c1… |

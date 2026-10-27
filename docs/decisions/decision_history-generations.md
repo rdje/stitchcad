@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-27`
-- **Status:** `active` — active v3 read/cutover authority; authoring available; resource case checked on Darwin; component feature acceptance remains owned.
+- **Status:** `active` — active v3 read/cutover authority; authoring available; scoped feature acceptance complete; full integration/platform proof remains separate.
 - **Owner / source:** G1-SLICE.6.4.5.capacity.apply; director delegates the decision and requires
   signoff/production quality.0391 selects self-contained retrieval over conditional Git receipts.
 
@@ -159,4 +159,13 @@ within the predeclared128MiB regression target. Native time separately measured1
 the tracked --unit-oracle gave exact same-child time/getrusage agreement14729216 bytes. Unit/boundary
 controls8 pass0. Earlier1167-record tracemalloc diagnostic found33324623 current/47814348 peak traced bytes and0 collected
 cycles; traced Python allocations and whole-process RSS are different observations. No universal
-population/latency/other-platform or hardware power-loss guarantee is inferred. Component gate next.
+population/latency/other-platform or hardware power-loss guarantee is inferred. Scoped component gate0396 passes; full integration remains separate.
+
+## Scoped feature closure0396
+
+The registered archive entry passes original legacy28/window1013, budget25/runtime4, reader46,
+authoring10+4, transaction27+identity and resource8 controls. Original/public/source/ledger bytes,
+process-interruption recovery and full real topology remain exact. Latest full-topology Darwin CLI
+measurement is122716160 RSS bytes/0.320178s; this stays a scoped regression observation. The capacity
+activity is complete; G1 garment input work resumes. No full repository CI, deep producer-authority,
+other-platform or power-loss verdict follows this component gate.

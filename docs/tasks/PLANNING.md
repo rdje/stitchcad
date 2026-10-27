@@ -1183,15 +1183,11 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 
 ## D270 — RSS unit evidence before capacity signoff
 
-Owner G1-SLICE.6.4.5.capacity.apply.accept.resources; immediate local mitigation. Archived Apple
-getrusage man page says kilobytes, contradicting modern Darwin behavior. XNU calcru assigns the
-resident-size maximum directly; native time -l and sole waited-child getrusage both14680064 bytes
-in the same observation rc=0. Linux man-pages specifies KiB. Record explicit normalized units and
-unknown-platform refusal; never multiply current Darwin by1024. External repository stays read-only.
+[Whole local mitigation/proofs0395](../history/stitchcad-devnotes-part545.md).
 
-- [x] ROOT CAUSE: primary-source/native same-child unit diagnostic rc=0:Darwin bytes, Linux KiB;
-  archived Apple unit text contradicted by current kernel and native time/getrusage agreement.
-- [x] ADDRESSED: v3_resource_contract.py:8 unit/boundary/refusal controls rc=0; --unit-oracle
- 14729216 bytes exact rc=0. No external writes; explicit unsupported-platform measurement refusal.
-- [x] NO REGRESSION: same full-capacity CLI121405440B/0.270896s,8×4000000 decodedB/native tar exact
-  rc=0; retention998/4-span544/book/publication/size rc=0. Other-platform observation remains unclaimed.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part545.md:
+  4 exact Git spans rc=0; completed source proofs
+  occupied live capacity, retained whole before retirement.
+- [x] ADDRESSED: same command rc=0; complete0395 resource task/lesson/ledger/D270 bytes retained.
+- [x] NO REGRESSION: archive entry legacy28/window1013/reader46/authoring10+4/transaction27+identity/
+  resource8/full topology rc=0; retention/book/publication/size rc=0. No full CI/platform claim.

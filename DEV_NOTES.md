@@ -3,20 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — full decoded capacity and isolated CLI resource evidence
+## _(2026-10-27 UTC)_ — complete scoped generation feature acceptance
 
-0395 independently reconstructs native tar bytes for1330 records/33 opaque backings; each of8 groups
-is exactly4000000 decodedB;128 windows/192 working Markdown/457 files are real. A458th file refuses
-before decode, then only the exclusively owned extra is removed. Fresh observer launches only the actual public CLI, avoiding constructor
-memory in its child counters. Darwin arm64/Python3.14.7 reports122470400 RSS bytes/0.270086s, within
-predeclared128MiB; native OS time corroborates121847808B/0.22s in a separate run. Eight unit/boundary/
-refusal controls0; tracked --unit-oracle gives14729216B exact same-child time/getrusage agreement.
-D270 resolved locally: archived Apple man-page units conflict with modern XNU; Darwin bytes and Linux
-KiB normalized explicitly, unknown platforms refuse. Earlier1167-record tracemalloc33324623 current/47814348 peak bytes
-and0 collected cycles measure a different domain from whole-process RSS. No general population or
-latency SLA, other-platform or power-loss proof inferred. Original live inputs unchanged;4-span544/
-retention998/book/publication/size0. Promotion: history-generations decision. Full component gate is
-separately owned .accept.feature before product .4; broader G1/platform/CI proof remains deferred.
+0396 runs the registered archive entry after0392–0395 implementation:legacy28/window1013/budget25+
+runtime4/reader46/authoring10+4/transaction27+identity and resource8 controls all pass0. Native bytes,
+Git cohorts, public materialization, real rename interruptions and exact recovery remain intact.
+The resource case simultaneously reaches8×4M decodedB,128 windows,192 working Markdown and457 real
+files;458 refuses before decode. Fresh Darwin/Python3.14.7 CLI122716160 RSS bytes/0.320178s fits the
+scoped128MiB target. This closes the finite self-contained retention activity; old v1/v2 caps and
+all original record/backing bytes remain. Full repository CI, deep authority and other-platform proof
+remain separately owned. Four-span545/retention/book/publication/size0. Promotion declined: existing
+generation authority covers the acceptance. Next actual garment Dart/fold/Gather/grain/allowance inputs.
+
+[Whole0395 resource lesson](docs/history/stitchcad-devnotes-part545.md) retains full topology, units and scoped memory evidence.
 
 [Whole0394 client lesson](docs/history/stitchcad-devnotes-part544.md) retains predicates, source scope and transaction proofs.
 
