@@ -3,15 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual layer Material assignments
+## _(2026-10-27 UTC)_ — owned current Hems and exact Facing joins
 
-0384 borrows original typed layers/Materials or exact unresolved reasons; complete current Materials,
-then all owner-id collisions, then exact targets in family order. Unknown/Derived properties unchanged.
-Four native/three privacy controls pass0, including canonical-context lifetime; strict affected lint/fmt/
-book/publication79/153 pass0. Existing inventory methods and Material/layer/Hem validators byte-identical.
-D250132 exact prior rows unchanged.535 retains whole0383/retirement/command-input lesson in5 exact Git
-spans0. Promotion declined: existing actual Material/source rules. Hem/Facing collections next;
-geometry/lining scope/global Design/physical/integration/CI remain separate.
+0385 owns original ordered HemInventory objects; complete supplied layer sources first, then every
+original owner/full finish/exact Facing through existing validators. Peer/kind/owner substitutions
+refuse; unused layer damage and later lost finish interiors keep concrete original causes/positions.
+Native5/privacy2, strict affected lint/fmt/book/publication79/155 pass0; D250132 exact rows unchanged.
+Original current validators/material queries byte-identical.536 retains whole0384/retirement/fixture
+plans in5 exact Git spans0. Promotion declined: existing current target/ownership rules. Known Hem/
+layer declarations next; Material/scope/global Design/physical/integration/CI remain separate.
+
+[Complete layer Material lesson](docs/history/stitchcad-devnotes-part536.md) retains
+its original scope, checks and promotion decision.
 
 [Complete layer inventory lesson](docs/history/stitchcad-devnotes-part535.md) retains
 its original scope, checks and promotion decision.

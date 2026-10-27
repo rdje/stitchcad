@@ -9,13 +9,16 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0384 — borrow actual current layer Material assignments
 
-- Whole current Materials/owner ids before exact family targets; original borrows/reasons/causes retained.
-- Unknown/Derived unchanged; native4/privacy3, strict affected lint/fmt/book/publication79/153 pass0.
-- D250132 unchanged; whole0383/retirement/command-input lesson535. Hem/Facing collections next.
+## STITCHCAD-G1-0385 — own complete current Hems and exact Facing joins
+
+- Private authored Hems; whole current layers before every original owner/finish/exact Facing target.
+- Original causes/positions, no substitutions; native5/privacy2, strict lint/fmt/book/publication pass0.
+- D250132 unchanged; whole0384/retirement/fixture plans536. Known Hem/layer declarations next.
 
 # Sealed archive — earlier slices
+
+| [part536](docs/history/stitchcad-devnotes-part536.md) | whole0384/retirement and historical fixture plans | 102 lines, 7800 bytes, sha256:2d552df5… |
 
 | [part535](docs/history/stitchcad-devnotes-part535.md) | whole0383/retirement/command-input lesson | 46 lines, 3650 bytes, sha256:ed44f60b… |
 

@@ -3,7 +3,8 @@
 use sc_core::ontology::{
     CuttingSide, DeterministicIdGenerator, DirectedEdge, DirectedRange, Direction, EdgeRange,
     EdgeRef, EntityId, Facing, GeometricValidation, Hem, HemDefinition, HemDepth, HemError,
-    HemFoldType, HemMethod, IdGenerator, IdentityLedger, LabelText, LayerDefinition, LayerError,
+    HemFoldType, HemInventory, HemInventoryError, HemMethod, IdGenerator, IdentityLedger,
+    Interfacing, LabelText, LayerDefinition, LayerError, LayerInventory, LayerInventoryError,
     LayerOffsetRelationship, LocalTag, MaterialAssignment, Mirroring, Param, Piece,
     PieceDefinition, ProfileBindingValidation, ProfileParameterRef, RangeIssue, RangePortion,
     Rational,
@@ -485,4 +486,234 @@ fn current_validation_follows_historical_finish_and_checks_original_owner_curren
         Err(HemError::OutsidePiece(f.piece.id()))
     );
     assert_eq!(hem.definition(), &input);
+}
+
+#[test]
+fn inventory_preserves_original_hem_order_identity_shared_objects_and_empty_scope() {
+    let f = fixture();
+    let facing = f.facing();
+    let first = f.hem(f.hem_definition(), None).unwrap();
+    let mut input = f.hem_definition();
+    input.id = EntityId::from_bits(210);
+    input.depth = HemDepth::Explicit {
+        parameter: EntityId::from_bits(211),
+        value: Length::from_micrometres(30000).unwrap(),
+    };
+    input.method = HemMethod::Faced {
+        facing: facing.id(),
+    };
+    let second = f.hem(input, Some(&facing)).unwrap();
+    let inventory = HemInventory::new(vec![second.clone(), first.clone()]).unwrap();
+    assert_eq!(inventory.hems(), &[second.clone(), first.clone()]);
+    assert!(core::ptr::eq(
+        inventory.hem(second.id()).unwrap(),
+        inventory.hems().first().unwrap()
+    ));
+    assert!(inventory.hem(EntityId::from_bits(999)).is_none());
+    assert_eq!(
+        HemInventory::new(vec![first.clone(), second.clone(), first.clone()]),
+        Err(HemInventoryError::DuplicateIdentity {
+            identity: first.id(),
+            first: 0,
+            duplicate: 2
+        })
+    );
+    let layers = LayerInventory::new(vec![facing], vec![], vec![]).unwrap();
+    inventory
+        .validate_current(&layers, std::slice::from_ref(&f.piece), &f.ledger)
+        .unwrap();
+    assert_eq!(
+        second.geometric_validation(),
+        GeometricValidation::DeferredToG2
+    );
+    let empty = HemInventory::new(vec![]).unwrap();
+    assert!(empty.hems().is_empty());
+    empty
+        .validate_current(
+            &LayerInventory::new(vec![], vec![], vec![]).unwrap(),
+            &[],
+            &f.ledger,
+        )
+        .unwrap();
+}
+
+#[test]
+fn inventory_keeps_original_hem_owner_and_refuses_ambiguous_current_pieces_even_when_empty() {
+    let f = fixture();
+    let hem = f.hem(f.hem_definition(), None).unwrap();
+    let inventory = HemInventory::new(vec![hem.clone()]).unwrap();
+    let layers = LayerInventory::new(vec![], vec![], vec![]).unwrap();
+    let mut input = f.piece.definition().clone();
+    input.id = EntityId::from_bits(901);
+    let other = Piece::new(input, &f.ledger).unwrap();
+    assert_eq!(
+        inventory.validate_current(&layers, std::slice::from_ref(&other), &f.ledger),
+        Err(HemInventoryError::MissingPiece {
+            index: 0,
+            hem: hem.id(),
+            piece: f.piece.id()
+        })
+    );
+    for collection in [&inventory, &HemInventory::new(vec![]).unwrap()] {
+        assert_eq!(
+            collection.validate_current(&layers, &[f.piece.clone(), f.piece.clone()], &f.ledger),
+            Err(HemInventoryError::Layers(Box::new(
+                LayerInventoryError::DuplicatePiece(f.piece.id())
+            )))
+        );
+    }
+}
+
+#[test]
+fn inventory_facing_joins_never_substitute_peers_other_layer_kinds_or_reassigned_owners() {
+    let f = fixture();
+    let facing = f.facing();
+    let mut input = f.hem_definition();
+    input.method = HemMethod::Faced {
+        facing: facing.id(),
+    };
+    let hem = f.hem(input, Some(&facing)).unwrap();
+    let inventory = HemInventory::new(vec![hem.clone()]).unwrap();
+    let mut input = f.definition.clone();
+    input.id = EntityId::from_bits(101);
+    let peer = Facing::new(input, &f.piece, &f.ledger).unwrap();
+    let same_id_other_kind = Interfacing::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    for layers in [
+        LayerInventory::new(vec![peer], vec![], vec![]).unwrap(),
+        LayerInventory::new(vec![], vec![], vec![same_id_other_kind]).unwrap(),
+    ] {
+        assert_eq!(
+            inventory.validate_current(&layers, std::slice::from_ref(&f.piece), &f.ledger),
+            Err(HemInventoryError::Hem {
+                index: 0,
+                hem: hem.id(),
+                issue: Box::new(HemError::MissingFacing(facing.id()))
+            })
+        );
+    }
+    let mut input = f.piece.definition().clone();
+    input.id = EntityId::from_bits(901);
+    let other = Piece::new(input, &f.ledger).unwrap();
+    let mut input = f.definition.clone();
+    input.served_piece = other.id();
+    let reassigned = Facing::new(input, &other, &f.ledger).unwrap();
+    let layers = LayerInventory::new(vec![reassigned], vec![], vec![]).unwrap();
+    assert_eq!(
+        inventory.validate_current(&layers, &[f.piece.clone(), other.clone()], &f.ledger),
+        Err(HemInventoryError::Hem {
+            index: 0,
+            hem: hem.id(),
+            issue: Box::new(HemError::FacingOutsidePiece {
+                facing: facing.id(),
+                expected: f.piece.id(),
+                served: other.id()
+            })
+        })
+    );
+}
+
+#[test]
+fn inventory_checks_unused_layer_sources_even_without_hems_and_keeps_concrete_cause_chain() {
+    use std::error::Error;
+    let mut f = fixture();
+    let unused = f.facing();
+    let hem = f.hem(f.hem_definition(), None).unwrap();
+    let hems = HemInventory::new(vec![hem.clone()]).unwrap();
+    let source = f.definition.offset.sources.first().unwrap().range.edge();
+    f.ledger.delete(&mut f.ids, source).unwrap();
+    hem.validate_current(&f.piece, &f.ledger, None).unwrap();
+    let layers = LayerInventory::new(vec![unused.clone()], vec![], vec![]).unwrap();
+    for inventory in [&hems, &HemInventory::new(vec![]).unwrap()] {
+        let issue = inventory
+            .validate_current(&layers, std::slice::from_ref(&f.piece), &f.ledger)
+            .unwrap_err();
+        let HemInventoryError::Layers(actual) = &issue else {
+            panic!("whole current layer cause")
+        };
+        let LayerInventoryError::Layer {
+            layer,
+            issue: original,
+            ..
+        } = actual.as_ref()
+        else {
+            panic!("original layer cause")
+        };
+        assert_eq!(*layer, unused.id());
+        assert!(matches!(
+            original.as_ref(),
+            LayerError::UnresolvedSource { index: 0, .. }
+        ));
+        let cause = issue.source().unwrap();
+        assert!(core::ptr::eq(
+            cause.downcast_ref::<LayerInventoryError>().unwrap(),
+            actual.as_ref()
+        ));
+        assert!(!cause.is::<Box<LayerInventoryError>>());
+        assert!(core::ptr::eq(
+            cause
+                .source()
+                .unwrap()
+                .downcast_ref::<LayerError>()
+                .unwrap(),
+            original.as_ref()
+        ));
+    }
+}
+
+#[test]
+fn inventory_checks_later_hem_full_finish_despite_live_endpoints_and_retains_held_damage() {
+    use std::error::Error;
+    let mut f = fixture();
+    let first = f.hem(f.hem_definition(), None).unwrap();
+    let edge = *f
+        .ledger
+        .declare_edges(&mut f.ids, 1)
+        .unwrap()
+        .first()
+        .unwrap();
+    let mut input = f.piece.definition().clone();
+    input.id = EntityId::from_bits(901);
+    input.boundary = vec![DirectedEdge {
+        edge,
+        direction: Direction::Original,
+    }];
+    input.construction_lines.clear();
+    let other = Piece::new(input, &f.ledger).unwrap();
+    let mut input = f.hem_definition();
+    input.id = EntityId::from_bits(210);
+    input.edge = edge;
+    input.depth = HemDepth::Explicit {
+        parameter: EntityId::from_bits(211),
+        value: Length::from_micrometres(30000).unwrap(),
+    };
+    let later = Hem::new(input.clone(), &other, &f.ledger, None).unwrap();
+    let parts = f.ledger.split(&mut f.ids, edge, t(1, 3)).unwrap();
+    let tail = f.ledger.split(&mut f.ids, parts.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, tail.first()).unwrap();
+    let inventory = HemInventory::new(vec![first.clone(), later.clone()]).unwrap();
+    first.validate_current(&f.piece, &f.ledger, None).unwrap();
+    let raw = later.edge_resolution(&f.ledger);
+    assert!(raw.start().resolved().is_some());
+    assert!(raw.end().resolved().is_some());
+    assert!(!raw.has_full_coverage());
+    let layers = LayerInventory::new(vec![], vec![], vec![]).unwrap();
+    let issue = inventory
+        .validate_current(&layers, &[f.piece.clone(), other], &f.ledger)
+        .unwrap_err();
+    let HemInventoryError::Hem {
+        index,
+        hem,
+        issue: actual,
+    } = &issue
+    else {
+        panic!("later original Hem cause")
+    };
+    assert_eq!((*index, *hem), (1, later.id()));
+    assert_eq!(actual.as_ref(), &HemError::UnresolvedEdge(Box::new(raw)));
+    assert!(core::ptr::eq(
+        issue.source().unwrap().downcast_ref::<HemError>().unwrap(),
+        actual.as_ref()
+    ));
+    assert!(!issue.source().unwrap().is::<Box<HemError>>());
+    assert_eq!(inventory.hem(later.id()).unwrap().definition(), &input);
 }

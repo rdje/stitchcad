@@ -1157,7 +1157,8 @@ Verified D261 original Hem layer-cause report and0381 red/green proof remain who
 [part533](../history/stitchcad-devnotes-part533.md); current chains preserve the original cause.
 [0382 report-retirement proof](../history/stitchcad-devnotes-part534.md).
 [0383 report-retirement proof](../history/stitchcad-devnotes-part535.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part535.md:
-  5 exact Git spans rc=0; completed0383/older lesson proof occupied live capacity.
-- [x] ADDRESSED: same receipt rc=0; whole task/lessons/ledger/retirement retained535.
-- [x] NO REGRESSION: scoped publication79/153/1454/2407 rc=0; book rc=0; D250132 exact rows0.
+[0384 report-retirement proof](../history/stitchcad-devnotes-part536.md).
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part536.md:
+  5 exact Git spans rc=0; completed0384/historical fixture proof occupied live capacity.
+- [x] ADDRESSED: same receipt rc=0; whole task/lesson/ledger/retirement/fixture plans retained536.
+- [x] NO REGRESSION: scoped publication79/155/1454/2408 rc=0; book rc=0; D250132 exact rows0.

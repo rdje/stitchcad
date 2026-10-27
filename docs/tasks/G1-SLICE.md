@@ -901,7 +901,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0382 shared current layer/Hem rules; [whole proof](../history/stitchcad-devnotes-part534.md).
 - ID: `G1-SLICE.6.4.5.3.c`
-  Status: `in_progress`
+  Status: `done`
   Goal: private actual layer/Hem collections, complete current sources and actual materials;
   stable Facing joins and explicit modelled lining/execution refusal.
   Children: .1 owned layer/source inventory; .2 actual Material assignments; .3 owned Hem/Facing joins.
@@ -910,26 +910,26 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0383 actual layer inventory; [whole proof](../history/stitchcad-devnotes-part535.md).
 - ID: `G1-SLICE.6.4.5.3.c.2`
   Status: `done`
-  Goal: actual current layer Material targets/unknown properties and original unresolved reasons.
-  Own original layer/Material borrows; whole current Materials first, layer/Material owner-id census,
-  then exact assignment targets/reasons in family order. Preserve unknown values, concrete causes,
-  no partial views and canonical-context lifetime. Geometry/lining/global joins stay separate.
-  Focused native/privacy/lint/book and whole0383 continuity535.
-  - [x] REPRODUCE / ISSUE: python3 Git-source comparison:ada5329 lacks layer assignment query rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): same comparison rc=0; held assigned ids need actual Material
-    targets/current properties. Existing inventory methods and Material/layer/Hem validators unchanged.
-  - [x] FIX: cargo clippy -p sc-core --test layer_contract -- -D warnings:rc=0;
-    whole Materials, owner-id census, exact ordered targets/reasons and concrete original causes.
-  - [x] ADDRESSED: cargo test -p sc-core --test layer_contract layer_material_:4/0 rc=0;
-    cargo test -p sc-core --doc ontology::layer_inventory:3/0 rc=0, including context lifetime.
-  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; source comparison rc=0;
-    glossary132 failures rc=1, exact prior D250 rows compare rc=0. No state/value defaults.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/153/1454/2407 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part535.md:5 exact spans rc=0.
-    promotion: declined (existing actual Material/source rules). Completed STITCHCAD-G1-0384.
+  Goal:0384 actual layer Materials; [whole proof](../history/stitchcad-devnotes-part536.md).
 - ID: `G1-SLICE.6.4.5.3.c.3`
-  Status: `pending`
+  Status: `done`
   Goal: private owned Hems, complete layers/current sources and stable same-Piece Facing joins.
+  Own exact Hem order/ids and held targets; whole actual layer sources first, then every Hem's
+  original owner/finish/Facing via existing validators. No cross-kind or peer Facing substitution.
+  Preserve concrete causes, empty draft scope and separate material/scope/declaration/G2/G3/G4 checks.
+  Focused native/privacy/lint/book and whole0384 continuity536.
+  - [x] REPRODUCE / ISSUE: python3 Git-source check:1733274 has no Hem inventory rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; individual Hems own no collection/all-layer
+    scope. Existing current validators/material queries remain byte-identical.
+  - [x] FIX: cargo clippy -p sc-core --test hem_contract -- -D warnings:rc=0;
+    private ordered Hems, whole layers then every original owner/finish/exact Facing, concrete causes.
+  - [x] ADDRESSED: cargo test -p sc-core --test hem_contract inventory_:5/0 rc=0;
+    cargo test -p sc-core --doc ontology::hem_inventory:2/0 rc=0.
+  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; source comparison rc=0;
+    glossary132 failures rc=1, exact prior D250 rows compare rc=0. No peer/kind/owner substitution.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/155/1454/2408 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part536.md:5 exact spans rc=0.
+    promotion: declined (existing current target/ownership rules). Completed STITCHCAD-G1-0385.
 - ID: `G1-SLICE.6.4.5.3.d`
   Status: `pending`
   Goal: actual known Hem depth/fold and layer operation roles; preserve logical/G2/G3/G4 owners.

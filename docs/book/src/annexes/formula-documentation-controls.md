@@ -33,25 +33,16 @@ product syntax behavior are unchanged; evaluator/API/MCP and release proof remai
 
 ## Copied-book and classifier-writer plans
 
-The context fixture module validates its own source, the local profile and the reference shell on
-import. Importing it creates no stores, copies or child processes. fixture_plan(activate=False)
-returns the complete validated plan without activation. The plan covers the whole book, all copied
-files/directories and the effective shell selectors. Unexpected old entries, links, nonregular inputs,
-hardlinked outputs and selected inputs or parts directories inside the replacement tree refuse before
-replacement. For example, FORMULA_PARTS_DIR pointing inside target/formula_inline_context/src refuses
-before deleting that directory, even when the selected grammar and examples point elsewhere.
+Importing the inline-context fixture creates no stores, copies or children. Its pure
+fixture_plan(activate=False) validates the complete book, outputs and effective child selectors before
+activation. Unexpected old entries, links, nonregular files, hardlinked outputs and selected inputs
+or parts directories inside the replacement tree refuse before deletion. Plans refresh before each
+copy, edit, child and log. Caller argv/selectors/environment survive; relative paths resolve from the
+repository root. Selector overrides can change authored fixture verdicts.
 
-contracts() activates prepared local stores, executes all thirteen original cases and rechecks the
-replacement before each copy. Copied inputs are validated before editing, then source and selector
-plans are refreshed before each shell child. Caller selectors and unrelated environment values are
-preserved; relative selectors resolve from the repository root. Overrides can change the expected
-verdicts in these authored fixtures. The ordinary command verifies the default complete copied book.
-
-The classifier writer is also inert on import. Its producing plan includes the fixture child's complete
-replacement tree, five logs and the single writable shell source. The child plan must pass before
-activation or classifier changes. Each source change, child and log receives a fresh plan. Both
-restoration paths validate the writable source alone, so an invalid late log cannot prevent restoration.
-Run the writer exclusively, with no other reference readers or source-mutating jobs:
+The classifier writer is inert on import and validates the complete child plan before activation or
+source changes. Each change/child/log receives a fresh plan; both restoration paths validate only the
+writable source, so a bad log cannot strand a mutation. Run the writer exclusively:
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_language/inline_context_contract.py
@@ -59,40 +50,27 @@ python3 -I -B docs/tasks/artifacts/formula_language/inline_context_mutations.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_inline_context_contract.py
 ```
 
-Invalid standalone plans print `local-environment: REFUSED — …` and exit2. Borrowed pure plans raise
-the shared provider's Refusal; unrelated assertion failures keep their original type. The watched
-last command exercises actual imports, producing calls, pure plans, child-failure restoration, guard
-removals and isolated filesystem faults. It also removes the actual nested old-entry guard to prove
-that refusal depends on that boundary. Intercepted children prove dispatch; the first two commands
-provide the separate thirteen real verdicts and five actual classifier assertion failures.
-These producer plans change no annotation, vocabulary, grammar or engine rule.
-
 ## Assertion reference and copied consumer plans
 
-The assertion module checks its own file, profile, shell and public signature loader before importing
-that loader. It then uses the loader's provider and Refusal class. Import and contracts() validate
-sources without creating stores, copying files or invoking a shell. The original262 assertion cases
-and eight compiled in-memory faults retain their thresholds, payloads and earlier-error precedence.
-
-consumer() prepares a complete plan for every book source, copied file, directory and false_closure.log.
-fixture_plan(activate=False) returns that plan without effects. Effective shell selectors are checked
-before replacement; selected files or parts directories inside the replacement refuse. Links,
-nonregular inputs, unexpected old entries and hardlinked outputs also refuse before activation.
-The replacement is rechecked before deletion, copied inputs before editing, source/selector plans
-before the child and the output plan before logging. Prepared stores, unrelated environment values,
-relative caller selectors and argv survive. Selector overrides can change the authored consumer verdict.
+Pure assertion imports/contracts freshly validate declared sources and share the provider's Refusal
+identity, with no stores, copies or children. Assertion thresholds, payloads and earlier-error
+precedence stay unchanged. Producing calls plan complete sources/copied trees/logs and effective
+selectors before activation, then recheck replacement, copied edits, child and output boundaries.
+Source/destination aliases and unsafe old entries refuse before effects; prepared stores, caller
+argv/environment and relative-selector rules remain intact.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/ci_environment/python_assertion_fixture_contract.py
 ```
 
-The first command supplies262 real reference cases, one actual copied-book refusal and eight intended
-body assertion failures. The second captures actual entry/helper bodies and dispatch, removes guards
-and exercises isolated filesystem refusals. Its intercepted child is dispatch evidence; it does not
-supply the first command's numerical result. Invalid CLI plans exit2 with the named local-environment
-refusal; borrowed pure calls raise the shared provider's Refusal. Assertion failures keep their original
-type. No reference source, grammar, threshold, diagnostic token or production engine rule changes.
+Invalid standalone plans exit2 with a named local-environment refusal; pure borrowed plans raise
+shared Refusal, and unrelated assertion errors keep their own type. Intercepted children prove
+dispatch boundaries; actual reference verdicts and compiled faults supply separate behavior evidence.
+Complete original inputs, examples, populations, guard faults and restoration receipts remain whole
+in `docs/history/stitchcad-devnotes-part536.md`; retrieve with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part536.md`.
+These plans change no source/reference rule, annotation, vocabulary, grammar or production engine.
 
 ## Binding fixture plans
 

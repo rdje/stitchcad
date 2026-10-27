@@ -24,6 +24,7 @@
 //! | [`gather`] | physical span-side binding and borrowed canonical intake/allocation | `.3c.4a.2b` |
 //! | [`grain`] | directed grainline and independent stripe/plaid references, deferred angles | `.3c.3b` |
 //! | [`hem`] | finish edge, depth/fold intent and stable current Facing links | `.3c.4b.2` |
+//! | [`hem_inventory`] | owned Hems and complete current layer/finish/Facing targets | `.6.4.5.3.c.3` |
 //! | [`layer`] | served layer/recipe/material intent; explicit lining execution-scope refusal | `.3c.4b.1` |
 //! | [`layer_inventory`] | owned layer families, complete current sources and separate lining scope | `.6.4.5.3.c.1` |
 //! | [`material`] | immutable metadata, current typed properties and unapplied shrinkage intent | `.6.4.2.d.3.2` |
@@ -54,6 +55,7 @@ pub mod fold;
 pub mod gather;
 pub mod grain;
 pub mod hem;
+pub mod hem_inventory;
 pub mod id;
 pub mod layer;
 pub mod layer_inventory;
@@ -141,6 +143,7 @@ pub use layer::{
 };
 
 pub use hem::{Hem, HemDefinition, HemDepth, HemError, HemFoldType, HemMethod};
+pub use hem_inventory::{HemInventory, HemInventoryError};
 pub use layer_inventory::{
     LayerInventory, LayerInventoryError, LayerInventoryPosition, LayerMaterialView, LayerRef,
 };

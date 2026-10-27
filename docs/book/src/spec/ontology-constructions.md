@@ -254,6 +254,33 @@ HemError exposes its original InvalidFacing LayerError through std::error::Error
 Chained diagnostic tools retain that same concrete error and its raw source-repair evidence.
 This changes no facing validation or stored intent; range evidence remains data, not a nested error.
 
+## Owned Hems and complete current Facing joins
+
+`HemInventory::new(hems)` owns exact authored order and rejects duplicate ids with both original
+positions. `hems()` and `hem(id)` borrow original objects, including held damage after edits; raw
+presence supplies no current certificate. An explicit empty collection is draft scope.
+
+`validate_current(layers, pieces, ledger)` first checks every supplied layer's current served/source
+scope, including unused layers, then each Hem's original Piece, complete finish edge and exact Facing
+through the existing Hem validator. Duplicate Pieces refuse even with no Hems. Missing owners never
+retarget to another Piece. A lost finish interior in a later Hem refuses even when both endpoints and
+an earlier Hem remain valid; the original position/id/concrete HemError and repair data are retained.
+
+Facing joins select only actual Facings. A removed Facing100 never transfers to surviving101, and
+Interfacing100 cannot stand in for it. A same-id Facing now serving another Piece also refuses.
+An unused damaged layer blocks the complete query even if all Hem targets are healthy or no Hems
+exist; its original LayerInventoryError/LayerError chain remains reachable. Objects and contexts are
+never rewritten or cached. Debug reports the Hem count without source content.
+
+For requested execution, apply layers.require_in_scope() first. Material assignment metadata remains
+its separate query; depth/fold declarations, global Design ids, physical folding and G2/G3/G4 proof
+remain separate. Current structural success grants no assembly or release readiness.
+
+| API token | Hem collection meaning |
+| --- | --- |
+| `HemInventory` | Private ordered actual Hems and complete current layer/finish/Facing checks |
+| `HemInventoryError` | Duplicate ids, original Layers cause, missing Piece or contextual Hem cause |
+
 ## Pocket placement and physical composition
 
 `PocketDefinition` binds a served physical copy and its source Piece, a held position anchor,
