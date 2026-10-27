@@ -1187,12 +1187,11 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 
 ## D271/D272 — current causes and derived census
 
-[Whole corrected reports/proofs0397](../history/stitchcad-devnotes-part547.md).
+[Whole corrected reports0397](../history/stitchcad-devnotes-part547.md); [whole retirement proof0398](../history/stitchcad-devnotes-part548.md).
 
 
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part547.md:
-  4 exact Git spans rc=0; completed0397 proofs occupied live capacity, retained whole before retirement.
-- [x] ADDRESSED: same rc=0; exact Dart/fold task/lesson/ledger/D271–D272 retained. A generic book
-  section marker reached the adjacent Layer introduction; all3619B restored from Git before verification.
-- [x] NO REGRESSION: Gather15 native/2 compile-fail/strict lint/fmt rc=0; book unchanged prefix/suffix
-  byte comparison, retention/book/publication/size rc=0. Broader component gate remains .4.f.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part548.md:
+  4 exact Git spans rc=0; completed0398 proofs occupied live capacity, retained whole before retirement.
+- [x] ADDRESSED: same command rc=0; complete Gather task/lesson/ledger/retirement retained548.
+- [x] NO REGRESSION: grain12/allowance11 native contracts, affected strict Clippy/fmt rc=0;
+  retention/book/publication/size and unchanged book prefix/suffix comparison rc=0. Broader gate .4.f.

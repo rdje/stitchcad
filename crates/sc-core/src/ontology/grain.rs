@@ -159,7 +159,14 @@ pub struct Grainline {
 /// Structural refusal, independent of actual geometry/angle evaluation.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum GrainlineError {
-    /// A born reference has missing intervals or unresolved endpoints.
+    /// Current validation cannot substitute another Piece for the held owner.
+    WrongPiece {
+        /// Original held owner.
+        held: EntityId,
+        /// Supplied current owner.
+        provided: EntityId,
+    },
+    /// A birth/current reference has missing intervals or unresolved endpoints.
     UnresolvedReference {
         /// Field carrying the reference.
         role: GrainReferenceRole,
@@ -177,6 +184,12 @@ pub enum GrainlineError {
 impl fmt::Display for GrainlineError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::WrongPiece { held, provided } => {
+                write!(
+                    f,
+                    "grainline held Piece {held} differs from current Piece {provided}"
+                )
+            }
             Self::UnresolvedReference { role, .. } => write!(
                 f,
                 "grainline {role:?} needs interval/endpoint repair or an explicit choice"
@@ -199,7 +212,29 @@ impl Grainline {
         piece: &Piece,
         ledger: &IdentityLedger,
     ) -> Result<Self, GrainlineError> {
-        for (role, reference) in references(&definition) {
+        let grain = Self {
+            piece: piece.id(),
+            definition,
+        };
+        grain.validate_current(piece, ledger)?;
+        Ok(grain)
+    }
+    /// Recheck the held owner and every complete current arrow/alignment/stripe/plaid source.
+    /// Historical traversal and raw choices/repairs stay unchanged; no angle is resolved or inferred.
+    /// # Errors
+    /// Returns the original owner refusal, then first complete range/ownership cause in role order.
+    pub fn validate_current(
+        &self,
+        piece: &Piece,
+        ledger: &IdentityLedger,
+    ) -> Result<(), GrainlineError> {
+        if self.piece != piece.id() {
+            return Err(GrainlineError::WrongPiece {
+                held: self.piece,
+                provided: piece.id(),
+            });
+        }
+        for (role, reference) in references(&self.definition) {
             let evidence = ledger.resolve_range(reference.range);
             if !evidence.has_full_coverage()
                 || evidence.start().resolved().is_none()
@@ -217,10 +252,7 @@ impl Grainline {
                 });
             }
         }
-        Ok(Self {
-            piece: piece.id(),
-            definition,
-        })
+        Ok(())
     }
     /// Stable grainline identity.
     #[must_use]

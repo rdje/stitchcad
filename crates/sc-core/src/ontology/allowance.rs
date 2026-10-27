@@ -72,6 +72,13 @@ pub struct SeamAllowance {
 /// Structural refusal of a descriptor; offset failure belongs to the G2 geometry engine.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum SeamAllowanceError {
+    /// Current validation cannot retarget a descriptor to a different Piece.
+    WrongPiece {
+        /// Original held owner.
+        held: EntityId,
+        /// Supplied current owner.
+        provided: EntityId,
+    },
     /// An authored width is negative; symbolic widths remain their owner's validation obligation.
     NegativeWidth(Length),
     /// Some positive interval is missing or an endpoint needs repair/choice.
@@ -82,6 +89,12 @@ pub enum SeamAllowanceError {
 impl fmt::Display for SeamAllowanceError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::WrongPiece { held, provided } => {
+                write!(
+                    f,
+                    "allowance held Piece {held} differs from current Piece {provided}"
+                )
+            }
             Self::NegativeWidth(value) => {
                 write!(f, "negative allowance width {} µm", value.as_micrometres())
             }
@@ -105,12 +118,34 @@ impl SeamAllowance {
         piece: &Piece,
         ledger: &IdentityLedger,
     ) -> Result<Self, SeamAllowanceError> {
-        if let AllowanceWidth::Explicit { value, .. } = definition.width {
+        let allowance = Self {
+            piece: piece.id(),
+            definition,
+        };
+        allowance.validate_current(piece, ledger)?;
+        Ok(allowance)
+    }
+    /// Recheck the held owner, original explicit width domain and complete current whole-edge source.
+    /// Held edge/corner/profile intent is unchanged; no width, inclusion policy or offset is resolved.
+    /// # Errors
+    /// Returns the original owner/width refusal, then complete current interval/endpoint or scope cause.
+    pub fn validate_current(
+        &self,
+        piece: &Piece,
+        ledger: &IdentityLedger,
+    ) -> Result<(), SeamAllowanceError> {
+        if self.piece != piece.id() {
+            return Err(SeamAllowanceError::WrongPiece {
+                held: self.piece,
+                provided: piece.id(),
+            });
+        }
+        if let AllowanceWidth::Explicit { value, .. } = self.definition.width {
             if value.as_micrometres() < 0 {
                 return Err(SeamAllowanceError::NegativeWidth(value));
             }
         }
-        let evidence = ledger.resolve_range(EdgeRange::whole(definition.edge));
+        let evidence = ledger.resolve_range(EdgeRange::whole(self.definition.edge));
         if !evidence.has_full_coverage()
             || evidence.start().resolved().is_none()
             || evidence.end().resolved().is_none()
@@ -120,10 +155,7 @@ impl SeamAllowance {
         if !range_is_owned(&evidence, piece, ledger) {
             return Err(SeamAllowanceError::OutsidePiece(piece.id()));
         }
-        Ok(Self {
-            piece: piece.id(),
-            definition,
-        })
+        Ok(())
     }
     /// Stable descriptor identity.
     #[must_use]

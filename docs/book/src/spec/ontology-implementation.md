@@ -280,80 +280,86 @@ but makes no garment-assembly completeness claim. The contract is recorded in
 | `BetweenNotches` | Allocation between two named notch stops |
 | `StopLandmark` | Semantic stop identity on an explicit side |
 
-**Directed grainlines (`G1-SLICE.3c.3b`).** `Grainline::new` takes immutable semantic input,
-a named Piece and the identity ledger. `GrainlineDefinition` carries a directed arrow range,
-explicit `GrainAlignment` and independent optional stripe/plaid ranges. Every reference must resolve
-with complete owned positive-length coverage and unique endpoints; unknown edges, interval repairs,
-ambiguous endpoints and foreign portions are typed `GrainlineError`s naming the affected field.
-G1 does not prove that a held range is a straight line or satisfies its angular intent.
+**Directed grainlines (`G1-SLICE.3c.3b`).** `Grainline::new` takes a definition, named Piece
+and identity ledger. Immutable content holds directed arrow, explicit alignment and independent
+optional stripe/plaid ranges. Every reference needs complete owned positive intervals and unique
+endpoints. Unknown edges, repairs, ambiguous endpoints and foreign portions are typed field-specific
+refusals. Valid structural references prove neither straightness nor angular alignment.
 
-`ParallelTo` states codirection. `AtAngle` carries an explicit directed reference plus `GrainAngle`:
-an authored Angle, formula declaration or profile declaration. A 45° angle expresses bias and 180°
-expresses antiparallel intent without collapsing a directed arrow to an undirected axis. Formula and
-profile identities supply no angle values here. Present profile bindings report `DeferredToG4`;
-absence of such a binding means only that the definition has no profile angle field. G2 must consume
-resolved values and prove the actual angular relation/straightness. Every grainline reports
+`ParallelTo` states codirection. `AtAngle` carries a directed reference and `GrainAngle`: authored
+Angle or formula/profile declaration. 45° bias and 180° antiparallel alignment remain directed intent. Symbolic
+ids provide no angle value. Present profile bindings report DeferredToG4; None means no profile angle
+field. G2 consumes resolved values and proves actual straightness/angle; every grainline reports
 `GeometricValidation::DeferredToG2`.
 
-For example, an authored reversed arrow along a source edge starts at parameter 1 and ends at 0.
-After that edge is split, `DirectedRangeResolution::portions()` traverses the second fragment before
-the first and composes the authored reversal with each fragment's journal direction. Reversing the
-source edge reflects point parameters and toggles that composed traversal, preserving the held arrow.
-Deleting an interior fragment retains a repair in its proper traversal position; neither surviving
-endpoint can hide it. `evidence()` retains the unmodified whole-range and separate point answers,
-including split choices. Directed `start()`/`end()` select the authored endpoints, without picking a
-split side. The definition is never automatically rewritten.
+A reversed arrow starts at source parameter 1 and ends at 0. After splitting, directed `portions()`
+visits the second fragment first and composes authored traversal with journal reversal. Reversing
+an edge reflects point parameters and toggles composed traversal without rewriting the held arrow.
+A deleted interior remains an ordered repair despite live endpoints. `evidence()` preserves raw
+whole-range and separate point answers, including split choices; directed `start()`/`end()` select
+only authored endpoints, never a split side.
 
-Stripe and plaid references are independent fields, each directed and validated. Omitting either is
-explicit. Deliberately using coincident references is legal authored content, not evidence of angular
-or print alignment. The constructor shares sewing's whole-interval ownership check, so a merged
-foreign remainder is refused after reversal too. The structural/geometric grain boundary is recorded
-in `decision_ontology-invariants-structural-g1-geometric-g2.md`.
+Stripe/plaid fields are independently directed and validated. Omission is explicit; coincident
+references are legal intent, without angular/print proof. Whole-interval ownership rejects a merged
+foreign remainder after reversal. The structural/geometric boundary remains in the ontology decision.
 
-| API token | Meaning in the grainline implementation |
+**Current grain (`G1-SLICE.6.4.5.4.c`).** `validate_current(piece, ledger)` requires the original
+Piece id, then reuses the constructor rules in arrow/alignment/stripe/plaid order. A historical split
+or reversal does not retarget or rewrite content. A later plaid interior loss refuses with its actual
+role and full raw evidence even when earlier sources and both endpoints remain valid. Angle origins
+stay unread; current sources grant no angular, physical or whole Design readiness.
+
+| API token | Grainline meaning |
 | --- | --- |
 | `DirectedRange` | Held positive interval plus authored traversal |
-| `DirectedRangeResolution` | Raw range evidence plus directed traversal view |
+| `DirectedRangeResolution` | Raw range evidence plus directed traversal |
 | `GrainlineDefinition` | Editable arrow, alignment and optional print references |
-| `GrainlineError` | Field-specific unresolved/foreign-reference refusal |
+| `GrainlineError` | Held-owner or field-specific source refusal |
 | `GrainAlignment` | Explicit codirection or angle intent |
 | `GrainAngle` | Explicit, formula or profile angle source |
 | `ParallelTo` | Explicit codirected alignment intent |
-| `AtAngle` | Declared angle from a directed reference to the arrow |
-| `DeferredToG4` | Profile declaration identity held without resolved value validation |
+| `AtAngle` | Declared angle from directed reference to arrow |
+| `DeferredToG4` | Profile identity without resolved value validation |
 
-**Per-edge allowance descriptors (`G1-SLICE.3c.3c`).** `SeamAllowance::new` holds a source
-Piece's whole edge, width origin, explicit corner and mandatory logical inclusion declaration. Unknown,
-orphaned or ambiguous references and foreign current intervals are typed refusals. Whole-interval
-coverage matters: after a merge, owned endpoints cannot conceal a foreign middle segment. Split,
-merge, reversal and deletion queries expose the raw interval/endpoint evidence and never rewrite the
-held descriptor or attach it to a replacement edge.
+**Per-edge allowance descriptors (`G1-SLICE.3c.3c`).** `SeamAllowance::new` holds the named
+Piece's whole edge, width origin, explicit corner and mandatory logical inclusion declaration.
+Unknown/orphaned/ambiguous or foreign current intervals refuse. Owned endpoints cannot conceal a
+foreign middle after merge. `edge_resolution()` retains raw split/merge/reversal/deletion evidence;
+held descriptors never attach themselves to a replacement edge.
 
-An explicit width carries both its authored parameter id and nonnegative Length. An authored zero is
-legal explicit content, not an inferred absence or a fallback; the fixture's fold and fused interfacing
-retain their absent allowance descriptors. Formula/profile width sources carry only declaration ids,
-without evaluated values or copied uncertainty states. For example, distinct side-seam edges may share
-one 10 000 µm width parameter while the hem names a 30 000 µm source and an envelope corner. Each
-edge keeps its own descriptor identity and corner choice. Miter, slant, envelope, trim and step are
-intent here; none constructs an offset until G2.
+Explicit width holds its parameter id and nonnegative Length. Authored zero is legal content,
+without inferring an absent descriptor or default. The fixture's fold/fused interfacing retain absent
+allowances. Formula/profile widths hold declaration ids without values or copied uncertainty. Distinct
+side-seam descriptors may share a 10 000 µm parameter while the hem names 30 000 µm and an envelope
+corner; ids/corner choices remain per edge. Miter, slant, envelope, trim and step are intent, with
+actual offsets deferred to G2.
 
-Inclusion carries a mandatory ProfileParameterRef, with possible resolved policy vocabulary
-`IncludedInContour` and `GeneratedDownstream`. The design can retain one logical declaration while
-two target profiles resolve it differently. G1 returns no resolved policy, cached flag, global boolean
-or exported contour. Every descriptor reports `ProfileBindingValidation::DeferredToG4` and
-`GeometricValidation::DeferredToG2`. `.5`/`.6` and G4 validate parameter existence, kinds, values and
-states; G2-2D.2/.3 owns bounded offsets, corner geometry, logged topology repair and pathology tests.
-The release matrix still gives unknown ownership/width a preview badge, draft sidecar and production
-block; no unread binding produces a default. The fixture's five pieces and goldens remain unchanged.
+Inclusion is a mandatory ProfileParameterRef. The vocabulary includes `IncludedInContour` and
+`GeneratedDownstream`; two target profiles may resolve one logical declaration differently. G1
+selects no policy, cached flag, global boolean or exported contour. Every descriptor reports
+`ProfileBindingValidation::DeferredToG4` and `GeometricValidation::DeferredToG2`. .5/.6/G4 check
+parameter existence/kinds/values/states; G2-2D.2/.3 owns bounded offsets, corners, logged topology
+repair and pathology tests. The release contract retains preview badges, draft sidecars and production
+blocks for unknown ownership/width. Unread bindings never default; the five-piece fixture/goldens stay unchanged.
 
-| API token | Meaning in the allowance implementation |
+**Current allowances (`G1-SLICE.6.4.5.4.c`).** `validate_current(piece, ledger)` requires the held
+Piece id, preserves explicit-width validation order and rechecks the complete current whole edge.
+A deleted middle returns the complete original repair despite live endpoints. Width/corner/inclusion
+intent stays unchanged and unresolved; another Piece with identical geometry cannot substitute.
+
+```rust,ignore
+grain.validate_current(&piece, &ledger)?;
+allowance.validate_current(&piece, &ledger)?;
+```
+
+| API token | Allowance meaning |
 | --- | --- |
-| `AllowanceWidth` | Explicit authored parameter/value, formula declaration or profile declaration |
+| `AllowanceWidth` | Explicit parameter/value, formula declaration or profile declaration |
 | `CornerTreatment` | Authored miter/slant/envelope/trim/step intent |
-| `AllowanceInclusion` | Possible target-profile inclusion vocabulary, without a G1 selection |
-| `IncludedInContour` | Resolved policy includes allowance in the contour |
-| `GeneratedDownstream` | Resolved policy delegates allowance generation to the receiver |
+| `AllowanceInclusion` | Target-profile vocabulary without a G1 selection |
+| `IncludedInContour` | Resolved policy includes allowance in contour |
+| `GeneratedDownstream` | Resolved policy delegates generation to receiver |
 | `SeamAllowanceDefinition` | Editable per-edge descriptor input |
-| `SeamAllowanceError` | Typed negative-width or unresolved/foreign-edge refusal |
+| `SeamAllowanceError` | Held-owner, negative-width or whole-source refusal |
 
 [Structural object-family review](ontology-review.md) records the completed scope and remaining proofs.

@@ -82,7 +82,7 @@ than roadmap clauses is expected (a tree may split one clause into several leave
 **`G1-SLICE.4c.3`** chart/body/break structural input scope closes in0310 after D230/D231 repairs.
 Current SizeSet inputs preserve explicit garment/MTM provenance, canonical sources and typed paths.
 0321 closes structural measurement/Ease/SizeSet acceptance; G1 progress6/18.
-0398 current Gather joins complete; next .6.4.5.4.c current grain/allowance sources.
+0399 current grain/allowance sources complete; next .6.4.5.4.d owned six-family scope.
 D250 baseline glossary declarations remain owned after .6.9 and before integration/pre-push.
 Live v3 retention/authoring/recovery and scoped full-capacity checks pass; full integration remains owned.
 Command-class schemas follow canonical inputs.

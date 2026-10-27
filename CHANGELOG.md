@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0398 — validate selected current Gather joins before borrowing intake
+## STITCHCAD-G1-0399 — validate current grainline and allowance source scope
 
-- Preserve held owner/copy and full attachment/direction sources; borrow exact graph declaration only after checks.
-- View lifetimes hold all supplied contexts; formula/profile origins stay unread and whole graph validation stays separate.
-- Native15/compile-fail2/strict lint/fmt pass0; original helper and unrelated book bytes exact.
-- Whole0397 evidence547 retains4 exact Git spans; current-source examples and scope documented.
+- Preserve held Piece ids, complete current directed print sources and whole allowance edges.
+- Historical split/reversal and lost interiors retain exact intent/evidence; no angle/width/policy value resolved.
+- Native grain12/allowance11/strict lint/fmt pass0; book current-source examples and scopes synchronized.
+- Whole0398 evidence548 has4 exact Git spans; unrelated book bytes exact. Owned families/declarations next.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part548](docs/history/stitchcad-devnotes-part548.md) | whole0398 Gather/lesson/ledger/retirement | 49 lines, 3992 bytes, sha256:3ad1969e… |
 | [part547](docs/history/stitchcad-devnotes-part547.md) | whole0397 Dart/fold/lesson/ledger/D271–D272 | 51 lines, 4366 bytes, sha256:bc36c3de… |
 | [part546](docs/history/stitchcad-devnotes-part546.md) | whole0396/retirement/syntax/SizeSet parents | 71 lines, 5361 bytes, sha256:40e26a2a… |
 | [part545](docs/history/stitchcad-devnotes-part545.md) | whole0395 resources/lesson/ledger/D270 | 51 lines, 4351 bytes, sha256:a34637eb… |

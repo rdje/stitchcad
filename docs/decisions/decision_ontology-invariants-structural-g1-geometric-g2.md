@@ -15,6 +15,8 @@ answers: "does current Dart validation require its historical apex edge to stay 
 
 answers: "does a current Gather intake view check the physical copy and hold all current contexts?"
 
+answers: "do current grainline and allowance checks preserve held owners and unresolved profile intent?"
+
 ## The fact / decision
 
 At gate **G1**, `sc-core`'s ontology types enforce the invariants that need **no 2D predicate**: a `Piece`'s
@@ -154,3 +156,13 @@ while the view is used. No independently copied amount/state, symbolic fallback 
 introduced. Standalone plan and graph queries keep their original independent meanings. Whole graph
 spans, stops, landmarks/distributions and complete Design ownership remain their actual validators'
 obligations. No numeric, physical intake or release certificate follows selected current joins.
+
+## Current grain/allowance sources — G1-SLICE.6.4.5.4.c
+
+Grainline and SeamAllowance now share constructor/current structural rules. Current validation first
+requires the held Piece id, then complete intervals/unique endpoints/owned scope in original order.
+Historical split/reversal references remain held; later print or whole-edge interior damage returns
+original role/evidence even with live endpoints. Angle, width, corner and inclusion origins remain
+unchanged; no symbolic/default value or target policy is resolved. Source success grants no angle,
+print alignment, offset, whole Design or production approval. Collections/declaration roles/global
+identity remain subsequent .4/.5 work.

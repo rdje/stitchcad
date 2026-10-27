@@ -326,3 +326,67 @@ fn a_reversed_reference_retains_raw_evidence_and_every_role_reports_repairs() {
     assert_eq!(resolved.evidence().repairs().count(), 1);
     assert!(resolved.start().resolved().is_none());
 }
+
+#[test]
+fn current_grain_follows_split_reversal_without_changing_held_angle_or_print_sources() {
+    let mut f = fixture();
+    f.definition.alignment = GrainAlignment::AtAngle {
+        reference: f.definition.alignment.reference(),
+        angle: GrainAngle::Profile(ProfileParameterRef::new(EntityId::from_bits(901))),
+    };
+    let grain = f.grain().unwrap();
+    let held = grain.definition().clone();
+    let parts = f
+        .ledger
+        .split(&mut f.ids, held.arrow.range.edge(), t(1, 2))
+        .unwrap();
+    f.ledger.reverse(&mut f.ids, parts.second()).unwrap();
+    assert!(!f.ledger.is_live(held.arrow.range.edge()));
+    assert_eq!(grain.validate_current(&f.piece, &f.ledger), Ok(()));
+    assert_eq!(grain.definition(), &held);
+    assert_eq!(
+        grain.profile_binding_validation(),
+        Some(ProfileBindingValidation::DeferredToG4)
+    );
+    assert_eq!(
+        grain.geometric_validation(),
+        GeometricValidation::DeferredToG2
+    );
+}
+
+#[test]
+fn current_grain_keeps_a_later_plaid_interior_repair_despite_live_endpoints() {
+    let mut f = fixture();
+    let grain = f.grain().unwrap();
+    let held = grain.definition().plaid.unwrap().range;
+    let first = f.ledger.split(&mut f.ids, held.edge(), t(1, 3)).unwrap();
+    let second = f.ledger.split(&mut f.ids, first.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, second.first()).unwrap();
+    let expected = f.ledger.resolve_range(held);
+    assert!(expected.start().resolved().is_some() && expected.end().resolved().is_some());
+    assert_eq!(expected.repairs().count(), 1);
+    assert_eq!(
+        grain.validate_current(&f.piece, &f.ledger),
+        Err(GrainlineError::UnresolvedReference {
+            role: GrainReferenceRole::Plaid,
+            evidence: Box::new(expected)
+        })
+    );
+    assert_eq!(grain.definition(), &f.definition);
+}
+
+#[test]
+fn current_grain_never_substitutes_another_piece_with_identical_geometry() {
+    let f = fixture();
+    let grain = f.grain().unwrap();
+    let mut definition = f.piece.definition().clone();
+    definition.id = EntityId::from_bits(777);
+    let other = Piece::new(definition, &f.ledger).unwrap();
+    assert_eq!(
+        grain.validate_current(&other, &f.ledger),
+        Err(GrainlineError::WrongPiece {
+            held: f.piece.id(),
+            provided: other.id()
+        })
+    );
+}

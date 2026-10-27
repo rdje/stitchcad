@@ -3,19 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — selected current Gather joins and borrowed intake
+## _(2026-10-27 UTC)_ — current grainline and seam-allowance sources
 
-0398 shares original Gather target/sign/range rules between birth and current validation; held Piece
-identity must match. The joined intake query returns the exact graph's DeclaredEase only after current
-copy/attachment/direction checks pass. Graph-only queries keep their independent meaning. All supplied
-contexts remain borrowed while the view is used; source amounts/states are neither copied nor resolved.
-Native15 covers signed sides/origins, absent held copy, same-Piece copy retarget, substituted owner and
-both lost interiors with live endpoints;2 compile-fail/lint/fmt pass0. Original target/sign helpers stay
-byte-exact. Whole graph spans/stops/landmarks/allocation and full Design checks remain their actual
-owners; no readiness/execution claim. A broad book section marker reached the Layer introduction;
-3619B restored from Git, and every byte outside Gather is exact. Whole0397 scopes547 retain4 exact
-Git spans; retention/book/publication/size0. Promotion: ontology structural decision. Grain/allowance,
-owned family scope, declaration roles and coupled root identity remain next.
+0399 reuses original constructor rules for current Grainline/SeamAllowance checks, requiring the held
+Piece identity before full source validation. Historical split/reversal remains held; later plaid
+or whole-edge lost interior returns original role/raw evidence despite live endpoints. Angle, width,
+corner and inclusion origins stay exact and unresolved; no symbolic value/default or physical offset
+is produced. Native grain12/allowance11, affected strict lint/fmt/book/publication pass0; original
+cases remain included. Explicit family anchors preserve every unrelated book prefix/suffix byte.
+Whole0398 scopes548 retain4 exact Git spans; retention/size0. Promotion: ontology structural decision.
+Owned ordered families/full current scope, actual declaration roles and coupled garment identities
+remain .4.d/.e/.5; broader component acceptance remains .4.f and integration/CI later.
+
+[Whole0398 Gather lesson](docs/history/stitchcad-devnotes-part548.md) retains source/lifetime scope and book preservation evidence.
 
 [Whole0397 current Dart/fold lesson](docs/history/stitchcad-devnotes-part547.md) retains source/priority/chain fixes and census evidence.
 

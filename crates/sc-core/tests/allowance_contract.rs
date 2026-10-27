@@ -306,3 +306,63 @@ fn a_merged_edge_with_owned_endpoints_and_foreign_middle_is_not_an_owned_allowan
         Err(SeamAllowanceError::OutsidePiece(f.piece.id()))
     );
 }
+
+#[test]
+fn current_allowance_follows_a_historical_edge_and_preserves_width_corner_and_inclusion() {
+    let mut f = fixture();
+    f.definition.width =
+        AllowanceWidth::Profile(ProfileParameterRef::new(EntityId::from_bits(301)));
+    f.definition.corner = CornerTreatment::Envelope;
+    let allowance = f.allowance().unwrap();
+    let held = allowance.definition().clone();
+    let parts = f.ledger.split(&mut f.ids, held.edge, t(1, 2)).unwrap();
+    f.ledger.reverse(&mut f.ids, parts.first()).unwrap();
+    assert!(!f.ledger.is_live(held.edge));
+    assert_eq!(allowance.validate_current(&f.piece, &f.ledger), Ok(()));
+    assert_eq!(allowance.definition(), &held);
+    assert_eq!(
+        allowance.profile_binding_validation(),
+        ProfileBindingValidation::DeferredToG4
+    );
+    assert_eq!(
+        allowance.geometric_validation(),
+        GeometricValidation::DeferredToG2
+    );
+}
+
+#[test]
+fn current_allowance_keeps_full_interior_repair_evidence_despite_live_endpoints() {
+    let mut f = fixture();
+    let allowance = f.allowance().unwrap();
+    assert_eq!(allowance.validate_current(&f.piece, &f.ledger), Ok(()));
+    let first = f
+        .ledger
+        .split(&mut f.ids, allowance.definition().edge, t(1, 3))
+        .unwrap();
+    let second = f.ledger.split(&mut f.ids, first.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, second.first()).unwrap();
+    let expected = allowance.edge_resolution(&f.ledger);
+    assert!(expected.start().resolved().is_some() && expected.end().resolved().is_some());
+    assert_eq!(expected.repairs().count(), 1);
+    assert_eq!(
+        allowance.validate_current(&f.piece, &f.ledger),
+        Err(SeamAllowanceError::UnresolvedEdge(Box::new(expected)))
+    );
+    assert_eq!(allowance.definition(), &f.definition);
+}
+
+#[test]
+fn current_allowance_never_retargets_the_same_edge_to_another_piece() {
+    let f = fixture();
+    let allowance = f.allowance().unwrap();
+    let mut definition = f.piece.definition().clone();
+    definition.id = EntityId::from_bits(777);
+    let other = Piece::new(definition, &f.ledger).unwrap();
+    assert_eq!(
+        allowance.validate_current(&other, &f.ledger),
+        Err(SeamAllowanceError::WrongPiece {
+            held: f.piece.id(),
+            provided: other.id()
+        })
+    );
+}
