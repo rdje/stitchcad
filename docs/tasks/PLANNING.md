@@ -8,13 +8,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D289 — repeated opaque source-host copies during candidate preparation
-P2 fixed0441, owner G1-SLICE.6.8.2.2.1: copied inner owners are consumed through private helpers.
-- [x] ROOT CAUSE: native cargo test -p sc-measure --test design_inputs_contract command_bus::resource_copies:
-  0 passed/1 failed rc=101; actual source-host counts3/3/2 exceed required1/1/1.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:46 passed rc=0;
-  actual individual1/1/1, group preview3/commit4, replay/Undo/Redo0 and original Piece address verified.
-- [x] NO REGRESSION: selected strict Clippy/fmt rc=0; affected compiler privacy3/4/4 passed rc=0.
+## D290 — metadata publication recopies the complete unused identity reserve
+P2 fixed0442, owner G1-SLICE.6.8.2.2.2.1: shared immutable backing and checked forward prefix.
+- [x] ROOT CAUSE: python3 -I -B native reserve/caller census prints remaining.to_vec() even for count0 rc=0.
+- [x] ADDRESSED: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0; native bus46 passed rc=0;
+  expanded prefix/exhaustion checks and actual cancellation/replay/undo/branch nonreuse preserved.
+- [x] NO REGRESSION: selected strict core/native Clippy and fmt finished rc=0; backing-copy census0 rc=0.
+D291 P2 fixed0442 same owner: standalone Notch example policy-install count0/1 rc=0; explicit setup added.
+D289 fixed0441; [whole native source-copy diagnosis/fix/privacy proof](../history/stitchcad-devnotes-part593.md).
 D287/D288 fixed0440; [whole native bypass/fix and package metadata proof](../history/stitchcad-devnotes-part592.md).
 D285 runtime fixed0437; persistence/reopen issuance/order remains owned/pending in G1-SLICE.7.
 [Whole D285/D286 diagnosis and verified runtime/claim closure](../history/stitchcad-devnotes-part591.md).

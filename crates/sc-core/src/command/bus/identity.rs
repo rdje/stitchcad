@@ -4,7 +4,7 @@ use crate::{
     ontology::{EntityId, IdError, IdGenerator},
 };
 use core::fmt;
-use std::collections::BTreeMap;
+use std::{collections::BTreeMap, sync::Arc};
 
 /// Invalid trusted application identity-reserve configuration, before constructing the bus.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -37,8 +37,10 @@ impl std::error::Error for CommandIdentityError {}
 
 #[derive(Default)]
 pub(super) struct IdentityReserve {
-    // Only a future atomic publication may remove consumed identities. Never rewind for undo.
-    identities: Vec<EntityId>,
+    // One immutable backing remains for this bus lifetime. Publication advances only the prefix;
+    // staging/replay/undo cannot rewind it, and publication never recopies unused identities.
+    identities: Arc<[EntityId]>,
+    consumed: usize,
 }
 impl IdentityReserve {
     pub(super) fn new<H: DesignReferenceHost>(
@@ -68,25 +70,35 @@ impl IdentityReserve {
                 });
             }
         }
-        Ok(Self { identities })
+        Ok(Self {
+            identities: identities.into(),
+            consumed: 0,
+        })
     }
     pub(super) fn stage(&self) -> IdentityStage<'_> {
+        let remaining = self.identities.iter().skip(self.consumed);
+        let initial_len = remaining.len();
         IdentityStage {
-            remaining: self.identities.iter(),
-            initial_len: self.identities.len(),
+            remaining,
+            initial_len,
         }
     }
     // Build the publication reserve before changing the original owner. Refuse a bound failure.
     pub(super) fn after_consuming(&self, count: usize) -> Option<Self> {
-        self.identities.get(count..).map(|remaining| Self {
-            identities: remaining.to_vec(),
+        let consumed = self.consumed.checked_add(count)?;
+        if consumed > self.identities.len() {
+            return None;
+        }
+        Some(Self {
+            identities: Arc::clone(&self.identities),
+            consumed,
         })
     }
 }
 
 // An iterator owns its position and borrows immutable values. No Clone contract can alias a cursor.
 pub(super) struct IdentityStage<'a> {
-    remaining: core::slice::Iter<'a, EntityId>,
+    remaining: core::iter::Skip<core::slice::Iter<'a, EntityId>>,
     initial_len: usize,
 }
 impl IdentityStage<'_> {
@@ -109,7 +121,8 @@ mod tests {
     fn staged_cursor_exhausts_without_advancing_other_cursors_or_original_reserve() {
         let last = EntityId::from_bits(u128::MAX);
         let reserve = IdentityReserve {
-            identities: vec![EntityId::from_bits(7), last],
+            identities: vec![EntityId::from_bits(7), last].into(),
+            consumed: 0,
         };
         let mut first = reserve.stage();
         let mut independent = reserve.stage();
@@ -126,5 +139,39 @@ mod tests {
         assert_eq!(independent.consumed(), 1);
         assert_eq!(reserve.stage().consumed(), 0);
         assert_eq!(reserve.stage().next_id(), Ok(EntityId::from_bits(7)));
+        assert_eq!(
+            reserve
+                .after_consuming(0)
+                .map(|next| next.stage().next_id()),
+            Some(Ok(EntityId::from_bits(7))),
+            "zero creation preserves the next identity"
+        );
+        let suffix = reserve.after_consuming(1).map(|next| {
+            let mut stage = next.stage();
+            let before = stage.consumed();
+            let identity = stage.next_id();
+            let exhausted = stage.next_id();
+            let consumed = stage.consumed();
+            let empty = next.after_consuming(1).map(|empty| empty.stage().next_id());
+            assert!(next.after_consuming(2).is_none());
+            assert!(next.after_consuming(usize::MAX).is_none());
+            (before, identity, exhausted, consumed, empty)
+        });
+        assert_eq!(
+            suffix,
+            Some((
+                0,
+                Ok(last),
+                Err(IdError::Exhausted),
+                1,
+                Some(Err(IdError::Exhausted))
+            ))
+        );
+        assert!(reserve.after_consuming(3).is_none());
+        assert_eq!(
+            reserve.stage().next_id(),
+            Ok(EntityId::from_bits(7)),
+            "preflight never advances the original reserve"
+        );
     }
 }

@@ -145,3 +145,15 @@ through unchanged validators. Bus reconstruction now requests one H copy per non
 one extra for a new revision; replay and actual Undo/Redo request none. Explicit member policy bounds
 candidate count. Native bus46 and privacy3/4/4 verify copy counts and no public extraction. This does
 not bound trusted host-internal bytes/time, all core collection work or retained memory; .6.8.2.2.2 owns those.
+
+## Shared reserve publication0442
+
+answers: "does committing metadata require copying all unused reserved identities?"
+
+D290 native source/caller census shows prior after_consuming recopied the entire unused Vec even for
+zero creation. G1-SLICE.6.8.2.2.2.1 retains one immutable shared backing and publishes a checked forward
+prefix. Independent borrowed cursors preserve local consumption/exhaustion; publication shares the
+backing without copying unused IDs, and history never rewinds issuance. Cursor1/native bus46 and
+selected lint/fmt pass. Initial backing including consumed IDs remains allocated for bus lifetime;
+this trades finite initial retention for removal of per-commit backing copies, not a total resource,
+initial-conversion or timing certificate. D291's standalone preview explicitly installs operation policy.

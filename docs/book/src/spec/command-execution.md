@@ -116,7 +116,7 @@ error chains, revocation and unchanged owned Pieces. Full bus integration remain
 ## Private identity reserve and actual Notch preview
 
 Creation uses identities reserved by the trusted application configuration. CommandBus::with_identities
-owns the actual garment, trusted authority provider and explicit unused identity vector. The bus
+owns the actual garment, trusted authority provider and explicit unused identity inventory. The bus
 rejects non-increasing supplied order, including duplicate identities, then the first identity already
 owned anywhere in the garment, including retired creating operations. Errors retain the supplied
 identity, zero-based reserve index and original owning position. No sorting or replacement occurs.
@@ -125,6 +125,11 @@ The composition root fills the reserve from its injected IdGenerator: clock/entr
 deterministic allocation for replay/tests. Reserve management must ensure global nonreuse across
 buses and restarts. The implemented checks establish local disjointness, not cross-process persistence.
 The reserve has exactly the supplied length; there is no hidden refill or fallback sequence.
+Its immutable backing is shared across preflight/publication reserve handles. A successful commit
+advances only a private consumed prefix, without recopying the unused IDs, including zero creation.
+Staging still borrows an independent cursor. The original backing, including consumed IDs, remains
+allocated for the bus lifetime; initial reserve conversion/validation and total memory are separate
+resource concerns. Undo/Redo cannot rewind that prefix. See [reserve work](command-operation-control.md#identity-reserve-transition-work).
 CommandBus::new has an empty reserve. Reads and Material previews need none; creation reports the
 original IdError::Exhausted. Persistent issuance, bounded refill and production host integration remain
 with the later publication/runtime/storage owners; this API does not claim those workflows exist.
@@ -134,7 +139,8 @@ exhausting that iterator cannot advance another iterator or the owned reserve. I
 entropy provider or arbitrary Clone implementation. The request cannot supply a new Notch identity:
 
 ```rust
-let bus = CommandBus::with_identities(garment, trusted_authority, reserved_unused_ids)?;
+let mut bus = CommandBus::with_identities(garment, trusted_authority, reserved_unused_ids)?;
+bus.install_operation_limits(limits)?;
 let intent = AddNotch::new(piece_id, exact_edge_anchor, explicit_profile_bindings);
 let request = CommandRequest::Mutation(CommandMutation::new(
     CommandMutationContext::new(design_id, actor, exact_revision.clone(), retry_key, None),
@@ -404,7 +410,8 @@ comparison permits only that revision change; canonical values, Pieces, landmark
 fields remain equal to the prepared candidate. Unknown/Derived declarations remain authored state,
 and their source/recipe/physical realization receives no new certificate from publication.
 
-The bus constructs the remaining reserve and preflights space for one audit entry before effects.
+The bus prepares a shared reserve handle with a checked forward prefix and preflights space for
+one audit entry before effects; it does not recopy the unused identity backing.
 It then refreshes whole-group Commit authority immediately before publication. Under its exclusive
 mutable owner, it moves the validated model, remaining reserve and prepared audit entry together,
 with no fallible operation or host callback between those moves. The old source host is retained

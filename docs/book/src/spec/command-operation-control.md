@@ -167,8 +167,28 @@ the original Piece-slice address. Prior native individual counts were3/3/2.
 This is a bound on bus-requested source-host copy invocations. It does not bound bytes or time inside
 the trusted host's Clone/validation implementation, remaining core collection copies, total model
 memory, raw input decoding or retained audit/history bytes. Remaining implementation is
-G1-SLICE.6.8.2.2.2. This native source-copy case brings focused bus coverage to46 cases; it is not a
+G1-SLICE.6.8.2.2.2.2. This native source-copy case brings focused bus coverage to46 cases; it is not a
 complete resource, performance or integration certificate.
+
+## Identity-reserve transition work
+
+Reserved identities have one immutable shared backing and a private consumed prefix. Preflight adds
+the exact staged consumption with checked arithmetic, refuses an out-of-range prefix, then shares the
+existing backing. It performs no unused-ID copy, including on zero-creation authoring. Publication
+installs this prepared handle with the model and record at the same atomic boundary. This is
+constant-sized reserve-transition metadata; other model/record preparation can still allocate.
+
+Independent borrowed stage cursors start at the current prefix and count only their own consumption.
+No arbitrary Clone/provider can share or advance those cursor positions. Exhaustion, including the
+last128-bit identity, preserves the original IdError::Exhausted. A refusal or inspect-preview does not
+advance the original prefix; Undo/Redo and exact replay never rewind or reuse issued IDs.
+
+The initial reserve is validated and converted to shared storage once. Its entire supplied backing,
+including consumed IDs, remains allocated for this bus lifetime. There is no hidden refill or reserve
+getter. This trades retention of the finite initial backing for removal of reserve-size-dependent
+publication copies. It does not certify initial conversion peaks or total memory/time. Focused proof
+is the expanded native identity-cursor case plus the46 actual bus cases, with strict selected lint
+and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 work.
 
 Focused runtime evidence comprises37 earlier bus cases, eight runtime-control cases and one actual
 source-copy case:46 passing cases. The evidence-input slice established six pure admission/fraction
@@ -176,4 +196,4 @@ cases and control privacy. The copy slice passes strict selected lint/formatting
 compiler privacy cases, including refusal of all three private consuming helpers. Full command
 integration and deeper source/allocation acceptance remain separately owned. These input units and
 copy counts do not establish total model/work/memory or future numeric/file/decompression/geometry/
-solver bounds; that remaining resource scope is G1-SLICE.6.8.2.2.2.
+solver bounds; that remaining resource scope is G1-SLICE.6.8.2.2.2.2.

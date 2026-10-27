@@ -333,7 +333,9 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// is private; previews borrow a separate cursor and cannot call or advance an external source.
     /// The application must ensure global nonreuse across buses/restarts; this local check covers
     /// the actual garment and reserve. An empty reserve is valid but creation reports exhaustion.
-    /// Install operation limits separately before costly metadata previews/effects.
+    /// Install operation limits separately before costly metadata previews/effects. The initial immutable
+    /// identity backing remains for this owner lifetime; publication advances a private prefix without
+    /// recopying unused identities. Staging and history traversal cannot rewind that prefix.
     /// # Errors
     /// Refuses non-increasing supplied order, then the first identity already owned by this garment.
     pub fn with_identities(

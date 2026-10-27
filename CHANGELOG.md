@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0441 — bound source-host copies during candidate reconstruction
+## STITCHCAD-G1-0442 — remove per-commit identity-reserve backing copies
 
-- D289: consume copied inner definitions instead of repeating opaque source-host clones; validators retained.
-- Native real-source copies1/1/1, group preview3/commit4 and replay/Undo/Redo0; bus46 passes.
-- Strict selected lint/fmt and affected compiler privacy3/4/4 pass; extraction remains crate-private.
-- Book scopes invocation-count proof; whole0440/D287/D288 and0432–0436 decision continuity retained592.
+- D290: share immutable initial reserve backing; publish a checked forward prefix, including zero creation.
+- Expanded cursor1/native bus46 and strict selected core/native lint/fmt pass; IDs never rewind on undo.
+- Document backing retention and remaining resource limits; D291 standalone Notch preview installs policy.
+- Whole0441/D289 scope/lesson/ledger retained593 with4 exact native Git spans.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part593](docs/history/stitchcad-devnotes-part593.md) | whole0441 source-copy scope/lesson/ledger and D289 closure | 61 lines, 5382 bytes, sha256:a55aadcd… |
 | [part592](docs/history/stitchcad-devnotes-part592.md) | whole0440/D287/D288 and0432–0436 decision continuity | 113 lines, 9458 bytes, sha256:f4d45166… |
 | [part591](docs/history/stitchcad-devnotes-part591.md) | whole0439 and D285/D286 ledger | 58 lines, 5129 bytes, sha256:d042a55c… |
 | [part590](docs/history/stitchcad-devnotes-part590.md) | whole0438 admission/progress scope/lesson/ledger | 39 lines, 3235 bytes, sha256:ffd7d9a3… |

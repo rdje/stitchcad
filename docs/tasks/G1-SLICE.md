@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0441
+## Current leaf acceptance —0442
 
-- [x] ROOT CAUSE: python3 -I -B native HEAD reconstruction census prints redundant nested copies
- 2/2/1/2 for Measurement/Material/Notch/revision paths rc=0; opaque H was already copied by outer owner.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:46 passed rc=0;
-  actual host individual1/1/1, group preview3/commit4 and replay/Undo/Redo0 copies verified.
-- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; affected DesignStructure/Inputs/Sewing
-  compiler privacy groups3/4/4 passed rc=0, including rejection of all three crate-private extraction helpers.
+- [x] ROOT CAUSE: python3 -I -B native HEAD reserve/caller census prints remaining.to_vec() on every
+  new accepted group, including count0 rc=0; resource cost scaled with unused reserve, not creation.
+- [x] ADDRESSED: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0; cargo test -p sc-measure
+  --test design_inputs_contract command_bus:46 passed rc=0, including actual ID/replay/history/cancel cases.
+- [x] NO REGRESSION: selected core lib/native contract strict Clippy and cargo fmt check finished rc=0;
+  expanded independent cursor/last128-bit/exhaustion/prefix overflow checks pass without suppression.
 
 ## Goal
 
@@ -800,40 +800,46 @@ All98 completed ids/statuses and original proof pointers remain live there.
   do not label metadata input bounds total memory/CPU. First remove repeated source-host cloning.
 - ID: `G1-SLICE.6.8.2.2.1`
   Status: `done`
-  Goal:0441 D289 bound source-host copy amplification while preserving actual validating reconstruction.
-  Consume copied Structure/Inputs/Sewing definitions through crate-private methods instead of copying
-  nested ownership again. No public extraction or mutable CommandBus model access; all constructors,
-  original typed source failures and fresh final effect authority remain on the actual paths.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract
-    command_bus::resource_copies:0 passed/1 failed rc=101; actual immutable source-host copies measured
-    [3,3,2] against required [1,1,1] for individual Measurement/Material/Notch previews.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B native HEAD reconstruction census prints redundant
-    nested copies2/2/1/2 in measurement.rs/material.rs/notch.rs/execution.rs rc=0. Outer definition
-    already owns its copied H; cloning nested wrappers recopies the same opaque actual source host.
-  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
-    three consuming crate-private helpers move copied fields through unchanged validating constructors;
-    all four candidate/revision rebuild paths retain actual validators/difference guards and effect ordering.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:46 passed rc=0;
-    real DesignSources/public readonly trait observer verifies individual1/1/1, mixed group preview3,
-    commit4 (fresh revision included), exact alias no copy, replay/Undo/Redo0 and original Piece address.
-    Instrumentation delegates actual source checks/bindings and never supplies a fabricated model/authority.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::DesignStructure:3 passed rc=0;
-    design::inputs::DesignInputs:4 and design::sewing_state::DesignSewing:4 passed rc=0; external extraction
-    remains refused. Selected cargo fmt check rc=0; prior45 actual bus cases retain semantic/failure coverage.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part592.md:5 exact
-    Git spans rc=0; whole0440/D287/D288 and0432–0436 decision continuity retained without editing bytes.
-    Retention1046 logical/76 aggregate working Markdown rc=0. Book/pointer/frontier/lesson/indexed
-    decision aligned; full/deeper .6.9/.6.5.5 acceptance deferred.
-  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
-  Native book/publication81 chapters/159 scoped API rows/1473 source links/2468 rendered links rc=0;
-  maintained-reference82 files/18063 lines/1260706 bytes owner .6.8.2.2.1 rc=0.
-  For n non-alias members the bus requests n host copies for preview and n+1 for a new commit; explicit
-  member policy bounds n. Host-internal copy/validation time/bytes, remaining collection copies, raw
-  ingress and retained-state work remain .6.8.2.2.2. This is no total CPU/memory or integration certificate.
+  Goal:0441 bounded source-host copies/D289; [whole scope/proofs](../history/stitchcad-devnotes-part593.md).
 - ID: `G1-SLICE.6.8.2.2.2`
-  Status: `pending`
-  Goal: derive remaining model/retained-state resource dimensions through actual public contracts;
+  Status: `in_progress`
+  Goal: remaining model/retained-state resource dimensions through actual public contracts;
   source-copy count does not bound per-copy size, validation/allocation work or retained journal bytes.
+- ID: `G1-SLICE.6.8.2.2.2.1`
+  Status: `done`
+  Goal:0442 D290 remove complete unused-reserve copies on publication; D291 standalone Notch setup fix.
+  One immutable Arc-backed reserved identity slice remains for this bus lifetime. A checked forward
+  consumed prefix and independent borrowed stage cursors preserve exact generator order/exhaustion.
+  Publication prepares only shared-handle/prefix metadata, even for zero creation; no public reserve
+  getter, refill, request override, undo rewind or identity reuse. Initial conversion/storage stays explicit.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native HEAD reserve/caller census prints remaining.to_vec()
+    for every new accepted group, including count0 rc=0; this is source proof of a backing copy, not a
+    measured latency/allocator benchmark. Actual semantic cases already existed and remain the oracle.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part593.md:
+    4 exact Git spans rc=0; prior slice removed repeated H copies, while identity.after_consuming still
+    independently copied every unused reserved ID before effects, regardless of actual creation count.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings:finished rc=0; shared immutable backing,
+    checked prefix addition/range and concrete Skip<slice::Iter> staging remove publication backing copies.
+  - [x] ADDRESSED: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0, expanded for zero/
+    partial/full consumption, independent prefix-local counts, unchanged original and overflow/range refusal.
+    cargo test -p sc-measure --test design_inputs_contract command_bus:46 passed rc=0; actual source-copy,
+    original ID order, exhaustion, grouped alias, cancellation/replay, undo/redo and branch nonreuse retained.
+  - [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished
+    rc=0; selected cargo fmt check rc=0. Source census prints one shared handle/checked prefix, no backing
+    Vec copy rc=0; no total allocation-free publication, timing or initial-conversion bound is claimed.
+  - [x] LOCKSTEP: python3 -I -B native prior/current Notch example census:policy-install0/1 rc=0;
+    D291 standalone preview now installs explicit policy before use. Book/pointer/frontier/lesson/indexed
+    decision aligned; whole0441/D289 proof593, retention1047 logical/77 aggregate working Markdown rc=0.
+  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Native book/publication81 chapters/159 scoped API rows/1474 source links/2470 rendered links rc=0;
+  maintained-reference82 files/18090 lines/1262878 bytes owner .6.8.2.2.2.1 rc=0.
+  Backing includes consumed IDs and stays allocated for bus lifetime; this deliberate bounded-initial-
+  backing tradeoff removes reserve-size-dependent per-commit copies. Remaining model/initial/retained
+  resource dimensions .6.8.2.2.2.2, deeper source/allocation .6.5.5 and full .6.9 stay owned/deferred.
+- ID: `G1-SLICE.6.8.2.2.2.2`
+  Status: `pending`
+  Goal: bound remaining model/retained-state work from public immutable contracts, including source
+  validation/data sizes, allocation/retained audit history and future raw ingress before exposure.
 
 - ID: `G1-SLICE.6.9`
   Status: `pending`

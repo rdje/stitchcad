@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — bound candidate source-host copy amplification
+## _(2026-10-27 UTC)_ — shared reserve backing and forward-only publication
 
-0441 .6.8.2.2.1 fixes D289: native real-source observer measured individual copies3/3/2, regression
-failed101; outer copied owners were cloned again at inner layers. Consume copied Structure/Inputs/
-Sewing definitions privately, rebuilding through all original validators. Native bus46 verifies1/1/1,
-group preview3/commit4, aliases/replay/Undo/Redo0 extra copies and original Piece address after Undo.
-Strict selected lint/fmt and affected privacy3/4/4 pass; no public extraction/mutable model escape.
-Promotion: command-layer record. Copy-call count is bounded, not opaque per-copy bytes/time, total
-model work or retained memory. Remaining .6.8.2.2.2/deeper .6.5.5/full .6.9; whole0440/D287/D288 proof592.
+0442 .6.8.2.2.2.1 fixes D290: native source/caller census shows remaining.to_vec() even for count0,
+not a latency benchmark. Share immutable reserved-ID backing and check forward prefix addition/range;
+independent borrowed cursors keep local counts/exhaustion. Expanded cursor1 and actual bus46 pass;
+strict selected core/native lint/fmt pass. D291 standalone Notch example now installs explicit policy,
+native prior/current setup census0/1. Promotion: command-layer record. Initial backing, including
+consumed IDs, remains for bus lifetime; no total resource/initial allocation claim. Remaining model/
+retained work .6.8.2.2.2.2, deeper .6.5.5/full .6.9; whole0441/D289 scope/lesson/ledger retained593.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 
