@@ -368,7 +368,7 @@ incoherent table/Ease/SizeSet scope, and held Piece references after deletion. S
 private/shared access remain unchanged from the namespace implementation's native/privacy checks.
 Input ownership and source currentness do not imply that topology is ready: a deleted held edge
 remains inspectable with its original unresolved point and uncovered interval evidence. Construction
-never repairs, registers or reattaches it implicitly. Point/whole-range readiness follows separately.
+never repairs, registers or reattaches it implicitly. Point/whole-range readiness uses the separate structural report.
 
 This closes the implemented source/input component scope. Full Design assembly still needs current
 sewing/garment sources and readiness; runtime commands, geometry, physical validation, storage,
@@ -404,8 +404,7 @@ The source view preserves the exact explicit/formula/profile distinction.
 A Count parameter refuses with FormulaKind and its actual kind, span and parameter identity. A late
 failure returns no accepted prefix of amount views. Current root errors retain concrete error chains.
 Views cannot outlive the actual graph/root objects, and never rewrite spans or allocations. Use the
-separate current SewingGraph validator for structural sources; owned complete sewing joins follow
-this metadata component. Profile declaration grammar/type/state/physical resolution remains G4.
+separate current SewingGraph validator for structural sources and DesignSewing below for owned joins. Profile declaration grammar/type/state/physical resolution remains G4.
 
 ## Private sewing/input ownership
 
@@ -431,5 +430,28 @@ Ownership admission preserves held sewing references for inspection and explicit
 replacing copy96000 with96010 leaves the original graph's96000 reference inspectable; the separate
 current graph validator returns MissingCopy. Structural Piece topology may still be ready in its own
 scope. Nothing reassigns the old seam or reconstructs born-valid graph/landmark objects against a
-later ledger. Complete current sewing/source queries follow this ownership component; construction
+later ledger. Current sewing/source queries are separate from ownership; construction
 alone supplies no sewing, numeric, Profile, geometry, execution or release readiness certificate.
+
+## Current sources over the owned sewing state
+
+DesignSewing.validate_current() checks complete owned ids/current root, then every landmark's actual
+current Piece and anchor, the original graph against current root copies/Pieces/landmarks/ledger,
+and every actual amount declaration. amount_declarations() performs the same checks before returning
+borrowed views over those exact objects. No partial declaration collection escapes a late failure.
+
+Unused landmarks remain owned obligations: deleting material under an unselected turn point returns
+its original AnchorError; removing its Piece returns MissingLandmarkPiece before graph lookup.
+A renamed copy returns the original SewingError even if pure amount metadata still validates. A Count
+amount parameter returns its original DesignSewingDeclarationError after graph validation. Landmark,
+graph and amount wrappers expose the concrete original error through std::error::Error::source().
+
+| Variant | Meaning |
+| --- | --- |
+| `MissingLandmarkPiece` | Actual owned landmark's held source Piece is absent |
+
+These queries reuse the existing raw current anchor/graph choice and repair rules. Stored data,
+registrations, ranges and allocations stay unchanged. Profile roles remain visibly DeferredToG4 in
+returned amount views; current source success does not resolve numeric values or physical profiles.
+Whole Piece topology readiness remains the separate structural report. Geometry, full Design
+execution, assembly completeness and release remain separately owned obligations.

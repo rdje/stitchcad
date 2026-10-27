@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2b.2`, D35/D57, ontology §4.2, reference skirt §8.
 
-answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?" · "does graph construction authorize replacement sewing sources?" · "can numeric canonical ids supply sewing formula or profile metadata?" · "can an owned sewing draft preserve damaged held references?"
+answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?" · "does graph construction authorize replacement sewing sources?" · "can numeric canonical ids supply sewing formula or profile metadata?" · "can an owned sewing draft preserve damaged held references?" · "must unused sewing landmarks validate against current sources?"
 
 ## Context
 
@@ -78,3 +78,10 @@ remain uses. Ownership admission preserves held sewing references after edits fo
 explicit repair, without rebuilding born-valid objects against later contexts. Current graph and
 complete sewing-source readiness stay separate from ownership; a copy replacement does not reassign
 an old seam. No numeric, Profile, geometric, execution or release proof follows construction.
+
+DesignSewing current source queries now validate complete root/ownership, every semantic landmark's
+actual current Piece/anchor (unused included), the original graph against owned current contexts,
+and amount declarations. They retain existing raw anchor/graph choice/repair rules and concrete
+original errors. Amount views borrow actual owner objects; a successful metadata-only query cannot
+authorize stale graph sources. Profile deferral, whole Piece topology and full numeric/physical/
+execution/release readiness remain explicit separate scopes.

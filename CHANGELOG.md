@@ -3,14 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0372 — privately own exact sewing/input components
+## STITCHCAD-G1-0373 — validate complete current owned sewing sources
 
-- Own the single input root, original graph and semantic landmarks with complete actual id scope.
-- Preserve held graph refs after copy replacement; ownership remains separate from current readiness.
-- Native3/privacy2/lint/fmt/book/publication pass0; fully retired creator alias covered, D250132 unchanged.
-- Whole0371/reserved-name continuity523; complete current sewing-source query follows, broad CI later.
+- Check every owned landmark, graph copy/range/stop source and actual amount metadata against one root.
+- Keep original concrete causes, raw repair/choice rules and visible G4 deferral; return borrowed views.
+- Native5/privacy3/lint/fmt/book/publication pass0; D250132 unchanged, whole0372/ambiguity continuity524.
+- Focused combined review next; full Design/numeric/physical/integration/CI remains separate.
 
 # Sealed archive — earlier slices
+
+| [part524](docs/history/stitchcad-devnotes-part524.md) | whole0372 and historical ambiguity proof | 70 lines, 5073 bytes, sha256:91e9eb9e… |
 
 | [part523](docs/history/stitchcad-devnotes-part523.md) | whole0371 and historical reserved-name proof | 77 lines, 6068 bytes, sha256:38a8979a… |
 

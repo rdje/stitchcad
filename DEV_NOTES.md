@@ -3,18 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — private exact sewing/input ownership
+## _(2026-10-27 UTC)_ — complete current owned sewing sources
 
-0372 DesignSewing owns exact DesignInputs, SewingGraph and complete semantic landmark inventory.
-Global ids retain original root positions then graph/landmarks/spans; uses never become new owners.
-Actual graph/Design, span/parameter and mark/fully retired creator collisions retain both positions.
-The fixture retires every original90000 output so a live-creator-only census cannot pass that control.
-Constructor checks owned ids/current root while preserving held graph refs needed for inspection;
-a copy replacement keeps the original seam and typed current MissingCopy rather than reassigning it.
-Current all-landmark/graph/amount validation follows .3.b; no readiness certificate follows ownership.
-Native3/privacy2/core+test strict lint/fmt/book/publication79/137 pass0; D250132 rows unchanged.
-523 retains whole0371/historical reserved-name proof in4 exact Git spans0. Promotion: existing sewing
-contract answers inspectable drafts. Full Design/execution/physical/integration/CI remains unverified.
+0373 DesignSewing validates complete ids/root, every owned landmark's current Piece/anchor (unused
+included), the actual graph against owned current contexts, then actual amount declarations.
+Current raw anchor/graph rules preserve original choices/repairs; no data or registration is rewritten.
+Pure amount metadata cannot certify a stale graph. Concrete AnchorError, SewingError and amount
+causes stay directly available through std::error::Error::source, rather than boxed dynamic causes.
+Views borrow actual spans/canonical owner; Profile refs remain DeferredToG4. Whole Piece topology and
+full numeric/physical/execution/release readiness remain separate. Native5/privacy3/core+test strict
+lint/fmt/book/publication79/137 pass0; D250132 exact rows, original validators unchanged.524 retains
+whole0372/ambiguity proof in4 exact Git spans0. Promotion: existing sewing decision answers unused
+current landmarks. Focused combined review next; full integration/CI remains unverified.
+
+[Complete private sewing/input lesson](docs/history/stitchcad-devnotes-part524.md) retains
+its original scope, checks and promotion decision.
 
 [Complete amount-declaration lesson](docs/history/stitchcad-devnotes-part523.md) retains
 its original scope, checks and promotion decision.

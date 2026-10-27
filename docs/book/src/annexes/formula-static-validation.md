@@ -157,33 +157,23 @@ Independent approval remains unclaimed; static diagnostics supply no physical/ru
 
 ## Ambiguous-name diagnostic sources
 
-Two declarations named `collision`, first a measurement of kind length and then a parameter
-of kind angle, refuse `formula_ambiguous_name`. Arguments retain `name=collision`,
-`origins=(measurement, parameter)`, and both actual kind/origin sources. The ordered pair adapter
-retains declaration positions1 and2; neither becomes a recipe ordinal. Two measurement declarations
-also refuse and retain both equal origins and both distinct positions.
-
-For an input named width followed by `let width:length=missing`, the collision precedes RHS
-name lookup. The prior source retains its input metadata; the attempted source retains the actual
-let name/statement spans and its whole-recipe ordinal when available. A detached dictionary has
-no original declaration position or whole-recipe ordinal to invent. This is diagnostic metadata,
-with no value/state/geometry query. Canonical product sources retain their actual record identities.
+formula_ambiguous_name retains both actual ordered sources, including equal origins and known
+metadata positions. Input positions never become invented recipe ordinals. A let collision precedes
+RHS name lookup and retains actual let spans/ordinal when known. Product canonical source locators
+keep their separate validation; no value/state/geometry read follows diagnostic construction.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/ambiguity_payload_contract.py --mutations
 ```
 
-The producer checks4192 exact argument payloads across all nine origins, eight input kinds and
-six bindable annotations, including equal origins and interrupted positions. Sixteen actual faults
-compiled in memory trigger body assertions; tracked source remains unchanged. Numerical execution
-is trapped. The token and accepted grammar remain unchanged.
-
-These authored names identify test examples; neither adds a reserved grammar token.
+Historical4192 payload cases, examples and sixteen compiled fault controls are preserved whole in
+`docs/history/stitchcad-devnotes-part524.md`; retrieve with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part524.md`.
 
 | Example name | Role |
 | --- | --- |
-| `collision` | Arbitrary measurement/parameter name used to demonstrate an ordered binding collision. |
-| `eps_chord` | Intentionally invalid assertion-class spelling; syntax refuses it as formula_parse. |
+| `collision` | Authored measurement/parameter example name, never a reserved token |
+| `eps_chord` | Invalid assertion-class example spelling; syntax refuses formula_parse |
 
 ## Whole recipe before execution
 

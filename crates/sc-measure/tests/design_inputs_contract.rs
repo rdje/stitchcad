@@ -1009,3 +1009,236 @@ fn sewing_owner_preserves_held_graph_for_inspection_after_an_explicit_current_co
         .expect("independent structural scope")
         .is_ready());
 }
+
+#[test]
+fn sewing_current_sources_return_actual_borrowed_amounts_and_preserve_profile_deferral() {
+    use sc_core::{
+        design::{DesignSewing, DesignSewingDefinition},
+        ontology::{EaseAmount, ProfileBindingValidation, ProfileParameterRef},
+    };
+    let definition = sewing_owner_definition();
+    let original = definition.clone();
+    let state = DesignSewing::new(definition).expect("owned actual state");
+    assert_eq!(state.validate_current(), Ok(()));
+    let declarations = state
+        .amount_declarations()
+        .expect("complete current sources");
+    assert!(declarations
+        .iter()
+        .zip(state.graph().spans())
+        .all(|(view, span)| core::ptr::eq(view.span(), span)
+            && core::ptr::eq(view.canonical_inputs(), state.inputs().inputs())));
+    assert_eq!(state.definition(), &original);
+    let (inputs, graph) = with_sewing_graph(
+        fixture(),
+        vec![EaseAmount::Profile(ProfileParameterRef::new(id(10)))],
+    );
+    let profile = DesignSewing::new(DesignSewingDefinition {
+        inputs,
+        graph,
+        landmarks: vec![],
+    })
+    .expect("logical Profile draft");
+    assert_eq!(profile.validate_current(), Ok(()));
+    assert_eq!(
+        profile
+            .amount_declarations()
+            .expect("metadata current, physical role deferred")
+            .first()
+            .expect("actual span")
+            .profile_validation(),
+        Some(ProfileBindingValidation::DeferredToG4)
+    );
+}
+
+#[test]
+fn sewing_current_sources_validate_unused_landmark_anchors_and_keep_the_concrete_original_cause() {
+    use sc_core::{
+        design::{DesignSewing, DesignSewingError},
+        ontology::{AnchorError, DeterministicIdGenerator},
+    };
+    use std::error::Error;
+    let mut definition = sewing_owner_definition();
+    assert!(definition
+        .graph
+        .spans()
+        .iter()
+        .all(|span| span.definition().stops.is_empty()));
+    let point = definition
+        .landmarks
+        .first()
+        .expect("unused actual landmark")
+        .resolve(definition.inputs.structure().topology())
+        .resolved()
+        .expect("original live point");
+    let mut root = definition.inputs.definition().clone();
+    let mut structure = root.structure.definition().clone();
+    structure
+        .topology
+        .delete(
+            &mut DeterministicIdGenerator::from_start(120000),
+            point.edge(),
+        )
+        .expect("explicit anchor material deletion");
+    root.structure = DesignStructure::new(structure).expect("inspectable held structural damage");
+    definition.inputs = DesignInputs::new(root).expect("current input metadata");
+    let original_graph = definition.graph.clone();
+    let state = DesignSewing::new(definition).expect("inspectable held sewing state");
+    let issue = state
+        .validate_current()
+        .expect_err("unused metadata is still an owned current obligation");
+    assert!(
+        matches!(&issue, DesignSewingError::Landmark { landmark, issue } if *landmark == id(98000) && matches!(issue.as_ref(), AnchorError::CurrentUnresolved { .. }))
+    );
+    assert!(issue
+        .source()
+        .expect("original current anchor cause")
+        .is::<AnchorError>());
+    assert!(!issue
+        .source()
+        .expect("concrete cause")
+        .is::<Box<AnchorError>>());
+    assert_eq!(state.graph(), &original_graph);
+}
+
+#[test]
+fn sewing_current_sources_reject_stale_actual_graph_copies_with_the_original_graph_error() {
+    use sc_core::{
+        design::{DesignSewing, DesignSewingError},
+        ontology::{SeamSideId, SewingError},
+    };
+    use std::error::Error;
+    let mut definition = sewing_owner_definition();
+    let mut root = definition.inputs.definition().clone();
+    let mut structure = root.structure.definition().clone();
+    structure.cut_plan = CutPlan::new(
+        structure
+            .cut_plan
+            .copies()
+            .iter()
+            .map(|copy| {
+                let mut copy = *copy.definition();
+                if copy.id == id(96000) {
+                    copy.id = id(96010);
+                }
+                copy
+            })
+            .collect(),
+        structure.pieces.pieces(),
+    )
+    .expect("actual explicit replacement plan");
+    root.structure = DesignStructure::new(structure).expect("actual structure");
+    definition.inputs = DesignInputs::new(root).expect("actual current input metadata");
+    let state = DesignSewing::new(definition).expect("old sewing refs remain inspectable");
+    assert!(state
+        .inputs()
+        .sewing_amount_declarations(state.graph())
+        .is_ok());
+    let expected = SewingError::MissingCopy {
+        span: id(97000),
+        side: SeamSideId::A,
+        copy: id(96000),
+    };
+    let issue = state
+        .validate_current()
+        .expect_err("metadata-only success cannot certify graph sources");
+    assert_eq!(issue, DesignSewingError::Graph(Box::new(expected.clone())));
+    assert_eq!(
+        issue
+            .source()
+            .expect("original graph cause")
+            .downcast_ref::<SewingError>(),
+        Some(&expected)
+    );
+    assert!(!issue
+        .source()
+        .expect("concrete graph cause")
+        .is::<Box<SewingError>>());
+}
+
+#[test]
+fn sewing_current_sources_refuse_an_unused_landmarks_missing_actual_piece_before_graph_lookup() {
+    use sc_core::design::{DesignSewing, DesignSewingError};
+    let mut definition = sewing_owner_definition();
+    let mut root = definition.inputs.definition().clone();
+    let mut structure = root.structure.definition().clone();
+    structure.pieces = PieceInventory::new(
+        structure
+            .pieces
+            .pieces()
+            .iter()
+            .filter(|piece| piece.id() != id(95000))
+            .cloned()
+            .collect(),
+    )
+    .expect("explicit remaining Pieces");
+    structure.cut_plan = CutPlan::new(
+        structure
+            .cut_plan
+            .copies()
+            .iter()
+            .filter(|copy| copy.piece() != id(95000))
+            .map(|copy| *copy.definition())
+            .collect(),
+        structure.pieces.pieces(),
+    )
+    .expect("complete remaining copies");
+    root.structure = DesignStructure::new(structure).expect("actual reduced structure");
+    definition.inputs = DesignInputs::new(root).expect("actual remaining input scope");
+    let state = DesignSewing::new(definition).expect("inspectable old semantic references");
+    assert_eq!(
+        state.validate_current(),
+        Err(DesignSewingError::MissingLandmarkPiece {
+            landmark: id(98000),
+            piece: id(95000)
+        })
+    );
+}
+
+#[test]
+fn sewing_current_sources_preserve_the_actual_amount_declaration_error_after_graph_validation() {
+    use sc_core::{
+        design::{
+            DesignSewing, DesignSewingDeclarationError, DesignSewingDefinition, DesignSewingError,
+        },
+        ontology::EaseAmount,
+        value::ScalarInputKind,
+    };
+    use std::error::Error;
+    let mut definition = fixture();
+    definition.parameters = DesignParameters::new(
+        vec![DesignParameterDefinition {
+            id: id(5002),
+            token: MachineToken::new("sewing_count").expect("actual authored name"),
+            target: DesignParameterTarget::Scalar {
+                declaration: id(2000),
+                kind: ScalarInputKind::Count,
+            },
+        }],
+        definition.structure.inputs(),
+    )
+    .expect("valid Count parameter metadata");
+    let (inputs, graph) = with_sewing_graph(definition, vec![EaseAmount::Formula(id(5002))]);
+    let state = DesignSewing::new(DesignSewingDefinition {
+        inputs,
+        graph,
+        landmarks: vec![],
+    })
+    .expect("owned original sources");
+    let expected = DesignSewingDeclarationError::<DesignSourcesError>::FormulaKind {
+        span: id(97000),
+        parameter: id(5002),
+        actual: sc_core::recipe::FormulaKind::Count,
+    };
+    let issue = state
+        .validate_current()
+        .expect_err("current graph does not turn Count into Length");
+    assert_eq!(issue, DesignSewingError::Amount(Box::new(expected.clone())));
+    assert_eq!(
+        issue
+            .source()
+            .expect("original amount metadata cause")
+            .downcast_ref::<DesignSewingDeclarationError<DesignSourcesError>>(),
+        Some(&expected)
+    );
+}
