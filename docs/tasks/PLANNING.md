@@ -1180,7 +1180,20 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
 ## D271–D280 — retained causes and verified corrections
-[Whole retirement/proofs](../history/stitchcad-devnotes-part569.md); prior exact captures remain linked.
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part569.md:4 exact Git spans rc=0; whole0419 proof/retirement retained.
-- [x] ADDRESSED: same rc=0; completed bus node and original native5/privacy2/source boundaries remain linked.
-- [x] NO REGRESSION: retention/native replacement3/strict selected Clippy/fmt rc=0; product integration/release remains owned.
+[Whole retirement/proofs](../history/stitchcad-devnotes-part570.md); prior exact captures remain linked.
+
+## D281/D282 — task-sibling freshness and sealed-proof byte storage
+P2, fixed0421 by G1-SLICE.6.5.2.b.sources before further candidate growth. Ordinary target fixture:
+move its fresh completed owner to a linked G1-SLICE-probe.md sibling; unchanged exact book/control
+then refuses code=task because maintained_reference.py reads only docs/tasks/<tree>.md. It also
+accepts the old completed G1-SLICE.5e.1.1 sibling owner when copied into the current root (old control
+raises no refusal), violating freshness. Both effects share this root-only lookup. Existing
+G1-SLICE-execution.md is already canonical. Fix bounded root/sibling status/freshness discovery and
+complete input freezing; partition the completed garment graph without dropping live node identities.
+Native before controls:1 failure/1 error rc=1 expected; fixed targeted2 pass0. No new Git repo/off-volume IO.
+- [x] ROOT CAUSE: transition_receipts.py records570/571:4+2 exact Git spans rc=0; whole0420/0390
+  scopes/lessons/ledgers retained. Old D281 control:1 error/1 failure rc=1, expected.
+- [x] ADDRESSED: task_source_contract.py10/newline5 rc=0; all98 completed nodes remain exact/live.
+- [x] NO REGRESSION: reader23/author8/AST/bash/retention/coverage rc=0; full product proof stays owned.
+D282 P2, fixed0421 by the same sources owner: native archive hash-object under autocrlf=true changes raw CRLF bytes;
+Git diff --cached --check also rejects the exact sealed571 blank EOF. Preserve bytes; scope archive attributes.

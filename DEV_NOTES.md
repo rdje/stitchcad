@@ -3,16 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — detached Material replacement retains birth history
+## _(2026-10-27 UTC)_ — canonical task sources and sealed proof bytes
 
-0420 Piece::with_material_assignment clones original fields and changes only material intent.
-Piece::new after a split refuses its retired birth edge, while held history still resolves.
-Reuse has_required_reason, retaining exact nonblank text/ids. No label inference, reference rewrite,
-registration or geometry certification. Native3 checks rebirth refusal vs replacement success,
-all other fields/original owner unchanged, no-op equality, blank reason and exact split/deletion
-range/endpoint evidence with the same ledger. Selected strict Clippy/fmt0. Whole0419 task/lesson/
-ledger/retirement569:4 exact spans; book/publication/size/retention/fmt0. Actual registry/source/currentness/auth/publication
-remain the candidate/command layer's obligations. Promotion: structural-vs-current ontology decision.
+0421 D281:root-only lookup refused fresh siblings and accepted a reused done sibling copied to root.
+Old control1 error/1 failure is expected. Bound32 linked family files/98304B, check all historical
+members for reuse, freeze all authoring sources/census; caller edits and prior authority survive drift.
+All98 .6.4 nodes move intact:294L/11636B/sha256:6a753dd7…; exact source/current-id coverage controlled.
+D282 raw archive attrs preserve bytes/blank EOF while ordinary source whitespace stays strict.
+Map8240/8192B forced lifecycle closure:whole completed journal572 retains79693B/1169L; seven current
+nodes remain done,21 current anchors redirected. Neutral generator unchanged; map8185B again.
+Source10 plus targeted graph/journal2, newline5/reader23/author8/AST/bash/coverage pass0. Whole0420/0390/
+journal570/571/572 retains4+2+1 exact spans; final checks in leaf. Promotion: containment/map decisions.
+
+[Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
 
 [Whole0419 private-owner/read lesson](docs/history/stitchcad-devnotes-part569.md) retains original native5/privacy2/source and execution boundaries.
 
@@ -70,12 +73,7 @@ remain the candidate/command layer's obligations. Promotion: structural-vs-curre
 
 [Whole0392 cutover lesson](docs/history/stitchcad-devnotes-part542.md) retains source/guard repairs and acceptance limits.
 
-## _(2026-10-27 UTC)_ — retention policy boundary
-
-0390 measures complete0388/0389 bodies3706B against2641B archive headroom; Python/Git and OS wc agree0.
-No oversized record is written. The history decision preserves source intervals/hashes and concrete A/B
-policy alternatives; neither is adopted. Capacity.apply awaits director choice; all caps/bytes stay fixed.
-Promotion: retention-decision-required section. Obsolete no-archive adoption rationale corrected.
+[Whole0390 policy-boundary lesson](docs/history/stitchcad-devnotes-part571.md) retains original measured capacity and authority boundary.
 
 ## _(2026-10-27 UTC)_ — actual layer offset-operation intent
 

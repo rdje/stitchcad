@@ -152,3 +152,23 @@ including LF/CRLF, rather than silently rewriting prose. Native Git hash-object 
 and actual checker awk provide independent before/after controls; ordinary target fixtures use only
 this repository's existing Git metadata read-only. Newline controls run in the existing probe suite.
 Reader23/authoring8/newline3 pass; broader runtime/physical/release proof remains independently owned.
+
+answers: "how does book authority follow canonical task siblings without reusing a completed owner?"
+
+0421 fixes D281:root-only lookup refused a fresh linked-sibling owner and accepted an old completed
+sibling owner copied into the root. Committed7b controls show both failures; bounded family lookup
+checks the canonical root and same-Tree-ID hyphenated siblings. Current files must form its linked
+local graph; native baseline lookup also retains unlinked historical members for no-reuse checks.
+The fixed profile permits32 files/98304 bytes each, with bounded directory/Git listings. Authoring
+freezes all family inputs and rechecks their census; late sibling edits cannot silently publish.
+This extends the existing canonical sibling convention, not filename guessing over arbitrary docs.
+All98 completed .6.4 nodes/proof pointers move as one exact live graph to G1-SLICE-garment.md, pinned
+to native7b bytes and raw Git storage. No nodes disappear or become anonymous archival prose.
+Reader23/author8 and focused task/native controls establish local scope; runtime/physical/release
+proof remains separately owned. The neutral doctrine body and book part/index limits are unchanged.
+
+D282 in the same slice:sealed Markdown history also requires raw Git bytes. Native autocrlf changes
+unprotected CRLF object identity; exact source571 ends with a blank line that default whitespace
+checking refuses. Archive-only attributes disable transformations and allow blank EOF. Native
+newline/storage5 controls retain raw bytes and accept that data, while ordinary source trailing
+whitespace still refuses through Git apply --check without creating files. No sealed record changes.

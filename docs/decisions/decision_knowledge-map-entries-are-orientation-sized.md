@@ -58,3 +58,13 @@ So the local levers are exactly two: the curated input, and the row's targets.
 - The alternative rejected: raising the ceiling in the same commit that filled it. That is precisely the
   move `LIVE_DOCUMENT_SIZE_CONTAINMENT.md` forbids, and it would have hidden the only real finding here —
   that two verbose entries had eaten a ninth of a generated surface's budget.
+
+answers: "how can a completed journal leave the map without changing its neutral generator or cap?"
+
+0421 adds a canonical live garment graph; the derived map reaches8240/8192B. Preserve the neutral
+generator rule above and restore information roles:archive the whole completed verification/commit
+journal as exact retained record572 (native79693B/1169L). Its seven historical node snapshots all have
+current done canonical copies, so no live task id is lost. Redirect21 current proof links with their
+original fragments; the complete historical source, including old states, stays unchanged. The actual
+generator then yields8185B again. This is a lossless lifecycle transition, not a cap rise or wording
+trim. The map's longer-term pressure remains SPINE.5/D50; no other repository is written to.

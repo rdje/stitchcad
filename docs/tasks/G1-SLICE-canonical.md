@@ -1,5 +1,11 @@
 # G1-SLICE — canonical expression contracts and evidence
 
+## Journal-link transition — G1-SLICE.6.5.2.b.sources
+
+- [x] ROOT CAUSE: native journal census7 historical nodes have done canonical copies; generated map8240B exceeds8192B, rc=0.
+- [x] ADDRESSED: transition_receipts.py --record docs/history/stitchcad-devnotes-part572.md:1 exact Git span rc=0; all21 current links retain original fragments.
+- [x] NO REGRESSION: task_source_contract.py11 tests OK rc=0; coverage10 lanes/13 trees/17 siblings/0 orphans and map8185B rc=0.
+
 Bounded semantic sibling of [G1-SLICE](G1-SLICE.md). Exact completed identity contracts/protocols
 and verification histories are retained here; the active frontier stays in the parent.
 
@@ -313,28 +319,28 @@ Current statement closure is recorded by G1-SLICE.5a.3e.1; ordered recipe compos
 
 ## Prior resume routes — preserved during G1-0065
 
-[Previous exact capture/D96 proof and commit journal](G1-SLICE-journal.md#second-window-local-proof--preserved-from-f876913)
+[Previous exact capture/D96 proof and commit journal](../history/stitchcad-devnotes-part572.md#second-window-local-proof--preserved-from-f876913)
 retain exact committed evidence.
 
-[Previous observed-CI proof and commit journal](G1-SLICE-journal.md#second-window-ci-evidence--preserved-from-a5159ba)
+[Previous observed-CI proof and commit journal](../history/stitchcad-devnotes-part572.md#second-window-ci-evidence--preserved-from-a5159ba)
 retain exact committed evidence.
 
-[Completed numeric review and corrections](G1-SLICE-journal.md#numeric-review-evidence--preserved-from-a6fa253)
+[Completed numeric review and corrections](../history/stitchcad-devnotes-part572.md#numeric-review-evidence--preserved-from-a6fa253)
 retain exact committed checklist/journal bytes. Current reference review is owned above.
 
-[Previous exact six-kind replay proof and commit journal](G1-SLICE-journal.md#six-kind-replay-evidence--preserved-from-57c94ad)
+[Previous exact six-kind replay proof and commit journal](../history/stitchcad-devnotes-part572.md#six-kind-replay-evidence--preserved-from-57c94ad)
 retain committed evidence unchanged.
 
-[Previous exact signed-angle proof and commit journal](G1-SLICE-journal.md#signed-angle-evidence--preserved-from-c099aee)
+[Previous exact signed-angle proof and commit journal](../history/stitchcad-devnotes-part572.md#signed-angle-evidence--preserved-from-c099aee)
 retain committed evidence unchanged.
 
-[Previous exact scoped reference review proof and commit journal](G1-SLICE-journal.md#scoped-reference-review-evidence--preserved-from-ea3f64f)
+[Previous exact scoped reference review proof and commit journal](../history/stitchcad-devnotes-part572.md#scoped-reference-review-evidence--preserved-from-ea3f64f)
 retain committed evidence unchanged.
 
-[Previous exact unsigned rounding proof and commit journal](G1-SLICE-journal.md#unsigned-rounding-evidence--preserved-from-97f124c)
+[Previous exact unsigned rounding proof and commit journal](../history/stitchcad-devnotes-part572.md#unsigned-rounding-evidence--preserved-from-97f124c)
 retain committed evidence unchanged.
 
-[Previous exact individual literal proof and commit journal](G1-SLICE-journal.md#individual-literal-proof--preserved-from-15d1520)
+[Previous exact individual literal proof and commit journal](../history/stitchcad-devnotes-part572.md#individual-literal-proof--preserved-from-15d1520)
 retain committed evidence unchanged.
 
 [Previous exact normalized arena proof and commit journal](G1-SLICE-formulas.md#normalized-arena-proof--preserved-from-b41418d)

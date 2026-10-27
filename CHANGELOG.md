@@ -3,18 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0420 — preserve held Piece references in detached Material replacements
+## STITCHCAD-G1-0421 — preserve task-sibling ownership and sealed proof bytes
 
-- Immutable with_material_assignment changes only Material intent; original fields/labels/ids remain.
-- Preserve split/deletion evidence; no rebirth, normalization, source certification or bus publication.
-- Native3/selected strict Clippy/fmt pass0; whole0419 proof569 retains4 exact Git spans.
-- Actual AssignMaterial candidate/handler/auth/current registry checks remain owned by .6.5.2.b/.3.
-
-## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
-
-- Complete next evidence bodies3706B exceed2641B headroom; exact Git spans and OS wc agree0.
-- Concrete policy alternatives recorded; implementation awaits director choice. No caps/records changed.
-- Correct obsolete containment adoption rationale; book states the aggregate retirement stop rule.
+- Fresh linked-sibling owners work; prior completed sibling owners cannot be reused through root.
+- Bound complete family discovery/frozen authoring inputs; preserve native task graph and raw bytes.
+- All98 completed garment/input nodes/proof pointers remain live in an exact canonical sibling.
+- Old controls fail as expected; reader23/author8/focused source controls pass; whole0420 proof570 retained.
+- D282 raw archive storage/scoped blank EOF; newline5 preserves strict ordinary checks, no record edit.
+- Retire whole completed journal572, redirect21 current anchors; native map returns8185B without cap/code changes.
+- No runtime/physical/release claim; actual AssignMaterial candidate remains .6.5.2.b.
 
 ## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
 
@@ -31,6 +28,9 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part572](docs/history/stitchcad-devnotes-part572.md) | whole completed verification/commit journal | 1169 lines, 79693 bytes, sha256:155861ad… |
+| [part571](docs/history/stitchcad-devnotes-part571.md) | whole0390 policy-boundary lesson/ledger | 13 lines, 838 bytes, sha256:dc2f2c21… |
+| [part570](docs/history/stitchcad-devnotes-part570.md) | whole0420 replacement/lesson/ledger/prior retirement | 32 lines, 3135 bytes, sha256:9c4a810b… |
 | [part569](docs/history/stitchcad-devnotes-part569.md) | whole0419 bus/read/lesson/ledger/prior retirement | 40 lines, 3387 bytes, sha256:59db8e44… |
 | [part568](docs/history/stitchcad-devnotes-part568.md) | whole book subtree/0418 lesson/ledger/D271–D280 | 60 lines, 4759 bytes, sha256:9ab6cbbd… |
 | [part567](docs/history/stitchcad-devnotes-part567.md) | whole0417 installation/lesson/ledger/D271–D278 | 54 lines, 4970 bytes, sha256:754fd688… |

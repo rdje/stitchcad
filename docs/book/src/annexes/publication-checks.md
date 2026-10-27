@@ -129,7 +129,27 @@ disable text/newline conversion, clean filters, identifier expansion and working
 these paths; the verifier checks their effective attributes before accepting authority. A local or
 nested override that enables a transformation refuses. Authors may use LF or CRLF: byte counts and
 digests include the original line endings, while content width excludes LF and one preceding CR.
-Recording never silently normalizes a chapter. Other project files keep their existing Git behavior.
+Recording never silently normalizes a chapter. The pinned completed garment task graph and sealed
+Markdown history also retain exact stored bytes. Sealed source copies may end with a blank line:
+their scoped whitespace rule preserves that EOF while ordinary source whitespace remains strict.
+
+Task ownership follows the canonical family under docs/tasks: the root named for its Tree ID and
+linked siblings named with that Tree ID plus a hyphen and suffix. For example, G1-SLICE.md links the
+G1-SLICE-execution.md frontier. Links may traverse siblings and return to the root. The fixed reader
+profile permits32 family files, each at most98304 bytes; directory/native-listing censuses are bounded.
+Missing, unlinked, unsafe or duplicate owners refuse. A newly completed owner in a linked sibling is
+valid; copying a previously completed sibling owner into the main file cannot make it fresh.
+
+The baseline checks every historical family member, including a member whose link later disappeared.
+Authoring freezes every current family source and rechecks its census before replacement. Late sibling
+edits preserve the caller's change and prior authority. The completed structural/input/garment graph
+is retained as a live canonical sibling with all98 node identities/statuses/proof pointers; its exact
+native source copy is checked, and no task is replaced by an anonymous history summary.
+
+Completed chronological evidence can move to sealed history after checking its current nodes and
+consumers. Record572 preserves the complete old verification/commit journal; all seven task IDs have
+current completed nodes and21 current proof links retain their fragments. This restores the generated
+orientation map's existing bound while preserving the neutral generator and every historical byte.
 
 The existing size-check command runs the canonical book verifier for normal commit/CI checks. Numeric
 fixture overrides cannot replace that book; caller Git directory/index/configuration cannot redirect

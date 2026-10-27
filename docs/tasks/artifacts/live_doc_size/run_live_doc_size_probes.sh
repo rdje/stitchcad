@@ -115,6 +115,14 @@ else
   bad NEWLINES "newline measurement/storage contract failed (exit=$rc)" "$out"
 fi
 
+# D281: canonical linked task siblings, historical freshness and exact live graph partition.
+out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/task_source_contract.py" 2>&1)"; rc=$?
+if [ "$rc" -eq 0 ]; then
+  ok TASK-SOURCES "canonical-family freshness, complete source freezing and native partition controls passed (exit=0)"
+else
+  bad TASK-SOURCES "task-sibling authority contract failed (exit=$rc)" "$out"
+fi
+
 echo
 printf 'probes: %d pass / %d fail\n' "$pass" "$fail"
 [ "$fail" -eq 0 ] || exit 1

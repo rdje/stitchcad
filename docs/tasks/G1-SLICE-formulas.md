@@ -1,5 +1,11 @@
 # G1-SLICE — completed formula syntax contracts and evidence
 
+## Journal-link transition — G1-SLICE.6.5.2.b.sources
+
+- [x] ROOT CAUSE: native journal census7 historical nodes have done canonical copies; generated map8240B exceeds8192B, rc=0.
+- [x] ADDRESSED: transition_receipts.py --record docs/history/stitchcad-devnotes-part572.md:1 exact Git span rc=0; all21 current links retain original fragments.
+- [x] NO REGRESSION: task_source_contract.py11 tests OK rc=0; coverage10 lanes/13 trees/17 siblings/0 orphans and map8185B rc=0.
+
 Bounded semantic sibling of [G1-SLICE](G1-SLICE.md). Completed syntax contracts/checklists retain
 exact committed text; the current frontier and verification/commit journal remain in the parent.
 
@@ -856,7 +862,7 @@ Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
 - ID: `G1-SLICE.5a.3b.3b.3b`
   Status: `done`
   Goal: D95 exact canonical literal width, quantum/scalar boundary and unary/kind identity.
-  Protocol: [completed canonical pre-code plan](G1-SLICE-journal.md#canonical-literal-pre-code-protocol--completed-in-g1-0051).
+  Protocol: [completed canonical pre-code plan](../history/stitchcad-devnotes-part572.md#canonical-literal-pre-code-protocol--completed-in-g1-0051).
   Verification: canonical146/twelve compiled actual reds; focused checks/current acceptance below.
   Commit: `STITCHCAD-G1-0051`.
 
@@ -870,23 +876,23 @@ Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
 - ID: `G1-SLICE.5a.3b.3b.3c.1`
   Status: `done`
   Goal: retain63 exact raw records in window2; repair D96 blocking ledger targets.
-  Protocol: [second-window pre-code plan](G1-SLICE-journal.md#second-window-pre-code-protocol--completed-in-g1-0052).
+  Protocol: [second-window pre-code plan](../history/stitchcad-devnotes-part572.md#second-window-pre-code-protocol--completed-in-g1-0052).
   Verification:63 source files/127 isolated logical files exact; archive controls/ledger13/four reds;
-  full native488/WASM3/book/probes25 pass, rc=0. [Local proof](G1-SLICE-journal.md#second-window-local-proof--preserved-from-f876913).
+  full native488/WASM3/book/probes25 pass, rc=0. [Local proof](../history/stitchcad-devnotes-part572.md#second-window-local-proof--preserved-from-f876913).
   Commit: `STITCHCAD-G1-0052`.
 
 - ID: `G1-SLICE.5a.3b.3b.3c.1v`
   Status: `done`
   Goal: observe exact .1 head SHA doctrine/Rust CI job/step verdicts; only close capacity on success.
   Verification: pushed f876913; both completed jobs/all steps successful; CLI140 and newest
-  committed catalog refusal pass. [Observed jobs](G1-SLICE-journal.md#second-window-ci-evidence--preserved-from-a5159ba);
+  committed catalog refusal pass. [Observed jobs](../history/stitchcad-devnotes-part572.md#second-window-ci-evidence--preserved-from-a5159ba);
   capacity prerequisite complete.
   Commit: `STITCHCAD-G1-0053`.
 
 - ID: `G1-SLICE.5a.3b.3b.3c.2`
   Status: `done`
   Goal: complete scoped D83 boundaries; correct D97 goal and D98 verdict attribution.
-  Protocol: [completed review plan](G1-SLICE-journal.md#numeric-boundary-review-protocol--completed-in-g1-0054).
+  Protocol: [completed review plan](../history/stitchcad-devnotes-part572.md#numeric-boundary-review-protocol--completed-in-g1-0054).
   Verification:61/57/80/146 independent controls;12/11/12/12 actual reds/exact restoration;
   prerequisite source identity/language16. Complete current acceptance below; D84 separate.
   Commit: `STITCHCAD-G1-0054`.
@@ -904,7 +910,7 @@ Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
 - ID: `G1-SLICE.5a.3b.3c.1`
   Status: `done`
   Goal: actual book replay must accept every declared bindable kind before signed-angle replay proof.
-  Protocol: [original pre-code plan](G1-SLICE-journal.md#six-kind-replay-protocol--completed-in-g1-0055).
+  Protocol: [original pre-code plan](../history/stitchcad-devnotes-part572.md#six-kind-replay-protocol--completed-in-g1-0055).
   Verification:19 independent actual consumer/format/declaration verdicts; nine compiled actual
   assertion reds/exact restoration; binding80/twelve existing reds. D99 closed, no new literals.
   Commit: `STITCHCAD-G1-0055`.
@@ -914,7 +920,7 @@ Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
   Goal: D84 signed principal atan/atan2, raw once-rounded angle binding/equality and full signed/multi-turn
   sweeps; keep dir explicitly normalized. Finalize principal branch/rounded range and independent
   controls before changing actual reference; no arbitrary-input transcendental certificate.
-  Protocol: [original pre-code plan](G1-SLICE-journal.md#signed-angle-protocol--completed-in-g1-0056).
+  Protocol: [original pre-code plan](../history/stitchcad-devnotes-part572.md#signed-angle-protocol--completed-in-g1-0056).
   Verification:90 independent controls/fifteen compiled actual reds/exact restoration;
   existing angular72/math42/seven reds, binding80/twelve reds and replay19/nine reds pass.
   Commit: `STITCHCAD-G1-0056`.
@@ -924,7 +930,7 @@ Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
   Goal: complete D84/reference obligation review, align all current contract/status pointers and close
   .5a.3b only after .1/.2 verified; correct D100 stale children label and retain its original bytes.
   Product literal normalization stays separately owned by .5a.3c.
-  Protocol: [original review plan](G1-SLICE-journal.md#complete-reference-review-protocol--completed-in-g1-0057).
+  Protocol: [original review plan](../history/stitchcad-devnotes-part572.md#complete-reference-review-protocol--completed-in-g1-0057).
   Verification: signed90/15 actual reds; angular72/math42/seven reds; six source bytes equal c099aee.
   D84/D100 close for received contract/scoped reference; production remains separate.
   Commit: `STITCHCAD-G1-0057`.

@@ -29,7 +29,7 @@
 - [`G1-SLICE-evidence`](docs/tasks/G1-SLICE-evidence.md)
 - [`G1-SLICE-execution`](docs/tasks/G1-SLICE-execution.md)
 - [`G1-SLICE-formulas`](docs/tasks/G1-SLICE-formulas.md)
-- [`G1-SLICE-journal`](docs/tasks/G1-SLICE-journal.md)
+- [`G1-SLICE-garment`](docs/tasks/G1-SLICE-garment.md)
 - [`G1-SLICE-measurements`](docs/tasks/G1-SLICE-measurements.md)
 - [`G1-SLICE-names`](docs/tasks/G1-SLICE-names.md)
 - [`G1-SLICE-producer-proof`](docs/tasks/G1-SLICE-producer-proof.md)

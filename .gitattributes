@@ -1,5 +1,9 @@
-# Exact maintained-book authority covers raw bytes, including line endings.
+# Exact book authority, completed task graph and sealed proofs cover raw bytes, including line endings.
 # Disable Git clean transformations for these governed inputs only.
 docs/book/src/*.md -text -filter -ident -working-tree-encoding
 docs/book/src/**/*.md -text -filter -ident -working-tree-encoding
 .doctrine/live_document_size/maintained_reference.jsonl -text -filter -ident -working-tree-encoding
+docs/tasks/G1-SLICE-garment.md -text -filter -ident -working-tree-encoding
+# A sealed source can end with a blank line; retain its bytes without weakening ordinary source checks.
+docs/history/*.md -text -filter -ident -working-tree-encoding whitespace=-blank-at-eof
+docs/history/**/*.md -text -filter -ident -working-tree-encoding whitespace=-blank-at-eof

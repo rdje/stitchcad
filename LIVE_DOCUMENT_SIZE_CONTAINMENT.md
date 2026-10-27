@@ -41,6 +41,8 @@
   overrides cannot select another book. Source/workspace preflight precedes scratch/part measurements.
   Governed Markdown/control Git attributes disable clean transformations; effective attributes are
   checked so committed bytes retain the exact recorded digest. Content width excludes LF/optional CR.
+  Fresh task ownership covers the bounded root/linked same-family siblings, including historical
+  completed-owner detection and complete authoring-source freezing; the canonical graph stays live.
 - **Landing-page identity:** top-level `README.md` is the rendered project landing page. Its purpose,
   verified first-use path, architecture summary and canonical navigation stay directly visible there;
   containment routes changing detail and chronology away, it does not off-load the landing function.

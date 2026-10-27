@@ -1,5 +1,11 @@
 # G1-SLICE — whole recipe proofs
 
+## Journal-link transition — G1-SLICE.6.5.2.b.sources
+
+- [x] ROOT CAUSE: native journal census7 historical nodes have done canonical copies; generated map8240B exceeds8192B, rc=0.
+- [x] ADDRESSED: transition_receipts.py --record docs/history/stitchcad-devnotes-part572.md:1 exact Git span rc=0; all21 current links retain original fragments.
+- [x] NO REGRESSION: task_source_contract.py11 tests OK rc=0; coverage10 lanes/13 trees/17 siblings/0 orphans and map8185B rc=0.
+
 Evidence sibling of [G1-SLICE](G1-SLICE.md); [recipe lane](G1-SLICE-recipes.md) owns all nodes.
 
 ## Immutable whole recipe protocol
@@ -663,9 +669,9 @@ Completed reference input contract .5a.2b.1 is preserved in
 - ID: `G1-SLICE.5a.3b`
   Status: `done`
   Goal: repair D79/D83 reference numeric identity/domains and resolve D84/D95 before product proof.
-  Children/contracts: [complete preserved reference subtree](G1-SLICE-journal.md#completed-reference-subtree--preserved-during-g1-0058).
+  Children/contracts: [complete preserved reference subtree](../history/stitchcad-devnotes-part572.md#completed-reference-subtree--preserved-during-g1-0058).
   Verification: independent rational/scalar/binding/canonical/angular/replay controls and actual
-  compiled assertion reds; [scoped review](G1-SLICE-journal.md#scoped-reference-review-evidence--preserved-from-ea3f64f).
+  compiled assertion reds; [scoped review](../history/stitchcad-devnotes-part572.md#scoped-reference-review-evidence--preserved-from-ea3f64f).
   Commit: `STITCHCAD-G1-0057`; production conversion/evaluation remains separately owned.
 - ID: `G1-SLICE.5a.3c`
   Status: `done`
@@ -687,14 +693,14 @@ Completed reference input contract .5a.2b.1 is preserved in
   Verification: five public contracts/138 independent Decimal rows, nine compiled debug reds/one
   release red; original signed four contracts/36 Fraction rows/five reds retained. Strict native494,
   sc-units46, release public contracts and three WASM crates pass. Source restoration exact.
-  [Complete pre-code protocol](G1-SLICE-journal.md#unsigned-rounding-pre-code-protocol--preserved-during-g1-0058).
+  [Complete pre-code protocol](../history/stitchcad-devnotes-part572.md#unsigned-rounding-pre-code-protocol--preserved-during-g1-0058).
   Commit: `STITCHCAD-G1-0058`; no literal conversion/arena/evaluation claim.
 - ID: `G1-SLICE.5a.3c.2`
   Status: `done`
   Goal: exact typed canonical literal inputs from validated borrowed syntax; retain kind/span/source,
   full128 magnitude and unary separation. Bounded decimal reduction precedes128-bit rational check,
   then shared input rounding and scalar length check. Raw angles retain turns; no binding/evaluation.
-  Protocol: [complete pre-code contract](G1-SLICE-journal.md#literal-conversion-pre-code-protocol--completed-in-g1-0059).
+  Protocol: [complete pre-code contract](../history/stitchcad-devnotes-part572.md#literal-conversion-pre-code-protocol--completed-in-g1-0059).
   Verification: five public contracts/100 independent Fraction rows/two privacy-lifetime docs;
   thirteen compiled actual assertion reds/exact restoration; strict native501, release five/WASM3.
   Commit: `STITCHCAD-G1-0059`.
@@ -702,7 +708,7 @@ Completed reference input contract .5a.2b.1 is preserved in
   Status: `done`
   Goal: immutable normalized arena retains every node/edge/name/operator/span and syntax bound;
   convert all literals with .2, preserve unary separation/raw turns and source borrowing. No execution.
-  Protocol: [complete pre-code plan](G1-SLICE-journal.md#normalized-arena-pre-code-protocol--completed-in-g1-0060).
+  Protocol: [complete pre-code plan](../history/stitchcad-devnotes-part572.md#normalized-arena-pre-code-protocol--completed-in-g1-0060).
   Verification: eight public contracts/24 independent shape rows/nested100 literal rows/25 book
   expressions/three privacy-lifetime docs plus runnable doc; seventeen compiled actual assertion reds/
   exact restoration; strict native513, release eight/WASM3. Flat conversion/clone/drop on64KiB stack.

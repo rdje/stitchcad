@@ -1,3 +1,13 @@
+# Sealed engineering continuity — part572
+
+- **Identity:** 1169 lines, 79693 bytes, sha256:155861ad63f7575c9db6dca8637f7f552276a96481d8e6072f1ab7735f0ea696
+- **Coverage:** whole completed verification and commit journal from 7b3736fe043af621d7ce693c43e34e50f36e9918.
+- Whole source interval: docs/tasks/G1-SLICE-journal.md bytes 0–79693, 79693 bytes, sha256:155861ad63f7575c9db6dca8637f7f552276a96481d8e6072f1ab7735f0ea696
+- **Retrieval:** exact bytes after the first rule and blank line.
+- **Write policy:** immutable; corrections belong in a new record.
+
+---
+
 # G1-SLICE — completed verification and commit journal
 
 Bounded sibling of [G1-SLICE](G1-SLICE.md). This committed journal retains exact 60c7305 bytes;

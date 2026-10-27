@@ -31,6 +31,7 @@ CONTROL_BYTES = 8192
 RECORD_BYTES = 6144
 REGISTRY_BYTES = 65536
 TASK_BYTES = 98304
+TASK_FILES = 32
 CENSUS_ENTRIES = 8192
 LISTING_BYTES = 1048576
 GIT_SECONDS = 10
@@ -427,6 +428,93 @@ def task_status(data: bytes | None, task: str) -> str | None:
     return matches[0] if matches else None
 
 
+def task_file_name(name: str, task: str) -> bool:
+    tree = re.escape(task.split(".", 1)[0])
+    return re.fullmatch(tree + r"(?:-[A-Za-z0-9][A-Za-z0-9_.-]*)?\.md", name) is not None
+
+
+def task_paths(tree: Path, task: str) -> set[str]:
+    """Bound the direct task family before reading bodies; never descend into artifact directories."""
+    folder = "docs/tasks"
+    need(stat.S_ISDIR(metadata(tree, folder).st_mode) and not os.path.lexists(tree / folder / ".git"),
+         "path", "task directory is not an ordinary project directory")
+    paths = set()
+    try:
+        with os.scandir(tree / folder) as entries:
+            for count, entry in enumerate(entries, 1):
+                need(count <= CENSUS_ENTRIES, "budget", "task directory entry census")
+                if task_file_name(entry.name, task):
+                    paths.add(folder + "/" + entry.name)
+                    need(len(paths) <= TASK_FILES, "budget", "task-family file census")
+    except OSError as issue:
+        raise Refusal("path", "cannot enumerate task family") from issue
+    for relative in sorted(paths):
+        info = metadata(tree, relative)
+        need(stat.S_ISREG(info.st_mode) and info.st_nlink == 1,
+             "path", f"task source must be regular and unshared: {relative}")
+        need(info.st_size <= TASK_BYTES, "budget", f"oversized task source: {relative}")
+    return paths
+
+
+def current_tasks(tree: Path, task: str) -> dict[str, bytes]:
+    sources = {name: read_file(tree, name, TASK_BYTES) for name in sorted(task_paths(tree, task))}
+    root = "docs/tasks/" + task.split(".", 1)[0] + ".md"
+    need(root in sources, "task", "canonical task root missing")
+    # Canonical siblings form a bounded linked graph. Basename-only local links retain the existing
+    # task-tree convention; fragments are navigation, never another source or an escaping path.
+    link = re.compile(rb"\]\(([A-Za-z0-9_.-]+\.md)(?:#[^()\r\n]*)?\)")
+    reached = set()
+    pending = {root}
+    while pending:
+        relative = min(pending)
+        pending.remove(relative)
+        if relative in reached:
+            continue
+        reached.add(relative)
+        for raw in link.findall(sources[relative]):
+            name = raw.decode("ascii")
+            if task_file_name(name, task):
+                target = "docs/tasks/" + name
+                portable(target)
+                need(target in sources, "task", f"linked task sibling missing: {target}")
+                if target not in reached:
+                    pending.add(target)
+    need(reached == set(sources), "task", "unlinked task sibling")
+    return sources
+
+
+def baseline_tasks(root: Path, revision: str, task: str) -> dict[str, bytes]:
+    outer = git(root, ["ls-tree", "-z", revision, "--", "docs/tasks"], 8192)
+    if not outer:
+        return {}
+    need(re.fullmatch(rb"040000 tree (?:[0-9a-f]{40}|[0-9a-f]{64})\tdocs/tasks\0", outer) is not None,
+         "git", "native task directory is not one ordinary tree")
+    listing = git(root, ["ls-tree", "-z", revision + ":docs/tasks"], LISTING_BYTES)
+    records = listing.split(b"\0")
+    need(records[-1] == b"" and len(records) - 1 <= CENSUS_ENTRIES, "git", "native task directory census")
+    selected = []
+    for entry in records[:-1]:
+        _header, separator, name = entry.partition(b"\t")
+        need(bool(separator), "git", "malformed native task entry")
+        try:
+            belongs = task_file_name(name.decode("utf-8"), task)
+        except UnicodeError as issue:
+            raise Refusal("git", "native task entry encoding") from issue
+        if belongs:
+            selected.append(entry + b"\0")
+            need(len(selected) <= TASK_FILES, "budget", "native task-family file census")
+    paths = git_entries(b"".join(selected)) if selected else []
+    # Inspect every historical family member even if its link later disappeared. A previously
+    # completed owner cannot be made fresh by unlinking or moving its canonical sibling.
+    return {"docs/tasks/" + name: blob(root, revision, "docs/tasks/" + name, TASK_BYTES) for name in paths}
+
+
+def owner_status(sources: dict[str, bytes], task: str) -> str | None:
+    states = [state for data in sources.values() if (state := task_status(data, task)) is not None]
+    need(len(states) <= 1, "task", "duplicate authority owner across task sources")
+    return states[0] if states else None
+
+
 @dataclass(frozen=True)
 class Verification:
     mode: str
@@ -470,9 +558,8 @@ def verify_record(root: Path, tree: Path, raw: bytes) -> Verification:
     baseline = git_snapshot(root, base)
     need(baseline == snapshot(authority["baseline"]), "baseline", "native Git baseline differs")
     task = authority["task"]
-    task_path = "docs/tasks/" + task.split(".", 1)[0] + ".md"
-    before = task_status(blob(root, base, task_path, TASK_BYTES, absent=True), task)
-    after = task_status(read_file(tree, task_path, TASK_BYTES), task)
+    before = owner_status(baseline_tasks(root, base, task), task)
+    after = owner_status(current_tasks(tree, task), task)
     need(before in (None, "proposed", "pending", "active", "in_progress") and after == "done",
          "task", "authority owner must be newly completed, never a reused closed task")
     return Verification(mode, current, task)
@@ -527,9 +614,9 @@ def record_change(task: str, reason: str, root: Path = ROOT, tree: Path | None =
     raw = encode_record(record)
     result = verify_record(root, tree, raw)
     need(result.mode == "candidate", "freshness", "recording requires a fresh candidate authority")
-    task_path = "docs/tasks/" + task.split(".", 1)[0] + ".md"
     chapters = navigation(read_file(tree, INDEX, INDEX_BOUNDS[1])) | {INDEX}
-    sources = {tree / name for name in chapters | {REGISTRY, task_path}}
+    task_files = task_paths(tree, task)
+    sources = {tree / name for name in chapters | {REGISTRY} | task_files}
     sources.update((Path(__file__).resolve(strict=True), root / "scripts/local_environment.py"))
     sources.add(root / ATTRIBUTES)
     if old is not None:
@@ -563,6 +650,7 @@ def record_change(task: str, reason: str, root: Path = ROOT, tree: Path | None =
         # Native HEAD, full content/ownership and every producer source are fresh at publication.
         need(git(root, ["rev-parse", "HEAD"], 128).decode("ascii").strip() == head,
              "changed", "HEAD changed during recording")
+        need(task_paths(tree, task) == task_files, "changed", "task source census changed before publication")
         for path, data in frozen.items():
             need(read_file(root, path.relative_to(root).as_posix(), max(TASK_BYTES, 65536)) == data,
                  "changed", "authoring input changed before publication")

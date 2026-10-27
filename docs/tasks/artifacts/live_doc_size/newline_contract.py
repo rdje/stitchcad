@@ -8,6 +8,7 @@ import runpy
 import subprocess
 import tempfile
 import unittest
+import uuid
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -38,6 +39,40 @@ class Newlines(unittest.TestCase):
                     self.assertEqual(int(count.split()[0]), len(body))
 
     def test_native_git_preserves_exact_governed_bytes_under_newline_settings(self):
+        self.compare_storage((API["SOURCE"] + "/introduction.md", API["CONTROL"]))
+
+    def test_native_git_preserves_the_exact_completed_task_partition_and_sealed_proofs(self):
+        self.compare_storage(("docs/tasks/G1-SLICE-garment.md",
+                              "docs/history/stitchcad-devnotes-part570.md",
+                              "docs/history/stitchcad-devnotes-part571.md"))
+
+    def test_archive_blank_eof_is_scoped_and_ordinary_source_whitespace_remains_strict(self):
+        token = uuid.uuid4().hex
+        archive = "docs/history/whitespace-probe-" + token + ".md"
+        source = "crates/sc-core/src/whitespace_probe_" + token + ".rs"
+        environment = {key: value for key, value in os.environ.items() if not key.startswith("GIT_")}
+        environment.update(GIT_CONFIG_NOSYSTEM="1", GIT_CONFIG_GLOBAL=os.devnull,
+                           GIT_CONFIG_SYSTEM=os.devnull, GIT_OPTIONAL_LOCKS="0")
+        def check(relative, lines):
+            self.assertFalse((ROOT / relative).exists())
+            patch = (f"--- /dev/null\n+++ b/{relative}\n@@ -0,0 +1,{len(lines)} @@\n" +
+                     "".join("+" + line + "\n" for line in lines)).encode()
+            result = subprocess.run(["git", "-C", str(ROOT), "-c", "core.fsmonitor=false",
+                                     "-c", "submodule.recurse=false", "-c",
+                                     "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab",
+                                     "apply", "--check", "--whitespace=error", "-"],
+                                    input=patch, env=environment, capture_output=True, timeout=10)
+            self.assertFalse((ROOT / relative).exists(), "native --check must never write the virtual file")
+            return result
+        allowed = check(archive, ["Exact sealed source", ""])
+        self.assertEqual(allowed.returncode, 0, allowed.stderr)
+        clean = check(source, ["// ordinary source"])
+        self.assertEqual(clean.returncode, 0, clean.stderr)
+        refused = check(source, ["// ordinary source "])
+        self.assertNotEqual(refused.returncode, 0)
+        self.assertIn(b"trailing whitespace", refused.stderr)
+
+    def compare_storage(self, paths):
         environment = {key: value for key, value in os.environ.items() if not key.startswith("GIT_")}
         environment.update(GIT_CONFIG_NOSYSTEM="1", GIT_CONFIG_GLOBAL=os.devnull,
                            GIT_CONFIG_SYSTEM=os.devnull, GIT_OPTIONAL_LOCKS="0")
@@ -47,7 +82,11 @@ class Newlines(unittest.TestCase):
         # this same repository's Git metadata read-only. Never initialize or amend another repo.
         context = tempfile.TemporaryDirectory(prefix="old-storage-", dir=parent) if BASELINE else nullcontext(None)
         with context as baseline:
-            for relative in (API["SOURCE"] + "/introduction.md", API["CONTROL"]):
+            if baseline:
+                # An explicit empty file makes the original no-declarations policy independent of
+                # check-attr's index fallback for a missing working-tree attributes file.
+                (Path(baseline) / ".gitattributes").write_bytes(b"")
+            for relative in paths:
                 for conversion in ("false", "true", "input"):
                     for body in (b"Exact storage\n", b"Exact storage\r\n"):
                         with self.subTest(path=relative, conversion=conversion, body=body):
