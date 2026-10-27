@@ -3,15 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — complete Closure and instance sources
+## _(2026-10-27 UTC)_ — actual Closure declaration roles
 
-0379 owns exact ordered ClosureInventory objects; Closure/nested-instance ids share a local census
-with original owning positions. Current queries check whole notions first, then every Closure.
-Unused notion failures and later missing targets keep concrete causes, stable instance and role.
-Five native controls/privacy2 pass0; strict affected lint/fmt/book/publication79/144 pass0. Original
-validators byte-identical; per-Closure reuse and physical/declaration deferrals unchanged. D250132
-exact prior rows unchanged.530 retains whole0378/retirement/signature evidence in6 exact Git spans0.
-Promotion declined: existing ownership/current-source rules. Known declaration roles next; full CI deferred.
+0380 borrows original zipper/hook/bar/button/hole roles over the actual ClosureInventory/current root.
+Formula zipper length joins actual DesignParameter then current canonical Length kind; Unknown/Derived
+remain unread. Explicit fields retain inline intent; logical sizes/operation domains and G3/G4 stay owned.
+Four native/one lifetime controls pass0; strict core/affected-measure lint/fmt/book/publication79/148 pass0.
+Original Closure/inventory/sewing bytes identical; metadata scope alone grants no placement readiness.
+D250132 exact prior rows unchanged.531 retains whole0379/older scopes/fixtures in7 exact Git spans0.
+Promotion declined: settled source/physical boundaries. Layers/Hem next; full CI/integration deferred.
+
+[Complete Closure collection lesson](docs/history/stitchcad-devnotes-part531.md) retains
+its original scope, checks and promotion decision.
 
 [Complete notion collection lesson](docs/history/stitchcad-devnotes-part530.md) retains
 its original scope, checks and promotion decision.
@@ -58,19 +61,8 @@ its original scope, checks and promotion decision.
 [Complete native authority review lesson](docs/history/stitchcad-devnotes-part530.md) retains
 its original scope, checks and promotion decision.
 
-## _(2026-10-26 UTC)_ — trusted-host core authorization
-
-0337 .6.3.2 checks one verified session/time/grant snapshot; exact actor/principal and same-grant scope/permission.
-Agent approval refuses; inspect-only mutation preview stays separate. No transport, handler or approval record.
-D243 actual duplicate-active/revoked grant control red0/1 rc101; upfront uniqueness fixes both orders.
-Native auth7/scope3/request2/catalog2/release6 pass20/0, strict lint/fmt/book/pub77-103 pass0; D242 text fixed.
-491 wholecd41993 source/hash/public exact0. Promotion: existing command decision; .6.3.3 review, capacity P1.
-
-## _(2026-10-26 UTC)_ — exact command scope coverage
-
-0336 .6.3.1 checks explicit Design/commands/start-inclusive end-exclusive time; widening refuses exact inputs.
-Native scope3/request2/catalog2, strict lint/fmt/book/publication77-101 pass0; initial missing topic index fixed.
-490 whole0812151 source/hash/public exact0, retention944/61 pass0. Scope grants no authority; .6.3.2 next. Promotion declined: existing scoped-authority contract. G1still6/18; full CI integration/pre-push.
+[Complete authorization/scope lessons](docs/history/stitchcad-devnotes-part531.md) retain
+their original scopes, checks and promotion decisions.
 
 ## _(2026-10-26 UTC)_ — one typed command input surface
 

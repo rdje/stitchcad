@@ -87,20 +87,8 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Goal:closed scope; [whole proof](../history/stitchcad-devnotes-part526.md).
 - ID: `G1-SLICE.3c`
   Status: `done`
-  Goal: the geometry-bearing object types (ontology §4) — `Piece`, `SeamSpan`/`SewingGraph`, `Notch`,
-  `Grainline`, `SeamAllowance`, `Dart`/`Tuck`/`Pleat`/`Gather`, `Closure`, `Pocket` — with their
-  structural invariants enforced at construction.
-  Acceptance: a structurally invalid object cannot be built and the diagnostic names the invariant
-  (an empty or self-repeating boundary loop, a reference to a non-existent edge, multiplicity 0, a
-  cut-on-fold piece without exactly one fold edge, incomplete label data); the GEOMETRIC invariants
-  (CCW winding, simplicity, holes strictly inside, closure, dart-intake conservation) are carried as a
-  visible `DeferredToG2` state discharged by `G2-2D.1`, never claimed here.
-  Verification: object/support suites 149 contracts; sc-core 260 tests incl. 18 docs; full strict
-  Rust/WASM/book, 22 probe suites, focused censuses/ledger and staged doctrine gates green.
-  Commit: `STITCHCAD-G1-0023`
-  Design: `decision_ontology-invariants-structural-g1-geometric-g2.md`.
-  Children: `.3c.1` (pieces), `.3c.2` (sewing graph), `.3c.3` (marks and allowances),
-  `.3c.4` (garment constructions). The parent closes only after all four children.
+  Goal:closed structural ontology scope; [whole proof](../history/stitchcad-devnotes-part531.md).
+  Children: `.3c.1`, `.3c.2`, `.3c.3`, `.3c.4`; geometric proof remains G2.
 
 - ID: `G1-SLICE.3c.1`
   Status: `done`
@@ -898,7 +886,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:closed Pocket scope; [whole proof](../history/stitchcad-devnotes-part528.md).
 - ID: `G1-SLICE.6.4.5.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual notion/Closure collection, every instance/placement and known declaration roles.
   Own Closure causes D260 and continuity528.
   Children .a original nested Closure errors; .b actual notion placements; .c actual Closure/instance
@@ -911,26 +899,27 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0378 actual notion collection; [whole scope/proof](../history/stitchcad-devnotes-part530.md).
 - ID: `G1-SLICE.6.4.5.2.c`
   Status: `done`
-  Goal: private actual Closure inventory, nested instance identities and complete current placements.
-  Own exact ordered objects and local Closure/instance id census with both positions/roles; whole
-  supplied notion inventory first, then every Closure's existing current checks. Preserve held damage,
-  raw queries/error causes and G2/G3/G4 deferrals; global Design joins/declarations remain .d/.5.
-  Focused native/privacy/lint/book and whole0378 continuity530 before next leaf.
-  - [x] REPRODUCE / ISSUE: python3 Git-source check: a50e92d has no Closure inventory rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; individual Closures own no collection-wide
-    nested id census or complete unused notion scope. Original validators byte-identical.
-  - [x] FIX: cargo clippy -p sc-core --test closure_contract -- -D warnings:rc=0;
-    private ordered objects/local nested ids, whole notions then every Closure, concrete causes.
-  - [x] ADDRESSED: cargo test -p sc-core --test closure_contract inventory_:5/0 rc=0;
-    cargo test -p sc-core --doc ontology::closure_inventory:2/0 rc=0.
-  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; glossary132 failures rc=1,
-    exact prior D250 rows compare rc=0; existing per-Closure target reuse rules retained.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/144/1454/2404 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part530.md:6 exact spans rc=0.
-    promotion: declined (existing ownership/current-source rules). Completed STITCHCAD-G1-0379.
+  Goal:0379 actual Closure/instance collection; [whole scope/proof](../history/stitchcad-devnotes-part531.md).
 - ID: `G1-SLICE.6.4.5.2.d`
-  Status: `pending`
+  Status: `done`
   Goal: actual known Closure declaration roles; preserve existing logical domain/operation deferrals.
+  Own borrowed zipper length, hook/bar/button size and canonical hole-source views over actual
+  ClosureInventory and DesignInputs. Formula length requires actual parameter metadata/Length kind;
+  explicit fields borrow original intent, logical size/operation/Profile roles stay G3/G4/recipe-owned.
+  Complete root first; no numeric reads, defaults or geometry proof. Global identity joins remain .5.
+  Focused actual cross-crate/native/privacy/lint/book; whole0379 continuity531.
+  - [x] REPRODUCE / ISSUE: python3 Git-source check:9a4357c has no Closure declaration views rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; original descriptors retain intent without
+    actual Design parameter/Length-kind joins. Logical size/operation schemas remain separate.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and -p sc-measure
+    --test design_inputs_contract -- -D warnings:rc=0 each; original borrowed field roles.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract closure_declarations_:
+    4/0 rc=0; cargo test -p sc-core --doc design::closures:1/0 rc=0.
+  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; original Closure/inventory/sewing bytes
+    identical rc=0; glossary132 failures rc=1, exact prior D250 rows compare rc=0.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/148/1454/2405 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part531.md:7 exact spans rc=0.
+    promotion: declined (settled source/physical boundaries). Completed STITCHCAD-G1-0380.
 - ID: `G1-SLICE.6.4.5.3`
   Status: `pending`
   Goal: actual layers/Hem current sources, materials and known declaration roles; explicit lining refusal.

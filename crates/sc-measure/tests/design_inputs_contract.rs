@@ -1242,3 +1242,392 @@ fn sewing_current_sources_preserve_the_actual_amount_declaration_error_after_gra
         Some(&expected)
     );
 }
+
+fn with_closures(
+    definition: DesignInputsDefinition<DesignSources>,
+    kinds: Vec<sc_core::ontology::ClosureKind>,
+) -> (
+    DesignInputs<DesignSources>,
+    sc_core::ontology::ClosureInventory,
+) {
+    use sc_core::ontology::{
+        Closure, ClosureDefinition, ClosureInstance, ClosureInventory, DirectedRange, Direction,
+        EdgeAnchor, EdgeRange, NotionPlacement, NotionPlacementDefinition, Param,
+    };
+    let (state, _) = with_sewing_graph(definition, vec![]);
+    let structure = state.structure();
+    let pieces = structure.pieces().pieces();
+    let placements = pieces
+        .iter()
+        .zip([99000, 99001])
+        .map(|(piece, identity)| {
+            let edge = piece.edges().next().expect("actual held boundary").edge;
+            let copy = structure
+                .cut_plan()
+                .copies_for_piece(piece.id())
+                .next()
+                .expect("actual physical copy");
+            NotionPlacement::new(
+                NotionPlacementDefinition {
+                    id: id(identity),
+                    copy: copy.id(),
+                    anchor: EdgeAnchor {
+                        edge,
+                        param: Param::START,
+                    },
+                    direction: DirectedRange {
+                        range: EdgeRange::whole(edge),
+                        direction: Direction::Original,
+                    },
+                },
+                structure.cut_plan(),
+                piece,
+                structure.topology(),
+            )
+            .expect("actual born placement")
+        })
+        .collect::<Vec<_>>();
+    let closures = kinds
+        .into_iter()
+        .enumerate()
+        .map(|(index, kind)| {
+            let ordinal = u128::try_from(index).expect("authored fixture ordinal");
+            Closure::new(
+                ClosureDefinition {
+                    id: id(100000 + ordinal),
+                    kind,
+                    instances: vec![ClosureInstance {
+                        id: id(101000 + ordinal),
+                        first: id(99000),
+                        second: id(99001),
+                    }],
+                },
+                &placements,
+                structure.cut_plan(),
+                pieces,
+                structure.topology(),
+            )
+            .expect("actual Closure")
+        })
+        .collect();
+    (
+        state,
+        ClosureInventory::new(closures).expect("actual ordered Closure inventory"),
+    )
+}
+
+#[test]
+fn closure_declarations_borrow_original_roles_and_both_length_families_without_value_reads() {
+    use sc_core::{
+        design::{DesignClosureDeclarationRole as Role, DesignClosureDeclarationSource as Source},
+        ontology::{
+            ButtonholeDerivation, ButtonholeValidation, ClosureKind, ClosureLength, NotionSize,
+            ProfileBindingValidation, ProfileParameterRef,
+        },
+        recipe::{FormulaLengthInput, FormulaScalarInput},
+        value::{
+            ScalarInputDeclaration, ScalarInputDeclarationDefinition, ScalarInputKind,
+            ScalarInputState,
+        },
+    };
+    let mut definition = fixture();
+    let mut structure = definition.structure.definition().clone();
+    let mut scalars = structure.inputs.scalars().to_vec();
+    scalars.push(
+        ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+            id: id(2003),
+            source: id(2005),
+            kind: ScalarInputKind::Length,
+            state: ScalarInputState::Unknown {
+                observation: id(2004),
+            },
+        })
+        .expect("actual unknown general Length"),
+    );
+    structure.inputs = CanonicalInputs::new(structure.inputs.lengths().to_vec(), scalars)
+        .expect("single canonical owner");
+    definition.structure = DesignStructure::new(structure).expect("actual replacement structure");
+    definition.parameters = DesignParameters::new(
+        vec![
+            DesignParameterDefinition {
+                id: id(5001),
+                token: MachineToken::new("zip_length").expect("authored token"),
+                target: DesignParameterTarget::Length(id(12)),
+            },
+            DesignParameterDefinition {
+                id: id(5002),
+                token: MachineToken::new("zip_general").expect("authored token"),
+                target: DesignParameterTarget::Scalar {
+                    declaration: id(2003),
+                    kind: ScalarInputKind::Length,
+                },
+            },
+        ],
+        definition.structure.inputs(),
+    )
+    .expect("actual derived/unknown parameter metadata");
+    let (state, closures) = with_closures(
+        definition,
+        vec![
+            ClosureKind::CentredZipper {
+                length: ClosureLength::Explicit {
+                    parameter: id(102000),
+                    value: sc_units::Length::from_micrometres(180000).expect("positive intent"),
+                },
+            },
+            ClosureKind::CentredZipper {
+                length: ClosureLength::Formula(id(5001)),
+            },
+            ClosureKind::CentredZipper {
+                length: ClosureLength::Formula(id(5002)),
+            },
+            ClosureKind::CentredZipper {
+                length: ClosureLength::Profile(ProfileParameterRef::new(id(10))),
+            },
+            ClosureKind::HookAndBar {
+                hook: NotionSize::Declaration(id(2000)),
+                bar: NotionSize::Profile(ProfileParameterRef::new(id(10))),
+            },
+            ClosureKind::ButtonAndButtonhole {
+                button: NotionSize::Profile(ProfileParameterRef::new(id(10))),
+                hole: ButtonholeDerivation {
+                    operation: id(2000),
+                },
+            },
+        ],
+    );
+    let original = (state.inputs().clone(), closures.clone());
+    let views = state
+        .closure_declarations(&closures)
+        .expect("all actual declaration roles");
+    assert_eq!(
+        views.iter().map(|view| view.role()).collect::<Vec<_>>(),
+        vec![
+            Role::ZipperLength,
+            Role::ZipperLength,
+            Role::ZipperLength,
+            Role::ZipperLength,
+            Role::HookSize,
+            Role::BarSize,
+            Role::ButtonSize,
+            Role::Buttonhole,
+        ]
+    );
+    for view in &views {
+        assert!(core::ptr::eq(view.canonical_inputs(), state.inputs()));
+        assert!(core::ptr::eq(
+            view.closure(),
+            closures
+                .closure(view.closure().id())
+                .expect("original owner")
+        ));
+        match view.source() {
+            Source::ExplicitLength { parameter, value } => {
+                let ClosureKind::CentredZipper {
+                    length:
+                        ClosureLength::Explicit {
+                            parameter: actual_id,
+                            value: actual_value,
+                        },
+                } = &view.closure().definition().kind
+                else {
+                    unreachable!()
+                };
+                assert!(core::ptr::eq(parameter, actual_id));
+                assert!(core::ptr::eq(value, actual_value));
+                assert_eq!(value.as_micrometres(), 180000);
+                assert!(state.parameters().parameter(*parameter).is_none());
+            }
+            Source::FormulaLength {
+                parameter,
+                declaration,
+            } => {
+                assert!(core::ptr::eq(
+                    parameter,
+                    state
+                        .parameters()
+                        .parameter(parameter.id())
+                        .expect("actual metadata")
+                ));
+                if let Some(length) = FormulaLengthInput::from_declaration(declaration) {
+                    assert!(core::ptr::eq(
+                        length.canonical_declaration(),
+                        state
+                            .inputs()
+                            .length(id(12))
+                            .expect("actual derived source")
+                    ));
+                    assert!(length.read_authored().is_err());
+                } else {
+                    let canonical = state
+                        .inputs()
+                        .scalar(id(2003))
+                        .expect("actual unknown general source");
+                    let scalar = FormulaScalarInput::from_declaration(declaration, canonical)
+                        .expect("actual general Length");
+                    assert!(core::ptr::eq(scalar.canonical_declaration(), canonical));
+                    assert!(scalar.read_authored().is_err());
+                }
+            }
+            Source::ProfileLength(reference) => {
+                let ClosureKind::CentredZipper {
+                    length: ClosureLength::Profile(actual),
+                } = &view.closure().definition().kind
+                else {
+                    unreachable!()
+                };
+                assert!(core::ptr::eq(reference, actual));
+                assert_eq!(
+                    view.profile_validation(),
+                    Some(ProfileBindingValidation::DeferredToG4)
+                );
+            }
+            Source::Size(size) => {
+                let actual = match (&view.closure().definition().kind, view.role()) {
+                    (ClosureKind::HookAndBar { hook, .. }, Role::HookSize) => hook,
+                    (ClosureKind::HookAndBar { bar, .. }, Role::BarSize) => bar,
+                    (ClosureKind::ButtonAndButtonhole { button, .. }, Role::ButtonSize) => button,
+                    _ => unreachable!(),
+                };
+                assert!(core::ptr::eq(size, actual));
+                assert_eq!(
+                    view.profile_validation(),
+                    if matches!(size, NotionSize::Profile(_)) {
+                        Some(ProfileBindingValidation::DeferredToG4)
+                    } else {
+                        None
+                    }
+                );
+            }
+            Source::Buttonhole(source) => {
+                let ClosureKind::ButtonAndButtonhole { button, hole } =
+                    &view.closure().definition().kind
+                else {
+                    unreachable!()
+                };
+                assert!(core::ptr::eq(source.button_size(), button));
+                assert!(core::ptr::eq(source.derivation(), hole));
+                assert_eq!(source.derivation().operation, id(2000));
+                assert_eq!(
+                    view.buttonhole_validation(),
+                    Some(ButtonholeValidation::DeferredToG3)
+                );
+                assert_eq!(
+                    view.profile_validation(),
+                    Some(ProfileBindingValidation::DeferredToG4)
+                );
+            }
+        }
+    }
+    assert_eq!(state.inputs(), &original.0);
+    assert_eq!(closures, original.1);
+}
+
+#[test]
+fn closure_declarations_require_actual_formula_metadata_despite_numeric_canonical_presence() {
+    use sc_core::{
+        design::DesignClosureDeclarationError as Error,
+        ontology::{ClosureKind, ClosureLength},
+    };
+    for numeric_only in [10, 2000] {
+        let (state, closures) = with_closures(
+            fixture(),
+            vec![ClosureKind::CentredZipper {
+                length: ClosureLength::Formula(id(numeric_only)),
+            }],
+        );
+        assert_eq!(
+            state
+                .closure_declarations(&closures)
+                .expect_err("canonical id is no parameter metadata"),
+            Error::MissingFormulaParameter {
+                closure: id(100000),
+                parameter: id(numeric_only)
+            }
+        );
+    }
+}
+
+#[test]
+fn closure_declarations_keep_the_later_actual_closure_when_formula_kind_is_wrong() {
+    use sc_core::{
+        design::DesignClosureDeclarationError as Error,
+        ontology::{ClosureKind, ClosureLength},
+        value::ScalarInputKind,
+    };
+    let mut definition = fixture();
+    let mut parameters = definition
+        .parameters
+        .parameters()
+        .iter()
+        .map(|parameter| parameter.definition().clone())
+        .collect::<Vec<_>>();
+    parameters.push(DesignParameterDefinition {
+        id: id(5002),
+        token: MachineToken::new("count_intent").expect("authored token"),
+        target: DesignParameterTarget::Scalar {
+            declaration: id(2000),
+            kind: ScalarInputKind::Count,
+        },
+    });
+    definition.parameters = DesignParameters::new(parameters, definition.structure.inputs())
+        .expect("actual Count metadata");
+    let (state, closures) = with_closures(
+        definition,
+        vec![
+            ClosureKind::CentredZipper {
+                length: ClosureLength::Formula(id(5001)),
+            },
+            ClosureKind::CentredZipper {
+                length: ClosureLength::Formula(id(5002)),
+            },
+        ],
+    );
+    assert_eq!(
+        state
+            .closure_declarations(&closures)
+            .expect_err("Count cannot satisfy zipper Length"),
+        Error::FormulaKind {
+            closure: id(100001),
+            parameter: id(5002),
+            actual: sc_core::recipe::FormulaKind::Count
+        }
+    );
+}
+
+#[test]
+fn closure_declarations_are_metadata_scope_and_do_not_approve_missing_current_placements() {
+    use sc_core::ontology::{
+        ClosureInventoryError, ClosureKind, ClosureLength, NotionPlacementInventory,
+    };
+    let (state, closures) = with_closures(
+        fixture(),
+        vec![ClosureKind::CentredZipper {
+            length: ClosureLength::Formula(id(5001)),
+        }],
+    );
+    let mut definition = state.definition().clone();
+    let mut structure = definition.structure.definition().clone();
+    structure.pieces = PieceInventory::new(vec![]).expect("explicit current empty Pieces");
+    structure.cut_plan = CutPlan::new(vec![], &[]).expect("explicit current empty copies");
+    definition.structure =
+        DesignStructure::new(structure).expect("actual current structural owner");
+    let current = DesignInputs::new(definition).expect("actual unchanged canonical metadata");
+    let views = current
+        .closure_declarations(&closures)
+        .expect("metadata remains inspectable");
+    assert_eq!(views.len(), 1);
+    assert_eq!(
+        views.first().expect("original Closure role").closure().id(),
+        id(100000)
+    );
+    assert!(matches!(
+        closures.validate_current(
+            &NotionPlacementInventory::new(vec![]).expect("empty notions"),
+            current.structure().cut_plan(),
+            current.structure().pieces().pieces(),
+            current.structure().topology()
+        ),
+        Err(ClosureInventoryError::Closure { .. })
+    ));
+}

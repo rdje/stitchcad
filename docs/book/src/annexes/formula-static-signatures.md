@@ -118,24 +118,11 @@ runs the real CLI and both prefixes' original offset/filename faults before the 
 
 ## Input context and fixture boundaries
 
-`formula_input.py` validates five bootstrap inputs before import and ten reference inputs before
-both public context loaders. These read-only calls retain the unit, arithmetic and fixture context;
-they create no stores, copies, files or children. `literal_diagnostic.py` validates six bootstrap
-inputs and eleven inputs before delegation, sharing the context provider's refusal identity.
-Its printed numerical observations remain diagnostics; exit zero alone is not a pass verdict.
-
-The input end-to-end call plans the whole book, three complete copied trees and their three logs
-before activation. It inspects old copies before replacement, rechecks deletion and copied inputs,
-and validates the actual child selectors before each shell dispatch. Caller selectors and unrelated
-environment values remain intact; local stores are passed to the child. An input or selected parts
-directory that aliases a replacement destination refuses before deletion. Links, foreign repository
-boundaries, nonregular files and hardlinked outputs also refuse before effects.
-
-The mutation entry plans eleven inputs, nine logs and the single writable reference shell before
-activation. Each source change, child, log and restoration receives a fresh plan. Importing that
-runner creates no fixtures; executing its CLI runs the original nine mutations. It restores exact
-source bytes on normal completion and child failure. Restoration validates only the writable source,
-so a late invalid log cannot prevent a safe restore (D207). Run it alone, without another reference reader.
+Borrowed input/literal calls freshly validate their declared sources and create no stores, files or
+children. Original unit/arithmetic/fixture context and refusal identity remain intact; printed
+numerical observations alone supply no pass verdict. Producing calls plan complete inputs, copied
+trees and logs before activation. Source/destination aliases, foreign Git boundaries, symlinks,
+nonregular files and hardlinked outputs refuse before effects. Caller selectors remain explicit.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/ci_environment/python_input_context_contract.py
@@ -144,36 +131,13 @@ bash docs/tasks/artifacts/formula_structure/run_formula_input_mutations.sh
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_diagnostic.py
 ```
 
-The first command captures actual pure, copied-book and source-writer boundaries, removes guards
-and tests physical refusals. Its intercepted children prove dispatch contracts; the next two commands
-supply the separate real 130 input assertions, three chapter refusals and nine failing mutations.
-The final command prints observations, including the superseded normalized-angle counterexample.
-The environment probe runner watches the capture control. These checks change no grammar rule.
-
 ## Structural and canonical inventory fixtures
 
-`formula_structure.py` validates four bootstrap sources and nine sources at each borrowed
-load_reference() call. The original sixteen structural assertions/refusals and iterative prebuilt-AST
-control stay active. Ordinary CLI execution also runs two copied-book refusals; `--contracts-only`
-skips those copies. Pure calls preserve prepared stores, unrelated environment values and caller argv.
-
-The end-to-end entry inspects the complete book, both replacement trees and logs before activation.
-It rejects unexpected old entries, links, hardlinked outputs and any selected input or parts directory
-inside a replacement destination. It rechecks before deletion, validates the copied inputs before
-editing, and checks the effective child selectors before dispatch. For example, a caller’s relative
-FORMULA_GRAMMAR is resolved from the repository root, matching the shell’s working directory.
-The child receives the prepared local stores and preserves all other caller selectors.
-
-The canonical inventory validates six bootstrap sources before loading the input provider, then
-thirteen sources before delegation and each direct grammar, decision or literal-annex read. It
-shares the input provider’s Refusal class. The original seven node roles, ten binary symbols, two
-named-call distinctions and six authored byte examples remain independent reference assertions.
-It creates no stores, files or children. Both CLIs report named local-environment refusals with exit2.
-
-The two mutation runners are inert on import. Their producing calls plan ten/fourteen inputs,
-four logs each and exactly one writable source before activation. They freshly validate each source
-change, child and log. Both restoration paths validate the writable source alone, retaining exact
-bytes even when a child fails or a log becomes invalid. Run either writer exclusively:
+Pure structural/canonical readers retain original AST/byte assertions and create no stores or
+children. Producers recheck copies, deletion and effective child selectors before each effect;
+relative selectors resolve from the repository root. Local stores stay on the repository volume.
+Mutation runners are inert on import. Run each source writer exclusively; fresh plans guard each
+write/child/log. Restoration validates the writable source alone, so a bad log cannot strand it.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/formula_structure.py --contracts-only
@@ -182,7 +146,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/canonical_contract_inventor
 python3 -I -B docs/tasks/artifacts/ci_environment/python_structure_fixture_contract.py
 ```
 
-The watched final command captures actual boundaries, removes each guard, tests real filesystem
-refusals and verifies both writers’ restoration with actual mirrored source writes. Captured children
-establish dispatch behavior; the writers’ four real assertion failures each supply separate reference
-evidence. These plans change no grammar, canonical bytes, numerical rule or engine implementation.
+Captured children prove dispatch boundaries; actual reference controls supply separate behavior
+proof. Complete original input lists, populations, examples, faults and restoration receipts remain
+whole in `docs/history/stitchcad-devnotes-part531.md`; retrieve with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part531.md`.
+Current plans change no grammar, canonical bytes, numerical rule or engine implementation.

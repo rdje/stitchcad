@@ -4,13 +4,16 @@ Newest first: one section per completed slice, in commit order. Older slices liv
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
 
-## STITCHCAD-G1-0379 — own complete current Closures and instances
 
-- Private ordered ClosureInventory; local nested id census and whole notions before all Closure targets.
-- Original concrete causes/positions; native5/privacy2, lint/fmt/book/publication79/144 pass0.
-- D250132 unchanged; whole0378/retirement/signature evidence530. Known declaration roles next.
+## STITCHCAD-G1-0380 — borrow actual Closure declaration roles
+
+- Original fields/canonical owner; zipper formula joins actual Length parameter metadata without value reads.
+- Logical sizes/operation/Profile retain existing owners; no placement/physical readiness claim.
+- Native4/privacy1, strict affected lint/fmt/book/publication79/148 pass0; D250132 unchanged;531 whole proof.
 
 # Sealed archive — earlier slices
+
+| [part531](docs/history/stitchcad-devnotes-part531.md) | whole0379/retirement/fixtures/ontology/authority | 140 lines, 10576 bytes, sha256:0fbcc2a4… |
 
 | [part530](docs/history/stitchcad-devnotes-part530.md) | whole0378/retirement/signatures/authority lesson | 105 lines, 7352 bytes, sha256:b62aecf4… |
 

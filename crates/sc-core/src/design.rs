@@ -34,12 +34,17 @@ impl DesignSizeSetReference {
     }
 }
 
+mod closures;
 mod host;
 mod inputs;
 mod parameters;
 mod sewing;
 mod sewing_state;
 mod topology;
+pub use closures::{
+    DesignClosureDeclaration, DesignClosureDeclarationError, DesignClosureDeclarationRole,
+    DesignClosureDeclarationSource,
+};
 pub use host::{
     DesignFormulaHost, DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
     DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost, DesignSourceReferences,

@@ -171,6 +171,44 @@ The existing constructor's env_fly refusal cannot be bypassed through this colle
 | `ClosureInventoryPosition` | Original Closure or nested instance position in the local id census |
 | `ClosureInventoryError` | DuplicateIdentity positions, whole Notions cause or contextual Closure cause |
 
+## Borrow actual declaration roles
+
+`DesignInputs::closure_declarations(closures)` first validates the complete current input root,
+then borrows each actual Closure's field roles in authored order. A zipper yields ZipperLength;
+hook/bar yields HookSize then BarSize; a button pair yields ButtonSize then Buttonhole. Each view
+retains its original Closure and the root's single canonical input owner. No partial view collection
+escapes a refusal. Raw size names, numeric values and customer labels are omitted from Debug.
+
+Explicit zipper intent borrows its original parameter id and positive Length. This creates no second
+canonical value or inferred parameter metadata. Formula length must name an actual DesignParameter,
+then borrow its current canonical Length-kind declaration; dedicated lengths and general Length
+scalars both work. A bare canonical id fails MissingFormulaParameter. A Count parameter fails
+FormulaKind with the actual Closure/id/kind. Derived and Unknown sources remain unread and unchanged;
+this query neither evaluates them nor proves a resolved positive length.
+
+Profile zipper lengths remain DeferredToG4. Hook/bar/button sizes borrow their original NotionSize:
+a logical declaration is not coerced to a scalar because its id happens to match a numeric input.
+The recipe/Profile owns the logical domain, selection and state. Buttonhole borrows the existing
+single canonical button-size/derivation view; it retains DeferredToG3 and any profile dependency
+retains DeferredToG4. An operation id matching a numeric input establishes no operation proof.
+Existence, kind and dependency checks remain with recipe/Design execution; G3 derives physical length.
+
+For example, an explicit18cm zip, a formula naming a Derived length and an Unknown general Length
+parameter expose different original sources. A profile-backed button's hole source borrows that same
+button declaration and operation, with no separately entered length. Neither example executes hardware.
+Profile/derivation None means that role has no such authored dependency, without readiness approval.
+
+These are declaration views only. Notion/current placement validation, global garment id joins,
+G2 geometry and full execution/release remain separate. Original current-root causes retain their
+concrete standard error chain; no source state is copied or defaulted.
+
+| API token | Declaration meaning |
+| --- | --- |
+| `DesignClosureDeclaration` | Borrowed actual Closure, canonical owner, role and original source |
+| `DesignClosureDeclarationRole` | ZipperLength, HookSize, BarSize, ButtonSize or Buttonhole |
+| `DesignClosureDeclarationSource` | ExplicitLength, FormulaLength, ProfileLength, Size or Buttonhole |
+| `DesignClosureDeclarationError` | Current Inputs/scope cause or actual missing/wrong-kind formula metadata |
+
 ## Button/buttonhole pairs: one canonical length source
 
 `ClosureKind::ButtonAndButtonhole` uses the same stable physical instance/count model. First placement
