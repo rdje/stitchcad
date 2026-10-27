@@ -435,6 +435,32 @@ impl SewingGraph {
         landmarks: &[SewingLandmark],
         ledger: &IdentityLedger,
     ) -> Result<Self, SewingError> {
+        let graph = Self {
+            id: definition.id,
+            spans: definition
+                .spans
+                .into_iter()
+                .map(|definition| SeamSpan { definition })
+                .collect(),
+        };
+        graph.validate_current(plan, pieces, landmarks, ledger)?;
+        Ok(graph)
+    }
+    /// Recheck the original graph against these actual current copy, Piece, stop and topology sources.
+    ///
+    /// Applies exactly the constructor's structural rules in the same order. Earlier construction
+    /// success and missing-target inventories are not current certificates. No graph/anchor/range,
+    /// registration or symbolic amount is rewritten or evaluated, and no split choice is inferred.
+    ///
+    /// # Errors
+    /// Returns the first original CutPlan, identity, side range/ownership, stop or distribution refusal.
+    pub fn validate_current(
+        &self,
+        plan: &CutPlan,
+        pieces: &[Piece],
+        landmarks: &[SewingLandmark],
+        ledger: &IdentityLedger,
+    ) -> Result<(), SewingError> {
         CutPlan::new(
             plan.copies()
                 .iter()
@@ -452,8 +478,8 @@ impl SewingGraph {
             .copied()
             .chain(plan.copies().iter().map(|copy| copy.id()))
             .collect::<BTreeSet<_>>();
-        if !identities.insert(definition.id) {
-            return Err(SewingError::IdentityCollision { id: definition.id });
+        if !identities.insert(self.id) {
+            return Err(SewingError::IdentityCollision { id: self.id });
         }
         let mut marks = BTreeMap::new();
         for landmark in landmarks {
@@ -462,7 +488,8 @@ impl SewingGraph {
             }
             marks.insert(landmark.id(), landmark);
         }
-        for span in &definition.spans {
+        for record in &self.spans {
+            let span = record.definition();
             if !identities.insert(span.id) {
                 return Err(SewingError::IdentityCollision { id: span.id });
             }
@@ -554,14 +581,7 @@ impl SewingGraph {
             }
             validate_distribution(span, &marks, ledger)?;
         }
-        Ok(Self {
-            id: definition.id,
-            spans: definition
-                .spans
-                .into_iter()
-                .map(|definition| SeamSpan { definition })
-                .collect(),
-        })
+        Ok(())
     }
     /// Stable first-class graph identity.
     #[must_use]

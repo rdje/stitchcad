@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2b.2`, D35/D57, ontology §4.2, reference skirt §8.
 
-answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?"
+answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?" · "does graph construction authorize replacement sewing sources?"
 
 ## Context
 
@@ -57,3 +57,10 @@ B; explicit wrong-sign declarations are refused, while symbolic value/sign/conse
 later validation obligation. Queries expose the raw signed declaration plus selected side, preserving its signed provenance. Direction and closing-operation identity remain
 explicit intent. Missing targets or a changed side-copy binding are typed failures; a replacement
 copy never inherits this gather. Current raw geometry evidence is retained without automatic rewriting.
+
+SewingGraph.validate_current now shares the original constructor's structural validator. It checks
+actual supplied plan/Pieces, source range ownership, semantic stops and distributions in original
+order without rebuilding or rewriting the graph. Missing-id inventories alone cannot detect a
+same-id copy reassigned to another Piece or a same-id landmark moved outside its side. Current
+validation retains the original typed refusal and complete range repair evidence. It supplies no
+formula/profile amount resolution, geometric walking, command or release authority.

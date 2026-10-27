@@ -244,7 +244,18 @@ After an explicit plan/landmark replacement, `missing_copies()` and `missing_lan
 original targets still held by the graph. A new copy does not inherit an old copy's seams. Queries do
 not mutate stored content or certify release. Every graph reports `GeometricValidation::DeferredToG2`
 and `EaseValidation::DeferredToG2AndG3`; `walk`/`true`, actual length differential, source transforms,
-net-line geometry and assembly completeness remain later checks. An empty graph is structurally legal
+net-line geometry and assembly completeness remain later checks.
+
+SewingGraph.validate_current(plan, pieces, landmarks, ledger) applies the constructor's exact rules
+again, in the same order, to its original immutable spans. Construction success and missing-id
+inventories cannot authorize replacement contexts. Copy200 may still exist but now name another
+Piece; the original held range then refuses with RangeOutsidePiece. Landmark400 may still exist
+but have moved to the other side's Piece; its stop refuses with StopOutsideSide. A deleted middle
+returns the original UnresolvedRange with live/repair/live evidence even when both endpoints resolve.
+No graph, reference, registration or amount is rewritten/evaluated; geometry and symbolic declaration
+resolution remain separate. The constructor and current query share one actual validator.
+
+An empty graph is structurally legal
 but makes no garment-assembly completeness claim. The contract is recorded in
 `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`.
 

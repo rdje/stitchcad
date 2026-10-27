@@ -886,28 +886,41 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0346–0368 input/source scope; [whole subtree/proof](../history/stitchcad-devnotes-part520.md).
 - ID: `G1-SLICE.6.4.3`
   Status: `done`
-  Goal: actual current point and whole-range resolution/repair readiness, including lost interiors.
-  Own immutable borrowed structural report over all registrations and every held Piece edge;
-  exact owner-specific saved endpoint choices, whole interval evidence and scoped readiness.
-  Preserve ledger verdict/API, drafts and original repair data; no geometry or release certificate.
-  Focused native/privacy/lint/book; retire whole closed input subtree/0368 and static sequence in520.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test design_structure_contract topology_report_:
-    5/0 rc=0; live endpoints hide lost interiors, and full coverage leaves split choices separate.
-  - [x] ROOT CAUSE (WHY + WHERE): native5/0 rc=0 via local_environment.py; independent
-    ledger point verdict and Piece range evidence require combined owner-specific consumption.
-  - [x] FIX: cargo clippy -p sc-core --test design_structure_contract -- -D warnings:rc=0;
-    borrowed immutable report retains every registration/held edge and exact choices/raw repairs.
-  - [x] ADDRESSED: cargo test -p sc-core --doc design::topology:: gives2/0 rc=0;
-    private report cannot escape owner. Native5 checks interior loss, ambiguity, reversal, missing/empty scope.
-  - [x] NO REGRESSION: git diff --exit-code HEAD -- crates/sc-core/src/ontology:empty rc=0;
-    fmt pass0; glossary132 failures rc=1, exact prior D250 rows compare rc=0. Ledger verdict unchanged.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/130/1454/2398 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part520.md:4 exact spans rc=0.
-    promotion: existing range-resolution decision answer extended. Completed STITCHCAD-G1-0369.
-    .6.4.4 sewing/current amounts next; full Design/integration/CI remain separate.
+  Goal:0369 combined structural topology readiness; [whole scope/proof](../history/stitchcad-devnotes-part521.md).
 - ID: `G1-SLICE.6.4.4`
   Status: `in_progress`
   Goal: current sewing copy/landmark targets and actual length-valued declaration sources.
+  Children .1 current graph copy/range/stop revalidation; .2 actual formula length metadata and explicit
+  G4 Profile-role boundary; .3 private owned sewing/root/landmark scope; .4 focused combined acceptance.
+- ID: `G1-SLICE.6.4.4.1`
+  Status: `done`
+  Goal: recheck actual immutable SewingGraph against supplied current plan/Pieces/landmarks/ledger.
+  Share original constructor validator without cloning an alternate graph or widening its rules;
+  retain first typed refusal/raw repair evidence and exact authored graph, focused checks/book.
+  Own whole0369/topology continuity and historical header proof retirement521.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test sewing_contract:21/0 rc=0;
+    prior graph success cannot authorize replacement copies/stops or lost interval interiors.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B Git-source token comparison: same original
+    validator after receiver/iteration adaptation rc=0. Old missing-id queries cannot check source scope.
+  - [x] FIX: cargo clippy -p sc-core --test sewing_contract -- -D warnings:rc=0;
+    constructor/current query share original rules/order without rebuilding or mutating the graph.
+  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract:21/0 rc=0; three new cases
+    retain MissingCopy/RangeOutsidePiece/MissingLandmark/StopOutsideSide and full UnresolvedRange evidence.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc ontology::sewing::SewingGraph:1/0 rc=0;
+    fmt pass0; glossary132 failures rc=1, exact D250 prior rows compare rc=0. Existing18 cases retained.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/130/1454/2398 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part521.md:4 exact spans rc=0.
+    promotion: existing sewing decision answer extended. Completed STITCHCAD-G1-0370.
+    .4.2 actual formula amount declarations/G4 boundary next; full CI integration/pre-push.
+- ID: `G1-SLICE.6.4.4.2`
+  Status: `in_progress`
+  Goal: actual sewing formula length declarations; keep logical Profile references explicitly deferred to G4.
+- ID: `G1-SLICE.6.4.4.3`
+  Status: `pending`
+  Goal: private sewing/root/landmark ownership, complete ids and current source/readiness scope.
+- ID: `G1-SLICE.6.4.4.4`
+  Status: `pending`
+  Goal: focused combined sewing/current amount and private ownership acceptance before garment families.
 - ID: `G1-SLICE.6.4.5`
   Status: `pending`
   Goal: current pocket/closure/notion/layer/declaration sources with explicit geometric deferrals.

@@ -3,18 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — combined structural topology readiness
+## _(2026-10-27 UTC)_ — current immutable sewing graph validation
 
-0369 adds DesignTopologyReadiness tied to the exact borrowed immutable DesignStructure. All actual
-registrations use original choice-aware answers; every held Piece edge retains raw full-range evidence
-and separate authored-direction endpoints. Choices match exact Piece/edge/parameter, never a peer owner.
-Scoped readiness requires unique points and full intervals: live endpoints cannot hide a deleted middle;
-full coverage cannot choose an ambiguous endpoint. Unknown whole sources block despite raw point
-pass-through, and explicit empty drafts grant only this empty scope. Existing ledger/Piece code unchanged.
-Native5/privacy2/strict selected lint/fmt/book/publication79/130 pass0; D250132 exact baseline rows.
-520 retains whole closed0346–0368 subtree,0368 lesson/ledger and historical sequence:4 exact Git spans0.
-Promotion: existing range-resolution decision answers owner-specific combined scope. Sewing amounts next;
-full Design/geometry/physical/runtime/integration/CI stays unverified.
+0370 factors original SewingGraph constructor checks into validate_current; constructor delegates.
+Git-source token comparison confirms identical validation after receiver/iteration adaptation. Shared
+spans stay original; no replacement graph/value or geometry proof is generated. Actual current copies,
+range ownership, stop sources and distribution rules recheck in the same order. Same-id retargets can
+pass missing-id inventories while failing actual scope. Lost interiors retain full raw range evidence.
+Affected target21/0 (18 original,3 new), privacy1/strict selected lint/fmt/book/publication79/130 pass0;
+D250 remains exact132 rows.521 retains whole0369/topology/header proof in4 exact Git spans0.
+Promotion: existing sewing decision answers replacement contexts. .4.2 actual symbolic declarations/
+G4 role boundary next; global ownership, runtime/physical/integration/CI remain separate.
+
+[Complete combined-topology lesson](docs/history/stitchcad-devnotes-part521.md) retains
+its original scope, checks and promotion decision.
 
 [Complete input-composition acceptance lesson](docs/history/stitchcad-devnotes-part520.md) retains
 its original scope, checks and promotion decision.

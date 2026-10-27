@@ -745,3 +745,140 @@ fn reversal_reports_each_sides_direction_without_rewriting_correspondence() {
     assert_eq!(span.definition(), f.span());
     assert_eq!(span.definition().direction, SeamDirection::Opposite);
 }
+
+#[test]
+fn current_graph_rechecks_actual_copy_identity_and_same_id_source_piece_after_plan_replacement() {
+    let f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let original = graph.clone();
+    assert_eq!(
+        graph.validate_current(&f.plan, &f.pieces, &[], &f.ledger),
+        Ok(())
+    );
+    let renamed = CutPlan::new(
+        f.plan
+            .copies()
+            .iter()
+            .map(|copy| {
+                let mut definition = *copy.definition();
+                if definition.id == id(200) {
+                    definition.id = id(205);
+                }
+                definition
+            })
+            .collect(),
+        &f.pieces,
+    )
+    .unwrap();
+    assert_eq!(
+        graph.validate_current(&renamed, &f.pieces, &[], &f.ledger),
+        Err(SewingError::MissingCopy {
+            span: id(301),
+            side: SeamSideId::A,
+            copy: id(200)
+        })
+    );
+    let rebound = CutPlan::new(
+        vec![
+            CutCopyDefinition {
+                id: id(200),
+                piece: id(101),
+                orientation: CopyOrientation::Authored,
+            },
+            CutCopyDefinition {
+                id: id(201),
+                piece: id(100),
+                orientation: CopyOrientation::Reflected,
+            },
+            CutCopyDefinition {
+                id: id(202),
+                piece: id(100),
+                orientation: CopyOrientation::Authored,
+            },
+        ],
+        &f.pieces,
+    )
+    .unwrap();
+    assert!(graph.missing_copies(&rebound).next().is_none());
+    assert_eq!(
+        graph.validate_current(&rebound, &f.pieces, &[], &f.ledger),
+        Err(SewingError::RangeOutsidePiece {
+            span: id(301),
+            side: SeamSideId::A,
+            piece: id(101)
+        })
+    );
+    assert_eq!(graph, original);
+}
+
+#[test]
+fn current_graph_rechecks_actual_landmark_source_even_when_the_same_stop_identity_is_present() {
+    let mut f = fixture();
+    let stop = StopLandmark {
+        side: SeamSideId::A,
+        landmark: id(400),
+    };
+    f.span_mut().stops.push(stop);
+    let original_mark = f.notch(400, t(1, 2));
+    let graph = f.graph(std::slice::from_ref(&original_mark)).unwrap();
+    let original = graph.clone();
+    assert_eq!(
+        graph.validate_current(&f.plan, &f.pieces, &[], &f.ledger),
+        Err(SewingError::MissingLandmark {
+            span: id(301),
+            stop
+        })
+    );
+    let replacement = SewingLandmark::Turn(
+        TurnPoint::new(
+            id(400),
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: t(1, 2),
+            },
+            f.pieces.get(1).unwrap(),
+            &f.ledger,
+        )
+        .unwrap(),
+    );
+    assert!(graph
+        .missing_landmarks(std::slice::from_ref(&replacement))
+        .next()
+        .is_none());
+    assert_eq!(
+        graph.validate_current(&f.plan, &f.pieces, &[replacement], &f.ledger),
+        Err(SewingError::StopOutsideSide {
+            span: id(301),
+            stop
+        })
+    );
+    assert_eq!(graph, original);
+}
+
+#[test]
+fn current_graph_keeps_whole_lost_interior_evidence_after_previous_construction_success() {
+    let mut f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let original = graph.clone();
+    let held = f.span().a.range;
+    let first = f.ledger.split(&mut f.ids, held.edge(), t(1, 3)).unwrap();
+    let second = f.ledger.split(&mut f.ids, first.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, second.first()).unwrap();
+    let issue = graph
+        .validate_current(&f.plan, &f.pieces, &[], &f.ledger)
+        .unwrap_err();
+    let SewingError::UnresolvedRange {
+        span,
+        side,
+        evidence,
+    } = issue
+    else {
+        panic!("original whole-range refusal");
+    };
+    assert_eq!((span, side), (id(301), SeamSideId::A));
+    assert_eq!(evidence.held(), held);
+    assert_eq!(evidence.portions().len(), 3);
+    assert_eq!(evidence.repairs().count(), 1);
+    assert!(evidence.start().resolved().is_some() && evidence.end().resolved().is_some());
+    assert_eq!(graph, original);
+}

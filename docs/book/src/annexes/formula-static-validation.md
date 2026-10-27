@@ -109,28 +109,16 @@ recipe acceptance is implemented below. The grammar and stable diagnostic token 
 
 ## Binding-header diagnostic arguments
 
-The reference distinguishes the two header cases in
-[contract5.2.5](../spec/formula-language.md#525-binding-header-dimension-arguments).
-For let saved:point=missing, formula_dimension has scope binding_annotation, raw_annotation point,
-operation let, name saved, annotation_span (10,15), and all six wanted_kinds. The RHS is not parsed;
-point is not presented as a bindable declared kind. Whole lexical errors still take precedence.
-
-For let saved:length=1.0, the same token has scope binding_kind, declared_kind length,
-expression_kind ratio, annotation_span (10,16), and wanted_kinds (length,). No value is evaluated.
-An unresolved RHS or invalid child operation keeps its own error before header comparison.
-Detached syntax/static/runtime-adapter refusals omit statement_index. Ordered whole preflight
-rebases spans and includes its actual one-based ordinal; a late error publishes no partial plan.
-The reference supplies no canonical expression. [Product current-statement proof](formula-name-scopes.md#check-the-actual-current-statement)
-is available; raw invalid annotations stay at syntax admission.
+[Contract5.2.5](../spec/formula-language.md#525-binding-header-dimension-arguments) retains exact
+binding_annotation/binding_kind payloads and lexical/child priority. Raw invalid annotations stay
+at syntax admission; [current-statement proof](formula-name-scopes.md#check-the-actual-current-statement)
+retains actual product context. Historical264 payload/fault controls and examples are preserved whole
+in `docs/history/stitchcad-devnotes-part521.md`, retrieved with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part521.md`.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/header_dimension_contract.py --mutations
 ```
-
-The 264 cases check232 exact payloads, all six declared/eight expression kinds, raw spelling,
-whitespace/local/global spans, late whole-recipe errors, lexical/child priority and runtime-domain
-separation. Metadata permits no state/value read; parse and execution traps enforce phase boundaries.
-Thirteen actual compiled body assertion faults must fail, with on-disk source unchanged.
 
 ## Names and single-statement static checking
 

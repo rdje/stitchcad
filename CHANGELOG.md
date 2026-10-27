@@ -3,14 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0369 — combine current structural point and whole-range readiness
+## STITCHCAD-G1-0370 — revalidate current immutable sewing sources
 
-- Borrow the exact structural owner and retain every actual registration/held Piece edge/repair.
-- Require unique points plus full intervals; apply saved endpoint choices by exact owner/reference.
-- Native5/privacy2/selected lint/fmt/book/publication pass0; D250132 unchanged, existing ledger untouched.
-- Closed input subtree/0368/static sequence retained whole520; sewing/current amounts next, broad CI later.
+- Share original constructor rules with SewingGraph.validate_current; preserve graph and refusal order.
+- Check actual same-id copy/stop source changes and full lost-interior evidence after prior success.
+- Native21/privacy1/lint/fmt/book/publication pass0; D250132 unchanged; whole0369/header continuity521.
+- Actual symbolic declarations/G4 boundary next; broader integration/CI remains owned.
 
 # Sealed archive — earlier slices
+
+| [part521](docs/history/stitchcad-devnotes-part521.md) | whole0369 topology and historical header proof | 67 lines, 5154 bytes, sha256:55df4944… |
 
 | [part520](docs/history/stitchcad-devnotes-part520.md) | closed0346–0368 subtree,0368 and static sequence | 167 lines, 10745 bytes, sha256:da4ff17b… |
 
