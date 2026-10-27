@@ -3,15 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual Closure declaration roles
+## _(2026-10-27 UTC)_ — original Hem Facing error cause
 
-0380 borrows original zipper/hook/bar/button/hole roles over the actual ClosureInventory/current root.
-Formula zipper length joins actual DesignParameter then current canonical Length kind; Unknown/Derived
-remain unread. Explicit fields retain inline intent; logical sizes/operation domains and G3/G4 stay owned.
-Four native/one lifetime controls pass0; strict core/affected-measure lint/fmt/book/publication79/148 pass0.
-Original Closure/inventory/sewing bytes identical; metadata scope alone grants no placement readiness.
-D250132 exact prior rows unchanged.531 retains whole0379/older scopes/fixtures in7 exact Git spans0.
-Promotion declined: settled source/physical boundaries. Layers/Hem next; full CI/integration deferred.
+0381 fixes D261: empty HemError Error impl hid the stored InvalidFacing LayerError.
+Actual faced Hem/deleted Facing source exact control red0/1 rc101, green1/0 rc0 after direct borrowing.
+Concrete type/same pointer retained; all production bytes outside Error impl identicaldd4fae3.
+Strict affected lint/fmt/book/publication79/148 pass0; D250132 exact prior rows unchanged.532 retains
+closed notion/Closure subtree/0380/retirement in4 exact Git spans0. Promotion declined: local standard
+Error repair with canonical D261 report. Shared current layer/Hem validators next; full CI deferred.
+
+[Complete Closure declaration lesson](docs/history/stitchcad-devnotes-part532.md) retains
+its original scope, checks and promotion decision.
 
 [Complete Closure collection lesson](docs/history/stitchcad-devnotes-part531.md) retains
 its original scope, checks and promotion decision.

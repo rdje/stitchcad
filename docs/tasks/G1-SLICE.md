@@ -887,42 +887,52 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:closed Pocket scope; [whole proof](../history/stitchcad-devnotes-part528.md).
 - ID: `G1-SLICE.6.4.5.2`
   Status: `done`
-  Goal: actual notion/Closure collection, every instance/placement and known declaration roles.
-  Own Closure causes D260 and continuity528.
-  Children .a original nested Closure errors; .b actual notion placements; .c actual Closure/instance
-  inventory; .d known declaration roles with existing operation/domain/G3/G4 boundaries.
+  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
 - ID: `G1-SLICE.6.4.5.2.a`
   Status: `done`
-  Goal:0377 D260 original Closure causes; [whole scope/proof](../history/stitchcad-devnotes-part529.md).
+  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
 - ID: `G1-SLICE.6.4.5.2.b`
   Status: `done`
-  Goal:0378 actual notion collection; [whole scope/proof](../history/stitchcad-devnotes-part530.md).
+  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
 - ID: `G1-SLICE.6.4.5.2.c`
   Status: `done`
-  Goal:0379 actual Closure/instance collection; [whole scope/proof](../history/stitchcad-devnotes-part531.md).
+  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
 - ID: `G1-SLICE.6.4.5.2.d`
   Status: `done`
-  Goal: actual known Closure declaration roles; preserve existing logical domain/operation deferrals.
-  Own borrowed zipper length, hook/bar/button size and canonical hole-source views over actual
-  ClosureInventory and DesignInputs. Formula length requires actual parameter metadata/Length kind;
-  explicit fields borrow original intent, logical size/operation/Profile roles stay G3/G4/recipe-owned.
-  Complete root first; no numeric reads, defaults or geometry proof. Global identity joins remain .5.
-  Focused actual cross-crate/native/privacy/lint/book; whole0379 continuity531.
-  - [x] REPRODUCE / ISSUE: python3 Git-source check:9a4357c has no Closure declaration views rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; original descriptors retain intent without
-    actual Design parameter/Length-kind joins. Logical size/operation schemas remain separate.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and -p sc-measure
-    --test design_inputs_contract -- -D warnings:rc=0 each; original borrowed field roles.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract closure_declarations_:
-    4/0 rc=0; cargo test -p sc-core --doc design::closures:1/0 rc=0.
-  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; original Closure/inventory/sewing bytes
-    identical rc=0; glossary132 failures rc=1, exact prior D250 rows compare rc=0.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/148/1454/2405 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part531.md:7 exact spans rc=0.
-    promotion: declined (settled source/physical boundaries). Completed STITCHCAD-G1-0380.
+  Goal:closed notion/Closure scope; [whole proof](../history/stitchcad-devnotes-part532.md).
 - ID: `G1-SLICE.6.4.5.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual layers/Hem current sources, materials and known declaration roles; explicit lining refusal.
+  Own child planning, original Hem layer causes D261 and whole0380 continuity532.
+- ID: `G1-SLICE.6.4.5.3.a`
+  Status: `done`
+  Goal: D261 preserve original InvalidFacing LayerError cause through HemError; exact red/green,
+  unchanged validation/schema, current book/defect records and whole532 continuity.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test hem_contract
+    hem_invalid_facing_error_keeps_original_layer_cause -- --exact:0/1 rc=101 at source() None.
+  - [x] ROOT CAUSE (WHY + WHERE): same exact control rc=101; empty HemError Error impl hid
+    its stored InvalidFacing LayerError from standard chained diagnostic tools.
+  - [x] FIX: cargo clippy -p sc-core --test hem_contract -- -D warnings:rc=0;
+    borrow original concrete LayerError; no wrapper erases its type.
+  - [x] ADDRESSED: same exact cargo test control:1/0 rc=0; original concrete cause/pointer retained.
+  - [x] NO REGRESSION: python3 Git-source comparison: every non-Error-impl production byte
+    identical rc=0; fmt0, glossary132 failures rc=1, exact D250 baseline rows compare rc=0.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/148/1454/2405 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part532.md:4 exact spans rc=0.
+    promotion: declined (local standard Error repair, canonical D261). Completed STITCHCAD-G1-0381.
+- ID: `G1-SLICE.6.4.5.3.b`
+  Status: `pending`
+  Goal: shared canonical current validators for layers and Hem; complete original references/targets.
+- ID: `G1-SLICE.6.4.5.3.c`
+  Status: `pending`
+  Goal: private actual layer/Hem collections, complete current sources and actual materials;
+  stable Facing joins and explicit modelled lining/execution refusal.
+- ID: `G1-SLICE.6.4.5.3.d`
+  Status: `pending`
+  Goal: actual known Hem depth/fold and layer operation roles; preserve logical/G2/G3/G4 owners.
+- ID: `G1-SLICE.6.4.5.3.e`
+  Status: `pending`
+  Goal: focused current layer/Hem component acceptance; broader integration after .6.9.
 - ID: `G1-SLICE.6.4.5.4`
   Status: `pending`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.

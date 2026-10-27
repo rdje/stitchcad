@@ -5,13 +5,16 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0380 — borrow actual Closure declaration roles
 
-- Original fields/canonical owner; zipper formula joins actual Length parameter metadata without value reads.
-- Logical sizes/operation/Profile retain existing owners; no placement/physical readiness claim.
-- Native4/privacy1, strict affected lint/fmt/book/publication79/148 pass0; D250132 unchanged;531 whole proof.
+## STITCHCAD-G1-0381 — preserve original Hem Facing error cause
+
+- Fix D261 standard source chain; exact original concrete LayerError/pointer retained.
+- Exact control red101/green0; all other production bytes identical; lint/fmt/book/publication pass0.
+- D250132 unchanged; whole notion/Closure subtree/0380/retirement532. Shared layer/Hem validators next.
 
 # Sealed archive — earlier slices
+
+| [part532](docs/history/stitchcad-devnotes-part532.md) | closed notion/Closure subtree,0380/retirement | 55 lines, 4128 bytes, sha256:ecb5ac6a… |
 
 | [part531](docs/history/stitchcad-devnotes-part531.md) | whole0379/retirement/fixtures/ontology/authority | 140 lines, 10576 bytes, sha256:0fbcc2a4… |
 

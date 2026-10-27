@@ -384,3 +384,47 @@ fn editing_cloned_depth_fold_method_and_edge_cannot_mutate_validated_content() {
     assert_ne!(replacement.definition(), &input);
     assert_eq!(hem.definition(), &input);
 }
+
+#[test]
+fn hem_invalid_facing_error_keeps_original_layer_cause() {
+    use std::error::Error;
+    let mut f = fixture();
+    let facing = f.facing();
+    let mut input = f.hem_definition();
+    input.method = HemMethod::Faced {
+        facing: facing.id(),
+    };
+    let hem = f.hem(input, Some(&facing)).unwrap();
+    let source = facing
+        .definition()
+        .offset
+        .sources
+        .first()
+        .unwrap()
+        .range
+        .edge();
+    f.ledger.delete(&mut f.ids, source).unwrap();
+    let issue = hem.facing(&f.piece, &f.ledger, Some(&facing)).unwrap_err();
+    let HemError::InvalidFacing {
+        facing: held,
+        error: actual,
+    } = &issue
+    else {
+        panic!("original current Facing layer error")
+    };
+    assert_eq!(*held, facing.id());
+    assert!(matches!(
+        actual,
+        LayerError::UnresolvedSource { index: 0, .. }
+    ));
+    let cause = issue
+        .source()
+        .expect("original LayerError must remain in standard error chain");
+    assert!(core::ptr::eq(
+        cause
+            .downcast_ref::<LayerError>()
+            .expect("concrete layer cause"),
+        actual
+    ));
+    assert!(!cause.is::<Box<LayerError>>());
+}

@@ -139,7 +139,14 @@ impl fmt::Display for HemError {
         }
     }
 }
-impl std::error::Error for HemError {}
+impl std::error::Error for HemError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::InvalidFacing { error, .. } => Some(error),
+            _ => None,
+        }
+    }
+}
 impl Hem {
     /// Validate a whole owned finish edge, depth domain and current faced composition target.
     /// # Errors

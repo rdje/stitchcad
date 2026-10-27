@@ -1151,7 +1151,16 @@ Verified D260 original Closure-cause report and0377 red/green proof remain whole
 [part529](../history/stitchcad-devnotes-part529.md); standard chains preserve original causes.
 [0378 report-retirement proof](../history/stitchcad-devnotes-part530.md).
 [0379 report-retirement proof](../history/stitchcad-devnotes-part531.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part531.md:
-  7 exact Git spans rc=0; completed0379/older proof occupied live capacity.
-- [x] ADDRESSED: same receipt rc=0; whole task/lessons/ledger/retirement/fixtures retained531.
-- [x] NO REGRESSION: scoped publication79/148/1454/2405 rc=0; book rc=0; D250132 exact rows0.
+[0380 report-retirement proof](../history/stitchcad-devnotes-part532.md).
+
+## D261 — Hem hid original InvalidFacing layer cause (fixed0381)
+
+HemError's empty Error impl hid its stored InvalidFacing LayerError. Actual born faced Hem with
+subsequently deleted Facing source: hem_invalid_facing_error_keeps_original_layer_cause in
+hem_contract red0/1 rc=101, green1/0 rc=0 through local_environment.py; target/hem-cause-*-0381.log.
+Concrete type/same original pointer retained; every production byte outside Error impl identical.
+P2; owner G1-SLICE.6.4.5.3.a. Closed focused; full CI integration/pre-push.
+- [x] ROOT CAUSE: same exact cargo test control red0/1 rc=101 at source() None; empty Error impl.
+- [x] ADDRESSED: same control green1/0 rc=0 after original concrete cause borrowing.
+- [x] NO REGRESSION: cargo clippy -p sc-core --test hem_contract -- -D warnings rc=0;
+  non-Error-impl source comparison/fmt/book/publication pass0; whole532 receipt4 exact spans rc=0.

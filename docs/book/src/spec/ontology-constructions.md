@@ -201,6 +201,10 @@ finishing remain G2/G3, and every Hem reports `GeometricValidation::DeferredToG2
 | `FacingOutsidePiece` | Current target serves a different Piece |
 | `InvalidFacing` | Current target's source/material content fails layer validation |
 
+HemError exposes its original InvalidFacing LayerError through std::error::Error::source().
+Chained diagnostic tools retain that same concrete error and its raw source-repair evidence.
+This changes no facing validation or stored intent; range evidence remains data, not a nested error.
+
 ## Pocket placement and physical composition
 
 `PocketDefinition` binds a served physical copy and its source Piece, a held position anchor,
