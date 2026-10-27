@@ -3,24 +3,30 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — scoped source/SizeSet acceptance and availability alignment
+## _(2026-10-27 UTC)_ — private implemented core Design input composition
 
-0364 reviews actual one-way source ownership, exact external pins, explicit garment/MTM provenance
-and unchanged physical Profile deferrals. Three existing exact filters pass1 each/0 failures: actual
-source pin vs numeric presence, both singleton families sharing actual canonical records, and symbolic
-Notch refs without physical quantities. This is focused structural/current-source acceptance, not
-full Design, evaluator, evidence, physical, integration or release proof. Source/SizeSet subtree closes;
-actual core/root composition .6.4.2.d.4.4 follows before readiness. G1 remains6/18.
-D257: guide common/garment footers and host decision still deferred implemented chart-family/combined
-ownership. git log -S traces the footer to0360; MTM/source implementations landed0361/0363. Appending
-new sections left conflicting old claims. Corrected earlier scopes and implementation-status row,
-retaining full Design/execution/physical/integration deferrals. D257 logged/owned/fixed in this leaf.
-Book/publication pass0; D250132 exact baseline rows/delta0, glossary rc=1. Whole0363 continuity515
-compares3 exact Git spans. Caps unchanged. Promotion declined: existing ownership/Profile rules.
-No new Rust algorithm, value lookup, broad verification or CI verdict is implied by this review.
+0365 DesignInputs owns exact DesignStructure, DesignParameters, FormulaRecipeDocument,
+MaterialInventory and DesignMetadata. Structure is the single canonical declaration owner; no
+borrowed context is stored. Structural identity iteration is shared unchanged with its original
+constructor, then parameter/Material/higher-source ids extend the complete census. References are
+uses, not owners, including evidence/formula refs and retired edge creators. Current parameter
+bindings, whole Materials/Piece assignments and actual higher sources validate against that owner.
+Held Piece references are preserved without reconstruction; original recipe text/revision stay exact.
+This is implemented input/structural composition, not full Design selection/name/sewing/garment/
+readiness or execution. An unbound recipe remains syntax-only until the later checking phase.
+Core14 includes8 original structural and6 composition contracts. Actual higher3 verify canonical
+pointer membership, containing-Design/external-set collision and source failure after canonical
+replacement. Core tests also watch param/Piece, param/Material and source/retired-op collisions,
+missing current parameters, missing assigned Materials, original data/history and detached edits.
+Native14+3/privacy2/strict selected core/measure lint/fmt/book/publication pass0; D250132 exact
+baseline rows/delta0, glossary rc=1. Continuity516 compares5 Git spans for whole closed source subtree,
+0364/D257 and historical checked-recipe proof. D154's existing reference ordinal gap stays live/open;
+no static-lane closure inferred. Caps unchanged; G1still6/18. Promotion: host decision records input
+composition's canonical owner and scope. .6.4.2.d.4.4.b actual selections next; full semantic/physical/
+integration/CI remains unverified.
 
 
-[Complete actual combined source-host lesson](docs/history/stitchcad-devnotes-part515.md) retains
+[Complete source acceptance/D257 lesson](docs/history/stitchcad-devnotes-part516.md) retains
 its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review

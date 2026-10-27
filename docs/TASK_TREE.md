@@ -82,7 +82,7 @@ than roadmap clauses is expected (a tree may split one clause into several leave
 **`G1-SLICE.4c.3`** chart/body/break structural input scope closes in0310 after D230/D231 repairs.
 Current SizeSet inputs preserve explicit garment/MTM provenance, canonical sources and typed paths.
 0321 closes structural measurement/Ease/SizeSet acceptance; G1 progress6/18.
-0364 closes focused source/SizeSet ownership and fixes D257; .6.4.2.d.4.4 owns actual Design composition next.
+0365 composes private implemented Design inputs; .6.4.2.d.4.4.b owns actual selected source references next.
 D250 baseline glossary declarations remain owned after .6.9 and before integration/pre-push.
 Capacity continuation is complete within unchanged caps; any future aggregate exhaustion needs an owned decision.
 Command-class schemas follow canonical inputs.

@@ -2,10 +2,11 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
-- Active: G1-SLICE.6.4.2.d.4.4 in docs/tasks/G1-SLICE.md.
-- Next: actual private Design composition from core structure/parameters/recipe/Materials and actual
-  source host. Review selection/name/reference contracts and split safe children; readiness follows.
-- 0364 scoped source/pin/family/G4 acceptance native3/book pass; D257 availability drift corrected;
-  source/SizeSet subtree closes, continuity515. G1still6/18; full root/execution/physical/integration/CI unverified.
-- D250132 exact baseline rows; repair after .6.9/before integration. D255/D256 fixed, retained511/513.
-- No background job or director decision pending; finish0364 commit workflow before next leaf.
+- Active: G1-SLICE.6.4.2.d.4.4.b in docs/tasks/G1-SLICE.md.
+- Next: actual selected measurement table/Ease set/external SizeSet references and joint scope;
+  inspect existing draft/selection contracts before extending the readonly source facet/composition.
+- 0365 DesignInputs privately owns implemented components over one canonical owner; native14+3/
+  privacy2/lint/fmt/book pass, continuity516. Selection/name/sewing/garment/readiness remain later.
+- G1still6/18; full Design/execution/physical/integration/CI unverified. D250132 baseline rows,
+  repair after .6.9/before integration. D154 reference ordinal gap remains open under existing .5b.4c owner.
+- No background job or director decision pending; finish0365 commit workflow before next leaf.

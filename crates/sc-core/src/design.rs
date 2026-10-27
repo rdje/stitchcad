@@ -1,4 +1,4 @@
-//! Owned structural Design content. Recipe, metadata, garment registries and execution follow.
+//! Owned Design structural/input components; selected bindings, semantic state and execution follow.
 use core::fmt;
 use std::collections::BTreeMap;
 
@@ -35,11 +35,13 @@ impl DesignSizeSetReference {
 }
 
 mod host;
+mod inputs;
 mod parameters;
 pub use host::{
     DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
     DesignMetadataHost, DesignSizeSetHost,
 };
+pub use inputs::{DesignInputs, DesignInputsDefinition, DesignInputsError, DesignInputsPosition};
 pub use parameters::{
     DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,
     DesignParameters,
@@ -159,37 +161,18 @@ impl DesignStructure {
     /// # Errors
     /// Returns the first owned identity collision, then any current Piece/copy-plan inconsistency.
     pub fn new(definition: DesignStructureDefinition) -> Result<Self, DesignStructureError> {
+        let structure = Self { definition };
         let mut seen = BTreeMap::new();
-        let mut claim = |identity, position| {
+        for (identity, position) in structure.identity_positions() {
             if let Some(first) = seen.insert(identity, position) {
-                Err(DesignStructureError::DuplicateIdentity {
+                return Err(DesignStructureError::DuplicateIdentity {
                     identity,
                     first,
                     duplicate: position,
-                })
-            } else {
-                Ok(())
+                });
             }
-        };
-        claim(definition.id, DesignStructurePosition::Design)?;
-        for (index, value) in definition.inputs.lengths().iter().enumerate() {
-            claim(value.id(), DesignStructurePosition::Length { index })?;
         }
-        for (index, value) in definition.inputs.scalars().iter().enumerate() {
-            claim(value.id(), DesignStructurePosition::Scalar { index })?;
-        }
-        for (index, value) in definition.pieces.pieces().iter().enumerate() {
-            claim(value.id(), DesignStructurePosition::Piece { index })?;
-        }
-        for (index, value) in definition.cut_plan.copies().iter().enumerate() {
-            claim(value.id(), DesignStructurePosition::CutCopy { index })?;
-        }
-        for (index, value) in definition.topology.journal().iter().enumerate() {
-            claim(
-                value.operation(),
-                DesignStructurePosition::Operation { index },
-            )?;
-        }
+        let definition = structure.definition();
         CutPlan::new(
             definition
                 .cut_plan
@@ -200,7 +183,54 @@ impl DesignStructure {
             definition.pieces.pieces(),
         )
         .map_err(DesignStructureError::CutPlan)?;
-        Ok(Self { definition })
+        Ok(structure)
+    }
+
+    // Canonical structural census reused by containing immutable owners without cloning records.
+    pub(crate) fn identity_positions(
+        &self,
+    ) -> impl Iterator<Item = (EntityId, DesignStructurePosition)> + '_ {
+        core::iter::once((self.id(), DesignStructurePosition::Design))
+            .chain(
+                self.inputs()
+                    .lengths()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| (value.id(), DesignStructurePosition::Length { index })),
+            )
+            .chain(
+                self.inputs()
+                    .scalars()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| (value.id(), DesignStructurePosition::Scalar { index })),
+            )
+            .chain(
+                self.pieces()
+                    .pieces()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| (value.id(), DesignStructurePosition::Piece { index })),
+            )
+            .chain(
+                self.cut_plan()
+                    .copies()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| (value.id(), DesignStructurePosition::CutCopy { index })),
+            )
+            .chain(
+                self.topology()
+                    .journal()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| {
+                        (
+                            value.operation(),
+                            DesignStructurePosition::Operation { index },
+                        )
+                    }),
+            )
     }
 
     /// Exact owned structural input; this shared view grants no mutation.

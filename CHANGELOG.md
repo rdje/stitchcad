@@ -12,15 +12,18 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0364 — accept scoped source ownership and correct stale availability
 
-- Review actual source pins, explicit singleton families and symbolic Profile deferrals with three exact existing cases.
-- Fix D257: guide/decision/implementation row now name implemented MTM/combined sources while retaining later Design/physical scope.
-- Native3/book/publication pass0; D250132 exact baseline rows/delta0. No runtime change or full integration/CI claim.
-- Whole0363 continuity515 matches3 Git spans; source/SizeSet subtree closes within focused scope; caps unchanged; G1still6/18.
-- Actual Design composition .6.4.2.d.4.4 follows before readiness/execution.
+## STITCHCAD-G1-0365 — compose private implemented Design inputs over one canonical owner
+
+- Own exact structure/parameters/recipe/Materials/metadata host; check all owned ids before actual current target/assignment/source validators.
+- Share the structural census; preserve recipe text, exact revision and held topology state without rebuilding Pieces or generating values.
+- Native14+3/privacy2/strict selected core/measure lint/fmt/book/publication pass0; D250132 exact baseline rows/delta0.
+- Whole closed source subtree/0364/D257/checked-recipe continuity516 matches5 Git spans; live D154 remains open; caps unchanged.
+- G1still6/18; source selections/names/semantic state/readiness and full Design/execution/physical/integration/CI remain later.
 
 # Sealed archive — earlier slices
+
+| [part516](docs/history/stitchcad-devnotes-part516.md) | whole0364 source subtree/D257 and historical checked-recipe proofs | 127 lines, 9910 bytes, sha256:6b988ecb… |
 
 | [part515](docs/history/stitchcad-devnotes-part515.md) | whole0363 actual source-host task, lesson and ledger | 48 lines, 4124 bytes, sha256:2015c9a0… |
 

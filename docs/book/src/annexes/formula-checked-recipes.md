@@ -163,51 +163,20 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_owner_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
 ```
 
-The public contracts cover96 binding pairs across prefix positions and640 assertion kind/class/
-position cases, late/untaken errors, real collisions, repeated dependencies and unknown records.
-Limits4096 statements,256-node operands,16 conditionals and4000 grouping pairs pass on a64KiB stack.
-Five actual documentation compiler guards require only E0451/E0515 for privacy and recipe/record
-borrows. The four Rust examples in this chapter compile and execute against Cargo's current library.
-The compiler entry validates its implementation source, this chapter, output directory and
-all29 destinations before reading fixtures or invoking Cargo: build metadata/log, five guard
-sources/logs/binary destinations and four example sources/logs/binaries. Both authored inputs
-are read-only. Missing late input, first/last symlinks or hard links, a guard-binary symlink and
-an output directory in a file slot refuse before reads, writes, store activation or Cargo.
-Cargo owns the build outputs. Its public JSON identifies the unique current library and every
-reported library input/search directory; a nonmutating local path plan checks them before Rustc.
-Cargo, Rustc and example executions retain prepared stores. A complete intercepted capture
-preserves all14 original children and fixture bytes; every destination omission, changed library
-input, missing library/directory plan and mutable-source authority is independently refused.
-Named PROFILE binding must be the exact local loader, unique, top-level and before activation.
-These dispatch controls are separate from actual five-guard/four-example native proof.
-The direct native entry plans the implementation and current public test inputs before reads or
-effects. Ordinary mode declares all twenty-one baseline/fault/restored diagnostic files and one
-mutable implementation source. It preserves the initial full-target baseline, nineteen ordered case
-bindings, both count-two replacements, full seven-test argv, prepared child stores and exact source
-restoration before consuming the current complete artifact.
+Public contracts cover ordered bindings/assertions, complete source occurrences, private owner/
+borrow boundaries and bounded traversal/drop. Historical counts, compiler guards, fault sets,
+dispatch controls and exact source/artifact restoration receipts remain in
+`docs/history/stitchcad-devnotes-part516.md`, retrievable through history_archive.py read.
+The native/documentation commands above remain maintained; classifier-only mode is also available:
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py --classifier-only
 ```
 
-Classifier-only plans zero files, mutable sources or native effects. A read-only input with three
-hard links and unused baseline/fault/restoration aliases is accepted without child dispatch or
-source/output writes. A failed body's current thread panic path, line and byte-column must identify
-an assertion macro; custom assertion messages pass. Nonthread macro mentions, compiler/linker noise,
-expect-only panics and test names refuse. Two complete captures, six physical refusals, sixteen mode
-faults and an independent legacy-regex fault distinguish missing baseline dispatch, incomplete plans,
-lost count-two replacements and missing restoration. Complete captures bind the baseline before any
-source mutation, each original fault and the final restored call.
-
-Exclusive replay of all nineteen real faults matches independently source-derived failing-test sets;
-every failed body reaches a current macro. D184's first observed unknown-record extraction failure
-restored exact inputs/source/full target before edits. Two acceptance checks now precede extraction
-in that existing unknown/alternate-record test; the alternate block shares the same cause, rather
-than a separately observed panic. Seventy-two frozen inputs, sixty-three unchanged production Rust
-files, twenty-one local diagnostic files and Cargo's current full seven-test executable remain exact.
-Full formatting, strict Clippy and fifty-nine native groups/seven-hundred-three tests pass. D184 and
-the bounded four-family D179 diagnostic repair are closed; no broader classifier claim follows.
-Run native mutations exclusively and consume restoration before another build or probe.
+Classifier-only plans no native child/source/output writes. Run mutations alone and consume exact
+source restoration before another build/probe. Body failures must identify current assertion macros;
+dispatch controls and compiled native proof retain separate scopes. Existing D154's known reference
+ordinal gap remains live below, with its original repair owner; this retirement does not close it.
 
 A statically valid false assertion, zero divisor, negative square root, absent size/export context
 or too-wide stored result still has no execution verdict. The proof reads no values, providers or

@@ -1,4 +1,4 @@
-# Owned Design metadata sources
+# Owned Design inputs and sources
 
 `DesignMetadata<H>` owns a DesignMetadataHost and its identity census; CanonicalInputs owns values.
 MeasurementInputs and DesignSources implement this core port. Full Design assembly
@@ -241,4 +241,50 @@ including coincident numeric ids. Full Design composition and integration remain
 
 ```bash
 cargo test -p sc-measure --test design_sources_contract
+```
+
+## Owned core input composition
+
+DesignInputs owns the implemented structure, parameters, exact recipe document, Materials and checked
+metadata host. Its structure is the single CanonicalInputs owner. This component precedes selected
+source/name bindings, sewing/garment state and readiness; it is not the complete Design schema.
+
+Construction checks identities in order: structure (Design, canonical records, Pieces, copies,
+operations), parameters, Materials, then higher source metadata. Even a retired creating operation
+cannot share an id with higher metadata. Referenced evidence/formula/material ids are uses, not new
+owners. DuplicateIdentity retains both actual original DesignInputsPosition witnesses.
+
+It then rechecks actual parameter targets, whole Material properties/Piece assignments, and source
+currentness against its own canonical records. Prior standalone validation cannot substitute for
+that context. Unresolved assignments and uncertain states remain intact. No Piece is reconstructed
+against an edited ledger, so held repair state remains inspectable. Recipe ownership preserves
+original text/canonical syntax; unbound names still require the later binding/checking phase.
+
+| API or variant | Meaning |
+| --- | --- |
+| `DesignInputs`, `DesignInputsDefinition` | Private implemented-component owner and exact construction input |
+| `DesignInputsPosition` | Structure, Parameter, Material or Source original ownership position |
+| `DesignInputsError` | DuplicateIdentity or original Parameters, Materials, Sources typed cause |
+
+All getters are shared. identities() lists actual owned ids; validate_current() repeats the scoped
+checks. id()/revision() retain the actual structure's identity/counter without advancing it. Debug
+exposes no customer content. Combining existing components requires no borrowed context storage:
+
+```rust
+use sc_core::{design::{DesignInputs, DesignInputsDefinition, DesignInputsError,
+    DesignMetadata, DesignMetadataHost, DesignParameters, DesignStructure},
+    ontology::MaterialInventory, recipe::FormulaRecipeDocument};
+fn combine<H: DesignMetadataHost>(structure: DesignStructure, parameters: DesignParameters,
+    recipe: FormulaRecipeDocument, materials: MaterialInventory, host: H)
+    -> Result<DesignInputs<H>, DesignInputsError<H::Error>>
+{
+    let sources = DesignMetadata::new(host, structure.inputs())
+        .map_err(|issue| DesignInputsError::Sources(Box::new(issue)))?;
+    DesignInputs::new(DesignInputsDefinition {structure, parameters, recipe, materials, sources})
+}
+```
+
+```bash
+cargo test -p sc-core --test design_structure_contract
+cargo test -p sc-measure --test design_inputs_contract
 ```

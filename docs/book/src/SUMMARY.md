@@ -34,7 +34,7 @@
     - [Executable garment constructions](spec/ontology-constructions.md)
     - [Structural ontology review](spec/ontology-review.md)
     - [Measurement length inputs](spec/measurement-inputs.md)
-    - [Owned Design metadata sources](spec/design-inputs.md)
+    - [Owned Design inputs and sources](spec/design-inputs.md)
     - [Material property inputs](spec/material-inputs.md)
     - [Measurement metadata](spec/measurement-metadata.md)
     - [Body-to-garment Ease intent](spec/ease-inputs.md)

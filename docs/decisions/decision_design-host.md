@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.6.4.2.d.4.1`; core design host, higher measurement input owners.
 
-answers: "how can Design own measurement metadata without a circular dependency?" · "does host admission prove a measurement binding?" · "can a copied canonical declaration authorize a Design source?" · "how do owned metadata objects avoid self-referential contexts?" · "how does core validate an external SizeSet pin without a reverse dependency?"
+answers: "how can Design own measurement metadata without a circular dependency?" · "does host admission prove a measurement binding?" · "can a copied canonical declaration authorize a Design source?" · "how do owned metadata objects avoid self-referential contexts?" · "how does core validate an external SizeSet pin without a reverse dependency?" · "what does DesignInputs admission prove?"
 
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
@@ -41,3 +41,8 @@ The DesignSizeSetHost facet delegates exact external pins to the actual current 
 identity presence supplies no replacement metadata. Core remains independent of higher schemas.
 Full Design composition follows; the common component alone is not a complete SizeSet, and Design
 still holds an external reference. Physical Profile resolution remains G4.
+
+DesignInputs now owns implemented core structure/parameters/recipe/Materials and checked higher
+metadata over the structure's single canonical inventory. Complete cross-component ownership ids
+precede actual current parameter/Material/Piece/source validation. This is an input composition,
+not full Design selection/name/sewing/garment/readiness proof; those remain explicit following work.

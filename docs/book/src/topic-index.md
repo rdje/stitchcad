@@ -75,7 +75,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Measurement metadata](spec/measurement-metadata.md)
 - [Measurements and fit](learn/measurements-and-fit.md)
 - [Measurements, ease and sizes](spec/glossary/measurements-and-fit.md)
-- [Owned Design metadata sources](spec/design-inputs.md)
+- [Owned Design inputs and sources](spec/design-inputs.md)
 - [Physical cut copies and seams](spec/ontology-implementation.md)
 - [Pieces and assembly](learn/pieces-and-assembly.md)
 - [Production approval and evidence](spec/release-contract.md)
