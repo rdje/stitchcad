@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0427
+## Current leaf acceptance —0428
 
-- [x] ROOT CAUSE: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
-  later private group staging needs the actual validated model/report, while public preview discards it.
-- [x] ADDRESSED: cargo test -p sc-core --doc command::bus:4 passed rc=0; valid host/authority bounds
-  still cannot access private prepare or retain a candidate handle. Real bus18 pass rc=0.
-- [x] NO REGRESSION: selected strict Clippy finished rc=0; real bus18 preserve original causes,
-  bindings, canonical diffs, owned model/revision/reserve; selected fmt --check rc=0. Full bus .6.9 later.
+- [x] ROOT CAUSE: cargo test -p sc-core --test command_group_contract:4 passed rc=0;
+  atomic group data needs exact nonempty ownership and common claims, distinct from later authority.
+- [x] ADDRESSED: cargo test -p sc-core --test command_group_contract:4 passed rc=0; membership,
+  Design/complete actor/beyond128 revision and first original error index preserve submitted data.
+- [x] NO REGRESSION: selected strict Clippy finished rc=0; cargo test -p sc-core --doc command::group:
+  1 passed rc=0; selected fmt --check rc=0. No bus execution changes; full bus .6.9 remains deferred.
 
 ## Goal
 
@@ -746,37 +746,39 @@ All98 completed ids/statuses and original proof pointers remain live there.
   dependencies in .3. Native sewing EaseValidation explicitly defers realization to G2/G3.
 - ID: `G1-SLICE.6.5.4.1`
   Status: `done`
-  Goal:0427 actual private validated model/report ownership through preparation; public preview
-  consumes/discards the model. No public prepared handle, publication or group success claimed.
-  - [x] REPRODUCE / ISSUE: git show 25f29c8:crates/sc-core/src/command/bus/measurement.rs prints
-    only report return after actual candidate construction, rc=0; group staging cannot retain that model.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-measure --test design_inputs_contract command_bus:
-    18 passed rc=0; retain same validated state/report internally without exposing a replacement capability.
-  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
-    private PreparedCommand owns state/report, private prepare dispatches all three actual handlers.
-  - [x] ADDRESSED: cargo test -p sc-core --doc command::bus:4 passed rc=0; external generic code with
-    correct host/authority bounds cannot call prepare. Actual public preview still discards the private state.
-  - [x] NO REGRESSION: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed
-    rc=0; selected fmt --check/strict Clippy rc=0. No original state/revision/reserve changes or new public API.
-  - [x] LOCKSTEP: whole0426 Measurement/D283 scope/lesson/ledger retained579; book/pointer/decision
-    synchronized. transition_receipts.py record579:3 exact Git spans rc=0; retention OK rc=0.
-    Native publication:80 chapters/159 scoped API rows/1462 source links/2440 rendered links rc=0.
-    Maintained-reference81 files/17515 lines/1222838 bytes rc=0; full bus .6.9 remains deferred.
-  Cargo commands use scripts/local_environment.py. Native sewing EaseValidation::DeferredToG2AndG3
-  remains explicit: paired split/Dart need real recipe/geometry. Existing transaction prerequisite is safe
-  for the implemented three metadata handlers before that dependent work is executable.
+  Goal:0427 private validated model/report preparation; [whole scope/proofs](../history/stitchcad-devnotes-part580.md).
 - ID: `G1-SLICE.6.5.4.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: exact atomic group input/context ownership and sequential private staging with independent
   original reserve cursor and actual failing-command context, no partial accepted result.
 - ID: `G1-SLICE.6.5.4.2.1`
-  Status: `pending`
-  Goal: nonempty typed mutation group, exact original id/order/actor/Design/revision/group context;
-  no authentication or execution implied, preserve retry keys without deciding replay policy.
+  Status: `done`
+  Goal:0428 exact nonempty typed mutation-group inputs/common claims, no authority or execution.
+  - [x] REPRODUCE / ISSUE: git show 12b23f6:crates/sc-core/src/command/context.rs prints optional
+    membership per standalone context without a validated group owner, rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test command_group_contract:4 passed rc=0;
+    explicit original membership/order and full common actor/Design/revision must remain consistent.
+  - [x] FIX: cargo clippy -p sc-core --test command_group_contract -- -D warnings:finished rc=0;
+    immutable group/common snapshot, per-command checks in input order, exact original error fields.
+  - [x] ADDRESSED: cargo test -p sc-core --test command_group_contract:4 passed rc=0; no mutation/key
+    sorting/dedup, empty/None/wrong membership, mixed Design/actor/revision and first invalid index checked.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc command::group:1 passed rc=0; selected fmt --check/
+    strict Clippy rc=0. All typed mutation payloads remain representable; availability/replay separate.
+  - [x] LOCKSTEP: whole0427 private preparation scope/lesson/ledger retained580; book/pointer/decision
+    updated. transition_receipts.py record580:3 exact Git spans rc=0; retention1034 records/64 working OK rc=0.
+    Native publication80 chapters/159 scoped API rows/1463 source links/2442 rendered links rc=0;
+    maintained-reference81 files/17549 lines/1224998 bytes rc=0. Full bus proof remains .6.9.
+  Cargo commands use scripts/local_environment.py. Consistency confers no authenticated actor,
+  current model/revision, grant, lookup, replay result, preview or execution. .4.2.2 staging follows.
 - ID: `G1-SLICE.6.5.4.2.2`
   Status: `pending`
   Goal: sequential real private candidates with one independent staged reserve cursor; all-or-error
   group report preserving actual failing index/command and no publication/partial accepted result.
+- ID: `G1-SLICE.6.5.4.retention1`
+  Status: `pending`
+  Goal: before the next history retirement, normally pack the64 working records using the published
+  retention workflow; preserve all logical bytes/identities and maintained links, fixed caps unchanged.
+  This is a direct group-staging documentation dependency; do not create record581 before making room.
 - ID: `G1-SLICE.6.5.5`
   Status: `pending`
   Goal: scoped actual transaction/failure-context/rollback acceptance; full bus review .6.9 later.

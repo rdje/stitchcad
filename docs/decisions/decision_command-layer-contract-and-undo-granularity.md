@@ -187,3 +187,8 @@ answers: "who can retain a validated prepared command model?"
 0427 .6.5.4.1 retains actual model/report in a private PreparedCommand; private prepare performs the
 same original checks. Public preview consumes/discards the model; compiler privacy4/real bus18/lint
 pass. This is the existing transaction prerequisite, not publication or completed group execution.
+
+answers: "what does a typed mutation group validate?"
+0428 .6.5.4.2.1 requires nonempty original order and exact explicit group/Design/actor/revision claims;
+preserves payloads/retry keys and first failing index/context. No sorting, grant, replay or execution
+follows. Native group4/privacy1/lint/fmt cover schema scope; sequential private staging follows.

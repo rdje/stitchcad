@@ -3,16 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — private prepared model/report ownership
+## _(2026-10-27 UTC)_ — exact typed mutation-group metadata
 
-0427 .6.5.4.1 retains each actual validated metadata candidate and its exact report in private
-PreparedCommand. Private prepare retains original auth/binding/source/difference checks; public
-preview consumes the object, drops the model and returns the report. No candidate/prepare handle
-is public. Real bus18/privacy4/strict selected lint/fmt pass; group staging/publication remain pending.
-Native sewing ease is explicitly deferred to G2/G3; paired split/Dart keep their real dependencies.
-Promotion: command-layer decision. D283 labeled publication summaries remain canonical.
+0428 .6.5.4.2.1 owns a nonempty ordered mutation group, requiring explicit group membership and
+common exact Design/actor/revision. No standalone rewrite, sorting, deduplication or key inference.
+Errors retain first original index/command/expected/requested data; full Actor roles and beyond128
+revision values survive. Native group4/privacy1/strict lint/fmt pass. Input consistency confers no
+current model, grant, replay or execution. Promotion: command-layer decision; real staging follows.
 
-[Whole0426 Measurement/D283 task/lesson/ledger](docs/history/stitchcad-devnotes-part579.md) retains exact source proofs and correction scope.
+[Whole0427 private-preparation task/lesson/ledger](docs/history/stitchcad-devnotes-part580.md) retains exact source proofs and prior correction pointers.
 
 [Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
 

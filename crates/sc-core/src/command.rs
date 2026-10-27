@@ -12,6 +12,7 @@ mod context;
 mod evaluation;
 mod grading_selection;
 mod grant;
+mod group;
 mod payload;
 mod pdf_print;
 mod plot;
@@ -45,6 +46,7 @@ pub use evaluation::{
 };
 pub use grading_selection::{GradedSizeSelection, GradedSizeSelectionError};
 pub use grant::{AgentApprovalGrantError, CommandGrant, CommandGrantStatus};
+pub use group::{CommandMutationGroup, CommandMutationGroupError};
 pub use payload::{
     AssignMaterial, AssignMaterialError, ChangeMeasurement, CommandMutation, MutationPayload,
     PieceSelection, PieceSelectionError,

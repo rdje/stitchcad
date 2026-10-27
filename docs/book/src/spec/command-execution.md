@@ -225,3 +225,34 @@ later sequential group staging. It does not publish a model, expose a replacemen
 revision/identity allocation or implement group success. Paired seam splitting and Dart execution
 retain their actual recipe/geometry dependencies; sewing ease realization remains deferred to G2/G3.
 
+## Typed mutation-group inputs
+
+CommandMutationGroup::new(group_id, mutations) owns a nonempty original Vec of CommandMutation
+values. Every member must explicitly name that group, and all must share the first command's exact
+Design, complete actor claim and revision. A standalone context with group=None is refused rather
+than rewritten. Human and Agent claims remain distinct even when they name the same human principal.
+Revision comparisons retain exact counters beyond128 bits.
+
+```rust
+// Both original mutation contexts already name Some(group_id).
+let group = CommandMutationGroup::new(group_id, vec![first_mutation, second_mutation])?;
+let common_claims = group.context();
+for mutation in group.mutations() {
+    assert_eq!(mutation.context().group(), Some(group.id()));
+    assert_eq!(mutation.context().expected_revision(), common_claims.expected_revision());
+}
+```
+
+The constructor checks membership, Design, actor then revision for each command in submitted order.
+NoMutations retains the requested group id. GroupMismatch, DesignMismatch, ActorMismatch and
+RevisionMismatch retain the first failing zero-based index, payload-derived command identity and
+exact expected/requested data. No sorting, deduplication or identity minting occurs. Payloads and
+retry keys remain exact, including repeated keys as submitted data; execution must determine their
+scope, payload equality and replay outcome. This input validation does not decide that policy.
+
+id(), context() and mutations() expose immutable original data. A compiler check rejects direct
+member reordering. Any typed mutation payload may be represented, including a handler that is not
+available yet. This is a group input schema, not a new command class or authenticated transaction.
+Constructing it neither grants permission, looks up model targets, proves current revision, returns
+a preview nor executes a group. Sequential private staging and whole-group failure handling follow.
+
