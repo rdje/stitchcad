@@ -1,7 +1,7 @@
 # Implemented command execution
 
 The [command-layer contract](command-layer.md) defines the complete intended surface. This page
-describes the implemented private owner, metadata query and Material inspect-preview subset.
+describes the implemented private owner, metadata query, Material and Notch inspect-preview subset.
 
 ## First executable read and private ownership
 
@@ -44,7 +44,7 @@ idempotency, audit, undo and runtime/adapter parity remain separately owned impl
 ## Actual Material assignment preview
 
 CommandBus::preview now accepts AssignMaterial under fresh inspect authority; commit permission is
-unnecessary. is_preview_available reports AssignMaterial only, separately from is_available.
+unnecessary. is_preview_available reports AssignMaterial and AddNotch, separately from is_available.
 The request carries the actual Design, actor, exact revision, retry key and explicit Piece selection.
 Constructing it grants no authority. With a supported actual garment and trusted provider:
 
@@ -59,7 +59,9 @@ let request = CommandRequest::Mutation(CommandMutation::new(
     ),
     MutationPayload::AssignMaterial(assignment),
 ));
-let report = bus.preview(&request)?;
+let CommandPreview::Material(report) = bus.preview(&request)? else {
+    unreachable!("this typed request is AssignMaterial");
+};
 assert_eq!(report.revision(), &exact_revision);
 for change in report.changes() {
     // Original selected Piece identity and exact assignment values, in selection order.
@@ -88,4 +90,52 @@ This is current metadata/source validation. It does not evaluate geometry, certi
 Piece topology, resolve physical properties or approve a release. Focused native tests cover the real
 sc-measure aggregate and installed inspect-only provider, order/no-op/reason semantics, original
 error chains, revocation and unchanged owned Pieces. Full bus integration remains G1-SLICE.6.9.
+
+## Private identity reserve and actual Notch preview
+
+Creation uses identities reserved by the trusted application configuration. CommandBus::with_identities
+owns the actual garment, trusted authority provider and explicit unused identity vector. The bus
+rejects non-increasing supplied order, including duplicate identities, then the first identity already
+owned anywhere in the garment, including retired creating operations. Errors retain the supplied
+identity, zero-based reserve index and original owning position. No sorting or replacement occurs.
+
+The composition root fills the reserve from its injected IdGenerator: clock/entropy for production,
+deterministic allocation for replay/tests. Reserve management must ensure global nonreuse across
+buses and restarts. The implemented checks establish local disjointness, not cross-process persistence.
+The reserve has exactly the supplied length; there is no hidden refill or fallback sequence.
+CommandBus::new has an empty reserve. Reads and Material previews need none; creation reports the
+original IdError::Exhausted. Persistent issuance, bounded refill and production host integration remain
+with the later publication/runtime/storage owners; this API does not claim those workflows exist.
+
+Each creation preview borrows an independent iterator over immutable reserved values. Advancing or
+exhausting that iterator cannot advance another iterator or the owned reserve. It cannot call a clock,
+entropy provider or arbitrary Clone implementation. The request cannot supply a new Notch identity:
+
+```rust
+let bus = CommandBus::with_identities(garment, trusted_authority, reserved_unused_ids)?;
+let intent = AddNotch::new(piece_id, exact_edge_anchor, explicit_profile_bindings);
+let request = CommandRequest::Mutation(CommandMutation::new(
+    CommandMutationContext::new(design_id, actor, exact_revision.clone(), retry_key, None),
+    MutationPayload::AddNotch(intent),
+));
+let CommandPreview::Notch(report) = bus.preview(&request)? else {
+    unreachable!("this typed request is AddNotch");
+};
+let proposed_notch = report.notch();
+assert_eq!(report.revision(), &exact_revision);
+```
+
+Fresh inspect authorization, actual Design/revision, envelope and complete current-source checks
+precede target lookup and staged allocation. A missing owning Piece refuses before exhaustion.
+Notch::new validates the actual current edge and anchor ownership against that Piece and its ledger;
+its original typed cause survives. The candidate appends the actual Notch after existing semantic
+landmarks, rebuilds the sewing/garment owners and validates the complete current candidate.
+
+CommandPreview::Notch contains only the actual Design/base revision and proposed immutable Notch,
+including its staged identity, exact anchor and original sample/production/style/encoding bindings.
+Profile binding validation remains DeferredToG4. No style, physical dimensions or geometry is invented.
+The candidate and iterator are discarded. Repeating a preview at the same base returns the same next
+reserved identity; a refused anchor consumes none. The proposed identity is tentative and grants no
+reservation or later publication capability. execute still refuses AddNotch. Model/revision/owned
+reserve stay unchanged, and no history, artifact or approved release is produced.
 

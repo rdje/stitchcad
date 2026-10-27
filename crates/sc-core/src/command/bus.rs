@@ -1,7 +1,7 @@
 //! First executable command path over a privately owned actual garment and trusted authority source.
 use super::{
     authorize_command, CommandAuthoritySource, CommandAuthorizationError, CommandAuthorizationMode,
-    CommandId, CommandRequest, DesignRevision, QueryPayload,
+    CommandId, CommandRequest, DesignRevision, MutationPayload, QueryPayload,
 };
 use crate::{
     design::{DesignGarment, DesignReferenceHost},
@@ -11,6 +11,19 @@ use core::fmt;
 
 mod material;
 pub use material::{CommandMaterialChange, CommandMaterialPreview, CommandPreviewError};
+mod identity;
+pub use identity::CommandIdentityError;
+mod notch;
+pub use notch::CommandNotchPreview;
+
+/// Actual inspect-preview subset; reports carry semantic changes, never an owned candidate model.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum CommandPreview {
+    /// Exact changed Piece assignments in original selection order.
+    Material(CommandMaterialPreview),
+    /// Exact proposed added semantic Notch with tentative staged identity.
+    Notch(CommandNotchPreview),
+}
 
 /// Actual authored Piece inventory at one authorized exact revision; no geometry/readiness verdict.
 /// Values borrow the private bus owner, so they cannot outlive it or become a publication token.
@@ -95,7 +108,7 @@ impl std::error::Error for CommandBusError {
 ///
 /// The application installs the authenticated authority provider; submitted requests cannot replace
 /// it. Construction claims no permission, source freshness or physical/geometry readiness. Only
-/// GetPieceList executes at this stage; AssignMaterial can prepare a private inspect-preview.
+/// GetPieceList executes at this stage; AssignMaterial and AddNotch prepare private inspect-previews.
 /// Mutation publication and histories remain absent.
 /// There is no model getter, mutable borrow, state replacement or caller-minted commit capability.
 ///
@@ -114,9 +127,71 @@ impl std::error::Error for CommandBusError {
 ///     bus.execute(request).ok()
 /// }
 /// ```
+/// ```compile_fail
+/// use sc_core::command::CommandBus;
+/// fn replace_reserved_ids<H, A>(bus: &mut CommandBus<H, A>) {
+///     bus.identities = Default::default();
+/// }
+/// ```
 pub struct CommandBus<H, A> {
     state: DesignGarment<H>,
     authority: A,
+    identities: identity::IdentityReserve,
+}
+
+impl<H: DesignReferenceHost + Clone, A: CommandAuthoritySource> CommandBus<H, A> {
+    /// Actual inspect-preview subset, independent of committable/executable handlers.
+    #[must_use]
+    pub const fn is_preview_available(&self, command: CommandId) -> bool {
+        matches!(command, CommandId::AssignMaterial | CommandId::AddNotch)
+    }
+
+    /// Freshly authorize inspect, bind the actual Design/revision and prepare a private candidate.
+    /// The original model, revision and reserved identities remain unchanged on success or refusal.
+    /// Candidates are discarded; reports are no geometry, physical-property or release certificate.
+    /// # Errors
+    /// Refuses authority/binding, unsupported handler, then the original explicit envelope/current
+    /// source cause before target lookup, staged allocation and actual candidate construction.
+    pub fn preview(
+        &self,
+        request: &CommandRequest,
+    ) -> Result<CommandPreview, CommandPreviewError<H::Error>> {
+        self.authorize_bound(request, CommandAuthorizationMode::Preview)
+            .map_err(|e| CommandPreviewError::Command(Box::new(e)))?;
+        let CommandRequest::Mutation(mutation) = request else {
+            return Err(CommandPreviewError::Command(Box::new(
+                CommandBusError::HandlerUnavailable {
+                    command: request.command_id(),
+                },
+            )));
+        };
+        if !self.is_preview_available(request.command_id()) {
+            return Err(CommandPreviewError::Command(Box::new(
+                CommandBusError::HandlerUnavailable {
+                    command: request.command_id(),
+                },
+            )));
+        }
+        self.state
+            .require_in_scope()
+            .map_err(|e| CommandPreviewError::Envelope(Box::new(e)))?;
+        self.state
+            .validate_current()
+            .map_err(|e| CommandPreviewError::Current(Box::new(e)))?;
+        match mutation.payload() {
+            MutationPayload::AssignMaterial(assignment) => self
+                .preview_material(assignment)
+                .map(CommandPreview::Material),
+            MutationPayload::AddNotch(addition) => {
+                self.preview_notch(*addition).map(CommandPreview::Notch)
+            }
+            _ => Err(CommandPreviewError::Command(Box::new(
+                CommandBusError::HandlerUnavailable {
+                    command: request.command_id(),
+                },
+            ))),
+        }
+    }
 }
 impl<H, A> fmt::Debug for CommandBus<H, A> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -127,9 +202,35 @@ impl<H, A> fmt::Debug for CommandBus<H, A> {
 impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// Install the original immutable model and trusted application authority dependency.
     /// This moves the sole owner without reconstructing held references or certifying execution.
+    /// The identity reserve is empty; creation previews refuse exhaustion until configured through
+    /// `with_identities` at construction. Material previews and metadata reads allocate no identities.
     #[must_use]
-    pub const fn new(state: DesignGarment<H>, authority: A) -> Self {
-        Self { state, authority }
+    pub fn new(state: DesignGarment<H>, authority: A) -> Self {
+        Self {
+            state,
+            authority,
+            identities: identity::IdentityReserve::default(),
+        }
+    }
+
+    /// Install explicit unused identities reserved by the trusted application generator.
+    /// Production clock/entropy and deterministic replay stay outside command inputs. The reserve
+    /// is private; previews borrow a separate cursor and cannot call or advance an external source.
+    /// The application must ensure global nonreuse across buses/restarts; this local check covers
+    /// the actual garment and reserve. An empty reserve is valid but creation reports exhaustion.
+    /// # Errors
+    /// Refuses non-increasing supplied order, then the first identity already owned by this garment.
+    pub fn with_identities(
+        state: DesignGarment<H>,
+        authority: A,
+        identities: Vec<EntityId>,
+    ) -> Result<Self, CommandIdentityError> {
+        let identities = identity::IdentityReserve::new(identities, &state)?;
+        Ok(Self {
+            state,
+            authority,
+            identities,
+        })
     }
 
     /// Actual executable subset, separate from the full typed command catalog.

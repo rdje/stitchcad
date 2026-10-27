@@ -53,3 +53,15 @@ as LedgerError::IdGeneration, including the standard error chain, before any led
 Their existing argument/precondition priority is retained. new() still starts at1; explicit seed0
 remains a valid separate deterministic sequence. This corrects implementation to the original
 nonreuse contract and introduces no clock, entropy dependency or persisted format change.
+
+answers: "how can a creation preview preserve the identity allocator?"
+
+0423 G1-SLICE.6.5.2.b.3 installs an explicit private reserve supplied by the trusted application
+configuration, filled from its injected generator. No request names a new identity. Strict original
+generator order and complete garment ownership disjointness are checked at bus construction.
+Preview staging owns only an iterator position over immutable reserved ids; it cannot call an external
+provider or alias another mutable cursor through Clone. Dropping/exhausting it leaves the reserve
+unchanged, including its last128-bit identity. AddNotch preview proves this on actual canonical owners.
+Empty reserves refuse with original IdError::Exhausted; no silent refill or substitute sequence.
+Production host integration and persistent global nonreuse across buses/restarts remain later owners.
+Atomic publication must advance model/reserve together; undo must never rewind issued identities.

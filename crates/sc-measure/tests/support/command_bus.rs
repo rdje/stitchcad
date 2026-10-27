@@ -56,6 +56,8 @@ impl Host {
 
 #[path = "command_bus/material_preview.rs"]
 mod material_preview;
+#[path = "command_bus/notch_preview.rs"]
+mod notch_preview;
 impl CommandAuthoritySource for Host {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_> {
         self.reads.set(self.reads.get() + 1);

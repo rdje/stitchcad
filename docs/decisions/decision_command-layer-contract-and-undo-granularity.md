@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; all17 typed inputs, trusted-host authorization, actual Piece-list read and Material inspect-preview implemented; publication pending
+- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Material/Notch inspect-preview implemented; publication pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 

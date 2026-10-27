@@ -1,0 +1,109 @@
+//! Owned preallocated identities: staging cannot advance the original reserve or call a provider.
+use crate::{
+    design::{DesignGarment, DesignGarmentPosition, DesignReferenceHost},
+    ontology::{EntityId, IdError, IdGenerator},
+};
+use core::fmt;
+use std::collections::BTreeMap;
+
+/// Invalid trusted application identity-reserve configuration, before constructing the bus.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum CommandIdentityError {
+    /// Supplied generator order repeats or goes backwards; the bus never silently sorts it.
+    NonIncreasing {
+        /// Previous supplied identity.
+        previous: EntityId,
+        /// Refused supplied identity.
+        identity: EntityId,
+        /// Zero-based original position.
+        index: usize,
+    },
+    /// A reserved identity already belongs to the actual garment, including retired operations.
+    AlreadyOwned {
+        /// Refused reserved identity.
+        identity: EntityId,
+        /// Zero-based original reserve position.
+        index: usize,
+        /// Exact original owning position.
+        owner: DesignGarmentPosition,
+    },
+}
+impl fmt::Display for CommandIdentityError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "command identity reserve refused: {self:?}")
+    }
+}
+impl std::error::Error for CommandIdentityError {}
+
+#[derive(Default)]
+pub(super) struct IdentityReserve {
+    // Only a future atomic publication may remove consumed identities. Never rewind for undo.
+    identities: Vec<EntityId>,
+}
+impl IdentityReserve {
+    pub(super) fn new<H: DesignReferenceHost>(
+        identities: Vec<EntityId>,
+        garment: &DesignGarment<H>,
+    ) -> Result<Self, CommandIdentityError> {
+        let mut previous = None;
+        for (index, identity) in identities.iter().copied().enumerate() {
+            if let Some(previous) = previous {
+                if identity <= previous {
+                    return Err(CommandIdentityError::NonIncreasing {
+                        previous,
+                        identity,
+                        index,
+                    });
+                }
+            }
+            previous = Some(identity);
+        }
+        let owners: BTreeMap<_, _> = garment.identities().into_iter().collect();
+        for (index, identity) in identities.iter().copied().enumerate() {
+            if let Some(owner) = owners.get(&identity) {
+                return Err(CommandIdentityError::AlreadyOwned {
+                    identity,
+                    index,
+                    owner: *owner,
+                });
+            }
+        }
+        Ok(Self { identities })
+    }
+    pub(super) fn stage(&self) -> IdentityStage<'_> {
+        IdentityStage {
+            remaining: self.identities.iter(),
+        }
+    }
+}
+
+// An iterator owns its position and borrows immutable values. No Clone contract can alias a cursor.
+pub(super) struct IdentityStage<'a> {
+    remaining: core::slice::Iter<'a, EntityId>,
+}
+impl IdGenerator for IdentityStage<'_> {
+    fn next_id(&mut self) -> Result<EntityId, IdError> {
+        self.remaining.next().copied().ok_or(IdError::Exhausted)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn staged_cursor_exhausts_without_advancing_other_cursors_or_original_reserve() {
+        let last = EntityId::from_bits(u128::MAX);
+        let reserve = IdentityReserve {
+            identities: vec![EntityId::from_bits(7), last],
+        };
+        let mut first = reserve.stage();
+        let mut independent = reserve.stage();
+        assert_eq!(first.next_id(), Ok(EntityId::from_bits(7)));
+        assert_eq!(first.next_id(), Ok(last));
+        assert_eq!(first.next_id(), Err(IdError::Exhausted));
+        assert_eq!(first.next_id(), Err(IdError::Exhausted));
+        assert_eq!(independent.next_id(), Ok(EntityId::from_bits(7)));
+        assert_eq!(reserve.stage().next_id(), Ok(EntityId::from_bits(7)));
+    }
+}

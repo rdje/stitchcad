@@ -1,16 +1,16 @@
 //! Actual private Material candidates; public reports contain no model or publication capability.
 use super::{CommandBus, CommandBusError};
 use crate::{
-    command::{
-        CommandAuthoritySource, CommandAuthorizationMode, CommandId, CommandRequest,
-        DesignRevision, MutationPayload,
-    },
+    command::{AssignMaterial, CommandAuthoritySource, DesignRevision},
     design::{
         DesignGarment, DesignGarmentEnvelopeError, DesignGarmentError, DesignInputs,
         DesignInputsError, DesignReferenceHost, DesignSewing, DesignSewingError, DesignStructure,
         DesignStructureError,
     },
-    ontology::{EntityId, MaterialAssignment, PieceError, PieceInventory, PieceInventoryError},
+    ontology::{
+        EntityId, IdError, MaterialAssignment, NotchError, PieceError, PieceInventory,
+        PieceInventoryError,
+    },
 };
 use core::fmt;
 
@@ -81,6 +81,10 @@ pub enum CommandPreviewError<E> {
         /// Original selection index.
         index: usize,
     },
+    /// The private staged reserve contains no unused identity.
+    Identity(IdError),
+    /// Original born-valid anchor/ownership cause for the proposed semantic Notch.
+    Notch(NotchError),
     /// Original local immutable Piece-replacement cause.
     Piece {
         /// Original selected identity.
@@ -108,6 +112,8 @@ impl<E: fmt::Display> fmt::Display for CommandPreviewError<E> {
             Self::MissingPiece { piece, index } => {
                 write!(f, "preview Piece {piece} absent at selection {index}")
             }
+            Self::Identity(e) => write!(f, "preview identity: {e}"),
+            Self::Notch(e) => write!(f, "preview Notch: {e}"),
             Self::Piece { piece, issue } => write!(f, "preview Piece {piece}: {issue}"),
             Self::Pieces(e) => write!(f, "preview Piece inventory: {e}"),
             Self::Structure(e) => write!(f, "preview structure: {e}"),
@@ -124,6 +130,8 @@ impl<E: std::error::Error + 'static> std::error::Error for CommandPreviewError<E
             Self::Envelope(e) => Some(e.as_ref()),
             Self::Current(e) | Self::Candidate(e) => Some(e.as_ref()),
             Self::MissingPiece { .. } => None,
+            Self::Identity(e) => Some(e),
+            Self::Notch(e) => Some(e),
             Self::Piece { issue, .. } => Some(issue),
             Self::Pieces(e) => Some(e.as_ref()),
             Self::Structure(e) => Some(e.as_ref()),
@@ -149,45 +157,10 @@ impl<H: DesignReferenceHost> MaterialCandidate<H> {
 }
 
 impl<H: DesignReferenceHost + Clone, A: CommandAuthoritySource> CommandBus<H, A> {
-    /// Current inspect-preview subset, independent of executable/committable handlers.
-    #[must_use]
-    pub const fn is_preview_available(&self, command: CommandId) -> bool {
-        matches!(command, CommandId::AssignMaterial)
-    }
-
-    /// Prepare one actual AssignMaterial candidate under fresh inspect authority.
-    /// Original model, revision, labels, references and identity allocation remain unchanged. The
-    /// whole current garment and candidate registry/source validators run; this is no geometry,
-    /// resolved physical-property, whole-topology or release certificate. No command is published.
-    /// # Errors
-    /// Refuses authorization/context first, unsupported preview, explicit envelope/current sources,
-    /// missing targets, then original candidate construction/current-registry causes.
-    pub fn preview(
+    pub(super) fn preview_material(
         &self,
-        request: &CommandRequest,
+        assignment: &AssignMaterial,
     ) -> Result<CommandMaterialPreview, CommandPreviewError<H::Error>> {
-        self.authorize_bound(request, CommandAuthorizationMode::Preview)
-            .map_err(|e| CommandPreviewError::Command(Box::new(e)))?;
-        let CommandRequest::Mutation(mutation) = request else {
-            return Err(CommandPreviewError::Command(Box::new(
-                CommandBusError::HandlerUnavailable {
-                    command: request.command_id(),
-                },
-            )));
-        };
-        let MutationPayload::AssignMaterial(assignment) = mutation.payload() else {
-            return Err(CommandPreviewError::Command(Box::new(
-                CommandBusError::HandlerUnavailable {
-                    command: request.command_id(),
-                },
-            )));
-        };
-        self.state
-            .require_in_scope()
-            .map_err(|e| CommandPreviewError::Envelope(Box::new(e)))?;
-        self.state
-            .validate_current()
-            .map_err(|e| CommandPreviewError::Current(Box::new(e)))?;
         let originals = self.state.inputs().structure().pieces().pieces();
         let mut selected = Vec::new();
         for (index, identity) in assignment.pieces().pieces().iter().copied().enumerate() {

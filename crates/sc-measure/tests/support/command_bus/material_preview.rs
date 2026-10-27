@@ -1,14 +1,17 @@
 //! Real private candidate preparation under inspect-only authority, without publication.
+#![allow(clippy::panic)]
 use super::*;
 use crate::garment_declarations;
 use sc_core::{
-    command::{AssignMaterial, CommandPreviewError, PieceSelection},
+    command::{
+        AssignMaterial, CommandMaterialPreview, CommandPreview, CommandPreviewError, PieceSelection,
+    },
     design::{DesignGarmentDefinition, DesignGarmentError, DesignInputsError},
     ontology::{LayerInventory, MaterialAssignment, MaterialInventoryError, Piece},
 };
 use std::error::Error as StdError;
 
-fn definition() -> DesignGarmentDefinition<DesignSources> {
+pub(super) fn definition() -> DesignGarmentDefinition<DesignSources> {
     let mut definition = garment_declarations::assigned_definition();
     definition.layers = LayerInventory::new(
         definition.layers.facings().to_vec(),
@@ -17,6 +20,12 @@ fn definition() -> DesignGarmentDefinition<DesignSources> {
     )
     .expect("supported envelope retains actual Facing and Interfacing");
     definition
+}
+fn material_report(report: CommandPreview) -> CommandMaterialPreview {
+    match report {
+        CommandPreview::Material(report) => report,
+        other => panic!("actual Material preview expected, got {other:?}"),
+    }
 }
 fn assignment(
     design: EntityId,
@@ -63,9 +72,10 @@ fn inspect_only_preview_reports_actual_changes_in_selection_order_without_public
         selected.clone(),
         MaterialAssignment::Assigned(id(220000)),
     );
-    let preview = bus
-        .preview(&request)
-        .expect("inspect alone prepares a real candidate with unknown material flags");
+    let preview = material_report(
+        bus.preview(&request)
+            .expect("inspect alone prepares a real candidate with unknown material flags"),
+    );
     assert_eq!(preview.design(), design);
     assert_eq!(preview.revision(), &revision);
     assert_eq!(preview.changes().len(), selected.len());
@@ -85,7 +95,7 @@ fn inspect_only_preview_reports_actual_changes_in_selection_order_without_public
     for command in CommandId::ALL {
         assert_eq!(
             bus.is_preview_available(command),
-            command == CommandId::AssignMaterial
+            matches!(command, CommandId::AssignMaterial | CommandId::AddNotch)
         );
         assert_eq!(
             bus.is_available(command),
@@ -108,16 +118,17 @@ fn exact_noop_is_omitted_and_unresolved_reason_text_is_preserved() {
         vec![first.id()],
         first.definition().material.clone(),
     );
-    assert!(bus
-        .preview(&noop)
-        .expect("same exact assignment")
-        .changes()
-        .is_empty());
+    assert!(
+        material_report(bus.preview(&noop).expect("same exact assignment"))
+            .changes()
+            .is_empty()
+    );
     let proposed = MaterialAssignment::Unresolved("  observe grain and nap\n".into());
     let change = assignment(design, revision.clone(), vec![first.id()], proposed.clone());
-    let report = bus
-        .preview(&change)
-        .expect("explicit unresolved material intent");
+    let report = material_report(
+        bus.preview(&change)
+            .expect("explicit unresolved material intent"),
+    );
     assert_eq!(report.changes().len(), 1);
     assert_eq!(
         report

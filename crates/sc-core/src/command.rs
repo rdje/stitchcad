@@ -30,7 +30,8 @@ pub use authorization::{
     CommandGrantRejection,
 };
 pub use bus::{
-    CommandBus, CommandBusError, CommandMaterialChange, CommandMaterialPreview, CommandPieceList,
+    CommandBus, CommandBusError, CommandIdentityError, CommandMaterialChange,
+    CommandMaterialPreview, CommandNotchPreview, CommandPieceList, CommandPreview,
     CommandPreviewError, CommandResult,
 };
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};

@@ -212,8 +212,10 @@ impl std::error::Error for IdError {}
 /// The source of entity ids, **injected** so that generation is the only place a clock or an entropy source
 /// can enter, and so a deterministic generator can replace it for tests and replay.
 ///
-/// The command bus (`G1-SLICE.6`, the only mutation path) holds the production generator; domain code takes
-/// ids from whatever generator it is given and never reads a clock directly.
+/// The trusted application fills the command bus's private reserve from its production generator;
+/// creation candidates use a separately staged cursor over that reserve. Domain code takes ids from
+/// its injected generator and never reads a clock directly. Production host integration and persistent
+/// global nonreuse remain separate from the implemented local staging contract.
 pub trait IdGenerator {
     /// The next unused id, strictly increasing within this generator's sequence.
     ///
