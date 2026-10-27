@@ -888,30 +888,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0365 private implemented Design input composition; [whole scope/proof](../history/stitchcad-devnotes-part517.md).
 - ID: `G1-SLICE.6.4.2.d.4.4.b`
   Status: `done`
-  Goal: exact actual selected measurement table/Ease set/external SizeSet references and joint scope.
-  Own explicit per-reference unprovided drafts (no inferred selection), readonly core reference facet,
-  actual table/Ease/SizeSet joins and private input ownership, focused native/privacy/lint/book sync;
-  whole0365 and historical coupled-static proof continuity517. Preserve live D154 and later readiness.
-  Fresh6 (0366):
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract:7/0 rc=0;
-    provided/unprovided, wrong metadata role/revision/table and equal-content MTM Ease-set controls.
-  - [x] ROOT CAUSE (WHY + WHERE): git diff -- crates/sc-core/src/design/inputs.rs:rc=0;
-    private composition lacked authored references and actual joint-scope validation.
-  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:rc=0;
-    explicit Option carrier, readonly reference facet and actual source joins; no fallback.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_structure_contract:14/0 rc=0;
-    current root checks keep exact draft fields, ids and original typed host causes.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::inputs::DesignInputs:2/0 rc=0;
-    fmt/core clippy pass0. Glossary census132 failures rc=1, exact prior D250 rows compare rc=0.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/126/1456/2398 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part517.md:4 exact spans rc=0.
-  Promotion: existing decision_design-host answer extended. Full CI stays integration/pre-push.
-  Completed: STITCHCAD-G1-0366; .c next.
+  Goal:0366 exact authored source references/joint scope; [whole scope/proof](../history/stitchcad-devnotes-part518.md).
 - ID: `G1-SLICE.6.4.2.d.4.4.c`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual flat formula-name/source bindings over selected metadata and owned canonical values.
+  Own readonly formula-source facet; actual selected table/Ease declarations, borrowed root namespace
+  with parameter declarations and original collision causes; no inferred names/values or Profile/
+  Material/geometry context. Focused actual host cases/privacy/book; continuity518 whole0366 plus
+  historical static review proof, retaining its live D154/persisted-cycle/physical obligations.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract:12/0 rc=0;
+    actual selected/unprovided names, canonical pointer/origin, collision and stale-source controls.
+  - [x] ROOT CAUSE (WHY + WHERE): native12/0 rc=0 via local_environment.py; standalone
+    input owners had no selected flat namespace. Temporary contexts cannot escape (E0515 observed).
+  - [x] FIX: cargo clippy -p sc-core --test design_structure_contract -- -D warnings:rc=0;
+    readonly source facet and borrowed root namespace; whole current validation before saved targets.
+  - [x] ADDRESSED: cargo test -p sc-core --doc design::inputs:: gives3/0 rc=0; namespace cannot
+    outlive state. Both actual collision sources retained; no unselected or inferred names.
+  - [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:rc=0;
+    fmt pass0; glossary132 failures rc=1, exact D250 baseline comparison rc=0.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/128/1454/2397 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part518.md:4 exact spans rc=0.
+    promotion: existing decision_design-host answer extended. Full CI integration/pre-push.
+    Completed STITCHCAD-G1-0367; .d focused composition acceptance next.
 - ID: `G1-SLICE.6.4.2.d.4.4.d`
-  Status: `pending`
+  Status: `in_progress`
   Goal: focused actual combined ownership/reference/binding/privacy acceptance before .6.4.3 readiness.
 - ID: `G1-SLICE.6.4.3`
   Status: `pending`

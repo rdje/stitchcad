@@ -3,13 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0366 — explicit Design source references
+## STITCHCAD-G1-0367 — borrow actual selected formula input names
 
-- Own exact provided/unprovided table/Ease/SizeSet refs and validate actual current joint scope.
-- Native7+14/privacy2/lint/fmt/book/scoped publication pass0; D250132 rows unchanged.
-- Whole0365/historical static continuity517; name binding next, full CI integration/pre-push.
+- Compose parameters and selected table/Ease declarations into the existing flat namespace.
+- Preserve original canonical records, origins and borrowed collision diagnostics; no unselected names.
+- Native12/privacy3/selected lint/fmt/book/publication pass0; D250132 rows unchanged; continuity518.
+- Focused composition review next; full Design/runtime/physical/integration/CI unverified.
 
 # Sealed archive — earlier slices
+
+| [part518](docs/history/stitchcad-devnotes-part518.md) | whole0366 and historical static review proofs | 92 lines, 7752 bytes, sha256:86ab15c3… |
 
 | [part517](docs/history/stitchcad-devnotes-part517.md) | whole0365 and historical coupled-static proofs | 113 lines, 8990 bytes, sha256:c55068eb… |
 

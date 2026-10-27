@@ -1,4 +1,4 @@
-//! Owned Design structural/input components; selected bindings, semantic state and execution follow.
+//! Owned Design structural/input components; selected input names; semantic state and execution follow.
 use core::fmt;
 use std::collections::BTreeMap;
 
@@ -38,10 +38,13 @@ mod host;
 mod inputs;
 mod parameters;
 pub use host::{
-    DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
+    DesignFormulaHost, DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
     DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost, DesignSourceReferences,
 };
-pub use inputs::{DesignInputs, DesignInputsDefinition, DesignInputsError, DesignInputsPosition};
+pub use inputs::{
+    DesignFormulaError, DesignInputs, DesignInputsDefinition, DesignInputsError,
+    DesignInputsPosition,
+};
 pub use parameters::{
     DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,
     DesignParameters,

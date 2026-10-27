@@ -5,15 +5,18 @@ mod support;
 use sc_core::{
     command::DesignRevision,
     design::{
-        DesignHostEntity, DesignHostEntityKind, DesignInputs, DesignInputsDefinition,
-        DesignInputsError, DesignInputsPosition, DesignMetadata, DesignMetadataError,
-        DesignParameterDefinition, DesignParameterTarget, DesignParameters, DesignSizeSetReference,
-        DesignSourceReferences, DesignStructure, DesignStructureDefinition,
-        DesignStructurePosition,
+        DesignFormulaError, DesignFormulaHost, DesignHostEntity, DesignHostEntityKind,
+        DesignInputs, DesignInputsDefinition, DesignInputsError, DesignInputsPosition,
+        DesignMetadata, DesignMetadataError, DesignParameterDefinition, DesignParameterTarget,
+        DesignParameters, DesignSizeSetReference, DesignSourceReferences, DesignStructure,
+        DesignStructureDefinition, DesignStructurePosition,
     },
     name::MachineToken,
     ontology::{CutPlan, IdentityLedger, MaterialInventory, PieceInventory},
-    recipe::FormulaRecipeDocument,
+    recipe::{
+        FormulaBindingKind, FormulaDeclarationSource, FormulaInputOrigin, FormulaNamespaceError,
+        FormulaRecipeDocument,
+    },
     value::CanonicalInputs,
 };
 use sc_measure::*;
@@ -259,4 +262,231 @@ fn mtm_chart_keeps_its_exact_ease_set_even_when_another_set_has_matching_content
             actual_set: id(60)
         }))
     );
+}
+
+#[test]
+fn selected_formula_names_borrow_actual_canonical_records_with_original_metadata_origins() {
+    let mut definition = fixture();
+    definition.references = references(Some(51), Some(60), None);
+    definition.parameters = DesignParameters::new(
+        vec![
+            definition
+                .parameters
+                .parameters()
+                .first()
+                .expect("actual parameter")
+                .definition()
+                .clone(),
+            DesignParameterDefinition {
+                id: id(5002),
+                token: MachineToken::new("fitting_count").expect("explicit name"),
+                target: DesignParameterTarget::Scalar {
+                    declaration: id(2000),
+                    kind: sc_core::value::ScalarInputKind::Count,
+                },
+            },
+        ],
+        definition.structure.inputs(),
+    )
+    .expect("actual general scalar parameter");
+    let state = DesignInputs::new(definition).expect("actual selected state");
+    let original = state.inputs().clone();
+    let namespace = state
+        .formula_namespace()
+        .expect("actual composed namespace");
+    assert_eq!(namespace.declarations().len(), 14);
+    for (name, origin, input, target) in [
+        ("authored_body", FormulaInputOrigin::Parameter, 5001, 10),
+        ("garment_waist", FormulaInputOrigin::Measurement, 2, 11),
+        ("waistband", FormulaInputOrigin::Measurement, 3, 12),
+        ("waist_ease", FormulaInputOrigin::Ease, 30, 13),
+        ("waistband_ease", FormulaInputOrigin::Ease, 31, 14),
+    ] {
+        let token = MachineToken::new(name).expect("authored name");
+        let declaration = namespace.resolve(&token).expect("selected declaration");
+        let (actual, metadata, declaration) = match declaration.source() {
+            FormulaDeclarationSource::LengthInput {
+                origin,
+                input,
+                declaration,
+            } => Some((origin, input, declaration)),
+            _ => None,
+        }
+        .expect("actual dedicated length source");
+        assert_eq!((actual, metadata), (origin, id(input)));
+        assert!(core::ptr::eq(
+            declaration,
+            state
+                .inputs()
+                .length(id(target))
+                .expect("single actual owner")
+        ));
+    }
+    let count = namespace
+        .resolve(&MachineToken::new("fitting_count").expect("name"))
+        .expect("general parameter");
+    assert!(
+        matches!(count.source(), FormulaDeclarationSource::Input { input, declaration, kind: FormulaBindingKind::Count, .. } if input == id(5002) && declaration == id(2000))
+    );
+    assert!(namespace
+        .resolve(&MachineToken::new("body_waist").expect("unselected name"))
+        .is_err());
+    assert_eq!(state.inputs(), &original);
+}
+
+#[test]
+fn unprovided_selection_does_not_import_names_from_available_metadata_or_selected_size_set() {
+    for authored in [
+        references(None, None, None),
+        references(None, None, Some((40, 2))),
+    ] {
+        let mut definition = fixture();
+        definition.references = authored;
+        let state = DesignInputs::new(definition).expect("explicit draft selection");
+        let namespace = state
+            .formula_namespace()
+            .expect("parameter and reserved metadata only");
+        assert_eq!(namespace.declarations().len(), 9);
+        for name in ["body_waist", "garment_waist", "waist_ease"] {
+            assert!(namespace
+                .resolve(&MachineToken::new(name).expect("valid query"))
+                .is_err());
+        }
+    }
+    let mut definition = fixture();
+    definition.references = references(Some(50), None, None);
+    let state = DesignInputs::new(definition).expect("body table explicitly selected");
+    let namespace = state.formula_namespace().expect("only selected body names");
+    assert_eq!(namespace.declarations().len(), 10);
+    assert!(namespace
+        .resolve(&MachineToken::new("body_waist").expect("name"))
+        .is_ok());
+    assert!(namespace
+        .resolve(&MachineToken::new("garment_waist").expect("name"))
+        .is_err());
+}
+
+#[test]
+fn cross_origin_collision_retains_both_actual_sources_without_shadowing() {
+    let mut definition = fixture();
+    definition.references = references(Some(51), Some(60), None);
+    definition.parameters = DesignParameters::new(
+        vec![DesignParameterDefinition {
+            id: id(5001),
+            token: MachineToken::new("garment_waist").expect("same authored spelling"),
+            target: DesignParameterTarget::Length(id(10)),
+        }],
+        definition.structure.inputs(),
+    )
+    .expect("valid standalone parameter");
+    let state = DesignInputs::new(definition)
+        .expect("input admission remains distinct from namespace checking");
+    let issue = match state
+        .formula_namespace()
+        .expect_err("neither origin shadows the other")
+    {
+        DesignFormulaError::Namespace(issue @ FormulaNamespaceError::AmbiguousName { .. }) => {
+            Some(issue)
+        }
+        _ => None,
+    }
+    .expect("original ambiguity");
+    assert_eq!(issue.token(), "formula_ambiguous_name");
+    let sources = issue.binding_sources();
+    assert_eq!(
+        sources.map(|source| source.source().origin()),
+        [
+            sc_core::recipe::FormulaOrigin::Parameter,
+            sc_core::recipe::FormulaOrigin::Measurement
+        ]
+    );
+    for (source, metadata, target) in sources
+        .into_iter()
+        .zip([5001, 2])
+        .zip([10, 11])
+        .map(|((a, b), c)| (a, b, c))
+    {
+        assert!(
+            matches!(source.source(), FormulaDeclarationSource::LengthInput { input, declaration, .. } if input == id(metadata) && core::ptr::eq(declaration, state.inputs().length(id(target)).expect("actual target")))
+        );
+    }
+}
+
+#[test]
+fn selected_ease_reserved_name_keeps_original_attempted_mapping_and_borrowed_source() {
+    let mut definition = fixture();
+    let canonical = definition.structure.inputs();
+    let original = definition.sources.host();
+    let mut inputs = original.measurements().definition().clone();
+    let peer = {
+        let records = inputs
+            .measurements
+            .record_context(canonical)
+            .expect("actual records");
+        let tables =
+            MeasurementTableContext::new(&inputs.measurements.definition().measurements, &records)
+                .expect("actual metadata");
+        let context = EaseSetContext::new(
+            &inputs.measurements.definition().tables,
+            &inputs.eases,
+            &tables,
+        )
+        .expect("actual mapping context");
+        let mut peer = inputs
+            .ease_sets
+            .first()
+            .expect("actual set")
+            .definition()
+            .clone();
+        peer.id = id(61);
+        peer.entries.first_mut().expect("actual mapping").token =
+            MachineToken::new("eps_num").expect("reserved token is a valid machine spelling");
+        EaseSet::new(peer, &context).expect("local set shape remains separate from flat namespace")
+    };
+    inputs.ease_sets.push(peer);
+    let measurements = MeasurementInputs::new(inputs, canonical).expect("actual current sources");
+    let sources = DesignSources::new(
+        DesignSourcesDefinition {
+            measurements,
+            size_sets: original.size_sets().clone(),
+        },
+        canonical,
+    )
+    .expect("actual provider");
+    definition.sources = DesignMetadata::new(sources, canonical).expect("core current owner");
+    definition.references = references(Some(51), Some(61), None);
+    let state = DesignInputs::new(definition).expect("actual input scope");
+    let issue = match state
+        .formula_namespace()
+        .expect_err("reserved name cannot be authored")
+    {
+        DesignFormulaError::Namespace(issue @ FormulaNamespaceError::ReservedBinding { .. }) => {
+            Some(issue)
+        }
+        _ => None,
+    }
+    .expect("original reserved refusal");
+    assert_eq!(issue.token(), "formula_rebinding");
+    let [reserved, attempted] = issue.binding_sources();
+    assert_eq!(reserved.name(), "eps_num");
+    assert!(
+        matches!(attempted.source(), FormulaDeclarationSource::LengthInput { origin: FormulaInputOrigin::Ease, input, declaration } if input == id(30) && core::ptr::eq(declaration, state.inputs().length(id(13)).expect("original canonical Ease")))
+    );
+}
+
+#[test]
+fn formula_source_query_rechecks_unselected_actual_sources_against_replacement_canonical_inputs() {
+    let definition = fixture();
+    let canonical = definition.structure.inputs();
+    let host = definition.sources.host();
+    assert!(host
+        .formula_declarations(references(None, None, None), canonical)
+        .expect("no selection, current inventory")
+        .is_empty());
+    let replacement =
+        CanonicalInputs::new(canonical.lengths().to_vec(), vec![]).expect("explicit replacement");
+    assert!(matches!(
+        host.formula_declarations(references(None, None, None), &replacement),
+        Err(DesignSourcesError::SizeSets(_))
+    ));
 }

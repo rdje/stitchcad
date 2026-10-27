@@ -1,15 +1,16 @@
 //! Actual immutable measurement/external-set host; core owns the interface and canonical values.
 use crate::{
-    GarmentSizeSetPosition, MeasurementHostError, MeasurementInputs, MtmSizeSetPosition, SizeSet,
-    SizeSetInventory, SizeSetInventoryError, SizeSetMetadataPosition, SizeSetPosition,
+    EaseError, GarmentSizeSetPosition, MeasurementHostError, MeasurementInputs, MtmSizeSetPosition,
+    SizeSet, SizeSetInventory, SizeSetInventoryError, SizeSetMetadataPosition, SizeSetPosition,
 };
 use core::fmt;
 use sc_core::{
     design::{
-        DesignHostEntity, DesignHostEntityKind as Kind, DesignMetadataHost, DesignReferenceHost,
-        DesignSizeSetHost, DesignSizeSetReference, DesignSourceReferences,
+        DesignFormulaHost, DesignHostEntity, DesignHostEntityKind as Kind, DesignMetadataHost,
+        DesignReferenceHost, DesignSizeSetHost, DesignSizeSetReference, DesignSourceReferences,
     },
     ontology::EntityId,
+    recipe::{FormulaDeclaration, FormulaInputOrigin},
     value::{CanonicalInputs, LengthDeclaration},
 };
 
@@ -29,6 +30,8 @@ pub enum DesignSourcesError {
     SizeSets(Box<SizeSetInventoryError>),
     /// Original actual measurement binding/context refusal.
     Measurement(Box<MeasurementHostError>),
+    /// Original actual selected Ease amount declaration refusal.
+    FormulaEase(Box<EaseError>),
     /// A provided logical table identity has no actual metadata record.
     MissingMeasurementTable {
         /// Exact provided table identity.
@@ -72,6 +75,7 @@ impl fmt::Display for DesignSourcesError {
         match self {
             Self::SizeSets(issue) => write!(f, "Design source sets: {issue}"),
             Self::Measurement(issue) => write!(f, "Design source measurement: {issue}"),
+            Self::FormulaEase(issue) => write!(f, "Design formula Ease: {issue}"),
             Self::MissingMeasurementTable { table } => {
                 write!(f, "Design sources have no measurement table {table}")
             }
@@ -105,6 +109,7 @@ impl std::error::Error for DesignSourcesError {
         match self {
             Self::SizeSets(issue) => Some(issue.as_ref()),
             Self::Measurement(issue) => Some(issue.as_ref()),
+            Self::FormulaEase(issue) => Some(issue.as_ref()),
             _ => None,
         }
     }
@@ -303,5 +308,55 @@ impl DesignReferenceHost for DesignSources {
             }
         }
         Ok(())
+    }
+}
+
+impl DesignFormulaHost for DesignSources {
+    fn formula_declarations<'a>(
+        &'a self,
+        references: DesignSourceReferences,
+        canonical: &'a CanonicalInputs,
+    ) -> Result<Vec<FormulaDeclaration<'a>>, Self::Error> {
+        self.validate_references(references, canonical)?;
+        let inventory = self.measurements().measurements();
+        let mut declarations = Vec::new();
+        if let Some(identity) = references.measurement_table {
+            let table = inventory
+                .table(identity)
+                .ok_or(DesignSourcesError::MissingMeasurementTable { table: identity })?;
+            for entry in &table.definition().entries {
+                let declaration = self.measurement_declaration(entry.measurement, canonical)?;
+                declarations.push(FormulaDeclaration::length_input(
+                    &entry.token,
+                    FormulaInputOrigin::Measurement,
+                    entry.measurement,
+                    declaration,
+                ));
+            }
+        }
+        if let Some(identity) = references.ease_set {
+            let set = self
+                .measurements()
+                .ease_set(identity)
+                .ok_or(DesignSourcesError::MissingEaseSet { set: identity })?;
+            for entry in &set.definition().entries {
+                // Complete current validation above has checked this exact saved binding against
+                // the actual Ease metadata. Borrow directly from the canonical owner so no
+                // temporary table/mapping context can become part of the returned lifetime.
+                let declaration = canonical.length(entry.declaration).ok_or_else(|| {
+                    DesignSourcesError::FormulaEase(Box::new(EaseError::MissingDeclaration {
+                        ease: entry.ease,
+                        declaration: entry.declaration,
+                    }))
+                })?;
+                declarations.push(FormulaDeclaration::length_input(
+                    &entry.token,
+                    FormulaInputOrigin::Ease,
+                    entry.ease,
+                    declaration,
+                ));
+            }
+        }
+        Ok(declarations)
     }
 }

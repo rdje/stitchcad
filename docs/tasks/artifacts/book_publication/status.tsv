@@ -125,3 +125,5 @@ actual combined Design sources	spec/design-inputs.md	crates/sc-measure/src/desig
 owned core Design input composition	spec/design-inputs.md	crates/sc-core/src/design/inputs.rs	DesignInputs	G1-SLICE.6.4.2.d.4.4.a	3.1
 authored Design source references	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignSourceReferences	G1-SLICE.6.4.2.d.4.4.b	3.1
 actual Design reference host	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignReferenceHost	G1-SLICE.6.4.2.d.4.4.b	4.4
+Design selected formula source host	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignFormulaHost	G1-SLICE.6.4.2.d.4.4.c	4.4
+Design selected input namespace refusal	spec/design-inputs.md	crates/sc-core/src/design/inputs.rs	DesignFormulaError	G1-SLICE.6.4.2.d.4.4.c	4.4

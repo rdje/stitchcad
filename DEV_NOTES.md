@@ -3,14 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — exact authored Design source references
+## _(2026-10-27 UTC)_ — actual selected Design input names
 
-0366 checks each provided table/Ease/set identity and exact revision against actual current sources.
-None remains an explicit draft field; table joins and MTM's saved Ease-set id refuse incoherent peers.
-Native measure7/core14, privacy2, strict selected lint/fmt/book and publication79/126 pass0.
-D250 remains exact132 baseline rows; no readiness/evaluation/physical/full-CI claim. Whole0365 and
-historical coupled-static proof retained in517:4 exact Git spans0. Promotion: existing host decision
-answers draft selection semantics. .d4.4.c actual flat source bindings next; integration/pre-push later.
+0367 adds readonly DesignFormulaHost and root formula_namespace over actual parameters/table/Ease.
+Whole current validation precedes exact saved bindings; returned tokens/lengths borrow original owners.
+Temporary table contexts cannot escape (E0515); validate their contracts, then borrow sole canonical
+records directly. Input admission stays separate from flat collision checking; original both-source
+and reserved diagnostics remain borrowed. Profile/Material/geometry/runtime contexts remain separate.
+Native12/privacy3/strict selected lint/fmt/book/scoped publication pass0; D250132 exact baseline.
+518 preserves whole0366/historical static review in4 exact Git spans0; D154 remains OPEN.
+Promotion: existing host decision answers selected names. .d focused review next; broad CI later.
+
+[Complete authored-reference lesson](docs/history/stitchcad-devnotes-part518.md) retains
+its original scope, checks and promotion decision.
 
 [Complete private Design-input composition lesson](docs/history/stitchcad-devnotes-part517.md) retains
 its original scope, checks and promotion decision.

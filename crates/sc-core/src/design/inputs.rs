@@ -1,13 +1,16 @@
 //! Private composition of implemented structural/input components, before whole Design readiness.
 use super::{
-    DesignHostEntity, DesignMetadata, DesignMetadataError, DesignMetadataHost,
+    DesignFormulaHost, DesignHostEntity, DesignMetadata, DesignMetadataError, DesignMetadataHost,
     DesignParameterError, DesignParameters, DesignReferenceHost, DesignSourceReferences,
     DesignStructure, DesignStructurePosition,
 };
 use crate::{
     command::DesignRevision,
     ontology::{EntityId, MaterialInventory, MaterialInventoryError},
-    recipe::FormulaRecipeDocument,
+    recipe::{
+        FormulaDeclaration, FormulaInitialDeclaration, FormulaNamespace, FormulaNamespaceError,
+        FormulaRecipeDocument,
+    },
     value::CanonicalInputs,
 };
 use core::fmt;
@@ -99,10 +102,42 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignInputsError<E> 
     }
 }
 
+/// Current input or borrowed namespace refusal; original declarations remain inspectable.
+#[derive(Debug)]
+pub enum DesignFormulaError<'a, E> {
+    /// Original complete current input refusal, before publishing any namespace.
+    Inputs(Box<DesignInputsError<E>>),
+    /// The host returned a declaration that cannot seed an initial namespace.
+    InvalidInitial(FormulaDeclaration<'a>),
+    /// Original reserved/ambiguous-name refusal with both actual sources.
+    Namespace(FormulaNamespaceError<'a>),
+}
+impl<E: fmt::Display> fmt::Display for DesignFormulaError<'_, E> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::Inputs(issue) => write!(f, "Design formula inputs: {issue}"),
+            Self::InvalidInitial(_) => {
+                f.write_str("Design formula source is not an initial declaration")
+            }
+            Self::Namespace(issue) => fmt::Display::fmt(issue, f),
+        }
+    }
+}
+impl<E: std::error::Error + 'static> std::error::Error for DesignFormulaError<'_, E> {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::Inputs(issue) => Some(issue.as_ref()),
+            // These payloads borrow actual authored declarations and cannot be 'static sources.
+            Self::InvalidInitial(_) | Self::Namespace(_) => None,
+        }
+    }
+}
+
 /// Immutable owner of the implemented structural/input components over one canonical inventory.
 ///
-/// Provided references validate without filling unprovided draft fields. Flat formula-name binding,
-/// sewing/garment state and readiness remain separate. Recipe admission is syntax/input ownership.
+/// Provided references validate without filling unprovided draft fields. Selected input namespaces
+/// are checked explicitly; sewing/garment state and readiness remain separate. Recipe admission
+/// is syntax/input ownership.
 /// Held Piece topology references
 /// remain inspectable after edits; no Piece is reconstructed and no value/history is generated.
 ///
@@ -187,6 +222,55 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     #[must_use]
     pub const fn references(&self) -> DesignSourceReferences {
         self.definition.references
+    }
+    /// Build the flat initial namespace from actual parameters and selected measurement/Ease sources.
+    ///
+    /// This checks complete current inputs first. Parameter order precedes selected table/Ease
+    /// order; the existing namespace adds reserved metadata and refuses collisions without shadowing.
+    /// No recipe statement, Profile/Material/geometry context, value or readiness is evaluated.
+    /// The returned namespace and collision payloads borrow this exact immutable owner.
+    ///
+    /// ```compile_fail
+    /// fn escape<H: sc_core::design::DesignFormulaHost>(state: sc_core::design::DesignInputs<H>)
+    ///     -> sc_core::recipe::FormulaNamespace<'static> {
+    ///     state.formula_namespace().unwrap()
+    /// }
+    /// ```
+    ///
+    /// # Errors
+    /// Returns original current-input/host causes, invalid initial metadata or namespace collisions.
+    pub fn formula_namespace(
+        &self,
+    ) -> Result<FormulaNamespace<'_>, DesignFormulaError<'_, H::Error>>
+    where
+        H: DesignFormulaHost,
+    {
+        self.validate_current()
+            .map_err(|issue| DesignFormulaError::Inputs(Box::new(issue)))?;
+        let mut declarations = Vec::new();
+        for parameter in self.parameters().parameters() {
+            declarations.push(parameter.declaration(self.inputs()).map_err(|issue| {
+                DesignFormulaError::Inputs(Box::new(DesignInputsError::Parameters(Box::new(issue))))
+            })?);
+        }
+        declarations.extend(
+            self.sources()
+                .host()
+                .formula_declarations(self.references(), self.inputs())
+                .map_err(|issue| {
+                    DesignFormulaError::Inputs(Box::new(DesignInputsError::References(Box::new(
+                        issue,
+                    ))))
+                })?,
+        );
+        let initial = declarations
+            .into_iter()
+            .map(|declaration| {
+                FormulaInitialDeclaration::try_from(declaration)
+                    .map_err(DesignFormulaError::InvalidInitial)
+            })
+            .collect::<Result<Vec<_>, _>>()?;
+        FormulaNamespace::new(initial).map_err(DesignFormulaError::Namespace)
     }
     /// Complete actual ownership positions: structure, parameters, Materials, then higher metadata.
     /// Referenced source/evidence/formula/assignment ids remain uses, not additional owners.

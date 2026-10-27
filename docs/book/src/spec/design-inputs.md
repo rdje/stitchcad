@@ -247,7 +247,7 @@ cargo test -p sc-measure --test design_sources_contract
 
 DesignInputs owns the implemented structure, parameters, exact recipe document, Materials and checked
 metadata host. Its structure is the single CanonicalInputs owner. Provided source references are
-checked below; name bindings, sewing/garment state and readiness remain separate.
+checked below; selected input names are checked explicitly. Sewing/garment state and readiness remain separate.
 
 Construction checks identities in order: structure (Design, canonical records, Pieces, copies,
 operations), parameters, Materials, then higher source metadata. Even a retired creating operation
@@ -317,3 +317,46 @@ other two fields None. Numeric declaration2000 cannot stand in for any absent so
 Whole ownership/current checks precede reference admission. Reference ids are uses, excluded from
 the owned-id census. Presence and coherent scope still supply no complete namespace, path coverage,
 numerical evaluation, physical Profile resolution or release readiness. Partial drafts remain valid.
+
+## Formula names from actual selected inputs
+
+DesignInputs.formula_namespace() first rechecks complete current input ownership and references.
+It borrows parameter declarations in authored order, then the selected table's measurements and
+selected Ease set's mappings. DesignFormulaHost supplies actual selected metadata through the
+one-way port; DesignSources validates every source and exact saved binding before borrowing
+canonical records. Local measurement contexts never escape or become stored self references.
+
+```rust
+use sc_core::{design::{DesignFormulaError, DesignFormulaHost, DesignInputs}, recipe::FormulaNamespace};
+fn names<'a, H: DesignFormulaHost>(state: &'a DesignInputs<H>)
+    -> Result<FormulaNamespace<'a>, DesignFormulaError<'a, H::Error>> {
+    state.formula_namespace()
+}
+```
+
+For example, parameter authored_body can borrow body declaration10 while selected table51 supplies
+measurement2/garment_waist from declaration11 and Ease60 supplies mapping30/waist_ease from13.
+The names preserve Parameter/Measurement/Ease origins and metadata identities. Canonical Unknown/
+Derived states stay exact; general scalar parameters retain their explicit kind and target.
+Unselected body table50 contributes no body_waist. With both source fields None, only parameters
+and the eight reserved metadata names appear, even if a selected SizeSet names a table/Ease set.
+
+If parameter5001 is instead named garment_waist, the namespace returns formula_ambiguous_name
+with the original parameter and measurement declarations, in that order. Neither shadows the other.
+A selected Ease entry named eps_num returns formula_rebinding with reserved and attempted sources.
+No accepted namespace escapes a collision. The namespace and its diagnostics borrow the actual
+state, so neither can outlive it. Borrowed collision payloads are inspected through the Namespace
+variant; they cannot be exposed as static std::error::Error sources. Current input errors retain
+their concrete error source chains.
+
+| API or variant | Meaning |
+| --- | --- |
+| `DesignFormulaHost` | Readonly actual selected table/Ease declaration facet |
+| `DesignFormulaError` | Current input or original borrowed initial-name refusal |
+| `InvalidInitial` | Host supplied metadata that cannot seed an initial namespace |
+| `Namespace` | Original reserved/ambiguous-name error with actual borrowed sources |
+| `FormulaEase` | Original selected canonical Ease declaration refusal |
+
+Input admission remains distinct from name checking. This namespace supplies implemented input
+metadata; Profile/Material/geometry/size/tolerance values, recipe statement checking, graph execution,
+physical claims and readiness retain their existing owners. Human labels never become formula names.

@@ -124,6 +124,24 @@ pub trait DesignReferenceHost: DesignSizeSetHost {
     ) -> Result<(), Self::Error>;
 }
 
+/// Readonly formula metadata from the actual provided measurement table and Ease set.
+///
+/// Implementations first validate complete current sources and reference joins, then enumerate
+/// only selected table entries followed by selected Ease entries, in authored order. Each
+/// declaration borrows its actual token and canonical length, retaining the metadata identity
+/// and Measurement/Ease origin. Unprovided selections yield no names; values are never inferred.
+pub trait DesignFormulaHost: DesignReferenceHost {
+    /// Borrow actual selected source declarations without reading numeric availability.
+    ///
+    /// # Errors
+    /// Returns original current source, selected reference or declaration-binding refusal.
+    fn formula_declarations<'a>(
+        &'a self,
+        references: DesignSourceReferences,
+        canonical: &'a CanonicalInputs,
+    ) -> Result<Vec<crate::recipe::FormulaDeclaration<'a>>, Self::Error>;
+}
+
 /// Checked source-host refusal, preserving original identities, positions and typed host causes.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum DesignMetadataError<E> {

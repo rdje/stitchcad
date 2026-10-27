@@ -346,58 +346,27 @@ those execution obligations.
 
 ## Complete static review and remaining contracts
 
-The .5b.1c.1 review checks all21 worked statements and all13 refusal sources against independently
-authored expected static outcomes. Three refusal examples are statically valid: division by zero,
-unknown material shrinkage and an unavailable factory tolerance fail only when executed. A false
-arithmetic assertion is also statically valid; its failure belongs to execution. All other listed
-refusals fail syntax or static checking. No numerical or geometry callback runs in these controls.
+The static review checks the21 worked statements and13 refusal examples against authored outcomes.
+Its100 controls distinguish syntax/static refusals from runtime-only zero division, missing material/
+factory values and false assertions. No numeric or geometry callback runs in these controls.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
 ```
 
-The100 cases also check all six envelope call spellings before operand name/kind resolution,
-including either conditional branch. Envelope dispatch begins after valid syntax: malformed calls
-still fail parsing. Expected envelope populations and book statement/refusal populations are compared
-in both directions; seven actual compiled faults and three loaded documentation faults must fail
-body assertions. Source remains unchanged.
+Current product APIs provide sourced namespaces, ordered scopes, expression signatures, whole recipe
+proofs and coupled static acceptance. [Whole recipe proof](formula-checked-recipes.md) retains current
+scope. D154's reference refusal ordinal repair remains OPEN under .5b.4c; the director's existing
+arithmetic/product exception does not close it. Persisted-cycle/replay repair remains .5e/.7; physical
+geometry and computed cross-platform verification remain G2/.5g.
 
-| Requirement | Reference evidence | Current product status / remaining owner |
-| --- | --- | --- |
-| Eight kinds, six let kinds; no implicit conversion | signature4032 and namespace1139 controls | Implemented declarations and scoped checks |
-| Nine origins, eight reserved names, collisions and spelling | namespace1139, recipe196 controls | Implemented sourced namespaces and ordered scopes |
-| Every operator/function/selector signature and arity | closed signature matrix;22 names | Implemented closed catalogs and expression checks |
-| Tolerance-name roles; Boolean test; both branches | signature/namespace matrices, recipe preflight | Implemented operand roles and both-branch checks |
-| Declaration order, headers, no accepted prefix on late error | whole-source196, actual consumer ordering | Complete whole recipe proof and coupled static review |
-| Statement4096, expression256, conditional16 boundaries | recipe boundaries; earlier syntax/input controls | Implemented and coupled syntax/input/proof limits |
-| All worked and refusal static outcomes | independently authored21/13 populations | Whole static review complete; runtime .5e |
-| Envelope dispatch before operand semantics | six calls/either branch; actual guard fault | Implemented call lookup and child priority |
-| Exact source and canonical identity | earlier product syntax/input/identity controls | Implemented expression/statement/whole owner context |
-| Complete typed diagnostic arguments | reference call/expression/provider/header payloads verified | Implemented static payloads; D154 reference context; command .6 |
-| Persisted cycles and atomic runtime/replay behavior | outside these static instrument controls | Pending .5e/.5f and storage .7 |
-| Physical geometry and cross-platform computed values | outside these static instrument controls | Pending G2 and .5g |
-
-**D124 is resolved by the director's ruling2026-10-03: keep the current grammar.** Excluded
-loop/function/macro capabilities introduce no additional source forms or keywords. Unknown calls
-such as loop(width), repeat(2,width) and while(width>0 um) raise formula_unbound_name, before
-argument semantics, including in an untaken conditional branch. Malformed fn/macro definition
-shapes raise formula_parse. Declared scalar names loop, repeat, while, fn and macro remain valid.
-Recognized non-square exponents retain formula_unsupported; envelope calls retain their tokens.
-
-The recognition controls compare actual contract6 cells and grammar1.1 keyword populations with
-independently authored expectations; ordinary names/let headers, all three reserved words and
-unknown-call/parse precedence are exercised with execution and values trapped. The concrete ruling
-is retained in ADR-0003. .5b.1c.2 closes the reference review; product namespace and local kind proofs are available,
-and [whole recipe proofs](formula-checked-recipes.md) are available; coupled whole review is complete at .5b.4b. This clarification changes diagnostic promises to match v1's
-closed grammar and enables no excluded capability.
-
-The reference runtime assertion repair closes D125 at G1-SLICE.5e.3a. A false assertion now raises
-formula_assertion; its name, exact left/right values and kinds, and symbolic tolerance class/value
-are retained. A statically valid false assertion still passes preflight, because preflight computes
-no verdict. [Runtime assertion controls](formula-runtime-validation.md#reference-runtime-assertion-controls) describe the repair.
-D121 reference provenance is [verified separately](formula-runtime-validation.md#approximation-contributions-and-admissible-classes). D122 reference origin/context routing is verified
-[separately](formula-runtime-validation.md#missing-values-by-origin); product adapters remain .5e.1.
-No static review result approves numerical determinism, a physical garment or a production release.
+D124's ruling keeps the current grammar: loop/repeat/while/fn/macro are ordinary scalar names, unknown
+calls refuse before argument semantics, malformed definitions parse-refuse, and unsupported powers/
+envelope calls keep their declared tokens. ADR-0003 retains that ruling. D125's false-assertion repair
+and its exact runtime diagnostics remain in [assertion controls](formula-runtime-validation.md#reference-runtime-assertion-controls).
+Original historical matrices, fault controls and proof commentary are preserved whole in
+`docs/history/stitchcad-devnotes-part518.md`; retrieve with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part518.md`.
 
 ### Implementation sequence after the review
 
