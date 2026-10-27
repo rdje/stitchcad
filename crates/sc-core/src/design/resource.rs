@@ -1,11 +1,18 @@
 //! Explicit logical dynamic-content accounting, independent of authorization and publication.
+use crate::ontology::EntityId;
 use core::{
     fmt,
     num::{NonZeroU64, NonZeroUsize},
 };
 
 mod canonical;
+mod pieces;
 pub use canonical::charge_canonical_input_resources;
+pub use pieces::{charge_cut_plan_resources, charge_piece_inventory_resources};
+
+// Fixed value/reference payloads own no dynamic content. Removing Copy requires new accounting.
+fn fixed_value<T: Copy>(_: &T) {}
+fn fixed_slice<T: Copy>(_: &[T]) {}
 
 /// Original top-level model scope of a resource charge; no model data or authority is carried.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -26,6 +33,8 @@ pub enum DesignResourceScope {
 pub struct DesignResourceLocation {
     /// Original model scope.
     pub scope: DesignResourceScope,
+    /// Actual owning entity for nested fields when one exists; identity is data, not authority.
+    pub owner: Option<EntityId>,
     /// Static field-path token chosen by the schema producer, never a copied user label/value.
     pub field: &'static str,
     /// Original zero-based authored collection position when this charge is member-specific.

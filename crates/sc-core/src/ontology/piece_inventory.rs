@@ -169,6 +169,12 @@ impl PieceInventory {
         Ok(Self { pieces })
     }
 
+    // Exhaustive borrowed resource view; new owned fields require an accounting update.
+    pub(crate) fn resource_pieces(&self) -> &[Piece] {
+        let Self { pieces } = self;
+        pieces
+    }
+
     /// Original immutable Pieces in caller-authored order.
     #[must_use]
     pub fn pieces(&self) -> &[Piece] {

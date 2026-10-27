@@ -228,6 +228,12 @@ impl CutPlan {
         })
     }
 
+    // Exhaustive borrowed resource view; new owned fields require an accounting update.
+    pub(crate) fn resource_copies(&self) -> &[CutCopy] {
+        let Self { copies } = self;
+        copies
+    }
+
     /// Physical copies in caller-authored order; identity is independent of that order.
     #[must_use]
     pub fn copies(&self) -> &[CutCopy] {

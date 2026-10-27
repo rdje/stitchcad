@@ -81,82 +81,8 @@ carried across a network boundary but not what the levels are.
 [Whole0432–0436 sequential preparation/publication/revision/operator decisions](../history/stitchcad-devnotes-part592.md)
 retain their complete lessons, alternatives, focused proofs and pending boundaries.
 
-## Actual bounded snapshot history0437
-
-answers: "how does undo preserve complete original semantics?" · "how are history effects authorized and ordered?"
-
-G1-SLICE.6.7.1.3 moves actual predecessor/current models through bounded alternatives; no inverse is
-reconstructed. Explicit finite depth/action limits, exact operation replay and shared complete-actor
-key scope preserve append-only original/action records. Bind the complete submitted original to its
-accepted record and selected stack top, authenticate current operator across every original command
-scope, validate actual current/alternative models, preflight allocations and refresh authority at effects.
-Original author remains distinct from current operator. Report oldest undo eviction/discarded redo.
-Model counters restore, while maximum-issued authoring revision/entity ids never rewind. Global exact
-audit sequence orders authoring/Undo/Redo independently of timestamps and restored counters; stale
-witnesses share actual event ordering. Native bus37 (prior30/history7), privacy7/lint/fmt cover this
-metadata subset, including D285 undo0/new2/old1 refusal and pointer/canonical roundtrip. Storage/reopen
-must persist issuance/order; work/cancellation and deeper/full acceptance remain separately owned.
-
-## Explicit metadata admission/progress contracts0438
-
-answers: "what do initial operation limits measure?" · "does progress data itself cancel or authorize work?"
-
-G1-SLICE.6.8.1.1 admits original submitted members, primary metadata selections and cumulative proposed
-UTF-8 assignment-reason bytes under explicit positive host limits. Aliases still count. Member excess
-precedes per-member target/byte excess; guard remaining room before arithmetic and retain exact factors.
-Typed phase-local fractions require positive total/completed<=total. Data-only observer returns Continue/
-Cancel and carries no model/authority capability. Native control4/privacy1/lint/fmt pass; runtime bus is
-unchanged. Immutable installation/actual emission/atomic cancellation follow .6.8.1.2. These inputs do
-not prove CPU time, total model memory, allocation peaks, numeric/file/decompression or solver bounds.
-
-## Actual immutable operation control0439
-
-answers: "where does metadata cancellation become effective?" · "may a request widen installed limits?"
-
-G1-SLICE.6.8.1.2 installs policy exactly once with no default or request override. Admit original typed
-metadata input before private source/model work, then emit actual phase-local data-only checkpoints.
-Cancel discards private work without changing semantic model/reserve/audit/history/issuance/keys;
-internal reserved capacity may grow. Prepare closed audit/result copies before ReadyToPublish and
-fresh final complete effect authority. No observer/large preparation follows that authority check.
-Exact replay refreshes entry authority and emits Replaying without new effects. Cheap authorized Piece
-reads require no policy. Native bus44/privacy8/lint/fmt pass, including observer revocation at Ready.
-Input counts and cooperative checkpoints do not prove total model/work/memory or wall-clock bounds;
-.6.8.2 owns the remaining resource implementation, .6.5.5/.6.9 deeper/full acceptance.
-
-## Measurement evidence admission0440
-
-answers: "are submitted Measurement evidence vectors covered by target counts?"
-
-D287 native baseline shows they are independent: a Known replacement carries two references while
-member/target/reason demand stays1/1/0. G1-SLICE.6.8.2.1 adds a fourth explicit positive host maximum
-and cumulative evidence-reference demand/refusal, including exact aliases. Preserve original vectors,
-counts and first member/index/command; compare remaining room before adding, without source lookup.
-All costly metadata entry paths share this admission before authority/model work. Refused keys remain
-unused. No evidence truth/registry grant is implied. This bounds already typed input, not raw decoding,
-initial construction, whole-model validation/cloning or retained-state memory; those remain separately owned.
-
-## Bound source-host reconstruction copies0441
-
-answers: "why consume copied inner Design owners instead of cloning them again?"
-
-D289 native real-source instrumentation measured individual H copies3/3/2 in Measurement/Material/Notch
-previews. G1-SLICE.6.8.2.2.1 consumes copied Structure/Inputs/Sewing definitions privately and rebuilds
-through unchanged validators. Bus reconstruction now requests one H copy per non-alias candidate and
-one extra for a new revision; replay and actual Undo/Redo request none. Explicit member policy bounds
-candidate count. Native bus46 and privacy3/4/4 verify copy counts and no public extraction. This does
-not bound trusted host-internal bytes/time, all core collection work or retained memory; .6.8.2.2.2 owns those.
-
-## Shared reserve publication0442
-
-answers: "does committing metadata require copying all unused reserved identities?"
-
-D290 native source/caller census shows prior after_consuming recopied the entire unused Vec even for
-zero creation. G1-SLICE.6.8.2.2.2.1 retains one immutable shared backing and publishes a checked forward
-prefix. Independent borrowed cursors preserve local consumption/exhaustion; publication shares the
-backing without copying unused IDs, and history never rewinds issuance. Cursor1/native bus46 and
-selected lint/fmt pass. Initial backing including consumed IDs remains allocated for bus lifetime;
-this trades finite initial retention for removal of per-commit backing copies, not a total resource,
-initial-conversion or timing certificate. D291's standalone preview explicitly installs operation policy.
+[Whole0437–0442 snapshot/admission/cancellation/copy/reserve decisions](../history/stitchcad-devnotes-part596.md)
+retain their complete answers, native proofs, original boundaries and retention tradeoffs.
 
 ## First-refusal logical dynamic-content contract0443
 
@@ -179,3 +105,14 @@ future dynamic-field obligations. Preserve original order/field/index; do not re
 normalize or inspect registry truth. Native resource10 (prior6/actual4)/lint/fmt verify15/0/0 demand,
 exact first refusals, original owner and empty/prior-error composition. This is a canonical component;
 remaining core/source/runtime, allocator RSS/time and evidence/publication proof stay separately owned.
+
+## Actual Piece/copy resources and nested owner0445
+
+answers: "how do resource refusals identify a nested hole without rebirthing its Piece?"
+
+G1-SLICE.6.8.2.2.2.2.2.2.1 precharges actual Piece/copy vectors and exact reason/label bytes through
+exhaustive held views. Add optional actual owner identity to static scope/field/index so nested holes
+retain Piece owner/hole index, and canonical evidence retains declaration owner. No path-string
+allocation, rebirth, repair, registry lookup or geometry proof. Resource15/privacy4/lint/fmt verify24/18/0,
+original nested/UTF-8/copy witnesses, actual split-held content and no mutation. D292 corrects one stale
+ontology metadata-command clause; whole-model/source/runtime and physical/RSS/time proof remain owned.

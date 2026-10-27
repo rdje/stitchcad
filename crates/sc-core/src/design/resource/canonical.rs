@@ -1,22 +1,26 @@
 //! Actual canonical dynamic collections; no copied state, availability reads or registry lookup.
 use super::{
-    DesignResourceLimitError, DesignResourceLocation, DesignResourceScope, DesignResourceSink,
+    fixed_value, DesignResourceLimitError, DesignResourceLocation, DesignResourceScope,
+    DesignResourceSink,
 };
+use crate::ontology::EntityId;
 use crate::value::{
     CanonicalInputs, LengthDeclarationDefinition, LengthState, ScalarInputDeclarationDefinition,
     ScalarInputState,
 };
 
-fn location(field: &'static str, index: Option<usize>) -> DesignResourceLocation {
+fn location(
+    field: &'static str,
+    index: Option<usize>,
+    owner: Option<EntityId>,
+) -> DesignResourceLocation {
     DesignResourceLocation {
         scope: DesignResourceScope::Structure,
+        owner,
         field,
         index,
     }
 }
-// Fixed value payloads own no dynamic content. Removing Copy requires revisiting this accounting.
-fn fixed_value<T: Copy>(_: &T) {}
-
 /// Charge actual canonical inventories/evidence vectors, in authored length-then-scalar order.
 /// Each inventory is precharged before its members, then each Known evidence vector by exact length.
 /// Shared evidence identities in different declarations still count as distinct logical vector entries.
@@ -30,10 +34,10 @@ pub fn charge_canonical_input_resources(
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
     let (lengths, scalars) = inputs.resource_collections();
-    sink.charge_entries(lengths.len(), location("canonical.lengths", None))?;
+    sink.charge_entries(lengths.len(), location("canonical.lengths", None, None))?;
     for (index, declaration) in lengths.iter().enumerate() {
         let LengthDeclarationDefinition {
-            id: _,
+            id,
             source: _,
             state,
         } = declaration.definition();
@@ -42,7 +46,7 @@ pub fn charge_canonical_input_resources(
                 fixed_value(value);
                 sink.charge_entries(
                     evidence.len(),
-                    location("canonical.lengths.evidence", Some(index)),
+                    location("canonical.lengths.evidence", Some(index), Some(*id)),
                 )?;
             }
             LengthState::Assumed {
@@ -56,10 +60,10 @@ pub fn charge_canonical_input_resources(
             LengthState::Unknown { observation: _ } | LengthState::Derived { formula: _ } => {}
         }
     }
-    sink.charge_entries(scalars.len(), location("canonical.scalars", None))?;
+    sink.charge_entries(scalars.len(), location("canonical.scalars", None, None))?;
     for (index, declaration) in scalars.iter().enumerate() {
         let ScalarInputDeclarationDefinition {
-            id: _,
+            id,
             source: _,
             kind: _,
             state,
@@ -69,7 +73,7 @@ pub fn charge_canonical_input_resources(
                 fixed_value(value);
                 sink.charge_entries(
                     evidence.len(),
-                    location("canonical.scalars.evidence", Some(index)),
+                    location("canonical.scalars.evidence", Some(index), Some(*id)),
                 )?;
             }
             ScalarInputState::Assumed {

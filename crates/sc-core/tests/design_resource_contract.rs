@@ -16,6 +16,7 @@ fn limits(entries: usize, text: usize, bits: u64) -> Limits {
 fn location(field: &'static str, index: Option<usize>) -> Location {
     Location {
         scope: Scope::SourceHost,
+        owner: None,
         field,
         index,
     }
@@ -306,6 +307,7 @@ fn actual_scalar_evidence_excess_retains_exact_preceding_count_and_original_scal
         requested: 2,
         location: Location {
             scope: Scope::Structure,
+            owner: Some(sc_core::ontology::EntityId::from_bits(11)),
             field: "canonical.scalars.evidence",
             index: Some(0),
         },
@@ -328,6 +330,7 @@ fn actual_inventory_precharge_refuses_before_nested_evidence_and_retains_the_fir
         requested: 5,
         location: Location {
             scope: Scope::Structure,
+            owner: None,
             field: "canonical.lengths",
             index: None,
         },
@@ -345,6 +348,7 @@ fn actual_inventory_precharge_refuses_before_nested_evidence_and_retains_the_fir
         requested: 2,
         location: Location {
             scope: Scope::Structure,
+            owner: Some(sc_core::ontology::EntityId::from_bits(1)),
             field: "canonical.lengths.evidence",
             index: Some(0),
         },
@@ -384,3 +388,6 @@ fn actual_empty_canonical_scope_composes_with_prior_charges_and_preserves_prior_
     );
     assert_eq!(refused.finish(), Err(original));
 }
+
+#[path = "support/design_resource/pieces.rs"]
+mod pieces;

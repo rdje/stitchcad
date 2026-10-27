@@ -8,13 +8,12 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D290 — metadata publication recopies the complete unused identity reserve
-P2 fixed0442, owner G1-SLICE.6.8.2.2.2.1: shared immutable backing and checked forward prefix.
-- [x] ROOT CAUSE: python3 -I -B native reserve/caller census prints remaining.to_vec() even for count0 rc=0.
-- [x] ADDRESSED: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0; native bus46 passed rc=0;
-  expanded prefix/exhaustion checks and actual cancellation/replay/undo/branch nonreuse preserved.
-- [x] NO REGRESSION: selected strict core/native Clippy and fmt finished rc=0; backing-copy census0 rc=0.
-D291 P2 fixed0442 same owner: standalone Notch example policy-install count0/1 rc=0; explicit setup added.
+## D292 — ontology guide still defers implemented Material command metadata
+P2 fixed0445, owner G1-SLICE.6.8.2.2.2.2.2.2.1; this is one observed clause, not a whole-book audit.
+- [x] ROOT CAUSE: python3 -I -B scoped native ontology clause census1 rc=0; actual private Material prep/group commit exist.
+- [x] ADDRESSED: scoped native prior/current stale clause1/0 rc=0; corrected metadata scope links actual execution.
+- [x] NO REGRESSION: cargo test -p sc-core --test design_resource_contract:15 passed rc=0; strict lint/fmt/privacy4 rc=0.
+D290/D291 fixed0442; [whole native reserve/setup closure ledger](../history/stitchcad-devnotes-part597.md).
 D289 fixed0441; [whole native source-copy diagnosis/fix/privacy proof](../history/stitchcad-devnotes-part593.md).
 D287/D288 fixed0440; [whole native bypass/fix and package metadata proof](../history/stitchcad-devnotes-part592.md).
 D285 runtime fixed0437; persistence/reopen issuance/order remains owned/pending in G1-SLICE.7.

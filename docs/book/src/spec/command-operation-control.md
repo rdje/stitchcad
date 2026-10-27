@@ -193,8 +193,8 @@ and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 
 ## Logical dynamic-content accounting contract
 
 DesignResourceLimits and DesignResourceMeter live in the Design domain, independent of command
-authority. They provide a data-only accounting contract. Actual canonical-component accounting is
-implemented below. Remaining model/source producers and command-bus enforcement are pending;
+authority. They provide a data-only accounting contract. Actual canonical/Piece/cut-plan accounting
+is implemented below. Remaining model/source producers and command-bus enforcement are pending;
 this meter is not yet a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
@@ -219,6 +219,7 @@ let mut meter = DesignResourceMeter::new(DesignResourceLimits::new(
     let sink: &mut dyn DesignResourceSink = &mut meter;
     let location = DesignResourceLocation {
         scope: DesignResourceScope::SourceHost,
+        owner: None,
         field: "example.entries",
         index: None,
     };
@@ -237,7 +238,8 @@ assert_eq!(declared.counter_bits(), 129);
 ```
 
 DesignResourceScope identifies Structure, Inputs, Sewing, Garment or SourceHost. Locations retain a
-static schema field token and optional original zero-based authored index. They contain no copied
+optional actual owner identity, static schema field token and original zero-based authored index.
+Owner identity is location data, never permission or a model handle. Locations contain no copied
 user label/value or model handle. Count refusals retain CollectionEntries or TextBytes, the explicit
 maximum, successful preceding count, exact attempted amount and location. CounterBits retains its
 original u64 components and location. Remaining-room comparisons precede addition, so even an
@@ -276,7 +278,7 @@ The order is exact: charge the length inventory's full length, visit lengths in 
 charge each Known evidence vector, then do the scalar inventory and its Known evidence vectors.
 Static fields are canonical.lengths, canonical.lengths.evidence, canonical.scalars and
 canonical.scalars.evidence in Structure scope. Inventory charges have no index; evidence charges
-retain the original zero-based declaration index. Reused evidence identities in different declarations
+retain the actual declaration owner identity and original zero-based declaration index. Reused evidence identities in different declarations
 still occupy entries in both original vectors; accounting does not deduplicate them.
 
 For example, the native actual inventory has five Length declarations covering Known, Assumed,
@@ -298,6 +300,47 @@ lint and formatting. The command-bus source remains unchanged. This is canonical
 Pieces/topology, parameters/recipe/Materials, sewing/garment, root counter bits, source-host traversal
 and runtime model admission remain separately owned. Finishing this component's meter supplies no
 whole-model, source-truth, allocator RSS/time or publication certificate.
+
+## Actual Piece and cut-plan accounting
+
+charge_piece_inventory_resources borrows the actual Piece inventory. It precharges Pieces, then each
+Piece's boundary, outer hole list, each hole's edge vector, construction lines and fold references in
+schema/authored order. It charges exact unresolved Material-reason bytes, then name/size/fabric/colorway
+label bytes. Assigned Material identity contributes no reason text; no registry lookup or physical
+property inference occurs. charge_cut_plan_resources charges the actual physical-copy vector.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_piece_inventory_resources(&pieces, &mut meter)?;
+charge_cut_plan_resources(&cut_plan, &mut meter)?;
+let represented_components = meter.finish()?;
+```
+
+The producers do not rebuild a Piece or copy against a later topology ledger. Actual held references,
+assignment/label text and physical-copy order remain unchanged after success/refusal. Exhaustive
+private owner/definition/label views and fixed Copy-reference constraints expose new owned fields.
+This is content accounting, not current-reference, Material truth, geometry or release validation.
+
+Nested locations now carry optional actual owner identity as well as scope/field/index. For a hole-edge
+vector, pieces.holes.edges retains its Piece owner and original hole index. Other Piece member fields
+retain owner and original Piece index. Whole inventories/copy vectors have no standalone entity owner.
+Canonical evidence locations likewise carry actual declaration identity. No dynamic path string or
+copied user label/value enters an error; identities supply location, not authority.
+
+The native fixture holds two Pieces, each with boundary3, two hole vectors containing1 and2 edges,
+construction1 and fold1. Piece entries total22, and two physical copies bring the total to24. Each
+label is7 UTF-8 bytes; the first unresolved reason ` é ` adds4 bytes, while the second Piece is Assigned.
+Text demand is18 bytes, with no trimming/deduplication. Maximum18 entries refuses the second Piece's
+second hole vector with consumed18/requested2 and that actual Piece owner/hole index1. Maximum17
+text bytes refuses its colorway with consumed16/requested2. Maximum23 entries admits Pieces, then
+refuses cut_plan.copies with consumed22/requested2.
+
+After a real split retires a held boundary source, rebirth would refuse that original Piece; accounting
+still succeeds without repair, rewriting or changed ledger. Empty actual Piece/copy scopes contribute
+zero entries and preserve an earlier meter refusal. Five new actual cases plus prior10 resource cases
+pass:15 total, with strict selected lint/formatting and four meter privacy/sealing checks rechecked.
+Topology history/index/registration, remaining model/source/runtime admission and total RSS/time proof
+remain separately owned. The command bus has not changed its runtime behavior.
 
 Focused runtime evidence comprises37 earlier bus cases, eight runtime-control cases and one actual
 source-copy case:46 passing cases. The evidence-input slice established six pure admission/fraction

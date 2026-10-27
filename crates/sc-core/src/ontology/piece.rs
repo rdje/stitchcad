@@ -354,6 +354,12 @@ impl Piece {
         Ok(Self { definition })
     }
 
+    // Exhaustive borrowed resource view; new owned fields require an accounting update.
+    pub(crate) fn resource_definition(&self) -> &PieceDefinition {
+        let Self { definition } = self;
+        definition
+    }
+
     /// Authored content, available by shared reference only.
     #[must_use]
     pub const fn definition(&self) -> &PieceDefinition {

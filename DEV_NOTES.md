@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual canonical dynamic-content producer
+## _(2026-10-27 UTC)_ — actual held Piece/copy resources and owner-aware locations
 
-0444 .6.8.2.2.2.2.2.1 borrows actual canonical Length/Scalar inventories and Known evidence vectors,
-precharges exact lengths and retains authored field/index order. Exhaustive owner/state patterns
-and Copy-value constraints prevent silently omitting new owned payloads. No numeric availability,
-registry, cloning or changed state/provenance. Resource10 (prior6/actual4)/strict selected lint/fmt pass;
-actual mixed-state demand15/0/0, first refusals, empty/prior-error composition and unchanged owner proven.
-Promotion: command-layer record. Other model/source/runtime work remains owned; no whole-model/RSS/
-time/evidence certificate. Whole0443 contract scope/lesson/ledger retained595 with3 exact Git spans.
+0445 .6.8.2.2.2.2.2.2.1 borrows actual Piece vectors/reasons/labels and physical copies; precharge
+before nested traversal, with actual owner identity/field/index. Canonical evidence now names its
+original declaration owner. Resource15 (prior10/actual5)/privacy4/strict lint/fmt pass:24 entries/18 bytes,
+exact nested/UTF-8/copy refusals, actual split-held refs without rebirth and no changed Piece/plan/ledger.
+D292 fixes one stale ontology Material-command clause, native1/0; no full-book audit claim. Promotion:
+command-layer record. Whole0444/0437–0442 decisions596 and D290/D291 ledger597 retain5 exact spans.
+Remaining topology/model/source/runtime/deeper/full work stays owned; no physical/RSS/time certificate.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

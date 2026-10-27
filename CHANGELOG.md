@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0444 — account for actual canonical input resources
+## STITCHCAD-G1-0445 — account for held Piece and physical-copy resources
 
-- Borrow actual length/scalar inventories and Known evidence vectors; precharge in original authored order.
-- Exhaustive owner/state views and Copy-value constraints; retain first field/index refusal, no numeric/source lookup.
-- Resource10 (prior6/actual4), strict selected lint/fmt pass; actual state/provenance/order unchanged, bus unchanged.
-- Book scopes canonical-component proof; whole0443 logical-contract scope/lesson/ledger retained595.
+- Actual nested Piece/reference/text and CutPlan producers; no rebirth, repair or registry/geometry lookup.
+- Owner-aware typed locations retain actual Piece/declaration identity and original nested index.
+- Resource15 (prior10/actual5), privacy4 and strict selected lint/fmt pass; actual held content remains unchanged.
+- D292 scoped stale ontology clause corrected; whole0444/older decisions596 and D290/D291 ledger597 retained.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part597](docs/history/stitchcad-devnotes-part597.md) | whole D290/D291 verified closure ledger | 13 lines, 1223 bytes, sha256:82264056… |
+| [part596](docs/history/stitchcad-devnotes-part596.md) | whole0444 and0437–0442 decision continuity | 125 lines, 9886 bytes, sha256:bfda6027… |
 | [part595](docs/history/stitchcad-devnotes-part595.md) | whole0443 logical resource-contract scope/lesson/ledger | 46 lines, 4068 bytes, sha256:8c5e05c3… |
 | [part594](docs/history/stitchcad-devnotes-part594.md) | whole0442 shared reserve/D290/D291 scope/lesson/ledger | 48 lines, 4296 bytes, sha256:d564a629… |
 | [part593](docs/history/stitchcad-devnotes-part593.md) | whole0441 source-copy scope/lesson/ledger and D289 closure | 61 lines, 5382 bytes, sha256:a55aadcd… |

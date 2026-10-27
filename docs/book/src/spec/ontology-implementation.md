@@ -55,8 +55,13 @@ replacement retains the original references and the same current point/range evi
 visible later losses. It repairs or retargets nothing and still reports geometry deferred to G2.
 It supplies no registry/source/readiness certificate: the actual Design Material collection checks
 assigned targets, and the command layer still owns authorization, current validation and atomic
-publication. Constructing this detached value cannot replace private bus state; AssignMaterial
-execution and private candidate preparation remain pending.
+publication. Constructing this detached value cannot replace private bus state. AssignMaterial metadata
+inspect-previews and atomic group commits are implemented under fresh command-bus authority;
+see [implemented execution](command-execution.md). Recipe/geometry/physical execution remains separately owned.
+
+[Piece/cut-plan resource accounting](command-operation-control.md#actual-piece-and-cut-plan-accounting)
+borrows original held reference vectors and authored text without rebirth, repair or registry/geometry
+validation. Exact logical entries/UTF-8 bytes and owner/field/index refusals are distinct from readiness.
 
 **Whole intervals.** `EdgeRange::new(edge, from, to)` requires exact ascending bounds; whole(edge)
 covers [0,1]. A zero-length anchor is a point. `IdentityLedger::resolve_range` partitions the entire

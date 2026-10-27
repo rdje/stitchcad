@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0444
+## Current leaf acceptance —0445
 
-- [x] ROOT CAUSE: python3 -I -B native HEAD canonical/resource assertions print actual length/scalar
-  ownership and earlier meter-only module rc=0; canonical accounting must visit real owned vectors.
-- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:10 passed rc=0; four actual
-  canonical cases cover all authored states, logical shared evidence entries, original limits and no mutation.
-- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; git diff --quiet HEAD --
-  crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior six data-meter cases retain coverage.
+- [x] ROOT CAUSE: python3 -I -B native Piece/copy schema assertions print nested held vectors/four
+  label strings and prior location without owner rc=0; nested first refusal needs actual owner plus index.
+- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:15 passed rc=0; actual Piece/
+  copy/UTF-8/held-split witnesses preserve state, original owner/index and prior meter refusal.
+- [x] NO REGRESSION: strict selected Clippy/fmt finished rc=0; cargo test -p sc-core --doc design::resource:
+  4 passed rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0.
 
 ## Goal
 
@@ -822,39 +822,48 @@ All98 completed ids/statuses and original proof pointers remain live there.
   precharge before nested traversal; cover every owned collection/text/counter field without inferred data.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.1`
   Status: `done`
-  Goal:0444 actual canonical Length/Scalar inventory and Known evidence-vector resource producer.
-  Exhaustive internal owner view and declaration/state patterns preserve future-field obligations;
-  fixed value payloads must remain Copy. Borrow only, precharge before traversal, no numeric availability,
-  registry lookup, copying, normalization or changed declarations/source/state/value/provenance/order.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native HEAD canonical/resource assertions print actual
-    length/scalar ownership and earlier meter-only module rc=0; this leaf adds the explicit canonical
-    producer to that module rather than treating declared demo charges as an actual model walk.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part595.md:
-    3 exact Git spans rc=0; whole0443 scope/lesson/ledger preserves its actual-visitor-pending boundary.
-    Canonical vectors and per-Known evidence are logical dynamic entries; fixed primitive values are not.
-  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
-    exhaustive borrowed owner view, complete original state matches, Copy-value constraints and length-
-    then-scalar precharge preserve exact first resource location/index without model/authority fabrication.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:10 passed rc=0. Four actual
-    canonical cases verify five Length/all authored states and six Scalars/computed Area, demand15/0/0,
-    reused evidence entries counted twice, max14 scalar-evidence13+2/index0, whole-vector max4 refusal,
-    max6 length-evidence refusal, unchanged input, actual empty scope and prior-error composition.
-  - [x] NO REGRESSION: selected cargo fmt check rc=0; strict selected lint rc=0; git diff --quiet HEAD
-    -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Original six meter cases still pass;
-    runtime policy/enforcement, metadata candidate/source/authority/cancellation paths are unchanged.
-  - [x] LOCKSTEP: whole0443 scope/lesson/ledger595 retained unchanged with3 exact Git spans rc=0;
-    book/pointer/frontier/lesson/indexed decision aligned. Remaining core components .2–.5, source-host
-    .3 and runtime admission .4 stay owned; deeper .6.5.5 and full .6.9 acceptance remain deferred.
-  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
-  Native book/publication81 chapters/159 scoped API rows/1475 source links/2473 rendered links rc=0;
-  maintained-reference82 files/18204 lines/1270093 bytes owner .6.8.2.2.2.2.2.1 rc=0.
-  Retention1049 logical/79 aggregate working Markdown rc=0; active generation fits64/group.
-  This is actual canonical-component accounting, not complete model/source traversal or runtime
-  enforcement, evidence truth, allocator RSS/time or publication authority.
+  Goal:0444 actual canonical resource producer; [whole scope/proofs](../history/stitchcad-devnotes-part596.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual Piece/copy-plan/topology resource accounting, including all held text/reference/history
   collections, with exhaustive owner views and bounded precharge; retain historical topology references.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.2.1`
+  Status: `done`
+  Goal:0445 actual Piece/cut-plan logical-content accounting, exact owner-aware locations and D292 doc fix.
+  Precharge actual inventories/held vectors before traversal; exact unresolved reason/four label bytes;
+  no rebirth, current-ledger resolution/repair, Material registry lookup, geometry or rewritten copy order.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native Piece/copy schema assertions print nested held vectors,
+    four label strings and prior location without owner rc=0. Native ontology clause census1 rc=0:
+    detached-Material text falsely defers actual command metadata preparation/publication (D292 P2).
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part596.md:
+    4 exact Git spans rc=0; whole0444 and0437–0442 decision continuity retained. Piece owner plus original
+    hole index identify nested vector excess without allocating path text; canonical evidence now names
+    its actual declaration owner. Exhaustive private owner/definition/label views and Copy guards cover fields.
+  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
+    borrowed Piece/CutPlan producers, checked cumulative meter, static owner/field/index locations,
+    updated canonical locations and exact definition/label/state handling preserve actual original content.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:15 passed rc=0; five new actual
+    cases verify combined24 entries/18 UTF-8 bytes, second Piece/second hole18+2, colorway16+2,
+    copy-vector22+2 refusal, real retired-source split without rebirth, unchanged Piece/plan/ledger,
+    assigned/unresolved intent, empty scopes and original prior error; prior10 meter/canonical cases pass.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::resource:4 passed rc=0; selected fmt rc=0;
+    git diff --quiet HEAD -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. No actual
+    source/authority/metadata bus path is changed; whole-model/runtime/deeper acceptance stays pending.
+  - [x] LOCKSTEP: native scoped D292 stale-clause census1/0 rc=0; native Material preparation/group
+    commit present. Correct ontology paragraph links implemented metadata without physical claims.
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part597.md:1 exact Git span rc=0;
+    whole D290/D291 closure ledger retained; pointer/frontier/book/lesson/indexed decision aligned.
+  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Native book/publication81 chapters/159 scoped API rows/1477 source links/2476 rendered links rc=0;
+  maintained-reference82 files/18252 lines/1273628 bytes owner .6.8.2.2.2.2.2.2.1 rc=0.
+  Retention1051 logical/81 aggregate working Markdown rc=0; active60 fits64/group.
+  Actual owner identity is location data, not authority or a model handle. Topology .2.2, remaining
+  core .2.3–.5/source .3/runtime .4, deeper .6.5.5 and full .6.9 remain owned; no whole-model/RSS/time,
+  current-reference, registry/evidence, geometry/physical or release certificate is supplied.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.2.2`
+  Status: `pending`
+  Goal: actual immutable topology journal/live-index/registration accounting with exhaustive owner views,
+  all per-edit owned fragment/edge collections and no resolution/rebuild or source-history rewrite.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.3`
   Status: `pending`
   Goal: actual parameter/recipe/Material resource accounting, including both original/canonical recipe text;
