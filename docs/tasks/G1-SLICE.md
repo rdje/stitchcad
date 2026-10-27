@@ -95,17 +95,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Goal: Structural Piece contract complete; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part485md).
 - ID: `G1-SLICE.3c.1a`
   Status: `done`
-  Goal: fix D56 — the shipped piece cut plan cannot represent the reference skirt's separate
-  cut-once L/R back members. Add explicit handedness and companion-piece identity while retaining
-  the existing total-quantity mirrored-pair mode. Printed labels derive the member's L/R information.
-  Acceptance: cut-once left/right pieces can carry reciprocal companion identities; missing hand or
-  companion is unrepresentable, self-companion is refused, existing even-quantity mirrored pairs
-  remain valid and odd totals in that mode remain refused. No geometric mirror claim is invented;
-  companion existence/reciprocity is a design-collection obligation at `.6`.
-  Verification: 14 piece-contract tests, strict `make check`, wasm, book, fixture/feature censuses,
-  ledger probes and staged doctrine gate green. D56 closed in defects-part3.
-  Commit: `STITCHCAD-G1-0008`
-  Design: `decision_piece-pair-members-have-explicit-handedness.md`.
+  Goal:original D56 pair-member scope; [whole proof](../history/stitchcad-devnotes-part534.md).
 
 - ID: `G1-SLICE.3c.2`
   Status: `done`
@@ -909,29 +899,36 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0381 D261 original Hem layer cause; [whole proof](../history/stitchcad-devnotes-part533.md).
 - ID: `G1-SLICE.6.4.5.3.b`
   Status: `done`
-  Goal: shared canonical current validators for layers and Hem; complete original references/targets.
-  Reuse original constructors' rule order; add immutable-context current queries for all three layers
-  and complete Hem owner/finish/Facing scope. Hem borrows current Facing validation without cloning.
-  Preserve raw endpoint choices/interval repairs, typed causes, scope/geometry deferrals and schemas.
-  Focused affected native/privacy/lint/book; whole0381/D261 continuity533.
-
-  - [x] REPRODUCE / ISSUE: python3 Git-source comparison rc=0; old layer rules were constructor-only,
-    Hem Facing checks rebuilt cloned definitions; no full Hem current validator was exposed.
-  - [x] ROOT CAUSE (WHY + WHERE): same comparison rc=0; reuse original layer/Hem rules rather than
-    duplicate guards. Original layer and Hem depth/edge rule blocks retain exact order/content.
-  - [x] FIX: cargo clippy -p sc-core --test layer_contract --test hem_contract -- -D warnings:rc=0;
-    shared current layer rules and complete Hem owner/edge/Facing checks, no cloned Facing.
-  - [x] ADDRESSED: cargo test -p sc-core --test layer_contract --test hem_contract:11+13/0 rc=0;
-    four new current controls; --doc ontology::layer and ontology::hem:3+1/0 rc=0.
-  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; rule-block source comparison rc=0;
-    glossary132 failures rc=1, exact prior D250 rows compare rc=0. Envelope/raw repairs unchanged.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/148/1453/2404 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part533.md:5 exact spans rc=0.
-    promotion: declined (existing structural/current boundary). Completed STITCHCAD-G1-0382.
+  Goal:0382 shared current layer/Hem rules; [whole proof](../history/stitchcad-devnotes-part534.md).
 - ID: `G1-SLICE.6.4.5.3.c`
-  Status: `pending`
+  Status: `in_progress`
   Goal: private actual layer/Hem collections, complete current sources and actual materials;
   stable Facing joins and explicit modelled lining/execution refusal.
+  Children: .1 owned layer/source inventory; .2 actual Material assignments; .3 owned Hem/Facing joins.
+- ID: `G1-SLICE.6.4.5.3.c.1`
+  Status: `done`
+  Goal: private actual Facing/Lining/Interfacing inventory; family order/id census and every current
+  served Piece/source, borrowed typed entries, concrete causes and separate lining scope refusal.
+  Preserve held damage/empty drafts, raw choices and original validators; materials remain .2.
+  Focused native/privacy/lint/book and whole0382 continuity534.
+  - [x] REPRODUCE / ISSUE: python3 Git-source check:30e8361 has no layer inventory rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): same check rc=0; individual layer types own no collection-wide
+    id/current-source scope. Original layer/Hem validators remain byte-identical.
+  - [x] FIX: cargo clippy -p sc-core --test layer_contract -- -D warnings:rc=0;
+    private families, borrowed typed entries, every served target/source and separate named scope.
+  - [x] ADDRESSED: cargo test -p sc-core --test layer_contract inventory_:4/0 rc=0;
+    cargo test -p sc-core --doc ontology::layer_inventory:2/0 rc=0.
+  - [x] NO REGRESSION: cargo fmt --all --check:rc=0; source comparison rc=0;
+    glossary132 failures rc=1, exact prior D250 rows compare rc=0. Raw rules/geometry unchanged.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/152/1453/2405 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part534.md:5 exact spans rc=0.
+    promotion: declined (existing ownership/current-source rules). Completed STITCHCAD-G1-0383.
+- ID: `G1-SLICE.6.4.5.3.c.2`
+  Status: `pending`
+  Goal: actual current layer Material targets/unknown properties and original unresolved reasons.
+- ID: `G1-SLICE.6.4.5.3.c.3`
+  Status: `pending`
+  Goal: private owned Hems, complete layers/current sources and stable same-Piece Facing joins.
 - ID: `G1-SLICE.6.4.5.3.d`
   Status: `pending`
   Goal: actual known Hem depth/fold and layer operation roles; preserve logical/G2/G3/G4 owners.

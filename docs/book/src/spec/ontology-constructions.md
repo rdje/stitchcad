@@ -163,6 +163,45 @@ Neither successful structural birth nor an envelope check proves geometry or gra
 | `LayerEnvelopeError` | Typed execution-scope refusal independent of structural birth |
 | `LiningDeferred` | Modelled lining request refuses with env_lining, served Piece and G7 |
 
+## Owned layer families and complete current sources
+
+`LayerInventory::new(facings, linings, interfacings)` owns the exact original objects in each
+authored family order. Its id census visits Facing, Lining, then Interfacing. Repeated ids within or
+across families refuse with both original kind/position pairs. No object is sorted or deduplicated.
+Explicit empty families are draft scope and make no whole Design or assembly completeness claim.
+
+`facings()`, `linings()` and `interfacings()` borrow original typed slices. `entries()` visits those
+same families/orders with typed LayerRef borrows and original positions. `facing(id)` selects only an
+actual Facing; a same-id Lining or Interfacing cannot substitute. These are inspection queries,
+including held damage after edits, and supply no current source certificate. Debug prints only
+family counts or the borrowed kind, without material reasons or customer source content.
+
+`validate_current(pieces, ledger)` first rejects duplicate Piece identities, then checks every layer's
+original served Piece and complete source list through its existing current validator. Missing owners
+never retarget to another Piece. For example, an unused later Interfacing whose middle interval was
+deleted refuses even when its endpoints and an earlier Facing remain valid. The refusal retains
+that layer's identity, original family/position and concrete LayerError with raw evidence. Current
+contexts are borrowed, never cached, and source references are never rewritten or implicitly chosen.
+
+Modelled Lining can pass current source validation. Requested execution must check scope first:
+
+```rust
+layers.require_in_scope()?;
+layers.validate_current(&current_pieces, &ledger)?;
+```
+
+The first Lining produces the original env_lining cause, served Piece and G7 even if its geometry
+also needs repair. The modelled object remains available for inspection; no supported layer is
+substituted. Passing scope certifies neither sources nor geometry. Assigned Material targets,
+global Design identity joins, recipe operations and G2/G3/G4 physical proofs remain separate.
+
+| API token | Layer collection meaning |
+| --- | --- |
+| `LayerInventory` | Private ordered Facing/Lining/Interfacing families and complete current sources |
+| `LayerInventoryPosition` | Original semantic kind and zero-based authored position in that family |
+| `LayerRef` | Shared original distinct layer type, without a validation certificate |
+| `LayerInventoryError` | Duplicate ids/Pieces, missing served owner, original Layer cause or named envelope cause |
+
 ## Hem: depth, fold binding and current Facing composition
 
 `Hem` retains a stable identity, whole owned finish edge, `HemDepth`, `HemFoldType` and `HemMethod`.

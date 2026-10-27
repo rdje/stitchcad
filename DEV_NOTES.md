@@ -3,15 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — shared current layer and Hem rules
+## _(2026-10-27 UTC)_ — owned current layer families
 
-0382 exposes current validators for each layer and complete Hem owner/depth/finish/Facing scope.
-Constructors share original rule blocks/order; Hem borrows current Facing validation without cloning.
-Four new controls prove historical/content ownership and interior repairs; all affected native11+13
-and privacy3+1 pass0. Strict affected lint/fmt/book/publication79/148 pass0; D250132 exact rows unchanged.
-Rule blocks retain exact bytes after self substitutions. Lining scope, raw choices and G2/G3/G4 stay
-separate.533 retains whole0381/D261/reference evidence in5 exact Git spans0. Promotion declined:
-existing structural/current boundary. Owned layer/Hem/material collections next; full CI deferred.
+0383 owns distinct Facing/Lining/Interfacing families in exact authored orders; local id census keeps
+original kind/position pairs. Typed entries borrow actual objects; every current served Piece/source
+is checked, including unused damaged layers. Modelled lining stays inspectable with original env_lining.
+Native4/privacy2, strict affected lint/fmt/book/publication79/152 pass0; D250132 exact prior rows unchanged.
+Original layer/Hem validators byte-identical.534 retains whole0382/retirement/old pair scope in5 exact
+Git spans0. Promotion declined: existing ownership/current-source rules. Material targets next;
+full Design joins/physical proof/integration/CI remain deferred.
+
+[Complete current layer/Hem lesson](docs/history/stitchcad-devnotes-part534.md) retains
+its original scope, checks and promotion decision.
 
 [Complete D261 Hem cause lesson](docs/history/stitchcad-devnotes-part533.md) retains
 its original scope, checks and promotion decision.

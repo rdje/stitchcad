@@ -25,6 +25,7 @@
 //! | [`grain`] | directed grainline and independent stripe/plaid references, deferred angles | `.3c.3b` |
 //! | [`hem`] | finish edge, depth/fold intent and stable current Facing links | `.3c.4b.2` |
 //! | [`layer`] | served layer/recipe/material intent; explicit lining execution-scope refusal | `.3c.4b.1` |
+//! | [`layer_inventory`] | owned layer families, complete current sources and separate lining scope | `.6.4.5.3.c.1` |
 //! | [`material`] | immutable metadata, current typed properties and unapplied shrinkage intent | `.6.4.2.d.3.2` |
 //! | [`material_inventory`] | current Material collection and actual Piece assignment targets/reasons | `.6.4.2.d.3.3` |
 //! | [`notion`] | physical-copy placements, owned anchors/orientation and current target validation | `.3c.4c.1a` |
@@ -55,6 +56,7 @@ pub mod grain;
 pub mod hem;
 pub mod id;
 pub mod layer;
+pub mod layer_inventory;
 pub mod material;
 pub mod material_inventory;
 pub mod notch;
@@ -139,6 +141,7 @@ pub use layer::{
 };
 
 pub use hem::{Hem, HemDefinition, HemDepth, HemError, HemFoldType, HemMethod};
+pub use layer_inventory::{LayerInventory, LayerInventoryError, LayerInventoryPosition, LayerRef};
 
 pub use notion::{NotionPlacement, NotionPlacementDefinition, NotionPlacementError};
 pub use notion_inventory::{NotionPlacementInventory, NotionPlacementInventoryError};

@@ -147,3 +147,7 @@ actual Closure declaration view	spec/ontology-closures.md	crates/sc-core/src/des
 actual Closure declaration role	spec/ontology-closures.md	crates/sc-core/src/design/closures.rs	DesignClosureDeclarationRole	G1-SLICE.6.4.5.2.d	4.4
 actual Closure declaration source	spec/ontology-closures.md	crates/sc-core/src/design/closures.rs	DesignClosureDeclarationSource	G1-SLICE.6.4.5.2.d	4.4
 actual Closure declaration refusal	spec/ontology-closures.md	crates/sc-core/src/design/closures.rs	DesignClosureDeclarationError	G1-SLICE.6.4.5.2.d	4.4
+owned layer current inventory	spec/ontology-constructions.md	crates/sc-core/src/ontology/layer_inventory.rs	LayerInventory	G1-SLICE.6.4.5.3.c.1	4.4
+owned layer current position	spec/ontology-constructions.md	crates/sc-core/src/ontology/layer_inventory.rs	LayerInventoryPosition	G1-SLICE.6.4.5.3.c.1	4.4
+owned layer current borrow	spec/ontology-constructions.md	crates/sc-core/src/ontology/layer_inventory.rs	LayerRef	G1-SLICE.6.4.5.3.c.1	4.4
+owned layer current refusal	spec/ontology-constructions.md	crates/sc-core/src/ontology/layer_inventory.rs	LayerInventoryError	G1-SLICE.6.4.5.3.c.1	4.4

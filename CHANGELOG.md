@@ -7,13 +7,16 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0382 — share complete current layer and Hem validation
 
-- Constructors/current queries share original rules; Hem validates actual Facing without cloning.
-- Native11+13 including4 new controls/privacy3+1, strict lint/fmt/book/publication79/148 pass0.
-- D250132 unchanged; whole0381/D261/reference evidence533. Actual owned collections next.
+## STITCHCAD-G1-0383 — own complete current layer families
+
+- Private authored Facing/Lining/Interfacing orders, local id census and every original served/source target.
+- Original typed entries/causes and separate env_lining; native4/privacy2, lint/fmt/book/publication pass0.
+- D250132 unchanged; whole0382/retirement/pair scope534. Actual layer Material assignments next.
 
 # Sealed archive — earlier slices
+
+| [part534](docs/history/stitchcad-devnotes-part534.md) | whole0382/retirement and original pair-member scope | 55 lines, 4306 bytes, sha256:d6be5ad4… |
 
 | [part533](docs/history/stitchcad-devnotes-part533.md) | whole0381/D261 and historical reference plans | 129 lines, 9600 bytes, sha256:4250bc7e… |
 

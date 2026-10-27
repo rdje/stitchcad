@@ -4,7 +4,8 @@ use sc_core::ontology::{
     CuttingSide, DeterministicIdGenerator, DirectedEdge, DirectedRange, DirectedRangeResolution,
     Direction, EdgeRange, EdgeRef, EntityId, Facing, GeometricValidation, IdGenerator,
     IdentityLedger, Interfacing, LabelText, LayerDefinition, LayerEnvelopeError, LayerError,
-    LayerKind, LayerOffsetRelationship, Lining, LocalTag, MaterialAssignment, Mirroring, Param,
+    LayerInventory, LayerInventoryError, LayerInventoryPosition, LayerKind,
+    LayerOffsetRelationship, LayerRef, Lining, LocalTag, MaterialAssignment, Mirroring, Param,
     Piece, PieceDefinition, RangeIssue, Rational,
 };
 use sc_units::Length;
@@ -404,5 +405,258 @@ fn current_validation_checks_every_layer_source_interior_with_live_endpoints() {
     assert_eq!(
         interfacing.validate_current(&f.piece, &f.ledger),
         Err(expected)
+    );
+}
+
+#[test]
+fn inventory_preserves_family_orders_distinct_types_and_original_identity_positions() {
+    let f = fixture();
+    let first = Facing::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let mut input = f.definition.clone();
+    input.id = EntityId::from_bits(701);
+    let second = Facing::new(input.clone(), &f.piece, &f.ledger).unwrap();
+    input.id = EntityId::from_bits(702);
+    let lining = Lining::new(input.clone(), &f.piece, &f.ledger).unwrap();
+    input.id = EntityId::from_bits(703);
+    let interfacing = Interfacing::new(input, &f.piece, &f.ledger).unwrap();
+    let inventory = LayerInventory::new(
+        vec![second.clone(), first.clone()],
+        vec![lining.clone()],
+        vec![interfacing.clone()],
+    )
+    .unwrap();
+    assert_eq!(inventory.facings(), &[second.clone(), first.clone()]);
+    assert_eq!(inventory.linings(), std::slice::from_ref(&lining));
+    assert_eq!(inventory.interfacings(), std::slice::from_ref(&interfacing));
+    assert_eq!(
+        inventory
+            .entries()
+            .map(|(position, layer)| (position.kind, position.index, layer.id()))
+            .collect::<Vec<_>>(),
+        vec![
+            (LayerKind::Facing, 0, second.id()),
+            (LayerKind::Facing, 1, first.id()),
+            (LayerKind::Lining, 0, lining.id()),
+            (LayerKind::Interfacing, 0, interfacing.id()),
+        ]
+    );
+    assert!(core::ptr::eq(
+        inventory.facing(first.id()).unwrap(),
+        inventory.facings().get(1).unwrap()
+    ));
+    assert!(inventory.facing(lining.id()).is_none());
+    let (_, borrowed) = inventory
+        .entries()
+        .find(|(_, value)| value.id() == lining.id())
+        .unwrap();
+    let LayerRef::Lining(actual) = borrowed else {
+        panic!("distinct original lining")
+    };
+    assert!(core::ptr::eq(actual, inventory.linings().first().unwrap()));
+    assert!(core::ptr::eq(borrowed.definition(), actual.definition()));
+    inventory
+        .validate_current(std::slice::from_ref(&f.piece), &f.ledger)
+        .unwrap();
+    assert_eq!(
+        LayerInventory::new(vec![first.clone(), second, first.clone()], vec![], vec![]),
+        Err(LayerInventoryError::DuplicateIdentity {
+            identity: first.id(),
+            first: LayerInventoryPosition {
+                kind: LayerKind::Facing,
+                index: 0
+            },
+            duplicate: LayerInventoryPosition {
+                kind: LayerKind::Facing,
+                index: 2
+            }
+        })
+    );
+    let same_id_lining = Lining::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    assert_eq!(
+        LayerInventory::new(vec![first.clone()], vec![same_id_lining], vec![]),
+        Err(LayerInventoryError::DuplicateIdentity {
+            identity: first.id(),
+            first: LayerInventoryPosition {
+                kind: LayerKind::Facing,
+                index: 0
+            },
+            duplicate: LayerInventoryPosition {
+                kind: LayerKind::Lining,
+                index: 0
+            }
+        })
+    );
+    let empty = LayerInventory::new(vec![], vec![], vec![]).unwrap();
+    assert_eq!(empty.entries().count(), 0);
+    empty.validate_current(&[], &f.ledger).unwrap();
+    empty.require_in_scope().unwrap();
+}
+
+#[test]
+fn inventory_refuses_ambiguous_piece_context_and_missing_original_served_owner() {
+    let f = fixture();
+    let facing = Facing::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let inventory = LayerInventory::new(vec![facing.clone()], vec![], vec![]).unwrap();
+    let mut input = f.piece.definition().clone();
+    input.id = EntityId::from_bits(800);
+    let other = Piece::new(input, &f.ledger).unwrap();
+    assert_eq!(
+        inventory.validate_current(std::slice::from_ref(&other), &f.ledger),
+        Err(LayerInventoryError::MissingServedPiece {
+            layer: facing.id(),
+            position: LayerInventoryPosition {
+                kind: LayerKind::Facing,
+                index: 0
+            },
+            piece: f.piece.id()
+        })
+    );
+    let ambiguous = vec![f.piece.clone(), f.piece.clone()];
+    for collection in [
+        &inventory,
+        &LayerInventory::new(vec![], vec![], vec![]).unwrap(),
+    ] {
+        assert_eq!(
+            collection.validate_current(&ambiguous, &f.ledger),
+            Err(LayerInventoryError::DuplicatePiece(f.piece.id()))
+        );
+    }
+    assert_eq!(
+        inventory.facing(facing.id()).unwrap().definition(),
+        &f.definition
+    );
+}
+
+#[test]
+fn inventory_checks_unused_later_layer_interiors_and_keeps_original_concrete_cause() {
+    use std::error::Error;
+    let mut f = fixture();
+    let mut input = f.definition.clone();
+    input.offset.sources.truncate(1);
+    let facing = Facing::new(input.clone(), &f.piece, &f.ledger).unwrap();
+    input.id = EntityId::from_bits(703);
+    let healthy = Interfacing::new(input, &f.piece, &f.ledger).unwrap();
+    let mut input = f.definition.clone();
+    input.id = EntityId::from_bits(704);
+    input.offset.sources.remove(0);
+    let later = Interfacing::new(input.clone(), &f.piece, &f.ledger).unwrap();
+    let source = input.offset.sources.first().unwrap().range;
+    let parts = f.ledger.split(&mut f.ids, source.edge(), t(1, 3)).unwrap();
+    let tail = f.ledger.split(&mut f.ids, parts.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, tail.first()).unwrap();
+    // Hold damage for inspection rather than reconstructing a born-live replacement.
+    let inventory = LayerInventory::new(
+        vec![facing.clone()],
+        vec![],
+        vec![healthy.clone(), later.clone()],
+    )
+    .unwrap();
+    facing.validate_current(&f.piece, &f.ledger).unwrap();
+    healthy.validate_current(&f.piece, &f.ledger).unwrap();
+    let raw = f.ledger.resolve_range(source);
+    assert!(raw.start().resolved().is_some());
+    assert!(raw.end().resolved().is_some());
+    assert!(!raw.has_full_coverage());
+    let issue = inventory
+        .validate_current(std::slice::from_ref(&f.piece), &f.ledger)
+        .unwrap_err();
+    let LayerInventoryError::Layer {
+        layer,
+        position,
+        issue: actual,
+    } = &issue
+    else {
+        panic!("later actual layer cause")
+    };
+    assert_eq!(
+        (*layer, *position),
+        (
+            later.id(),
+            LayerInventoryPosition {
+                kind: LayerKind::Interfacing,
+                index: 1
+            }
+        )
+    );
+    assert_eq!(
+        actual.as_ref(),
+        &LayerError::UnresolvedSource {
+            index: 0,
+            evidence: Box::new(raw)
+        }
+    );
+    assert!(core::ptr::eq(
+        issue
+            .source()
+            .unwrap()
+            .downcast_ref::<LayerError>()
+            .unwrap(),
+        actual.as_ref()
+    ));
+    assert!(!issue.source().unwrap().is::<Box<LayerError>>());
+    assert_eq!(
+        inventory.interfacings().get(1).unwrap().definition(),
+        &input
+    );
+    inventory.require_in_scope().unwrap();
+}
+
+#[test]
+fn inventory_keeps_modelled_lining_and_original_scope_cause_independent_of_current_geometry() {
+    use std::error::Error;
+    let mut f = fixture();
+    let lining = Lining::new(f.definition.clone(), &f.piece, &f.ledger).unwrap();
+    let inventory = LayerInventory::new(vec![], vec![lining.clone()], vec![]).unwrap();
+    inventory
+        .validate_current(std::slice::from_ref(&f.piece), &f.ledger)
+        .unwrap();
+    f.ledger
+        .delete(
+            &mut f.ids,
+            f.definition.offset.sources.first().unwrap().range.edge(),
+        )
+        .unwrap();
+    let scope = inventory.require_in_scope().unwrap_err();
+    let LayerInventoryError::OutsideEnvelope {
+        layer,
+        position,
+        issue: actual,
+    } = &scope
+    else {
+        panic!("original named lining refusal")
+    };
+    assert_eq!(
+        (*layer, *position),
+        (
+            lining.id(),
+            LayerInventoryPosition {
+                kind: LayerKind::Lining,
+                index: 0
+            }
+        )
+    );
+    assert_eq!(
+        *actual,
+        LayerEnvelopeError::LiningDeferred {
+            served_piece: f.piece.id()
+        }
+    );
+    assert_eq!(actual.diagnostic(), "env_lining");
+    assert_eq!(actual.proving_gate(), "G7");
+    assert!(core::ptr::eq(
+        scope
+            .source()
+            .unwrap()
+            .downcast_ref::<LayerEnvelopeError>()
+            .unwrap(),
+        actual
+    ));
+    assert!(matches!(
+        inventory.validate_current(std::slice::from_ref(&f.piece), &f.ledger),
+        Err(LayerInventoryError::Layer { .. })
+    ));
+    assert_eq!(
+        inventory.linings().first().unwrap().definition(),
+        &f.definition
     );
 }
