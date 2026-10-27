@@ -3,19 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned current measurement inventory
+## _(2026-10-27 UTC)_ — owned measurement and Ease source composition
 
-0350 MeasurementInventory owns exact landmark/procedure/measurement/table vectors in sc-measure.
-It checks identities across both canonical families and owned metadata, then reuses every actual
-Measurement/Table current validator. Unused metadata still needs targets; stale table bindings never
-transfer to same-token peers. Table token scope stays local. Canonical values/states/source remain
-borrowed, including same-id edits and original entered units. Contexts are built as borrowed views;
-no nested self-reference is stored. Empty drafts accept; shared access grants no mutator.
-Native8/privacy2/strict selected lint/fmt/book/publication pass0. D254 package description matches actual
-owned metadata/structural SizeSet inputs via cargo metadata, rc=0. D250132 glossary rows remain baseline,
-delta0; no full census pass. Whole0349 continuity501 compares3 Git spans. Promotion: existing canonical
-source/table rules. Caps unchanged; G1still6/18. Ease/set composition .6.4.2.d.2.b follows; full host/
-Design/source truth/readiness/bus/integration/CI remains later.
+0351 MeasurementInputs owns actual metadata, Ease mappings and sets without copying canonical values.
+Its census extends the existing exact metadata identity positions, then validates every current
+metadata object, every mapping including unused ones and every set with existing validators. Borrowed
+context owners remain local. Unknown/Derived gains no fallback; present negative amounts need explicit
+permission even without set selection. Explicit fit/permission replacements stay current while saved
+set targets remain pinned. Missing mappings/tables or membership never transfer to same-token/POM peers.
+Empty inventories accept; authored empty sets still need explicit tables. Shared getters remain immutable.
+Native9/inventory8/privacy2/strict selected lint/fmt/book/publication pass0. D250132 rows remain baseline,
+delta0. Complete0350/D254 and old Ease book proofs502 compare5 Git spans; public retrieval/current
+contracts remain available. Promotion: existing canonical-source/Ease rules. Caps unchanged; G1still6/18;
+measurement/Ease ownership closes .2.d.2. Profile/material .2.d.3 follows; full host/Design/selected scopes,
+readiness/execution/integration/CI remain later. Structural compression support grants no v1 envelope extension.
+
+[Whole0350 measurement ownership lesson](docs/history/stitchcad-devnotes-part502.md) retains exact scope/proofs.
 
 [Whole0349 parameter ownership lesson](docs/history/stitchcad-devnotes-part501.md) retains exact scope/proofs.
 

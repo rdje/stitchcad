@@ -1128,13 +1128,7 @@ Verified D251/D252 scope corrections retained whole in [part498](../history/stit
 
 Verified D253 phase correction retained whole in [part500](../history/stitchcad-devnotes-part500.md).
 
-## D254 — measurement package description still defers implemented structural SizeSet
-
-Reproduce: sc-measure/Cargo.toml description says "full SizeSet follows"; its lib.rs exports SizeSetInputs,
-GarmentSizeSetInputs and MtmSizeSetInputs with implemented structural contracts. Impact: package metadata
-understates current structural composition. Owner G1-SLICE.6.4.2.d.2.a, P2 fixed0350: actual owned
-metadata/structural inputs reported; numeric execution/full integration stay pending. cargo metadata
---no-deps --offline confirms description, rc=0, target/measurement-inventory-metadata-0350.log.
+Verified D254 package metadata correction retained whole in [part502](../history/stitchcad-devnotes-part502.md).
 
 ## Active continuity followup
 

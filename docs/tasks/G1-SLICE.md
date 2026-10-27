@@ -812,31 +812,33 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0349 immutable DesignParameters; [whole scope/proof](../history/stitchcad-devnotes-part501.md).
 - ID: `G1-SLICE.6.4.2.d.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: current measurement/Ease inventories and canonical host links without copied values.
   Children .a owned measurement/landmark/procedure/table inventories; .b owned Ease/set composition.
 - ID: `G1-SLICE.6.4.2.d.2.a`
   Status: `done`
-  Goal: immutable MeasurementInventory owns exact metadata/tables; existing contexts check all current
-  targets and cross-family ids. Canonical values stay borrowed; no global Design/source-truth/readiness
-  claim. Own focused checks/docs, D254 package description and complete0349 continuity501.
-  - [x] REPRODUCE / ISSUE: actual inventory tests expose stale local proofs after metadata/context edits;
-    measurement_inventory_contract gives8/0, rc=0, target/measurement-inventory-native-0350.log.
-  - [x] ROOT CAUSE (WHY + WHERE): existing contexts borrow records and tables pin bindings. Same-token
-    peers cannot repair old bindings; native stale-token/domain/missing-target cases pass8/0, rc=0.
-  - [x] FIX: private exact vectors, shared borrows and ordered identity/current-reference checks reuse
-    actual validators; native8/0 confirms no value cache, unit reconversion or nested self-reference.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test
-    measurement_inventory_contract passes8/0, rc=0, including unused metadata and scalar-id collisions.
-  - [x] NO REGRESSION: privacy2/strict selected lint/fmt/book/publication77/109/1444/2360 pass0,
-    target/measurement-inventory-*-0350.log; D250132 exact baseline rows, delta0, glossary rc=1.
-  - [x] LOCKSTEP: D254 cargo metadata/book/API/status/index/pointer aligned, rc=0; continuity501
-    compares3 Git spans0. Caps unchanged; G1still6/18. promotion: declined (canonical-source/table rules).
-    Commit0350; Ease .2.d.2.b next. Full host/Design/readiness/bus/integration/CI remains later.
+  Goal:0350 immutable MeasurementInventory; [whole scope/proof](../history/stitchcad-devnotes-part502.md).
 - ID: `G1-SLICE.6.4.2.d.2.b`
-  Status: `pending`
-  Goal: owned Ease mappings/sets over actual owned measurement/table metadata, preserving canonical
-  values and explicit compression/current membership checks, without numeric execution claims.
+  Status: `done`
+  Goal: immutable MeasurementInputs owns actual MeasurementInventory, Ease mappings and Ease sets;
+  whole identity census reuses measurement positions then Ease/set order. Existing validators check
+  every actual current target/membership/compression. Values stay borrowed; no numeric or Design proof.
+  Own private identity-iterator extraction, focused native/privacy/lint/book/API sync and whole0350/D254
+  continuity502, including complete old Ease book proof retirement with public retrieval instructions.
+  - [x] REPRODUCE / ISSUE: combined mappings/sets need actual owned metadata/current values. Native
+    measurement_inputs_contract negative-unused/missing/membership cases give9/0, rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): local Ease/Set birth checks borrow supplied contexts; replacing those
+    contexts requires complete current checks. New actual negative/missing-peer controls pass9/0, rc=0.
+  - [x] FIX: exact owned source objects, shared getters and ordered census/current validators; private
+    identity iterator preserves metadata positions. Native9/0 confirms no cached values or contexts.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test
+    measurement_inputs_contract passes9/0, rc=0, target/measurement-inputs-native-0351.log.
+  - [x] NO REGRESSION: inventory8/privacy2/strict selected lint/fmt/book/publication77/110/1444/2361
+    pass0, target/measurement-inputs-*-0351.log; D250132 exact baseline rows/delta0, glossary rc=1.
+  - [x] LOCKSTEP: book/API/status/index/pointer/notes aligned; continuity502 compares5 Git spans0,
+    including complete old Ease proof. Caps unchanged; G1still6/18; metadata/Ease parent closes.
+    promotion: declined (canonical-source/Ease rules). Commit0351; .2.d.3 profile/material contracts next.
+    Full host/Design/selected scope/readiness/bus/integration/CI remains later.
 - ID: `G1-SLICE.6.4.2.d.3`
   Status: `pending`
   Goal: actual profile/material source contracts and selected scope pins, no fabricated truth.

@@ -1,9 +1,8 @@
 # Executable body-to-garment Ease intent
 
-G1-SLICE.4b.1/.4b.2 implement immutable individual Ease mappings and per-POM Ease sets in sc-measure.
-The normative contract is [ontology §2.2](ontology.md#22-ease). Current mapping/table membership is
-checked; formula evaluation, regenerated geometry, physical fit and release approval remain later proofs.
-This body-to-garment mapping is separate from a sewing span's signed A-minus-B differential.
+sc-measure implements G1-SLICE.4b.1/.4b.2's immutable Ease mappings/sets under
+[ontology §2.2](ontology.md#22-ease). Current targets/membership are checked; execution, geometry,
+physical fit and approval remain separate. This mapping differs from sewing's signed A-minus-B ease.
 
 ## Authored fields and current queries
 
@@ -106,6 +105,26 @@ until the mapping is explicitly replaced with a compression declaration, and the
 needs to permit the intended construction. If it becomes unknown, inspection shows the observation
 request and the numeric query refuses; the prior +4 cm is never retained as a fallback.
 
+## Owned measurement and Ease inputs
+
+`MeasurementInputs::new(definition, &canonical)` owns an actual MeasurementInventory plus ordered
+Ease mappings and sets. Canonical values stay singly owned in CanonicalInputs. Its identity census
+extends the metadata positions with mapping/set positions, retaining both witnesses on collision.
+It then validates all metadata, every mapping including unused ones, and every set through the existing
+current-reference, compression and membership checks. No context or numeric result is cached.
+
+Shared definition()/measurements()/ease(id)/ease_set(id) queries borrow actual source objects.
+validate_current(&canonical) repeats complete checks after canonical replacement. Unknown/Derived
+amounts remain inspectable without fallback. A current negative amount refuses without permission,
+even when no set selects the mapping. Explicit fit/permission replacements remain current without
+rebinding saved set targets. Existing v1 compression restrictions still apply separately.
+
+Deleting a mapping refuses its held id despite a same-POM peer. Removing membership from a named table
+refuses despite surviving metadata elsewhere. Empty inventories accept; an authored empty set still
+requires both explicit table identities. Detached edits require validated replacement. Table/set token
+scope remains local. This composes actual structural sources without selecting a Design/SizeSet/profile,
+executing body-plus-Ease or derived amounts, certifying evidence/physical fit or granting readiness.
+
 ## Public API vocabulary
 
 | API | Contract |
@@ -121,40 +140,29 @@ request and the numeric query refuses; the prior +4 cm is never retained as a fa
 | `EaseSetDefinition` | Set identity, selected tables and authored bindings |
 | `EaseSetContext` | Borrowed unambiguous current tables, mappings and metadata |
 | `EaseSetError` | Scoped namespace, current mapping or table-membership refusal |
+| `MeasurementInputs` | Immutable owned metadata, mappings and sets over borrowed values |
+| `MeasurementInputsDefinition` | Actual MeasurementInventory and ordered Ease/set records |
+| `MeasurementInputsPosition` | Inherited metadata or original Ease/set index |
+| `MeasurementInputsError` | Duplicate owners or original current composition cause |
 
-The mapping's measurement query borrows selected current metadata. Its declaration query borrows
-current amount/state/source; its authored-value query refuses unresolved sources. Amount validation
-checks permission for a supplied signed result. Structured errors retain mapping, side and missing
-or reassigned identities; metadata/value errors expose their original error source.
+Mapping queries borrow current metadata/amount/state/source; unresolved numeric reads refuse.
+Amount validation checks supplied signed results. Errors retain actual mapping/side/target identities
+and original metadata/value causes.
 
-The MCP/API façade will expose the same semantic contracts when G1 .6/.9 lands. No executable MCP
-server or user-facing application is claimed by this library slice.
+API/MCP adapters remain G1 .6/.9 work; this library provides no server or user application.
 
 ## Verification boundary
 
-The tracked individual-Ease tests exercise ordered fit classes, canonical borrowing, required side
-kinds, distinct amount identity, current identity/binding/metadata changes, signed permission in all
-value-bearing states, unknown/derived refusal, same-token namespaces and reordered current inputs.
-The individual mutation diagnostic declares all seven numbered logs and restored.log, its mutable
-implementation and read-only current test source before input reads or native dispatch. Six pure
-cases plus the unchanged source-dependent span and complete alias predicate yield seven faults.
-Independent complete dispatch captures, output symlinks, mutable-source hard links, missing-test
-refusals and actual guard/classifier omissions are verified separately from native results.
-Each real removal must fail at a current guarded test assertion macro's UTF-8 byte location.
-All eight frozen build/source inputs and both Rust files remain exact after restoration; the
-current artifact selected through public Cargo output passes all thirteen tests. Rust strict checks
-and the browser-target build verify the library integration. These are local structural checks;
-physical fit and production signoff remain G2/G3/G4/G6 and independent G7 obligations.
+Historical individual/set acceptance covers13/14 native contracts and7/10 actual restored faults,
+with independently checked dispatch/refusals and guarded current assertion locations. Original complete
+proof/planning/restoration measurements are retained byte-for-byte in docs/history/stitchcad-devnotes-part502.md:
 
-Set contracts add per-POM/id/token lookup, three uniqueness rules, shared body/amount sources, mixed
-tables, empty drafts, current context collisions, missing/reassigned mappings/tables, current intent/
-state edits and selected versus full validation. The set diagnostic plans ten numbered logs and
-restored.log, two inputs and one mutable implementation before reads. Its eight pure cases and
-six ordered source-dependent statements preserve all ten faults. Current inline assertion macros
-use UTF-8 byte columns; independent ASCII/multibyte controls and a real leading-only helper fault
-verify that boundary. Complete dispatch/physical refusals are separate from ten real current macro
-failures. Exact frozen inputs and both Rust files are restored; the current public Cargo artifact
-passes all fourteen tests. These local checks do not claim observed remote CI for this slice.
+```bash
+python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part502.md
+```
+
+These are structural checks. Native strict checks and WASM compilation do not establish physical fit,
+observed current remote CI or production approval; G2/G3/G4/G6 and independent G7 retain those obligations.
 
 ## Structural Ease review at G1
 

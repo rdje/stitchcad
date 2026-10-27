@@ -192,6 +192,64 @@ impl MeasurementInventory {
         )
     }
 
+    pub(crate) fn identity_positions<'a>(
+        &'a self,
+        inputs: &'a CanonicalInputs,
+    ) -> impl Iterator<Item = (EntityId, MeasurementInventoryPosition)> + 'a {
+        inputs
+            .lengths()
+            .iter()
+            .enumerate()
+            .map(|(index, value)| (value.id(), MeasurementInventoryPosition::Length { index }))
+            .chain(
+                inputs.scalars().iter().enumerate().map(|(index, value)| {
+                    (value.id(), MeasurementInventoryPosition::Scalar { index })
+                }),
+            )
+            .chain(
+                self.definition
+                    .landmarks
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| {
+                        (value.id(), MeasurementInventoryPosition::Landmark { index })
+                    }),
+            )
+            .chain(
+                self.definition
+                    .procedures
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| {
+                        (
+                            value.id(),
+                            MeasurementInventoryPosition::Procedure { index },
+                        )
+                    }),
+            )
+            .chain(
+                self.definition
+                    .measurements
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| {
+                        (
+                            value.id(),
+                            MeasurementInventoryPosition::Measurement { index },
+                        )
+                    }),
+            )
+            .chain(
+                self.definition
+                    .tables
+                    .iter()
+                    .enumerate()
+                    .map(|(index, value)| {
+                        (value.id(), MeasurementInventoryPosition::Table { index })
+                    }),
+            )
+    }
+
     /// Validate identities first, then every actual measurement and table in their original order.
     ///
     /// Census order is dedicated lengths, general scalars, landmarks, procedures, measurements,
@@ -206,40 +264,14 @@ impl MeasurementInventory {
         inputs: &CanonicalInputs,
     ) -> Result<(), MeasurementInventoryError> {
         let mut seen = BTreeMap::new();
-        let mut claim = |identity, position| {
+        for (identity, position) in self.identity_positions(inputs) {
             if let Some(first) = seen.insert(identity, position) {
-                Err(MeasurementInventoryError::DuplicateIdentity {
+                return Err(MeasurementInventoryError::DuplicateIdentity {
                     identity,
                     first,
                     duplicate: position,
-                })
-            } else {
-                Ok(())
+                });
             }
-        };
-        for (index, value) in inputs.lengths().iter().enumerate() {
-            claim(value.id(), MeasurementInventoryPosition::Length { index })?;
-        }
-        for (index, value) in inputs.scalars().iter().enumerate() {
-            claim(value.id(), MeasurementInventoryPosition::Scalar { index })?;
-        }
-        for (index, value) in self.definition.landmarks.iter().enumerate() {
-            claim(value.id(), MeasurementInventoryPosition::Landmark { index })?;
-        }
-        for (index, value) in self.definition.procedures.iter().enumerate() {
-            claim(
-                value.id(),
-                MeasurementInventoryPosition::Procedure { index },
-            )?;
-        }
-        for (index, value) in self.definition.measurements.iter().enumerate() {
-            claim(
-                value.id(),
-                MeasurementInventoryPosition::Measurement { index },
-            )?;
-        }
-        for (index, value) in self.definition.tables.iter().enumerate() {
-            claim(value.id(), MeasurementInventoryPosition::Table { index })?;
         }
         let records = self
             .record_context(inputs)
