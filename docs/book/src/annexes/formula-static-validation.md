@@ -429,64 +429,23 @@ the loader/replay obligation at .5e.4/.7; ordinary forward/self names remain unb
 
 ### Coupled public static review
 
+The maintained review compares actual product/reference expression, statement and complete recipe
+interfaces using independently authored source expectations. Canonical owner pointers and complete
+graph occurrences come from the product; source-derived ordinals/spans/roles remain independent.
+Historical exact counts, fault sets, producer plans, restoration and phase-order receipts remain in
+`docs/history/stitchcad-devnotes-part517.md`, retrievable through history_archive.py read.
+
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/static_coupled_contract.py --mutations
-```
-
-The shared structural oracle compares independently authored rules, the actual reference and current
-public Rust interfaces. Complete26723-case/source/fault receipts remain in
-`docs/history/stitchcad-devnotes-part491.md`.
-
-The [standalone guard contract](../build-and-checks.md#direct-python-producers) covers all20
-inputs, prepared child stores, current driver assertion sites and unconditional artifact restoration.
-Ordinary execution declares seven destinations for its baseline build. Mutation execution declares
-244: seven per baseline,28 fault builds and restored build,28 oracle logs and six reference logs.
-Each build includes its driver executable, Cargo metadata, compiler logs, case input and result files.
-Only mutation CLI execution declares the four Rust inputs writable; reference and book inputs stay
-read-only. Missing inputs or symlink, directory and hard-link output slots refuse before reads,
-store activation, writes or children. Read-only hard links remain admissible in ordinary mode.
-
-Every build_and_check(label) call separately validates its directory, all seven destinations and
-current20 inputs before creating the directory or invoking Cargo. This includes a borrowed call
-such as build_and_check('first-phase'). After Cargo returns, every reported library or metadata
-file and dependency directory is inspected before Rustc uses the current library. These inspections
-are pure and retain prepared stores. Captures exercise ordinary, mutation, early compiler refusal
-with restoration, and borrowed-label calls; actual source omissions and copied physical fixtures
-check the plans independently of the separate native contract-body replay.
-
-The delegated first-phase guard suite checks the same seven-file imported plan and read-only
-sources, then its borrowed seven-file build and current library/metadata/directory plans. Both
-CLI modes retain four intercepted children and eight writes. Nine standing bridge faults and
-40 actual coupled-source omissions must produce their named assertions. The current native
-263-case phase review and ten reference faults remain separate from those dispatch captures.
-
-
-This shared-case contract verifies the exercised expression, statement and complete recipe interfaces.
-D150's competing-phase controls additionally compare263 independently authored token/phase/ordinal
-cases with the actual public API and reference, across four bad literal domains, eight later syntax/
-structure failures, four separators and genuine prefix ordinals. Eight detached controls preserve
-local defaults. Real phase/conversion traces verify untaken operands, exact spelling/units,
-normalized owners and original spans; ten actual compiled body faults must refuse.
-
-```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/first_phase_contract.py --mutations
 ```
 
-The [library-owned whole proof](formula-checked-recipes.md) is implemented at .5b.4a and independently
-reviewed at .5b.4b. All12756 expression cases additionally run in later whole-recipe scopes; valid
-point/edge results use the normative x/len selectors because they cannot be let annotations.
-The13967 recipe cases retain complete graph occurrences: genuine consumer ordinals, class/operand
-roles, original grouped spans and actual reserved/input/geometry/prior-let locators. The source
-oracle derives these from authored text and initial identities, without reading product output.
-The reference independently verifies operand reads/kinds and original assertion classes; it has no
-canonical product record identities or proof-owner pointers to invent. The public factory supplies
-those actual owners, checked against source-derived expectations. Sixty-two selected first refusals
-also compare genuine ordinals/spans; reference static-call tracing preserves its available context.
-Whole4095/4096 and first4097, node255/256/257 and conditional15/16/17 cases agree. The19 whole-factory
-faults join nine expression/statement/scope faults; each must fail an actual oracle or running Rust
-body assertion. Full source and compiled artifact restoration precedes other checks. Product static review
-is complete; D154 reference ordinal repair .5b.4c precedes .5b closure and arithmetic .5c.
-Static proofs still grant no numerical result, physical geometry, export readiness or human approval.
+Run source writers exclusively and consume restoration before another build/probe. Dispatch captures
+and actual native/reference behavior certify separate scopes. D154's reference ordinal repair remains
+open with .5b.4c; the existing director's arithmetic exception leaves that static-lane closure open.
+Static proofs grant no numerical result, physical geometry, release readiness or human approval.
+The [standalone producer guard](../build-and-checks.md#direct-python-producers) retains current
+input/file/store plans, actual driver assertions and unconditional source/artifact restoration.
 
 ### Parameter quantization and curve length
 

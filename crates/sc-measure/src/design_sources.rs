@@ -1,13 +1,13 @@
 //! Actual immutable measurement/external-set host; core owns the interface and canonical values.
 use crate::{
-    GarmentSizeSetPosition, MeasurementHostError, MeasurementInputs, MtmSizeSetPosition,
+    GarmentSizeSetPosition, MeasurementHostError, MeasurementInputs, MtmSizeSetPosition, SizeSet,
     SizeSetInventory, SizeSetInventoryError, SizeSetMetadataPosition, SizeSetPosition,
 };
 use core::fmt;
 use sc_core::{
     design::{
-        DesignHostEntity, DesignHostEntityKind as Kind, DesignMetadataHost, DesignSizeSetHost,
-        DesignSizeSetReference,
+        DesignHostEntity, DesignHostEntityKind as Kind, DesignMetadataHost, DesignReferenceHost,
+        DesignSizeSetHost, DesignSizeSetReference, DesignSourceReferences,
     },
     ontology::EntityId,
     value::{CanonicalInputs, LengthDeclaration},
@@ -29,12 +29,74 @@ pub enum DesignSourcesError {
     SizeSets(Box<SizeSetInventoryError>),
     /// Original actual measurement binding/context refusal.
     Measurement(Box<MeasurementHostError>),
+    /// A provided logical table identity has no actual metadata record.
+    MissingMeasurementTable {
+        /// Exact provided table identity.
+        table: EntityId,
+    },
+    /// A provided Ease-set identity has no actual metadata record.
+    MissingEaseSet {
+        /// Exact provided set identity.
+        set: EntityId,
+    },
+    /// The selected Ease set names a different garment table than the provided Design table.
+    EaseTableMismatch {
+        /// Actual selected Ease set.
+        ease_set: EntityId,
+        /// Exact provided Design table.
+        selected_table: EntityId,
+        /// Actual table named by the Ease set.
+        actual_table: EntityId,
+    },
+    /// The selected external SizeSet names a different logical Design table.
+    SizeTableMismatch {
+        /// Actual selected external reference.
+        size_set: DesignSizeSetReference,
+        /// Exact provided Design table.
+        selected_table: EntityId,
+        /// Actual table named by the set metadata.
+        actual_table: EntityId,
+    },
+    /// The selected MTM chart names a different exact Ease set, even if content/labels match.
+    MtmEaseSetMismatch {
+        /// Actual selected external reference.
+        size_set: DesignSizeSetReference,
+        /// Exact provided Ease set.
+        selected_set: EntityId,
+        /// Actual Ease set named by the MTM chart.
+        actual_set: EntityId,
+    },
 }
 impl fmt::Display for DesignSourcesError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
             Self::SizeSets(issue) => write!(f, "Design source sets: {issue}"),
             Self::Measurement(issue) => write!(f, "Design source measurement: {issue}"),
+            Self::MissingMeasurementTable { table } => {
+                write!(f, "Design sources have no measurement table {table}")
+            }
+            Self::MissingEaseSet { set } => write!(f, "Design sources have no Ease set {set}"),
+            Self::EaseTableMismatch {
+                ease_set,
+                selected_table,
+                actual_table,
+            } => {
+                write!(f, "selected Ease set {ease_set} names table {actual_table}, not provided table {selected_table}")
+            }
+            Self::SizeTableMismatch {
+                size_set,
+                selected_table,
+                actual_table,
+            } => {
+                write!(f, "selected SizeSet {size_set:?} names table {actual_table}, not provided table {selected_table}")
+            }
+            Self::MtmEaseSetMismatch {
+                size_set,
+                selected_set,
+                actual_set,
+            } => {
+                write!(f, "selected MTM set {size_set:?} names Ease set {actual_set}, not provided set {selected_set}")
+            }
         }
     }
 }
@@ -43,6 +105,7 @@ impl std::error::Error for DesignSourcesError {
         match self {
             Self::SizeSets(issue) => Some(issue.as_ref()),
             Self::Measurement(issue) => Some(issue.as_ref()),
+            _ => None,
         }
     }
 }
@@ -176,5 +239,69 @@ impl DesignSizeSetHost for DesignSources {
             .validate_reference(reference, canonical, self.measurements())
             .map(|_| ())
             .map_err(|issue| DesignSourcesError::SizeSets(Box::new(issue)))
+    }
+}
+
+impl DesignReferenceHost for DesignSources {
+    fn validate_references(
+        &self,
+        references: DesignSourceReferences,
+        canonical: &CanonicalInputs,
+    ) -> Result<(), Self::Error> {
+        self.validate_current(canonical)?;
+        let table = references
+            .measurement_table
+            .map(|identity| {
+                self.measurements()
+                    .measurements()
+                    .table(identity)
+                    .ok_or(DesignSourcesError::MissingMeasurementTable { table: identity })
+            })
+            .transpose()?;
+        let ease = references
+            .ease_set
+            .map(|identity| {
+                self.measurements()
+                    .ease_set(identity)
+                    .ok_or(DesignSourcesError::MissingEaseSet { set: identity })
+            })
+            .transpose()?;
+        let size = references
+            .size_set
+            .map(|reference| {
+                self.size_sets()
+                    .validate_reference(reference, canonical, self.measurements())
+                    .map_err(|issue| DesignSourcesError::SizeSets(Box::new(issue)))
+            })
+            .transpose()?;
+        if let (Some(table), Some(ease)) = (table, ease) {
+            if table.id() != ease.definition().garment_table {
+                return Err(DesignSourcesError::EaseTableMismatch {
+                    ease_set: ease.id(),
+                    selected_table: table.id(),
+                    actual_table: ease.definition().garment_table,
+                });
+            }
+        }
+        if let (Some(table), Some(size)) = (table, size) {
+            if table.id() != size.metadata().definition().design_table {
+                return Err(DesignSourcesError::SizeTableMismatch {
+                    size_set: size.reference().into(),
+                    selected_table: table.id(),
+                    actual_table: size.metadata().definition().design_table,
+                });
+            }
+        }
+        if let (Some(ease), Some(SizeSet::Mtm(size))) = (ease, size) {
+            let actual_set = size.definition().chart.definition().ease_set.id;
+            if ease.id() != actual_set {
+                return Err(DesignSourcesError::MtmEaseSetMismatch {
+                    size_set: size.reference().into(),
+                    selected_set: ease.id(),
+                    actual_set,
+                });
+            }
+        }
+        Ok(())
     }
 }

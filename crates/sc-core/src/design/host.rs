@@ -98,6 +98,32 @@ pub trait DesignSizeSetHost: DesignMetadataHost {
     ) -> Result<(), Self::Error>;
 }
 
+/// Exact authored source references; None records an explicitly unprovided draft field.
+/// This carrier performs no lookup, selection, currentness or completeness proof and has no Default.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct DesignSourceReferences {
+    /// Selected logical measurement table identity, if provided.
+    pub measurement_table: Option<EntityId>,
+    /// Selected Ease set identity, if provided; its garment table must match a provided table.
+    pub ease_set: Option<EntityId>,
+    /// Selected exact external SizeSet reference, if provided.
+    pub size_set: Option<super::DesignSizeSetReference>,
+}
+
+/// Readonly actual provided-reference and joint-scope validation, extending the exact set facet.
+pub trait DesignReferenceHost: DesignSizeSetHost {
+    /// Validate complete current sources and every provided reference, including mutual scope.
+    /// Unprovided fields stay unprovided; no single-candidate, label or latest-value fallback.
+    ///
+    /// # Errors
+    /// Returns original current/missing/reference mismatch cause without mutating references.
+    fn validate_references(
+        &self,
+        references: DesignSourceReferences,
+        canonical: &CanonicalInputs,
+    ) -> Result<(), Self::Error>;
+}
+
 /// Checked source-host refusal, preserving original identities, positions and typed host causes.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum DesignMetadataError<E> {

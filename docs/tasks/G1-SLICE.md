@@ -885,28 +885,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   table/Ease/set references; .c actual formula-name/source bindings; .d focused combined acceptance.
 - ID: `G1-SLICE.6.4.2.d.4.4.a`
   Status: `done`
-  Goal: private implemented Design input composition, whole owned ids and actual current validators.
-  Selection/name/sewing/garment/readiness remain separate; no complete Design claim.
-  - [x] REPRODUCE / ISSUE: independent components can reuse identities or carry old canonical-context
-    success; cargo test -p sc-core --test design_structure_contract gives14/0 rc=0, target/*core-native-0365.log.
-  - [x] ROOT CAUSE (WHY + WHERE): standalone constructors own narrower scopes; actual combined ids/
-    targets need one canonical owner. Core14 and cargo test -p sc-measure --test design_inputs_contract
-    give14+3/0 rc=0 through local_environment.py.
-  - [x] FIX: private exact five-component owner, shared structural census, global ids and original
-    parameter/Material/Piece/source checks; native17/0 rc=0 retains recipe text, revision and held history.
-  - [x] ADDRESSED: core14/actual higher3/privacy2 pass0; cargo test -p sc-core --doc
-    design::inputs::DesignInputs rc=0 protects private/shared state; actual host returns owned canonical pointers.
-  - [x] NO REGRESSION: strict selected core/measure Clippy/fmt/book/publication79/124/1457/2398
-    pass0; D250132 exact baseline rows/delta0, glossary rc=1. Full selection/name/semantic/integration/CI later.
-  - [x] LOCKSTEP: book/API/decision/status/index/pointer aligned; transition_receipts.py516
-    compares5 exact Git spans rc=0, whole closed source subtree/0364/D257/checked-recipe proof.
-    Live D154 remains open with original owner. Caps unchanged; G1still6/18.
-    promotion: promoted to docs/decisions/decision_design-host.md. Commit0365; .d.4.4.b actual selections next.
+  Goal:0365 private implemented Design input composition; [whole scope/proof](../history/stitchcad-devnotes-part517.md).
 - ID: `G1-SLICE.6.4.2.d.4.4.b`
-  Status: `pending`
+  Status: `done`
   Goal: exact actual selected measurement table/Ease set/external SizeSet references and joint scope.
+  Own explicit per-reference unprovided drafts (no inferred selection), readonly core reference facet,
+  actual table/Ease/SizeSet joins and private input ownership, focused native/privacy/lint/book sync;
+  whole0365 and historical coupled-static proof continuity517. Preserve live D154 and later readiness.
+  Fresh6 (0366):
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract:7/0 rc=0;
+    provided/unprovided, wrong metadata role/revision/table and equal-content MTM Ease-set controls.
+  - [x] ROOT CAUSE (WHY + WHERE): git diff -- crates/sc-core/src/design/inputs.rs:rc=0;
+    private composition lacked authored references and actual joint-scope validation.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:rc=0;
+    explicit Option carrier, readonly reference facet and actual source joins; no fallback.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_structure_contract:14/0 rc=0;
+    current root checks keep exact draft fields, ids and original typed host causes.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::inputs::DesignInputs:2/0 rc=0;
+    fmt/core clippy pass0. Glossary census132 failures rc=1, exact prior D250 rows compare rc=0.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/126/1456/2398 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part517.md:4 exact spans rc=0.
+  Promotion: existing decision_design-host answer extended. Full CI stays integration/pre-push.
+  Completed: STITCHCAD-G1-0366; .c next.
 - ID: `G1-SLICE.6.4.2.d.4.4.c`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual flat formula-name/source bindings over selected metadata and owned canonical values.
 - ID: `G1-SLICE.6.4.2.d.4.4.d`
   Status: `pending`

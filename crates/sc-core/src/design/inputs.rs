@@ -1,7 +1,8 @@
 //! Private composition of implemented structural/input components, before whole Design readiness.
 use super::{
     DesignHostEntity, DesignMetadata, DesignMetadataError, DesignMetadataHost,
-    DesignParameterError, DesignParameters, DesignStructure, DesignStructurePosition,
+    DesignParameterError, DesignParameters, DesignReferenceHost, DesignSourceReferences,
+    DesignStructure, DesignStructurePosition,
 };
 use crate::{
     command::DesignRevision,
@@ -25,6 +26,8 @@ pub struct DesignInputsDefinition<H> {
     pub materials: MaterialInventory,
     /// Actual checked higher metadata owner; canonical declarations remain in structure only.
     pub sources: DesignMetadata<H>,
+    /// Exact provided/unprovided references; these are uses, not additional owned entities.
+    pub references: DesignSourceReferences,
 }
 
 /// Actual original location in the complete implemented-component ownership census.
@@ -64,14 +67,23 @@ pub enum DesignInputsError<E> {
     Materials(Box<MaterialInventoryError>),
     /// Original higher metadata/current-canonical refusal, preserving the concrete host cause.
     Sources(Box<DesignMetadataError<E>>),
+    /// Original provided-reference or joint selected-scope refusal from the actual host.
+    References(Box<E>),
 }
 impl<E: fmt::Display> fmt::Display for DesignInputsError<E> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            Self::DuplicateIdentity {identity,first,duplicate}=>write!(f,"Design input identity {identity} repeats at {duplicate:?}, first supplied at {first:?}"),
-            Self::Parameters(issue)=>write!(f,"Design input parameters: {issue}"),
-            Self::Materials(issue)=>write!(f,"Design input Materials: {issue}"),
-            Self::Sources(issue)=>write!(f,"Design input sources: {issue}"),
+            Self::DuplicateIdentity {
+                identity,
+                first,
+                duplicate,
+            } => {
+                write!(f, "Design input identity {identity} repeats at {duplicate:?}, first supplied at {first:?}")
+            }
+            Self::Parameters(issue) => write!(f, "Design input parameters: {issue}"),
+            Self::Materials(issue) => write!(f, "Design input Materials: {issue}"),
+            Self::Sources(issue) => write!(f, "Design input sources: {issue}"),
+            Self::References(issue) => write!(f, "Design input references: {issue}"),
         }
     }
 }
@@ -82,14 +94,16 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignInputsError<E> 
             Self::Parameters(issue) => Some(issue.as_ref()),
             Self::Materials(issue) => Some(issue.as_ref()),
             Self::Sources(issue) => Some(issue.as_ref()),
+            Self::References(issue) => Some(issue.as_ref()),
         }
     }
 }
 
 /// Immutable owner of the implemented structural/input components over one canonical inventory.
 ///
-/// Selected source references, flat formula-name binding, sewing/garment state and readiness remain
-/// separate work. Recipe admission is syntax/input ownership only. Held Piece topology references
+/// Provided references validate without filling unprovided draft fields. Flat formula-name binding,
+/// sewing/garment state and readiness remain separate. Recipe admission is syntax/input ownership.
+/// Held Piece topology references
 /// remain inspectable after edits; no Piece is reconstructed and no value/history is generated.
 ///
 /// ```compile_fail
@@ -115,8 +129,11 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     /// Own exact implemented components after complete id and current target/assignment checks.
     ///
     /// # Errors
-    /// Returns first owned-id collision, then parameters, Materials/Pieces and source current causes.
-    pub fn new(definition: DesignInputsDefinition<H>) -> Result<Self, DesignInputsError<H::Error>> {
+    /// Returns first owned-id collision, then parameter, Material/Piece, source and reference causes.
+    pub fn new(definition: DesignInputsDefinition<H>) -> Result<Self, DesignInputsError<H::Error>>
+    where
+        H: DesignReferenceHost,
+    {
         let inputs = Self { definition };
         inputs.validate_current()?;
         Ok(inputs)
@@ -166,6 +183,11 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     pub const fn sources(&self) -> &DesignMetadata<H> {
         &self.definition.sources
     }
+    /// Exact authored source references; copying this carrier grants no validation certificate.
+    #[must_use]
+    pub const fn references(&self) -> DesignSourceReferences {
+        self.definition.references
+    }
     /// Complete actual ownership positions: structure, parameters, Materials, then higher metadata.
     /// Referenced source/evidence/formula/assignment ids remain uses, not additional owners.
     #[must_use]
@@ -202,12 +224,15 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     /// Recheck whole implemented ownership and actual current links against this state's canonical inputs.
     ///
     /// Identity checks precede parameters, complete Material/current Piece assignments, then complete
-    /// higher sources. Original uncertain states and explicit unresolved assignments remain intact.
+    /// higher sources and provided reference joins. Uncertain states and unresolved assignments remain intact.
     /// No namespace/kind/evaluation, geometry, physical or release readiness follows acceptance.
     ///
     /// # Errors
-    /// Returns first duplicate then original parameter, Material/assignment or current host refusal.
-    pub fn validate_current(&self) -> Result<(), DesignInputsError<H::Error>> {
+    /// Returns first duplicate then original parameter, Material/assignment, current host or reference refusal.
+    pub fn validate_current(&self) -> Result<(), DesignInputsError<H::Error>>
+    where
+        H: DesignReferenceHost,
+    {
         let mut seen = BTreeMap::new();
         for (identity, position) in self.identities() {
             if let Some(first) = seen.insert(identity, position) {
@@ -227,6 +252,10 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
         self.sources()
             .validate_current(self.inputs())
             .map_err(|issue| DesignInputsError::Sources(Box::new(issue)))?;
+        self.sources()
+            .host()
+            .validate_references(self.references(), self.inputs())
+            .map_err(|issue| DesignInputsError::References(Box::new(issue)))?;
         Ok(())
     }
 }

@@ -3,30 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — private implemented core Design input composition
+## _(2026-10-27 UTC)_ — exact authored Design source references
 
-0365 DesignInputs owns exact DesignStructure, DesignParameters, FormulaRecipeDocument,
-MaterialInventory and DesignMetadata. Structure is the single canonical declaration owner; no
-borrowed context is stored. Structural identity iteration is shared unchanged with its original
-constructor, then parameter/Material/higher-source ids extend the complete census. References are
-uses, not owners, including evidence/formula refs and retired edge creators. Current parameter
-bindings, whole Materials/Piece assignments and actual higher sources validate against that owner.
-Held Piece references are preserved without reconstruction; original recipe text/revision stay exact.
-This is implemented input/structural composition, not full Design selection/name/sewing/garment/
-readiness or execution. An unbound recipe remains syntax-only until the later checking phase.
-Core14 includes8 original structural and6 composition contracts. Actual higher3 verify canonical
-pointer membership, containing-Design/external-set collision and source failure after canonical
-replacement. Core tests also watch param/Piece, param/Material and source/retired-op collisions,
-missing current parameters, missing assigned Materials, original data/history and detached edits.
-Native14+3/privacy2/strict selected core/measure lint/fmt/book/publication pass0; D250132 exact
-baseline rows/delta0, glossary rc=1. Continuity516 compares5 Git spans for whole closed source subtree,
-0364/D257 and historical checked-recipe proof. D154's existing reference ordinal gap stays live/open;
-no static-lane closure inferred. Caps unchanged; G1still6/18. Promotion: host decision records input
-composition's canonical owner and scope. .6.4.2.d.4.4.b actual selections next; full semantic/physical/
-integration/CI remains unverified.
+0366 checks each provided table/Ease/set identity and exact revision against actual current sources.
+None remains an explicit draft field; table joins and MTM's saved Ease-set id refuse incoherent peers.
+Native measure7/core14, privacy2, strict selected lint/fmt/book and publication79/126 pass0.
+D250 remains exact132 baseline rows; no readiness/evaluation/physical/full-CI claim. Whole0365 and
+historical coupled-static proof retained in517:4 exact Git spans0. Promotion: existing host decision
+answers draft selection semantics. .d4.4.c actual flat source bindings next; integration/pre-push later.
 
-
-[Complete source acceptance/D257 lesson](docs/history/stitchcad-devnotes-part516.md) retains
+[Complete private Design-input composition lesson](docs/history/stitchcad-devnotes-part517.md) retains
 its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review

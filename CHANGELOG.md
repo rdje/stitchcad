@@ -3,25 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0366 — explicit Design source references
 
-
-
-
-
-
-
-
-
-
-## STITCHCAD-G1-0365 — compose private implemented Design inputs over one canonical owner
-
-- Own exact structure/parameters/recipe/Materials/metadata host; check all owned ids before actual current target/assignment/source validators.
-- Share the structural census; preserve recipe text, exact revision and held topology state without rebuilding Pieces or generating values.
-- Native14+3/privacy2/strict selected core/measure lint/fmt/book/publication pass0; D250132 exact baseline rows/delta0.
-- Whole closed source subtree/0364/D257/checked-recipe continuity516 matches5 Git spans; live D154 remains open; caps unchanged.
-- G1still6/18; source selections/names/semantic state/readiness and full Design/execution/physical/integration/CI remain later.
+- Own exact provided/unprovided table/Ease/SizeSet refs and validate actual current joint scope.
+- Native7+14/privacy2/lint/fmt/book/scoped publication pass0; D250132 rows unchanged.
+- Whole0365/historical static continuity517; name binding next, full CI integration/pre-push.
 
 # Sealed archive — earlier slices
+
+| [part517](docs/history/stitchcad-devnotes-part517.md) | whole0365 and historical coupled-static proofs | 113 lines, 8990 bytes, sha256:c55068eb… |
 
 | [part516](docs/history/stitchcad-devnotes-part516.md) | whole0364 source subtree/D257 and historical checked-recipe proofs | 127 lines, 9910 bytes, sha256:6b988ecb… |
 

@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.6.4.2.d.4.1`; core design host, higher measurement input owners.
 
-answers: "how can Design own measurement metadata without a circular dependency?" · "does host admission prove a measurement binding?" · "can a copied canonical declaration authorize a Design source?" · "how do owned metadata objects avoid self-referential contexts?" · "how does core validate an external SizeSet pin without a reverse dependency?" · "what does DesignInputs admission prove?"
+answers: "how can Design own measurement metadata without a circular dependency?" · "does host admission prove a measurement binding?" · "can a copied canonical declaration authorize a Design source?" · "how do owned metadata objects avoid self-referential contexts?" · "how does core validate an external SizeSet pin without a reverse dependency?" · "what does DesignInputs admission prove?" · "may a draft leave source references unprovided?"
 
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
@@ -45,4 +45,10 @@ still holds an external reference. Physical Profile resolution remains G4.
 DesignInputs now owns implemented core structure/parameters/recipe/Materials and checked higher
 metadata over the structure's single canonical inventory. Complete cross-component ownership ids
 precede actual current parameter/Material/Piece/source validation. This is an input composition,
-not full Design selection/name/sewing/garment/readiness proof; those remain explicit following work.
+not full Design name/sewing/garment/readiness proof; those remain explicit following work.
+
+DesignSourceReferences now stores explicit Option table/Ease/set refs without Default or inferred
+companions. None means unprovided draft input; every Some must resolve in the actual current source
+inventory. DesignReferenceHost checks provided-role presence and table/Ease/SizeSet joins; an MTM
+chart retains its exact Ease-set identity. DesignInputs owns the unchanged carrier and preserves
+original host causes. Validation does not populate missing fields or certify complete readiness.

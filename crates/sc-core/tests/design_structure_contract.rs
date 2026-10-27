@@ -333,7 +333,9 @@ mod input_composition {
             DesignHostEntity, DesignHostEntityKind, DesignInputs, DesignInputsDefinition,
             DesignInputsError as Error, DesignInputsPosition as Position, DesignMetadata,
             DesignMetadataHost, DesignParameterDefinition, DesignParameterError,
-            DesignParameterTarget, DesignParameters, DesignStructure, DesignStructurePosition,
+            DesignParameterTarget, DesignParameters, DesignReferenceHost, DesignSizeSetHost,
+            DesignSizeSetReference, DesignSourceReferences, DesignStructure,
+            DesignStructurePosition,
         },
         name::MachineToken,
         ontology::{Material, MaterialDefinition, MaterialInventory},
@@ -346,15 +348,15 @@ mod input_composition {
     #[derive(Clone, Debug, PartialEq, Eq)]
     struct Markers(Vec<DesignHostEntity>);
     #[derive(Clone, Debug, PartialEq, Eq)]
-    struct MissingMeasurement;
-    impl fmt::Display for MissingMeasurement {
+    struct MissingFixtureRecord;
+    impl fmt::Display for MissingFixtureRecord {
         fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
             f.write_str("fixture has no measurement metadata")
         }
     }
-    impl std::error::Error for MissingMeasurement {}
+    impl std::error::Error for MissingFixtureRecord {}
     impl DesignMetadataHost for Markers {
-        type Error = MissingMeasurement;
+        type Error = MissingFixtureRecord;
         fn entities(&self) -> Vec<DesignHostEntity> {
             self.0.clone()
         }
@@ -366,7 +368,32 @@ mod input_composition {
             _: sc_core::ontology::EntityId,
             _: &'a CanonicalInputs,
         ) -> Result<&'a LengthDeclaration, Self::Error> {
-            Err(MissingMeasurement)
+            Err(MissingFixtureRecord)
+        }
+    }
+    impl DesignSizeSetHost for Markers {
+        fn validate_size_set(
+            &self,
+            _: DesignSizeSetReference,
+            _: &CanonicalInputs,
+        ) -> Result<(), Self::Error> {
+            Err(MissingFixtureRecord)
+        }
+    }
+    impl DesignReferenceHost for Markers {
+        fn validate_references(
+            &self,
+            references: DesignSourceReferences,
+            _: &CanonicalInputs,
+        ) -> Result<(), Self::Error> {
+            if references.measurement_table.is_none()
+                && references.ease_set.is_none()
+                && references.size_set.is_none()
+            {
+                Ok(())
+            } else {
+                Err(MissingFixtureRecord)
+            }
         }
     }
     fn material(identity: u128, canonical: &CanonicalInputs) -> Material {
@@ -429,6 +456,11 @@ mod input_composition {
         )
         .expect("self-contained marker host");
         DesignInputsDefinition {
+            references: DesignSourceReferences {
+                measurement_table: None,
+                ease_set: None,
+                size_set: None,
+            },
             structure: DesignStructure::new(definition).expect("actual historical structure"),
             parameters,
             materials,

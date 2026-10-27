@@ -123,3 +123,5 @@ owned external SizeSet inventory	spec/design-inputs.md	crates/sc-measure/src/siz
 core external SizeSet host facet	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignSizeSetHost	G1-SLICE.6.4.2.d.4.3.c.3.b	4.4
 actual combined Design sources	spec/design-inputs.md	crates/sc-measure/src/design_sources.rs	DesignSources	G1-SLICE.6.4.2.d.4.3.c.3.b	4.4
 owned core Design input composition	spec/design-inputs.md	crates/sc-core/src/design/inputs.rs	DesignInputs	G1-SLICE.6.4.2.d.4.4.a	3.1
+authored Design source references	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignSourceReferences	G1-SLICE.6.4.2.d.4.4.b	3.1
+actual Design reference host	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignReferenceHost	G1-SLICE.6.4.2.d.4.4.b	4.4

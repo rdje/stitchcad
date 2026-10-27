@@ -246,8 +246,8 @@ cargo test -p sc-measure --test design_sources_contract
 ## Owned core input composition
 
 DesignInputs owns the implemented structure, parameters, exact recipe document, Materials and checked
-metadata host. Its structure is the single CanonicalInputs owner. This component precedes selected
-source/name bindings, sewing/garment state and readiness; it is not the complete Design schema.
+metadata host. Its structure is the single CanonicalInputs owner. Provided source references are
+checked below; name bindings, sewing/garment state and readiness remain separate.
 
 Construction checks identities in order: structure (Design, canonical records, Pieces, copies,
 operations), parameters, Materials, then higher source metadata. Even a retired creating operation
@@ -264,23 +264,23 @@ original text/canonical syntax; unbound names still require the later binding/ch
 | --- | --- |
 | `DesignInputs`, `DesignInputsDefinition` | Private implemented-component owner and exact construction input |
 | `DesignInputsPosition` | Structure, Parameter, Material or Source original ownership position |
-| `DesignInputsError` | DuplicateIdentity or original Parameters, Materials, Sources typed cause |
+| `DesignInputsError` | DuplicateIdentity or original Parameters, Materials, Sources, References typed cause |
 
-All getters are shared. identities() lists actual owned ids; validate_current() repeats the scoped
+Component getters are shared. identities() lists actual owned ids; validate_current() repeats the scoped
 checks. id()/revision() retain the actual structure's identity/counter without advancing it. Debug
 exposes no customer content. Combining existing components requires no borrowed context storage:
 
 ```rust
 use sc_core::{design::{DesignInputs, DesignInputsDefinition, DesignInputsError,
-    DesignMetadata, DesignMetadataHost, DesignParameters, DesignStructure},
+    DesignMetadata, DesignReferenceHost, DesignSourceReferences, DesignParameters, DesignStructure},
     ontology::MaterialInventory, recipe::FormulaRecipeDocument};
-fn combine<H: DesignMetadataHost>(structure: DesignStructure, parameters: DesignParameters,
-    recipe: FormulaRecipeDocument, materials: MaterialInventory, host: H)
+fn combine<H: DesignReferenceHost>(structure: DesignStructure, parameters: DesignParameters,
+    recipe: FormulaRecipeDocument, materials: MaterialInventory, host: H, references: DesignSourceReferences)
     -> Result<DesignInputs<H>, DesignInputsError<H::Error>>
 {
     let sources = DesignMetadata::new(host, structure.inputs())
         .map_err(|issue| DesignInputsError::Sources(Box::new(issue)))?;
-    DesignInputs::new(DesignInputsDefinition {structure, parameters, recipe, materials, sources})
+    DesignInputs::new(DesignInputsDefinition {structure, parameters, recipe, materials, sources, references})
 }
 ```
 
@@ -288,3 +288,32 @@ fn combine<H: DesignMetadataHost>(structure: DesignStructure, parameters: Design
 cargo test -p sc-core --test design_structure_contract
 cargo test -p sc-measure --test design_inputs_contract
 ```
+
+## Provided source references and joint scope
+
+DesignSourceReferences owns three explicit Option fields: measurement_table, ease_set and size_set.
+None means unprovided in a draft. No Default, singleton inference, label match or latest revision
+fills a field. DesignInputs stores the exact carrier; references() returns its copy for inspection.
+A copied carrier alone proves no currentness or readiness.
+
+DesignReferenceHost validates actual current sources and each provided identity/pin. DesignSources
+uses actual table/Ease/set metadata, then checks joins among provided fields: an Ease set's garment
+table and a SizeSet's logical table must match a provided Design table. A selected MTM chart must
+name the exact provided Ease set. A same-content peer with a different id cannot replace it.
+Unprovided companion fields stay unprovided, even when the selected object names an obvious target.
+
+For example, the actual MTM source may name table51/Ease60/SizeSet40 revision2. Providing all three
+accepts structurally; selecting table50 or peer Ease61 refuses. Providing only the SizeSet leaves the
+other two fields None. Numeric declaration2000 cannot stand in for any absent source metadata.
+
+| API or variant | Meaning |
+| --- | --- |
+| `DesignSourceReferences` | Exact provided/unprovided metadata references; no declaration ownership |
+| `DesignReferenceHost` | Readonly actual presence and joint-scope validation facet |
+| `MissingMeasurementTable`, `MissingEaseSet` | Provided id has no actual record of the requested role |
+| `EaseTableMismatch`, `SizeTableMismatch`, `MtmEaseSetMismatch` | Individually present records disagree in selected scope |
+| `References` | DesignInputsError preserves the original actual host reference cause |
+
+Whole ownership/current checks precede reference admission. Reference ids are uses, excluded from
+the owned-id census. Presence and coherent scope still supply no complete namespace, path coverage,
+numerical evaluation, physical Profile resolution or release readiness. Partial drafts remain valid.
