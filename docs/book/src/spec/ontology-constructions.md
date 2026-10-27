@@ -1,27 +1,23 @@
 # Executable garment constructions at G1
 
-The construction companion to [ontology §4.3/§4.7](ontology.md), alongside the running
-[piece, sewing and mark APIs](ontology-implementation.md). This chapter describes structural intent
-and its remaining physical obligations. Construction operations, conserved intake, bounded offsets
-and released receiver outputs require their later gates.
+Companion to [ontology §4.3/§4.7](ontology.md) and [piece/sewing/mark APIs](ontology-implementation.md).
+G1 retains structural intent. Executed constructions, conserved intake, bounded offsets and released
+receiver outputs require later gates.
 
-**Dart (`G1-SLICE.3c.4a.1`).** `Dart::new` takes a `DartDefinition`, source Piece and identity
-ledger. The immutable result retains id, intake origin, apex, two directed legs, directed closing/
-folding reference and closing-operation id. Explicit intake holds its authored parameter id and a
-nonnegative Length, including authored zero. Negative intake is a typed `DartError`; formula/profile
-origins hold declarations without values, defaults or copied uncertainty. Their registries validate
-existence, kinds and resolved values.
+**Dart (`G1-SLICE.3c.4a.1`).** `Dart::new(DartDefinition, Piece, ledger)` retains immutable id,
+intake origin, apex, two directed legs, directed closing/folding reference and closing-operation id.
+Explicit intake holds its parameter id and nonnegative Length, including zero; negative intake returns
+`DartError`. Formula/profile origins hold declarations without values, defaults or copied uncertainty;
+registries check existence, kinds and resolved values.
 
-An apex is an EdgeAnchor on owned geometry: it may be the endpoint of an internal leg rather than
-the cut boundary. Every leg/direction needs complete owned positive intervals and unique endpoints.
-Identical held legs refuse even with opposite traversal. Unknown/foreign geometry names its role;
-owned endpoints cannot conceal a foreign middle after merge/reversal. Valid references prove no
-straightness, apex coincidence or physical folding direction.
+An apex EdgeAnchor may end an owned internal leg. Legs/direction require complete owned positive
+intervals and unique endpoints; identical held legs refuse even with opposite traversal. Unknown/
+foreign geometry names its role; owned endpoints cannot conceal foreign middles after merge/reversal.
+Valid references prove no straightness, apex coincidence or physical folding direction.
 
-For example, a skirt can retain40 000 µm intake, two internal directed legs, an apex on one leg and
-a closing-operation id. G2/G3 executes closure and compares removed boundary length with declared
-intake within the numerical tolerance class. G1-SLICE.5/.6 validates operation existence, kind and
-dependencies. Replacing intake or operation builds a new object; authored zero never substitutes for
+A skirt can retain40 000 µm intake, two internal directed legs, an apex on one and a closing-operation
+id. G2/G3 executes closure and compares removed boundary length with intake under its tolerance class.
+G1-SLICE.5/.6 validates operation existence, kind and dependencies. Replacing intake or operation builds a new object; authored zero never substitutes for
 an unread declaration.
 
 `apex_resolution()` returns raw point evidence; splitting at the apex leaves a visible split choice.
@@ -53,36 +49,34 @@ Current source validation grants no executed closure, conservation, export readi
 | `IntakeAmount` | Explicit parameter/value, formula declaration or profile declaration |
 | `IntakeValidation` | Physical conservation obligation separate from declared intake |
 
-**Tuck and Pleat (`G1-SLICE.3c.4a.2a`).** Distinct immutable types share `FoldDefinition` and
-structural rules. Each retains id, intake origin, nonempty ordered directed fold ranges, explicit
-directed folding reference and closing-operation id. Empty/duplicate held intervals refuse, including
-opposite traversal. Every positive interval must be complete and owned with unique endpoints.
-Distinct partial ranges on one edge are valid intent; list length proves no physical pleat count,
-coincidence or fold shape. Explicit zero retains provenance; negative intake refuses; symbolic intake
-supplies no value or fallback.
+**Tuck and Pleat (`G1-SLICE.3c.4a.2a`).** Distinct immutable types share `FoldDefinition`/rules:
+id, intake origin, nonempty ordered directed fold ranges, directed folding reference, closing-operation
+id. Empty/duplicate intervals refuse, including opposite traversal; each positive interval requires
+complete owned coverage and unique endpoints. Distinct partial ranges on one edge remain valid intent.
+List length proves no physical count, coincidence or shape. Explicit zero retains provenance, negative
+intake refuses, and symbolic intake supplies no value/fallback.
 
-A tuck may name one internal fold range and an owned direction; a pleat may retain several lines in
-order. The operation registry checks its required typed closing operation. G2/G3 executes it and
-compares removed boundary length with resolved declared intake.
+A tuck may hold one internal fold range/owned direction; a pleat several ordered lines. The registry
+checks its typed closing operation; G2/G3 executes it and compares removed boundary length with
+resolved intake.
 
 `references()` lists authored fold lines, then direction. `reference_resolutions()` retains raw
 interval/endpoint evidence and composed traversal. Reversed splits visit fragments in opposite order;
 a deleted middle remains a repair despite live endpoints. Foreign interiors refuse before/after
 reversal. Editing cloned input cannot change either held object.
 
-**Current folds (`G1-SLICE.6.4.5.4.a`).** Both use the original structural rules, first requiring
-the held Piece identity. They check all current lines and direction without rewriting references or
-choosing endpoints. A later damaged line returns its original zero-based role and complete repair
-evidence even when earlier lines and both held endpoints remain valid.
+**Current folds (`G1-SLICE.6.4.5.4.a`).** Original rules require the held Piece, then all current
+lines/direction without rewriting references or choosing endpoints. Later damage retains its original
+zero-based role and complete repair evidence even with valid earlier lines and held endpoints.
 
 ```rust,ignore
 tuck.validate_current(&piece, &ledger)?;
 pleat.validate_current(&piece, &ledger)?;
 ```
 
-Both retain `GeometricValidation::DeferredToG2`, `IntakeValidation::DeferredToG2AndG3` and
-`ProfileBindingValidation::DeferredToG4` for a present profile intake. No source query resolves intake,
-executes a fold, establishes physical shape/count or certifies production readiness.
+Both retain `GeometricValidation::DeferredToG2`, `IntakeValidation::DeferredToG2AndG3` and, with
+profile intake, `ProfileBindingValidation::DeferredToG4`. Source queries resolve no intake, executed
+fold, physical shape/count or production readiness.
 
 | API token | Tuck/Pleat meaning |
 | --- | --- |
@@ -110,13 +104,11 @@ and explicit sign, without checking a separately changed plan. `attachment_resol
 `direction_resolution()` retain raw interval/endpoint evidence and composed traversal. Lost interiors
 remain repairs despite live endpoints; no query chooses another span/copy or rewrites held content.
 
-**Current Gather joins (`G1-SLICE.6.4.5.4.b`).** `validate_current()` requires the original Piece
-id, then the original graph/span/copy/sign and complete source rules. `current_intake_source()`
-returns the exact graph declaration only after those selected current checks pass. A graph-only
-intake query can still succeed after a plan loses the held copy; this joined query refuses it.
-Attachment or direction repairs return the actual role and complete evidence, without a partial view.
-All supplied contexts stay borrowed while the result is used, preventing replacement of the plan,
-Piece, graph or ledger under that view.
+**Current Gather joins (`G1-SLICE.6.4.5.4.b`).** `validate_current()` requires the held Piece,
+then original graph/span/copy/sign and complete source rules. `current_intake_source()` borrows the
+exact graph declaration afterward; unlike the graph-only query, it refuses a plan's lost held copy.
+Attachment/direction repairs retain original role/evidence without partial views. The view borrows
+all contexts, preventing replacement of its plan, Piece, graph or ledger.
 
 Use the actual selected Piece from the current inventory. Validate whole graph spans, stops,
 landmarks and allocation bindings separately; the selected Gather query cannot certify them:
@@ -138,6 +130,30 @@ closing operation and proves realized intake/allocation. Operation/parameter exi
 | `GatherIntakeSource` | Borrowed signed canonical ease declaration and selected side |
 | `GatherReferenceRole` | Attachment or authored direction |
 
+**Owned construction families (`G1-SLICE.6.4.5.4.d.1`).** Immutable vectors preserve exact
+objects/authored order: Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance, without id sorting or kind
+merging. `new` refuses the first repeated owned id with both positions. Piece/parameter/profile/
+operation references remain uses; Pocket/notion/Closure/layer/Hem inventories stay separate.
+
+```rust,ignore
+let sources = ConstructionInventory::new(darts, tucks, pleats, gathers, grains, allowances)?;
+for (position, actual) in sources.entries() {
+    inspect(position.kind, position.index, actual.id(), actual.piece());
+}
+```
+
+Getters/entries borrow actual objects; Debug shows counts/kind only. Empty families/held repairs
+remain. Ownership checks no current graph/copy/Piece sources, declaration roles, global Design ids
+or physical readiness. Complete current scope is next.
+
+| API token | Meaning |
+| --- | --- |
+| `ConstructionInventory` | Exact six-family ownership |
+| `ConstructionKind` | Distinct semantic family |
+| `ConstructionInventoryPosition` | Family and zero-based authored index |
+| `ConstructionRef` | Typed borrow of an actual stored object |
+| `ConstructionInventoryError` | First duplicate id and original locations |
+
 **Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable layer types share
 editable `LayerDefinition` input and structural validation. A definition names its served Piece,
 explicit `LayerOffsetRelationship` and material assignment. The relationship holds a required recipe
@@ -153,26 +169,23 @@ from line art. Assigned material holds an entity id whose registry remains a Des
 material carries a nonblank reason without a substitute assignment. The shared local reason check
 preserves the original Piece invariant too.
 
-Constructors require the supplied Piece to match the held served id. Unknown/foreign source portions,
-interval repairs, endpoint choices, empty source lists and exact duplicate held intervals are typed
-`LayerError`s. `source_resolutions()` keeps authored input-list order and directed raw range/endpoint
-evidence. Merging owned ends around a foreign middle does not make that source owned, even after
-reversal. An interior deletion stays visible; editing cloned material/offset input cannot mutate a
-validated layer. Actual offset shape, bounded error and physical relationships remain G2 obligations.
+Constructors require the held served Piece. Unknown/foreign portions, interval repairs, endpoint
+choices, empty sources and duplicate held intervals return `LayerError`. `source_resolutions()` keeps
+authored order and directed raw range/endpoint evidence. Merged owned ends cannot own a foreign middle,
+even reversed; interior deletions stay visible. Cloned material/offset edits cannot mutate a layer.
+Offset shape, bounded error and physical relationships remain G2 obligations.
 
 Each layer's `validate_current(served, ledger)` rechecks its original served owner, material reason
 and every complete owned source through the same rules/order as construction. Historical ranges
 may resolve after edits; a same-id Piece replacement cannot retain ownership of removed content.
 Raw endpoint choices and interior repairs remain explicit. Current validity grants no execution scope.
 
-**Modelled content and execution scope are separate.** The feature matrix's rule 3 permits a lining
-object to be modelled while deferring supported execution. `Lining::new` validates structural content;
-`require_in_scope()` refuses requested v1 execution with `LayerEnvelopeError::LiningDeferred`.
-Its `diagnostic()` is env_lining, the payload names the served Piece, and `proving_gate()` is G7.
-No facing or interfacing is silently substituted. G1-SLICE.6 must apply that refusal before requested
-construction execution while allowing inspection to retain modelled content. Facing and Interfacing
-pass only this envelope check; every layer still reports `GeometricValidation::DeferredToG2`.
-Neither successful structural birth nor an envelope check proves geometry or grants release approval.
+**Modelled content and execution scope are separate** (feature matrix rule 3). `Lining::new` checks
+structure; `require_in_scope()` refuses v1 execution with `LayerEnvelopeError::LiningDeferred`:
+`diagnostic()` env_lining, served-Piece payload, `proving_gate()` G7. G1-SLICE.6 must enforce this
+before execution while retaining inspection; Facing/Interfacing never substitute. They pass only the
+envelope check. Every layer retains `GeometricValidation::DeferredToG2`; structural birth and envelope
+checks prove no geometry or release approval.
 
 | API token | Meaning in the served-layer implementation |
 | --- | --- |
@@ -185,10 +198,9 @@ Neither successful structural birth nor an envelope check proves geometry or gra
 
 ## Owned layer families and complete current sources
 
-`LayerInventory::new(facings, linings, interfacings)` owns the exact original objects in each
-authored family order. Its id census visits Facing, Lining, then Interfacing. Repeated ids within or
-across families refuse with both original kind/position pairs.
-Explicit empty families are draft scope and make no whole Design or assembly completeness claim.
+`LayerInventory::new(facings, linings, interfacings)` owns exact objects in authored family order.
+The census visits Facing/Lining/Interfacing; duplicate ids within/across families retain both original
+kind/position pairs. Empty families are draft scope, without whole Design/assembly completeness.
 
 `facings()`, `linings()` and `interfacings()` borrow original typed slices. `entries()` visits those
 same families/orders with typed LayerRef borrows and original positions. `facing(id)` selects only an
@@ -218,9 +230,9 @@ substituted. Passing scope certifies neither sources nor geometry. Material meta
 | API token | Layer collection meaning |
 | --- | --- |
 | `LayerInventory` | Private ordered Facing/Lining/Interfacing families and complete current sources |
-| `LayerInventoryPosition` | Original semantic kind and zero-based authored position in that family |
+| `LayerInventoryPosition` | Semantic kind and zero-based authored family index |
 | `LayerRef` | Shared original distinct layer type, without a validation certificate |
-| `LayerInventoryError` | Duplicate ids/Pieces, missing targets, original layer/Material or named envelope causes |
+| `LayerInventoryError` | Duplicate ids/Pieces, missing targets, original layer/Material/envelope causes |
 
 ### Borrowed offset intent
 

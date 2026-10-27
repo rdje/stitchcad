@@ -17,6 +17,8 @@ answers: "does a current Gather intake view check the physical copy and hold all
 
 answers: "do current grainline and allowance checks preserve held owners and unresolved profile intent?"
 
+answers: "does six-family construction ownership certify current sources or reorder authored identities?"
+
 ## The fact / decision
 
 At gate **G1**, `sc-core`'s ontology types enforce the invariants that need **no 2D predicate**: a `Piece`'s
@@ -166,3 +168,11 @@ original role/evidence even with live endpoints. Angle, width, corner and inclus
 unchanged; no symbolic/default value or target policy is resolved. Source success grants no angle,
 print alignment, offset, whole Design or production approval. Collections/declaration roles/global
 identity remain subsequent .4/.5 work.
+
+## Exact construction ownership — G1-SLICE.6.4.5.4.d.1
+
+ConstructionInventory owns immutable distinct six-family vectors. Fixed semantic family traversal
+preserves authored order; duplicate owned ids refuse with both original positions. Shared Piece,
+parameter/profile/operation uses do not become owners. Typed entries borrow actual objects; Debug
+exposes counts/kind only. Held repairs and explicit empty scope survive without a current-readiness
+claim. Current complete graph/copy/Piece/source checks are .d.2; declarations/global joins remain .e/.5.

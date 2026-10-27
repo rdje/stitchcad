@@ -1187,11 +1187,10 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 
 ## D271/D272 — current causes and derived census
 
-[Whole corrected reports0397](../history/stitchcad-devnotes-part547.md); [whole retirement proof0398](../history/stitchcad-devnotes-part548.md).
+[Whole corrected reports0397](../history/stitchcad-devnotes-part547.md); [whole retirement proof0399](../history/stitchcad-devnotes-part549.md).
 
-
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part548.md:
-  4 exact Git spans rc=0; completed0398 proofs occupied live capacity, retained whole before retirement.
-- [x] ADDRESSED: same command rc=0; complete Gather task/lesson/ledger/retirement retained548.
-- [x] NO REGRESSION: grain12/allowance11 native contracts, affected strict Clippy/fmt rc=0;
-  retention/book/publication/size and unchanged book prefix/suffix comparison rc=0. Broader gate .4.f.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part549.md:
+  4 exact Git spans rc=0; complete0399 scopes retained before retiring completed live proofs.
+- [x] ADDRESSED: same command rc=0; whole grain/allowance task, lesson, ledger and retirement retained.
+- [x] NO REGRESSION: ownership4 native/3 compile-fail, affected strict Clippy/fmt rc=0;
+  retention/book/publication/size rc=0. Broader component gate remains .4.f.

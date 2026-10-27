@@ -3,17 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — current grainline and seam-allowance sources
+## _(2026-10-27 UTC)_ — exact construction-family ownership
 
-0399 reuses original constructor rules for current Grainline/SeamAllowance checks, requiring the held
-Piece identity before full source validation. Historical split/reversal remains held; later plaid
-or whole-edge lost interior returns original role/raw evidence despite live endpoints. Angle, width,
-corner and inclusion origins stay exact and unresolved; no symbolic value/default or physical offset
-is produced. Native grain12/allowance11, affected strict lint/fmt/book/publication pass0; original
-cases remain included. Explicit family anchors preserve every unrelated book prefix/suffix byte.
-Whole0398 scopes548 retain4 exact Git spans; retention/size0. Promotion: ontology structural decision.
-Owned ordered families/full current scope, actual declaration roles and coupled garment identities
-remain .4.d/.e/.5; broader component acceptance remains .4.f and integration/CI later.
+0400 owns immutable Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance vectors in fixed family/authored
+order. Original ids/Pieces and exact typed object borrows remain; first duplicate ownership retains
+both positions. Referenced parameter/profile/operation ids remain uses. Debug exposes counts/kind;
+explicit empty families and held repairs claim no current validity. Native4/compile-fail3/strict
+lint/fmt pass0; fixture index inference corrected to usize. Whole0399 scopes549 retain4 exact Git
+spans; retention/book/publication/size0. Book repetition tightened with existing facts retained.
+Promotion: ontology structural decision. Complete current scope .d.2, actual declarations .e, scoped
+acceptance .f and global garment/Design joins .5 remain; broader integration/CI is deferred.
+
+[Whole0399 grain/allowance lesson](docs/history/stitchcad-devnotes-part549.md) retains held-owner, source and book preservation proofs.
 
 [Whole0398 Gather lesson](docs/history/stitchcad-devnotes-part548.md) retains source/lifetime scope and book preservation evidence.
 

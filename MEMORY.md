@@ -2,20 +2,18 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
--0399 .6.4.5.4.c complete: current Grainline/SeamAllowance held-owner/full-source checks. Native
- grain12/allowance11 and affected strict lint/fmt/book/publication pass0. Held direction/angle/width/
- corner/inclusion origins and raw repairs remain; no values/profile/offset/geometry execution.
-- Whole0398 scopes548 retain4 exact Git spans; unrelated book prefix/suffix bytes preserved with
- explicit family markers. Old constructor cases remain in23 native checks. No new defects.
-- Next .6.4.5.4.d: own exact Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance families and ids/order,
- then complete current scope. Decompose .d into safe ownership and current-validation children before
- code if needed. Read existing Layer/Notion/Pocket inventories, SewingGraph/CutPlan validators/errors.
-- Preserve actual distinct types, duplicate positions and original nested causes. Current aggregate
- must validate complete graph/copy/Piece context before family queries, even empty collections.
+-0400 .6.4.5.4.d.1 complete: ConstructionInventory owns exact six-family vectors/orders/ids;
+ typed actual borrows, deterministic duplicate positions, count/kind-only Debug. Native4/compile-fail3/
+ strict lint/fmt/book/publication pass0. Empty scope/held damage retained without current certificate.
+- Whole0399 scopes549 retain4 exact Git spans; book repeated prose tightened with facts preserved.
+- Next .6.4.5.4.d.2 complete current context: whole SewingGraph validator (including CutPlan/Piece
+ scope) first even empty owned collection, then each original Piece and family source in fixed order.
+ Retain family/index/id and original nested typed causes; no partial result/retarget/rewrite/cache.
+ Inspect SewingError::source nesting with native red control; own any confirmed defect before fix.
  Keep ontology independent of Design host types; full Design/global garment identities remain .5.
 - .4.e actual typed declaration/operation borrows (split safely), .4.f focused component acceptance.
  Full PNT continues, commit each completed leaf; broad integration/CI remains separately owned.
 - Retention generation feature0396 complete; finite8 groups/4M local caps, original bytes retained.
- No old source-bound rollback over later records/HEAD. Archive pressure rederive by verify-retention.
-- G1still6/18; D250132 after .6.9; D154 open. No jobs remain. Cleanup due2026-10-27 13:40UTC.
+ No old source-bound rollback over later records/HEAD. Re-derive pressure by verify-retention.
+- G1still6/18; D250132 after .6.9; D154 open. Cleanup due2026-10-27 13:40UTC.
 - Derive push cadence; no early push.
