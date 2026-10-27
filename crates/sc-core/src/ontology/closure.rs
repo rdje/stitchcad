@@ -300,7 +300,15 @@ impl fmt::Display for ClosureError {
         }
     }
 }
-impl std::error::Error for ClosureError {}
+impl std::error::Error for ClosureError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::OutsideEnvelope(issue) => Some(issue),
+            Self::InvalidPlacement { error, .. } => Some(error.as_ref()),
+            _ => None,
+        }
+    }
+}
 impl Closure {
     /// Validate authored instances, sizes, unambiguous current registries and every placement.
     /// # Errors

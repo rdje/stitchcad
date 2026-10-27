@@ -890,37 +890,45 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Keep existing G3/G4/typed-operation owners explicit; numeric ids cannot invent logical metadata.
 - ID: `G1-SLICE.6.4.5.1`
   Status: `done`
-  Goal: actual Pocket inventory, current placement and every component contour; opening scope stays G3.
-  Children .a original pocket/notion anchor causes; .b owned collection/current component coverage.
+  Goal:closed Pocket scope; [whole proof](../history/stitchcad-devnotes-part528.md).
 - ID: `G1-SLICE.6.4.5.1.a`
   Status: `done`
-  Goal:0375 D258/D259 original anchor causes; [whole scope/proof](../history/stitchcad-devnotes-part527.md).
+  Goal:closed Pocket scope; [whole proof](../history/stitchcad-devnotes-part528.md).
 - ID: `G1-SLICE.6.4.5.1.b`
   Status: `done`
-  Goal: private actual Pocket collection/current plan, targets and all component held intervals.
-  Own ordered private inventory/duplicate guards, complete actual plan/current Pocket checks and every
-  component Piece full held range (including holes/construction lines). Keep raw direction/repair cause,
-  explicit empty drafts and G3 opening/G4 profile deferrals; global Design ids remain .5.5.
-  Focused native/privacy/lint/book and whole0375/D258/D259 continuity527; no old producer changes.
-  Component endpoints use only exact Piece/edge/parameter saved choices via the canonical ledger helper.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test pocket_contract inventory_:5/0 rc=0;
-    placement/live endpoints can hide component boundary/hole/construction interval loss or stale quantities.
-  - [x] ROOT CAUSE (WHY + WHERE): native5/0 rc=0 via local_environment.py; individual
-    Pocket target checks intentionally omit component contours and complete current copy-plan proof.
-  - [x] FIX: cargo clippy -p sc-core --test pocket_contract -- -D warnings:rc=0; ordered
-    immutable collection/current plan, every Pocket/component and exact owner-specific saved choices.
-  - [x] ADDRESSED: cargo test -p sc-core --doc ontology::pocket_inventory:: gives2/0 rc=0;
-    private/shared data; native5 retains raw plus choice-aware evidence and original concrete causes.
-  - [x] NO REGRESSION: python3 -I -B Git-source comparison: canonical choice resolver body
-    identical rc=0 (crate visibility only); original Pocket/Notion source diff empty0; fmt0.
-    Glossary132 failures rc=1, exact D250 prior rows compare rc=0. Opening/geometry scopes stay deferred.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/139/1454/2402 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part527.md:4 exact spans rc=0.
-    promotion: existing ontology decision answer extended. Completed STITCHCAD-G1-0376.
-    .5.2 actual notion/Closure collections next; full integration/CI remains separate.
+  Goal:closed Pocket scope; [whole proof](../history/stitchcad-devnotes-part528.md).
 - ID: `G1-SLICE.6.4.5.2`
   Status: `in_progress`
   Goal: actual notion/Closure collection, every instance/placement and known declaration roles.
+  Own Closure causes D260 and continuity528.
+  Children .a original nested Closure errors; .b actual notion placements; .c actual Closure/instance
+  inventory; .d known declaration roles with existing operation/domain/G3/G4 boundaries.
+- ID: `G1-SLICE.6.4.5.2.a`
+  Status: `done`
+  Goal: D260 preserve original envelope/placement causes through ClosureError; exact red/green,
+  unchanged validation/schema, current book/defect records and whole528 continuity.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test closure_contract
+    closure_envelope_error_keeps_original_cause -- --exact:0/1 rc=101; placement equivalent0/1 rc=101.
+  - [x] ROOT CAUSE (WHY + WHERE): both exact native controls returned rc=101 at source() None;
+    empty ClosureError Error impl hid original envelope and boxed placement causes.
+  - [x] FIX: cargo clippy -p sc-core --test closure_contract -- -D warnings:rc=0;
+    borrow concrete original errors, not Box type; no validation/schema changes.
+  - [x] ADDRESSED: both same exact cargo test controls give1/0 rc=0 each; concrete downcast/
+    pointer identity and placement-to-AnchorError chain retained.
+  - [x] NO REGRESSION: python3 -I -B Git-source comparison: all non-Error-impl production
+    bytes identical rc=0; fmt0, glossary132 failures rc=1, exact D250 rows compare rc=0.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/139/1454/2402 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part528.md:4 exact spans rc=0.
+    promotion: declined (local standard Error repair, canonical D260). Completed STITCHCAD-G1-0377.
+- ID: `G1-SLICE.6.4.5.2.b`
+  Status: `in_progress`
+  Goal: private actual notion-placement inventory; complete current copies and every original target.
+- ID: `G1-SLICE.6.4.5.2.c`
+  Status: `pending`
+  Goal: private actual Closure inventory, nested instance identities and complete current placements.
+- ID: `G1-SLICE.6.4.5.2.d`
+  Status: `pending`
+  Goal: actual known Closure declaration roles; preserve existing logical domain/operation deferrals.
 - ID: `G1-SLICE.6.4.5.3`
   Status: `pending`
   Goal: actual layers/Hem current sources, materials and known declaration roles; explicit lining refusal.

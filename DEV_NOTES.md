@@ -3,18 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned Pocket/current component intervals
+## _(2026-10-27 UTC)_ — original Closure error causes
 
-0376 PocketInventory owns exact ordered objects, rejects duplicate ids and rechecks complete current
-copies, each placement and every component boundary/hole/construction interval. Old target success
-and live endpoints cannot hide an interior loss. Late Pocket failures retain actual locations and
-concrete Pocket/Anchor causes; raw range evidence remains data. Exact Piece/edge/parameter saved
-choices use the canonical ledger resolver (body unchanged, crate visibility only); another consumer
-cannot choose for the Piece. Chosen orphaned endpoints block even with surviving positive coverage.
-Native5/privacy2/strict affected lint/fmt/book/publication79/139 pass0; D250132 exact rows. Opening
-roles/G3, physical profiles/G4, geometry/G2 and global Design joins remain separate.527 retains whole
-0375/D258/D259 in4 exact Git spans0. Promotion: existing ontology decision answers component coverage.
-Actual notion/Closure collections next; broad integration/CI stays unverified.
+0377 fixes D260: ClosureError's empty Error impl hid its original envelope/boxed placement errors.
+Actual Fly/deleted-anchor controls both red0/1 rc101, then green1/0 rc0 after direct cause borrowing.
+Concrete type/pointer and placement-to-AnchorError chain stay original; no dynamic Box erasure.
+All production bytes outside ClosureError Error impl matchfb122a9. Validation/schema/data unchanged.
+Strict affected lint/fmt/book/publication79/139 pass0; D250132 exact prior rows.528 retains closed
+Pocket scope/0376/report retirement in4 exact Git spans0. Promotion declined: local standard Error
+repair with canonical D260 report. Actual notion-placement inventory next; full CI remains deferred.
+
+[Complete Pocket collection/component lesson](docs/history/stitchcad-devnotes-part528.md) retains
+its original scope, checks and promotion decision.
 
 [Complete D258/D259 anchor-cause lesson](docs/history/stitchcad-devnotes-part527.md) retains
 its original scope, checks and promotion decision.

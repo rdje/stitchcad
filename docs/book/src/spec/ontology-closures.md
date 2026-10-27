@@ -95,6 +95,11 @@ requested Closure identity, declared trousers-gap identity and proving gate G7. 
 can be inspected; no executable supported Closure is constructed and no zipper is substituted.
 G7 owns the limitation, not a promise that physical fly support will appear at that gate.
 
+ClosureError exposes its original concrete ClosureEnvelopeError or NotionPlacementError through
+std::error::Error::source(). Placement causes continue to their original AnchorError where present.
+The exact original objects and context remain reachable; no Box wrapper erases the cause type.
+This changes neither instance/placement validation nor envelope priority or stored closure data.
+
 | API token | Meaning in the zipper/hook-bar implementation |
 | --- | --- |
 | `ClosureDefinition` | Authored closure kind and stable physical instances |

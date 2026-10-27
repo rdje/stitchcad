@@ -698,3 +698,62 @@ fn button_source_does_not_bypass_current_physical_placement_validation() {
         Err(expected)
     );
 }
+
+#[test]
+fn closure_envelope_error_keeps_original_cause() {
+    use std::error::Error;
+    let f = fixture();
+    let mut input = f.closure_input();
+    input.kind = ClosureKind::Fly {
+        trousers_gap: EntityId::from_bits(808),
+    };
+    let issue = f.closure(input, &[]).unwrap_err();
+    let actual = match &issue {
+        ClosureError::OutsideEnvelope(cause) => cause,
+        _ => panic!("original envelope refusal"),
+    };
+    let cause = issue
+        .source()
+        .expect("original envelope cause must remain reachable");
+    assert!(core::ptr::eq(
+        cause.downcast_ref::<ClosureEnvelopeError>().unwrap(),
+        actual
+    ));
+    assert_eq!(actual.diagnostic(), "env_fly");
+}
+
+#[test]
+fn closure_placement_error_keeps_original_cause() {
+    use std::error::Error;
+    let mut f = fixture();
+    let placements = f.placements();
+    let input = f.closure_input();
+    let closure = f.closure(input.clone(), &placements).unwrap();
+    let edge = placements.first().unwrap().definition().anchor.edge;
+    f.ledger.delete(&mut f.ids, edge).unwrap();
+    let issue = closure
+        .validate_current(
+            &placements,
+            &f.plan(),
+            std::slice::from_ref(&f.piece),
+            &f.ledger,
+        )
+        .unwrap_err();
+    let actual = match &issue {
+        ClosureError::InvalidPlacement { error, .. } => error.as_ref(),
+        _ => panic!("original placement refusal"),
+    };
+    let cause = issue
+        .source()
+        .expect("original placement cause must remain reachable");
+    assert!(core::ptr::eq(
+        cause.downcast_ref::<NotionPlacementError>().unwrap(),
+        actual
+    ));
+    assert!(!cause.is::<Box<NotionPlacementError>>());
+    assert!(cause
+        .source()
+        .unwrap()
+        .is::<sc_core::ontology::AnchorError>());
+    assert_eq!(closure.definition(), &input);
+}

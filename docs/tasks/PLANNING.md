@@ -1145,10 +1145,17 @@ Verified D257 availability correction retained whole in [part516](../history/sti
 Verified D258/D259 original Pocket/Notion anchor-source reports and0375 red/green proof remain whole
 in [part527](../history/stitchcad-devnotes-part527.md); current error chains preserve concrete causes.
 
-0376 closed-report retirement proof:
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part527.md
-  retains complete D258/D259 reports with4 exact Git spans rc=0; no original report bytes lost.
-- [x] ADDRESSED: cargo test -p sc-core --test pocket_contract inventory_:5/0 rc=0;
-  nested original Pocket/Anchor causes remain concrete in current inventory failures.
-- [x] NO REGRESSION: git diff --exit-code HEAD -- crates/sc-core/src/ontology/pocket.rs
-  crates/sc-core/src/ontology/notion.rs:empty rc=0; strict affected lint/fmt pass0.
+[0376 retirement proof](../history/stitchcad-devnotes-part528.md).
+
+## D260 — Closure errors hid original envelope/placement causes (fixed0377)
+
+ClosureError's empty Error impl hid stored envelope/placement causes.
+Exact closure_contract tests closure_envelope_error_keeps_original_cause and
+closure_placement_error_keeps_original_cause: red0/1 rc=101 each, green1/0 rc=0 each through
+local_environment.py; target/closure-causes-*-0377.log. Concrete type and same original pointer retained,
+including placement-to-AnchorError chaining. All production bytes outside Error impl identical.
+P2; owner G1-SLICE.6.4.5.2.a. Closed focused; full CI integration/pre-push.
+- [x] ROOT CAUSE: both exact cargo test controls red0/1 rc=101 at missing source(); empty Error impl.
+- [x] ADDRESSED: same controls green1/0 rc=0 each after original cause borrowing/as_ref.
+- [x] NO REGRESSION: cargo clippy -p sc-core --test closure_contract -- -D warnings rc=0;
+  production non-Error-impl Git-source bytes identical rc=0, fmt/book/publication pass0.

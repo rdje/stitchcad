@@ -3,14 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0376 — own Pockets and check every current component interval
+## STITCHCAD-G1-0377 — preserve original Closure error causes
 
-- Validate complete copies, every Pocket placement and component boundary/hole/construction ranges.
-- Honor exact Piece saved endpoint choices; retain raw and choice-aware evidence without repair/reassignment.
-- Native5/privacy2/lint/fmt/book/publication pass0; D250132 unchanged, whole0375/D258/D259 continuity527.
-- Notion/Closure collections next; logical opening, geometry, Profile and global Design scopes stay explicit.
+- Fix D260 envelope/placement standard source chains; original concrete objects and Anchor chain retained.
+- Both exact controls red101/green0; other production bytes identical. Lint/fmt/book/publication pass0.
+- D250132 unchanged; closed Pocket/0376/retirement continuity528. Notion-placement collection next.
 
 # Sealed archive — earlier slices
+
+| [part528](docs/history/stitchcad-devnotes-part528.md) | closed Pocket scope/0376/report retirement | 58 lines, 4681 bytes, sha256:75353404… |
 
 | [part527](docs/history/stitchcad-devnotes-part527.md) | whole0375 and D258/D259 anchor-cause reports | 63 lines, 4891 bytes, sha256:0978063c… |
 
