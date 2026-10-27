@@ -9,6 +9,7 @@ Records carry an `answers:` line so a question can find them — that is what ma
 
 | Record | Type | One-line hook |
 | --- | --- | --- |
+| [`decision_history-generations.md`](decision_history-generations.md) | `decision` | finite self-contained generations; measured budget authority, original byte retention and explicit cutover proof |
 | [`decision_design-host.md`](decision_design-host.md) | `decision` | immutable higher metadata through a core port; exact canonical object membership, actual host semantics and staged Design composition |
 | [`decision_acceptance-evidence-per-leaf.md`](decision_acceptance-evidence-per-leaf.md) | `decision` | acceptance checkboxes exist only for landed leaves, added fresh in the commit — because the inherited gate judges the first matching box in the file (defect D15) |
 | [`decision_scaffold-sync-protects-project-content.md`](decision_scaffold-sync-protects-project-content.md) | `decision` | the scaffold updater syncs NEUTRAL files and guards project-content files (task-tree index, toolbox, adopted policy) — backed up, skipped, never silently clobbered (defect D17) |

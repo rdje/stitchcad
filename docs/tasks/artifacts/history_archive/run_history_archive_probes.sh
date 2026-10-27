@@ -4,3 +4,4 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 python3 -B "$ROOT/docs/tasks/artifacts/history_archive/legacy_refusals.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/history_archive/window_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/history_archive/generation_budget.py" --self-test

@@ -1,0 +1,85 @@
+# Self-contained history grows through a finite, versioned generation index
+
+- **Type:** `decision`
+- **Date:** `2026-10-27`
+- **Status:** `active` — design authority; live cutover remains separately verified work.
+- **Owner / source:** G1-SLICE.6.4.5.capacity.apply; director delegates the decision and requires
+  signoff/production quality.0391 selects self-contained retrieval over conditional Git receipts.
+
+answers: "how does retained history grow after the first aggregate budget is full?" · "why eight generations?" · "which archive guarantees remain unchanged?"
+
+## Authority and scope
+
+This is separate authority for a version3 topology, not a v1/v2 constant increase. Existing v1/v2
+readers retain4000000 decoded/resident bytes,60000 decoded lines and their original refusal rules.
+All existing record, manifest, payload, catalog and opaque legacy backing bytes remain immutable.
+The v2 master is preserved byte-exact as generation1's control. Ordinary retrieval remains entirely
+local, self-contained and independent of historical Git objects. Git is used only for explicit
+committed/source proofs. No archive evidence is replaced by a conditional Git locator.
+
+The root v3 index has at most8 generation descriptors, at most8192 bytes and exact identities for
+the generation controls. Each generation retains these independent limits:
+
+| Dimension | Inclusive bound |
+| --- | --- |
+| Decoded bytes, including opaque evidence and catalogs | 4000000 |
+| Decoded lines | 60000 |
+| Actual resident bytes, including its controls | 4000000 |
+| Windows / members per window | 16 / 256 |
+| Control bytes / lines / files | 262144 / 20000 / 17 |
+| Working Markdown / per-file bytes / lines / maxline | 64 / 160000 / 2000 / 400 |
+| Compressed payload / decoded tar bytes | 1048576 / 8388608 |
+
+Only the first generation retains the16 original v1 catalogs and33 opaque backing files. Later
+ones contain new records, not recursively active archives. Sealed generations have no raw segments;
+all new raw segments belong to the last, active generation. Window and logical identities are
+unique across the complete index. Root metadata and physical orphan checks cover the whole tree.
+
+## Budget derivation and limits of the estimate
+
+Run python3 -I -B docs/tasks/artifacts/history_archive/generation_budget.py before cutover;
+--self-test is registered in run_history_archive_probes.sh. Source6121f21 with uncommitted whole-task
+record540 measures3999898 decoded bytes/53085 lines/994 records,2125362 physical bytes. OS wc agrees
+with the physical byte census. The working source differs from HEAD only by explicitly reported data;
+no committed-snapshot claim is made.25 boundary/oracle/refusal controls pass rc=0.
+
+The planning window is the director's default100 slices. Its explicit assumption is at most one
+full160000-byte retained segment per slice, plus a compact catalog allowance512+208 bytes per slice.
+The allowance reserves a complete512-byte header per segment, although capture normally groups them;
+208 covers each bounded200-byte logical name and heading syntax. Thus3999898+100*(160000+512+208)
+=20071898 bytes. Ceiling division needs6 four-million-byte slots; the smallest binary fanout is8.
+This is a workload envelope, not a guarantee for arbitrary future slices or an observed parser memory
+peak. The loader and transaction must prove their own boundaries before installation.
+
+Consequently total decoded history is at most32000000 bytes/480000 lines. Resident history is at
+most32008192 bytes including the index. Control bytes are at most2105344; control files137 and
+payload files128. Working Markdown is at most192: seven sealed groups'16 catalogs,16 original
+catalogs, and64 in the active group. Shared files cannot be charged to multiple generations.
+Per-record/payload/field/path limits remain unchanged. No automatic budget growth is permitted;
+near capacity, an owned new retention decision is required before further retirement.
+
+## Required implementation and acceptance
+
+- Strict versioned dispatch: unsupported schemas/keys/types, duplicate identities, reordered or
+  removed seals, changed old bytes, links, foreign volumes and unclassified physical files refuse.
+- Preserve public logical addresses and inventory's return shape. A generation control records its
+  exact windows and legacy catalogs; the root pins its bytes. All but the last descriptor are sealed.
+  Appending windows changes only the active control/root. Opening another generation seals its
+  predecessor after committed raw capture. Initial transition may assign existing raw records to
+  generation2 while generation1 preserves the original packed cohort and exact v2 master.
+- Validate schemas, complete membership, per-file identities and each independent budget. Decode one
+  flat tar level; never recursively expand retained compressed evidence or call extraction APIs.
+- Plan every source/output/child before effects. Source HEAD, all producer dependencies, both original
+  trees and candidate must be pinned. Keep exact old trees on the repository volume; refuse unknown
+  recovery states. Readers remain idle across the multi-directory transaction.
+- Test inclusive/+1 limits, ambiguous/truncated/corrupt populations, source/producer drift, real rename
+  interruption, explicit recovery, offline public byte retrieval and materialization. Compare original
+  contents with independent Git/OS tar oracles. No synthetic or client fixture may weaken its old predicate.
+- Measure resource behavior; state process-interruption versus power-loss guarantees accurately.
+  Full CI/platform integration remains separately owned; focused archive feature acceptance is required.
+
+[Python's tar guidance](https://docs.python.org/3/library/tarfile.html#extraction-filters) motivates
+explicit membership/path/resource checks beyond extraction filters. The reader continues not to extract.
+[SQLite's atomic-commit description](https://sqlite.org/atomiccommit.html) distinguishes journal and
+filesystem durability assumptions. The existing directory-swap protocol proves process interruption;
+this decision does not confer SQLite's power-loss guarantee on that protocol.

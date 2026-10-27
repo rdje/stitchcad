@@ -874,30 +874,13 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0386 actual Hem depth/fold roles; [whole proof](../history/stitchcad-devnotes-part538.md).
 - ID: `G1-SLICE.6.4.5.3.d.2`
   Status: `done`
-  Goal: borrowed actual layer offset-operation/source intent; existing recipe/G2/G3/scope owners.
-  Own exact typed layer/relationship/source borrows after whole current root validation. Preserve
-  family/source order, modelled Lining inspection and original operation ids without numeric coercion.
-  No operation existence/kind/dependency, geometry or execution proof; focused native/lifetime/lint/book.
-  Whole0386 continuity538; complete component acceptance remains .e.
-  D262 append repair closes .a; aggregate-capacity decision .capacity precedes unsafe archive growth.
+  Goal:0388 original layer offset scope; [whole proof](../history/stitchcad-devnotes-part540.md).
 - ID: `G1-SLICE.6.4.5.3.d.2.a`
   Status: `done`
   Goal:0387 D262 bounded v2 append; [whole proof](../history/stitchcad-devnotes-part539.md).
 - ID: `G1-SLICE.6.4.5.3.d.2.b`
   Status: `done`
-  Goal:0388 actual layer offset borrows after whole-root validation; whole0387 continuity539.
-  - [x] REPRODUCE / ISSUE: Python Git-source comparison:b3686da lacks Design layer offset views rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): same comparison rc=0; original LayerOffsetRelationship existed
-    without a current-root borrowed query. Original layer/current-root validator bytes unchanged.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and -p sc-measure
-    --test design_inputs_contract -- -D warnings:rc=0 each; exact family/relationship/canonical borrows.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract layer_offset_declarations_:
-    4/0 rc=0; cargo test -p sc-core --doc design::layers:1/0 rc=0, lifetime refusal.
-  - [x] NO REGRESSION: cargo fmt --all --check rc=0; original validators/prior test bytes compare0;
-    full glossary rc=1 with132 unchanged D250 rows, exact comparison rc=0. No operation coercion.
-  - [x] LOCKSTEP: run_make.sh book rc=0; scoped publication79/159/1454/2410 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part539.md:5 exact spans rc=0.
-    Promotion declined: existing metadata/current-source/scope boundaries. Component acceptance .e.
+  Goal:0388 actual layer offset borrows; [whole proof](../history/stitchcad-devnotes-part540.md).
 - ID: `G1-SLICE.6.4.5.3.e`
   Status: `done`
   Goal:0389 focused layer/Hem component acceptance; broader integration after .6.9.
@@ -908,8 +891,8 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   - [x] NO REGRESSION: book/publication79/159/1454/2410 rc=0; no Rust/manifest changes.
   Promotion declined: existing component/current-source/scope rules. Full Design proof remains open.
 - ID: `G1-SLICE.6.4.5.capacity`
-  Status: `blocked`
-  Goal: P1 retain all bytes without exceeding4000000B; needs director policy choice in history decision.
+  Status: `in_progress`
+  Goal: director2026-10-27 delegates decision; preserve self-contained history via bounded generations.
 - ID: `G1-SLICE.6.4.5.capacity.proposal`
   Status: `done`
   Goal: measure next complete retirement, present bounded retention alternatives; no cap/record changes.
@@ -917,10 +900,27 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   - [x] ROOT CAUSE: Git/wc diagnostic:3706>2641B rc=0; exact spans in history decision.
   - [x] ADDRESSED: same diagnostic rc=0; A/B policy proposal committed without changing caps/records.
   - [x] NO REGRESSION: history_archive.sh verify-retention/book/publication/size rc=0.
-  Promotion: history decision. Completed0390; director choice pending.
+  Promotion: history decision. Completed0390;0391 delegates and selects A.
 - ID: `G1-SLICE.6.4.5.capacity.apply`
-  Status: `blocked`
-  Goal: implement chosen policy with executable retention/recovery/refusal proof before product .4.
+  Status: `in_progress`
+  Goal: self-contained generations; preserve old bytes and per-generation bounds before product .4.
+  Children: .design budget/source prototype; .cutover reader/transaction/retention; .accept focused clients.
+- ID: `G1-SLICE.6.4.5.capacity.apply.design`
+  Status: `done`
+  Goal:0391 finite topology authority; whole0388 task/parent540. No live cutover.
+  - [x] REPRODUCE / ISSUE: generation_budget.py:3999898 decodedB rc=0; v2 headroom102B.
+  - [x] ROOT CAUSE (WHY + WHERE): same rc=0; aggregate and local reader budgets were coupled.
+  - [x] FIX: generation_budget.py --self-test:25 oracle/boundary/refusal controls rc=0.
+  - [x] ADDRESSED: generation_budget.py:20071898B workload needs8 slots; OS wc exact rc=0.
+  - [x] NO REGRESSION: history_archive.sh verify-retention rc=0; original reader/caps unchanged.
+  - [x] LOCKSTEP: book/publication/size rc=0; transition_receipts.py --record540:2 exact spans0.
+  Promotion: decision_history-generations.md; runtime/transaction proof remains .cutover/.accept.
+- ID: `G1-SLICE.6.4.5.capacity.apply.cutover`
+  Status: `pending`
+  Goal: strict v3 generation reader, immutable/source guards, native refusals and journaled cutover.
+- ID: `G1-SLICE.6.4.5.capacity.apply.accept`
+  Status: `pending`
+  Goal: complete public/offline/recovery/current-client feature acceptance before product .4.
 - ID: `G1-SLICE.6.4.5.4`
   Status: `pending`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.

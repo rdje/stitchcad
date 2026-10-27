@@ -185,7 +185,8 @@ backup guarantee, whole-source/suffix hashes, executable retrieval, and actionab
 object recovery. Future receipts would depend on those Git objects; unconditional shallow/offline
 retrieval would continue only for existing archive records. No such new terminal is installed now.
 
-Until the director chooses A or B, capacity.apply is blocked and product .6.4.5.4 stays pending.
+Director2026-10-27 delegates the choice;0391 adopts A via decision_history-generations.md.
+Implementation/cutover remains owned before product .6.4.5.4.
 No completed proof is discarded, no archive cap is raised and no new oversized segment is written.
 At that source, the book had28B under its separate1200000B cap; scope-preserving containment precedes
 new examples. That fact does not authorize an archive or book ceiling increase.

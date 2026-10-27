@@ -3,6 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0391 — derive bounded self-contained generation authority
+
+- Director delegates retention choice; adopt version3 design with at most8 independently bounded generations.
+- Tracked source/OS wc and25 boundary/oracle/refusal controls pass0; explicit100-slice planning assumption.
+- Original v2 reader/caps/bytes unchanged; no live cutover or resource-runtime claim. Whole0388 task/parent540.
+
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
 - Complete next evidence bodies3706B exceed2641B headroom; exact Git spans and OS wc agree0.
@@ -23,6 +29,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 - Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+| [part540](docs/history/stitchcad-devnotes-part540.md) | 23 lines, 1908 bytes, sha256:643cd825… |
 
 | [part539](docs/history/stitchcad-devnotes-part539.md) | whole D262/0387/retirement proof | 49 lines, 4019 bytes, sha256:34402047… |
 

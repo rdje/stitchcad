@@ -92,41 +92,40 @@ deep-campaign pass is claimed. The activation-omission parser control has a focu
 
 ## Guarded migration tooling
 
-The v2 installer verifies source HEAD, producer identities and exact source/candidate bytes before
-staging both trees on the repository volume. A flushed journal precedes the first rename.
-Each directory rename is atomic; keep readers idle until installation or recovery finishes.
+The installer pins HEAD, producers and exact source/candidate bytes before local staging. A flushed
+journal precedes the first rename. Individual directory renames are atomic; keep readers idle until
+installation or recovery finishes. This proves process interruption, not machine power-loss durability.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/history_archive/v2_migration.py prepare target/history-v2-migration
 python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py install target/history-v2-migration
-# After interruption, before any archive use:
+# After interruption, before archive use:
 python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py recover target/history-v2-migration
 ```
 
-Recovery classifies both directory trees before changing either. It accepts only exact original,
-staged and installed bytes from the prepared transaction; source, candidate, journal or HEAD drift
-refuses. Original source directories remain in the transaction backup, and the verified candidate
-remains available after rollback. An incomplete staging phase has not touched live storage.
-This protocol handles interrupted processes; no machine power-loss guarantee is claimed.
+Prepare requires a v1 source and fresh workspace. Recovery classifies both trees before effects,
+accepting only exact original/staged/installed transaction bytes. Source, candidate, producer, journal
+or HEAD drift refuses, including later records/commits. Original trees remain in the backup and the
+candidate survives rollback; incomplete staging has not changed live storage.
 
-The original v1 refusal producer runs unchanged in an exact retained-v1 fixture, with Git observations
-pinned to its capture. Historical reader traps use v1 data; current materialization uses v2. Reader/client
-native controls and fixture capture preserve original provenance through retained backing bytes.
-D246 feeds only deliberate raw-read faults exact logical bytes; the original child-dispatch assertion
-still rejects the missing public read. Legacy catalogs and non-changelog ledger rows remain valid.
+Original v1 refusals run unchanged in a retained-v1 fixture with capture-pinned Git observations.
+Historical traps use v1; current materialization uses v2. Reader/client/native capture proof keeps
+original backing provenance. D246 supplies exact logical bytes only for deliberate raw-read faults;
+the original child-dispatch assertion still rejects missing public reads. Legacy catalogs and
+non-changelog ledger rows remain valid.
 
-The prepare command requires a v1 source and fresh workspace. Recovery requires original HEAD and
-recognized archive bytes; later records/commits refuse. Retained original trees remain evidence.
-
-For a v2 append, commit all raw source records first and keep the source within the working bounds.
-Use a fresh workspace and the actual owning leaf:
+For a v2 append, commit all raw records first and keep the source within working bounds. Use a fresh
+workspace and actual owning leaf:
 
 ```bash
 python3 -I -B docs/tasks/artifacts/history_archive/v2_migration.py append target/history-v2-append --owner G1-SLICE.6.4.5.3.d.2.a
 python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py install target/history-v2-append
 ```
 
-Preparation packs the complete committed raw snapshot and preserves every old window byte.
-The same idle-reader, recovery and retained-backup rules apply. Catalog headings link records;
-full identities remain in manifests. If a complete retirement exceeds the aggregate budget, stop
-at its owning retention decision: packing grants no additional capacity.
+Append packs the complete committed raw snapshot, preserving old windows. The same reader/recovery/
+backup rules apply. Catalog headings navigate; manifests retain full identities. Packing grants no
+aggregate capacity: stop at the owning retention decision before an oversized retirement.
+
+The adopted successor design has at most eight self-contained generations, each keeping the current
+4 MB decode/resident bounds. Its budget is derived for a stated100-slice workload, not unlimited growth.
+Version3 reader/cutover/resource acceptance is pending; the live v2 archive retains its existing caps.

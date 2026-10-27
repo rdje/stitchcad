@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-27 UTC)_ — finite self-contained generation authority
+
+0391 chooses A under director delegation: version3 will seal old bytes and bound each generation.
+The tracked budget producer measures3999898B and derives20071898B for100 explicitly bounded slices;
+minimum6 slots round to8, with unchanged4MB/60000-line generation limits.25 oracle/refusal controls
+and independent physical OS wc pass0. This is a planning envelope, not parser-memory or cutover proof.
+Two exact Git spans retain whole0388 task/parent540. Live v2 remains unchanged with102B headroom.
+Promotion: decision_history-generations.md. Reader/transaction/current-client proof remains .cutover/.accept.
+
 ## _(2026-10-27 UTC)_ — retention policy boundary
 
 0390 measures complete0388/0389 bodies3706B against2641B archive headroom; Python/Git and OS wc agree0.

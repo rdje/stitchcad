@@ -6,17 +6,17 @@
 
 ## Key subsystems
 
-- crates/sc-units/;docs/book/src/spec/units-and-tolerances.md. G0-CONTRACT.2/.18.
-- crates/sc-core/src/lib.rs,crates/sc-measure/src/lib.rs;G1-SLICE.3/.4/.5.
-- docs/book/src/SUMMARY.md;G0-CONTRACT/G1-SLICE.4d.1.
-- docs/book/src/spec/formula-language.md;G0-CONTRACT.9/G1-SLICE.5. Census: TOOLBOX.md.
-- docs/book/src/spec/interchange-dialects.md;G0-CONTRACT.10/G2-2D;TOOLBOX.md census.
-- docs/book/src/spec/feature-matrix.md;G0-CONTRACT.4;TOOLBOX.md census.
-- docs/book/src/spec/glossary/;docs/tasks/artifacts/glossary/run_glossary_census.sh;G0-CONTRACT.1.
-- .doctrine/live_document_size/;scripts/check_live_doc_size.sh. SPINE.4.
-- docs/tasks/artifacts/;`make probes`;ROADMAP.md §11.
+- crates/sc-units/;docs/book/src/spec/units-and-tolerances.md. G0-CONTRACT.2/.18
+- crates/sc-core/,crates/sc-measure/;G1-SLICE.3/.4/.5
+- docs/book/src/SUMMARY.md;G0-CONTRACT/G1-SLICE.4d.1
+- docs/book/src/spec/formula-language.md;G0-CONTRACT.9/G1-SLICE.5. TOOLBOX.md
+- docs/book/src/spec/interchange-dialects.md;G0-CONTRACT.10/G2-2D;TOOLBOX.md census
+- docs/book/src/spec/feature-matrix.md;G0-CONTRACT.4;TOOLBOX.md census
+- docs/book/src/spec/glossary/;docs/tasks/artifacts/glossary/run_glossary_census.sh;G0-CONTRACT.1
+- .doctrine/live_document_size/;scripts/check_live_doc_size.sh. SPINE.4
+- docs/tasks/artifacts/;`make probes`;ROADMAP.md §11
 
-- CI: .github/workflows/rust.yml;scripts/ci_environment.py.
+- .github/workflows/rust.yml;scripts/ci_environment.py
 
 ## Active task-trees
 
@@ -75,6 +75,7 @@
 - [`finite-threshold-feasibility`](docs/decisions/decision_finite-threshold-feasibility.md)
 - [`fixture-oracles-derive-the-finished-dimension`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)
 - [`governance-two-review-paths-and-the-unnamed-roles`](docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md)
+- [`history-generations`](docs/decisions/decision_history-generations.md)
 - [`history-windows-retain-self-contained-bytes`](docs/decisions/decision_history-windows-retain-self-contained-bytes.md)
 - [`i18n-one-message-system-fluent`](docs/decisions/decision_i18n-one-message-system-fluent.md)
 - [`inverse-thresholds`](docs/decisions/decision_inverse-thresholds.md)
