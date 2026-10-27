@@ -17,9 +17,9 @@ bash scripts/history_archive.sh materialize target/history-review
 # ARCHIVE-RETENTION: REFUSED — destination exists; overwrite refused
 ```
 
-Destinations stay below `target/` on the repository volume. `HISTORY_ARCHIVE_ROOT` selects the project
-or a fixture below project `target/`; the destination is relative to that selected root. Symlinks,
-nested Git boundaries, other volumes and invalid destination kinds refuse.
+`HISTORY_ARCHIVE_ROOT` selects the project or a fixture below project `target/`. Destinations stay in
+that root's `target/` on the repository volume. Symlinks, nested Git boundaries, other volumes and
+invalid kinds refuse.
 
 ## Materialization authority
 
@@ -27,7 +27,7 @@ Materialization declares code/profile/physical inputs and every output file/dire
 implicit parents, before effects. Prepared stores/caller settings survive. Store overlap with archive
 or output refuses before activation.
 
-Creation/exclusive opens recheck authority; bytes and existing destinations are never overwritten.
+Creation/exclusive opens recheck authority and refuse overwrite.
 I/O failure may leave a partial review copy for artifact cleanup. Imported validation and CLI
 list/read/verify load no producer profile, activate no stores and create no directories/children.
 Invalid unused stores remain irrelevant.
@@ -68,7 +68,8 @@ resident bytes. These bound storage/decode, not process memory.
 All but the last generation are sealed. New raw drafts belong only to the active group and remain
 unsealed until capture; all committed raw records still retain exact bytes. Orphans, shared ownership,
 duplicate identities, links, malformed indices and reordered/removed seals refuse. Earlier v1/v2
-schemas retain their original4MB/60000-line rules. Exhaustion requires a new retention decision. Append/seal, current-client and transaction checks pass; full-budget resource acceptance remains open.
+schemas retain their original4MB/60000-line rules. Exhaustion requires a new retention decision. Append/seal/client/transaction checks pass. The full-decode fixture fits128MiB on Darwin/Python3.14.7;
+this regression target is no runtime OS limit or other-platform proof. Component gate pending.
 
 ## Independent controls
 
@@ -78,6 +79,7 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract
 python3 -I -B docs/tasks/artifacts/history_archive/v3_reader_contract.py
 python3 -I -B docs/tasks/artifacts/history_archive/v3_authoring_contract.py
 python3 -I -B docs/tasks/artifacts/history_archive/v3_transaction_smoke.py
+python3 -I -B docs/tasks/artifacts/history_archive/v3_resource_contract.py
 ```
 
 V3 fixtures reconstruct the frozen cohort through logical bytes as history grows. Native tar/tree-hash
@@ -86,11 +88,11 @@ archive/ledger copy; identity candidates cover commits without raw drafts.
 
 ## Refusal fixture maintenance
 
-Refusal producers declare copied inputs, fault payloads, fixtures and recovered outputs before effects.
-Sources/populations stay fixed; prepared stores survive and overlaps refuse before activation. All
-creation/copy/write/unlink/child/removal boundaries recheck authority. The known payload-symlink fixture
-has lexical removal authority and a nonfollowing remover; other links/unknown entries refuse. Protected
-cleanup covers interrupted setup; Git context stays project-scoped.
+Refusal producers declare inputs/faults/fixtures/recovered outputs before effects, preserve source
+populations/stores and reject overlap before activation. Creation/copy/write/unlink/child/removal
+boundaries recheck authority. The known payload-symlink fixture has lexical removal authority and a
+nonfollowing remover; other links/unknown entries refuse. Protected cleanup covers interrupted setup;
+Git stays project-scoped.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py

@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0394 — preserve archive client predicates and permanent transaction smoke
+## STITCHCAD-G1-0395 — verify full decoded generation capacity and isolated CLI resources
 
-- D269 v3 discovery/dependency/AST fixture assumptions corrected; original legacy28/window1011 pass0.
-- Reader companion996 exact files/15 physical/8 actual omission reds; fixture(411,203,9) pass0.
-- Permanent committed-HEAD transaction27 plus identity install/recovery pass0; all live inputs preserved.
-- Whole0393 evidence543 has4 exact Git spans0. Full-budget resource and feature acceptance remain open.
+- Native tar confirms8×4000000B groups;128 windows/192 workingMD/457 files;458 refused, originals exact.
+- Darwin arm64/Python3.14.7 actual CLI122470400 RSS bytes/0.270086s within scoped128MiB target.
+- D270 unit evidence corrected locally;8 unit/boundary/refusal controls and native same-child oracle pass0.
+- Whole0394 evidence544 has4 exact Git spans0. Component feature gate next; broader platform/CI deferred.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part544](docs/history/stitchcad-devnotes-part544.md) | whole0394 clients/lesson/ledger/D269 | 52 lines, 4402 bytes, sha256:bf349af8… |
 | [part543](docs/history/stitchcad-devnotes-part543.md) | whole0393 authoring/lesson/ledger/D268 | 49 lines, 4080 bytes, sha256:a54d712a… |
 | [part542](docs/history/stitchcad-devnotes-part542.md) | whole0392 cutover/lesson/ledger/D263–D267 | 63 lines, 5599 bytes, sha256:be63d3c1… |
 | [part541](docs/history/stitchcad-devnotes-part541.md) | whole0391/proposal/0389/D263/retirement | 71 lines, 5223 bytes, sha256:15e05162… |

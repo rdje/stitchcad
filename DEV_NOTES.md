@@ -3,20 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — generation client predicates and permanent transaction smoke
+## _(2026-10-27 UTC)_ — full decoded capacity and isolated CLI resource evidence
 
-0394 fixes D269: v2-only window/cohort discovery and an unused v3 dependency blocked original v1
-fixtures. Active v3 plans include its decoder; v1 copies do not require it. Original28 native legacy
-assertions/source/population remain unchanged. Window1011 controls/996 reads pass0; title/prose
-fixtures re-sign only owned metadata so inventory stays valid and committed immutability still refuses.
-The reader companion compares original predicates after removing only exact new typed validation
-adapters, each required once. Output-hardlink now links a separate fixture file, preserving the
-original destination-exists assertion; source-hardlink is a separate refusal. Reader996 exact files,
-15 physical refusals/8 compiled omission reds; fixture(411,203,9),11 directories/1077 files pass0.
-Permanent smoke freezes current GitHEAD archive/ledger and runs27 real interruption/recovery/tar/ledger
-controls under target; live inputs remain exact. Focused --identity-only proves identical-byte real
-install/recovery states for no-raw fallback. Four-span543/book/publication/size pass0. Promotion:
-history-generations decision. Resource/full-feature acceptance next; deep authority/platform/CI deferred.
+0395 independently reconstructs native tar bytes for1330 records/33 opaque backings; each of8 groups
+is exactly4000000 decodedB;128 windows/192 working Markdown/457 files are real. A458th file refuses
+before decode, then only the exclusively owned extra is removed. Fresh observer launches only the actual public CLI, avoiding constructor
+memory in its child counters. Darwin arm64/Python3.14.7 reports122470400 RSS bytes/0.270086s, within
+predeclared128MiB; native OS time corroborates121847808B/0.22s in a separate run. Eight unit/boundary/
+refusal controls0; tracked --unit-oracle gives14729216B exact same-child time/getrusage agreement.
+D270 resolved locally: archived Apple man-page units conflict with modern XNU; Darwin bytes and Linux
+KiB normalized explicitly, unknown platforms refuse. Earlier1167-record tracemalloc33324623 current/47814348 peak bytes
+and0 collected cycles measure a different domain from whole-process RSS. No general population or
+latency SLA, other-platform or power-loss proof inferred. Original live inputs unchanged;4-span544/
+retention998/book/publication/size0. Promotion: history-generations decision. Full component gate is
+separately owned .accept.feature before product .4; broader G1/platform/CI proof remains deferred.
+
+[Whole0394 client lesson](docs/history/stitchcad-devnotes-part544.md) retains predicates, source scope and transaction proofs.
 
 [Whole0393 authoring lesson](docs/history/stitchcad-devnotes-part543.md) retains bounded cohort/seal and D268 proofs.
 

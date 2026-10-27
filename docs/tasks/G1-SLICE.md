@@ -898,24 +898,25 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0393 bounded append/seals; [whole proof](../history/stitchcad-devnotes-part543.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.clients`
   Status: `done`
-  Goal:0394 preserve original refusal predicates on v3; permanent committed-source transaction smoke.
-  - [x] REPRODUCE / ISSUE: legacy_refusals.py/window_contract.py fail KeyError windows rc=1;
-    native original immutable-catalog assertion detects unrelated missing decoder; D269 logged/owned.
-  - [x] ROOT CAUSE (WHY + WHERE): source/AST diagnostic rc=0: v2-only discovery, unused v3 dependency
-    in v1 fixtures, new typed guard nodes and source-hardlink masking output-existence predicate.
-  - [x] FIX: legacy_refusals.py:28 pass/0 fail rc=0 with original producer/source/population fixed;
-    window_contract.py:1011 controls/0 fail,5 windows/996 reads rc=0; typed immutability preserved.
-  - [x] ADDRESSED: v3_transaction_smoke.py:27 real interruption/recovery/tar/ledger controls rc=0;
-    --identity-only:real byte-identical install/recovery rc=0; live HEAD/archive/ledger inputs unchanged.
-  - [x] NO REGRESSION: python_archive_reader_contract.py:996 exact files,15 physical refusals,
-    8 actual omission reds rc=0; python_archive_fixture_contract.py:(411,203,9),11 dirs/1077 files rc=0.
-    Original predicate AST comparison retains only exact declared adapters, each required once.
-  - [x] LOCKSTEP: history_archive.sh verify-retention:997 records/4018435 decodedB rc=0;
-    transition_receipts.py --record543:4 exact Git spans0; book/publication/size rc=0. No Rust changes.
-    Promotion: history-generations decision. Full-budget resources and feature acceptance remain .resources.
+  Goal:0394 original client predicates/transaction smoke; [whole proof](../history/stitchcad-devnotes-part544.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.resources`
+  Status: `done`
+  Goal:0395 eight full groups and isolated CLI resource evidence; component acceptance separately owned.
+  - [x] REPRODUCE / ISSUE: generation_budget.py --self-test:finite8 groups/32000000B derived rc=0;
+    no full-capacity observation yet; D270 archived Apple units conflict with native evidence.
+  - [x] ROOT CAUSE (WHY + WHERE): primary kernel/CPython and native time/getrusage diagnostic rc=0:
+    modern Darwin bytes, Linux KiB; sole waited child isolates actual CLI from fixture construction.
+  - [x] FIX: v3_resource_contract.py:8 unit/inclusive/+1/refusal controls rc=0; native tar reconstructs
+    1330 records/33 backings,8×4000000B/128 windows/192 workingMD/457 files;458 refused0. Sources exact.
+  - [x] ADDRESSED: same:Darwin arm64/Python3.14.7 CLI122470400 RSS bytes/0.270086s rc=0,
+    within predeclared128MiB. Native time121847808B/0.22s; tracked --unit-oracle14729216B exact rc=0.
+  - [x] NO REGRESSION: history_archive.sh verify-retention:998 records/4023832 decodedB rc=0;
+    transition_receipts.py --record544:4 exact Git spans rc=0; no live archive swaps/Rust changes.
+  - [x] LOCKSTEP: book/publication/size rc=0; registered resource regression; promotion:
+    decision_history-generations.md. .accept.feature owns component gate; other-platform/CI deferred.
+- ID: `G1-SLICE.6.4.5.capacity.apply.accept.feature`
   Status: `pending`
-  Goal: eight full groups and isolated resource measurements; feature acceptance before product .4.
+  Goal: focused archive feature gate after all implementations; close capacity before product .4.
 - ID: `G1-SLICE.6.4.5.4`
   Status: `pending`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.

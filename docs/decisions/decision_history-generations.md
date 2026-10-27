@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-27`
-- **Status:** `active` — active v3 read/cutover authority; authoring available; client/transaction checks pass; resource acceptance remains owned.
+- **Status:** `active` — active v3 read/cutover authority; authoring available; resource case checked on Darwin; component feature acceptance remains owned.
 - **Owner / source:** G1-SLICE.6.4.5.capacity.apply; director delegates the decision and requires
   signoff/production quality.0391 selects self-contained retrieval over conditional Git receipts.
 
@@ -13,6 +13,8 @@ answers: "what pins source and recovery audit during generation cutover?"
 answers: "how do append and explicit seal preserve a complete cohort across generations?"
 
 answers: "how do existing refusal clients retain their predicates under generation storage?"
+
+answers: "what full-capacity resource evidence supports the finite generation reader?"
 
 ## Authority and scope
 
@@ -129,3 +131,32 @@ separate physical control. Permanent transaction smoke freezes current committed
 uses real target-only swaps and preserves all live inputs; byte-identical candidates also exercise
 actual installation/recovery when no raw records exist. Deeper authority/platform/resource proof is
 separately owned; these focused checks do not claim its completion.
+
+## Resource acceptance envelope (set before measurement0395)
+
+The synthetic full-decoded fixture fills all8 groups to4000000 bytes each, preserving original
+opaque bytes. An isolated observer launches the actual public verify CLI as its sole waited child;
+it does not charge fixture-construction memory to the reader. The regression target is128MiB peak
+RSS for this population, with a30-second deadlock timeout. Report elapsed time; this is no universal
+latency SLA, OS memory enforcement or proof of every possible population/platform. Native tar byte
+oracles and exact independent decoded totals verify the fixture before interpreting the measurement.
+
+Normalize modern Darwin ru_maxrss as bytes and Linux as KiB; unsupported platforms refuse measurement.
+[Linux man-pages](https://man7.org/linux/man-pages/man2/getrusage.2.html) specifies KiB and the largest
+waited child. [CPython](https://github.com/python/cpython/blob/main/Modules/resource.c) returns the
+kernel value directly. Apple's archived man page says kilobytes, but current
+[XNU calcru](https://github.com/apple-oss-distributions/xnu/blob/main/bsd/kern/kern_resource.c) assigns
+resident_size_max without scaling; same-process native time -l and getrusage agree14680064 bytes on
+this host. D270 owns the local unit mitigation; no external repository is modified.
+
+## Resource result0395
+
+v3_resource_contract.py independently reconstructs native tar bytes for1330 records/33 original
+backings; all8 groups are exactly4000000 decoded bytes, with128 windows/192 working Markdown and
+457 physical files. A real458th file refuses before decode; only the exclusively owned extra is removed. The actual public CLI runs as the fresh
+observer's sole waited child. On Darwin arm64/Python3.14.7 it measured122470400 RSS bytes and0.270086s,
+within the predeclared128MiB regression target. Native time separately measured121847808 bytes/0.22s;
+the tracked --unit-oracle gave exact same-child time/getrusage agreement14729216 bytes. Unit/boundary
+controls8 pass0. Earlier1167-record tracemalloc diagnostic found33324623 current/47814348 peak traced bytes and0 collected
+cycles; traced Python allocations and whole-process RSS are different observations. No universal
+population/latency/other-platform or hardware power-loss guarantee is inferred. Component gate next.

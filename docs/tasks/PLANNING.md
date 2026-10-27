@@ -1179,14 +1179,19 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 
 ## D269 — generation client schema/dependency assumptions
 
-Owner G1-SLICE.6.4.5.capacity.apply.accept.clients; immediate. Legacy/window native entries fail
-KeyError windows on v3; original immutable-catalog assertion then detects an unrelated missing
-unused generation decoder in v1 copied fixtures. Discover flat windows without changing predicates;
-require decoder only for v3. Both companions and permanent transaction smoke corrected0394.
+[Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
 
-- [x] ROOT CAUSE: native legacy/window KeyError rc=1; AST diff rc=0 locates added typed guard
-  nodes. Source-hardlink fixture masks original output-existence predicate; fixtures now independent.
-- [x] ADDRESSED: legacy28/window1011/transaction27 and --identity-only rc=0; original assertions
-  and typed immutability intact, exact original/live bytes preserved; new source-hardlink control added.
-- [x] NO REGRESSION: reader companion996 exact files/15 physical/8 omission reds rc=0; fixture
-  companion(411,203,9) rc=0; retention997/4-span543/book/publication/size rc=0. No deep/full CI claim.
+## D270 — RSS unit evidence before capacity signoff
+
+Owner G1-SLICE.6.4.5.capacity.apply.accept.resources; immediate local mitigation. Archived Apple
+getrusage man page says kilobytes, contradicting modern Darwin behavior. XNU calcru assigns the
+resident-size maximum directly; native time -l and sole waited-child getrusage both14680064 bytes
+in the same observation rc=0. Linux man-pages specifies KiB. Record explicit normalized units and
+unknown-platform refusal; never multiply current Darwin by1024. External repository stays read-only.
+
+- [x] ROOT CAUSE: primary-source/native same-child unit diagnostic rc=0:Darwin bytes, Linux KiB;
+  archived Apple unit text contradicted by current kernel and native time/getrusage agreement.
+- [x] ADDRESSED: v3_resource_contract.py:8 unit/boundary/refusal controls rc=0; --unit-oracle
+ 14729216 bytes exact rc=0. No external writes; explicit unsupported-platform measurement refusal.
+- [x] NO REGRESSION: same full-capacity CLI121405440B/0.270896s,8×4000000 decodedB/native tar exact
+  rc=0; retention998/4-span544/book/publication/size rc=0. Other-platform observation remains unclaimed.
