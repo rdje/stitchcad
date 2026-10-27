@@ -855,23 +855,23 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   .c owned chart-family/context composition. Design retains a reference, not an embedded size list.
 - ID: `G1-SLICE.6.4.2.d.4.3.a`
   Status: `done`
-  Goal: exact core/higher SizeSet reference bridge over actual garment/MTM views, with no readiness claim.
-  - [x] REPRODUCE / ISSUE: Design needs an exact external set pin, not an embedded member list;
-    two exact family cases pass1 each/0 failures rc=0, target/design-size-reference-native-0358.log.
-  - [x] ROOT CAUSE (WHY + WHERE): SizeSetReference lives above core; the Design needs an explicit bridge.
-    Selected cargo test -p sc-measure family filters pass2/0 rc=0, target/design-size-reference-native-0358.log.
-  - [x] FIX: core carrier, explicit lossless conversions and actual current-view pin checks;
-    native2/0 rc=0 rejects wrong id/revision, retains terminal/zero revisions and partial-draft semantics.
-  - [x] ADDRESSED: exact garment/MTM cases pass1 each rc=0; matching pin preserves MTM grading
-    refusal and incomplete garment coverage; no latest/profile/label inference or source mutation.
-  - [x] NO REGRESSION: strict core/selected-measure Clippy/fmt/book/publication79/116/1456/2391
-    pass0; D250132 exact baseline rows/delta0, glossary rc=1; full source/Design/integration/CI later.
-  - [x] LOCKSTEP: SizeSet book/API/decision/index/pointer aligned; continuity509 compares5 exact
-    Git spans rc=0; historical name-read/SizeSet receipts retained; caps unchanged; G1still6/18.
-    promotion: promoted to docs/decisions/decision_size-set-ownership.md. Commit0358; .4.3.b sources next.
+  Goal:0358 exact external Design SizeSet pin; [whole scope/proof](../history/stitchcad-devnotes-part510.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.b`
-  Status: `pending`
-  Goal: owned common membership/axis/break source metadata over borrowed current canonical inputs.
+  Status: `done`
+  Goal: immutable common SizeSet metadata/current contexts; D255 concrete break source corrected.
+  - [x] REPRODUCE / ISSUE: replacement-context native case reports boxed payload seen=true,
+    rc=101 before fix; target/size-metadata-d255-before-0359.log retains the actual failing assertion.
+  - [x] ROOT CAUSE (WHY + WHERE): SizeBreaksError::Break source returned Box itself; selected
+    cargo test -p sc-measure --test size_set_metadata_contract fails1 rc=101 before issue.as_ref().
+  - [x] FIX: private common owner, complete cross-input census, nonescaping temporary contexts;
+    native5/0 rc=0 rejects all5 common id-family collisions and finds concrete MissingDelta after D255.
+  - [x] ADDRESSED: cargo test -p sc-measure --test size_set_metadata_contract --test
+    measurement_inputs_contract gives5+12/0 rc=0, target/size-metadata-native-0359.log.
+  - [x] NO REGRESSION: privacy3/strict selected Clippy/fmt/book/publication79/117/1456/2392
+    pass0; D250132 exact baseline rows/delta0, glossary rc=1; full chart/Design/integration/CI later.
+  - [x] LOCKSTEP: book/API/decision/defect/index/pointer aligned; transition_receipts.py510
+    compares5 Git spans rc=0, complete0358/ordered-name/routing proofs; caps unchanged; G1still6/18.
+    promotion: promoted to docs/decisions/decision_design-host.md. Commit0359; .4.3.c chart sources next.
 - ID: `G1-SLICE.6.4.2.d.4.3.c`
   Status: `pending`
   Goal: actual owned chart-family sources/context composition, then complete reference/source acceptance.

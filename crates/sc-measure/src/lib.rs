@@ -45,6 +45,11 @@ pub use inputs::{
 mod host;
 pub use host::MeasurementHostError;
 
+mod size_set_metadata;
+pub use size_set_metadata::{
+    SizeSetMetadata, SizeSetMetadataDefinition, SizeSetMetadataError, SizeSetMetadataPosition,
+};
+
 mod ease;
 pub use ease::{CompressionPermission, Ease, EaseDefinition, EaseError, EaseSide, FitIntent};
 

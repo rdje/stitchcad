@@ -6,15 +6,18 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0358 — validate exact external Design SizeSet references
 
-- Add core DesignSizeSetReference and explicit lossless higher-reference conversions; no embedded members or lookup.
-- Actual garment/MTM views reject wrong set/revision and retain original current validators and typed mismatch refs.
-- Two exact native cases/strict core and selected-measure lint/fmt/book/publication pass0; D250132 rows exactly baseline.
-- Pin admission remains separate from partial-chart coverage/MTM grading; whole0357/name-read/SizeSet proofs509 match5 Git spans.
-- Caps unchanged; G1still6/18. Owned source metadata next; full Design/execution/physical/integration/CI remains pending.
+## STITCHCAD-G1-0359 — own common SizeSet metadata over temporary current contexts
+
+- Own exact membership/axes/break metadata, complete cross-input identities and nonescaping temporary contexts.
+- Retain actual canonical objects, original current validators and explicit partial drafts; chart-family ownership follows.
+- Fix D255: break error source exposes concrete cause rather than Box; failing before/after native case verifies the repair.
+- Native5+12/privacy3/strict selected lint/fmt/book/publication pass0; D250132 rows exactly baseline, delta0.
+- Whole0358/ordered-name/routing continuity510 matches5 Git spans; caps unchanged; G1still6/18; no full Design/CI claim.
 
 # Sealed archive — earlier slices
+
+| [part510](docs/history/stitchcad-devnotes-part510.md) | whole0358 and historical ordered-name/routing proofs | 101 lines, 8076 bytes, sha256:ed543243… |
 
 | [part509](docs/history/stitchcad-devnotes-part509.md) | whole0357 and historical name-read/SizeSet milestone proofs | 147 lines, 11851 bytes, sha256:f2a5dd2d… |
 

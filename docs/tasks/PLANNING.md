@@ -1133,15 +1133,14 @@ Verified D254 package metadata correction retained whole in [part502](../history
 Verified D217–D225 closure reports retained whole in [part495](../history/stitchcad-devnotes-part495.md);
 original unknown descriptor identity remains unknown; current handoff rules remain binding.
 
-## Window15 retrieval routing —0305
+Historical window15/16 routing/pointer receipts remain whole in
+[continuity510](../history/stitchcad-devnotes-part510.md); current capacity ownership is G1-SLICE.RETENTION-CAPACITY.
 
-- [x] ROOT CAUSE0305: stable ba41e9a capture has50 raw records at64 working files; capture_window15.py rc=0.
-- [x] ADDRESSED0305: source proof50 byte-identical/0 missing-extra and all50 public reads exact, rc=0; links route to the new catalog.
-- [x] NO REGRESSION0305: prior14 backing byte-equal; materialized851 logical records/public bodies exact, rc=0; semantic task/evidence unchanged.
+## D255 — boxed break cause hides its concrete source type
 
-### G1-SLICE.4c.5.h16 — maintained retention pointers
-
-- [x] ROOT CAUSE (WHY + WHERE): source27bff4f mandatory seals would exceed63/64 working files; census rc=0.
-- [x] ADDRESSED: window16 source48/0/public/materialization exact; maintained links retarget headings rc=0.
-- [x] NO REGRESSION: prior15 backing files and current139 defect content unchanged; whole469/291/book rc=0.
-Capacity owner: G1-SLICE.RETENTION-CAPACITY, P1 before any next packing beyond16 admitted slots; no current product block.
+P2; owner G1-SLICE.6.4.2.d.4.3.b, fixed in0359. Reproduce: size_set_metadata_contract's replacement
+canonical-context case removes delta100; SizeBreaksError::Break exposes Box<SizeBreakError> through
+Error::source, so concrete MissingDelta downcast fails (boxed payload seen=true, before rc=101).
+Impact: generic error-source consumers lose the original typed cause. Return issue.as_ref(); the
+same focused case must find actual SizeBreakError::MissingDelta, with callback unvisited and original
+context still valid. Native/privacy/lint/book evidence remains in the owning leaf.

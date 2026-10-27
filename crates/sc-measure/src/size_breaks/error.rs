@@ -62,7 +62,7 @@ impl std::error::Error for SizeBreaksError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
             Self::Context(issue) => Some(issue),
-            Self::Break { issue, .. } => Some(issue),
+            Self::Break { issue, .. } => Some(issue.as_ref()),
             _ => None,
         }
     }

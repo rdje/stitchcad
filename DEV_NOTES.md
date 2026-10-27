@@ -3,24 +3,27 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — exact external Design SizeSet reference
+## _(2026-10-27 UTC)_ — owned common SizeSet metadata and temporary current contexts
 
-0358 DesignSizeSetReference carries only an explicit EntityId/Count revision in core; it performs
-no registry lookup or default revision selection. Explicit higher SizeSetReference conversions
-preserve both fields, including zero and terminal Count, without advancing/reimplementing its
-fallible successor. SizeSetInputs::validate_design_reference requires exact actual membership pin
-then invokes the existing family current validator. Typed mismatch retains expected/actual refs.
-Native garment/MTM cases pass1 each/0 failures; wrong id/revision refuse, matching refs retain
-partial garment drafts and the original MTM grading refusal. Pin admission is distinct from path
-coverage, numeric execution, global currentness and full Design composition. No member list or
-profile selection is embedded in the Design reference. Strict core/selected-measure lint/fmt/book/
-publication pass0; D250132 rows exactly baseline, delta0. Whole0357 and historical name-read proof
-block/SizeSet milestone509 compare5 exact Git spans; functional behavior/current commands retained. Caps unchanged;
-G1still6/18. Promotion: size-set ownership decision gains exact-reference answer/boundary section.
-.6.4.2.d.4.3.b owned common source metadata next; full Design/physical/integration/CI remains later.
+0359 SizeSetMetadata owns exact membership/axes/breaks and a referenced Design table identity.
+All canonical/measurement/Ease ids precede set/member/axis/value/break ids in a complete census;
+unselected tables cannot alias any common owned family. Existing actual source validators run
+before the callback, using temporary contexts over original canonical declarations. A higher-ranked
+visitor cannot return local context borrows. Original state and explicit partial break drafts remain;
+chart-family composition/grade coverage/numeric execution/readiness are separate obligations.
+MeasurementInputs identity iteration is extracted unchanged for reuse; original12 native cases pass.
+New5 native cases protect metadata order/actual pointers, all5 common cross-table aliases, partial
+coverage, missing exact table and missing current delta/callback suppression. The last exposed D255:
+SizeBreaksError::Break source returned Box itself, losing concrete downcasts. Before rc=101 shows
+boxed payload seen=true; issue.as_ref() now exposes actual MissingDelta. D255 is logged/owned/fixed.
+Native5+12/privacy3/strict selected lint/fmt/book/publication pass0. D250132 rows exactly baseline,
+delta0; full glossary rc=1. Continuity510 compares5 exact Git spans for whole0358 and historical
+ordered-name/routing receipts; current behavior/commands retained. Caps unchanged; G1still6/18.
+Promotion: core-host decision records temporary-context ownership. .6.4.2.d.4.3.c actual chart-family
+sources next; full Design/execution/physical/profile/integration/CI remains unverified.
 
 
-[Complete actual measurement-host lesson](docs/history/stitchcad-devnotes-part509.md) retains
+[Complete exact SizeSet-reference lesson](docs/history/stitchcad-devnotes-part510.md) retains
 its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review

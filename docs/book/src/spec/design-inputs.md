@@ -85,3 +85,37 @@ whole-scope validation and canonical object membership. No borrowed context is s
 ```bash
 cargo test -p sc-measure --test measurement_inputs_contract
 ```
+
+## Owned common SizeSet metadata
+
+SizeSetMetadata owns exact membership, axes/member points, required dimensions/available breaks
+and an explicit Design table id. This is the common external SizeSet source component; chart-family
+ownership and full Design composition follow. Canonical values and measurement/Ease metadata stay
+in their original supplied owners. Empty break inventories can be valid drafts, without coverage.
+
+new(definition, &canonical, &inputs) checks all owned ids across canonical/measurement/Ease records,
+then the set, members, each axis/its values and breaks in authored order. Even an unselected table
+cannot reuse a member/axis/value/break id. Source references are uses, not extra declarations.
+It then invokes actual current input/context/axes/break validators and requires the exact Design
+table. Equal-content tables cannot replace a missing id. Replacement canonical inputs are rechecked.
+
+with_context validates that whole scope before visiting a temporary SizeBreakContext. The callback
+cannot retain the local contexts; owned results may be returned. No self-reference or value/state
+cache is stored. Original canonical declarations are borrowed, including Unknown/Derived. Failures
+skip the callback and preserve the typed cause. Break declaration error sources expose the concrete
+SizeBreakError, including MissingDelta, rather than its allocation wrapper (D255 correction).
+
+| API or variant | Meaning |
+| --- | --- |
+| `SizeSetMetadata`, `SizeSetMetadataDefinition` | Private common owner and explicit editable construction input |
+| `SizeSetMetadataPosition` | Original ownership witness: Inputs, Set, Member, Axis, AxisValue, Break |
+| `SizeSetMetadataError` | DuplicateIdentity, Inputs, MissingDesignTable, RecordContext, TableContext, Sources, BreakContext or Breaks |
+
+identities() lists only common owned ids; definition() is shared. Debug exposes counts only.
+validate_current checks current structure; chart coverage, grade coverage, evaluation and readiness
+remain separate. For example, an authored required waist break with no available delta can be saved;
+require_grade_coverage still refuses its missing cell. No zero delta is invented.
+
+```bash
+cargo test -p sc-measure --test size_set_metadata_contract
+```

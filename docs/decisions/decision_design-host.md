@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.6.4.2.d.4.1`; core design host, higher measurement input owners.
 
-answers: "how can Design own measurement metadata without a circular dependency?" · "does host admission prove a measurement binding?" · "can a copied canonical declaration authorize a Design source?"
+answers: "how can Design own measurement metadata without a circular dependency?" · "does host admission prove a measurement binding?" · "can a copied canonical declaration authorize a Design source?" · "how do owned metadata objects avoid self-referential contexts?"
 
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
@@ -30,3 +30,9 @@ No lookup through a label, fallback value, profile selection, readiness or execu
 Focused public native and compile-fail contracts exercise observable guards. Broader feature and
 integration verification remains with G1's existing owners. The ownership decision is durable now;
 subsequent implementation must record its narrower actual acceptance scope in the task tree/book.
+
+Common SizeSetMetadata now owns membership/axes/break metadata separately from canonical inputs and
+measurement/Ease sources. Its higher-ranked callback reconstructs temporary actual contexts, checks
+all source identities/current validators before invocation and prevents borrowed contexts escaping.
+Chart-family ownership and full Design composition remain later children; this common component
+is not a complete SizeSet, and the Design still holds an external reference.

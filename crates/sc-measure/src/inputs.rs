@@ -166,22 +166,11 @@ impl MeasurementInputs {
             .find(|set| set.id() == identity)
     }
 
-    /// Validate the whole actual inventory against these explicit current canonical declarations.
-    ///
-    /// Census order extends MeasurementInventory's exact positions with mappings then sets, each
-    /// authored. Then all metadata, every mapping (even unused), and every set are checked in order
-    /// by their existing validators. Context owners are local borrows, never stored self-references.
-    /// Unknown/Derived amounts gain no fallback. Present negative amounts need explicit permission;
-    /// future evaluated results still require the mapping's separate amount check and v1 envelope.
-    ///
-    /// # Errors
-    /// Returns the first identity collision, then original metadata/mapping/set or context cause.
-    pub fn validate_current(
-        &self,
-        canonical: &CanonicalInputs,
-    ) -> Result<(), MeasurementInputsError> {
-        let positions = self
-            .measurements()
+    pub(crate) fn identity_positions<'a>(
+        &'a self,
+        canonical: &'a CanonicalInputs,
+    ) -> impl Iterator<Item = (EntityId, MeasurementInputsPosition)> + 'a {
+        self.measurements()
             .identity_positions(canonical)
             .map(|(id, position)| (id, MeasurementInputsPosition::Metadata(position)))
             .chain(
@@ -197,9 +186,25 @@ impl MeasurementInputs {
                     .iter()
                     .enumerate()
                     .map(|(index, set)| (set.id(), MeasurementInputsPosition::EaseSet { index })),
-            );
+            )
+    }
+
+    /// Validate the whole actual inventory against these explicit current canonical declarations.
+    ///
+    /// Census order extends MeasurementInventory's exact positions with mappings then sets, each
+    /// authored. Then all metadata, every mapping (even unused), and every set are checked in order
+    /// by their existing validators. Context owners are local borrows, never stored self-references.
+    /// Unknown/Derived amounts gain no fallback. Present negative amounts need explicit permission;
+    /// future evaluated results still require the mapping's separate amount check and v1 envelope.
+    ///
+    /// # Errors
+    /// Returns the first identity collision, then original metadata/mapping/set or context cause.
+    pub fn validate_current(
+        &self,
+        canonical: &CanonicalInputs,
+    ) -> Result<(), MeasurementInputsError> {
         let mut seen = BTreeMap::new();
-        for (identity, position) in positions {
+        for (identity, position) in self.identity_positions(canonical) {
             if let Some(first) = seen.insert(identity, position) {
                 return Err(MeasurementInputsError::DuplicateIdentity {
                     identity,

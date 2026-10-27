@@ -225,49 +225,18 @@ original canonical/recipe source lifetime; missing-name diagnostics retain the e
 Default cursor/scope Debug exposes only the position/ordinal. No source text or authored name is
 included by default.
 
-Eight public contracts cover actual owner pointers, initial/prior/self/forward visibility, six
-annotations, all reserved contexts and48 reserved attempts, assertion gaps/labels, input/geometry
-collision identities, both repeated-let indices/spans, unchanged failed advances, fused empty/max
-ends and formatting. Both4,096-assertion and4,096-let recipes traverse and drop on a64KiB stack.
-Five compile-fail examples protect private cursor fields, final namespace escape, recipe/scope
-lifetimes and mutation while a borrowed scope remains live.
+Public native and compile-fail contracts check actual owner pointers, ordered visibility, header
+refusals, immutable advances, bounded traversal/drop and formatting privacy. Complete historical
+fault sets, dispatch controls and restoration receipts remain in
+`docs/history/stitchcad-devnotes-part510.md`, retrievable without Git:
 
 ```bash
+python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part510.md
 cargo test -p sc-core --test formula_ordered_names_contract
-python3 -I -B docs/tasks/artifacts/formula_structure/ordered_name_mutations.py
-```
-
-The direct entry plans both implementations and the current public test before reads or effects.
-Ordinary mode declares all nineteen fault/restoration diagnostic files and both mutable sources.
-It preserves the eighteen original ordered cases, their two source bindings, the complete eight-test
-Cargo argv, prepared child stores and exact two-source restoration before rebuilding the full target.
-
-```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/ordered_name_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/ordered_name_mutations.py
 ```
 
-Classifier-only validates all three read-only inputs, prepares the local stores/output directory
-and checks original anchors/current macros. It declares zero files or mutable sources and invokes
-no native child or source/output write. A copied entry accepts both source inputs with three hard
-links each and leaves unused fault/restoration aliases untouched. Two complete captures, eight
-physical refusals and seventeen independent source/file/mutable/mode/store/restoration omissions
-watch these plans. Captures certify dispatch; real native replay supplies separate behavior evidence.
-
-A failed body's thread panic path, line and byte-column must identify a current assertion macro.
-Custom messages qualify. Nonthread macro mentions, compiler/linker noise, unwrap/expect-only panics
-and passed test names refuse. D186's measured nonthread weakness is repaired and independently
-watched by the actual legacy-regex body fault. Controls retain predeclared future names, skipped or
-incorrect positions, ignored/misclassified headers, lost/reversed sources, changed tokens, failed
-advance state, assertion advancement, wrong owner views and formatting leaks.
-
-The original eighteen real cases matched every independently authored failing-test set, but seven
-failed bodies extracted an advance error before an assertion could guard it. D187's shared helper
-now checks Result acceptance before extraction at all fourteen existing true-advance calls. The
-eight public test identities and eighteen original cases remain unchanged. Fresh replay preserves every
-expected failing-test set and proves a current macro in every failed body. Seventy-two frozen inputs,
-sixty-three unchanged production Rust files, nineteen local logs and Cargo's restored full eight-test
-executable remain exact. Full formatting, strict Clippy and fifty-nine native groups containing
-703 tests pass. Run native mutations alone and consume restoration before another
-build or probe. Complete expression/static graph and runtime acceptance keep their separate owners;
-these diagnostic repairs change no metadata API, grammar, numeric execution or geometry authority.
+Classifier-only plans no native child/source/output writes. Run mutations alone and consume both
+source restorations before another build/probe. Dispatch captures certify planned effects separately
+from actual native behavior; full runtime/geometry acceptance remains a separate owner.
