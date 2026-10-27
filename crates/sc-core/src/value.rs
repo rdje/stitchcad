@@ -5,7 +5,9 @@ use sc_units::Length;
 use std::collections::BTreeSet;
 
 mod inventory;
-pub use inventory::{CanonicalInputPosition, CanonicalInputs, CanonicalInputsError};
+pub use inventory::{
+    CanonicalInputPosition, CanonicalInputTarget, CanonicalInputs, CanonicalInputsError,
+};
 
 mod scalar;
 pub use scalar::{

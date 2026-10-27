@@ -1,5 +1,5 @@
 //! Owned canonical declarations; metadata keeps borrowing these records rather than copying state.
-use super::{LengthDeclaration, ScalarInputDeclaration};
+use super::{LengthDeclaration, ScalarInputDeclaration, ScalarInputKind};
 use crate::ontology::EntityId;
 use core::fmt;
 use std::collections::BTreeMap;
@@ -130,4 +130,18 @@ impl CanonicalInputs {
             .iter()
             .find(|declaration| declaration.id() == identity)
     }
+}
+
+/// Pinned canonical target representation; a general Length scalar never becomes a dedicated length.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CanonicalInputTarget {
+    /// Existing dedicated length declaration.
+    Length(EntityId),
+    /// Existing general scalar declaration with an explicit expected kind.
+    Scalar {
+        /// Stable target identity.
+        declaration: EntityId,
+        /// Kind expected by this metadata binding, including when no authored value exists.
+        kind: ScalarInputKind,
+    },
 }

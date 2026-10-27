@@ -3,20 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned measurement and Ease source composition
+## _(2026-10-27 UTC)_ — shared canonical target representation
 
-0351 MeasurementInputs owns actual metadata, Ease mappings and sets without copying canonical values.
-Its census extends the existing exact metadata identity positions, then validates every current
-metadata object, every mapping including unused ones and every set with existing validators. Borrowed
-context owners remain local. Unknown/Derived gains no fallback; present negative amounts need explicit
-permission even without set selection. Explicit fit/permission replacements stay current while saved
-set targets remain pinned. Missing mappings/tables or membership never transfer to same-token/POM peers.
-Empty inventories accept; authored empty sets still need explicit tables. Shared getters remain immutable.
-Native9/inventory8/privacy2/strict selected lint/fmt/book/publication pass0. D250132 rows remain baseline,
-delta0. Complete0350/D254 and old Ease book proofs502 compare5 Git spans; public retrieval/current
-contracts remain available. Promotion: existing canonical-source/Ease rules. Caps unchanged; G1still6/18;
-measurement/Ease ownership closes .2.d.2. Profile/material .2.d.3 follows; full host/Design/selected scopes,
-readiness/execution/integration/CI remain later. Structural compression support grants no v1 envelope extension.
+0352 moves the existing length/general-scalar target enum into value::CanonicalInputTarget for reuse
+by Material metadata. DesignParameterTarget remains an identical public alias. A source comparison
+matches the original complete enum after only its public-name substitution; no lookup, conversion,
+state or source semantics change. Existing parameter9/privacy2/strict selected lint/fmt/book/publication
+pass0. D250132 glossary rows remain exactly baseline, delta0. Whole0351 subtree/lesson/ledger503 compares3
+Git spans, preserving all three live ids/statuses. Promotion: existing canonical-source/identity contracts.
+Profile bindings remain symbolic under the canonical decision; G4 owns physical resolution and pins
+remain instantiation context. G1still6/18; Material field/source contracts .6.4.2.d.3.2 follow, with full
+host/Design/readiness/integration/CI pending. No new tests mirror the unchanged enum.
+
+[Whole0351 measurement/Ease lesson](docs/history/stitchcad-devnotes-part503.md) retains exact scope/proofs.
 
 [Whole0350 measurement ownership lesson](docs/history/stitchcad-devnotes-part502.md) retains exact scope/proofs.
 

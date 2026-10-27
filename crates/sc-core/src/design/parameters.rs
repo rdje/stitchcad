@@ -9,22 +9,10 @@ use crate::{
         FormulaDeclaration, FormulaInputOrigin, FormulaScalarInput, FormulaScalarInputAdapterRule,
         FormulaScalarInputOrigin,
     },
-    value::{CanonicalInputs, ScalarInputKind},
+    value::CanonicalInputs,
 };
 
-/// Pinned canonical target representation; a general Length scalar never becomes a dedicated length.
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum DesignParameterTarget {
-    /// Existing dedicated length declaration.
-    Length(EntityId),
-    /// Existing general scalar declaration with an explicit expected kind.
-    Scalar {
-        /// Stable target identity.
-        declaration: EntityId,
-        /// Kind expected by this metadata binding, including when no authored value exists.
-        kind: ScalarInputKind,
-    },
-}
+pub use crate::value::CanonicalInputTarget as DesignParameterTarget;
 
 /// Editable named parameter metadata; it owns no independent numeric value or uncertainty state.
 #[derive(Clone, Debug, PartialEq, Eq)]

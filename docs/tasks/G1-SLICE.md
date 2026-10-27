@@ -813,35 +813,48 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0349 immutable DesignParameters; [whole scope/proof](../history/stitchcad-devnotes-part501.md).
 - ID: `G1-SLICE.6.4.2.d.2`
   Status: `done`
-  Goal: current measurement/Ease inventories and canonical host links without copied values.
-  Children .a owned measurement/landmark/procedure/table inventories; .b owned Ease/set composition.
+  Goal:0350/0351 owned measurement/Ease sources; [whole subtree/proof](../history/stitchcad-devnotes-part503.md).
 - ID: `G1-SLICE.6.4.2.d.2.a`
   Status: `done`
   Goal:0350 immutable MeasurementInventory; [whole scope/proof](../history/stitchcad-devnotes-part502.md).
 - ID: `G1-SLICE.6.4.2.d.2.b`
   Status: `done`
-  Goal: immutable MeasurementInputs owns actual MeasurementInventory, Ease mappings and Ease sets;
-  whole identity census reuses measurement positions then Ease/set order. Existing validators check
-  every actual current target/membership/compression. Values stay borrowed; no numeric or Design proof.
-  Own private identity-iterator extraction, focused native/privacy/lint/book/API sync and whole0350/D254
-  continuity502, including complete old Ease book proof retirement with public retrieval instructions.
-  - [x] REPRODUCE / ISSUE: combined mappings/sets need actual owned metadata/current values. Native
-    measurement_inputs_contract negative-unused/missing/membership cases give9/0, rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): local Ease/Set birth checks borrow supplied contexts; replacing those
-    contexts requires complete current checks. New actual negative/missing-peer controls pass9/0, rc=0.
-  - [x] FIX: exact owned source objects, shared getters and ordered census/current validators; private
-    identity iterator preserves metadata positions. Native9/0 confirms no cached values or contexts.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test
-    measurement_inputs_contract passes9/0, rc=0, target/measurement-inputs-native-0351.log.
-  - [x] NO REGRESSION: inventory8/privacy2/strict selected lint/fmt/book/publication77/110/1444/2361
-    pass0, target/measurement-inputs-*-0351.log; D250132 exact baseline rows/delta0, glossary rc=1.
-  - [x] LOCKSTEP: book/API/status/index/pointer/notes aligned; continuity502 compares5 Git spans0,
-    including complete old Ease proof. Caps unchanged; G1still6/18; metadata/Ease parent closes.
-    promotion: declined (canonical-source/Ease rules). Commit0351; .2.d.3 profile/material contracts next.
-    Full host/Design/selected scope/readiness/bus/integration/CI remains later.
+  Goal:0351 immutable MeasurementInputs; [whole scope/proof](../history/stitchcad-devnotes-part503.md).
 - ID: `G1-SLICE.6.4.2.d.3`
+  Status: `in_progress`
+  Goal: actual material source contracts and explicit profile/context boundary, no fabricated truth.
+  Profile physical resolution remains G4 under the canonical symbolic-binding decision; pins select
+  instantiation context rather than silently binding Design semantic marks to one factory.
+  Children .1 shared canonical targets; .2 Material field contracts; .3 owned material identity/current
+  property/Piece assignment checks; .4 selected-host/profile deferral acceptance before .d.4 composition.
+- ID: `G1-SLICE.6.4.2.d.3.1`
+  Status: `done`
+  Goal: shared value::CanonicalInputTarget with compatible DesignParameterTarget alias; exact existing
+  variants, no conversion/lookup change. Own focused checks/docs and complete0351 continuity503.
+  - [x] REPRODUCE / ISSUE: Material metadata needs the same pinned family/id/kind contract; source
+    comparison proves exact original enum after name substitution, rc=0; no alternate representation.
+  - [x] ROOT CAUSE (WHY + WHERE): target lived inside design/parameters.rs. cargo test -p sc-core
+    --test design_parameters_contract gives9 passed/0 failed, rc=0; exact enum bytes confirm matching.
+  - [x] FIX: common value export, original public DesignParameterTarget alias; selected native9/0,
+    rc=0, target/canonical-target-native-0352.log. No new default, resolution or source-truth claim.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_parameters_contract passes9/0, rc=0.
+  - [x] NO REGRESSION: privacy2/strict selected lint/fmt/book/publication77/111/1444/2361 pass0,
+    target/canonical-target-*-0352.log; D250132 exact baseline rows/delta0, glossary rc=1.
+  - [x] LOCKSTEP: API vocabulary/status/notes/index/pointer aligned; continuity503 matches3 Git spans0.
+    Caps unchanged; G1still6/18. promotion: declined (existing canonical-source/identity contracts).
+    Commit0352; Material .3.2 next; full host/Design/readiness/integration/CI remains later.
+- ID: `G1-SLICE.6.4.2.d.3.2`
   Status: `pending`
-  Goal: actual profile/material source contracts and selected scope pins, no fabricated truth.
+  Goal: Material authored field/source contracts from ontology6; explicit state/source and measured
+  shrinkage stage intent without defaults or executed physical claims.
+- ID: `G1-SLICE.6.4.2.d.3.3`
+  Status: `pending`
+  Goal: actual owned Material collection, current property identities/kinds/state and Piece assignment
+  references, retaining explicit unresolved intent and separate geometry/evidence obligations.
+- ID: `G1-SLICE.6.4.2.d.3.4`
+  Status: `pending`
+  Goal: selected-host/profile context and symbolic G4 deferrals remain explicit; no Factory Profile
+  lookup, physical value inference or implicit Design pin from an instantiation request.
 - ID: `G1-SLICE.6.4.2.d.4`
   Status: `pending`
   Goal: complete source-host/identity composition and actual current metadata binding acceptance.

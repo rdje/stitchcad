@@ -104,10 +104,9 @@ This component grants no metadata binding, current Design revision, evidence tru
 
 ## Owned Design parameters
 
-`sc_core::design::DesignParameters::new(definitions, &inputs)` owns named parameter metadata without
-copying canonical values/states. Every definition supplies distinct metadata id, exact MachineToken
-and DesignParameterTarget: dedicated Length(id), or general Scalar with declaration id/expected kind.
-Family and kind stay pinned; a general Length scalar never substitutes for a dedicated declaration.
+`sc_core::design::DesignParameters::new(definitions, &inputs)` owns named metadata without copying
+canonical state. Shared CanonicalInputTarget pins Length(id) or Scalar{declaration,kind};
+DesignParameterTarget remains a compatible alias. Dedicated and general Length records stay distinct.
 
 Metadata ids/tokens must be unique, ids disjoint from canonical declaration ids, and the eight reserved
 input names cannot be rebound. These checks precede target resolution in authored order. Distinct
@@ -152,7 +151,8 @@ rebind. Tokens prove no source truth, value or display text.
 | `CanonicalInputPosition` | Dedicated-length or general-scalar family and index |
 | `DesignParameters` | Immutable ordered named Design parameter registry |
 | `DesignParameterDefinition` | Editable metadata id, token and pinned canonical target |
-| `DesignParameterTarget` | Dedicated Length id or general Scalar id/expected kind |
+| `CanonicalInputTarget` | Shared pinned declaration family/id/kind; no conversion |
+| `DesignParameterTarget` | Compatible alias of CanonicalInputTarget |
 | `DesignParameter` | Immutable metadata with a current-target declaration query |
 | `DesignParameterError` | Actual identity/name/target/kind refusal |
 | `NoEvidence` | Claimed known value has no evidence references |

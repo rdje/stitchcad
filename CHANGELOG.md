@@ -3,15 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0351 — own measurement and Ease source composition
+## STITCHCAD-G1-0352 — share exact canonical input targets
 
-- Add immutable MeasurementInputs over actual metadata/mappings/sets, with one current identity/target/membership census.
-- Retain canonical values and current compression/fit/permission without caches, defaults or missing-peer reassignment.
-- Native9/inventory8/privacy2/strict selected lint/fmt/book/publication pass0; D250132 rows remain exactly baseline.
-- Complete0350/D254 and old Ease book proofs502 match5 Git spans; retrieval/current contracts preserved; caps unchanged.
-- Measurement/Ease ownership closes .6.4.2.d.2; G1still6/18. Profile/material contracts next; full host/Design/bus/CI pending.
+- Move the existing enum to value::CanonicalInputTarget; retain DesignParameterTarget as an identical public alias.
+- Exact source comparison confirms unchanged variants; parameter9/privacy2/strict selected lint/fmt/book/publication pass0.
+- D250132 glossary rows remain baseline; continuity503 matches3 Git spans and preserves all three task ids/statuses.
+- Caps unchanged; G1still6/18. Material fields next; symbolic profile resolution remains G4, full host/Design/CI pending.
 
 # Sealed archive — earlier slices
+
+| [part503](docs/history/stitchcad-devnotes-part503.md) | whole0351 measurement/Ease subtree, lesson and ledger | 52 lines, 4373 bytes, sha256:53cdcb25… |
 
 | [part502](docs/history/stitchcad-devnotes-part502.md) | whole0350/D254 and historical Ease book proofs | 75 lines, 6228 bytes, sha256:9c0404d2… |
 
