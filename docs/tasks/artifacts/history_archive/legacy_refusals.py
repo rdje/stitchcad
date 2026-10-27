@@ -24,8 +24,7 @@ def baseline(reader, root):
     packed = {row['path'] for path in master['windows'] for row in json.loads(backings[path])['members']}
     records = reader['inventory'](root)[0]
     if reader['_uses_v2'](root):
-        active = json.loads((root / MASTER).read_bytes())
-        manifests = [json.loads((root / path).read_bytes()) for path in active['windows']]
+        manifests = list(reader['flat_snapshot'](root)[3].values())
         revision = next(value['source_revision'] for value in manifests
                         if any(row['kind'] == 'backing' for row in value['members']))
         cohort = {row['path'] for value in manifests if value['source_revision'] == revision
@@ -67,9 +66,9 @@ def main():
         profile['plan_producer'](ROOT, **plan)
         with (work / name).open('xb') as stream:
             stream.write(data)
-    active = json.loads((root / MASTER).read_bytes())
-    first = json.loads((root / active['windows'][0]).read_bytes())
-    revision = first['source_revision']
+    manifests = reader['flat_snapshot'](root)[3].values()
+    revision = next(value['source_revision'] for value in manifests
+                    if any(row['kind'] == 'backing' for row in value['members']))
     assert reader['_git_blob'](ROOT, revision, MASTER, 8192) == files[MASTER]
     original_run = subprocess.run
     original_environment = dict(os.environ)

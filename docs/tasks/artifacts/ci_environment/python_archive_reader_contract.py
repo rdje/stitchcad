@@ -11,11 +11,12 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 ENTRY = ROOT / 'scripts/history_archive.py'
+GENERATIONS = ROOT / 'scripts/history_generations.py'
 PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 WORK = ROOT / 'target/archive-reader-controls' / str(os.getpid())
 LEGACY = ROOT / 'docs/tasks/artifacts/history_archive/legacy_refusals.py'
-CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, LEGACY)
+CORE = (Path(__file__), ENTRY, GENERATIONS, PROFILE_SOURCE, LEGACY)
 BEFORE = '4027b36'
 
 
@@ -174,7 +175,7 @@ def original_cli_controls():
     class Project(ast.NodeTransformer):
         def visit_If(self, node):
             if isinstance(node.test, ast.Call) and isinstance(node.test.func, ast.Name) and node.test.func.id in {
-                    '_uses_v2', '_extended_cli'}:
+                    '_uses_v2', '_uses_v3_document', '_extended_cli'}:
                 return None  # Added version/operation branches have their own native controls.
             return self.generic_visit(node)
 
@@ -197,11 +198,25 @@ def original_cli_controls():
             return node
 
     assert ast.dump(Project().visit(current['main']), include_attributes=False) == ast.dump(old_main, include_attributes=False), 'archive original CLI body changed'
+    # V3 adds closed typed metadata validation before the unchanged v1 successful comparison.
+    # Remove only these exact additions, asserting their presence; never erase arbitrary predicates.
+    additions = ast.parse("""
+require(type(old) is dict and type(old.get('version')) is int and old['version'] in (1, 2, 3),
+        'unsupported committed archive schema')
+document, _ = load_json(root, MASTER, 8192)
+require(old['version'] == 1, 'unsupported committed archive schema')
+fields(old, 'version windows')
+""").body
+    additions = {ast.dump(node, include_attributes=False) for node in additions}
     tails = []
     for fn in (previous['guard_committed'], current['guard_committed']):
         index = next(index for index, node in enumerate(fn.body) if isinstance(node, ast.Assign)
                      and any(isinstance(target, ast.Name) and target.id == 'old' for target in node.targets))
         tail = ast.Module(body=fn.body[index:], type_ignores=[])
+        if fn is current['guard_committed']:
+            assert all(sum(ast.dump(node, include_attributes=False) == addition for node in tail.body) == 1
+                       for addition in additions), 'declared typed metadata adapters changed'
+            tail.body = [node for node in tail.body if ast.dump(node, include_attributes=False) not in additions]
         tails.append(ast.dump(Project().visit(tail), include_attributes=False))
     assert tails[0] == tails[1], 'archive successful committed comparison changed'
     print('archive complete original CLI argv/formats/order/output and successful immutability predicates exact through declared adapters')
@@ -218,6 +233,8 @@ def materialization_capture(label, source=None):
             folders.update(parent for parent in path.parents if parent == destination or parent.is_relative_to(destination))
         inputs = {ENTRY, PROFILE_SOURCE, *(path for folder in (root / '.doctrine/history_archive', root / 'docs/history')
                                         for path in folder.rglob('*') if path.is_file())}
+        if ns['load_json'](root, ns['MASTER'], 8192)[0]['version'] == 3:
+            inputs.add(GENERATIONS)
         saved_env = dict(os.environ)
         stores = {name: str(root / 'stores' / name.lower()) for name in PROFILE['STORES']}
         PROFILE['prepare_producer'](ROOT, sources=CORE, directories=tuple(Path(value) for value in stores.values()))
@@ -331,6 +348,7 @@ def physical_controls():
         ('parent-git', 'Git repository boundary'), ('parent-device', 'off-volume path'),
         ('profile-link', 'unsafe archive profile source'), ('entry-link', 'local regular file'),
         ('entry-missing', 'local regular file'), ('backing-link', 'symlink path refused'),
+        ('backing-hardlink', 'unsafe archive file'),
         ('store-invalid', 'invalid store components'), ('store-in-output', 'contains a store'),
         ('store-in-backing', 'contains a store'), ('destination-escape', 'unsafe path'),
     )
@@ -343,12 +361,15 @@ def physical_controls():
             alias, marker = root / 'alias.py', parent / '.git'
             saved_env = dict(os.environ)
             selected = 'target/copy'
-            if label in ('output-link', 'output-hardlink', 'output-directory', 'parent-git', 'parent-device'):
+            if label in ('output-link', 'output-hardlink', 'output-directory', 'parent-git', 'parent-device', 'backing-hardlink'):
                 PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(parent,))
             if label == 'output-link':
                 output.symlink_to(victim)
             elif label == 'output-hardlink':
-                os.link(victim, output)
+                # Keep the archive valid: output existence and source hard-link safety are
+                # independent predicates. Linking the source would trip the latter first.
+                alias.write_bytes(content)
+                os.link(alias, output)
             elif label == 'output-directory':
                 output.mkdir()
             elif label == 'parent-link':
@@ -362,6 +383,8 @@ def physical_controls():
                 ns['__file__'] = str(alias)
             elif label == 'backing-link':
                 victim.unlink(); victim.symlink_to(ROOT / 'docs/history/window1.md')
+            elif label == 'backing-hardlink':
+                os.link(victim, alias)
             elif label == 'store-invalid':
                 os.environ['TMPDIR'] = 'target/../invalid'
             elif label == 'store-in-output':
@@ -399,6 +422,8 @@ def physical_controls():
                 os.environ.clear(); os.environ.update(saved_env)
                 if alias.is_symlink():
                     alias.unlink()
+                elif label in ('output-hardlink', 'backing-hardlink') and alias.is_file():
+                    alias.unlink()
                 if victim.is_symlink():
                     victim.unlink(); victim.write_bytes(content)
                 if parent.is_symlink():
@@ -408,7 +433,7 @@ def physical_controls():
                 if output.is_symlink() or output.is_file():
                     output.unlink()
             assert victim.read_bytes() == content, label
-    print('archive fourteen physical source/profile/output/store/parent refusals before effects; device observation simulated')
+    print('archive fifteen physical source/profile/output/store/parent refusals before effects; device observation simulated')
 
 
 def omission_controls():

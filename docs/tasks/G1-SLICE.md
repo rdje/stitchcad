@@ -895,22 +895,24 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal: v3 authoring, current clients/permanent transaction smoke and resource proof before product .4.
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.authoring`
   Status: `done`
-  Goal:0393 bounded complete-snapshot append, immutable seals/rollover and multi-window source proof.
-  - [x] REPRODUCE / ISSUE: history_archive.sh verify-retention after b951604:refused1 invalid source path;
-    append target/history-authoring-red-0393 refused1 invalid backing path; no workspace created.
-  - [x] ROOT CAUSE (WHY + WHERE): Git/source diagnostic rc=0: committed-v3 generation paths absent
-    from _git_blob/source bounds; pre-commit old=v2 followed the transition branch. D268 owned/corrected.
-  - [x] FIX: v3_authoring_contract.py:10 physical source/candidate controls and4 early pure refusals0;
-    actual HEAD full preparation/source proof, cross-group multi-window cohort and native tar bytes exact.
-  - [x] ADDRESSED: history_archive.sh verify-retention:996 records/4013358 decodedB rc=0;
-    existing seals/indexed bytes preserved; payload/decoded/line/window/control rollover, slot9 refusal.
-  - [x] NO REGRESSION: v3_reader_contract.py:46 physical controls rc=0; generation_budget.py --self-test:
-    25 budget+4 runtime0; AST comparison:6 old decoder/2 formatter bodies exact0. No Rust changes.
-  - [x] LOCKSTEP: transition_receipts.py --record542:4 exact Git spans0; book/publication/size rc=0.
-    Promotion: decision_history-generations.md. Current-client/permanent smoke/resource proof remains.
+  Goal:0393 bounded append/seals; [whole proof](../history/stitchcad-devnotes-part543.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.clients`
-  Status: `pending`
-  Goal: preserve existing refusal predicates on v3; permanent current-source transaction smoke.
+  Status: `done`
+  Goal:0394 preserve original refusal predicates on v3; permanent committed-source transaction smoke.
+  - [x] REPRODUCE / ISSUE: legacy_refusals.py/window_contract.py fail KeyError windows rc=1;
+    native original immutable-catalog assertion detects unrelated missing decoder; D269 logged/owned.
+  - [x] ROOT CAUSE (WHY + WHERE): source/AST diagnostic rc=0: v2-only discovery, unused v3 dependency
+    in v1 fixtures, new typed guard nodes and source-hardlink masking output-existence predicate.
+  - [x] FIX: legacy_refusals.py:28 pass/0 fail rc=0 with original producer/source/population fixed;
+    window_contract.py:1011 controls/0 fail,5 windows/996 reads rc=0; typed immutability preserved.
+  - [x] ADDRESSED: v3_transaction_smoke.py:27 real interruption/recovery/tar/ledger controls rc=0;
+    --identity-only:real byte-identical install/recovery rc=0; live HEAD/archive/ledger inputs unchanged.
+  - [x] NO REGRESSION: python_archive_reader_contract.py:996 exact files,15 physical refusals,
+    8 actual omission reds rc=0; python_archive_fixture_contract.py:(411,203,9),11 dirs/1077 files rc=0.
+    Original predicate AST comparison retains only exact declared adapters, each required once.
+  - [x] LOCKSTEP: history_archive.sh verify-retention:997 records/4018435 decodedB rc=0;
+    transition_receipts.py --record543:4 exact Git spans0; book/publication/size rc=0. No Rust changes.
+    Promotion: history-generations decision. Full-budget resources and feature acceptance remain .resources.
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.resources`
   Status: `pending`
   Goal: eight full groups and isolated resource measurements; feature acceptance before product .4.

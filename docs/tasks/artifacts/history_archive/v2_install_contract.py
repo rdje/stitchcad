@@ -15,27 +15,31 @@ PROFILE = ROOT / 'scripts/local_environment.py'
 PRODUCER = Path(__file__).with_name('v2_migration.py')
 GENERATIONS = ROOT / 'scripts/history_generations.py'
 HELPER = ROOT / 'docs/tasks/artifacts/changelog/changelog_pointers.py'
-CHANGELOG = ROOT / 'CHANGELOG.md'
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('workspace')
+    parser.add_argument('--source', default='.', help='project or exact committed snapshot below target/')
     args = parser.parse_args()
     assert args.workspace.startswith('target/') and '..' not in Path(args.workspace).parts
+    assert args.source == '.' or (args.source.startswith('target/') and '..' not in Path(args.source).parts)
+    source_root = ROOT / args.source
+    ledger = source_root / 'CHANGELOG.md'
     prepared = ROOT / args.workspace
     work = ROOT / 'target/scratch/v2_install_contract' / str(os.getpid())
     profile = runpy.run_path(str(PROFILE))
     profile['plan_producer'](ROOT, sources=(Path(__file__), INSTALLER, PRODUCER, READER, GENERATIONS,
-                                          PROFILE, HELPER, CHANGELOG, prepared / 'source.json'), directories=(work,))
+                                          PROFILE, HELPER, ledger, prepared / 'source.json'), directories=(work,))
     reader = runpy.run_path(str(READER))
+    source_root = reader['archive_root'](source_root)
     install = runpy.run_path(str(INSTALLER))
     audit = json.loads((prepared / 'source.json').read_bytes())
     candidates = {row['path']: (prepared / 'candidate' / row['path']).read_bytes() for row in audit['candidate_files']}
-    original = {row['path']: (ROOT / row['path']).read_bytes() for row in audit['source_files']}
+    original = {row['path']: (source_root / row['path']).read_bytes() for row in audit['source_files']}
     sources = (Path(__file__), INSTALLER, PRODUCER, READER, GENERATIONS, PROFILE,
-               HELPER, CHANGELOG, prepared / 'source.json',
-               *(prepared / 'candidate' / name for name in candidates), *(ROOT / name for name in original))
+               HELPER, ledger, prepared / 'source.json',
+               *(prepared / 'candidate' / name for name in candidates), *(source_root / name for name in original))
     frozen = {path: path.read_bytes() for path in sources}
     profile['plan_producer'](ROOT, sources=sources, directories=(work,))
     assert not work.exists()
@@ -77,7 +81,7 @@ def main():
         else:
             raise AssertionError('interruption not reached')
         exact(target, audit['source_files'])
-        assert reader['inventory'](target)[0] == reader['inventory'](ROOT)[0]
+        assert reader['inventory'](target)[0] == reader['inventory'](source_root)[0]
         checks += 1
     base, target = fixture('abrupt')
     child = ("import os,runpy; from pathlib import Path; "
@@ -96,7 +100,7 @@ def main():
     install['install'](base, target)
     exact(target, audit['candidate_files'])
     checks += 1
-    records = reader['inventory'](ROOT)[0]
+    records = reader['inventory'](source_root)[0]
     command = [sys.executable, '-I', '-B', str(READER), '--root', str(target)]
     current_sources = (*sources, *reader['backing_sources'](target, profile))
     profile['plan_producer'](ROOT, sources=current_sources)
@@ -109,10 +113,10 @@ def main():
     profile['plan_producer'](ROOT, sources=current_sources, directories=tuple(sorted(directories)), output_files=outputs)
     subprocess.run([*command, 'materialize', 'target/review'], cwd=ROOT, check=True, capture_output=True)
     assert {path.relative_to(recovered).as_posix(): path.read_bytes() for path in recovered.rglob('*.md')} == records
-    assert reader['backing_inventory'](target) == reader['backing_inventory'](ROOT)
+    assert reader['backing_inventory'](target) == reader['backing_inventory'](source_root)
     checks += 3
     # Independent OS tar lists and emits concatenated first-level bytes, without the writer/reader.
-    expected = {**records, **reader['backing_inventory'](ROOT)}
+    expected = {**records, **reader['backing_inventory'](source_root)}
     candidate_master = json.loads(candidates[reader['MASTER']])
     if candidate_master['version'] == 3:
         windows = [path for row in candidate_master['generations']
@@ -129,9 +133,9 @@ def main():
         assert subprocess.check_output(['tar', '-xOzf', str(payload)]) == b''.join(expected[name] for name in names)
         checks += 1
     profile['plan_producer'](ROOT, sources=sources)
-    current = subprocess.check_output([sys.executable, '-I', '-B', str(HELPER), str(ROOT), str(ROOT)])
+    current = subprocess.check_output([sys.executable, '-I', '-B', str(HELPER), str(source_root), str(source_root)])
     profile['plan_producer'](ROOT, sources=(*sources, *(target / name for name in candidates)))
-    migrated = subprocess.check_output([sys.executable, '-I', '-B', str(HELPER), str(ROOT), str(target)])
+    migrated = subprocess.check_output([sys.executable, '-I', '-B', str(HELPER), str(source_root), str(target)])
     assert current == migrated
     checks += 1
     # A successful install can also be explicitly rolled back. Only the archive trees are owned;

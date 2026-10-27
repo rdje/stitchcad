@@ -507,7 +507,7 @@ def load_profile():
 
 def backing_sources(root, profile):
     """Complete nonproducing input validation, independent of unused store settings."""
-    sources = [Path(__file__), PROFILE_SOURCE, GENERATIONS_SOURCE, root / MASTER]
+    sources = [Path(__file__), PROFILE_SOURCE, root / MASTER]
     folders = [root / '.doctrine/history_archive', root / 'docs/history']
     for folder in folders:
         profile['directory'](PROJECT, profile['producer_path'](PROJECT, folder))
@@ -517,6 +517,11 @@ def backing_sources(root, profile):
                 folders.append(path)
             elif path not in sources:
                 sources.append(path)
+    # The generation decoder is an input only to v3. Retained v1 readers/fixtures do not
+    # load or require an unused decoder beside their exact original source population.
+    document, _size = load_json(root, MASTER, 8192)
+    if _uses_v3_document(document):
+        sources.insert(2, GENERATIONS_SOURCE)
     for path in sources:
         relative = profile['producer_path'](PROJECT, path)
         profile['directory'](PROJECT, Path(relative).parent.as_posix())

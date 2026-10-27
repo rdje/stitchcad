@@ -13,10 +13,11 @@ ROOT = Path(__file__).resolve().parents[4]
 ENTRY = ROOT / 'docs/tasks/artifacts/history_archive/history_archive_probes.py'
 PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 READER = ROOT / 'scripts/history_archive.py'
+GENERATIONS = ROOT / 'scripts/history_generations.py'
 SHELL = ROOT / 'scripts/history_archive.sh'
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 LEGACY = ROOT / 'docs/tasks/artifacts/history_archive/legacy_refusals.py'
-CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, READER, SHELL, LEGACY)
+CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, READER, GENERATIONS, SHELL, LEGACY)
 WORK = ROOT / 'target/archive-fixture-controls' / str(os.getpid())
 BEFORE = '1b8fc23'
 
@@ -119,8 +120,7 @@ def capture(label, source=None, *, metadata_mode=None, interrupt=False):
         reader = runpy.run_path(str(READER))
         revision = 'HEAD'
         if reader['_uses_v2'](ROOT):
-            master = reader['_master_v2'](ROOT)[0]
-            manifests = [reader['load_json'](ROOT, name, 65536)[0] for name in master['windows']]
+            manifests = reader['flat_snapshot'](ROOT)[3].values()
             revision = next(value['source_revision'] for value in manifests
                             if any(row['kind'] == 'backing' for row in value['members']))
         names = subprocess.check_output(['git', 'ls-tree', '--full-tree', '-r', '--name-only', revision, '--',

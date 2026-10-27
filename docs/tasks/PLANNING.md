@@ -1175,14 +1175,18 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 
 ## D268 — committed-v3 Git control paths
 
-Owner G1-SLICE.6.4.5.capacity.apply.accept.authoring; immediate. After b951604, native
-history_archive.sh verify-retention refuses1: invalid source path. Pre-commit old=v2 did not exercise
-committed-v3 generation controls. _git_blob allowlist and preparer source_bound omitted generation
-paths; ordinary retrieval unaffected. Corrected exact generation1..8 rules and native HEAD fixture.
+[Whole corrected report/proofs0393](../history/stitchcad-devnotes-part543.md).
 
-- [x] ROOT CAUSE: history_archive.sh verify-retention after b951604 refused1 invalid source path;
-  Git/source diagnostic0 identifies both missing rules and old=v2 pre-commit coverage.
-- [x] ADDRESSED: same command:996 records/4013358 decodedB rc=0; v3_authoring_contract.py:10 native
-  controls/4 pure refusals0, actual committed-HEAD preparation and exact Git/native tar bytes.
-- [x] NO REGRESSION: v3_reader_contract.py:46/0; generation_budget.py --self-test:25+4/0;
-  legacy6 decoder/2 formatter AST exact0; book/publication/size and4-span542 rc=0.
+## D269 — generation client schema/dependency assumptions
+
+Owner G1-SLICE.6.4.5.capacity.apply.accept.clients; immediate. Legacy/window native entries fail
+KeyError windows on v3; original immutable-catalog assertion then detects an unrelated missing
+unused generation decoder in v1 copied fixtures. Discover flat windows without changing predicates;
+require decoder only for v3. Both companions and permanent transaction smoke corrected0394.
+
+- [x] ROOT CAUSE: native legacy/window KeyError rc=1; AST diff rc=0 locates added typed guard
+  nodes. Source-hardlink fixture masks original output-existence predicate; fixtures now independent.
+- [x] ADDRESSED: legacy28/window1011/transaction27 and --identity-only rc=0; original assertions
+  and typed immutability intact, exact original/live bytes preserved; new source-hardlink control added.
+- [x] NO REGRESSION: reader companion996 exact files/15 physical/8 omission reds rc=0; fixture
+  companion(411,203,9) rc=0; retention997/4-span543/book/publication/size rc=0. No deep/full CI claim.

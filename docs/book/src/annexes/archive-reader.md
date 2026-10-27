@@ -68,8 +68,7 @@ resident bytes. These bound storage/decode, not process memory.
 All but the last generation are sealed. New raw drafts belong only to the active group and remain
 unsealed until capture; all committed raw records still retain exact bytes. Orphans, shared ownership,
 duplicate identities, links, malformed indices and reordered/removed seals refuse. Earlier v1/v2
-schemas retain their original4MB/60000-line rules. Exhaustion requires a new retention decision. Append/seal authoring is implemented; current-client/permanent smoke
-and full-budget resource acceptance remain open.
+schemas retain their original4MB/60000-line rules. Exhaustion requires a new retention decision. Append/seal, current-client and transaction checks pass; full-budget resource acceptance remains open.
 
 ## Independent controls
 
@@ -78,10 +77,12 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py --real
 python3 -I -B docs/tasks/artifacts/history_archive/v3_reader_contract.py
 python3 -I -B docs/tasks/artifacts/history_archive/v3_authoring_contract.py
+python3 -I -B docs/tasks/artifacts/history_archive/v3_transaction_smoke.py
 ```
 
 V3 fixtures reconstruct the frozen cohort through logical bytes as history grows. Native tar/tree-hash
-oracles and full-current retention checks remain separate.
+oracles and full-current retention checks remain separate. Transaction smoke uses a committed HEAD
+archive/ledger copy; identity candidates cover commits without raw drafts.
 
 ## Refusal fixture maintenance
 
@@ -96,12 +97,11 @@ python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
 ```
 
-The native entry preserves28 original calibrated cases. The companion captures plans/effects with
-simulated child responses, proving dispatch separately. Its --deep and physical/body calibration
-remain .f.fixture-verification under the [checking policy](checking-policy.md); no full campaign pass.
-The activation-omission parser has a focused regression. Historical traps
-use capture-pinned v1 backings: only deliberate raw-read faults receive exact logical substitution;
-the original missing-public-read assertion remains. Legacy catalogs/non-changelog rows stay valid.
+The native entry retains28 calibrated cases. Its companion captures plans/effects with simulated
+children; --deep and further physical/body calibration remain .f.fixture-verification under the
+[checking policy](checking-policy.md). Activation-omission parsing has a focused regression.
+Capture-pinned v1 traps substitute logical bytes only for deliberate raw-read faults, retaining the
+original missing-public-read assertion. Legacy catalogs/non-changelog rows stay valid.
 
 ## Guarded migration tooling
 
@@ -117,13 +117,13 @@ Append requires committed bounded raw records. Guards survive Python -O.
 archive_tools=docs/tasks/artifacts/history_archive
 archive_owner=G1-SLICE.6.4.5.capacity.apply.accept.authoring
 # Choose ONE preparation:
-python3 -I -B "$archive_tools/v2_migration.py" prepare target/history-transition # v1 to v2
-python3 -I -B "$archive_tools/v2_migration.py" append target/history-transition --owner "$archive_owner" # v2/v3 capture
-python3 -I -B "$archive_tools/v2_migration.py" generations target/history-transition --owner "$archive_owner" # v2 to v3
-python3 -I -B "$archive_tools/v2_migration.py" seal target/history-transition --owner "$archive_owner" # v3 rollover
+python3 -I -B "$archive_tools/v2_migration.py" prepare target/archive # v1 to v2
+python3 -I -B "$archive_tools/v2_migration.py" append target/archive --owner "$archive_owner" # v2/v3 capture
+python3 -I -B "$archive_tools/v2_migration.py" generations target/archive --owner "$archive_owner" # v2 to v3
+python3 -I -B "$archive_tools/v2_migration.py" seal target/archive --owner "$archive_owner" # v3 rollover
 # Install; after interruption, recover before archive use:
-python3 -I -B "$archive_tools/v2_install.py" install target/history-transition
-python3 -I -B "$archive_tools/v2_install.py" recover target/history-transition
+python3 -I -B "$archive_tools/v2_install.py" install target/archive
+python3 -I -B "$archive_tools/v2_install.py" recover target/archive
 ```
 
 Recovery classifies both trees before effects: only exact original/staged/installed states qualify.

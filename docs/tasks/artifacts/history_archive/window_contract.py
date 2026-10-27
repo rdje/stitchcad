@@ -39,6 +39,34 @@ def catalog_title(root, manifest):
     assert title == '# Retained history — window ' + number, 'catalog title identity mismatch'
 
 
+def groups(document, read):
+    if document['version'] == 3:
+        return [json.loads(read(row['path'])) for row in document['generations']]
+    return [document]
+
+
+def resign_catalog_fixture(root, catalog):
+    """Keep a prose/label fixture structurally valid under the new whole-tree seal predicate."""
+    index = json.loads((root / MASTER).read_bytes())
+    if index['version'] != 3:
+        return
+    for row in index['generations']:
+        group = json.loads((root / row['path']).read_bytes())
+        paths = [row['path'], *(item['path'] for item in group['legacy_catalogs'])]
+        for name in group['windows']:
+            value = json.loads((root / name).read_bytes())
+            paths.extend((name, value['payload'], value['catalog']))
+        if catalog.relative_to(root).as_posix() in paths:
+            stream = b'StitchCAD-history-generation-tree-v1\0'
+            for name in sorted(paths):
+                data = (root / name).read_bytes()
+                stream += ('%s\0%d\0%s\n' % (name, len(data), hashlib.sha256(data).hexdigest())).encode()
+            row['tree_sha256'] = hashlib.sha256(stream).hexdigest()
+            (root / MASTER).write_text(json.dumps(index, indent=2) + '\n')
+            return
+    raise AssertionError('catalog fixture has no generation owner')
+
+
 def fixture():
     root = WORK / 'fixture'
     if root.exists():
@@ -65,14 +93,16 @@ if WORK.exists():
     shutil.rmtree(WORK)
 WORK.mkdir(parents=True)
 try:
-    manifest_paths = json.loads((ARCHIVE / MASTER).read_text())['windows']
+    document = json.loads((ARCHIVE / MASTER).read_text())
+    archive_groups = groups(document, lambda path: (ARCHIVE / path).read_bytes())
+    manifest_paths = [name for group in archive_groups for name in group['windows']]
     manifests = [json.loads((ARCHIVE / path).read_text()) for path in manifest_paths]
     for manifest in manifests:
         catalog_title(ARCHIVE, manifest)
         checks += 1
     declared = {row['path']: row for manifest in manifests for row in manifest['members'] if row.get('kind', 'record') == 'record'}
     catalog_paths = {manifest['catalog'] for manifest in manifests}
-    catalog_paths.update(row['path'] for row in json.loads((ARCHIVE / MASTER).read_text()).get('legacy_catalogs', []))
+    catalog_paths.update(row['path'] for group in archive_groups for row in group.get('legacy_catalogs', []))
     raw = {path.relative_to(ARCHIVE).as_posix(): path.read_bytes()
            for path in (ARCHIVE / 'docs/history').glob('*.md')
            if path.relative_to(ARCHIVE).as_posix() not in catalog_paths}
@@ -111,6 +141,7 @@ try:
     lines = catalog.read_text().splitlines(keepends=True)
     lines[0] = '# Retained history — window 0\n'
     catalog.write_text(''.join(lines))
+    resign_catalog_fixture(root, catalog)
     success(command(root, 'verify'))
     try:
         catalog_title(root, newest)
@@ -153,12 +184,17 @@ try:
     root = fixture()
     catalog = root / newest['catalog']
     catalog.write_text(catalog.read_text() + '\nFixture control prose.\n')
+    resign_catalog_fixture(root, catalog)
     success(command(root, 'verify'))
     checks += 1
     prior = subprocess.run(['git', 'show', 'HEAD:' + MASTER], cwd=ROOT, capture_output=True)
-    if prior.returncode == 0 and newest_path in json.loads(prior.stdout)['windows']:
+    committed = [] if prior.returncode else groups(json.loads(prior.stdout), lambda path:
+        subprocess.check_output(['git', 'show', 'HEAD:' + path], cwd=ROOT))
+    if any(newest_path in group['windows'] for group in committed):
         result = command(root, 'verify-retention')
-        assert result.returncode == 1 and b'committed retained file changed' in result.stderr, (
+        sealed = json.loads(prior.stdout)['version'] == 3 and any(newest_path in group['windows'] for group in committed[:-1])
+        expected = b'committed generation seal changed' if sealed else b'committed retained file changed'
+        assert result.returncode == 1 and expected in result.stderr, (
             result.returncode, result.stdout, result.stderr)
         checks += 1
         print('  window refusal: newest committed catalog edit rc=1')

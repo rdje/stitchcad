@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-27`
-- **Status:** `active` — active v3 read/cutover authority; authoring available; client/resource acceptance remains owned.
+- **Status:** `active` — active v3 read/cutover authority; authoring available; client/transaction checks pass; resource acceptance remains owned.
 - **Owner / source:** G1-SLICE.6.4.5.capacity.apply; director delegates the decision and requires
   signoff/production quality.0391 selects self-contained retrieval over conditional Git receipts.
 
@@ -11,6 +11,8 @@ answers: "how does retained history grow after the first aggregate budget is ful
 answers: "what pins source and recovery audit during generation cutover?"
 
 answers: "how do append and explicit seal preserve a complete cohort across generations?"
+
+answers: "how do existing refusal clients retain their predicates under generation storage?"
 
 ## Authority and scope
 
@@ -114,3 +116,16 @@ new retirement; uncaptured drafts remain unsealed and byte-exact. Empty seals an
 workspace activation. Capture of one record is valid in v3; original v2 two-record rules remain fixed.
 Git proof admits only exact generation1..8 control paths; committed-v3 HEAD fixtures exercise that
 branch independently of the initial v2 transition. Client/resource feature acceptance remains open.
+
+## Client acceptance0394
+
+Legacy cohort discovery uses flat published manifests; the original v1 producer/population and28
+assertions remain unchanged. V1 evidence readers do not require an unused generation decoder; v3
+plans include it explicitly. Window title/prose fixtures re-sign only their synthetic tree metadata,
+keeping inventory valid while independently checking title and committed immutability predicates.
+Original CLI/guard comparison adapts only exact declared new validation nodes, requiring each node's
+presence once. Output-hardlink fixtures keep archive sources valid; source-hardlink refusal is a
+separate physical control. Permanent transaction smoke freezes current committed archive/ledger bytes,
+uses real target-only swaps and preserves all live inputs; byte-identical candidates also exercise
+actual installation/recovery when no raw records exist. Deeper authority/platform/resource proof is
+separately owned; these focused checks do not claim its completion.

@@ -3,19 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — bounded generation authoring and committed-v3 evidence
+## _(2026-10-27 UTC)_ — generation client predicates and permanent transaction smoke
 
-0393 captures all committed raw records, splitting payloads and filling bounded groups before ordered
-rollover. Explicit seal opens an active group before retirement; unsealed drafts retain exact bytes.
-Existing indexed files/sealed descriptors never move or change. Slot9 and empty seals refuse before
-workspace activation. Complete same-revision source proof spans all windows/groups. One record works
-in v3; original v2 formatter/two-record/report rules remain. Native10 source/candidate controls and4
-pure refusals pass0, including actual GitHEAD full preparation and independent OS tar byte oracles.
-D268 post-commit v3 retention failed closed: generation paths were missing from Git/source bounds;
-old=v2 pre-commit proof exercised only transition. Exact generation1..8 rules now pass native committed
-HEAD proof. Reader46, budget25/runtime4, old6 decoder/2 formatter AST and4-span542 pass0. No Root
-archive install in this slice. Promotion: history-generations decision. Client/permanent transaction
-smoke and full-budget resources remain immediate; full CI/platform integration remains deferred.
+0394 fixes D269: v2-only window/cohort discovery and an unused v3 dependency blocked original v1
+fixtures. Active v3 plans include its decoder; v1 copies do not require it. Original28 native legacy
+assertions/source/population remain unchanged. Window1011 controls/996 reads pass0; title/prose
+fixtures re-sign only owned metadata so inventory stays valid and committed immutability still refuses.
+The reader companion compares original predicates after removing only exact new typed validation
+adapters, each required once. Output-hardlink now links a separate fixture file, preserving the
+original destination-exists assertion; source-hardlink is a separate refusal. Reader996 exact files,
+15 physical refusals/8 compiled omission reds; fixture(411,203,9),11 directories/1077 files pass0.
+Permanent smoke freezes current GitHEAD archive/ledger and runs27 real interruption/recovery/tar/ledger
+controls under target; live inputs remain exact. Focused --identity-only proves identical-byte real
+install/recovery states for no-raw fallback. Four-span543/book/publication/size pass0. Promotion:
+history-generations decision. Resource/full-feature acceptance next; deep authority/platform/CI deferred.
+
+[Whole0393 authoring lesson](docs/history/stitchcad-devnotes-part543.md) retains bounded cohort/seal and D268 proofs.
 
 [Whole0391 lesson](docs/history/stitchcad-devnotes-part541.md) retains its scope, budget proof and authority.
 
