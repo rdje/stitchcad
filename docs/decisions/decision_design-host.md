@@ -22,8 +22,8 @@ object membership; semantic correctness of the metadata-to-target relation belon
 implementation. Canonical replacement triggers current validation, without remembered success.
 
 MeasurementInputs now implements the port using actual owned records and original validators.
-The port is not full Design assembly: SizeSet ownership and other cross-component identity scopes
-retain the following task children. Logical profile refs
+Combined source-host/Design assembly and remaining cross-component identity scopes retain their
+following task children. Logical profile refs
 and evaluation context pins keep their G4 deferrals even if canonical numeric ids happen to coincide.
 No lookup through a label, fallback value, profile selection, readiness or execution follows admission.
 
@@ -35,5 +35,6 @@ Common SizeSetMetadata now owns membership/axes/break metadata separately from c
 measurement/Ease sources. Its higher-ranked callback reconstructs temporary actual contexts, checks
 all source identities/current validators before invocation and prevents borrowed contexts escaping.
 GarmentSizeSet and MtmSizeSet now own actual chart-family sources over that common component.
-Unified source-host and full Design composition remain later children. The common component alone is not
+SizeSetInventory now owns explicit family sources with whole-current exact-reference checks.
+The combined source-host and full Design composition remain later children. The common component alone is not
 a complete SizeSet, and the Design still holds an external reference.

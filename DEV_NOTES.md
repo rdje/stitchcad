@@ -3,25 +3,27 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned MTM sources with actual body/Ease contexts
+## _(2026-10-27 UTC)_ — explicit owned SizeSet inventory and exact current references
 
-0361 MtmSizeSet owns singleton common metadata and the actual immutable chart. All supplied input/
-common/chart ids are disjoint before current checks. Temporary Ease/MTM/break contexts share actual
-membership, measurement context and logical Design table. Readonly view contexts permit separate
-body/Ease canonical declaration queries; no summed value, profile selection or cache is invented.
-Partial mappings remain drafts; path queries preserve original coverage and GradeRulesUnsupported
-chart/member refusal. Native cases compare actual source pointers and exact refs, keep partial/draft
-rules, reject a chart-axis alias and refuse replacement missing Ease sources before invoking a view.
-D256 was reproduced by all3 SizeSetInputError source branches exposing boxes: [false,false,false],
-rc=101. issue.as_ref() exposes original chart/MTM/break error types; the same public contract passes.
-Native5/privacy3/strict selected lint/fmt/book/publication pass0; D250132 exact baseline rows/delta0,
-glossary rc=1. Continuity512 compares4 Git spans for whole0360 and historical builtin-proof blocks;
-current semantics/commands retained. Caps unchanged; G1still6/18. Promotion declined: existing
-host/context ownership. .6.4.2.d.4.3.c.3 unified sources/host next. Full Design/execution/physical/
-profile/integration/CI remains unverified.
+0362 SizeSet retains actual Garment/Mtm source ownership and delegates original current/path causes.
+SizeSetInventory owns authored order, checking shared input and every owned set source id before
+current semantics. Distinct set identities cannot reuse an axis/member/chart id. Reference queries
+validate the entire current inventory, then require exact id/revision and return the actual object
+with inventory/canonical/metadata borrows retained. Raw identity inspection supplies no current proof.
+Empty explicit inventories mint nothing; canonical declarations can be shared through references.
+Actual MTM and separately authored singleton garment sources use the same canonical inputs and
+matching member labels; their explicit provenance remains distinct. Missing/wrong pins refuse;
+removing a garment-only Count coordinate blocks even a selected still-valid MTM source. Native cases
+also watch duplicate full sets and cross-set axis aliases with exact positions. Shared MTM fixture
+body equals the committed original; its5 original contracts and6 new inventory cases pass0.
+Privacy3/strict selected lint/fmt/book/publication pass0; D250132 exact baseline rows/delta0,
+glossary rc=1. Continuity513 compares6 exact Git spans for whole0361/D256/call-lookup proofs and
+complete historical .5e.1a.h/journal; original unknown-capture boundary remains explicit. Caps
+unchanged; G1still6/18. Promotion declined: existing external-set/context ownership. Actual combined
+source host .6.4.2.d.4.3.c.3.b next; full Design/execution/physical/profile/integration/CI unverified.
 
 
-[Complete owned garment source lesson](docs/history/stitchcad-devnotes-part512.md) retains
+[Complete owned MTM source/D256 lesson](docs/history/stitchcad-devnotes-part513.md) retains
 its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review

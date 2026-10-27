@@ -9,15 +9,18 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0361 — own actual MTM SizeSet sources and preserve typed causes
 
-- Own exact singleton common/chart sources; derive actual shared body/Ease contexts with readonly quantity accessors.
-- Preserve original draft/coverage/grading refusals and canonical body/Ease records; no computed sum or cached context.
-- Fix D256: composite chart/MTM/break sources expose concrete causes; all3 failing-before public downcasts now pass.
-- Native5/privacy3/strict selected lint/fmt/book/publication pass0; D250132 exact baseline rows/delta0.
-- Whole0360/builtin continuity512 matches4 Git spans; caps unchanged; G1still6/18. Unified host/full Design/CI remains later.
+## STITCHCAD-G1-0362 — own explicit SizeSet families and validate complete external inventories
+
+- Add owned SizeSet family and private authored inventory with complete cross-set source identity checks.
+- Exact reference queries revalidate all sources and borrow actual id/revision targets; singleton garment provenance stays explicit.
+- Native6+5/privacy3/strict selected lint/fmt/book/publication pass0; moved MTM fixture body exact; D250132 rows baseline.
+- Whole0361/D256/call-lookup/complete historical handoff continuity513 matches6 Git spans; original unknown boundary retained.
+- Caps unchanged; G1still6/18. Actual combined host/full Design/execution/physical/integration/CI remains later.
 
 # Sealed archive — earlier slices
+
+| [part513](docs/history/stitchcad-devnotes-part513.md) | whole0361/D256, historical call-lookup and handoff/journal proofs | 119 lines, 9481 bytes, sha256:97dc7fab… |
 
 | [part512](docs/history/stitchcad-devnotes-part512.md) | whole0360 and historical builtin proofs | 74 lines, 6227 bytes, sha256:45321f24… |
 

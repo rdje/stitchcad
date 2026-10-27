@@ -99,47 +99,22 @@ refusals retain their earlier phase; this lookup grants no syntax or normalized-
 
 ## Verification and remaining boundary
 
-Five public contracts independently enumerate the ordinary calls, envelope aliases, unknown and
-reserved names, source order, alternatives, tags, privacy and borrowed query identity. Two negative
-Rustdoc examples verify private construction and refusal lifetimes. Actual compiled source faults
-must fail body assertions and restore every source byte.
-The direct mutation entry resolves its selected mode and all paths before source reads or
-mutation. Ordinary mode declares two inputs (calls.rs and the current public test), one mutable
-implementation source, and nineteen logs: fault-1.log through fault-18.log plus restored.log.
-The test has no compile-time grammar include. Existing directory and store guards remain active;
-native children inherit prepared local stores, the selected channel and unrelated environment.
+Public native/privacy contracts check exact callee spelling, source order, envelope precedence,
+query lifetimes and diagnostic payloads. Historical fault sets, counts, dispatch controls and
+restoration receipts remain in `docs/history/stitchcad-devnotes-part513.md`:
 
 ```bash
+python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part513.md
+cargo test -p sc-core --test formula_call_lookup_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
 ```
 
-Classifier-only mode checks all eighteen unique fault anchors and current test macros. It declares
-zero output files and zero mutable sources, and launches no native child. Directory/store
-preconditions still run. Read-only source hard links and unused log aliases therefore grant no file
-write authority. Ordinary mode refuses a hard-linked mutable source, aliased first/restored log,
-or missing current test before source reads, mutation, logging or child dispatch.
-
-A qualifying failed-body thread panic must identify a current guarded assertion macro by exact
-path, line and UTF-8 byte column. Custom assertion messages remain valid; nonthread compiler notes,
-invalid UTF-8 paths, expect panics and test-name noise refuse. Independent controls exercise both
-modes, thirteen plan/effect omissions and the former permissive predicate; six actual copied-entry
-refusals watch the physical boundary. A separate read-only entry copy proves three source hard
-links and two unused log aliases preserve the victim, inputs and environment without file/native effects.
-
-The native entry retains all eighteen original faults and both Cargo argument lists. Each fault
-runs the full five-test public target; failed bodies must reach current assertion sites. Exact
-source restoration precedes the final full-target rebuild, including the exception path. The
-native verifier checks all failed-body sets against predictions authored before replay, freezes
-seventy-two inputs including all sixty-three production Rust files, and selects the current
-five-test executable through Cargo artifact metadata. These scoped checks do not establish
-expression execution, geometry or production approval.
-
-The independent reference producer runs 166 actual cases, with exact complete payloads and
-argument, namespace, value and execution traps. Twelve actual compiled counterfactuals prove
-name/source/scope/alternative retention and callee-before-argument precedence at static and runtime
-entry points. These controls address D136/D137; the separate [reference expression dimension payloads](formula-wanted-signatures.md#reference-expression-dimension-payloads)
-are verified at G1-SLICE.5b.3c.2b.1. None supplies accepted expression, whole-graph, value or geometry proof.
+Classifier-only plans no native children/source/output writes. Run mutations alone and consume
+source restoration before another build/probe. Dispatch captures certify effects separately from
+native behavior. Static/runtime reference payload and argument traps retain this precedence;
+[dimension payloads](formula-wanted-signatures.md#reference-expression-dimension-payloads) have their
+separate contract. Callee lookup grants no accepted-expression, whole-graph, value or geometry proof.
 
 The durable engineering decision is `docs/decisions/decision_call-lookup.md`; its verification
 claims this metadata scope, with independent production approval unclaimed.

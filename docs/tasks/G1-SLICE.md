@@ -868,23 +868,34 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0360 owned garment SizeSet sources; [whole scope/proof](../history/stitchcad-devnotes-part512.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.2`
   Status: `done`
-  Goal: owned MTM sources/current views; D256 concrete causes fixed.
-  - [x] REPRODUCE / ISSUE: D256 direct source types give[false,false,false] rc=101 before fix;
-    target/mtm-size-owner-before-0361.log retains the public downcast assertion.
-  - [x] ROOT CAUSE (WHY + WHERE): SizeSetInputError source branches return boxes; selected
-    cargo test -p sc-measure --test mtm_size_set_contract fails1 rc=101 before issue.as_ref().
-  - [x] FIX: owned common/chart sources, complete ids and actual shared Ease contexts;
-    native5/0 rc=0 proves body/Ease pointers, draft rules, aliases and replacement refusal.
-  - [x] ADDRESSED: selected mtm_size_set_contract gives5/0 rc=0, including all3 concrete
-    error-source types; target/mtm-size-owner-native-0361.log.
-  - [x] NO REGRESSION: privacy3/strict selected Clippy/fmt/book/publication79/119/1457/2395
-    pass0; D250132 baseline rows/delta0, glossary rc=1.
-  - [x] LOCKSTEP: docs/frontier aligned; transition_receipts.py512
-    compares4 Git spans rc=0, whole0360/builtin proofs; caps unchanged; G1still6/18.
-    promotion: declined (existing context ownership). Commit0361; .c.3 unified host next.
+  Goal:0361 owned MTM sources/D256; [whole scope/proof](../history/stitchcad-devnotes-part513.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: unified actual external set sources and exact Design-reference/host acceptance.
+  Children .a owned unified inventory; .b actual measurement/set source-host port; .c coupled acceptance.
+- ID: `G1-SLICE.6.4.2.d.4.3.c.3.a`
+  Status: `done`
+  Goal: explicit owned SizeSet families/inventory with complete current source ids and exact pins.
+  - [x] REPRODUCE / ISSUE: standalone valid sets can alias each other's owned ids; selected
+    cargo test -p sc-measure --test size_set_inventory_contract passes6/0 rc=0, target/*native-0362.log.
+  - [x] ROOT CAUSE (WHY + WHERE): per-set validators have no other set inventory; distinct set ids
+    sharing axis80 refuse with exact both-owner positions, native6/0 rc=0 through local_environment.py.
+  - [x] FIX: explicit owned family, complete private inventory/current checks and actual exact-ref
+    borrows; native6/0 rc=0 retains singleton garment provenance and unselected-source refusal.
+  - [x] ADDRESSED: selected inventory6+MTM5 pass0, target/size-inventory-native-0362.log;
+    shared MTM fixture body equals committed original byte-for-byte, direct Git comparison rc=0.
+  - [x] NO REGRESSION: privacy3/strict selected Clippy/fmt/book/publication79/121/1457/2396
+    pass0; D250132 exact baseline rows/delta0, glossary rc=1; full host/Design/integration/CI later.
+  - [x] LOCKSTEP: book/API/decision/defect/index/pointer aligned; transition_receipts.py513
+    compares6 Git spans rc=0, whole0361/D256/call-lookup and complete historical handoff/journal;
+    original unknown-capture boundary retained. Caps unchanged; G1still6/18.
+    promotion: declined (existing external-set/context ownership). Commit0362; .3.b actual host next.
+- ID: `G1-SLICE.6.4.2.d.4.3.c.3.b`
+  Status: `pending`
+  Goal: actual measurement/set source host under core ports without reverse dependencies/value copies.
+- ID: `G1-SLICE.6.4.2.d.4.3.c.3.c`
+  Status: `pending`
+  Goal: coupled actual host/selected external reference acceptance, preserving profile-role deferrals.
 - ID: `G1-SLICE.6.4.2.d.4.4`
   Status: `pending`
   Goal: compose actual owned Design sources, identity scopes and focused binding/privacy acceptance.
@@ -1125,28 +1136,5 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 - ID: `G1-SLICE.5e.1a.h`
   Status: `done`
-  Goal: finish post-commit handoff evidence and own an unexplained structural census refusal.
-  Acceptance: inspect actual parser/source and fresh captured OS evidence; do not guess the first
-  record's root cause; schedule exact refusal capture/reproduction, keep current product frontier.
-  Verification: first canonical census refuses2 (malformed lsof name field); actual name parser
-  has missing process/file/type or repeated-name guards. Fresh lsof snapshot has0 malformed names;
-  captured actual census completes with0blocking/11advisory; canonical retry passes0. First failed
-  record was not retained, exact cause unconfirmed. SPINE.23r owns P1 capture/reproduction, not a
-  verified defect classification. No background job or pending CUA result remains.
-  ROUTING EVIDENCE: parser/current OS lsof fields, independently of formula reference execution;
-  failure repeats in a handoff-only workflow only if captured again. No formula-family cause claimed.
-  Commit: `STITCHCAD-G1-0080h`; publication/ledger/gate receipts below before commit.
-  Recording checks: current publication9/ledger9 and embedded pointer13 terminal0; staged doctrine
-  and hook repeat final records before commit. Source/guard bytes unchanged, product frontier .3b.
-
-- `2026-10-02` (UTC): .5e.3b/STITCHCAD-G1-0081 repairs D121;425 cases/26 actual reds; director formula_domain ruling. Next D124 ruling/closure.
-
-- `2026-10-03` (UTC): .5b.1c.2/STITCHCAD-G1-0082 applies D124 current grammar;100 cases/seven source/three doc reds. Static reference .5b.1 done; .5b.2 next.
-
-- `2026-10-03` (UTC): .5b.2a/STITCHCAD-G1-0083 adds closed product metadata;5 contracts/10 actual reds, strict native596/WASM3. .2b next.
-
-- `2026-10-03` (UTC): .5b.2b/STITCHCAD-G1-0084 adds sourced metadata;7 contracts/19 body reds/one API-negative red, strict608. D130 fixed; .2c next.
-- `2026-10-03` (UTC): .5b.2c.1a/STITCHCAD-G1-0085 records D131 reserved argument conflict;121 cases/three actual reds. .1b ruling blocks namespace .2.
-- `2026-10-03` (UTC): .5b.2c.1b/STITCHCAD-G1-0086 applies delegated D131 sources;3624 argument cases/19 actual reds. Namespace .2c.2 next.
-
-Whole original Ease main-task acceptance retained in [part272](../history/window10.md#stitchcad-devnotes-part272md).
+  Goal: completed handoff evidence/journal retained [whole in513](../history/stitchcad-devnotes-part513.md).
+  Original first-capture identity remains unknown; current OS handoff contract remains in CLAUDE.md.

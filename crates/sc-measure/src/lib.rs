@@ -58,6 +58,11 @@ pub use garment_size_set::{
 mod mtm_size_set;
 pub use mtm_size_set::{MtmSizeSet, MtmSizeSetDefinition, MtmSizeSetError, MtmSizeSetPosition};
 
+mod size_set_owned;
+pub use size_set_owned::{SizeSet, SizeSetError, SizeSetPosition};
+mod size_set_inventory;
+pub use size_set_inventory::{SizeSetInventory, SizeSetInventoryError, SizeSetInventoryPosition};
+
 mod ease;
 pub use ease::{CompressionPermission, Ease, EaseDefinition, EaseError, EaseSide, FitIntent};
 

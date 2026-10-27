@@ -171,3 +171,46 @@ chart/MTM/break causes rather than boxes (D256 correction). No numeric execution
 ```bash
 cargo test -p sc-measure --test mtm_size_set_contract
 ```
+
+## Unified external SizeSet inventory
+
+SizeSet owns the explicit Garment/Mtm family and lends SizeSetInputs for current queries.
+Singleton garment charts retain that provenance; errors retain actual family causes.
+
+SizeSetInventory owns authored sets in order. It checks all shared and complete set ids before
+current validators. Distinct sets cannot reuse owned ids; shared canonical references remain uses.
+All sets, including unselected ones, validate. Empty explicit inventories are legal.
+
+size_set(id) inspects a shared source. validate_reference(expected, &canonical, &inputs) revalidates
+all sets and borrows the exact id/revision target, retaining current input borrows. Equal labels or
+latest revisions supply no fallback. A selected valid MTM set therefore refuses when an unselected
+garment set has lost its required axis declaration.
+
+| API or variant | Meaning |
+| --- | --- |
+| `SizeSet`, `SizeSetPosition`, `SizeSetError` | Exact Garment/Mtm owner, original family position and typed family cause |
+| `SizeSetInventory` | Private ordered external source inventory; sets() is shared |
+| `SizeSetInventoryPosition` | Inputs or Set index with exact original nested source position |
+| `SizeSetInventoryError` | DuplicateIdentity, Inputs, InvalidSet, MissingSet or RevisionMismatch |
+
+Exact source admission and structural path coverage are separate checks:
+
+```rust
+use sc_core::{design::DesignSizeSetReference, value::CanonicalInputs};
+use sc_measure::{MeasurementInputs, SizeInstantiationPath, SizeSetInventory};
+fn require_regeneration(inventory: &SizeSetInventory, pin: DesignSizeSetReference,
+    canonical: &CanonicalInputs, inputs: &MeasurementInputs) -> Result<(), Box<dyn std::error::Error>>
+{
+    let set = inventory.validate_reference(pin, canonical, inputs)?;
+    set.with_inputs(canonical, inputs, |view|
+        view.validate_inputs_for(SizeInstantiationPath::Regeneration))??;
+    Ok(())
+}
+```
+
+Unknown/Derived values still require their own observation/evaluation. This checks structural inputs,
+not numeric execution, full Design readiness or release. Debug reveals only inventory count.
+
+```bash
+cargo test -p sc-measure --test size_set_inventory_contract
+```
