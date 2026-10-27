@@ -14,8 +14,8 @@
   project doctrine slot (`SPINE.4.2`, `SPINE.4.3`). **Deferred, with triggers:** the neutral
   JSONL-registry checker package (a ~2 100-line interpreter plus the archive-descriptor,
   ledger-manifest, derived-state, ceiling-increase-authority and version-retention registries). It is
-  deferred because this repository has no partitioned archive, no rolling ledger and no derived-state
-  copies yet, and because running it would add a non-Rust interpreter to the commit path. Triggers
+  deferred as a package. Local archive/ledger and revision-aware checks now enforce adopted contracts;
+  this is not full neutral-package or version-retention-registry adoption. Triggers
   that reopen the decision, each owned by whoever hits it:
   1. a surface reaches its ceiling and cannot be trimmed → adopt the atomic partition / rollover /
      archive protocol and the archive-descriptor contract;

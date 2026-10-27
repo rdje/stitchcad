@@ -7,6 +7,7 @@
 
 answers: "how do I retrieve packed historical records?" · "does history retrieval require old Git objects?" · "what bounds archive storage and decompression?"
 answers: "how are committed v2 raw records packed without changing old windows?"
+answers: "what blocks further complete evidence retirement at the fixed aggregate history cap?"
 
 A working archive at its 64-file ceiling blocks the next normal rollover. Consolidate immutable
 records into a content-addressed tar.gz window, with complete per-file identity in a bounded manifest
@@ -148,3 +149,43 @@ Source53bc624 packs44 records into window21; native tar and17 transaction contro
 draft538 leaves3992152/4000000 decoded bytes: packing frees working slots, not aggregate capacity.
 G1-SLICE.6.4.5.capacity owns a new retention decision before further growth can exceed that cap.
 The installer fixture's helper-source authority audit is separate; no complete producer proof is claimed.
+
+## Retention decision required0390 — proposal, not adopted
+
+Owner G1-SLICE.6.4.5.capacity; source007cdcb4adce4bb91704957cadb17b07da9b864c.
+The existing archive remains valid:993 logical records,23 working Markdown,53051 decoded lines,
+3997359/4000000 decoded bytes and2122823 resident bytes. Only2641 decoded bytes remain.
+The next complete0388/0389 task/lesson/ledger bodies alone need3706B, before any descriptor:
+
+| Source at that revision | Byte interval | Bytes | SHA-256 |
+| --- | --- | --- | --- |
+| docs/tasks/G1-SLICE.md | 49009–50999 | 1990 | d67d34b2b99c5641c7eb568690ea52c976dbf92797e578f9be825338646c7730 |
+| DEV_NOTES.md | 193–1076 | 883 | aad79ec412a2bd847bf914a80f9e53b157262656e7f87ad9c91186ce35afbd00 |
+| CHANGELOG.md | 207–1040 | 833 | 74dc51e698147966aac0c7e7da005ab2052c7a851fba26a9e17aae04066d8ccc |
+
+Derivation: git show <revision>:<path>, slice each exact interval and hash with Python hashlib;
+concatenate those byte slices and pipe to OS wc -c:3706 rc=0, independently matching Python lengths.
+Existing history_archive.sh verify-retention checks the archive pressure rc=0. This is a source-bound
+measurement, not a forecast. A dedicated watched retirement-feasibility producer is not yet added;
+its omission is explicit. Existing source-span and archive validators remain the retained instruments.
+Repacking/splitting cannot reduce this complete immutable body population below the aggregate cap.
+Retiring only selected fields delays exhaustion and does not resolve the full retention obligation.
+
+**A — preserve self-contained retrieval (recommended).** Authorize a separate finite-budget retention
+redesign. Derive its total budget from the retained population, agreed future workload and measured
+resource limits; verify it before adoption. Keep per-record/path/member/payload/control limits and
+all existing bytes fixed. No proposed replacement budget or implementation is approved by this note.
+This changes the aggregate-retention policy and needs an explicit director exception to the current
+no-ceiling-increase-to-land-content rule; simply changing4000000 is rejected.
+
+**B — freeze the existing archive; conditional future Git receipts.** Keep4000000 and every old byte.
+Permit new completed-unit evidence to use exact Git object/interval descriptors. Before use, implement
+the adopted version-object contract: finite descriptor bounds, named owner, ancestor reachability and
+backup guarantee, whole-source/suffix hashes, executable retrieval, and actionable shallow/rewritten
+object recovery. Future receipts would depend on those Git objects; unconditional shallow/offline
+retrieval would continue only for existing archive records. No such new terminal is installed now.
+
+Until the director chooses A or B, capacity.apply is blocked and product .6.4.5.4 stays pending.
+No completed proof is discarded, no archive cap is raised and no new oversized segment is written.
+At that source, the book had28B under its separate1200000B cap; scope-preserving containment precedes
+new examples. That fact does not authorize an archive or book ceiling increase.

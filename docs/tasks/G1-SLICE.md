@@ -908,10 +908,19 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   - [x] NO REGRESSION: book/publication79/159/1454/2410 rc=0; no Rust/manifest changes.
   Promotion declined: existing component/current-source/scope rules. Full Design proof remains open.
 - ID: `G1-SLICE.6.4.5.capacity`
-  Status: `pending`
-  Goal: P1 retention decision before archive growth exceeds4000000 decodedB; current3997359 leaves2641.
-  Preserve all immutable bytes and independent bounds; do not widen caps to land content. Diagnose
-  feasible retention options and surface any policy authority needed. Product .d.2.b/.e proceeds if safe.
+  Status: `blocked`
+  Goal: P1 retain all bytes without exceeding4000000B; needs director policy choice in history decision.
+- ID: `G1-SLICE.6.4.5.capacity.proposal`
+  Status: `done`
+  Goal: measure next complete retirement, present bounded retention alternatives; no cap/record changes.
+  Own correction of the obsolete no-archive rationale in the containment adoption note.
+  - [x] ROOT CAUSE: Git/wc diagnostic:3706>2641B rc=0; exact spans in history decision.
+  - [x] ADDRESSED: same diagnostic rc=0; A/B policy proposal committed without changing caps/records.
+  - [x] NO REGRESSION: history_archive.sh verify-retention/book/publication/size rc=0.
+  Promotion: history decision. Completed0390; director choice pending.
+- ID: `G1-SLICE.6.4.5.capacity.apply`
+  Status: `blocked`
+  Goal: implement chosen policy with executable retention/recovery/refusal proof before product .4.
 - ID: `G1-SLICE.6.4.5.4`
   Status: `pending`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.

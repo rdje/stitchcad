@@ -3,6 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
+
+- Complete next evidence bodies3706B exceed2641B headroom; exact Git spans and OS wc agree0.
+- Concrete policy alternatives recorded; implementation awaits director choice. No caps/records changed.
+- Correct obsolete containment adoption rationale; book states the aggregate retirement stop rule.
+
 ## STITCHCAD-G1-0389 — close focused layer/Hem component acceptance
 
 - Layer inventory4, Hem inventory5 and actual Hem/layer declaration8 checks pass0;17 total.

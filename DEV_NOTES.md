@@ -3,6 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-27 UTC)_ — retention policy boundary
+
+0390 measures complete0388/0389 bodies3706B against2641B archive headroom; Python/Git and OS wc agree0.
+No oversized record is written. The history decision preserves source intervals/hashes and concrete A/B
+policy alternatives; neither is adopted. Capacity.apply awaits director choice; all caps/bytes stay fixed.
+Promotion: retention-decision-required section. Obsolete no-archive adoption rationale corrected.
+
 ## _(2026-10-27 UTC)_ — actual layer offset-operation intent
 
 0388 borrows original typed layers/offset relationships and the single current canonical owner.
@@ -14,83 +21,58 @@ Whole D262/0387 proof539 has5 exact Git spans0. Promotion declined: settled meta
 Aggregate3997359/4000000B leaves2641; capacity decision owned.0389 closes .e:17 focused checks pass0;
 full Design/global/physical/runtime/integration proof remains open. No new retention record needed.
 
-[Complete bounded append lesson](docs/history/stitchcad-devnotes-part539.md) retains
-its original source, transaction proof and retention limits.
+[Complete bounded append lesson](docs/history/stitchcad-devnotes-part539.md) retains its original source, transaction proof and retention limits.
 
-[Complete Hem declaration lesson](docs/history/stitchcad-devnotes-part538.md) retains
-its original scope, checks and promotion decision.
+[Complete Hem declaration lesson](docs/history/stitchcad-devnotes-part538.md) retains its original scope, checks and promotion decision.
 
-[Complete Hem collection lesson](docs/history/window21.md#stitchcad-devnotes-part537md) retains
-its original scope, checks and promotion decision.
+[Complete Hem collection lesson](docs/history/window21.md#stitchcad-devnotes-part537md) retains its original scope, checks and promotion decision.
 
-[Complete layer Material lesson](docs/history/window21.md#stitchcad-devnotes-part536md) retains
-its original scope, checks and promotion decision.
+[Complete layer Material lesson](docs/history/window21.md#stitchcad-devnotes-part536md) retains its original scope, checks and promotion decision.
 
-[Complete layer inventory lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains
-its original scope, checks and promotion decision.
+[Complete layer inventory lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains its original scope, checks and promotion decision.
 
-[Complete current layer/Hem lesson](docs/history/window21.md#stitchcad-devnotes-part534md) retains
-its original scope, checks and promotion decision.
+[Complete current layer/Hem lesson](docs/history/window21.md#stitchcad-devnotes-part534md) retains its original scope, checks and promotion decision.
 
-[Complete D261 Hem cause lesson](docs/history/window21.md#stitchcad-devnotes-part533md) retains
-its original scope, checks and promotion decision.
+[Complete D261 Hem cause lesson](docs/history/window21.md#stitchcad-devnotes-part533md) retains its original scope, checks and promotion decision.
 
-[Complete Closure declaration lesson](docs/history/window21.md#stitchcad-devnotes-part532md) retains
-its original scope, checks and promotion decision.
+[Complete Closure declaration lesson](docs/history/window21.md#stitchcad-devnotes-part532md) retains its original scope, checks and promotion decision.
 
-[Complete Closure collection lesson](docs/history/window21.md#stitchcad-devnotes-part531md) retains
-its original scope, checks and promotion decision.
+[Complete Closure collection lesson](docs/history/window21.md#stitchcad-devnotes-part531md) retains its original scope, checks and promotion decision.
 
-[Complete notion collection lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains
-its original scope, checks and promotion decision.
+[Complete notion collection lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains its original scope, checks and promotion decision.
 
-[Complete D260 Closure-cause lesson](docs/history/window21.md#stitchcad-devnotes-part529md) retains
-its original scope, checks and promotion decision.
+[Complete D260 Closure-cause lesson](docs/history/window21.md#stitchcad-devnotes-part529md) retains its original scope, checks and promotion decision.
 
-[Complete Pocket collection/component lesson](docs/history/window21.md#stitchcad-devnotes-part528md) retains
-its original scope, checks and promotion decision.
+[Complete Pocket collection/component lesson](docs/history/window21.md#stitchcad-devnotes-part528md) retains its original scope, checks and promotion decision.
 
-[Complete D258/D259 anchor-cause lesson](docs/history/window21.md#stitchcad-devnotes-part527md) retains
-its original scope, checks and promotion decision.
+[Complete D258/D259 anchor-cause lesson](docs/history/window21.md#stitchcad-devnotes-part527md) retains its original scope, checks and promotion decision.
 
-[Complete sewing-component acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part526md) retains
-its original scope, checks and promotion decision.
+[Complete sewing-component acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part526md) retains its original scope, checks and promotion decision.
 
-[Complete current sewing-source lesson](docs/history/window21.md#stitchcad-devnotes-part525md) retains
-its original scope, checks and promotion decision.
+[Complete current sewing-source lesson](docs/history/window21.md#stitchcad-devnotes-part525md) retains its original scope, checks and promotion decision.
 
-[Complete private sewing/input lesson](docs/history/window21.md#stitchcad-devnotes-part524md) retains
-its original scope, checks and promotion decision.
+[Complete private sewing/input lesson](docs/history/window21.md#stitchcad-devnotes-part524md) retains its original scope, checks and promotion decision.
 
-[Complete amount-declaration lesson](docs/history/window21.md#stitchcad-devnotes-part523md) retains
-its original scope, checks and promotion decision.
+[Complete amount-declaration lesson](docs/history/window21.md#stitchcad-devnotes-part523md) retains its original scope, checks and promotion decision.
 
-[Complete current-sewing graph lesson](docs/history/window21.md#stitchcad-devnotes-part522md) retains
-its original scope, checks and promotion decision.
+[Complete current-sewing graph lesson](docs/history/window21.md#stitchcad-devnotes-part522md) retains its original scope, checks and promotion decision.
 
-[Complete combined-topology lesson](docs/history/window21.md#stitchcad-devnotes-part521md) retains
-its original scope, checks and promotion decision.
+[Complete combined-topology lesson](docs/history/window21.md#stitchcad-devnotes-part521md) retains its original scope, checks and promotion decision.
 
-[Complete input-composition acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part520md) retains
-its original scope, checks and promotion decision.
+[Complete input-composition acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part520md) retains its original scope, checks and promotion decision.
 
-[Complete selected-input namespace lesson](docs/history/window21.md#stitchcad-devnotes-part519md) retains
-its original scope, checks and promotion decision.
+[Complete selected-input namespace lesson](docs/history/window21.md#stitchcad-devnotes-part519md) retains its original scope, checks and promotion decision.
 
-[Complete authored-reference lesson](docs/history/window21.md#stitchcad-devnotes-part518md) retains
-its original scope, checks and promotion decision.
+[Complete authored-reference lesson](docs/history/window21.md#stitchcad-devnotes-part518md) retains its original scope, checks and promotion decision.
 
-[Complete private Design-input composition lesson](docs/history/window21.md#stitchcad-devnotes-part517md) retains
-its original scope, checks and promotion decision.
+[Complete private Design-input composition lesson](docs/history/window21.md#stitchcad-devnotes-part517md) retains its original scope, checks and promotion decision.
 
-[Complete native authority review lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains
-its original scope, checks and promotion decision.
+[Complete native authority review lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains its original scope, checks and promotion decision.
 
 [Complete authorization/scope lessons](docs/history/window21.md#stitchcad-devnotes-part531md) retain
 their original scopes, checks and promotion decisions.
 
-[Complete command-input lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains
-its original scope, checks and promotion decision.
+[Complete command-input lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains its original scope, checks and promotion decision.
 
 [Complete release-input/approval lessons](docs/history/window21.md#stitchcad-devnotes-part537md) retain
 their original scopes, checks and promotion decisions.
@@ -239,158 +221,111 @@ original input/validation boundaries, exact source and focused proofs.
 [Complete immutable SizeSet origin lesson](docs/history/window20.md#stitchcad-devnotes-part489md) retains
 original implementation, verification and remaining execution owners.
 
-[Complete chart/body/break scope lesson](docs/history/window20.md#stitchcad-devnotes-part488md) retains
-its original acceptance, retained proof, fixes and remaining intent/execution boundaries.
+[Complete chart/body/break scope lesson](docs/history/window20.md#stitchcad-devnotes-part488md) retains its original acceptance, retained proof, fixes and remaining intent/execution boundaries.
 
 [Complete MTM fixture-plan integration lesson](docs/history/window20.md#stitchcad-devnotes-part487md)
 retains original D230/D231 reproduction, exact producer/input proofs and remaining verification owners.
 
-[Complete unified SizeSet input lesson](docs/history/window20.md#stitchcad-devnotes-part486md) retains
-its original family/provenance/current-reference contracts and focused native proof.
+[Complete unified SizeSet input lesson](docs/history/window20.md#stitchcad-devnotes-part486md) retains its original family/provenance/current-reference contracts and focused native proof.
 
-[Complete MTM composite-input lesson](docs/history/window20.md#stitchcad-devnotes-part485md) retains
-its original body/Ease/Design-source, path and focused-proof boundaries.
+[Complete MTM composite-input lesson](docs/history/window20.md#stitchcad-devnotes-part485md) retains its original body/Ease/Design-source, path and focused-proof boundaries.
 
-[Complete garment composite-input lesson](docs/history/window20.md#stitchcad-devnotes-part484md) retains
-its original canonical source/path contracts, focused checks and remaining proof boundaries.
+[Complete garment composite-input lesson](docs/history/window20.md#stitchcad-devnotes-part484md) retains its original canonical source/path contracts, focused checks and remaining proof boundaries.
 
-[Complete fifteenth-window lesson](docs/history/window20.md#stitchcad-devnotes-part483md) retains
-its original immutable source/packing/refusal proofs, D229 correction and continuation.
+[Complete fifteenth-window lesson](docs/history/window20.md#stitchcad-devnotes-part483md) retains its original immutable source/packing/refusal proofs, D229 correction and continuation.
 
-[Complete required-break coverage lesson](docs/history/window20.md#stitchcad-devnotes-part482md) retains
-its original draft/explicit-gap/current-source contracts, checks and promotion.
+[Complete required-break coverage lesson](docs/history/window20.md#stitchcad-devnotes-part482md) retains its original draft/explicit-gap/current-source contracts, checks and promotion.
 
 [Complete signed-break and approved-key lessons](docs/history/window20.md#stitchcad-devnotes-part480md)
 retain their original D228 contract, numeric-state boundaries and focused proof.
 
-[Complete break-key review lesson](docs/history/window20.md#stitchcad-devnotes-part479md) retains
-its original D228 witness, pending ruling and ownership; the later approved key remains implemented.
+[Complete break-key review lesson](docs/history/window20.md#stitchcad-devnotes-part479md) retains its original D228 witness, pending ruling and ownership; the later approved key remains implemented.
 
 [Complete query/paired-split lessons](docs/history/window20.md#stitchcad-devnotes-part477md) preserve
 their original contracts, focused evidence, promotion and remaining execution owners.
 
-[Complete member-point lesson](docs/history/window20.md#stitchcad-devnotes-part476md) retains
-its original D70/coverage/current-source contracts, checks and promotion decision.
+[Complete member-point lesson](docs/history/window20.md#stitchcad-devnotes-part476md) retains its original D70/coverage/current-source contracts, checks and promotion decision.
 
-[Complete explicit-axis lesson](docs/history/window20.md#stitchcad-devnotes-part472md) retains
-its original role/kind/order/state contracts, checks and promotion decision.
+[Complete explicit-axis lesson](docs/history/window20.md#stitchcad-devnotes-part472md) retains its original role/kind/order/state contracts, checks and promotion decision.
 
-[Complete receipt-correction lesson](docs/history/window20.md#stitchcad-devnotes-part470md) retains
-its original unread-result/duplicate metadata repair, checks and promotion decision.
+[Complete receipt-correction lesson](docs/history/window20.md#stitchcad-devnotes-part470md) retains its original unread-result/duplicate metadata repair, checks and promotion decision.
 
-[Complete dart/notch intent lesson](docs/history/window20.md#stitchcad-devnotes-part469md) retains
-its original canonical targets/director rulings, checks and promotion decision.
+[Complete dart/notch intent lesson](docs/history/window20.md#stitchcad-devnotes-part469md) retains its original canonical targets/director rulings, checks and promotion decision.
 
-[Complete measurement/material intent lesson](docs/history/window16.md#stitchcad-devnotes-part468md) retains
-its original assignment/canonical source contracts, checks and promotion decision.
+[Complete measurement/material intent lesson](docs/history/window16.md#stitchcad-devnotes-part468md) retains its original assignment/canonical source contracts, checks and promotion decision.
 
-[Complete typed mutation metadata lesson](docs/history/window16.md#stitchcad-devnotes-part467md) retains
-its original exact revision/retry/actor/group contracts, checks and promotion decision.
+[Complete typed mutation metadata lesson](docs/history/window16.md#stitchcad-devnotes-part467md) retains its original exact revision/retry/actor/group contracts, checks and promotion decision.
 
-[Complete terminal ID exhaustion lesson](docs/history/window16.md#stitchcad-devnotes-part465md) retains
-its original atomic failure/nonreuse contracts, checks and promotion decision.
+[Complete terminal ID exhaustion lesson](docs/history/window16.md#stitchcad-devnotes-part465md) retains its original atomic failure/nonreuse contracts, checks and promotion decision.
 
-[Complete command catalog lesson](docs/history/window16.md#stitchcad-devnotes-part462md) retains
-its original metadata/authority/retention contracts, checks and promotion decision.
+[Complete command catalog lesson](docs/history/window16.md#stitchcad-devnotes-part462md) retains its original metadata/authority/retention contracts, checks and promotion decision.
 
-[Complete tangent range lesson](docs/history/window16.md#stitchcad-devnotes-part458md) retains
-its original exact range/resource/domain evidence, checks and promotion decision.
+[Complete tangent range lesson](docs/history/window16.md#stitchcad-devnotes-part458md) retains its original exact range/resource/domain evidence, checks and promotion decision.
 
-[Complete sourced inverse lesson](docs/history/window16.md#stitchcad-devnotes-part455md) retains
-its original kind/source/readback behavior, checks and promotion decision.
+[Complete sourced inverse lesson](docs/history/window16.md#stitchcad-devnotes-part455md) retains its original kind/source/readback behavior, checks and promotion decision.
 
-[Complete native inverse lesson](docs/history/window16.md#stitchcad-devnotes-part453md) retains
-its original runtime/branch/rounding evidence, checks and promotion decision.
+[Complete native inverse lesson](docs/history/window16.md#stitchcad-devnotes-part453md) retains its original runtime/branch/rounding evidence, checks and promotion decision.
 
-[Complete bounded inverse-plan lesson](docs/history/window16.md#stitchcad-devnotes-part451md) retains
-its admitted precision/iterations/workspace/sign/error derivations, checks and promotion decision.
+[Complete bounded inverse-plan lesson](docs/history/window16.md#stitchcad-devnotes-part451md) retains its admitted precision/iterations/workspace/sign/error derivations, checks and promotion decision.
 
-[Complete inverse-population closure lesson](docs/history/window16.md#stitchcad-devnotes-part449md) retains
-its full450-chunk/source/digest/compact-witness evidence, checks and promotion decision.
+[Complete inverse-population closure lesson](docs/history/window16.md#stitchcad-devnotes-part449md) retains its full450-chunk/source/digest/compact-witness evidence, checks and promotion decision.
 
-[Complete proof-store cleanup-protection lesson](docs/history/window16.md#stitchcad-devnotes-part447md) retains
-its original protected-store census/controls and cadence boundary, checks and promotion decision.
+[Complete proof-store cleanup-protection lesson](docs/history/window16.md#stitchcad-devnotes-part447md) retains its original protected-store census/controls and cadence boundary, checks and promotion decision.
 
-[Complete inverse-controller lesson](docs/history/window16.md#stitchcad-devnotes-part445md) retains
-its original source/checkpoint/concurrency/byte boundaries, checks and promotion decision.
+[Complete inverse-controller lesson](docs/history/window16.md#stitchcad-devnotes-part445md) retains its original source/checkpoint/concurrency/byte boundaries, checks and promotion decision.
 
 [Complete inverse feasibility/chunk lessons](docs/history/window16.md#stitchcad-devnotes-part443md) retain
 their original exact interval/source/format boundaries, checks and promotion decisions.
 
-[Complete sourced forward-call lesson](docs/history/window16.md#stitchcad-devnotes-part441md) retains
-its original argument/kind/source/refusal behavior, checks and promotion decision.
+[Complete sourced forward-call lesson](docs/history/window16.md#stitchcad-devnotes-part441md) retains its original argument/kind/source/refusal behavior, checks and promotion decision.
 
-[Complete native forward-kernel lesson](docs/history/window16.md#stitchcad-devnotes-part438md) retains
-its original exact reduction/evaluation/rounding evidence, checks and promotion decision.
+[Complete native forward-kernel lesson](docs/history/window16.md#stitchcad-devnotes-part438md) retains its original exact reduction/evaluation/rounding evidence, checks and promotion decision.
 
-[Complete bounded forward-plan lesson](docs/history/window15.md#stitchcad-devnotes-part436md) retains
-its original reduction/budget/rounding derivation, checks and promotion decision.
+[Complete bounded forward-plan lesson](docs/history/window15.md#stitchcad-devnotes-part436md) retains its original reduction/budget/rounding derivation, checks and promotion decision.
 
-[Complete forward-threshold certificate lesson](docs/history/window15.md#stitchcad-devnotes-part434md) retains
-its original producer/reader/source/coverage evidence, checks and promotion decision.
+[Complete forward-threshold certificate lesson](docs/history/window15.md#stitchcad-devnotes-part434md) retains its original producer/reader/source/coverage evidence, checks and promotion decision.
 
-[Complete finite-threshold feasibility lesson](docs/history/window15.md#stitchcad-devnotes-part432md) retains
-its original populations/profile/proof boundaries, checks and promotion decision.
+[Complete finite-threshold feasibility lesson](docs/history/window15.md#stitchcad-devnotes-part432md) retains its original populations/profile/proof boundaries, checks and promotion decision.
 
-[Complete thirteenth-window lesson](docs/history/window15.md#stitchcad-devnotes-part429md) retains
-its original population/source/materialization evidence, checks and promotion decision.
+[Complete thirteenth-window lesson](docs/history/window15.md#stitchcad-devnotes-part429md) retains its original population/source/materialization evidence, checks and promotion decision.
 
-[Complete per-node static-certificate lesson](docs/history/window15.md#stitchcad-devnotes-part427md) retains
-its original node/role/target evidence, defects, checks and promotion decision.
+[Complete per-node static-certificate lesson](docs/history/window15.md#stitchcad-devnotes-part427md) retains its original node/role/target evidence, defects, checks and promotion decision.
 
-[Complete checked runtime-sequence lesson](docs/history/window15.md#stitchcad-devnotes-part425md) retains
-its original bounded execution ownership, source obligations, checks and promotion decision.
+[Complete checked runtime-sequence lesson](docs/history/window15.md#stitchcad-devnotes-part425md) retains its original bounded execution ownership, source obligations, checks and promotion decision.
 
-[Complete lazy supplied-value conditional lesson](docs/history/window15.md#stitchcad-devnotes-part423md) retains
-its original kind/laziness/source/refusal behavior, checks and promotion decision.
+[Complete lazy supplied-value conditional lesson](docs/history/window15.md#stitchcad-devnotes-part423md) retains its original kind/laziness/source/refusal behavior, checks and promotion decision.
 
-[Complete named assertion-outcome lesson](docs/history/window15.md#stitchcad-devnotes-part420md) retains
-its original actual identity/context/source results, checks and promotion decision.
+[Complete named assertion-outcome lesson](docs/history/window15.md#stitchcad-devnotes-part420md) retains its original actual identity/context/source results, checks and promotion decision.
 
-[Complete sourced named-tolerance lesson](docs/history/window15.md#stitchcad-devnotes-part418md) retains
-its original exact comparison/source/limit behavior, checks and promotion decision.
+[Complete sourced named-tolerance lesson](docs/history/window15.md#stitchcad-devnotes-part418md) retains its original exact comparison/source/limit behavior, checks and promotion decision.
 
-[Complete sourced numeric-call lesson](docs/history/window15.md#stitchcad-devnotes-part415md) retains
-its original operand/call propagation, actual failures, checks and promotion decision.
+[Complete sourced numeric-call lesson](docs/history/window15.md#stitchcad-devnotes-part415md) retains its original operand/call propagation, actual failures, checks and promotion decision.
 
-[Complete sourced scalar-operator/binding lesson](docs/history/window15.md#stitchcad-devnotes-part412md) retains
-its original exact-flow/source behavior, typed failures, checks and promotion decision.
+[Complete sourced scalar-operator/binding lesson](docs/history/window15.md#stitchcad-devnotes-part412md) retains its original exact-flow/source behavior, typed failures, checks and promotion decision.
 
-[Complete immutable approximation-source lesson](docs/history/window15.md#stitchcad-devnotes-part410md) retains
-its original call inventory, source-only T1 boundary, checks and promotion decision.
+[Complete immutable approximation-source lesson](docs/history/window15.md#stitchcad-devnotes-part410md) retains its original call inventory, source-only T1 boundary, checks and promotion decision.
 
-[Complete canonical/stored numeric-read lesson](docs/history/window15.md#stitchcad-devnotes-part406md) retains
-its original exact conversion boundaries, source separation, checks and promotion decision.
+[Complete canonical/stored numeric-read lesson](docs/history/window15.md#stitchcad-devnotes-part406md) retains its original exact conversion boundaries, source separation, checks and promotion decision.
 
-[Complete pinned size-membership lesson](docs/history/window15.md#stitchcad-devnotes-part403md) retains
-its original authored-order bridge, exact pins, validation and promotion decision.
+[Complete pinned size-membership lesson](docs/history/window15.md#stitchcad-devnotes-part403md) retains its original authored-order bridge, exact pins, validation and promotion decision.
 
-[Complete supplied size-frame lesson](docs/history/window14.md#stitchcad-devnotes-part399md) retains
-its original identity/range/storage boundaries, checks and promotion decision.
+[Complete supplied size-frame lesson](docs/history/window14.md#stitchcad-devnotes-part399md) retains its original identity/range/storage boundaries, checks and promotion decision.
 
-[Complete explicit tolerance-context lesson](docs/history/window14.md#stitchcad-devnotes-part397md) retains
-its original provider/absence behavior, focused checks and promotion decision.
+[Complete explicit tolerance-context lesson](docs/history/window14.md#stitchcad-devnotes-part397md) retains its original provider/absence behavior, focused checks and promotion decision.
 
-[Complete general scalar authored-read lesson](docs/history/window14.md#stitchcad-devnotes-part395md) retains
-its original identity checks, lifetime repair, validation and promotion decision.
+[Complete general scalar authored-read lesson](docs/history/window14.md#stitchcad-devnotes-part395md) retains its original identity checks, lifetime repair, validation and promotion decision.
 
-[Complete canonical scalar-content lesson](docs/history/window14.md#stitchcad-devnotes-part393md) retains
-its original model, lint repair, validation and promotion decision.
+[Complete canonical scalar-content lesson](docs/history/window14.md#stitchcad-devnotes-part393md) retains its original model, lint repair, validation and promotion decision.
 
-[Complete canonical length authored-read lesson](docs/history/window14.md#stitchcad-devnotes-part391md) retains
-its actual source/state behavior, validation and promotion decision.
+[Complete canonical length authored-read lesson](docs/history/window14.md#stitchcad-devnotes-part391md) retains its actual source/state behavior, validation and promotion decision.
 
-[Complete exact trig midpoint/resource lesson](docs/history/window14.md#stitchcad-devnotes-part387md) retains
-its original theorem/proof, resource boundary and promotion decision.
+[Complete exact trig midpoint/resource lesson](docs/history/window14.md#stitchcad-devnotes-part387md) retains its original theorem/proof, resource boundary and promotion decision.
 
-[Complete twelfth archive packing lesson](docs/history/window14.md#stitchcad-devnotes-part384md) retains
-its original scope, source/read validation and promotion decision.
+[Complete twelfth archive packing lesson](docs/history/window14.md#stitchcad-devnotes-part384md) retains its original scope, source/read validation and promotion decision.
 
-[Complete certified arc implementation lesson](docs/history/window14.md#stitchcad-devnotes-part382md) retains
-its original scope, verification and promotion decision.
+[Complete certified arc implementation lesson](docs/history/window14.md#stitchcad-devnotes-part382md) retains its original scope, verification and promotion decision.
 
-[Complete bounded arc certificate/approved UI lesson](docs/history/window14.md#stitchcad-devnotes-part380md) retains
-its full proof, director requirements, verification and promotion decisions.
+[Complete bounded arc certificate/approved UI lesson](docs/history/window14.md#stitchcad-devnotes-part380md) retains its full proof, director requirements, verification and promotion decisions.
 
 ## Retained engineering continuity
 

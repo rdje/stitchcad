@@ -30,7 +30,9 @@ answers: "do we use the live-document size containment doctrine?" · "why is the
      `at=<revision>` axis that the checker executes — a baseline whose revision the file no longer declares
      is refused, which is the freshness oracle the trigger asks for. Adopted as a contract, implemented in
      the existing awk checker rather than by importing the neutral interpreter, whose other two triggers have
-     not fired: `decision_revision-aware-containment-baseline.md`.
+     not fired at that capture: `decision_revision-aware-containment-baseline.md`. Archive adoption later
+     fired the first trigger: SPINE.19.2 and the v2 continuation enforce local descriptor/retention
+     contracts. The neutral package and version-retention registry remain unadopted.
 4. **Local parameters:** warn at 80 % of a health target; the enforcement ceiling is inclusive
    (equality passes, excess fails); a ceiling rises only by a recorded authority (a decision record
    plus the registry row citing it), never to land content. The data plane is bounded **TSV** parsed
@@ -45,11 +47,10 @@ risk in front of it: 18 specification chapters, a changelog entry per slice, and
 grow one evidence section per leaf (`docs/tasks/SPINE.md` was already 772 lines / 60 433 bytes at
 adoption).
 
-It does not yet have the shape of problem the full package solves: no partitioned archive, no rolling
-ledger with sealed ranges, no derived-state copies needing freshness oracles, no ceiling-increase
-history. Adopting a 2 100-line interpreter and eight registries to govern eleven documents would put a
-large unreviewed dependency in the commit path of a project whose entire product surface is still a
-specification — and would add a non-Rust interpreter to a Rust workspace's hooks.
+At initial adoption, partitioned archives, sealed rolling ledgers and freshness oracles were absent.
+They now exist through local checks. That historical deferral rationale does not describe the current
+repository. Full neutral-package and version-retention-registry adoption remain separate decisions;
+0390 corrects the obsolete present-tense claim without claiming either has been implemented.
 
 The proportionality call is recorded rather than left implicit because "we adopted the doctrine" and
 "we adopted part of it" are different claims, and a reader who assumes the full package is enforcing

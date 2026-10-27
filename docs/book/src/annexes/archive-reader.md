@@ -115,9 +115,8 @@ native controls and fixture capture preserve original provenance through retaine
 D246 feeds only deliberate raw-read faults exact logical bytes; the original child-dispatch assertion
 still rejects the missing public read. Legacy catalogs and non-changelog ledger rows remain valid.
 
-The commands above describe the one-time v1 transition: preparation requires a v1 source and a fresh
-workspace. Recovery requires its original source HEAD and recognized archive bytes. Later records
-or commits intentionally refuse that rollback path; retained original trees remain evidence.
+The prepare command requires a v1 source and fresh workspace. Recovery requires original HEAD and
+recognized archive bytes; later records/commits refuse. Retained original trees remain evidence.
 
 For a v2 append, commit all raw source records first and keep the source within the working bounds.
 Use a fresh workspace and the actual owning leaf:
@@ -129,4 +128,5 @@ python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py install target/
 
 Preparation packs the complete committed raw snapshot and preserves every old window byte.
 The same idle-reader, recovery and retained-backup rules apply. Catalog headings link records;
-full identities remain in manifests. Packing grants no additional aggregate history capacity.
+full identities remain in manifests. If a complete retirement exceeds the aggregate budget, stop
+at its owning retention decision: packing grants no additional capacity.
