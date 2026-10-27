@@ -3,18 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — whole current construction scope and original causes
+## _(2026-10-27 UTC)_ — actual intake and closing declaration roles
 
-0401 preflights the actual whole graph/copy/Piece/landmark/distribution context, even with empty
-ownership, then checks every original Piece/source in fixed family/authored order. Missing owners
-never retarget; contextual errors preserve actual id/index and original concrete raw evidence.
-Later index1 damage in all6 families refuses without partial success or content changes. Historical
-split/reversal remains held; subsequent damage is rechecked without caching. D273 red0/1 rc101
-showed SewingError's empty standard cause chain hiding an existing exact CutPlanError; fixed and
-verified through nested aggregate downcasts. Native9+22/compile-fail3/strict lint/fmt pass0.
-Whole0400 scopes550 retain4 exact Git spans; retention/book/publication/size0. Repeated book wording
-tightened with original semantics retained. Promotion: ontology structural decision. Declaration
-roles .e, focused component acceptance .f and global Design/garment joins .5 remain; full CI later.
+0402 validates the complete current input root before even empty intake scope, then borrows actual
+Dart/Tuck/Pleat intake/closing roles in family/authored order. Views retain original typed object,
+position and single canonical owner. Formula intake requires actual Design metadata/current Length
+kind; dedicated/general Length and Unknown/Derived states remain borrowed/unread. Explicit zero
+retains inline parameter/value, Profile and operation ids stay logical despite numeric aliases.
+Native5 covers exact pointers, absent metadata, later Count, missing current Piece and controlled
+host drift; lifetime1/strict lint/fmt pass0. Current source and metadata queries remain distinct.
+Whole0401 scopes551 retain4 exact Git spans; retention/book/publication/size0. Original book facts
+retained with duplicate wording tightened. Promotion: Design host decision. Grain/allowance .e.2,
+Gather .e.3, component acceptance .f and coupled global garment/root .5 remain; full CI later.
+
+[Whole0401 current-scope lesson](docs/history/stitchcad-devnotes-part551.md) retains complete context, typed causes and D273 proofs.
 
 [Whole0400 ownership lesson](docs/history/stitchcad-devnotes-part550.md) retains order, actual borrows and scope proofs.
 

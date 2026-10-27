@@ -168,6 +168,33 @@ Declaration roles, global Design ids and physical/release readiness remain separ
 | `ConstructionRef` | Typed borrow of an actual stored object |
 | `ConstructionInventoryError` | Duplicate locations, Graph, missing Piece or concrete family cause |
 
+### Intake and closing declarations
+
+`inputs.construction_intake_declarations(&sources)?` validates the whole current root, even empty,
+then borrows Intake/ClosingOperation per Dart/Tuck/Pleat in authored family order. Views retain the
+actual object, original position and single canonical owner.
+
+```rust,ignore
+for view in inputs.construction_intake_declarations(&sources)? {
+    inspect(view.position(), view.role(), view.source());
+}
+```
+
+Explicit intake borrows its parameter id/nonnegative Length, including zero. Formula intake requires
+actual Design parameter/current Length metadata, dedicated or general; Unknown/Derived stay unread.
+Bare numeric ids and Count refuse with actual construction/position/role and no partial views.
+ProfileIntake stays DeferredToG4; None means no profile field. ClosingOperation stays logical despite
+numeric-id matches. Debug omits ids/values. Operation existence/kind/dependencies, current garment
+sources, global ids, resolved intake/conservation and release proof remain separate. Gather ease
+stays on its span; grain/allowance roles follow separately.
+
+| API token | Meaning |
+| --- | --- |
+| `DesignConstructionDeclaration` | Actual object/position/canonical owner/field |
+| `DesignConstructionDeclarationRole` | Intake then ClosingOperation |
+| `DesignConstructionDeclarationSource` | ExplicitIntake, FormulaIntake, ProfileIntake, ClosingOperation |
+| `DesignConstructionDeclarationError` | Inputs cause or contextual missing/wrong-kind parameter |
+
 **Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable layer types share
 editable `LayerDefinition` input and structural validation. A definition names its served Piece,
 explicit `LayerOffsetRelationship` and material assignment. The relationship holds a required recipe
@@ -337,23 +364,20 @@ remain separate. Current structural success grants no assembly or release readin
 depth and fold-type roles for every actual Hem in authored order. Each view retains its original
 Hem and the root's single canonical input owner. No partial view collection escapes a refusal.
 
-Explicit depth borrows the original parameter id and nonnegative Length intent: authored zero is
-retained without creating a second canonical value or inventing parameter metadata. Formula depth
-must name an actual DesignParameter, then its current canonical Length-kind declaration. Dedicated
-lengths and general Length scalars both work. A bare canonical id refuses MissingFormulaParameter;
-a Count parameter refuses FormulaKind with the actual Hem/id/kind. Unknown and Derived values stay
-unread and unchanged; this query neither evaluates depth nor proves a resolved nonnegative result.
+Explicit depth borrows parameter id/nonnegative Length, preserving zero without another canonical
+value or invented metadata. Formula depth requires actual DesignParameter/current Length declaration;
+dedicated/general Length both work. Bare canonical ids return MissingFormulaParameter; Count returns
+FormulaKind with actual Hem/id/kind. Unknown/Derived remain unread/unchanged, without evaluation or
+resolved nonnegativity proof.
 
-Fold type borrows the original HemFoldType. A logical declaration is not converted into a scalar
-because its id matches a numeric input; its recipe/Profile owner supplies domain, selection and state.
-Profile depth/fold fields remain DeferredToG4. profile_validation() returning None means only that
-role has no Profile field, without readiness approval. Default Debug omits authored ids/values.
+Fold type borrows HemFoldType; numeric-id matches never convert logical intent to scalar. Its
+recipe/Profile owner supplies domain/selection/state. Profile depth/fold stays DeferredToG4;
+profile_validation() None means no Profile field, without approval. Debug omits ids/values.
 
-For example, an explicit zero-depth intent, a formula over a Derived length and an Unknown general
-Length expose different original sources. A profile-backed fold remains logical even when its id
-matches a stored Length. No physical fold choice, depth fallback or computed finishing is supplied.
-Current finish/Facing/layer sources, Material assignments, global garment ids and G2/G3/G4 physical
-proof remain separate. Original current-root errors keep their concrete standard cause chain.
+For example, explicit zero, Derived length and Unknown general Length retain distinct sources.
+Profile folds stay logical despite numeric-id matches. No fold choice/depth fallback/finishing is
+computed. Current finish/Facing/layer sources, Materials, global ids and G2/G3/G4 proof remain
+separate; current-root errors retain concrete standard causes.
 
 | API token | Hem declaration meaning |
 | --- | --- |
@@ -364,13 +388,11 @@ proof remain separate. Original current-root errors keep their concrete standard
 
 ## Pocket placement and physical composition
 
-`PocketDefinition` binds a served physical copy and its source Piece, a held position anchor,
-owned directed orientation, required logical opening and nonempty component references. Each
-`PocketPieceRef` pairs a stable copy id with the expected source Piece. For example, a pocket on
-copy `front-left` can name components `bag-left` and `bag-right`, both sourced from the same
-pattern “bag”. The components remain distinct physical objects; their pattern geometry is shared.
-The served copy may itself appear explicitly as a component. G1 does not infer construction
-support or recipe-cycle correctness from that relationship.
+`PocketDefinition` retains served physical copy/source Piece, position anchor, owned directed
+orientation, required logical opening and nonempty components. Each `PocketPieceRef` pairs stable
+copy/expected Piece ids. A pocket on `front-left` may use `bag-left`/`bag-right` from one “bag” pattern:
+distinct physical objects share pattern geometry. The served copy may explicitly be a component;
+G1 infers no construction support or recipe-cycle correctness.
 
 `Pocket::new` requires current copies/Pieces, unambiguous Piece ids, unique component copy ids,
 a live owned birth anchor and complete owned orientation intervals with uniquely resolved ends.
@@ -380,25 +402,20 @@ Historical anchors may resolve after split/reversal, while a split choice or del
 visible refusal. Orientation cannot hide foreign or deleted middle geometry behind valid ends.
 Authored direction is separate from the copy's reflected geometry, which remains G2/V1 work.
 
-PocketError position refusals expose the original concrete AnchorError through the standard
-std::error::Error::source chain. Its pointer and raw repair data are retained, without boxing the
-cause behind another dynamic Box type. RangeResolution remains inspectable data, not an invented
-error cause. Placement behavior, definitions and physical opening deferrals are unchanged.
+PocketError position failures expose original AnchorError through `Error::source()`, retaining its
+pointer/raw repair data without dynamic Box indirection. RangeResolution stays data; placement,
+definitions and opening deferrals are unchanged.
 
-`component(copy, plan, pieces)` borrows the current canonical Piece, including its labels/material
-and raw contour repair evidence. Reordering components does not change the queried target.
-Replacing a same-id Piece changes the newly observed metadata without rewriting old Pocket intent.
-This target query and Pocket placement validation do **not** certify component contours: Design
-must inspect every component's `range_resolutions()` and reject lost interiors before execution
-or release. Complete contour evidence still requires G2 geometry validation.
+`component(copy, plan, pieces)` borrows current Piece labels/material/raw contour evidence. Reordering
+components preserves targets; same-id replacement exposes current metadata without rewriting intent.
+Target/placement success proves no component contours: Design must inspect every `range_resolutions()`
+and refuse lost interiors before execution/release. G2 must still validate geometry.
 
-`PocketOpening::Declaration(operation)` and `PocketOpening::Profile(parameter)` preserve logical
-origins without inventing an opening vocabulary or default. Every Pocket reports
-`PocketOpeningValidation::DeferredToG3`; carrying a binding does not establish supported execution
-scope. Recipe/Design resolves its declaration, domain/state and dependencies; G3 executes pocket
-construction and consumes named envelope diagnostics before execution. A profile opening also
-reports `Some(ProfileBindingValidation::DeferredToG4)`. `None` means only no profile opening was
-authored. Placement/contour geometry reports `GeometricValidation::DeferredToG2` independently.
+`PocketOpening::Declaration(operation)`/`Profile(parameter)` retain logical origins without opening
+vocabulary/defaults. Every Pocket has `PocketOpeningValidation::DeferredToG3`; binding proves no
+execution scope. Recipe/Design checks declaration/domain/state/dependencies; G3 executes construction
+after named envelope checks. Profile openings add `Some(ProfileBindingValidation::DeferredToG4)`;
+`None` means no profile field. Geometry independently retains `GeometricValidation::DeferredToG2`.
 
 | API token | Meaning in the Pocket implementation |
 | --- | --- |
@@ -417,10 +434,9 @@ authored. Placement/contour geometry reports `GeometricValidation::DeferredToG2`
 
 ## Owned Pocket collection and current component intervals
 
-PocketInventory::new(pockets) owns exact authored Pocket objects in order. Duplicate identities
-refuse with original first/repeated positions; nothing is sorted, selected or repaired. pockets() and
-pocket(id) return shared original objects. Raw presence supplies no current certificate, and an
-explicitly empty collection supplies no whole Design or assembly completeness claim.
+PocketInventory::new(pockets) owns exact authored order; duplicate ids retain first/repeated positions
+without sorting/selection/repair. pockets()/pocket(id) borrow originals. Raw presence grants no current
+certificate; empty scope grants no whole Design/assembly completeness.
 
 ```rust
 let pockets = PocketInventory::new(vec![left_pocket, right_pocket])?;
@@ -433,19 +449,16 @@ construction lines. Constructor success and individual component lookup cannot r
 A plan built for cut-two cannot remain current after the same-id Pieces change to cut-four, even if
 each Pocket reference still finds its old copy. The original CutPlanError is retained as its cause.
 
-For example, split a bag component edge into thirds and delete the middle. Pocket placement and
-both component endpoints can still resolve. The inventory returns ComponentRange for the actual
-Pocket/component copy/source Piece/edge position with live/repair/live evidence. This applies to
-holes and construction lines too, retaining original traversal separately from forward-frame range
-portions. Only an exact source-Piece/edge/parameter registration supplies a saved endpoint choice;
-another consumer cannot choose for the Piece. The canonical ledger resolver applies that choice,
-while the raw range endpoints remain unchanged. A chosen branch that later becomes orphaned blocks
-with its choice-aware endpoint answer alongside the raw interval evidence. No deleted interval is
-sampled away or reattached. The unchanged Pocket remains inspectable.
+Split a bag edge into thirds and delete its middle: placement/both endpoints may still resolve.
+ComponentRange retains actual Pocket/component copy/source Piece/edge position and live/repair/live
+evidence, also for holes/construction lines. Original traversal stays separate from forward-frame
+portions. Saved endpoint choice requires exact source-Piece/edge/parameter registration; peers cannot
+choose for it. The canonical resolver applies choices without changing raw endpoints. An orphaned
+chosen branch blocks with its choice-aware answer/raw intervals. Deleted intervals are never sampled
+away or reattached; the unchanged Pocket remains inspectable.
 
-Every Pocket is checked, including a later one after earlier success. Pocket wrappers preserve the
-concrete original PocketError and its AnchorError chain; component range payloads remain data rather
-than invented Error causes. All failures retain authored positions without an accepted prefix.
+Every Pocket is checked; later failure retains authored position without an accepted prefix.
+Wrappers preserve PocketError/AnchorError chains; component range payloads remain data.
 
 | API or variant | Meaning |
 | --- | --- |

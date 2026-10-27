@@ -2124,7 +2124,7 @@ fn layer_offset_declarations_do_not_certify_missing_current_served_pieces_or_inf
 }
 
 #[test]
-fn layer_offset_declarations_recheck_whole_root_before_even_an_empty_inventory() {
+fn construction_intake_and_layer_offset_declarations_recheck_whole_root_before_even_empty_scope() {
     use core::cell::Cell;
     use sc_core::{
         design::{DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost},
@@ -2201,7 +2201,33 @@ fn layer_offset_declarations_recheck_whole_root_before_even_an_empty_inventory()
         .layer_offset_declarations(&layers)
         .expect("stable snapshot")
         .is_empty());
+    let constructions = sc_core::ontology::ConstructionInventory::new(
+        vec![],
+        vec![],
+        vec![],
+        vec![],
+        vec![],
+        vec![],
+    )
+    .expect("explicit empty constructions");
+    assert!(state
+        .construction_intake_declarations(&constructions)
+        .expect("stable root")
+        .is_empty());
     state.sources().host().changed.set(true);
+    let error = state
+        .construction_intake_declarations(&constructions)
+        .expect_err("whole current root first");
+    assert!(
+        matches!(&error, sc_core::design::DesignConstructionDeclarationError::Inputs(issue)
+        if matches!(issue.as_ref(), DesignInputsError::Sources(source) if matches!(source.as_ref(), DesignMetadataError::ChangedEntities)))
+    );
+    assert!(std::error::Error::source(&error)
+        .expect("original Inputs cause")
+        .is::<DesignInputsError<DesignSourcesError>>());
     assert!(matches!(state.layer_offset_declarations(&layers),
         Err(DesignInputsError::Sources(issue)) if matches!(issue.as_ref(), DesignMetadataError::ChangedEntities)));
 }
+
+#[path = "support/construction_intake_declarations.rs"]
+mod construction_intake_declarations;

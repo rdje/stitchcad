@@ -903,31 +903,40 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0399 current grain/allowance sources; [whole proof](../history/stitchcad-devnotes-part549.md).
 - ID: `G1-SLICE.6.4.5.4.d`
   Status: `done`
-  Goal: six-family ownership/current scope; .1 immutable orders/ids; .2 graph/copy/Piece/sources.
+  Goal:0400/0401 ownership/current scope; [whole current subtree](../history/stitchcad-devnotes-part551.md).
+  Children .1 ownership; .2 complete current sources/causes.
 - ID: `G1-SLICE.6.4.5.4.d.1`
   Status: `done`
-  Goal:0400 exact construction ownership; [whole proof](../history/stitchcad-devnotes-part550.md).
+  Goal:0400 exact ownership; [whole proof](../history/stitchcad-devnotes-part550.md).
 - ID: `G1-SLICE.6.4.5.4.d.2`
   Status: `done`
-  Goal:0401 complete current context/sources and original typed chains.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test sewing_contract
-    current_cut_plan_refusal_preserves_the_original_standard_error_cause:0/1 rc=101, cause None.
-    D273 owned P2/fixed here; complete context required even empty.
-  - [x] ROOT CAUSE (WHY + WHERE): source review and native red rc=101:sewing.rs empty Error impl
-    hid InvalidCutPlan's original cause; complete graph preflight must precede actual-family selection.
-  - [x] FIX: cargo test -p sc-core --test construction_inventory_contract --test sewing_contract:
-    9+22 passed rc=0; graph-first current traversal and original contextual typed causes implemented.
-  - [x] ADDRESSED: same31 native checks rc=0:empty context, unselected graph source, duplicate Pieces,
-    stale quantities, missing owner, later index1 in all6 families, historical split/reversal and no cache;
-    exact cause equality/downcasts include Dart AnchorError and Graph/Sewing/CutPlan.
-  - [x] NO REGRESSION: old cases remain in31 native checks rc=0; affected strict Clippy/fmt and
-    cargo test -p sc-core --doc ontology::construction_inventory:3 compile-fail contracts rc=0.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part550.md:4 spans rc=0;
-    retention/book/publication/size rc=0; book facts retained, repetition tightened.
-    Promotion: ontology structural decision. Declarations .e/global joins .5/component gate .f remain.
+  Goal:0401 complete current context/D273; [whole proof](../history/stitchcad-devnotes-part551.md).
 - ID: `G1-SLICE.6.4.5.4.e`
+  Status: `in_progress`
+  Goal: actual typed declarations/current root; no role/id coercion.
+  Children .1 intake/closing; .2 grain/allowance; .3 joined Gather.
+- ID: `G1-SLICE.6.4.5.4.e.1`
+  Status: `done`
+  Goal:0402 actual intake/closing roles over one current canonical owner.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract construction_intake:
+    5 passed rc=0; bare numeric ids10/2000 cannot replace actual formula metadata in all3 families.
+  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:intake/closing are numeric/logical roles;
+    select actual parameter/current canonical declaration without reading values.
+  - [x] FIX: same native5 rc=0; whole-root preflight then ordered typed actual object/field/position/
+    canonical borrows, preserving inline explicit zero and logical Profile/operation aliases.
+  - [x] ADDRESSED: same native5 rc=0; Derived dedicated/Unknown general Length, later Count,
+    missing current Piece and empty-scope host drift retain exact pointers/causes, no partial views.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::constructions:1 compile-fail rc=0;
+    cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings and affected fmt rc=0.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part551.md:4 spans rc=0;
+    retention/book/publication/size rc=0; book facts retained. Promotion: Design host decision.
+    Grain/allowance .e.2, Gather .e.3, component .f, global joins .5 and full CI remain owned.
+- ID: `G1-SLICE.6.4.5.4.e.2`
   Status: `pending`
-  Goal: actual typed declaration/operation borrows over the single current canonical root; no id coercion.
+  Goal: actual grain-angle/allowance width/inclusion declarations, typed kinds/Profile roles.
+- ID: `G1-SLICE.6.4.5.4.e.3`
+  Status: `pending`
+  Goal: original Gather signed span ease/closing; current graph/copy/sources.
 - ID: `G1-SLICE.6.4.5.4.f`
   Status: `pending`
   Goal: focused complete current construction component acceptance before coupled garment .5.

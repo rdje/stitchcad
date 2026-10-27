@@ -1179,14 +1179,11 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 [Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
-## D271/D272 — current causes and derived census
-[Whole corrected reports0397](../history/stitchcad-devnotes-part547.md); [whole retirement proof0400](../history/stitchcad-devnotes-part550.md).
-## D273 — sewing standard cause chain
-Owned P2 .6.4.5.4.d.2, fixed0401. Current stale-quantity reproduction:0/1 rc=101, then1/0 rc=0.
-Empty SewingError impl hid exact InvalidCutPlan cause. Native aggregate downcasts retain Graph →
-SewingError → CutPlanError; concrete leaf errors remain terminal. Existing typed refusal unchanged.
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part550.md:4 exact
-  Git spans rc=0; whole0400 scopes retained before live retirement; D273 native red0/1 rc=101.
-- [x] ADDRESSED: native sewing22/construction9 rc=0; D273 exact original cause preserved, no retarget.
-- [x] NO REGRESSION: compile-fail3/strict affected Clippy/fmt/book/publication/retention/size rc=0;
-  broader component verification remains .4.f, full integration later.
+## D271/D272/D273 — current cause chains and derived census
+[Whole Dart/census reports0397](../history/stitchcad-devnotes-part547.md); [whole D273/current proof0401](../history/stitchcad-devnotes-part551.md).
+
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part551.md:4 exact
+  Git spans rc=0; complete0401 scopes retained before retirement.
+- [x] ADDRESSED: same rc=0; whole0401 subtree/lesson/ledger/D273/retirement retained.
+- [x] NO REGRESSION: intake native5/lifetime1/affected strict Clippy/fmt/book/publication/retention/size
+  rc=0; complete component acceptance .4.f, full integration later.

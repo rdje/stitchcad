@@ -7,6 +7,8 @@
 
 answers: "how can Design own measurement metadata without a circular dependency?" · "does host admission prove a measurement binding?" · "can a copied canonical declaration authorize a Design source?" · "how do owned metadata objects avoid self-referential contexts?" · "how does core validate an external SizeSet pin without a reverse dependency?" · "what does DesignInputs admission prove?" · "may a draft leave source references unprovided?" · "which actual sources enter a Design input namespace?"
 
+answers: "do construction intake views require actual formula metadata while preserving logical closing and Profile roles?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -61,3 +63,14 @@ Ease bindings are validated before borrowing their saved target from the sole ca
 Namespace errors retain borrowed original declarations; static current-input error chains remain
 available separately. Unselected metadata and human labels contribute no names. Profile/Material/
 geometry inputs, recipe proofs and execution retain their existing separate contracts.
+
+## Actual construction intake roles — G1-SLICE.6.4.5.4.e.1
+
+The intake query validates the whole current root even with empty families, then borrows each actual
+Dart/Tuck/Pleat's intake and closing-operation fields in original family/authored order. Views retain
+actual distinct objects, original positions and one canonical owner. Formula intake requires actual
+Design parameter/current Length metadata; dedicated/general Length and Unknown/Derived remain their
+original representations/states. Explicit zero/id/value remain inline intent; logical Profile and
+operation ids never coerce to numeric roles. Errors retain actual construction/position/role with
+original current-root causes and no partial collection. Current garment sources, operation checks,
+global ids, resolved nonnegativity/conservation and physical/release proof remain separate.

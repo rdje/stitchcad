@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0401 — validate complete current construction context
+## STITCHCAD-G1-0402 — borrow actual intake and closing declaration roles
 
-- Preflight the whole graph/copy/Piece context before every family source, even with empty ownership.
-- Preserve original id/family/index and concrete causes/raw repairs; no partial success, retarget or cached proof.
-- Fix D273 standard SewingError/CutPlanError chain with native red/green and nested aggregate controls.
-- Native9+22/compile-fail3/strict lint/fmt pass0; book current scope/example and whole0400 proof550 synchronized.
+- Current whole-root preflight precedes Dart/Tuck/Pleat intake/closing views with original typed objects/positions.
+- Require actual Length-kind formula metadata; preserve explicit zero, unread states and logical Profile/operation intent.
+- Native5/lifetime1/strict lint/fmt pass0; current garment sources and full readiness remain separate.
+- Book/API example synchronized; whole0401 subtree/D273/continuity proof551 retains4 exact Git spans.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part551](docs/history/stitchcad-devnotes-part551.md) | whole0401 subtree/lesson/ledger/D273/retirement | 55 lines, 4393 bytes, sha256:d3afdf4f… |
 | [part550](docs/history/stitchcad-devnotes-part550.md) | whole0400 ownership/lesson/ledger/retirement | 43 lines, 3448 bytes, sha256:1e372e5a… |
 | [part549](docs/history/stitchcad-devnotes-part549.md) | whole0399 grain/allowance/lesson/ledger/retirement | 45 lines, 3561 bytes, sha256:105f30c2… |
 | [part548](docs/history/stitchcad-devnotes-part548.md) | whole0398 Gather/lesson/ledger/retirement | 49 lines, 3992 bytes, sha256:3ad1969e… |
