@@ -1,7 +1,7 @@
 # Implemented command execution
 
 The [command-layer contract](command-layer.md) defines the complete intended surface. This page
-describes the implemented private owner, metadata query, Material and Notch inspect-preview subset.
+describes the private owner, metadata query and Measurement/Material/Notch metadata inspect-previews.
 
 ## First executable read and private ownership
 
@@ -44,7 +44,8 @@ idempotency, audit, undo and runtime/adapter parity remain separately owned impl
 ## Actual Material assignment preview
 
 CommandBus::preview now accepts AssignMaterial under fresh inspect authority; commit permission is
-unnecessary. is_preview_available reports AssignMaterial and AddNotch, separately from is_available.
+unnecessary. is_preview_available reports ChangeMeasurement, AssignMaterial and AddNotch,
+separately from is_available. All three prepare metadata; recipe/geometry execution remains separate.
 The request carries the actual Design, actor, exact revision, retry key and explicit Piece selection.
 Constructing it grants no authority. With a supported actual garment and trusted provider:
 
@@ -163,6 +164,50 @@ the failed comparison; an unexpected internal mutation cannot become a successfu
 
 Focused difference checks use real canonical Pieces, ledger and Notches, including unrelated valid
 label changes, reordered Pieces/landmarks, unselected edits and mismatched assignment or Notch identity.
-The existing real-aggregate bus cases still pass. These checks establish the implemented two-operation
-subset; other mutation differences and full integration retain their later owners.
+The existing real-aggregate bus cases still pass. These checks establish the implemented
+metadata subset; other mutation differences and full integration retain their later owners.
+
+## Actual Measurement binding and metadata preview
+
+ChangeMeasurement now prepares an actual private metadata candidate. Fresh inspect authorization,
+exact Design/revision binding, explicit envelope and complete current sources precede Measurement
+lookup. The original DesignMetadata owner resolves the actual Measurement role and its borrowed
+canonical dedicated LengthDeclaration. A missing Measurement or wrong metadata role preserves the
+original DesignMetadataError chain. MeasurementDeclarationMismatch refuses a replacement naming
+another declaration, retaining the Measurement, actual bound id and requested replacement id.
+
+```rust
+let intent = ChangeMeasurement::new(measurement_id, replacement_declaration);
+let request = CommandRequest::Mutation(CommandMutation::new(
+    CommandMutationContext::new(design_id, actor, exact_revision.clone(), retry_key, None),
+    MutationPayload::ChangeMeasurement(intent),
+));
+let CommandPreview::Measurement(report) = bus.preview(&request)? else {
+    unreachable!("this typed request is ChangeMeasurement");
+};
+assert_eq!(report.measurement(), measurement_id);
+for change in report.changes() {
+    assert_eq!(change.before().id(), change.after().id());
+    let authored_state = change.after().state();
+}
+```
+
+The bus replaces only the bound dedicated declaration at its original position, retaining exact
+supplied source, authored state and provenance references. It rebuilds the actual structural/input/
+sewing/garment owner and validates the complete current candidate. Shared consumers see that same
+canonical declaration: for example, replacing a Measurement also used as a Material width with a
+known zero value refuses with the original MaterialError::NonPositiveWidth in its source chain.
+An Unknown observation or Derived formula remains a reference without a numeric fallback.
+
+CommandPreview::Measurement carries actual Design/base revision, original Measurement id and zero
+changes for an exact no-op or one CommandLengthChange with actual before/after declarations. The
+bus checks every other canonical record by restoring only the original target in a copied candidate
+inventory and comparing the complete owner. All other metadata, Pieces, landmarks, ordering, recipe,
+cut plan and ledger must remain identical. Unexpected changes retain Difference causes and refuse.
+
+Source, evidence, observation and formula references remain authored claims. This metadata preview
+does not verify their external truth or execute the recipe, regenerate geometry or produce an Instance.
+Actual expression/recipe execution remains G1-SLICE.5e/.5f; source truth remains its evidence owners.
+Inspect-only preparation grants no commit permission. Success and refusal leave the original model,
+canonical values, revision and identity reserve unchanged; execute still refuses ChangeMeasurement.
 

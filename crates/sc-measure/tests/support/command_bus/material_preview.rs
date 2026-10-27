@@ -95,7 +95,10 @@ fn inspect_only_preview_reports_actual_changes_in_selection_order_without_public
     for command in CommandId::ALL {
         assert_eq!(
             bus.is_preview_available(command),
-            matches!(command, CommandId::AssignMaterial | CommandId::AddNotch)
+            matches!(
+                command,
+                CommandId::ChangeMeasurement | CommandId::AssignMaterial | CommandId::AddNotch
+            )
         );
         assert_eq!(
             bus.is_available(command),

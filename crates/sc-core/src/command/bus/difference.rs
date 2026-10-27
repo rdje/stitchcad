@@ -1,12 +1,13 @@
 //! Exact actual candidate differences, with closed coverage of every implemented owner definition.
-use super::CommandMaterialChange;
+use super::{CommandLengthChange, CommandMaterialChange};
 use crate::{
-    command::{AddNotch, AssignMaterial},
+    command::{AddNotch, AssignMaterial, ChangeMeasurement},
     design::{
         DesignGarment, DesignGarmentDefinition, DesignInputsDefinition, DesignReferenceHost,
         DesignSewingDefinition, DesignStructureDefinition,
     },
     ontology::{EntityId, Notch, Piece, SewingLandmark},
+    value::CanonicalInputs,
 };
 use core::fmt;
 
@@ -22,6 +23,13 @@ pub enum CommandDifferenceError {
     InputContext,
     /// Original Design identity/revision, canonical values, cut plan or ledger differs.
     StructuralContext,
+    /// Canonical ownership/order or an unselected canonical declaration differs.
+    CanonicalInputs,
+    /// Actual selected dedicated declaration differs from explicit replacement intent.
+    LengthIntent {
+        /// Original bound canonical declaration identity.
+        declaration: EntityId,
+    },
     /// Original Piece count, identity order or an unpermitted Piece field differs.
     Pieces,
     /// Original semantic landmark order/content or append-only Notch shape differs.
@@ -44,6 +52,17 @@ impl std::error::Error for CommandDifferenceError {}
 // Each pair of exhaustive patterns deliberately has no `..`: adding any owned definition field
 // requires an explicit comparison decision here. Only Pieces/landmarks are compared separately.
 pub(super) fn unchanged_context<H: DesignReferenceHost + PartialEq>(
+    before: &DesignGarment<H>,
+    after: &DesignGarment<H>,
+) -> Result<(), CommandDifferenceError> {
+    unchanged_noncanonical_context(before, after)?;
+    if before.inputs().inputs() != after.inputs().inputs() {
+        return Err(CommandDifferenceError::StructuralContext);
+    }
+    Ok(())
+}
+
+pub(super) fn unchanged_noncanonical_context<H: DesignReferenceHost + PartialEq>(
     before: &DesignGarment<H>,
     after: &DesignGarment<H>,
 ) -> Result<(), CommandDifferenceError> {
@@ -106,24 +125,54 @@ pub(super) fn unchanged_context<H: DesignReferenceHost + PartialEq>(
     let DesignStructureDefinition {
         id,
         revision,
-        inputs,
+        inputs: _,
         pieces: _,
         cut_plan,
         topology,
     } = before.inputs().structure().definition();
-    let original = (id, revision, inputs, cut_plan, topology);
+    let original = (id, revision, cut_plan, topology);
     let DesignStructureDefinition {
         id,
         revision,
-        inputs,
+        inputs: _,
         pieces: _,
         cut_plan,
         topology,
     } = after.inputs().structure().definition();
-    if original != (id, revision, inputs, cut_plan, topology) {
+    if original != (id, revision, cut_plan, topology) {
         return Err(CommandDifferenceError::StructuralContext);
     }
     Ok(())
+}
+
+pub(super) fn length_changes(
+    before: &CanonicalInputs,
+    after: &CanonicalInputs,
+    intent: &ChangeMeasurement,
+) -> Result<Vec<CommandLengthChange>, CommandDifferenceError> {
+    let identity = intent.replacement().id();
+    let original = before
+        .length(identity)
+        .ok_or(CommandDifferenceError::CanonicalInputs)?;
+    let candidate = after
+        .length(identity)
+        .ok_or(CommandDifferenceError::CanonicalInputs)?;
+    if candidate != intent.replacement() {
+        return Err(CommandDifferenceError::LengthIntent {
+            declaration: identity,
+        });
+    }
+    if after.with_length_declaration(original.clone()).as_ref() != Ok(before) {
+        return Err(CommandDifferenceError::CanonicalInputs);
+    }
+    Ok(if original == candidate {
+        vec![]
+    } else {
+        vec![CommandLengthChange {
+            before: original.clone(),
+            after: candidate.clone(),
+        }]
+    })
 }
 
 pub(super) fn material_changes(
@@ -200,6 +249,78 @@ pub(super) fn added_notch(
 mod tests {
     #![allow(clippy::expect_used)]
     use super::*;
+    use crate::value::{LengthDeclaration, LengthDeclarationDefinition, LengthState};
+
+    fn canonical_length(identity: u128, source: u128) -> LengthDeclaration {
+        LengthDeclaration::new(LengthDeclarationDefinition {
+            id: EntityId::from_bits(identity),
+            source: EntityId::from_bits(source),
+            state: LengthState::Unknown {
+                observation: EntityId::from_bits(899),
+            },
+        })
+        .expect("actual dedicated canonical declaration")
+    }
+
+    #[test]
+    fn actual_length_diff_checks_selected_intent_and_every_unselected_canonical_record() {
+        let before = CanonicalInputs::new(
+            vec![canonical_length(800, 810), canonical_length(801, 811)],
+            vec![],
+        )
+        .expect("actual canonical owner");
+        let replacement = canonical_length(800, 820);
+        let intent = ChangeMeasurement::new(EntityId::from_bits(850), replacement.clone());
+        assert_eq!(
+            length_changes(&before, &before, &intent),
+            Err(CommandDifferenceError::LengthIntent {
+                declaration: replacement.id()
+            })
+        );
+        let after = before
+            .with_length_declaration(replacement.clone())
+            .expect("stable actual replacement");
+        let changes = length_changes(&before, &after, &intent).expect("actual selected change");
+        assert_eq!(changes.len(), 1);
+        assert_eq!(
+            changes.first().expect("actual change").before(),
+            before.length(replacement.id()).expect("actual original")
+        );
+        assert_eq!(
+            changes.first().expect("actual change").after(),
+            &replacement
+        );
+        let unrelated = after
+            .with_length_declaration(canonical_length(801, 821))
+            .expect("valid unselected declaration change");
+        assert_eq!(
+            length_changes(&before, &unrelated, &intent),
+            Err(CommandDifferenceError::CanonicalInputs)
+        );
+    }
+
+    #[test]
+    fn actual_length_diff_omits_exact_noop_and_refuses_inventory_or_order_drift() {
+        let first = canonical_length(800, 810);
+        let second = canonical_length(801, 811);
+        let before = CanonicalInputs::new(vec![first.clone(), second.clone()], vec![])
+            .expect("actual owner");
+        let intent = ChangeMeasurement::new(EntityId::from_bits(850), first.clone());
+        assert!(length_changes(&before, &before, &intent)
+            .expect("exact no-op")
+            .is_empty());
+        let reordered = CanonicalInputs::new(vec![second, first], vec![])
+            .expect("independently valid reordered owner");
+        assert_eq!(
+            length_changes(&before, &reordered, &intent),
+            Err(CommandDifferenceError::CanonicalInputs)
+        );
+        let empty = CanonicalInputs::new(vec![], vec![]).expect("valid empty draft");
+        assert_eq!(
+            length_changes(&before, &empty, &intent),
+            Err(CommandDifferenceError::CanonicalInputs)
+        );
+    }
     use crate::{
         command::PieceSelection,
         ontology::{

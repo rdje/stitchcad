@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0425
+## Current leaf acceptance —0426
 
-- [x] ROOT CAUSE: cargo test -p sc-core --test canonical_inputs_contract:9 passed rc=0;
-  stable dedicated identity/position must select replacement without append or scalar conversion.
-- [x] ADDRESSED: cargo test -p sc-core --test canonical_inputs_contract:9 passed rc=0;
-  exact source/state, original owner, other records/order and missing/general-scalar refusal checked.
-- [x] NO REGRESSION: selected strict Clippy finished rc=0; cargo test -p sc-core --doc value::inventory:
-  1 passed rc=0; selected fmt --check rc=0; canonical9 includes prior7 cases. Integration remains .6.9.
+- [x] ROOT CAUSE: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
+  actual Measurement identity binds a distinct dedicated declaration and shared current consumers.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
+  difference5 rc=0; actual binding/id, exact state/no-op, shared Material failure and unchanged owner checked.
+- [x] NO REGRESSION: selected strict Clippy finished rc=0; cargo test -p sc-core --doc command::bus:
+  3 passed rc=0; selected fmt --check rc=0. Prior bus14 pass within18; full integration remains .6.9.
 
 ## Goal
 
@@ -710,7 +710,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
     prior actual read5 also pass in command_bus10. Full integration remains .6.9, no publication claim.
   - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part573.md:1 exact Git
     span rc=0; verify-retention OK rc=0. Book/README/live pointer/decision/lesson aligned; gates below.
-  Book build/publication:80 chapters/159 tables/1461 rows/2435 local links rc=0; maintained-reference
+  Book build/publication:80 chapters/159 scoped API rows/1461 source links/2435 rendered links rc=0; maintained-reference
   candidate81 files/17359 lines/1212157 bytes rc=0. Tree census10 lanes/13 trees/17 siblings/0 gaps rc=0.
   Checks use scripts/local_environment.py for Cargo. Initial indexing lint refusals corrected without
   lint suppression; selected strict lint now passes. New test module path fixed from rustfmt diagnostic.
@@ -726,33 +726,47 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Children: .1 ChangeMeasurement metadata candidate; later paired-seam and Dart operations must
   retain actual recipe/geometry dependencies. Metadata preparation confers no evaluator/physical proof.
 - ID: `G1-SLICE.6.5.3.1`
-  Status: `in_progress`
-  Goal: actual ChangeMeasurement binding/canonical replacement/candidate and semantic diff. Recipe
-  reevaluation still requires .5e/.5f; no fabricated evaluator or publication before real dependencies.
+  Status: `done`
+  Goal: actual ChangeMeasurement metadata binding/replacement/candidate and semantic diff complete.
+  Recipe reevaluation remains .5e/.5f; no publication or complete evaluation proof follows.
 - ID: `G1-SLICE.6.5.3.1.1`
   Status: `done`
-  Goal:0425 immutable dedicated canonical length replacement, stable existing id/position, exact
-  source/state preserved; original owner/other records unchanged. Actual binding/candidate .1.2 next.
-  - [x] REPRODUCE / ISSUE: git show c027bc9:crates/sc-core/src/value/inventory.rs prints constructor/
-    borrowed-only ownership with no stable replacement operation, rc=0; handler would duplicate copying.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test canonical_inputs_contract:9 passed rc=0;
-    dedicated lengths and general Length-kind scalars are distinct; replacement must target existing owner.
-  - [x] FIX: cargo clippy -p sc-core --test canonical_inputs_contract -- -D warnings:finished rc=0;
-    clone owner/replace matching dedicated record only; typed MissingLength preserves exact requested id.
-  - [x] ADDRESSED: cargo test -p sc-core --test canonical_inputs_contract:9 passed rc=0; new2 cover
-    original order/source/Unknown/Derived/no-op and missing/general-scalar targets, without numeric defaults.
-  - [x] NO REGRESSION: canonical_inputs_contract9 rc=0 includes prior7; cargo test -p sc-core --doc
-    value::inventory:1 passed rc=0; selected strict Clippy/fmt pass rc=0. No domain authority granted.
-  - [x] LOCKSTEP: whole0424 task/lesson/ledger retained576; book/pointer/decision/task/ledger updated.
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part576.md:3 exact Git spans
-    rc=0; retention OK rc=0; book build/publication80 chapters/159 tables/1461 rows/2437 links rc=0.
-    Maintained-reference candidate81 files/17454 lines/1218767 bytes rc=0; integration remains .6.9.
-  Cargo commands use scripts/local_environment.py. No Measurement binding/source truth/evaluation or
-  committed mutation follows from detached value replacement; actual candidate .1.2 retains these duties.
+  Goal:0425 stable detached canonical replacement; [whole scope/proofs](../history/stitchcad-devnotes-part577.md).
 - ID: `G1-SLICE.6.5.3.1.2`
+  Status: `done`
+  Goal:0426 actual Measurement binding/id guard, validated private canonical candidate and exact
+  actual diff. Unknown/Derived remain metadata; external truth/recipe execution remain separately owned.
+  - [x] REPRODUCE / ISSUE: git show 411f74d:crates/sc-core/src/command/bus.rs prints preview dispatch
+    for only Material/Notch, rc=0; detached canonical replacement alone supplies no actual Measurement binding.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-measure --test design_inputs_contract command_bus:
+    18 passed rc=0; actual binding and shared consumers must use the single real canonical owner.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
+    bind actual metadata, require original declaration id, validate full candidate and normalize exact diff.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
+    inspect-only Unknown/Derived/no-op, wrong id/missing metadata, original shared width/source chain.
+  - [x] NO REGRESSION: cargo test -p sc-core --lib command::bus::difference:5 passed rc=0;
+    prior bus14 also pass within18; privacy3/selected fmt/strict Clippy pass rc=0. Shared errors moved intact.
+  - [x] LOCKSTEP: whole0425 scope/lesson/ledger retained577; README/book/pointer/status/decision aligned.
+    Original broad handler-pending wording now names actual read/metadata subset. Native archive/book
+    transition_receipts.py records577/578:3+1 exact Git spans rc=0; retention OK rc=0. Named publication
+    summary:80 chapters/159 scoped API rows/1462 source links/2439 rendered links rc=0, equal to native
+    411f74d original formatter. Exact tuple compatibility retained; full publication probes await .6.9.publication/pre-push.
+    Actual expression/recipe/source truth remain .5e/.5f/evidence owners.
+  D283 P2, owned/fixed here: manual tuple labels called159 scoped API rows tables and1461 source
+  links rows. Native check return/main formatter proves the cause; all1031 retained records scanned,
+  exactly575/576/577 affected. Those sealed bytes stay unchanged: read their159 as scoped API rows,
+  1461 as source links and2436/2437 as rendered links. No table-count claim was earned by that check.
+  Correct live0422 labels; return a named PublicationResult/summary to remove tuple decoding from callers. Native
+  wc establishes PLANNING1194 lines and decision184; an ad-hoc print had mislabeled decision184 as
+  planning after variable reuse. Stored planning cap assertion used the correct source; native paths
+  and named producer fields replace those ambiguous diagnostic labels. No retention bytes are edited.
+  Maintained-reference candidate81 files/17501 lines/1221811 bytes rc=0; git diff --check rc=0.
+  Cargo commands use scripts/local_environment.py. New metadata reports confer no effect authority;
+  model/revision/identity reserve unchanged on success/refusal. Full bus integration remains .6.9.
+- ID: `G1-SLICE.6.5.3.2`
   Status: `pending`
-  Goal: actual Measurement-to-declaration binding, private candidate/source validation and exact diff;
-  preserve Unknown/Derived and deferred provenance truth/evaluation obligations.
+  Goal: actual paired SplitSeamSpan handler: recover native range/ease/stop/lineage interfaces and
+  explicit A/B-cut contract first; own any real recipe/geometry dependencies without fabricated checks.
 - ID: `G1-SLICE.6.5.4`
   Status: `pending`
   Goal: authorized candidate preview, effect-boundary revalidation and whole-group atomic publication.
@@ -771,6 +785,12 @@ All98 completed ids/statuses and original proof pointers remain live there.
 - ID: `G1-SLICE.6.9`
   Status: `pending`
   Goal: coupled actual bus acceptance/private-mutator compile failures; workflow registry feeds G1.9/G5 parity.
+
+- ID: `G1-SLICE.6.9.publication`
+  Status: `pending`
+  Goal: after agreed command-feature implementation, run the complete existing publication probes,
+  including named-result fixture compatibility, before push; current focused native formatter oracle
+  does not claim this broader suite passed. COMMIT.md full pre-push gates remain mandatory.
 
 - ID: `G1-SLICE.7`
   Status: `pending`

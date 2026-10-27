@@ -56,6 +56,8 @@ impl Host {
 
 #[path = "command_bus/material_preview.rs"]
 mod material_preview;
+#[path = "command_bus/measurement_preview.rs"]
+mod measurement_preview;
 #[path = "command_bus/notch_preview.rs"]
 mod notch_preview;
 impl CommandAuthoritySource for Host {

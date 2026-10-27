@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Material/Notch inspect-preview implemented; publication pending
+- **Status:** `active`; all17 typed inputs, trusted-host authorization, Piece-list read and Measurement/Material/Notch metadata previews implemented; publication pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -167,3 +167,18 @@ answers: "how does ChangeMeasurement prepare stable canonical declaration replac
 original position, retaining exact supplied source/state and all other owned records. MissingLength
 refuses absent/general-scalar targets. The original owner stays unchanged; no binding, authority,
 source truth or evaluation follows from detached replacement. Actual binding/candidate/diff .1.2 follows.
+
+answers: "what does a real ChangeMeasurement metadata preview check?"
+
+0426 .6.5.3.1.2 resolves the actual Measurement role/binding before requiring the original bound
+declaration id. Exact source/state replacement rebuilds and validates the actual candidate; shared
+consumers such as Material width retain their original current-property errors. Canonical diff
+normalization reverts only the selected declaration and compares the full owner, preserving every
+other value/order; other metadata/Pieces/landmarks remain identical. Reports read actual candidate
+values, omit no-ops and confer no publication authority. Unknown/Derived gain no numeric fallback.
+This is metadata preparation; actual recipe execution/source truth remain separately owned.
+
+answers: "which book publication populations were actually checked?"
+D283 correction0426: the producer reports chapters, scoped API rows, source links and rendered links.
+Historical575/576/577 called the middle populations tables/rows; their tuples were correct, labels were not.
+Named PublicationResult/summary now preserve native formatter semantics; no table count was measured.

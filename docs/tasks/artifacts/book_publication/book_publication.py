@@ -19,6 +19,20 @@ import shutil
 import subprocess
 import uuid
 from urllib.parse import unquote, urlsplit
+from typing import NamedTuple
+
+
+class PublicationResult(NamedTuple):
+    """Named checked populations; tuple compatibility preserves existing fixture comparisons."""
+    chapters: int
+    scoped_api_rows: int
+    source_links: int
+    rendered_links: int
+
+    def summary(self) -> str:
+        """Use the producer's labels instead of assigning meanings to tuple positions."""
+        return (f"publication: {self.chapters} chapters / {self.scoped_api_rows} scoped API rows / "
+                f"{self.source_links} source links / {self.rendered_links} rendered links; all checked")
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = Path("docs/book/src")
@@ -473,7 +487,7 @@ def check(root):
     require("not a finished drafting application" in intro and "not a claim that a feature ships today" in availability,
             "TEXT_STATUS", "existing libraries versus future specification")
     formula_scope(root)
-    return len(registered), len(current_rows), source_links, rendered_links
+    return PublicationResult(len(registered), len(current_rows), source_links, rendered_links)
 
 
 def fixture(root, destination):
@@ -618,8 +632,7 @@ def main():
     if diagnostic:
         print(diagnostic, end="" if diagnostic.endswith("\n") else "\n")
     result = check(ROOT)
-    print(f"publication: {result[0]} chapters / {result[1]} scoped API rows / "
-          f"{result[2]} source links / {result[3]} rendered links; all checked")
+    print(result.summary())
     cases = {
         "unregistered chapter": "CHAPTER_COVERAGE",
         "missing indexed chapter": "INDEX_COVERAGE",

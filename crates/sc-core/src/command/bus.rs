@@ -10,17 +10,23 @@ use crate::{
 use core::fmt;
 
 mod material;
-pub use material::{CommandMaterialChange, CommandMaterialPreview, CommandPreviewError};
+pub use material::{CommandMaterialChange, CommandMaterialPreview};
+mod error;
+pub use error::CommandPreviewError;
 mod identity;
 pub use identity::CommandIdentityError;
 mod notch;
 pub use notch::CommandNotchPreview;
 mod difference;
 pub use difference::CommandDifferenceError;
+mod measurement;
+pub use measurement::{CommandLengthChange, CommandMeasurementPreview};
 
 /// Actual inspect-preview subset; reports carry semantic changes, never an owned candidate model.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum CommandPreview {
+    /// Exact bound canonical length replacement; no recipe evaluation result.
+    Measurement(CommandMeasurementPreview),
     /// Exact changed Piece assignments in original selection order.
     Material(CommandMaterialPreview),
     /// Exact proposed added semantic Notch with tentative staged identity.
@@ -110,7 +116,8 @@ impl std::error::Error for CommandBusError {
 ///
 /// The application installs the authenticated authority provider; submitted requests cannot replace
 /// it. Construction claims no permission, source freshness or physical/geometry readiness. Only
-/// GetPieceList executes at this stage; AssignMaterial and AddNotch prepare private inspect-previews.
+/// GetPieceList executes at this stage; ChangeMeasurement, AssignMaterial and AddNotch prepare
+/// private metadata inspect-previews. Recipe evaluation remains separate.
 /// Mutation publication and histories remain absent.
 /// There is no model getter, mutable borrow, state replacement or caller-minted commit capability.
 ///
@@ -145,7 +152,10 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
     /// Actual inspect-preview subset, independent of committable/executable handlers.
     #[must_use]
     pub const fn is_preview_available(&self, command: CommandId) -> bool {
-        matches!(command, CommandId::AssignMaterial | CommandId::AddNotch)
+        matches!(
+            command,
+            CommandId::ChangeMeasurement | CommandId::AssignMaterial | CommandId::AddNotch
+        )
     }
 
     /// Freshly authorize inspect, bind the actual Design/revision and prepare a private candidate.
@@ -181,6 +191,9 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             .validate_current()
             .map_err(|e| CommandPreviewError::Current(Box::new(e)))?;
         match mutation.payload() {
+            MutationPayload::ChangeMeasurement(replacement) => self
+                .preview_measurement(replacement)
+                .map(CommandPreview::Measurement),
             MutationPayload::AssignMaterial(assignment) => self
                 .preview_material(assignment)
                 .map(CommandPreview::Material),

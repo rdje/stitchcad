@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0425 — preserve canonical identity during length replacement
+## STITCHCAD-G1-0426 — preview actual bound Measurement metadata
 
-- Detached replacement updates an existing dedicated declaration at its original position only.
-- Preserve exact source/state/provenance, other lengths/scalars and the original canonical owner.
-- MissingLength refuses absent/general Length-kind scalar targets; no append or numeric fallback.
-- Focused canonical9/privacy1/lint/fmt; actual Measurement binding/candidate remains .6.5.3.1.2.
+- Resolve actual Measurement binding and refuse a different canonical declaration identity.
+- Rebuild the real candidate; retain exact authored state/source and original shared-consumer errors.
+- Derive exact canonical diff; refuse unselected/order/context/Piece/landmark drift, omit no-ops.
+- Focused bus18/diff5/privacy3/lint/fmt; original state unchanged, no publication or recipe evaluation.
+- D283: correct publication metric labels, preserve sealed historical bytes with an explicit erratum; named summaries match original native formatter.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +44,8 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part578](docs/history/stitchcad-devnotes-part578.md) | wholeD281/D282 verified ledger | 15 lines, 1487 bytes, sha256:fdf69ae8… |
+| [part577](docs/history/stitchcad-devnotes-part577.md) | whole0425 canonical replacement scope/lesson/ledger | 37 lines, 3076 bytes, sha256:bb276d57… |
 | [part576](docs/history/stitchcad-devnotes-part576.md) | whole0424 difference scope/lesson/ledger | 38 lines, 3130 bytes, sha256:e64d6680… |
 | [part575](docs/history/stitchcad-devnotes-part575.md) | whole0423 identity scope/lesson/ledger | 44 lines, 3757 bytes, sha256:37ec11fc… |
 | [part574](docs/history/stitchcad-devnotes-part574.md) | whole0422 Material-preview lesson | 11 lines, 848 bytes, sha256:cdfc5ca0… |

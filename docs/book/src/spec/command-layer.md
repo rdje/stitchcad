@@ -198,7 +198,8 @@ owned by its later implementation. Undo's revision restoration remains §3, not 
 MutationPayload carries ChangeMeasurement, AssignMaterial, SplitSeamSpan, CloseDart and AddNotch. CommandMutation binds that
 concrete payload to CommandMutationContext. Its command_id() is derived from the variant; there is
 no separate caller-supplied command identity that could misclassify the request. These are typed
-request shapes; handlers and current registry/authority checks remain later bus work.
+request shapes. The [execution guide](command-execution.md) distinguishes implemented queries and
+current metadata previews from pending mutation publication.
 
 ChangeMeasurement carries the measurement metadata identity and an immutable replacement
 LengthDeclaration. Measurement and declaration identities are distinct. The replacement retains
@@ -513,7 +514,8 @@ No UI implementation or extra broad verification is started by this DBIQNP note.
   and reversibility against the vocabularies §1 and §7 declare; compares §7's five levels with the five
   roadmap §7.8 names, in both directions; and refuses a parity column with no declared source.
   `run_command_layer_probes.sh` is its ground truth.
-- **Typed catalog metadata is implemented; command handlers remain pending.** The set is a contract for
+- **Typed catalog metadata, GetPieceList and three metadata previews are implemented; mutation
+  publication remains pending.** The set is a contract for
   `G1-SLICE.6`. The census checks specification closure; the native catalog target compares metadata.
   Neither establishes command execution. A new command is a row here first.
 - **The parity table is empty on purpose**, as the canvas spike's results are: its columns and generation
