@@ -829,24 +829,32 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   property/Piece assignment checks; .4 selected-host/profile deferral acceptance before .d.4 composition.
 - ID: `G1-SLICE.6.4.2.d.3.1`
   Status: `done`
-  Goal: shared value::CanonicalInputTarget with compatible DesignParameterTarget alias; exact existing
-  variants, no conversion/lookup change. Own focused checks/docs and complete0351 continuity503.
-  - [x] REPRODUCE / ISSUE: Material metadata needs the same pinned family/id/kind contract; source
-    comparison proves exact original enum after name substitution, rc=0; no alternate representation.
-  - [x] ROOT CAUSE (WHY + WHERE): target lived inside design/parameters.rs. cargo test -p sc-core
-    --test design_parameters_contract gives9 passed/0 failed, rc=0; exact enum bytes confirm matching.
-  - [x] FIX: common value export, original public DesignParameterTarget alias; selected native9/0,
-    rc=0, target/canonical-target-native-0352.log. No new default, resolution or source-truth claim.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_parameters_contract passes9/0, rc=0.
-  - [x] NO REGRESSION: privacy2/strict selected lint/fmt/book/publication77/111/1444/2361 pass0,
-    target/canonical-target-*-0352.log; D250132 exact baseline rows/delta0, glossary rc=1.
-  - [x] LOCKSTEP: API vocabulary/status/notes/index/pointer aligned; continuity503 matches3 Git spans0.
-    Caps unchanged; G1still6/18. promotion: declined (existing canonical-source/identity contracts).
-    Commit0352; Material .3.2 next; full host/Design/readiness/integration/CI remains later.
+  Goal:0352 shared CanonicalInputTarget; [whole scope/proof](../history/stitchcad-devnotes-part504.md).
 - ID: `G1-SLICE.6.4.2.d.3.2`
-  Status: `pending`
-  Goal: Material authored field/source contracts from ontology6; explicit state/source and measured
-  shrinkage stage intent without defaults or executed physical claims.
+  Status: `done`
+  Goal: immutable Material metadata from ontology6: id/source/name/optional nonblank composition;
+  canonical width and Boolean nap/directional-print/striped/checked targets; optional X/Y Ratio
+  shrinkage sources, treatment reference and explicitly supplied post_grade_pre_export stage.
+  Positive present width is required; Unknown/Derived remains uncached and unapplied. Check actual
+  current families/ids/kinds; no geometry, evidence truth, profile resolution or shrinkage execution.
+  Own native/privacy/lint/new Material book chapter/API/decision sync and whole0352/D228 continuity504,
+  including complete old coupled-input book proof retirement, preserving anchors/current commands.
+  - [x] REPRODUCE / ISSUE: ontology6 properties need current canonical states, not copied flags/values.
+    material_contract missing/kind/width/state cases pass8/0, rc=0, target/material-native-0353.log.
+  - [x] ROOT CAUSE (WHY + WHERE): core has canonical targets but no Material owner. cargo test -p
+    sc-core --test material_contract gives8 passed/0 failed, rc=0; both width families/all value states.
+  - [x] FIX: private exact metadata, typed actual property borrows, positive present/computed width,
+    optional unapplied shrinkage/stage and deferred source truth; native8/0 confirms no numeric defaults.
+    Public view variants are carriers, not standalone role proof; direct Scalar construction cannot
+    claim a Material match. The selected query supplies that check; carrier docs now state the scope.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    material_contract passes8/0, rc=0; exact text/id/family/kind/state/width/refusal/borrow checks.
+  - [x] NO REGRESSION: privacy3/strict selected lint/fmt/book/publication78/112/1450/2375 pass0,
+    target/material-*-0353.log; D250132 exact baseline rows/delta0, glossary rc=1.
+  - [x] LOCKSTEP: Material chapter/API/status/index/pointer aligned; continuity504 matches5 Git spans0,
+    including settled D228 and full old book proof. Caps unchanged; G1still6/18. promotion: promoted to
+    docs/decisions/decision_length-declarations-retain-state-and-provenance.md, answers updated.
+    Commit0353; collection/assignment .3.3 next. Full host/Design/geometry/transformation/CI stays later.
 - ID: `G1-SLICE.6.4.2.d.3.3`
   Status: `pending`
   Goal: actual owned Material collection, current property identities/kinds/state and Piece assignment

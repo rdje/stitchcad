@@ -251,81 +251,27 @@ incompatible annotations and unevaluated branches. They do not certify whole sem
 
 ## Coupled input and identity review
 
-G1-SLICE.5a.3f.2 checks the complete path from authored statements to normalized inputs and owned
-identity. The [worked skirt examples](../spec/formula-language/examples.md) supply 17 bindings and
-four assertions:21 statements with 25 expression operands. Independently authored complete statement
-bytes match the actual published names/kinds/operands and the complete ordered recipe. The recursive
-reference checks syntax with inference/evaluation trapped, plus complete ordered token coverage;
-authored statement chunks do not supply an independent whole-recipe parser.
+The review covers the [worked skirt](../spec/formula-language/examples.md)'s21 statements/25 operands
+and13 refusals (3syntax,10beyond inputs). Later literal errors retain original spans. Input identity
+proves no execution; current static/numeric foundations and remaining owners are mapped below.
 
-The 13 refusal examples also have a current stage. The missing conditional branch, text value and
-unsupported cube refuse during syntax parsing. The other 10 still produce input identity: their
-kind/name/division/unknown/tolerance/envelope checks belong to later static validation and evaluation.
-Accepting their syntax and inputs does not accept their use in a garment. A bad literal in an
-untaken branch or a call argument still aborts whole normalization, retaining the original span,
-known statement ordinal 22 and operand role after the 21 valid worked statements.
-
-| Obligation | Current evidence | Remaining implementation owner |
-| --- | --- | --- |
-| Whole let/assert syntax, order and fixed bounds | Statement/recipe contracts and coupled maximum/first excess tests | Syntax milestone G1-SLICE.5a.4 complete |
-| All literal inputs, including untaken branches | Literal/normalized contracts and later whole-input refusal tests | Numeric binding G1-SLICE.5c |
-| Names, annotations and original global metadata | 21 worked statements, source borrowing and Clone checks | Namespace/type acceptance G1-SLICE.5b |
-| Exact typed identity, empty/order/alias behavior | Owned identity contracts, actual worked recipe and typed collision controls | Typed project fields/digests G1-SLICE.7 |
-| Source/arena-independent identity, privacy and extraction | Ownership contracts and actual statement Debug controls | Command diagnostic envelope G1-SLICE.6 |
-| All 13 worked refusals | Three syntax refusals; ten semantic checks explicitly deferred | Static validation/evaluation G1-SLICE.5b/.5e |
-| Published values/assertion verdicts, lazy execution and replay | Independent reference only; inputs/identity compute no values | Product evaluator/DAG G1-SLICE.5e |
-| Geometry selectors and construction | Syntax/identity retain ordered selector calls | G1-SLICE.5f and G2-2D |
-| Storage, API/MCP and production acceptance | Distinct future workflow/approval requirements | G1-SLICE.7/.9 and G7-RELEASE |
-
-Five new public controls check the actual worked/refusal populations, metadata and complete bytes,
-whole later literal failures, alias/order invariants and combined limits of 4096 statements, 256 nodes and 16 nested conditionals
-with first excesses. The bounded maximum serializes on a 64 KiB stack. Existing tests additionally
-exercise all 4096 assertions with both 256-node operands; neither case is a performance/browser proof.
 ### Coupled input runner modes and evidence
 
-Seven original production faults target metadata, missing later inputs, flattened refusal index,
-recipe order, assertion operand identity, combined bound and normalized Debug privacy. Each compiles
-and fails at a current guarded public assertion macro. The direct entry declares eight inputs before
-activation or reads: all four implementations, current test source, complete worked-statement TSV,
-the actual example chapter and refusal-stage TSV. Ordinary mode declares all seven numbered fault
-logs plus restored.log and all four mutable implementations. Classifier-only declares no diagnostic
-files, mutable source or native child; caller-provided valid local stores and unrelated values survive.
-
-Complete mode captures verify original case tuples, source order/bindings, exact Cargo arguments,
-filters, diagnostic bytes, per-case restoration and final byte checks before the full rebuild.
-Twenty-eight actual omissions and the legacy nonthread predicate fail independently. Physical
-controls refuse aliased endpoint logs, each hard-linked mutable source and missing late inputs
-before reads or effects. An actual copied classifier-only entry accepts an input with three hard
-links and two unused log aliases without source/output writes or child dispatch; all inputs, the
-alias victim and environment remain exact. These captures establish dispatch; real compilation
-supplies the native evidence separately.
-
-Failed-body classification requires a thread panic at a current source/path/line/UTF-8 byte-column
-assertion macro. Custom macro messages qualify; compiler-note locations, compiler/expect noise
-and passing test names do not. D197 closes only after expression, reduction and input families
-verify their original controls and current artifacts. D198 removes an obsolete statement-availability
-phrase from the expression inventory; its expression fixtures and renderer remain unchanged.
-Current inventory/reference and all four original interpreter renderer faults pass after repair.
-
-The original seven input Cargo filters are retained, including their original substring semantics;
-each currently selects exactly one public test. The four filtered tests per fault were not executed
-and receive no coverage credit. Independent review inspects every actual failed body, including
-small-stack worker evidence, against current quoted-thread macro locations. Eight local single-link
-logs, seventy-five frozen inputs, sixty-three unchanged production Rust sources, all four mutable
-implementations and the unchanged five-test source restore exactly. The full target passes after
-restoration, and a newly Cargo-selected executable independently runs all five current tests.
-The structural suite watches authored/reference populations and original actual anchors; this
-proof supplies no numerical execution or browser/performance authority.
+Five public controls and seven original compiled faults cover authored populations, metadata, exact
+bytes, input refusal, combined limits and Debug. The complete original protocol, dispatch/physical
+controls, current-assertion evidence and byte-exact restoration receipt are retained in
+docs/history/stitchcad-devnotes-part504.md. Retrieval and current entry commands:
 
 ```bash
+python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part504.md
 cargo test -p sc-core --test formula_recipe_input_review
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
 ```
 
-The scoped input/identity review and syntax milestone .5a.4 are complete. Static proofs and numeric
-foundations now exist separately; these historical input checks do not establish whole execution,
-geometry, storage/recovery, command/API/MCP control, cross-platform results or production approval.
+Classifier-only mode declares no mutable source, diagnostic files or native child. Ordinary mode
+retains the original seven filtered native commands; unselected tests receive no coverage credit.
+These historical input proofs establish no performance, browser, geometry or release certification.
 
 ## Syntax milestone and the route to execution
 

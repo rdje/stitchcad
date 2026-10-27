@@ -3,14 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0352 — share exact canonical input targets
+## STITCHCAD-G1-0353 — retain canonical Material properties and stage intent
 
-- Move the existing enum to value::CanonicalInputTarget; retain DesignParameterTarget as an identical public alias.
-- Exact source comparison confirms unchanged variants; parameter9/privacy2/strict selected lint/fmt/book/publication pass0.
-- D250132 glossary rows remain baseline; continuity503 matches3 Git spans and preserves all three task ids/statuses.
-- Caps unchanged; G1still6/18. Material fields next; symbolic profile resolution remains G4, full host/Design/CI pending.
+- Add immutable Material metadata with exact typed current width/Boolean/shrinkage sources and no value/state copies.
+- Require positive present/computed width; retain Unknown/Derived drafts, explicit optional X/Y treatment/stage and original refusals.
+- Native8/privacy3/strict selected lint/fmt/book/publication pass0; D250132 glossary rows remain exactly baseline.
+- New Material chapter and canonical-source decision aligned; whole0352/D228 and old book proofs504 match5 Git spans.
+- Caps unchanged; G1still6/18. Collection/assignment next; full host/Design/geometry/transformation/integration/CI pending.
 
 # Sealed archive — earlier slices
+
+| [part504](docs/history/stitchcad-devnotes-part504.md) | whole0352/D228 and historical coupled-input book proofs | 129 lines, 10712 bytes, sha256:b6281757… |
 
 | [part503](docs/history/stitchcad-devnotes-part503.md) | whole0351 measurement/Ease subtree, lesson and ledger | 52 lines, 4373 bytes, sha256:53cdcb25… |
 

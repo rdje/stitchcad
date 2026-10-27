@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.4a.1`; ontology §2.1/§2.2/§5, formula-language §2/§3 and roadmap §2.3.
 
-answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?" · "how does a measurement table refuse token or scalar reassignment?" · "does close fit authorize compression?" · "how are per-POM ease mappings tied to current tables?"
+answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?" · "how does a measurement table refuse token or scalar reassignment?" · "does close fit authorize compression?" · "how are per-POM ease mappings tied to current tables?" · "how do Material properties retain state and transformation intent?"
 
 ## The fact / decision
 
@@ -126,3 +126,18 @@ General Length-kind scalars retain their representation; typed lookups never con
 measurement Length declarations. Shared views borrow the canonical objects; empty drafts are legal.
 This supplies a private-Design component while preserving the one-way sc-measure dependency. It
 neither evaluates Derived/Unknown states nor certifies metadata/revision/evidence/release readiness.
+
+## Material property sources — G1-SLICE.6.4.2.d.3.2
+
+Material metadata owns id/source/name/optional composition and canonical targets, never independent
+property values/state. Width permits either explicit Length representation; flags require general
+Boolean records, optional X/Y shrinkage requires general Ratio records. Current family/id/kind checks
+never substitute a peer or convert representation. Present authored width must be positive; unknown/
+derived remains unapplied, with supplied computed width checked separately before use.
+
+Optional shrinkage carries treatment and explicitly supplied post_grade_pre_export stage intent.
+No scalar ratio is silently folded into coordinates or converted into a physical scale. G4-PROFILES.13
+owns application domains/stage/policy; signed Ratio metadata alone proves no usable transformation.
+Names/source/composition/treatment are authored claims, not sourced physical truth. Piece assignment,
+dual-grainline/layout and global Design registries remain separate checks. Shared property views borrow
+actual current canonical records; inspection and deferred provenance grant no release authority.

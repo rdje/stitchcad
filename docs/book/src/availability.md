@@ -9,8 +9,8 @@ G0 contract review is mostly complete with human closure unapproved. G1 remains 
 | Library | Available behavior |
 | --- | --- |
 | sc-units | Fixed-point units, explicit conversions, rounding and typed tolerances/errors |
-| sc-core | Stable identities/references, selected profile pins, structural garment objects, physical copy identities, canonical length inputs, borrowed formula lexing, bounded expression/ordered-recipe syntax, whole-recipe literal normalization and owned expression/statement/recipe identity |
-| sc-measure | Body/garment metadata/tables, Ease sets, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
+| sc-core | Identities/references, profile pins, structural garment/[Material](spec/material-inputs.md) metadata, physical copies, owned inputs/parameters/recipe source, formula syntax/normalization/identity/static proofs, numeric/read APIs and typed requests/authorization |
+| sc-measure | Owned measurement/table/Ease records, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
 
 These APIs can inspect authored content and refuse invalid current references. Unknown/derived scalar
 inputs refuse numeric fallbacks. Some complete structural inventories can still contain unresolved

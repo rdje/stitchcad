@@ -70,6 +70,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Marks, closures and finishes](spec/glossary/marks-and-closures.md)
 - [MCP and command authority](spec/command-layer.md)
 - [Measurement and size standards](spec/standards.md)
+- [Material property inputs](spec/material-inputs.md)
 - [Measurement length inputs](spec/measurement-inputs.md)
 - [Measurement metadata](spec/measurement-metadata.md)
 - [Measurements and fit](learn/measurements-and-fit.md)

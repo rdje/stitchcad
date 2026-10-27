@@ -281,6 +281,7 @@ A `Material` carries the properties the product actually uses: name, composition
 whether it has a nap or a directional print, whether it is striped or checked (which activates the
 dual grainline reference), and its shrinkage if measured. Shrinkage is applied as an explicit
 transformation at a declared stage of the pipeline, never folded silently into a coordinate.
+Executable [Material property inputs](material-inputs.md) retain canonical state and unapplied stage intent.
 
 ## 7. Serialization
 
@@ -335,6 +336,7 @@ bounded; all existing examples and local API vocabulary are preserved there.
 | Piece | Immutable content/labels, pair-consistent inventories and owned structural state | G2 geometry; aggregate readiness |
 | Point and range references | Journal resolution, endpoint choices and interval repairs | G2 geometric continuity; design/release validation |
 | Physical cut copies | Explicit identities, exact quantity/orientation plan | G2/V1 physical transforms |
+| Material | Canonical property targets and positive present width | Collection/assignment; source truth; layout; G4 transformation |
 | Notch | Semantic anchor, symbolic profile bindings | G4 physical geometry/encoding |
 | Sewing graph | Copy-addressed spans, disjoint self-seams, explicit ease and stops | G2/G3 walking; recipe/profile values |
 | SeamAllowance | Per-edge width origins, corner intent, symbolic inclusion | G2 bounded offsets; G4 target policy |

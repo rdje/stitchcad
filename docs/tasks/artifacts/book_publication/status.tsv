@@ -110,3 +110,4 @@ owned Design parameters	spec/measurement-inputs.md	crates/sc-core/src/design/par
 owned measurement metadata	spec/measurement-metadata.md	crates/sc-measure/src/inventory.rs	MeasurementInventory	G1-SLICE.6.4.2.d.2.a	4.4
 owned measurement and Ease inputs	spec/ease-inputs.md	crates/sc-measure/src/inputs.rs	MeasurementInputs	G1-SLICE.6.4.2.d.2.b	4.4
 shared canonical input target	spec/measurement-inputs.md	crates/sc-core/src/value/inventory.rs	CanonicalInputTarget	G1-SLICE.6.4.2.d.3.1	4.4
+Material property sources	spec/material-inputs.md	crates/sc-core/src/ontology/material.rs	Material	G1-SLICE.6.4.2.d.3.2	4.1

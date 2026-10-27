@@ -1,7 +1,7 @@
 //! `sc-core` — the garment ontology, the construction recipe and the command bus.
 //!
 //! **Status:** identity, point/range reference resolution, structural pieces/copy plans, semantic
-//! notches, pair-consistent Piece inventories, directed grainlines, allowance descriptors and
+//! notches, pair-consistent Piece inventories, canonical Material property sources, directed grainlines, allowance descriptors and
 //! construction/closure/pocket intent with copy-addressed sewing graphs are implemented in [`ontology`]. Geometric correctness,
 //! realized ease and target-profile binding validation remain explicit deferred obligations.
 //! [`design`] owns structural inputs/Pieces/copies/topology and named parameter metadata with

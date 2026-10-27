@@ -3,17 +3,23 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — shared canonical target representation
+## _(2026-10-27 UTC)_ — canonical Material property metadata
 
-0352 moves the existing length/general-scalar target enum into value::CanonicalInputTarget for reuse
-by Material metadata. DesignParameterTarget remains an identical public alias. A source comparison
-matches the original complete enum after only its public-name substitution; no lookup, conversion,
-state or source semantics change. Existing parameter9/privacy2/strict selected lint/fmt/book/publication
-pass0. D250132 glossary rows remain exactly baseline, delta0. Whole0351 subtree/lesson/ledger503 compares3
-Git spans, preserving all three live ids/statuses. Promotion: existing canonical-source/identity contracts.
-Profile bindings remain symbolic under the canonical decision; G4 owns physical resolution and pins
-remain instantiation context. G1still6/18; Material field/source contracts .6.4.2.d.3.2 follow, with full
-host/Design/readiness/integration/CI pending. No new tests mirror the unchanged enum.
+0353 Material owns exact id/source/name/composition and canonical width/flag/shrinkage targets, never
+copied states or numeric facts. Fixed roles check authored target family/kind and actual current
+identity/kind before reading width. Every available Known/Assumed/Preference width must be positive;
+Unknown/Derived stays unapplied, with supplied computed width checked separately. Flags retain actual
+Boolean state, not default false. Optional X/Y Ratio sources retain treatment and explicit supported
+post-grade/pre-export intent; no coordinate, scale or physical transformation is produced.
+Targeted views borrow current declarations and remain inspectable even when full validation refuses;
+metadata/canonical ids stay disjoint. Source/evidence, layout/dual grainline and release remain deferred.
+Native8/privacy3/strict selected lint/fmt/book/publication pass0. D250132 rows remain baseline, delta0.
+Whole0352/D228 and old coupled-input proof504 compare5 Git spans, preserving current commands/anchors.
+Promotion: canonical-source decision gains Material answer/section. New Material chapter reflects actual
+scope; caps unchanged; G1still6/18. Collection/assignment .6.4.2.d.3.3 next, full host/Design/physical/
+transformation/integration/CI pending. Final native assertions require actual view variants before reads.
+
+[Whole0352 shared-target lesson](docs/history/stitchcad-devnotes-part504.md) retains exact scope/proofs.
 
 [Whole0351 measurement/Ease lesson](docs/history/stitchcad-devnotes-part503.md) retains exact scope/proofs.
 
