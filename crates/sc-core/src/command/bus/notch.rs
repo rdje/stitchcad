@@ -1,7 +1,9 @@
 //! Actual semantic Notch candidate over a separately staged immutable identity reserve.
-use super::{CommandBus, CommandPreview, CommandPreviewError, PreparedCommand};
+use super::{
+    identity::IdentityStage, CommandPreview, CommandPreviewError, PreparationBase, PreparedCommand,
+};
 use crate::{
-    command::{AddNotch, CommandAuthoritySource, DesignRevision},
+    command::{AddNotch, DesignRevision},
     design::{DesignGarment, DesignReferenceHost, DesignSewing},
     ontology::{EntityId, IdGenerator, Notch, SewingLandmark},
 };
@@ -31,10 +33,11 @@ impl CommandNotchPreview {
         &self.notch
     }
 }
-impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
+impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
     pub(super) fn prepare_notch(
         &self,
         addition: AddNotch,
+        identities: &mut IdentityStage<'_>,
     ) -> Result<PreparedCommand<H>, CommandPreviewError<H::Error>> {
         let structure = self.state.inputs().structure();
         let piece = structure
@@ -46,7 +49,6 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 piece: addition.piece(),
                 index: 0,
             })?;
-        let mut identities = self.identities.stage();
         let identity = identities
             .next_id()
             .map_err(CommandPreviewError::Identity)?;
@@ -66,7 +68,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         candidate
             .validate_current()
             .map_err(|e| CommandPreviewError::Candidate(Box::new(e)))?;
-        super::difference::unchanged_context(&self.state, &candidate)
+        super::difference::unchanged_context(self.state, &candidate)
             .map_err(CommandPreviewError::Difference)?;
         if structure.pieces() != candidate.inputs().structure().pieces() {
             return Err(CommandPreviewError::Difference(

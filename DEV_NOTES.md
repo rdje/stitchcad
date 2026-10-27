@@ -3,14 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — one complete grant for an entire group
+## _(2026-10-27 UTC)_ — private model base and identity cursor
 
-0430 .6.5.4.2.2.1 authenticates one fresh trusted snapshot and selects one grant covering every
-original mutation. Shared actor/status/permission/scope checks preserve single-command order.
-Original per-grant first failing index/command/refusal survives; partial grants cannot union coverage.
-Returned decision borrows original group and is no execution capability. Native authorization13
-includes original8/group5; lifetime1/strict selected lint/fmt pass. Promotion: command-layer decision.
-D284 remains fixed: archive counts are aggregate; actual per-generation budgets govern retirement.
+0431 .6.5.4.2.2.2 moves the three metadata handlers onto an immutable private PreparationBase.
+The bus keeps fresh authority/binding; the base keeps original availability/envelope/current checks.
+Notch receives the concrete independent reserve cursor rather than starting one inside its handler.
+Prepared state/report can be consumed internally for later staging; no public model handle exists.
+Native bus18, identity1, compiler privacy4 and selected strict lint/fmt pass. Actual sequential group
+preview remains the next leaf. Promotion declined: routine internal refactor under existing contracts.
+
+[Whole0430 group-authority lesson](docs/history/stitchcad-devnotes-part582.md) retains its original proof.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

@@ -1,7 +1,7 @@
 //! Actual bound canonical measurement replacement; recipe evaluation is a separate dependency.
-use super::{CommandBus, CommandPreview, CommandPreviewError, PreparedCommand};
+use super::{CommandPreview, CommandPreviewError, PreparationBase, PreparedCommand};
 use crate::{
-    command::{ChangeMeasurement, CommandAuthoritySource, DesignRevision},
+    command::{ChangeMeasurement, DesignRevision},
     design::{DesignGarment, DesignInputs, DesignReferenceHost, DesignSewing, DesignStructure},
     ontology::EntityId,
     value::LengthDeclaration,
@@ -57,7 +57,7 @@ impl CommandMeasurementPreview {
     }
 }
 
-impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
+impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
     pub(super) fn prepare_measurement(
         &self,
         replacement: &ChangeMeasurement,
@@ -93,7 +93,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         candidate
             .validate_current()
             .map_err(|e| CommandPreviewError::Candidate(Box::new(e)))?;
-        super::difference::unchanged_noncanonical_context(&self.state, &candidate)
+        super::difference::unchanged_noncanonical_context(self.state, &candidate)
             .map_err(CommandPreviewError::Difference)?;
         if self.state.inputs().structure().pieces() != candidate.inputs().structure().pieces() {
             return Err(CommandPreviewError::Difference(

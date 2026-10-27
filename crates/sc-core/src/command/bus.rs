@@ -1,7 +1,7 @@
 //! First executable command path over a privately owned actual garment and trusted authority source.
 use super::{
     authorize_command, CommandAuthoritySource, CommandAuthorizationError, CommandAuthorizationMode,
-    CommandId, CommandRequest, DesignRevision, MutationPayload, QueryPayload,
+    CommandId, CommandRequest, DesignRevision, QueryPayload,
 };
 use crate::{
     design::{DesignGarment, DesignReferenceHost},
@@ -21,6 +21,8 @@ mod difference;
 pub use difference::CommandDifferenceError;
 mod measurement;
 pub use measurement::{CommandLengthChange, CommandMeasurementPreview};
+mod preparation;
+use preparation::PreparationBase;
 
 /// Actual inspect-preview subset; reports carry semantic changes, never an owned candidate model.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -40,8 +42,11 @@ struct PreparedCommand<H> {
     report: CommandPreview,
 }
 impl<H> PreparedCommand<H> {
+    fn into_parts(self) -> (DesignGarment<H>, CommandPreview) {
+        (self.state, self.report)
+    }
     fn into_report(self) -> CommandPreview {
-        let Self { state, report } = self;
+        let (state, report) = self.into_parts();
         drop(state);
         report
     }
@@ -175,10 +180,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
     /// Actual inspect-preview subset, independent of committable/executable handlers.
     #[must_use]
     pub const fn is_preview_available(&self, command: CommandId) -> bool {
-        matches!(
-            command,
-            CommandId::ChangeMeasurement | CommandId::AssignMaterial | CommandId::AddNotch
-        )
+        preparation::handler_available(command)
     }
 
     /// Freshly authorize inspect, bind the actual Design/revision and prepare a private candidate.
@@ -207,31 +209,9 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
                 },
             )));
         };
-        if !self.is_preview_available(request.command_id()) {
-            return Err(CommandPreviewError::Command(Box::new(
-                CommandBusError::HandlerUnavailable {
-                    command: request.command_id(),
-                },
-            )));
-        }
-        self.state
-            .require_in_scope()
-            .map_err(|e| CommandPreviewError::Envelope(Box::new(e)))?;
-        self.state
-            .validate_current()
-            .map_err(|e| CommandPreviewError::Current(Box::new(e)))?;
-        match mutation.payload() {
-            MutationPayload::ChangeMeasurement(replacement) => {
-                self.prepare_measurement(replacement)
-            }
-            MutationPayload::AssignMaterial(assignment) => self.prepare_material(assignment),
-            MutationPayload::AddNotch(addition) => self.prepare_notch(*addition),
-            _ => Err(CommandPreviewError::Command(Box::new(
-                CommandBusError::HandlerUnavailable {
-                    command: request.command_id(),
-                },
-            ))),
-        }
+        let base = PreparationBase { state: &self.state };
+        let mut identities = self.identities.stage();
+        base.prepare_payload(mutation.payload(), &mut identities)
     }
 }
 impl<H, A> fmt::Debug for CommandBus<H, A> {

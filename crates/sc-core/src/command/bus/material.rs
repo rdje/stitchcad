@@ -1,7 +1,7 @@
 //! Actual private Material candidates; public reports contain no model or publication capability.
-use super::{CommandBus, CommandPreview, CommandPreviewError, PreparedCommand};
+use super::{CommandPreview, CommandPreviewError, PreparationBase, PreparedCommand};
 use crate::{
-    command::{AssignMaterial, CommandAuthoritySource, DesignRevision},
+    command::{AssignMaterial, DesignRevision},
     design::{DesignGarment, DesignInputs, DesignReferenceHost, DesignSewing, DesignStructure},
     ontology::{EntityId, MaterialAssignment, PieceInventory},
 };
@@ -57,7 +57,7 @@ impl CommandMaterialPreview {
     }
 }
 
-impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
+impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
     pub(super) fn prepare_material(
         &self,
         assignment: &AssignMaterial,
@@ -104,7 +104,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
         state
             .validate_current()
             .map_err(|e| CommandPreviewError::Candidate(Box::new(e)))?;
-        super::difference::unchanged_context(&self.state, &state)
+        super::difference::unchanged_context(self.state, &state)
             .map_err(CommandPreviewError::Difference)?;
         if self.state.sewing().landmarks() != state.sewing().landmarks() {
             return Err(CommandPreviewError::Difference(

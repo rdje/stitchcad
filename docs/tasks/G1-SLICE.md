@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0430
+## Current leaf acceptance —0431
 
-- [x] ROOT CAUSE: cargo test -p sc-core --test command_authorization_contract:13 passed rc=0;
-  individually covered commands cannot combine partial grants into whole-group authority.
-- [x] ADDRESSED: authorization13 (original8/group5) passes rc=0; later complete grant selection,
-  one snapshot, exact first grant/member causes, identity priority and fresh revocation/expiry checked.
-- [x] NO REGRESSION: selected strict Clippy finished rc=0; original8 authorization cases stay green;
-  cargo test -p sc-core --doc command::group_authorization:1 passed rc=0; selected fmt --check rc=0.
+- [x] ROOT CAUSE: git show HEAD:crates/sc-core/src/command/bus/notch.rs shows handler-bound
+  CommandBus impl and self.identities.stage(), rc=0; successive private models cannot share that cursor.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
+  selected strict Clippy finished rc=0; actual immutable base and explicit concrete staged cursor compile.
+- [x] NO REGRESSION: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0; cargo test
+  -p sc-core --doc command::bus:4 passed rc=0; selected cargo fmt --check rc=0. Group proof still pending.
 
 ## Goal
 
@@ -760,29 +760,27 @@ All98 completed ids/statuses and original proof pointers remain live there.
   group report preserving actual failing index/command and no publication/partial accepted result.
 - ID: `G1-SLICE.6.5.4.2.2.1`
   Status: `done`
-  Goal:0430 fresh whole-group single-complete-grant decision, original source/member refusal context;
-  descriptive only, no actual model lookup or group execution.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test command_authorization_contract:13 passed rc=0;
-    group case separately authorizes both members then proves their two partial grants cannot cover group.
-  - [x] ROOT CAUSE (WHY + WHERE): authorization13 rc=0; per-request selection cannot establish one grant
-    across all members. Shared original actor/status/permission/scope predicates preserve exact semantics.
-  - [x] FIX: cargo clippy -p sc-core --test command_authorization_contract -- -D warnings:finished rc=0;
-    one trusted observation, full identity/duplicate-grant checks, source-ordered per-grant member checks.
-  - [x] ADDRESSED: cargo test -p sc-core --test command_authorization_contract:13 passed rc=0;
-    original8/group5, later whole grant over earlier partial, no unions, inspect/commit distinction/freshness.
-  - [x] NO REGRESSION: original8 authorization cases pass within13 rc=0; cargo test -p sc-core --doc
-    command::group_authorization:1 passed rc=0; strict selected lint/fmt rc=0. No model/allocator effects.
-  - [x] LOCKSTEP: whole0428/0429 and D283/D284 scope/proofs retained581; five exact Git intervals
-    verified rc=0; retention1035/global65 with actual active44 fits unchanged caps rc=0. Book/pointer/decision aligned.
-  Native publication80 chapters/159 scoped API rows/1464 source links/2444 rendered links rc=0;
-  maintained-reference81 files/17587 lines/1227649 bytes rc=0; independent rg raw44/diff check rc=0.
-  Cargo commands use scripts/local_environment.py. Original core identity failures remain in standard
-  source chain; NoMatchingGrant retains each grant's actual first failing index/command/refusal. Decisions
-  borrow the original group, confer no handler availability/capability, and must be refreshed before effects.
+  Goal:0430 whole-group single-grant authority; [whole scope/proofs](../history/stitchcad-devnotes-part582.md).
 - ID: `G1-SLICE.6.5.4.2.2.2`
-  Status: `pending`
-  Goal: private preparation base/cursor sharing for successive actual staged models without source
-  substitution, reserve advancement or public model handle; retain existing single-preview behavior.
+  Status: `done`
+  Goal:0431 private preparation base/cursor sharing for successive actual staged models without
+  authority substitution, reserve advancement or public model handle; original single-preview behavior.
+  - [x] REPRODUCE / ISSUE: git show HEAD:crates/sc-core/src/command/bus/notch.rs | rg -n
+    'impl<|self.identities.stage': original handler-bound bus impl/cursor reset printed rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): native HEAD Notch source rc=0; private handlers depend on original
+    bus owner and reset their own reserve cursor rather than accepting a preceding staged model/cursor.
+  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
+    borrowed actual PreparationBase, shared original guards, explicit IdentityStage and private into_parts.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:18 passed rc=0;
+    all three native preview handlers compile and preserve actual reports, refusal ordering and original owner.
+  - [x] NO REGRESSION: cargo test -p sc-core --lib command::bus::identity:1 passed rc=0; cargo test
+    -p sc-core --doc command::bus:4 passed rc=0; selected fmt --check rc=0. Full integration remains .6.9.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part582.md:3 exact
+    Git spans rc=0; whole0430 scope/lesson/ledger retained. Book/pointer/frontier/lesson aligned.
+  Native publication80 chapters/159 scoped API rows/1464 source links/2444 rendered links rc=0;
+  maintained-reference81 files/17594 lines/1228233 bytes rc=0; retention1036/global66 fits rc=0.
+  Cargo commands use scripts/local_environment.py. No group success, publication, replay or model
+  replacement is exposed. Promotion declined: routine internal refactor under existing command contracts.
 - ID: `G1-SLICE.6.5.4.2.2.3`
   Status: `pending`
   Goal: actual sequential metadata-group preview and final semantic delta/failure context. Integrate

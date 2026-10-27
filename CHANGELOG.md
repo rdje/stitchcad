@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0430 — authorize whole groups with one complete grant
+## STITCHCAD-G1-0431 — share the private preparation base and identity cursor
 
-- Fresh trusted snapshot and one grant must cover all original mutation members; partial grants cannot union.
-- Preserve original source identity/duplicate-grant failures and per-grant first failing member/refusal.
-- Native authorization13 (original8/group5), lifetime1/lint/fmt; decisions remain descriptive, no execution.
-- Current archive record581 fits actual active-group bounds; D284 aggregate-scope correction retained.
+- Three metadata handlers borrow the actual model through one private view; fresh authority stays in the bus.
+- Pass the concrete staged identity cursor explicitly; original single-preview ordering/effects stay unchanged.
+- Native bus18/identity1/privacy4/selected strict lint/fmt pass; sequential group preview follows.
+- Whole0430 scope, lesson and ledger retained582 with three exact native Git source intervals.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part582](docs/history/stitchcad-devnotes-part582.md) | whole0430 group-authority scope/lesson/ledger | 37 lines, 3152 bytes, sha256:d469a142… |
 | [part581](docs/history/stitchcad-devnotes-part581.md) | whole0428/0429 schema/corrections/proofs | 79 lines, 6583 bytes, sha256:c617daa2… |
 | [part580](docs/history/stitchcad-devnotes-part580.md) | whole0427 private preparation scope/lesson/ledger | 39 lines, 3222 bytes, sha256:556a2815… |
 | [part579](docs/history/stitchcad-devnotes-part579.md) | whole0426 Measurement/D283 scope/lesson/ledger | 51 lines, 4536 bytes, sha256:6c38230d… |

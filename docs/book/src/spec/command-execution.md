@@ -220,8 +220,15 @@ checks. No caller can obtain that object or invoke preparation directly; a compi
 rejects that access using the same valid host/authority bounds as the public API.
 
 Public preview consumes the private prepared object, discards its model and returns only the owned
-report. This preserves the existing single-command behavior while providing internal ownership for
-later sequential group staging. It does not publish a model, expose a replacement capability, advance
+report. Preparation now operates through a private immutable view of the actual model and accepts
+one concrete private identity cursor. The three handlers share this view; they cannot substitute an
+authority provider or call a caller-supplied identity generator. A single preview borrows the original
+model and creates an independent reserve cursor, preserving its existing refusal order and reports.
+Later group staging can borrow each preceding validated candidate and pass the same cursor onward:
+two successful Notch steps must use successive identities, while another preview starts at the
+original reserve again. Sequential group behavior still requires its own implementation and proof.
+
+This internal refactor does not publish a model, expose a replacement capability, advance
 revision/identity allocation or implement group success. Paired seam splitting and Dart execution
 retain their actual recipe/geometry dependencies; sewing ease realization remains deferred to G2/G3.
 
