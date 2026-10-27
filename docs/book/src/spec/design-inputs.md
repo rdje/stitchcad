@@ -145,3 +145,29 @@ MTM/unified source-host composition and full Design/execution remain later owner
 ```bash
 cargo test -p sc-measure --test garment_size_set_contract
 ```
+
+## Owned MTM SizeSet sources
+
+MtmSizeSet owns singleton common metadata and the actual MtmChart. MeasurementInputs retains actual
+body/Ease/table/set ownership. Construction checks complete input/common/chart ids and reuses the
+original validators through temporary contexts sharing actual membership, records and Design table.
+No body-plus-Ease value, profile selection or context cache is created.
+
+with_inputs revalidates before visiting MtmSizeSetInputs. Its readonly chart_context()/break_context()
+permit explicit quantity/coverage queries. The chart's body_declaration(pom, context) and
+ease_declaration(pom, context) borrow separate actual canonical records. Local views cannot escape;
+owned callback results may return. Missing replacement sources refuse before the callback.
+
+| API or variant | Meaning |
+| --- | --- |
+| `MtmSizeSet`, `MtmSizeSetDefinition` | Private external MTM source owner and exact construction input |
+| `MtmSizeSetPosition` | Common or Chart ownership witness |
+| `MtmSizeSetError` | DuplicateIdentity, Metadata, Eases, Context or Inputs original cause |
+
+Partial mappings stay drafts; Regeneration requires coverage, while GradeRules keeps the original
+GradeRulesUnsupported chart/member refusal. Composite SizeSetInputError sources expose concrete
+chart/MTM/break causes rather than boxes (D256 correction). No numeric execution/readiness follows.
+
+```bash
+cargo test -p sc-measure --test mtm_size_set_contract
+```

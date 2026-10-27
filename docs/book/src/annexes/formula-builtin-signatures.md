@@ -124,34 +124,20 @@ metadata query on an empty slice returns None.
 
 ## Verification and remaining proof
 
-Public contracts independently enumerate all eight kinds and all five symbolic classes:
-every 13-member tuple at arities zero through four, for every registry name, gives 680702 cases.
-Wider min/max samples cover 255, 256 and 4096 operands. The complete actual normative rows are
-compared in both directions, and all 22 tokens match the unchanged canonical serializer.
-Exact wanted-catalog descriptors and result positions are checked alongside those matrices.
-The tracked producer docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py
-plans three inputs before reading them: implementation, public contract and its compile-time
-grammar chapter. Ordinary mode resolves 21 fault logs plus one restored log and one mutable
-source; classifier-only mode declares no files or mutable sources and runs no child. It still
-validates the inputs, anchors, stores and output directory. Read-only inputs may have multiple
-hard links, and unused fault-log aliases do not acquire write authority in classifier mode.
+Public contracts enumerate actual normative kind/class tuples and canonical tokens, including
+wide variadic cases and exact wanted catalogs. Historical counts, fault sets, dispatch controls
+and restoration receipts are retained in `docs/history/stitchcad-devnotes-part512.md`:
 
-Run cargo test -p sc-core --test formula_builtin_signature_contract for the five public contracts.
-The exclusive producer preserves all 21 original faults and Cargo arguments. Each fault must
-compile and fail at a current public assertion's exact path, line and UTF-8 byte column inside
-a failed-body thread panic. Custom macro messages qualify; nonthread notes, compiler errors,
-labelled expect panics, changed coordinates and test-name noise refuse. Source bytes are restored
-before rebuilding the complete five-test target, after failures during mutation replay.
+```bash
+python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part512.md
+cargo test -p sc-core --test formula_builtin_signature_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py
+```
 
-Standing controls cover independent omissions of all three inputs in every producing mode,
-a real red for the former nonthread predicate, two complete mode captures and eight physical
-refusals before reads, writes or dispatch. A copied classifier accepts three read-only source
-links and two unused log aliases while every child and source/output write is intercepted.
-Actual native replay separately verifies every failed body's current macro, all failed-test
-sets, 73 frozen inputs including 63 unchanged production Rust files, 22 local logs and the
-current Cargo-selected executable passing all five restored tests. The fixed-arity fault fails
-the registry, exhaustive tuple and symbolic-class tests through Within's arity gate; catalog
-descriptors remain unchanged. The task record retains the initial prediction and its diagnosed correction.
+Classifier-only plans no native child/source/output writes. Run mutations alone and consume source
+restoration before another build/probe. Dispatch captures certify effects separately from actual
+native replay; current macro failures and exact restored source remain required.
 
 [Typed wanted-kind catalogs](formula-wanted-signatures.md) are available for dimension diagnostics.
 Accepted normalized expressions and source-bearing name dependencies are available through

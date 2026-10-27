@@ -33,9 +33,9 @@ impl fmt::Display for SizeSetInputError {
 impl std::error::Error for SizeSetInputError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
-            Self::Chart(issue) => Some(issue),
-            Self::Mtm(issue) => Some(issue),
-            Self::Breaks(issue) => Some(issue),
+            Self::Chart(issue) => Some(issue.as_ref()),
+            Self::Mtm(issue) => Some(issue.as_ref()),
+            Self::Breaks(issue) => Some(issue.as_ref()),
             _ => None,
         }
     }

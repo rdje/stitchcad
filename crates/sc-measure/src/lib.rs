@@ -55,6 +55,9 @@ pub use garment_size_set::{
     GarmentSizeSet, GarmentSizeSetDefinition, GarmentSizeSetError, GarmentSizeSetPosition,
 };
 
+mod mtm_size_set;
+pub use mtm_size_set::{MtmSizeSet, MtmSizeSetDefinition, MtmSizeSetError, MtmSizeSetPosition};
+
 mod ease;
 pub use ease::{CompressionPermission, Ease, EaseDefinition, EaseError, EaseSide, FitIntent};
 

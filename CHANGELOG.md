@@ -8,15 +8,18 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0360 — own garment SizeSet sources and derive actual current views
 
-- Own exact common metadata, complete observation inventory and chart; check all ids and every current observation.
-- Add readonly actual chart/break contexts for nonescaping visitor quantity queries; original canonical objects remain borrowed.
-- Native5/privacy3/strict selected lint/fmt/book/publication pass0; partial chart/break coverage stays explicit.
-- D250132 rows exactly baseline; whole0359/D255/operator continuity511 matches5 Git spans; caps unchanged; G1still6/18.
-- MTM/unified sources and full Design/execution/physical/integration/CI remain pending.
+## STITCHCAD-G1-0361 — own actual MTM SizeSet sources and preserve typed causes
+
+- Own exact singleton common/chart sources; derive actual shared body/Ease contexts with readonly quantity accessors.
+- Preserve original draft/coverage/grading refusals and canonical body/Ease records; no computed sum or cached context.
+- Fix D256: composite chart/MTM/break sources expose concrete causes; all3 failing-before public downcasts now pass.
+- Native5/privacy3/strict selected lint/fmt/book/publication pass0; D250132 exact baseline rows/delta0.
+- Whole0360/builtin continuity512 matches4 Git spans; caps unchanged; G1still6/18. Unified host/full Design/CI remains later.
 
 # Sealed archive — earlier slices
+
+| [part512](docs/history/stitchcad-devnotes-part512.md) | whole0360 and historical builtin proofs | 74 lines, 6227 bytes, sha256:45321f24… |
 
 | [part511](docs/history/stitchcad-devnotes-part511.md) | whole0359/D255 and historical operator proofs | 86 lines, 6879 bytes, sha256:90f06614… |
 

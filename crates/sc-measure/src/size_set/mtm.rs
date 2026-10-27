@@ -103,11 +103,15 @@ impl<'a> MtmSizeSetInputs<'a> {
         )?;
         Ok(())
     }
-    pub(crate) const fn chart_context(self) -> &'a MtmChartContext<'a> {
+    /// Original shared body/Ease context for explicit quantity queries in this view's lifetime.
+    #[must_use]
+    pub const fn chart_context(self) -> &'a MtmChartContext<'a> {
         self.chart_context
     }
 
-    pub(crate) const fn break_context(self) -> &'a SizeBreakContext<'a> {
+    /// Original shared break context for explicit declaration/coverage queries in this view's lifetime.
+    #[must_use]
+    pub const fn break_context(self) -> &'a SizeBreakContext<'a> {
         self.break_context
     }
 

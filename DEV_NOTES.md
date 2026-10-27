@@ -3,26 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned garment SizeSet sources and actual temporary views
+## _(2026-10-27 UTC)_ — owned MTM sources with actual body/Ease contexts
 
-0360 GarmentSizeSet owns common metadata, all observations and the authored chart. A complete
-cross-input/common/observation/chart census retains original positions before current checks.
-Every observation validates, even if unselected; a valid-at-birth observation with a now-missing
-chart table refuses rather than hiding behind selected valid rows. Existing common/current/composite
-validators run over temporary shared contexts. GarmentSizeSetInputs now exposes readonly actual
-chart_context()/break_context() for explicit quantity queries through its nonescaping visitor.
-Native cases compare actual membership/chart/canonical measurement and delta pointers, exact Design
-pins, partial chart/break path refusals, an axis-observation alias, unused missing table, callback
-suppression on canonical replacement and successful original restoration. No cached state, derived
-number or geometry is produced. Default owner Debug exposes only observation count.
-Native5/privacy3/strict selected lint/fmt/book/publication pass0. D250132 rows exactly baseline,
-delta0; glossary rc=1. Continuity511 compares5 Git spans for whole0359/D255 and historical operator
-proofs; current behavior/commands retained. Caps unchanged; G1still6/18. Promotion declined: existing
-host/common-context ownership. .6.4.2.d.4.3.c.2 actual MTM sources next; unified host/full Design/
-execution/physical/profile/integration/CI remains unverified.
+0361 MtmSizeSet owns singleton common metadata and the actual immutable chart. All supplied input/
+common/chart ids are disjoint before current checks. Temporary Ease/MTM/break contexts share actual
+membership, measurement context and logical Design table. Readonly view contexts permit separate
+body/Ease canonical declaration queries; no summed value, profile selection or cache is invented.
+Partial mappings remain drafts; path queries preserve original coverage and GradeRulesUnsupported
+chart/member refusal. Native cases compare actual source pointers and exact refs, keep partial/draft
+rules, reject a chart-axis alias and refuse replacement missing Ease sources before invoking a view.
+D256 was reproduced by all3 SizeSetInputError source branches exposing boxes: [false,false,false],
+rc=101. issue.as_ref() exposes original chart/MTM/break error types; the same public contract passes.
+Native5/privacy3/strict selected lint/fmt/book/publication pass0; D250132 exact baseline rows/delta0,
+glossary rc=1. Continuity512 compares4 Git spans for whole0360 and historical builtin-proof blocks;
+current semantics/commands retained. Caps unchanged; G1still6/18. Promotion declined: existing
+host/context ownership. .6.4.2.d.4.3.c.3 unified sources/host next. Full Design/execution/physical/
+profile/integration/CI remains unverified.
 
 
-[Complete common SizeSet metadata/D255 lesson](docs/history/stitchcad-devnotes-part511.md) retains
+[Complete owned garment source lesson](docs/history/stitchcad-devnotes-part512.md) retains
 its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review

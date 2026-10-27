@@ -1137,3 +1137,10 @@ Historical window15/16 routing/pointer receipts remain whole in
 [continuity510](../history/stitchcad-devnotes-part510.md); current capacity ownership is G1-SLICE.RETENTION-CAPACITY.
 
 Verified D255 concrete source correction retained whole in [part511](../history/stitchcad-devnotes-part511.md).
+
+## D256 — composite SizeSet causes expose allocation wrappers
+
+P2; owner G1-SLICE.6.4.2.d.4.3.c.2, fixed0361. Repro: cargo test -p sc-measure --test
+mtm_size_set_contract composite_error_sources gives [false,false,false], rc=101 before fix.
+Chart/Mtm/Breaks sources return Box, hiding concrete causes from generic consumers. issue.as_ref()
+repairs all3; the same public downcast contract verifies actual chart/MTM/break payloads.

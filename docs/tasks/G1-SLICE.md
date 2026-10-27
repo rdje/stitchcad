@@ -865,23 +865,23 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Children .1 owned garment sources; .2 owned MTM sources; .3 unified external source-host acceptance.
 - ID: `G1-SLICE.6.4.2.d.4.3.c.1`
   Status: `done`
-  Goal: exact owned garment sources/current identities and nonescaping views with readonly contexts.
-  - [x] REPRODUCE / ISSUE: unused observation targets must validate with the complete owned scope;
-    cargo test -p sc-measure --test garment_size_set_contract passes5/0 rc=0, target/*native-0360.log.
-  - [x] ROOT CAUSE (WHY + WHERE): existing composites borrow separate context owners; owned sources
-    rebuild those actual shared contexts. Selected garment_size_set_contract passes5/0 rc=0.
-  - [x] FIX: immutable common/observation/chart owner, complete census/current validators and readonly
-    context getters; native5/0 rc=0 proves actual chart/break pointers and unused-target refusal.
-  - [x] ADDRESSED: selected native5/privacy3 pass0; cargo test -p sc-measure --doc
-    garment_size_set::GarmentSizeSet rc=0 protects private/shared state and nonescaping visitor views.
-  - [x] NO REGRESSION: strict selected Clippy/fmt/book/publication79/118/1457/2394 pass0;
-    D250132 exact baseline rows/delta0, glossary rc=1; full MTM/host/Design/integration/CI later.
-  - [x] LOCKSTEP: book/API/decision/defect/index/pointer aligned; transition_receipts.py511
-    compares5 exact Git spans rc=0, whole0359/D255/operator proofs; caps unchanged; G1still6/18.
-    promotion: declined (implements recorded host/common-context ownership). Commit0360; .c.2 MTM next.
+  Goal:0360 owned garment SizeSet sources; [whole scope/proof](../history/stitchcad-devnotes-part512.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c.2`
-  Status: `pending`
-  Goal: actual owned singleton MTM/chart-family sources over the common metadata/context contract.
+  Status: `done`
+  Goal: owned MTM sources/current views; D256 concrete causes fixed.
+  - [x] REPRODUCE / ISSUE: D256 direct source types give[false,false,false] rc=101 before fix;
+    target/mtm-size-owner-before-0361.log retains the public downcast assertion.
+  - [x] ROOT CAUSE (WHY + WHERE): SizeSetInputError source branches return boxes; selected
+    cargo test -p sc-measure --test mtm_size_set_contract fails1 rc=101 before issue.as_ref().
+  - [x] FIX: owned common/chart sources, complete ids and actual shared Ease contexts;
+    native5/0 rc=0 proves body/Ease pointers, draft rules, aliases and replacement refusal.
+  - [x] ADDRESSED: selected mtm_size_set_contract gives5/0 rc=0, including all3 concrete
+    error-source types; target/mtm-size-owner-native-0361.log.
+  - [x] NO REGRESSION: privacy3/strict selected Clippy/fmt/book/publication79/119/1457/2395
+    pass0; D250132 baseline rows/delta0, glossary rc=1.
+  - [x] LOCKSTEP: docs/frontier aligned; transition_receipts.py512
+    compares4 Git spans rc=0, whole0360/builtin proofs; caps unchanged; G1still6/18.
+    promotion: declined (existing context ownership). Commit0361; .c.3 unified host next.
 - ID: `G1-SLICE.6.4.2.d.4.3.c.3`
   Status: `pending`
   Goal: unified actual external set sources and exact Design-reference/host acceptance.
