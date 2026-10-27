@@ -801,31 +801,45 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0347 immutable DesignStructure; [whole scope/proof](../history/stitchcad-devnotes-part499.md).
 - ID: `G1-SLICE.6.4.2.c`
   Status: `done`
-  Goal: owned immutable authored recipe source and actual normalized/canonical syntax views without
-  self-referential storage, invented source spans, execution or static-check proof. Reuse parser and
-  literal normalization contracts; retain typed refusal and private replacement boundaries.
-  FormulaRecipeDocument owns exact source and typed canonical identity; normalized() reuses actual
-  parser/converter with source-borrowed views and typed syntax/literal refusals, no self-reference.
-  Own focused native/privacy/lint/book/API checks, D253 stale phase prose and whole0347 continuity499.
-  - [x] REPRODUCE / ISSUE: existing normalized arenas borrow original source. New document lifetime
-    compile-fail checks refuse detached views2/0, rc=0, target/recipe-document-privacy-0348.log.
-  - [x] ROOT CAUSE (WHY + WHERE): canonical recipe bytes retain identity but not source spans/spelling;
-    formula_recipe_document_contract compares distinct source/equal identity and original source spans,
-    native7 passed/0 failed, rc=0, target/recipe-document-native-0348.log.
-  - [x] FIX: immutable owned exact source/typed canonical identity; normalized() uses actual parser/
-    converter, retaining source borrowing and original typed syntax/literal refusals, without self-reference.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    formula_recipe_document_contract gives7/0, rc=0; source/order/errors/empty/detached edits/Debug exact.
-  - [x] NO REGRESSION: privacy2/strict selected Clippy/fmt/book/publication77/107/1444/2359 pass0;
-    target/recipe-document-*-0348.log. D250132 baseline rows exactly equal, delta0; full census rc=1.
-  - [x] LOCKSTEP: API vocabulary/phase map/D253/status/index/pointer aligned; continuity499 compares3
-    Git spans0; caps unchanged. Test conditional syntax/panic-lint setup corrected/excluded. G1still6/18;
-    promotion: declined (canonical identity/source contracts). Commit0348; source registries .2.d next.
-    No whole Design/static-name/numeric execution/readiness/integration/CI claim.
+  Goal:0348 owned FormulaRecipeDocument; [whole scope/proof](../history/stitchcad-devnotes-part500.md).
 - ID: `G1-SLICE.6.4.2.d`
-  Status: `pending`
+  Status: `in_progress`
   Goal: exact current source/metadata identity registries across canonical input domains, preserving
   one-way sc-measure dependency and singly owned values; actual host bindings before .3 readiness.
+  Children .1 owned Design parameters/current canonical targets; .2 current measurement/Ease inventories;
+  .3 profile/material source contracts; .4 complete identity/source-host composition before .3 readiness.
+- ID: `G1-SLICE.6.4.2.d.1`
+  Status: `done`
+  Goal: immutable owned named Design parameters pin exact canonical target family/id/kind. Reuse
+  MachineToken/reserved-name and formula input adapters; unique metadata ids/tokens and canonical-id
+  disjointness. Current lookups borrow actual CanonicalInputs, retain Unknown/Derived state and
+  refuse missing/changed kinds without retargeting or source/evidence truth claims. No reverse dependency.
+  Own native/privacy/lint/book/API sync, whole0348 continuity500 and exact old book proof retirement
+  before cap growth; retain public retrieval instructions and current functional contracts/examples.
+  - [x] REPRODUCE / ISSUE: formula input metadata claims alone do not own named Design parameters;
+    native design_parameters_contract exercises missing/changed targets and duplicate bindings9/0, rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): FormulaDeclaration::input carries ids/kind, while the scalar adapter
+    checks supplied canonical objects. New metadata pins family/id/kind and reuses this actual adapter;
+    cargo test -p sc-core --test design_parameters_contract passes9/0, rc=0, target/*native-0349.log.
+  - [x] FIX: immutable ordered parameters, unique metadata ids/tokens, reserved-name/canonical-id
+    refusals and shared current-target queries. Unknown/Derived states/source remain canonical, uncached.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    design_parameters_contract gives9/0, rc=0; exact role/errors, current false state and family pins.
+  - [x] NO REGRESSION: privacy2/strict selected Clippy/fmt/book/publication77/108/1444/2359 pass0,
+    target/design-parameters-*-0349.log. D250132 rows exactly baseline, delta0; full glossary rc=1.
+  - [x] LOCKSTEP: API vocabulary/status/index/pointer/notes aligned; continuity500 compares6 exact Git
+    source spans0, including both complete old book proof sections. Functional examples/commands retained;
+    caps unchanged, G1still6/18. promotion: declined (canonical source/name/identity contracts). Commit0349;
+    .2.d.2 measurement/Ease follows. Full host composition/Design/readiness/bus/integration/CI remains later.
+- ID: `G1-SLICE.6.4.2.d.2`
+  Status: `pending`
+  Goal: current measurement/Ease inventories and canonical host links without copied values.
+- ID: `G1-SLICE.6.4.2.d.3`
+  Status: `pending`
+  Goal: actual profile/material source contracts and selected scope pins, no fabricated truth.
+- ID: `G1-SLICE.6.4.2.d.4`
+  Status: `pending`
+  Goal: complete source-host/identity composition and actual current metadata binding acceptance.
 - ID: `G1-SLICE.6.4.3`
   Status: `pending`
   Goal: actual current point and whole-range resolution/repair readiness, including lost interiors.

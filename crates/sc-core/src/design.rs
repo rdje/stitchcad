@@ -8,6 +8,12 @@ use crate::{
     value::CanonicalInputs,
 };
 
+mod parameters;
+pub use parameters::{
+    DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,
+    DesignParameters,
+};
+
 /// Explicit structural input, with no inferred identity, revision, copy or topology registration.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct DesignStructureDefinition {

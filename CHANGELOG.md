@@ -3,15 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0348 — own exact authored recipe source and identity
+## STITCHCAD-G1-0349 — own named Design parameters with current canonical targets
 
-- Add immutable FormulaRecipeDocument, retaining source/spans and typed canonical identity without self-reference.
-- Actual normalized views borrow owned text; original syntax/literal refusals propagate. No name/kind/execution proof.
-- Native7/privacy2/strict selected lint/fmt/book/publication pass0; D253 stale phase prose corrected.
-- D250132 glossary rows remain exactly baseline. Whole0347 continuity499 matches3 Git spans; caps unchanged.
-- G1still6/18; source registries .6.4.2.d next; full Design/readiness/execution/integration/CI pending.
+- Add immutable DesignParameters: unique ids/tokens, reserved-name/canonical-id refusals and pinned target family/id/kind.
+- Resolve actual current declarations through existing adapters; preserve state/source without cached values or retargeting.
+- Native9/privacy2/strict selected lint/fmt/book/publication pass0. D250132 glossary rows remain exactly baseline.
+- Whole0348/D253 and complete old book input proofs500 match6 Git spans; retrieval/current contracts remain public.
+- Caps unchanged; G1still6/18. Measurement/Ease inventories next; full host/Design/readiness/bus/integration/CI pending.
 
 # Sealed archive — earlier slices
+
+| [part500](docs/history/stitchcad-devnotes-part500.md) | whole0348 document/D253 and historical book input proofs | 139 lines, 10682 bytes, sha256:3da40349… |
 
 | [part499](docs/history/stitchcad-devnotes-part499.md) | whole0347 structural Design task, lesson and ledger | 47 lines, 4093 bytes, sha256:ad9906e3… |
 

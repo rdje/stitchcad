@@ -186,44 +186,21 @@ children, unknown names/calls, unevaluated branches and incompatible declared/in
 or input-conversion refusal has no successfully normalized owner from which to produce whole identity.
 Name/type/binding validation, tolerance resolution and numerical execution remain separate steps.
 
-Ten public identity contracts check sixteen authored statements/nine complete sources, all55
-independently authored expression rows through all three operand roles (165 controls), and100
-independent Decimal/Fraction rows through those roles (300 controls). The actual four normative
-book/decision examples, alias equality/order distinctions, two actual cross-type text collisions,
-ownership/privacy/extraction and large sources are covered. On64KiB stack, the full4096-statement,
-two256-node/16-if-level operands per assertion serialize to exact independently composed bytes;
-100000-character names,50000 grouping levels and deepest/widest calls also retain exact identity.
-These are flat-shape/byte contracts, not a browser, performance or production certification.
-
-Five compile-fail docs check private construction and all three cross-domain equality pairings;
-two runnable API docs check source-independent usage. Twenty-one actual serializer faults compile
-and fail public assertions, covering headers, operands, envelope/order/count/spacing, empty identity,
-terminal newline, opaque Debug and exact extraction. The direct entry plans eight inputs before
-effects: implementation/current test/four imported TSVs/book grammar/byte decision. Ordinary mode
-declares twenty-two diagnostic files and one mutable source; classifier-only declares zero files
-or mutable sources and invokes no native child. Both modes preserve prepared local stores.
+Historical identity acceptance covers10 native contracts,21 compiled serializer faults, typed-domain
+collisions, opaque Debug and exact extraction, including maximum flat shapes. Original complete
+protocol/measurements are retained byte-for-byte in docs/history/stitchcad-devnotes-part500.md.
+The public archive reader retrieves that record without Git or recursive unpacking:
 
 ```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py --classifier-only
-```
-
-A failed-body thread panic must name a current assertion macro path/line/byte column. Custom messages
-pass; nonthread mentions, passing names and labelled extraction panics refuse. Two independent
-complete captures/eighteen physical refusals and twenty-four mode omissions preserve all21 original
-cases/full-target arguments/restoration; an independent legacy-regex fault distinguishes nonthread
-noise. Copied classifier-only mode accepts linked readonly input/unused log aliases without source/
-output writes. Every actual failed body reaches a current macro, including small-stack workers;
-independently authored failed-test sets remain exact. Thirty-one frozen inputs/eighteen unchanged
-Rust files/six compile-time inputs/twenty-two local single-link logs and the current full ten-test
-executable restore exactly. Dispatch captures and real native behavior are verified separately.
-Existing fixtures retain their independent recursive-reference checks; no independent whole-recipe
-parser or numerical evaluation proof is claimed. [Coupled review .3f.2](#coupled-input-and-identity-review)
-is complete below.
-
-```bash
+python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part500.md
 cargo test -p sc-core --test formula_canonical_recipe_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py
 ```
+
+These receipts establish syntax/identity behavior, without numerical, browser or production authority.
+Current source/provider/output planning and failed-body classification remain required by the linked
+entry's local-environment profile; classifier-only mode starts no native child or mutable-source run.
 
 ## Owned authored recipe document
 
@@ -256,46 +233,21 @@ Duplicate/unbound names and incompatible kinds remain inspectable until static c
 
 ## Verification scope
 
-Eight public contracts check sixteen independently authored statement/header/operand-byte rows,
-nine whole sources, original spans/source borrowing/privacy/Clone and exact later-statement failures.
-One hundred independent Decimal/Fraction literal rows pass through all three operand roles, supplying
-300 whole-recipe input controls. Both width and rounded scalar refusals retain their typed families.
-Earliest refusal/source chaining, unknown calls, duplicate/forward names, raw turns/wide magnitudes,
-incompatible annotations and unevaluated operators retain the stated input-only scope.
-
-On a64KiB thread stack,4096 assertions each hold two256-node operands with16 if levels. Parsing,
-conversion, syntax drop, normalized Clone and drop preserve all2097152 nodes. This checks the declared
-flat shape and separate bounds for that maximum; it is not a memory-performance or browser certificate.
-Six compile-fail docs check private fields/source/view lifetimes, and two runnable API docs check usage.
-
-Seventeen actual production faults compile and fail public assertions: name/header metadata,
-declared kind/tolerance, operand coverage/error role, order/count/ordinal, spans, privacy and both
-error causes. The direct entry plans seven inputs before effects: three implementations, current
-public test and its three imported TSVs. Ordinary mode declares eighteen logs and three mutable
-sources; classifier-only declares zero files or mutable sources and invokes no native child. Both
-modes retain local store/directory preparation.
-
-```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py --classifier-only
-```
-
-A qualifying failed-body thread panic must name a current assertion macro path/line/byte column.
-Custom messages pass; passing names, labelled extraction panics and nonthread location mentions
-refuse. Two independent complete captures, sixteen physical refusals and actual input/file/mutable/
-mode/stores/restoration/classifier faults calibrate the plans, including each of the three mutable
-declarations. A copied classifier-only entry accepts linked read-only input and ignores unused log
-aliases without source/output writes. Seventeen original full-target faults reach current macros
-in every failed body, including the small-stack worker; independently authored failed-test sets and
-source bindings remain exact. Twenty-seven frozen inputs/seventeen unchanged Rust files/three
-compile-time TSVs/eighteen local single-link logs and the current full eight-test executable restore
-exactly. Dispatch capture and real native behavior are verified separately.
-Authored fixtures are checked by the independent recursive reference, with semantic execution trapped.
-Test-side header/operand byte composition is inspection, not a product statement/recipe serializer.
+Eight input contracts check16 statement rows/nine sources and300 independent literal-role controls,
+including later-statement errors, exact width/rounded-domain refusals and all original source metadata.
+Maximum flat shapes, source/view privacy, Clone/drop and opaque diagnostics are covered. Seventeen
+compiled production faults calibrate the original native bodies. Complete retained measurements,
+plans, refusal/body controls and restoration receipts are in the same part500 record above; current
+commands remain:
 
 ```bash
 cargo test -p sc-core --test formula_normalized_recipe_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py
 ```
+
+The input contracts retain unknown calls, duplicate/forward names, raw turns, wide literals,
+incompatible annotations and unevaluated branches. They do not certify whole semantic execution.
 
 ## Coupled input and identity review
 

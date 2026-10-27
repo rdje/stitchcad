@@ -102,6 +102,33 @@ scalar stays general: querying its id with length(id) returns None, without conv
 a dedicated length id1 plus general scalar id1 refuses; distinct ids retain all states/provenance.
 This component grants no metadata binding, current Design revision, evidence truth or release readiness.
 
+## Owned Design parameters
+
+`sc_core::design::DesignParameters::new(definitions, &inputs)` owns named parameter metadata without
+copying canonical values/states. Every definition supplies distinct metadata id, exact MachineToken
+and DesignParameterTarget: dedicated Length(id), or general Scalar with declaration id/expected kind.
+Family and kind stay pinned; a general Length scalar never substitutes for a dedicated declaration.
+
+Metadata ids/tokens must be unique, ids disjoint from canonical declaration ids, and the eight reserved
+input names cannot be rebound. These checks precede target resolution in authored order. Distinct
+names may share a canonical target; empty drafts accept. No token, declaration or default is generated.
+For example, width/hem_depth can both name dedicated declaration1; width/width refuses even if both
+name1. Metadata id1 refuses if canonical declaration1 exists. A missing dedicated target1 cannot be
+repaired by a general Length scalar1. Unknown/Derived targets remain legal inspectable content.
+
+parameters()/parameter(id) borrow canonical metadata. A parameter's declaration(&inputs) resolves only
+its held target against current records, using the existing formula scalar adapter for exact kinds.
+Dedicated metadata retains an actual LengthDeclaration borrow; general metadata retains checked
+id/kind for that adapter, without a value cache. Same-id state edits remain current: a Boolean Unknown
+replaced by an explicit false Preference reads false with its actual provenance. A same-id Angle
+replacement refuses the pinned Boolean kind, and deletion retains the missing original id.
+
+validate_current(&inputs) checks every target and rechecks metadata/canonical id disjointness after
+inventory replacement. Shared definitions cannot mutate the registry; detached edits require a new
+validated replacement. This parameter registry does not certify other Design entities, cross-domain
+name composition, measurement/Ease/profile/material membership, source/evidence truth or readiness.
+Declaration source references retain their authored meaning; no equality with the metadata id is inferred.
+
 ## Stable machine tokens
 
 Measurement metadata uses core `MachineToken` for exact ASCII lower-snake identifiers, separately from
@@ -123,6 +150,11 @@ rebind. Tokens prove no source truth, value or display text.
 | `CanonicalInputs` | Immutable owned dedicated-length/general-scalar records |
 | `CanonicalInputsError` | Repeated owned identity with both original positions |
 | `CanonicalInputPosition` | Dedicated-length or general-scalar family and index |
+| `DesignParameters` | Immutable ordered named Design parameter registry |
+| `DesignParameterDefinition` | Editable metadata id, token and pinned canonical target |
+| `DesignParameterTarget` | Dedicated Length id or general Scalar id/expected kind |
+| `DesignParameter` | Immutable metadata with a current-target declaration query |
+| `DesignParameterError` | Actual identity/name/target/kind refusal |
 | `NoEvidence` | Claimed known value has no evidence references |
 | `DuplicateEvidence` | Known inventory repeats an evidence id |
 | `LengthValueError` | Numeric value requires observation or evaluation |

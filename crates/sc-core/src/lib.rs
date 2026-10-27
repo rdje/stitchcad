@@ -4,7 +4,8 @@
 //! notches, pair-consistent Piece inventories, directed grainlines, allowance descriptors and
 //! construction/closure/pocket intent with copy-addressed sewing graphs are implemented in [`ontology`]. Geometric correctness,
 //! realized ease and target-profile binding validation remain explicit deferred obligations.
-//! [`design`] owns structural inputs/Pieces/copies/topology with current identity/copy checks.
+//! [`design`] owns structural inputs/Pieces/copies/topology and named parameter metadata with
+//! current identity/copy/target checks; complete Design composition remains later.
 //! Canonical length declarations retain authored state/source/provenance in [`value`], without
 //! default unknowns or cached derived results; registry/evidence proof remains Design/G4.
 //! Shared [`name::MachineToken`] validates stable ASCII identifiers without deriving display labels.

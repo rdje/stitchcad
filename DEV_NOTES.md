@@ -3,20 +3,23 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-26 UTC)_ — owned original recipe source
+## _(2026-10-27 UTC)_ — owned named Design parameters
 
-0348 FormulaRecipeDocument owns exact source String and typed canonical recipe identity after existing
-parser/literal acceptance. Borrowed normalized arenas cannot live inside that object without a
-self-reference; normalized() instead reuses the actual parser/converter and returns source-borrowed
-views with original spans. It propagates typed errors without panic or invented source positions.
-Formatting/unit aliases can share canonical identity while document equality preserves exact text.
-Empty drafts accept; unknown calls, duplicate names and incompatible kinds remain syntax content,
-not static or execution proof. No canonical identity is used as a source reader or numeric certificate.
-Native7/privacy2/strict selected lint/fmt/book/publication pass0. D253 footer/phase map now distinguishes
-available static/numeric foundations from pending execution/platform acceptance; historical proof scope
-stays intact. D250132 glossary rows remain baseline, delta0. Whole0347 continuity499 matches3 exact Git
-spans. Promotion: existing canonical identity/source contracts. G1still6/18; current source registries
-.6.4.2.d follow. Full Design/readiness/execution/integration/CI remains unverified.
+0349 DesignParameters owns immutable metadata id/token/pinned canonical target family and scalar kind.
+Identity/name checks run before target resolution; ids cannot alias canonical declarations, reserved
+inputs cannot bind, and duplicate tokens refuse even for one shared target. Distinct names sharing a
+target and empty drafts remain legal. Current declaration queries reuse the actual scalar adapter;
+dedicated lengths retain their original borrowed representation. Same-id unknown→false preference
+edits read current state/provenance; changed kinds or missing ids refuse rather than retarget peers.
+Complete current validation rechecks metadata/canonical identity disjointness after replacement.
+No value/state cache, source-id equality inference, evidence truth or cross-domain completeness follows.
+Native9/privacy2/strict selected lint/fmt/book/publication pass0. D250132 glossary rows remain baseline,
+delta0. Whole0348/D253 continuity500 matches6 Git spans, including complete historical book identity/input
+proof sections; retrieval instructions and current functionality/examples/commands remain in the book.
+Promotion: existing canonical source/name/identity contracts. Caps unchanged; G1still6/18; measurement/Ease
+inventories .6.4.2.d.2 next. Full host composition/Design/readiness/execution/integration/CI remains later.
+
+[Whole0348 recipe ownership lesson](docs/history/stitchcad-devnotes-part500.md) retains exact scope/proofs.
 
 [Whole0347 structural ownership lesson](docs/history/stitchcad-devnotes-part499.md) retains exact scope/proofs.
 

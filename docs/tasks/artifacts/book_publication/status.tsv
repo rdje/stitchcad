@@ -106,3 +106,4 @@ piece inventory	spec/ontology-implementation.md	crates/sc-core/src/ontology/piec
 canonical owned inputs	spec/measurement-inputs.md	crates/sc-core/src/value/inventory.rs	CanonicalInputs	G1-SLICE.6.4.2.a	4.4
 owned structural Design	spec/ontology-implementation.md	crates/sc-core/src/design.rs	DesignStructure	G1-SLICE.6.4.2.b	4.4
 owned recipe document	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/document.rs	FormulaRecipeDocument	G1-SLICE.6.4.2.c	4.4
+owned Design parameters	spec/measurement-inputs.md	crates/sc-core/src/design/parameters.rs	DesignParameters	G1-SLICE.6.4.2.d.1	4.4
