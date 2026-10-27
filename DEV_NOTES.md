@@ -3,20 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — atomic maintained-book installation and D278
+## _(2026-10-27 UTC)_ — exact byte storage and scoped book acceptance
 
-0417 records exact fresh book proposals with guarded source/temp planning and one canonical atomic
-replacement. Native authoring8/reader23/O2 pass0:only control changes, repeat refresh, missing control,
-conflicting/late inputs and native rename refusal preserve caller edits/old record and clean temp.
-D278 existing numeric gate trusted caller roots/Git and opened parts before scope checks; old0dc native
-fixture reproduces escaped wc read/pass0. Canonical/target-only root and complete source preflight now
-refuse before wc or unsafe scratch, with isolated Git. D2787/full numeric17/probes6/overlap2 pass0 after
-bootstrap; no other Git repo created/amended. Hook/CI path verifies the canonical book regardless of
-numeric fixture overrides. Frozen part/index/depth limits plus bounded JSONL/fresh Git/task/hash govern
-unique maintained prose; aggregate targets explicitly inapplicable. Local note/COMMIT/book synced;
-neutral policy body unchanged. Whole0416 scopes/prior live row566 retains5 exact spans, retention/book/
-publication/size0. Promotion: containment decision. Actual committed-mode check follows commit, then
-.book.3 feature acceptance; source/semantic/physical/release claims remain independently owned.
+D279/D280: newline_contract.py --baseline reproduces6 native subcase failures rc=1:terminal CR is
+counted as content and Git autocrlf rewrites bytes after authority hashing. Corrected3 controls pass0:
+strip one CR for width only; retain raw wc/digests; explicitly unset Git text/filter/ident/encoding
+for governed Markdown/control and require effective native attributes. Freeze root policy during
+recording; no source normalization. Native hash-object never writes objects; fixtures are ordinary
+project-local directories using this same repo's Git read-only. Hash-object resolves --path against
+cwd, so baseline reproduction selects both fixture cwd/worktree; check-attr alone is insufficient.
+Reader23/authoring8 pass0; actual03460b0 committed-mode verification passes0. Scoped acceptance keeps
+runtime/semantic/physical/release proof separately owned. Whole0417 retirement567:4 exact spans0.
+Promotion: containment decision. Probes7/0 (numeric17/overlap2), AST/bash/book/publication/retention0.
+
+[Whole0417 installation/D278 lesson](docs/history/stitchcad-devnotes-part567.md) retains complete guarded authoring, native source and integration proof.
 
 [Whole0416 reader lesson](docs/history/stitchcad-devnotes-part566.md) retains original candidate/native/O2/calibration proof and uninstalled boundary.
 

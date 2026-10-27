@@ -109,7 +109,7 @@ After focused checks and completing the owning task leaf, record the proposal be
 
 ```bash
 python3 -I -B docs/tasks/artifacts/live_doc_size/maintained_reference.py record-change \
-  --task G1-SLICE.6.5.book.2 --reason 'Adopt exact maintained-book authority'
+  --task G1-SLICE.new_book_leaf --reason 'Describe this exact book change'
 ```
 
 Use the actual new leaf and reason for each change. The command validates the complete proposal,
@@ -124,12 +124,21 @@ to a newly completed task. Even an edit with the same byte count needs a new rec
 reused, banked or inexact authority refuses, alongside incomplete navigation and oversized parts.
 This is numerical document-change authority, never cryptographic signing or human release approval.
 
+Git stores the governed Markdown and JSONL bytes unchanged. The repository attributes explicitly
+disable text/newline conversion, clean filters, identifier expansion and working-tree encoding for
+these paths; the verifier checks their effective attributes before accepting authority. A local or
+nested override that enables a transformation refuses. Authors may use LF or CRLF: byte counts and
+digests include the original line endings, while content width excludes LF and one preceding CR.
+Recording never silently normalizes a chapter. Other project files keep their existing Git behavior.
+
 The existing size-check command runs the canonical book verifier for normal commit/CI checks. Numeric
 fixture overrides cannot replace that book; caller Git directory/index/configuration cannot redirect
 its baseline. Read-only checking creates no book control or build store. Native measurement paths
 are preflighted before opening bodies, including symlink/special-file/repository/volume boundaries.
 
-Reader23/optimized2 and guarded authoring8 controls pass in ordinary project-local candidates, with
-native wc/SHA calibration and controlled rename/late-input failures. Actual committed-mode adoption
-and full feature acceptance are separate checks after the installation commit. These checks prove
-scope/freshness, not semantic correctness, physical support or release readiness.
+Scoped acceptance covers reader23, guarded authoring8 and native newline/storage3 controls, with
+native wc/SHA calibration and controlled rename/late-input failures. The actual installation commit
+03460b0 passes committed-mode verification; ordinary candidate directories are not simulated commits.
+The default numeric/book gate and its refusal probes remain required. These checks prove document
+scope/freshness, not semantic correctness, cross-platform runtime parity, physical support or release
+readiness. Broader product verification stays with G1 integration and the production gates.

@@ -73,7 +73,7 @@ measure_registry() { # $1 = surfaces.tsv · $2 = output file
         l=0; m=0; fl=""
       else
         l=$(wc -l < "$ROOT/$p" | tr -d ' ')
-        m=$(awk '{n=length($0); if(n>x)x=n} END{print x+0}' "$ROOT/$p")
+        m=$(awk '{sub(/\r$/, ""); n=length($0); if(n>x)x=n} END{print x+0}' "$ROOT/$p")
         fl=$(head -1 "$ROOT/$p" | tr '\t' ' ')
       fi
     else

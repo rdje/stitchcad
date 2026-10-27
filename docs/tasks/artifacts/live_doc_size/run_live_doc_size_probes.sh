@@ -107,6 +107,14 @@ else
   bad OVERLAP "concurrent invocation scratch is not isolated (exit=$rc)" "$out"
 fi
 
+# D279/D280: native content-width and exact Git storage under newline conversion settings.
+out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/newline_contract.py" 2>&1)"; rc=$?
+if [ "$rc" -eq 0 ]; then
+  ok NEWLINES "native content-width, raw-byte storage and effective-attribute controls passed (exit=0)"
+else
+  bad NEWLINES "newline measurement/storage contract failed (exit=$rc)" "$out"
+fi
+
 echo
 printf 'probes: %d pass / %d fail\n' "$pass" "$fail"
 [ "$fail" -eq 0 ] || exit 1

@@ -936,37 +936,33 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0415 bus staging/book design/D277 correction; [whole proof](../history/stitchcad-devnotes-part565.md).
 - ID: `G1-SLICE.6.5.book`
-  Status: `in_progress`
+  Status: `done`
   Goal: unique product mdBook maintained-reference contract, source policy lifecycle; preserve complete
   direct navigation and current per-part/index bounds. Exact baseline/content digest and fresh owned
   signed deltas for every aggregate change, refuse stale/reused/banked authority; no arbitrary cap rise.
-  Children .1 bounded registry/readonly checker+native Git refusal controls; .2 integrate/atomic adoption;
-  .3 focused feature acceptance before bus product work. Full neutral package remains unadopted.
+  Completed0416–0418:bounded reader/native refusals, guarded authoring/atomic adoption and scoped
+  acceptance before bus product work. Full neutral package remains unadopted.
 - ID: `G1-SLICE.6.5.book.1`
   Status: `done`
   Goal:0416 strict reader23/optimized2/native controls; [whole proof](../history/stitchcad-devnotes-part566.md).
 - ID: `G1-SLICE.6.5.book.2`
   Status: `done`
-  Goal:0417 guarded recording, canonical gate/class/JSONL adoption and D278 workspace/source preflight.
-  - [x] REPRODUCE / ISSUE: measurement_scope_contract.py --baseline --refusals-only:old0dc4bc7 opens
-    escaped ordinary-fixture part in native wc and passes0; fixed refuses1 before wc, five guards pass rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): native source/fixture review rc=0:D278 trusted ambient Git/root and
-    measured paths before scope validation. Current record must bind exact new task/content, not spare caps.
-  - [x] FIX: maintained_reference_authoring_contract.py:8 tests OK rc=0; canonical control alone changes,
-    deterministic refresh, planned local temp/atomic replace, late edits/conflicts/rename refusal preserve
-    prior record and cleanup. Trusted planner guards complete inputs/output; no chapter or other repo write.
-  - [x] ADDRESSED: reader23/optimized2 rc=0; workspace/control/part preflight and isolated Git preserve
-    numeric behavior; ordinary fixtures only. Full D2787, numeric17 arms/probes6 and overlap2 rc=0 after
-    current control creation; bounded parts/index/depth stay, aggregate targets explicitly inapplicable.
-  - [x] NO REGRESSION: native authoring8/reader23/O2/AST/bash syntax/book/publication/size/retention rc=0;
-    inherited gate remains unconditional for this canonical book, even numeric fixture root overrides.
-    CI uses existing full-history/Python3.9+ path; remote verdict not claimed, no push below cadence.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part566.md:5 spans rc=0;
-    old reader/retirement/live row retained; containment decision promoted. Neutral body unchanged;
-    local adoption/COMMIT/book/control sync. Committed-mode confirmation after commit/.book.3 remains; bus/runtime/physical/release stays owned.
+  Goal:0417 installed guarded authority/D278; [whole proof](../history/stitchcad-devnotes-part567.md).
 - ID: `G1-SLICE.6.5.book.3`
-  Status: `pending`
-  Goal: focused full adoption gate and declared remaining proof before .6.5.2 implementation.
+  Status: `done`
+  Goal:0418 scoped adoption acceptance, D279 CRLF width and D280 exact Git storage-byte correction.
+  - [x] REPRODUCE / ISSUE: newline_contract.py --baseline:6 native subcase failures rc=1, expected;
+    awk441 vs440; Git changes CRLF object ids. Actual03460b0 committed-mode verification rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): native awk/Git probe rc=0:width includes CR; Git cleans raw bytes
+    after hashing. No root attributes existed. Ordinary target fixtures, same Git metadata read-only.
+  - [x] FIX: newline_contract.py:3 tests OK rc=0; one CR excluded from width, raw wc unchanged;
+    effective text/filter/ident/encoding attributes must be unset; writer freezes root policy.
+  - [x] ADDRESSED: maintained_reference_contract.py:23 tests OK rc=0; authoring contract8 OK rc=0;
+    native conversion settings preserve exact bytes; malformed/effective transformation refuses.
+  - [x] NO REGRESSION: live-doc-size probes7/0 (numeric17/overlap2), AST/bash/book/publication/retention
+    and git diff --check rc=0; source-neutral policy body unchanged. Full product proof remains owned.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part567.md:4 exact
+    Git spans rc=0; complete0417 proof retained; book/decision/live records sync. G1 remains6/18.
 - ID: `G1-SLICE.6.5.2`
   Status: `pending`
   Goal: private actual aggregate/candidate ownership and semantic diffs, no caller-minted commit token.

@@ -139,3 +139,16 @@ filesystem-monitor/submodule recursion. No other Git repo is initialized or amen
 overrides never select a replacement canonical book. Parts/index/depth remain fixed; only explicitly
 inapplicable aggregate targets change information role, not a raised numerical ceiling. The neutral
 package/version-retention adoption remains separate; policy's neutral body is unchanged.
+
+answers: "how do exact book digests survive Git newline conversion?"
+
+0418 scoped acceptance observes actual committed verification at03460b0, then fixes D279/D280 before
+closure. Native old measurement counts441 for440 content bytes plus CRLF; strip exactly one terminal
+CR for width while native wc retains all bytes. Git autocrlf can otherwise normalize CRLF after the
+authority hashes it. Root attributes now explicitly unset text/filter/ident/working-tree-encoding
+for book Markdown and its JSONL only; the checker requires matching effective native attributes.
+The writer freezes the root attribute source and rechecks before publication. Preserve source bytes,
+including LF/CRLF, rather than silently rewriting prose. Native Git hash-object without object writes
+and actual checker awk provide independent before/after controls; ordinary target fixtures use only
+this repository's existing Git metadata read-only. Newline controls run in the existing probe suite.
+Reader23/authoring8/newline3 pass; broader runtime/physical/release proof remains independently owned.

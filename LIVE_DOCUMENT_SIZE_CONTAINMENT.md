@@ -39,6 +39,8 @@
   baseline/delta/hash and a newly completed task. Stale/reused/banked authority refuses. The existing
   size-check entry verifies this canonical book unconditionally after numeric checks; fixture root
   overrides cannot select another book. Source/workspace preflight precedes scratch/part measurements.
+  Governed Markdown/control Git attributes disable clean transformations; effective attributes are
+  checked so committed bytes retain the exact recorded digest. Content width excludes LF/optional CR.
 - **Landing-page identity:** top-level `README.md` is the rendered project landing page. Its purpose,
   verified first-use path, architecture summary and canonical navigation stay directly visible there;
   containment routes changing detail and chronology away, it does not off-load the landing function.

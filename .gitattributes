@@ -1,0 +1,5 @@
+# Exact maintained-book authority covers raw bytes, including line endings.
+# Disable Git clean transformations for these governed inputs only.
+docs/book/src/*.md -text -filter -ident -working-tree-encoding
+docs/book/src/**/*.md -text -filter -ident -working-tree-encoding
+.doctrine/live_document_size/maintained_reference.jsonl -text -filter -ident -working-tree-encoding

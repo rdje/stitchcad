@@ -22,6 +22,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[4]
 CONTROL = ".doctrine/live_document_size/maintained_reference.jsonl"
 REGISTRY = ".doctrine/live_document_size/surfaces.tsv"
+ATTRIBUTES = ".gitattributes"
 SOURCE = "docs/book/src"
 INDEX = SOURCE + "/SUMMARY.md"
 PART_BOUNDS = (700, 40960, 440)
@@ -273,6 +274,21 @@ def registry_profile(tree: Path) -> None:
          "profile", "mandatory index bounds changed")
 
 
+def storage_profile(root: Path, paths: set[str]) -> None:
+    """The authority hashes raw bytes; Git must store those bytes without clean transformations.
+
+    Check effective native attributes, including nested and info attributes, rather than assuming
+    the root declarations won. Ordinary candidates use this repository's real storage policy.
+    """
+    read_file(root, ATTRIBUTES, 65536)
+    names = sorted(paths)
+    attributes = ("text", "filter", "ident", "working-tree-encoding")
+    expected = b"".join(portable(name).encode("utf-8") + b"\0" + attribute.encode("ascii") + b"\0unset\0"
+                        for name in names for attribute in attributes)
+    actual = git(root, ["check-attr", "-z", *attributes, "--", *names], LISTING_BYTES)
+    need(actual == expected, "storage", "book/control Git clean transformations must be explicitly unset")
+
+
 def content_bounds(data: bytes, bounds: tuple[int, int, int], relative: str) -> None:
     need(data.count(b"\n") <= bounds[0] and len(data) <= bounds[1] and
          max((len(line.removesuffix(b"\r")) for line in data.split(b"\n")), default=0) <= bounds[2],
@@ -436,6 +452,7 @@ def verify_record(root: Path, tree: Path, raw: bytes) -> Verification:
     registry_profile(tree)
     authority = record["authority"]
     current = filesystem_snapshot(tree)
+    storage_profile(root, navigation(read_file(tree, INDEX, INDEX_BOUNDS[1])) | {INDEX, CONTROL})
     need(current == snapshot(authority["target"]), "target", "current book differs from exact authority")
     head = git(root, ["rev-parse", "HEAD"], 128).decode("ascii").strip()
     at_head = blob(root, head, CONTROL, CONTROL_BYTES, absent=True)
@@ -514,6 +531,7 @@ def record_change(task: str, reason: str, root: Path = ROOT, tree: Path | None =
     chapters = navigation(read_file(tree, INDEX, INDEX_BOUNDS[1])) | {INDEX}
     sources = {tree / name for name in chapters | {REGISTRY, task_path}}
     sources.update((Path(__file__).resolve(strict=True), root / "scripts/local_environment.py"))
+    sources.add(root / ATTRIBUTES)
     if old is not None:
         sources.add(destination)
     # No imported book or JSON content is executable. This is the project's trusted planner module.

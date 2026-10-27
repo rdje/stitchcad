@@ -1179,15 +1179,15 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 [Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
-## D271–D278 — original causes, controls and input/scope corrections
-[D271/D272](../history/stitchcad-devnotes-part547.md), [D273](../history/stitchcad-devnotes-part551.md),
-[D274/D275](../history/stitchcad-devnotes-part554.md), [D276](../history/stitchcad-devnotes-part559.md),
-[D277](../history/stitchcad-devnotes-part565.md); prior whole retirement [566](../history/stitchcad-devnotes-part566.md).
-D278 P2 fixed0417 .6.5.book.2:old size checker trusted ambient roots/Git and measured undeclared scope
-before path validation. Ordinary ../fixture part reaches native wc/passes0 in saved0dc; fixed refuses1
-before wc. Canonical/target-only workspace, isolated Git and complete source preflight now guard IO.
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part566.md:5 exact
-  Git spans rc=0; whole0416 scopes/prior live row retained. D278 old0→fixed1/five prebootstrap guards rc=0.
-- [x] ADDRESSED: author8/reader23/O2/D2787/numeric17/probes6/overlap2 rc=0; canonical book guard wired.
-- [x] NO REGRESSION: AST/bash/book/publication/size/retention rc=0; actual committed/full feature proof
-  .book.3 and actual bus/runtime/physical/release remain owned.
+## D271–D278 — retained causes, controls and scope corrections
+[Whole0417 retirement](../history/stitchcad-devnotes-part567.md) preserves prior reports and proofs.
+
+## D279/D280 — newline measurement and exact Git storage
+D279 P3: native awk counts441 for440 content bytes plus CRLF; adopted contract excludes terminal CR.
+D280 P2: native git hash-object with core.autocrlf=true changes CRLF bytes before object storage, so
+working-tree authority can disagree after commit. Owner G1-SLICE.6.5.book.3 fixes both in0418.
+Reproduce: newline_contract.py --baseline gives6 native subcase failures rc=1; corrected3 tests pass0.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part567.md:4 exact
+  Git spans rc=0; whole0417 scopes/retirement preserved; native awk/Git localizes both defects.
+- [x] ADDRESSED: newline_contract.py:3 tests OK rc=0; raw bytes preserved and effective policy checked.
+- [x] NO REGRESSION: reader23/authoring8/probes7/0/book/publication/retention rc=0; product proof stays owned.

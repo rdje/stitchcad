@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0417 — install guarded maintained-book authority and fix D278
+## STITCHCAD-G1-0418 — close scoped book adoption and correct newline storage
 
-- Atomically record exact fresh Git/task/content authority; keep bounded parts/index/navigation.
-- Wire canonical book verification through existing hook/CI path; aggregate targets explicitly inapplicable.
-- D278 roots/Git/part inputs preflight before filesystem effects/native wc; controlled old0→fixed1 proof.
-- Author8/reader23/O2/D2787/numeric17/probes6/overlap2/book/gates pass0; whole0416/live row566 retained.
-- Actual committed-mode confirmation follows commit; full feature/runtime/physical/release proof stays pending.
+- Actual03460b0 committed-mode verification passes; reader23/authoring8/native newline3 pass0.
+- Fix D279 CRLF content width and D280 Git clean-byte drift; effective storage attributes enforced.
+- Preserve raw source bytes, bounded semantic parts/index and exact fresh change authority.
+- Whole0417 evidence/retirement567 retains4 exact Git spans; broader product/release proof stays owned.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -32,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part567](docs/history/stitchcad-devnotes-part567.md) | whole0417 installation/lesson/ledger/D271–D278 | 54 lines, 4970 bytes, sha256:754fd688… |
 | [part566](docs/history/stitchcad-devnotes-part566.md) | whole0416 reader/lesson/ledger/retirement/prior live row | 49 lines, 4879 bytes, sha256:746371c2… |
 | [part565](docs/history/stitchcad-devnotes-part565.md) | whole0415 bus/book design/lesson/ledger/D271–D277 | 57 lines, 4864 bytes, sha256:acc2866a… |
 | [part564](docs/history/stitchcad-devnotes-part564.md) | whole completed structural/input/garment tree/0414 scopes | 348 lines, 19551 bytes, sha256:835cf568… |
