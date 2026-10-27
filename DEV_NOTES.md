@@ -3,17 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — complete scoped generation feature acceptance
+## _(2026-10-27 UTC)_ — current Dart/Tuck/Pleat source validation
 
-0396 runs the registered archive entry after0392–0395 implementation:legacy28/window1013/budget25+
-runtime4/reader46/authoring10+4/transaction27+identity and resource8 controls all pass0. Native bytes,
-Git cohorts, public materialization, real rename interruptions and exact recovery remain intact.
-The resource case simultaneously reaches8×4M decodedB,128 windows,192 working Markdown and457 real
-files;458 refuses before decode. Fresh Darwin/Python3.14.7 CLI122716160 RSS bytes/0.320178s fits the
-scoped128MiB target. This closes the finite self-contained retention activity; old v1/v2 caps and
-all original record/backing bytes remain. Full repository CI, deep authority and other-platform proof
-remain separately owned. Four-span545/retention/book/publication/size0. Promotion declined: existing
-generation authority covers the acceptance. Next actual garment Dart/fold/Gather/grain/allowance inputs.
+0397 adds current held-owner/full-source checks while sharing original intake/list/range rules and
+constructor refusal order. Dart current apex follows the journal; birth still requires a live edge.
+Split choices and lost interiors remain typed raw evidence; equal geometry with another Piece id
+cannot retarget content. Closing/profile/formula declarations remain unread; geometry stays deferred.
+D271 reproduced native0/1 rc101:empty Dart Error::source hid its actual AnchorError. Original nested
+cause now exposed. A fixture assumed reversal retires identity; published ledger semantics showed
+reversal preserves it, then split/reversal correctly exercised historical validation. Dart15/fold12,
+affected strict lint/fmt/book/publication pass0. D272 volatile live sibling16 was stale against native
+17; notes now delegate the tally to the derived census. Whole0396/retirement/syntax/SizeSet parent
+scopes546 retain6 exact Git spans; all three evidence-sibling links and child graph remain, census
+10 lanes/13 trees/17 siblings/0 unowned/orphan/dead0. Promotion: ontology structural decision. Gather,
+grain/allowance, owned families, typed declarations and coupled garment/global identities remain next.
+
+[Whole0396 feature lesson](docs/history/stitchcad-devnotes-part546.md) retains scoped acceptance and remaining integration ownership.
 
 [Whole0395 resource lesson](docs/history/stitchcad-devnotes-part545.md) retains full topology, units and scoped memory evidence.
 

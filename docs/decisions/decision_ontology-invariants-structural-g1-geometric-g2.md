@@ -11,6 +11,8 @@ answers: "can Pocket placement certify every component interval?" · "how do Poc
   "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?" ·
   "how do tucks and pleats retain distinct semantic kinds?" · "can lining be modelled while remaining outside v1 execution scope?" · "how does a faced hem bind a current Facing without duplicating it?"
 
+answers: "does current Dart validation require its historical apex edge to stay live?" · "do current folds retain held owners and full interior repair evidence?"
+
 ## The fact / decision
 
 At gate **G1**, `sc-core`'s ontology types enforce the invariants that need **no 2D predicate**: a `Piece`'s
@@ -128,3 +130,15 @@ Component endpoints honor only exact source-Piece/edge/parameter saved choices t
 ledger resolver. Raw range answers remain intact; failures retain separate choice-aware lower/upper
 answers. Another consumer's choice cannot authorize a Piece, and a chosen orphaned branch remains a
 repair even if positive-length coverage survives. This supplies no geometric join/continuity proof.
+
+## Current Dart and fold sources — G1-SLICE.6.4.5.4.a
+
+Dart/Tuck/Pleat current validation first requires the original held Piece id, then applies the
+original intake/list/full directed-source rules in their existing order. Dart birth still requires
+a live uniquely resolved apex; current validation follows a previously born-valid apex through the
+journal. Missing interiors, foreign scope and ambiguous endpoints remain original typed refusals;
+complete range coverage cannot choose a split apex. Held definitions, traversal and raw evidence
+remain unchanged. Dart Apex errors expose their original AnchorError through Error::source; D271
+repairs that earlier empty chain. These methods resolve no numeric/profile/operation value and confer
+no geometric, intake-conservation or release proof. Owned collections, typed declaration borrows and
+complete garment/Design joins remain subsequent .4/.5 work.

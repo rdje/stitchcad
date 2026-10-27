@@ -227,14 +227,8 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
 
 - ID: `G1-SLICE.4c.3`
   Status: `done`
-  Children: .4c.3a (garment chart observations), .3b (chart collection), .3c (MTM body inputs),
-  .3d (breaks/composite SizeSet), .3e (review). .3a is independent of axis implementation.
-  Goal: complete SizeSet chart/break object over membership/axes, canonical per-member POM scalars,
-  landmarks/procedures/state/provenance and adjacent signed breaks; current references and path readiness.
-  Acceptance: chart and generated POMs distinct; missing breaks name dimension/pair and refuse path 2;
-  zero/uneven breaks legal; MTM of one uses body provenance and only path 1; no quantity/default values.
-  Verification: chart/MTM originals and0303–0310 focused declaration/coverage/composite evidence; scope closure .3e.
-  Commit: original0033–0035 and STITCHCAD-G1-0303–0310 structural scope.
+  Children: .4c.3a garment charts, .4c.3b collection, .4c.3c MTM, .4c.3d composite, .4c.3e review.
+  Goal:complete SizeSet chart/break scope/proofs; [whole parent](../history/stitchcad-devnotes-part546.md).
 
 - ID: `G1-SLICE.4c.3a`
   Status: `done`
@@ -442,22 +436,10 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
 
 - ID: `G1-SLICE.5a`
   Status: `done`
-  Children: `.5a.1` lexical stream, `.5a.2` expression trees, `.5a.3` literal/canonical recipes,
-  `.5a.4` syntax review. Finalize each protocol after reading its complete affected contracts.
-  Goal: expression-language syntax from the full formula contract/grammar/examples. Read all three
-  before finalizing a pre-code protocol and safe parser subleaves; introduce immutable syntax and
-  precise source diagnostics without claiming evaluation, generated geometry or resolved SizeSet.
-  Acceptance: syntax, keywords, literals/units, precedence/conditionals, structural bounds and
-  rejected forms conform to the normative language; canonical/display forms and source spans are
-  explicit. Type/name binding, exact evaluation/DAG and operation recipes remain .5's later children.
-  Verification: full syntax/input/identity map; native591/WASM3/probes25/coupled7 actual reds, rc=0.
-  Commit: `STITCHCAD-G1-0072`.
-
-Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
-[G1-SLICE-recipes](G1-SLICE-recipes.md#completed-syntax-node-graph--preserved-during-g1-0072).
-Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
-
-Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
+  Children: .5a.1 lexical, .5a.2 expression, .5a.3 canonical, .5a.4 review.
+  Goal:complete syntax scope/proofs; [whole parent](../history/stitchcad-devnotes-part546.md).
+[Recipe subtree](G1-SLICE-recipes.md#completed-syntax-node-graph--preserved-during-g1-0072).
+[Proof](G1-SLICE-checked-recipes.md) · [Retention](G1-SLICE-retention-proof.md).
 
 - ID: `G1-SLICE.5a.4`
   Status: `done`
@@ -904,19 +886,43 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0395 full capacity/resource evidence; [whole proof](../history/stitchcad-devnotes-part545.md).
 - ID: `G1-SLICE.6.4.5.capacity.apply.accept.feature`
   Status: `done`
-  Goal:0396 focused archive feature gate after completed implementations; capacity activity closed.
-  - [x] ROOT CAUSE: git log -4 and archive entry source review rc=0:0392–0395 implementation complete;
-    combined component acceptance remained pending, separately from full CI/deep authority campaigns.
-  - [x] ADDRESSED: PYTHONUNBUFFERED=1 bash docs/tasks/artifacts/history_archive/run_history_archive_probes.sh
-    rc=0:legacy28/window1013/budget25+runtime4/reader46/authoring10+4/transaction27+identity all pass.
-    Resource8 controls and8×4M decoded/128 windows/192 workingMD/457 files pass;458 refused before decode.
-    Actual Darwin/Python3.14.7 CLI122716160 RSS bytes/0.320178s; no other-platform or universal SLA claim.
-  - [x] NO REGRESSION: same entry rc=0, exact original/public/source/ledger bytes and real recovery;
-    verify-retention/4-span545/book/publication/size rc=0. Promotion declined: existing authority covers scope.
-    Full CI/deep authority integration remains its owners; resume product .6.4.5.4.
+  Goal:0396 scoped archive feature gate; [whole proof](../history/stitchcad-devnotes-part546.md).
 - ID: `G1-SLICE.6.4.5.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.
+  Children .a current Dart/Tuck/Pleat; .b Gather joins; .c grain/allowance; .d owned six-family scope;
+  .e actual intake/angle/width/profile/operation declarations (split as needed); .f focused acceptance.
+- ID: `G1-SLICE.6.4.5.4.a`
+  Status: `done`
+  Goal:0397 current Dart/Tuck/Pleat owner/full sources; original birth order and typed current causes.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test dart_contract
+    current_apex_error_chain_retains_the_original_anchor_cause:0 passed/1 failed rc=101, source None.
+  - [x] ROOT CAUSE (WHY + WHERE): Git/source review rc=0:empty Dart Error impl; original birth/range
+    rules needed current-owner entry points. Reversal keeps an id live; split creates historical sources.
+  - [x] FIX: cargo test -p sc-core --test dart_contract --test fold_contract:15+12 passed rc=0;
+    shared rules, held-owner guards, current historical apex and original AnchorError chain implemented.
+  - [x] ADDRESSED: same27 native contracts rc=0:historical split/reversal, later lost interior with live
+    ends, split-apex choice, substituted owner and mixed-invalid constructor priority; held content exact.
+  - [x] NO REGRESSION: original cases remain in27/0; cargo clippy -p sc-core --test dart_contract
+    --test fold_contract -- -D warnings and cargo fmt -p sc-core -- --check rc=0. D271/D272 corrected.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part546.md:6 spans0;
+    retention/book/publication/size rc=0; tree census10 lanes/13 trees/17 siblings/0 unowned/orphan/dead0.
+    Promotion: ontology structural decision. Current Gather/other families/declarations/full joins remain.
+- ID: `G1-SLICE.6.4.5.4.b`
+  Status: `pending`
+  Goal: current Gather graph/span/side/copy/Piece references and original canonical ease source.
+- ID: `G1-SLICE.6.4.5.4.c`
+  Status: `pending`
+  Goal: current grain/print/allowance full sources and original held owner roles.
+- ID: `G1-SLICE.6.4.5.4.d`
+  Status: `pending`
+  Goal: own exact six-family orders and complete current scope, duplicates and original typed causes.
+- ID: `G1-SLICE.6.4.5.4.e`
+  Status: `pending`
+  Goal: actual typed declaration/operation borrows over the single current canonical root; no id coercion.
+- ID: `G1-SLICE.6.4.5.4.f`
+  Status: `pending`
+  Goal: focused complete current construction component acceptance before coupled garment .5.
 - ID: `G1-SLICE.6.4.5.5`
   Status: `pending`
   Goal: couple actual garment ownership with single-root state and complete owned identity scope.

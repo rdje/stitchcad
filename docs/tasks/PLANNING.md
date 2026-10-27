@@ -1183,11 +1183,18 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 
 ## D270 — RSS unit evidence before capacity signoff
 
-[Whole local mitigation/proofs0395](../history/stitchcad-devnotes-part545.md).
+[Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
 
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part545.md:
-  4 exact Git spans rc=0; completed source proofs
-  occupied live capacity, retained whole before retirement.
-- [x] ADDRESSED: same command rc=0; complete0395 resource task/lesson/ledger/D270 bytes retained.
-- [x] NO REGRESSION: archive entry legacy28/window1013/reader46/authoring10+4/transaction27+identity/
-  resource8/full topology rc=0; retention/book/publication/size rc=0. No full CI/platform claim.
+## D271 — Dart apex error chain drops the original cause
+
+Owner G1-SLICE.6.4.5.4.a; fixed0397. Native cargo test -p sc-core --test dart_contract
+current_apex_error_chain_retains_the_original_anchor_cause failed101:source None vs nested MissingEdge.
+Empty Error impl hid actual AnchorError; expose the original cause, retaining birth order/payload.
+
+D272 — same owner. Native census17 siblings/0 orphans vs live16:hand-kept volatile tally removed.
+Live notes cite the derived census:10 lanes/13 trees/17 siblings/0 unowned/orphan/dead rc=0.
+
+- [x] ROOT CAUSE: cargo test -p sc-core --test dart_contract current_apex_error_chain_retains_the_original_anchor_cause:
+  0 passed/1 failed rc=101, empty Error impl; run_tree_coverage_census.sh:17 vs live16 rc=0.
+- [x] ADDRESSED: cargo test -p sc-core --test dart_contract --test fold_contract:15+12 passed rc=0; original AnchorError exposed, live tally delegated to census.
+- [x] NO REGRESSION: affected strict Clippy/fmt, six-span546/retention/book/publication/size and tree census10 lanes/13 trees/17 siblings/0 unowned/orphan/dead rc=0. Broader gates remain owned.

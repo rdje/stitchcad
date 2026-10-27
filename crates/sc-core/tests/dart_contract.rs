@@ -329,3 +329,154 @@ fn editable_input_and_replacement_cannot_change_a_validated_dart() {
         IntakeValidation::DeferredToG2AndG3
     );
 }
+
+#[test]
+fn current_apex_error_chain_retains_the_original_anchor_cause() {
+    use std::error::Error;
+    let mut f = fixture();
+    f.definition.apex.edge = EdgeRef::new(EntityId::from_bits(999), LocalTag::FIRST);
+    let error = f.dart().expect_err("unknown apex at birth");
+    let DartError::Apex(anchor) = &error else {
+        panic!("expected original anchor cause");
+    };
+    assert_eq!(
+        error
+            .source()
+            .and_then(|source| source.downcast_ref::<AnchorError>()),
+        Some(anchor)
+    );
+}
+
+#[test]
+fn current_validation_follows_a_historical_apex_without_relaxing_birth() {
+    let mut f = fixture();
+    let dart = f.dart().unwrap();
+    let held = dart.definition().clone();
+    let split = f.ledger.split(&mut f.ids, held.apex.edge, t(1, 2)).unwrap();
+    f.ledger.reverse(&mut f.ids, split.second()).unwrap();
+    assert!(!f.ledger.is_live(held.apex.edge));
+    assert_eq!(dart.validate_current(&f.piece, &f.ledger), Ok(()));
+    assert!(dart.apex_resolution(&f.ledger).resolved().is_some());
+    assert_eq!(dart.definition(), &held);
+    assert_eq!(
+        f.dart(),
+        Err(DartError::Apex(AnchorError::MissingEdge {
+            edge: held.apex.edge
+        }))
+    );
+}
+
+#[test]
+fn current_validation_retains_a_later_leg_interior_repair_despite_live_ends() {
+    let mut f = fixture();
+    let dart = f.dart().unwrap();
+    let held = dart.definition().clone();
+    let edge = held.second_leg.range.edge();
+    let first = f.ledger.split(&mut f.ids, edge, t(1, 3)).unwrap();
+    let second = f.ledger.split(&mut f.ids, first.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, second.first()).unwrap();
+    let expected = f.ledger.resolve_range(held.second_leg.range);
+    assert!(expected.start().resolved().is_some() && expected.end().resolved().is_some());
+    assert_eq!(expected.repairs().count(), 1);
+    assert_eq!(
+        dart.validate_current(&f.piece, &f.ledger),
+        Err(DartError::UnresolvedReference {
+            role: DartReferenceRole::SecondLeg,
+            evidence: Box::new(expected),
+        })
+    );
+    assert_eq!(dart.definition(), &held);
+}
+
+#[test]
+fn current_validation_rejects_another_owner_and_keeps_current_apex_cause() {
+    use std::error::Error;
+    let mut f = fixture();
+    let dart = f.dart().unwrap();
+    let mut definition = f.piece.definition().clone();
+    definition.id = EntityId::from_bits(777);
+    let other = Piece::new(definition, &f.ledger).unwrap();
+    assert_eq!(
+        dart.validate_current(&other, &f.ledger),
+        Err(DartError::WrongPiece {
+            held: f.piece.id(),
+            provided: other.id()
+        })
+    );
+    f.ledger
+        .delete(&mut f.ids, dart.definition().apex.edge)
+        .unwrap();
+    let expected = AnchorError::CurrentUnresolved {
+        anchor: dart.definition().apex,
+        resolution: Box::new(dart.apex_resolution(&f.ledger)),
+    };
+    let issue = dart.validate_current(&f.piece, &f.ledger).unwrap_err();
+    assert_eq!(issue, DartError::Apex(expected.clone()));
+    assert_eq!(
+        issue
+            .source()
+            .and_then(|source| source.downcast_ref::<AnchorError>()),
+        Some(&expected)
+    );
+}
+
+#[test]
+fn current_validation_does_not_choose_a_split_apex_from_complete_leg_coverage() {
+    let mut f = fixture();
+    f.definition.apex.param = t(1, 2);
+    let dart = f.dart().unwrap();
+    f.ledger
+        .split(&mut f.ids, dart.definition().apex.edge, t(1, 2))
+        .unwrap();
+    assert!(f
+        .ledger
+        .resolve_range(dart.definition().first_leg.range)
+        .has_full_coverage());
+    assert!(matches!(
+        dart.apex_resolution(&f.ledger),
+        Resolution::SplitPoint { .. }
+    ));
+    assert_eq!(
+        dart.validate_current(&f.piece, &f.ledger),
+        Err(DartError::Apex(AnchorError::CurrentUnresolved {
+            anchor: dart.definition().apex,
+            resolution: Box::new(dart.apex_resolution(&f.ledger)),
+        }))
+    );
+    assert_eq!(dart.definition(), &f.definition);
+}
+
+#[test]
+fn constructor_refusal_order_keeps_intake_legs_apex_then_directed_sources() {
+    let mut f = fixture();
+    let original = f.definition.clone();
+    let missing = EdgeRef::new(EntityId::from_bits(999), LocalTag::FIRST);
+    f.definition.intake = IntakeAmount::Explicit {
+        parameter: EntityId::from_bits(101),
+        value: Length::from_micrometres(-1).unwrap(),
+    };
+    f.definition.second_leg = f.definition.first_leg;
+    f.definition.apex.edge = missing;
+    assert_eq!(
+        f.dart(),
+        Err(DartError::NegativeIntake(
+            Length::from_micrometres(-1).unwrap()
+        ))
+    );
+    f.definition.intake = original.intake;
+    assert_eq!(f.dart(), Err(DartError::IdenticalLegs));
+    f.definition.second_leg = original.second_leg;
+    f.definition.first_leg.range = EdgeRange::whole(missing);
+    assert_eq!(
+        f.dart(),
+        Err(DartError::Apex(AnchorError::MissingEdge { edge: missing }))
+    );
+    f.definition.apex = original.apex;
+    assert!(matches!(
+        f.dart(),
+        Err(DartError::UnresolvedReference {
+            role: DartReferenceRole::FirstLeg,
+            ..
+        })
+    ));
+}

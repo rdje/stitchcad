@@ -384,3 +384,77 @@ fn replacement_input_cannot_mutate_either_validated_semantic_kind() {
         assert_eq!(object.definition(), &f.definition);
     }
 }
+
+impl TestedFold {
+    fn validate_current(&self, piece: &Piece, ledger: &IdentityLedger) -> Result<(), FoldError> {
+        match self {
+            Self::Tuck(value) => value.validate_current(piece, ledger),
+            Self::Pleat(value) => value.validate_current(piece, ledger),
+        }
+    }
+}
+
+#[test]
+fn current_fold_validation_follows_reversal_without_rewriting_either_kind() {
+    let mut f = fixture();
+    let objects = f.both().map(Result::unwrap);
+    let edge = f.definition.fold_lines.first().unwrap().range.edge();
+    f.ledger.reverse(&mut f.ids, edge).unwrap();
+    assert!(f.ledger.is_live(edge));
+    for object in objects {
+        let evidence = object.evidence(&f.ledger);
+        assert_eq!(
+            evidence
+                .first()
+                .unwrap()
+                .1
+                .portions()
+                .next()
+                .unwrap()
+                .direction,
+            Direction::Reversed
+        );
+        assert_eq!(object.validate_current(&f.piece, &f.ledger), Ok(()));
+        assert_eq!(object.definition(), &f.definition);
+    }
+}
+
+#[test]
+fn current_fold_validation_keeps_the_later_line_repair_and_complete_evidence() {
+    let mut f = fixture();
+    let objects = f.both().map(Result::unwrap);
+    let held = f.definition.fold_lines.get(1).unwrap().range;
+    let first = f.ledger.split(&mut f.ids, held.edge(), t(1, 3)).unwrap();
+    let second = f.ledger.split(&mut f.ids, first.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, second.first()).unwrap();
+    let expected = f.ledger.resolve_range(held);
+    assert!(expected.start().resolved().is_some() && expected.end().resolved().is_some());
+    assert_eq!(expected.repairs().count(), 1);
+    for object in objects {
+        assert_eq!(
+            object.validate_current(&f.piece, &f.ledger),
+            Err(FoldError::UnresolvedReference {
+                role: FoldReferenceRole::FoldLine(1),
+                evidence: Box::new(expected.clone()),
+            })
+        );
+        assert_eq!(object.definition(), &f.definition);
+    }
+}
+
+#[test]
+fn current_fold_validation_never_substitutes_another_piece_with_the_same_geometry() {
+    let f = fixture();
+    let mut definition = f.piece.definition().clone();
+    definition.id = EntityId::from_bits(777);
+    let other = Piece::new(definition, &f.ledger).unwrap();
+    for object in f.both().map(Result::unwrap) {
+        assert_eq!(
+            object.validate_current(&other, &f.ledger),
+            Err(FoldError::WrongPiece {
+                held: f.piece.id(),
+                provided: other.id()
+            })
+        );
+    }
+}

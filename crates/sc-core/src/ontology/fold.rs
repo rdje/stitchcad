@@ -33,6 +33,13 @@ pub enum FoldReferenceRole {
 /// Shared structural refusal; physical shape/count rules require G2/G3 closing operations.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum FoldError {
+    /// Current validation cannot retarget an original construction to another Piece.
+    WrongPiece {
+        /// Original held owner.
+        held: EntityId,
+        /// Supplied current owner.
+        provided: EntityId,
+    },
     /// Authored intake cannot be negative.
     NegativeIntake(Length),
     /// At least one fold-line interval is required.
@@ -62,6 +69,12 @@ pub enum FoldError {
 impl fmt::Display for FoldError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::WrongPiece { held, provided } => {
+                write!(
+                    f,
+                    "fold held Piece {held} differs from current Piece {provided}"
+                )
+            }
             Self::NegativeIntake(value) => {
                 write!(f, "negative fold intake {} µm", value.as_micrometres())
             }
@@ -90,6 +103,21 @@ impl FoldContent {
         piece: &Piece,
         ledger: &IdentityLedger,
     ) -> Result<Self, FoldError> {
+        let content = Self {
+            piece: piece.id(),
+            definition,
+        };
+        content.validate_current(piece, ledger)?;
+        Ok(content)
+    }
+    fn validate_current(&self, piece: &Piece, ledger: &IdentityLedger) -> Result<(), FoldError> {
+        if self.piece != piece.id() {
+            return Err(FoldError::WrongPiece {
+                held: self.piece,
+                provided: piece.id(),
+            });
+        }
+        let definition = &self.definition;
         if let IntakeAmount::Explicit { value, .. } = definition.intake {
             if value.as_micrometres() < 0 {
                 return Err(FoldError::NegativeIntake(value));
@@ -108,7 +136,7 @@ impl FoldContent {
                 });
             }
         }
-        for (role, reference) in references(&definition) {
+        for (role, reference) in references(definition) {
             let evidence = ledger.resolve_range(reference.range);
             if !evidence.has_full_coverage()
                 || evidence.start().resolved().is_none()
@@ -126,10 +154,7 @@ impl FoldContent {
                 });
             }
         }
-        Ok(Self {
-            piece: piece.id(),
-            definition,
-        })
+        Ok(())
     }
 }
 /// Immutable tuck, distinct from a pleat even with identical structural input.
@@ -163,6 +188,17 @@ macro_rules! fold_interface {
                 ledger: &IdentityLedger,
             ) -> Result<Self, FoldError> {
                 FoldContent::new(definition, piece, ledger).map(Self)
+            }
+            /// Recheck the held owner and every current fold-line/direction source in authored order.
+            /// Historical traversal and raw repairs remain unchanged; no intake value is resolved.
+            /// # Errors
+            /// Returns the original owner, intake, line-list or complete directed-reference refusal.
+            pub fn validate_current(
+                &self,
+                piece: &Piece,
+                ledger: &IdentityLedger,
+            ) -> Result<(), FoldError> {
+                self.0.validate_current(piece, ledger)
             }
             /// Stable construction identity.
             #[must_use]

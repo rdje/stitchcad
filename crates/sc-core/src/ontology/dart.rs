@@ -1,5 +1,5 @@
 //! Semantic dart intent; actual closing operations and conserved boundary length remain G2/G3.
-use super::anchor::validate_anchor;
+use super::anchor::{validate_anchor, validate_current_anchor};
 use super::range::range_is_owned;
 use super::{
     AnchorError, DirectedRange, DirectedRangeResolution, EdgeAnchor, EntityId, GeometricValidation,
@@ -72,11 +72,18 @@ pub struct Dart {
 /// Structural dart refusal; geometric leg/apex coincidence and intake conservation are later checks.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum DartError {
+    /// Current validation received a different Piece; it cannot retarget the held construction.
+    WrongPiece {
+        /// Original held owner.
+        held: EntityId,
+        /// Supplied current owner.
+        provided: EntityId,
+    },
     /// Explicit intake cannot remove a negative amount.
     NegativeIntake(Length),
     /// The two legs name the same held interval, even if their authored directions differ.
     IdenticalLegs,
-    /// Apex is missing, outside the Piece, or needs repair/choice at birth.
+    /// Birth/current apex is missing, outside the Piece, or needs repair/choice.
     Apex(AnchorError),
     /// Some directed reference needs interval/endpoint repair or choice.
     UnresolvedReference {
@@ -96,6 +103,12 @@ pub enum DartError {
 impl fmt::Display for DartError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::WrongPiece { held, provided } => {
+                write!(
+                    f,
+                    "dart held Piece {held} differs from current Piece {provided}"
+                )
+            }
             Self::NegativeIntake(value) => {
                 write!(f, "negative dart intake {} µm", value.as_micrometres())
             }
@@ -110,7 +123,14 @@ impl fmt::Display for DartError {
         }
     }
 }
-impl std::error::Error for DartError {}
+impl std::error::Error for DartError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::Apex(issue) => Some(issue),
+            _ => None,
+        }
+    }
+}
 impl Dart {
     /// Validate born-owned geometry and explicit intake domain, without executing a closure.
     /// # Errors
@@ -121,37 +141,36 @@ impl Dart {
         piece: &Piece,
         ledger: &IdentityLedger,
     ) -> Result<Self, DartError> {
-        if let IntakeAmount::Explicit { value, .. } = definition.intake {
-            if value.as_micrometres() < 0 {
-                return Err(DartError::NegativeIntake(value));
-            }
-        }
-        if definition.first_leg.range == definition.second_leg.range {
-            return Err(DartError::IdenticalLegs);
-        }
+        validate_intake_and_legs(&definition)?;
         validate_anchor(definition.apex, piece, ledger).map_err(DartError::Apex)?;
-        for (role, reference) in references(&definition) {
-            let evidence = ledger.resolve_range(reference.range);
-            if !evidence.has_full_coverage()
-                || evidence.start().resolved().is_none()
-                || evidence.end().resolved().is_none()
-            {
-                return Err(DartError::UnresolvedReference {
-                    role,
-                    evidence: Box::new(evidence),
-                });
-            }
-            if !range_is_owned(&evidence, piece, ledger) {
-                return Err(DartError::OutsidePiece {
-                    role,
-                    piece: piece.id(),
-                });
-            }
-        }
+        validate_references(&definition, piece, ledger)?;
         Ok(Self {
             piece: piece.id(),
             definition,
         })
+    }
+    /// Recheck the held owner, current apex and every complete directed leg/direction source.
+    ///
+    /// Historical references follow the current journal without rewriting held content or choosing
+    /// a split endpoint. Intake/operation declarations remain unread and geometry stays deferred.
+    /// Birth still requires a live apex; this query follows a previously born-valid historical apex.
+    ///
+    /// # Errors
+    /// Returns the original owner, intake, current AnchorError or first directed-reference refusal.
+    pub fn validate_current(
+        &self,
+        piece: &Piece,
+        ledger: &IdentityLedger,
+    ) -> Result<(), DartError> {
+        if self.piece != piece.id() {
+            return Err(DartError::WrongPiece {
+                held: self.piece,
+                provided: piece.id(),
+            });
+        }
+        validate_intake_and_legs(&self.definition)?;
+        validate_current_anchor(self.definition.apex, piece, ledger).map_err(DartError::Apex)?;
+        validate_references(&self.definition, piece, ledger)
     }
     /// Stable construction identity.
     #[must_use]
@@ -208,6 +227,42 @@ impl Dart {
             _ => None,
         }
     }
+}
+fn validate_intake_and_legs(definition: &DartDefinition) -> Result<(), DartError> {
+    if let IntakeAmount::Explicit { value, .. } = definition.intake {
+        if value.as_micrometres() < 0 {
+            return Err(DartError::NegativeIntake(value));
+        }
+    }
+    if definition.first_leg.range == definition.second_leg.range {
+        return Err(DartError::IdenticalLegs);
+    }
+    Ok(())
+}
+fn validate_references(
+    definition: &DartDefinition,
+    piece: &Piece,
+    ledger: &IdentityLedger,
+) -> Result<(), DartError> {
+    for (role, reference) in references(definition) {
+        let evidence = ledger.resolve_range(reference.range);
+        if !evidence.has_full_coverage()
+            || evidence.start().resolved().is_none()
+            || evidence.end().resolved().is_none()
+        {
+            return Err(DartError::UnresolvedReference {
+                role,
+                evidence: Box::new(evidence),
+            });
+        }
+        if !range_is_owned(&evidence, piece, ledger) {
+            return Err(DartError::OutsidePiece {
+                role,
+                piece: piece.id(),
+            });
+        }
+    }
+    Ok(())
 }
 fn references(
     definition: &DartDefinition,
