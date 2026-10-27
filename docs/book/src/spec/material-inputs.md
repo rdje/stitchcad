@@ -87,6 +87,9 @@ Material/property-view Debug omits customer text/values; explicit definition/rec
 Design/G4 still owns source/evidence truth and profile resolution. Collection/assignment checks above
 supply no geometry, layout/dual grainlines, shrinkage execution or release readiness.
 
+Factory selection belongs to [instantiation requests](evaluation-requests.md). Material reads resolve
+no logical profile references and prove no selected-label/result identity; G4 retains that validation.
+
 | API token | Meaning here |
 | --- | --- |
 | `Material` | Immutable structurally checked metadata |

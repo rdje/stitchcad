@@ -3,20 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned Materials and actual Piece assignments
+## _(2026-10-27 UTC)_ — selected context stays distinct from owned source presence
 
-0354 MaterialInventory owns original ordered Materials, rejects duplicate ids and reuses every current
-Material validator. Targeted assignment queries inspect one actual Piece/selected Material or original
-unresolved reason. Whole queries validate all Materials, then Piece/Material id collisions, then held
-targets. A fabric label exactly matching an existing Material still cannot replace a missing id.
-Unresolved remains explicit even with one available choice; no object or copy is generated. Assigned
-means metadata presence in this scope, with unknown/derived properties still retained, not readiness.
-Returned views borrow actual objects and hold the canonical context borrow; default Debug hides labels/
-reasons. Public variants are carriers, not certificates. Detached replacements cannot mutate storage.
-Native8/privacy3/strict selected lint/fmt/book/publication pass0. D250132 rows remain baseline, delta0.
-Whole0353 and historical syntax matrix505 compare4 Git spans; current stage/owner table stays live.
-Promotion: existing Material/source/assignment rules. Caps unchanged; G1still6/18; .6.4.2.d.3.4 selected
-context/G4 deferrals next. Full host/Design/physical/transformation/integration/CI remains unverified.
+0355 reviews the existing public boundary across DesignStructure/Material, selected evaluation inputs
+and symbolic Notch refs. Owned data has no implicit factory selection/resolver. EvaluateInstance and
+ResolveProfile retain explicit labels/result ids as caller claims under evaluation snapshot metadata;
+ProfileParameterRef carries no physical quantity. G4-PROFILES.1/.7/.13 still owns existence/type/
+evidence/policy/physical resolution. Even coincident canonical numeric ids cannot settle that role.
+Three exact existing native filters pass1 each/0 failures: logical/factory with both chart families,
+profile snapshot labels and symbolic shared declarations/G4 deferral. No new algorithm or constructor
+mirror tests. Book/publication pass0; D250132 rows remain baseline, delta0. Whole0354 continuity506
+compares3 Git spans. Promotion: profile-binding decision gains selected-context answer/section.
+Caps unchanged; G1still6/18. .6.4.2.d.3 boundary parent closes; actual host/Design composition .d.4 next.
+No full evaluator/profile/physical/integration/CI claim follows this scoped contract review.
+
+[Whole0354 Material assignment lesson](docs/history/stitchcad-devnotes-part506.md) retains exact scope/proofs.
 
 [Whole0353 Material metadata lesson](docs/history/stitchcad-devnotes-part505.md) retains exact scope/proofs.
 

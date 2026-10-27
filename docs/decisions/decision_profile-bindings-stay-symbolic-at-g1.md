@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.3a` and its marks/allowances siblings; ontology §4.4–§4.6, §5.
 
-answers: "does a G1 notch default its geometry?" · "where do notch style and encoding live?" · "can symbolic profile bindings generate physical geometry?" · "how does an allowance retain its width origin and per-profile inclusion policy?"
+answers: "does a G1 notch default its geometry?" · "where do notch style and encoding live?" · "can symbolic profile bindings generate physical geometry?" · "how does an allowance retain its width origin and per-profile inclusion policy?" · "where does selected factory context live?"
 
 ## Context
 
@@ -48,3 +48,16 @@ as a fallback for unknown input. Parameter existence/kind/state remains its owni
 Inclusion is a mandatory logical profile declaration, resolved separately for each target profile;
 G1 exposes possible policy vocabulary but no resolved selection or export geometry. Interval coverage,
 owned scope and unique endpoints are structural checks; actual offsets and error bounds remain G2.
+
+## Owned sources and selected context — G1-SLICE.6.4.2.d.3.4
+
+DesignStructure owns canonical inputs/Pieces/copies/topology, with no selected factory pin. Material
+property reads check actual canonical records but resolve no logical ProfileParameterRef. Even a
+coincident numeric id does not prove profile declaration existence, field role or physical policy.
+
+EvaluateInstance explicitly chooses logical context or carries selected profile/schema/content labels
+and a resolved-result identity; ResolveProfile retains the same evaluation snapshot boundary. These
+are caller claims, checked by later execution/G4 against actual immutable results and provenance.
+Neither exact labels nor retained current Material state supplies profile resolution or export approval.
+G4-PROFILES.1/.7/.13 retains schema/evidence/policy/physical transformation ownership; .d.4 must preserve
+that distinct role while composing actual metadata hosts. This review adds no profile resolver.

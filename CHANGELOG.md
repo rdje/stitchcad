@@ -3,15 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0354 — own Materials and resolve actual Piece assignment targets
+## STITCHCAD-G1-0355 — preserve selected profile context and symbolic G4 boundaries
 
-- Add immutable ordered MaterialInventory with exact current property checks and original typed causes.
-- Targeted/whole assignment views borrow actual objects or original unresolved reasons; missing ids never match labels.
-- Native8/privacy3/strict selected lint/fmt/book/publication pass0; canonical context cannot be replaced while views live.
-- D250132 rows exactly baseline; continuity505 matches4 Git spans; historical matrix/current owner map retained; caps unchanged.
-- G1still6/18; selected-context/G4 boundary next. Assignment presence grants no full Design/physical/readiness/CI proof.
+- Review owned source/request boundaries: factory labels/result ids remain claims; semantic profile refs carry no physical values.
+- Align profile-binding decision/answers and Material guide; no new resolver, runtime behavior or constructor mirror tests.
+- Three exact existing native cases pass1 each/0 failures; book/publication pass0. D250132 rows remain exactly baseline.
+- Whole0354 continuity506 matches3 Git spans; caps unchanged; G1still6/18. Material/profile-boundary parent closes.
+- Source-host/Design composition .6.4.2.d.4 follows; full evaluation, G4 physical resolution and integration/CI remain pending.
 
 # Sealed archive — earlier slices
+
+| [part506](docs/history/stitchcad-devnotes-part506.md) | whole0354 Material collection/assignment task, lesson and ledger | 47 lines, 4192 bytes, sha256:1a7cda6b… |
 
 | [part505](docs/history/stitchcad-devnotes-part505.md) | whole0353 Material and historical syntax milestone matrix | 80 lines, 7550 bytes, sha256:0d22418e… |
 

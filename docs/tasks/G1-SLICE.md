@@ -821,7 +821,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0351 immutable MeasurementInputs; [whole scope/proof](../history/stitchcad-devnotes-part503.md).
 - ID: `G1-SLICE.6.4.2.d.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual material source contracts and explicit profile/context boundary, no fabricated truth.
   Profile physical resolution remains G4 under the canonical symbolic-binding decision; pins select
   instantiation context rather than silently binding Design semantic marks to one factory.
@@ -835,34 +835,34 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0353 canonical Material properties; [whole scope/proof](../history/stitchcad-devnotes-part505.md).
 - ID: `G1-SLICE.6.4.2.d.3.3`
   Status: `done`
-  Goal: immutable MaterialInventory owns ordered unique Materials, reusing actual current property
-  checks. Targeted/whole Piece assignment queries borrow actual Pieces/Materials or the exact explicit
-  unresolved reason; missing ids/Material-Piece collisions refuse, never matching labels or defaulting.
-  Whole queries check every Material first; targeted queries check only selected scope. No readiness
-  token or source/geometry truth; canonical context remains borrowed while views are used.
-  Own native/privacy/lint/book/API/decision scope sync and complete0353 continuity505 before growth,
-  including the complete historical syntax milestone matrix with current owner/status table retained.
-  - [x] REPRODUCE / ISSUE: assigned metadata needs actual collection targets, not display-name peers;
-    material_inventory_contract missing-id/exact-label cases give8/0, rc=0, target/*native-0354.log.
-  - [x] ROOT CAUSE (WHY + WHERE): standalone Material/Piece constructors cannot check each other's
-    inventories. cargo test -p sc-core --test material_inventory_contract gives8 passed/0 failed, rc=0.
-  - [x] FIX: exact ordered private Materials, current property checks and actual assigned/unresolved
-    views; native8/0 confirms typed missing/collision causes, original reason bytes and canonical borrows.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    material_inventory_contract passes8/0, rc=0, including targeted/full scope and same-label refusal.
-  - [x] NO REGRESSION: privacy3/strict selected lint/fmt/book/publication78/113/1451/2377 pass0,
-    target/material-inventory-*-0354.log; D250132 exact baseline rows/delta0, glossary rc=1.
-  - [x] LOCKSTEP: Material chapter/API/status/index/pointer aligned; continuity505 compares4 Git spans0;
-    historical matrix preserved, current stage owners stay live. Caps unchanged; G1still6/18.
-    promotion: declined (existing Material/source/assignment rules). Commit0354; .3.4 context boundary next.
-    Presence is no readiness token; full host/Design/physical/transformation/integration/CI remains later.
+  Goal:0354 MaterialInventory/assignment queries; [whole scope/proof](../history/stitchcad-devnotes-part506.md).
 - ID: `G1-SLICE.6.4.2.d.3.4`
-  Status: `pending`
-  Goal: selected-host/profile context and symbolic G4 deferrals remain explicit; no Factory Profile
-  lookup, physical value inference or implicit Design pin from an instantiation request.
+  Status: `done`
+  Goal: scoped existing-contract acceptance: selected profile/result identities remain evaluation/
+  instantiation request claims; DesignStructure/Material own no implicit factory pin or resolver.
+  Preserve symbolic ProfileParameterRef and visible G4 existence/type/evidence/policy deferrals.
+  Own three focused existing native cases, source/decision/book scope alignment and whole0354
+  continuity506. No new algorithm/test scaffolding, lookup or full profile/evaluator verification.
+  - [x] REPRODUCE / ISSUE: Material/source presence must not become profile resolution. Source review
+    checks DesignStructureDefinition's6 fields, Material target methods and explicit evaluation inputs;
+    existing symbolic Notch case passes1/0, rc=0, target/profile-context-symbolic-0355.log.
+  - [x] ROOT CAUSE (WHY + WHERE): request pins/result ids are claims; logical refs carry no values.
+    Exact regeneration/profile-resolution filters each pass1/0, rc=0, target/profile-context-*-0355.log.
+  - [x] FIX: decision/book state selected-context ownership and G4 deferrals explicitly; unchanged
+    runtime passes3 selected cases/0 failures, rc=0. No new resolver or mirrored constructor tests.
+  - [x] ADDRESSED: cargo test -p sc-core --test command_evaluation_contract with the two exact
+    selection/resolution filters and notch_contract symbolic exact filter each give1 passed/0 failed0.
+  - [x] NO REGRESSION: book/publication78/113/1452/2378 pass0; D250132 exact baseline rows/delta0,
+    full glossary rc=1. Existing Rust behavior unchanged; no broad CI/platform verdict inferred.
+  - [x] LOCKSTEP: source-role decision/answers/book/status/index/pointer aligned; continuity506
+    compares3 exact Git spans0. Caps unchanged; G1still6/18; Material/profile-boundary parent closes.
+    promotion: promoted to docs/decisions/decision_profile-bindings-stay-symbolic-at-g1.md.
+    Commit0355; .d.4 source-host/Design composition next; G4 physical resolution remains its named owner.
 - ID: `G1-SLICE.6.4.2.d.4`
   Status: `pending`
   Goal: complete source-host/identity composition and actual current metadata binding acceptance.
+  Keep profile-role deferrals distinct from canonical numeric presence, including coincident ids;
+  factory label/result claims cannot authorize physical field resolution.
 - ID: `G1-SLICE.6.4.3`
   Status: `pending`
   Goal: actual current point and whole-range resolution/repair readiness, including lost interiors.
