@@ -3,28 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — scoped construction component acceptance
+## _(2026-10-27 UTC)_ — complete garment ownership over one actual root
 
-0405 closes .6.4.5.4 after unchanged-code acceptance: Dart15/fold12/Gather15/grain12/allowance11/
-ConstructionInventory9 =74 native source contracts, actual higher-host declarations13 =87 total;
-8 directly affected rustdoc filters pass13 privacy/lifetime contracts, matching source census13.
-All rc0; Git crates diff empty0. Book/size0. Source/declaration scope is verified; whole Design/
-global garment/runtime/application/numeric-physical/release proof remains owned by .5/.6 and later
-integration gates. Promotion declined: confirms existing structural/host decisions, no new fact.
-Full PNT proceeds to coupled garment ownership/current joins, decomposed before implementation.
+0406 owns exact DesignSewing/Pocket/notion/Closure/layer/Hem/construction components without another
+canonical inventory. Deterministic global positions include every ClosureInstance and retired
+creating operation; Piece/copy/parameter/Profile/operation references stay uses. Global collisions
+precede whole-current-root input validation; failures retain original locations/concrete causes.
+Shared getters/count-only Debug preserve actual objects and privacy. Held damage/empty/modelled
+Lining content remains inspectable without reconstructing born objects or granting source readiness.
+Native5 covers all represented owners, cross-family aliases, references, retired creators, exact
+pointers and combined host-drift/collision priority. Privacy2/strict lint/fmt0; fixture owned EdgeRef
+iteration corrected after compiler refusal. Whole construction subtree/0404–0405 scopes555 retain4
+exact Git spans with all12 node ids/children; retention/book/publication/size0. Existing book facts
+preserved with repetition tightened. Promotion: Design host decision. Current sources .b, complete
+declarations .c, execution envelope .d and broader Design/runtime/physical/release proof remain owned.
 
-## _(2026-10-27 UTC)_ — joined actual Gather declarations
-
-0404 validates complete current sewing/root/landmark/graph/amount scope, then all supplied
-construction source families before borrowing authored Gathers, even empty scope. Each view retains
-actual Gather/position, original signed span ease/selected side, existing DesignSewingAmount and
-single canonical owner. Logical closing intent stays borrowed; no value/state/allocation/negation
-copy or partial result is created. Native13 proves actual pointers, signed sides/zero, Derived/
-Profile origins, later same-Piece copy retarget, unused sources and controlled host drift with exact
-original error chains. Lifetime1/strict lint/fmt0; fixture uses public a/b fields after private helper
-compile refusal. Whole0403/D274–D275 scopes554 retain4 exact Git spans; retention/book/publication/
-size0. Original book facts preserved with repetition tightened. Promotion: Design host decision.
-All declaration children .e complete; component .f/global joins .5/full integration/release remain.
+[Whole0404/0405 construction lessons](docs/history/stitchcad-devnotes-part555.md) retain joined Gather and scoped87-native/13-lifetime acceptance.
 
 [Whole0403 grain/allowance lesson](docs/history/stitchcad-devnotes-part554.md) retains actual roles, D274/D275 and native red/green proofs.
 

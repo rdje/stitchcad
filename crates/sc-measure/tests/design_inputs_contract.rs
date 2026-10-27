@@ -2124,7 +2124,7 @@ fn layer_offset_declarations_do_not_certify_missing_current_served_pieces_or_inf
 }
 
 #[test]
-fn construction_intake_grain_allowance_and_layer_offset_recheck_whole_root_before_empty_scope() {
+fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
     use core::cell::Cell;
     use sc_core::{
         design::{DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost},
@@ -2132,6 +2132,7 @@ fn construction_intake_grain_allowance_and_layer_offset_recheck_whole_root_befor
         value::LengthDeclaration,
     };
     // A controlled port-contract violation exercises the public core's current-snapshot refusal.
+    #[derive(Clone)]
     struct ChangingHost {
         actual: DesignSources,
         changed: Cell<bool>,
@@ -2214,6 +2215,25 @@ fn construction_intake_grain_allowance_and_layer_offset_recheck_whole_root_befor
         landmarks: vec![],
     })
     .expect("actual current sewing/root owner");
+    let garment = sc_core::design::DesignGarment::new(sc_core::design::DesignGarmentDefinition {
+        sewing,
+        pockets: sc_core::ontology::PocketInventory::new(vec![]).expect("empty pockets"),
+        notions: sc_core::ontology::NotionPlacementInventory::new(vec![]).expect("empty notions"),
+        closures: sc_core::ontology::ClosureInventory::new(vec![]).expect("empty closures"),
+        layers: LayerInventory::new(vec![], vec![], vec![]).expect("empty layers"),
+        hems: sc_core::ontology::HemInventory::new(vec![]).expect("empty Hems"),
+        constructions: sc_core::ontology::ConstructionInventory::new(
+            vec![],
+            vec![],
+            vec![],
+            vec![],
+            vec![],
+            vec![],
+        )
+        .expect("empty constructions"),
+    })
+    .expect("whole immutable owner before controlled drift");
+    let sewing = garment.sewing();
     let state = sewing.inputs();
     let layers = LayerInventory::new(vec![], vec![], vec![]).expect("explicit empty layers");
     assert!(state
@@ -2242,6 +2262,31 @@ fn construction_intake_grain_allowance_and_layer_offset_recheck_whole_root_befor
         .expect("stable whole context")
         .is_empty());
     state.sources().host().changed.set(true);
+    let admission = sc_core::design::DesignGarment::new(garment.definition().clone())
+        .expect_err("current whole root admission");
+    assert!(
+        matches!(&admission, sc_core::design::DesignGarmentError::Inputs(issue)
+        if matches!(issue.as_ref(), DesignInputsError::Sources(source)
+            if matches!(source.as_ref(), DesignMetadataError::ChangedEntities)))
+    );
+    assert!(std::error::Error::source(&admission)
+        .expect("original current inputs cause")
+        .is::<DesignInputsError<DesignSourcesError>>());
+    let mut collision = garment.definition().clone();
+    collision.pockets = garment_ownership::pocket_with_id(id(5000));
+    assert_eq!(
+        sc_core::design::DesignGarment::new(collision)
+            .expect_err("ownership precedes current root drift"),
+        sc_core::design::DesignGarmentError::DuplicateIdentity {
+            identity: id(5000),
+            first: sc_core::design::DesignGarmentPosition::Sewing(
+                sc_core::design::DesignSewingPosition::Inputs(DesignInputsPosition::Structure(
+                    DesignStructurePosition::Design
+                ))
+            ),
+            duplicate: sc_core::design::DesignGarmentPosition::Pocket { index: 0 },
+        }
+    );
     let gather_error = sewing
         .gather_declarations(&constructions)
         .expect_err("whole root before empty Gather");
@@ -2280,3 +2325,6 @@ mod construction_grain_allowance_declarations;
 
 #[path = "support/construction_gather_declarations.rs"]
 mod construction_gather_declarations;
+
+#[path = "support/garment_ownership.rs"]
+mod garment_ownership;

@@ -36,6 +36,7 @@ impl DesignSizeSetReference {
 
 mod closures;
 mod constructions;
+mod garment;
 mod gathers;
 mod hems;
 mod host;
@@ -52,6 +53,9 @@ pub use closures::{
 pub use constructions::{
     DesignConstructionDeclaration, DesignConstructionDeclarationError,
     DesignConstructionDeclarationRole, DesignConstructionDeclarationSource,
+};
+pub use garment::{
+    DesignGarment, DesignGarmentDefinition, DesignGarmentError, DesignGarmentPosition,
 };
 pub use gathers::{DesignGatherDeclaration, DesignGatherDeclarationError};
 pub use hems::{

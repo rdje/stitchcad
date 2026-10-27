@@ -2,22 +2,23 @@
 
 Read CLAUDE.md/README.md and doctrine pointers. Derive HEAD with git log --oneline -1.
 
--0405 .6.4.5.4.f/.4 complete, unchanged Rust: source74 + actual higher-host declarations13 =87
- native checks pass0;8 affected rustdoc modules/13 privacy-lifetime contracts pass0, source census13
- agrees. Book/size0. Scoped structural source/declaration component verified; full Design/runtime/
- application/numeric-physical/release proof remains open. Prior0404 joined actual Gather complete.
-- Next .6.4.5.5: decompose coupled global garment ownership/current declarations before code.
- Read DesignSewing, all6 garment inventory public getters/identity locations/current validators,
- relevant mdBook/roadmap and host decisions. Preserve held damage/draft inspection at admission;
- complete global owned id census before current sources/declarations, no logical-id coercion.
- Candidate immutable definition owns DesignSewing + PocketInventory/NotionPlacementInventory/
- ClosureInventory/LayerInventory/HemInventory/ConstructionInventory. Include ClosureInstance ids;
- uses remain uses. Distinct family/authored positions and original nested typed causes required.
- Current source validation and requested execution envelope remain separate (Lining/Fly deferrals).
-- Then .6.4.5.6 complete garment component acceptance and .6.4.6 coupled aggregate/privacy acceptance.
- Full PNT continues; commit each completed leaf. No early push; derive cadence.
-- Whole0403/D274–D275 proof554 exact4 spans; old history/bytes retained. D273 cause chain fixed;
- D274 per-run checker scratch and D275 actual stale-token probe: native overlap2/self17/probes6 pass0.
- Retention generation feature0396 complete; finite8 groups/4M local caps. No old source-bound rollback
- over later records/HEAD. Re-derive archive pressure by verify-retention.
-- G1still6/18; D250132 after .6.9; D154 open. Cleanup due2026-10-27 13:40UTC.
+-0406 .6.4.5.5.a complete: DesignGarment owns exact DesignSewing +6 garment inventories over
+ one actual canonical owner. Global authored/family census includes ClosureInstances/retired creators;
+ references remain uses. Collisions precede current whole-root Inputs; original positions/causes stay.
+ Native5/privacy2/strict lint/fmt/book/publication pass0. Held damage/empty/modelled Lining remains
+ inspectable without source/readiness proof. All shared getter pointers exact; Debug counts only.
+- Whole construction subtree/0404–0405 lessons/ledger/retirement555 retain4 exact Git spans;
+ all12 original node ids/children preserved. Book existing facts retained with repetition tightened.
+- Next .6.4.5.5.b complete current garment sources/targets/assignments. Read all actual inventory
+ validators and choose original cause order: ownership/current inputs first, complete sewing scope,
+ Pockets, notions/Closures, layers/Materials, Hems, constructions. Do not skip empty/unused families.
+ Reuse original errors through typed DesignGarmentError wrappers; no repair/retarget/cache/default.
+ Preserve modelled Lining/Fly inspection; requested execution envelope .d remains separate.
+- .5.c complete actual declaration views after whole current root/garment validation (reuse adapters,
+ no partial views); .5.d original envelope. .6 component acceptance then .6.4.6 aggregate/privacy.
+ Full Design/bus/runtime/application/physical/release proof remains open. Full PNT continues;
+ commit each leaf. No early push; derive cadence. G1still6/18; D250132 after .6.9; D154 open.
+- D273 cause chain fixed; D274 isolated checker scratch/D275 actual stale probe: overlap2/self17/
+ probes6 pass0 in0403. Retention generation feature0396 complete, finite8 groups/4M local caps.
+ No old source-bound rollback over later records/HEAD. Re-derive pressure by verify-retention.
+- Cleanup due2026-10-27 13:40UTC; finish current leaf clean, then own/commit due cleanup when reached.

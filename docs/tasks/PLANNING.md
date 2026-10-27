@@ -1179,11 +1179,12 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 [Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
-## D271–D275 — current causes, derived census and native size controls
-[Whole Dart/census0397](../history/stitchcad-devnotes-part547.md); [whole D273/current0401](../history/stitchcad-devnotes-part551.md);
-[whole D274/D275 red/green0403](../history/stitchcad-devnotes-part554.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part554.md:4 spans
-  rc=0; complete0403 scopes retained before retirement.
-- [x] ADDRESSED: same rc=0; whole0403 task/lesson/ledger/D274–D275/retirement retained.
-- [x] NO REGRESSION: construction native13/lifetime1/strict affected lint/fmt/book/publication/size/
-  retention rc=0; complete component acceptance .4.f, full integration later.
+## D271–D275 — current causes, census and native size controls
+[Whole Dart/census0397](../history/stitchcad-devnotes-part547.md); [D273/current0401](../history/stitchcad-devnotes-part551.md);
+[D274/D275 red/green0403](../history/stitchcad-devnotes-part554.md); [whole retirement0406](../history/stitchcad-devnotes-part555.md).
+
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part555.md:4 exact
+  Git spans rc=0; completed construction subtree/0404–0405 scopes retained before live retirement.
+- [x] ADDRESSED: same rc=0; all12 original node ids/children retained; complete lessons/ledger/proofs saved.
+- [x] NO REGRESSION: garment native5/privacy2/strict affected lint/fmt/book/publication/size/retention
+  rc=0; current garment sources/declarations/envelope remain .5.b/.c/.d, full integration later.

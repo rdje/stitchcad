@@ -6,16 +6,15 @@ follows; admission selects no table, SizeSet or Factory Profile.
 
 ## Admission and current reads
 
-`DesignMetadata::new(host, &canonical)` checks the host's stable census, duplicate metadata ids and
-collisions with either canonical declaration family, then calls the host's actual current validator.
-An explicitly empty host is legal. Referenced input/evidence ids are uses, not metadata owners.
-Family and authored positions are retained in collision witnesses; records are never deduplicated.
+`DesignMetadata::new(host, &canonical)` checks stable census, duplicate metadata ids and both
+canonical families' collisions, then the host's actual current validator. Empty hosts are legal;
+input/evidence references stay uses. Collision witnesses retain family/authored positions without
+deduplicating records.
 
-`measurement_declaration(measurement, &canonical)` repeats whole-scope validation, requires actual
-Measurement metadata, then resolves its explicit binding through the host. The returned object must
-be the actual dedicated canonical length in this supplied inventory. A detached equal copy refuses.
-A canonical id cannot invent metadata or bindings. Unknown/Derived stays unchanged. Replacement
-inputs require current validation. The returned borrow retains host and canonical context.
+`measurement_declaration(measurement, &canonical)` rechecks whole scope, requires actual Measurement
+metadata and resolves its explicit host binding to the supplied inventory's actual dedicated Length.
+Detached equal copies/bare canonical ids cannot supply metadata/bindings. Unknown/Derived stays
+unchanged; replacement inputs are rechecked. The borrow retains host/canonical context.
 
 ```rust
 use sc_core::{
@@ -34,10 +33,9 @@ fn inspect<H: DesignMetadataHost>(host: H, canonical: &CanonicalInputs, measurem
 }
 ```
 
-The host must supply an immutable complete snapshot and actual semantic validation. Core checks
-observable identities/object membership; it cannot prove arbitrary provider binding semantics.
-There is no stored self-reference or copied value/state cache. host() and entities() are shared views.
-Default Debug exposes only the entity count.
+Hosts supply complete immutable snapshots/semantic validation. Core checks observable ids/object
+membership, not arbitrary provider semantics. No self-reference/value/state cache is stored;
+host()/entities() are shared, Debug exposes entity count only.
 
 ## Public vocabulary and boundary
 
@@ -56,11 +54,10 @@ Default Debug exposes only the entity count.
 | `MissingMeasurement`, `WrongEntityKind` | Absent metadata or an actual different role |
 | `NoncanonicalDeclaration` | Returned declaration is detached from the supplied canonical inventory |
 
-Other Design identities, SizeSet metadata, formula source composition and whole readiness retain
-separate owners. Profile ids, labels and result claims cannot resolve physical fields, including when
-an id coincides with a numeric declaration; [G4 profile boundaries](material-inputs.md) still apply.
-Focused native and privacy checks cover this port; full Design execution and integration remain
-unverified. Run the focused contract through the local producer profile:
+Other Design ids, SizeSets, formula composition and readiness have separate owners. Profile ids/
+labels/result claims resolve no physical field despite numeric-id matches; [G4 boundaries](material-inputs.md)
+apply. Native/privacy checks cover this port; full Design execution/integration remains unverified.
+Use the local producer profile:
 
 ```bash
 cargo test -p sc-core --test design_metadata_contract
@@ -89,22 +86,19 @@ cargo test -p sc-measure --test measurement_inputs_contract
 
 ## Owned common SizeSet metadata
 
-SizeSetMetadata owns exact membership, axes/member points, required dimensions/available breaks
-and an explicit Design table id. Chart-family owners below reuse this common source component;
-full Design composition follows. Canonical values and measurement/Ease metadata stay
-in their original supplied owners. Empty break inventories can be valid drafts, without coverage.
+SizeSetMetadata owns membership, axes/member points, required dimensions/available breaks and Design
+table id. Chart families reuse it; values/measurement/Ease metadata keep their original owners.
+Empty break drafts do not establish coverage; full Design composition remains separate.
 
-new(definition, &canonical, &inputs) checks all owned ids across canonical/measurement/Ease records,
-then the set, members, each axis/its values and breaks in authored order. Even an unselected table
-cannot reuse a member/axis/value/break id. Source references are uses, not extra declarations.
-It then invokes actual current input/context/axes/break validators and requires the exact Design
-table. Equal-content tables cannot replace a missing id. Replacement canonical inputs are rechecked.
+new(definition, &canonical, &inputs) checks canonical/measurement/Ease ids, then authored set/member/
+axis/value/break ids, including unselected tables. References stay uses. Actual current input/context/
+axes/break validators require the exact Design table; equal-content peers cannot replace missing ids.
+Replacement canonical inputs are rechecked.
 
-with_context validates that whole scope before visiting a temporary SizeBreakContext. The callback
-cannot retain the local contexts; owned results may be returned. No self-reference or value/state
-cache is stored. Original canonical declarations are borrowed, including Unknown/Derived. Failures
-skip the callback and preserve the typed cause. Break declaration error sources expose the concrete
-SizeBreakError, including MissingDelta, rather than its allocation wrapper (D255 correction).
+with_context validates whole scope before a temporary SizeBreakContext callback. Only owned results
+may escape; no self-reference/value/state cache is stored. Original Unknown/Derived declarations stay
+borrowed. Failure skips the callback with original cause; break errors expose concrete SizeBreakError
+(including MissingDelta), not its allocation wrapper (D255).
 
 | API or variant | Meaning |
 | --- | --- |
@@ -123,14 +117,13 @@ cargo test -p sc-measure --test size_set_metadata_contract
 
 ## Owned garment SizeSet sources
 
-GarmentSizeSet owns common metadata, all observations and the chart. Construction checks source ids,
-actual common sources, every observation and the original composite. A missing unused observation
-table refuses. Design references this external object; no values/contexts are copied or stored.
+GarmentSizeSet owns common metadata, observations and chart. Admission checks source ids/common
+sources/all observations/composite; missing unused observation tables refuse. Design references this
+external object without copying values or storing contexts.
 
-with_inputs revalidates before visiting temporary GarmentSizeSetInputs. Readonly chart_context()/
-break_context() expose actual shared contexts. Inside the callback, the chart's declaration(member,
-pom, view.chart_context()) and a break's delta(view.break_context()) borrow original canonical data.
-Owned results may return; local views/contexts cannot escape.
+with_inputs revalidates before temporary GarmentSizeSetInputs. Shared chart_context()/break_context()
+supply chart.declaration(member, pom, view.chart_context()) and break.delta(view.break_context()) with
+original canonical data. Only owned results escape the callback.
 
 | API or variant | Meaning |
 | --- | --- |
@@ -138,10 +131,9 @@ Owned results may return; local views/contexts cannot escape.
 | `GarmentSizeSetPosition` | Common, Observation or Chart original ownership witness |
 | `GarmentSizeSetError` | DuplicateIdentity, Metadata, Context, Observation, CollectionContext or Inputs cause |
 
-Partial chart/break drafts remain valid. validate_inputs_for requires the original structural
-coverage for Regeneration or GradeRules; it computes no geometry or unknown quantity. reference()
-retains the actual set/revision, identities() lists owned ids, and Debug reveals observation count.
-MTM and unified source hosts have separate contracts below; full Design/execution remain later owners.
+Partial chart/break drafts remain valid; validate_inputs_for requires Regeneration/GradeRules
+coverage without computing geometry/unknown quantities. reference() retains set/revision, identities()
+owned ids, Debug observation count. MTM/unified hosts follow; full Design/execution remains later.
 
 ```bash
 cargo test -p sc-measure --test garment_size_set_contract
@@ -178,9 +170,9 @@ cargo test -p sc-measure --test mtm_size_set_contract
 SizeSet owns the explicit Garment/Mtm family and lends SizeSetInputs for current queries.
 Singleton garment charts retain that provenance; errors retain actual family causes.
 
-SizeSetInventory owns authored sets in order. It checks all shared and complete set ids before
-current validators. Distinct sets cannot reuse owned ids; shared canonical references remain uses.
-All sets, including unselected ones, validate. Empty explicit inventories are legal.
+SizeSetInventory owns authored order and checks shared/complete set ids before current validators.
+Distinct sets cannot reuse owned ids; shared canonical refs stay uses. All sets, including unselected,
+validate; explicit empty inventories are legal.
 
 size_set(id) inspects a shared source. validate_reference(expected, &canonical, &inputs) revalidates
 all sets and borrows the exact id/revision target, retaining current input borrows. Equal labels or
@@ -245,20 +237,18 @@ cargo test -p sc-measure --test design_sources_contract
 
 ## Owned core input composition
 
-DesignInputs owns the implemented structure, parameters, exact recipe document, Materials and checked
-metadata host. Its structure is the single CanonicalInputs owner. Provided source references are
-checked below; selected input names are checked explicitly. Sewing/garment state and readiness remain separate.
+DesignInputs owns structure, parameters, exact recipe document, Materials and checked metadata host;
+structure alone owns CanonicalInputs. Provided refs are checked below, selected names explicitly.
+Sewing/garment currentness and readiness remain separate.
 
-Construction checks identities in order: structure (Design, canonical records, Pieces, copies,
-operations), parameters, Materials, then higher source metadata. Even a retired creating operation
-cannot share an id with higher metadata. Referenced evidence/formula/material ids are uses, not new
-owners. DuplicateIdentity retains both actual original DesignInputsPosition witnesses.
+Ownership visits structure (Design/canonical/Pieces/copies/operations), parameters, Materials, then
+higher metadata. Retired creators still own ids; evidence/formula/material refs remain uses.
+DuplicateIdentity retains both original DesignInputsPositions.
 
-It then rechecks actual parameter targets, whole Material properties/Piece assignments, and source
-currentness against its own canonical records. Prior standalone validation cannot substitute for
-that context. Unresolved assignments and uncertain states remain intact. No Piece is reconstructed
-against an edited ledger, so held repair state remains inspectable. Recipe ownership preserves
-original text/canonical syntax; unbound names still require the later binding/checking phase.
+Then actual parameter targets, all Material properties/Piece assignments and sources are rechecked
+against this canonical owner; past standalone success cannot substitute. Unresolved assignments/
+uncertainty and held Piece repairs survive without reconstruction against edited history. Recipe
+text/canonical syntax stays exact; unbound names need later binding/checking.
 
 | API or variant | Meaning |
 | --- | --- |
@@ -266,9 +256,9 @@ original text/canonical syntax; unbound names still require the later binding/ch
 | `DesignInputsPosition` | Structure, Parameter, Material or Source original ownership position |
 | `DesignInputsError` | DuplicateIdentity or original Parameters, Materials, Sources, References typed cause |
 
-Component getters are shared. identities() lists actual owned ids; validate_current() repeats the scoped
-checks. id()/revision() retain the actual structure's identity/counter without advancing it. Debug
-exposes no customer content. Combining existing components requires no borrowed context storage:
+Shared getters/identities() expose actual ownership; validate_current() repeats scoped checks.
+id()/revision() preserve the structure's identity/counter. Debug omits customer content; composition
+stores no borrowed context:
 
 ```rust
 use sc_core::{design::{DesignInputs, DesignInputsDefinition, DesignInputsError,
@@ -472,3 +462,28 @@ proof remain separate. Missing exact span metadata refuses instead of substituti
 | --- | --- |
 | `DesignGatherDeclaration` | Actual Gather/span/side/amount/closing intent over borrowed current contexts |
 | `DesignGatherDeclarationError` | Original Sewing/Constructions cause or missing exact span amount |
+
+## Private garment ownership
+
+```rust,ignore
+let garment = DesignGarment::new(DesignGarmentDefinition {
+    sewing, pockets, notions, closures, layers, hems, constructions,
+})?;
+```
+
+This owns exact DesignSewing and Pocket/NotionPlacement/Closure/Layer/Hem/Construction inventories.
+Shared getters preserve actual immutable objects/sole canonical owner. identities() visits sewing,
+Pockets, notions, Closures/instances, layers, Hems, constructions in authored/family order. Closure instances and retired root creators
+own ids; Piece/copy/parameter/Profile/operation uses never create owners. DuplicateIdentity returns
+first/repeated locations before current root-input validation; Inputs retains its original error chain.
+
+Admission retains empty drafts, damage and modelled Lining/Fly without rebuilding born objects.
+Debug shows counts. Ownership/current inputs prove no garment source/declaration joins, execution
+scope, geometry, resolved physical values, full completeness or release approval.
+
+| API token | Meaning |
+| --- | --- |
+| `DesignGarmentDefinition` | Exact seven-component owned input |
+| `DesignGarment` | Private garment owner over one sewing/input root |
+| `DesignGarmentPosition` | Original sewing/family/nested-instance ownership location |
+| `DesignGarmentError` | Duplicate ownership or original current Inputs cause |

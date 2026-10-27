@@ -13,6 +13,8 @@ answers: "do grain and allowance declarations preserve Angle versus Length kinds
 
 answers: "how do Gather declaration views retain original signed span ease and current whole contexts?"
 
+answers: "how does garment admission preserve exact families, nested owned identities and held source damage?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -98,3 +100,14 @@ field. One canonical owner remains; no distribution/value/state or negated intak
 copy retargeting and late/unused failures retain original typed causes without partial views. Shared
 lifetimes hold both owners; Debug exposes side only. Operation checks/global garment ids, resolved
 intake/conservation and physical/release proof remain later obligations.
+
+## Exact garment ownership — G1-SLICE.6.4.5.5.a
+
+DesignGarment owns the actual DesignSewing plus six garment inventories, with one canonical owner.
+Its deterministic census visits sewing, Pockets, notion placements, Closure/instances, distinct layers,
+Hems and constructions in original family/authored order. Nested instances and retired creators
+remain owned; referenced ids stay uses. Global collision witnesses precede current whole-root input
+validation and retain original locations/typed causes. Shared getters and count-only Debug preserve
+privacy/immutability. Admission retains held damage/empty/modelled content without reconstructing
+born objects. Complete current garment sources/declarations, execution envelope, physical values and
+release readiness remain separate obligations under .5.b/.c/.d and later gates.

@@ -3,18 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0405 — close scoped construction component acceptance
+## STITCHCAD-G1-0406 — own exact garment families over the actual root
 
-- Unchanged Rust:74 source and13 higher-host declaration contracts pass0;87 native total.
-- Eight affected rustdoc filters pass13 privacy/lifetime checks; independent source census13 agrees.
-- Book reflects scoped acceptance; global garment/Design/runtime/physical/release proof remains pending.
-
-## STITCHCAD-G1-0404 — borrow joined actual Gather declarations
-
-- Validate whole current sewing and supplied construction contexts before original Gather/span/side/amount/closing views.
-- Reuse actual amount adapter/canonical owner; preserve signed and logical origins without value/allocation copies.
-- Native13/lifetime1/strict lint/fmt pass0; late/unused failures retain exact causes and no partial views.
-- Book API/example and whole0403/D274–D275 proof554 synchronized; full component/global/release proof remains separate.
+- Preserve sole sewing/canonical owner and all garment objects; global census includes ClosureInstances/retired creators.
+- Reject original global collisions before current inputs; references remain uses and held repairs stay inspectable.
+- Native5/privacy2/strict lint/fmt pass0; current garment sources/declarations/envelope remain separate work.
+- Book ownership example and whole construction subtree/0404–0405 proof555 synchronized, all child links retained.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -37,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part555](docs/history/stitchcad-devnotes-part555.md) | whole construction subtree/0404–0405 lessons/ledger/retirement | 109 lines, 7932 bytes, sha256:54f514ab… |
 | [part554](docs/history/stitchcad-devnotes-part554.md) | whole0403 grain/allowance/lesson/ledger/D274–D275 | 69 lines, 5869 bytes, sha256:5be72d70… |
 | [part553](docs/history/stitchcad-devnotes-part553.md) | whole completed units/measurement/SizeSet parents | 43 lines, 2921 bytes, sha256:ee1c7a84… |
 | [part552](docs/history/stitchcad-devnotes-part552.md) | whole0402 intake/lesson/ledger/retirement | 44 lines, 3590 bytes, sha256:ac0cbc9e… |

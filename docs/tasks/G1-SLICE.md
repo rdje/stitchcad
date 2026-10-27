@@ -860,72 +860,76 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0396 scoped archive feature gate; [whole proof](../history/stitchcad-devnotes-part546.md).
 - ID: `G1-SLICE.6.4.5.4`
   Status: `done`
-  Goal: actual Dart/fold/Gather/grain/allowance references and known typed declarations.
-  Children .a current Dart/Tuck/Pleat; .b Gather joins; .c grain/allowance; .d owned six-family scope;
-  .e actual intake/angle/width/profile/operation declarations (split as needed); .f focused acceptance.
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
+  Children .a Dart/folds; .b Gather; .c grain/allowance; .d ownership/current; .e declarations; .f acceptance.
 - ID: `G1-SLICE.6.4.5.4.a`
   Status: `done`
-  Goal:0397 current Dart/fold sources; [whole proof](../history/stitchcad-devnotes-part547.md).
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.4.b`
   Status: `done`
-  Goal:0398 current Gather joins/borrowed intake; [whole proof](../history/stitchcad-devnotes-part548.md).
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.4.c`
   Status: `done`
-  Goal:0399 current grain/allowance sources; [whole proof](../history/stitchcad-devnotes-part549.md).
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.4.d`
   Status: `done`
-  Goal:0400/0401 ownership/current scope; [whole current subtree](../history/stitchcad-devnotes-part551.md).
-  Children .1 ownership; .2 complete current sources/causes.
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
+  Children .1 ownership; .2 current scope.
 - ID: `G1-SLICE.6.4.5.4.d.1`
   Status: `done`
-  Goal:0400 exact ownership; [whole proof](../history/stitchcad-devnotes-part550.md).
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.4.d.2`
   Status: `done`
-  Goal:0401 complete current context/D273; [whole proof](../history/stitchcad-devnotes-part551.md).
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.4.e`
   Status: `done`
-  Goal: actual typed declarations/current root; no role/id coercion.
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
   Children .1 intake/closing; .2 grain/allowance; .3 joined Gather.
 - ID: `G1-SLICE.6.4.5.4.e.1`
   Status: `done`
-  Goal:0402 actual intake/closing declarations; [whole proof](../history/stitchcad-devnotes-part552.md).
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.4.e.2`
   Status: `done`
-  Goal:0403 typed grain/allowance/D274–D275; [whole proof](../history/stitchcad-devnotes-part554.md).
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.4.e.3`
   Status: `done`
-  Goal:0404 original signed Gather span/side/amount/closing views over complete current contexts.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract construction_:
-    13 passed rc=0; later same-Piece copy retarget refuses after healthy earlier Gather, no prefix.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:Gather intake belongs to the actual span;
-    reuse existing DesignSewingAmount after whole sewing and complete supplied construction preflights.
-  - [x] FIX: same native13 rc=0; actual Gather/position/side/DeclaredEase/amount adapter/canonical
-    owner and logical closing field borrowed, without copied allocation/value/state or numeric coercion.
-  - [x] ADDRESSED: same native13 rc=0; positive-A/negative-B/zero/formula/Profile exact pointers,
-    unchanged Derived state and unused landmark/amount/construction plus host drift before empty scope;
-    wrappers preserve concrete Sewing/Construction/Gather causes and no partial views.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::gathers:1 compile-fail rc=0;
-    cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings and affected fmt rc=0.
-    Fixture private side helper replaced with published a/b fields; no API visibility changed.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part554.md:4 spans rc=0;
-    retention/book/publication/size rc=0; original book facts retained. Promotion: Design host decision.
-    Component acceptance .f/global garment joins .5/full integration and release remain owned.
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.4.f`
   Status: `done`
-  Goal:0405 scoped construction source/declaration component acceptance, before global garment .5.
-  - [x] ROOT CAUSE: cargo test -p sc-core --test dart_contract --test fold_contract --test gather_contract
-    --test grain_contract --test allowance_contract --test construction_inventory_contract:74 passed rc=0;
-    implementation complete, reverify original/current source contracts before coupled global work.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract construction_:13 passed rc=0;
-    source74 + actual higher-host declarations13 =87 native checks; no whole Design/runtime claim.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc FILTER for ontology::{dart,fold,gather,grain,
-    allowance,construction_inventory}, design::{constructions,gathers}:8 modules/13 privacy-lifetime
-    checks rc=0; compile-fail source census13 agrees; git diff --exit-code -- crates rc=0.
-    Book/size rc=0. Promotion declined: confirms existing source/host boundaries, no new policy/fact.
-    Global garment joins .5, component .6/aggregate .6.4.6 and full integration/CI remain owned.
+  Goal: completed construction scope; [whole subtree](../history/stitchcad-devnotes-part555.md).
 - ID: `G1-SLICE.6.4.5.5`
+  Status: `in_progress`
+  Goal: coupled garment ownership/current declarations over one canonical root.
+  Children .a immutable admission/global owned ids; .b current sources; .c complete declarations;
+  .d requested execution envelope. Final scoped acceptance .6 before aggregate review .6.4.6.
+- ID: `G1-SLICE.6.4.5.5.a`
+  Status: `done`
+  Goal:0406 exact garment/root ownership and complete original global identity positions.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_ownership:
+    5 passed rc=0; independently valid garment families/instances aliasing actual Design id refuse.
+  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:component-local namespaces cannot guarantee
+    global ownership; enumerate actual sewing/root then all garment owners, never referenced uses.
+  - [x] FIX: same native5 rc=0; private seven-component owner with original shared getters/count Debug;
+    deterministic Sewing/Pocket/notion/Closure-instance/layer/Hem/construction census before root inputs.
+  - [x] ADDRESSED: same native5 rc=0; exact pointers/order/locations, all garment families and nested
+    instances, cross-family aliases, retired creator ownership, references as uses, held damage and
+    modelled Lining. Combined host drift/collision returns collision first; Inputs keeps concrete cause.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::garment:2 privacy contracts rc=0;
+    cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings, sc-core --lib strict
+    Clippy and affected fmt rc=0.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part555.md:4 spans rc=0;
+    whole completed construction subtree retained with every child link; retention/book/publication/
+    size rc=0. Promotion: Design host decision. Current sources .b/declarations .c/envelope .d remain.
+- ID: `G1-SLICE.6.4.5.5.b`
   Status: `pending`
-  Goal: couple actual garment ownership with single-root state and complete owned identity scope.
+  Goal: complete current sewing and every garment-family source/target/assignment with original causes.
+- ID: `G1-SLICE.6.4.5.5.c`
+  Status: `pending`
+  Goal: complete typed actual garment declarations/operations over single current canonical root;
+  reuse adapters after full current preflight, even empty/unused scope, no partial views.
+- ID: `G1-SLICE.6.4.5.5.d`
+  Status: `pending`
+  Goal: apply original Lining/Fly requested-execution envelope independently of source/geometry proof.
 - ID: `G1-SLICE.6.4.5.6`
   Status: `pending`
   Goal: focused complete current garment/component acceptance before .6.4.6 aggregate review.
