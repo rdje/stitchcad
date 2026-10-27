@@ -789,7 +789,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0345 complete Piece companion checks; [whole scope/proof](../history/stitchcad-devnotes-part497.md).
 - ID: `G1-SLICE.6.4.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: privately owned canonical design state and identity registries; reuse actual core input contracts.
   Children .a owned canonical inputs; .b structural piece/copy/topology state; remaining actual source
   registries/recipe ownership follow their dependency contracts before .3 readiness.
@@ -803,7 +803,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0348 owned FormulaRecipeDocument; [whole scope/proof](../history/stitchcad-devnotes-part500.md).
 - ID: `G1-SLICE.6.4.2.d`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact current source/metadata identity registries across canonical input domains, preserving
   one-way sc-measure dependency and singly owned values; actual host bindings before .3 readiness.
   Children .1 owned Design parameters/current canonical targets; .2 current measurement/Ease inventories;
@@ -836,7 +836,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0355 selected-context/G4 boundary; [whole subtree/proof](../history/stitchcad-devnotes-part507.md).
 - ID: `G1-SLICE.6.4.2.d.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete source-host/identity composition and actual current metadata binding acceptance.
   Keep profile-role deferrals distinct from canonical numeric presence, including coincident ids;
   factory label/result claims cannot authorize physical field resolution.
@@ -879,7 +879,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0358–0364 source ownership; [whole subtree/proof](../history/stitchcad-devnotes-part516.md).
 - ID: `G1-SLICE.6.4.2.d.4.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: compose actual owned Design sources, identity scopes and focused binding/privacy acceptance.
   Children .a private implemented input/structural bundle and complete current ids; .b actual selected
   table/Ease/set references; .c actual formula-name/source bindings; .d focused combined acceptance.
@@ -891,30 +891,27 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0366 exact authored source references/joint scope; [whole scope/proof](../history/stitchcad-devnotes-part518.md).
 - ID: `G1-SLICE.6.4.2.d.4.4.c`
   Status: `done`
-  Goal: actual flat formula-name/source bindings over selected metadata and owned canonical values.
-  Own readonly formula-source facet; actual selected table/Ease declarations, borrowed root namespace
-  with parameter declarations and original collision causes; no inferred names/values or Profile/
-  Material/geometry context. Focused actual host cases/privacy/book; continuity518 whole0366 plus
-  historical static review proof, retaining its live D154/persisted-cycle/physical obligations.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract:12/0 rc=0;
-    actual selected/unprovided names, canonical pointer/origin, collision and stale-source controls.
-  - [x] ROOT CAUSE (WHY + WHERE): native12/0 rc=0 via local_environment.py; standalone
-    input owners had no selected flat namespace. Temporary contexts cannot escape (E0515 observed).
-  - [x] FIX: cargo clippy -p sc-core --test design_structure_contract -- -D warnings:rc=0;
-    readonly source facet and borrowed root namespace; whole current validation before saved targets.
-  - [x] ADDRESSED: cargo test -p sc-core --doc design::inputs:: gives3/0 rc=0; namespace cannot
-    outlive state. Both actual collision sources retained; no unselected or inferred names.
-  - [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:rc=0;
-    fmt pass0; glossary132 failures rc=1, exact D250 baseline comparison rc=0.
-  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/128/1454/2397 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part518.md:4 exact spans rc=0.
-    promotion: existing decision_design-host answer extended. Full CI integration/pre-push.
-    Completed STITCHCAD-G1-0367; .d focused composition acceptance next.
+  Goal:0367 actual selected input namespace; [whole scope/proof](../history/stitchcad-devnotes-part519.md).
 - ID: `G1-SLICE.6.4.2.d.4.4.d`
-  Status: `in_progress`
+  Status: `done`
   Goal: focused actual combined ownership/reference/binding/privacy acceptance before .6.4.3 readiness.
+  Own scoped actual selected-name, joint-table and preserved-held-topology acceptance; retain exact
+  prior privacy proofs when Rust stays unchanged. Retire whole0367 continuity519; no broad CI.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract
+    selected_formula_names_borrow_actual_canonical_records_with_original_metadata_origins -- --exact:1/0 rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): git diff --exit-code HEAD -- crates:empty rc=0;
+    input admission and name checking stay narrower than held topology readiness.
+  - [x] FIX: cargo test -p sc-measure --test design_inputs_contract
+    provided_table_must_match_actual_selected_ease_and_size_sources -- --exact:1/0 rc=0.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_structure_contract
+    deleted_held_references_remain_inspectable_without_registration_or_reattachment -- --exact:1/0 rc=0.
+  - [x] NO REGRESSION: git diff --exit-code HEAD -- crates:rc=0; 0367 native12/privacy3/
+    lint/fmt retained unchanged; no broad verification claim. D154/D250 owners remain live.
+  - [x] LOCKSTEP: bash scripts/run_make.sh book:rc=0; scoped publication79/128 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part519.md:3 exact spans rc=0.
+    promotion: declined (focused closure of existing host decision). Completed STITCHCAD-G1-0368.
 - ID: `G1-SLICE.6.4.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual current point and whole-range resolution/repair readiness, including lost interiors.
 - ID: `G1-SLICE.6.4.4`
   Status: `pending`

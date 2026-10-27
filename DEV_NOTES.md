@@ -3,16 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual selected Design input names
+## _(2026-10-27 UTC)_ — focused Design input composition acceptance
 
-0367 adds readonly DesignFormulaHost and root formula_namespace over actual parameters/table/Ease.
-Whole current validation precedes exact saved bindings; returned tokens/lengths borrow original owners.
-Temporary table contexts cannot escape (E0515); validate their contracts, then borrow sole canonical
-records directly. Input admission stays separate from flat collision checking; original both-source
-and reserved diagnostics remain borrowed. Profile/Material/geometry/runtime contexts remain separate.
-Native12/privacy3/strict selected lint/fmt/book/scoped publication pass0; D250132 exact baseline.
-518 preserves whole0366/historical static review in4 exact Git spans0; D154 remains OPEN.
-Promotion: existing host decision answers selected names. .d focused review next; broad CI later.
+0368 closes .6.4.2 implemented input/source scope with actual selected canonical pointer/origin,
+joint source-scope and held deleted-topology cases:three exact native filters each1/0 rc=0.
+Rust is unchanged from967e24e; its native12/privacy3/selected lint/fmt proofs remain applicable.
+Input/current-source admission never certifies held topology: original unresolved points and uncovered
+ranges remain inspectable for the next readiness component. Book/scoped publication pass0;
+519 retains whole0367 task/lesson/ledger:3 exact Git spans0. D154/D250 remain open as owned.
+Promotion declined: closure of existing host decision. .6.4.3 readiness next; broad CI later.
+
+[Complete selected-input namespace lesson](docs/history/stitchcad-devnotes-part519.md) retains
+its original scope, checks and promotion decision.
 
 [Complete authored-reference lesson](docs/history/stitchcad-devnotes-part518.md) retains
 its original scope, checks and promotion decision.

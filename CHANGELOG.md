@@ -3,14 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0367 — borrow actual selected formula input names
+## STITCHCAD-G1-0368 — close focused Design input composition acceptance
 
-- Compose parameters and selected table/Ease declarations into the existing flat namespace.
-- Preserve original canonical records, origins and borrowed collision diagnostics; no unselected names.
-- Native12/privacy3/selected lint/fmt/book/publication pass0; D250132 rows unchanged; continuity518.
-- Focused composition review next; full Design/runtime/physical/integration/CI unverified.
+- Three exact actual-source/scope/held-topology cases pass; Rust unchanged from0367's native/privacy proof.
+- Close implemented canonical/input/source ownership; preserve unresolved topology for explicit readiness.
+- Book/scoped publication pass; whole0367 retained in519. G1still6/18; full integration/CI deferred.
 
 # Sealed archive — earlier slices
+
+| [part519](docs/history/stitchcad-devnotes-part519.md) | whole0367 selected Design namespace | 40 lines, 3217 bytes, sha256:de4172ed… |
 
 | [part518](docs/history/stitchcad-devnotes-part518.md) | whole0366 and historical static review proofs | 92 lines, 7752 bytes, sha256:86ab15c3… |
 

@@ -360,3 +360,17 @@ their concrete error source chains.
 Input admission remains distinct from name checking. This namespace supplies implemented input
 metadata; Profile/Material/geometry/size/tolerance values, recipe statement checking, graph execution,
 physical claims and readiness retain their existing owners. Human labels never become formula names.
+
+## Implemented input composition acceptance
+
+The focused composition review checks actual selected declarations/origins/canonical pointers,
+incoherent table/Ease/SizeSet scope, and held Piece references after deletion. Source objects and
+private/shared access remain unchanged from the namespace implementation's native/privacy checks.
+Input ownership and source currentness do not imply that topology is ready: a deleted held edge
+remains inspectable with its original unresolved point and uncovered interval evidence. Construction
+never repairs, registers or reattaches it implicitly. Point/whole-range readiness follows separately.
+
+This closes the implemented source/input component scope. Full Design assembly still needs current
+sewing/garment sources and readiness; runtime commands, geometry, physical validation, storage,
+integration and release retain their task owners. D154's reference ordinal and D250's baseline
+vocabulary repairs remain open under their existing owners; this review closes neither.
