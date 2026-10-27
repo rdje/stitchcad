@@ -119,3 +119,29 @@ require_grade_coverage still refuses its missing cell. No zero delta is invented
 ```bash
 cargo test -p sc-measure --test size_set_metadata_contract
 ```
+
+## Owned garment SizeSet sources
+
+GarmentSizeSet owns common metadata, all observations and the chart. Construction checks source ids,
+actual common sources, every observation and the original composite. A missing unused observation
+table refuses. Design references this external object; no values/contexts are copied or stored.
+
+with_inputs revalidates before visiting temporary GarmentSizeSetInputs. Readonly chart_context()/
+break_context() expose actual shared contexts. Inside the callback, the chart's declaration(member,
+pom, view.chart_context()) and a break's delta(view.break_context()) borrow original canonical data.
+Owned results may return; local views/contexts cannot escape.
+
+| API or variant | Meaning |
+| --- | --- |
+| `GarmentSizeSet`, `GarmentSizeSetDefinition` | Private garment source owner and exact construction input |
+| `GarmentSizeSetPosition` | Common, Observation or Chart original ownership witness |
+| `GarmentSizeSetError` | DuplicateIdentity, Metadata, Context, Observation, CollectionContext or Inputs cause |
+
+Partial chart/break drafts remain valid. validate_inputs_for requires the original structural
+coverage for Regeneration or GradeRules; it computes no geometry or unknown quantity. reference()
+retains the actual set/revision, identities() lists owned ids, and Debug reveals observation count.
+MTM/unified source-host composition and full Design/execution remain later owners.
+
+```bash
+cargo test -p sc-measure --test garment_size_set_contract
+```

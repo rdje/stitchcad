@@ -267,6 +267,9 @@ Six composite garment tests plus the five break collection tests pass; selected 
 formatting and book build pass. Tests include actual record borrows, both structural paths, draft gaps,
 three mismatched snapshot components, cross-inventory aliases and preserved unavailable numeric input.
 
+Readonly chart_context()/break_context() expose the original contexts for explicit quantity queries;
+[owned garment sources](design-inputs.md#owned-garment-sizeset-sources) derive those views temporarily.
+
 ### Composite MTM body/Ease inputs — G1-SLICE.4c.3d.3.2
 
 `MtmSizeSetInputs` now composes the actual custom singleton membership, authored axis/member point,

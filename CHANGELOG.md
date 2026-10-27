@@ -7,15 +7,18 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0359 — own common SizeSet metadata over temporary current contexts
 
-- Own exact membership/axes/break metadata, complete cross-input identities and nonescaping temporary contexts.
-- Retain actual canonical objects, original current validators and explicit partial drafts; chart-family ownership follows.
-- Fix D255: break error source exposes concrete cause rather than Box; failing before/after native case verifies the repair.
-- Native5+12/privacy3/strict selected lint/fmt/book/publication pass0; D250132 rows exactly baseline, delta0.
-- Whole0358/ordered-name/routing continuity510 matches5 Git spans; caps unchanged; G1still6/18; no full Design/CI claim.
+## STITCHCAD-G1-0360 — own garment SizeSet sources and derive actual current views
+
+- Own exact common metadata, complete observation inventory and chart; check all ids and every current observation.
+- Add readonly actual chart/break contexts for nonescaping visitor quantity queries; original canonical objects remain borrowed.
+- Native5/privacy3/strict selected lint/fmt/book/publication pass0; partial chart/break coverage stays explicit.
+- D250132 rows exactly baseline; whole0359/D255/operator continuity511 matches5 Git spans; caps unchanged; G1still6/18.
+- MTM/unified sources and full Design/execution/physical/integration/CI remain pending.
 
 # Sealed archive — earlier slices
+
+| [part511](docs/history/stitchcad-devnotes-part511.md) | whole0359/D255 and historical operator proofs | 86 lines, 6879 bytes, sha256:90f06614… |
 
 | [part510](docs/history/stitchcad-devnotes-part510.md) | whole0358 and historical ordered-name/routing proofs | 101 lines, 8076 bytes, sha256:ed543243… |
 

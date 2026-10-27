@@ -50,6 +50,11 @@ pub use size_set_metadata::{
     SizeSetMetadata, SizeSetMetadataDefinition, SizeSetMetadataError, SizeSetMetadataPosition,
 };
 
+mod garment_size_set;
+pub use garment_size_set::{
+    GarmentSizeSet, GarmentSizeSetDefinition, GarmentSizeSetError, GarmentSizeSetPosition,
+};
+
 mod ease;
 pub use ease::{CompressionPermission, Ease, EaseDefinition, EaseError, EaseSide, FitIntent};
 

@@ -34,5 +34,6 @@ subsequent implementation must record its narrower actual acceptance scope in th
 Common SizeSetMetadata now owns membership/axes/break metadata separately from canonical inputs and
 measurement/Ease sources. Its higher-ranked callback reconstructs temporary actual contexts, checks
 all source identities/current validators before invocation and prevents borrowed contexts escaping.
-Chart-family ownership and full Design composition remain later children; this common component
-is not a complete SizeSet, and the Design still holds an external reference.
+GarmentSizeSet now owns actual garment observations/chart over that common component. MTM/unified
+source-host and full Design composition remain later children. The common component alone is not
+a complete SizeSet, and the Design still holds an external reference.

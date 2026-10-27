@@ -1136,11 +1136,4 @@ original unknown descriptor identity remains unknown; current handoff rules rema
 Historical window15/16 routing/pointer receipts remain whole in
 [continuity510](../history/stitchcad-devnotes-part510.md); current capacity ownership is G1-SLICE.RETENTION-CAPACITY.
 
-## D255 — boxed break cause hides its concrete source type
-
-P2; owner G1-SLICE.6.4.2.d.4.3.b, fixed in0359. Reproduce: size_set_metadata_contract's replacement
-canonical-context case removes delta100; SizeBreaksError::Break exposes Box<SizeBreakError> through
-Error::source, so concrete MissingDelta downcast fails (boxed payload seen=true, before rc=101).
-Impact: generic error-source consumers lose the original typed cause. Return issue.as_ref(); the
-same focused case must find actual SizeBreakError::MissingDelta, with callback unvisited and original
-context still valid. Native/privacy/lint/book evidence remains in the owning leaf.
+Verified D255 concrete source correction retained whole in [part511](../history/stitchcad-devnotes-part511.md).

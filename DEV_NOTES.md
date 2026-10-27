@@ -3,27 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — owned common SizeSet metadata and temporary current contexts
+## _(2026-10-27 UTC)_ — owned garment SizeSet sources and actual temporary views
 
-0359 SizeSetMetadata owns exact membership/axes/breaks and a referenced Design table identity.
-All canonical/measurement/Ease ids precede set/member/axis/value/break ids in a complete census;
-unselected tables cannot alias any common owned family. Existing actual source validators run
-before the callback, using temporary contexts over original canonical declarations. A higher-ranked
-visitor cannot return local context borrows. Original state and explicit partial break drafts remain;
-chart-family composition/grade coverage/numeric execution/readiness are separate obligations.
-MeasurementInputs identity iteration is extracted unchanged for reuse; original12 native cases pass.
-New5 native cases protect metadata order/actual pointers, all5 common cross-table aliases, partial
-coverage, missing exact table and missing current delta/callback suppression. The last exposed D255:
-SizeBreaksError::Break source returned Box itself, losing concrete downcasts. Before rc=101 shows
-boxed payload seen=true; issue.as_ref() now exposes actual MissingDelta. D255 is logged/owned/fixed.
-Native5+12/privacy3/strict selected lint/fmt/book/publication pass0. D250132 rows exactly baseline,
-delta0; full glossary rc=1. Continuity510 compares5 exact Git spans for whole0358 and historical
-ordered-name/routing receipts; current behavior/commands retained. Caps unchanged; G1still6/18.
-Promotion: core-host decision records temporary-context ownership. .6.4.2.d.4.3.c actual chart-family
-sources next; full Design/execution/physical/profile/integration/CI remains unverified.
+0360 GarmentSizeSet owns common metadata, all observations and the authored chart. A complete
+cross-input/common/observation/chart census retains original positions before current checks.
+Every observation validates, even if unselected; a valid-at-birth observation with a now-missing
+chart table refuses rather than hiding behind selected valid rows. Existing common/current/composite
+validators run over temporary shared contexts. GarmentSizeSetInputs now exposes readonly actual
+chart_context()/break_context() for explicit quantity queries through its nonescaping visitor.
+Native cases compare actual membership/chart/canonical measurement and delta pointers, exact Design
+pins, partial chart/break path refusals, an axis-observation alias, unused missing table, callback
+suppression on canonical replacement and successful original restoration. No cached state, derived
+number or geometry is produced. Default owner Debug exposes only observation count.
+Native5/privacy3/strict selected lint/fmt/book/publication pass0. D250132 rows exactly baseline,
+delta0; glossary rc=1. Continuity511 compares5 Git spans for whole0359/D255 and historical operator
+proofs; current behavior/commands retained. Caps unchanged; G1still6/18. Promotion declined: existing
+host/common-context ownership. .6.4.2.d.4.3.c.2 actual MTM sources next; unified host/full Design/
+execution/physical/profile/integration/CI remains unverified.
 
 
-[Complete exact SizeSet-reference lesson](docs/history/stitchcad-devnotes-part510.md) retains
+[Complete common SizeSet metadata/D255 lesson](docs/history/stitchcad-devnotes-part511.md) retains
 its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review

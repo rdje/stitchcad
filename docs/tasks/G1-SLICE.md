@@ -858,23 +858,33 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0358 exact external Design SizeSet pin; [whole scope/proof](../history/stitchcad-devnotes-part510.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.b`
   Status: `done`
-  Goal: immutable common SizeSet metadata/current contexts; D255 concrete break source corrected.
-  - [x] REPRODUCE / ISSUE: replacement-context native case reports boxed payload seen=true,
-    rc=101 before fix; target/size-metadata-d255-before-0359.log retains the actual failing assertion.
-  - [x] ROOT CAUSE (WHY + WHERE): SizeBreaksError::Break source returned Box itself; selected
-    cargo test -p sc-measure --test size_set_metadata_contract fails1 rc=101 before issue.as_ref().
-  - [x] FIX: private common owner, complete cross-input census, nonescaping temporary contexts;
-    native5/0 rc=0 rejects all5 common id-family collisions and finds concrete MissingDelta after D255.
-  - [x] ADDRESSED: cargo test -p sc-measure --test size_set_metadata_contract --test
-    measurement_inputs_contract gives5+12/0 rc=0, target/size-metadata-native-0359.log.
-  - [x] NO REGRESSION: privacy3/strict selected Clippy/fmt/book/publication79/117/1456/2392
-    pass0; D250132 exact baseline rows/delta0, glossary rc=1; full chart/Design/integration/CI later.
-  - [x] LOCKSTEP: book/API/decision/defect/index/pointer aligned; transition_receipts.py510
-    compares5 Git spans rc=0, complete0358/ordered-name/routing proofs; caps unchanged; G1still6/18.
-    promotion: promoted to docs/decisions/decision_design-host.md. Commit0359; .4.3.c chart sources next.
+  Goal:0359 common SizeSet metadata/D255; [whole scope/proof](../history/stitchcad-devnotes-part511.md).
 - ID: `G1-SLICE.6.4.2.d.4.3.c`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual owned chart-family sources/context composition, then complete reference/source acceptance.
+  Children .1 owned garment sources; .2 owned MTM sources; .3 unified external source-host acceptance.
+- ID: `G1-SLICE.6.4.2.d.4.3.c.1`
+  Status: `done`
+  Goal: exact owned garment sources/current identities and nonescaping views with readonly contexts.
+  - [x] REPRODUCE / ISSUE: unused observation targets must validate with the complete owned scope;
+    cargo test -p sc-measure --test garment_size_set_contract passes5/0 rc=0, target/*native-0360.log.
+  - [x] ROOT CAUSE (WHY + WHERE): existing composites borrow separate context owners; owned sources
+    rebuild those actual shared contexts. Selected garment_size_set_contract passes5/0 rc=0.
+  - [x] FIX: immutable common/observation/chart owner, complete census/current validators and readonly
+    context getters; native5/0 rc=0 proves actual chart/break pointers and unused-target refusal.
+  - [x] ADDRESSED: selected native5/privacy3 pass0; cargo test -p sc-measure --doc
+    garment_size_set::GarmentSizeSet rc=0 protects private/shared state and nonescaping visitor views.
+  - [x] NO REGRESSION: strict selected Clippy/fmt/book/publication79/118/1457/2394 pass0;
+    D250132 exact baseline rows/delta0, glossary rc=1; full MTM/host/Design/integration/CI later.
+  - [x] LOCKSTEP: book/API/decision/defect/index/pointer aligned; transition_receipts.py511
+    compares5 exact Git spans rc=0, whole0359/D255/operator proofs; caps unchanged; G1still6/18.
+    promotion: declined (implements recorded host/common-context ownership). Commit0360; .c.2 MTM next.
+- ID: `G1-SLICE.6.4.2.d.4.3.c.2`
+  Status: `pending`
+  Goal: actual owned singleton MTM/chart-family sources over the common metadata/context contract.
+- ID: `G1-SLICE.6.4.2.d.4.3.c.3`
+  Status: `pending`
+  Goal: unified actual external set sources and exact Design-reference/host acceptance.
 - ID: `G1-SLICE.6.4.2.d.4.4`
   Status: `pending`
   Goal: compose actual owned Design sources, identity scopes and focused binding/privacy acceptance.
