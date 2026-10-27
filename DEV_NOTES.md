@@ -3,15 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — focused Design input composition acceptance
+## _(2026-10-27 UTC)_ — combined structural topology readiness
 
-0368 closes .6.4.2 implemented input/source scope with actual selected canonical pointer/origin,
-joint source-scope and held deleted-topology cases:three exact native filters each1/0 rc=0.
-Rust is unchanged from967e24e; its native12/privacy3/selected lint/fmt proofs remain applicable.
-Input/current-source admission never certifies held topology: original unresolved points and uncovered
-ranges remain inspectable for the next readiness component. Book/scoped publication pass0;
-519 retains whole0367 task/lesson/ledger:3 exact Git spans0. D154/D250 remain open as owned.
-Promotion declined: closure of existing host decision. .6.4.3 readiness next; broad CI later.
+0369 adds DesignTopologyReadiness tied to the exact borrowed immutable DesignStructure. All actual
+registrations use original choice-aware answers; every held Piece edge retains raw full-range evidence
+and separate authored-direction endpoints. Choices match exact Piece/edge/parameter, never a peer owner.
+Scoped readiness requires unique points and full intervals: live endpoints cannot hide a deleted middle;
+full coverage cannot choose an ambiguous endpoint. Unknown whole sources block despite raw point
+pass-through, and explicit empty drafts grant only this empty scope. Existing ledger/Piece code unchanged.
+Native5/privacy2/strict selected lint/fmt/book/publication79/130 pass0; D250132 exact baseline rows.
+520 retains whole closed0346–0368 subtree,0368 lesson/ledger and historical sequence:4 exact Git spans0.
+Promotion: existing range-resolution decision answers owner-specific combined scope. Sewing amounts next;
+full Design/geometry/physical/runtime/integration/CI stays unverified.
+
+[Complete input-composition acceptance lesson](docs/history/stitchcad-devnotes-part520.md) retains
+its original scope, checks and promotion decision.
 
 [Complete selected-input namespace lesson](docs/history/stitchcad-devnotes-part519.md) retains
 its original scope, checks and promotion decision.

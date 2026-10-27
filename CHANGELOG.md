@@ -3,13 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0368 — close focused Design input composition acceptance
+## STITCHCAD-G1-0369 — combine current structural point and whole-range readiness
 
-- Three exact actual-source/scope/held-topology cases pass; Rust unchanged from0367's native/privacy proof.
-- Close implemented canonical/input/source ownership; preserve unresolved topology for explicit readiness.
-- Book/scoped publication pass; whole0367 retained in519. G1still6/18; full integration/CI deferred.
+- Borrow the exact structural owner and retain every actual registration/held Piece edge/repair.
+- Require unique points plus full intervals; apply saved endpoint choices by exact owner/reference.
+- Native5/privacy2/selected lint/fmt/book/publication pass0; D250132 unchanged, existing ledger untouched.
+- Closed input subtree/0368/static sequence retained whole520; sewing/current amounts next, broad CI later.
 
 # Sealed archive — earlier slices
+
+| [part520](docs/history/stitchcad-devnotes-part520.md) | closed0346–0368 subtree,0368 and static sequence | 167 lines, 10745 bytes, sha256:da4ff17b… |
 
 | [part519](docs/history/stitchcad-devnotes-part519.md) | whole0367 selected Design namespace | 40 lines, 3217 bytes, sha256:de4172ed… |
 

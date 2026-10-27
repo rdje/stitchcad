@@ -127,3 +127,5 @@ authored Design source references	spec/design-inputs.md	crates/sc-core/src/desig
 actual Design reference host	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignReferenceHost	G1-SLICE.6.4.2.d.4.4.b	4.4
 Design selected formula source host	spec/design-inputs.md	crates/sc-core/src/design/host.rs	DesignFormulaHost	G1-SLICE.6.4.2.d.4.4.c	4.4
 Design selected input namespace refusal	spec/design-inputs.md	crates/sc-core/src/design/inputs.rs	DesignFormulaError	G1-SLICE.6.4.2.d.4.4.c	4.4
+current Design structural topology readiness	spec/ontology-implementation.md	crates/sc-core/src/design/topology.rs	DesignTopologyReadiness	G1-SLICE.6.4.3	4.4
+held Design Piece topology evidence	spec/ontology-implementation.md	crates/sc-core/src/design/topology.rs	DesignPieceTopology	G1-SLICE.6.4.3	4.4

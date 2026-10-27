@@ -37,6 +37,7 @@ impl DesignSizeSetReference {
 mod host;
 mod inputs;
 mod parameters;
+mod topology;
 pub use host::{
     DesignFormulaHost, DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
     DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost, DesignSourceReferences,
@@ -49,6 +50,7 @@ pub use parameters::{
     DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,
     DesignParameters,
 };
+pub use topology::{DesignPieceTopology, DesignTopologyReadiness};
 
 /// Explicit structural input, with no inferred identity, revision, copy or topology registration.
 #[derive(Clone, Debug, PartialEq, Eq)]

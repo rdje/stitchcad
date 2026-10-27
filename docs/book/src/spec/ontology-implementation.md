@@ -57,6 +57,39 @@ directions. The bus must consider interval repairs and point repairs. The existi
 verdict remains narrower; full recipe/geometry/release checks remain separate. See
 `decision_range-resolution-preserves-entire-interval.md`.
 
+**Current structural report.** DesignStructure.topology_readiness() returns a borrowed
+DesignTopologyReadiness over the exact immutable structural owner. It includes every ledger
+registration's original choice-aware answer, then every held Piece edge in Piece/authored order
+(boundary, holes, construction lines). Each DesignPieceTopology retains Piece identity, edge index,
+original DirectedEdge, whole raw RangeResolution and authored traversal start/end answers.
+
+Only a matching owner/edge/parameter registration can supply a saved endpoint choice. Another
+consumer's choice at the same point never selects for the Piece. Reversed traversal swaps authored
+start/end while raw interval evidence stays in its original source frame. The query never mutates
+registrations, repairs, Pieces, history or revision; its report cannot outlive or transfer to a new
+structural owner. Registered lookup failures propagate the original LedgerError.
+
+is_ready() requires unique registered points, unique Piece endpoints and full held-interval coverage.
+A split with no stated registered choice blocks this scope. Split a held edge into thirds and delete
+the middle: both endpoints and the ledger's point-only release_readiness may still resolve/allow,
+but the new report blocks with live/repair/live portions. Unknown whole sources also block even if
+raw point folding returns pass-through answers. No unrelated edge replaces a missing interval.
+
+For a merge followed by a split exactly at a held edge's endpoint, positive coverage can remain full
+while that endpoint is ambiguous. An explicit choice saved for that Piece resolves the authored
+endpoint; range().start()/end() still retain the raw split evidence. A choice for a different owner
+leaves the Piece ambiguous. An older blocked report stays tied to its unchanged older state after explicit repair.
+
+| API | Meaning |
+| --- | --- |
+| `DesignTopologyReadiness` | Borrowed scoped current registered-point/Piece interval report |
+| `DesignPieceTopology` | Actual held edge, raw interval and choice-aware traversal endpoint evidence |
+
+This report covers structural references only. Explicitly empty drafts have no blocker in this scope;
+that supplies no complete Design, sewing/garment source, geometry, construction, physical or release
+proof. The existing ledger verdict retains its narrower contract. See
+[the public source](../../../../crates/sc-core/src/design/topology.rs).
+
 **Owned structural state (`G1-SLICE.6.4.2.b`).** `sc_core::design::DesignStructure::new(definition)`
 owns the explicit Design identity, exact DesignRevision, CanonicalInputs, PieceInventory, CutPlan and
 IdentityLedger. No record, revision, copy or registration is generated. definition() and the typed

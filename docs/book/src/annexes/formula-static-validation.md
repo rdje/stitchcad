@@ -370,31 +370,12 @@ Original historical matrices, fault controls and proof commentary are preserved 
 
 ### Implementation sequence after the review
 
-The product namespace foundation .5b.2 accepts immutable typed declarations from canonical inputs,
-validates machine names and consumes declaration pairs before an index can discard collisions.
-[Ordered metadata scopes](formula-name-scopes.md) retain actual prior let annotations and locations;
-bounded expression, current-statement and whole recipe proofs are implemented; coupled whole review is complete at .4b.
-Kinds and origins are separate from numeric availability. Reserved names have known kinds even
-without an instance/export context. Geometry declarations refer to prior operation outputs;
-they do not authorize construction. Input adapters must preserve existing source identities and
-avoid a sc-core to sc-measure dependency cycle. D124 preserves the existing reserved-word set.
-
-The product expression checker .5b.3c.2b.2 consumes bounded normalized syntax and the checked
-initial namespace, preserving all ordered dependencies and checking both conditional branches.
-Each refusal carries its actual operation, complete resolved kinds and wanted rules, with the
-existing angle-times-length hint. Call/tolerance-role populations match the chapter in both
-directions. Envelope dispatch applies before operand semantics after syntax/input succeeds.
-No numerical, tolerance-value, storage, geometry or solver callback belongs in this stage.
-[Current-statement/annotation integration](formula-name-scopes.md#check-the-actual-current-statement)
-is implemented at .5b.3c.3b; whole acceptance is implemented at .4a.
-
-The whole-validator .5b.4a inspects every statement in declaration order and returns an
-immutable typed dependency proof only after complete success. Dependency edges include untaken
-branches; each name resolves to an initial declaration or a prior statement. A late error returns
-no accepted graph prefix. Diagnostics retain actual source spans, known statement indices and
-canonical identity where available; invalid syntax/input must not acquire invented context.
-Syntax and identity APIs keep their existing scopes. Persisted corrupt-cycle diagnostics remain
-the loader/replay obligation at .5e.4/.7; ordinary forward/self names remain unbound-name refusals.
+[Sourced/ordered scopes](formula-name-scopes.md), expression checks and
+[whole recipe proofs](formula-checked-recipes.md) are implemented as separate metadata/static stages.
+They retain actual sources, both-branch dependencies and diagnostics without executing values.
+Persisted corrupt-cycle diagnostics remain .5e.4/.7. Whole historical sequence/proof commentary is
+preserved in `docs/history/stitchcad-devnotes-part520.md`, retrieved with
+`python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part520.md`.
 
 ### Coupled public static review
 

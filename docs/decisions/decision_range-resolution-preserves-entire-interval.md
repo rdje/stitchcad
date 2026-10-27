@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2a`, defect D55; ontology §1.1 and §4.2.
 
-answers: "how do seam ranges survive edits?" · "can endpoint repairs prove contour integrity?" · "how are deleted interior fragments represented?"
+answers: "how do seam ranges survive edits?" · "can endpoint repairs prove contour integrity?" · "how are deleted interior fragments represented?" · "how does Design combine registered points and whole Piece intervals?"
 
 ## Context
 
@@ -48,3 +48,11 @@ A zero-length interval is a point-reference concern and is rejected by the range
   query and its typed evidence; the existing point ledger's registration verdict keeps its scope.
 - Related: `decision_reference-resolution-journal-fold.md`,
   `decision_ontology-invariants-structural-g1-geometric-g2.md`.
+
+DesignStructure.topology_readiness now derives a borrowed immutable report over every registration
+and all held Piece edges. Scoped readiness requires unique registered points, full range coverage
+and unique authored Piece endpoints. Saved endpoint choices match exact Piece/edge/parameter only;
+another owner's choice cannot authorize a Piece. Raw range endpoint evidence remains intact even
+when the separate traversal endpoint has an explicit choice. The report retains the exact owner and
+cannot certify a replacement state. The ledger's narrower verdict is unchanged; empty drafts, full
+coverage and chosen points alone supply no sewing/garment, geometric, physical or release proof.

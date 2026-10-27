@@ -634,3 +634,254 @@ mod input_composition {
         );
     }
 }
+
+#[test]
+fn topology_report_borrows_exact_owner_and_keeps_choice_aware_points_with_whole_piece_ranges() {
+    let definition = fixture();
+    let original = definition.clone();
+    let state = DesignStructure::new(definition).expect("actual structural owner");
+    let report = state
+        .topology_readiness()
+        .expect("actual registered point lookups");
+    assert!(core::ptr::eq(report.structure(), &state));
+    assert!(report.is_ready());
+    assert_eq!(report.registrations().len(), 1);
+    assert!(report
+        .registrations()
+        .iter()
+        .all(
+            |(held, answer)| held.split_choice() == Some(SplitSide::Second)
+                && answer.resolved().is_some()
+        ));
+    assert_eq!(
+        report
+            .piece_edges()
+            .iter()
+            .map(|edge| (edge.piece(), edge.index()))
+            .collect::<Vec<_>>(),
+        [(id(20), 0), (id(10), 0)]
+    );
+    assert!(report
+        .piece_edges()
+        .iter()
+        .all(|edge| edge.range().has_full_coverage() && edge.is_ready()));
+    assert_eq!(state.definition(), &original);
+}
+
+#[test]
+fn topology_report_blocks_lost_interiors_even_when_every_registered_endpoint_resolves() {
+    let mut definition = fixture();
+    let piece = definition.pieces.piece(id(10)).expect("actual Piece");
+    let held = piece.edges().next().expect("held edge").edge;
+    for (edge, param) in piece.endpoint_references() {
+        definition
+            .topology
+            .register(piece.id(), edge, param)
+            .expect("explicit endpoint registration");
+    }
+    let mut ids = DeterministicIdGenerator::from_start(3000);
+    let first = definition
+        .topology
+        .split(
+            &mut ids,
+            held,
+            Param::new(Rational::new(1, 3).expect("third")).expect("valid bound"),
+        )
+        .expect("first split");
+    let second = definition
+        .topology
+        .split(
+            &mut ids,
+            first.second(),
+            Param::new(Rational::new(1, 2).expect("half")).expect("valid bound"),
+        )
+        .expect("second split");
+    definition
+        .topology
+        .delete(&mut ids, second.first())
+        .expect("explicit middle deletion");
+    let original = definition.clone();
+    let state = DesignStructure::new(definition).expect("inspectable damaged draft");
+    let report = state.topology_readiness().expect("actual point inventory");
+    assert_eq!(
+        state.topology().release_readiness(),
+        sc_core::ontology::ReleaseReadiness::Releasable
+    );
+    assert!(report
+        .registrations()
+        .iter()
+        .all(|(_, answer)| answer.resolved().is_some()));
+    let edge = report
+        .piece_edges()
+        .iter()
+        .find(|edge| edge.piece() == id(10))
+        .expect("actual held Piece");
+    assert!(edge.start().resolved().is_some() && edge.end().resolved().is_some());
+    assert_eq!(edge.held().edge, held);
+    assert_eq!(edge.range().portions().len(), 3);
+    assert_eq!(edge.range().repairs().count(), 1);
+    assert!(!edge.is_ready() && !report.is_ready());
+    assert_eq!(state.definition(), &original);
+}
+
+#[test]
+fn topology_report_requires_a_stated_registered_split_choice_before_scoped_readiness() {
+    let mut definition = fixture();
+    let held = definition
+        .pieces
+        .piece(id(10))
+        .expect("actual Piece")
+        .edges()
+        .next()
+        .expect("held edge")
+        .edge;
+    let half = Param::new(Rational::new(1, 2).expect("half")).expect("valid bound");
+    definition
+        .topology
+        .register(id(99), held, half)
+        .expect("actual independent consumer");
+    definition
+        .topology
+        .split(&mut DeterministicIdGenerator::from_start(3000), held, half)
+        .expect("explicit split");
+    let state = DesignStructure::new(definition).expect("inspectable choice draft");
+    let report = state.topology_readiness().expect("actual current evidence");
+    assert!(report.piece_edges().iter().all(|edge| edge.is_ready()));
+    assert!(report
+        .registrations()
+        .iter()
+        .any(|(held, answer)| held.owner() == id(99)
+            && matches!(answer, Resolution::SplitPoint { .. })));
+    assert!(!report.is_ready());
+    let mut chosen = state.definition().clone();
+    chosen
+        .topology
+        .state_split_choice(id(99), held, half, SplitSide::First)
+        .expect("explicit consumer choice");
+    let repaired = DesignStructure::new(chosen).expect("new explicit structural snapshot");
+    assert!(repaired
+        .topology_readiness()
+        .expect("fresh report")
+        .is_ready());
+    assert!(!report.is_ready());
+}
+
+#[test]
+fn topology_report_applies_only_matching_piece_endpoint_choices_and_keeps_raw_reversed_evidence() {
+    for include_piece_registration in [false, true] {
+        let mut definition = fixture();
+        let held = definition
+            .pieces
+            .piece(id(10))
+            .expect("actual Piece")
+            .edges()
+            .next()
+            .expect("held edge")
+            .edge;
+        definition.pieces = PieceInventory::new(
+            definition
+                .pieces
+                .pieces()
+                .iter()
+                .map(|piece| {
+                    if piece.id() != id(10) {
+                        return piece.clone();
+                    }
+                    let mut reversed = piece.definition().clone();
+                    reversed.boundary.first_mut().expect("held edge").direction =
+                        Direction::Reversed;
+                    Piece::new(reversed, &definition.topology)
+                        .expect("same current Piece, authored reverse traversal")
+                })
+                .collect(),
+        )
+        .expect("same complete inventory");
+        definition
+            .topology
+            .register(id(999), held, Param::END)
+            .expect("other owner on same point");
+        if include_piece_registration {
+            definition
+                .topology
+                .register(id(10), held, Param::END)
+                .expect("explicit exact Piece endpoint");
+        }
+        let mut ids = DeterministicIdGenerator::from_start(4000);
+        let peer = definition
+            .topology
+            .declare_edges(&mut ids, 1)
+            .expect("explicit peer")
+            .into_iter()
+            .next()
+            .expect("one edge");
+        let length = sc_units::Length::from_micrometres(1000).expect("positive authored length");
+        let merged = definition
+            .topology
+            .merge(&mut ids, held, length, peer, length)
+            .expect("explicit equal length merge");
+        definition
+            .topology
+            .split(
+                &mut ids,
+                merged,
+                Param::new(Rational::new(1, 2).expect("half")).expect("valid bound"),
+            )
+            .expect("split at original held endpoint");
+        definition
+            .topology
+            .state_split_choice(id(999), held, Param::END, SplitSide::Second)
+            .expect("other owner chooses");
+        if include_piece_registration {
+            definition
+                .topology
+                .state_split_choice(id(10), held, Param::END, SplitSide::Second)
+                .expect("exact Piece chooses");
+        }
+        let state = DesignStructure::new(definition).expect("inspectable current owner");
+        let report = state.topology_readiness().expect("current scoped evidence");
+        assert!(report
+            .registrations()
+            .iter()
+            .all(|(_, answer)| answer.resolved().is_some()));
+        let edge = report
+            .piece_edges()
+            .iter()
+            .find(|edge| edge.piece() == id(10))
+            .expect("held reversed Piece");
+        assert_eq!(edge.held().direction, Direction::Reversed);
+        assert!(edge.range().has_full_coverage());
+        assert!(matches!(edge.range().end(), Resolution::SplitPoint { .. }));
+        assert_eq!(
+            edge.start().resolved().is_some(),
+            include_piece_registration
+        );
+        assert_eq!(report.is_ready(), include_piece_registration);
+    }
+}
+
+#[test]
+fn topology_report_refuses_unknown_whole_sources_and_keeps_explicit_empty_drafts_scoped() {
+    let mut definition = fixture();
+    definition.topology = IdentityLedger::new();
+    let state =
+        DesignStructure::new(definition.clone()).expect("held references remain inspectable");
+    let report = state
+        .topology_readiness()
+        .expect("empty registration inventory");
+    assert!(report.registrations().is_empty());
+    assert!(report
+        .piece_edges()
+        .iter()
+        .all(|edge| edge.start().resolved().is_some() && edge.end().resolved().is_some()));
+    assert!(!report.is_ready());
+    assert!(report
+        .piece_edges()
+        .iter()
+        .all(|edge| edge.range().repairs().count() == 1));
+    definition.pieces = PieceInventory::new(vec![]).expect("explicit empty Pieces");
+    definition.cut_plan = CutPlan::new(vec![], &[]).expect("explicit empty plan");
+    let empty = DesignStructure::new(definition).expect("explicit empty structural draft");
+    let empty_report = empty.topology_readiness().expect("empty scoped report");
+    assert!(empty_report.registrations().is_empty() && empty_report.piece_edges().is_empty());
+    assert!(empty_report.is_ready());
+}
