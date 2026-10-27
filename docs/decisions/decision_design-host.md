@@ -15,6 +15,8 @@ answers: "how do Gather declaration views retain original signed span ease and c
 
 answers: "how does garment admission preserve exact families, nested owned identities and held source damage?"
 
+answers: "does complete garment current validation include unused families and original Material target roles?"
+
 sc-core owns canonical declarations and defines DesignMetadataHost. Higher crates implement the port
 using their actual immutable metadata. DesignMetadata owns that host and an identity-only census;
 it stores no borrowed context, cloned scalar declaration, numeric value or uncertainty state. Shared
@@ -111,3 +113,13 @@ validation and retain original locations/typed causes. Shared getters and count-
 privacy/immutability. Admission retains held damage/empty/modelled content without reconstructing
 born objects. Complete current garment sources/declarations, execution envelope, physical values and
 release readiness remain separate obligations under .5.b/.c/.d and later gates.
+
+## Complete current garment sources — G1-SLICE.6.4.5.5.b
+
+Current validation rechecks global ownership/inputs, sewing, Pockets, notions, Closures, layers and
+actual Material assignments, Hems, then constructions. Existing validators retain all unused/empty
+context obligations, original identity locations/raw repairs and concrete standard causes. Missing
+Material targets cannot coerce from numeric metadata; layer sources precede assignment checks.
+Objects remain unchanged and success uncached. Modelled Lining can pass current sources without
+execution support. Complete declarations, execution envelope, geometry/resolved domains and release
+remain separate .5.c/.d/later-gate obligations.

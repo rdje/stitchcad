@@ -904,25 +904,26 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   .d requested execution envelope. Final scoped acceptance .6 before aggregate review .6.4.6.
 - ID: `G1-SLICE.6.4.5.5.a`
   Status: `done`
-  Goal:0406 exact garment/root ownership and complete original global identity positions.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_ownership:
-    5 passed rc=0; independently valid garment families/instances aliasing actual Design id refuse.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:component-local namespaces cannot guarantee
-    global ownership; enumerate actual sewing/root then all garment owners, never referenced uses.
-  - [x] FIX: same native5 rc=0; private seven-component owner with original shared getters/count Debug;
-    deterministic Sewing/Pocket/notion/Closure-instance/layer/Hem/construction census before root inputs.
-  - [x] ADDRESSED: same native5 rc=0; exact pointers/order/locations, all garment families and nested
-    instances, cross-family aliases, retired creator ownership, references as uses, held damage and
-    modelled Lining. Combined host drift/collision returns collision first; Inputs keeps concrete cause.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc design::garment:2 privacy contracts rc=0;
-    cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings, sc-core --lib strict
-    Clippy and affected fmt rc=0.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part555.md:4 spans rc=0;
-    whole completed construction subtree retained with every child link; retention/book/publication/
-    size rc=0. Promotion: Design host decision. Current sources .b/declarations .c/envelope .d remain.
+  Goal:0406 exact garment/root ownership; [whole proof](../history/stitchcad-devnotes-part556.md).
 - ID: `G1-SLICE.6.4.5.5.b`
-  Status: `pending`
-  Goal: complete current sewing and every garment-family source/target/assignment with original causes.
+  Status: `done`
+  Goal:0407 complete current garment sources/targets/Material assignments with original causes.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract garment_:
+    9 passed rc=0; unused failures in sewing and every garment family refuse without empty shortcuts.
+  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:ownership admission preserves held content;
+    compose actual validators in owned/input, sewing, Pocket, notion, Closure, layer/Material, Hem,
+    construction order without promoting prior success to a current certificate.
+  - [x] FIX: same native9 rc=0; whole-root current traversal with original typed family wrappers/
+    standard cause chains; no repair, retarget, partial success or cached validity.
+  - [x] ADDRESSED: same native9 rc=0; full Pocket component loss, unused notions/layers, missing Closure
+    target, all family original-cause equality/downcasts, missing Material despite parameter presence,
+    source-before-assignment priority, later Hem index1 after earlier success and current host drift.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc design::garment:2 privacy rc=0; core --lib and
+    measure --test design_inputs_contract strict Clippy/affected fmt rc=0. Modelled Lining remains
+    source-valid while execution deferred; Unknown/unresolved intent and all objects stay unchanged.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part556.md:4 spans rc=0;
+    retention/book/publication/size rc=0; original book facts retained. Promotion: Design host decision.
+    Complete declarations .c/requested envelope .d/global feature/runtime/physical/release proof remain.
 - ID: `G1-SLICE.6.4.5.5.c`
   Status: `pending`
   Goal: complete typed actual garment declarations/operations over single current canonical root;

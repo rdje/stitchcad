@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0406 — own exact garment families over the actual root
+## STITCHCAD-G1-0407 — validate complete current garment sources
 
-- Preserve sole sewing/canonical owner and all garment objects; global census includes ClosureInstances/retired creators.
-- Reject original global collisions before current inputs; references remain uses and held repairs stay inspectable.
-- Native5/privacy2/strict lint/fmt pass0; current garment sources/declarations/envelope remain separate work.
-- Book ownership example and whole construction subtree/0404–0405 proof555 synchronized, all child links retained.
+- Recheck whole root/sewing and every garment-family source/target/Material assignment, including unused/empty context.
+- Preserve exact original locations/causes/raw repairs; missing Material never coerces from numeric metadata.
+- Native9/privacy2/core+measure strict lint/fmt pass0; late Hem, unused failures and unchanged modelled scope covered.
+- Book source order/boundaries and whole0406 proof556 synchronized; declarations/envelope/physical/release proof remains.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -31,6 +31,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part556](docs/history/stitchcad-devnotes-part556.md) | whole0406 garment ownership/lesson/ledger/retirement | 49 lines, 4234 bytes, sha256:90a4a45a… |
 | [part555](docs/history/stitchcad-devnotes-part555.md) | whole construction subtree/0404–0405 lessons/ledger/retirement | 109 lines, 7932 bytes, sha256:54f514ab… |
 | [part554](docs/history/stitchcad-devnotes-part554.md) | whole0403 grain/allowance/lesson/ledger/D274–D275 | 69 lines, 5869 bytes, sha256:5be72d70… |
 | [part553](docs/history/stitchcad-devnotes-part553.md) | whole completed units/measurement/SizeSet parents | 43 lines, 2921 bytes, sha256:ee1c7a84… |

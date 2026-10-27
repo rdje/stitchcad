@@ -77,8 +77,8 @@ borrowed record context; a general scalar peer cannot replace a dedicated length
 | `Inputs`, `RecordContext`, `Measurement` | Whole inventory, target context or explicit binding cause |
 | `MissingMeasurement` | Actual measurement metadata is absent |
 
-The direct trait binding method checks the selected declaration/context only. DesignMetadata adds
-whole-scope validation and canonical object membership. No borrowed context is stored.
+Direct trait binding checks only its selected declaration/context; DesignMetadata adds whole-scope
+validation/canonical membership without storing a context.
 
 ```bash
 cargo test -p sc-measure --test measurement_inputs_contract
@@ -106,10 +106,10 @@ borrowed. Failure skips the callback with original cause; break errors expose co
 | `SizeSetMetadataPosition` | Original ownership witness: Inputs, Set, Member, Axis, AxisValue, Break |
 | `SizeSetMetadataError` | DuplicateIdentity, Inputs, MissingDesignTable, RecordContext, TableContext, Sources, BreakContext or Breaks |
 
-identities() lists only common owned ids; definition() is shared. Debug exposes counts only.
-validate_current checks current structure; chart coverage, grade coverage, evaluation and readiness
-remain separate. For example, an authored required waist break with no available delta can be saved;
-require_grade_coverage still refuses its missing cell. No zero delta is invented.
+identities() lists common owned ids, definition() is shared, Debug shows counts. validate_current
+checks structure; chart/grade coverage, evaluation and readiness stay separate. A required waist
+break without a delta may be saved, but require_grade_coverage refuses the missing cell without zero
+substitution.
 
 ```bash
 cargo test -p sc-measure --test size_set_metadata_contract
@@ -141,15 +141,13 @@ cargo test -p sc-measure --test garment_size_set_contract
 
 ## Owned MTM SizeSet sources
 
-MtmSizeSet owns singleton common metadata and the actual MtmChart. MeasurementInputs retains actual
-body/Ease/table/set ownership. Construction checks complete input/common/chart ids and reuses the
-original validators through temporary contexts sharing actual membership, records and Design table.
-No body-plus-Ease value, profile selection or context cache is created.
+MtmSizeSet owns singleton common metadata/MtmChart; MeasurementInputs keeps body/Ease/table/set
+ownership. Admission checks input/common/chart ids through original validators and temporary actual
+membership/record/Design-table contexts. No body-plus-Ease value, profile selection or cache is created.
 
-with_inputs revalidates before visiting MtmSizeSetInputs. Its readonly chart_context()/break_context()
-permit explicit quantity/coverage queries. The chart's body_declaration(pom, context) and
-ease_declaration(pom, context) borrow separate actual canonical records. Local views cannot escape;
-owned callback results may return. Missing replacement sources refuse before the callback.
+with_inputs revalidates before temporary MtmSizeSetInputs. Shared chart_context()/break_context()
+allow quantity/coverage queries; chart.body_declaration(pom, context)/ease_declaration(pom, context)
+borrow separate canonical records. Only owned results escape; missing replacement sources skip callbacks.
 
 | API or variant | Meaning |
 | --- | --- |
@@ -157,9 +155,9 @@ owned callback results may return. Missing replacement sources refuse before the
 | `MtmSizeSetPosition` | Common or Chart ownership witness |
 | `MtmSizeSetError` | DuplicateIdentity, Metadata, Eases, Context or Inputs original cause |
 
-Partial mappings stay drafts; Regeneration requires coverage, while GradeRules keeps the original
-GradeRulesUnsupported chart/member refusal. Composite SizeSetInputError sources expose concrete
-chart/MTM/break causes rather than boxes (D256 correction). No numeric execution/readiness follows.
+Partial mappings stay drafts. Regeneration needs coverage; GradeRules retains GradeRulesUnsupported
+chart/member refusal. SizeSetInputError exposes concrete chart/MTM/break causes rather than boxes
+(D256). No numeric execution/readiness follows.
 
 ```bash
 cargo test -p sc-measure --test mtm_size_set_contract
@@ -167,17 +165,16 @@ cargo test -p sc-measure --test mtm_size_set_contract
 
 ## Unified external SizeSet inventory
 
-SizeSet owns the explicit Garment/Mtm family and lends SizeSetInputs for current queries.
-Singleton garment charts retain that provenance; errors retain actual family causes.
+SizeSet retains Garment/Mtm family (also singleton garment provenance), lends SizeSetInputs and
+preserves actual family causes.
 
 SizeSetInventory owns authored order and checks shared/complete set ids before current validators.
 Distinct sets cannot reuse owned ids; shared canonical refs stay uses. All sets, including unselected,
 validate; explicit empty inventories are legal.
 
-size_set(id) inspects a shared source. validate_reference(expected, &canonical, &inputs) revalidates
-all sets and borrows the exact id/revision target, retaining current input borrows. Equal labels or
-latest revisions supply no fallback. A selected valid MTM set therefore refuses when an unselected
-garment set has lost its required axis declaration.
+size_set(id) inspects shared content; validate_reference(expected, &canonical, &inputs) rechecks all
+sets and borrows exact id/revision/current inputs. Labels/latest revisions give no fallback: an
+unselected garment's lost required axis blocks a valid selected MTM set.
 
 | API or variant | Meaning |
 | --- | --- |
@@ -422,11 +419,10 @@ DesignSewing.validate_current() checks owned ids/current root, every landmark Pi
 graph against actual copies/Pieces/landmarks/ledger, then all amounts. amount_declarations() applies
 the same checks before borrowing exact objects, without partial views after late failure.
 
-Unused landmarks remain owned obligations: deleting material under an unselected turn point returns
-its original AnchorError; removing its Piece returns MissingLandmarkPiece before graph lookup.
-A renamed copy returns the original SewingError even if pure amount metadata still validates. A Count
-amount parameter returns its original DesignSewingDeclarationError after graph validation. Landmark,
-graph and amount wrappers expose the concrete original error through std::error::Error::source().
+Unused landmark loss retains AnchorError; absent Piece returns MissingLandmarkPiece before graph
+lookup. Renamed copies retain SewingError despite healthy amount metadata; Count amounts return
+DesignSewingDeclarationError after graph validation. Wrappers expose original concrete causes through
+`Error::source()`.
 
 | Variant | Meaning |
 | --- | --- |
@@ -437,8 +433,8 @@ allocations. Profile amounts stay DeferredToG4; source success resolves no numbe
 Piece topology has its separate report; geometry, full Design execution, assembly and release remain
 separately owned.
 
-Focused acceptance covers actual owner aliases, unused landmark repairs and borrowed amount/Profile
-metadata. Numeric, geometric, runtime and release verification remains separate.
+Focused checks cover owner aliases, unused landmark repairs and amount/Profile borrows;
+numeric/geometric/runtime/release proof remains separate.
 
 ## Joined Gather declarations
 
@@ -486,4 +482,17 @@ scope, geometry, resolved physical values, full completeness or release approval
 | `DesignGarmentDefinition` | Exact seven-component owned input |
 | `DesignGarment` | Private garment owner over one sewing/input root |
 | `DesignGarmentPosition` | Original sewing/family/nested-instance ownership location |
-| `DesignGarmentError` | Duplicate ownership or original current Inputs cause |
+| `DesignGarmentError` | Ownership/input or original sewing/garment family cause |
+
+### Complete current garment sources
+
+```rust,ignore
+garment.validate_current()?;
+```
+
+Checks visit ownership/inputs, sewing, Pockets, notions, Closures, layers/Materials, Hems, constructions,
+including complete empty/unused context. Errors retain locations/raw repairs/concrete standard causes
+without partial success, retargeting or cache. Parameter ids cannot supply missing Materials; layer
+sources precede assignment checks. Later Hem damage refuses after earlier success. Unknown/unresolved
+content stays held; Lining sources may pass while execution refuses. Declaration roles, envelope,
+geometry, resolved physical values and release remain separate.

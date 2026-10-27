@@ -3,20 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — complete garment ownership over one actual root
+## _(2026-10-27 UTC)_ — complete current garment sources and assignments
 
-0406 owns exact DesignSewing/Pocket/notion/Closure/layer/Hem/construction components without another
-canonical inventory. Deterministic global positions include every ClosureInstance and retired
-creating operation; Piece/copy/parameter/Profile/operation references stay uses. Global collisions
-precede whole-current-root input validation; failures retain original locations/concrete causes.
-Shared getters/count-only Debug preserve actual objects and privacy. Held damage/empty/modelled
-Lining content remains inspectable without reconstructing born objects or granting source readiness.
-Native5 covers all represented owners, cross-family aliases, references, retired creators, exact
-pointers and combined host-drift/collision priority. Privacy2/strict lint/fmt0; fixture owned EdgeRef
-iteration corrected after compiler refusal. Whole construction subtree/0404–0405 scopes555 retain4
-exact Git spans with all12 node ids/children; retention/book/publication/size0. Existing book facts
-preserved with repetition tightened. Promotion: Design host decision. Current sources .b, complete
-declarations .c, execution envelope .d and broader Design/runtime/physical/release proof remain owned.
+0407 rechecks global ownership/current inputs, sewing, Pockets, notions, Closures, layers/Material
+assignments, Hems and constructions. Original validators retain unused/empty obligations, locations,
+raw repairs and concrete standard causes. Missing Material cannot coerce from parameter metadata;
+layer-source failure precedes assignments. No object/reference is rewritten or successful prefix/
+validity cache published. Native9 includes all represented family causes, full component loss,
+unused sources, later Hem index1, exact error equality/downcasts, host drift and unchanged modelled
+Lining/Unknown/unresolved intent. Privacy2/core+measure strict lint/fmt0; fixture index typed usize
+after inference refusal. Whole0406 scopes556 retain4 exact Git spans; retention/book/publication/
+size0. Existing book facts retained with repetition tightened. Promotion: Design host decision.
+Complete declaration roles .c, requested execution envelope .d and global feature/runtime/physical/
+release proof remain explicitly separate; modelled Lining current sources do not grant execution.
+
+[Whole0406 garment ownership lesson](docs/history/stitchcad-devnotes-part556.md) retains exact components, global namespace and current-input priority proofs.
 
 [Whole0404/0405 construction lessons](docs/history/stitchcad-devnotes-part555.md) retain joined Gather and scoped87-native/13-lifetime acceptance.
 

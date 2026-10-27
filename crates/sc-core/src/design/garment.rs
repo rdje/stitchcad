@@ -1,11 +1,13 @@
 //! Exact implemented garment ownership over one actual sewing/input root; currentness is separate.
 use super::{
-    DesignInputs, DesignInputsError, DesignReferenceHost, DesignSewing, DesignSewingPosition,
+    DesignInputs, DesignInputsError, DesignReferenceHost, DesignSewing, DesignSewingError,
+    DesignSewingPosition,
 };
 use crate::ontology::{
-    ClosureInventory, ClosureInventoryPosition, ConstructionInventory,
-    ConstructionInventoryPosition, EntityId, HemInventory, LayerInventory, LayerInventoryPosition,
-    NotionPlacementInventory, PocketInventory,
+    ClosureInventory, ClosureInventoryError, ClosureInventoryPosition, ConstructionInventory,
+    ConstructionInventoryError, ConstructionInventoryPosition, EntityId, HemInventory,
+    HemInventoryError, LayerInventory, LayerInventoryError, LayerInventoryPosition,
+    NotionPlacementInventory, NotionPlacementInventoryError, PocketInventory, PocketInventoryError,
 };
 use core::fmt;
 use std::collections::BTreeMap;
@@ -55,7 +57,7 @@ pub enum DesignGarmentPosition {
     /// Original distinct construction family/authored position.
     Construction(ConstructionInventoryPosition),
 }
-/// Original complete ownership or current root-input refusal; admission supplies no source proof.
+/// Original complete ownership/current-input/source cause, preserving unmodified typed evidence.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum DesignGarmentError<E> {
     /// Independently valid components claim the same actual owned identity.
@@ -69,6 +71,20 @@ pub enum DesignGarmentError<E> {
     },
     /// Original complete current root-input cause, preserving the concrete host chain.
     Inputs(Box<DesignInputsError<E>>),
+    /// Complete current sewing/root/landmark/graph/amount cause, including unused sources.
+    Sewing(Box<DesignSewingError<E>>),
+    /// Original complete Pocket/current physical component interval cause.
+    Pockets(Box<PocketInventoryError>),
+    /// Original complete physical notion-placement cause, including unused placements.
+    Notions(Box<NotionPlacementInventoryError>),
+    /// Original complete Closure/instance/placement-target cause.
+    Closures(Box<ClosureInventoryError>),
+    /// Original complete layer/source/Material assignment cause, including unused layers.
+    Layers(Box<LayerInventoryError>),
+    /// Original complete Hem finish/current Facing cause.
+    Hems(Box<HemInventoryError>),
+    /// Original complete current six-family construction source cause.
+    Constructions(Box<ConstructionInventoryError>),
 }
 impl<E: fmt::Display> fmt::Display for DesignGarmentError<E> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -82,6 +98,13 @@ impl<E: fmt::Display> fmt::Display for DesignGarmentError<E> {
                 "garment identity {identity} repeats at {duplicate:?}, first supplied at {first:?}"
             ),
             Self::Inputs(issue) => write!(f, "garment current root inputs: {issue}"),
+            Self::Sewing(issue) => write!(f, "garment current sewing: {issue}"),
+            Self::Pockets(issue) => write!(f, "garment current Pockets: {issue}"),
+            Self::Notions(issue) => write!(f, "garment current notions: {issue}"),
+            Self::Closures(issue) => write!(f, "garment current Closures: {issue}"),
+            Self::Layers(issue) => write!(f, "garment current layers: {issue}"),
+            Self::Hems(issue) => write!(f, "garment current Hems: {issue}"),
+            Self::Constructions(issue) => write!(f, "garment current constructions: {issue}"),
         }
     }
 }
@@ -90,14 +113,22 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignGarmentError<E>
         match self {
             Self::DuplicateIdentity { .. } => None,
             Self::Inputs(issue) => Some(issue.as_ref()),
+            Self::Sewing(issue) => Some(issue.as_ref()),
+            Self::Pockets(issue) => Some(issue.as_ref()),
+            Self::Notions(issue) => Some(issue.as_ref()),
+            Self::Closures(issue) => Some(issue.as_ref()),
+            Self::Layers(issue) => Some(issue.as_ref()),
+            Self::Hems(issue) => Some(issue.as_ref()),
+            Self::Constructions(issue) => Some(issue.as_ref()),
         }
     }
 }
 /// Private exact garment ownership; held damage/empty draft scope stays available for inspection.
 ///
 /// Admission checks every owned id, then current root inputs. It does not certify current garment
-/// targets/sources/declarations, requested execution scope, geometry, global feature completeness or
-/// physical/release readiness. Modelled Lining/Fly retain their separate execution deferrals.
+/// targets/sources; use `validate_current` for structural source/assignment checks. Declaration roles,
+/// requested execution scope, geometry, global completeness and physical/release readiness stay
+/// separate. Modelled Lining/Fly retain their execution deferrals.
 /// ```compile_fail
 /// fn edit<H>(value: &mut sc_core::design::DesignGarment<H>, hems: sc_core::ontology::HemInventory) {
 ///     value.definition.hems = hems;
@@ -252,6 +283,55 @@ impl<H: DesignReferenceHost> DesignGarment<H> {
                 (value.id(), DesignGarmentPosition::Construction(position))
             }))
             .collect()
+    }
+    /// Revalidate all owned identities/current inputs, sewing and every actual garment source.
+    ///
+    /// Order is complete ownership/inputs, sewing, Pockets, notions, Closures, layers and Material
+    /// assignments, Hems, then constructions. Original validators include unused objects and complete
+    /// supplied contexts even for empty families. Raw repair/choice evidence stays unchanged;
+    /// held objects are never repaired, retargeted or cached as valid. Unresolved Material assignments
+    /// stay unresolved and logical Profile roles stay deferred. This supplies current structural
+    /// source/assignment validity only: complete declaration roles, operation execution, requested
+    /// envelope, geometry, resolved physical values and release readiness remain separate.
+    /// # Errors
+    /// Returns the first original contextual cause in documented order without partial success.
+    pub fn validate_current(&self) -> Result<(), DesignGarmentError<H::Error>> {
+        self.validate_owned_inputs()?;
+        self.sewing()
+            .validate_current()
+            .map_err(|issue| DesignGarmentError::Sewing(Box::new(issue)))?;
+        let structure = self.inputs().structure();
+        let pieces = structure.pieces().pieces();
+        let plan = structure.cut_plan();
+        let ledger = structure.topology();
+        self.pockets()
+            .validate_current(plan, pieces, ledger)
+            .map_err(|issue| DesignGarmentError::Pockets(Box::new(issue)))?;
+        self.notions()
+            .validate_current(plan, pieces, ledger)
+            .map_err(|issue| DesignGarmentError::Notions(Box::new(issue)))?;
+        self.closures()
+            .validate_current(self.notions(), plan, pieces, ledger)
+            .map_err(|issue| DesignGarmentError::Closures(Box::new(issue)))?;
+        self.layers()
+            .validate_current(pieces, ledger)
+            .map_err(|issue| DesignGarmentError::Layers(Box::new(issue)))?;
+        self.layers()
+            .material_assignments(self.inputs().materials(), self.inputs().inputs())
+            .map_err(|issue| DesignGarmentError::Layers(Box::new(issue)))?;
+        self.hems()
+            .validate_current(self.layers(), pieces, ledger)
+            .map_err(|issue| DesignGarmentError::Hems(Box::new(issue)))?;
+        self.constructions()
+            .validate_current(
+                pieces,
+                plan,
+                self.sewing().graph(),
+                self.sewing().landmarks(),
+                ledger,
+            )
+            .map_err(|issue| DesignGarmentError::Constructions(Box::new(issue)))?;
+        Ok(())
     }
     fn validate_owned_inputs(&self) -> Result<(), DesignGarmentError<H::Error>> {
         let mut seen = BTreeMap::new();

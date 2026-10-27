@@ -2233,6 +2233,7 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
         .expect("empty constructions"),
     })
     .expect("whole immutable owner before controlled drift");
+    assert!(garment.validate_current().is_ok());
     let sewing = garment.sewing();
     let state = sewing.inputs();
     let layers = LayerInventory::new(vec![], vec![], vec![]).expect("explicit empty layers");
@@ -2272,6 +2273,12 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
     assert!(std::error::Error::source(&admission)
         .expect("original current inputs cause")
         .is::<DesignInputsError<DesignSourcesError>>());
+    assert_eq!(
+        garment
+            .validate_current()
+            .expect_err("recheck whole current root"),
+        admission
+    );
     let mut collision = garment.definition().clone();
     collision.pockets = garment_ownership::pocket_with_id(id(5000));
     assert_eq!(
@@ -2328,3 +2335,6 @@ mod construction_gather_declarations;
 
 #[path = "support/garment_ownership.rs"]
 mod garment_ownership;
+
+#[path = "support/garment_current.rs"]
+mod garment_current;
