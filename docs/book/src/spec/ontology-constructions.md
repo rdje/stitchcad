@@ -143,8 +143,22 @@ for (position, actual) in sources.entries() {
 ```
 
 Getters/entries borrow actual objects; Debug shows counts/kind only. Empty families/held repairs
-remain. Ownership checks no current graph/copy/Piece sources, declaration roles, global Design ids
-or physical readiness. Complete current scope is next.
+remain. Ownership alone checks no current sources.
+
+`validate_current(pieces, plan, graph, landmarks, ledger)` first rechecks the whole graph, including
+CutPlan quantities/orientations, unique Piece context, all spans, stops and distributions, even with
+no constructions. It then validates every held Piece and complete source in family/authored order.
+An unused bad graph span blocks a healthy Dart; a damaged later construction blocks the whole check.
+Missing owners never retarget. Failures retain actual id, original family/index and concrete cause
+with raw repair evidence. `Error::source()` reaches original family errors, including Dart AnchorError;
+Graph → SewingError → CutPlanError also retains its exact standard chain (D273). No partial result,
+cached success, rewritten reference or inferred endpoint choice escapes.
+
+```rust,ignore
+sources.validate_current(&pieces, &plan, &graph, &landmarks, &ledger)?;
+```
+
+Declaration roles, global Design ids and physical/release readiness remain separate.
 
 | API token | Meaning |
 | --- | --- |
@@ -152,7 +166,7 @@ or physical readiness. Complete current scope is next.
 | `ConstructionKind` | Distinct semantic family |
 | `ConstructionInventoryPosition` | Family and zero-based authored index |
 | `ConstructionRef` | Typed borrow of an actual stored object |
-| `ConstructionInventoryError` | First duplicate id and original locations |
+| `ConstructionInventoryError` | Duplicate locations, Graph, missing Piece or concrete family cause |
 
 **Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable layer types share
 editable `LayerDefinition` input and structural validation. A definition names its served Piece,
@@ -202,11 +216,10 @@ checks prove no geometry or release approval.
 The census visits Facing/Lining/Interfacing; duplicate ids within/across families retain both original
 kind/position pairs. Empty families are draft scope, without whole Design/assembly completeness.
 
-`facings()`, `linings()` and `interfacings()` borrow original typed slices. `entries()` visits those
-same families/orders with typed LayerRef borrows and original positions. `facing(id)` selects only an
-actual Facing; a same-id Lining or Interfacing cannot substitute. These are inspection queries,
-including held damage after edits, and supply no current source certificate. Debug prints only
-family counts or the borrowed kind, without material reasons or customer source content.
+`facings()`, `linings()` and `interfacings()` borrow original typed slices; `entries()` retains
+family/order/positions with typed LayerRef borrows. `facing(id)` selects only Facing; same-id Lining/
+Interfacing cannot substitute. Inspection retains held damage without current certification.
+Debug shows counts/kind, excluding material reasons and customer sources.
 
 `validate_current(pieces, ledger)` first rejects duplicate Piece identities, then checks every layer's
 original served Piece and complete source list through its existing current validator. Missing owners
@@ -222,10 +235,9 @@ layers.require_in_scope()?;
 layers.validate_current(&current_pieces, &ledger)?;
 ```
 
-The first Lining produces the original env_lining cause, served Piece and G7 even if its geometry
-also needs repair. The modelled object remains available for inspection; no supported layer is
-substituted. Passing scope certifies neither sources nor geometry. Material metadata is checked
-[separately](material-inputs.md#layer-assignments); global ids, recipe operations and physical proof remain separate.
+The first Lining retains env_lining, served Piece and G7 even with damaged geometry; inspection stays
+available without substitution. Scope proves no sources/geometry. [Material metadata](material-inputs.md#layer-assignments),
+global ids, recipe operations and physical proof remain separate.
 
 | API token | Layer collection meaning |
 | --- | --- |
@@ -263,19 +275,16 @@ binding on the finish edge. This descriptor performs no turning, truing or offse
 A faced hem requires an existing Facing serving the same Piece: there is no generated substitute,
 second material assignment or copied Facing source list in the Hem.
 
-`Hem::new` checks complete owned finish-edge coverage and unique endpoints. It checks the held Facing
-identity, served Piece and its current sources through the layer validator. `facing()` borrows that
-canonical current target after repeating those checks. A removed target, replacement id, reassigned
-served Piece or invalid source returns a typed refusal. In particular, an old Facing whose source
-loses its middle interval is refused even if both original endpoints remain live. Same-id replacement
-content is inspected as current content, preserving its authored material/source intent.
+`Hem::new` checks complete owned finish coverage/unique endpoints, then the held Facing identity,
+served Piece and current layer sources. `facing()` borrows that target after repeating those checks.
+Removed/replacement ids, reassigned Pieces or invalid sources refuse; a Facing's lost middle refuses
+despite live endpoints. Same-id replacements use current authored material/source content.
 
-`edge_resolution()` preserves current fragment directions and raw interior repairs without rewriting
-the Hem. Facing and edge queries are independent: a valid Facing target does not certify the Hem's
-finish edge, physical fold or release readiness. Recipe/Design validates every declaration's existence,
-kind/domain/state and all current composition registries before execution. Profile fields report
-`DeferredToG4`; absence means only no profile field was authored. Actual fold geometry and executed
-finishing remain G2/G3, and every Hem reports `GeometricValidation::DeferredToG2`.
+`edge_resolution()` retains fragment directions/raw interior repairs without rewriting. Independent
+Facing success certifies no finish edge, physical fold or release readiness. Recipe/Design checks
+declaration existence/kind/domain/state and current composition registries before execution. Present
+profile fields report `DeferredToG4`; absence means only no profile field. Geometry/executed finishing
+remain G2/G3; every Hem retains `GeometricValidation::DeferredToG2`.
 
 `Hem::validate_current(piece, ledger, facing)` checks the original owner, depth domain, whole finish
 edge and original current Facing target in that order. Construction shares these rules. Facing
@@ -295,9 +304,8 @@ Facing and two live finish endpoints cannot conceal a deleted finish interior; h
 | `FacingOutsidePiece` | Current target serves a different Piece |
 | `InvalidFacing` | Current target's source/material content fails layer validation |
 
-HemError exposes its original InvalidFacing LayerError through std::error::Error::source().
-Chained diagnostic tools retain that same concrete error and its raw source-repair evidence.
-This changes no facing validation or stored intent; range evidence remains data, not a nested error.
+HemError's InvalidFacing exposes the original LayerError/raw evidence through `Error::source()`.
+Validation and stored intent are unchanged; range evidence is data, not a nested error.
 
 ## Owned Hems and complete current Facing joins
 
@@ -305,17 +313,14 @@ This changes no facing validation or stored intent; range evidence remains data,
 positions. `hems()` and `hem(id)` borrow original objects, including held damage after edits; raw
 presence supplies no current certificate. An explicit empty collection is draft scope.
 
-`validate_current(layers, pieces, ledger)` first checks every supplied layer's current served/source
-scope, including unused layers, then each Hem's original Piece, complete finish edge and exact Facing
-through the existing Hem validator. Duplicate Pieces refuse even with no Hems. Missing owners never
-retarget to another Piece. A lost finish interior in a later Hem refuses even when both endpoints and
-an earlier Hem remain valid; the original position/id/concrete HemError and repair data are retained.
+`validate_current(layers, pieces, ledger)` checks every layer's served/source scope, including unused
+layers, then each Hem's original Piece, complete finish edge and exact Facing through its validator.
+Duplicate Pieces refuse even without Hems; missing owners never retarget. A later lost finish interior
+refuses despite live endpoints/earlier Hems, retaining original position/id/HemError and repair data.
 
-Facing joins select only actual Facings. A removed Facing100 never transfers to surviving101, and
-Interfacing100 cannot stand in for it. A same-id Facing now serving another Piece also refuses.
-An unused damaged layer blocks the complete query even if all Hem targets are healthy or no Hems
-exist; its original LayerInventoryError/LayerError chain remains reachable. Objects and contexts are
-never rewritten or cached. Debug reports the Hem count without source content.
+Joins select actual Facings: removed100 never transfers to101 or Interfacing100; same-id reassignment
+also refuses. Unused damaged layers block healthy/empty Hem scope with the original LayerInventoryError/
+LayerError chain. Objects/contexts are never rewritten or cached; Debug shows Hem count only.
 
 For requested execution, apply layers.require_in_scope() first. Material assignment metadata remains
 its separate query; depth/fold declarations, global Design ids, physical folding and G2/G3/G4 proof

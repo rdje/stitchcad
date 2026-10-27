@@ -1,5 +1,9 @@
-//! Immutable ownership of the six remaining construction-source families; current scope is separate.
-use super::{Dart, EntityId, Gather, Grainline, Pleat, SeamAllowance, Tuck};
+//! Exact six-family construction ownership and complete current graph/copy/Piece/source scope.
+use super::{
+    CutPlan, Dart, DartError, EntityId, FoldError, Gather, GatherError, Grainline, GrainlineError,
+    IdentityLedger, Piece, Pleat, SeamAllowance, SeamAllowanceError, SewingError, SewingGraph,
+    SewingLandmark, Tuck,
+};
 use core::fmt;
 use std::collections::BTreeMap;
 
@@ -91,7 +95,7 @@ impl ConstructionRef<'_> {
     }
 }
 
-/// Original duplicate ownership refusal, independent of source/metadata/geometry validation.
+/// Original ownership or complete current-context/source refusal, without repaired content.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum ConstructionInventoryError {
     /// Two objects across any stored families claim the same owned id.
@@ -103,6 +107,71 @@ pub enum ConstructionInventoryError {
         /// Original first repeated location.
         duplicate: ConstructionInventoryPosition,
     },
+    /// Original complete graph/copy/Piece/landmark/distribution context refusal.
+    Graph(Box<SewingError>),
+    /// An actual construction's original held Piece is absent; no replacement is selected.
+    MissingPiece {
+        /// Actual construction id.
+        construction: EntityId,
+        /// Original family and authored index.
+        position: ConstructionInventoryPosition,
+        /// Original held Piece id.
+        piece: EntityId,
+    },
+    /// Original Dart source refusal.
+    Dart {
+        /// Actual construction id.
+        construction: EntityId,
+        /// Original family and authored index.
+        position: ConstructionInventoryPosition,
+        /// Original source cause and raw evidence.
+        issue: Box<DartError>,
+    },
+    /// Original Tuck source refusal.
+    Tuck {
+        /// Actual construction id.
+        construction: EntityId,
+        /// Original family and authored index.
+        position: ConstructionInventoryPosition,
+        /// Original source cause and raw evidence.
+        issue: Box<FoldError>,
+    },
+    /// Original Pleat source refusal, distinct from a Tuck.
+    Pleat {
+        /// Actual construction id.
+        construction: EntityId,
+        /// Original family and authored index.
+        position: ConstructionInventoryPosition,
+        /// Original source cause and raw evidence.
+        issue: Box<FoldError>,
+    },
+    /// Original Gather selected-copy/attachment/direction refusal.
+    Gather {
+        /// Actual construction id.
+        construction: EntityId,
+        /// Original family and authored index.
+        position: ConstructionInventoryPosition,
+        /// Original source cause and raw evidence.
+        issue: Box<GatherError>,
+    },
+    /// Original grain/print source refusal.
+    Grainline {
+        /// Actual construction id.
+        construction: EntityId,
+        /// Original family and authored index.
+        position: ConstructionInventoryPosition,
+        /// Original source cause and raw evidence.
+        issue: Box<GrainlineError>,
+    },
+    /// Original complete allowance-edge refusal.
+    SeamAllowance {
+        /// Actual construction id.
+        construction: EntityId,
+        /// Original family and authored index.
+        position: ConstructionInventoryPosition,
+        /// Original source cause and raw evidence.
+        issue: Box<SeamAllowanceError>,
+    },
 }
 impl fmt::Display for ConstructionInventoryError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -110,17 +179,40 @@ impl fmt::Display for ConstructionInventoryError {
             Self::DuplicateIdentity { identity, first, duplicate } => write!(
                 f, "construction identity {identity} repeats at {duplicate:?}, first supplied at {first:?}"
             ),
+            Self::Graph(issue) => write!(f, "construction current graph context: {issue}"),
+            Self::MissingPiece { construction, position, piece } => write!(
+                f, "construction {construction} at {position:?} lacks original Piece {piece}"
+            ),
+            Self::Dart { construction, position, issue } => write!(f, "Dart {construction} at {position:?}: {issue}"),
+            Self::Tuck { construction, position, issue } => write!(f, "Tuck {construction} at {position:?}: {issue}"),
+            Self::Pleat { construction, position, issue } => write!(f, "Pleat {construction} at {position:?}: {issue}"),
+            Self::Gather { construction, position, issue } => write!(f, "Gather {construction} at {position:?}: {issue}"),
+            Self::Grainline { construction, position, issue } => write!(f, "Grainline {construction} at {position:?}: {issue}"),
+            Self::SeamAllowance { construction, position, issue } => write!(f, "SeamAllowance {construction} at {position:?}: {issue}"),
         }
     }
 }
-impl std::error::Error for ConstructionInventoryError {}
+impl std::error::Error for ConstructionInventoryError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::Graph(issue) => Some(issue.as_ref()),
+            Self::Dart { issue, .. } => Some(issue.as_ref()),
+            Self::Tuck { issue, .. } | Self::Pleat { issue, .. } => Some(issue.as_ref()),
+            Self::Gather { issue, .. } => Some(issue.as_ref()),
+            Self::Grainline { issue, .. } => Some(issue.as_ref()),
+            Self::SeamAllowance { issue, .. } => Some(issue.as_ref()),
+            Self::DuplicateIdentity { .. } | Self::MissingPiece { .. } => None,
+        }
+    }
+}
 
 /// Private ordered Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance owners.
 ///
 /// Construction checks owned ids only and preserves exact objects, including held repairs. Referenced
 /// Pieces, operations, parameters and profile declarations are uses, not additional owners here.
 /// Pocket/notion/Closure/layer/Hem inventories remain separate. This component alone proves no current
-/// graph/copy/Piece sources, declaration roles, global Design identity or physical readiness.
+/// graph/copy/Piece sources; use `validate_current` for that structural scope. Declaration roles,
+/// global Design identity and physical readiness remain separate obligations.
 ///
 /// ```compile_fail
 /// fn edit(value: &mut sc_core::ontology::ConstructionInventory) { value.darts.clear(); }
@@ -186,6 +278,62 @@ impl ConstructionInventory {
             }
         }
         Ok(inventory)
+    }
+    /// Validate the complete current graph context, then every original owned source in entry order.
+    ///
+    /// Whole graph validation includes CutPlan quantities/orientations, unique Piece context, all
+    /// spans, stops and distributions, even for an empty inventory. Original held Pieces are selected
+    /// only after that preflight. No references are rewritten, endpoint choices inferred, results
+    /// cached or declarations evaluated. Success is not full Design or physical/release readiness.
+    /// # Errors
+    /// Returns the first original graph cause, missing held Piece, or concrete family source cause
+    /// with actual construction id and original family/index. No partial success is returned.
+    pub fn validate_current(
+        &self,
+        pieces: &[Piece],
+        plan: &CutPlan,
+        graph: &SewingGraph,
+        landmarks: &[SewingLandmark],
+        ledger: &IdentityLedger,
+    ) -> Result<(), ConstructionInventoryError> {
+        graph
+            .validate_current(plan, pieces, landmarks, ledger)
+            .map_err(|issue| ConstructionInventoryError::Graph(Box::new(issue)))?;
+        let pieces = pieces
+            .iter()
+            .map(|piece| (piece.id(), piece))
+            .collect::<BTreeMap<_, _>>();
+        for (position, source) in self.entries() {
+            let construction = source.id();
+            let piece =
+                pieces
+                    .get(&source.piece())
+                    .ok_or(ConstructionInventoryError::MissingPiece {
+                        construction,
+                        position,
+                        piece: source.piece(),
+                    })?;
+            macro_rules! validate {
+                ($value:expr, $kind:ident, $($context:expr),+) => {
+                    $value.validate_current($($context),+).map_err(|issue| {
+                        ConstructionInventoryError::$kind { construction, position, issue: Box::new(issue) }
+                    })
+                };
+            }
+            match source {
+                ConstructionRef::Dart(value) => validate!(value, Dart, piece, ledger),
+                ConstructionRef::Tuck(value) => validate!(value, Tuck, piece, ledger),
+                ConstructionRef::Pleat(value) => validate!(value, Pleat, piece, ledger),
+                ConstructionRef::Gather(value) => {
+                    validate!(value, Gather, piece, plan, graph, ledger)
+                }
+                ConstructionRef::Grainline(value) => validate!(value, Grainline, piece, ledger),
+                ConstructionRef::SeamAllowance(value) => {
+                    validate!(value, SeamAllowance, piece, ledger)
+                }
+            }?;
+        }
+        Ok(())
     }
     /// Original authored Dart order, without current-source certification.
     #[must_use]

@@ -205,6 +205,7 @@ its complete CutPlan, Piece collection, semantic landmark registry and topology 
 exposes shared spans, not public mutators; commands will construct and validate atomic replacements.
 Ids across this supplied scope must be unique. A missing copy, landmark, source interval or owned
 material portion is a typed `SewingError`, with resolution evidence retained for repair/choice cases.
+InvalidCutPlan retains the original CutPlanError through `Error::source()` (D273).
 
 For example, two physical copies of a cut-two Piece can join different neighbours while using the
 same pattern-frame edge interval. A one-to-many correspondence can use two spans: A's first half to

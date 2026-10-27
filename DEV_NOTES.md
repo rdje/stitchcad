@@ -3,16 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — exact construction-family ownership
+## _(2026-10-27 UTC)_ — whole current construction scope and original causes
 
-0400 owns immutable Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance vectors in fixed family/authored
-order. Original ids/Pieces and exact typed object borrows remain; first duplicate ownership retains
-both positions. Referenced parameter/profile/operation ids remain uses. Debug exposes counts/kind;
-explicit empty families and held repairs claim no current validity. Native4/compile-fail3/strict
-lint/fmt pass0; fixture index inference corrected to usize. Whole0399 scopes549 retain4 exact Git
-spans; retention/book/publication/size0. Book repetition tightened with existing facts retained.
-Promotion: ontology structural decision. Complete current scope .d.2, actual declarations .e, scoped
-acceptance .f and global garment/Design joins .5 remain; broader integration/CI is deferred.
+0401 preflights the actual whole graph/copy/Piece/landmark/distribution context, even with empty
+ownership, then checks every original Piece/source in fixed family/authored order. Missing owners
+never retarget; contextual errors preserve actual id/index and original concrete raw evidence.
+Later index1 damage in all6 families refuses without partial success or content changes. Historical
+split/reversal remains held; subsequent damage is rechecked without caching. D273 red0/1 rc101
+showed SewingError's empty standard cause chain hiding an existing exact CutPlanError; fixed and
+verified through nested aggregate downcasts. Native9+22/compile-fail3/strict lint/fmt pass0.
+Whole0400 scopes550 retain4 exact Git spans; retention/book/publication/size0. Repeated book wording
+tightened with original semantics retained. Promotion: ontology structural decision. Declaration
+roles .e, focused component acceptance .f and global Design/garment joins .5 remain; full CI later.
+
+[Whole0400 ownership lesson](docs/history/stitchcad-devnotes-part550.md) retains order, actual borrows and scope proofs.
 
 [Whole0399 grain/allowance lesson](docs/history/stitchcad-devnotes-part549.md) retains held-owner, source and book preservation proofs.
 

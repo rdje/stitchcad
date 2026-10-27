@@ -354,6 +354,29 @@ fn absent_copy_and_stale_cut_quantity_name_the_failed_reference() {
     );
 }
 #[test]
+fn current_cut_plan_refusal_preserves_the_original_standard_error_cause() {
+    let mut f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let mut definition = f.pieces.first().unwrap().definition().clone();
+    definition.quantity = 4;
+    *f.pieces.first_mut().unwrap() = Piece::new(definition, &f.ledger).unwrap();
+    let error = graph
+        .validate_current(&f.plan, &f.pieces, &[], &f.ledger)
+        .unwrap_err();
+    let original = CutPlanError::QuantityMismatch {
+        piece: id(100),
+        expected: 4,
+        actual: 2,
+    };
+    assert_eq!(error, SewingError::InvalidCutPlan(original.clone()));
+    assert_eq!(
+        std::error::Error::source(&error).and_then(|cause| cause.downcast_ref::<CutPlanError>()),
+        Some(&original)
+    );
+    assert!(std::error::Error::source(&original).is_none());
+    assert!(std::error::Error::source(&SewingError::IdentityCollision { id: id(300) }).is_none());
+}
+#[test]
 fn live_foreign_remainder_of_a_merged_edge_is_refused_after_reversal() {
     let mut f = fixture();
     let owned = f.span().a.range.edge();

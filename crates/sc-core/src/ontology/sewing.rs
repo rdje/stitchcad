@@ -415,7 +415,14 @@ impl fmt::Display for SewingError {
         }
     }
 }
-impl std::error::Error for SewingError {}
+impl std::error::Error for SewingError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::InvalidCutPlan(issue) => Some(issue),
+            _ => None,
+        }
+    }
+}
 
 struct ValidatedSide {
     side: SeamSideId,

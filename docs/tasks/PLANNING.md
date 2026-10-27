@@ -1174,23 +1174,19 @@ Verified D262 bounded v2 append report/proof retained whole in
 calibration remains .f.fixture-verification after .6.9; authoring/client/resource acceptance immediate.
 
 ## D268 — committed-v3 Git control paths
-
 [Whole corrected report/proofs0393](../history/stitchcad-devnotes-part543.md).
-
 ## D269 — generation client schema/dependency assumptions
-
 [Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
-
 ## D270 — RSS unit evidence before capacity signoff
-
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
-
 ## D271/D272 — current causes and derived census
-
-[Whole corrected reports0397](../history/stitchcad-devnotes-part547.md); [whole retirement proof0399](../history/stitchcad-devnotes-part549.md).
-
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part549.md:
-  4 exact Git spans rc=0; complete0399 scopes retained before retiring completed live proofs.
-- [x] ADDRESSED: same command rc=0; whole grain/allowance task, lesson, ledger and retirement retained.
-- [x] NO REGRESSION: ownership4 native/3 compile-fail, affected strict Clippy/fmt rc=0;
-  retention/book/publication/size rc=0. Broader component gate remains .4.f.
+[Whole corrected reports0397](../history/stitchcad-devnotes-part547.md); [whole retirement proof0400](../history/stitchcad-devnotes-part550.md).
+## D273 — sewing standard cause chain
+Owned P2 .6.4.5.4.d.2, fixed0401. Current stale-quantity reproduction:0/1 rc=101, then1/0 rc=0.
+Empty SewingError impl hid exact InvalidCutPlan cause. Native aggregate downcasts retain Graph →
+SewingError → CutPlanError; concrete leaf errors remain terminal. Existing typed refusal unchanged.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part550.md:4 exact
+  Git spans rc=0; whole0400 scopes retained before live retirement; D273 native red0/1 rc=101.
+- [x] ADDRESSED: native sewing22/construction9 rc=0; D273 exact original cause preserved, no retarget.
+- [x] NO REGRESSION: compile-fail3/strict affected Clippy/fmt/book/publication/retention/size rc=0;
+  broader component verification remains .4.f, full integration later.

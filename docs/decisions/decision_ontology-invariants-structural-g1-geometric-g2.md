@@ -19,6 +19,8 @@ answers: "do current grainline and allowance checks preserve held owners and unr
 
 answers: "does six-family construction ownership certify current sources or reorder authored identities?"
 
+answers: "must an empty construction inventory recheck the whole graph and retain nested original causes?"
+
 ## The fact / decision
 
 At gate **G1**, `sc-core`'s ontology types enforce the invariants that need **no 2D predicate**: a `Piece`'s
@@ -176,3 +178,13 @@ preserves authored order; duplicate owned ids refuse with both original position
 parameter/profile/operation uses do not become owners. Typed entries borrow actual objects; Debug
 exposes counts/kind only. Held repairs and explicit empty scope survive without a current-readiness
 claim. Current complete graph/copy/Piece/source checks are .d.2; declarations/global joins remain .e/.5.
+
+## Complete current construction scope — G1-SLICE.6.4.5.4.d.2
+
+Graph preflight applies its original complete CutPlan/Piece/landmark/span/distribution rules even
+without owned constructions. Only then does fixed family/authored traversal select each original
+Piece and run the concrete source validator. Missing owners never retarget; contextual failures retain
+actual id, original family/index and exact nested cause/raw evidence. Results are uncached and no
+partial view/reference rewrite/endpoint choice is introduced. D273 repairs SewingError's empty
+standard cause chain for InvalidCutPlan; leaf errors remain terminal. Declaration roles, global
+Design ownership and physical/release proof remain separate .e/.5/later-gate obligations.

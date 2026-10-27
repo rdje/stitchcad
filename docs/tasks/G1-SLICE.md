@@ -902,29 +902,29 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0399 current grain/allowance sources; [whole proof](../history/stitchcad-devnotes-part549.md).
 - ID: `G1-SLICE.6.4.5.4.d`
-  Status: `in_progress`
-  Goal: own exact six-family orders and complete current scope, duplicates and original typed causes.
-  Children .1 immutable ownership/order/ids; .2 complete current graph/copy/Piece/source scope.
+  Status: `done`
+  Goal: six-family ownership/current scope; .1 immutable orders/ids; .2 graph/copy/Piece/sources.
 - ID: `G1-SLICE.6.4.5.4.d.1`
   Status: `done`
-  Goal:0400 immutable six-family ownership, exact authored order/ids and typed actual borrows.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test construction_inventory_contract:4 passed rc=0;
-    same-kind and cross-family duplicates retain first original positions; numeric sorting is excluded.
-  - [x] ROOT CAUSE (WHY + WHERE): source review rc=0:distinct immutable types already own source
-    intent; collect exact vectors without coercion, sorting, source repair or borrowed-id ownership.
-  - [x] FIX: same native4 rc=0; private families, fixed traversal, original id/Piece and typed shared
-    entries implemented. Explicit empty families and held damaged content are retained.
-  - [x] ADDRESSED: same native4 rc=0; all6 actual pointer identities and every later-family duplicate
-    refuse correctly; shared parameter/profile/operation uses remain uses, Debug contains counts only.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc ontology::construction_inventory:3 compile-fail
-    contracts rc=0; affected strict Clippy/fmt rc=0. Initial fixture i32 index corrected to usize.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part549.md:4 spans rc=0;
-    retention/book/publication/size rc=0. Promotion: ontology structural decision. Current scope .d.2,
-    actual declarations .e, complete component acceptance .f and global garment/Design joins .5 remain.
+  Goal:0400 exact construction ownership; [whole proof](../history/stitchcad-devnotes-part550.md).
 - ID: `G1-SLICE.6.4.5.4.d.2`
-  Status: `pending`
-  Goal: validate complete actual graph/copy/Piece context before all owned source checks, even empty;
-  exact original family positions/causes, no partial result or repaired/retargeted data.
+  Status: `done`
+  Goal:0401 complete current context/sources and original typed chains.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test sewing_contract
+    current_cut_plan_refusal_preserves_the_original_standard_error_cause:0/1 rc=101, cause None.
+    D273 owned P2/fixed here; complete context required even empty.
+  - [x] ROOT CAUSE (WHY + WHERE): source review and native red rc=101:sewing.rs empty Error impl
+    hid InvalidCutPlan's original cause; complete graph preflight must precede actual-family selection.
+  - [x] FIX: cargo test -p sc-core --test construction_inventory_contract --test sewing_contract:
+    9+22 passed rc=0; graph-first current traversal and original contextual typed causes implemented.
+  - [x] ADDRESSED: same31 native checks rc=0:empty context, unselected graph source, duplicate Pieces,
+    stale quantities, missing owner, later index1 in all6 families, historical split/reversal and no cache;
+    exact cause equality/downcasts include Dart AnchorError and Graph/Sewing/CutPlan.
+  - [x] NO REGRESSION: old cases remain in31 native checks rc=0; affected strict Clippy/fmt and
+    cargo test -p sc-core --doc ontology::construction_inventory:3 compile-fail contracts rc=0.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part550.md:4 spans rc=0;
+    retention/book/publication/size rc=0; book facts retained, repetition tightened.
+    Promotion: ontology structural decision. Declarations .e/global joins .5/component gate .f remain.
 - ID: `G1-SLICE.6.4.5.4.e`
   Status: `pending`
   Goal: actual typed declaration/operation borrows over the single current canonical root; no id coercion.
