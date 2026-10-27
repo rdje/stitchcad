@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0435
+## Current leaf acceptance —0436
 
-- [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py: pinned
-  native contract model has distinct snapshots at1 and a matching stale precondition, rc=0.
-- [x] ADDRESSED: diagnosis scope only; revision_branch_probe.py shows separate maximum-issued counter
-  allocates2 and refuses old1, rc=0. D285 runtime fix .6.7.1.3 and native acceptance remain pending.
-- [x] NO REGRESSION: producer AST parsed rc=0; git diff --quiet HEAD -- crates rc=0; product unchanged.
-  This is contract-model evidence, not an implemented/native undo or reopen claim.
+- [x] ROOT CAUSE: git show HEAD:crates/sc-core/src/command.rs | rg prints original group exports
+  rc=0; a history intent must retain both current operator context and exact original authoring group.
+- [x] ADDRESSED: cargo test -p sc-core --test command_history_contract:3 passed rc=0; exact operator/
+  original author/order/revision/key, direction differences and first group/Design refusal preserved.
+- [x] NO REGRESSION: cargo clippy -p sc-core --test command_history_contract -- -D warnings:finished
+  rc=0; cargo test -p sc-core --doc command::history:1 passed rc=0; selected fmt --check rc=0.
 
 ## Goal
 
@@ -795,28 +795,28 @@ All98 completed ids/statuses and original proof pointers remain live there.
   and allocate fresh edits above it. Native branch/stale-request proof is required before closure.
 - ID: `G1-SLICE.6.7.1.1`
   Status: `done`
-  Goal:0435 reproduce/own D285 revision-reuse risk before undo implementation; specify separate
-  maximum-issued authoring counter, with runtime fix/native branch/reopen acceptance explicitly pending.
-  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py:
-    pinned native contract model reuses1 for distinct content and stale precondition matches, rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): revision_branch_probe.py rc=0 pins native57767b0 counter successor,
-    current-revision commit allocation, equality precondition and required undo counter restoration.
-  - [x] FIX: diagnosis/specification scope only; revision_branch_probe.py shows separate maximum-issued
-    counter gives fresh2 and refuses old1, rc=0. D285 implementation remains priority .6.7.1.3, not fixed.
-  - [x] ADDRESSED: tracked producer rc=0; durable P1 owner, new branch/storage obligations and task
-    decomposition recorded. No current native undo execution or completed fix follows from this model.
-  - [x] NO REGRESSION: producer AST parsed rc=0; git diff --quiet HEAD -- crates rc=0; product unchanged.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part586.md:4 exact
-    Git spans rc=0; whole0434/D283/D284 continuity retained. Book/decision/defect/pointer/frontier aligned.
-  Native publication80 chapters/159 scoped API rows/1466 source links/2448 rendered links rc=0;
-  retention1040/global70 fits rc=0.
-  Promotion: indexed command-layer decision; complete runtime undo feature and verification follow.
+  Goal:0435 D285 diagnosis; [whole scope/proofs](../history/stitchcad-devnotes-part587.md); runtime fix pending.
 - ID: `G1-SLICE.6.7.1.2`
-  Status: `pending`
-  Goal: typed undo/redo operation input with current operator/revision/key and exact original group;
-  retain original initiating actor separately. Validate group/Design consistency and preserve all data.
-  Authority must cover original command scopes using actual trusted current operator facts; no model,
-  approval or replay capability follows from construction. Runtime effect/history-action audit .3.
+  Status: `done`
+  Goal:0436 typed immutable history direction/current operator context/exact original group,
+  explicit membership and Design consistency; original author/order/revision/keys never rewritten.
+  - [x] REPRODUCE / ISSUE: git show HEAD:crates/sc-core/src/command.rs | rg -n prints original group
+    exports rc=0; operator/current-operation metadata must remain separate from original authoring data.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test command_history_contract:3 passed rc=0;
+    original group authority/revision cannot stand in for the current operation's actor/revision/key.
+  - [x] FIX: cargo clippy -p sc-core --test command_history_contract -- -D warnings:finished rc=0;
+    private owned original/context/direction, explicit original group membership then exact Design check.
+  - [x] ADDRESSED: cargo test -p sc-core --test command_history_contract:3 passed rc=0; full role/
+    principal distinction, exact counters beyond128 bits, original order/repeated keys and typed refusals.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc command::history:1 passed rc=0; selected strict
+    Clippy/fmt --check rc=0. Direction/key differences remain input data, not accepted replay/effects.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part587.md:3 exact
+    Git spans rc=0; whole0435 diagnosis retained with native-runtime proof still explicitly pending.
+  Cargo commands use scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Native publication80 chapters/159 scoped API rows/1466 source links/2449 rendered links rc=0;
+  retention1041/global71 fits rc=0.
+  Constructor grants no authority/current snapshot/audit binding/model/replay or undo capability;
+  actual bounded traversal, action audit and D285 fix/native acceptance remain .6.7.1.3/.7.
 - ID: `G1-SLICE.6.7.1.3`
   Status: `pending`
   Goal: bounded actual whole-model undo/redo, separate non-rewinding maximum-issued revisions (D285),

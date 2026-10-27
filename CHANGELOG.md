@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0435 — own revision reuse before undo branching
+## STITCHCAD-G1-0436 — preserve current history operator and original author
 
-- D285 P1: pinned native contract model proves restored-counter successor can name different content.
-- Specify separate maximum-issued authoring revision while preserving undo/redo snapshot counters.
-- Track immediate runtime fix/native branch proof and storage/reopen obligation; no runtime fix claimed.
-- Read-only model probe/AST pass; product unchanged. Whole0434/D283/D284 continuity retained586.
+- Typed Undo/Redo intent owns current operator/revision/key and exact original authoring group separately.
+- Validate explicit membership then Design; retain original author, exact revision, member order and keys.
+- Native history3/privacy1/selected strict lint/fmt pass; no runtime traversal/authority or D285 fix claimed.
+- Whole0435 diagnosis scope, lesson and ledger retained587 with three exact native source intervals.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part587](docs/history/stitchcad-devnotes-part587.md) | whole0435 D285 diagnosis scope/lesson/ledger | 36 lines, 2907 bytes, sha256:6efd580d… |
 | [part586](docs/history/stitchcad-devnotes-part586.md) | whole0434 and D283/D284 retained continuity | 49 lines, 4192 bytes, sha256:6cd57452… |
 | [part585](docs/history/stitchcad-devnotes-part585.md) | whole0433 private group-preparation scope/lesson/ledger | 38 lines, 3136 bytes, sha256:f8e993e6… |
 | [part584](docs/history/stitchcad-devnotes-part584.md) | whole0432 sequential metadata-group scope/lesson/ledger | 42 lines, 3641 bytes, sha256:fd216e2b… |

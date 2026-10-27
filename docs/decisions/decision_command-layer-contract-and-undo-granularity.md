@@ -121,3 +121,14 @@ redo restore original snapshots/counters. Original counter/identity restoration 
 This is a preventative P1 finding, not implemented undo proof. Runtime fix/native branch refusal is
 owned immediately by .6.7.1.3; storage/reopen .7 must retain issuance independently of undo history.
 The read-only tracked model probe and native-source guards pass; actual undo/reopen acceptance is pending.
+
+## History intent and operator0436
+
+answers: "how do current history operator and original author remain distinct?"
+
+G1-SLICE.6.7.1.2 owns current operation context/direction and exact original CommandMutationGroup.
+Explicit membership then Design must match; operator/revision may differ from original author/base.
+Both complete actor/principal claims remain untrusted and exact; original payloads/keys/order remain.
+Native schema3/privacy1/lint/fmt pass. Runtime must authenticate current operator for every original
+command scope, bind the exact accepted record/current revision/key and enforce bounded atomic effects.
+Input construction is no history capability; traversal/action audit and D285 runtime fix remain pending.

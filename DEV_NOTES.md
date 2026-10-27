@@ -3,16 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — D285 revision restoration and branch identity
+## _(2026-10-27 UTC)_ — current history operator and original authoring intent
 
-0435 .6.7.1.1 pins the actual counter/equality/commit allocation/undo clauses and models two distinct
-snapshots both named1 after restore-and-successor. Old optimistic preconditions would falsely match.
-Separate maximum-issued authoring counter yields2 while undo/redo preserve original snapshot counters.
-Tracked read-only probe/AST pass; product unchanged. This is a contract counterexample, not runtime
-undo proof. P1 D285 remains owned .6.7.1.3, with native branch/refusal and reopen .7 acceptance pending.
-Promotion: command-layer decision. Typed current-operator/original-group history inputs .1.2 next.
+0436 .6.7.1.2 owns current operator/revision/key separately from exact original group and direction.
+Explicit original membership precedes Design consistency; full actor/principal, original revision,
+order/payloads/aliases stay exact. Immutable getters/private fields confer no authority or effect.
+Native history3/privacy1/selected strict lint/fmt pass. Promotion: command-layer decision. Runtime
+traversal/action audit and D285 maximum-issued revision/native branch proof remain .6.7.1.3; reopen .7.
 
-[Whole0434 scope/lesson/ledger and retained D283/D284 continuity](docs/history/stitchcad-devnotes-part586.md) preserve exact source evidence.
+[Whole0435 D285 diagnosis scope/lesson/ledger](docs/history/stitchcad-devnotes-part587.md) retains the model/native-proof boundary.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

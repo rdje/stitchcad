@@ -401,3 +401,36 @@ later failure, retry/capacity/conflicts, permission separation and revocation at
 Full command integration, persistence/reopen, undo/redo, other mutation handlers, adapters and actual
 recipe/geometry/physical evaluation remain pending.
 
+## Typed history operation inputs — runtime pending
+
+CommandHistoryRequest::new(context, original_group, direction) owns a current operation context and
+the exact original CommandMutationGroup. CommandHistoryDirection is Undo or Redo. The context
+retains an explicit current operator, exact expected revision, retry key and Some(original_group.id()).
+The constructor checks group membership first, then Design consistency. GroupMismatch and
+DesignMismatch retain the original expected/requested values; absent membership is not rewritten.
+
+```rust
+let request = CommandHistoryRequest::new(
+    current_operation_context, original_accepted_group,
+    CommandHistoryDirection::Undo,
+)?;
+let operator_claim = request.context().actor();
+let original_author_claim = request.original_actor();
+let exact_original_members = request.original().mutations();
+```
+
+The current operator and revision may differ from the original author and base revision. For example,
+a human may request traversal of a group originally authored by an agent. Both complete claims remain
+distinct; the agent's principal is not substituted for its identity. The original group keeps its exact
+actor, revision, order, payloads and retry aliases. Undo and Redo remain different intents even if a
+caller submits the same operation key. Runtime must decide key conflicts and exact result replay.
+
+context(), original(), original_actor() and direction() expose immutable submitted data. A compiler
+check rejects replacing the original group directly. Constructor success does not authenticate either
+claim, bind an accepted audit record, establish a current revision, grant authority or traverse history.
+Runtime must authenticate the current operator over all original command scopes, check the exact
+accepted original group, current revision and operation key, then enforce bounded atomic traversal.
+The three native schema cases/privacy check are focused input proof. Actual undo/redo, separate
+revision issuance for D285, dropped-history/action-audit behavior and native branch/reopen proof remain
+their explicitly pending implementation tasks.
+
