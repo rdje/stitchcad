@@ -109,3 +109,15 @@ before infallible exclusive model/reserve/audit moves. Retain old host through t
 One accepted group adds one immutable original actor/request/result/grant/time entry and advances once,
 including net no-op. Exact replay adds neither. Native commit6/previous24/diff5/lint/fmt are focused
 proof. Persistence/reopen, bounded undo, byte/work/cancellation limits and full integration remain owned.
+
+## Revision identity across undo branches — D285
+
+answers: "how can undo restore counters without accepting stale branch requests?"
+
+0435 .6.7.1.1 pins the native57767b0 contract/code and reproduces a counter model: restore0 after
+snapshot1, then current.successor gives a distinct snapshot1 that accepts the old revision precondition.
+Undo must preserve a separate maximum-issued counter; new authoring allocates above it, while undo/
+redo restore original snapshots/counters. Original counter/identity restoration remains unchanged.
+This is a preventative P1 finding, not implemented undo proof. Runtime fix/native branch refusal is
+owned immediately by .6.7.1.3; storage/reopen .7 must retain issuance independently of undo history.
+The read-only tracked model probe and native-source guards pass; actual undo/reopen acceptance is pending.

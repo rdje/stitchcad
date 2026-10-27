@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0434
+## Current leaf acceptance —0435
 
-- [x] ROOT CAUSE: git show HEAD:crates/sc-core/src/command/bus.rs | rg prints publication/histories
-  absent and only GetPieceList execute dispatch rc=0; private preparations supply no accepted transitions.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:30 passed rc=0;
-  previous24/commit6 prove actual metadata/revision/reserve/audit and exact replay/refusal boundaries.
-- [x] NO REGRESSION: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished
-  rc=0; cargo test -p sc-core --lib command::bus::difference:5 passed rc=0; selected fmt --check rc=0.
+- [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py: pinned
+  native contract model has distinct snapshots at1 and a matching stale precondition, rc=0.
+- [x] ADDRESSED: diagnosis scope only; revision_branch_probe.py shows separate maximum-issued counter
+  allocates2 and refuses old1, rc=0. D285 runtime fix .6.7.1.3 and native acceptance remain pending.
+- [x] NO REGRESSION: producer AST parsed rc=0; git diff --quiet HEAD -- crates rc=0; product unchanged.
+  This is contract-model evidence, not an implemented/native undo or reopen claim.
 
 ## Goal
 
@@ -781,35 +781,48 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal: actual revision preconditions, idempotency replay and append-only actor audit trail.
 - ID: `G1-SLICE.6.6.1`
   Status: `done`
-  Goal:0434 actual atomic in-memory metadata-group publication, exact revision/replay and append-only
-  initiating-actor audit, explicit finite accepted-group count and fresh effect-boundary authority.
-  - [x] REPRODUCE / ISSUE: git show HEAD:crates/sc-core/src/command/bus.rs | rg -n prints mutation
-    publication/histories absent and GetPieceList-only execute dispatch rc=0; no accepted metadata edit.
-  - [x] ROOT CAUSE (WHY + WHERE): native HEAD bus source rc=0; effects need actual successor model,
-    concrete remaining reserve, exact original request registry and actor/result audit as one transition.
-  - [x] FIX: cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings:finished rc=0;
-    finite explicit edit constructor, initial/final complete Commit checks, preflight and exclusive moves.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:30 passed rc=0;
-    previous24/commit6 cover actual metadata/revision/IDs/actor, replay after later/full, conflicts/rollback,
-    revision witnesses, permission/configuration refusal and final-check revocation without effects.
-  - [x] NO REGRESSION: previous24 pass within30 rc=0; cargo test -p sc-core --lib
-    command::bus::difference:5 passed rc=0; selected strict Clippy/fmt --check rc=0. No preview effects.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part585.md:3 exact
-    Git spans rc=0; whole0433 retained. README/book/status/pointer/frontier/lesson/decision aligned.
-  Compiler privacy6 passes rc=0; direct replay/audit erasure is refused. Native publication80 chapters/
-  159 scoped API rows/1466 source links/2448 rendered links rc=0; retention1039/global69 fits rc=0.
-  Maintained-reference81 files/17736 lines/1238455 bytes rc=0.
-  Cargo commands use scripts/local_environment.py. Initial test guard moved non-Copy counters;
-  borrow and unused import corrected. Promotion: indexed command-layer decision. Audit/replay cover
-  this owner lifetime only; persistence .7, undo .6.7, work/cancellation .6.8 and full .6.9 remain owned.
+  Goal:0434 atomic metadata commit/replay/audit; [whole scope/proofs](../history/stitchcad-devnotes-part586.md).
 - ID: `G1-SLICE.6.7`
   Status: `in_progress`
   Goal: bounded semantic undo/redo, original actor/revision restoration and explicit dropped-history report.
 - ID: `G1-SLICE.6.7.1`
-  Status: `pending`
+  Status: `in_progress`
   Goal: explicit bounded metadata-group undo/redo with original semantic identities/revisions/actor,
   declared dropped-history reporting, fresh effect authority/current-source checks and atomic failure.
   Keep append-only original audit/replay independent; never rewind/reuse issued entity identities.
+  Own D285: counter restoration must not let a new branch reuse an earlier snapshot revision.
+  Reproduce the contract counterexample first; preserve separate maximum-issued revision through undo
+  and allocate fresh edits above it. Native branch/stale-request proof is required before closure.
+- ID: `G1-SLICE.6.7.1.1`
+  Status: `done`
+  Goal:0435 reproduce/own D285 revision-reuse risk before undo implementation; specify separate
+  maximum-issued authoring counter, with runtime fix/native branch/reopen acceptance explicitly pending.
+  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py:
+    pinned native contract model reuses1 for distinct content and stale precondition matches, rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): revision_branch_probe.py rc=0 pins native57767b0 counter successor,
+    current-revision commit allocation, equality precondition and required undo counter restoration.
+  - [x] FIX: diagnosis/specification scope only; revision_branch_probe.py shows separate maximum-issued
+    counter gives fresh2 and refuses old1, rc=0. D285 implementation remains priority .6.7.1.3, not fixed.
+  - [x] ADDRESSED: tracked producer rc=0; durable P1 owner, new branch/storage obligations and task
+    decomposition recorded. No current native undo execution or completed fix follows from this model.
+  - [x] NO REGRESSION: producer AST parsed rc=0; git diff --quiet HEAD -- crates rc=0; product unchanged.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part586.md:4 exact
+    Git spans rc=0; whole0434/D283/D284 continuity retained. Book/decision/defect/pointer/frontier aligned.
+  Native publication80 chapters/159 scoped API rows/1466 source links/2448 rendered links rc=0;
+  retention1040/global70 fits rc=0.
+  Promotion: indexed command-layer decision; complete runtime undo feature and verification follow.
+- ID: `G1-SLICE.6.7.1.2`
+  Status: `pending`
+  Goal: typed undo/redo operation input with current operator/revision/key and exact original group;
+  retain original initiating actor separately. Validate group/Design consistency and preserve all data.
+  Authority must cover original command scopes using actual trusted current operator facts; no model,
+  approval or replay capability follows from construction. Runtime effect/history-action audit .3.
+- ID: `G1-SLICE.6.7.1.3`
+  Status: `pending`
+  Goal: bounded actual whole-model undo/redo, separate non-rewinding maximum-issued revisions (D285),
+  fresh current operator authority over original commands, exact operation retry and append-only action
+  audit. Preserve original author/group/IDs/revisions; bounded drop/redo-branch reports and atomic failure.
+  Native original-branch request must refuse after undo/new edit; no issued ID may be rewound/reused.
 - ID: `G1-SLICE.6.8`
   Status: `pending`
   Goal: typed progress/cancellation with no partial state/artifact; explicit resource bounds.
@@ -829,6 +842,8 @@ All98 completed ids/statuses and original proof pointers remain live there.
   formatting, ULID ids, no wall-clock), schema version + migrations, recoverable-unknown-extension
   preservation, crash-consistent atomic multi-file commits, autosave/recovery, and the repository
   trait with the named WASM (files + IndexedDB) backend.
+  D285: persist/restore the maximum-issued revision separately from restored undo state; a reopened
+  Design must never reissue an earlier snapshot revision. Native reopen/branch acceptance required.
   Typed formula expression/statement/recipe identity fields and digest domains must stay framed;
   .3f.1a decision requires cross-kind bind/recipe call-collision controls before storage or hashing.
   Acceptance: forced-interruption and failed-migration recovery are tested, not asserted; a

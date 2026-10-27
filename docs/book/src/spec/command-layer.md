@@ -280,6 +280,13 @@ a piece nobody drafted.
 The last three rows are the ones an implementation gets wrong by accident, so they are stated as rules:
 undo is a property of the *design*, and neither a derived instance nor a reopened file inherits a history.
 
+Restoring a revision counter must also restore the exact snapshot that counter names. A new edit
+after undo must never reuse a counter that named a different snapshot: an old optimistic precondition
+would then match different content. Undo must preserve a separate maximum-issued counter for fresh
+authoring; redo restores the original snapshot/counter. Storage/reopen must retain that issuance
+state independently of the noncanonical undo stack. This D285 requirement is owned by G1-SLICE.6.7.1
+and G1-SLICE.7; native undo/branch/reopen acceptance is still pending.
+
 The [typed group-input guide](command-execution.md#typed-mutation-group-inputs) covers implemented
 request consistency, sequential metadata previews and atomic metadata-group publication. Persistence
 and undo/redo remain their later implementation work.

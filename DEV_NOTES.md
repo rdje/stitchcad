@@ -3,17 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — atomic in-memory metadata commit, replay and audit
+## _(2026-10-27 UTC)_ — D285 revision restoration and branch identity
 
-0434 .6.6.1 publishes validated successor model/reserve/accepted record only after allocation preflight
-and fresh complete Commit checks at entry/effect. Exact group replay returns its first result despite
-later revisions/full capacity; partial-key/group conflicts refuse. Stale edits retain actual advances
-and journal coverage origin. Explicit finite host capacity refuses new records without discarding old.
-Native bus30 (previous24/commit6), diff5/privacy6 and strict selected lint/fmt pass. Initial test guard moved
-non-Copy counters; borrow and unused import corrected. Promotion: command-layer decision. Persistence,
-undo, payload/work/cancellation bounds and complete integration remain separately owned.
+0435 .6.7.1.1 pins the actual counter/equality/commit allocation/undo clauses and models two distinct
+snapshots both named1 after restore-and-successor. Old optimistic preconditions would falsely match.
+Separate maximum-issued authoring counter yields2 while undo/redo preserve original snapshot counters.
+Tracked read-only probe/AST pass; product unchanged. This is a contract counterexample, not runtime
+undo proof. P1 D285 remains owned .6.7.1.3, with native branch/refusal and reopen .7 acceptance pending.
+Promotion: command-layer decision. Typed current-operator/original-group history inputs .1.2 next.
 
-[Whole0433 prepared-group scope/lesson/ledger](docs/history/stitchcad-devnotes-part585.md) retains exact native sources.
+[Whole0434 scope/lesson/ledger and retained D283/D284 continuity](docs/history/stitchcad-devnotes-part586.md) preserve exact source evidence.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

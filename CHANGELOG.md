@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0434 — commit actual metadata groups with replay and audit
+## STITCHCAD-G1-0435 — own revision reuse before undo branching
 
-- Explicit finite edit capacity; fresh complete Commit authority at entry and immediately before effects.
-- Actual validated successor model/reserve/audit publication; exact whole-group retry returns first result.
-- Group/actor-key conflicts and partial overlap refuse; stale errors name actual available revision advances.
-- Native bus30 (previous24/commit6), diff5 and selected strict lint/fmt pass; whole0433 proof retained585.
-- In-memory scope only; persistence, undo, work/cancellation bounds and complete command integration pending.
+- D285 P1: pinned native contract model proves restored-counter successor can name different content.
+- Specify separate maximum-issued authoring revision while preserving undo/redo snapshot counters.
+- Track immediate runtime fix/native branch proof and storage/reopen obligation; no runtime fix claimed.
+- Read-only model probe/AST pass; product unchanged. Whole0434/D283/D284 continuity retained586.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -44,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part586](docs/history/stitchcad-devnotes-part586.md) | whole0434 and D283/D284 retained continuity | 49 lines, 4192 bytes, sha256:6cd57452… |
 | [part585](docs/history/stitchcad-devnotes-part585.md) | whole0433 private group-preparation scope/lesson/ledger | 38 lines, 3136 bytes, sha256:f8e993e6… |
 | [part584](docs/history/stitchcad-devnotes-part584.md) | whole0432 sequential metadata-group scope/lesson/ledger | 42 lines, 3641 bytes, sha256:fd216e2b… |
 | [part583](docs/history/stitchcad-devnotes-part583.md) | whole0431 and command implementation continuity | 161 lines, 12908 bytes, sha256:bfff72b7… |

@@ -8,11 +8,15 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D283/D284 — corrected publication/archive count scopes
-[Whole correction/reproduction/proofs](../history/stitchcad-devnotes-part581.md); fixed by0426/0429, budgets unchanged.
-- [x] ROOT CAUSE: transition_receipts.py record581:5 exact Git spans rc=0; full correction ledgers retained.
-- [x] ADDRESSED: public archive inventory preserves D283/D284 exact bytes rc=0; active44/global65 fits64/group/192 aggregate.
-- [x] NO REGRESSION: verify-retention1035 records OK rc=0; source identities/caps unchanged; no packing claimed.
+## D285 — restored revision reused by a different undo branch
+P1 latent integrity risk; owner G1-SLICE.6.7.1, in_progress. Restore counter then current.successor
+can admit an old snapshot precondition against different content. Maximum-issued revision must survive undo.
+- [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/command_layer/revision_branch_probe.py: pinned
+  native contract model reuses1, stale precondition matches; separate maximum-issued gives2, rc=0.
+- [x] ADDRESSED: diagnosis scope only: revision_branch_probe.py records1/2 counterexample rc=0; runtime fix .6.7.1.3 pending.
+- [x] NO REGRESSION: producer AST parsed rc=0; git diff --quiet HEAD -- crates rc=0; product code unchanged.
+Persistence must restore maximum-issued revision; owned with actual storage/reopen in G1-SLICE.7.
+D283/D284 remain fixed; [whole correction/proofs](../history/stitchcad-devnotes-part581.md).
 
 ## Goal
 
