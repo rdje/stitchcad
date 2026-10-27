@@ -1942,3 +1942,266 @@ fn hem_declarations_are_metadata_scope_and_do_not_approve_missing_current_pieces
         .expect("explicit empty metadata scope")
         .is_empty());
 }
+
+fn with_layers() -> (
+    DesignInputs<DesignSources>,
+    sc_core::ontology::LayerInventory,
+) {
+    use sc_core::ontology::{
+        DirectedRange, Direction, EdgeRange, Facing, Interfacing, LayerDefinition, LayerInventory,
+        LayerOffsetRelationship, Lining, MaterialAssignment, Param, Rational,
+    };
+    let (state, _) = with_sewing_graph(fixture(), vec![]);
+    let structure = state.structure();
+    let piece = structure
+        .pieces()
+        .pieces()
+        .first()
+        .expect("actual served Piece");
+    let edge = piece.edges().next().expect("actual held edge").edge;
+    let middle = Param::new(Rational::new(1, 2).expect("exact midpoint")).expect("inside edge");
+    let layer = |identity, operation| LayerDefinition {
+        id: id(identity),
+        served_piece: piece.id(),
+        offset: LayerOffsetRelationship {
+            operation: id(operation),
+            sources: vec![
+                DirectedRange {
+                    range: EdgeRange::new(edge, middle, Param::END).expect("authored second half"),
+                    direction: Direction::Reversed,
+                },
+                DirectedRange {
+                    range: EdgeRange::new(edge, Param::START, middle).expect("authored first half"),
+                    direction: Direction::Original,
+                },
+            ],
+        },
+        material: MaterialAssignment::Unresolved("private layer selection".into()),
+    };
+    let layers = LayerInventory::new(
+        vec![
+            Facing::new(layer(104003, 10), piece, structure.topology()).expect("actual Facing"),
+            Facing::new(layer(104001, 2000), piece, structure.topology()).expect("later Facing"),
+        ],
+        vec![
+            Lining::new(layer(104004, 5001), piece, structure.topology()).expect("modelled Lining"),
+        ],
+        vec![
+            Interfacing::new(layer(104000, 108000), piece, structure.topology())
+                .expect("actual Interfacing"),
+        ],
+    )
+    .expect("distinct actual layer owners");
+    (state, layers)
+}
+
+#[test]
+fn layer_offset_declarations_keep_original_types_order_and_relationships_without_numeric_coercion()
+{
+    use sc_core::ontology::{Direction, LayerKind, LayerRef};
+    let (state, layers) = with_layers();
+    let views = state
+        .layer_offset_declarations(&layers)
+        .expect("current root metadata");
+    assert_eq!(views.len(), 4);
+    assert!(
+        matches!(views.first().expect("first").layer(), LayerRef::Facing(value)
+        if core::ptr::eq(value, layers.facings().first().expect("actual first Facing")))
+    );
+    assert!(
+        matches!(views.get(2).expect("third").layer(), LayerRef::Lining(value)
+        if core::ptr::eq(value, layers.linings().first().expect("actual Lining")))
+    );
+    assert!(
+        matches!(views.last().expect("last").layer(), LayerRef::Interfacing(value)
+        if core::ptr::eq(value, layers.interfacings().first().expect("actual Interfacing")))
+    );
+    assert_eq!(
+        views
+            .iter()
+            .map(|view| view.layer().kind())
+            .collect::<Vec<_>>(),
+        vec![
+            LayerKind::Facing,
+            LayerKind::Facing,
+            LayerKind::Lining,
+            LayerKind::Interfacing
+        ]
+    );
+    for ((_, layer), view) in layers.entries().zip(&views) {
+        assert!(core::ptr::eq(view.canonical_inputs(), state.inputs()));
+        assert!(core::ptr::eq(
+            view.relationship(),
+            &layer.definition().offset
+        ));
+        assert_eq!(view.layer(), layer);
+        assert_eq!(
+            view.relationship()
+                .sources
+                .iter()
+                .map(|source| source.direction)
+                .collect::<Vec<_>>(),
+            vec![Direction::Reversed, Direction::Original]
+        );
+        let debug = format!("{view:?}");
+        assert!(!debug.contains("private layer selection"));
+        assert!(!debug.contains("operation"));
+    }
+    assert_eq!(
+        views
+            .iter()
+            .map(|view| view.relationship().operation)
+            .collect::<Vec<_>>(),
+        [10, 2000, 5001, 108000].map(id)
+    );
+    assert!(state.inputs().length(id(10)).is_some());
+    assert!(state.inputs().scalar(id(2000)).is_some());
+    assert!(state.parameters().parameter(id(5001)).is_some());
+    // Those same-number input/metadata records cannot supply an operation kind or execution result.
+    assert_eq!(state.inputs(), fixture().structure.inputs());
+}
+
+#[test]
+fn layer_offset_declarations_leave_modelled_lining_execution_to_its_named_scope_check() {
+    use sc_core::ontology::LayerEnvelopeError;
+    let (state, layers) = with_layers();
+    let views = state
+        .layer_offset_declarations(&layers)
+        .expect("Lining remains inspectable");
+    for (index, view) in views.iter().enumerate() {
+        if index == 2 {
+            let issue = view
+                .layer()
+                .require_in_scope()
+                .expect_err("modelled Lining is outside v1 execution");
+            assert_eq!(
+                issue,
+                LayerEnvelopeError::LiningDeferred {
+                    served_piece: id(95000)
+                }
+            );
+            assert_eq!(issue.diagnostic(), "env_lining");
+            assert_eq!(issue.proving_gate(), "G7");
+        } else {
+            assert_eq!(view.layer().require_in_scope(), Ok(()));
+        }
+    }
+}
+
+#[test]
+fn layer_offset_declarations_do_not_certify_missing_current_served_pieces_or_infer_empty_content() {
+    use sc_core::ontology::{LayerInventory, LayerInventoryError};
+    let (state, layers) = with_layers();
+    let mut definition = state.definition().clone();
+    let mut structure = definition.structure.definition().clone();
+    structure.pieces = PieceInventory::new(vec![]).expect("explicit current empty Pieces");
+    structure.cut_plan = CutPlan::new(vec![], &[]).expect("explicit current empty copies");
+    definition.structure = DesignStructure::new(structure).expect("actual current structure");
+    let current = DesignInputs::new(definition).expect("actual unchanged canonical metadata");
+    let views = current
+        .layer_offset_declarations(&layers)
+        .expect("original relationship stays inspectable");
+    assert_eq!(views.len(), 4);
+    assert!(core::ptr::eq(
+        views.first().expect("original first").relationship(),
+        &layers
+            .facings()
+            .first()
+            .expect("actual original Facing")
+            .definition()
+            .offset
+    ));
+    assert!(
+        matches!(layers.validate_current(current.structure().pieces().pieces(), current.structure().topology()),
+        Err(LayerInventoryError::MissingServedPiece { piece, .. }) if piece == id(95000))
+    );
+    assert!(current
+        .layer_offset_declarations(
+            &LayerInventory::new(vec![], vec![], vec![]).expect("empty layers")
+        )
+        .expect("explicit empty metadata scope")
+        .is_empty());
+}
+
+#[test]
+fn layer_offset_declarations_recheck_whole_root_before_even_an_empty_inventory() {
+    use core::cell::Cell;
+    use sc_core::{
+        design::{DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost},
+        ontology::LayerInventory,
+        value::LengthDeclaration,
+    };
+    // A controlled port-contract violation exercises the public core's current-snapshot refusal.
+    struct ChangingHost {
+        actual: DesignSources,
+        changed: Cell<bool>,
+    }
+    impl DesignMetadataHost for ChangingHost {
+        type Error = DesignSourcesError;
+        fn entities(&self) -> Vec<DesignHostEntity> {
+            let mut entities = self.actual.entities();
+            if self.changed.get() {
+                entities.push(DesignHostEntity {
+                    id: id(109000),
+                    kind: DesignHostEntityKind::Ease,
+                    index: 0,
+                });
+            }
+            entities
+        }
+        fn validate_current(&self, canonical: &CanonicalInputs) -> Result<(), Self::Error> {
+            self.actual.validate_current(canonical)
+        }
+        fn measurement_declaration<'a>(
+            &'a self,
+            measurement: sc_core::ontology::EntityId,
+            canonical: &'a CanonicalInputs,
+        ) -> Result<&'a LengthDeclaration, Self::Error> {
+            self.actual.measurement_declaration(measurement, canonical)
+        }
+    }
+    impl DesignSizeSetHost for ChangingHost {
+        fn validate_size_set(
+            &self,
+            reference: DesignSizeSetReference,
+            canonical: &CanonicalInputs,
+        ) -> Result<(), Self::Error> {
+            self.actual.validate_size_set(reference, canonical)
+        }
+    }
+    impl DesignReferenceHost for ChangingHost {
+        fn validate_references(
+            &self,
+            references: DesignSourceReferences,
+            canonical: &CanonicalInputs,
+        ) -> Result<(), Self::Error> {
+            self.actual.validate_references(references, canonical)
+        }
+    }
+    let definition = fixture();
+    let sources = DesignMetadata::new(
+        ChangingHost {
+            actual: definition.sources.host().clone(),
+            changed: Cell::new(false),
+        },
+        definition.structure.inputs(),
+    )
+    .expect("actual stable metadata snapshot");
+    let state = DesignInputs::new(DesignInputsDefinition {
+        structure: definition.structure,
+        parameters: definition.parameters,
+        recipe: definition.recipe,
+        materials: definition.materials,
+        sources,
+        references: definition.references,
+    })
+    .expect("actual valid root before controlled port drift");
+    let layers = LayerInventory::new(vec![], vec![], vec![]).expect("explicit empty layers");
+    assert!(state
+        .layer_offset_declarations(&layers)
+        .expect("stable snapshot")
+        .is_empty());
+    state.sources().host().changed.set(true);
+    assert!(matches!(state.layer_offset_declarations(&layers),
+        Err(DesignInputsError::Sources(issue)) if matches!(issue.as_ref(), DesignMetadataError::ChangedEntities)));
+}

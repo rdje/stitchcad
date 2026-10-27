@@ -3,14 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0387 — append v2 history within working bounds
+## STITCHCAD-G1-0388 — borrow actual layer offset-operation intent
 
-- Explicit-owner, source-pinned v2 raw capture; unchanged journaled installation and all old bytes/caps.
--44 source records packed;17 transaction controls/native tar/offline recovery, retention/book checks pass0.
-- Live992 logical/3992152 decodedB/22 working; capacity decision owned before unsafe growth. D263 audit deferred.
-- Whole0386/range/sewing evidence538; scoped publication79/159 passes0. G1 remains6/18; no full CI claim.
+- Original typed layer/relationship/canonical owner; whole-root preflight includes empty scope.
+- Numeric ids retain operation intent; modelled Lining inspection preserves original env_lining refusal.
+- Native4/lifetime1/lint/fmt/book/publication pass0; D250132 unchanged. Whole D262/0387 proof539.
+- Current sources, recipe execution and physical/integration proof remain separate. G1still6/18.
 
 # Sealed archive — earlier slices
+
+| [part539](docs/history/stitchcad-devnotes-part539.md) | whole D262/0387/retirement proof | 49 lines, 4019 bytes, sha256:34402047… |
 
 | [part538](docs/history/stitchcad-devnotes-part538.md) | whole0386/retirement and original range/sewing scopes | 81 lines, 6016 bytes, sha256:692babc5… |
 

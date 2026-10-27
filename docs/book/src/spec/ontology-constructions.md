@@ -202,6 +202,19 @@ substituted. Passing scope certifies neither sources nor geometry. Material meta
 | `LayerRef` | Shared original distinct layer type, without a validation certificate |
 | `LayerInventoryError` | Duplicate ids/Pieces, missing targets, original layer/Material or named envelope causes |
 
+### Borrowed offset intent
+
+`inputs.layer_offset_declarations(&layers)?` checks the whole current root, then borrows each
+original layer and offset relationship in Facing/Lining/Interfacing order. `canonical_inputs()`
+retains the actual root owner. Operation ids matching numeric inputs remain operation intent;
+source order/direction remain authored. Empty layers yield no views. Modelled Lining stays
+inspectable; apply `view.layer().require_in_scope()?` before execution. Recipe operation checks,
+current sources, assignments, global ids and physical proof remain separate.
+
+| API token | Meaning |
+| --- | --- |
+| `DesignLayerOffsetDeclaration` | Original layer, canonical owner and unexecuted relationship |
+
 ## Hem: depth, fold binding and current Facing composition
 
 `Hem` retains a stable identity, whole owned finish edge, `HemDepth`, `HemFoldType` and `HemMethod`.

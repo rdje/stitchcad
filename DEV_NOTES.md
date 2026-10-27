@@ -3,16 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — bounded v2 history append
+## _(2026-10-27 UTC)_ — actual layer offset-operation intent
 
-0387 fixes D262: the v1-only preparer could not pack committed raw v2 records at the working64 cap.
-Append requires an explicit leaf/fresh workspace and exact committed archive snapshot; all prior
-windows and legacy bytes stay fixed.44 raw records become21 through the unchanged journaled installer.
-991 prior logical/33 backing bytes exact;17 transaction controls/native tar/offline recovery pass0.
-Restored538 yields992 logical/3992152 decodedB/22 working;7848B remains under the unchanged4000000 cap.
-Book/publication79/159 and6 Git spans pass0. Promotion: bounded-v2-append section in the history decision.
-P1 .6.4.5.capacity owns retention before unsafe growth; P3 D263 helper authority remains a later audit.
-No full producer/integration/CI verdict is claimed. Product layer-offset views follow while capacity permits.
+0388 borrows original typed layers/offset relationships and the single current canonical owner.
+Whole-root validation precedes even empty layers; authored family/source order and direction survive.
+Numeric input/parameter ids remain operation intent. Modelled Lining is inspectable; its original scope
+check still refuses env_lining/G7. Current sources, assignments, operation execution and physical proof
+remain separate. Native4/lifetime1/strict affected lint/fmt/book/publication79/159 pass0; D250132 exact.
+Whole D262/0387 proof539 has5 exact Git spans0. Promotion declined: settled metadata/source/scope rules.
+Aggregate3997359/4000000B leaves2641; capacity decision owned. Component acceptance .e next.
+
+[Complete bounded append lesson](docs/history/stitchcad-devnotes-part539.md) retains
+its original source, transaction proof and retention limits.
 
 [Complete Hem declaration lesson](docs/history/stitchcad-devnotes-part538.md) retains
 its original scope, checks and promotion decision.

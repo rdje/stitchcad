@@ -1161,14 +1161,8 @@ Verified D261 original Hem layer-cause report and0381 red/green proof remain who
 [0385 report-retirement proof](../history/window21.md#stitchcad-devnotes-part537md).
 [0386 report-retirement proof](../history/stitchcad-devnotes-part538.md).
 
-## D262 — bounded v2 append preparer (corrected0387)
-
-New draft538 originally made65 resident Markdown files and transition_receipts.py refused1 at64.
-Source inspection: old prepare accepts only v1/16 windows; existing v2 reader already supports append.
-Owner G1-SLICE.6.4.5.3.d.2.a restores working capacity through committed raw capture and existing
-journaled installation.44 source records packed,17 transaction controls pass0; all old bytes/caps fixed.
-Live992 records/3992152 decodedB leaves7848B. Separate P1 owner G1-SLICE.6.4.5.capacity must resolve
-retention before unsafe growth. Packing grants no aggregate capacity; no full integration claim.
+Verified D262 bounded v2 append report/proof retained whole in
+[part539](../history/stitchcad-devnotes-part539.md); all old bytes/caps unchanged.
 
 ## D263 — installer fixture omits helper source authority
 
@@ -1178,8 +1172,9 @@ Effect:17 transaction controls prove bytes/effects, not complete producer author
 G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification, after .6.9 before integration/pre-push. Repair complete
 helper/input/child plans and calibrate omissions while preserving every original transaction predicate.
 
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part538.md:
-  6 exact Git spans rc=0; completed0386/range/sewing evidence needed live retirement.
-- [x] ADDRESSED: same command rc=0; original bodies/identities remain whole538;44 other records exact21.
-- [x] NO REGRESSION: history_archive.sh verify-retention/prove-source window21:rc=0,44 exactfiles;
-  scoped publication79/159/1454/2409 and book rc=0. Old logical/backing bytes and caps unchanged.
+[0387 retirement proof](../history/stitchcad-devnotes-part539.md).
+
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part539.md:
+  5 exact Git spans rc=0; completed D262/0387 proof occupied live capacity.
+- [x] ADDRESSED: same command rc=0; whole task/lesson/ledger/report/retirement retained539.
+- [x] NO REGRESSION: book and scoped publication79/159/1454/2410 rc=0; exact D250132 rows compare0.

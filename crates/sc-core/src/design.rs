@@ -38,6 +38,7 @@ mod closures;
 mod hems;
 mod host;
 mod inputs;
+mod layers;
 mod parameters;
 mod sewing;
 mod sewing_state;
@@ -58,6 +59,7 @@ pub use inputs::{
     DesignFormulaError, DesignInputs, DesignInputsDefinition, DesignInputsError,
     DesignInputsPosition,
 };
+pub use layers::DesignLayerOffsetDeclaration;
 pub use parameters::{
     DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,
     DesignParameters,

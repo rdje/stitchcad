@@ -866,14 +866,14 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:closed layer/Hem collections; [whole proof](../history/window21.md#stitchcad-devnotes-part537md).
 - ID: `G1-SLICE.6.4.5.3.d`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual known Hem depth/fold and layer operation roles; preserve logical/G2/G3/G4 owners.
   Children: .1 actual Hem depth/fold metadata; .2 actual layer offset-operation borrows.
 - ID: `G1-SLICE.6.4.5.3.d.1`
   Status: `done`
   Goal:0386 actual Hem depth/fold roles; [whole proof](../history/stitchcad-devnotes-part538.md).
 - ID: `G1-SLICE.6.4.5.3.d.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: borrowed actual layer offset-operation/source intent; existing recipe/G2/G3/scope owners.
   Own exact typed layer/relationship/source borrows after whole current root validation. Preserve
   family/source order, modelled Lining inspection and original operation ids without numeric coercion.
@@ -882,30 +882,28 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   D262 append repair closes .a; aggregate-capacity decision .capacity precedes unsafe archive growth.
 - ID: `G1-SLICE.6.4.5.3.d.2.a`
   Status: `done`
-  Goal:0387 D262 source-pinned v2 append and exact journaled installation; all old bytes/caps fixed.
-  - [x] REPRODUCE / ISSUE: transition_receipts.py --record docs/history/stitchcad-devnotes-part538.md
-    first refused working65>64 rc=1; independent physical census65 rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): Python AST/source check rc=0: old prepare requires v1/16 windows;
-    v2 reader already permits immutable append. The working64 cap correctly refused the new raw file.
-  - [x] FIX: v2_migration.py append target/history-v2-append-0387 --owner G1-SLICE.6.4.5.3.d.2.a:
-    991 logical/33 backing exact,44 raw packed rc=0; existing v2_install.py install same workspace rc=0.
-  - [x] ADDRESSED: v2_install_contract.py target/history-v2-append-0387:17 controls/0 failures rc=0;
-    real interruptions/recovery/offline materialization/native tar/ledger routes. Original trees retained.
-  - [x] NO REGRESSION: history_archive.sh verify/verify-retention/prove-source window21 rc=0;
-    992 logical,3992152 decodedB,22 working;44 source files exact. Reader/installer/old formatter AST
-    unchanged rc=0; append missing-owner and prepare-on-v2 refuse1 before workspace effects.
-  - [x] LOCKSTEP: run_make.sh book and scoped publication79/159/1454/2409 rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part538.md:6 exact spans rc=0.
-    Promotion: bounded append decision; D263 fixture authority audit remains separately owned.
+  Goal:0387 D262 bounded v2 append; [whole proof](../history/stitchcad-devnotes-part539.md).
 - ID: `G1-SLICE.6.4.5.3.d.2.b`
-  Status: `pending`
-  Goal: actual layer offset-operation/source borrows after whole-root validation; original .d.2 scope.
+  Status: `done`
+  Goal:0388 actual layer offset borrows after whole-root validation; whole0387 continuity539.
+  - [x] REPRODUCE / ISSUE: Python Git-source comparison:b3686da lacks Design layer offset views rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): same comparison rc=0; original LayerOffsetRelationship existed
+    without a current-root borrowed query. Original layer/current-root validator bytes unchanged.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and -p sc-measure
+    --test design_inputs_contract -- -D warnings:rc=0 each; exact family/relationship/canonical borrows.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract layer_offset_declarations_:
+    4/0 rc=0; cargo test -p sc-core --doc design::layers:1/0 rc=0, lifetime refusal.
+  - [x] NO REGRESSION: cargo fmt --all --check rc=0; original validators/prior test bytes compare0;
+    full glossary rc=1 with132 unchanged D250 rows, exact comparison rc=0. No operation coercion.
+  - [x] LOCKSTEP: run_make.sh book rc=0; scoped publication79/159/1454/2410 rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part539.md:5 exact spans rc=0.
+    Promotion declined: existing metadata/current-source/scope boundaries. Component acceptance .e.
 - ID: `G1-SLICE.6.4.5.3.e`
   Status: `pending`
   Goal: focused current layer/Hem component acceptance; broader integration after .6.9.
 - ID: `G1-SLICE.6.4.5.capacity`
   Status: `pending`
-  Goal: P1 retention decision before archive growth exceeds4000000 decodedB; current3992152 leaves7848.
+  Goal: P1 retention decision before archive growth exceeds4000000 decodedB; current3997359 leaves2641.
   Preserve all immutable bytes and independent bounds; do not widen caps to land content. Diagnose
   feasible retention options and surface any policy authority needed. Product .d.2.b/.e proceeds if safe.
 - ID: `G1-SLICE.6.4.5.4`
