@@ -3,14 +3,16 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0370 — revalidate current immutable sewing sources
+## STITCHCAD-G1-0371 — bind actual sewing amount declarations
 
-- Share original constructor rules with SewingGraph.validate_current; preserve graph and refusal order.
-- Check actual same-id copy/stop source changes and full lost-interior evidence after prior success.
-- Native21/privacy1/lint/fmt/book/publication pass0; D250132 unchanged; whole0369/header continuity521.
-- Actual symbolic declarations/G4 boundary next; broader integration/CI remains owned.
+- Borrow original spans/canonical context, explicit signed values and actual Length parameter metadata.
+- Refuse missing parameter roles/Count kinds; keep logical Profile references explicitly deferred to G4.
+- Native3/privacy1/lint/fmt/book/publication pass0; D250132 unchanged, whole0370/static-name continuity522.
+- Complete sewing/root ownership next; runtime/physical/integration/CI remains separate.
 
 # Sealed archive — earlier slices
+
+| [part522](docs/history/stitchcad-devnotes-part522.md) | whole0370 and historical static-name proof | 98 lines, 7847 bytes, sha256:a6509185… |
 
 | [part521](docs/history/stitchcad-devnotes-part521.md) | whole0369 topology and historical header proof | 67 lines, 5154 bytes, sha256:55df4944… |
 

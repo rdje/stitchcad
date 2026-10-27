@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2b.2`, D35/D57, ontology §4.2, reference skirt §8.
 
-answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?" · "does graph construction authorize replacement sewing sources?"
+answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?" · "does graph construction authorize replacement sewing sources?" · "can numeric canonical ids supply sewing formula or profile metadata?"
 
 ## Context
 
@@ -64,3 +64,10 @@ order without rebuilding or rewriting the graph. Missing-id inventories alone ca
 same-id copy reassigned to another Piece or a same-id landmark moved outside its side. Current
 validation retains the original typed refusal and complete range repair evidence. It supplies no
 formula/profile amount resolution, geometric walking, command or release authority.
+
+DesignInputs.sewing_amount_declarations now borrows actual per-span amount metadata after complete
+current root validation. Formula identities name actual Design parameters, then require current
+Length-kind canonical targets; dedicated and general scalar families stay distinct. Explicit signed
+amounts borrow original spans. Logical profile refs remain DeferredToG4 even when numeric canonical
+ids coincide. No numeric value, Profile schema/content role, graph-source join or geometry follows
+this metadata query; owned complete sewing composition remains separate.

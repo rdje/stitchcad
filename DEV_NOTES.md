@@ -3,17 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — current immutable sewing graph validation
+## _(2026-10-27 UTC)_ — actual sewing amount declaration metadata
 
-0370 factors original SewingGraph constructor checks into validate_current; constructor delegates.
-Git-source token comparison confirms identical validation after receiver/iteration adaptation. Shared
-spans stay original; no replacement graph/value or geometry proof is generated. Actual current copies,
-range ownership, stop sources and distribution rules recheck in the same order. Same-id retargets can
-pass missing-id inventories while failing actual scope. Lost interiors retain full raw range evidence.
-Affected target21/0 (18 original,3 new), privacy1/strict selected lint/fmt/book/publication79/130 pass0;
-D250 remains exact132 rows.521 retains whole0369/topology/header proof in4 exact Git spans0.
-Promotion: existing sewing decision answers replacement contexts. .4.2 actual symbolic declarations/
-G4 role boundary next; global ownership, runtime/physical/integration/CI remain separate.
+0371 sewing_amount_declarations validates the complete current root before borrowing original spans,
+explicit signed Lengths, actual Design parameter/current Length-kind metadata and the canonical owner.
+Dedicated and general scalar Length families stay distinct; no uncertain state/value is evaluated.
+Numeric canonical ids cannot supply parameter metadata. Profile refs remain exact logical roles with
+DeferredToG4, even when their numbers match existing canonical lengths. Current graph/global sewing
+joins remain separate. Late metadata failures retain actual span/parameter/kind and return no prefix.
+Focused higher-host native3/privacy1/core+test strict lint/fmt/book/publication79/133 pass0;
+D250132 exact prior rows, ontology implementation unchanged.522 retains whole0370/static-name proof
+in4 exact Git spans0. Promotion: existing sewing decision answers numeric-role boundaries.
+Private complete sewing/root ownership next; full execution/physical/integration/CI stays unverified.
+
+[Complete current-sewing graph lesson](docs/history/stitchcad-devnotes-part522.md) retains
+its original scope, checks and promotion decision.
 
 [Complete combined-topology lesson](docs/history/stitchcad-devnotes-part521.md) retains
 its original scope, checks and promotion decision.

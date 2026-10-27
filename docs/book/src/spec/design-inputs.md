@@ -374,3 +374,35 @@ This closes the implemented source/input component scope. Full Design assembly s
 sewing/garment sources and readiness; runtime commands, geometry, physical validation, storage,
 integration and release retain their task owners. D154's reference ordinal and D250's baseline
 vocabulary repairs remain open under their existing owners; this review closes neither.
+
+## Actual sewing amount declarations
+
+DesignInputs.sewing_amount_declarations(&graph) rechecks the whole current root, then returns one
+borrowed DesignSewingAmount per actual span, in authored order. Each retains the actual span and
+canonical owner. This checks amount metadata only; graph copy/range/stop and global identity joins
+are separate, as are numeric evaluation, physical ease and release readiness.
+
+An explicit signed amount borrows the original Length from the span. Formula(id) requires actual
+DesignParameter metadata with that id and its current canonical binding, then requires Length kind.
+For example, parameter5001 may target dedicated length10; Formula(5001) retains both identities and
+borrows that exact record. Formula(10) refuses when10 is only a canonical declaration. A general
+scalar Length target is also supported after its existing identity/kind adapter succeeds. Unknown/
+Derived states and sources stay unchanged; no formula value or replacement scalar is generated.
+
+Profile(ref) stays a logical target-profile role. profile_validation() returns Some(DeferredToG4)
+for this branch; canonical length10 cannot resolve profile reference10 merely because numbers match.
+Other branches return None from that accessor, without asserting numeric or physical completeness.
+The source view preserves the exact explicit/formula/profile distinction.
+
+| API or variant | Meaning |
+| --- | --- |
+| `DesignSewingAmount` | Actual span/canonical context and borrowed amount metadata |
+| `DesignSewingAmountSource` | Explicit signed length, actual formula parameter or deferred profile ref |
+| `DesignSewingDeclarationError` | Current Inputs cause, missing parameter or FormulaKind mismatch |
+| `MissingFormulaParameter` | Formula identity has no actual Design parameter metadata |
+
+A Count parameter refuses with FormulaKind and its actual kind, span and parameter identity. A late
+failure returns no accepted prefix of amount views. Current root errors retain concrete error chains.
+Views cannot outlive the actual graph/root objects, and never rewrite spans or allocations. Use the
+separate current SewingGraph validator for structural sources; owned complete sewing joins follow
+this metadata component. Profile declaration grammar/type/state/physical resolution remains G4.

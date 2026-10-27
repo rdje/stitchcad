@@ -490,3 +490,299 @@ fn formula_source_query_rechecks_unselected_actual_sources_against_replacement_c
         Err(DesignSourcesError::SizeSets(_))
     ));
 }
+
+fn with_sewing_graph(
+    mut definition: DesignInputsDefinition<DesignSources>,
+    amounts: Vec<sc_core::ontology::EaseAmount>,
+) -> (DesignInputs<DesignSources>, sc_core::ontology::SewingGraph) {
+    use sc_core::ontology::{
+        CopyOrientation, CutCopyDefinition, CuttingSide, DeclaredEase, DeterministicIdGenerator,
+        DirectedEdge, Direction, EaseDistribution, EdgeRange, LabelText, MaterialAssignment,
+        Mirroring, Piece, PieceDefinition, SeamDirection, SeamSide, SeamSpanDefinition,
+        SewingGraph, SewingGraphDefinition,
+    };
+    let mut topology = IdentityLedger::new();
+    let edges = topology
+        .declare_edges(&mut DeterministicIdGenerator::from_start(90000), 2)
+        .expect("actual source edges");
+    let pieces = edges
+        .into_iter()
+        .zip([95000, 95001])
+        .map(|(edge, identity)| {
+            Piece::new(
+                PieceDefinition {
+                    id: id(identity),
+                    boundary: vec![DirectedEdge {
+                        edge,
+                        direction: Direction::Original,
+                    }],
+                    holes: vec![],
+                    construction_lines: vec![],
+                    quantity: 1,
+                    mirroring: Mirroring::Single,
+                    cut_on_fold: false,
+                    fold_edges: vec![],
+                    cutting_side: CuttingSide::Face,
+                    material: MaterialAssignment::Unresolved("explicit selection pending".into()),
+                    layer_index: 0,
+                    label: LabelText {
+                        name: "sewing source".into(),
+                        size: "authored".into(),
+                        fabric: "unassigned".into(),
+                        colorway: "explicit".into(),
+                    },
+                },
+                &topology,
+            )
+            .expect("actual born Piece")
+        })
+        .collect::<Vec<_>>();
+    let plan = CutPlan::new(
+        pieces
+            .iter()
+            .zip([96000, 96001])
+            .map(|(piece, identity)| CutCopyDefinition {
+                id: id(identity),
+                piece: piece.id(),
+                orientation: CopyOrientation::Authored,
+            })
+            .collect(),
+        &pieces,
+    )
+    .expect("actual complete copies");
+    let first = pieces
+        .first()
+        .expect("first source Piece")
+        .edges()
+        .next()
+        .expect("held edge")
+        .edge;
+    let second = pieces
+        .get(1)
+        .expect("second source Piece")
+        .edges()
+        .next()
+        .expect("held edge")
+        .edge;
+    let graph = SewingGraph::new(
+        SewingGraphDefinition {
+            id: id(94000),
+            spans: amounts
+                .into_iter()
+                .enumerate()
+                .map(|(index, amount)| SeamSpanDefinition {
+                    id: id(97000 + u128::try_from(index).expect("authored span ordinal")),
+                    a: SeamSide {
+                        copy: id(96000),
+                        range: EdgeRange::whole(first),
+                    },
+                    b: SeamSide {
+                        copy: id(96001),
+                        range: EdgeRange::whole(second),
+                    },
+                    direction: SeamDirection::Opposite,
+                    ease: DeclaredEase {
+                        amount,
+                        distribution: EaseDistribution::Uniform,
+                    },
+                    stops: vec![],
+                })
+                .collect(),
+        },
+        &plan,
+        &pieces,
+        &[],
+        &topology,
+    )
+    .expect("actual sewing graph");
+    let mut structure = definition.structure.definition().clone();
+    structure.pieces = PieceInventory::new(pieces).expect("actual complete Pieces");
+    structure.cut_plan = plan;
+    structure.topology = topology;
+    definition.structure =
+        DesignStructure::new(structure).expect("actual joined structural sources");
+    (
+        DesignInputs::new(definition).expect("actual current root"),
+        graph,
+    )
+}
+
+#[test]
+fn sewing_amount_views_borrow_actual_explicit_and_both_length_parameter_families_with_visible_profile_deferral(
+) {
+    use sc_core::{
+        design::DesignSewingAmountSource,
+        ontology::{EaseAmount, ProfileBindingValidation, ProfileParameterRef},
+        value::{
+            ScalarInputDeclaration, ScalarInputDeclarationDefinition, ScalarInputKind,
+            ScalarInputState,
+        },
+    };
+    let mut definition = fixture();
+    let mut structure = definition.structure.definition().clone();
+    let mut scalars = structure.inputs.scalars().to_vec();
+    scalars.push(
+        ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+            id: id(2003),
+            source: id(2005),
+            kind: ScalarInputKind::Length,
+            state: ScalarInputState::Unknown {
+                observation: id(2004),
+            },
+        })
+        .expect("actual general Length input"),
+    );
+    structure.inputs = CanonicalInputs::new(structure.inputs.lengths().to_vec(), scalars)
+        .expect("single combined canonical owner");
+    definition.structure = DesignStructure::new(structure).expect("actual updated structure");
+    let mut parameters = definition
+        .parameters
+        .parameters()
+        .iter()
+        .map(|parameter| parameter.definition().clone())
+        .collect::<Vec<_>>();
+    parameters.push(DesignParameterDefinition {
+        id: id(5002),
+        token: MachineToken::new("sewing_extra").expect("authored name"),
+        target: DesignParameterTarget::Scalar {
+            declaration: id(2003),
+            kind: ScalarInputKind::Length,
+        },
+    });
+    definition.parameters = DesignParameters::new(parameters, definition.structure.inputs())
+        .expect("actual general parameter binding");
+    let (state, graph) = with_sewing_graph(
+        definition,
+        vec![
+            EaseAmount::Explicit(sc_units::Length::from_micrometres(-1500).expect("signed length")),
+            EaseAmount::Formula(id(5001)),
+            EaseAmount::Formula(id(5002)),
+            EaseAmount::Profile(ProfileParameterRef::new(id(10))),
+        ],
+    );
+    let original = (state.inputs().clone(), graph.clone());
+    let views = state
+        .sewing_amount_declarations(&graph)
+        .expect("actual typed declarations");
+    assert_eq!(views.len(), 4);
+    for (view, span) in views.iter().zip(graph.spans()) {
+        assert!(core::ptr::eq(view.span(), span));
+        assert!(core::ptr::eq(view.canonical_inputs(), state.inputs()));
+        match view.source() {
+            DesignSewingAmountSource::Explicit(value) => {
+                let actual = match &span.definition().ease.amount {
+                    EaseAmount::Explicit(value) => Some(value),
+                    _ => None,
+                }
+                .expect("original explicit source");
+                assert!(core::ptr::eq(value, actual));
+                assert_eq!(value.as_micrometres(), -1500);
+            }
+            DesignSewingAmountSource::Formula {
+                parameter,
+                declaration,
+            } => {
+                assert!(state
+                    .parameters()
+                    .parameters()
+                    .iter()
+                    .any(|actual| core::ptr::eq(actual, parameter)));
+                assert_eq!(
+                    declaration.source().kind(),
+                    sc_core::recipe::FormulaKind::Length
+                );
+                let checked = match declaration.source() {
+                    FormulaDeclarationSource::LengthInput {
+                        input, declaration, ..
+                    } => {
+                        assert_eq!(input, id(5001));
+                        assert!(core::ptr::eq(
+                            declaration,
+                            state
+                                .inputs()
+                                .length(id(10))
+                                .expect("actual dedicated record")
+                        ));
+                        Some(())
+                    }
+                    FormulaDeclarationSource::Input {
+                        input,
+                        declaration,
+                        kind: FormulaBindingKind::Length,
+                        ..
+                    } => {
+                        assert_eq!((input, declaration), (id(5002), id(2003)));
+                        Some(())
+                    }
+                    _ => None,
+                };
+                checked.expect("actual length parameter family");
+            }
+            DesignSewingAmountSource::Profile(reference) => {
+                assert_eq!(reference, ProfileParameterRef::new(id(10)));
+                assert_eq!(
+                    view.profile_validation(),
+                    Some(ProfileBindingValidation::DeferredToG4)
+                );
+                assert!(state.inputs().length(id(10)).is_some());
+            }
+        }
+    }
+    assert_eq!(state.inputs(), &original.0);
+    assert_eq!(graph, original.1);
+}
+
+#[test]
+fn sewing_formula_amount_cannot_infer_parameter_metadata_from_numeric_canonical_presence() {
+    use sc_core::{design::DesignSewingDeclarationError, ontology::EaseAmount};
+    for numeric_only in [10, 2000] {
+        let (state, graph) =
+            with_sewing_graph(fixture(), vec![EaseAmount::Formula(id(numeric_only))]);
+        assert_eq!(
+            state
+                .sewing_amount_declarations(&graph)
+                .expect_err("canonical identity alone is not parameter metadata"),
+            DesignSewingDeclarationError::MissingFormulaParameter {
+                span: id(97000),
+                parameter: id(numeric_only)
+            }
+        );
+    }
+}
+
+#[test]
+fn sewing_formula_amount_requires_actual_length_kind_and_keeps_late_original_span_context() {
+    use sc_core::{
+        design::DesignSewingDeclarationError, ontology::EaseAmount, value::ScalarInputKind,
+    };
+    let mut definition = fixture();
+    definition.parameters = DesignParameters::new(
+        vec![DesignParameterDefinition {
+            id: id(5002),
+            token: MachineToken::new("sewing_count").expect("explicit name"),
+            target: DesignParameterTarget::Scalar {
+                declaration: id(2000),
+                kind: ScalarInputKind::Count,
+            },
+        }],
+        definition.structure.inputs(),
+    )
+    .expect("actual well-formed Count parameter");
+    let (state, graph) = with_sewing_graph(
+        definition,
+        vec![
+            EaseAmount::Explicit(sc_units::Length::ZERO),
+            EaseAmount::Formula(id(5002)),
+        ],
+    );
+    assert_eq!(
+        state
+            .sewing_amount_declarations(&graph)
+            .expect_err("Count cannot become Length"),
+        DesignSewingDeclarationError::FormulaKind {
+            span: id(97001),
+            parameter: id(5002),
+            actual: sc_core::recipe::FormulaKind::Count
+        }
+    );
+}

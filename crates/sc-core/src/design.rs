@@ -37,6 +37,7 @@ impl DesignSizeSetReference {
 mod host;
 mod inputs;
 mod parameters;
+mod sewing;
 mod topology;
 pub use host::{
     DesignFormulaHost, DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
@@ -50,6 +51,7 @@ pub use parameters::{
     DesignParameter, DesignParameterDefinition, DesignParameterError, DesignParameterTarget,
     DesignParameters,
 };
+pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use topology::{DesignPieceTopology, DesignTopologyReadiness};
 
 /// Explicit structural input, with no inferred identity, revision, copy or topology registration.
