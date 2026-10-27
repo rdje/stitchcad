@@ -25,7 +25,7 @@ Refusal = API["Refusal"]
 OWNER = "G1-SLICE.probe0416"
 
 
-class Candidate(unittest.TestCase):
+class BookFixture(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.head = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True).strip()
@@ -97,6 +97,9 @@ class Candidate(unittest.TestCase):
             API["check"](ROOT, self.tree)
         self.assertEqual(result.exception.code, code, str(result.exception))
 
+
+
+class Candidate(BookFixture):
     def test_candidate_matches_native_counts_and_reader_is_read_only(self):
         paths = sorted(self.tree.rglob("*"))
         before = {p.relative_to(self.tree).as_posix(): (p.stat().st_mtime_ns, hashlib.sha256(p.read_bytes()).digest())

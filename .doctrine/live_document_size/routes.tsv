@@ -9,7 +9,7 @@
 # `class` may be `reader_navigation`, `author_overflow`, or `both`.
 #
 #route_id	emitted_by	destination	surface_id	class	lifecycle	pressure_control	notes
-R01	check_readme_stability.sh routing_hint	docs/book/	book_collection	both	partitioned_canonical	per-part + file-count + aggregate ceilings	user-facing feature detail and examples
+R01	check_readme_stability.sh routing_hint	docs/book/	book_collection	both	maintained_reference	bounded parts/index/depth + exact fresh aggregate/content authority	unique user-facing feature detail and examples; no archival overflow
 R02	check_readme_stability.sh routing_hint	docs/tasks/	tasks_collection	author_overflow	partitioned_canonical	per-part + file-count + aggregate ceilings	current work; one file per tree, evidence inside its leaf
 R03	check_readme_stability.sh routing_hint	docs/TASK_TREE.md	task_index	reader_navigation	bounded_snapshot	line/byte/maxline ceilings	the index stays one row per tree; leaf detail never moves here
 R04	check_readme_stability.sh routing_hint	ROADMAP.md	roadmap	reader_navigation	maintained_reference	ceiling + transition debt; section index owed by SPINE.13	priorities and scope, revised under its own disposition log

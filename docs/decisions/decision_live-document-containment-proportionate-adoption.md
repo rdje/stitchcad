@@ -119,9 +119,23 @@ missing Git paths differ from Git errors. Caller Git configuration/directory/ind
 are excluded without mutating the parent; native children have bounded output/time and are reaped.
 Candidate/native23 plus optimized2 controls pass, with independent wc/SHA calibration. Tests never
 initialize another Git repo; their fresh owner exists only in ordinary target candidates. This is
-reader proof only: current class/caps/gate remain, and actual committed acceptance follows .book.2/.3.
+reader proof only at0416: class/caps/gate then remained; installation follows below.
 
 Native manifest duplicates/links/submodules refuse; watchdog startup failure still reaps the actual
 owned child. Native-contract4 rerun checks the direct first-parent query. Git and the OS null device
 are host dependencies; no project-owned stores/logs are written there. Uninstalled default invocation
 refuses missing control, rather than advertising gate adoption or committed-state verification.
+
+answers: "how does atomic book-change recording preserve prior authority and prevent workspace/source escapes?"
+
+0417 installs the local maintained-book record and existing size-check/CI path atomically. Source/
+output planning precedes local temporary creation; one replacement publishes only the canonical JSONL,
+with fresh HEAD/full inputs/destination checks. Native authoring8/reader23/O2 controls pass. Actual
+committed-mode observation is after commit, then .book.3 closes scoped adoption; no remote CI claim.
+D278 repairs existing root/Git/part preflight: canonical script root, target-only ordinary fixture
+roots, guarded controls and all parts before native wc. Old0dc reads ../fixture/pass0, fixed refuses1;
+source-boundary/regular/overlap controls remain. Native Git ignores caller context and disables
+filesystem-monitor/submodule recursion. No other Git repo is initialized or amended. Numeric fixture
+overrides never select a replacement canonical book. Parts/index/depth remain fixed; only explicitly
+inapplicable aggregate targets change information role, not a raised numerical ceiling. The neutral
+package/version-retention adoption remains separate; policy's neutral body is unchanged.

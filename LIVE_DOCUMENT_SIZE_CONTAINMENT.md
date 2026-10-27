@@ -29,11 +29,16 @@
   content.
 - **Locality:** the registry and every path in it are repository-root-relative; regenerable scratch
   lives under `target/`. No absolute, escaping or off-volume path may appear in the data plane.
-- **Serialization:** the local data plane is a bounded **TSV** registry
-  (`.doctrine/live_document_size/surfaces.tsv` and `routes.tsv`) parsed with awk, because the spine's
-  checks are bash/awk and this adds no interpreter to the commit path. Adopting the neutral checker
-  later implies migrating these two files to its JSONL shape — a bounded, named migration, not a
-  surprise.
+- **Serialization:** global surfaces/routes retain bounded TSV. The book additionally uses one
+  bounded UTF-8 JSONL header/record (`.doctrine/live_document_size/maintained_reference.jsonl`) and
+  a local Python3.9+/native-Git checker, adopted by `G1-SLICE.6.5.book.2`. This is the maintained-reference
+  contract family; the neutral package and version-retention registry remain unadopted.
+- **Maintained book:** unique browsable product/specification prose keeps semantic parts, complete
+  SUMMARY and depth-three navigation. Parts retain700L/40960B/440B; SUMMARY retains120L/8192B/240B.
+  Aggregate targets are explicitly inapplicable; every content/count change requires exact native-Git
+  baseline/delta/hash and a newly completed task. Stale/reused/banked authority refuses. The existing
+  size-check entry verifies this canonical book unconditionally after numeric checks; fixture root
+  overrides cannot select another book. Source/workspace preflight precedes scratch/part measurements.
 - **Landing-page identity:** top-level `README.md` is the rendered project landing page. Its purpose,
   verified first-use path, architecture summary and canonical navigation stay directly visible there;
   containment routes changing detail and chronology away, it does not off-load the landing function.

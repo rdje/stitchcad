@@ -31,13 +31,15 @@
 # against surfaces nobody thought of — that is what the coverage rule is for.
 #
 # CONTRACT (DOCTRINE_ENFORCEMENT.md): exit code is the verdict; explains on stderr; deterministic;
-# read-only; fast; unconditional (it judges the tree, not the staged set).
+# read-only for canonical inputs; unconditional (it judges the tree, not the staged set). D278 guards
+# canonical/target-only roots and every source before scratch or native content measurements.
 set -uo pipefail
 export LC_ALL=C
-ROOT="${LIVE_DOC_SIZE_ROOT:-$(git rev-parse --show-toplevel)}"
-cd "$ROOT" || exit 1
-
+BOOK_AUTHORITY_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)" || exit 2
 REGISTRY="${LIVE_DOC_SIZE_REGISTRY:-.doctrine/live_document_size}"
+ROOT="$(python3 -I -B "$BOOK_AUTHORITY_ROOT/docs/tasks/artifacts/live_doc_size/measurement_scope.py" \
+  root "${LIVE_DOC_SIZE_ROOT:-$BOOK_AUTHORITY_ROOT}" "$REGISTRY" "${LIVE_DOC_SIZE_TRACKED:-}")" || exit 2
+cd "$ROOT" || exit 2
 SURFACES="$REGISTRY/surfaces.tsv"
 ROUTES="$REGISTRY/routes.tsv"
 SCRATCH_BASE="$ROOT/target/doctrine_scratch"
@@ -60,20 +62,9 @@ trap 'exit 143' TERM
 
 # ── measure: emit "sid <TAB> path <TAB> lines <TAB> bytes <TAB> maxline" per part ─────────────
 measure_registry() { # $1 = surfaces.tsv · $2 = output file
-  local out="$2" parts sid glob kind p l b m
-  : > "$out.parts"
-  while IFS=$'\t' read -r sid glob kind; do
-    case "$sid" in ''|'#'*) continue ;; esac
-    case "$kind" in
-      file)       printf '%s\t%s\n' "$sid" "$glob" >> "$out.parts" ;;
-      list)       printf '%s\n' "$glob" | tr ';' '\n' | sed '/^$/d' \
-                    | while IFS= read -r p; do printf '%s\t%s\n' "$sid" "$p"; done >> "$out.parts" ;;
-      collection|binary_collection) git -C "$ROOT" ls-files -- "$glob" 2>/dev/null \
-                    | while IFS= read -r p; do printf '%s\t%s\n' "$sid" "$p"; done >> "$out.parts" ;;
-      external)   : ;;
-      *)          printf '%s\t%s\n' "$sid" "$glob" >> "$out.parts" ;;
-    esac
-  done < <(grep -vE '^(#|$)' "$1" | cut -f1-3)
+  local out="$2" sid p l b m
+  python3 -I -B "$BOOK_AUTHORITY_ROOT/docs/tasks/artifacts/live_doc_size/measurement_scope.py" \
+    parts "$ROOT" "$1" "$out.parts" || return 1
   : > "$out"
   while IFS=$'\t' read -r sid p; do
     if [ -f "$ROOT/$p" ]; then
@@ -331,9 +322,14 @@ fi
 if [ -n "${LIVE_DOC_SIZE_TRACKED:-}" ]; then
   cp "$LIVE_DOC_SIZE_TRACKED" "$SCRATCH/tracked_md.txt"
 else
-  git -C "$ROOT" ls-files '*.md' > "$SCRATCH/tracked_md.txt"
+  python3 -I -B "$BOOK_AUTHORITY_ROOT/docs/tasks/artifacts/live_doc_size/measurement_scope.py" \
+    tracked "$ROOT" "$SCRATCH/tracked_md.txt" || exit 1
 fi
-measure_registry "$SURFACES" "$SCRATCH/measurements.tsv"
+measure_registry "$SURFACES" "$SCRATCH/measurements.tsv" || exit 1
 evaluate "$SURFACES" "$ROUTES" "$SCRATCH/measurements.tsv" "$SCRATCH/tracked_md.txt"
 rc=$?
-exit "$rc"
+[ "$rc" -eq 0 ] || exit "$rc"
+# Numeric fixture overrides never select a different book authority. Normal hook/CI invocations
+# always validate this checkout's complete maintained reference, independently of changed paths.
+python3 -I -B "$BOOK_AUTHORITY_ROOT/docs/tasks/artifacts/live_doc_size/maintained_reference.py"
+exit $?

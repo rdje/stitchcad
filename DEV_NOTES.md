@@ -3,21 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — strict maintained-book reader before adoption
+## _(2026-10-27 UTC)_ — atomic maintained-book installation and D278
 
-0416 implements a readonly schema-1 reader, not yet wired into the gate. Bounded UTF-8 JSONL header/
-record (8192/6144B), frozen parts/index, complete depth-three SUMMARY, framed content SHA/counts and
-fresh native Git baseline/delta/newly completed owner prevent stale/reused/banked/same-size authority.
-Native Git context is isolated from caller overrides; bounded output/time and reaping leave no child.
-Native23/O-optimized2 controls pass0, independent wc/SHA match, AST0/assert0. Native4 rerun checks
-first-parent query/manifest modes/duplicates/watchdog-start child reaping; uninstalled root refuses2. Initial17-test run
-exposed invalid-Unicode handling and a probe changing the wrong lifecycle row; raw JSONL extents and
-exact row mutation fix both. Fixed candidates exceed old files/lines/bytes with valid parts/index;
-links/hardlinks/FIFO/marker-only boundaries refuse. Fresh fixture-only owner makes controls reusable
-past this commit. Ordinary target candidates/read-only actual Git only; no other Git repo created.
-Whole0415/D271–D277 scopes565 retain4 exact spans, retention/book/publication/size0. Promotion:
-containment adoption decision. Actual committed-mode proof/authoring/atomic class+gate switch remain
-.book.2/.3; existing caps still enforce. Bus/runtime/physical/release proof remains separately owned.
+0417 records exact fresh book proposals with guarded source/temp planning and one canonical atomic
+replacement. Native authoring8/reader23/O2 pass0:only control changes, repeat refresh, missing control,
+conflicting/late inputs and native rename refusal preserve caller edits/old record and clean temp.
+D278 existing numeric gate trusted caller roots/Git and opened parts before scope checks; old0dc native
+fixture reproduces escaped wc read/pass0. Canonical/target-only root and complete source preflight now
+refuse before wc or unsafe scratch, with isolated Git. D2787/full numeric17/probes6/overlap2 pass0 after
+bootstrap; no other Git repo created/amended. Hook/CI path verifies the canonical book regardless of
+numeric fixture overrides. Frozen part/index/depth limits plus bounded JSONL/fresh Git/task/hash govern
+unique maintained prose; aggregate targets explicitly inapplicable. Local note/COMMIT/book synced;
+neutral policy body unchanged. Whole0416 scopes/prior live row566 retains5 exact spans, retention/book/
+publication/size0. Promotion: containment decision. Actual committed-mode check follows commit, then
+.book.3 feature acceptance; source/semantic/physical/release claims remain independently owned.
+
+[Whole0416 reader lesson](docs/history/stitchcad-devnotes-part566.md) retains original candidate/native/O2/calibration proof and uninstalled boundary.
 
 [Whole0415 staging/book design lesson](docs/history/stitchcad-devnotes-part565.md) retains capacity evidence, D277 and implementation ownership.
 

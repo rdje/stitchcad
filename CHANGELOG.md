@@ -3,11 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0416 — verify strict maintained-book reader before adoption
+## STITCHCAD-G1-0417 — install guarded maintained-book authority and fix D278
 
-- Bound JSONL control, part/index/navigation, exact content/counts and fresh Git/task authority.
-- Native23/optimized2/independent wc+SHA/AST pass0; ordinary target candidates, no other Git repo writes.
-- Current gate/class/caps unchanged; authoring/atomic integration/committed acceptance follow. Whole0415 proof565.
+- Atomically record exact fresh Git/task/content authority; keep bounded parts/index/navigation.
+- Wire canonical book verification through existing hook/CI path; aggregate targets explicitly inapplicable.
+- D278 roots/Git/part inputs preflight before filesystem effects/native wc; controlled old0→fixed1 proof.
+- Author8/reader23/O2/D2787/numeric17/probes6/overlap2/book/gates pass0; whole0416/live row566 retained.
+- Actual committed-mode confirmation follows commit; full feature/runtime/physical/release proof stays pending.
 
 ## STITCHCAD-G1-0390 — record the aggregate retention policy boundary
 
@@ -30,6 +32,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part566](docs/history/stitchcad-devnotes-part566.md) | whole0416 reader/lesson/ledger/retirement/prior live row | 49 lines, 4879 bytes, sha256:746371c2… |
 | [part565](docs/history/stitchcad-devnotes-part565.md) | whole0415 bus/book design/lesson/ledger/D271–D277 | 57 lines, 4864 bytes, sha256:acc2866a… |
 | [part564](docs/history/stitchcad-devnotes-part564.md) | whole completed structural/input/garment tree/0414 scopes | 348 lines, 19551 bytes, sha256:835cf568… |
 | [part563](docs/history/stitchcad-devnotes-part563.md) | whole0413 garment acceptance/lesson/ledger/retirement | 41 lines, 3344 bytes, sha256:ef3c35e3… |

@@ -1179,12 +1179,15 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 [Whole corrected report/proofs0394](../history/stitchcad-devnotes-part544.md).
 ## D270 — RSS unit evidence before capacity signoff
 [Whole local mitigation0395](../history/stitchcad-devnotes-part545.md); [whole retirement proof0396](../history/stitchcad-devnotes-part546.md).
-## D271–D277 — original causes, controls and scope-order corrections
+## D271–D278 — original causes, controls and input/scope corrections
 [D271/D272](../history/stitchcad-devnotes-part547.md), [D273](../history/stitchcad-devnotes-part551.md),
 [D274/D275](../history/stitchcad-devnotes-part554.md), [D276](../history/stitchcad-devnotes-part559.md),
-[D277 original correction](../history/stitchcad-devnotes-part565.md).
-- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part565.md:4 exact
-  Git spans rc=0; whole0415 staging/lesson/ledger/D271–D277 preserved before retirement.
-- [x] ADDRESSED: same rc=0; all original capacity/refusal/correction evidence remains retrievable.
-- [x] NO REGRESSION: maintained-reader23/optimized2/native wc+SHA/AST/book/publication/size/retention
-  rc=0; .book.2/.3 atomic installation/committed proof and actual bus remain owned.
+[D277](../history/stitchcad-devnotes-part565.md); prior whole retirement [566](../history/stitchcad-devnotes-part566.md).
+D278 P2 fixed0417 .6.5.book.2:old size checker trusted ambient roots/Git and measured undeclared scope
+before path validation. Ordinary ../fixture part reaches native wc/passes0 in saved0dc; fixed refuses1
+before wc. Canonical/target-only workspace, isolated Git and complete source preflight now guard IO.
+- [x] ROOT CAUSE: transition_receipts.py --record docs/history/stitchcad-devnotes-part566.md:5 exact
+  Git spans rc=0; whole0416 scopes/prior live row retained. D278 old0→fixed1/five prebootstrap guards rc=0.
+- [x] ADDRESSED: author8/reader23/O2/D2787/numeric17/probes6/overlap2 rc=0; canonical book guard wired.
+- [x] NO REGRESSION: AST/bash/book/publication/size/retention rc=0; actual committed/full feature proof
+  .book.3 and actual bus/runtime/physical/release remain owned.

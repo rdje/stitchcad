@@ -1,4 +1,4 @@
-"""Read-only maintained-book contract, awaiting atomic LIVE-DOC-SIZE adoption (.book.2).
+"""Maintained-book verification and guarded exact change recording for LIVE-DOC-SIZE.
 
 The fixed schema-1 profile preserves existing part/index bounds. Current authority binds exact
 content and counts to a native Git baseline and a newly completed task, never to spare capacity.
@@ -7,7 +7,7 @@ Only project-local candidate directories are supported; no Git repository is cre
 from __future__ import annotations
 
 import argparse
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 import hashlib
 import json
 import os
@@ -16,6 +16,7 @@ import re
 import stat
 import subprocess
 import threading
+import uuid
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -126,7 +127,7 @@ def read_file(root: Path, relative: str, maximum: int) -> bytes:
     return data
 
 
-def git(root: Path, arguments: list[str], maximum: int) -> bytes:
+def git(root: Path, arguments: list[str], maximum: int, *, literal: bool = True) -> bytes:
     """Bound native output before allocation; always reap the child, also on refusal/interruption."""
     # A caller's alternate Git directory, index, object store, namespace or injected config cannot
     # select the authority. Preserve the parent environment; native commands remain read-only.
@@ -134,9 +135,10 @@ def git(root: Path, arguments: list[str], maximum: int) -> bytes:
     environment.update(GIT_OPTIONAL_LOCKS="0", GIT_CONFIG_NOSYSTEM="1", GIT_CONFIG_GLOBAL=os.devnull,
                        GIT_CONFIG_SYSTEM=os.devnull, GIT_NO_REPLACE_OBJECTS="1", GIT_TERMINAL_PROMPT="0")
     try:
-        process = subprocess.Popen(["git", "--no-pager", "--literal-pathspecs", "-C", str(root),
-                                    *arguments], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
-                                   env=environment)
+        options = ["--literal-pathspecs"] if literal else []
+        process = subprocess.Popen(["git", "--no-pager", "-c", "core.fsmonitor=false",
+                                    "-c", "submodule.recurse=false", *options, "-C", str(root), *arguments],
+                                   stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, env=environment)
     except OSError as issue:
         raise Refusal("git", "native Git unavailable") from issue
     timer = threading.Timer(GIT_SECONDS, process.kill)
@@ -416,7 +418,7 @@ class Verification:
     owner: str
 
 
-def check(root: Path = ROOT, tree: Path | None = None) -> Verification:
+def selected_tree(root: Path, tree: Path | None) -> tuple[Path, Path]:
     root = root.resolve(strict=True)
     tree = root if tree is None else tree
     try:
@@ -426,7 +428,10 @@ def check(root: Path = ROOT, tree: Path | None = None) -> Verification:
     if candidate != ".":
         need(stat.S_ISDIR(metadata(root, candidate).st_mode) and not os.path.lexists(tree / ".git"),
              "path", "candidate directory must not be another repository")
-    raw = read_file(tree, CONTROL, CONTROL_BYTES)
+    return root, tree
+
+
+def verify_record(root: Path, tree: Path, raw: bytes) -> Verification:
     record = parse_control(raw)
     registry_profile(tree)
     authority = record["authority"]
@@ -456,13 +461,132 @@ def check(root: Path = ROOT, tree: Path | None = None) -> Verification:
     return Verification(mode, current, task)
 
 
+def check(root: Path = ROOT, tree: Path | None = None) -> Verification:
+    root, tree = selected_tree(root, tree)
+    return verify_record(root, tree, read_file(tree, CONTROL, CONTROL_BYTES))
+
+
+def encode_record(record: dict) -> bytes:
+    header = dict(schema_version=1, max_records=1, max_bytes=CONTROL_BYTES, max_record_bytes=RECORD_BYTES)
+    raw = (json.dumps(header, sort_keys=True) + "\n" +
+           json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n").encode("utf-8")
+    parse_control(raw)
+    return raw
+
+
+def record_change(task: str, reason: str, root: Path = ROOT, tree: Path | None = None) -> Verification:
+    """Record one exact current proposal; all validation precedes the sole canonical replacement.
+
+    The control is authoritative tracked metadata. Regenerable temporary bytes live only in target/;
+    the shared producer planner guards its complete source/output plan before the first write.
+    This records numeric change authority, never a human approval or an executable command grant.
+    """
+    root, tree = selected_tree(root, tree)
+    need(root == ROOT.resolve(strict=True), "path", "authoring baseline must be this repository")
+    need(tree == root or tree.is_relative_to(root / "target"), "path", "authoring candidate must be under target")
+    text(task, 128, "task")
+    text(reason, 512, "reason")
+    registry_profile(tree)
+    head = git(root, ["rev-parse", "HEAD"], 128).decode("ascii").strip()
+    baseline = git_snapshot(root, head)
+    current = filesystem_snapshot(tree)
+    destination = tree / CONTROL
+    old = read_file(tree, CONTROL, CONTROL_BYTES) if os.path.lexists(destination) else None
+    at_head = blob(root, head, CONTROL, CONTROL_BYTES, absent=True)
+    if old is not None:
+        previous = parse_control(old)
+        if old != at_head:
+            need(previous["authority"]["task"] == task and previous["authority"]["base_commit"] == head,
+                 "conflict", "uncommitted authority belongs to another task or baseline")
+    record = {
+        "surface": "book_collection", "audience": "StitchCAD book readers and maintainers",
+        "rationale": "Unique maintained product/specification prose; bounded parts and complete direct navigation",
+        "navigation_depth": 3,
+        "authority": {"task": task, "reason": reason, "base_commit": head, "baseline": asdict(baseline),
+                      "target": asdict(current),
+                      "delta": {key: getattr(current, key) - getattr(baseline, key)
+                                for key in ("files", "lines", "bytes")}},
+    }
+    raw = encode_record(record)
+    result = verify_record(root, tree, raw)
+    need(result.mode == "candidate", "freshness", "recording requires a fresh candidate authority")
+    task_path = "docs/tasks/" + task.split(".", 1)[0] + ".md"
+    chapters = navigation(read_file(tree, INDEX, INDEX_BOUNDS[1])) | {INDEX}
+    sources = {tree / name for name in chapters | {REGISTRY, task_path}}
+    sources.update((Path(__file__).resolve(strict=True), root / "scripts/local_environment.py"))
+    if old is not None:
+        sources.add(destination)
+    # No imported book or JSON content is executable. This is the project's trusted planner module.
+    profile_source = read_file(root, "scripts/local_environment.py", 65536)
+    profile = dict(__file__=str(root / "scripts/local_environment.py"), __name__="maintained_book_profile")
+    exec(compile(profile_source, profile["__file__"], "exec"), profile)
+    relative_base = (tree.relative_to(root) / "target/maintained-reference-authoring").as_posix()
+    temporary = root / relative_base / ("authority-" + uuid.uuid4().hex + ".jsonl")
+    options = dict(sources=tuple(sorted(sources)), mutable_sources=(destination,) if old is not None else (),
+                   directories=(root / relative_base,), output_files=(temporary,))
+    def plan():
+        try:
+            profile["plan_producer"](root, **options)
+        except ValueError as issue:
+            raise Refusal("plan", str(issue)) from issue
+
+    plan()
+    frozen = {path: read_file(root, path.relative_to(root).as_posix(), max(TASK_BYTES, 65536))
+              for path in sources if path != destination}
+    created = None
+    try:
+        profile["directory"](root, relative_base, create=True)
+        descriptor = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_NOFOLLOW", 0), 0o600)
+        created = os.fstat(descriptor)
+        with os.fdopen(descriptor, "wb") as stream:
+            stream.write(raw)
+            stream.flush()
+            os.fsync(stream.fileno())
+        # Native HEAD, full content/ownership and every producer source are fresh at publication.
+        need(git(root, ["rev-parse", "HEAD"], 128).decode("ascii").strip() == head,
+             "changed", "HEAD changed during recording")
+        for path, data in frozen.items():
+            need(read_file(root, path.relative_to(root).as_posix(), max(TASK_BYTES, 65536)) == data,
+                 "changed", "authoring input changed before publication")
+        verify_record(root, tree, raw)
+        present = read_file(tree, CONTROL, CONTROL_BYTES) if os.path.lexists(destination) else None
+        need(present == old, "conflict", "authority destination changed before publication")
+        plan()
+        # Source/destination were separately guarded on this volume; replace never follows a leaf link.
+        os.replace(temporary, destination)
+        created = None
+        return result
+    except Refusal:
+        raise
+    except ValueError as issue:
+        raise Refusal("plan", str(issue)) from issue
+    except OSError as issue:
+        raise Refusal("write", "authority publication failed; previous canonical record retained") from issue
+    finally:
+        if created is not None:
+            try:
+                remaining = temporary.lstat()
+            except FileNotFoundError:
+                pass
+            else:
+                need((remaining.st_dev, remaining.st_ino) == (created.st_dev, created.st_ino) and
+                     stat.S_ISREG(remaining.st_mode) and remaining.st_nlink == 1,
+                     "changed", "temporary identity changed; refusing cleanup")
+                temporary.unlink()
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--candidate", help="repository-relative ordinary candidate directory")
+    actions = parser.add_subparsers(dest="action")
+    author = actions.add_parser("record-change", help="atomically record exact fresh book-change authority")
+    author.add_argument("--task", required=True)
+    author.add_argument("--reason", required=True)
     arguments = parser.parse_args()
     try:
         tree = ROOT / portable(arguments.candidate) if arguments.candidate else ROOT
-        result = check(ROOT, tree)
+        result = (record_change(arguments.task, arguments.reason, ROOT, tree)
+                  if arguments.action == "record-change" else check(ROOT, tree))
     except (Refusal, OSError, UnicodeError) as issue:
         print(str(issue))
         return 2

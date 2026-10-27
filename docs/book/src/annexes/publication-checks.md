@@ -97,6 +97,39 @@ Compiled production-body omissions must trigger independent assertion failures. 
 write neither off-volume nor to Git. Environment probes watch both contracts; `make probes` also runs
 the publication entry. See [build/checks](../build-and-checks.md) for local stores and remaining audits.
 
-The maintained-book reader passes23 candidate/native controls and2 optimized refusal checks: exact
-Git baseline/delta/content, fresh task ownership, bounded parts and complete SUMMARY. Default-gate
-installation remains G1-SLICE.6.5.book.2; current aggregate caps still apply. Committed proof follows.
+## Exact authority for maintained book changes
+
+The book is a maintained product reference. Its aggregate follows implemented product scope through
+an exact change record, with its existing chapter limits retained:700 lines,40960 bytes and440 bytes
+per content line. SUMMARY retains120 lines/8192 bytes/240 bytes per line, indexes every chapter once,
+and allows at most three navigation levels. The numerical aggregate targets are explicitly inapplicable;
+these part/index limits and a fresh record govern the collection instead.
+
+After focused checks and completing the owning task leaf, record the proposal before staging:
+
+```bash
+python3 -I -B docs/tasks/artifacts/live_doc_size/maintained_reference.py record-change \
+  --task G1-SLICE.6.5.book.2 --reason 'Adopt exact maintained-book authority'
+```
+
+Use the actual new leaf and reason for each change. The command validates the complete proposal,
+prepares a private file under target, then atomically replaces only the canonical control. It edits
+no chapter and preserves a conflicting caller edit. A failure before replacement leaves the previous
+record; owned temporary files are cleaned. Preparation is repeatable within the same uncommitted
+leaf; a previously completed leaf cannot authorize a later change.
+
+The bounded UTF-8 JSONL control has one metadata header and one record, with8192 total bytes and6144
+raw record bytes. It binds native Git baseline, exact file/line/byte deltas and framed Markdown digest
+to a newly completed task. Even an edit with the same byte count needs a new record. Missing, stale,
+reused, banked or inexact authority refuses, alongside incomplete navigation and oversized parts.
+This is numerical document-change authority, never cryptographic signing or human release approval.
+
+The existing size-check command runs the canonical book verifier for normal commit/CI checks. Numeric
+fixture overrides cannot replace that book; caller Git directory/index/configuration cannot redirect
+its baseline. Read-only checking creates no book control or build store. Native measurement paths
+are preflighted before opening bodies, including symlink/special-file/repository/volume boundaries.
+
+Reader23/optimized2 and guarded authoring8 controls pass in ordinary project-local candidates, with
+native wc/SHA calibration and controlled rename/late-input failures. Actual committed-mode adoption
+and full feature acceptance are separate checks after the installation commit. These checks prove
+scope/freshness, not semantic correctness, physical support or release readiness.
