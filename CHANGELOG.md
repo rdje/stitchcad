@@ -5,15 +5,18 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0357 — bind actual measurement metadata through the core host
 
-- Implement the readonly core port with exact MeasurementInputs records, six-family census and original validators.
-- Retain typed host errors; direct binding is targeted, checked DesignMetadata reads validate the whole actual scope.
-- Native12/privacy2/strict selected lint/fmt/book/publication pass0; D250132 rows exactly baseline, delta0.
-- Whole0356 and historical phase guards508 match4 Git spans; current behavior/commands retained; caps unchanged.
-- G1still6/18; actual SizeSet/reference scope next. Full Design/execution/physical/integration/CI remains pending.
+## STITCHCAD-G1-0358 — validate exact external Design SizeSet references
+
+- Add core DesignSizeSetReference and explicit lossless higher-reference conversions; no embedded members or lookup.
+- Actual garment/MTM views reject wrong set/revision and retain original current validators and typed mismatch refs.
+- Two exact native cases/strict core and selected-measure lint/fmt/book/publication pass0; D250132 rows exactly baseline.
+- Pin admission remains separate from partial-chart coverage/MTM grading; whole0357/name-read/SizeSet proofs509 match5 Git spans.
+- Caps unchanged; G1still6/18. Owned source metadata next; full Design/execution/physical/integration/CI remains pending.
 
 # Sealed archive — earlier slices
+
+| [part509](docs/history/stitchcad-devnotes-part509.md) | whole0357 and historical name-read/SizeSet milestone proofs | 147 lines, 11851 bytes, sha256:f2a5dd2d… |
 
 | [part508](docs/history/stitchcad-devnotes-part508.md) | whole0356 core-host and historical phase guards | 76 lines, 6172 bytes, sha256:b7b854f3… |
 

@@ -6,7 +6,7 @@
 - **Owner / source:** leaf `G0-CONTRACT.6`, resolving the question roadmap §3.4 leaves open at G0 and
   ontology §2.3 refers here ("Ownership … is decided in the size-sets chapter")
 
-answers: "who owns a size set?" · "can a factory change my sizes?" · "where do size-run quantities live?" · "why is a size set referenced rather than embedded in a design?" · "what must a profile record to override sizes?" · "how does made-to-measure fit a size set?" · "can label order choose the base?" · "can a size revision wrap?" · "may chart and Design share an authored base input?"
+answers: "who owns a size set?" · "can a factory change my sizes?" · "where do size-run quantities live?" · "why is a size set referenced rather than embedded in a design?" · "what must a profile record to override sizes?" · "how does made-to-measure fit a size set?" · "can label order choose the base?" · "can a size revision wrap?" · "may chart and Design share an authored base input?" · "what does core Design SizeSet reference admission prove?"
 
 ## The fact / decision
 
@@ -130,71 +130,19 @@ defines adjacency; dimensions, axis associations and values are never inferred f
 G1-SLICE.4c.3d.0 resolves the semantic gap; .3d.1 implements declarations before collection/composition.
 The whole original conflict/witness remains retained431; the choice itself does not certify readiness.
 
-G1-SLICE.4c.3d.1 now implements individual declarations over actual membership/axes and a named
-measurement-table binding. Ordered member adjacency is checked without sorting; scalar state/source
-is borrowed from a dedicated canonical Length record, with original Unknown/Derived read refusals.
-Cross-inventory identities/content are consistent before lookup; same-id delta replacements retain
-the actual current state/source. Five break plus five axis contracts pass. Required coverage and
-composite/path readiness remain .3d.2/.3; declared deltas are not generated equivalence evidence.
+The individual breaks, required coverage, garment/MTM composition and immutable profile intent
+milestones are implemented. Exact historical assertions, counts and successive scope boundaries
+remain in [continuity509](../history/stitchcad-devnotes-part509.md). Current APIs and examples live
+in the [SizeSet chapter](../book/src/spec/size-sets.md). Structural currentness/coverage and immutable
+intent remain distinct from numeric execution, G3/G4 application and global Design/release truth.
 
-G1-SLICE.4c.3d.2 adds an independent explicit required axis/dimension inventory and available break
-records. Partial drafts remain valid; coverage names exact missing cells in authored order and
-refuses singleton grading even when there are no gaps. Duplicate/undeclared requirements or cells
-refuse. Coverage never means numeric availability: Unknown/Derived sources keep their original reads.
-Five collection plus five declaration contracts pass; composite/path inputs remain .3d.3.
 
-G1-SLICE.4c.3d.3.1 composes actual garment SizeSet inputs by borrow, with one shared membership,
-measurement context and Design table across chart/break layers. Equal-id independent wrappers do not
-unify snapshots. Cross-view identity aliases refuse; nested errors remain original. Regeneration
-requires full chart coverage; grading additionally requires break coverage. No numeric availability,
-execution or approval follows from these structural checks. Five composite plus five break tests
-pass; MTM composition/shared review remains .3.2/.3.3 and persistence remains its later owner.
+## G1 core reference boundary
 
-G1-SLICE.4c.3d.3.2 adds composite MTM body/Ease inputs using the same shared snapshot/identity checks.
-The custom singleton keeps its authored axis/point. Regeneration requires complete mappings;
-grading preserves the original chart/member refusal after current metadata checks. Numeric source
-state remains borrowed without body-plus-Ease evaluation. Five new MTM, fifteen original MTM and
-five garment contracts pass; unified-family review remains .3.3, execution/persistence separate.
-
-G1-SLICE.4c.3d.3.3 adds explicit SizeSetInputs::Garment/Mtm variants over the actual validated views.
-Common record/path access delegates without inferring a family from labels/system/singleton count;
-a one-member garment chart remains garment provenance. Current focused review passes6 garment,
-6 MTM and5 break contracts, selected lint/fmt/book. Signed-break/composite-input implementation is
-complete; .4c.3e reviews scope, .4c.4 owns transformations, later owners retain execution/storage.
-
-G1-SLICE.4c.3e closes the chart/body/break structural input scope after D230/D231 integration repairs.
-Current local metadata/coverage is distinct from numeric, physical and global Design truth. Existing
-focused code evidence remains unchanged; profile transformation .4c.4 and combined-family .5/.4d
-review remain pending. This closure adds no numeric execution, persisted container or approval claim.
-
-G1-SLICE.4c.4.1 adds exact selected profile/schema/content labels and immutable resolution origin.
-G1 requires nonblank opaque labels, leaving grammar/registry validation to G4. Actual source
-identity/revision must match the supplied garment/MTM input view; a separately allocated target
-cannot alias supplied records or origin provenance. Source objects are unchanged. No transformed
-output, global freshness, profile execution or approval is certified. Typed transformations follow.
-
-G1-SLICE.4c.4.2 adds typed state-bearing label/base intent pinned to actual source inputs. Known
-requires distinct nonempty evidence; Unknown/Derived have no payload. Partial mappings preserve
-member/mapping order and exact labels, refusing collisions with unchanged members; simultaneous
-swaps remain valid. Proposed bases name actual members. These immutable declarations never apply
-a profile or change path readiness. Break/chart bindings and immutable aggregate remain .3/.4.
-
-G1-SLICE.4c.4.3.1 binds break-scaling intent to an actual available signed break and canonical
-Ratio scalar in the shared current input inventory. Original break/delta/factor records are borrowed;
-missing records, wrong roles and wrong actual kinds refuse. All canonical states and signed/zero
-factors remain intact. No multiplication, profile-domain validation or derived result is performed.
-
-G1-SLICE.4c.4.3.2 adds typed same-family chart replacement candidates through original source
-metadata, membership/axes/breaks. Candidate composites revalidate actual bindings, refuse missing/
-duplicate/substituted identities and retain draft/path rules. Authored replacement needs explicit
-context; Unknown/Derived remain payload-less. Source charts/references and canonical states stay
-unchanged. G4 profile resolution and G3 application/equivalence remain separate.
-
-G1-SLICE.4c.4.4 adds immutable origin plus ordered transformation intent, retaining exact selected
-profile pins, original/resolved refs and all states. Source/candidate bindings revalidate; cross-record
-identity aliases refuse. Empty no-override and unresolved intent remain representable. Each claim
-targets original inputs; G4 owns combined conflicts/precedence/application, with no resolved result claim.
-
-G1-SLICE.4c.4.5 closes immutable intent; .4c.5 closes the SizeSet structural family after requirements review.
-Four domains/five states remain distinct from G3/G4 application/conflicts/evidence truth. Combined
-measurement/Ease/SizeSet signoff .4d remains separate.
+DesignSizeSetReference now carries an exact id/Count revision in core, with explicit lossless
+conversion to/from the higher SizeSetReference. The higher reference retains its existing fallible
+successor API and typed overflow refusal; neither type silently advances a revision during conversion.
+SizeSetInputs validates the Design pin against its actual garment/MTM view and reuses current checks.
+Mismatch retains both exact references. Matching pins admit structural drafts, not chart coverage,
+numeric availability or execution. Full owned source/Design composition follows its task children;
+Design remains a reference owner, and Factory Profile transformation remains explicit and separate.

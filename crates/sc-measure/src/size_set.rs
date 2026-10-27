@@ -48,6 +48,21 @@ impl<'a> From<MtmSizeSetInputs<'a>> for SizeSetInputs<'a> {
     }
 }
 impl<'a> SizeSetInputs<'a> {
+    /// Require the exact Design-authored external reference, then validate this actual current view.
+    /// This does not select another set or require path coverage/numeric availability.
+    ///
+    /// # Errors
+    /// Returns the exact reference mismatch first, then the original family-specific current error.
+    pub fn validate_design_reference(
+        self,
+        expected: sc_core::design::DesignSizeSetReference,
+    ) -> Result<(), SizeSetInputError> {
+        let actual = self.reference().into();
+        if expected != actual {
+            return Err(SizeSetInputError::DesignReferenceMismatch { expected, actual });
+        }
+        self.validate_current()
+    }
     /// Exact set/revision from the original current membership.
     #[must_use]
     pub fn reference(self) -> crate::SizeSetReference {

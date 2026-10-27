@@ -1,5 +1,6 @@
 //! Size identities, human labels, authored order and base selection; chart/axes are separate contracts.
 use core::fmt;
+use sc_core::design::DesignSizeSetReference;
 use sc_core::ontology::EntityId;
 use sc_units::Count;
 use std::collections::BTreeSet;
@@ -14,6 +15,19 @@ pub struct SizeSetReference {
     pub id: EntityId,
     /// Exact authored revision, including initial revision zero.
     pub revision: Count,
+}
+impl From<SizeSetReference> for DesignSizeSetReference {
+    fn from(value: SizeSetReference) -> Self {
+        Self::new(value.id, value.revision)
+    }
+}
+impl From<DesignSizeSetReference> for SizeSetReference {
+    fn from(value: DesignSizeSetReference) -> Self {
+        Self {
+            id: value.id(),
+            revision: value.revision(),
+        }
+    }
 }
 impl SizeSetReference {
     /// Produce a successor retaining identity, without wrapping or mutating the original reference.

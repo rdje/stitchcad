@@ -847,25 +847,34 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0356 checked core metadata-host port; [whole scope/proof](../history/stitchcad-devnotes-part508.md).
 - ID: `G1-SLICE.6.4.2.d.4.2`
   Status: `done`
-  Goal: implement the port using actual MeasurementInputs metadata, references and current validators.
-  Own exact six-family census, original typed host errors and actual measurement-to-canonical reads;
-  focused existing fixture acceptance/lint/book sync and whole0356/phase-guard continuity508.
-  - [x] REPRODUCE / ISSUE: actual higher metadata must implement the core port without copied values;
-    cargo test -p sc-measure --test measurement_inputs_contract passes12/0 rc=0, target/measurement-host-native-0357.log.
-  - [x] ROOT CAUSE (WHY + WHERE): the core port alone cannot establish measurement-to-target semantics;
-    actual adapter cases in measurement_inputs_contract pass12/0 rc=0 through local_environment.py.
-  - [x] FIX: actual six-family owned census and original current validators/binding queries;
-    native12/0 rc=0 confirms pointer membership, family refusal and unused compression revalidation.
-  - [x] ADDRESSED: selected native12/privacy2 pass0; cargo test -p sc-measure --doc inputs::MeasurementInputs
-    rc=0 retains private/shared ownership; target/measurement-host-privacy-0357.log.
-  - [x] NO REGRESSION: strict selected Clippy/fmt/book/publication79/115/1456/2390 pass0;
-    D250132 exact baseline rows/delta0, glossary rc=1; full Design/execution/integration/CI deferred.
-  - [x] LOCKSTEP: actual adapter chapter/API/decision/index/pointer aligned; continuity508 compares4
-    exact Git spans rc=0. Historical guard receipts retained; caps unchanged; G1still6/18.
-    promotion: declined (implements existing core-host ownership decision). Commit0357; .4.3 SizeSet scope next.
+  Goal:0357 actual MeasurementInputs host; [whole scope/proof](../history/stitchcad-devnotes-part509.md).
 - ID: `G1-SLICE.6.4.2.d.4.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual SizeSet metadata/reference ownership; borrowed membership alone is not a complete set.
+  Children .a core exact reference/current-view bridge; .b owned common membership/axis/break sources;
+  .c owned chart-family/context composition. Design retains a reference, not an embedded size list.
+- ID: `G1-SLICE.6.4.2.d.4.3.a`
+  Status: `done`
+  Goal: exact core/higher SizeSet reference bridge over actual garment/MTM views, with no readiness claim.
+  - [x] REPRODUCE / ISSUE: Design needs an exact external set pin, not an embedded member list;
+    two exact family cases pass1 each/0 failures rc=0, target/design-size-reference-native-0358.log.
+  - [x] ROOT CAUSE (WHY + WHERE): SizeSetReference lives above core; the Design needs an explicit bridge.
+    Selected cargo test -p sc-measure family filters pass2/0 rc=0, target/design-size-reference-native-0358.log.
+  - [x] FIX: core carrier, explicit lossless conversions and actual current-view pin checks;
+    native2/0 rc=0 rejects wrong id/revision, retains terminal/zero revisions and partial-draft semantics.
+  - [x] ADDRESSED: exact garment/MTM cases pass1 each rc=0; matching pin preserves MTM grading
+    refusal and incomplete garment coverage; no latest/profile/label inference or source mutation.
+  - [x] NO REGRESSION: strict core/selected-measure Clippy/fmt/book/publication79/116/1456/2391
+    pass0; D250132 exact baseline rows/delta0, glossary rc=1; full source/Design/integration/CI later.
+  - [x] LOCKSTEP: SizeSet book/API/decision/index/pointer aligned; continuity509 compares5 exact
+    Git spans rc=0; historical name-read/SizeSet receipts retained; caps unchanged; G1still6/18.
+    promotion: promoted to docs/decisions/decision_size-set-ownership.md. Commit0358; .4.3.b sources next.
+- ID: `G1-SLICE.6.4.2.d.4.3.b`
+  Status: `pending`
+  Goal: owned common membership/axis/break source metadata over borrowed current canonical inputs.
+- ID: `G1-SLICE.6.4.2.d.4.3.c`
+  Status: `pending`
+  Goal: actual owned chart-family sources/context composition, then complete reference/source acceptance.
 - ID: `G1-SLICE.6.4.2.d.4.4`
   Status: `pending`
   Goal: compose actual owned Design sources, identity scopes and focused binding/privacy acceptance.

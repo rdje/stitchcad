@@ -512,6 +512,32 @@ Decided in `docs/decisions/decision_size-set-ownership.md`; the operative rules:
 5. **Artifacts record the resolved set.** A `.rul` table is meaningless without the base size and breaks it
    was built against, so the manifest names the resolved size set's identity and revision.
 
+### Executable Design reference boundary
+
+DesignSizeSetReference is the core id/revision carrier. new(id, revision) retains exact authored
+values; id() and revision() expose them without lookup or member storage. Explicit From conversions
+with sc-measure SizeSetReference preserve both fields, including revision zero and terminal Count.
+Construction/conversion supplies no registry, evidence or path-readiness certificate.
+
+SizeSetInputs::validate_design_reference(expected) requires the actual supplied garment/MTM view's
+exact set identity and revision, then reuses its current validator. No label, singleton count, latest
+revision or profile selection substitutes for the authored pin. The view is not modified.
+
+| API or variant | Implemented boundary |
+| --- | --- |
+| `DesignSizeSetReference` | Core external reference; no embedded chart/member list |
+| `DesignReferenceMismatch` | SizeSetInputError retains exact expected and actual references |
+
+```rust
+use sc_core::{design::DesignSizeSetReference, ontology::EntityId};
+use sc_units::Count;
+let reference = DesignSizeSetReference::new(EntityId::from_bits(17), Count::new(0));
+assert_eq!(reference.revision(), Count::new(0));
+```
+
+Admission permits partial chart drafts; validate_inputs_for remains the separate structural coverage
+check, and MTM still refuses grade rules. Numeric execution and full Design composition remain later.
+
 ## 10. What each instantiation path consumes
 
 | Path | From the size set | Consequence of a profile override |

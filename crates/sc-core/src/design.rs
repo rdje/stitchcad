@@ -7,6 +7,32 @@ use crate::{
     ontology::{CutPlan, CutPlanError, EntityId, IdentityLedger, PieceInventory},
     value::CanonicalInputs,
 };
+use sc_units::Count;
+
+/// Exact external SizeSet reference authored by a Design; construction performs no registry lookup.
+/// This reference owns neither member labels nor a chart and implies no instantiation readiness.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+pub struct DesignSizeSetReference {
+    id: EntityId,
+    revision: Count,
+}
+impl DesignSizeSetReference {
+    /// Retain the explicit identity/revision, including zero and the terminal Count revision.
+    #[must_use]
+    pub const fn new(id: EntityId, revision: Count) -> Self {
+        Self { id, revision }
+    }
+    /// Exact external set identity, without resolving a label or selecting a replacement.
+    #[must_use]
+    pub const fn id(self) -> EntityId {
+        self.id
+    }
+    /// Exact authored set revision, independent of the containing Design revision.
+    #[must_use]
+    pub const fn revision(self) -> Count {
+        self.revision
+    }
+}
 
 mod host;
 mod parameters;

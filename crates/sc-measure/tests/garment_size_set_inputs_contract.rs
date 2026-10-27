@@ -454,3 +454,48 @@ fn resolved_identity_cannot_alias_any_supplied_garment_namespace_or_its_provenan
 
 #[path = "support/size_set_transformations.rs"]
 mod transformations;
+
+#[test]
+fn design_reference_requires_exact_set_and_revision_without_inventing_coverage() {
+    use sc_core::design::DesignSizeSetReference;
+    use sc_units::Count;
+    let fixture = Fixture::new(MeasurementKind::Garment);
+    with_parts(
+        &fixture,
+        Options {
+            partial_chart: true,
+            ..Options::default()
+        },
+        |chart, chart_context, breaks, break_context| {
+            let inputs = SizeSetInputs::from(
+                GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                    .expect("actual family snapshot"),
+            );
+            let original = inputs.reference();
+            let actual = DesignSizeSetReference::from(original);
+            assert_eq!(SizeSetReference::from(actual), original);
+            assert_eq!(inputs.validate_design_reference(actual), Ok(()));
+            for expected in [
+                DesignSizeSetReference::new(id(9999), original.revision),
+                DesignSizeSetReference::new(original.id, Count::new(original.revision.get() + 1)),
+            ] {
+                assert_eq!(
+                    inputs.validate_design_reference(expected),
+                    Err(SizeSetInputError::DesignReferenceMismatch { expected, actual })
+                );
+            }
+            assert_eq!(inputs.reference(), original);
+            assert!(matches!(
+                inputs.validate_inputs_for(SizeInstantiationPath::Regeneration),
+                Err(SizeSetInputError::Chart(_))
+            ));
+            for revision in [Count::new(0), Count::new(u32::MAX)] {
+                let pin = DesignSizeSetReference::new(original.id, revision);
+                assert_eq!(
+                    DesignSizeSetReference::from(SizeSetReference::from(pin)),
+                    pin
+                );
+            }
+        },
+    );
+}

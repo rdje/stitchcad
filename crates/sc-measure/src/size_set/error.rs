@@ -7,6 +7,13 @@ use sc_core::ontology::EntityId;
 /// Composite current SizeSet input refusal, without cached values or an inferred snapshot.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum SizeSetInputError {
+    /// Actual current set identity/revision differs from the Design's explicit external reference.
+    DesignReferenceMismatch {
+        /// Exact Design-authored reference.
+        expected: sc_core::design::DesignSizeSetReference,
+        /// Actual supplied view's membership reference.
+        actual: sc_core::design::DesignSizeSetReference,
+    },
     /// Original current chart/reference/coverage failure.
     Chart(Box<SizeChartCollectionError>),
     /// Original current MTM body/Ease/reference/coverage or grading-path refusal.

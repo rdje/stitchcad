@@ -578,3 +578,38 @@ fn resolution_intent_rechecks_original_and_transformation_pins_against_current_m
         },
     );
 }
+
+#[test]
+fn design_reference_requires_exact_set_and_revision_without_inventing_coverage() {
+    use sc_core::design::DesignSizeSetReference;
+    use sc_units::Count;
+    let fixture = Fixture::new();
+    with_parts(
+        &fixture,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs = SizeSetInputs::from(
+                MtmSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                    .expect("actual family snapshot"),
+            );
+            let original = inputs.reference();
+            let actual = DesignSizeSetReference::from(original);
+            assert_eq!(SizeSetReference::from(actual), original);
+            assert_eq!(inputs.validate_design_reference(actual), Ok(()));
+            for expected in [
+                DesignSizeSetReference::new(id(9999), original.revision),
+                DesignSizeSetReference::new(original.id, Count::new(original.revision.get() + 1)),
+            ] {
+                assert_eq!(
+                    inputs.validate_design_reference(expected),
+                    Err(SizeSetInputError::DesignReferenceMismatch { expected, actual })
+                );
+            }
+            assert_eq!(inputs.reference(), original);
+            assert!(matches!(
+                inputs.validate_inputs_for(SizeInstantiationPath::GradeRules),
+                Err(SizeSetInputError::Mtm(_))
+            ));
+        },
+    );
+}

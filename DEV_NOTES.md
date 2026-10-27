@@ -3,26 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-27 UTC)_ — actual measurement metadata through the core host
+## _(2026-10-27 UTC)_ — exact external Design SizeSet reference
 
-0357 MeasurementInputs implements DesignMetadataHost using its actual immutable source records.
-The census lists only owned landmarks/procedures/measurements/tables/Ease/sets in authored family
-order, excluding canonical and referenced ids. Whole validation calls existing actual validators;
-selected binding queries use the original record context and Measurement declaration lookup.
-Direct trait binding is targeted; DesignMetadata adds whole-scope/current canonical-object checks.
-No copied values, stored contexts, fallback or reverse dependency. MeasurementHostError retains
-original inventory/context/binding causes and source chains. Actual fixture cases verify11 metadata
-positions, both explicit body/garment targets, unknown state, missing-id non-inference, same-id
-scalar-family refusal and revalidation of forbidden negative amounts in unused mappings.
-Native12/privacy2/strict selected lint/fmt/book/publication pass0. D250132 rows exactly baseline,
-delta0; full glossary rc=1. Whole0356 and historical phase-guard section508 compare4 exact Git spans;
-public guard behavior/current commands remain live. Caps unchanged; G1still6/18. Promotion declined:
-existing core-host decision implemented. .6.4.2.d.4.3 actual SizeSet/reference scope follows; no full
-Design/execution/physical/profile/integration/CI claim.
+0358 DesignSizeSetReference carries only an explicit EntityId/Count revision in core; it performs
+no registry lookup or default revision selection. Explicit higher SizeSetReference conversions
+preserve both fields, including zero and terminal Count, without advancing/reimplementing its
+fallible successor. SizeSetInputs::validate_design_reference requires exact actual membership pin
+then invokes the existing family current validator. Typed mismatch retains expected/actual refs.
+Native garment/MTM cases pass1 each/0 failures; wrong id/revision refuse, matching refs retain
+partial garment drafts and the original MTM grading refusal. Pin admission is distinct from path
+coverage, numeric execution, global currentness and full Design composition. No member list or
+profile selection is embedded in the Design reference. Strict core/selected-measure lint/fmt/book/
+publication pass0; D250132 rows exactly baseline, delta0. Whole0357 and historical name-read proof
+block/SizeSet milestone509 compare5 exact Git spans; functional behavior/current commands retained. Caps unchanged;
+G1still6/18. Promotion: size-set ownership decision gains exact-reference answer/boundary section.
+.6.4.2.d.4.3.b owned common source metadata next; full Design/physical/integration/CI remains later.
 
 
-[Complete core metadata-host lesson](docs/history/stitchcad-devnotes-part508.md) retains
-its original trust boundary, checks and promotion decision.
+[Complete actual measurement-host lesson](docs/history/stitchcad-devnotes-part509.md) retains
+its original scope, checks and promotion decision.
 
 ## _(2026-10-26 UTC)_ — native authority scope review
 
