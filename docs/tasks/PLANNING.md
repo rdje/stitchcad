@@ -491,9 +491,6 @@ G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exa
 
 
 
-
-
-
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a
@@ -1184,17 +1181,20 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 Done;owner G1-SLICE.6.vocabulary.acceptance. [Whole causes/reproductions/repairs](../history/stitchcad-devnotes-part639.md)
 retain obsolete secondary pointer,definition-only use and token/chapter-pair assumptions;focused4/full41 pass0.
 
-## D300 — stale command-schema execution summary
+## D300 — corrected execution scope0485
 
-P2;owner G1-SLICE.6.5.3.2.1;done0485. command-layer.md paired-cut paragraph previously ended with all mutation execution pending,despite preparation.rs exact native availability for ChangeMeasurement/
-AssignMaterial/AddNotch. Reproduce by rg of that prose and the actual preparation match. Impact: reader misses implemented metadata behavior. Correct scope to those handlers while paired seam/Dart execution remains
-owned;actual availability source bytes unchanged/scope predicate and final book87/162/1556/2641 pass rc=0.
+Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/stitchcad-devnotes-part642.md) retains the exact original ledger.
+
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 implementation prerequisite;owner G1-SLICE.6.5.3.2.3.2,pending and scheduled next before effects.
+P1 implementation prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Normalized progress .1 implemented;root-cumulative allocation .2 next.
 Actual native sewing test structural_child_graph_acceptance_is_not_parent_ease_conservation passes:
 copying the10-micrometre parent amount into each independently supplied child yields20 total;the
 same structural constructor also accepts5+5 and retains DeferredToG2AndG3. Root:per-span amount/
 distribution fields and graph validation have no original-parent relation. This is no published split;
 current handler remains unavailable. Implement coupled parent-aware sources/quantization/provenance
 for explicit/formula/profile and distribution cases;never use standalone structural success as conservation proof.
+
+Original-source cumulative quantization is the chosen plan:independent Fraction prototype for1µm
+shows rounded-child orders[0,1,0] versus[1,0,0];retained-root boundaries give[0,1,0],with signed symmetry.
+Native cumulative integration/watch remains .3.2.2;D301 is not closed by the normalized-progress prerequisite.

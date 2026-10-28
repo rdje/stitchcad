@@ -2,22 +2,22 @@
 
 Read CLAUDE.md/README.md and doctrine;derive HEAD with git log --oneline -1.
 
-- Next G1-SLICE.6.5.3.2.3.2 P1 D301:parent-aware conserved ease before paired effects. Actual native
-  diagnostic copies parent10µm to two supplied children,giving20;5+5 also passes standalone structural
-  graph validation with deferred-ease marker. Root graph/amount fields have no parent relation.
-  Own exact original explicit/formula/profile sources,uniform/weighted/notch distribution and coupled
-  quantization/geometry dependencies. No fabricated values or blind duplicated parent amount.
-  Parent .2/.3 in_progress;stop .3.3/lineage .3.4/full paired acceptance remain pending.
-- 0487 .3.1 CommandSeamSplitPair/paired_intervals returns fixed source projections in A lower/upper
-  order,Same lower/lower or Opposite lower/upper;retain original parent/copy/frame/direction.
-  Native2 new cases include6 direction/copy contexts (reflection/shared pattern edge) plus actual
-  conservation counterexample/control. Sewing28/docs3/selected strict library/sewing Clippy/fmt pass0.
-  Bus availability/operation-demand bytes unchanged;no child IDs,amounts,stops or split effects.
-- Final glossary310/9/158/0 and book88 chapters/165 API rows/1559 source/2654 rendered links pass0.
-  Whole0486 scope/lesson/changelog641 verified3 Git spans;retention1095/2486903 residentB/62 workingMD.
-  LIVE D301 P1 owned,G1 6/18. Prior binding sewing26/docs3,interval17/docs1 pass;D300 corrected.
-  D250 prior glossary41;metadata prior publication45/native317 incl bus98/docs49. Other runtime/
-  adapter/persistence/browser/full CI/physical/release work remains;G0 human closure unapproved.
+- Next G1-SLICE.6.5.3.2.3.2.2 P1 D301:root-cumulative uniform explicit allocation. Retain actual
+  original parent source/domains;quantize cumulative boundary values and difference endpoints.
+  Independent Fraction prototype ±1 shows rounded-child split orders differ;native watch/integration
+  still pending. Do not repartition rounded child totals. Respect Same/Opposite and A-ordered pairs.
+  Parent D301 in_progress;symbolic source/domain/provenance .3,weighted/notch .4,stops/lineage/paired
+  effects and acceptance remain owned. No fabricated source values or physical/currentness proof.
+- 0488 .1 exact EdgeRange::relative_progress normalizes complete fraction. Cross-cancel four factor
+  pairs before products/narrowing;offset125-bit denominator can yield valid63-bit progress. Original
+  range/cut and actual UnitError boxed source retained;successful computation fixed-width/no allocation.
+  Native numerical unit1/range19/docs1/strict selected Clippy/fmt pass;17 independent Fraction rows
+  (13 value/2 outside/2 overflow) native checked,producer byte-equal. Unknown topology stays unresolved.
+- Final glossary310/9/158/0 and book88 chapters/166 API rows/1559 source/2655 rendered links pass0.
+  Whole0487/closed D300642 verified4 Git spans;retention1096/2492115 residentB/63 workingMD pass0.
+  LIVE unchanged:G1 6/18,D301 P1. Prior direction sewing28/docs3,source binding26/docs3,interval17/docs1;
+  metadata prior publication45/native317 incl bus98/docs49. Remaining runtime/adapter/persistence/
+  browser/full CI/physical/release work stays owned;G0 human closure unapproved.
 - Protect target/history-capture-0450/installation/backup(98files),prior0392g. Window22 limits64/192;
-  raw62 leaves2 slots before capacity action. Derive push400 from Git;cleanup due2026-10-28 13:41UTC.
-  Full PNT continues. Other repos read-only;submodule implementations black boxes.
+  raw63 leaves1 slot:record643 fits,next record644 needs capacity action first. Derive push400 from Git.
+  Cleanup due2026-10-28 13:41UTC. Full PNT continues;other repos read-only/submodule internals black boxes.

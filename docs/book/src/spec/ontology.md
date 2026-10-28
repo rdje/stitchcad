@@ -111,6 +111,45 @@ queries, including visible repairs for unresolved references and exact mapping a
 The paired sewing handler still owns physical-copy/pairing, direction, ease, stop and lineage obligations.
 This interval operation alone supplies no sewing mutation or physical correspondence certificate.
 
+### 1.3 Exact normalized source progress
+
+A held range can report the exact fraction of its source interval at a supplied source-frame
+position. Endpoints return zero/one. Exterior positions retain an original bounds refusal; successful
+arithmetic checks the complete reduced fraction against the reference rational's signed64-bit fields.
+
+| API token | Meaning |
+| --- | --- |
+| `relative_progress` | Exact complete normalized fraction for a position within the held closed interval |
+| `Rational` | Bounded exact reference fraction;distinct from the formula workspace rational |
+| `RangeProgressError` | Original range/position and bounds or numeric refusal |
+| `Outside` | Position lies outside the held closed interval,before numerical recomputation |
+| `Arithmetic` | Complete reduced fraction exceeds the bounded representation;original UnitError remains its source |
+
+```rust
+use sc_core::ontology::{EdgeRange, EdgeRef, EntityId, LocalTag, Param, Rational};
+let edge = EdgeRef::new(EntityId::from_bits(1), LocalTag::FIRST);
+let from = Param::new(Rational::new(1, 7)?)?;
+let to = Param::new(Rational::new(6, 7)?)?;
+let at = Param::new(Rational::new(2, 3)?)?;
+let range = EdgeRange::new(edge, from, to)?;
+assert_eq!(range.relative_progress(at)?, Rational::new(11, 15)?);
+assert_eq!(range.relative_progress(from)?, Rational::ZERO);
+assert_eq!(range.relative_progress(to)?, Rational::ONE);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The kernel cancels all numerator/denominator factor pairs before multiplication. It does not first
+materialize a bounded offset and extent. With source denominators 9223372036854775806,
+9223372036854775804 and 9223372036854775802, the offset needs 125 denominator bits, while complete
+progress 4611686018427387901/9223372036854775804 fits 63 and is accepted. A complete reduced denominator
+of 9223372036854775808 genuinely exceeds the bound and retains its typed arithmetic refusal.
+
+Independent Python Fraction fixtures cover values, endpoints, exterior positions and refusals
+when the reduced result exceeds its width. Native tests consume the tracked fixture and preserve the original numeric
+source chain. This is source-frame mathematics:unknown topology remains unresolved,and copy,
+currentness and physical correspondence still require their actual checks. Error boxing occurs
+only on numeric refusal;successful computation uses fixed-width integer arithmetic.
+
 ## 2. Measurement and fit
 
 ### 2.1 `MeasurementTable`

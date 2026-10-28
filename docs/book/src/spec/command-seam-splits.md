@@ -125,3 +125,11 @@ The P1 conserved-ease task owns the parent relation,exact allocation/quantizatio
 explicit/formula/profile sources before effects. Weighted and notch-bounded distributions retain
 that same obligation;an unresolved source cannot be replaced with a fabricated child value. Semantic
 stop ownership and retired-parent/new-child lineage remain separate owned partition stages.
+
+For nested splits, the planned allocation stays tied to the original source and its domains. It
+quantizes cumulative original allocation at each retained boundary and differences those endpoint
+values for a child. This preserves the parent quantum sum without repeatedly rounding child totals.
+An independent Fraction planning prototype for a 1 µm parent gives rounded-child results
+[0,1,0] versus [1,0,0] for two split orders; the same original boundaries give [0,1,0]. The negative
+parent preserves signed symmetry. Native cumulative allocation and its regression tests remain
+the next owned P1 stage. These are planning prototype outputs.

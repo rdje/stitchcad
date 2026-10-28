@@ -152,6 +152,55 @@ impl Rational {
         reduce(num, den, "Rational::checked_div")
     }
 
+    /// Exact `(self - from) / (to - from)`, checking only the complete reduced result's width.
+    pub(super) fn checked_relative_progress(self, from: Self, to: Self) -> Result<Self, UnitError> {
+        const OPERATION: &str = "Rational::checked_relative_progress";
+        // As for checked_sub, both i64 cross-products and their difference fit i128 exactly.
+        let offset = i128::from(self.num) * i128::from(from.den)
+            - i128::from(from.num) * i128::from(self.den);
+        let extent =
+            i128::from(to.num) * i128::from(from.den) - i128::from(from.num) * i128::from(to.den);
+        if extent == 0 {
+            return Err(UnitError::DivisionByZero {
+                operation: OPERATION,
+            });
+        }
+        if offset == 0 {
+            return Ok(Self::ZERO);
+        }
+        let negative = (offset < 0) != (extent < 0);
+        let mut numerator = offset.unsigned_abs();
+        let mut denominator = extent.unsigned_abs();
+        let mut numerator_scale = u128::from(to.den.unsigned_abs());
+        let mut denominator_scale = u128::from(self.den.unsigned_abs());
+        // The shared from.den cancels algebraically. Cancel every remaining numerator/denominator
+        // factor pair before multiplying: otherwise an unobservable offset can exceed i64 even
+        // though the complete progress is representable. Division only removes factors, so later
+        // cancellation cannot make an earlier coprime pair share a factor again.
+        cancel_factors(&mut numerator, &mut denominator);
+        cancel_factors(&mut numerator, &mut denominator_scale);
+        cancel_factors(&mut numerator_scale, &mut denominator);
+        cancel_factors(&mut numerator_scale, &mut denominator_scale);
+        let overflow = || UnitError::Overflow {
+            operation: OPERATION,
+        };
+        // These products are now fully reduced. Exceeding u128/i128 therefore also exceeds the
+        // final i64 representation; it cannot hide a cancellation that would admit the result.
+        let numerator = numerator
+            .checked_mul(numerator_scale)
+            .ok_or_else(overflow)?;
+        let denominator = denominator
+            .checked_mul(denominator_scale)
+            .ok_or_else(overflow)?;
+        let numerator = i128::try_from(numerator).map_err(|_| overflow())?;
+        let denominator = i128::try_from(denominator).map_err(|_| overflow())?;
+        reduce(
+            if negative { -numerator } else { numerator },
+            denominator,
+            OPERATION,
+        )
+    }
+
     /// The exact negation `-self`.
     ///
     /// # Errors
@@ -224,6 +273,14 @@ fn reduce(num: i128, den: i128, operation: &'static str) -> Result<Rational, Uni
     })
 }
 
+fn cancel_factors(numerator: &mut u128, denominator: &mut u128) {
+    let common = gcd(*numerator, *denominator);
+    if common > 1 {
+        *numerator /= common;
+        *denominator /= common;
+    }
+}
+
 /// The greatest common divisor of two magnitudes, by Euclid's algorithm. `gcd(a, 0) == a`.
 const fn gcd(mut a: u128, mut b: u128) -> u128 {
     while b != 0 {
@@ -238,6 +295,40 @@ const fn gcd(mut a: u128, mut b: u128) -> u128 {
 mod tests {
     use super::{gcd, Rational};
     use sc_units::UnitError;
+
+    #[test]
+    fn relative_progress_checks_the_complete_fraction_not_a_materialized_offset() {
+        let d = i64::MAX - 1;
+        let from = Rational::new(1, d).unwrap();
+        let at = Rational::new(1, d - 2).unwrap();
+        let to = Rational::new(1, d - 4).unwrap();
+        assert_eq!(
+            at.checked_sub(from),
+            Err(UnitError::Overflow {
+                operation: "Rational::checked_sub",
+            })
+        );
+        assert_eq!(
+            at.checked_relative_progress(from, to),
+            Rational::new((d - 4) / 2, d - 2)
+        );
+        assert_eq!(
+            Rational::from_integer(-1).checked_relative_progress(Rational::ZERO, Rational::ONE),
+            Ok(Rational::from_integer(-1))
+        );
+        assert_eq!(
+            Rational::new(1, 2)
+                .unwrap()
+                .checked_relative_progress(Rational::ONE, Rational::ZERO),
+            Rational::new(1, 2)
+        );
+        assert_eq!(
+            Rational::ZERO.checked_relative_progress(Rational::ZERO, Rational::ZERO),
+            Err(UnitError::DivisionByZero {
+                operation: "Rational::checked_relative_progress",
+            })
+        );
+    }
 
     #[test]
     fn construction_reduces_to_canonical_form() {

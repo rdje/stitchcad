@@ -102,8 +102,8 @@ pub use material::{
 pub use material_inventory::{MaterialInventory, MaterialInventoryError, PieceMaterialView};
 
 pub use range::{
-    EdgeRange, RangeError, RangeIssue, RangePortion, RangeRepairTask, RangeResolution,
-    RangeSplitError, ResolvedRange,
+    EdgeRange, RangeError, RangeIssue, RangePortion, RangeProgressError, RangeRepairTask,
+    RangeResolution, RangeSplitError, ResolvedRange,
 };
 
 pub use notch::{

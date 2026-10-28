@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0487
+## Current leaf acceptance —0488
 
-- [x] ROOT CAUSE: native SeamDirection contract →lower/lower for Same,lower/upper for Opposite,independent physical reflection rc=0;parent amount has no coupled child relation.
-- [x] ADDRESSED: cargo test -p sc-core --test sewing_contract →28 passed rc=0;new direction/copy cases6 and actual cloned-parent ease diagnostic20 versus10 pass;D301 P1 next remains open.
-- [x] NO REGRESSION: seam_split rustdoc3/strict selected Clippy/fmt pass0;glossary0/book88/165/1559/2654 rc=0;bus availability/demand bytes unchanged,no paired effects.
+- [x] ROOT CAUSE: native relative_progress unit →materialized offset overflows while complete63-bit fraction succeeds rc=0;independent Fraction17 fixture bytes match0.
+- [x] ADDRESSED: cargo test -p sc-core --test range_contract -- --nocapture →19 passed/17 oracle rows;selected numerical unit1 and method rustdoc1 pass rc=0.
+- [x] NO REGRESSION: strict selected library/range Clippy/fmt,glossary0/book88/166/1559/2655 rc=0;D301 cumulative quantity/provenance implementation remains pending.
 
 ## Goal
 
@@ -348,7 +348,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Contract/checklist: [preserved publication evidence](G1-SLICE-measurements.md#publication-contract-and-evidence--preserved-from-9ef9602).
   Verification: 47 chapters/14 APIs; publication nine, archive 28, full 24 suites green.
   Commit: `STITCHCAD-G1-0036`.
-
 - ID: `G1-SLICE.4d.2`
   Status: `done`
   Goal:0321 combined structural acceptance/native46/publication74-87/progress6-18; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part476md).
@@ -371,21 +370,18 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   G3 executes it and validates positive physical length without a separately authored hole length.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.5a`
   Status: `done`
   Children: .5a.1 lexical, .5a.2 expression, .5a.3 canonical, .5a.4 review.
   Goal:complete syntax scope/proofs; [whole parent](../history/stitchcad-devnotes-part546.md).
 [Recipe subtree](G1-SLICE-recipes.md#completed-syntax-node-graph--preserved-during-g1-0072).
 [Proof](G1-SLICE-checked-recipes.md) · [Retention](G1-SLICE-retention-proof.md).
-
 - ID: `G1-SLICE.5a.4`
   Status: `done`
   Goal: review all syntax/canonical-form requirements and deferred name/type/evaluation owners,
   full milestone gate before closing .5a; exact evaluator/DAG and operations remain .5 children.
   Verification: full obligation/deferred map; native591/WASM3/probes25, seven actual reds/exact restore.
   Commit: `STITCHCAD-G1-0072`.
-
 - ID: `G1-SLICE.5b`
   Status: `in_progress`
   Goal: namespace, origin and static kind validation before any value is computed (contract2/3/5).
@@ -394,7 +390,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Acceptance: all names/kinds in both branches validated, every static refusal contextual and no
   numeric/geometry callback invoked. Detailed child contracts in G1-SLICE-recipes.md.
   Verification: `pending`; Commit: `pending`.
-
 - ID: `G1-SLICE.5c`
   Status: `pending`
   Goal: exact bounded rational arithmetic and binding storage (contract4.2/4.3; D84/D95).
@@ -403,7 +398,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Acceptance: no intermediate rounding, reduced width128, per-result scalar domains, signed turns,
   full i64 bindings and typed contextual refusals. Detailed child contracts in G1-SLICE-recipes.md.
   Verification: `pending`; Commit: `pending`.
-
 - ID: `G1-SLICE.5d`
   Status: `pending`
   Goal: correctly rounded sqrt/hypot/trigonometry/arc_length (contract4.2; grammar6).
@@ -412,7 +406,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Acceptance: true-value nearest quantum/ties away, arbitrary admitted inputs, no libm-dependent
   answer; original width/domain limits preserved. Child contracts in G1-SLICE-recipes.md.
   Verification: `pending`; Commit: `pending`.
-
 - ID: `G1-SLICE.5e`
   Status: `pending`
   Goal: atomic single-pass execution, state/tolerance handling and replay (contract3/4/5/9).
@@ -422,7 +415,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   no partial accepted result and same canonical bound output on replay.
   [Execution children and receipts](G1-SLICE-execution.md) retain the current frontier.
   Verification: `pending`; Commit: `pending`.
-
 - ID: `G1-SLICE.5f`
   Status: `pending`
   Goal: typed construction operations and geometry dependencies (ontology3.1/3.2; roadmap6.1).
@@ -431,7 +423,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Acceptance: full v1 set owned without implicit solver or fabricated geometry; operation arguments
   evaluate at their authored position. G2/G3 physical owners stay explicit. See G1-SLICE-recipes.md.
   Verification: `pending`; Commit: `pending`.
-
 - ID: `G1-SLICE.5g`
   Status: `pending`
   Goal: full formula/construction acceptance, example parity and two-platform reproducibility.
@@ -440,7 +431,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Acceptance: every contract9 requirement proven at product scope; actual platform evidence,
   retained diagnostics and public-interface fault controls. See G1-SLICE-recipes.md.
   Verification: `pending`; Commit: `pending`.
-
 - ID: `G1-SLICE.6`
   Status: `in_progress`
   Goal: command bus (§4.4) — typed validated commands, atomic groups, preview/commit, revision
@@ -472,7 +462,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
 
   Layer execution scope: `.3c.4b.1` models lining but its `require_in_scope()` returns env_lining.
   Apply envelope refusals before requested construction execution; inspection preserves modelled content.
-
 - ID: `G1-SLICE.6.1`
   Status: `done`
   Goal:0291 typed17-command catalog/book2/0/lint0 and exact window14 packing verified.
@@ -596,7 +585,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0338 native authority scope/freshness reviewed; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part493md).
 Completed structural/input/garment node graph: [canonical sibling](G1-SLICE-garment.md).
 All98 completed ids/statuses and original proof pointers remain live there.
-
 - ID: `G1-SLICE.6.vocabulary`
   Status: `done`
   Goal:0484 D250 all140 declaration pairs/P3 advisory repaired;full glossary41 pass,not full CI.
@@ -697,18 +685,34 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Children .1 direction interval pairs;.2 conserved ease sources;.3 semantic stop partition;.4 span lineage.
 - ID: `G1-SLICE.6.5.3.2.3.1`
   Status: `done`
-  Goal: actual declared-direction interval pairs and native conservation counterexample;no child/ease/effect publication.
-  - [x] REPRODUCE / ISSUE: native field/interface review →Same lower endpoints correspond,Opposite lower A meets upper B;binding has independent ordered side intervals,rc=0.
-  - [x] ROOT CAUSE: actual SeamDirection/SeamSide metadata separates endpoint order from physical reflection;actual graph/amount declarations have no original-parent conservation relation,rc=0.
-  - [x] FIX: add fixed Copy CommandSeamSplitPair/paired_intervals with original parent/copy/frame/direction;track D301 P1 next .3.2 for coupled ease before effects,plus actual stop/lineage stages.
-  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract →28 passed rc=0;new mapping case covers2 directions×3 physical-copy configurations including shared pattern edge;actual constructor accepts10+10=20 and5+5=10 while retaining deferred-ease marker.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc seam_split →3 passed;selected library/sewing strict Clippy/fmt pass0;glossary310/9/158/0 and book88/165/1559/2654 rc=0;actual bus availability/demand bytes unchanged. D301 is a pre-effect gap,not a published split result.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D301/indexed decision/index/LIVE/book/API-status updated;README unchanged. transition_receipts.py --record part641 →3 exact Git spans rc=0;history_archive.sh verify-retention →1095/2486903 residentB rc=0.
-  Commit: STITCHCAD-G1-0487;D301 .3.2 next before any paired effects;full paired acceptance remains deferred.
+  Goal:0487 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part642.md).
 - ID: `G1-SLICE.6.5.3.2.3.2`
+  Status: `in_progress`
+  Goal: P1 D301 conserve original parent allocation across child partitions and nested splits.
+  Children .1 exact normalized progress;.2 root-cumulative uniform explicit quantization;.3 retained
+  symbolic source/provenance representation;.4 weighted/notch/context integration before effects.
+- ID: `G1-SLICE.6.5.3.2.3.2.1`
+  Status: `done`
+  Goal: complete exact normalized progress with final reduced bounds,original numeric evidence and independent Fraction oracle;D301 cumulative plan recorded.
+  - [x] REPRODUCE / ISSUE: independent Fraction prototype →offset denominator125 bits versus complete progress denominator63;native selected relative_progress unit confirms old subtraction refuses its own offset while composite succeeds,rc=0.
+  - [x] ROOT CAUSE: exact algebra/source review →materializing a bounded offset/extent can lose a representable complete fraction;cross-cancel four factor pairs before final products and narrow only complete reduced result,rc=0.
+  - [x] FIX: add relative_progress/RangeProgressError with inclusive bounds,original range/cut and actual boxed UnitError source;fixed-width cross-cancelled kernel. Retain original-source/cumulative quantization plan;native quantity integration still .2.
+  - [x] ADDRESSED: cargo test -p sc-core --test range_contract -- --nocapture →19 passed/17 independent rows;--lib relative_progress →1 passed rc=0;Fraction producer/cmp →17 byte-equal rows (13 value/2 outside/2 overflow) rc=0.
+  - [x] NO REGRESSION: scoped relative_progress rustdoc1/strict library/range Clippy/fmt pass0;glossary310/9/158/0 and book88/166/1559/2655 rc=0. Independent cumulative prototype ±1 shows child-order differences;native cumulative watch remains pending,no quantity/effect publication.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D301/indexed decision/index/book/API-status updated;LIVE reviewed unchanged G1 6/18,D301 P1 owned;README unchanged. transition_receipts.py --record part642 →4 exact Git spans rc=0;history_archive.sh verify-retention →1096/2492115 residentB rc=0.
+  Commit: STITCHCAD-G1-0488;next .3.2.2 root-cumulative uniform explicit allocation;retained symbolic source/stop/lineage/full paired acceptance remain pending.
+- ID: `G1-SLICE.6.5.3.2.3.2.2`
   Status: `pending`
-  Goal: P1 conserve actual parent ease across child partitions,including explicit/formula/profile sources
-  and uniform/weighted/notch distributions;derive representation/geometry dependencies before effects.
+  Goal: uniform explicit allocation from original parent source/cumulative boundary quantization;
+  conserve signed quantum sums and nested split-order behavior without repartitioning rounded children.
+- ID: `G1-SLICE.6.5.3.2.3.2.3`
+  Status: `pending`
+  Goal: canonical retained original ease source/domain/provenance for child partitions,including
+  formula/profile and repeated splits;no duplicated independent numeric/state authority.
+- ID: `G1-SLICE.6.5.3.2.3.2.4`
+  Status: `pending`
+  Goal: weighted/notch-bounded cumulative allocation through actual source/stop/geometry contexts;
+  preserve original unavailable-source failures and integrate .3/.4 partition ownership before effects.
 - ID: `G1-SLICE.6.5.3.2.3.3`
   Status: `pending`
   Goal: preserve actual semantic stops/copy ownership,cut-boundary behavior and original authored order
@@ -910,7 +914,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   per-host algorithm time and future numeric/file/decompression/geometry work with exact owners.
   Private-model walks/refusal witnesses follow initial exact authority and snapshot binding; caller-only
   input admission remains early. Verify unauthorized callers trigger no private walk or quota witness.
-
 - ID: `G1-SLICE.6.8.2.2.2.2.4.1`
   Status: `done`
   Goal:0460 authorized current/preparation/history-alternative admission; [whole scope/proofs](../history/stitchcad-devnotes-part613.md).
@@ -970,7 +973,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.4`
   Status: `done`
   Goal:0473 coupled native logical-resource acceptance/D294; [whole scope/proofs](../history/stitchcad-devnotes-part628.md).
-
 - ID: `G1-SLICE.6.9`
   Status: `done`
   Goal: current implemented metadata bus/native privacy/publication acceptance;registry feeds G1.9/G5.
@@ -984,11 +986,9 @@ All98 completed ids/statuses and original proof pointers remain live there.
 - ID: `G1-SLICE.6.9.3`
   Status: `done`
   Goal:0477 combined current native317/doctests49 acceptance; [whole scope/proofs](../history/stitchcad-devnotes-part632.md).
-
 - ID: `G1-SLICE.6.9.publication`
   Status: `done`
   Goal:0478 full publication45/final inputs; [whole scope/proofs](../history/stitchcad-devnotes-part633.md).
-
 - ID: `G1-SLICE.7`
   Status: `pending`
   Goal: `sc-store` (§4.5) — canonical-text project directory (stable key order, declared float

@@ -66,6 +66,61 @@ impl fmt::Display for RangeSplitError {
 
 impl std::error::Error for RangeSplitError {}
 
+/// Original source-frame bounds or complete normalized-progress arithmetic refusal.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum RangeProgressError {
+    /// Requested point lies outside the held closed interval.
+    Outside {
+        /// Original held edge and bounds.
+        range: EdgeRange,
+        /// Original requested source-frame position.
+        at: Param,
+    },
+    /// Complete reduced progress cannot be represented by the bounded exact rational.
+    Arithmetic {
+        /// Original held edge and bounds.
+        range: EdgeRange,
+        /// Original requested source-frame position.
+        at: Param,
+        /// Original unit-arithmetic cause, also retained in the standard error chain.
+        issue: Box<UnitError>,
+    },
+}
+
+impl fmt::Display for RangeProgressError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::Outside { range, at } => write!(
+                f,
+                "range progress requires {} <= at <= {}, got {}",
+                range.from.as_rational(),
+                range.to.as_rational(),
+                at.as_rational()
+            ),
+            Self::Arithmetic { range, at, issue } => write!(
+                f,
+                "range progress at {} in {}..{}: {issue}",
+                at.as_rational(),
+                range.from.as_rational(),
+                range.to.as_rational()
+            ),
+        }
+    }
+}
+
+impl std::error::Error for RangeProgressError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::Outside { range: _, at: _ } => None,
+            Self::Arithmetic {
+                range: _,
+                at: _,
+                issue,
+            } => Some(issue.as_ref()),
+        }
+    }
+}
+
 impl EdgeRange {
     /// Build a positive-length interval; existence is checked by the consuming object or query.
     ///
@@ -123,6 +178,38 @@ impl EdgeRange {
                 to: self.to,
             },
         ])
+    }
+
+    /// Exact normalized progress `(at - from) / (to - from)` in this held source frame.
+    /// Endpoints return zero/one. This mathematical query neither resolves the held edge nor
+    /// validates geometry, copy ownership or paired correspondence. Successful arithmetic uses
+    /// only fixed-width integers and checks the complete reduced result before returning to i64.
+    ///
+    /// # Errors
+    /// Returns [`RangeProgressError::Outside`] before arithmetic for an exterior position.
+    /// Arithmetic refusal retains the original range/cut and underlying [`UnitError`].
+    ///
+    /// ```
+    /// use sc_core::ontology::{EdgeRange, EdgeRef, EntityId, LocalTag, Param, Rational};
+    /// let edge = EdgeRef::new(EntityId::from_bits(1), LocalTag::FIRST);
+    /// let from = Param::new(Rational::new(1, 7)?)?;
+    /// let to = Param::new(Rational::new(6, 7)?)?;
+    /// let at = Param::new(Rational::new(2, 3)?)?;
+    /// let range = EdgeRange::new(edge, from, to)?;
+    /// assert_eq!(range.relative_progress(at)?, Rational::new(11, 15)?);
+    /// # Ok::<(), Box<dyn std::error::Error>>(())
+    /// ```
+    pub fn relative_progress(self, at: Param) -> Result<Rational, RangeProgressError> {
+        if at < self.from || at > self.to {
+            return Err(RangeProgressError::Outside { range: self, at });
+        }
+        at.as_rational()
+            .checked_relative_progress(self.from.as_rational(), self.to.as_rational())
+            .map_err(|issue| RangeProgressError::Arithmetic {
+                range: self,
+                at,
+                issue: Box::new(issue),
+            })
     }
 
     /// Held edge identity, never rewritten by a query.

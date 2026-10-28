@@ -4,7 +4,8 @@
 
 use sc_core::ontology::{
     DeterministicIdGenerator, Direction, EdgeRange, EdgeRef, EntityId, IdentityLedger, LocalTag,
-    OffsetInterval, OrphaningEdit, Param, RangeIssue, RangePortion, Rational, Resolution,
+    OffsetInterval, OrphaningEdit, Param, RangeIssue, RangePortion, RangeProgressError, Rational,
+    Resolution,
 };
 use sc_units::Length;
 
@@ -34,6 +35,86 @@ fn live_parts(ledger: &IdentityLedger, held: EdgeRange) -> Vec<(EdgeRef, Param, 
             RangePortion::Unresolved(_) => None,
         })
         .collect()
+}
+
+#[test]
+fn relative_progress_matches_the_independent_fraction_oracle() {
+    let (_, _, edge) = fixture();
+    let oracle = include_str!("fixtures/range_progress.tsv");
+    let mut seen = 0;
+    for line in oracle
+        .lines()
+        .filter(|line| !line.is_empty() && !line.starts_with('#'))
+    {
+        let fields = line.split('\t').collect::<Vec<_>>();
+        assert_eq!(fields.len(), 8, "complete fixture row: {line}");
+        let field = |index: usize| *fields.get(index).expect("known oracle column");
+        let position = |n, d| t(field(n).parse().unwrap(), field(d).parse().unwrap());
+        let range = EdgeRange::new(edge, position(1, 2), position(5, 6)).unwrap();
+        let at = position(3, 4);
+        let result = range.relative_progress(at);
+        match field(7) {
+            "Outside" => {
+                let error = result.unwrap_err();
+                assert_eq!(error, RangeProgressError::Outside { range, at });
+                assert!(std::error::Error::source(&error).is_none());
+            }
+            "Overflow" => {
+                let error = result.unwrap_err();
+                let RangeProgressError::Arithmetic {
+                    range: actual,
+                    at: requested,
+                    issue,
+                } = &error
+                else {
+                    unreachable!("actual reduced-width refusal")
+                };
+                assert_eq!((*actual, *requested), (range, at));
+                assert_eq!(
+                    issue.as_ref(),
+                    &sc_units::UnitError::Overflow {
+                        operation: "Rational::checked_relative_progress",
+                    }
+                );
+                assert_eq!(
+                    std::error::Error::source(&error)
+                        .unwrap()
+                        .downcast_ref::<sc_units::UnitError>(),
+                    Some(issue.as_ref())
+                );
+            }
+            value => {
+                let (n, d) = value
+                    .strip_prefix("value:")
+                    .unwrap()
+                    .split_once('/')
+                    .unwrap();
+                assert_eq!(
+                    result.unwrap(),
+                    Rational::new(n.parse().unwrap(), d.parse().unwrap()).unwrap(),
+                    "complete Fraction oracle case {}",
+                    field(0)
+                );
+            }
+        }
+        seen += 1;
+    }
+    assert!(seen > 0, "an empty oracle cannot establish a contract");
+    println!("independent relative progress oracle: {seen} rows");
+}
+
+#[test]
+fn relative_progress_keeps_held_source_evidence_without_certifying_topology() {
+    let edge = EdgeRef::new(EntityId::from_bits(u128::MAX), LocalTag::FIRST);
+    let range = EdgeRange::new(edge, t(1, 7), t(6, 7)).unwrap();
+    assert_eq!(
+        range.relative_progress(t(2, 3)).unwrap(),
+        Rational::new(11, 15).unwrap()
+    );
+    assert_eq!(range.edge(), edge);
+    assert!(!IdentityLedger::new()
+        .resolve_range(range)
+        .has_full_coverage());
 }
 
 #[test]

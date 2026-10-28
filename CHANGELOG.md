@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0487 — preserve declared endpoint direction in interval pairs
+## STITCHCAD-G1-0488 — normalize complete held-range progress exactly
 
-- Add fixed Copy CommandSeamSplitPair/paired_intervals with original parent,physical copies,source frames and direction;Same lower/lower and Opposite lower/upper remain independent of reflection.
-- Native sewing28/docs3/selected strict Clippy/fmt pass. Mapping covers six direction/copy configurations;actual child graph diagnostic shows copied parent10→20 versus5+5→10,without a published result.
-- Own D301 P1 conserved parent ease next before effects. Final glossary0/book88/165/1559/2654 passes;bus availability/demand unchanged. Whole0486 retained641;stop/lineage and paired acceptance remain owned.
+- Add relative_progress/RangeProgressError with original interval/cut/numeric cause;cross-cancel before complete reduced-width checks,accepting representable results despite wider internal offsets.
+- Native numerical1/range19/docs1/selected strict Clippy/fmt pass;17 independent Fraction rows match tracked producer bytes and native outcomes,including bounds and genuine final overflows.
+- Final glossary0/book88/166/1559/2655 passes. Record original-source cumulative quantization plan;native allocation remains next P1 D301 stage. Whole0487/closed D300 retained642;no quantity/effect publication.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

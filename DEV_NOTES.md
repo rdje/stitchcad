@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — declared paired interval projections and D301
+## _(2026-10-28 UTC)_ — complete normalized progress and cumulative-source plan
 
-0487 .6.5.3.2.3.1 projects fixed Copy interval pairs from actual declared direction:Same lower/lower,Opposite lower/upper,in A lower/upper output order. Preserve original parent identity,physical copies,frames and direction without creating spans or assigning amounts/stops.
-New native mapping case covers2 directions×3 copy configurations,including reflected copies and one shared pattern edge. Actual structural child graph counterexample accepts10+10=20 for parent10;5+5 also passes with deferred-ease marker. Root has no parent-aware conservation relation.
-D301 P1 is owned next .3.2 before paired effects,including symbolic sources,distributions and coupled quantization. Sewing28/docs3/selected strict Clippy/fmt pass;glossary310/9/158/0 and book88/165/1559/2654 pass0. Actual bus availability/demand unchanged;no split result published.
-Promotion:indexed command-layer decision;whole0486 scope/lesson/changelog641 verifies3 Git spans,retention1095/2486903 residentB passes0. LIVE D301 P1 owned,G1still6/18;README unchanged. Remaining stop/lineage and full paired acceptance stay tracked;full PNT continues.
-[Whole0486 original source-binding lesson](docs/history/stitchcad-devnotes-part641.md) retains sewing26/docs3 and snapshot/compiler boundaries.
+0488 .3.2.1 adds exact held relative_progress and original-context RangeProgressError. Four factor-pair cancellations precede final multiplication/narrowing. A125-bit offset may yield a valid63-bit progress;materializing the offset first would refuse an admissible complete result.
+Native numerical unit1/range19/method docs1 pass;range target consumes17 independent Fraction rows (13 values/2 outside/2 genuine final overflows),producer bytes match. Original range/cut and actual UnitError source survive refusal;unknown topology remains unresolved. Strict selected Clippy/fmt pass.
+D301 plan retains original source/domain and differences cumulative quantized endpoints. Independent Fraction prototype ±1 shows child-order drift versus root boundaries;native cumulative watch/integration remains next .3.2.2. Glossary310/9/158/0/book88/166/1559/2655 pass0;no quantity/effect publication.
+Promotion:indexed command-layer decision;whole0487/closed D300642 verifies4 Git spans,retention1096/2492115 residentB passes0. LIVE reviewed unchanged,G1 6/18,D301 P1 owned;README unchanged. Original symbolic sources,stops,lineage and full paired acceptance remain owned.
+[Whole0487 direction-pair/D301 lesson](docs/history/stitchcad-devnotes-part642.md) retains exact native28/docs3 and parent-conservation counterexample.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

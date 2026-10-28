@@ -154,3 +154,16 @@ distributions and coupled quantization. This diagnostic publishes no command res
 CommandSeamSplitPair carries only original parent identity,physical copies,exact intervals and
 endpoint direction. Same uses lower/lower;Opposite lower/upper,independently of reflected copies.
 New live identities,child amounts/stops,lineage and physical/current-world validity remain required.
+
+## Complete progress and original-source quantization0488
+
+answers: "why retain the original allocation source and quantize cumulative boundaries?"
+
+An unobserved source offset can require125 denominator bits while normalized progress fits63.
+Cross-cancel all four numerator/denominator factor pairs before multiplication and check only the
+complete reduced reference fraction. Native numerical1/range19/independent Fraction17/docs1 pass.
+For the next allocation stage,retain the original source/domain. Quantize cumulative original
+allocation at global boundaries,then difference endpoints for each child. Repartitioning rounded
+child totals is order-dependent:the independent Fraction prototype for1µm gives[0,1,0] versus[1,0,0];
+original-root boundaries give[0,1,0],with negative symmetry. This is a planning prototype:the native
+cumulative watch/integration remains .3.2.2,D301 stays open,and no quantity or split effect is published.
