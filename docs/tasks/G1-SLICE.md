@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0488
+## Current leaf acceptance —0491
 
-- [x] ROOT CAUSE: native relative_progress unit →materialized offset overflows while complete63-bit fraction succeeds rc=0;independent Fraction17 fixture bytes match0.
-- [x] ADDRESSED: cargo test -p sc-core --test range_contract -- --nocapture →19 passed/17 oracle rows;selected numerical unit1 and method rustdoc1 pass rc=0.
-- [x] NO REGRESSION: strict selected library/range Clippy/fmt,glossary0/book88/166/1559/2655 rc=0;D301 cumulative quantity/provenance implementation remains pending.
+- [x] ROOT CAUSE: cargo test -p sc-core --test sewing_contract retained_ease via local_environment.py →3 passed;both orders preserve original source/domain and actual symbolic/distribution metadata,rc=0.
+- [x] ADDRESSED: cargo test -p sc-core --test sewing_contract retained_ease -- --nocapture via local_environment.py →3 passed;scoped source/portion docs3 pass,rc=0.
+- [x] NO REGRESSION: cargo test -p sc-core --test sewing_contract via local_environment.py →36 passed,rc=0;strict selected Clippy/fmt/glossary0/book88/171/1559/2657 pass,rc=0;graph/resource/quantity integration next.
 
 ## Goal
 
@@ -699,25 +699,35 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0489 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part644.md).
 - ID: `G1-SLICE.6.5.3.2.retention`
   Status: `done`
-  Goal:0490 D302 repeated D284 aggregate/active count confusion corrected;no archive packing needed.
-  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py
-    →before644:generation1=21,generation2=43,total64;after644:21+44=65,20 active working slots,rc=0.
-  - [x] ROOT CAUSE: same diagnostic →independent physical/catalog census agrees with each validated group,rc=0.
-    Earlier aggregate verify-retention count was compared with one group's64 ceiling despite public64/group and192 aggregate contract;D284 recurred in0489 prose.
-  - [x] FIX: tracked read-only pressure/census producer with scope controls;correct current pointer/index/ledger/book.
-    Preserve exact erroneous0489 in sealed644;no packing,rollover,deletion,cap increase or archive implementation change.
-  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py --self-test
-    →3 named controls:aggregate64/active43,aggregate85/active64,next active44;rc=0. Real producer →65 aggregate/44 active,rc=0.
-  - [x] NO REGRESSION: bash scripts/history_archive.sh verify-retention →1098 logical/65 workingMD/2502007 residentB,rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part644.md →3 exact Git spans,rc=0.
-    mdbook build/publication check →88 chapters/168 APIs/1559 source/2656 rendered links,rc=0;glossary census →0 failures,rc=0.
-    Independent pressure rerun SHA census →all archive/control files byte-identical,rc=0;full archive/CI campaigns remain pre-push/integration owners.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/indexed generation decision/book/task index/defect ledger updated;
-    LIVE reviewed with D302 correction noted,G1 6/18 unchanged. README unchanged;next .3.2.3 canonical original source/provenance.
+  Goal:0490 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part645.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: canonical retained original ease source/domain/provenance for child partitions,including
   formula/profile and repeated splits;no duplicated independent numeric/state authority.
+  Children .1 retained source/portion primitive;.2 graph ownership/current/resource integration;
+  .3 original-source quantity query integration;.acceptance deferred until implemented.
+- ID: `G1-SLICE.6.5.3.2.3.2.3.1`
+  Status: `done`
+  Goal:0491 actual immutable original ease source/shared interval portions;canonical graph/resource/quantity integration stays .2/.3 before effects.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test sewing_contract retained_ease -- --nocapture via local_environment.py →3 passed;actual signed/formula/profile × Same/Opposite × uniform/weighted/notch sources exercised,rc=0.
+  - [x] ROOT CAUSE: cargo test -p sc-core --test sewing_contract retained_ease via local_environment.py →both source-cut orders yield the same original-frame portions and source pointer;copying independent child declarations would lose that original source relation,rc=0.
+  - [x] FIX: private SeamEaseSource captured once from actual span;SeamEasePortion shares original declaration/domains through clones/splits. Keep original frame/interior refusals,A/B precedence and source chain;no child amount/identity or physical certificate.
+  - [x] ADDRESSED: same native selected run →3 passed,rc=0;graph-drop/replacement/topology-deletion and actual portion refusals preserve source evidence. cargo test -p sc-core --doc ontology::seam_ease via local_environment.py →3 passed,rc=0 (privacy2/positive1).
+  - [x] NO REGRESSION: cargo test -p sc-core --test sewing_contract via local_environment.py →36 passed,rc=0;strict lib/sewing Clippy/fmt --check →pass0. mdbook build/publication check →88/171/1559/2657,rc=0;glossary census →0 failures,rc=0.
+    generation_pressure.py →active45/64,aggregate66/192;verify-retention →1099 records/2506516 residentB,rc=0. transition_receipts.py --record docs/history/stitchcad-devnotes-part645.md →3 exact Git spans,rc=0.
+  - [x] LOCKSTEP: live pointers/journals/ledger/indexed sewing decision/book/API inventory synchronized;LIVE/README reviewed unchanged,G1 6/18,D301 P1. Whole0490 retained645. Graph ownership,current/readiness/resource accounting and retained quantity integration remain owned before full paired acceptance.
+- ID: `G1-SLICE.6.5.3.2.3.2.3.2`
+  Status: `pending`
+  Goal: canonical graph-owned source/portion integration,source identity/domain coherence,current
+  declaration readiness and exhaustive resource/ownership census;no independent child ease authority.
+- ID: `G1-SLICE.6.5.3.2.3.2.3.3`
+  Status: `pending`
+  Goal: quantity queries from retained original source for nested portions;conserve cumulative quantum
+  differences in original domains,including explicit uniforms without retagging rounded child totals.
+- ID: `G1-SLICE.6.5.3.2.3.2.3.acceptance`
+  Status: `pending`
+  Goal: deferred scoped retained-source/portion graph/resource/quantity acceptance after .1–.3;
+  paired handler/full distribution/stop/lineage acceptance remains parent-owned.
 - ID: `G1-SLICE.6.5.3.2.3.2.4`
   Status: `pending`
   Goal: weighted/notch-bounded cumulative allocation through actual source/stop/geometry contexts;
@@ -1126,7 +1136,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   what each profile excludes and why; browser execution is tested for real, not `cargo check`.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.12`
   Status: `pending`
   Goal: the real browser spike (G1 exit) — load project → evaluate recipe → resolve one CSP
@@ -1137,7 +1146,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   G5 where they belong.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.13`
   Status: `pending`
   Goal: the canvas-hosting spike that settles ADR-0002 against the protocol written at
@@ -1155,7 +1163,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   `spike_rule.tsv` is what ships until a re-spike.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.14`
   Status: `pending`
   Goal: the egui/iced dev shell for Stages 1–4 internal tools (ADR-0002's dev-shell ruling) —
@@ -1165,7 +1172,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   browser; it is labeled a dev shell in the book so nobody mistakes it for the product.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.15`
   Status: `pending`
   Goal: the license census (G1 exit: "license-compatible solver builds on all targets") — every
@@ -1176,7 +1182,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   non-default, non-shipped feature with the reason recorded.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.16`
   Status: `pending`
   Goal: G1 exit review — every exit clause cited against its artifact, the capability matrix

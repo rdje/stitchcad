@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0490 — distinguish active archive pressure from aggregate counts
+## STITCHCAD-G1-0491 — retain original ease sources through repeated interval partitions
 
-- Fix D302 recurrence of D284:64 aggregate working files did not require packing;before644 active generation used43/64. Add read-only validated group pressure and independent physical/catalog census with3 scope controls.
-- Preserve whole0489 exact in644;afterward65 aggregate/44 active,20 working slots. Retention1098/2502007 residentB passes0;no packing,deletion,seal rewrite or cap change. Correct current pointers and resume D301 canonical provenance.
-- Focused book/publication/glossary checks pass;LIVE D302 correction noted,G1 progress6/18 unchanged. Full archive/CI integration remains separately owned.
+- Add private owned SeamEaseSource and shared SeamEasePortion from the actual span. Preserve original copies/domains/direction and explicit/formula/profile/weighted/notch declarations through A-ordered source cuts;no independent child amount or identity.
+- Native selected3/sewing36/docs3/strict scoped Clippy/fmt pass. Both cut orders share the exact root;graph-drop,replacement/current-deletion and original frame/interior/error-chain controls pass.
+- Book88/171/1559/2657/glossary0 pass. Whole0490 retained645;retention1099 passes,active45/64. D301 stays P1 for graph/ownership/current/resource and retained quantity integration,then nonuniform/stops/lineage/paired acceptance.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

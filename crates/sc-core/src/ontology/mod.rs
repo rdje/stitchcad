@@ -40,6 +40,7 @@
 //! | [`pocket_inventory`] | owned Pocket collection and every current component interval | `.6.4.5.1.b` |
 //! | [`package_identity`] | opaque exact algorithm/digest claims, deferred canonicalizer validation | `.6.2.2.c.2.5.4` |
 //! | [`profile_pin`] | exact selected profile/schema/content labels, with deferred G4 validation | `.6.2.2.c.2.1` |
+//! | [`seam_ease`] | retained original ease sources and shared source-interval portions | `.6.5.3.2.3.2.3.1` |
 //! | [`range`] | whole-interval coverage and visible range repairs, distinct from endpoint queries | `.3c.2a` |
 //! | [`rational`] | the bounded exact rational a parameter is stored in | `.3a` |
 //! | [`reference`] | `EdgeRef`, `PointRef`, `LocalTag` and the `[0, 1]` `Param` | `.3a` |
@@ -75,6 +76,7 @@ pub mod profile_pin;
 pub mod range;
 pub mod rational;
 pub mod reference;
+pub mod seam_ease;
 pub mod sewing;
 pub mod topology;
 
@@ -115,6 +117,7 @@ pub use cut::{CopyOrientation, CutCopy, CutCopyDefinition, CutPlan, CutPlanError
 
 pub use anchor::AnchorError;
 
+pub use seam_ease::{SeamEasePortion, SeamEasePortionError, SeamEaseSource};
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,
     SeamSideId, SeamSpan, SeamSpanDefinition, SewingError, SewingGraph, SewingGraphDefinition,

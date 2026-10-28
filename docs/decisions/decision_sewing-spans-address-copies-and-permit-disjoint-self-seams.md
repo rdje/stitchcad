@@ -85,3 +85,16 @@ and amount declarations. They retain existing raw anchor/graph choice/repair rul
 original errors. Amount views borrow actual owner objects; a successful metadata-only query cannot
 authorize stale graph sources. Profile deferral, whole Piece topology and full numeric/physical/
 execution/release readiness remain explicit separate scopes.
+
+## Retained ease source/portion primitive0491
+
+answers: "how do repeated source cuts preserve symbolic ease without independently copying child declarations?"
+
+Capture the actual span's original ease/copies/domains/direction once into private immutable
+SeamEaseSource. SeamEasePortion shares that same root while retaining its own exact original-frame
+intervals. Same/Opposite pairs follow A order;source/interior refusals retain actual portion evidence.
+Native selected3/sewing36/docs3 pass:both cut orders share original source pointers,including partial
+domains/reflection,explicit/formula/profile and all distribution kinds. Retained data outlives the
+graph;replacement or topology deletion does not rebind or certify it. Capture clones weighted data
+once,so command admission must precede capture. Canonical graph/source ownership,current readiness,
+resource accounting and original-root quantity queries remain next .3.2/.3.3;D301 stays P1 before effects.

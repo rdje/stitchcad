@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — active versus aggregate archive pressure
+## _(2026-10-28 UTC)_ — retained original ease source and interval portions
 
-0490 D302 repeats D284:0489 prose compared64 aggregate working files with a per-generation64 cap. Public contract says192 aggregate;actual before644=21 sealed+43 active. No storage action was needed or taken.
-Tracked read-only generation_pressure.py validates each group and independently counts physical raw/catalog files.
-Scope controls3 distinguish aggregate64/active43,aggregate85/active64,next active44;all pass0. After exact whole0489 record644,real readout21+44=65,20 active slots;retention1098/2502007 residentB passes0. Original seals/backups/caps untouched;current pointers corrected. Working slots do not waive other resource bounds.
-Promotion:indexed generation decision. Book/publication/glossary focused checks recorded in owning leaf. LIVE D302 correction noted,G1 6/18 unchanged;README unchanged. Product resumes canonical original ease source/provenance .3.2.3,D301 P1 still open.
-[Whole0489 uniform-source lesson](docs/history/stitchcad-devnotes-part644.md) preserves the exact native allocation proof and erroneous pressure claim.
+0491 .3.1 captures actual span ease/copies/domains/direction once in immutable SeamEaseSource. Private SeamEasePortion shares that root through clones/repeated A-ordered cuts. Explicit/formula/profile and uniform/weighted/notch intent stays original;no child numeric declaration or identity is manufactured.
+Selected native3/sewing36/docs3/strict selected Clippy/fmt pass. Both cut orders yield identical original-frame portions and the same source pointer,including reflected copies/partial domains. Graph-drop,replacement,current-deletion,frame/interior precedence and concrete error-chain controls pass0.
+Book88/171/1559/2657/glossary0 pass. Whole0490 retained645 verifies3 Git spans;retention1099/2506516 residentB pass0. Pressure diagnostic:active45/64,aggregate66/192;no capacity action needed. Canonical graph/ownership/current/resource and quantity integration remain .3.2/.3.3;D301 P1 remains open before effects.
+Promotion:indexed sewing decision. LIVE reviewed unchanged,G1 6/18;README unchanged. Capture clones the original declaration once;resource admission must precede command use. Source partitioning supplies no physical correspondence,currentness or independent child amount.
+[Whole0490 pressure-correction lesson](docs/history/stitchcad-devnotes-part645.md) retains exact D302 recurrence/diagnostic and preservation evidence.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

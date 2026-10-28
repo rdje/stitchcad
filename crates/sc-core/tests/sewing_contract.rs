@@ -1669,3 +1669,232 @@ fn uniform_ease_queries_check_original_frame_and_domain_and_keep_snapshot_source
         replacement.spans().first().unwrap()
     ));
 }
+
+#[test]
+fn retained_ease_portions_share_original_symbolic_sources_across_both_split_orders() {
+    for amount in [
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap()),
+        EaseAmount::Formula(id(730)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(731))),
+    ] {
+        for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+            for distribution in [
+                EaseDistribution::Uniform,
+                EaseDistribution::Weighted {
+                    side: SeamSideId::B,
+                    regions: vec![WeightedEaseRegion {
+                        from: t(1, 4),
+                        to: t(3, 4),
+                        weight: Rational::new(7, 3).unwrap(),
+                    }],
+                },
+                EaseDistribution::BetweenNotches {
+                    side: SeamSideId::A,
+                    start: id(740),
+                    end: id(741),
+                },
+            ] {
+                let mut f = fixture();
+                let a = f.span().a.range.edge();
+                let b = f.span().b.range.edge();
+                f.span_mut().a = SeamSide {
+                    copy: id(201),
+                    range: EdgeRange::new(a, t(1, 7), t(6, 7)).unwrap(),
+                };
+                f.span_mut().b.range = EdgeRange::new(b, t(1, 5), t(4, 5)).unwrap();
+                f.span_mut().direction = direction;
+                f.span_mut().ease = DeclaredEase {
+                    amount,
+                    distribution,
+                };
+                f.span_mut().stops = vec![
+                    StopLandmark {
+                        side: SeamSideId::A,
+                        landmark: id(740),
+                    },
+                    StopLandmark {
+                        side: SeamSideId::A,
+                        landmark: id(741),
+                    },
+                ];
+                let marks = [f.notch(740, t(1, 3)), f.notch(741, t(2, 3))];
+                let original = f.span().clone();
+                let retained = {
+                    let graph = f.graph(&marks).unwrap();
+                    graph.spans().first().unwrap().retain_ease_source()
+                }; // Retained data has its own immutable owner after the actual graph is gone.
+                assert_eq!(retained.source().span(), original.id);
+                assert_eq!(retained.source().side(SeamSideId::A), original.a);
+                assert_eq!(retained.source().side(SeamSideId::B), original.b);
+                assert_eq!(retained.source().direction(), direction);
+                assert_eq!(retained.source().declaration(), &original.ease);
+                let a1 = EdgeAnchor {
+                    edge: a,
+                    param: t(8, 21),
+                };
+                let a2 = EdgeAnchor {
+                    edge: a,
+                    param: t(13, 21),
+                };
+                let (b1, b2) = match direction {
+                    SeamDirection::Same => (t(2, 5), t(3, 5)),
+                    SeamDirection::Opposite => (t(3, 5), t(2, 5)),
+                };
+                let b1 = EdgeAnchor { edge: b, param: b1 };
+                let b2 = EdgeAnchor { edge: b, param: b2 };
+                let [first, remainder] = retained.split_at(a1, b1).unwrap();
+                let [middle, last] = remainder.split_at(a2, b2).unwrap();
+                let left_first = [first, middle, last];
+                let [prefix, last] = retained.split_at(a2, b2).unwrap();
+                let [first, middle] = prefix.split_at(a1, b1).unwrap();
+                let right_first = [first, middle, last];
+                assert_eq!(left_first, right_first);
+                let expected_a = [
+                    (t(1, 7), t(8, 21)),
+                    (t(8, 21), t(13, 21)),
+                    (t(13, 21), t(6, 7)),
+                ];
+                let same_b = [(t(1, 5), t(2, 5)), (t(2, 5), t(3, 5)), (t(3, 5), t(4, 5))];
+                let opposite_b = [(t(3, 5), t(4, 5)), (t(2, 5), t(3, 5)), (t(1, 5), t(2, 5))];
+                for (index, portion) in left_first.iter().enumerate() {
+                    let (from, to) = *expected_a.get(index).unwrap();
+                    assert_eq!(
+                        portion.side(SeamSideId::A),
+                        SeamSide {
+                            copy: id(201),
+                            range: EdgeRange::new(a, from, to).unwrap()
+                        }
+                    );
+                    let (from, to) = *match direction {
+                        SeamDirection::Same => same_b.get(index),
+                        SeamDirection::Opposite => opposite_b.get(index),
+                    }
+                    .unwrap();
+                    assert_eq!(
+                        portion.side(SeamSideId::B),
+                        SeamSide {
+                            copy: id(202),
+                            range: EdgeRange::new(b, from, to).unwrap()
+                        }
+                    );
+                    assert!(std::ptr::eq(portion.source(), retained.source()));
+                    assert!(std::ptr::eq(portion.clone().source(), retained.source()));
+                    assert_eq!(portion.source().declaration(), &original.ease);
+                }
+                for portion in &right_first {
+                    assert!(std::ptr::eq(portion.source(), retained.source()));
+                }
+            }
+        }
+    }
+}
+
+#[test]
+fn retained_ease_portion_refusals_use_actual_current_intervals_in_a_b_order() {
+    use sc_core::ontology::SeamEasePortionError as Error;
+    use std::error::Error as _;
+    let f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let retained = graph.spans().first().unwrap().retain_ease_source();
+    let a = EdgeAnchor {
+        edge: f.span().a.range.edge(),
+        param: t(1, 3),
+    };
+    let b = EdgeAnchor {
+        edge: f.span().b.range.edge(),
+        param: t(2, 3),
+    };
+    let [first, second] = retained.split_at(a, b).unwrap();
+    let before = second.clone();
+    let bad_b = EdgeAnchor {
+        edge: a.edge,
+        param: t(1, 2),
+    };
+    let error = second.split_at(bad_b, bad_b).unwrap_err();
+    // This A edge is valid, but its cut is valid too; B's wrong frame is the original refusal.
+    assert_eq!(
+        error,
+        Error::SourceFrame {
+            source_span: id(301),
+            side: SeamSideId::B,
+            expected: b.edge,
+            cut: bad_b
+        }
+    );
+    assert!(error.source().is_none());
+    let error = second.split_at(b, bad_b).unwrap_err();
+    assert_eq!(
+        error,
+        Error::SourceFrame {
+            source_span: id(301),
+            side: SeamSideId::A,
+            expected: a.edge,
+            cut: b
+        }
+    );
+    let endpoint = EdgeAnchor {
+        edge: a.edge,
+        param: a.param,
+    };
+    let error = second.split_at(endpoint, bad_b).unwrap_err();
+    let issue = sc_core::ontology::RangeSplitError {
+        range: second.side(SeamSideId::A).range,
+        at: a.param,
+    };
+    assert_eq!(
+        error,
+        Error::Interior {
+            source_span: id(301),
+            side: SeamSideId::A,
+            issue
+        }
+    );
+    assert_eq!(error.source().unwrap().to_string(), issue.to_string());
+    let interior_a = EdgeAnchor {
+        edge: a.edge,
+        param: t(1, 2),
+    };
+    let error = second.split_at(interior_a, b).unwrap_err();
+    assert_eq!(
+        error,
+        Error::Interior {
+            source_span: id(301),
+            side: SeamSideId::B,
+            issue: sc_core::ontology::RangeSplitError {
+                range: second.side(SeamSideId::B).range,
+                at: b.param
+            }
+        }
+    );
+    assert_eq!(second, before);
+    assert!(std::ptr::eq(first.source(), second.source()));
+}
+
+#[test]
+fn retained_ease_source_is_an_owned_snapshot_without_currentness_or_amount_rebinding() {
+    let mut f = fixture();
+    f.span_mut().ease.amount = EaseAmount::Formula(id(750));
+    let graph = f.graph(&[]).unwrap();
+    let held = graph.spans().first().unwrap().retain_ease_source();
+    f.span_mut().ease.amount = EaseAmount::Profile(ProfileParameterRef::new(id(751)));
+    let replacement = f.graph(&[]).unwrap();
+    let fresh = replacement.spans().first().unwrap().retain_ease_source();
+    assert_eq!(held.source().span(), fresh.source().span());
+    assert!(!std::ptr::eq(held.source(), fresh.source()));
+    assert_eq!(
+        held.source().declaration().amount,
+        EaseAmount::Formula(id(750))
+    );
+    assert_eq!(
+        fresh.source().declaration().amount,
+        EaseAmount::Profile(ProfileParameterRef::new(id(751)))
+    );
+    let edge = f.span().a.range.edge();
+    f.ledger.delete(&mut f.ids, edge).unwrap();
+    assert!(graph
+        .validate_current(&f.plan, &f.pieces, &[], &f.ledger)
+        .is_err());
+    let after_edit = graph.spans().first().unwrap().retain_ease_source();
+    assert_eq!(after_edit, held);
+    assert_eq!(held.source().side(SeamSideId::A).range.edge(), edge);
+}

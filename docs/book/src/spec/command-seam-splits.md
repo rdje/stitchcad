@@ -190,3 +190,51 @@ are eligibility refusals,not invalid-graph diagnoses or fabricated missing-sourc
 This stage conserves the original uniform explicit allocation only. Persistent original-source/
 child provenance,symbolic and nonuniform integration,semantic stops,live lineage,current validation,
 resource admission and atomic paired publication remain required. D301 stays open before effects.
+
+## Retain the original source through repeated interval cuts
+
+| API token | Meaning |
+| --- | --- |
+| `retain_ease_source` | Capture actual span ease/copies/domains/direction once into an owned source |
+| `SeamEaseSource` | Private immutable original declaration and full original side domains |
+| `SeamEasePortion` | Private current source intervals sharing that same original source |
+| `SeamEasePortionError` | Actual named frame or strict-interior portion refusal |
+| `source` | Borrow the unchanged original source from any portion |
+| `declaration` | Borrow the original full amount/distribution,not an independent child amount |
+| `split_at` | Partition actual portion intervals into A-ordered pairs using original direction |
+
+This native prerequisite snapshots the actual structurally validated span's original correspondence
+identity,physical-copy identities,full source ranges,direction and complete ease declaration.
+Explicit signed amounts,formula identities,profile references,weighted regions and notch-boundary
+identities remain exact. Capturing clones the declaration once,including weighted regions. Callers
+must admit that cost before using capture in a command. Cloning or splitting portions then shares
+the same immutable source,without cloning those regions or creating independently authored amounts.
+
+A retained portion can outlive the caller's graph. A later graph carrying the same span identity
+needs a new capture;an old formula source does not silently become the replacement profile source.
+Debug visits only fixed identity/copy/range metadata. Private source and portion fields prevent
+callers from forging the provenance or replacing a source domain.
+
+```rust
+use sc_core::ontology::{SeamEasePortion, SeamSpan};
+fn retain(actual: &SeamSpan) -> SeamEasePortion {
+    let portion = actual.retain_ease_source();
+    assert_eq!(portion.source().span(), actual.id());
+    assert_eq!(portion.source().declaration(), &actual.definition().ease);
+    portion
+}
+```
+
+Each portion cut checks A completely before B and source frame before strict interior. Refusals
+retain the actual portion interval,requested cut and original RangeSplitError source. Same pairs
+lower A with lower B;Opposite pairs lower A with upper B. Both side ranges stay ascending in their
+original frames,including reflected physical copies. Repeated cuts retain the original full domain.
+For the partial domains above,cutting at normalized1/3 then2/3,or2/3 then1/3,produces the same three
+source-interval portions;all still share the same original declaration and source allocation.
+
+Portions describe source interval partitions. Their cuts may have unequal normalized progress;
+this operation does not evaluate the distribution or establish physical correspondence. It supplies
+no child quantity,span identity,stop partition,live lineage or installed graph change. Actual current
+validation can still refuse after topology deletion while the retained source stays inspectable.
+Graph ownership/current-source/resource integration and original-source quantity queries retain
+their own implementation leaves;full paired effects remain pending under D301.
