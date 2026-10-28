@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0483 — keep glossary advisory output bounded and quiet
+## STITCHCAD-G1-0484 — accept current glossary and repair stale negative controls
 
-- Reproduce the actual advisory pipe-close defect:default SIGPIPE silently aborts awk;ignored SIGPIPE prints a write error despite census success.
-- Bound samples inside awk while consuming all input. Both signal cases preserve full counts/exact first15 samples without stderr;independent full-population probes pass2 and reject the prior producer as expected.
-- Real census310/9/158/0 and focused book87/161/1555/2639 pass. Whole0482 retained637;full glossary acceptance remains pending.
+- Full current glossary suite41 pass/0 fail,including29 actual declaration-removal controls,two advisory signals and existing structural/missing-input checks;all140 original C1 pairs repaired.
+- D299 retains independent uses and checks exact independently derived using-chapter populations;four prior failures now pass. D298 corrects an obsolete secondary resume pointer.
+- Current census310/9/158/0 and final book87/161/1555/2639 pass. Whole0483 and original D250 ledger retained638;D250 closes without a full CI claim. Continue actual paired seam handler contracts.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — quiet bounded glossary advisory
+## _(2026-10-28 UTC)_ — full current glossary acceptance
 
-0483 .vocabulary.advisory reproduces actual P3 with4096 extra emphasis spans:normal signal silently aborts awk141/head0;ignored PIPE prints write error while census exits0. Default-only first attempt was quiet;historical0345 logs are absent,so fresh actual checks supply evidence.
-Limit printed nonmatches inside awk while consuming the full input. Counts/first15 sample stdout remain byte-equal,zero stderr in both signal cases,and actual awk completes0. A regression first assumed added spans sort first;existing quote/comma emphasis disproved that assumption.
-Replace that test assumption with an independent complete ASCII-folded term/span/count/sample oracle. Actual selected A1 arms2 pass;prior Git producer gives1 expected-red/1 pass. Real census310/9/158/0 and bash syntax pass;book87/161/1555/2639 passes0. Full glossary suite follows.
-Promotion:indexed machine-token decision;whole0482 scope/lesson/changelog637 verifies3 Git spans. Retention1091/2466014 residentB passes0. LIVE D250 C1/advisory repaired,full probes pending;G1still6/18. README unchanged;next .vocabulary.acceptance.
-[Whole0482 C1 closure lesson](docs/history/stitchcad-devnotes-part637.md) retains all140 repaired pairs and exact fixture meanings.
+0484 .vocabulary.acceptance adds12 actual D250 declaration faults. Initial full suite37/4 exposes D299:two definition-only names lose their use with the row;two names have two using chapters while the old probe assumes one. Current census behavior is correct.
+Retain an independent copied use for every fault,prove baseline green,derive exact two-arm using-chapter population independently and require all/only its failures. Focused prior failures4/0,final full suite41/0:29 declaration faults,two signal cases and original structural/missing controls pass0.
+D298 secondary index still named done .6.5.2.b as next;actual canonical states justify replacing that pointer with current metadata closure and next paired handler. D250 all140 pairs/P3 fixed;current census310/9/158/0 and final book87/161/1555/2639 pass0. Rust unchanged;full CI remains pending.
+Promotion:indexed machine-token decision;whole0483 scope/lesson/changelog/D250 original ledger638 verifies4 Git spans. Retention1092/2472017 residentB passes0. LIVE D250/D298/D299 fixed with glossary41;G1still6/18. README unchanged;next .6.5.3.2 actual paired contract recovery.
+[Whole0483 advisory lesson/initial D250 ledger](docs/history/stitchcad-devnotes-part638.md) retains exact signal diagnostics and original baseline/repair chronology.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

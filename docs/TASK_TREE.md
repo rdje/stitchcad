@@ -55,7 +55,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
 | [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5`/`.13`/`.19`/`.22` guarded; .23/.23v/.23r verified; product G1 frontier | repo-local |
 | [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `done` | no further leaf — `18 met / 1 not met` by `run_g0_exit_review.sh`, closure unapproved (§6.1) | repo-local |
-| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `active` | `.6.vocabulary.acceptance` — D250 C1/advisory repaired;full glossary probes | repo-local |
+| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `active` | `.6.5.3.2` — actual paired seam handler contract/dependency recovery | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
 | [`G4-PROFILES`](tasks/G4-PROFILES.md) | §11 gate **G4** — profiles & uncertainty workflow | `proposed` | `.1` — `sc-profiles` schema v2 | repo-local |
@@ -82,10 +82,10 @@ than roadmap clauses is expected (a tree may split one clause into several leave
 **`G1-SLICE.4c.3`** chart/body/break structural input scope closes in0310 after D230/D231 repairs.
 Current SizeSet inputs preserve explicit garment/MTM provenance, canonical sources and typed paths.
 0321 closes structural measurement/Ease/SizeSet acceptance; G1 progress6/18.
-0421 canonical task-sibling authority/complete garment graph restored; next .6.5.2.b actual candidate.
-D250 baseline glossary declarations remain owned after .6.9 and before integration/pre-push.
+0421 restored canonical task-sibling authority/garment graph;current metadata acceptance .6.9 is complete.
+D250 declarations/advisory accepted41 probes;next paired SplitSeamSpan handler .6.5.3.2 recovers actual native contracts.
 Live v3 retention/authoring/recovery and scoped full-capacity checks pass; full integration remains owned.
-Command-class schemas follow canonical inputs.
+All17 command-class schemas are declared;actual runtime availability remains narrower.
 [Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes and paired split schema are implemented.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.

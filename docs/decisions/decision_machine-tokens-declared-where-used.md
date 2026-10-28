@@ -123,3 +123,15 @@ SIGPIPE terminates awk141 silently;inherited ignored SIGPIPE instead prints a wr
 census still exits0. Bound output inside awk and consume all input. Actual full counts and first15
 samples stay byte-equal,with zero stderr in both signal cases. Independent full-population regression
 controls pass and reject the prior producer under ignored PIPE;full glossary acceptance remains separate.
+
+## Exact declaration-fault acceptance0484
+
+answers: "why must a removed declaration retain a separate use,and how many refusal rows should it produce?"
+
+A definition-only token loses its obligation when its whole row is deleted. Retain an independent
+copied use and prove the copied baseline green first. Then derive the actual two-arm token/using-
+chapter population independently;require exactly those named failures and no others. D299 repairs
+four stale controls without weakening C1. D298 removes obsolete secondary resume pointers.
+Full glossary41 probes pass:29 declaration faults (D1557/D21810/D25012),two signal cases and the
+original real/index/structure/ownership/reference/safety/coverage/arity/missing-input controls.
+All140 original C1 pairs are repaired;the current census310/9/158/0 passes. No full CI claim follows.

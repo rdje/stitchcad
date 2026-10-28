@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0483
+## Current leaf acceptance —0484
 
-- [x] ROOT CAUSE: actual copied-root census4096 extra spans →awk141/head0 normally;ignored PIPE prints write error while census returns0,Python driver rc=0.
-- [x] ADDRESSED: actual focused A1 regression arm →2 pass/0 fail rc=0;independent full-population counts/first15 agree,zero stderr for both signal cases.
-- [x] NO REGRESSION: prior producer →1 expected-red/1 pass,driver rc=0;real census0 failures,book87/161/1555/2639 rc=0;sample stdout byte-equal.
+- [x] ROOT CAUSE: full glossary probes →37 pass/4 fail before D299 repair;actual controls lose sole use or assume one using chapter;D298 stale index confirmed rc=0.
+- [x] ADDRESSED: bash docs/tasks/artifacts/glossary/run_glossary_probes.sh →41 pass/0 fail rc=0;29 declaration faults use exact independent chapter populations;C1 all140 repaired.
+- [x] NO REGRESSION: real census310/9/158/0 failures,signals/count/sample and all existing structural controls pass;book87/161/1555/2639 rc=0;Rust unchanged.
 
 ## Goal
 
@@ -625,10 +625,9 @@ Completed structural/input/garment node graph: [canonical sibling](G1-SLICE-garm
 All98 completed ids/statuses and original proof pointers remain live there.
 
 - ID: `G1-SLICE.6.vocabulary`
-  Status: `in_progress`
-  Goal: D250 canonical declarations;current census140 token/use pairs across13 chapters,not unique defects.
-  Children .1 command/authority/schema terms;.2 size sets;.3 formula/runtime;.4 local examples;
-  .acceptance actual census/probes;P3 advisory pipe diagnostic follows C1 closure if reproduced.
+  Status: `done`
+  Goal:0484 D250 all140 declaration pairs/P3 advisory repaired;full glossary41 pass,not full CI.
+  Children .1–.4/.advisory implemented;.acceptance closes actual current population and D298/D299 repairs.
 - ID: `G1-SLICE.6.vocabulary.1`
   Status: `done`
   Goal:0479 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part634.md).
@@ -643,17 +642,17 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0482 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part637.md).
 - ID: `G1-SLICE.6.vocabulary.advisory`
   Status: `done`
-  Goal: reproduce/fix D250 P3 early-close advisory pipeline after C1 closure;preserve bounded display.
-  - [x] REPRODUCE / ISSUE: Python actual census/copied4096-span root →normal signal quiet;ignored PIPE yields awk write error/census0,driver rc=0;earlier default-only reproduction did not show stderr.
-  - [x] ROOT CAUSE: same actual producer with status-only instrumentation →awk141/head0 normally;ignored signal turns early pipe close into write error,rc=0;historical0345 local logs are absent,not reused as new evidence.
-  - [x] FIX: cap printed nonmatches inside awk while consuming all input;retain first15/full counts. Add actual default/ignored-signal probes with independent full emphasis/term population oracle.
-  - [x] ADDRESSED: Python selected actual A1 probe arm →2 pass/0 fail rc=0;4096 extra spans,independent exact counts/sample,zero stderr. Actual completed awk now0;full stdout byte-equal to old default case,rc=0.
-  - [x] NO REGRESSION: same actual new probes against prior Git producer →1 pass/1 expected-red,driver rc=0;real census310/9/158/0 failures rc=0;bash -n and book_publication.py →87/161/1555/2639 rc=0.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/indexed decision/index/LIVE/book updated;README unchanged. transition_receipts.py --record part637 →3 exact Git spans rc=0;history_archive.sh verify-retention →1091/2466014 residentB rc=0.
-  Commit: STITCHCAD-G1-0483;full glossary suite remains .vocabulary.acceptance.
+  Goal:0483 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part638.md).
 - ID: `G1-SLICE.6.vocabulary.acceptance`
-  Status: `pending`
-  Goal: after declaration/advisory implementation,run full current glossary probes with actual D250 declaration-removal controls;close D250 only on scoped evidence.
+  Status: `done`
+  Goal: complete glossary acceptance after D250 implementation;repair exposed D298/D299 under this owner.
+  - [x] REPRODUCE / ISSUE: bash docs/tasks/artifacts/glossary/run_glossary_probes.sh →37 pass/4 fail rc=1;collision/eps_chord lose sole shaped use,HISTORY_ARCHIVE_ROOT/sources have two using chapters;index still points to done .6.5.2.b.
+  - [x] ROOT CAUSE: Python actual population/source review →definition-only row removal deletes obligation;old exact-one assertion confuses identity and chapter pairs,rc=0. Canonical tree proves old next leaf done,metadata .6.9 done,next paired handler pending rc=0.
+  - [x] FIX: retain independent copied use for every fault;derive exact two-arm chapter population in Python and require all/only those failures. Add12 D250 cases;repair stale secondary index.D298/D299 fixed and verified here.
+  - [x] ADDRESSED: full same glossary producer →41 pass/0 fail rc=0,including29 declaration controls and2 signals;selected four prior failures →4 pass/0 fail rc=0;real census310/9/158/0 failures rc=0.
+  - [x] NO REGRESSION: full suite includes real/index/ownership/references/safety/coverage/arity/missing-input controls plus independent full advisory counts/first15;book_publication.py →87 chapters/161 API rows/1555 source/2639 rendered links rc=0;Rust unchanged.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/D298/D299/indexed decision/index/LIVE/book updated;README unchanged. transition_receipts.py --record part638 →4 exact Git spans rc=0;history_archive.sh verify-retention →1092/2472017 residentB rc=0.
+  Commit: STITCHCAD-G1-0484;D250 parent done,next .6.5.3.2 actual paired seam handler contract recovery;full pre-push CI remains pending.
 - ID: `G1-SLICE.6.5`
   Status: `in_progress`
   Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.

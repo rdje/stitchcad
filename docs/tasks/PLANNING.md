@@ -1106,23 +1106,12 @@ D246/D247 complete reports/0344 closure are retained in [part496](../history/win
 
 D248/D249 complete reports/0345 closure are retained in [part497](../history/window21.md#stitchcad-devnotes-part497md).
 
-## D250 — glossary declarations lag implemented public API vocabulary
+## D250 — canonical declaration and advisory repair
 
-Census reports132 unaccounted token/use rows, not132 unique defects. All structure/ownership/reference/
-index checks pass. The working slice's two new API names are declared locally; exact C1 rows match
-sourcec588e5e across a110-Markdown-file Git-archive fixture (both rc=1). Example stale declarations:
-CommandRequest in command-layer.md; CommandAuthoritySnapshot in command-scopes.md; FormulaBoundValue
-in formula-rationals.md. Reproduce baseline via Git archivec588e5e ROADMAP.md/docs/book/src/docs/tasks
-Markdown to target/scratch/, then GLOSSARY_ROOT=<fixture> run_glossary_census.sh; compare its x rows
-with target/piece-inventory-glossary-0345.log. Baseline log: target/piece-inventory-glossary-baseline-0345.log.
-Impact: the full glossary/G0/probe gate cannot pass despite current scoped feature checks. Owner
-G1-SLICE.6.vocabulary, P2 after .6.9 feature implementation and before G1 .11/integration/pre-push.
-Repair canonical API/variant/local declarations without weakening C1 or adding blanket exemptions.
-Secondary P3: baseline and current advisory awk-to-head15 pipeline prints a pipe-close I/O diagnostic;
-source tail pinpoints it, without changing C1's132 rows. Repair under the same owner after C1 closure.
-Current feature may proceed with this explicit baseline gap; no full glossary/CI pass is claimed.
-0479–0482 resolve all140 pairs with0 new;0483 P3 actual ignored-PIPE write error repaired after C1 closure.
-Normal awk141/ignored-signal diagnostic both fixed;new focused controls2 pass/prior producer expected-red;full glossary acceptance remains owned.
+Done0484:all140 current token/use pairs repaired0479–0482 without exemptions;P3 ignored-SIGPIPE
+write error repaired0483. Full glossary41 pass/0 fail,including29 declaration controls and2 signal
+cases;real census310 terms/9 parts/158 owned tokens/0 failures. Full workspace CI remains separate.
+[Whole original baseline/reproduction/repair ledger](../history/stitchcad-devnotes-part638.md) retained unchanged.
 
 Verified D251/D252 scope corrections retained whole in [part498](../history/window21.md#stitchcad-devnotes-part498md).
 
@@ -1197,3 +1186,14 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 
 ## D281/D282 — task-sibling freshness and sealed bytes
 [Whole verified0421 correction](../history/stitchcad-devnotes-part578.md); canonical graph/code retained.
+
+## D298 — stale secondary command frontier
+
+P2;owner G1-SLICE.6.vocabulary.acceptance;done0484. docs/TASK_TREE.md previously said0421 next .6.5.2.b and D250 baseline pending despite that leaf done/current C1 repair. Reproduce with rg .6.5.2.b in index and
+canonical G1 leaf;impact is an obsolete resume instruction. Replace with current command/execution ownership;Python comparison confirms three canonical leaf states,rc=0.
+
+## D299 — glossary negative controls assume one use and leave no use
+
+P2;owner G1-SLICE.6.vocabulary.acceptance;done0484. Initial full current glossary probes reported 37 pass/4 fail:collision/eps_chord declaration removal also removes their only shaped use;HISTORY_ARCHIVE_ROOT/ sources
+have two using chapters but tests demand one row. Actual census behavior is correct. Retain an independent copied use for every declaration fault and derive its exact current chapter-use population; require only that
+named population and no other failures. Focused four4/0;full current suite41/0 pass rc=0.

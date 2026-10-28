@@ -126,32 +126,51 @@ else
   bad UNDECLARED "an undeclared machine token was not refused (exit=$rc)" "$out"
 fi
 
-# ---------------------------------------------------------------- D155/D218 actual diagnostic/helper declarations (C1)
+# ---------------------------------------------------------------- D155/D218/D250 actual declarations (C1)
 # Remove each real declaration from a fresh book copy; the standing census must name it.
 while IFS=$'\t' read -r family token chapter; do
   D="$WORK/$family-$token"; mkroot "$D"
-  baseline_rc=0
-  if [ "$family" = D218 ]; then
-    # Retain an independently authored use when removing its declaration. Some API names
-    # occur only in their definition row; deleting that row alone removes both obligations.
-    printf '\nTooling usage control: `%s`.\n' "$token" >> "$D/$chapter"
-    out="$(run "$D")"; baseline_rc=$?
-  fi
-  python3 -I -B - "$D/$chapter" "$token" "$family" <<'PY_DECLARATION'
+  # Every fault retains an independent use. Definition-only names otherwise lose the obligation
+  # together with their row. The green copied baseline proves the retained use is declared first.
+  printf '\nDeclaration usage control: `%s`.\n' "$token" >> "$D/$chapter"
+  out="$(run "$D")"; baseline_rc=$?
+  expected_pairs="$(python3 -I -B - "$D/$chapter" "$token" "$family" "$D" <<'PY_DECLARATION'
 from pathlib import Path
+import re
 import sys
-p, token, family = Path(sys.argv[1]), sys.argv[2], sys.argv[3]
+p, token, family, root = Path(sys.argv[1]), sys.argv[2], sys.argv[3], Path(sys.argv[4])
 rows = p.read_text().splitlines(keepends=True)
 removed = [row for row in rows if row.startswith('| `' + token + '` |')]
 assert len(removed) == 1, ('declaration fault anchor', family, token, len(removed))
 p.write_text(''.join(row for row in rows if row not in removed))
+# Independent Python oracle for the census's two documented code-span shape arms. Count token/use
+# chapter pairs, not token identities. Other chapters may legitimately use this same declaration.
+book = root / 'docs/book/src'
+users = set()
+for chapter in book.rglob('*.md'):
+    if chapter == book / 'spec/glossary.md' or (book / 'spec/glossary') in chapter.parents:
+        continue
+    for line in chapter.read_text().splitlines():
+        for span in re.findall(r'`([^`]+)`', line):
+            if span == token:
+                users.add(chapter)
+            elif '-' not in span and '.' not in span and any(op in span for op in '+=−×√÷'):
+                for identifier in re.findall(r'[A-Za-z_][A-Za-z0-9_]*', span):
+                    if identifier == token and (re.fullmatch(r'[a-z][a-z0-9]*(_[a-z0-9]+)+', identifier)
+                                               or re.fullmatch(r'[A-Z][a-z0-9]+([A-Z][A-Za-z0-9]*)*', identifier)):
+                        users.add(chapter)
+assert users, ('retained use missing', family, token)
+print(len(users))
 PY_DECLARATION
-  mutation_rc=$?
+)"; mutation_rc=$?
   out="$(run "$D")"; rc=$?
-  needle=$(printf '`%s` is used by' "$token")
-  if [ "$baseline_rc" -eq 0 ] && [ "$mutation_rc" -eq 0 ] && [ "$rc" -eq 1 ] && grep -Fq "$needle" <<<"$out" \
-     && grep -q 'unaccounted: 1' <<<"$out"; then
-    ok "$family-$token" "actual copied declaration removal is refused by name; exactly one unaccounted token"
+  needle=$(printf '  x `%s` is used by' "$token")
+  named_pairs=$(grep -Fc "$needle" <<<"$out")
+  all_failures=$(grep -c '^  x ' <<<"$out")
+  if [ "$baseline_rc" -eq 0 ] && [ "$mutation_rc" -eq 0 ] && [ "$rc" -eq 1 ] \
+     && [ "$named_pairs" = "$expected_pairs" ] && [ "$all_failures" = "$expected_pairs" ] \
+     && grep -Eq "unaccounted: $expected_pairs$" <<<"$out"; then
+    ok "$family-$token" "actual declaration removal refused in exactly $expected_pairs independently derived using chapter(s)"
   else
     bad "$family-$token" "actual declaration fault failed its named census assertion (mutation=$mutation_rc, exit=$rc)" "$out"
   fi
@@ -173,6 +192,18 @@ D218	plan_producer	docs/book/src/build-and-checks.md
 D218	prepare_producer	docs/book/src/build-and-checks.md
 D218	python3	docs/book/src/annexes/ledger-fixtures.md
 D218	sources	docs/book/src/build-and-checks.md
+D250	CommandRequest	docs/book/src/spec/command-layer.md
+D250	CommandScope	docs/book/src/spec/command-scopes.md
+D250	ArtifactPayload	docs/book/src/spec/artifact-requests.md
+D250	SizeMemberTarget	docs/book/src/spec/evaluation-requests.md
+D250	BlankAlgorithm	docs/book/src/spec/release-contract.md
+D250	GarmentSizeSetInputs	docs/book/src/spec/size-sets.md
+D250	SizeSetResolutionIntent	docs/book/src/spec/size-set-transformations.md
+D250	FormulaApproximationSources	docs/book/src/annexes/formula-runtime-validation.md
+D250	FormulaBoundValue	docs/book/src/annexes/formula-rationals.md
+D250	FormulaCheckedExpression	docs/book/src/annexes/formula-checked-nodes.md
+D250	bb	docs/book/src/spec/model-resource-accounting.md
+D250	e	docs/book/src/spec/source-resource-accounting.md
 DECLARATIONS
 
 # ---------------------------------------------------------------- A1: bounded sample, complete counts, quiet signals

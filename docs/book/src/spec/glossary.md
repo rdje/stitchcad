@@ -426,6 +426,10 @@ The bold-span advisory reports complete matching/nonmatching counts and at most 
 nonmatching samples in its sorted order. It does not classify emphasis as vocabulary or fail a
 chapter for emphasis. Large populations retain the same bounded sample without write-error noise.
 
+Coverage failures count token/using-chapter pairs: one undeclared name used in two chapters yields
+two rows. Declaration-removal controls retain an independent copied use and require precisely the
+actual using-chapter population, rather than assuming every name has one use or one chapter.
+
 ## Verification status of the synonyms
 
 - **Object names, tokens and clause references** — *exact*: they are quoted from the specification
