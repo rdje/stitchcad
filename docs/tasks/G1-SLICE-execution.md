@@ -266,48 +266,43 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .3 original-frame context construction;.acceptance focused actual-domain integration.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.1`
   Status: `done`
-  Goal:0510 bounded complete positive-interval coverage without endpoint choice trees;shared exact
-  per-edit mapping with legacy range resolution. Complete input and peak portion limits precede
-  derived collection growth;held/source/edit/numeric causes,order,repairs and direction survive.
-  - [x] REPRODUCE / ISSUE: actual source validation needs whole intervals,not point uniqueness.
-    rg -n 'ledger.resolve_range|piece.range_resolutions|start: self.resolve|end: self.resolve'
-    crates/sc-core/src/ontology/range.rs crates/sc-core/src/ontology/sewing.rs →5 actual callsites,
-    including source side and Piece ownership queries and both legacy endpoint folds,rc=0.
-    Dependency owned here;legacy collection meter remains correct within its documented scope.
-  - [x] ROOT CAUSE: 0510 cargo test -p sc-core --test range_coverage_contract
-    reversed_split_keeps_original_first_failure_precedence →draft failed101:direct reversed emission
-    evaluated second affine before first division. Independent Fraction control confirms both branches
-    overflow for symmetric held1/MAX..(MAX-1)/MAX at2/5. Historical mapping computes first branch
-    before reversing output. Preserve that order and per-input all-or-repair semantics.
-  - [x] FIX: stream shared fixed-size mapping in original arithmetic order;reverse only successful
-    input emissions with mutable iterators,no indexing or extra collection. Borrow actual journal;
-    admit all entries/nested fields before source lookup. Charge pending+next+active+one requested
-    output before append;truncate failed input emissions before retaining actual whole repair.
-    RangeCoverage/limits/fixed boxed refusal are public;PointJournalAdmissionIssue restricts shared
-    preflight to actual population failures. Initial Clippy rejected256B mapped outcome/error and
-    unchecked suffix indexing;precise input issue plus iterator reversal fix both without waivers.
-  - [x] ADDRESSED: 0510 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    range_coverage_contract --test range_contract --test unique_point_contract →6+20+6 passed,rc=0.
-    Exact quota boundaries/complete unrelated inputs/unknown source/reversed gaps/deletion/numeric
-    rollback/first-cause precedence pass. Eight cycles:upper interval1 under peak2,whole2 under3;
-    legacy lower endpoint256 leaves unchanged. No partial coverage or mutated ledger. All14 frozen
-    Fraction rows feed new coverage;reference_recomposition_oracle.py --check →14/9 valid/5 genuine
-    width refusals/reversed dual-failure control1,rc=0. No input/CPU/RSS/global-authority conflation.
-  - [x] NO REGRESSION: 0510 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core
-    --test sewing_contract notch_context_recovery →4 passed,rc=0;actual original source coverage
-    joins actual Notch/Graph projections without a fake provider. cargo test -p sc-core --doc
-    RangeCoverageLimits →1 passed,rc=0. Scoped Clippy four affected targets/fmt --all --check →pass0.
-    Book build/publication →89/195/1567/2688,rc=0;glossary →0 failures,rc=0;receipt667 →3 exact Git
-    spans,rc=0;retention →1121 logical/26 working/2395133 residentB,rc=0. Broader paired/mutation/
-    physical and bus verification remain .6.5.3.2.acceptance/pre-push after feature implementation.
-  - [x] LOCKSTEP: current task/next children/MEMORY/DEV/CHANGE/book/API routes/D301/task index align.
-    Whole0509 retained667. LIVE/README reviewed unchanged,G1 6/18. Next .3.2 actual complete source
-    dependency admission;whole source/Piece ownership/endpoint/currentness and quantities remain owned.
-    promotion: declined (implementation of already indexed explicit input/derived-work admission and exact source/reference contracts;no new policy or roadmap direction).
+  Goal:0510 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part668.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.2`
-  Status: `pending`
-  Goal: actual complete source/plan/Piece/landmark registry dependency and ownership admission;
-  explicit population/range/point budgets before building indexes or invoking derived resolution.
+  Status: `done`
+  Goal:0511 borrow actual complete notch source/plan/Piece/landmark/ledger dependencies after
+  eligibility and explicit input admission,before indexes or derived resolution. Limits retain
+  explicit original-point and per-range query budgets;no default or readiness inference.
+  - [x] REPRODUCE / ISSUE: input admission must precede index/resolution construction using actual
+    original sources. rg -n 'admit_notch_context|notch_source_admission' actual ontology module and
+    sewing_contract.rs →implemented producer plus five actual-domain consumers,rc=0. Whole Piece/
+    copy/registry populations cannot be reduced to named stops without losing dependencies.
+  - [x] ROOT CAUSE: 0511 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    sewing_contract notch_source_admission →5 passed/57 filtered,rc=0. Actual base inputs require13
+    dependency items;limit12 refuses full landmark request2 after11. Unused Turn raises total14;
+    actual holes/fold/unused Piece+copy raise total19 with exact hole/fold refusal ownership/index.
+    Existing validation methods perform separate currentness work;admission must not invoke them.
+  - [x] FIX: NotchContextLimits/NotchSourceAdmission lend exact original source/plan/Pieces/registry/
+    ledger and named side/IDs. Eligibility precedes complete journal admission,then whole dependency
+    census. Charge each collection before traversal;private exhaustive views/Copy guards expose new
+    owned fields. Fixed source/cause refusal has no partial index;success borrows and counts only.
+    Symbolic formulas/profiles,authored stop order and original source intent remain unchanged.
+  - [x] ADDRESSED: 0511 cargo test -p sc-core --test sewing_contract notch_source_admission →5
+    passed,rc=0. Pointer identity confirms actual borrowed inputs. Explicit/formula/profile declarations
+    stay exact,named401/400 differs from authored400/401 without rewriting. Whole unused Notch/Turn,
+    Piece/copy,hole/fold populations and quota equality pass;Uniform/Weighted eligibility and actual
+    complete unrelated journal/nested refusals retain precedence. Deleted held source still admits
+    input populations while actual graph refuses UnresolvedRange;old Uniform-only quantity helper
+    retains actual BetweenNotches source/side/names. Ledger unchanged;no context/amount supplied.
+  - [x] NO REGRESSION: 0511 python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-core
+    --test sewing_contract -- -D warnings/fmt --all --check →pass0. cargo test -p sc-core --doc
+    NotchContextLimits/NotchSourceAdmission →1+1 compile-fail passed,rc=0;notch_context_recovery
+    →4 passed,rc=0. Book build/publication →89/200/1567/2689,rc=0;glossary →0 failures,rc=0;
+    receipt668 →3 exact Git spans,rc=0;retention →1122 logical/27 working/2401984 residentB,rc=0.
+    Full source context/paired/mutation/physical/bus verification retains .3/.acceptance/pre-push.
+  - [x] LOCKSTEP: task/next context owner/MEMORY/DEV/CHANGE/book/API routes/D301/task index align;
+    whole0510 retained668. LIVE/README reviewed unchanged,G1 6/18. Input admission does not prove
+    source ownership/currentness,original interval or quantities;actual context construction .3 next.
+    promotion: declined (implementation of already indexed actual-source dependency admission and borrowed evidence boundaries;no new policy or direction).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3`
   Status: `pending`
   Goal: construct borrowed actual notch context from bounded source validation and exact original

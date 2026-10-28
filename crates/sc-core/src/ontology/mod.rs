@@ -32,6 +32,7 @@
 //! | [`material_inventory`] | current Material collection and actual Piece assignment targets/reasons | `.6.4.2.d.3.3` |
 //! | [`notion`] | physical-copy placements, owned anchors/orientation and current target validation | `.3c.4c.1a` |
 //! | [`notion_inventory`] | owned placements and complete current copies/original sources | `.6.4.5.2.b` |
+//! | [`seam_notch_context`] | borrowed actual notch-source inputs and explicit admission;context pending | `.6.5.3.2.3.2.4.3.3.2` |
 //! | [`notch`] | immutable semantic anchors and symbolic profile bindings, deferred physical validation | `.3c.3a` |
 //! | [`piece_inventory`] | immutable authored Piece collection; reciprocal opposite-hand/equal-quantity pair checks | `.6.4.1` |
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
@@ -81,6 +82,7 @@ pub mod reference;
 pub mod seam_ease;
 pub mod seam_ease_amount;
 pub mod seam_ease_workspace;
+pub mod seam_notch_context;
 pub mod sewing;
 pub mod topology;
 
@@ -132,6 +134,10 @@ pub use seam_ease::{
 pub use seam_ease_amount::SeamEaseAmountError;
 pub use seam_ease_workspace::{
     WeightedEaseAdmission, WeightedEaseAmountError, WeightedEaseLimits, WeightedEaseWorkspaceError,
+};
+pub use seam_notch_context::{
+    NotchContextLimits, NotchSourceAdmission, NotchSourceAdmissionError, NotchSourceAdmissionIssue,
+    NotchSourceCollection,
 };
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,

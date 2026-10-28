@@ -1,20 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.3.2 in docs/tasks/G1-SLICE-execution.md:actual complete source/
-  plan/Piece/landmark dependency admission before indexes or derived queries. Then .3 original-frame
-  context and .acceptance;quantities .4 and paired effects/full acceptance later. No fake providers.
-- Bounded interval prerequisite .3.1 closes0510:RangeCoverageLimits explicit journal/nested/peak
-  portion budgets;resolve_range_coverage streams shared exact mapping without endpoint choice trees.
-  Original held range/positive gaps/numeric causes/direction/order survive. Input error is precise
-  PointJournalAdmissionIssue;bounded current API outcomes unchanged. Peak includes queues+active+
-  output:whole8-cycle2 portions needs3 slots,upper interval1 needs2;old lower endpoint256 leaves stays.
-- Draft reversed emission changed first numeric failure;targeted test failed101,then original
-  evaluation plus iterator-only successful output reversal fixed it. Native6+range20+current6/
-  actual Notch recovery4/doc1/scoped lint/fmt/oracle14+dual-failure control pass0. Book89/195/1567/2688.
-  Whole0509 retained667/3 exact Git spans. Full source ownership/currentness/context remains next.
-- Primitive .2 closed0509 with focused actual Notch/Graph/retained-source acceptance4;side/named IDs/
-  full stops/declaration,wide original and ambiguous directions preserved. Profile G4/ease G2/G3
-  deferred;Uniform-only source API still reports actual BetweenNotches context. Whole0508 in666.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.3.3 in docs/tasks/G1-SLICE-execution.md:actual bounded source
+  validation and original-notch context construction. Recover source/copy/Piece/registry ownership,
+  all unused anchors,source interval endpoints/coverage and original coordinate comparison before
+  safe implementation children. No fake providers;quantities .4/paired effects/full acceptance later.
+- Actual input admission .3.2 closes0511:NotchContextLimits explicit dependency/original-point/
+  per-range limits;NotchSourceAdmission borrows complete actual source/plan/Pieces/marks/ledger.
+  Eligibility→whole journal/nested→whole dependencies;exact refusal owner/index/counts,no partial
+  index or derived resolution. Literal/formula/profile data and named/authored order stay exact.
+  Native5/doc2/recovery4/scoped lint/fmt pass0;book89/200/1567/2689,glossary0. Whole0510 in668/3 spans.
+- Input success is not source ownership/currentness/original positions/amount availability. Actual
+  deleted source graph still refuses;old Uniform-only helper requires BetweenNotches context.
+- Bounded coverage0510 shares exact interval mapping without endpoint trees;queues+active+output
+  peak limits. Whole8-cycle2 portions needs3 slots,upper1 needs2;old endpoint256 leaves persists.
+  Draft reverse-order first-cause regression fixed by original evaluation plus iterator-only reversal.
+  Focused6+20+6/Notch4/doc1/oracle14+dual-failure pass. Actual primitive0509 proof remains667.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

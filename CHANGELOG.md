@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0510 — bound complete interval coverage before source context
+## STITCHCAD-G1-0511 — admit complete actual notch-source inputs
 
-- Shared streamed range mapping preserves exact positive intervals/repairs/original numeric precedence without endpoint choice trees. Explicit complete input and peak portion admission;fixed actual held/operation refusal,precise PointJournalAdmissionIssue;no partial quota result.
-- Native coverage6/range20/current6/actual Notch4/doc1/scoped Clippy/fmt and Fraction14+dual-failure control pass. Eight cycles:whole2 portions/peak3,upper1/peak2;old endpoint256 leaves persists. Draft reverse-order defect reproduced/fixed before commit.
-- Whole0509 retained667/three exact Git spans;book89/195/1567/2688/glossary0/retention1121 pass. LIVE/README unchanged,G1 6/18. Actual complete source dependency admission .3.2 next;context/quantities/paired effects/full acceptance retain owners.
+- Explicit input/per-query limits and borrowed original source/plan/Pieces/registry/ledger. Whole journal and complete dependency populations,including unused marks/Pieces/copies/holes/folds,admit before indexes or derived queries. Fixed original intent/owner/index/count refusals;no default or partial input view.
+- Native5/doc2/recovery4/scoped Clippy/fmt pass. Symbolic source and named/authored order remain exact. Input admission preserves damaged held data while actual graph currentness and Uniform-only quantity helpers retain their original refusals;actual context is not implied.
+- Whole0510 retained668/three exact Git spans;book89/200/1567/2689/glossary0/retention1122 pass. LIVE/README unchanged,G1 6/18. Actual bounded source validation/original-notch context .3 next;quantities/paired effects/full acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

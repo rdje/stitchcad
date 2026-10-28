@@ -3649,3 +3649,387 @@ fn retained_uniform_source_queries_preserve_original_frame_and_closed_domain_ref
         assert_eq!(error.source().unwrap().to_string(), issue.to_string());
     }
 }
+
+fn notch_source_fixture() -> (Fixture, Vec<SewingLandmark>) {
+    let mut f = fixture();
+    let marks = vec![f.notch(400, t(1, 4)), f.notch(401, t(3, 4))];
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
+        side: SeamSideId::A,
+        start: id(401),
+        end: id(400),
+    };
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(400),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(401),
+        },
+    ];
+    (f, marks)
+}
+fn notch_source_limits(
+    items: usize,
+    journal: usize,
+    nested: usize,
+) -> sc_core::ontology::NotchContextLimits {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{NotchContextLimits, OriginalPointLimits, UniquePointLimits};
+    NotchContextLimits::new(
+        NonZeroUsize::new(items).unwrap(),
+        OriginalPointLimits::new(
+            UniquePointLimits::new(
+                NonZeroUsize::new(journal).unwrap(),
+                NonZeroUsize::new(nested).unwrap(),
+            ),
+            NonZeroUsize::new(2).unwrap(),
+            NonZeroU64::new(10000).unwrap(),
+        ),
+        NonZeroUsize::new(3).unwrap(),
+    )
+}
+
+#[test]
+fn notch_source_admission_borrows_actual_complete_inputs_and_symbolic_declarations() {
+    let (mut f, marks) = notch_source_fixture();
+    for amount in [
+        EaseAmount::Explicit(Length::from_micrometres(-1).unwrap()),
+        EaseAmount::Formula(id(900)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(901))),
+    ] {
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&marks).unwrap();
+        let portion = graph.spans().first().unwrap().retain_ease_source();
+        let source = portion.source();
+        let selected = notch_source_limits(13, 1, 4);
+        let admission = source
+            .admit_notch_context(&f.plan, &f.pieces, &marks, &f.ledger, selected)
+            .unwrap();
+        assert!(core::ptr::eq(admission.source(), source));
+        assert!(core::ptr::eq(admission.plan(), &f.plan));
+        assert!(core::ptr::eq(admission.pieces(), f.pieces.as_slice()));
+        assert!(core::ptr::eq(admission.landmarks(), marks.as_slice()));
+        assert!(core::ptr::eq(admission.ledger(), &f.ledger));
+        assert_eq!(admission.limits(), selected);
+        assert_eq!(admission.dependency_item_count(), 13);
+        assert_eq!(admission.distribution_side(), SeamSideId::A);
+        assert_eq!(admission.notch_ids(), (id(401), id(400)));
+        assert_eq!(admission.source().declaration().amount, amount);
+        assert_eq!(admission.source().stops(), f.span().stops);
+        assert_eq!(selected.dependency_items().get(), 13);
+        assert_eq!(selected.original_point().current().nested_items().get(), 4);
+        assert_eq!(selected.range_portions().get(), 3);
+        for mark in admission.landmarks() {
+            let SewingLandmark::Notch(notch) = mark else {
+                panic!("actual named Notch")
+            };
+            assert_eq!(
+                notch.profile_binding_validation(),
+                sc_core::ontology::ProfileBindingValidation::DeferredToG4
+            );
+        }
+        let debug = format!("{admission:?}");
+        assert!(debug.contains("dependency_items: 13"));
+        assert!(!debug.contains("selection pending"));
+        assert!(!debug.contains("NotchDefinition"));
+    }
+}
+
+#[test]
+fn notch_source_admission_charges_complete_unused_semantic_registry() {
+    use sc_core::ontology::{
+        NotchSourceAdmissionIssue as Issue, NotchSourceCollection as Collection,
+    };
+    let (f, mut marks) = notch_source_fixture();
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let source = portion.source();
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(12, 1, 4),
+        )
+        .unwrap_err();
+    assert_eq!(error.source_span(), id(301));
+    assert_eq!(
+        error.issue(),
+        &Issue::Items {
+            collection: Collection::Landmarks,
+            owner: None,
+            index: None,
+            consumed: 11,
+            requested: 2,
+            limit: 12
+        }
+    );
+    marks.push(SewingLandmark::Turn(
+        TurnPoint::new(
+            id(402),
+            EdgeAnchor {
+                edge: f.span().a.range.edge(),
+                param: t(1, 2),
+            },
+            f.pieces.first().unwrap(),
+            &f.ledger,
+        )
+        .unwrap(),
+    ));
+    f.graph(&marks).unwrap();
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 1, 4),
+        )
+        .unwrap_err();
+    assert_eq!(
+        error.issue(),
+        &Issue::Items {
+            collection: Collection::Landmarks,
+            owner: None,
+            index: None,
+            consumed: 11,
+            requested: 3,
+            limit: 13
+        }
+    );
+    let admission = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(14, 1, 4),
+        )
+        .unwrap();
+    assert_eq!(admission.dependency_item_count(), 14);
+    assert_eq!(admission.landmarks().last().unwrap().id(), id(402));
+    assert_eq!(admission.source().stops().len(), 2);
+}
+
+#[test]
+fn notch_source_admission_keeps_holes_folds_and_unused_piece_copy_dependencies() {
+    use sc_core::ontology::{
+        NotchSourceAdmissionIssue as Issue, NotchSourceCollection as Collection,
+    };
+    let (mut f, _) = notch_source_fixture();
+    let edges = f.ledger.declare_edges(&mut f.ids, 2).unwrap();
+    let mut definition = f.pieces.first().unwrap().definition().clone();
+    definition.holes.push(vec![DirectedEdge {
+        edge: *edges.first().unwrap(),
+        direction: Direction::Original,
+    }]);
+    definition.cut_on_fold = true;
+    definition.fold_edges = vec![definition.boundary.first().unwrap().edge];
+    *f.pieces.first_mut().unwrap() = Piece::new(definition, &f.ledger).unwrap();
+    let mut unused = f.pieces.last().unwrap().definition().clone();
+    unused.id = id(102);
+    unused.boundary = vec![DirectedEdge {
+        edge: *edges.last().unwrap(),
+        direction: Direction::Original,
+    }];
+    unused.construction_lines.clear();
+    f.pieces.push(Piece::new(unused, &f.ledger).unwrap());
+    let mut copies = f
+        .plan
+        .copies()
+        .iter()
+        .map(|copy| *copy.definition())
+        .collect::<Vec<_>>();
+    copies.push(CutCopyDefinition {
+        id: id(203),
+        piece: id(102),
+        orientation: CopyOrientation::Authored,
+    });
+    f.plan = CutPlan::new(copies, &f.pieces).unwrap();
+    let marks = vec![f.notch(400, t(1, 4)), f.notch(401, t(3, 4))];
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let source = portion.source();
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(11, 2, 6),
+        )
+        .unwrap_err();
+    assert_eq!(
+        error.issue(),
+        &Issue::Items {
+            collection: Collection::PieceHoleEdges,
+            owner: Some(id(100)),
+            index: Some(0),
+            consumed: 11,
+            requested: 1,
+            limit: 11
+        }
+    );
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 2, 6),
+        )
+        .unwrap_err();
+    assert_eq!(
+        error.issue(),
+        &Issue::Items {
+            collection: Collection::PieceFoldEdges,
+            owner: Some(id(100)),
+            index: Some(0),
+            consumed: 13,
+            requested: 1,
+            limit: 13
+        }
+    );
+    let admission = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(19, 2, 6),
+        )
+        .unwrap();
+    assert_eq!(admission.dependency_item_count(), 19);
+    assert_eq!(admission.pieces().last().unwrap().id(), id(102));
+    assert_eq!(admission.plan().copies().last().unwrap().id(), id(203));
+}
+
+#[test]
+fn notch_source_admission_preserves_eligibility_then_complete_journal_precedence() {
+    use sc_core::ontology::{
+        NotchSourceAdmissionIssue as Issue, PointJournalAdmissionIssue as Journal,
+    };
+    let mut f = fixture();
+    let uniform_graph = f.graph(&[]).unwrap();
+    let uniform = uniform_graph.spans().first().unwrap().retain_ease_source();
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
+        side: SeamSideId::B,
+        regions: vec![WeightedEaseRegion {
+            from: Param::START,
+            to: Param::END,
+            weight: Rational::ONE,
+        }],
+    };
+    let weighted_graph = f.graph(&[]).unwrap();
+    let weighted = weighted_graph.spans().first().unwrap().retain_ease_source();
+    f.ledger.declare_edges(&mut f.ids, 3).unwrap();
+    for (portion, expected) in [
+        (&uniform, Issue::Uniform),
+        (
+            &weighted,
+            Issue::Weighted {
+                side: SeamSideId::B,
+                regions: 1,
+            },
+        ),
+    ] {
+        let error = portion
+            .source()
+            .admit_notch_context(
+                &f.plan,
+                &f.pieces,
+                &[],
+                &f.ledger,
+                notch_source_limits(1, 1, 1),
+            )
+            .unwrap_err();
+        assert_eq!(error.issue(), &expected);
+    }
+    let (mut f, marks) = notch_source_fixture();
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let source = portion.source();
+    f.ledger.declare_edges(&mut f.ids, 3).unwrap();
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(1, 1, 1),
+        )
+        .unwrap_err();
+    assert_eq!(
+        error.issue(),
+        &Issue::Journal(Journal::JournalEntries {
+            required: 2,
+            limit: 1
+        })
+    );
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(1, 2, 6),
+        )
+        .unwrap_err();
+    assert_eq!(
+        error.issue(),
+        &Issue::Journal(Journal::NestedItems {
+            operation: f.ledger.journal().last().unwrap().operation(),
+            collection: sc_core::ontology::PointJournalCollection::DeclaredEdges,
+            consumed: 4,
+            requested: 3,
+            limit: 6,
+        })
+    );
+    source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 2, 7),
+        )
+        .unwrap();
+}
+
+#[test]
+fn notch_source_admission_is_input_evidence_and_keeps_damaged_current_sources_visible() {
+    let (mut f, marks) = notch_source_fixture();
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let source = portion.source();
+    let edge = source.side(SeamSideId::A).range.edge();
+    f.ledger.delete(&mut f.ids, edge).unwrap();
+    let before = f.ledger.clone();
+    let admission = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 2, 4),
+        )
+        .unwrap();
+    assert_eq!(admission.source().side(SeamSideId::A).range.edge(), edge);
+    assert!(
+        matches!(graph.validate_current(admission.plan(), admission.pieces(), admission.landmarks(), admission.ledger()),
+        Err(SewingError::UnresolvedRange { span, side: SeamSideId::A, .. }) if span == id(301))
+    );
+    assert_eq!(
+        source.uniform_explicit_cumulative_at_a(t(1, 2)),
+        Err(sc_core::ontology::SeamEaseAmountError::BetweenNotches {
+            source_span: id(301),
+            side: SeamSideId::A,
+            start: id(401),
+            end: id(400),
+        })
+    );
+    assert_eq!(f.ledger, before);
+}

@@ -194,3 +194,8 @@ bounded complete interval evidence	spec/command-notch-context.md	crates/sc-core/
 bounded interval refusal	spec/command-notch-context.md	crates/sc-core/src/ontology/range/coverage.rs	RangeCoverageError	G1-SLICE.6.5.3.2.3.2.4.3.3.1	4.4
 bounded interval issue	spec/command-notch-context.md	crates/sc-core/src/ontology/range/coverage.rs	RangeCoverageIssue	G1-SLICE.6.5.3.2.3.2.4.3.3.1	4.4
 complete journal admission issue	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/unique_point.rs	PointJournalAdmissionIssue	G1-SLICE.6.5.3.2.3.2.4.3.3.1	4.4
+notch context explicit limits	spec/command-notch-context.md	crates/sc-core/src/ontology/seam_notch_context.rs	NotchContextLimits	G1-SLICE.6.5.3.2.3.2.4.3.3.2	4.4
+actual notch source input admission	spec/command-notch-context.md	crates/sc-core/src/ontology/seam_notch_context.rs	NotchSourceAdmission	G1-SLICE.6.5.3.2.3.2.4.3.3.2	4.4
+notch source admission refusal	spec/command-notch-context.md	crates/sc-core/src/ontology/seam_notch_context.rs	NotchSourceAdmissionError	G1-SLICE.6.5.3.2.3.2.4.3.3.2	4.4
+notch source admission issue	spec/command-notch-context.md	crates/sc-core/src/ontology/seam_notch_context.rs	NotchSourceAdmissionIssue	G1-SLICE.6.5.3.2.3.2.4.3.3.2	4.4
+notch source dependency collection	spec/command-notch-context.md	crates/sc-core/src/ontology/seam_notch_context.rs	NotchSourceCollection	G1-SLICE.6.5.3.2.3.2.4.3.3.2	4.4

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — bounded complete interval coverage
+## _(2026-10-28 UTC)_ — actual complete notch-source input admission
 
-0510 streams shared exact range mapping without endpoint choice trees. Explicit complete journal/nested and peak portion budgets guard each append;unknown/deleted/gapped/numeric repairs retain held/edit/cause/order/direction. Peak counts queues+active+output;whole8-cycle2 portions needs3 slots.
-Draft reverse traversal changed first arithmetic failure;targeted native failed101. Original forward arithmetic plus iterator-only successful output reversal fixes precedence and preserves per-input rollback. Precise PointJournalAdmissionIssue fixes initial256B Clippy error;no lint waiver or indexing.
-Native coverage6/range20/current6/actual Notch4/doc1/scoped Clippy/fmt pass0. Fraction14 plus dual-failure control pass0. Upper8-cycle interval fits2 slots;old endpoint256 leaves stays. Actual Notch/Graph source coverage joins original point evidence;whole source/ownership/currentness remains next.
-[Whole0509 acceptance](docs/history/stitchcad-devnotes-part667.md) retains3 exact Git spans. Book89/195/1567/2688,glossary0,retention1121 pass. LIVE/README unchanged,G1 6/18;actual source dependency admission .3.2 next;context/quantities/paired acceptance remain owned. Promotion declined:existing admission contracts.
+0511 lends exact original source/plan/Pieces/semantic registry/ledger after eligibility,whole journal/nested input and whole dependency admission. Explicit NotchContextLimits retains later per-point/range budgets;no defaults,indexes,derived queries,cloned source or quantity is supplied.
+Exhaustive borrowed views and Copy guards charge all stops/copies/Pieces,boundaries/hole groups/edges/construction/folds,and unused Notch/Turn entries. Fixed errors retain source/collection/owner/index/counts. Text stays borrowed without scan;this item census supplies no byte/CPU/allocator certificate.
+Native5/doc2/recovery4/scoped Clippy/fmt pass0. Actual declarations retain explicit/formula/profile and named401/400 versus authored400/401. Base13/unused Turn14/holes+fold+unused Piece+copy19 and exact quota/precedence checks pass. Deleted source graph refuses while input admission preserves held data.
+[Whole0510 coverage](docs/history/stitchcad-devnotes-part668.md) retains3 exact Git spans. Book89/200/1567/2689,glossary0,retention1122 pass. LIVE/README unchanged,G1 6/18. Actual source/current/original context .3 next;quantity/paired acceptance retain owners. Promotion declined:existing source admission contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
