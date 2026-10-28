@@ -169,3 +169,15 @@ IDs and relative direction without traversing either branch or claiming final cu
 Registration choices are not applied and no held reference is rewritten. Native6 plus14 independent
 fraction rows pass;no input-count/point result is physical truth or whole Design authority. Repeat
 after edits. Original-coordinate inverse and actual notch/source context remain pending.
+
+## Original-point admission0506
+
+answers: "what is admitted before allocating wide original-coordinate arithmetic?"
+
+Explicit current-input/candidate/integer limits first admit actual current uniqueness,target source
+creation and conservative component W=63+127J,operand/result2W+128. Offset complete components gain
+at most127 bits;the latter also covers unreduced scratch/comparisons. Native fixture6 plus960
+independent Fraction steps watch this bound. The immutable borrowed token retains actual creation
+and held/current evidence without allocating wide integers or claiming any original preimage.
+Fixed current refusals preserve their concrete numeric error source. Candidate production/inverse
+mapping remains pending;notch quantity arithmetic and physical/global readiness need separate checks.

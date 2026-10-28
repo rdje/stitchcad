@@ -263,7 +263,7 @@ fn nested_population(edit: &TopologyEdit) -> Option<(PointJournalCollection, usi
         | TopologyEdit::Delete { edge: _ } => None,
     }
 }
-fn creates(edit: &TopologyEdit, reference: EdgeRef) -> bool {
+pub(super) fn creates(edit: &TopologyEdit, reference: EdgeRef) -> bool {
     match edit {
         TopologyEdit::Declared { edges } => edges.contains(&reference),
         TopologyEdit::Split {

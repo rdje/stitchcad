@@ -1,14 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.2.2 in docs/tasks/G1-SLICE-execution.md:wide exact original
-  coordinate inverse through actual journal to named source-edge CREATION frame;retain all numeric/
-  direction candidates. Split safe implementation children before edits;admit actual journal/nested,
-  candidates and integer work explicitly. No nearest point,anchor rewrite or physical certificate.
-- Bounded current uniqueness .2.1 closed0505:resolve_unique_point admits complete journal/nested
-  data before lookup/mapping,strictly rejects unknown sources,stops first required split choice.
-  Fixed Copy outcomes retain original holder/actual quota/repair/relative direction. Immediate split
-  branch IDs are not final current candidates;registration choices not applied. Native6/Fraction14
-  crossmaps1/doc2/scoped Clippy/fmt pass;repeat after edits. Whole0504 retained662,3 exact Git spans.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.2.2.2 in docs/tasks/G1-SLICE-execution.md:actual private
+  wide exact inverse on OriginalPointAdmission. Undo entries strictly AFTER named source creation,
+  then retain states on that source;do not stop early at same edge ID before undoing reversals.
+  Keep all coordinate/direction candidates,canonical equality coalescing and candidate admission
+  before retained-state allocation. No BigUint dependency type escapes,no Param narrowing/default.
+- Admission0506 .2.2.1 closed:explicit current/candidate/integer limits,actual target creation and
+  W=63+127J,operand/result2W+128. No wide arithmetic/query yet. Copy token borrows immutable exact
+  ledger;fixed current diagnostic box retains full outcome/actual UnitError source. J2 accepts762/
+  refuses761. Native5/private bound1/doc3/scoped lint/fmt/oracle6+960 steps pass. Whole0505 in663.
+- Bounded current .2.1 closed0505:whole journal/nested admission then known-source uniqueness;
+  first split preserves immediate IDs/direction,not final candidates. Registration choices not
+  applied. Original-point admission may accept unrelated real source without any preimage claim.
+  Prior native6/Fraction14 crossmaps1/doc2 pass. No physical/copy/Design readiness inferred.
 - D305 uses complete relative progress for split-second/offset and one shared i128 merge ratio;
   reduce before narrowing. Fraction14 proves9 false intermediate refusals fixed/5 genuine final
   widths still repaired with original reference/range and complete-operation cause. Range20,

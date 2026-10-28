@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — explicit bounded current-point uniqueness
+## _(2026-10-28 UTC)_ — admit original-point workspace before inverse arithmetic
 
-0505 resolve_unique_point admits complete actual journal count then aggregate declared-edge/offset-fragment populations before lookup/mapping. Explicit positive/no-default limits;fixed Copy outcomes retain original reference/parameter,actual operation/collection,consumed/requested/limit and concrete repair causes.
-Known-source check rejects legacy unknown pass-through. Shared exact step stops at first split with actual immediate branch IDs/cut/relative direction;no branch traversal or registration choice. Distinguish immediate branches from final current candidates. Repeat after edits;no copy/range/physical certificate.
-Native6/recomposition1/doc2/scoped Clippy/fmt pass0. Actual late unrelated data is charged before first choice;8-cycle full256 leaves remain required. All14 Fraction cases agree with full point/range maps,including5 genuine width repairs. Initial capitalized doc filter ran only1;module filter proves both examples.
-[Whole0504 refactor](docs/history/stitchcad-devnotes-part662.md) retains exact implementation/proofs. Indexed sewing decision gains bounded-query contract;book/API routes sync. LIVE/README unchanged,G1 6/18. Original-coordinate inverse/context and broader paired acceptance remain owned.
+0506 explicit current/candidate/integer limits admit actual bounded current point,target creation and conservative W=63+127J,operand/result2W+128 before wide arithmetic. Copy borrowed token fixes the exact immutable journal;bounded Debug omits bodies. No inverse/preimage or candidate collection exists yet.
+Offset complete components gain≤127 bits;split≤64,positive Length merge≤32,reverse0. Reservation covers comparison/unreduced scratch. Independent integer6/native and960 Fraction steps pass0,including64-bit control. Actual J2 admits762 bits,refuses761;source identity alone is not creation frame.
+Native5/private bound1/doc3/scoped Clippy/fmt pass0. Current quota/choice/unknown/numeric refusal precedes goal/bits and retains real StandardError cause. Real unrelated sources may be admitted without a preimage claim;equal forward branches do not cancel old reference choice. Wide query follows next.
+[Whole0505 bounded-query lesson](docs/history/stitchcad-devnotes-part663.md) retains exact scope/proofs. Indexed sewing decision/book/API routes sync;LIVE/README unchanged,G1 6/18. Notch interval/amount arithmetic and physical/global readiness require later admission/context checks.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

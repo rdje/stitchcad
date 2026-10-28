@@ -181,3 +181,6 @@ bounded point input limits	spec/command-notch-context.md	crates/sc-core/src/onto
 bounded point result	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/unique_point.rs	UniquePointResolution	G1-SLICE.6.5.3.2.3.2.4.3.2.1.2	4.4
 bounded point outcome	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/unique_point.rs	UniquePointOutcome	G1-SLICE.6.5.3.2.3.2.4.3.2.1.2	4.4
 bounded point nested collections	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/unique_point.rs	PointJournalCollection	G1-SLICE.6.5.3.2.3.2.4.3.2.1.2	4.4
+original point workspace limits	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point.rs	OriginalPointLimits	G1-SLICE.6.5.3.2.3.2.4.3.2.2.1	4.4
+original point workspace admission	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point.rs	OriginalPointAdmission	G1-SLICE.6.5.3.2.3.2.4.3.2.2.1	4.4
+original point admission refusal	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point.rs	OriginalPointAdmissionError	G1-SLICE.6.5.3.2.3.2.4.3.2.2.1	4.4

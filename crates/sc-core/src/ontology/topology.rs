@@ -40,7 +40,11 @@ use super::id::{EntityId, IdError, IdGenerator};
 use super::rational::Rational;
 use super::reference::{EdgeRef, LocalTag, Param};
 
+mod original_point;
 mod point_step;
+pub use original_point::{
+    OriginalPointAdmission, OriginalPointAdmissionError, OriginalPointLimits,
+};
 mod unique_point;
 pub use unique_point::{
     PointJournalCollection, UniquePointLimits, UniquePointOutcome, UniquePointResolution,

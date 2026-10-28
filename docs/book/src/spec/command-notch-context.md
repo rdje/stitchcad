@@ -1,8 +1,8 @@
 # Original-frame notch context
 
 Notch-bounded allocation needs the actual semantic landmarks and topology journal,not guessed
-parameters or physical notch dimensions. Explicit bounded current-point uniqueness is implemented.
-Original-coordinate projection and notch quantity contexts remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
+parameters or physical notch dimensions. Bounded current-point uniqueness and explicit original-point
+workspace admission are implemented. Inverse coordinates and notch quantity contexts remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
 is already implemented with focused checks.
 
 | API token | Meaning |
@@ -11,6 +11,12 @@ is already implemented with focused checks.
 | `Rational` | Signed64-bit reference fraction,distinct from a private wide numeric workspace |
 | `IdentityLedger` | Actual typed topology journal and reference resolver |
 | `UniquePointLimits` | Explicit positive journal/nested input budgets,without defaults |
+| `OriginalPointLimits` | Explicit current-input,candidate and integer workspace limits |
+| `OriginalPointAdmission` | Borrowed actual current point,original source creation and reserved widths |
+| `OriginalPointAdmissionError` | Actual current/source/integer preflight refusal |
+| `admit_original_point` | Admit wide inverse workspace before any wide integer arithmetic |
+| `IntegerBits` | Conservative operand/result reservation exceeds the selected limit |
+| `BoundOverflow` | Journal-derived reservation cannot be represented |
 | `UniquePointResolution` | Original held reference and fixed bounded query outcome |
 | `UniquePointOutcome` | Current point,required choice,repair,unknown source or admission refusal |
 | `PointJournalCollection` | Actual declared-edge or offset-fragment collection |
@@ -129,6 +135,65 @@ Its input counts do not constitute bus authority,an allocator/RSS limit or a CPU
 Native6 plus the14 independent fraction rows cover actual limits/causes/choices/current mapping;
 focused checks pass. Original-coordinate inverse,semantic context and paired effects remain owned.
 
+## Admit original-coordinate workspace
+
+Choose the existing current-point input limits,an explicit positive candidate limit and an explicit
+positive integer-bit limit. The candidate limit covers all simultaneously retained numeric states,
+including intermediate states. No default is supplied. Admission first runs bounded current
+uniqueness,then finds the actual creation entry for the named original source,then reserves integer
+work. It performs no wide arithmetic and produces no inverse coordinate or candidate collection.
+A current refusal retains its full fixed outcome in one diagnostic box;numeric causes remain the
+standard error source. Unknown target creation and integer-limit refusals keep both original source
+and held reference/parameter. No journal,registration or anchor is modified.
+
+For J actual journal entries,the conservative reduced coordinate-component bound is W =63+127J.
+For an offset with current coordinate qn/qd and original bounds fn/fd,tn/td,the complete inverse has:
+
+```text
+numerator   = qn*(tn*fd - fn*td) + fn*qd*td
+denominator = qd*td*fd
+```
+
+The bounds use at most63 bits. Thus the numerator gains at most127 bits and the denominator at
+most126. Split adds at most64,positive declared-length merge at most32,and reverse adds none.
+The admission reserves 2W+128 bits per integer operand/result. That also covers comparison products
+and sequential unreduced offset scratch of at most W+190,because W is at least63. These are
+conservative arithmetic bounds,not a measured maximum or an allocator/RSS/CPU certificate.
+Six independent exact-integer cases include the last fitting64-bit reservation and its overflowing
+successor. A recorded-seed Fraction check exercises960 inverse-offset steps against component and
+scratch bounds;the accepted late-fragment64-bit coordinate remains its counterexample to a63-bit
+original workspace. Native checks consume the exact reservation fixture.
+
+```rust
+use core::num::{NonZeroU64, NonZeroUsize};
+use sc_core::ontology::{DeterministicIdGenerator, IdentityLedger, OriginalPointLimits,
+    Param, Rational, UniquePointLimits};
+let mut ledger = IdentityLedger::new();
+let mut ids = DeterministicIdGenerator::new();
+let edge = ledger.declare_edges(&mut ids, 1)?.remove(0);
+let creation = ledger.journal()[0].operation();
+ledger.reverse(&mut ids, edge)?;
+let one = NonZeroUsize::new(1).ok_or("positive")?;
+let two = NonZeroUsize::new(2).ok_or("positive")?;
+let limits = OriginalPointLimits::new(UniquePointLimits::new(two, one), one,
+    NonZeroU64::new(762).ok_or("positive")?);
+let held = Param::new(Rational::new(1, 4)?)?;
+let token = ledger.admit_original_point(edge, held, edge, limits)?;
+assert_eq!(token.source_creation(), creation);
+assert_eq!(token.current().param().as_rational(), Rational::new(3, 4)?);
+assert_eq!(token.integer_bit_bound(), 762);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The immutable ledger borrow keeps the token tied to this exact journal. Bounded Debug omits the
+journal body. A reversed edge may keep its identity while its current parameter differs from its
+creation-frame coordinate;the inverse must stop at the actual creation event. Known source creation
+and current uniqueness do not prove that a preimage exists in the named source:two unrelated real
+edges can pass this admission. Equal numeric forward witnesses also do not cancel an old held
+reference's split choice. Actual inverse candidate production remains the next implementation.
+Notch interval/amount arithmetic,whole Design readiness and physical correspondence need their
+separate admission/context checks;this inverse workspace does not authorize those later operations.
+
 ## Current-reference composition defect
 
 D305 is repaired with focused verification. After a split at1/3,the valid held position
@@ -183,6 +248,7 @@ The independent Fraction producer freezes three recovery cases:
 ```bash
 python3 -I -B docs/tasks/artifacts/seam_partition/notch_context_oracle.py --check
 python3 -I -B docs/tasks/artifacts/seam_partition/reference_recomposition_oracle.py --check
+python3 -I -B docs/tasks/artifacts/seam_partition/projection_workspace_oracle.py --check
 ```
 
 Focused native range20/recovery4 and selected Clippy/format checks pass. Those checks validate actual

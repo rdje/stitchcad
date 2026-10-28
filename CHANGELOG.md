@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0505 — query explicit bounded current-point uniqueness
+## STITCHCAD-G1-0506 — admit wide original-point workspace before arithmetic
 
-- Positive no-default limits admit the complete actual journal/nested collections before source lookup/mapping. Fixed Copy outcomes retain held reference,actual quota context,unknown source,first required split choice or concrete repair cause/candidates.
-- Shared exact steps avoid full choice-tree construction;immediate split branch IDs retain their scope and relative direction. Native6/recomposition1/doc2/scoped Clippy/fmt pass,including all14 Fraction cases,late unrelated quota refusal and unchanged ledger state.
-- Whole0504 retained662;sewing decision/book/API/task pointers synchronized. LIVE/README unchanged,G1 6/18. Wide original-coordinate inverse,actual notch context and broader paired acceptance remain owned.
+- Positive no-default current/candidate/integer limits admit actual current uniqueness,target creation and conservative coordinate/scratch widths. Copy borrowed token retains exact immutable journal/context;current numeric causes remain standard error sources.
+- Native5/private bound1/doc3/scoped Clippy/fmt pass. Independent integer6 and960 Fraction offset checks include64-bit control;J2 reserves762 bits and refuses761. Real unrelated sources do not gain a preimage claim;old held choice survives equal forward witnesses.
+- Whole0505 retained663;sewing decision/book/API/task routes synchronized. LIVE/README unchanged,G1 6/18. Actual wide inverse/candidate production and later notch quantity/paired acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
