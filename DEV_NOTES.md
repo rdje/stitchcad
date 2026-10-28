@@ -3,16 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual structural root and exact revision resource bits
+## _(2026-10-28 UTC)_ — actual measurement and Ease source resources
 
-0453 .6.8.2.2.2.2.2.5.1 charges original revision magnitude bits, canonical inputs, Pieces, copies
-and topology under one sink. Exhaustive private root view; readonly BigUint bits adds no formatting,
-advance, clone or validation. Resource47 (prior42/actual5), context2, strict selected lint/fmt pass:
-41/18/129, zero/128/129 boundaries, exact component/Design owner refusals, prior prefix44/20/136,
-unchanged root/empty/prior error. Native context delta is only the private getter. Promotion: indexed
-command-layer decision. Whole0452 and0444–0449 implementation journals605 retain4 Git spans.
-Next source .3 then full higher-root .2.5.2, runtime .4; parent remains in progress, deeper/full proof
-stays deferred. Structural demand is no whole-model, source-currentness, physical or RSS/time proof.
+0454 .6.8.2.2.2.2.3.1 precharges actual metadata/table/Ease/set vectors and every retained text/token
+field. Saved bindings own separate tokens, even with equal spellings; canonical values remain solely
+core-owned. Exhaustive private views/Copy guards; no context/value/provenance read or reconversion.
+Measure resource6/strict lint/fmt pass:12/30/0, exact original owner/member/entry witnesses, prefix14/32,
+empty/prior error and held metadata unchanged despite a missing replacement canonical context.
+Promotion: indexed command-layer decision. Whole0453 proof606 has3 Git spans; source work split
+before implementation. External sets .3.2.1–.3.2.3/full host .3.3/higher root .2.5.2/runtime .4 remain;
+no whole-host/model, physical/source truth or allocator time/memory certificate.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

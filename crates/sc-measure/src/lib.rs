@@ -18,6 +18,9 @@
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
+mod resource;
+pub use resource::charge_measurement_input_resources;
+
 mod measurement;
 pub use measurement::{
     Landmark, LandmarkDefinition, Measurement, MeasurementContext, MeasurementDefinition,

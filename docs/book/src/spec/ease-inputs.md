@@ -4,6 +4,9 @@ sc-measure implements G1-SLICE.4b.1/.4b.2's immutable Ease mappings/sets under
 [ontology §2.2](ontology.md#22-ease). Current targets/membership are checked; execution, geometry,
 physical fit and approval remain separate. This mapping differs from sewing's signed A-minus-B ease.
 
+[Held resource accounting](model-resource-accounting.md#actual-measurement-and-ease-sources)
+counts actual source vectors and all retained name/document/binding-token bytes without reading values.
+
 ## Authored fields and current queries
 
 | Field | Meaning |

@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0453 — compose actual structural resources and exact revision bits
+## STITCHCAD-G1-0454 — account for actual measurement and Ease source resources
 
-- Charge original revision magnitude bits, canonical inputs, Pieces, copies and topology under one cumulative sink.
-- Resource47 (prior42/actual5), context2, strict selected lint/fmt pass:41/18/129, exact refusals and prefix44/20/136.
-- Zero/128/129-bit boundaries preserve original values; private getter leaves public successor/context behavior unchanged.
-- Whole0452 and0444–0449 journals retained605; source port precedes complete higher-root composition and runtime admission.
+- Precharge actual metadata/table/Ease/set vectors and charge every retained name/document/binding-token field.
+- Source resource6/strict selected lint/fmt pass:12/30/0, cumulative original locations and shared-prefix14/32.
+- Equal token spellings count per owned binding; canonical values stay singly owned; held metadata remains unchanged.
+- Whole0453 retained606; external SizeSets, complete host, higher roots and runtime remain separately owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

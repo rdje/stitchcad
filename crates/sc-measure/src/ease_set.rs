@@ -253,6 +253,10 @@ impl std::error::Error for EaseSetError {
     }
 }
 impl EaseSet {
+    pub(crate) fn resource_definition(&self) -> &EaseSetDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate unique identities/tokens/POMs, selected tables and all current mapped targets.
     /// # Errors
     /// Returns [`EaseSetError`] for ambiguity, current reassignment or missing/invalid membership.

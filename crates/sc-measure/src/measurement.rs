@@ -37,6 +37,10 @@ pub struct Landmark {
     definition: LandmarkDefinition,
 }
 impl Landmark {
+    pub(crate) fn resource_definition(&self) -> &LandmarkDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate required named content, without claiming a standard or physical source is true.
     /// # Errors
     /// Returns [`MeasurementError::EmptyName`] for a blank name.
@@ -82,6 +86,10 @@ pub struct MeasurementProcedure {
     definition: MeasurementProcedureDefinition,
 }
 impl MeasurementProcedure {
+    pub(crate) fn resource_definition(&self) -> &MeasurementProcedureDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate named, documented content, without inferring physical or standards conformance.
     /// # Errors
     /// Returns [`MeasurementError`] for blank name or documentation.
@@ -246,6 +254,10 @@ impl fmt::Display for MeasurementError {
 impl std::error::Error for MeasurementError {}
 
 impl Measurement {
+    pub(crate) fn resource_definition(&self) -> &MeasurementDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate required metadata, unambiguous identity and current body/garment targets.
     /// # Errors
     /// Returns [`MeasurementError`] for blank name, reserved binding or missing/incompatible targets.

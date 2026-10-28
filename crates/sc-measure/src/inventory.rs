@@ -137,6 +137,10 @@ impl fmt::Debug for MeasurementInventory {
     }
 }
 impl MeasurementInventory {
+    pub(crate) fn resource_definition(&self) -> &MeasurementInventoryDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Own exact metadata after complete identity/reference validation against these inputs.
     /// Empty drafts are legal; unused measurements still require their actual current targets.
     ///

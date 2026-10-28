@@ -134,3 +134,16 @@ strict selected lint/fmt pass:41/18/129, zero/128/129 boundaries, exact Design/c
 prior prefix44/20/136 and unchanged original/empty/prior-error scope. Native context comparison isolates
 the getter as its only delta. Source .3 precedes complete higher-root .2.5.2, then runtime .4; parent
 remains in progress. Structural demand is no whole-host/model, currentness, physical or RSS/time proof.
+
+## Actual measurement/Ease source resources0454
+
+answers: "do saved measurement bindings own token bytes when spellings coincide?"
+
+.6.8.2.2.2.2.3.1 precharges actual measurement/table/Ease/set vectors and charges all held name,
+documentation and token text. Every saved binding token is an owned logical field; matching spelling
+never deduplicates its charge. Canonical values/evidence are not copied or read. Exhaustive private
+owner/definition/binding views and Copy guards retain fixed units/domains/reference arrays. Native
+sc-measure resource6/strict selected lint/fmt pass:12/30/0, exact member/entry owner/index refusals,
+prefix14/32, empty/prior error and held source data unchanged despite missing canonical targets.
+External sets .3.2, full host .3.3, higher root .2.5.2/runtime .4 and deeper/full proof remain owned.
+No source/provenance truth, physical, whole-host/model or allocator time/memory certificate follows.

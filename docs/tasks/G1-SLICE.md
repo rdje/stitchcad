@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0453
+## Current leaf acceptance —0454
 
-- [x] ROOT CAUSE: python3 -I -B native structure schema assertions print exhaustive actual six-field
-  root and revision/canonical/Piece/copy/topology order rc=0; original revision is unbounded BigUint.
-- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:47 passed rc=0; five actual
-  structural cases verify41/18/129, zero/128/129 boundaries, exact owner refusals and prefix44/20/136.
-- [x] NO REGRESSION: existing command_context_contract:2 passed/strict selected Clippy/fmt rc=0;
-  native context source comparison proves only private readonly bit getter changed, not public behavior.
+- [x] ROOT CAUSE: python3 -I -B native measurement/Ease schema assertions print6 owner vectors plus
+  table/set entry vectors and separate saved token ownership rc=0; inline landmark pairs stay fixed.
+- [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:6 passed rc=0; actual12/30/0,
+  exact vector/UTF8 owner/index refusals, prefix14/32 and held source state despite missing targets.
+- [x] NO REGRESSION: strict selected Clippy/fmt rc=0; git diff --quiet HEAD -- crates/sc-core rc=0;
+  actual fixture constructors retain their semantic checks. No canonical/bus/source-validation change.
 
 ## Goal
 
@@ -860,43 +860,64 @@ All98 completed ids/statuses and original proof pointers remain live there.
   one cumulative meter; preserve scope-specific original first refusal and no mutation/large preparatory copy.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5.1`
   Status: `done`
-  Goal:0453 actual DesignStructure composition and exact represented revision magnitude bits.
-  One cumulative sink charges revision, canonical inputs, Pieces, copies and topology in schema order;
-  private exhaustive root view/bit getter need no text conversion, model copy, advancement or validation.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native structure schema assertions print six-field root and
-    revision/canonical/Piece/copy/topology order rc=0. DesignRevision is actual unbounded BigUint;
-    value magnitude is distinct from decimal text, allocator capacity and maximum-issued bus revision.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part605.md:
-    4 exact Git spans rc=0; whole0452 scope/lesson/ledger and whole0444–0449 implementation journals
-    preserved before containing indexed decision. Canonical contracts/current examples remain in book.
-  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract --test command_context_contract --
-    -D warnings:finished rc=0; exhaustive private root view and exact borrowed public BigUint bits count,
-    first counter location design.revision/actual Design owner, then original component producers.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:47 passed rc=0; five new actual
-    cases verify canonical2/Pieces22/copies2/topology15=41 entries/18 bytes/129 bits; original zero/1/2/3/
-    u128max/next/next+1 exact bits0/1/2/2/128/129/129, no advancement; refusals bits0+129, copies24+2,
-    live edges34+7 and second colorway16+2 preserve exact first locations/unchanged root. Prefix3/2/7
-    composes to44/20/136; bits135 refuses7+129,136 succeeds; actual empty root0/0/0/prior error retained.
-  - [x] NO REGRESSION: cargo test -p sc-core --test command_context_contract:2 passed rc=0; strict
-    selected Clippy/fmt rc=0. Native source comparison prints context delta only readonly private bit
-    getter rc=0; public successor/display/context unchanged. git diff --quiet HEAD -- crates/sc-core/src/command.rs rc=0.
-  - [x] LOCKSTEP: whole0452/component journals605 have4 exact Git spans rc=0; retention1059 logical/
-    26 working Markdown/58898 decoded lines/4443277 decoded bytes/2274089 resident bytes rc=0. Book,
-    pointer/frontier/lesson/indexed decision align. Actual source .3 then higher-root .2.5.2/runtime .4
-    remain; structural parent in progress and deeper/full verification deferred, never implied passed.
-  Book build/native publication:82 chapters/159 scoped API rows/1487 source links/2499 rendered links
-  rc=0; maintained-reference83 files/18562 lines/1294912 bytes rc=0. Map/diff checks rc=0.
-  Cargo uses scripts/local_environment.py. Promotion: indexed command-layer decision. No whole-model,
-  source-currentness, physical, runtime admission or allocator RSS/time certificate follows.
+  Goal:0453 actual structural resources/revision bits; [whole scope/proofs](../history/stitchcad-devnotes-part606.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5.2`
   Status: `pending`
   Goal: after actual source port .3, compose complete private Inputs/Sewing/Garment root under one sink,
   including owned metadata census, fixed source references and actual host traversal. No partial demand
   masquerades as whole-model admission; source/runtime enforcement and deeper/full checks stay separate.
 - ID: `G1-SLICE.6.8.2.2.2.2.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual immutable source-host resource port and sc-measure producer through published readonly
   contracts; include all owned source collection/text/counter fields, no dishonest-host security claim.
+- ID: `G1-SLICE.6.8.2.2.2.2.3.1`
+  Status: `done`
+  Goal:0454 actual MeasurementInputs/inventory/Landmark/procedure/Measurement/table/Ease/set resources.
+  Charge every actual owned vector and text/token field in authored/schema order; preserve all fixed
+  units/domains/source/declaration/reference/fit/compression data without lookup, validation or evaluation.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native measurement/Ease schema assertions print6 owner vectors,
+    table/set entry vectors, separately owned saved binding tokens and inline landmark pair rc=0.
+    Canonical values/states/evidence remain owned by core and cannot be counted again as copied metadata.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part606.md:
+    3 exact Git spans rc=0; whole0453 structural scope/lesson/ledger retains its source-pending boundary.
+    Repeated table/Ease/set spellings are distinct held token fields, not deduplicated borrowed aliases.
+  - [x] FIX: cargo clippy -p sc-measure --test resource_contract -- -D warnings:finished rc=0;
+    exhaustive private owner/definition/binding views precharge all vectors before traversal and charge
+    exact borrowed text. Individual Copy guards cover all skipped fixed payloads; no context or host fiction.
+  - [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:6 passed rc=0; actual metadata6/
+    tables1+2/Ease1/sets1+1=12 entries, all names/docs/tokens30 UTF8 bytes/0 bits. All8 vector charges
+    have original first witnesses; Unicode/document-space, record/table/Ease/set token failures preserve
+    exact owner/member or entry index, including text6+4/17+2/21+2/24+2/28+2. Shared prefix14/32,
+    empty0/0/0/prior error, unchanged source/canonical and missing-context current refusal with held success.
+  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
+    crates/sc-core rc=0. Actual constructors validate original fixture; no existing semantic/current/
+    canonical/value/authority/bus behavior changed. No complete source-host or full integration claim.
+  - [x] LOCKSTEP: whole0453 proof606 has3 exact Git spans rc=0; book/pointer/frontier/lesson/indexed
+    decision align. Source .3 is split into safe measured children before changes: external .3.2.1–.3,
+    complete readonly host .3.3, higher-root .2.5.2/runtime .4 and deeper/full verification stay owned.
+  Retention1060 logical/27 working Markdown/58958 decoded lines/4448491 decoded bytes/2279303
+  resident bytes rc=0. Book build/native publication:82 chapters/159 scoped API rows/1489 source links/
+  2502 rendered links rc=0; maintained-reference83 files/18607 lines/1298134 bytes rc=0; map/diff rc=0.
+  Cargo uses scripts/local_environment.py. Promotion: indexed command-layer decision. No source truth,
+  physical, whole-host/model, allocator time/memory or runtime admission certificate follows.
+- ID: `G1-SLICE.6.8.2.2.2.2.3.2`
+  Status: `pending`
+  Goal: complete actual external SizeSet family resources; all metadata/member/chart/axis/break/profile
+  and explicit Garment/MTM held fields, no fabricated host, geometry, grading or source inference.
+- ID: `G1-SLICE.6.8.2.2.2.2.3.2.1`
+  Status: `pending`
+  Goal: actual external membership/axis/break metadata and all owned nested strings/vectors/counters.
+- ID: `G1-SLICE.6.8.2.2.2.2.3.2.2`
+  Status: `pending`
+  Goal: actual chart/collection/profile transformation fields and every owned nested dimension.
+- ID: `G1-SLICE.6.8.2.2.2.2.3.2.3`
+  Status: `pending`
+  Goal: complete actual Garment/MTM source-family composition and external set inventory.
+- ID: `G1-SLICE.6.8.2.2.2.2.3.3`
+  Status: `pending`
+  Goal: actual core readonly resource-source trait and sc-measure DesignSources implementation, with
+  no default/partial/dishonest-host security claim. Original immutable payloads, first refusals and
+  source family/order retained; higher-root cached metadata census belongs to .2.5.2 composition.
 - ID: `G1-SLICE.6.8.2.2.2.2.4`
   Status: `pending`
   Goal: install explicit immutable model policy and admit actual current/prospective metadata shapes

@@ -195,6 +195,10 @@ impl std::error::Error for MeasurementTableError {
 }
 
 impl MeasurementTable {
+    pub(crate) fn resource_definition(&self) -> &MeasurementTableDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate table name, unique authored inventory and every required current metadata target.
     /// # Errors
     /// Returns [`MeasurementTableError`] for invalid content, ambiguity or current reassignment.

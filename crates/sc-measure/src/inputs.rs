@@ -122,6 +122,10 @@ impl fmt::Debug for MeasurementInputs {
     }
 }
 impl MeasurementInputs {
+    pub(crate) fn resource_definition(&self) -> &MeasurementInputsDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Own exact source objects after complete identity/metadata/mapping/set validation.
     /// Empty inventories are legal; authored empty Ease sets still require their explicit tables.
     ///

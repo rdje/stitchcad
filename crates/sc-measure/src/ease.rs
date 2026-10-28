@@ -166,6 +166,10 @@ impl std::error::Error for EaseError {
     }
 }
 impl Ease {
+    pub(crate) fn resource_definition(&self) -> &EaseDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate authored domains, distinct amount and every current target; unresolved drafts legal.
     /// # Errors
     /// Returns [`EaseError`] for an invalid binding, alias, missing target or undeclared compression.

@@ -356,3 +356,42 @@ delta is only the private readonly bit getter; public successor/display/context 
 This is structural-root accounting. Complete higher roots, their stored metadata census, actual host
 content and runtime enforcement remain pending; neither the producer name nor finish supplies a
 whole-garment/source/physical, allocator memory/time or command-admission certificate.
+
+## Actual measurement and Ease sources
+
+sc-measure's charge_measurement_input_resources borrows actual MeasurementInputs. It precharges
+Landmark, procedure, Measurement and table vectors, each table's entry vector, then Ease and EaseSet
+vectors and each set's entry vector. Schema/member order stays unchanged. It charges every exact
+name/documentation/token string, including each saved MeasurementBinding's owned token in tables,
+Ease body/garment bindings, and EaseSet entries. Matching spellings never merge distinct owned fields.
+
+Fixed domains, entered units, source/declaration/procedure ids, fit/compression and the inline pair
+of landmark ids add no dynamic entries. Canonical value/state/source/evidence remain owned by core;
+they are neither charged twice nor queried here. Exhaustive private owner/definition/binding views
+and Copy constraints cover fixed fields. No context construction, semantic/provenance validation,
+unit reconversion, Ease evaluation, physical fit or standards conformity follows from these counts.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+sc_measure::charge_measurement_input_resources(&measurement_inputs, &mut meter)?;
+let represented_measurement_sources = meter.finish()?;
+```
+
+The native fixture has2 landmarks,2 procedures,2 Measurements,1 table/2 entries,1 Ease and1 set/1
+entry:12 entries and30 UTF-8 bytes, zero counter bits. Names/documents retain `é`, `猫` and ` é `;
+body token `b` and garment token `gg` count in each owned binding, plus set token `e`. Procedure
+documentation preserves surrounding spaces. Both Measurement landmark pairs stay inline references.
+
+Maximum8 entries refuses measurements.tables.entries at7+2 with the actual table/index0; maximum11
+refuses measurements.ease_sets.entries at11+1 with the actual set/index0. Every other collection
+precharge also has a focused refusal case. Text maxima9/18/22/25/29 retain documentation6+4,
+Measurement token17+2, table entry token21+2, Ease garment token24+2 and set garment token28+2.
+Whole member text keeps its original owner/member index; entry text uses the actual table/set and
+original entry index. No private name/document/token text is copied into the error location.
+
+Six actual cases pass with strict selected lint/formatting: exact demand, vector/text witnesses,
+unchanged source/canonical data, prior prefix14/32, empty0/0/0 and original prior refusal. Replacing
+the canonical context with an empty draft makes current validation refuse; accounting held source
+metadata still succeeds unchanged without rebinding. This is the measurement/Ease component only.
+External SizeSets, the complete actual source-host port, higher-root composition and runtime admission
+remain owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
