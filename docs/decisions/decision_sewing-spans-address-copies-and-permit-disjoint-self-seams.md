@@ -124,3 +124,16 @@ sewing43/gather16/resource5/construction9/measure sewing14+retained2/docs11 pass
 domains stay source dependencies;child stop subsets do not erase them. Meter7/limit6/two snapshots14
 watch logical ownership and original failures. Current value/effect readiness remains separate;
 retained quantity queries .3.3 and paired execution are still owned,D301 P1 remains open.
+
+## Retained original-root quantity result0493
+
+answers: "which amount is the rounding source when a command targets an inherited portion?"
+
+Always the original literal/domain. Keep that source separate from the target allocation;difference
+original rounded cumulative endpoints for both new children. Check original A/B correspondence at
+both portion endpoints,using declared direction. Native nested partial-domain portions and actual
+intermediate command views yield[0,±1,0] for both split orders. Sewing46/docs4 and35 independent
+Fraction rows in both directions pass;source eligibility/frame/bounds/correspondence/numeric chains
+remain actual,including zero-valued bounds and genuine normalization overflow. The borrowed view's
+source pointer and global progress remain original;privacy/lifetime controls stay genuine. Scoped
+retained acceptance follows;symbolic/nonuniform/context,stops,lineage and paired effects remain D301 owners.

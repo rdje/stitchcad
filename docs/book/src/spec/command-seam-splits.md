@@ -133,11 +133,12 @@ stop ownership and retired-parent/new-child lineage remain separate owned partit
 | `uniform_explicit_ease` | Check the actual uniform explicit source and directed cut progress |
 | `CommandUniformEasePartition` | Sealed original request/span borrow with conserved A-ordered amounts |
 | `CommandUniformEaseError` | Original helper eligibility,progress,frame or quantity refusal |
-| `RetainedPortion` | Existing source portion needs its separate original-root quantity query |
-| `parent_amount` | Original signed explicit amount |
-| `cut_progress` | Exact normalized A cut progress |
+| `OriginalSource` | Actual retained source refusal wrapped with the requested target identity |
+| `original_source` | Borrow the retained original source;direct declarations return none |
+| `parent_amount` | Actual requested span allocation,including original cumulative differences for a portion |
+| `cut_progress` | Exact normalized original-root A cut progress |
 | `first_amount` | First projected pair's cumulative quantized amount |
-| `second_amount` | Original parent minus first amount |
+| `second_amount` | Target span allocation minus first amount |
 | `cumulative_at_a` | Quantized original allocation at an original A-domain position |
 | `amount_in_a` | Original cumulative upper amount minus original cumulative lower amount |
 | `Weighted` | Actual distribution side requires its separate allocation implementation |
@@ -148,15 +149,16 @@ stop ownership and retired-parent/new-child lineage remain separate owned partit
 | `IntervalSource` | Query interval names a different original A edge |
 | `Numeric` | Original shared UnitError,also the standard error source |
 
-The native helper reads the actual held span and first refuses a retained portion. For a direct
-declaration,it checks distribution eligibility,then explicit
+The native helper reads the actual held span. For a direct declaration,it checks distribution
+eligibility,then explicit
 amount,then exact A/B normalized progress. Same direction requires equal ascending progress;
 Opposite requires A progress to equal one minus ascending B progress. Unequal source parameters
 can be valid on unequal partial domains. Stored edge parameters are fractions of their own edge
 length by the reference contract;they are not polynomial curve parameters or measured geometry.
 
-At progress q,the helper quantizes original signed parent × q using the single shared half-away
-rule. The second A-ordered amount is parent minus first. Negative,zero and positive differentials
+For a direct declaration,the helper quantizes its original signed amount × q using the shared
+half-away rule. For a retained portion,it differences original-root cumulative boundary amounts.
+The second A-ordered amount is the target allocation minus first. Negative,zero and positive differentials
 retain their signs and exact quantum sum. Private fields and borrowed lifetimes prevent forging
 this view or outliving the actual owners. Debug visits only fixed source identity/progress.
 
@@ -239,7 +241,8 @@ this operation does not evaluate the distribution or establish physical correspo
 no child quantity,span identity,stop partition,live lineage or installed graph change. Actual current
 validation can still refuse after topology deletion while the retained source stays inspectable.
 Canonical graph/current-source/resource integration is implemented below. Original-source quantity
-queries for retained portions and full paired effects remain pending under D301.
+queries for uniform explicit retained portions are implemented below;full paired effects remain
+pending under D301.
 
 ## Canonical graph-owned ease sources
 
@@ -302,3 +305,51 @@ source's stop charge with consumed5/requested2. Charging two logical graph snaps
 when their immutable backing is shared. Exhaustive private owner/source/portion views retain field
 coverage. Command capture/admission,quantity integration,stop/lineage effects and paired acceptance
 remain their implementation owners;this change does not make SplitSeamSpan executable on the bus.
+
+## Query quantities from the retained original root
+
+| API token | Meaning |
+| --- | --- |
+| `uniform_explicit_cumulative_at_a` | Quantized full-source cumulative amount at an original A-domain position |
+| `uniform_explicit_amount_in_a` | Difference original cumulative endpoints for an original-frame A interval |
+| `uniform_explicit_amount` | Portion allocation after both directed endpoint correspondences are checked |
+| `SeamEaseAmountError` | Actual original eligibility,progress,correspondence,frame or numeric refusal |
+| `Correspondence` | Actual original A/B endpoints and ascending normalized fractions disagree |
+
+The original retained source and each portion now support uniform explicit quantity queries. All
+boundary values use the original literal and original full domain with the single shared rounding
+kernel. Portion amounts difference rounded cumulative upper/lower boundaries. Both endpoints must
+match the declared correspondence:Same compares ascending fractions;Opposite complements ascending
+B and pairs A lower with B upper. Normalization checks A's endpoints completely,then B's,followed
+by lower-A then upper-A correspondence. This proves the declared allocation relationship;it does
+not measure physical seam geometry or refresh current-world authority.
+
+```rust
+use sc_core::ontology::{SeamEaseAmountError, SeamEasePortion};
+use sc_units::Length;
+fn amount(actual: &SeamEasePortion) -> Result<Length, SeamEaseAmountError> {
+    actual.uniform_explicit_amount()
+}
+```
+
+The existing command allocation view now accepts a retained target. Its parent amount denotes
+that target portion's allocation;its optional original source retains the full original literal and
+domains. Cut progress and cumulative/interval queries still use the original root A domain. The view
+borrows the actual request,target span and original source;private fields and lifetime controls
+continue to reject forgery or escape. Temporary interval partitions share immutable source data
+and produce no new live identities or graph publication.
+
+For example,an original1 µm spread over thirds yields[0,1,0]. Cutting the first third then the
+remaining portion,or the first two thirds then their prefix,produces those same three amounts.
+The intermediate target may have amount1,but splitting it never treats that rounded1 as a new
+uniform source over its child domain. Native partial-domain portion trees and actual command views
+watch both orders and negative symmetry. This is nested allocation evidence;the bus split handler
+and its identity/stop/lineage effects remain pending.
+
+The independent Fraction fixture also checks retained sources/portions in both directions,including
+signed ties,zero,domain limits and full-width fractions. Original wrong-frame and closed-domain
+refusals remain visible even for a zero amount. Complete normalization can genuinely exceed the
+bounded rational representation;the original range/position and UnitError remain in its source chain.
+Formula/profile amounts and weighted/notch-bounded distributions retain actual eligibility refusals.
+No missing value is fabricated. A command wraps those native source/portion causes with the actual
+target identity,without replacing their original source identity,parameters or concrete numeric cause.

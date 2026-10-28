@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — canonical retained ease in the graph
+## _(2026-10-28 UTC)_ — original-root quantities through retained command views
 
-0492 .3.2 installs explicit declared/portion ease and unique original sources. Full original stop/domain readiness,child binding,global source identity and source-body resource census remain exact. Metadata/Gather views retain portion context;direct uniform helper refuses inherited portions until quantity integration.
-D303 initial native duplicate claims failed1/rc101;ordered A/B interval admission now refuses positive overlap with original evidence. D304 independent equal roots failed pointer identity1/rc101;post-validation canonicalization folds every consumer onto one actual body. Both fixed before committed model publication.
-Sewing43/gather16/resource5/construction9/measure sewing14+retained2/docs11/scoped strict Clippy/fmt pass0. Meter2 spans+1 source+2 regions+2 original stops=7;limit6 preserves actual stop refusal,two logical snapshots14. Native source/current/notch/alias/recapture controls pass. Book88/173/1560/2659/glossary0 pass.
-Promotion:indexed sewing decision;whole0491 retained646 verifies3 Git spans. Retention1100/2511558 residentB passes;active46/64,aggregate67/192. LIVE notes D303/D304 native fixes,G1 6/18 unchanged;README unchanged. Retained quantity queries .3 next;full paired/D301 acceptance remains open.
-[Whole0491 retained-source lesson](docs/history/stitchcad-devnotes-part646.md) preserves exact primitive/compiler/native evidence.
+0493 .3.3 adds uniform explicit source cumulative/interval queries and portion quantities. Both original directed endpoint correspondences are checked;shared half-away boundary values are differenced. Command target allocation stays separate from original source/literal/domain;no rounded child becomes a fresh root.
+Native sewing46/docs4/strict lib+sewing Clippy/fmt pass.35 independent Fraction rows now watch direct/retained math in both directions;producer bytes match.
+Actual nested portions/intermediate command views give[0,±1,0] in both orders with partial domains. Original eligibility,correspondence,zero bounds and numeric chains pass.
+Book88/174/1560/2660/glossary0 pass;whole0492 retained647 verifies3 Git spans,retention1101/2517054 residentB pass0. Active47/64,aggregate68/192;no capacity action needed. Promotion:indexed sewing decision. LIVE/README reviewed unchanged,G1 6/18;retained scoped acceptance next,full D301/paired work remains open.
+[Whole0492 canonical-graph lesson](docs/history/stitchcad-devnotes-part647.md) preserves exact D303/D304 red/fixed/current/resource/ownership evidence.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

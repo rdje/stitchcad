@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0492
+## Current leaf acceptance —0493
 
-- [x] ROOT CAUSE: cargo test -p sc-core --test sewing_contract duplicate_retained_interval / equal_independent_source (separate runs) →1 failed/rc101 each on initial uncommitted model;D303/D304 now fixed.
-- [x] ADDRESSED: cargo test -p sc-core --test sewing_contract via local_environment.py →43 passed,rc=0;retained root claims/body/ownership/current/resource/metadata controls pass.
-- [x] NO REGRESSION: focused gather16/resource5/construction9/measure sewing14+retained2/docs11/strict scoped Clippy/fmt,glossary0/book88/173/1560/2659 →pass,rc=0;retained quantity/effects remain owned.
+- [x] ROOT CAUSE: cumulative_quantization_prototype.py →rounded-child split orders differ for±1,rc=0;native retained_uniform tests now preserve original-root boundary values for both orders.
+- [x] ADDRESSED: cargo test -p sc-core --test sewing_contract via local_environment.py →46 passed,rc=0;35 independent Fraction rows also check retained sources/portions in both directions.
+- [x] NO REGRESSION: scoped amount/command rustdoc1+3,strict lib/sewing Clippy/fmt,glossary0/book88/174/1560/2660 pass,rc=0;full paired/D301 acceptance remains owned.
 
 ## Goal
 
@@ -711,18 +711,17 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0491 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part646.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.3.2`
   Status: `done`
-  Goal:0492 canonical graph-owned source/portion integration,current full-source readiness,global ownership and exact logical resource census;D303/D304 fixed before publication.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test sewing_contract duplicate_retained_interval / equal_independent_source (separate filters) via local_environment.py →1 failed/rc101 each on initial uncommitted integration;no released graph was affected.
-  - [x] ROOT CAUSE: same cargo test -p sc-core --test sewing_contract filters →1 failed/rc101 each:identity/content equality alone omitted disjoint interval claims and actual body folding;native diagnostics show duplicate claims and noncanonical pointers.
-  - [x] FIX: explicit SeamEase declaration/portion enum;unique graph source pool,original stop/domain context,typed current/binding conflicts and ordered per-source/per-side interval admission. After full validation,fold equal roots onto one actual body;flatten recapture. Metadata/Gather retain mapping;direct uniform helper refuses portions until .3.
-  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract via local_environment.py →43 passed,rc=0;D303 four overlap arrangements/touching/independent budgets and D304 independent-capture pointer controls pass. Meter7/limit6/two snapshots14,original current-source errors and global alias refusals pass.
-  - [x] NO REGRESSION: cargo test focused gather_contract →16,design_resource_contract sewing →5,construction_inventory_contract →9;sc-measure design_inputs_contract sewing →14 then retained_sewing →2;all via local_environment.py,rc=0. Scoped ontology/command/Design sewing docs3+3+5 and strict affected Clippy/fmt pass0.
-    mdbook build/publication check →88 chapters/173 APIs/1560 source/2659 rendered links,rc=0;glossary census →0 failures,rc=0. transition_receipts.py --record docs/history/stitchcad-devnotes-part646.md →3 exact Git spans;verify-retention →1100/2511558 residentB,rc=0.
-  - [x] LOCKSTEP: live pointers/journals/defect ledger/indexed sewing decision/four book chapters/API inventory synchronized;README reviewed unchanged,LIVE notes D303/D304 native fixes,G1 6/18 unchanged. Whole0491 retained646. Quantity .3,feature acceptance,nonuniform,stop/lineage and paired effects remain owned.
+  Goal:0492 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part647.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.3.3`
-  Status: `pending`
-  Goal: quantity queries from retained original source for nested portions;conserve cumulative quantum
-  differences in original domains,including explicit uniforms without retagging rounded child totals.
+  Status: `done`
+  Goal:0493 original-root uniform explicit source/portion quantities and retained command views;shared boundary rounding,original endpoint/cause evidence,private borrowed provenance. No paired effects.
+  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/seam_partition/cumulative_quantization_prototype.py →±1 rounded-child orders differ versus original-root boundaries,rc=0. Native retained_uniform tests now exercise actual nested portions and intermediate graph command views.
+  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/seam_partition/cumulative_quantization_prototype.py →different child-root rounding orders,rc=0;replacing an original source/domain with a rounded child loses cumulative boundary values. Store original source separately from target amount;normalize both original endpoint correspondences.
+  - [x] FIX: native source cumulative/interval and portion amount APIs with original eligibility/progress/correspondence/numeric evidence;shared existing half-away kernel. Retained command views borrow actual root/target/request and difference original cumulative values;privacy guard names all real typed fields.
+  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract via local_environment.py →46 passed,rc=0;native both nested orders yield[0,±1,0],actual root pointers/global progress preserved. Frozen35 Fraction rows now check direct and retained quantities in both directions;producer/cmp exact0.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc ontology::seam_ease_amount →1 passed;--doc command::seam_ease →3 passed;strict lib/sewing Clippy/fmt via local_environment.py →pass,rc=0. mdbook build/publication check →88/174/1560/2660 and glossary census →0 failures,rc=0.
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part647.md →3 exact Git spans,rc=0;verify-retention →1101/2517054 residentB;generation_pressure.py →active47/64,aggregate68/192,rc=0. Full paired acceptance stays parent-owned.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/task index/defect ledger/indexed sewing decision/book/API inventory/prototype watch synchronized;LIVE/README reviewed unchanged,G1 6/18. Whole0492 retained647;D301 P1 remains for retained feature acceptance,nonuniform/context,stops,lineage and paired effects.
 - ID: `G1-SLICE.6.5.3.2.3.2.3.acceptance`
   Status: `pending`
   Goal: deferred scoped retained-source/portion graph/resource/quantity acceptance after .1–.3;

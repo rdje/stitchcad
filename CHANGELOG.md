@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0492 — integrate canonical retained ease sources into the graph
+## STITCHCAD-G1-0493 — conserve retained quantities through original-root boundaries
 
-- Spans store declared ease or retained portions without independent child amounts. Graphs own one actual source body per original identity;full original stops/domains,current readiness,global identities and resource charging remain explicit. Amount/Gather metadata retains exact allocation context.
-- Fix initial uncommitted D303 duplicate claims and D304 equal-but-distinct source bodies with ordered disjoint interval admission and post-validation canonicalization. Native sewing43/gather16/resource5/construction9/measure sewing14+retained2/docs11/scoped Clippy/fmt pass.
-- Book88/173/1560/2659/glossary0 pass;whole0491 retained646,retention1100 passes. LIVE notes D303/D304 fixed,G1 remains6/18. D301 retained quantity queries,nonuniform/stops/lineage and paired execution/acceptance remain owned.
+- Add uniform explicit original-source cumulative/interval and retained portion quantities. Check both directed endpoints;retain actual eligibility/progress/correspondence/numeric refusals and original standard sources. Share the existing boundary rounding kernel.
+- Retained command views now keep original source/literal/domain separately from the target allocation. Native both-order nested portions/command views give[0,±1,0];sewing46/docs4/strict scoped Clippy/fmt pass.35 independent Fraction rows check direct/retained quantities in both directions,producer bytes exact.
+- Book88/174/1560/2660/glossary0 pass;whole0492 retained647,retention1101 passes. LIVE G1 6/18 unchanged. Scoped retained acceptance next;D301 nonuniform/context/stops/lineage/paired execution and full acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

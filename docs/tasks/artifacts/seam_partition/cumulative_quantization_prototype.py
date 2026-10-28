@@ -1,4 +1,4 @@
-"""Independent split-order diagnostic; native original-source queries have a separate watch.
+"""Independent split-order diagnostic; native retained portions and command views have a separate watch.
 
 Run from the repository root with python3 -I -B. This imports no project arithmetic and writes
 only stdout. It demonstrates why retained original source/domains precede nested split effects.
@@ -26,4 +26,4 @@ for original in (1, -1):
     assert sum(left_first) == sum(right_first) == sum(cumulative) == original
     print(f'original={original} um; child-left-first={left_first}; '
           f'child-right-first={right_first}; original-cumulative={cumulative}')
-print('native root-query watch: uniform_ease_original_root_queries_are_split_order_independent; child lineage/effects remain pending')
+print('native retained-view watch: retained_uniform_quantities_and_command_views_keep_original_rounding_in_both_nested_orders; bus lineage/effects remain pending')

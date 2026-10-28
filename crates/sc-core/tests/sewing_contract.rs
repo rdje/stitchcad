@@ -1285,6 +1285,38 @@ fn uniform_ease_matches_independent_signed_cumulative_oracle_in_both_directions(
             let graph = f.graph(&[]).unwrap();
             let binding = request.bind_source_cuts(&graph).unwrap();
             let allocation = binding.uniform_explicit_ease().unwrap();
+            let root = binding.span().retain_ease_source();
+            let [first_portion, second_portion] = root
+                .split_at(request.cut(SeamSideId::A), request.cut(SeamSideId::B))
+                .unwrap();
+            assert_eq!(
+                first_portion
+                    .uniform_explicit_amount()
+                    .unwrap()
+                    .as_micrometres(),
+                *first
+            );
+            assert_eq!(
+                second_portion
+                    .uniform_explicit_amount()
+                    .unwrap()
+                    .as_micrometres(),
+                *second
+            );
+            assert_eq!(
+                root.source()
+                    .uniform_explicit_cumulative_at_a(request.cut(SeamSideId::A).param)
+                    .unwrap()
+                    .as_micrometres(),
+                *first
+            );
+            assert_eq!(
+                root.source()
+                    .uniform_explicit_amount_in_a(first_portion.side(SeamSideId::A).range),
+                first_portion.uniform_explicit_amount()
+            );
+            assert!(allocation.original_source().is_none());
+
             assert!(std::ptr::eq(allocation.request(), &request));
             assert!(std::ptr::eq(
                 allocation.span(),
@@ -1419,6 +1451,14 @@ fn uniform_ease_retains_actual_eligibility_sources_without_fabricating_values() 
             }
         );
         assert!(error.source().is_none());
+        let root = graph.spans().first().unwrap().retain_ease_source();
+        assert_eq!(
+            root.uniform_explicit_amount(),
+            Err(sc_core::ontology::SeamEaseAmountError::Amount {
+                source_span: id(301),
+                amount
+            })
+        );
     }
     f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
         side: SeamSideId::B,
@@ -1429,6 +1469,14 @@ fn uniform_ease_retains_actual_eligibility_sources_without_fabricating_values() 
         }],
     };
     let graph = f.graph(&[]).unwrap();
+    let root = graph.spans().first().unwrap().retain_ease_source();
+    assert_eq!(
+        root.uniform_explicit_amount(),
+        Err(sc_core::ontology::SeamEaseAmountError::Weighted {
+            source_span: id(301),
+            side: SeamSideId::B
+        })
+    );
     assert_eq!(
         request
             .bind_source_cuts(&graph)
@@ -1457,6 +1505,16 @@ fn uniform_ease_retains_actual_eligibility_sources_without_fabricating_values() 
         end: id(721),
     };
     let graph = f.graph(&marks).unwrap();
+    let root = graph.spans().first().unwrap().retain_ease_source();
+    assert_eq!(
+        root.uniform_explicit_amount(),
+        Err(sc_core::ontology::SeamEaseAmountError::BetweenNotches {
+            source_span: id(301),
+            side: SeamSideId::A,
+            start: id(720),
+            end: id(721)
+        })
+    );
     assert_eq!(
         request
             .bind_source_cuts(&graph)
@@ -1940,7 +1998,6 @@ fn retained_children(f: &Fixture, marks: &[SewingLandmark]) -> Vec<SeamSpanDefin
 
 #[test]
 fn graph_retained_ease_sources_are_canonical_and_recapture_flattens_to_the_original() {
-    use sc_core::command::CommandUniformEaseError;
     let mut f = fixture();
     f.span_mut().ease.declared_mut().unwrap().amount =
         EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
@@ -1972,17 +2029,21 @@ fn graph_retained_ease_sources_are_canonical_and_recapture_flattens_to_the_origi
             param: t(3, 4),
         },
     );
+    let allocation = request
+        .bind_source_cuts(&graph)
+        .unwrap()
+        .uniform_explicit_ease()
+        .unwrap();
     assert_eq!(
-        request
-            .bind_source_cuts(&graph)
-            .unwrap()
-            .uniform_explicit_ease()
-            .unwrap_err(),
-        CommandUniformEaseError::RetainedPortion {
-            span: id(302),
-            source_span: id(301)
-        }
+        (
+            allocation.parent_amount().as_micrometres(),
+            allocation.first_amount().as_micrometres(),
+            allocation.second_amount().as_micrometres()
+        ),
+        (1, 0, 1)
     );
+    assert_eq!(allocation.cut_progress(), Rational::new(1, 4).unwrap());
+    assert!(std::ptr::eq(allocation.original_source().unwrap(), root));
     assert!(
         matches!(SplitSeamSpan::new(id(301), request.cut(SeamSideId::A), request.cut(SeamSideId::B)).bind_source_cuts(&graph), Err(SplitError::MissingSpan { span }) if span==id(301))
     );
@@ -2328,5 +2389,309 @@ fn distinct_retained_budgets_keep_first_consuming_order_and_separate_interval_cl
         ));
         let mut editable = span.definition().clone();
         assert!(editable.ease.declared_mut().is_none());
+    }
+}
+
+#[test]
+fn retained_uniform_quantities_and_command_views_keep_original_rounding_in_both_nested_orders() {
+    for original in [1, -1] {
+        for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+            let mut f = fixture();
+            let a = f.span().a.range.edge();
+            let b = f.span().b.range.edge();
+            f.span_mut().a.range = EdgeRange::new(a, t(1, 7), t(6, 7)).unwrap();
+            f.span_mut().b.range = EdgeRange::new(b, t(1, 5), t(4, 5)).unwrap();
+            f.span_mut().direction = direction;
+            f.span_mut().ease.declared_mut().unwrap().amount =
+                EaseAmount::Explicit(Length::from_micrometres(original).unwrap());
+            let graph = f.graph(&[]).unwrap();
+            let root = graph.spans().first().unwrap().retain_ease_source();
+            let a1 = EdgeAnchor {
+                edge: a,
+                param: t(8, 21),
+            };
+            let a2 = EdgeAnchor {
+                edge: a,
+                param: t(13, 21),
+            };
+            let (b1, b2) = match direction {
+                SeamDirection::Same => (t(2, 5), t(3, 5)),
+                SeamDirection::Opposite => (t(3, 5), t(2, 5)),
+            };
+            let b1 = EdgeAnchor { edge: b, param: b1 };
+            let b2 = EdgeAnchor { edge: b, param: b2 };
+            for (initial_a, initial_b, next_a, next_b, target, progress) in [
+                (a1, b1, a2, b2, 1_usize, Rational::new(2, 3).unwrap()),
+                (a2, b2, a1, b1, 0_usize, Rational::new(1, 3).unwrap()),
+            ] {
+                let initial = root.split_at(initial_a, initial_b).unwrap();
+                let nested = initial
+                    .get(target)
+                    .unwrap()
+                    .split_at(next_a, next_b)
+                    .unwrap();
+                let amounts = if target == 1 {
+                    [
+                        initial.first().unwrap().uniform_explicit_amount().unwrap(),
+                        nested.first().unwrap().uniform_explicit_amount().unwrap(),
+                        nested.get(1).unwrap().uniform_explicit_amount().unwrap(),
+                    ]
+                } else {
+                    [
+                        nested.first().unwrap().uniform_explicit_amount().unwrap(),
+                        nested.get(1).unwrap().uniform_explicit_amount().unwrap(),
+                        initial.get(1).unwrap().uniform_explicit_amount().unwrap(),
+                    ]
+                };
+                assert_eq!(amounts.map(Length::as_micrometres), [0, original, 0]);
+                let intermediate = SewingGraph::new(
+                    SewingGraphDefinition {
+                        id: id(300),
+                        spans: initial
+                            .into_iter()
+                            .zip(302_u128..)
+                            .map(|(portion, identity)| SeamSpanDefinition {
+                                id: id(identity),
+                                a: portion.side(SeamSideId::A),
+                                b: portion.side(SeamSideId::B),
+                                direction,
+                                ease: portion.into(),
+                                stops: vec![],
+                            })
+                            .collect(),
+                    },
+                    &f.plan,
+                    &f.pieces,
+                    &[],
+                    &f.ledger,
+                )
+                .unwrap();
+                let actual = intermediate.spans().get(target).unwrap();
+                let request = SplitSeamSpan::new(actual.id(), next_a, next_b);
+                let view = request
+                    .bind_source_cuts(&intermediate)
+                    .unwrap()
+                    .uniform_explicit_ease()
+                    .unwrap();
+                assert!(std::ptr::eq(view.span(), actual));
+                assert!(std::ptr::eq(view.request(), &request));
+                assert!(std::ptr::eq(
+                    view.original_source().unwrap(),
+                    intermediate.ease_sources().next().unwrap()
+                ));
+                assert_eq!(view.cut_progress(), progress); // Original-root progress,not the child's1/2.
+                assert_eq!(view.parent_amount().as_micrometres(), original);
+                assert_eq!(
+                    view.first_amount().checked_add(view.second_amount()),
+                    Ok(view.parent_amount())
+                );
+                assert_eq!(
+                    (
+                        view.first_amount().as_micrometres(),
+                        view.second_amount().as_micrometres()
+                    ),
+                    if target == 1 {
+                        (original, 0)
+                    } else {
+                        (0, original)
+                    }
+                );
+                assert_eq!(view.cumulative_at_a(t(1, 7)), Ok(Length::ZERO));
+                assert_eq!(
+                    view.cumulative_at_a(t(6, 7)).unwrap().as_micrometres(),
+                    original
+                );
+                assert_eq!(
+                    view.amount_in_a(EdgeRange::new(a, t(8, 21), t(13, 21)).unwrap())
+                        .unwrap()
+                        .as_micrometres(),
+                    original
+                );
+            }
+        }
+    }
+}
+
+#[test]
+fn retained_uniform_quantity_refusals_keep_original_eligibility_correspondence_and_arithmetic() {
+    use sc_core::command::CommandUniformEaseError;
+    use sc_core::ontology::SeamEaseAmountError as Error;
+    use std::error::Error as _;
+    for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+        let mut f = fixture();
+        f.span_mut().direction = direction;
+        let graph = f.graph(&[]).unwrap();
+        let root = graph.spans().first().unwrap().retain_ease_source();
+        let [first, second] = root
+            .split_at(
+                EdgeAnchor {
+                    edge: f.span().a.range.edge(),
+                    param: t(1, 3),
+                },
+                EdgeAnchor {
+                    edge: f.span().b.range.edge(),
+                    param: t(1, 2),
+                },
+            )
+            .unwrap();
+        for portion in [&first, &second] {
+            assert_eq!(
+                portion.uniform_explicit_amount().unwrap_err(),
+                Error::Correspondence {
+                    source_span: id(301),
+                    at_a: t(1, 3),
+                    at_b: t(1, 2),
+                    a: Rational::new(1, 3).unwrap(),
+                    b: Rational::new(1, 2).unwrap(),
+                    direction
+                }
+            );
+        }
+        let a_range = first.side(SeamSideId::A).range;
+        let b_range = first.side(SeamSideId::B).range;
+        let next_b = match direction {
+            SeamDirection::Same => t(1, 4),
+            SeamDirection::Opposite => t(3, 4),
+        };
+        f.definition.spans = vec![SeamSpanDefinition {
+            id: id(302),
+            a: first.side(SeamSideId::A),
+            b: first.side(SeamSideId::B),
+            direction,
+            ease: first.clone().into(),
+            stops: vec![],
+        }];
+        let intermediate = f.graph(&[]).unwrap();
+        let request = SplitSeamSpan::new(
+            id(302),
+            EdgeAnchor {
+                edge: a_range.edge(),
+                param: t(1, 6),
+            },
+            EdgeAnchor {
+                edge: b_range.edge(),
+                param: next_b,
+            },
+        );
+        let error = request
+            .bind_source_cuts(&intermediate)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap_err();
+        let CommandUniformEaseError::OriginalSource { span, issue } = &error else {
+            panic!("actual source refusal")
+        };
+        assert_eq!(*span, id(302));
+        assert_eq!(error.source().unwrap().to_string(), issue.to_string());
+    }
+    let mut f = fixture();
+    for amount in [
+        EaseAmount::Formula(id(830)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(831))),
+    ] {
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&[]).unwrap();
+        let root = graph.spans().first().unwrap().retain_ease_source();
+        assert_eq!(
+            root.uniform_explicit_amount(),
+            Err(Error::Amount {
+                source_span: id(301),
+                amount
+            })
+        );
+    }
+    f.span_mut().ease.declared_mut().unwrap().amount = EaseAmount::Explicit(Length::ZERO);
+    let maximum = i64::MAX;
+    let original =
+        EdgeRange::new(f.span().a.range.edge(), t(1, maximum), t(2, maximum - 1)).unwrap();
+    f.span_mut().a.range = original;
+    let graph = f.graph(&[]).unwrap();
+    let root = graph.spans().first().unwrap().retain_ease_source();
+    let [portion, _] = root
+        .split_at(
+            EdgeAnchor {
+                edge: original.edge(),
+                param: t(1, maximum - 1),
+            },
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: t(1, 2),
+            },
+        )
+        .unwrap();
+    let error = portion.uniform_explicit_amount().unwrap_err();
+    let Error::Progress {
+        source_span,
+        side,
+        issue,
+    } = &error
+    else {
+        panic!("actual complete normalization cause")
+    };
+    assert_eq!((*source_span, *side), (id(301), SeamSideId::A));
+    assert_eq!(error.source().unwrap().to_string(), issue.to_string());
+    assert!(matches!(
+        error
+            .source()
+            .unwrap()
+            .source()
+            .unwrap()
+            .downcast_ref::<sc_units::UnitError>(),
+        Some(sc_units::UnitError::Overflow {
+            operation: "Rational::checked_relative_progress"
+        })
+    ));
+}
+
+#[test]
+fn retained_uniform_source_queries_preserve_original_frame_and_closed_domain_refusals_even_at_zero()
+{
+    use sc_core::ontology::{RangeProgressError, SeamEaseAmountError as Error};
+    use std::error::Error as _;
+    let mut f = fixture();
+    let edge = f.span().a.range.edge();
+    let domain = EdgeRange::new(edge, t(1, 7), t(6, 7)).unwrap();
+    f.span_mut().a.range = domain;
+    let graph = f.graph(&[]).unwrap();
+    let root = graph.spans().first().unwrap().retain_ease_source();
+    let source = root.source();
+    assert_eq!(
+        source.uniform_explicit_cumulative_at_a(domain.from()),
+        Ok(Length::ZERO)
+    );
+    assert_eq!(
+        source.uniform_explicit_cumulative_at_a(domain.to()),
+        Ok(Length::ZERO)
+    );
+    assert_eq!(
+        source.uniform_explicit_amount_in_a(domain),
+        Ok(Length::ZERO)
+    );
+    let wrong = EdgeRange::whole(f.span().b.range.edge());
+    assert_eq!(
+        source.uniform_explicit_amount_in_a(wrong),
+        Err(Error::IntervalSource {
+            source_span: id(301),
+            expected: edge,
+            interval: wrong
+        })
+    );
+    for (from, to, at) in [
+        (Param::START, Param::END, Param::START),
+        (t(1, 2), Param::END, Param::END),
+    ] {
+        let issue = RangeProgressError::Outside { range: domain, at };
+        let error = source
+            .uniform_explicit_amount_in_a(EdgeRange::new(edge, from, to).unwrap())
+            .unwrap_err();
+        assert_eq!(
+            error,
+            Error::Progress {
+                source_span: id(301),
+                side: SeamSideId::A,
+                issue: Box::new(issue.clone())
+            }
+        );
+        assert_eq!(error.source().unwrap().to_string(), issue.to_string());
     }
 }
