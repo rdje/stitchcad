@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.4 in docs/tasks/G1-SLICE-execution.md:exact original notch-bounded
-  cumulative/interval quantities with separate arithmetic admission,shared signed rounding and
-  original source provenance. Source-context component .3.3 accepted0516;full PNT continues.
-- OriginalNotchContext0515 binds actual named Notch borrows/source/ledger/creation frame,unique
-  distinct in-domain originals and complete evidence. Checked C+1/both point admissions precede
-  projection;no bounded narrowing. Named start/end and mathematical lower/upper stay distinct.
-- Actual Design context acceptance0516 native3 (6 A/B x literal/formula/profile variants),scoped
-  Clippy/fmt/oracle3/receipt674 pass0. Retained2 child views borrow1 full canonical source,empty
-  child stops keep full source stops;N10/B2 yields20 cache/31 index. Copy rebind refuses original
-  source;later split's1/(2MAX) original remains exact while child held half still requires choice.
-- Whole0515 in674/3 spans;book90/207/1572/2704,glossary0/map unchanged,retention1128 pass.
-  Whole source decision encoded670;whole validation/comparison/context0513–0515 in672–674.
-- Context supplies positions,no notch quantity,whole Design/other graph/formula evaluation/physical
-  matching or effects. Logical budgets are not allocator/RSS/CPU proof;symbolic amounts unresolved.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.4.2 in docs/tasks/G1-SLICE-execution.md:exact original notch-bounded
+  cumulative/interval quantities under separate arithmetic admission. Full PNT continues. Clamp
+  original progress,complement B/Opposite before shared signed rounding,difference original CDFs.
+- NotchEaseAdmission0517 borrows sealed actual OriginalNotchContext,full original signed literal,
+  explicit positive limits;actual formula/profile amount refuses before width. No query integer
+  allocation/projection copy. Separately checked2W+63+b (b30) reserves473 atW190 or727 atW317.
+- Native admission2/bound1/oracle6 bound rows+302 Fraction/raw-width controls/doc3/lint/fmt pass0.
+  Exact/one-below limits,5 signed/zero/maximal amounts,actual64-bit original and symbolic precedence
+  pass. Explicit i64 Param/Length field views guard width proof;not an allocator/RSS/CPU certificate.
+- Original context/source component accepted0516 through actual Design owner:6 A/B x literal/
+  formula/profile variants,2 child views/1 full source,N10/B2 cache20/index31. Copy rebind refuses;
+  later split recovers1/(2MAX) while child held half still requires choice. No full Design proof.
+- Whole0516 in675/3 spans;book90/210/1572/2705,glossary0/map unchanged,retention1129 pass.
+  Quantity kernel/paired matching/stops/lineage/effects/full acceptance remain owned under D301.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -2,7 +2,8 @@
 
 Complete actual input admission,bounded local validation and original-notch coordinate context are
 implemented with focused checks. They build on the [point and interval primitives](command-notch-context.md).
-Quantity queries and paired effects retain their subsequent owners.
+Separate explicit quantity arithmetic admission is implemented;quantity queries and paired effects
+retain their subsequent owners.
 
 | API token | Meaning |
 | --- | --- |
@@ -16,6 +17,10 @@ Quantity queries and paired effects retain their subsequent owners.
 | `OriginalNotchContextError` | Source/named IDs and complete original-context refusal evidence |
 | `OriginalNotchContextIssue` | Actual admission/projection/frame/ambiguity/bounds/coincidence cause |
 | `original_context` | Bind actual locally validated source to exact original notch coordinates |
+| `NotchEaseLimits` | Explicit positive quantity integer width allowance |
+| `NotchEaseAdmission` | Borrowed sealed context and original signed literal after separate admission |
+| `NotchEaseWorkspaceError` | Actual symbolic amount or conservative quantity reservation refusal |
+| `admit_explicit` | Admit quantity arithmetic over the actual sealed original-notch context |
 | `NotchSourceValidation` | Borrowed local structural proof after actual current-source checks |
 | `NotchSourceValidationError` | Original source identity and concrete bounded validation refusal |
 | `NotchSourceValidationIssue` | Actual structural,point,coverage,quota or derived-bound cause |
@@ -232,6 +237,34 @@ endpoint at original half still requires a split choice,so complete current sewi
 that child while the full original source context succeeds. Context construction changes neither
 the held endpoint answer nor source/formula metadata. This is source-context component acceptance;
 notch quantities,whole paired command,mutation and physical verification retain their later owners.
+
+## Admit original-notch quantity arithmetic
+
+Call `context.admit_explicit(NotchEaseLimits::new(bits))` with an explicit positive `NonZeroU64`.
+There is no default. The returned `NotchEaseAdmission` borrows the sealed context and retains the
+full original signed literal,selected limits and conservative integer bound. It copies no projection
+or source collection and allocates no query integer. Formula/profile amounts refuse with their
+actual declaration before checking the quantity allowance,including when that allowance is1 bit.
+Earlier inverse/comparison admission does not license this separate arithmetic construction.
+
+For mathematical lower L=ln/ld and upper U=un/ud,an interior original query x=xn/xd has fraction
+`((xn*ld−ln*xd)*ud)/((un*ld−ln*ud)*xd)`. Coordinates have admitted component boundW and stored
+query fields have at most63 bits. Each ratio field needs at most2W+63 bits;clamping outside the
+notch interval and exact complementation cannot increase this. Multiplying by the maximum original
+Length magnitude adds30 bits. The separate conservative reservation is therefore **2W+93** bits.
+Bound arithmetic is checked in u64 before quantity allocation. The actual source with one journal
+entry hasW190 and reserves473 bits;with two entries,W317 reserves727. A limit one below either
+reservation refuses even when the actual coordinates happen to be small. These are conservative
+operand/result bounds,not allocator/RSS/CPU certificates or fresh whole Design authority.
+
+The independent producer checks six bound/overflow rows and302 Fraction/raw-integer width controls,
+including64/188-bit originals. Native checks consume those rows and admit the actual later-frame
+64-bit original without narrowing it. Privacy/lifetime and no-default doctests guard the public
+boundary. Quantity evaluation remains the next implementation slice:
+
+```bash
+python3 -I -B docs/tasks/artifacts/seam_partition/notch_quantity_oracle.py --check
+```
 
 The canonical decision is docs/decisions/decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md.
 Its whole pre-0512 source is logical record docs/history/stitchcad-devnotes-part670.md,available

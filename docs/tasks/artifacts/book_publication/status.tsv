@@ -206,3 +206,6 @@ actual notch source range location	spec/command-notch-sources.md	crates/sc-core/
 actual original-notch interval context	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/context.rs	OriginalNotchContext	G1-SLICE.6.5.3.2.3.2.4.3.3.3.4	4.4
 actual original-notch context refusal	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/context.rs	OriginalNotchContextError	G1-SLICE.6.5.3.2.3.2.4.3.3.3.4	4.4
 actual original-notch context issue	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/context.rs	OriginalNotchContextIssue	G1-SLICE.6.5.3.2.3.2.4.3.3.3.4	4.4
+original-notch quantity limits	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/quantity.rs	NotchEaseLimits	G1-SLICE.6.5.3.2.3.2.4.3.4.1	4.4
+original-notch quantity admission	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/quantity.rs	NotchEaseAdmission	G1-SLICE.6.5.3.2.3.2.4.3.4.1	4.4
+original-notch quantity reservation refusal	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/quantity.rs	NotchEaseWorkspaceError	G1-SLICE.6.5.3.2.3.2.4.3.4.1	4.4

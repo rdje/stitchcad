@@ -5197,3 +5197,122 @@ fn original_notch_context_admits_combined_candidates_and_both_points_before_wide
         Some(issue.as_ref())
     );
 }
+
+#[test]
+fn notch_quantity_admission_borrows_actual_context_and_reserves_an_independent_exact_limit() {
+    use core::num::NonZeroU64;
+    use sc_core::ontology::{NotchEaseLimits, NotchEaseWorkspaceError};
+    let (mut f, marks) = notch_source_fixture();
+    for signed in [-1_000_000_000, -1, 0, 1, 1_000_000_000] {
+        let parent = Length::from_micrometres(signed).unwrap();
+        f.span_mut().ease.declared_mut().unwrap().amount = EaseAmount::Explicit(parent);
+        let graph = f.graph(&marks).unwrap();
+        let portion = graph.spans().first().unwrap().retain_ease_source();
+        let context =
+            original_context(&f, portion.source(), &marks, notch_source_limits(13, 1, 4)).unwrap();
+        assert_eq!(context.start().admission().component_bit_bound(), 190);
+        assert_eq!(context.start().admission().integer_bit_bound(), 508);
+        let limits = NotchEaseLimits::new(NonZeroU64::new(473).unwrap());
+        let admitted = context.admit_explicit(limits).unwrap();
+        assert!(core::ptr::eq(admitted.context(), &context));
+        assert!(core::ptr::eq(
+            admitted.context().validation().admission().source(),
+            portion.source()
+        ));
+        assert_eq!(admitted.parent_amount(), parent);
+        assert_eq!(admitted.integer_bit_bound(), 473);
+        assert_eq!(admitted.limits(), limits);
+        assert_eq!(limits.integer_bits().get(), 473);
+        assert_eq!(
+            context
+                .admit_explicit(NotchEaseLimits::new(NonZeroU64::new(472).unwrap()))
+                .unwrap_err(),
+            NotchEaseWorkspaceError::IntegerBits {
+                source_span: id(301),
+                side: SeamSideId::A,
+                component_bits: 190,
+                required: 473,
+                limit: 472,
+            }
+        );
+    }
+}
+
+#[test]
+fn notch_quantity_admission_retains_actual_symbolic_precedence_and_wide_original_bound() {
+    use core::num::NonZeroU64;
+    use sc_core::ontology::{NotchEaseLimits, NotchEaseWorkspaceError};
+    let (mut f, marks) = notch_source_fixture();
+    for amount in [
+        EaseAmount::Formula(id(900)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(901))),
+    ] {
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&marks).unwrap();
+        let portion = graph.spans().first().unwrap().retain_ease_source();
+        let context =
+            original_context(&f, portion.source(), &marks, notch_source_limits(13, 1, 4)).unwrap();
+        assert_eq!(
+            context
+                .admit_explicit(NotchEaseLimits::new(NonZeroU64::new(1).unwrap()))
+                .unwrap_err(),
+            NotchEaseWorkspaceError::Amount {
+                source_span: id(301),
+                side: SeamSideId::A,
+                amount
+            }
+        );
+    }
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let definitions = notch_definitions(&marks);
+    let edge = portion.source().side(SeamSideId::A).range.edge();
+    let first = f.ledger.split(&mut f.ids, edge, t(1, 2)).unwrap().first();
+    let marks = current_notches(
+        &f,
+        definitions,
+        [
+            EdgeAnchor {
+                edge: first,
+                param: t(1, i64::MAX),
+            },
+            EdgeAnchor {
+                edge: first,
+                param: t(1, 2),
+            },
+        ],
+    );
+    let before = (f.ledger.clone(), marks.clone());
+    let context =
+        original_context(&f, portion.source(), &marks, notch_source_limits(13, 2, 4)).unwrap();
+    assert!(context
+        .lower()
+        .unique()
+        .unwrap()
+        .coordinate()
+        .as_param()
+        .is_err());
+    let admitted = context
+        .admit_explicit(NotchEaseLimits::new(NonZeroU64::new(727).unwrap()))
+        .unwrap();
+    assert_eq!(admitted.integer_bit_bound(), 727);
+    assert_eq!(
+        admitted.context().lower().admission().component_bit_bound(),
+        317
+    );
+    assert_eq!(
+        context
+            .admit_explicit(NotchEaseLimits::new(NonZeroU64::new(726).unwrap()))
+            .unwrap_err(),
+        NotchEaseWorkspaceError::IntegerBits {
+            source_span: id(301),
+            side: SeamSideId::A,
+            component_bits: 317,
+            required: 727,
+            limit: 726
+        }
+    );
+    assert_eq!((f.ledger.clone(), marks), before);
+}

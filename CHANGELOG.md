@@ -3,11 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0516 — accept actual Design original-notch context
+## STITCHCAD-G1-0517 — admit separate original-notch quantity arithmetic
 
-- Actual cross-crate Design owner joins2 retained child views and1 full source,actual Notch pointers,named/authored order and exact original bounds. Six A/B x literal/formula/profile variants preserve complete state;N10/B2 yields20 cache/31 index.
-- Native3/scoped sc-measure Clippy/fmt/oracle3/receipt674 pass. Actual copy replacement refuses original source;later half split recovers valid64-bit1/(2MAX) and1/4 originals while child held half still requires a choice. Correct stale canonical future-context wording.
-- Whole0515 retained674/three exact Git spans;book90/207/1572/2704,glossary0/map/retention1128 pass. Source-context component accepted;notch quantities next. LIVE/README unchanged,G1 6/18;whole paired/mutation/physical/effect verification remains owned.
+- Borrow actual sealed context/full signed source literal/explicit positive no-default limit. Symbolic intent precedes separately checked2W+93 reservation;no query integer allocation or projection copy. Original comparison admission does not license quantities.
+- Native admission2/bound1/doc3/scoped Clippy/fmt/oracle6 bound rows+302 Fraction/raw-width controls pass. Exact473/727 and one-below,5 signed/zero/maximal literals,actual64-bit original,symbolic precedence and u64 overflow retain exact evidence. Correct stale module/book
+  future-context wording.
+- Whole0516 retained675/three exact Git spans;book90/210/1572/2705,glossary0/map/retention1129 pass. Exact quantity queries next;integration/paired/mutation/physical proof stays owned. LIVE/README unchanged,G1 6/18.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

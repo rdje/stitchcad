@@ -182,3 +182,10 @@ combined candidate cardinality and both point admissions before wide work,bind a
 creation frames,and require unique in-domain distinct exact originals. Keep all ambiguous/coincident
 projection evidence and named/authored order;never narrow or filter by absolute direction.
 Notch quantities,formula/profile evaluation,physical matching and whole acceptance remain next.
+
+Separate notch quantity admission borrows the sealed context and actual full signed literal.
+Check symbolic amount first,then checked2W+63+b conservative integer reservation,whereW is admitted
+original component width andb maximum Length magnitude bits (currently30). Interior progress uses
+((xn*ld-ln*xd)*ud)/((un*ld-ln*ud)*xd);clamping/complement do not increase width. No integer query
+allocation,projection copy or inherited comparison-budget authority occurs during admission.
+This prepares quantity evaluation;allocator/runtime/whole Design/physical proof remain separate.

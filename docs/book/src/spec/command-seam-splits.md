@@ -538,8 +538,8 @@ fractions on opposite sides of one half that binary64 collapses to one half. The
 reference-progress API refuses these wider results;the admitted weighted query returns the exact
 quantity. Native tests consume all160 density rows and50 domain rows,including188-bit cumulative
 mass,189-bit normalization,positive/negative/zero/maximal sources,omitted regions and signed ties.
-Focused weighted6/oracle1/source docs4 and selected Clippy/fmt pass. Semantic-notch context,actual
-paired matching,command effects and full paired acceptance retain their later owners.
+Focused weighted6/oracle1/source docs4 and selected Clippy/fmt pass. Actual notch context is now
+implemented;notch quantities,paired matching,command effects and full acceptance retain later owners.
 
 ### Focused weighted-source component acceptance
 
@@ -551,10 +551,11 @@ resource cost is5 entries:2 spans+1 source+2 regions;limit4 refuses that origina
 with consumed3/requested2. Replacing copy96000 with96010 preserves held quantities,but complete
 current validation and fresh amount declarations refuse the original MissingCopy on span97001/A.
 Focused actual Design1 and selected lint/format checks pass. The weighted source component closes
-with focused verification. Original-notch contexts,paired physical matching,command effects and
+with focused verification. Original-notch quantities,paired physical matching,command effects and
 broader paired/mutation acceptance remain owned;these source partitions are descriptive intervals.
 
 [Original-frame notch context](command-notch-context.md) documents implemented bounded current
 uniqueness,exact wide inverse and focused actual Notch/Graph primitive acceptance. D305 is repaired;
-actual semantic source context/notch quantities and paired effects retain their next implementation
-owners. Weighted source acceptance above keeps its focused scope.
+actual semantic source context is implemented with focused Design integration. Separate notch
+quantity admission is implemented;quantity queries and paired effects retain their next owners.
+Weighted source acceptance above keeps its focused scope.

@@ -7,6 +7,8 @@ use core::{fmt, num::NonZeroUsize};
 mod context;
 mod inputs;
 pub use context::{OriginalNotchContext, OriginalNotchContextError, OriginalNotchContextIssue};
+mod quantity;
+pub use quantity::{NotchEaseAdmission, NotchEaseLimits, NotchEaseWorkspaceError};
 mod validation;
 pub use validation::{
     NotchSourceRange, NotchSourceValidation, NotchSourceValidationError, NotchSourceValidationIssue,

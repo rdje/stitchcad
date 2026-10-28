@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual Design source-context acceptance
+## _(2026-10-28 UTC)_ — separate original-notch quantity admission
 
-0516 native3 joins actual DesignSources/inputs/sewing owner,2 retained child views and1 canonical full source. Six A/B x literal/formula/profile variants preserve actual pointers,named/authored order,quarter/three-quarter originals and complete state. N10/B2 gives20 cache/31 index.
-Actual replacement copy refuses child97001/global and original97000/local. Later half split and explicitly authored current Notches recover1/(2MAX) and1/4;valid64-bit original survives Param refusal while child held half remains SplitPoint. Context success changes no choice or amount;whole readiness stays separate.
-Native3/167 filtered,scoped sc-measure Clippy/fmt,oracle3/receipt674 three exact Git spans pass0. Book90/207/1572/2704,glossary0/map/retention1128 pass. Correct stale canonical paragraph calling implemented context future;historical wording remains sealed. Source-context .3.3 accepted;quantities next.
-[Whole0515 implementation](docs/history/stitchcad-devnotes-part674.md) retains exact scope/lesson/changelog. LIVE/README unchanged,G1 6/18;no quantity/physical/effect/full verification claim. Promotion declined:integration of existing indexed contracts.
+0517 NotchEaseAdmission borrows actual sealed context/full signed literal/explicit positive limits. Symbolic intent precedes allowance;no query integer or projection copy. Interior CDF raw fields need2W+63 bits;clamp/complement do not grow them,source magnitude adds30. Checked2W+93 is separate from inverse budget.
+Native2/bound1/doc3/scoped Clippy/fmt pass0. Exact473/727 accepted,one-below refused;5 signed/zero/maximal literals,actual64-bit later original and formula/profile precedence retain source/context/limit evidence. Independent6 rows+302 Fraction/raw-width controls include64/188-bit originals and checked u64 overflow.
+Book90/210/1572/2705,glossary0/map/retention1129,675 receipt3 exact Git spans pass0. Correct stale module/book future-context wording. Query kernel .3.4.2 next;quantity integration/paired/mutation/physical/full proof stay owned. Explicit i64 reference/Length views guard future width changes.
+[Whole0516 context acceptance](docs/history/stitchcad-devnotes-part675.md) retains exact scope/lesson/changelog. LIVE/README unchanged,G1 6/18. Promotion declined:admitted implementation of indexed exact interval/rounding contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
