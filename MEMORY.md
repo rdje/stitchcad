@@ -1,8 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.2.1 in docs/tasks/G1-SLICE-execution.md:explicit bounded
-  current-point uniqueness before inverse projection;admit/avoid choice expansion before full fold.
-  Recovery0502 closed .4.3.1;D305 fixed0503 .4.3.numeric before this implementation.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.2.1.2 in docs/tasks/G1-SLICE-execution.md:public explicit
+  bounded current uniqueness with actual journal/nested admission and known-source check. Stop at
+  required split choice before tree growth;preserve actual repair/choice/direction evidence.
+- Shared allocation-free point edit step closed0504 .1.1:private Copy current/split/repair with
+  fixed two-candidate offset storage,exhaustive private fields/edits. Legacy full resolver alone
+  follows branches;all31 topology/recomposition1/notch4/scoped lint/fmt pass. Whole0503 in661.
 - D305 uses complete relative progress for split-second/offset and one shared i128 merge ratio;
   reduce before narrowing. Fraction14 proves9 false intermediate refusals fixed/5 genuine final
   widths still repaired with original reference/range and complete-operation cause. Range20,

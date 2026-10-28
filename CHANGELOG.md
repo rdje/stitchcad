@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0503 — fix D305 with complete reference recomposition
+## STITCHCAD-G1-0504 — share allocation-free exact point edit rules
 
-- Split-second/offset point+range maps reuse exact complete progress;both merge paths share one complete i128 arc-length ratio. Reduce before returning to bounded reference fields;no rounding or representation widening.
-- Independent Fraction14/native point+range watch fails before repair and passes afterward:nine valid final results resolve,five genuinely wide results retain original repairs and actual completed-operation causes. Range20/notch4/topology31/scoped Clippy/fmt pass.
-- Whole0502 retained660;numeric decision/book/D305/LIVE synchronized. G1 remains6/18. Bounded current uniqueness and wide inverse projection follow;context/effects/full paired acceptance remain owned.
+- Private Copy step retains immediate exact position,split pair or repair with fixed two-candidate offset storage. Exhaustive typed edit/private field views keep future state changes visible.
+- Legacy full fold consumes the shared step and preserves full choice trees,held references,relative directions and actual causes. Topology31/recomposition1/notch recovery4/scoped Clippy/fmt pass;no public bounded API yet.
+- Whole0503 retained661;task/book/live pointers synchronized. LIVE/README unchanged,G1 6/18. Explicit bounded current uniqueness is next;inverse/context/effects and broader paired acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

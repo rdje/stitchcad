@@ -31,7 +31,6 @@
 //!   mutation path. [`ReleaseReadiness`] is this contract's one input to the release decision, not the
 //!   whole of it — the artifact policy matrix (release contract §8, tuned at G4) remains the authority.
 
-use core::cmp::Ordering;
 use core::fmt;
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -40,6 +39,8 @@ use sc_units::{Length, UnitError};
 use super::id::{EntityId, IdError, IdGenerator};
 use super::rational::Rational;
 use super::reference::{EdgeRef, LocalTag, Param};
+
+mod point_step;
 
 /// The most edges one operation may create — the declared domain of [`IdentityLedger::declare_edges`] and
 /// [`IdentityLedger::offset`], enforced at the boundary so no downstream code re-checks it.
@@ -1108,7 +1109,12 @@ impl IdentityLedger {
     /// real edge is a structural invariant of the object holding it (`.3c`), not of the fold.
     #[must_use]
     pub fn resolve(&self, edge: EdgeRef, param: Param) -> Resolution {
-        self.fold(0, edge, param, edge, param, Direction::Original)
+        self.fold(
+            0,
+            edge,
+            param,
+            ResolvedRef::new(edge, param, Direction::Original),
+        )
     }
 
     /// Registers a reference a consumer holds, so the design-level questions — what is unresolved, may
@@ -1290,199 +1296,36 @@ impl IdentityLedger {
         resolution
     }
 
-    /// The fold itself: walks the journal from `from`, carrying the holder's original reference
-    /// (`held_edge`, `held_param` — what a [`RepairTask`] must name) and the current position (`edge`,
-    /// `param`, `direction`).
-    ///
-    /// Total by construction: every arithmetic step is checked, and a step that refuses becomes a
-    /// `RecomputationFailed` repair task rather than a panic, a wrap or a round.
+    /// Walks the journal carrying the original held reference and current exact position.
+    /// A shared allocation-free step produces immediate evidence; only this full consumer follows
+    /// both split branches and owns the recursively allocated public choice tree.
     fn fold(
         &self,
         from: usize,
         held_edge: EdgeRef,
         held_param: Param,
-        mut edge: EdgeRef,
-        mut param: Param,
-        mut direction: Direction,
+        mut current: ResolvedRef,
     ) -> Resolution {
         for (index, entry) in self.journal.iter().enumerate().skip(from) {
-            // A repair task for a failed recomputation, in the one shape every arithmetic refusal uses:
-            // the reference as its holder states it, the operation that demanded the recomputation, and
-            // the typed diagnostic — never a rounded fallback. `edge` is a parameter, not a capture: the
-            // fold mutates it as it goes, and a task must name the edge the fold was on when the
-            // arithmetic refused.
-            let failed = |edge: EdgeRef, cause: UnitError| {
-                Resolution::Unresolved(RepairTask::new(
-                    held_edge,
-                    held_param,
-                    OrphaningEdit::RecomputationFailed {
-                        operation: entry.operation(),
-                        edge,
-                        cause,
-                    },
-                    Vec::new(),
-                ))
-            };
-            match entry.edit() {
-                TopologyEdit::Split {
-                    source,
-                    at,
-                    first,
-                    second,
-                } if *source == edge => {
-                    let t = param.as_rational();
-                    let s = at.as_rational();
-                    match t.cmp(&s) {
-                        Ordering::Less => {
-                            // `s > 0` (validated at apply), so the division is defined; exactness is
-                            // `Rational`'s, and a refusal is a visible task, never a rounding.
-                            match t.checked_div(s).and_then(to_param) {
-                                Ok(local) => {
-                                    param = local;
-                                    edge = *first;
-                                }
-                                Err(cause) => return failed(edge, cause),
-                            }
-                        }
-                        Ordering::Greater => {
-                            // `s < 1` (validated at apply), so `1 − s > 0` and the division is defined.
-                            let recomputed = t
-                                .checked_relative_progress(s, Rational::ONE)
-                                .and_then(to_param);
-                            match recomputed {
-                                Ok(local) => {
-                                    param = local;
-                                    edge = *second;
-                                }
-                                Err(cause) => return failed(edge, cause),
-                            }
-                        }
-                        Ordering::Equal => {
-                            // The split-point case §1.1 spells out: resolve to BOTH, each side folded
-                            // through the rest of the journal, and let the consumer state which it wants.
-                            return Resolution::SplitPoint {
-                                first: Box::new(self.fold(
-                                    index + 1,
-                                    held_edge,
-                                    held_param,
-                                    *first,
-                                    Param::END,
-                                    direction,
-                                )),
-                                second: Box::new(self.fold(
-                                    index + 1,
-                                    held_edge,
-                                    held_param,
-                                    *second,
-                                    Param::START,
-                                    direction,
-                                )),
-                            };
-                        }
-                    }
+            match point_step::step(current, entry) {
+                point_step::PointStep::Current(next) => current = next,
+                point_step::PointStep::Split { first, second } => {
+                    return Resolution::SplitPoint {
+                        first: Box::new(self.fold(index + 1, held_edge, held_param, first)),
+                        second: Box::new(self.fold(index + 1, held_edge, held_param, second)),
+                    };
                 }
-                TopologyEdit::Merge {
-                    first,
-                    first_length,
-                    second,
-                    second_length,
-                    merged,
-                } if *first == edge || *second == edge => {
-                    let on_first = *first == edge;
-                    // Normalize the complete arc-length map before returning to the bounded
-                    // reference representation; scaled/shifted intermediates may be wider.
-                    let recomputed = param.as_rational().checked_merge_progress(
-                        first_length.as_micrometres(),
-                        second_length.as_micrometres(),
-                        on_first,
-                    );
-                    match recomputed.and_then(to_param) {
-                        Ok(local) => {
-                            param = local;
-                            edge = *merged;
-                        }
-                        Err(cause) => return failed(edge, cause),
-                    }
-                }
-                TopologyEdit::Reverse { edge: reversed } if *reversed == edge => {
-                    match param.as_rational().one_minus().and_then(to_param) {
-                        Ok(reflected) => {
-                            param = reflected;
-                            direction = direction.reversed();
-                        }
-                        Err(cause) => return failed(edge, cause),
-                    }
-                }
-                TopologyEdit::Delete { edge: deleted } if *deleted == edge => {
+                point_step::PointStep::Repair { cause, candidates } => {
                     return Resolution::Unresolved(RepairTask::new(
                         held_edge,
                         held_param,
-                        OrphaningEdit::Deleted {
-                            operation: entry.operation(),
-                            edge,
-                        },
-                        Vec::new(),
+                        cause,
+                        candidates.into_iter().flatten().collect(),
                     ));
                 }
-                TopologyEdit::Offset { source, fragments } if *source == edge => {
-                    // Validated intervals ascend without overlapping and each is non-empty, so a
-                    // parameter sits in at most two of them — exactly two only on a shared boundary.
-                    // The count decides, per §1.1's fifth row: one maps exactly, two are refused with
-                    // both as candidates, none is refused with none.
-                    let t = param.as_rational();
-                    let containing: Vec<&OffsetFragment> = fragments
-                        .iter()
-                        .filter(|fragment| fragment.from() <= param && param <= fragment.to())
-                        .collect();
-                    let mut candidates: Vec<ResolvedRef> = Vec::with_capacity(containing.len());
-                    for fragment in &containing {
-                        // The affine map into the fragment's own parameter space:
-                        // `(t − from)/(to − from)`, exact; `to > from` is the interval's invariant.
-                        let mapped = t
-                            .checked_relative_progress(
-                                fragment.from().as_rational(),
-                                fragment.to().as_rational(),
-                            )
-                            .and_then(to_param)
-                            .map(|local| ResolvedRef::new(fragment.edge(), local, direction));
-                        match mapped {
-                            Ok(position) => candidates.push(position),
-                            Err(cause) => return failed(edge, cause),
-                        }
-                    }
-                    if candidates.len() > 1 {
-                        return Resolution::Unresolved(RepairTask::new(
-                            held_edge,
-                            held_param,
-                            OrphaningEdit::OffsetAmbiguous {
-                                operation: entry.operation(),
-                                source: *source,
-                            },
-                            candidates,
-                        ));
-                    }
-                    match candidates.into_iter().next() {
-                        Some(position) => {
-                            param = position.param();
-                            edge = position.edge();
-                        }
-                        None => {
-                            return Resolution::Unresolved(RepairTask::new(
-                                held_edge,
-                                held_param,
-                                OrphaningEdit::OffsetUnmapped {
-                                    operation: entry.operation(),
-                                    source: *source,
-                                },
-                                Vec::new(),
-                            ))
-                        }
-                    }
-                }
-                _ => {}
             }
         }
-        Resolution::Resolved(ResolvedRef::new(edge, param, direction))
+        Resolution::Resolved(current)
     }
 }
 

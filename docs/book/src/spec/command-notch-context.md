@@ -67,6 +67,13 @@ collapse a held reference's choices merely because their numeric locations happe
 Admission includes the actual journal and nested reference populations,candidate storage and wide
 integer work. Whole-source/effect integration remains a separate owned stage.
 
+The shared single-edit point calculation is implemented. It uses fixed immediate evidence and at
+most two offset candidates;the journal enforces positive nonoverlapping offset intervals. It retains
+exact arithmetic,relative direction,split branches and concrete repair causes. The existing full
+resolver consumes this step and still follows both branches into its public choice tree. This
+refactor supplies the common rules for the next bounded consumer;it does not bound the full resolver.
+The public bounded uniqueness query and original-coordinate projection remain pending.
+
 ## Current-reference composition defect
 
 D305 is repaired with focused verification. After a split at1/3,the valid held position
