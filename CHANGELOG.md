@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0456 — account for retained chart content and align profile admission ownership
+## STITCHCAD-G1-0457 — compose actual external SizeSet family resources
 
-- Charge actual garment observation/chart vectors and MTM saved Ease snapshot entries with every owned token field.
-- Source resource19 (prior12/new7), strict selected lint/fmt pass:4/14,2/66,partial1/33 and cumulative6/80.
-- Actual spellings/Python/OS byte oracle corrected manual fixture expectation; all original owners/data preserved.
-- Bound source book, retain whole0455/book sections608, and schedule separate profile-input admission before G4 exposure.
+- Precharge the actual ordered set vector and compose explicit Garment/MTM common and chart owners once.
+- Source resource24 (prior19/new5), strict selected lint/fmt pass:20/239/0, prefix22/241, exact first witnesses.
+- Reverse order preserves totals and changes refusal owner; singleton garment origin and held source data stay intact.
+- Shared fixture wiring corrected; whole0456 retained609; complete host, higher-root and runtime work remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

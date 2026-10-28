@@ -169,6 +169,9 @@ cargo test -p sc-measure --test mtm_size_set_contract
 
 ## Unified external SizeSet inventory
 
+[Complete retained set resources](source-resource-accounting.md#actual-external-family-and-inventory-composition)
+compose actual family metadata and charts in authored order, preserving explicit Garment/MTM provenance.
+
 SizeSet retains Garment/Mtm family (also singleton garment provenance), lends SizeSetInputs and
 preserves actual family causes.
 

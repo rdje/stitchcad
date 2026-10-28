@@ -175,3 +175,16 @@ exact original owner/index and held missing-context state. Actual token spelling
 Python/OS oracles corrected the initial64-byte fixture expectation to66. Source examples moved into
 a bounded chapter; original whole bytes retained608. Family/host/higher-root/runtime/deeper/full
 proof remains; component demand grants no currentness, physical or allocator memory/time certificate.
+
+## Complete external set-family resources0457
+
+answers: "how does source accounting preserve actual family origin and authored refusal order?"
+
+.6.8.2.2.2.2.3.2.3 precharges the actual set vector and matches each explicit Garment/Mtm variant,
+composing complete common/chart fields in order. Exhaustive private inventory/family views and enum
+matching expose stored-field/variant changes without allocating a census, querying contexts or reading
+values. Source resource24/strict lint/fmt pass:20/239/0, prefix22/241, exact original nested refusals,
+reversed order/same totals/different first chart owner, singleton garment origin, empty/prior errors
+and held missing-context state. One shared test-fixture module fixes first duplicate-loading lint.
+External .3.2 implementation has focused acceptance; full host .3.3/higher root .2.5.2/runtime/deeper/
+full work remains owned. Logical content grants no currentness, physical or allocator memory/time proof.

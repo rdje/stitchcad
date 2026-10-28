@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0456
+## Current leaf acceptance —0457
 
-- [x] ROOT CAUSE: python3 -I -B scope0456 prints actual source-owner field sets2/3/2, standalone intent
-  transformation/evidence/label vectors and ResolveProfile selected-only schema rc=0; separate actual owners.
-- [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:19 passed rc=0; actual chart7 cases
-  verify4/14,2/66,partial1/33,common+chart25/34,combined6/80 and original owner/index/held-state witnesses.
-- [x] NO REGRESSION: strict selected Clippy/fmt rc=0; prior12 source cases pass; git diff --quiet HEAD --
-  crates/sc-core rc=0. Actual family constructors/current refusals remain intact; no profile execution added.
+- [x] ROOT CAUSE: python3 -I -B native external inventory schema prints one actual set vector and
+  explicit Garment/Mtm variants rc=0; singleton membership does not select source-family provenance.
+- [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:24 passed rc=0; five actual mixed
+  cases verify20/239/0, prefix22/241, original/reversed order and exact first field/owner/index refusals.
+- [x] NO REGRESSION: strict selected Clippy/fmt rc=0 after shared-fixture/import/assertion correction;
+  prior19 source cases pass. git diff --quiet HEAD -- crates/sc-core rc=0; current semantics unchanged.
 
 ## Goal
 
@@ -874,7 +874,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0454 actual measurement/Ease resources; [whole scope/proofs](../history/stitchcad-devnotes-part607.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete actual external SizeSet family resources; all metadata/member/chart/axis/break/profile
   and explicit Garment/MTM held fields, no fabricated host, geometry, grading or source inference.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.1`
@@ -887,44 +887,39 @@ All98 completed ids/statuses and original proof pointers remain live there.
   dependency is owned by G4-PROFILES.1.resource-admission before future handler exposure.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.2.1`
   Status: `done`
-  Goal:0456 actual Garment observation/chart and MTM saved Ease snapshot resources, common owner separate.
-  Exhaustive private actual family/chart/observation/definition/binding views precharge all retained
-  vectors/text in authored/schema order; fixed source/provenance/table/member/Count refs stay unread.
-  - [x] REPRODUCE / ISSUE: python3 -I -B scope0456:actual source owner field sets2/3/2, separate intent
-    transformation/evidence/label vectors, ResolveProfile selected-only schema rc=0. Garment source
-    registry includes unused observations; MTM snapshot owns its entry vector and all saved token copies.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part608.md:
-    4 exact Git spans rc=0; whole0455 scope/lesson/ledger plus whole source-component book sections.
-    Profile/model planning scope corrected from actual source definitions, without inventing held fields.
-  - [x] FIX: cargo clippy -p sc-measure --test resource_contract -- -D warnings:finished rc=0;
-    actual family-root chart producers retain exact Set/observation/chart owners and original indices;
-    saved chart/Ease binding references never become owning identities. No semantic/value/context reads.
-  - [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:19 passed rc=0; seven new actual
-    cases verify Garment2 registry/1 POM/1 saved binding=4 entries/14 bytes, including unused observation;
-    actual common21/20 gives25/34. MTM snapshot2/66, partial1/33; actual token spellings plus independent
-    Python/OS byte oracles agree10/10/13 and14/10/9=33+33=66. Initial manual64 expected bytes caused3
-    failures, corrected before acceptance. Exact all vector/token first owner/index witnesses, chart0/0/0,
-    preserved prior errors and held missing-context state; both actual components compose6/80 unchanged.
-  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; prior12 source cases pass;
-    git diff --quiet HEAD -- crates/sc-core rc=0. Existing actual current/domain constructors unchanged.
-    Whole old book interval24723–30474 (5751 bytes), SHA256
-    bf3a902865785a0639a42e33be8377e6eb2e4309e5cf3cd2dc11757e2f3ee5e6, moved exactly before one
-    current pending-boundary clause refresh; original whole text remains608. Complete navigation added.
-  - [x] LOCKSTEP: whole0455/book sections608 have4 Git spans rc=0; retention1062 logical/29 working
-    Markdown/59158 decoded lines/4464832 decoded bytes/2295644 resident bytes rc=0. Book/pointer/
-    frontier/lesson/indexed decision align. Family .3.2.3/full host .3.3/higher root .2.5.2/runtime .4
-    and deeper/full verification remain pending; no whole-host/model or allocator memory/time proof.
-  Book build/native publication:83 chapters/159 scoped API rows/1496 source links/2516 rendered links
-  rc=0; maintained-reference84 files/18715 lines/1305984 bytes rc=0. Map/diff checks rc=0.
-  LIVE_STATUS G4 note now says14 activities/input admission, stage Not Started; native top-level14 rc=0.
-  ROUTING EVIDENCE: native scope0456 measures current owner fields2/3/2 and separate SizeSet intent
-  vectors outside the retained-source family rc=0. Native route0456 verifies pending/P1 owner
-  G4-PROFILES.1.resource-admission and dependencies before schema/editor/transform exposure rc=0;
-  G1.9 still owns raw transport bounds. This is scheduled future admission, not a G4 implementation.
-  Cargo uses scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Goal:0456 actual chart resources/profile scope; [whole scope/proofs](../history/stitchcad-devnotes-part609.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.3`
-  Status: `pending`
-  Goal: complete actual Garment/MTM source-family composition and external set inventory.
+  Status: `done`
+  Goal:0457 complete actual Garment/MTM source-family and external set-inventory resource composition.
+  Charge outer set vector and every actual common/chart field in schema/authored order, preserving
+  explicit family origin and original first refusals without census allocation or semantic/value work.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native external inventory schema prints one actual owned
+    set vector and explicit Garment/Mtm variants rc=0. Both actual fixture families have one member;
+    collection length cannot replace the explicit family discriminator or justify changing provenance.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part609.md:
+    3 exact Git spans rc=0; whole0456 scope/lesson/ledger preserves retained chart/profile-scope boundary.
+    Exact private root/family views must compose both common metadata and saved chart content once.
+  - [x] FIX: cargo clippy -p sc-measure --test resource_contract -- -D warnings:finished rc=0;
+    exhaustive inventory/family/variant views use actual owners and one cumulative sink. First lint
+    rejected duplicate fixture-module loading, unused import and panic forms; shared root fixture and
+    established expect assertions resolve these without waivers. No source/current/identity query.
+  - [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:24 passed rc=0; five new actual
+    cases verify outer2/MTM7+102/Garment11+137=20 entries/239 bytes/0 bits, asserted actual labels/names
+    with independent Python/OS byte counts8/11/17/19. Prefix22/241, outer0+2, nested18+2 and last token
+    230+9 first witnesses; reversing family order keeps totals but refusal shifts from garment chart1006
+    to MTM chart70. Singleton garment origin, actual empty0/0/0, original prior failure and held source
+    success despite missing-context current refusal preserve exact inventory/canonical/measurement data.
+  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; prior19 source cases pass;
+    git diff --quiet HEAD -- crates/sc-core rc=0. Actual original/current constructors unchanged;
+    one fixture module is reused by both targets. No full host, runtime or broad verification claim.
+  - [x] LOCKSTEP: whole0456 proof609 has3 native Git spans rc=0; retention1063 logical/30 working
+    Markdown/59225 decoded lines/4470685 decoded bytes/2301497 resident bytes rc=0. Book/pointer/
+    frontier/lesson/indexed decision align. External .3.2 component implementation complete with focused
+    checks; host .3.3/higher root .2.5.2/runtime .4 and deeper/full verification stay pending, not implied.
+  Book build/native publication:83 chapters/159 scoped API rows/1497 source links/2518 rendered links
+  rc=0; maintained-reference84 files/18761 lines/1308973 bytes rc=0. Map/diff checks rc=0.
+  Cargo uses scripts/local_environment.py. Promotion: indexed command-layer decision. No currentness,
+  readiness, whole-host/model or allocator memory/time certificate follows from logical content.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.3`
   Status: `pending`
   Goal: actual core readonly resource-source trait and sc-measure DesignSources implementation, with
@@ -936,6 +931,8 @@ All98 completed ids/statuses and original proof pointers remain live there.
   before costly validation/cloning; retain original authority/cause/cancel/replay/undo and finite-state bounds.
   Bound logical model content and related retained-state composition; separate raw ingress, allocator peaks,
   per-host algorithm time and future numeric/file/decompression/geometry work with exact owners.
+  Private-model walks/refusal witnesses follow initial exact authority and snapshot binding; caller-only
+  input admission remains early. Verify unauthorized callers trigger no private walk or quota witness.
 
 - ID: `G1-SLICE.6.9`
   Status: `pending`

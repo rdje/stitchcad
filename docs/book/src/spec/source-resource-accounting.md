@@ -45,8 +45,7 @@ Six actual cases pass with strict selected lint/formatting: exact demand, vector
 unchanged source/canonical data, prior prefix14/32, empty0/0/0 and original prior refusal. Replacing
 the canonical context with an empty draft makes current validation refuse; accounting held source
 metadata still succeeds unchanged without rebinding. This is the measurement/Ease component only.
-External SizeSets, the complete actual source-host port, higher-root composition and runtime admission
-remain owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
+The complete actual source-host port, higher-root composition and runtime admission remain owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
 
 ## Actual common SizeSet metadata
 
@@ -84,8 +83,7 @@ With no available breaks, the same actual draft retains its required dimension:2
 without manufacturing a delta. Six new cases plus prior6 pass:12 source resource cases, with strict
 selected lint/formatting after correcting the new test's missing trait import. Prior2 entries/2 bytes
 compose to23/22; first errors remain original. An empty replacement canonical context refuses current
-validation, while held accounting preserves exact metadata/canonical/measurement objects. Garment/MTM family
-composition, complete host/higher-root and runtime admission remain owned; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.
+validation, while held accounting preserves exact metadata/canonical/measurement objects. Complete host/higher-root and runtime admission remain owned; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.
 
 ## Actual retained garment and MTM charts
 
@@ -132,5 +130,50 @@ fixture expectation of64 and it was corrected before acceptance. Snapshot vector
 Seven new cases plus prior12 pass:19 source resource cases, with strict selected lint/formatting.
 Both actual chart components share one meter at6/80, preserve original data and prior errors, and
 stay inspectable when an empty replacement canonical context makes current validation refuse.
-Complete family/inventory composition, full actual host/higher-root and runtime admission remain
-owned; these component counts grant no currentness, physical, whole-host/model or allocator memory/time proof.
+Full actual host/higher-root and runtime admission remain owned; these component counts grant no currentness, physical, whole-host/model or allocator memory/time proof.
+
+## Actual external family and inventory composition
+
+charge_size_set_inventory_resources precharges the actual SizeSetInventory vector, then matches
+each original Garment/Mtm variant in order. It composes that family's complete common metadata and
+retained chart producers under the same sink. A singleton garment source keeps Garment provenance;
+member count and matching labels never retag its instantiation path. Shared measurement/canonical
+sources are not embedded in each set and are charged through their actual owners separately.
+
+Exhaustive private inventory/family views and enum matching expose future stored fields or variants.
+No identity census allocation, semantic/reference validation, current context, coverage query, numeric
+read, grading or instantiation is performed. Component refusals retain their original exact owner,
+field and local index; the anonymous outer vector uses size_sets with no invented owner/index.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+sc_measure::charge_size_set_inventory_resources(&size_sets, &mut meter)?;
+let represented_external_sets = meter.finish()?;
+```
+
+The native mixed fixture has these owned components:
+
+| Component | Entries | UTF-8 bytes |
+| --- | --- | --- |
+| Outer ordered set vector | 2 | 0 |
+| MTM common metadata plus saved chart | 7 | 102 |
+| Singleton garment metadata plus observations/chart | 11 | 137 |
+| Total | 20 | 239 |
+
+The metadata names/labels are asserted against actual objects; independent Python/OS byte counts
+agree on Client A8, Client axis11, Client coordinate17 and Explicit count axis19. MTM common5/36
+plus chart2/66 gives7/102. Garment common5/27 plus chart6/110 gives11/137. Both source families
+keep their explicit provenance, authored references and zero unbounded counter bits.
+
+Maximum1 entry refuses the outer vector at0+2. With MTM first, maximum19 refuses the garment
+chart's saved bindings at18+2; maximum238 bytes refuses its last measurement token at230+9, actual
+chart/index1. Reversing the actual set order preserves20/239 but the same entry maximum refuses
+the MTM snapshot at18+2 with its own chart owner. Prior2 entries/2 bytes compose to22/241.
+
+Five new cases plus prior19 pass:24 source resource cases, with strict selected lint/formatting.
+The first lint caught duplicate test-fixture loading, an unused import and two disallowed panic
+assertions; sharing one fixture module and using the established assertion style resolved them.
+Actual empty inventory contributes0/0/0 and preserves first errors. Missing replacement canonical
+sources make current validation refuse; held accounting preserves exact inventory/canonical/inputs.
+Complete host and higher-root composition, runtime policy and deeper/full verification remain
+owned; these counts grant no currentness, readiness, physical or allocator memory/time certificate.

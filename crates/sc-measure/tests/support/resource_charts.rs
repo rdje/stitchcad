@@ -1,4 +1,5 @@
 //! Actual source-family chart ownership, including unused records and MTM saved token copies.
+use super::owned_size_sets as owned;
 use super::{id, limits, location, Error, Meter, Unit};
 use sc_core::{design::DesignResourceSink, value::CanonicalInputs};
 use sc_measure::{
@@ -8,8 +9,6 @@ use sc_measure::{
     SizeChartCollectionContext, SizeChartContext, SizeChartDefinition, SizeChartObservation,
     SizeChartObservationDefinition,
 };
-#[path = "owned_size_set_fixture.rs"]
-mod owned;
 fn garment(draft: bool) -> (GarmentSizeSet, CanonicalInputs, MeasurementInputs) {
     let (metadata, canonical, inputs) = super::size_metadata::fixture(false);
     let inventory = inputs.measurements().definition();

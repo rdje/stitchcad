@@ -3,16 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual retained chart resources and profile scope
+## _(2026-10-28 UTC)_ — actual complete external SizeSet resource composition
 
-0456 .6.8.2.2.2.2.3.2.2.1 charges actual Garment observation/POM/saved-binding vectors and MTM's
-owned Ease snapshot entries/tokens, common metadata separate. Source resource19 (prior12/new7)/
-strict lint/fmt pass:Garment4/14 + common21/20=25/34, MTM2/66 or partial1/33, composed6/80,
-exact owner/index, empty/prior errors and held missing-context state. First manual MTM64 expectation
-failed; actual spellings plus Python/OS byte oracles prove33+33=66. Whole0455/source-book sections608
-retain4 Git spans; source chapter moved with current scope refreshed. Promotion: indexed command-layer
-decision. Actual source owners have no intent field; pending G4.1.resource-admission owns standalone
-pin/intent/evidence/label admission before exposure. Family/full host/higher-root/runtime/deeper/full pending.
+0457 .6.8.2.2.2.2.3.2.3 precharges the actual set vector, then composes each explicit Garment/MTM
+common/chart owner in authored order. Exhaustive private inventory/family views and enum matching;
+no census allocation, context/value read or origin inference. Source resource24 (prior19/new5)/strict
+lint/fmt pass:outer2+MTM7/102+Garment11/137=20/239/0, prefix22/241, exact nested refusals and reversed
+order/first owner, singleton garment origin, empty/prior errors and held missing-context data. First
+lint's duplicate fixture/import/panic forms fixed by one shared module and established assertions.
+Promotion: indexed command-layer decision. Whole0456 proof609 has3 native Git spans. External .3.2
+implemented with focused checks; host .3.3/higher root .2.5.2/runtime/deeper/full acceptance pending.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

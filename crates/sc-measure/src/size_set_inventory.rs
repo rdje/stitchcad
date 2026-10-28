@@ -111,6 +111,10 @@ impl fmt::Debug for SizeSetInventory {
     }
 }
 impl SizeSetInventory {
+    pub(crate) fn resource_sets(&self) -> &[SizeSet] {
+        let Self { sets } = self;
+        sets
+    }
     /// Own exact authored sets after complete source identity/current validation. Empty drafts are legal.
     ///
     /// # Errors
