@@ -268,6 +268,10 @@ impl std::error::Error for MtmChartError {
     }
 }
 impl MtmChart {
+    pub(crate) fn resource_definition(&self) -> &MtmChartDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate custom single-member scope and every authored current body/Ease correspondence.
     /// Empty/partial and unresolved drafts remain inspectable; completeness is an explicit query.
     /// # Errors

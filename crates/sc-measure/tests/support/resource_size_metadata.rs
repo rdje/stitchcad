@@ -18,7 +18,7 @@ use sc_units::Count;
 fn label(text: &str) -> SizeLabel {
     SizeLabel::new(text.into()).expect("exact nonblank authored label")
 }
-fn fixture(partial: bool) -> (SizeSetMetadata, CanonicalInputs, MeasurementInputs) {
+pub(super) fn fixture(partial: bool) -> (SizeSetMetadata, CanonicalInputs, MeasurementInputs) {
     let (inputs, original) = measurement_fixture();
     let scalars = (1100_u128..1102)
         .map(|identity| {

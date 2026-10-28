@@ -19,7 +19,10 @@
 #![warn(missing_docs)]
 
 mod resource;
-pub use resource::{charge_measurement_input_resources, charge_size_set_metadata_resources};
+pub use resource::{
+    charge_garment_size_set_chart_resources, charge_measurement_input_resources,
+    charge_mtm_size_set_chart_resources, charge_size_set_metadata_resources,
+};
 
 mod measurement;
 pub use measurement::{

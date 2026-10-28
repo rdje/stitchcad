@@ -160,3 +160,18 @@ Native sc-measure resource12/strict selected lint/fmt pass:21/20/0, partial20/18
 owner/index refusals, all axis source forms/unused values/terminal Count and held missing-context data.
 Chart/profile/family/full host/higher-root/runtime and deeper/full proof remain owned; no currentness,
 grading/physical, whole-host/model or allocator time/memory certificate follows from these counts.
+
+## Retained charts and standalone profile input0456
+
+answers: "are profile resolution intents owned by the current source host?"
+
+Native source-owner definitions retain exactly measurements/sets, metadata/observations/chart and
+metadata/chart. Separate SizeSetResolutionIntent owns transformation declarations, Known evidence
+and LabelMapping vectors; G4-PROFILES.1.resource-admission is a P1 prerequisite before schema/editor/
+transform input exposure, complementing G1.9 raw transport bounds. No G4 implementation is implied.
+.6.8.2.2.2.2.3.2.2.1 charges actual garment registry/chart fields and MTM's owned Ease snapshot tokens,
+common metadata separately. Source resource19/strict lint/fmt pass:4/14,2/66,partial1/33,combined6/80,
+exact original owner/index and held missing-context state. Actual token spellings plus independent
+Python/OS oracles corrected the initial64-byte fixture expectation to66. Source examples moved into
+a bounded chapter; original whole bytes retained608. Family/host/higher-root/runtime/deeper/full
+proof remains; component demand grants no currentness, physical or allocator memory/time certificate.

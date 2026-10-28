@@ -85,7 +85,7 @@ cargo test -p sc-measure --test measurement_inputs_contract
 
 ## Owned common SizeSet metadata
 
-[Held resource accounting](model-resource-accounting.md#actual-common-sizeset-metadata) counts
+[Held resource accounting](source-resource-accounting.md#actual-common-sizeset-metadata) counts
 actual member/axis/point/break vectors and labels/tokens without rebuilding contexts or reading values.
 
 SizeSetMetadata owns members, axes/member points, required dimensions/available breaks and Design
@@ -117,6 +117,9 @@ cargo test -p sc-measure --test size_set_metadata_contract
 ```
 
 ## Owned garment SizeSet sources
+
+[Retained chart resource accounting](source-resource-accounting.md#actual-retained-garment-and-mtm-charts)
+includes unused observations, saved chart bindings and MTM's owned Ease snapshot without value reads.
 
 GarmentSizeSet owns common metadata, observations and chart. Admission checks source ids/common
 sources/all observations/composite; missing unused observation tables refuse. Design references this

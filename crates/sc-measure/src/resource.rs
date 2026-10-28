@@ -10,6 +10,9 @@ use sc_core::{
     },
     ontology::EntityId,
 };
+mod charts;
+pub use charts::{charge_garment_size_set_chart_resources, charge_mtm_size_set_chart_resources};
+
 mod size_metadata;
 pub use size_metadata::charge_size_set_metadata_resources;
 

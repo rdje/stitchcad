@@ -368,3 +368,6 @@ fn empty_actual_measurement_sources_contribute_zero_and_preserve_prior_error_on_
 
 #[path = "support/resource_size_metadata.rs"]
 mod size_metadata;
+
+#[path = "support/resource_charts.rs"]
+mod charts;

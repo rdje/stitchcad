@@ -208,6 +208,10 @@ impl std::error::Error for SizeChartError {
     }
 }
 impl SizeChartObservation {
+    pub(crate) fn resource_definition(&self) -> &SizeChartObservationDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate garment domains and all required current member/table/measurement targets.
     /// Unknown/derived chart drafts are inspectable; a numeric value is not required here.
     /// # Errors

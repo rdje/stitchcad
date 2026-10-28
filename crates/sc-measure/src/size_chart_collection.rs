@@ -266,6 +266,10 @@ impl std::error::Error for SizeChartCollectionError {
     }
 }
 impl SizeChart {
+    pub(crate) fn resource_definition(&self) -> &SizeChartDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate unique POMs/tokens/observations/cells and all authored current targets.
     /// Allows incomplete drafts; call [`Self::validate_complete`] for full structural coverage.
     /// # Errors

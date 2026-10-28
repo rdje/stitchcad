@@ -3,16 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual common SizeSet resource metadata
+## _(2026-10-28 UTC)_ — actual retained chart resources and profile scope
 
-0455 .6.8.2.2.2.2.3.2.1 precharges actual member/axis/value/point/coordinate/required-dimension/break
-vectors and exact labels/names/saved tokens. Fixed Count revision is not an unbounded counter; numeric
-refs stay unread. Exhaustive private views/Copy guards; point vector witnesses use Set owner/index,
-not a promoted member reference. Measure resource12 (prior6/new6)/strict lint/fmt pass:21/20/0,
-partial20/18, prefix23/22, all source forms/unused values/terminal Count, exact cumulative witnesses
-and held data unchanged despite missing canonical context. Initial missing test-trait import fixed.
-Promotion: indexed command-layer decision. Whole0454 proof607 has3 native Git spans; chart/profile/
-family/full host/higher root/runtime and deeper/full proof stay owned, no physical/RSS/time certificate.
+0456 .6.8.2.2.2.2.3.2.2.1 charges actual Garment observation/POM/saved-binding vectors and MTM's
+owned Ease snapshot entries/tokens, common metadata separate. Source resource19 (prior12/new7)/
+strict lint/fmt pass:Garment4/14 + common21/20=25/34, MTM2/66 or partial1/33, composed6/80,
+exact owner/index, empty/prior errors and held missing-context state. First manual MTM64 expectation
+failed; actual spellings plus Python/OS byte oracles prove33+33=66. Whole0455/source-book sections608
+retain4 Git spans; source chapter moved with current scope refreshed. Promotion: indexed command-layer
+decision. Actual source owners have no intent field; pending G4.1.resource-admission owns standalone
+pin/intent/evidence/label admission before exposure. Family/full host/higher-root/runtime/deeper/full pending.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

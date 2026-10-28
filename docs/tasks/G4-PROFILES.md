@@ -10,6 +10,15 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
+## Current dependency alignment —0456
+
+- [x] ROOT CAUSE: python3 -I -B scope0456 prints current source-owner fields2/3/2 versus separate
+  transformation/evidence/label vectors and selected-only ResolveProfile schema rc=0; different owners.
+- [x] ADDRESSED: python3 -I -B route0456 prints pending/P1 G4-PROFILES.1.resource-admission and
+  dependency before schema/editor/transform exposure rc=0. This schedules admission before activation.
+- [x] NO REGRESSION: git diff --quiet HEAD -- crates/sc-core rc=0; native scope0456 confirms current
+  ResolveProfile schema unchanged rc=0. G4 implementation leaves remain pending; no profile policy executes.
+
 ## Goal
 
 The signoff loop becomes the product: a **Factory Profile** is a versioned, typed, evidence-bearing
@@ -61,8 +70,24 @@ a known-good real-plotter fixture.
   schema version distinct from content version; validation that rejects unresolved identifiers.
   Acceptance: the §8 example profile validates; an unknown parameter name or dangling evidence ref is
   a validation error naming the field; a profile's content version changes only when its content does.
+  Dependency: .1.resource-admission binds actual variable input before schema/API/editor exposure.
   Verification: `pending`
   Commit: `pending`
+
+- ID: `G4-PROFILES.1.resource-admission`
+  Status: `pending`
+  Goal: before exposing profile schema/API/editor/transform handlers to untrusted variable input,
+  install explicit finite admission over actual pins, resolution-intent declarations, evidence vectors,
+  label mappings/text and candidate payloads. Derive all owned dimensions from actual contracts;
+  complement G1.9 raw transport bounds and G1 retained-model limits without guessed defaults.
+  Priority: P1 prerequisite to profile input/handler activation, including .1/.9/.13; no current G4
+  execution or resource implementation is claimed by this scheduled dependency.
+  Acceptance: inclusive/excess and cumulative source-field/owner/index refusals precede costly decode/
+  clone/validation/application; Unknown/Derived stay unread, first refusal/progress/authority/atomicity
+  remain intact. All borrowed/owned payloads and logical versus allocator/time bounds are explicit.
+  ROUTING EVIDENCE: G1 actual DesignSources/Garment/Mtm definitions retain measurement/set, common/
+  observation/chart fields; standalone SizeSetResolutionIntent owns transformation declarations,
+  Known evidence and LabelMapping vectors. Native scoped source schema output0456 rc=0.
 
 - ID: `G4-PROFILES.2`
   Status: `pending`
@@ -192,6 +217,7 @@ a known-good real-plotter fixture.
   Acceptance: each transformation is asserted at its stage by a test that would fail if it moved;
   the cut/sew swap never inverts semantic meaning (a swap changes the mapping, not the object);
   allowance policy resolution is per Factory Profile as §3.1 requires.
+  Dependency: .1.resource-admission completes before profile transformation handler activation.
   Verification: `pending`
   Commit: `pending`
 

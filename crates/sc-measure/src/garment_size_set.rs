@@ -115,6 +115,10 @@ impl fmt::Debug for GarmentSizeSet {
     }
 }
 impl GarmentSizeSet {
+    pub(crate) fn resource_definition(&self) -> &GarmentSizeSetDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Own exact sources after complete identity/current binding validation, allowing partial drafts.
     ///
     /// # Errors

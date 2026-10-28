@@ -10,7 +10,7 @@ including strict checks and three-crate WASM compilation. Tables also have local
 Current additions carry focused native checks; complete runtime/profile, facade and physical/release
 proof remains with G1 integration and later gates.
 
-[Held resource accounting](model-resource-accounting.md#actual-measurement-and-ease-sources)
+[Held resource accounting](source-resource-accounting.md#actual-measurement-and-ease-sources)
 counts actual source vectors and all retained name/document/binding-token bytes without reading values.
 
 ## Content and references

@@ -104,6 +104,10 @@ impl fmt::Debug for MtmSizeSet {
     }
 }
 impl MtmSizeSet {
+    pub(crate) fn resource_definition(&self) -> &MtmSizeSetDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Own exact sources after complete identity/current MTM validation, allowing partial drafts.
     ///
     /// # Errors
