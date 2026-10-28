@@ -1187,13 +1187,13 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 ## D281/D282 — task-sibling freshness and sealed bytes
 [Whole verified0421 correction](../history/stitchcad-devnotes-part578.md); canonical graph/code retained.
 
-## D298 — stale secondary command frontier
+## D298/D299 — verified glossary/index repair0484
 
-P2;owner G1-SLICE.6.vocabulary.acceptance;done0484. docs/TASK_TREE.md previously said0421 next .6.5.2.b and D250 baseline pending despite that leaf done/current C1 repair. Reproduce with rg .6.5.2.b in index and
-canonical G1 leaf;impact is an obsolete resume instruction. Replace with current command/execution ownership;Python comparison confirms three canonical leaf states,rc=0.
+Done;owner G1-SLICE.6.vocabulary.acceptance. [Whole causes/reproductions/repairs](../history/stitchcad-devnotes-part639.md)
+retain obsolete secondary pointer,definition-only use and token/chapter-pair assumptions;focused4/full41 pass0.
 
-## D299 — glossary negative controls assume one use and leave no use
+## D300 — stale command-schema execution summary
 
-P2;owner G1-SLICE.6.vocabulary.acceptance;done0484. Initial full current glossary probes reported 37 pass/4 fail:collision/eps_chord declaration removal also removes their only shaped use;HISTORY_ARCHIVE_ROOT/ sources
-have two using chapters but tests demand one row. Actual census behavior is correct. Retain an independent copied use for every declaration fault and derive its exact current chapter-use population; require only that
-named population and no other failures. Focused four4/0;full current suite41/0 pass rc=0.
+P2;owner G1-SLICE.6.5.3.2.1;done0485. command-layer.md paired-cut paragraph previously ended with all mutation execution pending,despite preparation.rs exact native availability for ChangeMeasurement/
+AssignMaterial/AddNotch. Reproduce by rg of that prose and the actual preparation match. Impact: reader misses implemented metadata behavior. Correct scope to those handlers while paired seam/Dart execution remains
+owned;actual availability source bytes unchanged/scope predicate and final book87/162/1556/2641 pass rc=0.

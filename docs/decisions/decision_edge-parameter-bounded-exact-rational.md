@@ -62,3 +62,15 @@ otherwise refuse with their exact bit count. This admits wide intermediates that
 inventing a custom wide-integer kernel. The primitive exposes no dependency type and changes no
 stored edge parameter, quantity domain or binding rule. The focused native target passes, including34 independent
 Fraction oracle rows in `.5c.1.3`; broader/platform integration remains `.5c.4`/pre-push.
+
+## Exact interval partition0485
+
+answers: "must splitting a held interval rescale its source parameters or allocate new topology?"
+
+EdgeRange::split_at copies the original edge and exact bounds into two positive intervals meeting
+at a strict interior cut. It needs only exact ordering,so full-width admitted parameters require no
+arithmetic recomputation or new identity. RangeSplitError retains the original range/cut. Native
+coverage uses exact membership samples and the existing later-edit interval resolver,including
+unknown-source repairs. This primitive supplies interval evidence;actual paired sewing/copy/ease/
+stop/lineage and transaction obligations remain G1-SLICE.6.5.3.2. Four new cases plus13 existing
+range tests and one compiled example pass;it grants no geometric or physical certificate.

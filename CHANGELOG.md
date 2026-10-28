@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0484 — accept current glossary and repair stale negative controls
+## STITCHCAD-G1-0485 — partition exact held source-frame ranges
 
-- Full current glossary suite41 pass/0 fail,including29 actual declaration-removal controls,two advisory signals and existing structural/missing-input checks;all140 original C1 pairs repaired.
-- D299 retains independent uses and checks exact independently derived using-chapter populations;four prior failures now pass. D298 corrects an obsolete secondary resume pointer.
-- Current census310/9/158/0 and final book87/161/1555/2639 pass. Whole0483 and original D250 ledger retained638;D250 closes without a full CI claim. Continue actual paired seam handler contracts.
+- Add EdgeRange::split_at and structured RangeSplitError;strict interior cuts return two fixed-array intervals with original edge/frame and exact bounds.
+- Native range17/method rustdoc1/selected strict Clippy/fmt pass;four new cases cover exact membership,refusals,full-width/unknown references and actual later topology edits.
+- D300 corrects stale command execution scope. Final glossary0 failures/book87/162/1556/2641 passes;whole0484/D298/D299 retained639. Actual paired handler binding and broader execution remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

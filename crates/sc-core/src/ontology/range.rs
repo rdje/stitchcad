@@ -43,6 +43,29 @@ impl fmt::Display for RangeError {
 
 impl std::error::Error for RangeError {}
 
+/// A cut outside the strict interior of its original source-frame interval.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct RangeSplitError {
+    /// Original held range, without rebinding its edge or parameter frame.
+    pub range: EdgeRange,
+    /// Original requested cut, including an endpoint or out-of-range value.
+    pub at: Param,
+}
+
+impl fmt::Display for RangeSplitError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "range split requires {} < cut < {}, got {}",
+            self.range.from.as_rational(),
+            self.range.to.as_rational(),
+            self.at.as_rational()
+        )
+    }
+}
+
+impl std::error::Error for RangeSplitError {}
+
 impl EdgeRange {
     /// Build a positive-length interval; existence is checked by the consuming object or query.
     ///
@@ -64,6 +87,42 @@ impl EdgeRange {
             from: Param::START,
             to: Param::END,
         }
+    }
+
+    /// Partition this held interval at an exact parameter in the same source edge's frame.
+    ///
+    /// The returned lower and upper ranges retain the original edge and meet at `at`. Bounds are
+    /// copied exactly, without rescaling, rounding, allocation or a topology edit. Current range
+    /// resolution, physical-copy ownership and paired sewing correspondence are separate checks.
+    ///
+    /// # Errors
+    /// Returns [`RangeSplitError`] with the original range and cut unless `from < at < to`.
+    ///
+    /// ```
+    /// use sc_core::ontology::{EdgeRange, EdgeRef, EntityId, LocalTag, Param, Rational};
+    /// let edge = EdgeRef::new(EntityId::from_bits(1), LocalTag::FIRST);
+    /// let half = Param::new(Rational::new(1, 2)?)?;
+    /// let [lower, upper] = EdgeRange::whole(edge).split_at(half)?;
+    /// assert_eq!((lower.to(), upper.from()), (half, half));
+    /// assert_eq!((lower.edge(), upper.edge()), (edge, edge));
+    /// # Ok::<(), Box<dyn std::error::Error>>(())
+    /// ```
+    pub fn split_at(self, at: Param) -> Result<[Self; 2], RangeSplitError> {
+        if at <= self.from || at >= self.to {
+            return Err(RangeSplitError { range: self, at });
+        }
+        Ok([
+            Self {
+                edge: self.edge,
+                from: self.from,
+                to: at,
+            },
+            Self {
+                edge: self.edge,
+                from: at,
+                to: self.to,
+            },
+        ])
     }
 
     /// Held edge identity, never rewritten by a query.

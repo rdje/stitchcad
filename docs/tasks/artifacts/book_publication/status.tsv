@@ -160,3 +160,4 @@ actual Hem declaration source	spec/ontology-constructions.md	crates/sc-core/src/
 actual Hem declaration refusal	spec/ontology-constructions.md	crates/sc-core/src/design/hems.rs	DesignHemDeclarationError	G1-SLICE.6.4.5.3.d.1	4.4
 builtin workflow identities	spec/command-workflows.md	crates/sc-core/src/command/workflow.rs	CommandWorkflowId	G1-SLICE.6.9.2	7.8
 builtin workflow operations	spec/command-workflows.md	crates/sc-core/src/command/workflow.rs	CommandWorkflowStep	G1-SLICE.6.9.2	7.8
+source-frame range partition	spec/ontology.md	crates/sc-core/src/ontology/range.rs	RangeSplitError	G1-SLICE.6.5.3.2.1	4.1

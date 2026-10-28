@@ -103,7 +103,7 @@ pub use material_inventory::{MaterialInventory, MaterialInventoryError, PieceMat
 
 pub use range::{
     EdgeRange, RangeError, RangeIssue, RangePortion, RangeRepairTask, RangeResolution,
-    ResolvedRange,
+    RangeSplitError, ResolvedRange,
 };
 
 pub use notch::{

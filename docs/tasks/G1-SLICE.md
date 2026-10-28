@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0484
+## Current leaf acceptance —0485
 
-- [x] ROOT CAUSE: full glossary probes →37 pass/4 fail before D299 repair;actual controls lose sole use or assume one using chapter;D298 stale index confirmed rc=0.
-- [x] ADDRESSED: bash docs/tasks/artifacts/glossary/run_glossary_probes.sh →41 pass/0 fail rc=0;29 declaration faults use exact independent chapter populations;C1 all140 repaired.
-- [x] NO REGRESSION: real census310/9/158/0 failures,signals/count/sample and all existing structural controls pass;book87/161/1555/2639 rc=0;Rust unchanged.
+- [x] ROOT CAUSE: git show HEAD:crates/sc-core/src/ontology/range.rs/native interface review →only positive-range construction,no strict partition API;D300 prose contradicts actual three-handler match rc=0.
+- [x] ADDRESSED: cargo test -p sc-core --test range_contract →17 passed rc=0,including4 new interval/ownership/refusal/full-width/later-topology cases;structured original evidence retained.
+- [x] NO REGRESSION: scoped split_at rustdoc1/strict selected Clippy/fmt pass0;real glossary0 failures/book87/162/1556/2641 rc=0;paired execution remains pending.
 
 ## Goal
 
@@ -85,22 +85,18 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 - ID: `G1-SLICE.3c.2`
   Status: `done`
   Goal:original sewing scope; [whole proof](../history/stitchcad-devnotes-part538.md).
-
 - ID: `G1-SLICE.3c.2a`
   Status: `done`
   Goal:original range/sewing scope; [whole proof](../history/stitchcad-devnotes-part538.md).
-
 - ID: `G1-SLICE.3c.2b`
   Status: `done`
   Goal:original range/sewing scope; [whole proof](../history/stitchcad-devnotes-part538.md).
-
 - ID: `G1-SLICE.3c.2b.1`
   Status: `done`
   Goal: Structural sewing-side primitives complete; whole source/contracts/proofs [retained](../history/window20.md#stitchcad-devnotes-part484md).
 - ID: `G1-SLICE.3c.2b.2`
   Status: `done`
   Goal: completed copy-addressed sewing contract; [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part430md).
-
 - ID: `G1-SLICE.3c.3`
   Status: `done`
   Goal:closed scope; [whole proof](../history/window12.md#stitchcad-devnotes-part328md).
@@ -120,7 +116,6 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 [Completed construction child contracts and acceptance evidence](G1-SLICE-constructions.md)
 are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-G1-0023.
-
 - ID: `G1-SLICE.4`
   Status: `done`
   Goal: sc-measure0321 structural library; runtime/registry proof remains G1/G3/G4; [whole scope](../history/stitchcad-devnotes-part553.md).
@@ -129,18 +124,15 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal: complete preserved structural contracts/proofs/navigation in [part475](../history/window20.md#stitchcad-devnotes-part475md).
   Commit: .4a children0024–0028/.4b0031; whole originals retained.
-
 - ID: `G1-SLICE.4a.2`
   Status: `done`
   Goal: complete preserved structural contracts/proofs/navigation in [part475](../history/window20.md#stitchcad-devnotes-part475md).
   Commit: .4a children0024–0028/.4b0031; whole originals retained.
-
 - ID: `G1-SLICE.4a.3`
   Status: `done`
   Goal: named tables/current bindings and .4a structural signoff.
   Verification: [complete preserved contract and checklist](G1-SLICE-measurements.md#named-table-contract-and-evidence--preserved-from-f19982d).
   Commit: `STITCHCAD-G1-0028`
-
 - ID: `G1-SLICE.4b`
   Status: `done`
   Goal: complete preserved structural contracts/proofs/navigation in [part475](../history/window20.md#stitchcad-devnotes-part475md).
@@ -645,14 +637,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0483 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part638.md).
 - ID: `G1-SLICE.6.vocabulary.acceptance`
   Status: `done`
-  Goal: complete glossary acceptance after D250 implementation;repair exposed D298/D299 under this owner.
-  - [x] REPRODUCE / ISSUE: bash docs/tasks/artifacts/glossary/run_glossary_probes.sh →37 pass/4 fail rc=1;collision/eps_chord lose sole shaped use,HISTORY_ARCHIVE_ROOT/sources have two using chapters;index still points to done .6.5.2.b.
-  - [x] ROOT CAUSE: Python actual population/source review →definition-only row removal deletes obligation;old exact-one assertion confuses identity and chapter pairs,rc=0. Canonical tree proves old next leaf done,metadata .6.9 done,next paired handler pending rc=0.
-  - [x] FIX: retain independent copied use for every fault;derive exact two-arm chapter population in Python and require all/only those failures. Add12 D250 cases;repair stale secondary index.D298/D299 fixed and verified here.
-  - [x] ADDRESSED: full same glossary producer →41 pass/0 fail rc=0,including29 declaration controls and2 signals;selected four prior failures →4 pass/0 fail rc=0;real census310/9/158/0 failures rc=0.
-  - [x] NO REGRESSION: full suite includes real/index/ownership/references/safety/coverage/arity/missing-input controls plus independent full advisory counts/first15;book_publication.py →87 chapters/161 API rows/1555 source/2639 rendered links rc=0;Rust unchanged.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/D298/D299/indexed decision/index/LIVE/book updated;README unchanged. transition_receipts.py --record part638 →4 exact Git spans rc=0;history_archive.sh verify-retention →1092/2472017 residentB rc=0.
-  Commit: STITCHCAD-G1-0484;D250 parent done,next .6.5.3.2 actual paired seam handler contract recovery;full pre-push CI remains pending.
+  Goal:0484 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part639.md).
 - ID: `G1-SLICE.6.5`
   Status: `in_progress`
   Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.
@@ -716,9 +701,25 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0426 actual bound Measurement metadata/D283; [whole scope/proofs](../history/stitchcad-devnotes-part579.md).
 - ID: `G1-SLICE.6.5.3.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual paired SplitSeamSpan handler: recover native range/ease/stop/lineage interfaces and
-  explicit A/B-cut contract first; own any real recipe/geometry dependencies without fabricated checks.
+  explicit A/B-cut contract first; own real recipe/geometry dependencies without fabricated checks.
+- ID: `G1-SLICE.6.5.3.2.1`
+  Status: `done`
+  Goal: exact held source-frame interval split_at prerequisite;D300 scope correction and closed-proof retirement.
+  - [x] REPRODUCE / ISSUE: git show HEAD:ontology/range.rs/interface review →positive-range constructor only,no reusable strict partition;paired handler needs exact original-frame child intervals,rc=0.
+  - [x] ROOT CAUSE: source review/actual core range-point fold →copying exact ascending bounds suffices without ratio recomputation or ledger edit;preparation.rs three-handler match proves D300 all-execution-pending prose stale,rc=0.
+  - [x] FIX: add EdgeRange::split_at and Copy RangeSplitError retaining original interval/cut;strict interior guard,unchanged edge/frame and fixed array. Correct D300 to implemented metadata versus pending paired/Dart execution.
+  - [x] ADDRESSED: cargo test -p sc-core --test range_contract →17 passed rc=0;four new cases cover148 exact sample memberships,8 endpoint/exterior refusals,full-width/unknown references and actual later ledger edits.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc ontology::range::EdgeRange::split_at →1 passed;clippy --lib --test range_contract -- -D warnings/fmt pass0;glossary310/9/158/0 and final book87/162/1556/2641 rc=0. D300 actual handler source bytes unchanged,scope predicate passes0.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D300/indexed decision/index/LIVE/book/API-status updated;README unchanged. transition_receipts.py --record part639 →4 exact Git spans rc=0;history_archive.sh verify-retention →1093/2477796 residentB rc=0.
+  Commit: STITCHCAD-G1-0485;next .2.2 binds actual original A/B source cuts;paired physical/ease/stop/lineage/admission/transaction execution remains parent work.
+- ID: `G1-SLICE.6.5.3.2.2`
+  Status: `pending`
+  Goal: bind actual request target and original A/B anchors to canonical span/copy/source-frame ranges,retaining typed ownership/interior evidence before paired execution.
+- ID: `G1-SLICE.6.5.3.2.acceptance`
+  Status: `pending`
+  Goal: after paired feature implementation,combined actual split/reference/ease/stop/lineage and bus undo/replay/cancel/quota acceptance;no broad suites between implementation slices.
 - ID: `G1-SLICE.6.5.4`
   Status: `done`
   Goal: authorized candidate preview, effect-boundary revalidation and whole-group atomic publication.

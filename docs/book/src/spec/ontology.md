@@ -74,6 +74,43 @@ When an edit changes the topology a reference points into, exactly one of two th
 — that names the reference, the edit that orphaned it, and the candidate resolutions. A design with
 unresolved references can be saved and inspected; it cannot be released (§8 of the release contract).
 
+### 1.2 Exact source-frame range partition
+
+The core interval primitive partitions a held range into lower and upper positive-length ranges at
+one strict interior cut. Both keep the original edge and its original parameter frame. For a range
+from1/7 through6/7, a cut at2/3 is still2/3 of that source edge; it is not renormalized within either child.
+
+| API token | Meaning |
+| --- | --- |
+| `EdgeRange` | Original edge reference and exact ascending positive-length interval |
+| `Param` | Exact rational position within the source edge's unit interval |
+| `split_at` | Return lower/upper intervals meeting at a strict interior parameter |
+| `RangeSplitError` | Refusal retaining the exact original range and requested cut |
+| `range` | Original held interval in the split refusal |
+| `at` | Original requested cut in the split refusal |
+
+```rust
+use sc_core::ontology::{EdgeRange, EdgeRef, EntityId, LocalTag, Param, Rational};
+let edge = EdgeRef::new(EntityId::from_bits(1), LocalTag::FIRST);
+let from = Param::new(Rational::new(1, 7)?)?;
+let cut = Param::new(Rational::new(2, 3)?)?;
+let to = Param::new(Rational::new(6, 7)?)?;
+let original = EdgeRange::new(edge, from, to)?;
+let [lower, upper] = original.split_at(cut)?;
+assert_eq!((lower.from(), lower.to()), (from, cut));
+assert_eq!((upper.from(), upper.to()), (cut, to));
+let refused = original.split_at(from).expect_err("endpoint");
+assert_eq!((refused.range, refused.at), (original, from));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Endpoint and exterior cuts return the original interval and cut as structured evidence. This copies
+fixed bounds without arithmetic recomputation, rounding, allocation, identity issuance or a topology
+edit. The original range remains available. Children use the ordinary current interval-resolution
+queries, including visible repairs for unresolved references and exact mapping after later edits.
+The paired sewing handler still owns physical-copy/pairing, direction, ease, stop and lineage obligations.
+This interval operation alone supplies no sewing mutation or physical correspondence certificate.
+
 ## 2. Measurement and fit
 
 ### 2.1 `MeasurementTable`

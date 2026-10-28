@@ -37,6 +37,94 @@ fn live_parts(ledger: &IdentityLedger, held: EdgeRange) -> Vec<(EdgeRef, Param, 
 }
 
 #[test]
+fn source_frame_split_partitions_exact_membership_and_preserves_the_held_edge() {
+    let (_, _, edge) = fixture();
+    let held = EdgeRange::new(edge, t(1, 7), t(6, 7)).unwrap();
+    let cut = t(2, 3);
+    let [lower, upper] = held.split_at(cut).unwrap();
+    assert_eq!((lower.edge(), upper.edge()), (edge, edge));
+    assert_eq!((lower.from(), upper.to()), (held.from(), held.to()));
+    assert_eq!((lower.to(), upper.from()), (cut, cut));
+    for numerator in 0..=147 {
+        let point = t(numerator, 147);
+        let contains = |range: EdgeRange| range.from() <= point && point <= range.to();
+        let actual = usize::from(contains(lower)) + usize::from(contains(upper));
+        let expected = if !contains(held) {
+            0
+        } else if point == cut {
+            2
+        } else {
+            1
+        };
+        assert_eq!(actual, expected, "partition membership at {point}");
+    }
+}
+
+#[test]
+fn source_frame_split_refuses_endpoints_and_external_cuts_with_original_evidence() {
+    let (_, _, edge) = fixture();
+    let held = EdgeRange::new(edge, t(1, 7), t(6, 7)).unwrap();
+    for cut in [
+        Param::START,
+        t(1, 14),
+        held.from(),
+        held.to(),
+        t(13, 14),
+        Param::END,
+    ] {
+        let error = held.split_at(cut).unwrap_err();
+        assert_eq!((error.range, error.at), (held, cut));
+        assert!(error.to_string().contains("1/7 < cut < 6/7"));
+        assert!(std::error::Error::source(&error).is_none());
+    }
+    for cut in [Param::START, Param::END] {
+        assert!(EdgeRange::whole(edge).split_at(cut).is_err());
+    }
+}
+
+#[test]
+fn source_frame_split_keeps_full_width_parameters_and_unresolved_references_exact() {
+    let edge = EdgeRef::new(EntityId::from_bits(u128::MAX), LocalTag::FIRST);
+    let held = EdgeRange::new(
+        edge,
+        t(4_611_686_018_427_387_902, i64::MAX),
+        t(4_611_686_018_427_387_905, i64::MAX),
+    )
+    .unwrap();
+    let cut = t(1, 2);
+    let [lower, upper] = held.split_at(cut).unwrap();
+    assert_eq!((lower.from(), lower.to()), (held.from(), cut));
+    assert_eq!((upper.from(), upper.to()), (cut, held.to()));
+    let ledger = IdentityLedger::new();
+    for range in [held, lower, upper] {
+        assert_eq!(range.edge(), edge);
+        assert!(!ledger.resolve_range(range).has_full_coverage());
+    }
+}
+
+#[test]
+fn source_frame_split_children_resolve_through_actual_later_topology_edits() {
+    let (mut ledger, mut ids, edge) = fixture();
+    let held = EdgeRange::new(edge, t(1, 4), t(3, 4)).unwrap();
+    let [lower, upper] = held.split_at(t(3, 5)).unwrap();
+    let edit = ledger.split(&mut ids, edge, t(1, 2)).unwrap();
+    assert_eq!(
+        live_parts(&ledger, lower),
+        vec![
+            (edit.first(), t(1, 2), Param::END, Direction::Original),
+            (edit.second(), Param::START, t(1, 5), Direction::Original),
+        ]
+    );
+    assert_eq!(
+        live_parts(&ledger, upper),
+        vec![(edit.second(), t(1, 5), t(1, 2), Direction::Original)]
+    );
+    for range in [held, lower, upper] {
+        assert!(ledger.resolve_range(range).has_full_coverage());
+    }
+}
+
+#[test]
 fn ranges_reject_equal_and_descending_bounds_and_never_change_the_held_reference() {
     let (ledger, _, edge) = fixture();
     assert!(EdgeRange::new(edge, Param::START, Param::START).is_err());

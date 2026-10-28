@@ -274,7 +274,8 @@ The actual target supplies copy/range ownership, direction, signed ease/distribu
 stops. The request neither duplicates those records nor supplies new result identities. Before any
 mutation, execution must resolve the current span and cuts, establish strict interior paired cuts,
 preserve reference/ease/stop obligations and allocate lineage-preserving outputs atomically. The payload
-creates no split result or geometry edit. All five mutation schemas are available; execution remains pending.
+creates no split result or geometry edit. All five mutation schemas are available. Three metadata handlers
+execute through the [native bus](command-execution.md); paired seam and Dart execution remain pending.
 
 ## 3. Atomic groups, and the granularity of undo
 
