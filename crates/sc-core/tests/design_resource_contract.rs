@@ -394,3 +394,6 @@ mod pieces;
 
 #[path = "support/design_resource/topology.rs"]
 mod topology;
+
+#[path = "support/design_resource/inputs.rs"]
+mod inputs;

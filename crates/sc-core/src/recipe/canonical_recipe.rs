@@ -69,6 +69,11 @@ pub struct FormulaCanonicalRecipe {
     text: String,
 }
 impl FormulaCanonicalRecipe {
+    pub(crate) fn resource_text(&self) -> &str {
+        let Self { text } = self;
+        text
+    }
+
     /// Explicit access to customer-bearing ASCII identity bytes, without a terminal newline.
     #[must_use]
     pub fn as_str(&self) -> &str {

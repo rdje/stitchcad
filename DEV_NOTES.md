@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual topology held-resource accounting
+## _(2026-10-28 UTC)_ — actual retained input-metadata resource accounting
 
-0446 .6.8.2.2.2.2.2.2.2 precharges actual journal/per-edit vectors, then actual live/registration index
-lengths. Exhaustive views/edit matches and fixed Copy-index constraints expose future owned payloads;
-no replay, resolution, repair, mutation or model copying. Resource19 (prior15/actual4)/strict lint/fmt
-pass:22/0/0 demand, all six edits, exact vector/index/registration refusals and retained original choices.
-Final private-view debug emits counts only, rechecked lint/fmt0. Promotion: command-layer record.
-Whole0445 scope/lesson/ledger retained598 with3 exact spans. Piece/copy/topology accounting closes;
-remaining model/source/runtime/deeper/full work stays owned, without whole-root/RSS/time/readiness proof.
+0447 .6.8.2.2.2.2.2.3 borrows actual parameter tokens, both retained recipe strings and Material
+name/provided composition; precharge vectors, preserve state/order and owner/index. Exhaustive held
+views and fixed Copy guards expose field evolution; no reparse, lookup, regeneration or applied scale.
+Resource24 (prior19/actual5)/strict lint/fmt pass:4/74/0 demand, exact cumulative witnesses, unchanged
+canonical/parameter/recipe/Material data and empty source retaining canonical8 bytes. Promotion:
+command-layer record. Whole0446 proof599 retains3 exact spans. Remaining garment/root/source/runtime/
+deeper/full work stays owned; no binding/evaluation/physical or whole-model/RSS/time certificate.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

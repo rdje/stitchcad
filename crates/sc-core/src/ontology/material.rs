@@ -229,6 +229,11 @@ impl fmt::Debug for Material {
     }
 }
 impl Material {
+    pub(crate) fn resource_definition(&self) -> &MaterialDefinition {
+        let Self { definition } = self;
+        definition
+    }
+
     /// Validate authored text and actual current property targets without resolving physical truth.
     ///
     /// Name is checked first, then supplied composition, then complete current validation. Known,

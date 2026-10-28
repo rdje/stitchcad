@@ -549,6 +549,6 @@ copy. The [resource-control guide](command-operation-control.md#source-host-copy
 native copy-count proof and its limits. There are46 focused bus cases; total resource proof remains owned.
 
 The [logical dynamic-content meter](command-operation-control.md#logical-dynamic-content-accounting-contract)
-is a separate Design-domain contract, with actual canonical/Piece/cut-plan/topology accounting.
+is a separate Design-domain contract with implemented component producers.
 Remaining model/source traversal and runtime model-policy installation stay pending; component demand
 supplies no additional execution or whole-model-validity proof.

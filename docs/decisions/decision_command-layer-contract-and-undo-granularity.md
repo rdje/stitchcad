@@ -127,3 +127,14 @@ Precharge before traversal; retain actual operation/index locations without repl
 mutation or extra model copies. View debug shows counts only. Resource19/lint/fmt verify22/0/0 across
 all six edits, vector/index/registration witnesses and original ledger/choice preservation. This completes
 Piece/copy/topology component accounting; whole-root/source/runtime and RSS/time/readiness remain owned.
+
+## Actual retained input metadata0447
+
+answers: "does a recipe resource check reparse the source or omit its canonical identity?"
+
+G1-SLICE.6.8.2.2.2.2.2.3 borrows both original/canonical recipe strings, parameter tokens and actual
+Material names/provided composition. Precharge vectors; preserve authored owner/index/field under one
+meter. Exhaustive held views and fixed Copy guards expose field evolution without lookup, regeneration,
+value inference or applied shrinkage. Resource24/lint/fmt verify4/74/0 and exact cumulative witnesses;
+empty source still owns canonical(recipe)8 bytes. Original data stays exact. Remaining model/source/
+runtime, binding/evaluation, truth/physics and whole-model/RSS/time proof remain separately owned.

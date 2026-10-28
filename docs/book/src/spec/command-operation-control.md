@@ -193,9 +193,9 @@ and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 
 ## Logical dynamic-content accounting contract
 
 DesignResourceLimits and DesignResourceMeter live in the Design domain, independent of command
-authority. They provide a data-only accounting contract. Actual canonical/Piece/cut-plan/topology
-accounting is implemented below. Remaining model/source producers and command-bus enforcement are pending;
-this meter is not yet a runtime model-admission gate.
+authority. They provide a data-only accounting contract with implemented component producers below.
+Complete root/source accounting and runtime enforcement remain pending; the meter alone is not
+a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -378,6 +378,51 @@ and formatting. They retain the exact original ledger/choices on success/refusal
 scope preserves a prior meter error. This closes Piece/copy/topology component accounting. Remaining
 parameter/recipe/Material, sewing/garment, root composition/counter bits, source-host and runtime
 admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
+
+## Actual input metadata accounting
+
+charge_parameter_resources precharges the actual parameter vector, then charges each held machine
+token's exact bytes in authored order. Target references remain fixed metadata; it performs no
+canonical target lookup or numeric-availability read. Refusals retain actual parameter owner/index.
+
+charge_recipe_document_resources borrows both retained fields: exact original source, then actual
+canonical syntax text. It does not call the parser, normalize literals again, regenerate identity or
+evaluate operators. Both logical strings count even when their text could coincide. An empty source
+still retains the eight-byte canonical identity `(recipe)`; it contributes8 bytes, not zero.
+
+charge_material_inventory_resources precharges the actual Material vector, then each exact name
+and provided composition. None contributes no composition text and supplies no inferred composition.
+Property targets and optional shrinkage are fixed Copy metadata, with no duplicate canonical values/
+evidence or applied physical scale. It performs no property, source or registry lookup. Locations
+retain actual Material owner and authored index. Exhaustive private owner/text/definition views and
+Copy guards expose future owned-field obligations, including canonical reference-vector payloads.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_parameter_resources(&parameters, &mut meter)?;
+charge_recipe_document_resources(&recipe_document, &mut meter)?;
+charge_material_inventory_resources(&materials, &mut meter)?;
+let actual_input_metadata = meter.finish()?;
+```
+
+The native fixture has two parameters with tokens `a` and `bb` (3 bytes). The original recipe text
+is24 bytes including outer whitespace; its retained canonical identity is36 bytes. Two Materials
+have names of3 and4 bytes; the first provided composition ` é ` adds4 bytes and the second is None.
+Combined demand is4 collection entries,74 UTF-8 bytes and zero unbounded-counter bits. Actual
+Unknown/Derived width/flag/shrinkage references remain unchanged, without inferred property values.
+
+Maximum2 text bytes refuses the second token at consumed1/requested2. Maximum23 refuses recipe.source
+at0+24; maximum62 after tokens refuses recipe.canonical at27+36. Maximum6 on Materials refuses the
+first composition at3+4; cumulative maximum73 refuses the second Material name at70+4. Collection
+maximum3 after parameter entries refuses materials at2+2. Owners/indices distinguish member fields;
+recipe strings and whole inventories have no standalone entity owner.
+
+Five new actual cases plus prior19 resource cases pass:24 total, with strict selected lint/formatting.
+They preserve canonical inputs, parameter order/targets, both recipe fields and complete Material
+intent. Empty parameter/Material drafts plus empty recipe source demand0 entries/8 bytes/0 bits;
+a prior meter refusal stays original across all three producers. Remaining sewing/garment, root/
+source and runtime admission work is separately owned; this is no binding, recipe evaluation,
+Material truth/physical, whole-model or allocator RSS/time certificate.
 
 Focused runtime evidence comprises37 earlier bus cases, eight runtime-control cases and one actual
 source-copy case:46 passing cases. The evidence-input slice established six pure admission/fraction

@@ -5,6 +5,10 @@ metadata over [canonical declarations](measurement-inputs.md). It preserves auth
 name and optional composition. Name and supplied composition must be nonblank; whitespace is retained.
 None means composition or shrinkage is unprovided, never an inferred value.
 
+[Resource accounting](command-operation-control.md#actual-input-metadata-accounting) borrows the
+actual Material vector/name/composition without reading property availability or applying shrinkage.
+Its logical counts and owner/index refusals supply no Material/source/physical truth certificate.
+
 ## Typed properties and current checks
 
 | Property | Required target | Current boundary |

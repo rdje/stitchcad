@@ -61,6 +61,12 @@ pub(crate) fn valid_spelling(input: &str) -> bool {
 }
 
 impl MachineToken {
+    // Exhaustive held-text view for resource accounting; new owned fields must be included.
+    pub(crate) fn resource_text(&self) -> &str {
+        let Self(text) = self;
+        text
+    }
+
     /// Validate without trimming, normalizing or automatically renaming the input.
     /// # Errors
     /// Returns [`MachineTokenError`] for malformed syntax or the keywords `let`, `assert`, `if`.

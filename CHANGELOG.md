@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0446 — account for actual topology journal and indices
+## STITCHCAD-G1-0447 — account for retained parameter, recipe and Material resources
 
-- Charge actual journal, Declared/Offset vectors and maintained live/registration lengths; no replay or repair.
-- Exhaustive held/edit views, fixed Copy constraints and exact operation/index refusals preserve original ledger/choices.
-- Resource19 (prior15/actual4) and strict selected lint/fmt pass; private-view debug contains counts only.
-- Piece/copy/topology component accounting closes; remaining whole-model/runtime work owned, whole0445 proof598 retained.
+- Actual vector/token/name/composition and original/canonical recipe text producers; no reparse or property lookup.
+- Exhaustive held views and Copy guards; preserve original state and exact first owner/index refusals.
+- Resource24 (prior19/actual5), strict selected lint/fmt pass; empty source retains canonical8 bytes, bus unchanged.
+- Book scopes component proof and remaining work; whole0446 held-topology scope/lesson/ledger retained599.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part599](docs/history/stitchcad-devnotes-part599.md) | whole0446 held-topology resource scope/lesson/ledger | 45 lines, 4028 bytes, sha256:082deecf… |
 | [part598](docs/history/stitchcad-devnotes-part598.md) | whole0445 Piece/copy-resource/owner/D292 scope/lesson/ledger | 50 lines, 4522 bytes, sha256:869a21aa… |
 | [part597](docs/history/stitchcad-devnotes-part597.md) | whole D290/D291 verified closure ledger | 13 lines, 1223 bytes, sha256:82264056… |
 | [part596](docs/history/stitchcad-devnotes-part596.md) | whole0444 and0437–0442 decision continuity | 125 lines, 9886 bytes, sha256:bfda6027… |

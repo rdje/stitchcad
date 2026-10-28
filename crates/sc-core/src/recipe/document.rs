@@ -64,6 +64,12 @@ impl fmt::Debug for FormulaRecipeDocument {
     }
 }
 impl FormulaRecipeDocument {
+    // Both held strings count; no parser, normalization or regenerated identity is needed.
+    pub(crate) fn resource_texts(&self) -> (&str, &str) {
+        let Self { source, canonical } = self;
+        (source, canonical.resource_text())
+    }
+
     /// Own exact authored source after complete syntax and input-literal acceptance.
     ///
     /// Reuses the existing ordered parser, conversion, limits and identity serializer. Source is

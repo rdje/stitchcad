@@ -99,6 +99,11 @@ impl fmt::Debug for DesignParameter {
     }
 }
 impl DesignParameter {
+    pub(crate) fn resource_definition(&self) -> &DesignParameterDefinition {
+        let Self { definition } = self;
+        definition
+    }
+
     /// Stable metadata identity; this is not its canonical value declaration id.
     #[must_use]
     pub const fn id(&self) -> EntityId {
@@ -194,6 +199,11 @@ impl fmt::Debug for DesignParameters {
     }
 }
 impl DesignParameters {
+    pub(crate) fn resource_parameters(&self) -> &[DesignParameter] {
+        let Self { parameters } = self;
+        parameters
+    }
+
     /// Validate complete authored metadata before publishing any immutable parameter.
     ///
     /// Identity/name checks visit authored order before target resolution. Reserved inputs cannot

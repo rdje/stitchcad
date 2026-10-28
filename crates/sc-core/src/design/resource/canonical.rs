@@ -1,7 +1,7 @@
 //! Actual canonical dynamic collections; no copied state, availability reads or registry lookup.
 use super::{
-    fixed_value, DesignResourceLimitError, DesignResourceLocation, DesignResourceScope,
-    DesignResourceSink,
+    fixed_slice, fixed_value, DesignResourceLimitError, DesignResourceLocation,
+    DesignResourceScope, DesignResourceSink,
 };
 use crate::ontology::EntityId;
 use crate::value::{
@@ -36,56 +36,58 @@ pub fn charge_canonical_input_resources(
     let (lengths, scalars) = inputs.resource_collections();
     sink.charge_entries(lengths.len(), location("canonical.lengths", None, None))?;
     for (index, declaration) in lengths.iter().enumerate() {
-        let LengthDeclarationDefinition {
-            id,
-            source: _,
-            state,
-        } = declaration.definition();
+        let LengthDeclarationDefinition { id, source, state } = declaration.definition();
+        fixed_value(source);
         match state {
             LengthState::Known { value, evidence } => {
                 fixed_value(value);
+                fixed_slice(evidence);
                 sink.charge_entries(
                     evidence.len(),
                     location("canonical.lengths.evidence", Some(index), Some(*id)),
                 )?;
             }
-            LengthState::Assumed {
-                value,
-                assumption: _,
+            LengthState::Assumed { value, assumption } => {
+                fixed_value(value);
+                fixed_value(assumption);
             }
-            | LengthState::Preference {
-                value,
-                provenance: _,
-            } => fixed_value(value),
-            LengthState::Unknown { observation: _ } | LengthState::Derived { formula: _ } => {}
+            LengthState::Preference { value, provenance } => {
+                fixed_value(value);
+                fixed_value(provenance);
+            }
+            LengthState::Unknown { observation } => fixed_value(observation),
+            LengthState::Derived { formula } => fixed_value(formula),
         }
     }
     sink.charge_entries(scalars.len(), location("canonical.scalars", None, None))?;
     for (index, declaration) in scalars.iter().enumerate() {
         let ScalarInputDeclarationDefinition {
             id,
-            source: _,
-            kind: _,
+            source,
+            kind,
             state,
         } = declaration.definition();
+        fixed_value(source);
+        fixed_value(kind);
         match state {
             ScalarInputState::Known { value, evidence } => {
                 fixed_value(value);
+                fixed_slice(evidence);
                 sink.charge_entries(
                     evidence.len(),
                     location("canonical.scalars.evidence", Some(index), Some(*id)),
                 )?;
             }
-            ScalarInputState::Assumed {
-                value,
-                assumption: _,
+            ScalarInputState::Assumed { value, assumption } => {
+                fixed_value(value);
+                fixed_value(assumption);
             }
-            | ScalarInputState::Preference {
-                value,
-                provenance: _,
-            } => fixed_value(value),
-            ScalarInputState::Unknown { observation: _ }
-            | ScalarInputState::Derived { formula: _ } => {}
+            ScalarInputState::Preference { value, provenance } => {
+                fixed_value(value);
+                fixed_value(provenance);
+            }
+            ScalarInputState::Unknown { observation } => fixed_value(observation),
+            ScalarInputState::Derived { formula } => fixed_value(formula),
         }
     }
     Ok(())

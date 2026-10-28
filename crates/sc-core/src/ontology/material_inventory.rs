@@ -128,6 +128,11 @@ impl fmt::Debug for MaterialInventory {
     }
 }
 impl MaterialInventory {
+    pub(crate) fn resource_materials(&self) -> &[Material] {
+        let Self { materials } = self;
+        materials
+    }
+
     /// Own exact Materials after complete identity and actual current property validation.
     /// Empty drafts are legal and mint no record; source/treatment references are uses, not owners.
     ///
