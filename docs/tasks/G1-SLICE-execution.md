@@ -182,14 +182,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0494 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part649.md).
 - ID: `G1-SLICE.6.5.3.2.cleanup`
   Status: `done`
-  Goal:0496 due daily artifact cleanup completed;public producer unchanged,original workspaces/proofs/stores preserved. Next .3.2.4.1 nonuniform arithmetic/context recovery.
-  - [x] REPRODUCE / ISSUE: read docs/ARTIFACT_CLEANUP.md and UTC clock →last2026-10-27 13:41UTC,now beyond2026-10-28 13:41UTC;daily cleanup due,rc=0.
-  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan target/artifact_cleanup_audit/seam-20261028 →87 candidates/229 files/15007705B,1032 skips,rc=0. Independent candidate listing confines selection to4 generated trees and83 root logs;Rust stray census0. No protected-path overlap.
-  - [x] FIX: inspect frozen candidates,hash both original generation workspaces,apply only frozen public plan with actual idle-CUA attestation and OS-visible process guard;preserve uncertain entries and all stores/certificates. Own whole0495 retirement651;update latest cleanup entry after immediate residue proof.
-  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply target/artifact_cleanup_audit/seam-20261028 --idle-cua →4 trees/83 strays/229 files/15007705B removed,residue0,tracked_change=false,rc=0. Result retained in result.json;all1032 unsafe/uncertain entries skipped.
-  - [x] NO REGRESSION: immediate independent Python Path/hashlib census →87 paths absent,213 preservation entries exact/9084081 regular-file bytes,protected_overlap=false,rc=0 in independent_post.json. Fresh read-only recheck before launcher agrees,rc=0. Hash scope is original workspaces;store/certificate separation is proven by candidate exclusion.
-    python3 -I -B scripts/local_environment.py -- mdbook build docs/book plus book_publication.py check →88/174/1560/2661,rc=0. transition_receipts.py --record docs/history/stitchcad-devnotes-part651.md →3 exact Git spans;bash scripts/history_archive.sh verify-retention →1105 logical/72 working/2538708 residentB,rc=0.
-  - [x] LOCKSTEP: task/index/MEMORY/DEV/CHANGE/latest cleanup/book synchronized;LIVE/README reviewed unchanged,G1 6/18. No runtime/producer behavior change. promotion: declined (routine execution and receipts for the already documented cleanup contract;no new reusable policy lesson).
+  Goal:0496 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part652.md).
 - ID: `G1-SLICE.6.5.3.2.tracking`
   Status: `done`
   Goal:0495 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part651.md).
@@ -201,16 +194,38 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .3 original-frame semantic-notch context;.4 allocation/command/source-context integration;
   .acceptance deferred until implementation. Physical/correspondence dependencies stay explicit.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.1`
-  Status: `pending`
-  Goal: recover actual density/domain,notch/current-frame and geometry contracts before changes;
-  independently derive weighted cumulative arithmetic/workspace/rounding requirements. Falsify
-  premature intermediate bounds and post-rounding orientation changes;document required context
-  without inventing a source value.
+  Status: `done`
+  Goal:0497 recover actual nonuniform arithmetic/context contracts before implementation;no native weighted quantity,physical pairing or handler claim.
+  - [x] REPRODUCE / ISSUE: inspect actual sewing/reference/range/topology/rounding APIs and normative book/roadmap →positive normalized arc-length density,zero omitted mass,original signed source;notch stops may use later frames and either named order. Missing execution/context stays owned below,not replaced by values.
+  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/seam_partition/nonuniform_ease_oracle.py --check →160 rows,Fraction/common-denominator agreement,188-bit denominator,float/orientation/equal-cut controls,rc=0. Four valid quarter densities need188 bits;exact below-half result0 becomes1 in binary64. Post-rounding B orientation moves±1 ties to the wrong A child.
+  - [x] FIX: freeze independent oracle fixture;native actual-source/refusal and later-frame notch watches. Derive constructive189N+ceil(log2N)+b cumulative-field bound and30-bit source multiplier;retain actual-temporary/admission obligations. Distinguish bounded normalized queries from wide original-domain normalization. Indexed decision/book document actual context requirements.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test sewing_contract nonuniform_recovery -- --nocapture →2 passed/46 filtered,rc=0. All160 declaration inputs admitted with exact retained source and actual Weighted refusal;later-fragment notches map to original quarter/three-quarter and both named orders pass. Native weighted values remain unimplemented.
+  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-core --test sewing_contract -- -D warnings and cargo fmt --all -- --check →pass,rc=0. Initial test authoring used iterator next on a slice and failed compile101;correct actual API is first;no runtime predicate changed.
+    nonuniform_ease_oracle.py --check →160 exact frozen rows and independent controls,rc=0;transition_receipts.py --record docs/history/stitchcad-devnotes-part652.md →3 exact Git spans,rc=0. mdbook build/publication check →88/174/1560/2662;glossary census →0 failures;verify-retention →1106 logical/73 working/2543647 residentB,all rc=0. Full paired acceptance remains its deferred owner.
+  - [x] LOCKSTEP: task/live journals/indexed sewing decision/book/D301 scheduling synchronized;README/LIVE reviewed unchanged,G1 6/18. Whole0496 retained652. Next .4.2 shared rounding,workspace and actual weighted quantities;notch/geometry contexts .4.3/.4.4 remain required before effects.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2`
   Status: `pending`
   Goal: exact weighted original-source cumulative allocation and signed boundary quantization;
   omitted regions allocate zero,positive densities normalize by original total mass. Use the one
   shared rounding rule and explicit bounded workspace/admission contracts;retain original causes.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.2.1`
+  Status: `pending`
+  Goal: shared half-away rounding from an exact wide quotient/remainder comparison without
+  narrowing the ratio or duplicating policy. Preserve existing API values/error operation names;
+  focused signed/unsigned/tie/limit checks and book contract before committing this component.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.2.2`
+  Status: `pending`
+  Goal: explicit borrowed original-source weighted workspace admission before allocation,checked
+  region-count/bit-work bounds and actual source/policy refusal context;no silent default budget.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.2.3`
+  Status: `pending`
+  Goal: exact original weighted cumulative quantities under admitted workspace,original-domain
+  normalization without premature narrowing,and canonical A-order orientation before shared
+  quantization. Consume independent frozen oracle;preserve actual signed source and causes.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.2.acceptance`
+  Status: `pending`
+  Goal: deferred focused weighted-source component acceptance after shared rounding/admission/
+  quantity implementation;actual notch/context/integration and full paired effects stay later owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3`
   Status: `pending`
   Goal: actual original-frame notch allocation context through public semantic landmark/ledger

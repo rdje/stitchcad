@@ -374,3 +374,55 @@ Detailed paired execution tasks now live in the existing canonical execution sib
 `docs/tasks/G1-SLICE-execution.md`. Original IDs,completion states and proof routes remain live;
 the exact pre-move branch is retained with its native Git extent. Nonuniform/context work follows
 this scoped retained-source component without expanding the root tracker beyond its bounds.
+
+## Nonuniform arithmetic and context requirements
+
+Weighted quantity execution is pending. The recovery diagnostic independently integrates the
+original declared density with exact fractions. For regions with bounds lᵢ,uᵢ and positive
+weights wᵢ, total mass is Σwᵢ(uᵢ−lᵢ); ascending cumulative mass at q is
+Σwᵢ max(0,min(q,uᵢ)−lᵢ). Divide by the original total,including every region.
+A gap contributes zero; it is not filled by a default density. Stored positions are fractions
+of their edge's own length, so original partial domains must be normalized exactly first.
+
+All allocations retain canonical A traversal order. For an A distribution,use its cumulative
+fraction. For a B distribution with Same direction,use ascending B cumulative fraction;with
+Opposite direction,use one minus that exact fraction. Apply this orientation before quantizing
+the original signed source. For a one-micrometre source at a half boundary,the correct first
+amount is1; subtracting a rounded B prefix from1 instead gives0. Negative sources obey the
+same signed symmetry. Child allocations remain differences of original quantized boundaries.
+
+Fixed128-bit rational intermediates cannot cover all valid declarations. Four quarter regions
+with densities1/(9223372036854775807−k),k=2,4,6,8,produce a reduced cumulative denominator
+of188 bits at the half boundary. The fraction is below one half: exact allocation of1 µm is0,
+while binary64 gives one half and allocates1. The tracked independent diagnostic freezes160
+input/result rows and checks Fraction against a separate integer common-denominator construction:
+
+```bash
+python3 -I -B docs/tasks/artifacts/seam_partition/nonuniform_ease_oracle.py --check
+```
+
+A constructive arithmetic bound follows from the stored63-bit positive fields. Each region mass
+has an unreduced numerator/denominator below2^189. For N regions,a common denominator D is below
+2^(189N),and total numerator T is below N×2^(189N). A query denominator Q with b bits gives a
+cumulative ratio P/(Q×T),with0≤P≤Q×T. Its fields need at most189N+ceil(log₂N)+b bits;
+multiplication by the maximum source magnitude needs at most30 more. Direct normalized queries
+have b≤63;an exact original-range normalization can need up to189 before reduction. This is a
+feasible mathematical construction,not a bound on every temporary of an arbitrary implementation,
+CPU time or allocator overhead. Implementation owns explicit checked workspace admission before
+allocation and reuse of the one shared rounding policy. The existing bounded progress API keeps
+its documented final representation refusals.
+
+Physical pairing requires actual context. For illustration only,original lengths11000/10000 µm,
+ease1000 µm and A densities1 then3 on the two halves allocate250 µm at A half. A matching B
+boundary is21/40;equal half progress would create500 µm differential. These are arithmetic example
+inputs,not measured geometry. A future paired handler must consume actual length/correspondence
+evidence;weighted allocation cannot reuse the uniform equal-progress predicate as that proof.
+
+Actual native fixtures admit notch stops authored on later split fragments:local half parameters
+correspond to original quarter and three-quarter positions. Both named start/end orders remain
+valid;locate the interval between the actual points while preserving both identities and stop order.
+Current resolved ranges expose live intervals/direction,without per-portion original subdomains.
+The context implementation must retain/recover exact original positions through actual journal
+mappings and retain ambiguous/lost-anchor evidence. Profile notch dimensions do not locate stops.
+The two focused native recovery tests validate real source admission,existing typed refusals and
+later-frame anchors;they do not execute weighted quantities or certify physical correspondence.

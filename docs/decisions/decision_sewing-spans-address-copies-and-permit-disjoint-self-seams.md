@@ -148,3 +148,30 @@ quantities while complete current validation refuses the original MissingCopy. F
 may be shared by several target views;their portion mappings determine allocation,not independent
 child literals. Retained .3 closes with focused verification,not full paired/physical/release proof.
 Nonuniform/context,stops,lineage/effects and full paired acceptance remain D301 P1 owners.
+
+## Nonuniform recovery0497
+
+answers: "why does weighted allocation require wider exact arithmetic and original-side context?"
+
+Use original density integrals and total mass,with zero mass in omitted regions. Canonical A order
+uses ascending cumulative allocation on A or Same B,and one minus ascending B for Opposite.
+Orient before quantization;parent-minus-rounded-B assigns the half quantum differently for±1.
+The independent Fraction/common-denominator diagnostic freezes160 rows. Four valid quarter regions
+need188 denominator bits;binary64 changes the exact one-micrometre result0 to1. Native recovery2
+proves actual graph/source admission and preserves current unsupported-distribution refusals;
+it does not claim native weighted quantity execution. No fixed128-bit intermediate cap is adequate.
+A constructive N-region bound is189N+ceil(log₂N)+b bits for cumulative fields,b=query-denominator
+bits,plus30 for source multiplication. Unreduced region fields are below2^189;common total T is
+below N×2^(189N),prefix numerator is at most Q×T. Normalize original bounds without premature
+narrowing (b≤189),or use bounded normalized input (b≤63). This is arithmetic feasibility only;
+implementation must bound its actual temporaries/operations and admit workspace before allocation.
+Reuse the one shared rounding policy,not a local floating or duplicated half-away implementation.
+A pure distribution-side quantity does not certify pairing. Illustrative lengths11000/10000,ease1000,
+A densities1/3 allocate250 at A half and require B21/40;uniform equal progress would give500.
+Consume actual original lengths/correspondence before effects;do not manufacture missing geometry.
+Native later-fragment notch half parameters locate original quarter/three-quarter stops,and both
+named orders are structurally legal. Recover their exact original positions through actual journal
+mappings;preserve identities,authored stop order and ambiguous/lost evidence. Current range evidence
+has no per-portion original subdomain. Profile dimensions are irrelevant to semantic stop location.
+D301 owns .4.2 shared rounding/workspace/weighted quantities,.4.3 notch context,.4.4 integration;
+scoped acceptance follows implementation,then full paired stops/lineage/effects acceptance.

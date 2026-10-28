@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0496 — complete due daily artifact cleanup
+## STITCHCAD-G1-0497 — recover exact nonuniform arithmetic and actual context contracts
 
-- Guarded frozen plan removes4 generated trees/83 root logs,229 files/15007705B;zero residue and no tracked-content change.
-- Immediate independent census and fresh read-only recheck:87 paths absent,213 preservation entries exact/9084081B in both original generation workspaces. All1032 uncertain entries and protected stores/certificates retained;Rust stray census0.
-- Whole0495 retained651;latest cleanup/book/task/live pointers synchronized. Runtime and LIVE G1 6/18 unchanged;nonuniform arithmetic/context recovery follows.
+- Independent Fraction/common-denominator diagnostic freezes160 rows:188-bit valid cumulative denominator,float/tie-orientation and unequal physical-cut controls. Derive explicit arithmetic workspace requirements before implementation.
+- Focused native2 verifies actual weighted declarations/refusals and later-frame notch source positions in either named order;scoped Clippy/fmt pass. No native weighted execution or physical/bus proof is claimed.
+- Whole0496 retained652;task/book/indexed decision/D301/live pointers synchronized. LIVE G1 6/18 unchanged;shared rounding/workspace/weighted implementation follows.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

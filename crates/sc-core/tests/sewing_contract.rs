@@ -975,6 +975,136 @@ fn weighted_regions_have_positive_density_and_explicit_order_without_defaulting(
         );
     }
 }
+
+#[test]
+fn nonuniform_recovery_oracle_inputs_are_valid_original_sources_without_invented_quantities() {
+    fn fraction(value: &str) -> Rational {
+        let (numerator, denominator) = value.split_once('/').unwrap_or((value, "1"));
+        Rational::new(numerator.parse().unwrap(), denominator.parse().unwrap()).unwrap()
+    }
+    let mut rows = 0;
+    let mut widest_denominator = 0;
+    for row in include_str!("fixtures/nonuniform_ease.tsv").lines().skip(1) {
+        let fields = row.split('\t').collect::<Vec<_>>();
+        assert_eq!(fields.len(), 11);
+        let field = |index| *fields.get(index).unwrap();
+        let parent = field(1).parse::<i64>().unwrap();
+        let side = match field(2) {
+            "A" => SeamSideId::A,
+            "B" => SeamSideId::B,
+            value => panic!("unexpected fixture side {value}"),
+        };
+        let direction = match field(3) {
+            "Same" => SeamDirection::Same,
+            "Opposite" => SeamDirection::Opposite,
+            value => panic!("unexpected fixture direction {value}"),
+        };
+        let at = t(field(4).parse().unwrap(), field(5).parse().unwrap());
+        assert!((Param::START..=Param::END).contains(&at));
+        let regions = field(6)
+            .split(';')
+            .map(|region| {
+                let fields = region.split(':').collect::<Vec<_>>();
+                assert_eq!(fields.len(), 3);
+                WeightedEaseRegion {
+                    from: Param::new(fraction(fields.first().unwrap())).unwrap(),
+                    to: Param::new(fraction(fields.get(1).unwrap())).unwrap(),
+                    weight: fraction(fields.get(2).unwrap()),
+                }
+            })
+            .collect();
+        let mut f = fixture();
+        f.span_mut().direction = direction;
+        let declaration = f.span_mut().ease.declared_mut().unwrap();
+        declaration.amount = EaseAmount::Explicit(Length::from_micrometres(parent).unwrap());
+        declaration.distribution = EaseDistribution::Weighted { side, regions };
+        let graph = f.graph(&[]).unwrap();
+        let source = graph.spans().first().unwrap().retain_ease_source();
+        assert_eq!(source.source().declaration(), f.span().ease.declaration());
+        assert_eq!(
+            source.source().uniform_explicit_cumulative_at_a(at),
+            Err(sc_core::ontology::SeamEaseAmountError::Weighted {
+                source_span: id(301),
+                side,
+            })
+        );
+        // This validates oracle input admission and the existing refusal boundary. The independent
+        // Fraction result is deliberately wider than the native reference Rational; weighted native
+        // quantities do not exist yet and no assertion below claims that they were executed.
+        let numerator = field(7).parse::<num_bigint::BigUint>().unwrap();
+        let denominator = field(8).parse::<num_bigint::BigUint>().unwrap();
+        assert!(numerator <= denominator);
+        widest_denominator = widest_denominator.max(denominator.bits());
+        let first = field(9).parse::<i64>().unwrap();
+        let second = field(10).parse::<i64>().unwrap();
+        assert_eq!(first + second, parent);
+        rows += 1;
+    }
+    assert_eq!(rows, 160);
+    assert_eq!(widest_denominator, 188);
+}
+
+#[test]
+fn nonuniform_recovery_notches_can_be_authored_in_later_frames_and_either_named_order() {
+    let mut f = fixture();
+    let first_definition = match f.notch(400, t(1, 4)) {
+        SewingLandmark::Notch(notch) => notch.definition().clone(),
+        SewingLandmark::Turn(_) => unreachable!("fixture constructs a notch"),
+    };
+    let second_definition = match f.notch(401, t(3, 4)) {
+        SewingLandmark::Notch(notch) => notch.definition().clone(),
+        SewingLandmark::Turn(_) => unreachable!("fixture constructs a notch"),
+    };
+    let original_edge = f.span().a.range.edge();
+    let fragments = f.ledger.split(&mut f.ids, original_edge, t(1, 2)).unwrap();
+    let marks = [
+        (first_definition, fragments.first()),
+        (second_definition, fragments.second()),
+    ]
+    .map(|(mut definition, edge)| {
+        definition.anchor = EdgeAnchor {
+            edge,
+            param: t(1, 2),
+        };
+        SewingLandmark::Notch(Notch::new(definition, f.pieces.first().unwrap(), &f.ledger).unwrap())
+    });
+    for (mark, original_at) in marks.iter().zip([t(1, 4), t(3, 4)]) {
+        assert_eq!(
+            mark.resolve(&f.ledger),
+            f.ledger.resolve(original_edge, original_at)
+        );
+    }
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(400),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(401),
+        },
+    ];
+    for (start, end) in [(id(400), id(401)), (id(401), id(400))] {
+        f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
+            side: SeamSideId::A,
+            start,
+            end,
+        };
+        let graph = f.graph(&marks).unwrap();
+        let portion = graph.spans().first().unwrap().retain_ease_source();
+        assert_eq!(portion.source().stops(), f.span().stops);
+        assert_eq!(
+            portion.source().uniform_explicit_cumulative_at_a(t(1, 2)),
+            Err(sc_core::ontology::SeamEaseAmountError::BetweenNotches {
+                source_span: id(301),
+                side: SeamSideId::A,
+                start,
+                end,
+            })
+        );
+    }
+}
+
 #[test]
 fn between_notches_requires_two_distinct_noncoincident_notch_stops_on_its_side() {
     let mut f = fixture();

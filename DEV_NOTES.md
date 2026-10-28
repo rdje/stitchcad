@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — due daily cleanup completed before nonuniform work
+## _(2026-10-28 UTC)_ — exact nonuniform arithmetic and context recovered
 
-0496 applies the frozen public plan at target/artifact_cleanup_audit/seam-20261028 after candidate review and the OS-visible idle guard. Removed4 generated trees/83 root logs,229 files/15007705B;producer residue0 and tracked_change=false.
-Immediate independent census and a fresh read-only recheck before launcher regeneration find all87 selected paths absent and all213 preserved entries exact (9084081 regular-file bytes). These hashes cover both original generation workspaces,including backups;candidate separation protects stores/certificates.
-All1032 unsafe/uncertain entries retained;Rust release/incremental/deps stray .bin/.log census0. Whole0495 scope/lesson/changelog retained651. No producer/runtime behavior change or new policy lesson;promotion declined in the leaf because this is routine execution of the existing cleanup contract.
-LIVE/README reviewed unchanged,G1 6/18;book/latest cleanup/task/live pointers synchronized. Next .3.2.4.1 exact nonuniform arithmetic/context recovery;full paired acceptance remains deferred to its owner.
-[Whole0495 tracking lesson](docs/history/stitchcad-devnotes-part651.md) retains exact source/proofs.
+0497 Fraction/common-denominator oracle freezes160 rows. Four valid quarter densities need188 bits;binary64 changes exact1µm result0 to1. Orient exact B cumulative fraction before rounding for Opposite;post-round subtraction assigns±1 half ties differently.
+Derived cumulative-field bound189N+ceil(log2N)+b,plus30 for source multiplication,is arithmetic feasibility only. Original-domain normalization may need189 bits;actual workspace admission/shared rounding remain implementation requirements.
+Illustrative lengths11000/10000,ease1000,densities1/3 require B21/40 at A half;actual geometry remains required. Native later-frame notch halves resolve original quarter/three-quarter;both named orders legal. Exact journal mappings/ambiguity/loss remain owned.
+Focused native2/46 filtered/scoped Clippy/fmt pass0;160 actual inputs admitted,current Weighted refusals preserved. Initial test compile101 used next on a slice;first fixes it. Promotion:indexed sewing decision. LIVE/README unchanged,G1 6/18;weighted/context/full paired execution pending.
+[Whole0496 cleanup lesson](docs/history/stitchcad-devnotes-part652.md) retains exact scope;3 Git spans verified.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.
