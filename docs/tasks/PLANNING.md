@@ -1171,7 +1171,7 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/window23.md#
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 paired prerequisite;owner G1-SLICE.6.5.3.2,in_progress before effects. Original source/Uniform/weighted/Notch/caller component checkpoint0527 scoped10/37/4+6 Design;caller0526 proof13/4/20 retained. Mathematical ease .3.2 closes;semantic stops .3.3 next,then lineage. Real formula/Profile/geometry,physical/authority/aggregate effects/full proof stay owned.
+P1 paired prerequisite;owner G1-SLICE.6.5.3.2,in_progress before effects. Mathematical/source ease checkpoint0527 scoped;caller0526 proof13/4/20 retained. Stop closed/copy/current contracts0529 verified;bounded stop admission .3.3.2 next,then memberships/views/lineage. Real formula/Profile/geometry,physical/authority/aggregate effects/full proof stay owned.
 Actual native structural_child_graph_acceptance_is_not_parent_ease_conservation passes:copied10+10 gives20 for parent10;independently authored5+5 also passes structural validation with DeferredToG2AndG3. Root:per-span fields/validation lack an original-parent relation. No split result is published;handler unavailable.
 Implement coupled parent-aware sources/quantization/provenance for explicit/formula/profile and distributions;standalone structural acceptance is not conservation proof.
 Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];root boundaries[0,1,0],signed symmetry. Native .2 root-query watch passes with original domains/direction;nonuniform/context/stops/lineage/effects and full paired acceptance remain pending.
@@ -1196,4 +1196,4 @@ Focused range20/notch4 and oracle14 pass0;five genuinely wide final fractions re
 
 ## D306 — independent seam oracles absent from automated gates
 
-Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Before:9 standalone producers/0 automated invocations. Closed driver/discovered probe+actual CI now run9 producers/11 fixtures;9 finite status/inventory/mismatch/wiring controls pass0,29 suites discovered. Native/kernel/fixtures unchanged;hosted verdict follows push400. Resume stops .3.3.
+Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687. Current gate10 producers/12 fixtures/9 finite guards pass;29 suites discovered. New stop oracle registered0529;missing/unknown/status/mismatch/wiring controls retained. Hosted verdict follows push400. Stop partition .3.3 continues.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — D306 exact seam oracle gate repaired
+## _(2026-10-28 UTC)_ — native closed semantic stop partition contracts
 
-0528 native Git census at6759525d proves9 seam producers/28 discovered probe runners/0 scoped invocation matches. Standalone oracle scripts were never registered with Make/CI;observed manual results remain valid. Own P1 D306 before next stop oracle/push;closed driver/discovered runner and actual CI step repair it.
-Focused runner9 exact producers/11 fixtures unchanged and9 finite controls pass0. Preserve stdout cmp/pipefail and child --check status;missing/unknown producers,args and removed wiring refuse. Unknown sentinel never executes. Scratch copies stay target/seam_oracle_watch on this volume;source hashes unchanged.
-Bash syntax/native source+oracle unchanged/book92/223/1587/2745/686 receipt3/retention1140 pass0. LIVE inventory29/D306 fixed;README/G1 6/18 unchanged. Actual hosted verdict follows push400/full gates. Mathematical producers/fixtures untouched. Closed stop membership recovery durably recorded;semantic partition next.
-[Whole0527 nonuniform checkpoint](docs/history/stitchcad-devnotes-part686.md) retains exact commands/proofs. Promotion declined:existing indexed claim-verification/CI rule enforcement. No new physical assumption;stop cut references preserve one semantic object across adjacent closed children before effects.
+0529 native2/scoped Clippy/fmt pass0:32 independent Fraction memberships,4 shared cuts,28 wrong-child refusals and4 reflected-copy/touching self-seam direction cases. Retain exact IDs/side/copy/authored order and actual later anchors with65-bit originals. One semantic cut object can be referenced by both children.
+Current graph membership is closed;partition will retain every closed membership. Test captures original template before ledger edit,then builds actual later anchor;retired-edge born constructor correctly refuses. No production partition/kernel/identity/physical effect added. Bounded stop admission .3.3.2 next.
+Gate10 producers/12 fixtures/9 finite guards/29 discovered suites,book93/223/1590/2758,glossary0/map/687 receipt3/retention1141 pass0. New stop chapter/source decision/task index/D301/D306 align. LIVE/README unchanged,G1 6/18;full paired/physical and hosted CI verdict remain later owners before effects/push.
+[Whole0528 oracle gate repair](docs/history/stitchcad-devnotes-part687.md) retains all original source/status/wiring proofs. Promotion declined:executable evidence for indexed stop/copy/current contracts. No new physical/export assumption;one existing semantic object survives closed boundary sharing.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

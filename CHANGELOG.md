@@ -3,13 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0528 — wire exact seam oracle producers into required gates
+## STITCHCAD-G1-0529 — verify closed semantic stop and copy contracts
 
-- Fix P1 D306: nine standalone seam oracle producers had no CI/discovered-probe invocation at6759525d. Add closed exact driver,discovered runner and actual doctrines CI step. Seven --check producers and two streaming stdout/fixture comparisons preserve original statuses and
-  complete inventory.
-- Focused9 exact producers/11 fixtures unchanged and9 finite gate controls pass. Mismatch,failed --check or stdout child,missing/unknown producer,args and removed CI/Make wiring refuse;unknown sentinel never executes. Same-volume scratch/source hashes and Bash syntax pass;no
-  mathematical/native fixture changes.
-- Whole0527 retained686/three exact Git spans;book92/223/1587/2745,retention1140 pass. LIVE inventory28→29/D306 fixed;README/G1 6/18 unchanged. Actual hosted verdict waits for push400/full gates. Resume semantic stops;closed cut-boundary recovery is durable under .3.3.
+- Native2/scoped Clippy/fmt pass for32 independent closed membership rows,4 shared cuts,28 wrong-child refusals and4 reflected-copy/touching self-seam direction cases. Keep one semantic object referenced by both adjacent cut children,exact side/copy/authored order and actual
+  later anchors with valid65-bit originals.
+- Register independent stop oracle in the closed required gate:10 producers/12 fixtures/9 finite guards pass,29 suites discovered. No production stop partition/kernel/identity/effect change. New chapter explains verified contract and remaining bounded admission/membership/view
+  implementation.
+- Whole0528 retained687/three exact Git spans;book93/223/1590/2758,glossary0/map/retention1141 pass. LIVE/README unchanged29 suites/G1 6/18. Actual bounded stop admission next;physical/authority/aggregate operations,paired effects and full/hosted verification remain owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

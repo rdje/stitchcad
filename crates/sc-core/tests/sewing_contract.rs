@@ -6652,3 +6652,258 @@ fn command_notch_ease_preserves_actual_context_ambiguity_and_coincidence_before_
         }
     }
 }
+
+fn stop_contract_children(
+    portions: [sc_core::ontology::SeamEasePortion; 2],
+    stops: [Vec<StopLandmark>; 2],
+) -> Vec<SeamSpanDefinition> {
+    portions
+        .into_iter()
+        .zip(stops)
+        .zip(302_u128..)
+        .map(|((portion, stops), identity)| SeamSpanDefinition {
+            id: id(identity),
+            a: portion.side(SeamSideId::A),
+            b: portion.side(SeamSideId::B),
+            direction: portion.source().direction(),
+            ease: portion.into(),
+            stops,
+        })
+        .collect()
+}
+#[test]
+fn paired_stop_contract_closed_membership_matches_independent_rows_and_actual_graph_refusals() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{OriginalPointLimits, UniquePointLimits};
+    let mut count = 0;
+    let mut shared = 0;
+    for row in include_str!("fixtures/seam_stop_partition.tsv")
+        .lines()
+        .filter(|row| !row.starts_with('#'))
+    {
+        let fields = row.split('\t').collect::<Vec<_>>();
+        assert_eq!(fields.len(), 9);
+        let field = |index: usize| *fields.get(index).unwrap();
+        let mut f = fixture();
+        let SewingLandmark::Notch(template) = f.notch(400, t(1, 4)) else {
+            unreachable!("Notch")
+        };
+        let side = match field(3) {
+            "A" => SeamSideId::A,
+            "B" => SeamSideId::B,
+            _ => panic!("frozen side"),
+        };
+        f.span_mut().direction = match field(4) {
+            "Same" => SeamDirection::Same,
+            "Opposite" => SeamDirection::Opposite,
+            _ => panic!("frozen direction"),
+        };
+        let source_edge = match side {
+            SeamSideId::A => f.span().a.range.edge(),
+            SeamSideId::B => f.span().b.range.edge(),
+        };
+        let anchor = if field(0).starts_with("wide-later") {
+            let fragment = f
+                .ledger
+                .split(&mut f.ids, source_edge, t(1, 3))
+                .unwrap()
+                .first();
+            let anchor = EdgeAnchor {
+                edge: fragment,
+                param: t(1, i64::MAX),
+            };
+            let projected = f
+                .ledger
+                .admit_original_point(
+                    fragment,
+                    anchor.param,
+                    source_edge,
+                    OriginalPointLimits::new(
+                        UniquePointLimits::new(
+                            NonZeroUsize::new(2).unwrap(),
+                            NonZeroUsize::new(4).unwrap(),
+                        ),
+                        NonZeroUsize::new(1).unwrap(),
+                        NonZeroU64::new(1000).unwrap(),
+                    ),
+                )
+                .unwrap()
+                .project()
+                .unwrap();
+            let coordinate = projected.unique().unwrap().coordinate();
+            assert!(coordinate.as_param().is_err());
+            assert_eq!(
+                coordinate.as_u128_ratio().unwrap(),
+                (field(1).parse().unwrap(), field(2).parse().unwrap())
+            );
+            anchor
+        } else {
+            EdgeAnchor {
+                edge: source_edge,
+                param: t(field(1).parse().unwrap(), field(2).parse().unwrap()),
+            }
+        };
+        let piece = f
+            .pieces
+            .get(if side == SeamSideId::A { 0 } else { 1 })
+            .unwrap();
+        let mut definition = template.definition().clone();
+        definition.anchor = anchor;
+        let notch = SewingLandmark::Notch(Notch::new(definition, piece, &f.ledger).unwrap());
+        let turn = TurnPoint::new(id(401), anchor, piece, &f.ledger).unwrap();
+        assert_eq!(
+            turn.geometric_validation(),
+            GeometricValidation::DeferredToG2
+        );
+        let marks = [notch, SewingLandmark::Turn(turn)];
+        let saved = marks.clone();
+        let authored = [
+            StopLandmark {
+                side,
+                landmark: id(401),
+            },
+            StopLandmark {
+                side,
+                landmark: id(400),
+            },
+        ];
+        f.span_mut().stops = authored.to_vec();
+        let graph = f.graph(&marks).unwrap();
+        let root = graph.spans().first().unwrap().retain_ease_source();
+        let request = SplitSeamSpan::new(
+            id(301),
+            EdgeAnchor {
+                edge: root.side(SeamSideId::A).range.edge(),
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: root.side(SeamSideId::B).range.edge(),
+                param: t(2, 3),
+            },
+        );
+        let binding = request.bind_source_cuts(&graph).unwrap();
+        let selected_cut = request.cut(side).param.as_rational();
+        assert_eq!(
+            (selected_cut.numerator(), selected_cut.denominator()),
+            (field(5).parse().unwrap(), field(6).parse().unwrap())
+        );
+        let expected = [field(7) == "1", field(8) == "1"];
+        assert!(expected[0] || expected[1]);
+        shared += usize::from(expected[0] && expected[1]);
+        let stops = expected.map(|belongs| if belongs { authored.to_vec() } else { vec![] });
+        f.definition.spans = stop_contract_children(
+            root.split_at(request.cut(SeamSideId::A), request.cut(SeamSideId::B))
+                .unwrap(),
+            stops.clone(),
+        );
+        let children = f.graph(&marks).unwrap();
+        for ((span, pair), expected_stops) in children
+            .spans()
+            .iter()
+            .zip(binding.paired_intervals())
+            .zip(stops)
+        {
+            assert_eq!(span.definition().stops, expected_stops, "{row}");
+            for side in [SeamSideId::A, SeamSideId::B] {
+                let actual = match side {
+                    SeamSideId::A => span.definition().a,
+                    SeamSideId::B => span.definition().b,
+                };
+                assert_eq!(actual, pair.side(side));
+            }
+            assert!(core::ptr::eq(
+                span.definition().ease.portion().unwrap().source(),
+                children.ease_sources().next().unwrap()
+            ));
+        }
+        assert_eq!(children.ease_sources().next().unwrap().stops(), authored);
+        assert_eq!(marks, saved);
+        // Independent expected membership must also reject putting a real stop in the wrong child.
+        if let Some(index) = expected.iter().position(|belongs| !*belongs) {
+            f.definition.spans.get_mut(index).unwrap().stops = authored.to_vec();
+            assert!(
+                matches!(f.graph(&marks),Err(SewingError::StopOutsideSide {span,stop})
+                if span==id(302+u128::try_from(index).unwrap()) && stop==authored[0]),
+                "{row}"
+            );
+        }
+        count += 1;
+    }
+    assert_eq!(count, 32);
+    assert_eq!(shared, 4);
+}
+#[test]
+fn paired_stop_contract_keeps_reflected_copy_and_touching_self_seam_side_tags_and_authored_order() {
+    for reflected in [false, true] {
+        for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+            let mut f = fixture();
+            let edge = f.span().a.range.edge();
+            f.span_mut().direction = direction;
+            f.span_mut().b = if reflected {
+                assert_eq!(
+                    f.plan.copy(id(201)).unwrap().orientation(),
+                    CopyOrientation::Reflected
+                );
+                SeamSide {
+                    copy: id(201),
+                    range: EdgeRange::whole(edge),
+                }
+            } else {
+                f.span_mut().a.range = EdgeRange::new(edge, Param::START, t(1, 2)).unwrap();
+                SeamSide {
+                    copy: id(200),
+                    range: EdgeRange::new(edge, t(1, 2), Param::END).unwrap(),
+                }
+            };
+            let mark = f.notch(400, t(1, 2));
+            let saved = mark.clone();
+            let authored = [
+                StopLandmark {
+                    side: SeamSideId::B,
+                    landmark: id(400),
+                },
+                StopLandmark {
+                    side: SeamSideId::A,
+                    landmark: id(400),
+                },
+            ];
+            f.span_mut().stops = authored.to_vec();
+            let graph = f.graph(core::slice::from_ref(&mark)).unwrap();
+            let root = graph.spans().first().unwrap().retain_ease_source();
+            let request = SplitSeamSpan::new(
+                id(301),
+                EdgeAnchor {
+                    edge,
+                    param: if reflected { t(1, 2) } else { t(1, 4) },
+                },
+                EdgeAnchor {
+                    edge,
+                    param: if reflected { t(2, 3) } else { t(3, 4) },
+                },
+            );
+            let stops = match (reflected, direction) {
+                (true, SeamDirection::Same) => [authored.to_vec(), vec![authored[1]]],
+                (true, SeamDirection::Opposite) => [vec![authored[1]], authored.to_vec()],
+                (false, SeamDirection::Same) => [vec![authored[0]], vec![authored[1]]],
+                (false, SeamDirection::Opposite) => [vec![], authored.to_vec()],
+            };
+            f.definition.spans = stop_contract_children(
+                root.split_at(request.cut(SeamSideId::A), request.cut(SeamSideId::B))
+                    .unwrap(),
+                stops.clone(),
+            );
+            let children = f.graph(core::slice::from_ref(&mark)).unwrap();
+            for (span, expected) in children.spans().iter().zip(stops) {
+                assert_eq!(span.definition().stops, expected);
+                assert_eq!(span.definition().a.copy, id(200));
+                assert_eq!(
+                    span.definition().b.copy,
+                    if reflected { id(201) } else { id(200) }
+                );
+                assert_eq!(span.definition().direction, direction);
+            }
+            assert_eq!(mark, saved);
+            assert_eq!(children.ease_sources().next().unwrap().stops(), authored);
+        }
+    }
+}

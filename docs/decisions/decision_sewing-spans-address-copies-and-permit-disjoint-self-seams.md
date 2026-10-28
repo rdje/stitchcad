@@ -15,8 +15,9 @@ but cannot overlap positively;different copies of one Piece are distinct materia
 and one-to-many spans remain supported,including the reference band's folded closure.
 
 Stops name semantic Notches or edge-anchored TurnPoints on explicit sides and must belong to the
-copy's actual Piece/current interval. Preserve duplicate/missing/outside/choice/repair causes;
-replacement never reassigns seams or Gathers. Semantic marks are not tessellation indices.
+copy's actual Piece/current interval. Closed cut membership retains one semantic object referenced
+by both adjacent children;preserve authored order/side/copy and duplicate/missing/outside/choice/repair
+causes. Replacement never reassigns seams or Gathers. Semantic marks are not tessellation indices.
 
 Declared sewing ease is signed A-minus-B,distinct from body-to-garment POM ease. Literal,formula
 parameter and logical profile roles remain distinct. Uniform is explicit;weighted densities are

@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.3 in docs/tasks/G1-SLICE-execution.md:actual semantic stop partition.
-  Recover/own safe children before code;existing membership is closed at cuts,so one semantic
-  landmark can be referenced by both adjacent children. Preserve side/copy/authored order and
-  actual current point/range evidence;native contract cases precede bounded partition. Then lineage.
-- P1 D306 oracle automation gap fixed0528:closed nine-producer/eleven-fixture driver,discovered
-  runner and actual doctrines CI step. Nine finite controls pass,including pipeline child status,
-  missing/unknown producers and removed wiring.29 suites discovered;hosted verdict awaits push.
-- Whole0527 retained686/3 exact Git spans;book92/223/1587/2745/retention1140 pass. LIVE inventory29/
-  D306 fixed;README/G1 6/18 unchanged. Mathematical/source ease checkpoint0527 remains scoped;
-  captured caller0526 proof13/4/20 retained685 with unchanged production sources/oracles.
-- Real formula execution .5e.2/.5e.4,Profile G4,geometry G2/.5f.3b/G3,paired stops/lineage/authority/
-  aggregate operations/effects/full proof remain explicit owners before effect consumption. No
-  provider/physical substitute. Consume all preparation/commit terminals;native --index authority
-  mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400 after full gates.
+- Next G1-SLICE.6.5.3.2.3.3.2 in docs/tasks/G1-SLICE-execution.md:explicit bounded actual
+  stop/source/registry/point/range workspace admission. Read actual current proof ports and derive
+  complete populations/checked cache/output bounds before allocation. Then .3 bounded memberships,
+  .4 ordered borrowed views/Design integration,.acceptance scoped checkpoint;lineage follows.
+- Closed stop contracts0529 pass native2/scoped Clippy/fmt:32 independent A/B/direction rows,
+  4 shared cuts,28 wrong-child refusals,4 reflected-copy/touching self-seam scenarios. Preserve one
+  semantic object referenced by both closed cut children,side/copy/authored order and later-frame
+  anchors with valid65-bit original denominator despite Param refusal. Production partition pending.
+- Oracle gate now10 producers/12 fixtures/9 finite guards,29 suites discovered,all focused pass0.
+  Book93/223/1590/2758,glossary0/map,687 receipt3/retention1141 pass;whole0528 retained687.
+  LIVE/README unchanged29 suites/G1 6/18. D306 fixed;hosted verdict waits for push400/full gates.
+- Real formula/Profile/geometry/physical/current authority/aggregate operations/paired effects/full
+  proof remain explicit owners. No repair/provider/physical substitute. Consume preparation/commit
+  terminals;native --index authority mandatory. Full PNT continues;derive Git HEAD/ahead count.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

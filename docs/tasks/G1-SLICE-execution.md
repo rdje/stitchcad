@@ -333,7 +333,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0527 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part686.md).
 - ID: `G1-SLICE.6.5.3.2.3.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: preserve actual semantic stops/copy ownership,cut-boundary behavior and original authored order
   in paired child partitions;use actual current anchors/range evidence rather than guessed assignment.
   Recovery0528:existing sewing range_contains_point uses closed <= endpoints;positive overlap
@@ -341,6 +341,62 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   object. Same/Opposite changes B pair order,not side/copy ownership. Native contract cases must
   preserve this actual behavior,authored order and later-frame/current evidence before partition.
   Begin only after the committed D306 oracle-watch prerequisite;then own bounded stop sub-slices.
+  Children .1 actual closed membership/copy/current contract;.2 bounded actual stop admission;
+  .3 bounded paired range/unique point membership;.4 ordered borrowed stop partitions and actual
+  Design integration;.acceptance deferred scoped component checkpoint after implementation.
+- ID: `G1-SLICE.6.5.3.2.3.3.1`
+  Status: `done`
+  Goal:0529 executable existing closed semantic stop/copy/current contracts and independent
+  membership fixture;bounded production stop partition still owned .2–.4.
+  - [x] REPRODUCE / ISSUE: 0529 cargo test -p sc-core --test sewing_contract paired_stop_contract
+    →2 passed/95 filtered,rc=0. Existing graph accepts one semantic cut landmark referenced by both
+    closed adjacent children. Same/Opposite B order and named side/copy cannot be guessed from q.
+  - [x] ROOT CAUSE: 0529 cargo test -p sc-core --test sewing_contract paired_stop_contract
+    →2 passed,rc=0. Existing range_contains_point uses inclusive endpoints;positive self-overlap
+    uses strict comparison. Native actual retained child graphs confirm complete closed membership,
+    original authored order and actual current range/semantic point frames without coordinate narrowing.
+    Fixture template is captured before the ledger edit:born construction on its retired edge
+    correctly refused MissingEdge;explicit actual later anchors preserve the intended frame test.
+  - [x] FIX: 0529 independent Fraction32-row oracle and native real Notch/Turn/child graph contract
+    cases establish full closed-member partition expectations. Cut reference belongs to both adjacent
+    children,without a new semantic object. Register new oracle with closed gate before use;current
+   10-producer/12-fixture gate and9 finite guards pass,rc=0. No production partition/kernel change.
+  - [x] ADDRESSED: 0529 cargo test -p sc-core --test sewing_contract paired_stop_contract
+    →2 passed/95 filtered,rc=0. Thirty-two A/B x Same/Opposite rows include4 exact shared cuts,
+    full endpoints and actual later anchors whose original1/(3MAX) denominator65 has no Param view.
+    Independent expected memberships admit real retained graphs;28 wrong-child assignments refuse
+    actual first authored StopOutsideSide. Four reflected-copy/touching self-seam direction scenarios
+    retain named copies,side tags,original ID/root stops and B-before-A order for one shared mark.
+    Both semantic kinds stay unchanged;physical representations/geometric turning remain deferred.
+  - [x] NO REGRESSION: 0529 cargo clippy -p sc-core --test sewing_contract -- -D warnings and
+    cargo fmt --all --check →pass,rc=0. local_environment.py -- bash run_seam_partition_probes.sh
+    →10 exact producers/12 fixtures unchanged/9 finite inventory/status/wiring guards,29 discovered
+    suites,rc=0. Native commands use local_environment.py. Book/publication93/223/1590/2758,
+    glossary310/9/158/0,map unchanged,687 receipt3 exact Git spans,retention1141 logical/46 working/
+    64087 decodedL/4964948 decodedB/2542285 residentB →pass,rc=0. Full source/current/quantity kernels
+    unchanged;bounded stop implementation .2–.4,component .acceptance and full paired proof stay owned.
+  - [x] LOCKSTEP: 0529 new bounded stop chapter/SUMMARY/topic/source links,closed membership in
+    canonical sewing decision,gate/build book current counts,task index/D301/D306/MEMORY/DEV/CHANGE
+    align. Whole0528 retained687/3 exact Git spans. LIVE reviewed unchanged29 suites/G1 6/18;README
+    unchanged. Next .3.3.2 actual bounded stop admission. No new identities,geometry,physical matching,
+    source repair choice or command effect. Shared-cut finding surfaced and durably owned here.
+    promotion: declined (executable evidence extends indexed stop/copy/current contracts;no new physical or export assumption).
+- ID: `G1-SLICE.6.5.3.2.3.3.2`
+  Status: `pending`
+  Goal: explicit finite actual command source/stop/registry/point/range workspace admission before
+  projection/collections;preserve actual target/stop/side/copy/limit causes and original error chains.
+- ID: `G1-SLICE.6.5.3.2.3.3.3`
+  Status: `pending`
+  Goal: bounded actual current pair-range coverage and unique semantic point membership;closed
+  endpoints,all repair/choice/numeric/refusal evidence and full declared frame semantics survive.
+- ID: `G1-SLICE.6.5.3.2.3.3.4`
+  Status: `pending`
+  Goal: ordered borrowed child stop partitions from actual admitted current evidence,with exact
+  side/copy/semantic identity and cut-boundary sharing;actual Design caller integration before effects.
+- ID: `G1-SLICE.6.5.3.2.3.3.acceptance`
+  Status: `pending`
+  Goal: deferred scoped actual stop component checkpoint after .1–.4;full paired lineage/effect/
+  physical/mutation verification remains .6.5.3.2.acceptance.
 - ID: `G1-SLICE.6.5.3.2.3.4`
   Status: `pending`
   Goal: canonical retired-parent/new-child span lineage with actual identity ownership and references;
@@ -355,37 +411,4 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.6.5.3.2.oracle-watch`
   Status: `done`
-  Goal:0528 P1 D306 wire all nine maintained seam oracle producers into discovered make probes
-  and actual CI before new stop oracle/next push. Native fixtures and mathematical sources unchanged.
-  - [x] REPRODUCE / ISSUE: 0528 git ls-tree -r --name-only 6759525d census →9 tracked seam
-    *_oracle.py producers/28 run_*probe*.sh runners;git grep scoped .github/crates/scripts/Makefile/
-    .githooks/artifact shell entrypoints for seam_partition/nonuniform_ease_oracle/notch_quantity_oracle
-    →0 invocation matches,expected grep rc=1;combined Python assertion diagnostic rc=0. Existing
-    native tests consume frozen TSV rows,while independent producers were only invoked manually.
-  - [x] ROOT CAUSE: 0528 git ls-tree -r --name-only 6759525d plus scoped git grep census
-    →9 producers/28 discovered runners/0 invocations at6759525dbb0d8ab9a8eb59670f9ffab66ae3d066,rc=0. Make only discovers run_*probe*.sh;
-    standalone *_oracle.py files were never registered. CI's native/doctrine/handoff steps supplied
-    no independent producer invocation. Missing automation did not invalidate observed oracle runs.
-  - [x] FIX: 0528 explicit closed driver runs seven --check producers and streams older progress/
-    Uniform stdout through exact cmp with pipefail. Discoverable runner composes actual producer
-    gate plus finite controls;real doctrines CI step invokes that same runner. Inventory refuses
-    missing/unknown producers before admitting success;unknown scripts never execute. Native
-    local_environment.py -- bash run_seam_partition_probes.sh →9 exact producers and9 controls
-    passed,rc=0. No data/kernel/fixture retuning or fallback success output.
-  - [x] ADDRESSED: 0528 same focused runner →9 producers/11 frozen fixtures unchanged,9 finite
-    controls pass,29 discovered probe suites and actual CI/Make wiring checked,rc=0. Baseline,
-    stdout mismatch,failed --check child,correct stdout+failed child,missing/unknown producer,
-    unsupported argument and removed CI/Make wiring all retain the intended verdict. Unknown
-    producer sentinel remains absent;original statuses cannot be hidden by plausible stdout.
-  - [x] NO REGRESSION: 0528 bash -n check_seam_oracles.sh run_seam_partition_probes.sh →rc=0.
-    git diff --quiet HEAD -- crates docs/tasks/artifacts/seam_partition/*_oracle.py →rc=0;
-    all actual mathematical producers/native fixtures unchanged. Fixture controls only copy known
-    files to target/seam_oracle_watch,verify same-volume real directories and source hashes,then
-    remove owned scratch. Book/publication92/223/1587/2745,686 receipt3 exact Git spans,retention1140
-    logical/45 working/64024 decodedL/4958409 decodedB/2535746 residentB →pass,rc=0. Full CI remains
-    required before push400;actual hosted CI verdict/monitoring follows that authorized push.
-  - [x] LOCKSTEP: 0528 D306 tracked/fixed in PLANNING (four surplus blank lines tightened,not caps),
-    LIVE inventory28→29/D306 fix,build book/task index/MEMORY/DEV/CHANGE align. README reviewed
-    unchanged,G1 6/18. Whole0527 retained686/3 exact Git spans. Existing closed stop membership
-    recovery recorded under pending .3.3;resume its owned native contract/bounded partition next.
-    promotion: declined (repair enforces existing indexed claim-verification/CI doctrine;no new policy or physical assumption).
+  Goal:0528 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part687.md).
