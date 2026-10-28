@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0480
+## Current leaf acceptance —0481
 
-- [x] ROOT CAUSE: glossary census/current Rust declarations →remaining97 rows include size-set APIs/local names rc=0;parent40386B needs bounded headroom.
-- [x] ADDRESSED: same census →32 rows rc=1 expected;exact difference65 resolved/0 new,whole axis move oracle passes rc=0.
-- [x] NO REGRESSION: copied declaration removal2 controls pass;mdbook/publication →87/161/1555/2637 rc=0,old anchors retained;code unchanged.
+- [x] ROOT CAUSE: glossary census/current core definitions →25 formula API/method rows without token declarations rc=0;existing binding table also leaves its type unquoted.
+- [x] ADDRESSED: same census →7 rows rc=1 expected;Python exact set delta25 resolved/0 new rc=0;all formula chapter populations clear.
+- [x] NO REGRESSION: mdbook build/publication →87 chapters/161 API rows/1555 source/2638 rendered links rc=0;Rust/census unchanged.
 
 ## Goal
 
@@ -638,18 +638,21 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0479 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part634.md).
 - ID: `G1-SLICE.6.vocabulary.2`
   Status: `done`
-  Goal: canonical size-set/axis/break/transformation/local declarations;bounded whole axis chapter move.
-  - [x] REPRODUCE / ISSUE: bash docs/tasks/artifacts/glossary/run_glossary_census.sh →97 rows rc=1;size-set chapters lack type/variant/method/example declarations.
-  - [x] ROOT CAUSE: Python current Rust/table review and byte census →parent40386B leaves574B,rc=0;canonical interfaces exist without local declarations.
-  - [x] FIX: declare actual APIs/fields/local variables;move complete axis/member contract to linked size-axes,retain old anchors and update navigation/API-status rows;no runtime/census exemptions.
-  - [x] ADDRESSED: same glossary census →32 rows rc=1 expected;Python set difference →65 resolved/0 new rc=0;whole moved body equals Git source except one explicit navigation sentence rc=0.
-  - [x] NO REGRESSION: Python actual copied SizeAxis/SizeSetResolutionIntent declaration removals →2 named refusals rc=1 expected,driver rc=0;mdbook build/publication →87 chapters/161 API rows/1555 source/2637 rendered links rc=0.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/indexed decision/index updated;LIVE reviewed unchanged G1 6/18,D250 owned;README unchanged. transition_receipts.py --record part634 →3 exact Git spans rc=0;history_archive.sh verify-retention →1088/2453918 residentB rc=0.
-  Verification: focused declarations/body/navigation/book/retention pass;remaining32 and full glossary acceptance stay owned.
-  Commit: STITCHCAD-G1-0480;next .vocabulary.3 formula runtime declarations.
+  Goal:0480 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part635.md).
 - ID: `G1-SLICE.6.vocabulary.3`
-  Status: `pending`
+  Status: `done`
   Goal: canonical formula checked-tree,bindings,runtime provenance/comparison API and method declarations.
+  - [x] REPRODUCE / ISSUE: bash docs/tasks/artifacts/glossary/run_glossary_census.sh →32 rows rc=1;25 rows belong to three formula annexes.
+  - [x] ROOT CAUSE: Python census/core source review →existing types/methods lack token-first declaration rows;bound type has an unquoted first cell,rc=0.
+  - [x] FIX: declare actual static proof/root,stored scalar/bound value and value-level source/operator/binding/comparison/assertion/conditional meanings;preserve execution boundaries.
+  - [x] ADDRESSED: same glossary census →7 rows rc=1 expected;Python set difference →25 resolved/0 new rc=0;no formula chapter failures remain.
+  - [x] NO REGRESSION: mdbook build plus book_publication.py main_inputs/check →87 chapters/161 API rows/1555 source/2638 rendered links rc=0;no Rust/API/census changes.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/indexed decision/index updated;LIVE reviewed unchanged G1 6/18,D250 owned;README unchanged. transition_receipts.py --record part635 →3 exact Git spans rc=0;history_archive.sh verify-retention →1089/2458081 residentB rc=0.
+  Verification: focused declaration delta/book/retention pass;seven local-example rows and full glossary acceptance stay owned.
+  Commit: STITCHCAD-G1-0481;next .vocabulary.4 local resource examples.
+- ID: `G1-SLICE.6.vocabulary.4`
+  Status: `pending`
+  Goal: declare source/model accounting example-local names by actual fixture meaning;close remaining C1 rows.
 - ID: `G1-SLICE.6.5`
   Status: `in_progress`
   Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.

@@ -317,7 +317,8 @@ bounds; nearest-integer rounding cannot cross those bounds. Count remains nonneg
 
 | API | Available behavior |
 | --- | --- |
-| FormulaBoundValue | Private numeric integer/kind or Boolean payload |
+| `FormulaBoundValue` | Private numeric integer/kind or Boolean payload |
+| `ScalarInputValue` | Canonical typed scalar payload; numeric conversion preserves exact internal units and refuses Boolean |
 | from_numeric | One binding rounding/storage check with an actual supplied name |
 | from_boolean | Store Boolean directly without numeric conversion |
 | kind | Inspect the stored numeric or Boolean kind |

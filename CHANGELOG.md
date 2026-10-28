@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0480 — declare size-set vocabulary and split the complete axis contract
+## STITCHCAD-G1-0481 — declare actual formula value API vocabulary
 
-- Declare actual size-set,axis,break and transformation API/field/local-example meanings;resolve65 more C1 token/use pairs,97→32 with0 new.
-- Move the complete axis/member contract into a bounded linked chapter;preserve old anchors,update incoming navigation and API-status owners. Whole-body oracle and two actual declaration-removal controls pass.
-- Final book87 chapters/161 API rows/1555 source/2637 rendered links passes. No runtime or census exemption changes. Whole0479 retained634;continue formula declarations.
+- Declare checked-expression/root,canonical scalar/stored binding and value-level approximation/operator/binding/tolerance/assertion/conditional meanings in three annexes.
+- Resolve25 more C1 token/use pairs,32→7 with0 new;no formula rows remain. Keep static proof,value computation and full expression/statement execution distinct;no Rust/API/census change.
+- Final book87 chapters/161 API rows/1555 source/2638 rendered links passes. Whole0480 retained635;continue seven resource-example rows before full glossary acceptance.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

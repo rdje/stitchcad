@@ -39,6 +39,8 @@ Root kind, canonical expression identity and the existing dependency slice retai
 
 | Node API | Meaning |
 | --- | --- |
+| `FormulaCheckedExpression` | Complete static proof over one actual normalized expression owner |
+| `root` | Borrow the certified root node after complete traversal succeeds |
 | expression | Actual original normalized owner |
 | span | Original half-open source extent, including grouping |
 | kind | Inferred quantity/Boolean/geometry kind of this actual node |

@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — size-set vocabulary and bounded axis chapter
+## _(2026-10-28 UTC)_ — formula value API declarations
 
-0480 .6.vocabulary.2 declares actual size-set,axis,break and transformation APIs/fields/local example names. Existing parent40386B left574B;whole axis/member contract moves to its own bounded chapter,with original anchors retained.
-Python source oracle proves moved body byte-equal except one navigation sentence. Update SUMMARY/topic index,actual incoming links and two API-status rows;no Rust or census policy changes. Exact C1 delta97→32:65 resolved/0 new.
-Two copied actual SizeAxis/SizeSetResolutionIntent declaration removals refuse by name;driver passes0. Final mdbook/publication87 chapters/161 API rows/1555 source/2637 rendered links pass0;full glossary acceptance remains owned.
-Promotion:indexed machine-token decision;whole0479 scope/lesson/changelog634 verifies3 Git spans. Retention1088/2453918 residentB passes0. LIVE reviewed unchanged:G1 6/18,D250 owned;README unchanged. Next formula declarations .vocabulary.3.
-[Whole0479 command declaration lesson](docs/history/stitchcad-devnotes-part634.md) retains exact140→97 delta and five copied controls.
+0481 .6.vocabulary.3 quotes existing core static proof/root,canonical scalar/stored binding and value-level approximation/operator/binding/tolerance/assertion/conditional API meanings in three formula annexes. The old bound-value table left its type unquoted.
+Exact census difference32→7:25 resolved/0 new;all formula populations clear. Types and method meanings come from actual core definitions. Static checking,value-level computation and complete expression/statement execution remain distinct;no Rust/API or census change.
+Final mdbook/publication87 chapters/161 API rows/1555 source/2638 rendered links pass0. Remaining seven source/model-example rows and full glossary acceptance are still owned. This focused doc check claims no new runtime verification.
+Promotion:indexed machine-token decision;whole0480 scope/lesson/changelog635 verifies3 Git spans. Retention1089/2458081 residentB passes0. LIVE reviewed unchanged:G1 6/18,D250 owned;README unchanged. Next .vocabulary.4.
+[Whole0480 size-set/axis lesson](docs/history/stitchcad-devnotes-part635.md) retains exact97→32 delta,whole-body oracle and copied controls.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

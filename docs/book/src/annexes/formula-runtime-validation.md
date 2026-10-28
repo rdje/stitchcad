@@ -303,6 +303,35 @@ adapters and complete production diagnostic/provenance context retain their sepa
 
 ## Approximation contributions and admissible classes
 
+### Value API vocabulary
+
+These are the existing core value-level interfaces. Their construction does not prove AST execution,
+provider truth, statement publication or numerical availability of an authored input.
+
+| API token | Meaning |
+| --- | --- |
+| `FormulaApproximationSources` | Immutable distinct approximation-producing call contributions |
+| `for_call` | Source-set constructor for a successful call's own contribution |
+| `union` | Immutable deduplicated merge of supplied executed dependency sets |
+| `with_call` | Merge a call's own contribution into an existing source set |
+| `iter` | Iterate distinct contributing built-ins in lexical machine-token order |
+| `FormulaEvaluatedScalar` | Numeric or Boolean value beside its approximation source set |
+| `from_numeric` | Evaluated-scalar constructor without contributions; bound-value API performs one storage rounding |
+| `from_boolean` | Preserve actual Boolean content without numeric conversion or call contributions |
+| `with_call_source` | Attach a supplied successful call's contribution to an evaluated scalar |
+| `influenced_by` | Merge additional executed dependency contributions without removing earlier ones |
+| `checked_unary` | Apply the admitted unary numeric operator and retain its input sources |
+| `checked_binary` | Apply admitted arithmetic/bare comparison and retain both operands' sources |
+| `bind` | Round/store one scalar once, preserving its source set or original refusal |
+| `FormulaEvaluatedBinding` | Stored integer/kind or Boolean plus its original approximation sources |
+| `read` | Read stored scalar with sources; tolerance/size contexts instead read their explicitly named value |
+| `FormulaToleranceValue` | Actual named class, quantitative limit, derivation and intrinsic/provider source |
+| `FormulaToleranceComparison` | Both supplied sourced operands, actual tolerance and Boolean outcome |
+| `FormulaToleranceComparisonError` | Original operands/context and first dimension or approximation refusal |
+| `FormulaSatisfiedAssertion` | Actual supplied assertion name and an admitted true comparison |
+| `FormulaAssertionFailure` | Actual name and admitted false comparison, without a replacement result |
+| `FormulaConditionalValueError` | Input-kind, selected computation or returned-kind refusal for lazy value control |
+
 ### Product source-set primitive
 
 `FormulaApproximationSources` now supplies an immutable, deduplicated set of existing built-ins.

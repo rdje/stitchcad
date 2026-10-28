@@ -95,3 +95,12 @@ Move a complete coherent contract to a linked bounded chapter,retain old anchors
 navigation/API-status owners. The axis/member body is byte-equal to Git source except one navigation
 sentence;no policy ceiling rises. Size-set local API/example declarations resolve65 more C1 rows,
 97→32 with0 new;two actual copied declaration removals refuse by name. Execution remains unchanged.
+
+## Formula declaration meaning0481
+
+answers: "does declaring a formula value API certify whole expression execution?"
+
+No. Quote actual static proof/root,canonical scalar/stored binding and runtime value/source/operator/
+comparison/assertion/conditional interfaces while retaining their distinct execution boundaries.
+Three annexes resolve25 more rows,32→7 with0 new. A bare type name in a table is still not a token
+column declaration;the existing bound-value row now quotes its actual name. Rust/API behavior stays unchanged.
