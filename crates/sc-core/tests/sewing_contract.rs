@@ -6153,3 +6153,502 @@ fn command_weighted_ease_accepts_valid_original_normalization_beyond_reference_w
     );
     assert_eq!(view.second_amount(), Length::from_micrometres(1).unwrap());
 }
+
+fn command_notch_capture<'a>(
+    request: &'a SplitSeamSpan,
+    graph: &'a SewingGraph,
+) -> sc_core::command::CommandEaseCapture<'a> {
+    use core::num::NonZeroUsize;
+    request
+        .bind_source_cuts(graph)
+        .unwrap()
+        .admit_ease_capture(sc_core::command::CommandEaseCaptureLimits::new(
+            NonZeroUsize::new(3).unwrap(),
+        ))
+        .unwrap()
+        .capture()
+}
+fn command_notch_limits(bits: u64) -> sc_core::ontology::NotchEaseLimits {
+    sc_core::ontology::NotchEaseLimits::new(core::num::NonZeroU64::new(bits).unwrap())
+}
+#[test]
+fn command_notch_ease_borrows_actual_context_and_original_signed_pair_boundaries() {
+    for side in [SeamSideId::A, SeamSideId::B] {
+        for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+            for signed in [-1, 0, 1] {
+                let (mut f, mut marks) = notch_source_fixture();
+                f.span_mut().direction = direction;
+                f.span_mut().ease.declared_mut().unwrap().amount =
+                    EaseAmount::Explicit(Length::from_micrometres(signed).unwrap());
+                f.span_mut().ease.declared_mut().unwrap().distribution =
+                    EaseDistribution::BetweenNotches {
+                        side,
+                        start: id(401),
+                        end: id(400),
+                    };
+                for stop in &mut f.span_mut().stops {
+                    stop.side = side;
+                }
+                if side == SeamSideId::B {
+                    let edge = f.span().b.range.edge();
+                    marks = notch_definitions(&marks)
+                        .into_iter()
+                        .map(|mut definition| {
+                            definition.anchor.edge = edge;
+                            SewingLandmark::Notch(
+                                Notch::new(definition, f.pieces.last().unwrap(), &f.ledger)
+                                    .unwrap(),
+                            )
+                        })
+                        .collect();
+                }
+                let graph = f.graph(&marks).unwrap();
+                let span = graph.spans().first().unwrap();
+                let request = SplitSeamSpan::new(
+                    span.id(),
+                    EdgeAnchor {
+                        edge: span.definition().a.range.edge(),
+                        param: t(1, 2),
+                    },
+                    EdgeAnchor {
+                        edge: span.definition().b.range.edge(),
+                        param: t(1, 2),
+                    },
+                );
+                let capture = command_notch_capture(&request, &graph);
+                let saved = (f.ledger.clone(), marks.clone(), span.definition().clone());
+                let context =
+                    original_context(&f, capture.source(), &marks, notch_source_limits(13, 1, 4))
+                        .unwrap();
+                let view = capture
+                    .notch_explicit_ease(&context, command_notch_limits(473))
+                    .unwrap();
+                let parent = Length::from_micrometres(signed).unwrap();
+                assert!(core::ptr::eq(view.capture(), &capture));
+                assert!(core::ptr::eq(view.original_context(), &context));
+                assert!(core::ptr::eq(view.original_source(), capture.source()));
+                assert!(core::ptr::eq(view.request(), &request));
+                assert!(core::ptr::eq(view.span(), span));
+                assert!(core::ptr::eq(
+                    context.validation().admission().ledger(),
+                    &f.ledger
+                ));
+                assert!(core::ptr::eq(view.notch_admission().context(), &context));
+                assert_eq!(view.notch_admission().integer_bit_bound(), 473);
+                assert_eq!(view.notch_admission().limits(), command_notch_limits(473));
+                assert_eq!(view.distribution_side(), side);
+                assert_eq!(view.source_parent_amount(), parent);
+                assert_eq!(view.parent_amount(), parent);
+                // Half-away tie:for B/Opposite complement precedes rounding,so first is1,
+                // rather than the erroneous full1-minus-rounded-prefix1 =0.
+                assert_eq!(view.first_amount(), parent);
+                assert_eq!(view.second_amount(), Length::ZERO);
+                assert_eq!(
+                    view.first_amount().checked_add(view.second_amount()),
+                    Ok(parent)
+                );
+                assert_eq!(
+                    view.paired_intervals(),
+                    capture.binding().paired_intervals()
+                );
+                assert_eq!(
+                    view.amount_in(capture.portion().side(side).range).unwrap(),
+                    parent
+                );
+                let reversed = side == SeamSideId::B && direction == SeamDirection::Opposite;
+                for (param, amount) in [
+                    (t(1, 4), if reversed { parent } else { Length::ZERO }),
+                    (t(3, 4), if reversed { Length::ZERO } else { parent }),
+                ] {
+                    assert_eq!(
+                        view.cumulative_at(EdgeAnchor {
+                            edge: capture.source().side(side).range.edge(),
+                            param,
+                        })
+                        .unwrap(),
+                        amount
+                    );
+                }
+                assert_eq!((f.ledger.clone(), marks, span.definition().clone()), saved);
+            }
+        }
+    }
+}
+#[test]
+fn command_notch_ease_uses_shared_original_context_for_retained_targets_without_renormalizing() {
+    let (mut f, marks) = notch_source_fixture();
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    f.definition.spans = retained_children(&f, &marks);
+    let graph = f.graph(&marks).unwrap();
+    let first_span = graph.spans().first().unwrap();
+    let second_span = graph.spans().get(1).unwrap();
+    let request = SplitSeamSpan::new(
+        first_span.id(),
+        EdgeAnchor {
+            edge: first_span.definition().a.range.edge(),
+            param: t(3, 8),
+        },
+        EdgeAnchor {
+            edge: first_span.definition().b.range.edge(),
+            param: t(5, 8),
+        },
+    );
+    let other_request = SplitSeamSpan::new(
+        second_span.id(),
+        EdgeAnchor {
+            edge: second_span.definition().a.range.edge(),
+            param: t(3, 4),
+        },
+        EdgeAnchor {
+            edge: second_span.definition().b.range.edge(),
+            param: t(1, 4),
+        },
+    );
+    let capture = command_notch_capture(&request, &graph);
+    let other = command_notch_capture(&other_request, &graph);
+    assert!(core::ptr::eq(capture.source(), other.source()));
+    assert!(first_span.definition().stops.is_empty());
+    assert_eq!(capture.source().stops().len(), 2);
+    let context =
+        original_context(&f, capture.source(), &marks, notch_source_limits(13, 1, 4)).unwrap();
+    let view = capture
+        .notch_explicit_ease(&context, command_notch_limits(473))
+        .unwrap();
+    assert_eq!(
+        (view.span().id(), view.original_source().span()),
+        (id(302), id(301))
+    );
+    assert_eq!(
+        (
+            view.parent_amount().as_micrometres(),
+            view.first_amount().as_micrometres(),
+            view.second_amount().as_micrometres()
+        ),
+        (1, 0, 1)
+    );
+    // A separately declared rounded child Uniform source normalizes3/8 over[0,1/2] to3/4,
+    // giving first1. The actual retained original notch progress is1/4,giving first0.
+    let mut child = fixture();
+    child.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    child.span_mut().a.range =
+        EdgeRange::new(child.span().a.range.edge(), Param::START, t(1, 2)).unwrap();
+    child.span_mut().b.range =
+        EdgeRange::new(child.span().b.range.edge(), t(1, 2), Param::END).unwrap();
+    let child_graph = child.graph(&[]).unwrap();
+    let child_request = SplitSeamSpan::new(
+        child.span().id,
+        request.cut(SeamSideId::A),
+        request.cut(SeamSideId::B),
+    );
+    assert_eq!(
+        child_request
+            .bind_source_cuts(&child_graph)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap()
+            .first_amount()
+            .as_micrometres(),
+        1
+    );
+    let upper = other
+        .notch_explicit_ease(&context, command_notch_limits(473))
+        .unwrap();
+    assert_eq!(upper.span().id(), id(303));
+    assert_eq!(upper.source_parent_amount().as_micrometres(), 1);
+    assert_eq!(upper.parent_amount(), Length::ZERO);
+    assert_eq!(
+        upper.first_amount().checked_add(upper.second_amount()),
+        Ok(Length::ZERO)
+    );
+    // The full original domain,including outside this consuming target,is still queryable.
+    assert_eq!(
+        upper
+            .amount_in(capture.portion().side(SeamSideId::A).range)
+            .unwrap()
+            .as_micrometres(),
+        1
+    );
+    use sc_core::command::{CommandEaseQuantityStage as Stage, CommandNotchEaseError as Error};
+    use sc_core::ontology::{NotchEaseAmountError, NotchEaseWorkspaceError};
+    use std::error::Error as _;
+    let error = other
+        .notch_explicit_ease(&context, command_notch_limits(472))
+        .unwrap_err();
+    assert_eq!(
+        error
+            .source()
+            .unwrap()
+            .downcast_ref::<NotchEaseWorkspaceError>(),
+        Some(&NotchEaseWorkspaceError::IntegerBits {
+            source_span: id(301),
+            side: SeamSideId::A,
+            component_bits: 190,
+            required: 473,
+            limit: 472
+        })
+    );
+    assert!(matches!(error,Error::Workspace {target_span,issue:_} if target_span==id(303)));
+    let at = request.cut(SeamSideId::B);
+    let error = view.cumulative_at(at).unwrap_err();
+    let original = NotchEaseAmountError::SourceFrame {
+        source_span: id(301),
+        side: SeamSideId::A,
+        expected: request.cut(SeamSideId::A).edge,
+        at,
+    };
+    assert_eq!(
+        error
+            .source()
+            .unwrap()
+            .downcast_ref::<NotchEaseAmountError>(),
+        Some(&original)
+    );
+    assert!(
+        matches!(error,Error::Quantity {target_span,stage:Stage::Boundary,issue}
+        if target_span==id(302) && *issue==original)
+    );
+    assert!(
+        matches!(view.amount_in(EdgeRange::whole(at.edge)).unwrap_err(),
+        Error::Quantity {target_span,stage:Stage::Interval,issue}
+        if target_span==id(302) && matches!(*issue,NotchEaseAmountError::IntervalSource {
+            source_span,side:SeamSideId::A,expected:_,interval:_} if source_span==id(301)))
+    );
+}
+#[test]
+fn command_notch_ease_rejects_other_actual_capture_before_quantity_admission_and_keeps_symbolic_value(
+) {
+    use sc_core::command::CommandNotchEaseError as Error;
+    use sc_core::ontology::NotchEaseWorkspaceError;
+    for amount in [
+        EaseAmount::Formula(id(900)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(901))),
+    ] {
+        let (mut f, marks) = notch_source_fixture();
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&marks).unwrap();
+        let request = SplitSeamSpan::new(
+            f.span().id,
+            EdgeAnchor {
+                edge: f.span().a.range.edge(),
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: t(1, 2),
+            },
+        );
+        let capture = command_notch_capture(&request, &graph);
+        let other = command_notch_capture(&request, &graph);
+        assert_eq!(capture.source(), other.source());
+        assert!(!core::ptr::eq(capture.source(), other.source()));
+        let context =
+            original_context(&f, capture.source(), &marks, notch_source_limits(13, 1, 4)).unwrap();
+        let error = other
+            .notch_explicit_ease(&context, command_notch_limits(1))
+            .unwrap_err();
+        let Error::ContextSource {
+            target_span,
+            expected,
+            context: actual,
+        } = error
+        else {
+            panic!("matching ID/body cannot substitute actual root: {error:?}")
+        };
+        assert_eq!(target_span, id(301));
+        assert!(core::ptr::eq(expected, other.source()));
+        assert!(core::ptr::eq(actual, &context));
+        assert_eq!(
+            actual.validation().admission().source().span(),
+            expected.span()
+        );
+        let error = capture
+            .notch_explicit_ease(&context, command_notch_limits(1))
+            .unwrap_err();
+        let Error::Workspace { target_span, issue } = error else {
+            panic!("actual value first: {error:?}")
+        };
+        assert_eq!(target_span, id(301));
+        assert_eq!(
+            issue,
+            NotchEaseWorkspaceError::Amount {
+                source_span: id(301),
+                side: SeamSideId::A,
+                amount
+            }
+        );
+        assert_eq!(
+            context
+                .validation()
+                .admission()
+                .source()
+                .declaration()
+                .amount,
+            amount
+        );
+    }
+}
+#[test]
+fn command_notch_ease_retains_valid_wide_originals_and_separate_actual_quantity_limits() {
+    use sc_core::command::CommandNotchEaseError as Error;
+    use sc_core::ontology::NotchEaseWorkspaceError;
+    let (mut f, marks) = notch_source_fixture();
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    let definitions = notch_definitions(&marks);
+    let graph = f.graph(&marks).unwrap();
+    let edge = f.span().a.range.edge();
+    let request = SplitSeamSpan::new(
+        f.span().id,
+        EdgeAnchor {
+            edge,
+            param: t(1, 8),
+        },
+        EdgeAnchor {
+            edge: f.span().b.range.edge(),
+            param: t(7, 8),
+        },
+    );
+    let capture = command_notch_capture(&request, &graph);
+    let fragment = f.ledger.split(&mut f.ids, edge, t(1, 2)).unwrap().first();
+    let marks = current_notches(
+        &f,
+        definitions,
+        [
+            EdgeAnchor {
+                edge: fragment,
+                param: t(1, i64::MAX),
+            },
+            EdgeAnchor {
+                edge: fragment,
+                param: t(1, 2),
+            },
+        ],
+    );
+    let saved = f.ledger.clone();
+    let context =
+        original_context(&f, capture.source(), &marks, notch_source_limits(13, 2, 4)).unwrap();
+    assert!(context
+        .lower()
+        .unique()
+        .unwrap()
+        .coordinate()
+        .as_param()
+        .is_err());
+    assert_eq!(
+        context
+            .lower()
+            .unique()
+            .unwrap()
+            .coordinate()
+            .as_u128_ratio()
+            .unwrap(),
+        (1, 2 * u128::try_from(i64::MAX).unwrap())
+    );
+    let error = capture
+        .notch_explicit_ease(&context, command_notch_limits(726))
+        .unwrap_err();
+    assert!(
+        matches!(error,Error::Workspace {target_span,issue:NotchEaseWorkspaceError::IntegerBits {
+        source_span,side:SeamSideId::A,component_bits:317,required:727,limit:726}}
+        if target_span==id(301) && source_span==id(301))
+    );
+    let view = capture
+        .notch_explicit_ease(&context, command_notch_limits(727))
+        .unwrap();
+    assert_eq!(view.notch_admission().integer_bit_bound(), 727);
+    assert_eq!(
+        (
+            view.first_amount().as_micrometres(),
+            view.second_amount().as_micrometres()
+        ),
+        (0, 1)
+    );
+    assert_eq!(
+        view.original_context()
+            .notches()
+            .1
+            .definition()
+            .anchor
+            .param,
+        t(1, i64::MAX)
+    );
+    assert_eq!(f.ledger, saved);
+}
+#[test]
+fn command_notch_ease_preserves_actual_context_ambiguity_and_coincidence_before_view_construction()
+{
+    use sc_core::ontology::OriginalNotchContextIssue as Issue;
+    for ambiguous in [false, true] {
+        let (mut f, marks) = notch_source_fixture();
+        let definitions = notch_definitions(&marks);
+        let graph = f.graph(&marks).unwrap();
+        let edge = f.span().a.range.edge();
+        let request = SplitSeamSpan::new(
+            f.span().id,
+            EdgeAnchor {
+                edge,
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: t(1, 2),
+            },
+        );
+        let capture = command_notch_capture(&request, &graph);
+        let split = f.ledger.split(&mut f.ids, edge, t(1, 2)).unwrap();
+        let anchors = if ambiguous {
+            f.ledger.reverse(&mut f.ids, split.second()).unwrap();
+            let one = Length::from_micrometres(1).unwrap();
+            let merged = f
+                .ledger
+                .merge(&mut f.ids, split.first(), one, split.second(), one)
+                .unwrap();
+            [
+                EdgeAnchor {
+                    edge: merged,
+                    param: t(1, 2),
+                },
+                EdgeAnchor {
+                    edge: merged,
+                    param: t(1, 4),
+                },
+            ]
+        } else {
+            [
+                EdgeAnchor {
+                    edge: split.first(),
+                    param: Param::END,
+                },
+                EdgeAnchor {
+                    edge: split.second(),
+                    param: Param::START,
+                },
+            ]
+        };
+        let marks = current_notches(&f, definitions, anchors);
+        let error = original_context(&f, capture.source(), &marks, notch_source_limits(13, 4, 4))
+            .unwrap_err();
+        assert_eq!(error.source_span(), capture.source().span());
+        assert_eq!(error.notch_ids(), (id(401), id(400)));
+        match error.issue() {
+            Issue::Ambiguous { notch, projection } if ambiguous => {
+                assert_eq!(*notch, id(400));
+                assert_eq!(projection.candidates().len(), 2);
+                assert_eq!(projection.admission().reference(), anchors[1].edge);
+            }
+            Issue::CoincidentOriginal { start, end } if !ambiguous => {
+                assert_ne!(
+                    start.admission().current().edge(),
+                    end.admission().current().edge()
+                );
+                assert_eq!(
+                    start.unique().unwrap().coordinate(),
+                    end.unique().unwrap().coordinate()
+                );
+            }
+            issue => panic!("full actual context refusal survives: {issue:?}"),
+        }
+    }
+}

@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0523 — query weighted quantities for actual captured commands
+## STITCHCAD-G1-0524 — query notch quantities for actual captured commands
 
-- Actual capture/request/target/full source borrows and existing weighted workspace produce target/first/second amounts from original rounded boundaries. No root clone,child normalization,bounded cut-progress or Uniform physical predicate. Typed stage/target preserve original
-  workspace/query/std causes.
-- Native4/scoped Clippy/fmt/doc2+1 pass. Twelve side/direction/sign cases,retained first1 versus child counterfactual0,target0/source1,full2-region598 quota,actual source301/target302 frame/std causes,symbolic precedence and valid189-bit normalization remain exact.
-- Whole0522 retained681/three exact Git spans;book92/219/1582/2733,glossary0/map/retention1135/nonuniform160+50 pass. New quantity chapter/API routes;notch caller adoption next. LIVE/README unchanged,G1 6/18;actual current/value/physical/authority/effects/full verification remain
+- Borrow actual capture and externally owned original-notch context/admission after exact source pointer check. Query target and A-ordered pairs from original rounded boundaries;preserve actual mismatch context,workspace/query/std causes and stages. No projection/root
+  clone,self-reference,new numeric kernel or narrowing.
+- Native5/scoped Clippy/fmt/doc2+1 pass. Twelve side/direction/sign cases,retained first0 versus rounded-child1,target0/source1,shared canonical context and equal-ID/body mismatch. Symbolic precedence,473/472 and727/726 quotas,actual source/target errors,valid64-bit original and
+  upstream ambiguity/coincidence stay exact.
+- Whole0523 retained682/three exact Git spans;book92/221/1584/2737,glossary0/map/retention1136/notch oracle6+302+380 pass. Actual Design/caller/dependency integration next. LIVE/README unchanged,G1 6/18;current/copy/authority/physical/effects/full verification remain separately
   owned.
 
 

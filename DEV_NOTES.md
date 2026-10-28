@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual captured weighted command quantities
+## _(2026-10-28 UTC)_ — actual captured original-notch command quantities
 
-0523 CommandWeightedEasePartition borrows capture/request/span/root and existing full weighted admission;target/first/second difference original rounded boundaries. Typed stage and consuming target retain original workspace/query/std causes. No source clone,child normalization,new rounding or bounded cut-progress.
-Native4/scoped Clippy/fmt/doc2+1 pass0. Twelve side/direction/sign cases conserve source;retained303/original301 first1 versus rounded-child0,target302 allocation0/source1. Full2-region598 quota,source/target frame/std causes,symbolic precedence and valid189-bit normalization under408-bit admission remain exact.
-Book92/219/1582/2733,glossary0/map/retention1135,nonuniform160+50 and681 receipt3 exact spans pass0. New bounded command-quantity chapter/API routes cover3 public types. These are descriptive mathematical pair amounts;no current/physical/authority/effect certificate. Actual notch caller adoption .4.4.3 next.
-[Whole0522 capture](docs/history/stitchcad-devnotes-part681.md) retains admission/materialization proof. LIVE/README unchanged,G1 6/18. Preserve actual context/candidate causes and dependencies before effects;consume preparation terminals before stage. Promotion declined:adoption of indexed source/rounding contracts.
+0524 CommandNotchEasePartition borrows capture and externally owned sealed context/admission after exact captured-source pointer check. Target/first/second use original notch boundary differences. Preserve actual mismatch context,workspace/query/std causes and stages;no clones,self-reference or new kernel.
+Native5/scoped Clippy/fmt/doc2+1 pass0. Twelve side/direction/sign cases,retained first0 versus rounded-child1,target0/source1,shared original context and distinct equal-ID/body refusal. Symbolic precedence,473/472 quota,target/source causes,valid64-bit original727/726 and upstream ambiguity/coincidence remain exact.
+Book92/221/1584/2737,glossary0/map/retention1136,notch oracle6+302+380 and682 receipt3 exact spans pass0. Quantity chapter documents2 new types and real context binding. Pure immutable quantities grant no current/physical/effect readiness. Actual Design/caller integration .4.4.4 next;LIVE/README unchanged,G1 6/18.
+[Whole0523 weighted caller](docs/history/stitchcad-devnotes-part682.md) retains all original proofs. Context/source kernel unchanged;separate caller/current/dependency and paired/full owners remain. Promotion declined:adoption of indexed source/context/rounding contracts. Consume authority and commit terminals.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -307,7 +307,7 @@ coverage. Aggregate command accounting,quantity integration,stop/lineage effects
 remain their implementation owners;this change does not make SplitSeamSpan executable on the bus.
 
 [Admitted command source capture](command-seam-capture.md) now checks complete original metadata
-cost before materialization. [Weighted command quantities](command-seam-quantities.md) now use that
+cost before materialization. [Weighted/notch command quantities](command-seam-quantities.md) now use that
 actual captured root;notch command views and paired effects remain next.
 
 ## Query quantities from the retained original root
@@ -561,5 +561,5 @@ broader paired/mutation acceptance remain owned;these source partitions are desc
 [Original-frame notch context](command-notch-context.md) documents implemented bounded current
 uniqueness,exact wide inverse and focused actual Notch/Graph primitive acceptance. D305 is repaired;
 actual semantic source context is implemented with focused Design integration. Separate notch
-quantity admission and exact queries have focused actual Design source/query acceptance;view/command adoption and paired effects retain their next owners.
+quantity queries and captured command views have focused checks;higher caller integration and paired effects remain owned.
 Weighted source acceptance above keeps its focused scope.

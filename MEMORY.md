@@ -1,20 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.4.3 in docs/tasks/G1-SLICE-execution.md:actual original-notch
-  context quantities for captured command target/projected pairs. Bind actual captured source,
-  preserve all actual context/candidate/limit causes and source/target identity;no silent choice.
-- Weighted caller0523 borrows admitted capture/request/span/full root,admits existing weighted
-  workspace and differences original rounded boundaries for target/first/second in A order. No
-  source clone,child normalization,cut-progress narrowing or Uniform physical predicate. Typed
-  stage and actual target wrap original workspace/query cause and standard error chain.
-- Native4/scoped Clippy/fmt/doc2+1/nonuniform160+50 pass0:12 side/direction/sign cases,retained
-  first1 versus rounded-child0,target0/source1,full2-region598 quota,actual source301/target302
-  errors,symbolic precedence and valid189-bit normalization under408-bit source workspace.
-- Book92/219/1582/2733,glossary0/map,retention1135/681 receipt3 exact spans pass;whole0522 in681.
-  Capture counts1+all original regions/stops before clone;owns direct root or shares retained root.
-- Notch source/query component closes0521 with scoped checkpoint;caller adoption/paired stop/
-  lineage/physical/authority/effects/full verification stay owned. Full PNT continues. Consume all
-  exec terminals before dependent mutations;final hook verifies exact native --index authority.
+- Next G1-SLICE.6.5.3.2.3.2.4.4.4 in docs/tasks/G1-SLICE-execution.md:actual Design/caller/
+  dependency integration for captured weighted/notch command quantities. Preserve real source/
+  current/copy/authority envelopes;own formula/profile/geometry dependencies before effects.
+- Notch caller0524 borrows actual capture and externally owned sealed original context,requires
+  exact source pointer,then separately admits numeric quantities and differences original rounded
+  target/pair boundaries. No projection/root clone,self-reference,new kernel or coordinate narrowing.
+- Native5/scoped Clippy/fmt/doc2+1 pass:12 side/direction/sign cases,retained first0 vs rounded
+  child1,target0/source1,shared retained context,distinct equal-ID/body capture refusal,symbolic
+  precedence,source/target/std stages,473/472 quota,valid64-bit original and727/726 separate quota.
+  Actual upstream ambiguity/coincidence stays unchanged;no partial view or silent choice.
+- Book92/221/1584/2737,glossary0/map,retention1136/682 receipt3 exact spans,notch oracle6+302+380
+  pass;whole0523 retained682. Source/query checkpoint0521 closed;captured caller views implemented
+  with focused checks. Actual caller integration,paired stops/lineage/physical/effects/full proof
+  remain owned. Consume all preparation/commit terminals;native --index authority stays mandatory.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

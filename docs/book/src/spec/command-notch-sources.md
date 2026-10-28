@@ -3,7 +3,8 @@
 Complete actual input admission,bounded local validation and original-notch coordinate context are
 implemented with focused checks. They build on the [point and interval primitives](command-notch-context.md).
 Separate explicit quantity arithmetic admission and exact cumulative/interval queries are implemented
-with focused actual Design source/query checks;view/command adoption and paired effects retain their next owners.
+with focused actual Design source/query checks. [Captured command views](command-seam-quantities.md)
+consume the actual sealed context;higher caller integration and paired effects remain owned.
 
 | API token | Meaning |
 | --- | --- |
@@ -239,7 +240,7 @@ original1/(2MAX) and1/4. The first remains exact despite `Param` refusal. The re
 endpoint at original half still requires a split choice,so complete current sewing validation refuses
 that child while the full original source context succeeds. Context construction changes neither
 the held endpoint answer nor source/formula metadata. This is source-context component acceptance;
-view/command adoption,whole paired command,mutation and physical verification retain their later owners.
+captured command views have their own focused checks;whole paired/mutation/physical proof remains owned.
 
 ## Admit original-notch quantity arithmetic
 
@@ -313,7 +314,7 @@ input. This local source success grants no whole Piece or Design certificate.
 
 Private actual-projection controls preserve concrete quota operations and refuse a separate
 equal-content ledger snapshot before numeric work. Focused quantity checks pass. The actual Design
-source/query acceptance below is separate from view/command adoption,nonuniform component acceptance
+source/query acceptance below is separate from captured command view checks,nonuniform component acceptance
 and whole paired/mutation/physical verification.
 
 ## Actual Design quantity acceptance
@@ -334,16 +335,16 @@ source,even ahead of a1-bit allowance. Neither a value nor physical corresponden
 
 Five focused native cases include the new signed/symbolic quantity acceptance and directly affected
 source-context fixtures. This accepts the source/query component with focused checks;convenience
-view/command APIs,whole nonuniform acceptance and paired/mutation/physical proof retain later owners.
+captured command views have focused checks;whole nonuniform and paired/mutation/physical proof remain owned.
 
 After implementation,the scoped original-notch component checkpoint passes all34 public Notch
 cases and4 private original-point cases. Independent projection,width,comparison,recovery and
 quantity oracles pass,including380 exact quantity rows. Together with the actual Design5 checks,
-this closes the original-notch source/query component. View/command adoption,physical matching,
+this closes the original-notch source/query component. Higher caller integration,physical matching,
 paired effects and broader acceptance remain explicit subsequent work.
 
 The canonical decision is docs/decisions/decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md.
 Its whole pre-0512 source is logical record docs/history/stitchcad-devnotes-part670.md,available
 through the [public archive reader](../annexes/archive-reader.md). It retains prior prospective
 wording and all historical evidence exactly. Focused implementation and source-context integration
-checks above are distinct from deferred view/command adoption and whole paired/mutation/physical verification.
+checks above are distinct from higher caller integration and whole paired/mutation/physical verification.

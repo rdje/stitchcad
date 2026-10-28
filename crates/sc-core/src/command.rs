@@ -98,7 +98,8 @@ pub use seam_capture::{
 };
 pub use seam_ease::{CommandUniformEaseError, CommandUniformEasePartition};
 pub use seam_quantity::{
-    CommandEaseQuantityStage, CommandWeightedEaseError, CommandWeightedEasePartition,
+    CommandEaseQuantityStage, CommandNotchEaseError, CommandNotchEasePartition,
+    CommandWeightedEaseError, CommandWeightedEasePartition,
 };
 pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};
 pub use snapshot::CommandSnapshotContext;

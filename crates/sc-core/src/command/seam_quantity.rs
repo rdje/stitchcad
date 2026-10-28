@@ -6,6 +6,8 @@ use crate::ontology::{
 };
 use core::fmt;
 use sc_units::Length;
+mod notch;
+pub use notch::{CommandNotchEaseError, CommandNotchEasePartition};
 
 /// Actual mathematical query stage;does not imply current-world or physical validation.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

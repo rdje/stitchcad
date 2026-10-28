@@ -73,5 +73,5 @@ Exhaustive private source/portion/definition views and fixed-field Copy guards c
 populations. A future owning field must be reviewed before it can be hidden behind this admission.
 Focused native cases exercise direct signed/symbolic sources,complete quotas,retained root sharing
 with empty child lists,and damaged held-source metadata. No-default,privacy and lifetime doctests
-guard the public boundary. [Weighted command allocation views](command-seam-quantities.md) now
-consume this actual source;notch command views and whole paired acceptance retain their next owners.
+guard the public boundary. [Weighted and original-notch command allocation views](command-seam-quantities.md) now
+consume this actual source;actual caller/current/dependency integration and whole paired acceptance remain owned.
