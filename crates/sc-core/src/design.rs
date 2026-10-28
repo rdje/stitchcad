@@ -84,7 +84,6 @@ pub use parameters::{
     DesignParameters,
 };
 pub use pockets::DesignPocketOpeningDeclaration;
-pub(crate) use resource::charge_length_declaration_resources;
 pub use resource::{
     charge_canonical_input_resources, charge_closure_inventory_resources,
     charge_construction_inventory_resources, charge_cut_plan_resources,
@@ -102,6 +101,7 @@ pub(crate) use resource::{
     charge_garment_length_replacement, charge_garment_material_assignment,
     charge_garment_notch_append, charge_garment_successor_revision,
 };
+pub(crate) use resource::{charge_length_declaration_resources, charge_revision_bits};
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use sewing_state::{
     DesignSewing, DesignSewingDefinition, DesignSewingError, DesignSewingPosition,

@@ -120,7 +120,7 @@ let declared_fraction = (progress.completed(), progress.total().get());
 ```
 
 Fractions are local to their named phase. Authorized, SnapshotBound, RetainedValidation, Preparing, CurrentValidation,
-CandidateValidation, AllocationPreflight, ReadyToPublish and Replaying are declared pre-effect steps.
+CandidateValidation, RetainedPublication, AllocationPreflight, ReadyToPublish and Replaying are declared pre-effect steps.
 ReadyToPublish means preparation is ready; it does not report a published model. The eventual success
 response acknowledges completion. Constructing phase data proves no actual source check or effect.
 
@@ -200,7 +200,7 @@ authority. They provide a data-only accounting contract with implemented compone
 Complete actual model roots compose their source content and retained census under one sink.
 Current/preparation and history-alternative admission now uses the required readonly source port;
 exact Measurement/Material/Notch/publication-revision projections and current private retained
-admission are implemented; prospective retained-state admission remains pending. The meter alone is not a runtime model-admission gate.
+admission are implemented; prospective authoring is implemented; prospective history admission remains pending. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -289,7 +289,7 @@ call its source host. A second installation returns ModelLimitsAlreadyInstalled 
 the first policy. Missing policy returns ModelLimitsNotInstalled after pure input admission; authorized
 GetPieceList inspection needs no policy. Neither requests nor progress observers carry a policy.
 Costly paths also require explicit [retained-policy configuration](command-resource-accounting.md#explicit-immutable-retained-policy-configuration);
-[current retained admission](command-resource-accounting.md#actual-current-private-retained-composition) is implemented; prospective admission remains owned.
+[current retained admission](command-resource-accounting.md#actual-current-private-retained-composition) is implemented; [prospective authoring](command-retained-publication.md) also admits publication growth. History admission remains owned.
 Compile-time H: DesignResourceSource is required for costly metadata methods; readonly query paths
 retain the narrower semantic host contract. Compiler privacy rejects direct model-policy reset.
 
@@ -323,7 +323,7 @@ This implements current/preparation-root and stored history-alternative admissio
 Measurement, selected Material, Notch and publication-revision admission are implemented below.
 Per-model logical admission is implemented with focused checks under the honest immutable-source
 contract. Current private audit/replay/history content and stored maximum-issued/audit counters are admitted;
-exact prospective retained content remains .4.3.4; coupled/deeper/full verification remains separate.
+exact prospective authoring is admitted; history retained projection remains .4.3.4.2; coupled/deeper/full verification remains separate.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
 release acceptance remain separate. Deeper/full verification stays deferred until feature completion.
 
@@ -499,4 +499,4 @@ authority/source host algorithm time, numeric/file/decompression/geometry work o
 
 [Actual command data resource accounting](command-resource-accounting.md) documents owned request
 contexts, aliases, reports, records and current private retained composition separately from proposed
-operation work. Exact prospective retained-state admission and coupled/full verification remain owned.
+operation work. Exact prospective authoring admission is implemented; history/coupled/full verification remain owned.

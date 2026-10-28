@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0469 — admit exact current private retained artifact composition
+## STITCHCAD-G1-0470 — admit exact prospective retained authoring publication
 
-- Charge current/history models, full reserve backing, journal counters/records and history vectors/actions once in stored order.
-- Admit after exact authority/snapshot, preserve original retained resource errors, and cancel at RetainedValidation0/1; accepted replays skip walks.
-- Real current3/model-admission4 and strict lint/fmt pass:independent3M+29/3B+74/36 oracle, one-short errors, full consumed reserve prefix and zero candidate/semantic work on refusal.
-- Source walks include the extra retained pass, candidate copies unchanged. Whole0468 retained622; exact prospective growth admission and coupled/full proof remain pending.
+- Project actual prepared candidate, counters, new/existing audit records and exact undo eviction/redo discard before publication construction.
+- Preserve original retained witnesses, aliases, cancelled/refused keys, full reserve backing and fresh final authority; temporary preparation stays separately bounded.
+- Authoring5/current3/revision1/audit forecast1/two count-boundary cases and strict lint/fmt pass against real model/record oracles, one-short limits and beyond-u128 carry.
+- Whole0469 retained623; bounded publication chapter/nav explains exact scope. Prospective history admission and coupled/full verification remain pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

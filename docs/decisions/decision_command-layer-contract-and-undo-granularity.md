@@ -163,3 +163,21 @@ walks are separate from per-model admission and do not add candidate copies. Thi
 prospective .3.4 must prevent growing accepted content before retained allocations/effects; coupled/
 full verification stays deferred. The current-only Notch proof tests a later-over-bound state, not
 prospective enforcement; replace that setup with early-refusal proof when .3.4 lands.
+
+## Exact prospective retained authoring publication0470
+
+answers: "can authoring fit by evicting undo/discarding redo, and when are publication copies allowed?"
+
+Borrow actual bounded prepared candidate/report/request. Before issuing counters, building final model,
+allocating retained records/history or cloning returned data, admit the exact future private artifact
+state. Forecast actual maximum-issued and independent audit sequence, never restored base. Keep every
+old audit/action; append the exact new request/report/counters/discard IDs, omit evicted undo and redo
+model alternatives, and append the actual old current model only if history is configured. Schema order,
+whole vector precharge, source H and full reserve backing remain; no supplied totals/token/authority.
+RetainedPublication0/1 cancels before construction; fresh final Commit authority still follows all prep.
+Temporary preparation and caller-delivered result ownership are distinct from the final retained budget;
+no allocator peak is claimed. Actual alias2M+13/2B+76/5, eviction2M+21/2B+60/30 and branch
+2M+2K+29/2B+110/36(K512) match independent real models/records. No-history beyond-u128 needs1029bits;
+1028 refuses original records.commit.revision900+129 before final copies, actual returned entry642bits.
+Authoring5/current3/revision1/audit forecast1/two count-boundary cases/strict lint/fmt pass. Smaller retry
+keys, full consumed backing and post-admission revocation verified. Exact history .3.4.2/coupled/full pending.

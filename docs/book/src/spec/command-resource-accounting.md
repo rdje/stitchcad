@@ -5,7 +5,7 @@ Command inputs, reports and retained execution state own dynamic data in additio
 same explicit logical units and sealed sink from the [resource contract](command-operation-control.md#logical-dynamic-content-accounting-contract).
 CommandState locations describe these objects; a resource result is data, not authority or a model
 snapshot stamp. Actual current private-state composition/admission is implemented; prospective retained
-admission and coupled/full verification remain owned work.
+authoring admission is implemented; history/coupled/full verification remain owned work.
 
 ## Actual typed mutation-group inputs
 
@@ -231,7 +231,7 @@ and formatting. All original execution/history/request implementations are byte-
 the new exhaustive readonly views; preparation, operation, identity and group implementations are
 byte-exact. Existing request/report readers are byte-exact. This implements accepted data accounting
 with focused checks. Current private retained model/reserve/journal composition is admitted; prospective
-retained admission remains .4.3.4; coupled acceptance .4.4 and deeper/full verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
+authoring admission is implemented; history .4.3.4.2 remains; coupled acceptance .4.4 and deeper/full verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
 ingress, numeric/file/decompression/geometry work or physical/release acceptance.
 
 
@@ -272,8 +272,8 @@ affected lint/formatting pass. Test helpers install explicit permissive retained
 that deliberately omits model limits is named without_model_limits and still supplies retained policy.
 
 Installation alone certifies no retained content or quota room. Actual current private admission now
-runs as described below; exact prospective commit/history admission remains .4.3.4, including evictions,
-branch discard and growth before allocations/effects. Coupled/deeper/full resource acceptance stays .4.4.
+runs as described below; [prospective authoring](command-retained-publication.md) also admits exact
+evictions/redo discard before publication allocations/effects. Prospective history .4.3.4.2 remains. Coupled/deeper/full resource acceptance stays .4.4.
 
 ## Actual current private retained composition
 
@@ -331,17 +331,16 @@ RetainedValidation1 with0 clones/3 source calls/0 semantic callbacks. One-short 
 policies preserve the same first error as that independent composition. Exact authoring/history
 replays still invoke0 clones/0 resource calls/0 semantic callbacks.
 
-A separate actual Notch commit consumes one of two reserved IDs. Current content then owns the one
-additional landmark plus both backing IDs. The following probe refuses at retained.identities with
-requested2, rather than incorrectly charging only the unused suffix. Cancellation before/after retained
+A separate actual Notch commit consumes one of two reserved IDs. Both backing slots still count.
+The [prospective authoring proof](command-retained-publication.md#native-exact-limit-examples) now
+refuses a later one-short publication before growth. Cancellation before/after current retained
 admission leaves the original group/key/capacities available for a later actual commit. Unauthorized,
 wrong-Design and stale single/group/commit/history paths still cause no private resource walk.
 
-Three new current-retained cases and four affected model-admission cases pass with strict affected
+Three current-retained cases and the affected model-admission cases pass with strict affected
 lint/formatting. The extra current-retained pass changes source-walk telemetry, while candidate-copy
-counts remain unchanged. This is current private admission only: prospective .4.3.4 must still refuse
-growth before allocation/effects and account exact evictions/branch discard. Until that leaf lands,
-the current-only Notch proof can create a later-over-budget state and then demonstrate next-operation
-refusal; it is not proof that accepted growth is bounded. Coupled .4.4/deeper/full verification remain
-deferred. Raw ingress, allocator peaks, arbitrary host time, numeric/file/decompression/geometry work
-and physical/release acceptance retain their separate owners.
+counts remain unchanged. [Prospective authoring admission](command-retained-publication.md) now
+prevents new group publication from exceeding the exact future retained bound, including undo eviction
+and redo discard. Prospective history-action admission remains .4.3.4.2; coupled .4.4/deeper/full
+verification stays deferred. Raw ingress, allocator peaks, arbitrary host time, numeric/file/
+decompression/geometry work and physical/release acceptance retain their separate owners.

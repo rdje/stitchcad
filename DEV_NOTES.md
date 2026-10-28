@@ -3,12 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact current private retained composition
+## _(2026-10-28 UTC)_ — exact prospective retained authoring publication
 
-0469 .6.8.2.2.2.2.4.3.3.2 admits actual current/history models, full reserve backing, journal/actions after authority/snapshot; RetainedValidation0/1 cancels before effects.
-Exhaustive views/precharge/fixed guards include source H and exclude external authority A. Current3/model4/strict lint/fmt pass:actual model/record oracle3M+29/3B+74/36.
-Exact/one-short errors and source chains, three source walks/no clones/semantics, cancellation/replay0/0/0 and consumed reserve prefix verified. Extra retained walks leave candidate-copy counts unchanged.
-Current-only growth proof does not establish prospective admission; .3.4/coupled/full remain pending. Promotion:indexed command-layer decision; whole0468 retained622.
+0470 .6.8.2.2.2.2.4.3.4.1 borrows actual bounded preparation and admits final retained candidate/record/history before successor/final-model/audit construction; temporary prep is bounded separately.
+Exact future counters, alias copies, eviction and redo IDs/models use current schema order/original witnesses. Authoring5/current3/revision1/auditforecast1/append-boundary1/bit-boundary1 and strict lint/fmt pass.
+Real oracles:alias2M+13/2B+76/5, eviction2M+21/2B+60/30, branch2M+2K+29/2B+110/36(K512), beyond-u1281029/one-short1028 with actual entry642bits. No final publication copies on quota/cancel; smaller retry keys survive.
+Fresh final authority still refuses revocation after admission. Full consumed reserve backing rejects early. History prospective .3.4.2/coupled/full pending; no allocator-peak certificate. Promotion:indexed decision; whole0469 retained623.
+[Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.
 [Whole0467 accepted-record lesson](docs/history/stitchcad-devnotes-part621.md) retains exact counter/history/replay ownership proof.
 [Whole0466 report lesson](docs/history/stitchcad-devnotes-part620.md) retains exact alias/net/restored ownership proof.

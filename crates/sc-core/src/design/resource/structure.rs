@@ -61,7 +61,7 @@ pub(super) fn charge_structure_projected(
 
 // None denotes exactly u64::MAX + one bits. Charge two exact chunks instead of wrapping, clipping
 // or imposing a counter cap. No finite u64 policy can admit both, and the sink latches the first error.
-fn charge_revision_bits(
+pub(crate) fn charge_revision_bits(
     bits: Option<u64>,
     sink: &mut dyn DesignResourceSink,
     location: DesignResourceLocation,

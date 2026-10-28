@@ -20,6 +20,10 @@ use std::{collections::TryReserveError, time::SystemTime};
 #[derive(Clone, Debug, Default, PartialEq, Eq, PartialOrd, Ord)]
 pub struct CommandAuditSequence(DesignRevision);
 impl CommandAuditSequence {
+    pub(super) fn successor_resource_bits(&self) -> Option<u64> {
+        let Self(revision) = self;
+        revision.successor_resource_bits()
+    }
     pub(super) fn resource_bits(&self) -> u64 {
         let Self(revision) = self;
         revision.resource_bits()
@@ -180,6 +184,77 @@ pub(super) struct CommandJournal {
 }
 
 impl CommandJournal {
+    pub(super) fn resource_maximum_revision(&self) -> &DesignRevision {
+        let Self {
+            limit: _,
+            initial_revision: _,
+            maximum_revision,
+            sequence: _,
+            entries: _,
+        } = self;
+        maximum_revision
+    }
+    pub(super) fn charge_after_authoring_resources<H>(
+        &self,
+        owner: EntityId,
+        request: &CommandMutationGroup,
+        changes: &CommandGroupPreview,
+        history: Option<&super::history::History<H>>,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self {
+            limit,
+            initial_revision,
+            maximum_revision,
+            sequence,
+            entries,
+        } = self;
+        crate::command::resource::fixed(limit);
+        sink.charge_counter_bits(
+            initial_revision.resource_bits(),
+            super::retained::location(owner, "retained.journal.initial_revision"),
+        )?;
+        super::retained::charge_successor_revision(
+            maximum_revision,
+            sink,
+            super::retained::location(owner, "retained.journal.maximum_revision"),
+        )?;
+        crate::design::charge_revision_bits(
+            sequence.successor_resource_bits(),
+            sink,
+            super::retained::location(owner, "retained.journal.sequence"),
+        )?;
+        super::retained::charge_appended_entries(
+            entries.len(),
+            sink,
+            super::retained::location(owner, "retained.journal.entries"),
+        )?;
+        for entry in entries {
+            super::resource::charge_command_audit_entry_resources(entry, sink)?;
+        }
+        let group = request.id().entity_id();
+        crate::design::charge_revision_bits(
+            sequence.successor_resource_bits(),
+            sink,
+            super::retained::location(group, "records.authoring.sequence"),
+        )?;
+        crate::command::charge_command_mutation_group_resources(request, sink)?;
+        super::resource::charge_command_group_preview_resources(changes, sink)?;
+        super::retained::charge_successor_revision(
+            maximum_revision,
+            sink,
+            super::retained::location(group, "records.commit.revision"),
+        )?;
+        if let Some(history) = history {
+            history.charge_authoring_change_resources(group, sink)?;
+        } else {
+            sink.charge_entries(
+                0,
+                super::retained::location(group, "records.commit.discarded_redo"),
+            )?;
+        }
+        Ok(())
+    }
     pub(super) fn charge_resources(
         &self,
         owner: EntityId,
@@ -523,6 +598,14 @@ impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAutho
             .map_err(|issue| CommandGroupPreviewError::<H::Error>::control(group.id(), issue))?;
         super::operation::admit_successor_revision(&candidate, limits, &journal.maximum_revision)
             .map_err(|issue| CommandGroupPreviewError::<H::Error>::control(group.id(), issue))?;
+        self.admit_retained_authoring(
+            super::retained::AuthoringProjection {
+                candidate: &candidate,
+                changes: &changes,
+                request: group,
+            },
+            observer,
+        )?;
         let revision = journal.maximum_revision.successor();
         let sequence = journal.sequence.successor();
         super::operation::group_checkpoint::<H::Error>(
@@ -670,4 +753,27 @@ fn at_revision<H: DesignReferenceHost + Clone + PartialEq>(
         ));
     }
     Ok(after)
+}
+
+#[cfg(test)]
+mod resource_tests {
+    use super::*;
+    #[test]
+    fn audit_successor_magnitude_matches_actual_zero_carry_and_beyond_u128_counter() {
+        for revision in [
+            DesignRevision::initial(),
+            DesignRevision::from_counter(1),
+            DesignRevision::from_counter(3),
+            DesignRevision::from_counter(u128::MAX),
+            DesignRevision::from_counter(u128::MAX).successor(),
+        ] {
+            let sequence = CommandAuditSequence(revision);
+            let before = sequence.clone();
+            assert_eq!(
+                sequence.successor_resource_bits(),
+                Some(sequence.successor().resource_bits())
+            );
+            assert_eq!(sequence, before);
+        }
+    }
 }

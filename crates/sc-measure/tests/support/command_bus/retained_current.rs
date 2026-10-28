@@ -20,7 +20,7 @@ use sc_core::{
     ontology::{MaterialAssignment, PieceInventory},
 };
 use std::num::{NonZeroU64, NonZeroUsize};
-type Model = DesignGarment<CountedSources>;
+pub(super) type Model = DesignGarment<CountedSources>;
 fn location(owner: EntityId, field: &'static str) -> Location {
     Location {
         scope: Scope::CommandState,
@@ -29,7 +29,7 @@ fn location(owner: EntityId, field: &'static str) -> Location {
         index: None,
     }
 }
-fn policy(entries: usize, text: usize, bits: u64) -> DesignResourceLimits {
+pub(super) fn policy(entries: usize, text: usize, bits: u64) -> DesignResourceLimits {
     DesignResourceLimits::new(
         capacity(entries.max(1)),
         capacity(text.max(1)),
@@ -46,7 +46,7 @@ impl CommandProgressObserver for Stop {
         }
     }
 }
-fn bus(
+pub(super) fn bus(
     owner: Model,
     reserve: Vec<EntityId>,
     limits: DesignResourceLimits,
@@ -74,7 +74,12 @@ fn bus(
         .expect("exact retained policy");
     bus
 }
-fn with_assignment(before: &Model, revision: u128, piece: EntityId, reason: &str) -> Model {
+pub(super) fn with_assignment(
+    before: &Model,
+    revision: u128,
+    piece: EntityId,
+    reason: &str,
+) -> Model {
     let mut garment = before.definition().clone();
     let mut sewing = garment.sewing.definition().clone();
     let mut inputs = sewing.inputs.definition().clone();
@@ -105,7 +110,12 @@ fn with_assignment(before: &Model, revision: u128, piece: EntityId, reason: &str
         .expect("actual complete independent model oracle");
     model
 }
-fn request(model: &Model, number: u128, piece: EntityId, reason: &str) -> CommandMutationGroup {
+pub(super) fn request(
+    model: &Model,
+    number: u128,
+    piece: EntityId,
+    reason: &str,
+) -> CommandMutationGroup {
     group(
         number,
         vec![mutation(
@@ -117,7 +127,7 @@ fn request(model: &Model, number: u128, piece: EntityId, reason: &str) -> Comman
         )],
     )
 }
-fn history(
+pub(super) fn history(
     original: &CommandMutationGroup,
     revision: u128,
     key: u128,
@@ -145,17 +155,17 @@ fn bits(value: impl ToString) -> u64 {
         .checked_ilog2()
         .map_or(0, |n| u64::from(n) + 1)
 }
-struct Observed<'a> {
-    initial: &'a Model,
-    current: &'a Model,
-    reserve: &'a [EntityId],
-    accepted: &'a [&'a CommandAuditEntry],
-    undo: &'a [&'a Model],
-    redo: &'a [&'a Model],
-    actions: &'a [&'a CommandHistoryAuditEntry],
+pub(super) struct Observed<'a> {
+    pub(super) initial: &'a Model,
+    pub(super) current: &'a Model,
+    pub(super) reserve: &'a [EntityId],
+    pub(super) accepted: &'a [&'a CommandAuditEntry],
+    pub(super) undo: &'a [&'a Model],
+    pub(super) redo: &'a [&'a Model],
+    pub(super) actions: &'a [&'a CommandHistoryAuditEntry],
 }
 impl Observed<'_> {
-    fn charge(&self, meter: &mut Meter) -> Result<(), LimitError> {
+    pub(super) fn charge(&self, meter: &mut Meter) -> Result<(), LimitError> {
         let owner = self.current.inputs().id();
         charge_design_garment_resources(self.current, meter)?;
         meter.charge_entries(self.reserve.len(), location(owner, "retained.identities"))?;
@@ -205,7 +215,7 @@ impl Observed<'_> {
         }
         Ok(())
     }
-    fn demand(&self) -> DesignResourceDemand {
+    pub(super) fn demand(&self) -> DesignResourceDemand {
         let mut meter = Meter::new(model_policy());
         self.charge(&mut meter)
             .expect("actual independent owner composition");
@@ -350,11 +360,10 @@ fn retained_reserve_counts_the_entire_backing_after_a_real_notch_consumes_its_pr
     let design = owner.inputs().id();
     let revision = owner.inputs().revision().clone();
     let reserve = vec![id(812800), id(812801)];
-    let mut actual = bus(
-        owner,
-        reserve,
-        policy(base.collection_entries() + 2, usize::MAX, u64::MAX),
-    );
+    // First accepted Notch fits; next no-op would retain three model snapshots. Full backing makes
+    // final entries3M+14, whereas incorrectly using the unused suffix would admit at3M+13.
+    let maximum = 3 * base.collection_entries() + 13;
+    let mut actual = bus(owner, reserve, policy(maximum, usize::MAX, u64::MAX));
     let original = group(
         812100,
         vec![mutation(
@@ -367,7 +376,7 @@ fn retained_reserve_counts_the_entire_backing_after_a_real_notch_consumes_its_pr
     );
     actual
         .commit_group(&original)
-        .expect("actual Notch consumes one reserve identity");
+        .expect("actual Notch consumes one reserve identity within final policy");
     let next = group(
         812110,
         vec![mutation(
@@ -375,29 +384,47 @@ fn retained_reserve_counts_the_entire_backing_after_a_real_notch_consumes_its_pr
             DesignRevision::from_counter(1),
             812110,
             812111,
-            material(addition.piece(), "next"),
+            material(addition.piece(), "explicit selection pending"),
         )],
     );
     reset(&counters);
     let error = actual
-        .preview_group(&next)
-        .expect_err("new current model plus full backing exceeds initial bound");
-    let expected = LimitError::Count {
-        unit: sc_core::design::DesignResourceCount::CollectionEntries,
-        maximum: base.collection_entries() + 2,
-        consumed: base.collection_entries() + 1,
-        requested: 2,
-        location: location(design, "retained.identities"),
-    };
-    assert_eq!(control(&error), Some(&Control::Retained(expected)));
-    assert_eq!(counts(&counters), [0, 1, 0]);
+        .commit_group(&next)
+        .expect_err("full backing refuses prospective growth before publication");
+    assert!(
+        matches!(control(&error),Some(Control::Retained(LimitError::Count {
+        unit:sc_core::design::DesignResourceCount::CollectionEntries, maximum:bound, ..
+    })) if *bound==maximum)
+    );
+    assert_eq!(
+        counts(&counters)[0],
+        1,
+        "bounded preparation only; no final publication-model copy"
+    );
+    let CommandResult::PieceList(result) = actual
+        .execute(&query(
+            design,
+            DesignRevision::from_counter(1),
+            QueryPayload::GetPieceList,
+        ))
+        .expect("original accepted revision unchanged");
+    assert_eq!(
+        result
+            .pieces()
+            .first()
+            .expect("actual first Piece")
+            .definition()
+            .material,
+        MaterialAssignment::Unresolved("explicit selection pending".into())
+    );
     reset(&counters);
     assert!(actual
         .commit_group(&original)
-        .expect("exact replay still works over current bound")
+        .expect("exact accepted replay")
         .is_replay());
     assert_eq!(counts(&counters), [0, 0, 0]);
 }
+
 #[test]
 fn retained_cancellation_and_original_quota_fail_before_private_validation_or_effects() {
     let owner = super::resource_measurement::fixture();

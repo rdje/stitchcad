@@ -184,6 +184,31 @@ pub(super) struct History<H> {
     actions: Vec<CommandHistoryAuditEntry>,
 }
 impl<H> History<H> {
+    pub(super) fn charge_authoring_change_resources(
+        &self,
+        owner: EntityId,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self {
+            depth: _,
+            action_limit: _,
+            undo: _,
+            redo,
+            actions: _,
+        } = self;
+        sink.charge_entries(
+            redo.len(),
+            super::retained::location(owner, "records.commit.discarded_redo"),
+        )?;
+        for step in redo.iter().rev() {
+            let HistoryStep {
+                group,
+                alternative: _,
+            } = step;
+            crate::command::resource::fixed(group);
+        }
+        Ok(())
+    }
     pub(super) fn changes_after<'a>(
         &'a self,
         sequence: Option<&'a CommandAuditSequence>,
@@ -579,6 +604,43 @@ fn validate_snapshot<H: DesignReferenceHost>(
 }
 
 impl<H: crate::design::DesignResourceSource> History<H> {
+    pub(super) fn charge_after_authoring_resources(
+        &self,
+        owner: EntityId,
+        previous: &DesignGarment<H>,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self {
+            depth,
+            action_limit,
+            undo,
+            redo: _,
+            actions,
+        } = self;
+        crate::command::resource::fixed(depth);
+        crate::command::resource::fixed(action_limit);
+        let retained = undo.iter().skip(usize::from(undo.len() >= depth.get()));
+        super::retained::charge_appended_entries(
+            retained.len(),
+            sink,
+            super::retained::location(owner, "retained.history.undo"),
+        )?;
+        for step in retained {
+            let HistoryStep { group, alternative } = step;
+            crate::command::resource::fixed(group);
+            crate::design::charge_design_garment_resources(alternative, sink)?;
+        }
+        crate::design::charge_design_garment_resources(previous, sink)?;
+        sink.charge_entries(0, super::retained::location(owner, "retained.history.redo"))?;
+        sink.charge_entries(
+            actions.len(),
+            super::retained::location(owner, "retained.history.actions"),
+        )?;
+        for action in actions {
+            super::resource::charge_command_history_audit_entry_resources(action, sink)?;
+        }
+        Ok(())
+    }
     pub(super) fn charge_resources(
         &self,
         owner: EntityId,

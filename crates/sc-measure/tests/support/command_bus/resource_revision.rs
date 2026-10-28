@@ -15,7 +15,7 @@ use sc_core::{
     },
 };
 use std::num::{NonZeroU64, NonZeroUsize};
-fn with_revision(
+pub(super) fn with_revision(
     before: &DesignGarment<CountedSources>,
     revision: DesignRevision,
 ) -> DesignGarment<CountedSources> {
@@ -90,8 +90,8 @@ fn exact_successor_bits_admit_zero_sparse_carry_and_beyond_u128_real_models() {
         );
         assert_eq!(
             counts(&counters)[1],
-            4,
-            "retained, current, metadata and final revision projections"
+            5,
+            "current retained/current/metadata/revision and prospective retained publication"
         );
         let CommandResult::PieceList(result) = bus
             .execute(&query(design, next, QueryPayload::GetPieceList))

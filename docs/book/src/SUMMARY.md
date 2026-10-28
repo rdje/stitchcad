@@ -54,6 +54,7 @@
     - [Actual model resource accounting](spec/model-resource-accounting.md)
     - [Actual source resource accounting](spec/source-resource-accounting.md)
     - [Actual command data resource accounting](spec/command-resource-accounting.md)
+    - [Prospective retained publication](spec/command-retained-publication.md)
     - [Typed evaluation requests](spec/evaluation-requests.md)
     - [Typed artifact requests](spec/artifact-requests.md)
   - [Internationalization](spec/i18n-architecture.md)

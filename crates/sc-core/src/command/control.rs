@@ -258,6 +258,8 @@ pub enum CommandProgressPhase {
     SnapshotBound,
     /// Actual complete private retained-content admission before preparation or history traversal.
     RetainedValidation,
+    /// Exact prospective retained publication before counter/model/audit/history construction.
+    RetainedPublication,
     /// Original submitted members are being prepared or resolved as exact aliases.
     Preparing,
     /// Actual current model/source validation.
