@@ -1,19 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.4.acceptance in docs/tasks/G1-SLICE-execution.md:focused actual
-  Design/retained-source notch quantity integration after implementation. Full PNT continues.
-- Integrity0519 repairs0518 omitted book control:preparation yielded but its session result was
-  discarded;stage/commit started early. Commit00e1d74 kept0517 authority while working gate saw
-  fresh unstaged record. Exact omitted929B retained artifacts/live_doc_size/0518_unstaged_authority.
-  jsonl;whole0518 in677. Consume EVERY exec terminal before dependent stage/commit;print full
-  result metadata so running session IDs cannot disappear. No background preparation remains.
-- Final hook now verifies --index:bounded native staged book/control/registry/task blobs,stage-zero
-  modes and stable listing. Actual old index refuses target2;new focused7+existing reader2 pass0.
-  Fresh repair authority uses a new completed owner;never reuse closed authority or amend history.
-- Quantity queries0518/native2/380 Fraction rows/private projection1/doc4/lint/fmt remain committed.
-  Clamp exact originals;B/Opposite complement BEFORE rounding;difference original boundaries.
-- Book90/211/1572/2706,map unchanged,retention1131 and677 receipt3 Git spans pass. No full Design,
-  symbolic/physical/effect authority;quantity integration/paired/stops/lineage/full proof stay owned.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.acceptance in docs/tasks/G1-SLICE-execution.md:focused original
+  notch/source component closure after implementation. Then .4.4 actual view/command adoption.
+- Quantity .3.4 accepted0520 through actual Design5 native cases/scoped Clippy/fmt. Four A/B x±2
+  sources with descriptive quarter A/three-quarter Opposite B cuts allocate0/±2 versus Uniform±1
+  first. Two actual child views retain1 full original/two stops,complete state and exact total.
+- Copy replacement refuses fresh child97001/A declarations and original97000/A local validation;
+  earlier immutable mathematics still works. Actual formula/profile metadata/context refuses
+  numeric amount before limit1. No symbolic value,physical match or whole Design proof supplied.
+- Queries0518 native2/380 Fraction rows/private projection1/doc4/lint/fmt remain committed:clamp
+  exact originals,B/Opposite complement BEFORE rounding,difference original boundaries,no narrowing.
+- Whole0519 in678/3 exact spans;book90/211/1572/2707,glossary0/map unchanged,retention1132 pass.
+  Integrity0519 final hook verifies exact native --index authority. Consume EVERY exec terminal
+  before dependent stage/commit;always print full metadata so running session IDs cannot disappear.
+- Omitted0518 authority:docs/tasks/artifacts/live_doc_size/0518_unstaged_authority.jsonl (929B).
+  View/command adoption,paired matching/stops/lineage/effects/full acceptance remain owned;PNT continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
@@ -40,7 +41,7 @@
 - Weighted source .4.2 closed0501 with focused actual Design acceptance. Original density/canonical
   source metadata and exact quantities survive portions;B/Opposite complement BEFORE shared rounding.
   Explicit region/integer limits bound arithmetic,not allocator/CPU/global authority. Actual notch
-  quantities,paired stops/lineage/effects/full acceptance remain owned under D301.
+  view/command adoption,paired stops/lineage/effects/full acceptance remain owned under D301.
 - Daily artifact cleanup completed2026-10-28 13:53UTC;docs/ARTIFACT_CLEANUP.md. Audit
   target/artifact_cleanup_audit/seam-20261028 preserves originals/stores/certificates. Clean only
   proven owned regenerable outputs;protect original generation/install and numerical proof data.

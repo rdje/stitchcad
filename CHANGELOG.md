@@ -3,14 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0519 — repair staged book authority after preparation race
+## STITCHCAD-G1-0520 — accept actual Design original-notch source quantities
 
-- Preserve exact omitted0518 authority929B and whole0518 scope/lesson/changelog677. Earlier00e1d74 feature commit kept old control because yielded preparation result was discarded and staging began early;working-tree gate saw fresh unstaged bytes. Product verification remains
-  valid.
-- Read-only staged book/control/registry/task verification now runs as final pre-commit gate,with bounded immutable native blobs,ordinary stage-zero modes and listing stability. Actual bad index refuses target2;focused7/existing reader2/shell syntax pass. COMMIT explicitly waits
-  for preparation terminal result.
-- Fresh control uses new completed repair owner;no history amend or closed-owner reuse. Book90/211/1572/2706,map/retention1131/677 receipt3 exact Git spans pass. LIVE/README unchanged,G1 6/18. Actual Design notch quantity integration resumes after repair;full pre-push gates
-  remain required.
+- Actual current Design declarations,2 retained child views/1 full canonical source and real Notch/ledger/context drive signed quantities. Four A/B x±2 descriptive quarter partitions allocate0/±2 while actual Uniform control spends±1 first. Original totals/stops/state stay exact.
+- Native5/scoped sc-measure Clippy/fmt pass. Actual copy replacement refuses fresh child declarations/original local validation while old immutable quantities remain usable. Formula/profile metadata and coordinates refuse symbolic amount before tiny budget;earlier
+  context/wide-choice fixtures pass.
+- Whole0519 retained678/three exact Git spans;book90/211/1572/2707,glossary0/map/retention1132 pass. Quantity component accepted with focused checks;Notch closure then view/command adoption next. LIVE/README unchanged,G1 6/18;paired/mutation/physical/full verification remains
+  owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

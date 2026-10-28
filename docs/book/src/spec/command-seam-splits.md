@@ -539,7 +539,7 @@ reference-progress API refuses these wider results;the admitted weighted query r
 quantity. Native tests consume all160 density rows and50 domain rows,including188-bit cumulative
 mass,189-bit normalization,positive/negative/zero/maximal sources,omitted regions and signed ties.
 Focused weighted6/oracle1/source docs4 and selected Clippy/fmt pass. Actual notch context is now
-implemented with admitted exact quantities;quantity integration,paired matching and effects retain later owners.
+implemented with admitted exact quantities and focused Design source/query acceptance;view adoption,paired matching and effects retain later owners.
 
 ### Focused weighted-source component acceptance
 
@@ -557,5 +557,5 @@ broader paired/mutation acceptance remain owned;these source partitions are desc
 [Original-frame notch context](command-notch-context.md) documents implemented bounded current
 uniqueness,exact wide inverse and focused actual Notch/Graph primitive acceptance. D305 is repaired;
 actual semantic source context is implemented with focused Design integration. Separate notch
-quantity admission and exact queries are implemented;quantity integration and paired effects retain their next owners.
+quantity admission and exact queries have focused actual Design source/query acceptance;view/command adoption and paired effects retain their next owners.
 Weighted source acceptance above keeps its focused scope.

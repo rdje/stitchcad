@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — repair staged book authority and preparation sequencing
+## _(2026-10-28 UTC)_ — actual Design original-notch quantity acceptance
 
-0519 fixes current commit integrity:0518 preparation yielded,but output-only handling discarded its session ID and stage/commit began early. Commit00e1d74 kept0517 control while working verifier saw fresh unstaged0518 authority. Product checks passed;exact929B omitted authority retained,whole0518 in677.
-Read-only --index verifies exact bounded native staged book/control/registry/task blobs,ordinary stage-zero modes and stable listing. Final hook invokes it after working doctrines. Shares freshness/raw-byte checks;COMMIT consumes preparation terminal result before staging. No index or temp repo writes.
-Actual old-index CLI refuses target2. Focused7+existing reader2/shell syntax pass0;book90/211/1572/2706,map/retention1131/677 receipt3 spans pass0. Fresh control uses new repair owner,not closed0518;no history amend. Original evidence remains exact and standing probes own the index controls.
-LIVE/README unchanged,G1 6/18. Resume actual Design quantity integration after clean commit/empty brief. Promotion declined:mechanical enforcement of indexed exact commit authority;current canonical answer updated. Always print full exec metadata and consume terminal result before dependent mutations.
+0520 focused actual Design5 joins current declarations,2 child views/1 canonical full source,actual Notches/ledger/context and473-bit quantity admission. Four A/B x±2 cases at descriptive A quarter/B three-quarter allocate0/±2,while actual Uniform control spends±1 first. Full source/stops/state stay exact;sum±2.
+Actual copy96000→96010 replacement refuses fresh declarations on child97001/A and local source validation on original97000/A;old immutable quantities remain usable. Four A/B x formula5001/profile98010 cases preserve current metadata/original context but refuse actual symbolic source before a1-bit allowance.
+Native5/167 filtered,scoped sc-measure Clippy/fmt pass0. Existing3 context/wide-choice cases stay exact. Book90/211/1572/2707,glossary0/map/retention1132 and678 receipt3 exact Git spans pass0. Quantity component accepted with focused checks;Notch component closure then view/command adoption next.
+[Whole0519 integrity repair](docs/history/stitchcad-devnotes-part678.md) retains exact incident/fix/proofs. Consume all preparation terminals before stage;final hook checks exact staged authority. LIVE/README unchanged,G1 6/18. Promotion declined:integration of indexed source/currentness/quantity contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

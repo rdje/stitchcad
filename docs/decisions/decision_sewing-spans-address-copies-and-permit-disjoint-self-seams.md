@@ -191,4 +191,7 @@ allocation,projection copy or inherited comparison-budget authority occurs durin
 Exact notch queries are implemented:clamp original progress,complement B/Opposite before shared
 signed rounding,and difference original rounded interval boundaries. Check full original frame and
 both bounds before query allocation,including zero. No child normalization or coordinate narrowing.
-Actual Design quantity integration/allocator/runtime/whole Design/physical proof remain separate.
+Actual Design source/query acceptance preserves±2 originals with quarter-partition amounts0/±2;
+Uniform control spends±1 there. Fresh copy replacement refuses current declarations/local source,
+while original immutable mathematical quantities survive;symbolic amounts remain unavailable.
+View/command adoption,allocator/runtime/whole Design/physical proof remain separate.

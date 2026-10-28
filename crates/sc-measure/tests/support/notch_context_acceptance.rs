@@ -30,6 +30,14 @@ fn limits(journal: usize, portions: usize) -> NotchContextLimits {
     )
 }
 fn state(amount: EaseAmount, side: SeamSideId) -> DesignSewing<DesignSources> {
+    state_at(amount, side, at(1, 2), at(1, 2))
+}
+fn state_at(
+    amount: EaseAmount,
+    side: SeamSideId,
+    a_cut: Param,
+    b_cut: Param,
+) -> DesignSewing<DesignSources> {
     let (inputs, graph) = with_sewing_graph(fixture(), vec![amount]);
     let mut definition = graph
         .spans()
@@ -108,11 +116,11 @@ fn state(amount: EaseAmount, side: SeamSideId) -> DesignSewing<DesignSources> {
         .split_at(
             EdgeAnchor {
                 edge: root.side(SeamSideId::A).range.edge(),
-                param: at(1, 2),
+                param: a_cut,
             },
             EdgeAnchor {
                 edge: root.side(SeamSideId::B).range.edge(),
-                param: at(1, 2),
+                param: b_cut,
             },
         )
         .expect("descriptive retained source partition,no physical correspondence claim");
@@ -435,4 +443,201 @@ fn original_notch_design_context_keeps_wide_originals_without_clearing_child_end
     ));
     assert_eq!(source.declaration().amount, EaseAmount::Formula(id(5_001)));
     assert_eq!(held, saved);
+}
+
+#[test]
+fn original_notch_design_quantity_keeps_original_signed_source_and_current_refusal_boundaries() {
+    use sc_core::ontology::NotchEaseLimits;
+    use sc_units::Length;
+    for side in [SeamSideId::A, SeamSideId::B] {
+        for sign in [-1, 1] {
+            let parent = Length::from_micrometres(2 * sign).expect("full original signed total");
+            let state = state_at(EaseAmount::Explicit(parent), side, at(1, 4), at(3, 4));
+            let saved = state.clone();
+            let structure = state.inputs().structure();
+            let canonical = state
+                .graph()
+                .ease_sources()
+                .next()
+                .expect("single original source");
+            let context = canonical
+                .admit_notch_context(
+                    structure.cut_plan(),
+                    structure.pieces().pieces(),
+                    state.landmarks(),
+                    structure.topology(),
+                    limits(1, 2),
+                )
+                .expect("actual full original dependencies")
+                .validate_sources()
+                .expect("actual local current source")
+                .original_context()
+                .expect("actual original Notches");
+            let quantities = context
+                .admit_explicit(NotchEaseLimits::new(
+                    NonZeroU64::new(473).expect("separate quantity allowance"),
+                ))
+                .expect("full signed source under exact conservative limit");
+            let portions = state
+                .amount_declarations()
+                .expect("complete actual current declarations")
+                .into_iter()
+                .map(|view| {
+                    let DesignSewingAmountSource::Explicit(actual) = view.source() else {
+                        unreachable!("actual literal source")
+                    };
+                    assert_eq!(*actual, parent);
+                    assert!(view.span().definition().stops.is_empty());
+                    let portion = view.portion().expect("actual retained target domain");
+                    assert!(core::ptr::eq(portion.source(), canonical));
+                    portion.side(side).range
+                })
+                .collect::<Vec<_>>();
+            let amounts = portions
+                .iter()
+                .map(|range| {
+                    quantities
+                        .amount_in(*range)
+                        .expect("original rounded boundaries")
+                })
+                .collect::<Vec<_>>();
+            assert_eq!(amounts, [Length::ZERO, parent]);
+            assert_eq!(
+                amounts
+                    .first()
+                    .expect("first")
+                    .checked_add(*amounts.get(1).expect("second")),
+                Ok(parent)
+            );
+            assert_eq!(quantities.amount_in(canonical.side(side).range), Ok(parent));
+            assert_eq!(canonical.stops().len(), 2);
+            let (_, uniform) = with_sewing_graph(fixture(), vec![EaseAmount::Explicit(parent)]);
+            let uniform = uniform
+                .spans()
+                .first()
+                .expect("actual Uniform control")
+                .retain_ease_source();
+            assert_eq!(
+                uniform.source().uniform_explicit_cumulative_at_a(at(1, 4)),
+                Ok(Length::from_micrometres(sign).expect("Uniform spends half quantum at quarter"))
+            );
+            assert_eq!(state, saved);
+
+            let mut inputs = state.inputs().definition().clone();
+            let mut structure = inputs.structure.definition().clone();
+            structure.cut_plan = CutPlan::new(
+                structure
+                    .cut_plan
+                    .copies()
+                    .iter()
+                    .map(|copy| {
+                        let mut definition = *copy.definition();
+                        if definition.id == id(96_000) {
+                            definition.id = id(96_010);
+                        }
+                        definition
+                    })
+                    .collect(),
+                structure.pieces.pieces(),
+            )
+            .expect("explicit current copy replacement");
+            inputs.structure =
+                DesignStructure::new(structure).expect("actual current structural snapshot");
+            let held = DesignSewing::new(DesignSewingDefinition {
+                inputs: DesignInputs::new(inputs).expect("actual current cross-crate root"),
+                graph: state.graph().clone(),
+                landmarks: state.landmarks().to_vec(),
+            })
+            .expect("held source is inspectable after actual replacement");
+            assert!(
+                matches!(held.amount_declarations(),Err(DesignSewingError::Graph(issue))
+                if matches!(*issue,SewingError::MissingCopy {span,side:SeamSideId::A,copy}
+                if span==id(97_001) && copy==id(96_000)))
+            );
+            let source = held
+                .graph()
+                .ease_sources()
+                .next()
+                .expect("held full original source");
+            let structure = held.inputs().structure();
+            let issue = source
+                .admit_notch_context(
+                    structure.cut_plan(),
+                    structure.pieces().pieces(),
+                    held.landmarks(),
+                    structure.topology(),
+                    limits(1, 2),
+                )
+                .expect("input evidence remains available")
+                .validate_sources()
+                .expect_err("fresh actual copy binding must refuse");
+            assert!(
+                matches!(issue.issue(),NotchSourceValidationIssue::Structural(issue)
+                if matches!(issue.as_ref(),SewingError::MissingCopy {span,side:SeamSideId::A,copy}
+                if *span==id(97_000) && *copy==id(96_000)))
+            );
+            assert_eq!(
+                portions
+                    .iter()
+                    .map(|range| quantities
+                        .amount_in(*range)
+                        .expect("original immutable mathematical snapshot"))
+                    .collect::<Vec<_>>(),
+                amounts
+            );
+            assert_eq!(state, saved);
+        }
+    }
+}
+
+#[test]
+fn original_notch_design_quantity_preserves_formula_and_profile_sources_without_values() {
+    use sc_core::ontology::{NotchEaseLimits, NotchEaseWorkspaceError};
+    for side in [SeamSideId::A, SeamSideId::B] {
+        for amount in [
+            EaseAmount::Formula(id(5_001)),
+            EaseAmount::Profile(ProfileParameterRef::new(id(98_010))),
+        ] {
+            let state = state(amount, side);
+            let saved = state.clone();
+            let views = state
+                .amount_declarations()
+                .expect("actual metadata is currently valid");
+            assert_eq!(views.len(), 2);
+            let source = views
+                .first()
+                .expect("actual target")
+                .portion()
+                .expect("retained source")
+                .source();
+            let structure = state.inputs().structure();
+            let context = source
+                .admit_notch_context(
+                    structure.cut_plan(),
+                    structure.pieces().pieces(),
+                    state.landmarks(),
+                    structure.topology(),
+                    limits(1, 2),
+                )
+                .expect("actual dependencies")
+                .validate_sources()
+                .expect("actual current source")
+                .original_context()
+                .expect("actual original coordinates");
+            assert_eq!(
+                context
+                    .admit_explicit(NotchEaseLimits::new(
+                        NonZeroU64::new(1).expect("tiny explicit quantity limit")
+                    ))
+                    .expect_err("coordinates and metadata cannot supply a symbolic numeric value"),
+                NotchEaseWorkspaceError::Amount {
+                    source_span: id(97_000),
+                    side,
+                    amount
+                }
+            );
+            assert_eq!(source.declaration().amount, amount);
+            assert_eq!(state, saved);
+        }
+    }
 }

@@ -3,7 +3,7 @@
 Complete actual input admission,bounded local validation and original-notch coordinate context are
 implemented with focused checks. They build on the [point and interval primitives](command-notch-context.md).
 Separate explicit quantity arithmetic admission and exact cumulative/interval queries are implemented
-with focused checks;actual Design quantity integration and paired effects retain their next owners.
+with focused actual Design source/query checks;view/command adoption and paired effects retain their next owners.
 
 | API token | Meaning |
 | --- | --- |
@@ -239,7 +239,7 @@ original1/(2MAX) and1/4. The first remains exact despite `Param` refusal. The re
 endpoint at original half still requires a split choice,so complete current sewing validation refuses
 that child while the full original source context succeeds. Context construction changes neither
 the held endpoint answer nor source/formula metadata. This is source-context component acceptance;
-quantity integration,whole paired command,mutation and physical verification retain their later owners.
+view/command adoption,whole paired command,mutation and physical verification retain their later owners.
 
 ## Admit original-notch quantity arithmetic
 
@@ -312,12 +312,32 @@ repair portions:the interior-offset fixture needs an explicit peak4 for its3 por
 input. This local source success grants no whole Piece or Design certificate.
 
 Private actual-projection controls preserve concrete quota operations and refuse a separate
-equal-content ledger snapshot before numeric work. Focused quantity checks pass;actual Design
-quantity integration,nonuniform component acceptance and whole paired/mutation/physical verification
-retain their later task owners.
+equal-content ledger snapshot before numeric work. Focused quantity checks pass. The actual Design
+source/query acceptance below is separate from view/command adoption,nonuniform component acceptance
+and whole paired/mutation/physical verification.
+
+## Actual Design quantity acceptance
+
+The focused actual Design fixture joins complete current amount declarations,two retained children,
+one canonical full original source and the actual semantic Notches. For either distribution side,
+with original Notches at1/4 and3/4 and signed source±2 µm,a descriptive A cut at1/4 and Opposite B
+cut at3/4 yields child amounts0 and±2 µm. The actual Uniform counterfactual spends±1 at that first
+boundary. Both child views continue to lend the full original±2 source;their empty stop lists do
+not erase the original two stops,and their exact amounts sum to that original total.
+
+After an actual copy replacement,fresh Design amount declarations refuse the child's MissingCopy;
+fresh local source validation refuses the full original source's MissingCopy. The earlier sealed
+immutable source/ledger context can still answer its mathematical quantities. This preserves the
+boundary between a snapshot query and current Design readiness. Currently valid formula/profile
+metadata and exact original coordinates still refuse numeric admission with the actual symbolic
+source,even ahead of a1-bit allowance. Neither a value nor physical correspondence is fabricated.
+
+Five focused native cases include the new signed/symbolic quantity acceptance and directly affected
+source-context fixtures. This accepts the source/query component with focused checks;convenience
+view/command APIs,whole nonuniform acceptance and paired/mutation/physical proof retain later owners.
 
 The canonical decision is docs/decisions/decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md.
 Its whole pre-0512 source is logical record docs/history/stitchcad-devnotes-part670.md,available
 through the [public archive reader](../annexes/archive-reader.md). It retains prior prospective
 wording and all historical evidence exactly. Focused implementation and source-context integration
-checks above are distinct from deferred quantity integration and whole paired/mutation/physical verification.
+checks above are distinct from deferred view/command adoption and whole paired/mutation/physical verification.

@@ -173,7 +173,7 @@ Native checks exercise actual limits,complete unknown/deleted/gapped/numeric evi
 per-input arithmetic rollback. The14 independent Fraction recomposition rows also feed this query,
 including nine valid complete reductions and five genuine final-width refusals. Actual Notch/Graph/
 retained-source fixtures use bounded coverage alongside their current/original point queries.
-Bounded local validation,original-coordinate context and admitted notch queries are implemented;quantity integration remains separately owned.
+Bounded local validation,original-coordinate context and admitted notch queries are implemented;source/query integration has focused Design acceptance;view/command adoption remains separately owned.
 
 ## Query bounded current uniqueness
 
@@ -451,6 +451,6 @@ python3 -I -B docs/tasks/artifacts/seam_partition/original_projection_oracle.py 
 
 Earlier range20/recovery4 receipts retain accepted source states,forward witnesses and corrected
 D305 evidence. Current inverse6/private oracle1/doc2 and selected Clippy/format checks pass with
-focused verification. Actual original-notch context and quantity queries are implemented;quantity integration and full paired acceptance remain pending. The exact
+focused verification. Actual original-notch context and quantity queries are implemented;focused Design source/query acceptance passes;view/command adoption and full paired acceptance remain pending. The exact
 pre-context sewing decision and closed D302–D304 ledgers are retained in repository history records
 658/659;the current decision keeps standing contracts without a raised ceiling or another map row.
