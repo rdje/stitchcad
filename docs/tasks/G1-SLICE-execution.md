@@ -346,45 +346,49 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Design integration;.acceptance deferred scoped component checkpoint after implementation.
 - ID: `G1-SLICE.6.5.3.2.3.3.1`
   Status: `done`
-  Goal:0529 executable existing closed semantic stop/copy/current contracts and independent
-  membership fixture;bounded production stop partition still owned .2–.4.
-  - [x] REPRODUCE / ISSUE: 0529 cargo test -p sc-core --test sewing_contract paired_stop_contract
-    →2 passed/95 filtered,rc=0. Existing graph accepts one semantic cut landmark referenced by both
-    closed adjacent children. Same/Opposite B order and named side/copy cannot be guessed from q.
-  - [x] ROOT CAUSE: 0529 cargo test -p sc-core --test sewing_contract paired_stop_contract
-    →2 passed,rc=0. Existing range_contains_point uses inclusive endpoints;positive self-overlap
-    uses strict comparison. Native actual retained child graphs confirm complete closed membership,
-    original authored order and actual current range/semantic point frames without coordinate narrowing.
-    Fixture template is captured before the ledger edit:born construction on its retired edge
-    correctly refused MissingEdge;explicit actual later anchors preserve the intended frame test.
-  - [x] FIX: 0529 independent Fraction32-row oracle and native real Notch/Turn/child graph contract
-    cases establish full closed-member partition expectations. Cut reference belongs to both adjacent
-    children,without a new semantic object. Register new oracle with closed gate before use;current
-   10-producer/12-fixture gate and9 finite guards pass,rc=0. No production partition/kernel change.
-  - [x] ADDRESSED: 0529 cargo test -p sc-core --test sewing_contract paired_stop_contract
-    →2 passed/95 filtered,rc=0. Thirty-two A/B x Same/Opposite rows include4 exact shared cuts,
-    full endpoints and actual later anchors whose original1/(3MAX) denominator65 has no Param view.
-    Independent expected memberships admit real retained graphs;28 wrong-child assignments refuse
-    actual first authored StopOutsideSide. Four reflected-copy/touching self-seam direction scenarios
-    retain named copies,side tags,original ID/root stops and B-before-A order for one shared mark.
-    Both semantic kinds stay unchanged;physical representations/geometric turning remain deferred.
-  - [x] NO REGRESSION: 0529 cargo clippy -p sc-core --test sewing_contract -- -D warnings and
-    cargo fmt --all --check →pass,rc=0. local_environment.py -- bash run_seam_partition_probes.sh
-    →10 exact producers/12 fixtures unchanged/9 finite inventory/status/wiring guards,29 discovered
-    suites,rc=0. Native commands use local_environment.py. Book/publication93/223/1590/2758,
-    glossary310/9/158/0,map unchanged,687 receipt3 exact Git spans,retention1141 logical/46 working/
-    64087 decodedL/4964948 decodedB/2542285 residentB →pass,rc=0. Full source/current/quantity kernels
-    unchanged;bounded stop implementation .2–.4,component .acceptance and full paired proof stay owned.
-  - [x] LOCKSTEP: 0529 new bounded stop chapter/SUMMARY/topic/source links,closed membership in
-    canonical sewing decision,gate/build book current counts,task index/D301/D306/MEMORY/DEV/CHANGE
-    align. Whole0528 retained687/3 exact Git spans. LIVE reviewed unchanged29 suites/G1 6/18;README
-    unchanged. Next .3.3.2 actual bounded stop admission. No new identities,geometry,physical matching,
-    source repair choice or command effect. Shared-cut finding surfaced and durably owned here.
-    promotion: declined (executable evidence extends indexed stop/copy/current contracts;no new physical or export assumption).
+  Goal:0529 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part688.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.2`
-  Status: `pending`
-  Goal: explicit finite actual command source/stop/registry/point/range workspace admission before
-  projection/collections;preserve actual target/stop/side/copy/limit causes and original error chains.
+  Status: `done`
+  Goal:0530 explicit actual stop input/workspace admission before semantic/current queries or
+  derived collections;metadata proof only,not accepted stop membership/currentness.
+  - [x] REPRODUCE / ISSUE: 0530 cargo test -p sc-measure --test design_inputs_contract
+    command_stop_admission →4 passed/176 filtered,rc=0. Actual N2/M2/B2 reserves16;limit15 refuses.
+    A retained target with0 stops/full original2 stops still counts full registry and range caches.
+    Actual held copy replacement can admit input metadata while complete current validation refuses.
+  - [x] ROOT CAUSE: 0530 cargo test -p sc-measure --test design_inputs_contract command_stop_admission
+    →4 passed,rc=0. Stop input admission must precede current queries/derived work,not consume a
+    token whose semantic callbacks already ran. Full model resource admission,actual held target/
+    cuts and shared complete journal admission supply fixed borrowed inputs. Reserve M+N+2N+4B
+    before collections:full registry index,one target row,two possible child references and four
+    paired-side range caches at selected peak B. Original ease-root stops remain a separate list.
+  - [x] FIX: 0530 SplitSeamSpan.admit_stop_partition_inputs composes actual complete model meter,
+    held binding,existing complete journal/nested admission and checked scalar reservation. Explicit
+    no-default limits and private borrowed token retain exact state/request/span,model demand/limits,
+    actual counts and workspace bounds. Typed original model/binding/Journal evidence precedes
+    overflow/workspace refusal;no allocation,clone,value lookup or current proof. Native4/docs3+1
+    →pass,rc=0. Separate test child module keeps actual reusable Design fixtures scoped/readable.
+  - [x] ADDRESSED: 0530 cargo test -p sc-measure --test design_inputs_contract command_stop_admission
+    →4 passed/176 filtered,rc=0. Actual signed/literal/formula/profile metadata,owner/request/span
+    pointers,model demand/limits and16/15 workspace exact. TargetN0 differs from full root stops2;
+    unused Turn expands M2→3/workspace10→11 and cannot be hidden. Model before target,target before
+    complete journal,nested before derived overflow. Actual unrelated declaration makes journal2/
+    nested3;typed operation/consumed/requested limits survive. Cache multiplication and total addition
+    overflow refuse;representable usizeMAX−3 scalar reservation allocates no cache. Missing copy
+    remains held and complete current validator still refuses original child97001/A/copy96000.
+    Standard model cause survives;original fixed journal evidence truthfully has no Error source.
+  - [x] NO REGRESSION: 0530 cargo clippy -p sc-core --lib -- -D warnings and cargo clippy
+    -p sc-measure --test design_inputs_contract -- -D warnings →pass,rc=0;cargo fmt --all --check
+    →pass,rc=0. cargo test -p sc-core --doc CommandStopPartition →3 privacy/default/lifetime cases
+    passed,rc=0;--doc admit_stop_partition_inputs →1 API example passed,rc=0. Native tools use
+    local_environment.py. Book/publication93/226/1590/2761,glossary310/9/158/0,map unchanged,688 receipt3
+    exact Git spans,retention1142 logical/47 working/64151 decodedL/4971585 decodedB/2548922 residentB
+    →pass,rc=0. Existing source/current/numeric/point/range kernels unchanged;bounded membership .3,
+    ordered views .4,component .acceptance and full paired/physical/mutation gates remain owned.
+  - [x] LOCKSTEP: 0530 three API types/routes/stop chapter/source decision/task index/D301/MEMORY/
+    DEV/CHANGE align. Whole0529 retained688/3 exact Git spans. LIVE/README reviewed unchanged29
+    suites/G1 6/18. Next .3.3.3 bounded actual current copy/point/range membership;must validate
+    even zero stops. No inferred semantic/current/physical/authority/effect proof from metadata.
+    promotion: declined (adoption of indexed actual input/resource/current contracts;no new physical or export assumption).
 - ID: `G1-SLICE.6.5.3.2.3.3.3`
   Status: `pending`
   Goal: bounded actual current pair-range coverage and unique semantic point membership;closed

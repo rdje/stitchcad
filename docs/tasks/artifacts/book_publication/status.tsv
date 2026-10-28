@@ -222,3 +222,6 @@ notch command quantity refusal	spec/command-seam-quantities.md	crates/sc-core/sr
 notch command quantity partition	spec/command-seam-quantities.md	crates/sc-core/src/command/seam_quantity/notch.rs	CommandNotchEasePartition	G1-SLICE.6.5.3.2.3.2.4.4.3	4.4
 actual owned seam source admission	spec/command-seam-capture.md	crates/sc-core/src/command/seam_source.rs	CommandSeamSplitSourceAdmission	G1-SLICE.6.5.3.2.3.2.4.4.4	4.4
 actual owned seam source refusal	spec/command-seam-capture.md	crates/sc-core/src/command/seam_source.rs	CommandSeamSplitSourceError	G1-SLICE.6.5.3.2.3.2.4.4.4	4.4
+command stop partition limits	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops.rs	CommandStopPartitionLimits	G1-SLICE.6.5.3.2.3.3.2	4.4
+command stop partition input admission	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops.rs	CommandStopPartitionAdmission	G1-SLICE.6.5.3.2.3.3.2	4.4
+command stop partition input refusal	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops.rs	CommandStopPartitionAdmissionError	G1-SLICE.6.5.3.2.3.3.2	4.4

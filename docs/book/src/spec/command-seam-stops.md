@@ -1,8 +1,8 @@
 # Semantic stops at paired seam cuts
 
-Native contract cases now verify the existing graph's stop membership at paired cuts,including
-closed endpoints,explicit side/copy identity,authored order and later-frame anchors. The bounded
-production stop partition stage is still pending. These cases construct real retained child graphs
+Native contract cases verify the existing graph's stop membership at paired cuts,including
+closed endpoints,explicit side/copy identity,authored order and later-frame anchors. Explicit actual
+stop input/workspace admission is implemented;bounded current membership and partition views remain pending. These cases construct real retained child graphs
 through public APIs;they do not install a command effect or create new semantic landmark identities.
 
 | API token | Meaning |
@@ -17,6 +17,20 @@ through public APIs;they do not install a command effect or create new semantic 
 | `EdgeRange` | Positive interval whose membership includes both endpoints |
 | `Param` | Stored bounded rational position;valid wide original views may refuse |
 | `StopOutsideSide` | Actual stop cannot belong to the named child's side interval |
+| `CommandStopPartitionLimits` | Explicit complete journal,range and workspace allowances |
+| `CommandStopPartitionAdmission` | Borrowed actual model/request/target and admitted input bounds |
+| `CommandStopPartitionAdmissionError` | Original model/binding/journal or checked workspace refusal |
+| `admit_stop_partition_inputs` | Admit actual inputs before current queries or derived collections |
+| `DesignResourceLimits` | Complete represented model envelope,independent of stop workspace |
+| `DesignResourceDemand` | Exact complete model walk demand retained by admission |
+| `UniquePointLimits` | Complete journal/nested input allowance for later point queries |
+| `RangeCoverageLimits` | Same journal allowance and selected peak range portions |
+| `PointJournalAdmissionIssue` | Complete actual journal/nested cause,without a standard Error trait |
+| `Model` | Original complete model resource refusal before target lookup |
+| `Binding` | Actual target or A/B frame/interior cut refusal |
+| `Journal` | Complete journal/nested cause before workspace arithmetic |
+| `BoundOverflow` | Conservative workspace cardinality cannot be represented |
+| `Workspace` | Actual conservative reservation exceeds the selected allowance |
 
 ## A stop at the cut belongs to both closed children
 
@@ -92,6 +106,90 @@ stops and authored order survive. Physical Notch representation and actual geome
 deferred to their existing owners.
 
 The new independent stop oracle is registered in the closed required oracle gate. Ten producers
-match twelve frozen fixtures;the nine gate controls still pass. Bounded source/stop admission,
-actual current membership and ordered borrowed partition views follow as separate owned slices.
+match twelve frozen fixtures;the nine gate controls still pass. Actual current membership and
+ordered borrowed partition views follow the input admission below as separate owned slices.
 Whole paired lineage/atomic effects and physical/mutation acceptance remain later work.
+
+## Admit actual inputs before current queries
+
+Call the real request's `admit_stop_partition_inputs(&state,model_limits,stop_limits)` over the
+actual owned DesignSewing component. The source host implements the existing readonly reference
+and exhaustive resource contracts. This stage walks the complete represented model under its
+explicit logical envelope,then binds the actual held target and source cuts. It does not run
+semantic/current callbacks,resolve points/ranges,build indexes,clone roots or evaluate values.
+
+Next it uses the existing complete journal/nested admission shared by point and range queries.
+Unrelated edits and nested declared-edge/offset-fragment collections remain counted. It then
+checks a separate conservative workspace reservation before any derived allocation.
+
+Let N be the actual target span's authored stop count,M the full supplied semantic registry count,
+and B the selected per-range peak. Reserve M+N+2N+4B logical items:
+
+| Reserved population | Bound | Purpose |
+| --- | --- | --- |
+| Complete semantic metadata index | M | Includes every unused registry entry |
+| Target stop membership rows | N | One row per actual authored side/landmark reference |
+| Total child stop references | 2N | A shared cut may reference the same stop in both children |
+| Four paired-side range caches | 4B | Two A-ordered pairs,each with A and B coverage |
+
+The range peak includes active input and transient output. Earlier cached queries plus the active
+query fit within four such allowances. These are conservative logical populations;fixed headers,
+allocator capacity,CPU and repeated whole-command snapshots require their own accounting. No
+workspace is allocated by admission itself. Even a very large representable reservation remains
+scalar metadata;overflow refuses instead of substituting a smaller guessed allowance.
+
+For example,N2/M2/B2 reserves16 items. Limit15 refuses with actual target,all three selected
+populations,required16 and limit15. Select every allowance explicitly:
+
+```rust
+use core::num::NonZeroUsize;
+use sc_core::command::CommandStopPartitionLimits;
+use sc_core::ontology::UniquePointLimits;
+
+let stop_limits = CommandStopPartitionLimits::new(
+    NonZeroUsize::new(16).unwrap(),
+    UniquePointLimits::new(NonZeroUsize::new(1).unwrap(), NonZeroUsize::new(2).unwrap()),
+    NonZeroUsize::new(2).unwrap(),
+);
+```
+
+These numbers belong to that fixture,not an implicit default policy. The complete model envelope
+is separately selected. `range_limits()` preserves the exact same journal/nested allowance with
+the chosen B. Existing point/range queries still own their concrete per-query refusal behavior.
+
+### Target stops and full original stops remain distinct
+
+Partition the actual target's authored stop list. A retained target can have N0 while its original
+ease root still retains two original stops for quantity provenance. Do not backfill that root list
+into the child. With M2/B2,the conservative input reservation remains10 even for N0. Adding an
+unused actual TurnPoint makes M3 and reserves11;limit10 cannot hide the extra registry entry.
+
+The private admission token lends the exact `state()` and `binding()`,including original request,
+target and projected pairs. It retains `model_demand()`,`model_limits()` and the exact stop limits.
+Getters expose actual N/M,range cache,membership,child reference and aggregate reservations. Its
+fields and lifetime prevent fabricating admitted inputs or escaping their actual owners. No
+semantic object or root has been copied by this stage.
+
+### Refusal order and currentness boundary
+
+The exact order is complete model envelope,actual target/A/B frame/interior cuts,complete journal/
+nested admission,checked reservation,then selected workspace allowance. A complete model refusal
+precedes a missing target;a missing target precedes journal quota. Complete journal count precedes
+nested processing,and both precede a huge selected range budget that cannot be represented.
+
+Model and binding variants retain their original standard error sources. Journal retains the
+full existing typed issue,including actual operation/collection/consumed/requested/limit;that
+fixed evidence does not implement the standard Error trait. Workspace and overflow variants retain
+actual target/counts/selected budget data. No partial successful input token escapes any refusal.
+
+An unrelated second declaration changes the complete journal from1 to2 entries and nested edges
+from2 to3. Journal limit1 refuses first;with2 entries admitted,nested limit2 refuses the later
+actual declaration with consumed2/requested1. A limit3 then admits the complete inputs. Multiplying
+an enormous B by4 and adding actual N/M also use checked arithmetic before allocation.
+
+These are admitted held inputs,not accepted current memberships. After copy96000 is explicitly
+replaced with96010,the original graph can remain inspectable and its stop input metadata can
+admit. The earlier complete current validator still refuses MissingCopy on the actual child/A.
+No current callback or numeric value has been smuggled into this token. Bounded copy/point/range
+validation must follow even when N is zero;only its successful result can support later ordered
+partition views. Whole source/physical/authority/aggregate operation/effect readiness stays separate.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — native closed semantic stop partition contracts
+## _(2026-10-28 UTC)_ — bounded actual stop input admission
 
-0529 native2/scoped Clippy/fmt pass0:32 independent Fraction memberships,4 shared cuts,28 wrong-child refusals and4 reflected-copy/touching self-seam direction cases. Retain exact IDs/side/copy/authored order and actual later anchors with65-bit originals. One semantic cut object can be referenced by both children.
-Current graph membership is closed;partition will retain every closed membership. Test captures original template before ledger edit,then builds actual later anchor;retired-edge born constructor correctly refuses. No production partition/kernel/identity/physical effect added. Bounded stop admission .3.3.2 next.
-Gate10 producers/12 fixtures/9 finite guards/29 discovered suites,book93/223/1590/2758,glossary0/map/687 receipt3/retention1141 pass0. New stop chapter/source decision/task index/D301/D306 align. LIVE/README unchanged,G1 6/18;full paired/physical and hosted CI verdict remain later owners before effects/push.
-[Whole0528 oracle gate repair](docs/history/stitchcad-devnotes-part687.md) retains all original source/status/wiring proofs. Promotion declined:executable evidence for indexed stop/copy/current contracts. No new physical/export assumption;one existing semantic object survives closed boundary sharing.
+0530 admit_stop_partition_inputs walks actual model resources,held target/cuts and complete journal/nested inputs,then reserves M+N+2N+4B before current callbacks/queries/indexes/clones. N actual target stops,M full registry,B per-range peak. Private token retains exact owners/model demand/limits and checked bounds.
+Actual Design4/core+test Clippy/fmt/docs3+1 pass0. Workspace16/15,target0/fullroot2,unused registry10→11,model/target/journal/nested/overflow order,unrelated journal2/nested3 and huge scalar bound without allocation. Held copy damage remains metadata;complete current validator still refuses. No current proof/effect.
+Book93/226/1590/2761,glossary0/map/688 receipt3/retention1142 pass0. Three API types/stop chapter/source decision/current docs align. LIVE/README unchanged29 suites/G1 6/18. Native fixtures isolated in a test child module. Existing kernels unchanged;bounded current memberships .3.3.3 next,including zero target stops.
+[Whole0529 stop contracts](docs/history/stitchcad-devnotes-part688.md) retains exact closed/copy/current/oracle proof. Promotion declined:indexed input/resource/current contract adoption. No physical/export assumption. Ordered views/component/full paired proof stay owned;consume authority/commit terminals.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

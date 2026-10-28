@@ -34,6 +34,7 @@ mod seam_ease;
 mod seam_quantity;
 mod seam_source;
 mod seam_split;
+mod seam_stops;
 mod snapshot;
 mod tech_pack;
 mod workflow;
@@ -104,6 +105,9 @@ pub use seam_quantity::{
 };
 pub use seam_source::{CommandSeamSplitSourceAdmission, CommandSeamSplitSourceError};
 pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};
+pub use seam_stops::{
+    CommandStopPartitionAdmission, CommandStopPartitionAdmissionError, CommandStopPartitionLimits,
+};
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};
 pub use workflow::{CommandWorkflowId, CommandWorkflowStep};

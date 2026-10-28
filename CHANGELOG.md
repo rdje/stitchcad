@@ -3,13 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0529 — verify closed semantic stop and copy contracts
+## STITCHCAD-G1-0530 — admit actual stop inputs and conservative workspace
 
-- Native2/scoped Clippy/fmt pass for32 independent closed membership rows,4 shared cuts,28 wrong-child refusals and4 reflected-copy/touching self-seam direction cases. Keep one semantic object referenced by both adjacent cut children,exact side/copy/authored order and actual
-  later anchors with valid65-bit originals.
-- Register independent stop oracle in the closed required gate:10 producers/12 fixtures/9 finite guards pass,29 suites discovered. No production stop partition/kernel/identity/effect change. New chapter explains verified contract and remaining bounded admission/membership/view
-  implementation.
-- Whole0528 retained687/three exact Git spans;book93/223/1590/2758,glossary0/map/retention1141 pass. LIVE/README unchanged29 suites/G1 6/18. Actual bounded stop admission next;physical/authority/aggregate operations,paired effects and full/hosted verification remain owned.
+- Walk actual full model envelope,bind held target/cuts and admit complete journal/nested input,then reserve M+N+2N+4B before current callbacks/queries/indexes/clones. Private borrowed token and explicit limits preserve actual owners,model demand/counts and original typed
+  causes;metadata supplies no current proof.
+- Actual Design4/core+test Clippy/fmt/docs3+1 pass. Exact16/15,zero target/fullroot2,unused registry10→11,model/target/journal/nested/overflow precedence,unrelated journal2/nested3 and huge scalar reservation without allocation. Held copy damage stays inspectable while complete
+  current validation refuses.
+- Whole0529 retained688/three exact Git spans;book93/226/1590/2761,glossary0/map/retention1142 pass. LIVE/README unchanged29 suites/G1 6/18. Bounded actual current memberships next,then ordered views;physical/authority/aggregate effects/full and hosted verification remain owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

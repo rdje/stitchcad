@@ -1078,3 +1078,6 @@ fn command_seam_source_preserves_actual_formula_profile_metadata_without_supplyi
         );
     }
 }
+
+#[path = "stop_partition_admission.rs"]
+mod stop_partition_admission;
