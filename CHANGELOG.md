@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0506 — admit wide original-point workspace before arithmetic
+## STITCHCAD-G1-0507 — project exact original coordinates with admitted work
 
-- Positive no-default current/candidate/integer limits admit actual current uniqueness,target creation and conservative coordinate/scratch widths. Copy borrowed token retains exact immutable journal/context;current numeric causes remain standard error sources.
-- Native5/private bound1/doc3/scoped Clippy/fmt pass. Independent integer6 and960 Fraction offset checks include64-bit control;J2 reserves762 bits and refuses761. Real unrelated sources do not gain a preimage claim;old held choice survives equal forward witnesses.
-- Whole0505 retained663;sewing decision/book/API/task routes synchronized. LIVE/README unchanged,G1 6/18. Actual wide inverse/candidate production and later notch quantity/paired acceptance remain owned.
+- Invert actual journal only after named source creation. Private canonical BigUint fractions,guarded operands/results and candidate storage retain all coordinate/direction states;stable coalescing keeps8 aligned cycles within2 states without canceling old reference choice.
+- Opaque exact coordinates support explicit bounded views;valid64-bit/188-bit originals survive Param/u128 refusals. Typed original source/held/current/operation failures publish no partial candidates. Native6/private oracle1/doc2/scoped Clippy/fmt pass;independent6 rows include188-bit control.
+- Whole0506 retained664;decision/book/API/task pointers synchronized. LIVE/README unchanged,G1 6/18. Active archive64/64 needs packing before next record;then focused actual-notch primitive acceptance. Semantic context/quantity and broader paired acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -1,8 +1,8 @@
 # Original-frame notch context
 
 Notch-bounded allocation needs the actual semantic landmarks and topology journal,not guessed
-parameters or physical notch dimensions. Bounded current-point uniqueness and explicit original-point
-workspace admission are implemented. Inverse coordinates and notch quantity contexts remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
+parameters or physical notch dimensions. Bounded current uniqueness,original-point workspace
+admission and exact inverse coordinates are implemented. Semantic notch quantity contexts remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
 is already implemented with focused checks.
 
 | API token | Meaning |
@@ -14,6 +14,18 @@ is already implemented with focused checks.
 | `OriginalPointLimits` | Explicit current-input,candidate and integer workspace limits |
 | `OriginalPointAdmission` | Borrowed actual current point,original source creation and reserved widths |
 | `OriginalPointAdmissionError` | Actual current/source/integer preflight refusal |
+| `OriginalCoordinate` | Opaque canonical exact coordinate in the named source creation frame |
+| `OriginalPointCandidate` | Coordinate plus mapping direction relative to the observed current frame |
+| `OriginalPointProjection` | Complete distinct candidate set bound to the immutable admitted journal |
+| `OriginalPointProjectionError` | Original source/held/current evidence and concrete projection failure |
+| `OriginalPointProjectionIssue` | Actual candidate quota,missing origin or numeric cause |
+| `project` | Compute exact inverse candidates after successful workspace admission |
+| `as_u128_ratio` | Explicit exact128-bit component view;may refuse a valid wider coordinate |
+| `as_param` | Explicit bounded reference view;may refuse a valid wider coordinate |
+| `component_bit_counts` | Exact numerator/denominator bit counts,without exposing dependency integers |
+| `NoOrigin` | Known current point has no predecessor in this named source frame |
+| `Candidates` | A branch exceeds simultaneously retained states before new state allocation |
+| `DeletedPredecessor` | Refuse an encountered deleted predecessor,retaining its actual operation |
 | `admit_original_point` | Admit wide inverse workspace before any wide integer arithmetic |
 | `IntegerBits` | Conservative operand/result reservation exceeds the selected limit |
 | `BoundOverflow` | Journal-derived reservation cannot be represented |
@@ -65,8 +77,8 @@ Directions are relative to different holder frames,so they cannot be compared as
 The first diagnostic incorrectly compared complete directed references and failed. The corrected
 watch compares current edge/parameter and separately asserts all relative direction values. It
 preserves their information. The explicit branch choice in the test is a forward witness,not a
-repair or an inverse selection made for a consumer. A context must retain all actual origin
-candidates and refuse ambiguous allocation. It must also check that the two selected original
+repair or an inverse selection made for a consumer. The implemented inverse retains both candidates
+under an explicit two-state limit. A context must retain their evidence and refuse ambiguous allocation. It must also check that the two selected original
 notch coordinates are distinct;distinct current IDs/edges alone do not prove a positive original interval.
 
 ## Admit derived work before full resolution
@@ -190,9 +202,64 @@ journal body. A reversed edge may keep its identity while its current parameter 
 creation-frame coordinate;the inverse must stop at the actual creation event. Known source creation
 and current uniqueness do not prove that a preimage exists in the named source:two unrelated real
 edges can pass this admission. Equal numeric forward witnesses also do not cancel an old held
-reference's split choice. Actual inverse candidate production remains the next implementation.
+reference's split choice. The admitted inverse below now produces actual numeric candidates.
 Notch interval/amount arithmetic,whole Design readiness and physical correspondence need their
 separate admission/context checks;this inverse workspace does not authorize those later operations.
+
+## Project exact original coordinates
+
+Call the admitted token's project method. It walks backward only through entries strictly after the
+named source's creation event,then retains states on that source. Split/offset invert their exact
+affine maps,reverse complements the coordinate and mapping direction,and merge uses its declared
+positive arc lengths. An exact merge join keeps both predecessor branches. Later unrelated declared
+roots have no predecessor in the named source. All math is private arbitrary-precision integer
+arithmetic;each operand/result is guarded against the admitted reservation before allocation.
+
+Candidate limits count both work queues and the active input. A branch checks the additional state
+before constructing it. Equal edge/coordinate/direction states coalesce in stable traversal order.
+Eight aligned split/merge cycles project within a two-state cap and return one original half;the old
+held half still requires an explicit reference choice. Even one aligned join may need two temporary
+states although its final result is one,so a one-state cap can refuse it. A reversed join retains
+original half/Original and original end/Reversed;neither candidate is silently selected.
+
+A projection retains the actual admission and immutable journal borrow. Its candidates expose opaque
+exact coordinates and mapping directions. A sole candidate means one numeric coordinate/direction
+state for the named source;it does not rebind a reference or certify copy/physical truth. The mapping
+direction is relative to the current edge frame,distinct from the held reference's current-resolution
+direction. Debug prints bounded metadata/counts or component bit counts,never full journals or large
+integer bodies. No dependency integer type escapes the API.
+
+```rust
+use core::num::{NonZeroU64, NonZeroUsize};
+use sc_core::ontology::{DeterministicIdGenerator, IdentityLedger, OriginalPointLimits,
+    Param, Rational, UniquePointLimits};
+let mut ledger = IdentityLedger::new();
+let mut ids = DeterministicIdGenerator::new();
+let source = ledger.declare_edges(&mut ids, 1)?.remove(0);
+let half = Param::new(Rational::new(1, 2)?)?;
+let fragment = ledger.split(&mut ids, source, half)?.first();
+let one = NonZeroUsize::new(1).ok_or("positive")?;
+let two = NonZeroUsize::new(2).ok_or("positive")?;
+let limits = OriginalPointLimits::new(UniquePointLimits::new(two, one), one,
+    NonZeroU64::new(762).ok_or("positive")?);
+let at = Param::new(Rational::new(1, i64::MAX)?)?;
+let projected = ledger.admit_original_point(fragment, at, source, limits)?.project()?;
+let coordinate = projected.unique().ok_or("one coordinate/direction candidate")?.coordinate();
+assert_eq!(coordinate.as_u128_ratio()?, (1, 18446744073709551614));
+assert!(coordinate.as_param().is_err());
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The bounded-reference conversion refusal above does not invalidate the original coordinate. Another
+actual offset case has a188-bit denominator and exactly matches the independent Fraction producer;
+its explicit128-bit view also refuses while the projection remains valid. There is no rounding,
+clamping or implicit conversion back to a reference parameter.
+
+A known source can still have no original preimage. That produces a typed missing-origin result;
+quota/numeric failures retain the actual operation and original source/held/current context,with the
+concrete numeric cause as standard error source. Failures publish no partial candidate collection.
+Native6 plus one native six-row Fraction comparison and two Rustdoc checks pass;combined primitive
+and actual semantic-notch/context/quantity adoption retain their own subsequent acceptance tasks.
 
 ## Current-reference composition defect
 
@@ -226,16 +293,16 @@ assert_eq!(current.param().as_rational(), Rational::new(1, 9223372036854775804)?
 ## Selected implementation boundary
 
 Bounded current-point uniqueness is implemented without constructing the full choice tree.
-Then project exact coordinates backward through actual journal mappings to the named source edge's
-creation frame. Split/offset use exact affine maps,reverse retains relative direction,and merge
+Admitted exact projection now maps backward through actual journal entries to the named source
+edge's creation frame. Split/offset use exact affine maps,reverse retains relative direction,and merge
 joins retain all applicable predecessor candidates. Equal coordinate/direction states may coalesce
 for numeric work. This does not rewrite references or cancel current reference repair requirements.
 
 A63-bit current coordinate needs at most127 additional component bits per inverse edit:an offset
 uses two63-bit bounds plus an addition;split/reverse/positive-length merge need no more. Thus
 63+127J is a conservative component bound for J journal entries. Comparisons and notch interval
-arithmetic must reserve their additional products explicitly before allocation. This is selected
-arithmetic/workspace design,not an implemented algorithm or allocator/CPU certificate.
+arithmetic must reserve their additional products explicitly before allocation. Implemented inverse admission also reserves2W+128 for scratch/comparisons. These arithmetic
+bounds are not an allocator/CPU certificate;notch interval/amount work needs its own reservation.
 
 Use the actual original source,side,copies,full stops,registry and journal. Preserve named notch
 identities and authored stop order while locating their original interval;both named orders are
@@ -243,16 +310,17 @@ structurally legal. Unknown,orphaned,ambiguous,outside and numeric outcomes keep
 Formula/Profile amounts remain unavailable until their actual resolution. Physical correspondence,
 complete Design readiness,command authority and release retain their own checks.
 
-The independent Fraction producer freezes three recovery cases:
+Independent producers retain recovery,recomposition,workspace and original-coordinate evidence:
 
 ```bash
 python3 -I -B docs/tasks/artifacts/seam_partition/notch_context_oracle.py --check
 python3 -I -B docs/tasks/artifacts/seam_partition/reference_recomposition_oracle.py --check
 python3 -I -B docs/tasks/artifacts/seam_partition/projection_workspace_oracle.py --check
+python3 -I -B docs/tasks/artifacts/seam_partition/original_projection_oracle.py --check
 ```
 
-Focused native range20/recovery4 and selected Clippy/format checks pass. Those checks validate actual
-accepted source states,forward witnesses,derived choice growth and the corrected D305 resolution;
-they do not claim implemented original-coordinate projection. The exact
+Earlier range20/recovery4 receipts retain accepted source states,forward witnesses and corrected
+D305 evidence. Current inverse6/private oracle1/doc2 and selected Clippy/format checks pass with
+focused verification. Actual semantic-notch quantity context and full paired acceptance remain pending. The exact
 pre-context sewing decision and closed D302–D304 ledgers are retained in repository history records
 658/659;the current decision keeps standing contracts without a raised ceiling or another map row.

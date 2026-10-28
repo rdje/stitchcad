@@ -11,5 +11,5 @@ workspace = true
 
 [dependencies]
 sc-units = { path = "../sc-units", version = "0.1.0" }
-# Private exact arithmetic: bounded formula workspace and design revision counters.
+# Private exact arithmetic: formula/revision and admitted sewing/reference workspaces.
 num-bigint = "=0.4.6"

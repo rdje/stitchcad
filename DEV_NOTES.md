@@ -3,12 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — admit original-point workspace before inverse arithmetic
+## _(2026-10-28 UTC)_ — exact admitted original-coordinate inverse
 
-0506 explicit current/candidate/integer limits admit actual bounded current point,target creation and conservative W=63+127J,operand/result2W+128 before wide arithmetic. Copy borrowed token fixes the exact immutable journal;bounded Debug omits bodies. No inverse/preimage or candidate collection exists yet.
-Offset complete components gain≤127 bits;split≤64,positive Length merge≤32,reverse0. Reservation covers comparison/unreduced scratch. Independent integer6/native and960 Fraction steps pass0,including64-bit control. Actual J2 admits762 bits,refuses761;source identity alone is not creation frame.
-Native5/private bound1/doc3/scoped Clippy/fmt pass0. Current quota/choice/unknown/numeric refusal precedes goal/bits and retains real StandardError cause. Real unrelated sources may be admitted without a preimage claim;equal forward branches do not cancel old reference choice. Wide query follows next.
-[Whole0505 bounded-query lesson](docs/history/stitchcad-devnotes-part663.md) retains exact scope/proofs. Indexed sewing decision/book/API routes sync;LIVE/README unchanged,G1 6/18. Notch interval/amount arithmetic and physical/global readiness require later admission/context checks.
+0507 private BigUint canonical fractions invert entries strictly after named source creation;retain all coordinate/direction candidates,guard each operand/result before allocation and additional branch states before storage. Stable equality coalescing keeps8 aligned cycles within2 states;old held choice persists.
+Opaque coordinates expose bit counts and explicit bounded views. Valid64-bit original fraction refuses Param;actual188-bit offset refuses u128 view while exact projection succeeds. Missing-origin/quota/numeric failures retain source/held/current context,concrete operation and actual StandardError cause;no partial set.
+Initial linked oracle cancelled to126 bits;Fraction/GCD census finds factor(MAX-1),then independent q1/(MAX-2) produces188-bit control before native use. Clippy caught large Result errors/needless borrows;one boxed failure keeps full context without lint suppression. No published/runtime claim used the bad fixture.
+Native6/private Fraction6-row1/doc2/scoped Clippy/fmt pass0;source birth/reverse,unequal merge/join,multiple origins/directions,peak cap,coalescing and later unrelated roots covered. [Whole0506 admission](docs/history/stitchcad-devnotes-part664.md) retains exact bounds/proofs.
+Indexed sewing decision/book/API routes synced;LIVE/README unchanged,G1 6/18. Next archive packing at active64/64 before record665,then focused actual-notch primitive acceptance. Semantic context/quantity/full paired acceptance remain owned;no allocator/CPU or physical certificate.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

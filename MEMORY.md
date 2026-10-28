@@ -1,18 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.2.2.2 in docs/tasks/G1-SLICE-execution.md:actual private
-  wide exact inverse on OriginalPointAdmission. Undo entries strictly AFTER named source creation,
-  then retain states on that source;do not stop early at same edge ID before undoing reversals.
-  Keep all coordinate/direction candidates,canonical equality coalescing and candidate admission
-  before retained-state allocation. No BigUint dependency type escapes,no Param narrowing/default.
-- Admission0506 .2.2.1 closed:explicit current/candidate/integer limits,actual target creation and
-  W=63+127J,operand/result2W+128. No wide arithmetic/query yet. Copy token borrows immutable exact
-  ledger;fixed current diagnostic box retains full outcome/actual UnitError source. J2 accepts762/
-  refuses761. Native5/private bound1/doc3/scoped lint/fmt/oracle6+960 steps pass. Whole0505 in663.
-- Bounded current .2.1 closed0505:whole journal/nested admission then known-source uniqueness;
-  first split preserves immediate IDs/direction,not final candidates. Registration choices not
-  applied. Original-point admission may accept unrelated real source without any preimage claim.
-  Prior native6/Fraction14 crossmaps1/doc2 pass. No physical/copy/Design readiness inferred.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.2.retention in docs/tasks/G1-SLICE-execution.md:actual active
+  generation64/64 after664;aggregate85/192. Public prepare/verify/install packing BEFORE new665.
+  Protect original target/history-generations-0392g and target/history-capture-0450,certificates,
+  stores and every logical byte. Retire whole0507 in665 after freeing capacity;physical next marker
+  .2.retention. Then focused actual-notch primitive acceptance .2.acceptance,not a broad campaign.
+- Exact inverse .2.2 closed0507:admitted private canonical BigUint mapping only through entries
+  strictly AFTER target creation. Guard each integer operand/result and peak candidate state before
+  allocation;coalesce equal edge/coordinate/direction states stably. Opaque coordinates have optional
+  Param/u128 views;valid64/188-bit originals remain valid on representation refusal. No dependency
+  integer type escapes. Full source/held/current/operation failures publish no partial candidate set.
+- Native6/private Fraction6-row1/doc2/scoped Clippy/fmt pass. Eight aligned split/merge cycles fit
+  2 states/output1 while old held choice persists;reverse merge retains2 origins/directions. First
+  linked oracle cancelled to126;corrected independent188-bit case/native exact components pass.
+  Whole0506 in664,3 exact Git spans. Admission positive limits/W=63+127J/2W+128 and immutable
+  ledger borrow remain;semantic notch context/quantity and physical/global proofs stay later.
 - D305 uses complete relative progress for split-second/offset and one shared i128 merge ratio;
   reduce before narrowing. Fraction14 proves9 false intermediate refusals fixed/5 genuine final
   widths still repaired with original reference/range and complete-operation cause. Range20,
@@ -22,8 +24,8 @@
   .4.3.2.1 owns bounded current uniqueness,.2 wide inverse before .3 context/.4 quantities.
   Keep choices/causes/directions;no guessed currentness or physical correspondence.
 - Whole0501 retained657;pre-context decision200L/15352B retained658 as strict wrapped source
-  because536B answers line exceeds archive400B. Closed D302–D304 retained659. Active history
-  was59/64 before660;derive pressure before packing. No cap/map growth or historical source loss.
+  because536B answers line exceeds archive400B. Closed D302–D304 retained659. Derive per-generation
+  pressure before packing;never infer it from aggregate. No cap/map growth or historical source loss.
 - Weighted source .4.2 closed0501 with focused actual Design1 acceptance,not full paired verification.
   Graph-only count5/limit4 original region refusal;replaced copy rejects current declarations while
   held source math remains available. Full paired/mutation acceptance or pre-push owns broad checks.

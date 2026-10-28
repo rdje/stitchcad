@@ -89,9 +89,11 @@ pub use rational::Rational;
 pub use reference::{EdgeRef, LocalTag, Param, ParamError, PointRef};
 pub use topology::{
     Direction, IdentityLedger, JournalEntry, LedgerError, OffsetFragment, OffsetInterval,
-    OpenRepair, OriginalPointAdmission, OriginalPointAdmissionError, OriginalPointLimits,
-    OrphaningEdit, PointJournalCollection, Registration, ReleaseReadiness, RepairTask, Resolution,
-    ResolvedRef, SplitFragments, SplitSide, TopologyEdit, UniquePointLimits, UniquePointOutcome,
+    OpenRepair, OriginalCoordinate, OriginalPointAdmission, OriginalPointAdmissionError,
+    OriginalPointCandidate, OriginalPointLimits, OriginalPointProjection,
+    OriginalPointProjectionError, OriginalPointProjectionIssue, OrphaningEdit,
+    PointJournalCollection, Registration, ReleaseReadiness, RepairTask, Resolution, ResolvedRef,
+    SplitFragments, SplitSide, TopologyEdit, UniquePointLimits, UniquePointOutcome,
     UniquePointResolution, MAX_EDGES_PER_OPERATION,
 };
 

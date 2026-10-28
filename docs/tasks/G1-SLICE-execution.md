@@ -242,49 +242,58 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0505 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part663.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact original-coordinate inverse with wide fractions,all actual coordinate/direction
   candidates and explicit journal/nested-data/candidate/integer admission. Preserve source-frame
   provenance;numeric projection does not rebind anchors or certify physical/current Design truth.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.2.1`
   Status: `done`
-  Goal:0506 explicit original-point candidate/integer admission with actual bounded current point
-  and target creation provenance before wide arithmetic. Actual inverse query/candidates follow .2.
-  - [x] REPRODUCE / ISSUE: valid late original coordinates need more than63 bits;source ID equality
-    after reversal is not the requested creation frame. Known target/current data alone cannot prove
-    any original preimage;coordinate coalescing cannot cancel a held reference choice.
-  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/seam_partition/projection_workspace_oracle.py
-    --check →6 exact integer rows/960 Fraction inverse-offset component+scratch checks/64-bit control,
-    rc=0. Complete offset numerator qn*(tn*fd-fn*td)+fn*qd*td gains at most127 bits;denominator
-    qd*td*fd gains126. Split/merge/reverse fit this conservative envelope;W=63+127J with2W+128
-    scratch covers comparison and sequential unreduced products. This is not a measured tight bound.
-  - [x] FIX: OriginalPointLimits explicitly carries positive current-input/candidate/integer caps.
-    Current query admits whole actual journal/nested data before target-creation lookup/reservation.
-    Copy borrowed admission retains held/current/target/creation/caps/bounds;exhaustive bounded Debug
-    omits journal bodies. No wide integer allocation,reference rewrite or projection result. One
-    fixed current-refusal box preserves original outcome/standard numeric source,not a choice tree.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    original_point_admission_contract →5 passed,rc=0. J2 reservation762 accepts/761 refuses with actual
-    held/source context. Reversed same-ID retains creation/current3/4 and relative direction;quota/
-    choice/unknown/genuine-width causes keep precedence and StandardError source. Real unrelated
-    target admits without claiming a preimage;equal forward witnesses retain old held split choice.
-    cargo test -p sc-core --lib integer_reservation_matches_independent_exact_integer_fixture →1
-    passed/79 filtered,rc=0;all6 rows include last fitting u64 reservation and overflowing successor.
-  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --doc
-    ontology::topology::original_point →3 passed/190 filtered,rc=0;no-default/immutable-borrow refusals
-    plus working admission example. Selected Clippy original_point_admission_contract -- -D warnings
-    and fmt --all --check →pass,rc=0. Receipt663 →3 exact Git spans,rc=0;book build/publication
-    →89/185/1567/2685,rc=0;glossary →0 failures,rc=0;retention →1117 logical/84 working/2621214
-    residentB,rc=0. Pressure before closure active63/64,total84/192,rc=0;next664 fits. Broader paired/
-    mutation acceptance remains .6.5.3.2.acceptance/pre-push;actual inverse remains unimplemented.
-  - [x] LOCKSTEP: task/MEMORY/DEV/CHANGE/sewing decision/book/API routes synchronized;whole0505
-    retained663. Indexed decision gains original-point admission answer. LIVE/README reviewed
-    unchanged,G1 6/18. Next .2 wide exact inverse;notch quantity/global/physical proofs stay separate.
+  Goal:0506 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part664.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.2.2`
+  Status: `done`
+  Goal:0507 actual admitted exact wide inverse implemented with focused checks;parent .2.2 closes.
+  Combined primitive/actual-notch acceptance and semantic context/quantities remain later owners.
+  - [x] REPRODUCE / ISSUE: bounded Param/u128 cannot represent all valid original coordinates;
+    unique current location need not have unique original predecessor. Target identity alone is
+    insufficient before undoing later reversals;peak candidate work differs from final output size.
+  - [x] ROOT CAUSE: 0507 python3 -I -B docs/tasks/artifacts/seam_partition/original_projection_oracle.py
+    first draft failed assertion/rc1:linked q1/MAX/bounds1/(MAX-1),1/(MAX-3) cancels factor(MAX-1),
+    leaving126 bits. Independent Fraction/GCD census rc0 selects q1/(MAX-2),125/188-bit components.
+    Corrected --check →6 exact rows/188-bit control,rc=0. Actual native offset comparison below
+    consumes every expected numerator/denominator;no published/runtime claim used the bad fixture.
+  - [x] FIX: private canonical BigUint fractions;guard integer operand/result estimates before
+    allocation. Undo entries strictly after actual target creation,retain all coordinate/direction
+    states,check peak branch storage before construction and coalesce equal states in stable order.
+    Opaque public coordinates/candidates/projection retain immutable admission;explicit bounded
+    views may refuse without invalidating wide coordinates. No silent selection/reference rewrite.
+  - [x] ADDRESSED: 0507 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    original_point_projection_contract →6 passed,rc=0. Covers wide split,source-fragment creation/
+    same-ID reverse,unequal merge sides/join,multiple origins/directions,real peak refusal and no
+    origin through unrelated/later roots. Eight aligned cycles fit2 states/output1 while old held
+    reference still requires choice. cargo test -p sc-core --lib actual_offset_projection_matches
+    filter →1 passed/80 filtered,rc=0;all6 Fraction rows exact and widest188 asserted. Optional
+    Param/u128 view refusals preserve valid projection. Ledger unchanged;Debug omits bodies.
+  - [x] NO REGRESSION: 0507 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --doc
+    ontology::topology::original_point::query →2 passed/193 filtered,rc=0;working wide example and
+    projection-held immutable borrow refusal. Scoped Clippy --test original_point_projection_contract
+    -- -D warnings/fmt --all --check →pass,rc=0. Initial Clippy rc101 caught144B Result errors/
+    needless borrows;one fixed boxed failure preserves full context without lint suppression.
+    Receipt664 →3 exact Git spans,rc=0;book build/publication →89/190/1567/2686,rc=0;glossary →0
+    failures,rc=0;retention →1118 logical/85 working/2627386 residentB,rc=0. Broad paired/mutation
+    acceptance stays .6.5.3.2.acceptance/pre-push;focused actual-notch primitive join next.
+  - [x] LOCKSTEP: task/MEMORY/DEV/CHANGE/sewing decision/book/API routes synchronized;whole0506
+    retained664. Indexed decision gains exact inverse answer;LIVE/README reviewed unchanged,G1 6/18.
+    First commit hook refused fresh ADDRESSED/NO REGRESSION because identical header lines were
+    unchanged diff context across0506 retirement. Unit0507 labels make this slice's added boxes
+    explicit;the proof bodies were already new. No gate relaxation/runtime or book change.
+    Active generation64/64 blocks next raw record;own retention prerequisite below before665. No
+    cap rise,history-source loss,semantic/quantity or physical/global readiness claim.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.retention`
   Status: `pending`
-  Goal: private wide exact backward journal mapping on admitted actual inputs,all source-creation
-  coordinate/direction candidates,stable numeric coalescing and candidate checks before storage.
-  Preserve original source/held/current evidence and concrete failures;no implicit Param narrowing.
+  Goal: unblock next primitive acceptance at actual active generation64/64 via public archive
+  prepare/verify/install workflow. Preserve every logical byte/protected original workspace;pack
+  before creating665,then retain whole0507 and resume product acceptance. No aggregate/per-group
+  confusion,cap increase or policy expansion;commit this prerequisite before .2.acceptance.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.acceptance`
   Status: `pending`
   Goal: deferred focused current-point/original-coordinate primitive acceptance after implementation;

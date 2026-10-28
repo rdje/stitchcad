@@ -168,7 +168,7 @@ causes/immediate offset candidates. The first split returns its actual operation
 IDs and relative direction without traversing either branch or claiming final current candidates.
 Registration choices are not applied and no held reference is rewritten. Native6 plus14 independent
 fraction rows pass;no input-count/point result is physical truth or whole Design authority. Repeat
-after edits. Original-coordinate inverse and actual notch/source context remain pending.
+after edits. Admitted inverse0507 is implemented;actual notch/source context remains pending.
 
 ## Original-point admission0506
 
@@ -179,5 +179,16 @@ creation and conservative component W=63+127J,operand/result2W+128. Offset compl
 at most127 bits;the latter also covers unreduced scratch/comparisons. Native fixture6 plus960
 independent Fraction steps watch this bound. The immutable borrowed token retains actual creation
 and held/current evidence without allocating wide integers or claiming any original preimage.
-Fixed current refusals preserve their concrete numeric error source. Candidate production/inverse
-mapping remains pending;notch quantity arithmetic and physical/global readiness need separate checks.
+Fixed current refusals preserve their concrete numeric error source. Admitted exact inverse0507
+now produces candidates;notch quantity arithmetic and physical/global readiness need separate checks.
+
+## Exact original-point projection0507
+
+answers: "does one current position prove one original coordinate or permit bounded Param narrowing?"
+
+Admitted inverse traverses only entries after actual target creation;retain every coordinate/direction
+candidate,guard integer operations and new branch state storage,coalesce equal numeric states stably.
+Opaque exact coordinates have optional bounded views;valid188-bit offset output survives128-bit view
+refusal. Reversed join keeps two origins;aligned8-cycle inverse fits2 states while old held reference
+still requires choice. No partial output or silent candidate selection. Actual semantic context/
+quantity and whole paired acceptance remain separate;current/held/mapping directions keep their frames.

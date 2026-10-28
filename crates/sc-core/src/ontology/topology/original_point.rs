@@ -1,9 +1,15 @@
-//! Preflight for wide exact original-coordinate projection;the inverse query is a later slice.
+//! Explicit preflight and admitted exact original-coordinate projection.
 
 use super::{
     unique_point, EdgeRef, EntityId, IdentityLedger, JournalEntry, OrphaningEdit, Param,
     ResolvedRef, UniquePointLimits, UniquePointOutcome, UniquePointResolution,
 };
+mod query;
+pub use query::{
+    OriginalCoordinate, OriginalPointCandidate, OriginalPointProjection,
+    OriginalPointProjectionError, OriginalPointProjectionIssue,
+};
+
 use core::{
     fmt,
     num::{NonZeroU64, NonZeroUsize},
@@ -122,7 +128,7 @@ impl std::error::Error for OriginalPointAdmissionError {
     }
 }
 
-/// Borrowed original-point workspace admission. No wide arithmetic or inverse result exists yet.
+/// Borrowed original-point workspace admission before exact inverse arithmetic.
 /// Known source creation and current uniqueness are prerequisites,not proof of an original preimage.
 /// The immutable ledger borrow keeps this admission tied to the exact observed journal.
 ///
@@ -226,7 +232,7 @@ impl OriginalPointAdmission<'_> {
 impl IdentityLedger {
     /// Admit current uniqueness,actual target creation and wide inverse workspace before arithmetic.
     /// A successful token does not claim that this current point has a preimage in the named source.
-    /// The inverse query/candidate production is a separately owned implementation stage.
+    /// Call the token's project method separately to compute all admitted exact inverse candidates.
     ///
     /// ```
     /// use core::num::{NonZeroU64, NonZeroUsize};

@@ -43,7 +43,9 @@ use super::reference::{EdgeRef, LocalTag, Param};
 mod original_point;
 mod point_step;
 pub use original_point::{
-    OriginalPointAdmission, OriginalPointAdmissionError, OriginalPointLimits,
+    OriginalCoordinate, OriginalPointAdmission, OriginalPointAdmissionError,
+    OriginalPointCandidate, OriginalPointLimits, OriginalPointProjection,
+    OriginalPointProjectionError, OriginalPointProjectionIssue,
 };
 mod unique_point;
 pub use unique_point::{

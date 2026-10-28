@@ -184,3 +184,8 @@ bounded point nested collections	spec/command-notch-context.md	crates/sc-core/sr
 original point workspace limits	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point.rs	OriginalPointLimits	G1-SLICE.6.5.3.2.3.2.4.3.2.2.1	4.4
 original point workspace admission	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point.rs	OriginalPointAdmission	G1-SLICE.6.5.3.2.3.2.4.3.2.2.1	4.4
 original point admission refusal	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point.rs	OriginalPointAdmissionError	G1-SLICE.6.5.3.2.3.2.4.3.2.2.1	4.4
+exact original coordinate	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point/query.rs	OriginalCoordinate	G1-SLICE.6.5.3.2.3.2.4.3.2.2.2	4.4
+original point candidate	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point/query.rs	OriginalPointCandidate	G1-SLICE.6.5.3.2.3.2.4.3.2.2.2	4.4
+original point projection	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point/query.rs	OriginalPointProjection	G1-SLICE.6.5.3.2.3.2.4.3.2.2.2	4.4
+original point projection refusal	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point/query.rs	OriginalPointProjectionError	G1-SLICE.6.5.3.2.3.2.4.3.2.2.2	4.4
+original point projection issue	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point/query.rs	OriginalPointProjectionIssue	G1-SLICE.6.5.3.2.3.2.4.3.2.2.2	4.4
