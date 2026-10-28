@@ -195,24 +195,25 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .acceptance deferred until implementation. Physical/correspondence dependencies stay explicit.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.1`
   Status: `done`
-  Goal:0497 recover actual nonuniform arithmetic/context contracts before implementation;no native weighted quantity,physical pairing or handler claim.
-  - [x] REPRODUCE / ISSUE: inspect actual sewing/reference/range/topology/rounding APIs and normative book/roadmap →positive normalized arc-length density,zero omitted mass,original signed source;notch stops may use later frames and either named order. Missing execution/context stays owned below,not replaced by values.
-  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/seam_partition/nonuniform_ease_oracle.py --check →160 rows,Fraction/common-denominator agreement,188-bit denominator,float/orientation/equal-cut controls,rc=0. Four valid quarter densities need188 bits;exact below-half result0 becomes1 in binary64. Post-rounding B orientation moves±1 ties to the wrong A child.
-  - [x] FIX: freeze independent oracle fixture;native actual-source/refusal and later-frame notch watches. Derive constructive189N+ceil(log2N)+b cumulative-field bound and30-bit source multiplier;retain actual-temporary/admission obligations. Distinguish bounded normalized queries from wide original-domain normalization. Indexed decision/book document actual context requirements.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test sewing_contract nonuniform_recovery -- --nocapture →2 passed/46 filtered,rc=0. All160 declaration inputs admitted with exact retained source and actual Weighted refusal;later-fragment notches map to original quarter/three-quarter and both named orders pass. Native weighted values remain unimplemented.
-  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-core --test sewing_contract -- -D warnings and cargo fmt --all -- --check →pass,rc=0. Initial test authoring used iterator next on a slice and failed compile101;correct actual API is first;no runtime predicate changed.
-    nonuniform_ease_oracle.py --check →160 exact frozen rows and independent controls,rc=0;transition_receipts.py --record docs/history/stitchcad-devnotes-part652.md →3 exact Git spans,rc=0. mdbook build/publication check →88/174/1560/2662;glossary census →0 failures;verify-retention →1106 logical/73 working/2543647 residentB,all rc=0. Full paired acceptance remains its deferred owner.
-  - [x] LOCKSTEP: task/live journals/indexed sewing decision/book/D301 scheduling synchronized;README/LIVE reviewed unchanged,G1 6/18. Whole0496 retained652. Next .4.2 shared rounding,workspace and actual weighted quantities;notch/geometry contexts .4.3/.4.4 remain required before effects.
+  Goal:0497 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part653.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: exact weighted original-source cumulative allocation and signed boundary quantization;
   omitted regions allocate zero,positive densities normalize by original total mass. Use the one
   shared rounding rule and explicit bounded workspace/admission contracts;retain original causes.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.1`
-  Status: `pending`
-  Goal: shared half-away rounding from an exact wide quotient/remainder comparison without
-  narrowing the ratio or duplicating policy. Preserve existing API values/error operation names;
-  focused signed/unsigned/tie/limit checks and book contract before committing this component.
+  Status: `done`
+  Goal:0498 shared exact floor/half-comparison magnitude rounding implemented without a second rounding policy or dependency;old ratio behavior/operation names retained.
+  - [x] REPRODUCE / ISSUE: read actual round.rs/public contract/tests/probe selectors and run nonuniform_ease_oracle.py --check →160 rows,188-bit denominator,rc=0. Wide valid source ratios exceed fixed inputs;shared policy must accept an exact decomposition without narrowing or copying its half-away decision.
+  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/seam_partition/nonuniform_ease_oracle.py --check →Fraction/common-denominator agreement/188-bit denominator,rc=0;actual old ratio signatures accept only128-bit fields. Floor plus exact fractional-half ordering suffices for the shared decision;caller retains division validity and workspace ownership.
+  - [x] FIX: new round_magnitude_from_half_comparison delegates to one private checked increment decision used by both old ratio entries. Preserve old signed/unsigned error context;new overflow names the new operation. Document mathematical input responsibilities and limits. Adapt only old remainder/tie fault anchors;producer dispatch/refusal/restoration/classifier rules unchanged.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-units --test magnitude_round_contract --test round_contract --test unsigned_round_contract →11 passed,rc=0. New2 include125 nonzero independent Decimal rows and explicit half/full-width/overflow cases;old4+5 keep signed endpoints,zero,width and operation context. Source doctest
+    filter round::round_magnitude_from_half_comparison →1 passed/2 filtered,rc=0.
+  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-units --lib --test magnitude_round_contract --test round_contract --test unsigned_round_contract -- -D warnings and cargo fmt --all -- --check →pass,rc=0. unsigned_round_reference.py →138 Decimal rows pass,rc=0;read-only AST/source census →5+9 unique actual fault
+    anchors,rc=0. Initial new fixture count134 failed101;independent census proves125 nonzero/13 zero and corrects expectation.
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part653.md →3 exact Git spans,rc=0. mdbook build/publication check →88/174/1561/2664;glossary census →0 failures;verify-retention →1107 logical/74 working/2549112 residentB,all rc=0. Compiled mutation runs remain full paired .6.5.3.2.acceptance or required pre-push probes;weighted source
+    acceptance remains .4.2.acceptance. No unobserved verdict implied.
+  - [x] LOCKSTEP: units spec/rounding annex/indexed numerical decision/live journals/task/index synchronized;README/LIVE reviewed unchanged,G1 6/18. Whole0497 retained653. Next .4.2.2 explicit workspace admission,then .4.2.3 weighted quantities;actual contexts/full paired effects remain later owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.2`
   Status: `pending`
   Goal: explicit borrowed original-source weighted workspace admission before allocation,checked
@@ -225,7 +226,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.acceptance`
   Status: `pending`
   Goal: deferred focused weighted-source component acceptance after shared rounding/admission/
-  quantity implementation;actual notch/context/integration and full paired effects stay later owners.
+  quantity implementation. Actual notch/context/integration and full paired effects stay later owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3`
   Status: `pending`
   Goal: actual original-frame notch allocation context through public semantic landmark/ledger
@@ -251,4 +252,4 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   no identity reuse or silent old-target reassignment;integrate current-model validation before effects.
 - ID: `G1-SLICE.6.5.3.2.acceptance`
   Status: `pending`
-  Goal: after paired feature implementation,combined actual split/reference/ease/stop/lineage and bus undo/replay/cancel/quota acceptance;no broad suites between implementation slices.
+  Goal: after paired feature implementation,combined actual split/reference/ease/stop/lineage and bus undo/replay/cancel/quota acceptance. Include refactored rounding compiled5 signed/9 unsigned faults plus extra release remainder fault,also run by required pre-push probes;no broad suites between implementation slices.

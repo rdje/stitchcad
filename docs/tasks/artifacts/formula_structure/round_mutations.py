@@ -13,7 +13,7 @@ CASES = [
     ('negative i64 endpoint', 'if negative && q == u128::from(i64::MIN.unsigned_abs()) {', 'if false && negative && q == u128::from(i64::MIN.unsigned_abs()) {', 'both_i64_endpoints_are_representable_with_either_denominator_sign'),
     ('checked quotient width', 'i64::try_from(q).map_err', 'i64::try_from(q as u64).map_err', 'extreme_i128_magnitudes_refuse_with_typed_overflow_without_panicking'),
     ('quotient sign', 'Ok(if negative { -magnitude } else { magnitude })', 'Ok(if negative { magnitude } else { -magnitude })', 'both_i64_endpoints_are_representable_with_either_denominator_sign'),
-    ('half-away tie', 'if r >= denominator - r {', 'if r > denominator - r {', 'extreme_denominators_zero_and_signs_preserve_half_away_rounding'),
+    ('half-away tie', 'if half != Ordering::Less {', 'if half == Ordering::Greater {', 'extreme_denominators_zero_and_signs_preserve_half_away_rounding'),
     ('zero denominator', 'if denominator == 0 {', 'if false && denominator == 0 {', 'extreme_denominators_zero_and_signs_preserve_half_away_rounding'),
 ]
 OUTPUT_FILES = tuple(WORK / ('mutation-%d.log' % index) for index in range(1, len(CASES) + 1)) + \

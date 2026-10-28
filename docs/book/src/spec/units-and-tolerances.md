@@ -134,13 +134,20 @@ precondition, clamping or wrapping.
 
 D78's extreme negative i128 input previously panicked before the checked conversion. The repair
 narrows an unsigned magnitude safely before reconstructing its sign, with the negative i64 endpoint
-handled explicitly. Both public entry points now share one magnitude rule; the signed entry point
+handled explicitly. All rounding entry points share one magnitude rule; the signed entry point
 then applies its sign and i64 storage boundary. The half-away rule is unchanged.
 
 The companion `sc_units::round::div_round_half_away_from_zero_unsigned` accepts u128 numerator and
 denominator and returns a full-width u128 magnitude. Zero refuses with that public operation name.
 It permits wide canonical literal children without imposing a binding's i64 width; it performs no
 literal parsing, quantity-domain validation or direction normalization.
+
+For ratios computed in a wider admitted workspace,
+`sc_units::round::round_magnitude_from_half_comparison` accepts an unsigned integer floor and an
+exact comparison of its fractional part with one half. All entry points use the same magnitude
+increment decision. The consumer retains denominator validity,exact comparison,sign and scalar
+checks. A required increment beyond u128 returns the new operation's Overflow. See the
+[decomposed-input contract](../annexes/numeric-rounding.md#exact-decomposed-magnitude-input).
 
 ```rust
 use sc_units::round::div_round_half_away_from_zero_unsigned as round;
@@ -170,12 +177,14 @@ refusals are separate from five real native faults and the restored public four-
 Run mutation checks alone, without other builds/probes/gates. These are primitive numeric checks, separate from formula evaluation,
 geometry, physical acceptance and release proofs.
 
-Unsigned-rounding verification preserves nine debug faults and one release remainder fault.
+Prior unsigned-rounding verification observed nine debug faults and one release remainder fault.
 The imported Decimal fixture/current test/mutable implementation and all twelve logs are guarded
 before reads. Its totality helper also asserts before extracting the caught result. Complete
-dispatch/profile/refusal controls are separate from native proof: all ten faults reach current
-assertion macros, source bytes restore exactly and both debug/release five-test artifacts pass.
-The arithmetic, diagnostic operation names and public numeric boundaries are unchanged.
+dispatch/profile/refusal controls were separate from native proof: all ten faults reached
+assertion macros,source bytes restored exactly and both debug/release five-test artifacts passed.
+The ratio values,diagnostic operation names and public numeric boundaries remain unchanged.
+Compiled mutation re-verification for the shared decomposed-input refactor is deferred to
+full paired acceptance or required pre-push probes;see the linked rounding annex.
 
 ### 2.4 Public length arithmetic
 

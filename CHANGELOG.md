@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0497 — recover exact nonuniform arithmetic and actual context contracts
+## STITCHCAD-G1-0498 — share half-away rounding with exact wide workspaces
 
-- Independent Fraction/common-denominator diagnostic freezes160 rows:188-bit valid cumulative denominator,float/tie-orientation and unequal physical-cut controls. Derive explicit arithmetic workspace requirements before implementation.
-- Focused native2 verifies actual weighted declarations/refusals and later-frame notch source positions in either named order;scoped Clippy/fmt pass. No native weighted execution or physical/bus proof is claimed.
-- Whole0496 retained652;task/book/indexed decision/D301/live pointers synchronized. LIVE G1 6/18 unchanged;shared rounding/workspace/weighted implementation follows.
+- New unsigned floor/half-comparison primitive delegates to the same private increment decision as signed/unsigned ratios. Preserve ratio values/error names;new required increment beyond u128 returns named Overflow. No dependency or float.
+- Native11/source doctest1/Decimal138/scoped Clippy/fmt pass. Two new contracts include125 nonzero independent rows and explicit half/full-width limits. Old5+9 fault anchors adapted and unique;compiled mutation verdict deferred to full paired acceptance/pre-push probes.
+- Whole0497 retained653;book/indexed numerical decision/task/live pointers synchronized. LIVE G1 6/18 unchanged;weighted workspace admission follows.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

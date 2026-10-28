@@ -6,6 +6,7 @@
 //! disagree with the direct conversion.
 
 use crate::error::UnitError;
+use core::cmp::Ordering;
 
 /// Rounds `numerator / denominator` half away from zero.
 ///
@@ -69,6 +70,42 @@ pub fn div_round_half_away_from_zero_unsigned(
     )
 }
 
+/// Rounds a nonnegative magnitude from its integer floor and exact fractional-half comparison.
+///
+/// `fractional_half` compares the fractional part with one half: [`Ordering::Less`] includes an
+/// exact integer, [`Ordering::Equal`] is an exact half, and [`Ordering::Greater`] is above half.
+/// The caller derives this comparison exactly; for a quotient/remainder division with nonzero
+/// denominator `d` and `0 <= r < d`, compare `r` with `d - r`. A wider integer workspace can
+/// derive the same comparison without narrowing its ratio or depending on a second rounding rule.
+///
+/// The result is an unsigned magnitude. Applying a sign, a scalar domain or a storage-width
+/// restriction remains the consumer's responsibility. This function performs no division and
+/// cannot validate the caller's original ratio or its denominator.
+///
+/// # Errors
+///
+/// Returns [`UnitError::Overflow`] with this operation's name if incrementing `u128::MAX` is
+/// required. Every other floor/comparison pair has a representable result.
+///
+/// ```
+/// use core::cmp::Ordering;
+/// use sc_units::round::round_magnitude_from_half_comparison as round;
+/// assert_eq!(round(0, Ordering::Equal)?, 1);
+/// assert_eq!(round(7, Ordering::Less)?, 7);
+/// assert_eq!(round(u128::MAX, Ordering::Less)?, u128::MAX);
+/// # Ok::<(), sc_units::UnitError>(())
+/// ```
+pub fn round_magnitude_from_half_comparison(
+    floor: u128,
+    fractional_half: Ordering,
+) -> Result<u128, UnitError> {
+    round_magnitude_parts(
+        floor,
+        fractional_half,
+        "round_magnitude_from_half_comparison",
+    )
+}
+
 fn round_magnitude(
     numerator: u128,
     denominator: u128,
@@ -77,14 +114,23 @@ fn round_magnitude(
     if denominator == 0 {
         return Err(UnitError::DivisionByZero { operation });
     }
-    let mut q = numerator / denominator;
+    let q = numerator / denominator;
     let r = numerator % denominator;
     // r < denominator, so subtraction is representable. Unlike 2*r, this comparison cannot
     // overflow at a full-width unsigned denominator, and it treats exact halves identically.
-    if r >= denominator - r {
-        q = q.checked_add(1).ok_or(UnitError::Overflow { operation })?;
+    round_magnitude_parts(q, r.cmp(&(denominator - r)), operation)
+}
+
+fn round_magnitude_parts(
+    q: u128,
+    half: Ordering,
+    operation: &'static str,
+) -> Result<u128, UnitError> {
+    if half != Ordering::Less {
+        q.checked_add(1).ok_or(UnitError::Overflow { operation })
+    } else {
+        Ok(q)
     }
-    Ok(q)
 }
 
 #[cfg(test)]

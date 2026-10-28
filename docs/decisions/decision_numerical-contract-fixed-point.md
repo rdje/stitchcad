@@ -178,3 +178,19 @@ scalar checks. Native arc2/0 with23 independent rows, numeric6/0 and selected li
 compiled endpoint is tied to the reproduced certificate. Source provenance remains .5e.3.
 
 Remaining trig: fact_trig-midpoints-and-resource-bound.md proves midpoint exclusion; practical resources remain .5d.1.2.2.2.
+
+## Wide-ratio shared rounding0498
+
+answers: "how can a wide exact workspace reuse rounding without narrowing its ratio?"
+
+sc-units accepts a u128 magnitude floor plus exact fractional-half Ordering through
+round_magnitude_from_half_comparison. Ratio entry points derive that comparison from remainder
+versus denominator-minus-remainder;all paths use one private increment decision. The consumer owns
+exact division/nonzero denominator,workspace,sign and scalar/storage checks. The decomposed API
+cannot validate an omitted ratio and never grants authority over a model or physical correspondence.
+Required increment beyond u128 returns the new named Overflow;old signed/unsigned values and error
+operation names remain unchanged. No dependency or float enters sc-units. Focused native11/source
+doctest1/Decimal138 pass;two new contracts include125 nonzero Decimal rows and explicit floor limits.
+Old5+9 mutation anchors remain unique after adapting remainder/tie sites;compiled mutation verdict
+for the refactor is deferred to full paired acceptance or required pre-push probes. Original campaigns
+retain their historical scope;shared primitive implementation alone does not execute weighted ease.

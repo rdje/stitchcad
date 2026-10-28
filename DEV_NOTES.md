@@ -3,13 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact nonuniform arithmetic and context recovered
+## _(2026-10-28 UTC)_ — shared rounding accepts exact wide half comparisons
 
-0497 Fraction/common-denominator oracle freezes160 rows. Four valid quarter densities need188 bits;binary64 changes exact1µm result0 to1. Orient exact B cumulative fraction before rounding for Opposite;post-round subtraction assigns±1 half ties differently.
-Derived cumulative-field bound189N+ceil(log2N)+b,plus30 for source multiplication,is arithmetic feasibility only. Original-domain normalization may need189 bits;actual workspace admission/shared rounding remain implementation requirements.
-Illustrative lengths11000/10000,ease1000,densities1/3 require B21/40 at A half;actual geometry remains required. Native later-frame notch halves resolve original quarter/three-quarter;both named orders legal. Exact journal mappings/ambiguity/loss remain owned.
-Focused native2/46 filtered/scoped Clippy/fmt pass0;160 actual inputs admitted,current Weighted refusals preserved. Initial test compile101 used next on a slice;first fixes it. Promotion:indexed sewing decision. LIVE/README unchanged,G1 6/18;weighted/context/full paired execution pending.
-[Whole0496 cleanup lesson](docs/history/stitchcad-devnotes-part652.md) retains exact scope;3 Git spans verified.
+0498 adds dependency-free magnitude floor/half-comparison rounding;all3 entry points share one increment decision. Consumers own exact division/nonzero denominator,workspace,sign and scalar checks. New u128 increment overflow keeps its operation;old ratio errors/values unchanged.
+Focused native11/source doctest1/Decimal138/scoped Clippy/fmt pass0. Two new contracts cover125 nonzero Decimal rows and explicit floor/half/overflow limits. Initial count assertion134 failed101;independent fixture census established125 and corrected the authored expectation.
+Old5+9 fault anchors remain unique after exact remainder/tie relocation;compiled mutation verdict deferred to full paired acceptance. No weighted runtime/physical claim. Promotion:indexed numerical decision;LIVE/README unchanged,G1 6/18.
+[Whole0497 recovery lesson](docs/history/stitchcad-devnotes-part653.md) retains exact arithmetic/context scope;3 Git spans verified.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.
