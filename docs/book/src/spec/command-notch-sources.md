@@ -216,8 +216,25 @@ and interval quantities,current whole Design readiness,physical matching and pai
 their subsequent owners. The existing Uniform-only helper continues to report BetweenNotches;
 constructing this context does not default an amount or extend that old helper implicitly.
 
+## Actual Design integration
+
+Focused component acceptance joins `DesignSewing::amount_declarations()` to the actual retained
+source and context. Two retained child views borrow one canonical full source,even with empty child
+stop lists. Its named Notches remain start401/end400 in the earlier example;authored stop order and
+mathematical lower/upper order remain separate. The actual integration fixture uses IDs98001/98000
+and covers both A/B distribution sides and literal/formula/profile amount metadata. Its complete
+dependency count is10;with per-range peak2,the interval bound is20 and metadata index bound31.
+
+A later copy replacement is refused against the actual original source before a context is accepted.
+After splitting the source edge at half,new Notches on its first fragment at1/MAX and1/2 recover
+original1/(2MAX) and1/4. The first remains exact despite `Param` refusal. The retained child's held
+endpoint at original half still requires a split choice,so complete current sewing validation refuses
+that child while the full original source context succeeds. Context construction changes neither
+the held endpoint answer nor source/formula metadata. This is source-context component acceptance;
+notch quantities,whole paired command,mutation and physical verification retain their later owners.
+
 The canonical decision is docs/decisions/decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md.
 Its whole pre-0512 source is logical record docs/history/stitchcad-devnotes-part670.md,available
 through the [public archive reader](../annexes/archive-reader.md). It retains prior prospective
-wording and all historical evidence exactly. Focused implementation checks above are distinct from
-the deferred source/context acceptance and whole paired/mutation/physical verification.
+wording and all historical evidence exactly. Focused implementation and source-context integration
+checks above are distinct from deferred quantity and whole paired/mutation/physical verification.

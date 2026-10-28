@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.3.acceptance in docs/tasks/G1-SLICE-execution.md:focused actual
-  source/current/original context component integration after implementation. Then .3.4 exact notch
-  quantities. Implementation .3.3.3 complete with focused checks;full PNT continues,no physical proof.
-- OriginalNotchContext0515 binds actual named Notch borrows and locally validated source/ledger,
-  source creation frame,unique coordinate/direction candidates,inclusive domain and distinct originals.
-  C+1 checked before projection,both point admissions before wide work;no bounded view narrowing.
-  Named start/end versus lower/upper stays exact;errors retain complete actual projection evidence.
-- Native context7/local10/frame port1 (6 Fraction rows)/doc2+1/scoped lint/fmt/oracle3 pass0.
-  Valid64-bit original survives;ambiguous reversed merge and coincident originals refuse. Eight
-  cycles C2/combined3 pass;C1 keeps original quota;equal ledger clones/wrong source frames refuse.
-- Whole0514 in673/3 spans;book90/207/1572/2703,glossary0/map unchanged;decision184L/13046B.
-  Whole source decision encoded670,validation0513 in672. Oracle header now reflects adoption0509.
-- Symbolic amounts stay unresolved;context supplies positions,no notch quantity,whole Design/other
-  graph/current formula/physical matching or effects. Logical budgets are not allocator/RSS/CPU proof.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.4 in docs/tasks/G1-SLICE-execution.md:exact original notch-bounded
+  cumulative/interval quantities with separate arithmetic admission,shared signed rounding and
+  original source provenance. Source-context component .3.3 accepted0516;full PNT continues.
+- OriginalNotchContext0515 binds actual named Notch borrows/source/ledger/creation frame,unique
+  distinct in-domain originals and complete evidence. Checked C+1/both point admissions precede
+  projection;no bounded narrowing. Named start/end and mathematical lower/upper stay distinct.
+- Actual Design context acceptance0516 native3 (6 A/B x literal/formula/profile variants),scoped
+  Clippy/fmt/oracle3/receipt674 pass0. Retained2 child views borrow1 full canonical source,empty
+  child stops keep full source stops;N10/B2 yields20 cache/31 index. Copy rebind refuses original
+  source;later split's1/(2MAX) original remains exact while child held half still requires choice.
+- Whole0515 in674/3 spans;book90/207/1572/2704,glossary0/map unchanged,retention1128 pass.
+  Whole source decision encoded670;whole validation/comparison/context0513–0515 in672–674.
+- Context supplies positions,no notch quantity,whole Design/other graph/formula evaluation/physical
+  matching or effects. Logical budgets are not allocator/RSS/CPU proof;symbolic amounts unresolved.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
@@ -40,7 +40,7 @@
 - Weighted source .4.2 closed0501 with focused actual Design acceptance. Original density/canonical
   source metadata and exact quantities survive portions;B/Opposite complement BEFORE shared rounding.
   Explicit region/integer limits bound arithmetic,not allocator/CPU/global authority. Actual notch
-  source context,quantities,paired stops/lineage/effects/full acceptance remain owned under D301.
+  quantities,paired stops/lineage/effects/full acceptance remain owned under D301.
 - Daily artifact cleanup completed2026-10-28 13:53UTC;docs/ARTIFACT_CLEANUP.md. Audit
   target/artifact_cleanup_audit/seam-20261028 preserves originals/stores/certificates. Clean only
   proven owned regenerable outputs;protect original generation/install and numerical proof data.

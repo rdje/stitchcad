@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual frame-bound original-notch context
+## _(2026-10-28 UTC)_ — actual Design source-context acceptance
 
-0515 binds actual named Notch borrows/source/ledger/creation frame to unique distinct in-domain originals. Checked C+1 precedes projection,both point admissions precede wide work. Private ports reject equal-content other snapshots/wrong sources before comparing;no bounded view or absolute-direction filter.
-Named start/end and lower/upper remain separate;complete ambiguous/coincident/bounds/frame projections and standard numeric/admission/projection causes survive. Local proof now retains actual Notch references;all metadata/ledger stays unchanged. Context supplies positions,not amount/global Design/physical readiness.
-Native context7/local10/frame port1(6 Fraction rows)/doc2+1/scoped Clippy/fmt/oracle3 pass0. Wide64-bit original,sideB/closed bounds/symbolic sources,ambiguity,coincident originals,eight cycles/C2 and C1/combined overflow/integer refusal pass. Correct oracle header stale since native projection adoption0509.
-[Whole0514 comparisons](docs/history/stitchcad-devnotes-part673.md) retains3 exact Git spans. Book90/207/1572/2703,glossary0/map/retention1127 pass. LIVE/README unchanged,G1 6/18;focused component integration then quantities next. Promotion declined:existing source/frame/interval contracts.
+0516 native3 joins actual DesignSources/inputs/sewing owner,2 retained child views and1 canonical full source. Six A/B x literal/formula/profile variants preserve actual pointers,named/authored order,quarter/three-quarter originals and complete state. N10/B2 gives20 cache/31 index.
+Actual replacement copy refuses child97001/global and original97000/local. Later half split and explicitly authored current Notches recover1/(2MAX) and1/4;valid64-bit original survives Param refusal while child held half remains SplitPoint. Context success changes no choice or amount;whole readiness stays separate.
+Native3/167 filtered,scoped sc-measure Clippy/fmt,oracle3/receipt674 three exact Git spans pass0. Book90/207/1572/2704,glossary0/map/retention1128 pass. Correct stale canonical paragraph calling implemented context future;historical wording remains sealed. Source-context .3.3 accepted;quantities next.
+[Whole0515 implementation](docs/history/stitchcad-devnotes-part674.md) retains exact scope/lesson/changelog. LIVE/README unchanged,G1 6/18;no quantity/physical/effect/full verification claim. Promotion declined:integration of existing indexed contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

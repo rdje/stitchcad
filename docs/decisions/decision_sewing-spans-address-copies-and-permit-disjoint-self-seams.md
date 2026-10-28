@@ -111,8 +111,8 @@ separate admission or avoidance. Coincident current locations never erase a held
 
 D305's complete point/range normalization and merge kernels are implemented;false temporary-width
 repairs are fixed and genuine final-width causes remain. Bounded current,coverage,wide admission
-and inverse primitives are implemented. Full semantic context,quantity/effect adoption and paired/
-mutation/physical acceptance remain later owners;no prospective primitive status overrides this.
+and inverse primitives and actual semantic context are implemented. Quantity/effect adoption and
+paired/mutation/physical acceptance remain later owners;historical prospective wording is retained.
 
 ## Exact historical source and proof retrieval
 

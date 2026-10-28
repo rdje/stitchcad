@@ -3,13 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0515 — bind actual original-notch interval context
+## STITCHCAD-G1-0516 — accept actual Design original-notch context
 
-- Actual named Notch/source/ledger/creation-frame borrows and unique distinct in-domain originals. Checked C+1 then both point admissions precede wide work. Preserve named/authored order versus mathematical bounds;complete ambiguity/coincidence/frame/bounds evidence and original
-  standard causes;no narrowing or default amount.
-- Native context7/local10/frame port1(6 Fraction rows)/doc2+1/scoped Clippy/fmt/oracle3 pass. Wide originals,actual sideB/closed bounds/symbolic data,ambiguity,coincidence,eight-cycle C2/C1 quotas,combined overflow and integer refusals remain exact. Fix recovery oracle's stale
-  projection header.
-- Whole0514 retained673/three exact Git spans;book90/207/1572/2703/glossary0/map/retention1127 pass. LIVE/README unchanged,G1 6/18. Focused source-context integration then notch quantities next;whole Design/physical/paired effects/full acceptance remain owned.
+- Actual cross-crate Design owner joins2 retained child views and1 full source,actual Notch pointers,named/authored order and exact original bounds. Six A/B x literal/formula/profile variants preserve complete state;N10/B2 yields20 cache/31 index.
+- Native3/scoped sc-measure Clippy/fmt/oracle3/receipt674 pass. Actual copy replacement refuses original source;later half split recovers valid64-bit1/(2MAX) and1/4 originals while child held half still requires a choice. Correct stale canonical future-context wording.
+- Whole0515 retained674/three exact Git spans;book90/207/1572/2704,glossary0/map/retention1128 pass. Source-context component accepted;notch quantities next. LIVE/README unchanged,G1 6/18;whole paired/mutation/physical/effect verification remains owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

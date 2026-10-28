@@ -1,5 +1,7 @@
 //! Actual higher source schemas compose with core input ownership without a dependency cycle.
 #![allow(clippy::expect_used)]
+#[path = "support/notch_context_acceptance.rs"]
+mod notch_context_acceptance;
 #[path = "support/owned_size_set_fixture.rs"]
 mod support;
 use sc_core::{
