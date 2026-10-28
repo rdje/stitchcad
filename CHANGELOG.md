@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0445 — account for held Piece and physical-copy resources
+## STITCHCAD-G1-0446 — account for actual topology journal and indices
 
-- Actual nested Piece/reference/text and CutPlan producers; no rebirth, repair or registry/geometry lookup.
-- Owner-aware typed locations retain actual Piece/declaration identity and original nested index.
-- Resource15 (prior10/actual5), privacy4 and strict selected lint/fmt pass; actual held content remains unchanged.
-- D292 scoped stale ontology clause corrected; whole0444/older decisions596 and D290/D291 ledger597 retained.
+- Charge actual journal, Declared/Offset vectors and maintained live/registration lengths; no replay or repair.
+- Exhaustive held/edit views, fixed Copy constraints and exact operation/index refusals preserve original ledger/choices.
+- Resource19 (prior15/actual4) and strict selected lint/fmt pass; private-view debug contains counts only.
+- Piece/copy/topology component accounting closes; remaining whole-model/runtime work owned, whole0445 proof598 retained.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part598](docs/history/stitchcad-devnotes-part598.md) | whole0445 Piece/copy-resource/owner/D292 scope/lesson/ledger | 50 lines, 4522 bytes, sha256:869a21aa… |
 | [part597](docs/history/stitchcad-devnotes-part597.md) | whole D290/D291 verified closure ledger | 13 lines, 1223 bytes, sha256:82264056… |
 | [part596](docs/history/stitchcad-devnotes-part596.md) | whole0444 and0437–0442 decision continuity | 125 lines, 9886 bytes, sha256:bfda6027… |
 | [part595](docs/history/stitchcad-devnotes-part595.md) | whole0443 logical resource-contract scope/lesson/ledger | 46 lines, 4068 bytes, sha256:8c5e05c3… |

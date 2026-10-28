@@ -116,3 +116,14 @@ retain Piece owner/hole index, and canonical evidence retains declaration owner.
 allocation, rebirth, repair, registry lookup or geometry proof. Resource15/privacy4/lint/fmt verify24/18/0,
 original nested/UTF-8/copy witnesses, actual split-held content and no mutation. D292 corrects one stale
 ontology metadata-command clause; whole-model/source/runtime and physical/RSS/time proof remain owned.
+
+## Actual held topology resource producer0446
+
+answers: "does resource accounting replay topology to estimate its held indices?"
+
+G1-SLICE.6.8.2.2.2.2.2.2.2 charges actual journal/per-edit vectors and stored live/registration lengths.
+Exhaustive ledger/journal/edit views plus Copy index-key/value constraints expose owned-field changes.
+Precharge before traversal; retain actual operation/index locations without replay, resolution, repair,
+mutation or extra model copies. View debug shows counts only. Resource19/lint/fmt verify22/0/0 across
+all six edits, vector/index/registration witnesses and original ledger/choice preservation. This completes
+Piece/copy/topology component accounting; whole-root/source/runtime and RSS/time/readiness remain owned.

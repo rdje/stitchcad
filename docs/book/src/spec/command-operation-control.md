@@ -193,8 +193,8 @@ and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 
 ## Logical dynamic-content accounting contract
 
 DesignResourceLimits and DesignResourceMeter live in the Design domain, independent of command
-authority. They provide a data-only accounting contract. Actual canonical/Piece/cut-plan accounting
-is implemented below. Remaining model/source producers and command-bus enforcement are pending;
+authority. They provide a data-only accounting contract. Actual canonical/Piece/cut-plan/topology
+accounting is implemented below. Remaining model/source producers and command-bus enforcement are pending;
 this meter is not yet a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
@@ -341,6 +341,43 @@ zero entries and preserve an earlier meter refusal. Five new actual cases plus p
 pass:15 total, with strict selected lint/formatting and four meter privacy/sealing checks rechecked.
 Topology history/index/registration, remaining model/source/runtime admission and total RSS/time proof
 remain separately owned. The command bus has not changed its runtime behavior.
+
+## Actual topology accounting
+
+charge_topology_resources borrows the actual IdentityLedger. It charges the journal's complete
+length before visiting entries in append order. Each Declared entry charges its held edge vector;
+each Offset entry charges its fragment vector. Split, Merge, Reverse and Delete carry fixed Copy
+payloads and add no nested collection entries. Their original values remain unchanged.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_topology_resources(&identity_ledger, &mut meter)?;
+let actual_topology = meter.finish()?;
+```
+
+After journal payloads, the producer charges the maintained live-edge set and registered-reference
+map by their actual stored lengths. It does not replay the journal, recompute an index, resolve a
+reference, rebuild repairs, mint an identity or rewrite a saved split choice. Exhaustive ledger/
+journal/edit views and Copy index-key/value constraints require an update for new owned payloads.
+The internal view's debug output contains counts, not journal values.
+
+Whole fields are topology.journal, topology.live_edges and topology.registrations. Nested fields
+are topology.journal.declared.edges and topology.journal.offset.fragments, with actual operation
+owner and original zero-based journal index. Registration choices and retired-source references
+remain part of the held model; accounting does not require them to resolve or certify integrity.
+
+The native fixture performs Declare, Split, Merge, Reverse, three-fragment Offset and Delete, with
+two registered references and a saved split choice. It retains6 journal entries,5 declared edges,
+3 offset fragments,6 live-index entries (including an unused live edge) and2 registrations:22 logical
+entries, zero text bytes and zero unbounded-counter bits. Maximum5 refuses the full journal6;
+maximum10 refuses declaration6+5 at index0; maximum13 refuses offset11+3 at index4 with its actual
+operation owner. Maximum19 refuses the live index14+6; maximum21 refuses registrations20+2.
+
+Four new actual topology cases plus prior15 resource cases pass:19 total, with strict selected lint
+and formatting. They retain the exact original ledger/choices on success/refusal, and empty actual
+scope preserves a prior meter error. This closes Piece/copy/topology component accounting. Remaining
+parameter/recipe/Material, sewing/garment, root composition/counter bits, source-host and runtime
+admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
 
 Focused runtime evidence comprises37 earlier bus cases, eight runtime-control cases and one actual
 source-copy case:46 passing cases. The evidence-input slice established six pure admission/fraction

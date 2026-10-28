@@ -391,3 +391,6 @@ fn actual_empty_canonical_scope_composes_with_prior_charges_and_preserves_prior_
 
 #[path = "support/design_resource/pieces.rs"]
 mod pieces;
+
+#[path = "support/design_resource/topology.rs"]
+mod topology;

@@ -376,6 +376,12 @@ impl JournalEntry {
         self.operation
     }
 
+    // Exhaustive borrowed journal view for logical resource accounting.
+    pub(crate) fn resource_edit(&self) -> (EntityId, &TopologyEdit) {
+        let Self { operation, edit } = self;
+        (*operation, edit)
+    }
+
     /// The edit itself.
     #[must_use]
     pub const fn edit(&self) -> &TopologyEdit {
@@ -754,6 +760,22 @@ impl std::error::Error for LedgerError {
     }
 }
 
+// Actual immutable held collections: fixed index entries need only their exact stored lengths.
+pub(crate) struct LedgerResourceView<'a> {
+    pub journal: &'a [JournalEntry],
+    pub live_edges: usize,
+    pub registrations: usize,
+}
+impl fmt::Debug for LedgerResourceView<'_> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("LedgerResourceView")
+            .field("journal_entries", &self.journal.len())
+            .field("live_edges", &self.live_edges)
+            .field("registrations", &self.registrations)
+            .finish()
+    }
+}
+
 /// The identity contract's state: an append-only journal of topology edits, the live-edge set that
 /// journal implies, and the references consumers have registered against it.
 ///
@@ -778,6 +800,24 @@ impl IdentityLedger {
     #[must_use]
     pub fn new() -> Self {
         Self::default()
+    }
+
+    pub(crate) fn resource_view(&self) -> LedgerResourceView<'_> {
+        // New owned fields or dynamic index payloads must extend the accounting contract.
+        fn fixed_set<T: Copy>(_: &BTreeSet<T>) {}
+        fn fixed_map<K: Copy, V: Copy>(_: &BTreeMap<K, V>) {}
+        let Self {
+            journal,
+            live,
+            registrations,
+        } = self;
+        fixed_set(live);
+        fixed_map(registrations);
+        LedgerResourceView {
+            journal,
+            live_edges: live.len(),
+            registrations: registrations.len(),
+        }
     }
 
     /// The journal, in the order the edits were applied. Append-only; the sole source of truth.
