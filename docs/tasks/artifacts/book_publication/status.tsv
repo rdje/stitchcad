@@ -158,3 +158,5 @@ actual Hem declaration view	spec/ontology-constructions.md	crates/sc-core/src/de
 actual Hem declaration role	spec/ontology-constructions.md	crates/sc-core/src/design/hems.rs	DesignHemDeclarationRole	G1-SLICE.6.4.5.3.d.1	4.4
 actual Hem declaration source	spec/ontology-constructions.md	crates/sc-core/src/design/hems.rs	DesignHemDeclarationSource	G1-SLICE.6.4.5.3.d.1	4.4
 actual Hem declaration refusal	spec/ontology-constructions.md	crates/sc-core/src/design/hems.rs	DesignHemDeclarationError	G1-SLICE.6.4.5.3.d.1	4.4
+builtin workflow identities	spec/command-workflows.md	crates/sc-core/src/command/workflow.rs	CommandWorkflowId	G1-SLICE.6.9.2	7.8
+builtin workflow operations	spec/command-workflows.md	crates/sc-core/src/command/workflow.rs	CommandWorkflowStep	G1-SLICE.6.9.2	7.8

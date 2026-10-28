@@ -49,6 +49,7 @@
   - [Release and approval](spec/release-contract.md)
   - [The command layer](spec/command-layer.md)
     - [Implemented execution](spec/command-execution.md)
+    - [Builtin workflows and native evidence](spec/command-workflows.md)
     - [Scopes and core authorization](spec/command-scopes.md)
     - [Operation limits and progress](spec/command-operation-control.md)
     - [Actual model resource accounting](spec/model-resource-accounting.md)

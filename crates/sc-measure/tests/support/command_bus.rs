@@ -98,6 +98,8 @@ mod retained_policy;
 mod source_clone_footprint;
 #[path = "command_bus/transaction_acceptance.rs"]
 mod transaction_acceptance;
+#[path = "command_bus/workflow_registry.rs"]
+mod workflow_registry;
 impl CommandAuthoritySource for Host {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_> {
         self.reads.set(self.reads.get() + 1);

@@ -8,6 +8,14 @@ use crate::ontology::EntityId;
 use core::fmt;
 use std::time::SystemTime;
 
+// Shared purpose metadata for actual group authorization and readonly workflow discovery.
+pub(super) const fn mutation_group_authority(mode: CommandAuthorizationMode) -> CommandAuthority {
+    match mode {
+        CommandAuthorizationMode::Preview => CommandAuthority::Inspect,
+        CommandAuthorizationMode::Execute => CommandAuthority::Commit,
+    }
+}
+
 /// One actual source grant's first failing original group member, in source-grant order.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct CommandGroupGrantRejection {
@@ -129,10 +137,7 @@ pub fn authorize_mutation_group<'a>(
         group: group.id(),
         issue: Box::new(issue),
     })?;
-    let required = match mode {
-        CommandAuthorizationMode::Preview => CommandAuthority::Inspect,
-        CommandAuthorizationMode::Execute => CommandAuthority::Commit,
-    };
+    let required = mutation_group_authority(mode);
     let mut rejections = Vec::new();
     for grant in snapshot.grants {
         let failure = group

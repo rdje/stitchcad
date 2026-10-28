@@ -335,13 +335,15 @@ A mutation is offered in two phases, because a patternmaker must see the result 
 
 ## 7. Agent authority as a command-layer concept
 
-Five levels, ordered, each a permission on a *class* of commands rather than a description of a tool. They
-are enforced in the core, not in a tool manifest, so an adapter cannot widen one.
+Five named levels are distinct permissions on command classes, without an implied hierarchy.
+Core enforces each permission and scope; a tool manifest cannot widen them.
+Native mutation preview requires Inspect alone. Propose is separate proposal-workflow metadata;
+constructing typed request data grants no execution authority.
 
 | Level | May issue | May not |
 | --- | --- | --- |
 | `inspect` | every `query` | change anything |
-| `propose` | build a candidate group and request a preview | commit it |
+| `propose` | proposal workflows, where implemented; native preview uses `inspect` | imply `inspect` or `commit` |
 | `commit` | `mutation` commands, within a scope a human granted | approve a release, or exceed the granted scope |
 | `generate` | `evaluation` and `artifact` commands, and `PrepareRelease` | approve |
 | `approve` | `ApprovePackage` | be held by an agent at all |
@@ -396,7 +398,7 @@ The table's columns, so G1 can populate it mechanically:
 | --- | --- |
 | workflow | a named sequence of commands, declared once, in the workflow registry |
 | command class | §1, derived from the commands in the workflow |
-| authority required | §7, the strictest level the workflow needs |
+| authority required | §7, the complete exact permission set required across workflow steps |
 | ui | the adapter entry point, or `absent` with the reason |
 | api | the `sc-api` method, or `absent` with the reason |
 | mcp | the tool name, or `absent` with the reason |
@@ -529,9 +531,9 @@ No UI implementation or extra broad verification is started by this DBIQNP note.
   group publication are implemented; full execution remains pending.** The set is a contract for
   `G1-SLICE.6`. The census checks specification closure; the native catalog target compares metadata.
   Neither establishes command execution. A new command is a row here first.
-- **The parity table is empty on purpose**, as the canvas spike's results are: its columns and generation
-  rule are normative now, its rows are G5's evidence, and a table filled in before the adapters exist would
-  be a claim about software nobody has written.
+- **The parity table stays empty until adapter evidence exists.** G5 owns its generated rows.
+  [Native workflow declarations](command-workflows.md) describe tested core sequences; they establish
+  no UI/API/MCP presence or resulting-state digest parity.
 - **The undo depth bound is declared but not numbered here.** It is a resource limit whose value belongs
   with the resource bounds roadmap §10 requires at G1, and a number written at G0 would be a guess; what is
   normative is that the bound exists, that exceeding it drops the oldest group, and that dropping is

@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0475 — report exact discarded group preparations
+## STITCHCAD-G1-0476 — declare and execute builtin native workflows
 
-- Fix D295:member, retry-conflict and final-difference failures retain actual successful first-occurrence positions/commands/keys; aliases and failed/unexecuted members add no entry.
-- Preserve original native source chains and same-key/two-ID/one-slot corrected retries. Native diagnostic1 red→green;transaction3/group-preview6/group-commit6/strict lint/fmt pass.
-- Fix D296's stale census header; executable bytes stay exact and the17-command/5-class/5-level census passes0. Lifecycle/accounting producers remain unchanged.
-- Whole0474 and0471–0474 decision continuity retained629; book/live docs align. Next native workflow evidence, then broader bus/publication acceptance; no additional authority or physical proof.
+- Discover3 immutable workflows with exact token lookup, actual stage/catalog metadata and full distinct permissions from the same group-purpose rule used by authorization.
+- Native workflow2 executes1/5/7-stage inspection/edit-replay/Undo-Redo paths over real sources/models and checks missing permissions;metadata2/schema4/catalog2/group-authorization5/strict lint/fmt pass.
+- Fix D297's hierarchy wording without changing grant behavior. Generate/watch the book table and register both public types; UI/API/MCP presence, parity digests and live authority stay separate.
+- Whole0475/D295/D296 retained630; next combined bus .6.9.3 and deferred publication probes. No full-project, persistence/browser, geometry or release certificate.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

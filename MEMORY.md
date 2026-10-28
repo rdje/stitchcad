@@ -2,23 +2,21 @@
 
 Read CLAUDE.md/README.md and doctrine; derive HEAD with git log --oneline -1.
 
-- Next G1-SLICE.6.9.2:native workflow registry/evidence feeding G1.9/G5. Read command-layer.md §8/10/11
-  and roadmap; adapters/parity table currently intentionally absent until actual adapter evidence.
-  Build actual native workflow evidence without claiming UI/API/MCP presence. Then coupled broader
-  metadata-bus acceptance under .6.9 and full book probes .6.9.publication, including named-result fixtures.
-- 0475 .6.9.1 fixes P1 D295:Mutation/RetryConflict/Difference carry discarded Vec<CommandGroupDiscardedStep>,
-  fixed Copy index()/command()/key() from actual successful first occurrences. Preserve original positions,
-  omit aliases/failing/unexecuted and keep native source chains. Error-only producer; lifecycle/accounting
-  files unchanged. Native diagnostic1 red→green;transaction3/group-preview6/group-commit6/lint/fmt pass0.
-  Both preview/commit positions0/2/3 original keys, empty prefix, conflict/native cause and corrected
-  same-key/two-ID/one-slot full reference retry verified. D296 stale census header fixed,code exact;
-  spec census17commands/5classes/5levels/0fail passes,does not prove runtime.
-- 0474 transaction37 checkpoints/9 phases native cancellation/retry/replay/Undo proof retained629,
-  plus whole0471–0474 decision journals. 0473 resource252 native/5 units/16 privacy is historical;
-  later transaction cases focused, current compiled target161, full current inventory not yet run.
-- D293 fixed0472:private Arc<H>,separate census/full logical charges;host()->&H non-const,
-  cross-thread Send+Sync,single-thread legal;foreign clone0 does not count core copies. D294 fixed0473.
-- Book operation-control#failed-group-preparation-context;publication85/159/1545/2601 verified0.
-  Retention1083/2425686residentB verified0. LIVE D293–D296 closed;G1still6/18;no whole-project/physical/
-  persistence/browser certificate. Protect target/history-capture-0450/installation/backup(98files),
-  prior0392g;window22 limits64/192. Full PNT;derive push cadence. Cleanup due2026-10-28 13:41UTC.
+- Next G1-SLICE.6.9.3:combined current implemented metadata-bus/public catalog-input-authority-resource
+  contracts and private-mutator compile failures. All metadata feature code is implemented; do deferred
+  integrated acceptance now, then .6.9.publication full probes (named-result fixture compatibility).
+  Other handlers/evaluation/persistence/browser remain their actual owners, no release certificate.
+- 0476 .6.9.2 builtin registry:CommandWorkflowId/Step immutable3 declarations. Exact from_token lookup
+  has no alias/default;actual commands/classes and complete exact rights derive from catalog/shared
+  group-purpose rule. Discovery reads no state/grant/policy and grants no availability or adapter parity.
+  Three real workflows execute1/5/7 stages via native2 cases;missing rights refused. Metadata2/schema4/
+  catalog2/group-auth5/strict lib-example-test lint/fmt pass0;grant-check bytes/order otherwise exact.
+- D297 fixed:permissions independent,Commit does not include Inspect;preview uses Inspect alone,
+  Propose is separate metadata. Generated table from core example command_workflows is watched by
+  command_workflow_contract;new book spec/command-workflows.md plus SUMMARY/topic-index/API map.
+  Publication86chapters/161APIrows/1548source/2612renderedlinks verified0. Adapter parity stays empty.
+- D293–D296 fixed, whole0475 diagnostic/source-scope proof in630;retention1084/2431155residentB verified0.
+  Prior transaction37 checkpoints/9 phases and resource252 were scoped earlier checkpoints; current
+  compiled Design-input target163, full current target not yet run. LIVE registry/D297 notes,G1still6/18.
+- Protect target/history-capture-0450/installation/backup(98files),prior0392g;window22 limits64/192.
+  Full PNT;derive push cadence. Cleanup due2026-10-28 13:41UTC;docs/ARTIFACT_CLEANUP.md.

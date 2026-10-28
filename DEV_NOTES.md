@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact discarded-preparation diagnostics
+## _(2026-10-28 UTC)_ — builtin native workflow registry and exact permissions
 
-0475 .6.9.1 fixes D295:Mutation/RetryConflict/Difference carry actual successful first-occurrence index/command/key descriptors; aliases/failing/unexecuted members omitted. Fixed Copy context only; native source chain unchanged.
-Native D2951 fails before/passes after;transaction3/group-preview6/group-commit6/strict lint/fmt pass0. Preview/commit yield positions0/2/3 and original keys;empty-prefix,key conflict and same-key/two-ID/one-slot corrected retry hold.
-Error-only borrowed-step producer leaves lifecycle/accounting untouched. D296 stale census header corrected;17 commands/5 classes/5 levels/0 failures,non-comment bytes unchanged. Source/accounting/physical proof is not expanded.
-Promotion:indexed decision. Book85/159/1545/2601 and retention1083/2425686B pass0;whole0474 and0471–0474 decisions retained629(4 Git spans). LIVE D295/D296 closed;README unchanged;next .6.9.2 native workflow evidence before full bus.
-[Whole0474 transaction/decision continuity](docs/history/stitchcad-devnotes-part629.md) retains exact native proofs and compatibility boundaries.
+0476 .6.9.2 declares3 workflows once as immutable stages/catalog IDs:Piece inspection1,metadata edit/replay5,metadata Undo/Redo7. Exact lookup has no alias/default;class and permission sets derive from actual metadata and the shared group-purpose rule.
+Native workflow2 executes all3 real paths and missing-permission refusals;metadata2/group-schema4/catalog2/group-authorization5/strict lib-example-test lint/fmt pass0. Grant-check bytes/order otherwise exact;bus/lifecycle/accounting unchanged.
+D297 fixed:ordered/strictest wording replaced by exact independent permissions;Commit does not include Inspect. Preview requires Inspect alone;Propose is separate metadata. Registry grants no authority,configuration,adapter presence or digest parity.
+Promotion:indexed decision. Generated book table/watch and86 chapters/161 API rows/1548 source/2612 rendered links pass0;whole0475/D295/D296630,retention1084/2431155B pass0. LIVE registry note,G1still6/18;README unchanged;next combined .6.9.3 then publication.
+[Whole0475 discarded-diagnostic/tool-scope lesson](docs/history/stitchcad-devnotes-part630.md) retains exact native before/after proof.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

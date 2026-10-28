@@ -31,6 +31,7 @@ pub use resource::{
 mod scope;
 mod snapshot;
 mod tech_pack;
+mod workflow;
 pub use approval::{ApprovalScopeTarget, ApprovePackage};
 pub use artifact::{ArtifactPayload, CommandArtifact, DxfGrading, DxfTarget, ExportDxf};
 pub use authorization::{
@@ -89,6 +90,7 @@ pub use scope::{
 };
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};
+pub use workflow::{CommandWorkflowId, CommandWorkflowStep};
 
 /// The five command classes fixed by the shared command-layer contract.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -125,7 +127,7 @@ impl CommandClass {
 pub enum CommandAuthority {
     /// Read-only queries and nonmutating previews.
     Inspect,
-    /// Candidate group construction and preview requests.
+    /// Proposal-workflow metadata; native mutation preview separately requires Inspect.
     Propose,
     /// Scoped authored design mutation.
     Commit,

@@ -132,3 +132,24 @@ cause, then corrected same-key/two-ID/one-slot publication equal to a real refer
 accounting sources stay unchanged; final Difference uses the same actual-step producer.
 D296 corrected the G0-era census header:no executable bytes changed;17/5/5/0 native census passes.
 Specification closure does not establish execution; native workflow evidence/full bus acceptance follow.
+
+## Builtin workflow discovery and exact permission sets0476
+
+answers: "where are actual native workflows declared?" · "why report a permission set instead of the strictest level?"
+
+CommandWorkflowId/CommandWorkflowStep declare3 immutable native sequences once. Stable exact lookup
+has no whitespace/case alias or default. Unique command/class metadata derives from catalog identities;
+complete distinct rights derive from each purpose. Extract the existing group-purpose match unchanged
+and share it with actual authorization; all other grant-check bytes/order and lifecycle code stay exact.
+Discovery contains no model/session/policy/grant and is never runtime availability or authorization.
+Non-exhaustive public enums permit future additions; actual new stages/workflows need native proof.
+
+Native acceptance interprets every declared stage over real complete sources/models:inspection1,
+edit/preview/replay5 and Undo/Redo7. It checks original/current reads, actual metadata differences,
+identity issuance, capacity replay and restored snapshot pointers. A separate permission matrix proves
+Inspect cannot commit and Commit cannot read/preview. Native2/metadata2/schema4/catalog2/group-auth5/
+strict lint/fmt pass0; generated stdout table is watched by the core book-projection contract.
+D297 clarified the misleading ordered/strictest wording. Named permissions stay distinct; native
+preview requires Inspect alone, Propose is separate metadata, and partial grants never gain a union
+through discovery. UI/API/MCP parity remains empty until actual adapter tests/digests exist. The new
+book part and2 public API rows explain this boundary; broader .6.9.3/publication acceptance follows.
