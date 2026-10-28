@@ -11,6 +11,17 @@ this chapter fixes three things that are easy to blur: what the package **contai
 every field has a source), what an approval **binds to** (the package's identity, and nothing else), and
 what a claim **is evidence for** (a scope, never a certificate).
 
+## Input API vocabulary
+
+These names describe existing request schemas and missing-content refusals; they do not seal a package.
+
+| API token | Meaning |
+| --- | --- |
+| `CommandRelease` | Shared Design/actor/revision snapshot plus preparation or approval input |
+| `NoArtifacts` | PrepareReleaseError::NoArtifacts: no requested artifact content supplied |
+| `BlankAlgorithm` | PackageIdentityError::BlankAlgorithm: original empty/whitespace algorithm label |
+| `EmptyDigest` | PackageIdentityError::EmptyDigest: no digest bytes for the supplied algorithm label |
+
 ## 1. What a release package is
 
 A package is an **immutable set**: the artifacts, the manifest that describes them, and the evidence

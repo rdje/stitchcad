@@ -3,12 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0478 — close current metadata publication acceptance
+## STITCHCAD-G1-0479 — declare actual command API vocabulary
 
-- All45 full existing publication probes pass against final book inputs, including copied-fixture refusals, named-result comparisons, compiled guard-removal controls and malformed-generic repair.
-- Final publication86 chapters/161 scoped API rows/1549 source/2616 rendered links passes; production code unchanged. Combined native317/doctests49 remains verified.
-- Close current implemented metadata acceptance .6.9 while preserving other handlers, adapters, persistence/browser, full workspace CI and physical/release owners.
-- Whole0477/0475–0477 decisions retained632; next scheduled D250 vocabulary repair. No early push or whole-project/prose correctness certificate.
+- Declare existing command,scope,authority,evaluation,artifact and release API/variant meanings in five owning chapters;no API or runtime change.
+- Current glossary census140→97 token/use rows:43 resolved,0 new. Five copied actual declaration-removal controls refuse by name;full glossary acceptance remains pending.
+- Focused book build/publication86 chapters/161 API rows/1549 source/2620 rendered links pass. Whole0478 scope/lesson/changelog retained633;continue size-set declarations.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

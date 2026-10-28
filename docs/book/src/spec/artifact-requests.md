@@ -3,6 +3,22 @@
 Four sc-core artifact schemas preserve exact snapshot, source and configuration claims.
 [Interchange](interchange-dialects.md) owns writer semantics; generation and closure execution remain pending.
 
+## API vocabulary
+
+These declarations name request data and constructor refusals. They establish no writer availability.
+
+| API token | Meaning |
+| --- | --- |
+| `ArtifactPayload` | Concrete DXF, plotter, PDF or tech-pack input carried by generation/closure requests |
+| `ALL` | The two declared targets in DxfTarget::ALL; not a list of available writers |
+| `from_token` | DxfTarget::from_token exact lookup, without normalization or a fallback |
+| `NoMembers` | GradedSizeSelectionError::NoMembers: empty requested member inventory |
+| `DuplicateMember` | GradedSizeSelectionError::DuplicateMember: first repeated id and original positions |
+| `SingleSize` | DxfGrading::SingleSize: one supplied Instance without inferred grading |
+| `FactoryResolved` | EvaluationProfile::FactoryResolved: selected pin and resolved-result identity claims |
+| `NonPositiveScaleSquare` | PdfPrintSettingsError::NonPositiveScaleSquare: refused exact scale-square side |
+| `NonPositiveOverlap` | PdfPrintSettingsError::NonPositiveOverlap: refused exact tiled overlap |
+
 ## Request one named DXF target
 
 `ExportDxf::single_instance(instance, target, selected, parameters)` names the Instance, dialect,

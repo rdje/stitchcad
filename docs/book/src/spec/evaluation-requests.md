@@ -4,6 +4,21 @@ The sc-core command module provides immutable inputs for both
 [instantiation paths](instantiation-paths.md). Lookup, authorization, numeric evaluation
 and persistence remain with future handlers.
 
+## API vocabulary
+
+Names below refer to existing immutable input types. Actual lookup and evaluation remain handler work.
+
+| API token | Meaning |
+| --- | --- |
+| `CommandEvaluation` | Snapshot context paired with concrete evaluation input |
+| `CommandSnapshotContext` | Explicit Design, actor claim and exact requested Design revision |
+| `CommandQueryContext` | Compatibility alias for that shared nonmutating context |
+| `DesignRevision` | Exact unbounded Design revision, separate from a SizeSet revision |
+| `SizeMemberTarget` | Member id under an explicit SizeSet id and Count revision |
+| `RegenerationChart` | Explicit garment-chart or MTM-chart identity |
+| `EvaluationProfile` | Logical evaluation or a named factory-resolved parameter result |
+| `SelectedProfilePin` | Exact profile key, schema version and content version claims |
+
 ## An exact shared snapshot
 
 `CommandSnapshotContext` names a Design, the caller's actor/principal claim and a mandatory

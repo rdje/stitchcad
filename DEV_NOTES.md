@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — full publication fixture acceptance
+## _(2026-10-28 UTC)_ — command vocabulary declarations
 
-0478 .6.9.publication passes all45 existing publication probes against final inputs:real book, copied chapter/index/link/status/API refusals, formula/statement currency and actual compiled guard-removal controls. Named-result positive comparisons pass.
-Actual unclosed generic warning refuses;quoted rendering repairs. Final book86 chapters/161 API rows/1549 source/2616 rendered links passes0. Final acceptance heading changed link population,so full suite reran and passed on exact final source;production unchanged.
-Combined native317/doctests49 remains the prior verified checkpoint. Current metadata .6.9 closes;other handlers,workspace CI,adapters,persistence/browser and physical/release proof remain separate. Scope is structural publication integrity,not all prose/sewing truth.
-Promotion:indexed decision. Whole0477 and0475–0477 decisions retained632(4 exact Git spans),retention1086/2445387B pass0. LIVE metadata lane/probe note,G1still6/18;README unchanged. Next scheduled .6.vocabulary D250;push cadence unchanged.
-[Whole0477 combined-native lesson/decisions](docs/history/stitchcad-devnotes-part632.md) retains exact populations and pending product boundaries.
+0479 .6.vocabulary.1 remeasures D250:140 token/use rows across13 chapters,not unique defects. Scope review quotes existing Rust API names/variants;five command-family chapters lacked table declarations.
+Declare exact core input,scope,authority,evaluation,artifact and release meanings locally. No API/runtime change or census exemption. Exact set delta resolves43 rows with0 new;97 remain in size-set/formula/local chapters.
+Five actual copied declaration removals refuse their named token;driver passes0 over existing97 baseline. mdbook/publication86 chapters/161 API rows/1549 source/2620 rendered links pass0. Full glossary acceptance stays pending.
+Promotion:indexed machine-token decision;whole0478 scope/lesson/changelog633 verified3 exact Git spans. Retention1087/2450002 residentB pass0. LIVE reviewed unchanged:G1 6/18,D250 owned;README unchanged. Next .vocabulary.2.
+[Whole0478 publication acceptance](docs/history/stitchcad-devnotes-part633.md) retains full45 controls and exact feature boundary.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

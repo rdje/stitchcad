@@ -76,3 +76,13 @@ Related: [[decision_numerical-contract-fixed-point]] · [[decision_product-work-
 `docs/book/src/spec/glossary.md` (the machine-token rule as specification) ·
 `docs/tasks/artifacts/glossary/run_glossary_census.sh` (the producer) ·
 `docs/tasks/PLANNING.md` (defects D26, D27, D28).
+
+## Current API declaration repair0479
+
+answers: "does a documented public API name still need a chapter-local declaration?"
+
+Yes. Current D250 census derives140 token/use pairs across13 chapters,not140 unique defects.
+Five command-family chapters now declare their actual public input/authority types and variant/method
+meanings. No API spelling,behavior or census exemption changes. Exact delta resolves43 rows with0 new;
+97 remain with later owners. Five copied actual declaration removals are refused by name,showing
+that these are live declarations rather than an allow-list. Full glossary acceptance remains pending.

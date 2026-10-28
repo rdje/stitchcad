@@ -3,6 +3,25 @@
 `CommandScope` is immutable Design/command/time policy for [core authority](command-layer.md#7-agent-authority-as-a-command-layer-concept).
 It grants no permission and authenticates nobody.
 
+## API vocabulary
+
+These are the existing core scope/authorization names, not transport capabilities.
+
+| API token | Meaning |
+| --- | --- |
+| `CommandScope` | Exact Design, ordered commands and half-open time window |
+| `CommandScopeWindowError` | Refused empty/reversed window with original endpoints |
+| `CommandScopeNarrowingError` | Refused Design, command or time-window expansion |
+| `SystemTime` | Standard-library time value used for explicit endpoints and observations |
+| `CommandAuthoritySource` | Trusted host interface supplying one consistent snapshot |
+| `CommandAuthoritySnapshot` | Authenticated binding, observation time and current grants |
+| `CommandGrantStatus` | Active or revoked status of a host-supplied grant |
+| `AgentApprovalGrantError` | Refusal to construct an agent grant containing approval permission |
+| `CommandAuthorization` | Borrowed request and original successful authorization decision |
+| `CommandAuthorizationError` | Typed single-command authentication/authorization refusal |
+| `NoMatchingGrant` | Authorization refusal when no one grant covers all required dimensions |
+| `Preview` | Mutation-only authorization mode requiring inspect permission |
+
 ## Explicit coverage
 
 `CommandScope::new(design, commands, valid_from, valid_until)` preserves the Design, authored command

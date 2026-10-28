@@ -107,6 +107,21 @@ Historical focused verification receipts remain complete in `docs/history/stitch
 
 ### One typed request surface
 
+The following names denote the existing core input API; construction grants no authority.
+
+| API token | Meaning |
+| --- | --- |
+| `CommandRequest` | One of the five typed command families |
+| `CommandQuery` | Snapshot-bound read intent |
+| `CommandMutation` | Authored change with retry/group context |
+| `CommandEvaluation` | Snapshot-bound derived-result intent |
+| `CommandArtifact` | Snapshot-bound artifact intent |
+| `CommandRelease` | Snapshot-bound preparation or approval intent |
+| `CommandSnapshotContext` | Exact Design, actor claim and requested revision |
+| `CommandQueryContext` | Compatibility alias for the shared snapshot context |
+| `DesignRevision` | Exact unbounded Design revision counter |
+| `QueryPayload` | Concrete piece-list, seam-span or artifact-closure read input |
+
 `CommandRequest` retains one original `CommandQuery`, `CommandMutation`, `CommandEvaluation`,
 `CommandArtifact` or `CommandRelease`. `command_id()` derives identity through the concrete payload;
 `design()`, `actor()` and `expected_revision()` expose original claims. Revisions are borrowed unchanged.

@@ -10,14 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0478
+## Current leaf acceptance —0479
 
-- [x] ROOT CAUSE: python3 -I -B scoped producer/fixture plan review confirms project-local copied
-  fixtures/no other Git repo edits;named result uses existing positive tuple comparisons rc=0.
-- [x] ADDRESSED: bash docs/tasks/artifacts/book_publication/run_book_publication_probes.sh →45 pass/0 fail
-  rc=0 on final source;real/copy/refusal/body-fault/named-result/warning-repair controls all pass.
-- [x] NO REGRESSION: final producer →86 chapters/161 API rows/1549 source/2616 rendered links rc=0;
-  production unchanged,prior native317/doctests49 pass;remaining product/workspace proof stays owned.
+- [x] ROOT CAUSE: glossary census invocation in .6.vocabulary.1 →140 C1 rows/13 chapters,rc=1;declaration-only gap.
+- [x] ADDRESSED: same census →97 rows,rc=1 expected;43 resolved/0 new;five actual declaration-removal controls pass rc=0.
+- [x] NO REGRESSION: mdbook build/publication →86 chapters/161 API rows/1549 source/2620 rendered links rc=0;code unchanged.
 
 ## Goal
 
@@ -632,10 +629,24 @@ Completed structural/input/garment node graph: [canonical sibling](G1-SLICE-garm
 All98 completed ids/statuses and original proof pointers remain live there.
 
 - ID: `G1-SLICE.6.vocabulary`
+  Status: `in_progress`
+  Goal: D250 canonical declarations;current census140 token/use pairs across13 chapters,not unique defects.
+  Children .1 command/authority/schema terms;.2 size sets;.3 formula/runtime;.4 local examples;
+  .acceptance actual census/probes;P3 advisory pipe diagnostic follows C1 closure if reproduced.
+- ID: `G1-SLICE.6.vocabulary.1`
+  Status: `done`
+  Goal: declare command/authority/evaluation/artifact/release API and variant meanings in five chapters.
+  - [x] REPRODUCE / ISSUE: bash docs/tasks/artifacts/glossary/run_glossary_census.sh →140 C1 token/use rows rc=1;all other rules clear.
+  - [x] ROOT CAUSE: same census/current Rust declaration review →43 rows in five command chapters lack table declarations rc=0;types/variants exist and remain unchanged.
+  - [x] FIX: add chapter-local meanings quoted from public core contracts;no API/runtime,global exemption or census changes.
+  - [x] ADDRESSED: same census →97 C1 rows rc=1 expected;Python exact set difference →43 resolved/0 new rows rc=0;all five chapter populations clear.
+  - [x] NO REGRESSION: Python copied declaration-removal controls for CommandRequest/CommandAuthoritySnapshot/ArtifactPayload/SizeMemberTarget/BlankAlgorithm →5 named refusals rc=1 expected,driver rc=0;mdbook/publication →86/161/1549/2620 rc=0.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/decision/index/D250 updated;LIVE reviewed unchanged G1 6/18,D250 owned;README unchanged. transition_receipts.py --record part633 →3 exact Git spans rc=0;history_archive.sh verify-retention →1087 records/2450002 residentB rc=0.
+  Verification: focused declaration delta/copied controls/book/retention pass;remaining97 and full glossary acceptance still owned.
+  Commit: STITCHCAD-G1-0479;next .vocabulary.2 size-set vocabulary.
+- ID: `G1-SLICE.6.vocabulary.2`
   Status: `pending`
-  Goal: P2 D250 repair preexisting public API/variant/local token declarations by canonical meaning;
-  schedule after .6.9 implementation, before G1 .11/integration/pre-push. Current .6.4.1 adds no C1 rows.
-  Scope includes separate P3 advisory awk/head pipe-close diagnostic cleanup after C1 closure.
+  Goal: canonical authored/resolved size-set/axis/break/transformation and local example declarations.
 - ID: `G1-SLICE.6.5`
   Status: `in_progress`
   Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.
@@ -969,23 +980,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
 
 - ID: `G1-SLICE.6.9.publication`
   Status: `done`
-  Goal: after agreed command-feature implementation, run the complete existing publication probes,
-  including named-result fixture compatibility, before push; current focused native formatter oracle
-  does not claim this broader suite passed. COMMIT.md full pre-push gates remain mandatory.
-  - [x] REPRODUCE / ISSUE: prior scoped native formatter/real-book checks did not execute the complete
-    existing copied-fixture population;producer plan/source review locates all controls rc=0.
-  - [x] ROOT CAUSE: native source review rc=0:main includes original formula/statement guard/body faults,
-    named-result comparisons and actual builder-warning repair;fixture roots are guarded project-local data.
-  - [x] FIX: execute the complete existing producer after metadata code completion;record scoped result.
-    Acceptance heading changed rendered links,so rerun full suite on final source before closure.
-  - [x] ADDRESSED: bash docs/tasks/artifacts/book_publication/run_book_publication_probes.sh →45 pass/0 fail
-    rc=0;all existing real/copy/positive/refusal/body-fault/named-result/warning-repair controls pass.
-  - [x] NO REGRESSION: final producer →86 chapters/161 API rows/1549 source/2616 rendered links rc=0;
-    production unchanged,prior combined317 native/doctests49 verified;full workspace CI remains pending.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/decision/index and LIVE metadata/probes note updated;README
-    unchanged;whole0477/decisions632 verified4 Git spans;retention1086/2445387residentB rc=0.
-  Verification: full publication45/final book/retention rc=0;current metadata .6.9 done with scoped limits.
-  Commit: STITCHCAD-G1-0478;next scheduled .6.vocabulary D250 repair before further integration.
+  Goal:0478 full publication45/final inputs; [whole scope/proofs](../history/stitchcad-devnotes-part633.md).
 
 - ID: `G1-SLICE.7`
   Status: `pending`
