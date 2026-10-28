@@ -3,13 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual Design retained-source acceptance
+## _(2026-10-28 UTC)_ — paired task branch contained before nonuniform work
 
-0494 retained .3 component closes with focused actual Design/Sewing/command/resource/current acceptance. Full original source metadata remains separate from target allocations. Real graph/model constructors and current source checks replace no dependency with a fake;no paired handler or physical/release claim follows.
-Selected cross-layer native1 passes with±1 roots:initial[0,±1],remainder[±1,0],canonical root pointer/global progress,graph-only meter3/limit2 original failure. Actual copy96000→96010 replacement retains held quantities but complete current validation refuses original
-MissingCopy. Strict measure-target Clippy/fmt pass0.
-Book88/174/1560/2661/glossary0 pass;whole0493 retained648 verifies3 Git spans;retention1102/2522316 residentB,active48/64/aggregate69/192 pass0. Promotion:indexed sewing decision. LIVE/README unchanged,G1 6/18. D301 P1 nonuniform/context .4 next;stops,lineage/effects/full paired acceptance remain owned.
-[Whole0493 root-quantity lesson](docs/history/stitchcad-devnotes-part648.md) preserves exact independent Fraction/native46/docs4/typed-cause evidence.
+0495 moves paired work to the existing canonical execution sibling before new density/notch/context detail. Native root1196/1200 lines had insufficient headroom;execution sibling126 had room. Original70-line/5726B branch retained650;working63-line copy is exact after authorized whole0494 retirement649.
+Native Git census preserves all258 original root IDs and24 current paired IDs exactly once. New source/family watch plus prior controls pass12/0;the first new regex lacked multiline mode and was red,then re.search/re.M corrected it. No ownership predicate weakened;knowledge map remains8185B without a new row/cap.
+Book88/174/1560/2661/glossary0 and source receipts3+1 Git spans/retention1104/2533729 residentB pass0;active50/64,aggregate71/192. Promotion:indexed containment decision. LIVE/README unchanged,G1 6/18. No Rust runtime source changes;next weighted/notch/context arithmetic recovery .4.1,then safe implementation leaves.
+[Whole0494 Design-acceptance lesson](docs/history/stitchcad-devnotes-part649.md) and [native paired task source](docs/history/stitchcad-devnotes-part650.md) preserve exact original scope/proofs.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

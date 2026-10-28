@@ -114,6 +114,42 @@ class TaskSources(CONTROLS["BookFixture"]):
             CHECK_API["check"](ROOT, self.tree)
         self.assertEqual(result.exception.code, "task")
 
+    def test_paired_branch_retains_exact_native_source_and_unique_live_nodes(self):
+        history = runpy.run_path(str(ROOT / "scripts/history_archive.py"))
+        record = history["inventory"](ROOT)[0]["docs/history/stitchcad-devnotes-part650.md"]
+        header, body = record.split(b"\n---\n\n", 1)
+        revision = re.search(rb"from ([0-9a-f]{40}|[0-9a-f]{64})\.", header)
+        extent = re.search(rb"Whole source interval: docs/tasks/G1-SLICE\.md bytes ([0-9]+)" +
+                           "–".encode() + rb"([0-9]+), ([0-9]+) bytes, sha256:([0-9a-f]{64})", header)
+        self.assertIsNotNone(revision)
+        self.assertIsNotNone(extent)
+        original = API["blob"](ROOT, revision[1].decode(), "docs/tasks/G1-SLICE.md", API["TASK_BYTES"])
+        begin, end, size, checksum = extent.groups()
+        self.assertEqual(body, original[int(begin):int(end)])
+        self.assertEqual(len(body), int(size))
+        self.assertEqual(hashlib.sha256(body).hexdigest().encode(), checksum)
+        current = API["current_tasks"](ROOT, OWNER)
+        self.assertIn("docs/tasks/G1-SLICE-execution.md", current)
+        prefix = rb"^- ID: `G1-SLICE\.6\.5\.3\.2(?:\.|`)"
+        self.assertIsNotNone(re.search(prefix, original, re.M), "native predecessor makes absence control red")
+        self.assertIsNone(re.search(prefix, current["docs/tasks/G1-SLICE.md"], re.M))
+        old_ids = Counter(re.findall(rb"^- ID: `([^`]+)`", original, re.M))
+        live_ids = Counter(identity for source in current.values()
+                           for identity in re.findall(rb"^- ID: `([^`]+)`", source, re.M))
+        self.assertFalse(old_ids - live_ids, "every original root node remains live")
+        nodes = re.findall(rb"^- ID: `([^`]+)`\n  Status: `([^`]+)`", body, re.M)
+        self.assertTrue(nodes)
+        for identity, old_state in nodes:
+            found = [state for source in current.values()
+                     if (state := API["task_status"](source, identity.decode())) is not None]
+            self.assertEqual(len(found), 1, identity)
+            if old_state == b"done":
+                self.assertEqual(found, ["done"], identity)
+        live = Counter(identity for source in current.values()
+                       for identity in re.findall(rb"^- ID: `(G1-SLICE\.6\.5\.3\.2(?:\.[^`]+)?)`", source, re.M))
+        self.assertTrue(live)
+        self.assertEqual(set(live.values()), {1}, "canonical paired identities never duplicate")
+
     def test_actual_completed_graph_is_an_exact_live_partition_of_native_history(self):
         API["storage_profile"](ROOT, {"docs/tasks/G1-SLICE-garment.md"})
         data = (ROOT / "docs/tasks/G1-SLICE-garment.md").read_bytes()

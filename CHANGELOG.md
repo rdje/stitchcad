@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0494 — close scoped actual Design retained-source acceptance
+## STITCHCAD-G1-0495 — contain the paired task branch before nonuniform detail
 
-- Join actual Design ownership,canonical retained source metadata,command quantities,graph resource limits and complete current-copy validation. Selected native1 passes with±1 roots;strict measure-target Clippy/fmt pass. Clarify original declarations versus target allocations in API/book prose.
-- Native checks preserve initial[0,±1],remainder[±1,0],root pointer/global progress,meter3/limit2 original refusal and actual MissingCopy after replacement;held quantities remain inspectable. No paired execution/physical/release approval follows.
-- Book88/174/1560/2661/glossary0 pass;whole0493 retained648,retention1102 passes. Retained .3 closes with focused acceptance;D301 nonuniform/context,stops,lineage/effects/full paired acceptance remain owned. LIVE G1 6/18 unchanged.
+- Move paired work into the existing canonical execution sibling without a new map row or raised limit. Preserve exact native70-line/5726B branch650 and whole0494 in649;copy the working branch exactly after authorized retirement,retain all IDs/states/proofs and add safe .4 children.
+- Native Git census keeps all258 original root IDs live/24 paired IDs unique. Task source/family12 controls and unchanged8185B knowledge map pass. Book88/174/1560/2661/glossary0/source receipts3+1/retention1104 pass.
+- Rust runtime code and LIVE G1 6/18 unchanged. D301 exact weighted/notch/context recovery .4.1 next;stops,lineage,effects and full paired acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

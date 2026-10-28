@@ -369,3 +369,8 @@ copy. Quantity availability therefore supplies no current-source or effect autho
 The retained-source component is implemented with focused native/compiler/publication checks.
 Nonuniform/notch context,semantic stops,live lineage and paired bus effects retain their owners.
 Broader paired acceptance follows implementation;no full CI,physical or release verdict is inferred.
+
+Detailed paired execution tasks now live in the existing canonical execution sibling,
+`docs/tasks/G1-SLICE-execution.md`. Original IDs,completion states and proof routes remain live;
+the exact pre-move branch is retained with its native Git extent. Nonuniform/context work follows
+this scoped retained-source component without expanding the root tracker beyond its bounds.

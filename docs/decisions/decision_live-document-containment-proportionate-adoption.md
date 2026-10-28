@@ -172,3 +172,14 @@ unprotected CRLF object identity; exact source571 ends with a blank line that de
 checking refuses. Archive-only attributes disable transformations and allow blank EOF. Native
 newline/storage5 controls retain raw bytes and accept that data, while ordinary source trailing
 whitespace still refuses through Git apply --check without creating files. No sealed record changes.
+
+## Paired work-memory containment0495
+
+answers: "how does paired task planning grow without another map row or a raised root ceiling?"
+
+Use the existing canonical execution sibling,which had126 lines while root had1196/1200. Retain
+whole0494 in649 and the exact native70-line/5726B branch in650. Copy the working branch byte-exact
+after the one authorized retirement,then evolve live plans there. All258 original root IDs stay live;
+24 current paired IDs are unique. A new native source/family guard pins the original Git extent,
+checks unique live nodes and preserves done states;all12 sibling/source controls pass. Root navigation
+and current task authority follow the existing family contract. No map row,cap or Rust runtime code changes.
