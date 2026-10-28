@@ -129,3 +129,16 @@ acceptance heading changed the rendered population,so the full suite reran again
 Production source remains unchanged;prior combined native317/doctests49 stands. This closes current
 metadata .6.9 acceptance,not other runtime handlers,adapter/persistence/browser/full CI or release
 proof. Publication integrity is scoped;it does not certify every prose or sewing-semantic claim.
+
+## Original paired-cut source binding0486
+
+answers: "does binding source cuts prove a current,authorized or physically valid seam split?"
+
+No. Bind the actual held graph member and original request;A/B source-frame and strict interior
+checks produce fixed ascending intervals while copy/direction/ease/stops stay on the original span.
+Missing target wins first,then A before B/frame before interior;the original interval refusal remains
+the standard error source. Private fields and lifetimes seal only that source evidence.
+Native pointer/weighted/profile/stop/unequal-cut/replacement tests pass;actual topology deletion still
+makes current validation refuse while held source binding remains inspectable. Bounded Debug avoids
+walking original variable-size content. Bus availability and operation demand remain unchanged;
+current-world/pairing/ease/stop/lineage/admission/atomic effects remain their separate implementation obligations.

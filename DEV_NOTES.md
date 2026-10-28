@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact held-range partition prerequisite
+## _(2026-10-28 UTC)_ — actual original paired-cut source binding
 
-0485 .6.5.3.2.1 adds EdgeRange::split_at with strict original-frame interior bounds and Copy RangeSplitError retaining original interval/cut. Fixed-array children preserve edge/endpoints without arithmetic rescaling,allocation,identity issuance or topology edits.
-Four new cases cover148 exact membership samples,eight endpoint/exterior refusals,full-width parameters,unknown-source repairs and later actual ledger split mapping. Initial native16/1 caught Param Display's t= prefix;format exact rational evidence directly. Final range17 and method rustdoc1 pass0.
-Selected strict library/range-target Clippy and fmt pass. Real glossary310/9/158/0 and final book87/162/1556/2641 pass0. D300 stale all-mutation-execution-pending sentence corrected from unchanged actual three-handler bytes;paired/Dart execution remains pending.
-Promotion:indexed exact-edge-parameter decision;whole0484/D298/D299639 verifies4 Git spans,retention1093/2477796 residentB passes0. LIVE adds D300 scope correction,G1still6/18. README unchanged. Next .2.2 actual A/B binding;paired-feature acceptance remains separately deferred.
-[Whole0484 glossary acceptance/defects](docs/history/stitchcad-devnotes-part639.md) retains full41 and exact D298/D299 causes/repairs.
+0486 .6.5.3.2.2 adds SplitSeamSpan::bind_source_cuts over the actual held graph. The sealed borrowed view keeps original request/span pointers and fixed ascending interval arrays. Copy/direction/ease/stops remain on the original owner;Debug visits bounded source metadata only.
+Missing target precedes A/B,each frame check precedes interior bounds,and the original RangeSplitError remains the standard source. Four actual cases include weighted/profile ease,a semantic notch,unequal cuts,pointer identity,refusal precedence,replacement snapshots and actual topology deletion.
+Sewing26 and docs3 (positive1/privacy1/lifetime1) pass;selected library/sewing strict Clippy/fmt pass. Real glossary310/9/158/0 and book88/164/1559/2652 pass0. Actual bus availability/operation-demand source bytes remain unchanged;source binding grants no currentness/authority/paired effects.
+Promotion:indexed command-layer decision;whole0485 scope/lesson/changelog640 verifies3 Git spans,retention1094/2482274 residentB passes0. LIVE reviewed unchanged,G1 6/18,D300 corrected;README unchanged. Next .2.3 exact direction/ease/stop/lineage obligations;full paired acceptance deferred.
+[Whole0485 interval prerequisite/D300 lesson](docs/history/stitchcad-devnotes-part640.md) retains native17/docs1 and exact source-frame bounds.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

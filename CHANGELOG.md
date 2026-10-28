@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0485 — partition exact held source-frame ranges
+## STITCHCAD-G1-0486 — bind original paired cuts to actual held seam spans
 
-- Add EdgeRange::split_at and structured RangeSplitError;strict interior cuts return two fixed-array intervals with original edge/frame and exact bounds.
-- Native range17/method rustdoc1/selected strict Clippy/fmt pass;four new cases cover exact membership,refusals,full-width/unknown references and actual later topology edits.
-- D300 corrects stale command execution scope. Final glossary0 failures/book87/162/1556/2641 passes;whole0484/D298/D299 retained639. Actual paired handler binding and broader execution remain owned.
+- Add sealed borrowed source binding with exact A/B interval arrays,original request/span identity and typed missing/frame/interior refusals;retain original range error source and bounded Debug.
+- Native sewing26/docs3/selected strict Clippy/fmt pass;four new actual weighted/profile/stop/pointer/precedence/replacement/deletion cases distinguish source evidence from current-world validity.
+- Final glossary0/book88/164/1559/2652 passes;actual bus availability/operation demand unchanged. Whole0485 retained640;paired direction/ease/stop/lineage and effects remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -161,3 +161,5 @@ actual Hem declaration refusal	spec/ontology-constructions.md	crates/sc-core/src
 builtin workflow identities	spec/command-workflows.md	crates/sc-core/src/command/workflow.rs	CommandWorkflowId	G1-SLICE.6.9.2	7.8
 builtin workflow operations	spec/command-workflows.md	crates/sc-core/src/command/workflow.rs	CommandWorkflowStep	G1-SLICE.6.9.2	7.8
 source-frame range partition	spec/ontology.md	crates/sc-core/src/ontology/range.rs	RangeSplitError	G1-SLICE.6.5.3.2.1	4.1
+paired seam source binding	spec/command-seam-splits.md	crates/sc-core/src/command/seam_split.rs	CommandSeamSplitBinding	G1-SLICE.6.5.3.2.2	4.4
+paired seam source refusal	spec/command-seam-splits.md	crates/sc-core/src/command/seam_split.rs	CommandSeamSplitBindingError	G1-SLICE.6.5.3.2.2	4.4

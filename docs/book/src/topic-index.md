@@ -12,6 +12,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Body-to-garment Ease intent](spec/ease-inputs.md)
 - [Commands and agent authority](spec/glossary/commands-and-authority.md)
 - [Command execution and metadata previews](spec/command-execution.md)
+- [Paired seam split source binding](spec/command-seam-splits.md)
 - [Builtin command workflows and native evidence](spec/command-workflows.md)
 - [Command scopes and core authorization](spec/command-scopes.md)
 - [Operation limits and progress contracts](spec/command-operation-control.md)

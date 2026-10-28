@@ -1,5 +1,6 @@
 //! Sewing topology/intent tests; no fixture pretends to measure geometry or certify seam lengths.
 #![allow(clippy::expect_used, clippy::unwrap_used, clippy::panic)]
+use sc_core::command::{CommandSeamSplitBindingError as SplitError, SplitSeamSpan};
 use sc_core::ontology::{
     CopyOrientation, CutCopyDefinition, CutPlan, CutPlanError, CuttingSide, DeclaredEase,
     DeterministicIdGenerator, DirectedEdge, Direction, EaseAmount, EaseDistribution,
@@ -157,6 +158,204 @@ impl Fixture {
         )
     }
 }
+#[test]
+fn source_cut_binding_borrows_actual_span_and_retains_both_original_frames() {
+    let mut f = fixture();
+    f.span_mut().a.range = EdgeRange::new(f.span().a.range.edge(), t(1, 7), t(6, 7)).unwrap();
+    f.span_mut().b.range = EdgeRange::new(f.span().b.range.edge(), t(1, 5), t(4, 5)).unwrap();
+    f.span_mut().ease.amount = EaseAmount::Profile(ProfileParameterRef::new(id(999)));
+    f.span_mut().ease.distribution = EaseDistribution::Weighted {
+        side: SeamSideId::B,
+        regions: vec![WeightedEaseRegion {
+            from: Param::START,
+            to: t(2, 3),
+            weight: Rational::new(3, 2).unwrap(),
+        }],
+    };
+    let mark = f.notch(500, t(1, 3));
+    f.span_mut().stops.push(StopLandmark {
+        side: SeamSideId::A,
+        landmark: mark.id(),
+    });
+    let graph = f.graph(&[mark]).unwrap();
+    let source = graph.spans().first().unwrap();
+    let request = SplitSeamSpan::new(
+        source.id(),
+        EdgeAnchor {
+            edge: source.definition().a.range.edge(),
+            param: t(2, 3),
+        },
+        EdgeAnchor {
+            edge: source.definition().b.range.edge(),
+            param: t(3, 7),
+        },
+    );
+    let binding = request.bind_source_cuts(&graph).unwrap();
+    assert!(std::ptr::eq(binding.request(), &request));
+    assert!(std::ptr::eq(binding.span(), source));
+    assert_eq!(binding.span().definition(), f.span());
+    let [lower_a, upper_a] = binding.ranges(SeamSideId::A);
+    let [lower_b, upper_b] = binding.ranges(SeamSideId::B);
+    assert_eq!(
+        (lower_a.from(), lower_a.to(), upper_a.to()),
+        (t(1, 7), t(2, 3), t(6, 7))
+    );
+    assert_eq!(
+        (lower_b.from(), lower_b.to(), upper_b.to()),
+        (t(1, 5), t(3, 7), t(4, 5))
+    );
+    assert_eq!(upper_a.from(), lower_a.to());
+    assert_eq!(upper_b.from(), lower_b.to());
+    assert_eq!(
+        binding.span().definition().direction,
+        SeamDirection::Opposite
+    );
+    assert_eq!(
+        graph.geometric_validation(),
+        GeometricValidation::DeferredToG2
+    );
+    assert_eq!(graph.ease_validation(), EaseValidation::DeferredToG2AndG3);
+}
+
+#[test]
+fn source_cut_binding_checks_target_then_a_then_b_and_retains_original_causes() {
+    let f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let a = EdgeAnchor {
+        edge: f.span().a.range.edge(),
+        param: t(1, 2),
+    };
+    let b = EdgeAnchor {
+        edge: f.span().b.range.edge(),
+        param: t(1, 3),
+    };
+    let missing = SplitSeamSpan::new(id(998), b, a);
+    assert_eq!(
+        missing.bind_source_cuts(&graph).unwrap_err(),
+        SplitError::MissingSpan { span: id(998) }
+    );
+    let wrong_a = SplitSeamSpan::new(f.span().id, b, a);
+    let error = wrong_a.bind_source_cuts(&graph).unwrap_err();
+    assert_eq!(
+        error,
+        SplitError::SourceFrame {
+            span: f.span().id,
+            side: SeamSideId::A,
+            expected: a.edge,
+            cut: b,
+        }
+    );
+    assert!(std::error::Error::source(&error).is_none());
+    let wrong_b = SplitSeamSpan::new(f.span().id, a, a);
+    assert_eq!(
+        wrong_b.bind_source_cuts(&graph).unwrap_err(),
+        SplitError::SourceFrame {
+            span: f.span().id,
+            side: SeamSideId::B,
+            expected: b.edge,
+            cut: a,
+        }
+    );
+    let endpoint_a = EdgeAnchor {
+        param: Param::START,
+        ..a
+    };
+    let both_refuse = SplitSeamSpan::new(f.span().id, endpoint_a, a);
+    let error = both_refuse.bind_source_cuts(&graph).unwrap_err();
+    let SplitError::Interior { span, side, issue } = error else {
+        unreachable!("actual interior cause")
+    };
+    assert_eq!(
+        (span, side, issue.range, issue.at),
+        (f.span().id, SeamSideId::A, f.span().a.range, Param::START)
+    );
+    assert_eq!(
+        std::error::Error::source(&error)
+            .unwrap()
+            .downcast_ref::<sc_core::ontology::RangeSplitError>(),
+        Some(&issue)
+    );
+    let endpoint_b = EdgeAnchor {
+        param: Param::END,
+        ..b
+    };
+    let wrong_b = SplitSeamSpan::new(f.span().id, a, endpoint_b);
+    let SplitError::Interior { span, side, issue } = wrong_b.bind_source_cuts(&graph).unwrap_err()
+    else {
+        unreachable!("actual B interior cause")
+    };
+    assert_eq!(
+        (span, side, issue.range, issue.at),
+        (f.span().id, SeamSideId::B, f.span().b.range, Param::END)
+    );
+}
+
+#[test]
+fn source_cut_binding_is_an_immutable_supplied_snapshot_not_a_future_decision() {
+    let mut f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let request = SplitSeamSpan::new(
+        f.span().id,
+        EdgeAnchor {
+            edge: f.span().a.range.edge(),
+            param: t(1, 4),
+        },
+        EdgeAnchor {
+            edge: f.span().b.range.edge(),
+            param: t(1, 3),
+        },
+    );
+    let original = request.bind_source_cuts(&graph).unwrap();
+    f.span_mut().a.copy = id(201);
+    f.span_mut().a.range = EdgeRange::new(f.span().a.range.edge(), t(1, 4), t(3, 4)).unwrap();
+    let replacement = f.graph(&[]).unwrap();
+    let SplitError::Interior { span, side, issue } =
+        request.bind_source_cuts(&replacement).unwrap_err()
+    else {
+        unreachable!("replacement boundary must be rechecked")
+    };
+    assert_eq!(
+        (span, side, issue.range, issue.at),
+        (f.span().id, SeamSideId::A, f.span().a.range, t(1, 4))
+    );
+    assert_eq!(original.span().definition().a.copy, id(200));
+    assert_eq!(
+        original.ranges(SeamSideId::A).first().unwrap().from(),
+        Param::START
+    );
+    assert_eq!(original.request(), &request);
+}
+
+#[test]
+fn source_cut_binding_keeps_held_evidence_when_actual_current_resolution_refuses() {
+    let mut f = fixture();
+    let graph = f.graph(&[]).unwrap();
+    let request = SplitSeamSpan::new(
+        f.span().id,
+        EdgeAnchor {
+            edge: f.span().a.range.edge(),
+            param: t(1, 2),
+        },
+        EdgeAnchor {
+            edge: f.span().b.range.edge(),
+            param: t(1, 3),
+        },
+    );
+    let binding = request.bind_source_cuts(&graph).unwrap();
+    let edge = f.span().a.range.edge();
+    f.ledger.delete(&mut f.ids, edge).unwrap();
+    assert!(graph
+        .validate_current(&f.plan, &f.pieces, &[], &f.ledger)
+        .is_err());
+    let held = request.bind_source_cuts(&graph).unwrap();
+    assert!(std::ptr::eq(held.span(), binding.span()));
+    assert_eq!(held.ranges(SeamSideId::A), binding.ranges(SeamSideId::A));
+    assert!(!held
+        .span()
+        .resolve_side(SeamSideId::A, &f.ledger)
+        .has_full_coverage());
+}
+
 #[test]
 fn immutable_content_retains_direction_signed_ease_and_visible_obligations() {
     let mut f = fixture();

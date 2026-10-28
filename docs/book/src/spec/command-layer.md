@@ -276,6 +276,7 @@ mutation, execution must resolve the current span and cuts, establish strict int
 preserve reference/ease/stop obligations and allocate lineage-preserving outputs atomically. The payload
 creates no split result or geometry edit. All five mutation schemas are available. Three metadata handlers
 execute through the [native bus](command-execution.md); paired seam and Dart execution remain pending.
+[Source-cut binding](command-seam-splits.md) checks the actual held span and strict interior cuts.
 
 ## 3. Atomic groups, and the granularity of undo
 
