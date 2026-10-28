@@ -336,6 +336,36 @@ concrete numeric cause as standard error source. Failures publish no partial can
 Native6 plus one native six-row Fraction comparison and two Rustdoc checks pass;combined primitive
 and actual semantic-notch/context/quantity adoption retain their own subsequent acceptance tasks.
 
+## Guard exact original-coordinate comparisons
+
+The private integer kernel now compares exact original coordinates with guarded cross-products.
+It also compares an original coordinate to a bounded source-frame parameter without converting the
+coordinate into Param or u128. Every integer operand/result remains inside the actual admitted
+reservation. With component bound W,coordinate products need at most2W bits;reference comparison
+needs at most W+63,also at most2W because W starts at63. The existing2W+128 reservation covers both.
+No new public integer type or unframed ordering API is exposed.
+
+The inverse merge-side decision uses the shared cross-product calculation. Normalization also
+checks exact order against the unit end before publishing a coordinate;zero denominators and
+positive order beyond that end return typed causes. Diagnostic operation labels stay bound to the
+actual calling stage. These checks preserve valid wide coordinates and do not round or clamp them.
+
+For the actual half-fragment example,x=1/18446744073709551614 and y=1/4. The comparator retains
+x<1/8<y although x cannot fit Param. Another actual offset projection has a188-bit component and
+refuses its optional128-bit view;exact comparisons against its original bounds still succeed.
+If the source was reversed before the offset,current fragment parameters1/4 and3/4 can project
+to original5/8 and3/8. Order the original numbers and preserve their mapping directions separately.
+
+Six frozen independent Fraction cases drive actual ledger/admission/projection results,including
+exact equality,source-bound equality,wide and reversed-source order. Private controls exercise an
+exact conservative comparison quota and its one-bit-short refusal,plus normalized unit/zero-denominator
+refusals. The inverse/source primitives remain unchanged for valid data under their admitted limits.
+
+These scalar comparisons establish numerical order. The next original-notch context must first
+bind actual ledger/source-creation frames,require unique coordinate/direction candidates,and use
+the actual original side bounds. That source-bound context and its quantity API remain pending;
+private numeric success does not supply those semantic or physical proofs.
+
 ## Actual Notch and retained-source primitive acceptance
 
 The focused primitive acceptance uses real Notch definitions,validated SewingGraph objects and

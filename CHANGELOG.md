@@ -3,13 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0513 — validate actual local notch sources with bounded evidence
+## STITCHCAD-G1-0514 — compare exact original coordinates without bounded views
 
-- Sealed borrowed local proof checks actual current plan/Piece/identity,all unused landmarks and full source endpoints/coverage/ownership/self-copy/stops/kinds. Checked N*B cache/3N+1 metadata envelopes and pre-growth guards;transient indexes discarded. Actual causes/standard numeric sources survive
-  without legacy endpoint trees or synthetic graph/data.
-- Native validation10/input5/doc1/scoped Clippy/fmt/Fraction14+two controls pass. Exact quotas,derived overflow,copy/Piece/identity changes,unused anchors,full source stops/kinds,self seams,eight-cycle endpoint choices,deleted interior/surviving subdomain and internal numeric range repairs remain
-  scoped. No original-coordinate/quantity/global readiness implied.
-- Whole0512 retained671/three exact Git spans;book90/204/1572/2702/glossary0/map/retention1125 pass. LIVE/README unchanged,G1 6/18. Guarded wide comparisons then original-notch context next;quantity/paired effects/full acceptance retain owners.
+- Private guarded wide/reference ordering reuses cross-products in inverse merge and normalized unit-domain checks. Concrete caller operations and actual numeric/quota causes survive;existing2W+128 covers products. No new public ordering/integer type,reference narrowing or
+  direction filter.
+- Six independent Fraction cases drive actual projection values:64/188-bit originals,3 Param refusals/1 beyond-u128,equality/source bounds/reversed order. Private2+guard1/public inverse6/Notch4/scoped Clippy/fmt/width6+960 pass. Exact quota accepts;one bit below and invalid
+  unit/denominator refuse.
+- Whole0513 retained672/three exact Git spans;book90/204/1572/2703/glossary0/map/retention1126 pass. LIVE/README unchanged,G1 6/18. Actual frame-bound original-notch context next;quantities/physical matching/paired effects/full acceptance remain owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

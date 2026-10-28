@@ -1,0 +1,7 @@
+# case	reverse	from_n	from_d	to_n	to_d	a_n	a_d	b_n	b_d	bound_n	bound_d	compare_ab	compare_a_bound	compare_b_bound	a_param	a_u128
+wide-half	0	0	1	1	2	1	9223372036854775807	1	2	1	8	Less	Less	Greater	0	1
+wide-offset	0	1	9223372036854775806	1	9223372036854775804	1	9223372036854775805	2	9223372036854775805	1	9223372036854775806	Less	Greater	Greater	0	0
+exact-bound	0	1	4	3	4	0	1	1	1	1	4	Less	Equal	Greater	1	1
+equal-half	0	0	1	1	1	1	2	1	2	1	2	Equal	Equal	Equal	1	1
+reversed-source	1	1	4	3	4	1	4	3	4	1	2	Greater	Greater	Less	1	1
+narrow-neighbor	0	0	1	1	2	1	9223372036854775807	2	9223372036854775807	1	9223372036854775807	Less	Less	Equal	0	1

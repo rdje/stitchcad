@@ -291,6 +291,7 @@ impl<'a> OriginalPointAdmission<'a> {
         let workspace = Workspace {
             component_bits,
             integer_bits,
+            operation: "OriginalPointAdmission::project",
         };
         let initial = workspace.reference(current.param()).map_err(|cause| {
             fail(OriginalPointProjectionIssue::Numeric {
@@ -555,5 +556,152 @@ mod contracts {
             beyond,
             "u128 narrowing cannot implement this original-coordinate contract"
         );
+    }
+    #[test]
+    fn admitted_original_coordinate_ordering_matches_independent_fraction_cases() {
+        use super::wide::Workspace;
+        use core::cmp::Ordering;
+        let mut seen = 0;
+        for row in include_str!("../../../../tests/fixtures/original_comparison.tsv")
+            .lines()
+            .filter(|row| !row.starts_with('#'))
+        {
+            let fields = row.split('\t').collect::<Vec<_>>();
+            assert_eq!(fields.len(), 17);
+            let field = |index: usize| *fields.get(index).expect("frozen comparison column");
+            let param = |n, d| {
+                Param::new(
+                    Rational::new(
+                        field(n).parse().expect("i64 numerator"),
+                        field(d).parse().expect("i64 denominator"),
+                    )
+                    .expect("exact input"),
+                )
+                .expect("unit input")
+            };
+            let order = |name| {
+                [
+                    ("Less", Ordering::Less),
+                    ("Equal", Ordering::Equal),
+                    ("Greater", Ordering::Greater),
+                ]
+                .into_iter()
+                .find_map(|(label, value)| (label == name).then_some(value))
+                .expect("frozen exact ordering")
+            };
+            let mut ledger = IdentityLedger::new();
+            let mut ids = DeterministicIdGenerator::new();
+            let source = ledger
+                .declare_edges(&mut ids, 1)
+                .expect("actual source")
+                .remove(0);
+            let reversed = field(1) == "1";
+            if reversed {
+                ledger
+                    .reverse(&mut ids, source)
+                    .expect("actual frame reversal");
+            }
+            let fragment = ledger
+                .offset(
+                    &mut ids,
+                    source,
+                    &[OffsetInterval::new(param(2, 3), param(4, 5)).expect("actual interval")],
+                )
+                .expect("actual offset")
+                .remove(0);
+            let four = NonZeroUsize::new(4).expect("positive");
+            let limits = OriginalPointLimits::new(
+                UniquePointLimits::new(four, four),
+                NonZeroUsize::new(1).expect("positive"),
+                NonZeroU64::new(10000).expect("positive"),
+            );
+            let project = |at| {
+                ledger
+                    .admit_original_point(fragment, at, source, limits)
+                    .expect("actual immutable admission")
+                    .project()
+                    .expect("actual original coordinate")
+            };
+            let left = project(param(6, 7));
+            let right = project(param(8, 9));
+            assert!(core::ptr::eq(left.admission.ledger, right.admission.ledger));
+            assert_eq!(
+                left.admission.source_creation(),
+                right.admission.source_creation()
+            );
+            assert_eq!(left.admission.source_edge(), right.admission.source_edge());
+            let workspace = Workspace {
+                component_bits: left.admission.component_bit_bound(),
+                integer_bits: left.admission.integer_bit_bound(),
+                operation: "Workspace::compare",
+            };
+            let a = left.unique().expect("unique actual source coordinate");
+            let b = right.unique().expect("unique actual source coordinate");
+            assert_eq!(
+                workspace
+                    .compare(&a.coordinate.exact, &b.coordinate.exact)
+                    .expect("guarded exact ordering"),
+                order(field(12)),
+                "{}",
+                field(0)
+            );
+            assert_eq!(
+                workspace
+                    .compare_reference(&a.coordinate.exact, param(10, 11))
+                    .expect("guarded source-bound ordering"),
+                order(field(13)),
+                "{}",
+                field(0)
+            );
+            assert_eq!(
+                workspace
+                    .compare_reference(&b.coordinate.exact, param(10, 11))
+                    .expect("guarded source-bound ordering"),
+                order(field(14)),
+                "{}",
+                field(0)
+            );
+            assert_eq!(a.coordinate.as_param().is_ok(), field(15) == "1");
+            assert_eq!(a.coordinate.as_u128_ratio().is_ok(), field(16) == "1");
+            let direction = if reversed {
+                super::Direction::Reversed
+            } else {
+                super::Direction::Original
+            };
+            assert_eq!(a.direction(), direction);
+            assert_eq!(b.direction(), direction);
+            if field(0) == "wide-half" {
+                // Private guard control uses actual admitted/projected values;no public token is forged.
+                let required = (a.coordinate.exact.num.bits() + b.coordinate.exact.den.bits())
+                    .max(b.coordinate.exact.num.bits() + a.coordinate.exact.den.bits());
+                let under = Workspace {
+                    component_bits: workspace.component_bits,
+                    integer_bits: required - 1,
+                    operation: workspace.operation,
+                };
+                assert_eq!(
+                    under.compare(&a.coordinate.exact, &b.coordinate.exact),
+                    Err(sc_units::UnitError::DomainExceeded {
+                        operation: "Workspace::compare",
+                        kind: "integer workspace bits",
+                        value: i128::from(required),
+                        limit: i128::from(required - 1),
+                    })
+                );
+                let exact = Workspace {
+                    component_bits: workspace.component_bits,
+                    integer_bits: required,
+                    operation: workspace.operation,
+                };
+                assert_eq!(
+                    exact
+                        .compare(&a.coordinate.exact, &b.coordinate.exact)
+                        .expect("exact conservative quota"),
+                    Ordering::Less
+                );
+            }
+            seen += 1;
+        }
+        assert_eq!(seen, 6);
     }
 }

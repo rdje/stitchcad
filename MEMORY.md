@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.3.3.3 in docs/tasks/G1-SLICE-execution.md:guarded private wide
-  original-coordinate/Param comparisons. Recover actual projection/Workspace/frame interfaces first;
-  no bounded view narrowing or absolute-direction filtering. Then .4 original context;full PNT continues.
-- Local validation .2 closes0513:sealed NotchSourceValidation borrows actual admission after current
-  plan/Piece/identity,all unused landmarks and full source endpoints/coverage/ownership/stops/kinds.
-  Checked cache N*B/metadata3N+1 before allocation;guard local growth,discard transient arrays.
-  Fixed current/full bounded interval evidence preserves actual causes and standard UnitError.
-- Native validation10/input5/doc1/scoped lint/fmt/Fraction14+two controls pass0. Actual cache4/index14
-  under39/40;low3-slot fixture correctly refused retained3+next1,explicit4 reaches domain evidence.
-  Surviving subdomain,first endpoint choice and internal numeric repair with unique endpoints stay visible.
-- Whole0512 in671/3 spans;decision177L/12381B;book90/204/1572/2702,glossary0/map unchanged.
-  Whole earlier decision194L/14247B encoded670;whole0511 in669,coverage0510 in668.
-- Local source success grants no original interval,amount,whole-Piece/global Design/other graph/formula/
-  physical readiness. Bounds are logical,not CPU/RSS/allocator/bus certificates. Quantities/effects later.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.3.3.4 in docs/tasks/G1-SLICE-execution.md:sealed actual original-
+  notch context. Bind actual locally validated source/registry/ledger,matching source creation frame,
+  unique coordinate/direction candidates,and distinct original in-domain interval. Full PNT continues.
+- Private comparison .3 closes0514:guarded wide/reference cross-products under actual2W+128;
+  reused inverse merge side and mechanical normalized unit-end check. Workspace has explicit actual
+  operation label;no narrowing,absolute-direction filtering,new public order or integer type.
+- Actual comparison Fraction6 covers3 Param refusals/1 beyond-u128,equality/bounds/reversal;private
+  tests2+guard1/public inverse6/Notch4/scoped lint/fmt and width6+960 controls pass0. Book90/204/
+  1572/2703,glossary0,map unchanged. Whole0513 in672/3 spans. Original frame binding remains .4.
+- Local validation0513 is implemented:actual inputs/all supplied landmarks/full source metadata,
+  checked cache N*B/metadata3N+1 before growth,actual bounded evidence/UnitError;no retained arrays.
+- Decision180L/12660B;whole old194L/14247B encoded670. Whole recovery0512 in671,inputs0511 in669.
+- Source/numeric success grants no original interval,quantity,whole-Piece/global Design/other graph/
+  formula/physical readiness. Logical bounds are not allocator/RSS/CPU/bus certificates;effects later.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

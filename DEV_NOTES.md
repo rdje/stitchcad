@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — bounded actual local notch-source validation
+## _(2026-10-28 UTC)_ — guarded private original-coordinate ordering
 
-0513 validates actual current plan/Piece/identity,all unused landmarks and full source endpoints/coverage/ownership/self-copy/stops/kinds. Sealed Copy proof borrows actual admission plus scalar counts. Checked cache N*B/metadata3N+1 guards precede growth;transient indexes/cache are discarded before return.
-Bounded queries retain actual structural/current/range/quota/numeric causes without legacy endpoint trees,synthetic graph or rewritten anchors. Piece membership uses surviving intervals without whole-Piece/global Design/physical claims. Original coordinate uniqueness/amount availability stay separate.
-Native10/input5/doc1/scoped Clippy/fmt/Fraction14+two controls pass0. First three-slot lost-interior test failed101 on actual retained3+next1 quota;preserved control plus explicit4 reaches intended domain evidence. Unique endpoints still expose internal numeric repair;standard error sources remain concrete.
-[Whole0512 recovery](docs/history/stitchcad-devnotes-part671.md) retains3 exact Git spans. Book90/204/1572/2702,glossary0/map unchanged/retention1125 pass. LIVE/README unchanged,G1 6/18;wide comparisons then original-notch context/quantities/paired acceptance next. Promotion declined:existing source contracts.
+0514 shares guarded wide/reference cross-products with inverse merge comparison and explicit normalized unit-end checks. Actual stage operation labels remain concrete;each operand/result is admitted before allocation. Existing2W+128 covers2W products and W+63 reference comparison;no narrowing or public API.
+Six frozen Fraction orderings drive actual ledger/admission/projection values,including64/188-bit originals,3 Param refusals/1 beyond-u128,equality/source bounds and reversed5/8 versus3/8. Exact private quota passes;one bit below refuses. Unit and zero-denominator guards retain typed actual causes.
+Private2+guard1/public inverse6/actual Notch4/scoped Clippy/fmt/ordering6/width6+960 pass0. Numeric order and mapping direction remain separate. Actual context must bind matching ledger/source frames and unique candidates before using these private scalars;no semantic quantity or physical proof follows.
+[Whole0513 validation](docs/history/stitchcad-devnotes-part672.md) retains3 exact Git spans. Book90/204/1572/2703,glossary0/map/retention1126 pass. LIVE/README unchanged,G1 6/18;actual original-notch context .4 next. Promotion declined:method-specific implementation of indexed exact arithmetic/frame contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

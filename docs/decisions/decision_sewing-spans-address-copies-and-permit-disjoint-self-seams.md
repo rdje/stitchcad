@@ -156,6 +156,9 @@ results and peak branch storage;coalesce equal edge/coordinate/direction states 
 join predecessors and original evidence. Optional bounded views do not invalidate a wider exact
 coordinate;no partial output or silent candidate choice. Current/held/mapping directions retain
 separate frames. Original semantic context and whole paired acceptance do not follow from projection.
+Private wide/reference ordering now uses guarded cross-products under the existing2W+128
+reservation. Normalization checks unit-domain order mechanically;bounded views stay optional.
+Actual original-notch context must still bind ledger/source frames and unique candidates first.
 
 ## Actual source input admission and local validation
 
