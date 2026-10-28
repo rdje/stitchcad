@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0451 — account for held layer and Hem resources
+## STITCHCAD-G1-0452 — account for held construction-family resources
 
-- Precharge actual Facing/Lining/Interfacing/source and Hem vectors; charge exact unresolved Material reason bytes.
-- Exhaustive held views/Copy guards preserve symbolic intent and faced references without lookup, rebirth or execution.
-- Resource37 (prior32/actual5), strict selected lint/fmt pass:13/9/0, exact refusals, env_lining and deletion-held state.
-- Book/pointer/decision aligned; whole0450 capture scope/lesson/ledger retained603; construction families next.
+- Precharge actual six-family and Tuck/Pleat fold-line vectors; retain original fixed references and symbolic intent.
+- Resource42 (prior37/actual5), strict selected lint/fmt pass after named-view correction:19/0/0, graph composition22.
+- Exact cumulative owner/index refusals, empty/prior errors and real deletion-held state; no Gather ease duplication.
+- Correct stale crate status and remaining-work book clauses; whole0451 retained604; root accounting next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -154,6 +154,10 @@ impl fmt::Display for GatherError {
 }
 impl std::error::Error for GatherError {}
 impl Gather {
+    pub(crate) fn resource_parts(&self) -> (EntityId, &GatherDefinition) {
+        let Self { piece, definition } = self;
+        (*piece, definition)
+    }
     /// Validate held graph/span/copy binding, explicit ease sign and born-owned geometry.
     /// # Errors
     /// Returns [`GatherError`] for missing/changed targets, a wrong Piece/ease sign or invalid ranges.

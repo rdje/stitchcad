@@ -175,3 +175,16 @@ Facing content. Native resource37/strict selected lint/fmt pass:13/9/0, exact fa
 refusals, unchanged env_lining, empty/prior-error and real deletion-held state without lookup/repair.
 Construction/root/source/runtime/deeper/full work remains; no current binding, execution/physical,
 whole-model or allocator memory/time certificate follows from component accounting.
+
+## Actual six-family construction resources0452
+
+answers: "what does held construction accounting charge versus reference through another owner?"
+
+.6.8.2.2.2.2.2.4.4 charges all actual family vectors plus Tuck/Pleat fold lines in schema/member order.
+Exhaustive private owner/wrapper/content/definition views and individual Copy guards preserve fixed
+Dart/Gather/grain/allowance intent without resolution, rebirth, lookup or execution. Named borrowed
+collection view/count-only Debug replaces the lint-rejected tuple. Native resource42/strict lint/fmt
+pass:19/0/0; graph composition22 counts canonical weighted ease once, exact first family/fold owner/
+index, all intake/angle/width origins, optional print refs, real deletion-held state and empty/prior
+errors. Crate status corrected to actual private composition/metadata execution; whole-root/source/
+runtime/deeper/full acceptance remains owned. No physical, whole-model or RSS/time certificate follows.

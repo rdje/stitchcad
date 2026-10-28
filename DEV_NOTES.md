@@ -3,15 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual held layer and Hem resources
+## _(2026-10-28 UTC)_ — actual six-family construction resources
 
-0451 .6.8.2.2.2.2.2.4.3 charges actual Facing/Lining/Interfacing vectors, nested offset sources,
-exact unresolved Material reason bytes and Hems. Exhaustive private views/Copy guards retain fixed
-source/operation/depth/fold/method payloads; Faced ids do not duplicate Facing content. Resource37
-(prior32/actual5)/strict lint/fmt pass:13/9/0, exact family/owner/index refusals, unchanged env_lining,
-all Hem depth/fold/method origins and real deletion-held content without resolution/repair. Promotion:
-indexed command-layer decision. Whole0450 capture proof603 has3 exact Git spans; backup retained.
-Construction/root/source/runtime/deeper/full work remains; no execution, physical or RSS/time proof.
+0452 .6.8.2.2.2.2.2.4.4 charges actual six-family vectors and Tuck/Pleat fold lines, retaining fixed
+source/operation/profile/sewing/print intent through exhaustive private views/Copy guards. Gather
+references do not recharge canonical ease. Resource42 (prior37/actual5)/strict lint/fmt pass:19/0/0,
+composed graph22, exact family/fold owner/index, empty/prior errors and deletion-held data unchanged.
+Initial tuple Clippy rejection fixed with a named borrowed/count-only Debug view before acceptance.
+Crate status now states actual metadata execution/private composition; book remaining work refreshed.
+Promotion: indexed command-layer decision. Whole0451 proof604 has3 native Git spans. Root/counter
+bits, source-host/runtime/deeper/full acceptance remain owned; no execution/physical/RSS/time proof.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

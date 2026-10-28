@@ -203,6 +203,10 @@ impl fmt::Display for GrainlineError {
 }
 impl std::error::Error for GrainlineError {}
 impl Grainline {
+    pub(crate) fn resource_parts(&self) -> (EntityId, &GrainlineDefinition) {
+        let Self { piece, definition } = self;
+        (*piece, definition)
+    }
     /// Validate complete owned references and unique endpoints; do not infer physical alignment.
     /// # Errors
     /// Returns [`GrainlineError`] for unknown/orphaned/ambiguous or foreign references. Formula/profile

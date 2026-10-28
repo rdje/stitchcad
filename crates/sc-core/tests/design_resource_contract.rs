@@ -406,3 +406,6 @@ mod garment;
 
 #[path = "support/design_resource/layers.rs"]
 mod layers;
+
+#[path = "support/design_resource/constructions.rs"]
+mod constructions;

@@ -86,7 +86,8 @@ pub use parameters::{
 pub use pockets::DesignPocketOpeningDeclaration;
 pub use resource::{
     charge_canonical_input_resources, charge_closure_inventory_resources,
-    charge_cut_plan_resources, charge_hem_inventory_resources, charge_layer_inventory_resources,
+    charge_construction_inventory_resources, charge_cut_plan_resources,
+    charge_hem_inventory_resources, charge_layer_inventory_resources,
     charge_material_inventory_resources, charge_notion_placement_inventory_resources,
     charge_parameter_resources, charge_piece_inventory_resources,
     charge_pocket_inventory_resources, charge_recipe_document_resources,

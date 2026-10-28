@@ -5,14 +5,17 @@
 //! construction/closure/pocket intent with copy-addressed sewing graphs are implemented in [`ontology`]. Geometric correctness,
 //! realized ease and target-profile binding validation remain explicit deferred obligations.
 //! [`design`] owns structural inputs/Pieces/copies/topology and named parameter metadata with
-//! current identity/copy/target checks; complete Design composition remains later.
+//! current identity/copy/target checks, private garment composition and authorized metadata execution.
+//! Full runtime resource, storage and application integration remain later work.
 //! Canonical length declarations retain authored state/source/provenance in [`value`], without
 //! default unknowns or cached derived results; registry/evidence proof remains Design/G4.
 //! Shared [`name::MachineToken`] validates stable ASCII identifiers without deriving display labels.
 //! Borrowed formula lexing/expression/ordered-statement syntax, literal normalization and canonical
 //! expression/statement/recipe identity, sourced metadata and initial namespaces, exact reads, ordered scopes, operator/built-in/selector signatures and typed wanted catalogs are
 //! implemented in [`recipe`]. Complete static recipe validation, exact numeric operators and binding
-//! conversion, typed command requests and authorized Piece-list reads are available; evaluation and mutation execution follow. New numeric features carry focused
+//! conversion, typed command requests and authorized Piece-list reads are available. Measurement/Material/
+//! Notch metadata previews, atomic groups, replay/audit and bounded actual undo/redo execute through the
+//! command bus; recipe/geometry execution and full integration remain pending. New numeric features carry focused
 //! native evidence; broader/platform verification remains owned by G1-SLICE.5c.4 and the pre-push gate.
 //!
 //! What lands here, and when:

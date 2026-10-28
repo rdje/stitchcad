@@ -40,7 +40,7 @@ meter refusal stays the exact original error, even if this producer's error is i
 
 Four actual canonical cases plus the previous six meter cases pass:10 total, with strict selected
 lint and formatting. The command-bus source remains unchanged. This is canonical-component proof;
-Construction families, root counter bits, source-host traversal and runtime model admission remain
+Root counter bits/composition, source-host traversal and runtime model admission remain
 separately owned; implemented component accounting is described in the following sections. Finishing this component's meter supplies no
 whole-model, source-truth, allocator RSS/time or publication certificate.
 
@@ -82,7 +82,7 @@ After a real split retires a held boundary source, rebirth would refuse that ori
 still succeeds without repair, rewriting or changed ledger. Empty actual Piece/copy scopes contribute
 zero entries and preserve an earlier meter refusal. Five new actual cases plus prior10 resource cases
 pass:15 total, with strict selected lint/formatting and four meter privacy/sealing checks rechecked.
-Remaining construction/root/source/runtime admission and total RSS/time proof stay separately owned. The command bus has not changed its runtime behavior.
+Remaining whole-root/source/runtime admission and total RSS/time proof stay separately owned. The command bus has not changed its runtime behavior.
 
 ## Actual topology accounting
 
@@ -118,7 +118,7 @@ operation owner. Maximum19 refuses the live index14+6; maximum21 refuses registr
 Four new actual topology cases plus prior15 resource cases pass:19 total, with strict selected lint
 and formatting. They retain the exact original ledger/choices on success/refusal, and empty actual
 scope preserves a prior meter error. This closes Piece/copy/topology component accounting. Remaining
-construction-family, root composition/counter bits, source-host and runtime admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
+root composition/counter bits, source-host and runtime admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
 
 ## Actual input metadata accounting
 
@@ -161,7 +161,7 @@ recipe strings and whole inventories have no standalone entity owner.
 Five new actual cases plus prior19 resource cases pass:24 total, with strict selected lint/formatting.
 They preserve canonical inputs, parameter order/targets, both recipe fields and complete Material
 intent. Empty parameter/Material drafts plus empty recipe source demand0 entries/8 bytes/0 bits;
-a prior meter refusal stays original across all three producers. Remaining construction/root/source
+a prior meter refusal stays original across all three producers. Remaining whole-root/source
 and runtime admission work is separately owned; this is no binding, recipe evaluation,
 Material truth/physical, whole-model or allocator RSS/time certificate.
 
@@ -197,7 +197,7 @@ After a real deletion retires a held boundary source, the same graph/landmark ac
 without rebirth or resolving the now-orphaned anchors. Exact graph/landmarks/ledger and profile intent
 remain unchanged on success/refusal. Four new actual cases plus prior24 resource cases pass:28 total,
 with strict selected lint and formatting. The first compile caught a missing public re-export, which
-was corrected before these checks passed. Construction families, root/source composition and runtime
+was corrected before these checks passed. Whole root/source composition and runtime
 model admission remain owned; these counts supply no binding, realized ease, geometry, physical,
 release, whole-model or allocator RSS/time certificate.
 
@@ -237,7 +237,7 @@ also covered. Original objects remain unchanged on success and refusal.
 A real deletion makes the held notion inventory fail current validation; the same resource walk
 still succeeds without rebirth, resolution or repair and preserves the exact objects and ledger.
 Four new cases plus prior28 resource cases pass:32 total, with strict selected lint/formatting.
-Construction families, whole root/source and runtime admission remain owned. Logical
+Whole root/source and runtime admission remain owned. Logical
 counts supply no current target binding, opening/closure execution, selected profile value, physical
 readiness, whole-model or allocator memory/time certificate.
 
@@ -278,6 +278,44 @@ current layer validation refuse; accounting the same held layers/Hems succeeds w
 leaves objects/ledger unchanged. Empty collections and prior-error preservation also pass.
 
 Five new actual cases plus prior32 resource cases pass:37 total, with strict selected lint/formatting.
-Construction families, whole root/source and runtime admission remain owned. These counts grant no
+Whole root/source and runtime admission remain owned. These counts grant no
 current source/Material binding, Lining execution, generated offset/folding geometry, physical
 readiness, whole-model or allocator memory/time certificate.
+
+## Actual construction-family accounting
+
+charge_construction_inventory_resources borrows the actual six-family owner and precharges Dart,
+Tuck, Pleat, Gather, Grainline and SeamAllowance vectors in that schema order. Each Tuck/Pleat then
+charges its own fold_lines vector before traversal. Original family order and nested fold order remain
+unchanged; whole fields have no entity owner, while fold refusals carry actual construction id and
+original within-family index. Fields are constructions.darts/tucks/pleats/gathers/grainlines/allowances
+and constructions.tucks.fold_lines or constructions.pleats.fold_lines.
+
+Exhaustive private inventory/wrapper/content/definition views and individual Copy-payload guards
+cover all held fields. The private named collection view's Debug shows counts only. Dart apex/legs,
+explicit/formula/profile intake, closing operations, grain arrow/alignment/optional stripe/plaid and
+allowance width/corner/inclusion stay fixed metadata. Gather retains its original graph/span/side/
+copy binding; the canonical weighted ease belongs to the SewingGraph and is not recharged through
+that reference. No geometric resolution, rebirth, repair, value/operation lookup or execution occurs.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_construction_inventory_resources(&constructions, &mut meter)?;
+charge_sewing_graph_resources(&sewing_graph, &mut meter)?;
+let represented_owners = meter.finish()?;
+```
+
+The native fixture has3 Darts,2 Tucks with1/2 fold lines,1 Pleat with2 lines,1 Gather,4 Grainlines
+and3 allowances:14 constructions plus5 lines=19 entries, zero text bytes/counter bits. It covers all
+intake/angle/allowance-width origins, parallel alignment, optional print references and explicit zero.
+Its separate graph has one span/two weighted regions; composing actual owners gives22, without
+expanding the Gather's reference. This does not realize ease, angles, offsets or conserved intake.
+
+Entry maxima2/4/5/7/8/10/11/15/18 retain exact refusals0+3/3+2/5+1/6+2/8+1/9+2/11+1/12+4/16+3.
+The second Tuck's fold failure carries its actual owner/index1; the Pleat carries its owner/index0.
+Empty families preserve zero demand and prior errors. A real deleted construction source makes
+current Dart validation refuse while held accounting succeeds with exact inventory/graph/ledger
+unchanged. Five new cases plus prior37 pass:42 resource cases, strict selected lint and formatting.
+The first lint rejected the initial six-slice tuple; a named borrowed view resolved it before acceptance.
+Whole root/counter-bit composition, source-host traversal and runtime admission remain owned; no
+current binding, execution, geometry/physical, whole-model or allocator memory/time certificate follows.

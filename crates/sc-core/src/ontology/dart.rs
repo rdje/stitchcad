@@ -132,6 +132,10 @@ impl std::error::Error for DartError {
     }
 }
 impl Dart {
+    pub(crate) fn resource_parts(&self) -> (EntityId, &DartDefinition) {
+        let Self { piece, definition } = self;
+        (*piece, definition)
+    }
     /// Validate born-owned geometry and explicit intake domain, without executing a closure.
     /// # Errors
     /// Returns [`DartError`] for negative authored intake, duplicate leg interval or invalid geometry

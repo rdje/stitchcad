@@ -109,6 +109,10 @@ impl fmt::Display for SeamAllowanceError {
 }
 impl std::error::Error for SeamAllowanceError {}
 impl SeamAllowance {
+    pub(crate) fn resource_parts(&self) -> (EntityId, &SeamAllowanceDefinition) {
+        let Self { piece, definition } = self;
+        (*piece, definition)
+    }
     /// Validate complete owned edge coverage, unique endpoints and an explicit width's domain.
     /// # Errors
     /// Returns [`SeamAllowanceError`] for negative authored width or missing/ambiguous/foreign edges.

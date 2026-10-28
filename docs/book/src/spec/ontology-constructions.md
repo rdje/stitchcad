@@ -1,6 +1,8 @@
 # Executable garment constructions at G1
 
 See [ontology §4.3/§4.7](ontology.md) and [piece/sewing/mark APIs](ontology-implementation.md).
+[Held construction resources](model-resource-accounting.md#actual-construction-family-accounting)
+count actual family/fold vectors without expanding their referenced sewing or operation owners.
 Current construction source/declaration acceptance passes. Executed constructions, conserved intake,
 bounded offsets and receiver release require later gates.
 

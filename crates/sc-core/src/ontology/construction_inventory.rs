@@ -235,6 +235,26 @@ pub struct ConstructionInventory {
     grainlines: Vec<Grainline>,
     allowances: Vec<SeamAllowance>,
 }
+pub(crate) struct ConstructionResourceView<'a> {
+    pub darts: &'a [Dart],
+    pub tucks: &'a [Tuck],
+    pub pleats: &'a [Pleat],
+    pub gathers: &'a [Gather],
+    pub grainlines: &'a [Grainline],
+    pub allowances: &'a [SeamAllowance],
+}
+impl fmt::Debug for ConstructionResourceView<'_> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("ConstructionResourceView")
+            .field("dart_count", &self.darts.len())
+            .field("tuck_count", &self.tucks.len())
+            .field("pleat_count", &self.pleats.len())
+            .field("gather_count", &self.gathers.len())
+            .field("grainline_count", &self.grainlines.len())
+            .field("allowance_count", &self.allowances.len())
+            .finish_non_exhaustive()
+    }
+}
 impl fmt::Debug for ConstructionInventory {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("ConstructionInventory")
@@ -248,6 +268,24 @@ impl fmt::Debug for ConstructionInventory {
     }
 }
 impl ConstructionInventory {
+    pub(crate) fn resource_collections(&self) -> ConstructionResourceView<'_> {
+        let Self {
+            darts,
+            tucks,
+            pleats,
+            gathers,
+            grainlines,
+            allowances,
+        } = self;
+        ConstructionResourceView {
+            darts,
+            tucks,
+            pleats,
+            gathers,
+            grainlines,
+            allowances,
+        }
+    }
     /// Own exact family orders without sorting, rewriting, choosing or repairing held content.
     /// # Errors
     /// Returns the first duplicate id across all six families with both original positions.

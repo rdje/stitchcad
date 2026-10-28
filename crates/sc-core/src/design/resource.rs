@@ -6,6 +6,7 @@ use core::{
 };
 
 mod canonical;
+mod constructions;
 mod garment;
 mod inputs;
 mod layers;
@@ -13,6 +14,7 @@ mod pieces;
 mod sewing;
 mod topology;
 pub use canonical::charge_canonical_input_resources;
+pub use constructions::charge_construction_inventory_resources;
 pub use garment::{
     charge_closure_inventory_resources, charge_notion_placement_inventory_resources,
     charge_pocket_inventory_resources,

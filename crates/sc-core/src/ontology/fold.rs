@@ -178,6 +178,11 @@ pub struct Pleat(FoldContent);
 macro_rules! fold_interface {
     ($kind:ident) => {
         impl $kind {
+            pub(crate) fn resource_parts(&self) -> (EntityId, &FoldDefinition) {
+                let Self(content) = self;
+                let FoldContent { piece, definition } = content;
+                (*piece, definition)
+            }
             /// Validate owned structural intent without executing the named closing operation.
             /// # Errors
             /// Returns [`FoldError`] for negative explicit intake, missing/duplicate fold lines or

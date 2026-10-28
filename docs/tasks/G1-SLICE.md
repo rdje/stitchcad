@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0451
+## Current leaf acceptance —0452
 
-- [x] ROOT CAUSE: python3 -I -B native layer/Hem schema assertions print3 actual layer vectors,
-  nested sources/material reasons and Hem vector/fixed definition rc=0; charge held owners once.
-- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:37 passed rc=0; five actual
-  cases verify13/9/0, exact family/owner/index refusals, env_lining and deleted held content unchanged.
-- [x] NO REGRESSION: strict selected Clippy/fmt rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs
-  crates/sc-core/src/command rc=0. Prior32 resource cases pass; source/envelope/runtime paths unchanged.
+- [x] ROOT CAUSE: python3 -I -B native construction schema assertions print6 family vectors plus
+  Tuck/Pleat fold vectors and fixed sewing/print references rc=0; count actual owners without expansion.
+- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:42 passed rc=0; five actual
+  cases verify19/0/0, canonical graph composition22, exact owner/index refusals and deletion-held state.
+- [x] NO REGRESSION: strict selected Clippy/fmt rc=0 after named-view correction; git diff --quiet HEAD --
+  crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior37 resource cases remain passing.
 
 ## Goal
 
@@ -837,7 +837,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0447 actual retained input resources; [whole scope/proofs](../history/stitchcad-devnotes-part600.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual sewing/garment-family resource accounting with all nested held fields and original locations.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.1`
   Status: `done`
@@ -850,41 +850,38 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0450 active64 capture window22; [whole scope/proofs](../history/stitchcad-devnotes-part603.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.3`
   Status: `done`
-  Goal:0451 actual Facing/modelled-Lining/Interfacing and Hem resource producers.
-  Charge all actual family/source vectors and unresolved Material reason bytes in schema/member order.
-  Preserve original source/operation/depth/fold/method and Facing id intent without lookup or repair.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native layer/Hem schema assertions print3 layer vectors,
-    offset sources/Material payload and Hem vector/fixed definition rc=0. Faced links are references,
-    and modelled Lining still owns stored content even while execution remains outside its envelope.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part603.md:
-    3 exact native Git spans rc=0; whole0450 capture scope/lesson/ledger preserves source/recovery proof.
-    Exhaustive private inventory/wrapper/content/definition views are needed to guard owned-field evolution.
-  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
-    lazy exact-size held iterators precharge families before members, sources before traversal and exact
-    reason bytes without trim/registry lookup. Fixed payloads require Copy; no Faced expansion or rebirth.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:37 passed rc=0; five actual
-    cases verify4 layers/6 source ranges/3 Hems=13 entries, reason4+3+2=9 UTF-8 bytes/0 counter bits;
-    whole/nested/hem refusals0+2/3+2/5+1/6+2/8+1/9+1/10+3, text0+4/4+3/7+2 actual owner/family index;
-    assigned no-text path, explicit-zero/formula/profile Hem depths, both fold/method origins, no Facing
-    double charge, env_lining unchanged, actual deleted-source current refusal but held walk succeeds,
-    unchanged success/refusal objects/ledger, empty/prior-error preservation including zero charges.
-  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
-    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior32 resource cases remain passing;
-    no current/envelope/source/authority/bus behavior changed. Full feature acceptance remains deferred.
-  - [x] LOCKSTEP: whole0450 record603 has3 exact Git spans rc=0; retention1057 logical/24 working
-    Markdown/58705 decoded lines/4427646 decoded bytes/2258458 resident bytes rc=0. Book/pointer/
-    frontier/lesson/indexed command-layer decision aligned; .4.4 construction/.2.5 root/source .3/runtime
-    .4 and deeper/full verification remain owned. Original0450/0392g recovery backups remain protected.
-  Book build/native publication:82 chapters/159 scoped API rows/1486 source links/2496 rendered links
-  rc=0; maintained-reference83 files/18485 lines/1289552 bytes rc=0. Map/diff checks rc=0.
-  Owned doc defect:6 inherited component clauses listed now-implemented families as remaining. Native
-  exact source replacements/assertions print6 refreshed clauses rc=0; current reference now scopes only
-  remaining construction/root/source/runtime work. Historical acceptance counts retain their slice context.
-  Cargo invocations use scripts/local_environment.py. No execution, physical, whole-model or RSS/time proof.
+  Goal:0451 actual held layer/Hem resources; [whole scope/proofs](../history/stitchcad-devnotes-part604.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.4`
-  Status: `pending`
-  Goal: actual Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance-family resource accounting with exhaustive
-  owner/definition/nested-field views and original field/owner/index refusals, without geometry realization.
+  Status: `done`
+  Goal:0452 actual Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance resource producer.
+  Precharge actual six-family vectors and nested fold lines; fixed original source/operation/profile/
+  sewing/copy/print/width/corner intent is not expanded, resolved, reborn, repaired or executed.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native construction schema assertions print6 family vectors,
+    Tuck/Pleat fold vectors and fixed sewing/print references rc=0. Gather refers to existing canonical
+    sewing ease, rather than owning another distribution. Every actual fixed payload requires Copy.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part604.md:
+    3 exact Git spans rc=0; whole0451 scope/lesson/ledger preserves layer/Hem component acceptance.
+    Original owner/definition exhaustiveness must cover private source bindings and both fold wrappers.
+  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
+    named private borrowed collection view with count-only Debug replaces initial lint-rejected six-slice
+    tuple (first lint exit101); no lint waiver. Lazy fold iterators precharge before definition traversal.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:42 passed rc=0 after correction;
+    five new cases verify14 constructions/5 fold lines=19/0/0, actual graph1 span/2 regions composition22,
+    all intake/angle/width origins, explicit zero/parallel alignment/optional stripe/plaid, exact cumulative
+    refusals0+3/3+2/5+1/6+2/8+1/9+2/11+1/12+4/16+3 with actual fold owner/index, real deleted source
+    current Dart refusal but held walk succeeds, unchanged inventory/graph/ledger and empty/prior errors.
+  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
+    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior37 resource cases remain passing;
+    no current semantic/source/authority/bus execution changes or full integration claim.
+  - [x] LOCKSTEP: whole0451 proof604 has3 exact Git spans rc=0; retention1058 logical/25 working
+    Markdown/58767 decoded lines/4433005 decoded bytes/2263817 resident bytes rc=0. Book/pointer/
+    frontier/lesson/indexed decision align. Parent .4 component implementation complete with focused checks;
+    root .2.5/source .3/runtime .4 and deeper/full verification remain pending, not implied by this status.
+  Book build/native publication:82 chapters/159 scoped API rows/1487 source links/2498 rendered links
+  rc=0; maintained-reference83 files/18525 lines/1292388 bytes rc=0. Map/diff checks rc=0.
+  Owned source-doc defect: native HEAD lib.rs assertions show2 stale composition/execution clauses rc=0;
+  current assertions verify actual private composition/metadata handlers and pending recipe/geometry/
+  integration rc=0. Corrected without changing handlers. Cargo uses scripts/local_environment.py.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5`
   Status: `pending`
   Goal: compose actual core root accounting, including exact unbounded represented revision bits, under
