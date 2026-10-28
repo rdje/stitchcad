@@ -1,20 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.3.3.2 in docs/tasks/G1-SLICE-execution.md:bounded actual local
-  source validation;then .3 guarded wide comparisons;.4 sealed original-notch context. Use complete
-  actual admitted inputs,no synthetic graph/legacy endpoint trees;admit derived work before allocation.
-- Recovery0512:current decision176L/12286B,all questions/headings/metadata retained;whole old194L/
-  14247B encoded exact Git span670. Whole0511 in669/3 spans. Exact admission section60L/4326B moved;
-  point426L/29406B,source120L/8674B. Five API routes retargeted;book90/200/1572/2702,glossary0,
-  map unchanged,task-source12/native inverse6/current3+1 pass. Context and quantities stay pending.
-- Local source contract:current plan/Piece/identity,all unused landmarks,full source coverage/
-  endpoints/ownership/self-overlap/stops/notch kinds/current distinctness. Preserve surviving Piece
-  interval semantics;no whole-Piece/global Design/other graph/formula/physical readiness claim.
-  Then require unique in-domain distinct original coordinates with actual directions/IDs/stop order.
-- Input admission0511 borrows actual source/plan/Pieces/marks/ledger with explicit complete input/
-  per-query limits;native5/doc2/recovery4 pass. Input success grants no currentness or quantity.
-- Coverage0510 shares exact mapping,first-failure order and rollback;whole8-cycle2 portions needs3
-  peak slots,upper1 needs2,old endpoint256 leaves persists. Whole proof668. Effects/acceptance later.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.3.3.3 in docs/tasks/G1-SLICE-execution.md:guarded private wide
+  original-coordinate/Param comparisons. Recover actual projection/Workspace/frame interfaces first;
+  no bounded view narrowing or absolute-direction filtering. Then .4 original context;full PNT continues.
+- Local validation .2 closes0513:sealed NotchSourceValidation borrows actual admission after current
+  plan/Piece/identity,all unused landmarks and full source endpoints/coverage/ownership/stops/kinds.
+  Checked cache N*B/metadata3N+1 before allocation;guard local growth,discard transient arrays.
+  Fixed current/full bounded interval evidence preserves actual causes and standard UnitError.
+- Native validation10/input5/doc1/scoped lint/fmt/Fraction14+two controls pass0. Actual cache4/index14
+  under39/40;low3-slot fixture correctly refused retained3+next1,explicit4 reaches domain evidence.
+  Surviving subdomain,first endpoint choice and internal numeric repair with unique endpoints stay visible.
+- Whole0512 in671/3 spans;decision177L/12381B;book90/204/1572/2702,glossary0/map unchanged.
+  Whole earlier decision194L/14247B encoded670;whole0511 in669,coverage0510 in668.
+- Local source success grants no original interval,amount,whole-Piece/global Design/other graph/formula/
+  physical readiness. Bounds are logical,not CPU/RSS/allocator/bus certificates. Quantities/effects later.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

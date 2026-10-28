@@ -3,11 +3,14 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0512 — recover current notch source contracts before context
+## STITCHCAD-G1-0513 — validate actual local notch sources with bounded evidence
 
-- Curate standing source/primitive/admission status;whole old decision194L/14247B retained670 as exact encoded Git span. All answers/old headings/metadata survive;map/ceilings unchanged. Local source validation/current Piece membership remains distinct from whole Design/physical authority.
-- Move implemented input-admission section60L/4326B exactly into a bounded indexed source chapter;retarget five API routes. Explicit pending local validation/original context contracts and safe implementation children;no runtime or availability change.
-- Native inverse6/current graph3/full retained notch1/receipts669+670/task-source12/map/book90/200/1572/2702/glossary0/retention1124 pass. Whole0511 retained669;LIVE/README unchanged,G1 6/18. Bounded local source validation next;comparisons/context/quantities/paired effects/full acceptance remain owned.
+- Sealed borrowed local proof checks actual current plan/Piece/identity,all unused landmarks and full source endpoints/coverage/ownership/self-copy/stops/kinds. Checked N*B cache/3N+1 metadata envelopes and pre-growth guards;transient indexes discarded. Actual causes/standard numeric sources survive
+  without legacy endpoint trees or synthetic graph/data.
+- Native validation10/input5/doc1/scoped Clippy/fmt/Fraction14+two controls pass. Exact quotas,derived overflow,copy/Piece/identity changes,unused anchors,full source stops/kinds,self seams,eight-cycle endpoint choices,deleted interior/surviving subdomain and internal numeric range repairs remain
+  scoped. No original-coordinate/quantity/global readiness implied.
+- Whole0512 retained671/three exact Git spans;book90/204/1572/2702/glossary0/map/retention1125 pass. LIVE/README unchanged,G1 6/18. Guarded wide comparisons then original-notch context next;quantity/paired effects/full acceptance retain owners.
+
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

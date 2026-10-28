@@ -5,6 +5,10 @@ use super::{
 };
 use core::{fmt, num::NonZeroUsize};
 mod inputs;
+mod validation;
+pub use validation::{
+    NotchSourceRange, NotchSourceValidation, NotchSourceValidationError, NotchSourceValidationIssue,
+};
 
 /// Explicit input and per-query workspace limits for original semantic-notch context construction.
 /// No default is supplied. Source dependency items count complete borrowed collections;original-point

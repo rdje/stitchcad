@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — current local source contract recovery
+## _(2026-10-28 UTC)_ — bounded actual local notch-source validation
 
-0512 replaces superseded prospective projection wording with actual primitive/input status. Whole decision194L/14247B retained670 as strict encoded exact Git span;current176L/12286B preserves all questions/headings/metadata. No map row or ceiling grows;old examples/counts/failures/pending scopes remain exact.
-Recovered actual current Design/graph/anchor/range contracts:validate every unused landmark and full original source,retain surviving Piece interval membership without claiming whole-Piece/global Design readiness. Next local validator must use actual inputs/bounded queries and admit derived work before allocation.
-Exact admission book section60L/4326B moved to indexed source chapter,5 API routes retargeted. Point426L/29406B/source120L/8674B now leave room for context. Native inverse6/current graph3/full retained notch1,receipts669/670,map/task-source12/book90/200/1572/2702/glossary0/retention1124 pass0.
-[Whole0511 inputs](docs/history/stitchcad-devnotes-part669.md) retains3 exact Git spans. LIVE/README unchanged,G1 6/18;next .3.3.3.2 bounded local source validation,then comparisons/context/quantities/paired acceptance. No runtime or availability change. Promotion declined:existing indexed contract recovery.
+0513 validates actual current plan/Piece/identity,all unused landmarks and full source endpoints/coverage/ownership/self-copy/stops/kinds. Sealed Copy proof borrows actual admission plus scalar counts. Checked cache N*B/metadata3N+1 guards precede growth;transient indexes/cache are discarded before return.
+Bounded queries retain actual structural/current/range/quota/numeric causes without legacy endpoint trees,synthetic graph or rewritten anchors. Piece membership uses surviving intervals without whole-Piece/global Design/physical claims. Original coordinate uniqueness/amount availability stay separate.
+Native10/input5/doc1/scoped Clippy/fmt/Fraction14+two controls pass0. First three-slot lost-interior test failed101 on actual retained3+next1 quota;preserved control plus explicit4 reaches intended domain evidence. Unique endpoints still expose internal numeric repair;standard error sources remain concrete.
+[Whole0512 recovery](docs/history/stitchcad-devnotes-part671.md) retains3 exact Git spans. Book90/204/1572/2702,glossary0/map unchanged/retention1125 pass. LIVE/README unchanged,G1 6/18;wide comparisons then original-notch context/quantities/paired acceptance next. Promotion declined:existing source contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

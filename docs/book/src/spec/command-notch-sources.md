@@ -1,7 +1,7 @@
 # Actual notch source context
 
-Complete actual input admission is implemented. Bounded local source validation and original-notch
-context construction remain pending;the [point and interval primitives](command-notch-context.md)
+Complete actual input admission and bounded local source validation are implemented. Original-notch
+coordinate context construction remains pending;the [point and interval primitives](command-notch-context.md)
 are implemented with focused checks. Quantities and paired effects retain their subsequent owners.
 
 | API token | Meaning |
@@ -12,6 +12,11 @@ are implemented with focused checks. Quantities and paired effects retain their 
 | `NotchSourceAdmissionIssue` | Original intent or complete journal/dependency population refusal |
 | `NotchSourceCollection` | Actual source,copy,Piece edge/hole/fold or landmark collection |
 | `admit_notch_context` | Admit complete actual source dependencies before indexes or derived work |
+| `NotchSourceValidation` | Borrowed local structural proof after actual current-source checks |
+| `NotchSourceValidationError` | Original source identity and concrete bounded validation refusal |
+| `NotchSourceValidationIssue` | Actual structural,point,coverage,quota or derived-bound cause |
+| `NotchSourceRange` | Source-side or authored Piece-edge query location |
+| `validate_sources` | Validate local current source structure using admitted actual inputs |
 | `SeamEaseSource` | Actual retained original declaration,domains,copies and full stops |
 | `CutPlan` | Actual complete physical-copy plan |
 | `Piece` | Actual immutable source Piece with held interval references |
@@ -31,7 +36,8 @@ input admission does not reorder them by coordinate or alter the original author
 Choose positive dependency-item,original-point and range-portion limits explicitly. The point
 limits include complete journal/nested input and per-point candidate/integer budgets. The range
 limit is the peak portion budget per later coverage query. These respective query limits are
-retained for context construction;this input-only operation performs no projection or range query,
+retained for local validation and later coordinate context;this input-only operation performs no
+projection or range query,
 reserves no derived numeric result and does not certify an aggregate allocator or CPU-time bound.
 
 Eligibility comes first. Uniform intent returns its actual source identity;weighted intent also
@@ -77,31 +83,74 @@ Focused native checks use actual validated graphs,original sources,Pieces,CutPla
 objects and ledgers. They cover symbolic declarations,named versus authored stop order,complete
 unused registry/Piece/copy dependencies,hole/fold boundaries,journal refusal precedence and damaged
 held-source preservation. No-default and immutable-borrow compile-fail checks cover the public
-boundary. Actual source validation and original-coordinate context construction remain the next
-owned step;their success and notch quantity availability are not implied by this input token.
+boundary. The bounded local source validation below follows this input step. Original-coordinate context
+construction remains pending;neither its success nor quantity availability follows from input admission.
 
-## Next local source-validation contract
+## Validate actual local source context
 
-The next implementation validates this original source against the supplied actual inputs. It must
-check current copy/Piece binding and local identity uniqueness,then every registry landmark,
-including unused entries. Each anchor needs bounded unique current resolution and membership in
-its actual Piece's surviving intervals. Full original side ranges need complete positive coverage,
-unique endpoints and actual copy/Piece ownership. Same-copy positive interiors cannot overlap.
-Every full original stop needs the actual side/Piece/current-interval membership;named boundaries
-must still be semantic Notches and have distinct current locations.
+Call validate_sources on the admitted actual input token. The returned proof borrows the same
+immutable source,plan,Pieces,registry and ledger. It validates local structural currentness;original
+notch coordinates,quantity availability,whole Design and physical readiness remain separate.
 
-This is local original-source validation. It has no supplied graph identity and must not invent
-one or reconstruct a synthetic graph. Other graph members,global Design/root ownership,current
-formula metadata and physical correspondence retain their actual separate validators. Surviving
-Piece intervals supply local membership;this does not strengthen the existing contract into a
-whole-Piece topology certificate or erase repairs elsewhere. Current Design sewing validation
-continues to validate its actual complete root,all landmarks,full graph and amount metadata.
+Before building any index or querying ranges,derive and check complete workspace cardinalities.
+For N actual admitted dependency items and B selected peak portions per range query,reserve N*B
+ownership-cache intervals and a conservative3N+1 metadata-row envelope. The latter covers public
+CutPlan validation's temporary fixed-copy arrays and local identity/Piece/mark/stop indexes. Check
+both products/additions;unrepresentable reservations return DerivedBoundOverflow before allocation.
+Every ownership-cache append and local index insertion checks its bound before growing storage.
+The proof records these bounds and actual validation cache/index counts;the transient collections
+are discarded before returning. These are logical populations,not a measured allocator/RSS/CPU or
+whole-bus certificate;the envelope is conservative.
 
-Derived interval/index work must be admitted from complete actual populations and explicit limits
-before allocation. Use bounded current/coverage queries,not the legacy endpoint choice trees.
-Retain actual owner,held reference,operation,choice,repair and numeric causes. A current unique
-position can still project to multiple original coordinates/directions,so complete source success
-cannot imply a usable original notch interval.
+Check the current CutPlan against the actual complete Piece registry and retain its original typed
+cause. Check local source/Piece/copy/landmark identity uniqueness. Resolve each Piece's held edges
+with bounded positive-interval coverage,retaining surviving intervals for ownership queries. Then
+check every semantic registry landmark,including unused entries:its actual Piece must exist,its
+actual anchor needs bounded unique current resolution,and that point must belong to its Piece's
+surviving intervals. No new semantic object is constructed to replace an old held reference.
+
+For each original side,require the actual physical copy,unique lower then upper current endpoints,
+complete positive-interval coverage and full ownership by that copy's actual Piece. Check A before
+B. Same-copy positive interiors cannot overlap. Every original stop must retain actual side/Piece/
+current-interval membership,even when child stop lists are empty. Named ease boundaries must still
+be semantic Notches and have distinct current locations. Named IDs and original authored stop order
+remain unchanged. Explicit,formula and profile declarations are preserved without evaluating ease.
+
+This proof has no supplied graph identity and creates none. Other graph members,global Design/root
+ownership,current formula metadata and physical correspondence use their actual separate validators.
+Surviving Piece intervals supply local membership;repairs elsewhere remain visible without becoming
+a whole-Piece topology certificate or an automatic local rejection. Current Design sewing validation
+continues to check its complete actual root,all landmarks,full graph and amount metadata.
+
+A refusal retains the original source and concrete evidence. Current point/endpoint failures keep
+the fixed bounded outcome,including first split branches,actual repair and held edge/parameter.
+Positive-interval failures keep complete bounded coverage evidence;quota errors retain the actual
+source side or flattened authored Piece-edge index and original held range. Structural copy/stop/
+kind causes remain the existing typed sewing causes. Numeric point and internal-range causes remain
+available through the standard error source. No partial source proof,nearest-point choice,legacy
+endpoint tree or reference rewrite is produced.
+
+```rust
+use sc_core::ontology::{NotchSourceAdmission, NotchSourceValidation, NotchSourceValidationError};
+fn validate_actual<'a>(admitted: NotchSourceAdmission<'a>)
+    -> Result<NotchSourceValidation<'a>, NotchSourceValidationError>
+{
+    admitted.validate_sources()
+}
+```
+
+Focused actual-model checks cover symbolic declarations,copy replacement,same-ID Piece binding,
+local identity collisions,unused deleted anchors,full original stops despite child subsets,and
+current Notch-kind replacement. They preserve the first endpoint split choice through eight cycles.
+A three-slot query refuses before constructing three portions plus its active input;explicit four
+slots reach the intended deleted-interior evidence. A valid surviving subdomain remains usable.
+
+Another actual source has unique current endpoints and newly born valid current Notches,but an
+internal retained range boundary maps outside the stored reference fraction width. Local validation
+retains that full numeric repair and original operation rather than accepting endpoint evidence as
+complete coverage. An independent Fraction control confirms the internal normalized half requires
+a wider stored component. Current-anchor numeric causes remain distinct. Source success still does
+not prove unique original coordinates:the next coordinate context must check their full evidence.
 
 ## Next original-coordinate contract
 
@@ -116,5 +165,5 @@ Symbolic amount/profile declarations remain unresolved;no quantity or physical v
 The canonical decision is docs/decisions/decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md.
 Its whole pre-0512 source is logical record docs/history/stitchcad-devnotes-part670.md,available
 through the [public archive reader](../annexes/archive-reader.md). It retains the superseded
-prospective wording and all historical evidence exactly. Both next contracts above are implementation
-requirements;this page does not claim they have passed or are available.
+prospective wording and all historical evidence exactly. The next original-coordinate
+contract is an implementation requirement;its context and quantity API remain pending.

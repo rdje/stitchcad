@@ -4033,3 +4033,655 @@ fn notch_source_admission_is_input_evidence_and_keeps_damaged_current_sources_vi
     );
     assert_eq!(f.ledger, before);
 }
+
+#[test]
+fn notch_source_validation_borrows_actual_current_sources_and_preserves_symbolic_amounts() {
+    let (mut f, marks) = notch_source_fixture();
+    for amount in [
+        EaseAmount::Explicit(Length::from_micrometres(-1).unwrap()),
+        EaseAmount::Formula(id(900)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(901))),
+    ] {
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&marks).unwrap();
+        let portion = graph.spans().first().unwrap().retain_ease_source();
+        let source = portion.source();
+        let admitted = source
+            .admit_notch_context(
+                &f.plan,
+                &f.pieces,
+                &marks,
+                &f.ledger,
+                notch_source_limits(13, 1, 4),
+            )
+            .unwrap();
+        let validated = admitted.validate_sources().unwrap();
+        assert!(core::ptr::eq(validated.admission().source(), source));
+        assert_eq!(validated.admission().notch_ids(), (id(401), id(400)));
+        assert_eq!(validated.admission().source().declaration().amount, amount);
+        assert_eq!(validated.interval_item_bound(), 39);
+        assert_eq!(validated.index_item_bound(), 40);
+        assert_eq!(validated.interval_item_count(), 4);
+        assert_eq!(validated.index_item_count(), 14);
+        assert_eq!(graph.ease_validation(), EaseValidation::DeferredToG2AndG3);
+        assert!(format!("{validated:?}").contains("interval_item_count: 4"));
+        assert!(!format!("{validated:?}").contains("selection pending"));
+        assert!(matches!(
+            source.uniform_explicit_cumulative_at_a(t(1, 2)),
+            Err(sc_core::ontology::SeamEaseAmountError::BetweenNotches { .. })
+        ));
+    }
+}
+
+#[test]
+fn notch_source_validation_admits_derived_bounds_before_queries_and_keeps_range_quota_evidence() {
+    use core::num::NonZeroUsize;
+    use sc_core::ontology::{
+        NotchContextLimits, NotchSourceRange, NotchSourceValidationIssue as Issue,
+    };
+    use std::error::Error as _;
+    let (f, marks) = notch_source_fixture();
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let source = portion.source();
+    let chosen = notch_source_limits(13, 1, 4);
+    let oversized = NotchContextLimits::new(
+        chosen.dependency_items(),
+        chosen.original_point(),
+        NonZeroUsize::new(usize::MAX).unwrap(),
+    );
+    let error = source
+        .admit_notch_context(&f.plan, &f.pieces, &marks, &f.ledger, oversized)
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    assert_eq!(error.source_span(), id(301));
+    assert_eq!(
+        error.issue(),
+        &Issue::DerivedBoundOverflow {
+            dependency_items: 13,
+            range_portions: usize::MAX
+        }
+    );
+    let small = NotchContextLimits::new(
+        chosen.dependency_items(),
+        chosen.original_point(),
+        NonZeroUsize::new(1).unwrap(),
+    );
+    let error = source
+        .admit_notch_context(&f.plan, &f.pieces, &marks, &f.ledger, small)
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    let Issue::CoverageLimit { reference, issue } = error.issue() else {
+        panic!("actual owner range quota")
+    };
+    assert_eq!(
+        *reference,
+        NotchSourceRange::PieceEdge {
+            piece: id(100),
+            index: 0
+        }
+    );
+    assert_eq!(
+        issue.held(),
+        EdgeRange::whole(source.side(SeamSideId::A).range.edge())
+    );
+    assert!(matches!(
+        issue.issue(),
+        sc_core::ontology::RangeCoverageIssue::Portions {
+            retained: 1,
+            requested: 1,
+            limit: 1,
+            ..
+        }
+    ));
+    assert_eq!(
+        error
+            .source()
+            .unwrap()
+            .downcast_ref::<sc_core::ontology::RangeCoverageError>(),
+        Some(issue)
+    );
+}
+
+#[test]
+fn notch_source_validation_preserves_current_copy_binding_and_local_identity_refusals() {
+    use sc_core::ontology::NotchSourceValidationIssue as Issue;
+    use std::error::Error as _;
+    let (f, marks) = notch_source_fixture();
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let source = portion.source();
+    let renamed = CutPlan::new(
+        f.plan
+            .copies()
+            .iter()
+            .map(|copy| {
+                let mut definition = *copy.definition();
+                if definition.id == id(200) {
+                    definition.id = id(205);
+                }
+                definition
+            })
+            .collect(),
+        &f.pieces,
+    )
+    .unwrap();
+    let error = source
+        .admit_notch_context(
+            &renamed,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 1, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    let expected = SewingError::MissingCopy {
+        span: id(301),
+        side: SeamSideId::A,
+        copy: id(200),
+    };
+    assert!(matches!(error.issue(),Issue::Structural(issue) if **issue==expected));
+    assert_eq!(
+        error.source().unwrap().downcast_ref::<SewingError>(),
+        Some(&expected)
+    );
+    let rebound = CutPlan::new(
+        vec![
+            CutCopyDefinition {
+                id: id(200),
+                piece: id(101),
+                orientation: CopyOrientation::Authored,
+            },
+            CutCopyDefinition {
+                id: id(201),
+                piece: id(100),
+                orientation: CopyOrientation::Reflected,
+            },
+            CutCopyDefinition {
+                id: id(202),
+                piece: id(100),
+                orientation: CopyOrientation::Authored,
+            },
+        ],
+        &f.pieces,
+    )
+    .unwrap();
+    let error = source
+        .admit_notch_context(
+            &rebound,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 1, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    assert!(
+        matches!(error.issue(),Issue::Structural(issue) if **issue==SewingError::RangeOutsidePiece {
+        span:id(301),side:SeamSideId::A,piece:id(101) })
+    );
+    let mut duplicates = marks.clone();
+    duplicates.push(marks.first().unwrap().clone());
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &duplicates,
+            &f.ledger,
+            notch_source_limits(14, 1, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    assert!(
+        matches!(error.issue(),Issue::Structural(issue) if **issue==SewingError::IdentityCollision { id:id(400) })
+    );
+    let mut changed = f.pieces.clone();
+    let mut piece = changed.first().unwrap().definition().clone();
+    piece.boundary = vec![DirectedEdge {
+        edge: piece.construction_lines.first().unwrap().edge,
+        direction: Direction::Original,
+    }];
+    *changed.first_mut().unwrap() = Piece::new(piece, &f.ledger).unwrap();
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &changed,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 1, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    let Issue::LandmarkOutsidePiece { landmark, issue } = error.issue() else {
+        panic!("actual changed Piece membership: {error:?}")
+    };
+    assert_eq!(*landmark, id(400));
+    assert_eq!(
+        **issue,
+        sc_core::ontology::AnchorError::AnchorOutsidePiece {
+            piece: id(100),
+            anchor: EdgeAnchor {
+                edge: source.side(SeamSideId::A).range.edge(),
+                param: t(1, 4)
+            }
+        }
+    );
+    assert_eq!(
+        error
+            .source()
+            .unwrap()
+            .downcast_ref::<sc_core::ontology::AnchorError>(),
+        Some(issue.as_ref())
+    );
+}
+
+#[test]
+fn notch_source_validation_rechecks_unused_current_landmarks_without_mutating_sources() {
+    use sc_core::ontology::{NotchSourceValidationIssue as Issue, UniquePointOutcome};
+    let (mut f, mut marks) = notch_source_fixture();
+    let edge = f
+        .pieces
+        .first()
+        .unwrap()
+        .definition()
+        .construction_lines
+        .first()
+        .unwrap()
+        .edge;
+    marks.push(SewingLandmark::Turn(
+        TurnPoint::new(
+            id(402),
+            EdgeAnchor {
+                edge,
+                param: t(1, 2),
+            },
+            f.pieces.first().unwrap(),
+            &f.ledger,
+        )
+        .unwrap(),
+    ));
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    f.ledger.delete(&mut f.ids, edge).unwrap();
+    assert_eq!(
+        graph.validate_current(&f.plan, &f.pieces, &marks, &f.ledger),
+        Ok(())
+    );
+    let before = f.ledger.clone();
+    let error = portion
+        .source()
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(14, 2, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    let Issue::LandmarkPoint {
+        landmark,
+        resolution,
+    } = error.issue()
+    else {
+        panic!("actual unused held anchor")
+    };
+    assert_eq!(*landmark, id(402));
+    assert_eq!(
+        (resolution.reference(), resolution.param()),
+        (edge, t(1, 2))
+    );
+    assert!(matches!(resolution.outcome(),UniquePointOutcome::Repair {
+        cause:sc_core::ontology::OrphaningEdit::Deleted { edge:actual,.. },..
+    } if *actual==edge));
+    assert_eq!(f.ledger, before);
+}
+
+#[test]
+fn notch_source_validation_retains_full_lost_source_interior_and_surviving_piece_membership() {
+    use sc_core::ontology::NotchSourceValidationIssue as Issue;
+    for partial in [false, true] {
+        let (mut f, mut marks) = notch_source_fixture();
+        let edge = f.span().a.range.edge();
+        if partial {
+            f.span_mut().a.range = EdgeRange::new(edge, Param::START, t(1, 8)).unwrap();
+            marks = vec![f.notch(400, t(1, 32)), f.notch(401, t(3, 32))];
+        }
+        let graph = f.graph(&marks).unwrap();
+        let portion = graph.spans().first().unwrap().retain_ease_source();
+        let held = portion.source().side(SeamSideId::A).range;
+        let second = f.ledger.split(&mut f.ids, edge, t(1, 3)).unwrap().second();
+        let middle = f.ledger.split(&mut f.ids, second, t(1, 2)).unwrap().first();
+        f.ledger.delete(&mut f.ids, middle).unwrap();
+        assert!(!f
+            .pieces
+            .first()
+            .unwrap()
+            .range_resolutions(&f.ledger)
+            .next()
+            .unwrap()
+            .1
+            .has_full_coverage());
+        let selected = notch_source_limits(13, 4, 4);
+        let under = portion
+            .source()
+            .admit_notch_context(&f.plan, &f.pieces, &marks, &f.ledger, selected)
+            .unwrap()
+            .validate_sources()
+            .unwrap_err();
+        assert!(matches!(under.issue(),Issue::CoverageLimit { issue,.. }
+            if matches!(issue.issue(),sc_core::ontology::RangeCoverageIssue::Portions {
+                retained:3,requested:1,limit:3,.. })));
+        let selected = sc_core::ontology::NotchContextLimits::new(
+            selected.dependency_items(),
+            selected.original_point(),
+            core::num::NonZeroUsize::new(4).unwrap(),
+        );
+        let admitted = portion
+            .source()
+            .admit_notch_context(&f.plan, &f.pieces, &marks, &f.ledger, selected)
+            .unwrap();
+        if partial {
+            assert_eq!(
+                graph.validate_current(&f.plan, &f.pieces, &marks, &f.ledger),
+                Ok(())
+            );
+            let proof = admitted.validate_sources().unwrap();
+            assert_eq!(proof.interval_item_count(), 5);
+        } else {
+            let error = admitted.validate_sources().unwrap_err();
+            let Issue::Coverage { side, evidence } = error.issue() else {
+                panic!("complete source range repair: {error:?}")
+            };
+            assert_eq!(*side, SeamSideId::A);
+            assert_eq!(evidence.held(), held);
+            assert!(!evidence.has_full_coverage());
+            assert!(evidence.portions().iter().any(
+                |part| matches!(part,sc_core::ontology::RangePortion::Unresolved(task)
+                if matches!(task.issue(),sc_core::ontology::RangeIssue::Orphaned(
+                    sc_core::ontology::OrphaningEdit::Deleted { edge,.. }) if edge==middle))
+            ));
+        }
+    }
+}
+
+#[test]
+fn notch_source_validation_retains_first_endpoint_choice_after_eight_cycles() {
+    use sc_core::ontology::{NotchSourceValidationIssue as Issue, UniquePointOutcome};
+    let (mut f, _) = notch_source_fixture();
+    let edge = f.span().a.range.edge();
+    f.span_mut().a.range = EdgeRange::new(edge, t(1, 2), Param::END).unwrap();
+    let marks = vec![f.notch(400, t(5, 8)), f.notch(401, t(7, 8))];
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let mut current = edge;
+    let one = Length::from_micrometres(1).unwrap();
+    for _ in 0..8 {
+        let split = f.ledger.split(&mut f.ids, current, t(1, 2)).unwrap();
+        current = f
+            .ledger
+            .merge(&mut f.ids, split.first(), one, split.second(), one)
+            .unwrap();
+    }
+    let error = portion
+        .source()
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 17, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    let Issue::Endpoint {
+        side,
+        upper,
+        resolution,
+    } = error.issue()
+    else {
+        panic!("actual first held endpoint choice")
+    };
+    assert_eq!((*side, *upper), (SeamSideId::A, false));
+    assert_eq!(
+        (resolution.reference(), resolution.param()),
+        (edge, t(1, 2))
+    );
+    assert!(
+        matches!(resolution.outcome(),UniquePointOutcome::SplitChoice { operation,source,.. }
+        if *source==edge && *operation==f.ledger.journal().get(1).unwrap().operation())
+    );
+}
+
+#[test]
+fn notch_source_validation_preserves_actual_current_numeric_error_sources() {
+    use sc_core::ontology::NotchSourceValidationIssue as Issue;
+    use std::error::Error as _;
+    let (mut f, _) = notch_source_fixture();
+    let marks = vec![f.notch(400, t(1, i64::MAX)), f.notch(401, t(3, 4))];
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let edge = portion.source().side(SeamSideId::A).range.edge();
+    f.ledger.split(&mut f.ids, edge, t(2, 3)).unwrap();
+    let error = portion
+        .source()
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 2, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    assert!(
+        matches!(error.issue(),Issue::LandmarkPoint { landmark,resolution }
+        if *landmark==id(400) && resolution.reference()==edge && resolution.param()==t(1,i64::MAX))
+    );
+    assert_eq!(
+        error
+            .source()
+            .unwrap()
+            .downcast_ref::<sc_units::UnitError>(),
+        Some(&sc_units::UnitError::Overflow {
+            operation: "Rational::checked_div"
+        })
+    );
+}
+
+#[test]
+fn notch_source_validation_keeps_original_full_stops_and_current_notch_kinds() {
+    use sc_core::ontology::NotchSourceValidationIssue as Issue;
+    let (mut f, marks) = notch_source_fixture();
+    f.definition.spans = retained_children(&f, &marks);
+    let graph = f.graph(&marks).unwrap();
+    let source = graph.ease_sources().next().unwrap();
+    assert!(graph
+        .spans()
+        .iter()
+        .all(|span| span.definition().stops.is_empty()));
+    let missing = marks.get(..1).unwrap();
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            missing,
+            &f.ledger,
+            notch_source_limits(12, 1, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    assert_eq!(error.source_span(), id(301));
+    assert!(
+        matches!(error.issue(),Issue::Structural(issue) if **issue==SewingError::MissingLandmark {
+        span:id(301),stop:StopLandmark { side:SeamSideId::A,landmark:id(401) } })
+    );
+    let mut replacement = marks.clone();
+    *replacement.first_mut().unwrap() = SewingLandmark::Turn(
+        TurnPoint::new(
+            id(400),
+            EdgeAnchor {
+                edge: source.side(SeamSideId::A).range.edge(),
+                param: t(1, 4),
+            },
+            f.pieces.first().unwrap(),
+            &f.ledger,
+        )
+        .unwrap(),
+    );
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &replacement,
+            &f.ledger,
+            notch_source_limits(13, 1, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    assert!(
+        matches!(error.issue(),Issue::Structural(issue) if **issue==SewingError::InvalidEaseAnchors {
+        span:id(301),side:SeamSideId::A,start:id(401),end:id(400) })
+    );
+}
+
+#[test]
+fn notch_source_validation_keeps_numeric_internal_range_repairs_with_unique_current_endpoints() {
+    use sc_core::ontology::{NotchSourceValidationIssue as Issue, OffsetInterval};
+    use std::error::Error as _;
+    let (mut f, marks) = notch_source_fixture();
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let source = portion.source();
+    let edge = source.side(SeamSideId::A).range.edge();
+    let split = f.ledger.split(&mut f.ids, edge, t(1, 2)).unwrap();
+    let one = Length::from_micrometres(1).unwrap();
+    let merged = f
+        .ledger
+        .merge(&mut f.ids, split.first(), one, split.second(), one)
+        .unwrap();
+    let fragments = f
+        .ledger
+        .offset(
+            &mut f.ids,
+            merged,
+            &[
+                OffsetInterval::new(Param::START, t(1, i64::MAX)).unwrap(),
+                OffsetInterval::new(t(1, i64::MAX), Param::END).unwrap(),
+            ],
+        )
+        .unwrap();
+    let mut piece = f.pieces.first().unwrap().definition().clone();
+    piece.boundary = fragments
+        .iter()
+        .map(|edge| DirectedEdge {
+            edge: *edge,
+            direction: Direction::Original,
+        })
+        .collect();
+    *f.pieces.first_mut().unwrap() = Piece::new(piece, &f.ledger).unwrap();
+    let current_marks = marks
+        .iter()
+        .zip([t(1, 4), t(3, 4)])
+        .map(|(mark, param)| {
+            let SewingLandmark::Notch(notch) = mark else {
+                panic!("actual source Notch")
+            };
+            let mut definition = notch.definition().clone();
+            definition.anchor = EdgeAnchor {
+                edge: *fragments.first().unwrap(),
+                param,
+            };
+            SewingLandmark::Notch(
+                Notch::new(definition, f.pieces.first().unwrap(), &f.ledger).unwrap(),
+            )
+        })
+        .collect::<Vec<_>>();
+    assert!(f
+        .ledger
+        .resolve_unique_point(
+            edge,
+            Param::START,
+            notch_source_limits(14, 4, 6).original_point().current()
+        )
+        .resolved()
+        .is_some());
+    assert!(f
+        .ledger
+        .resolve_unique_point(
+            edge,
+            Param::END,
+            notch_source_limits(14, 4, 6).original_point().current()
+        )
+        .resolved()
+        .is_some());
+    let error = source
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &current_marks,
+            &f.ledger,
+            notch_source_limits(14, 4, 6),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap_err();
+    let Issue::Coverage { side, evidence } = error.issue() else {
+        panic!("actual internal source range cause")
+    };
+    assert_eq!(*side, SeamSideId::A);
+    assert_eq!(evidence.held(), source.side(SeamSideId::A).range);
+    assert!(!evidence.has_full_coverage());
+    assert_eq!(
+        error
+            .source()
+            .unwrap()
+            .downcast_ref::<sc_units::UnitError>(),
+        Some(&sc_units::UnitError::Overflow {
+            operation: "Rational::checked_relative_progress"
+        })
+    );
+}
+
+#[test]
+fn notch_source_validation_permits_touching_disjoint_self_seams_on_one_actual_copy() {
+    let (mut f, _) = notch_source_fixture();
+    let edge = f.span().a.range.edge();
+    f.span_mut().a.range = EdgeRange::new(edge, Param::START, t(1, 2)).unwrap();
+    f.span_mut().b = SeamSide {
+        copy: id(200),
+        range: EdgeRange::new(edge, t(1, 2), Param::END).unwrap(),
+    };
+    let marks = vec![f.notch(400, t(1, 4)), f.notch(401, t(3, 8))];
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let proof = portion
+        .source()
+        .admit_notch_context(
+            &f.plan,
+            &f.pieces,
+            &marks,
+            &f.ledger,
+            notch_source_limits(13, 1, 4),
+        )
+        .unwrap()
+        .validate_sources()
+        .unwrap();
+    assert_eq!(
+        proof.admission().source().side(SeamSideId::A).copy,
+        proof.admission().source().side(SeamSideId::B).copy
+    );
+    assert_eq!(proof.interval_item_count(), 4);
+}

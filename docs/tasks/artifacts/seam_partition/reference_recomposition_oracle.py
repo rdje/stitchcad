@@ -58,6 +58,10 @@ def render():
     assert 1 - high == low and 1 - low == high
     assert (low / cut).denominator > m
     assert ((high - cut) / (1 - cut)).denominator > m
+    # Retained internal half after split/merge maps wide through a valid shared-boundary offset;
+    # original endpoints still map exactly to 0/1. New current semantic anchors do not erase this
+    # complete held-range numeric repair. The native source validator retains its actual cause.
+    assert ((F(1, 2) - F(1, m)) / (1 - F(1, m))).denominator > m
     return '\n'.join(rows) + '\n'
 
 
@@ -66,7 +70,7 @@ if __name__ == '__main__':
     if sys.argv[1:] == ['--check']:
         root = Path(__file__).resolve().parents[4]
         assert (root / 'crates/sc-core/tests/fixtures/reference_recomposition.tsv').read_bytes() == output.encode()
-        print('reference recomposition:14 Fraction cases;9 cancelled intermediate refusals;5 genuine final-width refusals;reversed dual-failure control1;rc=0')
+        print('reference recomposition:14 Fraction cases;9 cancelled intermediate refusals;5 genuine final-width refusals;reversed dual-failure control1;source internal-boundary control1;rc=0')
     elif not sys.argv[1:]:
         print(output, end='')
     else:

@@ -278,46 +278,52 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   source validation;.3 guarded original coordinate comparisons;.4 sealed original-notch context.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.1`
   Status: `done`
-  Goal:0512 current source-contract recovery/containment before bounded context implementation.
-  Whole old decision194L/14247B retained670 before curation;current176L/12286B preserves every answer,
-  old heading and metadata. Exact published input section60L/4326B moved to bounded source chapter.
-  - [x] REPRODUCE / ISSUE: standing decision still said selected projection design was not an
-    implemented projection,despite later implementation sections. git show HEAD:<decision> plus
-    actual source/API recovery found that prospective/current contradiction;whole source preserved
-    before replacement. Impact:reader could misclassify implemented primitives as pending.
-  - [x] ROOT CAUSE: 0512 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    original_point_projection_contract →6 passed,rc=0. Actual design/sewing_state.rs validates every
-    landmark then actual graph/amount metadata;anchor/range.rs ownership uses surviving Piece
-    intervals. Graph validates full original source separately from child subsets. These are local/
-    global boundaries,not permission to fabricate a graph ID or strengthen whole-Piece readiness.
-  - [x] FIX: exact old whole decision strict encoded Git span670 preserves the536B answers line;
-    curate standing source/primitive/admission contracts and label local validation/original context
-    pending. All existing questions/heading anchors/metadata remain;no map row or ceiling increase.
-    Move published admission section exactly;new indexed source chapter carries actual implemented
-    API routes and explicit pending validation/context contracts. Own safe implementation children.
-  - [x] ADDRESSED: 0512 curate_notch_sources_0512.py →original194/14247 SHA
-    6e30ebec0fc54cee2993294e398d59c39eeefd92e2fcb681839b616911a9e063;current176/12286,all
-    answers/old headings/metadata preserved;60L/4326B exact book move/five routes,rc=0. Receipt670
-    →1 exact full Git span/strict base64 decode,receipt669 →3 exact Git spans,rc=0. cargo test
-    -p sc-core --test sewing_contract current_graph →3 passed,rc=0;retained_notch_source_rechecks_
-    original_full_context_even_with_child_stop_subsets →1 passed,rc=0. Copy/same-id mark/lost interior/
-    full original stops and root-only material refusals stay actual. No runtime or availability change.
-  - [x] NO REGRESSION: 0512 knowledge-map/scripts/check_knowledge_map.sh →pass,rc=0,unchanged map.
-    Book build/publication →90/200/1572/2702,rc=0;glossary →0 failures,rc=0;task_source_contract.py
-    →12 passed,rc=0;verify-retention →1124 logical/29 working/2428444 residentB,rc=0. Point chapter
-    now426L/29406B;source chapter120L/8674B. Focused checks only;broader/mutation/physical/paired
-    verification stays .6.5.3.2.acceptance/pre-push after feature completion.
-  - [x] LOCKSTEP: parent/next children/current source decision/MEMORY/DEV/CHANGE/book/task index/
-    D301 align;whole0511 retained669. LIVE/README reviewed unchanged,G1 6/18. Next .2 bounded
-    actual local source validation;original comparison/context/quantities/effects remain pending.
-    promotion: declined (curation/recovery of already indexed source/currentness/admission contracts with exact whole-source retention;no new general policy or direction).
+  Goal:0512 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part671.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.2`
-  Status: `pending`
-  Goal: bounded local source ownership/currentness against complete actual inputs,all unused
-  landmarks,full source sides/stops/distribution. Preserve surviving Piece interval semantics,
-  actual missing/choice/repair/numeric causes and local-versus-whole-Design authority boundary.
-  Admit derived interval/index work from actual complete inputs and explicit per-query limits
-  before allocation;do not invoke legacy point/range choice trees or fabricate graph/source data.
+  Status: `done`
+  Goal:0513 bounded actual local source ownership/currentness validates complete admitted inputs,
+  all unused landmarks,full source sides/stops/distribution. Sealed borrowed proof preserves actual
+  causes and surviving Piece membership without global Design/original-coordinate/physical claims.
+  - [x] REPRODUCE / ISSUE: actual input admission alone supplies no source-currentness proof.
+    cargo test -p sc-core --test sewing_contract notch_source_admission →5 passed,rc=0,including
+    deleted held source whose input count admits while current graph refuses. Ownership and full
+    source dependencies therefore need their actual bounded semantic checks before context.
+  - [x] ROOT CAUSE: 0513 cargo test -p sc-core --test sewing_contract notch_source_validation →10
+    passed,rc=0. Actual copy/Piece binding,complete registry,unique current points,source coverage/
+    endpoint/ownership/self-copy/stop/kind checks are distinct. Surviving Piece intervals can own a
+    valid subdomain while lost whole-Piece material stays visible. Unique source endpoints can still
+    enclose genuine internal numeric repairs. Actual admitted inputs supply all required witnesses.
+  - [x] FIX: derive checked cache N*B and conservative metadata3N+1 before any derived allocation;
+    includes public CutPlan fixed-copy validation work and local indexes. Guard every local cache/
+    index insertion;in-place sort ownership intervals. Bounded point/coverage calls only;no legacy
+    endpoint tree,synthetic graph,value or reference rewrite. Preserve original structural causes,
+    fixed current outcomes,complete range evidence,typed query quotas and standard numeric sources.
+    Proof borrows actual admission with scalar counts only;transient indexes/caches are discarded.
+  - [x] ADDRESSED: 0513 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    sewing_contract notch_source_validation →10 passed/62 filtered,rc=0. Literal/formula/profile,
+    source/named/authored identity,pointer/bound/count checks pass;actual base cache4/index14 within
+    bounds39/40. Missing/rebound copies,same-ID changed Piece,identity collisions,unused deleted
+    anchor,full original stop loss despite empty child subsets and Notch→Turn replacement refuse.
+    Touching disjoint self-seam passes. Eight cycles keep first actual endpoint choice. Numeric
+    point/internal-range failures retain concrete UnitError/source operation;no accepted prefix.
+    Initial lost-interior test failed101 because selected3 slots correctly refused retained3+next1
+    on actual Piece edge100/0. Diagnostic confirmed exact quota;test now retains that control and
+    explicitly selects4 to reach whole deleted-source refusal or valid surviving-subdomain success.
+    Derived-bound overflow/range quotas refuse before growth;all held/ledger data remains unchanged.
+  - [x] NO REGRESSION: 0513 cargo clippy -p sc-core --test sewing_contract -- -D warnings/fmt --all
+    --check →pass0;cargo test -p sc-core --doc NotchSourceValidation →1 forge compile-fail passed0.
+    Actual input admission5 passes0. reference_recomposition_oracle.py --check →14 frozen Fraction
+    rows/9 valid complete reductions/5 genuine width refusals/reversed dual-failure1/internal source
+    boundary1 controls,rc=0. Receipt671 →3 exact Git spans,rc=0. Book/publication90/204/1572/2702,
+    glossary0,map unchanged,retention1125 logical/30 working/2434865 residentB →pass0. First commit
+    gate refused new changelog lines355/363B over320;wrapped uncommitted bullets,gate unchanged.
+    Full source/
+    original-context/paired/mutation/physical verification remains .3.3.acceptance/.6.5.3.2.acceptance.
+  - [x] LOCKSTEP: current decision/task/MEMORY/DEV/CHANGE/book/API routes/D301/task index align;
+    whole0512 retained671. LIVE/README reviewed unchanged,G1 6/18. Next .3 guarded original-coordinate
+    comparisons,then .4 actual original-notch context. Quantities and whole Design/physical readiness
+    remain separate. Bounds are logical populations,not allocator/RSS/CPU or bus-authority certificates.
+    promotion: declined (method-specific implementation of indexed actual-source currentness/derived-work admission;standing derivations recorded in the existing decision,no new general policy).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.3`
   Status: `pending`
   Goal: guarded private exact original-coordinate/Param comparisons and interval ordering using

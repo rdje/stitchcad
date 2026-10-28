@@ -109,9 +109,9 @@ shared step supplies both consumers;it does not bound the full resolver.
 
 ## Actual semantic source dependencies
 
-[Actual notch source context](command-notch-sources.md) documents the implemented complete borrowed
-input admission and the next bounded ownership/currentness/original-context contract. Point and
-coverage primitives below do not replace those source checks or supply physical correspondence.
+[Actual notch source context](command-notch-sources.md) documents implemented complete borrowed
+input admission and bounded local source validation. Original-coordinate context remains pending.
+Point and coverage primitives below do not replace source checks or supply physical correspondence.
 
 ## Query bounded whole-interval coverage
 
@@ -173,7 +173,7 @@ Native checks exercise actual limits,complete unknown/deleted/gapped/numeric evi
 per-input arithmetic rollback. The14 independent Fraction recomposition rows also feed this query,
 including nine valid complete reductions and five genuine final-width refusals. Actual Notch/Graph/
 retained-source fixtures use bounded coverage alongside their current/original point queries.
-Whole source-context admission and notch quantities retain their next implementation owners.
+Bounded local source validation is implemented;original-coordinate context and notch quantities retain their next owners.
 
 ## Query bounded current uniqueness
 

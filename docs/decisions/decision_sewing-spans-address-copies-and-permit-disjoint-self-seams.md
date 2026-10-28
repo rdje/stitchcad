@@ -157,7 +157,7 @@ join predecessors and original evidence. Optional bounded views do not invalidat
 coordinate;no partial output or silent candidate choice. Current/held/mapping directions retain
 separate frames. Original semantic context and whole paired acceptance do not follow from projection.
 
-## Actual source input admission and pending validation
+## Actual source input admission and local validation
 
 NotchSourceAdmission is implemented:borrow exact full source/plan/Pieces/registry/ledger after
 intent,complete journal and whole dependency admission. Include unused Pieces/copies/marks,all
@@ -166,11 +166,12 @@ Default;symbolic amounts and authored/named order stay exact. Input success gran
 original positions or quantities. Text stays borrowed without scanning;no aggregate allocator/CPU
 certificate follows. The source-context book chapter owns current APIs/examples.
 
-Next implementation contract:validate local original-source identities,current CutPlan/Pieces and
-all unused landmark anchors,then full original side coverage/endpoints/ownership,self-copy overlap,
-stops and named notch kinds/current distinctness. Preserve surviving Piece interval semantics;
-local membership is not a whole-Piece topology certificate. Use bounded primitives without legacy
-choice-tree construction,synthetic graph IDs or guessed coordinates. Admit derived interval/index
-work from complete actual inputs and explicit limits before allocation. Preserve actual refusals.
-Global Design/root/formula metadata,other graph members,physical matching and release stay separate.
-Then require unique in-domain distinct original notch coordinates before interval quantities.
+Bounded local validation is implemented:check actual current CutPlan/Pieces and local identities,
+cache surviving Piece intervals,validate every unused landmark,then full source side endpoints/
+coverage/ownership,self-copy overlap,stops and named notch kinds/current distinctness. Preserve
+actual original causes and numeric error sources without legacy choice trees or synthetic graph IDs.
+For N complete actual dependency items and selected per-range peak B,check conservative N*B cache
+and3N+1 metadata bounds before allocation;guard local appends/insertions. These logical bounds are
+not allocator/RSS/CPU certificates. Surviving interval membership does not certify whole Piece
+integrity. Global Design/root/formula metadata,other graph members,physical matching and release
+stay separate. Unique in-domain distinct original coordinates and interval quantities remain next.
