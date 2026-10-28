@@ -13,6 +13,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Commands and agent authority](spec/glossary/commands-and-authority.md)
 - [Command execution and metadata previews](spec/command-execution.md)
 - [Paired seam split source binding](spec/command-seam-splits.md)
+- [Admitted command source capture](spec/command-seam-capture.md)
 - [Original-frame notch context](spec/command-notch-context.md)
 - [Actual notch source context](spec/command-notch-sources.md)
 - [Builtin command workflows and native evidence](spec/command-workflows.md)

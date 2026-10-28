@@ -51,6 +51,7 @@
     - [Implemented execution](spec/command-execution.md)
     - [Builtin workflows and native evidence](spec/command-workflows.md)
     - [Paired seam split source binding](spec/command-seam-splits.md)
+    - [Admitted command source capture](spec/command-seam-capture.md)
     - [Original-frame notch context](spec/command-notch-context.md)
     - [Actual notch source context](spec/command-notch-sources.md)
     - [Scopes and core authorization](spec/command-scopes.md)

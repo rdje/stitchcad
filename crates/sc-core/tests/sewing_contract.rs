@@ -5550,3 +5550,230 @@ fn notch_quantities_preflight_original_frame_and_both_full_domain_bounds_even_fo
         );
     }
 }
+
+fn capture_fixture() -> (Fixture, Vec<SewingLandmark>) {
+    let (mut f, marks) = notch_source_fixture();
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
+        side: SeamSideId::A,
+        regions: vec![
+            WeightedEaseRegion {
+                from: Param::START,
+                to: t(1, 2),
+                weight: Rational::ONE,
+            },
+            WeightedEaseRegion {
+                from: t(1, 2),
+                to: Param::END,
+                weight: Rational::from_integer(3),
+            },
+        ],
+    };
+    (f, marks)
+}
+fn capture_fixture_graph_entries(graph: &SewingGraph) -> usize {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::design::{
+        charge_sewing_graph_resources, DesignResourceLimits, DesignResourceMeter,
+    };
+    let mut meter = DesignResourceMeter::new(DesignResourceLimits::new(
+        NonZeroUsize::new(7).unwrap(),
+        NonZeroUsize::new(1).unwrap(),
+        NonZeroU64::new(1).unwrap(),
+    ));
+    charge_sewing_graph_resources(graph, &mut meter).unwrap();
+    meter.finish().unwrap().collection_entries()
+}
+#[test]
+fn command_ease_capture_admits_complete_declared_payload_before_materializing() {
+    use core::num::NonZeroUsize;
+    use sc_core::command::{
+        CommandEaseCaptureCollection as Collection, CommandEaseCaptureError as Error,
+        CommandEaseCaptureLimits as Limits,
+    };
+    let (mut f, marks) = capture_fixture();
+    for amount in [
+        EaseAmount::Explicit(Length::from_micrometres(-1).unwrap()),
+        EaseAmount::Formula(id(900)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(901))),
+    ] {
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&marks).unwrap();
+        let span = graph.spans().first().unwrap();
+        let saved = span.definition().clone();
+        let request = SplitSeamSpan::new(
+            span.id(),
+            EdgeAnchor {
+                edge: span.definition().a.range.edge(),
+                param: t(1, 3),
+            },
+            EdgeAnchor {
+                edge: span.definition().b.range.edge(),
+                param: t(3, 4),
+            },
+        );
+        let binding = request.bind_source_cuts(&graph).unwrap();
+        let limits = |count| Limits::new(NonZeroUsize::new(count).unwrap());
+        assert_eq!(
+            binding.admit_ease_capture(limits(2)).unwrap_err(),
+            Error::Items {
+                target: id(301),
+                source_span: id(301),
+                collection: Collection::WeightedRegions,
+                consumed: 1,
+                requested: 2,
+                limit: 2,
+            }
+        );
+        assert_eq!(
+            binding.admit_ease_capture(limits(4)).unwrap_err(),
+            Error::Items {
+                target: id(301),
+                source_span: id(301),
+                collection: Collection::OriginalStops,
+                consumed: 3,
+                requested: 2,
+                limit: 4,
+            }
+        );
+        let selected = limits(5);
+        let admission = binding.admit_ease_capture(selected).unwrap();
+        assert_eq!(admission.item_count(), 5);
+        assert_eq!(admission.source_span(), id(301));
+        assert_eq!(admission.limits(), selected);
+        assert!(core::ptr::eq(admission.binding().request(), &request));
+        assert!(core::ptr::eq(admission.binding().span(), span));
+        assert_eq!(span.definition(), &saved);
+        let captured = admission.capture();
+        assert_eq!(captured.item_count(), 5);
+        assert_eq!(captured.item_count(), capture_fixture_graph_entries(&graph));
+        assert_eq!(captured.limits().items().get(), 5);
+        assert!(core::ptr::eq(captured.binding().request(), &request));
+        assert!(core::ptr::eq(captured.binding().span(), span));
+        assert_eq!(captured.source().span(), id(301));
+        assert_eq!(
+            captured.source().declaration(),
+            span.definition().ease.declaration()
+        );
+        assert_eq!(captured.source().declaration().amount, amount);
+        assert_eq!(captured.source().stops(), span.definition().stops);
+        assert_eq!(captured.portion().side(SeamSideId::A), span.definition().a);
+        assert_eq!(captured.portion().side(SeamSideId::B), span.definition().b);
+        let EaseDistribution::Weighted {
+            side: _,
+            regions: original,
+        } = &span.definition().ease.declaration().distribution
+        else {
+            panic!("actual weighted declaration")
+        };
+        let EaseDistribution::Weighted {
+            side: _,
+            regions: owned,
+        } = &captured.source().declaration().distribution
+        else {
+            panic!("actual captured weighted declaration")
+        };
+        assert_eq!(original, owned);
+        assert!(!core::ptr::eq(original.as_ptr(), owned.as_ptr()));
+        assert_eq!(span.definition(), &saved);
+    }
+}
+
+#[test]
+fn command_ease_capture_counts_full_retained_root_and_shares_it_without_child_truncation() {
+    use core::num::NonZeroUsize;
+    use sc_core::command::{
+        CommandEaseCaptureCollection as Collection, CommandEaseCaptureError as Error,
+        CommandEaseCaptureLimits as Limits,
+    };
+    let (mut f, marks) = capture_fixture();
+    f.definition.spans = retained_children(&f, &marks);
+    let graph = f.graph(&marks).unwrap();
+    let original = graph.ease_sources().next().unwrap();
+    let span = graph.spans().first().unwrap();
+    assert_eq!(span.id(), id(302));
+    assert!(span.definition().stops.is_empty());
+    let request = SplitSeamSpan::new(
+        span.id(),
+        EdgeAnchor {
+            edge: span.definition().a.range.edge(),
+            param: t(1, 4),
+        },
+        EdgeAnchor {
+            edge: span.definition().b.range.edge(),
+            param: t(3, 4),
+        },
+    );
+    let binding = request.bind_source_cuts(&graph).unwrap();
+    assert_eq!(
+        binding
+            .admit_ease_capture(Limits::new(NonZeroUsize::new(4).unwrap()))
+            .unwrap_err(),
+        Error::Items {
+            target: id(302),
+            source_span: id(301),
+            collection: Collection::OriginalStops,
+            consumed: 3,
+            requested: 2,
+            limit: 4,
+        }
+    );
+    let captured = binding
+        .admit_ease_capture(Limits::new(NonZeroUsize::new(5).unwrap()))
+        .unwrap()
+        .capture();
+    assert!(core::ptr::eq(captured.source(), original));
+    assert_eq!(captured.source().stops().len(), 2);
+    assert_eq!(captured.item_count(), 5);
+    assert_eq!(
+        captured.item_count(),
+        capture_fixture_graph_entries(&graph)
+            .checked_sub(graph.spans().len())
+            .unwrap()
+    );
+    assert_eq!(captured.portion().side(SeamSideId::A), span.definition().a);
+    assert_ne!(
+        captured.portion().side(SeamSideId::A),
+        captured.source().side(SeamSideId::A)
+    );
+    assert_eq!(captured.binding().span().id(), id(302));
+}
+
+#[test]
+fn command_ease_capture_fixed_minimum_keeps_damaged_held_sources_as_metadata() {
+    use core::num::NonZeroUsize;
+    use sc_core::command::CommandEaseCaptureLimits;
+    let mut f = fixture();
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Profile(ProfileParameterRef::new(id(901)));
+    let graph = f.graph(&[]).unwrap();
+    let span = graph.spans().first().unwrap();
+    let edge = span.definition().a.range.edge();
+    f.ledger.delete(&mut f.ids, edge).unwrap();
+    assert!(f.ledger.resolve(edge, t(1, 2)).resolved().is_none());
+    let request = SplitSeamSpan::new(
+        span.id(),
+        EdgeAnchor {
+            edge,
+            param: t(1, 2),
+        },
+        EdgeAnchor {
+            edge: span.definition().b.range.edge(),
+            param: t(1, 2),
+        },
+    );
+    let limits = CommandEaseCaptureLimits::new(NonZeroUsize::new(1).unwrap());
+    let capture = request
+        .bind_source_cuts(&graph)
+        .unwrap()
+        .admit_ease_capture(limits)
+        .unwrap()
+        .capture();
+    assert_eq!(capture.item_count(), 1);
+    assert_eq!(capture.item_count(), capture_fixture_graph_entries(&graph));
+    assert_eq!(capture.source().side(SeamSideId::A).range.edge(), edge);
+    assert_eq!(
+        capture.source().declaration().amount,
+        EaseAmount::Profile(ProfileParameterRef::new(id(901)))
+    );
+    assert!(f.ledger.resolve(edge, t(1, 2)).resolved().is_none());
+}

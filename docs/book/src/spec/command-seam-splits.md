@@ -303,8 +303,11 @@ regions and original stops in source order. Fixed physical/range/reference field
 A native fixture uses2 spans+1 source+2 regions+2 original stops=7 entries;limit6 refuses the original
 source's stop charge with consumed5/requested2. Charging two logical graph snapshots costs14 even
 when their immutable backing is shared. Exhaustive private owner/source/portion views retain field
-coverage. Command capture/admission,quantity integration,stop/lineage effects and paired acceptance
+coverage. Aggregate command accounting,quantity integration,stop/lineage effects and paired acceptance
 remain their implementation owners;this change does not make SplitSeamSpan executable on the bus.
+
+[Admitted command source capture](command-seam-capture.md) now checks complete original metadata
+cost before materialization. Weighted/notch command quantity views and paired effects remain next.
 
 ## Query quantities from the retained original root
 

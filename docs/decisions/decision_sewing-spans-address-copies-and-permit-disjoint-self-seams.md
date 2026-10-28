@@ -51,8 +51,9 @@ answers: "how do repeated source cuts preserve symbolic ease without independent
 answers: "does source identity equality alone prevent double claims or guarantee one charged body?"
 
 Capture original span identity,copies,full domains,direction,declaration and full stops once.
-Admit command capture before cloning weighted data. Portions share the immutable root and retain
-original source intervals;rounded child totals never become new sources. Pair intervals in A
+Explicit command capture admission counts1 root+all original regions/stops before materialization.
+Declarations clone once;retained targets share their full immutable original under the same cost.
+Portions retain original intervals;rounded child totals never become new sources. Pair intervals in A
 traversal order. Child subsets cannot erase full original dependencies;validate both separately.
 
 The graph owns each root once in first-consuming order. Conflicting same-ID bodies refuse;equal

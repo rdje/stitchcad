@@ -3,12 +3,14 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0521 — close original-notch source/query component checkpoint
+## STITCHCAD-G1-0522 — admit actual command source capture before cloning
 
-- Post-implementation public Notch34/private original-point4 pass. Independent projection6/workspace6+960/comparison6/recovery3/quantity6+302+380 controls pass;committed actual Design5/lint/fmt and earlier doc4 retain their scope. No new runtime implementation.
-- Original source/current ownership,choices/repairs/quotas,original ambiguity/coincidence/wide frames and signed clamped quantities stay exact. Source/query component closes with scoped verification;actual retained view/command adoption .4.4 is next,with real
-  formula/profile/geometry dependencies owned before effects.
-- Whole0520 retained679/three exact Git spans;book90/211/1572/2707,map/retention1133 pass. LIVE/README unchanged,G1 6/18. Full paired,mutation,physical/app and pre-push verification remain separately owned;staged book authority stays mandatory.
+- Positive explicit limits count1 logical original root+complete original weighted regions/stops before materialization. Private borrowed admission retains actual request/span;capture clones declared metadata once or shares retained root with target intervals. Precise
+  target/source/collection/count/limit evidence survives.
+- Native3/scoped Clippy/fmt/doc4+1 pass. Direct5 and retained root5 agree with independent graph resource meter,including empty child stops. Exact/one-below quotas,signed/formula/profile metadata,owned/direct vector and shared root provenance,damaged held references and minimum1
+  stay exact.
+- Whole0521 retained680/three exact Git spans;book91/216/1577/2719,glossary0/map/retention1134 pass. New capture chapter/API routes;weighted command quantities next. LIVE/README unchanged,G1 6/18;aggregate accounting,current/value/physical/authority/effects/full verification
+  remain owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

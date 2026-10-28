@@ -29,6 +29,7 @@ pub use resource::{
     charge_command_history_request_resources, charge_command_mutation_group_resources,
 };
 mod scope;
+mod seam_capture;
 mod seam_ease;
 mod seam_split;
 mod snapshot;
@@ -89,6 +90,10 @@ pub use release::{CommandRelease, PrepareRelease, PrepareReleaseError, ReleasePa
 pub use request::CommandRequest;
 pub use scope::{
     CommandScope, CommandScopeNarrowingError, CommandScopeRefusal, CommandScopeWindowError,
+};
+pub use seam_capture::{
+    CommandEaseCapture, CommandEaseCaptureAdmission, CommandEaseCaptureCollection,
+    CommandEaseCaptureError, CommandEaseCaptureLimits,
 };
 pub use seam_ease::{CommandUniformEaseError, CommandUniformEasePartition};
 pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};

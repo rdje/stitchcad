@@ -210,3 +210,8 @@ original-notch quantity limits	spec/command-notch-sources.md	crates/sc-core/src/
 original-notch quantity admission	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/quantity.rs	NotchEaseAdmission	G1-SLICE.6.5.3.2.3.2.4.3.4.1	4.4
 original-notch quantity reservation refusal	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/quantity.rs	NotchEaseWorkspaceError	G1-SLICE.6.5.3.2.3.2.4.3.4.1	4.4
 original-notch quantity refusal	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/quantity/query.rs	NotchEaseAmountError	G1-SLICE.6.5.3.2.3.2.4.3.4.2	4.4
+command source capture limits	spec/command-seam-capture.md	crates/sc-core/src/command/seam_capture.rs	CommandEaseCaptureLimits	G1-SLICE.6.5.3.2.3.2.4.4.1	4.4
+command source capture admission	spec/command-seam-capture.md	crates/sc-core/src/command/seam_capture.rs	CommandEaseCaptureAdmission	G1-SLICE.6.5.3.2.3.2.4.4.1	4.4
+command source capture collection	spec/command-seam-capture.md	crates/sc-core/src/command/seam_capture.rs	CommandEaseCaptureCollection	G1-SLICE.6.5.3.2.3.2.4.4.1	4.4
+command source capture refusal	spec/command-seam-capture.md	crates/sc-core/src/command/seam_capture.rs	CommandEaseCaptureError	G1-SLICE.6.5.3.2.3.2.4.4.1	4.4
+materialized command source capture	spec/command-seam-capture.md	crates/sc-core/src/command/seam_capture.rs	CommandEaseCapture	G1-SLICE.6.5.3.2.3.2.4.4.1	4.4

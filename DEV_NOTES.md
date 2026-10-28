@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — original-notch source/query component checkpoint
+## _(2026-10-28 UTC)_ — admit actual bound source capture before cloning
 
-0521 closes original-notch component after all inverse/context/quantity implementation. Scoped native public Notch34/private original-point4 pass0,together with independent projection6/workspace6+960/comparison6/recovery3/quantity6+302+380 controls. No new runtime implementation or broad paired claim.
-Complete actual dependencies/local current ownership,first choices/repairs/quotas,original frames/ambiguity/coincidence/wide coordinates and signed clamped quantities remain intact. Committed0520 actual Design5/lint/fmt retains signed Uniform counterfactual,copy refusal/symbolic boundaries;earlier doc4 stays valid.
-Book90/211/1572/2707,map/retention1133/679 receipt3 exact Git spans pass0. Only source/query scope closes;actual retained view/command adoption .4.4 is next. Formula/profile values,real geometry/correspondence,stops,lineage,atomic effects/full verification retain owners. Source decision198L remains bounded.
-[Whole0520 Design acceptance](docs/history/stitchcad-devnotes-part679.md) retains exact scope/lesson/changelog. LIVE/README unchanged,G1 6/18. Staged authority hook remains mandatory;consume every preparation terminal before stage. Promotion declined:scoped checkpoint of indexed existing contracts.
+0522 CommandEaseCaptureLimits/Admission/Capture count1 original root+all original regions/stops before materialization. Actual request/span borrows,checked quota evidence,exhaustive/fixed Copy views preserve full payload. Declared capture clones once;retained capture shares original root and keeps target intervals.
+Native3/scoped Clippy/fmt/doc4+1 pass0. Direct source5,retained child empty stops still5;existing graph meter independently agrees5 or7−2 spans. Limits2/4 preserve precise region/stop refusal;exact5 captures. Signed/formula/profile metadata and damaged held source remain exact;minimum1 does no current repair/query.
+Book91/216/1577/2719,glossary0/map/retention1134/680 receipt3 exact spans pass0. New bounded capture chapter/routes/SUMMARY/topic navigation cover5 public types. Source decision199L stays bounded. Weighted command quantity views .4.4.2 next;no numeric/current/physical/authority/effect certificate from capture.
+[Whole0521 checkpoint](docs/history/stitchcad-devnotes-part680.md) retains exact source/query scope. LIVE/README unchanged,G1 6/18. Per-capture bounds need separate aggregate accounting;consume every preparation terminal before stage. Promotion declined:implementation of indexed capture/resource contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
