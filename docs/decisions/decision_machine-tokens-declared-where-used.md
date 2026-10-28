@@ -86,3 +86,12 @@ Five command-family chapters now declare their actual public input/authority typ
 meanings. No API spelling,behavior or census exemption changes. Exact delta resolves43 rows with0 new;
 97 remain with later owners. Five copied actual declaration removals are refused by name,showing
 that these are live declarations rather than an allow-list. Full glossary acceptance remains pending.
+
+## Bounded declaration placement0480
+
+answers: "how do API declarations fit a chapter already at its maintained size ceiling?"
+
+Move a complete coherent contract to a linked bounded chapter,retain old anchors and update actual
+navigation/API-status owners. The axis/member body is byte-equal to Git source except one navigation
+sentence;no policy ceiling rises. Size-set local API/example declarations resolve65 more C1 rows,
+97→32 with0 new;two actual copied declaration removals refuse by name. Execution remains unchanged.

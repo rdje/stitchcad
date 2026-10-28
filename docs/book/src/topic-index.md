@@ -91,6 +91,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Seams, sewing and allowances](spec/glossary/seams-and-allowances.md)
 - [Size membership foundation](spec/size-membership.md)
 - [Size sets](spec/size-sets.md)
+- [Size axes and member coordinates](spec/size-axes.md)
 - [SizeSet profile transformation intent](spec/size-set-transformations.md)
 - [Sizes and grading](learn/sizes-and-grading.md)
 - [Specification and reference](spec/index.md)

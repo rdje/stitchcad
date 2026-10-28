@@ -6,6 +6,41 @@
 > constraints, precedence and resolution;
 > G3 owns numeric instantiation. This page extends [Size sets §9](size-sets.md#9-ownership-reference-and-override).
 
+## API and field vocabulary
+
+These declarations name existing immutable intent/binding APIs. They do not apply profile overrides.
+
+| Token | Meaning here |
+| --- | --- |
+| `SizeSetProfilePin` | Compatibility alias for the shared core selected-profile pin |
+| `SizeSetProfilePinError` | Alias retaining the shared pin's refused field and original spelling |
+| `schema_version` | Explicit schema label, independent of content version |
+| `content_version` | Explicit profile-content label; no latest-version selection |
+| `SizeSetInputs` | Current borrowed garment or MTM source view |
+| `SizeSetResolutionOriginDefinition` | Editable exact source/profile/target/provenance metadata |
+| `SizeSetTransformationDefinition` | Editable transformation identity, source pin, provenance, kind and state |
+| `SizeSetTransformationKind` | Explicit label mapping, base substitution, break scaling or chart replacement |
+| `SizeSetTransformationState` | Original known/assumed/unknown/preference/derived intent state and source |
+| `LabelMapping` | Transformation kind/payload for explicit existing-member label correspondences |
+| `ScalarInputDeclaration` | Canonical general scalar record; scaling binds its explicit Ratio kind |
+| `SizeBreakContext` | Actual current membership, axes, numeric sources and measurement bindings |
+| `SizeBreakScalingInputs` | Borrowed original break, dedicated Length delta and Ratio factor |
+| `MissingBreak` | Transformation refusal naming an absent available break |
+| `MissingFactor` | Transformation refusal naming a factor absent from all supplied records |
+| `FactorRole` | Transformation refusal: the supplied factor id has a different canonical record role |
+| `FactorKind` | Transformation refusal: actual general scalar factor is not Ratio |
+| `SourceMismatch` | Origin/transformation refusal retaining authored and actual source set pins |
+| `ChartContextRequired` | Source-only transformation API lacks actual authored replacement-chart candidates |
+| `SizeSetResolutionIntentDefinition` | Editable immutable origin plus authored ordered transformation vector |
+| `SizeSetResolutionIntent` | Locally checked origin/declaration aggregate, without applied effects |
+| `origin` | Actual immutable resolution-origin metadata in the intent definition |
+| `transformations` | Authored ordered intent declarations, including unresolved states |
+| `new` | Constructor on the named type: pin labels or locally checked source-bound metadata/intent |
+| `validate_current` | Recheck source inputs and current bindings; no inferred replacement candidates |
+| `new_with_context` | Transformation/intent constructor with actual chart replacement context |
+| `validate_current_with_context` | Recheck source and authored replacement targets through that context |
+| `resolve` | Chart context lookup returning the actual validated replacement input view |
+
 ## Pin the selected profile explicitly
 
 `sc-core::ontology::SelectedProfilePin` retains `profile_id`, `schema_version` and `content_version`.

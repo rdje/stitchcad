@@ -88,7 +88,7 @@ targets with exact full readers. Sin/cos and atan/atan2 value kernels are implem
 tangent's separate resource plan and implementation remain open.
 
 Individual named axes with explicit ordered values and canonical source/state borrows are available
-([contract](../spec/size-sets.md#executable-individual-axes--g1-slice4c21)). [Complete member coordinates](../spec/size-sets.md#complete-axismember-points--g1-slice4c22)
+([contract](../spec/size-axes.md#executable-individual-axes--g1-slice4c21)). [Complete member coordinates](../spec/size-axes.md#complete-axismember-points--g1-slice4c22)
 require >=1 explicit axis, including singletons. Signed breaks, explicit coverage and composite current
 inputs and scope review are implemented. Resolved profile intent remains G1-SLICE.4c.4.
 Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,

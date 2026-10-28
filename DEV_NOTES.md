@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — command vocabulary declarations
+## _(2026-10-28 UTC)_ — size-set vocabulary and bounded axis chapter
 
-0479 .6.vocabulary.1 remeasures D250:140 token/use rows across13 chapters,not unique defects. Scope review quotes existing Rust API names/variants;five command-family chapters lacked table declarations.
-Declare exact core input,scope,authority,evaluation,artifact and release meanings locally. No API/runtime change or census exemption. Exact set delta resolves43 rows with0 new;97 remain in size-set/formula/local chapters.
-Five actual copied declaration removals refuse their named token;driver passes0 over existing97 baseline. mdbook/publication86 chapters/161 API rows/1549 source/2620 rendered links pass0. Full glossary acceptance stays pending.
-Promotion:indexed machine-token decision;whole0478 scope/lesson/changelog633 verified3 exact Git spans. Retention1087/2450002 residentB pass0. LIVE reviewed unchanged:G1 6/18,D250 owned;README unchanged. Next .vocabulary.2.
-[Whole0478 publication acceptance](docs/history/stitchcad-devnotes-part633.md) retains full45 controls and exact feature boundary.
+0480 .6.vocabulary.2 declares actual size-set,axis,break and transformation APIs/fields/local example names. Existing parent40386B left574B;whole axis/member contract moves to its own bounded chapter,with original anchors retained.
+Python source oracle proves moved body byte-equal except one navigation sentence. Update SUMMARY/topic index,actual incoming links and two API-status rows;no Rust or census policy changes. Exact C1 delta97→32:65 resolved/0 new.
+Two copied actual SizeAxis/SizeSetResolutionIntent declaration removals refuse by name;driver passes0. Final mdbook/publication87 chapters/161 API rows/1555 source/2637 rendered links pass0;full glossary acceptance remains owned.
+Promotion:indexed machine-token decision;whole0479 scope/lesson/changelog634 verifies3 Git spans. Retention1088/2453918 residentB passes0. LIVE reviewed unchanged:G1 6/18,D250 owned;README unchanged. Next formula declarations .vocabulary.3.
+[Whole0479 command declaration lesson](docs/history/stitchcad-devnotes-part634.md) retains exact140→97 delta and five copied controls.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

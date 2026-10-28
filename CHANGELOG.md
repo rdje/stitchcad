@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0479 — declare actual command API vocabulary
+## STITCHCAD-G1-0480 — declare size-set vocabulary and split the complete axis contract
 
-- Declare existing command,scope,authority,evaluation,artifact and release API/variant meanings in five owning chapters;no API or runtime change.
-- Current glossary census140→97 token/use rows:43 resolved,0 new. Five copied actual declaration-removal controls refuse by name;full glossary acceptance remains pending.
-- Focused book build/publication86 chapters/161 API rows/1549 source/2620 rendered links pass. Whole0478 scope/lesson/changelog retained633;continue size-set declarations.
+- Declare actual size-set,axis,break and transformation API/field/local-example meanings;resolve65 more C1 token/use pairs,97→32 with0 new.
+- Move the complete axis/member contract into a bounded linked chapter;preserve old anchors,update incoming navigation and API-status owners. Whole-body oracle and two actual declaration-removal controls pass.
+- Final book87 chapters/161 API rows/1555 source/2637 rendered links passes. No runtime or census exemption changes. Whole0479 retained634;continue formula declarations.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

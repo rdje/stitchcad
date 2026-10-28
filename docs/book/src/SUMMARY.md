@@ -62,6 +62,7 @@
   - [The supported envelope](spec/feature-matrix.md)
   - [Instantiation paths](spec/instantiation-paths.md)
   - [Size sets](spec/size-sets.md)
+  - [Size axes and member coordinates](spec/size-axes.md)
   - [SizeSet profile transformations](spec/size-set-transformations.md)
   - [Measurement and size standards](spec/standards.md)
   - [The reference skirt](spec/reference-skirt.md)

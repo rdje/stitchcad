@@ -1121,8 +1121,8 @@ Repair canonical API/variant/local declarations without weakening C1 or adding b
 Secondary P3: baseline and current advisory awk-to-head15 pipeline prints a pipe-close I/O diagnostic;
 source tail pinpoints it, without changing C1's132 rows. Repair under the same owner after C1 closure.
 Current feature may proceed with this explicit baseline gap; no full glossary/CI pass is claimed.
-0479 current census140 rows/13 chapters;command declarations resolve43 with0 new rows,97 remain.
-Five copied actual-declaration removals refuse by name;size-set/formula/local rows remain owned before integration.
+0479 command declarations resolve43;0480 size-set/axis declarations resolve65 more,140→32 rows/0 new.
+Copied removals refuse by name;whole axis chapter/old-anchor navigation passes;formula/local closure remains owned.
 
 Verified D251/D252 scope corrections retained whole in [part498](../history/window21.md#stitchcad-devnotes-part498md).
 

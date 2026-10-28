@@ -73,8 +73,8 @@ formula numeric value refusals	annexes/formula-rationals.md	crates/sc-core/src/r
 formula stored scalar values	annexes/formula-rationals.md	crates/sc-core/src/recipe/bound.rs	FormulaBoundValue	G1-SLICE.5c.3.2	4.2
 formula binding value refusal	annexes/formula-rationals.md	crates/sc-core/src/recipe/bound.rs	FormulaBindingValueError	G1-SLICE.5c.3.2	4.2
 formula binding value rules	annexes/formula-rationals.md	crates/sc-core/src/recipe/bound.rs	FormulaBindingValueRule	G1-SLICE.5c.3.2	4.2
-size axes	spec/size-sets.md	crates/sc-measure/src/size_axis.rs	SizeAxis	G1-SLICE.4c.2.1	3.4
-size member coordinates	spec/size-sets.md	crates/sc-measure/src/size_axes.rs	SizeAxes	G1-SLICE.4c.2.2	3.4
+size axes	spec/size-axes.md	crates/sc-measure/src/size_axis.rs	SizeAxis	G1-SLICE.4c.2.1	3.4
+size member coordinates	spec/size-axes.md	crates/sc-measure/src/size_axes.rs	SizeAxes	G1-SLICE.4c.2.2	3.4
 signed size breaks	spec/size-sets.md	crates/sc-measure/src/size_break.rs	SizeBreak	G1-SLICE.4c.3d.1	3.4
 size break coverage	spec/size-sets.md	crates/sc-measure/src/size_breaks.rs	SizeBreaks	G1-SLICE.4c.3d.2	3.4
 garment SizeSet inputs	spec/size-sets.md	crates/sc-measure/src/size_set/garment.rs	GarmentSizeSetInputs	G1-SLICE.4c.3d.3.1	3.4
