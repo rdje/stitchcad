@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — formula value API declarations
+## _(2026-10-28 UTC)_ — exact resource fixture vocabulary
 
-0481 .6.vocabulary.3 quotes existing core static proof/root,canonical scalar/stored binding and value-level approximation/operator/binding/tolerance/assertion/conditional API meanings in three formula annexes. The old bound-value table left its type unquoted.
-Exact census difference32→7:25 resolved/0 new;all formula populations clear. Types and method meanings come from actual core definitions. Static checking,value-level computation and complete expression/statement execution remain distinct;no Rust/API or census change.
-Final mdbook/publication87 chapters/161 API rows/1555 source/2638 rendered links pass0. Remaining seven source/model-example rows and full glossary acceptance are still owned. This focused doc check claims no new runtime verification.
-Promotion:indexed machine-token decision;whole0480 scope/lesson/changelog635 verifies3 Git spans. Retention1089/2458081 residentB passes0. LIVE reviewed unchanged:G1 6/18,D250 owned;README unchanged. Next .vocabulary.4.
-[Whole0480 size-set/axis lesson](docs/history/stitchcad-devnotes-part635.md) retains exact97→32 delta,whole-body oracle and copied controls.
+0482 .6.vocabulary.4 checks actual native fixture spellings for source body/garment/Ease binding tokens,axis name,label coordinate and model parameter tokens. Declare these exact authored strings with their local owner/meaning,without product defaults or new schema fields.
+Exact census delta7→0 resolves the last seven pairs with0 new. Across four slices140 original pairs clear;all glossary structure/ownership/reference/index/coverage rules now pass:310 terms/9 parts/158 owned tokens. Rust/API/census policy remain unchanged.
+Final mdbook/publication87 chapters/161 API rows/1555 source/2639 rendered links pass0. Full glossary acceptance remains owned;next investigate recorded P3 advisory pipe diagnostic after C1 closure,without assuming current silence proves its repair.
+Promotion:indexed machine-token decision;whole0481 scope/lesson/changelog636 verifies3 Git spans. Retention1090/2462129 residentB passes0. LIVE now records D250 C1 clear/advisory+probes pending;G1still6/18. README unchanged;full PNT continues.
+[Whole0481 formula API lesson](docs/history/stitchcad-devnotes-part636.md) retains exact32→7 delta and runtime/static boundaries.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

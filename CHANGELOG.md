@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0481 — declare actual formula value API vocabulary
+## STITCHCAD-G1-0482 — close current glossary declaration coverage
 
-- Declare checked-expression/root,canonical scalar/stored binding and value-level approximation/operator/binding/tolerance/assertion/conditional meanings in three annexes.
-- Resolve25 more C1 token/use pairs,32→7 with0 new;no formula rows remain. Keep static proof,value computation and full expression/statement execution distinct;no Rust/API/census change.
-- Final book87 chapters/161 API rows/1555 source/2638 rendered links passes. Whole0480 retained635;continue seven resource-example rows before full glossary acceptance.
+- Declare seven exact source/model accounting fixture strings by actual native meaning;no product defaults,new fields or exemptions.
+- Current glossary census passes310 terms/9 parts/158 owned tokens/0 failures. All140 original token/use pairs resolved across four slices without Rust/API/census changes.
+- Final book87 chapters/161 API rows/1555 source/2639 rendered links passes. Whole0481 retained636;P3 advisory investigation and full glossary acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -104,3 +104,12 @@ No. Quote actual static proof/root,canonical scalar/stored binding and runtime v
 comparison/assertion/conditional interfaces while retaining their distinct execution boundaries.
 Three annexes resolve25 more rows,32→7 with0 new. A bare type name in a table is still not a token
 column declaration;the existing bound-value row now quotes its actual name. Rust/API behavior stays unchanged.
+
+## Fixture-local strings0482
+
+answers: "how are short accounting fixture names declared without inventing product defaults?"
+
+Declare actual authored text by its fixture meaning:body/garment/Ease binding tokens,axis name,
+coordinate label and parameter tokens. Quote exact native spellings;do not rename them or exempt a
+whole family. The last seven rows clear,140→0 overall,and the unchanged census passes every rule.
+Advisory investigation/full glossary probes remain separate acceptance,not inferred from a green census.

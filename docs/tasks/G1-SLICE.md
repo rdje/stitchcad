@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0481
+## Current leaf acceptance —0482
 
-- [x] ROOT CAUSE: glossary census/current core definitions →25 formula API/method rows without token declarations rc=0;existing binding table also leaves its type unquoted.
-- [x] ADDRESSED: same census →7 rows rc=1 expected;Python exact set delta25 resolved/0 new rc=0;all formula chapter populations clear.
-- [x] NO REGRESSION: mdbook build/publication →87 chapters/161 API rows/1555 source/2638 rendered links rc=0;Rust/census unchanged.
+- [x] ROOT CAUSE: Python fixture/source review →seven source/model-local strings used without declaration rows rc=0;they denote authored test text,not defaults.
+- [x] ADDRESSED: bash docs/tasks/artifacts/glossary/run_glossary_census.sh →310 terms/9 parts/158 owned tokens/0 failures rc=0;Python delta7→0/0 new rows rc=0.
+- [x] NO REGRESSION: mdbook build/publication →87 chapters/161 API rows/1555 source/2639 rendered links rc=0;code/census unchanged.
 
 ## Goal
 
@@ -55,7 +55,6 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 | WASM evidence: capability matrix with tested versions + limitations | `.12` |
 
 ## Task Tree
-
 - ID: `G1-SLICE`
   Status: `active`
   Goal: the architecture slice runs on native and in a browser, with the command bus and
@@ -641,18 +640,20 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0480 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part635.md).
 - ID: `G1-SLICE.6.vocabulary.3`
   Status: `done`
-  Goal: canonical formula checked-tree,bindings,runtime provenance/comparison API and method declarations.
-  - [x] REPRODUCE / ISSUE: bash docs/tasks/artifacts/glossary/run_glossary_census.sh →32 rows rc=1;25 rows belong to three formula annexes.
-  - [x] ROOT CAUSE: Python census/core source review →existing types/methods lack token-first declaration rows;bound type has an unquoted first cell,rc=0.
-  - [x] FIX: declare actual static proof/root,stored scalar/bound value and value-level source/operator/binding/comparison/assertion/conditional meanings;preserve execution boundaries.
-  - [x] ADDRESSED: same glossary census →7 rows rc=1 expected;Python set difference →25 resolved/0 new rc=0;no formula chapter failures remain.
-  - [x] NO REGRESSION: mdbook build plus book_publication.py main_inputs/check →87 chapters/161 API rows/1555 source/2638 rendered links rc=0;no Rust/API/census changes.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/indexed decision/index updated;LIVE reviewed unchanged G1 6/18,D250 owned;README unchanged. transition_receipts.py --record part635 →3 exact Git spans rc=0;history_archive.sh verify-retention →1089/2458081 residentB rc=0.
-  Verification: focused declaration delta/book/retention pass;seven local-example rows and full glossary acceptance stay owned.
-  Commit: STITCHCAD-G1-0481;next .vocabulary.4 local resource examples.
+  Goal:0481 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part636.md).
 - ID: `G1-SLICE.6.vocabulary.4`
+  Status: `done`
+  Goal: actual source/model accounting fixture-local names;all current C1 declaration rows resolved.
+  - [x] REPRODUCE / ISSUE: bash docs/tasks/artifacts/glossary/run_glossary_census.sh →7 rows rc=1 before;source S/a/b/e/gg and model a/bb lack declaration rows.
+  - [x] ROOT CAUSE: Python current native fixture review →authored body/garment/Ease tokens,axis name,label spelling and parameter tokens match actual source spellings rc=0.
+  - [x] FIX: declare each fixture-local string by actual meaning and owner;distinguish text from product defaults/new fields;no Rust/API/census changes.
+  - [x] ADDRESSED: same census →310 terms/9 parts/158 owned tokens/0 failures rc=0;Python delta →7 resolved/0 new rc=0,all140 original rows cleared.
+  - [x] NO REGRESSION: mdbook build plus book_publication.py main_inputs/check →87 chapters/161 API rows/1555 source/2639 rendered links rc=0;full glossary probes remain owned.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/indexed decision/index/LIVE updated;README unchanged. transition_receipts.py --record part636 →3 exact Git spans rc=0;history_archive.sh verify-retention →1090/2462129 residentB rc=0.
+  Commit: STITCHCAD-G1-0482;next .vocabulary.advisory then full glossary acceptance.
+- ID: `G1-SLICE.6.vocabulary.advisory`
   Status: `pending`
-  Goal: declare source/model accounting example-local names by actual fixture meaning;close remaining C1 rows.
+  Goal: after C1 closure,reproduce recorded P3 advisory awk/head pipe-close diagnostic;repair if live.
 - ID: `G1-SLICE.6.5`
   Status: `in_progress`
   Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.

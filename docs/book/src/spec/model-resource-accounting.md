@@ -153,6 +153,13 @@ scope preserves a prior meter error. This closes Piece/copy/topology component a
 
 ## Actual input metadata accounting
 
+The parameter names below are exact authored test data, not inferred product quantities or defaults.
+
+| Fixture token | Meaning here |
+| --- | --- |
+| `a` | First parameter's one-byte machine token in the input-metadata fixture |
+| `bb` | Second parameter's two-byte machine token in that same fixture |
+
 charge_parameter_resources precharges the actual parameter vector, then charges each held machine
 token's exact bytes in authored order. Target references remain fixed metadata; it performs no
 canonical target lookup or numeric-availability read. Refusals retain actual parameter owner/index.

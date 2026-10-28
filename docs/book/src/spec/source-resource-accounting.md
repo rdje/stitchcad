@@ -9,6 +9,19 @@ intents hold transformations/evidence/label mappings outside these source owners
 admission is G4-PROFILES.1.resource-admission, required before future profile exposure; current model
 accounting supplies no certificate for that separate input.
 
+## Native fixture text vocabulary
+
+These are exact authored strings in the accounting examples, not product defaults or new schema fields.
+Their UTF-8 bytes are charged separately at each actual owned occurrence.
+
+| Fixture token | Meaning here |
+| --- | --- |
+| `b` | Body Measurement token retained in the actual measurement/Ease fixture bindings |
+| `gg` | Garment Measurement token repeated in actual measurement, chart and saved bindings |
+| `e` | Ease-entry token retained by the actual EaseSet snapshot |
+| `a` | Authored axis name in the common SizeSet metadata fixture |
+| `S` | Authored label-coordinate spelling in that fixture's axis value catalog |
+
 ## Actual measurement and Ease sources
 
 sc-measure's charge_measurement_input_resources borrows actual MeasurementInputs. It precharges
