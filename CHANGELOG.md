@@ -3,11 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0526 — accept the implemented captured seam caller component
+## STITCHCAD-G1-0527 — accept implemented nonuniform source/context/caller component
 
-- After four implementation slices,scoped native command13,actual Design caller4 and public seam API docs20 pass. Full original source/rounding/context,resource/currentness and original cause boundaries stay exact;no product code or numeric kernel changes.
-- Independent weighted160+50 and notch6 bound/302 Fraction-width/380 query controls pass,including wide values and orientation/counterfactual falsifiers. Caller component closes with scoped checks;broader nonuniform checkpoint and semantic stop/lineage implementation follow.
-- Whole0525 retained684/three exact Git spans;book92/223/1587/2744,retention1138 pass. LIVE/README unchanged,G1 6/18. Real formula/Profile/geometry,physical/authority/aggregate operations,paired effects and full verification remain explicitly owned.
+- Post-implementation scoped weighted10,Notch37,private original-point4 and actual Design Notch5/weighted1 pass. Original source/rounding/frame/resource/currentness and symbolic/limit boundaries stay exact;no product code/kernel/validator changes. Mathematical/source ease
+  component closes at this scope.
+- Existing independent projection workspace6/960,inverse6,comparison6,Notch recovery3,weighted160+50 and Notch quantity6/302/380 controls pass. Caller0526 proof13/4/20 retained with unchanged implementation;no new caller verdict inferred. Semantic stops next,then new span
+  lineage.
+- Whole0526 retained685/three exact Git spans;book92/223/1587/2745,retention1139 pass. LIVE/README unchanged,G1 6/18. Real formula/Profile/geometry,physical/authority/aggregate operations,paired effects and full verification remain explicit later owners.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

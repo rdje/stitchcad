@@ -174,7 +174,26 @@ width refusal,valid wide originals and unchanged upstream ambiguous/coincident e
 Design source admission now joins these views;physical matching/paired effects and their real
 formula/profile/geometry dependencies remain separately owned.
 
-The captured caller component checkpoint now passes13 native command cases,4 actual Design caller
+The captured caller component checkpoint passes13 native command cases,4 actual Design caller
 cases and20 public seam API doctests after implementation. Independent weighted and original-notch
-quantity controls pass. This is scoped component acceptance;broader nonuniform and whole paired/
-mutation/physical verification remain separate subsequent work.
+quantity controls pass. This is scoped component acceptance;whole paired/mutation/physical
+verification remains separate subsequent work.
+
+## Nonuniform source/context/caller checkpoint
+
+After arithmetic,actual original-notch context and captured caller implementation,the scoped
+nonuniform checkpoint passes10 weighted source/caller cases,37 selected Notch source/query/caller
+cases and4 private original-point guards. Existing actual Design source/query joins pass5 Notch
+cases plus1 retained weighted case. The committed captured caller checkpoint above retains its
+exact unchanged production sources;no caller cases or API doctests are claimed anew from that reuse.
+
+Independent controls pass for projection reservation6 rows/960 affine-width checks,original inverse6
+Fraction rows,original comparison6 cases,Notch recovery3 cases,weighted160+50 rows and notch quantity
+6 bound/302 Fraction-width/380 exact query rows. They include valid wide originals,actual ambiguous
+inverse witnesses,bounded-view refusals,orientation/rounding and quantum counterfactuals. No product
+kernel or source validator is changed by this checkpoint.
+
+This closes the implemented nonuniform mathematical source/context/caller component with scoped
+checks. Semantic stop partition and new span lineage are next implementation work. Real formula/
+Profile/geometry,physical matching,fresh authority/aggregate operation admission,atomic effects,
+whole paired acceptance and full pre-push verification remain their explicitly named owners.

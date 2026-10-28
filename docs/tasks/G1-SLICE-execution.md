@@ -150,10 +150,11 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0487 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part642md).
 - ID: `G1-SLICE.6.5.3.2.3.2`
-  Status: `in_progress`
-  Goal: P1 D301 conserve original parent allocation across child partitions and nested splits.
-  Children .1 exact normalized progress;.2 root-cumulative uniform explicit quantization;.3 retained
-  symbolic source/provenance representation;.4 weighted/notch/context integration before effects.
+  Status: `done`
+  Goal:0527 original ease source/portion and exact Uniform/weighted/notch quantities implemented
+  with scoped source/context/caller checkpoints. Symbolic full roots retain actual provenance;
+  no child renormalization. Real providers/physical matching and paired stop/lineage/effects/full
+  acceptance stay explicit later owners;this closes mathematical/source component scope only.
 - ID: `G1-SLICE.6.5.3.2.3.2.1`
   Status: `done`
   Goal:0488 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part643md).
@@ -187,12 +188,11 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0495 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part651md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4`
-  Status: `in_progress`
-  Goal: weighted/notch-bounded cumulative allocation through actual source/stop/geometry contexts;
-  preserve original unavailable-source failures and integrate .3/.4 partition ownership before effects.
-  Children .1 recover exact arithmetic/context contracts;.2 weighted source cumulative quantities;
-  .3 original-frame semantic-notch context;.4 allocation/command/source-context integration;
-  .acceptance deferred until implementation. Physical/correspondence dependencies stay explicit.
+  Status: `done`
+  Goal:0527 weighted/notch exact original arithmetic,actual semantic context and captured/Design
+  caller component implemented with scoped post-implementation acceptance. Original unavailable
+  source/quantity errors,resource/provenance and wide-coordinate contracts remain exact. Physical/
+  formula/Profile/geometry,stop/lineage/effect and whole paired acceptance retain later owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.1`
   Status: `done`
   Goal:0497 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part653md).
@@ -328,41 +328,43 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0525 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part684.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.4.acceptance`
   Status: `done`
-  Goal:0526 scoped captured caller component checkpoint after all four implementation children;
-  pure mathematical/source admission scope,not whole paired/physical/effect acceptance.
-  - [x] REPRODUCE / ISSUE: 0526 cargo test -p sc-core --test sewing_contract command_
-    →13 passed/82 filtered,rc=0. All capture/weighted/notch caller cases plus nested original Uniform
-    command-view rounding control run at the same committed implementation. Separate child-focused
-    checks do not replace this now-owned post-implementation component checkpoint.
-  - [x] ROOT CAUSE: 0526 cargo test -p sc-measure --test design_inputs_contract command_seam_source
-    →4 passed/172 filtered,rc=0. Actual owned Design source/capture/currentness and weighted/notch
-    quantity joins preserve independent complete-model,source,capture,context and numeric allowances.
-    Equal IDs,bounded coordinate views or held-source success cannot substitute the actual proofs.
-  - [x] FIX: 0526 execute existing scoped caller suite after .1–.4 implementation and record
-    component-only closure;no product code/kernel or validation behavior changed. cargo test
-    -p sc-core --doc command::seam_ →20 passed/199 filtered,rc=0,including all caller privacy/lifetime
-    controls and positive binding/capture/Uniform/weighted/notch/actual Design examples.
-  - [x] ADDRESSED: 0526 native command_13 and actual Design command_seam_source4 →passed,rc=0.
-    Direct/retained capture admission,full original density/stops,source/target/stage/std causes,
-    A/B and Same/Opposite signed allocation,original child rounding,actual context identity,
-    64/189-bit values,quota/symbolic precedence and current copy replacement remain exact.
-    Public seam doctests20 →passed,rc=0. No partial accepted token or helper-selected original.
-  - [x] NO REGRESSION: 0526 nonuniform_ease_oracle.py --check →160 density/50 original-domain
-    Fraction/common-denominator rows and float/orientation/equal-cut controls,rc=0;
-    notch_quantity_oracle.py --check →6 bound/302 independent Fraction-width/380 exact query rows,
-    64/188-bit original controls,rc=0. git diff --quiet HEAD -- crates →rc=0. Book/publication
-    92/223/1587/2744,684 receipt3 exact Git spans,retention1138 logical/43 working/63902 decodedL/
-    4945838 decodedB/2523175 residentB →pass,rc=0. Native checks use local_environment.py. Full CI,
-    paired stop/lineage/mutation/physical acceptance stay .6.5.3.2.acceptance and required pre-push.
-  - [x] LOCKSTEP: 0526 caller parent/leaf checkpoint,book capture+quantity sections,source decision,
-    task index/D301/MEMORY/DEV/CHANGE align. Whole0525 retained684/3 exact Git spans. LIVE/README
-    reviewed unchanged,G1 6/18. Next .4.acceptance nonuniform component checkpoint now arithmetic,
-    context and caller implementations are complete;then actual semantic stop partition .3.3.
-    promotion: declined (scoped verification of indexed ownership/source/resource/numeric contracts;no new policy or physical assumption).
+  Goal:0526 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part685.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.acceptance`
-  Status: `pending`
-  Goal: deferred scoped weighted/notch/context acceptance after .1–.4 implementation;full paired
-  stop/lineage/effect and bus transaction acceptance remains .6.5.3.2.acceptance.
+  Status: `done`
+  Goal:0527 scoped nonuniform source/context/caller checkpoint after implementation;no whole
+  paired/mutation/physical/full CI claim. Mathematical/source ease component closes at this scope.
+  - [x] REPRODUCE / ISSUE: 0527 cargo test -p sc-core --test sewing_contract weighted_
+    →10 passed/85 filtered,rc=0;notch_ →37 passed/58 filtered,rc=0. Weighted/Notch source/context/
+    query/caller cases run against one committed implementation after all implementation children.
+  - [x] ROOT CAUSE: 0527 cargo test -p sc-measure --test design_inputs_contract original_notch_design
+    →5 passed/171 filtered,rc=0;retained_weighted_source_acceptance →1 passed/175 filtered,rc=0.
+    Actual owned Design joins must preserve original source and currentness boundaries separately;
+    a pure source quantity or local context cannot certify physical matching/whole effect readiness.
+  - [x] FIX: 0527 run existing scoped nonuniform checkpoint and close implemented mathematical/
+    source scope only. cargo test -p sc-core --lib original_point →4 passed/80 filtered,rc=0,
+    preserving actual integer reservation,private normalization,wide affine projection and exact
+    comparison guards. No product code/kernel or source validator change. Caller checkpoint0526
+    remains exact committed evidence,not a newly observed caller/doc verdict.
+  - [x] ADDRESSED: 0527 weighted_10/notch_37/private original_point4 and actual Design Notch5/
+    weighted1 →pass,rc=0. Full density/root stops,original boundaries,A/B orientation and signed
+    rounding,valid wide originals,original ambiguity/coincidence,quota/symbolic precedence,current
+    copy replacement and source/target error context remain exact. Existing actual caller13/4/20
+    proof is retained685;git diff --quiet HEAD~1 HEAD -- crates docs/tasks/artifacts/seam_partition
+    →rc=0 confirms unchanged implementation/oracle sources across its checkpoint commit.
+  - [x] NO REGRESSION: 0527 existing --check oracles all rc=0:projection workspace6 integer rows/
+    960 Fraction-width controls,original inverse6 Fraction rows,original comparison6 cases,Notch
+    context3 cases,weighted160+50 rows,Notch quantity6 bound/302 Fraction-width/380 exact queries.
+    Valid64/188/189-bit values,bounded-view refusals and orientation/quantum counterfactuals stay
+    independently checked. Native commands use local_environment.py. Book/publication92/223/1587/
+    2745,685 receipt3 exact Git spans,retention1139 logical/44 working/63960 decodedL/4951895 decodedB/
+    2529232 residentB →pass,rc=0. git diff --quiet HEAD -- crates docs/tasks/artifacts/seam_partition
+    →rc=0. Whole paired/mutation/physical/full gates stay .6.5.3.2.acceptance/required pre-push.
+  - [x] LOCKSTEP: 0527 ease/nonuniform parent closures and checkpoint leaf,book/source decision,
+    task index/D301/MEMORY/DEV/CHANGE align;whole0526 caller checkpoint retained685/3 exact Git spans.
+    LIVE/README reviewed unchanged,G1 6/18. Next semantic stop partition .6.5.3.2.3.3,then real new
+    span lineage .3.4. Formula/Profile/geometry/current authority/aggregate operations/paired effects
+    remain scheduled prerequisites before effect consumption. No fake provider or physical success.
+    promotion: declined (scoped verification of indexed source/context/resource/numeric contracts;no new policy or physical assumption).
 
 - ID: `G1-SLICE.6.5.3.2.3.3`
   Status: `pending`

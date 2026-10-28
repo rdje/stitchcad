@@ -1,19 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.acceptance in docs/tasks/G1-SLICE-execution.md:scoped nonuniform
-  source/context/caller checkpoint now weighted,notch and actual caller implementations complete.
-  Then semantic stop partition .6.5.3.2.3.3;full paired/physical/effect acceptance stays later.
-- Captured caller component0526 closes with13 native command cases,4 actual Design caller cases,
-  20 public seam API doctests and independent weighted160+50/notch6+302+380 controls,all pass0.
-  No product code/kernel change. Book92/223/1587/2744,684 receipt3 exact spans/retention1138 pass;
-  whole0525 retained684. LIVE/README unchanged,G1 6/18;no full paired/physical/CI verdict claimed.
-- Actual Design source entry0525 admits complete model resources before current ownership/root/
-  landmarks/graph/amount preflight,target/cuts and capture;borrows real declaration/state/demand.
-  Weighted/notch views retain full original source/rounding and actual external context borrows.
-- Real formula execution .5e.2/.5e.4,Profile G4,geometry G2/.5f.3b/G3 and paired stops/lineage/
-  authority/aggregate operations/effects/full proof remain explicit owners before effect consumption.
-  No physical/provider substitute. Consume all preparation/commit terminals;exact native --index
-  authority stays mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400.
+- Next G1-SLICE.6.5.3.2.3.3 in docs/tasks/G1-SLICE-execution.md:actual semantic stop partition
+  for A-ordered paired intervals. Recover canonical cut-boundary/Notch/Turn/copy/current anchor
+  contracts before changes;own safe sub-slices before code. Then actual new span lineage .3.4.
+- Nonuniform source/context/caller checkpoint0527 passes scoped weighted10/Notch37/private point4,
+  actual Design Notch5/weighted1 and6 exact oracle families. Captured caller0526 proof13/4/20
+  retained685;implementation unchanged. Mathematical/source ease .3.2/.4 scope closes only here.
+- Book92/223/1587/2745,685 receipt3 exact Git spans/retention1139 pass;whole0526 retained685.
+  LIVE/README unchanged,G1 6/18. No whole paired/mutation/physical/full CI verdict claimed.
+- Exact full-root Uniform/weighted/notch boundary differences preserve original quantum/sign/
+  source metadata,wide coordinates and original context/limit errors. Actual Design entry admits
+  full logical envelope/current sources/target/cuts/capture;no source clone on refusal.
+- Real formula execution .5e.2/.5e.4,Profile G4,geometry G2/.5f.3b/G3,paired stop/lineage/authority/
+  aggregate operations/effects/full proof remain explicit owners before effect consumption. No
+  provider/physical substitute. Consume all preparation/commit terminals;native --index authority
+  mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

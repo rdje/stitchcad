@@ -196,4 +196,4 @@ Actual Design source/query acceptance preserves±2 originals with quarter-partit
 Uniform control spends±1 there. Fresh copy replacement refuses current declarations/local source,
 while original immutable mathematical quantities survive;symbolic amounts remain unavailable.
 Scoped post-implementation Notch checkpoint34 public/4 private plus actual Design5 passes.
-Captured caller checkpoint13 native/4 actual Design/20 docs passes;broader nonuniform and physical/dependency/effect proof remain owned.
+Nonuniform checkpoint10 weighted/37 Notch/4 private+6 Design passes;caller13/4/20 retained. Physical/dependency/effect proof stays owned.
