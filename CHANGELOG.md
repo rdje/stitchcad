@@ -3,13 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0514 — compare exact original coordinates without bounded views
+## STITCHCAD-G1-0515 — bind actual original-notch interval context
 
-- Private guarded wide/reference ordering reuses cross-products in inverse merge and normalized unit-domain checks. Concrete caller operations and actual numeric/quota causes survive;existing2W+128 covers products. No new public ordering/integer type,reference narrowing or
-  direction filter.
-- Six independent Fraction cases drive actual projection values:64/188-bit originals,3 Param refusals/1 beyond-u128,equality/source bounds/reversed order. Private2+guard1/public inverse6/Notch4/scoped Clippy/fmt/width6+960 pass. Exact quota accepts;one bit below and invalid
-  unit/denominator refuse.
-- Whole0513 retained672/three exact Git spans;book90/204/1572/2703/glossary0/map/retention1126 pass. LIVE/README unchanged,G1 6/18. Actual frame-bound original-notch context next;quantities/physical matching/paired effects/full acceptance remain owned.
+- Actual named Notch/source/ledger/creation-frame borrows and unique distinct in-domain originals. Checked C+1 then both point admissions precede wide work. Preserve named/authored order versus mathematical bounds;complete ambiguity/coincidence/frame/bounds evidence and original
+  standard causes;no narrowing or default amount.
+- Native context7/local10/frame port1(6 Fraction rows)/doc2+1/scoped Clippy/fmt/oracle3 pass. Wide originals,actual sideB/closed bounds/symbolic data,ambiguity,coincidence,eight-cycle C2/C1 quotas,combined overflow and integer refusals remain exact. Fix recovery oracle's stale
+  projection header.
+- Whole0514 retained673/three exact Git spans;book90/207/1572/2703/glossary0/map/retention1127 pass. LIVE/README unchanged,G1 6/18. Focused source-context integration then notch quantities next;whole Design/physical/paired effects/full acceptance remain owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

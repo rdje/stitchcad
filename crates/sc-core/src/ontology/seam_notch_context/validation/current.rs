@@ -4,7 +4,7 @@ use super::{
     NotchSourceValidationError as Error, NotchSourceValidationIssue as Issue,
 };
 use crate::ontology::{
-    AnchorError, CutPlan, CutPlanError, EdgeRange, EntityId, Piece, RangeCoverage,
+    AnchorError, CutPlan, CutPlanError, EdgeRange, EntityId, Notch, Piece, RangeCoverage,
     RangeCoverageLimits, RangePortion, ResolvedRef, SeamSideId, SewingError, SewingLandmark,
     StopLandmark,
 };
@@ -300,32 +300,36 @@ fn stops(
     }
     Ok(seen)
 }
-fn distribution(
-    context: &Context<'_>,
-    marks: &BTreeMap<EntityId, MarkView<'_>>,
+fn distribution<'a>(
+    context: &Context<'a>,
+    marks: &BTreeMap<EntityId, MarkView<'a>>,
     stops: &BTreeSet<StopLandmark>,
-) -> Result<(), Error> {
+) -> Result<(&'a Notch, &'a Notch), Error> {
     let admission = context.admission;
     let (start, end) = admission.notch_ids();
     let side = admission.distribution_side();
     let get = |id| {
-        marks.get(&id).filter(|mark| {
-            matches!(mark.mark, SewingLandmark::Notch(_))
-                && stops.contains(&StopLandmark { side, landmark: id })
-        })
+        let MarkView { mark, current } = *marks.get(&id)?;
+        if !stops.contains(&StopLandmark { side, landmark: id }) {
+            return None;
+        }
+        match mark {
+            SewingLandmark::Notch(notch) => Some((notch, current)),
+            SewingLandmark::Turn(_) => None,
+        }
     };
-    let distinct = get(start).zip(get(end)).is_some_and(|(a, b)| {
-        a.current.edge() != b.current.edge() || a.current.param() != b.current.param()
+    let pair = get(start).zip(get(end)).filter(|((_, a), (_, b))| {
+        start != end && (a.edge() != b.edge() || a.param() != b.param())
     });
-    if start == end || !distinct {
+    let Some(((first, _), (second, _))) = pair else {
         return Err(context.structural(SewingError::InvalidEaseAnchors {
             span: admission.source().span(),
             side,
             start,
             end,
         }));
-    }
-    Ok(())
+    };
+    Ok((first, second))
 }
 pub(super) fn validate(
     admission: NotchSourceAdmission<'_>,
@@ -383,7 +387,7 @@ pub(super) fn validate(
         }));
     }
     let stops = stops(&mut context, &a, &b, &marks)?;
-    distribution(&context, &marks, &stops)?;
+    let (start_notch, end_notch) = distribution(&context, &marks, &stops)?;
     // All local index insertions and ownership-cache appends were checked before allocation.
     // The larger linear reservation also covers the public CutPlan's temporary fixed-copy arrays.
     Ok(NotchSourceValidation {
@@ -392,5 +396,7 @@ pub(super) fn validate(
         index_item_bound: index_bound,
         interval_item_count: context.interval_count,
         index_item_count: context.index_count,
+        start_notch,
+        end_notch,
     })
 }

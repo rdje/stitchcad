@@ -3,7 +3,7 @@
 Notch-bounded allocation needs the actual semantic landmarks and topology journal,not guessed
 parameters or physical notch dimensions. Bounded current uniqueness,whole-interval coverage,original-point workspace
 admission,exact inverse coordinates and borrowed complete source-input admission are implemented.
-Semantic notch context construction and quantity queries remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
+Actual original-notch context construction is implemented with focused checks;quantity queries remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
 is already implemented with focused checks.
 
 | API token | Meaning |
@@ -110,7 +110,7 @@ shared step supplies both consumers;it does not bound the full resolver.
 ## Actual semantic source dependencies
 
 [Actual notch source context](command-notch-sources.md) documents implemented complete borrowed
-input admission and bounded local source validation. Original-coordinate context remains pending.
+input admission,bounded local validation and original-coordinate context construction.
 Point and coverage primitives below do not replace source checks or supply physical correspondence.
 
 ## Query bounded whole-interval coverage
@@ -173,7 +173,7 @@ Native checks exercise actual limits,complete unknown/deleted/gapped/numeric evi
 per-input arithmetic rollback. The14 independent Fraction recomposition rows also feed this query,
 including nine valid complete reductions and five genuine final-width refusals. Actual Notch/Graph/
 retained-source fixtures use bounded coverage alongside their current/original point queries.
-Bounded local source validation is implemented;original-coordinate context and notch quantities retain their next owners.
+Bounded local validation and original-coordinate context are implemented;notch quantities retain their next owner.
 
 ## Query bounded current uniqueness
 
@@ -361,10 +361,10 @@ exact equality,source-bound equality,wide and reversed-source order. Private con
 exact conservative comparison quota and its one-bit-short refusal,plus normalized unit/zero-denominator
 refusals. The inverse/source primitives remain unchanged for valid data under their admitted limits.
 
-These scalar comparisons establish numerical order. The next original-notch context must first
-bind actual ledger/source-creation frames,require unique coordinate/direction candidates,and use
-the actual original side bounds. That source-bound context and its quantity API remain pending;
-private numeric success does not supply those semantic or physical proofs.
+These scalar comparisons establish numerical order. The implemented actual original-notch context
+binds ledger/source-creation frames,requires unique coordinate/direction candidates,and checks the
+actual original side bounds. The linked source chapter documents that scoped context. Quantity and
+physical correspondence remain subsequent obligations;private numeric success alone supplies neither.
 
 ## Actual Notch and retained-source primitive acceptance
 
@@ -386,9 +386,9 @@ and ease/geometry remain deferred to G2/G3. The old Uniform-only cumulative API 
 source with its actual notch-context requirement,original source identity,side and named IDs.
 Coordinates alone do not make semantic notch allocation available.
 
-The current-point/original-coordinate component closes with focused native4 and selected lint/
-format checks passing. Actual complete semantic source context and notch quantities are the next
-implementation stages;physical correspondence,command effects and full paired acceptance remain
+The current-point/original-coordinate primitive component has focused native4 and selected lint/
+format checks passing. Actual source/current/original context is also implemented with its scoped
+checks. Notch quantities,physical correspondence,command effects and full paired acceptance remain
 separate owned work. Earlier inverse/core checks retain their own scoped receipts.
 
 ## Current-reference composition defect
@@ -451,6 +451,6 @@ python3 -I -B docs/tasks/artifacts/seam_partition/original_projection_oracle.py 
 
 Earlier range20/recovery4 receipts retain accepted source states,forward witnesses and corrected
 D305 evidence. Current inverse6/private oracle1/doc2 and selected Clippy/format checks pass with
-focused verification. Actual semantic-notch quantity context and full paired acceptance remain pending. The exact
+focused verification. Actual original-notch context is implemented;quantity queries and full paired acceptance remain pending. The exact
 pre-context sewing decision and closed D302–D304 ledgers are retained in repository history records
 658/659;the current decision keeps standing contracts without a raised ceiling or another map row.

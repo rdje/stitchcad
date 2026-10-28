@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — guarded private original-coordinate ordering
+## _(2026-10-28 UTC)_ — actual frame-bound original-notch context
 
-0514 shares guarded wide/reference cross-products with inverse merge comparison and explicit normalized unit-end checks. Actual stage operation labels remain concrete;each operand/result is admitted before allocation. Existing2W+128 covers2W products and W+63 reference comparison;no narrowing or public API.
-Six frozen Fraction orderings drive actual ledger/admission/projection values,including64/188-bit originals,3 Param refusals/1 beyond-u128,equality/source bounds and reversed5/8 versus3/8. Exact private quota passes;one bit below refuses. Unit and zero-denominator guards retain typed actual causes.
-Private2+guard1/public inverse6/actual Notch4/scoped Clippy/fmt/ordering6/width6+960 pass0. Numeric order and mapping direction remain separate. Actual context must bind matching ledger/source frames and unique candidates before using these private scalars;no semantic quantity or physical proof follows.
-[Whole0513 validation](docs/history/stitchcad-devnotes-part672.md) retains3 exact Git spans. Book90/204/1572/2703,glossary0/map/retention1126 pass. LIVE/README unchanged,G1 6/18;actual original-notch context .4 next. Promotion declined:method-specific implementation of indexed exact arithmetic/frame contracts.
+0515 binds actual named Notch borrows/source/ledger/creation frame to unique distinct in-domain originals. Checked C+1 precedes projection,both point admissions precede wide work. Private ports reject equal-content other snapshots/wrong sources before comparing;no bounded view or absolute-direction filter.
+Named start/end and lower/upper remain separate;complete ambiguous/coincident/bounds/frame projections and standard numeric/admission/projection causes survive. Local proof now retains actual Notch references;all metadata/ledger stays unchanged. Context supplies positions,not amount/global Design/physical readiness.
+Native context7/local10/frame port1(6 Fraction rows)/doc2+1/scoped Clippy/fmt/oracle3 pass0. Wide64-bit original,sideB/closed bounds/symbolic sources,ambiguity,coincident originals,eight cycles/C2 and C1/combined overflow/integer refusal pass. Correct oracle header stale since native projection adoption0509.
+[Whole0514 comparisons](docs/history/stitchcad-devnotes-part673.md) retains3 exact Git spans. Book90/207/1572/2703,glossary0/map/retention1127 pass. LIVE/README unchanged,G1 6/18;focused component integration then quantities next. Promotion declined:existing source/frame/interval contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

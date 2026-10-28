@@ -1,8 +1,8 @@
 # Actual notch source context
 
-Complete actual input admission and bounded local source validation are implemented. Original-notch
-coordinate context construction remains pending;the [point and interval primitives](command-notch-context.md)
-are implemented with focused checks. Quantities and paired effects retain their subsequent owners.
+Complete actual input admission,bounded local validation and original-notch coordinate context are
+implemented with focused checks. They build on the [point and interval primitives](command-notch-context.md).
+Quantity queries and paired effects retain their subsequent owners.
 
 | API token | Meaning |
 | --- | --- |
@@ -12,6 +12,10 @@ are implemented with focused checks. Quantities and paired effects retain their 
 | `NotchSourceAdmissionIssue` | Original intent or complete journal/dependency population refusal |
 | `NotchSourceCollection` | Actual source,copy,Piece edge/hole/fold or landmark collection |
 | `admit_notch_context` | Admit complete actual source dependencies before indexes or derived work |
+| `OriginalNotchContext` | Actual named Notches and distinct in-domain original interval |
+| `OriginalNotchContextError` | Source/named IDs and complete original-context refusal evidence |
+| `OriginalNotchContextIssue` | Actual admission/projection/frame/ambiguity/bounds/coincidence cause |
+| `original_context` | Bind actual locally validated source to exact original notch coordinates |
 | `NotchSourceValidation` | Borrowed local structural proof after actual current-source checks |
 | `NotchSourceValidationError` | Original source identity and concrete bounded validation refusal |
 | `NotchSourceValidationIssue` | Actual structural,point,coverage,quota or derived-bound cause |
@@ -84,7 +88,7 @@ objects and ledgers. They cover symbolic declarations,named versus authored stop
 unused registry/Piece/copy dependencies,hole/fold boundaries,journal refusal precedence and damaged
 held-source preservation. No-default and immutable-borrow compile-fail checks cover the public
 boundary. The bounded local source validation below follows this input step. Original-coordinate context
-construction remains pending;neither its success nor quantity availability follows from input admission.
+construction follows local source validation;neither its success nor quantity availability follows from input admission.
 
 ## Validate actual local source context
 
@@ -150,20 +154,70 @@ internal retained range boundary maps outside the stored reference fraction widt
 retains that full numeric repair and original operation rather than accepting endpoint evidence as
 complete coverage. An independent Fraction control confirms the internal normalized half requires
 a wider stored component. Current-anchor numeric causes remain distinct. Source success still does
-not prove unique original coordinates:the next coordinate context must check their full evidence.
+not prove unique original coordinates:the coordinate context below checks their full evidence.
 
-## Next original-coordinate contract
+## Construct the actual original-notch interval
 
-Project the actual two named Notch anchors into the actual original distribution-side creation
-frame. Retain every ambiguous candidate and mapping direction;never select by proximity or compare
-directions from different holder frames as absolute point identities. Wide valid coordinates stay
-exact even when bounded views refuse. Compare them to the original full side bounds without
-narrowing,require distinct in-domain coordinates,and keep named IDs/authored stop order while
-ordering the mathematical interval. Admit comparison and later amount arithmetic separately.
-Symbolic amount/profile declarations remain unresolved;no quantity or physical value is defaulted.
+Call original_context on the local source-validation proof. That proof now retains the actual named
+Notch references from its validated registry. The context borrows those same objects and source
+inputs;it accepts no separate coordinates,synthetic registry or guessed geometry. It exposes named
+start/end projections and mathematical lower/upper projections separately. A source named401 then400
+can have lower400 and upper401 without changing either named IDs or authored stop order.
+
+Let C be the explicit original-point candidate limit. Check C+1 cardinality before any wide
+projection:one named result is retained only after it has exactly one candidate,while the other
+query may retain at most C states. An overflowing reservation refuses before projection. Admit both
+actual named anchors against the actual original distribution-side edge before wide work,using the
+same immutable ledger and explicit original-point limits. This includes the actual side-B source
+when the distribution is on B;Same/Opposite correspondence does not silently change its numeric axis.
+
+Project each actual Notch anchor into the actual source edge's creation frame. Require matching
+immutable ledger,source edge and actual creation entry before comparing values. Equal IDs/journal
+contents on a separate ledger snapshot do not supply that frame binding. Require one complete
+coordinate/direction candidate per named Notch;an ambiguous result retains every candidate and its
+relative mapping direction. No candidate is selected by proximity or an absolute-direction filter.
+
+Compare exact originals against the actual full original side bounds,inclusively,without Param or
+u128 conversion. Both named originals must be inside that domain and mathematically distinct.
+Distinct current edges/IDs do not prove a positive original interval. If a split's first-end and
+second-start Notches both project to the same original half,construction refuses and retains both
+actual projections. Valid wide originals survive optional bounded-view refusals.
+
+```rust
+use sc_core::ontology::{NotchSourceValidation, OriginalNotchContext, OriginalNotchContextError};
+fn inspect_original<'a>(validated: NotchSourceValidation<'a>)
+    -> Result<OriginalNotchContext<'a>, OriginalNotchContextError<'a>>
+{
+    let context = validated.original_context()?;
+    let (named_start, named_end) = context.notches();
+    assert_eq!((named_start.id(), named_end.id()),
+        context.validation().admission().notch_ids());
+    // lower()/upper() keep full projection frame evidence;they do not rename start/end.
+    assert!(context.lower().unique().is_some());
+    assert!(context.upper().unique().is_some());
+    Ok(context)
+}
+```
+
+Focused actual-model tests cover named/authored order,symbolic source declarations,closed original
+bounds,actual side-B frames,64-bit valid original coordinates,ambiguous reversed-merge witnesses,
+coincident originals on distinct current edges,and eight aligned split/merge cycles. C=2 yields the
+expected quarter/half interval in that cycle case;C=1 retains the actual inverse-branch quota cause.
+Integer admission and combined candidate overflow also keep their actual original causes.
+
+Failures keep original source/side/named IDs. Admission/projection/numeric causes remain available
+through standard error sources. Completed ambiguous,coincident,frame or bounds refusals retain the
+actual bounded projections and ledger borrows,so diagnostic lifetimes are explicit. No partial
+context,implicit reference choice or source/Notch mutation escapes. The private comparison ports
+also refuse a separate equal-content ledger or wrong source frame before numeric work.
+
+This context supplies exact original positions. Formula/profile values,notch-bounded cumulative
+and interval quantities,current whole Design readiness,physical matching and paired effects retain
+their subsequent owners. The existing Uniform-only helper continues to report BetweenNotches;
+constructing this context does not default an amount or extend that old helper implicitly.
 
 The canonical decision is docs/decisions/decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md.
 Its whole pre-0512 source is logical record docs/history/stitchcad-devnotes-part670.md,available
-through the [public archive reader](../annexes/archive-reader.md). It retains the superseded
-prospective wording and all historical evidence exactly. The next original-coordinate
-contract is an implementation requirement;its context and quantity API remain pending.
+through the [public archive reader](../annexes/archive-reader.md). It retains prior prospective
+wording and all historical evidence exactly. Focused implementation checks above are distinct from
+the deferred source/context acceptance and whole paired/mutation/physical verification.

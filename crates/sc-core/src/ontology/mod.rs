@@ -138,7 +138,8 @@ pub use seam_ease_workspace::{
 pub use seam_notch_context::{
     NotchContextLimits, NotchSourceAdmission, NotchSourceAdmissionError, NotchSourceAdmissionIssue,
     NotchSourceCollection, NotchSourceRange, NotchSourceValidation, NotchSourceValidationError,
-    NotchSourceValidationIssue,
+    NotchSourceValidationIssue, OriginalNotchContext, OriginalNotchContextError,
+    OriginalNotchContextIssue,
 };
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,

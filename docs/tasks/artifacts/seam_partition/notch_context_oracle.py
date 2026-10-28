@@ -1,7 +1,9 @@
 """Independent original-coordinate recovery examples; pure Fraction arithmetic and stdout.
 
-Native tests reproduce the accepted landmark/graph states and forward witnesses. Original-source
-projection is not implemented by those recovery tests. --check verifies the frozen evidence.
+Native tests reproduce the accepted landmark/graph states and use the implemented original-point
+projection with their actual anchors/sources. This independent producer supplies mathematical
+recovery/quantum evidence;it does not implement semantic context or quantity queries. --check
+verifies the frozen evidence.
 """
 from fractions import Fraction as F
 from pathlib import Path

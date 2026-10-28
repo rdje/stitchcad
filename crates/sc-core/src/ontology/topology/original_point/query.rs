@@ -1,6 +1,6 @@
 //! Exact backward numeric projection on an already admitted immutable journal.
 use super::super::{Direction, JournalEntry, OffsetFragment, Rational, TopologyEdit};
-use super::{EdgeRef, EntityId, OriginalPointAdmission, Param, ResolvedRef};
+use super::{EdgeRef, EntityId, IdentityLedger, OriginalPointAdmission, Param, ResolvedRef};
 use core::{cmp::Ordering, fmt};
 use sc_units::UnitError;
 mod wide;
@@ -98,6 +98,67 @@ impl<'a> OriginalPointProjection<'a> {
             [only] => Some(only),
             _ => None,
         }
+    }
+    // These semantic ports require the actual expected immutable ledger and source creation frame.
+    // None preserves an unmet frame/cardinality prerequisite;callers retain the full projections.
+    pub(crate) fn frame_matches(&self, ledger: &IdentityLedger, source: EdgeRef) -> bool {
+        core::ptr::eq(self.admission.ledger, ledger)
+            && self.admission.source == source
+            && ledger
+                .journal()
+                .get(self.admission.creation_index)
+                .is_some_and(|entry| core::ptr::eq(entry, self.admission.creation))
+    }
+    pub(crate) fn compare_projected(
+        &self,
+        other: &Self,
+        ledger: &IdentityLedger,
+        source: EdgeRef,
+        operation: &'static str,
+    ) -> Result<Option<Ordering>, UnitError> {
+        if !self.frame_matches(ledger, source)
+            || !other.frame_matches(ledger, source)
+            || !core::ptr::eq(self.admission.creation, other.admission.creation)
+        {
+            return Ok(None);
+        }
+        let Some((left, right)) = self.unique().zip(other.unique()) else {
+            return Ok(None);
+        };
+        Workspace {
+            component_bits: self
+                .admission
+                .component_bits
+                .min(other.admission.component_bits),
+            integer_bits: self
+                .admission
+                .integer_bits
+                .min(other.admission.integer_bits),
+            operation,
+        }
+        .compare(&left.coordinate.exact, &right.coordinate.exact)
+        .map(Some)
+    }
+    pub(crate) fn compare_original_bound(
+        &self,
+        ledger: &IdentityLedger,
+        source: EdgeRef,
+        bound: Param,
+        operation: &'static str,
+    ) -> Result<Option<Ordering>, UnitError> {
+        if !self.frame_matches(ledger, source) {
+            return Ok(None);
+        }
+        let Some(only) = self.unique() else {
+            return Ok(None);
+        };
+        Workspace {
+            component_bits: self.admission.component_bits,
+            integer_bits: self.admission.integer_bits,
+            operation,
+        }
+        .compare_reference(&only.coordinate.exact, bound)
+        .map(Some)
     }
 }
 impl fmt::Debug for OriginalPointProjection<'_> {
@@ -635,6 +696,50 @@ mod contracts {
                 integer_bits: left.admission.integer_bit_bound(),
                 operation: "Workspace::compare",
             };
+            assert!(left.frame_matches(&ledger, source));
+            assert_eq!(
+                left.compare_projected(
+                    &right,
+                    &ledger,
+                    source,
+                    "OriginalPointProjection::compare_projected"
+                )
+                .expect("bound actual frame"),
+                Some(order(field(12)))
+            );
+            assert_eq!(
+                left.compare_original_bound(
+                    &ledger,
+                    source,
+                    param(10, 11),
+                    "OriginalPointProjection::compare_original_bound"
+                )
+                .expect("bound actual source parameter"),
+                Some(order(field(13)))
+            );
+            let other_snapshot = ledger.clone();
+            assert_eq!(ledger, other_snapshot);
+            assert!(!left.frame_matches(&other_snapshot, source));
+            assert_eq!(
+                left.compare_projected(
+                    &right,
+                    &other_snapshot,
+                    source,
+                    "OriginalPointProjection::compare_projected"
+                )
+                .expect("frame refusal before numeric work"),
+                None
+            );
+            assert_eq!(
+                left.compare_original_bound(
+                    &ledger,
+                    fragment,
+                    param(10, 11),
+                    "OriginalPointProjection::compare_original_bound"
+                )
+                .expect("wrong source frame refusal"),
+                None
+            );
             let a = left.unique().expect("unique actual source coordinate");
             let b = right.unique().expect("unique actual source coordinate");
             assert_eq!(

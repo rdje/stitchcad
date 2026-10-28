@@ -177,4 +177,8 @@ For N complete actual dependency items and selected per-range peak B,check conse
 and3N+1 metadata bounds before allocation;guard local appends/insertions. These logical bounds are
 not allocator/RSS/CPU certificates. Surviving interval membership does not certify whole Piece
 integrity. Global Design/root/formula metadata,other graph members,physical matching and release
-stay separate. Unique in-domain distinct original coordinates and interval quantities remain next.
+stay separate. Original-notch context is implemented:retain actual named Notch borrows,check C+1
+combined candidate cardinality and both point admissions before wide work,bind actual ledger/source
+creation frames,and require unique in-domain distinct exact originals. Keep all ambiguous/coincident
+projection evidence and named/authored order;never narrow or filter by absolute direction.
+Notch quantities,formula/profile evaluation,physical matching and whole acceptance remain next.

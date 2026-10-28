@@ -4685,3 +4685,515 @@ fn notch_source_validation_permits_touching_disjoint_self_seams_on_one_actual_co
     );
     assert_eq!(proof.interval_item_count(), 4);
 }
+
+fn original_context<'a>(
+    f: &'a Fixture,
+    source: &'a sc_core::ontology::SeamEaseSource,
+    marks: &'a [SewingLandmark],
+    limits: sc_core::ontology::NotchContextLimits,
+) -> Result<
+    sc_core::ontology::OriginalNotchContext<'a>,
+    sc_core::ontology::OriginalNotchContextError<'a>,
+> {
+    source
+        .admit_notch_context(&f.plan, &f.pieces, marks, &f.ledger, limits)
+        .unwrap()
+        .validate_sources()
+        .unwrap()
+        .original_context()
+}
+fn notch_definitions(marks: &[SewingLandmark]) -> Vec<NotchDefinition> {
+    marks
+        .iter()
+        .map(|mark| match mark {
+            SewingLandmark::Notch(notch) => notch.definition().clone(),
+            SewingLandmark::Turn(_) => panic!("actual fixture Notch"),
+        })
+        .collect()
+}
+fn current_notches(
+    f: &Fixture,
+    definitions: Vec<NotchDefinition>,
+    anchors: [EdgeAnchor; 2],
+) -> Vec<SewingLandmark> {
+    definitions
+        .into_iter()
+        .zip(anchors)
+        .map(|(mut definition, anchor)| {
+            definition.anchor = anchor;
+            SewingLandmark::Notch(
+                Notch::new(definition, f.pieces.first().unwrap(), &f.ledger).unwrap(),
+            )
+        })
+        .collect()
+}
+
+#[test]
+fn original_notch_context_keeps_actual_named_order_bounds_and_symbolic_sources() {
+    use core::num::NonZeroUsize;
+    use sc_core::ontology::{NotchContextLimits, OriginalPointLimits};
+    let (mut f, marks) = notch_source_fixture();
+    let edge = f.span().a.range.edge();
+    f.span_mut().a.range = EdgeRange::new(edge, t(1, 4), t(3, 4)).unwrap();
+    for amount in [
+        EaseAmount::Explicit(Length::from_micrometres(-1).unwrap()),
+        EaseAmount::Formula(id(900)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(901))),
+    ] {
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&marks).unwrap();
+        let portion = graph.spans().first().unwrap().retain_ease_source();
+        let source = portion.source();
+        let selected = notch_source_limits(13, 1, 4);
+        let point = selected.original_point();
+        let selected = NotchContextLimits::new(
+            selected.dependency_items(),
+            OriginalPointLimits::new(
+                point.current(),
+                NonZeroUsize::new(1).unwrap(),
+                point.integer_bits(),
+            ),
+            selected.range_portions(),
+        );
+        let before = f.ledger.clone();
+        let context = original_context(&f, source, &marks, selected).unwrap();
+        assert!(core::ptr::eq(
+            context.validation().admission().source(),
+            source
+        ));
+        let (start, end) = context.notches();
+        assert_eq!((start.id(), end.id()), (id(401), id(400)));
+        let SewingLandmark::Notch(expected_start) = marks.get(1).unwrap() else {
+            panic!("actual Notch")
+        };
+        let SewingLandmark::Notch(expected_end) = marks.first().unwrap() else {
+            panic!("actual Notch")
+        };
+        assert!(core::ptr::eq(start, expected_start));
+        assert!(core::ptr::eq(end, expected_end));
+        assert_eq!(
+            context
+                .start()
+                .unique()
+                .unwrap()
+                .coordinate()
+                .as_param()
+                .unwrap(),
+            t(3, 4)
+        );
+        assert_eq!(
+            context
+                .end()
+                .unique()
+                .unwrap()
+                .coordinate()
+                .as_param()
+                .unwrap(),
+            t(1, 4)
+        );
+        assert!(core::ptr::eq(context.lower(), context.end()));
+        assert!(core::ptr::eq(context.upper(), context.start()));
+        assert_eq!(context.candidate_item_bound(), 2);
+        assert_eq!(
+            context
+                .validation()
+                .admission()
+                .source()
+                .declaration()
+                .amount,
+            amount
+        );
+        assert_eq!(
+            context.validation().admission().source().stops(),
+            f.span().stops
+        );
+        assert_eq!(context.start().admission().source_edge(), edge);
+        assert_eq!(
+            context.start().admission().source_creation(),
+            f.ledger.journal().first().unwrap().operation()
+        );
+        assert_eq!(
+            start.profile_binding_validation(),
+            sc_core::ontology::ProfileBindingValidation::DeferredToG4
+        );
+        assert!(matches!(
+            source.uniform_explicit_cumulative_at_a(t(1, 2)),
+            Err(sc_core::ontology::SeamEaseAmountError::BetweenNotches { .. })
+        ));
+        assert_eq!(f.ledger, before);
+    }
+}
+
+#[test]
+fn original_notch_context_uses_the_actual_distribution_side_b_frame() {
+    let mut f = fixture();
+    let edge = f.span().b.range.edge();
+    let definitions = notch_definitions(&[f.notch(400, t(1, 4)), f.notch(401, t(3, 4))]);
+    let marks = definitions
+        .into_iter()
+        .zip([t(1, 4), t(3, 4)])
+        .map(|(mut definition, param)| {
+            definition.anchor = EdgeAnchor { edge, param };
+            SewingLandmark::Notch(
+                Notch::new(definition, f.pieces.last().unwrap(), &f.ledger).unwrap(),
+            )
+        })
+        .collect::<Vec<_>>();
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
+        side: SeamSideId::B,
+        start: id(401),
+        end: id(400),
+    };
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::B,
+            landmark: id(400),
+        },
+        StopLandmark {
+            side: SeamSideId::B,
+            landmark: id(401),
+        },
+    ];
+    f.span_mut().b.range = EdgeRange::new(edge, t(1, 4), t(3, 4)).unwrap();
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let context =
+        original_context(&f, portion.source(), &marks, notch_source_limits(13, 1, 4)).unwrap();
+    assert_eq!(
+        context.validation().admission().distribution_side(),
+        SeamSideId::B
+    );
+    assert_eq!(context.lower().admission().source_edge(), edge);
+    assert_ne!(
+        context.lower().admission().source_edge(),
+        f.span().a.range.edge()
+    );
+    assert_eq!(
+        context
+            .lower()
+            .unique()
+            .unwrap()
+            .coordinate()
+            .as_param()
+            .unwrap(),
+        t(1, 4)
+    );
+    assert_eq!(
+        context
+            .upper()
+            .unique()
+            .unwrap()
+            .coordinate()
+            .as_param()
+            .unwrap(),
+        t(3, 4)
+    );
+    assert_eq!(
+        context.validation().admission().source().direction(),
+        SeamDirection::Opposite
+    );
+}
+
+#[test]
+fn original_notch_context_retains_valid_wide_coordinates_and_real_notch_metadata() {
+    let (mut f, marks) = notch_source_fixture();
+    let definitions = notch_definitions(&marks);
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let source = portion.source();
+    let edge = source.side(SeamSideId::A).range.edge();
+    let first = f.ledger.split(&mut f.ids, edge, t(1, 2)).unwrap().first();
+    let marks = current_notches(
+        &f,
+        definitions,
+        [
+            EdgeAnchor {
+                edge: first,
+                param: t(1, i64::MAX),
+            },
+            EdgeAnchor {
+                edge: first,
+                param: t(1, 2),
+            },
+        ],
+    );
+    let context = original_context(&f, source, &marks, notch_source_limits(13, 2, 4)).unwrap();
+    let low = context.lower().unique().unwrap().coordinate();
+    assert_eq!(
+        low.as_u128_ratio().unwrap(),
+        (1, 2 * u128::try_from(i64::MAX).unwrap())
+    );
+    assert!(low.as_param().is_err());
+    assert_eq!(
+        context
+            .upper()
+            .unique()
+            .unwrap()
+            .coordinate()
+            .as_param()
+            .unwrap(),
+        t(1, 4)
+    );
+    assert_eq!(
+        (context.notches().0.id(), context.notches().1.id()),
+        (id(401), id(400))
+    );
+    assert_eq!(
+        context.notches().1.definition().anchor,
+        EdgeAnchor {
+            edge: first,
+            param: t(1, i64::MAX)
+        }
+    );
+    assert_eq!(context.lower().admission().source_edge(), edge);
+    assert_eq!(context.lower().admission().reference(), first);
+}
+
+#[test]
+fn original_notch_context_keeps_all_ambiguous_original_coordinates_and_directions() {
+    use sc_core::ontology::OriginalNotchContextIssue as Issue;
+    let (mut f, marks) = notch_source_fixture();
+    let definitions = notch_definitions(&marks);
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let edge = portion.source().side(SeamSideId::A).range.edge();
+    let split = f.ledger.split(&mut f.ids, edge, t(1, 2)).unwrap();
+    f.ledger.reverse(&mut f.ids, split.second()).unwrap();
+    let one = Length::from_micrometres(1).unwrap();
+    let merged = f
+        .ledger
+        .merge(&mut f.ids, split.first(), one, split.second(), one)
+        .unwrap();
+    let marks = current_notches(
+        &f,
+        definitions,
+        [
+            EdgeAnchor {
+                edge: merged,
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: merged,
+                param: t(1, 4),
+            },
+        ],
+    );
+    let error =
+        original_context(&f, portion.source(), &marks, notch_source_limits(13, 4, 4)).unwrap_err();
+    assert_eq!(error.source_span(), id(301));
+    assert_eq!(error.distribution_side(), SeamSideId::A);
+    assert_eq!(error.notch_ids(), (id(401), id(400)));
+    let Issue::Ambiguous { notch, projection } = error.issue() else {
+        panic!("actual ambiguity: {error:?}")
+    };
+    assert_eq!(*notch, id(400));
+    assert_eq!(projection.candidates().len(), 2);
+    let values = projection
+        .candidates()
+        .iter()
+        .map(|candidate| {
+            (
+                candidate.coordinate().as_param().unwrap(),
+                candidate.direction(),
+            )
+        })
+        .collect::<Vec<_>>();
+    assert!(values.contains(&(t(1, 2), Direction::Original)));
+    assert!(values.contains(&(Param::END, Direction::Reversed)));
+    assert_eq!(
+        projection.admission().current().direction(),
+        Direction::Original
+    );
+    assert_eq!(projection.admission().source_edge(), edge);
+}
+
+#[test]
+fn original_notch_context_refuses_coincident_originals_from_distinct_current_notches() {
+    use sc_core::ontology::OriginalNotchContextIssue as Issue;
+    let (mut f, marks) = notch_source_fixture();
+    let definitions = notch_definitions(&marks);
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let edge = portion.source().side(SeamSideId::A).range.edge();
+    let split = f.ledger.split(&mut f.ids, edge, t(1, 2)).unwrap();
+    let marks = current_notches(
+        &f,
+        definitions,
+        [
+            EdgeAnchor {
+                edge: split.first(),
+                param: Param::END,
+            },
+            EdgeAnchor {
+                edge: split.second(),
+                param: Param::START,
+            },
+        ],
+    );
+    let error =
+        original_context(&f, portion.source(), &marks, notch_source_limits(13, 2, 4)).unwrap_err();
+    let Issue::CoincidentOriginal { start, end } = error.issue() else {
+        panic!("actual zero original interval: {error:?}")
+    };
+    assert_ne!(
+        start.admission().current().edge(),
+        end.admission().current().edge()
+    );
+    assert_eq!(
+        start.unique().unwrap().coordinate(),
+        end.unique().unwrap().coordinate()
+    );
+    assert_eq!(
+        start.unique().unwrap().coordinate().as_param().unwrap(),
+        t(1, 2)
+    );
+    assert_eq!(error.notch_ids(), (id(401), id(400)));
+}
+
+#[test]
+fn original_notch_context_handles_eight_cycles_and_keeps_actual_projection_quota_causes() {
+    use core::num::NonZeroUsize;
+    use sc_core::ontology::{
+        NotchContextLimits, OriginalNotchContextIssue as Issue, OriginalPointLimits,
+        OriginalPointProjectionError, OriginalPointProjectionIssue,
+    };
+    use std::error::Error as _;
+    let (mut f, marks) = notch_source_fixture();
+    let definitions = notch_definitions(&marks);
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let mut current = portion.source().side(SeamSideId::A).range.edge();
+    let one = Length::from_micrometres(1).unwrap();
+    for _ in 0..8 {
+        let split = f.ledger.split(&mut f.ids, current, t(1, 2)).unwrap();
+        current = f
+            .ledger
+            .merge(&mut f.ids, split.first(), one, split.second(), one)
+            .unwrap();
+    }
+    let marks = current_notches(
+        &f,
+        definitions,
+        [
+            EdgeAnchor {
+                edge: current,
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: current,
+                param: t(1, 4),
+            },
+        ],
+    );
+    let selected = notch_source_limits(13, 17, 4);
+    let context = original_context(&f, portion.source(), &marks, selected).unwrap();
+    assert_eq!(
+        context
+            .lower()
+            .unique()
+            .unwrap()
+            .coordinate()
+            .as_param()
+            .unwrap(),
+        t(1, 4)
+    );
+    assert_eq!(
+        context
+            .upper()
+            .unique()
+            .unwrap()
+            .coordinate()
+            .as_param()
+            .unwrap(),
+        t(1, 2)
+    );
+    assert_eq!(context.candidate_item_bound(), 3);
+    let point = selected.original_point();
+    let small = NotchContextLimits::new(
+        selected.dependency_items(),
+        OriginalPointLimits::new(
+            point.current(),
+            NonZeroUsize::new(1).unwrap(),
+            point.integer_bits(),
+        ),
+        selected.range_portions(),
+    );
+    let error = original_context(&f, portion.source(), &marks, small).unwrap_err();
+    let Issue::Projection { notch, issue } = error.issue() else {
+        panic!("actual inverse quota: {error:?}")
+    };
+    assert_eq!(*notch, id(400));
+    assert!(matches!(
+        issue.issue(),
+        OriginalPointProjectionIssue::Candidates {
+            retained: 1,
+            requested: 1,
+            limit: 1,
+            ..
+        }
+    ));
+    assert_eq!(
+        error
+            .source()
+            .unwrap()
+            .downcast_ref::<OriginalPointProjectionError>(),
+        Some(issue)
+    );
+}
+
+#[test]
+fn original_notch_context_admits_combined_candidates_and_both_points_before_wide_work() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{
+        NotchContextLimits, OriginalNotchContextIssue as Issue, OriginalPointAdmissionError,
+        OriginalPointLimits,
+    };
+    use std::error::Error as _;
+    let (f, marks) = notch_source_fixture();
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let selected = notch_source_limits(13, 1, 4);
+    let point = selected.original_point();
+    let oversized = NotchContextLimits::new(
+        selected.dependency_items(),
+        OriginalPointLimits::new(
+            point.current(),
+            NonZeroUsize::new(usize::MAX).unwrap(),
+            point.integer_bits(),
+        ),
+        selected.range_portions(),
+    );
+    let error = original_context(&f, portion.source(), &marks, oversized).unwrap_err();
+    assert!(
+        matches!(error.issue(),Issue::CandidateBoundOverflow { candidates } if *candidates==usize::MAX)
+    );
+    let small = NotchContextLimits::new(
+        selected.dependency_items(),
+        OriginalPointLimits::new(
+            point.current(),
+            point.candidates(),
+            NonZeroU64::new(1).unwrap(),
+        ),
+        selected.range_portions(),
+    );
+    let error = original_context(&f, portion.source(), &marks, small).unwrap_err();
+    let Issue::Admission { notch, issue } = error.issue() else {
+        panic!("actual original admission: {error:?}")
+    };
+    assert_eq!(*notch, id(401));
+    assert!(matches!(
+        issue.as_ref(),
+        OriginalPointAdmissionError::IntegerBits {
+            required: 508,
+            limit: 1,
+            ..
+        }
+    ));
+    assert_eq!(
+        error
+            .source()
+            .unwrap()
+            .downcast_ref::<OriginalPointAdmissionError>(),
+        Some(issue.as_ref())
+    );
+}

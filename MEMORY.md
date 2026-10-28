@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.3.3.4 in docs/tasks/G1-SLICE-execution.md:sealed actual original-
-  notch context. Bind actual locally validated source/registry/ledger,matching source creation frame,
-  unique coordinate/direction candidates,and distinct original in-domain interval. Full PNT continues.
-- Private comparison .3 closes0514:guarded wide/reference cross-products under actual2W+128;
-  reused inverse merge side and mechanical normalized unit-end check. Workspace has explicit actual
-  operation label;no narrowing,absolute-direction filtering,new public order or integer type.
-- Actual comparison Fraction6 covers3 Param refusals/1 beyond-u128,equality/bounds/reversal;private
-  tests2+guard1/public inverse6/Notch4/scoped lint/fmt and width6+960 controls pass0. Book90/204/
-  1572/2703,glossary0,map unchanged. Whole0513 in672/3 spans. Original frame binding remains .4.
-- Local validation0513 is implemented:actual inputs/all supplied landmarks/full source metadata,
-  checked cache N*B/metadata3N+1 before growth,actual bounded evidence/UnitError;no retained arrays.
-- Decision180L/12660B;whole old194L/14247B encoded670. Whole recovery0512 in671,inputs0511 in669.
-- Source/numeric success grants no original interval,quantity,whole-Piece/global Design/other graph/
-  formula/physical readiness. Logical bounds are not allocator/RSS/CPU/bus certificates;effects later.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.3.acceptance in docs/tasks/G1-SLICE-execution.md:focused actual
+  source/current/original context component integration after implementation. Then .3.4 exact notch
+  quantities. Implementation .3.3.3 complete with focused checks;full PNT continues,no physical proof.
+- OriginalNotchContext0515 binds actual named Notch borrows and locally validated source/ledger,
+  source creation frame,unique coordinate/direction candidates,inclusive domain and distinct originals.
+  C+1 checked before projection,both point admissions before wide work;no bounded view narrowing.
+  Named start/end versus lower/upper stays exact;errors retain complete actual projection evidence.
+- Native context7/local10/frame port1 (6 Fraction rows)/doc2+1/scoped lint/fmt/oracle3 pass0.
+  Valid64-bit original survives;ambiguous reversed merge and coincident originals refuse. Eight
+  cycles C2/combined3 pass;C1 keeps original quota;equal ledger clones/wrong source frames refuse.
+- Whole0514 in673/3 spans;book90/207/1572/2703,glossary0/map unchanged;decision184L/13046B.
+  Whole source decision encoded670,validation0513 in672. Oracle header now reflects adoption0509.
+- Symbolic amounts stay unresolved;context supplies positions,no notch quantity,whole Design/other
+  graph/current formula/physical matching or effects. Logical budgets are not allocator/RSS/CPU proof.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

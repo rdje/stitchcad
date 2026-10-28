@@ -1,7 +1,7 @@
 //! Bounded actual local source validation;global Design and original-coordinate evidence stay separate.
 use super::NotchSourceAdmission;
 use crate::ontology::{
-    AnchorError, EntityId, OrphaningEdit, RangeCoverage, RangeCoverageError, RangeIssue,
+    AnchorError, EntityId, Notch, OrphaningEdit, RangeCoverage, RangeCoverageError, RangeIssue,
     RangePortion, SeamSideId, SewingError, UniquePointOutcome, UniquePointResolution,
 };
 use core::fmt;
@@ -304,10 +304,11 @@ fn failure(source_span: EntityId, issue: NotchSourceValidationIssue) -> NotchSou
 /// Interval-cache/index bounds count logical entries,not allocator overhead,RSS or CPU time.
 ///
 /// ```compile_fail
-/// use sc_core::ontology::{NotchSourceAdmission, NotchSourceValidation};
-/// fn forge<'a>(admission: NotchSourceAdmission<'a>) -> NotchSourceValidation<'a> {
+/// use sc_core::ontology::{Notch, NotchSourceAdmission, NotchSourceValidation};
+/// fn forge<'a>(admission: NotchSourceAdmission<'a>, start_notch: &'a Notch, end_notch: &'a Notch)
+///     -> NotchSourceValidation<'a> {
 ///     NotchSourceValidation { admission, interval_item_bound: 1, index_item_bound: 1,
-///         interval_item_count: 1, index_item_count: 1 }
+///         interval_item_count: 1, index_item_count: 1, start_notch, end_notch }
 /// }
 /// ```
 #[derive(Clone, Copy)]
@@ -317,6 +318,8 @@ pub struct NotchSourceValidation<'a> {
     index_item_bound: usize,
     interval_item_count: usize,
     index_item_count: usize,
+    start_notch: &'a Notch,
+    end_notch: &'a Notch,
 }
 impl fmt::Debug for NotchSourceValidation<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -326,9 +329,13 @@ impl fmt::Debug for NotchSourceValidation<'_> {
             index_item_bound,
             interval_item_count,
             index_item_count,
+            start_notch,
+            end_notch,
         } = self;
         f.debug_struct("NotchSourceValidation")
             .field("source_span", &admission.source().span())
+            .field("start_notch", &start_notch.id())
+            .field("end_notch", &end_notch.id())
             .field("interval_item_bound", interval_item_bound)
             .field("index_item_bound", index_item_bound)
             .field("interval_item_count", interval_item_count)
@@ -337,6 +344,10 @@ impl fmt::Debug for NotchSourceValidation<'_> {
     }
 }
 impl<'a> NotchSourceValidation<'a> {
+    pub(crate) const fn named_notches(self) -> (&'a Notch, &'a Notch) {
+        (self.start_notch, self.end_notch)
+    }
+
     /// Actual complete borrowed inputs and explicit selected limits.
     #[must_use]
     pub const fn admission(self) -> NotchSourceAdmission<'a> {

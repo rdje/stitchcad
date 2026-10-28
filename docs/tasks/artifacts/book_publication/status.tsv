@@ -203,3 +203,6 @@ bounded actual notch source validation	spec/command-notch-sources.md	crates/sc-c
 actual notch source validation refusal	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/validation.rs	NotchSourceValidationError	G1-SLICE.6.5.3.2.3.2.4.3.3.3.2	4.4
 actual notch source validation issue	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/validation.rs	NotchSourceValidationIssue	G1-SLICE.6.5.3.2.3.2.4.3.3.3.2	4.4
 actual notch source range location	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/validation.rs	NotchSourceRange	G1-SLICE.6.5.3.2.3.2.4.3.3.3.2	4.4
+actual original-notch interval context	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/context.rs	OriginalNotchContext	G1-SLICE.6.5.3.2.3.2.4.3.3.3.4	4.4
+actual original-notch context refusal	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/context.rs	OriginalNotchContextError	G1-SLICE.6.5.3.2.3.2.4.3.3.3.4	4.4
+actual original-notch context issue	spec/command-notch-sources.md	crates/sc-core/src/ontology/seam_notch_context/context.rs	OriginalNotchContextIssue	G1-SLICE.6.5.3.2.3.2.4.3.3.3.4	4.4

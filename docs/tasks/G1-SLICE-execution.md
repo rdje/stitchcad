@@ -271,11 +271,10 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0511 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part669.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3`
-  Status: `in_progress`
-  Goal: construct borrowed actual notch context from bounded source validation and exact original
-  projections;preserve real named IDs,stop order,wide/ambiguous/invalid-original interval evidence.
-  Children .1 recover/curate current source contracts before implementation;.2 bounded actual
-  source validation;.3 guarded original coordinate comparisons;.4 sealed original-notch context.
+  Status: `done`
+  Goal:0515 actual original-notch context implementation complete with focused checks after source
+  recovery,local validation and guarded comparison. Actual metadata/frames/candidates/domain/order
+  are sealed;component integration .3.3.acceptance and quantity/paired/physical proof stay separate.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.1`
   Status: `done`
   Goal:0512 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part671.md).
@@ -284,45 +283,48 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0513 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part672.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.3`
   Status: `done`
-  Goal:0514 guarded private exact original-coordinate/Param ordering under admitted widths;no
-  bounded view narrowing,absolute direction filtering or new public API/integer type. Actual .4
-  context must still bind ledger/source-creation frames and unique candidates before scalar use.
-  - [x] REPRODUCE / ISSUE: valid original coordinates can refuse stored Param/u128 views without
-    losing their value. python3 -I -B docs/tasks/artifacts/seam_partition/original_comparison_oracle.py
-    --check →6 frozen Fraction cases/3 Param refusals/1 beyond-u128,rc=0. These actual projected
-    originals need exact bound/interval ordering,not narrowing or a binary64 substitute.
-  - [x] ROOT CAUSE: 0514 cargo test -p sc-core --lib original_point::query::contracts →2 passed,
-    rc=0. Test drives6 actual declared/offset/reversed ledgers,real admission/projection and exact
-    same source/creation evidence. Cross-products require at most2W;reference fields add63≤W.
-    Existing2W+128 reservation covers both. Mapping direction and numerical order remain distinct.
-  - [x] FIX: shared private compare-parts/wide/reference helpers admit operands and each product
-    before allocation. Reuse in actual inverse merge-side comparison and explicit normalized unit-end
-    invariant. Avoid recursive normalization in reference comparison. Workspace retains actual static
-    caller operation;all producer construction sites explicit. Private typed zero-denominator/unit/
-    integer-quota failures keep concrete values/order signs;no public projection candidate chosen.
-  - [x] ADDRESSED: 0514 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --lib
-    original_point::query::contracts →2 passed,rc=0:existing actual wide6-row and new actual comparison
-    6-row controls. New frozen Fraction rows include equality/source-bound equality,64/188-bit
-    originals,reversed5/8 versus3/8,and optional view refusals. Exact conservative private quota
-    accepts;one bit below refuses before product allocation. cargo test -p sc-core --lib
-    original_point::query::wide::contracts →1 passed,rc=0:normalization/unit-order and comparison/
-    normalization zero-denominator guards. No new source/semantic provider or public scalar order.
-  - [x] NO REGRESSION: 0514 cargo test -p sc-core --test original_point_projection_contract →6
-    passed,rc=0;cargo test -p sc-core --test sewing_contract notch_context_recovery →4 passed,rc=0.
-    Scoped Clippy --lib -D warnings/fmt --all --check →pass0. Original comparison oracle6/width
-    oracle6+960 Fraction steps pass0. Receipt672 →3 exact Git spans,rc=0. Book/publication90/204/
-    1572/2703,glossary0,map unchanged,retention1126 logical/31 working/2442415 residentB →pass0.
-    Broader source/context/paired/mutation/physical proof retains .3.3.acceptance/.6.5.3.2.acceptance.
-  - [x] LOCKSTEP: current task/source decision/MEMORY/DEV/CHANGE/book/D301/task index align;
-    whole0513 retained672. LIVE/README reviewed unchanged,G1 6/18. Next .4 actual source-bound
-    original-notch context and frame/candidate/domain binding. Private numeric success does not
-    authorize that pending semantic context,amount evaluation,current Design or physical matching.
-    promotion: declined (method-specific private comparison/invariant implementation under indexed exact arithmetic/frame/source contracts;no new public API or general policy).
+  Goal:0514 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part673.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.4`
-  Status: `pending`
-  Goal: sealed actual original-notch context from bounded source validation plus unique projections;
-  named IDs/authored stops remain exact,original interval distinct/in-domain,all ambiguity evidence
-  retained. Symbolic amount/current Design/physical matching/quantities keep separate obligations.
+  Status: `done`
+  Goal:0515 sealed actual original-notch context preserves actual named Notch borrows,validated
+  source/registry/ledger/source-creation frame,unique distinct in-domain originals and full evidence.
+  Named/authored order and symbolic amount remain unchanged;no quantity/physical readiness implied.
+  - [x] REPRODUCE / ISSUE: valid local/current source data can have ambiguous or coincident original
+    positions. cargo test -p sc-core --test sewing_contract original_notch_context →7 passed,rc=0,
+    including actual reversed-merge2 originals and split first-end/second-start same original half.
+    Local/current distinctness alone cannot certify a usable original interval.
+  - [x] ROOT CAUSE: 0515 actual Notch references/anchors and full original distribution side must
+    drive projection. Private frame ports require the exact immutable ledger/source edge/creation
+    entry before scalar comparison. cargo test -p sc-core --lib admitted_original_coordinate_ordering
+    →1 passed,rc=0:6 frozen actual projection cases accept matching frames and refuse equal-content
+    separate ledger snapshots/wrong source before numeric work. Numeric IDs alone are not frame proof.
+  - [x] FIX: local source validation now retains the actual validated named Notch references. Check
+    C+1 combined candidate cardinality before projection;admit both points before wide work. Require
+    one coordinate/direction per projection,actual matching frame,inclusive original bounds and
+    nonzero original interval. Preserve named start/end versus mathematical lower/upper without
+    renaming stops. Lifetime-bound errors retain actual ambiguous/coincident/frame/bounds projections
+    and original standard admission/projection/numeric causes;no partial context or silent choice.
+    Correct stale oracle docstring claiming native recovery lacked projection;adopted since0509.
+  - [x] ADDRESSED: 0515 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    sewing_contract original_notch_context →7 passed/72 filtered,rc=0. Actual pointers/named401/400/
+    authored400/401,closed bounds,literal/formula/profile and B-side source frame remain exact.
+    Valid64-bit tiny original survives Param refusal;reversed-merge preserves half/Original and
+    end/Reversed candidates without absolute filtering. Distinct current edges with same original
+    half refuse with both projections. Eight cycles produce original quarter/half under C2/combined3;
+    C1 retains actual inverse fork quota. Combined count overflow and actual508-bit/limit1 admission
+    refusal precede wide work;original causes/header identities survive. Ledger/definitions unchanged.
+  - [x] NO REGRESSION: 0515 cargo test -p sc-core --test sewing_contract notch_source_validation
+    →10 passed,rc=0;scoped Clippy --test sewing_contract -D warnings/fmt --all --check →pass0.
+    cargo test -p sc-core --doc OriginalNotchContext/NotchSourceValidation →2+1 privacy/lifetime
+    compile-fail passed,rc=0. Frame port fixture6/oracle3/receipt673 three exact Git spans →pass0.
+    Book/publication90/207/1572/2703,glossary0,map unchanged,retention1127 logical/32 working/
+    2448958 residentB →pass0. Full component integration belongs .3.3.acceptance;quantity/paired/
+    mutation/physical verification remains .3.4/.3.acceptance/.6.5.3.2.acceptance/pre-push.
+  - [x] LOCKSTEP: implementation parent/leaf/MEMORY/DEV/CHANGE/book/API routes/current source
+    decision/D301/task index align;whole0514 retained673. LIVE/README reviewed unchanged,G1 6/18.
+    Next .3.3.acceptance focused actual-domain integration,then original notch quantities. Whole
+    Design/other graph/formula evaluation/physical matching and atomic effects retain their owners.
+    promotion: declined (implementation of indexed actual source/frame/original-interval contracts with explicit retained evidence;no new general policy or default value).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.acceptance`
   Status: `pending`
   Goal: focused actual-source registry/currentness/original context integration after implementation;
