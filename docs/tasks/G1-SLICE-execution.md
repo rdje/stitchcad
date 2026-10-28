@@ -225,7 +225,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0503 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part661md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: bounded current-point resolution and exact original-coordinate projection through actual
   journal mappings;preserve wide/ambiguous/lost outcomes and relative direction evidence. Children
   .1 admit current uniqueness before derived choice growth;.2 original-coordinate inverse;.acceptance
@@ -254,39 +254,38 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0507 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part665.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.retention`
   Status: `done`
-  Goal:0508 next primitive acceptance unblocked by bounded public append/verify/install at actual
-  active64/64. Whole0507 captured665 only after complete installed-cohort comparison.
-  - [x] REPRODUCE / ISSUE: active generation had63 committed raw files+one catalog;record665 would
-    exceed64 working files. Aggregate85/192 is a different limit and did not determine this action.
-  - [x] ROOT CAUSE: 0508 python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py
-    →generation2 working64/64,raw63/windows1;aggregate85/192/headroom0,rc=0. Independent physical/
-    catalog census agrees. Materialized1118 logical source records/3637878B before preparation.
-  - [x] FIX: public v2_migration.py append target/history-capture-0508 with this actual owner,then
-    guarded v2_install.py install after whole candidate/native tar verification;all own readers idle.
-    Keep originals in transaction workspace/protected earlier captures;no raised bounds or lost IDs.
-    Route only live links to window23 headings;sealed bodies/source spans remain byte-exact.
-  - [x] ADDRESSED: 0508 public append/install/source proof window23 →63 byte-identical full Git
-    files/0 missing-extra,rc=0. Independent native tar →63/378790B exact;complete candidate and
-    before/after materializations →1118 names/sizes/SHA256/3637878B exact,rc=0. Source generation1
-    index exact;live installed retention →1118/active2/64,total23/192,rc=0. Audit target/history-proof-0508;
-    materializations target/history-review-0508-before and target/history-review-0508-after. Originals
-    retained target/history-capture-0508. Installation completed;do not rerun recovery after later edits.
-  - [x] NO REGRESSION: 0508 python3 -I -B docs/tasks/artifacts/live_doc_size/task_source_contract.py
-    →12 passed,rc=0;native original task nodes/done states remain exact/unique. Independent routing
-    census →94 exact catalog targets/headings in6 files,0 stale captured-file links,rc=0. Receipt665
-    →3 exact Git spans,rc=0. Current verify-retention →1119 logical/24 working/2383378 residentB,
-    rc=0;pressure →active3/64,total24/192/headroom61,rc=0. mdbook build/publication →89/190/1567/2686,
-    rc=0;Knowledge Map check →pass,rc=0. Product Rust behavior unchanged;broader paired/CI gates
-    retain .6.5.3.2.acceptance/pre-push ownership. No new power-loss or process-memory certificate.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGE/task index/family/live retrieval/book synchronized;whole0507
-    retained665 after safe installation and verification. LIVE/README reviewed unchanged,G1 6/18.
-    promotion: declined (routine verified capture/routing under existing indexed archive and generation contracts;no new rule or decision).
-    Next .2.acceptance actual-notch primitive join;semantic context/quantity and paired effects stay
-    later. Root-target work/protected originals,dependency stores and numerical certificates remain.
+  Goal:0508 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part666.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.acceptance`
-  Status: `pending`
-  Goal: deferred focused current-point/original-coordinate primitive acceptance after implementation;
-  context/quantity/paired effects and broad campaigns retain their later owners.
+  Status: `done`
+  Goal:0509 current/original-coordinate primitive component .2 closes with focused actual Notch/
+  Graph/source acceptance after implementation. Actual semantic context/quantities remain .3/.4.
+  - [x] REPRODUCE / ISSUE: standalone numeric success is not actual semantic-source adoption.
+    Join real Notch definitions/validated Graphs/retained originals without a fake coordinate or
+    physical geometry provider;preserve deferred profile/ease and actual context requirements.
+  - [x] ROOT CAUSE: 0509 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    sewing_contract notch_context_recovery →4 passed/53 filtered,rc=0. Source side/named IDs/stops/
+    original edge and actual anchor drive queries;using fragment-local parameters directly loses
+    original quarter/wide position,while one current merge position retains distinct origin evidence.
+  - [x] FIX: extend existing actual accepted late-fragment/reverse-merge/8-cycle fixtures to
+    implemented bounded current admission and exact inverse via complete retained source metadata.
+    Assert actual stop membership,original side/span/declaration and preserved definitions/ledger;
+    no runtime API or availability change. Correct sibling book's stale D305 prerequisite wording.
+  - [x] ADDRESSED: 0509 cargo test -p sc-core --test sewing_contract notch_context_recovery →4
+    passed,rc=0. Actual source301/copy200/stops400/401 retain complete declaration. Wide original
+    coordinate matches independent fixture and survives Param refusal;companion is original quarter.
+    Reverse/merge retains half/Original,end/Reversed while actual mark's current direction remains
+    holder-relative. Actual8-cycle graph/notches project half/quarter with2-state cap;25 logical
+    inputs and256 old reference leaves stay scoped. Uniform-only query refuses original source/
+    side/start/end context;profile G4/ease G2/G3 remain deferred,definitions/ledger unchanged.
+  - [x] NO REGRESSION: 0509 python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-core
+    --test sewing_contract -- -D warnings/fmt --all --check →pass,rc=0. notch_context_oracle.py
+    --check →3 frozen Fraction cases/quantum controls,rc=0. Receipt666 →3 exact Git spans,rc=0.
+    Book build/publication →89/190/1567/2687,rc=0;glossary →0 failures,rc=0;verify-retention
+    →1120 logical/25 working/2389248 residentB,rc=0. Full paired/mutation/physical verification
+    remains .6.5.3.2.acceptance/pre-push;source quantities do not follow from this component alone.
+  - [x] LOCKSTEP: parent/leaf/MEMORY/DEV/CHANGE/book/task index/D301 schedule aligned;whole0508 retained666.
+    LIVE/README reviewed unchanged,G1 6/18. Next .3 actual registry/ledger/side/ownership context.
+    promotion: declined (focused actual-domain confirmation of existing indexed source/projection/readiness contracts;no new reusable policy or decision).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3`
   Status: `pending`
   Goal: actual semantic-notch/original-source context with real IDs,registry/ledger/side ownership,

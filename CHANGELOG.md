@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0508 — restore actual archive capacity without losing logical bytes
+## STITCHCAD-G1-0509 — close focused actual Notch/source primitive acceptance
 
-- Public append/install packs63 committed files into window23 at actual active64/64. Source proof/native tar exact;before/after1118 names/sizes/SHA256 and3637878B identical. Sealed generation1 unchanged;original transaction trees retained.
-- Route94 live links across6 files to catalog headings;0 stale captured-file targets. Task-source12 and book89/190/1567/2686 pass. Whole0507 retained665/three exact Git spans only after packing/post-comparison;current archive1119/active3/64/aggregate24/192.
-- No capacity/policy or product behavior change;LIVE/README unchanged,G1 6/18. Resume focused actual-notch primitive acceptance before semantic context/quantity;broader paired acceptance remains owned.
+- Actual validated Notch/Graph and retained source data drive bounded current/inverse queries. Wide64-bit original,ambiguous origins/directions and8-cycle coalescing preserve full original metadata and actual definitions/ledger.
+- Native recovery4/scoped Clippy/fmt/oracle3 pass. Profile/ease obligations remain deferred;old Uniform-only API retains actual BetweenNotches source/side/IDs refusal. No fabricated position/geometry or notch quantity availability.
+- Whole0508 retained666/three exact Git spans;book/current pointer sync. Primitive component closes with focused verification;LIVE/README unchanged,G1 6/18. Actual semantic context .3 next;quantity/paired effects/full acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

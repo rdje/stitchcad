@@ -1476,6 +1476,76 @@ fn weighted_queries_preserve_actual_frames_and_bounds_even_for_zero_source() {
     assert_eq!(admitted.amount_in(domain), Ok(Length::ZERO));
 }
 
+fn project_source_notch<'a>(
+    mark: &SewingLandmark,
+    source: &sc_core::ontology::SeamEaseSource,
+    ledger: &'a IdentityLedger,
+    candidates: usize,
+) -> sc_core::ontology::OriginalPointProjection<'a> {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{OriginalPointLimits, UniquePointLimits};
+    let SewingLandmark::Notch(notch) = mark else {
+        unreachable!("actual matching Notch fixture")
+    };
+    let EaseDistribution::BetweenNotches { side, start, end } = &source.declaration().distribution
+    else {
+        unreachable!("actual original notch-bounded source")
+    };
+    assert!(mark.id() == *start || mark.id() == *end);
+    assert!(source
+        .stops()
+        .iter()
+        .any(|stop| stop.side == *side && stop.landmark == mark.id()));
+    assert_eq!(
+        notch.profile_binding_validation(),
+        sc_core::ontology::ProfileBindingValidation::DeferredToG4
+    );
+    let original_definition = notch.definition().clone();
+    let anchor = notch.definition().anchor;
+    let input = UniquePointLimits::new(
+        NonZeroUsize::new(32).unwrap(),
+        NonZeroUsize::new(32).unwrap(),
+    );
+    let current = ledger
+        .resolve_unique_point(anchor.edge, anchor.param, input)
+        .resolved()
+        .unwrap();
+    let limits = OriginalPointLimits::new(
+        input,
+        NonZeroUsize::new(candidates).unwrap(),
+        NonZeroU64::new(10000).unwrap(),
+    );
+    let admitted = ledger
+        .admit_original_point(
+            anchor.edge,
+            anchor.param,
+            source.side(*side).range.edge(),
+            limits,
+        )
+        .unwrap();
+    assert_eq!(admitted.current(), current);
+    let projected = admitted.project().unwrap();
+    assert_eq!(
+        (
+            projected.admission().reference(),
+            projected.admission().param()
+        ),
+        (anchor.edge, anchor.param)
+    );
+    // Available coordinates cannot turn the old Uniform-only API into a notch-context fallback.
+    assert_eq!(
+        source.uniform_explicit_cumulative_at_a(t(1, 2)),
+        Err(sc_core::ontology::SeamEaseAmountError::BetweenNotches {
+            source_span: source.span(),
+            side: *side,
+            start: *start,
+            end: *end,
+        })
+    );
+    assert_eq!(notch.definition(), &original_definition);
+    projected
+}
+
 #[test]
 fn notch_context_recovery_accepts_a_late_anchor_with_an_unrepresentable_original_param() {
     let mut f = fixture();
@@ -1539,8 +1609,8 @@ fn notch_context_recovery_accepts_a_late_anchor_with_an_unrepresentable_original
         .unwrap();
     assert_eq!(current.edge(), fragments.first());
     assert_eq!(current.param(), t(current_n, current_d));
-    // The public split contract gives original=current*half. This bounded arithmetic refusal is
-    // correct for Rational,not a failed current anchor or an implemented inverse projection result.
+    // The bounded reference arithmetic refusal is correct;the admitted inverse below retains
+    // the valid original coordinate exactly without forcing it into Param.
     assert_eq!(
         t(current_n, current_d)
             .as_rational()
@@ -1549,6 +1619,29 @@ fn notch_context_recovery_accepts_a_late_anchor_with_an_unrepresentable_original
             operation: "Rational::checked_mul"
         })
     );
+    let original = graph.spans().first().unwrap().retain_ease_source();
+    assert_eq!(original.source().span(), id(301));
+    assert_eq!(original.source().side(SeamSideId::A), f.span().a);
+    assert_eq!(original.source().stops(), f.span().stops);
+    assert_eq!(original.source().declaration(), f.span().ease.declaration());
+    let before = f.ledger.clone();
+    let projected = project_source_notch(marks.first().unwrap(), original.source(), &f.ledger, 1);
+    assert_eq!(
+        projected
+            .unique()
+            .unwrap()
+            .coordinate()
+            .as_u128_ratio()
+            .unwrap(),
+        (1, original_d)
+    );
+    assert!(projected.unique().unwrap().coordinate().as_param().is_err());
+    let upper = project_source_notch(marks.get(1).unwrap(), original.source(), &f.ledger, 1);
+    assert_eq!(
+        upper.unique().unwrap().coordinate().as_param().unwrap(),
+        t(1, 4)
+    );
+    assert_eq!(f.ledger, before);
 }
 
 #[test]
@@ -1655,6 +1748,36 @@ fn notch_context_recovery_has_two_original_coordinates_for_one_unique_current_no
     assert_eq!(first_forward.direction(), Direction::Original);
     assert_eq!(second_forward.direction(), Direction::Reversed);
     assert_eq!(current.direction(), Direction::Original);
+    let original = graph.spans().first().unwrap().retain_ease_source();
+    assert_eq!(original.source().side(SeamSideId::A), f.span().a);
+    assert_eq!(original.source().stops(), f.span().stops);
+    let before = f.ledger.clone();
+    let projected = project_source_notch(marks.first().unwrap(), original.source(), &f.ledger, 2);
+    assert!(projected.unique().is_none());
+    let candidates = projected
+        .candidates()
+        .iter()
+        .map(|candidate| {
+            (
+                candidate.coordinate().as_param().unwrap(),
+                candidate.direction(),
+            )
+        })
+        .collect::<Vec<_>>();
+    assert_eq!(
+        candidates,
+        vec![(first, Direction::Original), (second, Direction::Reversed)]
+    );
+    assert_eq!(
+        projected.admission().current().direction(),
+        current.direction()
+    );
+    let other = project_source_notch(marks.get(1).unwrap(), original.source(), &f.ledger, 2);
+    assert_eq!(
+        other.unique().unwrap().coordinate().as_param().unwrap(),
+        t(1, 4)
+    );
+    assert_eq!(f.ledger, before);
 }
 
 #[test]
@@ -1679,6 +1802,10 @@ fn notch_context_recovery_bounds_must_cover_derived_reference_choices_before_res
         }
     }
     let mut f = fixture();
+    let definitions = [400, 401].map(|identity| match f.notch(identity, t(1, 4)) {
+        SewingLandmark::Notch(notch) => notch.definition().clone(),
+        SewingLandmark::Turn(_) => unreachable!("actual Notch definition"),
+    });
     let original = f.span().a.range.edge();
     let mut current_edge = original;
     let declared = Length::from_micrometres(1).unwrap();
@@ -1710,6 +1837,54 @@ fn notch_context_recovery_bounds_must_cover_derived_reference_choices_before_res
     assert_eq!(leaves(&actual, expected), 256);
     // This is the public logical input census,not a promised bound on derived workspace or CPU.
     // A new context must admit/reference-limit derived choices before calling this full resolver.
+    let marks = definitions
+        .into_iter()
+        .zip([t(1, 2), t(1, 4)])
+        .map(|(mut definition, param)| {
+            definition.anchor = EdgeAnchor {
+                edge: current_edge,
+                param,
+            };
+            SewingLandmark::Notch(
+                Notch::new(definition, f.pieces.first().unwrap(), &f.ledger).unwrap(),
+            )
+        })
+        .collect::<Vec<_>>();
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(400),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(401),
+        },
+    ];
+    f.span_mut().ease = DeclaredEase {
+        amount: EaseAmount::Explicit(Length::from_micrometres(1).unwrap()),
+        distribution: EaseDistribution::BetweenNotches {
+            side: SeamSideId::A,
+            start: id(400),
+            end: id(401),
+        },
+    }
+    .into();
+    let graph = f.graph(&marks).unwrap();
+    assert_eq!(graph.ease_validation(), EaseValidation::DeferredToG2AndG3);
+    let source = graph.spans().first().unwrap().retain_ease_source();
+    assert_eq!(source.source().side(SeamSideId::A).range.edge(), original);
+    let projected = project_source_notch(marks.first().unwrap(), source.source(), &f.ledger, 2);
+    assert_eq!(projected.candidates().len(), 1);
+    assert_eq!(
+        projected.unique().unwrap().coordinate().as_param().unwrap(),
+        t(1, 2)
+    );
+    assert_eq!(projected.unique().unwrap().direction(), Direction::Original);
+    let other = project_source_notch(marks.get(1).unwrap(), source.source(), &f.ledger, 2);
+    assert_eq!(
+        other.unique().unwrap().coordinate().as_param().unwrap(),
+        t(1, 4)
+    );
 }
 
 #[test]

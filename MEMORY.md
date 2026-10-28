@@ -1,11 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.2.acceptance in docs/tasks/G1-SLICE-execution.md:focused actual
-  Notch/Graph join of bounded current uniqueness and exact original-coordinate projection. Then
-  .3 actual semantic source context/.4 quantities;no broad campaign before paired implementation.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.3 in docs/tasks/G1-SLICE-execution.md:actual semantic-notch/
+  original-source context. Recover actual complete source/registry/ledger/copy/piece ownership and
+  source-currentness interfaces before safe implementation children. Do not fake providers or infer
+  full readiness from numeric projection. .4 owns quantities;full paired effects/acceptance later.
+- Primitive .2 closes0509 with focused actual validated Notch/Graph/retained-source acceptance4,
+  scoped lint/fmt/oracle3 pass. Real stops400/401/source301/copy200/full metadata preserved;wide
+  original/ambiguous directions/8-cycle coalescing join actual anchors. Uniform-only API still
+  requires actual BetweenNotches context;profile G4/ease G2/G3 deferred. Whole0508 in666/3 spans.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
-  3 exact Git spans;94 live links/6 files routed;task-source12 pass. Current1119 logical,active3/64,
+  3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
   aggregate24/192. Transaction complete;do not rerun install/recover after later edits. Proofs in
   target/history-proof-0508;original trees retained target/history-capture-0508. Protect earlier
   target/history-capture-0450 and target/history-generations-0392g,stores and numerical certificates.

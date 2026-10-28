@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — pack actual active archive and preserve every logical byte
+## _(2026-10-28 UTC)_ — actual Notch/source primitive acceptance
 
-0508 actual active64/64=63 committed raw records+one catalog blocked the next product receipt. Public append prepares window23;source proof63 full Git files and independent native tar63/378790B match. Complete candidate matches1118 original logical records before installation.
-Guarded install retains original transaction trees. Independent before/after materializations match1118 names/sizes/SHA256 and3637878B;sealed generation1 index unchanged. Active2/64,total23/192 after packing;capacity restored without changing a bound or logical identity. No power-loss claim.
-Route live packed-record links to catalog headings;keep sealed bodies and source spans unchanged. [Whole0507 inverse lesson](docs/history/stitchcad-devnotes-part665.md) is retained only after packing/source comparison,three exact Git spans. Focused retrieval/task/book checks belong this leaf.
-Existing indexed archive/generation rules apply;promotion declined explicitly in leaf for routine bounded capture. LIVE/README unchanged,G1 6/18. Resume focused actual-notch primitive acceptance after this prerequisite commit;semantic context/quantity and paired acceptance stay owned.
+0509 joins implemented bounded current/inverse helpers to actual Notch definitions,validated SewingGraphs and retained original sources. Derive side/named IDs/goal edge from actual declaration;read actual anchors and full stop membership. No supplied coordinate/geometry provider substitutes for those objects.
+Late-fragment mark retains64-bit original and companion quarter;reverse/merge keeps two original/direction witnesses;actual8-cycle marks project within2 states despite256 old reference leaves/25 logical inputs. Original span/copy/stops/declaration and definitions/ledger remain intact.
+Native recovery4/scoped Clippy/fmt/oracle3 pass0. Profile obligations stay G4/ease stays G2/G3;Uniform-only source query still returns original BetweenNotches context requirement. Primitive .2 closes with focused checks;semantic source context/quantity and command/physical/paired acceptance stay owned.
+[Whole0508 retention](docs/history/stitchcad-devnotes-part666.md) preserves exact source/packing/routing proofs,3 Git spans. Book links now describe implemented primitives/repaired D305. LIVE/README unchanged,G1 6/18;actual semantic source context .3 next. Promotion declined for routine existing-contract acceptance.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

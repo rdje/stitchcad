@@ -554,7 +554,7 @@ Focused actual Design1 and selected lint/format checks pass. The weighted source
 with focused verification. Original-notch contexts,paired physical matching,command effects and
 broader paired/mutation acceptance remain owned;these source partitions are descriptive intervals.
 
-[Original-frame notch context](command-notch-context.md) records actual late-frame,ambiguous-origin
-and derived-work counterexamples plus the immediate D305 reference-recomposition repair prerequisite.
-Those requirements precede notch allocation and paired effects;weighted source acceptance above
-retains its focused scope.
+[Original-frame notch context](command-notch-context.md) documents implemented bounded current
+uniqueness,exact wide inverse and focused actual Notch/Graph primitive acceptance. D305 is repaired;
+actual semantic source context/notch quantities and paired effects retain their next implementation
+owners. Weighted source acceptance above keeps its focused scope.

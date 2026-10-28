@@ -261,6 +261,31 @@ concrete numeric cause as standard error source. Failures publish no partial can
 Native6 plus one native six-row Fraction comparison and two Rustdoc checks pass;combined primitive
 and actual semantic-notch/context/quantity adoption retain their own subsequent acceptance tasks.
 
+## Actual Notch and retained-source primitive acceptance
+
+The focused primitive acceptance uses real Notch definitions,validated SewingGraph objects and
+retained original SeamEaseSource data. It derives the distribution side,named IDs and original edge
+from that source,then reads the actual Notch anchor and performs bounded current/inverse queries.
+It supplies no caller-invented positions,physical widths or substitute geometry provider.
+
+Three actual source arrangements pass. A later first-fragment notch retains its64-bit original
+coordinate while its companion maps to original quarter. A split/reverse/merge notch keeps both
+half/Original and end/Reversed witnesses;its companion remains original quarter. Eight aligned
+split/merge cycles still retain256 old reference leaves under25 logical topology inputs,while newly
+authored current notches project with a two-state cap to original half and quarter. The current
+query and projection agree without comparing relative directions as absolute point identities.
+
+Original span identity,physical-copy side,full authored stop order and complete declaration remain
+intact. Actual Notch definitions and ledger stay unchanged. Profile bindings remain deferred to G4,
+and ease/geometry remain deferred to G2/G3. The old Uniform-only cumulative API still refuses this
+source with its actual notch-context requirement,original source identity,side and named IDs.
+Coordinates alone do not make semantic notch allocation available.
+
+The current-point/original-coordinate component closes with focused native4 and selected lint/
+format checks passing. Actual complete semantic source context and notch quantities are the next
+implementation stages;physical correspondence,command effects and full paired acceptance remain
+separate owned work. Earlier inverse/core checks retain their own scoped receipts.
+
 ## Current-reference composition defect
 
 D305 is repaired with focused verification. After a split at1/3,the valid held position
@@ -301,8 +326,8 @@ for numeric work. This does not rewrite references or cancel current reference r
 A63-bit current coordinate needs at most127 additional component bits per inverse edit:an offset
 uses two63-bit bounds plus an addition;split/reverse/positive-length merge need no more. Thus
 63+127J is a conservative component bound for J journal entries. Comparisons and notch interval
-arithmetic must reserve their additional products explicitly before allocation. Implemented inverse admission also reserves2W+128 for scratch/comparisons. These arithmetic
-bounds are not an allocator/CPU certificate;notch interval/amount work needs its own reservation.
+arithmetic must reserve their additional products explicitly before allocation. Implemented inverse
+admission also reserves2W+128 for scratch/comparisons. These arithmetic bounds are not an allocator/CPU certificate;notch interval/amount work needs its own reservation.
 
 Use the actual original source,side,copies,full stops,registry and journal. Preserve named notch
 identities and authored stop order while locating their original interval;both named orders are
