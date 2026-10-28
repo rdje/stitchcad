@@ -1,7 +1,8 @@
 //! Exact held-source cut binding; current-world validation and paired effects remain separate.
 use super::SplitSeamSpan;
 use crate::ontology::{
-    EdgeAnchor, EdgeRange, EdgeRef, EntityId, RangeSplitError, SeamSideId, SeamSpan, SewingGraph,
+    EdgeAnchor, EdgeRange, EdgeRef, EntityId, RangeSplitError, SeamDirection, SeamSide, SeamSideId,
+    SeamSpan, SewingGraph,
 };
 use core::fmt;
 
@@ -79,6 +80,40 @@ impl std::error::Error for CommandSeamSplitBindingError {
     }
 }
 
+/// One declared interval pairing projected from a source binding, without a new span identity.
+/// Both physical-copy identities, source frames and endpoint direction remain original metadata.
+/// Ease, stops, lineage, currentness and physical validity require their separate execution checks.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct CommandSeamSplitPair {
+    source_span: EntityId,
+    a: SeamSide,
+    b: SeamSide,
+    direction: SeamDirection,
+}
+
+impl CommandSeamSplitPair {
+    /// Actual original parent identity, not an identity allocated for a child span.
+    #[must_use]
+    pub const fn source_span(&self) -> EntityId {
+        self.source_span
+    }
+
+    /// Exact named side's original physical copy and projected source interval.
+    #[must_use]
+    pub const fn side(&self, side: SeamSideId) -> SeamSide {
+        match side {
+            SeamSideId::A => self.a,
+            SeamSideId::B => self.b,
+        }
+    }
+
+    /// Original endpoint correspondence, independent of physical-copy reflection.
+    #[must_use]
+    pub const fn direction(&self) -> SeamDirection {
+        self.direction
+    }
+}
+
 /// Borrowed original request and actual held span, with each side's exact lower/upper intervals.
 /// Copy identities, direction, ease and stops remain on the original span. This is source-frame
 /// evidence, not current-world validation, physical correspondence or an execution capability.
@@ -146,6 +181,47 @@ impl<'a> CommandSeamSplitBinding<'a> {
             SeamSideId::B => &self.side_b,
         }
     }
+
+    /// Pair intervals in side-A lower/upper order using the original endpoint correspondence.
+    /// Same direction pairs lower A with lower B; opposite pairs lower A with upper B. Every
+    /// interval retains its own ascending source bounds and original physical-copy identity.
+    /// These fixed projections allocate no IDs and supply no child ease, stops or live graph edits.
+    #[must_use]
+    pub const fn paired_intervals(&self) -> [CommandSeamSplitPair; 2] {
+        let source = self.span.definition();
+        let [first_a, second_a] = self.side_a;
+        let [lower_b, upper_b] = self.side_b;
+        let (first_b, second_b) = match source.direction {
+            SeamDirection::Same => (lower_b, upper_b),
+            SeamDirection::Opposite => (upper_b, lower_b),
+        };
+        [
+            CommandSeamSplitPair {
+                source_span: self.span.id(),
+                a: SeamSide {
+                    copy: source.a.copy,
+                    range: first_a,
+                },
+                b: SeamSide {
+                    copy: source.b.copy,
+                    range: first_b,
+                },
+                direction: source.direction,
+            },
+            CommandSeamSplitPair {
+                source_span: self.span.id(),
+                a: SeamSide {
+                    copy: source.a.copy,
+                    range: second_a,
+                },
+                b: SeamSide {
+                    copy: source.b.copy,
+                    range: second_b,
+                },
+                direction: source.direction,
+            },
+        ]
+    }
 }
 
 impl SplitSeamSpan {
@@ -164,6 +240,9 @@ impl SplitSeamSpan {
     ///     let [lower, upper] = binding.ranges(SeamSideId::A);
     ///     assert_eq!((lower.to(), upper.from()), (request.cut(SeamSideId::A).param,
     ///         request.cut(SeamSideId::A).param));
+    ///     let [first, second] = binding.paired_intervals();
+    ///     assert_eq!(first.source_span(), second.source_span());
+    ///     assert_eq!(first.direction(), binding.span().definition().direction);
     ///     Ok(binding)
     /// }
     /// ```

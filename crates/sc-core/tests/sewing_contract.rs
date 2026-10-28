@@ -357,6 +357,142 @@ fn source_cut_binding_keeps_held_evidence_when_actual_current_resolution_refuses
 }
 
 #[test]
+fn source_interval_pairs_follow_endpoint_direction_and_keep_physical_copies_distinct() {
+    for (a_copy, b_copy, same_pattern_edge) in
+        [(200, 202, false), (201, 202, false), (200, 201, true)]
+    {
+        for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+            let mut f = fixture();
+            f.span_mut().a.copy = id(a_copy);
+            f.span_mut().b.copy = id(b_copy);
+            f.span_mut().direction = direction;
+            f.span_mut().a.range =
+                EdgeRange::new(f.span().a.range.edge(), t(1, 7), t(6, 7)).unwrap();
+            let b_edge = if same_pattern_edge {
+                f.span().a.range.edge()
+            } else {
+                f.span().b.range.edge()
+            };
+            f.span_mut().b.range = EdgeRange::new(b_edge, t(1, 5), t(4, 5)).unwrap();
+            let graph = f.graph(&[]).unwrap();
+            let request = SplitSeamSpan::new(
+                f.span().id,
+                EdgeAnchor {
+                    edge: f.span().a.range.edge(),
+                    param: t(2, 3),
+                },
+                EdgeAnchor {
+                    edge: f.span().b.range.edge(),
+                    param: t(3, 7),
+                },
+            );
+            let binding = request.bind_source_cuts(&graph).unwrap();
+            let [first, second] = binding.paired_intervals();
+            for pair in [first, second] {
+                assert_eq!(pair.source_span(), f.span().id);
+                assert_eq!(pair.direction(), direction);
+                assert_eq!(pair.side(SeamSideId::A).copy, id(a_copy));
+                assert_eq!(pair.side(SeamSideId::B).copy, id(b_copy));
+                assert_eq!(
+                    pair.side(SeamSideId::A).range.edge(),
+                    f.span().a.range.edge()
+                );
+                assert_eq!(
+                    pair.side(SeamSideId::B).range.edge(),
+                    f.span().b.range.edge()
+                );
+            }
+            let bounds = |pair: sc_core::command::CommandSeamSplitPair, side| {
+                let range = pair.side(side).range;
+                (range.from(), range.to())
+            };
+            assert_eq!(
+                [bounds(first, SeamSideId::A), bounds(second, SeamSideId::A)],
+                [(t(1, 7), t(2, 3)), (t(2, 3), t(6, 7))]
+            );
+            let expected_b = match direction {
+                SeamDirection::Same => [(t(1, 5), t(3, 7)), (t(3, 7), t(4, 5))],
+                SeamDirection::Opposite => [(t(3, 7), t(4, 5)), (t(1, 5), t(3, 7))],
+            };
+            assert_eq!(
+                [bounds(first, SeamSideId::B), bounds(second, SeamSideId::B)],
+                expected_b
+            );
+            assert_eq!(binding.span().definition(), f.span());
+        }
+    }
+}
+
+#[test]
+fn structural_child_graph_acceptance_is_not_parent_ease_conservation() {
+    let mut f = fixture();
+    f.span_mut().ease.amount = EaseAmount::Explicit(Length::from_micrometres(10).unwrap());
+    let graph = f.graph(&[]).unwrap();
+    let request = SplitSeamSpan::new(
+        f.span().id,
+        EdgeAnchor {
+            edge: f.span().a.range.edge(),
+            param: t(1, 2),
+        },
+        EdgeAnchor {
+            edge: f.span().b.range.edge(),
+            param: t(1, 2),
+        },
+    );
+    let binding = request.bind_source_cuts(&graph).unwrap();
+    let [first, second] = binding.paired_intervals();
+    let child = |pair: sc_core::command::CommandSeamSplitPair, identity| {
+        let mut definition = binding.span().definition().clone();
+        definition.id = identity;
+        definition.a = pair.side(SeamSideId::A);
+        definition.b = pair.side(SeamSideId::B);
+        definition.direction = pair.direction();
+        definition
+    };
+    let mut declarations = vec![child(first, id(302)), child(second, id(303))];
+    let build = |spans| {
+        SewingGraph::new(
+            SewingGraphDefinition { id: id(300), spans },
+            &f.plan,
+            &f.pieces,
+            &[],
+            &f.ledger,
+        )
+        .unwrap()
+    };
+    let total = |candidate: &SewingGraph| {
+        candidate
+            .spans()
+            .iter()
+            .try_fold(Length::ZERO, |sum, span| {
+                let EaseAmount::Explicit(amount) = span.definition().ease.amount else {
+                    unreachable!("actual explicit diagnostic fixture")
+                };
+                sum.checked_add(amount)
+            })
+            .unwrap()
+    };
+    // These are independently supplied child declarations, not a result published by a handler.
+    // The structural constructor has no original-parent relation from which to certify conservation.
+    let copied = build(declarations.clone());
+    assert_eq!(total(&copied), Length::from_micrometres(20).unwrap());
+    assert_eq!(copied.ease_validation(), EaseValidation::DeferredToG2AndG3);
+    for declaration in &mut declarations {
+        declaration.ease.amount = EaseAmount::Explicit(Length::from_micrometres(5).unwrap());
+    }
+    let conserving = build(declarations);
+    assert_eq!(total(&conserving), Length::from_micrometres(10).unwrap());
+    assert_eq!(
+        conserving.ease_validation(),
+        EaseValidation::DeferredToG2AndG3
+    );
+    assert_eq!(
+        binding.span().definition().ease.amount,
+        EaseAmount::Explicit(Length::from_micrometres(10).unwrap())
+    );
+}
+
+#[test]
 fn immutable_content_retains_direction_signed_ease_and_visible_obligations() {
     let mut f = fixture();
     f.span_mut().ease.amount = EaseAmount::Explicit(Length::from_micrometres(-1500).unwrap());

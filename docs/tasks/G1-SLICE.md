@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0486
+## Current leaf acceptance —0487
 
-- [x] ROOT CAUSE: native construction/sewing interface review →original request retained target/cuts,but supplied graph source binding was absent;actual source fields provide canonical metadata rc=0.
-- [x] ADDRESSED: cargo test -p sc-core --test sewing_contract →26 passed rc=0,including4 actual graph/request/interval/precedence/replacement/deletion cases;no copied span/ease/stop content.
-- [x] NO REGRESSION: cargo test -p sc-core --doc seam_split →3 passed (positive1/privacy1/lifetime1);strict selected Clippy/fmt,glossary0 and book88/164/1559/2652 rc=0;bus source unchanged.
+- [x] ROOT CAUSE: native SeamDirection contract →lower/lower for Same,lower/upper for Opposite,independent physical reflection rc=0;parent amount has no coupled child relation.
+- [x] ADDRESSED: cargo test -p sc-core --test sewing_contract →28 passed rc=0;new direction/copy cases6 and actual cloned-parent ease diagnostic20 versus10 pass;D301 P1 next remains open.
+- [x] NO REGRESSION: seam_split rustdoc3/strict selected Clippy/fmt pass0;glossary0/book88/165/1559/2654 rc=0;bus availability/demand bytes unchanged,no paired effects.
 
 ## Goal
 
@@ -153,7 +153,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Verification: [preserved review contract](G1-SLICE-measurements.md#structural-ease-review-contract--preserved-from-71aaf19)
   and [preserved evidence](G1-SLICE-measurements.md#structural-ease-review--preserved-from-b6bd985).
   Commit: `STITCHCAD-G1-0031`
-
 - ID: `G1-SLICE.4c`
   Status: `done`
   Goal: SizeSet structural/intention children complete; execution/approval later; [whole scope](../history/stitchcad-devnotes-part553.md).
@@ -163,7 +162,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal: stable authored size membership and checked revision successors.
   Verification: [preserved full contract/checklist](G1-SLICE-measurements.md#size-membership-contract-and-evidence--preserved-from-0b77235).
   Commit: `STITCHCAD-G1-0032`
-
 - ID: `G1-SLICE.4c.2`
   Status: `done`
   Goal: axes with ordered values and member coordinate references; incomplete grids remain explicit.
@@ -172,44 +170,37 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   no label-derived body measurements or silent axis defaults. Preserve source/state for numeric axes.
   Verification: individual5/0 + aggregate5/0; selected strict lint/fmt/book0.
   Commit: STITCHCAD-G1-0297/0298.
-
 - ID: `G1-SLICE.4c.2.1`
   Status: `done`
   Goal:0297 individual axes verified5/0/lint/fmt/book0.
   Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part422md).
   Commit: STITCHCAD-G1-0297.
-
 - ID: `G1-SLICE.4c.2.2`
   Status: `done`
   Goal:0298 complete axis/member points verified5+5/0/lint/fmt/book0.
   Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part424md).
   Commit: STITCHCAD-G1-0298.
-
 - ID: `G1-SLICE.4c.3`
   Status: `done`
   Children: .4c.3a garment charts, .4c.3b collection, .4c.3c MTM, .4c.3d composite, .4c.3e review.
   Goal:complete SizeSet chart/break scope/proofs; [whole parent](../history/stitchcad-devnotes-part546.md).
-
 - ID: `G1-SLICE.4c.3a`
   Status: `done`
   Goal: canonical current garment chart observations with stable member/POM references.
   Verification: [preserved full contract/checklist](G1-SLICE-measurements.md#garment-chart-observation-contract-and-evidence--preserved-from-71aaf19).
   Commit: `STITCHCAD-G1-0033`
-
 - ID: `G1-SLICE.4c.3b`
   Status: `done`
   Goal: immutable current Design/member/POM garment-chart coverage; full contract/evidence preserved
   in [measurement evidence](G1-SLICE-measurements.md#garment-chart-collection-evidence--preserved-from-e299771).
   Verification: 18 contracts/privacy, fourteen real reds; 422 strict tests/WASM/book; staged doctrines.
   Commit: `STITCHCAD-G1-0034` (`e299771`).
-
 - ID: `G1-SLICE.4c.3c`
   Status: `done`
   Goal: custom-member body/Ease inputs; full contract/evidence retained in
   [measurement evidence](G1-SLICE-measurements.md#mtm-contract-and-evidence--preserved-from-285e238).
   Verification: 15 contracts/two privacy-role docs, twelve real reds; 439 strict tests/WASM/book.
   Commit: `STITCHCAD-G1-0035` (`285e238`).
-
 - ID: `G1-SLICE.4c.3d`
   Status: `done`
   Goal: signed canonical adjacent breaks and composite SizeSet over membership/axes/chart with source/
@@ -218,7 +209,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   MTM path-2 refusal; no rounded values, generated equivalence or profile execution claimed.
   Verification: focused declaration/coverage/composite children0303/0304/0306–0308 pass0; structural scope only.
   Commit: STITCHCAD-G1-0303/0304/0306/0307/0308.
-
 - ID: `G1-SLICE.4c.3d.0`
   Status: `done`
   Goal:0302 D228 key approved; [whole ruling/evidence](../history/window15.md#stitchcad-devnotes-part433md).
@@ -248,19 +238,16 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0308 unified inputs verified6+6+5/0/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part446md).
   Commit: STITCHCAD-G1-0308.
-
 - ID: `G1-SLICE.4c.3d.3.h15`
   Status: `done`
   Goal:0305 window15/source/public/materialization/prior14/retention/book verified; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part440md).
   Commit: STITCHCAD-G1-0305.
-
 - ID: `G1-SLICE.4c.3e`
   Status: `done`
   Goal: chart/body/break/currentness requirement review and milestone checks before closing .3;
   remaining profile transformation .4 and full SizeSet .5/.4d stay owned.
   Verification: D230/D231 source/producer repairs0309, unchanged-code/book/targeted-anchor review0310.
   Commit: STITCHCAD-G1-0309/0310.
-
 - ID: `G1-SLICE.4c.3e.1`
   Status: `done`
   Goal:0309 D230/D231 repairs verified13-child capture/5 refusals/omission-red/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part448md).
@@ -269,7 +256,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0310 chart/body/break scope closes; unchanged-code/book/anchor checks0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part450md).
   Commit: STITCHCAD-G1-0310.
-
 - ID: `G1-SLICE.4c.4`
   Status: `done`
   Goal: resolved profile intent0311–0318; G4 execution remains separate; [whole scope](../history/stitchcad-devnotes-part553.md).
@@ -277,7 +263,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0311 profile pins/origin; focused18/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part452md).
   Commit: STITCHCAD-G1-0311.
-
 - ID: `G1-SLICE.4c.4.2`
   Status: `done`
   Goal:0312 label/base intent; focused21/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part454md).
@@ -358,7 +343,6 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Full integration/runtime/CI retains G1 .11/.12/.16 and pre-push ownership.
   Verification:0321 focused native acceptance and scoped publication74 chapters/87 entries pass0; no fresh platform claim.
   Commit: STITCHCAD-G1-0321; full runtime/integration/CI retains later owners.
-
 - ID: `G1-SLICE.4d.1`
   Status: `done`
   Contract/checklist: [preserved publication evidence](G1-SLICE-measurements.md#publication-contract-and-evidence--preserved-from-9ef9602).
@@ -706,17 +690,33 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0485 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part640.md).
 - ID: `G1-SLICE.6.5.3.2.2`
   Status: `done`
-  Goal: exact original request/actual held graph span source-cut binding;sealed borrowed evidence,not execution authority.
-  - [x] REPRODUCE / ISSUE: native construction/sewing interface review →request schema preserves explicit target/A/B cuts but has no held graph binding;graph exposes actual canonical spans,rc=0.
-  - [x] ROOT CAUSE: actual native field/source review →side frames/ranges,copy/direction/ease/stops belong to the original span;strict source-cut evidence can borrow it without cloning or claiming current-world validity,rc=0.
-  - [x] FIX: add bind_source_cuts and sealed CommandSeamSplitBinding;missing target then A/B source/interior order,original typed RangeSplitError source chain,fixed ascending interval arrays and bounded Debug.
-  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract →26 passed rc=0,including4 new actual weighted/profile/stop/unequal-cut/pointer/error/replacement/deletion cases;held binding remains descriptive when actual current validation refuses.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc seam_split →3 passed rc=0 (positive1,privacy1,lifetime1);selected library/sewing strict Clippy/fmt pass0;glossary310/9/158/0 and book88/164/1559/2652 rc=0;actual bus availability/operation-demand bytes unchanged.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/indexed decision/index/new bounded book/navigation/API-status updated;LIVE reviewed unchanged G1 6/18,D300 corrected;README unchanged. transition_receipts.py --record part640 →3 exact Git spans rc=0;history_archive.sh verify-retention →1094/2482274 residentB rc=0.
-  Commit: STITCHCAD-G1-0486;next .2.3 exact direction/ease/stop/lineage partition obligations before effects;paired acceptance stays deferred.
+  Goal:0486 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part641.md).
 - ID: `G1-SLICE.6.5.3.2.3`
+  Status: `in_progress`
+  Goal: exact paired partition obligations from native graph/reference/amount contracts before effects.
+  Children .1 direction interval pairs;.2 conserved ease sources;.3 semantic stop partition;.4 span lineage.
+- ID: `G1-SLICE.6.5.3.2.3.1`
+  Status: `done`
+  Goal: actual declared-direction interval pairs and native conservation counterexample;no child/ease/effect publication.
+  - [x] REPRODUCE / ISSUE: native field/interface review →Same lower endpoints correspond,Opposite lower A meets upper B;binding has independent ordered side intervals,rc=0.
+  - [x] ROOT CAUSE: actual SeamDirection/SeamSide metadata separates endpoint order from physical reflection;actual graph/amount declarations have no original-parent conservation relation,rc=0.
+  - [x] FIX: add fixed Copy CommandSeamSplitPair/paired_intervals with original parent/copy/frame/direction;track D301 P1 next .3.2 for coupled ease before effects,plus actual stop/lineage stages.
+  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract →28 passed rc=0;new mapping case covers2 directions×3 physical-copy configurations including shared pattern edge;actual constructor accepts10+10=20 and5+5=10 while retaining deferred-ease marker.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc seam_split →3 passed;selected library/sewing strict Clippy/fmt pass0;glossary310/9/158/0 and book88/165/1559/2654 rc=0;actual bus availability/demand bytes unchanged. D301 is a pre-effect gap,not a published split result.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D301/indexed decision/index/LIVE/book/API-status updated;README unchanged. transition_receipts.py --record part641 →3 exact Git spans rc=0;history_archive.sh verify-retention →1095/2486903 residentB rc=0.
+  Commit: STITCHCAD-G1-0487;D301 .3.2 next before any paired effects;full paired acceptance remains deferred.
+- ID: `G1-SLICE.6.5.3.2.3.2`
   Status: `pending`
-  Goal: derive exact direction/ease/stop/lineage partition requirements from actual native graph/reference/amount interfaces;own missing semantic or geometry dependencies before implementing paired effects.
+  Goal: P1 conserve actual parent ease across child partitions,including explicit/formula/profile sources
+  and uniform/weighted/notch distributions;derive representation/geometry dependencies before effects.
+- ID: `G1-SLICE.6.5.3.2.3.3`
+  Status: `pending`
+  Goal: preserve actual semantic stops/copy ownership,cut-boundary behavior and original authored order
+  in paired child partitions;use actual current anchors/range evidence rather than guessed assignment.
+- ID: `G1-SLICE.6.5.3.2.3.4`
+  Status: `pending`
+  Goal: canonical retired-parent/new-child span lineage with actual identity ownership and references;
+  no identity reuse or silent old-target reassignment;integrate current-model validation before effects.
 - ID: `G1-SLICE.6.5.3.2.acceptance`
   Status: `pending`
   Goal: after paired feature implementation,combined actual split/reference/ease/stop/lineage and bus undo/replay/cancel/quota acceptance;no broad suites between implementation slices.

@@ -142,3 +142,15 @@ Native pointer/weighted/profile/stop/unequal-cut/replacement tests pass;actual t
 makes current validation refuse while held source binding remains inspectable. Bounded Debug avoids
 walking original variable-size content. Bus availability and operation demand remain unchanged;
 current-world/pairing/ease/stop/lineage/admission/atomic effects remain their separate implementation obligations.
+
+## Declared direction and conserved-parent gap0487
+
+answers: "does a standalone child graph prove the original parent's ease was conserved?"
+
+No. Native copied-child declarations10+10 give20 for a10-micrometre parent;independently supplied
+5+5 also passes the same structural constructor,which has no parent relation and explicitly defers
+realized ease. D301 is owned P1 at .6.5.3.2.3.2 before effects,including original symbolic sources,
+distributions and coupled quantization. This diagnostic publishes no command result.
+CommandSeamSplitPair carries only original parent identity,physical copies,exact intervals and
+endpoint direction. Same uses lower/lower;Opposite lower/upper,independently of reflected copies.
+New live identities,child amounts/stops,lineage and physical/current-world validity remain required.

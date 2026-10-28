@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual original paired-cut source binding
+## _(2026-10-28 UTC)_ — declared paired interval projections and D301
 
-0486 .6.5.3.2.2 adds SplitSeamSpan::bind_source_cuts over the actual held graph. The sealed borrowed view keeps original request/span pointers and fixed ascending interval arrays. Copy/direction/ease/stops remain on the original owner;Debug visits bounded source metadata only.
-Missing target precedes A/B,each frame check precedes interior bounds,and the original RangeSplitError remains the standard source. Four actual cases include weighted/profile ease,a semantic notch,unequal cuts,pointer identity,refusal precedence,replacement snapshots and actual topology deletion.
-Sewing26 and docs3 (positive1/privacy1/lifetime1) pass;selected library/sewing strict Clippy/fmt pass. Real glossary310/9/158/0 and book88/164/1559/2652 pass0. Actual bus availability/operation-demand source bytes remain unchanged;source binding grants no currentness/authority/paired effects.
-Promotion:indexed command-layer decision;whole0485 scope/lesson/changelog640 verifies3 Git spans,retention1094/2482274 residentB passes0. LIVE reviewed unchanged,G1 6/18,D300 corrected;README unchanged. Next .2.3 exact direction/ease/stop/lineage obligations;full paired acceptance deferred.
-[Whole0485 interval prerequisite/D300 lesson](docs/history/stitchcad-devnotes-part640.md) retains native17/docs1 and exact source-frame bounds.
+0487 .6.5.3.2.3.1 projects fixed Copy interval pairs from actual declared direction:Same lower/lower,Opposite lower/upper,in A lower/upper output order. Preserve original parent identity,physical copies,frames and direction without creating spans or assigning amounts/stops.
+New native mapping case covers2 directions×3 copy configurations,including reflected copies and one shared pattern edge. Actual structural child graph counterexample accepts10+10=20 for parent10;5+5 also passes with deferred-ease marker. Root has no parent-aware conservation relation.
+D301 P1 is owned next .3.2 before paired effects,including symbolic sources,distributions and coupled quantization. Sewing28/docs3/selected strict Clippy/fmt pass;glossary310/9/158/0 and book88/165/1559/2654 pass0. Actual bus availability/demand unchanged;no split result published.
+Promotion:indexed command-layer decision;whole0486 scope/lesson/changelog641 verifies3 Git spans,retention1095/2486903 residentB passes0. LIVE D301 P1 owned,G1still6/18;README unchanged. Remaining stop/lineage and full paired acceptance stay tracked;full PNT continues.
+[Whole0486 original source-binding lesson](docs/history/stitchcad-devnotes-part641.md) retains sewing26/docs3 and snapshot/compiler boundaries.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

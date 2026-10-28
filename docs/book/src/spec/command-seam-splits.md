@@ -20,6 +20,11 @@ execution owners. The bus still exposes its three implemented metadata handlers.
 | `SourceFrame` | Original cut edge differs from the actual named side's held edge |
 | `Interior` | Same-frame cut is not strictly inside that side's original range |
 | `RangeSplitError` | Original held range and cut,retained as the interior refusal's standard source |
+| `paired_intervals` | Two declared interval pairs,ordered by A's lower then upper interval |
+| `CommandSeamSplitPair` | Fixed original-parent/copy/range/direction projection,without a child span identity |
+| `source_span` | Original parent correspondence identity carried by a projected pair |
+| `side` | Original named physical-copy identity and its projected interval |
+| `direction` | Original endpoint correspondence carried unchanged by each pair |
 
 Lookups use the original target identity and authored graph order. One side cannot substitute its
 anchor for the other. Missing target wins first; side A is checked completely before side B. On each
@@ -49,9 +54,38 @@ fn inspect_existing<'a>(request: &'a SplitSeamSpan, graph: &'a SewingGraph)
     let [lower, upper] = binding.ranges(SeamSideId::A);
     assert_eq!((lower.to(), upper.from()), (request.cut(SeamSideId::A).param,
         request.cut(SeamSideId::A).param));
+    let [first, second] = binding.paired_intervals();
+    assert_eq!(first.source_span(), second.source_span());
+    assert_eq!(first.direction(), binding.span().definition().direction);
     Ok(binding)
 }
 ```
+
+## Follow the declared endpoint correspondence
+
+The binding projects two fixed interval pairs in side-A lower/upper order:
+
+| Original direction | First pair | Second pair |
+| --- | --- | --- |
+| Same | A lower with B lower | A upper with B upper |
+| Opposite | A lower with B upper | A upper with B lower |
+
+Each pair retains its own ascending source bounds,original physical-copy identities and original
+endpoint direction. Reflection of a physical copy does not rewrite this declaration. Two copies of
+one pattern may use the same source edge while remaining distinct physical sides. The pair's parent
+identity is provenance metadata;creating new live span identities remains an execution obligation.
+
+Given that binding,a caller can read its fixed projected metadata:
+
+```rust,ignore
+let [first, second] = binding.paired_intervals();
+assert_eq!(first.source_span(), second.source_span());
+let actual_a_copy = first.side(SeamSideId::A).copy;
+let original_direction = first.direction();
+```
+
+These are interval projections. Actual physical correspondence,child ease,semantic stops,lineage
+and current graph publication remain required stages before a paired effect.
 
 ## Preserve original refusals
 
@@ -77,3 +111,17 @@ Native tests use actual Pieces,CutPlan,ledger,graph,weighted symbolic ease and a
 check original pointer identity, unequal cuts, exact partial intervals, A/B error precedence and the
 original source chain, replacement snapshots and actual deleted-range evidence. Full paired behavior
 and bus transaction acceptance remain separate work.
+
+## Conserve the original ease before effects
+
+A paired mutation must check coupled conservation against its original parent. Standalone structural
+graph validation checks each supplied span's references and declarations and retains its explicit
+`EaseValidation::DeferredToG2AndG3` marker. In the actual native counterexample,a10-micrometre parent
+copied into two independently supplied child declarations produces20 total;both that graph and the
+independently authored5+5 control pass structural validation. They are fixture inputs,not published
+results from a paired handler.
+
+The P1 conserved-ease task owns the parent relation,exact allocation/quantization and original
+explicit/formula/profile sources before effects. Weighted and notch-bounded distributions retain
+that same obligation;an unresolved source cannot be replaced with a fabricated child value. Semantic
+stop ownership and retired-parent/new-child lineage remain separate owned partition stages.

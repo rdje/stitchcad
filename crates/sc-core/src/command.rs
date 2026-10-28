@@ -89,7 +89,7 @@ pub use request::CommandRequest;
 pub use scope::{
     CommandScope, CommandScopeNarrowingError, CommandScopeRefusal, CommandScopeWindowError,
 };
-pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError};
+pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};
 pub use workflow::{CommandWorkflowId, CommandWorkflowStep};

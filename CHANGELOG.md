@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0486 — bind original paired cuts to actual held seam spans
+## STITCHCAD-G1-0487 — preserve declared endpoint direction in interval pairs
 
-- Add sealed borrowed source binding with exact A/B interval arrays,original request/span identity and typed missing/frame/interior refusals;retain original range error source and bounded Debug.
-- Native sewing26/docs3/selected strict Clippy/fmt pass;four new actual weighted/profile/stop/pointer/precedence/replacement/deletion cases distinguish source evidence from current-world validity.
-- Final glossary0/book88/164/1559/2652 passes;actual bus availability/operation demand unchanged. Whole0485 retained640;paired direction/ease/stop/lineage and effects remain owned.
+- Add fixed Copy CommandSeamSplitPair/paired_intervals with original parent,physical copies,source frames and direction;Same lower/lower and Opposite lower/upper remain independent of reflection.
+- Native sewing28/docs3/selected strict Clippy/fmt pass. Mapping covers six direction/copy configurations;actual child graph diagnostic shows copied parent10→20 versus5+5→10,without a published result.
+- Own D301 P1 conserved parent ease next before effects. Final glossary0/book88/165/1559/2654 passes;bus availability/demand unchanged. Whole0486 retained641;stop/lineage and paired acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
