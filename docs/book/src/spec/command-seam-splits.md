@@ -308,7 +308,7 @@ remain their implementation owners;this change does not make SplitSeamSpan execu
 
 [Admitted command source capture](command-seam-capture.md) now checks complete original metadata
 cost before materialization. [Weighted/notch command quantities](command-seam-quantities.md) now use that
-actual captured root;notch command views and paired effects remain next.
+actual captured root;actual Design source admission precedes capture,while paired effects remain owned.
 
 ## Query quantities from the retained original root
 

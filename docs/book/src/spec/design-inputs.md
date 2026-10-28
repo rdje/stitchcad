@@ -441,6 +441,9 @@ no current sewing, numeric/Profile/geometric/execution/release result.
 DesignSewing.validate_current() checks owned ids/current root, every landmark Piece/anchor, original
 graph against actual copies/Pieces/landmarks/ledger, then all amounts. amount_declarations() repeats
 this preflight before borrowing objects; late failures expose no partial views.
+The [actual seam-command source entry](command-seam-capture.md#join-the-actual-owned-design)
+admits complete model resources before this preflight,then binds real target cuts and admits
+original capture. It lends the actual selected declaration;numeric/physical/authority stages remain separate.
 
 Unused landmarks retain AnchorError; absent Piece yields MissingLandmarkPiece before graph lookup.
 Renamed copies retain SewingError despite healthy amounts. After graph validation, Count retains

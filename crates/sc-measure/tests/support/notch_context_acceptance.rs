@@ -641,3 +641,440 @@ fn original_notch_design_quantity_preserves_formula_and_profile_sources_without_
         }
     }
 }
+
+fn command_model_limits(
+    state: &DesignSewing<DesignSources>,
+) -> (
+    sc_core::design::DesignResourceLimits,
+    sc_core::design::DesignResourceDemand,
+) {
+    use sc_core::design::{
+        charge_design_sewing_resources, DesignResourceLimits, DesignResourceMeter,
+    };
+    let generous = DesignResourceLimits::new(
+        NonZeroUsize::new(1_000_000).expect("finite census"),
+        NonZeroUsize::new(1_000_000).expect("finite text census"),
+        NonZeroU64::new(1_000).expect("finite counter census"),
+    );
+    let mut meter = DesignResourceMeter::new(generous);
+    charge_design_sewing_resources(state, &mut meter)
+        .expect("existing independent complete model meter");
+    let demand = meter.finish().expect("complete actual demand");
+    (
+        DesignResourceLimits::new(
+            NonZeroUsize::new(demand.collection_entries().max(1)).expect("exact actual population"),
+            NonZeroUsize::new(demand.text_bytes().max(1)).expect("exact actual text"),
+            NonZeroU64::new(demand.counter_bits().max(1)).expect("exact actual counter bits"),
+        ),
+        demand,
+    )
+}
+fn command_capture_limits(items: usize) -> sc_core::command::CommandEaseCaptureLimits {
+    sc_core::command::CommandEaseCaptureLimits::new(
+        NonZeroUsize::new(items).expect("explicit capture count"),
+    )
+}
+fn command_request(
+    state: &DesignSewing<DesignSources>,
+    index: usize,
+    a_cut: Param,
+    b_cut: Param,
+) -> sc_core::command::SplitSeamSpan {
+    let span = state
+        .graph()
+        .spans()
+        .get(index)
+        .expect("actual selected target");
+    sc_core::command::SplitSeamSpan::new(
+        span.id(),
+        EdgeAnchor {
+            edge: span.definition().a.range.edge(),
+            param: a_cut,
+        },
+        EdgeAnchor {
+            edge: span.definition().b.range.edge(),
+            param: b_cut,
+        },
+    )
+}
+#[test]
+fn command_seam_source_notch_joins_actual_complete_design_capture_and_original_context_quantities()
+{
+    use sc_core::ontology::NotchEaseLimits;
+    use sc_units::Length;
+    for side in [SeamSideId::A, SeamSideId::B] {
+        for sign in [-1, 1] {
+            let parent = Length::from_micrometres(sign).expect("signed literal");
+            let state = state(EaseAmount::Explicit(parent), side);
+            let saved = state.clone();
+            let request = command_request(&state, 0, at(3, 8), at(5, 8));
+            let (model_limits, demand) = command_model_limits(&state);
+            let source = request
+                .admit_sewing_source(&state, model_limits, command_capture_limits(3))
+                .expect("complete actual model/current source/target/capture admission");
+            assert!(core::ptr::eq(source.state(), &state));
+            assert!(core::ptr::eq(source.binding().request(), &request));
+            assert!(core::ptr::eq(
+                source.binding().span(),
+                state.graph().spans().first().expect("target")
+            ));
+            let metadata = source.amount_declaration();
+            assert!(core::ptr::eq(metadata.span(), source.binding().span()));
+            assert!(core::ptr::eq(
+                metadata.canonical_inputs(),
+                state.inputs().inputs()
+            ));
+            assert_eq!(source.model_demand(), demand);
+            assert_eq!(source.model_limits(), model_limits);
+            assert_eq!(source.capture_admission().item_count(), 3);
+            assert_eq!(source.capture_admission().source_span(), id(97_000));
+            let capture = source.capture_admission().capture();
+            assert!(core::ptr::eq(
+                capture.source(),
+                state
+                    .graph()
+                    .ease_sources()
+                    .next()
+                    .expect("canonical original")
+            ));
+            let structure = source.state().inputs().structure();
+            let context = capture
+                .source()
+                .admit_notch_context(
+                    structure.cut_plan(),
+                    structure.pieces().pieces(),
+                    source.state().landmarks(),
+                    structure.topology(),
+                    limits(1, 2),
+                )
+                .expect("actual full source dependencies")
+                .validate_sources()
+                .expect("bounded current original context")
+                .original_context()
+                .expect("actual original Notches");
+            let view = capture
+                .notch_explicit_ease(
+                    &context,
+                    NotchEaseLimits::new(
+                        NonZeroU64::new(473).expect("separate exact quantity allowance"),
+                    ),
+                )
+                .expect("actual captured original command quantities");
+            assert_eq!(view.span().id(), id(97_001));
+            assert_eq!(view.original_source().span(), id(97_000));
+            assert_eq!(
+                (
+                    view.parent_amount(),
+                    view.first_amount(),
+                    view.second_amount()
+                ),
+                (parent, Length::ZERO, parent)
+            );
+            assert_eq!(view.source_parent_amount(), parent);
+            assert_eq!(view.original_source().stops().len(), 2);
+            assert!(view.span().definition().stops.is_empty());
+            assert!(core::ptr::eq(view.original_context(), &context));
+            assert!(core::ptr::eq(
+                context.validation().admission().ledger(),
+                structure.topology()
+            ));
+            assert_eq!(state, saved);
+        }
+    }
+}
+fn command_weighted_state(amount: EaseAmount, side: SeamSideId) -> DesignSewing<DesignSources> {
+    use sc_core::ontology::{DeclaredEase, WeightedEaseRegion};
+    let state = state(amount, side);
+    let source = state
+        .graph()
+        .ease_sources()
+        .next()
+        .expect("actual original source");
+    let definition = SeamSpanDefinition {
+        id: source.span(),
+        a: source.side(SeamSideId::A),
+        b: source.side(SeamSideId::B),
+        direction: source.direction(),
+        ease: DeclaredEase {
+            amount,
+            distribution: EaseDistribution::Weighted {
+                side,
+                regions: vec![
+                    WeightedEaseRegion {
+                        from: Param::START,
+                        to: at(1, 2),
+                        weight: Rational::ONE,
+                    },
+                    WeightedEaseRegion {
+                        from: at(1, 2),
+                        to: Param::END,
+                        weight: Rational::from_integer(3),
+                    },
+                ],
+            },
+        }
+        .into(),
+        stops: source.stops().to_vec(),
+    };
+    let structure = state.inputs().structure();
+    let graph = SewingGraph::new(
+        SewingGraphDefinition {
+            id: state.graph().id(),
+            spans: vec![definition],
+        },
+        structure.cut_plan(),
+        structure.pieces().pieces(),
+        state.landmarks(),
+        structure.topology(),
+    )
+    .expect("actual full weighted source with real Notches");
+    DesignSewing::new(DesignSewingDefinition {
+        inputs: state.inputs().clone(),
+        graph,
+        landmarks: state.landmarks().to_vec(),
+    })
+    .expect("actual owned weighted sewing state")
+}
+#[test]
+fn command_seam_source_weighted_joins_actual_complete_design_capture_and_density_quantities() {
+    use sc_core::ontology::WeightedEaseLimits;
+    use sc_units::Length;
+    for side in [SeamSideId::A, SeamSideId::B] {
+        for sign in [-1, 1] {
+            let parent = Length::from_micrometres(sign).expect("signed literal");
+            let state = command_weighted_state(EaseAmount::Explicit(parent), side);
+            let saved = state.clone();
+            let request = command_request(&state, 0, at(1, 2), at(2, 3));
+            let (model_limits, demand) = command_model_limits(&state);
+            let source = request
+                .admit_sewing_source(&state, model_limits, command_capture_limits(5))
+                .expect("complete actual weighted model source");
+            assert_eq!(source.model_demand(), demand);
+            assert_eq!(source.capture_admission().item_count(), 5);
+            let metadata = source.amount_declaration();
+            let DesignSewingAmountSource::Explicit(actual) = metadata.source() else {
+                unreachable!("literal")
+            };
+            assert_eq!(*actual, parent);
+            assert!(core::ptr::eq(
+                metadata.canonical_inputs(),
+                state.inputs().inputs()
+            ));
+            let capture = source.capture_admission().capture();
+            let view = capture
+                .weighted_explicit_ease(WeightedEaseLimits::new(
+                    NonZeroUsize::new(2).expect("full original regions"),
+                    NonZeroU64::new(598).expect("separate exact quantity allowance"),
+                ))
+                .expect("original weighted command quantities");
+            assert!(core::ptr::eq(view.span(), metadata.span()));
+            assert_eq!(view.source_parent_amount(), parent);
+            assert_eq!(view.parent_amount(), parent);
+            assert_eq!(
+                view.first_amount(),
+                if side == SeamSideId::A {
+                    Length::ZERO
+                } else {
+                    parent
+                }
+            );
+            assert_eq!(
+                view.first_amount().checked_add(view.second_amount()),
+                Ok(parent)
+            );
+            assert_eq!(view.weighted_admission().region_count(), 2);
+            assert_eq!(state, saved);
+        }
+    }
+}
+#[test]
+fn command_seam_source_preserves_model_current_target_and_capture_refusal_precedence() {
+    use sc_core::command::{
+        CommandEaseCaptureCollection, CommandEaseCaptureError, CommandSeamSplitBindingError,
+        CommandSeamSplitSourceError as Error, SplitSeamSpan,
+    };
+    use sc_core::design::{DesignResourceCount, DesignResourceLimitError, DesignResourceLimits};
+    use std::error::Error as _;
+    let state = state(EaseAmount::Formula(id(5_001)), SeamSideId::A);
+    let request = command_request(&state, 0, at(3, 8), at(5, 8));
+    let absent = SplitSeamSpan::new(
+        id(99_999),
+        request.cut(SeamSideId::A),
+        request.cut(SeamSideId::B),
+    );
+    let (exact, demand) = command_model_limits(&state);
+    let less = DesignResourceLimits::new(
+        NonZeroUsize::new(demand.collection_entries() - 1).expect("one below"),
+        exact.text_bytes(),
+        exact.counter_bits(),
+    );
+    let error = absent
+        .admit_sewing_source(&state, less, command_capture_limits(1))
+        .expect_err("complete model envelope before missing target or capture");
+    assert!(matches!(error, Error::Resources(_)));
+    let issue = error
+        .source()
+        .expect("original resource cause")
+        .downcast_ref::<DesignResourceLimitError>()
+        .expect("actual resource refusal");
+    assert_eq!(
+        error
+            .source()
+            .expect("original cause")
+            .downcast_ref::<DesignResourceLimitError>(),
+        Some(issue)
+    );
+    assert!(
+        matches!(issue,DesignResourceLimitError::Count {unit:DesignResourceCount::CollectionEntries,
+        maximum,consumed,requested:2,location}
+        if *maximum==demand.collection_entries()-1 && *consumed==demand.collection_entries()-2
+        && location.field=="sewing.landmarks")
+    );
+    assert!(
+        matches!(absent.admit_sewing_source(&state,exact,command_capture_limits(1)).expect_err("actual target"),
+        Error::Binding(CommandSeamSplitBindingError::MissingSpan {span}) if span==absent.span())
+    );
+    let edge = request.cut(SeamSideId::A).edge;
+    let wrong = SplitSeamSpan::new(
+        request.span(),
+        request.cut(SeamSideId::B),
+        request.cut(SeamSideId::B),
+    );
+    assert!(
+        matches!(wrong.admit_sewing_source(&state,exact,command_capture_limits(1)).expect_err("actual cut before capture"),
+        Error::Binding(CommandSeamSplitBindingError::SourceFrame {span,side:SeamSideId::A,expected,cut:_})
+        if span==request.span() && expected==edge)
+    );
+    let error = request
+        .admit_sewing_source(&state, exact, command_capture_limits(2))
+        .expect_err("capture complete original stops");
+    let expected = CommandEaseCaptureError::Items {
+        target: id(97_001),
+        source_span: id(97_000),
+        collection: CommandEaseCaptureCollection::OriginalStops,
+        consumed: 1,
+        requested: 2,
+        limit: 2,
+    };
+    assert_eq!(
+        error
+            .source()
+            .expect("capture cause")
+            .downcast_ref::<CommandEaseCaptureError>(),
+        Some(&expected)
+    );
+    assert!(matches!(error,Error::Capture(issue) if issue==expected));
+
+    let mut inputs = state.inputs().definition().clone();
+    let mut structure = inputs.structure.definition().clone();
+    structure.cut_plan = CutPlan::new(
+        structure
+            .cut_plan
+            .copies()
+            .iter()
+            .map(|copy| {
+                let mut definition = *copy.definition();
+                if definition.id == id(96_000) {
+                    definition.id = id(96_010);
+                }
+                definition
+            })
+            .collect(),
+        structure.pieces.pieces(),
+    )
+    .expect("actual current copy replacement");
+    inputs.structure = DesignStructure::new(structure).expect("actual current structure");
+    let held = DesignSewing::new(DesignSewingDefinition {
+        inputs: DesignInputs::new(inputs).expect("current inputs"),
+        graph: state.graph().clone(),
+        landmarks: state.landmarks().to_vec(),
+    })
+    .expect("held graph remains inspectable");
+    let (selected, _) = command_model_limits(&held);
+    let error = absent
+        .admit_sewing_source(&held, selected, command_capture_limits(1))
+        .expect_err("complete current graph before target or capture");
+    let original = error
+        .source()
+        .expect("actual current source chain")
+        .downcast_ref::<DesignSewingError<crate::DesignSourcesError>>();
+    assert!(matches!(original,Some(DesignSewingError::Graph(issue))
+        if matches!(issue.as_ref(),SewingError::MissingCopy {span,side:SeamSideId::A,copy}
+        if *span==id(97_001) && *copy==id(96_000))));
+    assert!(matches!(error, Error::Current(_)));
+    // The source-only binding still exposes the held metadata;the new complete entry refuses it.
+    assert!(request.bind_source_cuts(held.graph()).is_ok());
+}
+#[test]
+fn command_seam_source_preserves_actual_formula_profile_metadata_without_supplying_values() {
+    use sc_core::command::CommandNotchEaseError;
+    use sc_core::ontology::{NotchEaseLimits, NotchEaseWorkspaceError};
+    for amount in [
+        EaseAmount::Formula(id(5_001)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(98_010))),
+    ] {
+        let state = state(amount, SeamSideId::A);
+        let request = command_request(&state, 0, at(3, 8), at(5, 8));
+        let (model_limits, _) = command_model_limits(&state);
+        let source = request
+            .admit_sewing_source(&state, model_limits, command_capture_limits(3))
+            .expect("actual current declaration metadata");
+        let metadata = source.amount_declaration();
+        match (amount, metadata.source()) {
+            (
+                EaseAmount::Formula(expected),
+                DesignSewingAmountSource::Formula {
+                    parameter,
+                    declaration,
+                },
+            ) => {
+                assert_eq!(parameter.id(), expected);
+                assert!(core::ptr::eq(
+                    parameter,
+                    state
+                        .inputs()
+                        .parameters()
+                        .parameters()
+                        .first()
+                        .expect("actual metadata")
+                ));
+                assert_eq!(
+                    declaration.source().kind(),
+                    sc_core::recipe::FormulaKind::Length
+                );
+                assert_eq!(metadata.profile_validation(), None);
+            }
+            (EaseAmount::Profile(expected), DesignSewingAmountSource::Profile(actual)) => {
+                assert_eq!(actual, expected);
+                assert_eq!(
+                    metadata.profile_validation(),
+                    Some(ProfileBindingValidation::DeferredToG4)
+                );
+            }
+            _ => unreachable!("actual metadata kind"),
+        }
+        let capture = source.capture_admission().capture();
+        let structure = state.inputs().structure();
+        let context = capture
+            .source()
+            .admit_notch_context(
+                structure.cut_plan(),
+                structure.pieces().pieces(),
+                state.landmarks(),
+                structure.topology(),
+                limits(1, 2),
+            )
+            .expect("actual dependencies")
+            .validate_sources()
+            .expect("actual local context")
+            .original_context()
+            .expect("original Notches");
+        assert!(
+            matches!(capture.notch_explicit_ease(&context,NotchEaseLimits::new(
+            NonZeroU64::new(1).expect("tiny numeric allowance"))).expect_err("no symbolic value"),
+            CommandNotchEaseError::Workspace {target_span,issue:NotchEaseWorkspaceError::Amount {
+                source_span,side:SeamSideId::A,amount:actual}}
+            if target_span==id(97_001) && source_span==id(97_000) && actual==amount)
+        );
+    }
+}

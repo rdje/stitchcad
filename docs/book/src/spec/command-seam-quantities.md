@@ -100,7 +100,8 @@ results,not allocator internals,CPU or aggregate command costs.
 
 Focused actual direct/retained command tests cover A/B,Same/Opposite,signed/zero values,original
 rounding,full-source population/bit refusals,symbolic values,standard causes and wide normalization.
-Actual higher caller/dependency integration and whole paired acceptance retain their subsequent owners.
+[Actual Design source admission](command-seam-capture.md#join-the-actual-owned-design) joins complete
+model/current preflight to capture;whole paired acceptance retains its subsequent owner.
 
 ## Borrow the actual original-notch context
 
@@ -170,4 +171,5 @@ local source validation does not become a fresh whole Design,current cut,authori
 Focused actual direct/retained command cases cover twelve side/direction/sign combinations,
 original child rounding,source sharing and mismatch,symbolic precedence,standard errors,separate
 width refusal,valid wide originals and unchanged upstream ambiguous/coincident evidence. Complete
-Design/caller/dependency integration and physical matching/paired effects remain separately owned.
+Design source admission now joins these views;physical matching/paired effects and their real
+formula/profile/geometry dependencies remain separately owned.

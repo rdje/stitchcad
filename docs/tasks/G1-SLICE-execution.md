@@ -324,51 +324,51 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0523 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part682.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.4.3`
   Status: `done`
-  Goal:0524 actual captured original-notch target/pair quantities borrow the sealed context and
-  exact original source,without cloning projections or narrowing original coordinates.
-  - [x] REPRODUCE / ISSUE: 0524 cargo test -p sc-core --test sewing_contract command_notch_ease
-    →5 passed/90 filtered,rc=0. Retained302/original301 at original A3/8 yields first0;actual
-    separately authored rounded-child Uniform counterfactual yields1. Equal direct capture bodies
-    and IDs still identify distinct actual source objects;they cannot supply the other's context.
-  - [x] ROOT CAUSE: 0524 cargo test -p sc-core --test sewing_contract command_notch_ease
-    →5 passed,rc=0. Original notch CDF and B/Opposite complement precede shared quantization.
-    Capture/context source identity and separate numeric admission must precede actual target and
-    both A-ordered pair queries;child total/domain cannot replace original denominators/Notches.
-  - [x] FIX: 0524 capture.notch_explicit_ease requires exact source pointer,borrows externally
-    owned sealed context/admission and queries original density-side target/first/second ranges.
-    Typed consuming target/stage preserve original workspace/query/std causes. Source mismatch
-    retains expected source and actual supplied context. Existing staged context builders retain
-    full original refusals unchanged. No projection/root clone,self-reference or new numeric kernel.
-    Focused native5/doc2+1 →pass,rc=0;no partial accepted partition on any refusal.
-  - [x] ADDRESSED: 0524 cargo test -p sc-core --test sewing_contract command_notch_ease
-    →5 passed/90 filtered,rc=0. Twelve A/B x Same/Opposite x signed/zero cases retain actual capture,
-    request/span/root/context/admission/ledger evidence and source/pair conservation. Retained
-    target302 first0 versus rounded child1;target303 allocation0/full source1 shares exact canonical
-    root/context despite empty child stops. Wrong direct equal-ID/body capture refuses before
-    tiny quantity budget. Formula900/Profile901 preserve symbolic amount before bit1. Actual
-    target302/303 vs source301,Boundary/Interval/std causes,473/472 quota remain exact. Later source
-    split gives valid64-bit original1/(2MAX) despite Param refusal;727 admits first0/second1 while726
-    preserves317-bit component/727 reservation. Upstream ambiguity keeps2 originals/directions;
-    distinct current Notches with coincident originals refuse without a helper-selected value.
-  - [x] NO REGRESSION: 0524 cargo clippy -p sc-core --test sewing_contract -- -D warnings and
-    cargo fmt --all --check →pass,rc=0. cargo test -p sc-core --doc CommandNotchEase →2 privacy/
-    lifetime cases passed,rc=0;--doc notch_explicit_ease →1 API example passed,rc=0. Native commands
-    use local_environment.py. Notch quantity oracle6 bound/302 Fraction-width/380 exact query rows,
-    book/publication92/221/1584/2737,glossary310/9/158/0,map unchanged,682 receipt3 exact Git spans,
-    retention1136 logical/41 working/63760 decodedL/4931301 decodedB/2508638 residentB →pass,rc=0.
-    No original context/projection/quantity kernel change;actual Design/caller integration .4,
-    deferred component .acceptance and paired/full .6.5.3.2.acceptance/pre-push remain owned.
-  - [x] LOCKSTEP: 0524 two public API types/quantity chapter/capture+source chapters/source
-    decision/task index/D301/MEMORY/DEV/CHANGE align. Whole0523 retained682/3 exact Git spans.
-    LIVE/README reviewed unchanged,G1 6/18. Next .4.4.4 actual Design/caller/dependency integration;
-    real current/copy/source/authority and physical/effect contexts remain separate from immutable
-    mathematical quantities. Consume authority producer and commit terminals before next mutation.
-    promotion: declined (caller adoption of indexed original-source/context/rounding contracts;no new policy or physical assumption).
+  Goal:0524 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part683.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.4.4`
-  Status: `pending`
-  Goal: actual Design/caller integration and explicit ownership of real formula/profile/geometry
-  dependencies before effects. Fresh source/current/authority/capture envelopes remain independent
-  from immutable mathematical snapshots;no fabricated provider or successful physical check.
+  Status: `done`
+  Goal:0525 actual owned DesignSewing source entry joins complete model/current/declaration and
+  original capture admission to existing weighted/notch quantities;real dependencies stay explicit.
+  - [x] REPRODUCE / ISSUE: 0525 cargo test -p sc-measure --test design_inputs_contract
+    command_seam_source →4 passed/172 filtered,rc=0. Raw held source binding still succeeds after
+    actual copy replacement;the complete actual command source entry refuses original MissingCopy
+    before missing target/capture. A source binding or numeric view alone cannot certify currentness.
+  - [x] ROOT CAUSE: 0525 cargo test -p sc-measure --test design_inputs_contract command_seam_source
+    →4 passed,rc=0. Complete model envelope must precede current ownership/root/unused landmarks/
+    graph/amount validation;actual declaration then target/cut binding and complete capture precede
+    materialization. Canonical source/target context and symbolic values cannot be reconstructed.
+  - [x] FIX: 0525 SplitSeamSpan.admit_sewing_source walks actual complete DesignSewing through
+    existing resource producer/meter,then actual amount_declarations preflight,selects real target,
+    binds real cuts and admits complete capture. Private borrowed token retains actual state,
+    selected declaration/capture admission plus exact model demand/limits. Original resource/current/
+    binding/capture causes remain typed and standard sources. Native4/doc2+1 →pass,rc=0. No partial
+    token/source clone on refusal;no numeric/profile/physical/current authority is invented.
+  - [x] ADDRESSED: 0525 cargo test -p sc-measure --test design_inputs_contract command_seam_source
+    →4 passed/172 filtered,rc=0. Actual A/B x signed sources join owned state/canonical inputs/target
+    borrows to weighted5-item full2-region598-bit queries and retained Notch3-item/473-bit quantities.
+    Original sources/stops/ledger and target/source IDs remain exact;retained first0/second±1,
+    weighted Afirst0/Bfirst±1 conserve literals. Existing full resource meter agrees with retained
+    exact demand/limits. One-below complete population refuses final2-landmark charge before target;
+    current MissingCopy precedes missing target/capture;target and A frame precede capture limit2.
+    Actual capture/std causes preserve target97001/source97000. Actual Formula5001 lends current
+    Length-kind parameter/declaration over canonical inputs;Profile98010 stays DeferredToG4. Both
+    retain symbolic amount refusal before bit1. Original immutable states remain exactly equal.
+  - [x] NO REGRESSION: 0525 cargo clippy -p sc-core --lib -- -D warnings and cargo clippy
+    -p sc-measure --test design_inputs_contract -- -D warnings →pass,rc=0;cargo fmt --all --check
+    →pass,rc=0. cargo test -p sc-core --doc CommandSeamSplitSourceAdmission →2 privacy/lifetime
+    cases passed,rc=0;--doc admit_sewing_source →1 API example passed,rc=0. All native commands use
+    local_environment.py. Strict test lint's explicit panic replaced with typed assertions;book C1
+    missing2 local resource tokens declared,then glossary310/9/158/0 pass,rc=0. Book/publication
+    92/223/1587/2743,map unchanged,683 receipt3 exact Git spans,retention1137 logical/42 working/
+    63830 decodedL/4938447 decodedB/2515784 residentB →pass,rc=0. No source/query kernel or current
+    validator changes;component .4.4.acceptance follows implementation,paired/full proof later.
+  - [x] LOCKSTEP: 0525 two public types/API routes/actual Design entry chapter/dependency table,
+    design-input/quantity/source chapters,canonical source decision/task index/D301/MEMORY/DEV/CHANGE
+    align. Stale local notch-view-next wording corrected. Whole0524 retained683/3 exact Git spans.
+    LIVE/README reviewed unchanged,G1 6/18. Real formula execution .5e.2/.5e.4,typed Profile resolution
+    G4.1/.1.resource-admission/.3,geometry G2.1/.5f.3b/G3,stops/lineage .3.3/.3.4 and fresh authority/
+    aggregate operation/atomic effects .6.5.3.2 remain scheduled prerequisites before consuming effects.
+    promotion: declined (adoption of indexed actual ownership/source/resource contracts;no new policy or physical assumption).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.4.acceptance`
   Status: `pending`
   Goal: focused actual captured-source/weighted/notch command view component after .1–.4;

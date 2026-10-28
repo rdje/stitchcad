@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.4.4 in docs/tasks/G1-SLICE-execution.md:actual Design/caller/
-  dependency integration for captured weighted/notch command quantities. Preserve real source/
-  current/copy/authority envelopes;own formula/profile/geometry dependencies before effects.
-- Notch caller0524 borrows actual capture and externally owned sealed original context,requires
-  exact source pointer,then separately admits numeric quantities and differences original rounded
-  target/pair boundaries. No projection/root clone,self-reference,new kernel or coordinate narrowing.
-- Native5/scoped Clippy/fmt/doc2+1 pass:12 side/direction/sign cases,retained first0 vs rounded
-  child1,target0/source1,shared retained context,distinct equal-ID/body capture refusal,symbolic
-  precedence,source/target/std stages,473/472 quota,valid64-bit original and727/726 separate quota.
-  Actual upstream ambiguity/coincidence stays unchanged;no partial view or silent choice.
-- Book92/221/1584/2737,glossary0/map,retention1136/682 receipt3 exact spans,notch oracle6+302+380
-  pass;whole0523 retained682. Source/query checkpoint0521 closed;captured caller views implemented
-  with focused checks. Actual caller integration,paired stops/lineage/physical/effects/full proof
-  remain owned. Consume all preparation/commit terminals;native --index authority stays mandatory.
+- Next G1-SLICE.6.5.3.2.3.2.4.4.acceptance in docs/tasks/G1-SLICE-execution.md:focused captured
+  source/weighted/notch command-view checkpoint now .1–.4 implemented. Then .4.acceptance scoped
+  nonuniform component;no broad paired/mutation/physical verification before implementation.
+- Actual Design source entry0525 admits complete model resources before actual current ownership/
+  root/landmarks/graph/amount preflight,then target/cuts and full capture. Borrow actual selected
+  declaration,state,capture token and exact model demand/limits;no source clone on refusal.
+- Cross-crate4/scoped core+test Clippy/fmt/doc2+1 pass:actual A/B signed weighted/notch quantities,
+  canonical pointers,exact resource envelope,model/current/target/frame/capture refusal precedence,
+  source/target/std causes and unchanged Formula5001/Profile98010 symbolic source boundaries.
+- Book92/223/1587/2743,glossary0/map,retention1137/683 receipt3 exact spans pass;whole0524 in683.
+  Weighted/notch callers and actual Design source integration now have focused checks. Formula
+  .5e.2/.5e.4,Profile G4,real geometry G2/.5f.3b/G3 and paired stop/lineage/authority/aggregate
+  operation/effects/full proof remain explicit owners. No physical/provider substitute. Consume
+  all preparation/commit terminals;exact native --index authority stays mandatory. PNT continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

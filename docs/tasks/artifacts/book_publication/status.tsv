@@ -220,3 +220,5 @@ weighted command quantity refusal	spec/command-seam-quantities.md	crates/sc-core
 weighted command quantity partition	spec/command-seam-quantities.md	crates/sc-core/src/command/seam_quantity.rs	CommandWeightedEasePartition	G1-SLICE.6.5.3.2.3.2.4.4.2	4.4
 notch command quantity refusal	spec/command-seam-quantities.md	crates/sc-core/src/command/seam_quantity/notch.rs	CommandNotchEaseError	G1-SLICE.6.5.3.2.3.2.4.4.3	4.4
 notch command quantity partition	spec/command-seam-quantities.md	crates/sc-core/src/command/seam_quantity/notch.rs	CommandNotchEasePartition	G1-SLICE.6.5.3.2.3.2.4.4.3	4.4
+actual owned seam source admission	spec/command-seam-capture.md	crates/sc-core/src/command/seam_source.rs	CommandSeamSplitSourceAdmission	G1-SLICE.6.5.3.2.3.2.4.4.4	4.4
+actual owned seam source refusal	spec/command-seam-capture.md	crates/sc-core/src/command/seam_source.rs	CommandSeamSplitSourceError	G1-SLICE.6.5.3.2.3.2.4.4.4	4.4

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual captured original-notch command quantities
+## _(2026-10-28 UTC)_ — actual owned Design seam source entry
 
-0524 CommandNotchEasePartition borrows capture and externally owned sealed context/admission after exact captured-source pointer check. Target/first/second use original notch boundary differences. Preserve actual mismatch context,workspace/query/std causes and stages;no clones,self-reference or new kernel.
-Native5/scoped Clippy/fmt/doc2+1 pass0. Twelve side/direction/sign cases,retained first0 versus rounded-child1,target0/source1,shared original context and distinct equal-ID/body refusal. Symbolic precedence,473/472 quota,target/source causes,valid64-bit original727/726 and upstream ambiguity/coincidence remain exact.
-Book92/221/1584/2737,glossary0/map/retention1136,notch oracle6+302+380 and682 receipt3 exact spans pass0. Quantity chapter documents2 new types and real context binding. Pure immutable quantities grant no current/physical/effect readiness. Actual Design/caller integration .4.4.4 next;LIVE/README unchanged,G1 6/18.
-[Whole0523 weighted caller](docs/history/stitchcad-devnotes-part682.md) retains all original proofs. Context/source kernel unchanged;separate caller/current/dependency and paired/full owners remain. Promotion declined:adoption of indexed source/context/rounding contracts. Consume authority and commit terminals.
+0525 admit_sewing_source walks complete actual DesignSewing resources,then current ownership/root/landmarks/graph/amounts,target/cuts and full capture admission. Private token borrows actual state/declaration/capture and exact demand/limits. Original typed/std causes survive;no source clone on refusal.
+Cross-crate4/core+test Clippy/fmt/doc2+1 pass0. Actual A/B signed weighted/notch quantities,canonical roots,original stops and source/target identities. Exact model meter agrees;one-below final landmarks,current copy replacement,target/frame/capture precedence remain exact. Formula/Profile metadata supplies no values.
+Book92/223/1587/2743,glossary0/map/retention1137 and683 receipt3 exact spans pass0. Chapter names real formula/Profile/geometry/stop/lineage/authority/effect owners. Strict test panic corrected;2 C1 tokens declared. No current validator/kernel change;caller component acceptance next,LIVE/README unchanged,G1 6/18.
+[Whole0524 notch caller](docs/history/stitchcad-devnotes-part683.md) retains all proofs. Source admission is immutable mathematical/source preflight,not bus/physical/effect authority. Keep separate model/capture/context/numeric/aggregate allowances. Promotion declined:indexed ownership/resource contract adoption.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

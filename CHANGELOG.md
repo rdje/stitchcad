@@ -3,14 +3,14 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0524 — query notch quantities for actual captured commands
+## STITCHCAD-G1-0525 — admit actual owned Design seam sources before capture
 
-- Borrow actual capture and externally owned original-notch context/admission after exact source pointer check. Query target and A-ordered pairs from original rounded boundaries;preserve actual mismatch context,workspace/query/std causes and stages. No projection/root
-  clone,self-reference,new numeric kernel or narrowing.
-- Native5/scoped Clippy/fmt/doc2+1 pass. Twelve side/direction/sign cases,retained first0 versus rounded-child1,target0/source1,shared canonical context and equal-ID/body mismatch. Symbolic precedence,473/472 and727/726 quotas,actual source/target errors,valid64-bit original and
-  upstream ambiguity/coincidence stay exact.
-- Whole0523 retained682/three exact Git spans;book92/221/1584/2737,glossary0/map/retention1136/notch oracle6+302+380 pass. Actual Design/caller/dependency integration next. LIVE/README unchanged,G1 6/18;current/copy/authority/physical/effects/full verification remain separately
-  owned.
+- Walk complete actual DesignSewing resources before current ownership/root/landmarks/graph/amount preflight,then select actual target declaration,bind real cuts and admit full original capture. Borrow actual state/declaration/capture plus exact demand/limits;preserve original
+  typed/std causes with no source clone on refusal.
+- Cross-crate4/core+test Clippy/fmt/doc2+1 pass. Actual A/B signed weighted/notch views,canonical pointers,exact full-model demand and one-below final-landmark refusal. Current copy replacement,target/frame/capture precedence and Formula5001/Profile98010 symbolic boundaries
+  remain exact.
+- Whole0524 retained683/three exact Git spans;book92/223/1587/2743,glossary0/map/retention1137 pass. Actual dependencies named before effects;caller component checkpoint next. LIVE/README unchanged,G1 6/18;physical/authority/aggregate operation/paired effects/full verification
+  remain owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
