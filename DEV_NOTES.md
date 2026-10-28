@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — separate original-notch quantity admission
+## _(2026-10-28 UTC)_ — exact original-notch cumulative and interval queries
 
-0517 NotchEaseAdmission borrows actual sealed context/full signed literal/explicit positive limits. Symbolic intent precedes allowance;no query integer or projection copy. Interior CDF raw fields need2W+63 bits;clamp/complement do not grow them,source magnitude adds30. Checked2W+93 is separate from inverse budget.
-Native2/bound1/doc3/scoped Clippy/fmt pass0. Exact473/727 accepted,one-below refused;5 signed/zero/maximal literals,actual64-bit later original and formula/profile precedence retain source/context/limit evidence. Independent6 rows+302 Fraction/raw-width controls include64/188-bit originals and checked u64 overflow.
-Book90/210/1572/2705,glossary0/map/retention1129,675 receipt3 exact Git spans pass0. Correct stale module/book future-context wording. Query kernel .3.4.2 next;quantity integration/paired/mutation/physical/full proof stay owned. Explicit i64 reference/Length views guard future width changes.
-[Whole0516 context acceptance](docs/history/stitchcad-devnotes-part675.md) retains exact scope/lesson/changelog. LIVE/README unchanged,G1 6/18. Promotion declined:admitted implementation of indexed exact interval/rounding contracts.
+0518 clamps actual original notch progress and complements B/Opposite before shared signed rounding;intervals difference original rounded boundaries. Preflight full original edge/both bounds even for zero. Private closed projection port guards common immutable frame/unique ordered originals;no Big API or narrowing.
+Native2 consumes380 Fraction rows across A/B,directions,reversed frames,clamps/partial domains,5 signed/zero/maximal literals and64/188-bit originals;all conserve source. Initial interior-offset fixture correctly refused peak3 for3 portions+active;explicit4 passes and preserves surrounding Piece repairs.
+Private actual-projection1/6 rows+quota/frame/order controls,admission2,doc4,scoped Clippy/fmt/oracle6+302+380 pass0. Book90/211/1572/2706,glossary0/map/retention1130 and676 receipt3 exact Git spans pass0. Separate2W+93 guards actual integer operands/results;not allocator/runtime/whole Design proof.
+[Whole0517 admission](docs/history/stitchcad-devnotes-part676.md) retains exact scope/lesson/changelog. LIVE/README unchanged,G1 6/18. Actual Design quantity integration next;paired/mutation/physical/effects remain owned. Promotion declined:implementation of indexed original interval/rounding contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

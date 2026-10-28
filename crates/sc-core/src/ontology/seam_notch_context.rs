@@ -1,4 +1,4 @@
-//! Actual notch-source dependencies and explicit admission,before semantic context construction.
+//! Actual borrowed source validation,original-notch context and separately admitted exact quantities.
 use super::{
     CutPlan, EaseDistribution, EntityId, IdentityLedger, OriginalPointLimits, Piece,
     PointJournalAdmissionIssue, SeamEaseSource, SeamSideId, SewingLandmark,
@@ -8,7 +8,9 @@ mod context;
 mod inputs;
 pub use context::{OriginalNotchContext, OriginalNotchContextError, OriginalNotchContextIssue};
 mod quantity;
-pub use quantity::{NotchEaseAdmission, NotchEaseLimits, NotchEaseWorkspaceError};
+pub use quantity::{
+    NotchEaseAdmission, NotchEaseAmountError, NotchEaseLimits, NotchEaseWorkspaceError,
+};
 mod validation;
 pub use validation::{
     NotchSourceRange, NotchSourceValidation, NotchSourceValidationError, NotchSourceValidationIssue,

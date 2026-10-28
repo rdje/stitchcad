@@ -2,8 +2,8 @@
 
 Complete actual input admission,bounded local validation and original-notch coordinate context are
 implemented with focused checks. They build on the [point and interval primitives](command-notch-context.md).
-Separate explicit quantity arithmetic admission is implemented;quantity queries and paired effects
-retain their subsequent owners.
+Separate explicit quantity arithmetic admission and exact cumulative/interval queries are implemented
+with focused checks;actual Design quantity integration and paired effects retain their next owners.
 
 | API token | Meaning |
 | --- | --- |
@@ -21,6 +21,9 @@ retain their subsequent owners.
 | `NotchEaseAdmission` | Borrowed sealed context and original signed literal after separate admission |
 | `NotchEaseWorkspaceError` | Actual symbolic amount or conservative quantity reservation refusal |
 | `admit_explicit` | Admit quantity arithmetic over the actual sealed original-notch context |
+| `NotchEaseAmountError` | Actual original frame,bounds,context or concrete quantity cause |
+| `cumulative_at` | Quantized original notch-bounded cumulative amount in canonical A order |
+| `amount_in` | Difference original quantized boundaries for a distribution-side interval |
 | `NotchSourceValidation` | Borrowed local structural proof after actual current-source checks |
 | `NotchSourceValidationError` | Original source identity and concrete bounded validation refusal |
 | `NotchSourceValidationIssue` | Actual structural,point,coverage,quota or derived-bound cause |
@@ -216,9 +219,9 @@ actual bounded projections and ledger borrows,so diagnostic lifetimes are explic
 context,implicit reference choice or source/Notch mutation escapes. The private comparison ports
 also refuse a separate equal-content ledger or wrong source frame before numeric work.
 
-This context supplies exact original positions. Formula/profile values,notch-bounded cumulative
-and interval quantities,current whole Design readiness,physical matching and paired effects retain
-their subsequent owners. The existing Uniform-only helper continues to report BetweenNotches;
+This context supplies exact original positions. Separate admitted quantity queries below consume
+those positions. Formula/profile values,current whole Design readiness,physical matching and paired
+effects retain their subsequent owners. The existing Uniform-only helper still reports BetweenNotches;
 constructing this context does not default an amount or extend that old helper implicitly.
 
 ## Actual Design integration
@@ -236,7 +239,7 @@ original1/(2MAX) and1/4. The first remains exact despite `Param` refusal. The re
 endpoint at original half still requires a split choice,so complete current sewing validation refuses
 that child while the full original source context succeeds. Context construction changes neither
 the held endpoint answer nor source/formula metadata. This is source-context component acceptance;
-notch quantities,whole paired command,mutation and physical verification retain their later owners.
+quantity integration,whole paired command,mutation and physical verification retain their later owners.
 
 ## Admit original-notch quantity arithmetic
 
@@ -260,14 +263,61 @@ operand/result bounds,not allocator/RSS/CPU certificates or fresh whole Design a
 The independent producer checks six bound/overflow rows and302 Fraction/raw-integer width controls,
 including64/188-bit originals. Native checks consume those rows and admit the actual later-frame
 64-bit original without narrowing it. Privacy/lifetime and no-default doctests guard the public
-boundary. Quantity evaluation remains the next implementation slice:
+boundary. The query implementation below consumes that separate admission:
 
 ```bash
 python3 -I -B docs/tasks/artifacts/seam_partition/notch_quantity_oracle.py --check
 ```
 
+## Query exact original-notch quantities
+
+Use `admitted.cumulative_at(at)` with an `EdgeAnchor` in the actual full original distribution-side
+edge/domain. Ascending progress is0 at or before the mathematical lower Notch and1 at or after
+the upper Notch;inside,use the exact original ratio above. Named start/end IDs remain unchanged.
+For B/Opposite,complement the exact fraction **before** applying the shared signed half-away rule.
+The full original literal remains the source on every call,including retained child queries.
+
+For original Notches at1/4 and3/4 and a1 µm source,the implemented cumulative results are:
+
+| Original boundary | A or B/Same | B/Opposite |
+| --- | --- | --- |
+| `0` | `0 µm` | `1 µm` |
+| `1/4` | `0 µm` | `1 µm` |
+| `1/2` | `1 µm` | `1 µm` |
+| `3/4` | `1 µm` | `0 µm` |
+| `1` | `1 µm` | `0 µm` |
+
+Negative sources produce signed mirrors. Subtracting an already rounded B prefix would give0 at
+the half tie instead of1,so it cannot supply the complemented result. `amount_in(interval)` checks
+the actual original edge and **both** closed-domain endpoints before computing either cumulative
+value. It differences those original rounded values in canonical A order,including on Opposite B;
+it never renormalizes a child or treats a rounded child amount as the source. Partition amounts sum
+to the original literal,including negative,zero and maximal supported magnitudes.
+
+Frame/domain checks happen before query integer allocation and remain active for zero ease.
+`NotchEaseAmountError` preserves actual source/side/anchor or interval/bounds,private common-frame
+preconditions,or the concrete numeric cause as its standard error source. The admission retains
+the sealed actual context and complete original projection evidence. A private closed semantic
+port transports only actual projections,`Param` and `Length`;no dependency integer API escapes.
+The kernel guards integer operations under the separately admitted width and uses the shared
+rounding policy. Width admission does not certify dependency internals,allocator or CPU costs.
+
+The actual native ledger/source/context queries consume380 independently frozen Fraction rows.
+These cover A/B,Same/Opposite,reversed current frames,clamping,source bounds and five signed/zero/
+maximal literals. After an offset to original half,a later Notch at local1/MAX gives original
+1/(2MAX);with upper1/4,the query at1/8 is below the half quantum and returns0,while binary64
+would round1. Another actual partial offset preserves188-bit originals and a valid below-half
+query;even u128 views refuse,but the quantity stays exact. Full Piece coverage retains surrounding
+repair portions:the interior-offset fixture needs an explicit peak4 for its3 portions plus active
+input. This local source success grants no whole Piece or Design certificate.
+
+Private actual-projection controls preserve concrete quota operations and refuse a separate
+equal-content ledger snapshot before numeric work. Focused quantity checks pass;actual Design
+quantity integration,nonuniform component acceptance and whole paired/mutation/physical verification
+retain their later task owners.
+
 The canonical decision is docs/decisions/decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md.
 Its whole pre-0512 source is logical record docs/history/stitchcad-devnotes-part670.md,available
 through the [public archive reader](../annexes/archive-reader.md). It retains prior prospective
 wording and all historical evidence exactly. Focused implementation and source-context integration
-checks above are distinct from deferred quantity and whole paired/mutation/physical verification.
+checks above are distinct from deferred quantity integration and whole paired/mutation/physical verification.

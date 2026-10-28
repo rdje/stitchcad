@@ -2,7 +2,7 @@
 use super::super::super::Param;
 use core::cmp::Ordering;
 use num_bigint::BigUint;
-use sc_units::UnitError;
+use sc_units::{round::round_magnitude_from_half_comparison, Length, UnitError};
 
 #[derive(Debug, PartialEq, Eq)]
 pub(super) struct Wide {
@@ -16,6 +16,60 @@ pub(super) struct Workspace {
     pub(super) operation: &'static str,
 }
 impl Workspace {
+    // Uses separately admitted2W+63+b quantity width,not the inverse/compare reservation.
+    pub(super) fn notch_amount(
+        self,
+        lower: &Wide,
+        upper: &Wide,
+        at: Param,
+        parent: Length,
+        reversed: bool,
+    ) -> Result<Length, UnitError> {
+        let (mut numerator, denominator) = if self.compare_reference(lower, at)? != Ordering::Less {
+            (self.scalar(0)?, self.scalar(1)?)
+        } else if self.compare_reference(upper, at)? != Ordering::Greater {
+            (self.scalar(1)?, self.scalar(1)?)
+        } else {
+            let reference = at.as_rational();
+            let (n, d): (i64, i64) = (reference.numerator(), reference.denominator());
+            let n = self.scalar(n.unsigned_abs())?;
+            let d = self.scalar(d.unsigned_abs())?;
+            let offset = self.sub(&self.mul(&n, &lower.den)?, &self.mul(&lower.num, &d)?)?;
+            let extent = self.sub(
+                &self.mul(&upper.num, &lower.den)?,
+                &self.mul(&lower.num, &upper.den)?,
+            )?;
+            (self.mul(&offset, &upper.den)?, self.mul(&extent, &d)?)
+        };
+        if denominator == self.scalar(0)? {
+            return Err(UnitError::DivisionByZero {
+                operation: self.operation,
+            });
+        }
+        if reversed {
+            numerator = self.sub(&denominator, &numerator)?;
+        }
+        let signed: i64 = parent.as_micrometres();
+        let scaled = self.mul(&numerator, &self.scalar(signed.unsigned_abs())?)?;
+        // Operands are admitted;division/remainder cannot grow their integer width. Dependency
+        // internals/allocator costs are outside this explicit operand/result-width contract.
+        let quotient = &scaled / &denominator;
+        let remainder = scaled % &denominator;
+        let overflow = || UnitError::Overflow {
+            operation: self.operation,
+        };
+        let floor = u128::try_from(&quotient).map_err(|_| overflow())?;
+        let magnitude = round_magnitude_from_half_comparison(
+            floor,
+            remainder.cmp(&self.sub(&denominator, &remainder)?),
+        )?;
+        let magnitude = i64::try_from(magnitude).map_err(|_| overflow())?;
+        Length::from_micrometres(if signed < 0 {
+            magnitude.checked_neg().ok_or_else(overflow)?
+        } else {
+            magnitude
+        })
+    }
     fn admit(self, bits: u64) -> Result<(), UnitError> {
         if bits > self.integer_bits {
             return Err(UnitError::DomainExceeded {

@@ -1,19 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.4.2 in docs/tasks/G1-SLICE-execution.md:exact original notch-bounded
-  cumulative/interval quantities under separate arithmetic admission. Full PNT continues. Clamp
-  original progress,complement B/Opposite before shared signed rounding,difference original CDFs.
-- NotchEaseAdmission0517 borrows sealed actual OriginalNotchContext,full original signed literal,
-  explicit positive limits;actual formula/profile amount refuses before width. No query integer
-  allocation/projection copy. Separately checked2W+63+b (b30) reserves473 atW190 or727 atW317.
-- Native admission2/bound1/oracle6 bound rows+302 Fraction/raw-width controls/doc3/lint/fmt pass0.
-  Exact/one-below limits,5 signed/zero/maximal amounts,actual64-bit original and symbolic precedence
-  pass. Explicit i64 Param/Length field views guard width proof;not an allocator/RSS/CPU certificate.
-- Original context/source component accepted0516 through actual Design owner:6 A/B x literal/
-  formula/profile variants,2 child views/1 full source,N10/B2 cache20/index31. Copy rebind refuses;
-  later split recovers1/(2MAX) while child held half still requires choice. No full Design proof.
-- Whole0516 in675/3 spans;book90/210/1572/2705,glossary0/map unchanged,retention1129 pass.
-  Quantity kernel/paired matching/stops/lineage/effects/full acceptance remain owned under D301.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.4.acceptance in docs/tasks/G1-SLICE-execution.md:focused actual
+  Design/retained-source notch quantity integration after implementation. Full PNT continues.
+- NotchEaseAdmission0517/queries0518 borrow actual sealed context/full signed original source.
+  Independent positive limits reserve2W+93;symbolic intent refuses first. CDF clamps exact original
+  notch progress;B/Opposite complements BEFORE shared signed rounding. Interval amounts difference
+  rounded original boundaries,no child normalization or Param/u128 narrowing. No Big API escapes.
+- Native quantity2 consumes380 Fraction rows:A/B,Same/Opposite,reversed frames,clamps/partial domains,
+  5 signed/zero/maximal amounts,64/188-bit originals;exact conservation and zero frame/bounds checks.
+  Private actual-projection1/6 rows+quota/frame/order controls,admission2,doc4,lint/fmt/oracle pass0.
+  Interior offset Piece coverage needs explicit peak4 for3 portions+active,not3;repairs preserved.
+- Whole0517 in676/3 exact spans;book90/211/1572/2706,glossary0/map unchanged,retention1130 pass.
+  Original context0515/Design acceptance0516 remain actual;whole source decision encoded670.
+- Context/query success grants no symbolic resolution,whole Piece/Design/other graph/physical/effect
+  authority. Operand/result widths are not allocator/CPU/RSS certificates. Quantity integration,
+  paired matching/stops/lineage/effects/full acceptance remain owned under D301.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

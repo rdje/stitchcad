@@ -297,43 +297,47 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .acceptance focused actual source/Design quantity integration after implementation.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.4.1`
   Status: `done`
-  Goal:0517 separate explicit positive quantity integer admission borrows sealed actual context.
-  Actual symbolic intent precedes reservation;no query integer allocation or projection copy.
-  - [x] REPRODUCE / ISSUE: 0517 cargo test -p sc-core --test sewing_contract
-    notch_quantity_admission →2 passed/79 filtered,rc=0. Earlier original-point comparison budget
-    is a different construction and cannot silently authorize original-notch progress/rounding.
-  - [x] ROOT CAUSE: 0517 python3 -I -B docs/tasks/artifacts/seam_partition/notch_quantity_oracle.py
-    --check →6 checked bound rows/302 independent Fraction and raw-integer controls,rc=0. For
-    L=ln/ld,U=un/ud and63-bit query xn/xd,interior CDF is((xn*ld-ln*xd)*ud)/((un*ld-ln*ud)*xd).
-    AdmittedW-bit originals give2W+63-bit ratio fields;clamp/complement do not grow them and maximum
-    signed Length magnitude adds30. Quantity reservation2W+93 is checked separately in u64.
-  - [x] FIX: 0517 actual context.admit_explicit takes no-default positive NotchEaseLimits,checks
-    real full amount first,then checked width and selected allowance. Copy/exhaustive fixed Debug
-    of borrowed private NotchEaseAdmission prevent hidden owning populations;retain actual context,
-    signed original literal and limits. Explicit i64 Param/Length views guard field-width proof.
-    Native admission2 and independent bound1 →passed,rc=0. Correct stale module/book context wording.
-  - [x] ADDRESSED: 0517 cargo test -p sc-core --test sewing_contract notch_quantity_admission
-    →2 passed,rc=0. Real5 signed/zero/maximal literals admit exact473 bits atW190;limit472 refuses
-    with original301/A/190/473/472 evidence. Actual later half split's64-bit original survives
-    Param refusal atW317/727;726 refuses. Formula900/profile901 retain original intent ahead of
-    limit1;actual source/context pointers and ledger/Notches unchanged. cargo test -p sc-core --lib
-    original_notch_quantity_bound →1 passed,rc=0,all6 frozen bound rows including u64 overflow.
-  - [x] NO REGRESSION: 0517 cargo clippy -p sc-core --test sewing_contract -- -D warnings and
-    cargo fmt --all --check →pass,rc=0. cargo test -p sc-core --doc NotchEase →3 privacy/lifetime/
-    no-default compile-fail passed,rc=0. Book/publication90/210/1572/2705,glossary310/9/158/0,
-    map unchanged,675 receipt3 exact Git spans,retention1129 logical/34 working/63312 decodedL/
-    4885234 decodedB/2462571 residentB →pass,rc=0. All native tools use local_environment.py.
-    Query kernel/whole quantity component/paired/mutation/physical verification stay .2/.acceptance/
-    .3.acceptance/.6.5.3.2.acceptance/pre-push;no deferred check is claimed complete.
-  - [x] LOCKSTEP: 0517 MEMORY/DEV/CHANGE/book/API rows/canonical decision/task index/D301 align.
-    Whole0516 retained675/3 exact Git spans. LIVE/README reviewed unchanged,G1 6/18. Next .3.4.2
-    exact clamped original-notch cumulative and interval quantities;no physical/effect readiness.
-    promotion: declined (separate admitted construction of existing indexed exact original interval/rounding contracts;no new general policy or implicit default).
+  Goal:0517 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part676.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.4.2`
-  Status: `pending`
-  Goal: exact private clamped CDF from actual original Notch projections,full original side/frame
-  and closed bounds,B/Opposite complement before shared signed rounding. Interval differences
-  of original quantized boundaries;no narrowing,child renormalization or partial result.
+  Status: `done`
+  Goal:0518 exact original-notch CDF/interval queries implemented with focused checks. Preserve
+  full actual source/ledger/Notches,clamping,canonical A orientation and original signed rounding.
+  - [x] REPRODUCE / ISSUE: 0518 python3 -I -B docs/tasks/artifacts/seam_partition/
+    notch_quantity_oracle.py --check →6 bound rows/302 raw-width controls/380 exact query rows,rc=0.
+    Actual64-bit lower1/(2MAX),upper1/4,query1/8 is below half but binary64 gives half. A188-bit
+    actual partial-offset pair also has a below-half query;Param/u128 narrowing cannot supply it.
+  - [x] ROOT CAUSE: 0518 cargo test -p sc-core --test sewing_contract notch_quantities →2 passed/
+    81 filtered,rc=0,all380 frozen rows. Correct CDF is clamped original notch progress,not current
+    local parameters or child totals. Complement B/Opposite BEFORE rounding;subtracting rounded
+    prefix changes ties. Actual original frames,source domains and named/authored order stay exact.
+  - [x] FIX: 0518 separately admitted quantity methods preflight full original edge/both bounds,
+    including zero;private semantic projection port guards actual same immutable ledger/source
+    creation and unique increasing originals. Guard raw ratio/complement/source multiplication
+    under2W+93;shared half-away magnitude helper rounds once. Interval amounts difference original
+    rounded boundaries in canonical A order. Concrete standard numeric source and original actual
+    frame/bounds/interval evidence survive;no Big type,projection clone or partial amount escapes.
+    Focused quantity2/private actual-projection1 →passed,rc=0.
+  - [x] ADDRESSED: 0518 cargo test -p sc-core --test sewing_contract notch_quantities →2 passed,
+    rc=0. All380 actual ledger/retained source/local validation/context queries match independent
+    Fraction outputs:A/B x Same/Opposite x5 signed/zero/maximal literals,clamps/partial domains,
+    reversed current frames,64/188-bit originals. Exact interval sums conserve original source;
+    both full bounds validate before quantities;zero keeps wrong-edge/interval/outside refusals.
+    Initial test1 passed/1 failed,rc=101:interior offset Piece coverage quota retained3/requested1/
+    limit3 correctly refused. Fixture now explicitly admits peak4 for3 output portions+active;
+    full Piece repairs remain present,no production quota or semantics changed to pass.
+  - [x] NO REGRESSION: 0518 cargo test -p sc-core --lib admitted_original_coordinate_ordering
+    →1 passed,rc=0:6 actual Fraction projection rows plus quantity complement,actual operation/
+    limit1 numeric refusal,other equal-content ledger refusal before numeric work and non-increasing
+    bound refusal. Native admission2 still passes;scoped Clippy/fmt →pass,rc=0;cargo test -p sc-core
+    --doc NotchEase →4 passed,rc=0. All native tools use local_environment.py. Book/publication
+    90/211/1572/2706,glossary310/9/158/0,map unchanged,676 receipt3 Git spans,retention1130 logical/
+    35 working/63372 decodedL/4891369 decodedB/2468706 residentB →pass,rc=0. Actual Design quantity
+    integration/full paired/mutation/physical verification stay .4.acceptance/.3.acceptance/
+    .6.5.3.2.acceptance/pre-push;no deferred verification claimed passed.
+  - [x] LOCKSTEP: 0518 MEMORY/DEV/CHANGE/book/API row/canonical decision/task index/D301 align.
+    Whole0517 retained676/3 exact Git spans. LIVE/README reviewed unchanged,G1 6/18. Next .3.4.
+    acceptance actual Design/retained-source quantities;no symbolic/physical/effect readiness.
+    promotion: declined (implementation of indexed exact original interval/resource/rounding contracts;no new policy,implicit value or physical assumption).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.4.acceptance`
   Status: `pending`
   Goal: focused actual Design/retained original notch source quantity integration after .1/.2;

@@ -32,7 +32,7 @@
 //! | [`material_inventory`] | current Material collection and actual Piece assignment targets/reasons | `.6.4.2.d.3.3` |
 //! | [`notion`] | physical-copy placements, owned anchors/orientation and current target validation | `.3c.4c.1a` |
 //! | [`notion_inventory`] | owned placements and complete current copies/original sources | `.6.4.5.2.b` |
-//! | [`seam_notch_context`] | actual local/original-notch context and separate quantity admission | `.6.5.3.2.3.2.4.3.4.1` |
+//! | [`seam_notch_context`] | actual local/original-notch context and admitted exact quantities | `.6.5.3.2.3.2.4.3.4.2` |
 //! | [`notch`] | immutable semantic anchors and symbolic profile bindings, deferred physical validation | `.3c.3a` |
 //! | [`piece_inventory`] | immutable authored Piece collection; reciprocal opposite-hand/equal-quantity pair checks | `.6.4.1` |
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
@@ -136,11 +136,11 @@ pub use seam_ease_workspace::{
     WeightedEaseAdmission, WeightedEaseAmountError, WeightedEaseLimits, WeightedEaseWorkspaceError,
 };
 pub use seam_notch_context::{
-    NotchContextLimits, NotchEaseAdmission, NotchEaseLimits, NotchEaseWorkspaceError,
-    NotchSourceAdmission, NotchSourceAdmissionError, NotchSourceAdmissionIssue,
-    NotchSourceCollection, NotchSourceRange, NotchSourceValidation, NotchSourceValidationError,
-    NotchSourceValidationIssue, OriginalNotchContext, OriginalNotchContextError,
-    OriginalNotchContextIssue,
+    NotchContextLimits, NotchEaseAdmission, NotchEaseAmountError, NotchEaseLimits,
+    NotchEaseWorkspaceError, NotchSourceAdmission, NotchSourceAdmissionError,
+    NotchSourceAdmissionIssue, NotchSourceCollection, NotchSourceRange, NotchSourceValidation,
+    NotchSourceValidationError, NotchSourceValidationIssue, OriginalNotchContext,
+    OriginalNotchContextError, OriginalNotchContextIssue,
 };
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,

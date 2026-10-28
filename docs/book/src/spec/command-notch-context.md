@@ -3,7 +3,7 @@
 Notch-bounded allocation needs the actual semantic landmarks and topology journal,not guessed
 parameters or physical notch dimensions. Bounded current uniqueness,whole-interval coverage,original-point workspace
 admission,exact inverse coordinates and borrowed complete source-input admission are implemented.
-Actual original-notch context construction is implemented with focused checks;quantity queries remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
+Actual original-notch context and separately admitted quantity queries are implemented with focused checks;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
 is already implemented with focused checks.
 
 | API token | Meaning |
@@ -173,7 +173,7 @@ Native checks exercise actual limits,complete unknown/deleted/gapped/numeric evi
 per-input arithmetic rollback. The14 independent Fraction recomposition rows also feed this query,
 including nine valid complete reductions and five genuine final-width refusals. Actual Notch/Graph/
 retained-source fixtures use bounded coverage alongside their current/original point queries.
-Bounded local validation and original-coordinate context are implemented;notch quantities retain their next owner.
+Bounded local validation,original-coordinate context and admitted notch queries are implemented;quantity integration remains separately owned.
 
 ## Query bounded current uniqueness
 
@@ -451,6 +451,6 @@ python3 -I -B docs/tasks/artifacts/seam_partition/original_projection_oracle.py 
 
 Earlier range20/recovery4 receipts retain accepted source states,forward witnesses and corrected
 D305 evidence. Current inverse6/private oracle1/doc2 and selected Clippy/format checks pass with
-focused verification. Actual original-notch context is implemented;quantity queries and full paired acceptance remain pending. The exact
+focused verification. Actual original-notch context and quantity queries are implemented;quantity integration and full paired acceptance remain pending. The exact
 pre-context sewing decision and closed D302–D304 ledgers are retained in repository history records
 658/659;the current decision keeps standing contracts without a raised ceiling or another map row.

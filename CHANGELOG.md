@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0517 — admit separate original-notch quantity arithmetic
+## STITCHCAD-G1-0518 — query exact original-notch cumulative quantities
 
-- Borrow actual sealed context/full signed source literal/explicit positive no-default limit. Symbolic intent precedes separately checked2W+93 reservation;no query integer allocation or projection copy. Original comparison admission does not license quantities.
-- Native admission2/bound1/doc3/scoped Clippy/fmt/oracle6 bound rows+302 Fraction/raw-width controls pass. Exact473/727 and one-below,5 signed/zero/maximal literals,actual64-bit original,symbolic precedence and u64 overflow retain exact evidence. Correct stale module/book
-  future-context wording.
-- Whole0516 retained675/three exact Git spans;book90/210/1572/2705,glossary0/map/retention1129 pass. Exact quantity queries next;integration/paired/mutation/physical proof stays owned. LIVE/README unchanged,G1 6/18.
+- Actual original clamped progress,exact B/Opposite complement before shared signed rounding and original rounded boundary differences. Preflight full original edge/both bounds even for zero;closed private projection port and separate2W+93 guards retain actual
+  frame/operation/quota evidence.
+- Native2/380 Fraction rows preserve signs/ties/clamps/partial domains/reversed frames and64/188-bit originals;all intervals conserve original source. Private projection1/admission2/doc4/scoped Clippy/fmt/oracle6+302+380 pass. Interior-offset fixture peak4 retains3 Piece portions
+  plus active input.
+- Whole0517 retained676/three exact Git spans;book90/211/1572/2706,glossary0/map/retention1130 pass. Actual Design quantity integration next;paired/mutation/physical/effect/full verification remains owned. LIVE/README unchanged,G1 6/18.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

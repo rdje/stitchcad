@@ -2,7 +2,7 @@
 use super::super::{Direction, JournalEntry, OffsetFragment, Rational, TopologyEdit};
 use super::{EdgeRef, EntityId, IdentityLedger, OriginalPointAdmission, Param, ResolvedRef};
 use core::{cmp::Ordering, fmt};
-use sc_units::UnitError;
+use sc_units::{Length, UnitError};
 mod wide;
 use wide::{Wide, Workspace};
 
@@ -98,6 +98,47 @@ impl<'a> OriginalPointProjection<'a> {
             [only] => Some(only),
             _ => None,
         }
+    }
+    // Closed semantic port:only Length/Param and actual projections cross it,never dependency
+    // integers. The caller borrows a sealed context and independently admitted quantity width.
+    pub(crate) fn notch_cumulative_at(
+        &self,
+        upper: &Self,
+        at: Param,
+        parent: Length,
+        reversed: bool,
+        integer_bits: u64,
+    ) -> Result<Option<Length>, UnitError> {
+        let ledger = self.admission.ledger;
+        let source = self.admission.source;
+        if !self.frame_matches(ledger, source) || !upper.frame_matches(ledger, source) {
+            return Ok(None);
+        }
+        let (Some(lower), Some(upper_candidate)) = (self.unique(), upper.unique()) else {
+            return Ok(None);
+        };
+        let workspace = Workspace {
+            component_bits: self
+                .admission
+                .component_bits
+                .max(upper.admission.component_bits),
+            integer_bits,
+            operation: "NotchEaseAdmission::cumulative_at",
+        };
+        if workspace.compare(&lower.coordinate.exact, &upper_candidate.coordinate.exact)?
+            != Ordering::Less
+        {
+            return Ok(None);
+        }
+        workspace
+            .notch_amount(
+                &lower.coordinate.exact,
+                &upper_candidate.coordinate.exact,
+                at,
+                parent,
+                reversed,
+            )
+            .map(Some)
     }
     // These semantic ports require the actual expected immutable ledger and source creation frame.
     // None preserves an unmet frame/cardinality prerequisite;callers retain the full projections.
@@ -776,6 +817,51 @@ mod contracts {
             assert_eq!(a.direction(), direction);
             assert_eq!(b.direction(), direction);
             if field(0) == "wide-half" {
+                let one = sc_units::Length::from_micrometres(1).expect("original signed literal");
+                let bits = 2 * left.admission.component_bit_bound() + 93;
+                assert_eq!(
+                    left.notch_cumulative_at(&right, param(10, 11), one, false, bits)
+                        .expect("separate quantity admission"),
+                    Some(sc_units::Length::ZERO)
+                );
+                assert_eq!(
+                    left.notch_cumulative_at(&right, param(10, 11), one, true, bits)
+                        .expect("exact complement before rounding"),
+                    Some(one)
+                );
+                let operand_bits = a
+                    .coordinate
+                    .exact
+                    .num
+                    .bits()
+                    .max(a.coordinate.exact.den.bits())
+                    .max(b.coordinate.exact.num.bits())
+                    .max(b.coordinate.exact.den.bits());
+                assert_eq!(
+                    left.notch_cumulative_at(&right, param(10, 11), one, false, 1),
+                    Err(sc_units::UnitError::DomainExceeded {
+                        operation: "NotchEaseAdmission::cumulative_at",
+                        kind: "integer workspace bits",
+                        value: i128::from(operand_bits),
+                        limit: 1,
+                    })
+                );
+                let other_projection = other_snapshot
+                    .admit_original_point(fragment, param(8, 9), source, left.admission.limits())
+                    .expect("actual other immutable ledger admission")
+                    .project()
+                    .expect("other projection");
+                assert_eq!(
+                    left.notch_cumulative_at(&other_projection, param(10, 11), one, false, 1)
+                        .expect("frame refusal precedes numeric work"),
+                    None
+                );
+                assert_eq!(
+                    right
+                        .notch_cumulative_at(&left, param(10, 11), one, false, bits)
+                        .expect("non-increasing bound order refuses"),
+                    None
+                );
                 // Private guard control uses actual admitted/projected values;no public token is forged.
                 let required = (a.coordinate.exact.num.bits() + b.coordinate.exact.den.bits())
                     .max(b.coordinate.exact.num.bits() + a.coordinate.exact.den.bits());

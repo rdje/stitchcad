@@ -3,6 +3,8 @@ use super::OriginalNotchContext;
 use crate::ontology::{EaseAmount, EntityId, Param, SeamSideId};
 use core::{fmt, num::NonZeroU64};
 use sc_units::{Length, MAX_LENGTH_UM};
+mod query;
+pub use query::NotchEaseAmountError;
 
 /// Explicit positive integer operand/result limit for original-notch quantities;no default.
 /// Context dependency/candidate admission remains separate. This is not an allocator or CPU cap.
@@ -145,7 +147,7 @@ impl OriginalNotchContext<'_> {
     /// Check the actual amount first,then independently reserve2W+63+b integer bits,whereW is
     /// the largest admitted original coordinate component bound andb the maximum Length magnitude
     /// width. This covers clamped progress construction,orientation and source multiplication.
-    /// Quantity methods remain a subsequent implementation step.
+    /// Subsequent queries retain the original source and round only original cumulative boundaries.
     ///
     /// # Errors
     /// Preserves actual symbolic amount first,then checked bound-overflow or selected-limit refusal.

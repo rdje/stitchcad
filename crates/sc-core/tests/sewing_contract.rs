@@ -5316,3 +5316,237 @@ fn notch_quantity_admission_retains_actual_symbolic_precedence_and_wide_original
     );
     assert_eq!((f.ledger.clone(), marks), before);
 }
+
+#[test]
+fn notch_quantities_match_independent_original_frame_signed_clamped_and_wide_rows() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{NotchContextLimits, NotchEaseLimits, OffsetInterval};
+    let mut count = 0;
+    for row in include_str!("fixtures/notch_quantities.tsv")
+        .lines()
+        .filter(|row| !row.starts_with('#'))
+    {
+        let fields = row.split('\t').collect::<Vec<_>>();
+        assert_eq!(fields.len(), 19);
+        let field = |index: usize| *fields.get(index).unwrap();
+        let param = |n, d| t(field(n).parse().unwrap(), field(d).parse().unwrap());
+        let side = match field(12) {
+            "A" => SeamSideId::A,
+            "B" => SeamSideId::B,
+            _ => panic!("frozen side"),
+        };
+        let mut f = fixture();
+        f.span_mut().direction = match field(13) {
+            "Same" => SeamDirection::Same,
+            "Opposite" => SeamDirection::Opposite,
+            _ => panic!("frozen direction"),
+        };
+        let parent = Length::from_micrometres(field(14).parse().unwrap()).unwrap();
+        f.span_mut().ease.declared_mut().unwrap().amount = EaseAmount::Explicit(parent);
+        let (edge, index) = match side {
+            SeamSideId::A => (f.span().a.range.edge(), 0),
+            SeamSideId::B => (f.span().b.range.edge(), 1),
+        };
+        let domain = EdgeRange::new(edge, param(2, 3), param(4, 5)).unwrap();
+        match side {
+            SeamSideId::A => f.span_mut().a.range = domain,
+            SeamSideId::B => f.span_mut().b.range = domain,
+        }
+        let definitions =
+            notch_definitions(&[f.notch(400, domain.from()), f.notch(401, domain.to())]);
+        let marks = definitions
+            .iter()
+            .cloned()
+            .zip([domain.from(), domain.to()])
+            .map(|(mut definition, param)| {
+                definition.anchor = EdgeAnchor { edge, param };
+                SewingLandmark::Notch(
+                    Notch::new(definition, f.pieces.get(index).unwrap(), &f.ledger).unwrap(),
+                )
+            })
+            .collect::<Vec<_>>();
+        f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
+            side,
+            start: id(401),
+            end: id(400),
+        };
+        f.span_mut().stops = [400, 401]
+            .map(|n| StopLandmark {
+                side,
+                landmark: id(n),
+            })
+            .to_vec();
+        let graph = f.graph(&marks).unwrap();
+        let portion = graph.spans().first().unwrap().retain_ease_source();
+        let fragment = *f
+            .ledger
+            .offset(
+                &mut f.ids,
+                edge,
+                &[OffsetInterval::new(domain.from(), domain.to()).unwrap()],
+            )
+            .unwrap()
+            .first()
+            .unwrap();
+        if field(1) == "1" {
+            f.ledger.reverse(&mut f.ids, fragment).unwrap();
+        }
+        let marks = definitions
+            .into_iter()
+            .zip([param(6, 7), param(8, 9)])
+            .map(|(mut definition, param)| {
+                definition.anchor = EdgeAnchor {
+                    edge: fragment,
+                    param,
+                };
+                SewingLandmark::Notch(
+                    Notch::new(definition, f.pieces.get(index).unwrap(), &f.ledger).unwrap(),
+                )
+            })
+            .collect::<Vec<_>>();
+        let saved = (f.ledger.clone(), marks.clone());
+        let base = notch_source_limits(13, 3, 5);
+        // Interior offsets preserve both outside Piece repairs plus the surviving interval.
+        // Their3-portion output and one active input require a measured peak of4.
+        let selected = NotchContextLimits::new(
+            base.dependency_items(),
+            base.original_point(),
+            NonZeroUsize::new(4).unwrap(),
+        );
+        let context = original_context(&f, portion.source(), &marks, selected).unwrap();
+        let width = [context.lower(), context.upper()]
+            .into_iter()
+            .map(|projection| {
+                let (n, d) = projection
+                    .unique()
+                    .unwrap()
+                    .coordinate()
+                    .component_bit_counts();
+                n.max(d)
+            })
+            .max()
+            .unwrap();
+        assert_eq!(width, field(18).parse::<u64>().unwrap(), "{row}");
+        if width > 63 {
+            assert!(context
+                .lower()
+                .unique()
+                .unwrap()
+                .coordinate()
+                .as_param()
+                .is_err());
+        }
+        if width > 128 {
+            assert!(context
+                .lower()
+                .unique()
+                .unwrap()
+                .coordinate()
+                .as_u128_ratio()
+                .is_err());
+        }
+        let admitted = context
+            .admit_explicit(NotchEaseLimits::new(NonZeroU64::new(10_000).unwrap()))
+            .unwrap();
+        let at = param(10, 11);
+        let cumulative = Length::from_micrometres(field(15).parse().unwrap()).unwrap();
+        assert_eq!(
+            admitted.cumulative_at(EdgeAnchor { edge, param: at }),
+            Ok(cumulative),
+            "{row}"
+        );
+        let expected = [field(16), field(17)]
+            .map(|value| Length::from_micrometres(value.parse().unwrap()).unwrap());
+        for ((from, to), amount) in [(domain.from(), at), (at, domain.to())]
+            .into_iter()
+            .zip(expected)
+        {
+            if from == to {
+                assert_eq!(amount, Length::ZERO);
+            } else {
+                assert_eq!(
+                    admitted.amount_in(EdgeRange::new(edge, from, to).unwrap()),
+                    Ok(amount),
+                    "{row}"
+                );
+            }
+        }
+        assert_eq!(expected[0].checked_add(expected[1]), Ok(parent));
+        assert_eq!(admitted.amount_in(domain), Ok(parent), "{row}");
+        assert_eq!(
+            admitted.context().validation().admission().notch_ids(),
+            (id(401), id(400))
+        );
+        assert_eq!((f.ledger.clone(), marks), saved);
+        count += 1;
+    }
+    assert_eq!(count, 380);
+}
+
+#[test]
+fn notch_quantities_preflight_original_frame_and_both_full_domain_bounds_even_for_zero() {
+    use core::num::NonZeroU64;
+    use sc_core::ontology::{NotchEaseAmountError as Error, NotchEaseLimits};
+    let (mut f, marks) = notch_source_fixture();
+    let edge = f.span().a.range.edge();
+    let wrong = f.span().b.range.edge();
+    let domain = EdgeRange::new(edge, t(1, 4), t(3, 4)).unwrap();
+    f.span_mut().a.range = domain;
+    let graph = f.graph(&marks).unwrap();
+    let portion = graph.spans().first().unwrap().retain_ease_source();
+    let context =
+        original_context(&f, portion.source(), &marks, notch_source_limits(13, 1, 4)).unwrap();
+    let actual = context
+        .admit_explicit(NotchEaseLimits::new(NonZeroU64::new(473).unwrap()))
+        .unwrap();
+    assert_eq!(actual.parent_amount(), Length::ZERO);
+    let at = EdgeAnchor {
+        edge: wrong,
+        param: t(1, 2),
+    };
+    assert_eq!(
+        actual.cumulative_at(at),
+        Err(Error::SourceFrame {
+            source_span: id(301),
+            side: SeamSideId::A,
+            expected: edge,
+            at
+        })
+    );
+    let interval = EdgeRange::whole(wrong);
+    assert_eq!(
+        actual.amount_in(interval),
+        Err(Error::IntervalSource {
+            source_span: id(301),
+            side: SeamSideId::A,
+            expected: edge,
+            interval
+        })
+    );
+    for at in [Param::START, Param::END] {
+        let expected = Error::Outside {
+            source_span: id(301),
+            side: SeamSideId::A,
+            range: domain,
+            at,
+        };
+        assert_eq!(
+            actual.cumulative_at(EdgeAnchor { edge, param: at }),
+            Err(expected)
+        );
+        let interval = if at == Param::START {
+            EdgeRange::new(edge, at, t(1, 2))
+        } else {
+            EdgeRange::new(edge, t(1, 2), at)
+        }
+        .unwrap();
+        assert_eq!(actual.amount_in(interval), Err(expected));
+    }
+    assert_eq!(actual.amount_in(domain), Ok(Length::ZERO));
+    for at in [domain.from(), domain.to()] {
+        assert_eq!(
+            actual.cumulative_at(EdgeAnchor { edge, param: at }),
+            Ok(Length::ZERO)
+        );
+    }
+}

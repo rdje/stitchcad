@@ -181,11 +181,14 @@ stay separate. Original-notch context is implemented:retain actual named Notch b
 combined candidate cardinality and both point admissions before wide work,bind actual ledger/source
 creation frames,and require unique in-domain distinct exact originals. Keep all ambiguous/coincident
 projection evidence and named/authored order;never narrow or filter by absolute direction.
-Notch quantities,formula/profile evaluation,physical matching and whole acceptance remain next.
+Formula/profile evaluation,physical matching and whole acceptance remain separate.
 
 Separate notch quantity admission borrows the sealed context and actual full signed literal.
 Check symbolic amount first,then checked2W+63+b conservative integer reservation,whereW is admitted
 original component width andb maximum Length magnitude bits (currently30). Interior progress uses
 ((xn*ld-ln*xd)*ud)/((un*ld-ln*ud)*xd);clamping/complement do not increase width. No integer query
 allocation,projection copy or inherited comparison-budget authority occurs during admission.
-This prepares quantity evaluation;allocator/runtime/whole Design/physical proof remain separate.
+Exact notch queries are implemented:clamp original progress,complement B/Opposite before shared
+signed rounding,and difference original rounded interval boundaries. Check full original frame and
+both bounds before query allocation,including zero. No child normalization or coordinate narrowing.
+Actual Design quantity integration/allocator/runtime/whole Design/physical proof remain separate.
