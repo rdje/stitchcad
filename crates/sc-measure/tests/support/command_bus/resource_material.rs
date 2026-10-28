@@ -1,6 +1,6 @@
 //! Actual selected Piece text versus independently rebuilt validated whole-model resource oracle.
 use super::group_commit::{capacity, group, mutation};
-use super::resource_admission::{control, counts, demand, operation_only, reset};
+use super::resource_admission::{control, counts, demand, reset, without_model_limits};
 use super::resource_copies::{owner, CountedSources};
 use super::*;
 use sc_core::{
@@ -120,7 +120,7 @@ fn selected_utf8_growth_refuses_before_any_candidate_copy_and_keeps_keys_capacit
         payload(vec![second, first], proposed),
     );
     let request = group(805000, vec![member.clone()]);
-    let mut bus = operation_only(
+    let mut bus = without_model_limits(
         CommandBus::with_edit_capacity(owner, Host::new(design), vec![], capacity(1))
             .expect("actual finite original owner"),
     );
@@ -221,7 +221,7 @@ fn only_selected_resulting_reasons_count_for_noop_same_byte_shrink_and_assigned_
             805011,
             payload(selected.clone(), assignment.clone()),
         ));
-        let mut bus = operation_only(CommandBus::new(owner, Host::new(design)));
+        let mut bus = without_model_limits(CommandBus::new(owner, Host::new(design)));
         bus.install_model_limits(limits)
             .expect("exact finite original model budget");
         reset(&counters);
@@ -264,7 +264,7 @@ fn later_missing_selected_piece_keeps_original_index_before_any_prospective_walk
             MaterialAssignment::Unresolved("猫猫".into()),
         ),
     ));
-    let mut bus = operation_only(CommandBus::new(owner, Host::new(design)));
+    let mut bus = without_model_limits(CommandBus::new(owner, Host::new(design)));
     bus.install_model_limits(limits)
         .expect("exact finite original model budget");
     reset(&counters);
@@ -300,7 +300,7 @@ fn sequential_material_projection_uses_actual_staged_reason_and_aliases_do_not_r
         payload(vec![first], MaterialAssignment::Unresolved(" é ".into())),
     );
     let request = group(805030, vec![shorter, restore.clone(), restore]);
-    let mut bus = operation_only(CommandBus::new(owner, Host::new(design)));
+    let mut bus = without_model_limits(CommandBus::new(owner, Host::new(design)));
     bus.install_model_limits(limits)
         .expect("exact finite original model budget");
     reset(&counters);

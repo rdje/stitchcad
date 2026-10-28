@@ -122,3 +122,26 @@ Real bus author39/124/2,Undo15/4/4,Redo15/4/3,prefix41/126/3,branch7/64/5 and ev
 pass record4/report5/request4/strict lint/fmt. Original agent and authenticated human operator stay distinct;
 source/authority callbacks0 during readers. Runtime and prior reader implementations remain byte-exact.
 Private aggregate/prospective retained admission and coupled/full verification stay separately owned.
+
+## Explicit immutable retained-policy configuration0468
+
+answers: "does installing retained limits walk private state or certify its current resource demand?"
+
+A third private positive-limits policy starts absent in every bus constructor and installs once without
+model/reserve/journal/history traversal, validation, cloning or authority callbacks. Same or larger
+replacement refuses. Costly metadata paths require operation/model/retained setup; cheap authorized
+Piece reads require none. Configuration presence affects handler availability but conveys no authority,
+validity or quota-room certificate. Setup checks operation demand then model presence then retained
+presence before authority/private work. Native setup2 and prior model/operation setup cases plus strict
+lint/fmt verify constructor variants, original error precedence and zero callbacks. Private aggregate/
+current admission .3.3.2 and exact prospective admission .3.4 remain required before retained closure.
+
+### Focused doctest invocation0468
+
+answers: "how is bus privacy checked without unintentionally selecting unrelated doctests?"
+
+The observed cargo test -p sc-core --doc filter containing command::bus::CommandBus plus a spaced
+line suffix selected171 cases, including unrelated types. The owned expanded rustdoc/children were
+terminated (cargo101, SIGTERM); this interrupted run is not full verification. The space-free filter
+command::bus::CommandBus selects exactly11 bus compile-failure contracts, including retained-policy
+reset. Use that bounded type filter; do not infer one-case scope from a line suffix containing spaces.

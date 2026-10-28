@@ -230,6 +230,48 @@ and formatting. All original execution/history/request implementations are byte-
 the new exhaustive readonly views; preparation, operation, identity and group implementations are
 byte-exact. Existing request/report readers are byte-exact. This implements accepted data accounting
 with focused checks. Private retained model/reserve/journal composition and prospective runtime
-retained admission remain G1-SLICE.6.8.2.2.2.2.4.3.3–.4.3.4; coupled acceptance .4.4 and deeper/full
-verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
+retained admission remain .4.3.3.2–.4.3.4; coupled acceptance .4.4 and deeper/full verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
 ingress, numeric/file/decompression/geometry work or physical/release acceptance.
+
+
+## Explicit immutable retained-policy configuration
+
+The composition root calls install_retained_limits with explicit positive DesignResourceLimits for
+logical collection entries, UTF-8 bytes and represented unbounded-counter magnitude bits. This is a
+third independent policy beside operation-input limits and per-model limits. None has a default.
+new, with_identities and edit/history constructors start without retained limits. Installation does
+not walk private models, reserve, journal or history, validate currentness, clone sources or consult
+authority. It changes only the private policy slot. Even a tiny explicit policy can be installed on
+an existing owner; construction/initial allocation and admission are separate concerns.
+
+```rust
+bus.install_operation_limits(explicit_input_limits)?;
+bus.install_model_limits(explicit_per_model_limits)?;
+bus.install_retained_limits(explicit_retained_limits)?;
+```
+
+Costly implemented single/group previews, commits and history traversal require all three installed
+policies. Missing retained configuration returns CommandControlError::RetainedLimitsNotInstalled
+after pure operation admission and the existing model-policy presence check, before authority,
+progress, private traversal or preparation. Repeat installation, with either the same policy or a
+larger one, returns RetainedLimitsAlreadyInstalled and preserves the original policy. Requests and
+progress observers cannot replace, widen or reset it; direct private-field reset fails compilation.
+
+is_preview_available requires all three policies and an implemented handler; is_commit_available
+also requires edit capacity. Availability is no authority, currentness, quota-room or validity
+certificate. Authorized GetPieceList remains independent of every policy and does no private source
+walk, even with tiny retained configuration or missing edit capacity.
+
+Two native configuration cases cover plain/reserve/edit-history constructors, once-only installation,
+missing-policy refusal across all four costly entry points and cheap reads before/after setup.
+Source telemetry stays0/0/0 and configuration/setup refusals read authority0 times. The11 bus
+compile-failure contracts use the bounded space-free command::bus::CommandBus doctest filter. The existing
+operation-policy and model-policy setup cases retain their original precedence and behavior; strict
+affected lint/formatting pass. Test helpers install explicit permissive retained limits; the helper
+that deliberately omits model limits is named without_model_limits and still supplies retained policy.
+
+This slice implements configuration and setup refusal only. It does not yet compare actual private
+retained content to that policy. The next leaf .4.3.3.2 owns the exact current private composition
+and admission after authority/snapshot binding; .4.3.4 owns exact prospective commit/history admission,
+including branch discard, eviction and replay/cancellation behavior. No retained-state, memory or
+resource-bound certificate follows from installation alone. Broader resource acceptance stays .4.4.

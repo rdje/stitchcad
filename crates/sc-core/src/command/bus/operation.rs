@@ -22,6 +22,10 @@ pub enum CommandControlError {
     ModelLimitsNotInstalled,
     /// Installed logical model policy cannot be replaced for this owner's lifetime.
     ModelLimitsAlreadyInstalled,
+    /// Trusted composition root has not installed explicit logical retained-content policy.
+    RetainedLimitsNotInstalled,
+    /// Installed retained-content policy cannot be replaced for this owner's lifetime.
+    RetainedLimitsAlreadyInstalled,
     /// Original actual model resource refusal, after authority and snapshot binding.
     Model(DesignResourceLimitError),
     /// Original submitted metadata demand exceeds host policy.
@@ -57,7 +61,7 @@ impl std::error::Error for CommandControlError {
 
 impl<H, A> CommandBus<H, A> {
     /// Install host-chosen metadata policy exactly once; neither requests nor observers can replace it.
-    /// Read-only Piece inspection needs no policy. Costly metadata paths also require model policy.
+    /// Read-only Piece inspection needs no policy. Costly metadata paths also require model and retained policies.
     /// This changes no Design, grant, revision, reserve, audit or history and confers no authority.
     /// # Errors
     /// Returns LimitsAlreadyInstalled, retaining the original policy unchanged.
@@ -72,8 +76,8 @@ impl<H, A> CommandBus<H, A> {
         Ok(())
     }
     /// Install explicit logical model limits exactly once, without traversing private state.
-    /// Costly metadata paths require both operation and model policies. Piece inspection requires
-    /// neither. This setter grants no authority and performs no validation, clone or host callback.
+    /// Costly metadata paths require operation, model and retained policies. Piece inspection requires
+    /// none. This setter grants no authority and performs no validation, clone or host callback.
     /// Current and history-alternative roots are admitted after exact authority/snapshot binding.
     /// Current/prospective model checks are implemented; retained command-state admission is separate.
     /// # Errors
@@ -88,6 +92,30 @@ impl<H, A> CommandBus<H, A> {
         self.model_limits = Some(limits);
         Ok(())
     }
+    /// Install explicit logical retained-content limits exactly once, without traversing private state.
+    /// Costly metadata paths require operation, model and retained policies; Piece inspection needs none.
+    /// This setter changes no model, reserve, journal, history or grant and invokes no host callback.
+    /// Current private composition and prospective retained admission are separate implementation work;
+    /// installing this policy is configuration, not a resource admission or retained-state certificate.
+    /// # Errors
+    /// Returns RetainedLimitsAlreadyInstalled, preserving the original policy unchanged.
+    pub fn install_retained_limits(
+        &mut self,
+        limits: DesignResourceLimits,
+    ) -> Result<(), CommandControlError> {
+        if self.retained_limits.is_some() {
+            return Err(CommandControlError::RetainedLimitsAlreadyInstalled);
+        }
+        self.retained_limits = Some(limits);
+        Ok(())
+    }
+    pub(super) fn require_retained_limits(
+        &self,
+    ) -> Result<DesignResourceLimits, CommandControlError> {
+        self.retained_limits
+            .ok_or(CommandControlError::RetainedLimitsNotInstalled)
+    }
+
     pub(super) fn require_model_limits(&self) -> Result<DesignResourceLimits, CommandControlError> {
         self.model_limits
             .ok_or(CommandControlError::ModelLimitsNotInstalled)
@@ -103,6 +131,7 @@ impl<H, A> CommandBus<H, A> {
             .check_mutation(mutation)
             .map_err(CommandControlError::Input)?;
         self.require_model_limits()?;
+        self.require_retained_limits()?;
         Ok(demand)
     }
     pub(super) fn admit_group(
@@ -116,6 +145,7 @@ impl<H, A> CommandBus<H, A> {
             .check_group(group)
             .map_err(CommandControlError::Input)?;
         self.require_model_limits()?;
+        self.require_retained_limits()?;
         Ok(demand)
     }
 }

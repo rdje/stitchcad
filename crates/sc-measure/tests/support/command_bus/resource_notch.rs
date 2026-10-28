@@ -1,6 +1,6 @@
 //! Real reserved identities, fixed Notch payloads and exact rebuilt-model resource oracle.
 use super::group_commit::{capacity, group, mutation};
-use super::resource_admission::{control, counts, demand, operation_only, reset};
+use super::resource_admission::{control, counts, demand, reset, without_model_limits};
 use super::resource_copies::CountedSources;
 use super::*;
 use sc_core::{
@@ -120,7 +120,7 @@ fn actual_append_refuses_before_copy_and_retry_can_free_evidence_without_losing_
         MutationPayload::AddNotch(intent),
     );
     let request = group(806000, vec![member.clone()]);
-    let mut bus = operation_only(
+    let mut bus = without_model_limits(
         CommandBus::with_edit_capacity(owner, Host::new(design), reserve, capacity(1))
             .expect("actual finite reserved owner"),
     );
@@ -215,7 +215,7 @@ fn exact_one_entry_room_admits_repeated_preview_alias_and_rolls_back_later_group
             ),
         ],
     );
-    let mut bus = operation_only(
+    let mut bus = without_model_limits(
         CommandBus::with_edit_capacity(owner, Host::new(design), reserve, capacity(1))
             .expect("actual one-group finite owner"),
     );
@@ -324,7 +324,7 @@ fn original_missing_target_exhaustion_and_anchor_causes_precede_prospective_quot
             806031,
             MutationPayload::AddNotch(intent),
         ));
-        let mut bus = operation_only(
+        let mut bus = without_model_limits(
             CommandBus::with_identities(owner, Host::new(design), reserve)
                 .expect("actual reserved owner"),
         );

@@ -308,7 +308,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
 impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAuthoritySource>
     CommandBus<H, A>
 {
-    /// Whether both installed policies, implemented handler and finite edit capacity are present.
+    /// Whether all three installed policies, implemented handler and finite edit capacity are present.
     /// This does not certify current authority, revision, journal room or candidate validity.
     #[must_use]
     pub fn is_commit_available(&self, command: crate::command::CommandId) -> bool {

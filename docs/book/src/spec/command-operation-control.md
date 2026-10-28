@@ -99,9 +99,9 @@ An unauthorized request emits no progress. History admission covers the complete
 group before constructing its current-operator authorization context. Exact aliases count in admission.
 
 The existing preview, preview_group, commit_group and apply_history methods use the unit observer;
-they enforce both installed policies. Their explicit observer counterparts are preview_with_progress,
+they enforce all three installed policies. Their explicit observer counterparts are preview_with_progress,
 preview_group_with_progress, commit_group_with_progress and apply_history_with_progress. Availability
-queries for preview/commit handlers require both installed policies; availability supplies no permission,
+queries for preview/commit handlers require all three installed policies; availability supplies no permission,
 remaining quota or candidate validity.
 
 ## Declared progress fractions
@@ -287,7 +287,9 @@ exactly once with explicit DesignResourceLimits: cumulative collection entries, 
 bytes and represented unbounded-counter magnitude bits. The setter does not traverse the model or
 call its source host. A second installation returns ModelLimitsAlreadyInstalled without replacing
 the first policy. Missing policy returns ModelLimitsNotInstalled after pure input admission; authorized
-GetPieceList inspection needs neither policy. Neither requests nor progress observers carry a policy.
+GetPieceList inspection needs no policy. Neither requests nor progress observers carry a policy.
+Costly paths also require explicit [retained-policy configuration](command-resource-accounting.md#explicit-immutable-retained-policy-configuration);
+private retained admission is separate owned work.
 Compile-time H: DesignResourceSource is required for costly metadata methods; readonly query paths
 retain the narrower semantic host contract. Compiler privacy rejects direct model-policy reset.
 

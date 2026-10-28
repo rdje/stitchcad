@@ -39,7 +39,7 @@ pub(super) fn demand(
         .finish()
         .expect("actual demand without semantic callbacks")
 }
-pub(super) fn operation_only<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
+pub(super) fn without_model_limits<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
     bus.install_operation_limits(CommandOperationLimits::new(
         capacity(10),
         capacity(10),
@@ -47,6 +47,8 @@ pub(super) fn operation_only<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A
         capacity(1000),
     ))
     .expect("explicit operation admission");
+    bus.install_retained_limits(model_policy())
+        .expect("explicit retained policy; only model limits deliberately absent");
     bus
 }
 #[derive(Default)]
@@ -70,7 +72,7 @@ fn model_policy_has_no_default_installs_once_and_does_not_walk_or_block_piece_in
         803001,
         MutationPayload::AddNotch(addition),
     ));
-    let mut bus = operation_only(
+    let mut bus = without_model_limits(
         CommandBus::with_edit_capacity(
             owner,
             Host::new(design),
@@ -191,7 +193,7 @@ fn exact_current_model_refusal_precedes_validation_copy_and_effect_on_all_prepar
         MutationPayload::AddNotch(addition),
     );
     let request = group(803020, vec![member.clone()]);
-    let mut bus = operation_only(
+    let mut bus = without_model_limits(
         CommandBus::with_edit_capacity(
             owner,
             Host::new(design),

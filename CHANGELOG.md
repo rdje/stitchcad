@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0467 — account actual accepted authoring and history record resources
+## STITCHCAD-G1-0468 — require explicit immutable retained-policy configuration
 
-- Exhaustively borrow commit/record/result/history-request owners; count effect sequences, copied requests/reports and all stored revisions.
-- Count effective-command and discarded-redo vectors; preserve fixed grant/time/replay/direction/oldest-undo fields and original witnesses.
-- Real record4/report5/request4/strict lint/fmt pass:author39/124/2, Undo15/4/4, Redo15/4/3, branch7/64/5 and eviction3/4/18.
-- Agent author/human operator and exact replay copies verified, source/authority reads zero during accounting; original runtime/readers unchanged.
-- Whole0466 and whole0461–0466 decision journals retained620; private aggregate/runtime retained enforcement and broader verification pending.
+- Add an absent-by-default private retained policy and once-only positive-limits setter, without traversal, validation or callbacks.
+- Costly metadata entry points require all three explicit policies; authorized Piece inspection remains independent of policy setup.
+- Native retained setup2 and existing model/operation setup cases plus strict lint/fmt pass; original error precedence and zero source/authority callbacks verified.
+- Whole0467 retained621; book distinguishes configuration from pending current/prospective retained admission and broader acceptance.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

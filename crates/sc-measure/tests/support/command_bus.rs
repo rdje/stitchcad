@@ -86,6 +86,8 @@ mod resource_reports;
 mod resource_requests;
 #[path = "command_bus/resource_revision.rs"]
 mod resource_revision;
+#[path = "command_bus/retained_policy.rs"]
+mod retained_policy;
 impl CommandAuthoritySource for Host {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_> {
         self.reads.set(self.reads.get() + 1);
@@ -131,6 +133,8 @@ fn model_policy() -> sc_core::design::DesignResourceLimits {
 fn model_controlled<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
     bus.install_model_limits(model_policy())
         .expect("one explicit test-host model policy");
+    bus.install_retained_limits(model_policy())
+        .expect("one explicit test-host retained policy");
     bus
 }
 fn query(design: EntityId, revision: DesignRevision, payload: QueryPayload) -> CommandRequest {

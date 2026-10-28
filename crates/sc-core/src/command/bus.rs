@@ -236,6 +236,12 @@ impl std::error::Error for CommandBusError {
 ///     let _ = bus.preview(request);
 /// }
 /// ```
+/// ```compile_fail
+/// use sc_core::command::CommandBus;
+/// fn reset_retained_policy<H, A>(bus: &mut CommandBus<H, A>) {
+///     bus.retained_limits = None;
+/// }
+/// ```
 pub struct CommandBus<H, A> {
     state: DesignGarment<H>,
     authority: A,
@@ -244,14 +250,16 @@ pub struct CommandBus<H, A> {
     history: Option<history::History<H>>,
     operation_limits: Option<crate::command::CommandOperationLimits>,
     model_limits: Option<DesignResourceLimits>,
+    retained_limits: Option<DesignResourceLimits>,
 }
 
 impl<H: DesignResourceSource + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
-    /// Implemented inspect-preview subset with both explicit policies; supplies no authority.
+    /// Implemented inspect-preview subset with all three explicit policies; supplies no authority.
     #[must_use]
     pub const fn is_preview_available(&self, command: CommandId) -> bool {
         self.operation_limits.is_some()
             && self.model_limits.is_some()
+            && self.retained_limits.is_some()
             && preparation::handler_available(command)
     }
 
@@ -259,7 +267,7 @@ impl<H: DesignResourceSource + Clone + PartialEq, A: CommandAuthoritySource> Com
     /// The original model, revision and reserved identities remain unchanged on success or refusal.
     /// Candidates are discarded; reports are no geometry, physical-property or release certificate.
     /// # Errors
-    /// Supported metadata first requires both policies and pure submitted-input admission. Then
+    /// Supported metadata first requires all three policies and pure submitted-input admission. Then
     /// authority/binding, handler and original envelope/current source checks precede target lookup
     /// and actual candidate construction. Current-model accounting follows exact authority/binding
     /// and precedes semantic validation/cloning; no private quota witness precedes authorization.
@@ -342,8 +350,8 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
     /// Install the original immutable model and trusted application authority dependency.
     /// This moves the sole owner without reconstructing held references or certifying execution.
     /// The identity reserve is empty; creation previews refuse exhaustion until configured through
-    /// `with_identities` at construction. Costly metadata paths require install_operation_limits
-    /// and install_model_limits; authorized Piece inspection needs neither. Material previews mint no ids.
+    /// `with_identities` at construction. Costly metadata paths require install_operation_limits,
+    /// install_model_limits and install_retained_limits. Piece inspection needs none. Material previews mint no ids.
     #[must_use]
     pub fn new(state: DesignGarment<H>, authority: A) -> Self {
         Self {
@@ -354,6 +362,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             history: None,
             operation_limits: None,
             model_limits: None,
+            retained_limits: None,
         }
     }
 
@@ -381,6 +390,7 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
             history: None,
             operation_limits: None,
             model_limits: None,
+            retained_limits: None,
         })
     }
 

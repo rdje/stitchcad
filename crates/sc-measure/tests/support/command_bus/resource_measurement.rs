@@ -1,6 +1,6 @@
 //! Prospective borrowed evidence versus independently reconstructed actual complete model accounting.
 use super::group_commit::{capacity, group, mutation};
-use super::resource_admission::{control, counts, demand, operation_only, reset};
+use super::resource_admission::{control, counts, demand, reset, without_model_limits};
 use super::resource_copies::{owner, CountedSources};
 use super::*;
 use sc_core::{
@@ -93,7 +93,7 @@ fn growing_evidence_refuses_before_model_copy_and_failed_group_keys_remain_avail
         MutationPayload::ChangeMeasurement(ChangeMeasurement::new(id(1), growing)),
     );
     let request = group(804000, vec![member.clone()]);
-    let mut bus = operation_only(
+    let mut bus = without_model_limits(
         CommandBus::with_edit_capacity(owner, Host::new(design), vec![], capacity(1))
             .expect("actual finite owner"),
     );
@@ -190,7 +190,7 @@ fn exact_noop_same_size_replacement_and_unknown_shrink_use_resulting_owned_evide
             804011,
             MutationPayload::ChangeMeasurement(ChangeMeasurement::new(id(1), after.clone())),
         ));
-        let mut bus = operation_only(CommandBus::new(owner, Host::new(design)));
+        let mut bus = without_model_limits(CommandBus::new(owner, Host::new(design)));
         bus.install_model_limits(limits)
             .expect("exact original-size policy");
         reset(&counters);
@@ -242,7 +242,7 @@ fn sequential_evidence_projection_uses_actual_staged_state_and_aliases_do_not_re
         MutationPayload::ChangeMeasurement(ChangeMeasurement::new(id(1), original)),
     );
     let request = group(804020, vec![first, restore.clone(), restore]);
-    let mut bus = operation_only(CommandBus::new(owner, Host::new(design)));
+    let mut bus = without_model_limits(CommandBus::new(owner, Host::new(design)));
     bus.install_model_limits(limits)
         .expect("exact original-size policy");
     reset(&counters);

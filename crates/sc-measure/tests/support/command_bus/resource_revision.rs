@@ -1,6 +1,6 @@
 //! Actual publication revisions and independent maximum-issued counter after undo, without fake hosts.
 use super::group_commit::{capacity, group, material, mutation};
-use super::resource_admission::{control, counts, demand, operation_only, reset};
+use super::resource_admission::{control, counts, demand, reset, without_model_limits};
 use super::resource_copies::CountedSources;
 use super::*;
 use sc_core::{
@@ -72,7 +72,7 @@ fn exact_successor_bits_admit_zero_sparse_carry_and_beyond_u128_real_models() {
             807000,
             vec![mutation(design, base, 807000, 807001, payload)],
         );
-        let mut bus = operation_only(
+        let mut bus = without_model_limits(
             CommandBus::with_edit_capacity(owner, Host::new(design), vec![], capacity(1))
                 .expect("actual finite counter owner"),
         );
@@ -137,7 +137,7 @@ fn carry_quota_matches_actual_model_before_revision_copy_and_keeps_revision_keys
                 material(piece, "other valid metadata"),
             )],
         );
-        let mut bus = operation_only(
+        let mut bus = without_model_limits(
             CommandBus::with_edit_capacity(owner, Host::new(design), vec![], capacity(1))
                 .expect("actual finite counter owner"),
         );
@@ -191,7 +191,7 @@ fn undo_does_not_lower_maximum_issued_budget_and_exact_replays_survive_next_coun
     let design = owner.inputs().id();
     let payload = noop(&owner);
     let address = owner.inputs().structure().pieces().pieces().as_ptr();
-    let mut bus = operation_only(
+    let mut bus = without_model_limits(
         CommandBus::with_edit_history(
             owner,
             Host::new(design),
