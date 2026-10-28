@@ -60,7 +60,7 @@ case refuses this dimension on all four costly entry paths before any authority 
 
 This API admits already constructed typed inputs. It does not bound raw transport decoding, the
 initial LengthDeclaration structural constructor or allocation before the caller submits the input.
-Those ingress and whole-model dimensions remain separate work; no raw untrusted API is exposed here.
+Raw ingress remains separate work; actual model admission is described below. No raw untrusted API is exposed here.
 
 The check compares against remaining room before adding or multiplying. It neither wraps, saturates,
 clips input nor silently deduplicates members. Original contexts, payloads, identities and order remain
@@ -199,8 +199,8 @@ DesignResourceLimits and DesignResourceMeter live in the Design domain, independ
 authority. They provide a data-only accounting contract with implemented component producers below.
 Complete actual model roots compose their source content and retained census under one sink.
 Current/preparation and history-alternative admission now uses the required readonly source port;
-exact Measurement/Material/Notch projections are implemented; publication revision and retained
-command-state admission remain pending. The meter alone is not a runtime model-admission gate.
+exact Measurement/Material/Notch/publication-revision projections are implemented; retained
+command-state admission remains pending. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -318,10 +318,10 @@ examples also pass. The new test's missing explicit borrowed-error lifetime and 
 were corrected before acceptance. No semantic validation callback is replaced by accounting.
 
 This implements current/preparation-root and stored history-alternative admission. Exact prospective
-Measurement, selected Material and Notch admission are implemented below; publication revision
-growth remains .4.2.4; retained
-command audit/replay/history content and maximum-issued/audit counters remain .4.3. This partial
-runtime stage does not certify every newly published model or total retained state fits the policy.
+Measurement, selected Material, Notch and publication-revision admission are implemented below.
+Per-model logical admission is implemented with focused checks under the honest immutable-source
+contract. Total command audit/replay/history content and stored maximum-issued/audit counters remain
+.4.3; coupled/deeper/full verification remains separate.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
 release acceptance remain separate. Deeper/full verification stays deferred until feature completion.
 
@@ -359,8 +359,8 @@ Material validation refused it. An explicit positive1000 micrometre length makes
 evidence accounting while preserving that production validator. An assumed test convenience accessor
 was replaced with the actual difference getters. The new3 and original4 Measurement cases,33 source
 resource cases and6 cases selected by the canonical filter pass, with strict affected lint/formatting.
-Authorization/group/effect/history implementations are byte-exact in this slice. Selected Material
-and Notch projections follow below; publication revision growth and retained content remain owned;
+The Measurement implementation preserves original authority/group/effect/history contracts. Selected
+Material, Notch and publication-revision projections follow below; retained content remains owned;
 this feature stage supplies no complete new-model/retained-state, raw ingress, allocator memory/time,
 physical or release certificate. Deeper/full verification remains deferred until feature completion.
 
@@ -398,7 +398,8 @@ resource walks. Python and OS byte counts independently confirm the exact4/3/6-b
 The new4, original5 Material and3 Measurement-projection cases,33 source resource cases and5 Piece
 cases pass, with strict affected lint/formatting. The execution guide's earlier semantic-only preview
 host bound is corrected to the required DesignResourceSource contract. Notch projection follows
-below; publication revision, retained command state and deeper/full verification remain owned. These projections
+below, followed by publication revision admission; retained state and deeper/full verification remain
+owned. These projections
 supply no complete retained-state, raw ingress, allocator memory/time, physical or release certificate.
 
 ## Exact prospective Notch resources
@@ -438,5 +439,58 @@ ID/capacity. Actual target/exhaustion/wrong-Piece anchor tests verify original c
 no prospective walk/copy before those failures. Three new and four existing Notch cases,33 source
 resource cases,4 sewing cases and the expanded cursor case pass, with strict affected lint/formatting.
 The cursor case covers repeated peeks, current/independent/original positions, terminal identity and
-exhaustion. Publication revision growth, retained command state and deeper/full verification remain
-owned; this stage supplies no complete retained-state, ingress, allocator memory/time or release proof.
+exhaustion. Publication revision admission follows below; retained command state and deeper/full
+verification remain owned; this stage supplies no complete retained-state, ingress, allocator memory/time or release proof.
+
+## Prospective publication revision resources
+
+A new authoring group first prepares and validates its actual metadata candidates. Before constructing
+any successor or rebuilding the final model at that revision, the bus charges the whole prospective
+model using the private journal's independent maximum-issued counter. The counter is not taken from
+the restored model or request claim. Undo/Redo moves an earlier snapshot without lowering issuance.
+All metadata fields are the actual prepared candidate; only the revision magnitude is projected.
+Old and new revision bits are not added together. Initial authority/snapshot binding and member
+semantic causes still precede this final check; final fresh Commit authority and atomic effects follow.
+
+The readonly forecast uses the pinned num-bigint0.4.6 public bits and trailing_ones methods. Zero's
+successor needs1 bit. Otherwise an all-one magnitude gains one bit; every other increment keeps its
+width. It requests no successor, clone or formatted value. The exact installed counter-bit budget
+is charged first at Structure/design.revision, the actual Design owner and no member index. The
+remaining real model fields then charge once under the same cumulative sink. See the
+[pinned integer API](https://docs.rs/num-bigint/0.4.6/num_bigint/struct.BigUint.html#method.trailing_ones);
+its interface was checked through a normal offline local documentation build, without changing the pin.
+
+| Current revision | Next revision | Current bits | Next bits |
+| --- | --- | --- | --- |
+| 0 | 1 | 0 | 1 |
+| 1 | 2 | 1 | 2 |
+| 2 | 3 | 2 | 2 |
+| 3 | 4 | 2 | 3 |
+| u128::MAX | u128::MAX +1 | 128 | 129 |
+
+For example, after issuing1,2,3, a two-bit model policy admits all three revisions. Undoing back to0
+leaves maximum-issued3. New authoring forecasts4/3 bits and refuses with maximum2/consumed0/requested3
+at design.revision. It does not create revision4, change the model, append an accepted record or
+consume group/key/capacity. Exact accepted authoring/history replays still return their original
+records without a new counter or private model walk. Preview keeps its base revision and therefore
+does not issue a publication counter; it remains a nonpublishing report.
+
+Three new runtime cases compare against actual rebuilt, validated models. Exact zero/sparse/carry/
+beyond-u128 boundaries admit and retain the existing two host copies for metadata plus final revision.
+A carry exceeding policy preserves the oracle's exact error after the bounded metadata candidate,
+with1 host copy and no final revision reconstruction. Repeating or changing valid metadata under the
+same refused group/key retains that error and original Piece address/revision. The undo scenario
+above preserves issuance and exact replay at the history action bound; replay telemetry is0/0/0.
+
+A separate readonly forecast case compares with actual arbitrary-precision successor arithmetic,
+including word boundaries and4096-bit values. If a forecast magnitude count itself needs2^64 units,
+checked arithmetic returns an explicit overflow representation; the producer submits two exact
+chunks at the same revision location. No finite u64 policy can admit both, and first-error latching
+prevents partial demand. The primitive count-boundary case exercises this refusal without constructing
+an enormous model or changing public counter semantics. There is no wrap, clipping or added counter cap.
+
+Runtime revision3/forecast1/count-boundary1/source33/structural-root5/context2/D285 branch1/actual-copy1
+pass, with strict affected lint/formatting. All four model projection branches now have focused
+implementation checks. Retained command content .4.3, coupled resource acceptance .4.4 and deeper/full
+verification remain pending. Logical model content does not bound raw ingress, allocator peaks,
+authority/source host algorithm time, numeric/file/decompression/geometry work or physical/release proof.

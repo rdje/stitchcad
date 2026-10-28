@@ -444,6 +444,11 @@ impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAutho
         }
         let prepared = self.stage_group_with_progress(group, observer)?;
         let (candidate, changes, consumed) = prepared.into_parts();
+        let limits = self
+            .require_model_limits()
+            .map_err(|issue| CommandGroupPreviewError::<H::Error>::control(group.id(), issue))?;
+        super::operation::admit_successor_revision(&candidate, limits, &journal.maximum_revision)
+            .map_err(|issue| CommandGroupPreviewError::<H::Error>::control(group.id(), issue))?;
         let revision = journal.maximum_revision.successor();
         let sequence = journal.sequence.successor();
         super::operation::group_checkpoint::<H::Error>(

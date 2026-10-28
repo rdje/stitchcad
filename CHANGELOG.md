@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0463 — admit actual Notch append before cursor consumption and model copy
+## STITCHCAD-G1-0464 — admit exact next publication revision from maximum issued counter
 
-- Readonly-peek the actual reserved ID; preserve target/exhaustion/anchor order, then admit exact prospective registry before consumption/copy.
-- Charge complete new registry once with actual fixed Notch payload, original schema order/location and no fabricated identity or supplied totals.
-- Notch projection3/old Notch4/source33/sewing4/cursor1/strict lint/fmt pass; actual model oracle, exact boundary/aliases/later rollback.
-- Freed-evidence retry preserves original ID/group/key/capacity; whole0462 retained615; revision/retained/deeper/full work pending.
+- Forecast magnitude through pinned public integer API; charge complete resulting model before successor/revision-model construction.
+- Use independent maximum-issued revision after undo; retain metadata/effect/replay causes and original model counter location.
+- Revision3/forecast1/count-boundary1/source33/structure5/context2/D2851/copy1/strict lint/fmt pass; actual model oracle and exhausted-counter replays.
+- Preserve beyond-u128 arithmetic/no overflow/counter cap; whole0463/0388–0389 lessons616/617 retained; model projections implemented, retained/full proof pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -46,6 +46,14 @@ impl DesignRevision {
         let Self(counter) = self;
         counter.bits()
     }
+    // Readonly forecast through the pinned public integer API. Zero needs one bit; otherwise only
+    // an all-one magnitude gains a bit on increment.
+    // None is exactly u64::MAX + one magnitude bits, outside every representable finite policy.
+    pub(crate) fn successor_resource_bits(&self) -> Option<u64> {
+        let Self(counter) = self;
+        let bits = counter.bits();
+        bits.checked_add(u64::from(counter.trailing_ones() == bits))
+    }
     /// Initial counter value zero.
     #[must_use]
     pub fn initial() -> Self {
@@ -170,5 +178,31 @@ impl CommandMutationContext {
     #[must_use]
     pub const fn group(&self) -> Option<CommandGroupId> {
         self.group
+    }
+}
+
+#[cfg(test)]
+mod resource_tests {
+    use super::DesignRevision;
+    use num_bigint::BigUint;
+    #[test]
+    fn readonly_successor_magnitude_matches_actual_arithmetic_at_zero_word_and_large_carries() {
+        let check = |revision: DesignRevision| {
+            let original = revision.clone();
+            assert_eq!(
+                revision.successor_resource_bits(),
+                Some(revision.successor().resource_bits())
+            );
+            assert_eq!(revision, original);
+        };
+        for value in [0_u128, 1, 2, 3, 4, 7, 8, u128::from(u64::MAX), u128::MAX] {
+            check(DesignRevision::from_counter(value));
+        }
+        for shift in [129_usize, 256, 4096] {
+            let power = BigUint::from(1_u8) << shift;
+            for value in [&power - 1_u8, power.clone(), &power + 5_u8] {
+                check(DesignRevision(value));
+            }
+        }
     }
 }

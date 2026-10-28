@@ -220,5 +220,5 @@ replacement canonical sources still refuse current validation; generic port acco
 exact held host/canonical data. [Complete actual root composition](model-resource-accounting.md#complete-actual-inputs-sewing-and-garment-roots)
 additionally charges the retained DesignMetadata entity catalog and guards fixed provided-reference
 fields. [Installed current-model admission](command-operation-control.md#installed-current-model-admission)
-uses that composition after authority/binding. Publication revision/retained-state admission and
-deeper/full verification remain owned; source demand alone is no whole-model/allocator time/memory certificate.
+uses that composition after authority/binding, including prospective publication revision. Retained
+command-state admission and coupled/deeper/full verification remain owned; source demand alone is no whole-model/allocator time/memory certificate.

@@ -416,8 +416,9 @@ These records describe this in-memory owner, without a persisted history claim.
 
 New authoring issues the exact successor of the separate maximum-issued counter. Undo/redo restore
 the original snapshot counter while leaving issuance intact; a new branch therefore skips previously
-issued snapshot counters. The actual candidate is rebuilt at its freshly issued revision through the original
-structural/input/sewing/garment constructors and complete current validation. An exhaustive context
+issued snapshot counters. Before allocating that successor or rebuilding its model, [publication revision admission](command-operation-control.md#prospective-publication-revision-resources)
+checks the complete actual candidate with the forecast magnitude from maximum issued. The final model
+then uses the original structural/input/sewing/garment constructors and complete current validation. An exhaustive context
 comparison permits only that revision change; canonical values, Pieces, landmarks and all other
 fields remain equal to the prepared candidate. Unknown/Derived declarations remain authored state,
 and their source/recipe/physical realization receives no new certificate from publication.

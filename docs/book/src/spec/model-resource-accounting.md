@@ -410,7 +410,8 @@ contract. [Installed current-model admission](command-operation-control.md#insta
 now follows exact authority/snapshot binding. [Exact prospective Measurement accounting](command-operation-control.md#exact-prospective-measurement-resources)
 borrows a replacement in its actual slot before candidate copies. [Selected Material accounting](command-operation-control.md#exact-prospective-selected-material-resources)
 borrows resulting Piece reasons before copies. [Notch append accounting](command-operation-control.md#exact-prospective-notch-resources)
-charges the actual new registry before cursor consumption/copy; publication revision and retained
-command state remain G1-SLICE.6.8.2.2.2.2.4 work. Retained command journals/history, ingress, allocation peaks and host algorithm
+charges the actual new registry before cursor consumption/copy. [Publication revision admission](command-operation-control.md#prospective-publication-revision-resources)
+uses the independent maximum-issued counter before successor construction; retained command state
+and coupled/deeper/full verification remain G1-SLICE.6.8.2.2.2.2.4 work. Retained command journals/history, ingress, allocation peaks and host algorithm
 time require their own bounds; logical demand supplies no dishonest-host security, readiness,
 physical or release certificate. Deeper/full verification remains deferred until feature completion.

@@ -155,3 +155,17 @@ pub(crate) fn charge_garment_notch_append<H: DesignResourceSource>(
 ) -> Result<(), DesignResourceLimitError> {
     charge_garment_projected(garment, ResourceProjection::AppendedNotch(notch), sink)
 }
+
+// This is the private journal's actual independent maximum-issued revision, never the restored
+// model revision or an untrusted request claim. Only its next magnitude is forecast here.
+pub(crate) fn charge_garment_successor_revision<H: DesignResourceSource>(
+    garment: &DesignGarment<H>,
+    maximum_issued: &crate::command::DesignRevision,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    charge_garment_projected(
+        garment,
+        ResourceProjection::SuccessorRevision(maximum_issued),
+        sink,
+    )
+}

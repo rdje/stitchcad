@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0463
+## Current leaf acceptance —0464
 
-- [x] ROOT CAUSE: python3 -I -B native Notch projection:target < real ID peek < fixed validation <
-  whole admission < staged consumption < registry/model copy; full precharge and unchanged authority rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_notch:::
-  3 passed rc=0; actual rebuilt oracle, +1 boundary/refusal/alias/rollback and original reserved ID retry.
-- [x] NO REGRESSION: old Notch4/source resource33/core sewing4/cursor1 and strict core-lib/affected-test
-  Clippy/both package fmt pass rc=0; original target/exhaustion/anchor causes intact. Full proof deferred.
+- [x] ROOT CAUSE: python3 -I -B native revision projection:validated candidate < actual max-issued
+  admission < counter/sequence successors < final model; public successor/authority/history byte-exact rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_revision:::
+  3 passed rc=0; actual counter-model oracle and max3/undo0→4 quota; exact exhausted-counter replays.
+- [x] NO REGRESSION: forecast1/count-boundary1/source33/structure5/context2/D2851/copy1 and strict
+  core-lib/affected-test Clippy/both package fmt pass rc=0. Retained/coupled/deeper/full proof deferred.
 
 ## Goal
 
@@ -905,7 +905,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0460 authorized current/preparation/history-alternative admission; [whole scope/proofs](../history/stitchcad-devnotes-part613.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: prospective metadata replacement/AddNotch/revision admission before growing copies/current
   constructors, with exact represented demand and first locations; no conservative double counting.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.1`
@@ -916,43 +916,41 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0462 exact selected Material resources; [whole scope/proofs](../history/stitchcad-devnotes-part615.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.3`
   Status: `done`
-  Goal:0463 exact prospective Notch resources before staged cursor consumption/registry/model copy;
-  readonly actual ID peek and fixed semantic validation preserve original target/exhaustion/anchor order.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native Notch projection:target < real ID peek < fixed
-    Notch validation < full admission < staged consumption < model/registry copy rc=0. Original code
-    selected actual reserved ID before anchor checking; quota must not replace those original causes.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part615.md:
-    3 exact Git spans rc=0; whole0462 selected Material scope/lesson/ledger retained before containment.
-    Native full-vector precharge/nonzero enum-size guard and unchanged authority/other handlers/group/
-    effect/history code rc=0. Static diagnostic corrected to match actual formatted cursor call.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and cargo clippy -p sc-measure --test
-    design_inputs_contract -- -D warnings:both rc=0. Peek only concrete standard borrowed iterator;
-    never clone provider/backing or consume original IDs. Borrow actual fixed Notch, precharge resulting
-    registry once, then use shared exhaustive/Copy guards. No fake ID, supplied totals or public projection.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_notch:::
-    3 passed rc=0; actual rebuilt/validated root oracle verifies +1 entries/no text/bits and exact
-    single/group/commit refusal before host copy. Current bound, exact one-entry boundary, repeated
-    preview/alias and later group overflow preserve model/revision/reserve/group/key/capacity.
-    Free Known2 evidence then append1 returns original first reserved ID; two staged distinct marks
-    over one-entry room roll back and later commit still uses first ID. Missing target, exhausted
-    reserve and wrong-Piece anchor retain original typed causes before prospective walk/copy.
-  - [x] NO REGRESSION: old Notch subset4/source resource33/core sewing4/cursor1 pass rc=0; strict
-    affected lint/both package fmt rc=0. Cursor covers repeated peeks/no advancement, independent/
-    original positions, last ID/exhaustion and checked prefix arithmetic. Existing authority/other
-    handlers/effects/history stay byte-exact. Broader checks stay with feature/deeper/full owners.
-  - [x] LOCKSTEP: book build/native publication83 chapters/159 scoped API rows/1508 source links/
-    2535 rendered links rc=0; exact append/real ID/cause precedence examples and remaining scope align.
-    Notch .4.2.3 done; publication revision .2.4/retained .4.3/feature/deeper/full work remain owned.
-    Owned doc correction: stale done source-parent profile wording removed; the existing child already
-    records standalone profile intents/G4 admission separately. rg reproduces the prior contradiction.
-  Retention1069 logical/36 working Markdown/59731 decoded lines/4514273 decoded bytes/2345085
-  resident bytes rc=0; maintained-reference84 files/19046 lines/1331612 bytes rc=0; map/diff rc=0.
-  Cargo uses scripts/local_environment.py; promotion:indexed command-layer decision.
-  No complete prospective/retained-state, ingress, allocator memory/time, physical or release certificate.
+  Goal:0463 exact actual Notch append/resources/peek; [whole scope/proofs](../history/stitchcad-devnotes-part616.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.4`
-  Status: `pending`
-  Goal: exact prospective publication revision magnitude before successor/revision-model construction;
-  use independent maximum-issued revision, preserve replay/branch monotonicity and original first error.
+  Status: `done`
+  Goal:0464 exact prospective publication revision from independent maximum issued, before successor/
+  final revision-model construction; preserve original member/current/authority/effect/replay contracts.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native revision projection:validated metadata candidate <
+    actual max-issued admission < counter/sequence successors < final model construction rc=0.
+    Restored model/request revision cannot forecast new issuance; original public successor unchanged.
+  - [x] ROOT CAUSE (WHY + WHERE): normal offline cargo doc -p num-bigint@0.4.6 --no-deps --locked
+    --offline:0.4.6 public API generated rc=0; HTML bits/trailing_ones signatures both readonly→u64.
+    Pinned web fetch unavailable; local public docs suffice, no dependency implementation/pin changes.
+    transition_receipts.py records616/617:3+1 exact Git spans rc=0. Whole0463/0388–0389 lessons
+    retained; measured DEV401-line overflow resolved by whole closed-lesson retirement, no raised cap.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and cargo clippy -p sc-measure --test
+    design_inputs_contract -- -D warnings:both rc=0. Borrow actual max counter; forecast next bits
+    without clone/format/advance and visit actual candidate fields once, no old+new revision sum.
+    Checked count overflow uses exact chunks and original first-refusal latch, never wrap/clip/cap.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_revision:::
+    3 passed rc=0. Actual rebuilt/validated model oracle covers0/1/2/3/u128MAX; exact bits admit,
+    carrying beyond policy preserves original location/error after metadata copy1/no final revision copy.
+    Repeated/changed metadata at refused group/key preserves original model address/revision/capacity.
+    Issued1/2/3 then undo0 still forecasts4/3bits at cap2; exact authoring/history replay0/0/0 remains.
+    Private forecast case1 compares actual arbitrary-precision successor through4096-bit values;
+    primitive count-boundary case1 refuses mathematical2^64 bit units without constructing huge model.
+  - [x] NO REGRESSION: source resource33/structural root5/public context2/D285 branch1/actual-copy1
+    pass rc=0; strict affected lint/both package fmt rc=0. Native authority/group/history/other metadata
+    handlers and public successor byte-exact. Original actor, monotone issuance, snapshots and copy
+    counts remain; no extra host copy is introduced. Broader checks remain with their separate owners.
+  - [x] LOCKSTEP: book build/native publication83 chapters/159 scoped API rows/1510 source links/
+    2538 rendered links rc=0; per-model implementation complete with focused checks under source trust.
+    Retained .4.3/coupled .4.4/deeper/full verification remain pending; live pointer/frontier align.
+  Retention1071 logical/38 working Markdown/59812 decoded lines/4521381 decoded bytes/2352193
+  resident bytes rc=0; maintained-reference84 files/19102 lines/1336040 bytes rc=0; map/diff rc=0.
+  Cargo uses scripts/local_environment.py; promotion:indexed command-layer decision.
+  No total retained-state, ingress, allocator memory/time, host algorithm, physical or release certificate.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3`
   Status: `pending`
   Goal: bound actual retained audit/replay/history content and unbounded maximum-issued/audit counters

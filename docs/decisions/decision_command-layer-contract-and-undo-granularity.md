@@ -92,8 +92,8 @@ G1-SLICE.6.8.2.2.2.2.1 defines positive collection-entry/UTF-8-text/unbounded-co
 constant-state first-refusal meter in the Design domain. Precheck remaining room before arithmetic;
 retain exact first counts/location across ignored/later/zero charges and finish. Give producers only a
 sealed charging trait object, with no concrete-policy setter/reset/finish/model operation. Contract6/
-privacy4/lint/fmt pass. Actual core/source producers are implemented; current and partial prospective runtime admission
-are implemented under .4, with remaining prospective/retained work owned;
+privacy4/lint/fmt pass. Actual core/source producers are implemented; current/prospective model admission is
+implemented with focused checks under .4, with retained/coupled/deeper/full work owned;
 this contract proves no model traversal, allocator RSS/time or dishonest-host security boundary.
 
 Whole0444–0449 component implementation journals retain exact source intervals in
@@ -146,3 +146,18 @@ fmt pass against actual rebuilt model: +1 entries/unchanged text/bits; no-copy r
 boundary/aliases/later rollback and freed-evidence retry retains original ID/key/group/capacity.
 Whole0462 retained615. Publication revision .4.2.4/retained/deeper/full work remains owned; no complete
 retained-state, ingress, allocator memory/time, physical or release certificate.
+
+## Exact maximum-issued publication resources0464
+
+answers: "does undo lower the resource forecast for the next issued revision?"
+
+After actual group metadata validation, project the complete candidate with the private maximum-issued
+revision's successor magnitude, before successor/revision-model construction. Pinned public bits/
+trailing_ones APIs forecast width readonly; no clone/format/counter advance. Original public successor
+semantics persist. Checked magnitude-count overflow uses exact chunks/no wrap, clipping or counter cap.
+Runtime revision3/forecast1/count-boundary1/source33/structure5/context2/D2851/copy1/strict lint/fmt pass:
+actual rebuilt model oracle covers0/sparse/carry/u128MAX; carry refusal leaves bounded metadata copy1,
+no final revision reconstruction, original revision/key/capacity. Max3/undo0 still forecasts4/3bits under
+cap2; exact authoring/history replays0/0/0. Offline num-bigint0.4.6 public docs verified after web fetch
+failed. Whole0463 and whole0388/0389 lesson616/617 retain4 Git spans, freeing DEV from401-line overflow.
+All model projections implemented with focused checks; retained .4.3/coupled/deeper/full proof remains.

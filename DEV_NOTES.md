@@ -3,12 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact prospective Notch resources before cursor consumption
+## _(2026-10-28 UTC)_ — exact publication revision resources before successor construction
 
-0463 .6.8.2.2.2.2.4.2.3 peeks the actual immutable reserve, validates only fixed Notch payload, then admits the exact whole prospective root before cursor consumption/registry/model copy. Original
-target→exhaustion→anchor precedence persists; no fake ID or summed old/new registry. Native Notch projection3/old Notch4/source33/sewing4/cursor1/strict lint/fmt pass against actual rebuilt model: +1
-entries, unchanged text/bits, exact refusal/one-entry boundary/aliases/later rollback, freed evidence retry returns original reserved ID. Shared fixed-field guards and nonzero enum-size proof protect
-count shape. Promotion:indexed command-layer decision. Whole0462 retained615; revision .4.2.4/retained/deeper/full proof pending.
+0464 .6.8.2.2.2.2.4.2.4 derives successor magnitude from pinned public bits/trailing_ones, before successor/revision-model construction and from actual independent max-issued counter. Exact current candidate fields retain
+their own counts; no old+new revision sum. Runtime revision3/forecast1/count-boundary1/source33/structure5/context2/D2851/copy1/strict lint/fmt pass. Actual model oracle: zero/sparse/carry/u128MAX, exact failure/no final
+revision copy, max3/undo0 still forecasts4/3bits under cap2; exact replays0/0/0. Count beyond u64 policy uses exact chunks/no overflow/counter cap. Normal offline num-bigint0.4.6 docs verified API after web fetch failed.
+Promotion:indexed command-layer decision. Whole0463 retained616; retained/deeper/full proof pending.
+[Whole0463 Notch lesson](docs/history/stitchcad-devnotes-part616.md) retains exact peek/precedence/rollback proof.
 [Whole0462 Material lesson](docs/history/stitchcad-devnotes-part615.md) retains exact Unicode/selected/oracle proof.
 [Whole0461 Measurement lesson](docs/history/stitchcad-devnotes-part614.md) retains exact evidence/oracle/fixture correction proof.
 [Whole0460 current-admission lesson](docs/history/stitchcad-devnotes-part613.md) retains original authority/telemetry/privacy proof.
@@ -77,16 +78,7 @@ count shape. Promotion:indexed command-layer decision. Whole0462 retained615; re
 
 [Whole0390 policy-boundary lesson](docs/history/stitchcad-devnotes-part571.md) retains original measured capacity and authority boundary.
 
-## _(2026-10-27 UTC)_ — actual layer offset-operation intent
-
-0388 borrows original typed layers/offset relationships and the single current canonical owner.
-Whole-root validation precedes even empty layers; authored family/source order and direction survive.
-Numeric input/parameter ids remain operation intent. Modelled Lining is inspectable; its original scope
-check still refuses env_lining/G7. Current sources, assignments, operation execution and physical proof
-remain separate. Native4/lifetime1/strict affected lint/fmt/book/publication79/159 pass0; D250132 exact.
-Whole D262/0387 proof539 has5 exact Git spans0. Promotion declined: settled metadata/source/scope rules.
-Aggregate3997359/4000000B leaves2641; capacity decision owned.0389 closes .e:17 focused checks pass0;
-full Design/global/physical/runtime/integration proof remains open. No new retention record needed.
+[Whole0388/0389 layer/Hem lesson](docs/history/stitchcad-devnotes-part617.md) retains original scope, checks and containment facts.
 
 [Complete bounded append lesson](docs/history/stitchcad-devnotes-part539.md) retains its original source, transaction proof and retention limits.
 

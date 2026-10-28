@@ -78,6 +78,8 @@ mod resource_material;
 mod resource_measurement;
 #[path = "command_bus/resource_notch.rs"]
 mod resource_notch;
+#[path = "command_bus/resource_revision.rs"]
+mod resource_revision;
 impl CommandAuthoritySource for Host {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_> {
         self.reads.set(self.reads.get() + 1);
