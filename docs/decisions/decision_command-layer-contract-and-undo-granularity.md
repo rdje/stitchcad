@@ -132,3 +132,17 @@ old Material5/Measurement projection3/source33/Piece5/strict lint/fmt pass:4+3�
 refuses before host copy; no-op/same-size/shrink/assigned removes7, missing index1, sequential restore/
 alias and failed group/key/capacity preservation. Python/OS confirms exact UTF-8 lengths4/3/6.
 Whole0461/0456–0460 journals614 retain4 Git spans. Notch/revision/retained/deeper/full work remains owned.
+
+## Exact actual Notch-append resources0463
+
+answers: "can prospective Notch admission preserve original identity/anchor failures without consuming the cursor?"
+
+Readonly-peek the actual concrete borrowed iterator, build/validate only fixed Notch payload, then
+admit the exact resulting root before staged consumption or registry/model copy. Target→exhaustion→
+anchor precedence persists; no fake ID or external allocator is used. Charge the whole new registry
+before members, including the actual appended fixed Notch; exhaustive/Copy guards and nonzero enum
+size protect the shape/count. Native Notch projection3/old Notch4/source33/sewing4/cursor1/strict lint/
+fmt pass against actual rebuilt model: +1 entries/unchanged text/bits; no-copy refusal, one-entry
+boundary/aliases/later rollback and freed-evidence retry retains original ID/key/group/capacity.
+Whole0462 retained615. Publication revision .4.2.4/retained/deeper/full work remains owned; no complete
+retained-state, ingress, allocator memory/time, physical or release certificate.

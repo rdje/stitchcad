@@ -2,22 +2,22 @@
 
 Read CLAUDE.md/README.md and doctrine; derive HEAD with git log --oneline -1.
 
-- Next G1-SLICE.6.8.2.2.2.2.4.2.3: exact prospective appended Notch resources before registry/
-  model allocation and tentative ID work, preserving target/anchor/allocator errors. Then revision
-  .2.4 using independent max-issued revision; retained .4.3/feature .4.4/deeper/full work deferred.
-  Initial exact authority/snapshot binding precedes private model walks and quota witnesses.
-- 0462 .4.2.2 borrows selected IDs/Material assignment after all actual targets exist and before
-  Piece/reason/model copy. Exhaustive private ResourceProjection enum shares original schema walk;
-  resulting reasons only, unselected original fields, fixed Assigned refs. Actual rebuilt-model
-  oracle: old4+3→6+6 adds5 bytes/refuses0 host copies; same4/no-op/shrink/Assigned removes7, missing
-  index1 before projection, staged restore/alias, keys/capacity and original contents/revision intact.
-  New Material4/old Material5/Measurement projection3/source33/core Piece5/strict lint/fmt pass.
-  Whole0461/0456–0460 journals614 retain4 Git spans; Python/OS byte oracle4/3/6; semantic-only book
-  preview host bound corrected. Authority/Measurement/group/effects/history/canonical code byte-exact.
-- Measurement .4.2.1 exact borrowed canonical replacement, Known2→3 adds1; same/no-op at N,
-  Unknown N-2; before clone/current constructors. Model limits explicit immutable/noDefault alongside
-  input policy. Costly H:DesignResourceSource. Current/staged/history-alternative admission implemented;
-  current check alone does NOT certify every new model/retained state fits. Bus50/privacy10 prior proof.
+- Next G1-SLICE.6.8.2.2.2.2.4.2.4: prospective publication revision bits BEFORE successor/model
+  construction, using independent maximum-issued revision (undo must not rewind it). Inspect current
+  BigUint contract and execution paths; exact counter/location and no wrap/saturation/fake limit.
+  Then retained .4.3/feature .4.4/deeper/full proof. Initial exact authority/binding precedes private walks.
+- 0463 .4.2.3 readonly-peeks actual reserved ID, validates fixed Notch payload, admits exact complete
+  resulting model before staged cursor consumption/registry/model copy. Target→exhaustion→anchor
+  precedence intact; no fake ID. Shared fixed-field guards/nonzero enum proof; new registry precharges
+  length+1 once. Actual model oracle: +1 entries/no text/bits; no-copy refusals, exact one-entry room,
+  aliases/later group rollback; freeing Known2 evidence then append1 returns original reserved ID.
+  Notch projection3/old Notch4/source33/sewing4/cursor1/strict core-lib/affected-test lint/fmt pass.
+  Whole0462 scope/lesson/ledger615 has3 Git spans; authority/other handlers/group/effect/history unchanged.
+- Prior exact Measurement/Material projections borrow actual resulting fields before clones: no old+
+  new double counting, preserve unchanged fields/original witnesses and current semantic failures.
+  ResourceProjection is private, actual source/cached census counted once. Model limits immutable,
+  explicit positive/noDefault alongside input policy; costly H:DesignResourceSource. Current/staged/
+  history-alternative gates implemented; complete new revision/retained content still pending.
 - Model80/650/129; cached census26 + actualH39/628/0; empty full draft0/8/0. Book:
   docs/book/src/spec/command-operation-control.md and adjacent resource chapters. Honest source trust;
   no dishonest-host/RSS/time or physical certificate. G1still6/18; other feature tasks owned.

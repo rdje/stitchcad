@@ -10,7 +10,7 @@ use sc_core::{
 };
 use std::error::Error as StdError;
 
-fn bindings() -> NotchProfileBindings {
+pub(super) fn bindings() -> NotchProfileBindings {
     let reference = |identity| ProfileParameterRef::new(id(identity));
     NotchProfileBindings {
         style: reference(710001),

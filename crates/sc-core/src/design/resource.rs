@@ -21,6 +21,7 @@ pub use composition::{
 };
 pub(crate) use composition::{
     charge_garment_length_replacement, charge_garment_material_assignment,
+    charge_garment_notch_append,
 };
 pub use constructions::charge_construction_inventory_resources;
 pub use garment::{
@@ -43,6 +44,7 @@ pub use topology::charge_topology_resources;
 pub(super) enum ResourceProjection<'a> {
     Current,
     Length(&'a crate::value::LengthDeclaration),
+    AppendedNotch(&'a crate::ontology::Notch),
     Material {
         pieces: &'a [EntityId],
         assignment: &'a crate::ontology::MaterialAssignment,

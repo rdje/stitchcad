@@ -102,6 +102,16 @@ pub(super) struct IdentityStage<'a> {
     initial_len: usize,
 }
 impl IdentityStage<'_> {
+    // Clone only the concrete standard borrowed iterator, never an external ID provider or backing.
+    // Repeated peeks leave this cursor and the original reserve unchanged.
+    pub(super) fn peek_next_id(&self) -> Result<EntityId, IdError> {
+        self.remaining
+            .clone()
+            .next()
+            .copied()
+            .ok_or(IdError::Exhausted)
+    }
+
     // Only this concrete iterator advances the cursor, so remaining.len() cannot exceed initial_len.
     pub(super) fn consumed(&self) -> usize {
         self.initial_len - self.remaining.len()
@@ -127,9 +137,16 @@ mod tests {
         let mut first = reserve.stage();
         let mut independent = reserve.stage();
         assert_eq!(first.consumed(), 0);
+        assert_eq!(first.peek_next_id(), Ok(EntityId::from_bits(7)));
+        assert_eq!(first.peek_next_id(), Ok(EntityId::from_bits(7)));
+        assert_eq!(first.consumed(), 0);
         assert_eq!(first.next_id(), Ok(EntityId::from_bits(7)));
         assert_eq!(first.consumed(), 1);
+        assert_eq!(first.peek_next_id(), Ok(last));
+        assert_eq!(first.consumed(), 1);
         assert_eq!(first.next_id(), Ok(last));
+        assert_eq!(first.consumed(), 2);
+        assert_eq!(first.peek_next_id(), Err(IdError::Exhausted));
         assert_eq!(first.consumed(), 2);
         assert_eq!(first.next_id(), Err(IdError::Exhausted));
         assert_eq!(first.next_id(), Err(IdError::Exhausted));

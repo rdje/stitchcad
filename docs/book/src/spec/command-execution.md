@@ -164,8 +164,10 @@ assert_eq!(report.revision(), &exact_revision);
 
 Fresh inspect authorization, actual Design/revision, envelope and complete current-source checks
 precede target lookup and staged allocation. A missing owning Piece refuses before exhaustion.
-Notch::new validates the actual current edge and anchor ownership against that Piece and its ledger;
-its original typed cause survives. The candidate appends the actual Notch after existing semantic
+A readonly peek supplies the actual next reserved ID; Notch::new validates edge/anchor ownership.
+Its original typed cause survives. [Prospective Notch admission](command-operation-control.md#exact-prospective-notch-resources)
+then charges the resulting registry before staged cursor consumption or model copy. The candidate
+appends the actual Notch after existing semantic
 landmarks, rebuilds the sewing/garment owners and validates the complete current candidate.
 
 CommandPreview::Notch contains only the actual Design/base revision and proposed immutable Notch,

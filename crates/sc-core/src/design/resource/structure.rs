@@ -43,6 +43,7 @@ pub(super) fn charge_structure_projected(
     let (length, material) = match projection {
         ResourceProjection::Current => (None, None),
         ResourceProjection::Length(replacement) => (Some(replacement), None),
+        ResourceProjection::AppendedNotch(_) => (None, None),
         ResourceProjection::Material { pieces, assignment } => (None, Some((pieces, assignment))),
     };
     super::canonical::charge_canonical_with_length(inputs, length, sink)?;

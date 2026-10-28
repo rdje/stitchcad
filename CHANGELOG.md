@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0462 — admit exact selected Material text before Piece copies
+## STITCHCAD-G1-0463 — admit actual Notch append before cursor consumption and model copy
 
-- Borrow selected Piece IDs/proposed assignment after all actual targets exist; charge resulting reasons before any Piece/reason/model clone.
-- Share an exhaustive private projection enum; preserve original unselected fields/owner/index and fixed assigned references.
-- Material projection4/old Material5/Measurement projection3/source33/core Piece5/strict lint/fmt pass; actual rebuilt-model UTF-8 oracle.
-- Preserve no-op/shrink/assigned/alias/missing-target/key semantics; whole0461/0456–0460 journals614 retained; Notch/revision/retained pending.
+- Readonly-peek the actual reserved ID; preserve target/exhaustion/anchor order, then admit exact prospective registry before consumption/copy.
+- Charge complete new registry once with actual fixed Notch payload, original schema order/location and no fabricated identity or supplied totals.
+- Notch projection3/old Notch4/source33/sewing4/cursor1/strict lint/fmt pass; actual model oracle, exact boundary/aliases/later rollback.
+- Freed-evidence retry preserves original ID/group/key/capacity; whole0462 retained615; revision/retained/deeper/full work pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

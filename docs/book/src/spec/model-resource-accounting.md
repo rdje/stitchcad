@@ -409,6 +409,8 @@ This completes implemented model accounting under the source port's honest/exhau
 contract. [Installed current-model admission](command-operation-control.md#installed-current-model-admission)
 now follows exact authority/snapshot binding. [Exact prospective Measurement accounting](command-operation-control.md#exact-prospective-measurement-resources)
 borrows a replacement in its actual slot before candidate copies. [Selected Material accounting](command-operation-control.md#exact-prospective-selected-material-resources)
-borrows resulting Piece reasons before copies; Notch/revision and retained command state remain G1-SLICE.6.8.2.2.2.2.4 work. Retained command journals/history, ingress, allocation peaks and host algorithm
+borrows resulting Piece reasons before copies. [Notch append accounting](command-operation-control.md#exact-prospective-notch-resources)
+charges the actual new registry before cursor consumption/copy; publication revision and retained
+command state remain G1-SLICE.6.8.2.2.2.2.4 work. Retained command journals/history, ingress, allocation peaks and host algorithm
 time require their own bounds; logical demand supplies no dishonest-host security, readiness,
 physical or release certificate. Deeper/full verification remains deferred until feature completion.

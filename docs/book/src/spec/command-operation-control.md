@@ -199,7 +199,8 @@ DesignResourceLimits and DesignResourceMeter live in the Design domain, independ
 authority. They provide a data-only accounting contract with implemented component producers below.
 Complete actual model roots compose their source content and retained census under one sink.
 Current/preparation and history-alternative admission now uses the required readonly source port;
-exact Measurement/Material projections are implemented; Notch/revision and retained command-state admission remain pending. The meter alone is not a runtime model-admission gate.
+exact Measurement/Material/Notch projections are implemented; publication revision and retained
+command-state admission remain pending. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -317,8 +318,8 @@ examples also pass. The new test's missing explicit borrowed-error lifetime and 
 were corrected before acceptance. No semantic validation callback is replaced by accounting.
 
 This implements current/preparation-root and stored history-alternative admission. Exact prospective
-Measurement evidence and selected Material reason admission are implemented below; Notch/revision
-growth remains .4.2.3/.4.2.4; retained
+Measurement, selected Material and Notch admission are implemented below; publication revision
+growth remains .4.2.4; retained
 command audit/replay/history content and maximum-issued/audit counters remain .4.3. This partial
 runtime stage does not certify every newly published model or total retained state fits the policy.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
@@ -359,7 +360,7 @@ evidence accounting while preserving that production validator. An assumed test 
 was replaced with the actual difference getters. The new3 and original4 Measurement cases,33 source
 resource cases and6 cases selected by the canonical filter pass, with strict affected lint/formatting.
 Authorization/group/effect/history implementations are byte-exact in this slice. Selected Material
-projection follows below; Notch appends, publication revision growth and retained content remain owned;
+and Notch projections follow below; publication revision growth and retained content remain owned;
 this feature stage supplies no complete new-model/retained-state, raw ingress, allocator memory/time,
 physical or release certificate. Deeper/full verification remains deferred until feature completion.
 
@@ -396,6 +397,46 @@ resource walks. Python and OS byte counts independently confirm the exact4/3/6-b
 
 The new4, original5 Material and3 Measurement-projection cases,33 source resource cases and5 Piece
 cases pass, with strict affected lint/formatting. The execution guide's earlier semantic-only preview
-host bound is corrected to the required DesignResourceSource contract. Notch appends, publication
-revision growth, retained command state and deeper/full verification remain owned. These projections
+host bound is corrected to the required DesignResourceSource contract. Notch projection follows
+below; publication revision, retained command state and deeper/full verification remain owned. These projections
 supply no complete retained-state, raw ingress, allocator memory/time, physical or release certificate.
+
+## Exact prospective Notch resources
+
+AddNotch retains current-model admission, original envelope/current validation and actual target
+lookup. It uses a readonly peek at the next actual reserved identity: no clock, external allocator,
+newly invented identity or reserve copy is involved. Exhaustion still precedes anchor validation.
+Notch::new validates the fixed semantic payload against the actual Piece/ledger. Only then does
+the runtime charge the complete prospective model, before consuming the staged cursor or copying/
+growing the landmark registry or model. A missing target, exhausted reserve or invalid anchor keeps
+its original typed cause before a prospective quota refusal.
+
+The projection borrows that actual fixed Notch. It precharges the whole resulting sewing.landmarks
+length, original length plus one, before traversing any members. Existing entries remain an unchanged
+prefix; the appended mark's identity, Piece reference, anchor and symbolic profile bindings own no
+additional vector/text/counter fields. Shared exhaustive private Notch views and Copy guards cover
+all fixed fields in both current and projected walks. A compile-time nonzero-size check and valid
+slice size bound ensure the one-entry length addition fits usize. Other model fields still charge
+once in the original schema order, under the caller's same cumulative meter and installed policy.
+
+After admission, the concrete standard iterator advances once and returns the same peeked identity:
+no intervening code receives that cursor or access to the private immutable backing. Then the
+original actual candidate constructors/current validation run. Public preview discards its private
+cursor/model; exact within-group aliases reuse the first report without another append or advance.
+Symbolic physical bindings still defer to G4; accounting infers no style, dimensions or geometry.
+
+An actual rebuilt-model oracle confirms one append adds1 collection entry and no text/counter bits.
+With the maximum equal to current demand, single/group preview and commit preserve the exact oracle
+refusal with0 candidate host copies. A retry that first replaces a real Known2-evidence declaration
+with explicit Unknown frees2 entries, then appends1 and returns the original first reserved identity.
+The refused group/key/capacity and original Piece address/revision remain available/unchanged.
+
+With one extra entry of room, repeated previews and an exact alias fit and return the same first ID,
+with1 host copy/2 source resource walks. Two distinct appends exceed that bound at the second staged
+member; the complete group rolls back, and later single-member commit still uses the original first
+ID/capacity. Actual target/exhaustion/wrong-Piece anchor tests verify original cause precedence and
+no prospective walk/copy before those failures. Three new and four existing Notch cases,33 source
+resource cases,4 sewing cases and the expanded cursor case pass, with strict affected lint/formatting.
+The cursor case covers repeated peeks, current/independent/original positions, terminal identity and
+exhaustion. Publication revision growth, retained command state and deeper/full verification remain
+owned; this stage supplies no complete retained-state, ingress, allocator memory/time or release proof.

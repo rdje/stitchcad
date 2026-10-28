@@ -4,7 +4,7 @@ use super::{
 };
 use crate::{
     command::{AddNotch, DesignRevision},
-    design::{DesignGarment, DesignReferenceHost, DesignSewing},
+    design::{DesignGarment, DesignResourceSource, DesignSewing},
     ontology::{EntityId, IdGenerator, Notch, SewingLandmark},
 };
 
@@ -33,7 +33,7 @@ impl CommandNotchPreview {
         &self.notch
     }
 }
-impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
+impl<H: DesignResourceSource + Clone + PartialEq> PreparationBase<'_, H> {
     pub(super) fn prepare_notch(
         &self,
         addition: AddNotch,
@@ -50,7 +50,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
                 index: 0,
             })?;
         let identity = identities
-            .next_id()
+            .peek_next_id()
             .map_err(CommandPreviewError::Identity)?;
         let notch = Notch::new(
             addition.definition_with_id(identity),
@@ -58,6 +58,12 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
             structure.topology(),
         )
         .map_err(CommandPreviewError::Notch)?;
+        super::operation::admit_notch_append(self.state, self.limits, &notch)?;
+        // No code between peek and consumption receives this cursor or access to its private
+        // immutable backing. The concrete iterator therefore yields the same exact identity.
+        identities
+            .next_id()
+            .map_err(CommandPreviewError::Identity)?;
         let mut garment = self.state.definition().clone();
         let mut sewing = garment.sewing.into_definition();
         sewing.landmarks.push(SewingLandmark::Notch(notch));

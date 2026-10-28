@@ -4,10 +4,9 @@ use super::{
     charge_hem_inventory_resources, charge_layer_inventory_resources,
     charge_material_inventory_resources, charge_notion_placement_inventory_resources,
     charge_parameter_resources, charge_pocket_inventory_resources,
-    charge_recipe_document_resources, charge_sewing_graph_resources,
-    charge_sewing_landmark_resources, fixed_slice, fixed_value, DesignResourceLimitError,
-    DesignResourceLocation, DesignResourceScope, DesignResourceSink, DesignResourceSource,
-    ResourceProjection,
+    charge_recipe_document_resources, charge_sewing_graph_resources, fixed_slice, fixed_value,
+    DesignResourceLimitError, DesignResourceLocation, DesignResourceScope, DesignResourceSink,
+    DesignResourceSource, ResourceProjection,
 };
 use crate::design::{
     DesignGarment, DesignGarmentDefinition, DesignInputs, DesignInputsDefinition, DesignSewing,
@@ -81,7 +80,12 @@ fn charge_sewing_projected<H: DesignResourceSource>(
     } = sewing.resource_definition();
     charge_inputs_projected(inputs, projection, sink)?;
     charge_sewing_graph_resources(graph, sink)?;
-    charge_sewing_landmark_resources(landmarks, sink)
+    let appended = if let ResourceProjection::AppendedNotch(notch) = projection {
+        Some(notch)
+    } else {
+        None
+    };
+    super::sewing::charge_landmarks_appended(landmarks, appended, sink)
 }
 /// Charge every actual implemented garment root field in schema order, without resetting the sink.
 /// Shared logical references are fixed; owned snapshots and vectors count at their actual owners.
@@ -140,4 +144,14 @@ pub(crate) fn charge_garment_material_assignment<H: DesignResourceSource>(
         ResourceProjection::Material { pieces, assignment },
         sink,
     )
+}
+
+// The command has peeked an actual reserved ID and validated this fixed semantic payload. No
+// staged ID has been consumed and no model/registry vector has been copied or grown yet.
+pub(crate) fn charge_garment_notch_append<H: DesignResourceSource>(
+    garment: &DesignGarment<H>,
+    notch: &crate::ontology::Notch,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    charge_garment_projected(garment, ResourceProjection::AppendedNotch(notch), sink)
 }

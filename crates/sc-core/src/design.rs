@@ -97,7 +97,10 @@ pub use resource::{
     DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits, DesignResourceLocation,
     DesignResourceMeter, DesignResourceScope, DesignResourceSink, DesignResourceSource,
 };
-pub(crate) use resource::{charge_garment_length_replacement, charge_garment_material_assignment};
+pub(crate) use resource::{
+    charge_garment_length_replacement, charge_garment_material_assignment,
+    charge_garment_notch_append,
+};
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use sewing_state::{
     DesignSewing, DesignSewingDefinition, DesignSewingError, DesignSewingPosition,

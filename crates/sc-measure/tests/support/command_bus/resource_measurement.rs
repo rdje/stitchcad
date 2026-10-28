@@ -53,7 +53,7 @@ fn rebuilt(
         .expect("independent actual current-model oracle");
     actual
 }
-fn fixture() -> DesignGarment<CountedSources> {
+pub(super) fn fixture() -> DesignGarment<CountedSources> {
     let (original, _) = owner(Rc::new(Cell::new(0)));
     rebuilt(&original, replacement(&original, known(&[804100, 804101])))
 }

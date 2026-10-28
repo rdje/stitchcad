@@ -81,23 +81,37 @@ pub fn charge_sewing_landmark_resources(
     landmarks: &[SewingLandmark],
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    sink.charge_entries(landmarks.len(), location("sewing.landmarks", None, None))?;
+    charge_landmarks_appended(landmarks, None, sink)
+}
+// A valid slice of this nonzero-sized enum fits isize::MAX bytes, so len + one fits usize.
+const _: () = assert!(core::mem::size_of::<SewingLandmark>() > 0);
+pub(super) fn charge_landmarks_appended(
+    landmarks: &[SewingLandmark],
+    appended: Option<&crate::ontology::Notch>,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    let length = landmarks.len() + usize::from(appended.is_some());
+    sink.charge_entries(length, location("sewing.landmarks", None, None))?;
     for landmark in landmarks {
         match landmark {
-            SewingLandmark::Notch(notch) => {
-                let (piece, definition) = notch.resource_parts();
-                fixed_value(&piece);
-                let NotchDefinition {
-                    id,
-                    anchor,
-                    representation,
-                } = definition;
-                fixed_value(id);
-                fixed_value(anchor);
-                fixed_value(representation);
-            }
+            SewingLandmark::Notch(notch) => charge_notch(notch),
             SewingLandmark::Turn(turn) => fixed_value(&turn.resource_fields()),
         }
     }
+    if let Some(notch) = appended {
+        charge_notch(notch);
+    }
     Ok(())
+}
+fn charge_notch(notch: &crate::ontology::Notch) {
+    let (piece, definition) = notch.resource_parts();
+    fixed_value(&piece);
+    let NotchDefinition {
+        id,
+        anchor,
+        representation,
+    } = definition;
+    fixed_value(id);
+    fixed_value(anchor);
+    fixed_value(representation);
 }
