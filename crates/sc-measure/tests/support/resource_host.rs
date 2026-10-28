@@ -8,7 +8,7 @@ use sc_measure::{
     DesignSources, DesignSourcesDefinition, MeasurementInputs, MeasurementInputsDefinition,
     MeasurementInventory, MeasurementInventoryDefinition, SizeSet, SizeSetInventory,
 };
-fn fixture() -> (DesignSources, CanonicalInputs) {
+pub(super) fn fixture() -> (DesignSources, CanonicalInputs) {
     let (canonical, measurements, mtm, garment) = super::owned_size_sets::inventory_fixture();
     let size_sets = SizeSetInventory::new(
         vec![SizeSet::Mtm(mtm), SizeSet::Garment(garment)],

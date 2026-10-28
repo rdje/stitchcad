@@ -194,8 +194,8 @@ and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 
 
 DesignResourceLimits and DesignResourceMeter live in the Design domain, independent of command
 authority. They provide a data-only accounting contract with implemented component producers below.
-Higher-root composition and runtime enforcement remain pending; actual source accounting is available
-through the required readonly DesignResourceSource port. The meter alone is not a runtime model-admission gate.
+Complete actual model roots compose their source content and retained census under one sink. Runtime
+enforcement remains pending; actual source accounting uses the required readonly DesignResourceSource port. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |

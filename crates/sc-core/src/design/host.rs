@@ -238,6 +238,13 @@ pub struct DesignMetadata<H> {
     host: H,
     entities: Vec<DesignHostEntity>,
 }
+impl<H> DesignMetadata<H> {
+    // Borrow the retained census; do not regenerate it through the semantic host callback.
+    pub(crate) fn resource_parts(&self) -> (&H, &[DesignHostEntity]) {
+        let Self { host, entities } = self;
+        (host, entities)
+    }
+}
 impl<H> fmt::Debug for DesignMetadata<H> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("DesignMetadata")

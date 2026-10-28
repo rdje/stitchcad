@@ -124,6 +124,13 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignSewingError<E> 
 pub struct DesignSewing<H> {
     definition: DesignSewingDefinition<H>,
 }
+impl<H> DesignSewing<H> {
+    // Exhaustive private ownership view: a new root field requires an accounting decision.
+    pub(crate) const fn resource_definition(&self) -> &DesignSewingDefinition<H> {
+        let Self { definition } = self;
+        definition
+    }
+}
 impl<H> fmt::Debug for DesignSewing<H> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("DesignSewing")

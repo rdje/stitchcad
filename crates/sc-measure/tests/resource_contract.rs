@@ -380,3 +380,6 @@ mod size_inventory;
 
 #[path = "support/resource_host.rs"]
 mod source_host;
+
+#[path = "support/resource_composition.rs"]
+mod composition;

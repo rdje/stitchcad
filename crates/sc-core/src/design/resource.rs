@@ -6,6 +6,7 @@ use core::{
 };
 
 mod canonical;
+mod composition;
 mod constructions;
 mod garment;
 mod inputs;
@@ -15,6 +16,9 @@ mod sewing;
 mod structure;
 mod topology;
 pub use canonical::charge_canonical_input_resources;
+pub use composition::{
+    charge_design_garment_resources, charge_design_input_resources, charge_design_sewing_resources,
+};
 pub use constructions::charge_construction_inventory_resources;
 pub use garment::{
     charge_closure_inventory_resources, charge_notion_placement_inventory_resources,
@@ -39,7 +43,7 @@ fn fixed_slice<T: Copy>(_: &[T]) {}
 pub enum DesignResourceScope {
     /// Structural/canonical/Piece/topology content.
     Structure,
-    /// Parameter/recipe/Material and supplied-reference content.
+    /// Parameter/recipe/Material, retained source census and supplied-reference content.
     Inputs,
     /// Sewing graph and semantic landmarks.
     Sewing,

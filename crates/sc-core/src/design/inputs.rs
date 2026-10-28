@@ -160,6 +160,13 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignFormulaError<'_
 pub struct DesignInputs<H> {
     definition: DesignInputsDefinition<H>,
 }
+impl<H> DesignInputs<H> {
+    // Exhaustive private ownership view: a new root field requires an accounting decision.
+    pub(crate) const fn resource_definition(&self) -> &DesignInputsDefinition<H> {
+        let Self { definition } = self;
+        definition
+    }
+}
 impl<H> fmt::Debug for DesignInputs<H> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("DesignInputs").finish_non_exhaustive()

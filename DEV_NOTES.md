@@ -3,16 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — required actual source-resource port
+## _(2026-10-28 UTC)_ — complete actual higher-root resource composition
 
-0458 .6.8.2.2.2.2.3.3 adds required readonly DesignResourceSource over the semantic host contract,
-with only sealed sink access/no default or supplied totals. Actual DesignSources exhaustively visits
-its two owned roots without clone/current/census/context callbacks; existing meter behavior unchanged.
-Source resource28 (prior24/new4), strict core-lib/source lint and fmt pass:39/628/0, prefix41/630/1,
-exact first owner/index, empty/prior and held missing-context state. Initial moved assertion fixed;
-stale626 corrected by actual field census40+110+77+54+42+66=389 plus sets239. Promotion: indexed
-command-layer decision. Whole0457/0451–0455 journals610 retain4 Git spans. Source .3 implemented;
-higher root/cache census .2.5.2, runtime .4/deeper/full proof pending, no dishonest-host/RSS/time claim.
+0459 .6.8.2.2.2.2.2.5.2 exhaustively borrows private roots/host/census with one sink/Copy guards,
+no clone/currentness/census/context callbacks. Actual source resource33 (new5),
+strict core-lib/source lint/fmt pass:80/650/129, prefix82/652/136; cache52+26/landmark78+1/notion79+1,
+source641+9 and original revision/prior refusals preserve data. Source39/628 plus retained26 identities
+are counted separately. Real deletion refuses current validation while held demand stays80/650/129;
+empty full draft0/8/0 retains canonical recipe. Incorrect expected token-field spelling corrected against
+producer. Promotion: indexed command-layer decision. Whole0458 retained611; runtime .4/deeper/full
+proof pending. Logical demand grants no authority, allocator memory/time or physical certificate.
+[Whole0458 source-port lesson](docs/history/stitchcad-devnotes-part611.md) retains original trust/census and independent byte-correction proof.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

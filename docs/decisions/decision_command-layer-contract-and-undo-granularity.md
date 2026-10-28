@@ -142,3 +142,20 @@ strict core-lib/source lint/fmt pass:39/628/0,prefix41/630/1, exact first witnes
 and empty/prior failures. Python/OS field census389+239 corrects stale626 test expectation before
 acceptance. Higher-root cached entity census/refs .2.5.2 and runtime .4/deeper/full proof remain owned;
 source demand is no semantic/currentness, dishonest-host security, whole-model or allocator memory/time proof.
+
+## Complete actual root-resource composition0459
+
+answers: "does source accounting include the core owner's separately retained metadata census?"
+
+The complete private Inputs/Sewing/Garment producers exhaustively borrow each wrapper/definition,
+charge every actual component once in schema order and retain the caller's one sink. DesignMetadata
+owns both H and a captured identity vector: charge actual H first, then the stored vector, without
+regenerating the semantic census. Copy guards cover captured records and fixed provided refs.
+Actual source resource33/strict core-lib/source-test lint/fmt pass:80/650/129, prefix82/652/136;
+cache52+26, landmark78+1, notion79+1 and original source/revision refusals preserve unchanged data.
+Real deletion refuses current validation but held accounting stays80/650/129; empty full draft0/8/0
+retains canonical recipe. Incorrect expected static token-field spelling corrected against producer.
+Whole0458 scope/lesson/ledger retained611. Runtime .4 must install explicit policy, bind initial
+exact authority/snapshot before private walks and admit prospective shapes before costly preparation.
+Deeper/full proof remains owned; model demand grants no authority/currentness, dishonest-host security,
+allocator memory/time, retained-journal, physical or release certificate.

@@ -45,7 +45,7 @@ Six actual cases pass with strict selected lint/formatting: exact demand, vector
 unchanged source/canonical data, prior prefix14/32, empty0/0/0 and original prior refusal. Replacing
 the canonical context with an empty draft makes current validation refuse; accounting held source
 metadata still succeeds unchanged without rebinding. This is the measurement/Ease component only.
-Higher-root composition and runtime admission remain owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
+Runtime admission remains owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
 
 ## Actual common SizeSet metadata
 
@@ -83,7 +83,7 @@ With no available breaks, the same actual draft retains its required dimension:2
 without manufacturing a delta. Six new cases plus prior6 pass:12 source resource cases, with strict
 selected lint/formatting after correcting the new test's missing trait import. Prior2 entries/2 bytes
 compose to23/22; first errors remain original. An empty replacement canonical context refuses current
-validation, while held accounting preserves exact metadata/canonical/measurement objects. Higher-root composition and runtime admission remain owned; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.
+validation, while held accounting preserves exact metadata/canonical/measurement objects. Runtime admission remains owned; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.
 
 ## Actual retained garment and MTM charts
 
@@ -130,7 +130,7 @@ fixture expectation of64 and it was corrected before acceptance. Snapshot vector
 Seven new cases plus prior12 pass:19 source resource cases, with strict selected lint/formatting.
 Both actual chart components share one meter at6/80, preserve original data and prior errors, and
 stay inspectable when an empty replacement canonical context makes current validation refuse.
-Higher-root composition and runtime admission remain owned; these component counts grant no currentness, physical, whole-host/model or allocator memory/time proof.
+Runtime admission remains owned; these component counts grant no currentness, physical, whole-host/model or allocator memory/time proof.
 
 ## Actual external family and inventory composition
 
@@ -175,7 +175,7 @@ The first lint caught duplicate test-fixture loading, an unused import and two d
 assertions; sharing one fixture module and using the established assertion style resolved them.
 Actual empty inventory contributes0/0/0 and preserves first errors. Missing replacement canonical
 sources make current validation refuse; held accounting preserves exact inventory/canonical/inputs.
-Higher-root composition, runtime policy and deeper/full verification remain
+Runtime policy and deeper/full verification remain
 owned; these counts grant no currentness, readiness, physical or allocator memory/time certificate.
 
 ## Complete immutable source-host port
@@ -217,6 +217,7 @@ source demand; this says nothing about separately owned kernel recipe or root fi
 Four new actual-host cases plus prior24 pass:28 source resource cases, with strict core-library and
 source-test lint/formatting. A moved test assertion was corrected to borrow preserved values. Missing
 replacement canonical sources still refuse current validation; generic port accounting preserves the
-exact held host/canonical data. Kernel higher-root composition must additionally charge its retained
-DesignMetadata entity catalog and fixed provided-reference fields. That composition, runtime policy
-and deeper/full verification remain owned; source demand is no whole-model/allocator time/memory certificate.
+exact held host/canonical data. [Complete actual root composition](model-resource-accounting.md#complete-actual-inputs-sewing-and-garment-roots)
+additionally charges the retained DesignMetadata entity catalog and guards fixed provided-reference
+fields. Runtime policy and deeper/full verification remain owned; source demand alone is no
+whole-model/allocator time/memory certificate.

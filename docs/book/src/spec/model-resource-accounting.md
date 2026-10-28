@@ -2,8 +2,9 @@
 
 These component producers borrow actual held content under the
 [logical resource contract](command-operation-control.md#logical-dynamic-content-accounting-contract).
-The structural root composes its actual components under one cumulative meter. Higher Inputs/Sewing/
-Garment roots, source-host traversal and runtime integration remain owned.
+The structural and complete Inputs/Sewing/Garment roots compose their actual fields under one
+cumulative sink, including actual source content and its retained identity census. Runtime
+integration remains owned; accounting grants no authority or currentness certificate.
 
 ## Actual canonical-input accounting
 
@@ -198,8 +199,7 @@ After a real deletion retires a held boundary source, the same graph/landmark ac
 without rebirth or resolving the now-orphaned anchors. Exact graph/landmarks/ledger and profile intent
 remain unchanged on success/refusal. Four new actual cases plus prior24 resource cases pass:28 total,
 with strict selected lint and formatting. The first compile caught a missing public re-export, which
-was corrected before these checks passed. Whole root/source composition and runtime
-model admission remain owned; these counts supply no binding, realized ease, geometry, physical,
+was corrected before these checks passed. Runtime model admission remains owned; these counts supply no binding, realized ease, geometry, physical,
 release, whole-model or allocator RSS/time certificate.
 
 ## Actual Pocket, notion and Closure accounting
@@ -238,7 +238,7 @@ also covered. Original objects remain unchanged on success and refusal.
 A real deletion makes the held notion inventory fail current validation; the same resource walk
 still succeeds without rebirth, resolution or repair and preserves the exact objects and ledger.
 Four new cases plus prior28 resource cases pass:32 total, with strict selected lint/formatting.
-Whole root/source and runtime admission remain owned. Logical
+Runtime admission remains owned. Logical
 counts supply no current target binding, opening/closure execution, selected profile value, physical
 readiness, whole-model or allocator memory/time certificate.
 
@@ -279,7 +279,7 @@ current layer validation refuse; accounting the same held layers/Hems succeeds w
 leaves objects/ledger unchanged. Empty collections and prior-error preservation also pass.
 
 Five new actual cases plus prior32 resource cases pass:37 total, with strict selected lint/formatting.
-Whole root/source and runtime admission remain owned. These counts grant no
+Runtime admission remains owned. These counts grant no
 current source/Material binding, Lining execution, generated offset/folding geometry, physical
 readiness, whole-model or allocator memory/time certificate.
 
@@ -318,7 +318,7 @@ Empty families preserve zero demand and prior errors. A real deleted constructio
 current Dart validation refuse while held accounting succeeds with exact inventory/graph/ledger
 unchanged. Five new cases plus prior37 pass:42 resource cases, strict selected lint and formatting.
 The first lint rejected the initial six-slice tuple; a named borrowed view resolved it before acceptance.
-Complete higher-root/source composition and runtime admission remain owned; no
+Runtime admission remains owned; no
 current binding, execution, geometry/physical, whole-model or allocator memory/time certificate follows.
 
 ## Actual structural root and revision bits
@@ -353,9 +353,60 @@ has0/0/0 demand, including its zero revision, and cannot clear an earlier meter 
 Five new actual cases plus prior42 pass:47 resource cases; both existing command-context cases also
 pass, with strict selected lint and formatting. Native source comparison proves the command-context
 delta is only the private readonly bit getter; public successor/display/context behavior stays intact.
-This is structural-root accounting. Complete higher roots, their stored metadata census, actual host
-content and runtime enforcement remain pending; neither the producer name nor finish supplies a
-whole-garment/source/physical, allocator memory/time or command-admission certificate.
+This is structural-root accounting; complete higher roots compose below. Runtime enforcement remains
+pending. Neither the producer name nor finish supplies a physical, allocator memory/time or
+command-admission certificate.
 
 Actual measurement and external SizeSet component examples continue in
 [Actual source resource accounting](source-resource-accounting.md).
+
+## Complete actual Inputs, Sewing and Garment roots
+
+charge_design_input_resources borrows every private DesignInputsDefinition field in schema order:
+structure, parameters, retained recipe, Materials, source metadata and provided references. Actual
+source metadata owns both the higher host and a separately retained vector of DesignHostEntity.
+The producer first charges the host through DesignResourceSource, then precharges that exact stored
+vector. It does not regenerate a census through the semantic entities callback. Fixed Copy guards
+cover each captured identity record and the provided measurement/Ease/SizeSet reference carrier.
+
+charge_design_sewing_resources charges that actual input root, the graph, then the complete retained
+landmark registry. charge_design_garment_resources charges sewing, Pockets, physical notions,
+Closures, layers, Hems and all six construction families, once in original schema order. Exhaustive
+private wrapper/definition views make future retained fields explicit accounting obligations. None
+of these producers clones, rebuilds or validates current models, reparses recipes, replays topology,
+looks up numeric values or resets/finishes the caller's meter.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_design_garment_resources(&actual_garment, &mut meter)?;
+let represented_model = meter.finish()?;
+```
+
+The native complete model uses actual DesignSources with both external set families. Its structure
+has6 canonical declarations,2 Piece entries,1 copy and3 topology entries; parameter1, actual host39,
+retained metadata identities26, semantic landmark1 and an unused physical notion1 bring the total
+to80 entries. Piece reason/labels11 bytes, parameter token1, retained recipe10 and source628 bring
+the total to650 UTF-8 bytes. The actual revision is the successor of u128::MAX:129 magnitude bits.
+The complete input/sewing roots count78/79 entries respectively; the garment root counts80.
+
+Maximum77 entries refuses sources.entities at52+26, with Inputs scope, actual containing Design id
+and no collection index. This catalog owns no new entity id. Maximum78 refuses sewing.landmarks
+at78+1; maximum79 refuses notions at79+1. Maximum649 bytes preserves the original source chart's
+saved measurement-token refusal641+9, chart id and entry index1. Maximum128 bits preserves the
+initial design.revision refusal0+129. None publishes partial demand or changes the original model.
+Prior2 entries/2 bytes/7 bits compose to82/652/136 under the same meter, and a prior refusal survives.
+
+After a real edge deletion, current validation refuses the held landmark/notion source. Accounting
+still preserves the exact held model and counts80/650/129: the journal gains one entry and live-edge
+index loses one. An explicit empty complete draft counts0 entries/8 bytes/0 bits because its retained
+canonical recipe is (recipe); a7-byte limit refuses recipe.canonical at0+8. Empty authored source
+does not imply empty canonical syntax. Five new actual cases and prior28 source cases pass33, with
+strict core-library/source-test lint and formatting. A wrong expected static token-field spelling was
+corrected against the actual chart producer before acceptance. Python/OS byte counts independently
+confirm the additional11+10+1 bytes; the retained26-record census is read from the actual owner.
+
+This completes implemented model accounting under the source port's honest/exhaustive integration
+contract. Runtime installation, authority ordering and current/prospective command admission remain
+G1-SLICE.6.8.2.2.2.2.4. Retained command journals/history, ingress, allocation peaks and host algorithm
+time require their own bounds; logical demand supplies no dishonest-host security, readiness,
+physical or release certificate. Deeper/full verification remains deferred until feature completion.

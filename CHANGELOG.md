@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0458 — expose required readonly accounting for the actual source host
+## STITCHCAD-G1-0459 — compose complete actual model resources under one sink
 
-- Core DesignResourceSource requires restricted sink charging; no default, supplied totals or publication/authority capability.
-- Actual DesignSources walks both exhaustive owned roots; no clone/current/census/context callback or canonical duplication.
-- Source resource28 (prior24/new4), strict core-lib/source lint/fmt pass:39/628/0, prefix41/630/1 and original refusals/state.
-- Correct moved assertion/stale byte expectation and doc grammar; retain whole0457/0451–0455 journals610; higher root next.
+- Exhaustively borrow actual Inputs/Sewing/Garment and retained source identity census; fixed references own no dynamic copy.
+- Charge every actual component once in schema order, with original first error and no semantic/currentness callbacks.
+- Source resource33 (prior28/new5), strict core-lib/source lint/fmt pass:80/650/129, prefix82/652/136, held and empty drafts.
+- Preserve exact cache/landmark/notion/source witnesses; correct expected field spelling; whole0458 retained611; runtime next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
