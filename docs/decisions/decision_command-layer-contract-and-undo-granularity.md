@@ -153,3 +153,16 @@ D297 clarified the misleading ordered/strictest wording. Named permissions stay 
 preview requires Inspect alone, Propose is separate metadata, and partial grants never gain a union
 through discovery. UI/API/MCP parity remains empty until actual adapter tests/digests exist. The new
 book part and2 public API rows explain this boundary; broader .6.9.3/publication acceptance follows.
+
+## Combined current native acceptance0477
+
+answers: "what current native command populations passed together after implementation?"
+
+All317 selected cases pass across21 targets:core command-contract66 in17 targets plus model-resource47
+and metadata8;higher Design-input163 plus source-resource33. Completed output derives98 actual bus
+cases within that163. Command15/Design34 doctests pass49, including privacy/lifetime/sealing controls.
+Current workflow, discarded-error, resource, transaction and authority paths all participate. Production
+source is unchanged in this acceptance leaf; source diagnostics/types and actual metadata handlers
+are distinguished from still-unimplemented other runtime handlers. The book records native commands,
+counts and limits. Full publication fixture probes follow before this metadata lane closes; workspace
+CI/persistence/browser/adapter parity and physical/release evidence remain separate owners.

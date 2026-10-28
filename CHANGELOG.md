@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0476 — declare and execute builtin native workflows
+## STITCHCAD-G1-0477 — accept the combined current native metadata bus
 
-- Discover3 immutable workflows with exact token lookup, actual stage/catalog metadata and full distinct permissions from the same group-purpose rule used by authorization.
-- Native workflow2 executes1/5/7-stage inspection/edit-replay/Undo-Redo paths over real sources/models and checks missing permissions;metadata2/schema4/catalog2/group-authorization5/strict lint/fmt pass.
-- Fix D297's hierarchy wording without changing grant behavior. Generate/watch the book table and register both public types; UI/API/MCP presence, parity digests and live authority stay separate.
-- Whole0475/D295/D296 retained630; next combined bus .6.9.3 and deferred publication probes. No full-project, persistence/browser, geometry or release certificate.
+- All317 cases pass across21 selected targets:core121 and measure196, including all163 Design-input cases and98 actual bus cases;49 command/design doctests also pass.
+- Current workflow, discarded-error, resource, transaction, authority and public-input features participate in the combined targets; production sources unchanged.
+- Book records exact populations and scoped evidence; broader handlers, adapters, persistence/browser, full workspace CI and physical/release proof remain separately owned.
+- Whole0476/D297 retained631; next full existing publication fixture probes, including named-result compatibility. No early push or whole-project certificate.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

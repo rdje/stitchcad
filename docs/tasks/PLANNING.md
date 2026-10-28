@@ -8,9 +8,7 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D297 — workflow authority wording implied a permission hierarchy
-P2 fixed0476, owner G1-SLICE.6.9.2; native independent-permission case1 and new registry/runtime2/metadata2 checks pass0.
-Registry derives complete exact rights from shared actual group-purpose rules; Commit never implies Inspect. Book ordered/strictest wording and Propose metadata clarified;grant-check order/behavior otherwise exact. Native3 workflows execute1/5/7 stages;broader bus/adapter parity remain pending.
+D297 fixed0476; [whole workflow/independent-permission closure](../history/stitchcad-devnotes-part631.md).
 D295/D296 fixed0475; [whole discarded-context/tool-scope closure](../history/stitchcad-devnotes-part630.md).
 D294 fixed0473; [whole model/source runtime-boundary closure](../history/stitchcad-devnotes-part628.md).
 D293 P0 fixed0472; [whole diagnosis/ownership/API closure](../history/stitchcad-devnotes-part627.md).

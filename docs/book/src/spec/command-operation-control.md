@@ -539,7 +539,7 @@ python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test de
 Both new cases and existing group-preview6/group-commit6/control8 cases pass, with strict selected
 Clippy and formatting. This is cooperative pre-effect cancellation and native semantic-failure proof.
 It does not inject allocator exhaustion or certify panic recovery, persistence/reopen, other handlers,
-adapters, evaluation, geometry or physical/release behavior. Broader command acceptance stays .6.9.
+adapters, evaluation, geometry or physical/release behavior. Combined native metadata acceptance passes; full publication remains pending.
 
 ## Failed-group preparation context
 

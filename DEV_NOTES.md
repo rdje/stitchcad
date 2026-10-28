@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — builtin native workflow registry and exact permissions
+## _(2026-10-28 UTC)_ — combined current native metadata-bus acceptance
 
-0476 .6.9.2 declares3 workflows once as immutable stages/catalog IDs:Piece inspection1,metadata edit/replay5,metadata Undo/Redo7. Exact lookup has no alias/default;class and permission sets derive from actual metadata and the shared group-purpose rule.
-Native workflow2 executes all3 real paths and missing-permission refusals;metadata2/group-schema4/catalog2/group-authorization5/strict lib-example-test lint/fmt pass0. Grant-check bytes/order otherwise exact;bus/lifecycle/accounting unchanged.
-D297 fixed:ordered/strictest wording replaced by exact independent permissions;Commit does not include Inspect. Preview requires Inspect alone;Propose is separate metadata. Registry grants no authority,configuration,adapter presence or digest parity.
-Promotion:indexed decision. Generated book table/watch and86 chapters/161 API rows/1548 source/2612 rendered links pass0;whole0475/D295/D296630,retention1084/2431155B pass0. LIVE registry note,G1still6/18;README unchanged;next combined .6.9.3 then publication.
-[Whole0475 discarded-diagnostic/tool-scope lesson](docs/history/stitchcad-devnotes-part630.md) retains exact native before/after proof.
+0477 .6.9.3 accepts current native metadata bus/public inputs:317 cases across21 targets;core121(17 command targets66+resource47+metadata8),measure196(Design-input163+source33). Completed logs derive the actual bus subset98;all pass0.
+Command15/Design34 namespace doctests pass49, including privacy/lifetime/sealing controls. Registry/error/resource/transaction features participate in the full current targets. Production sources unchanged;publication fixture probes still pending.
+Book command-workflows#combined-native-acceptance records populations/scope;86chapters/161APIrows/1549source/2615renderedlinks pass0. Broader handlers,app/adapters/persistence/browser/physical/release/full-workspace CI remain actual owners.
+Promotion:indexed decision. Whole0476/D297 in631(4 exact Git spans);retention1085/2436702B passes0. LIVE combined native note,G1still6/18;README correct unchanged. Next .6.9.publication full existing probes;push cadence unchanged.
+[Whole0476 native-workflow/D297 lesson](docs/history/stitchcad-devnotes-part631.md) retains precise metadata/permission/runtime evidence.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

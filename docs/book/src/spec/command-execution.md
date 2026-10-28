@@ -579,5 +579,6 @@ passes; broader command/full acceptance remains owned.
 
 The [logical dynamic-content meter](command-operation-control.md#logical-dynamic-content-accounting-contract)
 is a separate Design-domain contract with implemented component producers.
-Current/prospective model and retained-state admission have focused and coupled native checks;
-broader command/full acceptance remains pending. Component demand supplies no additional execution or whole-model-validity proof.
+[Combined native metadata-bus acceptance](command-workflows.md#combined-native-acceptance) passes.
+Broader handlers, persistence, adapters and full publication verification remain pending. Component
+accounting supplies no additional execution or whole-model-validity proof.

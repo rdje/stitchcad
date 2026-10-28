@@ -70,10 +70,40 @@ refusal, matching the independently required permission set.
 
 The core registry/book projection is checked by command_workflow_contract. Actual runtime evidence
 lives in command_bus::workflow_registry inside sc-measure's design_inputs_contract target. These
-checks certify the named native paths only; current broader metadata-bus/publication acceptance
-remains separately owned. They grant no adapter availability or parity, persistent recovery, recipe
+checks certify the named native paths. [Combined native acceptance](#combined-native-acceptance)
+now covers the current metadata bus/public contracts; full publication probes remain separately owned. They grant no adapter availability or parity, persistent recovery, recipe
 reevaluation, geometry, physical/profile realization, allocator/time or release certificate.
 
 Library discovery itself does not install the three required policies, provide finite journal/history
 capacity, refill identity reserves, authenticate a session, select a complete grant or guarantee that
 a particular request will pass. Those prerequisites and all fresh failures remain at the actual bus.
+
+## Combined native acceptance
+
+After implemented metadata features and the workflow registry are complete, the current selected
+native suites pass317 cases across21 test targets:
+
+| Current selected contract population | Passed cases |
+| --- | --- |
+| core command data, scopes, authority and workflow:17 command_* targets | 66 |
+| core model-resource contract | 47 |
+| core metadata contract | 8 |
+| complete Design-input contract, including98 actual command-bus cases | 163 |
+| complete higher-source resource contract | 33 |
+
+Command-namespace15 and Design-namespace34 doctests also pass:49 cases, including private-mutator,
+borrow lifetime and sealed-accounting controls. These totals are derived from the completed native
+outputs. The Design-input run includes the cache-growth repair, exact current/prospective resource
+checks, mixed all-checkpoint cancellation, discarded-preparation diagnostics and registry-driven
+execution of all three current workflows. Individual numbers are test populations, not additional
+handlers or a broader product capability count.
+
+The selected core targets are every immediate command_*.rs test file plus design_resource_contract
+and design_metadata_contract; the source package runs design_inputs_contract and resource_contract.
+Privacy/lifetime coverage uses cargo test -p sc-core --doc command:: and --doc design::. The project
+local-environment launcher remains mandatory for these producers.
+
+This accepts the current implemented native metadata bus and its declared public inputs. Remaining
+mutation/evaluation/artifact/release handlers, adapter parity, persistence/reopen and browser execution
+retain their actual roadmap owners. Full publication fixture probes follow separately, and complete
+workspace CI still precedes an authorized push. No physical or release certificate follows here.

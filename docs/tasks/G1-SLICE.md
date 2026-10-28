@@ -10,13 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0476
+## Current leaf acceptance —0477
 
-- [x] ROOT CAUSE: cargo test native independent Commit/Inspect case →1 passed rc=0;old ordered/strictest
-  wording contradicted exact rights. Native extraction check preserves all other group-grant bytes/order rc=0.
-- [x] ADDRESSED: cargo test -p sc-core --test command_workflow_contract →2 passed rc=0;actual workflow2
-  executes all3 declarations at1/5/7 stages,exact rights and missing-permission refusals rc=0.
-- [x] NO REGRESSION: cargo test -p sc-core --test command_authorization_contract group_authorization:: →5 passed rc=0;schema4/catalog2/strict lint/fmt/book86/161/1548/2612 pass0.
+- [x] ROOT CAUSE: python3 -I -B scoped complete-target/log census derives19 core/2 measure targets;
+  actual bus subset98;feature code complete,combined proof now owned here;crates unchanged rc=0.
+- [x] ADDRESSED: cargo test selected core19 targets →121 passed;measure2 →196 passed;total317 rc=0.
+  Full current Design-input163 includes98 actual bus;public schemas differ from unavailable other handlers.
+- [x] NO REGRESSION: cargo test -p sc-core --doc command:: →15 passed and --doc design:: →34 passed rc=0;
+  book86/161/1549/2615 and retention1085/2436702B pass0;full publication/other roadmap proof pending.
 
 ## Goal
 
@@ -960,28 +961,24 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0475 D295/D296 discarded diagnostics/tool-scope repair; [whole scope/proofs](../history/stitchcad-devnotes-part630.md).
 - ID: `G1-SLICE.6.9.2`
   Status: `done`
-  Goal:actual native workflow registry/evidence feeding G1.9/G5; preserve absent adapter/parity boundary.
-  Own three builtin Piece-inspection/metadata-edit-replay/metadata-undo-redo declarations; derive classes
-  from the command catalog and exact permission sets from shared group purpose rules. Execute real bus
-  workflows and guard missing permissions; metadata grants no runtime capability or adapter presence.
-  Own P2 D297 ordered/strictest authority wording:core/native grant checks have no implied hierarchy.
-  - [x] REPRODUCE / ISSUE: native Commit/Inspect independence1 passed rc=0 despite old ordered/strictest
-    book wording;HEAD public catalog had no CommandWorkflowId declaration (scoped Git source census rc=0).
-  - [x] ROOT CAUSE: native group-purpose extraction/source check rc=0:permissions are exact independent
-    rights,not a rank;workflow metadata must share the actual rule without querying models/grants.
-  - [x] FIX: immutable3-workflow registry/exact lookup and data-only stages;derive catalog classes/rights,
-    share actual group-purpose rule,generate/watch native table;D297 wording aligns with unchanged behavior.
-  - [x] ADDRESSED: cargo test -p sc-core --test command_workflow_contract →2 passed rc=0;actual native
-    workflow2 executes all3 paths1/5/7 stages,metadata/identity/replay/snapshot outcomes and rights refusals.
-  - [x] NO REGRESSION: cargo test -p sc-core --test command_authorization_contract group_authorization::
-    →5 passed rc=0;schema4/catalog2/strict lib-example-test lint/fmt/source/census17/5/5/0 pass0.
-  - [x] LOCKSTEP: book86 chapters/161 API rows/1548 source/2612 rendered links rc=0;new part/nav/topic/API
-    map and live docs/decision/index updated;LIVE native registry/D297,README unchanged;whole0475 in630.
-  Verification: scoped above pass0;retention1084/2431155B rc=0;full current bus/publication pending.
-  Commit: STITCHCAD-G1-0476;native declarations grant no adapter availability/authority/state parity.
+  Goal:0476 native workflow registry/exact rights/D297; [whole scope/proofs](../history/stitchcad-devnotes-part631.md).
 - ID: `G1-SLICE.6.9.3`
-  Status: `pending`
+  Status: `done`
   Goal: combined current implemented metadata-bus/public schemas/authority/resource/privacy acceptance.
+  - [x] REPRODUCE / ISSUE: completed feature had focused checkpoints;native current-target census/log
+    producer derives19 core/2 measure targets and98 actual bus cases,all source artifacts local rc=0.
+  - [x] ROOT CAUSE: python3 -I -B bounded log census →core121/measure196,command15/design34 docs rc=0;
+    no production changes in this leaf;source/API classes and actual runtime subset remain distinct.
+  - [x] FIX: execute current combined contracts after feature implementation;record exact populations
+    and update user book while preserving pending full publication,other handlers and product boundaries.
+  - [x] ADDRESSED: cargo test core17 command_* targets plus design_resource/design_metadata →121 passed;
+    measure design_inputs/resource_contract →196 passed,total317 rc=0;all98 bus cases in163 pass0.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc command:: →15 passed;--doc design:: →34 passed rc=0;
+    book86 chapters/161 API rows/1549 source/2615 rendered links rc=0;no workspace-wide CI claim.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/decision/index and LIVE combined-native note updated;README
+    correct unchanged;whole0476/D297 retained631(4 Git spans),retention1085/2436702residentB rc=0.
+  Verification: selected combined317/doctests49/book/retention rc=0;full publication probes next.
+  Commit: STITCHCAD-G1-0477;parent .6.9 remains in_progress until .6.9.publication closes.
 
 - ID: `G1-SLICE.6.9.publication`
   Status: `pending`
