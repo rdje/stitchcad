@@ -4,8 +4,8 @@ use super::{
     DesignResourceScope, DesignResourceSink,
 };
 use crate::ontology::{
-    DeclaredEase, EaseDistribution, EntityId, NotchDefinition, SeamSpanDefinition, SewingGraph,
-    SewingLandmark,
+    DeclaredEase, EaseDistribution, EntityId, NotchDefinition, SeamEase, SeamSpanDefinition,
+    SewingGraph, SewingLandmark,
 };
 fn location(
     field: &'static str,
@@ -29,7 +29,7 @@ pub fn charge_sewing_graph_resources(
     graph: &SewingGraph,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    let (graph_id, spans) = graph.resource_spans();
+    let (graph_id, spans, sources) = graph.resource_spans();
     sink.charge_entries(spans.len(), location("sewing.spans", Some(graph_id), None))?;
     for (index, span) in spans.iter().enumerate() {
         let SeamSpanDefinition {
@@ -43,26 +43,11 @@ pub fn charge_sewing_graph_resources(
         fixed_value(a);
         fixed_value(b);
         fixed_value(direction);
-        let DeclaredEase {
-            amount,
-            distribution,
-        } = ease;
-        fixed_value(amount);
-        match distribution {
-            EaseDistribution::Uniform => {}
-            EaseDistribution::Weighted { side, regions } => {
-                fixed_value(side);
-                fixed_slice(regions);
-                sink.charge_entries(
-                    regions.len(),
-                    location("sewing.spans.ease.regions", Some(*id), Some(index)),
-                )?;
+        match ease {
+            SeamEase::Declared(declaration) => {
+                charge_ease(declaration, *id, index, "sewing.spans.ease.regions", sink)?
             }
-            EaseDistribution::BetweenNotches { side, start, end } => {
-                fixed_value(side);
-                fixed_value(start);
-                fixed_value(end);
-            }
+            SeamEase::Portion(portion) => fixed_value(&portion.resource_sides()),
         }
         fixed_slice(stops);
         sink.charge_entries(
@@ -70,7 +55,50 @@ pub fn charge_sewing_graph_resources(
             location("sewing.spans.stops", Some(*id), Some(index)),
         )?;
     }
+    sink.charge_entries(
+        sources.len(),
+        location("sewing.ease_sources", Some(graph_id), None),
+    )?;
+    for (index, source) in sources.iter().enumerate() {
+        let (id, a, b, direction, ease, stops) = source.resource_parts();
+        fixed_value(&a);
+        fixed_value(&b);
+        fixed_value(&direction);
+        charge_ease(ease, id, index, "sewing.ease_sources.regions", sink)?;
+        fixed_slice(stops);
+        sink.charge_entries(
+            stops.len(),
+            location("sewing.ease_sources.stops", Some(id), Some(index)),
+        )?;
+    }
     Ok(())
+}
+fn charge_ease(
+    ease: &DeclaredEase,
+    id: EntityId,
+    index: usize,
+    field: &'static str,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    let DeclaredEase {
+        amount,
+        distribution,
+    } = ease;
+    fixed_value(amount);
+    match distribution {
+        EaseDistribution::Uniform => Ok(()),
+        EaseDistribution::Weighted { side, regions } => {
+            fixed_value(side);
+            fixed_slice(regions);
+            sink.charge_entries(regions.len(), location(field, Some(id), Some(index)))
+        }
+        EaseDistribution::BetweenNotches { side, start, end } => {
+            fixed_value(side);
+            fixed_value(start);
+            fixed_value(end);
+            Ok(())
+        }
+    }
 }
 /// Charge the provided actual semantic registry slice without resolving or rebirthing any anchor.
 /// Callers compose this with the root's exact owned landmark vector. Notch/Turn private views guard

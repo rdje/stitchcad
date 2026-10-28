@@ -109,7 +109,8 @@ fn fixture() -> Fixture {
                             },
                         ],
                     },
-                },
+                }
+                .into(),
                 stops: vec![],
             }],
         },

@@ -117,7 +117,9 @@ pub use cut::{CopyOrientation, CutCopy, CutCopyDefinition, CutPlan, CutPlanError
 
 pub use anchor::AnchorError;
 
-pub use seam_ease::{SeamEasePortion, SeamEasePortionError, SeamEaseSource};
+pub use seam_ease::{
+    SeamEase, SeamEaseBindingIssue, SeamEasePortion, SeamEasePortionError, SeamEaseSource,
+};
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,
     SeamSideId, SeamSpan, SeamSpanDefinition, SewingError, SewingGraph, SewingGraphDefinition,

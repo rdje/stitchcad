@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — retained original ease source and interval portions
+## _(2026-10-28 UTC)_ — canonical retained ease in the graph
 
-0491 .3.1 captures actual span ease/copies/domains/direction once in immutable SeamEaseSource. Private SeamEasePortion shares that root through clones/repeated A-ordered cuts. Explicit/formula/profile and uniform/weighted/notch intent stays original;no child numeric declaration or identity is manufactured.
-Selected native3/sewing36/docs3/strict selected Clippy/fmt pass. Both cut orders yield identical original-frame portions and the same source pointer,including reflected copies/partial domains. Graph-drop,replacement,current-deletion,frame/interior precedence and concrete error-chain controls pass0.
-Book88/171/1559/2657/glossary0 pass. Whole0490 retained645 verifies3 Git spans;retention1099/2506516 residentB pass0. Pressure diagnostic:active45/64,aggregate66/192;no capacity action needed. Canonical graph/ownership/current/resource and quantity integration remain .3.2/.3.3;D301 P1 remains open before effects.
-Promotion:indexed sewing decision. LIVE reviewed unchanged,G1 6/18;README unchanged. Capture clones the original declaration once;resource admission must precede command use. Source partitioning supplies no physical correspondence,currentness or independent child amount.
-[Whole0490 pressure-correction lesson](docs/history/stitchcad-devnotes-part645.md) retains exact D302 recurrence/diagnostic and preservation evidence.
+0492 .3.2 installs explicit declared/portion ease and unique original sources. Full original stop/domain readiness,child binding,global source identity and source-body resource census remain exact. Metadata/Gather views retain portion context;direct uniform helper refuses inherited portions until quantity integration.
+D303 initial native duplicate claims failed1/rc101;ordered A/B interval admission now refuses positive overlap with original evidence. D304 independent equal roots failed pointer identity1/rc101;post-validation canonicalization folds every consumer onto one actual body. Both fixed before committed model publication.
+Sewing43/gather16/resource5/construction9/measure sewing14+retained2/docs11/scoped strict Clippy/fmt pass0. Meter2 spans+1 source+2 regions+2 original stops=7;limit6 preserves actual stop refusal,two logical snapshots14. Native source/current/notch/alias/recapture controls pass. Book88/173/1560/2659/glossary0 pass.
+Promotion:indexed sewing decision;whole0491 retained646 verifies3 Git spans. Retention1100/2511558 residentB passes;active46/64,aggregate67/192. LIVE notes D303/D304 native fixes,G1 6/18 unchanged;README unchanged. Retained quantity queries .3 next;full paired/D301 acceptance remains open.
+[Whole0491 retained-source lesson](docs/history/stitchcad-devnotes-part646.md) preserves exact primitive/compiler/native evidence.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

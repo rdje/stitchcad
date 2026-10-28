@@ -82,7 +82,8 @@ fn fixture() -> Fixture {
                 ease: DeclaredEase {
                     amount: EaseAmount::Explicit(Length::ZERO),
                     distribution: EaseDistribution::Uniform,
-                },
+                }
+                .into(),
                 stops: vec![],
             }],
         },

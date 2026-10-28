@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0491
+## Current leaf acceptance —0492
 
-- [x] ROOT CAUSE: cargo test -p sc-core --test sewing_contract retained_ease via local_environment.py →3 passed;both orders preserve original source/domain and actual symbolic/distribution metadata,rc=0.
-- [x] ADDRESSED: cargo test -p sc-core --test sewing_contract retained_ease -- --nocapture via local_environment.py →3 passed;scoped source/portion docs3 pass,rc=0.
-- [x] NO REGRESSION: cargo test -p sc-core --test sewing_contract via local_environment.py →36 passed,rc=0;strict selected Clippy/fmt/glossary0/book88/171/1559/2657 pass,rc=0;graph/resource/quantity integration next.
+- [x] ROOT CAUSE: cargo test -p sc-core --test sewing_contract duplicate_retained_interval / equal_independent_source (separate runs) →1 failed/rc101 each on initial uncommitted model;D303/D304 now fixed.
+- [x] ADDRESSED: cargo test -p sc-core --test sewing_contract via local_environment.py →43 passed,rc=0;retained root claims/body/ownership/current/resource/metadata controls pass.
+- [x] NO REGRESSION: focused gather16/resource5/construction9/measure sewing14+retained2/docs11/strict scoped Clippy/fmt,glossary0/book88/173/1560/2659 →pass,rc=0;retained quantity/effects remain owned.
 
 ## Goal
 
@@ -708,18 +708,17 @@ All98 completed ids/statuses and original proof pointers remain live there.
   .3 original-source quantity query integration;.acceptance deferred until implemented.
 - ID: `G1-SLICE.6.5.3.2.3.2.3.1`
   Status: `done`
-  Goal:0491 actual immutable original ease source/shared interval portions;canonical graph/resource/quantity integration stays .2/.3 before effects.
-  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test sewing_contract retained_ease -- --nocapture via local_environment.py →3 passed;actual signed/formula/profile × Same/Opposite × uniform/weighted/notch sources exercised,rc=0.
-  - [x] ROOT CAUSE: cargo test -p sc-core --test sewing_contract retained_ease via local_environment.py →both source-cut orders yield the same original-frame portions and source pointer;copying independent child declarations would lose that original source relation,rc=0.
-  - [x] FIX: private SeamEaseSource captured once from actual span;SeamEasePortion shares original declaration/domains through clones/splits. Keep original frame/interior refusals,A/B precedence and source chain;no child amount/identity or physical certificate.
-  - [x] ADDRESSED: same native selected run →3 passed,rc=0;graph-drop/replacement/topology-deletion and actual portion refusals preserve source evidence. cargo test -p sc-core --doc ontology::seam_ease via local_environment.py →3 passed,rc=0 (privacy2/positive1).
-  - [x] NO REGRESSION: cargo test -p sc-core --test sewing_contract via local_environment.py →36 passed,rc=0;strict lib/sewing Clippy/fmt --check →pass0. mdbook build/publication check →88/171/1559/2657,rc=0;glossary census →0 failures,rc=0.
-    generation_pressure.py →active45/64,aggregate66/192;verify-retention →1099 records/2506516 residentB,rc=0. transition_receipts.py --record docs/history/stitchcad-devnotes-part645.md →3 exact Git spans,rc=0.
-  - [x] LOCKSTEP: live pointers/journals/ledger/indexed sewing decision/book/API inventory synchronized;LIVE/README reviewed unchanged,G1 6/18,D301 P1. Whole0490 retained645. Graph ownership,current/readiness/resource accounting and retained quantity integration remain owned before full paired acceptance.
+  Goal:0491 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part646.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.3.2`
-  Status: `pending`
-  Goal: canonical graph-owned source/portion integration,source identity/domain coherence,current
-  declaration readiness and exhaustive resource/ownership census;no independent child ease authority.
+  Status: `done`
+  Goal:0492 canonical graph-owned source/portion integration,current full-source readiness,global ownership and exact logical resource census;D303/D304 fixed before publication.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-core --test sewing_contract duplicate_retained_interval / equal_independent_source (separate filters) via local_environment.py →1 failed/rc101 each on initial uncommitted integration;no released graph was affected.
+  - [x] ROOT CAUSE: same cargo test -p sc-core --test sewing_contract filters →1 failed/rc101 each:identity/content equality alone omitted disjoint interval claims and actual body folding;native diagnostics show duplicate claims and noncanonical pointers.
+  - [x] FIX: explicit SeamEase declaration/portion enum;unique graph source pool,original stop/domain context,typed current/binding conflicts and ordered per-source/per-side interval admission. After full validation,fold equal roots onto one actual body;flatten recapture. Metadata/Gather retain mapping;direct uniform helper refuses portions until .3.
+  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract via local_environment.py →43 passed,rc=0;D303 four overlap arrangements/touching/independent budgets and D304 independent-capture pointer controls pass. Meter7/limit6/two snapshots14,original current-source errors and global alias refusals pass.
+  - [x] NO REGRESSION: cargo test focused gather_contract →16,design_resource_contract sewing →5,construction_inventory_contract →9;sc-measure design_inputs_contract sewing →14 then retained_sewing →2;all via local_environment.py,rc=0. Scoped ontology/command/Design sewing docs3+3+5 and strict affected Clippy/fmt pass0.
+    mdbook build/publication check →88 chapters/173 APIs/1560 source/2659 rendered links,rc=0;glossary census →0 failures,rc=0. transition_receipts.py --record docs/history/stitchcad-devnotes-part646.md →3 exact Git spans;verify-retention →1100/2511558 residentB,rc=0.
+  - [x] LOCKSTEP: live pointers/journals/defect ledger/indexed sewing decision/four book chapters/API inventory synchronized;README reviewed unchanged,LIVE notes D303/D304 native fixes,G1 6/18 unchanged. Whole0491 retained646. Quantity .3,feature acceptance,nonuniform,stop/lineage and paired effects remain owned.
 - ID: `G1-SLICE.6.5.3.2.3.2.3.3`
   Status: `pending`
   Goal: quantity queries from retained original source for nested portions;conserve cumulative quantum

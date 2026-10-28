@@ -38,6 +38,11 @@ pub enum DesignSewingPosition {
         /// Zero-based original correspondence position.
         index: usize,
     },
+    /// Canonical retained original source identity,owned once in first-consuming-span order.
+    EaseSource {
+        /// Zero-based original source inventory position.
+        index: usize,
+    },
 }
 
 /// Original ownership/current-source refusal, without rewriting held sewing references.
@@ -198,6 +203,14 @@ impl<H: DesignReferenceHost> DesignSewing<H> {
                     .iter()
                     .enumerate()
                     .map(|(index, span)| (span.id(), DesignSewingPosition::Span { index })),
+            )
+            .chain(
+                self.graph()
+                    .ease_sources()
+                    .enumerate()
+                    .map(|(index, source)| {
+                        (source.span(), DesignSewingPosition::EaseSource { index })
+                    }),
             )
             .collect()
     }

@@ -170,3 +170,5 @@ uniform original ease refusal	spec/command-seam-splits.md	crates/sc-core/src/com
 retained original ease source	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease.rs	SeamEaseSource	G1-SLICE.6.5.3.2.3.2.3.1	4.4
 retained ease interval portion	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease.rs	SeamEasePortion	G1-SLICE.6.5.3.2.3.2.3.1	4.4
 retained ease interval refusal	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease.rs	SeamEasePortionError	G1-SLICE.6.5.3.2.3.2.3.1	4.4
+canonical seam ease intent	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease.rs	SeamEase	G1-SLICE.6.5.3.2.3.2.3.2	4.4
+canonical ease binding issue	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease.rs	SeamEaseBindingIssue	G1-SLICE.6.5.3.2.3.2.3.2	4.4

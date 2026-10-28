@@ -88,9 +88,10 @@ fold, physical shape/count or production readiness.
 
 **Gather (`G1-SLICE.3c.4a.2b`).** Immutable `GatherDefinition` content binds graph, span,
 selected side, held physical-copy id, directed gathering reference and closing-operation id.
-`intake_source()` borrows the span's existing DeclaredEase, including its Uniform, weighted or
+`intake_source()` borrows the span's original DeclaredEase, including its Uniform, weighted or
 between-notch allocation and signed A-minus-B origin. Gather stores no second intake/allocation,
-formula/profile value or uncertainty state.
+formula/profile value or uncertainty state. For retained ease,the view also carries the exact
+portion mapping;the original full declaration is not a numeric child allocation.
 
 A-minus-B = +5 000 µm permits gathering A; −5 000 µm permits B. Wrong-sign explicit selection refuses;
 authored zero is legal no-op intent. Formula/profile origins supply no value/default. Resolved sign,

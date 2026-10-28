@@ -98,7 +98,8 @@ fn fixture() -> Fixture {
         ease: DeclaredEase {
             amount: EaseAmount::Explicit(Length::ZERO),
             distribution: EaseDistribution::Uniform,
-        },
+        }
+        .into(),
         stops: vec![],
     };
     Fixture {
@@ -163,8 +164,9 @@ fn source_cut_binding_borrows_actual_span_and_retains_both_original_frames() {
     let mut f = fixture();
     f.span_mut().a.range = EdgeRange::new(f.span().a.range.edge(), t(1, 7), t(6, 7)).unwrap();
     f.span_mut().b.range = EdgeRange::new(f.span().b.range.edge(), t(1, 5), t(4, 5)).unwrap();
-    f.span_mut().ease.amount = EaseAmount::Profile(ProfileParameterRef::new(id(999)));
-    f.span_mut().ease.distribution = EaseDistribution::Weighted {
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Profile(ProfileParameterRef::new(id(999)));
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
         side: SeamSideId::B,
         regions: vec![WeightedEaseRegion {
             from: Param::START,
@@ -426,7 +428,8 @@ fn source_interval_pairs_follow_endpoint_direction_and_keep_physical_copies_dist
 #[test]
 fn structural_child_graph_acceptance_is_not_parent_ease_conservation() {
     let mut f = fixture();
-    f.span_mut().ease.amount = EaseAmount::Explicit(Length::from_micrometres(10).unwrap());
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(10).unwrap());
     let graph = f.graph(&[]).unwrap();
     let request = SplitSeamSpan::new(
         f.span().id,
@@ -465,7 +468,8 @@ fn structural_child_graph_acceptance_is_not_parent_ease_conservation() {
             .spans()
             .iter()
             .try_fold(Length::ZERO, |sum, span| {
-                let EaseAmount::Explicit(amount) = span.definition().ease.amount else {
+                let EaseAmount::Explicit(amount) = span.definition().ease.declaration().amount
+                else {
                     unreachable!("actual explicit diagnostic fixture")
                 };
                 sum.checked_add(amount)
@@ -478,7 +482,8 @@ fn structural_child_graph_acceptance_is_not_parent_ease_conservation() {
     assert_eq!(total(&copied), Length::from_micrometres(20).unwrap());
     assert_eq!(copied.ease_validation(), EaseValidation::DeferredToG2AndG3);
     for declaration in &mut declarations {
-        declaration.ease.amount = EaseAmount::Explicit(Length::from_micrometres(5).unwrap());
+        declaration.ease.declared_mut().unwrap().amount =
+            EaseAmount::Explicit(Length::from_micrometres(5).unwrap());
     }
     let conserving = build(declarations);
     assert_eq!(total(&conserving), Length::from_micrometres(10).unwrap());
@@ -487,7 +492,7 @@ fn structural_child_graph_acceptance_is_not_parent_ease_conservation() {
         EaseValidation::DeferredToG2AndG3
     );
     assert_eq!(
-        binding.span().definition().ease.amount,
+        binding.span().definition().ease.declaration().amount,
         EaseAmount::Explicit(Length::from_micrometres(10).unwrap())
     );
 }
@@ -495,7 +500,8 @@ fn structural_child_graph_acceptance_is_not_parent_ease_conservation() {
 #[test]
 fn immutable_content_retains_direction_signed_ease_and_visible_obligations() {
     let mut f = fixture();
-    f.span_mut().ease.amount = EaseAmount::Explicit(Length::from_micrometres(-1500).unwrap());
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(-1500).unwrap());
     let graph = f.graph(&[]).unwrap();
     assert_eq!(graph.id(), f.definition.id);
     let span = graph.spans().first().unwrap();
@@ -518,7 +524,7 @@ fn immutable_content_retains_direction_signed_ease_and_visible_obligations() {
             EaseAmount::Profile(ProfileParameterRef::new(id(601))),
         ] {
             f.span_mut().direction = direction;
-            f.span_mut().ease.amount = amount;
+            f.span_mut().ease.declared_mut().unwrap().amount = amount;
             assert_eq!(
                 f.graph(&[]).unwrap().spans().first().unwrap().definition(),
                 f.span()
@@ -929,7 +935,7 @@ fn weighted_regions_have_positive_density_and_explicit_order_without_defaulting(
         to: t(3, 4),
         weight: Rational::new(3, 2).unwrap(),
     };
-    f.span_mut().ease.distribution = EaseDistribution::Weighted {
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
         side: SeamSideId::B,
         regions: vec![region],
     };
@@ -955,7 +961,7 @@ fn weighted_regions_have_positive_density_and_explicit_order_without_defaulting(
             (Some(1), WeightIssue::UnorderedOrOverlapping),
         ),
     ] {
-        f.span_mut().ease.distribution = EaseDistribution::Weighted {
+        f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
             side: SeamSideId::A,
             regions,
         };
@@ -985,13 +991,13 @@ fn between_notches_requires_two_distinct_noncoincident_notch_stops_on_its_side()
             landmark: id(401),
         },
     ];
-    f.span_mut().ease.distribution = EaseDistribution::BetweenNotches {
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
         side: SeamSideId::A,
         start: id(400),
         end: id(401),
     };
     assert!(f.graph(&marks).is_ok());
-    f.span_mut().ease.distribution = EaseDistribution::BetweenNotches {
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
         side: SeamSideId::B,
         start: id(400),
         end: id(401),
@@ -1003,7 +1009,7 @@ fn between_notches_requires_two_distinct_noncoincident_notch_stops_on_its_side()
             ..
         })
     ));
-    f.span_mut().ease.distribution = EaseDistribution::BetweenNotches {
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
         side: SeamSideId::A,
         start: id(400),
         end: id(400),
@@ -1012,7 +1018,7 @@ fn between_notches_requires_two_distinct_noncoincident_notch_stops_on_its_side()
         f.graph(&marks),
         Err(SewingError::InvalidEaseAnchors { .. })
     ));
-    f.span_mut().ease.distribution = EaseDistribution::BetweenNotches {
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
         side: SeamSideId::A,
         start: id(400),
         end: id(401),
@@ -1259,7 +1265,7 @@ fn uniform_ease_matches_independent_signed_cumulative_oracle_in_both_directions(
         for direction in [SeamDirection::Same, SeamDirection::Opposite] {
             let mut f = fixture();
             f.span_mut().direction = direction;
-            f.span_mut().ease.amount =
+            f.span_mut().ease.declared_mut().unwrap().amount =
                 EaseAmount::Explicit(Length::from_micrometres(*parent).unwrap());
             let b = match direction {
                 SeamDirection::Same => progress,
@@ -1333,7 +1339,7 @@ fn uniform_ease_original_root_queries_are_split_order_independent() {
             f.span_mut().a.range = EdgeRange::new(a_edge, t(1, 7), t(6, 7)).unwrap();
             f.span_mut().b.range = EdgeRange::new(b_edge, t(1, 5), t(4, 5)).unwrap();
             f.span_mut().direction = direction;
-            f.span_mut().ease.amount =
+            f.span_mut().ease.declared_mut().unwrap().amount =
                 EaseAmount::Explicit(Length::from_micrometres(parent).unwrap());
             let graph = f.graph(&[]).unwrap();
             let mut observed = Vec::new();
@@ -1398,7 +1404,7 @@ fn uniform_ease_retains_actual_eligibility_sources_without_fabricating_values() 
         EaseAmount::Formula(id(710)),
         EaseAmount::Profile(ProfileParameterRef::new(id(711))),
     ] {
-        f.span_mut().ease.amount = amount;
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
         let graph = f.graph(&[]).unwrap();
         let error = request
             .bind_source_cuts(&graph)
@@ -1414,7 +1420,7 @@ fn uniform_ease_retains_actual_eligibility_sources_without_fabricating_values() 
         );
         assert!(error.source().is_none());
     }
-    f.span_mut().ease.distribution = EaseDistribution::Weighted {
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
         side: SeamSideId::B,
         regions: vec![WeightedEaseRegion {
             from: Param::START,
@@ -1445,7 +1451,7 @@ fn uniform_ease_retains_actual_eligibility_sources_without_fabricating_values() 
             landmark: id(721),
         },
     ];
-    f.span_mut().ease.distribution = EaseDistribution::BetweenNotches {
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
         side: SeamSideId::A,
         start: id(720),
         end: id(721),
@@ -1598,7 +1604,8 @@ fn uniform_ease_queries_check_original_frame_and_domain_and_keep_snapshot_source
     let mut f = fixture();
     let edge = f.span().a.range.edge();
     f.span_mut().a.range = EdgeRange::new(edge, t(1, 7), t(6, 7)).unwrap();
-    f.span_mut().ease.amount = EaseAmount::Explicit(Length::from_micrometres(10).unwrap());
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(10).unwrap());
     let request = SplitSeamSpan::new(
         id(301),
         EdgeAnchor {
@@ -1646,7 +1653,8 @@ fn uniform_ease_queries_check_original_frame_and_domain_and_keep_snapshot_source
         allocation.cumulative_at_a(t(6, 7)),
         Ok(allocation.parent_amount())
     );
-    f.span_mut().ease.amount = EaseAmount::Explicit(Length::from_micrometres(-3).unwrap());
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(-3).unwrap());
     let replacement = f.graph(&[]).unwrap();
     let fresh = request
         .bind_source_cuts(&replacement)
@@ -1706,7 +1714,8 @@ fn retained_ease_portions_share_original_symbolic_sources_across_both_split_orde
                 f.span_mut().ease = DeclaredEase {
                     amount,
                     distribution,
-                };
+                }
+                .into();
                 f.span_mut().stops = vec![
                     StopLandmark {
                         side: SeamSideId::A,
@@ -1727,7 +1736,7 @@ fn retained_ease_portions_share_original_symbolic_sources_across_both_split_orde
                 assert_eq!(retained.source().side(SeamSideId::A), original.a);
                 assert_eq!(retained.source().side(SeamSideId::B), original.b);
                 assert_eq!(retained.source().direction(), direction);
-                assert_eq!(retained.source().declaration(), &original.ease);
+                assert_eq!(retained.source().declaration(), original.ease.declaration());
                 let a1 = EdgeAnchor {
                     edge: a,
                     param: t(8, 21),
@@ -1779,7 +1788,7 @@ fn retained_ease_portions_share_original_symbolic_sources_across_both_split_orde
                     );
                     assert!(std::ptr::eq(portion.source(), retained.source()));
                     assert!(std::ptr::eq(portion.clone().source(), retained.source()));
-                    assert_eq!(portion.source().declaration(), &original.ease);
+                    assert_eq!(portion.source().declaration(), original.ease.declaration());
                 }
                 for portion in &right_first {
                     assert!(std::ptr::eq(portion.source(), retained.source()));
@@ -1873,10 +1882,11 @@ fn retained_ease_portion_refusals_use_actual_current_intervals_in_a_b_order() {
 #[test]
 fn retained_ease_source_is_an_owned_snapshot_without_currentness_or_amount_rebinding() {
     let mut f = fixture();
-    f.span_mut().ease.amount = EaseAmount::Formula(id(750));
+    f.span_mut().ease.declared_mut().unwrap().amount = EaseAmount::Formula(id(750));
     let graph = f.graph(&[]).unwrap();
     let held = graph.spans().first().unwrap().retain_ease_source();
-    f.span_mut().ease.amount = EaseAmount::Profile(ProfileParameterRef::new(id(751)));
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Profile(ProfileParameterRef::new(id(751)));
     let replacement = f.graph(&[]).unwrap();
     let fresh = replacement.spans().first().unwrap().retain_ease_source();
     assert_eq!(held.source().span(), fresh.source().span());
@@ -1897,4 +1907,426 @@ fn retained_ease_source_is_an_owned_snapshot_without_currentness_or_amount_rebin
     let after_edit = graph.spans().first().unwrap().retain_ease_source();
     assert_eq!(after_edit, held);
     assert_eq!(held.source().side(SeamSideId::A).range.edge(), edge);
+}
+
+fn retained_children(f: &Fixture, marks: &[SewingLandmark]) -> Vec<SeamSpanDefinition> {
+    let original = f.graph(marks).unwrap();
+    let root = original.spans().first().unwrap().retain_ease_source();
+    let [first, second] = root
+        .split_at(
+            EdgeAnchor {
+                edge: f.span().a.range.edge(),
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: t(1, 2),
+            },
+        )
+        .unwrap();
+    [first, second]
+        .into_iter()
+        .zip(302_u128..)
+        .map(|(portion, identity)| SeamSpanDefinition {
+            id: id(identity),
+            a: portion.side(SeamSideId::A),
+            b: portion.side(SeamSideId::B),
+            direction: portion.source().direction(),
+            ease: portion.into(),
+            stops: vec![],
+        })
+        .collect()
+}
+
+#[test]
+fn graph_retained_ease_sources_are_canonical_and_recapture_flattens_to_the_original() {
+    use sc_core::command::CommandUniformEaseError;
+    let mut f = fixture();
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    f.definition.spans = retained_children(&f, &[]);
+    let graph = f.graph(&[]).unwrap();
+    assert_eq!(graph.ease_sources().len(), 1);
+    let root = graph.ease_sources().next().unwrap();
+    assert_eq!(root.span(), id(301));
+    assert_eq!(
+        root.declaration().amount,
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap())
+    );
+    for span in graph.spans() {
+        assert!(span.definition().ease.portion().is_some());
+        let captured = span.retain_ease_source();
+        assert!(std::ptr::eq(captured.source(), root));
+        assert_eq!(captured.side(SeamSideId::A), span.definition().a);
+        assert_eq!(captured.side(SeamSideId::B), span.definition().b);
+    }
+    let span = graph.spans().first().unwrap();
+    let request = SplitSeamSpan::new(
+        span.id(),
+        EdgeAnchor {
+            edge: span.definition().a.range.edge(),
+            param: t(1, 4),
+        },
+        EdgeAnchor {
+            edge: span.definition().b.range.edge(),
+            param: t(3, 4),
+        },
+    );
+    assert_eq!(
+        request
+            .bind_source_cuts(&graph)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap_err(),
+        CommandUniformEaseError::RetainedPortion {
+            span: id(302),
+            source_span: id(301)
+        }
+    );
+    assert!(
+        matches!(SplitSeamSpan::new(id(301), request.cut(SeamSideId::A), request.cut(SeamSideId::B)).bind_source_cuts(&graph), Err(SplitError::MissingSpan { span }) if span==id(301))
+    );
+}
+
+#[test]
+fn graph_retained_ease_rejects_binding_identity_and_conflicting_root_sources() {
+    use sc_core::ontology::SeamEaseBindingIssue;
+    use std::error::Error as _;
+    let mut f = fixture();
+    let children = retained_children(&f, &[]);
+    let mut changed = children.clone();
+    let child = changed.first_mut().unwrap();
+    let expected = child.a;
+    child.a.copy = id(201);
+    let actual = child.a;
+    f.definition.spans = changed;
+    let error = f.graph(&[]).unwrap_err();
+    let mismatch = SeamEaseBindingIssue::Side {
+        side: SeamSideId::A,
+        expected,
+        actual,
+    };
+    assert_eq!(
+        error,
+        SewingError::EasePortionBinding {
+            span: id(302),
+            source_span: id(301),
+            issue: Box::new(mismatch)
+        }
+    );
+    assert_eq!(error.source().unwrap().to_string(), mismatch.to_string());
+    f.definition.spans = children.clone();
+    f.span_mut().direction = SeamDirection::Same;
+    assert_eq!(
+        f.graph(&[]).unwrap_err(),
+        SewingError::EasePortionBinding {
+            span: id(302),
+            source_span: id(301),
+            issue: Box::new(SeamEaseBindingIssue::Direction {
+                expected: SeamDirection::Opposite,
+                actual: SeamDirection::Same
+            })
+        }
+    );
+    f.definition.spans = children.clone();
+    f.span_mut().id = id(301);
+    assert_eq!(
+        f.graph(&[]).unwrap_err(),
+        SewingError::IdentityCollision { id: id(301) }
+    );
+    // Independently captured same-id roots with different actual declarations cannot coexist.
+    let mut replacement = fixture();
+    replacement.span_mut().ease.declared_mut().unwrap().amount = EaseAmount::Formula(id(790));
+    let others = retained_children(&replacement, &[]);
+    f.definition.spans = vec![
+        children.first().unwrap().clone(),
+        others.get(1).unwrap().clone(),
+    ];
+    assert_eq!(
+        f.graph(&[]).unwrap_err(),
+        SewingError::EaseSourceConflict {
+            source_span: id(301),
+            first_span: id(302),
+            span: id(303)
+        }
+    );
+}
+
+#[test]
+fn retained_notch_source_rechecks_original_full_context_even_with_child_stop_subsets() {
+    use std::error::Error as _;
+    let mut f = fixture();
+    let marks = [f.notch(800, t(1, 4)), f.notch(801, t(3, 4))];
+    let stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(800),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(801),
+        },
+    ];
+    f.span_mut().stops = stops.clone();
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
+        side: SeamSideId::A,
+        start: id(800),
+        end: id(801),
+    };
+    f.definition.spans = retained_children(&f, &marks);
+    let graph = f.graph(&marks).unwrap();
+    assert_eq!(graph.ease_sources().next().unwrap().stops(), &stops);
+    assert!(graph
+        .spans()
+        .iter()
+        .all(|span| span.definition().stops.is_empty()));
+    assert_eq!(
+        graph.missing_landmarks(&[]).collect::<Vec<_>>(),
+        vec![id(800), id(801)]
+    );
+    let error = graph
+        .validate_current(&f.plan, &f.pieces, marks.get(..1).unwrap(), &f.ledger)
+        .unwrap_err();
+    let inner = SewingError::MissingLandmark {
+        span: id(301),
+        stop: *stops.get(1).unwrap(),
+    };
+    assert_eq!(
+        error,
+        SewingError::EaseSource {
+            source_span: id(301),
+            issue: Box::new(inner.clone())
+        }
+    );
+    assert_eq!(error.source().unwrap().to_string(), inner.to_string());
+    // The retained root covers more than one live child. Losing root-only material remains visible.
+    let mut first_only = f.definition.clone();
+    first_only.spans.truncate(1);
+    let partial = SewingGraph::new(first_only, &f.plan, &f.pieces, &marks, &f.ledger).unwrap();
+    let held = partial
+        .ease_sources()
+        .next()
+        .unwrap()
+        .side(SeamSideId::A)
+        .range;
+    let fragments = f.ledger.split(&mut f.ids, held.edge(), t(3, 4)).unwrap();
+    f.ledger.delete(&mut f.ids, fragments.second()).unwrap();
+    let error = partial
+        .validate_current(&f.plan, &f.pieces, &marks, &f.ledger)
+        .unwrap_err();
+    assert!(
+        matches!(&error, SewingError::EaseSource { source_span, .. } if *source_span==id(301)),
+        "{error:?}"
+    );
+}
+
+#[test]
+fn retained_source_resources_charge_each_canonical_body_once_per_logical_graph() {
+    use sc_core::design::{
+        charge_sewing_graph_resources, DesignResourceCount, DesignResourceLimitError,
+        DesignResourceLimits, DesignResourceLocation, DesignResourceMeter, DesignResourceScope,
+    };
+    use std::num::{NonZeroU64, NonZeroUsize};
+    let mut f = fixture();
+    let marks = [f.notch(810, t(1, 4)), f.notch(811, t(3, 4))];
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(810),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(811),
+        },
+    ];
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
+        side: SeamSideId::A,
+        regions: vec![
+            WeightedEaseRegion {
+                from: Param::START,
+                to: t(1, 2),
+                weight: Rational::ONE,
+            },
+            WeightedEaseRegion {
+                from: t(1, 2),
+                to: Param::END,
+                weight: Rational::new(2, 1).unwrap(),
+            },
+        ],
+    };
+    f.definition.spans = retained_children(&f, &marks);
+    let graph = f.graph(&marks).unwrap();
+    let saved = graph.clone();
+    let limits = |entries| {
+        DesignResourceLimits::new(
+            NonZeroUsize::new(entries).unwrap(),
+            NonZeroUsize::new(1).unwrap(),
+            NonZeroU64::new(1).unwrap(),
+        )
+    };
+    let mut exact = DesignResourceMeter::new(limits(7));
+    charge_sewing_graph_resources(&graph, &mut exact).unwrap();
+    assert_eq!(exact.finish().unwrap().collection_entries(), 7); // 2 spans +1 source +2 regions +2 original stops.
+    let mut limited = DesignResourceMeter::new(limits(6));
+    let expected = DesignResourceLimitError::Count {
+        unit: DesignResourceCount::CollectionEntries,
+        maximum: 6,
+        consumed: 5,
+        requested: 2,
+        location: DesignResourceLocation {
+            scope: DesignResourceScope::Sewing,
+            owner: Some(id(301)),
+            field: "sewing.ease_sources.stops",
+            index: Some(0),
+        },
+    };
+    assert_eq!(
+        charge_sewing_graph_resources(&graph, &mut limited),
+        Err(expected)
+    );
+    assert_eq!(limited.finish(), Err(expected));
+    let mut snapshots = DesignResourceMeter::new(limits(14));
+    charge_sewing_graph_resources(&graph, &mut snapshots).unwrap();
+    charge_sewing_graph_resources(&saved, &mut snapshots).unwrap();
+    assert_eq!(snapshots.finish().unwrap().collection_entries(), 14); // No dedup across logical snapshots.
+    assert_eq!(graph, saved);
+}
+
+#[test]
+fn duplicate_retained_interval_claims_cannot_spend_the_same_original_budget_twice() {
+    use sc_core::ontology::SeamEaseBindingIssue;
+    use std::error::Error as _;
+    let mut f = fixture();
+    f.span_mut().direction = SeamDirection::Same;
+    let original = f.graph(&[]).unwrap();
+    let root = original.spans().first().unwrap().retain_ease_source();
+    let a = f.span().a.range.edge();
+    let b = f.span().b.range.edge();
+    let split = |portion: &sc_core::ontology::SeamEasePortion, a_cut, b_cut| {
+        portion
+            .split_at(
+                EdgeAnchor {
+                    edge: a,
+                    param: a_cut,
+                },
+                EdgeAnchor {
+                    edge: b,
+                    param: b_cut,
+                },
+            )
+            .unwrap()
+    };
+    let [lower, upper] = split(&root, t(1, 2), t(1, 2));
+    let [_, remainder] = split(&root, t(1, 4), t(1, 4));
+    let [middle, _] = split(&remainder, t(3, 4), t(3, 4));
+    let [_, b_overlap] = split(&root, t(1, 2), t(1, 4));
+    for (first, next, side) in [
+        (lower.clone(), lower.clone(), SeamSideId::A),
+        (lower.clone(), middle, SeamSideId::A),
+        (upper, root.clone(), SeamSideId::A),
+        (lower, b_overlap, SeamSideId::B),
+    ] {
+        let first_range = first.side(side).range;
+        let interval = next.side(side).range;
+        f.definition.spans = [first, next]
+            .into_iter()
+            .zip(302_u128..)
+            .map(|(portion, identity)| SeamSpanDefinition {
+                id: id(identity),
+                a: portion.side(SeamSideId::A),
+                b: portion.side(SeamSideId::B),
+                direction: portion.source().direction(),
+                ease: portion.into(),
+                stops: vec![],
+            })
+            .collect();
+        let issue = SeamEaseBindingIssue::Overlap {
+            side,
+            first_span: id(302),
+            first: first_range,
+            interval,
+        };
+        let error = f.graph(&[]).unwrap_err();
+        assert_eq!(
+            error,
+            SewingError::EasePortionBinding {
+                span: id(303),
+                source_span: id(301),
+                issue: Box::new(issue)
+            }
+        );
+        assert_eq!(error.source().unwrap().to_string(), issue.to_string());
+    }
+}
+
+#[test]
+fn equal_independent_source_captures_are_folded_into_one_actual_canonical_body() {
+    let mut f = fixture();
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
+        side: SeamSideId::A,
+        regions: vec![WeightedEaseRegion {
+            from: Param::START,
+            to: Param::END,
+            weight: Rational::ONE,
+        }],
+    };
+    let first_capture = retained_children(&f, &[]);
+    let second_capture = retained_children(&f, &[]);
+    let first_source = first_capture
+        .first()
+        .unwrap()
+        .ease
+        .portion()
+        .unwrap()
+        .source();
+    let second_source = second_capture
+        .get(1)
+        .unwrap()
+        .ease
+        .portion()
+        .unwrap()
+        .source();
+    assert_eq!(first_source, second_source);
+    assert!(!std::ptr::eq(first_source, second_source));
+    f.definition.spans = vec![
+        first_capture.first().unwrap().clone(),
+        second_capture.get(1).unwrap().clone(),
+    ];
+    let graph = f.graph(&[]).unwrap();
+    let canonical = graph.ease_sources().next().unwrap();
+    assert!(
+        graph.spans().iter().all(|span| std::ptr::eq(
+            span.definition().ease.portion().unwrap().source(),
+            canonical
+        )),
+        "all portions must reference the actual canonical body charged by the graph"
+    );
+}
+
+#[test]
+fn distinct_retained_budgets_keep_first_consuming_order_and_separate_interval_claims() {
+    let mut f = fixture();
+    let original = retained_children(&f, &[]).first().unwrap().clone();
+    f.span_mut().id = id(311);
+    let mut other = retained_children(&f, &[]).first().unwrap().clone();
+    other.id = id(312);
+    assert_eq!(original.a, other.a);
+    assert_eq!(original.b, other.b);
+    f.definition.spans = vec![other, original];
+    let graph = f.graph(&[]).unwrap();
+    assert_eq!(
+        graph
+            .ease_sources()
+            .map(|source| source.span())
+            .collect::<Vec<_>>(),
+        vec![id(311), id(301)]
+    );
+    for (span, source) in graph.spans().iter().zip(graph.ease_sources()) {
+        assert!(std::ptr::eq(
+            span.definition().ease.portion().unwrap().source(),
+            source
+        ));
+        let mut editable = span.definition().clone();
+        assert!(editable.ease.declared_mut().is_none());
+    }
 }

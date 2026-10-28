@@ -163,7 +163,8 @@ fn fixture() -> (
             ease: DeclaredEase {
                 amount: EaseAmount::Explicit(Length::ZERO),
                 distribution: EaseDistribution::Uniform,
-            },
+            }
+            .into(),
             stops: vec![StopLandmark {
                 side: SeamSideId::B,
                 landmark: id(402),
@@ -191,7 +192,8 @@ fn fixture() -> (
                         },
                     ],
                 },
-            },
+            }
+            .into(),
             stops: notch_stops.clone(),
         },
         SeamSpanDefinition {
@@ -206,7 +208,8 @@ fn fixture() -> (
                     start: id(400),
                     end: id(401),
                 },
-            },
+            }
+            .into(),
             stops: notch_stops,
         },
     ];

@@ -584,7 +584,8 @@ fn with_sewing_graph(
                     ease: DeclaredEase {
                         amount,
                         distribution: EaseDistribution::Uniform,
-                    },
+                    }
+                    .into(),
                     stops: vec![],
                 })
                 .collect(),
@@ -670,7 +671,7 @@ fn sewing_amount_views_borrow_actual_explicit_and_both_length_parameter_families
         assert!(core::ptr::eq(view.canonical_inputs(), state.inputs()));
         match view.source() {
             DesignSewingAmountSource::Explicit(value) => {
-                let actual = match &span.definition().ease.amount {
+                let actual = match &span.definition().ease.declaration().amount {
                     EaseAmount::Explicit(value) => Some(value),
                     _ => None,
                 }
@@ -2380,3 +2381,180 @@ mod coupled_aggregate;
 
 #[path = "support/command_bus.rs"]
 mod command_bus;
+
+#[test]
+fn retained_sewing_amount_views_keep_original_sources_and_global_ownership_once() {
+    use sc_core::{
+        design::{
+            DesignSewing, DesignSewingAmountSource, DesignSewingDefinition, DesignSewingPosition,
+        },
+        ontology::{
+            EaseAmount, EdgeAnchor, Param, ProfileParameterRef, Rational, SeamSideId,
+            SeamSpanDefinition, SewingGraph, SewingGraphDefinition,
+        },
+    };
+    for amount in [
+        EaseAmount::Explicit(sc_units::Length::from_micrometres(-1).expect("signed original")),
+        EaseAmount::Formula(id(5001)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(820))),
+    ] {
+        let (inputs, original) = with_sewing_graph(fixture(), vec![amount]);
+        let span = original.spans().first().expect("actual root");
+        let root = span.retain_ease_source();
+        let half = Param::new(Rational::new(1, 2).expect("half")).expect("valid position");
+        let portions = root
+            .split_at(
+                EdgeAnchor {
+                    edge: span.definition().a.range.edge(),
+                    param: half,
+                },
+                EdgeAnchor {
+                    edge: span.definition().b.range.edge(),
+                    param: half,
+                },
+            )
+            .expect("actual root cuts");
+        let structure = inputs.structure();
+        let graph = SewingGraph::new(
+            SewingGraphDefinition {
+                id: original.id(),
+                spans: portions
+                    .into_iter()
+                    .zip(97001_u128..)
+                    .map(|(portion, identity)| SeamSpanDefinition {
+                        id: id(identity),
+                        a: portion.side(SeamSideId::A),
+                        b: portion.side(SeamSideId::B),
+                        direction: portion.source().direction(),
+                        ease: portion.into(),
+                        stops: vec![],
+                    })
+                    .collect(),
+            },
+            structure.cut_plan(),
+            structure.pieces().pieces(),
+            &[],
+            structure.topology(),
+        )
+        .expect("actual canonical retained graph");
+        let state = DesignSewing::new(DesignSewingDefinition {
+            inputs,
+            graph,
+            landmarks: vec![],
+        })
+        .expect("complete retained source ownership");
+        let ids = state.identities();
+        assert_eq!(
+            ids.iter()
+                .filter(|(identity, _)| *identity == id(97000))
+                .count(),
+            1
+        );
+        assert!(ids.contains(&(id(97000), DesignSewingPosition::EaseSource { index: 0 })));
+        let views = state
+            .amount_declarations()
+            .expect("actual complete current retained sources");
+        assert_eq!(views.len(), 2);
+        for view in views {
+            let portion = view.portion().expect("actual retained allocation context");
+            assert!(core::ptr::eq(
+                portion.source(),
+                state.graph().ease_sources().next().expect("one root")
+            ));
+            assert_eq!(portion.source().declaration().amount, amount);
+            match view.source() {
+                DesignSewingAmountSource::Explicit(value) => {
+                    assert_eq!(EaseAmount::Explicit(*value), amount)
+                }
+                DesignSewingAmountSource::Formula {
+                    parameter,
+                    declaration,
+                } => {
+                    assert_eq!(parameter.id(), id(5001));
+                    assert_eq!(
+                        declaration.source().kind(),
+                        sc_core::recipe::FormulaKind::Length
+                    );
+                }
+                DesignSewingAmountSource::Profile(reference) => {
+                    assert_eq!(EaseAmount::Profile(reference), amount)
+                }
+            }
+        }
+    }
+}
+
+#[test]
+fn retained_sewing_source_identity_cannot_alias_an_actual_root_parameter_owner() {
+    use sc_core::{
+        design::{DesignSewing, DesignSewingDefinition, DesignSewingError, DesignSewingPosition},
+        ontology::{
+            EaseAmount, SeamSideId, SeamSpanDefinition, SewingGraph, SewingGraphDefinition,
+        },
+    };
+    let (inputs, original) = with_sewing_graph(
+        fixture(),
+        vec![EaseAmount::Explicit(sc_units::Length::ZERO)],
+    );
+    let first = inputs
+        .identities()
+        .into_iter()
+        .find(|(identity, _)| *identity == id(5001))
+        .expect("actual parameter owner")
+        .1;
+    let mut source = original
+        .spans()
+        .first()
+        .expect("actual source span")
+        .definition()
+        .clone();
+    source.id = id(5001);
+    let structure = inputs.structure();
+    let source_graph = SewingGraph::new(
+        SewingGraphDefinition {
+            id: id(94001),
+            spans: vec![source],
+        },
+        structure.cut_plan(),
+        structure.pieces().pieces(),
+        &[],
+        structure.topology(),
+    )
+    .expect("standalone graph has no parameter registry");
+    let portion = source_graph
+        .spans()
+        .first()
+        .expect("original root")
+        .retain_ease_source();
+    let graph = SewingGraph::new(
+        SewingGraphDefinition {
+            id: id(94000),
+            spans: vec![SeamSpanDefinition {
+                id: id(97001),
+                a: portion.side(SeamSideId::A),
+                b: portion.side(SeamSideId::B),
+                direction: portion.source().direction(),
+                ease: portion.into(),
+                stops: vec![],
+            }],
+        },
+        structure.cut_plan(),
+        structure.pieces().pieces(),
+        &[],
+        structure.topology(),
+    )
+    .expect("valid retained graph before complete ownership");
+    assert_eq!(
+        DesignSewing::new(DesignSewingDefinition {
+            inputs,
+            graph,
+            landmarks: vec![]
+        })
+        .expect_err("retained source is an owned identity"),
+        DesignSewingError::DuplicateIdentity {
+            identity: id(5001),
+            first: DesignSewingPosition::Inputs(first),
+            duplicate: DesignSewingPosition::EaseSource { index: 0 }
+        }
+    );
+}

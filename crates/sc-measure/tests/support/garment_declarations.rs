@@ -233,7 +233,7 @@ fn unified_views_cover_every_actual_family_in_role_order_with_paired_layer_mater
                 ));
                 assert!(core::ptr::eq(
                     value.intake_source().declaration,
-                    &garment
+                    garment
                         .sewing()
                         .graph()
                         .spans()
@@ -241,6 +241,7 @@ fn unified_views_cover_every_actual_family_in_role_order_with_paired_layer_mater
                         .expect("span")
                         .definition()
                         .ease
+                        .declaration()
                 ));
                 actual.push(("gather", value.gather().id()));
             }

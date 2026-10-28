@@ -389,7 +389,8 @@ repairs remain open.
 
 DesignInputs.sewing_amount_declarations(&graph) checks all current inputs before lending each
 authored span's DesignSewingAmount over the actual canonical owner. Views borrow graph/root;
-no span or allocation is rewritten. Copy/range/stop validity, global ids, numeric/physical ease
+no span or allocation is rewritten. Retained views also borrow the exact portion mapping;source
+metadata denotes the full original declaration. Copy/range/stop validity,global ids,numeric/physical ease
 and release are separate checks.
 
 Explicit signed amounts borrow the span's Length. Formula(id) needs actual DesignParameter metadata
@@ -417,7 +418,8 @@ DesignSewing::new(DesignSewingDefinition { inputs, graph, landmarks }) owns the 
 graph and complete landmarks. Shared definition()/inputs()/graph()/landmarks() expose no mutator.
 Only the root owns canonical inputs; no context or replacement graph is stored.
 
-Before root validation, the identity census visits inputs, graph, landmarks, then authored spans.
+Before root validation,the identity census visits inputs,graph,landmarks,authored spans,then unique
+retained original sources. Their identities remain owned even when the original span is retired.
 Graph5000 cannot alias Design, span5001 parameter5001, or landmark90000 retired operation90000.
 DuplicateIdentity keeps both DesignSewingPositions. Copy/parameter/anchor refs remain uses; labels
 create no identities or ownership.
@@ -426,7 +428,7 @@ create no identities or ownership.
 | --- | --- |
 | `DesignSewingDefinition` | Exact authored root, graph and landmarks |
 | `DesignSewing` | Private immutable component owner |
-| `DesignSewingPosition` | Original input/graph/landmark/span location |
+| `DesignSewingPosition` | Original input/graph/landmark/span/source location |
 | `DesignSewingError` | Original ownership or current-root cause |
 
 Admission preserves held references for inspection/explicit repair. Replacing copy96000 with96010

@@ -98,7 +98,8 @@ fn fixture() -> Fixture {
         ease: DeclaredEase {
             amount: EaseAmount::Explicit(Length::ZERO),
             distribution: EaseDistribution::Uniform,
-        },
+        }
+        .into(),
         stops: vec![],
     };
     Fixture {
@@ -219,7 +220,13 @@ fn immutable_gather_retains_physical_target_and_borrows_existing_intake_and_allo
     assert_eq!(source.gathered_side, SeamSideId::A);
     assert!(std::ptr::eq(
         source.declaration,
-        &graph.spans().first().unwrap().definition().ease
+        graph
+            .spans()
+            .first()
+            .unwrap()
+            .definition()
+            .ease
+            .declaration()
     ));
     assert_eq!(
         gather.attachment_resolution(&graph, &f.ledger).unwrap(),
@@ -251,7 +258,7 @@ fn gathered_side_requires_the_correct_explicit_sign_with_authored_zero_legal_for
         (SeamSideId::B, 0, true),
     ] {
         let differential = Length::from_micrometres(value).unwrap();
-        f.span_mut().ease.amount = EaseAmount::Explicit(differential);
+        f.span_mut().ease.declared_mut().unwrap().amount = EaseAmount::Explicit(differential);
         let graph = f.graph(&[]).unwrap();
         let result = f.gather(f.gather_definition(side), &graph);
         if valid {
@@ -276,7 +283,7 @@ fn symbolic_sources_supply_no_value_or_default_and_profile_deferral_is_visible()
         EaseAmount::Formula(id(600)),
         EaseAmount::Profile(ProfileParameterRef::new(id(601))),
     ] {
-        f.span_mut().ease.amount = amount;
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
         let graph = f.graph(&[]).unwrap();
         for side in [SeamSideId::A, SeamSideId::B] {
             let gather = f.gather(f.gather_definition(side), &graph).unwrap();
@@ -329,7 +336,7 @@ fn uniform_weighted_and_between_notch_allocation_have_one_canonical_graph_source
             end: id(701),
         },
     ] {
-        f.span_mut().ease.distribution = distribution.clone();
+        f.span_mut().ease.declared_mut().unwrap().distribution = distribution.clone();
         let graph = f.graph(&marks).unwrap();
         let gather = f
             .gather(f.gather_definition(SeamSideId::A), &graph)
@@ -338,7 +345,13 @@ fn uniform_weighted_and_between_notch_allocation_have_one_canonical_graph_source
         assert_eq!(source.declaration.distribution, distribution);
         assert!(std::ptr::eq(
             source.declaration,
-            &graph.spans().first().unwrap().definition().ease
+            graph
+                .spans()
+                .first()
+                .unwrap()
+                .definition()
+                .ease
+                .declaration()
         ));
     }
 }
@@ -571,7 +584,7 @@ fn a_changed_explicit_ease_sign_is_detected_by_current_target_queries() {
         .gather(f.gather_definition(SeamSideId::A), &graph)
         .unwrap();
     let negative = Length::from_micrometres(-1).unwrap();
-    f.span_mut().ease.amount = EaseAmount::Explicit(negative);
+    f.span_mut().ease.declared_mut().unwrap().amount = EaseAmount::Explicit(negative);
     let changed = f.graph(&[]).unwrap();
     let expected = GatherError::IncompatibleEaseSign {
         side: SeamSideId::A,
@@ -595,7 +608,7 @@ fn current_intake_borrows_the_exact_graph_declaration_and_keeps_signed_side_orig
             EaseAmount::Profile(ProfileParameterRef::new(id(901))),
         ] {
             let mut f = fixture();
-            f.span_mut().ease.amount = amount;
+            f.span_mut().ease.declared_mut().unwrap().amount = amount;
             let graph = f.graph(&[]).unwrap();
             let input = f.gather_definition(side);
             let gather = f.gather(input.clone(), &graph).unwrap();
@@ -609,7 +622,13 @@ fn current_intake_borrows_the_exact_graph_declaration_and_keeps_signed_side_orig
                 .unwrap();
             assert!(std::ptr::eq(
                 source.declaration,
-                &graph.spans().first().unwrap().definition().ease
+                graph
+                    .spans()
+                    .first()
+                    .unwrap()
+                    .definition()
+                    .ease
+                    .declaration()
             ));
             assert_eq!(source.declaration.amount, amount);
             assert_eq!(source.gathered_side, side);
@@ -709,4 +728,55 @@ fn current_intake_refuses_attachment_or_direction_interior_repairs_without_parti
         );
         assert_eq!(gather.definition(), &input);
     }
+}
+
+#[test]
+fn retained_gather_intake_keeps_original_source_and_exact_portion_context() {
+    let mut f = fixture();
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    let original = f.graph(&[]).unwrap();
+    let root = original.spans().first().unwrap().retain_ease_source();
+    let [first, _] = root
+        .split_at(
+            EdgeAnchor {
+                edge: f.span().a.range.edge(),
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: t(1, 2),
+            },
+        )
+        .unwrap();
+    f.definition.spans = vec![SeamSpanDefinition {
+        id: id(302),
+        a: first.side(SeamSideId::A),
+        b: first.side(SeamSideId::B),
+        direction: first.source().direction(),
+        ease: first.into(),
+        stops: vec![],
+    }];
+    let graph = f.graph(&[]).unwrap();
+    let gather = f
+        .gather(f.gather_definition(SeamSideId::A), &graph)
+        .unwrap();
+    let intake = gather.intake_source(&graph).unwrap();
+    let portion = intake.portion.unwrap();
+    assert!(std::ptr::eq(
+        intake.declaration,
+        portion.source().declaration()
+    ));
+    assert!(std::ptr::eq(
+        portion.source(),
+        graph.ease_sources().next().unwrap()
+    ));
+    assert_eq!(
+        intake.declaration.amount,
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap())
+    );
+    assert_eq!(
+        portion.side(SeamSideId::A),
+        graph.spans().first().unwrap().definition().a
+    );
 }

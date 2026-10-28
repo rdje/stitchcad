@@ -149,7 +149,10 @@ fn joined_views_borrow_original_signed_side_span_amount_and_closing_intent_in_au
             .find(|span| span.id() == gather.definition().span)
             .expect("same original span");
         assert!(core::ptr::eq(amount.span(), span));
-        assert!(core::ptr::eq(intake.declaration, &span.definition().ease));
+        assert!(core::ptr::eq(
+            intake.declaration,
+            span.definition().ease.declaration()
+        ));
         assert_eq!(intake.gathered_side, gather.definition().side);
         match amount.source() {
             DesignSewingAmountSource::Explicit(value) => {

@@ -1,10 +1,116 @@
-//! Retained original ease declarations and source intervals; graph installation is separate.
+//! Canonical declared or retained ease,with immutable original sources and source intervals.
 use super::{
-    DeclaredEase, EdgeAnchor, EdgeRef, EntityId, RangeSplitError, SeamDirection, SeamSide,
-    SeamSideId, SeamSpan,
+    DeclaredEase, EdgeAnchor, EdgeRange, EdgeRef, EntityId, RangeSplitError, SeamDirection,
+    SeamSide, SeamSideId, SeamSpan, StopLandmark,
 };
 use core::fmt;
+use std::collections::BTreeMap;
 use std::sync::Arc;
+
+/// Canonical ease intent: an authored declaration or an interval of a retained original source.
+/// A retained portion has no independently authored child amount or distribution.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum SeamEase {
+    /// Original signed/symbolic amount and allocation intent.
+    Declared(DeclaredEase),
+    /// Source intervals sharing their immutable original declaration.
+    Portion(SeamEasePortion),
+}
+impl From<DeclaredEase> for SeamEase {
+    fn from(value: DeclaredEase) -> Self {
+        Self::Declared(value)
+    }
+}
+impl From<SeamEasePortion> for SeamEase {
+    fn from(value: SeamEasePortion) -> Self {
+        Self::Portion(value)
+    }
+}
+impl SeamEase {
+    /// Original source declaration; for a portion this is the full parent,not a child quantity.
+    #[must_use]
+    pub fn declaration(&self) -> &DeclaredEase {
+        match self {
+            Self::Declared(value) => value,
+            Self::Portion(value) => value.source().declaration(),
+        }
+    }
+    /// Exact retained source intervals,when this span inherits its ease.
+    #[must_use]
+    pub const fn portion(&self) -> Option<&SeamEasePortion> {
+        match self {
+            Self::Declared(_) => None,
+            Self::Portion(value) => Some(value),
+        }
+    }
+    /// Edit an authored declaration in an editable input;retained source data stays immutable.
+    pub fn declared_mut(&mut self) -> Option<&mut DeclaredEase> {
+        match self {
+            Self::Declared(value) => Some(value),
+            Self::Portion(_) => None,
+        }
+    }
+}
+
+/// Actual side or direction mismatch between a span and its retained source interval portion.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum SeamEaseBindingIssue {
+    /// Two consuming spans claim overlapping intervals of one original allocation source.
+    Overlap {
+        /// Named original side.
+        side: SeamSideId,
+        /// Previously admitted consuming span.
+        first_span: EntityId,
+        /// Actual previous original-frame interval.
+        first: EdgeRange,
+        /// Actual overlapping new original-frame interval.
+        interval: EdgeRange,
+    },
+    /// A side differs from the portion's original physical copy or exact domain.
+    Side {
+        /// Named side.
+        side: SeamSideId,
+        /// Actual immutable portion side.
+        expected: SeamSide,
+        /// Actual supplied span side.
+        actual: SeamSide,
+    },
+    /// The span changes its retained source's endpoint correspondence.
+    Direction {
+        /// Original source direction.
+        expected: SeamDirection,
+        /// Actual supplied span direction.
+        actual: SeamDirection,
+    },
+}
+impl fmt::Display for SeamEaseBindingIssue {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::Overlap {
+                side,
+                first_span,
+                first,
+                interval,
+            } => write!(
+                f,
+                "retained ease {side:?} interval {interval:?} overlaps span {first_span} interval {first:?}"
+            ),
+            Self::Side {
+                side,
+                expected,
+                actual,
+            } => write!(
+                f,
+                "retained ease {side:?} needs {expected:?}, got {actual:?}"
+            ),
+            Self::Direction { expected, actual } => write!(
+                f,
+                "retained ease direction needs {expected:?}, got {actual:?}"
+            ),
+        }
+    }
+}
+impl std::error::Error for SeamEaseBindingIssue {}
 
 /// Immutable original ease source captured from an actual structurally validated span.
 /// Original physical copies, source domains, direction and symbolic/distribution intent survive
@@ -12,10 +118,10 @@ use std::sync::Arc;
 ///
 /// Its provenance cannot be forged through public fields:
 /// ```compile_fail
-/// use sc_core::ontology::{DeclaredEase, EntityId, SeamDirection, SeamEaseSource, SeamSide};
+/// use sc_core::ontology::{DeclaredEase, EntityId, SeamDirection, SeamEaseSource, SeamSide, StopLandmark};
 /// fn forge(span: EntityId, a: SeamSide, b: SeamSide, direction: SeamDirection,
-///     ease: DeclaredEase) -> SeamEaseSource {
-///     SeamEaseSource { span, a, b, direction, ease }
+///     ease: DeclaredEase, stops: Vec<StopLandmark>) -> SeamEaseSource {
+///     SeamEaseSource { span, a, b, direction, ease, stops }
 /// }
 /// ```
 #[derive(PartialEq, Eq)]
@@ -25,6 +131,7 @@ pub struct SeamEaseSource {
     b: SeamSide,
     direction: SeamDirection,
     ease: DeclaredEase,
+    stops: Vec<StopLandmark>,
 }
 
 impl fmt::Debug for SeamEaseSource {
@@ -35,6 +142,7 @@ impl fmt::Debug for SeamEaseSource {
             b,
             direction,
             ease: _,
+            stops: _,
         } = self;
         f.debug_struct("SeamEaseSource")
             .field("span", span)
@@ -46,6 +154,32 @@ impl fmt::Debug for SeamEaseSource {
 }
 
 impl SeamEaseSource {
+    pub(crate) fn resource_parts(
+        &self,
+    ) -> (
+        EntityId,
+        SeamSide,
+        SeamSide,
+        SeamDirection,
+        &DeclaredEase,
+        &[StopLandmark],
+    ) {
+        let Self {
+            span,
+            a,
+            b,
+            direction,
+            ease,
+            stops,
+        } = self;
+        (*span, *a, *b, *direction, ease, stops)
+    }
+    /// Original semantic stops,including source notch-boundary membership,in authored order.
+    #[must_use]
+    pub fn stops(&self) -> &[StopLandmark] {
+        &self.stops
+    }
+
     /// Original correspondence identity; no new child or independently issued source identity.
     #[must_use]
     pub const fn span(&self) -> EntityId {
@@ -170,6 +304,29 @@ impl fmt::Debug for SeamEasePortion {
 }
 
 impl SeamEasePortion {
+    // Graph construction calls this only after complete content/coherence validation. Equal
+    // sources become one actual immutable body,not merely one counted identity.
+    pub(crate) fn canonicalize_source(
+        &mut self,
+        sources: &mut BTreeMap<EntityId, Arc<SeamEaseSource>>,
+        ordered: &mut Vec<Arc<SeamEaseSource>>,
+    ) {
+        let Self { source, a: _, b: _ } = self;
+        let canonical = sources.entry(source.span()).or_insert_with(|| {
+            let shared = Arc::clone(source);
+            ordered.push(Arc::clone(&shared));
+            shared
+        });
+        *source = Arc::clone(canonical);
+    }
+    pub(crate) const fn resource_sides(&self) -> (SeamSide, SeamSide) {
+        let Self { source: _, a, b } = self;
+        (*a, *b)
+    }
+    pub(crate) fn shared_source(&self) -> Arc<SeamEaseSource> {
+        let Self { source, a: _, b: _ } = self;
+        Arc::clone(source)
+    }
     /// Original full source/domain/declaration, shared unchanged by every descendant portion.
     #[must_use]
     pub fn source(&self) -> &SeamEaseSource {
@@ -249,10 +406,10 @@ impl SeamEasePortion {
 
 impl SeamSpan {
     /// Capture an owned immutable original ease source and whole-domain portion from this span.
-    /// Clones the actual declaration once,including any weighted regions. Subsequent portion
+    /// Clones an authored declaration and original semantic stops once. Subsequent portion
     /// clones/splits share that same source;callers must admit this capture cost before bus use.
     /// This snapshot preserves held references without fresh topology or source-value validation.
-    /// Canonical graph ownership/resource integration and quantity queries remain separate stages.
+    /// Retained portions keep their existing source;quantity queries and paired effects remain separate stages.
     ///
     /// The retained source may outlive the caller's original graph:
     /// ```
@@ -260,20 +417,24 @@ impl SeamSpan {
     /// fn retain(actual: &SeamSpan) -> SeamEasePortion {
     ///     let portion = actual.retain_ease_source();
     ///     assert_eq!(portion.source().span(), actual.id());
-    ///     assert_eq!(portion.source().declaration(), &actual.definition().ease);
+    ///     assert_eq!(portion.source().declaration(), actual.definition().ease.declaration());
     ///     portion
     /// }
     /// ```
     #[must_use]
     pub fn retain_ease_source(&self) -> SeamEasePortion {
         let original = self.definition();
+        if let SeamEase::Portion(portion) = &original.ease {
+            return portion.clone();
+        }
         SeamEasePortion {
             source: Arc::new(SeamEaseSource {
                 span: original.id,
                 a: original.a,
                 b: original.b,
                 direction: original.direction,
-                ease: original.ease.clone(),
+                ease: original.ease.declaration().clone(),
+                stops: original.stops.clone(),
             }),
             a: original.a,
             b: original.b,

@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0491 — retain original ease sources through repeated interval partitions
+## STITCHCAD-G1-0492 — integrate canonical retained ease sources into the graph
 
-- Add private owned SeamEaseSource and shared SeamEasePortion from the actual span. Preserve original copies/domains/direction and explicit/formula/profile/weighted/notch declarations through A-ordered source cuts;no independent child amount or identity.
-- Native selected3/sewing36/docs3/strict scoped Clippy/fmt pass. Both cut orders share the exact root;graph-drop,replacement/current-deletion and original frame/interior/error-chain controls pass.
-- Book88/171/1559/2657/glossary0 pass. Whole0490 retained645;retention1099 passes,active45/64. D301 stays P1 for graph/ownership/current/resource and retained quantity integration,then nonuniform/stops/lineage/paired acceptance.
+- Spans store declared ease or retained portions without independent child amounts. Graphs own one actual source body per original identity;full original stops/domains,current readiness,global identities and resource charging remain explicit. Amount/Gather metadata retains exact allocation context.
+- Fix initial uncommitted D303 duplicate claims and D304 equal-but-distinct source bodies with ordered disjoint interval admission and post-validation canonicalization. Native sewing43/gather16/resource5/construction9/measure sewing14+retained2/docs11/scoped Clippy/fmt pass.
+- Book88/173/1560/2659/glossary0 pass;whole0491 retained646,retention1100 passes. LIVE notes D303/D304 fixed,G1 remains6/18. D301 retained quantity queries,nonuniform/stops/lineage and paired execution/acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

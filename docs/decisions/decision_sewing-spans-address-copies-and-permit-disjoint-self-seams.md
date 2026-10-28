@@ -98,3 +98,29 @@ domains/reflection,explicit/formula/profile and all distribution kinds. Retained
 graph;replacement or topology deletion does not rebind or certify it. Capture clones weighted data
 once,so command admission must precede capture. Canonical graph/source ownership,current readiness,
 resource accounting and original-root quantity queries remain next .3.2/.3.3;D301 stays P1 before effects.
+
+## Canonical retained-source integration design0492
+
+Use an explicit declared-versus-portion ease enum on spans;children carry no independent amount or
+distribution. The graph owns one immutable source per original span identity,with coherence and
+same-id conflicting-source checks. Retain original semantic stops with the source for current
+notch/domain validation. Capture inherited portions by sharing the existing root,never recapturing
+rounded child totals. Current child domains/stops and original source domains/stops validate separately.
+Graph source identities join global ownership once;resource accounting charges each canonical source
+body once per logical graph,without deduplicating across model snapshots. Amount/Gather metadata
+retains the portion mapping alongside the original declaration. The earlier direct uniform helper
+must refuse retained portions until original-root quantity integration;no fabricated child value.
+
+## Canonical graph/source result0492
+
+answers: "does source identity equality alone prevent double claims or guarantee one charged body?"
+
+No. D303 native red control accepted duplicate interval claims;ordered per-source/per-side maps now
+refuse positive overlap with original consumer/range evidence while allowing touching and separate
+budgets. D304 native red control found equal independent roots with noncanonical backing pointers.
+After complete current/coherence validation,fold equal roots onto one actual body in first-consuming
+order. No declaration value changes. Graph ownership/resource/source/metadata integration is native:
+sewing43/gather16/resource5/construction9/measure sewing14+retained2/docs11 pass. Original full stops/
+domains stay source dependencies;child stop subsets do not erase them. Meter7/limit6/two snapshots14
+watch logical ownership and original failures. Current value/effect readiness remains separate;
+retained quantity queries .3.3 and paired execution are still owned,D301 P1 remains open.

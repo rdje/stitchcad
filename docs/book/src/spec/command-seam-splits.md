@@ -2,7 +2,7 @@
 
 The sc-core SplitSeamSpan input can now bind its original source cuts to the actual held SewingGraph.
 This is an implemented native prerequisite for the paired handler. Current copy/range resolution,
-physical pairing, complete ease/stop conservation, lineage, resource admission and atomic effects retain their
+physical pairing,complete ease/stop conservation,lineage,command admission and atomic effects retain their
 execution owners. The bus still exposes its three implemented metadata handlers.
 
 ## Bind the actual held source
@@ -133,6 +133,7 @@ stop ownership and retired-parent/new-child lineage remain separate owned partit
 | `uniform_explicit_ease` | Check the actual uniform explicit source and directed cut progress |
 | `CommandUniformEasePartition` | Sealed original request/span borrow with conserved A-ordered amounts |
 | `CommandUniformEaseError` | Original helper eligibility,progress,frame or quantity refusal |
+| `RetainedPortion` | Existing source portion needs its separate original-root quantity query |
 | `parent_amount` | Original signed explicit amount |
 | `cut_progress` | Exact normalized A cut progress |
 | `first_amount` | First projected pair's cumulative quantized amount |
@@ -147,7 +148,8 @@ stop ownership and retired-parent/new-child lineage remain separate owned partit
 | `IntervalSource` | Query interval names a different original A edge |
 | `Numeric` | Original shared UnitError,also the standard error source |
 
-The native helper reads the actual held span. It checks distribution eligibility,then explicit
+The native helper reads the actual held span and first refuses a retained portion. For a direct
+declaration,it checks distribution eligibility,then explicit
 amount,then exact A/B normalized progress. Same direction requires equal ascending progress;
 Opposite requires A progress to equal one minus ascending B progress. Unequal source parameters
 can be valid on unequal partial domains. Stored edge parameters are fractions of their own edge
@@ -206,7 +208,7 @@ resource admission and atomic paired publication remain required. D301 stays ope
 This native prerequisite snapshots the actual structurally validated span's original correspondence
 identity,physical-copy identities,full source ranges,direction and complete ease declaration.
 Explicit signed amounts,formula identities,profile references,weighted regions and notch-boundary
-identities remain exact. Capturing clones the declaration once,including weighted regions. Callers
+identities remain exact. Capturing clones the declaration once,including weighted regions and original semantic stops. Callers
 must admit that cost before using capture in a command. Cloning or splitting portions then shares
 the same immutable source,without cloning those regions or creating independently authored amounts.
 
@@ -236,5 +238,67 @@ Portions describe source interval partitions. Their cuts may have unequal normal
 this operation does not evaluate the distribution or establish physical correspondence. It supplies
 no child quantity,span identity,stop partition,live lineage or installed graph change. Actual current
 validation can still refuse after topology deletion while the retained source stays inspectable.
-Graph ownership/current-source/resource integration and original-source quantity queries retain
-their own implementation leaves;full paired effects remain pending under D301.
+Canonical graph/current-source/resource integration is implemented below. Original-source quantity
+queries for retained portions and full paired effects remain pending under D301.
+
+## Canonical graph-owned ease sources
+
+| API token | Meaning |
+| --- | --- |
+| `SeamEase` | Authored declaration or retained portion,without independent child amount/distribution |
+| `Declared` | Direct original amount/distribution intent |
+| `Portion` | Exact retained source intervals used by this consuming span |
+| `declared_mut` | Edit a direct declaration in an editable input;retained sources return no mutable view |
+| `portion` | Borrow retained allocation context alongside original amount metadata |
+| `ease_sources` | Unique original source bodies in first-consuming-span order |
+| `SeamEaseBindingIssue` | Actual side,direction or overlapping source-claim evidence |
+| `Side` | Supplied side differs from its portion's exact original copy/domain |
+| `Direction` | Supplied direction differs from the original source |
+| `Overlap` | A previously admitted consumer claims overlapping original-domain material |
+| `EasePortionBinding` | Consuming span/source identities plus the original boxed binding issue |
+| `EaseSourceConflict` | Same original identity appears with conflicting source content |
+| `EaseSource` | Retained original source ownership position or wrapped current source refusal |
+
+An authored span now stores its original declaration with an explicit conversion:
+
+```rust,ignore
+let ease: SeamEase = DeclaredEase {
+    amount: EaseAmount::Explicit(original_length),
+    distribution: EaseDistribution::Uniform,
+}.into();
+```
+
+A child stores its existing portion with the same conversion,then uses the portion's exact sides
+and original direction. It has no separately editable child differential or distribution. Recapturing
+an inherited span shares its existing root and portion;it never turns a rounded child total into a
+new source. The private graph owns each original source identity once. Equal independent captures
+are folded onto one actual shared body after complete validation;conflicting same-id content refuses.
+This is canonical ownership,not a discount for coincidentally equal backing data across model snapshots.
+
+Current validation checks the consuming span's side/copy/domain and direction against its portion,
+then its actual ranges/stops. Original full source ranges/stops/distribution validate separately.
+For example,a between-notches root can retain both original notch dependencies while each child's
+stop list is a subset. Missing source landmarks or damaged original material remain visible,with
+original source identity and concrete SewingError in the standard error chain. Missing-landmark
+inventory includes retained source stops. An old root identity names owned provenance,not a live
+replacement command target;binding that retired target still refuses MissingSpan.
+
+Interval claims from one source must be disjoint on each side. Ordered exact interval admission
+checks A then B;touching endpoints are legal,positive overlap refuses with both original intervals
+and the prior consumer identity. Duplicate portions,predecessor/successor overlap and isolated B-side
+overlap are watched natively. Partial coverage remains legal;this does not certify full paired
+coverage,physical correspondence or a realized quantity sum.
+
+The Design sewing ownership census visits inputs,graph,landmarks,live spans,then unique original
+sources. A source cannot alias a parameter or another actual owner. Amount and Gather views retain
+the exact portion mapping alongside the full original declaration. An explicit original1 µm is still
+source metadata;it is not a reported child allocation. Formula declarations bind actual current
+Length-kind parameters;logical profile references remain deferred as before.
+
+Resource accounting visits spans/direct declarations/stops,then canonical source entries,weighted
+regions and original stops in source order. Fixed physical/range/reference fields stay metadata.
+A native fixture uses2 spans+1 source+2 regions+2 original stops=7 entries;limit6 refuses the original
+source's stop charge with consumed5/requested2. Charging two logical graph snapshots costs14 even
+when their immutable backing is shared. Exhaustive private owner/source/portion views retain field
+coverage. Command capture/admission,quantity integration,stop/lineage effects and paired acceptance
+remain their implementation owners;this change does not make SplitSeamSpan executable on the bus.

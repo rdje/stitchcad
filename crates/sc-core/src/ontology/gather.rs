@@ -3,7 +3,7 @@ use super::range::range_is_owned;
 use super::{
     CutCopy, CutPlan, DeclaredEase, DirectedRange, DirectedRangeResolution, EaseAmount, EntityId,
     GeometricValidation, IdentityLedger, IntakeValidation, Piece, ProfileBindingValidation,
-    RangeResolution, SeamSide, SeamSideId, SeamSpan, SewingGraph,
+    RangeResolution, SeamEasePortion, SeamSide, SeamSideId, SeamSpan, SewingGraph,
 };
 use core::fmt;
 use sc_units::Length;
@@ -33,6 +33,8 @@ pub struct GatherIntakeSource<'a> {
     pub declaration: &'a DeclaredEase,
     /// Gathering A interprets A-minus-B directly; gathering B interprets its negation.
     pub gathered_side: SeamSideId,
+    /// Retained original-domain allocation context;declaration remains the full source amount.
+    pub portion: Option<&'a SeamEasePortion>,
 }
 /// Structural reference role named by constructor refusals.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -281,7 +283,8 @@ impl Gather {
     ) -> Result<GatherIntakeSource<'a>, GatherError> {
         let span = held_span(&self.definition, graph)?;
         Ok(GatherIntakeSource {
-            declaration: &span.definition().ease,
+            declaration: span.definition().ease.declaration(),
+            portion: span.definition().ease.portion(),
             gathered_side: self.definition.side,
         })
     }
@@ -364,7 +367,7 @@ fn held_span<'a>(
             current,
         });
     }
-    if let EaseAmount::Explicit(value) = span.definition().ease.amount {
+    if let EaseAmount::Explicit(value) = span.definition().ease.declaration().amount {
         let wrong_sign = match definition.side {
             SeamSideId::A => value.as_micrometres() < 0,
             SeamSideId::B => value.as_micrometres() > 0,

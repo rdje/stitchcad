@@ -2,7 +2,8 @@
 use super::{DesignInputs, DesignInputsError, DesignParameter, DesignReferenceHost};
 use crate::{
     ontology::{
-        EaseAmount, EntityId, ProfileBindingValidation, ProfileParameterRef, SeamSpan, SewingGraph,
+        EaseAmount, EntityId, ProfileBindingValidation, ProfileParameterRef, SeamEasePortion,
+        SeamSpan, SewingGraph,
     },
     recipe::{FormulaDeclaration, FormulaKind},
     value::CanonicalInputs,
@@ -48,6 +49,7 @@ pub struct DesignSewingAmount<'a> {
     span: &'a SeamSpan,
     canonical: &'a CanonicalInputs,
     source: DesignSewingAmountSource<'a>,
+    portion: Option<&'a SeamEasePortion>,
 }
 impl fmt::Debug for DesignSewingAmount<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -57,6 +59,12 @@ impl fmt::Debug for DesignSewingAmount<'_> {
     }
 }
 impl<'a> DesignSewingAmount<'a> {
+    /// Retained original-domain allocation context;source() is its full original declaration.
+    #[must_use]
+    pub const fn portion(self) -> Option<&'a SeamEasePortion> {
+        self.portion
+    }
+
     /// Original actual span, without a copied amount or allocation.
     #[must_use]
     pub const fn span(self) -> &'a SeamSpan {
@@ -153,7 +161,7 @@ impl<H: DesignReferenceHost> DesignInputs<H> {
             .spans()
             .iter()
             .map(|span| {
-                let source = match &span.definition().ease.amount {
+                let source = match &span.definition().ease.declaration().amount {
                     EaseAmount::Explicit(value) => DesignSewingAmountSource::Explicit(value),
                     EaseAmount::Profile(reference) => DesignSewingAmountSource::Profile(*reference),
                     EaseAmount::Formula(identity) => {
@@ -190,6 +198,7 @@ impl<H: DesignReferenceHost> DesignInputs<H> {
                     span,
                     canonical: self.inputs(),
                     source,
+                    portion: span.definition().ease.portion(),
                 })
             })
             .collect()

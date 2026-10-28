@@ -11,6 +11,13 @@ use sc_units::{round::div_round_half_away_from_zero, Length, UnitError};
 /// Distribution/amount variants describe helper eligibility, not an invalid sewing graph.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum CommandUniformEaseError {
+    /// Retained original-source portions require their separate original-root quantity query.
+    RetainedPortion {
+        /// Actual requested span identity.
+        span: EntityId,
+        /// Retained original source identity.
+        source_span: EntityId,
+    },
     /// Weighted allocation requires its separate cumulative distribution implementation.
     Weighted {
         /// Original correspondence identity.
@@ -77,6 +84,10 @@ pub enum CommandUniformEaseError {
 impl fmt::Display for CommandUniformEaseError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::RetainedPortion { span, source_span } => write!(
+                f,
+                "span {span} uses retained ease source {source_span};direct allocation is inapplicable"
+            ),
             Self::Weighted { span, side } => {
                 write!(f,
                 "seam {span} uses weighted ease on {side:?}; uniform allocation is inapplicable")
@@ -128,7 +139,11 @@ impl std::error::Error for CommandUniformEaseError {
                 issue,
             } => Some(issue.as_ref()),
             Self::Numeric { span: _, issue } => Some(issue),
-            Self::Weighted { span: _, side: _ }
+            Self::RetainedPortion {
+                span: _,
+                source_span: _,
+            }
+            | Self::Weighted { span: _, side: _ }
             | Self::BetweenNotches {
                 span: _,
                 side: _,
@@ -305,7 +320,13 @@ impl<'a> CommandSeamSplitBinding<'a> {
     ) -> Result<CommandUniformEasePartition<'a>, CommandUniformEaseError> {
         let span = self.span();
         let source = span.definition();
-        match &source.ease.distribution {
+        if let Some(portion) = source.ease.portion() {
+            return Err(CommandUniformEaseError::RetainedPortion {
+                span: span.id(),
+                source_span: portion.source().span(),
+            });
+        }
+        match &source.ease.declaration().distribution {
             EaseDistribution::Uniform => (),
             EaseDistribution::Weighted { side, regions: _ } => {
                 return Err(CommandUniformEaseError::Weighted {
@@ -322,7 +343,7 @@ impl<'a> CommandSeamSplitBinding<'a> {
                 })
             }
         }
-        let parent = match source.ease.amount {
+        let parent = match source.ease.declaration().amount {
             EaseAmount::Explicit(amount) => amount,
             amount @ (EaseAmount::Formula(_) | EaseAmount::Profile(_)) => {
                 return Err(CommandUniformEaseError::Amount {

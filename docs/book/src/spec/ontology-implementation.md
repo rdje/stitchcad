@@ -228,7 +228,9 @@ no physical validation.
 **Copy-addressed sewing (`G1-SLICE.3c.2b.2`).** `SewingGraph::new` validates the graph against
 its complete CutPlan, Piece collection, semantic landmark registry and topology ledger. Each
 `SeamSpanDefinition` supplies its id, A/B `SeamSide`s (copy id plus positive EdgeRange), an explicit
-`SeamDirection`, signed `DeclaredEase` and `StopLandmark`s on explicit sides. The immutable graph
+`SeamDirection`, canonical ease intent and `StopLandmark`s on explicit sides. Direct declarations
+retain signed DeclaredEase;retained portions share their original source. See
+[canonical seam sources](command-seam-splits.md#canonical-graph-owned-ease-sources). The immutable graph
 exposes shared spans, not public mutators; commands will construct and validate atomic replacements.
 Ids across this supplied scope must be unique. A missing copy, landmark, source interval or owned
 material portion is a typed `SewingError`, with resolution evidence retained for repair/choice cases.

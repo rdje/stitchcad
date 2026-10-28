@@ -4,11 +4,12 @@ use super::range::range_is_owned;
 use super::{
     AnchorError, CutPlan, CutPlanError, EdgeAnchor, EdgeRange, EntityId, GeometricValidation,
     IdentityLedger, Notch, Param, Piece, ProfileParameterRef, RangePortion, RangeResolution,
-    Rational, Resolution, ResolvedRef,
+    Rational, Resolution, ResolvedRef, SeamEase, SeamEaseBindingIssue, SeamEaseSource,
 };
 use core::fmt;
 use sc_units::Length;
 use std::collections::{BTreeMap, BTreeSet};
+use std::sync::Arc;
 
 /// One born-valid semantic sewing turn, without claiming a geometric corner.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -196,7 +197,7 @@ pub struct SeamSpanDefinition {
     /// Which endpoints correspond.
     pub direction: SeamDirection,
     /// Differential and allocation intent; never implicit stretch.
-    pub ease: DeclaredEase,
+    pub ease: SeamEase,
     /// Semantic stops, in caller-authored order.
     pub stops: Vec<StopLandmark>,
 }
@@ -253,6 +254,7 @@ pub struct SewingGraphDefinition {
 pub struct SewingGraph {
     id: EntityId,
     spans: Vec<SeamSpan>,
+    ease_sources: Vec<Arc<SeamEaseSource>>,
 }
 /// Visible deferred obligation for every declared seam differential/distribution.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -275,6 +277,31 @@ pub enum WeightIssue {
 /// A typed sewing construction refusal, retaining resolution evidence where applicable.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum SewingError {
+    /// Same original identity is supplied with conflicting retained source content.
+    EaseSourceConflict {
+        /// Original retained source identity.
+        source_span: EntityId,
+        /// First consuming span in authored order.
+        first_span: EntityId,
+        /// Conflicting consuming span.
+        span: EntityId,
+    },
+    /// A span's actual sides/direction disagree with its immutable ease portion.
+    EasePortionBinding {
+        /// Actual consuming span identity.
+        span: EntityId,
+        /// Original source identity.
+        source_span: EntityId,
+        /// Original concrete mismatch,also the standard error source.
+        issue: Box<SeamEaseBindingIssue>,
+    },
+    /// Actual retained full source is not currently structurally ready.
+    EaseSource {
+        /// Original retained correspondence identity.
+        source_span: EntityId,
+        /// Concrete original source refusal,also the standard error source.
+        issue: Box<SewingError>,
+    },
     /// The cut plan no longer matches the supplied Piece collection.
     InvalidCutPlan(CutPlanError),
     /// An entity id is repeated across graph, spans, landmarks, copies or Pieces.
@@ -370,6 +397,22 @@ pub enum SewingError {
 impl fmt::Display for SewingError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
+            Self::EaseSourceConflict {
+                source_span,
+                first_span,
+                span,
+            } => write!(
+                f,
+                "ease source {source_span} conflicts between spans {first_span} and {span}"
+            ),
+            Self::EasePortionBinding {
+                span,
+                source_span,
+                issue,
+            } => write!(f, "span {span} ease source {source_span}: {issue}"),
+            Self::EaseSource { source_span, issue } => {
+                write!(f, "retained ease source {source_span}: {issue}")
+            }
             Self::InvalidCutPlan(error) => write!(f, "sewing graph cut plan: {error}"),
             Self::IdentityCollision { id } => {
                 write!(f, "sewing graph repeats entity identity {id}")
@@ -429,10 +472,21 @@ impl std::error::Error for SewingError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
             Self::InvalidCutPlan(issue) => Some(issue),
+            Self::EasePortionBinding {
+                span: _,
+                source_span: _,
+                issue,
+            } => Some(issue.as_ref()),
+            Self::EaseSource {
+                source_span: _,
+                issue,
+            } => Some(issue.as_ref()),
             _ => None,
         }
     }
 }
+
+type ClaimedIntervals = BTreeMap<(EntityId, SeamSideId), BTreeMap<Param, (EdgeRange, EntityId)>>;
 
 struct ValidatedSide {
     side: SeamSideId,
@@ -441,9 +495,13 @@ struct ValidatedSide {
 }
 
 impl SewingGraph {
-    pub(crate) fn resource_spans(&self) -> (EntityId, &[SeamSpan]) {
-        let Self { id, spans } = self;
-        (*id, spans)
+    pub(crate) fn resource_spans(&self) -> (EntityId, &[SeamSpan], &[Arc<SeamEaseSource>]) {
+        let Self {
+            id,
+            spans,
+            ease_sources,
+        } = self;
+        (*id, spans, ease_sources)
     }
 
     /// Validate copy addressing, owned complete ranges, disjoint self-seams, stops and ease domains.
@@ -457,15 +515,32 @@ impl SewingGraph {
         landmarks: &[SewingLandmark],
         ledger: &IdentityLedger,
     ) -> Result<Self, SewingError> {
-        let graph = Self {
+        let spans: Vec<_> = definition
+            .spans
+            .into_iter()
+            .map(|definition| SeamSpan { definition })
+            .collect();
+        let mut seen = BTreeSet::new();
+        let ease_sources = spans
+            .iter()
+            .filter_map(|span| span.definition.ease.portion())
+            .filter(|portion| seen.insert(portion.source().span()))
+            .map(|portion| portion.shared_source())
+            .collect();
+        let mut graph = Self {
             id: definition.id,
-            spans: definition
-                .spans
-                .into_iter()
-                .map(|definition| SeamSpan { definition })
-                .collect(),
+            spans,
+            ease_sources,
         };
         graph.validate_current(plan, pieces, landmarks, ledger)?;
+        let mut canonical = BTreeMap::new();
+        let mut ordered = Vec::new();
+        for span in &mut graph.spans {
+            if let SeamEase::Portion(portion) = &mut span.definition.ease {
+                portion.canonicalize_source(&mut canonical, &mut ordered);
+            }
+        }
+        graph.ease_sources = ordered;
         Ok(graph)
     }
     /// Recheck the original graph against these actual current copy, Piece, stop and topology sources.
@@ -510,100 +585,109 @@ impl SewingGraph {
             }
             marks.insert(landmark.id(), landmark);
         }
+        let mut seen_sources: BTreeMap<EntityId, (EntityId, &SeamEaseSource)> = BTreeMap::new();
+        let mut claims = ClaimedIntervals::new();
         for record in &self.spans {
             let span = record.definition();
             if !identities.insert(span.id) {
                 return Err(SewingError::IdentityCollision { id: span.id });
             }
-            let mut resolutions = Vec::with_capacity(2);
-            for side_id in [SeamSideId::A, SeamSideId::B] {
-                let side = span.side(side_id);
-                let copy = plan.copy(side.copy).ok_or(SewingError::MissingCopy {
-                    span: span.id,
-                    side: side_id,
-                    copy: side.copy,
+            let context = SpanContext {
+                id: span.id,
+                a: span.a,
+                b: span.b,
+                ease: span.ease.declaration(),
+                stops: &span.stops,
+            };
+            if let SeamEase::Portion(portion) = &span.ease {
+                let source = portion.source();
+                if let Some((first_span, first_source)) = seen_sources.get(&source.span()) {
+                    if !core::ptr::eq(*first_source, source) && *first_source != source {
+                        return Err(SewingError::EaseSourceConflict {
+                            source_span: source.span(),
+                            first_span: *first_span,
+                            span: span.id,
+                        });
+                    }
+                } else {
+                    seen_sources.insert(source.span(), (span.id, source));
+                }
+                for side in [SeamSideId::A, SeamSideId::B] {
+                    let expected = portion.side(side);
+                    let actual = span.side(side);
+                    if actual != expected {
+                        return Err(SewingError::EasePortionBinding {
+                            span: span.id,
+                            source_span: source.span(),
+                            issue: Box::new(SeamEaseBindingIssue::Side {
+                                side,
+                                expected,
+                                actual,
+                            }),
+                        });
+                    }
+                }
+                if span.direction != source.direction() {
+                    return Err(SewingError::EasePortionBinding {
+                        span: span.id,
+                        source_span: source.span(),
+                        issue: Box::new(SeamEaseBindingIssue::Direction {
+                            expected: source.direction(),
+                            actual: span.direction,
+                        }),
+                    });
+                }
+                for side in [SeamSideId::A, SeamSideId::B] {
+                    let interval = span.side(side).range;
+                    let occupied = claims.entry((source.span(), side)).or_default();
+                    let previous = occupied
+                        .range(..=interval.from())
+                        .next_back()
+                        .filter(|(_, (range, _))| range.to() > interval.from())
+                        .or_else(|| occupied.range(interval.from()..interval.to()).next());
+                    if let Some((_, (first, first_span))) = previous {
+                        return Err(SewingError::EasePortionBinding {
+                            span: span.id,
+                            source_span: source.span(),
+                            issue: Box::new(SeamEaseBindingIssue::Overlap {
+                                side,
+                                first_span: *first_span,
+                                first: *first,
+                                interval,
+                            }),
+                        });
+                    }
+                    occupied.insert(interval.from(), (interval, span.id));
+                }
+                validate_span(context, plan, &patterns, &marks, ledger)?;
+            } else {
+                validate_span(context, plan, &patterns, &marks, ledger)?;
+                validate_distribution(context, &marks, ledger)?;
+            }
+        }
+        for source in &self.ease_sources {
+            if !identities.insert(source.span()) {
+                return Err(SewingError::IdentityCollision { id: source.span() });
+            }
+            let context = SpanContext {
+                id: source.span(),
+                a: source.side(SeamSideId::A),
+                b: source.side(SeamSideId::B),
+                ease: source.declaration(),
+                stops: source.stops(),
+            };
+            validate_span(context, plan, &patterns, &marks, ledger)
+                .and_then(|()| validate_distribution(context, &marks, ledger))
+                .map_err(|issue| SewingError::EaseSource {
+                    source_span: source.span(),
+                    issue: Box::new(issue),
                 })?;
-                let resolved = ledger.resolve_range(side.range);
-                if !resolved.has_full_coverage()
-                    || resolved.start().resolved().is_none()
-                    || resolved.end().resolved().is_none()
-                {
-                    return Err(SewingError::UnresolvedRange {
-                        span: span.id,
-                        side: side_id,
-                        evidence: Box::new(resolved),
-                    });
-                }
-                let piece = patterns.get(&copy.piece()).ok_or_else(|| {
-                    SewingError::InvalidCutPlan(CutPlanError::MissingPiece {
-                        copy: copy.id(),
-                        piece: copy.piece(),
-                    })
-                })?;
-                if !range_is_owned(&resolved, piece, ledger) {
-                    return Err(SewingError::RangeOutsidePiece {
-                        span: span.id,
-                        side: side_id,
-                        piece: piece.id(),
-                    });
-                }
-                resolutions.push(ValidatedSide {
-                    side: side_id,
-                    piece: copy.piece(),
-                    range: resolved,
-                });
-            }
-            if span.a.copy == span.b.copy {
-                // Exactly two sides were validated; zip avoids a panic-prone indexed invariant.
-                if resolutions
-                    .iter()
-                    .take(1)
-                    .zip(resolutions.iter().skip(1))
-                    .any(|(a, b)| ranges_overlap(&a.range, &b.range))
-                {
-                    return Err(SewingError::OverlappingSelfSeam {
-                        span: span.id,
-                        copy: span.a.copy,
-                    });
-                }
-            }
-            let mut stops = BTreeSet::new();
-            for stop in &span.stops {
-                if !stops.insert(*stop) {
-                    return Err(SewingError::DuplicateStop {
-                        span: span.id,
-                        stop: *stop,
-                    });
-                }
-                let mark = marks
-                    .get(&stop.landmark)
-                    .ok_or(SewingError::MissingLandmark {
-                        span: span.id,
-                        stop: *stop,
-                    })?;
-                let resolution = mark.resolve(ledger);
-                let point = resolution
-                    .resolved()
-                    .ok_or_else(|| SewingError::UnresolvedStop {
-                        span: span.id,
-                        stop: *stop,
-                        evidence: Box::new(resolution.clone()),
-                    })?;
-                let belongs = resolutions.iter().any(|side| {
-                    side.side == stop.side
-                        && side.piece == mark.piece()
-                        && range_contains_point(&side.range, point)
-                });
-                if !belongs {
-                    return Err(SewingError::StopOutsideSide {
-                        span: span.id,
-                        stop: *stop,
-                    });
-                }
-            }
-            validate_distribution(span, &marks, ledger)?;
         }
         Ok(())
+    }
+    /// Canonical retained original sources,in first-consuming-span order;each identity is owned once.
+    pub fn ease_sources(&self) -> impl ExactSizeIterator<Item = &SeamEaseSource> {
+        self.ease_sources.iter().map(Arc::as_ref)
     }
     /// Stable first-class graph identity.
     #[must_use]
@@ -632,6 +716,11 @@ impl SewingGraph {
         self.spans
             .iter()
             .flat_map(|span| span.definition.stops.iter().map(|stop| stop.landmark))
+            .chain(
+                self.ease_sources
+                    .iter()
+                    .flat_map(|source| source.stops().iter().map(|stop| stop.landmark)),
+            )
             .collect::<BTreeSet<_>>()
             .into_iter()
             .filter(|id| !landmarks.iter().any(|mark| mark.id() == *id))
@@ -646,6 +735,118 @@ impl SewingGraph {
     pub const fn ease_validation(&self) -> EaseValidation {
         EaseValidation::DeferredToG2AndG3
     }
+}
+
+#[derive(Clone, Copy)]
+struct SpanContext<'a> {
+    id: EntityId,
+    a: SeamSide,
+    b: SeamSide,
+    ease: &'a DeclaredEase,
+    stops: &'a [StopLandmark],
+}
+impl SpanContext<'_> {
+    fn side(self, side: SeamSideId) -> SeamSide {
+        match side {
+            SeamSideId::A => self.a,
+            SeamSideId::B => self.b,
+        }
+    }
+}
+fn validate_span(
+    span: SpanContext<'_>,
+    plan: &CutPlan,
+    patterns: &BTreeMap<EntityId, &Piece>,
+    marks: &BTreeMap<EntityId, &SewingLandmark>,
+    ledger: &IdentityLedger,
+) -> Result<(), SewingError> {
+    let mut resolutions = Vec::with_capacity(2);
+    for side_id in [SeamSideId::A, SeamSideId::B] {
+        let side = span.side(side_id);
+        let copy = plan.copy(side.copy).ok_or(SewingError::MissingCopy {
+            span: span.id,
+            side: side_id,
+            copy: side.copy,
+        })?;
+        let resolved = ledger.resolve_range(side.range);
+        if !resolved.has_full_coverage()
+            || resolved.start().resolved().is_none()
+            || resolved.end().resolved().is_none()
+        {
+            return Err(SewingError::UnresolvedRange {
+                span: span.id,
+                side: side_id,
+                evidence: Box::new(resolved),
+            });
+        }
+        let piece = patterns.get(&copy.piece()).ok_or_else(|| {
+            SewingError::InvalidCutPlan(CutPlanError::MissingPiece {
+                copy: copy.id(),
+                piece: copy.piece(),
+            })
+        })?;
+        if !range_is_owned(&resolved, piece, ledger) {
+            return Err(SewingError::RangeOutsidePiece {
+                span: span.id,
+                side: side_id,
+                piece: piece.id(),
+            });
+        }
+        resolutions.push(ValidatedSide {
+            side: side_id,
+            piece: copy.piece(),
+            range: resolved,
+        });
+    }
+    if span.a.copy == span.b.copy {
+        // Exactly two sides were validated; zip avoids a panic-prone indexed invariant.
+        if resolutions
+            .iter()
+            .take(1)
+            .zip(resolutions.iter().skip(1))
+            .any(|(a, b)| ranges_overlap(&a.range, &b.range))
+        {
+            return Err(SewingError::OverlappingSelfSeam {
+                span: span.id,
+                copy: span.a.copy,
+            });
+        }
+    }
+    let mut stops = BTreeSet::new();
+    for stop in span.stops {
+        if !stops.insert(*stop) {
+            return Err(SewingError::DuplicateStop {
+                span: span.id,
+                stop: *stop,
+            });
+        }
+        let mark = marks
+            .get(&stop.landmark)
+            .ok_or(SewingError::MissingLandmark {
+                span: span.id,
+                stop: *stop,
+            })?;
+        let resolution = mark.resolve(ledger);
+        let point = resolution
+            .resolved()
+            .ok_or_else(|| SewingError::UnresolvedStop {
+                span: span.id,
+                stop: *stop,
+                evidence: Box::new(resolution.clone()),
+            })?;
+        let belongs = resolutions.iter().any(|side| {
+            side.side == stop.side
+                && side.piece == mark.piece()
+                && range_contains_point(&side.range, point)
+        });
+        if !belongs {
+            return Err(SewingError::StopOutsideSide {
+                span: span.id,
+                stop: *stop,
+            });
+        }
+    }
+    Ok(())
 }
 
 fn range_contains_point(range: &RangeResolution, point: ResolvedRef) -> bool {
@@ -663,7 +864,7 @@ fn ranges_overlap(a: &RangeResolution, b: &RangeResolution) -> bool {
     })
 }
 fn validate_distribution(
-    span: &SeamSpanDefinition,
+    span: SpanContext<'_>,
     marks: &BTreeMap<EntityId, &SewingLandmark>,
     ledger: &IdentityLedger,
 ) -> Result<(), SewingError> {
