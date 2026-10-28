@@ -12,7 +12,7 @@ borrow, replacement method or commit token. Construction moves the original aggr
 reconstructing held references. This is an in-process owner; it does not authenticate a transport.
 
 execute currently implements GetPieceList; is_available describes that entry point. commit_group
-implements the three metadata mutations with finite edit capacity and installed operation policy. Handler availability
+implements the three metadata mutations with finite edit capacity and both explicit operation/model policies. Handler availability
 is independent of the17-command typed catalog. Each execute call freshly authorizes, then checks
 the requested Design and exact revision against the private owner. Authorization failures preserve
 their original typed cause. DesignMismatch and RevisionMismatch retain the command and both actual
@@ -46,25 +46,28 @@ persistence and runtime/adapter parity remain separately owned implementation wo
 ## Trusted metadata operation policy
 
 Before costly metadata previews, commits or history traversal, the host installs explicit positive
-CommandOperationLimits exactly once. Authorized GetPieceList reads need no policy. For example,
-with host-chosen NonZeroUsize maxima:
+CommandOperationLimits and DesignResourceLimits exactly once. Authorized GetPieceList reads need
+neither. Costly methods require H: DesignResourceSource. For example, with explicit host-chosen maxima:
 
 ```rust
 bus.install_operation_limits(CommandOperationLimits::new(
     maximum_members, maximum_metadata_targets, maximum_assignment_reason_bytes,
     maximum_measurement_evidence_references,
 ))?;
+bus.install_model_limits(model_resource_limits)?;
 ```
 
 Missing policy refuses with CommandControlError::LimitsNotInstalled; attempted replacement returns
-LimitsAlreadyInstalled and retains the original policy. Pure submitted-input admission precedes
-private authority/model work. Actual progress, observer methods, cancellation/retry semantics and
+LimitsAlreadyInstalled and retains the original policy. Missing model policy returns
+ModelLimitsNotInstalled; replacement returns ModelLimitsAlreadyInstalled. Pure input admission
+precedes authority; private model accounting follows exact authority/snapshot binding and precedes
+current validation/cloning. Actual progress, observer methods, cancellation/retry semantics and
 the precise limits of these metadata bounds are documented in [Operation limits and progress](command-operation-control.md).
 
 ## Actual Material assignment preview
 
 CommandBus::preview now accepts AssignMaterial under fresh inspect authority; commit permission is
-unnecessary. With installed operation policy, is_preview_available reports the three metadata handlers,
+unnecessary. With both policies, is_preview_available reports the three metadata handlers,
 separately from is_available. All three prepare metadata; recipe/geometry execution remains separate.
 The request carries the actual Design, actor, exact revision, retry key and explicit Piece selection.
 Constructing it grants no authority. With a supported actual garment and trusted provider:
@@ -141,6 +144,7 @@ entropy provider or arbitrary Clone implementation. The request cannot supply a 
 ```rust
 let mut bus = CommandBus::with_identities(garment, trusted_authority, reserved_unused_ids)?;
 bus.install_operation_limits(limits)?;
+bus.install_model_limits(model_resource_limits)?;
 let intent = AddNotch::new(piece_id, exact_edge_anchor, explicit_profile_bindings);
 let request = CommandRequest::Mutation(CommandMutation::new(
     CommandMutationContext::new(design_id, actor, exact_revision.clone(), retry_key, None),
@@ -360,8 +364,8 @@ revision advance, audit/undo history, recipe evaluation, geometry or physical-pr
 
 CommandBus::with_edit_capacity installs the actual owner, trusted authority source, unused identity
 reserve and an explicit NonZeroUsize maximum accepted-group count. new and with_identities retain
-read behavior; previews require installed operation policy. With that policy, owners without edit
-capacity refuse commit_group with EditsNotConfigured. is_commit_available requires both policy and
+read behavior; previews require both policies. With those installed, owners without edit capacity
+refuse commit_group with EditsNotConfigured. is_commit_available requires both policies and
 configured metadata handlers; it supplies no authority, current revision, journal room or valid candidate.
 The host chooses the finite capacity. Construction mints no grant or implicit commit permission.
 
@@ -371,6 +375,7 @@ let mut bus = CommandBus::with_edit_capacity(
     NonZeroUsize::new(config.maximum_committed_groups).ok_or(configuration_error)?,
 )?;
 bus.install_operation_limits(limits)?;
+bus.install_model_limits(model_resource_limits)?;
 let result = bus.commit_group(&group)?;
 let accepted = result.entry();
 assert_eq!(accepted.actor(), group.context().actor());
@@ -470,8 +475,8 @@ native D285 branch checks are described below; storage/reopen proof remains pend
 
 with_edit_history installs explicit NonZeroUsize bounds for accepted authoring groups, reversible
 history depth and accepted history actions. History starts empty. with_edit_capacity supports authoring
-without traversal; with installed operation policy, apply_history then returns NotConfigured.
-The host chooses each finite bound and installs metadata operation policy separately.
+without traversal; with both installed policies, apply_history then returns NotConfigured.
+The host chooses each finite bound and installs operation/model policies separately.
 
 ```rust
 let mut bus = CommandBus::with_edit_history(
@@ -479,6 +484,7 @@ let mut bus = CommandBus::with_edit_history(
     maximum_authoring_groups, undo_depth, maximum_history_actions,
 )?;
 bus.install_operation_limits(limits)?;
+bus.install_model_limits(model_resource_limits)?;
 // Commit returned the exact original group and its accepted revision.
 let undo = CommandHistoryRequest::new(
     current_operator_context, original_group.clone(), CommandHistoryDirection::Undo,

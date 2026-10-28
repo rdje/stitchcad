@@ -13,11 +13,22 @@ use sc_core::{
 use sc_measure::DesignSourcesError;
 
 // Instrumentation delegates every census/reference/binding/validation to the actual immutable host.
-// Only copy telemetry is shared; semantic source equality deliberately excludes this counter.
+// Only telemetry is shared; semantic source equality deliberately excludes these counters.
 #[derive(Debug)]
-struct CountedSources {
+pub(super) struct CountedSources {
     actual: DesignSources,
     copies: Rc<Cell<usize>>,
+    walks: Rc<Cell<usize>>,
+    callbacks: Rc<Cell<usize>>,
+}
+impl CountedSources {
+    pub(super) fn telemetry(&self) -> [Rc<Cell<usize>>; 3] {
+        [
+            Rc::clone(&self.copies),
+            Rc::clone(&self.walks),
+            Rc::clone(&self.callbacks),
+        ]
+    }
 }
 impl Clone for CountedSources {
     fn clone(&self) -> Self {
@@ -25,6 +36,8 @@ impl Clone for CountedSources {
         Self {
             actual: self.actual.clone(),
             copies: Rc::clone(&self.copies),
+            walks: Rc::clone(&self.walks),
+            callbacks: Rc::clone(&self.callbacks),
         }
     }
 }
@@ -37,9 +50,11 @@ impl Eq for CountedSources {}
 impl DesignMetadataHost for CountedSources {
     type Error = DesignSourcesError;
     fn entities(&self) -> Vec<DesignHostEntity> {
+        self.callbacks.set(self.callbacks.get() + 1);
         self.actual.entities()
     }
     fn validate_current(&self, canonical: &CanonicalInputs) -> Result<(), Self::Error> {
+        self.callbacks.set(self.callbacks.get() + 1);
         self.actual.validate_current(canonical)
     }
     fn measurement_declaration<'a>(
@@ -47,6 +62,7 @@ impl DesignMetadataHost for CountedSources {
         measurement: EntityId,
         canonical: &'a CanonicalInputs,
     ) -> Result<&'a LengthDeclaration, Self::Error> {
+        self.callbacks.set(self.callbacks.get() + 1);
         self.actual.measurement_declaration(measurement, canonical)
     }
 }
@@ -56,7 +72,17 @@ impl DesignSizeSetHost for CountedSources {
         reference: DesignSizeSetReference,
         canonical: &CanonicalInputs,
     ) -> Result<(), Self::Error> {
+        self.callbacks.set(self.callbacks.get() + 1);
         self.actual.validate_size_set(reference, canonical)
+    }
+}
+impl sc_core::design::DesignResourceSource for CountedSources {
+    fn charge_resources(
+        &self,
+        sink: &mut dyn sc_core::design::DesignResourceSink,
+    ) -> Result<(), sc_core::design::DesignResourceLimitError> {
+        self.walks.set(self.walks.get() + 1);
+        self.actual.charge_resources(sink)
     }
 }
 impl DesignReferenceHost for CountedSources {
@@ -65,10 +91,11 @@ impl DesignReferenceHost for CountedSources {
         references: DesignSourceReferences,
         canonical: &CanonicalInputs,
     ) -> Result<(), Self::Error> {
+        self.callbacks.set(self.callbacks.get() + 1);
         self.actual.validate_references(references, canonical)
     }
 }
-fn owner(copies: Rc<Cell<usize>>) -> (DesignGarment<CountedSources>, AddNotch) {
+pub(super) fn owner(copies: Rc<Cell<usize>>) -> (DesignGarment<CountedSources>, AddNotch) {
     let original = notch_preview::owner();
     let addition = notch_preview::addition(&original);
     let inputs = original.inputs().definition();
@@ -76,6 +103,8 @@ fn owner(copies: Rc<Cell<usize>>) -> (DesignGarment<CountedSources>, AddNotch) {
         CountedSources {
             actual: inputs.sources.host().clone(),
             copies,
+            walks: Rc::new(Cell::new(0)),
+            callbacks: Rc::new(Cell::new(0)),
         },
         inputs.structure.inputs(),
     )

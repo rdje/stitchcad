@@ -9,7 +9,7 @@ use crate::{
         CommandGroupAuthorization, CommandGroupAuthorizationError, CommandGroupId, CommandId,
         CommandIdempotencyKey, CommandMutationGroup, DesignRevision,
     },
-    design::{DesignGarment, DesignReferenceHost},
+    design::DesignGarment,
     ontology::EntityId,
 };
 use core::fmt;
@@ -189,7 +189,9 @@ impl<E: std::error::Error + 'static> std::error::Error for CommandGroupPreviewEr
         }
     }
 }
-impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
+impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAuthoritySource>
+    CommandBus<H, A>
+{
     /// Preview original ordered metadata mutations against successive actual validated candidates.
     /// One fresh trusted snapshot and one complete Inspect grant cover the entire group. Exact retries
     /// within this group return the first report explicitly; conflicting reuse refuses. This ephemeral
@@ -327,6 +329,9 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             }
             let base = PreparationBase {
                 state: staged.as_ref().unwrap_or(&self.state),
+                limits: self
+                    .require_model_limits()
+                    .map_err(|issue| CommandGroupPreviewError::control(group.id(), issue))?,
             };
             let prepared = base
                 .prepare_payload(mutation.payload(), &mut identities, observer, member)

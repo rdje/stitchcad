@@ -68,6 +68,8 @@ mod material_preview;
 mod measurement_preview;
 #[path = "command_bus/notch_preview.rs"]
 mod notch_preview;
+#[path = "command_bus/resource_admission.rs"]
+mod resource_admission;
 #[path = "command_bus/resource_copies.rs"]
 mod resource_copies;
 impl CommandAuthoritySource for Host {
@@ -103,6 +105,18 @@ fn controlled<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
         std::num::NonZeroUsize::MAX,
     ))
     .expect("one explicit test-host policy installation");
+    model_controlled(bus)
+}
+fn model_policy() -> sc_core::design::DesignResourceLimits {
+    sc_core::design::DesignResourceLimits::new(
+        std::num::NonZeroUsize::MAX,
+        std::num::NonZeroUsize::MAX,
+        std::num::NonZeroU64::MAX,
+    )
+}
+fn model_controlled<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
+    bus.install_model_limits(model_policy())
+        .expect("one explicit test-host model policy");
     bus
 }
 fn query(design: EntityId, revision: DesignRevision, payload: QueryPayload) -> CommandRequest {

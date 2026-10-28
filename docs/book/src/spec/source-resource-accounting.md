@@ -219,5 +219,6 @@ source-test lint/formatting. A moved test assertion was corrected to borrow pres
 replacement canonical sources still refuse current validation; generic port accounting preserves the
 exact held host/canonical data. [Complete actual root composition](model-resource-accounting.md#complete-actual-inputs-sewing-and-garment-roots)
 additionally charges the retained DesignMetadata entity catalog and guards fixed provided-reference
-fields. Runtime policy and deeper/full verification remain owned; source demand alone is no
-whole-model/allocator time/memory certificate.
+fields. [Installed current-model admission](command-operation-control.md#installed-current-model-admission)
+uses that composition after authority/binding. Prospective/retained-state admission and deeper/full
+verification remain owned; source demand alone is no whole-model/allocator time/memory certificate.

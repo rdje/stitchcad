@@ -121,6 +121,16 @@ fn operation_policy_installs_once_and_missing_policy_never_blocks_authorized_pie
     );
     bus.install_operation_limits(policy(1, 2, 8, 1))
         .expect("one trusted policy");
+    assert!(!bus.is_preview_available(CommandId::AddNotch));
+    let error = bus
+        .preview(&CommandRequest::Mutation(single.clone()))
+        .expect_err("model policy also has no default");
+    assert_eq!(
+        control_error(&error),
+        Some(&ControlError::ModelLimitsNotInstalled)
+    );
+    let bus_with_policy = model_controlled(bus);
+    let mut bus = bus_with_policy;
     assert!(bus.is_preview_available(CommandId::AddNotch));
     assert_eq!(
         bus.install_operation_limits(policy(9, 9, 99, 1)),
@@ -160,6 +170,7 @@ fn target_and_reason_admission_refuse_before_lookup_authority_progress_or_any_ac
         .expect("one accepted group");
     bus.install_operation_limits(policy(2, 2, 3, 1))
         .expect("explicit boundaries");
+    let mut bus = model_controlled(bus);
     let assignment = |selected, material| {
         MutationPayload::AssignMaterial(
             AssignMaterial::new(
@@ -614,6 +625,7 @@ fn evidence_admission_precedes_all_costly_entry_paths_and_leaves_refused_keys_av
             .expect("one explicit authoring/history action");
     bus.install_operation_limits(policy(1, 1, 1, 1))
         .expect("independent evidence maximum1");
+    let mut bus = model_controlled(bus);
     let observer = Observer::default();
     let expected = ControlError::Input(LimitError::EvidenceReferences {
         maximum: 1,

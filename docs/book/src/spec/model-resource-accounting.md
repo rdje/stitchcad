@@ -406,7 +406,8 @@ corrected against the actual chart producer before acceptance. Python/OS byte co
 confirm the additional11+10+1 bytes; the retained26-record census is read from the actual owner.
 
 This completes implemented model accounting under the source port's honest/exhaustive integration
-contract. Runtime installation, authority ordering and current/prospective command admission remain
-G1-SLICE.6.8.2.2.2.2.4. Retained command journals/history, ingress, allocation peaks and host algorithm
+contract. [Installed current-model admission](command-operation-control.md#installed-current-model-admission)
+now follows exact authority/snapshot binding; prospective replacements and retained command state
+remain G1-SLICE.6.8.2.2.2.2.4 work. Retained command journals/history, ingress, allocation peaks and host algorithm
 time require their own bounds; logical demand supplies no dishonest-host security, readiness,
 physical or release certificate. Deeper/full verification remains deferred until feature completion.

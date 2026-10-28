@@ -5,6 +5,10 @@ use crate::command::{
     CommandOperationLimitError, CommandOperationLimits, CommandProgress, CommandProgressDecision,
     CommandProgressError, CommandProgressObserver, CommandProgressPhase,
 };
+use crate::design::{
+    charge_design_garment_resources, DesignGarment, DesignResourceLimitError, DesignResourceLimits,
+    DesignResourceMeter, DesignResourceSource,
+};
 use core::{fmt, num::NonZeroUsize};
 
 /// Original setup/admission/cancellation refusal, before a metadata effect is published.
@@ -14,6 +18,12 @@ pub enum CommandControlError {
     LimitsNotInstalled,
     /// Installed policy is immutable for this owner's lifetime, including after accepted retries.
     LimitsAlreadyInstalled,
+    /// Trusted composition root has not installed explicit logical model policy.
+    ModelLimitsNotInstalled,
+    /// Installed logical model policy cannot be replaced for this owner's lifetime.
+    ModelLimitsAlreadyInstalled,
+    /// Original actual model resource refusal, after authority and snapshot binding.
+    Model(DesignResourceLimitError),
     /// Original submitted metadata demand exceeds host policy.
     Input(CommandOperationLimitError),
     /// Host requested cancellation at this actual pre-effect checkpoint.
@@ -38,6 +48,7 @@ impl std::error::Error for CommandControlError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
             Self::Input(issue) => Some(issue),
+            Self::Model(issue) => Some(issue),
             Self::Progress(issue) => Some(issue),
             _ => None,
         }
@@ -46,7 +57,7 @@ impl std::error::Error for CommandControlError {
 
 impl<H, A> CommandBus<H, A> {
     /// Install host-chosen metadata policy exactly once; neither requests nor observers can replace it.
-    /// Read-only Piece inspection needs no policy. Costly metadata previews/effects require this setup.
+    /// Read-only Piece inspection needs no policy. Costly metadata paths also require model policy.
     /// This changes no Design, grant, revision, reserve, audit or history and confers no authority.
     /// # Errors
     /// Returns LimitsAlreadyInstalled, retaining the original policy unchanged.
@@ -60,26 +71,63 @@ impl<H, A> CommandBus<H, A> {
         self.operation_limits = Some(limits);
         Ok(())
     }
+    /// Install explicit logical model limits exactly once, without traversing private state.
+    /// Costly metadata paths require both operation and model policies. Piece inspection requires
+    /// neither. This setter grants no authority and performs no validation, clone or host callback.
+    /// Current and history-alternative roots are admitted after exact authority/snapshot binding.
+    /// Prospective replacement and retained command-state admission remain separate work.
+    /// # Errors
+    /// Returns ModelLimitsAlreadyInstalled, preserving the original policy unchanged.
+    pub fn install_model_limits(
+        &mut self,
+        limits: DesignResourceLimits,
+    ) -> Result<(), CommandControlError> {
+        if self.model_limits.is_some() {
+            return Err(CommandControlError::ModelLimitsAlreadyInstalled);
+        }
+        self.model_limits = Some(limits);
+        Ok(())
+    }
+    pub(super) fn require_model_limits(&self) -> Result<DesignResourceLimits, CommandControlError> {
+        self.model_limits
+            .ok_or(CommandControlError::ModelLimitsNotInstalled)
+    }
     pub(super) fn admit_mutation(
         &self,
         mutation: &CommandMutation,
     ) -> Result<CommandOperationDemand, CommandControlError> {
-        self.operation_limits
+        let demand = self
+            .operation_limits
             .as_ref()
             .ok_or(CommandControlError::LimitsNotInstalled)?
             .check_mutation(mutation)
-            .map_err(CommandControlError::Input)
+            .map_err(CommandControlError::Input)?;
+        self.require_model_limits()?;
+        Ok(demand)
     }
     pub(super) fn admit_group(
         &self,
         group: &CommandMutationGroup,
     ) -> Result<CommandOperationDemand, CommandControlError> {
-        self.operation_limits
+        let demand = self
+            .operation_limits
             .as_ref()
             .ok_or(CommandControlError::LimitsNotInstalled)?
             .check_group(group)
-            .map_err(CommandControlError::Input)
+            .map_err(CommandControlError::Input)?;
+        self.require_model_limits()?;
+        Ok(demand)
     }
+}
+
+pub(super) fn admit_model<H: DesignResourceSource>(
+    state: &DesignGarment<H>,
+    limits: DesignResourceLimits,
+) -> Result<(), CommandControlError> {
+    let mut meter = DesignResourceMeter::new(limits);
+    charge_design_garment_resources(state, &mut meter).map_err(CommandControlError::Model)?;
+    meter.finish().map_err(CommandControlError::Model)?;
+    Ok(())
 }
 
 pub(super) fn checkpoint(

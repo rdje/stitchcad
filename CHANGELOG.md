@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0459 — compose complete actual model resources under one sink
+## STITCHCAD-G1-0460 — admit authorized actual current models before costly preparation
 
-- Exhaustively borrow actual Inputs/Sewing/Garment and retained source identity census; fixed references own no dynamic copy.
-- Charge every actual component once in schema order, with original first error and no semantic/currentness callbacks.
-- Source resource33 (prior28/new5), strict core-lib/source lint/fmt pass:80/650/129, prefix82/652/136, held and empty drafts.
-- Preserve exact cache/landmark/notion/source witnesses; correct expected field spelling; whole0458 retained611; runtime next.
+- Install explicit immutable model limits; supported costly paths require both policies and the actual resource-source capability.
+- Charge current/staged and history-alternative owners after authority/binding, before validation/copy; retain original resource errors.
+- Actual bus50/privacy-capability10 and strict affected lint/fmt pass; unauthorized/stale callbacks zero, exact replay skips walks.
+- Preserve original metadata/cancel/history/retry semantics; whole0459 retained612; prospective growth and retained state remain pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

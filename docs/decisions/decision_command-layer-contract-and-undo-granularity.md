@@ -159,3 +159,19 @@ Whole0458 scope/lesson/ledger retained611. Runtime .4 must install explicit poli
 exact authority/snapshot before private walks and admit prospective shapes before costly preparation.
 Deeper/full proof remains owned; model demand grants no authority/currentness, dishonest-host security,
 allocator memory/time, retained-journal, physical or release certificate.
+
+## Authorized current-model admission0460
+
+answers: "when may runtime model accounting inspect a private garment and expose a quota witness?"
+
+Costly metadata paths require H: DesignResourceSource and separately installed immutable input/model
+policies. The model setter performs no traversal/callback and no default or observer/request override
+exists. Initial exact authority/Design/revision binding precedes every private current/staged resource
+walk; accounting precedes envelope/current validation and clone. Actual history also charges the stored
+alternative before its current validation. Exact accepted replays skip model walks and retain authority.
+Bus50/privacy-capability10/strict affected lint/fmt pass: unauthorized/stale0 clones/0 walks/0 semantic
+callbacks; quota0/1/0; history0 copies/2 walks; replay0/0/0. E0106 test lifetime/unused import corrected;
+prior privacy example bounds refreshed to preserve intended private-method refusal. Read execute tail
+is byte-exact. Whole0459 retained612. Prospective growth .4.2, retained state .4.3 and deeper/full proof
+remain owned; current admission alone does not guarantee every published model fits policy or certify
+allocator memory/time, dishonest-host security, numeric/physical/release readiness.

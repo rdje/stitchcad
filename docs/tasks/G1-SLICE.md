@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0459
+## Current leaf acceptance —0460
 
-- [x] ROOT CAUSE: python3 -I -B native root scope:exhaustive4 private owners; each actual component
-  called once, semantic code byte-exact outside new views; no clone/current/census/context/reset/finish rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:33 passed rc=0; five new actual
-  higher-root cases80/650/129, prefix82/652/136, original refusal/held/empty ownership preserved.
-- [x] NO REGRESSION: strict core-lib/source-test Clippy/both package fmt rc=0; prior28 source cases
-  pass. git diff --quiet HEAD -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0.
+- [x] ROOT CAUSE: python3 -I -B native current admission:explicit unset2/immutable setup/no private
+  callback; authorized+bound current/history gates precede semantic checks; execute tail byte-exact rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:::50 passed rc=0;
+  actual delegated-source quota0copies/1walk/0callbacks, authority/stale0/0/0, history2 walks/replay0.
+- [x] NO REGRESSION: strict core-lib/affected-test Clippy and both package fmt rc=0; prior46 bus cases
+  pass. cargo test -p sc-core --doc command::bus::CommandBus:10 privacy/capability cases pass rc=0.
 
 ## Goal
 
@@ -863,36 +863,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0453 actual structural resources/revision bits; [whole scope/proofs](../history/stitchcad-devnotes-part606.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5.2`
   Status: `done`
-  Goal:0459 complete actual private Inputs/Sewing/Garment resource composition under one sink;
-  charge retained metadata host and captured identity vector separately, fixed refs/all actual families.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native root scope:4 exhaustive private owners and every
-    actual component call once rc=0. The core owner retains its captured census in addition to H;
-    actual stored26 records must count, rather than regenerating a semantic census or skipping cache.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part611.md:
-    3 exact Git spans rc=0; whole0458 scope/lesson/ledger retained before live proof/lesson containment.
-    Native root compare proves prior semantic code byte-exact outside new private views rc=0.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and cargo clippy -p sc-measure --test
-    resource_contract -- -D warnings:both rc=0. Exhaustive private definitions, borrowed host/census,
-    Copy guards and schema-order one-sink composition avoid clone/current/census/context/reset/finish.
-  - [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:33 passed rc=0; five new actual
-    model cases verify80/650/129=input78+landmark1+notion1, source39/628 plus captured26; prefix82/652/136.
-    Python/OS wc independently confirms Piece11+recipe10+parameter1+source628=650; actual vectors
-    12+1+39+26+1+1=80. Cache52+26, landmark78+1, notion79+1, source641+9 and revision0+129 retain
-    original scope/owner/index/errors. Initial wrong expected token field corrected against actual
-    chart producer after one failed assertion. Exact original model unchanged after success/refusal.
-    Real deletion refuses current landmark/notion validation while held demand stays80/650/129;
-    empty actual full draft0/8/0 retains canonical recipe and7 bytes refuses0+8. Prior error survives.
-  - [x] NO REGRESSION: strict core-lib/source-test Clippy/both package fmt rc=0; prior28 source cases
-    pass. git diff --quiet HEAD -- crates/sc-core/src/command.rs crates/sc-core/src/command rc=0;
-    original semantic/reference/authority/effect behavior unchanged. Deeper/full checks deferred.
-  - [x] LOCKSTEP: book build/native publication83 chapters/159 scoped API rows/1500 source links/
-    2523 rendered links rc=0; pointer/frontier/lesson/indexed decision align; whole0458 retained611.
-    Core .2/.2.5 implementation complete with focused checks. Runtime .4/deeper/full proof pending.
-  Retention1065 logical/32 working Markdown/59414 decoded lines/4486344 decoded bytes/2317156
-  resident bytes rc=0; maintained-reference84 files/18862 lines/1316268 bytes rc=0; map/diff rc=0.
-  Cargo uses scripts/local_environment.py; promotion:indexed command-layer decision.
-  Native model demand supplies no authority/currentness, dishonest-host security, allocator memory/time,
-  retained command-journal, physical/readiness or release certificate. Runtime install is the next leaf.
+  Goal:0459 complete actual root resources/captured census; [whole scope/proofs](../history/stitchcad-devnotes-part612.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3`
   Status: `done`
   Goal: actual immutable source-host resource port and sc-measure producer through published readonly
@@ -922,13 +893,59 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0458 actual required readonly source port; [whole scope/proofs](../history/stitchcad-devnotes-part611.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: install explicit immutable model policy and admit actual current/prospective metadata shapes
   before costly validation/cloning; retain original authority/cause/cancel/replay/undo and finite-state bounds.
   Bound logical model content and related retained-state composition; separate raw ingress, allocator peaks,
   per-host algorithm time and future numeric/file/decompression/geometry work with exact owners.
   Private-model walks/refusal witnesses follow initial exact authority and snapshot binding; caller-only
   input admission remains early. Verify unauthorized callers trigger no private walk or quota witness.
+
+- ID: `G1-SLICE.6.8.2.2.2.2.4.1`
+  Status: `done`
+  Goal:0460 immutable explicit model policy and actual current/preparation/history-alternative admission,
+  compile-time source-resource capability, exact authority/snapshot binding before private witnesses.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native current admission:explicit unset2/immutable setup/no
+    private callback rc=0. Existing input admission does not measure private held content. Current/
+    staged resource gates now precede envelope/current checks and clone, after authority and binding.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part612.md:
+    3 exact Git spans rc=0; whole0459 root-composition scope/lesson/ledger retained before live containment.
+    Native order confirms both actual history roots gated before validation, execute tail byte-exact rc=0.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and cargo clippy -p sc-measure --test
+    design_inputs_contract -- -D warnings:both rc=0. Explicit model policy installs once/no default,
+    availability requires both policies, setter/read triggers no private callback, original policy retained.
+    Costly methods require H:DesignResourceSource; original resource errors retain standard source chains.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:::50 passed rc=0;
+    four new real-source telemetry cases plus prior46. Unauthorized/wrong Design/stale single/group/
+    commit and history denial/stale snapshot cause0 copies/0 resource walks/0 semantic callbacks.
+    One-byte-short actual policy returns exact producer error at all preparation entries:0/1/0,
+    unchanged Piece address/revision. History actual current+alternative charge2 with0 copies;
+    exact authoring/history replay0/0/0. Missing/immutable model policy and cheap reads covered.
+    Initial E0106 test helper gains explicit borrow lifetime; one unused import removed before acceptance.
+  - [x] NO REGRESSION: bus50/strict selected lint/both package fmt rc=0; prior metadata/authority/
+    cancellation/replay/history/copy cases pass. cargo test -p sc-core --doc command::bus::CommandBus:
+    10 privacy/capability cases pass rc=0; old private-method examples gain actual required resource
+    bound so their intended failure remains privacy. New reset/capability refusals included.
+  - [x] LOCKSTEP: book build/native publication83 chapters/159 scoped API rows/1502 source links/
+    2526 rendered links rc=0; examples install both policies; live pointer/frontier/indexed lesson align.
+    Current .4.1 done; prospective .4.2/retained .4.3/feature .4.4/deeper/full work remain owned.
+  Retention1066 logical/33 working Markdown/59475 decoded lines/4491683 decoded bytes/2322495
+  resident bytes rc=0; maintained-reference84 files/18918 lines/1320907 bytes rc=0; map/diff rc=0.
+  Cargo uses scripts/local_environment.py; promotion:indexed command-layer decision.
+  No guarantee every newly published model fits policy until prospective checks land; no allocator
+  memory/time, dishonest-host security, raw ingress, numeric/physical/release or full-verification claim.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.2`
+  Status: `pending`
+  Goal: prospective metadata replacement/AddNotch/revision admission before growing copies/current
+  constructors, with exact represented demand and first locations; no conservative double counting.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.3`
+  Status: `pending`
+  Goal: bound actual retained audit/replay/history content and unbounded maximum-issued/audit counters
+  as well as finite counts; account current/prospective retained composition before allocation/effects.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.4`
+  Status: `pending`
+  Goal: close resource feature acceptance after .4.1–.4.3; run deferred integrated resource/bus checks,
+  then return to deeper/full .6.5.5/.6.9 and remaining command feature implementation as appropriate.
 
 - ID: `G1-SLICE.6.9`
   Status: `pending`

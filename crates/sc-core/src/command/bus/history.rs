@@ -321,7 +321,9 @@ impl<H: DesignReferenceHost, A: CommandAuthoritySource> CommandBus<H, A> {
         Ok(bus)
     }
 }
-impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> CommandBus<H, A> {
+impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAuthoritySource>
+    CommandBus<H, A>
+{
     /// Traverse the selected original whole-group snapshot under fresh current-operator authority.
     /// Exact operation retry returns its first result before current revision/stack/capacity checks.
     /// Other reuse refuses, including a key already accepted for this operator's authoring mutation.
@@ -423,10 +425,12 @@ impl<H: DesignReferenceHost + Clone + PartialEq, A: CommandAuthoritySource> Comm
             });
         }
         super::operation::checkpoint(observer, Phase::CurrentValidation, 0, 1, None)?;
+        super::operation::admit_model(&self.state, self.require_model_limits()?)?;
         validate_snapshot(&self.state)
             .map_err(|issue| CommandHistoryError::Current(Box::new(issue)))?;
         super::operation::checkpoint(observer, Phase::CurrentValidation, 1, 1, None)?;
         super::operation::checkpoint(observer, Phase::CandidateValidation, 0, 1, None)?;
+        super::operation::admit_model(&target.alternative, self.require_model_limits()?)?;
         validate_snapshot(&target.alternative)
             .map_err(|issue| CommandHistoryError::Alternative(Box::new(issue)))?;
         super::operation::checkpoint(observer, Phase::CandidateValidation, 1, 1, None)?;

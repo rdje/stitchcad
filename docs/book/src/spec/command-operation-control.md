@@ -70,7 +70,8 @@ An admitted demand is data, not authority or a commit capability.
 ## Install trusted policy once
 
 Every bus starts without operation policy. The trusted composition root must install explicit limits
-before costly metadata operations; no request, observer or constructor supplies a hidden default.
+before costly metadata operations, alongside explicit model limits below. No request, observer or
+constructor supplies a hidden default.
 
 ```rust
 let mut bus = CommandBus::with_edit_capacity(
@@ -80,10 +81,12 @@ bus.install_operation_limits(CommandOperationLimits::new(
     maximum_members, maximum_metadata_targets, maximum_assignment_reason_bytes,
     maximum_measurement_evidence_references,
 ))?;
+bus.install_model_limits(model_resource_limits)?;
 let result = bus.commit_group_with_progress(&group, &observer)?;
 ```
 
-All five maxima in this example are host-chosen positive NonZeroUsize values. Installation changes
+Operation/group-capacity maxima use explicit positive NonZeroUsize values; model counter bits use
+NonZeroU64, with positive NonZeroUsize entry/text maxima. Installation changes
 no model, grant, revision, reserve, audit or history. A second installation returns
 CommandControlError::LimitsAlreadyInstalled and retains the original policy. Compiler privacy also
 rejects direct policy reset. Missing policy returns LimitsNotInstalled on costly metadata paths.
@@ -96,9 +99,9 @@ An unauthorized request emits no progress. History admission covers the complete
 group before constructing its current-operator authorization context. Exact aliases count in admission.
 
 The existing preview, preview_group, commit_group and apply_history methods use the unit observer;
-they enforce the same installed policy. Their explicit observer counterparts are preview_with_progress,
+they enforce both installed policies. Their explicit observer counterparts are preview_with_progress,
 preview_group_with_progress, commit_group_with_progress and apply_history_with_progress. Availability
-queries for preview/commit handlers require installed policy; availability supplies no permission,
+queries for preview/commit handlers require both installed policies; availability supplies no permission,
 remaining quota or candidate validity.
 
 ## Declared progress fractions
@@ -194,8 +197,9 @@ and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 
 
 DesignResourceLimits and DesignResourceMeter live in the Design domain, independent of command
 authority. They provide a data-only accounting contract with implemented component producers below.
-Complete actual model roots compose their source content and retained census under one sink. Runtime
-enforcement remains pending; actual source accounting uses the required readonly DesignResourceSource port. The meter alone is not a runtime model-admission gate.
+Complete actual model roots compose their source content and retained census under one sink.
+Current/preparation and history-alternative admission now uses the required readonly source port;
+prospective replacement and retained command-state admission remain pending. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -274,3 +278,47 @@ compiler privacy cases, including refusal of all three private consuming helpers
 integration and deeper source/allocation acceptance remain separately owned. These input units and
 copy counts do not establish total model/work/memory or future numeric/file/decompression/geometry/
 solver bounds; that remaining resource scope is G1-SLICE.6.8.2.2.2.2.
+
+## Installed current-model admission
+
+CommandBus starts with no model limits. The trusted composition root calls install_model_limits
+exactly once with explicit DesignResourceLimits: cumulative collection entries, exact logical UTF-8
+bytes and represented unbounded-counter magnitude bits. The setter does not traverse the model or
+call its source host. A second installation returns ModelLimitsAlreadyInstalled without replacing
+the first policy. Missing policy returns ModelLimitsNotInstalled after pure input admission; authorized
+GetPieceList inspection needs neither policy. Neither requests nor progress observers carry a policy.
+Compile-time H: DesignResourceSource is required for costly metadata methods; readonly query paths
+retain the narrower semantic host contract. Compiler privacy rejects direct model-policy reset.
+
+For single/group metadata preparation, the complete actual current or previously staged garment is
+charged under the installed model policy at CurrentValidation0, before envelope/current validation
+or a model clone. The walk follows initial exact authority and Design/revision binding. Thus an
+authority, Design or revision refusal never triggers a private resource walk or exposes a quota
+witness. Runtime model refusal retains CommandControlError::Model and the original scope/owner/
+field/index/consumed/requested/maximum resource error through standard error.source chains.
+
+History traversal admits both the current actual model and the exact stored alternative before each
+snapshot's semantic validation, after current-operator authority and exact snapshot binding. Successful
+Undo/Redo moves existing owners. Exact accepted authoring/history replays keep their original result
+and skip private model walks; accepted request identity and fresh authority checks still apply.
+Cancellation remains at actual pre-effect checkpoints; no effect, reserve, revision, stack, key or
+accepted record is published on refusal. is_preview_available and is_commit_available require both
+policies; availability supplies no remaining-quota, permission or candidate-validity certificate.
+
+Four new cases instrument a wrapper delegating to actual DesignSources, without invented model or
+resource totals. Unauthorized and mismatched snapshots produce0 clones/0 resource calls/0 semantic
+callbacks across single/group preview and commit; history denial/stale snapshot does likewise.
+An actual one-byte-short model policy preserves the exact native resource refusal across all three
+preparation entries, with0 clones/1 actual host resource call/0 semantic callbacks and unchanged
+Piece address/revision. Setup/cheap reads invoke none. Actual history traversal charges2 snapshots
+with0 host copies; exact history/authoring replays invoke none. The existing46 cases plus4 new cases
+pass50, with strict core-library/affected-test lint and formatting; focused bus privacy/capability
+examples also pass. The new test's missing explicit borrowed-error lifetime and one unused import
+were corrected before acceptance. No semantic validation callback is replaced by accounting.
+
+This implements current/preparation-root and stored history-alternative admission. Prospective
+replacement/evidence/reason/Notch/revision growth before candidate allocation remains .4.2; retained
+command audit/replay/history content and maximum-issued/audit counters remain .4.3. This partial
+runtime stage does not certify every newly published model or total retained state fits the policy.
+Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
+release acceptance remain separate. Deeper/full verification stays deferred until feature completion.

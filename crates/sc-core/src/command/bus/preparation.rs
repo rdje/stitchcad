@@ -2,7 +2,7 @@
 use super::{identity::IdentityStage, CommandBusError, CommandPreviewError, PreparedCommand};
 use crate::{
     command::{CommandId, MutationPayload},
-    design::{DesignGarment, DesignReferenceHost},
+    design::{DesignGarment, DesignResourceLimits, DesignResourceSource},
 };
 
 pub(super) const fn handler_available(command: CommandId) -> bool {
@@ -16,8 +16,9 @@ pub(super) const fn handler_available(command: CommandId) -> bool {
 // It borrows immutable model data; it contains no replacement capability or authority provider.
 pub(super) struct PreparationBase<'a, H> {
     pub(super) state: &'a DesignGarment<H>,
+    pub(super) limits: DesignResourceLimits,
 }
-impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
+impl<H: DesignResourceSource + Clone + PartialEq> PreparationBase<'_, H> {
     pub(super) fn prepare_payload(
         &self,
         payload: &MutationPayload,
@@ -33,6 +34,7 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
         }
         use crate::command::CommandProgressPhase as Phase;
         super::operation::checkpoint(observer, Phase::CurrentValidation, 0, 1, member)?;
+        super::operation::admit_model(self.state, self.limits)?;
         self.state
             .require_in_scope()
             .map_err(|e| CommandPreviewError::Envelope(Box::new(e)))?;
