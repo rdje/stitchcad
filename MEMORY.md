@@ -1,14 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.2.acceptance in docs/tasks/G1-SLICE-execution.md:focused actual
-  weighted-source component acceptance after rounding/admission/quantity implementation. Join actual
-  Design/source/resource/currentness context without adding physical correspondence or bus effects.
-  No broad/mutation campaigns here;full paired acceptance or required pre-push probes owns them.
-- 0500 WeightedEaseAdmission::cumulative_at(EdgeAnchor)/amount_in(EdgeRange) use complete original
-  density-side frame,wide normalization and A-order orientation BEFORE shared rounding. Kernel is
-  private child seam_ease_workspace/quantity.rs;admission fields remain module-private. Native6+1/
-  docs4/160 density+50 domain oracle rows pass,including188-bit mass/189-bit progress. Limits explicit
-  positive,no Default;reservation189N+ceil(log2N)+219 bounds numeric width,not allocator/CPU authority.
+- Next G1-SLICE.6.5.3.2.3.2.4.3 in docs/tasks/G1-SLICE-execution.md:recover actual semantic
+  notch/original-frame context through published landmark/ledger contracts before implementation.
+  Split safely into recovery/projection/context/query/acceptance leaves if needed. Preserve actual
+  original IDs,positions,ambiguous/lost causes and caller-selected resource bounds;no guessed inverse.
+  Investigate representation limits of late-frame projections before assuming they fit Param.
+- Weighted source .4.2 closed0501 with focused actual Design1 acceptance,not full paired verification.
+  Graph-only count5/limit4 original region refusal;replaced copy rejects current declarations while
+  held source math remains available. Full paired/mutation acceptance or pre-push owns broad checks.
+- 0500 WeightedEaseAdmission::cumulative_at/amount_in uses complete original density,wide original
+  frame normalization and B/Opposite orientation BEFORE shared rounding. Native6+1/docs4 and160+50
+  oracle rows pass,including188-bit mass/189-bit progress. Explicit positive/no-default limits and
+  conservative189N+ceil(log2N)+219 reservation bound numeric width,not allocator/CPU authority.
 - Recovery0497:160 independent rows,valid188-bit denominator;B/Opposite complement BEFORE rounding.
   Original-domain exact normalization may need189 bits. Do not use uniform equal-progress as physical
   evidence. Indexed sewing decision/book retain constructive workspace and actual context contracts.

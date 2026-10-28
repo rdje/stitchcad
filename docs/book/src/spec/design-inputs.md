@@ -455,6 +455,12 @@ success resolves no numbers or Profiles; amounts remain DeferredToG4 where appli
 reports, geometry, full Design execution/assembly/release remain separate. Focused checks cover
 owner aliases, unused landmark repairs and amount/Profile borrows.
 
+Actual retained weighted source views also support separately budgeted
+[original cumulative quantities](command-seam-splits.md#query-exact-original-weighted-quantities).
+Focused Design acceptance preserves full original metadata and graph-only resource cost5 while
+fresh declarations reject a replaced copy. Held source math remains inspection data;it grants no
+currentness,paired correspondence or command effect.
+
 ## Joined Gather declarations
 
 ```rust,ignore

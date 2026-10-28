@@ -2782,3 +2782,254 @@ fn retained_uniform_feature_acceptance_joins_actual_design_quantities_resources_
         );
     }
 }
+
+#[test]
+fn retained_weighted_source_acceptance_joins_actual_design_quantities_resources_and_current_sources(
+) {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::{
+        design::{
+            charge_sewing_graph_resources, DesignResourceCount, DesignResourceLimitError,
+            DesignResourceLimits, DesignResourceLocation, DesignResourceMeter, DesignResourceScope,
+            DesignSewing, DesignSewingAmountSource, DesignSewingDefinition, DesignSewingError,
+        },
+        ontology::{
+            EaseAmount, EaseDistribution, EdgeAnchor, Param, Rational, SeamSideId,
+            SeamSpanDefinition, SewingError, SewingGraph, SewingGraphDefinition,
+            WeightedEaseLimits, WeightedEaseRegion,
+        },
+    };
+    let parameter = |n, d| Param::new(Rational::new(n, d).expect("fraction")).expect("position");
+    let workspace = WeightedEaseLimits::new(
+        NonZeroUsize::new(2).expect("explicit region count"),
+        NonZeroU64::new(598).expect("explicit conservative integer width"),
+    );
+    for signed in [-1, 1] {
+        let literal = sc_units::Length::from_micrometres(signed).expect("original signed source");
+        let (inputs, original) = with_sewing_graph(fixture(), vec![EaseAmount::Explicit(literal)]);
+        let mut definition = original
+            .spans()
+            .first()
+            .expect("actual root")
+            .definition()
+            .clone();
+        definition
+            .ease
+            .declared_mut()
+            .expect("authored source")
+            .distribution = EaseDistribution::Weighted {
+            side: SeamSideId::A,
+            regions: vec![
+                WeightedEaseRegion {
+                    from: Param::START,
+                    to: parameter(1, 2),
+                    weight: Rational::ONE,
+                },
+                WeightedEaseRegion {
+                    from: parameter(1, 2),
+                    to: Param::END,
+                    weight: Rational::from_integer(3),
+                },
+            ],
+        };
+        let structure = inputs.structure();
+        let source_graph = SewingGraph::new(
+            SewingGraphDefinition {
+                id: id(94001),
+                spans: vec![definition],
+            },
+            structure.cut_plan(),
+            structure.pieces().pieces(),
+            &[],
+            structure.topology(),
+        )
+        .expect("actual declared weighted graph");
+        let root = source_graph
+            .spans()
+            .first()
+            .expect("actual weighted span")
+            .retain_ease_source();
+        let a = root.side(SeamSideId::A).range.edge();
+        let b = root.side(SeamSideId::B).range.edge();
+        // These are descriptive source partitions. Neither the graph constructor nor this source
+        // quantity acceptance certifies measured physical pairing or a prepared command effect.
+        let portions = root
+            .split_at(
+                EdgeAnchor {
+                    edge: a,
+                    param: parameter(1, 2),
+                },
+                EdgeAnchor {
+                    edge: b,
+                    param: parameter(1, 2),
+                },
+            )
+            .expect("actual source-domain partition");
+        let graph = SewingGraph::new(
+            SewingGraphDefinition {
+                id: id(94000),
+                spans: portions
+                    .into_iter()
+                    .zip(97001_u128..)
+                    .map(|(portion, identity)| SeamSpanDefinition {
+                        id: id(identity),
+                        a: portion.side(SeamSideId::A),
+                        b: portion.side(SeamSideId::B),
+                        direction: portion.source().direction(),
+                        ease: portion.into(),
+                        stops: vec![],
+                    })
+                    .collect(),
+            },
+            structure.cut_plan(),
+            structure.pieces().pieces(),
+            &[],
+            structure.topology(),
+        )
+        .expect("actual canonical retained source graph");
+        let state = DesignSewing::new(DesignSewingDefinition {
+            inputs,
+            graph,
+            landmarks: vec![],
+        })
+        .expect("actual owned Design component");
+        let canonical = state
+            .graph()
+            .ease_sources()
+            .next()
+            .expect("one original source");
+        assert_eq!(state.graph().ease_sources().len(), 1);
+        let declarations = state
+            .amount_declarations()
+            .expect("complete current source validation");
+        let quantities = declarations
+            .iter()
+            .map(|view| {
+                let DesignSewingAmountSource::Explicit(source) = view.source() else {
+                    unreachable!("actual original literal")
+                };
+                assert_eq!(*source, literal);
+                let portion = view.portion().expect("actual target interval context");
+                assert!(core::ptr::eq(portion.source(), canonical));
+                let admitted = portion
+                    .source()
+                    .admit_weighted_explicit(workspace)
+                    .expect("actual explicit budget");
+                assert!(core::ptr::eq(admitted.source(), canonical));
+                assert_eq!(admitted.region_count(), 2);
+                assert_eq!(admitted.parent_amount(), literal);
+                admitted
+                    .amount_in(portion.side(SeamSideId::A).range)
+                    .expect("original cumulative differences")
+            })
+            .collect::<Vec<_>>();
+        assert_eq!(quantities, [sc_units::Length::ZERO, literal]);
+        let uniform_control = original
+            .spans()
+            .first()
+            .expect("actual original Uniform counterfactual")
+            .retain_ease_source();
+        assert_eq!(
+            uniform_control
+                .source()
+                .uniform_explicit_cumulative_at_a(parameter(1, 2)),
+            Ok(literal)
+        ); // A uniform fallback would spend the half quantum on the first child instead.
+        assert_eq!(
+            quantities
+                .first()
+                .expect("first")
+                .checked_add(*quantities.get(1).expect("second")),
+            Ok(literal)
+        );
+        let graph_limits = |entries| {
+            DesignResourceLimits::new(
+                NonZeroUsize::new(entries).expect("positive graph entries"),
+                NonZeroUsize::new(1).expect("positive text limit"),
+                NonZeroU64::new(1).expect("positive counter limit"),
+            )
+        };
+        let mut exact = DesignResourceMeter::new(graph_limits(5));
+        charge_sewing_graph_resources(state.graph(), &mut exact)
+            .expect("two spans/one root/two original regions");
+        assert_eq!(
+            exact
+                .finish()
+                .expect("exact graph resource meter")
+                .collection_entries(),
+            5
+        );
+        let mut limited = DesignResourceMeter::new(graph_limits(4));
+        let refusal = DesignResourceLimitError::Count {
+            unit: DesignResourceCount::CollectionEntries,
+            maximum: 4,
+            consumed: 3,
+            requested: 2,
+            location: DesignResourceLocation {
+                scope: DesignResourceScope::Sewing,
+                owner: Some(id(97000)),
+                field: "sewing.ease_sources.regions",
+                index: Some(0),
+            },
+        };
+        assert_eq!(
+            charge_sewing_graph_resources(state.graph(), &mut limited),
+            Err(refusal)
+        );
+        assert_eq!(limited.finish(), Err(refusal));
+        let mut changed = state.inputs().definition().clone();
+        let mut structure = changed.structure.definition().clone();
+        structure.cut_plan = CutPlan::new(
+            structure
+                .cut_plan
+                .copies()
+                .iter()
+                .map(|copy| {
+                    let mut definition = *copy.definition();
+                    if definition.id == id(96000) {
+                        definition.id = id(96010);
+                    }
+                    definition
+                })
+                .collect(),
+            structure.pieces.pieces(),
+        )
+        .expect("actual copy replacement");
+        changed.structure =
+            DesignStructure::new(structure).expect("valid current root retaining sewing evidence");
+        let held = DesignSewing::new(DesignSewingDefinition {
+            inputs: DesignInputs::new(changed).expect("actual current input owner"),
+            graph: state.graph().clone(),
+            landmarks: vec![],
+        })
+        .expect("owned held sewing data");
+        let missing = DesignSewingError::Graph(Box::new(SewingError::MissingCopy {
+            span: id(97001),
+            side: SeamSideId::A,
+            copy: id(96000),
+        }));
+        assert_eq!(held.validate_current(), Err(missing));
+        assert!(
+            matches!(held.amount_declarations(), Err(DesignSewingError::Graph(issue))
+            if matches!(*issue, SewingError::MissingCopy {span,side: SeamSideId::A,copy}
+                if span==id(97001) && copy==id(96000)))
+        );
+        let portion = held
+            .graph()
+            .spans()
+            .get(1)
+            .expect("held target")
+            .definition()
+            .ease
+            .portion()
+            .expect("held original portion");
+        assert_eq!(
+            portion
+                .source()
+                .admit_weighted_explicit(workspace)
+                .expect("held mathematical source")
+                .amount_in(portion.side(SeamSideId::A).range),
+            Ok(literal)
+        );
+    }
+}

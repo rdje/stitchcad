@@ -197,10 +197,10 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0497 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part653.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2`
-  Status: `in_progress`
-  Goal: exact weighted original-source cumulative allocation and signed boundary quantization;
-  omitted regions allocate zero,positive densities normalize by original total mass. Use the one
-  shared rounding rule and explicit bounded workspace/admission contracts;retain original causes.
+  Status: `done`
+  Goal:0501 original weighted-source component complete with focused actual Design acceptance.
+  Shared rounding,explicit workspace admission,wide cumulative/interval quantities and original
+  source/resource/currentness joins verified;notch/paired contexts and full acceptance remain later owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.1`
   Status: `done`
   Goal:0498 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part654.md).
@@ -209,23 +209,19 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0499 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part655.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.3`
   Status: `done`
-  Goal:0500 admitted exact original weighted cumulative/interval quantities implemented with complete source density,wide normalization and shared signed quantization;physical/command integration remains separate.
-  - [x] REPRODUCE / ISSUE: nonuniform_ease_oracle.py --check →160 independent density rows plus50 domain rows,188-bit density/189-bit original progress,float/orientation/equal-cut controls,rc=0. Source/cut fractions can exceed both bounded reference and128-bit formula widths while their final quantity is valid;child-mass normalization would lose original quantum conservation.
-  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/seam_partition/nonuniform_ease_oracle.py --check →Fraction/common-denominator agreement and exact below/above-half189-bit progress both collapse to0.5 in binary64,rc=0. Actual bounded-reference counterfactual refuses final/wide progress,while complete weighted quantity remains representable. Integrate
-    original prefix/total mass under actual admitted bounds before one shared rounding step.
-  - [x] FIX: private quantity child of admission module;actual original edge/both bounds preflight before allocation. Two region passes retain no density clone/integer array;normalize original range without reference-width narrowing,orient exact B/Opposite before shared magnitude rounding,reconstruct sign/check Length. amount_in differences original
-    boundaries in A order. Explicit reference/Length types protect bound derivation;actual frame/bounds/numeric errors retain original source/side/data/cause.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test sewing_contract weighted_ →6 passed/47 filtered,rc=0;domain50 includes189-bit half neighbors and existing bounded-progress refusals;interval quantities conserve signed originals and zero retains frames/bounds. cargo test -p sc-core --test sewing_contract
-    nonuniform_recovery_oracle →1 passed/52 filtered,rc=0;all160 actual-source density rows agree,including188-bit mass/maxima/gaps/both sides/directions.
-  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --doc seam_ease_workspace →4 passed/184 filtered,rc=0;new public query signature plus original privacy/lifetime/no-default controls remain genuine. Scoped core lib/sewing Clippy -D warnings and cargo fmt --all -- --check pass0;transition_receipts.py --record
-    docs/history/stitchcad-devnotes-part655.md →3 exact Git spans,rc=0.
-    mdbook build/publication check →88 chapters/178 API rows/1561 source/2666 rendered links;glossary census →0 failures;verify-retention →1109 logical/76 working/2560189 residentB,all rc=0. Full paired integration/mutation campaigns remain .6.5.3.2.acceptance/pre-push;focused weighted component acceptance .4.2.acceptance follows now that implementation is complete.
-  - [x] LOCKSTEP: task/index/MEMORY/DEV/CHANGE/book/API map/indexed sewing decision/D301 scheduling synchronized;README/LIVE reviewed unchanged,G1 6/18. Whole0499 retained655. Clarify earlier physical-example densities as1 then3. Next focused actual weighted-source component acceptance;notch/context,paired matching,stops,lineage/effects remain later owners.
-    No bus/physical/release verdict follows from source queries.
+  Goal:0500 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part656.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.acceptance`
-  Status: `pending`
-  Goal: deferred focused weighted-source component acceptance after shared rounding/admission/
-  quantity implementation. Actual notch/context/integration and full paired effects stay later owners.
+  Status: `done`
+  Goal:0501 focused actual Design weighted-source component acceptance complete after shared rounding/admission/quantity implementation;parent .4.2 closes in this scope. Actual notch/context/paired effects remain later owners.
+  - [x] REPRODUCE / ISSUE: inspect actual DesignSewing/source metadata/resource/currentness APIs and prior retained acceptance →weighted source kernels need the actual owned Design join,not a fabricated source provider or standalone geometry claim. Earlier third-cut candidate did not distinguish Uniform fallback;use a half cut and the actual original Uniform graph as a counterfactual.
+  - [x] ROOT CAUSE: python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test design_inputs_contract retained_weighted_source_acceptance →1 passed/166 filtered,rc=0. Actual weighted half allocation0/±1 differs from the Uniform control's first±1;metadata carries full original literal/regions,so target quantity must use actual portion context and admitted original density.
+  - [x] FIX: one actual Design acceptance for±1 roots joins canonical source pointer/full metadata,retained side interval and explicit2-region/598-bit admission. Check exact graph-only collection cost and original refusal;replace actual CutPlan copy and preserve held data while rejecting fresh current declarations. No runtime code,availability,physical correspondence or command handler change.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test design_inputs_contract retained_weighted_source_acceptance →1 passed,rc=0. Both targets share one canonical root;quantities0/±1 sum original;graph5=2 spans+1 source+2 regions,limit4 refuses root97000 region charge consumed3/requested2. Replacement96000→96010
+    retains held math but validate_current/amount_declarations refuse MissingCopy97001/A/96000 without partial views.
+  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings and cargo fmt --all -- --check →pass,rc=0. transition_receipts.py --record docs/history/stitchcad-devnotes-part656.md →3 exact Git spans,rc=0. mdbook build/publication check →88/178/1562/2668;glossary census →0
+    failures;verify-retention →1110 logical/77 working/2566312 residentB,all rc=0.
+    Broader paired/mutation verification stays .6.5.3.2.acceptance or required pre-push probes;focused weighted implementation receipts remain whole0500/656. No full repository,physical or release verdict is inferred.
+  - [x] LOCKSTEP: parent/leaf/task index/MEMORY/DEV/CHANGE/seam and Design book/D301 scheduling synchronized;README/LIVE reviewed unchanged,G1 6/18. Whole0500 retained656. Next .4.3 actual semantic-notch/original-frame recovery and implementation. promotion: declined (routine focused confirmation of existing indexed weighted/source/resource/currentness contracts;no new reusable policy rule).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3`
   Status: `pending`
   Goal: actual original-frame notch allocation context through public semantic landmark/ledger

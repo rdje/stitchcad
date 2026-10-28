@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0500 — compute exact original weighted cumulative and interval quantities
+## STITCHCAD-G1-0501 — close focused actual Design weighted-source acceptance
 
-- Admitted source queries preserve complete original density/domain,wide normalization and signed parent. Orient B/Opposite before shared rounding;difference original cumulative boundaries. Check actual edge and both bounds before allocation,including zero ease.
-- Native weighted6/oracle1/docs4/scoped Clippy/fmt pass. Independent160 density/50 original-domain rows include188-bit cumulative mass,189-bit progress and float-collapsed half neighbors. Original intervals conserve signed source quanta.
-- Whole0499 retained655;book/API map/indexed decision/task/live pointers synchronized. LIVE G1 6/18 unchanged;focused weighted component acceptance next. Notch/paired correspondence/context/effects/full acceptance remain owned.
+- Actual±1 Design/source/portion/quantity joins distinguish weighted half allocation0/±1 from the real Uniform control. Canonical source and complete two-region density remain original.
+- Graph-only resources5;limit4 refuses original region charge consumed3/requested2. Replaced copy preserves held math while current validation/fresh declarations reject original MissingCopy. Native1/166 filtered/scoped Clippy/fmt pass.
+- Whole0500 retained656;task/book/live pointers synchronized. Weighted source component closes with focused verification;LIVE G1 6/18 unchanged. Actual notch/frame/context work follows;paired geometry/effects/full acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact original weighted quantities implemented
+## _(2026-10-28 UTC)_ — focused actual Design weighted-source acceptance closed
 
-0500 admitted cumulative_at/amount_in use complete original density and wide source-frame normalization;B/Opposite complements before shared rounding. Interval allocations difference original boundaries,not child-normalized mass. Frame and both bounds precede allocation,including zero source.
-Two passes retain no cloned density/integer array. Explicit reference/Length field types protect the admitted bit derivation. Native weighted6/oracle1/docs4/scoped Clippy/fmt pass0;160 density/50 domain rows include188-bit mass and189-bit progress on opposite sides of half that float collapses.
-Actual signed/zero/max sources,gaps/interval conservation and original frame/bounds failures pass. Promotion:indexed sewing decision;LIVE/README unchanged,G1 6/18. Source quantities alone grant no currentness/paired geometry/effects;focused component acceptance next,then actual notch/context integration.
-[Whole0499 admission lesson](docs/history/stitchcad-devnotes-part655.md) retains exact source/limit proofs;3 Git spans verified before commit.
+0501 actual Design acceptance joins±1 weighted roots,canonical source/portion metadata and admitted source quantities. Half partitions yield0/±1;the real Uniform control yields±1 first. The earlier third-cut candidate did not distinguish uniform allocation;half plus actual counterfactual fixes that before commit.
+Graph-only count5=2 spans+1 source+2 regions;limit4 preserves original root97000 regions refusal consumed3/requested2. Copy96000→96010 replacement keeps held math but current validation/fresh declarations reject MissingCopy on97001/A. Native1/166 filtered/scoped Clippy/fmt pass0.
+Source component .4.2 closes with focused checks;notch/paired context/effects/full acceptance remain owned. No new runtime API/policy rule;promotion declined in leaf for routine verification of existing indexed contracts. LIVE/README unchanged,G1 6/18;actual notch-frame recovery next.
+[Whole0500 weighted-query lesson](docs/history/stitchcad-devnotes-part656.md) retains exact implementation/oracle proofs;3 Git spans verified.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

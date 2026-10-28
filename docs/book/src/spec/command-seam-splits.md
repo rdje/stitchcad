@@ -540,3 +540,16 @@ quantity. Native tests consume all160 density rows and50 domain rows,including18
 mass,189-bit normalization,positive/negative/zero/maximal sources,omitted regions and signed ties.
 Focused weighted6/oracle1/source docs4 and selected Clippy/fmt pass. Semantic-notch context,actual
 paired matching,command effects and full paired acceptance retain their later owners.
+
+### Focused weighted-source component acceptance
+
+An actual owned Design fixture joins original weighted metadata,retained intervals,explicit numeric
+admission and source queries for±1 µm. At the half cut,weighted quantities are0 and±1;the actual
+Uniform control gives±1 at that first boundary,so a uniform fallback cannot satisfy the check.
+Both targets retain the same canonical original source and its two-region density. Graph-only
+resource cost is5 entries:2 spans+1 source+2 regions;limit4 refuses that original region charge
+with consumed3/requested2. Replacing copy96000 with96010 preserves held quantities,but complete
+current validation and fresh amount declarations refuse the original MissingCopy on span97001/A.
+Focused actual Design1 and selected lint/format checks pass. The weighted source component closes
+with focused verification. Original-notch contexts,paired physical matching,command effects and
+broader paired/mutation acceptance remain owned;these source partitions are descriptive intervals.
