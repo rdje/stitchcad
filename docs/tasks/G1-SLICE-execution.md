@@ -231,45 +231,45 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .1 admit current uniqueness before derived choice growth;.2 original-coordinate inverse;.acceptance
   focused primitive proof after implementation. No nearest-point or silent choice.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.1`
-  Status: `in_progress`
+  Status: `done`
   Goal: explicit bounded current-point/uniqueness handling before derived reference-choice tree
   allocation. Preserve actual unknown/orphaned/choice/arithmetic causes;equal current coordinates
   do not cancel required reference choices. Use actual journal data,no fabricated source readiness.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.1.1`
   Status: `done`
-  Goal:0504 shared allocation-free exact point edit step before bounded public uniqueness .1.2.
-  Own whole0503 retirement;no public API/availability or legacy full-resolution contract change.
-  - [x] REPRODUCE / ISSUE: full fold previously combined exact edit rules,offset temporary vectors
-    and recursive choice allocation. Next bounded consumer must share rules without constructing
-    that tree or duplicating arithmetic/repair predicates.
-  - [x] ROOT CAUSE: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    sewing_contract notch_context_recovery →4 passed/53 filtered,rc=0. Actual8-cycle recovery retains
-    256 leaves from25 logical inputs;full resolution and immediate single-edit evidence need distinct
-    consumers. Private fold source inspection localizes rule/allocation coupling in topology.rs.
-  - [x] FIX: private topology/point_step.rs returns Copy current/split/repair state,with fixed two
-    optional candidates. Exhaustive ResolvedRef/JournalEntry/OffsetFragment/edit views reject hidden
-    new state at compile time. Nonoverlapping positive offset intervals contain a point at most twice.
-    Full fold alone recurses/boxes choices and builds public candidate Vecs;all causes/ordering remain.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --lib
-    ontology::topology::tests →31 passed/48 filtered,rc=0;cargo test -p sc-core --test range_contract
-    complete_reference_recomposition_matches_independent_fraction_maps →1 passed/19 filtered,rc=0.
-    Both actual point/range maps consume all14 independent success/final-width rows;notch recovery4
-    passes,rc=0,including unchanged full256-leaf choices and relative direction witnesses.
-  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-core --test
-    range_contract --test sewing_contract -- -D warnings and cargo fmt --all --check →pass,rc=0.
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part661.md →3 exact Git spans,rc=0.
-    mdbook build/publication →89/178/1567/2683,rc=0;verify-retention →1115 logical/82 working/
-    2609635 residentB,rc=0. Broader paired/mutation acceptance stays .6.5.3.2.acceptance/pre-push.
-  - [x] LOCKSTEP: task/MEMORY/DEV/CHANGE/book synced;whole0503 retained661. LIVE/README reviewed
-    unchanged,G1 6/18;next .1.2 public bounded uniqueness before original-coordinate inverse/context.
-    promotion: declined (private refactor of existing indexed exact-reference/retained-choice contracts;no new public rule or standing decision).
-    Commit gate first refused a multiline promotion reason;joined the explicit decline into one line
-    for the existing gate syntax. No runtime or book content changed during this correction.
+  Goal:0504 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part662.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.1.2`
-  Status: `pending`
-  Goal: public explicit no-default bounded current-point uniqueness using the shared edit step,
-  actual journal/nested admission,strict known-source check and fixed choice/repair evidence before
-  tree allocation. Typed original causes preserved;do not silently select or cancel held choices.
+  Status: `done`
+  Goal:0505 explicit bounded current-point uniqueness implemented with focused checks. Parent .2.1
+  closes;wide original-coordinate inverse/context and combined primitive acceptance remain later.
+  - [x] REPRODUCE / ISSUE: next original-notch context cannot invoke uncontrolled full choice-tree
+    expansion or mistake legacy unknown-edge pass-through for actual known-source readiness.
+  - [x] ROOT CAUSE: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    unique_point_contract →6 passed,rc=0. Actual8-cycle full fold has256 leaves;bounded query returns
+    first required split's real operation/source/cut/branch IDs,without claiming current candidates.
+    An unknown edge still passes legacy resolution but is explicit UnknownSource in the new query.
+  - [x] FIX: explicit positive UniquePointLimits for whole journal and aggregate declared-edge/
+    offset-fragment populations;admit all before source lookup/mapping. Shared exact step returns
+    fixed Copy outcomes with held context,real collection refusal and concrete repair/candidates.
+    Exhaustive typed edit/private fragment views;no default,branch traversal,registration mutation,
+    silent choice or bounded-reference widening. Query observation must be refreshed after edits.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    unique_point_contract →6 passed,rc=0. Equality quotas accepted;actual offset refusal consumed3/
+    requested2/limit4 names original operation. Later unrelated declaration is charged before first
+    choice. Delete/gap/ambiguity causes and candidate ordering match full fold;relative direction and
+    original holder preserved;ledger unchanged. range_contract complete_reference_recomposition
+    filter →1 passed/19 filtered,rc=0;all14 independent success/genuine-width rows agree across
+    bounded point/full point/range maps,including concrete complete-operation numeric causes.
+  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --doc
+    ontology::topology::unique_point →2 passed/188 filtered,rc=0;first capitalized filter ran only1,
+    corrected module filter covers no-default compile refusal and actual successful query example.
+    Scoped Clippy unique_point_contract/range_contract -- -D warnings and fmt --all --check →pass,
+    rc=0. Receipt662 →3 exact Git spans,rc=0;book build/publication →89/182/1567/2684,rc=0;glossary
+    →0 failures,rc=0;retention →1116 logical/83 working/2615246 residentB,rc=0;pressure →active62/64,
+    aggregate83/192,rc=0. Broader paired/mutation acceptance stays .6.5.3.2.acceptance/pre-push.
+  - [x] LOCKSTEP: task/MEMORY/DEV/CHANGE/sewing decision/book/API routes synchronized;whole0504
+    retained662. Indexed decision gains bounded current-point answer;LIVE/README reviewed unchanged,
+    G1 6/18. Next .2.2 exact wide original-coordinate inverse;context/effects stay later owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.2`
   Status: `pending`
   Goal: exact original-coordinate inverse with wide fractions,all actual coordinate/direction

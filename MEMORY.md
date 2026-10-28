@@ -1,11 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.2.1.2 in docs/tasks/G1-SLICE-execution.md:public explicit
-  bounded current uniqueness with actual journal/nested admission and known-source check. Stop at
-  required split choice before tree growth;preserve actual repair/choice/direction evidence.
-- Shared allocation-free point edit step closed0504 .1.1:private Copy current/split/repair with
-  fixed two-candidate offset storage,exhaustive private fields/edits. Legacy full resolver alone
-  follows branches;all31 topology/recomposition1/notch4/scoped lint/fmt pass. Whole0503 in661.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.2.2 in docs/tasks/G1-SLICE-execution.md:wide exact original
+  coordinate inverse through actual journal to named source-edge CREATION frame;retain all numeric/
+  direction candidates. Split safe implementation children before edits;admit actual journal/nested,
+  candidates and integer work explicitly. No nearest point,anchor rewrite or physical certificate.
+- Bounded current uniqueness .2.1 closed0505:resolve_unique_point admits complete journal/nested
+  data before lookup/mapping,strictly rejects unknown sources,stops first required split choice.
+  Fixed Copy outcomes retain original holder/actual quota/repair/relative direction. Immediate split
+  branch IDs are not final current candidates;registration choices not applied. Native6/Fraction14
+  crossmaps1/doc2/scoped Clippy/fmt pass;repeat after edits. Whole0504 retained662,3 exact Git spans.
 - D305 uses complete relative progress for split-second/offset and one shared i128 merge ratio;
   reduce before narrowing. Fraction14 proves9 false intermediate refusals fixed/5 genuine final
   widths still repaired with original reference/range and complete-operation cause. Range20,

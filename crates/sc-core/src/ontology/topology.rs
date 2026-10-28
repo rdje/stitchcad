@@ -41,6 +41,10 @@ use super::rational::Rational;
 use super::reference::{EdgeRef, LocalTag, Param};
 
 mod point_step;
+mod unique_point;
+pub use unique_point::{
+    PointJournalCollection, UniquePointLimits, UniquePointOutcome, UniquePointResolution,
+};
 
 /// The most edges one operation may create — the declared domain of [`IdentityLedger::declare_edges`] and
 /// [`IdentityLedger::offset`], enforced at the boundary so no downstream code re-checks it.

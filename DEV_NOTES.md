@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — shared allocation-free point edit step
+## _(2026-10-28 UTC)_ — explicit bounded current-point uniqueness
 
-0504 extracts exact single-edit point rules from recursive full fold into a private child. Copy immediate state/fixed two-candidate offset evidence and exhaustive private fields/edit variants keep future changes visible. Validated positive nonoverlapping intervals contain a point at most twice.
-Legacy full fold alone follows/boxes both split branches and builds public repair candidate vectors. Unknown-source pass-through,held references,relative directions,actual numeric causes and choice trees stay unchanged. Bounded public admission/uniqueness remains next .1.2;no full-resolver resource bound claimed.
-Topology31/recomposition1/notch recovery4/scoped Clippy/fmt pass0. Fraction14 point/range watch preserves9 corrected complete results/5 genuine final-width repairs;8-cycle recovery still retains256 leaves. No runtime API or availability change;LIVE/README unchanged,G1 6/18.
-[Whole0503 numeric repair](docs/history/stitchcad-devnotes-part661.md) retains exact cause/fix/validation. Book explains shared calculation versus full consumer. Promotion declined in leaf:implementation refactor of existing indexed contracts,without a new policy or standing decision.
+0505 resolve_unique_point admits complete actual journal count then aggregate declared-edge/offset-fragment populations before lookup/mapping. Explicit positive/no-default limits;fixed Copy outcomes retain original reference/parameter,actual operation/collection,consumed/requested/limit and concrete repair causes.
+Known-source check rejects legacy unknown pass-through. Shared exact step stops at first split with actual immediate branch IDs/cut/relative direction;no branch traversal or registration choice. Distinguish immediate branches from final current candidates. Repeat after edits;no copy/range/physical certificate.
+Native6/recomposition1/doc2/scoped Clippy/fmt pass0. Actual late unrelated data is charged before first choice;8-cycle full256 leaves remain required. All14 Fraction cases agree with full point/range maps,including5 genuine width repairs. Initial capitalized doc filter ran only1;module filter proves both examples.
+[Whole0504 refactor](docs/history/stitchcad-devnotes-part662.md) retains exact implementation/proofs. Indexed sewing decision gains bounded-query contract;book/API routes sync. LIVE/README unchanged,G1 6/18. Original-coordinate inverse/context and broader paired acceptance remain owned.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

@@ -1,9 +1,8 @@
 # Original-frame notch context
 
 Notch-bounded allocation needs the actual semantic landmarks and topology journal,not guessed
-parameters or physical notch dimensions. This chapter records the recovered requirements before
-implementation. Exact current-point/original-coordinate helpers and notch quantity queries remain
-pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
+parameters or physical notch dimensions. Explicit bounded current-point uniqueness is implemented.
+Original-coordinate projection and notch quantity contexts remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
 is already implemented with focused checks.
 
 | API token | Meaning |
@@ -11,6 +10,16 @@ is already implemented with focused checks.
 | `Param` | Bounded exact position in an edge's own original frame |
 | `Rational` | Signed64-bit reference fraction,distinct from a private wide numeric workspace |
 | `IdentityLedger` | Actual typed topology journal and reference resolver |
+| `UniquePointLimits` | Explicit positive journal/nested input budgets,without defaults |
+| `UniquePointResolution` | Original held reference and fixed bounded query outcome |
+| `UniquePointOutcome` | Current point,required choice,repair,unknown source or admission refusal |
+| `PointJournalCollection` | Actual declared-edge or offset-fragment collection |
+| `resolve_unique_point` | Admit the whole journal before current uniqueness lookup/mapping |
+| `JournalEntries` | Complete journal count exceeds the selected limit |
+| `NestedItems` | Actual collection would exceed the aggregate nested budget |
+| `CountOverflow` | Aggregate count cannot be represented |
+| `SplitChoice` | Required first split choice;branch identities have not been folded further |
+| `Repair` | Actual first repair cause with fixed immediate offset candidates |
 | `TopologyEdit` | Declared split,merge,reverse,delete or offset mapping |
 | `Notch` | Actual semantic anchor with deferred physical representation |
 | `SewingLandmark` | Actual registered Notch or TurnPoint |
@@ -71,8 +80,54 @@ The shared single-edit point calculation is implemented. It uses fixed immediate
 most two offset candidates;the journal enforces positive nonoverlapping offset intervals. It retains
 exact arithmetic,relative direction,split branches and concrete repair causes. The existing full
 resolver consumes this step and still follows both branches into its public choice tree. This
-refactor supplies the common rules for the next bounded consumer;it does not bound the full resolver.
-The public bounded uniqueness query and original-coordinate projection remain pending.
+shared step supplies both consumers;it does not bound the full resolver.
+
+## Query bounded current uniqueness
+
+Choose both positive limits explicitly. Journal entries include all edits,including unrelated ones.
+The nested budget sums every declared-edge and offset-fragment collection across that complete
+journal. Fixed split/merge/reverse/delete fields are covered by their journal entries. Admission
+finishes before source lookup or point mapping;no registration collection is read or charged.
+A refusal retains the original held edge/parameter and actual operation/collection,prior consumed
+count,whole next request and selected limit. Equality with a limit is accepted.
+
+The query uses fixed storage and shared exact point steps without constructing the full choice
+tree. An unknown source is explicit,while the existing point fold still has its documented
+pass-through behavior. A known unique result agrees with that full fold. Actual deletion,offset
+gap/shared-boundary and arithmetic causes remain concrete. Offset candidates retain their immediate
+meaning and authored order,as in the full fold.
+
+A first split choice stops the query. Its branch IDs refer to the edit's immediate fragments:the
+first starts at its end,the second at its start. Neither is presented as a final current candidate.
+Stated registration choices are not applied by this reference-only query. Coincident later
+locations do not cancel a required reference choice. Relative direction is retained throughout.
+
+```rust
+use core::num::NonZeroUsize;
+use sc_core::ontology::{DeterministicIdGenerator, IdentityLedger, Param, Rational,
+    UniquePointLimits, UniquePointOutcome};
+use sc_units::Length;
+let mut ledger = IdentityLedger::new();
+let mut ids = DeterministicIdGenerator::new();
+let edge = ledger.declare_edges(&mut ids, 1)?.remove(0);
+let half = Param::new(Rational::new(1, 2)?)?;
+let fragments = ledger.split(&mut ids, edge, half)?;
+let one = Length::from_micrometres(1)?;
+ledger.merge(&mut ids, fragments.first(), one, fragments.second(), one)?;
+let entries = NonZeroUsize::new(3).ok_or("positive journal limit")?;
+let nested = NonZeroUsize::new(1).ok_or("positive nested limit")?;
+let result = ledger.resolve_unique_point(edge, half, UniquePointLimits::new(entries, nested));
+assert_eq!(result.reference(), edge);
+assert!(matches!(result.outcome(), UniquePointOutcome::SplitChoice { source, .. } if *source == edge));
+assert!(result.resolved().is_none());
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The answer is an observation of this journal;repeat after edits. This primitive does not certify
+whole-range coverage,copy ownership,physical correspondence or original-coordinate uniqueness.
+Its input counts do not constitute bus authority,an allocator/RSS limit or a CPU-time certificate.
+Native6 plus the14 independent fraction rows cover actual limits/causes/choices/current mapping;
+focused checks pass. Original-coordinate inverse,semantic context and paired effects remain owned.
 
 ## Current-reference composition defect
 
@@ -105,7 +160,7 @@ assert_eq!(current.param().as_rational(), Rational::new(1, 9223372036854775804)?
 
 ## Selected implementation boundary
 
-First provide bounded current-point uniqueness without constructing an uncontrolled choice tree.
+Bounded current-point uniqueness is implemented without constructing the full choice tree.
 Then project exact coordinates backward through actual journal mappings to the named source edge's
 creation frame. Split/offset use exact affine maps,reverse retains relative direction,and merge
 joins retain all applicable predecessor candidates. Equal coordinate/direction states may coalesce

@@ -156,3 +156,16 @@ The [whole pre-context record](../history/stitchcad-devnotes-part658.md) preserv
 15352-byte decision,all earlier settled statements,dated implementation/probe counts and historical
 pending scopes byte-exact. This curation keeps standing contracts current without another map row
 or raised ceiling. Whole0501 acceptance lives in [657](../history/stitchcad-devnotes-part657.md).
+
+## Bounded current-point primitive0505
+
+answers: "can current-point uniqueness be queried before allocating a full reference-choice tree?"
+
+resolve_unique_point requires explicit positive journal/nested limits,admits all entries plus all
+variable declared-edge/offset-fragment populations before lookup/mapping,then uses the shared exact
+point step with fixed output. Unknown source is explicit;actual repairs retain their original
+causes/immediate offset candidates. The first split returns its actual operation/source/cut/branch
+IDs and relative direction without traversing either branch or claiming final current candidates.
+Registration choices are not applied and no held reference is rewritten. Native6 plus14 independent
+fraction rows pass;no input-count/point result is physical truth or whole Design authority. Repeat
+after edits. Original-coordinate inverse and actual notch/source context remain pending.

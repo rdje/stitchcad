@@ -708,12 +708,27 @@ fn complete_reference_recomposition_matches_independent_fraction_maps() {
             _ => unreachable!("frozen public mapping kind"),
         };
         let point = ledger.resolve(source, held);
+        let ten = core::num::NonZeroUsize::new(10).unwrap();
+        let bounded = ledger.resolve_unique_point(
+            source,
+            held,
+            sc_core::ontology::UniquePointLimits::new(ten, ten),
+        );
+        assert_eq!((bounded.reference(), bounded.param()), (source, held));
+        assert_eq!(bounded.resolved(), point.resolved());
         let result = ledger.resolve_range(range);
         if field(8) == "Overflow" {
             let Resolution::Unresolved(task) = point else {
                 panic!("genuine final-width refusal: {}", field(0))
             };
             assert_eq!((task.reference(), task.param()), (source, held));
+            let sc_core::ontology::UniquePointOutcome::Repair { cause, candidates } =
+                bounded.outcome()
+            else {
+                panic!("bounded complete-fraction refusal")
+            };
+            assert_eq!(cause, task.orphaned_by());
+            assert!(candidates.iter().all(Option::is_none));
             if !matches!(task.orphaned_by(), OrphaningEdit::RecomputationFailed {
                 edge, cause: sc_units::UnitError::Overflow { operation: actual }, ..
             } if *edge == source && *actual == operation)

@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0504 — share allocation-free exact point edit rules
+## STITCHCAD-G1-0505 — query explicit bounded current-point uniqueness
 
-- Private Copy step retains immediate exact position,split pair or repair with fixed two-candidate offset storage. Exhaustive typed edit/private field views keep future state changes visible.
-- Legacy full fold consumes the shared step and preserves full choice trees,held references,relative directions and actual causes. Topology31/recomposition1/notch recovery4/scoped Clippy/fmt pass;no public bounded API yet.
-- Whole0503 retained661;task/book/live pointers synchronized. LIVE/README unchanged,G1 6/18. Explicit bounded current uniqueness is next;inverse/context/effects and broader paired acceptance remain owned.
+- Positive no-default limits admit the complete actual journal/nested collections before source lookup/mapping. Fixed Copy outcomes retain held reference,actual quota context,unknown source,first required split choice or concrete repair cause/candidates.
+- Shared exact steps avoid full choice-tree construction;immediate split branch IDs retain their scope and relative direction. Native6/recomposition1/doc2/scoped Clippy/fmt pass,including all14 Fraction cases,late unrelated quota refusal and unchanged ledger state.
+- Whole0504 retained662;sewing decision/book/API/task pointers synchronized. LIVE/README unchanged,G1 6/18. Wide original-coordinate inverse,actual notch context and broader paired acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
