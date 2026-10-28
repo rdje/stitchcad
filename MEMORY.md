@@ -1,20 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.acceptance in docs/tasks/G1-SLICE-execution.md:focused original
-  notch/source component closure after implementation. Then .4.4 actual view/command adoption.
-- Quantity .3.4 accepted0520 through actual Design5 native cases/scoped Clippy/fmt. Four A/B x±2
-  sources with descriptive quarter A/three-quarter Opposite B cuts allocate0/±2 versus Uniform±1
-  first. Two actual child views retain1 full original/two stops,complete state and exact total.
-- Copy replacement refuses fresh child97001/A declarations and original97000/A local validation;
-  earlier immutable mathematics still works. Actual formula/profile metadata/context refuses
-  numeric amount before limit1. No symbolic value,physical match or whole Design proof supplied.
-- Queries0518 native2/380 Fraction rows/private projection1/doc4/lint/fmt remain committed:clamp
-  exact originals,B/Opposite complement BEFORE rounding,difference original boundaries,no narrowing.
-- Whole0519 in678/3 exact spans;book90/211/1572/2707,glossary0/map unchanged,retention1132 pass.
-  Integrity0519 final hook verifies exact native --index authority. Consume EVERY exec terminal
-  before dependent stage/commit;always print full metadata so running session IDs cannot disappear.
-- Omitted0518 authority:docs/tasks/artifacts/live_doc_size/0518_unstaged_authority.jsonl (929B).
-  View/command adoption,paired matching/stops/lineage/effects/full acceptance remain owned;PNT continues.
+- Next G1-SLICE.6.5.3.2.3.2.4.4 in docs/tasks/G1-SLICE-execution.md:actual nonuniform source/
+  quantity adoption into retained allocation and command views. Recover real caller/resource/
+  metadata interfaces first;split safe lanes and own formula/profile/geometry dependencies before
+  effects. Original-notch component .4.3 closes0521 with scoped post-implementation checkpoint.
+- Checkpoint native Notch34/private original-point4 and independent projection6/workspace6+960/
+  comparison6/recovery3/quantity6+302+380 pass0. No runtime changes;actual Design5/lint/fmt0520
+  and doc4 remain committed. This is source/query scope,not full paired/physical/app verification.
+- Actual Design±2 quarter partitions produce0/±2 versus Uniform±1 first;2 child views keep1 full
+  original/two stops. Fresh copy replacement refuses declarations/local validation while original
+  immutable quantities work. Formula/profile metadata/context still supplies no numeric value.
+- Whole0520 in679/3 exact spans;book90/211/1572/2707,map unchanged,retention1133 pass. Native
+  source decision198L remains bounded;original pre-curation source encoded670. Full PNT continues.
+- Integrity0519 final hook verifies exact native --index authority. Consume EVERY exec terminal
+  before dependent mutations;print full metadata. Omitted0518 authority is retained in the live
+  doc-size artifact family;whole incident/fix/proof in678. No background preparation remains.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -3,13 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0520 — accept actual Design original-notch source quantities
+## STITCHCAD-G1-0521 — close original-notch source/query component checkpoint
 
-- Actual current Design declarations,2 retained child views/1 full canonical source and real Notch/ledger/context drive signed quantities. Four A/B x±2 descriptive quarter partitions allocate0/±2 while actual Uniform control spends±1 first. Original totals/stops/state stay exact.
-- Native5/scoped sc-measure Clippy/fmt pass. Actual copy replacement refuses fresh child declarations/original local validation while old immutable quantities remain usable. Formula/profile metadata and coordinates refuse symbolic amount before tiny budget;earlier
-  context/wide-choice fixtures pass.
-- Whole0519 retained678/three exact Git spans;book90/211/1572/2707,glossary0/map/retention1132 pass. Quantity component accepted with focused checks;Notch closure then view/command adoption next. LIVE/README unchanged,G1 6/18;paired/mutation/physical/full verification remains
-  owned.
+- Post-implementation public Notch34/private original-point4 pass. Independent projection6/workspace6+960/comparison6/recovery3/quantity6+302+380 controls pass;committed actual Design5/lint/fmt and earlier doc4 retain their scope. No new runtime implementation.
+- Original source/current ownership,choices/repairs/quotas,original ambiguity/coincidence/wide frames and signed clamped quantities stay exact. Source/query component closes with scoped verification;actual retained view/command adoption .4.4 is next,with real
+  formula/profile/geometry dependencies owned before effects.
+- Whole0520 retained679/three exact Git spans;book90/211/1572/2707,map/retention1133 pass. LIVE/README unchanged,G1 6/18. Full paired,mutation,physical/app and pre-push verification remain separately owned;staged book authority stays mandatory.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

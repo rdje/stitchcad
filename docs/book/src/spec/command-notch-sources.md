@@ -336,6 +336,12 @@ Five focused native cases include the new signed/symbolic quantity acceptance an
 source-context fixtures. This accepts the source/query component with focused checks;convenience
 view/command APIs,whole nonuniform acceptance and paired/mutation/physical proof retain later owners.
 
+After implementation,the scoped original-notch component checkpoint passes all34 public Notch
+cases and4 private original-point cases. Independent projection,width,comparison,recovery and
+quantity oracles pass,including380 exact quantity rows. Together with the actual Design5 checks,
+this closes the original-notch source/query component. View/command adoption,physical matching,
+paired effects and broader acceptance remain explicit subsequent work.
+
 The canonical decision is docs/decisions/decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md.
 Its whole pre-0512 source is logical record docs/history/stitchcad-devnotes-part670.md,available
 through the [public archive reader](../annexes/archive-reader.md). It retains prior prospective

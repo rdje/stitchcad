@@ -214,10 +214,11 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0501 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part657md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3`
-  Status: `in_progress`
-  Goal: actual original-frame notch allocation context through public semantic landmark/ledger
-  interfaces,including later topology frames,ambiguous/lost anchors and current source ownership.
-  Preserve original IDs/positions/causes;no nearest-point or guessed inverse projection.
+  Status: `done`
+  Goal:0521 actual original-frame notch source/query component implemented and scoped checkpoint
+  passed after implementation:bounded current/inverse,actual source dependencies/local validation,
+  sealed original interval,separate quantity admission and exact original cumulative differences.
+  Physical matching,view/command adoption and whole paired/mutation/full proof retain later owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.1`
   Status: `done`
   Goal:0502 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part660md).
@@ -303,44 +304,41 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0518 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part677.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.4.acceptance`
   Status: `done`
-  Goal:0520 focused actual Design/retained original notch source/query quantities accepted.
-  Full original totals,actual metadata and current refusal boundaries remain distinct.
-  - [x] REPRODUCE / ISSUE: 0520 cargo test -p sc-measure --test design_inputs_contract
-    original_notch_design →5 passed/167 filtered,rc=0. Actual signed2um quarter partition gives
-    Notch child amounts0/2 while actual Uniform counterfactual spends1 first;source kind matters.
-    Views lending full originals cannot be mistaken for independently rounded child declarations.
-  - [x] ROOT CAUSE: 0520 same cargo test -p sc-measure --test design_inputs_contract
-    original_notch_design →5 passed,rc=0. Two actual child views/one canonical full source retain
-    both original stops despite empty child lists. Quarter A/three-quarter Opposite B cuts are
-    descriptive partitions;amounts must use exact original Notch CDFs in canonical A order.
-  - [x] FIX: 0520 actual DesignSources/inputs/sewing owner fixture now accepts explicit descriptive
-    A/B cuts while its existing half-cut context fixtures keep their behavior. New source/query
-    acceptance joins actual current declarations,source/Notch/ledger context and separate473-bit
-    quantity admission. Fresh current-source refusal remains outside held mathematical queries.
-    Focused actual native5 →passed,rc=0;no production value,geometry or reference choice supplied.
-  - [x] ADDRESSED: 0520 cargo test -p sc-measure --test design_inputs_contract
-    original_notch_design →5 passed/167 filtered,rc=0. Four A/B x signed±2 cases preserve complete
-    state,actual source pointers/full original declarations/stops and allocate0/±2,sum±2. Uniform
-    quarter control returns±1. Actual copy96000→96010 replacement makes fresh declarations refuse
-    child97001/A and local validation refuse original97000/A;old immutable quantities stay exact.
-    Four A/B x formula5001/profile98010 cases keep valid actual metadata/context but refuse actual
-    symbolic amount before limit1. The earlier three source-context/later-wide-choice fixtures pass.
-  - [x] NO REGRESSION: 0520 cargo clippy -p sc-measure --test design_inputs_contract -- -D warnings
-    and cargo fmt --all --check →pass,rc=0. Book/publication90/211/1572/2707,glossary310/9/158/0,
-    map unchanged,678 receipt3 exact Git spans,retention1132 logical/37 working/63506 decodedL/
-    4905018 decodedB/2482355 residentB →pass,rc=0. Native tools use local_environment.py. Actual
-    view/command APIs,.3 component acceptance,paired/mutation/physical/full verification retain
-    .4.4/.3.acceptance/.6.5.3.2.acceptance/pre-push;no deferred verification claimed complete.
-  - [x] LOCKSTEP: 0520 quantity parent closes with focused acceptance;MEMORY/DEV/CHANGE/book/
-    canonical source decision/task index/D301 align. Whole0519 retained678/3 exact Git spans,
-    including original integrity incident/fix. New staged authority hook remains mandatory;consume
-    every preparation terminal before stage. LIVE/README reviewed unchanged,G1 6/18. Next .3.
-    acceptance focused original-notch component closure,then actual nonuniform view/command adoption.
-    promotion: declined (integration of indexed original source/currentness/quantity contracts;no new policy,implicit value or physical assumption).
+  Goal:0520 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part679.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.acceptance`
-  Status: `pending`
-  Goal: deferred focused actual notch/source component acceptance after projection/context/query
-  implementation;physical correspondence,paired effects and broad acceptance retain later owners.
+  Status: `done`
+  Goal:0521 post-implementation scoped original-notch component checkpoint passed;only source/
+  query component closes. Actual view/command adoption remains .4.4,no physical/effect/app claim.
+  - [x] REPRODUCE / ISSUE: 0521 cargo test -p sc-core --test sewing_contract notch →34 passed/
+    49 filtered,rc=0. The completed family must preserve actual source/current/original/quantity
+    behavior together;private scalar success or one accepted amount is not complete source context.
+  - [x] ROOT CAUSE: 0521 cargo test -p sc-core --lib original_point →4 passed/80 filtered,rc=0.
+    Actual immutable frame,source creation,relative directions,unit-domain/zero denominator and
+    checked resource reservations remain coupled to inverse coordinates and later guarded queries.
+  - [x] FIX: 0521 no new runtime implementation;activate the separately owned checkpoint only
+    after .1/.numeric/.2/.3/.4 implementation/acceptance closes. Review canonical source contract,
+    public API/book routes and retained proofs. Native Notch34/private4 →passed,rc=0. Close .3
+    with scoped verification;convenience view/command APIs and broader paired work remain owned.
+  - [x] ADDRESSED: 0521 cargo test -p sc-core --test sewing_contract notch →34 passed,rc=0,
+    complete public Notch family:current choices/repairs/quotas,complete input populations/local
+    ownership/unused landmarks/full stops,actual original ambiguity/coincidence/wide frames and
+    signed clamped quantities. Private original-point4 →passed,rc=0. Independent original_projection
+    oracle6,projection_workspace6+960,original_comparison6,notch_context3,notch_quantity6+302+380
+    →pass,rc=0. These external Fraction/raw-integer controls cover the implemented source/query
+    component;actual Design5 from committed0520 retains signed Uniform counterfactual/current
+    refusal/symbolic boundaries. Its whole proof is retained679/3 exact Git spans.
+  - [x] NO REGRESSION: 0521 scoped native34+4 and five named independent oracle producers →pass,
+    rc=0. Book/publication90/211/1572/2707,map unchanged,679 receipt3 exact Git spans,retention
+    1133 logical/38 working/63569 decodedL/4911509 decodedB/2488846 residentB →pass,rc=0. Native
+    tools use local_environment.py. No Rust changes in this checkpoint;0520 lint/fmt/Design5 and
+    earlier doc4 remain committed evidence. Full CI/paired/mutation/physical proof stays .4.4/
+    .4.acceptance/.6.5.3.2.acceptance/pre-push,not represented as passed by this scoped checkpoint.
+  - [x] LOCKSTEP: 0521 source/query parent closes;MEMORY/DEV/CHANGE/book/canonical decision/task
+    index/D301 align. Whole0520 retained679/3 exact Git spans. LIVE/README reviewed unchanged,
+    G1 6/18. Next .4.4 actual nonuniform view/command adoption;recover actual interfaces and own
+    real formula/profile/geometry dependencies before effects. Staged book authority gate remains
+    mandatory;consume every preparation terminal before dependent stage/commit.
+    promotion: declined (scoped post-implementation checkpoint of indexed source/current/original/quantity contracts;no new policy or physical assumption).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.4`
   Status: `pending`
   Goal: integrate actual nonuniform source/context quantities with retained allocations and command

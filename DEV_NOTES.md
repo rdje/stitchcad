@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual Design original-notch quantity acceptance
+## _(2026-10-28 UTC)_ — original-notch source/query component checkpoint
 
-0520 focused actual Design5 joins current declarations,2 child views/1 canonical full source,actual Notches/ledger/context and473-bit quantity admission. Four A/B x±2 cases at descriptive A quarter/B three-quarter allocate0/±2,while actual Uniform control spends±1 first. Full source/stops/state stay exact;sum±2.
-Actual copy96000→96010 replacement refuses fresh declarations on child97001/A and local source validation on original97000/A;old immutable quantities remain usable. Four A/B x formula5001/profile98010 cases preserve current metadata/original context but refuse actual symbolic source before a1-bit allowance.
-Native5/167 filtered,scoped sc-measure Clippy/fmt pass0. Existing3 context/wide-choice cases stay exact. Book90/211/1572/2707,glossary0/map/retention1132 and678 receipt3 exact Git spans pass0. Quantity component accepted with focused checks;Notch component closure then view/command adoption next.
-[Whole0519 integrity repair](docs/history/stitchcad-devnotes-part678.md) retains exact incident/fix/proofs. Consume all preparation terminals before stage;final hook checks exact staged authority. LIVE/README unchanged,G1 6/18. Promotion declined:integration of indexed source/currentness/quantity contracts.
+0521 closes original-notch component after all inverse/context/quantity implementation. Scoped native public Notch34/private original-point4 pass0,together with independent projection6/workspace6+960/comparison6/recovery3/quantity6+302+380 controls. No new runtime implementation or broad paired claim.
+Complete actual dependencies/local current ownership,first choices/repairs/quotas,original frames/ambiguity/coincidence/wide coordinates and signed clamped quantities remain intact. Committed0520 actual Design5/lint/fmt retains signed Uniform counterfactual,copy refusal/symbolic boundaries;earlier doc4 stays valid.
+Book90/211/1572/2707,map/retention1133/679 receipt3 exact Git spans pass0. Only source/query scope closes;actual retained view/command adoption .4.4 is next. Formula/profile values,real geometry/correspondence,stops,lineage,atomic effects/full verification retain owners. Source decision198L remains bounded.
+[Whole0520 Design acceptance](docs/history/stitchcad-devnotes-part679.md) retains exact scope/lesson/changelog. LIVE/README unchanged,G1 6/18. Staged authority hook remains mandatory;consume every preparation terminal before stage. Promotion declined:scoped checkpoint of indexed existing contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
