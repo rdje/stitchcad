@@ -69,14 +69,32 @@ integer work. Whole-source/effect integration remains a separate owned stage.
 
 ## Current-reference composition defect
 
-D305 is open and scheduled as the immediate repair before projection implementation. With a split
-at1/3,the valid held position1537228672809129301/4611686018427387902 currently becomes an
-arithmetic repair. Its temporary offset1/13835058055282163706 needs64 denominator bits,but the
-complete normalized result1/9223372036854775804 fits the supported63-bit field. The existing exact
-source-range progress query returns that complete fraction;the current point resolver prematurely
-narrows the offset. Source inspection finds related composition patterns in offset/merge/range maps.
-Only the split failure is behaviorally reproduced at this recovery checkpoint;related paths are
-immediate audit/fix scope. Complete-fraction recomposition must preserve genuine final-width refusals.
+D305 is repaired with focused verification. After a split at1/3,the valid held position
+1537228672809129301/4611686018427387902 resolves to the second fragment at1/9223372036854775804.
+The temporary offset1/13835058055282163706 needs64 denominator bits,but the complete normalized
+result fits the supported63-bit field. Split-second and offset maps now use the existing exact
+complete-progress kernel;point and range merge maps share complete arc-length recomposition.
+Reduction precedes the return to bounded reference fields. No coordinate is rounded or clamped.
+
+The independent Fraction fixture covers14 cases through both point and range resolution:nine
+valid results defeat premature intermediate checks,five genuinely wide final fractions still
+produce numeric repairs. Repairs retain the held source and position/range plus the actual
+completed-operation cause. Declared merge lengths remain caller-supplied arc-length evidence;
+this repair adds no measured geometry or physical correspondence.
+
+```rust
+use sc_core::ontology::{DeterministicIdGenerator, IdentityLedger, Param, Rational};
+let mut ledger = IdentityLedger::new();
+let mut ids = DeterministicIdGenerator::new();
+let source = ledger.declare_edges(&mut ids, 1)?[0];
+let split = Param::new(Rational::new(1, 3)?)?;
+let fragments = ledger.split(&mut ids, source, split)?;
+let held = Param::new(Rational::new(1537228672809129301, 4611686018427387902)?)?;
+let current = ledger.resolve(source, held).resolved().ok_or("expected exact current position")?;
+assert_eq!(current.edge(), fragments.second());
+assert_eq!(current.param().as_rational(), Rational::new(1, 9223372036854775804)?);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
 
 ## Selected implementation boundary
 
@@ -102,10 +120,11 @@ The independent Fraction producer freezes three recovery cases:
 
 ```bash
 python3 -I -B docs/tasks/artifacts/seam_partition/notch_context_oracle.py --check
+python3 -I -B docs/tasks/artifacts/seam_partition/reference_recomposition_oracle.py --check
 ```
 
-Focused native recovery4 and selected Clippy/format checks pass. Those checks validate actual
-accepted source states,forward witnesses,derived choice growth and the observed D305 failure;
-they do not claim a repaired D305 or implemented original-coordinate projection. The exact
+Focused native range20/recovery4 and selected Clippy/format checks pass. Those checks validate actual
+accepted source states,forward witnesses,derived choice growth and the corrected D305 resolution;
+they do not claim implemented original-coordinate projection. The exact
 pre-context sewing decision and closed D302–D304 ledgers are retained in repository history records
 658/659;the current decision keeps standing contracts without a raised ceiling or another map row.

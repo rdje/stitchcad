@@ -14,8 +14,9 @@ A parameterized reference's position `t` is a **bounded exact rational in `[0, 1
 and denominator (`i64`, reduced to canonical form, `i128` intermediates) — defined in **`sc-core`'s ontology
 module**. It is **not** `sc-units`' parts-per-million `Ratio`, and **not** the formula evaluator's
 arbitrary-precision rational. Split, merge and reverse recompute `t` **exactly** (`t/s`, by arc length,
-`1 − t`); an intermediate that does not fit `i64` after reduction is a **typed diagnostic**, never a silent
-round.
+`1 − t`); a complete recomputed position that does not fit `i64` after reduction is a **typed diagnostic**,
+never a silent round. Arithmetic operators still check their own complete results;an unobservable
+intermediate inside one journal map must not impose a narrower contract than that map's result.
 
 ## Why
 
@@ -74,3 +75,16 @@ coverage uses exact membership samples and the existing later-edit interval reso
 unknown-source repairs. This primitive supplies interval evidence;actual paired sewing/copy/ease/
 stop/lineage and transaction obligations remain G1-SLICE.6.5.3.2. Four new cases plus13 existing
 range tests and one compiled example pass;it grants no geometric or physical certificate.
+
+## Complete reference recomposition0503
+
+answers: "may a wide temporary offset or scaled position reject a representable current reference?"
+
+D305 reproduced nine false point/range repairs with independent Fraction cases. Split-second and
+all offset normalization now reuse complete relative progress. Both point/range merge paths use one
+exact complete arc-length ratio:form its numerator/denominator in i128,reduce,then narrow once.
+Positive i64 reference denominators keep even full-i64 coefficient sums/products strictly inside
+the signed128-bit range;actual declared merge lengths are further bounded by Length.
+Five independent genuinely wide final fractions retain repairs with original reference/range and
+complete-operation cause. Focused range20/notch4/topology31 pass;broader paired acceptance remains
+separately owned. The original reference representation,choice rules and physical checks stay intact.

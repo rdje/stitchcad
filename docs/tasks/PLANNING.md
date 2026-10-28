@@ -1175,7 +1175,7 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/stitchcad-de
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Uniform/root and retained .3 component closed0494. Weighted source .4.2 closes0501 with focused actual Design acceptance after0497–0500 recovery/rounding/admission/queries. Recovery0502 owns D305 complete-fraction repair next,then notch/frame context;paired matching/stops/lineage/effects/full acceptance remain owned.
+P1 prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Uniform/root and retained .3 component closed0494. Weighted source .4.2 closes0501 with focused actual Design acceptance after0497–0500 recovery/rounding/admission/queries. D305 fixed0503;bounded notch/frame projection next;paired matching/stops/lineage/effects/full acceptance remain owned.
 Actual native structural_child_graph_acceptance_is_not_parent_ease_conservation passes:copied10+10 gives20 for parent10;independently authored5+5 also passes structural validation with DeferredToG2AndG3. Root:per-span fields/validation lack an original-parent relation. No split result is published;handler unavailable.
 Implement coupled parent-aware sources/quantization/provenance for explicit/formula/profile and distributions;standalone structural acceptance is not conservation proof.
 Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];root boundaries[0,1,0],signed symmetry. Native .2 root-query watch passes with original domains/direction;nonuniform/context/stops/lineage/effects and full paired acceptance remain pending.
@@ -1194,6 +1194,6 @@ Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history
 
 ## D305 — premature bounded intermediates in reference recomputation
 
-P1 open;owner G1-SLICE.6.5.3.2.3.2.4.3.numeric,next before projection. Actual notch_context_recovery filter passes4/rc0,including this observed defect:valid held1537228672809129301/4611686018427387902 at split1/3 becomes Unresolved;complete result1/9223372036854775804 fits Param.
-Root:code census finds bounded differences/products before full ratios in point/range split/offset/merge paths. Split offset1/13835058055282163706 needs64 bits;the complete current parameter needs63. Impact:false arithmetic repairs block valid current references/notches.
-Repair complete-fraction recomposition and preserve genuine final-width refusals;independent fixtures/focused point/range watches required. Root recovery .4.3.1 records native/oracle evidence;no fix or full verification claimed yet.
+P1 fixed0503;owner G1-SLICE.6.5.3.2.3.2.4.3.numeric. Independent Fraction14/public point+range native watch first failed1/rc101:nine representable final results falsely repaired. Split1/3 held1537228672809129301/4611686018427387902 now correctly resolves1/9223372036854775804.
+Root:bounded differences/products before complete ratios in split-second/offset/merge point+range maps. Reuse exact complete relative progress;share one complete arc-length merge kernel. Reduce before narrowing;no reference width increase or rounding.
+Focused range20/notch4 and oracle14 pass0;five genuinely wide final fractions retain original reference/range and actual numeric cause. Topology unit/scoped lint results belong owning leaf;projection/context and deferred broader paired acceptance remain separate.

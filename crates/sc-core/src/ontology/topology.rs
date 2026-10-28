@@ -1347,10 +1347,7 @@ impl IdentityLedger {
                         Ordering::Greater => {
                             // `s < 1` (validated at apply), so `1 − s > 0` and the division is defined.
                             let recomputed = t
-                                .checked_sub(s)
-                                .and_then(|shifted| {
-                                    s.one_minus().and_then(|rest| shifted.checked_div(rest))
-                                })
+                                .checked_relative_progress(s, Rational::ONE)
                                 .and_then(to_param);
                             match recomputed {
                                 Ok(local) => {
@@ -1392,22 +1389,13 @@ impl IdentityLedger {
                     merged,
                 } if *first == edge || *second == edge => {
                     let on_first = *first == edge;
-                    let l1 = Rational::from_integer(first_length.as_micrometres());
-                    let l2 = Rational::from_integer(second_length.as_micrometres());
-                    let t = param.as_rational();
-                    // Recomputed BY ARC LENGTH, exactly: `t·L₁/(L₁+L₂)` from the first edge,
-                    // `(L₁ + t·L₂)/(L₁+L₂)` from the second. Both lengths are positive (validated at
-                    // apply), so the total is non-zero and every division is defined.
-                    let recomputed = l1.checked_add(l2).and_then(|total| {
-                        if on_first {
-                            t.checked_mul(l1)
-                                .and_then(|scaled| scaled.checked_div(total))
-                        } else {
-                            t.checked_mul(l2)
-                                .and_then(|scaled| l1.checked_add(scaled))
-                                .and_then(|shifted| shifted.checked_div(total))
-                        }
-                    });
+                    // Normalize the complete arc-length map before returning to the bounded
+                    // reference representation; scaled/shifted intermediates may be wider.
+                    let recomputed = param.as_rational().checked_merge_progress(
+                        first_length.as_micrometres(),
+                        second_length.as_micrometres(),
+                        on_first,
+                    );
                     match recomputed.and_then(to_param) {
                         Ok(local) => {
                             param = local;
@@ -1450,14 +1438,11 @@ impl IdentityLedger {
                     for fragment in &containing {
                         // The affine map into the fragment's own parameter space:
                         // `(t − from)/(to − from)`, exact; `to > from` is the interval's invariant.
-                        let mapped = fragment
-                            .to()
-                            .as_rational()
-                            .checked_sub(fragment.from().as_rational())
-                            .and_then(|width| {
-                                t.checked_sub(fragment.from().as_rational())
-                                    .and_then(|shifted| shifted.checked_div(width))
-                            })
+                        let mapped = t
+                            .checked_relative_progress(
+                                fragment.from().as_rational(),
+                                fragment.to().as_rational(),
+                            )
                             .and_then(to_param)
                             .map(|local| ResolvedRef::new(fragment.edge(), local, direction));
                         match mapped {

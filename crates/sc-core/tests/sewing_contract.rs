@@ -1713,8 +1713,7 @@ fn notch_context_recovery_bounds_must_cover_derived_reference_choices_before_res
 }
 
 #[test]
-fn notch_context_recovery_exposes_a_premature_bounded_split_repair_for_a_valid_final_param() {
-    use sc_core::ontology::{OrphaningEdit, Resolution};
+fn notch_context_recovery_resolves_a_valid_split_after_complete_fraction_recomposition() {
     let mut f = fixture();
     let source = f.span().a.range.edge();
     let row = include_str!("fixtures/notch_context_recovery.tsv")
@@ -1740,24 +1739,11 @@ fn notch_context_recovery_exposes_a_premature_bounded_split_repair_for_a_valid_f
         .relative_progress(held)
         .unwrap();
     assert_eq!(complete, expected.as_rational());
-    f.ledger.split(&mut f.ids, source, split).unwrap();
-    let actual = f.ledger.resolve(source, held);
-    // Recovery diagnostic of the present defect,not desired acceptance. The immediate numeric
-    // repair leaf must replace this assertion with the correctly resolved second-fragment value.
-    let Resolution::Unresolved(task) = actual else {
-        panic!("expected current premature-width defect")
-    };
-    assert_eq!(task.reference(), source);
-    assert_eq!(task.param(), held);
-    assert!(matches!(
-        task.orphaned_by(),
-        OrphaningEdit::RecomputationFailed {
-            cause: sc_units::UnitError::Overflow {
-                operation: "Rational::checked_sub"
-            },
-            ..
-        }
-    ));
+    let second = f.ledger.split(&mut f.ids, source, split).unwrap().second();
+    let actual = f.ledger.resolve(source, held).resolved().unwrap();
+    assert_eq!(actual.edge(), second);
+    assert_eq!(actual.param(), expected);
+    assert_eq!(actual.direction(), Direction::Original);
 }
 
 #[test]

@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0502 — recover original-frame notch requirements and own D305
+## STITCHCAD-G1-0503 — fix D305 with complete reference recomposition
 
-- Native4/independent Fraction3 expose wide original coordinates,multiple origin witnesses and256 derived leaves from25 logical inputs. Select bounded current uniqueness and wide inverse projection;implementation remains pending.
-- Reproduce D305 valid split falsely repaired by premature bounded subtraction. Immediate numeric slice owns complete point/range composition repair before projection;diagnostic pass is not fix acceptance.
-- Curate decision200→158L;preserve exact full source658,whole0501 in657 and closed D302–D304 in659. Strict wrapped-source receipt preserves536B original line within400B archive rows. LIVE defect note changed,G1 6/18 unchanged.
+- Split-second/offset point+range maps reuse exact complete progress;both merge paths share one complete i128 arc-length ratio. Reduce before returning to bounded reference fields;no rounding or representation widening.
+- Independent Fraction14/native point+range watch fails before repair and passes afterward:nine valid final results resolve,five genuinely wide results retain original repairs and actual completed-operation causes. Range20/notch4/topology31/scoped Clippy/fmt pass.
+- Whole0502 retained660;numeric decision/book/D305/LIVE synchronized. G1 remains6/18. Bounded current uniqueness and wide inverse projection follow;context/effects/full paired acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

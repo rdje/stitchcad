@@ -220,58 +220,38 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Preserve original IDs/positions/causes;no nearest-point or guessed inverse projection.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.1`
   Status: `done`
-  Goal: recover actual public journal/landmark/original-frame contracts and independently falsify
-  bounded-position and unique-inverse assumptions before context implementation. Own whole0501
-  retirement and exact sewing-decision containment at its200-line ceiling before adding context
-  design;preserve every prior source/fact/proof route. Derive explicit numeric/iteration/candidate
-  admission requirements from actual accepted native cases,no guessed inverse or physical claims.
-  Own pre-seal capture repair:raw decision answers line536B exceeds archive400B;retain source
-  via strictly decoded wrapped base64 plus exact Git-span/hash verification,no raised ceiling.
-  Recovery findings0502 (P1 implementation prerequisites under D301):
-  - Actual accepted late-fragment notch needs original coordinate1/(2*i64MAX),whose denominator
-    has64 bits;bounded Param/Rational arithmetic correctly refuses it. Own wide coordinate support
-    in .4.3.2.2 before constructing notch allocation contexts;never clamp or fabricate a position.
-  - One unique current notch location has two original coordinate witnesses after split/reverse/
-    merge. Forward witness directions are Original/Reversed relative to different source frames;
-    retain them,do not compare them as absolute location IDs or select one inverse silently.
-  - Native public logical topology census25 accepts17 journal entries,while8 split/merge cycles
-    yield256 resolved leaves with retained choices. The meter promises input collections,not this
-    derived workspace. Own bounded current-point/choice handling .4.3.2.1 before invoking full
-    resolution in context construction;actual guarded source/effect adoption stays .4.4.
-  - Tool: cargo test -p sc-core --test sewing_contract notch_context_recovery →4 passed/53 filtered,
-    rc=0;notch_context_oracle.py --check →3 frozen Fraction cases/quantum controls,rc=0.
-    First directed-reference equality probe failed101;public direction contract plus coordinate
-    comparisons and explicit Original/Reversed/Original assertions correct its scope,not the runtime.
-  - [x] REPRODUCE / ISSUE: actual accepted late-fragment/reverse-merge landmarks falsify bounded
-    original coordinates/unique inverse;derived choice workspace needs separate admission. D305
-    observed false split repair is owned by immediate .4.3.numeric;no runtime repair claimed here.
-  - [x] ROOT CAUSE: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    sewing_contract notch_context_recovery →4 passed/53 filtered,rc=0. Wide original64-bit
-    denominator,two original witnesses/relative directions and256 leaves from25 logical inputs
-    require distinct contracts. Premature bounded split offset rejects a63-bit final result.
-  - [x] FIX: select bounded current uniqueness then wide inverse with explicit actual journal,
-    nested populations,candidates and integer reservation;retain actual choices/causes/directions.
-    Curate decision200→158L with whole source retained658;raw536B line exceeded archive400B,
-    corrected pre-seal via strict wrapped base64 with complete decoded-source extent/hash/Git checks.
-  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/seam_partition/notch_context_oracle.py
-    --check →3 frozen Fraction cases/quantum controls,rc=0;native recovery4 passes,rc=0.
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part658.md →1 exact Git span,
-    rc=0;independent standard-library decode equals whole Git source15352B/hash,rc=0.
-    D305 is reproduced/owned,not fixed;projection/context implementation and acceptance remain pending.
-  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-core
-    --test sewing_contract -- -D warnings and cargo fmt --all --check →pass,rc=0. mdbook build/
-    publication check →89 chapters/178 API rows/1566 source/2682 rendered links,rc=0;glossary →0
-    failures,rc=0. transition_receipts.py on657/659 →3/1 exact Git spans,rc=0. verify-retention
-    →1113 logical/80 working/2596486 residentB,rc=0;generation_pressure.py →active59/64,total80/192,
-    rc=0. Broader paired/mutation verification stays .6.5.3.2.acceptance or required pre-push probes.
-  - [x] LOCKSTEP: task/MEMORY/DEV/CHANGE/decision/book/D301/D305 synchronized. README reviewed
-    unchanged;LIVE defect note gains D305,G1 6/18 unchanged. Indexed decision gains answers for actual
-    original-notch and derived workspace requirements. Immediate next .4.3.numeric before projection.
+  Goal:0502 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part660.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.numeric`
-  Status: `pending`
-  Goal: immediate D305 complete-fraction reference recomputation repair,confirmed by native split
-  recovery. Own point/range split/offset/merge composition,independent
-  exact fixtures and preserved genuine final-width refusals before bounded projection work.
+  Status: `done`
+  Goal:0503 D305 complete point/range split-second/offset/merge recomposition repair before
+  bounded original-coordinate projection. Independent final-width controls retain actual repairs.
+  - [x] REPRODUCE / ISSUE: accepted split1/3 falsely repairs valid current1/9223372036854775804.
+    Extend independent Fraction evidence to actual point/range offset/merge paths before repair.
+  - [x] ROOT CAUSE: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    range_contract complete_reference_recomposition_matches_independent_fraction_maps →1 failed,
+    rc=101 before runtime edit. All9 representable rows falsely repaired in both point/range maps;
+    old causes name temporary subtraction/product rather than the complete result. Initial test
+    compile draft corrected explicit index type/actual SplitFragments accessor before behavioral RED.
+  - [x] FIX: split-second/offset reuse checked_relative_progress;point/range merge share one exact
+    i128 numerator/denominator with one reduce/narrow. Positive reference denominator bounds even
+    full-i64 coefficient products/sums strictly inside signed128;no arbitrary precision dependency,
+    rounding or reference widening. Choices/orphans/declared length evidence retain prior contracts.
+  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/seam_partition/reference_recomposition_oracle.py
+    --check →14 frozen Fraction rows,9 cancelled intermediate refusals/5 genuine final-width refusals,
+    rc=0. cargo test -p sc-core --test range_contract →20 passed,rc=0;all14 consumed through actual
+    point+range maps. Original held reference/range and concrete completed-operation causes survive
+    genuine overflow. Sewing notch_context_recovery filter →4 passed/53 filtered,rc=0;D305 now
+    asserts desired correct second-fragment result rather than the observed old defect.
+  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --lib
+    ontology::topology::tests →31 passed/48 filtered,rc=0. Selected cargo clippy --test range_contract
+    --test sewing_contract -- -D warnings/fmt --all --check →pass,rc=0. Whole0502 receipt660 →3 exact
+    Git spans,rc=0;verify-retention →1114 logical/81 working/2603838 residentB,rc=0. Book build/
+    publication →89/178/1567/2683,rc=0;glossary →0 failures,rc=0. Broader paired/mutation acceptance
+    remains .6.5.3.2.acceptance or required pre-push;no full verification claim.
+  - [x] LOCKSTEP: D305 closed;task/MEMORY/DEV/CHANGE/both numeric and sewing decisions/book/LIVE
+    synchronized. README reviewed unchanged;LIVE defect note fixed,G1 6/18 unchanged. Numeric
+    decision gains complete-reference recomposition answer;whole0502 retained660. Next .4.3.2.1
+    bounded current uniqueness before inverse/context;remaining paired/effect obligations stay owned.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2`
   Status: `pending`
   Goal: bounded current-point resolution and exact original-coordinate projection through actual

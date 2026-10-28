@@ -614,3 +614,154 @@ fn generated_edit_scripts_agree_with_the_independent_point_fold_away_from_bounda
         }
     }
 }
+
+#[test]
+fn complete_reference_recomposition_matches_independent_fraction_maps() {
+    let mut mismatches = Vec::new();
+    let mut seen = 0;
+    for row in include_str!("fixtures/reference_recomposition.tsv")
+        .lines()
+        .filter(|row| !row.starts_with('#'))
+    {
+        let fields = row.split('\t').collect::<Vec<_>>();
+        assert_eq!(fields.len(), 9);
+        let field = |index: usize| *fields.get(index).unwrap();
+        let integer = |index| field(index).parse::<i64>().unwrap();
+        let held = t(integer(2), integer(3));
+        let (mut ledger, mut ids, initial) = fixture();
+        let (source, target, range, lower, upper, operation) = match field(1) {
+            "split-first" | "split-second" => {
+                let split = t(integer(4), integer(5));
+                let split_fragments = ledger.split(&mut ids, initial, split).unwrap();
+                let (first, second) = (split_fragments.first(), split_fragments.second());
+                if field(1) == "split-first" {
+                    (
+                        initial,
+                        first,
+                        EdgeRange::new(initial, held, split).unwrap(),
+                        None,
+                        Some(Param::END),
+                        "Rational::checked_div",
+                    )
+                } else {
+                    (
+                        initial,
+                        second,
+                        EdgeRange::new(initial, held, Param::END).unwrap(),
+                        None,
+                        Some(Param::END),
+                        "Rational::checked_relative_progress",
+                    )
+                }
+            }
+            "offset" => {
+                let from = t(integer(4), integer(5));
+                let to = t(integer(6), integer(7));
+                let target = *ledger
+                    .offset(&mut ids, initial, &[OffsetInterval::new(from, to).unwrap()])
+                    .unwrap()
+                    .first()
+                    .unwrap();
+                (
+                    initial,
+                    target,
+                    EdgeRange::new(initial, held, to).unwrap(),
+                    None,
+                    Some(Param::END),
+                    "Rational::checked_relative_progress",
+                )
+            }
+            "merge-first" | "merge-second" => {
+                let other = *ledger.declare_edges(&mut ids, 1).unwrap().first().unwrap();
+                let l1 = integer(4);
+                let l2 = integer(6);
+                let target = ledger
+                    .merge(
+                        &mut ids,
+                        initial,
+                        Length::from_micrometres(l1).unwrap(),
+                        other,
+                        Length::from_micrometres(l2).unwrap(),
+                    )
+                    .unwrap();
+                let join = t(l1, l1 + l2);
+                if field(1) == "merge-first" {
+                    (
+                        initial,
+                        target,
+                        EdgeRange::new(initial, held, Param::END).unwrap(),
+                        None,
+                        Some(join),
+                        "Rational::checked_merge_progress",
+                    )
+                } else {
+                    (
+                        other,
+                        target,
+                        EdgeRange::new(other, Param::START, held).unwrap(),
+                        Some(join),
+                        None,
+                        "Rational::checked_merge_progress",
+                    )
+                }
+            }
+            _ => unreachable!("frozen public mapping kind"),
+        };
+        let point = ledger.resolve(source, held);
+        let result = ledger.resolve_range(range);
+        if field(8) == "Overflow" {
+            let Resolution::Unresolved(task) = point else {
+                panic!("genuine final-width refusal: {}", field(0))
+            };
+            assert_eq!((task.reference(), task.param()), (source, held));
+            if !matches!(task.orphaned_by(), OrphaningEdit::RecomputationFailed {
+                edge, cause: sc_units::UnitError::Overflow { operation: actual }, ..
+            } if *edge == source && *actual == operation)
+            {
+                mismatches.push(format!("{}: point final cause", field(0)));
+            }
+            assert!(!result.has_full_coverage());
+            let repair = result.repairs().next().unwrap();
+            assert_eq!(repair.held(), range);
+            if !matches!(repair.issue(), RangeIssue::Orphaned(OrphaningEdit::RecomputationFailed {
+                edge, cause: sc_units::UnitError::Overflow { operation: actual }, ..
+            }) if edge == source && actual == operation)
+            {
+                mismatches.push(format!("{}: range final cause", field(0)));
+            }
+        } else {
+            let (n, d) = field(8)
+                .strip_prefix("value:")
+                .unwrap()
+                .split_once('/')
+                .unwrap();
+            let expected = t(n.parse().unwrap(), d.parse().unwrap());
+            let correct_point = point.resolved().is_some_and(|actual| {
+                (actual.edge(), actual.param(), actual.direction())
+                    == (target, expected, Direction::Original)
+            });
+            let expected_range = vec![(
+                target,
+                lower.unwrap_or(expected),
+                upper.unwrap_or(expected),
+                Direction::Original,
+            )];
+            if !correct_point
+                || !result.has_full_coverage()
+                || live_parts(&ledger, range) != expected_range
+            {
+                mismatches.push(format!(
+                    "{}: point={correct_point};range={}",
+                    field(0),
+                    result.has_full_coverage()
+                ));
+            }
+        }
+        seen += 1;
+    }
+    assert_eq!(seen, 14, "all success and refusal rows consumed");
+    assert!(
+        mismatches.is_empty(),
+        "completed maps failed: {mismatches:?}"
+    );
+}

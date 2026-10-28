@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — original-frame notch recovery before implementation
+## _(2026-10-28 UTC)_ — complete current-reference recomposition fixes D305
 
-0502 actual late anchors need64-bit original fractions;unique current locations retain multiple origins/directions. Eight split/merge cycles yield256 leaves from25 logical inputs;the input meter is correct. Projection must admit derived work,retain choices and use wide exact coordinates.
-D305 split1/3 narrows a64-bit temporary though its63-bit final result fits. Native4/oracle3 pass as diagnostics,not fix acceptance. Immediate numeric leaf owns complete point/range split/offset/merge repair before projection. Relative-direction test correction preserves evidence.
-Decision200→158L keeps standing contracts;whole15352B retained658. Raw536B source line exceeded archive400B;wrapped base64 and strict decode/Git-span checks preserve exact bytes without cap growth. Native/lint pass;book records pending API and owned D305. LIVE defect note changed,G1 6/18.
-[Whole0501 acceptance](docs/history/stitchcad-devnotes-part657.md),whole pre-context decision658 and closed D302–D304 ledger659 retain exact source proofs. Indexed sewing decision gains current context/admission requirements;no new map row.
+0503 independent Fraction14 proves9 representable results were falsely repaired in split-second/offset/merge point+range maps. Desired native test failed1/rc101 on all9 before repair. The initial test draft needed explicit closure/index and actual SplitFragments accessors before behavioral RED.
+Reuse exact complete relative progress for split-second/offset;share one i128 arc-length merge fraction,reduce then narrow once. Positive bounded denominator keeps even full-i64 coefficient sums/products strictly inside signed128 bits. No reference widening,rounding or guessed physical evidence.
+Range20/notch4/topology31 pass0,including9 repaired values and5 genuine final-width refusals with original reference/range and complete-operation cause. Oracle14/scoped Clippy/fmt pass0. Replace the recovery defect assertion with desired correct second-fragment result;D305 closes,LIVE note updated,G1 6/18.
+[Whole0502 recovery](docs/history/stitchcad-devnotes-part660.md) retains exact assumptions/diagnostics/containment lesson. Numeric decision gains complete-recomposition contract;book examples/current status synced. Bounded current uniqueness/inverse/context and broader paired acceptance remain next owners.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

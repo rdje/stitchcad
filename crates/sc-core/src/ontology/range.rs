@@ -471,8 +471,7 @@ fn mapped(
 fn affine(value: Param, from: Param, to: Param) -> Result<Rational, UnitError> {
     value
         .as_rational()
-        .checked_sub(from.as_rational())?
-        .checked_div(to.as_rational().checked_sub(from.as_rational())?)
+        .checked_relative_progress(from.as_rational(), to.as_rational())
 }
 
 fn step(
@@ -518,16 +517,12 @@ fn step(
             second_length,
             merged,
         } if *first == edge || *second == edge => {
-            let l1 = Rational::from_integer(first_length.as_micrometres());
-            let l2 = Rational::from_integer(second_length.as_micrometres());
-            let total = l1.checked_add(l2)?;
             let map = |t: Param| {
-                if *first == edge {
-                    t.as_rational().checked_mul(l1)?.checked_div(total)
-                } else {
-                    l1.checked_add(t.as_rational().checked_mul(l2)?)?
-                        .checked_div(total)
-                }
+                t.as_rational().checked_merge_progress(
+                    first_length.as_micrometres(),
+                    second_length.as_micrometres(),
+                    *first == edge,
+                )
             };
             Ok(vec![mapped(*merged, map(from)?, map(to)?, direction)?])
         }

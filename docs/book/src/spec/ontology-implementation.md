@@ -73,7 +73,10 @@ candidate interval mapping; point ambiguity retains its separate candidates.
 Split an edge into thirds and delete the middle: both original endpoints still resolve, but the
 whole range returns live/repair/live and has_full_coverage() is false. A sub-range inside the first
 third retains full coverage. Arbitrarily narrow offset gaps remain uncovered; exact overflow creates
-a recomputation repair. A never-created edge is UnknownSource. start()/end() retain original point
+a recomputation repair. Split/offset normalization and arc-length merge check the complete reduced
+current parameter,so a wide temporary difference/product alone cannot reject a valid final fraction.
+Point and range maps share these numeric kernels;see the [exact example](command-notch-context.md#current-reference-composition-defect).
+A never-created edge is UnknownSource. start()/end() retain original point
 resolutions, including split/shared-offset-boundary choices. Positive-length coverage settles neither
 those choices nor continuity, winding, geometry or approval. Later unrelated edges cannot reattach
 lost content.

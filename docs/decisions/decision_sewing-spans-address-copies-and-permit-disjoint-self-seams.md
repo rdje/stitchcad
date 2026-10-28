@@ -134,8 +134,8 @@ Eight split/merge cycles yield256 reference leaves from25 logical topology entri
 records. The input meter is correct within its documented scope. Context construction must admit
 or avoid derived choice allocation before invoking full resolution;equal current locations never
 cancel an actual held-reference choice requirement. D305 separately records premature bounded
-forward recomposition:the complete current result fits63 bits while a temporary needs64. Repair
-that next,before implementing new bounded current/projection paths. Preserve genuine final refusals.
+forward recomposition:the complete current result fits63 bits while a temporary needs64. Fixed0503
+with shared complete point/range normalization and merge kernels;genuine final-width repairs remain.
 
 Selected projection design:explicitly bounded current uniqueness first,then exact backward journal
 mapping into the named source-edge creation frame. Split/offset use exact affine maps;reverse toggles

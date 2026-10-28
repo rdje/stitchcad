@@ -201,6 +201,28 @@ impl Rational {
         )
     }
 
+    /// Exact arc-length merge position, checking only the complete reduced result's width.
+    /// The journal validates both declared lengths as positive before storing a merge.
+    pub(super) fn checked_merge_progress(
+        self,
+        first_length: i64,
+        second_length: i64,
+        on_first: bool,
+    ) -> Result<Self, UnitError> {
+        let first = i128::from(first_length);
+        let second = i128::from(second_length);
+        let numerator = if on_first {
+            i128::from(self.num) * first
+        } else {
+            i128::from(self.den) * first + i128::from(self.num) * second
+        };
+        let denominator = i128::from(self.den) * (first + second);
+        // Each product fits i128. Even for full i64 inputs, the sums above stay strictly inside
+        // (-2^127, 2^127): self.den is positive and at most i64::MAX. Do not narrow a scaled
+        // position or shifted numerator before the complete fraction cancels its common factors.
+        reduce(numerator, denominator, "Rational::checked_merge_progress")
+    }
+
     /// The exact negation `-self`.
     ///
     /// # Errors
