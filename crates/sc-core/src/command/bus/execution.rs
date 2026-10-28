@@ -184,6 +184,41 @@ pub(super) struct CommandJournal {
 }
 
 impl CommandJournal {
+    pub(super) fn charge_after_history_resources(
+        &self,
+        owner: EntityId,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self {
+            limit,
+            initial_revision,
+            maximum_revision,
+            sequence,
+            entries,
+        } = self;
+        crate::command::resource::fixed(limit);
+        sink.charge_counter_bits(
+            initial_revision.resource_bits(),
+            super::retained::location(owner, "retained.journal.initial_revision"),
+        )?;
+        sink.charge_counter_bits(
+            maximum_revision.resource_bits(),
+            super::retained::location(owner, "retained.journal.maximum_revision"),
+        )?;
+        crate::design::charge_revision_bits(
+            sequence.successor_resource_bits(),
+            sink,
+            super::retained::location(owner, "retained.journal.sequence"),
+        )?;
+        sink.charge_entries(
+            entries.len(),
+            super::retained::location(owner, "retained.journal.entries"),
+        )?;
+        for entry in entries {
+            super::resource::charge_command_audit_entry_resources(entry, sink)?;
+        }
+        Ok(())
+    }
     pub(super) fn resource_maximum_revision(&self) -> &DesignRevision {
         let Self {
             limit: _,

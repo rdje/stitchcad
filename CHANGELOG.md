@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0470 — admit exact prospective retained authoring publication
+## STITCHCAD-G1-0471 — admit exact prospective retained history publication
 
-- Project actual prepared candidate, counters, new/existing audit records and exact undo eviction/redo discard before publication construction.
-- Preserve original retained witnesses, aliases, cancelled/refused keys, full reserve backing and fresh final authority; temporary preparation stays separately bounded.
-- Authoring5/current3/revision1/audit forecast1/two count-boundary cases and strict lint/fmt pass against real model/record oracles, one-short limits and beyond-u128 carry.
-- Whole0469 retained623; bounded publication chapter/nav explains exact scope. Prospective history admission and coupled/full verification remain pending.
+- Project actual Undo/Redo model moves, original author/current operator, aliases, unchanged maximum-issued and next action before publication copies or allocation.
+- History4/current4/resource-admission4/strict lint/fmt pass against real oracles, one-short limits, cancellation, replay and late revocation.
+- Plain real-source/cache diagnostic reproduces P0 D293:forecast907B accepted but actual908B; frozen-source repair is next, before coupled/full resource acceptance.
+- Whole0470 and closed D292/G1.1 retained624/625; book documents exact history scope and prominently identifies the open D293 signoff blocker.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

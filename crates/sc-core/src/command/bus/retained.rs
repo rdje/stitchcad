@@ -209,3 +209,57 @@ mod tests {
         assert_eq!(meter.finish().map(|d| d.collection_entries()), Ok(3));
     }
 }
+
+// References are the actual accepted record/current target already bound by the history lifecycle.
+pub(super) struct HistoryProjection<'a, H> {
+    pub(super) target: &'a crate::design::DesignGarment<H>,
+    pub(super) request: &'a crate::command::CommandHistoryRequest,
+    pub(super) accepted: &'a super::CommandAuditEntry,
+    pub(super) journal: &'a super::execution::CommandJournal,
+    pub(super) history: &'a super::history::History<H>,
+}
+impl<H: DesignResourceSource, A> CommandBus<H, A> {
+    fn charge_retained_after_history(
+        &self,
+        projection: &HistoryProjection<'_, H>,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError> {
+        let Self {
+            state,
+            authority: _,
+            identities,
+            journal: _,
+            history: _,
+            operation_limits,
+            model_limits,
+            retained_limits,
+        } = self;
+        fixed(operation_limits);
+        fixed(model_limits);
+        fixed(retained_limits);
+        let HistoryProjection {
+            target,
+            request: _,
+            accepted: _,
+            journal,
+            history,
+        } = projection;
+        let owner = state.inputs().id();
+        charge_design_garment_resources(target, sink)?;
+        identities.charge_resources(owner, sink)?;
+        journal.charge_after_history_resources(owner, sink)?;
+        history.charge_after_history_resources(owner, state, projection, sink)
+    }
+    pub(super) fn admit_retained_history(
+        &self,
+        projection: HistoryProjection<'_, H>,
+        observer: &dyn CommandProgressObserver,
+    ) -> Result<(), CommandControlError> {
+        checkpoint(observer, Phase::RetainedPublication, 0, 1, None)?;
+        let mut meter = DesignResourceMeter::new(self.require_retained_limits()?);
+        self.charge_retained_after_history(&projection, &mut meter)
+            .map_err(CommandControlError::Retained)?;
+        meter.finish().map_err(CommandControlError::Retained)?;
+        checkpoint(observer, Phase::RetainedPublication, 1, 1, None)
+    }
+}

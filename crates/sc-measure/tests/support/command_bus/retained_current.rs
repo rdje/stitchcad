@@ -146,12 +146,12 @@ pub(super) fn history(
     )
     .expect("actual history intent")
 }
-// Independent small-fixture oracle uses public exact decimal values, never a private counter reader.
+// Independent fixture oracle uses public exact decimal values; only its chosen values fit u128.
 fn bits(value: impl ToString) -> u64 {
     value
         .to_string()
         .parse::<u128>()
-        .expect("this fixture uses only counters0..5")
+        .expect("these independent oracle fixture values fit u128")
         .checked_ilog2()
         .map_or(0, |n| u64::from(n) + 1)
 }
@@ -286,72 +286,106 @@ fn exact_current_private_composition_includes_all_models_records_actions_and_ind
     );
     assert_eq!(expected.text_bytes(), 3 * base.text_bytes() + 74);
     assert_eq!(expected.counter_bits(), 36);
-    for limit in [
-        policy(expected.collection_entries(), expected.text_bytes(), 36),
-        policy(expected.collection_entries() - 1, expected.text_bytes(), 36),
-        policy(expected.collection_entries(), expected.text_bytes() - 1, 36),
-        policy(expected.collection_entries(), expected.text_bytes(), 35),
+    let limit = policy(expected.collection_entries(), expected.text_bytes(), 36);
+    let mut actual = bus(original.clone(), reserve.clone(), limit);
+    assert_eq!(
+        actual.commit_group(&first_request).expect("first").entry(),
+        a.entry()
+    );
+    assert_eq!(
+        actual
+            .commit_group(&second_request)
+            .expect("second")
+            .entry(),
+        b.entry()
+    );
+    actual.apply_history(&undo_b).expect("undo second");
+    actual.apply_history(&undo_a).expect("undo first");
+    actual.apply_history(&redo_a).expect("redo first");
+    reset(&counters);
+    let probe = request(&after_first, 812030, first, " é ");
+    let error = actual
+        .preview_group_with_progress(&probe, &Stop(1))
+        .expect_err("stop after exact current admission");
+    assert!(
+        matches!(control(&error),Some(Control::Cancelled {progress}) if progress.phase()==Phase::RetainedValidation && progress.completed()==1)
+    );
+    assert_eq!(counts(&counters), [0, 3, 0]);
+    reset(&counters);
+    assert!(actual
+        .commit_group(&first_request)
+        .expect("authoring replay")
+        .is_replay());
+    assert!(actual
+        .apply_history(&undo_a)
+        .expect("history replay")
+        .is_replay());
+    assert_eq!(counts(&counters), [0, 0, 0]);
+}
+#[test]
+fn initial_current_over_bound_content_refuses_each_unit_without_semantic_work_or_effects() {
+    let initial = super::resource_revision::with_revision(
+        &super::resource_measurement::fixture(),
+        DesignRevision::from_counter(3),
+    );
+    let counters = initial.inputs().sources().host().telemetry();
+    let design = initial.inputs().id();
+    let reserve = vec![id(812600), id(812601), id(812602)];
+    let oracle = Observed {
+        initial: &initial,
+        current: &initial,
+        reserve: &reserve,
+        accepted: &[],
+        undo: &[],
+        redo: &[],
+        actions: &[],
+    };
+    let expected = oracle.demand();
+    let base = demand(&initial);
+    assert_eq!(
+        (
+            expected.collection_entries(),
+            expected.text_bytes(),
+            expected.counter_bits()
+        ),
+        (base.collection_entries() + 3, base.text_bytes(), 6)
+    );
+    let piece = initial
+        .inputs()
+        .structure()
+        .pieces()
+        .pieces()
+        .first()
+        .expect("Piece")
+        .id();
+    let probe = request(&initial, 812040, piece, "next");
+    for limits in [
+        policy(expected.collection_entries() - 1, expected.text_bytes(), 6),
+        policy(expected.collection_entries(), expected.text_bytes() - 1, 6),
+        policy(expected.collection_entries(), expected.text_bytes(), 5),
     ] {
-        let mut actual = bus(original.clone(), reserve.clone(), limit);
-        assert_eq!(
-            actual
-                .commit_group(&first_request)
-                .expect("first under final current budget")
-                .entry(),
-            a.entry()
-        );
-        assert_eq!(
-            actual
-                .commit_group(&second_request)
-                .expect("second under final current budget")
-                .entry(),
-            b.entry()
-        );
-        actual.apply_history(&undo_b).expect("undo second");
-        actual.apply_history(&undo_a).expect("undo first");
-        actual.apply_history(&redo_a).expect("redo first");
-        let mut meter = Meter::new(limit);
-        let oracle_result = oracle.charge(&mut meter);
+        let actual = bus(initial.clone(), reserve.clone(), limits);
+        let mut meter = Meter::new(limits);
+        let expected = oracle
+            .charge(&mut meter)
+            .expect_err("independent original current error");
         reset(&counters);
-        let probe = request(&after_first, 812030, first, " é ");
         let error = actual
-            .preview_group_with_progress(&probe, &Stop(1))
-            .expect_err("stop after current admission or original quota");
-        match oracle_result {
-            Ok(()) => {
-                assert!(
-                    matches!(control(&error),Some(Control::Cancelled { progress }) if progress.phase()==Phase::RetainedValidation && progress.completed()==1)
-                );
-                assert_eq!(
-                    counts(&counters),
-                    [0, 3, 0],
-                    "three actual retained models; no semantic validation/copies"
-                );
-            }
-            Err(expected) => {
-                assert_eq!(control(&error), Some(&Control::Retained(expected)));
-                assert_eq!(
-                    std::error::Error::source(control(&error).expect("typed retained cause"))
-                        .and_then(|issue| issue.downcast_ref::<LimitError>()),
-                    Some(&expected)
-                );
-                assert_eq!(meter.finish(), Err(expected));
-                assert_eq!(counts(&counters)[0], 0);
-                assert_eq!(counts(&counters)[2], 0);
-            }
-        }
-        reset(&counters);
-        let replay = actual
-            .commit_group(&first_request)
-            .expect("accepted authoring replay skips current resource admission");
-        assert!(replay.is_replay());
-        let replay = actual
-            .apply_history(&undo_a)
-            .expect("accepted history replay skips current resource admission");
-        assert!(replay.is_replay());
-        assert_eq!(counts(&counters), [0, 0, 0]);
+            .preview_group(&probe)
+            .expect_err("current retained admission before private prep");
+        assert_eq!(control(&error), Some(&Control::Retained(expected)));
+        assert_eq!(counts(&counters)[0], 0);
+        assert_eq!(counts(&counters)[2], 0);
+        actual
+            .execute(&query(
+                design,
+                DesignRevision::from_counter(3),
+                QueryPayload::GetPieceList,
+            ))
+            .expect("cheap original read independent of policy");
     }
 }
+
 #[test]
 fn retained_reserve_counts_the_entire_backing_after_a_real_notch_consumes_its_prefix() {
     let (owner, addition) = resource_copies::owner(Rc::new(Cell::new(0)));

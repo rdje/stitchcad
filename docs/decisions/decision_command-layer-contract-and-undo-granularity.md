@@ -108,76 +108,25 @@ Whole0456–0460 source/root/runtime implementation journals retain exact source
 [Whole0461–0466 resource decisions](../history/stitchcad-devnotes-part620.md) retain exact prospective
 model/Notch/revision and actual request/report ownership contracts and focused proofs.
 
-## Exact actual accepted-record resources0467
+[Whole0467–0470 resource decisions](../history/stitchcad-devnotes-part624.md) retain accepted/current/
+prospective authoring ownership, immutable setup and bounded doctest contracts with focused proofs.
 
-answers: "does exact replay eliminate returned record data, and does a discarded branch own a vector?"
+## Exact prospective history0471 and source-clone defect D293
 
-Actual authoring commit/record/result and history request/action/result readers exhaustively borrow all
-owners. Schema-order counts include effect sequence, every represented revision and every original
-request/report snapshot. Actual effective-command and discarded-redo vectors precharge their full lengths;
-aliases remain in copied requests, omitted only from the actual effective-command vector. Grant/time,
-replay/direction and oldest-undo identity are fixed, guarded fields. Returned exact replay copies own
-complete records despite no new private journal/action entry. Nested original witnesses remain unchanged.
-Real bus author39/124/2,Undo15/4/4,Redo15/4/3,prefix41/126/3,branch7/64/5 and eviction3/4/18
-pass record4/report5/request4/strict lint/fmt. Original agent and authenticated human operator stay distinct;
-source/authority callbacks0 during readers. Runtime and prior reader implementations remain byte-exact.
-Private aggregate/prospective retained admission and coupled/full verification stay separately owned.
+answers: "what changes in retained state when Undo or Redo publishes?" · "can semantic Clone equality certify charged source footprint?"
 
-## Explicit immutable retained-policy configuration0468
+Borrow the already validated actual target/request/accepted record. Restore target as current; omit
+its actual source-stack back, retain the other alternatives in order and append previous current to
+the reciprocal stack. Preserve journal initial/maximum and accepted entries; forecast only sequence
+and the new action, including effective commands, original author request/aliases and current operator.
+Precharge whole vectors before walks; no clones/collection/counter construction occurs in projection.
+RetainedPublication0/1 precedes publication copies/reserves and the final fresh grant/effect.
+History4/current4/resource-admission4/lint/fmt pass0; real oracles and max1797/action642bits are in the book.
 
-answers: "does installing retained limits walk private state or certify its current resource demand?"
-
-A third private positive-limits policy starts absent in every bus constructor and installs once without
-model/reserve/journal/history traversal, validation, cloning or authority callbacks. Same or larger
-replacement refuses. Costly metadata paths require operation/model/retained setup; cheap authorized
-Piece reads require none. Configuration presence affects handler availability but conveys no authority,
-validity or quota-room certificate. Setup checks operation demand then model presence then retained
-presence before authority/private work. Native setup2 and prior model/operation setup cases plus strict
-lint/fmt verify constructor variants, original error precedence and zero callbacks. Private aggregate/
-current admission .3.3.2 and exact prospective admission .3.4 remain required before retained closure.
-
-### Focused doctest invocation0468
-
-answers: "how is bus privacy checked without unintentionally selecting unrelated doctests?"
-
-The observed cargo test -p sc-core --doc filter containing command::bus::CommandBus plus a spaced
-line suffix selected171 cases, including unrelated types. The owned expanded rustdoc/children were
-terminated (cargo101, SIGTERM); this interrupted run is not full verification. The space-free filter
-command::bus::CommandBus selects exactly11 bus compile-failure contracts, including retained-policy
-reset. Use that bounded type filter; do not infer one-case scope from a line suffix containing spaces.
-
-## Actual current private retained composition0469
-
-answers: "does current retained admission count history snapshots, old audit records and consumed IDs?"
-
-One cumulative private walk charges actual current model, full immutable ID backing (consumed prefix
-included), initial/max-issued/audit counters, every accepted record, undo/redo models in stored order,
-and chronological action records. All owners are exhaustive, vectors precharged, fixed fields guarded;
-A is the external trusted authority service and excluded, while each model's actual owned source H counts.
-Fresh authority/exact snapshot precede RetainedValidation0/1; no public private-state getter exists.
-Cancellation/refusal preserves model/reserve/keys/capacities and original resource cause/source chain.
-Exact authoring/history replays bypass the current walk. The real independent model/record oracle is
-3M+29 entries/3B+74 bytes/36 bits; exact and one-short unit limits, three-source/no-copy/no-semantic
-admission and full consumed reserve count pass current3/model4/strict lint/fmt. Extra retained source
-walks are separate from per-model admission and do not add candidate copies. This is current-only:
-prospective .3.4 must prevent growing accepted content before retained allocations/effects; coupled/
-full verification stays deferred. The current-only Notch proof tests a later-over-bound state, not
-prospective enforcement; replace that setup with early-refusal proof when .3.4 lands.
-
-## Exact prospective retained authoring publication0470
-
-answers: "can authoring fit by evicting undo/discarding redo, and when are publication copies allowed?"
-
-Borrow actual bounded prepared candidate/report/request. Before issuing counters, building final model,
-allocating retained records/history or cloning returned data, admit the exact future private artifact
-state. Forecast actual maximum-issued and independent audit sequence, never restored base. Keep every
-old audit/action; append the exact new request/report/counters/discard IDs, omit evicted undo and redo
-model alternatives, and append the actual old current model only if history is configured. Schema order,
-whole vector precharge, source H and full reserve backing remain; no supplied totals/token/authority.
-RetainedPublication0/1 cancels before construction; fresh final Commit authority still follows all prep.
-Temporary preparation and caller-delivered result ownership are distinct from the final retained budget;
-no allocator peak is claimed. Actual alias2M+13/2B+76/5, eviction2M+21/2B+60/30 and branch
-2M+2K+29/2B+110/36(K512) match independent real models/records. No-history beyond-u128 needs1029bits;
-1028 refuses original records.commit.revision900+129 before final copies, actual returned entry642bits.
-Authoring5/current3/revision1/audit forecast1/two count-boundary cases/strict lint/fmt pass. Smaller retry
-keys, full consumed backing and post-admission revocation verified. Exact history .3.4.2/coupled/full pending.
+P0 D293 is confirmed by a plain adapter over real DesignSources plus an honestly charged String cache.
+Each Clone leaves its source immutable and returns semantic-equal data with cache1→2→3. Native diagnostic1
+passes0 by demonstrating forecast907B accepted but actual retained908B, followed by current882+26 refusal.
+[Rust Clone/PartialEq](https://doc.rust-lang.org/std/clone/trait.Clone.html#clone-and-partialeqeq) requires
+semantic equality, not identical cache footprint (that implication is our inference, tested natively).
+Thus projection logic is focused-verified but generic publication bounds remain defective. Owned P0
+.4.3.4.3 freezes actual source ownership before .4.4 acceptance; a diagnostic pass is not a fix verdict.

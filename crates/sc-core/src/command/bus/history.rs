@@ -495,6 +495,16 @@ impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAutho
         validate_snapshot(&target.alternative)
             .map_err(|issue| CommandHistoryError::Alternative(Box::new(issue)))?;
         super::operation::checkpoint(observer, Phase::CandidateValidation, 1, 1, None)?;
+        self.admit_retained_history(
+            super::retained::HistoryProjection {
+                target: &target.alternative,
+                request,
+                accepted,
+                journal,
+                history,
+            },
+            observer,
+        )?;
         let before = self.state.inputs().revision().clone();
         let revision = target.alternative.inputs().revision().clone();
         let sequence = journal.sequence.successor();
@@ -604,6 +614,106 @@ fn validate_snapshot<H: DesignReferenceHost>(
 }
 
 impl<H: crate::design::DesignResourceSource> History<H> {
+    pub(super) fn charge_after_history_resources(
+        &self,
+        owner: EntityId,
+        previous: &DesignGarment<H>,
+        projection: &super::retained::HistoryProjection<'_, H>,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self {
+            depth,
+            action_limit,
+            undo,
+            redo,
+            actions,
+        } = self;
+        crate::command::resource::fixed(depth);
+        crate::command::resource::fixed(action_limit);
+        match projection.request.direction() {
+            CommandHistoryDirection::Undo => {
+                let retained = undo.iter().rev().skip(1).rev();
+                sink.charge_entries(
+                    retained.len(),
+                    super::retained::location(owner, "retained.history.undo"),
+                )?;
+                for step in retained {
+                    let HistoryStep { group, alternative } = step;
+                    crate::command::resource::fixed(group);
+                    crate::design::charge_design_garment_resources(alternative, sink)?;
+                }
+                super::retained::charge_appended_entries(
+                    redo.len(),
+                    sink,
+                    super::retained::location(owner, "retained.history.redo"),
+                )?;
+                for step in redo {
+                    let HistoryStep { group, alternative } = step;
+                    crate::command::resource::fixed(group);
+                    crate::design::charge_design_garment_resources(alternative, sink)?;
+                }
+                crate::design::charge_design_garment_resources(previous, sink)?;
+            }
+            CommandHistoryDirection::Redo => {
+                super::retained::charge_appended_entries(
+                    undo.len(),
+                    sink,
+                    super::retained::location(owner, "retained.history.undo"),
+                )?;
+                for step in undo {
+                    let HistoryStep { group, alternative } = step;
+                    crate::command::resource::fixed(group);
+                    crate::design::charge_design_garment_resources(alternative, sink)?;
+                }
+                crate::design::charge_design_garment_resources(previous, sink)?;
+                let retained = redo.iter().rev().skip(1).rev();
+                sink.charge_entries(
+                    retained.len(),
+                    super::retained::location(owner, "retained.history.redo"),
+                )?;
+                for step in retained {
+                    let HistoryStep { group, alternative } = step;
+                    crate::command::resource::fixed(group);
+                    crate::design::charge_design_garment_resources(alternative, sink)?;
+                }
+            }
+        }
+        super::retained::charge_appended_entries(
+            actions.len(),
+            sink,
+            super::retained::location(owner, "retained.history.actions"),
+        )?;
+        for action in actions {
+            super::resource::charge_command_history_audit_entry_resources(action, sink)?;
+        }
+        let group = projection.request.original().id().entity_id();
+        crate::design::charge_revision_bits(
+            projection.journal.sequence.successor_resource_bits(),
+            sink,
+            super::retained::location(group, "records.history.sequence"),
+        )?;
+        let steps = projection.accepted.commit().changes().steps();
+        let effective = steps
+            .iter()
+            .filter(|step| step.replay_of().is_none())
+            .count();
+        sink.charge_entries(
+            effective,
+            super::retained::location(group, "records.history.commands"),
+        )?;
+        for step in steps.iter().filter(|step| step.replay_of().is_none()) {
+            crate::command::resource::fixed(&step.command());
+        }
+        crate::command::charge_command_history_request_resources(projection.request, sink)?;
+        sink.charge_counter_bits(
+            previous.inputs().revision().resource_bits(),
+            super::retained::location(group, "records.history.before_revision"),
+        )?;
+        sink.charge_counter_bits(
+            projection.target.inputs().revision().resource_bits(),
+            super::retained::location(group, "records.history.revision"),
+        )
+    }
     pub(super) fn charge_after_authoring_resources(
         &self,
         owner: EntityId,

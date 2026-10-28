@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0470
+## Current leaf acceptance —0471
 
-- [x] ROOT CAUSE: python3 -I -B native authoring order:bounded actual prep/model forecast < retained
-  projection < counters/final-model/history/request/report construction < fresh grant < effect rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_authoring:::
-  5 passed rc=0:real alias/eviction/branch oracles, one-short units, beyond-u1281029/1028, cancel/retry/revoke.
-- [x] NO REGRESSION: current3/revision1/auditforecast1/two count-boundary cases/strict lint/fmt pass
-  rc=0; exact history .3.4.2/coupled/deeper/full proof remains pending.
+- [x] ROOT CAUSE: python3 -I -B native history source/order:validated actual target < projection <
+  counters/commands/request/result/reserve < fresh grant < effects; unchanged source owners confirmed rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_history:::
+  4 passed rc=0:real Undo/unequal Redo oracles, one-short units, maximum1797bits, cancel/retry/revoke/replay.
+- [x] NO REGRESSION: current4/resource-admission4/strict core+test lint/fmt pass rc=0;
+  D293 diagnostic1 reproduces907/908B rc=0; its P0 repair .3.4.3 precedes coupled/deeper/full proof.
 
 ## Goal
 
@@ -67,15 +67,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.1`
   Status: `done`
-  Goal: workspace shape per §4.3 — retire the bedrock starter crate (`crates/app`, defect D10),
-  create `sc-units` and `sc-core` with the workspace lints inherited, and extend CI to the G0
-  workflow shape (fmt / clippy / unit+property / WASM smoketest).
-  Acceptance: `cargo metadata` lists the roadmap crates that exist so far; no crate prints the
-  template message; CI green on the new layout; the Knowledge Map names the subsystems.
-  Verification: recorded below — delivered by `G0-CONTRACT.18` (commit `eb83f01`) ahead of this
-  leaf; every acceptance criterion re-derived by command in the `### G1-SLICE.1` checklist.
-  Commit: `STITCHCAD-G1-0001`
-
+  Goal:0001 workspace/G0.18 closure; [whole scope/proof](../history/stitchcad-devnotes-part625.md).
 - ID: `G1-SLICE.2`
   Status: `done`
   Goal: sc-units0002/G0.18; typed exact units/tolerances and focused acceptance; [whole scope](../history/stitchcad-devnotes-part553.md).
@@ -950,28 +942,30 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal: exact prospective retained publication before growing retained copies/allocations/effects.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.1`
   Status: `done`
-  Goal: exact authoring retained projection from actual bounded preparation before publication-counter/
-  final-model/audit/history construction; include maximum-issued/sequence, evictions and redo discard.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native authoring-order/source check rc=0:actual bounded prep
-    precedes borrowed final composition; all successors/final copies/fresh grant/effect follow admission.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part623.md:
-    3 exact Git spans rc=0; whole0469 retained. Temporary prep/caller results are not final private owners.
-  - [x] FIX: strict core-lib/affected-test Clippy and both package fmt pass rc=0; no clone/counter advance/
-    census/authority callback in projection, whole append precharge/exact overflow chunks, no clipping.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_authoring:::
-    5 passed rc=0:alias2M+13/2B+76/5, eviction2M+21/2B+60/30, branch2M+2K+29/2B+110/36(K512).
-    Exact/one-short errors, consumed backing, no-history1029/1028(original900+129, actual entry642bits),
-    quota/cancel Hcopy1 vs success2, smaller retry keys, post-admission revocation/fresh grant2 verified.
-  - [x] NO REGRESSION: current3/runtime revision1/audit successor1/append-boundary1/bit-boundary1 pass
-    rc=0; primitive forecasts match actual arithmetic. Native original handlers/current model walkers unchanged.
-  - [x] LOCKSTEP: book build/native publication85 chapters/159 scoped API rows/1531 source links/
-    2580 rendered links rc=0; bounded publication chapter/nav, indexed promotion and scope examples sync.
-    retention1077 logical/44 working Markdown/60212 decoded lines/4557003 decoded bytes/2387815
-    resident bytes rc=0. History .3.4.2/coupled/full deferred; no allocator/physical/release certificate.
+  Goal:0470 exact prospective retained authoring; [whole scope/proofs](../history/stitchcad-devnotes-part624.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.2`
-  Status: `pending`
+  Status: `done`
   Goal: exact history retained projection before counter/request/command copies or stack/action growth;
   preserve actual model moves, current operator/original author, replay, fresh authority and cancellation.
+  Own scoped D293 source-clone footprint diagnosis here; its P0 repair .3.4.3 precedes feature acceptance.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native source/order confirms prior history had no prospective
+    check before publication construction; source_clone_footprint1 reproduces D293907/908B rc=0, open.
+  - [x] ROOT CAUSE: native source/order rc=0:actual target is validated before projection; inline H
+    derived Clone can alter charged cache despite semantic equality; D293 .3.4.3 owns repair.
+  - [x] FIX: exact borrowed target/request/accepted projection retains max-issued, moves previous model,
+    omits actual source top, forecasts only sequence/action; no counter/model/record allocation in walk.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_history::
+    →4 passed rc=0;Undo2M+19/2B+84/10,Redo3M+28/3B+352/36,max1797bits/action642;short/cancel/revoke/replay.
+  - [x] NO REGRESSION: current4/resource-admission4 and cargo clippy core lib/measure contract -D warnings,
+    cargo fmt -p sc-core -p sc-measure --check pass rc=0; native original producers unchanged rc=0.
+  - [x] LOCKSTEP: native book publication85 chapters/159 API rows/1532 source/2582 rendered links rc=0;
+    MEMORY/DEV/CHANGELOG/decision/index updated,LIVE adds D293;README correct unchanged;coupled/full pending.
+  Verification: history4/current4/resource-admission4/D293 diagnostic1/lint/fmt/book/source/retention rc=0.
+  Commit: STITCHCAD-G1-0471; next P0 D293 .3.4.3, parent remains in_progress.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.3`
+  Status: `pending`
+  Goal:P0 D293 freeze actual immutable source ownership across model snapshots; eliminate foreign Clone
+  footprint assumptions, verify honest resource-charged cache wrapper and preserve public host contracts.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.4`
   Status: `pending`
   Goal: close resource feature acceptance after .4.1–.4.3; run deferred integrated resource/bus checks,

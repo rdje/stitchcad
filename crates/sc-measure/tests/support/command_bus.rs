@@ -90,8 +90,12 @@ mod resource_revision;
 mod retained_authoring;
 #[path = "command_bus/retained_current.rs"]
 mod retained_current;
+#[path = "command_bus/retained_history.rs"]
+mod retained_history;
 #[path = "command_bus/retained_policy.rs"]
 mod retained_policy;
+#[path = "command_bus/source_clone_footprint.rs"]
+mod source_clone_footprint;
 impl CommandAuthoritySource for Host {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_> {
         self.reads.set(self.reads.get() + 1);

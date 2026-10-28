@@ -200,7 +200,7 @@ authority. They provide a data-only accounting contract with implemented compone
 Complete actual model roots compose their source content and retained census under one sink.
 Current/preparation and history-alternative admission now uses the required readonly source port;
 exact Measurement/Material/Notch/publication-revision projections and current private retained
-admission are implemented; prospective authoring is implemented; prospective history admission remains pending. The meter alone is not a runtime model-admission gate.
+admission are implemented; prospective authoring/history projections are implemented; D293 source ownership repair remains pending. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -289,7 +289,7 @@ call its source host. A second installation returns ModelLimitsAlreadyInstalled 
 the first policy. Missing policy returns ModelLimitsNotInstalled after pure input admission; authorized
 GetPieceList inspection needs no policy. Neither requests nor progress observers carry a policy.
 Costly paths also require explicit [retained-policy configuration](command-resource-accounting.md#explicit-immutable-retained-policy-configuration);
-[current retained admission](command-resource-accounting.md#actual-current-private-retained-composition) is implemented; [prospective authoring](command-retained-publication.md) also admits publication growth. History admission remains owned.
+[current retained admission](command-resource-accounting.md#actual-current-private-retained-composition) is implemented; [prospective authoring](command-retained-publication.md) also admits publication growth. History projection is implemented; D293 ownership repair remains owned.
 Compile-time H: DesignResourceSource is required for costly metadata methods; readonly query paths
 retain the narrower semantic host contract. Compiler privacy rejects direct model-policy reset.
 
@@ -312,8 +312,8 @@ Four model-admission cases instrument actual DesignSources, without invented mod
 Unauthorized and mismatched snapshots produce0 clones/0 resource calls/0 semantic callbacks across
 single/group preview and commit; history denial/stale snapshot does likewise. A one-byte-short model
 policy preserves its original resource error with0 clones/2 host walks/0 semantic callbacks: complete
-retained admission now precedes the per-model walk. History with one alternative now has4 walks,
-two for retained composition plus two individual model admissions, with0 copies. Setup/cheap reads
+retained admission now precedes the per-model walk. History with one alternative now has6 walks,
+two current-retained, two individual model and two prospective-retained, with0 copies. Setup/cheap reads
 invoke none, as do exact accepted authoring/history replays. The four affected cases and strict lint/
 formatting pass; prior broader bus acceptance is historical, with current coupled verification deferred.
 No semantic validation is replaced by accounting. Current retained totals and phase-local cancellation
@@ -323,7 +323,7 @@ This implements current/preparation-root and stored history-alternative admissio
 Measurement, selected Material, Notch and publication-revision admission are implemented below.
 Per-model logical admission is implemented with focused checks under the honest immutable-source
 contract. Current private audit/replay/history content and stored maximum-issued/audit counters are admitted;
-exact prospective authoring is admitted; history retained projection remains .4.3.4.2; coupled/deeper/full verification remains separate.
+exact prospective authoring is admitted; history retained projection is implemented; D293 ownership repair remains; coupled/deeper/full verification remains separate.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
 release acceptance remain separate. Deeper/full verification stays deferred until feature completion.
 
@@ -499,4 +499,4 @@ authority/source host algorithm time, numeric/file/decompression/geometry work o
 
 [Actual command data resource accounting](command-resource-accounting.md) documents owned request
 contexts, aliases, reports, records and current private retained composition separately from proposed
-operation work. Exact prospective authoring admission is implemented; history/coupled/full verification remain owned.
+operation work. Exact prospective authoring admission is implemented; D293 ownership repair/coupled/full verification remain owned.

@@ -3,12 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact prospective retained authoring publication
+## _(2026-10-28 UTC)_ — exact prospective retained history publication
 
-0470 .6.8.2.2.2.2.4.3.4.1 borrows actual bounded preparation and admits final retained candidate/record/history before successor/final-model/audit construction; temporary prep is bounded separately.
-Exact future counters, alias copies, eviction and redo IDs/models use current schema order/original witnesses. Authoring5/current3/revision1/auditforecast1/append-boundary1/bit-boundary1 and strict lint/fmt pass.
-Real oracles:alias2M+13/2B+76/5, eviction2M+21/2B+60/30, branch2M+2K+29/2B+110/36(K512), beyond-u1281029/one-short1028 with actual entry642bits. No final publication copies on quota/cancel; smaller retry keys survive.
-Fresh final authority still refuses revocation after admission. Full consumed reserve backing rejects early. History prospective .3.4.2/coupled/full pending; no allocator-peak certificate. Promotion:indexed decision; whole0469 retained623.
+0471 .6.8.2.2.2.2.4.3.4.2 borrows actual validated history target/request/accepted record; admits exact model moves, unchanged maximum-issued and next sequence/action before publication construction.
+History4/current4/resource-admission4/strict lint/fmt pass. Real oracles:Undo2M+19/2B+84/10;unequal Redo3M+28/3B+352/36;all-one maximum1797bits/action642. Quota/cancel/revoke preserve state/keys; replay skips private walks.
+P0 D293 plain real-source/cache diagnostic reproduces semantic-equal Clone cache1→2→3:forecast907B accepted but actual908B, then current refuses882+26. This passing diagnostic proves an open defect; frozen-source repair .3.4.3 precedes coupled .4.4/full proof.
+Promotion:indexed command decision distinguishes projection correctness from generic Clone footprint. Whole0470 retained624; closed D292/G1.1 retained625; retention1079 records/2400192 residentB passes0. README unchanged; LIVE defect note adds D293.
+[Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.
 [Whole0467 accepted-record lesson](docs/history/stitchcad-devnotes-part621.md) retains exact counter/history/replay ownership proof.

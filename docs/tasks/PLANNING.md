@@ -8,11 +8,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D292 — ontology guide still defers implemented Material command metadata
-P2 fixed0445, owner G1-SLICE.6.8.2.2.2.2.2.2.1; this is one observed clause, not a whole-book audit.
-- [x] ROOT CAUSE: python3 -I -B scoped native ontology clause census1 rc=0; actual private Material prep/group commit exist.
-- [x] ADDRESSED: scoped native prior/current stale clause1/0 rc=0; corrected metadata scope links actual execution.
-- [x] NO REGRESSION: cargo test -p sc-core --test design_resource_contract:15 passed rc=0; strict lint/fmt/privacy4 rc=0.
+## D293 — generic source Clone can change actual charged cache footprint
+P0 owned G1-SLICE.6.8.2.2.2.2.4.3.4.3 before .4.4; scoped diagnostic belongs .3.4.2.
+Native source_clone_footprint1 passed rc=0:actual source/cache1→2→3, equal semantic clones, forecast907B accepted but retained908B; next current meter refuses882+26.
+Impact:generic authoring can exceed policy after final H.clone; repair frozen source ownership in .3.4.3, then close diagnostic and run .4.4.
+D292 fixed0445; [whole ontology-clause closure](../history/stitchcad-devnotes-part625.md).
 D290/D291 fixed0442; [whole native reserve/setup closure ledger](../history/stitchcad-devnotes-part597.md).
 D289 fixed0441; [whole native source-copy diagnosis/fix/privacy proof](../history/stitchcad-devnotes-part593.md).
 D287/D288 fixed0440; [whole native bypass/fix and package metadata proof](../history/stitchcad-devnotes-part592.md).

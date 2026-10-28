@@ -65,7 +65,7 @@ Missing policy refuses with CommandControlError::LimitsNotInstalled; attempted r
 LimitsAlreadyInstalled and retains the original policy. Missing model policy returns
 ModelLimitsNotInstalled; replacement returns ModelLimitsAlreadyInstalled. Missing retained policy returns
 RetainedLimitsNotInstalled; replacement returns RetainedLimitsAlreadyInstalled. Retained configuration
-itself performs no admission; [current retained admission is implemented](command-resource-accounting.md#actual-current-private-retained-composition), [prospective authoring](command-retained-publication.md) is implemented; history remains owned. Pure input admission
+itself performs no admission; [current retained admission is implemented](command-resource-accounting.md#actual-current-private-retained-composition), [prospective projections](command-retained-publication.md) are implemented; D293 ownership repair remains. Pure input admission
 precedes authority; private model accounting follows exact authority/snapshot binding and precedes
 current validation/cloning. Actual progress, observer methods, cancellation/retry semantics and
 the precise limits of these metadata bounds are documented in [Operation limits and progress](command-operation-control.md).

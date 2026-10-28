@@ -292,8 +292,8 @@ fn history_admits_both_actual_snapshots_and_exact_replays_skip_model_walks() {
     let observed = counts(&counters);
     assert_eq!(observed[0], 0, "undo moves existing owners without cloning");
     assert_eq!(
-        observed[1], 4,
-        "both retained models plus individual current/alternative admission"
+        observed[1], 6,
+        "current retained2 + individual current/alternative2 + prospective retained2"
     );
     assert!(
         observed[2] > 0,

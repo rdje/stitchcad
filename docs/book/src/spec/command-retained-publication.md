@@ -3,8 +3,15 @@
 Authoring commits now admit their exact future private retained artifact state before publication
 construction. This extends [current retained admission](command-resource-accounting.md#actual-current-private-retained-composition)
 and the [per-model projections](command-operation-control.md#exact-prospective-measurement-resources).
-The authoring implementation has focused checks. Prospective history-action admission remains
-G1-SLICE.6.8.2.2.2.2.4.3.4.2; coupled and deeper/full verification remain separately owned.
+Authoring and history-action projections now have focused checks. Coupled/deeper/full verification
+remains separately owned.
+
+**P0 D293 — source ownership repair required before resource signoff.** A reproducible custom source
+adapter preserves semantic Clone equality while its honestly charged immutable cache grows in each
+new clone. Its forecast admits907 bytes but the final model retains908; the next current meter refuses
+882+26. This is a defect, not dishonest resource totals. The next owned leaf .4.3.4.3 must freeze source
+ownership across model copies and close this case before .4.4 acceptance. The concrete fixture checks
+below establish the projection logic with stable source copies; they do not close D293.
 
 ## What is admitted, and when
 
@@ -136,6 +143,66 @@ Five authoring cases, the three affected current-retained cases, one actual revi
 one audit-successor case and the two primitive count-boundary cases pass with strict affected lint
 and formatting. Publication-order/source checks verify that counter construction, final model,
 reserve/history/request/report allocations, fresh authority and effects follow the new gate.
-Prospective history .4.3.4.2 and coupled/deeper/full acceptance remain pending. This supplies no
+D293 ownership repair and coupled/deeper/full acceptance remain pending. This supplies no
 raw-ingress, allocator-peak, arbitrary-time, numeric/file/decompression/geometry or physical/release
 certificate.
+
+## Exact prospective history actions
+
+After complete current-operator authority, exact original accepted-record binding, current revision,
+stack target and finite action-room checks, the history path admits current retained content and
+validates both actual model snapshots. RetainedPublication then checks the exact future owner before
+cloning its before/restored counters, issuing the next sequence, collecting effective commands,
+cloning requests/results or reserving stack/action storage. Initial operator-authorization metadata
+is separate bounded input preparation. History never constructs another model or invokes H.clone.
+The fresh final complete grant still follows all record preparation and precedes the actual move.
+
+The private projection borrows the actual target, request, accepted record, journal and history.
+It charges the restored target as the new current model and the complete identity backing. Journal
+initial revision and maximum issued remain unchanged; only the effect sequence is forecast. Existing
+accepted authoring records remain unchanged. The source stack omits exactly its actual last step;
+the destination stack keeps its original order and appends the previous current model. Undo uses
+undo-back to redo-back; Redo uses redo-back to undo-back. There is no inverse edit, clipping to depth,
+second copy of the restored target or new authoring revision.
+
+The whole action vector is precharged at its new length, followed by all original actions and the
+exact new action. New data is the forecast sequence, actual effective-command vector, complete
+original history request, actual before revision and actual restored revision. Commands come from
+the accepted report's first-occurrence steps; aliases remain in the copied original request. The
+read-only count/filter borrows already admitted accepted steps before the new vector is allocated.
+Actual source H is charged once per retained model, in the same schema order and original locations
+as current admission. No replacement model, supplied total, caller token or authority callback occurs.
+
+A real agent authoring group with a Material assignment and an exact alias is undone by a separately
+authorized human. With two reserved IDs and model demand M/B at revision0, the future owner is
+2M+19 entries,2B+84 bytes and10 bits. The copied request retains both payloads, while the effective
+command vector has one entry. Exact entry/text/bit maxima match an independent composition of real
+models and returned immutable records. Each one-short policy returns the same original error and
+source chain before publication copies. Repeating a refused request returns that original cause;
+its key/action slot/counter and current Piece address remain unchanged. Exact authorized replay
+still returns the first action at action capacity, with zero private resource calls.
+
+A second fixture uses three unequal actual Material snapshots. Its second reason is64 bytes, so
+incorrectly retaining the wrong redo member changes real counted text. After Undo group2, Undo
+group1 and Redo group1, the future owner is3M+28 entries,3B+352 bytes and36 bits. The current
+snapshot is revision1, undo contains revision0 and redo still contains revision2. Exact limits and
+one-short text/bit refusals match the independent actual-owner oracle, with0 H clones. The final
+Redo uses8 source calls: current retained3, individual current/target2 and prospective retained3.
+
+A no-op authoring act starts at u128::MAX−1 and issues the all-one maximum u128::MAX. Undo restores
+the former value while preserving that maximum. It needs1797 future retained bits; its actual new
+action owns642 bits. At1796, the original error refuses before retained counter/request/command
+copies. Advancing or forecasting another maximum-issued revision during history would incorrectly
+reject the exact case. The actual values are large representations, not numeric counter ceilings.
+
+RetainedPublication0/1 cancellation preserves model addresses, stack membership, the original key
+and the sole action slot. Revocation after resource admission still fails the fresh final authority
+check without any move. A later authorized retry succeeds. The projection invokes no H.clone,
+including successful history: existing model owners move between current and stack positions.
+
+Four new history cases, four current-retained cases and four affected model-admission cases pass
+with strict affected lint/formatting. Initial over-bound owners are refused by current admission;
+accepted history growth is now checked before publication. Logical composition is implemented with
+focused checks, while the separately reproduced D293 source-clone ownership defect remains P0 and
+blocks feature signoff. Coupled/deeper/full verification follows that repair. These results establish
+no raw-ingress, allocator-peak, arbitrary-time, geometry/physical or release certificate.
