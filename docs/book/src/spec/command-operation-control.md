@@ -174,7 +174,8 @@ This ownership change closes P0 D293: semantic-equal custom Clone may honestly g
 Snapshotting retains the original source instead. The charged-cache regression and exact906-byte
 publication are in the [publication guide](command-retained-publication.md#immutable-source-ownership).
 Shared access must still preserve immutable source content under the host integration contract.
-Coupled/full resource verification remains separately owned.
+[Coupled native resource checks](model-resource-accounting.md#coupled-native-resource-acceptance) now pass;
+broader command/full verification remains separately owned.
 
 ## Identity-reserve transition work
 
@@ -193,8 +194,8 @@ The initial reserve is validated and converted to shared storage once. Its entir
 including consumed IDs, remains allocated for this bus lifetime. There is no hidden refill or reserve
 getter. This trades retention of the finite initial backing for removal of reserve-size-dependent
 publication copies. It does not certify initial conversion peaks or total memory/time. Focused proof
-is the expanded native identity-cursor case plus the46 actual bus cases, with strict selected lint
-and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 work.
+is the expanded native identity-cursor case plus the93 actual bus cases in coupled resource acceptance,
+with strict selected lint/formatting. Current/prospective model/retained-state admission is implemented.
 
 ## Logical dynamic-content accounting contract
 
@@ -318,7 +319,7 @@ policy preserves its original resource error with0 clones/2 host walks/0 semanti
 retained admission now precedes the per-model walk. History with one alternative now has6 walks,
 two current-retained, two individual model and two prospective-retained, with0 copies. Setup/cheap reads
 invoke none, as do exact accepted authoring/history replays. The four affected cases and strict lint/
-formatting pass; prior broader bus acceptance is historical, with current coupled verification deferred.
+formatting pass; current coupled native resource checks also pass. Broader command acceptance remains separate.
 No semantic validation is replaced by accounting. Current retained totals and phase-local cancellation
 are detailed in the [command data guide](command-resource-accounting.md#actual-current-private-retained-composition).
 
@@ -326,7 +327,7 @@ This implements current/preparation-root and stored history-alternative admissio
 Measurement, selected Material, Notch and publication-revision admission are implemented below.
 Per-model logical admission is implemented with focused checks under the honest immutable-source
 contract. Current private audit/replay/history content and stored maximum-issued/audit counters are admitted;
-exact prospective authoring is admitted; history retained projection is implemented; D293 ownership repair has focused checks; coupled/deeper/full verification remains separate.
+exact prospective authoring is admitted; history retained projection is implemented; D293 ownership repair has focused checks; coupled native resource checks pass; broader command/deeper/full verification remains separate.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
 release acceptance remain separate. Deeper/full verification stays deferred until feature completion.
 
@@ -496,10 +497,10 @@ an enormous model or changing public counter semantics. There is no wrap, clippi
 
 Runtime revision3/forecast1/count-boundary1/source33/structural-root5/context2/D285 branch1/actual-copy1
 pass, with strict affected lint/formatting. All four model projection branches now have focused
-implementation checks. Retained command content .4.3 has focused checks; coupled resource acceptance
-.4.4 and deeper/full verification remain pending. Logical model content does not bound raw ingress, allocator peaks,
+implementation checks. Retained command content and coupled native resource checks pass; broader
+command/deeper/full verification remains pending. Logical model content does not bound raw ingress, allocator peaks,
 authority/source host algorithm time, numeric/file/decompression/geometry work or physical/release proof.
 
 [Actual command data resource accounting](command-resource-accounting.md) documents owned request
 contexts, aliases, reports, records and current private retained composition separately from proposed
-operation work. Exact prospective authoring/history admission and D293 ownership repair have focused checks; coupled/full verification remains owned.
+operation work. Exact prospective authoring/history admission and D293 ownership repair have focused checks; coupled native resource checks pass; broader command/full verification remains owned.

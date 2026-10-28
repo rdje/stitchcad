@@ -154,3 +154,17 @@ own cache,905B refuses original880+26,906B/old907B publish and pass subsequent c
 The independent clone telemetry control increments1; all actual preview/group/commit/replay/Undo/Redo
 foreign clones are0. This count is no longer a proxy for core model copies; affected tests/book say so.
 Affected command25/metadata8/doctest4/lint/fmt pass0. D293 closes; coupled .4.4/deeper/full proof stays owned.
+
+## Coupled native logical-resource acceptance0473
+
+answers: "which integrated resource checks passed after feature completion?" · "does native resource acceptance certify the whole command layer?"
+
+After current/prospective models, retained state and D293 source ownership are implemented, the actual
+Design-input158(including93 bus)/source33/core resource47/control6/metadata8 suites all pass:252 cases.
+Five private model/audit forecast, exact bit/entry chunk and reserve-cursor units plus16 bus/resource/
+control privacy doctests pass. Strict selected test lint also passes. Book evidence links the native
+commands and limits. Broader transaction .6.5.5/full bus .6.9 follow; no full CI/browser/persistence/
+ingress/allocator-time/physical/release verdict follows from this scoped acceptance.
+D294 exposed stale component-only boundaries in the model/source resource chapters. Native precise
+pending-clause census model11→0/source3→0 and the rendered publication check pass0; actual component
+proofs remain scoped and historical counts stay labeled. Whole0472/D293 closure is retained627.

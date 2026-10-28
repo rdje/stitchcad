@@ -3,8 +3,8 @@
 Authoring commits now admit their exact future private retained artifact state before publication
 construction. This extends [current retained admission](command-resource-accounting.md#actual-current-private-retained-composition)
 and the [per-model projections](command-operation-control.md#exact-prospective-measurement-resources).
-Authoring and history-action projections now have focused checks. Coupled/deeper/full verification
-remains separately owned.
+Authoring/history projections and [coupled native resource checks](model-resource-accounting.md#coupled-native-resource-acceptance)
+now pass. Broader command/deeper/full verification remains separately owned.
 
 ## Immutable source ownership
 
@@ -26,8 +26,8 @@ Two focused regression cases first failed against the inline source representati
 snapshot source-address identity, separate census ownership, full logical charges for both models,
 and exact906-byte publication. A905-byte policy preserves the original880+26 request-field refusal;
 906 and the old907-byte policy both admit publication and then pass the next current-retained check.
-The final probe cancels only after that check, so it creates no second act. Coupled/deeper/full
-resource verification remains pending; sharing deducts no logical snapshot charge.
+The final probe cancels only after that check, so it creates no second act. Coupled native resource
+checks pass; broader command/full verification remains pending. Sharing deducts no logical snapshot charge.
 
 ## What is admitted, and when
 
@@ -159,7 +159,7 @@ Five authoring cases, the three affected current-retained cases, one actual revi
 one audit-successor case and the two primitive count-boundary cases pass with strict affected lint
 and formatting. Publication-order/source checks verify that counter construction, final model,
 reserve/history/request/report allocations, fresh authority and effects follow the new gate.
-D293 ownership repair has focused checks; coupled/deeper/full acceptance remains pending. This supplies no
+D293 ownership repair and coupled native resource checks pass; broader command/full acceptance remains pending. This supplies no
 raw-ingress, allocator-peak, arbitrary-time, numeric/file/decompression/geometry or physical/release
 certificate.
 
@@ -219,6 +219,6 @@ including successful history: existing model owners move between current and sta
 Four new history cases, four current-retained cases and four affected model-admission cases pass
 with strict affected lint/formatting. Initial over-bound owners are refused by current admission;
 accepted history growth is now checked before publication. Logical composition is implemented with
-focused checks, including repaired D293 source ownership. Coupled/deeper/full verification remains
-pending. These results establish
+focused and coupled native resource checks, including repaired D293 source ownership. Broader
+command/deeper/full verification remains pending. These results establish
 no raw-ingress, allocator-peak, arbitrary-time, geometry/physical or release certificate.

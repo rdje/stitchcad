@@ -45,7 +45,7 @@ Six actual cases pass with strict selected lint/formatting: exact demand, vector
 unchanged source/canonical data, prior prefix14/32, empty0/0/0 and original prior refusal. Replacing
 the canonical context with an empty draft makes current validation refuse; accounting held source
 metadata still succeeds unchanged without rebinding. This is the measurement/Ease component only.
-Runtime admission remains owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
+Runtime admission now composes these producers; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
 
 ## Actual common SizeSet metadata
 
@@ -83,7 +83,7 @@ With no available breaks, the same actual draft retains its required dimension:2
 without manufacturing a delta. Six new cases plus prior6 pass:12 source resource cases, with strict
 selected lint/formatting after correcting the new test's missing trait import. Prior2 entries/2 bytes
 compose to23/22; first errors remain original. An empty replacement canonical context refuses current
-validation, while held accounting preserves exact metadata/canonical/measurement objects. Runtime admission remains owned; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.
+validation, while held accounting preserves exact metadata/canonical/measurement objects. Runtime admission now composes these producers; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.
 
 ## Actual retained garment and MTM charts
 
@@ -130,7 +130,7 @@ fixture expectation of64 and it was corrected before acceptance. Snapshot vector
 Seven new cases plus prior12 pass:19 source resource cases, with strict selected lint/formatting.
 Both actual chart components share one meter at6/80, preserve original data and prior errors, and
 stay inspectable when an empty replacement canonical context makes current validation refuse.
-Runtime admission remains owned; these component counts grant no currentness, physical, whole-host/model or allocator memory/time proof.
+Runtime admission now composes these producers; these component counts grant no currentness, physical, whole-host/model or allocator memory/time proof.
 
 ## Actual external family and inventory composition
 
@@ -223,4 +223,5 @@ fields. [Immutable source snapshots](design-inputs.md#immutable-source-snapshots
 instance; each logical model still charges the complete source body and its separate captured census.
 [Installed current-model admission](command-operation-control.md#installed-current-model-admission)
 uses that composition after authority/binding, including prospective publication revision. Retained
-command-state admission and coupled/deeper/full verification remain owned; source demand alone is no whole-model/allocator time/memory certificate.
+command-state admission is implemented and [coupled native checks](model-resource-accounting.md#coupled-native-resource-acceptance)
+pass; broader command/full verification remains owned. Source demand alone is no allocator time/memory certificate.

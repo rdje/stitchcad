@@ -3,8 +3,37 @@
 These component producers borrow actual held content under the
 [logical resource contract](command-operation-control.md#logical-dynamic-content-accounting-contract).
 The structural and complete Inputs/Sewing/Garment roots compose their actual fields under one
-cumulative sink, including actual source content and its retained identity census. Runtime
-integration remains owned; accounting grants no authority or currentness certificate.
+cumulative sink, including actual source content and its retained identity census. Runtime integration and [coupled native checks](#coupled-native-resource-acceptance) are implemented; accounting grants no authority or currentness certificate.
+
+## Coupled native resource acceptance
+
+After implementation and the D293 source-ownership repair, the complete selected native suites pass:
+
+| Actual test target | Passed cases |
+| --- | --- |
+| sc-measure: design_inputs_contract | 158, including93 actual command-bus cases |
+| sc-measure: resource_contract | 33 |
+| sc-core: design_resource_contract | 47 |
+| sc-core: command_control_contract | 6 |
+| sc-core: design_metadata_contract | 8 |
+
+These252 cases cover actual source/model composition, all implemented metadata preview/commit/history
+paths, exact limits and first witnesses, aliases/replay, current and prospective states, authority,
+cancellation, reserve ownership and source cache stability. Five private unit cases also pass for
+model/audit successor forecasts, exact bit/entry overflow chunks and independent reserve cursors.
+Eleven bus, four resource and one operation-policy compile-fail doctests preserve privacy/sealing.
+
+The primary native commands are:
+
+```bash
+python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test design_inputs_contract --test resource_contract
+python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test design_resource_contract --test command_control_contract --test design_metadata_contract
+```
+
+This closes the implemented logical-content resource feature's native acceptance. Broader command
+acceptance, persistence/reopen, browser execution, raw ingress, numeric/file/decompression/geometry
+work, allocator peaks, arbitrary source algorithm time and physical/release proof remain separate.
+No whole-project CI or release verdict follows from these selected suites.
 
 ## Actual canonical-input accounting
 
@@ -42,8 +71,7 @@ meter refusal stays the exact original error, even if this producer's error is i
 
 Four actual canonical cases plus the previous six meter cases pass:10 total, with strict selected
 lint and formatting. The command-bus source remains unchanged. This is canonical-component proof;
-Higher root composition, source-host traversal and runtime model admission remain
-separately owned; implemented component accounting is described in the following sections. Finishing this component's meter supplies no
+Higher roots, source traversal and runtime admission are implemented below; implemented component accounting is described in the following sections. Finishing this component's meter supplies no
 whole-model, source-truth, allocator RSS/time or publication certificate.
 
 ## Actual Piece and cut-plan accounting
@@ -84,7 +112,7 @@ After a real split retires a held boundary source, rebirth would refuse that ori
 still succeeds without repair, rewriting or changed ledger. Empty actual Piece/copy scopes contribute
 zero entries and preserve an earlier meter refusal. Five new actual cases plus prior10 resource cases
 pass:15 total, with strict selected lint/formatting and four meter privacy/sealing checks rechecked.
-Remaining whole-root/source/runtime admission and total RSS/time proof stay separately owned. The command bus has not changed its runtime behavior.
+Whole-root/source/runtime admission is implemented; allocator RSS/time certification stays separate. The command bus has not changed its runtime behavior.
 
 ## Actual topology accounting
 
@@ -119,8 +147,7 @@ operation owner. Maximum19 refuses the live index14+6; maximum21 refuses registr
 
 Four new actual topology cases plus prior15 resource cases pass:19 total, with strict selected lint
 and formatting. They retain the exact original ledger/choices on success/refusal, and empty actual
-scope preserves a prior meter error. This closes Piece/copy/topology component accounting. Remaining
-higher root composition, source-host and runtime admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
+scope preserves a prior meter error. This closes Piece/copy/topology component accounting. Higher root composition, source traversal and runtime admission are implemented below; no release, physical, integrity, allocator RSS/time or authority proof follows.
 
 ## Actual input metadata accounting
 
@@ -163,8 +190,7 @@ recipe strings and whole inventories have no standalone entity owner.
 Five new actual cases plus prior19 resource cases pass:24 total, with strict selected lint/formatting.
 They preserve canonical inputs, parameter order/targets, both recipe fields and complete Material
 intent. Empty parameter/Material drafts plus empty recipe source demand0 entries/8 bytes/0 bits;
-a prior meter refusal stays original across all three producers. Remaining whole-root/source
-and runtime admission work is separately owned; this is no binding, recipe evaluation,
+a prior meter refusal stays original across all three producers. Whole-root/source and runtime admission are implemented below; this is no binding, recipe evaluation,
 Material truth/physical, whole-model or allocator RSS/time certificate.
 
 ## Actual sewing accounting
@@ -199,7 +225,7 @@ After a real deletion retires a held boundary source, the same graph/landmark ac
 without rebirth or resolving the now-orphaned anchors. Exact graph/landmarks/ledger and profile intent
 remain unchanged on success/refusal. Four new actual cases plus prior24 resource cases pass:28 total,
 with strict selected lint and formatting. The first compile caught a missing public re-export, which
-was corrected before these checks passed. Runtime model admission remains owned; these counts supply no binding, realized ease, geometry, physical,
+was corrected before these checks passed. Runtime model admission is implemented below; these counts supply no binding, realized ease, geometry, physical,
 release, whole-model or allocator RSS/time certificate.
 
 ## Actual Pocket, notion and Closure accounting
@@ -238,7 +264,7 @@ also covered. Original objects remain unchanged on success and refusal.
 A real deletion makes the held notion inventory fail current validation; the same resource walk
 still succeeds without rebirth, resolution or repair and preserves the exact objects and ledger.
 Four new cases plus prior28 resource cases pass:32 total, with strict selected lint/formatting.
-Runtime admission remains owned. Logical
+Runtime admission is implemented below. Logical
 counts supply no current target binding, opening/closure execution, selected profile value, physical
 readiness, whole-model or allocator memory/time certificate.
 
@@ -279,7 +305,7 @@ current layer validation refuse; accounting the same held layers/Hems succeeds w
 leaves objects/ledger unchanged. Empty collections and prior-error preservation also pass.
 
 Five new actual cases plus prior32 resource cases pass:37 total, with strict selected lint/formatting.
-Runtime admission remains owned. These counts grant no
+Runtime admission is implemented below. These counts grant no
 current source/Material binding, Lining execution, generated offset/folding geometry, physical
 readiness, whole-model or allocator memory/time certificate.
 
@@ -318,7 +344,7 @@ Empty families preserve zero demand and prior errors. A real deleted constructio
 current Dart validation refuse while held accounting succeeds with exact inventory/graph/ledger
 unchanged. Five new cases plus prior37 pass:42 resource cases, strict selected lint and formatting.
 The first lint rejected the initial six-slice tuple; a named borrowed view resolved it before acceptance.
-Runtime admission remains owned; no
+Runtime admission is implemented below; no
 current binding, execution, geometry/physical, whole-model or allocator memory/time certificate follows.
 
 ## Actual structural root and revision bits
@@ -353,8 +379,7 @@ has0/0/0 demand, including its zero revision, and cannot clear an earlier meter 
 Five new actual cases plus prior42 pass:47 resource cases; both existing command-context cases also
 pass, with strict selected lint and formatting. Native source comparison proves the command-context
 delta is only the private readonly bit getter; public successor/display/context behavior stays intact.
-This is structural-root accounting; complete higher roots compose below. Runtime enforcement remains
-pending. Neither the producer name nor finish supplies a physical, allocator memory/time or
+This is structural-root accounting; complete higher roots compose below. Runtime model enforcement is implemented. Neither the producer name nor finish supplies a physical, allocator memory/time or
 command-admission certificate.
 
 Actual measurement and external SizeSet component examples continue in
@@ -411,7 +436,9 @@ now follows exact authority/snapshot binding. [Exact prospective Measurement acc
 borrows a replacement in its actual slot before candidate copies. [Selected Material accounting](command-operation-control.md#exact-prospective-selected-material-resources)
 borrows resulting Piece reasons before copies. [Notch append accounting](command-operation-control.md#exact-prospective-notch-resources)
 charges the actual new registry before cursor consumption/copy. [Publication revision admission](command-operation-control.md#prospective-publication-revision-resources)
-uses the independent maximum-issued counter before successor construction; retained command state
-and coupled/deeper/full verification remain G1-SLICE.6.8.2.2.2.2.4 work. Retained command journals/history, ingress, allocation peaks and host algorithm
-time require their own bounds; logical demand supplies no dishonest-host security, readiness,
-physical or release certificate. Deeper/full verification remains deferred until feature completion.
+uses the independent maximum-issued counter before successor construction. [Retained command
+composition](command-resource-accounting.md#actual-current-private-retained-composition) and
+[prospective publication](command-retained-publication.md) include actual journal/history content.
+The coupled native resource checks above pass. Raw ingress, allocation peaks and host algorithm time
+retain separate boundaries; logical demand supplies no dishonest-host security, readiness, physical
+or release certificate. Broader command/deeper/full verification remains separately owned.

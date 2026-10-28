@@ -2,19 +2,21 @@
 
 Read CLAUDE.md/README.md and doctrine; derive HEAD with git log --oneline -1.
 
-- Next G1-SLICE.6.8.2.2.2.2.4.4: coupled resource/bus acceptance after all .4.1–.4.3 implementation.
-  Current/per-model/authoring/history prospective composition and P0 D293 repair have focused checks;
-  run deferred actual integrated resource/bus and privacy gates, then deeper/full .6.5.5/.6.9 as owned.
-  Do not imply full resource/ingress/allocator-peak/arbitrary-time/physical/release acceptance.
-- 0472 .4.3.4.3 closes D293:private Arc<H>, manual metadata Clone shares same actual immutable source;
-  separate census Vec; each logical model still charges full source/census. No foreign H.clone in
-  snapshots. host()->&H now ordinary non-const; cross-thread H:Send+Sync, single-thread legal.
-  Actual DesignGarment<DesignSources> compiles Send+Sync; metadata Clone no H:Clone bound, other bounds unchanged.
-- Honest real-source/cache regressions2 failed before/2 pass after. Exact906B and old907B publish then
-  pass current check;905B preserves880+26 refusal. Independent foreign Clone grows its own cache.
-  Source observer control1; previews/groups/commit/replay/Undo/Redo0 foreign clones, not core model-copy
-  telemetry. Affected command25/metadata8/doctest4/strict lint/fmt/native ownership paths pass0.
-- Book spec/design-inputs.md and command-retained-publication.md record ownership/API limits/examples.
-  LIVE closes D293 note; G1still6/18. Whole0471 diagnosis/scope/lesson/changelog in626; retention1080
-  records/2404556 residentB verified0. Protect target/history-capture-0450/installation/backup (98files),
-  prior0392g; window22 limits64/192. Full PNT; derive push cadence. Cleanup due2026-10-28 13:41UTC.
+- Next G1-SLICE.6.5.5: actual transaction/failure-context/rollback acceptance after logical-resource
+  feature closure, then broader full bus .6.9 and .6.9.publication. Read exact goals/interfaces/book.
+  All three metadata handlers/current/prospective model/retained resource code is implemented.
+- 0473 .6.8.2.2.2.2.4.4 closes scoped native resource acceptance:Design-input158(including93 actual
+  command bus)/source33/core resource47/control6/metadata8 →252 passed0;private model/audit forecasts,
+  bit/entry chunk and reserve cursor5 plus privacy16 pass0;selected strict test Clippy passes.
+  Not full bus/CI/browser/persistence, raw ingress, arbitrary host time, allocator peaks or release proof.
+- D294 fixed:old component boundaries in model/source resource guides corrected;precise native stale
+  clause census11→0/3→0. Book model-resource-accounting.md#coupled-native-resource-acceptance has native
+  commands/evidence/scope;publication85chapters/159APIrows/1542source/2596renderedlinks verified0.
+- D293 fixed0472:private Arc<H>/manual metadata Clone shares original immutable H;separate census Vec,
+  full logical charge per model. host()->&H non-const;cross-thread H:Send+Sync,single-thread legal.
+  Honest cache regressions2 fail before/pass after;905B refuses880+26,906/old907B publish/current check
+  pass. Foreign clone observer control1,bus0;this no longer measures core model copies.
+- Whole0472/D293 scope/lesson/changelog/closure in627;retention1081records/2409882residentB verified0.
+  LIVE native-resource acceptance/D294 notes updated,G1still6/18. Protect target/history-capture-0450/
+  installation/backup(98files),prior0392g;window22 limits64/192. Full PNT;derive push cadence.
+  Cleanup due2026-10-28 13:41UTC;docs/ARTIFACT_CLEANUP.md. All broader pending owners remain in tree.

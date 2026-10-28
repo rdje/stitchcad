@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0472 — freeze actual immutable source ownership (P0 D293)
+## STITCHCAD-G1-0473 — close coupled native logical-resource acceptance
 
-- Share the actual source privately across snapshots; copy captured entity vectors separately and preserve complete logical resource charges.
-- Honest semantic-equal cache-growth regression2 fails before/passes after; exact906B and old907B publication/current checks pass,905B retains original880+26 refusal.
-- Affected command25/metadata8/doctest4/strict lint/fmt pass. Foreign Clone telemetry is0, independently controlled; it no longer measures core model copying.
-- host()->&H becomes non-const; cross-thread sources require Send+Sync, single-thread supported. Whole0471 retained626; coupled/deeper/full resource acceptance remains pending.
+- All252 selected native cases pass:Design-input158(including93 bus),source33,core resource47/control6/metadata8; five private units and16 privacy doctests pass.
+- Strict selected test lint passes; current/prospective model/retained logical-content implementation accepted natively, with D293 source ownership repaired.
+- Fix D294 stale model/source guide boundaries:scoped pending-clause census11→0/3→0; preserve component proof and distinguish broader command/full/persistence/browser/ingress/time/release limits.
+- Whole0472/D293 retained627; next scoped transaction acceptance .6.5.5, then .6.9 broader bus. No full CI or whole-project resource certificate.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

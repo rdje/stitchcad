@@ -562,15 +562,16 @@ source/allocation fault acceptance, full command integration and recipe/geometry
 separately owned; metadata history supplies no broader certificate.
 
 [Operation limits and progress](command-operation-control.md) describes installed immutable metadata
-input policy, actual pre-effect progress and atomic cooperative cancellation. The coupled bus now has
-46 focused native cases. Submitted Measurement evidence references have their own explicit quota;
+input policy, actual pre-effect progress and atomic cooperative cancellation. Coupled native resource
+acceptance includes93 actual bus cases within158 Design-input cases. Submitted Measurement evidence references have their own explicit quota;
 eight bus privacy boundaries and control privacy were previously checked. Full integration remains deferred.
 
 Candidate reconstruction shares the actual immutable source across model snapshots; no foreign
 H.clone is invoked. Core model/census copies still occur. The [resource-control guide](command-operation-control.md#source-host-copy-work)
-records this ownership boundary and focused proof. Coupled/full resource acceptance remains owned.
+records this ownership boundary and proof. [Coupled native resource acceptance](model-resource-accounting.md#coupled-native-resource-acceptance)
+passes; broader command/full acceptance remains owned.
 
 The [logical dynamic-content meter](command-operation-control.md#logical-dynamic-content-accounting-contract)
 is a separate Design-domain contract with implemented component producers.
-Current/prospective model and retained-state admission have focused checks; coupled/full acceptance
-remains pending. Component demand supplies no additional execution or whole-model-validity proof.
+Current/prospective model and retained-state admission have focused and coupled native checks;
+broader command/full acceptance remains pending. Component demand supplies no additional execution or whole-model-validity proof.

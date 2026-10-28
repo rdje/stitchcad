@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — freeze actual immutable source ownership (D293)
+## _(2026-10-28 UTC)_ — coupled native logical-resource acceptance
 
-0472 .6.8.2.2.2.2.4.3.4.3 closes P0 D293:private Arc<H>/manual metadata Clone retain the same source instance; captured entity vectors remain separate and every logical model charges full source content.
-Regression2 first failed, now passes:exact906B/current retained check;905B preserves880+26 refusal;old907B also passes. Explicit honest foreign Clone still grows cache; actual model snapshots no longer invoke it.
-Foreign-copy observer control1, all bus foreign clones0; core model copies remain. Metadata8/doctest4/affected command25/strict lint/fmt pass0. host()->&H now non-const; cross-thread H:Send+Sync, single-thread supported and actual DesignSources Send+Sync compiles.
-Promotion:indexed command decision; whole0471 scope/lesson/changelog retained626. Book/source/privacy checks scoped; coupled .4.4/deeper/full proof pending. README correct unchanged; LIVE closes D293 note.
-[Whole0471 history/D293 diagnosis lesson](docs/history/stitchcad-devnotes-part626.md) retains exact before-fix reproduction.
+0473 .6.8.2.2.2.2.4.4 closes current/prospective model/retained logical-resource feature acceptance:sc-measure Design-input158(including93 actual bus)/source33;core resource47/control6/metadata8;all252 native cases pass0.
+Five private counter/append/cursor units and16 bus/resource/control privacy doctests pass0;strict selected test lint passes. This is scoped native resource evidence, not full bus/CI/browser/persistence, RSS/time/ingress or release acceptance.
+D294 observed stale component boundaries in model/source resource guides; native precise pending-clause census11→0/3→0 and publication85 chapters/159 API rows/1542 source/2596 rendered links pass0. Current integration now described without rewriting historical counts.
+Promotion:indexed command decision. Whole0472/D293 scope/lesson/changelog/closure retained627; deeper .6.5.5 then full .6.9 next. README correct unchanged; LIVE notes native resource acceptance, G1still6/18.
+[Whole0472 source ownership/API lesson](docs/history/stitchcad-devnotes-part627.md) retains exact D293 before/after and prior0471 pointer.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

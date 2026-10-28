@@ -10,14 +10,15 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0472
+## Current leaf acceptance —0473
 
-- [x] ROOT CAUSE: cargo test -p sc-measure --test design_inputs_contract command_bus::source_clone_footprint::
-  →0 passed/2 failed before rc=101; same-source address and exact charged-cache bound fail with inline H.
-- [x] ADDRESSED: same native regression →2 passed rc=0 after private Arc ownership;905B refuses880+26,
-  906B/old907B publish then pass current-retained check. Explicit foreign Clone still grows its new cache.
-- [x] NO REGRESSION: affected command25/metadata8/doctest4/strict lint/fmt and native ownership/order
-  pass rc=0; coupled .4.4/deeper/full proof remains pending, zero foreign clones do not count core copies.
+- [x] ROOT CAUSE: python3 -I -B scoped native source census locates D294 model11/source3 stale runtime
+  boundaries despite implemented current/prospective admission; completed native suite logs derived rc=0.
+- [x] ADDRESSED: cargo test selected sc-measure Design-input158/source33 and core resource47/control6/
+  metadata8 →252 passed rc=0, including93 actual bus cases; precise stale clauses11→0/3→0 rc=0.
+- [x] NO REGRESSION: cargo test -p sc-core --doc command::bus::CommandBus →11 passed rc=0;
+  resource4/control1/private units5 and selected strict Clippy pass0;book85/159/1542/2596 verified0.
+  Broader transaction/full bus/persistence/browser acceptance remains pending.
 
 ## Goal
 
@@ -801,7 +802,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0442 shared reserve/D290/D291; [whole scope/proofs](../history/stitchcad-devnotes-part594.md).
 - ID: `G1-SLICE.6.8.2.2.2.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: explicit actual dynamic-model/retained-state admission from public immutable contracts:
   cumulative collection entries, logical UTF-8 field bytes and unbounded counter bits. Preserve original
   model/authority failures, refuse before costly preparation, and distinguish logical content from RSS/time.
@@ -885,7 +886,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0458 actual required readonly source port; [whole scope/proofs](../history/stitchcad-devnotes-part611.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: install explicit immutable model policy and admit actual current/prospective metadata shapes
   before costly validation/cloning; retain original authority/cause/cancel/replay/undo and finite-state bounds.
   Bound logical model content and related retained-state composition; separate raw ingress, allocator peaks,
@@ -948,28 +949,27 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0471 exact prospective history/D293 diagnostic; [whole scope/proofs](../history/stitchcad-devnotes-part626.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.3`
   Status: `done`
-  Goal:P0 D293 freeze actual immutable source ownership across model snapshots; eliminate foreign Clone
-  footprint assumptions; honest charged-cache regression, borrowed host/semantic contracts and logical counts.
-  Decision:private Arc<H>, manual metadata Clone shares source; host()->&H becomes non-const; cross-thread
-  ownership requires H:Send+Sync, single-thread hosts stay legal. Correct source-copy telemetry claims.
-  - [x] REPRODUCE / ISSUE: original honest plain source diagnostic0471 accepted907B/retained908B;
-    replacement regression2 both fail against inline H rc=101, not a fake source or fabricated total.
-  - [x] ROOT CAUSE: native ownership check confirms inline derived H.clone; custom semantic Eq permits
-    cache differences. cargo test --test design_inputs_contract command_bus::source_clone_footprint:: red2.
-  - [x] FIX: private Arc<H>/exhaustive manual Clone preserves actual source and separately copies census;
-    no mutable/public Arc capability, source shared-access immutability remains an integration obligation.
-  - [x] ADDRESSED: same regression2 passed rc=0;actual source address/logical double charge,905/906/907B
-    witnesses/current check;explicit foreign Clone control still grows cache. Metadata Clone needs no H:Clone.
-  - [x] NO REGRESSION: affected command25/metadata8/doctest4, cargo clippy core lib/measure test -D warnings
-    and cargo fmt --check pass0;native original one-root/consuming candidates unchanged0;source observer control1.
-  - [x] LOCKSTEP: native book85 chapters/159 API rows/1535 source/2587 rendered links rc=0;
-    live docs/decision/index close D293,README correct unchanged;whole0471 retained626,retention1080/2404556B rc=0.
-  Verification: focused above rc=0;host() non-const/cross-thread Send+Sync documented;coupled/full pending.
-  Commit: STITCHCAD-G1-0472; next .4.4 coupled resource acceptance after completed implementation.
+  Goal:0472 immutable source/D293 repair; [whole scope/proofs](../history/stitchcad-devnotes-part627.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.4`
-  Status: `pending`
+  Status: `done`
   Goal: close resource feature acceptance after .4.1–.4.3; run deferred integrated resource/bus checks,
   then return to deeper/full .6.5.5/.6.9 and remaining command feature implementation as appropriate.
+  Own D294 stale model/source resource guide runtime boundaries; sync actual implemented admission and
+  preserve scoped component history. Native coupled resource proof does not close broader bus/ingress/time.
+  - [x] REPRODUCE / ISSUE: native precise D294 pending-clause census model11/source3 rc=0;
+    prior leaf checks were focused, while this completed feature owns deferred integrated resource proof.
+  - [x] ROOT CAUSE: python3 -I -B scoped actual runtime/chapter census rc=0:component-era pending
+    claims survived completed model/source/retained admission;native test logs verify the actual paths.
+  - [x] FIX: close implemented logical-content scope only;correct14 observed model/source chapter
+    clauses and link native resource acceptance;broader transaction/full bus/ingress/time stay owned.
+  - [x] ADDRESSED: cargo test sc-measure design_inputs_contract158/resource_contract33 and core
+    design_resource_contract47/command_control_contract6/design_metadata_contract8 →252 passed rc=0.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc command::bus::CommandBus →11 passed rc=0;
+    resource4/control1/private units5/strict test Clippy pass0;native bus93/158,book85/159/1542/2596 pass0.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/decision/index and LIVE native-resource/D294 notes updated;
+    README correct unchanged;whole0472/D293 retained627,4 exact Git spans/retention1081/2409882B rc=0.
+  Verification: above scoped checks pass0;full project CI,transaction .6.5.5/full bus .6.9 remain pending.
+  Commit: STITCHCAD-G1-0473;next .6.5.5 actual transaction/failure-context/rollback acceptance.
 
 - ID: `G1-SLICE.6.9`
   Status: `pending`
