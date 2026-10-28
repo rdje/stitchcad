@@ -41,6 +41,7 @@
 //! | [`package_identity`] | opaque exact algorithm/digest claims, deferred canonicalizer validation | `.6.2.2.c.2.5.4` |
 //! | [`profile_pin`] | exact selected profile/schema/content labels, with deferred G4 validation | `.6.2.2.c.2.1` |
 //! | [`seam_ease_amount`] | original-source uniform cumulative amounts and directed portion checks | `.6.5.3.2.3.2.3.3` |
+//! | [`seam_ease_workspace`] | explicit borrowed weighted-source workspace admission | `.6.5.3.2.3.2.4.2.2` |
 //! | [`seam_ease`] | retained original ease sources and shared source-interval portions | `.6.5.3.2.3.2.3.1` |
 //! | [`range`] | whole-interval coverage and visible range repairs, distinct from endpoint queries | `.3c.2a` |
 //! | [`rational`] | the bounded exact rational a parameter is stored in | `.3a` |
@@ -79,6 +80,7 @@ pub mod rational;
 pub mod reference;
 pub mod seam_ease;
 pub mod seam_ease_amount;
+pub mod seam_ease_workspace;
 pub mod sewing;
 pub mod topology;
 
@@ -123,6 +125,9 @@ pub use seam_ease::{
     SeamEase, SeamEaseBindingIssue, SeamEasePortion, SeamEasePortionError, SeamEaseSource,
 };
 pub use seam_ease_amount::SeamEaseAmountError;
+pub use seam_ease_workspace::{
+    WeightedEaseAdmission, WeightedEaseLimits, WeightedEaseWorkspaceError,
+};
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,
     SeamSideId, SeamSpan, SeamSpanDefinition, SewingError, SewingGraph, SewingGraphDefinition,

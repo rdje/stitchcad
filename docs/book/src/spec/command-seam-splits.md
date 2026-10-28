@@ -426,3 +426,62 @@ The context implementation must retain/recover exact original positions through 
 mappings and retain ambiguous/lost-anchor evidence. Profile notch dimensions do not locate stops.
 The two focused native recovery tests validate real source admission,existing typed refusals and
 later-frame anchors;they do not execute weighted quantities or certify physical correspondence.
+
+## Admit original weighted workspace before allocation
+
+| API token | Meaning |
+| --- | --- |
+| `WeightedEaseLimits` | Explicit positive region-count and conservative integer-width limits,no default |
+| `NonZeroUsize` | Standard Rust positive count used for the region limit |
+| `NonZeroU64` | Standard Rust positive integer used for the bit limit |
+| `WeightedEaseAdmission` | Sealed borrowed original weighted explicit source and admitted reservation |
+| `WeightedEaseWorkspaceError` | Actual eligibility or original-source resource refusal |
+| `admit_weighted_explicit` | Check distribution,amount,complete region count,then derived integer width |
+| `distribution_side` | Actual original side carrying normalized density |
+| `region_count` | Complete original density population,including regions beyond a queried prefix |
+| `integer_bit_bound` | Conservative reserved width,not a minimal necessary width |
+| `integer_bits` | Caller-selected positive maximum integer width |
+| `limits` | Actual selected limits retained by value |
+| `Regions` | Complete original count exceeds its selected limit |
+| `IntegerBits` | Conservative reservation exceeds its selected bit limit |
+| `BoundOverflow` | Checked count-derived reservation cannot be represented |
+
+Admission now exists for an actual retained original weighted explicit source. It borrows the
+source and density;it does not clone regions or allocate arbitrary-precision integers. Private
+fields and a source-bound lifetime prevent forged or escaping admission. Limits have no Default;
+the caller selects both positive values. Debug visits fixed metadata and the region count only.
+The source getter returns the actual original source;parent_amount remains its signed literal,
+including for queries starting from a retained child's source. Admission itself computes no amount.
+
+```rust
+use core::num::{NonZeroU64, NonZeroUsize};
+use sc_core::ontology::{SeamEaseSource, WeightedEaseLimits};
+fn admit(actual: &SeamEaseSource) -> Result<(), Box<dyn std::error::Error>> {
+    let limits = WeightedEaseLimits::new(
+        NonZeroUsize::new(4).ok_or("positive count required")?,
+        NonZeroU64::new(977).ok_or("positive bit limit required")?,
+    );
+    let admitted = actual.admit_weighted_explicit(limits)?;
+    assert!(std::ptr::eq(admitted.source(), actual));
+    let _reserved_integer_bits = admitted.integer_bit_bound();
+    Ok(())
+}
+```
+
+The conservative reservation is189N+ceil(log₂N)+219 bits:189 for complete original-domain query
+normalization and30 for source multiplication supplement the common mass bound above. The source
+multiplier width is derived from the actual Length domain constant. Four regions therefore reserve
+977 bits even when their particular reduced result is much smaller. A977-bit limit accepts that
+reservation;976 refuses it. This policy intentionally reserves by declared input bounds rather
+than first performing expensive arithmetic to discover a smaller answer. Count/bit arithmetic is
+checked before any integer workspace allocation. Zero source amounts still check the full source.
+
+Eligibility precedes resource checks. Uniform intent reports its original source;notch intent
+retains the actual side/start/end;symbolic weighted amounts retain the actual formula/profile
+reference. Region-limit and bit-limit errors retain the original source identity,side,required
+amount and selected limit. A child interval never truncates the original denominator population.
+These are mathematical input/reservation checks. Allocator overhead,CPU time,whole-command
+admission,current source validation and physical correspondence remain their own obligations.
+The exact weighted cumulative query kernel and command/context integration remain pending.
+Focused native source2/bound1 and privacy/lifetime/no-default doctests3 pass;broader paired proof
+and shared-rounding mutation campaigns remain deferred to their explicit owners.

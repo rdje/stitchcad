@@ -175,3 +175,17 @@ mappings;preserve identities,authored stop order and ambiguous/lost evidence. Cu
 has no per-portion original subdomain. Profile dimensions are irrelevant to semantic stop location.
 D301 owns .4.2 shared rounding/workspace/weighted quantities,.4.3 notch context,.4.4 integration;
 scoped acceptance follows implementation,then full paired stops/lineage/effects acceptance.
+
+## Explicit borrowed weighted admission0499
+
+answers: "what must precede original weighted integer workspace allocation?"
+
+Borrow the actual immutable original source with explicit positive region/bit limits and no Default.
+Check distribution,amount,complete original region count,then checked conservative integer reservation.
+Reserve189N+ceil(log2N)+219 bits for the planned common-denominator query,not a minimal actual width;
+four regions reserve977 even if reduced output is smaller. Derive source bits from the Length domain.
+No region cloning or arbitrary-precision allocation occurs during admission. Private fields/lifetimes
+and exhaustive Copy metadata keep its source borrow and bounded Debug honest. Preserve actual
+symbolic/notch IDs and source/side/required/limit refusals;zero amounts and child queries retain full
+source population. This is not allocator/CPU/currentness/physical authority. Native source2/bound1/
+privacy-lifetime-no-default docs3 pass;weighted quantity execution follows in .4.2.3.

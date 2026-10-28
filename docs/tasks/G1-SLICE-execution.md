@@ -203,21 +203,18 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   shared rounding rule and explicit bounded workspace/admission contracts;retain original causes.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.1`
   Status: `done`
-  Goal:0498 shared exact floor/half-comparison magnitude rounding implemented without a second rounding policy or dependency;old ratio behavior/operation names retained.
-  - [x] REPRODUCE / ISSUE: read actual round.rs/public contract/tests/probe selectors and run nonuniform_ease_oracle.py --check →160 rows,188-bit denominator,rc=0. Wide valid source ratios exceed fixed inputs;shared policy must accept an exact decomposition without narrowing or copying its half-away decision.
-  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/seam_partition/nonuniform_ease_oracle.py --check →Fraction/common-denominator agreement/188-bit denominator,rc=0;actual old ratio signatures accept only128-bit fields. Floor plus exact fractional-half ordering suffices for the shared decision;caller retains division validity and workspace ownership.
-  - [x] FIX: new round_magnitude_from_half_comparison delegates to one private checked increment decision used by both old ratio entries. Preserve old signed/unsigned error context;new overflow names the new operation. Document mathematical input responsibilities and limits. Adapt only old remainder/tie fault anchors;producer dispatch/refusal/restoration/classifier rules unchanged.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-units --test magnitude_round_contract --test round_contract --test unsigned_round_contract →11 passed,rc=0. New2 include125 nonzero independent Decimal rows and explicit half/full-width/overflow cases;old4+5 keep signed endpoints,zero,width and operation context. Source doctest
-    filter round::round_magnitude_from_half_comparison →1 passed/2 filtered,rc=0.
-  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-units --lib --test magnitude_round_contract --test round_contract --test unsigned_round_contract -- -D warnings and cargo fmt --all -- --check →pass,rc=0. unsigned_round_reference.py →138 Decimal rows pass,rc=0;read-only AST/source census →5+9 unique actual fault
-    anchors,rc=0. Initial new fixture count134 failed101;independent census proves125 nonzero/13 zero and corrects expectation.
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part653.md →3 exact Git spans,rc=0. mdbook build/publication check →88/174/1561/2664;glossary census →0 failures;verify-retention →1107 logical/74 working/2549112 residentB,all rc=0. Compiled mutation runs remain full paired .6.5.3.2.acceptance or required pre-push probes;weighted source
-    acceptance remains .4.2.acceptance. No unobserved verdict implied.
-  - [x] LOCKSTEP: units spec/rounding annex/indexed numerical decision/live journals/task/index synchronized;README/LIVE reviewed unchanged,G1 6/18. Whole0497 retained653. Next .4.2.2 explicit workspace admission,then .4.2.3 weighted quantities;actual contexts/full paired effects remain later owners.
+  Goal:0498 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part654.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.2`
-  Status: `pending`
-  Goal: explicit borrowed original-source weighted workspace admission before allocation,checked
-  region-count/bit-work bounds and actual source/policy refusal context;no silent default budget.
+  Status: `done`
+  Goal:0499 explicit original weighted-source workspace admission implemented before arbitrary-precision allocation;no weighted quantity execution or bus/physical authority follows yet.
+  - [x] REPRODUCE / ISSUE: read actual retained source/reference/Length/rounding/resource contracts;nonuniform_ease_oracle.py --check →160 rows/188-bit denominator,rc=0. Planned wide arithmetic needs caller-selected population/bit admission before allocation;child prefixes cannot truncate original total density.
+  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/seam_partition/nonuniform_ease_oracle.py --check →Fraction/common-denominator agreement/188-bit valid denominator,rc=0. Complete weighted mass and original-domain query bounds derive189N+ceil(log2N)+219 including actual Length-domain multiplier bits. A reserved bound is conservative,not minimal actual width or allocator/CPU certification.
+  - [x] FIX: explicit positive WeightedEaseLimits,no Default;module-private borrowed WeightedEaseAdmission checks actual distribution/amount then complete count and checked reservation. Preserve original identity/side/required/limit and symbolic/notch context. No region clone/BigUint allocation on admission;Copy plus exhaustive fixed-metadata Debug retains bounded ownership.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test sewing_contract weighted_workspace_admission →2 passed/48 filtered,rc=0. Actual original and both child sources retain4 regions at±1/0;977 accepts,976/count3 return exact source/side limits. Real Uniform/formula/profile/notch refusals precede quota checks. cargo
+    test -p sc-core --lib seam_ease_workspace →bound1 passed/78 filtered,rc=0;1/2/3/4 counts and0/usize overflow guards verified.
+  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --doc seam_ease_workspace →3 genuine privacy/lifetime/no-default controls pass/184 filtered,rc=0. Scoped core lib/sewing Clippy -D warnings and cargo fmt --all -- --check pass0;transition_receipts.py --record docs/history/stitchcad-devnotes-part654.md →3 exact Git spans,rc=0.
+    mdbook build/publication check →88 chapters/177 API rows/1561 source/2665 rendered links;glossary census →0 failures;verify-retention →1108 logical/75 working/2554650 residentB,all rc=0. Full paired integration and shared-rounding mutation campaigns remain .6.5.3.2.acceptance/pre-push;weighted component acceptance .4.2.acceptance follows implementation.
+  - [x] LOCKSTEP: task/index/MEMORY/DEV/CHANGE/book/API map/indexed sewing decision/D301 scheduling synchronized;README/LIVE reviewed unchanged,G1 6/18. Whole0498 retained654. Next .4.2.3 actual exact weighted queries under this admission;original notch/geometry contexts and complete paired effects retain later owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.2.3`
   Status: `pending`
   Goal: exact original weighted cumulative quantities under admitted workspace,original-domain

@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0498 — share half-away rounding with exact wide workspaces
+## STITCHCAD-G1-0499 — admit weighted workspace from the actual original source
 
-- New unsigned floor/half-comparison primitive delegates to the same private increment decision as signed/unsigned ratios. Preserve ratio values/error names;new required increment beyond u128 returns named Overflow. No dependency or float.
-- Native11/source doctest1/Decimal138/scoped Clippy/fmt pass. Two new contracts include125 nonzero independent rows and explicit half/full-width limits. Old5+9 fault anchors adapted and unique;compiled mutation verdict deferred to full paired acceptance/pre-push probes.
-- Whole0497 retained653;book/indexed numerical decision/task/live pointers synchronized. LIVE G1 6/18 unchanged;weighted workspace admission follows.
+- Explicit positive count/bit limits,no Default. Sealed borrowed admission checks actual distribution/amount then complete original population and conservative checked integer reservation,before arbitrary-precision allocation or region cloning.
+- Native source2/bound1/docs3/scoped Clippy/fmt pass. Parent/both child sources retain4 regions at±1/0;977 bits accepts,976/count3 preserve original refusals. Actual symbolic/notch/Uniform intent remains visible.
+- Whole0498 retained654;book/API map/indexed decision/task/live pointers synchronized. LIVE G1 6/18 unchanged;exact weighted queries follow. No allocator/CPU/currentness/physical authority claim.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -1106,6 +1106,149 @@ fn nonuniform_recovery_notches_can_be_authored_in_later_frames_and_either_named_
 }
 
 #[test]
+fn weighted_workspace_admission_keeps_complete_original_source_and_exact_selected_limits() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{WeightedEaseLimits, WeightedEaseWorkspaceError as Error};
+    let limits = |regions, bits| {
+        WeightedEaseLimits::new(
+            NonZeroUsize::new(regions).unwrap(),
+            NonZeroU64::new(bits).unwrap(),
+        )
+    };
+    for parent in [-1, 0, 1] {
+        let mut f = fixture();
+        let declaration = f.span_mut().ease.declared_mut().unwrap();
+        declaration.amount = EaseAmount::Explicit(Length::from_micrometres(parent).unwrap());
+        declaration.distribution = EaseDistribution::Weighted {
+            side: SeamSideId::B,
+            regions: (0_i64..4)
+                .map(|index| WeightedEaseRegion {
+                    from: t(index, 4),
+                    to: t(index + 1, 4),
+                    weight: Rational::new(1, i64::MAX - 2 * (index + 1)).unwrap(),
+                })
+                .collect(),
+        };
+        let graph = f.graph(&[]).unwrap();
+        let original = graph.spans().first().unwrap().retain_ease_source();
+        let [first, second] = original
+            .split_at(
+                EdgeAnchor {
+                    edge: f.span().a.range.edge(),
+                    param: t(1, 2),
+                },
+                EdgeAnchor {
+                    edge: f.span().b.range.edge(),
+                    param: t(1, 2),
+                },
+            )
+            .unwrap();
+        for portion in [&original, &first, &second] {
+            let source = portion.source();
+            let admitted = source.admit_weighted_explicit(limits(4, 977)).unwrap();
+            assert!(std::ptr::eq(admitted.source(), source));
+            assert_eq!(admitted.distribution_side(), SeamSideId::B);
+            assert_eq!(admitted.region_count(), 4);
+            assert_eq!(admitted.parent_amount().as_micrometres(), parent);
+            assert_eq!(admitted.integer_bit_bound(), 977);
+            assert_eq!(admitted.limits(), limits(4, 977));
+            assert_eq!(admitted.limits().regions().get(), 4);
+            assert_eq!(admitted.limits().integer_bits().get(), 977);
+            let count_error = source.admit_weighted_explicit(limits(3, 1)).unwrap_err();
+            assert_eq!(
+                count_error,
+                Error::Regions {
+                    source_span: id(301),
+                    side: SeamSideId::B,
+                    required: 4,
+                    limit: 3,
+                }
+            );
+            assert_eq!(
+                source.admit_weighted_explicit(limits(4, 976)).unwrap_err(),
+                Error::IntegerBits {
+                    source_span: id(301),
+                    side: SeamSideId::B,
+                    regions: 4,
+                    required: 977,
+                    limit: 976,
+                }
+            );
+            assert!(std::error::Error::source(&count_error).is_none());
+            let debug = format!("{admitted:?}");
+            assert!(debug.contains("regions: 4") && !debug.contains("WeightedEaseRegion"));
+        }
+    }
+}
+
+#[test]
+fn weighted_workspace_admission_preserves_actual_eligibility_before_budget_refusals() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{WeightedEaseLimits, WeightedEaseWorkspaceError as Error};
+    let tiny = WeightedEaseLimits::new(NonZeroUsize::new(1).unwrap(), NonZeroU64::new(1).unwrap());
+    let mut f = fixture();
+    f.span_mut().ease.declared_mut().unwrap().amount = EaseAmount::Formula(id(500));
+    let graph = f.graph(&[]).unwrap();
+    let source = graph.spans().first().unwrap().retain_ease_source();
+    assert_eq!(
+        source.source().admit_weighted_explicit(tiny).unwrap_err(),
+        Error::Uniform {
+            source_span: id(301)
+        }
+    );
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
+        side: SeamSideId::A,
+        regions: vec![WeightedEaseRegion {
+            from: Param::START,
+            to: Param::END,
+            weight: Rational::ONE,
+        }],
+    };
+    for amount in [
+        EaseAmount::Formula(id(500)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(501))),
+    ] {
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&[]).unwrap();
+        let source = graph.spans().first().unwrap().retain_ease_source();
+        assert_eq!(
+            source.source().admit_weighted_explicit(tiny).unwrap_err(),
+            Error::Amount {
+                source_span: id(301),
+                amount
+            }
+        );
+    }
+    let marks = [f.notch(400, t(1, 4)), f.notch(401, t(3, 4))];
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(400),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(401),
+        },
+    ];
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::BetweenNotches {
+        side: SeamSideId::A,
+        start: id(401),
+        end: id(400),
+    };
+    let graph = f.graph(&marks).unwrap();
+    let source = graph.spans().first().unwrap().retain_ease_source();
+    assert_eq!(
+        source.source().admit_weighted_explicit(tiny).unwrap_err(),
+        Error::BetweenNotches {
+            source_span: id(301),
+            side: SeamSideId::A,
+            start: id(401),
+            end: id(400),
+        }
+    );
+}
+
+#[test]
 fn between_notches_requires_two_distinct_noncoincident_notch_stops_on_its_side() {
     let mut f = fixture();
     let a = f.notch(400, t(1, 4));

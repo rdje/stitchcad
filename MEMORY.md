@@ -1,11 +1,13 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.2.2 in docs/tasks/G1-SLICE-execution.md:explicit original-source
-  weighted workspace admission before allocation,checked region-count/bit-work bounds and actual
-  source/policy refusal context. Shared rounding0498 implements round_magnitude_from_half_comparison
-  in sc-units;caller derives exact quotient/remainder comparison and owns sign/scalar validity.
-  Native11/doc1/Decimal138 pass;old5+9 mutation anchors unique,compiled execution deferred to
-  full paired .6.5.3.2.acceptance or required pre-push probes. .4.2.3 exact weighted quantities follows admission.
+- Next G1-SLICE.6.5.3.2.3.2.4.2.3 in docs/tasks/G1-SLICE-execution.md:exact weighted original
+  cumulative quantities through the sealed WeightedEaseAdmission from seam_ease_workspace.rs.
+  Place query engine in that module or its private child;admission fields stay module-private.
+  Limits explicit positive,no Default;reservation189N+ceil(log2N)+219 is conservative integer width,
+  not RSS/CPU authority. Source/amount/count/bits checks precede BigUint work;no source truncation.
+  Parent/side/complete regions/limits/original source remain actual. Reuse shared sc-units
+  round_magnitude_from_half_comparison;derive exact floor/remainder comparison before rounding.
+  Shared-rounding compiled5+9/+release mutations remain full paired acceptance/pre-push probes.
 - Recovery0497:160 independent rows,valid188-bit denominator;B/Opposite complement BEFORE rounding.
   Original-domain exact normalization may need189 bits. Do not use uniform equal-progress as physical
   evidence. Indexed sewing decision/book retain constructive workspace and actual context contracts.
