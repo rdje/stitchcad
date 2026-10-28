@@ -210,6 +210,25 @@ pub trait DesignResourceSink: sealed::Sealed {
         location: DesignResourceLocation,
     ) -> Result<(), DesignResourceLimitError>;
 }
+/// Required readonly accounting port for the actual immutable higher source owner.
+///
+/// Implementors precharge every owned dynamic collection before traversal, charge every retained
+/// text field/duplicate snapshot/cache and represented unbounded counter, and preserve schema/authored
+/// order with original locations. Canonical data owned by core composes separately. The supplied
+/// sealed sink exposes no reset, policy replacement, finish, model publication or authority operation.
+/// There is no default implementation or caller-provided totals. Integration must select an honest,
+/// exhaustive owner implementation; this contract is not a security claim against dishonest host code.
+/// Accounting must not clone/format sources, read canonical availability, validate current references,
+/// allocate a fresh identity census, evaluate formulas or grant any semantic/physical authority.
+pub trait DesignResourceSource: super::DesignReferenceHost {
+    /// Charge the exact currently held source content into the caller's cumulative restricted sink.
+    /// # Errors
+    /// Returns the original first resource refusal; an earlier latched failure cannot be cleared.
+    fn charge_resources(
+        &self,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError>;
+}
 /// First-failure-latching logical-content meter. It allocates/copies no model, collection or text.
 /// Actual exhaustive producers and runtime enforcement remain separate implementation obligations.
 /// ```compile_fail

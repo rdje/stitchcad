@@ -7,7 +7,8 @@ use core::fmt;
 use sc_core::{
     design::{
         DesignFormulaHost, DesignHostEntity, DesignHostEntityKind as Kind, DesignMetadataHost,
-        DesignReferenceHost, DesignSizeSetHost, DesignSizeSetReference, DesignSourceReferences,
+        DesignReferenceHost, DesignResourceLimitError, DesignResourceSink, DesignResourceSource,
+        DesignSizeSetHost, DesignSizeSetReference, DesignSourceReferences,
     },
     ontology::EntityId,
     recipe::{FormulaDeclaration, FormulaInputOrigin},
@@ -358,5 +359,20 @@ impl DesignFormulaHost for DesignSources {
             }
         }
         Ok(declarations)
+    }
+}
+
+impl DesignResourceSource for DesignSources {
+    fn charge_resources(
+        &self,
+        sink: &mut dyn DesignResourceSink,
+    ) -> Result<(), DesignResourceLimitError> {
+        let Self { definition } = self;
+        let DesignSourcesDefinition {
+            measurements,
+            size_sets,
+        } = definition;
+        crate::charge_measurement_input_resources(measurements, sink)?;
+        crate::charge_size_set_inventory_resources(size_sets, sink)
     }
 }

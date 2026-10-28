@@ -98,68 +98,8 @@ this contract proves no model traversal, allocator RSS/time or dishonest-host se
 Whole0444–0449 component implementation journals retain exact source intervals in
 [part605](../history/stitchcad-devnotes-part605.md); current component contracts/examples remain in the book.
 
-## Actual held layers and Hems0451
-
-answers: "how are held layer/Hem resources charged without granting Lining execution?"
-
-.6.8.2.2.2.2.2.4.3 charges actual Facing/Lining/Interfacing vectors, offset-source vectors and exact
-unresolved Material reason bytes, then Hems. Exhaustive private owner/wrapper/content/definition views
-and Copy guards retain original sources/operation/depth/fold/method intent. Faced ids add no duplicate
-Facing content. Native resource37/strict selected lint/fmt pass:13/9/0, exact family/owner/index first
-refusals, unchanged env_lining, empty/prior-error and real deletion-held state without lookup/repair.
-Construction/root/source/runtime/deeper/full work remains; no current binding, execution/physical,
-whole-model or allocator memory/time certificate follows from component accounting.
-
-## Actual six-family construction resources0452
-
-answers: "what does held construction accounting charge versus reference through another owner?"
-
-.6.8.2.2.2.2.2.4.4 charges all actual family vectors plus Tuck/Pleat fold lines in schema/member order.
-Exhaustive private owner/wrapper/content/definition views and individual Copy guards preserve fixed
-Dart/Gather/grain/allowance intent without resolution, rebirth, lookup or execution. Named borrowed
-collection view/count-only Debug replaces the lint-rejected tuple. Native resource42/strict lint/fmt
-pass:19/0/0; graph composition22 counts canonical weighted ease once, exact first family/fold owner/
-index, all intake/angle/width origins, optional print refs, real deletion-held state and empty/prior
-errors. Crate status corrected to actual private composition/metadata execution; whole-root/source/
-runtime/deeper/full acceptance remains owned. No physical, whole-model or RSS/time certificate follows.
-
-## Actual structural root and revision bits0453
-
-answers: "how does actual structural accounting measure a revision beyond machine width?"
-
-.6.8.2.2.2.2.2.5.1 charges the original BigUint magnitude bits first, then actual canonical/Piece/copy/
-topology owners under one cumulative sink. Exhaustive private root view and readonly bit getter need
-no decimal formatting, advancement, model copy or semantic validation. Native resource47/context2/
-strict selected lint/fmt pass:41/18/129, zero/128/129 boundaries, exact Design/component first refusal,
-prior prefix44/20/136 and unchanged original/empty/prior-error scope. Native context comparison isolates
-the getter as its only delta. Source .3 precedes complete higher-root .2.5.2, then runtime .4; parent
-remains in progress. Structural demand is no whole-host/model, currentness, physical or RSS/time proof.
-
-## Actual measurement/Ease source resources0454
-
-answers: "do saved measurement bindings own token bytes when spellings coincide?"
-
-.6.8.2.2.2.2.3.1 precharges actual measurement/table/Ease/set vectors and charges all held name,
-documentation and token text. Every saved binding token is an owned logical field; matching spelling
-never deduplicates its charge. Canonical values/evidence are not copied or read. Exhaustive private
-owner/definition/binding views and Copy guards retain fixed units/domains/reference arrays. Native
-sc-measure resource6/strict selected lint/fmt pass:12/30/0, exact member/entry owner/index refusals,
-prefix14/32, empty/prior error and held source data unchanged despite missing canonical targets.
-External sets .3.2, full host .3.3, higher root .2.5.2/runtime .4 and deeper/full proof remain owned.
-No source/provenance truth, physical, whole-host/model or allocator time/memory certificate follows.
-
-## Actual common SizeSet metadata resources0455
-
-answers: "how do common SizeSet resources preserve explicit points and partial break drafts?"
-
-.6.8.2.2.2.2.3.2.1 precharges actual member/axis/value/point/coordinate/required-dimension/break
-vectors, then exact owned labels/names/binding tokens. Fixed Count revisions add zero unbounded bits;
-Length/Scalar refs stay unread. Exhaustive private views/Copy guards expose field evolution. Point
-vectors use actual Set owner/original point index; member refs do not become new owning identities.
-Native sc-measure resource12/strict selected lint/fmt pass:21/20/0, partial20/18, prefix23/22, original
-owner/index refusals, all axis source forms/unused values/terminal Count and held missing-context data.
-Chart/profile/family/full host/higher-root/runtime and deeper/full proof remain owned; no currentness,
-grading/physical, whole-host/model or allocator time/memory certificate follows from these counts.
+Whole0451–0455 implementation journals retain exact source intervals in
+[part610](../history/stitchcad-devnotes-part610.md); current component contracts/examples remain in the book.
 
 ## Retained charts and standalone profile input0456
 
@@ -188,3 +128,17 @@ reversed order/same totals/different first chart owner, singleton garment origin
 and held missing-context state. One shared test-fixture module fixes first duplicate-loading lint.
 External .3.2 implementation has focused acceptance; full host .3.3/higher root .2.5.2/runtime/deeper/
 full work remains owned. Logical content grants no currentness, physical or allocator memory/time proof.
+
+## Required actual source-resource port0458
+
+answers: "how does core account for an actual immutable higher source host without supplied totals?"
+
+DesignResourceSource extends DesignReferenceHost with required readonly charge_resources and only a
+sealed sink. No default implementation, policy setter/reset/finish or publication/authority method is
+provided; exhaustive honest foreign-host implementation is a trusted integration obligation. Actual
+DesignSources matches private owner/two-root definition and visits MeasurementInputs then SizeSets,
+without clone/current/census/context callbacks; existing meter code is unchanged. Source resource28/
+strict core-lib/source lint/fmt pass:39/628/0,prefix41/630/1, exact first witnesses, held missing-context
+and empty/prior failures. Python/OS field census389+239 corrects stale626 test expectation before
+acceptance. Higher-root cached entity census/refs .2.5.2 and runtime .4/deeper/full proof remain owned;
+source demand is no semantic/currentness, dishonest-host security, whole-model or allocator memory/time proof.

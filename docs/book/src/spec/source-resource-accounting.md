@@ -45,7 +45,7 @@ Six actual cases pass with strict selected lint/formatting: exact demand, vector
 unchanged source/canonical data, prior prefix14/32, empty0/0/0 and original prior refusal. Replacing
 the canonical context with an empty draft makes current validation refuse; accounting held source
 metadata still succeeds unchanged without rebinding. This is the measurement/Ease component only.
-The complete actual source-host port, higher-root composition and runtime admission remain owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
+Higher-root composition and runtime admission remain owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
 
 ## Actual common SizeSet metadata
 
@@ -83,7 +83,7 @@ With no available breaks, the same actual draft retains its required dimension:2
 without manufacturing a delta. Six new cases plus prior6 pass:12 source resource cases, with strict
 selected lint/formatting after correcting the new test's missing trait import. Prior2 entries/2 bytes
 compose to23/22; first errors remain original. An empty replacement canonical context refuses current
-validation, while held accounting preserves exact metadata/canonical/measurement objects. Complete host/higher-root and runtime admission remain owned; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.
+validation, while held accounting preserves exact metadata/canonical/measurement objects. Higher-root composition and runtime admission remain owned; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.
 
 ## Actual retained garment and MTM charts
 
@@ -130,7 +130,7 @@ fixture expectation of64 and it was corrected before acceptance. Snapshot vector
 Seven new cases plus prior12 pass:19 source resource cases, with strict selected lint/formatting.
 Both actual chart components share one meter at6/80, preserve original data and prior errors, and
 stay inspectable when an empty replacement canonical context makes current validation refuse.
-Full actual host/higher-root and runtime admission remain owned; these component counts grant no currentness, physical, whole-host/model or allocator memory/time proof.
+Higher-root composition and runtime admission remain owned; these component counts grant no currentness, physical, whole-host/model or allocator memory/time proof.
 
 ## Actual external family and inventory composition
 
@@ -175,5 +175,48 @@ The first lint caught duplicate test-fixture loading, an unused import and two d
 assertions; sharing one fixture module and using the established assertion style resolved them.
 Actual empty inventory contributes0/0/0 and preserves first errors. Missing replacement canonical
 sources make current validation refuse; held accounting preserves exact inventory/canonical/inputs.
-Complete host and higher-root composition, runtime policy and deeper/full verification remain
+Higher-root composition, runtime policy and deeper/full verification remain
 owned; these counts grant no currentness, readiness, physical or allocator memory/time certificate.
+
+## Complete immutable source-host port
+
+Core's DesignResourceSource extends the readonly DesignReferenceHost contract with a required
+charge_resources(&self, &mut dyn DesignResourceSink) method. There is no default implementation or
+supplied totals carrier. The actual sc-measure DesignSources adapter exhaustively matches its private
+owner and two-root definition, then charges MeasurementInputs followed by SizeSetInventory through
+the same restricted sink. The port performs no clone, canonical/current validation, identity-census
+allocation or context construction. Canonical values remain singly owned by the kernel.
+
+Implementors must cover every owned dynamic field, including saved copies/caches, preserve original
+schema/member order and precharge vectors. The sealed sink exposes no policy replacement/reset,
+finish, model publication or authority method. This is a trusted integration contract: it cannot force
+honest exhaustive behavior in arbitrary foreign host code. The actual adapter uses compiler-checked
+owner/definition patterns and the tested component producers; no invented host or request statistics
+replace actual data. A resource success supplies no semantic/currentness, evidence or authorization.
+
+```rust
+use sc_core::design::DesignResourceSource;
+let mut meter = DesignResourceMeter::new(resource_limits);
+actual_sources.charge_resources(&mut meter)?;
+let represented_host = meter.finish()?;
+```
+
+The native complete host holds19 measurement/Ease entries and20 external-set entries:39 entries,
+zero unbounded counter bits. Independent Python/OS UTF-8 counts for actual fixture fields give
+landmarks40, procedures110, Measurements77, tables54, Ease42 and EaseSet66:389 bytes. Adding actual
+sets239 gives628. Both declarations and saved snapshots retain their own logical text fields.
+The initial test carried a stale626 total; the independent field census and actual refusals exposed
+it, and corrected totals passed before acceptance.
+
+Entry maxima3/20/38 preserve0+4 at landmarks,19+2 at size_sets and37+2 at the final chart bindings.
+Maximum9 bytes refuses the first landmark name0+10;627 bytes refuses the final saved measurement
+token619+9 with its actual chart owner/index1. Prior2 entries/2 bytes/1 counter bit compose to41/630/1.
+An ignored host refusal cannot clear a prior counter error. An actual explicitly empty host has0/0/0
+source demand; this says nothing about separately owned kernel recipe or root fields.
+
+Four new actual-host cases plus prior24 pass:28 source resource cases, with strict core-library and
+source-test lint/formatting. A moved test assertion was corrected to borrow preserved values. Missing
+replacement canonical sources still refuse current validation; generic port accounting preserves the
+exact held host/canonical data. Kernel higher-root composition must additionally charge its retained
+DesignMetadata entity catalog and fixed provided-reference fields. That composition, runtime policy
+and deeper/full verification remain owned; source demand is no whole-model/allocator time/memory certificate.

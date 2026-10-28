@@ -94,7 +94,7 @@ pub use resource::{
     charge_recipe_document_resources, charge_sewing_graph_resources,
     charge_sewing_landmark_resources, charge_topology_resources, DesignResourceCount,
     DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits, DesignResourceLocation,
-    DesignResourceMeter, DesignResourceScope, DesignResourceSink,
+    DesignResourceMeter, DesignResourceScope, DesignResourceSink, DesignResourceSource,
 };
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use sewing_state::{

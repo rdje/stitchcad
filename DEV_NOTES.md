@@ -3,16 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual complete external SizeSet resource composition
+## _(2026-10-28 UTC)_ — required actual source-resource port
 
-0457 .6.8.2.2.2.2.3.2.3 precharges the actual set vector, then composes each explicit Garment/MTM
-common/chart owner in authored order. Exhaustive private inventory/family views and enum matching;
-no census allocation, context/value read or origin inference. Source resource24 (prior19/new5)/strict
-lint/fmt pass:outer2+MTM7/102+Garment11/137=20/239/0, prefix22/241, exact nested refusals and reversed
-order/first owner, singleton garment origin, empty/prior errors and held missing-context data. First
-lint's duplicate fixture/import/panic forms fixed by one shared module and established assertions.
-Promotion: indexed command-layer decision. Whole0456 proof609 has3 native Git spans. External .3.2
-implemented with focused checks; host .3.3/higher root .2.5.2/runtime/deeper/full acceptance pending.
+0458 .6.8.2.2.2.2.3.3 adds required readonly DesignResourceSource over the semantic host contract,
+with only sealed sink access/no default or supplied totals. Actual DesignSources exhaustively visits
+its two owned roots without clone/current/census/context callbacks; existing meter behavior unchanged.
+Source resource28 (prior24/new4), strict core-lib/source lint and fmt pass:39/628/0, prefix41/630/1,
+exact first owner/index, empty/prior and held missing-context state. Initial moved assertion fixed;
+stale626 corrected by actual field census40+110+77+54+42+66=389 plus sets239. Promotion: indexed
+command-layer decision. Whole0457/0451–0455 journals610 retain4 Git spans. Source .3 implemented;
+higher root/cache census .2.5.2, runtime .4/deeper/full proof pending, no dishonest-host/RSS/time claim.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

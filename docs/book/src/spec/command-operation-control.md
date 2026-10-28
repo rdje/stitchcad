@@ -194,8 +194,8 @@ and formatting. Initial/model/retained-state bounds remain G1-SLICE.6.8.2.2.2.2 
 
 DesignResourceLimits and DesignResourceMeter live in the Design domain, independent of command
 authority. They provide a data-only accounting contract with implemented component producers below.
-Complete root/source accounting and runtime enforcement remain pending; the meter alone is not
-a runtime model-admission gate.
+Higher-root composition and runtime enforcement remain pending; actual source accounting is available
+through the required readonly DesignResourceSource port. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -237,7 +237,7 @@ assert_eq!(declared.text_bytes(), 2);
 assert_eq!(declared.counter_bits(), 129);
 ```
 
-DesignResourceScope identifies Structure, Inputs, Sewing, Garment or SourceHost. Locations retain a
+DesignResourceScope identifies Structure, Inputs, Sewing, Garment or SourceHost. Locations retain an
 optional actual owner identity, static schema field token and original zero-based authored index.
 Owner identity is location data, never permission or a model handle. Locations contain no copied
 user label/value or model handle. Count refusals retain CollectionEntries or TextBytes, the explicit
@@ -260,6 +260,9 @@ formatting. The actual core visitor is G1-SLICE.6.8.2.2.2.2.2, the actual immuta
 is .3, and prospective shape/runtime installation is .4 under the same parent. Source truth, raw
 input decoding, allocator peaks, host algorithm time and future solver/file/decompression/geometry
 work remain distinct obligations. The existing metadata bus has not changed its runtime behavior.
+
+[Complete immutable source accounting](source-resource-accounting.md#complete-immutable-source-host-port)
+uses actual retained host fields; it exposes no default, source-currentness or authority bypass.
 
 Actual component examples and refusal witnesses are in
 [Actual model resource accounting](model-resource-accounting.md).

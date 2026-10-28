@@ -377,3 +377,6 @@ mod charts;
 
 #[path = "support/resource_size_inventory.rs"]
 mod size_inventory;
+
+#[path = "support/resource_host.rs"]
+mod source_host;

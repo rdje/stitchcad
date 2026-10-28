@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0457 — compose actual external SizeSet family resources
+## STITCHCAD-G1-0458 — expose required readonly accounting for the actual source host
 
-- Precharge the actual ordered set vector and compose explicit Garment/MTM common and chart owners once.
-- Source resource24 (prior19/new5), strict selected lint/fmt pass:20/239/0, prefix22/241, exact first witnesses.
-- Reverse order preserves totals and changes refusal owner; singleton garment origin and held source data stay intact.
-- Shared fixture wiring corrected; whole0456 retained609; complete host, higher-root and runtime work remains owned.
+- Core DesignResourceSource requires restricted sink charging; no default, supplied totals or publication/authority capability.
+- Actual DesignSources walks both exhaustive owned roots; no clone/current/census/context callback or canonical duplication.
+- Source resource28 (prior24/new4), strict core-lib/source lint/fmt pass:39/628/0, prefix41/630/1 and original refusals/state.
+- Correct moved assertion/stale byte expectation and doc grammar; retain whole0457/0451–0455 journals610; higher root next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

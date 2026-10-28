@@ -214,6 +214,9 @@ cargo test -p sc-measure --test size_set_inventory_contract
 
 ## Actual combined Design sources
 
+[Readonly resource accounting](source-resource-accounting.md#complete-immutable-source-host-port)
+implements the required core DesignResourceSource port over both actual retained roots, without current queries.
+
 DesignSourcesDefinition supplies owned MeasurementInputs/SizeSetInventory to DesignSources, without
 stored canonical values/contexts. new(definition, &canonical) repeats complete inventory/current
 checks; DesignSourcesError retains typed SizeSets/Measurement causes. definition()/measurements()/
