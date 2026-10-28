@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual complete notch-source input admission
+## _(2026-10-28 UTC)_ — current local source contract recovery
 
-0511 lends exact original source/plan/Pieces/semantic registry/ledger after eligibility,whole journal/nested input and whole dependency admission. Explicit NotchContextLimits retains later per-point/range budgets;no defaults,indexes,derived queries,cloned source or quantity is supplied.
-Exhaustive borrowed views and Copy guards charge all stops/copies/Pieces,boundaries/hole groups/edges/construction/folds,and unused Notch/Turn entries. Fixed errors retain source/collection/owner/index/counts. Text stays borrowed without scan;this item census supplies no byte/CPU/allocator certificate.
-Native5/doc2/recovery4/scoped Clippy/fmt pass0. Actual declarations retain explicit/formula/profile and named401/400 versus authored400/401. Base13/unused Turn14/holes+fold+unused Piece+copy19 and exact quota/precedence checks pass. Deleted source graph refuses while input admission preserves held data.
-[Whole0510 coverage](docs/history/stitchcad-devnotes-part668.md) retains3 exact Git spans. Book89/200/1567/2689,glossary0,retention1122 pass. LIVE/README unchanged,G1 6/18. Actual source/current/original context .3 next;quantity/paired acceptance retain owners. Promotion declined:existing source admission contracts.
+0512 replaces superseded prospective projection wording with actual primitive/input status. Whole decision194L/14247B retained670 as strict encoded exact Git span;current176L/12286B preserves all questions/headings/metadata. No map row or ceiling grows;old examples/counts/failures/pending scopes remain exact.
+Recovered actual current Design/graph/anchor/range contracts:validate every unused landmark and full original source,retain surviving Piece interval membership without claiming whole-Piece/global Design readiness. Next local validator must use actual inputs/bounded queries and admit derived work before allocation.
+Exact admission book section60L/4326B moved to indexed source chapter,5 API routes retargeted. Point426L/29406B/source120L/8674B now leave room for context. Native inverse6/current graph3/full retained notch1,receipts669/670,map/task-source12/book90/200/1572/2702/glossary0/retention1124 pass0.
+[Whole0511 inputs](docs/history/stitchcad-devnotes-part669.md) retains3 exact Git spans. LIVE/README unchanged,G1 6/18;next .3.3.3.2 bounded local source validation,then comparisons/context/quantities/paired acceptance. No runtime or availability change. Promotion declined:existing indexed contract recovery.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

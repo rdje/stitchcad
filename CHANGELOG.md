@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0511 — admit complete actual notch-source inputs
+## STITCHCAD-G1-0512 — recover current notch source contracts before context
 
-- Explicit input/per-query limits and borrowed original source/plan/Pieces/registry/ledger. Whole journal and complete dependency populations,including unused marks/Pieces/copies/holes/folds,admit before indexes or derived queries. Fixed original intent/owner/index/count refusals;no default or partial input view.
-- Native5/doc2/recovery4/scoped Clippy/fmt pass. Symbolic source and named/authored order remain exact. Input admission preserves damaged held data while actual graph currentness and Uniform-only quantity helpers retain their original refusals;actual context is not implied.
-- Whole0510 retained668/three exact Git spans;book89/200/1567/2689/glossary0/retention1122 pass. LIVE/README unchanged,G1 6/18. Actual bounded source validation/original-notch context .3 next;quantities/paired effects/full acceptance remain owned.
+- Curate standing source/primitive/admission status;whole old decision194L/14247B retained670 as exact encoded Git span. All answers/old headings/metadata survive;map/ceilings unchanged. Local source validation/current Piece membership remains distinct from whole Design/physical authority.
+- Move implemented input-admission section60L/4326B exactly into a bounded indexed source chapter;retarget five API routes. Explicit pending local validation/original context contracts and safe implementation children;no runtime or availability change.
+- Native inverse6/current graph3/full retained notch1/receipts669+670/task-source12/map/book90/200/1572/2702/glossary0/retention1124 pass. Whole0511 retained669;LIVE/README unchanged,G1 6/18. Bounded local source validation next;comparisons/context/quantities/paired effects/full acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

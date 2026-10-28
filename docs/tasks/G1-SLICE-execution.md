@@ -269,44 +269,64 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0510 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part668.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.2`
   Status: `done`
-  Goal:0511 borrow actual complete notch source/plan/Piece/landmark/ledger dependencies after
-  eligibility and explicit input admission,before indexes or derived resolution. Limits retain
-  explicit original-point and per-range query budgets;no default or readiness inference.
-  - [x] REPRODUCE / ISSUE: input admission must precede index/resolution construction using actual
-    original sources. rg -n 'admit_notch_context|notch_source_admission' actual ontology module and
-    sewing_contract.rs →implemented producer plus five actual-domain consumers,rc=0. Whole Piece/
-    copy/registry populations cannot be reduced to named stops without losing dependencies.
-  - [x] ROOT CAUSE: 0511 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    sewing_contract notch_source_admission →5 passed/57 filtered,rc=0. Actual base inputs require13
-    dependency items;limit12 refuses full landmark request2 after11. Unused Turn raises total14;
-    actual holes/fold/unused Piece+copy raise total19 with exact hole/fold refusal ownership/index.
-    Existing validation methods perform separate currentness work;admission must not invoke them.
-  - [x] FIX: NotchContextLimits/NotchSourceAdmission lend exact original source/plan/Pieces/registry/
-    ledger and named side/IDs. Eligibility precedes complete journal admission,then whole dependency
-    census. Charge each collection before traversal;private exhaustive views/Copy guards expose new
-    owned fields. Fixed source/cause refusal has no partial index;success borrows and counts only.
-    Symbolic formulas/profiles,authored stop order and original source intent remain unchanged.
-  - [x] ADDRESSED: 0511 cargo test -p sc-core --test sewing_contract notch_source_admission →5
-    passed,rc=0. Pointer identity confirms actual borrowed inputs. Explicit/formula/profile declarations
-    stay exact,named401/400 differs from authored400/401 without rewriting. Whole unused Notch/Turn,
-    Piece/copy,hole/fold populations and quota equality pass;Uniform/Weighted eligibility and actual
-    complete unrelated journal/nested refusals retain precedence. Deleted held source still admits
-    input populations while actual graph refuses UnresolvedRange;old Uniform-only quantity helper
-    retains actual BetweenNotches source/side/names. Ledger unchanged;no context/amount supplied.
-  - [x] NO REGRESSION: 0511 python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-core
-    --test sewing_contract -- -D warnings/fmt --all --check →pass0. cargo test -p sc-core --doc
-    NotchContextLimits/NotchSourceAdmission →1+1 compile-fail passed,rc=0;notch_context_recovery
-    →4 passed,rc=0. Book build/publication →89/200/1567/2689,rc=0;glossary →0 failures,rc=0;
-    receipt668 →3 exact Git spans,rc=0;retention →1122 logical/27 working/2401984 residentB,rc=0.
-    Full source context/paired/mutation/physical/bus verification retains .3/.acceptance/pre-push.
-  - [x] LOCKSTEP: task/next context owner/MEMORY/DEV/CHANGE/book/API routes/D301/task index align;
-    whole0510 retained668. LIVE/README reviewed unchanged,G1 6/18. Input admission does not prove
-    source ownership/currentness,original interval or quantities;actual context construction .3 next.
-    promotion: declined (implementation of already indexed actual-source dependency admission and borrowed evidence boundaries;no new policy or direction).
+  Goal:0511 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part669.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: construct borrowed actual notch context from bounded source validation and exact original
   projections;preserve real named IDs,stop order,wide/ambiguous/invalid-original interval evidence.
+  Children .1 recover/curate current source contracts before implementation;.2 bounded actual
+  source validation;.3 guarded original coordinate comparisons;.4 sealed original-notch context.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.1`
+  Status: `done`
+  Goal:0512 current source-contract recovery/containment before bounded context implementation.
+  Whole old decision194L/14247B retained670 before curation;current176L/12286B preserves every answer,
+  old heading and metadata. Exact published input section60L/4326B moved to bounded source chapter.
+  - [x] REPRODUCE / ISSUE: standing decision still said selected projection design was not an
+    implemented projection,despite later implementation sections. git show HEAD:<decision> plus
+    actual source/API recovery found that prospective/current contradiction;whole source preserved
+    before replacement. Impact:reader could misclassify implemented primitives as pending.
+  - [x] ROOT CAUSE: 0512 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    original_point_projection_contract →6 passed,rc=0. Actual design/sewing_state.rs validates every
+    landmark then actual graph/amount metadata;anchor/range.rs ownership uses surviving Piece
+    intervals. Graph validates full original source separately from child subsets. These are local/
+    global boundaries,not permission to fabricate a graph ID or strengthen whole-Piece readiness.
+  - [x] FIX: exact old whole decision strict encoded Git span670 preserves the536B answers line;
+    curate standing source/primitive/admission contracts and label local validation/original context
+    pending. All existing questions/heading anchors/metadata remain;no map row or ceiling increase.
+    Move published admission section exactly;new indexed source chapter carries actual implemented
+    API routes and explicit pending validation/context contracts. Own safe implementation children.
+  - [x] ADDRESSED: 0512 curate_notch_sources_0512.py →original194/14247 SHA
+    6e30ebec0fc54cee2993294e398d59c39eeefd92e2fcb681839b616911a9e063;current176/12286,all
+    answers/old headings/metadata preserved;60L/4326B exact book move/five routes,rc=0. Receipt670
+    →1 exact full Git span/strict base64 decode,receipt669 →3 exact Git spans,rc=0. cargo test
+    -p sc-core --test sewing_contract current_graph →3 passed,rc=0;retained_notch_source_rechecks_
+    original_full_context_even_with_child_stop_subsets →1 passed,rc=0. Copy/same-id mark/lost interior/
+    full original stops and root-only material refusals stay actual. No runtime or availability change.
+  - [x] NO REGRESSION: 0512 knowledge-map/scripts/check_knowledge_map.sh →pass,rc=0,unchanged map.
+    Book build/publication →90/200/1572/2702,rc=0;glossary →0 failures,rc=0;task_source_contract.py
+    →12 passed,rc=0;verify-retention →1124 logical/29 working/2428444 residentB,rc=0. Point chapter
+    now426L/29406B;source chapter120L/8674B. Focused checks only;broader/mutation/physical/paired
+    verification stays .6.5.3.2.acceptance/pre-push after feature completion.
+  - [x] LOCKSTEP: parent/next children/current source decision/MEMORY/DEV/CHANGE/book/task index/
+    D301 align;whole0511 retained669. LIVE/README reviewed unchanged,G1 6/18. Next .2 bounded
+    actual local source validation;original comparison/context/quantities/effects remain pending.
+    promotion: declined (curation/recovery of already indexed source/currentness/admission contracts with exact whole-source retention;no new general policy or direction).
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.2`
+  Status: `pending`
+  Goal: bounded local source ownership/currentness against complete actual inputs,all unused
+  landmarks,full source sides/stops/distribution. Preserve surviving Piece interval semantics,
+  actual missing/choice/repair/numeric causes and local-versus-whole-Design authority boundary.
+  Admit derived interval/index work from actual complete inputs and explicit per-query limits
+  before allocation;do not invoke legacy point/range choice trees or fabricate graph/source data.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.3`
+  Status: `pending`
+  Goal: guarded private exact original-coordinate/Param comparisons and interval ordering using
+  admitted widths;no bounded view narrowing,absolute direction filtering or extra public integer type.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3.4`
+  Status: `pending`
+  Goal: sealed actual original-notch context from bounded source validation plus unique projections;
+  named IDs/authored stops remain exact,original interval distinct/in-domain,all ambiguity evidence
+  retained. Symbolic amount/current Design/physical matching/quantities keep separate obligations.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.acceptance`
   Status: `pending`
   Goal: focused actual-source registry/currentness/original context integration after implementation;

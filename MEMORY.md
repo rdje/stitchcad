@@ -1,20 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.3.3 in docs/tasks/G1-SLICE-execution.md:actual bounded source
-  validation and original-notch context construction. Recover source/copy/Piece/registry ownership,
-  all unused anchors,source interval endpoints/coverage and original coordinate comparison before
-  safe implementation children. No fake providers;quantities .4/paired effects/full acceptance later.
-- Actual input admission .3.2 closes0511:NotchContextLimits explicit dependency/original-point/
-  per-range limits;NotchSourceAdmission borrows complete actual source/plan/Pieces/marks/ledger.
-  Eligibility→whole journal/nested→whole dependencies;exact refusal owner/index/counts,no partial
-  index or derived resolution. Literal/formula/profile data and named/authored order stay exact.
-  Native5/doc2/recovery4/scoped lint/fmt pass0;book89/200/1567/2689,glossary0. Whole0510 in668/3 spans.
-- Input success is not source ownership/currentness/original positions/amount availability. Actual
-  deleted source graph still refuses;old Uniform-only helper requires BetweenNotches context.
-- Bounded coverage0510 shares exact interval mapping without endpoint trees;queues+active+output
-  peak limits. Whole8-cycle2 portions needs3 slots,upper1 needs2;old endpoint256 leaves persists.
-  Draft reverse-order first-cause regression fixed by original evaluation plus iterator-only reversal.
-  Focused6+20+6/Notch4/doc1/oracle14+dual-failure pass. Actual primitive0509 proof remains667.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.3.3.2 in docs/tasks/G1-SLICE-execution.md:bounded actual local
+  source validation;then .3 guarded wide comparisons;.4 sealed original-notch context. Use complete
+  actual admitted inputs,no synthetic graph/legacy endpoint trees;admit derived work before allocation.
+- Recovery0512:current decision176L/12286B,all questions/headings/metadata retained;whole old194L/
+  14247B encoded exact Git span670. Whole0511 in669/3 spans. Exact admission section60L/4326B moved;
+  point426L/29406B,source120L/8674B. Five API routes retargeted;book90/200/1572/2702,glossary0,
+  map unchanged,task-source12/native inverse6/current3+1 pass. Context and quantities stay pending.
+- Local source contract:current plan/Piece/identity,all unused landmarks,full source coverage/
+  endpoints/ownership/self-overlap/stops/notch kinds/current distinctness. Preserve surviving Piece
+  interval semantics;no whole-Piece/global Design/other graph/formula/physical readiness claim.
+  Then require unique in-domain distinct original coordinates with actual directions/IDs/stop order.
+- Input admission0511 borrows actual source/plan/Pieces/marks/ledger with explicit complete input/
+  per-query limits;native5/doc2/recovery4 pass. Input success grants no currentness or quantity.
+- Coverage0510 shares exact mapping,first-failure order and rollback;whole8-cycle2 portions needs3
+  peak slots,upper1 needs2,old endpoint256 leaves persists. Whole proof668. Effects/acceptance later.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

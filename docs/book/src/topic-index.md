@@ -14,6 +14,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Command execution and metadata previews](spec/command-execution.md)
 - [Paired seam split source binding](spec/command-seam-splits.md)
 - [Original-frame notch context](spec/command-notch-context.md)
+- [Actual notch source context](spec/command-notch-sources.md)
 - [Builtin command workflows and native evidence](spec/command-workflows.md)
 - [Command scopes and core authorization](spec/command-scopes.md)
 - [Operation limits and progress contracts](spec/command-operation-control.md)

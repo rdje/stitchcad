@@ -11,12 +11,6 @@ is already implemented with focused checks.
 | `Param` | Bounded exact position in an edge's own original frame |
 | `Rational` | Signed64-bit reference fraction,distinct from a private wide numeric workspace |
 | `IdentityLedger` | Actual typed topology journal and reference resolver |
-| `NotchContextLimits` | Explicit complete dependency and later per-query point/range limits |
-| `NotchSourceAdmission` | Borrowed actual source/plan/Pieces/registry/ledger after input admission |
-| `NotchSourceAdmissionError` | Fixed original source identity and actual admission refusal |
-| `NotchSourceAdmissionIssue` | Original intent or complete journal/dependency population refusal |
-| `NotchSourceCollection` | Actual source,copy,Piece edge/hole/fold or landmark collection |
-| `admit_notch_context` | Admit complete actual source dependencies before indexes or derived work |
 | `RangeCoverageLimits` | Explicit journal/nested input and peak interval-portion budgets |
 | `RangeCoverage` | Complete ordered positive-interval evidence,without endpoint choice trees |
 | `RangeCoverageError` | Original held range and input/derived collection admission refusal |
@@ -113,65 +107,11 @@ exact arithmetic,relative direction,split branches and concrete repair causes. T
 resolver consumes this step and still follows both branches into its public choice tree. This
 shared step supplies both consumers;it does not bound the full resolver.
 
-## Admit complete actual source dependencies
+## Actual semantic source dependencies
 
-Original-notch context input admission is implemented. Supply the actual retained original source,
-complete physical-copy plan,Piece registry,semantic Notch/Turn registry and topology ledger. The
-returned token borrows those exact objects,without a copied declaration,synthetic graph or supplied
-notch coordinates. It retains the declaration's actual side and named start/end IDs in named order;
-input admission does not reorder them by coordinate or alter the original authored stop list.
-
-Choose positive dependency-item,original-point and range-portion limits explicitly. The point
-limits include complete journal/nested input and per-point candidate/integer budgets. The range
-limit is the peak portion budget per later coverage query. These respective query limits are
-retained for context construction;this input-only operation performs no projection or range query,
-reserves no derived numeric result and does not certify an aggregate allocator or CPU-time bound.
-
-Eligibility comes first. Uniform intent returns its actual source identity;weighted intent also
-retains its actual density side and complete region count,without cloning the density. For an
-actual BetweenNotches source,complete journal/nested admission precedes the dependency census.
-Then charge every original source stop,every plan copy and every supplied Piece. For each Piece,
-charge its whole boundary,hole-loop collection,each hole's whole edge list,construction lines and
-fold declarations in schema order. Finally charge the complete supplied semantic registry,
-including unused Notch and Turn entries. Filtering down to the two named notches would omit actual
-source dependencies. Each collection is admitted before traversal;quota equality is accepted.
-
-A refusal retains the original source span,actual collection and source/Piece owner,authored Piece
-or hole index,prior consumed count,whole next request and selected limit. Journal refusals retain
-the original operation and nested collection. There is no partial index or truncated registry.
-Private exhaustive source/plan/Piece/mark views and Copy guards expose future owned-field changes.
-Piece label and Material reason text stays borrowed without scanning or cloning;its bytes are not
-part of this dependency-item census. No formula is evaluated and no physical profile value is
-supplied. Explicit,formula and profile amounts all preserve their actual source declarations.
-
-```rust
-use core::num::NonZeroUsize;
-use sc_core::ontology::{CutPlan, IdentityLedger, NotchContextLimits, NotchSourceAdmission,
-    NotchSourceAdmissionError, OriginalPointLimits, Piece, SeamEaseSource, SewingLandmark};
-fn borrow_actual<'a>(source: &'a SeamEaseSource, plan: &'a CutPlan, pieces: &'a [Piece],
-    marks: &'a [SewingLandmark], ledger: &'a IdentityLedger,
-    dependency_items: NonZeroUsize, point_limits: OriginalPointLimits,
-    range_portions: NonZeroUsize)
-    -> Result<NotchSourceAdmission<'a>, NotchSourceAdmissionError>
-{
-    let limits = NotchContextLimits::new(dependency_items, point_limits, range_portions);
-    source.admit_notch_context(plan, pieces, marks, ledger, limits)
-}
-```
-
-Admission success proves complete input populations,not ownership,currentness,unique original notch
-positions or quantity availability. The immutable borrows prevent changing the supplied sources
-while the token remains in use. Bounded Debug reports fixed identities,limits and population counts
-without traversing label text,Notch definitions or the journal body. Current graph validation can
-still refuse a deleted source edge while this input token preserves the actual held source;the
-Uniform-only amount helper still reports its original BetweenNotches context requirement.
-
-Focused native checks use actual validated graphs,original sources,Pieces,CutPlans,Notch/Turn
-objects and ledgers. They cover symbolic declarations,named versus authored stop order,complete
-unused registry/Piece/copy dependencies,hole/fold boundaries,journal refusal precedence and damaged
-held-source preservation. No-default and immutable-borrow compile-fail checks cover the public
-boundary. Actual source validation and original-coordinate context construction remain the next
-owned step;their success and notch quantity availability are not implied by this input token.
+[Actual notch source context](command-notch-sources.md) documents the implemented complete borrowed
+input admission and the next bounded ownership/currentness/original-context contract. Point and
+coverage primitives below do not replace those source checks or supply physical correspondence.
 
 ## Query bounded whole-interval coverage
 
