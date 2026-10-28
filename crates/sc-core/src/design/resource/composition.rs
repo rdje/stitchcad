@@ -7,6 +7,7 @@ use super::{
     charge_recipe_document_resources, charge_sewing_graph_resources,
     charge_sewing_landmark_resources, fixed_slice, fixed_value, DesignResourceLimitError,
     DesignResourceLocation, DesignResourceScope, DesignResourceSink, DesignResourceSource,
+    ResourceProjection,
 };
 use crate::design::{
     DesignGarment, DesignGarmentDefinition, DesignInputs, DesignInputsDefinition, DesignSewing,
@@ -24,11 +25,11 @@ pub fn charge_design_input_resources<H: DesignResourceSource>(
     inputs: &DesignInputs<H>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    charge_inputs_with_length(inputs, None, sink)
+    charge_inputs_projected(inputs, ResourceProjection::Current, sink)
 }
-fn charge_inputs_with_length<H: DesignResourceSource>(
+fn charge_inputs_projected<H: DesignResourceSource>(
     inputs: &DesignInputs<H>,
-    replacement: Option<&LengthDeclaration>,
+    projection: ResourceProjection<'_>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
     let DesignInputsDefinition {
@@ -39,7 +40,7 @@ fn charge_inputs_with_length<H: DesignResourceSource>(
         sources,
         references,
     } = inputs.resource_definition();
-    super::structure::charge_structure_with_length(structure, replacement, sink)?;
+    super::structure::charge_structure_projected(structure, projection, sink)?;
     charge_parameter_resources(parameters, sink)?;
     charge_recipe_document_resources(recipe, sink)?;
     charge_material_inventory_resources(materials, sink)?;
@@ -66,11 +67,11 @@ pub fn charge_design_sewing_resources<H: DesignResourceSource>(
     sewing: &DesignSewing<H>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    charge_sewing_with_length(sewing, None, sink)
+    charge_sewing_projected(sewing, ResourceProjection::Current, sink)
 }
-fn charge_sewing_with_length<H: DesignResourceSource>(
+fn charge_sewing_projected<H: DesignResourceSource>(
     sewing: &DesignSewing<H>,
-    replacement: Option<&LengthDeclaration>,
+    projection: ResourceProjection<'_>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
     let DesignSewingDefinition {
@@ -78,7 +79,7 @@ fn charge_sewing_with_length<H: DesignResourceSource>(
         graph,
         landmarks,
     } = sewing.resource_definition();
-    charge_inputs_with_length(inputs, replacement, sink)?;
+    charge_inputs_projected(inputs, projection, sink)?;
     charge_sewing_graph_resources(graph, sink)?;
     charge_sewing_landmark_resources(landmarks, sink)
 }
@@ -92,11 +93,11 @@ pub fn charge_design_garment_resources<H: DesignResourceSource>(
     garment: &DesignGarment<H>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    charge_garment_with_length(garment, None, sink)
+    charge_garment_projected(garment, ResourceProjection::Current, sink)
 }
-fn charge_garment_with_length<H: DesignResourceSource>(
+fn charge_garment_projected<H: DesignResourceSource>(
     garment: &DesignGarment<H>,
-    replacement: Option<&LengthDeclaration>,
+    projection: ResourceProjection<'_>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
     let DesignGarmentDefinition {
@@ -108,7 +109,7 @@ fn charge_garment_with_length<H: DesignResourceSource>(
         hems,
         constructions,
     } = garment.resource_definition();
-    charge_sewing_with_length(sewing, replacement, sink)?;
+    charge_sewing_projected(sewing, projection, sink)?;
     charge_pocket_inventory_resources(pockets, sink)?;
     charge_notion_placement_inventory_resources(notions, sink)?;
     charge_closure_inventory_resources(closures, sink)?;
@@ -124,5 +125,19 @@ pub(crate) fn charge_garment_length_replacement<H: DesignResourceSource>(
     replacement: &LengthDeclaration,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    charge_garment_with_length(garment, Some(replacement), sink)
+    charge_garment_projected(garment, ResourceProjection::Length(replacement), sink)
+}
+
+// The command has checked every selected actual Piece before entering this borrowed projection.
+pub(crate) fn charge_garment_material_assignment<H: DesignResourceSource>(
+    garment: &DesignGarment<H>,
+    pieces: &[crate::ontology::EntityId],
+    assignment: &crate::ontology::MaterialAssignment,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    charge_garment_projected(
+        garment,
+        ResourceProjection::Material { pieces, assignment },
+        sink,
+    )
 }

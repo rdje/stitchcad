@@ -2,7 +2,7 @@
 use super::{CommandPreview, CommandPreviewError, PreparationBase, PreparedCommand};
 use crate::{
     command::{AssignMaterial, DesignRevision},
-    design::{DesignGarment, DesignInputs, DesignReferenceHost, DesignSewing, DesignStructure},
+    design::{DesignGarment, DesignInputs, DesignResourceSource, DesignSewing, DesignStructure},
     ontology::{EntityId, MaterialAssignment, PieceInventory},
 };
 
@@ -57,7 +57,7 @@ impl CommandMaterialPreview {
     }
 }
 
-impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
+impl<H: DesignResourceSource + Clone + PartialEq> PreparationBase<'_, H> {
     pub(super) fn prepare_material(
         &self,
         assignment: &AssignMaterial,
@@ -72,6 +72,12 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
                     index,
                 })?;
         }
+        super::operation::admit_material_assignment(
+            self.state,
+            self.limits,
+            assignment.pieces().pieces(),
+            assignment.material(),
+        )?;
         let pieces = originals
             .iter()
             .map(|original| {

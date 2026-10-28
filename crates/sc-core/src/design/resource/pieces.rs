@@ -31,6 +31,13 @@ pub fn charge_piece_inventory_resources(
     inventory: &PieceInventory,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
+    charge_pieces_projected(inventory, None, sink)
+}
+pub(super) fn charge_pieces_projected(
+    inventory: &PieceInventory,
+    replacement: Option<(&[EntityId], &MaterialAssignment)>,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
     let pieces = inventory.resource_pieces();
     sink.charge_entries(pieces.len(), location("pieces", None, None))?;
     for (index, piece) in pieces.iter().enumerate() {
@@ -74,6 +81,9 @@ pub fn charge_piece_inventory_resources(
             fold_edges.len(),
             location("pieces.fold_edges", owner, Some(index)),
         )?;
+        let material = replacement
+            .filter(|(selected, _)| selected.contains(id))
+            .map_or(material, |(_, assignment)| assignment);
         match material {
             MaterialAssignment::Assigned(identity) => fixed_value(identity),
             MaterialAssignment::Unresolved(reason) => sink.charge_text(

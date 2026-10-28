@@ -16,9 +16,11 @@ mod sewing;
 mod structure;
 mod topology;
 pub use canonical::charge_canonical_input_resources;
-pub(crate) use composition::charge_garment_length_replacement;
 pub use composition::{
     charge_design_garment_resources, charge_design_input_resources, charge_design_sewing_resources,
+};
+pub(crate) use composition::{
+    charge_garment_length_replacement, charge_garment_material_assignment,
 };
 pub use constructions::charge_construction_inventory_resources;
 pub use garment::{
@@ -34,6 +36,18 @@ pub use pieces::{charge_cut_plan_resources, charge_piece_inventory_resources};
 pub use sewing::{charge_sewing_graph_resources, charge_sewing_landmark_resources};
 pub use structure::charge_design_structure_resources;
 pub use topology::charge_topology_resources;
+
+// Only core constructs borrowed prospective views after actual target binding. No supplied totals,
+// public model replacement capability, callbacks or owned candidate data are carried here.
+#[derive(Clone, Copy)]
+pub(super) enum ResourceProjection<'a> {
+    Current,
+    Length(&'a crate::value::LengthDeclaration),
+    Material {
+        pieces: &'a [EntityId],
+        assignment: &'a crate::ontology::MaterialAssignment,
+    },
+}
 
 // Fixed value/reference payloads own no dynamic content. Removing Copy requires new accounting.
 fn fixed_value<T: Copy>(_: &T) {}

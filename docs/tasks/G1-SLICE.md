@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0461
+## Current leaf acceptance —0462
 
-- [x] ROOT CAUSE: python3 -I -B native Measurement projection:exact identity guard < borrowed
-  admission < first clone < constructors; current None/no semantic callbacks; authority/effects byte-exact rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_measurement:::
-  3 passed rc=0; actual rebuilt-model oracle, growth/no copy, same-size/no-op/Unknown/staged aliases.
-- [x] NO REGRESSION: old Measurement4/source resource33/core canonical-filter6 plus strict core-lib/
-  affected-test Clippy/both package fmt pass rc=0. No broader bus/full verification claim.
+- [x] ROOT CAUSE: python3 -I -B native Material projection:all targets < borrowed admission < first
+  Piece/reason/model clone; no semantic callbacks; authority/Measurement/group/effects byte-exact rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_material:::
+  4 passed rc=0; actual rebuilt-model oracle, UTF-8 growth/no copy, exact selected/shrink/Assigned/aliases.
+- [x] NO REGRESSION: old Material5/Measurement projection3/source resource33/core Piece5 plus strict
+  core-lib/affected-test Clippy and both package fmt pass rc=0. Broader bus/full proof remains deferred.
 
 ## Goal
 
@@ -910,40 +910,41 @@ All98 completed ids/statuses and original proof pointers remain live there.
   constructors, with exact represented demand and first locations; no conservative double counting.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.1`
   Status: `done`
-  Goal:0461 exact prospective Measurement evidence admission before candidate clone/constructors;
-  borrow replacement in actual canonical slot, retain schema order/original witnesses and resulting data.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native Measurement projection:exact identity guard <
-    borrowed admission < first clone < candidate constructors rc=0. Current demand alone does not
-    account for replaced evidence. Only the new vector counts; current wrappers retain None route.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part613.md:
-    3 exact Git spans rc=0; whole0460 current-admission scope/lesson/ledger retained before containment.
-    Native projection source has no clone/current/census/context callbacks; authority/group/effect/
-    history implementations remain byte-exact rc=0. No supplied totals/public projection capability.
+  Goal:0461 exact prospective Measurement resources; [whole scope/proofs](../history/stitchcad-devnotes-part614.md).
+- ID: `G1-SLICE.6.8.2.2.2.2.4.2.2`
+  Status: `done`
+  Goal:0462 exact prospective selected Material resources before first Piece/reason/model copy;
+  retain unselected original fields, fixed Assigned refs and actual resulting text in schema order.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native Material projection:every original selected target
+    check < borrowed admission < first Piece/reason/model clone rc=0. Current demand cannot charge
+    new reasons, and old+new counting falsely rejects exact same-size replacements/no-ops.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part614.md:
+    4 exact Git spans rc=0; whole0461 scope/lesson/ledger and whole0456–0460 journals retained before
+    live proof/decision containment. Native authority/Measurement/group/effects/history/canonical
+    implementations byte-exact, no projection clone/collect/current/census/context callbacks rc=0.
   - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and cargo clippy -p sc-measure --test
-    design_inputs_contract -- -D warnings:both rc=0. Original current/binding/identity causes precede
-    exact whole projected resource check; semantic candidate validation still follows successful admission.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_measurement:::
-    3 passed rc=0; actual rebuilt/validated garment is independent oracle. Known2→3 adds1 and all
-    single/group/commit paths retain exact actual-model refusal before host copy; original Piece
-    address/revision and failed key/group/capacity preserved, then valid same-size commit succeeds.
-    No-op/same-size fits exact N, Unknown projects N-2, text/counter units unchanged. Actual staged
-    shrink/restore has no net difference; alias reuses prior report without clone/resource walk.
-    First E0599 uses actual difference getters. Three fixture failures exposed zero width shared by
-    Measurement/Material; use explicit positive1000um so original Material validator remains active.
-  - [x] NO REGRESSION: old Measurement command subset4/source resource33/core canonical filter6
-    pass rc=0; strict affected lint/both package fmt rc=0. Public current accounting, semantic errors,
-    original source/current validation and original effect/history paths stay intact. Broader checks deferred.
-  - [x] LOCKSTEP: book build/native publication83 chapters/159 scoped API rows/1504 source links/
-    2529 rendered links rc=0; exact replacement examples/actual oracle correction and scope documented.
-    Current .4.2.1 done; Material .4.2.2/Notch .2.3/revision .2.4/retained/deeper/full work owned.
-  Retention1067 logical/34 working Markdown/59536 decoded lines/4497233 decoded bytes/2328045
-  resident bytes rc=0; maintained-reference84 files/18961 lines/1324537 bytes rc=0; map/diff rc=0.
+    design_inputs_contract -- -D warnings:both rc=0. Private exhaustive projection enum carries only
+    borrowed actual replacement data; original schema/owner/index and current public paths persist.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_material:::
+    4 passed rc=0; actual rebuilt/validated garment oracle verifies old4+3→new6+6 adds5 bytes,
+    same exact refusal across single/group/commit before host copy. Original Piece contents/address/
+    revision and failed group/key/capacity preserved, later valid commit accepted. Python/OS wc
+    independently confirms4/3/6 exact UTF-8 bytes. No-op/same4/shrink1/Assigned removes7 preserve other
+    units; reversed selection/report order, missing target index1 before prospective walk/copy,
+    sequential shorter/restored reason and alias/no net difference pass. Admitted preview1 host copy/
+    2 source resource walks, two distinct staged members2/4; exact alias repeats neither.
+  - [x] NO REGRESSION: old Material subset5/Measurement projection3/source resource33/core Piece5
+    pass rc=0; strict affected lint/both package fmt rc=0. Original current/source/target/semantic,
+    history/effect/replay and public current accounting remain intact. Broader checks stay deferred.
+  - [x] LOCKSTEP: book build/native publication83 chapters/159 scoped API rows/1506 source links/
+    2532 rendered links rc=0; exact selected Unicode/Assigned/alias examples and remaining scope align.
+    Owned doc issue: execution guide's old semantic-only preview bound would omit required resource
+    port; rg found original DesignReferenceHost clause, corrected to DesignResourceSource as actual code.
+    Notch .4.2.3/revision .2.4/retained .4.3/feature/deeper/full verification remain owned.
+  Retention1068 logical/35 working Markdown/59671 decoded lines/4508681 decoded bytes/2339493
+  resident bytes rc=0; maintained-reference84 files/19001 lines/1327980 bytes rc=0; map/diff rc=0.
   Cargo uses scripts/local_environment.py; promotion:indexed command-layer decision.
   No complete prospective/retained-state, ingress, allocator memory/time, physical or release certificate.
-- ID: `G1-SLICE.6.8.2.2.2.2.4.2.2`
-  Status: `pending`
-  Goal: exact selected Piece assignment projection before reason/metadata copies, preserving ownership,
-  actual replaced reasons and original missing-target causes; no conservative double counting.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.3`
   Status: `pending`
   Goal: exact prospective appended semantic Notch resources before registry allocation/identity staging;

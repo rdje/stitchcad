@@ -3,14 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact prospective Measurement evidence resources
+## _(2026-10-28 UTC)_ — exact prospective selected Material resources
 
-0461 .6.8.2.2.2.2.4.2.1 borrows a replacement at its actual canonical slot after current validation/binding, before candidate clone/constructors. Whole projected root charges new evidence only;
-public current accounting follows unchanged None route. Native projection3/old Measurement4/source33/
-core canonical-selection6/strict lint/fmt pass. Actual rebuilt-model oracle verifies +1 refusal with0
-host copies, same-size/no-op/shrink-2, sequential shrink/restore/alias, unchanged revision/keys/capacity.
-E0599 uses actual difference accessors; zero-width oracle fixture corrected to explicit positive1000um
-because the real Measurement also supplies Material width. Promotion:indexed command-layer decision. Whole0460 retained613; selected Material/Notch/revision .4.2.2–.4.2.4, retained state/full proof pending.
+0462 .6.8.2.2.2.2.4.2.2 borrows selected Piece IDs/proposed assignment after every target exists, before first Piece/reason/model copy. Private exhaustive projection enum shares original schema walk;
+selected resulting reasons replace old fields, unselected fields persist, assigned refs own no text.
+Native Material projection4/old Material5/Measurement projection3/source33/core Piece5/strict lint/fmt pass against actual rebuilt-model oracle: old4+3→new6+6 adds5 bytes/refuses with0 host copies; same4,
+no-op/shrink/assigned removes7, missing index1 before projection, staged restore/alias, keys/capacity.
+Promotion:indexed command-layer decision. Whole0461/0456–0460 journals614 retain4 exact Git spans. Notch/revision .4.2.3/.2.4 and retained/full proof pending; no complete resource/physical certificate.
+[Whole0461 Measurement lesson](docs/history/stitchcad-devnotes-part614.md) retains exact evidence/oracle/fixture correction proof.
 [Whole0460 current-admission lesson](docs/history/stitchcad-devnotes-part613.md) retains original authority/telemetry/privacy proof.
 [Whole0459 root-composition lesson](docs/history/stitchcad-devnotes-part612.md) retains exact cache/held/empty proof.
 [Whole0458 source-port lesson](docs/history/stitchcad-devnotes-part611.md) retains original trust/census and independent byte-correction proof.

@@ -75,7 +75,7 @@ impl<H, A> CommandBus<H, A> {
     /// Costly metadata paths require both operation and model policies. Piece inspection requires
     /// neither. This setter grants no authority and performs no validation, clone or host callback.
     /// Current and history-alternative roots are admitted after exact authority/snapshot binding.
-    /// Prospective replacement and retained command-state admission remain separate work.
+    /// Prospective Notch/revision and retained command-state admission remain separate work.
     /// # Errors
     /// Returns ModelLimitsAlreadyInstalled, preserving the original policy unchanged.
     pub fn install_model_limits(
@@ -137,6 +137,19 @@ pub(super) fn admit_length_replacement<H: DesignResourceSource>(
 ) -> Result<(), CommandControlError> {
     let mut meter = DesignResourceMeter::new(limits);
     crate::design::charge_garment_length_replacement(state, replacement, &mut meter)
+        .map_err(CommandControlError::Model)?;
+    meter.finish().map_err(CommandControlError::Model)?;
+    Ok(())
+}
+
+pub(super) fn admit_material_assignment<H: DesignResourceSource>(
+    state: &DesignGarment<H>,
+    limits: DesignResourceLimits,
+    pieces: &[crate::ontology::EntityId],
+    assignment: &crate::ontology::MaterialAssignment,
+) -> Result<(), CommandControlError> {
+    let mut meter = DesignResourceMeter::new(limits);
+    crate::design::charge_garment_material_assignment(state, pieces, assignment, &mut meter)
         .map_err(CommandControlError::Model)?;
     meter.finish().map_err(CommandControlError::Model)?;
     Ok(())

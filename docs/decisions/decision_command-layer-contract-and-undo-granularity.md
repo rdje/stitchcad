@@ -92,7 +92,8 @@ G1-SLICE.6.8.2.2.2.2.1 defines positive collection-entry/UTF-8-text/unbounded-co
 constant-state first-refusal meter in the Design domain. Precheck remaining room before arithmetic;
 retain exact first counts/location across ignored/later/zero charges and finish. Give producers only a
 sealed charging trait object, with no concrete-policy setter/reset/finish/model operation. Contract6/
-privacy4/lint/fmt pass. Actual exhaustive core/source producers and runtime model admission remain .2/.3/.4;
+privacy4/lint/fmt pass. Actual core/source producers are implemented; current and partial prospective runtime admission
+are implemented under .4, with remaining prospective/retained work owned;
 this contract proves no model traversal, allocator RSS/time or dishonest-host security boundary.
 
 Whole0444–0449 component implementation journals retain exact source intervals in
@@ -101,80 +102,8 @@ Whole0444–0449 component implementation journals retain exact source intervals
 Whole0451–0455 implementation journals retain exact source intervals in
 [part610](../history/stitchcad-devnotes-part610.md); current component contracts/examples remain in the book.
 
-## Retained charts and standalone profile input0456
-
-answers: "are profile resolution intents owned by the current source host?"
-
-Native source-owner definitions retain exactly measurements/sets, metadata/observations/chart and
-metadata/chart. Separate SizeSetResolutionIntent owns transformation declarations, Known evidence
-and LabelMapping vectors; G4-PROFILES.1.resource-admission is a P1 prerequisite before schema/editor/
-transform input exposure, complementing G1.9 raw transport bounds. No G4 implementation is implied.
-.6.8.2.2.2.2.3.2.2.1 charges actual garment registry/chart fields and MTM's owned Ease snapshot tokens,
-common metadata separately. Source resource19/strict lint/fmt pass:4/14,2/66,partial1/33,combined6/80,
-exact original owner/index and held missing-context state. Actual token spellings plus independent
-Python/OS oracles corrected the initial64-byte fixture expectation to66. Source examples moved into
-a bounded chapter; original whole bytes retained608. Family/host/higher-root/runtime/deeper/full
-proof remains; component demand grants no currentness, physical or allocator memory/time certificate.
-
-## Complete external set-family resources0457
-
-answers: "how does source accounting preserve actual family origin and authored refusal order?"
-
-.6.8.2.2.2.2.3.2.3 precharges the actual set vector and matches each explicit Garment/Mtm variant,
-composing complete common/chart fields in order. Exhaustive private inventory/family views and enum
-matching expose stored-field/variant changes without allocating a census, querying contexts or reading
-values. Source resource24/strict lint/fmt pass:20/239/0, prefix22/241, exact original nested refusals,
-reversed order/same totals/different first chart owner, singleton garment origin, empty/prior errors
-and held missing-context state. One shared test-fixture module fixes first duplicate-loading lint.
-External .3.2 implementation has focused acceptance; full host .3.3/higher root .2.5.2/runtime/deeper/
-full work remains owned. Logical content grants no currentness, physical or allocator memory/time proof.
-
-## Required actual source-resource port0458
-
-answers: "how does core account for an actual immutable higher source host without supplied totals?"
-
-DesignResourceSource extends DesignReferenceHost with required readonly charge_resources and only a
-sealed sink. No default implementation, policy setter/reset/finish or publication/authority method is
-provided; exhaustive honest foreign-host implementation is a trusted integration obligation. Actual
-DesignSources matches private owner/two-root definition and visits MeasurementInputs then SizeSets,
-without clone/current/census/context callbacks; existing meter code is unchanged. Source resource28/
-strict core-lib/source lint/fmt pass:39/628/0,prefix41/630/1, exact first witnesses, held missing-context
-and empty/prior failures. Python/OS field census389+239 corrects stale626 test expectation before
-acceptance. Higher-root cached entity census/refs .2.5.2 and runtime .4/deeper/full proof remain owned;
-source demand is no semantic/currentness, dishonest-host security, whole-model or allocator memory/time proof.
-
-## Complete actual root-resource composition0459
-
-answers: "does source accounting include the core owner's separately retained metadata census?"
-
-The complete private Inputs/Sewing/Garment producers exhaustively borrow each wrapper/definition,
-charge every actual component once in schema order and retain the caller's one sink. DesignMetadata
-owns both H and a captured identity vector: charge actual H first, then the stored vector, without
-regenerating the semantic census. Copy guards cover captured records and fixed provided refs.
-Actual source resource33/strict core-lib/source-test lint/fmt pass:80/650/129, prefix82/652/136;
-cache52+26, landmark78+1, notion79+1 and original source/revision refusals preserve unchanged data.
-Real deletion refuses current validation but held accounting stays80/650/129; empty full draft0/8/0
-retains canonical recipe. Incorrect expected static token-field spelling corrected against producer.
-Whole0458 scope/lesson/ledger retained611. Runtime .4 must install explicit policy, bind initial
-exact authority/snapshot before private walks and admit prospective shapes before costly preparation.
-Deeper/full proof remains owned; model demand grants no authority/currentness, dishonest-host security,
-allocator memory/time, retained-journal, physical or release certificate.
-
-## Authorized current-model admission0460
-
-answers: "when may runtime model accounting inspect a private garment and expose a quota witness?"
-
-Costly metadata paths require H: DesignResourceSource and separately installed immutable input/model
-policies. The model setter performs no traversal/callback and no default or observer/request override
-exists. Initial exact authority/Design/revision binding precedes every private current/staged resource
-walk; accounting precedes envelope/current validation and clone. Actual history also charges the stored
-alternative before its current validation. Exact accepted replays skip model walks and retain authority.
-Bus50/privacy-capability10/strict affected lint/fmt pass: unauthorized/stale0 clones/0 walks/0 semantic
-callbacks; quota0/1/0; history0 copies/2 walks; replay0/0/0. E0106 test lifetime/unused import corrected;
-prior privacy example bounds refreshed to preserve intended private-method refusal. Read execute tail
-is byte-exact. Whole0459 retained612. Prospective growth .4.2, retained state .4.3 and deeper/full proof
-remain owned; current admission alone does not guarantee every published model fits policy or certify
-allocator memory/time, dishonest-host security, numeric/physical/release readiness.
+Whole0456–0460 source/root/runtime implementation journals retain exact source intervals in
+[part614](../history/stitchcad-devnotes-part614.md); current contracts/examples remain in the book.
 
 ## Exact prospective Measurement resources0461
 
@@ -189,3 +118,17 @@ validated-model oracle: +1 refusal/no host copy, no-op/same-size at N, Unknown N
 restore/alias, unchanged original address/revision and refused group/key/capacity reused. E0599 uses
 actual difference getters; zero shared Material-width fixture corrected to explicit positive1000um.
 Whole0460 retained613. Material/Notch/revision .4.2.2–.4.2.4, retained state/deeper/full proof remain owned.
+
+## Exact selected Material resources0462
+
+answers: "does a proposed Material reason count in addition to the old reason or before Piece copies?"
+
+Check every actual selected Piece first, preserving authored missing-target index; then borrow the
+selection/assignment in a private exhaustive projection enum. At each original Piece slot charge its
+resulting reason only when selected; retain unselected fields, owned labels/collections and fixed
+Assigned refs. The full original schema walk precedes any Piece/reason/model clone, with no supplied
+totals or mutable/public projection capability. Actual rebuilt-model oracle plus Material projection4/
+old Material5/Measurement projection3/source33/Piece5/strict lint/fmt pass:4+3→6+6 adds5 bytes and
+refuses before host copy; no-op/same-size/shrink/assigned removes7, missing index1, sequential restore/
+alias and failed group/key/capacity preservation. Python/OS confirms exact UTF-8 lengths4/3/6.
+Whole0461/0456–0460 journals614 retain4 Git spans. Notch/revision/retained/deeper/full work remains owned.

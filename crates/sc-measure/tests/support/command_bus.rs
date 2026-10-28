@@ -72,6 +72,8 @@ mod notch_preview;
 mod resource_admission;
 #[path = "command_bus/resource_copies.rs"]
 mod resource_copies;
+#[path = "command_bus/resource_material.rs"]
+mod resource_material;
 #[path = "command_bus/resource_measurement.rs"]
 mod resource_measurement;
 impl CommandAuthoritySource for Host {

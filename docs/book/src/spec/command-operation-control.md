@@ -199,7 +199,7 @@ DesignResourceLimits and DesignResourceMeter live in the Design domain, independ
 authority. They provide a data-only accounting contract with implemented component producers below.
 Complete actual model roots compose their source content and retained census under one sink.
 Current/preparation and history-alternative admission now uses the required readonly source port;
-prospective replacement and retained command-state admission remain pending. The meter alone is not a runtime model-admission gate.
+exact Measurement/Material projections are implemented; Notch/revision and retained command-state admission remain pending. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -317,7 +317,8 @@ examples also pass. The new test's missing explicit borrowed-error lifetime and 
 were corrected before acceptance. No semantic validation callback is replaced by accounting.
 
 This implements current/preparation-root and stored history-alternative admission. Exact prospective
-Measurement evidence admission is implemented below; reason/Notch/revision growth remains .4.2.2–.4.2.4; retained
+Measurement evidence and selected Material reason admission are implemented below; Notch/revision
+growth remains .4.2.3/.4.2.4; retained
 command audit/replay/history content and maximum-issued/audit counters remain .4.3. This partial
 runtime stage does not certify every newly published model or total retained state fits the policy.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
@@ -357,7 +358,44 @@ Material validation refused it. An explicit positive1000 micrometre length makes
 evidence accounting while preserving that production validator. An assumed test convenience accessor
 was replaced with the actual difference getters. The new3 and original4 Measurement cases,33 source
 resource cases and6 cases selected by the canonical filter pass, with strict affected lint/formatting.
-Authorization/group/effect/history implementations are byte-exact in this slice. Material reasons,
-Notch appends, publication revision growth and retained command content remain separate owned work;
+Authorization/group/effect/history implementations are byte-exact in this slice. Selected Material
+projection follows below; Notch appends, publication revision growth and retained content remain owned;
 this feature stage supplies no complete new-model/retained-state, raw ingress, allocator memory/time,
 physical or release certificate. Deeper/full verification remains deferred until feature completion.
+
+## Exact prospective selected Material resources
+
+AssignMaterial retains current-model admission and original envelope/current validation. It checks
+every actual selected Piece in the authored selection order; a missing later target keeps the same
+MissingPiece identity/index before any prospective walk. It then borrows the selection and proposed
+MaterialAssignment and charges the complete prospective garment before the first Piece/reason/model
+copy. The private exhaustive projection enum carries borrowed data, without supplied totals or a
+request-controlled callback, meter or public model replacement capability.
+
+At each original Piece slot, the projection retains its labels, topology collections and original
+owner/index. Selected Pieces contribute only their resulting unresolved reason text; unselected
+Pieces retain their original assignment and exact text. Assigned references add no owned reason or
+new Material object. Repeated proposed spelling counts per selected Piece; it is not deduplicated.
+The full actual source host, captured metadata census and every other model field still count in
+schema order. Subsequent actual Piece/candidate constructors and current validation remain required.
+
+For example, two selected Pieces retain reasons ` é ` and `猫`:4+3 UTF-8 bytes. Replacing both with
+`猫猫` gives6+6 bytes, so the prospective model has5 more bytes. A model text maximum equal to the
+current demand refuses with the same first error as an independently rebuilt actual model, before
+any candidate host copy. Replacing the first reason with `éé` preserves its4-byte demand; replacing
+it with `猫` removes1 byte. Assigning both to an actual registry Material removes7 reason bytes.
+An exact no-op fits its original limit. Unselected labels/reasons and other model units are unchanged.
+
+Four new native cases compare with rebuilt, validated actual models. They cover growth refusal on
+single/group preview and commit, unchanged original Piece address/revision/content and later reuse
+of the refused group/key/capacity by a valid commit. They also cover no-op/same-byte/shrink/Assigned,
+reversed selection/report order, missing target index1 before projection, and a staged shorter reason
+followed by restoration and an alias. The alias repeats neither candidate copy nor resource walk;
+restoration has no net metadata difference. Admitted previews retain one host copy and two source
+resource walks. Python and OS byte counts independently confirm the exact4/3/6-byte strings.
+
+The new4, original5 Material and3 Measurement-projection cases,33 source resource cases and5 Piece
+cases pass, with strict affected lint/formatting. The execution guide's earlier semantic-only preview
+host bound is corrected to the required DesignResourceSource contract. Notch appends, publication
+revision growth, retained command state and deeper/full verification remain owned. These projections
+supply no complete retained-state, raw ingress, allocator memory/time, physical or release certificate.

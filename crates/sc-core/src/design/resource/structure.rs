@@ -1,10 +1,9 @@
 //! Actual structural root composition, without higher metadata or whole-garment admission.
 use super::{
-    charge_cut_plan_resources, charge_piece_inventory_resources, charge_topology_resources,
-    DesignResourceLimitError, DesignResourceLocation, DesignResourceScope, DesignResourceSink,
+    charge_cut_plan_resources, charge_topology_resources, DesignResourceLimitError,
+    DesignResourceLocation, DesignResourceScope, DesignResourceSink, ResourceProjection,
 };
 use crate::design::{DesignStructure, DesignStructureDefinition};
-use crate::value::LengthDeclaration;
 /// Charge the actual structural root under the caller's cumulative meter, in schema order.
 /// Exact revision magnitude bits precede canonical inputs, Pieces, copies and topology. Zero has zero
 /// magnitude bits. No formatting, counter advance, model copy, current validation or value lookup occurs.
@@ -17,11 +16,11 @@ pub fn charge_design_structure_resources(
     structure: &DesignStructure,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    charge_structure_with_length(structure, None, sink)
+    charge_structure_projected(structure, ResourceProjection::Current, sink)
 }
-pub(super) fn charge_structure_with_length(
+pub(super) fn charge_structure_projected(
     structure: &DesignStructure,
-    replacement: Option<&LengthDeclaration>,
+    projection: ResourceProjection<'_>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
     let DesignStructureDefinition {
@@ -41,8 +40,13 @@ pub(super) fn charge_structure_with_length(
             index: None,
         },
     )?;
-    super::canonical::charge_canonical_with_length(inputs, replacement, sink)?;
-    charge_piece_inventory_resources(pieces, sink)?;
+    let (length, material) = match projection {
+        ResourceProjection::Current => (None, None),
+        ResourceProjection::Length(replacement) => (Some(replacement), None),
+        ResourceProjection::Material { pieces, assignment } => (None, Some((pieces, assignment))),
+    };
+    super::canonical::charge_canonical_with_length(inputs, length, sink)?;
+    super::pieces::charge_pieces_projected(pieces, material, sink)?;
     charge_cut_plan_resources(cut_plan, sink)?;
     charge_topology_resources(topology, sink)
 }

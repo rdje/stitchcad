@@ -66,6 +66,8 @@ the precise limits of these metadata bounds are documented in [Operation limits 
 
 ChangeMeasurement also [admits exact prospective evidence](command-operation-control.md#exact-prospective-measurement-resources)
 before its candidate clone, counting resulting owned evidence in place of the old vector.
+AssignMaterial [admits selected resulting reasons](command-operation-control.md#exact-prospective-selected-material-resources)
+before Piece/reason/model copies, preserving unselected fields and original target errors.
 
 ## Actual Material assignment preview
 
@@ -180,7 +182,7 @@ Reports are derived from the actual validated candidate before that candidate is
 The bus compares original garment metadata, sewing graph, input registries/recipe/higher sources,
 Design identity/revision, canonical declarations, cut plan and topology history. The comparisons use
 exhaustive owner-definition patterns: adding a field requires explicitly including it in this coverage.
-Preview hosts therefore implement Clone and PartialEq in addition to DesignReferenceHost; the
+Preview hosts therefore implement Clone and PartialEq in addition to DesignResourceSource; the
 installed sc-measure source owner supplies those value semantics.
 
 For Material assignment, Piece count and identity order must match. Every unselected Piece must be
