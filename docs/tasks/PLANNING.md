@@ -241,7 +241,6 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     yet for deriving the cells instead of writing them: a hand-kept value duplicated in the same document
     drifts against itself, not just against the trees.
 
-
   - Recurrence at G1-SLICE.4a.2b: SPINE's root child range still ended at .10 while .11–.21
     existed. Adding .22 corrected the range to .1–.22; PLANNING.5 retains mechanical graph/index
     agreement ownership. This is another instance of the already owned hand-kept child-index drift.
@@ -444,7 +443,6 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     `stitchcad-devnotes-part7.md` (57 lines / 5120 bytes) and brought both ledgers back under health,
     verified by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`.
 
-
 - **D70** — resolved by director2026-10-26: every complete SizeSet requires at least one authored axis.
   Names/ordered values are explicit, never inferred. Normative field/§7 and ownership record align.
   Owner/schedule: G1-SLICE.4c.2 next after current command-payload slice; axes code remains pending.
@@ -459,7 +457,6 @@ G1-SLICE.5a.1 corrects ADR clause links and ASCII vertical-tab handling; lexical
 actual guard mutations verify the fixes.
 
 
-
 D75 and D77 are sealed in [`stitchcad-defects-part16.md`](../history/window2.md#stitchcad-defects-part16md).
 G1-SLICE.5a.2a verifies complete reference child traversal/depth refusal and fragment sibling ownership.
 D76 is sealed in [`stitchcad-defects-part17.md`](../history/window2.md#stitchcad-defects-part17md).
@@ -469,7 +466,6 @@ G1-SLICE.5a.2b.1 verifies machine spelling/keyword roles, unit separators and no
 D78 is sealed in [`stitchcad-defects-part18.md`](../history/window2.md#stitchcad-defects-part18md).
 G1-SLICE.5a.3a proves total extreme-magnitude rounding with four public contracts, an independent
 36-row Fraction oracle and five actual guard reds; strict native/release/WASM checks pass.
-
 
 D79, D80 and D81 are sealed in
 [`stitchcad-defects-part19.md`](../history/window2.md#stitchcad-defects-part19md). G1-SLICE.5a.3b.1 verifies
@@ -1197,3 +1193,7 @@ Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history
 P1 fixed0503;owner G1-SLICE.6.5.3.2.3.2.4.3.numeric. Independent Fraction14/public point+range native watch first failed1/rc101:nine representable final results falsely repaired. Split1/3 held1537228672809129301/4611686018427387902 now correctly resolves1/9223372036854775804.
 Root:bounded differences/products before complete ratios in split-second/offset/merge point+range maps. Reuse exact complete relative progress;share one complete arc-length merge kernel. Reduce before narrowing;no reference width increase or rounding.
 Focused range20/notch4 and oracle14 pass0;five genuinely wide final fractions retain original reference/range and actual numeric cause. Topology unit/scoped lint results belong owning leaf;projection/context and deferred broader paired acceptance remain separate.
+
+## D306 — independent seam oracles absent from automated gates
+
+Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Before:9 standalone producers/0 automated invocations. Closed driver/discovered probe+actual CI now run9 producers/11 fixtures;9 finite status/inventory/mismatch/wiring controls pass0,29 suites discovered. Native/kernel/fixtures unchanged;hosted verdict follows push400. Resume stops .3.3.

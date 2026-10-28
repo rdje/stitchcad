@@ -3,13 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0527 — accept implemented nonuniform source/context/caller component
+## STITCHCAD-G1-0528 — wire exact seam oracle producers into required gates
 
-- Post-implementation scoped weighted10,Notch37,private original-point4 and actual Design Notch5/weighted1 pass. Original source/rounding/frame/resource/currentness and symbolic/limit boundaries stay exact;no product code/kernel/validator changes. Mathematical/source ease
-  component closes at this scope.
-- Existing independent projection workspace6/960,inverse6,comparison6,Notch recovery3,weighted160+50 and Notch quantity6/302/380 controls pass. Caller0526 proof13/4/20 retained with unchanged implementation;no new caller verdict inferred. Semantic stops next,then new span
-  lineage.
-- Whole0526 retained685/three exact Git spans;book92/223/1587/2745,retention1139 pass. LIVE/README unchanged,G1 6/18. Real formula/Profile/geometry,physical/authority/aggregate operations,paired effects and full verification remain explicit later owners.
+- Fix P1 D306: nine standalone seam oracle producers had no CI/discovered-probe invocation at6759525d. Add closed exact driver,discovered runner and actual doctrines CI step. Seven --check producers and two streaming stdout/fixture comparisons preserve original statuses and
+  complete inventory.
+- Focused9 exact producers/11 fixtures unchanged and9 finite gate controls pass. Mismatch,failed --check or stdout child,missing/unknown producer,args and removed CI/Make wiring refuse;unknown sentinel never executes. Same-volume scratch/source hashes and Bash syntax pass;no
+  mathematical/native fixture changes.
+- Whole0527 retained686/three exact Git spans;book92/223/1587/2745,retention1140 pass. LIVE inventory28→29/D306 fixed;README/G1 6/18 unchanged. Actual hosted verdict waits for push400/full gates. Resume semantic stops;closed cut-boundary recovery is durable under .3.3.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

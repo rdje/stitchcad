@@ -20,3 +20,5 @@ jobs:
         run: scripts/check_doctrines.sh
       - name: Verify project handoff census guards
         run: bash docs/tasks/artifacts/handoff/run_handoff_probes.sh
+      - name: Verify exact seam oracle producers and gate guards
+        run: bash docs/tasks/artifacts/seam_partition/run_seam_partition_probes.sh

@@ -331,45 +331,16 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0526 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part685.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.acceptance`
   Status: `done`
-  Goal:0527 scoped nonuniform source/context/caller checkpoint after implementation;no whole
-  paired/mutation/physical/full CI claim. Mathematical/source ease component closes at this scope.
-  - [x] REPRODUCE / ISSUE: 0527 cargo test -p sc-core --test sewing_contract weighted_
-    →10 passed/85 filtered,rc=0;notch_ →37 passed/58 filtered,rc=0. Weighted/Notch source/context/
-    query/caller cases run against one committed implementation after all implementation children.
-  - [x] ROOT CAUSE: 0527 cargo test -p sc-measure --test design_inputs_contract original_notch_design
-    →5 passed/171 filtered,rc=0;retained_weighted_source_acceptance →1 passed/175 filtered,rc=0.
-    Actual owned Design joins must preserve original source and currentness boundaries separately;
-    a pure source quantity or local context cannot certify physical matching/whole effect readiness.
-  - [x] FIX: 0527 run existing scoped nonuniform checkpoint and close implemented mathematical/
-    source scope only. cargo test -p sc-core --lib original_point →4 passed/80 filtered,rc=0,
-    preserving actual integer reservation,private normalization,wide affine projection and exact
-    comparison guards. No product code/kernel or source validator change. Caller checkpoint0526
-    remains exact committed evidence,not a newly observed caller/doc verdict.
-  - [x] ADDRESSED: 0527 weighted_10/notch_37/private original_point4 and actual Design Notch5/
-    weighted1 →pass,rc=0. Full density/root stops,original boundaries,A/B orientation and signed
-    rounding,valid wide originals,original ambiguity/coincidence,quota/symbolic precedence,current
-    copy replacement and source/target error context remain exact. Existing actual caller13/4/20
-    proof is retained685;git diff --quiet HEAD~1 HEAD -- crates docs/tasks/artifacts/seam_partition
-    →rc=0 confirms unchanged implementation/oracle sources across its checkpoint commit.
-  - [x] NO REGRESSION: 0527 existing --check oracles all rc=0:projection workspace6 integer rows/
-    960 Fraction-width controls,original inverse6 Fraction rows,original comparison6 cases,Notch
-    context3 cases,weighted160+50 rows,Notch quantity6 bound/302 Fraction-width/380 exact queries.
-    Valid64/188/189-bit values,bounded-view refusals and orientation/quantum counterfactuals stay
-    independently checked. Native commands use local_environment.py. Book/publication92/223/1587/
-    2745,685 receipt3 exact Git spans,retention1139 logical/44 working/63960 decodedL/4951895 decodedB/
-    2529232 residentB →pass,rc=0. git diff --quiet HEAD -- crates docs/tasks/artifacts/seam_partition
-    →rc=0. Whole paired/mutation/physical/full gates stay .6.5.3.2.acceptance/required pre-push.
-  - [x] LOCKSTEP: 0527 ease/nonuniform parent closures and checkpoint leaf,book/source decision,
-    task index/D301/MEMORY/DEV/CHANGE align;whole0526 caller checkpoint retained685/3 exact Git spans.
-    LIVE/README reviewed unchanged,G1 6/18. Next semantic stop partition .6.5.3.2.3.3,then real new
-    span lineage .3.4. Formula/Profile/geometry/current authority/aggregate operations/paired effects
-    remain scheduled prerequisites before effect consumption. No fake provider or physical success.
-    promotion: declined (scoped verification of indexed source/context/resource/numeric contracts;no new policy or physical assumption).
-
+  Goal:0527 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part686.md).
 - ID: `G1-SLICE.6.5.3.2.3.3`
   Status: `pending`
   Goal: preserve actual semantic stops/copy ownership,cut-boundary behavior and original authored order
   in paired child partitions;use actual current anchors/range evidence rather than guessed assignment.
+  Recovery0528:existing sewing range_contains_point uses closed <= endpoints;positive overlap
+  uses strict <. A stop at the cut can reference both closed children without cloning its semantic
+  object. Same/Opposite changes B pair order,not side/copy ownership. Native contract cases must
+  preserve this actual behavior,authored order and later-frame/current evidence before partition.
+  Begin only after the committed D306 oracle-watch prerequisite;then own bounded stop sub-slices.
 - ID: `G1-SLICE.6.5.3.2.3.4`
   Status: `pending`
   Goal: canonical retired-parent/new-child span lineage with actual identity ownership and references;
@@ -381,3 +352,40 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.4.2.integrity`
   Status: `done`
   Goal:0519 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part678.md).
+
+- ID: `G1-SLICE.6.5.3.2.oracle-watch`
+  Status: `done`
+  Goal:0528 P1 D306 wire all nine maintained seam oracle producers into discovered make probes
+  and actual CI before new stop oracle/next push. Native fixtures and mathematical sources unchanged.
+  - [x] REPRODUCE / ISSUE: 0528 git ls-tree -r --name-only 6759525d census →9 tracked seam
+    *_oracle.py producers/28 run_*probe*.sh runners;git grep scoped .github/crates/scripts/Makefile/
+    .githooks/artifact shell entrypoints for seam_partition/nonuniform_ease_oracle/notch_quantity_oracle
+    →0 invocation matches,expected grep rc=1;combined Python assertion diagnostic rc=0. Existing
+    native tests consume frozen TSV rows,while independent producers were only invoked manually.
+  - [x] ROOT CAUSE: 0528 git ls-tree -r --name-only 6759525d plus scoped git grep census
+    →9 producers/28 discovered runners/0 invocations at6759525dbb0d8ab9a8eb59670f9ffab66ae3d066,rc=0. Make only discovers run_*probe*.sh;
+    standalone *_oracle.py files were never registered. CI's native/doctrine/handoff steps supplied
+    no independent producer invocation. Missing automation did not invalidate observed oracle runs.
+  - [x] FIX: 0528 explicit closed driver runs seven --check producers and streams older progress/
+    Uniform stdout through exact cmp with pipefail. Discoverable runner composes actual producer
+    gate plus finite controls;real doctrines CI step invokes that same runner. Inventory refuses
+    missing/unknown producers before admitting success;unknown scripts never execute. Native
+    local_environment.py -- bash run_seam_partition_probes.sh →9 exact producers and9 controls
+    passed,rc=0. No data/kernel/fixture retuning or fallback success output.
+  - [x] ADDRESSED: 0528 same focused runner →9 producers/11 frozen fixtures unchanged,9 finite
+    controls pass,29 discovered probe suites and actual CI/Make wiring checked,rc=0. Baseline,
+    stdout mismatch,failed --check child,correct stdout+failed child,missing/unknown producer,
+    unsupported argument and removed CI/Make wiring all retain the intended verdict. Unknown
+    producer sentinel remains absent;original statuses cannot be hidden by plausible stdout.
+  - [x] NO REGRESSION: 0528 bash -n check_seam_oracles.sh run_seam_partition_probes.sh →rc=0.
+    git diff --quiet HEAD -- crates docs/tasks/artifacts/seam_partition/*_oracle.py →rc=0;
+    all actual mathematical producers/native fixtures unchanged. Fixture controls only copy known
+    files to target/seam_oracle_watch,verify same-volume real directories and source hashes,then
+    remove owned scratch. Book/publication92/223/1587/2745,686 receipt3 exact Git spans,retention1140
+    logical/45 working/64024 decodedL/4958409 decodedB/2535746 residentB →pass,rc=0. Full CI remains
+    required before push400;actual hosted CI verdict/monitoring follows that authorized push.
+  - [x] LOCKSTEP: 0528 D306 tracked/fixed in PLANNING (four surplus blank lines tightened,not caps),
+    LIVE inventory28→29/D306 fix,build book/task index/MEMORY/DEV/CHANGE align. README reviewed
+    unchanged,G1 6/18. Whole0527 retained686/3 exact Git spans. Existing closed stop membership
+    recovery recorded under pending .3.3;resume its owned native contract/bounded partition next.
+    promotion: declined (repair enforces existing indexed claim-verification/CI doctrine;no new policy or physical assumption).

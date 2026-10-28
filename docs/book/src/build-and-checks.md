@@ -539,3 +539,9 @@ The statement contract count is checked against its public test markers, with bo
 and source-marker faults watched. Actual native tests retain the execution proof.
 These finite controls complement chapter/API/link checks; they do not certify all book prose.
 Static proofs still grant no numerical execution, physical correctness or product approval.
+
+The exact seam oracle gate is discovered by make probes and invoked directly by the doctrines CI
+job. Nine independent producers must match eleven frozen fixtures;missing or unreviewed producers,
+failed children and mismatches refuse. Nine finite gate controls also check CI/Make wiring and
+original pipeline exit status. Scratch stays under target/seam_oracle_watch on the repository
+volume. This local gate proof grants no unobserved hosted CI verdict;that verdict follows a push.

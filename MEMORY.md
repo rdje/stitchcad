@@ -1,17 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.3 in docs/tasks/G1-SLICE-execution.md:actual semantic stop partition
-  for A-ordered paired intervals. Recover canonical cut-boundary/Notch/Turn/copy/current anchor
-  contracts before changes;own safe sub-slices before code. Then actual new span lineage .3.4.
-- Nonuniform source/context/caller checkpoint0527 passes scoped weighted10/Notch37/private point4,
-  actual Design Notch5/weighted1 and6 exact oracle families. Captured caller0526 proof13/4/20
-  retained685;implementation unchanged. Mathematical/source ease .3.2/.4 scope closes only here.
-- Book92/223/1587/2745,685 receipt3 exact Git spans/retention1139 pass;whole0526 retained685.
-  LIVE/README unchanged,G1 6/18. No whole paired/mutation/physical/full CI verdict claimed.
-- Exact full-root Uniform/weighted/notch boundary differences preserve original quantum/sign/
-  source metadata,wide coordinates and original context/limit errors. Actual Design entry admits
-  full logical envelope/current sources/target/cuts/capture;no source clone on refusal.
-- Real formula execution .5e.2/.5e.4,Profile G4,geometry G2/.5f.3b/G3,paired stop/lineage/authority/
+- Next G1-SLICE.6.5.3.2.3.3 in docs/tasks/G1-SLICE-execution.md:actual semantic stop partition.
+  Recover/own safe children before code;existing membership is closed at cuts,so one semantic
+  landmark can be referenced by both adjacent children. Preserve side/copy/authored order and
+  actual current point/range evidence;native contract cases precede bounded partition. Then lineage.
+- P1 D306 oracle automation gap fixed0528:closed nine-producer/eleven-fixture driver,discovered
+  runner and actual doctrines CI step. Nine finite controls pass,including pipeline child status,
+  missing/unknown producers and removed wiring.29 suites discovered;hosted verdict awaits push.
+- Whole0527 retained686/3 exact Git spans;book92/223/1587/2745/retention1140 pass. LIVE inventory29/
+  D306 fixed;README/G1 6/18 unchanged. Mathematical/source ease checkpoint0527 remains scoped;
+  captured caller0526 proof13/4/20 retained685 with unchanged production sources/oracles.
+- Real formula execution .5e.2/.5e.4,Profile G4,geometry G2/.5f.3b/G3,paired stops/lineage/authority/
   aggregate operations/effects/full proof remain explicit owners before effect consumption. No
   provider/physical substitute. Consume all preparation/commit terminals;native --index authority
   mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400 after full gates.

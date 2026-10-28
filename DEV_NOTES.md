@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — nonuniform source/context/caller checkpoint
+## _(2026-10-28 UTC)_ — D306 exact seam oracle gate repaired
 
-0527 after source/context/caller implementation,scoped weighted10/Notch37/private original-point4 and actual Design Notch5/weighted1 pass0. Exact source/rounding/frame/resource/limit/currentness boundaries remain intact. No product/kernel/validator change;mathematical/source ease component closes at this scope.
-Independent projection workspace6/960,inverse6,comparison6,Notch recovery3,weighted160+50 and Notch quantity6/302/380 controls pass0. Captured caller0526 proof13/4/20 remains exact committed evidence;unchanged source/oracle diff passes0. No caller verdict inferred anew. Semantic stop partition next,then lineage.
-Book92/223/1587/2745,685 receipt3 exact spans/retention1139 pass0;task parents/index/D301/source decision/current docs align. LIVE/README unchanged,G1 6/18. Real formula/Profile/geometry,physical/authority/aggregate runtime,paired effects and full verification retain explicit owners before consuming effects.
-[Whole0526 caller checkpoint](docs/history/stitchcad-devnotes-part685.md) retains all original commands/counts/proofs. Promotion declined:scoped verification of indexed source/context/resource/numeric contracts. No new policy/physical assumption;consume authority/commit terminals before advancing .3.3.
+0528 native Git census at6759525d proves9 seam producers/28 discovered probe runners/0 scoped invocation matches. Standalone oracle scripts were never registered with Make/CI;observed manual results remain valid. Own P1 D306 before next stop oracle/push;closed driver/discovered runner and actual CI step repair it.
+Focused runner9 exact producers/11 fixtures unchanged and9 finite controls pass0. Preserve stdout cmp/pipefail and child --check status;missing/unknown producers,args and removed wiring refuse. Unknown sentinel never executes. Scratch copies stay target/seam_oracle_watch on this volume;source hashes unchanged.
+Bash syntax/native source+oracle unchanged/book92/223/1587/2745/686 receipt3/retention1140 pass0. LIVE inventory29/D306 fixed;README/G1 6/18 unchanged. Actual hosted verdict follows push400/full gates. Mathematical producers/fixtures untouched. Closed stop membership recovery durably recorded;semantic partition next.
+[Whole0527 nonuniform checkpoint](docs/history/stitchcad-devnotes-part686.md) retains exact commands/proofs. Promotion declined:existing indexed claim-verification/CI rule enforcement. No new physical assumption;stop cut references preserve one semantic object across adjacent closed children before effects.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
