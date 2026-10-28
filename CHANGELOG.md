@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0452 — account for held construction-family resources
+## STITCHCAD-G1-0453 — compose actual structural resources and exact revision bits
 
-- Precharge actual six-family and Tuck/Pleat fold-line vectors; retain original fixed references and symbolic intent.
-- Resource42 (prior37/actual5), strict selected lint/fmt pass after named-view correction:19/0/0, graph composition22.
-- Exact cumulative owner/index refusals, empty/prior errors and real deletion-held state; no Gather ease duplication.
-- Correct stale crate status and remaining-work book clauses; whole0451 retained604; root accounting next.
+- Charge original revision magnitude bits, canonical inputs, Pieces, copies and topology under one cumulative sink.
+- Resource47 (prior42/actual5), context2, strict selected lint/fmt pass:41/18/129, exact refusals and prefix44/20/136.
+- Zero/128/129-bit boundaries preserve original values; private getter leaves public successor/context behavior unchanged.
+- Whole0452 and0444–0449 journals retained605; source port precedes complete higher-root composition and runtime admission.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

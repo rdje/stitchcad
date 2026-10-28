@@ -9,7 +9,7 @@ use sc_core::{
     },
 };
 
-fn fixture() -> (
+pub(super) fn fixture() -> (
     PieceInventory,
     CutPlan,
     IdentityLedger,

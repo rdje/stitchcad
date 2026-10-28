@@ -2,7 +2,8 @@
 
 These component producers borrow actual held content under the
 [logical resource contract](command-operation-control.md#logical-dynamic-content-accounting-contract).
-They compose into one cumulative meter; full root/source and runtime integration remain owned.
+The structural root composes its actual components under one cumulative meter. Higher Inputs/Sewing/
+Garment roots, source-host traversal and runtime integration remain owned.
 
 ## Actual canonical-input accounting
 
@@ -40,7 +41,7 @@ meter refusal stays the exact original error, even if this producer's error is i
 
 Four actual canonical cases plus the previous six meter cases pass:10 total, with strict selected
 lint and formatting. The command-bus source remains unchanged. This is canonical-component proof;
-Root counter bits/composition, source-host traversal and runtime model admission remain
+Higher root composition, source-host traversal and runtime model admission remain
 separately owned; implemented component accounting is described in the following sections. Finishing this component's meter supplies no
 whole-model, source-truth, allocator RSS/time or publication certificate.
 
@@ -118,7 +119,7 @@ operation owner. Maximum19 refuses the live index14+6; maximum21 refuses registr
 Four new actual topology cases plus prior15 resource cases pass:19 total, with strict selected lint
 and formatting. They retain the exact original ledger/choices on success/refusal, and empty actual
 scope preserves a prior meter error. This closes Piece/copy/topology component accounting. Remaining
-root composition/counter bits, source-host and runtime admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
+higher root composition, source-host and runtime admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
 
 ## Actual input metadata accounting
 
@@ -317,5 +318,41 @@ Empty families preserve zero demand and prior errors. A real deleted constructio
 current Dart validation refuse while held accounting succeeds with exact inventory/graph/ledger
 unchanged. Five new cases plus prior37 pass:42 resource cases, strict selected lint and formatting.
 The first lint rejected the initial six-slice tuple; a named borrowed view resolved it before acceptance.
-Whole root/counter-bit composition, source-host traversal and runtime admission remain owned; no
+Complete higher-root/source composition and runtime admission remain owned; no
 current binding, execution, geometry/physical, whole-model or allocator memory/time certificate follows.
+
+## Actual structural root and revision bits
+
+charge_design_structure_resources borrows the actual private DesignStructure and exhaustively
+matches its definition. It charges the represented revision's exact magnitude bits first, then actual
+canonical inputs, Pieces, cut copies and topology in schema order under the same sink. It performs
+no revision formatting/advancement, model copy, source/value lookup or current validation.
+
+The private revision view borrows the original BigUint and reads its public magnitude-bit count.
+Zero contributes zero bits;1 contributes1,2/3 contribute2,u128::MAX contributes128, and its exact
+successor contributes129. This is represented magnitude, not decimal digits, allocation capacity,
+a maximum-issued command revision or a fixed machine-width cap. The original value remains unchanged.
+The first counter refusal uses design.revision, the actual Design id and no collection index.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_design_structure_resources(&structure, &mut meter)?;
+let represented_structure = meter.finish()?;
+```
+
+The native nonempty root holds two canonical declarations,22 Piece entries,2 copies and15 topology
+entries:41 collection entries,18 text bytes and129 revision bits. Maximum128 bits refuses0+129 before
+later fields; maximum25 entries refuses cut_plan.copies at24+2. Maximum40 entries refuses the actual
+live-edge index at34+7; maximum17 bytes retains the second Piece colorway refusal16+2. Each refusal
+preserves the original root and exact component location rather than returning partial demand.
+
+Prior charges3 entries/2 UTF-8 bytes/7 bits compose to44/20/136. Maximum135 bits refuses7+129 with
+the original Design owner;136 admits the complete structural scope. An actual empty structural draft
+has0/0/0 demand, including its zero revision, and cannot clear an earlier meter error.
+
+Five new actual cases plus prior42 pass:47 resource cases; both existing command-context cases also
+pass, with strict selected lint and formatting. Native source comparison proves the command-context
+delta is only the private readonly bit getter; public successor/display/context behavior stays intact.
+This is structural-root accounting. Complete higher roots, their stored metadata census, actual host
+content and runtime enforcement remain pending; neither the producer name nor finish supplies a
+whole-garment/source/physical, allocator memory/time or command-admission certificate.

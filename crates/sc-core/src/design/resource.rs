@@ -12,6 +12,7 @@ mod inputs;
 mod layers;
 mod pieces;
 mod sewing;
+mod structure;
 mod topology;
 pub use canonical::charge_canonical_input_resources;
 pub use constructions::charge_construction_inventory_resources;
@@ -26,6 +27,7 @@ pub use inputs::{
 pub use layers::{charge_hem_inventory_resources, charge_layer_inventory_resources};
 pub use pieces::{charge_cut_plan_resources, charge_piece_inventory_resources};
 pub use sewing::{charge_sewing_graph_resources, charge_sewing_landmark_resources};
+pub use structure::charge_design_structure_resources;
 pub use topology::charge_topology_resources;
 
 // Fixed value/reference payloads own no dynamic content. Removing Copy requires new accounting.

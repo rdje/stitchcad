@@ -87,13 +87,14 @@ pub use pockets::DesignPocketOpeningDeclaration;
 pub use resource::{
     charge_canonical_input_resources, charge_closure_inventory_resources,
     charge_construction_inventory_resources, charge_cut_plan_resources,
-    charge_hem_inventory_resources, charge_layer_inventory_resources,
-    charge_material_inventory_resources, charge_notion_placement_inventory_resources,
-    charge_parameter_resources, charge_piece_inventory_resources,
-    charge_pocket_inventory_resources, charge_recipe_document_resources,
-    charge_sewing_graph_resources, charge_sewing_landmark_resources, charge_topology_resources,
-    DesignResourceCount, DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits,
-    DesignResourceLocation, DesignResourceMeter, DesignResourceScope, DesignResourceSink,
+    charge_design_structure_resources, charge_hem_inventory_resources,
+    charge_layer_inventory_resources, charge_material_inventory_resources,
+    charge_notion_placement_inventory_resources, charge_parameter_resources,
+    charge_piece_inventory_resources, charge_pocket_inventory_resources,
+    charge_recipe_document_resources, charge_sewing_graph_resources,
+    charge_sewing_landmark_resources, charge_topology_resources, DesignResourceCount,
+    DesignResourceDemand, DesignResourceLimitError, DesignResourceLimits, DesignResourceLocation,
+    DesignResourceMeter, DesignResourceScope, DesignResourceSink,
 };
 pub use sewing::{DesignSewingAmount, DesignSewingAmountSource, DesignSewingDeclarationError};
 pub use sewing_state::{
@@ -209,6 +210,10 @@ pub struct DesignStructure {
 }
 
 impl DesignStructure {
+    pub(crate) fn resource_definition(&self) -> &DesignStructureDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Own the exact components after identity and actual Piece/copy consistency checks.
     ///
     /// The identity census runs Design, lengths, scalars, Pieces, copies, then journal operations,

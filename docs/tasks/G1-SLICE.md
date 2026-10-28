@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0452
+## Current leaf acceptance —0453
 
-- [x] ROOT CAUSE: python3 -I -B native construction schema assertions print6 family vectors plus
-  Tuck/Pleat fold vectors and fixed sewing/print references rc=0; count actual owners without expansion.
-- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:42 passed rc=0; five actual
-  cases verify19/0/0, canonical graph composition22, exact owner/index refusals and deletion-held state.
-- [x] NO REGRESSION: strict selected Clippy/fmt rc=0 after named-view correction; git diff --quiet HEAD --
-  crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior37 resource cases remain passing.
+- [x] ROOT CAUSE: python3 -I -B native structure schema assertions print exhaustive actual six-field
+  root and revision/canonical/Piece/copy/topology order rc=0; original revision is unbounded BigUint.
+- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:47 passed rc=0; five actual
+  structural cases verify41/18/129, zero/128/129 boundaries, exact owner refusals and prefix44/20/136.
+- [x] NO REGRESSION: existing command_context_contract:2 passed/strict selected Clippy/fmt rc=0;
+  native context source comparison proves only private readonly bit getter changed, not public behavior.
 
 ## Goal
 
@@ -853,39 +853,46 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0451 actual held layer/Hem resources; [whole scope/proofs](../history/stitchcad-devnotes-part604.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.4`
   Status: `done`
-  Goal:0452 actual Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance resource producer.
-  Precharge actual six-family vectors and nested fold lines; fixed original source/operation/profile/
-  sewing/copy/print/width/corner intent is not expanded, resolved, reborn, repaired or executed.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native construction schema assertions print6 family vectors,
-    Tuck/Pleat fold vectors and fixed sewing/print references rc=0. Gather refers to existing canonical
-    sewing ease, rather than owning another distribution. Every actual fixed payload requires Copy.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part604.md:
-    3 exact Git spans rc=0; whole0451 scope/lesson/ledger preserves layer/Hem component acceptance.
-    Original owner/definition exhaustiveness must cover private source bindings and both fold wrappers.
-  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
-    named private borrowed collection view with count-only Debug replaces initial lint-rejected six-slice
-    tuple (first lint exit101); no lint waiver. Lazy fold iterators precharge before definition traversal.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:42 passed rc=0 after correction;
-    five new cases verify14 constructions/5 fold lines=19/0/0, actual graph1 span/2 regions composition22,
-    all intake/angle/width origins, explicit zero/parallel alignment/optional stripe/plaid, exact cumulative
-    refusals0+3/3+2/5+1/6+2/8+1/9+2/11+1/12+4/16+3 with actual fold owner/index, real deleted source
-    current Dart refusal but held walk succeeds, unchanged inventory/graph/ledger and empty/prior errors.
-  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
-    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior37 resource cases remain passing;
-    no current semantic/source/authority/bus execution changes or full integration claim.
-  - [x] LOCKSTEP: whole0451 proof604 has3 exact Git spans rc=0; retention1058 logical/25 working
-    Markdown/58767 decoded lines/4433005 decoded bytes/2263817 resident bytes rc=0. Book/pointer/
-    frontier/lesson/indexed decision align. Parent .4 component implementation complete with focused checks;
-    root .2.5/source .3/runtime .4 and deeper/full verification remain pending, not implied by this status.
-  Book build/native publication:82 chapters/159 scoped API rows/1487 source links/2498 rendered links
-  rc=0; maintained-reference83 files/18525 lines/1292388 bytes rc=0. Map/diff checks rc=0.
-  Owned source-doc defect: native HEAD lib.rs assertions show2 stale composition/execution clauses rc=0;
-  current assertions verify actual private composition/metadata handlers and pending recipe/geometry/
-  integration rc=0. Corrected without changing handlers. Cargo uses scripts/local_environment.py.
+  Goal:0452 actual six-family resources; [whole scope/proofs](../history/stitchcad-devnotes-part605.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5`
-  Status: `pending`
+  Status: `in_progress`
   Goal: compose actual core root accounting, including exact unbounded represented revision bits, under
   one cumulative meter; preserve scope-specific original first refusal and no mutation/large preparatory copy.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.5.1`
+  Status: `done`
+  Goal:0453 actual DesignStructure composition and exact represented revision magnitude bits.
+  One cumulative sink charges revision, canonical inputs, Pieces, copies and topology in schema order;
+  private exhaustive root view/bit getter need no text conversion, model copy, advancement or validation.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native structure schema assertions print six-field root and
+    revision/canonical/Piece/copy/topology order rc=0. DesignRevision is actual unbounded BigUint;
+    value magnitude is distinct from decimal text, allocator capacity and maximum-issued bus revision.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part605.md:
+    4 exact Git spans rc=0; whole0452 scope/lesson/ledger and whole0444–0449 implementation journals
+    preserved before containing indexed decision. Canonical contracts/current examples remain in book.
+  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract --test command_context_contract --
+    -D warnings:finished rc=0; exhaustive private root view and exact borrowed public BigUint bits count,
+    first counter location design.revision/actual Design owner, then original component producers.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:47 passed rc=0; five new actual
+    cases verify canonical2/Pieces22/copies2/topology15=41 entries/18 bytes/129 bits; original zero/1/2/3/
+    u128max/next/next+1 exact bits0/1/2/2/128/129/129, no advancement; refusals bits0+129, copies24+2,
+    live edges34+7 and second colorway16+2 preserve exact first locations/unchanged root. Prefix3/2/7
+    composes to44/20/136; bits135 refuses7+129,136 succeeds; actual empty root0/0/0/prior error retained.
+  - [x] NO REGRESSION: cargo test -p sc-core --test command_context_contract:2 passed rc=0; strict
+    selected Clippy/fmt rc=0. Native source comparison prints context delta only readonly private bit
+    getter rc=0; public successor/display/context unchanged. git diff --quiet HEAD -- crates/sc-core/src/command.rs rc=0.
+  - [x] LOCKSTEP: whole0452/component journals605 have4 exact Git spans rc=0; retention1059 logical/
+    26 working Markdown/58898 decoded lines/4443277 decoded bytes/2274089 resident bytes rc=0. Book,
+    pointer/frontier/lesson/indexed decision align. Actual source .3 then higher-root .2.5.2/runtime .4
+    remain; structural parent in progress and deeper/full verification deferred, never implied passed.
+  Book build/native publication:82 chapters/159 scoped API rows/1487 source links/2499 rendered links
+  rc=0; maintained-reference83 files/18562 lines/1294912 bytes rc=0. Map/diff checks rc=0.
+  Cargo uses scripts/local_environment.py. Promotion: indexed command-layer decision. No whole-model,
+  source-currentness, physical, runtime admission or allocator RSS/time certificate follows.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.5.2`
+  Status: `pending`
+  Goal: after actual source port .3, compose complete private Inputs/Sewing/Garment root under one sink,
+  including owned metadata census, fixed source references and actual host traversal. No partial demand
+  masquerades as whole-model admission; source/runtime enforcement and deeper/full checks stay separate.
 - ID: `G1-SLICE.6.8.2.2.2.2.3`
   Status: `pending`
   Goal: actual immutable source-host resource port and sc-measure producer through published readonly

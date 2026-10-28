@@ -409,3 +409,6 @@ mod layers;
 
 #[path = "support/design_resource/constructions.rs"]
 mod constructions;
+
+#[path = "support/design_resource/structure.rs"]
+mod structure;

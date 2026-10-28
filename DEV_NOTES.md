@@ -3,16 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual six-family construction resources
+## _(2026-10-28 UTC)_ — actual structural root and exact revision resource bits
 
-0452 .6.8.2.2.2.2.2.4.4 charges actual six-family vectors and Tuck/Pleat fold lines, retaining fixed
-source/operation/profile/sewing/print intent through exhaustive private views/Copy guards. Gather
-references do not recharge canonical ease. Resource42 (prior37/actual5)/strict lint/fmt pass:19/0/0,
-composed graph22, exact family/fold owner/index, empty/prior errors and deletion-held data unchanged.
-Initial tuple Clippy rejection fixed with a named borrowed/count-only Debug view before acceptance.
-Crate status now states actual metadata execution/private composition; book remaining work refreshed.
-Promotion: indexed command-layer decision. Whole0451 proof604 has3 native Git spans. Root/counter
-bits, source-host/runtime/deeper/full acceptance remain owned; no execution/physical/RSS/time proof.
+0453 .6.8.2.2.2.2.2.5.1 charges original revision magnitude bits, canonical inputs, Pieces, copies
+and topology under one sink. Exhaustive private root view; readonly BigUint bits adds no formatting,
+advance, clone or validation. Resource47 (prior42/actual5), context2, strict selected lint/fmt pass:
+41/18/129, zero/128/129 boundaries, exact component/Design owner refusals, prior prefix44/20/136,
+unchanged root/empty/prior error. Native context delta is only the private getter. Promotion: indexed
+command-layer decision. Whole0452 and0444–0449 implementation journals605 retain4 Git spans.
+Next source .3 then full higher-root .2.5.2, runtime .4; parent remains in progress, deeper/full proof
+stays deferred. Structural demand is no whole-model, source-currentness, physical or RSS/time proof.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

@@ -95,74 +95,8 @@ sealed charging trait object, with no concrete-policy setter/reset/finish/model 
 privacy4/lint/fmt pass. Actual exhaustive core/source producers and runtime model admission remain .2/.3/.4;
 this contract proves no model traversal, allocator RSS/time or dishonest-host security boundary.
 
-## Actual canonical resource producer0444
-
-answers: "how does logical accounting reach actual canonical declarations without changing state?"
-
-G1-SLICE.6.8.2.2.2.2.2.1 precharges actual canonical length/scalar vectors, then each original Known
-state's evidence-vector length. Exhaustive owner/state patterns and Copy-payload constraints expose
-future dynamic-field obligations. Preserve original order/field/index; do not read availability, clone,
-normalize or inspect registry truth. Native resource10 (prior6/actual4)/lint/fmt verify15/0/0 demand,
-exact first refusals, original owner and empty/prior-error composition. This is a canonical component;
-remaining core/source/runtime, allocator RSS/time and evidence/publication proof stay separately owned.
-
-## Actual Piece/copy resources and nested owner0445
-
-answers: "how do resource refusals identify a nested hole without rebirthing its Piece?"
-
-G1-SLICE.6.8.2.2.2.2.2.2.1 precharges actual Piece/copy vectors and exact reason/label bytes through
-exhaustive held views. Add optional actual owner identity to static scope/field/index so nested holes
-retain Piece owner/hole index, and canonical evidence retains declaration owner. No path-string
-allocation, rebirth, repair, registry lookup or geometry proof. Resource15/privacy4/lint/fmt verify24/18/0,
-original nested/UTF-8/copy witnesses, actual split-held content and no mutation. D292 corrects one stale
-ontology metadata-command clause; whole-model/source/runtime and physical/RSS/time proof remain owned.
-
-## Actual held topology resource producer0446
-
-answers: "does resource accounting replay topology to estimate its held indices?"
-
-G1-SLICE.6.8.2.2.2.2.2.2.2 charges actual journal/per-edit vectors and stored live/registration lengths.
-Exhaustive ledger/journal/edit views plus Copy index-key/value constraints expose owned-field changes.
-Precharge before traversal; retain actual operation/index locations without replay, resolution, repair,
-mutation or extra model copies. View debug shows counts only. Resource19/lint/fmt verify22/0/0 across
-all six edits, vector/index/registration witnesses and original ledger/choice preservation. This completes
-Piece/copy/topology component accounting; whole-root/source/runtime and RSS/time/readiness remain owned.
-
-## Actual retained input metadata0447
-
-answers: "does a recipe resource check reparse the source or omit its canonical identity?"
-
-G1-SLICE.6.8.2.2.2.2.2.3 borrows both original/canonical recipe strings, parameter tokens and actual
-Material names/provided composition. Precharge vectors; preserve authored owner/index/field under one
-meter. Exhaustive held views and fixed Copy guards expose field evolution without lookup, regeneration,
-value inference or applied shrinkage. Resource24/lint/fmt verify4/74/0 and exact cumulative witnesses;
-empty source still owns canonical(recipe)8 bytes. Original data stays exact. Remaining model/source/
-runtime, binding/evaluation, truth/physics and whole-model/RSS/time proof remain separately owned.
-
-## Actual held sewing resources0448
-
-answers: "does accounting resolve sewing anchors or instantiate symbolic ease/profile bindings?"
-
-G1-SLICE.6.8.2.2.2.2.2.4.1 precharges actual graph/spans/weighted-region/stop/landmark collections.
-Exhaustive held views and fixed Copy guards preserve all ease sources/distributions and Notch/Turn
-profile/anchor payloads, without lookup, rebirth, resolution, inferred values or realized geometry.
-Resource28/lint/fmt verify13/0/0, exact owner/index limits, actual deletion-held content and no mutation;
-initial public-export gap was corrected before acceptance. Garment/root/source/runtime, currentness,
-binding, selected profile/ease values and physical/RSS/time proof remain separately owned.
-
-## Actual held garment composition resources0449
-
-answers: "what does actual Pocket/notion/Closure resource accounting measure?"
-
-.6.8.2.2.2.2.2.4.2 charges actual Pocket/component, notion and Closure/instance vectors in authored
-order. Exhaustive owner/definition views and Copy guards preserve fixed original source/copy/anchor,
-opening, size, operation and derived Count payloads without lookup, rebirth, resolution or execution.
-Native resource32/strict selected lint/fmt pass:29/0/0, unused notions, all supported Closure intents,
-exact cumulative owner/index refusals and real deletion-held content unchanged. Component reference
-moved byte-exact to model-resource-accounting.md; operation policy example now correctly says four.
-Layers/Hems, construction, root/source/runtime and deeper/full acceptance remain separate. This is
-no current binding, physical readiness, whole-model or allocator memory/time proof. Active raw64
-requires owned archive maintenance before another retirement; aggregate85 alone is not the trigger.
+Whole0444–0449 component implementation journals retain exact source intervals in
+[part605](../history/stitchcad-devnotes-part605.md); current component contracts/examples remain in the book.
 
 ## Actual held layers and Hems0451
 
@@ -188,3 +122,15 @@ pass:19/0/0; graph composition22 counts canonical weighted ease once, exact firs
 index, all intake/angle/width origins, optional print refs, real deletion-held state and empty/prior
 errors. Crate status corrected to actual private composition/metadata execution; whole-root/source/
 runtime/deeper/full acceptance remains owned. No physical, whole-model or RSS/time certificate follows.
+
+## Actual structural root and revision bits0453
+
+answers: "how does actual structural accounting measure a revision beyond machine width?"
+
+.6.8.2.2.2.2.2.5.1 charges the original BigUint magnitude bits first, then actual canonical/Piece/copy/
+topology owners under one cumulative sink. Exhaustive private root view and readonly bit getter need
+no decimal formatting, advancement, model copy or semantic validation. Native resource47/context2/
+strict selected lint/fmt pass:41/18/129, zero/128/129 boundaries, exact Design/component first refusal,
+prior prefix44/20/136 and unchanged original/empty/prior-error scope. Native context comparison isolates
+the getter as its only delta. Source .3 precedes complete higher-root .2.5.2, then runtime .4; parent
+remains in progress. Structural demand is no whole-host/model, currentness, physical or RSS/time proof.

@@ -42,6 +42,10 @@ impl CommandActorClaim {
 pub struct DesignRevision(BigUint);
 
 impl DesignRevision {
+    pub(crate) fn resource_bits(&self) -> u64 {
+        let Self(counter) = self;
+        counter.bits()
+    }
     /// Initial counter value zero.
     #[must_use]
     pub fn initial() -> Self {
