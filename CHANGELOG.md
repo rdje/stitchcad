@@ -3,14 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0525 — admit actual owned Design seam sources before capture
+## STITCHCAD-G1-0526 — accept the implemented captured seam caller component
 
-- Walk complete actual DesignSewing resources before current ownership/root/landmarks/graph/amount preflight,then select actual target declaration,bind real cuts and admit full original capture. Borrow actual state/declaration/capture plus exact demand/limits;preserve original
-  typed/std causes with no source clone on refusal.
-- Cross-crate4/core+test Clippy/fmt/doc2+1 pass. Actual A/B signed weighted/notch views,canonical pointers,exact full-model demand and one-below final-landmark refusal. Current copy replacement,target/frame/capture precedence and Formula5001/Profile98010 symbolic boundaries
-  remain exact.
-- Whole0524 retained683/three exact Git spans;book92/223/1587/2743,glossary0/map/retention1137 pass. Actual dependencies named before effects;caller component checkpoint next. LIVE/README unchanged,G1 6/18;physical/authority/aggregate operation/paired effects/full verification
-  remain owned.
+- After four implementation slices,scoped native command13,actual Design caller4 and public seam API docs20 pass. Full original source/rounding/context,resource/currentness and original cause boundaries stay exact;no product code or numeric kernel changes.
+- Independent weighted160+50 and notch6 bound/302 Fraction-width/380 query controls pass,including wide values and orientation/counterfactual falsifiers. Caller component closes with scoped checks;broader nonuniform checkpoint and semantic stop/lineage implementation follow.
+- Whole0525 retained684/three exact Git spans;book92/223/1587/2744,retention1138 pass. LIVE/README unchanged,G1 6/18. Real formula/Profile/geometry,physical/authority/aggregate operations,paired effects and full verification remain explicitly owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

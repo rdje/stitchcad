@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.4.acceptance in docs/tasks/G1-SLICE-execution.md:focused captured
-  source/weighted/notch command-view checkpoint now .1–.4 implemented. Then .4.acceptance scoped
-  nonuniform component;no broad paired/mutation/physical verification before implementation.
-- Actual Design source entry0525 admits complete model resources before actual current ownership/
-  root/landmarks/graph/amount preflight,then target/cuts and full capture. Borrow actual selected
-  declaration,state,capture token and exact model demand/limits;no source clone on refusal.
-- Cross-crate4/scoped core+test Clippy/fmt/doc2+1 pass:actual A/B signed weighted/notch quantities,
-  canonical pointers,exact resource envelope,model/current/target/frame/capture refusal precedence,
-  source/target/std causes and unchanged Formula5001/Profile98010 symbolic source boundaries.
-- Book92/223/1587/2743,glossary0/map,retention1137/683 receipt3 exact spans pass;whole0524 in683.
-  Weighted/notch callers and actual Design source integration now have focused checks. Formula
-  .5e.2/.5e.4,Profile G4,real geometry G2/.5f.3b/G3 and paired stop/lineage/authority/aggregate
-  operation/effects/full proof remain explicit owners. No physical/provider substitute. Consume
-  all preparation/commit terminals;exact native --index authority stays mandatory. PNT continues.
+- Next G1-SLICE.6.5.3.2.3.2.4.acceptance in docs/tasks/G1-SLICE-execution.md:scoped nonuniform
+  source/context/caller checkpoint now weighted,notch and actual caller implementations complete.
+  Then semantic stop partition .6.5.3.2.3.3;full paired/physical/effect acceptance stays later.
+- Captured caller component0526 closes with13 native command cases,4 actual Design caller cases,
+  20 public seam API doctests and independent weighted160+50/notch6+302+380 controls,all pass0.
+  No product code/kernel change. Book92/223/1587/2744,684 receipt3 exact spans/retention1138 pass;
+  whole0525 retained684. LIVE/README unchanged,G1 6/18;no full paired/physical/CI verdict claimed.
+- Actual Design source entry0525 admits complete model resources before current ownership/root/
+  landmarks/graph/amount preflight,target/cuts and capture;borrows real declaration/state/demand.
+  Weighted/notch views retain full original source/rounding and actual external context borrows.
+- Real formula execution .5e.2/.5e.4,Profile G4,geometry G2/.5f.3b/G3 and paired stops/lineage/
+  authority/aggregate operations/effects/full proof remain explicit owners before effect consumption.
+  No physical/provider substitute. Consume all preparation/commit terminals;exact native --index
+  authority stays mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

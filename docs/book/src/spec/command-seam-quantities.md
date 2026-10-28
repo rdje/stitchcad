@@ -173,3 +173,8 @@ original child rounding,source sharing and mismatch,symbolic precedence,standard
 width refusal,valid wide originals and unchanged upstream ambiguous/coincident evidence. Complete
 Design source admission now joins these views;physical matching/paired effects and their real
 formula/profile/geometry dependencies remain separately owned.
+
+The captured caller component checkpoint now passes13 native command cases,4 actual Design caller
+cases and20 public seam API doctests after implementation. Independent weighted and original-notch
+quantity controls pass. This is scoped component acceptance;broader nonuniform and whole paired/
+mutation/physical verification remain separate subsequent work.

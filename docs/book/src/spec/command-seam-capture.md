@@ -168,3 +168,13 @@ These owners must supply real published interfaces and evidence before effects c
 A formula/profile metadata reference is not a numeric provider,and equal normalized cut positions
 are not a physical correspondence check. The SplitSeamSpan bus handler remains unimplemented;
 focused source/quantity checks do not close its later combined acceptance.
+
+## Captured caller component checkpoint
+
+After all four capture/weighted/notch/actual-Design caller slices are implemented,the scoped
+checkpoint passes13 native seam-command cases,4 actual Design caller cases and20 public seam API
+doctests. Existing independent weighted160+50 rows and notch6 bound/302 Fraction-width/380 exact
+query controls pass. This closes the captured caller component with scoped checks;no product
+kernel is changed by the checkpoint. The broader nonuniform component checkpoint follows.
+The required full pre-push gate and whole paired stop/lineage/atomic/mutation/physical acceptance
+retain their own later owners. Current source/quantity success grants no bus or release approval.
