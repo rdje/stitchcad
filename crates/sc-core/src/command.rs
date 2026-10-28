@@ -44,12 +44,12 @@ pub use bus::{
     charge_command_history_audit_entry_resources, charge_command_history_result_resources,
     charge_command_preview_resources, CommandAuditEntry, CommandAuditSequence, CommandBus,
     CommandBusError, CommandControlError, CommandDifferenceError, CommandGroupCommit,
-    CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference, CommandGroupPreview,
-    CommandGroupPreviewError, CommandGroupPreviewStep, CommandHistoryAuditEntry,
-    CommandHistoryChange, CommandHistoryError, CommandHistoryResult, CommandIdentityError,
-    CommandLengthChange, CommandMaterialChange, CommandMaterialPreview, CommandMeasurementPreview,
-    CommandNotchPreview, CommandPieceList, CommandPreview, CommandPreviewError, CommandResult,
-    CommandRevisionChange,
+    CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference,
+    CommandGroupDiscardedStep, CommandGroupPreview, CommandGroupPreviewError,
+    CommandGroupPreviewStep, CommandHistoryAuditEntry, CommandHistoryChange, CommandHistoryError,
+    CommandHistoryResult, CommandIdentityError, CommandLengthChange, CommandMaterialChange,
+    CommandMaterialPreview, CommandMeasurementPreview, CommandNotchPreview, CommandPieceList,
+    CommandPreview, CommandPreviewError, CommandResult, CommandRevisionChange,
 };
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{

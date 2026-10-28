@@ -540,3 +540,18 @@ Both new cases and existing group-preview6/group-commit6/control8 cases pass, wi
 Clippy and formatting. This is cooperative pre-effect cancellation and native semantic-failure proof.
 It does not inject allocator exhaustion or certify panic recovery, persistence/reopen, other handlers,
 adapters, evaluation, geometry or physical/release behavior. Broader command acceptance stays .6.9.
+
+## Failed-group preparation context
+
+Mutation, RetryConflict and Difference errors expose `discarded: Vec<CommandGroupDiscardedStep>`.
+Each fixed entry provides its original zero-based index(), payload-derived command() and request key().
+The list follows actual successful first occurrences; aliases, failing and unexecuted members add
+no entries. An empty successful prefix returns an empty list. It carries discarded preparation
+context without a candidate, change report or publication capability.
+
+For example, a Notch/alias/Material/Measurement/invalid-Notch group fails at4 and names discarded
+positions0,2,3 with keys817001,817002,817003. Preview and commit preserve the original native source
+chain. A conflicting retry at4 preserves the same list; corrected same-key publication still uses
+both original reserved IDs and the sole audit slot. Resource and cancellation causes stay original.
+
+Exhaustive matches on these error variants must include `discarded` or `..`.

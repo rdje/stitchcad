@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — mixed transaction cancellation and rollback acceptance
+## _(2026-10-28 UTC)_ — exact discarded-preparation diagnostics
 
-0474 .6.5.5 uses real Notch/Material/Measurement/Notch plus exact alias, two reserved IDs and sole authoring/undo/action slots. Actual reference37 pre-effect events span9 required phases; cancelling each retains original event context and exact trace prefix.
-All37 cancellations preserve model/address/revision, same-key retry/full reference report, both IDs, capacity replay and original-address Undo. Separate member3 Notch failure after all3 handlers preserves the original error chain and corrected same-key retry.
-New2/group-preview6/group-commit6/control8, strict selected lint/fmt, native final-grant/infallible-effect source check pass0. No production source change; allocation exhaustion/panic recovery/persistence/browser/other-handler proof is not claimed.
-Promotion:indexed command decision;book85/159/1544/2599,retention1082/2415074B pass0. Whole0473/D294 in628(4 exact Git spans);0473 resource252 counts historical. Next full bus .6.9;LIVE transaction note,G1still6/18;README unchanged.
-[Whole0473 resource-acceptance lesson](docs/history/stitchcad-devnotes-part628.md) retains actual integrated proof and D294 closure.
+0475 .6.9.1 fixes D295:Mutation/RetryConflict/Difference carry actual successful first-occurrence index/command/key descriptors; aliases/failing/unexecuted members omitted. Fixed Copy context only; native source chain unchanged.
+Native D2951 fails before/passes after;transaction3/group-preview6/group-commit6/strict lint/fmt pass0. Preview/commit yield positions0/2/3 and original keys;empty-prefix,key conflict and same-key/two-ID/one-slot corrected retry hold.
+Error-only borrowed-step producer leaves lifecycle/accounting untouched. D296 stale census header corrected;17 commands/5 classes/5 levels/0 failures,non-comment bytes unchanged. Source/accounting/physical proof is not expanded.
+Promotion:indexed decision. Book85/159/1545/2601 and retention1083/2425686B pass0;whole0474 and0471–0474 decisions retained629(4 Git spans). LIVE D295/D296 closed;README unchanged;next .6.9.2 native workflow evidence before full bus.
+[Whole0474 transaction/decision continuity](docs/history/stitchcad-devnotes-part629.md) retains exact native proofs and compatibility boundaries.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

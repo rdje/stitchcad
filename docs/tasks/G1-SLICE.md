@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0474
+## Current leaf acceptance —0475
 
-- [x] ROOT CAUSE: python3 -I -B native transaction effect-boundary check confirms final grant after
-  Ready and no fallible/copy/progress/allocation call between publication moves;core source unchanged rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::transaction_acceptance::
-  →2 passed rc=0;37 checkpoints/9 phases preserve exact cancellation, same-key/two-ID/one-slot retry and Undo.
-- [x] NO REGRESSION: cargo test selected command_bus::group_preview::/group_commit::/control:: →6/6/8
-  passed rc=0;strict lint/fmt/book/native source pass0;full bus/persistence/browser proof remains pending.
+- [x] ROOT CAUSE: cargo test -p sc-measure --test design_inputs_contract failed_group_diagnostic
+  →0 passed/1 failed rc=101;actual mixed/alias prefix diagnostic omitted AssignMaterial/ChangeMeasurement.
+- [x] ADDRESSED: cargo test same native diagnostic →1 passed rc=0;transaction3 confirms positions0/2/3,
+  original keys/native causes, alias exclusion, empty prefix and unchanged corrected finite-slot retry.
+- [x] NO REGRESSION: cargo test -p sc-measure --test design_inputs_contract command_bus::group_preview:: →6 passed rc=0;
+  group_commit6/strict lint/fmt/source/census/book pass0;workflow/broader bus/publication remain pending.
 
 ## Goal
 
@@ -738,23 +738,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0429 D284 count-scope correction, no packing; [whole scope/proofs](../history/stitchcad-devnotes-part581.md).
 - ID: `G1-SLICE.6.5.5`
   Status: `done`
-  Goal: scoped actual transaction/failure-context/rollback acceptance; full bus review .6.9 later.
-  Prove every observed pre-effect checkpoint cancellation on a mixed real metadata group, exact
-  later-member native error context, same-key/identity/audit-slot retry and original snapshot Undo.
-  - [x] REPRODUCE / ISSUE: actual mixed reference trace emits37 pre-effect events across9 required
-    phases;native effect-boundary check confirms sole final authority/effect ordering,core unchanged rc=0.
-  - [x] ROOT CAUSE: python3 -I -B scoped source check rc=0:private candidates/cursor stage before
-    final grant;publication moves are infallible. New actual fixture exercises all observed checkpoints.
-  - [x] FIX: add public-interface transaction acceptance over real complete sources/models, three
-    handlers/five members, exact alias, finite two-ID/one-slot ownership and independent native error.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::transaction_acceptance::
-    →2 passed rc=0;all37 cancel/retry/replay/Undo cases and member3 original Notch error/corrected retry pass.
-  - [x] NO REGRESSION: cargo test selected group_preview/group_commit/control →6/6/8 passed rc=0;
-    cargo clippy measure contract -D warnings and cargo fmt -p sc-measure --check pass0;production unchanged.
-  - [x] LOCKSTEP: book publication85 chapters/159 API rows/1544 source/2599 rendered links rc=0;
-    live docs/decision/index updated,LIVE transaction note,README unchanged;whole0473/D294 retained628.
-  Verification: above focused checks pass0;retention1082/2415074residentB rc=0;full bus .6.9 next.
-  Commit: STITCHCAD-G1-0474;no allocation exhaustion/panic/persistence/browser/other-handler certificate.
+  Goal:0474 mixed transaction/cancellation/native-error acceptance; [whole scope/proofs](../history/stitchcad-devnotes-part629.md).
 - ID: `G1-SLICE.6.6`
   Status: `done`
   Goal: actual revision preconditions, idempotency replay and append-only actor audit trail.
@@ -970,8 +954,30 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0473 coupled native logical-resource acceptance/D294; [whole scope/proofs](../history/stitchcad-devnotes-part628.md).
 
 - ID: `G1-SLICE.6.9`
-  Status: `pending`
+  Status: `in_progress`
   Goal: coupled actual bus acceptance/private-mutator compile failures; workflow registry feeds G1.9/G5 parity.
+- ID: `G1-SLICE.6.9.1`
+  Status: `done`
+  Goal:P1 D295 complete failed-group discarded-preparation diagnostics from actual successful first
+  occurrences; preserve original index/command/key order, aliases, native source chain and atomic retry.
+  Own P3 D296 stale G0 command-census header claiming no command code; correct its spec-only scope.
+  - [x] REPRODUCE / ISSUE: cargo test -p sc-measure --test design_inputs_contract failed_group_diagnostic
+    →0 passed/1 failed rc=101;command_group_failed contract requires missing discarded prior commands.
+  - [x] ROOT CAUSE: cargo test -p sc-measure --test design_inputs_contract failed_group_diagnostic
+    →0 passed/1 failed rc=101;actual error names only group817000/index4/AddNotch;D296 header stale.
+  - [x] FIX: error-only actual-step producer/fixed Copy index-command-key DTO for Mutation/RetryConflict/
+    Difference;exclude aliases/failing/unexecuted,keep native chain. D296 comment only,executable exact.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract failed_group_diagnostic →1 passed rc=0;
+    transaction3 covers positions0/2/3,keys/native/conflict/empty prefix and same-key/two-ID/one-slot retry.
+  - [x] NO REGRESSION: cargo test -p sc-measure --test design_inputs_contract command_bus::group_preview:: →6 passed rc=0;
+    group_commit6/strict core+test Clippy/fmt pass0;lifecycle/accounting unchanged,D296 census17/5/5/0 rc=0.
+  - [x] LOCKSTEP: book85 chapters/159 API rows/1545 source/2601 rendered links rc=0;live docs/decision/
+    index updated,LIVE D295/D296 closed,README correct unchanged;whole0474/decisions629,4 Git spans rc=0.
+  Verification: above focused pass0;retention1083/2425686residentB rc=0;workflow/full bus/publication pending.
+  Commit: STITCHCAD-G1-0475;next .6.9.2 actual native workflow evidence,absent adapters remain unclaimed.
+- ID: `G1-SLICE.6.9.2`
+  Status: `pending`
+  Goal:actual native workflow registry/evidence feeding G1.9/G5; preserve absent adapter/parity boundary.
 
 - ID: `G1-SLICE.6.9.publication`
   Status: `pending`

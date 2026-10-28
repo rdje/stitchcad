@@ -2,23 +2,23 @@
 
 Read CLAUDE.md/README.md and doctrine; derive HEAD with git log --oneline -1.
 
-- Next G1-SLICE.6.9: broader actual metadata-bus acceptance/private-mutator compile failures;
-  workflow evidence feeds G1.9/G5 parity. Read current goal/command-layer workflow registry contract,
-  actual census/publication producers before selecting safe slices. .6.9.publication owns full probes.
-- 0474 .6.5.5 scoped transaction acceptance:real Notch/Material/Measurement/Notch/alias group, two
-  reserved IDs and sole authoring/undo/action slots. All37 actual pre-effect events across9 required
-  phases cancel with exact original progress/prefix, original model/revision/address retained.
-  Same keys/group retry equals full reference, both original IDs issue;capacity replay and original
-  address Undo pass. Separate member3 native Notch failure preserves original chain and corrected retry.
-  New2/group-preview6/group-commit6/control8/strict lint/fmt/native final-grant effect check pass0.
-  Production sources unchanged;no allocator-fault/panic/persistence/browser/other-handler proof.
-- 0473 scoped resource acceptance:Design-input158(including93 bus)/source33/core resource47/control6/
-  metadata8 →252 native;private units5/privacy16/strict lint pass0. Counts are historical; new2 transaction
-  cases pass separately (current design-input target160);next .6.9 integrates current inventory.
-- D293 fixed0472:private Arc<H>,separate census Vec/full logical source charges;host()->&H non-const,
-  cross-thread Send+Sync,single-thread legal. Foreign clone count0 does not measure core copies.
-  D294 fixed0473 model/source boundary drift. Whole0473/D294 scope/lesson/ledger in628, prior0472 in627.
-- Book operation-control#mixed-transaction-checkpoint-acceptance;publication85/159/1544/2599 verified0.
-  Retention1082/2415074residentB verified0. LIVE native resource/transaction notes;G1still6/18.
-  Protect target/history-capture-0450/installation/backup(98files),prior0392g;window22 limits64/192.
-  Full PNT;derive push cadence. Cleanup due2026-10-28 13:41UTC;docs/ARTIFACT_CLEANUP.md.
+- Next G1-SLICE.6.9.2:native workflow registry/evidence feeding G1.9/G5. Read command-layer.md §8/10/11
+  and roadmap; adapters/parity table currently intentionally absent until actual adapter evidence.
+  Build actual native workflow evidence without claiming UI/API/MCP presence. Then coupled broader
+  metadata-bus acceptance under .6.9 and full book probes .6.9.publication, including named-result fixtures.
+- 0475 .6.9.1 fixes P1 D295:Mutation/RetryConflict/Difference carry discarded Vec<CommandGroupDiscardedStep>,
+  fixed Copy index()/command()/key() from actual successful first occurrences. Preserve original positions,
+  omit aliases/failing/unexecuted and keep native source chains. Error-only producer; lifecycle/accounting
+  files unchanged. Native diagnostic1 red→green;transaction3/group-preview6/group-commit6/lint/fmt pass0.
+  Both preview/commit positions0/2/3 original keys, empty prefix, conflict/native cause and corrected
+  same-key/two-ID/one-slot full reference retry verified. D296 stale census header fixed,code exact;
+  spec census17commands/5classes/5levels/0fail passes,does not prove runtime.
+- 0474 transaction37 checkpoints/9 phases native cancellation/retry/replay/Undo proof retained629,
+  plus whole0471–0474 decision journals. 0473 resource252 native/5 units/16 privacy is historical;
+  later transaction cases focused, current compiled target161, full current inventory not yet run.
+- D293 fixed0472:private Arc<H>,separate census/full logical charges;host()->&H non-const,
+  cross-thread Send+Sync,single-thread legal;foreign clone0 does not count core copies. D294 fixed0473.
+- Book operation-control#failed-group-preparation-context;publication85/159/1545/2601 verified0.
+  Retention1083/2425686residentB verified0. LIVE D293–D296 closed;G1still6/18;no whole-project/physical/
+  persistence/browser certificate. Protect target/history-capture-0450/installation/backup(98files),
+  prior0392g;window22 limits64/192. Full PNT;derive push cadence. Cleanup due2026-10-28 13:41UTC.

@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0474 — verify mixed transaction cancellation and rollback
+## STITCHCAD-G1-0475 — report exact discarded group preparations
 
-- Cancel each of37 observed pre-effect events across9 required phases in a real mixed metadata/alias group; preserve exact error context, original model and trace prefix.
-- Same group/keys/two-ID/one-slot retry matches the full reference commit; capacity replay and original-address Undo pass. Later native failure at original member3 retains its complete cause and corrected retry.
-- New2/group-preview6/group-commit6/control8/strict lint/fmt/native effect-boundary/book checks pass; production sources unchanged.
-- Whole0473/D294 retained628; historical resource checkpoint counts labeled. Next broader bus acceptance .6.9; no allocator-fault/panic/persistence/browser or release proof.
+- Fix D295:member, retry-conflict and final-difference failures retain actual successful first-occurrence positions/commands/keys; aliases and failed/unexecuted members add no entry.
+- Preserve original native source chains and same-key/two-ID/one-slot corrected retries. Native diagnostic1 red→green;transaction3/group-preview6/group-commit6/strict lint/fmt pass.
+- Fix D296's stale census header; executable bytes stay exact and the17-command/5-class/5-level census passes0. Lifecycle/accounting producers remain unchanged.
+- Whole0474 and0471–0474 decision continuity retained629; book/live docs align. Next native workflow evidence, then broader bus/publication acceptance; no additional authority or physical proof.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

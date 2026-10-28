@@ -8,14 +8,17 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
+## D295 — failed-group diagnostics omitted discarded prior commands
+P1 fixed0475, owner G1-SLICE.6.9.1; native diagnostic1 failed before/passed after;transaction3/group-preview6/group-commit6/strict lint/fmt pass0.
+Mutation/RetryConflict/Difference now carry actual first-occurrence index/command/key context; aliases/failing/unexecuted members excluded. Preview/commit preserve positions0/2/3, original native cause and same-key/two-ID/one-slot corrected retry; empty prefix stays empty.
+D296 P3 fixed0475 same owner:corrected stale command-census header against actual schemas/bus;non-comment source unchanged,17 commands/5 classes/5 levels/0 failures rc=0.
 D294 fixed0473; [whole model/source runtime-boundary closure](../history/stitchcad-devnotes-part628.md).
 D293 P0 fixed0472; [whole diagnosis/ownership/API closure](../history/stitchcad-devnotes-part627.md).
 D292 fixed0445; [whole ontology-clause closure](../history/stitchcad-devnotes-part625.md).
 D290/D291 fixed0442; [whole native reserve/setup closure ledger](../history/stitchcad-devnotes-part597.md).
 D289 fixed0441; [whole native source-copy diagnosis/fix/privacy proof](../history/stitchcad-devnotes-part593.md).
 D287/D288 fixed0440; [whole native bypass/fix and package metadata proof](../history/stitchcad-devnotes-part592.md).
-D285 runtime fixed0437; persistence/reopen issuance/order remains owned/pending in G1-SLICE.7.
-[Whole D285/D286 diagnosis and verified runtime/claim closure](../history/stitchcad-devnotes-part591.md).
+D285 runtime fixed0437; persistence/reopen issuance/order remains owned/pending in G1-SLICE.7; [whole D285/D286 diagnosis and runtime/claim closure](../history/stitchcad-devnotes-part591.md).
 D283/D284 fixed; [whole correction/proofs](../history/stitchcad-devnotes-part581.md).
 
 ## Goal

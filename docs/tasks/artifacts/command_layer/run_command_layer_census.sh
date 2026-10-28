@@ -28,9 +28,9 @@
 #   A1 the command table as read — per class, the commands and their authority — so a human can eyeball the
 #      whole surface instead of trusting the summary line.
 #
-# HONEST LIMITS: it proves the specification agrees with the roadmap and with itself. No command exists in
-# code yet (`G1-SLICE.6` writes the bus), so nothing here can check that an implementation honours the
-# contract — that is G1's acceptance, and this census is the list its tests are written from. It reads the
+# HONEST LIMITS: it proves the specification agrees with the roadmap and with itself. Typed command
+# schemas and metadata bus handlers exist, but this census checks no execution behavior. Native command
+# acceptance is owned by G1-SLICE.6.9; this census supplies the specification its tests use. It reads the
 # roadmap's two prose lists by shape (backticked CamelCase in §4.4; a slash-separated list in §7.8), so a
 # rewrite of either is reported as "nothing parsed" and refused rather than silently passing.
 #

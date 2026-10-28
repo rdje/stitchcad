@@ -368,6 +368,9 @@ those two Notches, and repeating the entire preview returns the same tentative i
 
 A failed member returns CommandGroupPreviewError::Mutation with the original group, zero-based index,
 payload-derived command and complete original CommandPreviewError in the standard error source chain.
+Mutation, RetryConflict and Difference also retain discarded first-occurrence positions/commands/keys
+as CommandGroupDiscardedStep data; exact aliases and the failing member add no entry. See
+[failed-group context](command-operation-control.md#failed-group-preparation-context).
 All preceding candidates and reports are discarded. A later invalid anchor or exhausted reserve cannot
 consume an original identity. Final-model integrity failures retain Difference and its original cause.
 The six native group cases and existing individual cases are focused checks; complete bus integration

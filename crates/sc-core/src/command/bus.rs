@@ -26,7 +26,10 @@ use preparation::PreparationBase;
 mod operation;
 pub use operation::CommandControlError;
 mod group;
-pub use group::{CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep};
+pub use group::{
+    CommandGroupDiscardedStep, CommandGroupPreview, CommandGroupPreviewError,
+    CommandGroupPreviewStep,
+};
 mod group_difference;
 mod resource;
 mod retained;

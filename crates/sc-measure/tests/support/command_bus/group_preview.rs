@@ -259,7 +259,7 @@ fn conflicting_retry_key_refuses_instead_of_applying_a_different_payload() {
             .expect("actual reserve"),
     );
     assert!(
-        matches!(bus.preview_group(&bad),Err(GroupError::RetryConflict { group, key, first:0,index:1,command:CommandId::AssignMaterial }) if group==group_id() && key==CommandIdempotencyKey::from_entity_id(id(750030)))
+        matches!(bus.preview_group(&bad),Err(GroupError::RetryConflict { group, key, first:0,index:1,command:CommandId::AssignMaterial, .. }) if group==group_id() && key==CommandIdempotencyKey::from_entity_id(id(750030)))
     );
     assert_eq!(
         bus.preview_group(&valid)

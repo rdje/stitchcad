@@ -111,74 +111,24 @@ model/Notch/revision and actual request/report ownership contracts and focused p
 [Whole0467–0470 resource decisions](../history/stitchcad-devnotes-part624.md) retain accepted/current/
 prospective authoring ownership, immutable setup and bounded doctest contracts with focused proofs.
 
-## Exact prospective history0471 and source-clone defect D293
+[Whole0471–0474 history/source-ownership/resource/transaction decisions](../history/stitchcad-devnotes-part629.md)
+retain exact native proofs, D293/D294 closure, compatibility changes and pending boundaries.
 
-answers: "what changes in retained state when Undo or Redo publishes?" · "can semantic Clone equality certify charged source footprint?"
+## Discarded private preparation context0475
 
-Borrow the already validated actual target/request/accepted record. Restore target as current; omit
-its actual source-stack back, retain the other alternatives in order and append previous current to
-the reciprocal stack. Preserve journal initial/maximum and accepted entries; forecast only sequence
-and the new action, including effective commands, original author request/aliases and current operator.
-Precharge whole vectors before walks; no clones/collection/counter construction occurs in projection.
-RetainedPublication0/1 precedes publication copies/reserves and the final fresh grant/effect.
-History4/current4/resource-admission4/lint/fmt pass0; real oracles and max1797/action642bits are in the book.
+answers: "how does a failed group identify discarded preceding commands without exposing candidates?" · "does the command census prove execution behavior?"
 
-P0 D293 is confirmed by a plain adapter over real DesignSources plus an honestly charged String cache.
-Each Clone leaves its source immutable and returns semantic-equal data with cache1→2→3. Native diagnostic1
-passes0 by demonstrating forecast907B accepted but actual retained908B, followed by current882+26 refusal.
-[Rust Clone/PartialEq](https://doc.rust-lang.org/std/clone/trait.Clone.html#clone-and-partialeqeq) requires
-semantic equality, not identical cache footprint (that implication is our inference, tested natively).
-Thus projection logic is focused-verified but generic publication bounds remain defective. Owned P0
-.4.3.4.3 freezes actual source ownership before .4.4 acceptance; a diagnostic pass is not a fix verdict.
+D295 reproduced natively:the mixed prefix/alias/failing-Notch error named only the failing AddNotch,
+although command-layer §9/§11 require preceding discarded commands. Mutation/RetryConflict/Difference
+now carry fixed Copy CommandGroupDiscardedStep data:index, command and key from actual successful
+first-occurrence steps. Preserve original positions/order and omit aliases/failing/unexecuted members.
+The producer copies no report/model and calls no authority/source provider; original error sources stay
+unchanged. Diagnostic construction occurs only on these error paths, within admitted member counts.
+Exhaustive external error patterns must add discarded or ..; existing wildcard patterns remain valid.
 
-## Actual immutable source ownership0472 closes D293
-
-answers: "why share the source instance rather than trust H Clone shape?" · "what compatibility changes accompany frozen snapshot sources?"
-
-Private DesignMetadata stores Arc<H> and manually clones that handle plus the captured census Vec.
-No H.clone callback participates in model snapshots. Semantic equality alone cannot certify an honest
-cache's content/size; a post-clone rejection would occur after the publication copy and leave the
-assumption in place. Sharing the exact immutable source removes it at the source-owner boundary.
-Core model collections still copy; each logical model charges full source/census without deduplication.
-The source integration obligation remains immutable/honest/exhaustive; this is not hostile-code isolation.
-
-host() still lends &H and exposes no Arc/mutator; it becomes an ordinary method instead of const fn.
-Cross-thread ownership now requires H:Send+Sync; single-thread H remains supported. This follows the
-[standard Arc contract](https://doc.rust-lang.org/std/sync/struct.Arc.html); no unsafe trait override is used.
-Native actual DesignGarment<DesignSources> satisfies Send+Sync. Metadata Clone itself requires no H:Clone;
-existing model/command generic bounds stay as before in this focused repair.
-
-Two regressions fail against the old inline owner and pass after:source address remains identical,
-census vectors differ, two models charge exactly twice the content, explicit foreign Clone grows its
-own cache,905B refuses original880+26,906B/old907B publish and pass subsequent current admission.
-The independent clone telemetry control increments1; all actual preview/group/commit/replay/Undo/Redo
-foreign clones are0. This count is no longer a proxy for core model copies; affected tests/book say so.
-Affected command25/metadata8/doctest4/lint/fmt pass0. D293 closes; coupled .4.4/deeper/full proof stays owned.
-
-## Coupled native logical-resource acceptance0473
-
-answers: "which integrated resource checks passed after feature completion?" · "does native resource acceptance certify the whole command layer?"
-
-After current/prospective models, retained state and D293 source ownership are implemented, the actual
-Design-input158(including93 bus)/source33/core resource47/control6/metadata8 suites all pass:252 cases.
-Five private model/audit forecast, exact bit/entry chunk and reserve-cursor units plus16 bus/resource/
-control privacy doctests pass. Strict selected test lint also passes. Book evidence links the native
-commands and limits. Broader transaction .6.5.5/full bus .6.9 follow; no full CI/browser/persistence/
-ingress/allocator-time/physical/release verdict follows from this scoped acceptance.
-D294 exposed stale component-only boundaries in the model/source resource chapters. Native precise
-pending-clause census model11→0/source3→0 and the rendered publication check pass0; actual component
-proofs remain scoped and historical counts stay labeled. Whole0472/D293 closure is retained627.
-
-## Actual mixed transaction acceptance0474
-
-answers: "how are all actual pre-effect cancellation points checked?" · "can failed mixed preparation consume identities or its sole audit slot?"
-
-Trace one successful actual five-member Notch/Material/Measurement/Notch/alias transaction. Require all9
-public pre-effect phases; the fixture emits37 events. Cancel each actual event on a fresh owner, compare
-its exact original Cancelled cause and trace prefix, then commit the unchanged original group/keys.
-The whole actual commit equals the reference, both original IDs issue, capacity replay works and Undo
-restores the original Piece address. A separate fourth-member native Notch failure after all3 handlers
-retains group/index/command and the full typed source chain; correcting the same keys gives the reference.
-New2/group-preview6/group-commit6/control8/strict lint/fmt/native effect-boundary checks pass0. Production
-source stays unchanged. Allocation exhaustion/panic recovery/persistence/browser/other handlers remain
-outside this proof. Resource checkpoint0473 counts stay historical; full bus .6.9 follows.
+Native diagnostic1 fails before/passes after;transaction3/group-preview6/group-commit6/lint/fmt pass0.
+Preview/commit witness positions0/2/3 and original keys, empty prefix, native Notch source and key-conflict
+cause, then corrected same-key/two-ID/one-slot publication equal to a real reference. Lifecycle and
+accounting sources stay unchanged; final Difference uses the same actual-step producer.
+D296 corrected the G0-era census header:no executable bytes changed;17/5/5/0 native census passes.
+Specification closure does not establish execution; native workflow evidence/full bus acceptance follow.

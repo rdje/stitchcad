@@ -267,3 +267,151 @@ fn later_native_failure_after_all_three_metadata_handlers_preserves_exact_contex
     assert!(!retry.is_replay());
     assert_eq!(retry.entry().commit(), accepted.entry().commit());
 }
+
+#[test]
+fn failed_group_diagnostic_identifies_discarded_preparations_without_repeating_aliases() {
+    let (owner, request) = fixture();
+    let design = owner.inputs().id();
+    let revision = owner.inputs().revision().clone();
+    let addition = notch_preview::addition(&owner);
+    let other = owner
+        .inputs()
+        .structure()
+        .pieces()
+        .pieces()
+        .get(1)
+        .expect("actual second Piece");
+    let invalid = AddNotch::new(other.id(), addition.anchor(), addition.representation());
+    let expected_native = Notch::new(
+        invalid.definition_with_id(id(720001)),
+        other,
+        owner.inputs().structure().topology(),
+    )
+    .expect_err("independent second-ID native witness");
+    let reference = configured(owner.clone())
+        .commit_group(&request)
+        .expect("actual corrected reference");
+    for conflict in [false, true] {
+        let mut members = request.mutations().to_vec();
+        let alias = members.first().expect("original first Notch").clone();
+        members.insert(1, alias);
+        *members
+            .get_mut(4)
+            .expect("original fourth member after alias") = mutation(
+            design,
+            revision.clone(),
+            817000,
+            if conflict { 817001 } else { 817004 },
+            MutationPayload::AddNotch(invalid),
+        );
+        let bad = group(817000, members);
+        let mut bus = configured(owner.clone());
+        let preview_error = bus
+            .preview_group(&bad)
+            .expect_err("failed actual mixed preview");
+        let commit_error = bus
+            .commit_group(&bad)
+            .expect_err("failed actual mixed commit");
+        let commit_preparation = commit_error
+            .source()
+            .expect("original group source")
+            .downcast_ref::<GroupError<sc_measure::DesignSourcesError>>()
+            .expect("same original group error type");
+        for error in [&preview_error, commit_preparation] {
+            let discarded = match error {
+                GroupError::Mutation {
+                    group,
+                    index: 4,
+                    command: CommandId::AddNotch,
+                    discarded,
+                    ..
+                } if !conflict => {
+                    assert_eq!(*group, request.id());
+                    let native = error
+                        .source()
+                        .expect("original preview source")
+                        .source()
+                        .expect("original Notch source");
+                    assert_eq!(native.downcast_ref::<NotchError>(), Some(&expected_native));
+                    discarded
+                }
+                GroupError::RetryConflict {
+                    group,
+                    key,
+                    first: 0,
+                    index: 4,
+                    command: CommandId::AddNotch,
+                    discarded,
+                } if conflict => {
+                    assert_eq!(*group, request.id());
+                    assert_eq!(*key, CommandIdempotencyKey::from_entity_id(id(817001)));
+                    assert!(
+                        error.source().is_none(),
+                        "a key conflict invents no native preparation cause"
+                    );
+                    discarded
+                }
+                error => {
+                    unreachable!("original native/conflicting fourth-member context: {error:?}")
+                }
+            };
+            let contexts: Vec<_> = discarded
+                .iter()
+                .map(|step| (step.index(), step.command(), step.key()))
+                .collect();
+            assert_eq!(
+                contexts,
+                vec![
+                    (
+                        0,
+                        CommandId::AddNotch,
+                        CommandIdempotencyKey::from_entity_id(id(817001))
+                    ),
+                    (
+                        2,
+                        CommandId::AssignMaterial,
+                        CommandIdempotencyKey::from_entity_id(id(817002))
+                    ),
+                    (
+                        3,
+                        CommandId::ChangeMeasurement,
+                        CommandIdempotencyKey::from_entity_id(id(817003))
+                    ),
+                ],
+                "only actual completed first occurrences; no alias1, failing4 or unexecuted5"
+            );
+            let diagnostic = error.to_string();
+            assert!(
+                diagnostic.contains("AssignMaterial") && diagnostic.contains("ChangeMeasurement")
+            );
+        }
+        bus.execute(&query(design, revision.clone(), QueryPayload::GetPieceList))
+            .expect("original revision after both failures");
+        let corrected = bus
+            .commit_group(&request)
+            .expect("same group/keys and both IDs retain sole publication slot");
+        assert!(!corrected.is_replay());
+        assert_eq!(corrected.entry().commit(), reference.entry().commit());
+    }
+    let failed_first = group(
+        817000,
+        vec![mutation(
+            design,
+            revision.clone(),
+            817000,
+            817004,
+            MutationPayload::AddNotch(invalid),
+        )],
+    );
+    let mut bus = configured(owner);
+    let error = bus
+        .preview_group(&failed_first)
+        .expect_err("no successful predecessor exists");
+    assert!(
+        matches!(error, GroupError::Mutation { index:0, discarded, .. } if discarded.is_empty())
+    );
+    assert!(!bus
+        .commit_group(&request)
+        .expect("empty-prefix failure also leaves original slot/keys/IDs")
+        .is_replay());
+}

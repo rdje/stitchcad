@@ -131,6 +131,52 @@ impl CommandGroupPreview {
     }
 }
 
+/// One actual successful first occurrence whose private preparation was discarded by group failure.
+/// This is fixed context only: no candidate, change report, accepted effect or publication capability.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct CommandGroupDiscardedStep {
+    index: usize,
+    command: CommandId,
+    key: CommandIdempotencyKey,
+}
+impl CommandGroupDiscardedStep {
+    /// Original zero-based submitted member position, preserving gaps occupied by retry aliases.
+    #[must_use]
+    pub const fn index(self) -> usize {
+        self.index
+    }
+    /// Actual payload-derived command that successfully prepared before this failure.
+    #[must_use]
+    pub const fn command(self) -> CommandId {
+        self.command
+    }
+    /// Original first-occurrence request key; exact aliases add no second discarded preparation.
+    #[must_use]
+    pub const fn key(self) -> CommandIdempotencyKey {
+        self.key
+    }
+}
+
+fn discarded_steps(steps: &[CommandGroupPreviewStep]) -> Vec<CommandGroupDiscardedStep> {
+    steps
+        .iter()
+        .enumerate()
+        .filter_map(|(index, step)| {
+            let CommandGroupPreviewStep {
+                command,
+                key,
+                replay_of,
+                report: _,
+            } = step;
+            replay_of.is_none().then_some(CommandGroupDiscardedStep {
+                index,
+                command: *command,
+                key: *key,
+            })
+        })
+        .collect()
+}
+
 /// Original group refusal; no partial accepted report or private candidate escapes.
 #[derive(Debug)]
 pub enum CommandGroupPreviewError<E> {
@@ -173,6 +219,8 @@ pub enum CommandGroupPreviewError<E> {
         index: usize,
         /// Conflicting member's actual payload-derived command.
         command: CommandId,
+        /// Actual successful first occurrences discarded, in original submitted order.
+        discarded: Vec<CommandGroupDiscardedStep>,
     },
     /// Original member preparation cause, with its exact submitted position.
     Mutation {
@@ -182,6 +230,8 @@ pub enum CommandGroupPreviewError<E> {
         index: usize,
         /// Failing member's actual payload-derived command.
         command: CommandId,
+        /// Actual successful first occurrences discarded; excludes aliases and the failing member.
+        discarded: Vec<CommandGroupDiscardedStep>,
         /// Original complete preparation cause, retained in the standard source chain.
         issue: Box<CommandPreviewError<E>>,
     },
@@ -189,6 +239,8 @@ pub enum CommandGroupPreviewError<E> {
     Difference {
         /// Original explicit group identity.
         group: CommandGroupId,
+        /// Actual successful first occurrences discarded by the final whole-group integrity refusal.
+        discarded: Vec<CommandGroupDiscardedStep>,
         /// Original final-model semantic integrity cause.
         issue: CommandDifferenceError,
     },
@@ -341,6 +393,7 @@ impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAutho
                         first: *first,
                         index,
                         command: mutation.command_id(),
+                        discarded: discarded_steps(&steps),
                     });
                 }
                 steps.push(CommandGroupPreviewStep {
@@ -376,6 +429,7 @@ impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAutho
                         group: group.id(),
                         index,
                         command: mutation.command_id(),
+                        discarded: discarded_steps(&steps),
                         issue: Box::new(issue),
                     },
                 })?;
@@ -402,6 +456,7 @@ impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAutho
             group_difference::between(&self.state, final_state, &steps).map_err(|issue| {
                 CommandGroupPreviewError::Difference {
                     group: group.id(),
+                    discarded: discarded_steps(&steps),
                     issue,
                 }
             })?;
