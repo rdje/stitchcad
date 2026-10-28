@@ -64,6 +64,9 @@ precedes authority; private model accounting follows exact authority/snapshot bi
 current validation/cloning. Actual progress, observer methods, cancellation/retry semantics and
 the precise limits of these metadata bounds are documented in [Operation limits and progress](command-operation-control.md).
 
+ChangeMeasurement also [admits exact prospective evidence](command-operation-control.md#exact-prospective-measurement-resources)
+before its candidate clone, counting resulting owned evidence in place of the old vector.
+
 ## Actual Material assignment preview
 
 CommandBus::preview now accepts AssignMaterial under fresh inspect authority; commit permission is

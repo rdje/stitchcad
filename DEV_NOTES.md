@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — authorized current-model resource admission
+## _(2026-10-28 UTC)_ — exact prospective Measurement evidence resources
 
-0460 .6.8.2.2.2.2.4.1 installs immutable explicit model limits alongside input policy; no default, private setup traversal or request/observer override. Costly methods require DesignResourceSource.
-Current/staged roots and both history alternatives charge after exact authority/binding, before semantic
-validation/copy. Actual delegated-source telemetry: authority/stale0/0/0, quota0copies/1walk/0callbacks,
-history2 walks/0copies, exact replay0/0/0. Bus50/privacy-capability10/strict lint/fmt pass; E0106 test
-lifetime and unused import fixed; prior privacy-example bounds retain their intended private cause.
-Promotion: indexed command-layer decision. Whole0459 retained612; prospective growth .4.2 and retained
-state .4.3/deeper/full proof pending. Current admission alone does not bound every new published model.
+0461 .6.8.2.2.2.2.4.2.1 borrows a replacement at its actual canonical slot after current validation/binding, before candidate clone/constructors. Whole projected root charges new evidence only;
+public current accounting follows unchanged None route. Native projection3/old Measurement4/source33/
+core canonical-selection6/strict lint/fmt pass. Actual rebuilt-model oracle verifies +1 refusal with0
+host copies, same-size/no-op/shrink-2, sequential shrink/restore/alias, unchanged revision/keys/capacity.
+E0599 uses actual difference accessors; zero-width oracle fixture corrected to explicit positive1000um
+because the real Measurement also supplies Material width. Promotion:indexed command-layer decision. Whole0460 retained613; selected Material/Notch/revision .4.2.2–.4.2.4, retained state/full proof pending.
+[Whole0460 current-admission lesson](docs/history/stitchcad-devnotes-part613.md) retains original authority/telemetry/privacy proof.
 [Whole0459 root-composition lesson](docs/history/stitchcad-devnotes-part612.md) retains exact cache/held/empty proof.
 [Whole0458 source-port lesson](docs/history/stitchcad-devnotes-part611.md) retains original trust/census and independent byte-correction proof.
 

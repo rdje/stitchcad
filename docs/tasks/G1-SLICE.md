@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0460
+## Current leaf acceptance —0461
 
-- [x] ROOT CAUSE: python3 -I -B native current admission:explicit unset2/immutable setup/no private
-  callback; authorized+bound current/history gates precede semantic checks; execute tail byte-exact rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:::50 passed rc=0;
-  actual delegated-source quota0copies/1walk/0callbacks, authority/stale0/0/0, history2 walks/replay0.
-- [x] NO REGRESSION: strict core-lib/affected-test Clippy and both package fmt rc=0; prior46 bus cases
-  pass. cargo test -p sc-core --doc command::bus::CommandBus:10 privacy/capability cases pass rc=0.
+- [x] ROOT CAUSE: python3 -I -B native Measurement projection:exact identity guard < borrowed
+  admission < first clone < constructors; current None/no semantic callbacks; authority/effects byte-exact rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_measurement:::
+  3 passed rc=0; actual rebuilt-model oracle, growth/no copy, same-size/no-op/Unknown/staged aliases.
+- [x] NO REGRESSION: old Measurement4/source resource33/core canonical-filter6 plus strict core-lib/
+  affected-test Clippy/both package fmt pass rc=0. No broader bus/full verification claim.
 
 ## Goal
 
@@ -903,41 +903,55 @@ All98 completed ids/statuses and original proof pointers remain live there.
 
 - ID: `G1-SLICE.6.8.2.2.2.2.4.1`
   Status: `done`
-  Goal:0460 immutable explicit model policy and actual current/preparation/history-alternative admission,
-  compile-time source-resource capability, exact authority/snapshot binding before private witnesses.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native current admission:explicit unset2/immutable setup/no
-    private callback rc=0. Existing input admission does not measure private held content. Current/
-    staged resource gates now precede envelope/current checks and clone, after authority and binding.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part612.md:
-    3 exact Git spans rc=0; whole0459 root-composition scope/lesson/ledger retained before live containment.
-    Native order confirms both actual history roots gated before validation, execute tail byte-exact rc=0.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and cargo clippy -p sc-measure --test
-    design_inputs_contract -- -D warnings:both rc=0. Explicit model policy installs once/no default,
-    availability requires both policies, setter/read triggers no private callback, original policy retained.
-    Costly methods require H:DesignResourceSource; original resource errors retain standard source chains.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus:::50 passed rc=0;
-    four new real-source telemetry cases plus prior46. Unauthorized/wrong Design/stale single/group/
-    commit and history denial/stale snapshot cause0 copies/0 resource walks/0 semantic callbacks.
-    One-byte-short actual policy returns exact producer error at all preparation entries:0/1/0,
-    unchanged Piece address/revision. History actual current+alternative charge2 with0 copies;
-    exact authoring/history replay0/0/0. Missing/immutable model policy and cheap reads covered.
-    Initial E0106 test helper gains explicit borrow lifetime; one unused import removed before acceptance.
-  - [x] NO REGRESSION: bus50/strict selected lint/both package fmt rc=0; prior metadata/authority/
-    cancellation/replay/history/copy cases pass. cargo test -p sc-core --doc command::bus::CommandBus:
-    10 privacy/capability cases pass rc=0; old private-method examples gain actual required resource
-    bound so their intended failure remains privacy. New reset/capability refusals included.
-  - [x] LOCKSTEP: book build/native publication83 chapters/159 scoped API rows/1502 source links/
-    2526 rendered links rc=0; examples install both policies; live pointer/frontier/indexed lesson align.
-    Current .4.1 done; prospective .4.2/retained .4.3/feature .4.4/deeper/full work remain owned.
-  Retention1066 logical/33 working Markdown/59475 decoded lines/4491683 decoded bytes/2322495
-  resident bytes rc=0; maintained-reference84 files/18918 lines/1320907 bytes rc=0; map/diff rc=0.
-  Cargo uses scripts/local_environment.py; promotion:indexed command-layer decision.
-  No guarantee every newly published model fits policy until prospective checks land; no allocator
-  memory/time, dishonest-host security, raw ingress, numeric/physical/release or full-verification claim.
+  Goal:0460 authorized current/preparation/history-alternative admission; [whole scope/proofs](../history/stitchcad-devnotes-part613.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: prospective metadata replacement/AddNotch/revision admission before growing copies/current
   constructors, with exact represented demand and first locations; no conservative double counting.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.2.1`
+  Status: `done`
+  Goal:0461 exact prospective Measurement evidence admission before candidate clone/constructors;
+  borrow replacement in actual canonical slot, retain schema order/original witnesses and resulting data.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native Measurement projection:exact identity guard <
+    borrowed admission < first clone < candidate constructors rc=0. Current demand alone does not
+    account for replaced evidence. Only the new vector counts; current wrappers retain None route.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part613.md:
+    3 exact Git spans rc=0; whole0460 current-admission scope/lesson/ledger retained before containment.
+    Native projection source has no clone/current/census/context callbacks; authority/group/effect/
+    history implementations remain byte-exact rc=0. No supplied totals/public projection capability.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and cargo clippy -p sc-measure --test
+    design_inputs_contract -- -D warnings:both rc=0. Original current/binding/identity causes precede
+    exact whole projected resource check; semantic candidate validation still follows successful admission.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_measurement:::
+    3 passed rc=0; actual rebuilt/validated garment is independent oracle. Known2→3 adds1 and all
+    single/group/commit paths retain exact actual-model refusal before host copy; original Piece
+    address/revision and failed key/group/capacity preserved, then valid same-size commit succeeds.
+    No-op/same-size fits exact N, Unknown projects N-2, text/counter units unchanged. Actual staged
+    shrink/restore has no net difference; alias reuses prior report without clone/resource walk.
+    First E0599 uses actual difference getters. Three fixture failures exposed zero width shared by
+    Measurement/Material; use explicit positive1000um so original Material validator remains active.
+  - [x] NO REGRESSION: old Measurement command subset4/source resource33/core canonical filter6
+    pass rc=0; strict affected lint/both package fmt rc=0. Public current accounting, semantic errors,
+    original source/current validation and original effect/history paths stay intact. Broader checks deferred.
+  - [x] LOCKSTEP: book build/native publication83 chapters/159 scoped API rows/1504 source links/
+    2529 rendered links rc=0; exact replacement examples/actual oracle correction and scope documented.
+    Current .4.2.1 done; Material .4.2.2/Notch .2.3/revision .2.4/retained/deeper/full work owned.
+  Retention1067 logical/34 working Markdown/59536 decoded lines/4497233 decoded bytes/2328045
+  resident bytes rc=0; maintained-reference84 files/18961 lines/1324537 bytes rc=0; map/diff rc=0.
+  Cargo uses scripts/local_environment.py; promotion:indexed command-layer decision.
+  No complete prospective/retained-state, ingress, allocator memory/time, physical or release certificate.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.2.2`
+  Status: `pending`
+  Goal: exact selected Piece assignment projection before reason/metadata copies, preserving ownership,
+  actual replaced reasons and original missing-target causes; no conservative double counting.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.2.3`
+  Status: `pending`
+  Goal: exact prospective appended semantic Notch resources before registry allocation/identity staging;
+  preserve current target/anchor/original allocator failures and unchanged reserve on refusal.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.2.4`
+  Status: `pending`
+  Goal: exact prospective publication revision magnitude before successor/revision-model construction;
+  use independent maximum-issued revision, preserve replay/branch monotonicity and original first error.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3`
   Status: `pending`
   Goal: bound actual retained audit/replay/history content and unbounded maximum-issued/audit counters

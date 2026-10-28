@@ -2,7 +2,7 @@
 use super::{CommandPreview, CommandPreviewError, PreparationBase, PreparedCommand};
 use crate::{
     command::{ChangeMeasurement, DesignRevision},
-    design::{DesignGarment, DesignInputs, DesignReferenceHost, DesignSewing, DesignStructure},
+    design::{DesignGarment, DesignInputs, DesignResourceSource, DesignSewing, DesignStructure},
     ontology::EntityId,
     value::LengthDeclaration,
 };
@@ -57,7 +57,7 @@ impl CommandMeasurementPreview {
     }
 }
 
-impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
+impl<H: DesignResourceSource + Clone + PartialEq> PreparationBase<'_, H> {
     pub(super) fn prepare_measurement(
         &self,
         replacement: &ChangeMeasurement,
@@ -74,6 +74,11 @@ impl<H: DesignReferenceHost + Clone + PartialEq> PreparationBase<'_, H> {
                 requested: replacement.replacement().id(),
             });
         }
+        super::operation::admit_length_replacement(
+            self.state,
+            self.limits,
+            replacement.replacement(),
+        )?;
         let mut garment = self.state.definition().clone();
         let mut sewing = garment.sewing.into_definition();
         let mut inputs = sewing.inputs.into_definition();

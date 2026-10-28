@@ -5,8 +5,8 @@ use super::{
 };
 use crate::ontology::EntityId;
 use crate::value::{
-    CanonicalInputs, LengthDeclarationDefinition, LengthState, ScalarInputDeclarationDefinition,
-    ScalarInputState,
+    CanonicalInputs, LengthDeclaration, LengthDeclarationDefinition, LengthState,
+    ScalarInputDeclarationDefinition, ScalarInputState,
 };
 
 fn location(
@@ -33,9 +33,21 @@ pub fn charge_canonical_input_resources(
     inputs: &CanonicalInputs,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
+    charge_canonical_with_length(inputs, None, sink)
+}
+// Private prospective view: the command must first establish the exact actual target identity.
+// Replace the borrowed declaration at its original slot; never charge old and new evidence together.
+pub(super) fn charge_canonical_with_length(
+    inputs: &CanonicalInputs,
+    replacement: Option<&LengthDeclaration>,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
     let (lengths, scalars) = inputs.resource_collections();
     sink.charge_entries(lengths.len(), location("canonical.lengths", None, None))?;
     for (index, declaration) in lengths.iter().enumerate() {
+        let declaration = replacement
+            .filter(|candidate| candidate.id() == declaration.id())
+            .unwrap_or(declaration);
         let LengthDeclarationDefinition { id, source, state } = declaration.definition();
         fixed_value(source);
         match state {

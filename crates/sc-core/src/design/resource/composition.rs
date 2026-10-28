@@ -1,18 +1,18 @@
 //! Complete actual higher roots, preserving one cumulative sink and original component locations.
 use super::{
     charge_closure_inventory_resources, charge_construction_inventory_resources,
-    charge_design_structure_resources, charge_hem_inventory_resources,
-    charge_layer_inventory_resources, charge_material_inventory_resources,
-    charge_notion_placement_inventory_resources, charge_parameter_resources,
-    charge_pocket_inventory_resources, charge_recipe_document_resources,
-    charge_sewing_graph_resources, charge_sewing_landmark_resources, fixed_slice, fixed_value,
-    DesignResourceLimitError, DesignResourceLocation, DesignResourceScope, DesignResourceSink,
-    DesignResourceSource,
+    charge_hem_inventory_resources, charge_layer_inventory_resources,
+    charge_material_inventory_resources, charge_notion_placement_inventory_resources,
+    charge_parameter_resources, charge_pocket_inventory_resources,
+    charge_recipe_document_resources, charge_sewing_graph_resources,
+    charge_sewing_landmark_resources, fixed_slice, fixed_value, DesignResourceLimitError,
+    DesignResourceLocation, DesignResourceScope, DesignResourceSink, DesignResourceSource,
 };
 use crate::design::{
     DesignGarment, DesignGarmentDefinition, DesignInputs, DesignInputsDefinition, DesignSewing,
     DesignSewingDefinition,
 };
+use crate::value::LengthDeclaration;
 /// Charge the actual complete input root, including the source host and separately retained census.
 /// Exhaustive private views follow schema order. References are fixed Copy payloads; the captured
 /// identity vector is precharged without invoking a semantic census or currentness callback.
@@ -24,6 +24,13 @@ pub fn charge_design_input_resources<H: DesignResourceSource>(
     inputs: &DesignInputs<H>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
+    charge_inputs_with_length(inputs, None, sink)
+}
+fn charge_inputs_with_length<H: DesignResourceSource>(
+    inputs: &DesignInputs<H>,
+    replacement: Option<&LengthDeclaration>,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
     let DesignInputsDefinition {
         structure,
         parameters,
@@ -32,7 +39,7 @@ pub fn charge_design_input_resources<H: DesignResourceSource>(
         sources,
         references,
     } = inputs.resource_definition();
-    charge_design_structure_resources(structure, sink)?;
+    super::structure::charge_structure_with_length(structure, replacement, sink)?;
     charge_parameter_resources(parameters, sink)?;
     charge_recipe_document_resources(recipe, sink)?;
     charge_material_inventory_resources(materials, sink)?;
@@ -59,12 +66,19 @@ pub fn charge_design_sewing_resources<H: DesignResourceSource>(
     sewing: &DesignSewing<H>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
+    charge_sewing_with_length(sewing, None, sink)
+}
+fn charge_sewing_with_length<H: DesignResourceSource>(
+    sewing: &DesignSewing<H>,
+    replacement: Option<&LengthDeclaration>,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
     let DesignSewingDefinition {
         inputs,
         graph,
         landmarks,
     } = sewing.resource_definition();
-    charge_design_input_resources(inputs, sink)?;
+    charge_inputs_with_length(inputs, replacement, sink)?;
     charge_sewing_graph_resources(graph, sink)?;
     charge_sewing_landmark_resources(landmarks, sink)
 }
@@ -78,6 +92,13 @@ pub fn charge_design_garment_resources<H: DesignResourceSource>(
     garment: &DesignGarment<H>,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
+    charge_garment_with_length(garment, None, sink)
+}
+fn charge_garment_with_length<H: DesignResourceSource>(
+    garment: &DesignGarment<H>,
+    replacement: Option<&LengthDeclaration>,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
     let DesignGarmentDefinition {
         sewing,
         pockets,
@@ -87,11 +108,21 @@ pub fn charge_design_garment_resources<H: DesignResourceSource>(
         hems,
         constructions,
     } = garment.resource_definition();
-    charge_design_sewing_resources(sewing, sink)?;
+    charge_sewing_with_length(sewing, replacement, sink)?;
     charge_pocket_inventory_resources(pockets, sink)?;
     charge_notion_placement_inventory_resources(notions, sink)?;
     charge_closure_inventory_resources(closures, sink)?;
     charge_layer_inventory_resources(layers, sink)?;
     charge_hem_inventory_resources(hems, sink)?;
     charge_construction_inventory_resources(constructions, sink)
+}
+
+// The caller has resolved a real Measurement binding and checked this exact canonical identity.
+// This private logical projection neither installs data nor skips subsequent semantic validation.
+pub(crate) fn charge_garment_length_replacement<H: DesignResourceSource>(
+    garment: &DesignGarment<H>,
+    replacement: &LengthDeclaration,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    charge_garment_with_length(garment, Some(replacement), sink)
 }

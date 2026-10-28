@@ -175,3 +175,17 @@ prior privacy example bounds refreshed to preserve intended private-method refus
 is byte-exact. Whole0459 retained612. Prospective growth .4.2, retained state .4.3 and deeper/full proof
 remain owned; current admission alone does not guarantee every published model fits policy or certify
 allocator memory/time, dishonest-host security, numeric/physical/release readiness.
+
+## Exact prospective Measurement resources0461
+
+answers: "does replacing evidence charge both the old and new vectors or allocate a candidate first?"
+
+After actual current checks/Measurement binding, a private borrowed root projection selects the exact
+replacement at its canonical slot and charges only resulting owned evidence, before candidate clone/
+constructors. Public current wrappers use the unchanged None route; original index/order/other fields
+and all source/census ownership remain. No supplied totals or public projection capability is exposed.
+Projection3/old Measurement4/source33/canonical selection6/strict lint/fmt pass against actual rebuilt
+validated-model oracle: +1 refusal/no host copy, no-op/same-size at N, Unknown N-2, sequential shrink/
+restore/alias, unchanged original address/revision and refused group/key/capacity reused. E0599 uses
+actual difference getters; zero shared Material-width fixture corrected to explicit positive1000um.
+Whole0460 retained613. Material/Notch/revision .4.2.2–.4.2.4, retained state/deeper/full proof remain owned.

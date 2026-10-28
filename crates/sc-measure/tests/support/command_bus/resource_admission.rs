@@ -12,7 +12,7 @@ use sc_core::{
     },
 };
 use std::{cell::RefCell, error::Error as StdError, num::NonZeroU64};
-fn control<'a>(error: &'a (dyn StdError + 'static)) -> Option<&'a Control> {
+pub(super) fn control<'a>(error: &'a (dyn StdError + 'static)) -> Option<&'a Control> {
     let mut current = Some(error);
     while let Some(error) = current {
         if let Some(control) = error.downcast_ref::<Control>() {
@@ -22,22 +22,24 @@ fn control<'a>(error: &'a (dyn StdError + 'static)) -> Option<&'a Control> {
     }
     None
 }
-fn reset(counters: &[Rc<Cell<usize>>; 3]) {
+pub(super) fn reset(counters: &[Rc<Cell<usize>>; 3]) {
     for counter in counters {
         counter.set(0);
     }
 }
-fn counts(counters: &[Rc<Cell<usize>>; 3]) -> [usize; 3] {
+pub(super) fn counts(counters: &[Rc<Cell<usize>>; 3]) -> [usize; 3] {
     counters.each_ref().map(|counter| counter.get())
 }
-fn demand(owner: &DesignGarment<resource_copies::CountedSources>) -> DesignResourceDemand {
+pub(super) fn demand(
+    owner: &DesignGarment<resource_copies::CountedSources>,
+) -> DesignResourceDemand {
     let mut meter = DesignResourceMeter::new(model_policy());
     charge_design_garment_resources(owner, &mut meter).expect("actual complete logical model");
     meter
         .finish()
         .expect("actual demand without semantic callbacks")
 }
-fn operation_only<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
+pub(super) fn operation_only<H, A>(mut bus: CommandBus<H, A>) -> CommandBus<H, A> {
     bus.install_operation_limits(CommandOperationLimits::new(
         capacity(10),
         capacity(10),

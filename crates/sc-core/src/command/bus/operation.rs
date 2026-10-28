@@ -130,6 +130,18 @@ pub(super) fn admit_model<H: DesignResourceSource>(
     Ok(())
 }
 
+pub(super) fn admit_length_replacement<H: DesignResourceSource>(
+    state: &DesignGarment<H>,
+    limits: DesignResourceLimits,
+    replacement: &crate::value::LengthDeclaration,
+) -> Result<(), CommandControlError> {
+    let mut meter = DesignResourceMeter::new(limits);
+    crate::design::charge_garment_length_replacement(state, replacement, &mut meter)
+        .map_err(CommandControlError::Model)?;
+    meter.finish().map_err(CommandControlError::Model)?;
+    Ok(())
+}
+
 pub(super) fn checkpoint(
     observer: &dyn CommandProgressObserver,
     phase: CommandProgressPhase,

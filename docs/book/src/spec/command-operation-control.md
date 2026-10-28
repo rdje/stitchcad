@@ -316,9 +316,48 @@ pass50, with strict core-library/affected-test lint and formatting; focused bus 
 examples also pass. The new test's missing explicit borrowed-error lifetime and one unused import
 were corrected before acceptance. No semantic validation callback is replaced by accounting.
 
-This implements current/preparation-root and stored history-alternative admission. Prospective
-replacement/evidence/reason/Notch/revision growth before candidate allocation remains .4.2; retained
+This implements current/preparation-root and stored history-alternative admission. Exact prospective
+Measurement evidence admission is implemented below; reason/Notch/revision growth remains .4.2.2–.4.2.4; retained
 command audit/replay/history content and maximum-issued/audit counters remain .4.3. This partial
 runtime stage does not certify every newly published model or total retained state fits the policy.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
 release acceptance remain separate. Deeper/full verification stays deferred until feature completion.
+
+## Exact prospective Measurement resources
+
+ChangeMeasurement first retains current-model admission, original envelope/current validation and
+actual Measurement binding. A mismatched canonical declaration still returns its original identity
+error. Before the first candidate model clone, the runtime borrows the replacement declaration at
+that exact existing canonical slot and charges the complete prospective garment under the same
+installed model limits. The original slot/index and all other owned inventories, source snapshots,
+retained census, text and revision remain part of the walk. No candidate data is installed or cloned.
+
+For Known state, only the replacement's evidence vector is charged at that slot; old and new evidence
+are not added together. Unknown/Derived and the other fixed states own no evidence vector there.
+All unrelated canonical declarations keep their original authored order, ownership and charges.
+Public current-model accounting still uses the same implementation with no replacement. The
+projection is private to core; requests cannot supply resource totals or substitute another meter.
+Subsequent actual candidate construction and full current validation still run after admission.
+
+For example, let the actual current model have N collection entries, including2 evidence references
+in the bound declaration, and set the model entry maximum to N. Replacing them with3 references
+projects N+1 and refuses with the exact first error returned by a real rebuilt-model resource walk.
+There is no candidate host copy. Replacing them with2 references or submitting the exact no-op fits N;
+changing to Unknown projects N-2. All unchanged text and counter units retain their exact values.
+
+Three new native cases compare the borrowed projection with independently rebuilt, validated actual
+models. They verify the growth refusal across single/group preview and commit, unchanged Piece
+address/revision and reuse of refused group/key/capacity by a valid same-size replacement. Current
+and prospective source walks occur without a candidate copy on refusal. Admitted previews retain
+one actual host copy. A group that shrinks then restores evidence has no net metadata difference;
+an exact alias reuses the prior report and repeats neither candidate clone nor resource walks.
+
+The first oracle fixture used zero for a Measurement that also supplies Material width; actual
+Material validation refused it. An explicit positive1000 micrometre length makes the fixture isolate
+evidence accounting while preserving that production validator. An assumed test convenience accessor
+was replaced with the actual difference getters. The new3 and original4 Measurement cases,33 source
+resource cases and6 cases selected by the canonical filter pass, with strict affected lint/formatting.
+Authorization/group/effect/history implementations are byte-exact in this slice. Material reasons,
+Notch appends, publication revision growth and retained command content remain separate owned work;
+this feature stage supplies no complete new-model/retained-state, raw ingress, allocator memory/time,
+physical or release certificate. Deeper/full verification remains deferred until feature completion.

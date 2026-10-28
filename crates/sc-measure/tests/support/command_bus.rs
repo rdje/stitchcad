@@ -72,6 +72,8 @@ mod notch_preview;
 mod resource_admission;
 #[path = "command_bus/resource_copies.rs"]
 mod resource_copies;
+#[path = "command_bus/resource_measurement.rs"]
+mod resource_measurement;
 impl CommandAuthoritySource for Host {
     fn snapshot(&self) -> CommandAuthoritySnapshot<'_> {
         self.reads.set(self.reads.get() + 1);

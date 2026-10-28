@@ -16,6 +16,7 @@ mod sewing;
 mod structure;
 mod topology;
 pub use canonical::charge_canonical_input_resources;
+pub(crate) use composition::charge_garment_length_replacement;
 pub use composition::{
     charge_design_garment_resources, charge_design_input_resources, charge_design_sewing_resources,
 };

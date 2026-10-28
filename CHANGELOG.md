@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0460 — admit authorized actual current models before costly preparation
+## STITCHCAD-G1-0461 — admit exact prospective Measurement evidence before candidate copies
 
-- Install explicit immutable model limits; supported costly paths require both policies and the actual resource-source capability.
-- Charge current/staged and history-alternative owners after authority/binding, before validation/copy; retain original resource errors.
-- Actual bus50/privacy-capability10 and strict affected lint/fmt pass; unauthorized/stale callbacks zero, exact replay skips walks.
-- Preserve original metadata/cancel/history/retry semantics; whole0459 retained612; prospective growth and retained state remain pending.
+- Borrow the bound replacement in the original canonical slot; charge resulting whole-model content without old/new double counting.
+- After current validation/binding, projected refusal precedes candidate host clone and current constructors; original semantic failures stay intact.
+- Projection3/old Measurement4/source33/core canonical-selection6/strict lint/fmt pass; actual rebuilt model oracle, no-op/shrink/group aliases.
+- Correct fixture's zero shared Material width and test accessor; whole0460 retained613; Material/Notch/revision/retained work pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
