@@ -8,6 +8,7 @@ use core::{
 mod canonical;
 mod inputs;
 mod pieces;
+mod sewing;
 mod topology;
 pub use canonical::charge_canonical_input_resources;
 pub use inputs::{
@@ -15,6 +16,7 @@ pub use inputs::{
     charge_recipe_document_resources,
 };
 pub use pieces::{charge_cut_plan_resources, charge_piece_inventory_resources};
+pub use sewing::{charge_sewing_graph_resources, charge_sewing_landmark_resources};
 pub use topology::charge_topology_resources;
 
 // Fixed value/reference payloads own no dynamic content. Removing Copy requires new accounting.

@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual retained input-metadata resource accounting
+## _(2026-10-28 UTC)_ — actual held sewing resource producers
 
-0447 .6.8.2.2.2.2.2.3 borrows actual parameter tokens, both retained recipe strings and Material
-name/provided composition; precharge vectors, preserve state/order and owner/index. Exhaustive held
-views and fixed Copy guards expose field evolution; no reparse, lookup, regeneration or applied scale.
-Resource24 (prior19/actual5)/strict lint/fmt pass:4/74/0 demand, exact cumulative witnesses, unchanged
-canonical/parameter/recipe/Material data and empty source retaining canonical8 bytes. Promotion:
-command-layer record. Whole0446 proof599 retains3 exact spans. Remaining garment/root/source/runtime/
-deeper/full work stays owned; no binding/evaluation/physical or whole-model/RSS/time certificate.
+0448 .6.8.2.2.2.2.2.4.1 precharges graph/spans/weighted regions/stops and semantic Notch/Turn registry;
+exhaustive private views and fixed Copy guards retain symbolic/profile/anchor intent without lookup,
+resolution/rebirth or realized ease. Initial E0432 public-export gap corrected before accepted checks.
+Resource28 (prior24/actual4)/strict lint/fmt pass:13/0/0, all ease sources/distributions, exact owner/index
+witnesses, actual deletion-held anchors and unchanged graph/landmarks/ledger. Promotion: command-layer
+record. Whole0447 proof600 retains3 exact spans. Garment/root/source/runtime/deeper/full work remains;
+no binding, selected profile values, geometry/physical, whole-model or allocator RSS/time certificate.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0447
+## Current leaf acceptance —0448
 
-- [x] ROOT CAUSE: python3 -I -B native input-metadata schema assertions print parameter vector/tokens,
-  separate retained recipe strings and Material name/optional composition rc=0; each owned field counts.
-- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:24 passed rc=0; five new actual
-  cases verify4/74/0, exact cumulative owner/index failures, original state and empty recipe's canonical8 bytes.
-- [x] NO REGRESSION: selected strict Clippy/fmt finished rc=0; git diff --quiet HEAD --
-  crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Original19 resource cases still pass.
+- [x] ROOT CAUSE: python3 -I -B native sewing schema assertions print spans/weighted regions/stops
+  and Notch/Turn fixed logical/profile payloads rc=0; precharge actual dynamic fields without resolution.
+- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:28 passed rc=0; four actual
+  sewing cases verify13/0/0, all ease variants, exact graph/span/index witnesses and held refs after deletion.
+- [x] NO REGRESSION: strict selected Clippy/fmt finished rc=0; git diff --quiet HEAD --
+  crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior24 resource cases remain passing.
 
 ## Goal
 
@@ -835,39 +835,52 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0446 actual topology held resources; [whole scope/proofs](../history/stitchcad-devnotes-part599.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.3`
   Status: `done`
-  Goal:0447 actual parameter, retained recipe and Material logical-resource producers.
-  Precharge vectors; exact token/name/provided-composition plus both source/canonical recipe bytes.
-  Exhaustive private owner/text/definition views and fixed Copy/reference-vector guards; no reparse,
-  regeneration, rebinding, numeric availability/property lookup, physical shrinkage/defaults or mutation.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native input-metadata schema assertions print parameter
-    vector/tokens, separate retained source/canonical strings and Material name/optional composition rc=0.
-    Logical accounting must include both recipe fields; original source length alone omits held identity text.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part599.md:
-    3 exact Git spans rc=0; whole0446 scope/lesson/ledger retains its input-metadata-pending boundary.
-    Fixed property targets/shrinkage are inline metadata, not a second value/evidence collection/cache.
-  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
-    exhaustive held owner/text views, precharge before member traversal and exact original owner/index
-    locations. Canonical skipped primitives/evidence elements now also require fixed Copy payloads.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:24 passed rc=0; five actual
-    cases verify2 tokens/3 bytes, source24/canonical36, two Materials/11 bytes, exact4/74/0 demand;
-    token1+2, source0+24, canonical27+36, composition3+4, cumulative name70+4 and vector2+2 refusals;
-    Unknown/Derived properties, absent/present composition/shrinkage and full original state retained.
-    Empty metadata/source still retains canonical(recipe)8 bytes; all three producers preserve prior failure.
-  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
-    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Original19 meter/canonical/Piece/
-    topology cases remain passing; runtime bus/source/authority/effect behavior is unchanged.
-  - [x] LOCKSTEP: whole0446 scope/lesson/ledger599 retained unchanged with3 exact Git spans rc=0;
-    pointer/frontier/book/lesson/indexed decision aligned. Remaining core .2.4–.5/source .3/runtime .4,
-    deeper .6.5.5 and full .6.9 stay owned; no whole-root/source/runtime or physical/RSS/time proof.
-  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
-  Native book/publication81 chapters/159 scoped API rows/1478 source links/2479 rendered links rc=0;
-  maintained-reference82 files/18338 lines/1279539 bytes owner .6.8.2.2.2.2.2.3 rc=0.
-  Retention1053 logical/83 aggregate working Markdown rc=0; active62 fits64/group.
-  Actual parameter/recipe/Material component counts supply no canonical target currentness, namespace
-  binding, recipe evaluation, provenance/Material truth, applied shrinkage, geometry or release authority.
+  Goal:0447 actual retained input resources; [whole scope/proofs](../history/stitchcad-devnotes-part600.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual sewing/garment-family resource accounting with all nested held fields and original locations.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.4.1`
+  Status: `done`
+  Goal:0448 actual sewing graph/span/weighted-region/stop and semantic landmark resource producers.
+  Exhaustive held views and fixed Copy guards retain graph/span owner/index, symbolic/profile intent
+  and current anchors without copy/landmark lookup, resolution/rebirth, value read or ease realization.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native sewing schema assertions print span/weighted-region/
+    stop vectors and fixed Notch/Turn logical/profile payloads rc=0. The original compile check stopped
+    with E0432 because root public re-exports were missing; corrected exact export before accepted checks.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part600.md:
+    3 exact Git spans rc=0; prior whole0447 scope/lesson/ledger retains its sewing/garment-pending boundary.
+    Graph/spans/regions/stops and registry are actual independent held collections; fixed metadata adds none.
+  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
+    exhaustive graph/span/ease/landmark private views, precharge before traversal and fixed payload
+    guards count actual content without semantic/profile/physical work; root API exports are reachable.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:28 passed rc=0. Four actual
+    cases verify3 spans/2 regions/5 stops/3 landmarks=13/0/0, all ease sources/distributions, Notch/Turn,
+    spans0+3, stops3+1, regions4+2 and registry10+3 first owner/index refusals, actual deletion-held anchors
+    without rebirth, unchanged graph/landmarks/ledger, empty scope and original prior-error preservation.
+  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
+    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior24 resource cases still pass;
+    no source/authority/metadata bus execution path or physical/profile validation behavior changed.
+  - [x] LOCKSTEP: whole0447 scope/lesson/ledger600 retained unchanged with3 exact Git spans rc=0;
+    pointer/frontier/book/lesson/indexed decision aligned. Garment .2–.4, root .2.5/source .3/runtime .4,
+    deeper .6.5.5 and full .6.9 remain owned; no full sewing/garment currentness or whole-model/RSS/time proof.
+  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
+  Book build/native publication rc=0:81 chapters/159 scoped API rows/1479 source links/2481 rendered
+  links; maintained reference82 files/18378 lines/1282263 bytes. Retention1054 records/84 working Markdown
+  rc=0; Knowledge Map and git diff --check rc=0.
+  Logical profile refs supply no selected style/encoding/dimensions, and Formula/Profile ease supplies
+  no numeric result. Actual component counts supply no binding, geometry/physical/release authority.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.4.2`
+  Status: `pending`
+  Goal: actual Pocket/component, notion placement and Closure/instance resource accounting, with all
+  held private fields and original source/copy intent, without rebirth/repair or physical inference.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.4.3`
+  Status: `pending`
+  Goal: actual Facing/modelled-Lining/Interfacing and Hem-family resource accounting; preserve deferred
+  envelope/profile/Material intent and all held relationships without executing transformations.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.4.4`
+  Status: `pending`
+  Goal: actual Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance-family resource accounting with exhaustive
+  owner/definition/nested-field views and original field/owner/index refusals, without geometry realization.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5`
   Status: `pending`
   Goal: compose actual core root accounting, including exact unbounded represented revision bits, under

@@ -138,3 +138,14 @@ meter. Exhaustive held views and fixed Copy guards expose field evolution withou
 value inference or applied shrinkage. Resource24/lint/fmt verify4/74/0 and exact cumulative witnesses;
 empty source still owns canonical(recipe)8 bytes. Original data stays exact. Remaining model/source/
 runtime, binding/evaluation, truth/physics and whole-model/RSS/time proof remain separately owned.
+
+## Actual held sewing resources0448
+
+answers: "does accounting resolve sewing anchors or instantiate symbolic ease/profile bindings?"
+
+G1-SLICE.6.8.2.2.2.2.2.4.1 precharges actual graph/spans/weighted-region/stop/landmark collections.
+Exhaustive held views and fixed Copy guards preserve all ease sources/distributions and Notch/Turn
+profile/anchor payloads, without lookup, rebirth, resolution, inferred values or realized geometry.
+Resource28/lint/fmt verify13/0/0, exact owner/index limits, actual deletion-held content and no mutation;
+initial public-export gap was corrected before acceptance. Garment/root/source/runtime, currentness,
+binding, selected profile/ease values and physical/RSS/time proof remain separately owned.

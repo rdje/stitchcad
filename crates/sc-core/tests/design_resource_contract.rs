@@ -397,3 +397,6 @@ mod topology;
 
 #[path = "support/design_resource/inputs.rs"]
 mod inputs;
+
+#[path = "support/design_resource/sewing.rs"]
+mod sewing;

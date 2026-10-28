@@ -115,6 +115,11 @@ pub struct Notch {
 }
 
 impl Notch {
+    pub(crate) fn resource_parts(&self) -> (EntityId, &NotchDefinition) {
+        let Self { piece, definition } = self;
+        (*piece, definition)
+    }
+
     /// Validate the anchor against the current topology and its named piece's surviving intervals.
     ///
     /// # Errors

@@ -274,6 +274,10 @@ not mutate stored content or certify release. Every graph reports `GeometricVali
 and `EaseValidation::DeferredToG2AndG3`; `walk`/`true`, actual length differential, source transforms,
 net-line geometry and assembly completeness remain later checks.
 
+[Sewing resource accounting](command-operation-control.md#actual-sewing-accounting) borrows held spans,
+weighted regions, stop lists and semantic landmarks without resolving/rebirthing anchors or realizing ease.
+Logical counts and original graph/span/index refusals remain separate from readiness.
+
 SewingGraph.validate_current(plan, pieces, landmarks, ledger) applies the constructor's exact rules
 again, in the same order, to its original immutable spans. Construction success and missing-id
 inventories cannot authorize replacement contexts. Copy200 may still exist but now name another

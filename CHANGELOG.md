@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0447 — account for retained parameter, recipe and Material resources
+## STITCHCAD-G1-0448 — account for held sewing graph and semantic landmarks
 
-- Actual vector/token/name/composition and original/canonical recipe text producers; no reparse or property lookup.
-- Exhaustive held views and Copy guards; preserve original state and exact first owner/index refusals.
-- Resource24 (prior19/actual5), strict selected lint/fmt pass; empty source retains canonical8 bytes, bus unchanged.
-- Book scopes component proof and remaining work; whole0446 held-topology scope/lesson/ledger retained599.
+- Actual spans/weighted-region/stop/landmark producers with exhaustive held/profile views and owner/index refusals.
+- No lookup, anchor resolution/rebirth, symbolic/profile value inference, ease realization or mutation.
+- Resource28 (prior24/actual4), strict selected lint/fmt pass after correcting public export; actual deletion-held content preserved.
+- Book scopes component proof and remaining work; whole0447 retained input-resource scope/lesson/ledger retained600.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
@@ -43,6 +43,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+| [part600](docs/history/stitchcad-devnotes-part600.md) | whole0447 retained input-resource scope/lesson/ledger | 49 lines, 4374 bytes, sha256:06dfd2f1… |
 | [part599](docs/history/stitchcad-devnotes-part599.md) | whole0446 held-topology resource scope/lesson/ledger | 45 lines, 4028 bytes, sha256:082deecf… |
 | [part598](docs/history/stitchcad-devnotes-part598.md) | whole0445 Piece/copy-resource/owner/D292 scope/lesson/ledger | 50 lines, 4522 bytes, sha256:869a21aa… |
 | [part597](docs/history/stitchcad-devnotes-part597.md) | whole D290/D291 verified closure ledger | 13 lines, 1223 bytes, sha256:82264056… |

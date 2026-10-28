@@ -18,6 +18,11 @@ pub struct TurnPoint {
     anchor: EdgeAnchor,
 }
 impl TurnPoint {
+    pub(crate) fn resource_fields(&self) -> (EntityId, EntityId, EdgeAnchor) {
+        let Self { id, piece, anchor } = self;
+        (*id, *piece, *anchor)
+    }
+
     /// Validate an exact semantic anchor on the named piece.
     /// # Errors
     /// Returns [`AnchorError`] for missing, unresolved or foreign anchors.
@@ -209,6 +214,11 @@ pub struct SeamSpan {
     definition: SeamSpanDefinition,
 }
 impl SeamSpan {
+    pub(crate) fn resource_definition(&self) -> &SeamSpanDefinition {
+        let Self { definition } = self;
+        definition
+    }
+
     /// Stable correspondence identity.
     #[must_use]
     pub const fn id(&self) -> EntityId {
@@ -431,6 +441,11 @@ struct ValidatedSide {
 }
 
 impl SewingGraph {
+    pub(crate) fn resource_spans(&self) -> (EntityId, &[SeamSpan]) {
+        let Self { id, spans } = self;
+        (*id, spans)
+    }
+
     /// Validate copy addressing, owned complete ranges, disjoint self-seams, stops and ease domains.
     /// # Errors
     /// Returns [`SewingError`] for invalid structural references/content. Geometry, realized ease,

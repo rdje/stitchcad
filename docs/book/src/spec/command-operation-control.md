@@ -424,6 +424,42 @@ a prior meter refusal stays original across all three producers. Remaining sewin
 source and runtime admission work is separately owned; this is no binding, recipe evaluation,
 Material truth/physical, whole-model or allocator RSS/time certificate.
 
+## Actual sewing accounting
+
+charge_sewing_graph_resources precharges the actual graph's span vector, then each span's weighted
+region vector (when Weighted) and stop list in authored/schema order. Uniform and BetweenNotches
+carry no region vector. Fixed side, direction and Explicit/Formula/Profile amount metadata stay
+unchanged; the producer does not read a symbolic value, look up a copy/landmark, resolve an anchor,
+validate current contexts or realize ease/geometry.
+
+charge_sewing_landmark_resources charges the provided actual Notch/TurnPoint registry slice. Root
+composition must supply its exact owned vector. Exhaustive private views and fixed Copy-payload
+constraints cover each held piece/anchor/id/profile representation; bindings remain symbolic, with
+no inferred notch style, sample/production dimensions or encoding. No landmark is reborn or resolved.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_sewing_graph_resources(&sewing_graph, &mut meter)?;
+charge_sewing_landmark_resources(&landmarks, &mut meter)?;
+let represented_sewing = meter.finish()?;
+```
+
+The native graph has3 spans covering Uniform/Weighted/BetweenNotches and Explicit/Profile/Formula
+amounts. Its weighted span holds2 regions, the spans retain1/2/2 stops, and the registry holds two
+Notches plus one TurnPoint:13 collection entries, zero text bytes and zero unbounded-counter bits.
+Maximum2 refuses sewing.spans (requested3, actual graph owner). Maximum3 refuses the first stop list
+at3+1, span owner/index0; maximum5 refuses the weighted vector at4+2, weighted span owner/index1.
+After10 graph entries, maximum12 refuses the3-entry sewing.landmarks field. Empty actual graph and
+registry contribute zero and cannot clear an earlier meter refusal.
+
+After a real deletion retires a held boundary source, the same graph/landmark accounting still succeeds
+without rebirth or resolving the now-orphaned anchors. Exact graph/landmarks/ledger and profile intent
+remain unchanged on success/refusal. Four new actual cases plus prior24 resource cases pass:28 total,
+with strict selected lint and formatting. The first compile caught a missing public re-export, which
+was corrected before these checks passed. Garment families, root/source composition and runtime
+model admission remain owned; these counts supply no binding, realized ease, geometry, physical,
+release, whole-model or allocator RSS/time certificate.
+
 Focused runtime evidence comprises37 earlier bus cases, eight runtime-control cases and one actual
 source-copy case:46 passing cases. The evidence-input slice established six pure admission/fraction
 cases and control privacy. The copy slice passes strict selected lint/formatting and11 affected
