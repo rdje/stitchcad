@@ -1,5 +1,5 @@
 //! Exact logical owned command data; no authorization, model lookup or runtime admission capability.
-use super::{CommandMutationGroup, MutationPayload};
+use super::{CommandHistoryRequest, CommandMutationGroup, MutationPayload};
 use crate::{
     design::{
         charge_length_declaration_resources, DesignResourceLimitError, DesignResourceLocation,
@@ -81,4 +81,25 @@ pub fn charge_command_mutation_group_resources(
         }
     }
     Ok(())
+}
+
+/// Charge the actual history intent's operator context and complete original authoring-group copy.
+/// The direction is fixed data; original contexts, keys, payloads and aliases stay unchanged.
+/// No accepted-record lookup, authority, model/currentness check or history traversal occurs.
+/// # Errors
+/// Returns the original first refusal, with the original containing group and request location.
+pub fn charge_command_history_request_resources(
+    request: &CommandHistoryRequest,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    let (context, original) = request.resource_parts();
+    sink.charge_counter_bits(
+        context.resource_revision().resource_bits(),
+        location(
+            original.id().entity_id(),
+            "requests.history.context.revision",
+            None,
+        ),
+    )?;
+    charge_command_mutation_group_resources(original, sink)
 }

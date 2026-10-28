@@ -155,8 +155,81 @@ during accounting. Every private report owner and change/Notch definition is mat
 The original runtime/report implementations are byte-exact after removing the added readonly views;
 execution, history, preparation, operation and identity files are byte-exact in this slice.
 
-Accepted authoring/history record readers remain G1-SLICE.6.8.2.2.2.2.4.3.2.2; private retained
-model/reserve/journal composition and prospective runtime retained admission remain .4.3.3–.4.3.4.
-Coupled resource acceptance .4.4 and deeper/full verification remain deferred. Logical field counts
-do not bound allocator peaks, host algorithm time, raw ingress, numeric/file/decompression/geometry
-work or physical/release acceptance.
+## Actual accepted authoring and history records
+
+These readers inspect immutable data returned by real execution. They do not accept a request as
+proof that an action occurred, look up a private journal or perform a new effect.
+
+| Reader | Actual owned fields |
+| --- | --- |
+| charge_command_group_commit_resources | original group report, issued revision, discarded-redo ID vector |
+| charge_command_audit_entry_resources | effect sequence, exact original request copy, accepted commit |
+| charge_command_group_commit_result_resources | one accepted-record copy; fixed replay flag |
+| charge_command_history_request_resources | current operator context revision, complete original authoring-group copy; fixed direction |
+| charge_command_history_audit_entry_resources | effect sequence, effective-command vector, exact history request, before/restored revisions |
+| charge_command_history_result_resources | one accepted history-action copy; fixed replay flag |
+
+Every owner is matched exhaustively, including grant/time, replay, direction and oldest-undo ID
+fields guarded as fixed values. SystemTime here is the original trusted final authorization observation;
+reading it calls no clock or authority provider. Audit sequence and every owned DesignRevision count
+their actual represented magnitude bits, including duplicate values and zero. An authoring entry
+walks sequence, request and commit in schema order. A commit walks its report, issued revision and
+then precharges its complete discarded-redo vector. A history action walks sequence, precharges
+its stored effective-command vector, walks the full history request, then before/restored revisions.
+An original retry alias stays in the copied request; the separate stored effective-command vector
+omits execution aliases. Neither reader reconstructs or deduplicates either owner.
+
+```rust
+let mut meter = DesignResourceMeter::new(explicit_resource_limits);
+charge_command_audit_entry_resources(actual_accepted.entry(), &mut meter)?;
+let owned_record = meter.finish()?;
+```
+
+The result reader charges its one owned entry once. Calling an entry reader and its containing
+result reader on the same sink would deliberately walk that entry twice; choose the containing
+owner being measured. Exact replay creates no additional private accepted record, but its returned
+owned result still contains a complete copied record and has the same demand as the original result.
+No model, journal lookup, fresh grant, currentness or publication capability is carried by a count.
+
+The native accepted fixture starts with a real revision0 Known2 model and two actual Piece reasons
+`explicit selection pending`, independently verified as26 UTF-8 bytes each. Its four submitted
+members are a Known3 Measurement replacement, a reversed two-Piece Material reason ` é `, an
+actual AddNotch, and an exact alias of the Measurement request. The inspect/commit-authorized bus
+actually accepts the group. Its request is12/4/0; the report plus issued revision is27/120/1.
+The report text includes each old26/new4 reason for both Pieces in the step and again in the net
+difference. Effect sequence1 adds1 bit: the complete authoring entry and each returned result copy
+are39/124/2. A prior2 entries/2 bytes/1 bit composes to41/126/3.
+
+A distinct human operator with a real complete grant performs Undo and Redo. The original agent
+and principal stay unchanged inside the copied authoring group. The actual effective command vector
+has3 entries, omitting the alias. The Undo request is12/4/1; sequence2, before revision1 and restored
+revision0 make its action15/4/4. Redo's sequence3, operator/before revision0 and restored revision1
+make its action15/4/3. Exact Undo replay after Redo returns the original action; exact authoring
+replay after the round trip returns its original record. Accounting these copies calls neither
+source nor authority, and changes neither original object nor accepted metadata.
+
+Original locations stay under the actual containing authoring group. Record-specific fields include
+records.authoring.sequence, records.commit.revision, records.commit.discarded_redo,
+records.history.sequence, records.history.commands, records.history.before_revision and
+records.history.revision. Nested requests/reports preserve their existing original fields/positions;
+requests.history.context.revision identifies the current operator's own revision. A record sequence
+limit can refuse before walking requests or reports. A full effective-command vector is refused
+before its members. No private reason text is copied into a witness. The first prior failure survives
+every record, result, commit and history-request reader.
+
+The branch case accepts a second group, undoes both groups, then accepts a new branch. The actual
+commit's discarded-redo vector preserves both original group IDs in redo order and contributes2
+entries. That accepted entry is7/64/5: sequence5 uses3 bits while newly issued revision3 uses2,
+independently of the restored revision0. At6 entries, records.commit.discarded_redo refuses5+2;
+at2 bits, records.authoring.sequence refuses0+3. After two more no-op commits at bounded undo depth2,
+the oldest-undo ID is present but fixed, the discarded vector is empty, and the actual final entry
+is3/4/18. No lost-history event is fabricated from a count.
+
+Four actual record cases, five report cases and four request cases pass with strict affected lint
+and formatting. All original execution/history/request implementations are byte-exact after removing
+the new exhaustive readonly views; preparation, operation, identity and group implementations are
+byte-exact. Existing request/report readers are byte-exact. This implements accepted data accounting
+with focused checks. Private retained model/reserve/journal composition and prospective runtime
+retained admission remain G1-SLICE.6.8.2.2.2.2.4.3.3–.4.3.4; coupled acceptance .4.4 and deeper/full
+verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
+ingress, numeric/file/decompression/geometry work or physical/release acceptance.

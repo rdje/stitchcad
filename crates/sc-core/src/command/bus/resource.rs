@@ -1,7 +1,8 @@
 //! Exact actual owned report data, without model/authority lookups or retained runtime admission.
 use super::{
-    CommandGroupDifference, CommandGroupPreview, CommandLengthChange, CommandMaterialChange,
-    CommandPreview,
+    CommandAuditEntry, CommandGroupCommit, CommandGroupCommitResult, CommandGroupDifference,
+    CommandGroupPreview, CommandHistoryAuditEntry, CommandHistoryResult, CommandLengthChange,
+    CommandMaterialChange, CommandPreview,
 };
 use crate::{
     command::resource::fixed,
@@ -239,4 +240,111 @@ fn charge_notch(notch: &Notch) {
     fixed(id);
     fixed(anchor);
     fixed(representation);
+}
+
+/// Charge the actual accepted commit's original report, issued revision and redo-discard vector.
+/// Fixed oldest-undo identities add no dynamic entry. This borrows data without executing an effect.
+/// # Errors
+/// Preserves the first refusal at its actual containing group, static field and original index.
+pub fn charge_command_group_commit_resources(
+    commit: &CommandGroupCommit,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    let (changes, revision, history) = commit.resource_parts();
+    let site = Site {
+        owner: changes.group().entity_id(),
+        index: None,
+    };
+    charge_command_group_preview_resources(changes, sink)?;
+    sink.charge_counter_bits(
+        revision.resource_bits(),
+        site.location("records.commit.revision"),
+    )?;
+    let discarded = history.resource_discarded();
+    sink.charge_entries(
+        discarded.len(),
+        site.location("records.commit.discarded_redo"),
+    )?;
+    for group in discarded {
+        fixed(group);
+    }
+    Ok(())
+}
+
+/// Charge one actual immutable accepted authoring record in stored schema order.
+/// Its sequence, original request copy and complete accepted commit are independent owned fields.
+/// Trusted final grant/time are fixed values; no fresh authority, model or replay lookup occurs.
+/// # Errors
+/// Preserves the original first resource refusal; this is not runtime retained-state admission.
+pub fn charge_command_audit_entry_resources(
+    entry: &CommandAuditEntry,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    let (sequence, request, commit) = entry.resource_parts();
+    let site = Site {
+        owner: request.id().entity_id(),
+        index: None,
+    };
+    sink.charge_counter_bits(
+        sequence.resource_bits(),
+        site.location("records.authoring.sequence"),
+    )?;
+    crate::command::charge_command_mutation_group_resources(request, sink)?;
+    charge_command_group_commit_resources(commit, sink)
+}
+
+/// Charge an actual returned authoring result's owned accepted-record copy, including exact replay.
+/// Its fixed replay flag neither deduplicates the returned data nor appends to the private journal.
+/// # Errors
+/// Preserves the original first refusal without authority, currentness or publication effects.
+pub fn charge_command_group_commit_result_resources(
+    result: &CommandGroupCommitResult,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    charge_command_audit_entry_resources(result.resource_entry(), sink)
+}
+
+/// Charge one actual accepted history action, retaining its operator/original-author distinction.
+/// Schema order is sequence, effective-command vector, full history request, before/restored revision.
+/// Original aliases remain in the copied authoring request; effective commands are the actual stored
+/// vector with execution aliases omitted. No reconstruction, model traversal or history effect occurs.
+/// # Errors
+/// Preserves the original first refusal under the actual original containing group.
+pub fn charge_command_history_audit_entry_resources(
+    entry: &CommandHistoryAuditEntry,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    let (sequence, commands, request, before, revision) = entry.resource_parts();
+    let site = Site {
+        owner: request.original().id().entity_id(),
+        index: None,
+    };
+    sink.charge_counter_bits(
+        sequence.resource_bits(),
+        site.location("records.history.sequence"),
+    )?;
+    sink.charge_entries(commands.len(), site.location("records.history.commands"))?;
+    for command in commands {
+        fixed(command);
+    }
+    crate::command::charge_command_history_request_resources(request, sink)?;
+    sink.charge_counter_bits(
+        before.resource_bits(),
+        site.location("records.history.before_revision"),
+    )?;
+    sink.charge_counter_bits(
+        revision.resource_bits(),
+        site.location("records.history.revision"),
+    )
+}
+
+/// Charge an actual returned history result's owned action copy, including exact replay.
+/// The replay flag is fixed; it grants no traversal, currentness or reset capability.
+/// # Errors
+/// Preserves the original first refusal without model/source/authority callbacks.
+pub fn charge_command_history_result_resources(
+    result: &CommandHistoryResult,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    charge_command_history_audit_entry_resources(result.resource_entry(), sink)
 }

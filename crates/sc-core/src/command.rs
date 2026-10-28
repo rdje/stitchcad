@@ -25,7 +25,9 @@ mod query;
 mod release;
 mod request;
 mod resource;
-pub use resource::charge_command_mutation_group_resources;
+pub use resource::{
+    charge_command_history_request_resources, charge_command_mutation_group_resources,
+};
 mod scope;
 mod snapshot;
 mod tech_pack;
@@ -37,14 +39,17 @@ pub use authorization::{
     CommandGrantRejection,
 };
 pub use bus::{
-    charge_command_group_preview_resources, charge_command_preview_resources, CommandAuditEntry,
-    CommandAuditSequence, CommandBus, CommandBusError, CommandControlError, CommandDifferenceError,
-    CommandGroupCommit, CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference,
-    CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep,
-    CommandHistoryAuditEntry, CommandHistoryChange, CommandHistoryError, CommandHistoryResult,
-    CommandIdentityError, CommandLengthChange, CommandMaterialChange, CommandMaterialPreview,
-    CommandMeasurementPreview, CommandNotchPreview, CommandPieceList, CommandPreview,
-    CommandPreviewError, CommandResult, CommandRevisionChange,
+    charge_command_audit_entry_resources, charge_command_group_commit_resources,
+    charge_command_group_commit_result_resources, charge_command_group_preview_resources,
+    charge_command_history_audit_entry_resources, charge_command_history_result_resources,
+    charge_command_preview_resources, CommandAuditEntry, CommandAuditSequence, CommandBus,
+    CommandBusError, CommandControlError, CommandDifferenceError, CommandGroupCommit,
+    CommandGroupCommitError, CommandGroupCommitResult, CommandGroupDifference, CommandGroupPreview,
+    CommandGroupPreviewError, CommandGroupPreviewStep, CommandHistoryAuditEntry,
+    CommandHistoryChange, CommandHistoryError, CommandHistoryResult, CommandIdentityError,
+    CommandLengthChange, CommandMaterialChange, CommandMaterialPreview, CommandMeasurementPreview,
+    CommandNotchPreview, CommandPieceList, CommandPreview, CommandPreviewError, CommandResult,
+    CommandRevisionChange,
 };
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{

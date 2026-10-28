@@ -57,6 +57,15 @@ pub struct CommandHistoryRequest {
     direction: CommandHistoryDirection,
 }
 impl CommandHistoryRequest {
+    pub(crate) fn resource_parts(&self) -> (&CommandMutationContext, &CommandMutationGroup) {
+        let Self {
+            context,
+            original,
+            direction,
+        } = self;
+        super::resource::fixed(direction);
+        (context, original)
+    }
     /// Check explicit target membership, then Design consistency without looking up model/history.
     /// Current operator and revision need not equal the original author's prior context. Operation
     /// retry-key scope/equality and current authority remain runtime checks, with no silent minting.

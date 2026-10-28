@@ -3,16 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact actual owned preview-report resources
+## _(2026-10-28 UTC)_ — exact actual accepted-record resources
 
-0466 .6.8.2.2.2.2.4.3.2.1 borrows every actual single/group preview and net-difference owner.
-Before/after evidence/reasons, alias reports, common/member revisions and net copies count separately.
-Native report5/request4/strict lint/fmt pass:30/32/12,prefix32/34/13,restored32/32/16,no-op/Unknown8/0/0;
-original owner/index/first-error witnesses and zero source/authority callbacks. Runtime bodies byte-exact.
-Test preparation corrected private into_definition use to public definition clones, then explicitly assigned
-actual Piece Materials: assigned_definition names a Facing assignment, not Piece assignments. No product
-change required. Whole0465 retained619. Promotion:indexed command-layer decision. Record/private retained/
-runtime admission and coupled/deeper/full verification remain owned; no runtime-policy certificate.
+0467 .6.8.2.2.2.2.4.3.2.2 borrows actual authoring commit/record/result and history request/action/result
+owners exhaustively, including every revision/effect sequence, original request/report copy, effective
+command and redo-discard vector; grant/time/replay/direction/oldest undo identity remain guarded fixed.
+Native record4/report5/request4/strict lint/fmt pass:author39/124/2,commit27/120/1,Undo15/4/4,Redo15/4/3,
+prefix41/126/3,branch7/64/5 and eviction3/4/18. Actual agent author/human operator, exact replays,
+original first witnesses and zero source/authority callbacks verified. Original runtime/reader bodies
+byte-exact after added readonly views. Whole0466 and whole0461–0466 decision journals retained620.
+Promotion:indexed command-layer decision. Private aggregate/runtime retained policy and broad proof pending.
+[Whole0466 report lesson](docs/history/stitchcad-devnotes-part620.md) retains exact alias/net/restored ownership proof.
 [Whole0465 owned-request lesson](docs/history/stitchcad-devnotes-part619.md) retains exact request/resource/alias proof.
 [Whole0464 publication lesson](docs/history/stitchcad-devnotes-part618.md) retains exact carry/undo/API/retirement proof.
 [Whole0463 Notch lesson](docs/history/stitchcad-devnotes-part616.md) retains exact peek/precedence/rollback proof.

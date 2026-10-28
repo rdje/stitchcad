@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0466
+## Current leaf acceptance —0467
 
-- [x] ROOT CAUSE: python3 -I -B native report scope:three variants/exhaustive owner/change/Notch
-  views, no clone/source/current/auth/numeric callbacks; original runtime bodies byte-exact rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_reports:::
-  5 passed rc=0:30/32/12,prefix32/34/13,restored32/32/16,no-op/Unknown8/0/0, original witnesses.
-- [x] NO REGRESSION: request4, strict core-lib/affected-test Clippy/both package fmt pass rc=0;
-  runtime paths unchanged. Accepted record/private aggregate/runtime retained/coupled/full work deferred.
+- [x] ROOT CAUSE: python3 -I -B native record scope:exhaustive private views/fixed guards, existing
+  runtime/request/report implementations byte-exact, no clone/model/source/auth callbacks rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_records:::
+  4 passed rc=0:author39/124/2,Undo15/4/4,Redo15/4/3,branch7/64/5,eviction3/4/18 and witnesses.
+- [x] NO REGRESSION: report5/request4, strict core-lib/affected-test Clippy/both package fmt pass
+  rc=0. Private aggregate/runtime retained/coupled/deeper/full work deferred.
 
 ## Goal
 
@@ -928,35 +928,33 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0465 exact owned typed mutation requests; [whole scope/proofs](../history/stitchcad-devnotes-part619.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact actual report/difference/accepted authoring/history record resources; split by actual owners.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.2.1`
   Status: `done`
-  Goal:0466 exact actual single/group preview and net-difference resources, including alias copies,
-  before/after evidence/reasons, represented revisions and original owner/member witnesses.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native report scope:all three explicit variants and actual
-    private owner/change/Notch exhaustive views rc=0; report copies differ from request/operation demand.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part619.md:
-    3 exact Git spans rc=0; whole0465 retained. Test prep corrected private consuming API to public
-    definition clones and explicitly assigned actual Pieces; assigned_definition assigns a Facing only.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and affected sc-measure test strict Clippy:
-    both rc=0; no clone/model/source/currentness/authority/numeric callback or supplied totals in readers.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_reports:::
-    5 passed rc=0. Actual bus mixed report30/32/12, prefix32/34/13, restored32/32/16; revision0
-    no-op/Unknown group8/0/0, singles0/0/0 and3/0/0; alias copies and all before/after owners counted.
-    Exact vector/evidence/reason/revision refusals preserve group/step/net or Design/change coordinates;
-    prior errors survive all variants. Objects unchanged; source telemetry0/0/0 and authority reads0.
-  - [x] NO REGRESSION: request4 and both package fmt pass rc=0. Native source comparison:original
-    five report/runtime files byte-exact after removing new views; execution/history/preparation/
-    operation/identity files byte-exact rc=0. Python/OS independently verify both Unicode reasons4B.
-  - [x] LOCKSTEP: mdbook build/native publication84 chapters/159 scoped API rows/1517 source links/
-    2554 rendered links rc=0. Book examples/witnesses and indexed command-layer decision promoted.
-    history_archive.sh verify-retention:1073 logical/40 working Markdown/59926 decoded lines/
-    4532281 decoded bytes/2363093 resident bytes rc=0. Records .3.2.2 and retained/coupled/full pending.
+  Goal:0466 exact actual report/net resources; [whole scope/proofs](../history/stitchcad-devnotes-part620.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.2.2`
-  Status: `pending`
-  Goal: exact accepted authoring/history records and result/request owners, duplicated snapshots and
-  represented revision/audit counters; no runtime retained-policy claim.
+  Status: `done`
+  Goal:0467 exact actual authoring commit/record/result and history request/action/result resources.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native record scope:exhaustive private views count separate
+    effect/revision/request/report/vector owners; fixed grant/time/replay/direction/oldest undo guarded rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part620.md:
+    4 exact Git spans rc=0; whole0466 and whole0461–0466 decision journals retained before containment.
+    Original implementations and request/report readers byte-exact after removing new readonly views rc=0.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and affected sc-measure test strict Clippy:
+    both rc=0. All6 readers borrow actual data; no clone, model/source/current/auth or numeric callback.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_records:::
+    4 passed rc=0:author39/124/2,commit27/120/1,Undo15/4/4,Redo15/4/3,history request12/4/1,
+    prefix41/126/3,actual branch7/64/5 and eviction3/4/18. Real agent author/human operator, original
+    exact replay entries, alias-containing requests/effective command3, two redo-discard IDs verified.
+    Original sequence/operator/before/restored/request/report/vector witnesses and prior errors survive;
+    original objects unchanged, source0/0/0+authority0. Python/OS original reason26B rc=0.
+  - [x] NO REGRESSION: report5/request4 and both package fmt pass rc=0. Native execution/history/
+    request implementations byte-exact after new views; preparation/operation/identity/group unchanged.
+  - [x] LOCKSTEP: mdbook build/native publication84 chapters/159 scoped API rows/1517 source links/
+    2555 rendered links rc=0; bounded resource examples and indexed decision promotion updated.
+    history_archive.sh verify-retention:1074 logical/41 working Markdown/60063 decoded lines/
+    4543513 decoded bytes/2374325 resident bytes rc=0. Private aggregate/runtime/coupled/full pending.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.3`
   Status: `pending`
   Goal: complete private retained bus composition: actual current/history alternatives, reserve backing,

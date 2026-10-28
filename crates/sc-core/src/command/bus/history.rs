@@ -25,6 +25,14 @@ pub struct CommandHistoryChange {
     discarded_redo: Vec<CommandGroupId>,
 }
 impl CommandHistoryChange {
+    pub(super) fn resource_discarded(&self) -> &[CommandGroupId] {
+        let Self {
+            dropped_undo,
+            discarded_redo,
+        } = self;
+        crate::command::resource::fixed(dropped_undo);
+        discarded_redo
+    }
     /// Oldest undo group evicted at the configured depth, if any.
     #[must_use]
     pub const fn dropped_undo(&self) -> Option<CommandGroupId> {
@@ -49,6 +57,28 @@ pub struct CommandHistoryAuditEntry {
     checked_at: SystemTime,
 }
 impl CommandHistoryAuditEntry {
+    pub(super) fn resource_parts(
+        &self,
+    ) -> (
+        &CommandAuditSequence,
+        &[CommandId],
+        &CommandHistoryRequest,
+        &DesignRevision,
+        &DesignRevision,
+    ) {
+        let Self {
+            sequence,
+            commands,
+            request,
+            before,
+            revision,
+            grant,
+            checked_at,
+        } = self;
+        crate::command::resource::fixed(grant);
+        crate::command::resource::fixed(checked_at);
+        (sequence, commands, request, before, revision)
+    }
     /// Actual common authoring/history chronological effect identity.
     #[must_use]
     pub const fn sequence(&self) -> &CommandAuditSequence {
@@ -103,6 +133,11 @@ pub struct CommandHistoryResult {
     replayed: bool,
 }
 impl CommandHistoryResult {
+    pub(super) fn resource_entry(&self) -> &CommandHistoryAuditEntry {
+        let Self { entry, replayed } = self;
+        crate::command::resource::fixed(replayed);
+        entry
+    }
     /// Original accepted action record, without a model or replay/reset capability.
     #[must_use]
     pub const fn entry(&self) -> &CommandHistoryAuditEntry {

@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0466 — account actual owned preview-report and net-difference resources
+## STITCHCAD-G1-0467 — account actual accepted authoring and history record resources
 
-- Exhaustively borrow all three previews, original group/alias reports and separate actual net snapshots.
-- Count before/after evidence/reasons and all owned revisions; preserve original Design/group/member witnesses.
-- Real bus report5/request4 and strict lint/fmt pass:30/32/12, prefix32/34/13, restored32/32/16 and no-op/Unknown8/0/0.
-- Source/authority telemetry zero during readers; runtime bodies unchanged. Whole0465 retained619; accepted records and runtime retained admission pending.
+- Exhaustively borrow commit/record/result/history-request owners; count effect sequences, copied requests/reports and all stored revisions.
+- Count effective-command and discarded-redo vectors; preserve fixed grant/time/replay/direction/oldest-undo fields and original witnesses.
+- Real record4/report5/request4/strict lint/fmt pass:author39/124/2, Undo15/4/4, Redo15/4/3, branch7/64/5 and eviction3/4/18.
+- Agent author/human operator and exact replay copies verified, source/authority reads zero during accounting; original runtime/readers unchanged.
+- Whole0466 and whole0461–0466 decision journals retained620; private aggregate/runtime retained enforcement and broader verification pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -38,10 +38,10 @@ fn inspection(design: EntityId, operator: Actor, revision: DesignRevision) -> Co
         QueryPayload::GetPieceList,
     ))
 }
-fn human() -> Actor {
+pub(super) fn human() -> Actor {
     Actor::Human(id(700003))
 }
-fn operator_host(design: EntityId, commands: Vec<CommandId>) -> Host {
+pub(super) fn operator_host(design: EntityId, commands: Vec<CommandId>) -> Host {
     let mut host = Host::new(design);
     for (entries, status) in [
         (&mut host.active, CommandGrantStatus::Active),

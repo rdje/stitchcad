@@ -78,6 +78,8 @@ mod resource_material;
 mod resource_measurement;
 #[path = "command_bus/resource_notch.rs"]
 mod resource_notch;
+#[path = "command_bus/resource_records.rs"]
+mod resource_records;
 #[path = "command_bus/resource_reports.rs"]
 mod resource_reports;
 #[path = "command_bus/resource_requests.rs"]

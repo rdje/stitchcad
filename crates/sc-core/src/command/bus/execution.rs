@@ -20,6 +20,10 @@ use std::{collections::TryReserveError, time::SystemTime};
 #[derive(Clone, Debug, Default, PartialEq, Eq, PartialOrd, Ord)]
 pub struct CommandAuditSequence(DesignRevision);
 impl CommandAuditSequence {
+    pub(super) fn resource_bits(&self) -> u64 {
+        let Self(revision) = self;
+        revision.resource_bits()
+    }
     pub(super) fn successor(&self) -> Self {
         Self(self.0.successor())
     }
@@ -38,6 +42,16 @@ pub struct CommandGroupCommit {
     history: CommandHistoryChange,
 }
 impl CommandGroupCommit {
+    pub(super) fn resource_parts(
+        &self,
+    ) -> (&CommandGroupPreview, &DesignRevision, &CommandHistoryChange) {
+        let Self {
+            changes,
+            revision,
+            history,
+        } = self;
+        (changes, revision, history)
+    }
     /// Original base-revision step/net report from actual validated preparation.
     #[must_use]
     pub const fn changes(&self) -> &CommandGroupPreview {
@@ -65,6 +79,24 @@ pub struct CommandAuditEntry {
     checked_at: SystemTime,
 }
 impl CommandAuditEntry {
+    pub(super) fn resource_parts(
+        &self,
+    ) -> (
+        &CommandAuditSequence,
+        &CommandMutationGroup,
+        &CommandGroupCommit,
+    ) {
+        let Self {
+            sequence,
+            request,
+            commit,
+            grant,
+            checked_at,
+        } = self;
+        crate::command::resource::fixed(grant);
+        crate::command::resource::fixed(checked_at);
+        (sequence, request, commit)
+    }
     /// Actual chronological effect sequence; exact retries retain their original value.
     #[must_use]
     pub const fn sequence(&self) -> &CommandAuditSequence {
@@ -104,6 +136,11 @@ pub struct CommandGroupCommitResult {
     replayed: bool,
 }
 impl CommandGroupCommitResult {
+    pub(super) fn resource_entry(&self) -> &CommandAuditEntry {
+        let Self { entry, replayed } = self;
+        crate::command::resource::fixed(replayed);
+        entry
+    }
     /// Original accepted record; an exact replay neither rewrites it nor adds another entry.
     #[must_use]
     pub const fn entry(&self) -> &CommandAuditEntry {

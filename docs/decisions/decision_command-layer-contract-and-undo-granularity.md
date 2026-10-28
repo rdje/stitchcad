@@ -105,87 +105,20 @@ Whole0451–0455 implementation journals retain exact source intervals in
 Whole0456–0460 source/root/runtime implementation journals retain exact source intervals in
 [part614](../history/stitchcad-devnotes-part614.md); current contracts/examples remain in the book.
 
-## Exact prospective Measurement resources0461
+[Whole0461–0466 resource decisions](../history/stitchcad-devnotes-part620.md) retain exact prospective
+model/Notch/revision and actual request/report ownership contracts and focused proofs.
 
-answers: "does replacing evidence charge both the old and new vectors or allocate a candidate first?"
+## Exact actual accepted-record resources0467
 
-After actual current checks/Measurement binding, a private borrowed root projection selects the exact
-replacement at its canonical slot and charges only resulting owned evidence, before candidate clone/
-constructors. Public current wrappers use the unchanged None route; original index/order/other fields
-and all source/census ownership remain. No supplied totals or public projection capability is exposed.
-Projection3/old Measurement4/source33/canonical selection6/strict lint/fmt pass against actual rebuilt
-validated-model oracle: +1 refusal/no host copy, no-op/same-size at N, Unknown N-2, sequential shrink/
-restore/alias, unchanged original address/revision and refused group/key/capacity reused. E0599 uses
-actual difference getters; zero shared Material-width fixture corrected to explicit positive1000um.
-Whole0460 retained613. Material/Notch/revision .4.2.2–.4.2.4, retained state/deeper/full proof remain owned.
+answers: "does exact replay eliminate returned record data, and does a discarded branch own a vector?"
 
-## Exact selected Material resources0462
-
-answers: "does a proposed Material reason count in addition to the old reason or before Piece copies?"
-
-Check every actual selected Piece first, preserving authored missing-target index; then borrow the
-selection/assignment in a private exhaustive projection enum. At each original Piece slot charge its
-resulting reason only when selected; retain unselected fields, owned labels/collections and fixed
-Assigned refs. The full original schema walk precedes any Piece/reason/model clone, with no supplied
-totals or mutable/public projection capability. Actual rebuilt-model oracle plus Material projection4/
-old Material5/Measurement projection3/source33/Piece5/strict lint/fmt pass:4+3→6+6 adds5 bytes and
-refuses before host copy; no-op/same-size/shrink/assigned removes7, missing index1, sequential restore/
-alias and failed group/key/capacity preservation. Python/OS confirms exact UTF-8 lengths4/3/6.
-Whole0461/0456–0460 journals614 retain4 Git spans. Notch/revision/retained/deeper/full work remains owned.
-
-## Exact actual Notch-append resources0463
-
-answers: "can prospective Notch admission preserve original identity/anchor failures without consuming the cursor?"
-
-Readonly-peek the actual concrete borrowed iterator, build/validate only fixed Notch payload, then
-admit the exact resulting root before staged consumption or registry/model copy. Target→exhaustion→
-anchor precedence persists; no fake ID or external allocator is used. Charge the whole new registry
-before members, including the actual appended fixed Notch; exhaustive/Copy guards and nonzero enum
-size protect the shape/count. Native Notch projection3/old Notch4/source33/sewing4/cursor1/strict lint/
-fmt pass against actual rebuilt model: +1 entries/unchanged text/bits; no-copy refusal, one-entry
-boundary/aliases/later rollback and freed-evidence retry retains original ID/key/group/capacity.
-Whole0462 retained615. Publication revision .4.2.4/retained/deeper/full work remains owned; no complete
-retained-state, ingress, allocator memory/time, physical or release certificate.
-
-## Exact maximum-issued publication resources0464
-
-answers: "does undo lower the resource forecast for the next issued revision?"
-
-After actual group metadata validation, project the complete candidate with the private maximum-issued
-revision's successor magnitude, before successor/revision-model construction. Pinned public bits/
-trailing_ones APIs forecast width readonly; no clone/format/counter advance. Original public successor
-semantics persist. Checked magnitude-count overflow uses exact chunks/no wrap, clipping or counter cap.
-Runtime revision3/forecast1/count-boundary1/source33/structure5/context2/D2851/copy1/strict lint/fmt pass:
-actual rebuilt model oracle covers0/sparse/carry/u128MAX; carry refusal leaves bounded metadata copy1,
-no final revision reconstruction, original revision/key/capacity. Max3/undo0 still forecasts4/3bits under
-cap2; exact authoring/history replays0/0/0. Offline num-bigint0.4.6 public docs verified after web fetch
-failed. Whole0463 and whole0388/0389 lesson616/617 retain4 Git spans, freeing DEV from401-line overflow.
-All model projections implemented with focused checks; retained .4.3/coupled/deeper/full proof remains.
-
-## Exact owned mutation-request resources0465
-
-answers: "is one owned Material reason multiplied by selected Pieces, and do retry aliases own data?"
-
-Typed group accounting charges common/member revision copies, member/selection/Known-evidence vectors
-and one stored reason per payload. Exact aliases own another context/payload copy; runtime dedup does
-not erase those fields. Declared operation work8 differs from one owned4-byte reason for two Pieces.
-CommandState locations keep actual containing group/member position, not a promoted referenced
-canonical ID. Exhaustive private owner views/Copy guards and shared actual declaration walker cover
-all five variants without model/current/authority/numeric callbacks. New request4/source33/canonical6/
-strict lint/fmt pass:12/4/14,prefix14/6/15, fixed3/0/0, Unknown1/0/0 and original first witnesses.
-Whole0464 retained618; current constructors/bus code byte-exact. Bounded command-resource chapter
-owns examples; report/record/private retained/runtime policy and coupled/deeper/full work remains.
-
-## Exact owned preview-report resources0466
-
-answers: "does a restored net value or retry alias remove owned report snapshots from resource demand?"
-
-Actual single/group preview readers borrow every private owner exhaustively. Charge common/step revisions,
-step and net vectors, before/after evidence/reasons and exact alias report copies in actual stored order.
-No-op reports own no changes; fixed Notch payloads own no dynamic field. Net restoration removes only the
-net snapshots: intermediate/restoring step copies remain. Standalone locations name actual Design/change;
-group locations name actual containing group/step, net members their original change index. No referenced
-Piece/declaration is promoted into a containing owner; no clone/model/source/authority lookup occurs.
-Real inspect-authorized bus reports verify30/32/12,prefix32/34/13,restored32/32/16 and revision0
-no-op/Unknown8/0/0; report5/request4/strict lint/fmt pass. Runtime bodies byte-exact. This is logical
-owned report data only; accepted records/private aggregate/retained runtime policy and broader proof remain.
+Actual authoring commit/record/result and history request/action/result readers exhaustively borrow all
+owners. Schema-order counts include effect sequence, every represented revision and every original
+request/report snapshot. Actual effective-command and discarded-redo vectors precharge their full lengths;
+aliases remain in copied requests, omitted only from the actual effective-command vector. Grant/time,
+replay/direction and oldest-undo identity are fixed, guarded fields. Returned exact replay copies own
+complete records despite no new private journal/action entry. Nested original witnesses remain unchanged.
+Real bus author39/124/2,Undo15/4/4,Redo15/4/3,prefix41/126/3,branch7/64/5 and eviction3/4/18
+pass record4/report5/request4/strict lint/fmt. Original agent and authenticated human operator stay distinct;
+source/authority callbacks0 during readers. Runtime and prior reader implementations remain byte-exact.
+Private aggregate/prospective retained admission and coupled/full verification stay separately owned.

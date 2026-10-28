@@ -30,7 +30,12 @@ pub use group::{CommandGroupPreview, CommandGroupPreviewError, CommandGroupPrevi
 mod group_difference;
 mod resource;
 pub use group_difference::CommandGroupDifference;
-pub use resource::{charge_command_group_preview_resources, charge_command_preview_resources};
+pub use resource::{
+    charge_command_audit_entry_resources, charge_command_group_commit_resources,
+    charge_command_group_commit_result_resources, charge_command_group_preview_resources,
+    charge_command_history_audit_entry_resources, charge_command_history_result_resources,
+    charge_command_preview_resources,
+};
 mod execution;
 pub use execution::{
     CommandAuditEntry, CommandAuditSequence, CommandGroupCommit, CommandGroupCommitError,
