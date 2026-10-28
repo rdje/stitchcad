@@ -40,6 +40,14 @@ pub struct CommandMaterialPreview {
     changes: Vec<CommandMaterialChange>,
 }
 impl CommandMaterialPreview {
+    pub(super) fn resource_parts(&self) -> (EntityId, &DesignRevision, &[CommandMaterialChange]) {
+        let Self {
+            design,
+            revision,
+            changes,
+        } = self;
+        (*design, revision, changes)
+    }
     /// Actual represented Design.
     #[must_use]
     pub const fn design(&self) -> EntityId {

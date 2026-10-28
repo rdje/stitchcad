@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0465
+## Current leaf acceptance —0466
 
-- [x] ROOT CAUSE: python3 -I -B native request scope:exhaustive views/five variants/schema precharge,
-  no clone/model/current/auth/numeric callbacks; constructors/bus byte-exact; UTF8 Python/OS4 rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_requests:::
-  4 passed rc=0:12/4/14,prefix14/6/15, fixed3/0/0, Unknown1/0/0, exact group/member/prior errors.
-- [x] NO REGRESSION: source resource33/canonical-filter6, strict core-lib/affected-test Clippy/both
-  package fmt pass rc=0. Runtime bus/constructors unchanged; retained/coupled/deeper/full work deferred.
+- [x] ROOT CAUSE: python3 -I -B native report scope:three variants/exhaustive owner/change/Notch
+  views, no clone/source/current/auth/numeric callbacks; original runtime bodies byte-exact rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_reports:::
+  5 passed rc=0:30/32/12,prefix32/34/13,restored32/32/16,no-op/Unknown8/0/0, original witnesses.
+- [x] NO REGRESSION: request4, strict core-lib/affected-test Clippy/both package fmt pass rc=0;
+  runtime paths unchanged. Accepted record/private aggregate/runtime retained/coupled/full work deferred.
 
 ## Goal
 
@@ -926,38 +926,37 @@ All98 completed ids/statuses and original proof pointers remain live there.
   as well as finite counts; account current/prospective retained composition before allocation/effects.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.1`
   Status: `done`
-  Goal:0465 exact readonly typed mutation-group/context/all five payload resources; actual owned
-  vectors/text/counter copies and fixed variants, no model/authority lookup or runtime admission stamp.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native request scope:exhaustive group/context/mutation/
-    payload/selection/declaration views, five explicit variants and schema precharge rc=0. Request
-    strings/contexts and exact aliases own data separately from model copies and declared work demand.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part618.md:
-    3 exact Git spans rc=0; whole0464 counter scope/lesson/ledger retained before live proof containment.
-    Native public constructors including value declarations and all bus code byte-exact rc=0.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and cargo clippy -p sc-measure --test
-    design_inputs_contract -- -D warnings:both rc=0. CommandState scope and required sealed sink
-    charge actual common/member revision copies, original vectors/strings and aliases without clone,
-    model/currentness/census/authority/numeric callbacks. Canonical actual declaration walker is shared.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_requests:::
-    4 passed rc=0:member6+Known2 twice+selection2=12 entries, one reason4 bytes, revision3 in7 owned
-    contexts=14 bits; prefix14/6/15. Native Python/OS confirms4 bytes; declared operation work8 for
-    two Piece copies differs from actual one owned request string. Original group and source telemetry
-    unchanged0/0/0. Whole vector0+6, evidence6+2/member0, selection8+2/member1, alias10+2/member5,
-    reason0+4/member1 and counters0+2/common/12+2/member5 retain original group ownership/positions.
-    Fixed intents3/0/0, Unknown snapshot1/0/0 and original prior-error preservation pass.
-  - [x] NO REGRESSION: source resource33/core canonical filter6 pass rc=0; strict affected lint/both
-    package fmt rc=0. Original public constructors and bus source byte-exact; no runtime policy/effect,
-    handler, grant or currentness behavior changed. Broader checks stay with their separate owners.
-  - [x] LOCKSTEP: new bounded command-resource chapter with SUMMARY/topic-index links; book build/
-    native publication84 chapters/159 scoped API rows/1517 source links/2553 rendered links rc=0.
-    Report/record .4.3.2/private aggregate .3.3/runtime retained .3.4/coupled/deeper/full work pending.
-  Retention1072 logical/39 working Markdown/59871 decoded lines/4527036 decoded bytes/2357848
-  resident bytes rc=0. Cargo uses scripts/local_environment.py; promotion:indexed command-layer decision.
-  This is owned typed request data only, not transport/initial allocation or retained runtime admission.
+  Goal:0465 exact owned typed mutation requests; [whole scope/proofs](../history/stitchcad-devnotes-part619.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.2`
+  Status: `in_progress`
+  Goal: exact actual report/difference/accepted authoring/history record resources; split by actual owners.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.3.2.1`
+  Status: `done`
+  Goal:0466 exact actual single/group preview and net-difference resources, including alias copies,
+  before/after evidence/reasons, represented revisions and original owner/member witnesses.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native report scope:all three explicit variants and actual
+    private owner/change/Notch exhaustive views rc=0; report copies differ from request/operation demand.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part619.md:
+    3 exact Git spans rc=0; whole0465 retained. Test prep corrected private consuming API to public
+    definition clones and explicitly assigned actual Pieces; assigned_definition assigns a Facing only.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and affected sc-measure test strict Clippy:
+    both rc=0; no clone/model/source/currentness/authority/numeric callback or supplied totals in readers.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::resource_reports:::
+    5 passed rc=0. Actual bus mixed report30/32/12, prefix32/34/13, restored32/32/16; revision0
+    no-op/Unknown group8/0/0, singles0/0/0 and3/0/0; alias copies and all before/after owners counted.
+    Exact vector/evidence/reason/revision refusals preserve group/step/net or Design/change coordinates;
+    prior errors survive all variants. Objects unchanged; source telemetry0/0/0 and authority reads0.
+  - [x] NO REGRESSION: request4 and both package fmt pass rc=0. Native source comparison:original
+    five report/runtime files byte-exact after removing new views; execution/history/preparation/
+    operation/identity files byte-exact rc=0. Python/OS independently verify both Unicode reasons4B.
+  - [x] LOCKSTEP: mdbook build/native publication84 chapters/159 scoped API rows/1517 source links/
+    2554 rendered links rc=0. Book examples/witnesses and indexed command-layer decision promoted.
+    history_archive.sh verify-retention:1073 logical/40 working Markdown/59926 decoded lines/
+    4532281 decoded bytes/2363093 resident bytes rc=0. Records .3.2.2 and retained/coupled/full pending.
+- ID: `G1-SLICE.6.8.2.2.2.2.4.3.2.2`
   Status: `pending`
-  Goal: exact actual report/difference/accepted authoring/history record resources, including duplicated
-  request/report vectors, before/after evidence/reasons and every represented revision/audit counter.
+  Goal: exact accepted authoring/history records and result/request owners, duplicated snapshots and
+  represented revision/audit counters; no runtime retained-policy claim.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.3`
   Status: `pending`
   Goal: complete private retained bus composition: actual current/history alternatives, reserve backing,

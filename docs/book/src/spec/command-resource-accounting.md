@@ -84,8 +84,79 @@ and6 cases selected by the canonical filter pass, with strict core-library/affec
 formatting. Public constructors and command-bus code remain byte-exact in this slice. No fake host,
 supplied resource totals, model clone or current/source/authority callback supplies the evidence.
 
-Actual report/difference/accepted-record walkers, private retained model/reserve/journal composition
-and prospective runtime retained admission remain G1-SLICE.6.8.2.2.2.2.4.3.2–.4.3.4. Coupled resource
-acceptance .4.4 and deeper/full verification remain deferred. Logical field counts do not bound
-allocator peaks, host algorithm time, raw ingress, numeric/file/decompression/geometry work or physical/
-release acceptance.
+## Actual preview reports and net differences
+
+charge_command_preview_resources borrows a real CommandPreview. Its three exhaustive variants
+charge their own represented base revision and actual owned fields. Measurement reports precharge
+their change vector and count each before/after declaration's Known evidence separately. Material
+reports precharge their change vector and count each before/after unresolved reason separately;
+Assigned references remain fixed IDs. A Notch report owns fixed identity, anchor and symbolic profile
+bindings, plus its revision; it gains no evidence, strings, inferred dimensions or collection entry.
+An empty change vector contributes zero entries. Revision0 contributes zero magnitude bits.
+
+charge_command_group_preview_resources charges the actual common report revision, then the entire
+step vector before walking members in original order. Each step owns its full preview, including
+another revision. An exact alias owns another full report snapshot even though it applies no second
+edit. After the steps, the reader precharges the net difference's lengths, materials and notches
+vectors in that order, walking their actual members. Net before/after snapshots are owned copies
+beside the step copies, so both count. The reader never reconstructs a model or deduces a report
+from a request or an operation-demand total.
+
+```rust
+let mut meter = DesignResourceMeter::new(explicit_resource_limits);
+charge_command_group_preview_resources(&actual_bus_report, &mut meter)?;
+let owned_report = meter.finish()?;
+```
+
+Standalone locations use the actual Design owner. Their revision/vector fields have no index;
+before/after fields use the original change index. Group step locations use the actual group owner
+and original step index, including aliases. Net-difference fields use that group owner and their
+original change index, with no index for the whole vector. Locations carry static field names and
+no private reason text. The reader does not promote a referenced Piece/declaration into a containing
+owner, authorize access, validate currentness or acquire publication capability.
+
+The native fixture reconstructs a real revision3 model with two Pieces explicitly assigned an actual
+available Material, then asks the inspect-authorized bus for these five actual sequential steps:
+
+1. ChangeMeasurement replaces Known2 evidence with Known3 evidence at the same positive width.
+2. AssignMaterial selects both Pieces in reverse order with reason ` é `.
+3. AddNotch prepares one actual semantic mark using the private staged identity reserve.
+4. An exact alias of step0 owns another original Measurement report.
+5. AssignMaterial changes both reasons to ` β `.
+
+The single-report demands in that order are6/0/2,2/8/2,0/0/2,6/0/2 and2/16/2
+(entries/UTF-8 bytes/counter bits). The group owns5 step slots and2 common revision bits. Its net
+length difference owns1 slot plus2+3 evidence entries, its net Material difference owns2 slots and
+8 reason bytes, and its net Notch difference owns1 slot. The complete group report is30/32/12.
+Both Unicode reasons are independently verified as4 bytes. A prior2 entries/2 bytes/1 bit composes
+to32/34/13 without replacing or restarting the sink.
+
+| Maximum | Actual original first refusal |
+| --- | --- |
+| 4 entries | reports.steps,0+5, no member index |
+| 7 entries | reports.measurement.before.evidence,6+2, step0 |
+| 18 entries | reports.measurement.after.evidence,16+3, alias step3 |
+| 26 entries | reports.difference.lengths.after.evidence,24+3, net change0 |
+| 29 entries | reports.difference.notches,29+1, no member index |
+| 15 text bytes | reports.material.after.reason,12+4, step4 |
+| 27 text bytes | reports.difference.materials.after.reason,24+4, net change0 |
+| 11 counter bits | reports.material.revision,10+2, step4 |
+
+A seven-step variant restores the original Measurement and both Material assignments. Those net
+vectors become empty; the existing Notch remains a net addition. The intermediate and restoring
+step snapshots still count:32/32/16. A separate actual revision0 no-op followed by an explicit
+Unknown Measurement produces8/0/0 for the group,0/0/0 for the no-op report and3/0/0 for the
+Unknown report. Unknown adds no invented evidence or numeric value; its actual Known before
+snapshot remains owned. Prior failures survive every variant, including the fixed Notch report.
+
+Five native report cases and the four existing request cases pass with strict affected lint and
+formatting. Original report objects are unchanged; source telemetry and authority reads stay zero
+during accounting. Every private report owner and change/Notch definition is matched exhaustively.
+The original runtime/report implementations are byte-exact after removing the added readonly views;
+execution, history, preparation, operation and identity files are byte-exact in this slice.
+
+Accepted authoring/history record readers remain G1-SLICE.6.8.2.2.2.2.4.3.2.2; private retained
+model/reserve/journal composition and prospective runtime retained admission remain .4.3.3–.4.3.4.
+Coupled resource acceptance .4.4 and deeper/full verification remain deferred. Logical field counts
+do not bound allocator peaks, host algorithm time, raw ingress, numeric/file/decompression/geometry
+work or physical/release acceptance.

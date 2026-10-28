@@ -35,6 +35,17 @@ pub struct CommandMeasurementPreview {
     changes: Vec<CommandLengthChange>,
 }
 impl CommandMeasurementPreview {
+    pub(super) fn resource_parts(
+        &self,
+    ) -> (EntityId, &DesignRevision, EntityId, &[CommandLengthChange]) {
+        let Self {
+            design,
+            revision,
+            measurement,
+            changes,
+        } = self;
+        (*design, revision, *measurement, changes)
+    }
     /// Actual inspected Design identity.
     #[must_use]
     pub const fn design(&self) -> EntityId {

@@ -3,12 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact readonly owned mutation-request resources
+## _(2026-10-28 UTC)_ — exact actual owned preview-report resources
 
-0465 .6.8.2.2.2.2.4.3.1 adds exact readonly typed group/context/all5 payload resources in CommandState scope. Exhaustive private views and Copy guards cover actual owned fields; aliases own duplicate
-payloads/contexts. Shared declaration snapshot helper preserves canonical resource behavior. New request4/source33/canonical-filter6/strict lint/fmt pass:12/4/14, prefix14/6/15, exact original
-group/member failures, fixed3/0/0 and Unknown1/0/0; no source/model callbacks. One owned reason4 differs from declared operation work8 for two selected Pieces. Promotion:indexed command-layer
-decision. Whole0464 retained618; report/record/private retained composition and runtime policy/enforcement pending. New bounded command-resource book chapter owns remaining examples.
+0466 .6.8.2.2.2.2.4.3.2.1 borrows every actual single/group preview and net-difference owner.
+Before/after evidence/reasons, alias reports, common/member revisions and net copies count separately.
+Native report5/request4/strict lint/fmt pass:30/32/12,prefix32/34/13,restored32/32/16,no-op/Unknown8/0/0;
+original owner/index/first-error witnesses and zero source/authority callbacks. Runtime bodies byte-exact.
+Test preparation corrected private into_definition use to public definition clones, then explicitly assigned
+actual Piece Materials: assigned_definition names a Facing assignment, not Piece assignments. No product
+change required. Whole0465 retained619. Promotion:indexed command-layer decision. Record/private retained/
+runtime admission and coupled/deeper/full verification remain owned; no runtime-policy certificate.
+[Whole0465 owned-request lesson](docs/history/stitchcad-devnotes-part619.md) retains exact request/resource/alias proof.
 [Whole0464 publication lesson](docs/history/stitchcad-devnotes-part618.md) retains exact carry/undo/API/retirement proof.
 [Whole0463 Notch lesson](docs/history/stitchcad-devnotes-part616.md) retains exact peek/precedence/rollback proof.
 [Whole0462 Material lesson](docs/history/stitchcad-devnotes-part615.md) retains exact Unicode/selected/oracle proof.

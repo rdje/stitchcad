@@ -16,6 +16,14 @@ pub struct CommandNotchPreview {
     notch: Notch,
 }
 impl CommandNotchPreview {
+    pub(super) fn resource_parts(&self) -> (EntityId, &DesignRevision, &Notch) {
+        let Self {
+            design,
+            revision,
+            notch,
+        } = self;
+        (*design, revision, notch)
+    }
     /// Actual inspected Design identity.
     #[must_use]
     pub const fn design(&self) -> EntityId {

@@ -42,6 +42,18 @@ pub struct CommandGroupPreviewStep {
     report: CommandPreview,
 }
 impl CommandGroupPreviewStep {
+    pub(super) fn resource_report(&self) -> &CommandPreview {
+        let Self {
+            command,
+            key,
+            replay_of,
+            report,
+        } = self;
+        crate::command::resource::fixed(command);
+        crate::command::resource::fixed(key);
+        crate::command::resource::fixed(replay_of);
+        report
+    }
     /// Original payload-derived command identity.
     #[must_use]
     pub const fn command(&self) -> CommandId {
@@ -74,6 +86,24 @@ pub struct CommandGroupPreview {
     difference: CommandGroupDifference,
 }
 impl CommandGroupPreview {
+    pub(super) fn resource_parts(
+        &self,
+    ) -> (
+        CommandGroupId,
+        &DesignRevision,
+        &[CommandGroupPreviewStep],
+        &CommandGroupDifference,
+    ) {
+        let Self {
+            group,
+            design,
+            revision,
+            steps,
+            difference,
+        } = self;
+        crate::command::resource::fixed(design);
+        (*group, revision, steps, difference)
+    }
     /// Original explicit group identity.
     #[must_use]
     pub const fn group(&self) -> CommandGroupId {

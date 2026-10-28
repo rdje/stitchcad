@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0465 — account actual typed mutation-request resources without runtime effects
+## STITCHCAD-G1-0466 — account actual owned preview-report and net-difference resources
 
-- Charge common/member revision copies, actual member/selection/evidence vectors and one owned unresolved reason per payload; aliases remain owned copies.
-- Exhaustively borrow private contexts/groups/payloads; fixed unsupported intents add no invented data and canonical declaration visitor is shared.
-- Request4/source33/canonical-filter6/strict lint/fmt pass:12/4/14, prefix14/6/15 and exact original first witnesses; source/model callbacks zero.
-- Retain whole0464 in618; add bounded command-resource chapter; report/record/private retained/runtime admission work remains owned.
+- Exhaustively borrow all three previews, original group/alias reports and separate actual net snapshots.
+- Count before/after evidence/reasons and all owned revisions; preserve original Design/group/member witnesses.
+- Real bus report5/request4 and strict lint/fmt pass:30/32/12, prefix32/34/13, restored32/32/16 and no-op/Unknown8/0/0.
+- Source/authority telemetry zero during readers; runtime bodies unchanged. Whole0465 retained619; accepted records and runtime retained admission pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

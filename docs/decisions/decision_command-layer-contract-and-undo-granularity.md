@@ -175,3 +175,17 @@ all five variants without model/current/authority/numeric callbacks. New request
 strict lint/fmt pass:12/4/14,prefix14/6/15, fixed3/0/0, Unknown1/0/0 and original first witnesses.
 Whole0464 retained618; current constructors/bus code byte-exact. Bounded command-resource chapter
 owns examples; report/record/private retained/runtime policy and coupled/deeper/full work remains.
+
+## Exact owned preview-report resources0466
+
+answers: "does a restored net value or retry alias remove owned report snapshots from resource demand?"
+
+Actual single/group preview readers borrow every private owner exhaustively. Charge common/step revisions,
+step and net vectors, before/after evidence/reasons and exact alias report copies in actual stored order.
+No-op reports own no changes; fixed Notch payloads own no dynamic field. Net restoration removes only the
+net snapshots: intermediate/restoring step copies remain. Standalone locations name actual Design/change;
+group locations name actual containing group/step, net members their original change index. No referenced
+Piece/declaration is promoted into a containing owner; no clone/model/source/authority lookup occurs.
+Real inspect-authorized bus reports verify30/32/12,prefix32/34/13,restored32/32/16 and revision0
+no-op/Unknown8/0/0; report5/request4/strict lint/fmt pass. Runtime bodies byte-exact. This is logical
+owned report data only; accepted records/private aggregate/retained runtime policy and broader proof remain.

@@ -17,6 +17,16 @@ pub struct CommandGroupDifference {
     notches: Vec<Notch>,
 }
 impl CommandGroupDifference {
+    pub(super) fn resource_parts(
+        &self,
+    ) -> (&[CommandLengthChange], &[CommandMaterialChange], &[Notch]) {
+        let Self {
+            lengths,
+            materials,
+            notches,
+        } = self;
+        (lengths, materials, notches)
+    }
     /// Actual changed dedicated declarations in original canonical inventory order.
     #[must_use]
     pub fn lengths(&self) -> &[CommandLengthChange] {

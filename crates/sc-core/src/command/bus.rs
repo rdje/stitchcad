@@ -28,7 +28,9 @@ pub use operation::CommandControlError;
 mod group;
 pub use group::{CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep};
 mod group_difference;
+mod resource;
 pub use group_difference::CommandGroupDifference;
+pub use resource::{charge_command_group_preview_resources, charge_command_preview_resources};
 mod execution;
 pub use execution::{
     CommandAuditEntry, CommandAuditSequence, CommandGroupCommit, CommandGroupCommitError,
