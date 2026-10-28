@@ -254,8 +254,12 @@ def parse_control(data: bytes) -> dict:
 
 
 def registry_profile(tree: Path) -> None:
+    registry_bytes_profile(read_file(tree, REGISTRY, REGISTRY_BYTES))
+
+
+def registry_bytes_profile(data: bytes) -> None:
     try:
-        source = read_file(tree, REGISTRY, REGISTRY_BYTES).decode("utf-8")
+        source = data.decode("utf-8")
     except UnicodeError as issue:
         raise Refusal("schema", "registry encoding") from issue
     rows = {}
@@ -536,11 +540,15 @@ def selected_tree(root: Path, tree: Path | None) -> tuple[Path, Path]:
 
 
 def verify_record(root: Path, tree: Path, raw: bytes) -> Verification:
-    record = parse_control(raw)
+    task = parse_control(raw)["authority"]["task"]
     registry_profile(tree)
-    authority = record["authority"]
     current = filesystem_snapshot(tree)
     storage_profile(root, navigation(read_file(tree, INDEX, INDEX_BOUNDS[1])) | {INDEX, CONTROL})
+    return verify_authority(root, raw, current, current_tasks(tree, task))
+
+
+def verify_authority(root: Path, raw: bytes, current: Snapshot, tasks: dict[str, bytes]) -> Verification:
+    authority = parse_control(raw)["authority"]
     need(current == snapshot(authority["target"]), "target", "current book differs from exact authority")
     head = git(root, ["rev-parse", "HEAD"], 128).decode("ascii").strip()
     at_head = blob(root, head, CONTROL, CONTROL_BYTES, absent=True)
@@ -559,7 +567,7 @@ def verify_record(root: Path, tree: Path, raw: bytes) -> Verification:
     need(baseline == snapshot(authority["baseline"]), "baseline", "native Git baseline differs")
     task = authority["task"]
     before = owner_status(baseline_tasks(root, base, task), task)
-    after = owner_status(current_tasks(tree, task), task)
+    after = owner_status(tasks, task)
     need(before in (None, "proposed", "pending", "active", "in_progress") and after == "done",
          "task", "authority owner must be newly completed, never a reused closed task")
     return Verification(mode, current, task)
@@ -568,6 +576,63 @@ def verify_record(root: Path, tree: Path, raw: bytes) -> Verification:
 def check(root: Path = ROOT, tree: Path | None = None) -> Verification:
     root, tree = selected_tree(root, tree)
     return verify_record(root, tree, read_file(tree, CONTROL, CONTROL_BYTES))
+
+
+def staged_entries(listing: bytes) -> dict[str, str]:
+    """Select ordinary stage-zero book/control/registry and root task records;ignore other artifacts."""
+    records = listing.split(b"\0")
+    need(records[-1] == b"" and len(records) - 1 <= CENSUS_ENTRIES, "index", "staged entry census")
+    result = {}
+    for record in records[:-1]:
+        header, separator, encoded = record.partition(b"\t")
+        need(bool(separator), "index", "staged entry shape")
+        try:
+            name = portable(encoded.decode("utf-8"))
+        except UnicodeError as issue:
+            raise Refusal("index", "staged path encoding") from issue
+        path = PurePosixPath(name)
+        selected = (name.startswith(SOURCE + "/") or name in (CONTROL, REGISTRY) or
+                    path.parent == PurePosixPath("docs/tasks") and path.suffix == ".md")
+        if not selected:
+            continue
+        fields = header.split()
+        need(len(fields) == 3 and fields[0] in (b"100644", b"100755") and fields[2] == b"0",
+             "index", "book authority requires regular stage-zero entries")
+        need(re.fullmatch(rb"[0-9a-f]{40}|[0-9a-f]{64}", fields[1]) is not None,
+             "index", "invalid native staged object identity")
+        need(name not in result, "index", "duplicate staged authority path")
+        result[name] = fields[1].decode("ascii")
+    return result
+
+
+def staged_blob(root: Path, entries: dict[str, str], name: str, maximum: int) -> bytes:
+    need(name in entries, "index", f"required authority input is not staged: {name}")
+    # Read the exact immutable native object from the frozen listing,not a later index/work file.
+    return git(root, ["cat-file", "blob", entries[name]], maximum)
+
+
+def check_index(root: Path = ROOT) -> Verification:
+    """Verify what Git will commit;read-only native objects,no alternate index or temporary repo."""
+    root, _tree = selected_tree(root, None)
+    command = ["ls-files", "--stage", "-z", "--", SOURCE, CONTROL, REGISTRY, "docs/tasks"]
+    listing = git(root, command, LISTING_BYTES)
+    entries = staged_entries(listing)
+    raw = staged_blob(root, entries, CONTROL, CONTROL_BYTES)
+    task = parse_control(raw)["authority"]["task"]
+    registry_bytes_profile(staged_blob(root, entries, REGISTRY, REGISTRY_BYTES))
+    index = staged_blob(root, entries, INDEX, INDEX_BOUNDS[1])
+    expected = navigation(index) | {INDEX}
+    actual = {name for name in entries if name.startswith(SOURCE + "/") and name.endswith(".md")}
+    need(actual == expected, "navigation", "staged book has missing/unindexed Markdown")
+    current = summarize({name: staged_blob(root, entries, name,
+                         INDEX_BOUNDS[1] if name == INDEX else PART_BOUNDS[1]) for name in sorted(actual)})
+    names = [name for name in entries if PurePosixPath(name).parent == PurePosixPath("docs/tasks")
+             and task_file_name(PurePosixPath(name).name, task)]
+    need(len(names) <= TASK_FILES, "budget", "staged task-family file census")
+    tasks = {name: staged_blob(root, entries, name, TASK_BYTES) for name in sorted(names)}
+    result = verify_authority(root, raw, current, tasks)
+    need(git(root, command, LISTING_BYTES) == listing, "changed", "index changed during authority verification")
+    return Verification("index-" + result.mode, result.snapshot, result.owner)
 
 
 def encode_record(record: dict) -> bytes:
@@ -684,6 +749,7 @@ def record_change(task: str, reason: str, root: Path = ROOT, tree: Path | None =
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--candidate", help="repository-relative ordinary candidate directory")
+    parser.add_argument("--index", action="store_true", help="verify exact canonical staged book authority")
     actions = parser.add_subparsers(dest="action")
     author = actions.add_parser("record-change", help="atomically record exact fresh book-change authority")
     author.add_argument("--task", required=True)
@@ -691,8 +757,12 @@ def main() -> int:
     arguments = parser.parse_args()
     try:
         tree = ROOT / portable(arguments.candidate) if arguments.candidate else ROOT
-        result = (record_change(arguments.task, arguments.reason, ROOT, tree)
-                  if arguments.action == "record-change" else check(ROOT, tree))
+        if arguments.index:
+            need(not arguments.candidate and arguments.action is None, "index", "index mode cannot select a candidate or record authority")
+            result = check_index(ROOT)
+        else:
+            result = (record_change(arguments.task, arguments.reason, ROOT, tree)
+                      if arguments.action == "record-change" else check(ROOT, tree))
     except (Refusal, OSError, UnicodeError) as issue:
         print(str(issue))
         return 2

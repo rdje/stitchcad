@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact original-notch cumulative and interval queries
+## _(2026-10-28 UTC)_ — repair staged book authority and preparation sequencing
 
-0518 clamps actual original notch progress and complements B/Opposite before shared signed rounding;intervals difference original rounded boundaries. Preflight full original edge/both bounds even for zero. Private closed projection port guards common immutable frame/unique ordered originals;no Big API or narrowing.
-Native2 consumes380 Fraction rows across A/B,directions,reversed frames,clamps/partial domains,5 signed/zero/maximal literals and64/188-bit originals;all conserve source. Initial interior-offset fixture correctly refused peak3 for3 portions+active;explicit4 passes and preserves surrounding Piece repairs.
-Private actual-projection1/6 rows+quota/frame/order controls,admission2,doc4,scoped Clippy/fmt/oracle6+302+380 pass0. Book90/211/1572/2706,glossary0/map/retention1130 and676 receipt3 exact Git spans pass0. Separate2W+93 guards actual integer operands/results;not allocator/runtime/whole Design proof.
-[Whole0517 admission](docs/history/stitchcad-devnotes-part676.md) retains exact scope/lesson/changelog. LIVE/README unchanged,G1 6/18. Actual Design quantity integration next;paired/mutation/physical/effects remain owned. Promotion declined:implementation of indexed original interval/rounding contracts.
+0519 fixes current commit integrity:0518 preparation yielded,but output-only handling discarded its session ID and stage/commit began early. Commit00e1d74 kept0517 control while working verifier saw fresh unstaged0518 authority. Product checks passed;exact929B omitted authority retained,whole0518 in677.
+Read-only --index verifies exact bounded native staged book/control/registry/task blobs,ordinary stage-zero modes and stable listing. Final hook invokes it after working doctrines. Shares freshness/raw-byte checks;COMMIT consumes preparation terminal result before staging. No index or temp repo writes.
+Actual old-index CLI refuses target2. Focused7+existing reader2/shell syntax pass0;book90/211/1572/2706,map/retention1131/677 receipt3 spans pass0. Fresh control uses new repair owner,not closed0518;no history amend. Original evidence remains exact and standing probes own the index controls.
+LIVE/README unchanged,G1 6/18. Resume actual Design quantity integration after clean commit/empty brief. Promotion declined:mechanical enforcement of indexed exact commit authority;current canonical answer updated. Always print full exec metadata and consume terminal result before dependent mutations.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

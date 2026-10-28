@@ -183,3 +183,14 @@ after the one authorized retirement,then evolve live plans there. All258 origina
 24 current paired IDs are unique. A new native source/family guard pins the original Git extent,
 checks unique live nodes and preserves done states;all12 sibling/source controls pass. Root navigation
 and current task authority follow the existing family contract. No map row,cap or Rust runtime code changes.
+
+## Staged book authority0519
+
+0518 exposed a sequencing defect:authority preparation yielded,but staging started before its
+terminal result. Commit00e1d74 kept the preceding control while the working-tree verifier saw the
+fresh unstaged record. Preserve that exact929B record as0518_unstaged_authority.jsonl in the live
+doc-size artifact family;repair under a newly completed owner rather than reuse closed authority.
+The final pre-commit --index reader validates exact native staged book/control/registry/task blobs,
+ordinary stage-zero modes and a stable listing. It reads immutable object IDs with bounded output;
+no index/temp repository is written. Old staged control/new book now refuses target,rc=2. Seven
+finite index controls and two existing reader controls pass;the standing probe suite owns reruns.

@@ -80,6 +80,9 @@ apply to code changes.
    This writes only the canonical book control after guarded temporary preparation. Rerun it if book
    inputs change; prior authority or a prior completed leaf cannot license a new change. The commit/CI
    gate checks exact bytes/counts, part/index bounds and fresh Git/task binding; it grants no human approval.
+   Consume the authority producer's terminal result before staging; a yielded exec is still running.
+   The pre-commit hook independently verifies exact staged book/control/registry/task objects with
+   `maintained_reference.py --index`; working-tree authority cannot license older staged bytes.
 4. Write a concise message to `git_message_brief.txt`.
 5. Stage only the intended tracked files (`git add <files>`).
 6. Commit: `git commit -F git_message_brief.txt` (the pre-commit hook runs the doctrine

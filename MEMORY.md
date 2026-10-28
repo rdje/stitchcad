@@ -2,19 +2,18 @@
 
 - Next G1-SLICE.6.5.3.2.3.2.4.3.4.acceptance in docs/tasks/G1-SLICE-execution.md:focused actual
   Design/retained-source notch quantity integration after implementation. Full PNT continues.
-- NotchEaseAdmission0517/queries0518 borrow actual sealed context/full signed original source.
-  Independent positive limits reserve2W+93;symbolic intent refuses first. CDF clamps exact original
-  notch progress;B/Opposite complements BEFORE shared signed rounding. Interval amounts difference
-  rounded original boundaries,no child normalization or Param/u128 narrowing. No Big API escapes.
-- Native quantity2 consumes380 Fraction rows:A/B,Same/Opposite,reversed frames,clamps/partial domains,
-  5 signed/zero/maximal amounts,64/188-bit originals;exact conservation and zero frame/bounds checks.
-  Private actual-projection1/6 rows+quota/frame/order controls,admission2,doc4,lint/fmt/oracle pass0.
-  Interior offset Piece coverage needs explicit peak4 for3 portions+active,not3;repairs preserved.
-- Whole0517 in676/3 exact spans;book90/211/1572/2706,glossary0/map unchanged,retention1130 pass.
-  Original context0515/Design acceptance0516 remain actual;whole source decision encoded670.
-- Context/query success grants no symbolic resolution,whole Piece/Design/other graph/physical/effect
-  authority. Operand/result widths are not allocator/CPU/RSS certificates. Quantity integration,
-  paired matching/stops/lineage/effects/full acceptance remain owned under D301.
+- Integrity0519 repairs0518 omitted book control:preparation yielded but its session result was
+  discarded;stage/commit started early. Commit00e1d74 kept0517 authority while working gate saw
+  fresh unstaged record. Exact omitted929B retained artifacts/live_doc_size/0518_unstaged_authority.
+  jsonl;whole0518 in677. Consume EVERY exec terminal before dependent stage/commit;print full
+  result metadata so running session IDs cannot disappear. No background preparation remains.
+- Final hook now verifies --index:bounded native staged book/control/registry/task blobs,stage-zero
+  modes and stable listing. Actual old index refuses target2;new focused7+existing reader2 pass0.
+  Fresh repair authority uses a new completed owner;never reuse closed authority or amend history.
+- Quantity queries0518/native2/380 Fraction rows/private projection1/doc4/lint/fmt remain committed.
+  Clamp exact originals;B/Opposite complement BEFORE rounding;difference original boundaries.
+- Book90/211/1572/2706,map unchanged,retention1131 and677 receipt3 Git spans pass. No full Design,
+  symbolic/physical/effect authority;quantity integration/paired/stops/lineage/full proof stay owned.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

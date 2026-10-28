@@ -4,6 +4,14 @@ New task lines: 400 UTF-8 bytes max.
 
 [Focused checks](annexes/checking-policy.md).
 
+Book changes require a completed owning leaf and exact maintained-reference authority before
+staging. Consume the authority producer's terminal result before starting the commit workflow.
+The doctrine enforcer checks working-tree content;the pre-commit hook additionally runs
+`maintained_reference.py --index` against exact staged book/control/registry/task objects. It
+refuses old authority,unstaged task completion,missing chapters,changed profiles,nonregular/merge
+entries or index drift. This reader changes no index or canonical input. Focused finite controls
+live in docs/tasks/artifacts/live_doc_size/maintained_reference_index_contract.py.
+
 ## Local producer profile
 
 `scripts/local_environment.py` prepares the four destinations below for the listed Make targets.

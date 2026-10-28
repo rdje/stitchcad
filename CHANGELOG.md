@@ -3,13 +3,14 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0518 — query exact original-notch cumulative quantities
+## STITCHCAD-G1-0519 — repair staged book authority after preparation race
 
-- Actual original clamped progress,exact B/Opposite complement before shared signed rounding and original rounded boundary differences. Preflight full original edge/both bounds even for zero;closed private projection port and separate2W+93 guards retain actual
-  frame/operation/quota evidence.
-- Native2/380 Fraction rows preserve signs/ties/clamps/partial domains/reversed frames and64/188-bit originals;all intervals conserve original source. Private projection1/admission2/doc4/scoped Clippy/fmt/oracle6+302+380 pass. Interior-offset fixture peak4 retains3 Piece portions
-  plus active input.
-- Whole0517 retained676/three exact Git spans;book90/211/1572/2706,glossary0/map/retention1130 pass. Actual Design quantity integration next;paired/mutation/physical/effect/full verification remains owned. LIVE/README unchanged,G1 6/18.
+- Preserve exact omitted0518 authority929B and whole0518 scope/lesson/changelog677. Earlier00e1d74 feature commit kept old control because yielded preparation result was discarded and staging began early;working-tree gate saw fresh unstaged bytes. Product verification remains
+  valid.
+- Read-only staged book/control/registry/task verification now runs as final pre-commit gate,with bounded immutable native blobs,ordinary stage-zero modes and listing stability. Actual bad index refuses target2;focused7/existing reader2/shell syntax pass. COMMIT explicitly waits
+  for preparation terminal result.
+- Fresh control uses new completed repair owner;no history amend or closed-owner reuse. Book90/211/1572/2706,map/retention1131/677 receipt3 exact Git spans pass. LIVE/README unchanged,G1 6/18. Actual Design notch quantity integration resumes after repair;full pre-push gates
+  remain required.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

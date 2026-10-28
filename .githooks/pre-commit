@@ -22,3 +22,8 @@ fi
 # The single general doctrine enforcer (registry + driver) — runs every
 # mechanizable check and exits nonzero on any breach.
 "$ROOT/scripts/check_doctrines.sh"
+
+# The enforcer judges working-tree content. Git commits the index:independently verify its exact
+# book/control/task bytes after all preparation,so an unstaged fresh authority cannot license an
+# older staged record. This reader never stages or changes any input.
+python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/maintained_reference.py" --index

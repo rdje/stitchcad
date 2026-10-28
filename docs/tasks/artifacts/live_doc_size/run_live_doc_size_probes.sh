@@ -123,6 +123,14 @@ else
   bad TASK-SOURCES "task-sibling authority contract failed (exit=$rc)" "$out"
 fi
 
+# G1-SLICE.6.5.3.2.3.2.4.3.4.2.integrity:Git commits staged bytes,not working authority.
+out="$(python3 -I -B "$ROOT/docs/tasks/artifacts/live_doc_size/maintained_reference_index_contract.py" 2>&1)"; rc=$?
+if [ "$rc" -eq 0 ]; then
+  ok BOOK-INDEX "exact staged authority, old-control, task, navigation, profile and drift controls passed (exit=0)"
+else
+  bad BOOK-INDEX "staged book authority contract failed (exit=$rc)" "$out"
+fi
+
 echo
 printf 'probes: %d pass / %d fail\n' "$pass" "$fail"
 [ "$fail" -eq 0 ] || exit 1

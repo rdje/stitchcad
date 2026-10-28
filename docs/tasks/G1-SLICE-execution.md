@@ -300,44 +300,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0517 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part676.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.4.2`
   Status: `done`
-  Goal:0518 exact original-notch CDF/interval queries implemented with focused checks. Preserve
-  full actual source/ledger/Notches,clamping,canonical A orientation and original signed rounding.
-  - [x] REPRODUCE / ISSUE: 0518 python3 -I -B docs/tasks/artifacts/seam_partition/
-    notch_quantity_oracle.py --check →6 bound rows/302 raw-width controls/380 exact query rows,rc=0.
-    Actual64-bit lower1/(2MAX),upper1/4,query1/8 is below half but binary64 gives half. A188-bit
-    actual partial-offset pair also has a below-half query;Param/u128 narrowing cannot supply it.
-  - [x] ROOT CAUSE: 0518 cargo test -p sc-core --test sewing_contract notch_quantities →2 passed/
-    81 filtered,rc=0,all380 frozen rows. Correct CDF is clamped original notch progress,not current
-    local parameters or child totals. Complement B/Opposite BEFORE rounding;subtracting rounded
-    prefix changes ties. Actual original frames,source domains and named/authored order stay exact.
-  - [x] FIX: 0518 separately admitted quantity methods preflight full original edge/both bounds,
-    including zero;private semantic projection port guards actual same immutable ledger/source
-    creation and unique increasing originals. Guard raw ratio/complement/source multiplication
-    under2W+93;shared half-away magnitude helper rounds once. Interval amounts difference original
-    rounded boundaries in canonical A order. Concrete standard numeric source and original actual
-    frame/bounds/interval evidence survive;no Big type,projection clone or partial amount escapes.
-    Focused quantity2/private actual-projection1 →passed,rc=0.
-  - [x] ADDRESSED: 0518 cargo test -p sc-core --test sewing_contract notch_quantities →2 passed,
-    rc=0. All380 actual ledger/retained source/local validation/context queries match independent
-    Fraction outputs:A/B x Same/Opposite x5 signed/zero/maximal literals,clamps/partial domains,
-    reversed current frames,64/188-bit originals. Exact interval sums conserve original source;
-    both full bounds validate before quantities;zero keeps wrong-edge/interval/outside refusals.
-    Initial test1 passed/1 failed,rc=101:interior offset Piece coverage quota retained3/requested1/
-    limit3 correctly refused. Fixture now explicitly admits peak4 for3 output portions+active;
-    full Piece repairs remain present,no production quota or semantics changed to pass.
-  - [x] NO REGRESSION: 0518 cargo test -p sc-core --lib admitted_original_coordinate_ordering
-    →1 passed,rc=0:6 actual Fraction projection rows plus quantity complement,actual operation/
-    limit1 numeric refusal,other equal-content ledger refusal before numeric work and non-increasing
-    bound refusal. Native admission2 still passes;scoped Clippy/fmt →pass,rc=0;cargo test -p sc-core
-    --doc NotchEase →4 passed,rc=0. All native tools use local_environment.py. Book/publication
-    90/211/1572/2706,glossary310/9/158/0,map unchanged,676 receipt3 Git spans,retention1130 logical/
-    35 working/63372 decodedL/4891369 decodedB/2468706 residentB →pass,rc=0. Actual Design quantity
-    integration/full paired/mutation/physical verification stay .4.acceptance/.3.acceptance/
-    .6.5.3.2.acceptance/pre-push;no deferred verification claimed passed.
-  - [x] LOCKSTEP: 0518 MEMORY/DEV/CHANGE/book/API row/canonical decision/task index/D301 align.
-    Whole0517 retained676/3 exact Git spans. LIVE/README reviewed unchanged,G1 6/18. Next .3.4.
-    acceptance actual Design/retained-source quantities;no symbolic/physical/effect readiness.
-    promotion: declined (implementation of indexed exact original interval/resource/rounding contracts;no new policy,implicit value or physical assumption).
+  Goal:0518 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part677.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.4.acceptance`
   Status: `pending`
   Goal: focused actual Design/retained original notch source quantity integration after .1/.2;
@@ -367,3 +330,43 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.6.5.3.2.acceptance`
   Status: `pending`
   Goal: after paired feature implementation,combined actual split/reference/ease/stop/lineage and bus undo/replay/cancel/quota acceptance. Include refactored rounding compiled5 signed/9 unsigned faults plus extra release remainder fault,also run by required pre-push probes;no broad suites between implementation slices.
+
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.4.2.integrity`
+  Status: `done`
+  Goal:0519 immediate P1 repair of0518 omitted book control and false-green commit gate. Source
+  quantity implementation/checks remain committed;fresh control uses this new repair owner.
+  - [x] REPRODUCE / ISSUE: 0519 git show00e1d74:.doctrine/live_document_size/
+    maintained_reference.jsonl retains0517 target1515568B while actual committed book is1519183B.
+    Correct unstaged0518 authority929B/SHA256721690108705542f99542b88d00199965eaba9d0d3cf6ab9f1114ef74978da35
+    preserved in artifacts/live_doc_size/0518_unstaged_authority.jsonl;Python exact byte/hash check
+    →pass,rc=0. New maintained_reference.py --index on the actual old index refuses target,rc=2.
+  - [x] ROOT CAUSE: 0519 native --index reproduction →target refusal,rc=2;working-tree verifier
+    and pre-commit source read confirm original enforcer judged work bytes while Git committed
+    earlier staged bytes. Preparation exec yielded a session whose ID/result was discarded by
+    reading only output;dependent stage/commit began early. HEAD/status/empty brief checked before
+    repair;OS-visible census found no owned preparation/commit still running. No product test failed.
+  - [x] FIX: 0519 read-only --index uses bounded native stage-zero object listing and immutable
+    blobs for exact book/control/registry/task authority,existing counts/profile/fresh-owner checks
+    and final listing stability. No Git write,index mutation or temporary repository. Final hook
+    invokes it after working-tree doctrine checks. COMMIT now explicitly consumes producer terminal
+    result before staging. Focused index contract7 →OK,rc=0;standing live-doc probe runner owns reruns.
+  - [x] ADDRESSED: 0519 python3 -I -B docs/tasks/artifacts/live_doc_size/
+    maintained_reference_index_contract.py →7 tests OK,rc=0. Older control/new book,unstaged task
+    completion,missing chapter,changed staged profile,index drift,nonregular/merge-stage/duplicate/
+    malformed native records refuse. Exact staged fixture passes with native status unchanged.
+    --index cannot select candidates or record authority;actual control unchanged. Native old-index
+    reproduction refuses target,rc=2. Fresh actual native --index →index-candidate,91 files/
+    21705 lines/1519832B,correct repair owner,rc=0. Final hook reruns after all preparation.
+  - [x] NO REGRESSION: 0519 maintained_reference_contract.py Candidate.test_candidate_matches_
+    native_counts_and_reader_is_read_only and Candidate.test_caller_git_context_cannot_redirect_
+    native_authority_or_change_parent_environment →2 tests OK,rc=0. bash -n hook/runner →pass,rc=0.
+    Book/publication90/211/1572/2706,map unchanged,677 receipt3 exact Git spans,retention1131 logical/
+    36 working/63439 decodedL/4898183 decodedB/2475520 residentB →pass,rc=0. Fresh authority is
+    recorded after this owner completes and terminal result consumed before stage. Product/broad/
+    full hook and pre-push verification retain their required scopes;no earlier CI verdict invented.
+  - [x] LOCKSTEP: 0519 original omitted authority preserved;whole0518 scope/lesson/changelog in677.
+    Native first commit00e1d74 remains recorded;repair neither amends history nor reuses closed
+    authority. New exact book authority/control,COMMIT/DEV/CHANGE/MEMORY/book/canonical decision/
+    task index/D301 align. LIVE/README reviewed unchanged,G1 6/18. Resume .3.4.acceptance after
+    successful commit/empty brief/clean tree. No foreign repository changed.
+    promotion: declined (mechanical repair of indexed exact raw-byte/fresh-task commit authority;failure evidence retained and canonical answer updated without a new policy or map row).
