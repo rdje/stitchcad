@@ -314,6 +314,8 @@ impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAutho
         group: &CommandMutationGroup,
         observer: &dyn crate::command::CommandProgressObserver,
     ) -> Result<PreparedGroup<H>, CommandGroupPreviewError<H::Error>> {
+        self.admit_retained_current(observer)
+            .map_err(|issue| CommandGroupPreviewError::control(group.id(), issue))?;
         let inputs = self.state.inputs();
         let mut staged = None;
         let mut identities = self.identities.stage();

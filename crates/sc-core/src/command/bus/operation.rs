@@ -28,6 +28,8 @@ pub enum CommandControlError {
     RetainedLimitsAlreadyInstalled,
     /// Original actual model resource refusal, after authority and snapshot binding.
     Model(DesignResourceLimitError),
+    /// Original complete private retained-content refusal, after exact authority/snapshot binding.
+    Retained(DesignResourceLimitError),
     /// Original submitted metadata demand exceeds host policy.
     Input(CommandOperationLimitError),
     /// Host requested cancellation at this actual pre-effect checkpoint.
@@ -52,7 +54,7 @@ impl std::error::Error for CommandControlError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
             Self::Input(issue) => Some(issue),
-            Self::Model(issue) => Some(issue),
+            Self::Model(issue) | Self::Retained(issue) => Some(issue),
             Self::Progress(issue) => Some(issue),
             _ => None,
         }
@@ -79,7 +81,7 @@ impl<H, A> CommandBus<H, A> {
     /// Costly metadata paths require operation, model and retained policies. Piece inspection requires
     /// none. This setter grants no authority and performs no validation, clone or host callback.
     /// Current and history-alternative roots are admitted after exact authority/snapshot binding.
-    /// Current/prospective model checks are implemented; retained command-state admission is separate.
+    /// Current/prospective model and current retained checks are implemented; prospective retained work remains.
     /// # Errors
     /// Returns ModelLimitsAlreadyInstalled, preserving the original policy unchanged.
     pub fn install_model_limits(
@@ -95,7 +97,7 @@ impl<H, A> CommandBus<H, A> {
     /// Install explicit logical retained-content limits exactly once, without traversing private state.
     /// Costly metadata paths require operation, model and retained policies; Piece inspection needs none.
     /// This setter changes no model, reserve, journal, history or grant and invokes no host callback.
-    /// Current private composition and prospective retained admission are separate implementation work;
+    /// Current private composition/admission is implemented; prospective retained admission remains owned;
     /// installing this policy is configuration, not a resource admission or retained-state certificate.
     /// # Errors
     /// Returns RetainedLimitsAlreadyInstalled, preserving the original policy unchanged.

@@ -122,8 +122,8 @@ fn growing_evidence_refuses_before_model_copy_and_failed_group_keys_remain_avail
             "no candidate host clone before projected refusal"
         );
         assert_eq!(
-            telemetry[1], 2,
-            "current and exact prospective resource walks"
+            telemetry[1], 3,
+            "retained, current and exact prospective resource walks"
         );
         assert!(
             telemetry[2] > 0,
@@ -206,8 +206,8 @@ fn exact_noop_same_size_replacement_and_unknown_shrink_use_resulting_owned_evide
         let telemetry = counts(&counters);
         assert_eq!(telemetry[0], 1, "one admitted actual candidate source copy");
         assert_eq!(
-            telemetry[1], 2,
-            "current and prospective source resource walks"
+            telemetry[1], 3,
+            "retained, current and prospective source resource walks"
         );
         bus.execute(&query(design, revision, QueryPayload::GetPieceList))
             .expect("preview leaves original revision");
@@ -262,8 +262,8 @@ fn sequential_evidence_projection_uses_actual_staged_state_and_aliases_do_not_re
         "one admitted candidate copy for each distinct member"
     );
     assert_eq!(
-        telemetry[1], 4,
-        "current/prospective for each distinct actual staged base"
+        telemetry[1], 5,
+        "one retained walk plus current/prospective for each distinct staged base"
     );
     bus.execute(&query(design, revision, QueryPayload::GetPieceList))
         .expect("group preview leaves original revision");

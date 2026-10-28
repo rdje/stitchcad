@@ -256,6 +256,8 @@ pub enum CommandProgressPhase {
     Authorized,
     /// Actual requested snapshot has been bound.
     SnapshotBound,
+    /// Actual complete private retained-content admission before preparation or history traversal.
+    RetainedValidation,
     /// Original submitted members are being prepared or resolved as exact aliases.
     Preparing,
     /// Actual current model/source validation.

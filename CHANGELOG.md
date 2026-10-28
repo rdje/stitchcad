@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0468 — require explicit immutable retained-policy configuration
+## STITCHCAD-G1-0469 — admit exact current private retained artifact composition
 
-- Add an absent-by-default private retained policy and once-only positive-limits setter, without traversal, validation or callbacks.
-- Costly metadata entry points require all three explicit policies; authorized Piece inspection remains independent of policy setup.
-- Native retained setup2 and existing model/operation setup cases plus strict lint/fmt pass; original error precedence and zero source/authority callbacks verified.
-- Whole0467 retained621; book distinguishes configuration from pending current/prospective retained admission and broader acceptance.
+- Charge current/history models, full reserve backing, journal counters/records and history vectors/actions once in stored order.
+- Admit after exact authority/snapshot, preserve original retained resource errors, and cancel at RetainedValidation0/1; accepted replays skip walks.
+- Real current3/model-admission4 and strict lint/fmt pass:independent3M+29/3B+74/36 oracle, one-short errors, full consumed reserve prefix and zero candidate/semantic work on refusal.
+- Source walks include the extra retained pass, candidate copies unchanged. Whole0468 retained622; exact prospective growth admission and coupled/full proof remain pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

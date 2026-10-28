@@ -459,6 +459,7 @@ impl<H: crate::design::DesignResourceSource + Clone + PartialEq, A: CommandAutho
                 limit: history.action_limit.get(),
             });
         }
+        self.admit_retained_current(observer)?;
         super::operation::checkpoint(observer, Phase::CurrentValidation, 0, 1, None)?;
         super::operation::admit_model(&self.state, self.require_model_limits()?)?;
         validate_snapshot(&self.state)
@@ -575,4 +576,48 @@ fn validate_snapshot<H: DesignReferenceHost>(
     state
         .validate_current()
         .map_err(|issue| CommandPreviewError::Current(Box::new(issue)))
+}
+
+impl<H: crate::design::DesignResourceSource> History<H> {
+    pub(super) fn charge_resources(
+        &self,
+        owner: EntityId,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self {
+            depth,
+            action_limit,
+            undo,
+            redo,
+            actions,
+        } = self;
+        crate::command::resource::fixed(depth);
+        crate::command::resource::fixed(action_limit);
+        sink.charge_entries(
+            undo.len(),
+            super::retained::location(owner, "retained.history.undo"),
+        )?;
+        for step in undo {
+            let HistoryStep { group, alternative } = step;
+            crate::command::resource::fixed(group);
+            crate::design::charge_design_garment_resources(alternative, sink)?;
+        }
+        sink.charge_entries(
+            redo.len(),
+            super::retained::location(owner, "retained.history.redo"),
+        )?;
+        for step in redo {
+            let HistoryStep { group, alternative } = step;
+            crate::command::resource::fixed(group);
+            crate::design::charge_design_garment_resources(alternative, sink)?;
+        }
+        sink.charge_entries(
+            actions.len(),
+            super::retained::location(owner, "retained.history.actions"),
+        )?;
+        for action in actions {
+            super::resource::charge_command_history_audit_entry_resources(action, sink)?;
+        }
+        Ok(())
+    }
 }

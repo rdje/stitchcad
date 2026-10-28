@@ -90,8 +90,8 @@ fn exact_successor_bits_admit_zero_sparse_carry_and_beyond_u128_real_models() {
         );
         assert_eq!(
             counts(&counters)[1],
-            3,
-            "current, metadata and final whole revision projections"
+            4,
+            "retained, current, metadata and final revision projections"
         );
         let CommandResult::PieceList(result) = bus
             .execute(&query(design, next, QueryPayload::GetPieceList))
@@ -156,8 +156,8 @@ fn carry_quota_matches_actual_model_before_revision_copy_and_keeps_revision_keys
             );
             assert_eq!(
                 counts(&counters)[1],
-                2,
-                "carry refuses before projected host traversal"
+                3,
+                "retained/current/metadata; carry refuses before projected host traversal"
             );
             let CommandResult::PieceList(result) = bus
                 .execute(&query(design, base.clone(), QueryPayload::GetPieceList))

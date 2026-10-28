@@ -119,7 +119,7 @@ let progress = CommandProgress::new(
 let declared_fraction = (progress.completed(), progress.total().get());
 ```
 
-Fractions are local to their named phase. Authorized, SnapshotBound, Preparing, CurrentValidation,
+Fractions are local to their named phase. Authorized, SnapshotBound, RetainedValidation, Preparing, CurrentValidation,
 CandidateValidation, AllocationPreflight, ReadyToPublish and Replaying are declared pre-effect steps.
 ReadyToPublish means preparation is ready; it does not report a published model. The eventual success
 response acknowledges completion. Constructing phase data proves no actual source check or effect.
@@ -199,8 +199,8 @@ DesignResourceLimits and DesignResourceMeter live in the Design domain, independ
 authority. They provide a data-only accounting contract with implemented component producers below.
 Complete actual model roots compose their source content and retained census under one sink.
 Current/preparation and history-alternative admission now uses the required readonly source port;
-exact Measurement/Material/Notch/publication-revision projections are implemented; retained
-command-state admission remains pending. The meter alone is not a runtime model-admission gate.
+exact Measurement/Material/Notch/publication-revision projections and current private retained
+admission are implemented; prospective retained-state admission remains pending. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -289,7 +289,7 @@ call its source host. A second installation returns ModelLimitsAlreadyInstalled 
 the first policy. Missing policy returns ModelLimitsNotInstalled after pure input admission; authorized
 GetPieceList inspection needs no policy. Neither requests nor progress observers carry a policy.
 Costly paths also require explicit [retained-policy configuration](command-resource-accounting.md#explicit-immutable-retained-policy-configuration);
-private retained admission is separate owned work.
+[current retained admission](command-resource-accounting.md#actual-current-private-retained-composition) is implemented; prospective admission remains owned.
 Compile-time H: DesignResourceSource is required for costly metadata methods; readonly query paths
 retain the narrower semantic host contract. Compiler privacy rejects direct model-policy reset.
 
@@ -305,25 +305,25 @@ snapshot's semantic validation, after current-operator authority and exact snaps
 Undo/Redo moves existing owners. Exact accepted authoring/history replays keep their original result
 and skip private model walks; accepted request identity and fresh authority checks still apply.
 Cancellation remains at actual pre-effect checkpoints; no effect, reserve, revision, stack, key or
-accepted record is published on refusal. is_preview_available and is_commit_available require both
+accepted record is published on refusal. is_preview_available and is_commit_available require all three
 policies; availability supplies no remaining-quota, permission or candidate-validity certificate.
 
-Four new cases instrument a wrapper delegating to actual DesignSources, without invented model or
-resource totals. Unauthorized and mismatched snapshots produce0 clones/0 resource calls/0 semantic
-callbacks across single/group preview and commit; history denial/stale snapshot does likewise.
-An actual one-byte-short model policy preserves the exact native resource refusal across all three
-preparation entries, with0 clones/1 actual host resource call/0 semantic callbacks and unchanged
-Piece address/revision. Setup/cheap reads invoke none. Actual history traversal charges2 snapshots
-with0 host copies; exact history/authoring replays invoke none. The existing46 cases plus4 new cases
-pass50, with strict core-library/affected-test lint and formatting; focused bus privacy/capability
-examples also pass. The new test's missing explicit borrowed-error lifetime and one unused import
-were corrected before acceptance. No semantic validation callback is replaced by accounting.
+Four model-admission cases instrument actual DesignSources, without invented model/resource totals.
+Unauthorized and mismatched snapshots produce0 clones/0 resource calls/0 semantic callbacks across
+single/group preview and commit; history denial/stale snapshot does likewise. A one-byte-short model
+policy preserves its original resource error with0 clones/2 host walks/0 semantic callbacks: complete
+retained admission now precedes the per-model walk. History with one alternative now has4 walks,
+two for retained composition plus two individual model admissions, with0 copies. Setup/cheap reads
+invoke none, as do exact accepted authoring/history replays. The four affected cases and strict lint/
+formatting pass; prior broader bus acceptance is historical, with current coupled verification deferred.
+No semantic validation is replaced by accounting. Current retained totals and phase-local cancellation
+are detailed in the [command data guide](command-resource-accounting.md#actual-current-private-retained-composition).
 
 This implements current/preparation-root and stored history-alternative admission. Exact prospective
 Measurement, selected Material, Notch and publication-revision admission are implemented below.
 Per-model logical admission is implemented with focused checks under the honest immutable-source
-contract. Total command audit/replay/history content and stored maximum-issued/audit counters remain
-.4.3; coupled/deeper/full verification remains separate.
+contract. Current private audit/replay/history content and stored maximum-issued/audit counters are admitted;
+exact prospective retained content remains .4.3.4; coupled/deeper/full verification remains separate.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
 release acceptance remain separate. Deeper/full verification stays deferred until feature completion.
 
@@ -394,8 +394,8 @@ single/group preview and commit, unchanged original Piece address/revision/conte
 of the refused group/key/capacity by a valid commit. They also cover no-op/same-byte/shrink/Assigned,
 reversed selection/report order, missing target index1 before projection, and a staged shorter reason
 followed by restoration and an alias. The alias repeats neither candidate copy nor resource walk;
-restoration has no net metadata difference. Admitted previews retain one host copy and two source
-resource walks. Python and OS byte counts independently confirm the exact4/3/6-byte strings.
+restoration has no net metadata difference. Admitted previews retain one host copy and two per-model
+source walks, plus one walk per actual retained model. Python and OS byte counts independently confirm the exact4/3/6-byte strings.
 
 The new4, original5 Material and3 Measurement-projection cases,33 source resource cases and5 Piece
 cases pass, with strict affected lint/formatting. The execution guide's earlier semantic-only preview
@@ -435,7 +435,7 @@ with explicit Unknown frees2 entries, then appends1 and returns the original fir
 The refused group/key/capacity and original Piece address/revision remain available/unchanged.
 
 With one extra entry of room, repeated previews and an exact alias fit and return the same first ID,
-with1 host copy/2 source resource walks. Two distinct appends exceed that bound at the second staged
+with1 host copy/2 per-model source walks, plus one walk per actual retained model. Two distinct appends exceed that bound at the second staged
 member; the complete group rolls back, and later single-member commit still uses the original first
 ID/capacity. Actual target/exhaustion/wrong-Piece anchor tests verify original cause precedence and
 no prospective walk/copy before those failures. Three new and four existing Notch cases,33 source
@@ -498,5 +498,5 @@ verification remain pending. Logical model content does not bound raw ingress, a
 authority/source host algorithm time, numeric/file/decompression/geometry work or physical/release proof.
 
 [Actual command data resource accounting](command-resource-accounting.md) documents owned request
-contexts, aliases, vectors and text separately from proposed operation work. Request readers are
-implemented; actual report/retained-state composition and runtime retained policy remain owned.
+contexts, aliases, reports, records and current private retained composition separately from proposed
+operation work. Exact prospective retained-state admission and coupled/full verification remain owned.

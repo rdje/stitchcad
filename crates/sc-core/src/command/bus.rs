@@ -29,6 +29,7 @@ mod group;
 pub use group::{CommandGroupPreview, CommandGroupPreviewError, CommandGroupPreviewStep};
 mod group_difference;
 mod resource;
+mod retained;
 pub use group_difference::CommandGroupDifference;
 pub use resource::{
     charge_command_audit_entry_resources, charge_command_group_commit_resources,
@@ -327,6 +328,7 @@ impl<H: DesignResourceSource + Clone + PartialEq, A: CommandAuthoritySource> Com
         use crate::command::CommandProgressPhase as Phase;
         operation::checkpoint(observer, Phase::Authorized, 1, 1, None)?;
         operation::checkpoint(observer, Phase::SnapshotBound, 1, 1, None)?;
+        self.admit_retained_current(observer)?;
         let member = Some((0, mutation.command_id()));
         operation::checkpoint(observer, Phase::Preparing, 0, 1, member)?;
         let base = PreparationBase {

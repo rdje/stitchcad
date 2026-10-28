@@ -3,15 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — explicit immutable retained-policy configuration
+## _(2026-10-28 UTC)_ — exact current private retained composition
 
-0468 .6.8.2.2.2.2.4.3.3.1 adds a private absent-by-default retained policy and once-only setter.
-All costly entry points require operation/model/retained setup; cheap authorized Piece reads need none.
-Native setup2 plus model/operation setup cases and strict lint/fmt pass:three constructors, same/larger
-replacement refusals, source0/0/0 and authority0 for configuration/missing-policy errors. Test helpers
-supply explicit retained maxima; without_model_limits deliberately omits only the model policy.
-Current .3.3.2/prospective .3.4 admission remain pending; no retained certificate. Whole0467 retained621; indexed decision promoted.
-Doctest filter with spaces unexpectedly selected171; stopped owned tree (101), space-free type filter selects11 privacy checks.
+0469 .6.8.2.2.2.2.4.3.3.2 admits actual current/history models, full reserve backing, journal/actions after authority/snapshot; RetainedValidation0/1 cancels before effects.
+Exhaustive views/precharge/fixed guards include source H and exclude external authority A. Current3/model4/strict lint/fmt pass:actual model/record oracle3M+29/3B+74/36.
+Exact/one-short errors and source chains, three source walks/no clones/semantics, cancellation/replay0/0/0 and consumed reserve prefix verified. Extra retained walks leave candidate-copy counts unchanged.
+Current-only growth proof does not establish prospective admission; .3.4/coupled/full remain pending. Promotion:indexed command-layer decision; whole0468 retained622.
+[Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.
 [Whole0467 accepted-record lesson](docs/history/stitchcad-devnotes-part621.md) retains exact counter/history/replay ownership proof.
 [Whole0466 report lesson](docs/history/stitchcad-devnotes-part620.md) retains exact alias/net/restored ownership proof.
 [Whole0465 owned-request lesson](docs/history/stitchcad-devnotes-part619.md) retains exact request/resource/alias proof.

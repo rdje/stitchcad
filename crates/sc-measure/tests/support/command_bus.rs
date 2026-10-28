@@ -86,6 +86,8 @@ mod resource_reports;
 mod resource_requests;
 #[path = "command_bus/resource_revision.rs"]
 mod resource_revision;
+#[path = "command_bus/retained_current.rs"]
+mod retained_current;
 #[path = "command_bus/retained_policy.rs"]
 mod retained_policy;
 impl CommandAuthoritySource for Host {

@@ -4,7 +4,8 @@ Command inputs, reports and retained execution state own dynamic data in additio
 [model](model-resource-accounting.md) and [source host](source-resource-accounting.md). They use the
 same explicit logical units and sealed sink from the [resource contract](command-operation-control.md#logical-dynamic-content-accounting-contract).
 CommandState locations describe these objects; a resource result is data, not authority or a model
-snapshot stamp. Actual private-state composition and runtime retained admission remain owned work.
+snapshot stamp. Actual current private-state composition/admission is implemented; prospective retained
+admission and coupled/full verification remain owned work.
 
 ## Actual typed mutation-group inputs
 
@@ -229,8 +230,8 @@ Four actual record cases, five report cases and four request cases pass with str
 and formatting. All original execution/history/request implementations are byte-exact after removing
 the new exhaustive readonly views; preparation, operation, identity and group implementations are
 byte-exact. Existing request/report readers are byte-exact. This implements accepted data accounting
-with focused checks. Private retained model/reserve/journal composition and prospective runtime
-retained admission remain .4.3.3.2–.4.3.4; coupled acceptance .4.4 and deeper/full verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
+with focused checks. Current private retained model/reserve/journal composition is admitted; prospective
+retained admission remains .4.3.4; coupled acceptance .4.4 and deeper/full verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
 ingress, numeric/file/decompression/geometry work or physical/release acceptance.
 
 
@@ -270,8 +271,77 @@ operation-policy and model-policy setup cases retain their original precedence a
 affected lint/formatting pass. Test helpers install explicit permissive retained limits; the helper
 that deliberately omits model limits is named without_model_limits and still supplies retained policy.
 
-This slice implements configuration and setup refusal only. It does not yet compare actual private
-retained content to that policy. The next leaf .4.3.3.2 owns the exact current private composition
-and admission after authority/snapshot binding; .4.3.4 owns exact prospective commit/history admission,
-including branch discard, eviction and replay/cancellation behavior. No retained-state, memory or
-resource-bound certificate follows from installation alone. Broader resource acceptance stays .4.4.
+Installation alone certifies no retained content or quota room. Actual current private admission now
+runs as described below; exact prospective commit/history admission remains .4.3.4, including evictions,
+branch discard and growth before allocations/effects. Coupled/deeper/full resource acceptance stays .4.4.
+
+## Actual current private retained composition
+
+Before preparing a supported metadata operation or traversing a new history action, the bus admits
+its complete actual retained artifact state under the installed retained policy. Fresh authority,
+Design and exact snapshot binding precede this private walk. Accepted authoring/history replays
+return their original records before walking private models, even when current retained content is
+over the installed bound. Ordinary authorized GetPieceList remains a borrowed policy-free read.
+There is no public private-state meter, model getter, replacement token or caller-supplied census.
+
+The exhaustive internal bus view charges these actual owners, using one cumulative sealed meter:
+
+1. The complete current model, including its actual source host and separately stored entity census.
+2. The full immutable identity-reserve backing, including the consumed prefix. Its finite consumed
+   cursor is fixed data; the backing does not shrink after a successful Notch allocation.
+3. The journal's initial revision, independent maximum-issued revision and current effect sequence,
+   followed by its whole accepted-entry vector and every actual authoring record in stored order.
+4. The whole undo deque, each actual model alternative front to back; the whole redo vector and
+   each actual alternative in stored vector order; then the whole chronological action vector and
+   each actual accepted history-action record. Redo application order is a separate runtime concern.
+
+Each collection is precharged before its members. Model and record producers preserve their native
+original locations; no private text or invented containing identity is added to a refusal. Reserve,
+journal and stack/vector fields use CommandState scope and the actual Design owner. Static fields
+are retained.identities, retained.journal.initial_revision, retained.journal.maximum_revision,
+retained.journal.sequence, retained.journal.entries, retained.history.undo, retained.history.redo
+and retained.history.actions. Multiple owned model alternatives count separately even when revisions
+or source values match. Their immutable source contract remains honest/exhaustive; no semantic census,
+validation, formatting or clone is used by runtime accounting.
+
+Finite count limits, configured policies, grant/time and cursor/identity fields stay fixed and are
+guarded accordingly. The trusted foreign authority service A is outside this retained artifact scope;
+the walk neither inspects nor calls it. Every represented model's owned source H remains included.
+This bounds logical artifact content, not arbitrary authority-service allocation or host algorithms.
+
+The whole-owner RetainedValidation phase emits0/1 before and1/1 after actual admission, with no member
+index. It follows SnapshotBound and precedes member preparation/current validation; history also checks
+its actual target and action room first. Cancellation at0 makes no resource call. Cancellation at1
+has completed the retained walk but performs no semantic validation, candidate clone or effect.
+Retained refusal preserves CommandControlError::Retained and the original resource error through the
+standard source chain. A prior failure is never reset. Each actual retained model contributes one
+source resource call to this phase, separately from later per-model current/prospective admission.
+
+The native oracle independently rebuilds and validates actual Material models at revisions0,1,2
+through public constructors. Real buses produce the two accepted records, Undo of group2, Undo of
+group1 and Redo of group1. The final current model is revision1, the undo alternative is revision0,
+the redo alternative is revision2, the maximum-issued revision is2 and effect sequence is5. Both
+accepted records and all three history-action records remain. The reserved three-ID backing remains.
+
+Let M and B be the independently measured revision0 model entries and text bytes. Each actual model
+has M entries; the two edits replace26-byte reasons with4-byte reasons. Complete retained demand is
+3M+29 entries,3B+74 bytes and36 magnitude bits. This is re-derived from the independently retained
+actual models and returned immutable records, not from private bus statistics. Exact limits reach
+RetainedValidation1 with0 clones/3 source calls/0 semantic callbacks. One-short entry, text and bit
+policies preserve the same first error as that independent composition. Exact authoring/history
+replays still invoke0 clones/0 resource calls/0 semantic callbacks.
+
+A separate actual Notch commit consumes one of two reserved IDs. Current content then owns the one
+additional landmark plus both backing IDs. The following probe refuses at retained.identities with
+requested2, rather than incorrectly charging only the unused suffix. Cancellation before/after retained
+admission leaves the original group/key/capacities available for a later actual commit. Unauthorized,
+wrong-Design and stale single/group/commit/history paths still cause no private resource walk.
+
+Three new current-retained cases and four affected model-admission cases pass with strict affected
+lint/formatting. The extra current-retained pass changes source-walk telemetry, while candidate-copy
+counts remain unchanged. This is current private admission only: prospective .4.3.4 must still refuse
+growth before allocation/effects and account exact evictions/branch discard. Until that leaf lands,
+the current-only Notch proof can create a later-over-budget state and then demonstrate next-operation
+refusal; it is not proof that accepted growth is bounded. Coupled .4.4/deeper/full verification remain
+deferred. Raw ingress, allocator peaks, arbitrary host time, numeric/file/decompression/geometry work
+and physical/release acceptance retain their separate owners.

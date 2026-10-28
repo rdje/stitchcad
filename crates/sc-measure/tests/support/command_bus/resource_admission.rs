@@ -108,8 +108,8 @@ fn model_policy_has_no_default_installs_once_and_does_not_walk_or_block_piece_in
     assert!(matches!(control(&error), Some(Control::Model(_))));
     assert_eq!(
         counts(&counters),
-        [0, 0, 0],
-        "first core quota precedes source traversal/validation/copy"
+        [0, 1, 0],
+        "retained admission precedes the first per-model quota; no validation/copy"
     );
 }
 #[test]
@@ -217,8 +217,8 @@ fn exact_current_model_refusal_precedes_validation_copy_and_effect_on_all_prepar
         assert_eq!(control(error.as_ref()), Some(&Control::Model(expected)));
         assert_eq!(
             counts(&counters),
-            [0, 1, 0],
-            "one actual H walk, no semantic callback or clone"
+            [0, 2, 0],
+            "retained plus per-model H walks, no semantic callback or clone"
         );
         let CommandResult::PieceList(result) = bus
             .execute(&query(design, revision.clone(), QueryPayload::GetPieceList))
@@ -292,8 +292,8 @@ fn history_admits_both_actual_snapshots_and_exact_replays_skip_model_walks() {
     let observed = counts(&counters);
     assert_eq!(observed[0], 0, "undo moves existing owners without cloning");
     assert_eq!(
-        observed[1], 2,
-        "current and exact stored alternative each admitted"
+        observed[1], 4,
+        "both retained models plus individual current/alternative admission"
     );
     assert!(
         observed[2] > 0,

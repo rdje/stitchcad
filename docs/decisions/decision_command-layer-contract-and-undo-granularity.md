@@ -145,3 +145,21 @@ line suffix selected171 cases, including unrelated types. The owned expanded rus
 terminated (cargo101, SIGTERM); this interrupted run is not full verification. The space-free filter
 command::bus::CommandBus selects exactly11 bus compile-failure contracts, including retained-policy
 reset. Use that bounded type filter; do not infer one-case scope from a line suffix containing spaces.
+
+## Actual current private retained composition0469
+
+answers: "does current retained admission count history snapshots, old audit records and consumed IDs?"
+
+One cumulative private walk charges actual current model, full immutable ID backing (consumed prefix
+included), initial/max-issued/audit counters, every accepted record, undo/redo models in stored order,
+and chronological action records. All owners are exhaustive, vectors precharged, fixed fields guarded;
+A is the external trusted authority service and excluded, while each model's actual owned source H counts.
+Fresh authority/exact snapshot precede RetainedValidation0/1; no public private-state getter exists.
+Cancellation/refusal preserves model/reserve/keys/capacities and original resource cause/source chain.
+Exact authoring/history replays bypass the current walk. The real independent model/record oracle is
+3M+29 entries/3B+74 bytes/36 bits; exact and one-short unit limits, three-source/no-copy/no-semantic
+admission and full consumed reserve count pass current3/model4/strict lint/fmt. Extra retained source
+walks are separate from per-model admission and do not add candidate copies. This is current-only:
+prospective .3.4 must prevent growing accepted content before retained allocations/effects; coupled/
+full verification stays deferred. The current-only Notch proof tests a later-over-bound state, not
+prospective enforcement; replace that setup with early-refusal proof when .3.4 lands.

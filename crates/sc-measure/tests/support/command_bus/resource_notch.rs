@@ -228,13 +228,13 @@ fn exact_one_entry_room_admits_repeated_preview_alias_and_rolls_back_later_group
             .expect("exact one-entry boundary");
         assert_eq!(notch_report(&preview).notch().id(), first);
         assert_eq!(counts(&counters)[0], 1);
-        assert_eq!(counts(&counters)[1], 2);
+        assert_eq!(counts(&counters)[1], 3);
     }
     reset(&counters);
     let report = bus.preview_group(&alias).expect("alias appends only once");
     assert_eq!(report.steps().last().expect("alias").replay_of(), Some(0));
     assert_eq!(counts(&counters)[0], 1);
-    assert_eq!(counts(&counters)[1], 2);
+    assert_eq!(counts(&counters)[1], 3);
     reset(&counters);
     let error = bus
         .commit_group(&too_many)
@@ -348,8 +348,8 @@ fn original_missing_target_exhaustion_and_anchor_causes_precede_prospective_quot
         assert_eq!(counts(&counters)[0], 0);
         assert_eq!(
             counts(&counters)[1],
-            1,
-            "no prospective walk before original cause"
+            2,
+            "retained/current only; no prospective walk before original cause"
         );
     }
 }

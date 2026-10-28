@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0468
+## Current leaf acceptance —0469
 
-- [x] ROOT CAUSE: python3 -I -B native retained setup:two constructor initializers absent, both costly
-  admission helpers require policy; once-only callback-free setter and availability guard rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_policy:::
-  2 passed rc=0:all constructors, missing setup/all4 paths, same/larger reinstall, source0/0/0+authority0.
-- [x] NO REGRESSION: model setup1/operation setup1, strict affected lint/fmt, bus privacy11 pass rc=0;
-  current .3.3.2/prospective .3.4 retained admission and coupled/full verification remain pending.
+- [x] ROOT CAUSE: python3 -I -B native retained scope:exhaustive bus/reserve/journal/history/step
+  views, precharge/full backing, no clone/census/auth/numeric calls; binding/replay/checkpoint order rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_current:::
+  3 passed rc=0:actual model/record3M+29/3B+74/36 oracle, one-short/errors/chains, replay/cancel/full prefix.
+- [x] NO REGRESSION: affected model-admission4, strict core-lib/affected-test Clippy/both package fmt
+  pass rc=0; candidate copies unchanged. Exact prospective .3.4 and coupled/deeper/full proof pending.
 
 ## Goal
 
@@ -937,34 +937,33 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0467 exact actual accepted records; [whole scope/proofs](../history/stitchcad-devnotes-part621.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete private retained bus composition with explicit immutable policy and authorized admission.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.3.1`
   Status: `done`
-  Goal: install explicit immutable retained-content policy, without traversal/callbacks/defaults; require
-  all three policies for costly metadata entry points and preserve policy-free authorized Piece reads.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native setup:explicit absent constructor slots, both admission
-    helpers require retained presence; original model/operation setup precedence preserved rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part621.md:
-    3 exact Git spans rc=0; whole0467 retained. Retained setup must not traverse or imply admission.
-  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and affected sc-measure strict Clippy:both
-    rc=0; once-only private setter, noDefault fallback/callback/walk; all3 policies gate availability.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_policy:::
-    2 passed rc=0, plain/reserve/edit-history constructors and single/group/commit/history refusal;
-    same/larger replacement rejected, cheap authorized reads unaffected, source0/0/0+authority0.
-  - [x] NO REGRESSION: model setup1/operation setup1/both package fmt pass rc=0. cargo test -p sc-core
-    --doc command::bus::CommandBus:11 privacy cases passed rc=0. Spaced line-suffix filter expanded171;
-    owned rustdoc/children terminated (101/SIGTERM), corrected space-free type filter11/160 filtered.
-    Native group/history/preparation/identity/resource files unchanged; effect runtime byte-exact,
-    policy-count rustdoc only. No current/prospective retained-content check is claimed.
-  - [x] LOCKSTEP: mdbook build/native publication84 chapters/159 scoped API rows/1519 source links/
-    2558 rendered links rc=0; book setup examples/pending boundary and indexed decision promoted.
-    history_archive.sh verify-retention:1075 logical/42 working Markdown/60115 decoded lines/
-    4548123 decoded bytes/2378935 resident bytes rc=0. Current .3.3.2/prospective .3.4/coupled/full pending.
+  Goal:0468 immutable explicit retained configuration; [whole scope/proofs](../history/stitchcad-devnotes-part622.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.3.2`
-  Status: `pending`
+  Status: `done`
   Goal: actual current/history alternatives, complete reserve backing, journal/actions/counters once;
   preserve stored orders/witnesses and admit current retained content after exact authority/snapshot.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native retained scope:all actual bus/reserve/journal/history/
+    step fields exhaustive, vector precharge/stored order/full backing, no clone/census/auth/numeric rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part622.md:
+    3 exact Git spans rc=0; whole0468 retained. External A excluded, each actual source H/model included.
+  - [x] FIX: cargo clippy -p sc-core --lib -- -D warnings and affected sc-measure strict Clippy:
+    both rc=0; private cumulative retained meter and original Retained resource error/source chain.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_current:::
+    3 passed rc=0:independent rebuilt models/actual audit records3M+29/3B+74/36, exact and each one-short
+    unit preserve original errors; final revision1/max2/sequence5, undo0/redo2 and all3 actions count.
+    Admission0 clones/3 source walks/0 semantics; authoring/history replay0/0/0. Actual consumed reserve
+    still requests whole2 entries; cancellation0/1 preserves original group/key/capacities and later commit.
+  - [x] NO REGRESSION: model-admission4/both package fmt pass rc=0; unauthorized/wrong-Design/stale
+    single/group/commit/history0 private walks. Source telemetry includes retained pass (history4);
+    candidate copies unchanged. Native original handler/model/projection/request/report bodies unchanged.
+  - [x] LOCKSTEP: mdbook build/native publication84 chapters/159 scoped API rows/1521 source links/
+    2561 rendered links rc=0; indexed decision promotion, examples/current-only boundary synchronized.
+    history_archive.sh verify-retention:1076 logical/43 working Markdown/60165 decoded lines/
+    4552540 decoded bytes/2383352 resident bytes rc=0. Prospective .3.4/coupled/full still pending.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4`
   Status: `pending`
   Goal: exact prospective commit/history preflight under installed immutable retained policy before

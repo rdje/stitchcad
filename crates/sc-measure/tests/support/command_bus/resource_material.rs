@@ -240,7 +240,7 @@ fn only_selected_resulting_reasons_count_for_noop_same_byte_shrink_and_assigned_
         }
         let telemetry = counts(&counters);
         assert_eq!(telemetry[0], 1);
-        assert_eq!(telemetry[1], 2);
+        assert_eq!(telemetry[1], 3);
         let CommandResult::PieceList(result) = bus
             .execute(&query(design, revision, QueryPayload::GetPieceList))
             .expect("preview keeps original model");
@@ -276,7 +276,7 @@ fn later_missing_selected_piece_keeps_original_index_before_any_prospective_walk
     );
     let telemetry = counts(&counters);
     assert_eq!(telemetry[0], 0);
-    assert_eq!(telemetry[1], 1);
+    assert_eq!(telemetry[1], 2);
 }
 #[test]
 fn sequential_material_projection_uses_actual_staged_reason_and_aliases_do_not_repeat_work() {
@@ -316,7 +316,7 @@ fn sequential_material_projection_uses_actual_staged_reason_and_aliases_do_not_r
     );
     let telemetry = counts(&counters);
     assert_eq!(telemetry[0], 2);
-    assert_eq!(telemetry[1], 4);
+    assert_eq!(telemetry[1], 5);
     bus.execute(&query(design, revision, QueryPayload::GetPieceList))
         .expect("preview keeps original revision");
 }

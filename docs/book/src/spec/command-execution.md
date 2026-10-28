@@ -44,7 +44,7 @@ readiness. Individual/group metadata previews and commits are described below. O
 persistence and runtime/adapter parity remain separately owned implementation work.
 
 [Actual command data accounting](command-resource-accounting.md) measures owned request fields,
-including duplicated contexts/aliases. Retained-state enforcement remains separate from model admission.
+including duplicated contexts/aliases and current private retained state, separately from model admission.
 
 ## Trusted metadata operation policy
 
@@ -65,7 +65,7 @@ Missing policy refuses with CommandControlError::LimitsNotInstalled; attempted r
 LimitsAlreadyInstalled and retains the original policy. Missing model policy returns
 ModelLimitsNotInstalled; replacement returns ModelLimitsAlreadyInstalled. Missing retained policy returns
 RetainedLimitsNotInstalled; replacement returns RetainedLimitsAlreadyInstalled. Retained configuration
-performs no admission yet; [current/private/prospective enforcement remains owned](command-resource-accounting.md#explicit-immutable-retained-policy-configuration). Pure input admission
+itself performs no admission; [current retained admission is implemented](command-resource-accounting.md#actual-current-private-retained-composition), prospective admission remains owned. Pure input admission
 precedes authority; private model accounting follows exact authority/snapshot binding and precedes
 current validation/cloning. Actual progress, observer methods, cancellation/retry semantics and
 the precise limits of these metadata bounds are documented in [Operation limits and progress](command-operation-control.md).

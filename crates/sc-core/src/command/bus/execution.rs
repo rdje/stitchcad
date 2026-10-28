@@ -179,6 +179,43 @@ pub(super) struct CommandJournal {
     pub(super) entries: Vec<CommandAuditEntry>,
 }
 
+impl CommandJournal {
+    pub(super) fn charge_resources(
+        &self,
+        owner: EntityId,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self {
+            limit,
+            initial_revision,
+            maximum_revision,
+            sequence,
+            entries,
+        } = self;
+        crate::command::resource::fixed(limit);
+        sink.charge_counter_bits(
+            initial_revision.resource_bits(),
+            super::retained::location(owner, "retained.journal.initial_revision"),
+        )?;
+        sink.charge_counter_bits(
+            maximum_revision.resource_bits(),
+            super::retained::location(owner, "retained.journal.maximum_revision"),
+        )?;
+        sink.charge_counter_bits(
+            sequence.resource_bits(),
+            super::retained::location(owner, "retained.journal.sequence"),
+        )?;
+        sink.charge_entries(
+            entries.len(),
+            super::retained::location(owner, "retained.journal.entries"),
+        )?;
+        for entry in entries {
+            super::resource::charge_command_audit_entry_resources(entry, sink)?;
+        }
+        Ok(())
+    }
+}
+
 /// Actual accepted authoring or history action that changed the represented snapshot.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct CommandRevisionChange {

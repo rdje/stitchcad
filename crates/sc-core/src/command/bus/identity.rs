@@ -43,6 +43,25 @@ pub(super) struct IdentityReserve {
     consumed: usize,
 }
 impl IdentityReserve {
+    pub(super) fn charge_resources(
+        &self,
+        owner: EntityId,
+        sink: &mut dyn crate::design::DesignResourceSink,
+    ) -> Result<(), crate::design::DesignResourceLimitError> {
+        let Self {
+            identities,
+            consumed,
+        } = self;
+        crate::command::resource::fixed(consumed);
+        sink.charge_entries(
+            identities.len(),
+            super::retained::location(owner, "retained.identities"),
+        )?;
+        for identity in identities.iter() {
+            crate::command::resource::fixed(identity);
+        }
+        Ok(())
+    }
     pub(super) fn new<H: DesignReferenceHost>(
         identities: Vec<EntityId>,
         garment: &DesignGarment<H>,
