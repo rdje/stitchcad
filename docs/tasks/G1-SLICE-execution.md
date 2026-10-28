@@ -180,16 +180,19 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.6.5.3.2.3.2.3.acceptance`
   Status: `done`
   Goal:0494 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part649.md).
+- ID: `G1-SLICE.6.5.3.2.cleanup`
+  Status: `done`
+  Goal:0496 due daily artifact cleanup completed;public producer unchanged,original workspaces/proofs/stores preserved. Next .3.2.4.1 nonuniform arithmetic/context recovery.
+  - [x] REPRODUCE / ISSUE: read docs/ARTIFACT_CLEANUP.md and UTC clock →last2026-10-27 13:41UTC,now beyond2026-10-28 13:41UTC;daily cleanup due,rc=0.
+  - [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan target/artifact_cleanup_audit/seam-20261028 →87 candidates/229 files/15007705B,1032 skips,rc=0. Independent candidate listing confines selection to4 generated trees and83 root logs;Rust stray census0. No protected-path overlap.
+  - [x] FIX: inspect frozen candidates,hash both original generation workspaces,apply only frozen public plan with actual idle-CUA attestation and OS-visible process guard;preserve uncertain entries and all stores/certificates. Own whole0495 retirement651;update latest cleanup entry after immediate residue proof.
+  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply target/artifact_cleanup_audit/seam-20261028 --idle-cua →4 trees/83 strays/229 files/15007705B removed,residue0,tracked_change=false,rc=0. Result retained in result.json;all1032 unsafe/uncertain entries skipped.
+  - [x] NO REGRESSION: immediate independent Python Path/hashlib census →87 paths absent,213 preservation entries exact/9084081 regular-file bytes,protected_overlap=false,rc=0 in independent_post.json. Fresh read-only recheck before launcher agrees,rc=0. Hash scope is original workspaces;store/certificate separation is proven by candidate exclusion.
+    python3 -I -B scripts/local_environment.py -- mdbook build docs/book plus book_publication.py check →88/174/1560/2661,rc=0. transition_receipts.py --record docs/history/stitchcad-devnotes-part651.md →3 exact Git spans;bash scripts/history_archive.sh verify-retention →1105 logical/72 working/2538708 residentB,rc=0.
+  - [x] LOCKSTEP: task/index/MEMORY/DEV/CHANGE/latest cleanup/book synchronized;LIVE/README reviewed unchanged,G1 6/18. No runtime/producer behavior change. promotion: declined (routine execution and receipts for the already documented cleanup contract;no new reusable policy lesson).
 - ID: `G1-SLICE.6.5.3.2.tracking`
   Status: `done`
-  Goal:0495 paired task branch moved to existing canonical execution sibling before nonuniform detail;all source/status/proof routes preserved,limits unchanged.
-  - [x] REPRODUCE / ISSUE: native Git/wc census →root1196/1200 lines,execution sibling126,rc=0;detailed weighted/notch/context leaves would consume root headroom before implementation.
-  - [x] ROOT CAUSE: git show 9eed02cc:docs/tasks/G1-SLICE.md | wc -l →1196;execution sibling equivalent →126,rc=0. Root cap binds while existing sibling has room. Move canonical work memory without adding a map row or raising limits;retain exact source before changing live navigation.
-  - [x] FIX: whole0494 task/lesson/changelog retained649;whole native paired branch650. Copy working63-line branch exactly after the sole authorized retirement;preserve all IDs/states/proofs,add source/family guard and detailed .4 children. No Rust runtime source or submodule change.
-  - [x] ADDRESSED: independent native Git census →all258 original root IDs live,24 current paired IDs exactly once,rc=0. transition_receipts.py --record docs/history/stitchcad-devnotes-part649.md /part650.md →3+1 exact Git spans,rc=0;native branch70 lines/5726B exact. Root1128/execution232 before closure checklist.
-  - [x] NO REGRESSION: python3 -I -B docs/tasks/artifacts/live_doc_size/task_source_contract.py →12 passed,rc=0;fresh sibling/duplicate/source immutability controls remain intact. Initial new regex lacked multiline mode and was correctly red;native re.search/re.M fixes the test without weakening its predicate.
-    knowledge-map check →pass,8185B unchanged;mdbook build/publication check →88/174/1560/2661,glossary census →0 failures,verify-retention →1104/2533729 residentB,all rc=0. Pressure actual50/64,aggregate71/192;no archive packing needed.
-  - [x] LOCKSTEP: root/sibling/task index/live pointers/journals/indexed containment decision/book/defect scheduling synchronized;LIVE/README reviewed unchanged,G1 6/18. Next .4.1 exact arithmetic/context recovery;feature work stays same G1 tree. Native handler/physical/release and broader paired acceptance remain owned.
+  Goal:0495 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part651.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4`
   Status: `in_progress`
   Goal: weighted/notch-bounded cumulative allocation through actual source/stop/geometry contexts;

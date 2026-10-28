@@ -69,6 +69,12 @@ would recreate scratch. Overwrite the latest cleanup record in docs/ARTIFACT_CLE
 commit its owned task. Rebuild native/WASM/book outputs and run the appropriate controls only
 after the immediate residue proof. All roots and examples remain relocatable.
 
+The latest run and its owning task are recorded in docs/ARTIFACT_CLEANUP.md. A preservation
+receipt states its actual scope: hashing selected original generation workspaces does not mean
+that every protected dependency or numerical-proof store was hashed. Candidate separation proves
+those stores were outside the deletion set. Regenerated book/scratch output after the immediate
+residue census is expected and does not invalidate that census.
+
 ### Incomplete runtime observations
 
 SPINE.23r captured a recurrence: lsof emitted descriptor4 and a name without the requested type.

@@ -3,12 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — paired task branch contained before nonuniform work
+## _(2026-10-28 UTC)_ — due daily cleanup completed before nonuniform work
 
-0495 moves paired work to the existing canonical execution sibling before new density/notch/context detail. Native root1196/1200 lines had insufficient headroom;execution sibling126 had room. Original70-line/5726B branch retained650;working63-line copy is exact after authorized whole0494 retirement649.
-Native Git census preserves all258 original root IDs and24 current paired IDs exactly once. New source/family watch plus prior controls pass12/0;the first new regex lacked multiline mode and was red,then re.search/re.M corrected it. No ownership predicate weakened;knowledge map remains8185B without a new row/cap.
-Book88/174/1560/2661/glossary0 and source receipts3+1 Git spans/retention1104/2533729 residentB pass0;active50/64,aggregate71/192. Promotion:indexed containment decision. LIVE/README unchanged,G1 6/18. No Rust runtime source changes;next weighted/notch/context arithmetic recovery .4.1,then safe implementation leaves.
-[Whole0494 Design-acceptance lesson](docs/history/stitchcad-devnotes-part649.md) and [native paired task source](docs/history/stitchcad-devnotes-part650.md) preserve exact original scope/proofs.
+0496 applies the frozen public plan at target/artifact_cleanup_audit/seam-20261028 after candidate review and the OS-visible idle guard. Removed4 generated trees/83 root logs,229 files/15007705B;producer residue0 and tracked_change=false.
+Immediate independent census and a fresh read-only recheck before launcher regeneration find all87 selected paths absent and all213 preserved entries exact (9084081 regular-file bytes). These hashes cover both original generation workspaces,including backups;candidate separation protects stores/certificates.
+All1032 unsafe/uncertain entries retained;Rust release/incremental/deps stray .bin/.log census0. Whole0495 scope/lesson/changelog retained651. No producer/runtime behavior change or new policy lesson;promotion declined in the leaf because this is routine execution of the existing cleanup contract.
+LIVE/README reviewed unchanged,G1 6/18;book/latest cleanup/task/live pointers synchronized. Next .3.2.4.1 exact nonuniform arithmetic/context recovery;full paired acceptance remains deferred to its owner.
+[Whole0495 tracking lesson](docs/history/stitchcad-devnotes-part651.md) retains exact source/proofs.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

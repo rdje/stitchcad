@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0495 — contain the paired task branch before nonuniform detail
+## STITCHCAD-G1-0496 — complete due daily artifact cleanup
 
-- Move paired work into the existing canonical execution sibling without a new map row or raised limit. Preserve exact native70-line/5726B branch650 and whole0494 in649;copy the working branch exactly after authorized retirement,retain all IDs/states/proofs and add safe .4 children.
-- Native Git census keeps all258 original root IDs live/24 paired IDs unique. Task source/family12 controls and unchanged8185B knowledge map pass. Book88/174/1560/2661/glossary0/source receipts3+1/retention1104 pass.
-- Rust runtime code and LIVE G1 6/18 unchanged. D301 exact weighted/notch/context recovery .4.1 next;stops,lineage,effects and full paired acceptance remain owned.
+- Guarded frozen plan removes4 generated trees/83 root logs,229 files/15007705B;zero residue and no tracked-content change.
+- Immediate independent census and fresh read-only recheck:87 paths absent,213 preservation entries exact/9084081B in both original generation workspaces. All1032 uncertain entries and protected stores/certificates retained;Rust stray census0.
+- Whole0495 retained651;latest cleanup/book/task/live pointers synchronized. Runtime and LIVE G1 6/18 unchanged;nonuniform arithmetic/context recovery follows.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

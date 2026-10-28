@@ -41,10 +41,11 @@ selected roots.
 
 ## Latest run
 
-- **Run:** `2026-10-27 13:41 UTC` by leaf `G1-SLICE.6.4.5.5.cleanup1`.
-- **Summary:** removed4 ignored trees/403 root logs,53930 files (1751160158B);407 selected paths absent
-  and cleanup changed no tracked bytes, before documentation updates/regeneration.
-- **Evidence:** target/artifact_cleanup_audit/feature-20261027-garment/ plan/result/independent-post;
-  989257 preservation entries exact, including978746 regular-file hashes and555 symlink records.
-- **Preserved:**1032 unsafe/uncertain entries, package/dependency stores, numerical certificates and
-  original generation-install backups. Rust release/deps artifact census0; incremental1251 retained.
+- **Run:** `2026-10-28 13:53 UTC` by leaf `G1-SLICE.6.5.3.2.cleanup`.
+- **Summary:** removed4 ignored generated trees/83 root logs,229 files (15007705B);all87 selected
+  paths absent and cleanup changed no tracked bytes, before documentation updates/regeneration.
+- **Evidence:** target/artifact_cleanup_audit/seam-20261028/ plan/result/independent_post.json;
+  immediate independent census and fresh read-only recheck agree:213 preservation entries exact,
+  9084081 regular-file bytes,including both original generation workspaces and installation backups.
+- **Preserved:**1032 unsafe/uncertain entries,package/dependency stores,numerical certificates and
+  original generation-install backups. Rust release/incremental/deps stray .bin/.log census0.
