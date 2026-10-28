@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0507 — project exact original coordinates with admitted work
+## STITCHCAD-G1-0508 — restore actual archive capacity without losing logical bytes
 
-- Invert actual journal only after named source creation. Private canonical BigUint fractions,guarded operands/results and candidate storage retain all coordinate/direction states;stable coalescing keeps8 aligned cycles within2 states without canceling old reference choice.
-- Opaque exact coordinates support explicit bounded views;valid64-bit/188-bit originals survive Param/u128 refusals. Typed original source/held/current/operation failures publish no partial candidates. Native6/private oracle1/doc2/scoped Clippy/fmt pass;independent6 rows include188-bit control.
-- Whole0506 retained664;decision/book/API/task pointers synchronized. LIVE/README unchanged,G1 6/18. Active archive64/64 needs packing before next record;then focused actual-notch primitive acceptance. Semantic context/quantity and broader paired acceptance remain owned.
+- Public append/install packs63 committed files into window23 at actual active64/64. Source proof/native tar exact;before/after1118 names/sizes/SHA256 and3637878B identical. Sealed generation1 unchanged;original transaction trees retained.
+- Route94 live links across6 files to catalog headings;0 stale captured-file targets. Task-source12 and book89/190/1567/2686 pass. Whole0507 retained665/three exact Git spans only after packing/post-comparison;current archive1119/active3/64/aggregate24/192.
+- No capacity/policy or product behavior change;LIVE/README unchanged,G1 6/18. Resume focused actual-notch primitive acceptance before semantic context/quantity;broader paired acceptance remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

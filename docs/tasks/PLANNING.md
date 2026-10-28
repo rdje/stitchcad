@@ -7,11 +7,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-D297 fixed0476; [whole workflow/independent-permission closure](../history/stitchcad-devnotes-part631.md).
-D295/D296 fixed0475; [whole discarded-context/tool-scope closure](../history/stitchcad-devnotes-part630.md).
-D294 fixed0473; [whole model/source runtime-boundary closure](../history/stitchcad-devnotes-part628.md).
-D293 P0 fixed0472; [whole diagnosis/ownership/API closure](../history/stitchcad-devnotes-part627.md).
-D292 fixed0445; [whole ontology-clause closure](../history/stitchcad-devnotes-part625.md).
+D297 fixed0476; [whole workflow/independent-permission closure](../history/window23.md#stitchcad-devnotes-part631md).
+D295/D296 fixed0475; [whole discarded-context/tool-scope closure](../history/window23.md#stitchcad-devnotes-part630md).
+D294 fixed0473; [whole model/source runtime-boundary closure](../history/window23.md#stitchcad-devnotes-part628md).
+D293 P0 fixed0472; [whole diagnosis/ownership/API closure](../history/window23.md#stitchcad-devnotes-part627md).
+D292 fixed0445; [whole ontology-clause closure](../history/window23.md#stitchcad-devnotes-part625md).
 D290/D291 fixed0442; [whole native reserve/setup closure ledger](../history/stitchcad-devnotes-part597.md).
 D289 fixed0441; [whole native source-copy diagnosis/fix/privacy proof](../history/stitchcad-devnotes-part593.md).
 D287/D288 fixed0440; [whole native bypass/fix and package metadata proof](../history/stitchcad-devnotes-part592.md).
@@ -1088,7 +1088,7 @@ D248/D249 complete reports/0345 closure are retained in [part497](../history/win
 Done0484:all140 current token/use pairs repaired0479–0482 without exemptions;P3 ignored-SIGPIPE
 write error repaired0483. Full glossary41 pass/0 fail,including29 declaration controls and2 signal
 cases;real census310 terms/9 parts/158 owned tokens/0 failures. Full workspace CI remains separate.
-[Whole original baseline/reproduction/repair ledger](../history/stitchcad-devnotes-part638.md) retained unchanged.
+[Whole original baseline/reproduction/repair ledger](../history/window23.md#stitchcad-devnotes-part638md) retained unchanged.
 
 Verified D251/D252 scope corrections retained whole in [part498](../history/window21.md#stitchcad-devnotes-part498md).
 
@@ -1166,12 +1166,12 @@ calibration remains .f.fixture-verification after .6.9; authoring/client/resourc
 
 ## D298/D299 — verified glossary/index repair0484
 
-Done;owner G1-SLICE.6.vocabulary.acceptance. [Whole causes/reproductions/repairs](../history/stitchcad-devnotes-part639.md)
+Done;owner G1-SLICE.6.vocabulary.acceptance. [Whole causes/reproductions/repairs](../history/window23.md#stitchcad-devnotes-part639md)
 retain obsolete secondary pointer,definition-only use and token/chapter-pair assumptions;focused4/full41 pass0.
 
 ## D300 — corrected execution scope0485
 
-Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/stitchcad-devnotes-part642.md) retains the exact original ledger.
+Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/window23.md#stitchcad-devnotes-part642md) retains the exact original ledger.
 
 ## D301 — parent-aware ease conservation before paired effects
 
@@ -1182,15 +1182,15 @@ Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];roo
 
 ## D302 — aggregate count mistaken for active archive pressure
 
-Done0490;owner G1-SLICE.6.5.3.2.retention. [Whole cause/reproduction/verified fix](../history/stitchcad-devnotes-part659.md).
+Done0490;owner G1-SLICE.6.5.3.2.retention. [Whole cause/reproduction/verified fix](../history/window23.md#stitchcad-devnotes-part659md).
 
 ## D303 — repeated retained-source interval claims
 
-Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history/stitchcad-devnotes-part659.md).
+Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history/window23.md#stitchcad-devnotes-part659md).
 
 ## D304 — equal source content retained as multiple actual bodies
 
-Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history/stitchcad-devnotes-part659.md).
+Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history/window23.md#stitchcad-devnotes-part659md).
 
 ## D305 — premature bounded intermediates in reference recomputation
 

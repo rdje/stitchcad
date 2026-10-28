@@ -97,24 +97,24 @@ implemented with focused checks under .4, with retained/coupled/deeper/full work
 this contract proves no model traversal, allocator RSS/time or dishonest-host security boundary.
 
 Whole0444–0449 component implementation journals retain exact source intervals in
-[part605](../history/stitchcad-devnotes-part605.md); current component contracts/examples remain in the book.
+[part605](../history/window23.md#stitchcad-devnotes-part605md); current component contracts/examples remain in the book.
 
 Whole0451–0455 implementation journals retain exact source intervals in
-[part610](../history/stitchcad-devnotes-part610.md); current component contracts/examples remain in the book.
+[part610](../history/window23.md#stitchcad-devnotes-part610md); current component contracts/examples remain in the book.
 
 Whole0456–0460 source/root/runtime implementation journals retain exact source intervals in
-[part614](../history/stitchcad-devnotes-part614.md); current contracts/examples remain in the book.
+[part614](../history/window23.md#stitchcad-devnotes-part614md); current contracts/examples remain in the book.
 
-[Whole0461–0466 resource decisions](../history/stitchcad-devnotes-part620.md) retain exact prospective
+[Whole0461–0466 resource decisions](../history/window23.md#stitchcad-devnotes-part620md) retain exact prospective
 model/Notch/revision and actual request/report ownership contracts and focused proofs.
 
-[Whole0467–0470 resource decisions](../history/stitchcad-devnotes-part624.md) retain accepted/current/
+[Whole0467–0470 resource decisions](../history/window23.md#stitchcad-devnotes-part624md) retain accepted/current/
 prospective authoring ownership, immutable setup and bounded doctest contracts with focused proofs.
 
-[Whole0471–0474 history/source-ownership/resource/transaction decisions](../history/stitchcad-devnotes-part629.md)
+[Whole0471–0474 history/source-ownership/resource/transaction decisions](../history/window23.md#stitchcad-devnotes-part629md)
 retain exact native proofs, D293/D294 closure, compatibility changes and pending boundaries.
 
-[Whole0475–0477 discarded-error/workflow/current-native decisions](../history/stitchcad-devnotes-part632.md)
+[Whole0475–0477 discarded-error/workflow/current-native decisions](../history/window23.md#stitchcad-devnotes-part632md)
 retain exact context/permission/runtime proofs and pending boundaries.
 
 ## Final publication acceptance0478

@@ -62,7 +62,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Children: `.1`, `.2`, `.3a`/`.3b`/`.3c`, `.4` … `.16` (18 leaves; `.3` was decomposed `2026-09-30`)
 - ID: `G1-SLICE.1`
   Status: `done`
-  Goal:0001 workspace/G0.18 closure; [whole scope/proof](../history/stitchcad-devnotes-part625.md).
+  Goal:0001 workspace/G0.18 closure; [whole scope/proof](../history/window23.md#stitchcad-devnotes-part625md).
 - ID: `G1-SLICE.2`
   Status: `done`
   Goal: sc-units0002/G0.18; typed exact units/tolerances and focused acceptance; [whole scope](../history/stitchcad-devnotes-part553.md).
@@ -591,22 +591,22 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Children .1–.4/.advisory implemented;.acceptance closes actual current population and D298/D299 repairs.
 - ID: `G1-SLICE.6.vocabulary.1`
   Status: `done`
-  Goal:0479 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part634.md).
+  Goal:0479 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part634md).
 - ID: `G1-SLICE.6.vocabulary.2`
   Status: `done`
-  Goal:0480 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part635.md).
+  Goal:0480 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part635md).
 - ID: `G1-SLICE.6.vocabulary.3`
   Status: `done`
-  Goal:0481 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part636.md).
+  Goal:0481 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part636md).
 - ID: `G1-SLICE.6.vocabulary.4`
   Status: `done`
-  Goal:0482 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part637.md).
+  Goal:0482 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part637md).
 - ID: `G1-SLICE.6.vocabulary.advisory`
   Status: `done`
-  Goal:0483 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part638.md).
+  Goal:0483 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part638md).
 - ID: `G1-SLICE.6.vocabulary.acceptance`
   Status: `done`
-  Goal:0484 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part639.md).
+  Goal:0484 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part639md).
 - ID: `G1-SLICE.6.5`
   Status: `in_progress`
   Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.
@@ -707,7 +707,7 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Goal:0429 D284 count-scope correction, no packing; [whole scope/proofs](../history/stitchcad-devnotes-part581.md).
 - ID: `G1-SLICE.6.5.5`
   Status: `done`
-  Goal:0474 mixed transaction/cancellation/native-error acceptance; [whole scope/proofs](../history/stitchcad-devnotes-part629.md).
+  Goal:0474 mixed transaction/cancellation/native-error acceptance; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part629md).
 - ID: `G1-SLICE.6.6`
   Status: `done`
   Goal: actual revision preconditions, idempotency replay and append-only actor audit trail.
@@ -805,40 +805,40 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   Goal:0448 actual held sewing resources; [whole scope/proofs](../history/stitchcad-devnotes-part601.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.2`
   Status: `done`
-  Goal:0449 actual held garment resources; [whole scope/proofs](../history/stitchcad-devnotes-part602.md).
+  Goal:0449 actual held garment resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part602md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.retention`
   Status: `done`
-  Goal:0450 active64 capture window22; [whole scope/proofs](../history/stitchcad-devnotes-part603.md).
+  Goal:0450 active64 capture window22; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part603md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.3`
   Status: `done`
-  Goal:0451 actual held layer/Hem resources; [whole scope/proofs](../history/stitchcad-devnotes-part604.md).
+  Goal:0451 actual held layer/Hem resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part604md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.4`
   Status: `done`
-  Goal:0452 actual six-family resources; [whole scope/proofs](../history/stitchcad-devnotes-part605.md).
+  Goal:0452 actual six-family resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part605md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5`
   Status: `done`
   Goal: compose actual core root accounting, including exact unbounded represented revision bits, under
   one cumulative meter; preserve scope-specific original first refusal and no mutation/large preparatory copy.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5.1`
   Status: `done`
-  Goal:0453 actual structural resources/revision bits; [whole scope/proofs](../history/stitchcad-devnotes-part606.md).
+  Goal:0453 actual structural resources/revision bits; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part606md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.5.2`
   Status: `done`
-  Goal:0459 complete actual root resources/captured census; [whole scope/proofs](../history/stitchcad-devnotes-part612.md).
+  Goal:0459 complete actual root resources/captured census; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part612md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3`
   Status: `done`
   Goal: actual immutable source-host resource port and sc-measure producer through published readonly
   contracts; include all owned source collection/text/counter fields, no dishonest-host security claim.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.1`
   Status: `done`
-  Goal:0454 actual measurement/Ease resources; [whole scope/proofs](../history/stitchcad-devnotes-part607.md).
+  Goal:0454 actual measurement/Ease resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part607md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2`
   Status: `done`
   Goal: complete actual external SizeSet family resources; all actual metadata/member/chart/axis/break fields
   and explicit Garment/MTM held fields, no fabricated host, geometry, grading or source inference.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.1`
   Status: `done`
-  Goal:0455 actual common SizeSet resources; [whole scope/proofs](../history/stitchcad-devnotes-part608.md).
+  Goal:0455 actual common SizeSet resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part608md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.2`
   Status: `done`
   Goal: actual retained chart/observation/collection and MTM saved snapshot resources.
@@ -846,13 +846,13 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   dependency is owned by G4-PROFILES.1.resource-admission before future handler exposure.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.2.1`
   Status: `done`
-  Goal:0456 actual chart resources/profile scope; [whole scope/proofs](../history/stitchcad-devnotes-part609.md).
+  Goal:0456 actual chart resources/profile scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part609md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.3`
   Status: `done`
-  Goal:0457 actual external family resources; [whole scope/proofs](../history/stitchcad-devnotes-part610.md).
+  Goal:0457 actual external family resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part610md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3.3`
   Status: `done`
-  Goal:0458 actual required readonly source port; [whole scope/proofs](../history/stitchcad-devnotes-part611.md).
+  Goal:0458 actual required readonly source port; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part611md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4`
   Status: `done`
   Goal: install explicit immutable model policy and admit actual current/prospective metadata shapes
@@ -863,79 +863,79 @@ Paired SplitSeamSpan execution and conserved-source children live in the
   input admission remains early. Verify unauthorized callers trigger no private walk or quota witness.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.1`
   Status: `done`
-  Goal:0460 authorized current/preparation/history-alternative admission; [whole scope/proofs](../history/stitchcad-devnotes-part613.md).
+  Goal:0460 authorized current/preparation/history-alternative admission; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part613md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2`
   Status: `done`
   Goal: prospective metadata replacement/AddNotch/revision admission before growing copies/current
   constructors, with exact represented demand and first locations; no conservative double counting.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.1`
   Status: `done`
-  Goal:0461 exact prospective Measurement resources; [whole scope/proofs](../history/stitchcad-devnotes-part614.md).
+  Goal:0461 exact prospective Measurement resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part614md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.2`
   Status: `done`
-  Goal:0462 exact selected Material resources; [whole scope/proofs](../history/stitchcad-devnotes-part615.md).
+  Goal:0462 exact selected Material resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part615md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.3`
   Status: `done`
-  Goal:0463 exact actual Notch append/resources/peek; [whole scope/proofs](../history/stitchcad-devnotes-part616.md).
+  Goal:0463 exact actual Notch append/resources/peek; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part616md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.2.4`
   Status: `done`
-  Goal:0464 exact max-issued publication resources; [whole scope/proofs](../history/stitchcad-devnotes-part618.md).
+  Goal:0464 exact max-issued publication resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part618md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3`
   Status: `done`
   Goal: bound actual retained audit/replay/history content and unbounded maximum-issued/audit counters
   as well as finite counts; account current/prospective retained composition before allocation/effects.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.1`
   Status: `done`
-  Goal:0465 exact owned typed mutation requests; [whole scope/proofs](../history/stitchcad-devnotes-part619.md).
+  Goal:0465 exact owned typed mutation requests; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part619md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.2`
   Status: `done`
   Goal: exact actual report/difference/accepted authoring/history record resources; split by actual owners.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.2.1`
   Status: `done`
-  Goal:0466 exact actual report/net resources; [whole scope/proofs](../history/stitchcad-devnotes-part620.md).
+  Goal:0466 exact actual report/net resources; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part620md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.2.2`
   Status: `done`
-  Goal:0467 exact actual accepted records; [whole scope/proofs](../history/stitchcad-devnotes-part621.md).
+  Goal:0467 exact actual accepted records; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part621md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.3`
   Status: `done`
   Goal: complete private retained bus composition with explicit immutable policy and authorized admission.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.3.1`
   Status: `done`
-  Goal:0468 immutable explicit retained configuration; [whole scope/proofs](../history/stitchcad-devnotes-part622.md).
+  Goal:0468 immutable explicit retained configuration; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part622md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.3.2`
   Status: `done`
-  Goal:0469 exact current private retained admission; [whole scope/proofs](../history/stitchcad-devnotes-part623.md).
+  Goal:0469 exact current private retained admission; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part623md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4`
   Status: `done`
   Goal: exact prospective retained publication before growing retained copies/allocations/effects.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.1`
   Status: `done`
-  Goal:0470 exact prospective retained authoring; [whole scope/proofs](../history/stitchcad-devnotes-part624.md).
+  Goal:0470 exact prospective retained authoring; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part624md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.2`
   Status: `done`
-  Goal:0471 exact prospective history/D293 diagnostic; [whole scope/proofs](../history/stitchcad-devnotes-part626.md).
+  Goal:0471 exact prospective history/D293 diagnostic; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part626md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.3`
   Status: `done`
-  Goal:0472 immutable source/D293 repair; [whole scope/proofs](../history/stitchcad-devnotes-part627.md).
+  Goal:0472 immutable source/D293 repair; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part627md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.4`
   Status: `done`
-  Goal:0473 coupled native logical-resource acceptance/D294; [whole scope/proofs](../history/stitchcad-devnotes-part628.md).
+  Goal:0473 coupled native logical-resource acceptance/D294; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part628md).
 - ID: `G1-SLICE.6.9`
   Status: `done`
   Goal: current implemented metadata bus/native privacy/publication acceptance;registry feeds G1.9/G5.
   Scope:other runtime handlers remain .6.5.3 and their actual recipe/geometry dependencies.
 - ID: `G1-SLICE.6.9.1`
   Status: `done`
-  Goal:0475 D295/D296 discarded diagnostics/tool-scope repair; [whole scope/proofs](../history/stitchcad-devnotes-part630.md).
+  Goal:0475 D295/D296 discarded diagnostics/tool-scope repair; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part630md).
 - ID: `G1-SLICE.6.9.2`
   Status: `done`
-  Goal:0476 native workflow registry/exact rights/D297; [whole scope/proofs](../history/stitchcad-devnotes-part631.md).
+  Goal:0476 native workflow registry/exact rights/D297; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part631md).
 - ID: `G1-SLICE.6.9.3`
   Status: `done`
-  Goal:0477 combined current native317/doctests49 acceptance; [whole scope/proofs](../history/stitchcad-devnotes-part632.md).
+  Goal:0477 combined current native317/doctests49 acceptance; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part632md).
 - ID: `G1-SLICE.6.9.publication`
   Status: `done`
-  Goal:0478 full publication45/final inputs; [whole scope/proofs](../history/stitchcad-devnotes-part633.md).
+  Goal:0478 full publication45/final inputs; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part633md).
 - ID: `G1-SLICE.7`
   Status: `pending`
   Goal: `sc-store` (§4.5) — canonical-text project directory (stable key order, declared float

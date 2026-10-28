@@ -152,10 +152,10 @@ Actual guarded full-source/effect adoption remains .4.4;broader paired/mutation 
 
 ## Exact historical source and proof retrieval
 
-The [whole pre-context record](../history/stitchcad-devnotes-part658.md) preserves the native200-line/
+The [whole pre-context record](../history/window23.md#stitchcad-devnotes-part658md) preserves the native200-line/
 15352-byte decision,all earlier settled statements,dated implementation/probe counts and historical
 pending scopes byte-exact. This curation keeps standing contracts current without another map row
-or raised ceiling. Whole0501 acceptance lives in [657](../history/stitchcad-devnotes-part657.md).
+or raised ceiling. Whole0501 acceptance lives in [657](../history/window23.md#stitchcad-devnotes-part657md).
 
 ## Bounded current-point primitive0505
 

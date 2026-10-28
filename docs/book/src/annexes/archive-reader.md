@@ -159,3 +159,13 @@ with no budget change. The source proof found64 byte-identical files and no miss
 Independent before/after materializations matched all1055 logical records and3259088 bytes by size
 and SHA-256. The installer retained original trees for explicit recovery; this is process-interruption
 protection, with no new power-loss claim. A later raw record remains in the active generation as usual.
+
+The0508 append addressed an actual full active group:63 committed raw records plus one catalog.
+Window23 packs those63 full files;the public source proof reports no missing/extra member. Independent
+native tar extraction matches all378790 captured bytes. Before/after installation materializations
+match all1118 original logical names,sizes,SHA-256 hashes and3637878 bytes;the sealed generation1
+index remains exact. Packing reduces active working files64→2 and aggregate85→23 without changing
+any limit. Original transaction trees remain in target/history-capture-0508 for explicit recovery.
+Live retrieval links route to catalog headings;sealed source bodies keep their original bytes.
+The following completed inverse receipt665 is authored only after installation/cohort comparison.
+This is verified retention and process-interruption protection,with no new power-loss claim.

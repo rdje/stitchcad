@@ -3,26 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact admitted original-coordinate inverse
+## _(2026-10-28 UTC)_ — pack actual active archive and preserve every logical byte
 
-0507 private BigUint canonical fractions invert entries strictly after named source creation;retain all coordinate/direction candidates,guard each operand/result before allocation and additional branch states before storage. Stable equality coalescing keeps8 aligned cycles within2 states;old held choice persists.
-Opaque coordinates expose bit counts and explicit bounded views. Valid64-bit original fraction refuses Param;actual188-bit offset refuses u128 view while exact projection succeeds. Missing-origin/quota/numeric failures retain source/held/current context,concrete operation and actual StandardError cause;no partial set.
-Initial linked oracle cancelled to126 bits;Fraction/GCD census finds factor(MAX-1),then independent q1/(MAX-2) produces188-bit control before native use. Clippy caught large Result errors/needless borrows;one boxed failure keeps full context without lint suppression. No published/runtime claim used the bad fixture.
-Native6/private Fraction6-row1/doc2/scoped Clippy/fmt pass0;source birth/reverse,unequal merge/join,multiple origins/directions,peak cap,coalescing and later unrelated roots covered. [Whole0506 admission](docs/history/stitchcad-devnotes-part664.md) retains exact bounds/proofs.
-Indexed sewing decision/book/API routes synced;LIVE/README unchanged,G1 6/18. Next archive packing at active64/64 before record665,then focused actual-notch primitive acceptance. Semantic context/quantity/full paired acceptance remain owned;no allocator/CPU or physical certificate.
-[Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
-[Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
-[Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.
-[Whole0467 accepted-record lesson](docs/history/stitchcad-devnotes-part621.md) retains exact counter/history/replay ownership proof.
-[Whole0466 report lesson](docs/history/stitchcad-devnotes-part620.md) retains exact alias/net/restored ownership proof.
-[Whole0465 owned-request lesson](docs/history/stitchcad-devnotes-part619.md) retains exact request/resource/alias proof.
-[Whole0464 publication lesson](docs/history/stitchcad-devnotes-part618.md) retains exact carry/undo/API/retirement proof.
-[Whole0463 Notch lesson](docs/history/stitchcad-devnotes-part616.md) retains exact peek/precedence/rollback proof.
-[Whole0462 Material lesson](docs/history/stitchcad-devnotes-part615.md) retains exact Unicode/selected/oracle proof.
-[Whole0461 Measurement lesson](docs/history/stitchcad-devnotes-part614.md) retains exact evidence/oracle/fixture correction proof.
-[Whole0460 current-admission lesson](docs/history/stitchcad-devnotes-part613.md) retains original authority/telemetry/privacy proof.
-[Whole0459 root-composition lesson](docs/history/stitchcad-devnotes-part612.md) retains exact cache/held/empty proof.
-[Whole0458 source-port lesson](docs/history/stitchcad-devnotes-part611.md) retains original trust/census and independent byte-correction proof.
+0508 actual active64/64=63 committed raw records+one catalog blocked the next product receipt. Public append prepares window23;source proof63 full Git files and independent native tar63/378790B match. Complete candidate matches1118 original logical records before installation.
+Guarded install retains original transaction trees. Independent before/after materializations match1118 names/sizes/SHA256 and3637878B;sealed generation1 index unchanged. Active2/64,total23/192 after packing;capacity restored without changing a bound or logical identity. No power-loss claim.
+Route live packed-record links to catalog headings;keep sealed bodies and source spans unchanged. [Whole0507 inverse lesson](docs/history/stitchcad-devnotes-part665.md) is retained only after packing/source comparison,three exact Git spans. Focused retrieval/task/book checks belong this leaf.
+Existing indexed archive/generation rules apply;promotion declined explicitly in leaf for routine bounded capture. LIVE/README unchanged,G1 6/18. Resume focused actual-notch primitive acceptance after this prerequisite commit;semantic context/quantity and paired acceptance stay owned.
+[Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
+[Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
+[Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
+[Whole0467 accepted-record lesson](docs/history/window23.md#stitchcad-devnotes-part621md) retains exact counter/history/replay ownership proof.
+[Whole0466 report lesson](docs/history/window23.md#stitchcad-devnotes-part620md) retains exact alias/net/restored ownership proof.
+[Whole0465 owned-request lesson](docs/history/window23.md#stitchcad-devnotes-part619md) retains exact request/resource/alias proof.
+[Whole0464 publication lesson](docs/history/window23.md#stitchcad-devnotes-part618md) retains exact carry/undo/API/retirement proof.
+[Whole0463 Notch lesson](docs/history/window23.md#stitchcad-devnotes-part616md) retains exact peek/precedence/rollback proof.
+[Whole0462 Material lesson](docs/history/window23.md#stitchcad-devnotes-part615md) retains exact Unicode/selected/oracle proof.
+[Whole0461 Measurement lesson](docs/history/window23.md#stitchcad-devnotes-part614md) retains exact evidence/oracle/fixture correction proof.
+[Whole0460 current-admission lesson](docs/history/window23.md#stitchcad-devnotes-part613md) retains original authority/telemetry/privacy proof.
+[Whole0459 root-composition lesson](docs/history/window23.md#stitchcad-devnotes-part612md) retains exact cache/held/empty proof.
+[Whole0458 source-port lesson](docs/history/window23.md#stitchcad-devnotes-part611md) retains original trust/census and independent byte-correction proof.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 
@@ -86,7 +85,7 @@ Indexed sewing decision/book/API routes synced;LIVE/README unchanged,G1 6/18. Ne
 
 [Whole0390 policy-boundary lesson](docs/history/stitchcad-devnotes-part571.md) retains original measured capacity and authority boundary.
 
-[Whole0388/0389 layer/Hem lesson](docs/history/stitchcad-devnotes-part617.md) retains original scope, checks and containment facts.
+[Whole0388/0389 layer/Hem lesson](docs/history/window23.md#stitchcad-devnotes-part617md) retains original scope, checks and containment facts.
 
 [Complete bounded append lesson](docs/history/stitchcad-devnotes-part539.md) retains its original source, transaction proof and retention limits.
 
