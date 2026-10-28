@@ -163,3 +163,15 @@ moved byte-exact to model-resource-accounting.md; operation policy example now c
 Layers/Hems, construction, root/source/runtime and deeper/full acceptance remain separate. This is
 no current binding, physical readiness, whole-model or allocator memory/time proof. Active raw64
 requires owned archive maintenance before another retirement; aggregate85 alone is not the trigger.
+
+## Actual held layers and Hems0451
+
+answers: "how are held layer/Hem resources charged without granting Lining execution?"
+
+.6.8.2.2.2.2.2.4.3 charges actual Facing/Lining/Interfacing vectors, offset-source vectors and exact
+unresolved Material reason bytes, then Hems. Exhaustive private owner/wrapper/content/definition views
+and Copy guards retain original sources/operation/depth/fold/method intent. Faced ids add no duplicate
+Facing content. Native resource37/strict selected lint/fmt pass:13/9/0, exact family/owner/index first
+refusals, unchanged env_lining, empty/prior-error and real deletion-held state without lookup/repair.
+Construction/root/source/runtime/deeper/full work remains; no current binding, execution/physical,
+whole-model or allocator memory/time certificate follows from component accounting.

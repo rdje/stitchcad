@@ -92,6 +92,10 @@ impl fmt::Debug for HemInventory {
     }
 }
 impl HemInventory {
+    pub(crate) fn resource_hems(&self) -> &[Hem] {
+        let Self { hems } = self;
+        hems
+    }
     /// Own exact authored order without sorting, retargeting or repairing references.
     /// # Errors
     /// Returns the first repeated Hem identity with both original positions.

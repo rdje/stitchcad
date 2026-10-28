@@ -148,6 +148,10 @@ impl std::error::Error for HemError {
     }
 }
 impl Hem {
+    pub(crate) fn resource_parts(&self) -> (EntityId, &HemDefinition) {
+        let Self { piece, definition } = self;
+        (*piece, definition)
+    }
     /// Validate a whole owned finish edge, depth domain and current faced composition target.
     /// # Errors
     /// Returns [`HemError`] for invalid references, negative authored depth or missing/wrong/invalid

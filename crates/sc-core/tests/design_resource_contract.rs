@@ -403,3 +403,6 @@ mod sewing;
 
 #[path = "support/design_resource/garment.rs"]
 mod garment;
+
+#[path = "support/design_resource/layers.rs"]
+mod layers;

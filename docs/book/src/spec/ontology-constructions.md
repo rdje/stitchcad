@@ -212,6 +212,9 @@ ProfileWidth and required AllowanceInclusion retain their exact Profile refs, ev
 matches. Profile roles stay DeferredToG4. Axis/stripe/plaid/corner intent stays on the object; no current-source,
 resolved width-domain, alignment/offset, policy or release proof follows.
 
+[Held layer/Hem resource accounting](model-resource-accounting.md#actual-layer-and-hem-accounting)
+counts owned family/source vectors and exact unresolved reason bytes without changing execution scope.
+
 **Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable types share
 `LayerDefinition`: served Piece, `LayerOffsetRelationship` (recipe offset-operation id/nonempty owned
 directed ranges), material assignment. Recipe owns dimensions/input states and checks operation

@@ -8,6 +8,7 @@ use core::{
 mod canonical;
 mod garment;
 mod inputs;
+mod layers;
 mod pieces;
 mod sewing;
 mod topology;
@@ -20,6 +21,7 @@ pub use inputs::{
     charge_material_inventory_resources, charge_parameter_resources,
     charge_recipe_document_resources,
 };
+pub use layers::{charge_hem_inventory_resources, charge_layer_inventory_resources};
 pub use pieces::{charge_cut_plan_resources, charge_piece_inventory_resources};
 pub use sewing::{charge_sewing_graph_resources, charge_sewing_landmark_resources};
 pub use topology::charge_topology_resources;

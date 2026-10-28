@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0450 — capture active64 history records before continuing garment resources
+## STITCHCAD-G1-0451 — account for held layer and Hem resources
 
-- Published source-pinned append/install captures all64 raw records into window22; old trees retained.
-- Source proof64 exact, public before/after oracle1055 files/3259088 bytes identical; zero lost/extra/changed.
-- Working Markdown85→22, then23 with whole0449 record602; no budget, code or submodule-pin change.
-- Book, pointer and indexed generation decision aligned; layers/Hems resource slice resumes next.
+- Precharge actual Facing/Lining/Interfacing/source and Hem vectors; charge exact unresolved Material reason bytes.
+- Exhaustive held views/Copy guards preserve symbolic intent and faced references without lookup, rebirth or execution.
+- Resource37 (prior32/actual5), strict selected lint/fmt pass:13/9/0, exact refusals, env_lining and deletion-held state.
+- Book/pointer/decision aligned; whole0450 capture scope/lesson/ledger retained603; construction families next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

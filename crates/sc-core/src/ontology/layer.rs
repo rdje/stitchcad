@@ -224,6 +224,11 @@ pub struct Interfacing(LayerContent);
 macro_rules! layer_interface {
     ($name:ident, $kind:ident) => {
         impl $name {
+            pub(crate) fn resource_definition(&self) -> &LayerDefinition {
+                let Self(content) = self;
+                let LayerContent { definition } = content;
+                definition
+            }
             /// Validate modelled structural content; this does not execute or authorize construction.
             /// # Errors
             /// Returns [`LayerError`] for wrong Piece, missing/duplicate sources, invalid material

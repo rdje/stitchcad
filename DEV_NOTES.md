@@ -3,15 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — capture actual active raw-record boundary
+## _(2026-10-28 UTC)_ — actual held layer and Hem resources
 
-0450 .6.8.2.2.2.2.2.4.retention uses published append/install after active64, not aggregate85.
-Empty active windows required append rather than empty seal. window22 retains64 exact committed
-files; independent public materializations match1055 files/3259088 bytes by size/SHA-256. Installed
-working Markdown22, then23 after whole0449 retirement602 (3 native Git spans). Original98 backup
-files remain target/history-capture-0450/installation/backup; preserve for recovery. Promotion:
-indexed history-generation decision. No budget/code/pin or power-loss claim changed; layers/Hems
-resume next, deeper/full product verification remains deferred.
+0451 .6.8.2.2.2.2.2.4.3 charges actual Facing/Lining/Interfacing vectors, nested offset sources,
+exact unresolved Material reason bytes and Hems. Exhaustive private views/Copy guards retain fixed
+source/operation/depth/fold/method payloads; Faced ids do not duplicate Facing content. Resource37
+(prior32/actual5)/strict lint/fmt pass:13/9/0, exact family/owner/index refusals, unchanged env_lining,
+all Hem depth/fold/method origins and real deletion-held content without resolution/repair. Promotion:
+indexed command-layer decision. Whole0450 capture proof603 has3 exact Git spans; backup retained.
+Construction/root/source/runtime/deeper/full work remains; no execution, physical or RSS/time proof.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

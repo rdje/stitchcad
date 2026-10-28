@@ -280,6 +280,14 @@ impl fmt::Debug for LayerInventory {
     }
 }
 impl LayerInventory {
+    pub(crate) fn resource_layers(&self) -> (&[Facing], &[Lining], &[Interfacing]) {
+        let Self {
+            facings,
+            linings,
+            interfacings,
+        } = self;
+        (facings, linings, interfacings)
+    }
     /// Own exact family orders without sorting, choosing or repairing held sources.
     /// # Errors
     /// Returns the first duplicate layer id across the three families with both original positions.

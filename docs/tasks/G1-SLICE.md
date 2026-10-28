@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0450
+## Current leaf acceptance —0451
 
-- [x] ROOT CAUSE: python3 -I -B native working census prints64 active raw/21 sealed catalogs=85 total
-  and empty generation2 windows rc=0; active64 requires append, while empty seal would refuse.
-- [x] ADDRESSED: v2_install.py install target/history-capture-0450 prints exact logical/source retention
-  verified, originals retained rc=0; public prove-source window22 gives64 byte-identical/zero missing-extra.
-- [x] NO REGRESSION: independent public before/after materializations match1055 files/3259088 bytes
-  by OS size/SHA-256 rc=0; exact name sets match. No product source code or submodule pin changed.
+- [x] ROOT CAUSE: python3 -I -B native layer/Hem schema assertions print3 actual layer vectors,
+  nested sources/material reasons and Hem vector/fixed definition rc=0; charge held owners once.
+- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:37 passed rc=0; five actual
+  cases verify13/9/0, exact family/owner/index refusals, env_lining and deleted held content unchanged.
+- [x] NO REGRESSION: strict selected Clippy/fmt rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs
+  crates/sc-core/src/command rc=0. Prior32 resource cases pass; source/envelope/runtime paths unchanged.
 
 ## Goal
 
@@ -847,34 +847,40 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0449 actual held garment resources; [whole scope/proofs](../history/stitchcad-devnotes-part602.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.retention`
   Status: `done`
-  Goal:0450 capture the actual active-generation64 raw-record boundary before next product retirement.
-  Published v3 append/install preserves every logical byte and original tree; no budget/pin changes.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native glob census prints64 raw/21 catalogs=85 aggregate and
-    empty active generation2 window list rc=0. Another raw record would exceed64/group; total85 alone
-    is not pressure. Empty seal refuses by public contract, so use source-pinned append.
-  - [x] ROOT CAUSE (WHY + WHERE): v2_migration.py append target/history-capture-0450 --owner
-    G1-SLICE.6.8.2.2.2.2.2.4.retention rc=0; report source cbad2ff, packed_records64,new_windows window22,
-    logical1055,candidate22 working Markdown. Published archive integration docs/CLI determine operation.
-  - [x] FIX: v2_install.py install target/history-capture-0450:exact logical/source retention verified;
-    original trees retained for recovery rc=0. Native recovery backup census98 files rc=0 under
-    target/history-capture-0450/installation/backup; preserve this tree and prior0392g installation.
-  - [x] ADDRESSED: history_archive.sh prove-source window22:64 byte-identical full files/0 missing-extra
-    rc=0; independent public materialize before/after plus OS size/SHA-256 census:1055 equal logical
-    files/3259088 bytes, exact name sets/zero changed rc=0. Live captured raw residue0/22 catalogs rc=0.
-  - [x] NO REGRESSION: history_archive.sh verify-retention after install:1055 logical/22 working Markdown
-    rc=0; old sealed generation1 bytes stay pinned. No product source/submodule-pin or policy-bound edit.
-    This scoped real capture is no broad repository/platform/power-loss or feature-completion verdict.
-  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part602.md:3 exact Git
-    spans rc=0; whole0449 scope/lesson/ledger retained after capacity released. Retention1056 logical/
-    23 working Markdown/58650 decoded lines/4423088 decoded bytes/2253900 resident bytes rc=0.
-    Pointer/frontier/book/lesson/decision align; promotion to indexed history-generation decision.
-  Book build/native publication:82 chapters/159 scoped API rows/1485 source links/2494 rendered links
-  rc=0; maintained-reference83 files/18443 lines/1286608 bytes rc=0. Map/diff checks rc=0.
-  Next .4.3 layers/Hems, then .4.4 constructions/.2.5 root/source .3/runtime .4; deeper/full proof deferred.
+  Goal:0450 active64 capture window22; [whole scope/proofs](../history/stitchcad-devnotes-part603.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.3`
-  Status: `pending`
-  Goal: actual Facing/modelled-Lining/Interfacing and Hem-family resource accounting; preserve deferred
-  envelope/profile/Material intent and all held relationships without executing transformations.
+  Status: `done`
+  Goal:0451 actual Facing/modelled-Lining/Interfacing and Hem resource producers.
+  Charge all actual family/source vectors and unresolved Material reason bytes in schema/member order.
+  Preserve original source/operation/depth/fold/method and Facing id intent without lookup or repair.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native layer/Hem schema assertions print3 layer vectors,
+    offset sources/Material payload and Hem vector/fixed definition rc=0. Faced links are references,
+    and modelled Lining still owns stored content even while execution remains outside its envelope.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part603.md:
+    3 exact native Git spans rc=0; whole0450 capture scope/lesson/ledger preserves source/recovery proof.
+    Exhaustive private inventory/wrapper/content/definition views are needed to guard owned-field evolution.
+  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
+    lazy exact-size held iterators precharge families before members, sources before traversal and exact
+    reason bytes without trim/registry lookup. Fixed payloads require Copy; no Faced expansion or rebirth.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:37 passed rc=0; five actual
+    cases verify4 layers/6 source ranges/3 Hems=13 entries, reason4+3+2=9 UTF-8 bytes/0 counter bits;
+    whole/nested/hem refusals0+2/3+2/5+1/6+2/8+1/9+1/10+3, text0+4/4+3/7+2 actual owner/family index;
+    assigned no-text path, explicit-zero/formula/profile Hem depths, both fold/method origins, no Facing
+    double charge, env_lining unchanged, actual deleted-source current refusal but held walk succeeds,
+    unchanged success/refusal objects/ledger, empty/prior-error preservation including zero charges.
+  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
+    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior32 resource cases remain passing;
+    no current/envelope/source/authority/bus behavior changed. Full feature acceptance remains deferred.
+  - [x] LOCKSTEP: whole0450 record603 has3 exact Git spans rc=0; retention1057 logical/24 working
+    Markdown/58705 decoded lines/4427646 decoded bytes/2258458 resident bytes rc=0. Book/pointer/
+    frontier/lesson/indexed command-layer decision aligned; .4.4 construction/.2.5 root/source .3/runtime
+    .4 and deeper/full verification remain owned. Original0450/0392g recovery backups remain protected.
+  Book build/native publication:82 chapters/159 scoped API rows/1486 source links/2496 rendered links
+  rc=0; maintained-reference83 files/18485 lines/1289552 bytes rc=0. Map/diff checks rc=0.
+  Owned doc defect:6 inherited component clauses listed now-implemented families as remaining. Native
+  exact source replacements/assertions print6 refreshed clauses rc=0; current reference now scopes only
+  remaining construction/root/source/runtime work. Historical acceptance counts retain their slice context.
+  Cargo invocations use scripts/local_environment.py. No execution, physical, whole-model or RSS/time proof.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.4`
   Status: `pending`
   Goal: actual Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance-family resource accounting with exhaustive

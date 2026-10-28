@@ -40,8 +40,8 @@ meter refusal stays the exact original error, even if this producer's error is i
 
 Four actual canonical cases plus the previous six meter cases pass:10 total, with strict selected
 lint and formatting. The command-bus source remains unchanged. This is canonical-component proof;
-Pieces/topology, parameters/recipe/Materials, sewing/garment, root counter bits, source-host traversal
-and runtime model admission remain separately owned. Finishing this component's meter supplies no
+Construction families, root counter bits, source-host traversal and runtime model admission remain
+separately owned; implemented component accounting is described in the following sections. Finishing this component's meter supplies no
 whole-model, source-truth, allocator RSS/time or publication certificate.
 
 ## Actual Piece and cut-plan accounting
@@ -82,8 +82,7 @@ After a real split retires a held boundary source, rebirth would refuse that ori
 still succeeds without repair, rewriting or changed ledger. Empty actual Piece/copy scopes contribute
 zero entries and preserve an earlier meter refusal. Five new actual cases plus prior10 resource cases
 pass:15 total, with strict selected lint/formatting and four meter privacy/sealing checks rechecked.
-Topology history/index/registration, remaining model/source/runtime admission and total RSS/time proof
-remain separately owned. The command bus has not changed its runtime behavior.
+Remaining construction/root/source/runtime admission and total RSS/time proof stay separately owned. The command bus has not changed its runtime behavior.
 
 ## Actual topology accounting
 
@@ -119,8 +118,7 @@ operation owner. Maximum19 refuses the live index14+6; maximum21 refuses registr
 Four new actual topology cases plus prior15 resource cases pass:19 total, with strict selected lint
 and formatting. They retain the exact original ledger/choices on success/refusal, and empty actual
 scope preserves a prior meter error. This closes Piece/copy/topology component accounting. Remaining
-parameter/recipe/Material, sewing/garment, root composition/counter bits, source-host and runtime
-admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
+construction-family, root composition/counter bits, source-host and runtime admission work stay owned; no release, physical, integrity, allocator RSS/time or authority proof follows.
 
 ## Actual input metadata accounting
 
@@ -163,8 +161,8 @@ recipe strings and whole inventories have no standalone entity owner.
 Five new actual cases plus prior19 resource cases pass:24 total, with strict selected lint/formatting.
 They preserve canonical inputs, parameter order/targets, both recipe fields and complete Material
 intent. Empty parameter/Material drafts plus empty recipe source demand0 entries/8 bytes/0 bits;
-a prior meter refusal stays original across all three producers. Remaining sewing/garment, root/
-source and runtime admission work is separately owned; this is no binding, recipe evaluation,
+a prior meter refusal stays original across all three producers. Remaining construction/root/source
+and runtime admission work is separately owned; this is no binding, recipe evaluation,
 Material truth/physical, whole-model or allocator RSS/time certificate.
 
 ## Actual sewing accounting
@@ -199,7 +197,7 @@ After a real deletion retires a held boundary source, the same graph/landmark ac
 without rebirth or resolving the now-orphaned anchors. Exact graph/landmarks/ledger and profile intent
 remain unchanged on success/refusal. Four new actual cases plus prior24 resource cases pass:28 total,
 with strict selected lint and formatting. The first compile caught a missing public re-export, which
-was corrected before these checks passed. Garment families, root/source composition and runtime
+was corrected before these checks passed. Construction families, root/source composition and runtime
 model admission remain owned; these counts supply no binding, realized ease, geometry, physical,
 release, whole-model or allocator RSS/time certificate.
 
@@ -239,6 +237,47 @@ also covered. Original objects remain unchanged on success and refusal.
 A real deletion makes the held notion inventory fail current validation; the same resource walk
 still succeeds without rebirth, resolution or repair and preserves the exact objects and ledger.
 Four new cases plus prior28 resource cases pass:32 total, with strict selected lint/formatting.
-Layers/Hems, construction families, whole root/source and runtime admission remain owned. Logical
+Construction families, whole root/source and runtime admission remain owned. Logical
 counts supply no current target binding, opening/closure execution, selected profile value, physical
+readiness, whole-model or allocator memory/time certificate.
+
+## Actual layer and Hem accounting
+
+charge_layer_inventory_resources visits Facing, modelled Lining and Interfacing in schema order.
+It precharges each actual family vector, then each original layer's offset source vector and exact
+UTF-8 unresolved Material reason. Assigned Material ids add no text and trigger no registry lookup.
+Locations use layers.facings/linings/interfacings for whole vectors, layers.offset.sources and
+layers.material.reason for nested fields, actual layer owner and original within-family index.
+
+The iterator borrows actual private layer content; exhaustive inventory/wrapper/content/definition
+views and Copy source guards expose owned-field changes. It does not resolve ranges, regenerate
+contours, execute offsets, select Materials or bypass the Lining envelope. Modelled Lining content
+counts even when require_in_scope refuses env_lining; the refusal remains unchanged.
+
+charge_hem_inventory_resources precharges the actual Hem vector. Exhaustive held source/definition
+views guard fixed edge, Explicit/Formula/Profile depth, Declaration/Profile fold and Turned/Faced
+method fields. A Faced Hem keeps one Facing id: its source list and reason are charged once through
+the owning layer vector. No Facing lookup, rebirth, depth resolution or folding is performed.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_layer_inventory_resources(&layers, &mut meter)?;
+charge_hem_inventory_resources(&hems, &mut meter)?;
+let represented_finishes = meter.finish()?;
+```
+
+The native fixture has two Facings (1/2 sources), one Lining (2 sources), one Interfacing (1 source)
+and three Hems:13 entries. Reasons ` é `, `猫` and `é` contribute4+3+2=9 UTF-8 bytes, without trimming;
+the assigned Facing contributes none. Counter bits are zero. Hems cover explicit zero, formula and
+profile depths, both fold origins, and turned/faced methods without duplicating Facing content.
+
+Entry maxima1/4/5/7/8/9/12 retain exact first refusals0+2/3+2/5+1/6+2/8+1/9+1/10+3 across whole
+families, nested sources and hems. Nested witnesses keep the actual layer and original family index.
+Text maxima3/6/8 refuse0+4/4+3/7+2 at the exact Material reason owner/index. A real deletion makes
+current layer validation refuse; accounting the same held layers/Hems succeeds without repair and
+leaves objects/ledger unchanged. Empty collections and prior-error preservation also pass.
+
+Five new actual cases plus prior32 resource cases pass:37 total, with strict selected lint/formatting.
+Construction families, whole root/source and runtime admission remain owned. These counts grant no
+current source/Material binding, Lining execution, generated offset/folding geometry, physical
 readiness, whole-model or allocator memory/time certificate.
