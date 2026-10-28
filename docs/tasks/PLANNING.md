@@ -1187,14 +1187,14 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/stitchcad-de
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 implementation prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Normalized progress .1/root-cumulative uniform explicit .2 implemented;canonical provenance .3 next after capacity transition.
-Actual native sewing test structural_child_graph_acceptance_is_not_parent_ease_conservation passes:
-copying the10-micrometre parent amount into each independently supplied child yields20 total;the
-same structural constructor also accepts5+5 and retains DeferredToG2AndG3. Root:per-span amount/
-distribution fields and graph validation have no original-parent relation. This is no published split;
-current handler remains unavailable. Implement coupled parent-aware sources/quantization/provenance
-for explicit/formula/profile and distribution cases;never use standalone structural success as conservation proof.
+P1 implementation prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Normalized progress .1/root-cumulative uniform explicit .2 implemented;canonical provenance .3 follows D302 correction.
+Actual native structural_child_graph_acceptance_is_not_parent_ease_conservation passes:copied10+10 gives20 for parent10;independently authored5+5 also passes structural validation with DeferredToG2AndG3. Root:per-span fields/validation lack an original-parent relation. No split result is published;handler unavailable.
+Implement coupled parent-aware sources/quantization/provenance for explicit/formula/profile and distributions;standalone structural acceptance is not conservation proof.
+Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];root boundaries[0,1,0],signed symmetry. Native .2 root-query watch passes with original domains/direction;canonical sources/nonuniform/stops/lineage/effects remain pending.
 
-Original-source cumulative quantization is the chosen plan:independent Fraction prototype for1µm
-shows rounded-child orders[0,1,0] versus[1,0,0];retained-root boundaries give[0,1,0],with signed symmetry.
-Native root-query watch .3.2.2 passes with original domains/direction;D301 remains open for canonical sources/nonuniform/stops/lineage/effects.
+## D302 — aggregate count mistaken for active archive pressure
+
+P2 fixed0490;owner G1-SLICE.6.5.3.2.retention. Recurrence of D284:0489 pointers/message inferred packing from64 aggregate workingMD.
+Reproduction:validated generation decoder plus independent physical/catalog census →generation1=21,generation2=43 including42 raw/1 catalog,total64,rc=0. Contract limits each64/aggregate192;record644 fits active44.
+Root:aggregate verify-retention readout was compared with a per-generation ceiling despite the public annex's explicit distinction. Impact:false blocker/unnecessary storage work;no archive packing/deletion occurred.
+Fix:tracked generation_pressure.py validates groups and independently counts raw/catalog files;3 scope controls pass. After644:21+44=65 aggregate,20 active slots;retention1098 passes0. Current pointers corrected;whole0489 retains prior exact claim. No cap increase,sealed rewrite or packing;resume product.

@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0489 — conserve uniform explicit ease from original cumulative boundaries
+## STITCHCAD-G1-0490 — distinguish active archive pressure from aggregate counts
 
-- Add sealed borrowed original-source allocation with direction-compatible cuts,shared rounding and original-domain cumulative interval queries. Preserve actual eligibility/refusal chains;no child IDs or paired effects.
-- Native selected5/sewing33/docs3/strict scoped Clippy/fmt pass;35 independent Fraction rows in both directions match producer/frozen bytes. Native partial-root order,signed symmetry,source and snapshot controls pass.
-- Book88/168/1559/2656/glossary0 pass. Whole0488 retained643;64 working history files require capacity transition next. D301 stays P1 for canonical provenance/nonuniform/stops/lineage/paired acceptance.
+- Fix D302 recurrence of D284:64 aggregate working files did not require packing;before644 active generation used43/64. Add read-only validated group pressure and independent physical/catalog census with3 scope controls.
+- Preserve whole0489 exact in644;afterward65 aggregate/44 active,20 working slots. Retention1098/2502007 residentB passes0;no packing,deletion,seal rewrite or cap change. Correct current pointers and resume D301 canonical provenance.
+- Focused book/publication/glossary checks pass;LIVE D302 correction noted,G1 progress6/18 unchanged. Full archive/CI integration remains separately owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

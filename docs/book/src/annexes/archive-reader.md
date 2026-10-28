@@ -69,6 +69,14 @@ The verify-retention working-Markdown readout is the aggregate across generation
 is independently limited to64; the version3 aggregate limit is192. Sealed catalogs remain charged to
 their own generation, while raw records belong to the active generation. A total of64 therefore does
 not itself require packing. Check actual per-generation pressure before scheduling capture or rollover.
+The read-only diagnostic also checks counts against an independent physical/catalog census:
+
+```bash
+python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py
+```
+
+Its active working-slot headroom does not waive the separate decoded,resident,line or window bounds.
+
 
 All but the last generation are sealed. New raw drafts belong only to the active group and remain
 unsealed until capture; all committed raw records still retain exact bytes. Orphans, shared ownership,

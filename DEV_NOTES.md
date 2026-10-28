@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — original-source cumulative uniform ease
+## _(2026-10-28 UTC)_ — active versus aggregate archive pressure
 
-0489 .3.2.2 retains actual original request/span/domain. Same requires equal normalized cuts;Opposite compares A with1−ascending B. Stored Param is edge-length progress by contract. Shared half-away rounding computes cumulative original quantities;interval amounts difference original endpoints.
-Native selected5/full sewing33/docs3/strict lib+sewing Clippy/fmt pass.35 independent Fraction rows×both directions match native/frozen bytes;partial-root order queries yield[0,±1,0]. Actual symbolic/weighted/notch eligibility,original normalization chains,frame/bounds and replacement snapshots checked.
-Book88/168/1559/2656 and glossary0 pass;whole0488 retained643 verifies3 Git spans. Retention1097/64 workingMD/2496923 residentB passes;next record644 requires product-blocking capacity transition. Original backups protected. D301 remains P1;canonical source/child provenance/nonuniform/stops/lineage/effects pending.
-Promotion:indexed command-layer decision. LIVE reviewed unchanged,G1 6/18;README unchanged. No currentness/physical/child publication certificate.
-[Whole0488 normalized-progress lesson](docs/history/stitchcad-devnotes-part643.md) retains exact arithmetic and independent Fraction evidence.
+0490 D302 repeats D284:0489 prose compared64 aggregate working files with a per-generation64 cap. Public contract says192 aggregate;actual before644=21 sealed+43 active. No storage action was needed or taken.
+Tracked read-only generation_pressure.py validates each group and independently counts physical raw/catalog files.
+Scope controls3 distinguish aggregate64/active43,aggregate85/active64,next active44;all pass0. After exact whole0489 record644,real readout21+44=65,20 active slots;retention1098/2502007 residentB passes0. Original seals/backups/caps untouched;current pointers corrected. Working slots do not waive other resource bounds.
+Promotion:indexed generation decision. Book/publication/glossary focused checks recorded in owning leaf. LIVE D302 correction noted,G1 6/18 unchanged;README unchanged. Product resumes canonical original ease source/provenance .3.2.3,D301 P1 still open.
+[Whole0489 uniform-source lesson](docs/history/stitchcad-devnotes-part644.md) preserves the exact native allocation proof and erroneous pressure claim.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

@@ -186,3 +186,14 @@ independent public materializations match1055 files/3259088 bytes by size/SHA-25
 files remains target/history-capture-0450/installation/backup. Post-capture working Markdown22, then23
 with whole0449 record602; no capacity/policy or power-loss guarantee changed. Product resource work
 resumes at .6.8.2.2.2.2.2.4.3; full integration acceptance stays separately owned.
+
+## Per-generation pressure recurrence0490
+
+answers: "how is active pressure distinguished reproducibly from the aggregate readout?"
+
+D302 repeats D284's incorrect scope inference in0489 planning;no packing/deletion occurred.
+The tracked generation_pressure.py validates the complete archive and each group,then independently
+counts physical raw/catalog files. Before record644:21 sealed+43 active=64 aggregate;after:21+44=65.
+Three named controls distinguish aggregate64/active43 from aggregate85/active64 and the next raw
+record. Use this read-only diagnostic before capacity work;working slots do not waive other bounds.
+Whole0489 retains the prior exact erroneous claim;current pointers are corrected without rewriting seals.

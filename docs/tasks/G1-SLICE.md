@@ -696,29 +696,24 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0488 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part643.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.2`
   Status: `done`
-  Goal:0489 uniform explicit original-source cumulative allocation;private borrowed provenance,
-  declared-direction compatibility and signed quantum conservation. No child lineage or paired effects.
-  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/seam_partition/cumulative_quantization_prototype.py
-    →±1µm rounded-child orders differ;root cumulative endpoints agree,rc=0. Native root-query watch now covers the chosen remedy.
-  - [x] ROOT CAUSE: same diagnostic →repartitioning rounded children loses original cumulative boundaries,rc=0.
-    Public Param/reference contract and actual SeamSpan amount/domain reviewed;preserve original edge-length fractions,not polynomial curve t.
-  - [x] FIX: sealed CommandUniformEasePartition retains actual request/span/source;shared half-away boundary quantization,
-    original-domain interval differences,Same/Opposite compatibility,original eligibility and numeric error chains. No new IDs/effects.
-  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract uniform_ease -- --nocapture via local_environment.py
-    →5 passed;35 independent Fraction rows in both directions,partial-root order/signed symmetry,actual eligibility/overflow/query/snapshot checks,rc=0.
-    python3 -I -B docs/tasks/artifacts/seam_partition/uniform_ease_oracle.py plus cmp frozen TSV →exact bytes,rc=0.
-  - [x] NO REGRESSION: cargo test -p sc-core --test sewing_contract via local_environment.py →33 passed,rc=0;
-    cargo test -p sc-core --doc command::seam_ease →3 passed,rc=0;scoped strict lib/sewing Clippy and fmt --check →pass,rc=0.
-    mdbook build/publication check →88 chapters/168 scoped APIs/1559 source/2656 rendered links,rc=0;glossary census →0 failures,rc=0.
-  - [x] LOCKSTEP: live pointers/journals/indexed decision/book/API inventory updated;LIVE/README reviewed unchanged.
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part643.md →3 exact Git spans,rc=0;
-    bash scripts/history_archive.sh verify-retention →1097 records/64 workingMD/2496923 residentB,rc=0.
-    D301 remains P1:.3 retained canonical sources,.4 nonuniform/context,.3.3 stops,.3.4 lineage and paired acceptance pending.
+  Goal:0489 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part644.md).
 - ID: `G1-SLICE.6.5.3.2.retention`
-  Status: `pending`
-  Goal: product-blocking capacity transition before next sealed record644;working history now64/64.
-  Follow public archive authoring/install contracts;verify copy/preservation/use before exact retirement.
-  Preserve original backups;never overwrite sealed records or raise limits. Then resume .3.2.3.
+  Status: `done`
+  Goal:0490 D302 repeated D284 aggregate/active count confusion corrected;no archive packing needed.
+  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py
+    →before644:generation1=21,generation2=43,total64;after644:21+44=65,20 active working slots,rc=0.
+  - [x] ROOT CAUSE: same diagnostic →independent physical/catalog census agrees with each validated group,rc=0.
+    Earlier aggregate verify-retention count was compared with one group's64 ceiling despite public64/group and192 aggregate contract;D284 recurred in0489 prose.
+  - [x] FIX: tracked read-only pressure/census producer with scope controls;correct current pointer/index/ledger/book.
+    Preserve exact erroneous0489 in sealed644;no packing,rollover,deletion,cap increase or archive implementation change.
+  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py --self-test
+    →3 named controls:aggregate64/active43,aggregate85/active64,next active44;rc=0. Real producer →65 aggregate/44 active,rc=0.
+  - [x] NO REGRESSION: bash scripts/history_archive.sh verify-retention →1098 logical/65 workingMD/2502007 residentB,rc=0;
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part644.md →3 exact Git spans,rc=0.
+    mdbook build/publication check →88 chapters/168 APIs/1559 source/2656 rendered links,rc=0;glossary census →0 failures,rc=0.
+    Independent pressure rerun SHA census →all archive/control files byte-identical,rc=0;full archive/CI campaigns remain pre-push/integration owners.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/indexed generation decision/book/task index/defect ledger updated;
+    LIVE reviewed with D302 correction noted,G1 6/18 unchanged. README unchanged;next .3.2.3 canonical original source/provenance.
 - ID: `G1-SLICE.6.5.3.2.3.2.3`
   Status: `pending`
   Goal: canonical retained original ease source/domain/provenance for child partitions,including
