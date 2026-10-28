@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — combined current native metadata-bus acceptance
+## _(2026-10-28 UTC)_ — full publication fixture acceptance
 
-0477 .6.9.3 accepts current native metadata bus/public inputs:317 cases across21 targets;core121(17 command targets66+resource47+metadata8),measure196(Design-input163+source33). Completed logs derive the actual bus subset98;all pass0.
-Command15/Design34 namespace doctests pass49, including privacy/lifetime/sealing controls. Registry/error/resource/transaction features participate in the full current targets. Production sources unchanged;publication fixture probes still pending.
-Book command-workflows#combined-native-acceptance records populations/scope;86chapters/161APIrows/1549source/2615renderedlinks pass0. Broader handlers,app/adapters/persistence/browser/physical/release/full-workspace CI remain actual owners.
-Promotion:indexed decision. Whole0476/D297 in631(4 exact Git spans);retention1085/2436702B passes0. LIVE combined native note,G1still6/18;README correct unchanged. Next .6.9.publication full existing probes;push cadence unchanged.
-[Whole0476 native-workflow/D297 lesson](docs/history/stitchcad-devnotes-part631.md) retains precise metadata/permission/runtime evidence.
+0478 .6.9.publication passes all45 existing publication probes against final inputs:real book, copied chapter/index/link/status/API refusals, formula/statement currency and actual compiled guard-removal controls. Named-result positive comparisons pass.
+Actual unclosed generic warning refuses;quoted rendering repairs. Final book86 chapters/161 API rows/1549 source/2616 rendered links passes0. Final acceptance heading changed link population,so full suite reran and passed on exact final source;production unchanged.
+Combined native317/doctests49 remains the prior verified checkpoint. Current metadata .6.9 closes;other handlers,workspace CI,adapters,persistence/browser and physical/release proof remain separate. Scope is structural publication integrity,not all prose/sewing truth.
+Promotion:indexed decision. Whole0477 and0475–0477 decisions retained632(4 exact Git spans),retention1086/2445387B pass0. LIVE metadata lane/probe note,G1still6/18;README unchanged. Next scheduled .6.vocabulary D250;push cadence unchanged.
+[Whole0477 combined-native lesson/decisions](docs/history/stitchcad-devnotes-part632.md) retains exact populations and pending product boundaries.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

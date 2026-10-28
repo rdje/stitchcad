@@ -114,55 +114,18 @@ prospective authoring ownership, immutable setup and bounded doctest contracts w
 [Whole0471–0474 history/source-ownership/resource/transaction decisions](../history/stitchcad-devnotes-part629.md)
 retain exact native proofs, D293/D294 closure, compatibility changes and pending boundaries.
 
-## Discarded private preparation context0475
+[Whole0475–0477 discarded-error/workflow/current-native decisions](../history/stitchcad-devnotes-part632.md)
+retain exact context/permission/runtime proofs and pending boundaries.
 
-answers: "how does a failed group identify discarded preceding commands without exposing candidates?" · "does the command census prove execution behavior?"
+## Final publication acceptance0478
 
-D295 reproduced natively:the mixed prefix/alias/failing-Notch error named only the failing AddNotch,
-although command-layer §9/§11 require preceding discarded commands. Mutation/RetryConflict/Difference
-now carry fixed Copy CommandGroupDiscardedStep data:index, command and key from actual successful
-first-occurrence steps. Preserve original positions/order and omit aliases/failing/unexecuted members.
-The producer copies no report/model and calls no authority/source provider; original error sources stay
-unchanged. Diagnostic construction occurs only on these error paths, within admitted member counts.
-Exhaustive external error patterns must add discarded or ..; existing wildcard patterns remain valid.
+answers: "did the complete existing publication controls pass after current metadata implementation?"
 
-Native diagnostic1 fails before/passes after;transaction3/group-preview6/group-commit6/lint/fmt pass0.
-Preview/commit witness positions0/2/3 and original keys, empty prefix, native Notch source and key-conflict
-cause, then corrected same-key/two-ID/one-slot publication equal to a real reference. Lifecycle and
-accounting sources stay unchanged; final Difference uses the same actual-step producer.
-D296 corrected the G0-era census header:no executable bytes changed;17/5/5/0 native census passes.
-Specification closure does not establish execution; native workflow evidence/full bus acceptance follow.
-
-## Builtin workflow discovery and exact permission sets0476
-
-answers: "where are actual native workflows declared?" · "why report a permission set instead of the strictest level?"
-
-CommandWorkflowId/CommandWorkflowStep declare3 immutable native sequences once. Stable exact lookup
-has no whitespace/case alias or default. Unique command/class metadata derives from catalog identities;
-complete distinct rights derive from each purpose. Extract the existing group-purpose match unchanged
-and share it with actual authorization; all other grant-check bytes/order and lifecycle code stay exact.
-Discovery contains no model/session/policy/grant and is never runtime availability or authorization.
-Non-exhaustive public enums permit future additions; actual new stages/workflows need native proof.
-
-Native acceptance interprets every declared stage over real complete sources/models:inspection1,
-edit/preview/replay5 and Undo/Redo7. It checks original/current reads, actual metadata differences,
-identity issuance, capacity replay and restored snapshot pointers. A separate permission matrix proves
-Inspect cannot commit and Commit cannot read/preview. Native2/metadata2/schema4/catalog2/group-auth5/
-strict lint/fmt pass0; generated stdout table is watched by the core book-projection contract.
-D297 clarified the misleading ordered/strictest wording. Named permissions stay distinct; native
-preview requires Inspect alone, Propose is separate metadata, and partial grants never gain a union
-through discovery. UI/API/MCP parity remains empty until actual adapter tests/digests exist. The new
-book part and2 public API rows explain this boundary; broader .6.9.3/publication acceptance follows.
-
-## Combined current native acceptance0477
-
-answers: "what current native command populations passed together after implementation?"
-
-All317 selected cases pass across21 targets:core command-contract66 in17 targets plus model-resource47
-and metadata8;higher Design-input163 plus source-resource33. Completed output derives98 actual bus
-cases within that163. Command15/Design34 doctests pass49, including privacy/lifetime/sealing controls.
-Current workflow, discarded-error, resource, transaction and authority paths all participate. Production
-source is unchanged in this acceptance leaf; source diagnostics/types and actual metadata handlers
-are distinguished from still-unimplemented other runtime handlers. The book records native commands,
-counts and limits. Full publication fixture probes follow before this metadata lane closes; workspace
-CI/persistence/browser/adapter parity and physical/release evidence remain separate owners.
+All45 publication probes pass on exact final inputs:real book plus copied structural/status/API
+refusals, independent formula/statement currency and actual compiled guard-removal assertions,
+named-result positive comparisons, actual malformed-generic builder warning and repaired rendering.
+Final populations86 chapters/161 scoped API rows/1549 source/2616 rendered links pass. An added
+acceptance heading changed the rendered population,so the full suite reran against final source.
+Production source remains unchanged;prior combined native317/doctests49 stands. This closes current
+metadata .6.9 acceptance,not other runtime handlers,adapter/persistence/browser/full CI or release
+proof. Publication integrity is scoped;it does not certify every prose or sewing-semantic claim.

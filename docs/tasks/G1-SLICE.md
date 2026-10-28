@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0477
+## Current leaf acceptance —0478
 
-- [x] ROOT CAUSE: python3 -I -B scoped complete-target/log census derives19 core/2 measure targets;
-  actual bus subset98;feature code complete,combined proof now owned here;crates unchanged rc=0.
-- [x] ADDRESSED: cargo test selected core19 targets →121 passed;measure2 →196 passed;total317 rc=0.
-  Full current Design-input163 includes98 actual bus;public schemas differ from unavailable other handlers.
-- [x] NO REGRESSION: cargo test -p sc-core --doc command:: →15 passed and --doc design:: →34 passed rc=0;
-  book86/161/1549/2615 and retention1085/2436702B pass0;full publication/other roadmap proof pending.
+- [x] ROOT CAUSE: python3 -I -B scoped producer/fixture plan review confirms project-local copied
+  fixtures/no other Git repo edits;named result uses existing positive tuple comparisons rc=0.
+- [x] ADDRESSED: bash docs/tasks/artifacts/book_publication/run_book_publication_probes.sh →45 pass/0 fail
+  rc=0 on final source;real/copy/refusal/body-fault/named-result/warning-repair controls all pass.
+- [x] NO REGRESSION: final producer →86 chapters/161 API rows/1549 source/2616 rendered links rc=0;
+  production unchanged,prior native317/doctests49 pass;remaining product/workspace proof stays owned.
 
 ## Goal
 
@@ -954,8 +954,9 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0473 coupled native logical-resource acceptance/D294; [whole scope/proofs](../history/stitchcad-devnotes-part628.md).
 
 - ID: `G1-SLICE.6.9`
-  Status: `in_progress`
-  Goal: coupled actual bus acceptance/private-mutator compile failures; workflow registry feeds G1.9/G5 parity.
+  Status: `done`
+  Goal: current implemented metadata bus/native privacy/publication acceptance;registry feeds G1.9/G5.
+  Scope:other runtime handlers remain .6.5.3 and their actual recipe/geometry dependencies.
 - ID: `G1-SLICE.6.9.1`
   Status: `done`
   Goal:0475 D295/D296 discarded diagnostics/tool-scope repair; [whole scope/proofs](../history/stitchcad-devnotes-part630.md).
@@ -964,27 +965,27 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0476 native workflow registry/exact rights/D297; [whole scope/proofs](../history/stitchcad-devnotes-part631.md).
 - ID: `G1-SLICE.6.9.3`
   Status: `done`
-  Goal: combined current implemented metadata-bus/public schemas/authority/resource/privacy acceptance.
-  - [x] REPRODUCE / ISSUE: completed feature had focused checkpoints;native current-target census/log
-    producer derives19 core/2 measure targets and98 actual bus cases,all source artifacts local rc=0.
-  - [x] ROOT CAUSE: python3 -I -B bounded log census →core121/measure196,command15/design34 docs rc=0;
-    no production changes in this leaf;source/API classes and actual runtime subset remain distinct.
-  - [x] FIX: execute current combined contracts after feature implementation;record exact populations
-    and update user book while preserving pending full publication,other handlers and product boundaries.
-  - [x] ADDRESSED: cargo test core17 command_* targets plus design_resource/design_metadata →121 passed;
-    measure design_inputs/resource_contract →196 passed,total317 rc=0;all98 bus cases in163 pass0.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc command:: →15 passed;--doc design:: →34 passed rc=0;
-    book86 chapters/161 API rows/1549 source/2615 rendered links rc=0;no workspace-wide CI claim.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/decision/index and LIVE combined-native note updated;README
-    correct unchanged;whole0476/D297 retained631(4 Git spans),retention1085/2436702residentB rc=0.
-  Verification: selected combined317/doctests49/book/retention rc=0;full publication probes next.
-  Commit: STITCHCAD-G1-0477;parent .6.9 remains in_progress until .6.9.publication closes.
+  Goal:0477 combined current native317/doctests49 acceptance; [whole scope/proofs](../history/stitchcad-devnotes-part632.md).
 
 - ID: `G1-SLICE.6.9.publication`
-  Status: `pending`
+  Status: `done`
   Goal: after agreed command-feature implementation, run the complete existing publication probes,
   including named-result fixture compatibility, before push; current focused native formatter oracle
   does not claim this broader suite passed. COMMIT.md full pre-push gates remain mandatory.
+  - [x] REPRODUCE / ISSUE: prior scoped native formatter/real-book checks did not execute the complete
+    existing copied-fixture population;producer plan/source review locates all controls rc=0.
+  - [x] ROOT CAUSE: native source review rc=0:main includes original formula/statement guard/body faults,
+    named-result comparisons and actual builder-warning repair;fixture roots are guarded project-local data.
+  - [x] FIX: execute the complete existing producer after metadata code completion;record scoped result.
+    Acceptance heading changed rendered links,so rerun full suite on final source before closure.
+  - [x] ADDRESSED: bash docs/tasks/artifacts/book_publication/run_book_publication_probes.sh →45 pass/0 fail
+    rc=0;all existing real/copy/positive/refusal/body-fault/named-result/warning-repair controls pass.
+  - [x] NO REGRESSION: final producer →86 chapters/161 API rows/1549 source/2616 rendered links rc=0;
+    production unchanged,prior combined317 native/doctests49 verified;full workspace CI remains pending.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/decision/index and LIVE metadata/probes note updated;README
+    unchanged;whole0477/decisions632 verified4 Git spans;retention1086/2445387residentB rc=0.
+  Verification: full publication45/final book/retention rc=0;current metadata .6.9 done with scoped limits.
+  Commit: STITCHCAD-G1-0478;next scheduled .6.vocabulary D250 repair before further integration.
 
 - ID: `G1-SLICE.7`
   Status: `pending`

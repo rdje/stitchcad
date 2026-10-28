@@ -71,7 +71,7 @@ refusal, matching the independently required permission set.
 The core registry/book projection is checked by command_workflow_contract. Actual runtime evidence
 lives in command_bus::workflow_registry inside sc-measure's design_inputs_contract target. These
 checks certify the named native paths. [Combined native acceptance](#combined-native-acceptance)
-now covers the current metadata bus/public contracts; full publication probes remain separately owned. They grant no adapter availability or parity, persistent recovery, recipe
+now covers the current metadata bus/public contracts; full publication probes also pass45 cases. They grant no adapter availability or parity, persistent recovery, recipe
 reevaluation, geometry, physical/profile realization, allocator/time or release certificate.
 
 Library discovery itself does not install the three required policies, provide finite journal/history
@@ -105,5 +105,22 @@ local-environment launcher remains mandatory for these producers.
 
 This accepts the current implemented native metadata bus and its declared public inputs. Remaining
 mutation/evaluation/artifact/release handlers, adapter parity, persistence/reopen and browser execution
-retain their actual roadmap owners. Full publication fixture probes follow separately, and complete
+retain their actual roadmap owners. Full publication fixture probes pass45 cases, and complete
 workspace CI still precedes an authorized push. No physical or release certificate follows here.
+
+## Publication fixture acceptance
+
+The complete existing publication suite passes45 probes. It checks the real book, copied-fixture
+chapter/index/link/status/API refusals, original formula/statement currency guards, and actual
+compiled guard-removal assertions. Named publication results remain compatible with copied-fixture
+positive comparisons. A real unclosed generic triggers the builder-warning refusal; quoting it
+restores the expected rendering. This is scoped publication integrity, not a prose/sewing or product
+correctness certificate.
+
+```bash
+python3 -I -B scripts/local_environment.py -- bash docs/tasks/artifacts/book_publication/run_book_publication_probes.sh
+```
+
+Together with combined native317/doctests49, this closes current metadata acceptance. Adapter parity,
+other runtime handlers, persistence/browser, full workspace CI and physical/release evidence remain
+with their existing owners. G1 as a whole remains in progress.

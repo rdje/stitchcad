@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0477 — accept the combined current native metadata bus
+## STITCHCAD-G1-0478 — close current metadata publication acceptance
 
-- All317 cases pass across21 selected targets:core121 and measure196, including all163 Design-input cases and98 actual bus cases;49 command/design doctests also pass.
-- Current workflow, discarded-error, resource, transaction, authority and public-input features participate in the combined targets; production sources unchanged.
-- Book records exact populations and scoped evidence; broader handlers, adapters, persistence/browser, full workspace CI and physical/release proof remain separately owned.
-- Whole0476/D297 retained631; next full existing publication fixture probes, including named-result compatibility. No early push or whole-project certificate.
+- All45 full existing publication probes pass against final book inputs, including copied-fixture refusals, named-result comparisons, compiled guard-removal controls and malformed-generic repair.
+- Final publication86 chapters/161 scoped API rows/1549 source/2616 rendered links passes; production code unchanged. Combined native317/doctests49 remains verified.
+- Close current implemented metadata acceptance .6.9 while preserving other handlers, adapters, persistence/browser, full workspace CI and physical/release owners.
+- Whole0477/0475–0477 decisions retained632; next scheduled D250 vocabulary repair. No early push or whole-project/prose correctness certificate.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
