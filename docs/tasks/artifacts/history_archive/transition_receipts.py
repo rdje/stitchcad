@@ -1,5 +1,6 @@
 """Verify whole temporary transition receipts against their hashes and named Git byte intervals."""
 import argparse
+import base64
 import hashlib
 from pathlib import Path
 import re
@@ -51,6 +52,14 @@ def check_source_spans(data):
     assert authority, 'composite source revision missing'
     reader = runpy.run_path(str(ROOT / 'scripts/history_archive.py'))
     environment = reader['metadata_environment'](ROOT)
+    encoded = b'- **Encoding:** base64, wrapped at100 characters; decoded source intervals concatenate exactly.' in header
+    if encoded:
+        match = re.fullmatch(rb'```base64\n([A-Za-z0-9+/=\n]+)```\n', body)
+        assert match, 'malformed encoded source body'
+        lines = match[1].splitlines()
+        assert all(0 < len(line) <= 100 for line in lines), 'encoded source width'
+        body = base64.b64decode(b''.join(lines), validate=True)
+        assert len(body) <= 160000, 'decoded source bound'
     offset = 0
     for name, begin, end, size, checksum in rows:
         path = Path(name.decode())
@@ -67,6 +76,8 @@ def check_source_spans(data):
         assert hashlib.sha256(segment).hexdigest().encode() == checksum, 'composite source hash mismatch'
         assert body[offset:offset + size] == segment, 'composite source bytes/order mismatch'
         offset += size
+    if encoded:
+        assert offset == len(body), 'extra decoded source bytes'
     return len(rows)
 
 

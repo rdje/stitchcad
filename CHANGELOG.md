@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0501 — close focused actual Design weighted-source acceptance
+## STITCHCAD-G1-0502 — recover original-frame notch requirements and own D305
 
-- Actual±1 Design/source/portion/quantity joins distinguish weighted half allocation0/±1 from the real Uniform control. Canonical source and complete two-region density remain original.
-- Graph-only resources5;limit4 refuses original region charge consumed3/requested2. Replaced copy preserves held math while current validation/fresh declarations reject original MissingCopy. Native1/166 filtered/scoped Clippy/fmt pass.
-- Whole0500 retained656;task/book/live pointers synchronized. Weighted source component closes with focused verification;LIVE G1 6/18 unchanged. Actual notch/frame/context work follows;paired geometry/effects/full acceptance remain owned.
+- Native4/independent Fraction3 expose wide original coordinates,multiple origin witnesses and256 derived leaves from25 logical inputs. Select bounded current uniqueness and wide inverse projection;implementation remains pending.
+- Reproduce D305 valid split falsely repaired by premature bounded subtraction. Immediate numeric slice owns complete point/range composition repair before projection;diagnostic pass is not fix acceptance.
+- Curate decision200→158L;preserve exact full source658,whole0501 in657 and closed D302–D304 in659. Strict wrapped-source receipt preserves536B original line within400B archive rows. LIVE defect note changed,G1 6/18 unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

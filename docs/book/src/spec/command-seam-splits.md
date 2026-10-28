@@ -553,3 +553,8 @@ current validation and fresh amount declarations refuse the original MissingCopy
 Focused actual Design1 and selected lint/format checks pass. The weighted source component closes
 with focused verification. Original-notch contexts,paired physical matching,command effects and
 broader paired/mutation acceptance remain owned;these source partitions are descriptive intervals.
+
+[Original-frame notch context](command-notch-context.md) records actual late-frame,ambiguous-origin
+and derived-work counterexamples plus the immediate D305 reference-recomposition repair prerequisite.
+Those requirements precede notch allocation and paired effects;weighted source acceptance above
+retains its focused scope.

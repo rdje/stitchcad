@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — focused actual Design weighted-source acceptance closed
+## _(2026-10-28 UTC)_ — original-frame notch recovery before implementation
 
-0501 actual Design acceptance joins±1 weighted roots,canonical source/portion metadata and admitted source quantities. Half partitions yield0/±1;the real Uniform control yields±1 first. The earlier third-cut candidate did not distinguish uniform allocation;half plus actual counterfactual fixes that before commit.
-Graph-only count5=2 spans+1 source+2 regions;limit4 preserves original root97000 regions refusal consumed3/requested2. Copy96000→96010 replacement keeps held math but current validation/fresh declarations reject MissingCopy on97001/A. Native1/166 filtered/scoped Clippy/fmt pass0.
-Source component .4.2 closes with focused checks;notch/paired context/effects/full acceptance remain owned. No new runtime API/policy rule;promotion declined in leaf for routine verification of existing indexed contracts. LIVE/README unchanged,G1 6/18;actual notch-frame recovery next.
-[Whole0500 weighted-query lesson](docs/history/stitchcad-devnotes-part656.md) retains exact implementation/oracle proofs;3 Git spans verified.
+0502 actual late anchors need64-bit original fractions;unique current locations retain multiple origins/directions. Eight split/merge cycles yield256 leaves from25 logical inputs;the input meter is correct. Projection must admit derived work,retain choices and use wide exact coordinates.
+D305 split1/3 narrows a64-bit temporary though its63-bit final result fits. Native4/oracle3 pass as diagnostics,not fix acceptance. Immediate numeric leaf owns complete point/range split/offset/merge repair before projection. Relative-direction test correction preserves evidence.
+Decision200→158L keeps standing contracts;whole15352B retained658. Raw536B source line exceeded archive400B;wrapped base64 and strict decode/Git-span checks preserve exact bytes without cap growth. Native/lint pass;book records pending API and owned D305. LIVE defect note changed,G1 6/18.
+[Whole0501 acceptance](docs/history/stitchcad-devnotes-part657.md),whole pre-context decision658 and closed D302–D304 ledger659 retain exact source proofs. Indexed sewing decision gains current context/admission requirements;no new map row.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

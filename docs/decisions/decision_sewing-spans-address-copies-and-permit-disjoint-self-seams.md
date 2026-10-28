@@ -7,194 +7,152 @@
 
 answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?" · "does graph construction authorize replacement sewing sources?" · "can numeric canonical ids supply sewing formula or profile metadata?" · "can an owned sewing draft preserve damaged held references?" · "must unused sewing landmarks validate against current sources?"
 
-## Context
+## Copy-addressed sewing intent
 
-The supported construction vocabulary includes closing darts and folded-piece finishes. The reference
-band's folded short-end closure joins material of one physical copy to itself; forbidding every
-self-seam would require an artificial duplicate pattern/copy. D57's director ruling already gives
-physical copies stable identities, so two copies of one Piece are distinct material domains.
+A side names one CutCopy and a positive-length EdgeRange in its source Piece's frame. Declared
+Same/Opposite endpoint correspondence,copy reflection and later journal reversal are separate facts.
+Never infer them from labels or drawing order. Same-copy ranges may meet at endpoints but their
+positive interiors must be disjoint;different copies of one Piece are distinct material domains.
+Partial and one-to-many spans remain supported. The reference band's folded closure therefore
+needs no fabricated extra copy;its numeric geometry remains an executable G2 fixture obligation.
 
-## Decision
+Stops name semantic Notches or edge-anchored TurnPoints on explicit sides. They must belong to the
+copy's actual Piece/current range. Turn semantics and physical notch geometry remain geometric/
+profile obligations;semantic identity is not a tessellation index. Duplicate/missing/outside/
+unresolved references retain typed failures. Replacing a copy never reassigns its seams or Gathers.
 
-A side names one CutCopy id and one positive-length EdgeRange, in the source Piece's frame. An
-explicit correspondence says whether the two stored lower endpoints meet each other, or the lower
-endpoint of A meets B's upper endpoint. This is independent of later journal reversal and copy
-reflection. G2/V1 consumes all three facts, never inferred from label names or drawing order.
+Declared seam ease is signed A-minus-B,distinct from body-to-garment POM ease. Explicit literals,
+formula parameter identities and logical profile bindings retain their actual roles. Uniform is an
+explicit choice. Weighted regions are ordered positive relative densities on normalized arc-length
+progress;gaps allocate zero. BetweenNotches names two distinct semantic notch stops on one side.
+Geometric walking must validate actual lengths,direction,differential and resampling before effects.
 
-Same-copy seams are permitted when the two resolved ranges have disjoint positive-length interiors;
-shared endpoints are legal. Identical or overlapping material intervals on one copy cannot be sewn
-to themselves and are a typed refusal. Different copies of one Piece can use the same source range.
-The constructor checks current resolved fragments, so split/merge history cannot bypass disjointness.
-Later queries preserve the held ranges and expose missing interiors/endpoint choices. Atomic commands
-must revalidate replacements; an old validated graph is not a perpetual current-topology certificate.
+## Gather and complete owned sources
 
-Stop landmarks name semantic Notches or edge-anchored TurnPoints by stable id, attached to an explicit
-span side. They must belong to the copy's source Piece and the resolved side interval. A TurnPoint
-asserts sewing semantics; G2 checks actual turning geometry. Landmark identity is not a tessellation
-index, and a profile's notch geometry is irrelevant to semantic stop resolution.
+A Gather binds graph/span/side/copy and borrows that span's signed intake/distribution,without a
+second independently authored intake. Explicit gathering A requires nonnegative A-minus-B;B requires
+nonpositive. Symbolic sign/value/conservation and the closing operation remain explicit obligations.
+Current missing/changed bindings preserve raw evidence and typed causes,without automatic rewriting.
 
-Declared ease is signed A-minus-B length, explicit or symbolic, rather than stretching material by
-renderer convention. The distribution is explicit: uniform, positive weighted non-overlapping regions
-of normalized span arc-length progress, or between two distinct named notch anchors on one side.
-Weights are relative densities; omitted regions receive none. G2/G3 walking validates actual arc
-length, direction and differential, and defines the sampling/resampling realization. G1 preserves
-intent and checks structural domains; it never claims measured seam equality or a fulfilled ease budget.
+DesignSewing owns actual inputs,graph and landmarks. Complete identities include graph,landmarks,
+live spans and retained source owners;references remain uses. Ownership preserves damaged held
+references for inspection/repair. It certifies neither currentness nor numeric/physical readiness.
+Current source queries validate complete root/ownership,unused landmarks included,actual plan/
+Pieces/anchors,the full graph and all amount declarations before lending views. Same-id owner/
+landmark changes are checked,not just missing-id inventories;no partial views escape on refusal.
 
-## Consequences
-
-- Partial spans and several spans sharing a source edge express one-to-many correspondence.
-- The reference band can be represented without manufacturing a second physical copy. Its detailed
-  range geometry remains the executable G2 fixture's obligation, not a invented numeric golden here.
-- Unknown copies/landmarks, unresolved born references and overlapping self-seams are explicit failures.
-- Global id, command revision, geometry, profile resolution and release checks remain separate gates.
-
-## Gather binding (`G1-SLICE.3c.4a.2b`)
-
-A Gather binds an explicit graph/span/side/physical-copy identity. Its attachment interval, signed
-intake source and allocation come from the existing span; there is no independently authored intake
-or hidden second distribution. A-minus-B is nonnegative for gathering A and nonpositive for gathering
-B; explicit wrong-sign declarations are refused, while symbolic value/sign/conservation remains a
-later validation obligation. Queries expose the raw signed declaration plus selected side, preserving its signed provenance. Direction and closing-operation identity remain
-explicit intent. Missing targets or a changed side-copy binding are typed failures; a replacement
-copy never inherits this gather. Current raw geometry evidence is retained without automatic rewriting.
-
-SewingGraph.validate_current now shares the original constructor's structural validator. It checks
-actual supplied plan/Pieces, source range ownership, semantic stops and distributions in original
-order without rebuilding or rewriting the graph. Missing-id inventories alone cannot detect a
-same-id copy reassigned to another Piece or a same-id landmark moved outside its side. Current
-validation retains the original typed refusal and complete range repair evidence. It supplies no
-formula/profile amount resolution, geometric walking, command or release authority.
-
-DesignInputs.sewing_amount_declarations now borrows actual per-span amount metadata after complete
-current root validation. Formula identities name actual Design parameters, then require current
-Length-kind canonical targets; dedicated and general scalar families stay distinct. Explicit signed
-amounts borrow original spans. Logical profile refs remain DeferredToG4 even when numeric canonical
-ids coincide. No numeric value, Profile schema/content role, graph-source join or geometry follows
-this metadata query; owned complete sewing composition remains separate.
-
-DesignSewing now privately owns exact input/graph/landmark objects. Complete owned identities include
-all original root positions, graph, landmarks and spans before current root validation. References
-remain uses. Ownership admission preserves held sewing references after edits for inspection and
-explicit repair, without rebuilding born-valid objects against later contexts. Current graph and
-complete sewing-source readiness stay separate from ownership; a copy replacement does not reassign
-an old seam. No numeric, Profile, geometric, execution or release proof follows construction.
-
-DesignSewing current source queries now validate complete root/ownership, every semantic landmark's
-actual current Piece/anchor (unused included), the original graph against owned current contexts,
-and amount declarations. They retain existing raw anchor/graph choice/repair rules and concrete
-original errors. Amount views borrow actual owner objects; a successful metadata-only query cannot
-authorize stale graph sources. Profile deferral, whole Piece topology and full numeric/physical/
-execution/release readiness remain explicit separate scopes.
-
-## Retained ease source/portion primitive0491
-
-answers: "how do repeated source cuts preserve symbolic ease without independently copying child declarations?"
-
-Capture the actual span's original ease/copies/domains/direction once into private immutable
-SeamEaseSource. SeamEasePortion shares that same root while retaining its own exact original-frame
-intervals. Same/Opposite pairs follow A order;source/interior refusals retain actual portion evidence.
-Native selected3/sewing36/docs3 pass:both cut orders share original source pointers,including partial
-domains/reflection,explicit/formula/profile and all distribution kinds. Retained data outlives the
-graph;replacement or topology deletion does not rebind or certify it. Capture clones weighted data
-once,so command admission must precede capture. Canonical graph/source ownership,current readiness,
-resource accounting and original-root quantity queries remain next .3.2/.3.3;D301 stays P1 before effects.
-
-## Canonical retained-source integration design0492
-
-Use an explicit declared-versus-portion ease enum on spans;children carry no independent amount or
-distribution. The graph owns one immutable source per original span identity,with coherence and
-same-id conflicting-source checks. Retain original semantic stops with the source for current
-notch/domain validation. Capture inherited portions by sharing the existing root,never recapturing
-rounded child totals. Current child domains/stops and original source domains/stops validate separately.
-Graph source identities join global ownership once;resource accounting charges each canonical source
-body once per logical graph,without deduplicating across model snapshots. Amount/Gather metadata
-retains the portion mapping alongside the original declaration. The earlier direct uniform helper
-must refuse retained portions until original-root quantity integration;no fabricated child value.
-
-## Canonical graph/source result0492
-
-answers: "does source identity equality alone prevent double claims or guarantee one charged body?"
-
-No. D303 native red control accepted duplicate interval claims;ordered per-source/per-side maps now
-refuse positive overlap with original consumer/range evidence while allowing touching and separate
-budgets. D304 native red control found equal independent roots with noncanonical backing pointers.
-After complete current/coherence validation,fold equal roots onto one actual body in first-consuming
-order. No declaration value changes. Graph ownership/resource/source/metadata integration is native:
-sewing43/gather16/resource5/construction9/measure sewing14+retained2/docs11 pass. Original full stops/
-domains stay source dependencies;child stop subsets do not erase them. Meter7/limit6/two snapshots14
-watch logical ownership and original failures. Current value/effect readiness remains separate;
-retained quantity queries .3.3 and paired execution are still owned,D301 P1 remains open.
-
-## Retained original-root quantity result0493
-
-answers: "which amount is the rounding source when a command targets an inherited portion?"
-
-Always the original literal/domain. Keep that source separate from the target allocation;difference
-original rounded cumulative endpoints for both new children. Check original A/B correspondence at
-both portion endpoints,using declared direction. Native nested partial-domain portions and actual
-intermediate command views yield[0,±1,0] for both split orders. Sewing46/docs4 and35 independent
-Fraction rows in both directions pass;source eligibility/frame/bounds/correspondence/numeric chains
-remain actual,including zero-valued bounds and genuine normalization overflow. The borrowed view's
-source pointer and global progress remain original;privacy/lifetime controls stay genuine. Scoped
-retained acceptance follows;symbolic/nonuniform/context,stops,lineage and paired effects remain D301 owners.
-
-## Actual Design retained acceptance0494
+Formula IDs name actual Design parameters with Length-kind canonical targets;dedicated/general
+scalar source families remain distinct. Numeric canonical IDs cannot stand in for Profile metadata.
+Logical profile references remain DeferredToG4. Amount views borrow actual full original declaration
+and portion context;source success alone supplies no evaluated formula/Profile or geometric value.
 
 answers: "does a usable retained quantity imply the complete Design has current sewing sources?"
 
-No. Focused native actual Design acceptance passes with±1 roots,canonical source/metadata/command
-joins and graph-only resource3/limit2 original refusal. Replacing copy96000 with96010 preserves held
-quantities while complete current validation refuses the original MissingCopy. Full source metadata
-may be shared by several target views;their portion mappings determine allocation,not independent
-child literals. Retained .3 closes with focused verification,not full paired/physical/release proof.
-Nonuniform/context,stops,lineage/effects and full paired acceptance remain D301 P1 owners.
+A current copy replacement preserves held quantity math but fresh declarations refuse the original
+MissingCopy. This is the inspection/currentness boundary,not a successful mutation certificate.
+Whole Piece topology,recipe execution,physical assembly and release remain separate checks.
 
-## Nonuniform recovery0497
+## One immutable original source and disjoint portions
+
+answers: "how do repeated source cuts preserve symbolic ease without independently copying child declarations?"
+
+Capture the actual source span's identity,copies,full domains,direction,declaration and original
+semantic stops once. Capture clones weighted data,so command admission must precede that copy.
+Inherited portions share the same root;they never recapture rounded child totals. Their own source
+intervals remain in the original frame. Same/Opposite pairing follows canonical A traversal order.
+Original source domains/stops and current child domains/stops validate separately;child subsets
+cannot erase original dependencies. Source/interior/binding refusals keep original input evidence.
+
+answers: "does source identity equality alone prevent double claims or guarantee one charged body?"
+
+The graph owns each original source once in first-consuming order. Same identity with conflicting
+content refuses. Equal same-ID backing is folded only after complete validation. Claims are disjoint
+per source/per side;positive overlap refuses with actual prior consumer/ranges,while touching,
+partial coverage and separate original budgets remain legal. D303/D304's original native reds/fixes
+are retained in the whole historical record below. Source IDs join global ownership once and cannot
+alias live spans or other actual owners. Charge each canonical body once per logical graph and
+fully again per model snapshot;shared backing does not discount logical ownership.
+
+## Original cumulative quantities
+
+answers: "which amount is the rounding source when a command targets an inherited portion?"
+
+Use the original literal/domain for every boundary and difference its rounded cumulative values;
+never normalize a child's mass or use its rounded allocation as a new source. Target allocation,
+original source total and global original cut progress are distinct. Uniform quantities check both
+original directed endpoint correspondences,complete A before B,lower A before upper A. Same compares
+ascending progress;Opposite complements B. The bounded reference-progress API retains genuine final
+representation refusals;zero source amounts do not bypass bounds/frame checks.
 
 answers: "why does weighted allocation require wider exact arithmetic and original-side context?"
 
-Use original density integrals and total mass,with zero mass in omitted regions. Canonical A order
-uses ascending cumulative allocation on A or Same B,and one minus ascending B for Opposite.
-Orient before quantization;parent-minus-rounded-B assigns the half quantum differently for±1.
-The independent Fraction/common-denominator diagnostic freezes160 rows. Four valid quarter regions
-need188 denominator bits;binary64 changes the exact one-micrometre result0 to1. Native recovery2
-proves actual graph/source admission and preserves current unsupported-distribution refusals;
-it does not claim native weighted quantity execution. No fixed128-bit intermediate cap is adequate.
-A constructive N-region bound is189N+ceil(log₂N)+b bits for cumulative fields,b=query-denominator
-bits,plus30 for source multiplication. Unreduced region fields are below2^189;common total T is
-below N×2^(189N),prefix numerator is at most Q×T. Normalize original bounds without premature
-narrowing (b≤189),or use bounded normalized input (b≤63). This is arithmetic feasibility only;
-implementation must bound its actual temporaries/operations and admit workspace before allocation.
-Reuse the one shared rounding policy,not a local floating or duplicated half-away implementation.
-A pure distribution-side quantity does not certify pairing. Illustrative lengths11000/10000,ease1000,
-A densities1 then3 allocate250 at A half and require B21/40;uniform equal progress would give500.
-Consume actual original lengths/correspondence before effects;do not manufacture missing geometry.
-Native later-fragment notch half parameters locate original quarter/three-quarter stops,and both
-named orders are structurally legal. Recover their exact original positions through actual journal
-mappings;preserve identities,authored stop order and ambiguous/lost evidence. Current range evidence
-has no per-portion original subdomain. Profile dimensions are irrelevant to semantic stop location.
-D301 owns .4.2 shared rounding/workspace/weighted quantities,.4.3 notch context,.4.4 integration;
-scoped acceptance follows implementation,then full paired stops/lineage/effects acceptance.
-
-## Explicit borrowed weighted admission0499
+Weighted quantities integrate complete original density and total mass. Orient B/Opposite as one
+minus the exact ascending B cumulative fraction before shared half-away rounding. Subtracting a
+rounded B prefix assigns half quanta differently. Four valid quarter densities require188 reduced
+denominator bits;original-domain normalization can require189. Binary64 changes exact half-neighbor
+results. No fixed128-bit intermediate cap or local rounding variant may replace exact computation.
 
 answers: "what must precede original weighted integer workspace allocation?"
 
-Borrow the actual immutable original source with explicit positive region/bit limits and no Default.
-Check distribution,amount,complete original region count,then checked conservative integer reservation.
-Reserve189N+ceil(log2N)+219 bits for the planned common-denominator query,not a minimal actual width;
-four regions reserve977 even if reduced output is smaller. Derive source bits from the Length domain.
-No region cloning or arbitrary-precision allocation occurs during admission. Private fields/lifetimes
-and exhaustive Copy metadata keep its source borrow and bounded Debug honest. Preserve actual
-symbolic/notch IDs and source/side/required/limit refusals;zero amounts and child queries retain full
-source population. This is not allocator/CPU/currentness/physical authority. Native source2/bound1/
-privacy-lifetime-no-default docs3 pass;weighted quantities implemented0500 in .4.2.3.
+Explicit positive count/bit limits have no Default. Admission checks distribution,amount,complete
+original region count,then checked conservative integer reservation before BigUint allocation or
+region cloning. Reserve189N+ceil(log2N)+219 bits:mass fields below2^189,original query at most189,
+and source multiplier30 derived from the Length domain. This is conservative,not minimal width,
+allocator/CPU coverage or fresh Design authority. Private source-bound fields,Copy/exhaustive views
+and fixed-metadata Debug retain actual ownership and eligibility/quota context.
 
 answers: "how do admitted weighted source queries preserve exact normalization and original rounding?"
 
-0500 cumulative_at/amount_in use original density-side frames,wide exact normalization and complete
-original mass. Orient B/Opposite before shared rounding;difference original boundaries,never child
-mass. Check frame and both interval bounds before allocation,including zero sources. Two passes
-retain no integer array;explicit reference/Length types protect the admitted width derivation.
-Native weighted6/oracle1/docs4 pass with160 density/50 domain rows,including188/189-bit fractions
-and signed ties. Pure quantity queries do not certify paired correspondence,currentness or effects.
+The two-pass admitted query retains no integer array. It checks the actual density-side edge and
+both interval bounds before allocation,including zero sources. Explicit reference/Length field types
+protect the width derivation. Uniform and weighted source components have focused native/oracle/
+actual Design acceptance;held source math remains available after current-source refusal. This does
+not make SplitSeamSpan executable. The book owns current APIs/examples;historical counts stay below.
+
+## Physical correspondence and context prerequisites
+
+Pure allocation does not establish matching cuts. Illustrative lengths11000/10000 µm,ease1000 and
+A densities1 then3 allocate250 at A half and require B21/40. Equal normalized cuts would give500.
+Those are arithmetic example inputs,not measured geometry. Actual original lengths/correspondence,
+formula/Profile values,stops,lineage and complete transactional effects remain owned before use.
+
+BetweenNotches needs actual registry/ledger data. Both named orders are structurally legal;keep
+identities/authored stop order while locating the interval between actual original coordinates.
+Original projected coordinates must be distinct and inside the original side;current distinct IDs/
+edges alone do not prove a positive original interval. Profile notch dimensions do not locate stops.
+
+answers: "what do actual later-frame notch examples require before origin projection?"
+
+Native recovery confirms a valid late-fragment point whose original denominator needs64 bits and a
+unique current location with two original coordinates after split/reverse/merge. Relative direction
+is measured in the holder's frame;retain every coordinate/direction witness,not an absolute-direction
+filter. First full-reference equality probe failed101;coordinate assertions plus explicit relative
+direction assertions corrected the diagnostic scope. No original-coordinate implementation verdict
+is inferred from these input/forward witnesses.
+
+Eight split/merge cycles yield256 reference leaves from25 logical topology entries/17 journal
+records. The input meter is correct within its documented scope. Context construction must admit
+or avoid derived choice allocation before invoking full resolution;equal current locations never
+cancel an actual held-reference choice requirement. D305 separately records premature bounded
+forward recomposition:the complete current result fits63 bits while a temporary needs64. Repair
+that next,before implementing new bounded current/projection paths. Preserve genuine final refusals.
+
+Selected projection design:explicitly bounded current uniqueness first,then exact backward journal
+mapping into the named source-edge creation frame. Split/offset use exact affine maps;reverse toggles
+relative direction;merge joins retain all applicable predecessors. Equal coordinate/direction states
+may coalesce for coordinate work,without rewriting references or canceling current repair choices.
+Unknown/orphaned/arithmetic/ambiguous outcomes retain actual cause/source data. No nearest point.
+
+Starting with63-bit point fields,each inverse edit adds at most127 component bits (offset's two63-bit
+bounds plus addition dominate;merge lengths need30 each). A conservative63+127J component bound
+therefore precedes allocation;comparisons/notch interval arithmetic reserve their additional products.
+Admit journal/nested populations,candidates and actual integer workspace explicitly,without defaults.
+This is selected arithmetic/workspace design,not an implemented projection or a CPU/RSS certificate.
+Actual guarded full-source/effect adoption remains .4.4;broader paired/mutation proof stays acceptance.
+
+## Exact historical source and proof retrieval
+
+The [whole pre-context record](../history/stitchcad-devnotes-part658.md) preserves the native200-line/
+15352-byte decision,all earlier settled statements,dated implementation/probe counts and historical
+pending scopes byte-exact. This curation keeps standing contracts current without another map row
+or raised ceiling. Whole0501 acceptance lives in [657](../history/stitchcad-devnotes-part657.md).

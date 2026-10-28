@@ -1,10 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3 in docs/tasks/G1-SLICE-execution.md:recover actual semantic
-  notch/original-frame context through published landmark/ledger contracts before implementation.
-  Split safely into recovery/projection/context/query/acceptance leaves if needed. Preserve actual
-  original IDs,positions,ambiguous/lost causes and caller-selected resource bounds;no guessed inverse.
-  Investigate representation limits of late-frame projections before assuming they fit Param.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.numeric in docs/tasks/G1-SLICE-execution.md:immediate D305
+  complete-fraction point/range split/offset/merge repair before bounded notch projection.
+  Recovery0502 closed .4.3.1 with native4/oracle3 diagnostic checks;D305 remains open.
+  Split1/3 held1537228672809129301/4611686018427387902 should yield1/9223372036854775804;
+  bounded temporary64-bit offset falsely repairs though final63-bit result fits.
+- Verified context constraints:valid late notch needs64-bit original denominator;unique current
+  position has two original witnesses/relative directions;25 logical inputs yield256 resolution
+  leaves. .4.3.2.1 owns bounded current uniqueness,.2 wide inverse before .3 context/.4 quantities.
+  Keep choices/causes/directions;no guessed currentness or physical correspondence.
+- Whole0501 retained657;pre-context decision200L/15352B retained658 as strictly decoded wrapped
+  source because its536B answers line exceeds archive400B. Closed D302–D304 ledger retained659.
+  Receipts3/1/1 exact Git spans;independent658 decode/source/hash exact. Current decision158L,
+  book89/178/1566/2682;glossary0. Active history59/64,aggregate80/192;derive before packing.
 - Weighted source .4.2 closed0501 with focused actual Design1 acceptance,not full paired verification.
   Graph-only count5/limit4 original region refusal;replaced copy rejects current declarations while
   held source math remains available. Full paired/mutation acceptance or pre-push owns broad checks.

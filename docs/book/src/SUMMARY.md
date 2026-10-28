@@ -51,6 +51,7 @@
     - [Implemented execution](spec/command-execution.md)
     - [Builtin workflows and native evidence](spec/command-workflows.md)
     - [Paired seam split source binding](spec/command-seam-splits.md)
+    - [Original-frame notch context](spec/command-notch-context.md)
     - [Scopes and core authorization](spec/command-scopes.md)
     - [Operation limits and progress](spec/command-operation-control.md)
     - [Actual model resource accounting](spec/model-resource-accounting.md)

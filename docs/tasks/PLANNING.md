@@ -1175,26 +1175,25 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/stitchcad-de
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Uniform/root and retained .3 component closed0494. Weighted source .4.2 closes0501 with focused actual Design acceptance after0497–0500 recovery/rounding/admission/queries. Actual notch/frame context .4.3 next;paired matching/stops/lineage/effects/full acceptance remain owned.
+P1 prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Uniform/root and retained .3 component closed0494. Weighted source .4.2 closes0501 with focused actual Design acceptance after0497–0500 recovery/rounding/admission/queries. Recovery0502 owns D305 complete-fraction repair next,then notch/frame context;paired matching/stops/lineage/effects/full acceptance remain owned.
 Actual native structural_child_graph_acceptance_is_not_parent_ease_conservation passes:copied10+10 gives20 for parent10;independently authored5+5 also passes structural validation with DeferredToG2AndG3. Root:per-span fields/validation lack an original-parent relation. No split result is published;handler unavailable.
 Implement coupled parent-aware sources/quantization/provenance for explicit/formula/profile and distributions;standalone structural acceptance is not conservation proof.
 Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];root boundaries[0,1,0],signed symmetry. Native .2 root-query watch passes with original domains/direction;nonuniform/context/stops/lineage/effects and full paired acceptance remain pending.
 
 ## D302 — aggregate count mistaken for active archive pressure
 
-P2 fixed0490;owner G1-SLICE.6.5.3.2.retention. Recurrence of D284:0489 pointers/message inferred packing from64 aggregate workingMD.
-Reproduction:validated generation decoder plus independent physical/catalog census →generation1=21,generation2=43 including42 raw/1 catalog,total64,rc=0. Contract limits each64/aggregate192;record644 fits active44.
-Root:aggregate verify-retention readout was compared with a per-generation ceiling despite the public annex's explicit distinction. Impact:false blocker/unnecessary storage work;no archive packing/deletion occurred.
-Fix:tracked generation_pressure.py validates groups and independently counts raw/catalog files;3 scope controls pass. After644:21+44=65 aggregate,20 active slots;retention1098 passes0. Current pointers corrected;whole0489 retains prior exact claim. No cap increase,sealed rewrite or packing;resume product.
+Done0490;owner G1-SLICE.6.5.3.2.retention. [Whole cause/reproduction/verified fix](../history/stitchcad-devnotes-part659.md).
 
 ## D303 — repeated retained-source interval claims
 
-P1 fixed0492;owner G1-SLICE.6.5.3.2.3.2.3.2. Initial native duplicate_retained_interval_claims_cannot_spend_the_same_original_budget_twice →fails1/rc101 against first uncommitted0492 integration:two span IDs carry one identical source portion and the graph accepts it.
-Root:source identity/content coherence alone does not enforce disjoint allocation claims. Impact:later quantity queries could spend the same original budget twice. Fixed with ordered per-source/per-side admission and original consumer/range evidence;native43 passes including four overlap arrangements/touching/separate budgets. Partial coverage stays legal. No released/committed
-graph integration is affected.
+Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history/stitchcad-devnotes-part659.md).
 
 ## D304 — equal source content retained as multiple actual bodies
 
-P1 fixed0492;owner G1-SLICE.6.5.3.2.3.2.3.2. Initial native equal_independent_source_captures_are_folded_into_one_actual_canonical_body →fails1/rc101 on first uncommitted0492 integration:equal roots have separate backing objects;one child does not point at the graph's charged canonical source.
-Root:pool deduplicated identity/content but did not fold equal portion source pointers. Fixed after complete validation:fold equal same-id sources onto one actual shared body in first-consuming order;native pointer regression and logical meter7/limit6/snapshots14 pass within sewing43. Preserve original values/errors and charge each logical graph independently. No
-committed/released integration is affected.
+Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history/stitchcad-devnotes-part659.md).
+
+## D305 — premature bounded intermediates in reference recomputation
+
+P1 open;owner G1-SLICE.6.5.3.2.3.2.4.3.numeric,next before projection. Actual notch_context_recovery filter passes4/rc0,including this observed defect:valid held1537228672809129301/4611686018427387902 at split1/3 becomes Unresolved;complete result1/9223372036854775804 fits Param.
+Root:code census finds bounded differences/products before full ratios in point/range split/offset/merge paths. Split offset1/13835058055282163706 needs64 bits;the complete current parameter needs63. Impact:false arithmetic repairs block valid current references/notches.
+Repair complete-fraction recomposition and preserve genuine final-width refusals;independent fixtures/focused point/range watches required. Root recovery .4.3.1 records native/oracle evidence;no fix or full verification claimed yet.

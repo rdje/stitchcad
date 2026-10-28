@@ -1,0 +1,4 @@
+# case	current_n	current_d	original1_n	original1_d	original2_n	original2_d
+wide-split	1	9223372036854775807	1	18446744073709551614	-	-
+reversed-merge	1	2	1	2	1	1
+split-final-fits	1	9223372036854775804	1537228672809129301	4611686018427387902	1	3

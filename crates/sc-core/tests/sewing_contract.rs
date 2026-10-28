@@ -1477,6 +1477,290 @@ fn weighted_queries_preserve_actual_frames_and_bounds_even_for_zero_source() {
 }
 
 #[test]
+fn notch_context_recovery_accepts_a_late_anchor_with_an_unrepresentable_original_param() {
+    let mut f = fixture();
+    let definitions = [400, 401].map(|identity| match f.notch(identity, t(1, 4)) {
+        SewingLandmark::Notch(notch) => notch.definition().clone(),
+        SewingLandmark::Turn(_) => unreachable!("fixture constructs a notch"),
+    });
+    let source_edge = f.span().a.range.edge();
+    let fragments = f.ledger.split(&mut f.ids, source_edge, t(1, 2)).unwrap();
+    let row = include_str!("fixtures/notch_context_recovery.tsv")
+        .lines()
+        .find(|row| row.starts_with("wide-split\t"))
+        .unwrap()
+        .split('\t')
+        .collect::<Vec<_>>();
+    let current_n = row.get(1).unwrap().parse::<i64>().unwrap();
+    let current_d = row.get(2).unwrap().parse::<i64>().unwrap();
+    let original_d = row.get(4).unwrap().parse::<u128>().unwrap();
+    assert_eq!(original_d, 2 * u128::from(current_d.unsigned_abs()));
+    assert!(original_d > u128::from(i64::MAX.unsigned_abs()));
+    let marks = definitions
+        .into_iter()
+        .zip([t(current_n, current_d), t(1, 2)])
+        .map(|(mut definition, param)| {
+            definition.anchor = EdgeAnchor {
+                edge: fragments.first(),
+                param,
+            };
+            SewingLandmark::Notch(
+                Notch::new(definition, f.pieces.first().unwrap(), &f.ledger).unwrap(),
+            )
+        })
+        .collect::<Vec<_>>();
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(400),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(401),
+        },
+    ];
+    f.span_mut().ease = DeclaredEase {
+        amount: EaseAmount::Explicit(Length::from_micrometres(1).unwrap()),
+        distribution: EaseDistribution::BetweenNotches {
+            side: SeamSideId::A,
+            start: id(400),
+            end: id(401),
+        },
+    }
+    .into();
+    let graph = f.graph(&marks).unwrap();
+    assert_eq!(graph.ease_validation(), EaseValidation::DeferredToG2AndG3);
+    assert!(f.ledger.resolve_range(f.span().a.range).has_full_coverage());
+    let current = marks
+        .first()
+        .unwrap()
+        .resolve(&f.ledger)
+        .resolved()
+        .unwrap();
+    assert_eq!(current.edge(), fragments.first());
+    assert_eq!(current.param(), t(current_n, current_d));
+    // The public split contract gives original=current*half. This bounded arithmetic refusal is
+    // correct for Rational,not a failed current anchor or an implemented inverse projection result.
+    assert_eq!(
+        t(current_n, current_d)
+            .as_rational()
+            .checked_mul(t(1, 2).as_rational()),
+        Err(sc_units::UnitError::Overflow {
+            operation: "Rational::checked_mul"
+        })
+    );
+}
+
+#[test]
+fn notch_context_recovery_has_two_original_coordinates_for_one_unique_current_notch() {
+    use sc_core::ontology::SplitSide;
+    let mut f = fixture();
+    let definitions = [400, 401].map(|identity| match f.notch(identity, t(1, 4)) {
+        SewingLandmark::Notch(notch) => notch.definition().clone(),
+        SewingLandmark::Turn(_) => unreachable!("fixture constructs a notch"),
+    });
+    let source_edge = f.span().a.range.edge();
+    let fragments = f.ledger.split(&mut f.ids, source_edge, t(1, 2)).unwrap();
+    f.ledger.reverse(&mut f.ids, fragments.second()).unwrap();
+    // Equal positive lengths are declared protocol inputs here,not measured geometry evidence.
+    let declared = Length::from_micrometres(1).unwrap();
+    let merged = f
+        .ledger
+        .merge(
+            &mut f.ids,
+            fragments.first(),
+            declared,
+            fragments.second(),
+            declared,
+        )
+        .unwrap();
+    let marks = definitions
+        .into_iter()
+        .zip([t(1, 2), t(1, 4)])
+        .map(|(mut definition, param)| {
+            definition.anchor = EdgeAnchor {
+                edge: merged,
+                param,
+            };
+            SewingLandmark::Notch(
+                Notch::new(definition, f.pieces.first().unwrap(), &f.ledger).unwrap(),
+            )
+        })
+        .collect::<Vec<_>>();
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(400),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(401),
+        },
+    ];
+    f.span_mut().ease = DeclaredEase {
+        amount: EaseAmount::Explicit(Length::from_micrometres(1).unwrap()),
+        distribution: EaseDistribution::BetweenNotches {
+            side: SeamSideId::A,
+            start: id(400),
+            end: id(401),
+        },
+    }
+    .into();
+    let graph = f.graph(&marks).unwrap();
+    assert_eq!(graph.ease_validation(), EaseValidation::DeferredToG2AndG3);
+    assert!(f.ledger.resolve_range(f.span().a.range).has_full_coverage());
+    let current = marks
+        .first()
+        .unwrap()
+        .resolve(&f.ledger)
+        .resolved()
+        .unwrap();
+    assert_eq!(current.edge(), merged);
+    assert_eq!(current.param(), t(1, 2));
+    let row = include_str!("fixtures/notch_context_recovery.tsv")
+        .lines()
+        .find(|row| row.starts_with("reversed-merge\t"))
+        .unwrap()
+        .split('\t')
+        .collect::<Vec<_>>();
+    let first = t(
+        row.get(3).unwrap().parse().unwrap(),
+        row.get(4).unwrap().parse().unwrap(),
+    );
+    let second = t(
+        row.get(5).unwrap().parse().unwrap(),
+        row.get(6).unwrap().parse().unwrap(),
+    );
+    assert_ne!(first, second);
+    assert!(f.ledger.resolve(source_edge, first).resolved().is_none());
+    // Explicit First is only a forward witness for this counterexample;it is not a repair or a
+    // selection made on behalf of an original-source context consumer.
+    let first_forward = f
+        .ledger
+        .resolve(source_edge, first)
+        .choose(SplitSide::First)
+        .resolved()
+        .unwrap();
+    let second_forward = f.ledger.resolve(source_edge, second).resolved().unwrap();
+    assert_eq!(
+        (first_forward.edge(), first_forward.param()),
+        (current.edge(), current.param())
+    );
+    assert_eq!(
+        (second_forward.edge(), second_forward.param()),
+        (current.edge(), current.param())
+    );
+    // Directions are relative to the holder's original frame,not absolute location identities.
+    // The two source paths retain different directions;the newer notch uses the merged frame.
+    assert_eq!(first_forward.direction(), Direction::Original);
+    assert_eq!(second_forward.direction(), Direction::Reversed);
+    assert_eq!(current.direction(), Direction::Original);
+}
+
+#[test]
+fn notch_context_recovery_bounds_must_cover_derived_reference_choices_before_resolution() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::{
+        design::{charge_topology_resources, DesignResourceLimits, DesignResourceMeter},
+        ontology::{Resolution, ResolvedRef},
+    };
+    fn leaves(value: &Resolution, expected: ResolvedRef) -> usize {
+        match value {
+            Resolution::Resolved(actual) => {
+                assert_eq!(*actual, expected);
+                1
+            }
+            Resolution::SplitPoint { first, second } => {
+                leaves(first, expected) + leaves(second, expected)
+            }
+            Resolution::Unresolved(task) => {
+                panic!("unexpected orphan in this complete fixture: {task}")
+            }
+        }
+    }
+    let mut f = fixture();
+    let original = f.span().a.range.edge();
+    let mut current_edge = original;
+    let declared = Length::from_micrometres(1).unwrap();
+    for _ in 0..8 {
+        let parts = f.ledger.split(&mut f.ids, current_edge, t(1, 2)).unwrap();
+        current_edge = f
+            .ledger
+            .merge(
+                &mut f.ids,
+                parts.first(),
+                declared,
+                parts.second(),
+                declared,
+            )
+            .unwrap();
+    }
+    let limits = DesignResourceLimits::new(
+        NonZeroUsize::new(25).unwrap(),
+        NonZeroUsize::new(1).unwrap(),
+        NonZeroU64::new(1).unwrap(),
+    );
+    let mut meter = DesignResourceMeter::new(limits);
+    charge_topology_resources(&f.ledger, &mut meter).unwrap();
+    assert_eq!(meter.finish().unwrap().collection_entries(), 25);
+    assert_eq!(f.ledger.journal().len(), 17);
+    let expected = f.ledger.resolve(current_edge, t(1, 2)).resolved().unwrap();
+    let actual = f.ledger.resolve(original, t(1, 2));
+    assert!(actual.resolved().is_none()); // Choice requirements survive reunification.
+    assert_eq!(leaves(&actual, expected), 256);
+    // This is the public logical input census,not a promised bound on derived workspace or CPU.
+    // A new context must admit/reference-limit derived choices before calling this full resolver.
+}
+
+#[test]
+fn notch_context_recovery_exposes_a_premature_bounded_split_repair_for_a_valid_final_param() {
+    use sc_core::ontology::{OrphaningEdit, Resolution};
+    let mut f = fixture();
+    let source = f.span().a.range.edge();
+    let row = include_str!("fixtures/notch_context_recovery.tsv")
+        .lines()
+        .find(|row| row.starts_with("split-final-fits\t"))
+        .unwrap()
+        .split('\t')
+        .collect::<Vec<_>>();
+    let split = t(
+        row.get(5).unwrap().parse().unwrap(),
+        row.get(6).unwrap().parse().unwrap(),
+    );
+    let held = t(
+        row.get(3).unwrap().parse().unwrap(),
+        row.get(4).unwrap().parse().unwrap(),
+    );
+    let expected = t(
+        row.get(1).unwrap().parse().unwrap(),
+        row.get(2).unwrap().parse().unwrap(),
+    );
+    let complete = EdgeRange::new(source, split, Param::END)
+        .unwrap()
+        .relative_progress(held)
+        .unwrap();
+    assert_eq!(complete, expected.as_rational());
+    f.ledger.split(&mut f.ids, source, split).unwrap();
+    let actual = f.ledger.resolve(source, held);
+    // Recovery diagnostic of the present defect,not desired acceptance. The immediate numeric
+    // repair leaf must replace this assertion with the correctly resolved second-fragment value.
+    let Resolution::Unresolved(task) = actual else {
+        panic!("expected current premature-width defect")
+    };
+    assert_eq!(task.reference(), source);
+    assert_eq!(task.param(), held);
+    assert!(matches!(
+        task.orphaned_by(),
+        OrphaningEdit::RecomputationFailed {
+            cause: sc_units::UnitError::Overflow {
+                operation: "Rational::checked_sub"
+            },
+            ..
+        }
+    ));
+}
+
+#[test]
 fn between_notches_requires_two_distinct_noncoincident_notch_stops_on_its_side() {
     let mut f = fixture();
     let a = f.notch(400, t(1, 4));
