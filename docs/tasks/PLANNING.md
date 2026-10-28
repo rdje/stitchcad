@@ -1121,8 +1121,8 @@ Repair canonical API/variant/local declarations without weakening C1 or adding b
 Secondary P3: baseline and current advisory awk-to-head15 pipeline prints a pipe-close I/O diagnostic;
 source tail pinpoints it, without changing C1's132 rows. Repair under the same owner after C1 closure.
 Current feature may proceed with this explicit baseline gap; no full glossary/CI pass is claimed.
-0479 command43/0480 size-set65/0481 formula25/0482 fixture7 rows resolved;current140→0,0 new.
-Current glossary census passes0 without exemptions;P3 advisory investigation/full glossary acceptance remain owned.
+0479–0482 resolve all140 pairs with0 new;0483 P3 actual ignored-PIPE write error repaired after C1 closure.
+Normal awk141/ignored-signal diagnostic both fixed;new focused controls2 pass/prior producer expected-red;full glossary acceptance remains owned.
 
 Verified D251/D252 scope corrections retained whole in [part498](../history/window21.md#stitchcad-devnotes-part498md).
 

@@ -435,7 +435,10 @@ total_spans=$(count_lines "$SPANS")
 matched=$(awk -F'\t' 'FILENAME == ARGV[1] { t[$1] = 1; next } ($1 in t)' "$TERMS_LC" "$SPANS" | grep -c .)
 echo "  bolded spans: $total_spans · matching a glossary term: $matched · not matching: $((total_spans - matched))"
 echo "  a non-match is emphasis or a chapter-local label, not a defect — read them, do not automate them:"
-awk -F'\t' 'FILENAME == ARGV[1] { t[$1] = 1; next } !($1 in t) { printf "    · %s\n", $2 }' "$TERMS_LC" "$SPANS" | head -15
+# Bound the sample inside awk while consuming the complete input. A downstream head would close
+# early: default SIGPIPE silently terminates awk, while inherited ignored SIGPIPE prints a write error.
+awk -F'\t' 'FILENAME == ARGV[1] { t[$1] = 1; next }
+  !($1 in t) && shown < 15 { printf "    · %s\n", $2; shown++ }' "$TERMS_LC" "$SPANS"
 
 echo "glossary census: $terms_total terms / $parts_total parts / $(count_lines "$GLOSSARY_TOKENS") tokens / $fails failure(s)"
 [ "$fails" -eq 0 ] || exit 1

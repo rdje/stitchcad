@@ -113,3 +113,13 @@ Declare actual authored text by its fixture meaning:body/garment/Ease binding to
 coordinate label and parameter tokens. Quote exact native spellings;do not rename them or exempt a
 whole family. The last seven rows clear,140→0 overall,and the unchanged census passes every rule.
 Advisory investigation/full glossary probes remain separate acceptance,not inferred from a green census.
+
+## Quiet bounded advisory0483
+
+answers: "why can the same advisory pipeline be quiet in one process and print write errors in another?"
+
+The previous awk-to-head display closes the pipe early. Actual large copied-root checks show default
+SIGPIPE terminates awk141 silently;inherited ignored SIGPIPE instead prints a write error while the
+census still exits0. Bound output inside awk and consume all input. Actual full counts and first15
+samples stay byte-equal,with zero stderr in both signal cases. Independent full-population regression
+controls pass and reject the prior producer under ignored PIPE;full glossary acceptance remains separate.

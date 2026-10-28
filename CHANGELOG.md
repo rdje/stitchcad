@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0482 — close current glossary declaration coverage
+## STITCHCAD-G1-0483 — keep glossary advisory output bounded and quiet
 
-- Declare seven exact source/model accounting fixture strings by actual native meaning;no product defaults,new fields or exemptions.
-- Current glossary census passes310 terms/9 parts/158 owned tokens/0 failures. All140 original token/use pairs resolved across four slices without Rust/API/census changes.
-- Final book87 chapters/161 API rows/1555 source/2639 rendered links passes. Whole0481 retained636;P3 advisory investigation and full glossary acceptance remain owned.
+- Reproduce the actual advisory pipe-close defect:default SIGPIPE silently aborts awk;ignored SIGPIPE prints a write error despite census success.
+- Bound samples inside awk while consuming all input. Both signal cases preserve full counts/exact first15 samples without stderr;independent full-population probes pass2 and reject the prior producer as expected.
+- Real census310/9/158/0 and focused book87/161/1555/2639 pass. Whole0482 retained637;full glossary acceptance remains pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

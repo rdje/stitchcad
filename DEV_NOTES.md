@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact resource fixture vocabulary
+## _(2026-10-28 UTC)_ — quiet bounded glossary advisory
 
-0482 .6.vocabulary.4 checks actual native fixture spellings for source body/garment/Ease binding tokens,axis name,label coordinate and model parameter tokens. Declare these exact authored strings with their local owner/meaning,without product defaults or new schema fields.
-Exact census delta7→0 resolves the last seven pairs with0 new. Across four slices140 original pairs clear;all glossary structure/ownership/reference/index/coverage rules now pass:310 terms/9 parts/158 owned tokens. Rust/API/census policy remain unchanged.
-Final mdbook/publication87 chapters/161 API rows/1555 source/2639 rendered links pass0. Full glossary acceptance remains owned;next investigate recorded P3 advisory pipe diagnostic after C1 closure,without assuming current silence proves its repair.
-Promotion:indexed machine-token decision;whole0481 scope/lesson/changelog636 verifies3 Git spans. Retention1090/2462129 residentB passes0. LIVE now records D250 C1 clear/advisory+probes pending;G1still6/18. README unchanged;full PNT continues.
-[Whole0481 formula API lesson](docs/history/stitchcad-devnotes-part636.md) retains exact32→7 delta and runtime/static boundaries.
+0483 .vocabulary.advisory reproduces actual P3 with4096 extra emphasis spans:normal signal silently aborts awk141/head0;ignored PIPE prints write error while census exits0. Default-only first attempt was quiet;historical0345 logs are absent,so fresh actual checks supply evidence.
+Limit printed nonmatches inside awk while consuming the full input. Counts/first15 sample stdout remain byte-equal,zero stderr in both signal cases,and actual awk completes0. A regression first assumed added spans sort first;existing quote/comma emphasis disproved that assumption.
+Replace that test assumption with an independent complete ASCII-folded term/span/count/sample oracle. Actual selected A1 arms2 pass;prior Git producer gives1 expected-red/1 pass. Real census310/9/158/0 and bash syntax pass;book87/161/1555/2639 passes0. Full glossary suite follows.
+Promotion:indexed machine-token decision;whole0482 scope/lesson/changelog637 verifies3 Git spans. Retention1091/2466014 residentB passes0. LIVE D250 C1/advisory repaired,full probes pending;G1still6/18. README unchanged;next .vocabulary.acceptance.
+[Whole0482 C1 closure lesson](docs/history/stitchcad-devnotes-part637.md) retains all140 repaired pairs and exact fixture meanings.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

@@ -175,6 +175,68 @@ D218	python3	docs/book/src/annexes/ledger-fixtures.md
 D218	sources	docs/book/src/build-and-checks.md
 DECLARATIONS
 
+# ---------------------------------------------------------------- A1: bounded sample, complete counts, quiet signals
+D="$WORK/advisory"; mkroot "$D"
+python3 -I -B - "$D/docs/book/src/spec/ontology.md" <<'ADVISORY_INPUT'
+from pathlib import Path
+import sys
+with Path(sys.argv[1]).open('a') as stream:
+    for index in range(4096):
+        stream.write(f'\n**0000 advisory emphasis {index:04d} ' + 'x' * 96 + '**\n')
+ADVISORY_INPUT
+advisory_input_rc=$?
+for disposition in default ignored; do
+  detail="$(python3 -I -B - "$CENSUS" "$D" "$disposition" "$advisory_input_rc" <<'ADVISORY_CHECK'
+from pathlib import Path
+import os
+import re
+import string
+import subprocess
+import sys
+census, root, disposition, input_rc = sys.argv[1:]
+command = ['bash', census] if disposition == 'default' else [
+    'bash', '-c', 'trap "" PIPE; bash "$1"', 'advisory-signal-control', census]
+run = subprocess.run(command, env={**os.environ, 'GLOSSARY_ROOT': root}, capture_output=True, text=True)
+samples = [line for line in run.stdout.splitlines() if line.startswith('    · ')]
+# Independent full-population oracle: retain existing emphasis that sorts before the added spans.
+book = Path(root) / 'docs/book/src'
+fold_ascii = str.maketrans(string.ascii_uppercase, string.ascii_lowercase)
+terms = set()
+for part in (book / 'spec/glossary').glob('*.md'):
+    for line in part.read_text().splitlines():
+        if not line.startswith('|'):
+            continue
+        term = line.split('|')[1].strip()
+        if term == 'Term' or re.fullmatch(r':?-+:?', term):
+            continue
+        terms.add(term.translate(fold_ascii).removesuffix(' ⚠').replace('`', ''))
+spans = set()
+for chapter in book.rglob('*.md'):
+    if chapter == book / 'spec/glossary.md' or (book / 'spec/glossary') in chapter.parents:
+        continue
+    for line in chapter.read_text().splitlines():
+        for span in re.findall(r'\*\*([^*]+)\*\*', line):
+            spans.add((span.translate(fold_ascii), span))
+ordered = sorted(spans, key=lambda pair: ('\t'.join(pair)).encode('utf-8'))
+nonmatching = [original for folded, original in ordered if folded not in terms]
+expected = ['    · ' + span for span in nonmatching[:15]]
+counts = re.search(r'bolded spans: ([0-9]+) · matching a glossary term: ([0-9]+) · not matching: ([0-9]+)', run.stdout)
+expected_counts = (len(spans), len(spans) - len(nonmatching), len(nonmatching))
+actual_counts = tuple(map(int, counts.groups())) if counts else None
+if input_rc != '0' or run.returncode != 0 or run.stderr or samples != expected or actual_counts != expected_counts or '/ 0 failure(s)' not in run.stdout:
+    print(f'REFUSED — advisory {disposition}: input={input_rc}, rc={run.returncode}, '
+          f'samples={len(samples)}, stderr={run.stderr!r}')
+    sys.exit(1)
+print('4096 extra spans; independent full counts/first15 samples, zero stderr and census rc=0')
+ADVISORY_CHECK
+)"; advisory_rc=$?
+  if [ "$advisory_rc" -eq 0 ]; then
+    ok "A1-$disposition" "$detail"
+  else
+    bad "A1-$disposition" "actual large advisory population failed its output/signal assertion" "$detail"
+  fi
+done
+
 # ---------------------------------------------------------------- ARITY (S1)
 D="$WORK/arity"; mkroot "$D"
 printf '| extra term | meaning | object | also called | token | a sixth cell |\n' \

@@ -422,6 +422,10 @@ the chapter that uses it, or exempted with a written reason. What it cannot judg
 definition is *correct*; that is the domain review, and the seat that performs it is **vacant**
 ([governance §8.1](../governance.md)).
 
+The bold-span advisory reports complete matching/nonmatching counts and at most the first15
+nonmatching samples in its sorted order. It does not classify emphasis as vocabulary or fail a
+chapter for emphasis. Large populations retain the same bounded sample without write-error noise.
+
 ## Verification status of the synonyms
 
 - **Object names, tokens and clause references** — *exact*: they are quoted from the specification

@@ -10,11 +10,11 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0482
+## Current leaf acceptance —0483
 
-- [x] ROOT CAUSE: Python fixture/source review →seven source/model-local strings used without declaration rows rc=0;they denote authored test text,not defaults.
-- [x] ADDRESSED: bash docs/tasks/artifacts/glossary/run_glossary_census.sh →310 terms/9 parts/158 owned tokens/0 failures rc=0;Python delta7→0/0 new rows rc=0.
-- [x] NO REGRESSION: mdbook build/publication →87 chapters/161 API rows/1555 source/2639 rendered links rc=0;code/census unchanged.
+- [x] ROOT CAUSE: actual copied-root census4096 extra spans →awk141/head0 normally;ignored PIPE prints write error while census returns0,Python driver rc=0.
+- [x] ADDRESSED: actual focused A1 regression arm →2 pass/0 fail rc=0;independent full-population counts/first15 agree,zero stderr for both signal cases.
+- [x] NO REGRESSION: prior producer →1 expected-red/1 pass,driver rc=0;real census0 failures,book87/161/1555/2639 rc=0;sample stdout byte-equal.
 
 ## Goal
 
@@ -60,7 +60,6 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Goal: the architecture slice runs on native and in a browser, with the command bus and
   persistence as the only mutation path.
   Children: `.1`, `.2`, `.3a`/`.3b`/`.3c`, `.4` … `.16` (18 leaves; `.3` was decomposed `2026-09-30`)
-
 - ID: `G1-SLICE.1`
   Status: `done`
   Goal:0001 workspace/G0.18 closure; [whole scope/proof](../history/stitchcad-devnotes-part625.md).
@@ -77,14 +76,12 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Status: `done`
   Goal:closed structural ontology scope; [whole proof](../history/window21.md#stitchcad-devnotes-part531md).
   Children: `.3c.1`, `.3c.2`, `.3c.3`, `.3c.4`; geometric proof remains G2.
-
 - ID: `G1-SLICE.3c.1`
   Status: `done`
   Goal: Structural Piece contract complete; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part485md).
 - ID: `G1-SLICE.3c.1a`
   Status: `done`
   Goal:original D56 pair-member scope; [whole proof](../history/window21.md#stitchcad-devnotes-part534md).
-
 - ID: `G1-SLICE.3c.2`
   Status: `done`
   Goal:original sewing scope; [whole proof](../history/stitchcad-devnotes-part538.md).
@@ -643,17 +640,20 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0481 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part636.md).
 - ID: `G1-SLICE.6.vocabulary.4`
   Status: `done`
-  Goal: actual source/model accounting fixture-local names;all current C1 declaration rows resolved.
-  - [x] REPRODUCE / ISSUE: bash docs/tasks/artifacts/glossary/run_glossary_census.sh →7 rows rc=1 before;source S/a/b/e/gg and model a/bb lack declaration rows.
-  - [x] ROOT CAUSE: Python current native fixture review →authored body/garment/Ease tokens,axis name,label spelling and parameter tokens match actual source spellings rc=0.
-  - [x] FIX: declare each fixture-local string by actual meaning and owner;distinguish text from product defaults/new fields;no Rust/API/census changes.
-  - [x] ADDRESSED: same census →310 terms/9 parts/158 owned tokens/0 failures rc=0;Python delta →7 resolved/0 new rc=0,all140 original rows cleared.
-  - [x] NO REGRESSION: mdbook build plus book_publication.py main_inputs/check →87 chapters/161 API rows/1555 source/2639 rendered links rc=0;full glossary probes remain owned.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/indexed decision/index/LIVE updated;README unchanged. transition_receipts.py --record part636 →3 exact Git spans rc=0;history_archive.sh verify-retention →1090/2462129 residentB rc=0.
-  Commit: STITCHCAD-G1-0482;next .vocabulary.advisory then full glossary acceptance.
+  Goal:0482 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part637.md).
 - ID: `G1-SLICE.6.vocabulary.advisory`
+  Status: `done`
+  Goal: reproduce/fix D250 P3 early-close advisory pipeline after C1 closure;preserve bounded display.
+  - [x] REPRODUCE / ISSUE: Python actual census/copied4096-span root →normal signal quiet;ignored PIPE yields awk write error/census0,driver rc=0;earlier default-only reproduction did not show stderr.
+  - [x] ROOT CAUSE: same actual producer with status-only instrumentation →awk141/head0 normally;ignored signal turns early pipe close into write error,rc=0;historical0345 local logs are absent,not reused as new evidence.
+  - [x] FIX: cap printed nonmatches inside awk while consuming all input;retain first15/full counts. Add actual default/ignored-signal probes with independent full emphasis/term population oracle.
+  - [x] ADDRESSED: Python selected actual A1 probe arm →2 pass/0 fail rc=0;4096 extra spans,independent exact counts/sample,zero stderr. Actual completed awk now0;full stdout byte-equal to old default case,rc=0.
+  - [x] NO REGRESSION: same actual new probes against prior Git producer →1 pass/1 expected-red,driver rc=0;real census310/9/158/0 failures rc=0;bash -n and book_publication.py →87/161/1555/2639 rc=0.
+  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D250/indexed decision/index/LIVE/book updated;README unchanged. transition_receipts.py --record part637 →3 exact Git spans rc=0;history_archive.sh verify-retention →1091/2466014 residentB rc=0.
+  Commit: STITCHCAD-G1-0483;full glossary suite remains .vocabulary.acceptance.
+- ID: `G1-SLICE.6.vocabulary.acceptance`
   Status: `pending`
-  Goal: after C1 closure,reproduce recorded P3 advisory awk/head pipe-close diagnostic;repair if live.
+  Goal: after declaration/advisory implementation,run full current glossary probes with actual D250 declaration-removal controls;close D250 only on scoped evidence.
 - ID: `G1-SLICE.6.5`
   Status: `in_progress`
   Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.
