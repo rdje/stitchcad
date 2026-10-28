@@ -1510,6 +1510,14 @@ fn project_source_notch<'a>(
         .resolve_unique_point(anchor.edge, anchor.param, input)
         .resolved()
         .unwrap();
+    let coverage = ledger
+        .resolve_range_coverage(
+            source.side(*side).range,
+            sc_core::ontology::RangeCoverageLimits::new(input, NonZeroUsize::new(32).unwrap()),
+        )
+        .unwrap();
+    assert!(coverage.has_full_coverage());
+    assert_eq!(coverage.held(), source.side(*side).range);
     let limits = OriginalPointLimits::new(
         input,
         NonZeroUsize::new(candidates).unwrap(),

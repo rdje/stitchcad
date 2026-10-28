@@ -92,9 +92,9 @@ pub use topology::{
     OpenRepair, OriginalCoordinate, OriginalPointAdmission, OriginalPointAdmissionError,
     OriginalPointCandidate, OriginalPointLimits, OriginalPointProjection,
     OriginalPointProjectionError, OriginalPointProjectionIssue, OrphaningEdit,
-    PointJournalCollection, Registration, ReleaseReadiness, RepairTask, Resolution, ResolvedRef,
-    SplitFragments, SplitSide, TopologyEdit, UniquePointLimits, UniquePointOutcome,
-    UniquePointResolution, MAX_EDGES_PER_OPERATION,
+    PointJournalAdmissionIssue, PointJournalCollection, Registration, ReleaseReadiness, RepairTask,
+    Resolution, ResolvedRef, SplitFragments, SplitSide, TopologyEdit, UniquePointLimits,
+    UniquePointOutcome, UniquePointResolution, MAX_EDGES_PER_OPERATION,
 };
 
 pub use piece::{
@@ -112,8 +112,9 @@ pub use material::{
 pub use material_inventory::{MaterialInventory, MaterialInventoryError, PieceMaterialView};
 
 pub use range::{
-    EdgeRange, RangeError, RangeIssue, RangePortion, RangeProgressError, RangeRepairTask,
-    RangeResolution, RangeSplitError, ResolvedRange,
+    EdgeRange, RangeCoverage, RangeCoverageError, RangeCoverageIssue, RangeCoverageLimits,
+    RangeError, RangeIssue, RangePortion, RangeProgressError, RangeRepairTask, RangeResolution,
+    RangeSplitError, ResolvedRange,
 };
 
 pub use notch::{

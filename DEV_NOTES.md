@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual Notch/source primitive acceptance
+## _(2026-10-28 UTC)_ — bounded complete interval coverage
 
-0509 joins implemented bounded current/inverse helpers to actual Notch definitions,validated SewingGraphs and retained original sources. Derive side/named IDs/goal edge from actual declaration;read actual anchors and full stop membership. No supplied coordinate/geometry provider substitutes for those objects.
-Late-fragment mark retains64-bit original and companion quarter;reverse/merge keeps two original/direction witnesses;actual8-cycle marks project within2 states despite256 old reference leaves/25 logical inputs. Original span/copy/stops/declaration and definitions/ledger remain intact.
-Native recovery4/scoped Clippy/fmt/oracle3 pass0. Profile obligations stay G4/ease stays G2/G3;Uniform-only source query still returns original BetweenNotches context requirement. Primitive .2 closes with focused checks;semantic source context/quantity and command/physical/paired acceptance stay owned.
-[Whole0508 retention](docs/history/stitchcad-devnotes-part666.md) preserves exact source/packing/routing proofs,3 Git spans. Book links now describe implemented primitives/repaired D305. LIVE/README unchanged,G1 6/18;actual semantic source context .3 next. Promotion declined for routine existing-contract acceptance.
+0510 streams shared exact range mapping without endpoint choice trees. Explicit complete journal/nested and peak portion budgets guard each append;unknown/deleted/gapped/numeric repairs retain held/edit/cause/order/direction. Peak counts queues+active+output;whole8-cycle2 portions needs3 slots.
+Draft reverse traversal changed first arithmetic failure;targeted native failed101. Original forward arithmetic plus iterator-only successful output reversal fixes precedence and preserves per-input rollback. Precise PointJournalAdmissionIssue fixes initial256B Clippy error;no lint waiver or indexing.
+Native coverage6/range20/current6/actual Notch4/doc1/scoped Clippy/fmt pass0. Fraction14 plus dual-failure control pass0. Upper8-cycle interval fits2 slots;old endpoint256 leaves stays. Actual Notch/Graph source coverage joins original point evidence;whole source/ownership/currentness remains next.
+[Whole0509 acceptance](docs/history/stitchcad-devnotes-part667.md) retains3 exact Git spans. Book89/195/1567/2688,glossary0,retention1121 pass. LIVE/README unchanged,G1 6/18;actual source dependency admission .3.2 next;context/quantities/paired acceptance remain owned. Promotion declined:existing admission contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

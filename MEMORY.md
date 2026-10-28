@@ -1,13 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.3.3 in docs/tasks/G1-SLICE-execution.md:actual semantic-notch/
-  original-source context. Recover actual complete source/registry/ledger/copy/piece ownership and
-  source-currentness interfaces before safe implementation children. Do not fake providers or infer
-  full readiness from numeric projection. .4 owns quantities;full paired effects/acceptance later.
-- Primitive .2 closes0509 with focused actual validated Notch/Graph/retained-source acceptance4,
-  scoped lint/fmt/oracle3 pass. Real stops400/401/source301/copy200/full metadata preserved;wide
-  original/ambiguous directions/8-cycle coalescing join actual anchors. Uniform-only API still
-  requires actual BetweenNotches context;profile G4/ease G2/G3 deferred. Whole0508 in666/3 spans.
+- Next G1-SLICE.6.5.3.2.3.2.4.3.3.2 in docs/tasks/G1-SLICE-execution.md:actual complete source/
+  plan/Piece/landmark dependency admission before indexes or derived queries. Then .3 original-frame
+  context and .acceptance;quantities .4 and paired effects/full acceptance later. No fake providers.
+- Bounded interval prerequisite .3.1 closes0510:RangeCoverageLimits explicit journal/nested/peak
+  portion budgets;resolve_range_coverage streams shared exact mapping without endpoint choice trees.
+  Original held range/positive gaps/numeric causes/direction/order survive. Input error is precise
+  PointJournalAdmissionIssue;bounded current API outcomes unchanged. Peak includes queues+active+
+  output:whole8-cycle2 portions needs3 slots,upper interval1 needs2;old lower endpoint256 leaves stays.
+- Draft reversed emission changed first numeric failure;targeted test failed101,then original
+  evaluation plus iterator-only successful output reversal fixed it. Native6+range20+current6/
+  actual Notch recovery4/doc1/scoped lint/fmt/oracle14+dual-failure control pass0. Book89/195/1567/2688.
+  Whole0509 retained667/3 exact Git spans. Full source ownership/currentness/context remains next.
+- Primitive .2 closed0509 with focused actual Notch/Graph/retained-source acceptance4;side/named IDs/
+  full stops/declaration,wide original and ambiguous directions preserved. Profile G4/ease G2/G3
+  deferred;Uniform-only source API still reports actual BetweenNotches context. Whole0508 in666.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

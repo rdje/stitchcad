@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0509 — close focused actual Notch/source primitive acceptance
+## STITCHCAD-G1-0510 — bound complete interval coverage before source context
 
-- Actual validated Notch/Graph and retained source data drive bounded current/inverse queries. Wide64-bit original,ambiguous origins/directions and8-cycle coalescing preserve full original metadata and actual definitions/ledger.
-- Native recovery4/scoped Clippy/fmt/oracle3 pass. Profile/ease obligations remain deferred;old Uniform-only API retains actual BetweenNotches source/side/IDs refusal. No fabricated position/geometry or notch quantity availability.
-- Whole0508 retained666/three exact Git spans;book/current pointer sync. Primitive component closes with focused verification;LIVE/README unchanged,G1 6/18. Actual semantic context .3 next;quantity/paired effects/full acceptance remain owned.
+- Shared streamed range mapping preserves exact positive intervals/repairs/original numeric precedence without endpoint choice trees. Explicit complete input and peak portion admission;fixed actual held/operation refusal,precise PointJournalAdmissionIssue;no partial quota result.
+- Native coverage6/range20/current6/actual Notch4/doc1/scoped Clippy/fmt and Fraction14+dual-failure control pass. Eight cycles:whole2 portions/peak3,upper1/peak2;old endpoint256 leaves persists. Draft reverse-order defect reproduced/fixed before commit.
+- Whole0509 retained667/three exact Git spans;book89/195/1567/2688/glossary0/retention1121 pass. LIVE/README unchanged,G1 6/18. Actual complete source dependency admission .3.2 next;context/quantities/paired effects/full acceptance retain owners.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

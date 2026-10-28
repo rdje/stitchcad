@@ -1,7 +1,7 @@
 # Original-frame notch context
 
 Notch-bounded allocation needs the actual semantic landmarks and topology journal,not guessed
-parameters or physical notch dimensions. Bounded current uniqueness,original-point workspace
+parameters or physical notch dimensions. Bounded current uniqueness,whole-interval coverage,original-point workspace
 admission and exact inverse coordinates are implemented. Semantic notch quantity contexts remain pending;the [weighted source component](command-seam-splits.md#query-exact-original-weighted-quantities)
 is already implemented with focused checks.
 
@@ -10,6 +10,12 @@ is already implemented with focused checks.
 | `Param` | Bounded exact position in an edge's own original frame |
 | `Rational` | Signed64-bit reference fraction,distinct from a private wide numeric workspace |
 | `IdentityLedger` | Actual typed topology journal and reference resolver |
+| `RangeCoverageLimits` | Explicit journal/nested input and peak interval-portion budgets |
+| `RangeCoverage` | Complete ordered positive-interval evidence,without endpoint choice trees |
+| `RangeCoverageError` | Original held range and input/derived collection admission refusal |
+| `RangeCoverageIssue` | Actual whole-input,peak portion or count-overflow refusal |
+| `PointJournalAdmissionIssue` | Complete journal/nested input refusal,before reference mapping |
+| `resolve_range_coverage` | Query bounded interval coverage separately from endpoint uniqueness |
 | `UniquePointLimits` | Explicit positive journal/nested input budgets,without defaults |
 | `OriginalPointLimits` | Explicit current-input,candidate and integer workspace limits |
 | `OriginalPointAdmission` | Borrowed actual current point,original source creation and reserved widths |
@@ -99,6 +105,68 @@ most two offset candidates;the journal enforces positive nonoverlapping offset i
 exact arithmetic,relative direction,split branches and concrete repair causes. The existing full
 resolver consumes this step and still follows both branches into its public choice tree. This
 shared step supplies both consumers;it does not bound the full resolver.
+
+## Query bounded whole-interval coverage
+
+Actual source validation also needs complete material intervals. Two unique endpoints cannot prove
+that their interior survives,and a unique notch point cannot prove that its whole source range is
+owned by the selected Piece. The implemented coverage query folds every positive-length portion
+through the journal using the same exact mapping as the legacy range resolver. It performs neither
+endpoint point query and builds no endpoint choice tree. Source-context ownership and endpoint
+checks must still be performed separately;this query does not replace complete source validation.
+
+Choose the complete journal/nested input limits and a positive peak portion limit explicitly. Input
+admission is shared with bounded current uniqueness and finishes before source lookup or collection
+allocation. It includes unrelated journal entries,declared edges and offset fragments. The distinct
+journal-admission issue contains only population refusals;it cannot contain a mapped point choice
+or numeric repair. The existing current-point outcome retains its original public variants.
+
+The peak budget counts both fold queues and the active input. Before each output append,the query
+checks that population plus one requested portion. Even an identity fold needs two slots while
+emitting its replacement. A whole range split into two portions needs three;two final portions do
+not imply that a two-slot peak budget can construct them. An unknown source returns one explicit
+coverage repair after input admission. A quota refusal retains the actual held range,operation,
+prior retained count,one requested output and selected limit,and returns no partial coverage.
+These are logical populations;they do not certify allocator overhead,RSS or CPU time.
+
+Outputs remain in the held range's traversal order,including reversed offsets and their gaps.
+Deletion,unmapped positive intervals and genuine reference-width failures keep their actual repair
+causes. If arithmetic fails after one input has already emitted valid fragments or gaps,all output
+from that input is discarded before retaining its complete repair. Earlier independent input
+portions are preserved. Arithmetic keeps its original forward evaluation order even when output
+traversal is reversed,so a dual-failure split retains the original first division cause. Native and
+independent Fraction controls watch this precedence. No sampling,rounding,reference reassignment or
+registration choice occurs.
+
+```rust
+use core::num::NonZeroUsize;
+use sc_core::ontology::{DeterministicIdGenerator, EdgeRange, IdentityLedger, Param,
+    RangeCoverageLimits, Rational, UniquePointLimits, UniquePointOutcome};
+let mut ledger = IdentityLedger::new();
+let mut ids = DeterministicIdGenerator::new();
+let source = ledger.declare_edges(&mut ids, 1)?.remove(0);
+let half = Param::new(Rational::new(1, 2)?)?;
+ledger.split(&mut ids, source, half)?;
+let one = NonZeroUsize::new(1).ok_or("positive")?;
+let two = NonZeroUsize::new(2).ok_or("positive")?;
+let input = UniquePointLimits::new(two, one);
+let held = EdgeRange::new(source, half, Param::END)?;
+let coverage = ledger.resolve_range_coverage(held, RangeCoverageLimits::new(input, two))?;
+assert!(coverage.has_full_coverage());
+assert_eq!(coverage.portions().len(), 1);
+let start = ledger.resolve_unique_point(source, half, input);
+assert!(matches!(start.outcome(), UniquePointOutcome::SplitChoice { .. }));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+After eight aligned split/merge cycles,the native upper-half range still has one coverage portion
+under a two-slot peak limit;the whole range has two portions under three slots. Its old held lower
+endpoint still has256 leaves in the legacy choice tree. No choice is canceled by coverage success.
+Native checks exercise actual limits,complete unknown/deleted/gapped/numeric evidence,traversal and
+per-input arithmetic rollback. The14 independent Fraction recomposition rows also feed this query,
+including nine valid complete reductions and five genuine final-width refusals. Actual Notch/Graph/
+retained-source fixtures use bounded coverage alongside their current/original point queries.
+Whole source-context admission and notch quantities retain their next implementation owners.
 
 ## Query bounded current uniqueness
 

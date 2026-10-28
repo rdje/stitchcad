@@ -23,6 +23,43 @@ pub struct UniquePointLimits {
     nested_items: NonZeroUsize,
 }
 impl UniquePointLimits {
+    // Complete input admission shared with interval coverage;no source lookup or mapping here.
+    pub(crate) fn admit_journal(
+        self,
+        ledger: &IdentityLedger,
+    ) -> Result<(), PointJournalAdmissionIssue> {
+        let journal = ledger.journal();
+        if journal.len() > self.journal_entries.get() {
+            return Err(PointJournalAdmissionIssue::JournalEntries {
+                required: journal.len(),
+                limit: self.journal_entries.get(),
+            });
+        }
+        let mut consumed = 0usize;
+        for entry in journal {
+            if let Some((collection, requested)) = nested_population(entry.edit()) {
+                let Some(total) = consumed.checked_add(requested) else {
+                    return Err(PointJournalAdmissionIssue::CountOverflow {
+                        operation: entry.operation(),
+                        collection,
+                        consumed,
+                        requested,
+                    });
+                };
+                if total > self.nested_items.get() {
+                    return Err(PointJournalAdmissionIssue::NestedItems {
+                        operation: entry.operation(),
+                        collection,
+                        consumed,
+                        requested,
+                        limit: self.nested_items.get(),
+                    });
+                }
+                consumed = total;
+            }
+        }
+        Ok(())
+    }
     /// Choose both limits explicitly,including a positive nested budget for an empty journal.
     #[must_use]
     pub const fn new(journal_entries: NonZeroUsize, nested_items: NonZeroUsize) -> Self {
@@ -50,6 +87,76 @@ pub enum PointJournalCollection {
     DeclaredEdges,
     /// Source intervals and edge identities recorded by an offset.
     OffsetFragments,
+}
+
+/// Complete journal admission refusal,before source lookup or point/interval mapping.
+/// This fixed evidence excludes point choices and repair candidates,which are mapping outcomes.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PointJournalAdmissionIssue {
+    /// Complete journal population exceeds the caller's limit,before any nested processing.
+    JournalEntries {
+        /// Complete population.
+        required: usize,
+        /// Selected limit.
+        limit: usize,
+    },
+    /// Actual variable-length collection would exceed the aggregate nested limit.
+    NestedItems {
+        /// Owning journal operation.
+        operation: EntityId,
+        /// Actual collection.
+        collection: PointJournalCollection,
+        /// Previously admitted nested population.
+        consumed: usize,
+        /// Whole collection requested next.
+        requested: usize,
+        /// Selected aggregate limit.
+        limit: usize,
+    },
+    /// Aggregate nested count cannot be represented;no source lookup or mapping has occurred.
+    CountOverflow {
+        /// Owning journal operation.
+        operation: EntityId,
+        /// Actual collection.
+        collection: PointJournalCollection,
+        /// Previously admitted nested population.
+        consumed: usize,
+        /// Whole collection requested next.
+        requested: usize,
+    },
+}
+impl From<PointJournalAdmissionIssue> for UniquePointOutcome {
+    fn from(issue: PointJournalAdmissionIssue) -> Self {
+        match issue {
+            PointJournalAdmissionIssue::JournalEntries { required, limit } => {
+                Self::JournalEntries { required, limit }
+            }
+            PointJournalAdmissionIssue::NestedItems {
+                operation,
+                collection,
+                consumed,
+                requested,
+                limit,
+            } => Self::NestedItems {
+                operation,
+                collection,
+                consumed,
+                requested,
+                limit,
+            },
+            PointJournalAdmissionIssue::CountOverflow {
+                operation,
+                collection,
+                consumed,
+                requested,
+            } => Self::CountOverflow {
+                operation,
+                collection,
+                consumed,
+                requested,
+            },
+        }
+    }
 }
 
 /// Immediate outcome of an admitted current-point query,with fixed evidence storage.
@@ -180,36 +287,10 @@ impl IdentityLedger {
             param,
             outcome,
         };
+        if let Err(outcome) = limits.admit_journal(self) {
+            return finish(outcome.into());
+        }
         let journal = self.journal();
-        if journal.len() > limits.journal_entries.get() {
-            return finish(UniquePointOutcome::JournalEntries {
-                required: journal.len(),
-                limit: limits.journal_entries.get(),
-            });
-        }
-        let mut consumed = 0usize;
-        for entry in journal {
-            if let Some((collection, requested)) = nested_population(entry.edit()) {
-                let Some(total) = consumed.checked_add(requested) else {
-                    return finish(UniquePointOutcome::CountOverflow {
-                        operation: entry.operation(),
-                        collection,
-                        consumed,
-                        requested,
-                    });
-                };
-                if total > limits.nested_items.get() {
-                    return finish(UniquePointOutcome::NestedItems {
-                        operation: entry.operation(),
-                        collection,
-                        consumed,
-                        requested,
-                        limit: limits.nested_items.get(),
-                    });
-                }
-                consumed = total;
-            }
-        }
         if !journal.iter().any(|entry| creates(entry.edit(), reference)) {
             return finish(UniquePointOutcome::UnknownSource);
         }

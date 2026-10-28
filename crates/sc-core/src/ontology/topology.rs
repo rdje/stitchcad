@@ -49,7 +49,8 @@ pub use original_point::{
 };
 mod unique_point;
 pub use unique_point::{
-    PointJournalCollection, UniquePointLimits, UniquePointOutcome, UniquePointResolution,
+    PointJournalAdmissionIssue, PointJournalCollection, UniquePointLimits, UniquePointOutcome,
+    UniquePointResolution,
 };
 
 /// The most edges one operation may create — the declared domain of [`IdentityLedger::declare_edges`] and

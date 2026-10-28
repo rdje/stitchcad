@@ -14,6 +14,9 @@ use super::{
     TopologyEdit,
 };
 
+mod coverage;
+pub use coverage::{RangeCoverage, RangeCoverageError, RangeCoverageIssue, RangeCoverageLimits};
+
 /// An authored positive-length interval along an edge, with exact ascending bounds.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct EdgeRange {
@@ -388,17 +391,7 @@ impl IdentityLedger {
             range: held,
             direction: Direction::Original,
         };
-        let known = self.journal().iter().any(|entry| match entry.edit() {
-            TopologyEdit::Declared { edges } => edges.contains(&held.edge),
-            TopologyEdit::Split { first, second, .. } => {
-                *first == held.edge || *second == held.edge
-            }
-            TopologyEdit::Merge { merged, .. } => *merged == held.edge,
-            TopologyEdit::Offset { fragments, .. } => {
-                fragments.iter().any(|item| item.edge() == held.edge)
-            }
-            TopologyEdit::Reverse { .. } | TopologyEdit::Delete { .. } => false,
-        });
+        let known = known_source(self, held.edge);
         let mut portions = if known {
             vec![RangePortion::Resolved(original)]
         } else {
@@ -432,6 +425,16 @@ impl IdentityLedger {
             end: self.resolve(held.edge, held.to),
         }
     }
+}
+
+fn known_source(ledger: &IdentityLedger, edge: EdgeRef) -> bool {
+    ledger.journal().iter().any(|entry| match entry.edit() {
+        TopologyEdit::Declared { edges } => edges.contains(&edge),
+        TopologyEdit::Split { first, second, .. } => *first == edge || *second == edge,
+        TopologyEdit::Merge { merged, .. } => *merged == edge,
+        TopologyEdit::Offset { fragments, .. } => fragments.iter().any(|item| item.edge() == edge),
+        TopologyEdit::Reverse { .. } | TopologyEdit::Delete { .. } => false,
+    })
 }
 
 fn repair(held: EdgeRange, affected: ResolvedRange, issue: RangeIssue) -> RangePortion {
@@ -479,6 +482,27 @@ fn step(
     current: ResolvedRange,
     entry: &JournalEntry,
 ) -> Result<Vec<RangePortion>, UnitError> {
+    let mut parts = Vec::new();
+    let reverse = step_into(held, current, entry, |part| {
+        parts.push(part);
+        Ok::<(), UnitError>(())
+    })?;
+    if reverse {
+        parts.reverse();
+    }
+    Ok(parts)
+}
+
+// Stream fixed-size portions;the consumer admits collection growth before each push.
+// A numeric failure invalidates ALL output for this input,as in the original collecting step.
+// Arithmetic retains original forward evaluation precedence. The bool requests reversing only
+// this input's output after success,to preserve held traversal order.
+fn step_into<E: From<UnitError>>(
+    held: EdgeRange,
+    current: ResolvedRange,
+    entry: &JournalEntry,
+    mut emit: impl FnMut(RangePortion) -> Result<(), E>,
+) -> Result<bool, E> {
     let EdgeRange { edge, from, to } = current.range;
     let direction = current.direction;
     match entry.edit() {
@@ -488,27 +512,23 @@ fn step(
             first,
             second,
         } if *source == edge => {
-            let mut parts = Vec::new();
             if from < *at {
-                parts.push(mapped(
+                emit(mapped(
                     *first,
                     from.as_rational().checked_div(at.as_rational())?,
                     to.min(*at).as_rational().checked_div(at.as_rational())?,
                     direction,
-                )?);
+                )?)?;
             }
             if to > *at {
-                parts.push(mapped(
+                emit(mapped(
                     *second,
                     affine(from.max(*at), *at, Param::END)?,
                     affine(to, *at, Param::END)?,
                     direction,
-                )?);
+                )?)?;
             }
-            if direction == Direction::Reversed {
-                parts.reverse();
-            }
-            Ok(parts)
+            Ok(direction == Direction::Reversed)
         }
         TopologyEdit::Merge {
             first,
@@ -524,24 +544,30 @@ fn step(
                     *first == edge,
                 )
             };
-            Ok(vec![mapped(*merged, map(from)?, map(to)?, direction)?])
+            emit(mapped(*merged, map(from)?, map(to)?, direction)?)?;
+            Ok(false)
         }
-        TopologyEdit::Reverse { edge: reversed } if *reversed == edge => Ok(vec![mapped(
-            edge,
-            to.as_rational().one_minus()?,
-            from.as_rational().one_minus()?,
-            direction.reversed(),
-        )?]),
-        TopologyEdit::Delete { edge: deleted } if *deleted == edge => Ok(vec![repair(
-            held,
-            current,
-            RangeIssue::Orphaned(OrphaningEdit::Deleted {
-                operation: entry.operation(),
+        TopologyEdit::Reverse { edge: reversed } if *reversed == edge => {
+            emit(mapped(
                 edge,
-            }),
-        )]),
+                to.as_rational().one_minus()?,
+                from.as_rational().one_minus()?,
+                direction.reversed(),
+            )?)?;
+            Ok(false)
+        }
+        TopologyEdit::Delete { edge: deleted } if *deleted == edge => {
+            emit(repair(
+                held,
+                current,
+                RangeIssue::Orphaned(OrphaningEdit::Deleted {
+                    operation: entry.operation(),
+                    edge,
+                }),
+            ))?;
+            Ok(false)
+        }
         TopologyEdit::Offset { source, fragments } if *source == edge => {
-            let mut parts = Vec::new();
             let mut cursor = from;
             let gap = |low, high| {
                 repair(
@@ -567,25 +593,25 @@ fn step(
                     continue;
                 }
                 if cursor < low {
-                    parts.push(gap(cursor, low));
+                    emit(gap(cursor, low))?;
                 }
-                parts.push(mapped(
+                emit(mapped(
                     fragment.edge(),
                     affine(low, fragment.from(), fragment.to())?,
                     affine(high, fragment.from(), fragment.to())?,
                     direction,
-                )?);
+                )?)?;
                 cursor = high;
             }
             if cursor < to {
-                parts.push(gap(cursor, to));
+                emit(gap(cursor, to))?;
             }
-            if direction == Direction::Reversed {
-                parts.reverse();
-            }
-            Ok(parts)
+            Ok(direction == Direction::Reversed)
         }
-        _ => Ok(vec![RangePortion::Resolved(current)]),
+        _ => {
+            emit(RangePortion::Resolved(current))?;
+            Ok(false)
+        }
     }
 }
 

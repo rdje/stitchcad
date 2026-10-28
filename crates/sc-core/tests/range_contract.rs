@@ -717,6 +717,23 @@ fn complete_reference_recomposition_matches_independent_fraction_maps() {
         assert_eq!((bounded.reference(), bounded.param()), (source, held));
         assert_eq!(bounded.resolved(), point.resolved());
         let result = ledger.resolve_range(range);
+        let coverage = ledger
+            .resolve_range_coverage(
+                range,
+                sc_core::ontology::RangeCoverageLimits::new(
+                    sc_core::ontology::UniquePointLimits::new(ten, ten),
+                    ten,
+                ),
+            )
+            .unwrap();
+        assert_eq!(coverage.held(), range);
+        assert_eq!(
+            coverage.portions(),
+            result.portions(),
+            "coverage oracle row {}",
+            field(0)
+        );
+        assert_eq!(coverage.has_full_coverage(), result.has_full_coverage());
         if field(8) == "Overflow" {
             let Resolution::Unresolved(task) = point else {
                 panic!("genuine final-width refusal: {}", field(0))

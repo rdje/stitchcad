@@ -189,3 +189,8 @@ original point candidate	spec/command-notch-context.md	crates/sc-core/src/ontolo
 original point projection	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point/query.rs	OriginalPointProjection	G1-SLICE.6.5.3.2.3.2.4.3.2.2.2	4.4
 original point projection refusal	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point/query.rs	OriginalPointProjectionError	G1-SLICE.6.5.3.2.3.2.4.3.2.2.2	4.4
 original point projection issue	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/original_point/query.rs	OriginalPointProjectionIssue	G1-SLICE.6.5.3.2.3.2.4.3.2.2.2	4.4
+bounded interval input limits	spec/command-notch-context.md	crates/sc-core/src/ontology/range/coverage.rs	RangeCoverageLimits	G1-SLICE.6.5.3.2.3.2.4.3.3.1	4.4
+bounded complete interval evidence	spec/command-notch-context.md	crates/sc-core/src/ontology/range/coverage.rs	RangeCoverage	G1-SLICE.6.5.3.2.3.2.4.3.3.1	4.4
+bounded interval refusal	spec/command-notch-context.md	crates/sc-core/src/ontology/range/coverage.rs	RangeCoverageError	G1-SLICE.6.5.3.2.3.2.4.3.3.1	4.4
+bounded interval issue	spec/command-notch-context.md	crates/sc-core/src/ontology/range/coverage.rs	RangeCoverageIssue	G1-SLICE.6.5.3.2.3.2.4.3.3.1	4.4
+complete journal admission issue	spec/command-notch-context.md	crates/sc-core/src/ontology/topology/unique_point.rs	PointJournalAdmissionIssue	G1-SLICE.6.5.3.2.3.2.4.3.3.1	4.4

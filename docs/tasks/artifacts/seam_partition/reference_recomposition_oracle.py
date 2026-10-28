@@ -51,6 +51,13 @@ def render():
         rows.append('\t'.join(map(str, (name, kind, held.numerator, held.denominator,
                                         a.numerator, a.denominator, b.numerator, b.denominator, expected))))
     assert cancellation == 9 and refusal == 5
+    # A reversed symmetric held interval can fail in BOTH split branches. The original
+    # forward arithmetic order must still report first-branch division,then reverse output
+    # only after success. This independently establishes the native precedence control.
+    low, high, cut = F(1, m), F(m - 1, m), F(2, 5)
+    assert 1 - high == low and 1 - low == high
+    assert (low / cut).denominator > m
+    assert ((high - cut) / (1 - cut)).denominator > m
     return '\n'.join(rows) + '\n'
 
 
@@ -59,7 +66,7 @@ if __name__ == '__main__':
     if sys.argv[1:] == ['--check']:
         root = Path(__file__).resolve().parents[4]
         assert (root / 'crates/sc-core/tests/fixtures/reference_recomposition.tsv').read_bytes() == output.encode()
-        print('reference recomposition:14 Fraction cases;9 cancelled intermediate refusals;5 genuine final-width refusals;rc=0')
+        print('reference recomposition:14 Fraction cases;9 cancelled intermediate refusals;5 genuine final-width refusals;reversed dual-failure control1;rc=0')
     elif not sys.argv[1:]:
         print(output, end='')
     else:

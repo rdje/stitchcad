@@ -257,39 +257,65 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0508 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part666.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.2.acceptance`
   Status: `done`
-  Goal:0509 current/original-coordinate primitive component .2 closes with focused actual Notch/
-  Graph/source acceptance after implementation. Actual semantic context/quantities remain .3/.4.
-  - [x] REPRODUCE / ISSUE: standalone numeric success is not actual semantic-source adoption.
-    Join real Notch definitions/validated Graphs/retained originals without a fake coordinate or
-    physical geometry provider;preserve deferred profile/ease and actual context requirements.
-  - [x] ROOT CAUSE: 0509 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    sewing_contract notch_context_recovery →4 passed/53 filtered,rc=0. Source side/named IDs/stops/
-    original edge and actual anchor drive queries;using fragment-local parameters directly loses
-    original quarter/wide position,while one current merge position retains distinct origin evidence.
-  - [x] FIX: extend existing actual accepted late-fragment/reverse-merge/8-cycle fixtures to
-    implemented bounded current admission and exact inverse via complete retained source metadata.
-    Assert actual stop membership,original side/span/declaration and preserved definitions/ledger;
-    no runtime API or availability change. Correct sibling book's stale D305 prerequisite wording.
-  - [x] ADDRESSED: 0509 cargo test -p sc-core --test sewing_contract notch_context_recovery →4
-    passed,rc=0. Actual source301/copy200/stops400/401 retain complete declaration. Wide original
-    coordinate matches independent fixture and survives Param refusal;companion is original quarter.
-    Reverse/merge retains half/Original,end/Reversed while actual mark's current direction remains
-    holder-relative. Actual8-cycle graph/notches project half/quarter with2-state cap;25 logical
-    inputs and256 old reference leaves stay scoped. Uniform-only query refuses original source/
-    side/start/end context;profile G4/ease G2/G3 remain deferred,definitions/ledger unchanged.
-  - [x] NO REGRESSION: 0509 python3 -I -B scripts/local_environment.py -- cargo clippy -p sc-core
-    --test sewing_contract -- -D warnings/fmt --all --check →pass,rc=0. notch_context_oracle.py
-    --check →3 frozen Fraction cases/quantum controls,rc=0. Receipt666 →3 exact Git spans,rc=0.
-    Book build/publication →89/190/1567/2687,rc=0;glossary →0 failures,rc=0;verify-retention
-    →1120 logical/25 working/2389248 residentB,rc=0. Full paired/mutation/physical verification
-    remains .6.5.3.2.acceptance/pre-push;source quantities do not follow from this component alone.
-  - [x] LOCKSTEP: parent/leaf/MEMORY/DEV/CHANGE/book/task index/D301 schedule aligned;whole0508 retained666.
-    LIVE/README reviewed unchanged,G1 6/18. Next .3 actual registry/ledger/side/ownership context.
-    promotion: declined (focused actual-domain confirmation of existing indexed source/projection/readiness contracts;no new reusable policy or decision).
+  Goal:0509 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part667.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual semantic-notch/original-source context with real IDs,registry/ledger/side ownership,
   complete source dependencies and explicit no-default admission;retain original causes.
+  Children .1 bounded complete range coverage;.2 complete borrowed actual source dependencies;
+  .3 original-frame context construction;.acceptance focused actual-domain integration.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.1`
+  Status: `done`
+  Goal:0510 bounded complete positive-interval coverage without endpoint choice trees;shared exact
+  per-edit mapping with legacy range resolution. Complete input and peak portion limits precede
+  derived collection growth;held/source/edit/numeric causes,order,repairs and direction survive.
+  - [x] REPRODUCE / ISSUE: actual source validation needs whole intervals,not point uniqueness.
+    rg -n 'ledger.resolve_range|piece.range_resolutions|start: self.resolve|end: self.resolve'
+    crates/sc-core/src/ontology/range.rs crates/sc-core/src/ontology/sewing.rs →5 actual callsites,
+    including source side and Piece ownership queries and both legacy endpoint folds,rc=0.
+    Dependency owned here;legacy collection meter remains correct within its documented scope.
+  - [x] ROOT CAUSE: 0510 cargo test -p sc-core --test range_coverage_contract
+    reversed_split_keeps_original_first_failure_precedence →draft failed101:direct reversed emission
+    evaluated second affine before first division. Independent Fraction control confirms both branches
+    overflow for symmetric held1/MAX..(MAX-1)/MAX at2/5. Historical mapping computes first branch
+    before reversing output. Preserve that order and per-input all-or-repair semantics.
+  - [x] FIX: stream shared fixed-size mapping in original arithmetic order;reverse only successful
+    input emissions with mutable iterators,no indexing or extra collection. Borrow actual journal;
+    admit all entries/nested fields before source lookup. Charge pending+next+active+one requested
+    output before append;truncate failed input emissions before retaining actual whole repair.
+    RangeCoverage/limits/fixed boxed refusal are public;PointJournalAdmissionIssue restricts shared
+    preflight to actual population failures. Initial Clippy rejected256B mapped outcome/error and
+    unchecked suffix indexing;precise input issue plus iterator reversal fix both without waivers.
+  - [x] ADDRESSED: 0510 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    range_coverage_contract --test range_contract --test unique_point_contract →6+20+6 passed,rc=0.
+    Exact quota boundaries/complete unrelated inputs/unknown source/reversed gaps/deletion/numeric
+    rollback/first-cause precedence pass. Eight cycles:upper interval1 under peak2,whole2 under3;
+    legacy lower endpoint256 leaves unchanged. No partial coverage or mutated ledger. All14 frozen
+    Fraction rows feed new coverage;reference_recomposition_oracle.py --check →14/9 valid/5 genuine
+    width refusals/reversed dual-failure control1,rc=0. No input/CPU/RSS/global-authority conflation.
+  - [x] NO REGRESSION: 0510 python3 -I -B scripts/local_environment.py -- cargo test -p sc-core
+    --test sewing_contract notch_context_recovery →4 passed,rc=0;actual original source coverage
+    joins actual Notch/Graph projections without a fake provider. cargo test -p sc-core --doc
+    RangeCoverageLimits →1 passed,rc=0. Scoped Clippy four affected targets/fmt --all --check →pass0.
+    Book build/publication →89/195/1567/2688,rc=0;glossary →0 failures,rc=0;receipt667 →3 exact Git
+    spans,rc=0;retention →1121 logical/26 working/2395133 residentB,rc=0. Broader paired/mutation/
+    physical and bus verification remain .6.5.3.2.acceptance/pre-push after feature implementation.
+  - [x] LOCKSTEP: current task/next children/MEMORY/DEV/CHANGE/book/API routes/D301/task index align.
+    Whole0509 retained667. LIVE/README reviewed unchanged,G1 6/18. Next .3.2 actual complete source
+    dependency admission;whole source/Piece ownership/endpoint/currentness and quantities remain owned.
+    promotion: declined (implementation of already indexed explicit input/derived-work admission and exact source/reference contracts;no new policy or roadmap direction).
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.2`
+  Status: `pending`
+  Goal: actual complete source/plan/Piece/landmark registry dependency and ownership admission;
+  explicit population/range/point budgets before building indexes or invoking derived resolution.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.3`
+  Status: `pending`
+  Goal: construct borrowed actual notch context from bounded source validation and exact original
+  projections;preserve real named IDs,stop order,wide/ambiguous/invalid-original interval evidence.
+- ID: `G1-SLICE.6.5.3.2.3.2.4.3.3.acceptance`
+  Status: `pending`
+  Goal: focused actual-source registry/currentness/original context integration after implementation;
+  quantity/paired effects/full acceptance remain separate owners.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.3.4`
   Status: `pending`
   Goal: exact original notch-bounded cumulative/interval quantities through actual admitted context,
