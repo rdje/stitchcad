@@ -1,4 +1,4 @@
-//! Count real immutable source-host copies through public metadata contracts, without fake models.
+//! Observe foreign source Clone independently of model reconstruction; actual model owners and APIs.
 use super::group_commit::{capacity, group, material, mutation};
 use super::*;
 use sc_core::{
@@ -13,7 +13,8 @@ use sc_core::{
 use sc_measure::DesignSourcesError;
 
 // Instrumentation delegates every census/reference/binding/validation to the actual immutable host.
-// Only telemetry is shared; semantic source equality deliberately excludes these counters.
+// Telemetry is observational only; semantic source equality deliberately excludes these counters.
+// `copies` counts foreign H::clone calls, never core model reconstruction or allocation work.
 #[derive(Debug)]
 pub(super) struct CountedSources {
     actual: DesignSources,
@@ -140,9 +141,27 @@ pub(super) fn owner(copies: Rc<Cell<usize>>) -> (DesignGarment<CountedSources>, 
 }
 
 #[test]
-fn actual_source_host_copies_are_bounded_per_candidate_revision_and_snapshot_traversal() {
+fn actual_source_is_shared_across_candidate_revision_and_snapshot_traversal() {
     let copies = Rc::new(Cell::new(0));
     let (owner, addition) = owner(Rc::clone(&copies));
+    let snapshot = owner.clone();
+    assert!(core::ptr::eq(
+        owner.inputs().sources().host(),
+        snapshot.inputs().sources().host()
+    ));
+    assert_ne!(
+        owner.inputs().sources().entities().as_ptr(),
+        snapshot.inputs().sources().entities().as_ptr(),
+        "captured entity vectors remain separate owned copies"
+    );
+    let detached = owner.inputs().sources().host().clone();
+    assert_eq!(
+        copies.get(),
+        1,
+        "independent foreign Clone control proves observer is live"
+    );
+    drop(detached);
+    copies.set(0);
     let design = owner.inputs().id();
     let base = owner.inputs().revision().clone();
     let original_address = owner.inputs().structure().pieces().pieces().as_ptr();
@@ -208,8 +227,8 @@ fn actual_source_host_copies_are_bounded_per_candidate_revision_and_snapshot_tra
     }
     assert_eq!(
         observed,
-        vec![1, 1, 1],
-        "D289: one trusted source-host copy per metadata candidate"
+        vec![0, 0, 0],
+        "D293: every metadata candidate shares its original source instance"
     );
     let alias = members.last().expect("actual Notch member").clone();
     let mut original_members = members;
@@ -224,16 +243,12 @@ fn actual_source_host_copies_are_bounded_per_candidate_revision_and_snapshot_tra
         preview.steps().last().expect("alias report").replay_of(),
         Some(2)
     );
-    assert_eq!(copies.get(), 3, "aliases copy no source host");
+    assert_eq!(copies.get(), 0, "shared source: no foreign H::clone");
     copies.set(0);
     let accepted = bus
         .commit_group(&request)
         .expect("one group and fresh revision");
-    assert_eq!(
-        copies.get(),
-        4,
-        "three candidates plus one fresh-revision rebuild"
-    );
+    assert_eq!(copies.get(), 0, "shared source: no foreign H::clone");
     copies.set(0);
     assert!(bus
         .commit_group(&request)

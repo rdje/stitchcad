@@ -8,10 +8,10 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D293 — generic source Clone can change actual charged cache footprint
-P0 owned G1-SLICE.6.8.2.2.2.2.4.3.4.3 before .4.4; scoped diagnostic belongs .3.4.2.
-Native source_clone_footprint1 passed rc=0:actual source/cache1→2→3, equal semantic clones, forecast907B accepted but retained908B; next current meter refuses882+26.
-Impact:generic authoring can exceed policy after final H.clone; repair frozen source ownership in .3.4.3, then close diagnostic and run .4.4.
+## D293 — generic source Clone changed actual charged cache footprint
+P0 fixed0472, owner G1-SLICE.6.8.2.2.2.2.4.3.4.3; whole diagnosis0471 retained626.
+Native regression2 failed before/2 passed after rc=0:actual source snapshots share H; full logical charges remain; exact906B/current check pass,905B refuses880+26. Explicit foreign Clone still grows its own cache.
+Repair:private Arc<H>, separate census copies; host()->&H becomes ordinary non-const; cross-thread H:Send+Sync, single-thread legal. Coupled .4.4/deeper/full resource proof pending.
 D292 fixed0445; [whole ontology-clause closure](../history/stitchcad-devnotes-part625.md).
 D290/D291 fixed0442; [whole native reserve/setup closure ledger](../history/stitchcad-devnotes-part597.md).
 D289 fixed0441; [whole native source-copy diagnosis/fix/privacy proof](../history/stitchcad-devnotes-part593.md).

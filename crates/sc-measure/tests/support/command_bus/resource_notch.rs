@@ -227,13 +227,21 @@ fn exact_one_entry_room_admits_repeated_preview_alias_and_rolls_back_later_group
             .preview(&CommandRequest::Mutation(member.clone()))
             .expect("exact one-entry boundary");
         assert_eq!(notch_report(&preview).notch().id(), first);
-        assert_eq!(counts(&counters)[0], 1);
+        assert_eq!(
+            counts(&counters)[0],
+            0,
+            "shared source: no foreign H::clone"
+        );
         assert_eq!(counts(&counters)[1], 3);
     }
     reset(&counters);
     let report = bus.preview_group(&alias).expect("alias appends only once");
     assert_eq!(report.steps().last().expect("alias").replay_of(), Some(0));
-    assert_eq!(counts(&counters)[0], 1);
+    assert_eq!(
+        counts(&counters)[0],
+        0,
+        "shared source: no foreign H::clone"
+    );
     assert_eq!(counts(&counters)[1], 3);
     reset(&counters);
     let error = bus
@@ -242,8 +250,8 @@ fn exact_one_entry_room_admits_repeated_preview_alias_and_rolls_back_later_group
     assert_eq!(control(&error), Some(&Control::Model(expected)));
     assert_eq!(
         counts(&counters)[0],
-        1,
-        "only first admitted staged candidate was copied"
+        0,
+        "shared source: no foreign H::clone"
     );
     let valid = group(806020, vec![member]);
     let accepted = bus

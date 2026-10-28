@@ -204,7 +204,7 @@ fn exact_noop_same_size_replacement_and_unknown_shrink_use_resulting_owned_evide
             assert_eq!(change.after(), &after);
         }
         let telemetry = counts(&counters);
-        assert_eq!(telemetry[0], 1, "one admitted actual candidate source copy");
+        assert_eq!(telemetry[0], 0, "shared source: no foreign H::clone");
         assert_eq!(
             telemetry[1], 3,
             "retained, current and prospective source resource walks"
@@ -257,10 +257,7 @@ fn sequential_evidence_projection_uses_actual_staged_state_and_aliases_do_not_re
         Some(1)
     );
     let telemetry = counts(&counters);
-    assert_eq!(
-        telemetry[0], 2,
-        "one admitted candidate copy for each distinct member"
-    );
+    assert_eq!(telemetry[0], 0, "shared source: no foreign H::clone");
     assert_eq!(
         telemetry[1], 5,
         "one retained walk plus current/prospective for each distinct staged base"

@@ -2,20 +2,19 @@
 
 Read CLAUDE.md/README.md and doctrine; derive HEAD with git log --oneline -1.
 
-- Next G1-SLICE.6.8.2.2.2.2.4.3.4.3: P0 D293. Actual inline H Clone can honestly grow cache while
-  preserving semantic Eq. Plain real DesignSources/cache reproducer accepts forecast907B but retains
-  908B; next current refuses882+26. source_clone_footprint.rs is a passing DIAGNOSTIC, not a fix.
-  Freeze immutable source ownership across snapshots; preserve borrowed host/semantic API, inspect
-  const/Send/Sync implications; eliminate foreign Clone shape assumptions. Convert diagnostic to
-  exact-bound regression. H clone telemetry will cease measuring model copies: correct claims/tests.
-- 0471 .3.4.2 history preflight before counters/commands/request/result copies and reserves/effects.
-  Undo/Redo move actual target/previous models; retain maximum-issued; forecast only sequence/action.
-  History4/current4/resource-admission4/strict lint/fmt and native source/order pass0. Real oracles
-  Undo2M+19/2B+84/10, unequal Redo3M+28/3B+352/36, all-one max1797bits/action642. Replay0 walks;
-  quota/cancel/final fresh revocation preserve effects/keys. D293 remains owned before coupled .4.4.
-- Book command-retained-publication.md and command-resource-accounting.md. Current/authoring/history
-  projections have focused checks; .4.4/deeper/full .6.5.5/.6.9 pending. G1still6/18; no full resource,
-  raw-ingress/allocator-peak/arbitrary-time/physical/release certificate. LIVE defect note adds D293.
-- Whole0470 and closed D292/G1.1 retained624/625; 1079 records/2400192 residentB verified0.
-  Protect target/history-capture-0450/installation/backup (98 files), prior0392g; window22 limits64/192.
-  Full PNT; derive push cadence. Cleanup due2026-10-28 13:41UTC, docs/ARTIFACT_CLEANUP.md.
+- Next G1-SLICE.6.8.2.2.2.2.4.4: coupled resource/bus acceptance after all .4.1–.4.3 implementation.
+  Current/per-model/authoring/history prospective composition and P0 D293 repair have focused checks;
+  run deferred actual integrated resource/bus and privacy gates, then deeper/full .6.5.5/.6.9 as owned.
+  Do not imply full resource/ingress/allocator-peak/arbitrary-time/physical/release acceptance.
+- 0472 .4.3.4.3 closes D293:private Arc<H>, manual metadata Clone shares same actual immutable source;
+  separate census Vec; each logical model still charges full source/census. No foreign H.clone in
+  snapshots. host()->&H now ordinary non-const; cross-thread H:Send+Sync, single-thread legal.
+  Actual DesignGarment<DesignSources> compiles Send+Sync; metadata Clone no H:Clone bound, other bounds unchanged.
+- Honest real-source/cache regressions2 failed before/2 pass after. Exact906B and old907B publish then
+  pass current check;905B preserves880+26 refusal. Independent foreign Clone grows its own cache.
+  Source observer control1; previews/groups/commit/replay/Undo/Redo0 foreign clones, not core model-copy
+  telemetry. Affected command25/metadata8/doctest4/strict lint/fmt/native ownership paths pass0.
+- Book spec/design-inputs.md and command-retained-publication.md record ownership/API limits/examples.
+  LIVE closes D293 note; G1still6/18. Whole0471 diagnosis/scope/lesson/changelog in626; retention1080
+  records/2404556 residentB verified0. Protect target/history-capture-0450/installation/backup (98files),
+  prior0392g; window22 limits64/192. Full PNT; derive push cadence. Cleanup due2026-10-28 13:41UTC.

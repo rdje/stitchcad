@@ -130,3 +130,27 @@ passes0 by demonstrating forecast907B accepted but actual retained908B, followed
 semantic equality, not identical cache footprint (that implication is our inference, tested natively).
 Thus projection logic is focused-verified but generic publication bounds remain defective. Owned P0
 .4.3.4.3 freezes actual source ownership before .4.4 acceptance; a diagnostic pass is not a fix verdict.
+
+## Actual immutable source ownership0472 closes D293
+
+answers: "why share the source instance rather than trust H Clone shape?" · "what compatibility changes accompany frozen snapshot sources?"
+
+Private DesignMetadata stores Arc<H> and manually clones that handle plus the captured census Vec.
+No H.clone callback participates in model snapshots. Semantic equality alone cannot certify an honest
+cache's content/size; a post-clone rejection would occur after the publication copy and leave the
+assumption in place. Sharing the exact immutable source removes it at the source-owner boundary.
+Core model collections still copy; each logical model charges full source/census without deduplication.
+The source integration obligation remains immutable/honest/exhaustive; this is not hostile-code isolation.
+
+host() still lends &H and exposes no Arc/mutator; it becomes an ordinary method instead of const fn.
+Cross-thread ownership now requires H:Send+Sync; single-thread H remains supported. This follows the
+[standard Arc contract](https://doc.rust-lang.org/std/sync/struct.Arc.html); no unsafe trait override is used.
+Native actual DesignGarment<DesignSources> satisfies Send+Sync. Metadata Clone itself requires no H:Clone;
+existing model/command generic bounds stay as before in this focused repair.
+
+Two regressions fail against the old inline owner and pass after:source address remains identical,
+census vectors differ, two models charge exactly twice the content, explicit foreign Clone grows its
+own cache,905B refuses original880+26,906B/old907B publish and pass subsequent current admission.
+The independent clone telemetry control increments1; all actual preview/group/commit/replay/Undo/Redo
+foreign clones are0. This count is no longer a proxy for core model copies; affected tests/book say so.
+Affected command25/metadata8/doctest4/lint/fmt pass0. D293 closes; coupled .4.4/deeper/full proof stays owned.

@@ -5,8 +5,8 @@ Command inputs, reports and retained execution state own dynamic data in additio
 same explicit logical units and sealed sink from the [resource contract](command-operation-control.md#logical-dynamic-content-accounting-contract).
 CommandState locations describe these objects; a resource result is data, not authority or a model
 snapshot stamp. Actual current private-state composition/admission is implemented; prospective retained
-authoring/history projections are implemented with focused checks. P0 D293 source-clone ownership
-repair and coupled/full verification remain owned work.
+authoring/history projections and D293 immutable source ownership have focused checks.
+Coupled/full verification remains owned work.
 
 ## Actual typed mutation-group inputs
 
@@ -232,7 +232,7 @@ and formatting. All original execution/history/request implementations are byte-
 the new exhaustive readonly views; preparation, operation, identity and group implementations are
 byte-exact. Existing request/report readers are byte-exact. This implements accepted data accounting
 with focused checks. Current private retained model/reserve/journal composition is admitted; prospective
-authoring admission is implemented; D293 source ownership repair remains; coupled acceptance .4.4 and deeper/full verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
+authoring admission is implemented; D293 source ownership repair has focused checks; coupled acceptance .4.4 and deeper/full verification stay deferred. Logical counts do not bound allocator peaks, host algorithm time, raw
 ingress, numeric/file/decompression/geometry work or physical/release acceptance.
 
 
@@ -274,7 +274,7 @@ that deliberately omits model limits is named without_model_limits and still sup
 
 Installation alone certifies no retained content or quota room. Actual current private admission now
 runs as described below; [prospective authoring](command-retained-publication.md) also admits exact
-evictions/redo discard before publication allocations/effects. [History projection](command-retained-publication.md#exact-prospective-history-actions) is implemented; D293 ownership repair remains. Coupled/deeper/full resource acceptance stays .4.4.
+evictions/redo discard before publication allocations/effects. [History projection](command-retained-publication.md#exact-prospective-history-actions) is implemented; D293 ownership repair has focused checks. Coupled/deeper/full resource acceptance stays .4.4.
 
 ## Actual current private retained composition
 
@@ -339,9 +339,9 @@ admission leaves the original group/key/capacities available for a later actual 
 wrong-Design and stale single/group/commit/history paths still cause no private resource walk.
 
 Four current-retained cases and the affected model-admission cases pass with strict affected
-lint/formatting. The extra current-retained pass changes source-walk telemetry, while candidate-copy
-counts remain unchanged. [Prospective authoring admission](command-retained-publication.md) now
+lint/formatting. The extra current-retained pass changes source-walk telemetry. Immutable source
+sharing gives0 foreign H.clone calls; this does not measure core model copies. [Prospective authoring admission](command-retained-publication.md) now
 prevents new group publication from exceeding the exact future retained bound, including undo eviction
-and redo discard. Prospective history projection is implemented; P0 D293 source-clone ownership repair blocks signoff,
-and coupled .4.4/deeper/full verification stays deferred. Raw ingress, allocator peaks, arbitrary host time, numeric/file/
+and redo discard. Prospective history projection and D293 ownership repair have focused checks;
+coupled .4.4/deeper/full verification stays deferred. Raw ingress, allocator peaks, arbitrary host time, numeric/file/
 decompression/geometry work and physical/release acceptance retain their separate owners.

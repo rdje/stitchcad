@@ -4,7 +4,7 @@ use crate::{
     value::{CanonicalInputs, LengthDeclaration},
 };
 use core::fmt;
-use std::collections::BTreeMap;
+use std::{collections::BTreeMap, sync::Arc};
 
 /// Metadata families currently supported by the Design source host.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -207,9 +207,18 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignMetadataError<E
 /// Private immutable metadata owner, checked against explicitly supplied canonical inputs.
 ///
 /// Only the identity census is retained alongside the host; no declaration or scalar state is
-/// copied. This component does not select a Design/table/SizeSet/profile or prove readiness.
-/// Later Design composition must also check identities against its other owned components.
+/// copied. Model snapshots share this exact immutable host instance without invoking `H::clone`.
+/// The captured census is copied separately. Accounting still charges the source contents in each
+/// logical model; shared backing does not deduplicate logical demand. This component does not select
+/// a Design/table/SizeSet/profile or prove readiness. Later Design composition must also check
+/// identities against its other owned components. Cross-thread sharing requires `H: Send + Sync`;
+/// single-threaded hosts need neither bound.
 ///
+/// ```
+/// fn snapshot<H>(metadata: &sc_core::design::DesignMetadata<H>) -> sc_core::design::DesignMetadata<H> {
+///     metadata.clone() // no foreign H: Clone requirement or callback
+/// }
+/// ```
 /// ```compile_fail
 /// fn change<H: sc_core::design::DesignMetadataHost>(metadata: &mut sc_core::design::DesignMetadata<H>) {
 ///     metadata.entities.clear();
@@ -233,10 +242,19 @@ impl<E: std::error::Error + 'static> std::error::Error for DesignMetadataError<E
 ///     }
 /// }
 /// ```
-#[derive(Clone, PartialEq, Eq)]
+#[derive(PartialEq, Eq)]
 pub struct DesignMetadata<H> {
-    host: H,
+    host: Arc<H>,
     entities: Vec<DesignHostEntity>,
+}
+impl<H> Clone for DesignMetadata<H> {
+    fn clone(&self) -> Self {
+        let Self { host, entities } = self;
+        Self {
+            host: Arc::clone(host),
+            entities: entities.clone(),
+        }
+    }
 }
 impl<H> DesignMetadata<H> {
     // Borrow the retained census; do not regenerate it through the semantic host callback.
@@ -262,15 +280,19 @@ impl<H: DesignMetadataHost> DesignMetadata<H> {
         canonical: &CanonicalInputs,
     ) -> Result<Self, DesignMetadataError<H::Error>> {
         let entities = host.entities();
-        let metadata = Self { host, entities };
+        let metadata = Self {
+            host: Arc::new(host),
+            entities,
+        };
         metadata.validate_current(canonical)?;
         Ok(metadata)
     }
 
-    /// Original immutable host; this port supplies no mutable access.
+    /// Original immutable host shared by all snapshots; this port supplies no mutable access.
+    /// This is an ordinary borrowed accessor, not a const-evaluation interface.
     #[must_use]
-    pub const fn host(&self) -> &H {
-        &self.host
+    pub fn host(&self) -> &H {
+        self.host.as_ref()
     }
 
     /// Exact captured metadata identities/positions, excluding referenced canonical inputs.

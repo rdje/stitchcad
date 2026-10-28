@@ -6,12 +6,28 @@ and the [per-model projections](command-operation-control.md#exact-prospective-m
 Authoring and history-action projections now have focused checks. Coupled/deeper/full verification
 remains separately owned.
 
-**P0 D293 — source ownership repair required before resource signoff.** A reproducible custom source
-adapter preserves semantic Clone equality while its honestly charged immutable cache grows in each
-new clone. Its forecast admits907 bytes but the final model retains908; the next current meter refuses
-882+26. This is a defect, not dishonest resource totals. The next owned leaf .4.3.4.3 must freeze source
-ownership across model copies and close this case before .4.4 acceptance. The concrete fixture checks
-below establish the projection logic with stable source copies; they do not close D293.
+## Immutable source ownership
+
+D293 is fixed by retaining one actual source instance privately in DesignMetadata through `Arc<H>`.
+Model snapshots share this instance without calling foreign H.clone; the captured entity census
+remains separately owned per snapshot. The public host() accessor still returns &H, now as an
+ordinary method instead of const fn. Cross-thread ownership requires H:Send+Sync; single-thread
+hosts need neither bound. The actual DesignSources model passes native Send+Sync compilation.
+No mutable host or shared-pointer capability is exposed. Source contents must remain immutable
+through shared access under the existing honest integration contract.
+
+The original plain adapter over real DesignSources kept an honestly charged String cache. Custom Clone
+preserved semantic equality but returned cache1→2→3 while leaving its original immutable. Forecast907
+bytes was accepted, final publication retained908, and the next current meter refused882+26. Semantic
+Clone equality cannot establish identical charged cache content. Retaining the same actual source
+closes that assumption; an independent explicit foreign Clone still grows its own cache.
+
+Two focused regression cases first failed against the inline source representation. They now prove
+snapshot source-address identity, separate census ownership, full logical charges for both models,
+and exact906-byte publication. A905-byte policy preserves the original880+26 request-field refusal;
+906 and the old907-byte policy both admit publication and then pass the next current-retained check.
+The final probe cancels only after that check, so it creates no second act. Coupled/deeper/full
+resource verification remains pending; sharing deducts no logical snapshot charge.
 
 ## What is admitted, and when
 
@@ -100,11 +116,11 @@ error as an independent composition of actual models and returned records. Count
 the original group/key available for a smaller actual no-op retry. A policy below the minimum first
 publication counter demand can admit no first effect; it is never silently widened.
 
-In these single-distinct-member fixtures, retained quota refusal or cancellation has1 bounded
-preparation source-host copy and no final publication-model copy. Successful authoring has2 copies:
-that temporary candidate and the final revision model. Larger groups retain the existing one-copy
-per distinct prepared member behavior; aliases do not prepare another candidate. No general allocator
-peak or physical byte size is inferred from these logical/copy counts.
+In these single-distinct-member fixtures, retained quota refusal or cancellation follows bounded
+candidate preparation and precedes final publication-model construction. Successful authoring also
+constructs the final revision model. Every snapshot shares the original source, with0 foreign H.clone
+calls. That telemetry does not measure core model copies. Larger groups still prepare each distinct
+member; aliases prepare no additional candidate. No allocator peak or physical byte size is inferred.
 
 Three one-Piece assignments with undo depth1 produce a final retained demand2M+21 entries,2B+60
 bytes and30 bits. The exact final budget admits the third act while reporting the second group's
@@ -143,7 +159,7 @@ Five authoring cases, the three affected current-retained cases, one actual revi
 one audit-successor case and the two primitive count-boundary cases pass with strict affected lint
 and formatting. Publication-order/source checks verify that counter construction, final model,
 reserve/history/request/report allocations, fresh authority and effects follow the new gate.
-D293 ownership repair and coupled/deeper/full acceptance remain pending. This supplies no
+D293 ownership repair has focused checks; coupled/deeper/full acceptance remains pending. This supplies no
 raw-ingress, allocator-peak, arbitrary-time, numeric/file/decompression/geometry or physical/release
 certificate.
 
@@ -203,6 +219,6 @@ including successful history: existing model owners move between current and sta
 Four new history cases, four current-retained cases and four affected model-admission cases pass
 with strict affected lint/formatting. Initial over-bound owners are refused by current admission;
 accepted history growth is now checked before publication. Logical composition is implemented with
-focused checks, while the separately reproduced D293 source-clone ownership defect remains P0 and
-blocks feature signoff. Coupled/deeper/full verification follows that repair. These results establish
+focused checks, including repaired D293 source ownership. Coupled/deeper/full verification remains
+pending. These results establish
 no raw-ingress, allocator-peak, arbitrary-time, geometry/physical or release certificate.

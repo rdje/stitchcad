@@ -127,8 +127,8 @@ fn prospective_alias_record_and_history_fit_exact_limits_or_refuse_before_public
                 );
                 assert_eq!(
                     counts(&counters)[0],
-                    2,
-                    "bounded preparation plus final revision model only"
+                    0,
+                    "shared source: no foreign H::clone"
                 );
             }
             Err(expected) => {
@@ -137,8 +137,8 @@ fn prospective_alias_record_and_history_fit_exact_limits_or_refuse_before_public
                 assert_eq!(meter.finish(), Err(expected));
                 assert_eq!(
                     counts(&counters)[0],
-                    1,
-                    "no final model/counter/request/report publication copies"
+                    0,
+                    "shared source: no foreign H::clone"
                 );
                 let CommandResult::PieceList(current) = actual
                     .execute(&query(
@@ -238,7 +238,11 @@ fn exact_oldest_undo_eviction_does_not_add_dropped_models_to_the_future_budget()
         .commit_group(&c)
         .expect("oldest snapshot removed before exact future composition");
     assert_eq!(accepted.entry(), third.entry());
-    assert_eq!(counts(&counters)[0], 2);
+    assert_eq!(
+        counts(&counters)[0],
+        0,
+        "shared source: no foreign H::clone"
+    );
     assert_eq!(
         counts(&counters)[1],
         7,
@@ -428,7 +432,11 @@ fn exact_branch_discards_redo_models_but_retains_ids_actions_and_maximum_issued_
                         .entry(),
                     third.entry()
                 );
-                assert_eq!(counts(&counters)[0], 2);
+                assert_eq!(
+                    counts(&counters)[0],
+                    0,
+                    "shared source: no foreign H::clone"
+                );
                 assert_eq!(
                     counts(&counters)[1],
                     8,
@@ -440,7 +448,11 @@ fn exact_branch_discards_redo_models_but_retains_ids_actions_and_maximum_issued_
                     control(&result.expect_err("one-short original branch refusal")),
                     Some(&Control::Retained(expected))
                 );
-                assert_eq!(counts(&counters)[0], 1);
+                assert_eq!(
+                    counts(&counters)[0],
+                    0,
+                    "shared source: no foreign H::clone"
+                );
             }
         }
     }
@@ -487,7 +499,11 @@ fn prospective_counter_carry_beyond_u128_is_exact_and_refuses_before_final_revis
                 meter.finish().expect("actual record demand").counter_bits(),
                 642
             );
-            assert_eq!(counts(&counters)[0], 2);
+            assert_eq!(
+                counts(&counters)[0],
+                0,
+                "shared source: no foreign H::clone"
+            );
         } else {
             let error = result.expect_err("one bit short");
             let expected = DesignResourceLimitError::CounterBits {
@@ -502,7 +518,11 @@ fn prospective_counter_carry_beyond_u128_is_exact_and_refuses_before_final_revis
                 },
             };
             assert_eq!(control(&error), Some(&Control::Retained(expected)));
-            assert_eq!(counts(&counters)[0], 1);
+            assert_eq!(
+                counts(&counters)[0],
+                0,
+                "shared source: no foreign H::clone"
+            );
             actual
                 .execute(&query(
                     design,
@@ -567,7 +587,11 @@ fn prospective_checkpoints_cancel_before_publication_construction_and_leave_grou
         assert!(
             matches!(control(&error),Some(Control::Cancelled {progress}) if progress.phase()==Phase::RetainedPublication && progress.completed()==completed)
         );
-        assert_eq!(counts(&counters)[0], 1, "bounded temporary candidate only");
+        assert_eq!(
+            counts(&counters)[0],
+            0,
+            "shared source: no foreign H::clone"
+        );
         actual
             .execute(&query(
                 design,
@@ -587,8 +611,8 @@ fn prospective_checkpoints_cancel_before_publication_construction_and_leave_grou
     assert_eq!(reads.get(), 2, "initial and fresh final authorization");
     assert_eq!(
         counts(&counters)[0],
-        2,
-        "validated temporary and final models discarded before effect"
+        0,
+        "shared source: no foreign H::clone"
     );
     revoked.set(false);
     actual

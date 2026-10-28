@@ -432,8 +432,8 @@ fn retained_reserve_counts_the_entire_backing_after_a_real_notch_consumes_its_pr
     );
     assert_eq!(
         counts(&counters)[0],
-        1,
-        "bounded preparation only; no final publication-model copy"
+        0,
+        "shared source: no foreign H::clone"
     );
     let CommandResult::PieceList(result) = actual
         .execute(&query(

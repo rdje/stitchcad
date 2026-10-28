@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0471 — admit exact prospective retained history publication
+## STITCHCAD-G1-0472 — freeze actual immutable source ownership (P0 D293)
 
-- Project actual Undo/Redo model moves, original author/current operator, aliases, unchanged maximum-issued and next action before publication copies or allocation.
-- History4/current4/resource-admission4/strict lint/fmt pass against real oracles, one-short limits, cancellation, replay and late revocation.
-- Plain real-source/cache diagnostic reproduces P0 D293:forecast907B accepted but actual908B; frozen-source repair is next, before coupled/full resource acceptance.
-- Whole0470 and closed D292/G1.1 retained624/625; book documents exact history scope and prominently identifies the open D293 signoff blocker.
+- Share the actual source privately across snapshots; copy captured entity vectors separately and preserve complete logical resource charges.
+- Honest semantic-equal cache-growth regression2 fails before/passes after; exact906B and old907B publication/current checks pass,905B retains original880+26 refusal.
+- Affected command25/metadata8/doctest4/strict lint/fmt pass. Foreign Clone telemetry is0, independently controlled; it no longer measures core model copying.
+- host()->&H becomes non-const; cross-thread sources require Send+Sync, single-thread supported. Whole0471 retained626; coupled/deeper/full resource acceptance remains pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

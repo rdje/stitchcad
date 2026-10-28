@@ -239,7 +239,7 @@ fn only_selected_resulting_reasons_count_for_noop_same_byte_shrink_and_assigned_
             assert_eq!(change.after(), &assignment);
         }
         let telemetry = counts(&counters);
-        assert_eq!(telemetry[0], 1);
+        assert_eq!(telemetry[0], 0, "shared source: no foreign H::clone");
         assert_eq!(telemetry[1], 3);
         let CommandResult::PieceList(result) = bus
             .execute(&query(design, revision, QueryPayload::GetPieceList))
@@ -315,7 +315,7 @@ fn sequential_material_projection_uses_actual_staged_reason_and_aliases_do_not_r
         Some(1)
     );
     let telemetry = counts(&counters);
-    assert_eq!(telemetry[0], 2);
+    assert_eq!(telemetry[0], 0, "shared source: no foreign H::clone");
     assert_eq!(telemetry[1], 5);
     bus.execute(&query(design, revision, QueryPayload::GetPieceList))
         .expect("preview keeps original revision");

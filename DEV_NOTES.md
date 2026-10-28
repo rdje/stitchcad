@@ -3,12 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact prospective retained history publication
+## _(2026-10-28 UTC)_ — freeze actual immutable source ownership (D293)
 
-0471 .6.8.2.2.2.2.4.3.4.2 borrows actual validated history target/request/accepted record; admits exact model moves, unchanged maximum-issued and next sequence/action before publication construction.
-History4/current4/resource-admission4/strict lint/fmt pass. Real oracles:Undo2M+19/2B+84/10;unequal Redo3M+28/3B+352/36;all-one maximum1797bits/action642. Quota/cancel/revoke preserve state/keys; replay skips private walks.
-P0 D293 plain real-source/cache diagnostic reproduces semantic-equal Clone cache1→2→3:forecast907B accepted but actual908B, then current refuses882+26. This passing diagnostic proves an open defect; frozen-source repair .3.4.3 precedes coupled .4.4/full proof.
-Promotion:indexed command decision distinguishes projection correctness from generic Clone footprint. Whole0470 retained624; closed D292/G1.1 retained625; retention1079 records/2400192 residentB passes0. README unchanged; LIVE defect note adds D293.
+0472 .6.8.2.2.2.2.4.3.4.3 closes P0 D293:private Arc<H>/manual metadata Clone retain the same source instance; captured entity vectors remain separate and every logical model charges full source content.
+Regression2 first failed, now passes:exact906B/current retained check;905B preserves880+26 refusal;old907B also passes. Explicit honest foreign Clone still grows cache; actual model snapshots no longer invoke it.
+Foreign-copy observer control1, all bus foreign clones0; core model copies remain. Metadata8/doctest4/affected command25/strict lint/fmt pass0. host()->&H now non-const; cross-thread H:Send+Sync, single-thread supported and actual DesignSources Send+Sync compiles.
+Promotion:indexed command decision; whole0471 scope/lesson/changelog retained626. Book/source/privacy checks scoped; coupled .4.4/deeper/full proof pending. README correct unchanged; LIVE closes D293 note.
+[Whole0471 history/D293 diagnosis lesson](docs/history/stitchcad-devnotes-part626.md) retains exact before-fix reproduction.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

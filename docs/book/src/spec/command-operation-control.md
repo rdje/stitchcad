@@ -153,25 +153,28 @@ advances audit sequence nor traverses history again.
 
 ## Source-host copy work
 
-Private candidate reconstruction requests one copy of the trusted source host for each actual
-non-alias metadata candidate. It consumes the copied nested owners through crate-private helpers
-and rebuilds them through the same validating constructors. Public callers receive no extraction
-method, mutable bus model or replacement capability. Complete source validation and final effect
-authorization remain in place; moving a copied component is not a validation shortcut.
+DesignMetadata privately owns its source in `Arc<H>`. Snapshots and reconstructed metadata candidates
+share that exact immutable H instance; they never invoke foreign H.clone. The captured entity census
+remains a separately copied Vec. Each logical model still charges all source content and its census,
+even when snapshots share backing. No mutable-host, extraction, replacement or Arc capability is
+exposed; host() returns the original borrowed &H.
 
-For n actual candidate members, grouped preview needs n reconstruction copies and a new commit
-needs n+1, including its fresh-revision rebuild. Exact aliases add no candidate copy. The explicit
-submitted-member maximum bounds n. Exact accepted replay and actual snapshot Undo/Redo request no
-host reconstruction copy. The native case wraps the actual immutable DesignSources, forwarding
-all public census/binding/reference/current-validation methods and observing only host copies.
-It measures individual counts1/1/1, group preview3, commit4 and replay/Undo/Redo0; Undo also restores
-the original Piece-slice address. Prior native individual counts were3/3/2.
+Core reconstruction still copies the affected complete root once per distinct member, consumes copied
+nested definitions and rebuilds them through validating constructors. A new commit also rebuilds the
+fresh-revision model. Exact aliases skip reconstruction; accepted replay and Undo/Redo read or move
+existing owners. A zero foreign-clone count does not measure core copies, allocation bytes or time.
 
-This is a bound on bus-requested source-host copy invocations. It does not bound bytes or time inside
-the trusted host's Clone/validation implementation, remaining core collection copies, total model
-memory, raw input decoding or retained audit/history bytes. Remaining implementation is
-G1-SLICE.6.8.2.2.2.2. This native source-copy case brings focused bus coverage to46 cases; it is not a
-complete resource, performance or integration certificate.
+The real DesignSources wrapper verifies individual previews0/0/0, three-member group preview0,
+commit0 and replay/Undo/Redo0 foreign clones. An explicit detached H.clone control increments its
+observer. Actual snapshot clones preserve the source address but have separate census-vector
+addresses; Undo restores the original Piece-slice address. Earlier D289 counts1/1/1, group3 and
+commit4 described the former inline source representation.
+
+This ownership change closes P0 D293: semantic-equal custom Clone may honestly grow its own new cache.
+Snapshotting retains the original source instead. The charged-cache regression and exact906-byte
+publication are in the [publication guide](command-retained-publication.md#immutable-source-ownership).
+Shared access must still preserve immutable source content under the host integration contract.
+Coupled/full resource verification remains separately owned.
 
 ## Identity-reserve transition work
 
@@ -200,7 +203,7 @@ authority. They provide a data-only accounting contract with implemented compone
 Complete actual model roots compose their source content and retained census under one sink.
 Current/preparation and history-alternative admission now uses the required readonly source port;
 exact Measurement/Material/Notch/publication-revision projections and current private retained
-admission are implemented; prospective authoring/history projections are implemented; D293 source ownership repair remains pending. The meter alone is not a runtime model-admission gate.
+admission are implemented; prospective authoring/history projections are implemented; D293 source ownership repair has focused checks. The meter alone is not a runtime model-admission gate.
 
 | Unit | Exact declared accounting |
 | --- | --- |
@@ -289,7 +292,7 @@ call its source host. A second installation returns ModelLimitsAlreadyInstalled 
 the first policy. Missing policy returns ModelLimitsNotInstalled after pure input admission; authorized
 GetPieceList inspection needs no policy. Neither requests nor progress observers carry a policy.
 Costly paths also require explicit [retained-policy configuration](command-resource-accounting.md#explicit-immutable-retained-policy-configuration);
-[current retained admission](command-resource-accounting.md#actual-current-private-retained-composition) is implemented; [prospective authoring](command-retained-publication.md) also admits publication growth. History projection is implemented; D293 ownership repair remains owned.
+[current retained admission](command-resource-accounting.md#actual-current-private-retained-composition) is implemented; [prospective authoring](command-retained-publication.md) also admits publication growth. History projection is implemented; D293 ownership repair has focused checks.
 Compile-time H: DesignResourceSource is required for costly metadata methods; readonly query paths
 retain the narrower semantic host contract. Compiler privacy rejects direct model-policy reset.
 
@@ -323,7 +326,7 @@ This implements current/preparation-root and stored history-alternative admissio
 Measurement, selected Material, Notch and publication-revision admission are implemented below.
 Per-model logical admission is implemented with focused checks under the honest immutable-source
 contract. Current private audit/replay/history content and stored maximum-issued/audit counters are admitted;
-exact prospective authoring is admitted; history retained projection is implemented; D293 ownership repair remains; coupled/deeper/full verification remains separate.
+exact prospective authoring is admitted; history retained projection is implemented; D293 ownership repair has focused checks; coupled/deeper/full verification remains separate.
 Raw ingress, allocator peaks, host algorithm time, solver/decompression/numeric work and physical/
 release acceptance remain separate. Deeper/full verification stays deferred until feature completion.
 
@@ -346,14 +349,14 @@ Subsequent actual candidate construction and full current validation still run a
 For example, let the actual current model have N collection entries, including2 evidence references
 in the bound declaration, and set the model entry maximum to N. Replacing them with3 references
 projects N+1 and refuses with the exact first error returned by a real rebuilt-model resource walk.
-There is no candidate host copy. Replacing them with2 references or submitting the exact no-op fits N;
+The refusal precedes candidate reconstruction. Replacing them with2 references or submitting the exact no-op fits N;
 changing to Unknown projects N-2. All unchanged text and counter units retain their exact values.
 
 Three new native cases compare the borrowed projection with independently rebuilt, validated actual
 models. They verify the growth refusal across single/group preview and commit, unchanged Piece
 address/revision and reuse of refused group/key/capacity by a valid same-size replacement. Current
-and prospective source walks occur without a candidate copy on refusal. Admitted previews retain
-one actual host copy. A group that shrinks then restores evidence has no net metadata difference;
+and prospective source walks precede candidate reconstruction on refusal. Admitted previews share
+the original source without invoking H.clone. A group that shrinks then restores evidence has no net metadata difference;
 an exact alias reuses the prior report and repeats neither candidate clone nor resource walks.
 
 The first oracle fixture used zero for a Measurement that also supplies Material width; actual
@@ -385,7 +388,7 @@ schema order. Subsequent actual Piece/candidate constructors and current validat
 For example, two selected Pieces retain reasons ` é ` and `猫`:4+3 UTF-8 bytes. Replacing both with
 `猫猫` gives6+6 bytes, so the prospective model has5 more bytes. A model text maximum equal to the
 current demand refuses with the same first error as an independently rebuilt actual model, before
-any candidate host copy. Replacing the first reason with `éé` preserves its4-byte demand; replacing
+candidate reconstruction. Replacing the first reason with `éé` preserves its4-byte demand; replacing
 it with `猫` removes1 byte. Assigning both to an actual registry Material removes7 reason bytes.
 An exact no-op fits its original limit. Unselected labels/reasons and other model units are unchanged.
 
@@ -394,7 +397,7 @@ single/group preview and commit, unchanged original Piece address/revision/conte
 of the refused group/key/capacity by a valid commit. They also cover no-op/same-byte/shrink/Assigned,
 reversed selection/report order, missing target index1 before projection, and a staged shorter reason
 followed by restoration and an alias. The alias repeats neither candidate copy nor resource walk;
-restoration has no net metadata difference. Admitted previews retain one host copy and two per-model
+restoration has no net metadata difference. Admitted previews share the source with0 foreign clones and two per-model
 source walks, plus one walk per actual retained model. Python and OS byte counts independently confirm the exact4/3/6-byte strings.
 
 The new4, original5 Material and3 Measurement-projection cases,33 source resource cases and5 Piece
@@ -435,7 +438,7 @@ with explicit Unknown frees2 entries, then appends1 and returns the original fir
 The refused group/key/capacity and original Piece address/revision remain available/unchanged.
 
 With one extra entry of room, repeated previews and an exact alias fit and return the same first ID,
-with1 host copy/2 per-model source walks, plus one walk per actual retained model. Two distinct appends exceed that bound at the second staged
+with0 foreign host clones/2 per-model source walks, plus one walk per actual retained model. Two distinct appends exceed that bound at the second staged
 member; the complete group rolls back, and later single-member commit still uses the original first
 ID/capacity. Actual target/exhaustion/wrong-Piece anchor tests verify original cause precedence and
 no prospective walk/copy before those failures. Three new and four existing Notch cases,33 source
@@ -478,9 +481,9 @@ records without a new counter or private model walk. Preview keeps its base revi
 does not issue a publication counter; it remains a nonpublishing report.
 
 Three new runtime cases compare against actual rebuilt, validated models. Exact zero/sparse/carry/
-beyond-u128 boundaries admit and retain the existing two host copies for metadata plus final revision.
+beyond-u128 boundaries admit metadata and final revision models sharing the original source.
 A carry exceeding policy preserves the oracle's exact error after the bounded metadata candidate,
-with1 host copy and no final revision reconstruction. Repeating or changing valid metadata under the
+with0 foreign host clones and no final revision reconstruction. Repeating or changing valid metadata under the
 same refused group/key retains that error and original Piece address/revision. The undo scenario
 above preserves issuance and exact replay at the history action bound; replay telemetry is0/0/0.
 
@@ -493,10 +496,10 @@ an enormous model or changing public counter semantics. There is no wrap, clippi
 
 Runtime revision3/forecast1/count-boundary1/source33/structural-root5/context2/D285 branch1/actual-copy1
 pass, with strict affected lint/formatting. All four model projection branches now have focused
-implementation checks. Retained command content .4.3, coupled resource acceptance .4.4 and deeper/full
-verification remain pending. Logical model content does not bound raw ingress, allocator peaks,
+implementation checks. Retained command content .4.3 has focused checks; coupled resource acceptance
+.4.4 and deeper/full verification remain pending. Logical model content does not bound raw ingress, allocator peaks,
 authority/source host algorithm time, numeric/file/decompression/geometry work or physical/release proof.
 
 [Actual command data resource accounting](command-resource-accounting.md) documents owned request
 contexts, aliases, reports, records and current private retained composition separately from proposed
-operation work. Exact prospective authoring admission is implemented; D293 ownership repair/coupled/full verification remain owned.
+operation work. Exact prospective authoring/history admission and D293 ownership repair have focused checks; coupled/full verification remains owned.

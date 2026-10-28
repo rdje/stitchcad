@@ -37,6 +37,24 @@ Hosts supply complete immutable snapshots/semantic validation. Core checks obser
 membership, not arbitrary provider semantics. No self-reference/value/state cache is stored;
 host()/entities() are shared, Debug exposes entity count only.
 
+## Immutable source snapshots
+
+DesignMetadata owns H through a private Arc. Its manual Clone shares the exact source instance and
+copies only the captured entity vector; it does not require or invoke H.clone. Model reconstruction
+can preserve honestly charged source/cache content even when an independent semantic-equal H.clone
+uses a different cache representation. Each logical snapshot still charges the full source content
+and its own census. Shared access must preserve source immutability.
+
+```rust
+let snapshot = metadata.clone();
+assert!(core::ptr::eq(metadata.host(), snapshot.host()));
+```
+
+host() remains a readonly borrowed &H accessor, now an ordinary method rather than const fn.
+No Arc handle, mutable source or replacement method is exposed. Cross-thread sharing requires
+H:Send+Sync; single-thread hosts remain supported. See [retained publication](command-retained-publication.md#immutable-source-ownership)
+for the D293 cache regression and exact publication-bound examples.
+
 ## Public vocabulary and boundary
 
 | API or variant | Meaning |

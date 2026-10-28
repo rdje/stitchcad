@@ -85,8 +85,8 @@ fn exact_successor_bits_admit_zero_sparse_carry_and_beyond_u128_real_models() {
         assert_eq!(accepted.entry().commit().revision(), &next);
         assert_eq!(
             counts(&counters)[0],
-            2,
-            "metadata candidate and admitted final revision copies only"
+            0,
+            "shared source: no foreign H::clone"
         );
         assert_eq!(
             counts(&counters)[1],
@@ -151,8 +151,8 @@ fn carry_quota_matches_actual_model_before_revision_copy_and_keeps_revision_keys
             assert_eq!(control(&error), Some(&Control::Model(expected)));
             assert_eq!(
                 counts(&counters)[0],
-                1,
-                "bounded metadata prepared; no final revision model copy"
+                0,
+                "shared source: no foreign H::clone"
             );
             assert_eq!(
                 counts(&counters)[1],
@@ -258,8 +258,8 @@ fn undo_does_not_lower_maximum_issued_budget_and_exact_replays_survive_next_coun
     assert_eq!(control(&error), Some(&Control::Model(expected)));
     assert_eq!(
         counts(&counters)[0],
-        1,
-        "no final revision reconstruction before refusal"
+        0,
+        "shared source: no foreign H::clone"
     );
     let CommandResult::PieceList(result) = bus
         .execute(&query(design, current, QueryPayload::GetPieceList))

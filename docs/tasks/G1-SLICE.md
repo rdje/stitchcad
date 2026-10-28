@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0471
+## Current leaf acceptance —0472
 
-- [x] ROOT CAUSE: python3 -I -B native history source/order:validated actual target < projection <
-  counters/commands/request/result/reserve < fresh grant < effects; unchanged source owners confirmed rc=0.
-- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_history:::
-  4 passed rc=0:real Undo/unequal Redo oracles, one-short units, maximum1797bits, cancel/retry/revoke/replay.
-- [x] NO REGRESSION: current4/resource-admission4/strict core+test lint/fmt pass rc=0;
-  D293 diagnostic1 reproduces907/908B rc=0; its P0 repair .3.4.3 precedes coupled/deeper/full proof.
+- [x] ROOT CAUSE: cargo test -p sc-measure --test design_inputs_contract command_bus::source_clone_footprint::
+  →0 passed/2 failed before rc=101; same-source address and exact charged-cache bound fail with inline H.
+- [x] ADDRESSED: same native regression →2 passed rc=0 after private Arc ownership;905B refuses880+26,
+  906B/old907B publish then pass current-retained check. Explicit foreign Clone still grows its new cache.
+- [x] NO REGRESSION: affected command25/metadata8/doctest4/strict lint/fmt and native ownership/order
+  pass rc=0; coupled .4.4/deeper/full proof remains pending, zero foreign clones do not count core copies.
 
 ## Goal
 
@@ -913,7 +913,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0464 exact max-issued publication resources; [whole scope/proofs](../history/stitchcad-devnotes-part618.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: bound actual retained audit/replay/history content and unbounded maximum-issued/audit counters
   as well as finite counts; account current/prospective retained composition before allocation/effects.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.1`
@@ -938,34 +938,34 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0469 exact current private retained admission; [whole scope/proofs](../history/stitchcad-devnotes-part623.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact prospective retained publication before growing retained copies/allocations/effects.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.1`
   Status: `done`
   Goal:0470 exact prospective retained authoring; [whole scope/proofs](../history/stitchcad-devnotes-part624.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.2`
   Status: `done`
-  Goal: exact history retained projection before counter/request/command copies or stack/action growth;
-  preserve actual model moves, current operator/original author, replay, fresh authority and cancellation.
-  Own scoped D293 source-clone footprint diagnosis here; its P0 repair .3.4.3 precedes feature acceptance.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native source/order confirms prior history had no prospective
-    check before publication construction; source_clone_footprint1 reproduces D293907/908B rc=0, open.
-  - [x] ROOT CAUSE: native source/order rc=0:actual target is validated before projection; inline H
-    derived Clone can alter charged cache despite semantic equality; D293 .3.4.3 owns repair.
-  - [x] FIX: exact borrowed target/request/accepted projection retains max-issued, moves previous model,
-    omits actual source top, forecasts only sequence/action; no counter/model/record allocation in walk.
-  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::retained_history::
-    →4 passed rc=0;Undo2M+19/2B+84/10,Redo3M+28/3B+352/36,max1797bits/action642;short/cancel/revoke/replay.
-  - [x] NO REGRESSION: current4/resource-admission4 and cargo clippy core lib/measure contract -D warnings,
-    cargo fmt -p sc-core -p sc-measure --check pass rc=0; native original producers unchanged rc=0.
-  - [x] LOCKSTEP: native book publication85 chapters/159 API rows/1532 source/2582 rendered links rc=0;
-    MEMORY/DEV/CHANGELOG/decision/index updated,LIVE adds D293;README correct unchanged;coupled/full pending.
-  Verification: history4/current4/resource-admission4/D293 diagnostic1/lint/fmt/book/source/retention rc=0.
-  Commit: STITCHCAD-G1-0471; next P0 D293 .3.4.3, parent remains in_progress.
+  Goal:0471 exact prospective history/D293 diagnostic; [whole scope/proofs](../history/stitchcad-devnotes-part626.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.3.4.3`
-  Status: `pending`
+  Status: `done`
   Goal:P0 D293 freeze actual immutable source ownership across model snapshots; eliminate foreign Clone
-  footprint assumptions, verify honest resource-charged cache wrapper and preserve public host contracts.
+  footprint assumptions; honest charged-cache regression, borrowed host/semantic contracts and logical counts.
+  Decision:private Arc<H>, manual metadata Clone shares source; host()->&H becomes non-const; cross-thread
+  ownership requires H:Send+Sync, single-thread hosts stay legal. Correct source-copy telemetry claims.
+  - [x] REPRODUCE / ISSUE: original honest plain source diagnostic0471 accepted907B/retained908B;
+    replacement regression2 both fail against inline H rc=101, not a fake source or fabricated total.
+  - [x] ROOT CAUSE: native ownership check confirms inline derived H.clone; custom semantic Eq permits
+    cache differences. cargo test --test design_inputs_contract command_bus::source_clone_footprint:: red2.
+  - [x] FIX: private Arc<H>/exhaustive manual Clone preserves actual source and separately copies census;
+    no mutable/public Arc capability, source shared-access immutability remains an integration obligation.
+  - [x] ADDRESSED: same regression2 passed rc=0;actual source address/logical double charge,905/906/907B
+    witnesses/current check;explicit foreign Clone control still grows cache. Metadata Clone needs no H:Clone.
+  - [x] NO REGRESSION: affected command25/metadata8/doctest4, cargo clippy core lib/measure test -D warnings
+    and cargo fmt --check pass0;native original one-root/consuming candidates unchanged0;source observer control1.
+  - [x] LOCKSTEP: native book85 chapters/159 API rows/1535 source/2587 rendered links rc=0;
+    live docs/decision/index close D293,README correct unchanged;whole0471 retained626,retention1080/2404556B rc=0.
+  Verification: focused above rc=0;host() non-const/cross-thread Send+Sync documented;coupled/full pending.
+  Commit: STITCHCAD-G1-0472; next .4.4 coupled resource acceptance after completed implementation.
 - ID: `G1-SLICE.6.8.2.2.2.2.4.4`
   Status: `pending`
   Goal: close resource feature acceptance after .4.1–.4.3; run deferred integrated resource/bus checks,

@@ -65,7 +65,7 @@ Missing policy refuses with CommandControlError::LimitsNotInstalled; attempted r
 LimitsAlreadyInstalled and retains the original policy. Missing model policy returns
 ModelLimitsNotInstalled; replacement returns ModelLimitsAlreadyInstalled. Missing retained policy returns
 RetainedLimitsNotInstalled; replacement returns RetainedLimitsAlreadyInstalled. Retained configuration
-itself performs no admission; [current retained admission is implemented](command-resource-accounting.md#actual-current-private-retained-composition), [prospective projections](command-retained-publication.md) are implemented; D293 ownership repair remains. Pure input admission
+itself performs no admission; [current retained admission is implemented](command-resource-accounting.md#actual-current-private-retained-composition), [prospective projections](command-retained-publication.md) are implemented; D293 ownership repair has focused checks. Pure input admission
 precedes authority; private model accounting follows exact authority/snapshot binding and precedes
 current validation/cloning. Actual progress, observer methods, cancellation/retry semantics and
 the precise limits of these metadata bounds are documented in [Operation limits and progress](command-operation-control.md).
@@ -566,12 +566,11 @@ input policy, actual pre-effect progress and atomic cooperative cancellation. Th
 46 focused native cases. Submitted Measurement evidence references have their own explicit quota;
 eight bus privacy boundaries and control privacy were previously checked. Full integration remains deferred.
 
-Candidate reconstruction now copies the trusted source host once per actual non-alias member, plus
-once for a new commit's fresh revision. Exact replay and actual Undo/Redo require no reconstruction
-copy. The [resource-control guide](command-operation-control.md#source-host-copy-work) records the
-native copy-count proof and its limits. There are46 focused bus cases; total resource proof remains owned.
+Candidate reconstruction shares the actual immutable source across model snapshots; no foreign
+H.clone is invoked. Core model/census copies still occur. The [resource-control guide](command-operation-control.md#source-host-copy-work)
+records this ownership boundary and focused proof. Coupled/full resource acceptance remains owned.
 
 The [logical dynamic-content meter](command-operation-control.md#logical-dynamic-content-accounting-contract)
 is a separate Design-domain contract with implemented component producers.
-Remaining model/source traversal and runtime model-policy installation stay pending; component demand
-supplies no additional execution or whole-model-validity proof.
+Current/prospective model and retained-state admission have focused checks; coupled/full acceptance
+remains pending. Component demand supplies no additional execution or whole-model-validity proof.
