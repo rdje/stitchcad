@@ -2558,3 +2558,227 @@ fn retained_sewing_source_identity_cannot_alias_an_actual_root_parameter_owner()
         }
     );
 }
+
+#[test]
+fn retained_uniform_feature_acceptance_joins_actual_design_quantities_resources_and_current_sources(
+) {
+    use sc_core::{
+        command::SplitSeamSpan,
+        design::{
+            charge_sewing_graph_resources, DesignResourceCount, DesignResourceLimitError,
+            DesignResourceLimits, DesignResourceLocation, DesignResourceMeter, DesignResourceScope,
+            DesignSewing, DesignSewingAmountSource, DesignSewingDefinition, DesignSewingError,
+        },
+        ontology::{
+            EaseAmount, EdgeAnchor, Param, Rational, SeamSideId, SeamSpanDefinition, SewingError,
+            SewingGraph, SewingGraphDefinition,
+        },
+    };
+    use std::num::{NonZeroU64, NonZeroUsize};
+    for signed in [-1, 1] {
+        let literal = sc_units::Length::from_micrometres(signed).expect("original signed source");
+        let (inputs, original) = with_sewing_graph(fixture(), vec![EaseAmount::Explicit(literal)]);
+        let root = original
+            .spans()
+            .first()
+            .expect("actual original")
+            .retain_ease_source();
+        let a = root.side(SeamSideId::A).range.edge();
+        let b = root.side(SeamSideId::B).range.edge();
+        let third = Param::new(Rational::new(1, 3).expect("third")).expect("valid position");
+        let two_thirds =
+            Param::new(Rational::new(2, 3).expect("two thirds")).expect("valid position");
+        let portions = root
+            .split_at(
+                EdgeAnchor {
+                    edge: a,
+                    param: third,
+                },
+                EdgeAnchor {
+                    edge: b,
+                    param: two_thirds,
+                },
+            )
+            .expect("actual opposite-direction partition");
+        let structure = inputs.structure();
+        let graph = SewingGraph::new(
+            SewingGraphDefinition {
+                id: id(94000),
+                spans: portions
+                    .into_iter()
+                    .zip(97001_u128..)
+                    .map(|(portion, identity)| SeamSpanDefinition {
+                        id: id(identity),
+                        a: portion.side(SeamSideId::A),
+                        b: portion.side(SeamSideId::B),
+                        direction: portion.source().direction(),
+                        ease: portion.into(),
+                        stops: vec![],
+                    })
+                    .collect(),
+            },
+            structure.cut_plan(),
+            structure.pieces().pieces(),
+            &[],
+            structure.topology(),
+        )
+        .expect("actual canonical graph");
+        let state = DesignSewing::new(DesignSewingDefinition {
+            inputs,
+            graph,
+            landmarks: vec![],
+        })
+        .expect("actual complete ownership");
+        let declarations = state
+            .amount_declarations()
+            .expect("complete current sources");
+        let amounts = declarations
+            .iter()
+            .map(|view| {
+                let DesignSewingAmountSource::Explicit(source) = view.source() else {
+                    unreachable!("literal source")
+                };
+                assert_eq!(*source, literal); // Full original declaration;not this target's allocation.
+                let portion = view.portion().expect("exact allocation context");
+                assert!(core::ptr::eq(
+                    source,
+                    match &portion.source().declaration().amount {
+                        EaseAmount::Explicit(value) => value,
+                        _ => unreachable!("same original literal"),
+                    }
+                ));
+                portion
+                    .uniform_explicit_amount()
+                    .expect("coupled original endpoints")
+            })
+            .collect::<Vec<_>>();
+        assert_eq!(
+            amounts
+                .iter()
+                .map(|amount| amount.as_micrometres())
+                .collect::<Vec<_>>(),
+            vec![0, signed]
+        );
+        assert_eq!(
+            amounts
+                .first()
+                .expect("first")
+                .checked_add(*amounts.get(1).expect("second")),
+            Ok(literal)
+        );
+        let request = SplitSeamSpan::new(
+            id(97002),
+            EdgeAnchor {
+                edge: a,
+                param: two_thirds,
+            },
+            EdgeAnchor {
+                edge: b,
+                param: third,
+            },
+        );
+        let view = request
+            .bind_source_cuts(state.graph())
+            .expect("actual retained target")
+            .uniform_explicit_ease()
+            .expect("original cumulative allocation");
+        assert_eq!(view.parent_amount(), literal);
+        assert_eq!(
+            (view.first_amount(), view.second_amount()),
+            (literal, sc_units::Length::ZERO)
+        );
+        assert_eq!(view.cut_progress(), two_thirds.as_rational());
+        assert!(core::ptr::eq(
+            view.original_source().expect("actual original"),
+            state
+                .graph()
+                .ease_sources()
+                .next()
+                .expect("one owned source")
+        ));
+        let limits = |entries| {
+            DesignResourceLimits::new(
+                NonZeroUsize::new(entries).expect("positive entry policy"),
+                NonZeroUsize::new(1).expect("positive text policy"),
+                NonZeroU64::new(1).expect("positive counter policy"),
+            )
+        };
+        let mut exact = DesignResourceMeter::new(limits(3));
+        charge_sewing_graph_resources(state.graph(), &mut exact)
+            .expect("two spans plus one actual source");
+        assert_eq!(
+            exact
+                .finish()
+                .expect("exact graph budget")
+                .collection_entries(),
+            3
+        );
+        let mut limited = DesignResourceMeter::new(limits(2));
+        let refusal = DesignResourceLimitError::Count {
+            unit: DesignResourceCount::CollectionEntries,
+            maximum: 2,
+            consumed: 2,
+            requested: 1,
+            location: DesignResourceLocation {
+                scope: DesignResourceScope::Sewing,
+                owner: Some(id(94000)),
+                field: "sewing.ease_sources",
+                index: None,
+            },
+        };
+        assert_eq!(
+            charge_sewing_graph_resources(state.graph(), &mut limited),
+            Err(refusal)
+        );
+        assert_eq!(limited.finish(), Err(refusal));
+        let mut changed = state.inputs().definition().clone();
+        let mut structure = changed.structure.definition().clone();
+        structure.cut_plan = CutPlan::new(
+            structure
+                .cut_plan
+                .copies()
+                .iter()
+                .map(|copy| {
+                    let mut definition = *copy.definition();
+                    if definition.id == id(96000) {
+                        definition.id = id(96010);
+                    }
+                    definition
+                })
+                .collect(),
+            structure.pieces.pieces(),
+        )
+        .expect("actual replacement physical copy");
+        changed.structure = DesignStructure::new(structure)
+            .expect("valid current root with held sewing references");
+        let changed_inputs = DesignInputs::new(changed).expect("actual current metadata owner");
+        let held = DesignSewing::new(DesignSewingDefinition {
+            inputs: changed_inputs,
+            graph: state.graph().clone(),
+            landmarks: vec![],
+        })
+        .expect("preserve held source evidence");
+        assert_eq!(
+            held.validate_current(),
+            Err(DesignSewingError::Graph(Box::new(
+                SewingError::MissingCopy {
+                    span: id(97001),
+                    side: SeamSideId::A,
+                    copy: id(96000)
+                }
+            )))
+        );
+        assert_eq!(
+            held.graph()
+                .spans()
+                .get(1)
+                .expect("same held target")
+                .definition()
+                .ease
+                .portion()
+                .expect("held portion")
+                .uniform_explicit_amount(),
+            Ok(literal)
+        );
+    }
+}

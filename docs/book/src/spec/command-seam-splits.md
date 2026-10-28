@@ -353,3 +353,19 @@ bounded rational representation;the original range/position and UnitError remain
 Formula/profile amounts and weighted/notch-bounded distributions retain actual eligibility refusals.
 No missing value is fabricated. A command wraps those native source/portion causes with the actual
 target identity,without replacing their original source identity,parameters or concrete numeric cause.
+
+## Scoped retained-source acceptance
+
+A native acceptance case joins the actual Design owner,canonical sewing graph,amount declarations,
+retained command view and graph resource meter for positive and negative original sources. Source
+metadata can lend the same original literal to several target views;their portion queries determine
+the allocations. The case checks initial[0,±1],then the remainder's[±1,0],without replacing the root.
+
+Its graph-only budget admits two spans and one original source;the lower budget refuses the source
+collection charge with its original location. Replacing a real physical-copy identity preserves the
+held declaration/quantity evidence while complete current validation refuses the original missing
+copy. Quantity availability therefore supplies no current-source or effect authority.
+
+The retained-source component is implemented with focused native/compiler/publication checks.
+Nonuniform/notch context,semantic stops,live lineage and paired bus effects retain their owners.
+Broader paired acceptance follows implementation;no full CI,physical or release verdict is inferred.

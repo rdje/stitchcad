@@ -14,7 +14,7 @@ use sc_units::Length;
 /// Exact authored amount source, without evaluating a formula or resolving a Factory Profile.
 #[derive(Clone, Copy)]
 pub enum DesignSewingAmountSource<'a> {
-    /// Original signed value borrowed from the actual span.
+    /// Full original signed literal;retained target allocation also needs its portion context.
     Explicit(&'a Length),
     /// Actual Design parameter and its current canonical Length-kind declaration.
     Formula {
@@ -75,7 +75,8 @@ impl<'a> DesignSewingAmount<'a> {
     pub const fn canonical_inputs(self) -> &'a CanonicalInputs {
         self.canonical
     }
-    /// Exact explicit/formula/logical-profile source; no fallback values.
+    /// Exact full original explicit/formula/logical-profile source;no fallback values.
+    /// A retained target carries its separate portion mapping rather than a child literal.
     #[must_use]
     pub const fn source(self) -> DesignSewingAmountSource<'a> {
         self.source
@@ -145,7 +146,9 @@ impl<H: DesignReferenceHost> DesignInputs<H> {
     ///
     /// Formula identities select actual Design parameters, then require Length kind through their
     /// original current canonical bindings. Unknown/Derived states are neither read nor evaluated.
-    /// Profile references remain logical and deferred to G4. This checks metadata only, not the
+    /// Retained targets lend their full original declaration plus exact portion mapping,not an
+    /// independently authored or resolved child quantity. Profile references remain deferred to G4.
+    /// This checks metadata only, not the
     /// graph's copy/range/stop context, global graph ids, sewing geometry or numeric amount readiness.
     ///
     /// # Errors

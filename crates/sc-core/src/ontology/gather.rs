@@ -29,7 +29,7 @@ pub struct GatherDefinition {
 /// Borrowed canonical intake/allocation source, retaining the signed A-minus-B convention.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct GatherIntakeSource<'a> {
-    /// Existing span declaration, never an independently authored/cached gather distribution.
+    /// Full original source declaration;retained child allocation also needs the portion mapping.
     pub declaration: &'a DeclaredEase,
     /// Gathering A interprets A-minus-B directly; gathering B interprets its negation.
     pub gathered_side: SeamSideId,

@@ -462,8 +462,8 @@ let views = sewing.gather_declarations(&constructions)?;
 ```
 
 Whole-current sewing root/landmarks/graph/amounts precede all construction sources, even without
-Gathers. Views borrow authored Gather/position/side/span DeclaredEase, DesignSewingAmount and canonical
-owner. closing_operation() stays logical despite numeric-id matches; Debug shows side only.
+Gathers. Views borrow authored Gather/position/side,original source declaration and portion context,
+DesignSewingAmount and canonical owner. closing_operation() stays logical despite numeric-id matches; Debug shows side only.
 
 A-minus-B remains signed: +5 mm permits gathering A; −3 mm permits B. No negated amount/allocation
 copy, fallback or resolved sign is produced. Derived/formula and Profile origins remain unread/

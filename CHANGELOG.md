@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0493 — conserve retained quantities through original-root boundaries
+## STITCHCAD-G1-0494 — close scoped actual Design retained-source acceptance
 
-- Add uniform explicit original-source cumulative/interval and retained portion quantities. Check both directed endpoints;retain actual eligibility/progress/correspondence/numeric refusals and original standard sources. Share the existing boundary rounding kernel.
-- Retained command views now keep original source/literal/domain separately from the target allocation. Native both-order nested portions/command views give[0,±1,0];sewing46/docs4/strict scoped Clippy/fmt pass.35 independent Fraction rows check direct/retained quantities in both directions,producer bytes exact.
-- Book88/174/1560/2660/glossary0 pass;whole0492 retained647,retention1101 passes. LIVE G1 6/18 unchanged. Scoped retained acceptance next;D301 nonuniform/context/stops/lineage/paired execution and full acceptance remain owned.
+- Join actual Design ownership,canonical retained source metadata,command quantities,graph resource limits and complete current-copy validation. Selected native1 passes with±1 roots;strict measure-target Clippy/fmt pass. Clarify original declarations versus target allocations in API/book prose.
+- Native checks preserve initial[0,±1],remainder[±1,0],root pointer/global progress,meter3/limit2 original refusal and actual MissingCopy after replacement;held quantities remain inspectable. No paired execution/physical/release approval follows.
+- Book88/174/1560/2661/glossary0 pass;whole0493 retained648,retention1102 passes. Retained .3 closes with focused acceptance;D301 nonuniform/context,stops,lineage/effects/full paired acceptance remain owned. LIVE G1 6/18 unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

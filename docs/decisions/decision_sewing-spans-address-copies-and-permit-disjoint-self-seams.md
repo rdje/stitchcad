@@ -137,3 +137,14 @@ Fraction rows in both directions pass;source eligibility/frame/bounds/correspond
 remain actual,including zero-valued bounds and genuine normalization overflow. The borrowed view's
 source pointer and global progress remain original;privacy/lifetime controls stay genuine. Scoped
 retained acceptance follows;symbolic/nonuniform/context,stops,lineage and paired effects remain D301 owners.
+
+## Actual Design retained acceptance0494
+
+answers: "does a usable retained quantity imply the complete Design has current sewing sources?"
+
+No. Focused native actual Design acceptance passes with±1 roots,canonical source/metadata/command
+joins and graph-only resource3/limit2 original refusal. Replacing copy96000 with96010 preserves held
+quantities while complete current validation refuses the original MissingCopy. Full source metadata
+may be shared by several target views;their portion mappings determine allocation,not independent
+child literals. Retained .3 closes with focused verification,not full paired/physical/release proof.
+Nonuniform/context,stops,lineage/effects and full paired acceptance remain D301 P1 owners.
