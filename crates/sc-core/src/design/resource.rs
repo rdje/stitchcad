@@ -16,6 +16,7 @@ mod sewing;
 mod structure;
 mod topology;
 pub use canonical::charge_canonical_input_resources;
+pub(crate) use canonical::charge_length_declaration_resources;
 pub use composition::{
     charge_design_garment_resources, charge_design_input_resources, charge_design_sewing_resources,
 };
@@ -69,6 +70,8 @@ pub enum DesignResourceScope {
     Garment,
     /// Actual immutable higher metadata source host.
     SourceHost,
+    /// Typed command inputs, reports and retained execution records, separate from model content.
+    CommandState,
 }
 /// Producer-declared static field path and original authored position, without copied private text.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

@@ -11,6 +11,17 @@ pub struct CommandSnapshotContext {
     expected_revision: DesignRevision,
 }
 impl CommandSnapshotContext {
+    pub(crate) fn resource_revision(&self) -> &DesignRevision {
+        let Self {
+            design,
+            actor,
+            expected_revision,
+        } = self;
+        super::resource::fixed(design);
+        super::resource::fixed(actor);
+        expected_revision
+    }
+
     /// Preserve the explicit target, actor/principal claim and exact requested snapshot revision.
     /// Constructing a context does not resolve the Design, authenticate an actor or pin live storage.
     #[must_use]

@@ -16,6 +16,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Operation limits and progress contracts](spec/command-operation-control.md)
 - [Actual model resource accounting](spec/model-resource-accounting.md)
 - [Actual source resource accounting](spec/source-resource-accounting.md)
+- [Actual command data resource accounting](spec/command-resource-accounting.md)
 - [Current-reference repairs](spec/ontology-implementation.md)
 - [Draft and complete chart coverage](spec/size-chart-collections.md)
 - [Missing formula values by origin](annexes/formula-runtime-validation.md#missing-values-by-origin)

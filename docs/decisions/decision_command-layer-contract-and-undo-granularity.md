@@ -161,3 +161,17 @@ no final revision reconstruction, original revision/key/capacity. Max3/undo0 sti
 cap2; exact authoring/history replays0/0/0. Offline num-bigint0.4.6 public docs verified after web fetch
 failed. Whole0463 and whole0388/0389 lesson616/617 retain4 Git spans, freeing DEV from401-line overflow.
 All model projections implemented with focused checks; retained .4.3/coupled/deeper/full proof remains.
+
+## Exact owned mutation-request resources0465
+
+answers: "is one owned Material reason multiplied by selected Pieces, and do retry aliases own data?"
+
+Typed group accounting charges common/member revision copies, member/selection/Known-evidence vectors
+and one stored reason per payload. Exact aliases own another context/payload copy; runtime dedup does
+not erase those fields. Declared operation work8 differs from one owned4-byte reason for two Pieces.
+CommandState locations keep actual containing group/member position, not a promoted referenced
+canonical ID. Exhaustive private owner views/Copy guards and shared actual declaration walker cover
+all five variants without model/current/authority/numeric callbacks. New request4/source33/canonical6/
+strict lint/fmt pass:12/4/14,prefix14/6/15, fixed3/0/0, Unknown1/0/0 and original first witnesses.
+Whole0464 retained618; current constructors/bus code byte-exact. Bounded command-resource chapter
+owns examples; report/record/private retained/runtime policy and coupled/deeper/full work remains.

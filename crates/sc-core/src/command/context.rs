@@ -131,6 +131,21 @@ pub struct CommandMutationContext {
 }
 
 impl CommandMutationContext {
+    pub(crate) fn resource_revision(&self) -> &DesignRevision {
+        let Self {
+            design,
+            actor,
+            expected_revision,
+            idempotency_key,
+            group,
+        } = self;
+        super::resource::fixed(design);
+        super::resource::fixed(actor);
+        super::resource::fixed(idempotency_key);
+        super::resource::fixed(group);
+        expected_revision
+    }
+
     /// Preserve all declared metadata. Revision and retry key are mandatory typed arguments.
     /// None for group requests a standalone command; execution still makes it a group of one.
     #[must_use]

@@ -84,6 +84,7 @@ pub use parameters::{
     DesignParameters,
 };
 pub use pockets::DesignPocketOpeningDeclaration;
+pub(crate) use resource::charge_length_declaration_resources;
 pub use resource::{
     charge_canonical_input_resources, charge_closure_inventory_resources,
     charge_construction_inventory_resources, charge_cut_plan_resources,

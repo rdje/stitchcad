@@ -45,6 +45,11 @@ impl fmt::Display for PieceSelectionError {
 impl std::error::Error for PieceSelectionError {}
 
 impl PieceSelection {
+    pub(crate) fn resource_pieces(&self) -> &[EntityId] {
+        let Self(pieces) = self;
+        pieces
+    }
+
     /// Validate inventory without sorting, silently deduplicating or looking up a registry.
     /// # Errors
     /// Returns NoPieces or the first actual DuplicatePiece in authored order.
@@ -81,6 +86,14 @@ pub struct ChangeMeasurement {
 }
 
 impl ChangeMeasurement {
+    pub(crate) fn resource_parts(&self) -> (EntityId, &LengthDeclaration) {
+        let Self {
+            measurement,
+            replacement,
+        } = self;
+        (*measurement, replacement)
+    }
+
     /// Preserve the actual measurement target and structurally validated canonical replacement.
     /// No numeric value is extracted from Unknown or Derived state.
     #[must_use]
@@ -136,6 +149,11 @@ impl fmt::Display for AssignMaterialError {
 impl std::error::Error for AssignMaterialError {}
 
 impl AssignMaterial {
+    pub(crate) fn resource_parts(&self) -> (&PieceSelection, &MaterialAssignment) {
+        let Self { pieces, material } = self;
+        (pieces, material)
+    }
+
     /// Reuse the same local reason invariant as canonical Piece construction.
     /// # Errors
     /// Returns the original blank unresolved reason. Assigned material identity is not looked up.
@@ -203,6 +221,11 @@ pub struct CommandMutation {
 }
 
 impl CommandMutation {
+    pub(crate) fn resource_parts(&self) -> (&CommandMutationContext, &MutationPayload) {
+        let Self { context, payload } = self;
+        (context, payload)
+    }
+
     /// Bind the supplied context and canonical intent without authenticating or executing it.
     #[must_use]
     pub const fn new(context: CommandMutationContext, payload: MutationPayload) -> Self {

@@ -3,12 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — exact publication revision resources before successor construction
+## _(2026-10-28 UTC)_ — exact readonly owned mutation-request resources
 
-0464 .6.8.2.2.2.2.4.2.4 derives successor magnitude from pinned public bits/trailing_ones, before successor/revision-model construction and from actual independent max-issued counter. Exact current candidate fields retain
-their own counts; no old+new revision sum. Runtime revision3/forecast1/count-boundary1/source33/structure5/context2/D2851/copy1/strict lint/fmt pass. Actual model oracle: zero/sparse/carry/u128MAX, exact failure/no final
-revision copy, max3/undo0 still forecasts4/3bits under cap2; exact replays0/0/0. Count beyond u64 policy uses exact chunks/no overflow/counter cap. Normal offline num-bigint0.4.6 docs verified API after web fetch failed.
-Promotion:indexed command-layer decision. Whole0463 retained616; retained/deeper/full proof pending.
+0465 .6.8.2.2.2.2.4.3.1 adds exact readonly typed group/context/all5 payload resources in CommandState scope. Exhaustive private views and Copy guards cover actual owned fields; aliases own duplicate
+payloads/contexts. Shared declaration snapshot helper preserves canonical resource behavior. New request4/source33/canonical-filter6/strict lint/fmt pass:12/4/14, prefix14/6/15, exact original
+group/member failures, fixed3/0/0 and Unknown1/0/0; no source/model callbacks. One owned reason4 differs from declared operation work8 for two selected Pieces. Promotion:indexed command-layer
+decision. Whole0464 retained618; report/record/private retained composition and runtime policy/enforcement pending. New bounded command-resource book chapter owns remaining examples.
+[Whole0464 publication lesson](docs/history/stitchcad-devnotes-part618.md) retains exact carry/undo/API/retirement proof.
 [Whole0463 Notch lesson](docs/history/stitchcad-devnotes-part616.md) retains exact peek/precedence/rollback proof.
 [Whole0462 Material lesson](docs/history/stitchcad-devnotes-part615.md) retains exact Unicode/selected/oracle proof.
 [Whole0461 Measurement lesson](docs/history/stitchcad-devnotes-part614.md) retains exact evidence/oracle/fixture correction proof.

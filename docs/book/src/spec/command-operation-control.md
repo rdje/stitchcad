@@ -494,3 +494,7 @@ pass, with strict affected lint/formatting. All four model projection branches n
 implementation checks. Retained command content .4.3, coupled resource acceptance .4.4 and deeper/full
 verification remain pending. Logical model content does not bound raw ingress, allocator peaks,
 authority/source host algorithm time, numeric/file/decompression/geometry work or physical/release proof.
+
+[Actual command data resource accounting](command-resource-accounting.md) documents owned request
+contexts, aliases, vectors and text separately from proposed operation work. Request readers are
+implemented; actual report/retained-state composition and runtime retained policy remain owned.

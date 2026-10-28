@@ -167,6 +167,11 @@ pub enum ValueProvenanceValidation {
     DeferredToDesignAndG4,
 }
 impl LengthDeclaration {
+    pub(crate) fn resource_definition(&self) -> &LengthDeclarationDefinition {
+        let Self { definition } = self;
+        definition
+    }
+
     /// Validate the authored state's structural evidence inventory; no source truth is inferred.
     /// # Errors
     /// Returns [`LengthDeclarationError`] for missing or duplicate known-state evidence references.

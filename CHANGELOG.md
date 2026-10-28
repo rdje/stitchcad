@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0464 — admit exact next publication revision from maximum issued counter
+## STITCHCAD-G1-0465 — account actual typed mutation-request resources without runtime effects
 
-- Forecast magnitude through pinned public integer API; charge complete resulting model before successor/revision-model construction.
-- Use independent maximum-issued revision after undo; retain metadata/effect/replay causes and original model counter location.
-- Revision3/forecast1/count-boundary1/source33/structure5/context2/D2851/copy1/strict lint/fmt pass; actual model oracle and exhausted-counter replays.
-- Preserve beyond-u128 arithmetic/no overflow/counter cap; whole0463/0388–0389 lessons616/617 retained; model projections implemented, retained/full proof pending.
+- Charge common/member revision copies, actual member/selection/evidence vectors and one owned unresolved reason per payload; aliases remain owned copies.
+- Exhaustively borrow private contexts/groups/payloads; fixed unsupported intents add no invented data and canonical declaration visitor is shared.
+- Request4/source33/canonical-filter6/strict lint/fmt pass:12/4/14, prefix14/6/15 and exact original first witnesses; source/model callbacks zero.
+- Retain whole0464 in618; add bounded command-resource chapter; report/record/private retained/runtime admission work remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

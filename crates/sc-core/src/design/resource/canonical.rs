@@ -48,28 +48,15 @@ pub(super) fn charge_canonical_with_length(
         let declaration = replacement
             .filter(|candidate| candidate.id() == declaration.id())
             .unwrap_or(declaration);
-        let LengthDeclarationDefinition { id, source, state } = declaration.definition();
-        fixed_value(source);
-        match state {
-            LengthState::Known { value, evidence } => {
-                fixed_value(value);
-                fixed_slice(evidence);
-                sink.charge_entries(
-                    evidence.len(),
-                    location("canonical.lengths.evidence", Some(index), Some(*id)),
-                )?;
-            }
-            LengthState::Assumed { value, assumption } => {
-                fixed_value(value);
-                fixed_value(assumption);
-            }
-            LengthState::Preference { value, provenance } => {
-                fixed_value(value);
-                fixed_value(provenance);
-            }
-            LengthState::Unknown { observation } => fixed_value(observation),
-            LengthState::Derived { formula } => fixed_value(formula),
-        }
+        charge_length_declaration_resources(
+            declaration,
+            location(
+                "canonical.lengths.evidence",
+                Some(index),
+                Some(declaration.id()),
+            ),
+            sink,
+        )?;
     }
     sink.charge_entries(scalars.len(), location("canonical.scalars", None, None))?;
     for (index, declaration) in scalars.iter().enumerate() {
@@ -101,6 +88,37 @@ pub(super) fn charge_canonical_with_length(
             ScalarInputState::Unknown { observation } => fixed_value(observation),
             ScalarInputState::Derived { formula } => fixed_value(formula),
         }
+    }
+    Ok(())
+}
+
+// Shared actual declaration snapshot accounting. The caller supplies its static original containing
+// scope/location; no model/source lookup, numerical availability or ownership reconstruction occurs.
+pub(crate) fn charge_length_declaration_resources(
+    declaration: &LengthDeclaration,
+    location: DesignResourceLocation,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    sink.charge_entries(0, location)?;
+    let LengthDeclarationDefinition { id, source, state } = declaration.resource_definition();
+    fixed_value(id);
+    fixed_value(source);
+    match state {
+        LengthState::Known { value, evidence } => {
+            fixed_value(value);
+            fixed_slice(evidence);
+            sink.charge_entries(evidence.len(), location)?;
+        }
+        LengthState::Assumed { value, assumption } => {
+            fixed_value(value);
+            fixed_value(assumption);
+        }
+        LengthState::Preference { value, provenance } => {
+            fixed_value(value);
+            fixed_value(provenance);
+        }
+        LengthState::Unknown { observation } => fixed_value(observation),
+        LengthState::Derived { formula } => fixed_value(formula),
     }
     Ok(())
 }

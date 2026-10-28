@@ -82,6 +82,17 @@ pub struct CommandMutationGroup {
     mutations: Vec<CommandMutation>,
 }
 impl CommandMutationGroup {
+    pub(crate) fn resource_parts(
+        &self,
+    ) -> (CommandGroupId, &CommandSnapshotContext, &[CommandMutation]) {
+        let Self {
+            id,
+            context,
+            mutations,
+        } = self;
+        (*id, context, mutations)
+    }
+
     /// Validate original request consistency without sorting, deduplication or context rewriting.
     /// Membership, Design, actor then revision are checked per command in submitted order. Retry
     /// keys remain untouched; their scope/payload equality/replay policy belongs to execution.

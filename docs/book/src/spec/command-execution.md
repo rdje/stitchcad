@@ -43,6 +43,9 @@ authored inventory does not validate those sources or certify geometry, envelope
 readiness. Individual/group metadata previews and commits are described below. Other handlers,
 persistence and runtime/adapter parity remain separately owned implementation work.
 
+[Actual command data accounting](command-resource-accounting.md) measures owned request fields,
+including duplicated contexts/aliases. Retained-state enforcement remains separate from model admission.
+
 ## Trusted metadata operation policy
 
 Before costly metadata previews, commits or history traversal, the host installs explicit positive
