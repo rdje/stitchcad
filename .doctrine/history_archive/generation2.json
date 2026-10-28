@@ -1,5 +1,7 @@
 {
   "version": 2,
-  "windows": [],
+  "windows": [
+    ".doctrine/history_archive/window22.json"
+  ],
   "legacy_catalogs": []
 }

@@ -174,3 +174,15 @@ process-interruption recovery and full real topology remain exact. Latest full-t
 measurement is122716160 RSS bytes/0.320178s; this stays a scoped regression observation. The capacity
 activity is complete; G1 garment input work resumes. No full repository CI, deep producer-authority,
 other-platform or power-loss verdict follows this component gate.
+
+## Active raw-boundary capture0450
+
+answers: "when did the active group actually require capture after D284?"
+
+After0449, native census found64 raw files in active generation2 and21 sealed catalogs:85 aggregate.
+The active group's empty window list rules out empty seal. Published append/install captured all64
+committed files into window22. Native source proof reports64 byte-identical files/zero missing-extra;
+independent public materializations match1055 files/3259088 bytes by size/SHA-256. Retained backup98
+files remains target/history-capture-0450/installation/backup. Post-capture working Markdown22, then23
+with whole0449 record602; no capacity/policy or power-loss guarantee changed. Product resource work
+resumes at .6.8.2.2.2.2.2.4.3; full integration acceptance stays separately owned.

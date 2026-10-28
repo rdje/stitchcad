@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0449 — account for held Pocket, notion and Closure resources
+## STITCHCAD-G1-0450 — capture active64 history records before continuing garment resources
 
-- Actual collection/component/instance producers preserve all source/copy and logical size/operation intent.
-- Resource32 (prior28/actual4), strict selected lint/fmt pass; exact29/0/0, refusal locations and deleted held sources.
-- Bounded model-accounting book page preserves prior sections byte-exact; stale policy example comment fixed.
-- Whole0448 scope/lesson/ledger retained601; active archive64 requires capture before the next retention record.
+- Published source-pinned append/install captures all64 raw records into window22; old trees retained.
+- Source proof64 exact, public before/after oracle1055 files/3259088 bytes identical; zero lost/extra/changed.
+- Working Markdown85→22, then23 with whole0449 record602; no budget, code or submodule-pin change.
+- Book, pointer and indexed generation decision aligned; layers/Hems resource slice resumes next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

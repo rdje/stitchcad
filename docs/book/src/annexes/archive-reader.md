@@ -142,3 +142,12 @@ a group before retirement, carrying unsealed drafts byte-exact. Empty seals and 
 workspace creation. Source proof compares the whole same-revision cohort across groups/windows.
 V3 accepts one record; v2 retains its one-window/two-record rules. Catalog headings navigate; manifests
 give full identities. Packing grants no capacity: stop before an oversized retirement.
+
+## Capture at the actual active-generation boundary
+
+The0450 local capture used append after the active generation reached64 raw records. Its existing
+window list was empty, so an empty seal would have refused. window22 captured all64 committed files
+with no budget change. The source proof found64 byte-identical files and no missing/extra entries.
+Independent before/after materializations matched all1055 logical records and3259088 bytes by size
+and SHA-256. The installer retained original trees for explicit recovery; this is process-interruption
+protection, with no new power-loss claim. A later raw record remains in the active generation as usual.

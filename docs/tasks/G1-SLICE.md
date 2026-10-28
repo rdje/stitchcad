@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0449
+## Current leaf acceptance —0450
 
-- [x] ROOT CAUSE: python3 -I -B native garment schema assertions print Pocket/component, notion and
-  Closure/instance vectors plus fixed notion payload rc=0; account for actual owned content without resolution.
-- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:32 passed rc=0; four actual
-  garment cases verify29/0/0, all supported Closure intents, unused notions and exact owner/index refusals.
-- [x] NO REGRESSION: strict selected Clippy/fmt rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs
-  crates/sc-core/src/command rc=0. Prior28 cases pass; no command/source/current-validation path changed.
+- [x] ROOT CAUSE: python3 -I -B native working census prints64 active raw/21 sealed catalogs=85 total
+  and empty generation2 windows rc=0; active64 requires append, while empty seal would refuse.
+- [x] ADDRESSED: v2_install.py install target/history-capture-0450 prints exact logical/source retention
+  verified, originals retained rc=0; public prove-source window22 gives64 byte-identical/zero missing-extra.
+- [x] NO REGRESSION: independent public before/after materializations match1055 files/3259088 bytes
+  by OS size/SHA-256 rc=0; exact name sets match. No product source code or submodule pin changed.
 
 ## Goal
 
@@ -844,42 +844,33 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0448 actual held sewing resources; [whole scope/proofs](../history/stitchcad-devnotes-part601.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.2`
   Status: `done`
-  Goal:0449 actual Pocket/component, notion placement and Closure/instance resource producers.
-  Exhaustive held private views/Copy guards preserve original source/copy, opening, size/operation and
-  stored derived Count intent without lookup, rebirth, repair, physical expansion or value resolution.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native garment schema assertions print actual Pocket/component,
-    notion and Closure/instance vectors plus fixed notion payload rc=0. Each owned collection counts;
-    placement ids, supported kind/declaration/profile payloads and derived Count are fixed metadata.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part601.md:
-    3 exact Git spans rc=0; whole0448 scope/lesson/ledger retains its garment-pending boundary.
-    The component reference grew to31416 bytes; preserve full sections while creating bounded room.
-  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
-    precharge each actual vector before traversal; private owner/definition matches and Copy guards
-    expose future dynamic payload changes. No registry/model/source authority or current-context lookup.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:32 passed rc=0; four new cases
-    verify2 Pockets/3 components/13 notions/5 Closures/6 instances=29/0/0, all supported Closure kinds
-    and zipper length origins, unused notions, exact0+2/3+2/5+13/18+5/23+2/25+1 owner/index refusals,
-    unchanged success/refusal state, real deleted-source accounting despite current notion refusal,
-    empty inventories and first-error preservation through all producers including a zero charge.
-  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
-    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior28 resource cases remain passing.
-    Whole prior book component interval preserves bytes16966–30757 (13791 bytes), sha256:
-    c4a66359e85c4c881b43eb582e28d2533346a5dd6c5bc91f82808cebeefdae91 from32f2a8b.
-  - [x] LOCKSTEP: whole0448 proof601 has3 exact Git spans rc=0; book/pointer/frontier/lesson/decision
-    align. Owned small doc defect: actual policy constructor has four positive maxima but its example
-    comment said three; corrected in operation guide. Promotion: indexed command-layer decision.
-    Layers .3/construction .4/root .2.5/source .3/runtime .4 and deeper/full acceptance remain owned.
-  Native book publication:82 chapters/159 scoped API rows/1485 source links/2493 rendered links rc=0;
-  maintained-reference83 files/18434 lines/1285951 bytes rc=0. Initial publication refused missing topic
-  index entry; added exact page link and rechecked successfully. Map/diff checks rc=0. Archive1055
-  logical records/85 aggregate working Markdown rc=0; active64 requires next owned maintenance.
-  Cargo invocations use scripts/local_environment.py. No binding, physical, whole-model or RSS/time proof.
+  Goal:0449 actual held garment resources; [whole scope/proofs](../history/stitchcad-devnotes-part602.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.retention`
-  Status: `pending`
-  Goal: maintain the actual active-generation64 raw-record boundary before next product retirement.
-  Use published source-pinned capture/install, preserve every logical byte and old tree recovery copy;
-  verify native whole-cohort/source receipts and public retrieval. No submodule internals, budget raise
-  or aggregate-count confusion. Commit clean before resuming layers/Hems .4.3.
+  Status: `done`
+  Goal:0450 capture the actual active-generation64 raw-record boundary before next product retirement.
+  Published v3 append/install preserves every logical byte and original tree; no budget/pin changes.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native glob census prints64 raw/21 catalogs=85 aggregate and
+    empty active generation2 window list rc=0. Another raw record would exceed64/group; total85 alone
+    is not pressure. Empty seal refuses by public contract, so use source-pinned append.
+  - [x] ROOT CAUSE (WHY + WHERE): v2_migration.py append target/history-capture-0450 --owner
+    G1-SLICE.6.8.2.2.2.2.2.4.retention rc=0; report source cbad2ff, packed_records64,new_windows window22,
+    logical1055,candidate22 working Markdown. Published archive integration docs/CLI determine operation.
+  - [x] FIX: v2_install.py install target/history-capture-0450:exact logical/source retention verified;
+    original trees retained for recovery rc=0. Native recovery backup census98 files rc=0 under
+    target/history-capture-0450/installation/backup; preserve this tree and prior0392g installation.
+  - [x] ADDRESSED: history_archive.sh prove-source window22:64 byte-identical full files/0 missing-extra
+    rc=0; independent public materialize before/after plus OS size/SHA-256 census:1055 equal logical
+    files/3259088 bytes, exact name sets/zero changed rc=0. Live captured raw residue0/22 catalogs rc=0.
+  - [x] NO REGRESSION: history_archive.sh verify-retention after install:1055 logical/22 working Markdown
+    rc=0; old sealed generation1 bytes stay pinned. No product source/submodule-pin or policy-bound edit.
+    This scoped real capture is no broad repository/platform/power-loss or feature-completion verdict.
+  - [x] LOCKSTEP: transition_receipts.py --record docs/history/stitchcad-devnotes-part602.md:3 exact Git
+    spans rc=0; whole0449 scope/lesson/ledger retained after capacity released. Retention1056 logical/
+    23 working Markdown/58650 decoded lines/4423088 decoded bytes/2253900 resident bytes rc=0.
+    Pointer/frontier/book/lesson/decision align; promotion to indexed history-generation decision.
+  Book build/native publication:82 chapters/159 scoped API rows/1485 source links/2494 rendered links
+  rc=0; maintained-reference83 files/18443 lines/1286608 bytes rc=0. Map/diff checks rc=0.
+  Next .4.3 layers/Hems, then .4.4 constructions/.2.5 root/source .3/runtime .4; deeper/full proof deferred.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.3`
   Status: `pending`
   Goal: actual Facing/modelled-Lining/Interfacing and Hem-family resource accounting; preserve deferred

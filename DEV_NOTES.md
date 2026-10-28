@@ -3,16 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual garment composition and closure resources
+## _(2026-10-28 UTC)_ — capture actual active raw-record boundary
 
-0449 .6.8.2.2.2.2.2.4.2 precharges actual Pocket/component, notion and Closure/instance vectors.
-Exhaustive private views/Copy guards retain source/copy/anchor and logical size/operation intent;
-no rebirth, resolution, physical expansion or derived length. Resource32 (prior28/actual4)/strict
-lint/fmt pass:29/0/0, exact cumulative owner/index witnesses, unused notions and real deleted-source
-content unchanged. Whole0448 retained601 with3 native Git spans. Book component sections moved
-byte-exact to a bounded reference; stale three-maxima comment corrected to four. Promotion: indexed
-command-layer decision. Next active64 archive maintenance precedes layers/Hems; root/source/runtime/
-deeper/full work stays owned. Counts grant no binding, physical, whole-model or RSS/time certificate.
+0450 .6.8.2.2.2.2.2.4.retention uses published append/install after active64, not aggregate85.
+Empty active windows required append rather than empty seal. window22 retains64 exact committed
+files; independent public materializations match1055 files/3259088 bytes by size/SHA-256. Installed
+working Markdown22, then23 after whole0449 retirement602 (3 native Git spans). Original98 backup
+files remain target/history-capture-0450/installation/backup; preserve for recovery. Promotion:
+indexed history-generation decision. No budget/code/pin or power-loss claim changed; layers/Hems
+resume next, deeper/full product verification remains deferred.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 
