@@ -59,7 +59,7 @@ publication. Constructing this detached value cannot replace private bus state. 
 inspect-previews and atomic group commits are implemented under fresh command-bus authority;
 see [implemented execution](command-execution.md). Recipe/geometry/physical execution remains separately owned.
 
-[Piece/cut-plan resource accounting](command-operation-control.md#actual-piece-and-cut-plan-accounting)
+[Piece/cut-plan resource accounting](model-resource-accounting.md#actual-piece-and-cut-plan-accounting)
 borrows original held reference vectors and authored text without rebirth, repair or registry/geometry
 validation. Exact logical entries/UTF-8 bytes and owner/field/index refusals are distinct from readiness.
 
@@ -274,7 +274,7 @@ not mutate stored content or certify release. Every graph reports `GeometricVali
 and `EaseValidation::DeferredToG2AndG3`; `walk`/`true`, actual length differential, source transforms,
 net-line geometry and assembly completeness remain later checks.
 
-[Sewing resource accounting](command-operation-control.md#actual-sewing-accounting) borrows held spans,
+[Sewing resource accounting](model-resource-accounting.md#actual-sewing-accounting) borrows held spans,
 weighted regions, stop lists and semantic landmarks without resolving/rebirthing anchors or realizing ease.
 Logical counts and original graph/span/index refusals remain separate from readiness.
 

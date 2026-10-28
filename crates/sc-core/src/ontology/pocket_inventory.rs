@@ -94,6 +94,10 @@ impl fmt::Debug for PocketInventory {
     }
 }
 impl PocketInventory {
+    pub(crate) fn resource_pockets(&self) -> &[Pocket] {
+        let Self { pockets } = self;
+        pockets
+    }
     /// Own exact authored order without sorting, selecting or repairing references.
     ///
     /// # Errors

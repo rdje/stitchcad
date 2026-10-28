@@ -83,6 +83,10 @@ impl fmt::Debug for NotionPlacementInventory {
     }
 }
 impl NotionPlacementInventory {
+    pub(crate) fn resource_placements(&self) -> &[NotionPlacement] {
+        let Self { placements } = self;
+        placements
+    }
     /// Own exact authored order without choosing, retargeting or repairing references.
     ///
     /// # Errors

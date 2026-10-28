@@ -149,3 +149,17 @@ profile/anchor payloads, without lookup, rebirth, resolution, inferred values or
 Resource28/lint/fmt verify13/0/0, exact owner/index limits, actual deletion-held content and no mutation;
 initial public-export gap was corrected before acceptance. Garment/root/source/runtime, currentness,
 binding, selected profile/ease values and physical/RSS/time proof remain separately owned.
+
+## Actual held garment composition resources0449
+
+answers: "what does actual Pocket/notion/Closure resource accounting measure?"
+
+.6.8.2.2.2.2.2.4.2 charges actual Pocket/component, notion and Closure/instance vectors in authored
+order. Exhaustive owner/definition views and Copy guards preserve fixed original source/copy/anchor,
+opening, size, operation and derived Count payloads without lookup, rebirth, resolution or execution.
+Native resource32/strict selected lint/fmt pass:29/0/0, unused notions, all supported Closure intents,
+exact cumulative owner/index refusals and real deletion-held content unchanged. Component reference
+moved byte-exact to model-resource-accounting.md; operation policy example now correctly says four.
+Layers/Hems, construction, root/source/runtime and deeper/full acceptance remain separate. This is
+no current binding, physical readiness, whole-model or allocator memory/time proof. Active raw64
+requires owned archive maintenance before another retirement; aggregate85 alone is not the trigger.

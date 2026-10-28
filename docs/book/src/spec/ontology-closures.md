@@ -6,6 +6,9 @@ parameter/operation/material registries and target profiles must validate their 
 Centred zipper, hook/bar and button/buttonhole descriptors now have structural APIs, including one
 canonical buttonhole source. Structural support alone is not realized hardware geometry.
 
+[Held resource accounting](model-resource-accounting.md#actual-pocket-notion-and-closure-accounting)
+counts actual notion/Closure collections without resolving or rebuilding their original targets.
+
 ## Physical notion placements
 
 `NotionPlacement` gives each notion placement a stable semantic identity and names the **physical

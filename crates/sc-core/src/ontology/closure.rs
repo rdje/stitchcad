@@ -310,6 +310,10 @@ impl std::error::Error for ClosureError {
     }
 }
 impl Closure {
+    pub(crate) fn resource_parts(&self) -> (&ClosureDefinition, Count) {
+        let Self { definition, count } = self;
+        (definition, *count)
+    }
     /// Validate authored instances, sizes, unambiguous current registries and every placement.
     /// # Errors
     /// Returns [`ClosureError`] for scope/domain/count/identity/target failures. Recipe/profile size

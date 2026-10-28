@@ -400,3 +400,6 @@ mod inputs;
 
 #[path = "support/design_resource/sewing.rs"]
 mod sewing;
+
+#[path = "support/design_resource/garment.rs"]
+mod garment;

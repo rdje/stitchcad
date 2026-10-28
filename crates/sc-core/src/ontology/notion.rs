@@ -96,6 +96,10 @@ impl std::error::Error for NotionPlacementError {
     }
 }
 impl NotionPlacement {
+    pub(crate) fn resource_fields(&self) -> (EntityId, NotionPlacementDefinition) {
+        let Self { piece, definition } = self;
+        (*piece, *definition)
+    }
     /// Validate born-live anchoring, original copy/owner binding and complete owned direction.
     /// # Errors
     /// Returns [`NotionPlacementError`] for absent/wrong targets or invalid geometry references.

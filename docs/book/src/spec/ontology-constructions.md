@@ -392,6 +392,9 @@ separate; current-root errors retain concrete standard causes.
 
 ## Pocket placement and physical composition
 
+[Held resource accounting](model-resource-accounting.md#actual-pocket-notion-and-closure-accounting)
+counts Pocket/component collections while preserving original copy/source and opening intent.
+
 `PocketDefinition` retains served physical copy/source Piece, position anchor, owned directed
 orientation, required logical opening and nonempty components. Each `PocketPieceRef` pairs stable
 copy/expected Piece ids. A pocket on `front-left` may use `bag-left`/`bag-right` from one “bag” pattern:

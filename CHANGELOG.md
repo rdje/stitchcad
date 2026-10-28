@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0448 — account for held sewing graph and semantic landmarks
+## STITCHCAD-G1-0449 — account for held Pocket, notion and Closure resources
 
-- Actual spans/weighted-region/stop/landmark producers with exhaustive held/profile views and owner/index refusals.
-- No lookup, anchor resolution/rebirth, symbolic/profile value inference, ease realization or mutation.
-- Resource28 (prior24/actual4), strict selected lint/fmt pass after correcting public export; actual deletion-held content preserved.
-- Book scopes component proof and remaining work; whole0447 retained input-resource scope/lesson/ledger retained600.
+- Actual collection/component/instance producers preserve all source/copy and logical size/operation intent.
+- Resource32 (prior28/actual4), strict selected lint/fmt pass; exact29/0/0, refusal locations and deleted held sources.
+- Bounded model-accounting book page preserves prior sections byte-exact; stale policy example comment fixed.
+- Whole0448 scope/lesson/ledger retained601; active archive64 requires capture before the next retention record.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

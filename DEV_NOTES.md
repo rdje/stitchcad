@@ -3,15 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual held sewing resource producers
+## _(2026-10-28 UTC)_ — actual garment composition and closure resources
 
-0448 .6.8.2.2.2.2.2.4.1 precharges graph/spans/weighted regions/stops and semantic Notch/Turn registry;
-exhaustive private views and fixed Copy guards retain symbolic/profile/anchor intent without lookup,
-resolution/rebirth or realized ease. Initial E0432 public-export gap corrected before accepted checks.
-Resource28 (prior24/actual4)/strict lint/fmt pass:13/0/0, all ease sources/distributions, exact owner/index
-witnesses, actual deletion-held anchors and unchanged graph/landmarks/ledger. Promotion: command-layer
-record. Whole0447 proof600 retains3 exact spans. Garment/root/source/runtime/deeper/full work remains;
-no binding, selected profile values, geometry/physical, whole-model or allocator RSS/time certificate.
+0449 .6.8.2.2.2.2.2.4.2 precharges actual Pocket/component, notion and Closure/instance vectors.
+Exhaustive private views/Copy guards retain source/copy/anchor and logical size/operation intent;
+no rebirth, resolution, physical expansion or derived length. Resource32 (prior28/actual4)/strict
+lint/fmt pass:29/0/0, exact cumulative owner/index witnesses, unused notions and real deleted-source
+content unchanged. Whole0448 retained601 with3 native Git spans. Book component sections moved
+byte-exact to a bounded reference; stale three-maxima comment corrected to four. Promotion: indexed
+command-layer decision. Next active64 archive maintenance precedes layers/Hems; root/source/runtime/
+deeper/full work stays owned. Counts grant no binding, physical, whole-model or RSS/time certificate.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

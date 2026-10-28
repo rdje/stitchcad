@@ -91,6 +91,10 @@ impl fmt::Debug for ClosureInventory {
     }
 }
 impl ClosureInventory {
+    pub(crate) fn resource_closures(&self) -> &[Closure] {
+        let Self { closures } = self;
+        closures
+    }
     /// Own original ordered objects without resolving or rewriting held targets.
     ///
     /// # Errors

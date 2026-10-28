@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0448
+## Current leaf acceptance —0449
 
-- [x] ROOT CAUSE: python3 -I -B native sewing schema assertions print spans/weighted regions/stops
-  and Notch/Turn fixed logical/profile payloads rc=0; precharge actual dynamic fields without resolution.
-- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:28 passed rc=0; four actual
-  sewing cases verify13/0/0, all ease variants, exact graph/span/index witnesses and held refs after deletion.
-- [x] NO REGRESSION: strict selected Clippy/fmt finished rc=0; git diff --quiet HEAD --
-  crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior24 resource cases remain passing.
+- [x] ROOT CAUSE: python3 -I -B native garment schema assertions print Pocket/component, notion and
+  Closure/instance vectors plus fixed notion payload rc=0; account for actual owned content without resolution.
+- [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:32 passed rc=0; four actual
+  garment cases verify29/0/0, all supported Closure intents, unused notions and exact owner/index refusals.
+- [x] NO REGRESSION: strict selected Clippy/fmt rc=0; git diff --quiet HEAD -- crates/sc-core/src/command.rs
+  crates/sc-core/src/command rc=0. Prior28 cases pass; no command/source/current-validation path changed.
 
 ## Goal
 
@@ -841,38 +841,45 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal: actual sewing/garment-family resource accounting with all nested held fields and original locations.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.1`
   Status: `done`
-  Goal:0448 actual sewing graph/span/weighted-region/stop and semantic landmark resource producers.
-  Exhaustive held views and fixed Copy guards retain graph/span owner/index, symbolic/profile intent
-  and current anchors without copy/landmark lookup, resolution/rebirth, value read or ease realization.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native sewing schema assertions print span/weighted-region/
-    stop vectors and fixed Notch/Turn logical/profile payloads rc=0. The original compile check stopped
-    with E0432 because root public re-exports were missing; corrected exact export before accepted checks.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part600.md:
-    3 exact Git spans rc=0; prior whole0447 scope/lesson/ledger retains its sewing/garment-pending boundary.
-    Graph/spans/regions/stops and registry are actual independent held collections; fixed metadata adds none.
-  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
-    exhaustive graph/span/ease/landmark private views, precharge before traversal and fixed payload
-    guards count actual content without semantic/profile/physical work; root API exports are reachable.
-  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:28 passed rc=0. Four actual
-    cases verify3 spans/2 regions/5 stops/3 landmarks=13/0/0, all ease sources/distributions, Notch/Turn,
-    spans0+3, stops3+1, regions4+2 and registry10+3 first owner/index refusals, actual deletion-held anchors
-    without rebirth, unchanged graph/landmarks/ledger, empty scope and original prior-error preservation.
-  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
-    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior24 resource cases still pass;
-    no source/authority/metadata bus execution path or physical/profile validation behavior changed.
-  - [x] LOCKSTEP: whole0447 scope/lesson/ledger600 retained unchanged with3 exact Git spans rc=0;
-    pointer/frontier/book/lesson/indexed decision aligned. Garment .2–.4, root .2.5/source .3/runtime .4,
-    deeper .6.5.5 and full .6.9 remain owned; no full sewing/garment currentness or whole-model/RSS/time proof.
-  Cargo invocations use scripts/local_environment.py. Promotion: indexed command-layer decision.
-  Book build/native publication rc=0:81 chapters/159 scoped API rows/1479 source links/2481 rendered
-  links; maintained reference82 files/18378 lines/1282263 bytes. Retention1054 records/84 working Markdown
-  rc=0; Knowledge Map and git diff --check rc=0.
-  Logical profile refs supply no selected style/encoding/dimensions, and Formula/Profile ease supplies
-  no numeric result. Actual component counts supply no binding, geometry/physical/release authority.
+  Goal:0448 actual held sewing resources; [whole scope/proofs](../history/stitchcad-devnotes-part601.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.2`
+  Status: `done`
+  Goal:0449 actual Pocket/component, notion placement and Closure/instance resource producers.
+  Exhaustive held private views/Copy guards preserve original source/copy, opening, size/operation and
+  stored derived Count intent without lookup, rebirth, repair, physical expansion or value resolution.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native garment schema assertions print actual Pocket/component,
+    notion and Closure/instance vectors plus fixed notion payload rc=0. Each owned collection counts;
+    placement ids, supported kind/declaration/profile payloads and derived Count are fixed metadata.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part601.md:
+    3 exact Git spans rc=0; whole0448 scope/lesson/ledger retains its garment-pending boundary.
+    The component reference grew to31416 bytes; preserve full sections while creating bounded room.
+  - [x] FIX: cargo clippy -p sc-core --test design_resource_contract -- -D warnings:finished rc=0;
+    precharge each actual vector before traversal; private owner/definition matches and Copy guards
+    expose future dynamic payload changes. No registry/model/source authority or current-context lookup.
+  - [x] ADDRESSED: cargo test -p sc-core --test design_resource_contract:32 passed rc=0; four new cases
+    verify2 Pockets/3 components/13 notions/5 Closures/6 instances=29/0/0, all supported Closure kinds
+    and zipper length origins, unused notions, exact0+2/3+2/5+13/18+5/23+2/25+1 owner/index refusals,
+    unchanged success/refusal state, real deleted-source accounting despite current notion refusal,
+    empty inventories and first-error preservation through all producers including a zero charge.
+  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
+    crates/sc-core/src/command.rs crates/sc-core/src/command rc=0. Prior28 resource cases remain passing.
+    Whole prior book component interval preserves bytes16966–30757 (13791 bytes), sha256:
+    c4a66359e85c4c881b43eb582e28d2533346a5dd6c5bc91f82808cebeefdae91 from32f2a8b.
+  - [x] LOCKSTEP: whole0448 proof601 has3 exact Git spans rc=0; book/pointer/frontier/lesson/decision
+    align. Owned small doc defect: actual policy constructor has four positive maxima but its example
+    comment said three; corrected in operation guide. Promotion: indexed command-layer decision.
+    Layers .3/construction .4/root .2.5/source .3/runtime .4 and deeper/full acceptance remain owned.
+  Native book publication:82 chapters/159 scoped API rows/1485 source links/2493 rendered links rc=0;
+  maintained-reference83 files/18434 lines/1285951 bytes rc=0. Initial publication refused missing topic
+  index entry; added exact page link and rechecked successfully. Map/diff checks rc=0. Archive1055
+  logical records/85 aggregate working Markdown rc=0; active64 requires next owned maintenance.
+  Cargo invocations use scripts/local_environment.py. No binding, physical, whole-model or RSS/time proof.
+- ID: `G1-SLICE.6.8.2.2.2.2.2.4.retention`
   Status: `pending`
-  Goal: actual Pocket/component, notion placement and Closure/instance resource accounting, with all
-  held private fields and original source/copy intent, without rebirth/repair or physical inference.
+  Goal: maintain the actual active-generation64 raw-record boundary before next product retirement.
+  Use published source-pinned capture/install, preserve every logical byte and old tree recovery copy;
+  verify native whole-cohort/source receipts and public retrieval. No submodule internals, budget raise
+  or aggregate-count confusion. Commit clean before resuming layers/Hems .4.3.
 - ID: `G1-SLICE.6.8.2.2.2.2.2.4.3`
   Status: `pending`
   Goal: actual Facing/modelled-Lining/Interfacing and Hem-family resource accounting; preserve deferred

@@ -129,6 +129,10 @@ impl std::error::Error for PocketError {
     }
 }
 impl Pocket {
+    pub(crate) fn resource_definition(&self) -> &PocketDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate explicit composition targets, live owned birth position and whole orientation.
     /// # Errors
     /// Returns [`PocketError`] for empty/duplicate components, ambiguous/missing/mismatched targets
