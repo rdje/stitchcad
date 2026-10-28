@@ -1,20 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.4.2 in docs/tasks/G1-SLICE-execution.md:weighted command target/
-  projected-pair quantities using actual admitted capture and original weighted workspace. Bind
-  actual capture/request/span/root;keep source/target causes and no Uniform physical substitute.
-- Capture0522 binding.admit_ease_capture counts1 logical root+all original regions/stops under
-  explicit positive limits before any clone. Borrowed Copy token;capture then owns direct root
-  metadata once or shares actual canonical retained source with target intervals. No quantities.
-- Native3/scoped Clippy/fmt/doc4+1 pass0. Direct payload5;retained child empty stops still source5,
-  independent graph meter agrees5 or7−2 spans. Exact/one-below/source quota evidence retains actual
-  IDs;literal/formula/profile metadata and damaged held references stay unchanged. Minimum1 works.
-- Book91/216/1577/2719,glossary0/map unchanged,retention1134 and680 receipt3 exact spans pass.
-  Source decision199L bounded;whole0521 checkpoint in680. No full paired/physical/app proof claimed.
-- Capture borrows actual request/span;source borrow stays with its owner. Later contexts/views
-  borrow that owner;avoid self refs. Aggregate budgets/currentness/values/geometry/effects remain owned.
-- Consume EVERY exec terminal before dependent mutations;print full metadata. Final hook verifies
-  exact native --index authority;whole0519 integrity incident/fix in678. No background preparation.
+- Next G1-SLICE.6.5.3.2.3.2.4.4.3 in docs/tasks/G1-SLICE-execution.md:actual original-notch
+  context quantities for captured command target/projected pairs. Bind actual captured source,
+  preserve all actual context/candidate/limit causes and source/target identity;no silent choice.
+- Weighted caller0523 borrows admitted capture/request/span/full root,admits existing weighted
+  workspace and differences original rounded boundaries for target/first/second in A order. No
+  source clone,child normalization,cut-progress narrowing or Uniform physical predicate. Typed
+  stage and actual target wrap original workspace/query cause and standard error chain.
+- Native4/scoped Clippy/fmt/doc2+1/nonuniform160+50 pass0:12 side/direction/sign cases,retained
+  first1 versus rounded-child0,target0/source1,full2-region598 quota,actual source301/target302
+  errors,symbolic precedence and valid189-bit normalization under408-bit source workspace.
+- Book92/219/1582/2733,glossary0/map,retention1135/681 receipt3 exact spans pass;whole0522 in681.
+  Capture counts1+all original regions/stops before clone;owns direct root or shares retained root.
+- Notch source/query component closes0521 with scoped checkpoint;caller adoption/paired stop/
+  lineage/physical/authority/effects/full verification stay owned. Full PNT continues. Consume all
+  exec terminals before dependent mutations;final hook verifies exact native --index authority.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -307,7 +307,8 @@ coverage. Aggregate command accounting,quantity integration,stop/lineage effects
 remain their implementation owners;this change does not make SplitSeamSpan executable on the bus.
 
 [Admitted command source capture](command-seam-capture.md) now checks complete original metadata
-cost before materialization. Weighted/notch command quantity views and paired effects remain next.
+cost before materialization. [Weighted command quantities](command-seam-quantities.md) now use that
+actual captured root;notch command views and paired effects remain next.
 
 ## Query quantities from the retained original root
 

@@ -318,47 +318,45 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .acceptance focused caller component after implementation. Full effects retain paired owner.
 - ID: `G1-SLICE.6.5.3.2.3.2.4.4.1`
   Status: `done`
-  Goal:0522 actual bound source capture admitted before materialization;original request/span,
-  full logical root payload and actual retained target intervals preserve provenance.
-  - [x] REPRODUCE / ISSUE: 0522 cargo test -p sc-core --test sewing_contract command_ease_capture
-    →3 passed/83 filtered,rc=0. retain_ease_source clones a declared original region/stop body;
-    command callers need complete pre-clone admission,including original stops absent from children.
-  - [x] ROOT CAUSE: 0522 same cargo test -p sc-core --test sewing_contract command_ease_capture
-    →3 passed,rc=0. Actual direct source has1 root+2 regions+2 stops=5;retained child302 has empty
-    child stops but still full source301 cost5. Existing graph resource meter independently agrees:
-    declared graph5 entries;retained graph7 minus2 live spans=5. Arc sharing grants no logical discount.
-  - [x] FIX: 0522 binding.admit_ease_capture takes positive no-default per-capture item limit;
-    counts1 root,all original weighted regions,then original stops with checked additions. Borrowed
-    Copy admission retains actual request/span/count/limits;exhaustive definition/source/portion
-    views and fixed-field/slice guards prevent hidden owning fields. Explicit capture then clones
-    declared metadata once or shares actual retained root with target intervals. No index/current
-    queries/quantities/physical/effect capability. Focused native3 and doc4+1 →passed,rc=0.
-  - [x] ADDRESSED: 0522 cargo test -p sc-core --test sewing_contract command_ease_capture
-    →3 passed/83 filtered,rc=0. Direct signed/formula/profile sources keep exact body/stops/request/
-    span pointers and state. Limit2 refuses regions consumed1/requested2;limit4 refuses original
-    stops consumed3/requested2;exact5 captures independent owned direct region vector. Child302
-    exact5 shares canonical source301 and keeps narrower target intervals;limit4 retains both IDs
-    and original stop cost. Damaged held Uniform/profile source captures at minimum1 without
-    resolving or repairing deletion. Existing graph meter agrees with all admitted payload costs.
-  - [x] NO REGRESSION: 0522 cargo clippy -p sc-core --test sewing_contract -- -D warnings and
-    cargo fmt --all --check →pass,rc=0;cargo test -p sc-core --doc CommandEaseCapture →4 privacy/
-    lifetime/no-default compile-fail passed,rc=0;--doc admit_ease_capture →1 API example passed,rc=0.
-    Native tools use local_environment.py. Book/publication91/216/1577/2719,glossary310/9/158/0,
-    map unchanged,680 receipt3 exact Git spans,retention1134 logical/39 working/63629 decodedL/
-    4917768 decodedB/2495105 residentB →pass,rc=0. Weighted/notch caller quantities,aggregate command
-    accounting,actual source/value/physical authority and paired/full proof retain .2/.3/.4/
-    .acceptance/.6.5.3.2.acceptance/pre-push;no later gate claimed passed.
-  - [x] LOCKSTEP: 0522 five public types/API routes/new bounded capture chapter/SUMMARY/topic
-    navigation/MEMORY/DEV/CHANGE/source decision/task index/D301 align. Whole0521 retained680/3
-    exact Git spans. LIVE/README reviewed unchanged,G1 6/18. Next .4.4.2 exact weighted command
-    target/projected-pair quantities from admitted capture;capture alone supplies no numeric or
-    current/physical/authority certificate. Per-capture limits are not global allocator/CPU quotas.
-    promotion: declined (mechanical implementation of indexed original-source capture/resource contracts;no new policy,implicit value or physical assumption).
+  Goal:0522 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part681.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.4.2`
-  Status: `pending`
-  Goal: exact weighted quantities for actual bound target and A-ordered projected pairs from an
-  admitted captured original source. Bind actual request/span/root,retain original limit/numeric/
-  source refusals and target/source distinction;no Uniform equal-progress physical substitute.
+  Status: `done`
+  Goal:0523 exact weighted quantities borrow actual captured target/request/root and preserve
+  original source arithmetic;only mathematical view scope,no current/physical/effect certificate.
+  - [x] REPRODUCE / ISSUE: 0523 cargo test -p sc-core --test sewing_contract command_weighted_ease
+    →4 passed/86 filtered,rc=0. Retained target303 from original301 at original A2/3 yields first1;
+    actual separately authored rounded-child Uniform counterfactual yields0. Original root matters.
+  - [x] ROOT CAUSE: 0523 same cargo test -p sc-core --test sewing_contract command_weighted_ease
+    →4 passed,rc=0. Target and both A-ordered projected pairs need original density-side rounded
+    boundary differences. B/Opposite complements BEFORE rounding;full original region/bit admission
+    cannot be truncated to a child. Bounded normalized progress may genuinely refuse189-bit values.
+  - [x] FIX: 0523 capture.weighted_explicit_ease admits existing full weighted workspace,queries
+    target/first/second original ranges and returns private borrowed Copy view with fixed amounts.
+    No source clone,new rounding kernel,Rational cut-progress narrowing or Uniform physical
+    substitute. Shared typed quantity stage preserves actual target and original workspace/query
+    error plus standard cause. Focused native4/doc2+1 →passed,rc=0;no partial partition on refusal.
+  - [x] ADDRESSED: 0523 cargo test -p sc-core --test sewing_contract command_weighted_ease
+    →4 passed/86 filtered,rc=0. Twelve A/B x Same/Opposite x signed/zero cases keep capture/request/
+    span/root pointers,density side,limits,source/target totals and exact pair conservation. Retained
+    target303 keeps full density2 and original301 rounding1/0 versus child counterfactual0. Target302
+    allocation0 remains distinct from source1. Region limit1 precedes bit1;bit597 refuses full598.
+    Actual target302/source301/std cause/Boundary and Interval frame errors survive. Formula/profile
+    amount refuses before tiny budgets. Frozen189-bit original normalization refuses bounded progress
+    but command source query succeeds under existing408-bit admission,with exact first0/second1.
+  - [x] NO REGRESSION: 0523 cargo clippy -p sc-core --test sewing_contract -- -D warnings and
+    cargo fmt --all --check →pass,rc=0. cargo test -p sc-core --doc CommandWeightedEase →2 privacy/
+    lifetime compile-fail passed,rc=0;--doc weighted_explicit_ease →1 API example passed,rc=0.
+    Native tools use local_environment.py. Book/publication92/219/1582/2733,glossary310/9/158/0,
+    map unchanged,nonuniform oracle160+50 Fraction rows,681 receipt3 exact Git spans,retention1135
+    logical/40 working/63695 decodedL/4924529 decodedB/2501866 residentB →pass,rc=0. No new numeric
+    kernel/production capture changes;notch callers,actual dependency/current/physical/authority
+    integration,paired/broad/full verification retain .3/.4/.acceptance/.6.5.3.2.acceptance/pre-push.
+  - [x] LOCKSTEP: 0523 three public types/API rows/new bounded quantity chapter/SUMMARY/topic
+    links/capture+source chapters/MEMORY/DEV/CHANGE/source decision/task index/D301 align. Whole0522
+    retained681/3 exact Git spans. LIVE/README reviewed unchanged,G1 6/18. Next .4.4.3 actual notch
+    context command quantities;own real source/ledger/context matching and preserve all original
+    candidate/limit causes before effects. Staged authority and terminal consumption stay mandatory.
+    promotion: declined (caller adoption of indexed original weighted source/rounding/resource contracts;no new policy or physical assumption).
 - ID: `G1-SLICE.6.5.3.2.3.2.4.4.3`
   Status: `pending`
   Goal: actual original-notch context quantities for bound target/projected pairs. Preserve exact

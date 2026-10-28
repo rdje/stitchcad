@@ -31,6 +31,7 @@ pub use resource::{
 mod scope;
 mod seam_capture;
 mod seam_ease;
+mod seam_quantity;
 mod seam_split;
 mod snapshot;
 mod tech_pack;
@@ -96,6 +97,9 @@ pub use seam_capture::{
     CommandEaseCaptureError, CommandEaseCaptureLimits,
 };
 pub use seam_ease::{CommandUniformEaseError, CommandUniformEasePartition};
+pub use seam_quantity::{
+    CommandEaseQuantityStage, CommandWeightedEaseError, CommandWeightedEasePartition,
+};
 pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};

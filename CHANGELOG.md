@@ -3,14 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0522 — admit actual command source capture before cloning
+## STITCHCAD-G1-0523 — query weighted quantities for actual captured commands
 
-- Positive explicit limits count1 logical original root+complete original weighted regions/stops before materialization. Private borrowed admission retains actual request/span;capture clones declared metadata once or shares retained root with target intervals. Precise
-  target/source/collection/count/limit evidence survives.
-- Native3/scoped Clippy/fmt/doc4+1 pass. Direct5 and retained root5 agree with independent graph resource meter,including empty child stops. Exact/one-below quotas,signed/formula/profile metadata,owned/direct vector and shared root provenance,damaged held references and minimum1
-  stay exact.
-- Whole0521 retained680/three exact Git spans;book91/216/1577/2719,glossary0/map/retention1134 pass. New capture chapter/API routes;weighted command quantities next. LIVE/README unchanged,G1 6/18;aggregate accounting,current/value/physical/authority/effects/full verification
-  remain owned.
+- Actual capture/request/target/full source borrows and existing weighted workspace produce target/first/second amounts from original rounded boundaries. No root clone,child normalization,bounded cut-progress or Uniform physical predicate. Typed stage/target preserve original
+  workspace/query/std causes.
+- Native4/scoped Clippy/fmt/doc2+1 pass. Twelve side/direction/sign cases,retained first1 versus child counterfactual0,target0/source1,full2-region598 quota,actual source301/target302 frame/std causes,symbolic precedence and valid189-bit normalization remain exact.
+- Whole0522 retained681/three exact Git spans;book92/219/1582/2733,glossary0/map/retention1135/nonuniform160+50 pass. New quantity chapter/API routes;notch caller adoption next. LIVE/README unchanged,G1 6/18;actual current/value/physical/authority/effects/full verification remain
+  owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

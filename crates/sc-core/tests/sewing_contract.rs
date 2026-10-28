@@ -5777,3 +5777,379 @@ fn command_ease_capture_fixed_minimum_keeps_damaged_held_sources_as_metadata() {
     );
     assert!(f.ledger.resolve(edge, t(1, 2)).resolved().is_none());
 }
+
+fn command_weighted_limits(regions: usize, bits: u64) -> sc_core::ontology::WeightedEaseLimits {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    sc_core::ontology::WeightedEaseLimits::new(
+        NonZeroUsize::new(regions).unwrap(),
+        NonZeroU64::new(bits).unwrap(),
+    )
+}
+#[test]
+fn command_weighted_ease_uses_actual_density_side_and_original_signed_pair_boundaries() {
+    use core::num::NonZeroUsize;
+    use sc_core::command::CommandEaseCaptureLimits;
+    for side in [SeamSideId::A, SeamSideId::B] {
+        for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+            for signed in [-1, 0, 1] {
+                let (mut f, marks) = capture_fixture();
+                f.span_mut().direction = direction;
+                f.span_mut().ease.declared_mut().unwrap().amount =
+                    EaseAmount::Explicit(Length::from_micrometres(signed).unwrap());
+                let EaseDistribution::Weighted {
+                    side: actual,
+                    regions: _,
+                } = &mut f.span_mut().ease.declared_mut().unwrap().distribution
+                else {
+                    panic!("actual weighted source")
+                };
+                *actual = side;
+                let graph = f.graph(&marks).unwrap();
+                let span = graph.spans().first().unwrap();
+                let saved = span.definition().clone();
+                let request = SplitSeamSpan::new(
+                    span.id(),
+                    EdgeAnchor {
+                        edge: span.definition().a.range.edge(),
+                        param: t(1, 2),
+                    },
+                    EdgeAnchor {
+                        edge: span.definition().b.range.edge(),
+                        param: t(2, 3),
+                    },
+                );
+                let binding = request.bind_source_cuts(&graph).unwrap();
+                let capture = binding
+                    .admit_ease_capture(CommandEaseCaptureLimits::new(
+                        NonZeroUsize::new(5).unwrap(),
+                    ))
+                    .unwrap()
+                    .capture();
+                let limits = command_weighted_limits(2, 598);
+                let view = capture.weighted_explicit_ease(limits).unwrap();
+                let parent = Length::from_micrometres(signed).unwrap();
+                assert!(core::ptr::eq(view.capture(), &capture));
+                assert!(core::ptr::eq(view.request(), &request));
+                assert!(core::ptr::eq(view.span(), span));
+                assert!(core::ptr::eq(view.original_source(), capture.source()));
+                assert_eq!(view.distribution_side(), side);
+                assert_eq!(view.weighted_admission().limits(), limits);
+                assert_eq!(view.source_parent_amount(), parent);
+                assert_eq!(view.parent_amount(), parent);
+                assert_eq!(
+                    view.first_amount(),
+                    if side == SeamSideId::A {
+                        Length::ZERO
+                    } else {
+                        parent
+                    }
+                );
+                assert_eq!(
+                    view.first_amount().checked_add(view.second_amount()),
+                    Ok(parent)
+                );
+                assert_eq!(view.paired_intervals(), binding.paired_intervals());
+                assert_eq!(
+                    view.amount_in(capture.portion().side(side).range),
+                    Ok(parent)
+                );
+                assert_eq!(span.definition(), &saved);
+            }
+        }
+    }
+}
+
+#[test]
+fn command_weighted_ease_keeps_original_rounding_when_target_is_an_inherited_child() {
+    use core::num::NonZeroUsize;
+    use sc_core::command::CommandEaseCaptureLimits;
+    let (mut f, marks) = capture_fixture();
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    f.definition.spans = retained_children(&f, &marks);
+    let graph = f.graph(&marks).unwrap();
+    let span = graph.spans().get(1).unwrap();
+    let request = SplitSeamSpan::new(
+        span.id(),
+        EdgeAnchor {
+            edge: span.definition().a.range.edge(),
+            param: t(2, 3),
+        },
+        EdgeAnchor {
+            edge: span.definition().b.range.edge(),
+            param: t(1, 3),
+        },
+    );
+    let capture = request
+        .bind_source_cuts(&graph)
+        .unwrap()
+        .admit_ease_capture(CommandEaseCaptureLimits::new(NonZeroUsize::new(5).unwrap()))
+        .unwrap()
+        .capture();
+    let view = capture
+        .weighted_explicit_ease(command_weighted_limits(2, 598))
+        .unwrap();
+    assert_eq!(view.span().id(), id(303));
+    assert_eq!(view.original_source().span(), id(301));
+    assert_eq!(
+        (
+            view.parent_amount().as_micrometres(),
+            view.first_amount().as_micrometres(),
+            view.second_amount().as_micrometres()
+        ),
+        (1, 1, 0)
+    );
+    assert_eq!(view.weighted_admission().region_count(), 2);
+    assert_eq!(
+        view.cumulative_at(request.cut(SeamSideId::A)),
+        Ok(Length::from_micrometres(1).unwrap())
+    );
+    // Actual independent declaration of the rounded child amount/domain is the forbidden
+    // counterfactual:its local third rounds0,while the original cumulative half rounds1.
+    let mut child = fixture();
+    child.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    child.span_mut().a.range =
+        EdgeRange::new(child.span().a.range.edge(), t(1, 2), Param::END).unwrap();
+    child.span_mut().b.range =
+        EdgeRange::new(child.span().b.range.edge(), Param::START, t(1, 2)).unwrap();
+    let graph = child.graph(&[]).unwrap();
+    let request = SplitSeamSpan::new(
+        child.span().id,
+        EdgeAnchor {
+            edge: child.span().a.range.edge(),
+            param: t(2, 3),
+        },
+        EdgeAnchor {
+            edge: child.span().b.range.edge(),
+            param: t(1, 3),
+        },
+    );
+    assert_eq!(
+        request
+            .bind_source_cuts(&graph)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap()
+            .first_amount(),
+        Length::ZERO
+    );
+}
+
+#[test]
+fn command_weighted_ease_preserves_original_workspace_frame_and_target_stage_errors() {
+    use core::num::NonZeroUsize;
+    use sc_core::{
+        command::{
+            CommandEaseCaptureLimits, CommandEaseQuantityStage as Stage,
+            CommandWeightedEaseError as Error,
+        },
+        ontology::{WeightedEaseAmountError as Amount, WeightedEaseWorkspaceError as Workspace},
+    };
+    use std::error::Error as _;
+    let (mut f, marks) = capture_fixture();
+    f.span_mut().ease.declared_mut().unwrap().amount =
+        EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    f.definition.spans = retained_children(&f, &marks);
+    let graph = f.graph(&marks).unwrap();
+    let span = graph.spans().first().unwrap();
+    let request = SplitSeamSpan::new(
+        span.id(),
+        EdgeAnchor {
+            edge: span.definition().a.range.edge(),
+            param: t(1, 4),
+        },
+        EdgeAnchor {
+            edge: span.definition().b.range.edge(),
+            param: t(3, 4),
+        },
+    );
+    let capture = request
+        .bind_source_cuts(&graph)
+        .unwrap()
+        .admit_ease_capture(CommandEaseCaptureLimits::new(NonZeroUsize::new(5).unwrap()))
+        .unwrap()
+        .capture();
+    let regions = Workspace::Regions {
+        source_span: id(301),
+        side: SeamSideId::A,
+        required: 2,
+        limit: 1,
+    };
+    let error = capture
+        .weighted_explicit_ease(command_weighted_limits(1, 1))
+        .unwrap_err();
+    assert_eq!(
+        error,
+        Error::Workspace {
+            target_span: id(302),
+            issue: regions
+        }
+    );
+    assert_eq!(
+        error.source().unwrap().downcast_ref::<Workspace>(),
+        Some(&regions)
+    );
+    assert_eq!(
+        capture
+            .weighted_explicit_ease(command_weighted_limits(2, 597))
+            .unwrap_err(),
+        Error::Workspace {
+            target_span: id(302),
+            issue: Workspace::IntegerBits {
+                source_span: id(301),
+                side: SeamSideId::A,
+                regions: 2,
+                required: 598,
+                limit: 597
+            },
+        }
+    );
+    let view = capture
+        .weighted_explicit_ease(command_weighted_limits(2, 598))
+        .unwrap();
+    assert_eq!(
+        view.source_parent_amount(),
+        Length::from_micrometres(1).unwrap()
+    );
+    assert_eq!(view.parent_amount(), Length::ZERO);
+    assert_eq!(
+        (view.first_amount(), view.second_amount()),
+        (Length::ZERO, Length::ZERO)
+    );
+    let at = EdgeAnchor {
+        edge: span.definition().b.range.edge(),
+        param: t(1, 2),
+    };
+    let amount = Amount::SourceFrame {
+        source_span: id(301),
+        side: SeamSideId::A,
+        expected: span.definition().a.range.edge(),
+        at,
+    };
+    let error = view.cumulative_at(at).unwrap_err();
+    assert_eq!(
+        error,
+        Error::Quantity {
+            target_span: id(302),
+            stage: Stage::Boundary,
+            issue: Box::new(amount)
+        }
+    );
+    assert_eq!(
+        error.source().unwrap().downcast_ref::<Amount>(),
+        Some(&amount)
+    );
+    let interval = EdgeRange::whole(at.edge);
+    assert_eq!(
+        view.amount_in(interval).unwrap_err(),
+        Error::Quantity {
+            target_span: id(302),
+            stage: Stage::Interval,
+            issue: Box::new(Amount::IntervalSource {
+                source_span: id(301),
+                side: SeamSideId::A,
+                expected: span.definition().a.range.edge(),
+                interval
+            })
+        }
+    );
+    for amount in [
+        EaseAmount::Formula(id(900)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(901))),
+    ] {
+        let (mut f, marks) = capture_fixture();
+        f.span_mut().ease.declared_mut().unwrap().amount = amount;
+        let graph = f.graph(&marks).unwrap();
+        let span = graph.spans().first().unwrap();
+        let request = SplitSeamSpan::new(
+            span.id(),
+            EdgeAnchor {
+                edge: span.definition().a.range.edge(),
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: span.definition().b.range.edge(),
+                param: t(1, 2),
+            },
+        );
+        let capture = request
+            .bind_source_cuts(&graph)
+            .unwrap()
+            .admit_ease_capture(CommandEaseCaptureLimits::new(NonZeroUsize::new(5).unwrap()))
+            .unwrap()
+            .capture();
+        assert_eq!(
+            capture
+                .weighted_explicit_ease(command_weighted_limits(1, 1))
+                .unwrap_err(),
+            Error::Workspace {
+                target_span: id(301),
+                issue: Workspace::Amount {
+                    source_span: id(301),
+                    amount
+                },
+            }
+        );
+    }
+}
+
+#[test]
+fn command_weighted_ease_accepts_valid_original_normalization_beyond_reference_width() {
+    use core::num::NonZeroUsize;
+    use sc_core::command::CommandEaseCaptureLimits;
+    let row = include_str!("fixtures/weighted_domain_ease.tsv")
+        .lines()
+        .find(|row| row.starts_with("wide-below-half\t1\t"))
+        .unwrap();
+    let fields = row.split('\t').collect::<Vec<_>>();
+    let field = |i: usize| *fields.get(i).unwrap();
+    let param = |n, d| t(field(n).parse().unwrap(), field(d).parse().unwrap());
+    let mut f = fixture();
+    f.span_mut().a.range =
+        EdgeRange::new(f.span().a.range.edge(), param(2, 3), param(6, 7)).unwrap();
+    let declared = f.span_mut().ease.declared_mut().unwrap();
+    declared.amount = EaseAmount::Explicit(Length::from_micrometres(1).unwrap());
+    declared.distribution = EaseDistribution::Weighted {
+        side: SeamSideId::A,
+        regions: vec![WeightedEaseRegion {
+            from: Param::START,
+            to: Param::END,
+            weight: Rational::ONE,
+        }],
+    };
+    let graph = f.graph(&[]).unwrap();
+    let span = graph.spans().first().unwrap();
+    assert!(span
+        .definition()
+        .a
+        .range
+        .relative_progress(param(4, 5))
+        .is_err());
+    let request = SplitSeamSpan::new(
+        span.id(),
+        EdgeAnchor {
+            edge: span.definition().a.range.edge(),
+            param: param(4, 5),
+        },
+        EdgeAnchor {
+            edge: span.definition().b.range.edge(),
+            param: t(1, 2),
+        },
+    );
+    let capture = request
+        .bind_source_cuts(&graph)
+        .unwrap()
+        .admit_ease_capture(CommandEaseCaptureLimits::new(NonZeroUsize::new(2).unwrap()))
+        .unwrap()
+        .capture();
+    let view = capture
+        .weighted_explicit_ease(command_weighted_limits(1, 408))
+        .unwrap();
+    assert_eq!(view.parent_amount(), Length::from_micrometres(1).unwrap());
+    assert_eq!(
+        view.first_amount(),
+        Length::from_micrometres(field(10).parse().unwrap()).unwrap()
+    );
+    assert_eq!(view.second_amount(), Length::from_micrometres(1).unwrap());
+}

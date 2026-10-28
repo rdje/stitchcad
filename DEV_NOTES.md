@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — admit actual bound source capture before cloning
+## _(2026-10-28 UTC)_ — actual captured weighted command quantities
 
-0522 CommandEaseCaptureLimits/Admission/Capture count1 original root+all original regions/stops before materialization. Actual request/span borrows,checked quota evidence,exhaustive/fixed Copy views preserve full payload. Declared capture clones once;retained capture shares original root and keeps target intervals.
-Native3/scoped Clippy/fmt/doc4+1 pass0. Direct source5,retained child empty stops still5;existing graph meter independently agrees5 or7−2 spans. Limits2/4 preserve precise region/stop refusal;exact5 captures. Signed/formula/profile metadata and damaged held source remain exact;minimum1 does no current repair/query.
-Book91/216/1577/2719,glossary0/map/retention1134/680 receipt3 exact spans pass0. New bounded capture chapter/routes/SUMMARY/topic navigation cover5 public types. Source decision199L stays bounded. Weighted command quantity views .4.4.2 next;no numeric/current/physical/authority/effect certificate from capture.
-[Whole0521 checkpoint](docs/history/stitchcad-devnotes-part680.md) retains exact source/query scope. LIVE/README unchanged,G1 6/18. Per-capture bounds need separate aggregate accounting;consume every preparation terminal before stage. Promotion declined:implementation of indexed capture/resource contracts.
+0523 CommandWeightedEasePartition borrows capture/request/span/root and existing full weighted admission;target/first/second difference original rounded boundaries. Typed stage and consuming target retain original workspace/query/std causes. No source clone,child normalization,new rounding or bounded cut-progress.
+Native4/scoped Clippy/fmt/doc2+1 pass0. Twelve side/direction/sign cases conserve source;retained303/original301 first1 versus rounded-child0,target302 allocation0/source1. Full2-region598 quota,source/target frame/std causes,symbolic precedence and valid189-bit normalization under408-bit admission remain exact.
+Book92/219/1582/2733,glossary0/map/retention1135,nonuniform160+50 and681 receipt3 exact spans pass0. New bounded command-quantity chapter/API routes cover3 public types. These are descriptive mathematical pair amounts;no current/physical/authority/effect certificate. Actual notch caller adoption .4.4.3 next.
+[Whole0522 capture](docs/history/stitchcad-devnotes-part681.md) retains admission/materialization proof. LIVE/README unchanged,G1 6/18. Preserve actual context/candidate causes and dependencies before effects;consume preparation terminals before stage. Promotion declined:adoption of indexed source/rounding contracts.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

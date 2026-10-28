@@ -1175,7 +1175,7 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/window23.md#
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Uniform/retained0494,weighted0501,notch checkpoint0521. Staged book integrity0519 fixed;capture admission0522 focused. Weighted target/pair command quantities .4.4.2 next,then notch caller/dependency adoption;formula/profile/geometry,stops/lineage/effects/full acceptance remain owned.
+P1 prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Uniform/retained0494,weighted0501,notch checkpoint0521. Book integrity0519 fixed;capture0522/weighted command views0523 focused. Actual notch command context quantities .4.4.3 next,then caller/dependency integration;formula/profile/geometry,stops/lineage/effects/full acceptance remain owned.
 Actual native structural_child_graph_acceptance_is_not_parent_ease_conservation passes:copied10+10 gives20 for parent10;independently authored5+5 also passes structural validation with DeferredToG2AndG3. Root:per-span fields/validation lack an original-parent relation. No split result is published;handler unavailable.
 Implement coupled parent-aware sources/quantization/provenance for explicit/formula/profile and distributions;standalone structural acceptance is not conservation proof.
 Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];root boundaries[0,1,0],signed symmetry. Native .2 root-query watch passes with original domains/direction;nonuniform/context/stops/lineage/effects and full paired acceptance remain pending.
