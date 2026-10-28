@@ -29,6 +29,7 @@ pub use resource::{
     charge_command_history_request_resources, charge_command_mutation_group_resources,
 };
 mod scope;
+mod seam_ease;
 mod seam_split;
 mod snapshot;
 mod tech_pack;
@@ -89,6 +90,7 @@ pub use request::CommandRequest;
 pub use scope::{
     CommandScope, CommandScopeNarrowingError, CommandScopeRefusal, CommandScopeWindowError,
 };
+pub use seam_ease::{CommandUniformEaseError, CommandUniformEasePartition};
 pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};

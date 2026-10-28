@@ -2,7 +2,7 @@
 
 The sc-core SplitSeamSpan input can now bind its original source cuts to the actual held SewingGraph.
 This is an implemented native prerequisite for the paired handler. Current copy/range resolution,
-physical pairing, ease/stop conservation, lineage, resource admission and atomic effects retain their
+physical pairing, complete ease/stop conservation, lineage, resource admission and atomic effects retain their
 execution owners. The bus still exposes its three implemented metadata handlers.
 
 ## Bind the actual held source
@@ -126,10 +126,67 @@ explicit/formula/profile sources before effects. Weighted and notch-bounded dist
 that same obligation;an unresolved source cannot be replaced with a fabricated child value. Semantic
 stop ownership and retired-parent/new-child lineage remain separate owned partition stages.
 
-For nested splits, the planned allocation stays tied to the original source and its domains. It
-quantizes cumulative original allocation at each retained boundary and differences those endpoint
-values for a child. This preserves the parent quantum sum without repeatedly rounding child totals.
-An independent Fraction planning prototype for a 1 µm parent gives rounded-child results
-[0,1,0] versus [1,0,0] for two split orders; the same original boundaries give [0,1,0]. The negative
-parent preserves signed symmetry. Native cumulative allocation and its regression tests remain
-the next owned P1 stage. These are planning prototype outputs.
+## Uniform explicit cumulative allocation
+
+| API token | Meaning |
+| --- | --- |
+| `uniform_explicit_ease` | Check the actual uniform explicit source and directed cut progress |
+| `CommandUniformEasePartition` | Sealed original request/span borrow with conserved A-ordered amounts |
+| `CommandUniformEaseError` | Original helper eligibility,progress,frame or quantity refusal |
+| `parent_amount` | Original signed explicit amount |
+| `cut_progress` | Exact normalized A cut progress |
+| `first_amount` | First projected pair's cumulative quantized amount |
+| `second_amount` | Original parent minus first amount |
+| `cumulative_at_a` | Quantized original allocation at an original A-domain position |
+| `amount_in_a` | Original cumulative upper amount minus original cumulative lower amount |
+| `Weighted` | Actual distribution side requires its separate allocation implementation |
+| `BetweenNotches` | Actual side and original notch identities require their allocation context |
+| `Amount` | Actual formula/profile source remains symbolic |
+| `Progress` | Original side and boxed RangeProgressError,also the standard error source |
+| `CutProgress` | Original ascending A/B fractions conflict with the declared direction |
+| `IntervalSource` | Query interval names a different original A edge |
+| `Numeric` | Original shared UnitError,also the standard error source |
+
+The native helper reads the actual held span. It checks distribution eligibility,then explicit
+amount,then exact A/B normalized progress. Same direction requires equal ascending progress;
+Opposite requires A progress to equal one minus ascending B progress. Unequal source parameters
+can be valid on unequal partial domains. Stored edge parameters are fractions of their own edge
+length by the reference contract;they are not polynomial curve parameters or measured geometry.
+
+At progress q,the helper quantizes original signed parent × q using the single shared half-away
+rule. The second A-ordered amount is parent minus first. Negative,zero and positive differentials
+retain their signs and exact quantum sum. Private fields and borrowed lifetimes prevent forging
+this view or outliving the actual owners. Debug visits only fixed source identity/progress.
+
+```rust
+use sc_core::command::{CommandSeamSplitBinding, CommandUniformEaseError,
+    CommandUniformEasePartition};
+fn allocate<'a>(binding: &CommandSeamSplitBinding<'a>)
+    -> Result<CommandUniformEasePartition<'a>, CommandUniformEaseError> {
+    let allocation = binding.uniform_explicit_ease()?;
+    assert_eq!(allocation.first_amount().checked_add(allocation.second_amount()),
+        Ok(allocation.parent_amount()));
+    Ok(allocation)
+}
+```
+
+For further subinterval queries,retain that original source/domain and difference cumulative
+quantized endpoint values. Repartitioning already rounded children is order-dependent:for1 µm,
+the independent Fraction diagnostic gives[0,1,0] versus[1,0,0] for two split orders. Native queries
+at the same original boundaries give[0,1,0] from either cut view,with negative symmetry. Partial
+A[1/7,6/7] boundaries8/21 and13/21 exercise this without silently resetting the original domain.
+These are original-root allocation queries;canonical nested child lineage/effects remain owned.
+
+A query checks the original A edge,then lower and upper closed-domain endpoints. Wrong-frame and
+outside-domain inputs are refused without clipping;normalization retains the original range/cut
+and actual numeric cause through the standard error chain. A replacement graph of the same span
+identity needs a fresh view;the old view keeps its original amount and domain.
+
+Independent Fraction fixture rows watch signed,tie,zero,domain-limit and full-width fractions in
+both directions. Native tests also cover pointer identity,directed mismatch,actual symbolic/weighted/
+notch declarations,normalization overflow and original query refusals. Unsupported helper cases
+are eligibility refusals,not invalid-graph diagnoses or fabricated missing-source values.
+
+This stage conserves the original uniform explicit allocation only. Persistent original-source/
+child provenance,symbolic and nonuniform integration,semantic stops,live lineage,current validation,
+resource admission and atomic paired publication remain required. D301 stays open before effects.

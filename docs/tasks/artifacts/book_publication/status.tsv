@@ -165,3 +165,5 @@ paired seam source binding	spec/command-seam-splits.md	crates/sc-core/src/comman
 paired seam source refusal	spec/command-seam-splits.md	crates/sc-core/src/command/seam_split.rs	CommandSeamSplitBindingError	G1-SLICE.6.5.3.2.2	4.4
 declared seam interval pairs	spec/command-seam-splits.md	crates/sc-core/src/command/seam_split.rs	CommandSeamSplitPair	G1-SLICE.6.5.3.2.3.1	4.4
 exact source interval progress	spec/ontology.md	crates/sc-core/src/ontology/range.rs	RangeProgressError	G1-SLICE.6.5.3.2.3.2.1	4.1
+uniform original ease allocation	spec/command-seam-splits.md	crates/sc-core/src/command/seam_ease.rs	CommandUniformEasePartition	G1-SLICE.6.5.3.2.3.2.2	4.4
+uniform original ease refusal	spec/command-seam-splits.md	crates/sc-core/src/command/seam_ease.rs	CommandUniformEaseError	G1-SLICE.6.5.3.2.3.2.2	4.4

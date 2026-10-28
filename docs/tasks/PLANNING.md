@@ -1187,7 +1187,7 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/stitchcad-de
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 implementation prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Normalized progress .1 implemented;root-cumulative allocation .2 next.
+P1 implementation prerequisite;owner G1-SLICE.6.5.3.2.3.2,in_progress before effects. Normalized progress .1/root-cumulative uniform explicit .2 implemented;canonical provenance .3 next after capacity transition.
 Actual native sewing test structural_child_graph_acceptance_is_not_parent_ease_conservation passes:
 copying the10-micrometre parent amount into each independently supplied child yields20 total;the
 same structural constructor also accepts5+5 and retains DeferredToG2AndG3. Root:per-span amount/
@@ -1197,4 +1197,4 @@ for explicit/formula/profile and distribution cases;never use standalone structu
 
 Original-source cumulative quantization is the chosen plan:independent Fraction prototype for1µm
 shows rounded-child orders[0,1,0] versus[1,0,0];retained-root boundaries give[0,1,0],with signed symmetry.
-Native cumulative integration/watch remains .3.2.2;D301 is not closed by the normalized-progress prerequisite.
+Native root-query watch .3.2.2 passes with original domains/direction;D301 remains open for canonical sources/nonuniform/stops/lineage/effects.

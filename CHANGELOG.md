@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0488 — normalize complete held-range progress exactly
+## STITCHCAD-G1-0489 — conserve uniform explicit ease from original cumulative boundaries
 
-- Add relative_progress/RangeProgressError with original interval/cut/numeric cause;cross-cancel before complete reduced-width checks,accepting representable results despite wider internal offsets.
-- Native numerical1/range19/docs1/selected strict Clippy/fmt pass;17 independent Fraction rows match tracked producer bytes and native outcomes,including bounds and genuine final overflows.
-- Final glossary0/book88/166/1559/2655 passes. Record original-source cumulative quantization plan;native allocation remains next P1 D301 stage. Whole0487/closed D300 retained642;no quantity/effect publication.
+- Add sealed borrowed original-source allocation with direction-compatible cuts,shared rounding and original-domain cumulative interval queries. Preserve actual eligibility/refusal chains;no child IDs or paired effects.
+- Native selected5/sewing33/docs3/strict scoped Clippy/fmt pass;35 independent Fraction rows in both directions match producer/frozen bytes. Native partial-root order,signed symmetry,source and snapshot controls pass.
+- Book88/168/1559/2656/glossary0 pass. Whole0488 retained643;64 working history files require capacity transition next. D301 stays P1 for canonical provenance/nonuniform/stops/lineage/paired acceptance.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

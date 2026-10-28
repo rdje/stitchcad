@@ -1240,3 +1240,432 @@ fn current_graph_keeps_whole_lost_interior_evidence_after_previous_construction_
     assert!(evidence.start().resolved().is_some() && evidence.end().resolved().is_some());
     assert_eq!(graph, original);
 }
+
+#[test]
+fn uniform_ease_matches_independent_signed_cumulative_oracle_in_both_directions() {
+    let mut rows = 0;
+    for row in include_str!("fixtures/uniform_ease.tsv")
+        .lines()
+        .filter(|row| !row.starts_with('#'))
+    {
+        let fields = row
+            .split('\t')
+            .map(|value| value.parse::<i64>().unwrap())
+            .collect::<Vec<_>>();
+        let [parent, n, d, first, second] = fields.as_slice() else {
+            panic!("five oracle columns")
+        };
+        let progress = Rational::new(*n, *d).unwrap();
+        for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+            let mut f = fixture();
+            f.span_mut().direction = direction;
+            f.span_mut().ease.amount =
+                EaseAmount::Explicit(Length::from_micrometres(*parent).unwrap());
+            let b = match direction {
+                SeamDirection::Same => progress,
+                SeamDirection::Opposite => progress.one_minus().unwrap(),
+            };
+            let request = SplitSeamSpan::new(
+                id(301),
+                EdgeAnchor {
+                    edge: f.span().a.range.edge(),
+                    param: Param::new(progress).unwrap(),
+                },
+                EdgeAnchor {
+                    edge: f.span().b.range.edge(),
+                    param: Param::new(b).unwrap(),
+                },
+            );
+            let graph = f.graph(&[]).unwrap();
+            let binding = request.bind_source_cuts(&graph).unwrap();
+            let allocation = binding.uniform_explicit_ease().unwrap();
+            assert!(std::ptr::eq(allocation.request(), &request));
+            assert!(std::ptr::eq(
+                allocation.span(),
+                graph.spans().first().unwrap()
+            ));
+            assert_eq!(allocation.cut_progress(), progress);
+            assert_eq!(
+                (
+                    allocation.first_amount().as_micrometres(),
+                    allocation.second_amount().as_micrometres()
+                ),
+                (*first, *second)
+            );
+            assert_eq!(
+                allocation
+                    .first_amount()
+                    .checked_add(allocation.second_amount()),
+                Ok(allocation.parent_amount())
+            );
+            let [first_pair, second_pair] = binding.paired_intervals();
+            assert_eq!(
+                allocation.amount_in_a(first_pair.side(SeamSideId::A).range),
+                Ok(allocation.first_amount())
+            );
+            assert_eq!(
+                allocation.amount_in_a(second_pair.side(SeamSideId::A).range),
+                Ok(allocation.second_amount())
+            );
+            assert_eq!(allocation.cumulative_at_a(Param::START), Ok(Length::ZERO));
+            assert_eq!(
+                allocation.cumulative_at_a(Param::END),
+                Ok(allocation.parent_amount())
+            );
+            assert_eq!(
+                allocation.amount_in_a(f.span().a.range),
+                Ok(allocation.parent_amount())
+            );
+        }
+        rows += 1;
+    }
+    assert_eq!(rows, 35);
+    println!("independent uniform-ease oracle: {rows} rows, both declared directions");
+}
+
+#[test]
+fn uniform_ease_original_root_queries_are_split_order_independent() {
+    for parent in [1, -1] {
+        for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+            let mut f = fixture();
+            let a_edge = f.span().a.range.edge();
+            let b_edge = f.span().b.range.edge();
+            f.span_mut().a.range = EdgeRange::new(a_edge, t(1, 7), t(6, 7)).unwrap();
+            f.span_mut().b.range = EdgeRange::new(b_edge, t(1, 5), t(4, 5)).unwrap();
+            f.span_mut().direction = direction;
+            f.span_mut().ease.amount =
+                EaseAmount::Explicit(Length::from_micrometres(parent).unwrap());
+            let graph = f.graph(&[]).unwrap();
+            let mut observed = Vec::new();
+            for (a_cut, same_b, opposite_b) in
+                [(t(8, 21), t(2, 5), t(3, 5)), (t(13, 21), t(3, 5), t(2, 5))]
+            {
+                let request = SplitSeamSpan::new(
+                    id(301),
+                    EdgeAnchor {
+                        edge: a_edge,
+                        param: a_cut,
+                    },
+                    EdgeAnchor {
+                        edge: b_edge,
+                        param: match direction {
+                            SeamDirection::Same => same_b,
+                            SeamDirection::Opposite => opposite_b,
+                        },
+                    },
+                );
+                let allocation = request
+                    .bind_source_cuts(&graph)
+                    .unwrap()
+                    .uniform_explicit_ease()
+                    .unwrap();
+                let amounts = [
+                    (t(1, 7), t(8, 21)),
+                    (t(8, 21), t(13, 21)),
+                    (t(13, 21), t(6, 7)),
+                ]
+                .map(|(from, to)| {
+                    allocation
+                        .amount_in_a(EdgeRange::new(a_edge, from, to).unwrap())
+                        .unwrap()
+                        .as_micrometres()
+                });
+                assert_eq!(amounts, [0, parent, 0]);
+                observed.push(amounts);
+            }
+            assert_eq!(observed.first(), observed.get(1));
+        }
+    }
+}
+
+#[test]
+fn uniform_ease_retains_actual_eligibility_sources_without_fabricating_values() {
+    use sc_core::command::CommandUniformEaseError as Error;
+    use std::error::Error as _;
+    let mut f = fixture();
+    let request = SplitSeamSpan::new(
+        id(301),
+        EdgeAnchor {
+            edge: f.span().a.range.edge(),
+            param: t(1, 2),
+        },
+        EdgeAnchor {
+            edge: f.span().b.range.edge(),
+            param: t(1, 2),
+        },
+    );
+    for amount in [
+        EaseAmount::Formula(id(710)),
+        EaseAmount::Profile(ProfileParameterRef::new(id(711))),
+    ] {
+        f.span_mut().ease.amount = amount;
+        let graph = f.graph(&[]).unwrap();
+        let error = request
+            .bind_source_cuts(&graph)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap_err();
+        assert_eq!(
+            error,
+            Error::Amount {
+                span: id(301),
+                amount
+            }
+        );
+        assert!(error.source().is_none());
+    }
+    f.span_mut().ease.distribution = EaseDistribution::Weighted {
+        side: SeamSideId::B,
+        regions: vec![WeightedEaseRegion {
+            from: Param::START,
+            to: Param::END,
+            weight: Rational::ONE,
+        }],
+    };
+    let graph = f.graph(&[]).unwrap();
+    assert_eq!(
+        request
+            .bind_source_cuts(&graph)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap_err(),
+        Error::Weighted {
+            span: id(301),
+            side: SeamSideId::B
+        }
+    );
+    let marks = [f.notch(720, t(1, 4)), f.notch(721, t(3, 4))];
+    f.span_mut().stops = vec![
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(720),
+        },
+        StopLandmark {
+            side: SeamSideId::A,
+            landmark: id(721),
+        },
+    ];
+    f.span_mut().ease.distribution = EaseDistribution::BetweenNotches {
+        side: SeamSideId::A,
+        start: id(720),
+        end: id(721),
+    };
+    let graph = f.graph(&marks).unwrap();
+    assert_eq!(
+        request
+            .bind_source_cuts(&graph)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap_err(),
+        Error::BetweenNotches {
+            span: id(301),
+            side: SeamSideId::A,
+            start: id(720),
+            end: id(721)
+        }
+    );
+}
+
+#[test]
+fn uniform_ease_retains_directed_cut_mismatch_and_original_numeric_chain() {
+    use sc_core::command::CommandUniformEaseError as Error;
+    use sc_core::ontology::RangeProgressError;
+    use std::error::Error as _;
+    for direction in [SeamDirection::Same, SeamDirection::Opposite] {
+        let mut f = fixture();
+        f.span_mut().direction = direction;
+        let request = SplitSeamSpan::new(
+            id(301),
+            EdgeAnchor {
+                edge: f.span().a.range.edge(),
+                param: t(1, 3),
+            },
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: t(1, 2),
+            },
+        );
+        let graph = f.graph(&[]).unwrap();
+        let error = request
+            .bind_source_cuts(&graph)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap_err();
+        assert_eq!(
+            error,
+            Error::CutProgress {
+                span: id(301),
+                a: Rational::new(1, 3).unwrap(),
+                b: Rational::new(1, 2).unwrap(),
+                direction
+            }
+        );
+        assert!(error.source().is_none());
+    }
+    for side in [SeamSideId::A, SeamSideId::B] {
+        let mut f = fixture();
+        let maximum = i64::MAX;
+        let range =
+            EdgeRange::new(f.span().a.range.edge(), t(1, maximum), t(2, maximum - 1)).unwrap();
+        let request = SplitSeamSpan::new(
+            id(301),
+            EdgeAnchor {
+                edge: f.span().a.range.edge(),
+                param: t(1, 2),
+            },
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: t(1, 2),
+            },
+        );
+        match side {
+            SeamSideId::A => {
+                f.span_mut().a.range = range;
+            }
+            SeamSideId::B => {
+                f.span_mut().b.range =
+                    EdgeRange::new(f.span().b.range.edge(), range.from(), range.to()).unwrap();
+            }
+        }
+        let request = SplitSeamSpan::new(
+            request.span(),
+            EdgeAnchor {
+                edge: f.span().a.range.edge(),
+                param: if side == SeamSideId::A {
+                    t(1, maximum - 1)
+                } else {
+                    request.cut(SeamSideId::A).param
+                },
+            },
+            EdgeAnchor {
+                edge: f.span().b.range.edge(),
+                param: if side == SeamSideId::B {
+                    t(1, maximum - 1)
+                } else {
+                    request.cut(SeamSideId::B).param
+                },
+            },
+        );
+        let graph = f.graph(&[]).unwrap();
+        let error = request
+            .bind_source_cuts(&graph)
+            .unwrap()
+            .uniform_explicit_ease()
+            .unwrap_err();
+        let Error::Progress {
+            span,
+            side: actual_side,
+            issue,
+        } = &error
+        else {
+            panic!("actual normalization cause")
+        };
+        assert_eq!((*span, *actual_side), (id(301), side));
+        let RangeProgressError::Arithmetic {
+            range: original,
+            at,
+            issue: numeric,
+        } = issue.as_ref()
+        else {
+            panic!("reduced progress denominator overflows")
+        };
+        assert_eq!(
+            *original,
+            match side {
+                SeamSideId::A => f.span().a.range,
+                SeamSideId::B => f.span().b.range,
+            }
+        );
+        assert_eq!(*at, t(1, maximum - 1));
+        assert_eq!(
+            numeric.as_ref(),
+            &sc_units::UnitError::Overflow {
+                operation: "Rational::checked_relative_progress"
+            }
+        );
+        assert_eq!(error.source().unwrap().to_string(), issue.to_string());
+        assert_eq!(
+            error.source().unwrap().source().unwrap().to_string(),
+            numeric.to_string()
+        );
+    }
+}
+
+#[test]
+fn uniform_ease_queries_check_original_frame_and_domain_and_keep_snapshot_source() {
+    use sc_core::command::CommandUniformEaseError as Error;
+    use sc_core::ontology::RangeProgressError;
+    let mut f = fixture();
+    let edge = f.span().a.range.edge();
+    f.span_mut().a.range = EdgeRange::new(edge, t(1, 7), t(6, 7)).unwrap();
+    f.span_mut().ease.amount = EaseAmount::Explicit(Length::from_micrometres(10).unwrap());
+    let request = SplitSeamSpan::new(
+        id(301),
+        EdgeAnchor {
+            edge,
+            param: t(1, 2),
+        },
+        EdgeAnchor {
+            edge: f.span().b.range.edge(),
+            param: t(1, 2),
+        },
+    );
+    let graph = f.graph(&[]).unwrap();
+    let allocation = request
+        .bind_source_cuts(&graph)
+        .unwrap()
+        .uniform_explicit_ease()
+        .unwrap();
+    let wrong = EdgeRange::whole(f.span().b.range.edge());
+    assert_eq!(
+        allocation.amount_in_a(wrong),
+        Err(Error::IntervalSource {
+            span: id(301),
+            expected: edge,
+            interval: wrong
+        })
+    );
+    for (from, to, at) in [
+        (Param::START, Param::END, Param::START),
+        (t(1, 2), Param::END, Param::END),
+    ] {
+        assert_eq!(
+            allocation.amount_in_a(EdgeRange::new(edge, from, to).unwrap()),
+            Err(Error::Progress {
+                span: id(301),
+                side: SeamSideId::A,
+                issue: Box::new(RangeProgressError::Outside {
+                    range: f.span().a.range,
+                    at
+                })
+            })
+        );
+    }
+    assert_eq!(allocation.cumulative_at_a(t(1, 7)), Ok(Length::ZERO));
+    assert_eq!(
+        allocation.cumulative_at_a(t(6, 7)),
+        Ok(allocation.parent_amount())
+    );
+    f.span_mut().ease.amount = EaseAmount::Explicit(Length::from_micrometres(-3).unwrap());
+    let replacement = f.graph(&[]).unwrap();
+    let fresh = request
+        .bind_source_cuts(&replacement)
+        .unwrap()
+        .uniform_explicit_ease()
+        .unwrap();
+    assert_eq!(
+        (
+            allocation.parent_amount().as_micrometres(),
+            fresh.parent_amount().as_micrometres()
+        ),
+        (10, -3)
+    );
+    assert!(std::ptr::eq(
+        allocation.span(),
+        graph.spans().first().unwrap()
+    ));
+    assert!(std::ptr::eq(
+        fresh.span(),
+        replacement.spans().first().unwrap()
+    ));
+}

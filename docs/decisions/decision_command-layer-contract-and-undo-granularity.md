@@ -167,3 +167,16 @@ allocation at global boundaries,then difference endpoints for each child. Repart
 child totals is order-dependent:the independent Fraction prototype for1µm gives[0,1,0] versus[1,0,0];
 original-root boundaries give[0,1,0],with negative symmetry. This is a planning prototype:the native
 cumulative watch/integration remains .3.2.2,D301 stays open,and no quantity or split effect is published.
+
+## Original-root uniform allocation0489
+
+answers: "what does the native uniform explicit ease partition prove?"
+
+It borrows the actual original request/span and checks directed normalized cuts before quantizing
+original cumulative signed quantities through the shared rounding rule. Original-domain interval
+amounts difference boundary values;rounded children never become fresh sources. Stored Param is
+an edge-length fraction by the reference contract,not a polynomial curve parameter. Native sewing33/
+docs3/independent Fraction35 rows in both directions pass,including partial-root query order/signed
+symmetry,eligibility,actual error chains and snapshot replacement. Private fields/lifetimes seal
+source evidence only. Canonical child provenance,symbolic/nonuniform integration,stops,lineage,
+current validation,admission and paired publication remain owned;D301 stays P1 before effects.

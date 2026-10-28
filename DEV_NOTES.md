@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — complete normalized progress and cumulative-source plan
+## _(2026-10-28 UTC)_ — original-source cumulative uniform ease
 
-0488 .3.2.1 adds exact held relative_progress and original-context RangeProgressError. Four factor-pair cancellations precede final multiplication/narrowing. A125-bit offset may yield a valid63-bit progress;materializing the offset first would refuse an admissible complete result.
-Native numerical unit1/range19/method docs1 pass;range target consumes17 independent Fraction rows (13 values/2 outside/2 genuine final overflows),producer bytes match. Original range/cut and actual UnitError source survive refusal;unknown topology remains unresolved. Strict selected Clippy/fmt pass.
-D301 plan retains original source/domain and differences cumulative quantized endpoints. Independent Fraction prototype ±1 shows child-order drift versus root boundaries;native cumulative watch/integration remains next .3.2.2. Glossary310/9/158/0/book88/166/1559/2655 pass0;no quantity/effect publication.
-Promotion:indexed command-layer decision;whole0487/closed D300642 verifies4 Git spans,retention1096/2492115 residentB passes0. LIVE reviewed unchanged,G1 6/18,D301 P1 owned;README unchanged. Original symbolic sources,stops,lineage and full paired acceptance remain owned.
-[Whole0487 direction-pair/D301 lesson](docs/history/stitchcad-devnotes-part642.md) retains exact native28/docs3 and parent-conservation counterexample.
+0489 .3.2.2 retains actual original request/span/domain. Same requires equal normalized cuts;Opposite compares A with1−ascending B. Stored Param is edge-length progress by contract. Shared half-away rounding computes cumulative original quantities;interval amounts difference original endpoints.
+Native selected5/full sewing33/docs3/strict lib+sewing Clippy/fmt pass.35 independent Fraction rows×both directions match native/frozen bytes;partial-root order queries yield[0,±1,0]. Actual symbolic/weighted/notch eligibility,original normalization chains,frame/bounds and replacement snapshots checked.
+Book88/168/1559/2656 and glossary0 pass;whole0488 retained643 verifies3 Git spans. Retention1097/64 workingMD/2496923 residentB passes;next record644 requires product-blocking capacity transition. Original backups protected. D301 remains P1;canonical source/child provenance/nonuniform/stops/lineage/effects pending.
+Promotion:indexed command-layer decision. LIVE reviewed unchanged,G1 6/18;README unchanged. No currentness/physical/child publication certificate.
+[Whole0488 normalized-progress lesson](docs/history/stitchcad-devnotes-part643.md) retains exact arithmetic and independent Fraction evidence.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

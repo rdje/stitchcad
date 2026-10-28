@@ -693,18 +693,32 @@ All98 completed ids/statuses and original proof pointers remain live there.
   symbolic source/provenance representation;.4 weighted/notch/context integration before effects.
 - ID: `G1-SLICE.6.5.3.2.3.2.1`
   Status: `done`
-  Goal: complete exact normalized progress with final reduced bounds,original numeric evidence and independent Fraction oracle;D301 cumulative plan recorded.
-  - [x] REPRODUCE / ISSUE: independent Fraction prototype →offset denominator125 bits versus complete progress denominator63;native selected relative_progress unit confirms old subtraction refuses its own offset while composite succeeds,rc=0.
-  - [x] ROOT CAUSE: exact algebra/source review →materializing a bounded offset/extent can lose a representable complete fraction;cross-cancel four factor pairs before final products and narrow only complete reduced result,rc=0.
-  - [x] FIX: add relative_progress/RangeProgressError with inclusive bounds,original range/cut and actual boxed UnitError source;fixed-width cross-cancelled kernel. Retain original-source/cumulative quantization plan;native quantity integration still .2.
-  - [x] ADDRESSED: cargo test -p sc-core --test range_contract -- --nocapture →19 passed/17 independent rows;--lib relative_progress →1 passed rc=0;Fraction producer/cmp →17 byte-equal rows (13 value/2 outside/2 overflow) rc=0.
-  - [x] NO REGRESSION: scoped relative_progress rustdoc1/strict library/range Clippy/fmt pass0;glossary310/9/158/0 and book88/166/1559/2655 rc=0. Independent cumulative prototype ±1 shows child-order differences;native cumulative watch remains pending,no quantity/effect publication.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/D301/indexed decision/index/book/API-status updated;LIVE reviewed unchanged G1 6/18,D301 P1 owned;README unchanged. transition_receipts.py --record part642 →4 exact Git spans rc=0;history_archive.sh verify-retention →1096/2492115 residentB rc=0.
-  Commit: STITCHCAD-G1-0488;next .3.2.2 root-cumulative uniform explicit allocation;retained symbolic source/stop/lineage/full paired acceptance remain pending.
+  Goal:0488 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part643.md).
 - ID: `G1-SLICE.6.5.3.2.3.2.2`
+  Status: `done`
+  Goal:0489 uniform explicit original-source cumulative allocation;private borrowed provenance,
+  declared-direction compatibility and signed quantum conservation. No child lineage or paired effects.
+  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/seam_partition/cumulative_quantization_prototype.py
+    →±1µm rounded-child orders differ;root cumulative endpoints agree,rc=0. Native root-query watch now covers the chosen remedy.
+  - [x] ROOT CAUSE: same diagnostic →repartitioning rounded children loses original cumulative boundaries,rc=0.
+    Public Param/reference contract and actual SeamSpan amount/domain reviewed;preserve original edge-length fractions,not polynomial curve t.
+  - [x] FIX: sealed CommandUniformEasePartition retains actual request/span/source;shared half-away boundary quantization,
+    original-domain interval differences,Same/Opposite compatibility,original eligibility and numeric error chains. No new IDs/effects.
+  - [x] ADDRESSED: cargo test -p sc-core --test sewing_contract uniform_ease -- --nocapture via local_environment.py
+    →5 passed;35 independent Fraction rows in both directions,partial-root order/signed symmetry,actual eligibility/overflow/query/snapshot checks,rc=0.
+    python3 -I -B docs/tasks/artifacts/seam_partition/uniform_ease_oracle.py plus cmp frozen TSV →exact bytes,rc=0.
+  - [x] NO REGRESSION: cargo test -p sc-core --test sewing_contract via local_environment.py →33 passed,rc=0;
+    cargo test -p sc-core --doc command::seam_ease →3 passed,rc=0;scoped strict lib/sewing Clippy and fmt --check →pass,rc=0.
+    mdbook build/publication check →88 chapters/168 scoped APIs/1559 source/2656 rendered links,rc=0;glossary census →0 failures,rc=0.
+  - [x] LOCKSTEP: live pointers/journals/indexed decision/book/API inventory updated;LIVE/README reviewed unchanged.
+    transition_receipts.py --record docs/history/stitchcad-devnotes-part643.md →3 exact Git spans,rc=0;
+    bash scripts/history_archive.sh verify-retention →1097 records/64 workingMD/2496923 residentB,rc=0.
+    D301 remains P1:.3 retained canonical sources,.4 nonuniform/context,.3.3 stops,.3.4 lineage and paired acceptance pending.
+- ID: `G1-SLICE.6.5.3.2.retention`
   Status: `pending`
-  Goal: uniform explicit allocation from original parent source/cumulative boundary quantization;
-  conserve signed quantum sums and nested split-order behavior without repartitioning rounded children.
+  Goal: product-blocking capacity transition before next sealed record644;working history now64/64.
+  Follow public archive authoring/install contracts;verify copy/preservation/use before exact retirement.
+  Preserve original backups;never overwrite sealed records or raise limits. Then resume .3.2.3.
 - ID: `G1-SLICE.6.5.3.2.3.2.3`
   Status: `pending`
   Goal: canonical retained original ease source/domain/provenance for child partitions,including
@@ -1005,7 +1019,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   byte-identical.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.8`
   Status: `pending`
   Goal: `sc-constraints` kernel (§6.1/§6.2) — typed constraint AST, finite-domain propagation +
@@ -1017,7 +1030,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   release artifact contains no Z3 dependency (verified by a dependency census).
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.9`
   Status: `pending`
   Goal: `sc-api` + `sc-mcp` (§7.8, §10) — versioned experimental command API over jsonrpsee
@@ -1035,7 +1047,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   measured stitching-expertise claim. Existing human-only release approval remains §10's contract.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.9.doc`
   Status: `proposed`
   Goal: director2026-10-24 DBIQNP rustdoc adoption and mdBook-link requirements; no pivot.
@@ -1047,7 +1058,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   identities, types/units, uncertainty, provenance, dependencies, diagnostics and authority.
   Runtime introspection/wire discovery retain separate typed contracts/tests under .9.
   Schedule: after D156 closure, before .9 signoff; discussion does not revise roadmap scope.
-
 - ID: `G1-SLICE.9.plugin`
   Status: `proposed`
   Goal: director2026-10-24 DBIQNP StitchCAD plugin with chat and interactive UI control.
@@ -1075,8 +1085,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   G1.9/.13 and G5 own control contracts/state visibility/real UI-agent tests; V1 owns staged3D coverage.
   Quality/baseline/full-control direction is adopted in decision_stitchcad-ui-baseline-and-quality.md;
   stack selection, implementation order and numerical frontier remain unchanged.
-
-
 - ID: `G1-SLICE.9.plugin.t1`
   Status: `done`
   Goal: STITCHCAD-G1-0230 owns DBIQNP proposal/book/CH/DEV transport clarification.
@@ -1085,34 +1093,27 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Verified: book/publication45, command census0 failures, size OK; rc=0, protected transport-*.txt.
   Commit: STITCHCAD-G1-0230. LIVE categories and MEMORY next action unchanged.
   promotion: declined (scoped external compatibility research; reverify before adoption).
-
 - ID: `G1-SLICE.9.transport`
   Status: `in_progress`
   Goal: admission policy and four implemented connection profiles; no runtime profile is certified yet.
-
 - ID: `G1-SLICE.9.transport.policy`
   Status: `done`
   Goal: v0.4 MCP admission policy and D218 verified in0231; runtime profiles remain unapproved.
   Paths: ROADMAP.md;docs/book/src/spec/command-layer.md;docs/tasks/artifacts/command_layer/run_command_layer_census.sh;docs/tasks/artifacts/command_layer/run_command_layer_probes.sh
   Additional paths: docs/tasks/artifacts/glossary/run_glossary_probes.sh;docs/book/src/build-and-checks.md;docs/book/src/annexes/ledger-fixtures.md;docs/book/src/annexes/formula-static-signatures.md
   Acceptance: complete scope/six proof boxes retained in [part317](../history/window12.md#stitchcad-devnotes-part317md).
-
 - ID: `G1-SLICE.9.transport.stdio`
   Status: `pending`
   Goal: G1 local-stdio baseline; owned process/identity/permissions/lifecycle and §7.1 admission tests.
-
 - ID: `G1-SLICE.9.transport.http`
   Status: `pending`
   Goal: local-http; explicit loopback binding, origin/caller checks and §7.1 admission tests.
-
 - ID: `G1-SLICE.9.transport.remote`
   Status: `pending`
   Goal: remote-http; TLS/authentication/revocation/isolation and §7.1 admission tests before enablement.
-
 - ID: `G1-SLICE.9.transport.bridge`
   Status: `pending`
   Goal: private-bridge; end-to-end caller/relay/target scope, lifecycle and §7.1 admission tests.
-
 - ID: `G1-SLICE.10`
   Status: `pending`
   Goal: `sc-cli` — headless command replay that is deterministic: the same command script produces
@@ -1121,7 +1122,6 @@ All98 completed ids/statuses and original proof pointers remain live there.
   with structured diagnostics; no wall-clock or locale leaks into output.
   Verification: `pending`
   Commit: `pending`
-
 - ID: `G1-SLICE.11`
   Status: `pending`
   Goal: the three runtime profiles build (§7.3): `native-full`, `native-headless`, `wasm-viewer`,
