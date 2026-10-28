@@ -147,3 +147,16 @@ sc-measure resource6/strict selected lint/fmt pass:12/30/0, exact member/entry o
 prefix14/32, empty/prior error and held source data unchanged despite missing canonical targets.
 External sets .3.2, full host .3.3, higher root .2.5.2/runtime .4 and deeper/full proof remain owned.
 No source/provenance truth, physical, whole-host/model or allocator time/memory certificate follows.
+
+## Actual common SizeSet metadata resources0455
+
+answers: "how do common SizeSet resources preserve explicit points and partial break drafts?"
+
+.6.8.2.2.2.2.3.2.1 precharges actual member/axis/value/point/coordinate/required-dimension/break
+vectors, then exact owned labels/names/binding tokens. Fixed Count revisions add zero unbounded bits;
+Length/Scalar refs stay unread. Exhaustive private views/Copy guards expose field evolution. Point
+vectors use actual Set owner/original point index; member refs do not become new owning identities.
+Native sc-measure resource12/strict selected lint/fmt pass:21/20/0, partial20/18, prefix23/22, original
+owner/index refusals, all axis source forms/unused values/terminal Count and held missing-context data.
+Chart/profile/family/full host/higher-root/runtime and deeper/full proof remain owned; no currentness,
+grading/physical, whole-host/model or allocator time/memory certificate follows from these counts.

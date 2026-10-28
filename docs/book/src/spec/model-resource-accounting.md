@@ -395,3 +395,43 @@ the canonical context with an empty draft makes current validation refuse; accou
 metadata still succeeds unchanged without rebinding. This is the measurement/Ease component only.
 External SizeSets, the complete actual source-host port, higher-root composition and runtime admission
 remain owned; these counts supply no source-truth, physical, whole-host/model or allocator time/memory proof.
+
+## Actual common SizeSet metadata
+
+charge_size_set_metadata_resources charges actual common membership, axes and breaks without
+rebuilding their current contexts. It precharges members; axes and each value catalog; points and
+each coordinate vector; required break dimensions; then available break records. Exact member/axis/
+value labels and saved dimension-binding tokens count per owned field. Base member, system, Design
+table, numeric source/delta references and fixed Count revisions add no unbounded counter bits.
+
+Exhaustive private owner/definition/label views and Copy guards cover fixed fields. Label, Length and
+Scalar axis sources retain their authored form; an unknown numeric source remains unread. No label
+normalization, revision advance, coordinate resolution, Cartesian grid, adjacent-cell expansion,
+missing-delta synthesis, coverage or grading execution occurs. A point has a member reference rather
+than its own identity: coordinate refusals keep the actual Set owner and original point index.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+sc_measure::charge_size_set_metadata_resources(&common_metadata, &mut meter)?;
+let represented_common_sources = meter.finish()?;
+```
+
+The native fixture has2 members,3 axes/6 values,2 points/6 coordinates,1 required dimension and1
+available break:21 entries. Member labels ` é ` and `猫` retain7 UTF-8 bytes; axis names `a`, `é`, `猫`
+retain6, label coordinates `S`/`é` retain3, and the required/available dimension tokens `gg` each add2:
+20 bytes total. Dedicated Length and general Scalar coordinates remain references. Unused catalog
+values still count; a reversed coordinate order and explicit second-member base stay unchanged.
+The terminal Count revision remains at its bound and contributes zero unbounded magnitude bits.
+
+Entry maxima1/4/6/8/10/12/15/18/19/20 retain original refusals0+2/2+3/5+2/7+2/9+2/11+2/13+3/16+3/
+19+1/20+1. Nested value vectors retain actual axis/index; coordinates retain Set/point index. Text
+refusals preserve actual member/value/axis/Set/break ownership, including member4+3, value9+2,
+axis13+3, required dimension16+2 and available break18+2. No private label/token is copied into locations.
+
+With no available breaks, the same actual draft retains its required dimension:20 entries/18 bytes,
+without manufacturing a delta. Six new cases plus prior6 pass:12 source resource cases, with strict
+selected lint/formatting after correcting the new test's missing trait import. Prior2 entries/2 bytes
+compose to23/22; first errors remain original. An empty replacement canonical context refuses current
+validation, while held accounting preserves exact metadata/canonical/measurement objects. Chart,
+profile and Garment/MTM source families, complete host/higher-root and runtime admission remain
+owned; these counts grant no currentness, grading/physical, whole-host/model or allocator memory/time proof.

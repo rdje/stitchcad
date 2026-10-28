@@ -10,14 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0454
+## Current leaf acceptance —0455
 
-- [x] ROOT CAUSE: python3 -I -B native measurement/Ease schema assertions print6 owner vectors plus
-  table/set entry vectors and separate saved token ownership rc=0; inline landmark pairs stay fixed.
-- [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:6 passed rc=0; actual12/30/0,
-  exact vector/UTF8 owner/index refusals, prefix14/32 and held source state despite missing targets.
-- [x] NO REGRESSION: strict selected Clippy/fmt rc=0; git diff --quiet HEAD -- crates/sc-core rc=0;
-  actual fixture constructors retain their semantic checks. No canonical/bus/source-validation change.
+- [x] ROOT CAUSE: python3 -I -B native common SizeSet schema assertions print actual member/axis/
+  value/point/coordinate/required-dimension/break vectors, labels/tokens and fixed Count revision rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:12 passed rc=0; six actual common
+  metadata cases verify21/20/0, partial20/18, prefix23/22, exact original owners/indices and held state.
+- [x] NO REGRESSION: strict selected Clippy/fmt rc=0 after final Set/point witness correction; prior6
+  source cases pass. git diff --quiet HEAD -- crates/sc-core rc=0; no current semantic/bus path changed.
 
 ## Goal
 
@@ -872,41 +872,42 @@ All98 completed ids/statuses and original proof pointers remain live there.
   contracts; include all owned source collection/text/counter fields, no dishonest-host security claim.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.1`
   Status: `done`
-  Goal:0454 actual MeasurementInputs/inventory/Landmark/procedure/Measurement/table/Ease/set resources.
-  Charge every actual owned vector and text/token field in authored/schema order; preserve all fixed
-  units/domains/source/declaration/reference/fit/compression data without lookup, validation or evaluation.
-  - [x] REPRODUCE / ISSUE: python3 -I -B native measurement/Ease schema assertions print6 owner vectors,
-    table/set entry vectors, separately owned saved binding tokens and inline landmark pair rc=0.
-    Canonical values/states/evidence remain owned by core and cannot be counted again as copied metadata.
-  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part606.md:
-    3 exact Git spans rc=0; whole0453 structural scope/lesson/ledger retains its source-pending boundary.
-    Repeated table/Ease/set spellings are distinct held token fields, not deduplicated borrowed aliases.
-  - [x] FIX: cargo clippy -p sc-measure --test resource_contract -- -D warnings:finished rc=0;
-    exhaustive private owner/definition/binding views precharge all vectors before traversal and charge
-    exact borrowed text. Individual Copy guards cover all skipped fixed payloads; no context or host fiction.
-  - [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:6 passed rc=0; actual metadata6/
-    tables1+2/Ease1/sets1+1=12 entries, all names/docs/tokens30 UTF8 bytes/0 bits. All8 vector charges
-    have original first witnesses; Unicode/document-space, record/table/Ease/set token failures preserve
-    exact owner/member or entry index, including text6+4/17+2/21+2/24+2/28+2. Shared prefix14/32,
-    empty0/0/0/prior error, unchanged source/canonical and missing-context current refusal with held success.
-  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; git diff --quiet HEAD --
-    crates/sc-core rc=0. Actual constructors validate original fixture; no existing semantic/current/
-    canonical/value/authority/bus behavior changed. No complete source-host or full integration claim.
-  - [x] LOCKSTEP: whole0453 proof606 has3 exact Git spans rc=0; book/pointer/frontier/lesson/indexed
-    decision align. Source .3 is split into safe measured children before changes: external .3.2.1–.3,
-    complete readonly host .3.3, higher-root .2.5.2/runtime .4 and deeper/full verification stay owned.
-  Retention1060 logical/27 working Markdown/58958 decoded lines/4448491 decoded bytes/2279303
-  resident bytes rc=0. Book build/native publication:82 chapters/159 scoped API rows/1489 source links/
-  2502 rendered links rc=0; maintained-reference83 files/18607 lines/1298134 bytes rc=0; map/diff rc=0.
-  Cargo uses scripts/local_environment.py. Promotion: indexed command-layer decision. No source truth,
-  physical, whole-host/model, allocator time/memory or runtime admission certificate follows.
+  Goal:0454 actual measurement/Ease resources; [whole scope/proofs](../history/stitchcad-devnotes-part607.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: complete actual external SizeSet family resources; all metadata/member/chart/axis/break/profile
   and explicit Garment/MTM held fields, no fabricated host, geometry, grading or source inference.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.1`
-  Status: `pending`
-  Goal: actual external membership/axis/break metadata and all owned nested strings/vectors/counters.
+  Status: `done`
+  Goal:0455 actual common SizeSet membership/axis/point/break metadata resources.
+  Charge every actual owned vector/name/label/token; retain fixed source/reference/Count/base/system
+  intent without context construction, numeric reads, label normalization, inference or grading.
+  - [x] REPRODUCE / ISSUE: python3 -I -B native common SizeSet schema assertions print members/axes/
+    values/points/coordinates/required-dimensions/break vectors, saved token/label text and Count revision
+    rc=0. Required dimensions and available breaks are independent; points own no extra member id.
+  - [x] ROOT CAUSE (WHY + WHERE): transition_receipts.py --record docs/history/stitchcad-devnotes-part607.md:
+    3 exact Git spans rc=0; whole0454 scope/lesson/ledger retains external-family/full-host boundaries.
+    Set/point index is the coordinate-vector owner witness; the held member id remains a reference.
+  - [x] FIX: cargo clippy -p sc-measure --test resource_contract -- -D warnings:finished rc=0;
+    exhaustive private owner/definition/label/variant views and fixed Copy guards precharge actual
+    vectors and exact text. Initial E0599 test-trait import fixed before acceptance; no lint waiver.
+  - [x] ADDRESSED: cargo test -p sc-measure --test resource_contract:12 passed rc=0 after final witness
+    correction; six new cases verify2 members/3 axes/6 values/2 points/6 coordinates/1 required dimension/
+    1 break=21 entries, labels7/names6/value labels3/tokens4=20 bytes, fixed Count0 unbounded bits.
+    All Label/Length/Scalar sources, unused catalog values, authored point order/second base/terminal
+    Count remain; vector refusals0+2/2+3/5+2/7+2/9+2/11+2/13+3/16+3/19+1/20+1 and text witnesses
+    keep exact owners/original indices. Partial20/18, prefix23/22, first refusal and held missing-context
+    success preserve exact metadata/canonical/measurement data without fabricated deltas/current proof.
+  - [x] NO REGRESSION: selected cargo fmt check/strict Clippy rc=0; prior6 source cases pass;
+    git diff --quiet HEAD -- crates/sc-core rc=0. No existing current/semantic/source or command behavior
+    changed; original actual constructors keep their domain/current checks. No broader integration claim.
+  - [x] LOCKSTEP: whole0454 proof607 has3 exact Git spans rc=0; retention1061 logical/28 working
+    Markdown/59018 decoded lines/4453656 decoded bytes/2284468 resident bytes rc=0. Book/pointer/
+    frontier/lesson/indexed decision align; chart/profile .3.2.2, family .3.2.3/full host .3.3/higher root
+    .2.5.2/runtime .4 and deeper/full verification stay owned. No whole-source/model or RSS/time proof.
+  Book build/native publication:82 chapters/159 scoped API rows/1490 source links/2504 rendered links
+  rc=0; maintained-reference83 files/18650 lines/1301260 bytes rc=0. Map/diff checks rc=0.
+  Cargo uses scripts/local_environment.py. Promotion: indexed command-layer decision.
 - ID: `G1-SLICE.6.8.2.2.2.2.3.2.2`
   Status: `pending`
   Goal: actual chart/collection/profile transformation fields and every owned nested dimension.

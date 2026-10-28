@@ -64,6 +64,10 @@ impl<'a> SizeMemberPointView<'a> {
 }
 
 impl SizeAxes {
+    pub(crate) fn resource_definition(&self) -> &SizeAxesDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate exact pins, nonempty axes and complete distinct member points against actual records.
     /// # Errors
     /// Returns structural, membership, coordinate-ownership or current canonical-source evidence.

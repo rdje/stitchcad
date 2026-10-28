@@ -1,4 +1,4 @@
-//! Logical held measurement source content; canonical values remain owned by sc-core.
+//! Logical held source content; canonical values remain owned by sc-core.
 use crate::{
     EaseBinding, EaseDefinition, EaseSetDefinition, LandmarkDefinition, MeasurementBinding,
     MeasurementDefinition, MeasurementInputs, MeasurementInputsDefinition,
@@ -10,7 +10,11 @@ use sc_core::{
     },
     ontology::EntityId,
 };
+mod size_metadata;
+pub use size_metadata::charge_size_set_metadata_resources;
+
 fn fixed<T: Copy>(_: &T) {}
+fn fixed_slice<T: Copy>(_: &[T]) {}
 fn location(
     field: &'static str,
     owner: Option<EntityId>,

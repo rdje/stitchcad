@@ -180,6 +180,10 @@ impl<'a> SizeAxisValueView<'a> {
 }
 
 impl SizeAxis {
+    pub(crate) fn resource_definition(&self) -> &SizeAxisDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate explicit name/order/identities and every actual current source/kind.
     /// This constructs one axis, not a complete SizeSet or member-coordinate grid.
     /// # Errors

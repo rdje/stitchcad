@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0454 — account for actual measurement and Ease source resources
+## STITCHCAD-G1-0455 — account for actual common SizeSet metadata resources
 
-- Precharge actual metadata/table/Ease/set vectors and charge every retained name/document/binding-token field.
-- Source resource6/strict selected lint/fmt pass:12/30/0, cumulative original locations and shared-prefix14/32.
-- Equal token spellings count per owned binding; canonical values stay singly owned; held metadata remains unchanged.
-- Whole0453 retained606; external SizeSets, complete host, higher roots and runtime remain separately owned.
+- Charge actual member/axis/value/point/coordinate/required-dimension/break vectors and exact owned text bindings.
+- Source resource12 (prior6/new6), strict selected lint/fmt pass:21/20/0, partial20/18 and prefix23/22.
+- Preserve Set/point witnesses, all axis source forms, terminal Count, original order and held missing-context state.
+- Whole0454 retained607; chart/profile/family, complete host, higher-root and runtime integration remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

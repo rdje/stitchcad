@@ -365,3 +365,6 @@ fn empty_actual_measurement_sources_contribute_zero_and_preserve_prior_error_on_
     );
     assert_eq!(refused.finish(), Err(first));
 }
+
+#[path = "support/resource_size_metadata.rs"]
+mod size_metadata;

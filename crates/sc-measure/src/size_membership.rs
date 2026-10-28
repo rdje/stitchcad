@@ -67,6 +67,10 @@ pub enum SizeSystem {
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub struct SizeLabel(String);
 impl SizeLabel {
+    pub(crate) fn resource_text(&self) -> &str {
+        let Self(text) = self;
+        text
+    }
     /// Preserve authored bytes after checking that the label is not entirely whitespace.
     /// # Errors
     /// Returns [`SizeMembershipError::BlankLabel`] for a blank label.
@@ -188,6 +192,10 @@ impl fmt::Display for SizeMembershipError {
 }
 impl std::error::Error for SizeMembershipError {}
 impl SizeMembership {
+    pub(crate) fn resource_definition(&self) -> &SizeMembershipDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate nonempty authored order, unique identities/labels and explicit base membership.
     /// Does not sort, parse labels, or derive measurements or axes.
     /// # Errors

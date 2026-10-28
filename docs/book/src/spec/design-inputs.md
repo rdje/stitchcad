@@ -85,6 +85,9 @@ cargo test -p sc-measure --test measurement_inputs_contract
 
 ## Owned common SizeSet metadata
 
+[Held resource accounting](model-resource-accounting.md#actual-common-sizeset-metadata) counts
+actual member/axis/point/break vectors and labels/tokens without rebuilding contexts or reading values.
+
 SizeSetMetadata owns members, axes/member points, required dimensions/available breaks and Design
 table id, reused by chart families. Values/measurement/Ease retain their owners; empty break drafts
 prove no coverage or full Design composition.

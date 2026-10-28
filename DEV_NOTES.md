@@ -3,16 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — actual measurement and Ease source resources
+## _(2026-10-28 UTC)_ — actual common SizeSet resource metadata
 
-0454 .6.8.2.2.2.2.3.1 precharges actual metadata/table/Ease/set vectors and every retained text/token
-field. Saved bindings own separate tokens, even with equal spellings; canonical values remain solely
-core-owned. Exhaustive private views/Copy guards; no context/value/provenance read or reconversion.
-Measure resource6/strict lint/fmt pass:12/30/0, exact original owner/member/entry witnesses, prefix14/32,
-empty/prior error and held metadata unchanged despite a missing replacement canonical context.
-Promotion: indexed command-layer decision. Whole0453 proof606 has3 Git spans; source work split
-before implementation. External sets .3.2.1–.3.2.3/full host .3.3/higher root .2.5.2/runtime .4 remain;
-no whole-host/model, physical/source truth or allocator time/memory certificate.
+0455 .6.8.2.2.2.2.3.2.1 precharges actual member/axis/value/point/coordinate/required-dimension/break
+vectors and exact labels/names/saved tokens. Fixed Count revision is not an unbounded counter; numeric
+refs stay unread. Exhaustive private views/Copy guards; point vector witnesses use Set owner/index,
+not a promoted member reference. Measure resource12 (prior6/new6)/strict lint/fmt pass:21/20/0,
+partial20/18, prefix23/22, all source forms/unused values/terminal Count, exact cumulative witnesses
+and held data unchanged despite missing canonical context. Initial missing test-trait import fixed.
+Promotion: indexed command-layer decision. Whole0454 proof607 has3 native Git spans; chart/profile/
+family/full host/higher root/runtime and deeper/full proof stay owned, no physical/RSS/time certificate.
 
 [Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
 

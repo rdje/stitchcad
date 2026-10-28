@@ -52,6 +52,10 @@ pub struct SizeBreaks {
     definition: SizeBreaksDefinition,
 }
 impl SizeBreaks {
+    pub(crate) fn resource_definition(&self) -> &SizeBreaksDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate all actual requirement/break bindings and uniqueness, allowing explicitly partial drafts.
     /// # Errors
     /// Returns current-reference errors, duplicate cells/identities or an undeclared dimension.

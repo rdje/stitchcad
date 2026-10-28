@@ -148,6 +148,10 @@ impl fmt::Debug for SizeSetMetadata {
     }
 }
 impl SizeSetMetadata {
+    pub(crate) fn resource_definition(&self) -> &SizeSetMetadataDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Own exact common metadata after whole identity/current-source validation, allowing drafts.
     ///
     /// # Errors

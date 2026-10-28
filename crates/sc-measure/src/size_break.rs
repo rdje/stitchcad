@@ -35,6 +35,10 @@ pub struct SizeBreak {
     definition: SizeBreakDefinition,
 }
 impl SizeBreak {
+    pub(crate) fn resource_definition(&self) -> &SizeBreakDefinition {
+        let Self { definition } = self;
+        definition
+    }
     /// Validate the explicit key, actual dimension binding and canonical delta without reading its value.
     /// # Errors
     /// Returns exact current pin, identity, adjacency, dimension or delta-source evidence.
