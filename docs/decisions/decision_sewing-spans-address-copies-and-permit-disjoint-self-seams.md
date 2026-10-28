@@ -167,7 +167,7 @@ narrowing (b≤189),or use bounded normalized input (b≤63). This is arithmetic
 implementation must bound its actual temporaries/operations and admit workspace before allocation.
 Reuse the one shared rounding policy,not a local floating or duplicated half-away implementation.
 A pure distribution-side quantity does not certify pairing. Illustrative lengths11000/10000,ease1000,
-A densities1/3 allocate250 at A half and require B21/40;uniform equal progress would give500.
+A densities1 then3 allocate250 at A half and require B21/40;uniform equal progress would give500.
 Consume actual original lengths/correspondence before effects;do not manufacture missing geometry.
 Native later-fragment notch half parameters locate original quarter/three-quarter stops,and both
 named orders are structurally legal. Recover their exact original positions through actual journal
@@ -188,4 +188,13 @@ No region cloning or arbitrary-precision allocation occurs during admission. Pri
 and exhaustive Copy metadata keep its source borrow and bounded Debug honest. Preserve actual
 symbolic/notch IDs and source/side/required/limit refusals;zero amounts and child queries retain full
 source population. This is not allocator/CPU/currentness/physical authority. Native source2/bound1/
-privacy-lifetime-no-default docs3 pass;weighted quantity execution follows in .4.2.3.
+privacy-lifetime-no-default docs3 pass;weighted quantities implemented0500 in .4.2.3.
+
+answers: "how do admitted weighted source queries preserve exact normalization and original rounding?"
+
+0500 cumulative_at/amount_in use original density-side frames,wide exact normalization and complete
+original mass. Orient B/Opposite before shared rounding;difference original boundaries,never child
+mass. Check frame and both interval bounds before allocation,including zero sources. Two passes
+retain no integer array;explicit reference/Length types protect the admitted width derivation.
+Native weighted6/oracle1/docs4 pass with160 density/50 domain rows,including188/189-bit fractions
+and signed ties. Pure quantity queries do not certify paired correspondence,currentness or effects.

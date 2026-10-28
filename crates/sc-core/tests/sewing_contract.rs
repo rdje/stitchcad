@@ -978,6 +978,8 @@ fn weighted_regions_have_positive_density_and_explicit_order_without_defaulting(
 
 #[test]
 fn nonuniform_recovery_oracle_inputs_are_valid_original_sources_without_invented_quantities() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::WeightedEaseLimits;
     fn fraction(value: &str) -> Rational {
         let (numerator, denominator) = value.split_once('/').unwrap_or((value, "1"));
         Rational::new(numerator.parse().unwrap(), denominator.parse().unwrap()).unwrap()
@@ -1028,9 +1030,8 @@ fn nonuniform_recovery_oracle_inputs_are_valid_original_sources_without_invented
                 side,
             })
         );
-        // This validates oracle input admission and the existing refusal boundary. The independent
-        // Fraction result is deliberately wider than the native reference Rational; weighted native
-        // quantities do not exist yet and no assertion below claims that they were executed.
+        // The uniform API retains its actual weighted refusal. The separately admitted weighted
+        // query consumes the same original declaration and the independent wide Fraction result.
         let numerator = field(7).parse::<num_bigint::BigUint>().unwrap();
         let denominator = field(8).parse::<num_bigint::BigUint>().unwrap();
         assert!(numerator <= denominator);
@@ -1038,6 +1039,30 @@ fn nonuniform_recovery_oracle_inputs_are_valid_original_sources_without_invented
         let first = field(9).parse::<i64>().unwrap();
         let second = field(10).parse::<i64>().unwrap();
         assert_eq!(first + second, parent);
+        let admitted = source
+            .source()
+            .admit_weighted_explicit(WeightedEaseLimits::new(
+                NonZeroUsize::new(4).unwrap(),
+                NonZeroU64::new(1000).unwrap(),
+            ))
+            .unwrap();
+        let domain = admitted.source().side(side).range;
+        assert_eq!(
+            admitted
+                .cumulative_at(EdgeAnchor {
+                    edge: domain.edge(),
+                    param: at
+                })
+                .unwrap()
+                .as_micrometres(),
+            first,
+            "{row}"
+        );
+        assert_eq!(
+            admitted.amount_in(domain).unwrap().as_micrometres(),
+            parent,
+            "{row}"
+        );
         rows += 1;
     }
     assert_eq!(rows, 160);
@@ -1246,6 +1271,209 @@ fn weighted_workspace_admission_preserves_actual_eligibility_before_budget_refus
             end: id(400),
         }
     );
+}
+
+#[test]
+fn weighted_original_domain_queries_use_complete_fractions_beyond_reference_progress_width() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{WeightedEaseAmountError as Error, WeightedEaseLimits};
+    let limits =
+        WeightedEaseLimits::new(NonZeroUsize::new(1).unwrap(), NonZeroU64::new(408).unwrap());
+    let mut rows = 0;
+    for row in include_str!("fixtures/weighted_domain_ease.tsv")
+        .lines()
+        .skip(1)
+    {
+        let fields = row.split('\t').collect::<Vec<_>>();
+        assert_eq!(fields.len(), 11);
+        let field = |index| *fields.get(index).unwrap();
+        let parent = field(1).parse().unwrap();
+        let from = t(field(2).parse().unwrap(), field(3).parse().unwrap());
+        let at = t(field(4).parse().unwrap(), field(5).parse().unwrap());
+        let to = t(field(6).parse().unwrap(), field(7).parse().unwrap());
+        let mut f = fixture();
+        let edge = f.span().a.range.edge();
+        let domain = EdgeRange::new(edge, from, to).unwrap();
+        f.span_mut().a.range = domain;
+        f.span_mut().ease = DeclaredEase {
+            amount: EaseAmount::Explicit(Length::from_micrometres(parent).unwrap()),
+            distribution: EaseDistribution::Weighted {
+                side: SeamSideId::A,
+                regions: vec![WeightedEaseRegion {
+                    from: Param::START,
+                    to: Param::END,
+                    weight: Rational::ONE,
+                }],
+            },
+        }
+        .into();
+        let graph = f.graph(&[]).unwrap();
+        let original = graph.spans().first().unwrap().retain_ease_source();
+        let admitted = original.source().admit_weighted_explicit(limits).unwrap();
+        let actual = admitted.cumulative_at(EdgeAnchor { edge, param: at });
+        if field(10) == "outside" {
+            assert_eq!(
+                actual,
+                Err(Error::Outside {
+                    source_span: id(301),
+                    side: SeamSideId::A,
+                    range: domain,
+                    at,
+                }),
+                "{row}"
+            );
+        } else {
+            assert_eq!(
+                actual.unwrap().as_micrometres(),
+                field(10).parse::<i64>().unwrap(),
+                "{row}"
+            );
+            if field(0).starts_with("final-") || field(0).starts_with("wide-") {
+                assert!(matches!(
+                    domain.relative_progress(at),
+                    Err(sc_core::ontology::RangeProgressError::Arithmetic { .. })
+                ));
+            }
+        }
+        rows += 1;
+    }
+    assert_eq!(rows, 50);
+}
+
+#[test]
+fn weighted_interval_quantities_conserve_original_boundaries_with_pre_rounding_b_orientation() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::WeightedEaseLimits;
+    let limits =
+        WeightedEaseLimits::new(NonZeroUsize::new(2).unwrap(), NonZeroU64::new(598).unwrap());
+    for side in [SeamSideId::A, SeamSideId::B] {
+        for parent in [-1, 1] {
+            let mut f = fixture();
+            f.span_mut().ease = DeclaredEase {
+                amount: EaseAmount::Explicit(Length::from_micrometres(parent).unwrap()),
+                distribution: EaseDistribution::Weighted {
+                    side,
+                    regions: vec![
+                        WeightedEaseRegion {
+                            from: Param::START,
+                            to: t(1, 2),
+                            weight: Rational::ONE,
+                        },
+                        WeightedEaseRegion {
+                            from: t(1, 2),
+                            to: Param::END,
+                            weight: Rational::from_integer(3),
+                        },
+                    ],
+                },
+            }
+            .into();
+            let graph = f.graph(&[]).unwrap();
+            let original = graph.spans().first().unwrap().retain_ease_source();
+            let admitted = original.source().admit_weighted_explicit(limits).unwrap();
+            let domain = original.source().side(side).range;
+            let boundaries = [Param::START, t(1, 3), t(2, 3), Param::END];
+            let mut quantities = boundaries
+                .windows(2)
+                .map(|ends| {
+                    admitted
+                        .amount_in(
+                            EdgeRange::new(
+                                domain.edge(),
+                                *ends.first().unwrap(),
+                                *ends.get(1).unwrap(),
+                            )
+                            .unwrap(),
+                        )
+                        .unwrap()
+                        .as_micrometres()
+                })
+                .collect::<Vec<_>>();
+            if side == SeamSideId::B {
+                quantities.reverse();
+                assert_eq!(quantities, [parent, 0, 0]);
+            } else {
+                assert_eq!(quantities, [0, parent, 0]);
+            }
+            assert_eq!(quantities.iter().sum::<i64>(), parent);
+            assert_eq!(admitted.amount_in(domain).unwrap().as_micrometres(), parent);
+        }
+    }
+}
+
+#[test]
+fn weighted_queries_preserve_actual_frames_and_bounds_even_for_zero_source() {
+    use core::num::{NonZeroU64, NonZeroUsize};
+    use sc_core::ontology::{WeightedEaseAmountError as Error, WeightedEaseLimits};
+    let mut f = fixture();
+    let edge = f.span().a.range.edge();
+    let foreign = f.span().b.range.edge();
+    let domain = EdgeRange::new(edge, t(1, 4), t(3, 4)).unwrap();
+    f.span_mut().a.range = domain;
+    f.span_mut().ease.declared_mut().unwrap().distribution = EaseDistribution::Weighted {
+        side: SeamSideId::A,
+        regions: vec![WeightedEaseRegion {
+            from: Param::START,
+            to: Param::END,
+            weight: Rational::ONE,
+        }],
+    };
+    let graph = f.graph(&[]).unwrap();
+    let original = graph.spans().first().unwrap().retain_ease_source();
+    let admitted = original
+        .source()
+        .admit_weighted_explicit(WeightedEaseLimits::new(
+            NonZeroUsize::new(1).unwrap(),
+            NonZeroU64::new(408).unwrap(),
+        ))
+        .unwrap();
+    let at = EdgeAnchor {
+        edge: foreign,
+        param: Param::START,
+    };
+    let error = admitted.cumulative_at(at).unwrap_err();
+    assert_eq!(
+        error,
+        Error::SourceFrame {
+            source_span: id(301),
+            side: SeamSideId::A,
+            expected: edge,
+            at
+        }
+    );
+    assert!(std::error::Error::source(&error).is_none());
+    assert_eq!(
+        admitted.cumulative_at(EdgeAnchor {
+            edge,
+            param: Param::START
+        }),
+        Err(Error::Outside {
+            source_span: id(301),
+            side: SeamSideId::A,
+            range: domain,
+            at: Param::START
+        })
+    );
+    let interval = EdgeRange::whole(foreign);
+    assert_eq!(
+        admitted.amount_in(interval),
+        Err(Error::IntervalSource {
+            source_span: id(301),
+            side: SeamSideId::A,
+            expected: edge,
+            interval,
+        })
+    );
+    assert_eq!(
+        admitted.amount_in(EdgeRange::new(edge, t(1, 4), Param::END).unwrap()),
+        Err(Error::Outside {
+            source_span: id(301),
+            side: SeamSideId::A,
+            range: domain,
+            at: Param::END
+        })
+    );
+    assert_eq!(admitted.amount_in(domain), Ok(Length::ZERO));
 }
 
 #[test]

@@ -1,13 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.2.4.2.3 in docs/tasks/G1-SLICE-execution.md:exact weighted original
-  cumulative quantities through the sealed WeightedEaseAdmission from seam_ease_workspace.rs.
-  Place query engine in that module or its private child;admission fields stay module-private.
-  Limits explicit positive,no Default;reservation189N+ceil(log2N)+219 is conservative integer width,
-  not RSS/CPU authority. Source/amount/count/bits checks precede BigUint work;no source truncation.
-  Parent/side/complete regions/limits/original source remain actual. Reuse shared sc-units
-  round_magnitude_from_half_comparison;derive exact floor/remainder comparison before rounding.
-  Shared-rounding compiled5+9/+release mutations remain full paired acceptance/pre-push probes.
+- Next G1-SLICE.6.5.3.2.3.2.4.2.acceptance in docs/tasks/G1-SLICE-execution.md:focused actual
+  weighted-source component acceptance after rounding/admission/quantity implementation. Join actual
+  Design/source/resource/currentness context without adding physical correspondence or bus effects.
+  No broad/mutation campaigns here;full paired acceptance or required pre-push probes owns them.
+- 0500 WeightedEaseAdmission::cumulative_at(EdgeAnchor)/amount_in(EdgeRange) use complete original
+  density-side frame,wide normalization and A-order orientation BEFORE shared rounding. Kernel is
+  private child seam_ease_workspace/quantity.rs;admission fields remain module-private. Native6+1/
+  docs4/160 density+50 domain oracle rows pass,including188-bit mass/189-bit progress. Limits explicit
+  positive,no Default;reservation189N+ceil(log2N)+219 bounds numeric width,not allocator/CPU authority.
 - Recovery0497:160 independent rows,valid188-bit denominator;B/Opposite complement BEFORE rounding.
   Original-domain exact normalization may need189 bits. Do not use uniform equal-progress as physical
   evidence. Indexed sewing decision/book retain constructive workspace and actual context contracts.

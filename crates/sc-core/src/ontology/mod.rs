@@ -126,7 +126,7 @@ pub use seam_ease::{
 };
 pub use seam_ease_amount::SeamEaseAmountError;
 pub use seam_ease_workspace::{
-    WeightedEaseAdmission, WeightedEaseLimits, WeightedEaseWorkspaceError,
+    WeightedEaseAdmission, WeightedEaseAmountError, WeightedEaseLimits, WeightedEaseWorkspaceError,
 };
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,

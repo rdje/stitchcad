@@ -27,7 +27,7 @@ pub enum CommandUniformEaseError {
         /// Actual portion cause,also the standard error source.
         issue: Box<SeamEasePortionError>,
     },
-    /// Weighted allocation requires its separate cumulative distribution implementation.
+    /// Weighted allocation requires its separately admitted original-source query/context API.
     Weighted {
         /// Original correspondence identity.
         span: EntityId,

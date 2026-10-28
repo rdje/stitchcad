@@ -5,6 +5,9 @@ use super::{
 use core::{fmt, num::NonZeroU64, num::NonZeroUsize};
 use sc_units::{Length, MAX_LENGTH_UM};
 
+mod quantity;
+pub use quantity::WeightedEaseAmountError;
+
 /// Explicit positive limits for one original weighted-source quantity workspace.
 /// No default is supplied. These limits bound region count and conservative integer operand/result
 /// width,not allocator overhead,CPU time,current Design authority or physical correspondence.
@@ -284,7 +287,8 @@ fn weighted_workspace_bit_bound(regions: usize) -> Option<u64> {
     let reference_bits = u64::from(i64::BITS - 1);
     let region_bits = reference_bits.checked_mul(3)?;
     let query_bits = region_bits;
-    let source_bits = u64::from(i64::BITS - MAX_LENGTH_UM.leading_zeros());
+    let max_length: i64 = MAX_LENGTH_UM;
+    let source_bits = u64::from(i64::BITS - max_length.leading_zeros());
     // Common D<2^(189N),total T<N*2^(189N),prefix P<=Q*T. Original-domain Q needs
     // <=189 bits;source magnitude needs30. This reserves a conservative construction,not the
     // minimal width for the actual density. No BigUint allocation occurs to derive admission.

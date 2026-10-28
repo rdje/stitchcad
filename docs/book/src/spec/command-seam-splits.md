@@ -141,7 +141,7 @@ stop ownership and retired-parent/new-child lineage remain separate owned partit
 | `second_amount` | Target span allocation minus first amount |
 | `cumulative_at_a` | Quantized original allocation at an original A-domain position |
 | `amount_in_a` | Original cumulative upper amount minus original cumulative lower amount |
-| `Weighted` | Actual distribution side requires its separate allocation implementation |
+| `Weighted` | Actual distribution side requires its separately admitted weighted query |
 | `BetweenNotches` | Actual side and original notch identities require their allocation context |
 | `Amount` | Actual formula/profile source remains symbolic |
 | `Progress` | Original side and boxed RangeProgressError,also the standard error source |
@@ -377,7 +377,7 @@ this scoped retained-source component without expanding the root tracker beyond 
 
 ## Nonuniform arithmetic and context requirements
 
-Weighted quantity execution is pending. The recovery diagnostic independently integrates the
+The admitted weighted-source queries below implement exact allocation. The independent diagnostic integrates the
 original declared density with exact fractions. For regions with bounds lᵢ,uᵢ and positive
 weights wᵢ, total mass is Σwᵢ(uᵢ−lᵢ); ascending cumulative mass at q is
 Σwᵢ max(0,min(q,uᵢ)−lᵢ). Divide by the original total,including every region.
@@ -394,7 +394,7 @@ same signed symmetry. Child allocations remain differences of original quantized
 Fixed128-bit rational intermediates cannot cover all valid declarations. Four quarter regions
 with densities1/(9223372036854775807−k),k=2,4,6,8,produce a reduced cumulative denominator
 of188 bits at the half boundary. The fraction is below one half: exact allocation of1 µm is0,
-while binary64 gives one half and allocates1. The tracked independent diagnostic freezes160
+while binary64 gives one half and allocates1. The tracked independent diagnostic freezes160 density and50 original-domain
 input/result rows and checks Fraction against a separate integer common-denominator construction:
 
 ```bash
@@ -482,6 +482,61 @@ reference. Region-limit and bit-limit errors retain the original source identity
 amount and selected limit. A child interval never truncates the original denominator population.
 These are mathematical input/reservation checks. Allocator overhead,CPU time,whole-command
 admission,current source validation and physical correspondence remain their own obligations.
-The exact weighted cumulative query kernel and command/context integration remain pending.
+The exact weighted query kernel below is implemented;command/context integration remains pending.
 Focused native source2/bound1 and privacy/lifetime/no-default doctests3 pass;broader paired proof
 and shared-rounding mutation campaigns remain deferred to their explicit owners.
+
+## Query exact original weighted quantities
+
+| API token | Meaning |
+| --- | --- |
+| `cumulative_at` | Original weighted cumulative amount at an actual original density-side EdgeAnchor,in canonical A order |
+| `amount_in` | Original cumulative endpoint difference for a density-side interval |
+| `WeightedEaseAmountError` | Actual source/side/frame/bounds or concrete numeric refusal |
+| `SourceFrame` | Boundary uses a different edge from the original density side |
+| `IntervalSource` | Interval uses a different original density-side edge |
+| `Outside` | Boundary lies outside the closed complete original domain |
+| `Numeric` | Original UnitError retained as the standard error source |
+
+An admitted view now computes these quantities from the complete immutable original density and
+signed literal. It normalizes source-frame positions exactly in a wide workspace,integrates the
+piecewise positive density and divides by the original total mass. Missing regions contribute zero.
+No bounded reference Rational or formula128-bit intermediate is inserted into this calculation.
+For B/Opposite,it complements the exact fraction before invoking the shared rounding primitive.
+These interval query amounts difference original rounded boundaries;no child mass is renormalized.
+
+```rust
+use sc_core::ontology::{EdgeAnchor, EdgeRange, WeightedEaseAdmission, WeightedEaseAmountError};
+use sc_units::Length;
+fn inspect(actual: WeightedEaseAdmission<'_>, at: EdgeAnchor, interval: EdgeRange)
+    -> Result<(Length, Length), WeightedEaseAmountError> {
+    Ok((actual.cumulative_at(at)?, actual.amount_in(interval)?))
+}
+```
+
+For a declared1 µm source with density1 on the lower half and3 on the upper half,the three
+ascending density-side thirds have cumulative fractions0,1/6,1/2,1. Canonical A-ordered interval
+amounts are0,1,0 for an A distribution. For a B/Opposite distribution,the A traversal reverses those
+intervals and exact complemented boundaries give1,0,0. A−1 µm source produces their signed mirrors.
+Each partition sums to its original source quantum. These are declared allocation examples;
+matching physical A/B cuts still requires their actual length/correspondence context.
+
+Frame and closed-domain checks precede integer allocation. Interval queries check the original
+edge and both endpoints before computing either cumulative value. Zero ease retains those same
+refusals. Errors name the original source and density side;frame/interval/bounds errors preserve
+the actual supplied data,while numeric errors forward their concrete UnitError source.
+
+The implementation makes two region passes without a cloned density or retained integer array.
+It builds a common denominator,then original total/prefix integer masses. Positive term bounds
+follow the admitted construction above;query normalization needs at most189 bits,and source
+multiplication adds at most30. Explicit reference/Length field types make a future width change
+require re-deriving admission at compile time. This reservation bounds numeric operands/results;
+allocator internals and whole-command runtime budgets remain separate.
+
+The independent fixture now has50 original-domain rows,including two valid189-bit progress
+fractions on opposite sides of one half that binary64 collapses to one half. The unchanged bounded
+reference-progress API refuses these wider results;the admitted weighted query returns the exact
+quantity. Native tests consume all160 density rows and50 domain rows,including188-bit cumulative
+mass,189-bit normalization,positive/negative/zero/maximal sources,omitted regions and signed ties.
+Focused weighted6/oracle1/source docs4 and selected Clippy/fmt pass. Semantic-notch context,actual
+paired matching,command effects and full paired acceptance retain their later owners.

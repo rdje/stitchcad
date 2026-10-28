@@ -1,7 +1,8 @@
 """Independent exact nonuniform allocation diagnostic; no project arithmetic imports.
 
-Default output is the frozen native-input TSV. --check compares it without writing files.
-The native consumer checks actual source admission/refusals, not implemented weighted quantities.
+Default output is the frozen native-input TSV. --domains emits original-domain query rows.
+--check compares both fixtures without writing files. Native consumers check actual source
+admission/refusals and original weighted quantities against the independently derived results.
 The workspace bound is a constructive arithmetic bound, not an allocator/CPU certificate.
 """
 from fractions import Fraction as F
@@ -96,14 +97,47 @@ def render():
     return '\n'.join(lines) + '\n'
 
 
+def render_domains():
+    root = Path(__file__).resolve().parents[4]
+    selected = {'partial-a', 'partial-b', 'outside-low', 'outside-high',
+                'cancelled-small-frame', 'cancelled-near-one',
+                'final-denominator-overflow', 'final-two-component-overflow'}
+    cases = [row.split('\t') for row in
+             (root / 'crates/sc-core/tests/fixtures/range_progress.tsv').read_text().splitlines()
+             if row and not row.startswith('#') and row.split('\t')[0] in selected]
+    assert {row[0] for row in cases} == selected
+    maximum = (1 << 63) - 1
+    for name, numerator in (('wide-below-half', (maximum - 1) // 2),
+                            ('wide-above-half', (maximum + 1) // 2)):
+        cases.append([name, '1', str(maximum - 2), str(numerator), str(maximum),
+                      str(maximum - 2), str(maximum - 1), 'independent'])
+    lines = ['# case\tparent_um\tfrom_n\tfrom_d\tat_n\tat_d\tto_n\tto_d\tcdf_n\tcdf_d\tamount_or_outside']
+    for name, fn, fd, an, ad, tn, td, _ in cases:
+        start, at, end = F(int(fn), int(fd)), F(int(an), int(ad)), F(int(tn), int(td))
+        progress = (at - start) / (end - start)
+        assert max(progress.numerator.bit_length(), progress.denominator.bit_length()) <= 189
+        if name.startswith('wide-'):
+            assert progress.denominator.bit_length() == 189 and float(progress) == 0.5
+            assert (progress < F(1, 2)) == (name == 'wide-below-half')
+        for parent in (-1_000_000_000, -1, 0, 1, 1_000_000_000):
+            result = quantize(parent * progress) if start <= at <= end else 'outside'
+            lines.append('\t'.join(map(str, (name, parent, fn, fd, an, ad, tn, td,
+                                           progress.numerator, progress.denominator, result))))
+    return '\n'.join(lines) + '\n'
+
+
 if __name__ == '__main__':
     output = render()
     if sys.argv[1:] == ['--check']:
         root = Path(__file__).resolve().parents[4]
         assert (root / 'crates/sc-core/tests/fixtures/nonuniform_ease.tsv').read_bytes() == output.encode()
+        assert (root / 'crates/sc-core/tests/fixtures/weighted_domain_ease.tsv').read_bytes() == render_domains().encode()
         print('nonuniform oracle:160 rows;Fraction/common-denominator agreement;'
-              '188-bit denominator;float/orientation/equal-cut controls;rc=0')
+              '188-bit density denominator;50 original-domain rows/189-bit progress;'
+              'float/orientation/equal-cut controls;rc=0')
+    elif sys.argv[1:] == ['--domains']:
+        print(render_domains(), end='')
     elif not sys.argv[1:]:
         print(output, end='')
     else:
-        raise SystemExit('usage: nonuniform_ease_oracle.py [--check]')
+        raise SystemExit('usage: nonuniform_ease_oracle.py [--check|--domains]')

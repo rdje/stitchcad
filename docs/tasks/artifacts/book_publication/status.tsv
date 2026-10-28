@@ -176,3 +176,4 @@ retained original ease quantity refusal	spec/command-seam-splits.md	crates/sc-co
 weighted workspace limits	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease_workspace.rs	WeightedEaseLimits	G1-SLICE.6.5.3.2.3.2.4.2.2	4.4
 weighted workspace admission	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease_workspace.rs	WeightedEaseAdmission	G1-SLICE.6.5.3.2.3.2.4.2.2	4.4
 weighted workspace refusal	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease_workspace.rs	WeightedEaseWorkspaceError	G1-SLICE.6.5.3.2.3.2.4.2.2	4.4
+weighted original quantity refusal	spec/command-seam-splits.md	crates/sc-core/src/ontology/seam_ease_workspace/quantity.rs	WeightedEaseAmountError	G1-SLICE.6.5.3.2.3.2.4.2.3	4.4

@@ -9,7 +9,7 @@ use sc_units::{round::div_round_half_away_from_zero, Length, UnitError};
 /// Actual original source eligibility,normalization,correspondence or quantity refusal.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum SeamEaseAmountError {
-    /// Weighted intent requires its cumulative distribution implementation.
+    /// Weighted intent requires its separately admitted cumulative query API.
     Weighted {
         /// Original source identity.
         source_span: EntityId,

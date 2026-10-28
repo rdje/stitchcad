@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — weighted workspace admitted from actual original source
+## _(2026-10-28 UTC)_ — exact original weighted quantities implemented
 
-0499 adds explicit positive count/bit limits and a sealed source-bound admission. No Default,region clone or arbitrary-precision allocation. Distribution then amount eligibility precede complete-source count and checked conservative189N+ceil(log2N)+219 bit reservation;four regions need977 by policy.
-Native source2/bound1/docs3/scoped Clippy/fmt pass0. Actual parent and both child sources retain4 regions at±1/0;977 accepts,976/count3 refuse with original context. Symbolic/notch/Uniform failures stay actual. Privacy,lifetime,no-default and checked-count overflow watched.
-Reservation bounds integer operands/results,not allocator/CPU/currentness/physical authority. Debug fixed metadata plus Copy/exhaustive fields. Promotion:indexed sewing decision;LIVE/README unchanged,G1 6/18. Next .4.2.3 exact weighted queries;full paired/mutation verification deferred.
-[Whole0498 rounding lesson](docs/history/stitchcad-devnotes-part654.md) retains exact implementation/proofs;3 Git spans verified.
+0500 admitted cumulative_at/amount_in use complete original density and wide source-frame normalization;B/Opposite complements before shared rounding. Interval allocations difference original boundaries,not child-normalized mass. Frame and both bounds precede allocation,including zero source.
+Two passes retain no cloned density/integer array. Explicit reference/Length field types protect the admitted bit derivation. Native weighted6/oracle1/docs4/scoped Clippy/fmt pass0;160 density/50 domain rows include188-bit mass and189-bit progress on opposite sides of half that float collapses.
+Actual signed/zero/max sources,gaps/interval conservation and original frame/bounds failures pass. Promotion:indexed sewing decision;LIVE/README unchanged,G1 6/18. Source quantities alone grant no currentness/paired geometry/effects;focused component acceptance next,then actual notch/context integration.
+[Whole0499 admission lesson](docs/history/stitchcad-devnotes-part655.md) retains exact source/limit proofs;3 Git spans verified before commit.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.
