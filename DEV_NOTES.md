@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — coupled native logical-resource acceptance
+## _(2026-10-28 UTC)_ — mixed transaction cancellation and rollback acceptance
 
-0473 .6.8.2.2.2.2.4.4 closes current/prospective model/retained logical-resource feature acceptance:sc-measure Design-input158(including93 actual bus)/source33;core resource47/control6/metadata8;all252 native cases pass0.
-Five private counter/append/cursor units and16 bus/resource/control privacy doctests pass0;strict selected test lint passes. This is scoped native resource evidence, not full bus/CI/browser/persistence, RSS/time/ingress or release acceptance.
-D294 observed stale component boundaries in model/source resource guides; native precise pending-clause census11→0/3→0 and publication85 chapters/159 API rows/1542 source/2596 rendered links pass0. Current integration now described without rewriting historical counts.
-Promotion:indexed command decision. Whole0472/D293 scope/lesson/changelog/closure retained627; deeper .6.5.5 then full .6.9 next. README correct unchanged; LIVE notes native resource acceptance, G1still6/18.
-[Whole0472 source ownership/API lesson](docs/history/stitchcad-devnotes-part627.md) retains exact D293 before/after and prior0471 pointer.
+0474 .6.5.5 uses real Notch/Material/Measurement/Notch plus exact alias, two reserved IDs and sole authoring/undo/action slots. Actual reference37 pre-effect events span9 required phases; cancelling each retains original event context and exact trace prefix.
+All37 cancellations preserve model/address/revision, same-key retry/full reference report, both IDs, capacity replay and original-address Undo. Separate member3 Notch failure after all3 handlers preserves the original error chain and corrected same-key retry.
+New2/group-preview6/group-commit6/control8, strict selected lint/fmt, native final-grant/infallible-effect source check pass0. No production source change; allocation exhaustion/panic recovery/persistence/browser/other-handler proof is not claimed.
+Promotion:indexed command decision;book85/159/1544/2599,retention1082/2415074B pass0. Whole0473/D294 in628(4 exact Git spans);0473 resource252 counts historical. Next full bus .6.9;LIVE transaction note,G1still6/18;README unchanged.
+[Whole0473 resource-acceptance lesson](docs/history/stitchcad-devnotes-part628.md) retains actual integrated proof and D294 closure.
 [Whole0470 authoring lesson](docs/history/stitchcad-devnotes-part624.md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/stitchcad-devnotes-part623.md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/stitchcad-devnotes-part622.md) retains exact setup/privacy/diagnostic proof.

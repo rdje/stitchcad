@@ -7,7 +7,7 @@ cumulative sink, including actual source content and its retained identity censu
 
 ## Coupled native resource acceptance
 
-After implementation and the D293 source-ownership repair, the complete selected native suites pass:
+At resource checkpoint0473, after implementation and D293 repair, these selected native suites passed:
 
 | Actual test target | Passed cases |
 | --- | --- |
@@ -34,6 +34,8 @@ This closes the implemented logical-content resource feature's native acceptance
 acceptance, persistence/reopen, browser execution, raw ingress, numeric/file/decompression/geometry
 work, allocator peaks, arbitrary source algorithm time and physical/release proof remain separate.
 No whole-project CI or release verdict follows from these selected suites.
+The table records that checkpoint; [two subsequent transaction cases](command-operation-control.md#mixed-transaction-checkpoint-acceptance)
+pass separately. The commands also include those later cases; current broader bus acceptance stays .6.9.
 
 ## Actual canonical-input accounting
 

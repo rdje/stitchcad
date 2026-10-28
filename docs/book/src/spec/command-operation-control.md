@@ -194,7 +194,7 @@ The initial reserve is validated and converted to shared storage once. Its entir
 including consumed IDs, remains allocated for this bus lifetime. There is no hidden refill or reserve
 getter. This trades retention of the finite initial backing for removal of reserve-size-dependent
 publication copies. It does not certify initial conversion peaks or total memory/time. Focused proof
-is the expanded native identity-cursor case plus the93 actual bus cases in coupled resource acceptance,
+is the expanded native identity-cursor case plus the93 actual bus cases at resource checkpoint0473,
 with strict selected lint/formatting. Current/prospective model/retained-state admission is implemented.
 
 ## Logical dynamic-content accounting contract
@@ -504,3 +504,39 @@ authority/source host algorithm time, numeric/file/decompression/geometry work o
 [Actual command data resource accounting](command-resource-accounting.md) documents owned request
 contexts, aliases, reports, records and current private retained composition separately from proposed
 operation work. Exact prospective authoring/history admission and D293 ownership repair have focused checks; coupled native resource checks pass; broader command/full verification remains owned.
+
+## Mixed transaction checkpoint acceptance
+
+The scoped transaction acceptance uses a real five-member metadata group: AddNotch, AssignMaterial,
+ChangeMeasurement, a second distinct AddNotch and an exact alias of the first. The explicit owner has
+two reserved identities, one authoring slot, one undo snapshot and one history-action slot. Its
+Measurement remains an authored Unknown; no evaluation or geometry result is substituted.
+
+A successful reference execution records the actual public progress events. The fixture observes37
+pre-effect checkpoints across all nine required phases: Authorized, SnapshotBound, RetainedValidation,
+Preparing, CurrentValidation, CandidateValidation, RetainedPublication, AllocationPreflight and
+ReadyToPublish. This count describes this fixture, not a universal work or time limit. Each event
+retains its original phase/fraction/member context.
+
+A fresh real owner then cancels at each observed event in turn. The returned original Cancelled
+cause matches that exact event, and the observed log is exactly the reference prefix. The private
+represented revision and original Piece-slice address/content remain unchanged. Reusing the same
+original group and keys commits once with the same complete report as the successful reference;
+its Notches receive both original reserved identities. The exact alias consumes no extra identity.
+Replay succeeds at the sole audit slot's capacity, and actual Undo restores that owner's original
+Piece-slice address. Thus all37 cancellations preserve later publication, replay and snapshot use.
+
+A second actual case changes the fourth member to an invalid Notch after the other three metadata
+handlers have staged changes. The commit retains group id, original index3 and AddNotch identity,
+then the original GroupPreviewError → CommandPreviewError → native NotchError source chain. An
+independently constructed native Notch witness matches. Correcting the same group/keys produces the
+same complete actual commit as the successful reference, including both original identities.
+
+```bash
+python3 -I -B scripts/local_environment.py -- cargo test -p sc-measure --test design_inputs_contract command_bus::transaction_acceptance:: -- --nocapture
+```
+
+Both new cases and existing group-preview6/group-commit6/control8 cases pass, with strict selected
+Clippy and formatting. This is cooperative pre-effect cancellation and native semantic-failure proof.
+It does not inject allocator exhaustion or certify panic recovery, persistence/reopen, other handlers,
+adapters, evaluation, geometry or physical/release behavior. Broader command acceptance stays .6.9.

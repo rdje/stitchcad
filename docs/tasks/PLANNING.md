@@ -8,9 +8,7 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## D294 — model/source guides retained stale component/runtime boundaries
-P2 fixed0473, owner G1-SLICE.6.8.2.2.2.2.4.4; scoped native pending-clause census model11→0/source3→0 rc=0.
-Actual current/prospective model/retained bus paths and coupled252 native/5 units/16 privacy cases pass0; corrected only these guides' stale component boundaries, preserving actual component proof and wider pending limits.
+D294 fixed0473; [whole model/source runtime-boundary closure](../history/stitchcad-devnotes-part628.md).
 D293 P0 fixed0472; [whole diagnosis/ownership/API closure](../history/stitchcad-devnotes-part627.md).
 D292 fixed0445; [whole ontology-clause closure](../history/stitchcad-devnotes-part625.md).
 D290/D291 fixed0442; [whole native reserve/setup closure ledger](../history/stitchcad-devnotes-part597.md).

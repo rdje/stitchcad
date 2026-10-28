@@ -10,15 +10,14 @@
 - Created: `2026-09-29`
 - Owner: repo-local workflow
 
-## Current leaf acceptance —0473
+## Current leaf acceptance —0474
 
-- [x] ROOT CAUSE: python3 -I -B scoped native source census locates D294 model11/source3 stale runtime
-  boundaries despite implemented current/prospective admission; completed native suite logs derived rc=0.
-- [x] ADDRESSED: cargo test selected sc-measure Design-input158/source33 and core resource47/control6/
-  metadata8 →252 passed rc=0, including93 actual bus cases; precise stale clauses11→0/3→0 rc=0.
-- [x] NO REGRESSION: cargo test -p sc-core --doc command::bus::CommandBus →11 passed rc=0;
-  resource4/control1/private units5 and selected strict Clippy pass0;book85/159/1542/2596 verified0.
-  Broader transaction/full bus/persistence/browser acceptance remains pending.
+- [x] ROOT CAUSE: python3 -I -B native transaction effect-boundary check confirms final grant after
+  Ready and no fallible/copy/progress/allocation call between publication moves;core source unchanged rc=0.
+- [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::transaction_acceptance::
+  →2 passed rc=0;37 checkpoints/9 phases preserve exact cancellation, same-key/two-ID/one-slot retry and Undo.
+- [x] NO REGRESSION: cargo test selected command_bus::group_preview::/group_commit::/control:: →6/6/8
+  passed rc=0;strict lint/fmt/book/native source pass0;full bus/persistence/browser proof remains pending.
 
 ## Goal
 
@@ -738,8 +737,24 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Status: `done`
   Goal:0429 D284 count-scope correction, no packing; [whole scope/proofs](../history/stitchcad-devnotes-part581.md).
 - ID: `G1-SLICE.6.5.5`
-  Status: `pending`
+  Status: `done`
   Goal: scoped actual transaction/failure-context/rollback acceptance; full bus review .6.9 later.
+  Prove every observed pre-effect checkpoint cancellation on a mixed real metadata group, exact
+  later-member native error context, same-key/identity/audit-slot retry and original snapshot Undo.
+  - [x] REPRODUCE / ISSUE: actual mixed reference trace emits37 pre-effect events across9 required
+    phases;native effect-boundary check confirms sole final authority/effect ordering,core unchanged rc=0.
+  - [x] ROOT CAUSE: python3 -I -B scoped source check rc=0:private candidates/cursor stage before
+    final grant;publication moves are infallible. New actual fixture exercises all observed checkpoints.
+  - [x] FIX: add public-interface transaction acceptance over real complete sources/models, three
+    handlers/five members, exact alias, finite two-ID/one-slot ownership and independent native error.
+  - [x] ADDRESSED: cargo test -p sc-measure --test design_inputs_contract command_bus::transaction_acceptance::
+    →2 passed rc=0;all37 cancel/retry/replay/Undo cases and member3 original Notch error/corrected retry pass.
+  - [x] NO REGRESSION: cargo test selected group_preview/group_commit/control →6/6/8 passed rc=0;
+    cargo clippy measure contract -D warnings and cargo fmt -p sc-measure --check pass0;production unchanged.
+  - [x] LOCKSTEP: book publication85 chapters/159 API rows/1544 source/2599 rendered links rc=0;
+    live docs/decision/index updated,LIVE transaction note,README unchanged;whole0473/D294 retained628.
+  Verification: above focused checks pass0;retention1082/2415074residentB rc=0;full bus .6.9 next.
+  Commit: STITCHCAD-G1-0474;no allocation exhaustion/panic/persistence/browser/other-handler certificate.
 - ID: `G1-SLICE.6.6`
   Status: `done`
   Goal: actual revision preconditions, idempotency replay and append-only actor audit trail.
@@ -952,24 +967,7 @@ All98 completed ids/statuses and original proof pointers remain live there.
   Goal:0472 immutable source/D293 repair; [whole scope/proofs](../history/stitchcad-devnotes-part627.md).
 - ID: `G1-SLICE.6.8.2.2.2.2.4.4`
   Status: `done`
-  Goal: close resource feature acceptance after .4.1–.4.3; run deferred integrated resource/bus checks,
-  then return to deeper/full .6.5.5/.6.9 and remaining command feature implementation as appropriate.
-  Own D294 stale model/source resource guide runtime boundaries; sync actual implemented admission and
-  preserve scoped component history. Native coupled resource proof does not close broader bus/ingress/time.
-  - [x] REPRODUCE / ISSUE: native precise D294 pending-clause census model11/source3 rc=0;
-    prior leaf checks were focused, while this completed feature owns deferred integrated resource proof.
-  - [x] ROOT CAUSE: python3 -I -B scoped actual runtime/chapter census rc=0:component-era pending
-    claims survived completed model/source/retained admission;native test logs verify the actual paths.
-  - [x] FIX: close implemented logical-content scope only;correct14 observed model/source chapter
-    clauses and link native resource acceptance;broader transaction/full bus/ingress/time stay owned.
-  - [x] ADDRESSED: cargo test sc-measure design_inputs_contract158/resource_contract33 and core
-    design_resource_contract47/command_control_contract6/design_metadata_contract8 →252 passed rc=0.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc command::bus::CommandBus →11 passed rc=0;
-    resource4/control1/private units5/strict test Clippy pass0;native bus93/158,book85/159/1542/2596 pass0.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGELOG/decision/index and LIVE native-resource/D294 notes updated;
-    README correct unchanged;whole0472/D293 retained627,4 exact Git spans/retention1081/2409882B rc=0.
-  Verification: above scoped checks pass0;full project CI,transaction .6.5.5/full bus .6.9 remain pending.
-  Commit: STITCHCAD-G1-0473;next .6.5.5 actual transaction/failure-context/rollback acceptance.
+  Goal:0473 coupled native logical-resource acceptance/D294; [whole scope/proofs](../history/stitchcad-devnotes-part628.md).
 
 - ID: `G1-SLICE.6.9`
   Status: `pending`

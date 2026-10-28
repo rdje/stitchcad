@@ -168,3 +168,17 @@ ingress/allocator-time/physical/release verdict follows from this scoped accepta
 D294 exposed stale component-only boundaries in the model/source resource chapters. Native precise
 pending-clause census model11→0/source3→0 and the rendered publication check pass0; actual component
 proofs remain scoped and historical counts stay labeled. Whole0472/D293 closure is retained627.
+
+## Actual mixed transaction acceptance0474
+
+answers: "how are all actual pre-effect cancellation points checked?" · "can failed mixed preparation consume identities or its sole audit slot?"
+
+Trace one successful actual five-member Notch/Material/Measurement/Notch/alias transaction. Require all9
+public pre-effect phases; the fixture emits37 events. Cancel each actual event on a fresh owner, compare
+its exact original Cancelled cause and trace prefix, then commit the unchanged original group/keys.
+The whole actual commit equals the reference, both original IDs issue, capacity replay works and Undo
+restores the original Piece address. A separate fourth-member native Notch failure after all3 handlers
+retains group/index/command and the full typed source chain; correcting the same keys gives the reference.
+New2/group-preview6/group-commit6/control8/strict lint/fmt/native effect-boundary checks pass0. Production
+source stays unchanged. Allocation exhaustion/panic recovery/persistence/browser/other handlers remain
+outside this proof. Resource checkpoint0473 counts stay historical; full bus .6.9 follows.

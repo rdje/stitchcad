@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0473 — close coupled native logical-resource acceptance
+## STITCHCAD-G1-0474 — verify mixed transaction cancellation and rollback
 
-- All252 selected native cases pass:Design-input158(including93 bus),source33,core resource47/control6/metadata8; five private units and16 privacy doctests pass.
-- Strict selected test lint passes; current/prospective model/retained logical-content implementation accepted natively, with D293 source ownership repaired.
-- Fix D294 stale model/source guide boundaries:scoped pending-clause census11→0/3→0; preserve component proof and distinguish broader command/full/persistence/browser/ingress/time/release limits.
-- Whole0472/D293 retained627; next scoped transaction acceptance .6.5.5, then .6.9 broader bus. No full CI or whole-project resource certificate.
+- Cancel each of37 observed pre-effect events across9 required phases in a real mixed metadata/alias group; preserve exact error context, original model and trace prefix.
+- Same group/keys/two-ID/one-slot retry matches the full reference commit; capacity replay and original-address Undo pass. Later native failure at original member3 retains its complete cause and corrected retry.
+- New2/group-preview6/group-commit6/control8/strict lint/fmt/native effect-boundary/book checks pass; production sources unchanged.
+- Whole0473/D294 retained628; historical resource checkpoint counts labeled. Next broader bus acceptance .6.9; no allocator-fault/panic/persistence/browser or release proof.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -452,7 +452,10 @@ and supports cancellation. Total model/work/memory and allocation fault injectio
 resource/acceptance owners. JournalAllocation retains an actual preflight allocation error.
 The six native commit cases cover actual metadata/revision/reserve publication, original actor/result,
 later failure, retry/capacity/conflicts, permission separation and revocation at the second check.
-Full command integration, persistence/reopen, other mutation handlers, adapters and actual
+[Mixed transaction acceptance](command-operation-control.md#mixed-transaction-checkpoint-acceptance)
+checks all37 observed pre-effect cancellations and exact later native failure, with original keys,
+identities and the sole audit slot available for retry. Full command integration, persistence/reopen,
+other mutation handlers, adapters and actual
 recipe/geometry/physical evaluation remain pending.
 
 ## Typed history operation inputs
@@ -562,8 +565,8 @@ source/allocation fault acceptance, full command integration and recipe/geometry
 separately owned; metadata history supplies no broader certificate.
 
 [Operation limits and progress](command-operation-control.md) describes installed immutable metadata
-input policy, actual pre-effect progress and atomic cooperative cancellation. Coupled native resource
-acceptance includes93 actual bus cases within158 Design-input cases. Submitted Measurement evidence references have their own explicit quota;
+input policy, actual pre-effect progress and atomic cooperative cancellation. At resource checkpoint0473, coupled native
+acceptance passed93 actual bus cases within158 Design-input cases; two later transaction cases pass separately. Submitted Measurement evidence references have their own explicit quota;
 eight bus privacy boundaries and control privacy were previously checked. Full integration remains deferred.
 
 Candidate reconstruction shares the actual immutable source across model snapshots; no foreign

@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | D156/D223/D263 audits and D250 owned; D285 persistence/reopen pending; D293/D294 fixed with native checks |
 | G0 — product & semantic contract | Mostly Done | Contract reviewed; D239 detached-approval boundary adopted and checked. Evaluation-seat exception remains; human closure **unapproved**. Earlier exit census18 met/1 not met |
-| G1 — executable architecture slice | In Progress | 6/18 done. Inputs/numeric, all17 schemas, trusted authorization, metadata read/preview/commit/replay/audit and bounded undo/redo, metadata admission/progress/cancellation. Native logical-resource acceptance passed; storage/app/full integration pending |
+| G1 — executable architecture slice | In Progress | 6/18 done. Inputs/numeric, all17 schemas, trusted authorization, metadata read/preview/commit/replay/audit and bounded undo/redo, metadata admission/progress/cancellation. Native resource/transaction acceptance passed; storage/app/full integration pending |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 activities; input admission, CSP/oracle, evidence, policy matrix, HPGL, minimal Profile Editor |
