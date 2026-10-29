@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — execute real scalar recipes with an earned stored prefix
+## _(2026-10-29 UTC)_ — independently check scalar recipes and repair complete book search
 
-0585 consumes whole scalar source plans;one D source/read vector,N scratch,S outcomes reserve before reads. RHS then shared once-only storage precedes let visibility. Original supplier identity/ordinal joins private completed output. Assert left/right/header order;no copied name,input clone or partial accepted result.
-New7/existing11 incl49 scalar oracle rows/frozen bytes/doc5/scoped strict lint/fmt pass. Fractions/zero/false/sources,physical provider,Unknown/Derived requests,T1/false assertion and Count storage witnesses retained. Empty/max4096 complete outcomes pass;full whole-recipe oracle acceptance remains separately pending.
-Book95/299/1620/2832/glossary310/9/158/0 pass;semantic recipe annex retains admission/preparation and execution contracts. Initial topic-index omission refused/fixed. [Whole0584 shared runtime](docs/history/stitchcad-devnotes-part743.md) retains four Git spans. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
-Indexed real-proof/source/ordered-storage/atomic-result rules apply;promotion declined. Next .5e.2.5.1.2.2.acceptance actual independent subset checkpoint. Full Derived/tan/geometry/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
+0586 native9/reference18(11 successes/7 refusals)/4167 exact frozen bytes pass;real source/unbound/stored/source/read/assertion/refusal rows. Oracle uses original evaluator,not Rust/results. Draft Count*Ratio correctly refused;use actual Count/Ratio half case. Product source unchanged;scoped lint/fmt pass.
+D339 real book warning10003884B blocked closure. Supported chapter-level search retains96 chapters/63247 word/51431 indexed-term pairs;final native JSON10012281→7894324B. Five data refusal controls/public candidate byte equality pass;strict fixed config/full chapter/text/posting/anchor guards;warnings retained.
+Book96/299/1623/2841/glossary310/9/158/0 pass;[whole0585 execution](docs/history/stitchcad-devnotes-part744.md) retains four exact Git spans. Capture/migration tools tracked;protect target/book_search_capture_0586_book_final. .1/.1.2/.2.2 close scoped only;G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
+Existing oracle/source/bounded-publication rules apply;promotion declined. Next .5e.2.5.derived actual canonical dependency contracts before implementation. Full families/Derived/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full publication campaign/CI deferred to required broader gate. Full PNT.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

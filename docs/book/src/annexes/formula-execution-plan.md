@@ -344,7 +344,7 @@ original set/revision/member/base sources and unchanged membership. The full 256
 all 255 original eps_num occurrences under the exact 767-record reservation; a left-deep 256-node
 expression also completes without recursive execution frames. The scoped independent result
 checkpoint below follows feature completion. Whole worked-book,
-platform identity, tangent/geometry/derived evaluation, prior-let statements and replay keep their
+platform identity,tangent/geometry/Derived evaluation and replay keep their
 existing .5g/.5e.4/parent owners. This scoped expression result grants no whole-language, containing
 Design/currentness, evidence-truth, geometry/physical or release approval.
 
@@ -413,8 +413,8 @@ replacement math backend,precision cutoff or caller placeholder. An admitted fun
 unfinished implementation cannot be reclassified as a language refusal or published as a
 canonical computed result.
 
-Complete source/derived-input resolution, actual geometry selectors, statement execution and atomic
-publication also remain open. Internal slices must state their supported scope. Public whole-runtime
+Complete source/Derived resolution,geometry selectors and full-family statement/atomic publication
+remain open. Admitted scalar statements are available in the recipe annex. Internal slices must state their supported scope. Public whole-runtime
 acceptance remains pending until every required family has its real implementation and evidence.
 API/MCP publication, artifact authority, browser execution and production approval retain their
 separate roadmap owners.

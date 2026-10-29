@@ -1,16 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.1.2.2.acceptance:independent actual available scalar recipe checkpoint.
-  Use existing reference parser/evaluator,actual stored-let propagation/assertion read order;
-  compare finite values/sources/read traces/refusals without product-generated expectations.
-  Distinguish focused implemented subset from full families/Derived/load/replay/platform proof.
-- Actual one-shot scalar recipes0585 available:private earned prefix,RHS then one storage,
-  Boolean/zero/sources,real assertions/ordinals/provider and no partial accepted result. One D
-  read vector,N scratch,S outcomes before reads. New7/existing11 incl49 scalar oracle/doc5/
-  lint/fmt/book95/299/1620/2832/glossary310/9/158/0 pass. Whole0584 retained743/four Git spans.
-- D338 fixed0581;whole admission0582/source plan0583/shared machine0584 ready. Full whole recipe/
-  Derived/tan/geometry/replay/platform/physical still owned. G1 6/18/G0 unapproved;full local/
-  hosted79bd6f6a SHA-scoped. Lineage0574 closes47 native/21 doc;paired .2.4/.2.5 joins/effects open.
+- Next G1-SLICE.5e.2.5.derived:actual canonical Formula/Design/document/dependency contracts.
+  dependency contracts before choosing a safe bounded Derived integration slice. Sole formula
+  ID must join real authored source/namespace/graph;full preflight/cycle/resource admission before
+  recursive reads. No caller cached value/annotation/state clone or guessed source can execute it.
+- Admitted scalar checkpoint0586 closes .1/.1.2/.2.2 only:native9/reference18/7 refusals/4167B
+  exact;source code unchanged,scoped lint/fmt pass. D339 fixed:chapter search retains full words/
+  indexed terms,96 chapters and valid results;JSON7894324B/five refusal controls. Preserve
+  target/book_search_capture_0586_book_final;source hashes/capture/proof exact,never overwrite old runs.
+  Book96/299/1623/2841/glossary310/9/158/0 pass;whole0585 retained744/four Git spans.
+- Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
+  unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,

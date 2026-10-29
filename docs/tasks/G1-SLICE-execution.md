@@ -76,8 +76,8 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   No absent implemented family or caller placeholder becomes a language refusal/canonical result.
   D337 readiness fixed0575;actual native inverse kernels available. Complete proof/workspace
   admission0576/canonical joins0577/actual scalar worker0579 are implemented. Scoped independent
-  result checkpoint0580 closes the prepared subset only. Full tangent/geometry/prior-let/Derived
-  integration remains pending below;no missing implementation becomes a language refusal/result.
+  result checkpoint0580 closes the prepared expression subset. Actual prior-let scalar recipes
+  close0586;full tangent/geometry/Derived/load/replay integration remains pending below.
 - ID: `G1-SLICE.5e.2.4.availability`
   Status: `done`
   Goal:0575 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part734.md).
@@ -111,7 +111,8 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0580 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part739.md).
 - ID: `G1-SLICE.5e.2.4.integration`
   Status: `pending`
-  Goal: after real .5d tangent,.5f.3 geometry,.5e.2.5 prior-let/Derived and .5e.4 load/replay
+  Goal: prior-let scalar recipes available0585/checkpoint0586. After real .5d tangent,.5f.3
+  geometry,.5e.2.5 Derived and .5e.4 load/replay
   dependencies exist,extend actual source execution to every admitted family and close parent
   .5e.2.4 with complete original diagnostics/provenance and all source/provider kinds. Retain
   implemented scalar subset/no fake language refusals during staged delivery. Full worked-book,
@@ -125,7 +126,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Status: `done`
   Goal:0581 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part740.md).
 - ID: `G1-SLICE.5e.2.5.1`
-  Status: `in_progress`
+  Status: `done`
   Goal: start actual whole-recipe execution with complete-proof admission and an owned bounded
   execution-session/prefix boundary. Read actual checked-recipe/statement/normalized/binding
   interfaces and normative declaration-order/static-before-value contracts first. Derive complete
@@ -134,81 +135,125 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   an earned prior let. Select a safe concrete admission/session slice with focused checks/book/
   commit before actual let/assert worker units. No defaults,source-state cloning,partial accepted
   recipe or missing-family language refusals;whole dependencies/replay/platform remain owned.
+  Closure0586: actual admitted available scalar foundation/prefix checkpoint only;full missing
+  families/Derived/load/replay/platform/physical remain with parent/integration owners.
 - ID: `G1-SLICE.5e.2.5.1.1`
   Status: `done`
   Goal:0582 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part741.md).
 - ID: `G1-SLICE.5e.2.5.1.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: use actual complete admission to construct private bounded whole-recipe session/prefix;
   read real worker/source/binding interfaces before choosing safe execution slices. No caller
   value/annotation or standalone conversion can manufacture an earned prior-let result. Track
   output/read ownership and all capacity reservations before actual statement execution.
+  Closure0586: actual admitted available scalar foundation/prefix checkpoint only;full missing
+  families/Derived/load/replay/platform/physical remain with parent/integration owners.
 - ID: `G1-SLICE.5e.2.5.1.2.1`
   Status: `done`
   Goal:0583 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part742.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: consume real prepared whole source plan into a private bounded runtime prefix. Reuse
   iterative actual-node worker,perform real once-only binding,retain executed source witnesses
   and real let/assert ordinals. Caller values/annotations must not advance or seed execution.
   Read exact worker,read/dispatch,stored-name/error lifetimes and assertion APIs first;split safe
   implementation units before code. Full accepted-result failure/replay remains .5e.4 work.
+  Closure0586: actual admitted available scalar foundation/prefix checkpoint only;full missing
+  families/Derived/load/replay/platform/physical remain with parent/integration owners.
 - ID: `G1-SLICE.5e.2.5.1.2.2.1`
   Status: `done`
   Goal:0584 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part743.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.2`
   Status: `done`
-  Goal: implement real declaration-order scalar recipe execution using actual whole plan/shared
-  machine/private storage. Reserve N task/value and S output buffers before reads,retain single D
-  source/read vector,real successful binding prefix and assertions. No public seeding/advance APIs.
-  Original let/assert/name/source/ordinal/storage/comparison failures survive;no partial accepted
-  recipe escapes. Whole dependency families/replay/platform remain owned integration work.
-  Implementation0585 scope: one-shot available scalar recipe evaluation,private real output
-  prefix and actual once-rounded binding;all static/capability/canonical joins already complete.
-  Assertion order is actual left,right,then header tolerance,as existing reference statement()
-  implements. Preserve actual read order without a second D trace vector:iterate each static
-  statement block's operands then header. Actual supplier identity must match private completed
-  output at its real ordinal. Reuse private storage rule and shared actual-node machine only.
-  Runtime error returns original cause/actual whole statement and no accepted prefix;unimplemented
-  Derived/tan/geometry/load/replay/platform remain explicit owners. Partition whole-recipe book
-  contracts into a semantic annex before adding this feature,keeping links/API routes complete.
-  Completion0585: actual one-shot admitted scalar recipes implemented with focused checks.
-  - [x] ROOT CAUSE (WHY + WHERE): complete shared worker/read/storage/assertion APIs and
-    actual reference statement() →left,right,then tolerance header;source inspection rc=0.
-    Whole source plans retain metadata suppliers,not executed values. Consume actual proof with
-    a private successful outcome prefix;only real RHS/storage success can supply a later let.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_recipe_execution_contract
-    --test formula_scalar_execution_contract -- --nocapture →seven new/eleven existing pass,rc=0.
-    Real1000/3 binds333,subsequent reads stored integer;zero/false and contribution sources retained.
-    Actual supplier identity/ordinal checked against private completed prefix,including assertions.
-    Left/right/header refusal order,true/false original comparisons,T1 refusal,original physical
-    provider/label/within read,untaken optional context and canonical Unknown/Derived requests pass.
-    Wide Count2*i64MAX refuses actual let storage with full bounds/rounded witness. Empty and
-    max4096 assertion recipes return complete real outcomes;no partial constructor/prefix escapes.
-  - [x] NO REGRESSION: same affected targets include unchanged49 independent scalar rows/frozen
-    bytes,rc=0. cargo test -p sc-core --doc recipe::execution::recipe_ -- --nocapture →five pass,
-    actual private result/input/lifetime guards and positive examples,rc=0. Scoped strict core-lib/
-    new-target Clippy and changed Rust formatting/diff pass,rc=0. One D source/read vector plus
-    N task/value scratch and S outcomes reserve before reads;actual read iterator streams operand
-    blocks before assertion header without a second trace/sort. No input clone or replacement
-    MachineToken in product code. Book95/299/1620/2832/glossary310/9/158/0 and receipt743/four exact
-    Git spans pass,rc=0. Initial publication refused missing topic-index route;add actual route,
-    then green. Whole-recipe independent acceptance remains separate pending task below;no claim
-    it passed. No allocator fault injection,full CI/platform/missing-family/Derived/load/replay/
-    whole bus/physical verdict;actual owners remain .5e.2.4.integration/.5e.4/.5g and paired .2.4/.2.5.
-  - [x] LOCKSTEP: semantic scalar recipe annex retains whole admission/preparation contracts and
-    actual execution/outcome/read/refusal examples;SUMMARY/topic index/API rows route all public
-    types. README/normative/runtime/rational/static-proof scope clarifies admitted subset versus
-    full dependencies. MEM/DEV/CHANGE/LIVE/index align;next .5e.2.5.1.2.2.acceptance independent
-    available-recipe checkpoint. Parent .1/.1.2/.2.2 remain in_progress until that scoped acceptance.
-    G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped. D334/D156/D223/PLANNING.5 owned. Full PNT.
-    promotion: declined (existing actual-proof/source,once-only-storage,ordered execution and no-partial-result doctrines applied;no new grammar or approval policy).
+  Goal:0585 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part744.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.acceptance`
-  Status: `pending`
+  Status: `done`
   Goal: after available scalar recipe implementation,focused independent actual reference recipe
   acceptance and source/failure/read-order checkpoint. Separate broader missing-family/Derived/
   replay/load/platform/worked-example completion remains .5e.2.4.integration/.5e.4/.5g;no full
   language/product acceptance implied by this available subset or its focused checks.
+  Scope0586: finite independent actual whole-recipe source/value/storage/contribution/read-order
+  and refusal rows,using existing reference parser/evaluator. Trace actual reads and binding input
+  only,without replacing evaluation or importing native results. Freeze complete source rows;
+  actual Rust whole executor compares each outcome/read/failure and watcher rederives all bytes.
+  No external Derived/geometry/tangent evaluator,full worked-example/platform/load/replay claim.
+  Completion0586: independent finite actual scalar recipe checkpoint;full language stays open.
+  - [x] ROOT CAUSE (WHY + WHERE): actual reference preflight/statement/stored/value_of_name and
+    native whole outcome/read/error interfaces inspected,rc=0. Complete static source precedes
+    reference execution;trace original read/pre-storage methods without replacing computation.
+    Available scalar subset needs independent stored-value/source/read/refusal evidence,not new
+    product annotations. A draft Count*Ratio annotated Count correctly refused;actual independent
+    signature table/reference inference prove product Ratio versus quotient Count. Use1/2.0 for
+    the intended half-Count case;no type rule or product code changed,diagnostic tools rc=0.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_recipe_execution_contract
+    -- --nocapture →nine pass,18 complete independent rows/11 successes/seven refusals,rc=0.
+    Actual original source,unbound RHS/stored result,Boolean/source contributions,assertion
+    operands/class,executed read values/order and refusal ordinal/name/token match. Native second
+    watcher rederives all4167 frozen bytes from actual independent parser/evaluator,rc=0;SHA256
+    372bbbceb712119fde85ba9b0c94f1a8dcad0f1b370a6db0115a77be3b0c9484. No Rust/fixture/native
+    result read by oracle;no accepted partial trace compared on errors. No external canonical-
+    input/Derived evaluator/geometry/tangent/platform/load/replay claim. Those keep real owners.
+  - [x] NO REGRESSION: scoped strict native-target Clippy,changed Rust formatting/Python syntax
+    and diff check pass,rc=0. git diff --exit-code HEAD -- crates/sc-core/src →unchanged,rc=0.
+    Book96/299/1623/2841/glossary310/9/158/0 and retained744/four exact Git spans pass,rc=0.
+    D339 initially blocked actual publication at10003884B search JSON;child below repairs real
+    default-index growth without suppressing warnings or dropping text. Focused native capture/
+    five data controls and exact stored-word/indexed-term migration pass,rc=0. Full publication
+    fixture/mutation campaign and CI remain the mandatory later broad gate,not claimed run here.
+  - [x] LOCKSTEP: close .1/.1.2/.2.2 for admitted scalar foundation/private prefix only;parent
+    .5e.2.5/full .5e.2.4.integration still own missing families/Derived/load/replay/platform/physical.
+    Book subset checkpoint/search policy,task/index/MEM/DEV/CHANGE/LIVE align. Next .5e.2.5.derived
+    actual canonical dependency contract recovery before a safe implementation leaf. G1 6/18/G0
+    unapproved;full/hosted79bd6f6a stays SHA-scoped. D334/D156/D223/PLANNING.5 owned. Full PNT.
+    promotion: declined (existing independent-oracle,real-source,complete-prefix and bounded-publication doctrines applied;no new language or approval policy).
+- ID: `G1-SLICE.5e.2.5.1.2.2.acceptance.search`
+  Status: `done`
+  D339 P1: actual positive book build after18-row oracle documentation refuses
+  BOOK_BUILD_WARNING:search index very large10003884B. Baseline0585 book.toml had no search policy;
+  mdBook defaults produce the growing index. Own root-cause/official configuration inspection,
+  direct generated-index census and a compact full-text policy retaining complete searchable
+  content/navigation. Do not suppress warnings,raise thresholds,trim legitimate product prose
+  to fit a search limit or disable search. Verify actual generated coverage and warning-free build
+  before completing parent acceptance. Track any behavior change and durable finding in book.
+  Completion0586: D339 fixed;native chapter-level full-text search,all content retained.
+  - [x] ROOT CAUSE: actual default mdBook0.5.4 positive build raised search warning10003884B;
+    official renderer search docs confirm default heading-split-level3. No threshold/warning
+    suppression. Native same-source study3/2/1 shows section fanout drives index growth;level2
+    leaves little headroom,chapter1 preserves semantic chapter results/full content. Commands
+    search_migration_capture.py and search_migration_contract.py reproduce snapshots/census.
+  - [x] ADDRESSED: tracked native capture --output target/book_search_capture_0586_book_final plus
+    tracked migration checker --baseline .../level3 --candidate .../level1 --sources
+    .../source-sha256.json →823→96 documents,96 chapters,63247 chapter-word/51431 actual indexed-
+    term pairs exact,all complete source hashes unchanged,rc=0. Final native JSON10012281→7894324B;
+    script10024238→7906281B;chapter candidate has zero warnings. Current public index equals
+    candidate byte-for-byte,rc=0;SHA9de1188c357b6fd92333b5597a2c35070da213614ce3192bda95e218a0510fd6.
+  - [x] NO REGRESSION: actual public check and search_controls →five in-memory real data refusals
+    for duplicate/missing chapter,empty text,lost postings,bad result anchor;source/index unchanged,
+    rc=0. Publication now checks every chapter/document/actual body posting/result landing. Strict
+    config admits only integer1 search setting;initial unplanned-config refusal required explicit
+    scalar policy admission. Initial migration directory call refused absolute store components;
+    use original profile's repository-relative directory contract. Existing-output overwrite and
+    self-comparison each actually refuse rc=1;all four evidence files unchanged,control rc=0.
+    Python syntax/book96/299/1623/2841/glossary0 pass,rc=0. No extra runtime dependency;broader
+    existing publication probes deferred to required full gate,not claimed run. Preserve final
+    target capture and source hashes;capture tool requires a fresh directory,never overwrites.
+  - [x] LOCKSTEP: book.toml/source/config guard/read-only snapshot producers/build chapter explain
+    chapter-level result landing with full text and section navigation. D339 ledger/LIVE fixed;
+    normal warning rejection retained. This directly unblocks parent recipe acceptance0586.
+    promotion: declined (existing complete searchable coverage and bounded generated-publication rules applied through a supported renderer option;no canonical design or human-authority change).
+  Final authority pre-stage guard refused build-and-checks41933B>40960B;move new search text
+  intact to indexed annex,keep guide40949B and all caps. Fresh final capture/current public exact
+  with96 chapters;positive book and five controls pass,rc=0. No search text removed. Original
+  source-profile snapshots stay retained;final named capture above is the final source boundary.
+- ID: `G1-SLICE.5e.2.5.derived`
+  Status: `pending`
+  Goal: recover actual canonical Formula/Design/document/value/dependency contracts and relevant
+  normative/book/roadmap obligations before choosing the first safe Derived integration slice.
+  Join the sole real formula identity to its actual authored source and complete namespace/graph;
+  explicit complete limits and dependency/cycle checks precede recursive value reads/allocation.
+  No caller cached value,metadata annotation,cloned state,guessed source or invented language
+  refusal can substitute evaluation. Select and own concrete admission/execution units after
+  reading actual interfaces;full missing families/load/replay/platform remain separate owners.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

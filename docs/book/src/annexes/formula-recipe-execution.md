@@ -219,6 +219,41 @@ failure order,false comparison values,full Count storage witnesses and empty/max
 Actual within and assertion reads retain the same physical provider and explicit context label;
 unselected optional format stays unread. The11 existing expression tests,including49 independent
 scalar rows/frozen bytes,still pass. Five scoped documentation tests cover the actual example and
-private proof/input/result boundaries. Whole-recipe independent reference acceptance is separately
-owned by .5e.2.5.1.2.2.acceptance;it is not claimed passed here. Full missing-family/Derived/load/
-replay/platform/worked-example completion remains .5e.2.4.integration/.5e.4/.5g.
+private proof/input/result boundaries. The finite whole-recipe independent checkpoint below closes .5e.2.5.1.2.2.acceptance. Full missing-
+family/Derived/load/replay/platform/worked-example completion remains .5e.2.4.integration/.5e.4/.5g.
+
+## Independent whole scalar checkpoint
+
+The focused actual recipe target passes nine tests after adding two independent-oracle watchers.
+It compares18 complete recipe rows:11 successes and7 intended refusals. The4167-byte frozen fixture
+contains original source,each successful outcome's exact unbound RHS/stored value/contribution set,
+true assertion operands/class,and actual executed read values/sources in order. Error rows retain
+actual ordinal,name and diagnostic,with no accepted partial trace. A second watcher reruns the
+independent producer and requires equality of every fixture byte.
+
+`docs/tasks/artifacts/formula_structure/scalar_recipe_execution_oracle.py` loads the existing
+independent reference parser and table-driven evaluator. It preflights the complete source,then
+traces original value_of_name and stored calls while invoking their unchanged implementations.
+Prior lets enter its runtime environment only from real returned stored results. It reads no Rust,
+native result or frozen fixture. The native watcher independently constructs the actual whole
+proof/admission/source plan and runs the real recipe executor for each source. Production code is
+unchanged by this checkpoint.
+
+Rows cover once-only fractions,zero/false,raw signed turns,half-quantum Count storage,real earlier
+lets across assertions,conditional laziness,round_to/min/clamp sources,sin/atan/arc_length sources,
+within read order,false assertions,wide Count storage,T1 refusal,division,missing tolerance and
+negative roots. An initial authored Count-times-Ratio example correctly failed static checking:
+the existing contract returns Ratio. The intended half-Count case uses Count-divided-by-Ratio;
+the existing independent signature table and actual reference inference agree. No type rule changed.
+
+```bash
+python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test formula_scalar_recipe_execution_contract -- --nocapture
+python3 -I -B docs/tasks/artifacts/formula_structure/scalar_recipe_execution_oracle.py
+```
+
+This finite checkpoint closes actual admission/preparation/private-prefix work for the implemented
+scalar subset. It has no external canonical-input rows;the separate seven native controls retain
+actual Unknown/Derived requests and physical-provider identity. Derived dependency execution and
+remaining capability families remain open. Full language/worked-example/platform/load/replay/
+physical verification is not inferred from these18 rows. Next .5e.2.5.derived recovers actual
+canonical formula/document/input dependency contracts before selecting bounded Derived integration.

@@ -12,6 +12,9 @@ refuses old authority,unstaged task completion,missing chapters,changed profiles
 entries or index drift. This reader changes no index or canonical input. Focused finite controls
 live in docs/tasks/artifacts/live_doc_size/maintained_reference_index_contract.py.
 
+[Full-text book search](annexes/book-search.md) indexes complete chapters with compact result
+grouping and checks every chapter,text posting and result landing during publication.
+
 ## Local producer profile
 
 `scripts/local_environment.py` prepares the four destinations below for the listed Make targets.

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0585 — execute actual admitted scalar recipes in declaration order
+## STITCHCAD-G1-0586 — independently verify scalar recipes and repair full-text book search
 
-- Private earned prefix joins real checked suppliers only after RHS/once-only storage success. Keep zero/Boolean/sources;assert left/right/header order and original provider/comparison/refusal context. One D read vector,N scratch,S outcomes before reads;no partial accepted result or copied header name.
-- New7/existing11 incl49 scalar oracle/doc5/scoped lint/fmt/book95/299/1620/2832/glossary310/9/158/0 pass. Whole0584 retained743/four spans. Independent whole-recipe checkpoint next .5e.2.5.1.2.2.acceptance. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;full families/replay/platform/physical pending.
+- Native9 compare18 independent whole recipes/11 successes/7 refusals;all4167 frozen source/outcome/read bytes rederive. Close only admitted scalar foundation/prefix. Production source unchanged;actual Derived contract recovery next .5e.2.5.derived. Full families/replay/platform/physical remain owned.
+- Fix D339:actual native chapter search retains96 chapters/63247 word/51431 indexed-term pairs;JSON10012281→7894324B. Five data controls/warning-free publication/book96/299/1623/2841/glossary310/9/158/0 pass. Whole0585 retained744/four spans. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -8,3 +8,7 @@ src = "src"
 [output.html]
 default-theme = "rust"
 git-repository-url = "https://github.com/rdje/stitchcad"
+
+[output.html.search]
+# Full chapter text remains indexed; each result opens its semantic chapter.
+heading-split-level = 1

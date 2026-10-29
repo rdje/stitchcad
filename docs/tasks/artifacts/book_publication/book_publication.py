@@ -6,6 +6,7 @@ Copied-fixture mutations prove the named refusals. No tracked source or other Gi
 """
 from __future__ import annotations
 
+import ast
 import csv
 from contextlib import contextmanager
 import hashlib
@@ -262,12 +263,13 @@ def build_inputs(root):
     # command options need their own input/delegation plan before this boundary can accept them.
     section, seen = None, set()
     fields = {"book": {"title", "description", "authors", "language", "src"},
-              "output.html": {"default-theme", "git-repository-url"}}
+              "output.html": {"default-theme", "git-repository-url"},
+              "output.html.search": {"heading-split-level"}}
     for line in config.read_text().splitlines():
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        if line in ("[book]", "[output.html]"):
+        if line in ("[book]", "[output.html]", "[output.html.search]"):
             section = line[1:-1]
             require(section not in seen, "BOOK_AUTHORITY", "duplicate configuration section")
             seen.add(section)
@@ -279,6 +281,9 @@ def build_inputs(root):
             value = json.loads(value.strip())
         except ValueError:
             raise PublicationError("BOOK_AUTHORITY: unsupported configuration value") from None
+        if section == "output.html.search":
+            require(type(value) is int and value == 1, "BOOK_AUTHORITY", "chapter-level search policy required")
+            continue
         require((isinstance(value, list) and all(isinstance(item, str) for item in value)) if field == "authors"
                 else isinstance(value, str), "BOOK_AUTHORITY", "invalid book metadata type")
         if field == "src":
@@ -407,6 +412,117 @@ def formula_scope(root):
             "FORMULA_COUNT", f"statement contracts: declared {declared[1] if declared else 'absent'}, source {population}")
 
 
+def search_data(output):
+    """Read mdBook's generated data-only JSON wrapper without executing JavaScript."""
+    files = list(output.glob("searchindex-*.js"))
+    require(len(files) == 1, "SEARCH_INDEX", "one generated search index is required")
+    content = files[0].read_text()
+    prefix = "window.search = Object.assign(window.search, JSON.parse("
+    require(content.startswith(prefix) and content.endswith("));"), "SEARCH_INDEX", "unrecognized wrapper")
+    try:
+        raw = ast.literal_eval(content[len(prefix):-3])
+        require(isinstance(raw, str), "SEARCH_INDEX", "string wrapper required")
+        data = json.loads(raw)
+    except (SyntaxError, ValueError, TypeError) as error:
+        raise PublicationError("SEARCH_INDEX: invalid data wrapper") from error
+    require(isinstance(data, dict), "SEARCH_INDEX", "object required")
+    return data
+
+
+def search_contract(data, registered, anchors=None):
+    """One full-text search record per chapter, with genuine indexed body terms for every record."""
+    try:
+        urls = data["doc_urls"]
+        index = data["index"]
+        store = index["documentStore"]
+        docs = store["docs"]
+        expected = {Path(chapter).with_suffix(".html").as_posix() for chapter in registered}
+        keys = {str(i) for i in range(len(expected))}
+        require(isinstance(urls, list) and all(isinstance(url, str) for url in urls)
+                and len(urls) == len(expected) and isinstance(docs, dict) and set(docs) == keys
+                and type(store["length"]) is int and store["length"] == len(expected),
+                "SEARCH_DOCUMENTS", "one complete search document per registered chapter required")
+        paths = {}
+        words = {}
+        for key, document in docs.items():
+            url = urlsplit(urls[int(key)])
+            require(not url.scheme and not url.netloc and not url.query, "SEARCH_CHAPTERS", "local result required")
+            path = unquote(url.path)
+            paths[key] = path
+            if anchors is not None:
+                require(path in anchors and (not url.fragment or unquote(url.fragment) in anchors[path]),
+                        "SEARCH_ANCHOR", "search result must reach an actual rendered chapter/anchor")
+            require(isinstance(document, dict) and document.get("id") == key
+                    and all(isinstance(document.get(field), str) and document[field].strip()
+                            for field in ("body", "title", "breadcrumbs")),
+                    "SEARCH_CONTENT", "complete nonempty indexed document text required")
+            words[path] = set(re.findall(r"\w+", " ".join(document[field] for field in
+                              ("body", "title", "breadcrumbs")).casefold()))
+        require(set(paths.values()) == expected, "SEARCH_CHAPTERS", "search chapter population differs from SUMMARY")
+        body_refs = set()
+        pending = [index["index"]["body"]["root"]]
+        while pending:
+            node = pending.pop()
+            require(isinstance(node, dict) and isinstance(node.get("docs", {}), dict),
+                    "SEARCH_CONTENT", "invalid body postings")
+            refs = set(node.get("docs", {}))
+            require(refs <= keys, "SEARCH_CONTENT", "foreign body document reference")
+            body_refs.update(refs)
+            pending.extend(child for field, child in node.items() if field not in ("docs", "df"))
+        require(body_refs == keys, "SEARCH_CONTENT", "every chapter needs actual full-text body postings")
+        return words
+    except (KeyError, TypeError, ValueError) as error:
+        raise PublicationError("SEARCH_INDEX: incomplete generated index") from error
+
+
+def search_controls(root):
+    """Focused in-memory refusals; source and generated publication bytes remain unchanged."""
+    original = search_data(root / HTML)
+    registered = chapters((root / SOURCE / "SUMMARY.md").read_text())
+    anchors = {}
+    for chapter in registered:
+        page = Page()
+        target = Path(chapter).with_suffix(".html")
+        page.feed((root / HTML / target).read_text())
+        anchors[target.as_posix()] = page.ids
+    search_contract(original, registered, anchors)
+    before = json.dumps(original, sort_keys=True)
+    cases = (("duplicate chapter", "SEARCH_CHAPTERS"), ("missing document", "SEARCH_DOCUMENTS"),
+             ("empty text", "SEARCH_CONTENT"), ("missing body postings", "SEARCH_CONTENT"),
+             ("missing result anchor", "SEARCH_ANCHOR"))
+    for name, code in cases:
+        candidate = dict(original)
+        candidate["index"] = dict(original["index"])
+        if name in ("duplicate chapter", "missing result anchor"):
+            candidate["doc_urls"] = list(original["doc_urls"])
+            if name == "duplicate chapter":
+                candidate["doc_urls"][0] = original["doc_urls"][-1]
+            else:
+                candidate["doc_urls"][0] = original["doc_urls"][0].split("#")[0] + "#missing-result-anchor"
+        else:
+            store = dict(original["index"]["documentStore"])
+            store["docs"] = dict(store["docs"])
+            candidate["index"]["documentStore"] = store
+            first = next(iter(store["docs"]))
+            if name == "missing document":
+                del store["docs"][first]
+            elif name == "empty text":
+                store["docs"][first] = dict(store["docs"][first], body="")
+            else:
+                fields = dict(original["index"]["index"])
+                fields["body"] = {"root": {"docs": {}, "df": 0}}
+                candidate["index"]["index"] = fields
+        try:
+            search_contract(candidate, registered, anchors)
+        except PublicationError as error:
+            require(str(error).startswith(code + ":"), "SEARCH_CONTROL", str(error))
+        else:
+            raise PublicationError("SEARCH_CONTROL: missing refusal for " + name)
+    require(json.dumps(original, sort_keys=True) == before, "SEARCH_CONTROL", "original index changed")
+    print(f"search controls: {len(cases)} actual data refusals; original index unchanged")
+    return len(cases)
+
+
 def check(root):
     source = (root / SOURCE).resolve()
     output = (root / HTML).resolve()
@@ -437,6 +553,8 @@ def check(root):
         page = Page()
         page.feed(path.read_text())
         pages[path.resolve()] = page
+    search_contract(search_data(output), registered,
+                    {path.relative_to(output).as_posix(): page.ids for path, page in pages.items()})
     source_links = 0
     rendered_links = 0
     for chapter in registered + ["SUMMARY.md"]:
@@ -633,6 +751,7 @@ def main():
         print(diagnostic, end="" if diagnostic.endswith("\n") else "\n")
     result = check(ROOT)
     print(result.summary())
+    search_control_count = search_controls(ROOT)
     cases = {
         "unregistered chapter": "CHAPTER_COVERAGE",
         "missing indexed chapter": "INDEX_COVERAGE",
@@ -728,7 +847,7 @@ def main():
         require("<code>Checked&lt;UnclosedType&gt;</code>" in rendered,
                 "WARNING_REPAIR", "generic parameter missing from repaired rendering")
     print("  verified refusal: actual malformed generic (BOOK_BUILD_WARNING); repaired rendering pass")
-    print(f"publication probes: {len(cases) + 5} pass / 0 fail")
+    print(f"publication probes: {len(cases) + 5 + search_control_count} pass / 0 fail")
 
 
 if __name__ == "__main__":

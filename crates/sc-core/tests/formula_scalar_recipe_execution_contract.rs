@@ -466,3 +466,6 @@ fn actual_within_and_assertion_reads_keep_original_physical_provider_and_lazy_ot
         "one real within name and one actual assertion header"
     );
 }
+
+#[path = "support/formula_scalar_recipe_execution/oracle.rs"]
+mod independent_recipe_oracle;
