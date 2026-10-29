@@ -329,11 +329,37 @@ the execution documentation controls. The integration derives all size values th
 SizeMembership::formula_context adapter for three authored members, then verifies taken-only reads,
 original set/revision/member/base sources and unchanged membership. The full 256-node fanout reads
 all 255 original eps_num occurrences under the exact 767-record reservation; a left-deep 256-node
-expression also completes without recursive execution frames. Independent broader scalar-result
-verification is deferred to .5e.2.4.3.acceptance after this feature commit. Whole worked-book,
+expression also completes without recursive execution frames. The scoped independent result
+checkpoint below follows feature completion. Whole worked-book,
 platform identity, tangent/geometry/derived evaluation, prior-let statements and replay keep their
 existing .5g/.5e.4/parent owners. This scoped expression result grants no whole-language, containing
 Design/currentness, evidence-truth, geometry/physical or release approval.
+
+### Finite independent result checkpoint
+
+Checkpoint0580 compares actual public AST execution with the separately parsed, table-driven book
+reference. Its guarded pure-stdout producer is
+docs/tasks/artifacts/formula_structure/scalar_execution_oracle.py. It imports no Rust implementation
+and reads no expected fixture. The frozen native fixture is
+crates/sc-core/tests/fixtures/formula_scalar_execution.tsv;two native watchers compare every actual
+row and independently regenerate its complete bytes.
+
+The finite population contains49 rows,including10 intended runtime refusals. It checks exact
+unbound values,literal conversion/explicit rounding,Boolean outcomes,all available scalar call
+families,executed approximation contributions and original name-read order. Cases retain repeated
+reads,condition plus chosen-branch contributions,multiple nested call sources,unselected evaluated
+operands,untaken Unknown/absent contexts and actual first-failure families. Both watchers pass;
+the2325-byte fixture is independently reproduced exactly. Existing implementation sources are
+unchanged from0579. This closes the prepared scalar subset's result checkpoint,not whole-language,
+all-input numerical,worked-book,platform,geometry/physical or release verification.
+
+D338 records an actual reference limitation discovered during this checkpoint:an unexecuted
+Derived parameter with no supplied value is incorrectly classified as formula_unknown. The
+normative diagnostic applies to Unknown state. The Rust adapters/worker correctly preserve the
+sole formula's RequiresEvaluation request. Reference Derived-resolution verdicts are excluded
+here;their repair is owned by .5e.2.5.reference-derived before Derived integration. No substitute
+value,formula identity or new language token is introduced. Actual available derived bindings and
+Unknown diagnostics must remain distinct when that reference boundary is repaired.
 
 Name reads use the actual resolved declaration, not a fresh name-only search that could find another
 source. Canonical length/general scalar adapters retain source/state and return observation or

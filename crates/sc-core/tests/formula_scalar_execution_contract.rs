@@ -28,6 +28,9 @@ use std::error::Error as _;
 #[path = "support/formula_scalar_execution/inputs.rs"]
 mod general_inputs;
 
+#[path = "support/formula_scalar_execution/oracle.rs"]
+mod independent_oracle;
+
 fn id(bits: u128) -> EntityId {
     EntityId::from_bits(bits)
 }

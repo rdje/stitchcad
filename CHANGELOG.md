@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0579 — execute actual bounded sourced scalar expressions
+## STITCHCAD-G1-0580 — verify actual scalar results with an independent parser oracle
 
-- Consume prepared proofs/sources with explicit tolerance/size contexts. Reserve/guard N-task/N-value buffers and fill existing D read slots. Real condition/taken branch,exact kernels,all evaluated operand sources,original errors and actual canonical/provider state survive;no binding conversion or callback proof.
-- Core9/real membership1/plan5/doc10/scoped lint/fmt/book94/281/1601/2801/glossary310/9/158/0 pass;whole0578 retained737/four Git spans. Full256/255 under767 and left-deep256 pass. Next .3.acceptance;whole runtime/recipe/derived/tan/geometry/replay/platform pending. G1 6/18/G0 unapproved.
+- Independent guarded book reference yields49 rows/ten refusals/2325B;native actual values,call sources,read order and refusal families match. Full11 initially/expanded oracle pair/scoped lint/fmt/book94/281/1601/2802/glossary310/9/158/0 pass;implementation unchanged0579. Whole0579 retained738/four Git spans.
+- Scoped scalar .3 checkpoint done;full expression .integration/recipe/derived/tan/geometry/replay/platform/physical stay open. Own D338 P2:reference labels unexecuted Derived as Unknown,contrary to normative row/Rust request. Next .5e.2.5.reference-derived repair before Derived integration. G1 6/18/G0 unapproved.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

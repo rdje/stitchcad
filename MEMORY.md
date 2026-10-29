@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.3.acceptance:after scalar feature0579,run deferred scoped independent/
-  integration result checks and reconcile supported/unavailable families. Read worker,real source/context contracts and existing oracle instruments first;whole language still open.
-- Actual scalar AST worker0579 implemented with focused checks passing:ordered actual nodes,
-  condition/taken-only branches,all evaluated operands,original input/provider read traces and
-  exact kernels. N task/N value buffers reserve fallibly/push-guarded;D slots fill in place.
-  Native core9/real membership1/plan5/doc10/scoped lint/fmt pass;full256/255 under767 and left-deep
-  256 pass. No premature binding rounding;original Unknown/Derived requests and T1 causes kept.
-  Book94/281/1601/2801/glossary310/9/158/0 pass;whole0578 retained737/four exact Git spans.
-- Whole recipes/prior-let/derived evaluation,tangent/geometry/replay/platform remain owned.
-  D337 fixed0575:actual0288 inverses available;tangent .5d.1.2.2.2.d.2/.5d.3.2.2 pending.
+- Next G1-SLICE.5e.2.5.reference-derived:fix owned D338 P2 before Derived integration.
+  Actual reference state Derived/valueNone emits formula_unknown;blameb126f3c41/0080. Normative
+  Unknown-only token and Rust RequiresEvaluation disagree with reference. Repair source/context
+  boundary without invented formula ID,value/cache,new language token;retain real Unknown and
+  available derived bindings. Read affected origin/provenance/statement contracts before coding.
+- Scalar checkpoint0580 closes prepared subset .5e.2.4.3:independent actual reference49 rows,
+  ten refusals/2325B;native whole11 initially,expanded oracle pair49 rows pass,strict lint/fmt.
+  Book94/281/1601/2802/glossary310/9/158/0 pass;whole0579 retained738/four exact Git spans.
+  Implementation unchanged0579;actual worker9/membership1/plan5/doc10 remain scoped evidence.
+- Full .5e.2.4.integration remains pending tangent/geometry/prior-let/Derived;whole recipe/
+  replay/platform still owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a stays SHA-scoped.
   Lineage0574 closes47 native/21 doc;actual paired .2.4 providers/physical,.2.5 atomic effects open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,
-  102 originals exact;never rerun old transactions. Full local/hosted79bd6f6a stays SHA-scoped.
-- G1 6/18/G0 unapproved;D334 P2 after current G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;focused checks/commit per slice,push400 after full gates. Broader scalar acceptance next,not already verified.
+  102 originals exact;never rerun old transactions. D334 P2 after G1/before G0;D156/D223/PLANNING.5 owned. Full PNT;focused checks/commit per slice,push400 after full gates. D338 repair next.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

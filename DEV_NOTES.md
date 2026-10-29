@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — execute actual sourced scalar ASTs within admitted workspaces
+## _(2026-10-29 UTC)_ — verify actual scalar results against the independent book parser
 
-0579 actual iterative worker reserves N tasks/N values before reads,guards pushes and fills D slots only on execution. Real condition selects actual branch;no callback annotations. Exact kernels retain evaluated operands and condition/taken sources;within reuses actual class read.
-Native core9/real membership1 across3 members/plan5/doc10/scoped strict lint/fmt pass. Exact fractions/literal-once conversion,Unknown/Derived requirements,canonical state/false/zero/raw turns,Count beyond i64 binding range,error order,T1/provider sources and full256/255/767 plus left-deep256 pass.
-Initial check unused trait import removed;native101 integer inference fixed in fixture. Book94/281/1601/2801/glossary310/9/158/0 pass. [Whole0578 preparation](docs/history/stitchcad-devnotes-part737.md) retains four Git spans. Result/context/read/error Debug omits names/values;explicit typed sources remain available.
-Indexed node/source/numeric/lazy/resource rules apply;promotion declined. Logical buffers exclude kernel/error/provider work and allocator bytes. Next .3.acceptance scoped result proof;whole recipe/derived/tan/geometry/replay/platform pending. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped.
+0580 pure guarded reference producer imports no Rust implementation/expected fixture. Native actual ASTs match49 rows/ten intended refusals/2325B,including exact values,call sources,ordered repeated/taken reads and combined contributions. Complete frozen bytes independently reproduced;implementation unchanged0579.
+Native full11 passed initial46 rows;expanded oracle pair49 rows and scoped strict lint/fmt pass. Prior scalar9/real membership1/plan5/doc10 remain scoped evidence. Book94/281/1601/2802/glossary310/9/158/0 pass. [Whole0579 worker](docs/history/stitchcad-devnotes-part738.md) retains four exact Git spans.
+D338 P2 actual reference Derived/valueNone wrongly yields formula_unknown;normative token requires Unknown and Rust correctly needs sole formula execution. Repro/blame→b126f3c41/0080 generic external-origin branch. Owned next .5e.2.5.reference-derived before Derived integration;exclude those oracle verdicts now.
+Indexed independent-parser/watched-fixture/scoped-claim rules apply;promotion declined. Prepared subset .3 closes;whole expression .integration/recipe/derived/tan/geometry/replay/platform/physical remain owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;D334/D156/D223/PLANNING.5 pending. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -1,0 +1,50 @@
+# expression	kind	numerator or refusal	denominator	call sources	executed names
+1 um/3	length	1	3	-	-
+0.0004 mm+0.0004 mm	length	0	1	-	-
+0.0005 mm+0.0005 mm	length	2	1	-	-
+-((2 mm)^2)	area	-4000000	1	-	-
+((1 um/3)+(2 um/3))*3	length	3	1	-	-
+1 mm/3+1 mm/3	length	2000	3	-	-
+(1 um/3)^2	area	1	9	-	-
+3/2	ratio	1500000	1	-	-
+round_to(3 um,2 um)	length	4	1	round_to	-
+round_to(-3 um,2 um)	length	-4	1	round_to	-
+sqrt((3 um/2)^2)	length	2	1	sqrt	-
+hypot(1 um,1 um)	length	1	1	hypot	-
+sin(90 deg)	ratio	1000000	1	sin	-
+cos(180 deg)	ratio	-1000000	1	cos	-
+atan(1.0)	angle	45000000	1	atan	-
+atan2(1 um,1 um)	angle	45000000	1	atan2	-
+arc_length(0 deg,1 cm)	length	0	1	arc_length	-
+min(0 mm,round_to(1 mm,1 um))	length	0	1	round_to	-
+max(2 mm,round_to(1 mm,1 um))	length	2000	1	round_to	-
+clamp(0 mm,0 mm,round_to(1 mm,1 um))	length	0	1	round_to	-
+if(sin(0 deg)==0.0,1 um,2 um)	length	1	1	sin	-
+if(1==1,1 um,sin(90 deg)*1 um)	length	1	1	-	-
+if(1!=1,sin(90 deg)*1 um,1 um)	length	1	1	-	-
+if(use_fixed,known_zero,private_width)	length	0	1	-	use_fixed,known_zero
+if(use_fixed,assumed,preferred)	length	1000	1	-	use_fixed,assumed
+if(1!=1,assumed,preferred)	length	-1000	1	-	preferred
+assumed+assumed+preferred	length	1000	1	-	assumed,assumed,preferred
+use_fixed	boolean	true	-	-	use_fixed
+known_zero	length	0	1	-	known_zero
+within(1 um,1 um,eps_num)	boolean	true	-	-	eps_num
+within(sqrt((3 um)^2),3 um,eps_num)	error	formula_domain	-	-	-
+within(1 um,11 um,eps_geo)	boolean	true	-	-	eps_geo
+if(1==1,1 um,eps_phys)	length	1	1	-	-
+eps_phys	error	formula_tolerance_unbound	-	-	-
+is_base_size	error	formula_unbound_name	-	-	-
+private_width	error	formula_unknown	-	-	-
+min(0 um,private_width)	error	formula_unknown	-	-	-
+private_width+1 um/0	error	formula_unknown	-	-	-
+1 um/0+private_width	error	formula_division	-	-	-
+sqrt(-(1 um)^2)	error	formula_domain	-	-	-
+clamp(0 um,2 um,1 um)	error	formula_domain	-	-	-
+if(1==1,1 um/0,1 um)	error	formula_division	-	-	-
+if(1!=1,1 um/0,1 um)	length	1	1	-	-
+within(sin(90 deg),1.0,eps_geo)	boolean	true	-	sin	eps_geo
+((1 um)^2)/(3 um)	length	1	3	-	-
+0.0000004+0.0000004	ratio	0	1	-	-
+if(sin(0 deg)==0.0,sqrt((3 um)^2),hypot(3 um,4 um))	length	3	1	sin,sqrt	-
+hypot(round_to(3 um,2 um),sqrt((3 um)^2))	length	5	1	hypot,round_to,sqrt	-
+within(sin(90 deg)+cos(0 deg),2.0,eps_geo)	boolean	true	-	cos,sin	eps_geo
