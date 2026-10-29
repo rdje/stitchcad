@@ -426,6 +426,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   D328 fixed0558:full default original-cohort/capture/physical/body checks and actual current
   four native reds/restored16 pass0. Continue published tail after ledger fixture at mutation
   controller,then fresh full clean check/gate/probes/normal push/actual jobs;no full pass yet.
+  Tail0558:mutation entry1 pass0/source clean;publication entry2 original-body fails only
+  approved named-result adapter. D329 fixed0559/focused proof;full default advances to retired
+  window1 physical backing refusal. D330 next before remaining environment/full gates/push/jobs.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
@@ -450,50 +453,69 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0557 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part716.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.ledger-cohort`
   Status: `done`
-  Goal: D328,P1 next after completed0557 before environment continuation. Ledger mutation
-  default before_control combines frozen39861d11 mutator with current0342 helper;old fault2
-  pointed.add anchor was intentionally adapted to name assignment0342. Frozen original check
-  now stops at nonunique actual mutation anchor instead of demonstrating unrelated-red admission.
-  Reproduce:prepared python_ledger_mutation_contract.py default →before_control assertion1,
-  target/ledger-population-0557-mutation-capture.log;no native source changes. Independent AST
-  diagnostic:only current fault2 replacement pair differs from frozen original;other three exact.
-  Paths:docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py. Reconstruct
-  complete original mutable helper/shell cohort in isolated same-volume mirror before original
-  classifier test;restore that cohort and preserve actual old unrelated-red admission. Current
-  original-body projection must verify exact approved0342 fault2 adapter before comparing all
-  remaining frozen original bodies. Do not move original pin or weaken current red classifier.
-  Verify default full controls and related native four-current-red/16 baseline;omission controls
-  prove old-cohort selection and current adapter preservation. D223 continuity stays deferred.
+  Goal:0558 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part717.md).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.publication-result`
+  Status: `done`
+  Goal: D329,P1 current prepush blocker;preserve original publication whole-body proof across
+  exact approved0426 named-result adapter. Default after clean c90a0d09:734 copy plans/732
+  effects/346 files,40 mutation captures/11 omissions/12 physical/borrowed purity pass,then
+  original whole AST assertion1. Published tail mutation entry1 passes/source clean;publication
+  entry2 stops. Log:target/prepush-400-0558-environment/02-python_publication_fixture_contract.log.
+  Root tool derives projected32 original versus34 current nodes:only NamedTuple import/result
+  class,check four-value tuple→named construction,and main identical-label summary changed.
+  Git25f29c89 adopted exact adapter for D283;no other projected checker/body delta found.
+  Paths:docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py.
+  Verify exact approved class/import,unchanged original ordered payload and exact summary call/
+  label mapping before narrow projection;keep original pin and all remaining whole AST compare.
+  Focus actual original_body_controls,tuple-compatible distinct-field runtime oracle,frozen old
+  formatter equality,isolated class/payload/summary/other-body drift refusals. Full default may
+  expose later continuity blockers;own separately,never claim unrun/failing continuation passed.
+  Update book/live/retained whole prior receipt,commit0559,then remaining published checks and
+  fresh full clean prepush/normal push/actual exact-SHA jobs. No production feature advance.
 
-  Completion0558:D328 original mutable cohort/current exact adapter restored.
-  - [x] ROOT CAUSE (WHY + WHERE): original39861d11 fault2 expects pointed.add(routes[target]);
-    current0342 helper uses name assignment. Default mixed-cohort before_control stopped at
-    obsolete anchor. target/ledger_cohort_0558_focus.py omits actual frozen-cohort staging and
-    reproduces the same nonunique-anchor assertion,rc=0;only approved fault2 pair differs.
-  - [x] FIX: obtain original shell/helper Git bytes at unchanged BEFORE,plan both mirror
-    outputs before writes,verify before original mutator. Entire current CASES must equal exact
-    public0342 CASES before projecting only approved route-assignment replacement in parsed
-    frozen comparison. All other original nodes remain compared;no actual mutator/classifier edit.
-  - [x] ADDRESSED (verified): actual prepared python_ledger_mutation_contract.py default →
-    original frozen-cohort four unrelated-response admissions,27 plans/15 effects/9 captured
-    children,two protected failures/six unrelated-red refusals/ten omissions/profile-alias refusal,
-    thirteen physical CLI refusals and original-body comparison pass,rc=0;source/cohort exact.
-    Log:target/ledger-cohort-0558-default.log. Injected child responses remain simulation only.
-  - [x] NO REGRESSION: target/ledger_cohort_0558_focus.py →all program AST outside two
-    historical controls exact;cohort omission/unapproved adapter/missing adapter/unrelated body
-    drift refuse;owned no-effect approved-guard disable admits expected calibration only,rc=0.
-    Actual --real →four current native case/site/verdict reds/restored16 baseline,all core/
-    archive inputs exact/no residue,rc=0. Logs:target/ledger-cohort-0558-{focus,real}.log.
-    Book93/248/1590/2771,retirement716/four exact Git spans,retention1170 and git diff --check
-    pass0. D223 --continuity remains deferred;no complete environment/full prepush claim.
-    Initial normal hook refused missing explicit rc=0 in ADDRESSED;record corrected to actual
-    consumed default terminal0. No code/checker bypass or source change followed the refusal.
-  - [x] LOCKSTEP: whole0557/prior ledger retained716. Book explains same-revision historical
-    mutable cohort and exact current adapter versus native proof. MEM/DEV/CHANGE/index/ledger
-    aligned;LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D328 fixed,D156/D223 open.
-    Commit then published environment entries after ledger fixture,starting mutation controller;
-    resolve failures,then fresh full clean gates/normal push/actual jobs. Full PNT continues.
-    promotion: declined (application of indexed coherent original cohorts,exact adapter projection and independent omission controls;no new product authority).
+  Completion0559:D329 exact approved named-result projection accepted.
+  - [x] ROOT CAUSE (WHY + WHERE): actual projected AST32 versus34 differs only by approved
+    0426 import/result class/check return/main summary. Git25f29c89 fixed D283 labels with this
+    tuple-compatible adapter;old original-body oracle predates it. Actual updated body and
+    target/publication_result_0559_focus.py →exact approved boundaries/old remaining AST,rc=0.
+  - [x] FIX: verify exact approved typing import/PublicationResult class before removal from
+    parsed comparison. Named construction must have exactly original ordered four expressions,
+    no kwargs;summary must be exact print(result.summary()). Replace only those verified nodes
+    with original tuple/formatter in comparison. Keep original pin/whole remaining AST assertion.
+  - [x] ADDRESSED (verified): actual original_body_controls through prepared controller passes,
+    rc=0,target/publication-result-0559-body.log. Focus verifies tuple equality/field order with
+    distinct2/3/5/7 and original frozen formatter exact labels;actual borrowed check yields named
+    current93/248/1590/2771,rc=0,target/publication-result-0559-focus.log. Public producer unchanged.
+  - [x] NO REGRESSION: focused actual class/import/payload/summary/other-body drift all refuse;
+    two owned no-effect class/payload guard disables admit expected calibration only,rc=0.
+    All other controller AST frozen c90a0d09 and public producer/tracked bytes exact,rc=0.
+    Full default rerun passes734 copy plans/732 effects/346 files,40 mutation captures/11
+    omissions/12 physical/pure APIs/new original-body,then fails later retired window1 backing.
+    D330 next owns that continuity failure;no whole-default pass. Initial noncase probe anchor
+    appeared twice and refused before execution;qualified exact require call then controls pass.
+    Book93/248/1590/2771,retirement717/four exact Git spans,retention1171 and diff --check pass0.
+  - [x] LOCKSTEP: whole0558/prior ledger retained717. Book documents named fields/compatible
+    payload/exact historical projection and explicit pending D330 continuity. MEM/DEV/CHANGE/
+    index/ledger align;LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D329 fixed,D330
+    owned,D156 audits/D223 pending. Commit then D330,remaining tail/fresh full clean gates/normal
+    push/actual exact-SHA hosted jobs. Full PNT;no feature or immutable history change.
+    promotion: declined (application of indexed exact approved adapters,typed population labels and independent payload/formatter/drift controls;no new product authority).
+
+- ID: `G1-SLICE.6.5.3.2.prepush-400.publication-continuity`
+  Status: `pending`
+  Goal: D330,P1 next after0559 before published environment continuation. Publication default
+  now passes exact approved named-result/original body and reaches continuity;prior archive
+  path .doctrine/history_archive/window1.json no longer physical after generation retirement.
+  Reproduce:target/publication-result-0559-default.log,FileNotFoundError in continuity read;
+  full original-body now passes. Existing retained reports are not assumed missing from storage.
+  Paths:docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py.
+  Resolve historical controls/payloads through published backing/logical inventory;preserve all
+  original10 captures/Git interval hashes/D219 identities,old complete archive bytes/window order
+  and predecessor graph/uniqueness/ten corruption controls/three actual omission controls.
+  Diagnose current versus frozen master semantics through public APIs before adapting schemas;
+  do not pin current layout,skip old files,move original source pins or weaken identity proofs.
+  Verify actual default continuity/refusals and full default controller;D223 ledger continuity
+  remains separate. Commit before remaining tail/fresh full clean gates/normal push/actual jobs.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

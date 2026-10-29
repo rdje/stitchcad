@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D328 — prepush repairs
+## D308–D330 — prepush repairs
 
-D308–D328 fixed0537–0558;[prior ledger](../history/stitchcad-devnotes-part716.md). D328 original mutable cohort/exact approved adapter/full default/four refusals and native4/restored16 pass. D223/PLANNING.5 open. Continue published tail after ledger fixture,then fresh full clean gates/normal push/actual jobs under .6.5.3.2.prepush-400. LIVE G1 6/18.
+D308–D329 fixed0537–0559;[prior ledger](../history/stitchcad-devnotes-part717.md). D329 exact named result/original payload/formatter/five refusals pass. D330 P1 next:publication continuity reads retired window1 backing physically;owner .6.5.3.2.prepush-400.publication-continuity. D223/PLANNING.5 open. Then remaining tail/fresh full gates/normal push/actual jobs. LIVE G1 6/18.

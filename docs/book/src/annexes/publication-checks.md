@@ -78,6 +78,13 @@ These identifiers belong to the publication Python module/configuration:
 | `check` | Pure chapter, navigation and current-status validation |
 | `rows` | Pure reader for the scoped tabular API/status map |
 | `formula_scope` | Pure validator for known formula availability claims and methods |
+| `PublicationResult` | Tuple-compatible checked counts with named fields and a labelled summary |
+
+The result fields are `chapters`, `scoped_api_rows`, `source_links` and `rendered_links`, in that
+original tuple order. `summary()` names each population explicitly. The fixture's historical-body
+comparison verifies the exact approved result class, unchanged ordered payload and summary call
+before projecting this adapter; every remaining original checker/copier/mutation/main node is compared.
+Distinct-field values reproduce the original formatter, and class/import/payload/summary/body drift refuses.
 
 ## Verification
 
@@ -93,6 +100,8 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_publication_fixture_con
 ```
 
 These controls intercept renderer children for fault safety; the publication entry runs real mdBook.
+The historical continuity stage currently stops at a retired physical archive-backing path (D330);
+its separately owned repair is next. The named-result proof does not imply complete fixture acceptance.
 Compiled production-body omissions must trigger independent assertion failures. Device/index controls
 write neither off-volume nor to Git. Environment probes watch both contracts; `make probes` also runs
 the publication entry. See [build/checks](../build-and-checks.md) for local stores and remaining audits.

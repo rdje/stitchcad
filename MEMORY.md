@@ -1,17 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400:remaining published environment entries after
-  python_ledger_fixture_contract.py;start python_ledger_mutation_contract.py. Continue original
-  runner argv under target/prepush-400-0558-environment,stop/own any failure/source drift. Then
-  fresh full clean check/gate/probes before normal push/actual exact-SHA hosted jobs. No push yet.
-- D328 fixed0558:original mutable shell/helper from39861d11;current approved0342 adapter
-  verified before remaining original AST. Default full capture/classifier/physical/body pass0;
-  four isolated omission/drift refusals/one guard-disable admission and actual native4/restored16
-  pass0;tracked/core/archive inputs exact. D223 --continuity and global PLANNING.5 stay deferred.
-- Whole0557/prior ledger retained716/four spans;book93/248/1590/2771,retention1170 pass0. Prior
-  tail first11 then next6 pass/source clean;ledger16 default/masked/native mutation now repaired.
-- LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits open. After required full prepush/
-  push/jobs:stop .3.3.acceptance/live lineage .3.4. Full PNT;consume all terminals before edits.
+- Next G1-SLICE.6.5.3.2.prepush-400.publication-continuity:D330 publication controller
+  default reaches retired .doctrine/history_archive/window1.json physical read. Repair using
+  public backing/logical inventory,retain original10 Git captures/full old archive bytes/master
+  order/predecessor uniqueness/ten corruption and three guard-omission controls. No pin move.
+- D329 fixed0559:exact approved0426 named-result class/import/original payload/summary mapping
+  before whole remaining AST compare. Distinct-field tuple/frozen formatter/native borrowed check,
+  five drift refusals/two guard-disable admissions and all other controller/public source exact0.
+- Whole0558/prior ledger retained717/four spans;book93/248/1590/2771,retention1171 pass0. Tail
+  target/prepush-400-0558-environment entry1 mutation passes/source clean;entry2 now reaches D330.
+  Default preceding copy346/40 mutations/11 omissions/12 physical/purity/body pass;not whole pass.
+- After D330/remaining tail:fresh full clean check/gate/probes,normal push/actual exact-SHA jobs.
+  LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits/D223/PLANNING.5 pending. Then stop
+  .3.3.acceptance/live lineage .3.4. Full PNT;consume all producer/commit terminals before edits.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -376,6 +376,44 @@ def borrowed_controls(root):
 
 def original_body_controls():
     old, current = ast.parse(OLD), ast.parse(ENTRY.read_text())
+    approved = ast.parse(subprocess.check_output(['git', 'show',
+        '25f29c8958fbfde0adfca0a528d24f6c85d22c10:' + ENTRY.relative_to(ROOT).as_posix()], text=True))
+
+    def named_nodes(tree):
+        return [node for node in tree.body if
+                (isinstance(node, ast.ImportFrom) and node.module == 'typing') or
+                (isinstance(node, ast.ClassDef) and node.name == 'PublicationResult')]
+
+    def dump(node):
+        return ast.dump(node, include_attributes=False)
+
+    def function(tree, name):
+        return next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == name)
+
+    adapters = named_nodes(current)
+    assert len(adapters) == 2 and [dump(node) for node in adapters] == [
+        dump(node) for node in named_nodes(approved)], 'publication named result adapter changed'
+    for node in adapters:
+        current.body.remove(node)
+    original_returns = [node for node in ast.walk(function(old, 'check')) if isinstance(node, ast.Return)]
+    named_returns = [node for node in ast.walk(function(current, 'check')) if isinstance(node, ast.Return)]
+    assert len(original_returns) == len(named_returns) == 1, 'publication named result return count changed'
+    payload, named = original_returns[0].value, named_returns[0].value
+    assert (isinstance(payload, ast.Tuple) and isinstance(named, ast.Call) and
+            isinstance(named.func, ast.Name) and named.func.id == 'PublicationResult' and
+            not named.keywords), 'publication named result return changed'
+    assert [dump(node) for node in named.args] == [
+        dump(node) for node in payload.elts], 'publication named result payload changed'
+    named_returns[0].value = payload
+    original_prints = [node for node in function(old, 'main').body if isinstance(node, ast.Expr) and
+        isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name) and node.value.func.id == 'print' and
+        len(node.value.args) == 1 and isinstance(node.value.args[0], ast.JoinedStr) and
+        isinstance(node.value.args[0].values[0], ast.Constant) and node.value.args[0].values[0].value.startswith('publication: ')]
+    expected_print = dump(ast.parse('print(result.summary())').body[0])
+    main = function(current, 'main')
+    positions = [index for index, node in enumerate(main.body) if dump(node) == expected_print]
+    assert len(original_prints) == len(positions) == 1, 'publication named result summary changed'
+    main.body[positions[0]] = original_prints[0]
     added = {'load_profile', 'source_tree', 'fixture_plan', 'fixture_effect', 'mutation_plan', 'mutation_target',
              'temporary_root', 'build_inputs', 'publication_environment', 'publication_plan', 'build', 'main_inputs'}
 
@@ -422,7 +460,7 @@ def original_body_controls():
             return self.generic_visit(node)
 
     assert ast.dump(Project().visit(current), include_attributes=False) == ast.dump(Project().visit(old), include_attributes=False), 'publication original whole AST changed'
-    print('publication original AST: pure/copier/mutation/main semantics exact through declared guards/owned temporary context; builder separately captured')
+    print('publication original AST: exact approved named-result adapter/original ordered payload/summary call; remaining pure/copier/mutation/main semantics exact through declared guards/owned temporary context; builder separately captured')
 
 
 def continuity_controls(*, observe=None):
