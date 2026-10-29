@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0553 — repair certified-root statement role fault adapters
+## STITCHCAD-G1-0554 — align coupled source/book adapters and composed proof scope
 
-- Close D320 two old role anchors;22 identities/20 other tuples/all other AST/plans/CLI exact. Forged helper matches original mutant tokens. Native22/restored7/all3 sources and current assertion-origin audit pass;known join propagation stays distinct.
-- Modes2/physical10/21 guard-classifier reds/class-only pass. Whole producer advances to D321 coupled result anchors;D321 P1 owned next. Whole0552 retained711/three spans;book/history checks pass. Full prepush/normal push/actual jobs remain;no whole producer pass claimed.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D320 fixed,D321 owned,D156 audits open. Book records current statement evidence and separate pending coupled calibration.
+- Close D321–D323 with two current operand adapters/one copied-book anchor. Correct local-only9 census to9+19=28 Rust,6 reference/3 book controls. All other AST/API/plans/data and standing tuples exact. Native26723 shared cases/all original fault controls/source restoration pass.
+- Whole producer runtime/body/mode/physical/classifier checks pass0;dispatch and native scopes remain distinct. Whole0553 retained712/three spans;book/history checks pass. Fresh full prepush gates/normal push/actual jobs remain next;no full verdict inferred.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D321–D323 fixed,D156 audits open. Then stop component acceptance/live lineage;full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -233,10 +233,17 @@ graph occurrences come from the product; source-derived ordinals/spans/roles rem
 Historical exact counts, fault sets, producer plans, restoration and phase-order receipts remain in
 `docs/history/stitchcad-devnotes-part517.md`, retrievable through history_archive.py read.
 
-Current coupled mutation preflight is blocked by D321:two of nine Rust fault anchors still target
-the removed computed-result push after node certificates introduced a shared operand assignment.
-The other seven anchors match. Repair/current native coupled replay is owned by
-.6.5.3.2.prepush-400.coupled-result;the historical fault evidence above supplies no current verdict.
+Current coupled calibration compares26,723 shared cases through independent expectations,
+reference code and actual public Rust APIs. Its complete fault population is9 local plus19
+appended whole-recipe faults:28 Rust faults,with6 reference and3 copied-book controls. All pass
+their original mismatch/body refusals,then restore source and current compiler artifacts.
+The two computed-result faults now target the shared operand feeding kind stack and node
+certificate;one copied-book fault targets the current implemented-status sentence. Only those
+three data adapters change. All other program AST/API/plans/CLI/classifiers/reference data,
+7 other local tuples and19 standing whole-factory tuples remain exact. The initial local-only
+census undercount is corrected by verifying the full composition and runtime28-fault result.
+Whole producer dispatch/guard verification also passes;its simulated children remain separate
+from this real native/reference proof. Full pre-push/platform verification remains separately owned.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/static_coupled_contract.py --mutations

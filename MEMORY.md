@@ -1,17 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.coupled-result in execution sibling:D321 P1 two obsolete
-  result/computed-class Rust fault anchors after0275 shared operand. Adapt only2;keep9 identities/
-  7 other tuples/all other AST/API/plans/references. Verify current coupled modes/native/restore.
-- D320 fixed0553:22 native reds/restored7/all3 sources exact;all failed test bodies originate
-  at current macros. Known parent join propagation carries real child assertions. Frozen22/20
-  tuple/all other AST proof,forged helper matches old mutant tokens;2 modes/10 physical/21 reds0.
-- Whole producer now passes statement then fails coupled result anchor,rc1;9-case census finds
-  exactly2 missing/7 valid. D321 owned next. Logs target/checked-statement-0553-*.log.
-- Whole0552 retained711/3 spans;book93/248/1590/2771,retention1165 pass. Full57bd check0/gate0/
-  probes2 reached29;after D321/whole producer pass,fresh full gates/normal push/actual jobs.
-- LIVE G1 6/18/29 suites/G0 human unapproved;D156/12 audits open. Expression16 and archive28/
-  calibration remain separate complete. Then stop .3.3.acceptance/live lineage .3.4;PNT continues.
+- Next G1-SLICE.6.5.3.2.prepush-400 in execution sibling:fresh full check/gate/probes from
+  clean completed HEAD,normal push only after all pass,then actual exact-SHA hosted jobs/steps.
+  Derive ahead count;cadence already reached. No push/hosted verdict yet.
+- D321–D323 fixed0554:two shared-operand Rust adapters/one copied-book anchor;full composed
+  9 local+19 whole=28 Rust/6 reference/3 book population preserved. Native26723 shared cases,
+  28 Rust/6 reference/3 book reds and source/current artifact restoration pass0. Local-only9
+  census undercount explicitly corrected before code;all other AST/API/plans/data exact.
+- Whole producer passes0:244 runtime/1125 body reds/4 complete static captures/58 child-file/
+  330 physical/35 classifiers,source exact. Logs target/coupled-0554-{native,focus,producer}.log.
+- Whole0553 retained712/3 spans;book93/248/1590/2771,retention1166 pass. Last full57bd check0/
+  gate0/probes2 reached29;fresh full retry required. LIVE G1 6/18/29 suites/G0 human unapproved;
+  D156/12 audits open. Expression16/statement22/archive28 scoped proofs complete separately.
+- After prepush milestone resume stop .3.3.acceptance/live lineage .3.4. Full PNT continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -422,63 +422,12 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0552 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part711.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-statement`
   Status: `done`
-  Goal: D320,P1 immediately after D319/before push:restore22 original checked-statement fault
-  intents with current certified-root operand helper;no production or classifier weakening.
-  Paths: docs/tasks/artifacts/formula_structure/checked_statement_mutations.py
-  Reproduce: after D319 fix,prepared python_producer_contract.py passes checked-expression block,
-  stops at checked-statement ('direct class role lost','actual anchor count'),rc=1. Log
-  target/checked-expression-0552-producer.log. Independent22-case AST/current-source census finds
-  exactly two missing anchors:direct role lost/computed role forged;other20 meet original counts.
-  Root:0275 replaced root_operand's direct-name/dependency classification body with the actual
-  root certificate's operand. Both old role mutation predicates disappeared;new helper expression
-  self.root().operand() is unique. Full actual0275 diff reviewed during D318 diagnosis,rc=0.
-  Impact: environment suite cannot advance to later guard fixtures;statement mutation/classifier
-  calibration blocks full prepush. Source restoration checked;no production repair inferred.
-  Acceptance: preserve22 ordered intents/20 other tuples/whole remaining AST/plans/CLI;adapt only
-  two helper role faults through declared current-body replacements. Verify modes/physical/guard
-  controls and exclusive compiled native assertion reds/restored target with exact source bytes.
-  Commit before fresh full check/gate/probes/normal push/actual jobs. Own before code changes.
-
-  Selected adapters:unique current helper expression self.root().operand() becomes plain
-  Value(self.kind) for lost role,and the exact original first-dependency classification body
-  under its original forged if-true predicate for computed role. Limit replacements to that
-  helper expression;current certificates,production code and all20 other tuples stay unchanged.
-
-  Completion0553:D320 accepted,current22 proof complete;D321 coupled followup remains next.
-  - [x] REPRODUCE / ISSUE: prepared whole python_producer_contract after D319 stops at statement
-    ('direct class role lost','actual anchor count'),rc=1. Independent22-case census:two old role
-    anchors0/expected1,other20 valid,current helper1,rc=0. Original0552 producer log retained.
-  - [x] ROOT CAUSE (WHY + WHERE): current/frozen0275 helper review,rc=0:old direct-name/first-
-    dependency classification replaced by actual root certificate operand. Fixture predicates
-    lagged;original role obligations remain. No production repair is required for this issue.
-  - [x] FIX: adapt only two helper expression faults. Lost role returns plain Value(self.kind);
-    forged role reinstates frozen original first-dependency body under original if-true fault.
-    Production/checker/certificate dataflow remain unchanged;20 other tuples/all other AST exact.
-  - [x] ADDRESSED (verified): prepared original default producer →22 compiled body assertion
-    reds/all3 sources/current target restored,rc=0;actual restored7 tests pass0. Every failed test
-    body originates at current macro. Two known parent join propagations carry actual child
-    assertions;no production panic evidence counted,rc=0. Source/Cargo/toolchain diff checks0.
-  - [x] NO REGRESSION: target/checked_statement_0553_focus.py →22 identities/20 exact tuples,
-    two adapters only/all other program AST/plans/CLI/classifier/restoration exact;forged helper
-    tokens equal frozen original mutant body. Existing actual main block →2 modes/10 physical/
-    20 mode +legacy classifier reds,rc=0;--classifier-only passes0. Initial all-thread audit scope
-    corrected after source inspection of real child assertion/parent join propagation;final0.
-    Whole producer advances past statement then exposes D321 coupled result anchor,rc=1;D321
-    owned next,no whole pass inferred. Book93/248/1590/2771,rc=0;receipt711 →3 exact Git spans0;
-    retention1165 logical/70 aggregate working/65736 decodedL/5133127 decodedB/2710464 residentB,
-    rc=0;git diff --check →rc=0. Full prepush/normal push/actual jobs remain after D321.
-  - [x] LOCKSTEP: whole0552 retained711;book current22 role/native/mode proof and historical
-    counts separated,D321 coupled preflight pending. MEM/DEV/CHANGE/index/ledger align;LIVE
-    G1 6/18/29 suites/G0 human unapproved unchanged,D320 fixed/D321 owned,D156 audits open.
-    README unchanged. Commit then D321;full PNT continues. Native/focus/producer logs under
-    target/checked-statement-0553-*.log;all source and restoration terminals consumed.
-    promotion: declined (application of indexed current-body adapters,frozen legacy semantics and originating assertion evidence;coupled followup explicitly owned).
-
+  Goal:0553 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part712.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.coupled-result`
-  Status: `pending`
-  Goal: D321,P1 immediately after D320/before push:current shared-operand adapters for two
-  coupled Rust mutation anchors;preserve all9 ordered Rust fault intents/7 other tuples and
-  complete original coupled reference/driver/book/mode/restore contracts. No production change.
+  Status: `done`
+  Goal: D321/D322/D323,P1 before push:current shared-operand adapters for two
+  coupled Rust mutation anchors;preserve9 local/19 appended whole =28 Rust faults,6 reference/3
+  book controls and complete driver/mode/restore contracts. No production change.
   Paths: docs/tasks/artifacts/formula_structure/static_coupled_contract.py
   Reproduce: prepared whole python_producer_contract after D320 passes statement block,stops
   at capture_static_entry/static_coupled preflight ('coupled real fault anchor','result kind'),
@@ -489,10 +438,59 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   already reviewed;preserve semantic wrong computed kind/class through current shared assignment.
   Impact: coupled/default/mutation source preflight and remaining environment checks cannot run;
   full push signoff held. Strict guards fail closed;production code/source restoration unchanged.
-  Acceptance: two explicit adapters only;9 identities/7 whole tuples/all other AST/API/plans exact.
+  Acceptance: two Rust adapters plus one current copied-annex before-anchor;28 effective Rust
+  identities,7 other local/19 whole tuples,6 references/2 other book tuples/all other AST/API/plans exact.
   Verify current standalone coupled baseline/mutation/real mismatches,guard/physical/source/restore
   controls with original references intact. Commit,then whole failing producer/fresh full prepush
   gates/normal push/actual exact-SHA jobs. Own before any adapter code change.
+
+  D322 — initial diagnostic scope undercount,owned here:the first census read only literal
+  RUST_FAULTS9 and missed its AugAssign composition of19 WHOLE_FAULTS from standing recipe
+  cases. Full public data composition confirms28;all composed source anchors except same2 match.
+  Correct task/book/current census before source edits and verify complete declared28 labels.
+  This corrects the newly published unqualified9 claim;no original population is removed.
+  D323 — stale copied-annex fault,owned here:documentation(fault) requires one current before
+  sentence. The formula-static-validation old implemented-status sentence was retired by book
+  curation;count0,other2 book anchors1 and all6 reference anchors1. Current actual status line
+  is unique. Adapt only this before-anchor;keep forbidden replacement/guard predicate unchanged.
+  Both are immediate bounded dependencies of full coupled mutation proof in this same file;
+  scope is three data adapters,no new interfaces/guard weakening or broader production work.
+
+  Completion0554:D321/D322/D323 closed;current native/whole-producer proof complete.
+  - [x] REPRODUCE / ISSUE: after D320,prepared whole producer stops at coupled result anchor,
+    rc=1;initial local census9 →two0/expected1,other7 valid. Full composed census9+19=28 →same
+    two stale Rust anchors,6 reference anchors1 and3 book before-anchors[0,1,1],rc=0. Initial
+    unqualified9 claim omitted AugAssign19;D322 logged/corrected before code. D323 old status
+    sentence was retired by book curation. Both bounded dependencies owned in this leaf.
+  - [x] ROOT CAUSE (WHY + WHERE): full coupled data assembly/controller/source review,rc=0:
+    shared computed operand replaced direct push in0275;separate coupled table retained old
+    literals. Literal-only census missed appended standing whole cases. Copied-annex fault
+    still named retired implemented-status text;current status line is unique. No production fix.
+  - [x] FIX: exactly two Rust before/after adapters target current shared operand;one book
+    before-anchor targets current status. Original forbidden replacement/guards/reference and
+    case intents remain. Full composition9 local +19 whole =28,6 references/3 book controls kept.
+    No classifier,plan,public API,driver,CLI or production source changes.
+  - [x] ADDRESSED (verified): prepared static_coupled_contract.py --mutations →26723 shared
+    cases through independent expectations/reference/actual public Rust;3 copied-annex body
+    reds/6 compiled reference body reds/28 actual compiled public Rust oracle reds (19 whole
+    factory),sources/current artifact restored,rc=0. All4 Rust sources/reference/Cargo/toolchain
+    and imported standing case source diff checks →rc=0. Logs target/coupled-0554-native.log.
+  - [x] NO REGRESSION: target/coupled_0554_focus.py →frozen52231:9 local/7 other tuples exact,
+    all19 standing whole cases exact,6 reference/2 other book tuples exact;only three declared
+    data adapters,all other program AST/API/plans/CLI/classifiers/restoration exact,rc=0. Full
+    current composed source/reference/book before-census28/6/3 exact,rc=0. Whole original
+    python_producer_contract →244 runtime/1125 body reds/4 complete static captures/58 child-file
+    captures/330 copied-entry physical refusals/35 classifiers,source unchanged,rc=0. Dispatch
+    simulation stays distinct from actual native proof. Book after update:documentation positive/
+    3 original copied refusals and publication93/248/1590/2771,rc=0;receipt712 →3 exact Git spans0;
+    retention1166 logical/71 aggregate working/65814 decodedL/5140560 decodedB/2717897 residentB,
+    rc=0;git diff --check →rc=0. No full check/gate/probes/hosted verdict inferred yet.
+  - [x] LOCKSTEP: whole0553 retained712;book corrects local-only undercount and documents full
+    current28/6/3 proof/26723 cases/three data adapters. MEM/DEV/CHANGE/index/ledger align;LIVE
+    G1 6/18/29 suites/G0 human unapproved unchanged,D321–D323 fixed,D156 audits open. README
+    unchanged. Commit then fresh full prepush gates from clean HEAD,normal push/actual jobs;
+    then stop component acceptance/live lineage. All native/producer/restoration terminals consumed.
+    promotion: declined (application of indexed composed-population verification,current source/book mutation adapters and separate native/dispatch evidence;no new product or archive semantics).
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

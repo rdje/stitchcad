@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D321 — prepush repairs
+## D308–D323 — prepush repairs
 
-D308–D320 fixed0537–0553;[prior ledger](../history/stitchcad-devnotes-part709.md). D321 P1 next:two coupled result anchors after0275,7 others valid. Owner .6.5.3.2.prepush-400.coupled-result. Statement native22/origin audit/modes pass;whole producer stops coupled preflight. Full57bd check0/gate0/probes2;push held;LIVE G1 6/18,G0 human unapproved.
+D308–D323 fixed0537–0554;[prior ledger](../history/stitchcad-devnotes-part709.md). Coupled complete28 Rust/6 reference/3 book scope and native26723/source restore pass;whole producer passes0. Fresh full check/gate/probes/normal push/actual jobs remain .6.5.3.2.prepush-400. Last full57bd check0/gate0/probes2;LIVE G1 6/18,G0 human unapproved;D156 audits open.

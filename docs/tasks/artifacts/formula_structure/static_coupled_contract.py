@@ -554,13 +554,13 @@ def build_and_check(label="baseline"):
 
 RUST_FAULTS = (
     ('result kind', 'crates/sc-core/src/recipe/checked.rs',
-     '// Computed results never acquire the direct-name tolerance role.\n                    kinds.push(O::Value(kind));',
-     'kinds.push(O::Value(FormulaKind::Count));', 1),
+     '// Computed results never acquire the direct-name tolerance role.\n                    let operand = O::Value(kind);',
+     'let operand = O::Value(FormulaKind::Count);', 1),
     ('direct tolerance role', 'crates/sc-core/src/recipe/checked.rs',
      ')) => O::Tolerance(class),', ')) => O::Value(FormulaKind::Length),', 1),
     ('computed role forged', 'crates/sc-core/src/recipe/checked.rs',
-     '// Computed results never acquire the direct-name tolerance role.\n                    kinds.push(O::Value(kind));',
-     'kinds.push(if kind == FormulaKind::Length { O::Tolerance(super::FormulaToleranceName::Geometric) } else { O::Value(kind) });', 1),
+     '// Computed results never acquire the direct-name tolerance role.\n                    let operand = O::Value(kind);',
+     'let operand = if kind == FormulaKind::Length { O::Tolerance(super::FormulaToleranceName::Geometric) } else { O::Value(kind) };', 1),
     ('dependency prefix', 'crates/sc-core/src/recipe/checked.rs',
      'dependencies.push(FormulaNameDependency {\n                            span: self.nodes[index].span,\n                            declaration,\n                        });',
      'if dependencies.is_empty() { dependencies.push(FormulaNameDependency {\n                            span: self.nodes[index].span,\n                            declaration,\n                        }); }', 1),
@@ -609,7 +609,7 @@ def mutations():
     import traceback
     documentation()
     doc_faults = (
-        ('formula-static-validation.md', 'bounded expression, current-statement and whole recipe proofs are implemented; coupled whole review is complete at .4b.',
+        ('formula-static-validation.md', 'reference static checks and coupled public expression/current-statement/whole-recipe review are verified.',
          'complete expression/recipe acceptance remains the next two stages.'),
         ('formula-wanted-signatures.md', 'at .5b.3c.3b; atomic [whole recipe acceptance](formula-checked-recipes.md) is available.',
          'Current statement context remains .5b.3c.3'),
