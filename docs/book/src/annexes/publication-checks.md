@@ -100,8 +100,18 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_publication_fixture_con
 ```
 
 These controls intercept renderer children for fault safety; the publication entry runs real mdBook.
-The historical continuity stage currently stops at a retired physical archive-backing path (D330);
-its separately owned repair is next. The named-result proof does not imply complete fixture acceptance.
+Historical continuity reads logical reports with `read` and original control/payload identities with
+`read-backing`. The retained v1 master is distinct from the active generation index at the same path;
+original schema/window-prefix checks apply to that retained master. Catalog and source-interval bytes
+remain compared exactly. Ten whole captures, predecessor order/uniqueness, twelve corruption or
+unavailable-reader refusals and three actual guard omissions pass without rewriting retained data.
+
+For example, this retrieves the original window control even after its physical file is retired:
+
+```bash
+python3 -I -B scripts/history_archive.py --root . read-backing .doctrine/history_archive/window1.json
+```
+
 Compiled production-body omissions must trigger independent assertion failures. Device/index controls
 write neither off-volume nor to Git. Environment probes watch both contracts; `make probes` also runs
 the publication entry. See [build/checks](../build-and-checks.md) for local stores and remaining audits.

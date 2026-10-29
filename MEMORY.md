@@ -1,18 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.publication-continuity:D330 publication controller
-  default reaches retired .doctrine/history_archive/window1.json physical read. Repair using
-  public backing/logical inventory,retain original10 Git captures/full old archive bytes/master
-  order/predecessor uniqueness/ten corruption and three guard-omission controls. No pin move.
-- D329 fixed0559:exact approved0426 named-result class/import/original payload/summary mapping
-  before whole remaining AST compare. Distinct-field tuple/frozen formatter/native borrowed check,
-  five drift refusals/two guard-disable admissions and all other controller/public source exact0.
-- Whole0558/prior ledger retained717/four spans;book93/248/1590/2771,retention1171 pass0. Tail
-  target/prepush-400-0558-environment entry1 mutation passes/source clean;entry2 now reaches D330.
-  Default preceding copy346/40 mutations/11 omissions/12 physical/purity/body pass;not whole pass.
-- After D330/remaining tail:fresh full clean check/gate/probes,normal push/actual exact-SHA jobs.
-  LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits/D223/PLANNING.5 pending. Then stop
-  .3.3.acceptance/live lineage .3.4. Full PNT;consume all producer/commit terminals before edits.
+- Next G1-SLICE.6.5.3.2.prepush-400:remaining published environment entries after
+  python_publication_fixture_contract.py;start python_publication_builder_contract.py. Original
+  runner argv under target/prepush-400-0560-environment. Stop/own failures or source drift;then
+  fresh full clean check/gate/probes before normal push/actual exact-SHA hosted jobs. No push yet.
+- D330 fixed0560:historical reports read/original control+payload read-backing. All78 original
+  Git paths:47 logical/21 backings/10 catalogs exact;retained v1 master schema/ordered prefix/
+  uniqueness preserved. Original10 captures/ten refusals/three omissions intact;two added backing
+  refusals pass. Full publication default including copy346/mutations40/physical12/purity/body0.
+- Whole0559/prior ledger retained718/four spans;book93/248/1590/2771,retention1172 pass0. Prior
+  c90a0d09 tail entry1 mutation pass/source clean;entry2 publication now repaired. No whole pass.
+- LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits/D223/PLANNING.5 pending. After
+  full prepush/push/jobs:stop .3.3.acceptance/live lineage .3.4. Full PNT;consume all terminals.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -429,6 +429,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Tail0558:mutation entry1 pass0/source clean;publication entry2 original-body fails only
   approved named-result adapter. D329 fixed0559/focused proof;full default advances to retired
   window1 physical backing refusal. D330 next before remaining environment/full gates/push/jobs.
+  D330 fixed0560:all78 predecessor paths exact via published roles;10 full captures/12 refusals/
+  three guard omissions and complete default pass0. Continue published tail after publication
+  fixture at builder,then fresh full clean gates/normal push/actual jobs. No whole environment yet.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
@@ -456,53 +459,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0558 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part717.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.publication-result`
   Status: `done`
-  Goal: D329,P1 current prepush blocker;preserve original publication whole-body proof across
-  exact approved0426 named-result adapter. Default after clean c90a0d09:734 copy plans/732
-  effects/346 files,40 mutation captures/11 omissions/12 physical/borrowed purity pass,then
-  original whole AST assertion1. Published tail mutation entry1 passes/source clean;publication
-  entry2 stops. Log:target/prepush-400-0558-environment/02-python_publication_fixture_contract.log.
-  Root tool derives projected32 original versus34 current nodes:only NamedTuple import/result
-  class,check four-value tuple→named construction,and main identical-label summary changed.
-  Git25f29c89 adopted exact adapter for D283;no other projected checker/body delta found.
-  Paths:docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py.
-  Verify exact approved class/import,unchanged original ordered payload and exact summary call/
-  label mapping before narrow projection;keep original pin and all remaining whole AST compare.
-  Focus actual original_body_controls,tuple-compatible distinct-field runtime oracle,frozen old
-  formatter equality,isolated class/payload/summary/other-body drift refusals. Full default may
-  expose later continuity blockers;own separately,never claim unrun/failing continuation passed.
-  Update book/live/retained whole prior receipt,commit0559,then remaining published checks and
-  fresh full clean prepush/normal push/actual exact-SHA jobs. No production feature advance.
-
-  Completion0559:D329 exact approved named-result projection accepted.
-  - [x] ROOT CAUSE (WHY + WHERE): actual projected AST32 versus34 differs only by approved
-    0426 import/result class/check return/main summary. Git25f29c89 fixed D283 labels with this
-    tuple-compatible adapter;old original-body oracle predates it. Actual updated body and
-    target/publication_result_0559_focus.py →exact approved boundaries/old remaining AST,rc=0.
-  - [x] FIX: verify exact approved typing import/PublicationResult class before removal from
-    parsed comparison. Named construction must have exactly original ordered four expressions,
-    no kwargs;summary must be exact print(result.summary()). Replace only those verified nodes
-    with original tuple/formatter in comparison. Keep original pin/whole remaining AST assertion.
-  - [x] ADDRESSED (verified): actual original_body_controls through prepared controller passes,
-    rc=0,target/publication-result-0559-body.log. Focus verifies tuple equality/field order with
-    distinct2/3/5/7 and original frozen formatter exact labels;actual borrowed check yields named
-    current93/248/1590/2771,rc=0,target/publication-result-0559-focus.log. Public producer unchanged.
-  - [x] NO REGRESSION: focused actual class/import/payload/summary/other-body drift all refuse;
-    two owned no-effect class/payload guard disables admit expected calibration only,rc=0.
-    All other controller AST frozen c90a0d09 and public producer/tracked bytes exact,rc=0.
-    Full default rerun passes734 copy plans/732 effects/346 files,40 mutation captures/11
-    omissions/12 physical/pure APIs/new original-body,then fails later retired window1 backing.
-    D330 next owns that continuity failure;no whole-default pass. Initial noncase probe anchor
-    appeared twice and refused before execution;qualified exact require call then controls pass.
-    Book93/248/1590/2771,retirement717/four exact Git spans,retention1171 and diff --check pass0.
-  - [x] LOCKSTEP: whole0558/prior ledger retained717. Book documents named fields/compatible
-    payload/exact historical projection and explicit pending D330 continuity. MEM/DEV/CHANGE/
-    index/ledger align;LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D329 fixed,D330
-    owned,D156 audits/D223 pending. Commit then D330,remaining tail/fresh full clean gates/normal
-    push/actual exact-SHA hosted jobs. Full PNT;no feature or immutable history change.
-    promotion: declined (application of indexed exact approved adapters,typed population labels and independent payload/formatter/drift controls;no new product authority).
-
+  Goal:0559 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part718.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.publication-continuity`
-  Status: `pending`
+  Status: `done`
   Goal: D330,P1 next after0559 before published environment continuation. Publication default
   now passes exact approved named-result/original body and reaches continuity;prior archive
   path .doctrine/history_archive/window1.json no longer physical after generation retirement.
@@ -516,6 +475,39 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   do not pin current layout,skip old files,move original source pins or weaken identity proofs.
   Verify actual default continuity/refusals and full default controller;D223 ledger continuity
   remains separate. Commit before remaining tail/fresh full clean gates/normal push/actual jobs.
+
+  Root public-API census:78 original Git paths =47 logical reports/21 retained control-payload
+  backings/10 retained physical catalogs. All nonmaster bytes exact. Historical original v1
+  master10 windows versus retained v1 master16 share exact schema/ordered prefix/unique windows;
+  active physical master is v3. Use read-backing for historical roles,not active master schema.
+  Keep10 original refusals/three guard omissions;add corrupted/unavailable backing controls.
+  Completion0560:D330 role-specific historical reads preserve full original continuity.
+  - [x] ROOT CAUSE (WHY + WHERE): actual old reader looked up retired physical window1.json.
+    target/publication_continuity_0560_focus.py →78 original Git paths:47 logical/21 backing/
+    10 catalogs;all nonmaster bytes exact,retained v1 master16 keeps original10 prefix/schema/
+    uniqueness,rc=0. Active physical v3 index is a different role from retained original master.
+  - [x] FIX: read historical reports via public read and original control/payload identities
+    via read-backing. Keep every other capture/hash/schema/window/task/identity assertion exact.
+    Add corrupted and unavailable original-backing controls;retain all ten prior refusals/three
+    original guard omissions. No source pin,archive schema,stored record or public reader change.
+  - [x] ADDRESSED (verified): actual prepared publication controller --continuity →10 whole
+    captures/public reads/prior archive bytes exact;predecessor/task/window order preserved;
+    12 independent refusals/three compiled guard-omission reds,rc=0. Full default →734 copy
+    plans/732 effects/346 files,40 mutation captures/11 omissions/12 physical/pure APIs/exact
+    original-body/complete continuity and refusals pass,rc=0. Logs target/publication-continuity-
+    0560-{native,default}.log;retained and source bytes exact. No simulated-output native claim.
+  - [x] NO REGRESSION: independent public logical/backing API versus original Git all78 roles
+    pass0;all original continuity proof AST outside read adapter,original refusal prefix/three
+    fault tuples and every noncontinuity controller node exact,rc=0. Tracked inputs exact,rc=0.
+    target/publication-continuity-0560-focus.log. Book93/248/1590/2771,retirement718/four exact
+    Git spans,retention1172 and git diff --check pass0. Whole environment/fresh full prepush/
+    hosted verdict still pending;D223 ledger continuity remains deferred.
+  - [x] LOCKSTEP: whole0559/prior ledger retained718. Book removes pending D330 and explains
+    retained historical roles/read-backing with example and exact continuity scope. MEM/DEV/
+    CHANGE/index/ledger align;LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D330 fixed,
+    D156 audits/D223/PLANNING.5 open. Commit then published tail after publication fixture at
+    builder controller;resolve failures,then fresh full clean gates/normal push/actual jobs.
+    promotion: declined (application of indexed role-specific retained byte retrieval,original Git identities and independent corruption/omission controls;no new archive or product authority).
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

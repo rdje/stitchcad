@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308–D330 — prepush repairs
 
-D308–D329 fixed0537–0559;[prior ledger](../history/stitchcad-devnotes-part717.md). D329 exact named result/original payload/formatter/five refusals pass. D330 P1 next:publication continuity reads retired window1 backing physically;owner .6.5.3.2.prepush-400.publication-continuity. D223/PLANNING.5 open. Then remaining tail/fresh full gates/normal push/actual jobs. LIVE G1 6/18.
+D308–D330 fixed0537–0560;[prior ledger](../history/stitchcad-devnotes-part718.md). D330 all78 original roles/Git bytes/master prefix and10 captures/12 refusals/three omissions/full publication default pass. D223/PLANNING.5 open. Continue published tail at builder,then fresh full clean gates/normal push/actual jobs under .6.5.3.2.prepush-400. LIVE G1 6/18.

@@ -465,15 +465,16 @@ def original_body_controls():
 
 def continuity_controls(*, observe=None):
     reader = ROOT / 'scripts/history_archive.py'
-    # These are logical records: later windows may retire their physical source files.
+    # Historical records and original backing identities can outlive their physical paths.
     archives = tuple(path for directory in (ROOT / 'docs/history', ROOT / '.doctrine/history_archive')
                      for path in directory.rglob('*') if path.is_file())
     PROFILE['plan_producer'](ROOT, sources=(*CORE, Path(__file__), reader, *archives))
 
     def read(path):
-        if path.startswith('docs/history/stitchcad-'):
+        if path.startswith(('docs/history/stitchcad-', '.doctrine/history_archive/', 'docs/history/payloads/')):
+            operation = 'read' if path.startswith('docs/history/stitchcad-') else 'read-backing'
             result = subprocess.run([sys.executable, '-I', '-B', str(reader), '--root', str(ROOT),
-                                     'read', path], cwd=ROOT, capture_output=True)
+                                     operation, path], cwd=ROOT, capture_output=True)
             assert result.returncode == 0, ('publication archive read failed', path, result.stderr)
             data = result.stdout
         else:
@@ -574,6 +575,8 @@ def continuity_refusals():
         *[(tree, lambda data, mode=mode: nodes(data, mode), reason) for mode, reason in (
             ('remove', 'publication predecessor task graph changed'), ('reorder', 'publication predecessor task graph changed'),
             ('duplicate', 'publication duplicate task node'))],
+        ('.doctrine/history_archive/window1.json', lambda data: data + b'corrupt',
+         ('publication prior archive bytes changed', '.doctrine/history_archive/window1.json')),
     ]
 
     def refuses(checker, path, change, reason):
@@ -591,16 +594,19 @@ def continuity_refusals():
             continuity_controls()
         for path, change, reason in cases:
             refuses(continuity_controls, path, change, reason)
-        selected = next(key for key in run_cache if key[-2] == record)
-        result = run_cache[selected]
-        run_cache[selected] = subprocess.CompletedProcess(result.args, 2, b'', b'controlled unavailable archive')
-        try:
-            continuity_controls()
-        except AssertionError as error:
-            assert error.args[0][:2] == ('publication archive read failed', record), error
-        else:
-            raise AssertionError('publication failed reader accepted')
-        run_cache[selected] = result
+        unavailable = (record, '.doctrine/history_archive/window1.json')
+        for path in unavailable:
+            selected = next(key for key in run_cache if key[-2] == path)
+            result = run_cache[selected]
+            run_cache[selected] = subprocess.CompletedProcess(result.args, 2, b'', b'controlled unavailable archive')
+            try:
+                continuity_controls()
+            except AssertionError as error:
+                assert error.args[0][:2] == ('publication archive read failed', path), error
+            else:
+                raise AssertionError('publication failed reader accepted')
+            finally:
+                run_cache[selected] = result
 
         source = Path(__file__).read_text()
         function = next(node for node in ast.parse(source).body if isinstance(node, ast.FunctionDef) and node.name == 'continuity_controls')
@@ -623,7 +629,7 @@ def continuity_refusals():
                 raise AssertionError('publication continuity body fault missed')
     finally:
         subprocess.run, subprocess.check_output = originals
-    print('publication continuity: ten independent refusals / three compiled guard-omission assertion reds; retained files untouched')
+    print(f'publication continuity: {len(cases) + len(unavailable)} independent refusals / three compiled guard-omission assertion reds; retained files untouched')
 
 
 def real_controls():

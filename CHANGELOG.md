@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0559 — preserve exact named publication result in historical body proof
+## STITCHCAD-G1-0560 — preserve publication continuity through retained backing identities
 
-- Close D329:verify exact approved result class/import,original ordered payload and summary call before historical projection;compare all remaining original AST. Distinct-field tuple/frozen formatter/actual borrowed check,five drift refusals/two no-effect guard-disable admissions pass. Public producer unchanged.
-- Whole0558/prior ledger retained717/four spans;book/history checks pass. Default advances through copied/mutation/physical/pure/body proof to D330 retired physical backing;owned next before remaining environment/fresh full clean prepush/normal push/jobs. No full default or hosted verdict claimed.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D329 fixed,D330 owned,D156 audits/D223 continuity pending. Full PNT continues.
+- Close D330:public read/read-backing resolves all78 original predecessor roles;original master schema/prefix/uniqueness and every other capture/Git/task proof stay exact. Retain ten refusals/three omissions,add two backing controls. Full publication default and independent API/Git proof pass.
+- Whole0559/prior ledger retained718/four spans;book/history checks pass. Continue published tail at builder controller,then fresh full clean prepush/normal push/actual jobs. D223/PLANNING.5 remain deferred;no whole environment or hosted verdict claimed.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D330 fixed,D156 audits open. Full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
