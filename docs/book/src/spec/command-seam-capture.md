@@ -176,6 +176,6 @@ checkpoint passes13 native seam-command cases,4 actual Design caller cases and20
 doctests. Existing independent weighted160+50 rows and notch6 bound/302 Fraction-width/380 exact
 query controls pass. This closes the captured caller component with scoped checks;no product
 kernel is changed by the checkpoint. The enclosing nonuniform component checkpoint also passes
-its scoped source/context/query checks;semantic stop/lineage implementation follows.
+its scoped source/context/query checks. Bounded stop rows/views are implemented;sealed capture join and live lineage follow.
 The required full pre-push gate and whole paired stop/lineage/atomic/mutation/physical acceptance
 retain their own later owners. Current source/quantity success grants no bus or release approval.

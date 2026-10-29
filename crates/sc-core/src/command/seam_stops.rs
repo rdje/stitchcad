@@ -17,12 +17,16 @@ pub use current::{
 };
 mod membership;
 mod ownership;
+mod partition;
 pub use membership::{
     CommandStopMembership, CommandStopMembershipError, CommandStopMembershipIssue,
     CommandStopMemberships, CommandStopPairMembership,
 };
 pub use ownership::{
     CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits,
+};
+pub use partition::{
+    CommandStopChild, CommandStopChildView, CommandStopPartitionError, CommandStopPartitions,
 };
 
 /// Explicit logical workspace and point/range input limits;no defaults or currentness proof.

@@ -3,7 +3,7 @@
 Native contract cases verify the existing graph's stop membership at paired cuts,including
 closed endpoints,explicit side/copy identity,authored order and later-frame anchors. Explicit actual
 stop input/workspace,ownership-workspace,bounded current context and actual membership rows are
-implemented;ordered child views remain pending. These cases construct real retained child graphs
+implemented,including ordered child views;the sealed ease-capture/view join remains next. These cases construct real retained child graphs
 through public APIs;they do not install a command effect or create new semantic landmark identities.
 
 | API token | Meaning |
@@ -52,6 +52,11 @@ through public APIs;they do not install a command effect or create new semantic 
 | `CommandStopMembershipError` | Actual target,failed stop ordinal/reference and original cause |
 | `CommandStopMembershipIssue` | Actual structural refusal or original N row-bound guard |
 | `derive_stop_memberships` | Classify actual authored references without additional queries |
+| `CommandStopChild` | First or Second in unchanged A pair order |
+| `CommandStopChildView` | Exact projected pair and ordered borrowed original membership rows |
+| `CommandStopPartitions` | Complete two-child references bound to the actual membership owner |
+| `CommandStopPartitionError` | Actual row/child and original aggregate2N reference refusal |
+| `partition_stops` | Build both child lists without new semantic/source objects or queries |
 
 ## A stop at the cut belongs to both closed children
 
@@ -73,7 +78,7 @@ The pair order is always lower/upper A. Same pairs those with lower/upper B;Oppo
 with upper/lower B. An arbitrary winner at a shared cut would lose a valid boundary reference.
 The current graph constructor validates supplied child stop lists;it does not itself execute this
 partition or enforce complete command conservation. The membership stage below derives every actual
-target reference;ordered child views and whole command conservation follow under their own owners.
+target reference;ordered views follow below. Whole command conservation retains its effect owner.
 
 ## Preserve side,copy and authored order
 
@@ -129,7 +134,7 @@ deferred to their existing owners.
 
 The new independent stop oracle is registered in the closed required oracle gate. Ten producers
 match twelve frozen fixtures;the nine gate controls still pass. Actual current membership follows
-the input admission below;ordered borrowed partition views remain their own implementation slice.
+the input admission below,with ordered borrowed views available after the complete membership rows.
 Whole paired lineage/atomic effects and physical/mutation acceptance remain later work.
 
 ## Admit actual inputs before current queries
@@ -349,7 +354,7 @@ This is local registry and target evidence. A lost interval on an unused Piece i
 `piece_portions()` while the valid target can still obtain a context;that success makes no claim
 about whole Piece health. It also supplies no stop-reference conservation,original ease-root/value
 evaluation,physical correspondence,current mutation authority or atomic command effect. Actual
-authored stop rows are available below;ordered child views follow in their own implementation slice.
+authored stop rows and ordered child views are available below,with their own implementation owners.
 
 Ten actual cross-crate Design cases cover the successful and refusing paths above,including exact
 borrowed object identities,unused registry data,N0 missing copies,identity-range quota1 versus
@@ -422,5 +427,52 @@ The original list is never backfilled. Five focused actual Design cases compare 
 independent membership rows with four shared-cut controls,both semantic kinds,authored Turn before
 Notch order and later anchors. They also cover missing/wrong-Piece/outside-side refusals after a
 valid prefix,reflected copies,touching self-seams,shared side tags and the two-origin case above.
-Privacy/lifetime and public API doctests pass. Ordered borrowed child views and their actual caller
-join remain next;component and whole paired/physical/authority/effect verification retain owners.
+Privacy/lifetime and public API doctests pass. Ordered borrowed child views follow below. The sealed
+actual caller join,component and whole paired/physical/authority/effect verification retain owners.
+
+## Obtain two ordered borrowed child views
+
+Call `memberships.partition_stops()` over the externally owned complete membership result. The
+private partition token borrows that exact owner and stores two lists of references to its original
+rows. Iterate the authored rows once and append each to the First and/or Second list indicated by
+its complete membership. Every push checks the original aggregate2N reservation before growth.
+The bound counts references across both lists,including a shared row twice. It does not clone a
+semantic object,stop definition,source root or projected range,and it performs no query/value read.
+
+```rust
+use sc_core::command::{CommandStopMemberships,CommandStopPartitions,CommandStopPartitionError};
+
+fn children<'a,H>(memberships:&'a CommandStopMemberships<'a,H>)
+    ->Result<CommandStopPartitions<'a,H>,CommandStopPartitionError>
+{
+    memberships.partition_stops()
+}
+```
+
+Use `partitions.child(CommandStopChild::First)` or Second to obtain a borrowed view. Its `child()`
+identifies the A-ordered child,`pair()` returns the exact original projected pair metadata,and
+`rows()` lends the ordered references. Each still exposes its original stop,semantic object,copy,
+held/current evidence and authored ordinal. Both views reference the exact same row at a shared
+boundary. `memberships()` recovers the original complete owner;`reference_count()` gives actual
+aggregate references. The partition and its child views cannot escape their actual borrowed owners.
+
+For two authored marks both at a closed cut,N2 produces two references in each child,total4,
+exactly the conservative2N cap. It creates neither additional semantic marks nor new span IDs.
+An empty retained target produces two empty lists,total0,even when its ease root has two original
+stops. A later checked-growth refusal retains actual target,row ordinal,stop,child,retained count,
+requested1 and limit;neither partial child list escapes. Allocator capacity and whole command
+snapshot/runtime policy stay separate from this admitted logical reference population.
+
+The actual Design integration cases independently admit and capture the original source,then use
+these borrowed stop views and its retained portions to construct real child graphs. All32 frozen
+expected cases pass,including four shared-cut controls,both directions/semantic kinds and later
+anchors. Both children retain one shared canonical ease root with its original stops and regions;
+the actual candidate's current metadata preflight passes. Four reflected/touching copy/direction
+scenarios preserve row pointers,two semantic side tags and authored order. A separate N0 case
+preserves empty views. Three focused native cases and privacy/lifetime/API doctests cover the stage.
+
+Those native callers intentionally use the same actual request/state for both pipelines. A sealed
+production join checking the exact ease-capture and stop-view request/span owners follows as its
+own slice. Same IDs or equal source definitions cannot replace that provenance requirement. These
+views supply no new live child lineage,physical matching,fresh mutation authority,atomic effect,
+undo/replay/cancellation or full paired verification. Those requirements retain their task owners.

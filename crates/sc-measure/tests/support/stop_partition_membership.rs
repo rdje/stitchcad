@@ -1,4 +1,6 @@
 //! Real owned Design stop rows,with independent frozen expected closed memberships.
+#[path = "stop_partition_views.rs"]
+mod stop_partition_views;
 use super::{
     admitted, at, command_request, command_weighted_state, id, ownership_limits, self_seam_state,
     with_ledger, DesignInputs, DesignSewing, DesignSewingDefinition, DesignStructure, EaseAmount,

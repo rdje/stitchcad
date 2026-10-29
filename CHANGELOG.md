@@ -3,13 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0533 — derive actual authored closed stop memberships
+## STITCHCAD-G1-0534 — build ordered borrowed child stop views
 
-- Borrow complete actual authored stop rows from the exact bounded current context. Preserve original ordinal/side/physical copy/semantic object and every closed First/Second/Both current membership under original N reservation. No queries,original narrowing,value reads,new
-  semantic objects or partial accepted prefix.
-- Actual Design5,32-row independent oracle,privacy/API docs2+1,strict core/test Clippy and fmt pass. Cover shared cuts,later anchors,N0 original-stop separation,authored order,reflected/touching copies,two side tags and original errors after a valid prefix. Actual inverse
-  confirms two-origin current sharing away from cut without choosing an original.
-- Whole0532 retained691/three exact Git spans;book93/242/1590/2768,glossary0/map/retention1145 pass. LIVE/README unchanged29 suites/G1 6/18. Ordered child views/actual caller integration next;physical/authority/aggregate effects/full and hosted verification retain owners.
+- Borrow both A-ordered child reference lists from exact membership rows,guarding the original aggregate2N cap before each push. Preserve authored order,actual pair/copy/semantic identity and shared row pointers;no source clones,new span IDs,queries or effects. N0 never backfills
+  original stops.
+- Actual Design3,privacy/API docs2+1,strict core/test Clippy and fmt pass. All32 frozen cases/four shared cuts construct actual retained child graphs with one canonical root/current metadata acceptance. Reflected/touching copy/side-tag/order and N0 controls pass;original state
+  unchanged.
+- Whole0533 retained692/three exact Git spans;book93/246/1590/2769,glossary0/map/retention1146 pass. LIVE/README unchanged29 suites/G1 6/18. Sealed actual capture/stop owner join next;whole source/physical/authority/aggregate effects/full and hosted verification retain owners.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

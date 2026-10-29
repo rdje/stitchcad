@@ -1171,7 +1171,7 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/window23.md#
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 paired prerequisite;owner G1-SLICE.6.5.3.2,in_progress before effects. Ease checkpoint0527/caller0526 scoped. Stop contracts0529,input0530/ownership0531/current0532/membership0533 focused. Ordered borrowed child views/actual Design join .3.3.4 next,then component checkpoint/lineage. Real formula/Profile/geometry,physical/authority/aggregate effects/full proof stay owned.
+P1 paired prerequisite;owner G1-SLICE.6.5.3.2,in_progress before effects. Ease checkpoint0527/caller0526 scoped. Stop contracts/admission/current/membership/ordered views0529–0534 focused. Sealed actual capture/stop owner join .3.3.4.2 next,then component checkpoint/live lineage. Real formula/Profile/geometry,physical/authority/aggregate effects/full proof stay owned.
 Actual native structural_child_graph_acceptance_is_not_parent_ease_conservation passes:copied10+10 gives20 for parent10;independently authored5+5 also passes structural validation with DeferredToG2AndG3. Root:per-span fields/validation lack an original-parent relation. No split result is published;handler unavailable.
 Implement coupled parent-aware sources/quantization/provenance for explicit/formula/profile and distributions;standalone structural acceptance is not conservation proof.
 Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];root boundaries[0,1,0],signed symmetry. Native .2 root-query watch passes with original domains/direction;nonuniform/context/stops/lineage/effects and full paired acceptance remain pending.

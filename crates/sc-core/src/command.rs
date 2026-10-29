@@ -106,12 +106,13 @@ pub use seam_quantity::{
 pub use seam_source::{CommandSeamSplitSourceAdmission, CommandSeamSplitSourceError};
 pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};
 pub use seam_stops::{
-    CommandStopContextBoundary, CommandStopContextError, CommandStopContextIssue,
-    CommandStopContextPopulation, CommandStopContextRange, CommandStopCurrentContext,
-    CommandStopLandmarkEvidence, CommandStopMembership, CommandStopMembershipError,
-    CommandStopMembershipIssue, CommandStopMemberships, CommandStopOwnershipAdmission,
-    CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits, CommandStopPairMembership,
-    CommandStopPartitionAdmission, CommandStopPartitionAdmissionError, CommandStopPartitionLimits,
+    CommandStopChild, CommandStopChildView, CommandStopContextBoundary, CommandStopContextError,
+    CommandStopContextIssue, CommandStopContextPopulation, CommandStopContextRange,
+    CommandStopCurrentContext, CommandStopLandmarkEvidence, CommandStopMembership,
+    CommandStopMembershipError, CommandStopMembershipIssue, CommandStopMemberships,
+    CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits,
+    CommandStopPairMembership, CommandStopPartitionAdmission, CommandStopPartitionAdmissionError,
+    CommandStopPartitionError, CommandStopPartitionLimits, CommandStopPartitions,
     CommandStopPiecePortion,
 };
 pub use snapshot::CommandSnapshotContext;

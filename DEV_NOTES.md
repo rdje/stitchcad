@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — actual authored closed stop memberships
+## _(2026-10-29 UTC)_ — ordered borrowed child stop views
 
-0533 private rows borrow exact current context/stop/copy/semantic evidence in authored order. Closed First/Second/Both memberships use cached ranges,actual Piece ownership and original N cap;no query,inverse,narrowing,value read or new object. N0 never backfills original ease-root stops.
-Actual Design5/core+test Clippy/fmt/docs2+1 and independent32-row oracle pass0. Four shared cuts,wide later anchors,two semantic kinds/reflected/touching copies/side tags and ordinal1 errors after a valid prefix retain actual IDs/pointers/original sources. No partial accepted rows or state mutation.
-Book93/242/1590/2768,glossary0/map/691 receipt3/retention1145 pass0;LIVE/README unchanged29 suites/G1 6/18. Split/reverse/merge native+inverse confirms Both away from cut with two originals;no inverse selection/physical certificate. Ordered views/actual caller join next;full/effect checks remain owned.
-[Whole0532 current context](docs/history/stitchcad-devnotes-part691.md) retains exact point/range/cache refusal proofs. Promotion declined:indexed closed membership/inverse contracts;combined finding in book/task. Inverse diagnostic fixture explicitly admits required1270 bits for J4;stop limits unchanged.
+0534 private partitions borrow actual membership owner and original rows in authored order. Each append guards original aggregate2N cap;child views retain exact A-ordered pair metadata and row/stop/copy/semantic pointers. No source clone,query,inverse,narrowing,new span or effect;N0 stays empty.
+Actual Design3/core+test Clippy/fmt/docs2+1 pass0. All32 frozen cases/four exact2N shared cuts build actual retained child Graphs with one canonical ease root and current metadata acceptance. Four reflected/touching direction/copy scenarios and N0 retain side tags/order/objects;original owner unchanged.
+Book93/246/1590/2769,glossary0/map/692 receipt3/retention1146 pass0;LIVE/README unchanged29 suites/G1 6/18. Related source/quantity frontier paragraphs align. Sealed actual capture/stop request/span identity join next;whole source/physical/authority/aggregate effects/full and hosted proof remain owned.
+[Whole0533 memberships](docs/history/stitchcad-devnotes-part692.md) retains exact closed membership/two-origin/current refusal proof. Promotion declined:indexed current/resource/retained-source contracts. Native caller deliberately uses same actual state/request;separate production join is not inferred.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

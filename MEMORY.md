@@ -1,16 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.3.4 in docs/tasks/G1-SLICE-execution.md:ordered borrowed child
-  stop views and actual Design caller integration over committed membership rows. Guard original
-  aggregate2N child-reference bound;preserve authored order and actual side/copy/semantic objects.
-  Then deferred stop component checkpoint;new span lineage and paired effects remain next owners.
-- Membership0533 borrows exact bounded current context;one actual authored row retains stop ordinal,
-  physical copy,semantic/held/current evidence and First/Second/Both memberships under original N.
-  No queries/inverse/narrowing/value reads/new objects. N0 never backfills full original stops.
-- Actual Design5/core+test Clippy/fmt/docs2+1/independent32-row oracle pass. Four shared cuts,wide
-  later anchors,authored order,missing/wrong-Piece/outside-side after valid prefix,reflected/touching
-  copies/two side tags and two-origin shared current boundary away from cut all pass. Book93/242/
-  1590/2768,glossary0/map,691 receipt3/retention1145 pass;whole0532 retained691. LIVE/README29/G1 6/18.
+- Next G1-SLICE.6.5.3.2.3.3.4.2 in docs/tasks/G1-SLICE-execution.md:sealed actual ease-
+  capture/stop-view join. Require exact original request and actual span pointers before joined
+  metadata;equal IDs/bodies cannot substitute. Borrow external owners;no hidden collection/query,
+  self-reference,original narrowing or renewed current/effect authority. Then component checkpoint.
+- Ordered views0534 borrow exact membership rows and actual pair metadata;guard aggregate2N child
+  references before every push. Shared boundaries retain identical row/semantic pointers in both
+  lists;N0 stays empty despite full original stops. Original side/copy/authored order stays exact.
+- Actual Design3/core+test Clippy/fmt/docs2+1 pass. All32 frozen expected cases/four exact2N shared
+  cuts build actual retained child Graphs with one canonical ease root/current metadata acceptance;
+  reflected/touching copy/side-tag order and N0 controls pass. Book93/246/1590/2769,glossary0/map,
+  692 receipt3/retention1146 pass;whole0533 retained692. LIVE/README29 suites/G1 6/18 unchanged.
 - Real formula/Profile/geometry/physical/current authority/aggregate operations/paired effects/full
   proof remain explicit owners. Consume preparation/commit terminals;native --index authority
   mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400 after full gates.
