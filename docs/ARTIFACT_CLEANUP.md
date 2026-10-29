@@ -41,11 +41,12 @@ selected roots.
 
 ## Latest run
 
-- **Run:** `2026-10-28 13:53 UTC` by leaf `G1-SLICE.6.5.3.2.cleanup`.
-- **Summary:** removed4 ignored generated trees/83 root logs,229 files (15007705B);all87 selected
-  paths absent and cleanup changed no tracked bytes, before documentation updates/regeneration.
-- **Evidence:** target/artifact_cleanup_audit/seam-20261028/ plan/result/independent_post.json;
-  immediate independent census and fresh read-only recheck agree:213 preservation entries exact,
-  9084081 regular-file bytes,including both original generation workspaces and installation backups.
-- **Preserved:**1032 unsafe/uncertain entries,package/dependency stores,numerical certificates and
-  original generation-install backups. Rust release/incremental/deps stray .bin/.log census0.
+- **Run:** `2026-10-29 14:10 UTC` by leaf `G1-SLICE.6.5.3.2.cleanup-20261029`.
+- **Summary:** removed4 ignored generated trees/702 strays,45740 files (1472184692B);all706
+  selected paths absent and tracked bytes unchanged before documentation updates/regeneration.
+- **Evidence:** target/artifact_cleanup_audit/seam-20261029/ plan/result/independent-post.json;
+  immediate independent census proves1538 protected entries/13185133915 regular B exact across
+  four original generation/install workspaces and both complete numerical certificate stores.
+- **Preserved:**1692 unsafe entries,package/dependency stores;all702 stray copies and24 current
+  verification evidence files verified in protected audit. Release/deps .bin/.log0;1890 incremental
+  bins retained with complete native/WASM caches because linked object files refuse safe removal.

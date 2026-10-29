@@ -185,7 +185,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0496 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part652md).
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261029`
-  Status: `pending`
+  Status: `done`
   Goal: explicit daily cleanup due after2026-10-29 13:53UTC;last run2026-10-28 13:53UTC.
   Use existing artifact_cleanup/cleanup.py frozen plan;inspect every candidate class before apply.
   Preserve original generation/install trees,package stores,numerical certificates and current
@@ -194,6 +194,35 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Acceptance:OS-visible idle handoff before apply;exact selected removal and immediate independent
   residue/tracked-byte/preservation census without reactivating scratch;Rust stray census. Own
   ARTIFACT_CLEANUP/live docs/book sync and commit;then stop component checkpoint,not another audit.
+
+  Completion0565:reviewed daily cleanup after completed/published verification milestone.
+  - [x] ROOT CAUSE (WHY + WHERE): last cleanup2026-10-28 13:53UTC;daily cadence due during
+    prepush verification. Existing cleanup.py plan →706 selected/1692 unsafe skipped,rc=0.
+    Reviewed4 regenerable trees/702 strays;independent protected-prefix intersection0,rc=0.
+    Stores,original0450/0392g/0508 generation/install workspaces and certificates excluded.
+  - [x] ADDRESSED (verified): existing cleanup.py apply --idle-cua with OS visibility →handoff
+    OK,4 trees/702 strays/45740 files/1472184692B removed,residue0,tracked_change false,rc=0.
+    Immediate cleanup_20261029_guard.py after without launcher activation →all706 paths absent,
+    tracked hash exact,1538 protected entries/13185133915 regular B exact,rc=0. Audit seam-
+    20261029 contains frozen plan/result/preserved-before/independent-post and Rust census.
+  - [x] NO REGRESSION: all702 strays copied and byte-verified before removal;24 current full/
+    hosted/D333/D334 evidence files also independently retained and SHA256 verified afterward,
+    rc=0. Complete four original workspace/two numerical stores hashed before/after;package/
+    dependency stores excluded by independent overlap check,not claimed wholly hashed. Rust
+    release/deps .bin/.log0;1890 normal incremental bins retained because linked object files
+    make complete native/WASM incremental roots unsafe to remove. Actual census rc=0.
+  - [x] LOCKSTEP: latest cleanup record/book/MEM/DEV/CHANGE/index align;whole0564/prior ledger
+    retained723/four Git spans. Local+hosted79bd6f6a success stays exact-SHA scoped;G1 6/18/G0
+    human unapproved/D334 P2/D156/D223/PLANNING.5 unchanged. No runtime or policy producer edit.
+    Next stop component checkpoint .3.3.acceptance,then actual lineage .3.4;full PNT continues.
+    PREPARATION: first evidence helper passed directories as regular sources;planner refused
+    before output. Correct public directory validation plus actual regular-file plan passed0.
+    SEQUENCING INCIDENT0564:stage began before authority terminal was consumed. Later terminal0
+    and independent staged-object gate proved exact authority;normal commit clean,no retry.
+    Consume every terminal before staging or dependent changes;no exception or bypass is adopted.
+    Focused post-residue book build/publication →93/248/1590/2771,rc=0;retention1177 and
+    receipt723/four exact Git spans pass,rc=0. LIVE_STATUS reviewed;feature states unchanged.
+    promotion: declined (application of indexed copy/verify/delete,independent preservation and terminal-before-staging rules;no new mechanism or product authority).
 
 - ID: `G1-SLICE.6.5.3.2.tracking`
   Status: `done`
@@ -409,75 +438,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400`
   Status: `done`
-  Goal: at the next derived400-commit cadence,run required full make check/gate/probes from the
-  clean completed commit before pushing this project's main normally. Observe actual hosted jobs
-  and steps for the pushed SHA;record explicit pending/refusing verdicts rather than infer success.
-  This required push milestone is separate from deferred stop component/whole paired acceptance.
-  Keep all logs project-local;consume every producer/commit/push terminal before dependent work.
-  Attempt0535:clean51e421cf at derived400;full make check refused lib-test items_after_test_module
-  in retained.rs183,rc2. Gate/probes were not started;push held. D307 repair/layout child owns
-  immediate fix and focused verification/commit,then retry all full gates from the new clean HEAD.
-  Attempt0537:clean07b4ac7a/402 full check refused six rational fixture indices,rc2. One keep-going
-  all-target census found only that remaining compiler error group. D309 fixed0538 with scoped
-  target lint/native5;fresh complete full gate retry follows its clean commit before any push.
-  Attempt0550:clean57bd5c8d/derived415;full check0/gate0/probes2. All29 suite entry points
-  reached;environment/formula_structure both stop on the same missing checked-expression fault
-  anchor. Source tree restores clean;D318 child below owns immediate repair before fresh full
-  gates/normal push/exact-SHA jobs. Logs target/prepush-400-0550;no hosted verdict or push.
-  Attempt0554:clean c455f929/419 →full check0/gate0/probes2;all29 entry points,one recipe
-  selector-oracle failure. D324 fixed0555 with actual public closure23,all original guard/native
-  proofs. Next remaining environment entries after recipe fixture,then fresh full gates/normal
-  push/actual jobs. Logs target/prepush-400-0554;no push/hosted verdict inferred.
-  Tail0555:published next11 entries pass0/source clean;receipt entry12 fails stale live census.
-  D325 fixed0556:original byte/continuity/non-census AST exact,scoped closure/six reds pass0.
-  Continue after receipt at signed-angle fixture;then fresh full clean gates/push/actual jobs.
-  Tail0556:next6 pass0/source clean;ledger default fails13-versus16 destinations. D326/D327
-  fixed0557:full current fixture/native32 verdicts/four actual mutation reds pass. D328 original
-  frozen-mutable cohort owns next default repair,before remaining tail/fresh full gates/push/jobs.
-  D328 fixed0558:full default original-cohort/capture/physical/body checks and actual current
-  four native reds/restored16 pass0. Continue published tail after ledger fixture at mutation
-  controller,then fresh full clean check/gate/probes/normal push/actual jobs;no full pass yet.
-  Tail0558:mutation entry1 pass0/source clean;publication entry2 original-body fails only
-  approved named-result adapter. D329 fixed0559/focused proof;full default advances to retired
-  window1 physical backing refusal. D330 next before remaining environment/full gates/push/jobs.
-  D330 fixed0560:all78 predecessor paths exact via published roles;10 full captures/12 refusals/
-  three guard omissions and complete default pass0. Continue published tail after publication
-  fixture at builder,then fresh full clean gates/normal push/actual jobs. No whole environment yet.
-  Tail0560:builder/map entries1–2 pass0/source clean;client3 fails unconditional v1 setup.
-  D331 fixed0561:default/real eight children/provenance/seven physical/seven omissions/three
-  content controls pass0. Continue six entries after client,then fresh full gates/push/actual jobs.
-  Tail0561:reader/archive--all/static capture/payload entries1–4 pass0/source clean;native
-  loader5 fails obsolete0200 Rust comparison. D332 fixed0562:all8 native consumers/current526
-  inputs/415 Rust restored0. Next final push-cadence entry,then fresh full gates/push/actual jobs.
-  Attempt0562:clean1a51b37f/derived427 →full check0/gate0/probes2,all29 suites reached;
-  G0/glossary bad-arm groups only. D333 undeclared publication fields fixed0563;actual glossary
-  310/9/158/0 and normal G0 18/1/19 restored. Fresh full clean gates/push/jobs remain pending.
-  D334 parse-only engineering wording independently owned G0-CONTRACT.15f,P2 after current G1
-  activity/before G0 closure;normal-mode review/push remains applicable. Logs target/prepush-400-0562.
-
-  Completion0564:required400-cadence milestone closes at exact published79bd6f6a.
-  - [x] ROOT CAUSE (WHY + WHERE): clean1a51b37f full probes exposed D333 after all other
-    repaired entries;local field declarations fixed0563. Fresh target/verify_full_0563.py
-    baseline asserts clean79bd6f6a/derived428 and all three terminal records,rc=0.
-  - [x] ADDRESSED (verified): full scripts/run_make.sh check/gate/probes →0/0/0 at exact
-    79bd6f6aa383385d7e598efcffc28171e58324a8;all29 suites green,each stage source clean and
-    HEAD unchanged,rc=0. Includes actual glossary/G0 controls,239 core/31 measure/3 units
-    doctests and all29 command_stop_ native cases. Logs target/prepush-400-0563.
-  - [x] NO REGRESSION: normal git push origin main →c455b93e..79bd6f6a,rc=0;derived ahead0.
-    Actual exact-SHA job/step observer →doctrines/enforce completed/success and rust/check
-    completed/success,all required steps successful,rc=0. Includes hosted handoff/seam oracle
-    guards,format/strict Clippy/native tests and actual WASM build. Saved target/hosted-0563/
-    79bd6f6aa383385d7e598efcffc28171e58324a8/snapshot.json. Jobs123493403887/123493404119;
-    runs40887026733/40887026757. Verdicts read at job/step level;no aggregate inference.
-  - [x] LOCKSTEP: book links actual successful jobs;whole0563/four Git spans retained722.
-    MEM/DEV/CHANGE/index/ledger align. LIVE G1 6/18/29 suites/G0 human unapproved remains;
-    D333 fixed,D334 P2/D156/D223/PLANNING.5 pending. No whole paired/physical/release claim.
-    Next due cleanup owned below,then stop .3.3.acceptance and lineage .3.4. This proof commit
-    follows published SHA;do not imply it has a fresh hosted verdict or push before400.
-    Focused proof-document sync:book main_inputs/build/check →93/248/1590/2771,rc=0;
-    receipt722/four exact Git spans and verify-retention1176 pass,rc=0.
-    promotion: declined (application of indexed exact-revision full prepush verification,normal cadence and actual job/step observation;no new product acceptance).
-
+  Goal:0564 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part723.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
   Goal:0551 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part710.md).

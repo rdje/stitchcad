@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — complete the required prepush milestone
+## _(2026-10-29 UTC)_ — clean regenerable artifacts while retaining exact proof
 
-0564 records full clean79bd6f6a check0/gate0/probes0:all29 suites green,each stage sources clean/HEAD exact. Actual glossary310/9/158/0 and G0 18/1/19 restored. Core239/measure31/units3 doctests and29 native command_stop_ cases pass. Prior failed run remains explicit;no release/whole paired claim.
-Normal push sends428 committed units c455b93e..79bd6f6a,ahead0. Exact-SHA hosted jobs doctrines/enforce123493403887 and rust/check123493404119 completed/success with all required steps,including actual WASM. Observer reads job/step verdicts;no lagging aggregate assumption.
-Whole0563/prior ledger retained722/four spans. Book links actual jobs;LIVE G1 6/18/29 suites/G0 human unapproved remains. D334 P2/D156 audits/D223/PLANNING.5 stay owned. Proof0564 follows published0563;do not assign it the earlier SHA's hosted verdict.
-[Whole0563 declaration proof](docs/history/stitchcad-devnotes-part722.md). Promotion declined:indexed exact-revision checks/cadence/job verdicts. Next due daily cleanup,then stop component checkpoint/lineage. No repeated broad campaign between feature slices;full PNT continues.
+0565 applies reviewed frozen daily plan after full/push/hosted milestone. OS-visible handoff OK;4 trees/702 strays/45740 files/1472184692B removed. Immediate independent no-launcher census proves706 absent,tracked hash exact;1538 protected entries/13185133915 regular B unchanged across4 originals/2 certificates.
+All702 strays copied/verified;24 latest full/hosted/D333/D334 files retained under protected audit seam-20261029. Package/dependency stores excluded,not wholly hashed. Unsafe1692 preserved;Rust release/deps .bin/.log0,incremental1890 bins kept because linked objects block safe whole-cache removal.
+Preparation refused directories as regular sources before outputs;correct public directory/file plans passed. Sequencing0564 staged before authority terminal consumption;later0 plus independent index gate proved exact committed authority. Consume terminal before staging/dependent changes;no bypass/retry occurred.
+[Whole0564 milestone proof](docs/history/stitchcad-devnotes-part723.md). Promotion declined:indexed preservation/residue/terminal discipline. LIVE G1 6/18/G0 human unapproved unchanged;D334 P2/D156/D223/PLANNING.5 owned. Next scoped stop component checkpoint,then lineage;full PNT.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

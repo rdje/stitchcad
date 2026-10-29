@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308–D334 — prepush repairs
 
-D308–D333 fixed0537–0563;[prior ledger](../history/stitchcad-devnotes-part722.md). Full clean79bd6f6a check/gate/probes0,normal push/exact-SHA hosted jobs success0564. D334 parse-only verdict P2:G0-CONTRACT.15f,after current G1 activity/before G0 closure. D223/PLANNING.5 open. Next due cleanup,then stop checkpoint/lineage. LIVE G1 6/18;G0 human unapproved.
+D308–D333 fixed0537–0563;[prior ledger](../history/stitchcad-devnotes-part723.md). Full clean/pushed79bd6f6a check/gate/probes0 and exact-SHA hosted jobs pass0564;cleanup0565 verified. D334 parse-only verdict P2:G0-CONTRACT.15f,after current G1 activity/before G0 closure. D223/PLANNING.5 open. Next stop checkpoint/lineage. LIVE G1 6/18;G0 human unapproved.

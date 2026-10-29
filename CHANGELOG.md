@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0564 — complete full prepush and hosted verification
+## STITCHCAD-G1-0565 — clean generated artifacts and retain proof
 
-- Full clean79bd6f6a check/gate/probes0;all29 suites green,source/HEAD exact after each. Normal push sends428 commits;actual exact-SHA doctrines/enforce and rust/check jobs/required steps successful,including WASM. Proof0564 follows that published SHA and does not inherit its hosted verdict.
-- Whole0563/prior ledger retained722/four exact spans;book links actual jobs. LIVE G1 6/18/29 suites/G0 human unapproved remains;D334 P2/D156/D223/PLANNING.5 pending. Next due cleanup,then stop component checkpoint and lineage. Full PNT;no whole paired/physical/release completion.
+- Reviewed daily cleanup removes4 trees/702 strays/45740 files/1472184692B. OS-visible idle check and immediate independent residue/tracked/preservation proof pass:706 absent;1538 protected entries/13185133915 regular B exact. All702 strays and24 current verification files retained in protected audit.
+- Unsafe1692 preserved;release/deps .bin/.log0,1890 incremental bins kept with linked caches. Whole0564 retained723/four spans;book/latest cleanup/live docs aligned. Local/hosted79bd6f6a verdict remains exact-SHA scoped;G1 6/18/G0 human unapproved and owned defects unchanged. Next stop checkpoint/lineage.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

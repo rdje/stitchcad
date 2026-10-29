@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.cleanup-20261029:daily cleanup due after13:53UTC2026-10-29;
-  inspect frozen plan,preserve original generation/install/stores/certificates and current full/
-  hosted evidence. Existing producer plus independent immediate residue/preservation census.
-  Commit cleanup,then stop .3.3.acceptance and lineage .3.4;full PNT continues.
-- Required prepush-400 closed0564:full clean79bd6f6aa383385d7e598efcffc28171e58324a8 at
-  derived428 →check0/gate0/probes0,all29 suites green/source clean/HEAD unchanged. Normal push
-  succeeded,ahead0. Actual exact-SHA doctrines/enforce and rust/check jobs/required steps success,
-  including WASM. Logs target/prepush-400-0563 and target/hosted-0563/<fullSHA>/snapshot.json.
-- Proof0564 follows pushed0563;derive current ahead count,no fresh hosted verdict for proof commit.
-  Whole0563/prior ledger retained722/four spans. D333 fixed;D334 P2 pending G0-CONTRACT.15f after
-  current G1 paired activity/before G0 closure. Normal G0 18/1/19,human closure unapproved.
-- LIVE G1 6/18/29 suites,D156/12 audits/D223/PLANNING.5 pending. Stop native29/independent32
-  rows passed in full run;component checkpoint remains owned. No whole paired/physical/release claim.
+- Next G1-SLICE.6.5.3.2.3.3.acceptance:scoped stop component checkpoint after implemented
+  .1–.4. Full clean/pushed79bd6f6a check/gate/probes29 and actual exact-SHA hosted jobs/steps
+  all pass,including WASM. Native stop29 and independent32 rows available;keep full paired/
+  physical/authority/effect/release proof separate. Then live span lineage .3.4. Full PNT.
+- Cleanup0565 completed2026-10-29 after due cadence:4 trees/702 strays/45740 files/1472184692B
+  removed;all706 absent before regeneration,tracked exact. Original four workspaces/both full
+  numerical stores1538 entries/13185133915B byte-exact;1692 unsafe entries preserved.
+- Evidence moved safely before cleanup:target/artifact_cleanup_audit/seam-20261029 contains
+  verification-evidence/{prepush-400-0562,prepush-400-0563,hosted-0563},24 files exact;all702
+  strays copied under retired-strays. Plan/result/independent-post/preserved-before/Rust receipts.
+- Whole0564/prior ledger retained723/four spans. Proof/cleanup commits follow pushed0563;derive
+  ahead count,no hosted verdict for later commits. D334 P2/G0-CONTRACT.15f after current G1/
+  before G0 closure;normal18/1/19,human unapproved. D156/12 audits/D223/PLANNING.5 pending.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
@@ -40,9 +40,10 @@
   source metadata and exact quantities survive portions;B/Opposite complement BEFORE shared rounding.
   Explicit region/integer limits bound arithmetic,not allocator/CPU/global authority. Actual notch
   view/command adoption,paired stops/lineage/effects/full acceptance remain owned under D301.
-- Daily artifact cleanup completed2026-10-28 13:53UTC;docs/ARTIFACT_CLEANUP.md. Audit
-  target/artifact_cleanup_audit/seam-20261028 preserves originals/stores/certificates. Clean only
-  proven owned regenerable outputs;protect original generation/install and numerical proof data.
+- Daily artifact cleanup completed2026-10-29 14:10UTC;docs/ARTIFACT_CLEANUP.md. Audit
+  target/artifact_cleanup_audit/seam-20261029 preserves current full/hosted proof and all removed
+  strays;four original workspaces/two numerical stores1538 entries/13185133915B exact. Keep unsafe
+  linked caches,package/dependency stores and original generation/install workspaces intact.
 - Paired work is canonical in execution sibling;no duplicate IDs at root. SplitSeamSpan still has
   no native bus handler. LIVE G1 remains6/18;no app/full paired verification claimed. Derive Git HEAD
   and origin/main ahead count;push at400 only after required full pre-push gates. Full PNT continues.

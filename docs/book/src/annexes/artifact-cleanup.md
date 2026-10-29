@@ -75,6 +75,15 @@ that every protected dependency or numerical-proof store was hashed. Candidate s
 those stores were outside the deletion set. Regenerated book/scratch output after the immediate
 residue census is expected and does not invalidate that census.
 
+The 2026-10-29 run removed four generated trees and702 stray files after copying and verifying
+all702 strays into its protected audit. Its immediate census proved all706 selected paths absent
+and tracked bytes exact. An independent full hash comparison preserved four original archive
+workspaces and both numerical certificate stores:1538 entries,13185133915 regular-file bytes.
+Package/dependency stores were excluded by candidate separation;they were not wholly hashed.
+Native/WASM incremental trees containing linked objects remained untouched,including1890 native
+incremental binary cache files. Current full/hosted verification receipts remain under the same
+protected audit. Later book/scratch regeneration follows the completed immediate residue proof.
+
 ### Incomplete runtime observations
 
 SPINE.23r captured a recurrence: lsof emitted descriptor4 and a name without the requested type.
