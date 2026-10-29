@@ -435,6 +435,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Tail0560:builder/map entries1–2 pass0/source clean;client3 fails unconditional v1 setup.
   D331 fixed0561:default/real eight children/provenance/seven physical/seven omissions/three
   content controls pass0. Continue six entries after client,then fresh full gates/push/actual jobs.
+  Tail0561:reader/archive--all/static capture/payload entries1–4 pass0/source clean;native
+  loader5 fails obsolete0200 Rust comparison. D332 fixed0562:all8 native consumers/current526
+  inputs/415 Rust restored0. Next final push-cadence entry,then fresh full gates/push/actual jobs.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
@@ -468,48 +471,52 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0560 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part719.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.archive-client-fixture`
   Status: `done`
-  Goal: D331,P1 current prepush blocker;packed_fixture computes a v1 window before checking
-  whether any raw records need packing. Current verified v3 authority already packs all three
-  fixed D222 records;none are raw. No new window is needed,yet unconditional windows key fails.
-  Reproduce:clean407c3f22/derived425,published builder/map entries1–2 pass/source clean;archive
-  client entry3 fails KeyError windows before output activation. Log:target/prepush-400-0560-
-  environment/03-python_archive_client_contract.log. Public inventory confirms3 logical/no raw.
-  Paths:docs/tasks/artifacts/ci_environment/python_archive_client_contract.py. Move only v1
-  window/master/manifest construction under existing members condition;retain copied current
-  packed authority unchanged when none. Explicitly bound optional raw packing to original v1
-  fixture semantics;do not add a v3 archive writer or change record/source pins.
-  Verify old failure/new default and actual --real eight provenance/read children,seven
-  physical/seven omission/three content controls,whole predecessor preservation/source cleanup.
-  Independently compare unchanged client and fixture algorithms outside conditional setup;
-  book/live/whole prior receipt sync,commit0561,then remaining six published environment entries
-  and fresh full clean prepush/normal push/actual jobs. No physical OS/runtime probe required.
+  Goal:0561 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part720.md).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.loader-native-baseline`
+  Status: `done`
+  Goal: D332,P1 current prepush blocker;native static-loader preflight compares every current
+  tracked Rust file against0200 BEFORE. Legitimate0476 command_workflows example did not exist
+  then;other current Rust evolves by feature work. Frozen original Python body pin remains valid.
+  Reproduce:clean3e01ef43/derived426;tail reader/archive--all/static capture/payload entries1–4
+  pass/source clean;static --native entry5 fails Git128 on current command_workflows.rs absent
+  in a265306d22dbe6c706d4524a93d534c81f5ad38c. Evidence:target/prepush-400-0561-environment/
+  05-python_static_loader_contract.log. New example introduced47f42d4f/0476 legitimately.
+  Paths:docs/tasks/artifacts/ci_environment/python_static_loader_contract.py. Bind restoration
+  to complete current sources snapshot already computed at native entry;check before execution
+  and after every original consumer. Keep BEFORE/original Python body oracles and all8 actual
+  child argv/markers/current Rust census/source hashes/library identity/frozen output records.
+  Focus positive current snapshot and isolated new/old Rust and non-Rust drift refusals;all
+  native consumers execute with current sources unchanged. No Rust/source pin/classifier change.
+  Commit0562 with book/live/whole prior receipt;then final push-cadence entry and fresh full
+  clean check/gate/probes/normal push/actual exact-SHA jobs. No broad product verification claim.
 
-  Completion0561:D331 conditional original v1 setup preserves current packed authority.
-  - [x] ROOT CAUSE (WHY + WHERE): frozen407c3f22 packed_fixture computes windows before
-    existing members condition. Public v3 inventory confirms all3 fixed records logical/no raw.
-    target/archive_client_fixture_0561_focus.py reproduces old KeyError windows before output,
-    rc=0;this fixture needs no new window when current production already packs all3 records.
-  - [x] FIX: move only master/window/revision/manifest statements under members. Optional raw
-    construction requires original v1 authority explicitly;already-packed data stays byte-exact,
-    including v3 generation metadata. No generic v3 writer,record/source pin or client change.
-  - [x] ADDRESSED (verified): actual prepared archive-client controller default and --real
-    both pass original raw-only refusal/complete provenance/eight readonly children/seven physical/
-    seven compiled omission/three content refusals/whole retained predecessor proof,rc=0.
-    --real performs actual public read/Git/source-proof children;default intercepts archive
-    responses. Original five task intervals4144B/followup8170B/whole ledgers3030B remain exact.
-    Logs target/archive-client-fixture-0561-{default,real}.log;inputs exact/workspace removed.
-  - [x] NO REGRESSION: independent focused whole controller AST equals frozen407c3f22 after
-    moving exactly four original setup statements back and removing only explicit v1 guard,
-    rc=0. Original client/tracked bytes exact;all3 packed/no raw;controlled non-v1 raw builder
-    refuses before activation/no workspace,rc=0,target/archive-client-fixture-0561-focus.log.
-    Book93/248/1590/2771,retirement719/four exact Git spans,retention1173 and diff --check pass0.
-    No physical OS/runtime diagnostic activated;no whole environment/fresh full prepush claim.
-  - [x] LOCKSTEP: whole0560/prior ledger retained719. Book explains preserved packed authority,
-    optional original v1 builder and native-versus-intercepted proof scope. MEM/DEV/CHANGE/index/
-    ledger align;LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D331 fixed,D156 audits/
-    D223/PLANNING.5 pending. Commit then published tail after archive client at reader controller,
-    remaining six entries/fresh full clean gates/normal push/actual jobs. Full PNT continues.
-    promotion: declined (application of indexed conditional fixture ownership,unchanged native provenance and exact legacy builder scope;no new archive or product authority).
+  Completion0562:D332 complete current-run source restoration replaces obsolete source age.
+  - [x] ROOT CAUSE (WHY + WHERE): native guard compares every current Rust file to0200 tree;
+    valid0476 example is absent there. Actual published native traceback Git128 establishes
+    failure. target/loader_native_baseline_0562_focus.py verifies new example absent/old lib
+    legitimately evolved/current baseline accepted,rc=0. Original Python source pin stays exact.
+  - [x] FIX: share existing complete current-source SHA256 restoration expression before
+    execution and after every consumer. Remove obsolete per-Rust historical comparison only.
+    Keep all8 native argv/markers/current source census/outputs/library identity/frozen records
+    and all nonnative oracles unchanged;no actual Rust/library/consumer/classifier change.
+  - [x] ADDRESSED (verified): actual prepared static-loader --native →all8 consumers terminal0,
+    526 inputs/415 tracked Rust/231 production sources exact,current library frozen,rc=0.
+    Original dimension4023/3814/15,ambiguity4192/16,geometry97/12,call166/12+3,reserved3624/19,
+    locator prefixes/four faults,competing263/10,coupled26723 pass. Target/loader-native-baseline-
+    0562-native.log;all current sources restored after every actual original child.
+  - [x] NO REGRESSION: target/loader_native_baseline_0562_focus.py →new Rust/old Rust/Python
+    virtual input drift each hits original restoration refusal;current full snapshot passes,
+    tracked bytes exact,rc=0. Original post-child guard AST expression exact;all native census/
+    consumer/marker/artifact and nonnative controller AST otherwise exact,rc=0. Original BEFORE
+    unchanged. Book93/248/1590/2771,retirement720/four exact Git spans,retention1174 and diff
+    --check pass0. Archive--all/static capture/payload passed earlier clean tail;no fresh full
+    prepush/whole environment/hosted verdict yet. Deferred product acceptance retains its owner.
+  - [x] LOCKSTEP: whole0561/prior ledger retained720. Book explains current complete native
+    baseline and separate historical Python oracle. MEM/DEV/CHANGE/index/ledger align;LIVE
+    G1 6/18/29 suites/G0 human unapproved unchanged,D332 fixed,D156/D223/PLANNING.5 pending.
+    Commit then final published push-cadence entry,then fresh full clean check/gate/probes/
+    normal push/actual exact-SHA jobs. Full PNT;no product completeness or release claim.
+    promotion: declined (application of indexed current-run restoration,original immutable Python oracles and scoped input drift controls;no new product authority).
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

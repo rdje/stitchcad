@@ -381,8 +381,12 @@ def native():
         'loader-native-locator.log'))
     GOOD['enter_producer'](ROOT, sources=sources, output_files=outputs)
     frozen = {path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() for path in sources}
-    for path in rust:
-        assert path.read_bytes() == subprocess.check_output(['git', 'show', BEFORE + ':' + path.relative_to(ROOT).as_posix()]), 'native Rust source changed'
+
+    def unchanged():
+        assert all(hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest
+                   for path, digest in frozen.items()), 'native input restoration failed'
+
+    unchanged()
     for entry, arguments, log, markers in (
         ('dimension_payload_contract.py', ['--mutations'], outputs[4],
          ('dimension payloads:4023 actual cases /3814', 'dimension payload faults:15')),
@@ -405,7 +409,7 @@ def native():
                                 cwd=ROOT, text=True, capture_output=True, env=dict(os.environ))
         log.write_text(result.stdout + result.stderr)
         assert result.returncode == 0 and all(marker in result.stdout for marker in markers), (entry, result.returncode, result.stderr)
-        assert all(hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest for path, digest in frozen.items()), 'native input restoration failed'
+        unchanged()
         print('actual native consumer:', entry, 'terminal0; inputs exact', flush=True)
     metadata = ROOT / 'target/static_coupled_contract/baseline/cargo-artifacts.json'
     GOOD['plan_producer'](ROOT, sources=(metadata,))

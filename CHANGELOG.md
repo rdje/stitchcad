@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0561 — preserve already-packed archive client fixtures
+## STITCHCAD-G1-0562 — bind native source restoration to the current run
 
-- Close D331:construct original v1 fixture window only if raw members remain;already-packed v3 authority stays byte-exact. Optional raw builder refuses other schemas before activation. Original client/controller algorithms otherwise exact;default/real provenance and all existing refusal controls pass.
-- Whole0560/prior ledger retained719/four spans;book/history checks pass. Continue remaining six environment entries at archive reader,then fresh full clean prepush/normal push/actual jobs. D223/PLANNING.5 stay deferred;no whole environment/hosted verdict claimed.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D331 fixed,D156 audits open. Full PNT continues.
+- Close D332:replace obsolete0200 Rust equality with complete current-source restoration before execution/after every native consumer. All8 argv/markers/census/artifact code and historical Python pins remain exact. Native526 inputs/415 Rust/231 production sources and three drift refusals pass.
+- Whole0561/prior ledger retained720/four spans;book/history checks pass. Earlier archive--all/static capture/payload tail passes;run final cadence entry,then fresh full clean prepush/normal push/actual jobs. Deferred D223/PLANNING.5 stay owned;no whole environment/hosted verdict claimed.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D332 fixed,D156 audits open. Full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -1,15 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400:remaining published environment entries after
-  python_archive_client_contract.py;start python_archive_reader_contract.py. Original runner
-  argv under target/prepush-400-0561-environment. Stop/own failures/source drift;then fresh full
-  clean check/gate/probes before normal push/actual exact-SHA hosted jobs. No push/verdict yet.
-- D331 fixed0561:all3 D222 records already packed/no raw;conditional v1 setup only if members.
-  Current v3 authority stays exact;raw non-v1 optional builder refuses before activation. Whole
-  controller AST except four moved setup statements/new guard and actual client/source exact.
-  Default/real eight children/provenance/seven physical/seven omissions/three content controls0.
-- Whole0560/prior ledger retained719/four spans;book93/248/1590/2771,retention1173 pass0. Prior
-  target/prepush-400-0560-environment builder/map pass/source clean;client3 now repaired. Six left.
+- Next G1-SLICE.6.5.3.2.prepush-400:final published environment entry after exact static
+  loader --native argv;run push_cadence_contract.py from clean committed HEAD. Prior tail
+  target/prepush-400-0561-environment first4 pass/source clean;native5 D332 now repaired. Then
+  fresh full clean check/gate/probes under target/prepush-400-0562 before normal push/actual jobs.
+- D332 fixed0562:obsolete0200 Rust equality removed;complete current snapshot guard before
+  and after all8 consumers. Native526 inputs/415 tracked Rust/231 production sources exact and
+  current library frozen;three virtual Rust/Python drift refusals pass. Original Python pins/
+  native argv/markers/census/artifacts and other controller AST remain exact;no Rust change.
+- Whole0561/prior ledger retained720/four spans;book93/248/1590/2771,retention1174 pass0. Deep
+  archive--all watch/body/19 physical/411-plan capture/interruption/HEAD/ten omission proof pass.
 - LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits/D223/PLANNING.5 pending. After
   full prepush/push/jobs:stop .3.3.acceptance/live lineage .3.4. Full PNT;consume all terminals.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete

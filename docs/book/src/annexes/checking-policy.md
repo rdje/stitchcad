@@ -27,3 +27,17 @@ D227's duplicate receipt established this guard.
 Size checks own unique repository-local scratch, removed on trapped exit. D274's native-wc overlap
 control protects in-flight measurements from another checker's cleanup. D275 mutates the actual
 row's at= token and requires its exact stale-revision refusal. Caps/coverage/refusal rules stay fixed.
+
+The native static-loader entry freezes its complete current input population, including tracked Rust
+files and the book, before executing its consumers. The same hash guard runs before execution and
+after each of eight consumers. Newly added Rust files and later feature implementations enter that
+current snapshot; the original Python-body oracle retains its historical source pin.
+
+```bash
+python3 -I -B docs/tasks/artifacts/ci_environment/python_static_loader_contract.py --native
+```
+
+This checks the existing consumer arguments and expected outputs, preserves every declared input,
+and records the actual current library identity after the coupled run. Isolated new-Rust, old-Rust
+and Python-input drift controls must refuse. This scoped result leaves the full pre-push gate owned
+separately by its task-tree milestone.

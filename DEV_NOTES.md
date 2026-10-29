@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — skip unnecessary legacy window setup for already-packed fixtures
+## _(2026-10-29 UTC)_ — current native input baseline permits legitimate feature growth
 
-0561 closes D331:archive-client fixture used v1 windows before checking members. All3 fixed records already packed in valid v3 authority. Move original master/window/revision/manifest setup under existing condition;explicitly bound optional raw builder to v1. Packed bytes stay exact.
-Default/native --real each pass eight children/provenance/seven physical/seven omissions/three content controls. Native children use real read/Git/source-proof;fault dispatch remains intercepted. Whole controller AST except moved setup/new guard and actual client/tracked bytes exact0;no residue.
-Whole0560/prior ledger retained719/four spans;book93/248/1590/2771 and retention1173 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D331 fixed,D156 audits/D223 continuity/PLANNING.5 pending. No whole environment/prepush/hosted verdict inferred.
-[Whole0560 continuity proof](docs/history/stitchcad-devnotes-part719.md). Promotion declined:indexed conditional fixture/legacy scope/exact provenance. Next remaining six published environment entries,then fresh full clean gates/normal push/actual jobs;full PNT continues.
+0562 closes D332:native loader compared current Rust to0200,where valid0476 workflow example did not exist. Share existing complete current input hash guard before execution/after every consumer. Original Python body pin stays;all8 native argv/markers/census/artifact code otherwise exact.
+Actual native8 pass:526 inputs/415 Rust/231 production sources exact,current library frozen. Virtual new/old Rust and Python drift all refuse0. Whole other controller AST/tracked bytes exact. Earlier tail reader/archive--all/static capture/payload passed;final cadence entry/full gates remain.
+Whole0561/prior ledger retained720/four spans;book93/248/1590/2771 and retention1174 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D332 fixed,D156 audits/D223 continuity/PLANNING.5 pending. No whole prepush/hosted verdict inferred.
+[Whole0561 fixture proof](docs/history/stitchcad-devnotes-part720.md). Promotion declined:indexed current restoration/historical Python oracles/input drift calibration. Next final cadence entry,then fresh full clean gates/normal push/actual jobs;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
