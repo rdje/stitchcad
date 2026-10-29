@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.ledger-cohort:D328 original mutation before_control uses
-  frozen39861d11 mutator/current0342 helper,obsolete fault2 anchor;fix original cohort and exact
-  approved current adapter projection,run default,then continue published environment tail after
-  python_ledger_fixture_contract.py. Logs target/ledger-population-0557-mutation-capture.log.
-- D326/D327 fixed0557:strict16-case outputs/17 children/final15;all original13 plus exact0342
-  three additions retained. Default/masked actual16 each;four current native assertion reds and
-  restored16 baseline pass0. Mutator AST except expected third name exact;classifier guards stay.
-- Whole0556/prior ledger retained715/four spans;book93/248/1590/2771,retention1169 pass0. Tail
-  target/prepush-400-0556-environment next6 pass/source clean;entry7 now repaired. No full pass.
-- After remaining tail:fresh full clean check/gate/probes,normal push/actual exact-SHA jobs.
-  LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits and D223/PLANNING.5 still pending.
-  Then stop .3.3.acceptance/live lineage .3.4. Full PNT;consume all terminals before dependent work.
+- Next G1-SLICE.6.5.3.2.prepush-400:remaining published environment entries after
+  python_ledger_fixture_contract.py;start python_ledger_mutation_contract.py. Continue original
+  runner argv under target/prepush-400-0558-environment,stop/own any failure/source drift. Then
+  fresh full clean check/gate/probes before normal push/actual exact-SHA hosted jobs. No push yet.
+- D328 fixed0558:original mutable shell/helper from39861d11;current approved0342 adapter
+  verified before remaining original AST. Default full capture/classifier/physical/body pass0;
+  four isolated omission/drift refusals/one guard-disable admission and actual native4/restored16
+  pass0;tracked/core/archive inputs exact. D223 --continuity and global PLANNING.5 stay deferred.
+- Whole0557/prior ledger retained716/four spans;book93/248/1590/2771,retention1170 pass0. Prior
+  tail first11 then next6 pass/source clean;ledger16 default/masked/native mutation now repaired.
+- LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits open. After required full prepush/
+  push/jobs:stop .3.3.acceptance/live lineage .3.4. Full PNT;consume all terminals before edits.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

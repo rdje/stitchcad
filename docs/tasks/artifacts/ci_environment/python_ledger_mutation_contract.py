@@ -51,9 +51,14 @@ def before_control():
     root = mirror('before')
     entry = root / ENTRY.relative_to(ROOT)
     logs = tuple(root / 'target/ledger_pointer_mutations' / ('mutation-%d.log' % index) for index in range(1, 5))
+    originals = {root / path.relative_to(ROOT): subprocess.check_output(
+        ['git', 'show', BEFORE + ':' + path.relative_to(ROOT).as_posix()], cwd=ROOT)
+        for path in (SHELL, HELPER)}
     PROFILE['prepare_producer'](ROOT, sources=(*CORE, Path(__file__)),
-                               directories=(logs[0].parent,), output_files=logs)
-    originals = {root / path.relative_to(ROOT): path.read_bytes() for path in (SHELL, HELPER)}
+                               directories=(logs[0].parent,), output_files=(*logs, *originals))
+    for path, data in originals.items():
+        path.write_bytes(data)
+    assert all(path.read_bytes() == data for path, data in originals.items())
     original = subprocess.run
     dispatch = []
 
@@ -73,7 +78,7 @@ def before_control():
     assert len(dispatch) == 9 and output.getvalue().count('actual contract assertion red') == 4
     assert all(path.read_bytes() == data for path, data in originals.items())
     assert all(path.read_bytes() == data for path, data in FROZEN.items())
-    print('original actual classifier admits four unrelated assertion responses as pointer reds; exact sources restored')
+    print('original actual classifier with frozen mutable cohort admits four unrelated assertion responses as pointer reds; exact cohort/project sources restored')
 
 
 NAMES = ('catalog target, short label', 'missing catalog',
@@ -356,6 +361,13 @@ def physical_controls():
 def original_body_controls():
     old, current = ast.parse(OLD), ast.parse(ENTRY.read_text())
     cases = next(node for node in old.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'CASES' for target in node.targets))
+    current_cases = next(node for node in current.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'CASES' for target in node.targets))
+    approved = ast.parse(subprocess.check_output(['git', 'show', '55ed18e9a33a801c1f7fd9f2dc5376682e7a35a9:' + ENTRY.relative_to(ROOT).as_posix()], text=True))
+    approved_cases = next(node for node in approved.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'CASES' for target in node.targets))
+    assert ast.dump(current_cases, include_attributes=False) == ast.dump(approved_cases, include_attributes=False), 'ledger approved current mutation cases changed'
+    # The public helper now assigns the resolved name before filtering changelog membership.
+    # Project only that approved route-assignment edit; every remaining original node is compared.
+    cases.value.elts[1].elts[2].elts[1] = current_cases.value.elts[1].elts[2].elts[1]
     old.body.remove(cases)
     position = next(index for index, node in enumerate(old.body) if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'original' for target in node.targets))
     old.body.insert(position, cases)
@@ -388,7 +400,7 @@ def original_body_controls():
             return node
 
     assert ast.dump(Project().visit(current), include_attributes=False) == ast.dump(old, include_attributes=False), 'ledger mutation original complete bodies changed'
-    print('ledger mutation original AST: all four edits/anchors/parsing/checks/argv/logs/restoration/baseline exact through declared plan/environment/classifier adapters')
+    print('ledger mutation original AST: four approved0342 cases with only original route-assignment adapter; all remaining edits/anchors/parsing/checks/argv/logs/restoration/baseline exact through declared plan/environment/classifier adapters')
 
 
 def real_controls():

@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0557 — restore complete ledger cases and native mutation evidence
+## STITCHCAD-G1-0558 — restore original ledger mutation cohort
 
-- Close D326/D327:strict16-case destinations/17 children/final output and unknown-lesson refusal;original13 plus0342 additions preserved. Native default/masked16 each and four current mutation reds/restored16 baseline pass. Third expected case updated;fault edits/classifier guards unchanged.
-- Whole0556/prior ledger retained715/four spans;book/history checks pass. D328 frozen-mutator/current-helper default mismatch is tracked/next before remaining tail and fresh full prepush/normal push/actual jobs. D223 continuity remains deferred;no full environment pass claimed.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D326/D327 fixed,D328 owned,D156 audits open. Full PNT continues.
+- Close D328:original mutator receives exact original mutable shell/helper in isolated planned mirror. Current four cases match approved0342 before only route-assignment projection;other original body exact. Full default controls,four isolated refusals/one omission admission and native four reds/restored16 pass.
+- Whole0557/prior ledger retained716/four spans;book/history checks pass. Continue remaining published environment entries,then fresh full clean prepush/normal push/actual jobs. D223 continuity/PLANNING.5 stay deferred;no full environment pass claimed.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D328 fixed,D156 audits open. Full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

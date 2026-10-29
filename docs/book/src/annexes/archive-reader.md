@@ -122,6 +122,12 @@ runs each check all16 actual verdicts. Captures of child output prove dispatch a
 the separate native mutation run checks four real assertion failures and the restored16-case baseline.
 Expected mutation evidence identifies the first affected case, its assertion site and verdict family.
 
+The historical classifier control uses the helper and shell from the same original Git revision as
+the old mutator in an isolated workspace. Injected unrelated assertion responses demonstrate the old
+classifier's admission; they are separate from native verdicts. Current-body comparison permits only
+the exact route-assignment adapter introduced with the public helper, then checks every remaining
+original body node. Omitting the old cohort or changing that adapter is detected.
+
 ## Independent controls
 
 ```bash

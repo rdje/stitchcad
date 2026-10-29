@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308–D328 — prepush repairs
 
-D308–D327 fixed0537–0557;[prior ledger](../history/stitchcad-devnotes-part715.md). D326 strict16/all original13+0342 additions and D327 four actual current reds/restored16 pass. D328 P1 next:original mutation control mixes old mutator/current helper;owner .6.5.3.2.prepush-400.ledger-cohort. D223/PLANNING.5 open. Then tail/fresh full gates/push/actual jobs. LIVE G1 6/18.
+D308–D328 fixed0537–0558;[prior ledger](../history/stitchcad-devnotes-part716.md). D328 original mutable cohort/exact approved adapter/full default/four refusals and native4/restored16 pass. D223/PLANNING.5 open. Continue published tail after ledger fixture,then fresh full clean gates/normal push/actual jobs under .6.5.3.2.prepush-400. LIVE G1 6/18.
