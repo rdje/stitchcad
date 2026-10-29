@@ -36,7 +36,8 @@ root kind and dependencies. Runtime code can consume the selected branch's real 
    both complete branch proofs, then evaluates only its condition and selected branch. All evaluated
    call operands contribute, including candidates or bounds whose numeric value is not returned.
    Errors retain the actual failing node, owning expression and available canonical identity.
-3. **Whole declaration-order execution — .5e.2.5.** Consume the actual checked recipe. Every let
+3. **Whole declaration-order execution — .5e.2.5, in progress.** Whole-proof admission is available
+   below; actual statement execution remains pending. Consume the actual checked recipe. Every let
    evaluates its RHS before its single numeric binding conversion; only a successful binding becomes
    visible later. Boolean bindings stay Boolean. Assertions use their actual class/name and refuse
    false comparisons. Statement ordinals include assertions and come from the real proof owner.
@@ -113,6 +114,62 @@ maximum fixture is min with 255 eps_num arguments: N=256, D=255, reservation=767
 unreachable under today's 256-node bound; its defensive refusal is not claimed as a native fixture.
 Privacy/lifetime/no-default documentation checks accompany this API. Whole execution, independent
 runtime result oracles and cross-platform identity remain the later owners below.
+
+## Whole checked-recipe admission
+
+| Public API | Role |
+| --- | --- |
+| `FormulaRecipeExecutionLimits` | Explicit statement, node, workspace and output allowances |
+| `FormulaRecipeExecutionAdmission` | Allocation-free reservation pinned to the complete actual recipe proof |
+| `FormulaRecipeExecutionAdmissionRefusal` | Complete quota/population refusal, separate from language diagnostics |
+| `FormulaRecipeExecutionAdmissionError` | Actual whole proof, selected limits and original resource refusal |
+
+`FormulaCheckedRecipe::admit_execution` is available at G1-SLICE.5e.2.5.1.1. It accepts only explicit
+limits and borrows the existing successful whole static proof. The caller cannot substitute counts,
+a statement prefix, values, ordinals or another recipe. The admission retains proof(), limits(),
+statement_count(), binding_count(), assertion_count(), node_count(), name_use_count(),
+workspace_records() and output_records(). The actual immutable statements and dependencies remain
+available through proof(); their source owners and genuine one-based ordinals include assertions.
+
+For the complete recipe, S is its statement population, N is the sum of all operand nodes and D is
+every dependency occurrence. Both assertion operands, repeated names and untaken branches count.
+Each assertion's original symbolic tolerance header adds one source record to D, without inventing
+an expression node. Reserve N task frames, N value slots and D source records: workspace is 2N+D.
+Separately reserve S outcome records, one per let or assertion. These are conservative logical
+reservations; sequential workspace reuse may use less. They do not certify allocator bytes, kernel
+or provider resources, CPU, backend availability, input currentness or accepted execution.
+
+```rust
+use sc_core::recipe::*;
+let recipe = FormulaRecipe::parse("let n:count=1\nassert check:eps_num=n==n")?
+    .normalize_literals()?;
+let proof = recipe.check_kinds(FormulaNamespace::new([])?).expect("complete static proof");
+let limits = FormulaRecipeExecutionLimits::new(2, 3, 9, 2);
+let admitted = proof.admit_execution(limits).expect("exact complete allowance");
+assert_eq!((admitted.binding_count(), admitted.assertion_count()), (1, 1));
+assert_eq!((admitted.node_count(), admitted.name_use_count()), (3, 3));
+assert_eq!((admitted.workspace_records(), admitted.output_records()), (9, 2));
+assert!(std::ptr::eq(admitted.proof(), &proof));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Refusal order is complete statements, checked population/workspace arithmetic, nodes, outputs,
+then workspace. For that example, limits (1,0,0,0) refuse Statements with actual 2; (2,2,0,0) refuse
+Nodes with actual 3; (2,3,0,1) refuse OutputRecords with required 2; (2,3,8,2) refuse WorkspaceRecords
+with required 9. Zero allowances admit an empty recipe. None widens the fixed language bounds.
+Aggregate refusals retain the actual whole proof and limits, without inventing a failed statement
+ordinal or canonical formula diagnostic. Missing runtime context and numerical failures remain
+unevaluated; a later static error prevents the complete proof needed to call admission at all.
+
+Five native tests cover actual Unknown/source owners and global spans, quota priority/exact limits,
+empty and maximum4096-statement recipes, static-before-runtime order and four independent reference
+parser rows. The largest assertion-only fixture has8192 nodes,4096 header uses,20480 workspace and
+4096 outputs; no tolerance is read. Three compiler-negative examples enforce explicit limits,
+private populations and proof lifetime; the positive example executes. The existing independent
+reference parser supplies finite source/population rows through
+`docs/tasks/artifacts/formula_structure/recipe_execution_admission_oracle.py`; it reads no Rust or
+native output and evaluates no values. This slice constructs no session or executed prior-let
+prefix. Those remain .5e.2.5.1.2; statement execution, whole-result acceptance and replay stay owned.
 
 ## Source and provider integration
 

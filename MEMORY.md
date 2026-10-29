@@ -1,16 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.1:actual complete checked-recipe runtime admission/session boundary.
-  Read real checked-recipe/statement/normalized/binding APIs and normative order/static-before-
-  value contracts first. Explicit complete workspace/output limits and actual ordinals;no caller
-  values/annotations can impersonate earned prior lets. Choose safe implementation units/book.
-- D338 fixed0581:reference-only input requirements replace wrong non-Unknown formula_unknown.
-  Derived needs evaluation;Known/Assumed/Preference needs authored context. Real Unknown stays
-  canonical;zero/false/computed bindings/actual labels/lazy geometry preserved. No invented IDs.
-  Focus16/origin1471/four actual guard reds/public17/4/13/native oracle49 unchanged/syntax pass.
-  Book94/281/1601/2802/glossary310/9/158/0 pass;whole0580 retained739/four exact Git spans.
-- Scalar subset checkpoint0580 remains closed;whole recipe/Derived/tangent/geometry/replay/
-  platform still owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a remains SHA-scoped.
+- Next G1-SLICE.5e.2.5.1.2:private bounded whole-recipe session/prefix after complete admission.
+  Read actual scalar worker/source/binding APIs first;plan real allocation/output/read ownership
+  and prior-let witness before code. No caller value/annotation or standalone binding conversion
+  can create earned prior-let execution. Split safe source-preparation/let/assert units as needed.
+- Whole recipe admission0582 available:actual complete proof;explicit S/N/workspace/output caps;
+  all operands/branches/repeated names/assertion headers;checked2N+D workspace plus S outcomes.
+  Native5/reference4/doc4/scoped lint/fmt/book94/285/1602/2804/glossary310/9/158/0 pass.
+  No session/value/currentness/allocator/CPU/backend certificate. Whole0581 retained740/four spans.
+- D338 fixed0581;prepared scalar subset0580 closed. Whole recipe/Derived/tan/geometry/replay/
+  platform/physical still owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped.
   Lineage0574 closes47 native/21 doc;paired .2.4 providers/physical,.2.5 atomic effects open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete

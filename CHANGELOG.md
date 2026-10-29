@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0581 — repair reference Derived and authored-value scope requirements
+## STITCHCAD-G1-0582 — admit the complete actual checked recipe before runtime preparation
 
-- Fix D338:only actual Unknown emits formula_unknown. Missing Derived/authored context raises nonlanguage requirement with actual name/origin/state/label;no token/formula/value invented or geometry fallback. Preserve computed bindings,zero/false and source contributions;retain historical0080 receipts.
-- Focus16/origin1471/four guard reds/public17/4/13/native oracle49 unchanged/syntax/book94/281/1601/2802/glossary310/9/158/0 pass;whole0580 retained739/four Git spans. Next actual recipe admission .5e.2.5.1. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;whole runtime/physical/release still pending.
+- Add real whole-proof admission with explicit statement/node/workspace/output quotas. All operands/branches/repeated uses/assertion headers count;checked2N+D workspace plus S outcomes. Preserve actual owners/ordinals;no allocation,session,value/currentness/backend certificate.
+- Native5/reference4/doc4/scoped lint/fmt/book94/285/1602/2804/glossary310/9/158/0 pass. Whole0581 retained740/four Git spans. Next private session .5e.2.5.1.2;whole execution/replay/platform/physical pending. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
