@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.acceptance in docs/tasks/G1-SLICE-producers.md:
-  register complete current watch;native28/current deep calibration with exact restoration;then
-  full check/gate/probes from clean HEAD,normal push and actual exact-SHA hosted jobs.
-- Physical0549:19 actual expected-cause entry refusals,valid activation and3 direct audit-sentry
-  controls;all23 children reaped,full faulted mirror metadata/bytes exact and faults restored.
-  Canonical source/archive exact;no native producer/reader changes. Access time excluded.
-- Body0548 frozen1b8fc23 core/10 AST faults/reformat passes;deep0547 capture/interruption/HEAD/
-  omission controls passed. Whole0548 retained707/3 spans;book93/248/1590/2771,retention1161 pass.
-- LIVE29 suites/G1 6/18 unchanged,D156 audits/G0 human unapproved. D315333-source inventory
-  committed22e1a265;12 audit groups pending. Full95925f7b check0/gate0/probes2 is last full run.
-- After due archive acceptance/full gates/push/actual jobs,resume stop .3.3.acceptance/live
-  lineage .3.4. Full PNT continues;consume all producer/commit terminals before dependent work.
+- Next G1-SLICE.6.5.3.2.prepush-400 in docs/tasks/G1-SLICE-execution.md:run full check/gate/probes
+  from clean completed HEAD;normal push only after all pass,then observe actual exact-SHA hosted
+  jobs/steps. Derive ahead count;cadence already reached. No hosted verdict yet.
+- Archive deferred calibration closed0550:current suite --all watch/reflow/five controls;body10;
+  physical19/valid activation/3 sentries/23 children;positive411 plans203 effects9 simulated
+  children;interrupted15/6/0;HEAD evidence and10 compiled omissions. Exact restoration,rc0.
+- Separate actual native28/0 with unchanged source and capture-pinned real Git/CLI passes0.
+  Whole0549 retained708/3 spans;book93/248/1590/2771,retention1162 pass. Native reader/producer
+  unchanged;D156/12 producer audits remain open. LIVE29 suites/G1 6/18,G0 human unapproved.
+- Last full95925f7b check0/gate0/probes2 predates focused D310–D317 repairs. Fresh full gates
+  and actual jobs must pass before completion. Consume all producer/commit terminals first.
+- After prepush milestone resume stop .3.3.acceptance/live lineage .3.4. Full PNT continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

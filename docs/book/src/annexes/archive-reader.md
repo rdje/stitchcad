@@ -129,6 +129,7 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contrac
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --deep
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --body
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --physical
+python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --all
 ```
 
 The native entry retains28 calibrated cases. Companion --deep verifies interrupted-copy teardown,
@@ -143,7 +144,11 @@ direct sentry controls and a valid-prefix activation control establish that boun
 are reaped. Faulted mirror bytes,kinds,modes,links and identity/change metadata remain exact;read
 access times are excluded. Exact lexical fault restoration precedes guarded cleanup;canonical
 source/archive inputs stay exact. This finite entry proof does not execute the native28 cases.
-Final calibration/watch integration remains .f.fixture-verification under the [checking policy](checking-policy.md).
+The existing environment probe suite invokes --all exactly once:body,physical and deep modes run
+together,including actual watch argv/reflow and five omission/duplicate/dispatch controls. Native28
+still run separately through legacy_refusals.py in the archive suite with real CLI/Git children.
+Companion simulated children prove authority/lifecycle boundaries;they do not replace that replay
+or pending producer-group/locality audits. Broad gates follow the [checking policy](checking-policy.md).
 Capture-pinned v1 traps substitute logical bytes only for deliberate raw-read faults, retaining the
 original missing-public-read assertion. Legacy catalogs/non-changelog rows stay valid.
 

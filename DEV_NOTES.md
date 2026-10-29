@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — actual archive entry refuses before effects
+## _(2026-10-29 UTC)_ — complete archive calibration watch and separate native replay
 
-0549 adds --physical:unchanged entry in fresh isolated children,with independent pre-dispatch audit sentry. Nineteen expected-cause input/profile/workspace/output/store refusals pass. Valid prefix reaches activation;direct write/mkdir/child controls independently trap. No native producer repair needed.
-All23 children reaped;faulted mirror lstat metadata/modes/kinds/nlinks/hashes/link targets exact. Read access time excluded. Owned fake markers/aliases/hardlinks/FIFOs are undone lexically before guarded cleanup;source/archive exact. No other Git repo initialized or amended;no writes through aliases.
-Final physical/body10 controls,book93/248/1590/2771,707 receipt3/retention1161 pass0. Whole0548 retained. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Native28/current complete watch belong parent acceptance before full gates/push/actual hosted jobs.
-[Whole0548 predicate preservation](docs/history/stitchcad-devnotes-part707.md). Promotion declined:indexed physical refusal/effect traps/lexical restoration. Full PNT continues;physical entry checks do not establish whole locality or product acceptance.
+0550 wires existing environment suite to --all:exact argv/reflow positive andfive omission/duplicate/dispatch reds,body10,physical19 plusvalid activation/three sentries,then full deep route. CORE includes watched shell. All original manual modes remain;no extra suite or native producer change.
+Complete run0:population11/1077;positive411 plans203 effects9 simulated children;interrupted15/6/0;HEAD evidence andten compiled omission reds. All physical23 children reaped;mirror/source/archive exact/restored. Separate native28/0 real CLI/Git replay0 retains original source/capture pin.
+Book93/248/1590/2771,708 receipt3/retention1162 pass0. Whole0549 retained;parent finite calibration closed. LIVE reviewed unchanged:29 suites/G1 6/18,D156/12 producer audits open,G0 human unapproved. Full prepush gates and actual hosted jobs remain pending;no application or whole-locality signoff.
+[Whole0549 physical proof](docs/history/stitchcad-devnotes-part708.md). Promotion declined:indexed complete watch/calibration/separate native scope. Next clean prepush-400 check/gate/probes,normal push/exact-SHA jobs,then stop checkpoint/live lineage. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

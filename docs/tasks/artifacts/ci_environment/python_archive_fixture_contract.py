@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 import runpy
+import shlex
 import shutil
 import stat
 import subprocess
@@ -21,7 +22,8 @@ GENERATIONS = ROOT / 'scripts/history_generations.py'
 SHELL = ROOT / 'scripts/history_archive.sh'
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 LEGACY = ROOT / 'docs/tasks/artifacts/history_archive/legacy_refusals.py'
-CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, READER, GENERATIONS, SHELL, LEGACY)
+WATCH = Path(__file__).with_name('run_ci_environment_probes.sh')
+CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, READER, GENERATIONS, SHELL, LEGACY, WATCH)
 WORK = ROOT / 'target/archive-fixture-controls' / str(os.getpid())
 BEFORE = '1b8fc23c7aab412d6a4602290dfcc26faceaeeb0'
 
@@ -740,15 +742,44 @@ def physical_controls():
           'all23 children reaped; faulted mirror metadata/bytes and canonical inputs exact; owned faults restored; rc=0', flush=True)
 
 
+def watch_controls():
+    """The existing suite must invoke the complete calibration, exactly once."""
+    PROFILE['plan_producer'](ROOT, sources=CORE)
+    source = WATCH.read_text()
+    argument = '$ROOT/' + Path(__file__).relative_to(ROOT).as_posix()
+    expected = ['python3', '-I', '-B', argument, '--all']
+
+    def check(text):
+        rows = [shlex.split(line, comments=True) for line in text.replace('\\\n', '').splitlines()]
+        assert [row for row in rows if argument in row] == [expected], 'archive complete calibration watch changed'
+
+    check(source)
+    command = next(line for line in source.splitlines() if shlex.split(line, comments=True) == expected)
+    check(source.replace(command, '  ' + command.replace(' --all', ' \\\n    --all') + ' # complete scope', 1))
+    for replacement in (command.removesuffix(' --all'), command.replace('--all', '--unknown'),
+                        command + '\n' + command, '# ' + command, command.replace('python3 -I -B', 'true')):
+        try:
+            check(source.replace(command, replacement, 1))
+        except AssertionError as error:
+            assert str(error) == 'archive complete calibration watch changed', error
+        else:
+            raise AssertionError('archive incomplete watch admitted')
+    print('archive complete watch:actual suite argv,semantic reflow positive and5 omission/duplicate/dispatch controls; rc=0', flush=True)
+
+
 if __name__ == '__main__':
-    assert sys.argv[1:] in ([], ['--before'], ['--population'], ['--deep'], ['--body'], ['--physical'])
+    assert sys.argv[1:] in ([], ['--before'], ['--population'], ['--deep'], ['--body'], ['--physical'], ['--all'])
+    if sys.argv[1:] == ['--all']:
+        watch_controls()
+        original_body_controls()
     if sys.argv[1:] == ['--body']:
         original_body_controls()
-    elif sys.argv[1:] == ['--physical']:
-        PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
-        physical_controls()
     else:
         PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
+        if sys.argv[1:] in (['--physical'], ['--all']):
+            physical_controls()
+        if sys.argv[1:] == ['--physical']:
+            sys.exit(0)
         before_control()
         if sys.argv[1:] != ['--before']:
             with mirror('population') as root:
@@ -757,9 +788,9 @@ if __name__ == '__main__':
                 assert ns['OWNED_LINK'] in ns['FILES']
                 print('closed pure population:', len(ns['DIRECTORIES']), 'directories /', len(ns['FILES']),
                       'files; no effects during bootstrap; retained v1 fixture')
-            if sys.argv[1:] in ([], ['--deep']):
+            if sys.argv[1:] in ([], ['--deep'], ['--all']):
                 print('actual archive fixture capture:', capture('positive'))
-            if sys.argv[1:] == ['--deep']:
+            if sys.argv[1:] in (['--deep'], ['--all']):
                 print('protected interrupted copy:', capture('interrupted', interrupt=True))
                 metadata_controls()
                 omission_controls()

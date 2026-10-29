@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0549 — verify actual archive entry refusals before effects
+## STITCHCAD-G1-0550 — accept complete archive calibration and current watch
 
-- Add --physical:unchanged entry in isolated children;19 expected-cause refusals,valid activation and3 direct sentry controls. Audit traps writes/environment changes/child dispatch before effects. All23 children reaped;faulted mirror metadata/bytes exact and owned faults restored.
-- Canonical source/archive exact;no native producer repair. Access times excluded. Original-body10/reformat,book/history checks pass;whole0548 retained707/three exact spans. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved.
-- Complete current watch/native28 and parent calibration remain next before full gates/push/actual hosted jobs;no full locality or product signoff inferred.
+- Existing environment suite invokes --all:watch/reflow/five controls,body10,physical19/valid activation/three sentries and full deep capture/interruption/HEAD/ten omissions pass. Source/archive/mirrors exact and restored;all physical23 children reaped.
+- Separate real CLI/Git native28/0 passes with unchanged original source and explicit capture pin. Native producer/reader unchanged. Parent finite calibration closed;whole0549 retained708. Book/history checks pass.
+- LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Fresh full prepush gates/normal push/actual hosted jobs remain next,then stop component acceptance/live lineage;no full locality or application signoff inferred.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
