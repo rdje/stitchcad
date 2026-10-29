@@ -10,6 +10,8 @@ This continues D156 .5b.4c.h2.b.p.o; native source/directory receipts exist, com
   Goal: independently divide finite Python output/delegation ledger into bounded owned groups before producer changes.
   Acceptance: actual source/hash/call snapshot; finite watched path/kind/terminal-owner division and falsifying controls; complete public entry/module/fixture/root and safe effect/refusal inspection owned before repairs, runtime signoff explicitly pending; no unguarded native actions.
 
+## Original0151 division record (historical counts and evidence)
+
 STITCHCAD-G1-0151 owns the complete current ledger division, its watched path/owner coverage,
 public-boundary inspection plan and source/book/live sync. It also owns blocking retention of whole
 committed older lessons and ledger records before growing the bounded live receipts, with exact
@@ -369,6 +371,106 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Goal: Historical archive capture6; sources and kinds in the watched ledger.
   Acceptance: ordered group acceptance above.
 
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a29`
+  Status: `pending`
+  Goal: D156 P1 Bounded numerical cohorts and forward certificate author; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/formula_structure/finite_threshold_feasibility.py;docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py;docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a30`
+  Status: `pending`
+  Goal: D156 P1 Historical immutable archive captures12–14; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/history_archive/capture_window12.py;docs/tasks/artifacts/history_archive/capture_window13.py;docs/tasks/artifacts/history_archive/capture_window14.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a31`
+  Status: `pending`
+  Goal: D156 P1 Historical archive captures15–16 and capacity prototype; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/history_archive/capture_window15.py;docs/tasks/artifacts/history_archive/capture_window16.py;docs/tasks/artifacts/history_archive/retention_capacity_probe.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a32`
+  Status: `pending`
+  Goal: D156 P1 Source-pinned archive prepare/install and interruption fixtures; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/history_archive/v2_install.py;docs/tasks/artifacts/history_archive/v2_migration.py;docs/tasks/artifacts/history_archive/v2_install_contract.py;docs/tasks/artifacts/history_archive/v2_transition_contract.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a33`
+  Status: `pending`
+  Goal: D156 P1 Flat/generation archive reader and authoring/resource fixtures; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/history_archive/v2_reader_contract.py;docs/tasks/artifacts/history_archive/v3_reader_contract.py;docs/tasks/artifacts/history_archive/v3_authoring_contract.py;docs/tasks/artifacts/history_archive/v3_resource_contract.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a34`
+  Status: `pending`
+  Goal: D156 P1 Archive transaction smoke and legacy/owner-refusal dispatch; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/history_archive/v3_transaction_smoke.py;docs/tasks/artifacts/history_archive/legacy_refusals.py;docs/tasks/artifacts/history_archive/generation_budget.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a35`
+  Status: `pending`
+  Goal: D156 P1 Maintained authority writer,numeric scope helper and concurrent checker fixtures; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/live_doc_size/maintained_reference.py;docs/tasks/artifacts/live_doc_size/measurement_scope.py;docs/tasks/artifacts/live_doc_size/concurrent_contract.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a36`
+  Status: `pending`
+  Goal: D156 P1 Maintained authority and numeric scope fixture controls; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/live_doc_size/maintained_reference_contract.py;docs/tasks/artifacts/live_doc_size/maintained_reference_authoring_contract.py;docs/tasks/artifacts/live_doc_size/maintained_reference_index_contract.py;docs/tasks/artifacts/live_doc_size/measurement_scope_contract.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a37`
+  Status: `pending`
+  Goal: D156 P1 Native newline and task-family source fixtures; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/live_doc_size/newline_contract.py;docs/tasks/artifacts/live_doc_size/task_source_contract.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a38`
+  Status: `pending`
+  Goal: D156 P1 Certificate-preservation fixture and historical approval witness; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py;docs/tasks/artifacts/release_contract/approval_identity_probe.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a39`
+  Status: `pending`
+  Goal: D156 P1 Closed seam oracle-driver fixture control; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/seam_partition/oracle_watch_contract.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
+
 ## Ordered native file-destination repairs
 
 These P1 leaves extend the verified source/directory guards with complete file plans.
@@ -700,6 +802,16 @@ Complete predecessor scopes/proofs retained in [part307](../history/window12.md#
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
 Whole original completed n14 scope retained in [part254](../history/window10.md#stitchcad-devnotes-part254md).
+
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n15`
+  Status: `pending`
+  Goal: D156 P1 Native inverse certificate controller and bounded native probe; role inspection recorded0546,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_certificate.py;docs/tasks/artifacts/formula_structure/native_inverse_probe.py
+  Schedule: existing producer/file verification milestone after active paired feature scope,
+  before locality signoff. No historical author,installer or certificate controller is run by inventory.
+  Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
+  sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup2`
   Status: `done`

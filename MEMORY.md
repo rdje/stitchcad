@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.producer-inventory in docs/tasks/G1-SLICE-execution.md:
-  D315 inspect/classify every new candidate,including D310 helpers and ordinary current/build.rs
-  module. Inventory is inspection,not standalone locality signoff;preserve existing audit owners.
-- D314 fixed0545:current static scope12/proof routes11/copied-text reds25/reflow positives pass0;
-  old twelve-row table retained byte-exact518. D154 ordinal/runtime/geometry owners remain open.
-- Whole0544 retained703/3 spans;book93/248/1590/2771/retention1157 pass. LIVE29 suites/G1 6/18
-  unchanged;D307–D314/D316/D317 fixed,D315 P1 owned. Cleanup production/stores remain untouched.
-- Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538. Last G018/1 human unapproved;
-  no push/hosted verdict. After D315 commit,run all full gates from clean completed HEAD.
-- Normal push only after full check/gate/probes pass;observe exact-SHA hosted jobs. Then stop
-  .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/Profile/current authority/
-  aggregate/effect proof remain separately owned. Consume terminals before edits/staging/moving.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification in docs/tasks/G1-SLICE-producers.md:
+  required before next authorized push. Read actual archive companion/entry contracts,finish
+  --deep interrupted/metadata/omission scope;default mode does not cover it. Activate after commit.
+- D315 fixed0546:67 explicit roles,32 effect/64 file rows,new12 pending audit groups;333 Git
+  candidates/396 boundary checks pass,all adversarial coverage controls pass. Inventory is not
+  runtime/locality signoff;D156 remains open. No historical/certificate producer rerun or data change.
+- Whole0545 retained704/3 spans;book93/248/1590/2771/tree10/13/17/0/map/retention1158 pass.
+  LIVE29 suites/G1 6/18 unchanged;D307–D317 fixed. Last G018/1 human unapproved;no hosted verdict.
+- Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538. After due fixture proof,run
+  full check/gate/probes from clean completed HEAD,normal push/actual exact-SHA hosted jobs.
+- Then stop .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/Profile/current
+  authority/aggregate/effect proof remain owned. Consume terminals before edits/staging/moving.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

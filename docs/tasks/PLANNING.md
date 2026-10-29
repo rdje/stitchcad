@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308 — unchecked formula root fixture fields
 
-D308–D314/D316–D317 fixed0537–0545;[prior ledger](../history/stitchcad-devnotes-part697.md). Static status12 scopes/11 routes/25 copied-text reds pass;D154 remains open. Cleanup and matrix focused checks pass;G0 last18/1,human unapproved. D315 P1 owned by G1-SLICE.6.5.3.2.prepush-400.producer-inventory;candidate inspection is not locality signoff. Full gates before push.
+D308–D317 fixed0537–0546;[prior ledger](../history/stitchcad-devnotes-part697.md). Inventory333 Git paths/396 boundary checks passes;new12 audit groups stay pending,D156 open. Static/cleanup/matrix focused checks pass;G0 last18/1,human unapproved. Existing .5b.4c.h2.b.p.o.f.fixture-verification requires --deep before next push;finish then full gates/push/actual jobs.

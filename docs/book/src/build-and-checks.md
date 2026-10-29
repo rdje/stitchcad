@@ -135,6 +135,8 @@ call and complete non-Python source for inspection, including dynamic delegation
 An inventory match establishes coverage of these sources; it does not establish runtime locality.
 The census refuses missing or duplicate entries, malformed Python and literal heredoc boundaries,
 source symlinks and nested Git boundaries. Its existing diagnostic suite watches those refusals.
+Python file/effect ledgers and bounded audit groups accompany source roles. The seam context's
+nested build.rs is an ordinary Rust module,inventoried conservatively;it has no Cargo build entry.
 
 A pre-repair capture of the actual size-membership mutation body stops at its first directory write
 with all five store exports absent, before any source mutation or compiler invocation. This confirms

@@ -438,41 +438,43 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0544 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part703.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.static-status`
   Status: `done`
-  Goal:0545 D314 P1 check maintained static scope and proof routes without requiring retired layout.
-  - [x] REPRODUCE / ISSUE: full0538 formula_structure stopped at static_status_contract.py
-    assertion D152 current table missing,rc1;current chapter already uses scoped prose/routes.
-  - [x] ROOT CAUSE (WHY + WHERE): git log -S old table header →0367/967e24e7 curation,rc=0;
-    whole twelve-row pre-curation table compares byte-exact in retained518,rc=0. Checker remained
-    pinned to old table shape/NEW_PROSE wording. Read full current chapter,history and D154 live
-    owners:implemented metadata/static stages coexist with open reference ordinal/runtime/geometry
-    work. Old table removal is not evidence that implementations disappeared or pending work closed.
-  - [x] FIX: independently authored12 scoped statements require implemented stages,name/kind/
-    both-branch/phase/prefix/provider boundaries,D154 open owner and pending runtime/geometry.
-    Eleven actual Markdown proof routes retain kinds/catalogs/limits/source/static/runtime homes.
-    Retain obsolete prerequisite/future refusals;paragraph reflow/prose organization can change.
-    This checks documentation scope,not the routed implementations or full static execution proof.
-  - [x] ADDRESSED (verified): local_environment.py -- python3 -I -B
-    docs/tasks/artifacts/formula_structure/static_status_contract.py --mutations →12 independent
-    scope clauses/11 proof routes,reflow/unrelated-prose positives,25 actual copied-text body reds,
-    source unchanged,rc=0. Each scoped statement and every occurrence of each required route is
-    independently removed in copied text;obsolete prerequisite/future contradictions also refuse.
-  - [x] NO REGRESSION: mdbook build/positive publication →93/248/1590/2771,rc=0;
-    receipt703 →3 exact Git spans,rc=0;retention1157 logical/62 working/65212 decodedL/5079337
-    decodedB/2656674 residentB,rc=0;git diff --check →rc=0. Full formula/repository suites remain
-    parent prepush-400's required fresh retry after D315,not claimed passed by this small check.
-  - [x] LOCKSTEP: whole0544 task/lesson/changelog retained703. Book explains maintained scoped
-    status guard/manual invocation;old table stays immutable518. MEM/DEV/CHANGE/LIVE/index/ledger
-    align;D314 fixed,29 suites/G1 6/18 unchanged,D154 and G0 human closure remain open/unapproved.
-    README objective/commands unchanged. Next D315 final candidate inventory,including D310 new
-    helpers;commit before moving,then full gates before normal push/actual hosted jobs.
-    promotion: declined (application of indexed maintained-proof scope and layout-independent contract checks;no new static/runtime or approval claim).
+  Goal:0545 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part704.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.producer-inventory`
-  Status: `pending`
-  Goal:D315 P1 refresh complete source candidate dispositions for producer_census_contract.
-  Full CI-environment suite's later producer census refuses new paths;earlier local/CI helper controls
-  pass. Inventory is explicitly inspection work,not runtime/locality signoff. Ordinary nested
-  current/build.rs is conservatively a candidate,not thereby a Cargo entry;record accurate reference
-  disposition. Inspect/classify every new script and retain honest existing standalone audit owners.
-  Run after .archive-profiles through .static-status so any new helpers are registered too. Never
-  execute historical installers/certificate authors to classify them or blanket-label unreviewed
-  programs safe. Source set equality/AST and adversarial inventory controls must pass before commit.
+  Status: `done`
+  Goal:0546 D315 P1 complete conservative source role inventory and coupled Python audit ownership;
+  inspection is not runtime/locality signoff. No candidate producer executed to classify its role.
+  - [x] REPRODUCE / ISSUE: full0538 CI-environment suite stopped at source/entry inventory differs,
+    rc1. Current independent inventory at f9c1298e →67 missing candidates/no removals,rc=0,
+    including two new D310 helpers and ordinary nested Rust build.rs. Read complete census and
+    contract before edits;effect/file ledgers and exact canonical task groups are coupled inputs.
+  - [x] ROOT CAUSE (WHY + WHERE): static entry/call/AST/public-mode inspection distinguishes
+    stdout oracles/read-only evidence,fixture/output writers,archive delegation and native Cargo
+    certificate/probe dispatch. Existing266 source rows omitted later additions. Current Rust
+    current.rs uses mod build;Cargo has no build override and module has no main/IO dispatcher,
+    rc=0. Conservative filename matching is retained;this module receives reference disposition.
+  - [x] FIX: add67 explicit roles:31 reference,30 output,4 delegate,2 native;append32 Python
+    effect rows and64 Python file rows. Add11 pending effect groups a29–a39 and bounded native
+    group n15;never attach new work to completed audit leaves or call activation-only entries pure.
+    Sources/entry modes inspected without running historical authors,installers or certificate
+    controllers. Original source-ledger byte prefix and all existing disposition values preserved.
+    Old0151 counts remain intact under explicit historical heading. D156 standalone audits stay open.
+  - [x] ADDRESSED (verified): local_environment.py -- python3 -I -B
+    docs/tasks/artifacts/ci_environment/producer_census_contract.py →333 independent Git paths/
+    396 AST/source/bash boundary checks pass;effect108 paths/47 groups/8 data refusals/7 guard reds;
+    file221 paths/88 owners/38 bounded native groups/15 refusals/12 guard reds,rc=0. Main controls
+    →9 assertions/9 refusals/4 compiled-body reds,source unchanged,rc=0. Final source-ledger append
+    order has identical333 row values to passing snapshot;fresh census333 accepts,rc=0.
+  - [x] NO REGRESSION: producer_census.py →333 entries/32643 Python AST calls/73 literal
+    heredocs/2887 embedded calls,inspection only,rc=0. Tree census10 lanes/13 trees/17 siblings/
+    0 unowned/orphan/dead links,rc=0;map →pass,rc=0. Book build/publication93/248/1590/2771,
+    rc=0;receipt704 →3 exact Git spans,rc=0;retention1158 logical/63 working/65267 decodedL/
+    5084937 decodedB/2662274 residentB,rc=0;git diff --check →rc=0. No runtime audit closure.
+  - [x] LOCKSTEP: whole0545 task/lesson/changelog retained704. Book explains coupled ledgers/
+    conservative module classification;MEM/DEV/CHANGE/LIVE/index/ledger/producers align. D315 fixed,
+    29 suites/G1 6/18 unchanged;D156 and new12 audit groups remain pending. README unchanged.
+    Before full gates/push,finish existing explicit prepush deferred dependency
+    .5b.4c.h2.b.p.o.f.fixture-verification:actual archive companion --deep includes interrupted
+    copy,metadata and omission controls absent from default mode. It was already required before
+    next authorized push;not a new runtime audit scope. Commit this completed inventory first,
+    then select that leaf from clean state. Full repository/push/hosted verdict still unobserved.
+    promotion: declined (application of indexed conservative source census,exact coupled ownership and scoped verification;no new locality or runtime authority).

@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0545 — check maintained static scope independently of layout
+## STITCHCAD-G1-0546 — complete conservative source roles and coupled ownership
 
-- Fix D314 stale table requirement with12 authored scope statements and11 proof routes. Retain implemented static stages and explicit pending D154/runtime/geometry boundaries;reject obsolete prerequisite/future claims without restoring retired prose.
-- Reflow/unrelated-prose positives and25 actual copied-text refusals pass,source unchanged. Old12-row table remains byte-exact518. Book93/248/1590/2771 and history checks pass;whole0544 retained703/three exact Git spans.
-- LIVE29 suites/G1 6/18 unchanged,D314 fixed,D315 owned. Check is documentation scope;full formula/repository gates,push and actual hosted jobs remain pending. D154 and G0 human closure remain open/unapproved.
+- Fix D315 with67 explicit source roles,32 Python effect rows,64 file rows and12 pending audit groups. Preserve original ledger bytes/values and conservative filename census;ordinary nested build.rs remains a module. No candidate producer rerun or runtime/locality signoff.
+- Independent Git333/boundary396 coverage and source/effect/file adversarial controls pass;book/tree/map/history checks pass. Whole0545 retained704/three exact Git spans. LIVE29 suites/G1 6/18 unchanged,D315 fixed,D156 audits remain open.
+- Complete existing deferred archive-fixture --deep scope before the required full prepush retry. Commit inventory first;full check/gate/probes,push and actual hosted jobs remain pending. G0 human closure unapproved.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
