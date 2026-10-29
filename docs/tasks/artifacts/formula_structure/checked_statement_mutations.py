@@ -25,9 +25,13 @@ CASES = [
     ('immediate operands reversed', STATEMENT, '[left.root_operand(), right.root_operand()]', '[right.root_operand(), left.root_operand()]', 1),
     ('second comparison argument omitted', EXPRESSION, 'operands: Vec::from(operands),', 'operands: operands.into_iter().take(1).collect(),', 1),
     ('comparison operation mislabeled', EXPRESSION, 'operation: FormulaCheckedOperation::Binary(FormulaBinaryOperator::Equal),', 'operation: FormulaCheckedOperation::Binary(FormulaBinaryOperator::NotEqual),', 1),
-    ('direct class role lost', EXPRESSION, 'return FormulaBuiltinOperand::Tolerance(name);', 'return FormulaBuiltinOperand::Value({ let _ = name; self.kind });', 1),
+    ('direct class role lost', EXPRESSION, 'self.root().operand()', 'FormulaBuiltinOperand::Value(self.kind)', 1),
     ('computed class role forged', EXPRESSION,
-     'if matches!(\n            self.expression.root().kind(),\n            super::FormulaNormalizedNodeKind::Name(_)\n        )', 'if true', 1),
+     'self.root().operand()',
+     '{ if true { if let Some(dependency) = self.dependencies.first() { '
+     'if let FormulaDeclarationSource::Reserved(FormulaReservedName::Tolerance(name)) = '
+     'dependency.declaration.source() { return FormulaBuiltinOperand::Tolerance(name); } } } '
+     'FormulaBuiltinOperand::Value(self.kind) }', 1),
     ('refusal ordinal fabricated', STATEMENT,
      'let refuse = |refusal| FormulaStatementCheckError {\n        statement,\n        statement_index,',
      'let refuse = |refusal| FormulaStatementCheckError {\n        statement,\n        statement_index: statement_index + 1,', 1),

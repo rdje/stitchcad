@@ -1,18 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.checked-statement in execution sibling:D320 P1 two obsolete
-  role anchors after0275 root_operand reads actual certificate. Adapt only two role mutations;
-  keep22 identities/20 other tuples/all other AST/plans/CLI. Verify modes/native22/restoration.
-- D319 fixed0552:original else mutation exact,mutant-only certificate seeds bypass only new
-  bookkeeping barrier. Production/classifier exact;all16 compiled reds/every failed thread at
-  current test macro,restored7/source exact pass0. Modes2/physical6/mode13 +legacy red pass0.
-- Whole producer now passes expression block then fails statement direct-role anchor,rc1;
-  independent22-case census finds2 missing/20 valid anchors. D320 owned immediately next.
-- Whole0551 retained710/three spans;book93/248/1590/2771,retention1164 pass. Logs target/
-  checked-expression-0552-{native,focus,producer}.log. Full57bd check0/gate0/probes2 reached29;
-  after D320,fresh full gates/normal push/actual jobs remain. No push/hosted verdict yet.
-- LIVE G1 6/18/29 suites/G0 human unapproved;D156/12 audits open. Archive calibration/current
-  watch/native28 separate complete. Then stop .3.3.acceptance/live lineage .3.4;full PNT continues.
+- Next G1-SLICE.6.5.3.2.prepush-400.coupled-result in execution sibling:D321 P1 two obsolete
+  result/computed-class Rust fault anchors after0275 shared operand. Adapt only2;keep9 identities/
+  7 other tuples/all other AST/API/plans/references. Verify current coupled modes/native/restore.
+- D320 fixed0553:22 native reds/restored7/all3 sources exact;all failed test bodies originate
+  at current macros. Known parent join propagation carries real child assertions. Frozen22/20
+  tuple/all other AST proof,forged helper matches old mutant tokens;2 modes/10 physical/21 reds0.
+- Whole producer now passes statement then fails coupled result anchor,rc1;9-case census finds
+  exactly2 missing/7 valid. D321 owned next. Logs target/checked-statement-0553-*.log.
+- Whole0552 retained711/3 spans;book93/248/1590/2771,retention1165 pass. Full57bd check0/gate0/
+  probes2 reached29;after D321/whole producer pass,fresh full gates/normal push/actual jobs.
+- LIVE G1 6/18/29 suites/G0 human unapproved;D156/12 audits open. Expression16 and archive28/
+  calibration remain separate complete. Then stop .3.3.acceptance/live lineage .3.4;PNT continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -419,43 +419,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0551 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part710.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression-certificate`
   Status: `done`
-  Goal:0552 D319 original skipped-else semantic fault reaches external assertion evidence under
-  new certificate bookkeeping;current16 native proof restored. D320 statement adapters next.
-  Paths: docs/tasks/artifacts/formula_structure/checked_expression_mutations.py
-  - [x] REPRODUCE / ISSUE: prepared default producer0551 →first4 actual body reds,case5 skipped
-    else nodes cause checked.rs482 certificate-completion unreachable,strict classifier rejects,
-    rc=1. Finally source exact/all7 tests pass0. Prior log target/checked-expression-0551-native.log
-    is actual missing-adapter negative,not valid body evidence. D319 P1 owned before adapter code.
-  - [x] ROOT CAUSE (WHY + WHERE): current loop/certificate initializer/collection and0275 diff
-    review,rc=0:old duplicate-then/skip-else fault omits node certificates;new bookkeeping invariant
-    fires before original dependency/kind assertions. Production complete traversal is unchanged.
-    Preserve original semantic mutation and classifier;adapt only mutant certificate metadata.
-  - [x] FIX: second declared replacement seeds only this mutant's certificate vector with
-    Count/None placeholders;visited nodes overwrite them. Original branch replacement remains
-    exact;production initializer/completion guard and strict current macro classifier unchanged.
-    No native argv/source/output plan or CLI change. Fifteen other tuples remain byte-identical.
-  - [x] ADDRESSED (verified): prepared original default entry →all16 actual compiled assertion
-    reds,source/current target restored,rc=0. Independent audit of all16 logs →every failed thread
-    body names a current contract assertion macro,no production-invariant evidence counted,rc=0.
-    Restored actual7 tests pass0;git diff --exit-code -- crates/sc-core →rc=0. Logs target/
-    checked-expression-0552-native.log and target/checked_expression_mutations/ preserve evidence.
-  - [x] NO REGRESSION: prepared target/checked_expression_0552_focus.py →frozena7ad:16 identities,
-    original else step/15 other tuples exact,one declared metadata adapter,all other program AST/
-    plans/CLI/classifier/restoration exact;two modes/six physical/13 mode +legacy classifier reds,
-    including missing second replacement,rc=0. Original --classifier-only →16 unique/current
-    macro/noise controls,rc=0. Whole python_producer_contract now passes expression block then
-    stops at distinct D320 obsolete statement role anchor,rc=1;D320 owned next,no whole pass claimed.
-    Book build/publication93/248/1590/2771,rc=0;receipt710 →3 exact Git spans,rc=0;retention1164
-    logical/69 aggregate working/65675 decodedL/5126648 decodedB/2703985 residentB,rc=0;
-    git diff --check →rc=0. Full prepush gates/normal push/actual jobs remain after D320.
-  - [x] LOCKSTEP: whole0551 retained710;book explains mutant-only adapter/current16 proof and
-    separately marks statement calibration historical/pending D320. MEM/DEV/CHANGE/index/ledger
-    align;LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D319 fixed/D320 prepush owned,
-    D156 audits open. README unchanged. Commit then D320;no production Rust or classifier weakened.
-    promotion: declined (application of indexed explicit mutation adapters,preserved original predicates and exclusive current assertion evidence;next statement defect explicitly owned).
-
+  Goal:0552 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part711.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-statement`
-  Status: `pending`
+  Status: `done`
   Goal: D320,P1 immediately after D319/before push:restore22 original checked-statement fault
   intents with current certified-root operand helper;no production or classifier weakening.
   Paths: docs/tasks/artifacts/formula_structure/checked_statement_mutations.py
@@ -472,6 +438,61 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   two helper role faults through declared current-body replacements. Verify modes/physical/guard
   controls and exclusive compiled native assertion reds/restored target with exact source bytes.
   Commit before fresh full check/gate/probes/normal push/actual jobs. Own before code changes.
+
+  Selected adapters:unique current helper expression self.root().operand() becomes plain
+  Value(self.kind) for lost role,and the exact original first-dependency classification body
+  under its original forged if-true predicate for computed role. Limit replacements to that
+  helper expression;current certificates,production code and all20 other tuples stay unchanged.
+
+  Completion0553:D320 accepted,current22 proof complete;D321 coupled followup remains next.
+  - [x] REPRODUCE / ISSUE: prepared whole python_producer_contract after D319 stops at statement
+    ('direct class role lost','actual anchor count'),rc=1. Independent22-case census:two old role
+    anchors0/expected1,other20 valid,current helper1,rc=0. Original0552 producer log retained.
+  - [x] ROOT CAUSE (WHY + WHERE): current/frozen0275 helper review,rc=0:old direct-name/first-
+    dependency classification replaced by actual root certificate operand. Fixture predicates
+    lagged;original role obligations remain. No production repair is required for this issue.
+  - [x] FIX: adapt only two helper expression faults. Lost role returns plain Value(self.kind);
+    forged role reinstates frozen original first-dependency body under original if-true fault.
+    Production/checker/certificate dataflow remain unchanged;20 other tuples/all other AST exact.
+  - [x] ADDRESSED (verified): prepared original default producer →22 compiled body assertion
+    reds/all3 sources/current target restored,rc=0;actual restored7 tests pass0. Every failed test
+    body originates at current macro. Two known parent join propagations carry actual child
+    assertions;no production panic evidence counted,rc=0. Source/Cargo/toolchain diff checks0.
+  - [x] NO REGRESSION: target/checked_statement_0553_focus.py →22 identities/20 exact tuples,
+    two adapters only/all other program AST/plans/CLI/classifier/restoration exact;forged helper
+    tokens equal frozen original mutant body. Existing actual main block →2 modes/10 physical/
+    20 mode +legacy classifier reds,rc=0;--classifier-only passes0. Initial all-thread audit scope
+    corrected after source inspection of real child assertion/parent join propagation;final0.
+    Whole producer advances past statement then exposes D321 coupled result anchor,rc=1;D321
+    owned next,no whole pass inferred. Book93/248/1590/2771,rc=0;receipt711 →3 exact Git spans0;
+    retention1165 logical/70 aggregate working/65736 decodedL/5133127 decodedB/2710464 residentB,
+    rc=0;git diff --check →rc=0. Full prepush/normal push/actual jobs remain after D321.
+  - [x] LOCKSTEP: whole0552 retained711;book current22 role/native/mode proof and historical
+    counts separated,D321 coupled preflight pending. MEM/DEV/CHANGE/index/ledger align;LIVE
+    G1 6/18/29 suites/G0 human unapproved unchanged,D320 fixed/D321 owned,D156 audits open.
+    README unchanged. Commit then D321;full PNT continues. Native/focus/producer logs under
+    target/checked-statement-0553-*.log;all source and restoration terminals consumed.
+    promotion: declined (application of indexed current-body adapters,frozen legacy semantics and originating assertion evidence;coupled followup explicitly owned).
+
+- ID: `G1-SLICE.6.5.3.2.prepush-400.coupled-result`
+  Status: `pending`
+  Goal: D321,P1 immediately after D320/before push:current shared-operand adapters for two
+  coupled Rust mutation anchors;preserve all9 ordered Rust fault intents/7 other tuples and
+  complete original coupled reference/driver/book/mode/restore contracts. No production change.
+  Paths: docs/tasks/artifacts/formula_structure/static_coupled_contract.py
+  Reproduce: prepared whole python_producer_contract after D320 passes statement block,stops
+  at capture_static_entry/static_coupled preflight ('coupled real fault anchor','result kind'),
+  rc=1. Log target/checked-statement-0553-producer.log. RUST_FAULTS AST/current-source census
+  finds9 cases;exactly result kind/computed role forged before-anchors count0,other7 valid.
+  Root: same0275 shared operand/certificate change as D318 removed direct kinds.push statement;
+  this separate coupled fault table retained its old before/after literals. Actual source/history
+  already reviewed;preserve semantic wrong computed kind/class through current shared assignment.
+  Impact: coupled/default/mutation source preflight and remaining environment checks cannot run;
+  full push signoff held. Strict guards fail closed;production code/source restoration unchanged.
+  Acceptance: two explicit adapters only;9 identities/7 whole tuples/all other AST/API/plans exact.
+  Verify current standalone coupled baseline/mutation/real mismatches,guard/physical/source/restore
+  controls with original references intact. Commit,then whole failing producer/fresh full prepush
+  gates/normal push/actual exact-SHA jobs. Own before any adapter code change.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

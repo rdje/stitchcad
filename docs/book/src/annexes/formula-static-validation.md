@@ -233,6 +233,11 @@ graph occurrences come from the product; source-derived ordinals/spans/roles rem
 Historical exact counts, fault sets, producer plans, restoration and phase-order receipts remain in
 `docs/history/stitchcad-devnotes-part517.md`, retrievable through history_archive.py read.
 
+Current coupled mutation preflight is blocked by D321:two of nine Rust fault anchors still target
+the removed computed-result push after node certificates introduced a shared operand assignment.
+The other seven anchors match. Repair/current native coupled replay is owned by
+.6.5.3.2.prepush-400.coupled-result;the historical fault evidence above supplies no current verdict.
+
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/static_coupled_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/first_phase_contract.py --mutations

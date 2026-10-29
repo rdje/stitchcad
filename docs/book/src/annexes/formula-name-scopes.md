@@ -125,10 +125,11 @@ then locally check second:length=first against that annotation. This certifies t
 scope and kinds, and supplies no whole-recipe acceptance. The [whole recipe validator](formula-checked-recipes.md) checks each
 statement successfully before staging it and returns only a complete immutable proof.
 
-Current statement-mutation replay is blocked by D320:two role anchors still target the older
-root-operand helper,which now reads its actual node certificate. The strict source census refuses
-before mutation. Repair of those two adapters and a fresh22-case native replay are owned by
-.6.5.3.2.prepush-400.checked-statement. Production statement checking is unchanged.
+Current role faults target the certified-root helper expression. Lost role returns its plain
+Value kind;forged computed role restores the original first-dependency classification under its
+original if-true fault. That forged body is token-identical to the frozen original mutant helper.
+All22 case identities/20 other tuples and all other program AST/plans/CLI/classifier/restoration
+stay exact. Current22 compiled assertion reds and all7 restored tests pass;all3 sources restore.
 
 ```bash
 cargo test -p sc-core --test formula_checked_statement_contract -- --nocapture
@@ -165,15 +166,15 @@ python3 -I -B docs/tasks/artifacts/formula_structure/checked_statement_mutations
 Classifier-only declares zero files/mutables/native effects. All three input sources may be read-only
 hard-linked files; unused fault/restoration aliases are outside that mode's declared file plan.
 Current thread panic path/line/byte-column must identify an assertion macro. Custom messages pass;
-nonthread/compiler/expect/test-name noise refuses. Historical evidence before the certified-root
-adaptation included two complete captures, ten physical refusals,
-twenty mode faults and an independent legacy-regex fault discriminate omissions, partial mutable
-plans, wrong replacement counts and restoration loss. Earlier exclusive real replay matched authored failed
-sets and a current macro in every failed body. Four acceptance/refusal preconditions in three public
+nonthread/compiler/expect/test-name noise refuses. Current two complete captures,ten physical
+refusals,twenty mode faults and an independent legacy-regex fault discriminate omissions,partial
+mutable plans,wrong replacement counts and restoration loss. Every failed test body in current
+native22 replay originates at a current assertion macro. The known parent join site only propagates
+a child assertion;it is not separate valid assertion evidence. Four acceptance/refusal preconditions in three public
 tests prevent extraction panics from hiding rejection. Seventy-two frozen inputs/sixty-three unchanged
 production Rust files/twenty-three local logs/full seven-test artifact were exact;full
-formatting/strict Clippy/seven-hundred-three native tests passed at that snapshot. Current replay
-is pending D320 above. Run mutations exclusively. Existing
+formatting/strict Clippy/seven-hundred-three native tests passed at that historical snapshot.
+Current native22/mode proof is complete;broader pre-push verification remains separate. Run mutations exclusively. Existing
 18 scope and16 expression fault controls remain required when their implementation changes.
 
 ## Binding refusals retain real sources

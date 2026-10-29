@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0552 — restore certificate-aware branch mutation evidence
+## STITCHCAD-G1-0553 — repair certified-root statement role fault adapters
 
-- Close D319:retain exact original else fault;declare mutant-only certificate seeding so external assertions observe its original semantic error. Production/classifier unchanged;15 other tuples/all other AST/plans/CLI exact. All16 compiled reds/every failed thread macro/restored7 pass.
-- Modes2/physical6/14 guard-classifier reds pass. Whole producer advances to distinct D320 statement role anchors;D320 P1 owned next,no whole pass inferred. Whole0551 retained710/three spans;book/history checks pass. Fresh full prepush gates/normal push/actual jobs remain required.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D319 fixed,D320 owned,D156 audits open. Book separates current expression proof from historical/pending statement calibration.
+- Close D320 two old role anchors;22 identities/20 other tuples/all other AST/plans/CLI exact. Forged helper matches original mutant tokens. Native22/restored7/all3 sources and current assertion-origin audit pass;known join propagation stays distinct.
+- Modes2/physical10/21 guard-classifier reds/class-only pass. Whole producer advances to D321 coupled result anchors;D321 P1 owned next. Whole0552 retained711/three spans;book/history checks pass. Full prepush/normal push/actual jobs remain;no whole producer pass claimed.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D320 fixed,D321 owned,D156 audits open. Book records current statement evidence and separate pending coupled calibration.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

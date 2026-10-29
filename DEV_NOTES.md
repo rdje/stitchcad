@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — preserve legacy branch fault through new certificate bookkeeping
+## _(2026-10-29 UTC)_ — current root-certificate role fault adapters
 
-0552 closes D319:keep exact duplicate-then/skip-else fault,seed only mutant certificate vector so newer metadata completeness does not replace original external assertion target. Visited nodes overwrite seeds. Production initializer/guard/classifier unchanged;15 other tuples/all other program AST/plans/CLI exact.
-Exclusive replay16 compiled reds/current7 restored pass0;all failed thread bodies in all16 logs name current contract assertion macros. Prior0551 bare fault hit production invariant and was correctly rejected. Two modes/six physical/13 mode pluslegacy classifier reds,including missing second replacement,pass0.
-Whole producer advances past expression then exposes D320 two missing statement role anchors after0275 root certificate helper;rc1. D320 P1 owned immediately next. Whole0551 retained710/3 spans;book93/248/1590/2771 and retention1164 pass0. Full prepush/normal push/actual jobs pending;no whole producer verdict inferred.
-[Whole0551 anchor repair](docs/history/stitchcad-devnotes-part710.md). LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D319 fixed,D320 owned,D156 audits open. Promotion declined:indexed explicit mutation adapters/current assertion evidence. Next statement22 adapters/native proof,then full gates;full PNT continues.
+0553 fixes D320 two role anchors after0275. Frozen22/20 tuple/all other AST/plans/CLI proof and forged-helper/original-mutant token equivalence pass0. Native22 compiled reds/restored7/all3 sources exact;every failed body originates at current macro. Production/classifier unchanged.
+Known parent join propagation carries child assertions. Current2 modes/10 physical/21 guard-classifier reds and class-only pass0. Whole producer advances to D321 two missing coupled result anchors;D321 P1 owned next. No whole producer or full prepush verdict inferred.
+Whole0552 retained711/3 spans;book93/248/1590/2771 and retention1165 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D320 fixed,D321 owned,D156 audits open. Next coupled9 adapters,then full gates/normal push/actual jobs.
+[Whole0552 expression proof](docs/history/stitchcad-devnotes-part711.md). Promotion declined:indexed current-body adapters/frozen semantics/assertion origins. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
