@@ -67,11 +67,53 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   - [x] ADDRESSED0295: whole source/hash exact in416, Python comparison rc=0.
   - [x] NO REGRESSION0295: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part416.md whole public file exact, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5e.2.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: bounded source-order expression execution consuming actual node proofs and sourced values.
   Actual errors retain failing node/owner/canonical identity; taken-only if, all evaluated call
   inputs, exact numeric kernels, explicit source adapters. Trig/geometry remain actual dependencies.
   No absent implemented family or caller placeholder becomes a language refusal/canonical result.
+  Startup D337:execution-plan still calls atan/atan2 unimplemented although native0288 and the
+  certificate/runtime chapters expose real kernels. Repair actual readiness .availability first,
+  then select the first bounded actual-node/source implementation slice;no new math backend.
+- ID: `G1-SLICE.5e.2.4.availability`
+  Status: `done`
+  Goal: fix D337 P2 source-readiness drift before AST implementation. Reproduce execution-plan
+  lines70–74 against numeric.rs checked_atan/checked_atan2,actual inverse implementation and
+  native-inverse book section. Git blame names89e0e8711;inverse kernel introduced3219d3f8/0288.
+  The old plan can repeat completed certificate/kernel work and incorrectly block the evaluator.
+  Own actual inverse native/oracle check,precise tangent pending task pointers,book/live/ledger
+  repair and commit. No numerical/kernel change or heavy certificate rerun;resume .5e.2.4 after.
+  Completion0575:D337 inverse availability corrected before actual expression work.
+  - [x] ROOT CAUSE (WHY + WHERE): git blame execution-plan70–74 →89e0e871/0280 retained
+    pre-inverse statement. git log inverse.rs →3219d3f8/0288 actual implementation;numeric.rs
+    checked_atan/checked_atan2 call real private kernel. Current recipe tree marks .5d.3.3/.1
+    done;certificate/runtime chapters already document native inverses. Tools rc=0;old plan
+    also cited nonexistent .5d.3.2.3 instead of actual inverse owner .5d.3.3/.1.
+  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
+    formula_inverse_value_contract →three pass,rc=0. Native27 atan/54 atan2 rows,byte-exact
+    independent81-row oracle,kind priority/zero-vector/full-width/principal sign cases pass.
+    Plan now lists inverse kernels/plan/wrappers as available and links actual native evidence.
+    Tangent correctly remains pending .5d.1.2.2.2.d.2 before .5d.3.2.2;geometry/whole runtime
+    still need their real implementations. No precision cutoff,backend or language rule changed.
+  - [x] NO REGRESSION: git diff --exit-code HEAD -- crates/ →all Rust unchanged,rc=0. Positive
+    book94/260/1600/2796 and glossary310/9/158/0 pass,rc=0;new native/tangent links resolve.
+    Receipt733 →four exact Git spans,rc=0. No full CI/heavy certificate rerun;retained numerical
+    stores remain protected. Native availability is distinct from AST/geometry/platform approval.
+  - [x] LOCKSTEP: execution plan/MEMORY/DEV/CHANGE/LIVE/index/D337 ledger align;whole0574
+    scope/lesson/changelog/ledger retained733. D337 fixed;G1 still6/18/G0 human unapproved.
+    Next .5e.2.4.1 actual complete-proof/workspace admission before value/provider reads. Source
+    execution/full recipe/actual dependencies remain .5e.2.4/.5e.2.5/.5e.4 and paired .2.4/.2.5.
+    promotion: declined (repair of an existing readiness record under indexed source/book alignment and real-provider doctrine;no new math or execution policy).
+- ID: `G1-SLICE.5e.2.4.1`
+  Status: `pending`
+  Goal: explicit complete checked-expression input and prospective iterative workspace admission
+  before runtime allocation/value/provider reads. Bind actual successful proof/root/source spans;
+  count all N certified nodes and D name uses,including untaken branches/repeated names. Reserve
+  N task frames,N value slots,D source-read records under an explicit checked2N+D allowance.
+  No defaults,source clone,callback,computed value or execution/available-backend certificate.
+  This prepares the actual source-order machine;semantic reads/operations/branch selection and
+  whole recipe/replay stay separate subsequent implementation slices. Read normative contracts,
+  actual proof/value/source interfaces and tests before coding;own focused checks/book/commit.
 - ID: `G1-SLICE.5e.2.5`
   Status: `pending`
   Goal: whole checked recipe declaration-order execution and real let/assert statement context.
@@ -443,38 +485,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0573 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part732.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.acceptance`
   Status: `done`
-  Goal: deferred scoped history/graph/actual candidate checkpoint after .1–.3;whole paired physical/
-  dependency/authority/effect/undo/replay/cancel/quota/mutation/release proof stays separately owned.
-  Activated only after0573 completed all scoped .1–.3 implementations. Verify actual local
-  history9,graph/history5,Gather18,Design history2,graph/garment candidates9 and source joins4
-  (47 native cases);history5/graph4/Gather4/candidate8 doctests (21). Keep Rust bytes exact to
-  committed0573;reuse its passing scoped strict lint/fmt unless source changes require rerun.
-  No full CI,global audit or mutation campaign here. Full paired acceptance remains .2.acceptance.
-  Existing book/API examples/ownership/resource/contracts and source cohorts reviewed. Then
-  close this local checkpoint,parent .3.4,and select the next actual dependency-aligned slice.
-  Completion0574:deferred local lineage/candidate checkpoint passes after implementation.
-  - [x] ROOT CAUSE (WHY + WHERE): task children .1–.3 all complete through0573;their previously
-    deferred checkpoint now activates under verification doctrine. git diff --exit-code HEAD
-    -- crates/ →Rust bytes exact to f6b0a0aa,rc=0;no new runtime/lint-policy edit or broad audit.
-  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
-    seam_span_history_contract →9;sewing_contract span_history →5;gather_contract →18. Actual
-    sc-measure design_inputs_contract span_history →2;seam_graph_candidate →9;command_stop_source_binding
-    →4. All47 direct native cases pass,rc=0. Full source/pointer/nonreuse/nested/cut-stop/global
-    namespace/resource/current-Gather/reserve guards pass;independent closed chain/120 map
-    comparison remain inside the actual primitive cases,not separate external-ID certification.
-  - [x] NO REGRESSION: core --doc ontology::seam_span_history →5;ontology::sewing →4;
-    ontology::gather →4;command::seam_candidate →8. All21 actual doctests pass,rc=0. All Rust
-    remains byte-exact to passing0573 scoped core/measure strict lint/fmt,rc=0. Positive book
-    →94/260/1598/2794 and glossary310/9/158/0 pass,rc=0. Receipt732 →four exact Git spans,rc=0.
-    No full CI/platform/mutation verdict claimed;whole paired acceptance remains .2.acceptance.
-  - [x] LOCKSTEP: lineage book/MEMORY/DEV/CHANGE/LIVE/index/D301/footer aligned;whole0573
-    scope/lesson/changelog/ledger retained732. Scoped .3.4 and partition components .3 closed;
-    root paired handler stays in_progress. Explicit future .4 real provider/physical joins and
-    .5 trusted atomic effects retain all remaining implementation before whole acceptance.
-    Next existing .5e.2.4 actual checked-node sourced expression execution;no unavailable math
-    family or supplied annotation may become a canonical result/refusal. G1 still6/18/G0 human
-    unapproved;D334 P2/D156/D223/PLANNING.5 owned. README reviewed unchanged. Full PNT continues.
-    promotion: declined (scheduled post-implementation component checkpoint under existing verification and real-provider/no-placeholder doctrine;no new cross-cutting rule).
+  Goal:0574 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part733.md).
 - ID: `G1-SLICE.6.5.3.2.4`
   Status: `pending`
   Goal: actual formula/Profile/geometry quantitative and physical correspondence joins after the

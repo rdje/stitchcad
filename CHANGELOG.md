@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0574 — close deferred local lineage and candidate checkpoint
+## STITCHCAD-G1-0575 — correct inverse readiness before checked-node execution
 
-- After implementation,47 direct history/graph/Gather/Design/candidate/source native cases and21 doctests pass. Rust exact0573,prior scoped lint/fmt applies;no new runtime/full CI/platform/mutation claim. Scoped partition/lineage components close;actual paired handler and whole acceptance stay open.
-- Book94/260/1598/2794/glossary310/9/158/0/receipt732 four Git spans pass. G1 6/18/G0 human unapproved;real provider/physical and trusted atomic tasks explicit. Resume .5e.2.4 bounded actual checked-node/source-order execution before effects. D334 P2/D156/D223/PLANNING.5 owned;full PNT continues.
+- Fix D337:plan retained pre0288 inverse status and wrong owner. Native atan/atan2 kernels/plan/source wrappers are available;actual tangent strategy/kernel remain pending. Native inverse3/independent81-row fixture/kind/zero/full-width checks pass;no Rust/math/precision-policy change.
+- Book94/260/1600/2796/glossary310/9/158/0/receipt733 four Git spans pass. G1 6/18/G0 human unapproved;D337 fixed. Next .5e.2.4.1 bounded actual proof/workspace admission,then source-order expression execution. Full paired/provider/physical/effect and D334 P2/D156/D223/PLANNING.5 remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

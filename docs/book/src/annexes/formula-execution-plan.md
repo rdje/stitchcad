@@ -67,11 +67,17 @@ parameter/geometry error budget uses actual edge length, not an inferred boundin
 
 ## Dependencies that still prevent full runtime closure
 
-The numerical kernels cover rational arithmetic, quantization, roots, arc_length and certified sin/cos.
-Tan and atan/atan2 still require the practical all-input resource strategy and implementations
-owned by .5d.1.2.2.2 and .5d.3.2.2/.3. This plan selects no replacement math backend, precision cutoff or
-caller placeholder. An admitted function with an unfinished implementation cannot be silently
-reclassified as a language refusal or published as a canonical computed result.
+The numerical kernels cover rational arithmetic,quantization,roots,arc_length,certified sin/cos
+and [native atan/atan2](formula-trig-certificates.md#native-inverse-values). The inverse kernels
+and their admitted all-input plan were completed in .5d.3.3/.5d.3.3.1;source-bearing scalar wrappers
+are also available. D337 corrected this plan's stale pre0288 inverse-availability statement.
+
+Tangent remains unimplemented. Its practical all-input rounding/termination/resource strategy is
+owned by .5d.1.2.2.2.d.2 before the .5d.3.2.2 kernel;see the actual
+[tangent boundary](formula-trig-certificates.md#tangent-resource-boundary). This plan selects no
+replacement math backend,precision cutoff or caller placeholder. An admitted function with an
+unfinished implementation cannot be reclassified as a language refusal or published as a
+canonical computed result.
 
 Complete source/derived-input resolution, actual geometry selectors, statement execution and atomic
 publication also remain open. Internal slices must state their supported scope. Public whole-runtime

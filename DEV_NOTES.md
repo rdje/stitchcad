@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — close deferred local lineage and candidate checkpoint
+## _(2026-10-29 UTC)_ — correct actual inverse readiness before AST execution
 
-0574 after completed implementation:history9/graph5/Gather18/actual Design history2/candidates9/source joins4 pass,47 native. History5/graph4/Gather4/candidate8 doctests pass,21 total. Rust stays exact0573;its scoped lint/fmt applies. No runtime code,full CI/platform or broad mutation verdict added.
-Scoped partition/lineage components close;actual handler remains pending real quantitative/physical and trusted publication work. Future .2.4 provider joins/.2.5 atomic effects/repair/reserve/undo/replay owned. Next .5e.2.4 actual checked-node/source-order expression execution;no unavailable-family placeholder outcome.
-Book94/260/1598/2794/glossary310/9/158/0 pass. [Whole0573 ownership/resource proof](docs/history/stitchcad-devnotes-part732.md) retains scope/lesson/changelog/ledger,four Git spans. LIVE G1 6/18/G0 human unapproved;checkpoint evidence updated. Existing full local/hosted79bd6f6a stays SHA-scoped.
-Scheduled verification/real-provider rules apply;promotion declined. README unchanged. D334 P2 after paired activity/before G0 closure,D156/D223/PLANNING.5 remain owned. Full PNT continues through actual evaluator dependencies;local candidates/identity evidence never imply physical readiness or command authority.
+0575 D337:execution plan0280 still called atan/atan2 unimplemented after actual0288 kernel/plan completion. Blame/log/numeric methods/current recipe status and certificate/runtime chapters establish drift;old inverse task pointer .5d.3.2.3 did not exist. Correct plan and actual tangent pending owners.
+Native inverse3 passes27 atan/54 atan2 rows,byte-exact independent81-row oracle and kind/zero/full-width/principal sign cases. All Rust unchanged;no heavy certificate rerun or math/backend/domain change. Protected numerical stores stay exact;availability is no complete AST/geometry/platform certificate.
+Book94/260/1600/2796/glossary310/9/158/0 pass. [Whole0574 lineage checkpoint](docs/history/stitchcad-devnotes-part733.md) retains scope/lesson/changelog/ledger,four Git spans. D337 fixed;LIVE G1 6/18/G0 human unapproved. Tangent remains actual .5d.1.2.2.2.d.2/.5d.3.2.2 work.
+Indexed source/book readiness rules apply;promotion declined. Next .5e.2.4.1 complete actual proof/workspace admission before reads,then source-order execution. No supplied annotation or unfinished family becomes canonical result/refusal. D334 P2/D156/D223/PLANNING.5 owned;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
