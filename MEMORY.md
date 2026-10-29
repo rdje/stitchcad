@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.3.4.2 in docs/tasks/G1-SLICE-execution.md:sealed actual ease-
-  capture/stop-view join. Require exact original request and actual span pointers before joined
-  metadata;equal IDs/bodies cannot substitute. Borrow external owners;no hidden collection/query,
-  self-reference,original narrowing or renewed current/effect authority. Then component checkpoint.
-- Ordered views0534 borrow exact membership rows and actual pair metadata;guard aggregate2N child
-  references before every push. Shared boundaries retain identical row/semantic pointers in both
-  lists;N0 stays empty despite full original stops. Original side/copy/authored order stays exact.
-- Actual Design3/core+test Clippy/fmt/docs2+1 pass. All32 frozen expected cases/four exact2N shared
-  cuts build actual retained child Graphs with one canonical ease root/current metadata acceptance;
-  reflected/touching copy/side-tag order and N0 controls pass. Book93/246/1590/2769,glossary0/map,
-  692 receipt3/retention1146 pass;whole0533 retained692. LIVE/README29 suites/G1 6/18 unchanged.
-- Real formula/Profile/geometry/physical/current authority/aggregate operations/paired effects/full
-  proof remain explicit owners. Consume preparation/commit terminals;native --index authority
-  mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400 after full gates.
+- Next derive cadence after completed0535 commit. At400,activate G1-SLICE.6.5.3.2.prepush-400
+  in docs/tasks/G1-SLICE-execution.md:required full make check/gate/probes from clean completed HEAD,
+  then normal main push and observe actual hosted jobs/steps for that SHA. No early push or assumed
+  runner verdict. Keep producer logs local;consume every terminal before edits/retries/dependent work.
+- Then G1-SLICE.6.5.3.2.3.3.acceptance scoped stop component checkpoint after all implemented
+  stages,then .3.4 new live span lineage. Stop source-owner join0535 requires exact request then
+  target pointers and borrows capture/partitions;no queries/clones/value reads or new current proof.
+- Actual Design4/core+test Clippy/fmt/docs2+1 pass. Joined A/B signed weighted and retained notch
+  quantity ports preserve roots/stops/quantities;symbolic metadata stays opaque. Equal boxed request/
+  cloned equal target and both mismatches refuse actual pointer context. N0 never backfills root2
+  stops. Book93/248/1590/2770,glossary0/map,693 receipt3/retention1147 pass;whole0534 retained693.
+- LIVE/README unchanged29 suites/G1 6/18. Full PNT continues. Real formula/Profile/geometry/physical/
+  current authority/aggregate operations/lineage/paired effects/full proof remain explicit owners.
+  Native --index book authority mandatory;consume preparation/commit terminals before dependent work.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

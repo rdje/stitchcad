@@ -245,3 +245,5 @@ command A ordered stop child	spec/command-seam-stops.md	crates/sc-core/src/comma
 command borrowed ordered stop child view	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/partition.rs	CommandStopChildView	G1-SLICE.6.5.3.2.3.3.4.1	4.4
 command bounded complete stop partitions	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/partition.rs	CommandStopPartitions	G1-SLICE.6.5.3.2.3.3.4.1	4.4
 command child stop reference refusal	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/partition.rs	CommandStopPartitionError	G1-SLICE.6.5.3.2.3.3.4.1	4.4
+command captured ease and stop owner binding	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/source.rs	CommandStopSourceBinding	G1-SLICE.6.5.3.2.3.3.4.2	4.4
+command actual capture stop owner mismatch	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/source.rs	CommandStopSourceBindingError	G1-SLICE.6.5.3.2.3.3.4.2	4.4

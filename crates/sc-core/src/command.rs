@@ -113,7 +113,7 @@ pub use seam_stops::{
     CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits,
     CommandStopPairMembership, CommandStopPartitionAdmission, CommandStopPartitionAdmissionError,
     CommandStopPartitionError, CommandStopPartitionLimits, CommandStopPartitions,
-    CommandStopPiecePortion,
+    CommandStopPiecePortion, CommandStopSourceBinding, CommandStopSourceBindingError,
 };
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};

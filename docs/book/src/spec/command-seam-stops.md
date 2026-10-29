@@ -3,7 +3,7 @@
 Native contract cases verify the existing graph's stop membership at paired cuts,including
 closed endpoints,explicit side/copy identity,authored order and later-frame anchors. Explicit actual
 stop input/workspace,ownership-workspace,bounded current context and actual membership rows are
-implemented,including ordered child views;the sealed ease-capture/view join remains next. These cases construct real retained child graphs
+implemented,including ordered child views and the sealed ease-capture/view join. These cases construct real retained child graphs
 through public APIs;they do not install a command effect or create new semantic landmark identities.
 
 | API token | Meaning |
@@ -57,6 +57,9 @@ through public APIs;they do not install a command effect or create new semantic 
 | `CommandStopPartitions` | Complete two-child references bound to the actual membership owner |
 | `CommandStopPartitionError` | Actual row/child and original aggregate2N reference refusal |
 | `partition_stops` | Build both child lists without new semantic/source objects or queries |
+| `CommandStopSourceBinding` | Exact captured ease and ordered stops bound to original request/target owners |
+| `CommandStopSourceBindingError` | Actual expected/captured request or target owner mismatch |
+| `bind_source_capture` | Require exact owners before lending joined source/child stop metadata |
 
 ## A stop at the cut belongs to both closed children
 
@@ -428,7 +431,8 @@ independent membership rows with four shared-cut controls,both semantic kinds,au
 Notch order and later anchors. They also cover missing/wrong-Piece/outside-side refusals after a
 valid prefix,reflected copies,touching self-seams,shared side tags and the two-origin case above.
 Privacy/lifetime and public API doctests pass. Ordered borrowed child views follow below. The sealed
-actual caller join,component and whole paired/physical/authority/effect verification retain owners.
+actual caller join follows the views below;component and whole paired/physical/authority/effect
+verification retain their later owners.
 
 ## Obtain two ordered borrowed child views
 
@@ -472,7 +476,58 @@ scenarios preserve row pointers,two semantic side tags and authored order. A sep
 preserves empty views. Three focused native cases and privacy/lifetime/API doctests cover the stage.
 
 Those native callers intentionally use the same actual request/state for both pipelines. A sealed
-production join checking the exact ease-capture and stop-view request/span owners follows as its
-own slice. Same IDs or equal source definitions cannot replace that provenance requirement. These
+production join checking the exact ease-capture and stop-view request/span owners is available
+below. Same IDs or equal source definitions cannot replace that provenance requirement. These
 views supply no new live child lineage,physical matching,fresh mutation authority,atomic effect,
 undo/replay/cancellation or full paired verification. Those requirements retain their task owners.
+
+## Bind the captured source to the actual stop views
+
+Call `partitions.bind_source_capture(&capture)` before consuming captured ease with the child stops.
+The stage compares the capture's original request pointer to the stop input token's request first,
+then compares their actual target span pointers. Both must match. Equal request bodies,same target
+IDs and equal graph definitions cannot stand in for the original owners. An equal cloned Design
+has different actual graph members and therefore refuses. A distinct equal request refuses first,
+including when its target owner also differs.
+
+```rust
+use sc_core::command::{CommandEaseCapture,CommandStopPartitions,CommandStopSourceBinding,
+    CommandStopSourceBindingError};
+
+fn join<'a,H>(capture:&'a CommandEaseCapture<'a>,partitions:&'a CommandStopPartitions<'a,H>)
+    ->Result<CommandStopSourceBinding<'a,H>,CommandStopSourceBindingError<'a>>
+{
+    partitions.bind_source_capture(capture)
+}
+```
+
+The private successful view borrows both externally owned tokens;there is no self-reference or
+lifetime extension. It allocates,clones and queries nothing. `capture()` returns the exact admitted
+capture,including original root,portion and selected capture limits. `partitions()` returns the
+exact stop views and their complete membership/current/input/limit provenance. `child(First)` or
+Second lends the existing actual child view,now bound to that same captured request and target.
+Request and Target errors retain the actual expected and captured objects for inspection,including
+when their IDs print identically. A fixed owner mismatch has no invented standard error cause.
+
+Actual native callers join complete Design source admission and capture with the separately
+admitted stop input/ownership/current/membership/view pipeline. Signed weighted cases on A and B
+preserve the existing original cumulative allocation and signed conservation. Retained notch cases
+separately admit and validate the full original notch context,then preserve its exact original
+quantities while child stop lists remain empty. That root still retains both original stops;none
+are backfilled into the actual N0 target. Formula and Profile cases retain their original metadata
+without obtaining numeric values. These callers construct real retained child graphs with one
+canonical original root and successful current metadata preflight;the original Design stays unchanged.
+
+Four focused native cases cover those joins plus independent source-owner controls. A boxed equal
+request and a cloned equal-body Design demonstrate actual Request and Target refusals,with both
+original references retained and request-before-target priority. Privacy/lifetime/API doctests pass.
+These are focused implementation checks;the stop component checkpoint follows completion,with
+full paired/physical/authority/effect acceptance owned separately.
+
+This token proves owner coherence. A metadata capture can be obtained through its own public
+admission without complete Design source preflight,so this join does not add that preflight or
+certify the full original root's currentness. Real callers must still use actual Design source
+admission and the selected original quantity/context APIs as needed. It supplies no missing Formula
+or Profile value,physical correspondence,aggregate runtime/snapshot budget,fresh mutation authority,
+new live child lineage,atomic command effect or release approval. The SplitSeamSpan bus handler and
+its combined undo/replay/cancellation/quota proof remain unimplemented and explicitly owned.

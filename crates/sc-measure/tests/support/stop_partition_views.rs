@@ -1,4 +1,6 @@
 //! Ordered borrowed row lists and actual owned retained-child Graph construction.
+#[path = "stop_partition_source.rs"]
+mod stop_partition_source;
 use super::{
     admitted, at, command_request, id, oracle_state, ownership_limits, two_tags_state,
     DesignSewing, DesignSewingDefinition, EaseAmount, Param, SeamDirection, SeamSideId,

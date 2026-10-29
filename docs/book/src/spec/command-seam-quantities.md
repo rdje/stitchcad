@@ -194,6 +194,6 @@ inverse witnesses,bounded-view refusals,orientation/rounding and quantum counter
 kernel or source validator is changed by this checkpoint.
 
 This closes the implemented nonuniform mathematical source/context/caller component with scoped
-checks. Bounded stop rows/views are implemented;sealed capture join and live lineage follow. Real formula/
+checks. Bounded stops/views and exact capture-owner join are implemented;live lineage follows. Real formula/
 Profile/geometry,physical matching,fresh authority/aggregate operation admission,atomic effects,
 whole paired acceptance and full pre-push verification remain their explicitly named owners.

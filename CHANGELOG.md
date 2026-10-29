@@ -3,13 +3,14 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0534 — build ordered borrowed child stop views
+## STITCHCAD-G1-0535 — seal captured ease and actual stop-view owners
 
-- Borrow both A-ordered child reference lists from exact membership rows,guarding the original aggregate2N cap before each push. Preserve authored order,actual pair/copy/semantic identity and shared row pointers;no source clones,new span IDs,queries or effects. N0 never backfills
-  original stops.
-- Actual Design3,privacy/API docs2+1,strict core/test Clippy and fmt pass. All32 frozen cases/four shared cuts construct actual retained child graphs with one canonical root/current metadata acceptance. Reflected/touching copy/side-tag/order and N0 controls pass;original state
-  unchanged.
-- Whole0533 retained692/three exact Git spans;book93/246/1590/2769,glossary0/map/retention1146 pass. LIVE/README unchanged29 suites/G1 6/18. Sealed actual capture/stop owner join next;whole source/physical/authority/aggregate effects/full and hosted verification retain owners.
+- Join externally owned capture and ordered stops only after exact original request then actual target pointers match. Retain actual expected/captured objects on mismatch;no allocation,clone,query,inverse,narrowing,value read or new current/effect authority. Equal IDs/bodies
+  cannot substitute.
+- Actual Design4,privacy/API docs2+1,strict core/test Clippy and fmt pass. A/B signed weighted and retained notch quantities preserve original roots/stops/allocations;N0 stays empty. Symbolic metadata remains opaque. Boxed equal request/cloned equal target/both mismatches prove
+  exact owner refusal and priority.
+- Whole0534 retained693/three exact Git spans;book93/248/1590/2770,glossary0/map/retention1147 pass. LIVE/README unchanged29 suites/G1 6/18. Derive400 cadence for required full gates/push/hosted jobs;then scoped stop component checkpoint/live lineage. Physical/authority/aggregate
+  effects/full verification retain owners.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

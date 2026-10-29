@@ -18,6 +18,7 @@ pub use current::{
 mod membership;
 mod ownership;
 mod partition;
+mod source;
 pub use membership::{
     CommandStopMembership, CommandStopMembershipError, CommandStopMembershipIssue,
     CommandStopMemberships, CommandStopPairMembership,
@@ -28,6 +29,7 @@ pub use ownership::{
 pub use partition::{
     CommandStopChild, CommandStopChildView, CommandStopPartitionError, CommandStopPartitions,
 };
+pub use source::{CommandStopSourceBinding, CommandStopSourceBindingError};
 
 /// Explicit logical workspace and point/range input limits;no defaults or currentness proof.
 /// Workspace covers full registry index,target stop rows,two child references per stop and four

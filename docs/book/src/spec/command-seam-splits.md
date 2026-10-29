@@ -310,7 +310,7 @@ remain their implementation owners;this change does not make SplitSeamSpan execu
 cost before materialization. [Weighted/notch command quantities](command-seam-quantities.md) now use that
 actual captured root;actual Design source admission precedes capture,while paired effects remain owned.
 [Bounded stop stages](command-seam-stops.md) now provide actual input/ownership/current evidence,
-closed authored memberships and ordered child views;sealed capture join and paired effects follow.
+closed authored memberships,ordered child views and exact capture-owner join;paired effects follow.
 
 ## Query quantities from the retained original root
 

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — ordered borrowed child stop views
+## _(2026-10-29 UTC)_ — seal actual captured ease and stop-view owners
 
-0534 private partitions borrow actual membership owner and original rows in authored order. Each append guards original aggregate2N cap;child views retain exact A-ordered pair metadata and row/stop/copy/semantic pointers. No source clone,query,inverse,narrowing,new span or effect;N0 stays empty.
-Actual Design3/core+test Clippy/fmt/docs2+1 pass0. All32 frozen cases/four exact2N shared cuts build actual retained child Graphs with one canonical ease root and current metadata acceptance. Four reflected/touching direction/copy scenarios and N0 retain side tags/order/objects;original owner unchanged.
-Book93/246/1590/2769,glossary0/map/692 receipt3/retention1146 pass0;LIVE/README unchanged29 suites/G1 6/18. Related source/quantity frontier paragraphs align. Sealed actual capture/stop request/span identity join next;whole source/physical/authority/aggregate effects/full and hosted proof remain owned.
-[Whole0533 memberships](docs/history/stitchcad-devnotes-part692.md) retains exact closed membership/two-origin/current refusal proof. Promotion declined:indexed current/resource/retained-source contracts. Native caller deliberately uses same actual state/request;separate production join is not inferred.
+0535 private binding compares exact original request then actual target pointers before joining captured ease and stop partitions. Retain both external owners and actual mismatch references;no allocation,clone,query,inverse,narrowing,value read or lifetime extension. Equal IDs/bodies cannot substitute.
+Actual Design4/core+test Clippy/fmt/docs2+1 pass0. Joined A/B signed weighted and retained notch quantities preserve original roots/stops/allocations;N0 stays empty. Formula/Profile metadata stays opaque. Equal boxed request/cloned equal target/both mismatches retain actual pointers and refusal priority.
+Book93/248/1590/2770,glossary0/map/693 receipt3/retention1147 pass0;LIVE/README unchanged29 suites/G1 6/18. Ordered stop feature implemented with focused checks;component/full acceptance remain owned. Derive cadence;at400 required full gates/push/actual hosted jobs under explicit prepush-400 owner.
+[Whole0534 ordered views](docs/history/stitchcad-devnotes-part693.md) retains exact2N/current child/root proof. Promotion declined:indexed immutable owner contracts. Metadata capture alone is not Design source preflight/full-root currentness/quantity/physical/effect proof;actual caller uses those stages.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

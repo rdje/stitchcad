@@ -366,62 +366,59 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0533 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part692.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.4`
-  Status: `in_progress`
-  Goal: ordered borrowed child stop partitions from actual admitted current evidence,with exact
-  side/copy/semantic identity and cut-boundary sharing;actual Design caller integration before effects.
-  Children .1 two ordered borrowed child views under original aggregate2N cap;.2 sealed actual
-  ease-capture/stop-view caller join,requiring exact original request/span owners before source use.
+  Status: `done`
+  Goal:0534–0535 ordered borrowed child stop views and exact actual source capture/view owner
+  binding implemented with focused native/compiler checks and actual Design retained-root/quantity
+  integration. Deferred stop component and full paired/physical/authority/effect owners remain.
 - ID: `G1-SLICE.6.5.3.2.3.3.4.1`
   Status: `done`
-  Goal:0534 two ordered borrowed child row lists under the original aggregate2N bound;exact
-  authored order and actual row/stop/copy/semantic pointers. Source-identity caller join remains .2.
-  - [x] REPRODUCE / ISSUE: 0534 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_partitions →3 passed/198 filtered,rc=0. Actual shared closed memberships require
-    two child references to one row;N0 must stay empty despite a full root's original2 stops.
-    Membership success alone does not materialize ordered child lists or source capture binding.
-  - [x] ROOT CAUSE: 0534 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_partitions →3 passed,rc=0. Each actual N row belongs to First,Second or Both.
-    Therefore two authored-order reference lists need at most aggregate2N,already checked in input
-    admission. Original semantic/current evidence and row ordinals must be borrowed,not recreated,
-    sorted by position or cloned into new semantic objects. Pair metadata stays exact A order.
-  - [x] FIX: 0534 cargo test -p sc-core --doc CommandStopPartitions →2 privacy/lifetime cases
-    passed,rc=0;--doc partition_stops →1 API case passed,rc=0. Private result borrows actual complete
-    membership owner and guards checked aggregate reference growth before each append. Child view
-    lends the original ordered rows and exact projected pair;count includes shared rows twice.
-    No source/semantic clone,new span identity,query,inverse,narrowing,value read or effect occurs.
-    Refusal retains target/ordinal/stop/child/retained/requested/limit;no partial children escape.
-  - [x] ADDRESSED: 0534 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_partitions →3 passed/198 filtered,rc=0. All32 independent frozen memberships
-    produce exact ordered children,four shared-cut controls hit exact2N while sharing row pointers.
-    Actual Design source admission/capture and retained portions construct native child Graphs
-    accepting those lists;both share one actual canonical ease root and original stops/regions.
-    Actual candidate current amount metadata preflight passes;original state/semantic data stays
-    unchanged. Four reflected/touching Same/Opposite copy scenarios preserve physical identities,
-    authored ordinals and two tags of one mark. N0 produces two empty lists with reference total0
-    despite full-root2 stops. Native caller deliberately uses same actual request/state;sealed
-    capture/stop owner binding is the separate .2 production requirement,not implied by this case.
-  - [x] NO REGRESSION: 0534 cargo clippy -p sc-core --lib -- -D warnings and cargo clippy
+  Goal:0534 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part693.md).
+- ID: `G1-SLICE.6.5.3.2.3.3.4.2`
+  Status: `done`
+  Goal:0535 seal actual ease capture/ordered stop partition source-owner coherence by exact
+  request then target pointers;borrow both external owners without additional work or authority.
+  - [x] REPRODUCE / ISSUE: 0535 cargo test -p sc-measure --test design_inputs_contract
+    command_stop_source_binding →4 passed/201 filtered,rc=0. Equal request bodies and same-ID/equal
+    cloned Design target bodies do not establish actual shared source ownership. Native callers
+    need a sealed join before using admitted capture and actual ordered stop views together.
+  - [x] ROOT CAUSE: 0535 cargo test -p sc-measure --test design_inputs_contract
+    command_stop_source_binding →4 passed,rc=0. CommandEaseCapture retains actual original request/
+    span binding;stop partitions retain the actual input/context binding through external owners.
+    These can be compared exactly before exposing a joined view. IDs/body equality cannot identify
+    actual immutable owners or the particular admitted pipeline. Per-stage resource/current/source
+    context requirements remain distinct;joining provenance must not silently grant missing proof.
+  - [x] FIX: 0535 cargo test -p sc-core --doc CommandStopSourceBinding →2 privacy/lifetime cases
+    passed,rc=0;--doc bind_source_capture →1 public API case passed,rc=0. Private view borrows exact
+    externally owned capture/partitions. Request pointer precedes target pointer;typed mismatch
+    retains actual expected/captured objects even with equal IDs/bodies. Bounded Debug avoids full
+    owner traversal. No allocation,clone,query,inverse,narrowing,value read or lifetime extension.
+    Capture/partition/child getters retain original data and allowances;no fabricated standard cause.
+  - [x] ADDRESSED: 0535 cargo test -p sc-measure --test design_inputs_contract
+    command_stop_source_binding →4 passed/201 filtered,rc=0. Actual A/B signed weighted callers
+    preserve original exact cumulative allocation and signed conservation through joined capture.
+    Retained A/B signed notch callers separately validate full original context and preserve exact
+    quantities while N0 child rows stay empty and root2 stops remain. Actual Formula5001/Profile98010
+    metadata joins without values. Real retained child Graphs share one actual canonical root and
+    pass candidate current metadata preflight;source state/semantic data stays unchanged. Boxed
+    equal request,cloned equal-body target and both mismatched refuse with exact original reference
+    pointers and request-before-target priority. Original capture/row/copy/source borrows stay exact.
+  - [x] NO REGRESSION: 0535 cargo clippy -p sc-core --lib -- -D warnings and cargo clippy
     -p sc-measure --test design_inputs_contract -- -D warnings →pass,rc=0;cargo fmt --all --check
     →pass,rc=0. Native tools use local_environment.py. mdbook build docs/book and positive publication
-    check →93 chapters/246 API rows/1590 source links/2769 rendered links,rc=0. Glossary census
-    →310 terms/9 parts/158 tokens/0 failures,rc=0;knowledge-map →pass,rc=0. Receipt692 →3 exact Git
-    spans,rc=0;retention →1146 logical/51 working/64433 decodedL/5000585 decodedB/2577922 residentB,
-    rc=0. Source/quantity kernels unchanged. Stop component .3.3.acceptance and full paired
-    .6.5.3.2.acceptance retain deferred broader verification after implementation.
-  - [x] LOCKSTEP: 0534 four API routes/ordered-view examples/related source and quantity frontier
-    paragraphs/source decision/task hierarchy/index/D301/MEMORY/DEV/CHANGE align. Whole0533 retained
-    692/three exact Git spans. LIVE/README reviewed unchanged29 suites/G1 6/18. Sealed source-capture/
-    stop-view join .4.2 next;require exact original request/span owners,not same IDs or equal bodies.
-    Current source-root/quantity contexts,physical/authority/aggregate runtime/new live lineage/
-    atomic effects/full and hosted verdicts remain explicit owners. No self-referential owner.
-    promotion: declined (adoption of indexed resource/current closed membership and retained-source contracts;no new physical or export assumption).
-- ID: `G1-SLICE.6.5.3.2.3.3.4.2`
-  Status: `pending`
-  Goal: private borrowed actual ease-capture/stop partition join;require exact original request and
-  actual span pointers,not equal IDs,before exposing joined paired child metadata. No self-reference,
-  synthetic owner,projection narrowing,hidden allocation or renewed current/effect authority.
-  Native actual Design caller joins source capture/current stop pipeline and retained child roots;
-  mismatched same-ID/equal-body owners refuse with actual source context. Physical/effects remain.
+    check →93 chapters/248 API rows/1590 source links/2770 rendered links,rc=0. Glossary census
+    →310 terms/9 parts/158 tokens/0 failures,rc=0;knowledge-map →pass,rc=0. Receipt693 →3 exact Git
+    spans,rc=0;retention →1147 logical/52 working/64504 decodedL/5007793 decodedB/2585130 residentB,
+    rc=0. Numeric/current/source/quantity kernels unchanged. Stop component .3.3.acceptance and whole
+    paired .6.5.3.2.acceptance retain deferred broader verification. Required push milestone has
+    explicit owner G1-SLICE.6.5.3.2.prepush-400;derive actual cadence and run all gates before push.
+  - [x] LOCKSTEP: 0535 two public routes/sealed source-join examples/source/quantity frontier
+    paragraphs/canonical decision/task parent/index/D301/MEMORY/DEV/CHANGE align. Whole0534 retained
+    693/three exact Git spans. LIVE/README reviewed unchanged29 suites/G1 6/18. Metadata capture alone
+    does not imply actual Design source preflight or full original-root currentness/quantity
+    availability;real caller uses those existing stages explicitly. No new live lineage,physical/
+    authority/aggregate runtime/atomic effect proof. After cadence milestone,stop component checkpoint
+    and live lineage remain next. Hosted verdict stays unobserved until actual push/job monitoring.
+    promotion: declined (adoption of indexed exact immutable source/current owner contracts;no new physical or export assumption).
 - ID: `G1-SLICE.6.5.3.2.3.3.acceptance`
   Status: `pending`
   Goal: deferred scoped actual stop component checkpoint after .1–.4;full paired lineage/effect/
@@ -441,3 +438,11 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.6.5.3.2.oracle-watch`
   Status: `done`
   Goal:0528 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part687.md).
+
+- ID: `G1-SLICE.6.5.3.2.prepush-400`
+  Status: `pending`
+  Goal: at the next derived400-commit cadence,run required full make check/gate/probes from the
+  clean completed commit before pushing this project's main normally. Observe actual hosted jobs
+  and steps for the pushed SHA;record explicit pending/refusing verdicts rather than infer success.
+  This required push milestone is separate from deferred stop component/whole paired acceptance.
+  Keep all logs project-local;consume every producer/commit/push terminal before dependent work.

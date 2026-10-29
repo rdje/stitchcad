@@ -197,4 +197,4 @@ Actual Design source/query acceptance preserves±2 originals with quarter-partit
 Uniform control spends±1 there. Fresh copy replacement refuses current declarations/local source,
 while original immutable mathematical quantities survive;symbolic amounts remain unavailable.
 Scoped post-implementation Notch checkpoint34 public/4 private plus actual Design5 passes.
-Stop input/ownership/current context/membership rows/ordered child views implemented;closed current sharing selects no original preimage. Sealed capture join/physical/effects remain owned.
+Stop admission/current context/memberships/ordered views/exact capture-owner join implemented;closed current sharing selects no original preimage. Component checkpoint/physical/effects remain owned.
