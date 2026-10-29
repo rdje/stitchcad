@@ -49,6 +49,16 @@ impl<'p, 'd> FormulaCheckedNode<'p, 'd> {
     fn child(self, index: usize) -> Self {
         Self { index, ..self }
     }
+    // Only the recipe implementation can inspect the complete same-proof arena. No caller index
+    // or foreign owner enters this iterator; its order is storage order, not execution order.
+    pub(in crate::recipe) fn all_nodes(
+        self,
+    ) -> impl ExactSizeIterator<Item = Self> + DoubleEndedIterator + 'p {
+        (0..self.certificates.len()).map(move |index| self.child(index))
+    }
+    pub(in crate::recipe) fn dependency_index(self) -> Option<usize> {
+        self.certificates[self.index].dependency
+    }
     /// Original normalized arena owner; no copied or substitutable expression is attached.
     #[must_use]
     pub const fn expression(self) -> &'p FormulaNormalizedExpression<'p> {

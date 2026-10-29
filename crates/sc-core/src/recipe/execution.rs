@@ -2,6 +2,12 @@
 use super::{FormulaCheckedExpression, FormulaCheckedNode, FormulaNameDependency};
 use core::fmt;
 
+mod plan;
+pub use plan::{
+    FormulaScalarExecutionPlan, FormulaScalarExecutionPlanError, FormulaScalarExecutionPlanRefusal,
+    FormulaScalarExecutionSource, FormulaScalarExecutionSourceKind,
+};
+
 /// Explicit per-expression node and logical workspace allowances, without implicit defaults.
 /// Zero is a valid allowance and refuses any nonempty complete proof.
 /// These limits do not widen the language's fixed syntax bounds or bound allocator bytes/CPU.

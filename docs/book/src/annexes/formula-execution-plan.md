@@ -178,6 +178,68 @@ and three origins, dedicated origins, unchanged Unknown/Derived requests, false/
 equal-copy owner refusals, family positions and existing scalar causes. Whole expression execution,
 source-order read traces and real geometry/derived dependencies remain subsequent implementation.
 
+### Prepared scalar source plan
+
+| Public API | Role |
+| --- | --- |
+| `FormulaScalarExecutionPlan` | Complete actual source binding for the available scalar subset |
+| `FormulaScalarExecutionSource` | One original certified name occurrence and its bound source |
+| `FormulaScalarExecutionSourceKind` | Actual canonical inventory join or reserved-name role |
+| `FormulaScalarExecutionPlanRefusal` | Preparation capability/source/allocation refusal |
+| `FormulaScalarExecutionPlanError` | Actual failed node, immutable inventory and original cause |
+
+Consume a complete workspace admission with prepare_scalar(inputs). The prepared plan retains
+that proof/reservation and the actual immutable CanonicalInputs. It binds every name occurrence,
+including repetitions and both branches, before any value or provider read. This is preparation,
+not an executed expression. No value/result accessor or whole-runtime acceptance is available.
+
+```rust
+use sc_core::{recipe::*, value::CanonicalInputs};
+
+let inputs = CanonicalInputs::new(vec![], vec![])?;
+let expression = FormulaExpression::parse("if(1 mm<2 mm,1 mm,eps_phys)")?
+    .normalize_literals()?;
+let proof = expression.check_kinds(&FormulaNamespace::new([])?).expect("static fixture");
+let plan = proof.admit_execution(FormulaExecutionLimits::new(6, 13))
+    .expect("exact allowance").prepare_scalar(&inputs).expect("scalar scope");
+assert!(std::ptr::eq(plan.inputs(), &inputs));
+assert_eq!(plan.sources().len(), 1);
+// eps_phys retains its reserved role; no physical provider is requested during preparation.
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The allocation-free capability scan uses private same-proof node views in certified arena order.
+It accepts the scalar shapes and available numeric/within kernels. Tangent, geometry sources/
+selectors and prior-let sources retain explicit unavailable implementation scope. These preparation
+gaps precede source binding and are not formula_unsupported or another language diagnostic. They
+cannot produce a canonical computed result. An untaken unsupported family still lies outside this
+prepared subset; this is a capability boundary, not whole-language conditional semantics.
+
+After that scan, fallible reservation creates D prospective source records within the admitted
+2N+D allowance. Private certificate indices locate each actual name occurrence; no foreign or
+caller-supplied index is accepted. Actual inventory joins then run in original dependency order.
+sources() is an exact double-ended view in that order, including all repeated/untaken occurrences.
+Canonical records are bound through the sealed join above. Reserved entries retain their exact
+roles without fetching size/tolerance values or checking optional provider availability.
+
+A missing canonical target is invalid source metadata, even in an untaken branch: preparation
+refuses before execution. An existing Unknown/Derived record is valid source metadata and remains
+unread. Likewise, an absent optional context supplies no default value and raises no value refusal
+here; later execution must read only a taken source. The example above intentionally provides no
+physical context. Whole Design/currentness/evidence truth remain their existing owners.
+
+Errors retain the actual failed name/call node and expression owner; allocation errors retain the
+actual root and requested D-record population. Canonical join details reconstruct the same cause
+from immutable original metadata/inventory. The allocator's original error is separately inspectable
+and remains the standard-error source. No partial source plan escapes. No allocator failure is
+claimed as a native fixture: D is bounded by the real 256-node proof; reservation is fallible.
+
+Five native tests cover available scalar forms, actual Unknown borrows, original reserved roles,
+late untaken missing targets, unavailable capability priority and all 256 nodes/255 name occurrences.
+They prepare the full 767-record logical reservation without deduplicating sources. Privacy/lifetime
+documentation controls accompany the API. N task/value workspaces, actual source-order evaluation,
+executed-read traces, real context/provider use and final result provenance remain .5e.2.4.3.2.
+
 Name reads use the actual resolved declaration, not a fresh name-only search that could find another
 source. Canonical length/general scalar adapters retain source/state and return observation or
 dependency-evaluation requirements. Known/Assumed/Preference values remain labelled beside their

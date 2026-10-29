@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — join declarations to actual canonical inventories before reads
+## _(2026-10-29 UTC)_ — prepare complete actual scalar source plans before values
 
-0577 sealed canonical join selects actual dedicated/general adapters in supplied CanonicalInputs. Dedicated metadata requires exact record pointer;general metadata resolves actual id/kind. Missing family retains other-family position;existing scalar cause remains inspectable. No allocation,clone,value or name search.
-Native5 covers checked-name sources,six scalar kinds/three origins,dedicated origins,Unknown/Derived requests,zero/false,family/owner/kind causes and equal-copy controls. Existing length3/scalar5/doc3/scoped strict lint/fmt pass. Initial fixture101 used wrong reserved variant;correct actual IsBaseSize.
-Strict lint caught160-byte Err;store immutable metadata/inventory once plus compact issue,reconstruct detail on inspection. No heap/lint exception. Book94/268/1601/2799/glossary310/9/158/0 pass. [Whole0576 admission](docs/history/stitchcad-devnotes-part735.md) retains four exact Git spans.
-Indexed source/owner/scope rules apply;promotion declined. Join is supplied-component membership,not whole Design/currentness/evidence/execution. Next .5e.2.4.3 real bounded machine and contexts;missing families stay owned. LIVE G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;D334/D156/D223/PLANNING.5 owned.
+0578 private same-proof arena/dependency views drive capability scan then fallible D-source reservation. Join every canonical occurrence in original dependency order;reserved roles stay unresolved. Actual record/proof borrows survive repeated/untaken uses. No value/provider read or computed result.
+Native5 covers available forms,Unknown/optional contexts,late missing target actual node/cause,full256/255/767 logical bound and tangent root/mixed/untaken/geometry/prior-let gaps. Existing node6/admission4/doc7/scoped strict lint/fmt pass. Allocation cause retained;no fake oversized proof/OOM fixture.
+Book94/273/1601/2800/glossary310/9/158/0 pass. [Whole0577 source join](docs/history/stitchcad-devnotes-part736.md) retains four exact Git spans. Private complete-plan fields and actual original error nodes prevent prefix/source substitution;capability scope remains distinct from language semantics.
+Indexed source/resource/proof rules apply;promotion declined. Next .5e.2.4.3.2 actual N-task/N-value worker,executed reads and real contexts/provenance. Whole derived/geometry/tangent/recipe/replay/platform work owned. LIVE G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;D334/D156/D223/PLANNING.5 owned.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

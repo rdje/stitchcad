@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0577 — join actual canonical input inventories before authored reads
+## STITCHCAD-G1-0578 — prepare actual complete scalar source plans before reads
 
-- Sealed declaration/inventory join pins actual dedicated length pointer or general scalar target/kind. Retain missing-family positions and original scalar cause without allocation,clone,value/name search. Unknown/Derived stay unread;zero/false stay present. No containing Design/currentness/evidence/execution claim.
-- Native5/input3+5/doc3/scoped strict lint/fmt pass;book94/268/1601/2799/glossary310/9/158/0 and whole0576 receipt735/four Git spans pass. Compact error fixes strict160-byte refusal without heap/lint exemption. Next .5e.2.4.3 actual machine/real contexts;G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
+- Complete same-proof capability scan precedes fallible D-source reservation and actual canonical joins in dependency order. Keep repeated/untaken sources and optional reserved roles unread. Tangent/geometry/prior-let gaps stay preparation scope,no language refusal or placeholder result.
+- Native5/node6/admission4/doc7/scoped strict lint/fmt/book94/273/1601/2800/glossary310/9/158/0 pass. Whole0577 retained736/four Git spans. Next .5e.2.4.3.2 actual N-task/N-value worker and real sourced reads/contexts. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;whole runtime/paired/physical work owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

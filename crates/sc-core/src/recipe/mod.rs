@@ -151,7 +151,9 @@ pub use checked::{
 mod execution;
 pub use execution::{
     FormulaExecutionAdmission, FormulaExecutionAdmissionError, FormulaExecutionAdmissionRefusal,
-    FormulaExecutionLimits,
+    FormulaExecutionLimits, FormulaScalarExecutionPlan, FormulaScalarExecutionPlanError,
+    FormulaScalarExecutionPlanRefusal, FormulaScalarExecutionSource,
+    FormulaScalarExecutionSourceKind,
 };
 
 mod checked_statement;
