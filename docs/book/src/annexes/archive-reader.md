@@ -126,11 +126,13 @@ Git stays project-scoped.
 ```bash
 python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
+python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --deep
 ```
 
-The native entry retains28 calibrated cases. Its companion captures plans/effects with simulated
-children; --deep and further physical/body calibration remain .f.fixture-verification under the
-[checking policy](checking-policy.md). Activation-omission parsing has a focused regression.
+The native entry retains28 calibrated cases. Companion --deep verifies interrupted-copy teardown,
+HEAD evidence and ten source-body omission controls with simulated children. Complete original-body
+and physical-entry calibration remain .f.fixture-verification under the
+[checking policy](checking-policy.md);this scoped pass does not close that parent.
 Capture-pinned v1 traps substitute logical bytes only for deliberate raw-read faults, retaining the
 original missing-public-read assertion. Legacy catalogs/non-changelog rows stay valid.
 

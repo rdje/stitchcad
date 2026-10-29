@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification in docs/tasks/G1-SLICE-producers.md:
-  required before next authorized push. Read actual archive companion/entry contracts,finish
-  --deep interrupted/metadata/omission scope;default mode does not cover it. Activate after commit.
-- D315 fixed0546:67 explicit roles,32 effect/64 file rows,new12 pending audit groups;333 Git
-  candidates/396 boundary checks pass,all adversarial coverage controls pass. Inventory is not
-  runtime/locality signoff;D156 remains open. No historical/certificate producer rerun or data change.
-- Whole0545 retained704/3 spans;book93/248/1590/2771/tree10/13/17/0/map/retention1158 pass.
-  LIVE29 suites/G1 6/18 unchanged;D307–D317 fixed. Last G018/1 human unapproved;no hosted verdict.
-- Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538. After due fixture proof,run
-  full check/gate/probes from clean completed HEAD,normal push/actual exact-SHA hosted jobs.
-- Then stop .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/Profile/current
-  authority/aggregate/effect proof remain owned. Consume terminals before edits/staging/moving.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.body in docs/tasks/G1-SLICE-producers.md:
+  complete original cases/packer/resident/CLI AST preservation through explicit adapters to
+  frozen1b8fc23;actual body faults must fail. Then .physical/.acceptance before full gates/push.
+- Deep0547 passed:11 dirs/1077 files,positive411 plans/203 effects/9 simulated children;
+  interrupted15/6/0,HEAD evidence and10 actual omission reds. Captured inputs/stores restored.
+  No source change,fresh native28 replay or full CI claim. Parent fixture-verification stays open.
+- Whole0546 retained705/3 spans;book93/248/1590/2771/retention1159 pass. Aggregate working64
+  is not a per-generation limit. LIVE29 suites/G1 6/18 unchanged;D156 audits/G0 human unapproved.
+- D315333-source role/ownership fix22e1a265 is committed;12 audit groups remain pending.
+  Full95925f7b check0/gate0/probes2;target/prepush-400-0538. No push/hosted verdict.
+- After due archive acceptance,full check/gate/probes from clean HEAD,normal push/actual jobs;
+  then stop .3.3.acceptance/live lineage .3.4. Full PNT continues;consume terminals before edits.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

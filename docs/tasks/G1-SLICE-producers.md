@@ -326,13 +326,63 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Acceptance: whole scope and six proof boxes retained in [part313](../history/window12.md#stitchcad-devnotes-part313md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification`
-  Status: `pending`
+  Status: `in_progress`
   Goal: deferred .a25.2 exhaustive AST/physical/omission calibration at a later integration milestone,
   before the next authorized push; director2026-10-25 focused-check ruling.
   Paths: docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
   Acceptance: preserve complete original cases/packer/resident/CLI predicates through declared adapters;
   finish physical refusal and --deep calibration, including activation-omission parser regression.
   Source/archive restoration and bounded cleanup remain mandatory. No full calibration is claimed now.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.deep`
+  Status: `done`
+  Goal:0547 existing deep companion controls completed at due prepush milestone;parent remains
+  in progress until original-body/physical/acceptance obligations are separately verified.
+  - [x] REPRODUCE / ISSUE: parent deferred by0243 explicitly until before next authorized push;
+    cadence411 at22e1a265 now makes this integration proof due. Source CLI branches show default
+    mode excludes interrupted/metadata/omission checks;--deep selects them,source read rc=0.
+  - [x] ROOT CAUSE (WHY + WHERE): full360-line companion/332-line native producer and
+    git diff 1b8fc23..22e1a265 -- docs/tasks/artifacts/history_archive/history_archive_probes.py
+    →reviewed adapters,rc=0;distinguish actual capture/HEAD/omission proof from complete
+    original-body/physical-entry calibration. Split existing parent into bounded owned
+    deep/body/physical/acceptance slices before execution;no new runtime audit or product scope.
+  - [x] FIX: run existing --deep without source changes;keep all producer inputs frozen until
+    terminal completion. Original setup-removal trap retains old failure evidence. No native
+    producer,reader,guard,policy,archive payload or threshold changed. This is verification only.
+  - [x] ADDRESSED (verified): local_environment.py -- python3 -I -B
+    docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --deep →rc=0;
+    pure population11 directories/1077 files;positive capture411 plans/203 effects/9 simulated
+    children;interrupted copy15 plans/6 effects/0 children. Present-unreadable/unavailable HEAD
+    refuse;genuine first transition retains27 cases. Ten compiled actual source/file/directory/
+    activation/write/store/Git/teardown/HEAD assertion reds pass;captured inputs/stores restored.
+    Complete terminal consumed;log target/archive-fixture-0547-deep.log. OS metadata observed
+    owned process running;later sample raced normal completion,no process was signaled.
+  - [x] NO REGRESSION: git diff --exit-code -- .doctrine/history_archive docs/history and
+    both producer/companion sources →rc=0;only owned705/task/live changes remain. Book build/
+    positive publication93/248/1590/2771,rc=0;receipt705 →3 exact Git spans,rc=0;retention1159
+    logical/64 aggregate working/65331 decodedL/5091535 decodedB/2668872 residentB,rc=0.
+    git diff --check →rc=0. This is simulated-child capture,not fresh native28 replay or full CI.
+  - [x] LOCKSTEP: whole0546 task/lesson/changelog retained705 before curation. Archive-reader
+    book names passed deep scope and pending original-body/physical proof;MEM/DEV/CHANGE/index/
+    ledger align. LIVE reviewed unchanged:29 suites,G1 6/18,D156 audits open,G0 human unapproved.
+    README objective/commands unchanged. Next .body after clean commit;parent acceptance/full
+    check/gate/probes/normal push/exact-SHA hosted jobs remain owned and unobserved.
+    promotion: declined (application of indexed deferred integration,scope-specific capture and consume-before-edit rules;no new archive or runtime policy).
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.body`
+  Status: `pending`
+  Goal: compare complete original cases/packer/resident/CLI predicates to frozen pre-guard source
+  through explicit reviewed adapters. Add independent critical-body omissions/changes that must
+  turn actual comparison red;retain public fixture APIs and all original refusal families.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.physical`
+  Status: `pending`
+  Goal: actual controlled-mirror entry refusals for unsafe inputs/workspaces/stores,with source/
+  archive/full mirror identity and no-before-refusal effects. Exercise only owned same-volume
+  fixtures;never initialize or amend another Git repository or write through source aliases.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.acceptance`
+  Status: `pending`
+  Goal: after deep/body/physical slices,finish scoped parent calibration and register its current
+  watch in existing probes;actual native28 and companion scope must remain distinct. Consume all
+  restoration/verification terminals,commit,then parent prepush full check/gate/probes and jobs.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.3`
   Status: `pending`

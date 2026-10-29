@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — complete conservative source roles and coupled audit ownership
+## _(2026-10-29 UTC)_ — observe the deferred deep archive-fixture controls
 
-0546 D315 adds67 inspected candidates:31 reference/30 output/4 delegate/2 native. Include pure stdout oracles,readonly witnesses,writers,archive tools and native certificate/probe drivers. Nested build.rs is an ordinary mod build source,not a Cargo entry. No candidate executed to classify it.
-Append32 Python effect/64 file rows;11 new effect groups and one bounded native group remain pending. Original source-ledger byte prefix/old row values survive;0151 counts explicitly historical. Contract333 Git paths/396 boundary checks,all source/effect/file data and actual guard reds pass0.
-Book93/248/1590/2771,tree10/13/17/0,map/704 receipt3/retention1158 pass0. Whole0545 retained. LIVE29 suites/G1 6/18 unchanged,D315 fixed,D156 runtime/locality audits open. Inventory cannot certify those audits;no historical author,installer or certificate controller was rerun.
-[Whole0545 status repair](docs/history/stitchcad-devnotes-part704.md). Promotion declined:indexed source-role/exact ownership/proof-scope contracts. Existing .f.fixture-verification explicitly requires archive --deep before next push;finish that due scope next,then full gates/push/actual jobs. G0 human unapproved.
+0547 due milestone:0243 deferred complete archive calibration until next authorized push;cadence411 reached. Read full companion/native producer and original migration diff;split existing parent into deep/body/physical/acceptance leaves. No producer source or archive policy changed.
+Existing --deep passes0:population11/1077,positive capture411 plans/203 effects/9 simulated children,interrupted15/6/0,HEAD evidence and10 compiled actual guard reds. Captured source/store restoration passes;terminal consumed. Process metadata showed active work;later sampling raced normal completion.
+Git diff confirms tracked archive/producer/companion exact;book93/248/1590/2771,705 receipt3/retention1159 pass0. Whole0546 retained. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. No fresh native28 or full CI claim.
+[Whole0546 inventory repair](docs/history/stitchcad-devnotes-part705.md). Promotion declined:indexed scope-specific capture/deferred integration/terminal rules. Next complete original-body preservation,then physical/parent acceptance before full gates/push/actual hosted jobs. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0546 — complete conservative source roles and coupled ownership
+## STITCHCAD-G1-0547 — verify deferred deep archive-fixture controls
 
-- Fix D315 with67 explicit source roles,32 Python effect rows,64 file rows and12 pending audit groups. Preserve original ledger bytes/values and conservative filename census;ordinary nested build.rs remains a module. No candidate producer rerun or runtime/locality signoff.
-- Independent Git333/boundary396 coverage and source/effect/file adversarial controls pass;book/tree/map/history checks pass. Whole0545 retained704/three exact Git spans. LIVE29 suites/G1 6/18 unchanged,D315 fixed,D156 audits remain open.
-- Complete existing deferred archive-fixture --deep scope before the required full prepush retry. Commit inventory first;full check/gate/probes,push and actual hosted jobs remain pending. G0 human closure unapproved.
+- Complete existing --deep scope at the due prepush milestone:interrupted-copy teardown,HEAD evidence and10 actual source-body omission controls pass. Source/stores restored;all producer inputs stayed frozen until terminal completion.
+- Preserve existing parent obligations as separate original-body,physical-entry and acceptance leaves. No producer/reader/archive-policy change,no fresh native28 replay and no full CI verdict. Whole0546 retained705/three exact Git spans;book/history checks pass.
+- LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Continue original-body proof after this commit,then remaining archive acceptance/full gates/normal push/actual hosted jobs.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
