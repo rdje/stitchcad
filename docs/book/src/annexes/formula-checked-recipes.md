@@ -153,6 +153,20 @@ Explicit source/name/canonical getters deliberately expose authored content to t
 
 ## Verification and remaining authority
 
+The reference copied-book consumer rechecks the whole book/loaders and then its effective
+selectors before shell delegation. The selector plan contains the four selected files,every
+parts file and direct local links from the contract,grammar and examples. Its current default
+population is23,including docs/book/src/annexes/formula-rationals.md. The capture oracle retains
+strict set equality;the public shell's actual L7 resolver and producer independently agree on
+that population. Removing only the rational target from the actual final plan is refused.
+All22 earlier oracle paths and every other capture/guard/classifier statement stay exact.
+
+The guard calibration passes six intercepted dispatches,pure196,twelve guard negatives,
+fourteen physical refusals and owned no-effect admission controls. Its authored child metrics
+remain separate from the real reference consumer:the actual21-statement replay and25-statement
+measurement ceiling pass,and11 original reference faults plus2 consumer/1 measurement faults
+produce14 actual assertion refusals. These are reference-consumer proofs,not product execution.
+
 The [execution sequence](formula-execution-plan.md) joins these actual static owners to sourced value
 primitives. [Actual per-node certificates](formula-checked-nodes.md) are available; expression/statement
 execution comes next. Neither proof construction nor supplied-value callbacks execute a whole recipe.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — current coupled adapters and complete composed population
+## _(2026-10-29 UTC)_ — independent recipe selector closure stays current
 
-0554 closes D321–D323:two shared-operand Rust adapters/one current copied-book anchor. Initial literal-only9 census omitted19 appended whole faults;correct scope28 Rust/6 reference/3 book. Frozen proof keeps all other AST/API/plans/data exact;7 other local/19 standing whole tuples unchanged.
-Native26723 shared cases/28 Rust oracle reds/6 reference reds/3 copied-book reds and source/artifact restoration pass0. Whole producer244 runtime/1125 body reds/4 static captures/58 child-file/330 physical/35 classifiers passes0. Native/dispatch proofs stay separate;no production change.
-Whole0553 retained712/3 spans;book93/248/1590/2771 and retention1166 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D321–D323 fixed,D156 audits open. Fresh full gates/normal push/actual exact-SHA jobs remain required before product stop checkpoint/live lineage.
-[Whole0553 statement proof](docs/history/stitchcad-devnotes-part712.md). Promotion declined:indexed composed-population/current-adapter/separate-proof scope. Full PNT continues.
+0555 closes D324:producer/public shell L7 plan23 while old capture oracle22 missed rational annex link added0244. Append one expected path;strict equality/22 old paths/all other controller AST exact. Actual rational-only plan omission refuses. Production entry/shell unchanged.
+Captures6/pure196/guard12/physical14/positive/owned no-effect admissions pass0. Real consumer21/25 ceiling and11 original+2 consumer+1 measurement fault reds pass0. Intercepted metrics stay authored. Fullc455 check0/gate0/probes2 reached29;sole observed recipe traceback/source restored.
+Whole0554/prior ledger retained713/four spans;book93/248/1590/2771 and retention1167 pass0. New/uncommitted curation delimiter refused before writes;committed boundary retry/receipt verified. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D324 fixed,D156 audits open.
+[Whole0554 coupled proof](docs/history/stitchcad-devnotes-part713.md). Promotion declined:indexed public-selector closure/exact oracle/omission calibration. Next remaining environment entries,then fresh full gates/normal push/actual jobs;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

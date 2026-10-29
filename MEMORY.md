@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400 in execution sibling:fresh full check/gate/probes from
-  clean completed HEAD,normal push only after all pass,then actual exact-SHA hosted jobs/steps.
-  Derive ahead count;cadence already reached. No push/hosted verdict yet.
-- D321–D323 fixed0554:two shared-operand Rust adapters/one copied-book anchor;full composed
-  9 local+19 whole=28 Rust/6 reference/3 book population preserved. Native26723 shared cases,
-  28 Rust/6 reference/3 book reds and source/current artifact restoration pass0. Local-only9
-  census undercount explicitly corrected before code;all other AST/API/plans/data exact.
-- Whole producer passes0:244 runtime/1125 body reds/4 complete static captures/58 child-file/
-  330 physical/35 classifiers,source exact. Logs target/coupled-0554-{native,focus,producer}.log.
-- Whole0553 retained712/3 spans;book93/248/1590/2771,retention1166 pass. Last full57bd check0/
-  gate0/probes2 reached29;fresh full retry required. LIVE G1 6/18/29 suites/G0 human unapproved;
-  D156/12 audits open. Expression16/statement22/archive28 scoped proofs complete separately.
-- After prepush milestone resume stop .3.3.acceptance/live lineage .3.4. Full PNT continues.
+- Next G1-SLICE.6.5.3.2.prepush-400 in execution sibling:verify remaining environment entries
+  from published runner after python_recipe_fixture_contract.py;start python_input_context_contract.
+  Logs target/prepush-400-0555-environment. Resolve owned failures,then fresh full check/gate/probes
+  from clean completed HEAD before normal push/actual exact-SHA hosted jobs. No push/verdict yet.
+- D324 fixed0555:one expected rational-annex path;22 old paths/all other AST exact. Public shell/
+  producer/oracle closure23;actual rational-only final-plan omission refused. Captures6/pure196/
+  guards12/physical14/positive/admission controls pass0;real consumer21/25 ceiling and14 fault reds0.
+- Full c455f929/derived419:check0/gate0/probes2;all29 reached,one recipe capture traceback;source
+  restored clean,all terminals consumed. Logs target/prepush-400-0554. Whole0554/prior ledger
+  retained713/four spans;book93/248/1590/2771,retention1167 pass. Production entry/shell unchanged.
+- LIVE G1 6/18/29 suites/G0 human unapproved;D156/12 audits open. Coupled26723/28 Rust/6 ref/3
+  book,expression16/statement22/archive28 scoped proofs complete. Then stop .3.3.acceptance/live
+  lineage .3.4. Full PNT continues;consume all producer/commit terminals before dependent work.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

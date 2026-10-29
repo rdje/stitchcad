@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0554 — align coupled source/book adapters and composed proof scope
+## STITCHCAD-G1-0555 — restore complete independent recipe selector oracle
 
-- Close D321–D323 with two current operand adapters/one copied-book anchor. Correct local-only9 census to9+19=28 Rust,6 reference/3 book controls. All other AST/API/plans/data and standing tuples exact. Native26723 shared cases/all original fault controls/source restoration pass.
-- Whole producer runtime/body/mode/physical/classifier checks pass0;dispatch and native scopes remain distinct. Whole0553 retained712/three spans;book/history checks pass. Fresh full prepush gates/normal push/actual jobs remain next;no full verdict inferred.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D321–D323 fixed,D156 audits open. Then stop component acceptance/live lineage;full PNT continues.
+- Close D324:append rational annex to expected child inputs23,retain22 original paths/strict equality/all other AST. Public shell/producer/oracle agree;actual rational-only omission refuses. Original capture/physical/body/native consumer/restoration controls pass. Production unchanged.
+- Fullc455 check0/gate0/probes2 reached29;sole recipe capture traceback. Whole0554/prior ledger retained713/four spans;book/history checks pass. Verify remaining environment entries then fresh full prepush/normal push/actual jobs;no whole verdict inferred.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D324 fixed,D156 audits open. Full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
