@@ -96,6 +96,11 @@ pub use document::{FormulaRecipeDocument, FormulaRecipeDocumentError};
 mod expression_document;
 pub use expression_document::{FormulaExpressionDocument, FormulaExpressionDocumentError};
 
+mod sources;
+pub use sources::{
+    FormulaSource, FormulaSourceLimits, FormulaSourceResource, FormulaSources, FormulaSourcesError,
+};
+
 mod semantic;
 pub use semantic::{
     FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName, FormulaSizeName,

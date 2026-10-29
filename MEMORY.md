@@ -1,13 +1,13 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.2:actual formula-id/source/body/binding contracts before choosing
-  owned registry/dependency admission units. Preserve actual Formula(id) amount→DesignParameter
-  metadata contract;canonical Derived ids remain sole source references requiring real joins.
-  Read interfaces/namespace/rounding/identity requirements before selecting safe implementation.
-- Expression source document0587 ready:original text/canonical syntax/source-borrowed views;
-  native4/doc3(E0616/E0515)/scoped lint/fmt/book96/301/1623/2842/glossary310/9/158/0 pass. No
-  fake header/name/entity/value/graph proof. Whole0586 retained745/four Git spans/live ids intact.
-- Scalar checkpoint0586:native9/reference18/7/4167B exact,scoped only. D339 fixed0586;preserve
+- Next G1-SLICE.5e.2.5.derived.3:actual canonical Derived source joins,namespace/kind/dependency/
+  cycle and complete bounded admission contracts. Preserve Formula(id) amount→DesignParameter
+  metadata meaning;canonical Derived ids need real source joins,no guessed let/rounding/value.
+- Source inventory0588 ready:explicit entity ids/original documents,immutable authored order,
+  exact-id index and complete explicit count/original/canonical-byte quotas before allocation.
+  Native4/independent256/doc3/scoped lint/fmt/parameter2/book96/306/1624/2844/glossary0 pass.
+  No global Design/kind/graph/value/currentness proof. Whole0587 retained746/four Git spans/ids.
+- Scalar checkpoint0586:native9/reference18/7/4167B exact,scoped only. Preserve D339
   target/book_search_capture_0586_book_final at its source boundary;never overwrite old captures.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.

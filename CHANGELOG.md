@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0587 — own original formula expression source without invented statement context
+## STITCHCAD-G1-0588 — own explicit original formula source entities
 
-- Add immutable original expression/canonical syntax document and source-borrowed normalization using existing factories. Preserve original spans/refusals/exact-source equality;no fake let/name/entity/graph or computed value. Existing Formula(id) parameter contract stays intact;actual binding integration next.
-- Native4/doc3/scoped lint/fmt/book96/301/1623/2842/glossary310/9/158/0 pass. Whole0586 retained745/four Git spans/live ids intact. Next .5e.2.5.derived.2 actual source-id/body/binding contracts. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;full families/replay/platform/physical still pending.
+- Add immutable authored source inventory/exact-id lookup,complete explicit retained-content quotas and original duplicate positions. Preserve actual source buffers/canonical aliases and parameter-backed Formula(id) semantics;no global Design/kind/graph/value proof or extra rounding.
+- Native4/independent256/doc3/scoped lint/fmt/parameter2/book96/306/1624/2844/glossary0 pass. Whole0587 retained746/four Git spans/live ids. Next .derived.3 canonical source joins/static graph admission. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;full integration remains pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -190,44 +190,52 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   decision source inspected,rc=0. Source identity/binding integration remains explicitly pending.
 - ID: `G1-SLICE.5e.2.5.derived.1`
   Status: `done`
-  Goal: immutable owned original expression document with existing typed canonical syntax identity
-  and source-borrowed normalization. Reuse actual parser/converter/serializer;preserve exact text,
-  spans,syntax/literal causes,privacy and equality semantics. No fake let/header/name or new
-  syntax is needed. Document ownership does not supply namespace/kind/value,entity identity,
-  dependency graph,currentness or execution proof. Focused native/compiler/book checks then commit.
-  Existing whole-recipe document supplies the accepted ownership pattern;read its original API,
-  native contracts and canonical-state decision before implementation. No extra source/state cache.
-  Completion0587: original expression document available;actual id/graph integration stays .2.
-  - [x] ROOT CAUSE (WHY + WHERE): read document.rs/normalized.rs and actual recipe-document
-    native contracts;DesignInputsDefinition/host/value and normative source-state contracts
-    inspected,rc=0. Existing borrowed expressions need an owned raw-source boundary without a
-    fictitious let/header. Original recipe document's accepted source/canonical/borrow pattern
-    applies;no claim that referenced formula ids already identify a real expression owner.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_expression_document_contract
-    -- --nocapture →four pass,rc=0. Real caller-buffer ownership,original grouped spans,canonical
-    aliases/exact-source inequality,immutable replacement/repeated views,original syntax/literal
-    causes and whole branch literal checks retained. Empty/header/nonASCII sources keep syntax
-    refusal. Missing names/division/negative roots/kind mismatch remain syntax-only until real
-    checking;no computed result,namespace/kind proof,entity identity or graph is invented.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc recipe::expression_document -- --nocapture
-    →three pass,actual E0616/E0515 and positive example,rc=0. Strict core-lib/new-target Clippy
-    and changed Rust formatting/diff pass,rc=0. Existing parser/converter/serializer reused;
-    their complete algorithms/Derived evaluation not recertified by these wrapper checks. Book96/
-    301/1623/2842/glossary310/9/158/0 and retained745/four exact Git spans pass,rc=0. Retirement
-    preserves complete live id/order sequence,including D339 child;old whole586 scope exact.
-    No new dependency,default,value/state cache or change to actual Formula(id) parameter contracts.
-  - [x] LOCKSTEP: book source-document API/example/boundaries and API map,task/index/MEM/DEV/
-    CHANGE/LIVE align. Next .5e.2.5.derived.2 actual source-id/body/binding semantics before
-    selecting concrete owned registry/bounded dependency units. Full families/Derived/load/replay/
-    platform/physical and D334/D156/D223/PLANNING.5 remain owned. G1 6/18/G0 unapproved;full/hosted
-    79bd6f6a SHA-scoped. D339 proof retained at its0586 source boundary;never overwrite captures.
-    promotion: declined (existing original-source ownership,typed identity,no-invented-context and borrowed-proof rules applied;no new formula-id semantics or authority policy).
+  Goal:0587 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part746.md).
 - ID: `G1-SLICE.5e.2.5.derived.2`
+  Status: `done`
+  Goal: own explicit formula-source entity ids and actual expression documents in an immutable
+  bounded registry. Preserve authored order,original buffers and exact source identity;reject
+  complete count/original-byte/canonical-byte quota breaches before allocating one fallible sorted
+  lookup index. Reject duplicate ids with first/original duplicate positions;never deduplicate by
+  equal canonical text or generate ids/names/values. Existing Formula(id) quantity parameters keep
+  their separate metadata→canonical target contract. No global Design census,namespace/kind/graph,
+  binding rounding,evaluation or currentness claim;next .3 owns real canonical Derived source joins
+  and complete static graph admission before runtime. Existing document factories remain unchanged.
+  Recovery: DesignParameter::declaration and sewing_amount_declarations enforce actual parameter
+  ids;ontology §1/§3.1 assigns stable ids to semantic entities and an expression graph to Design;
+  formula §4.2 adds no arbitrary expression rounding. Source ownership can precede graph/binding
+  semantics without guessing a let or changing quantity resolution. Focused native/compiler checks,
+  scoped lint/fmt,book/glossary and exact previous-scope retirement;full verification .5g/pre-push.
+  Completion0588: source inventory available;canonical joins/graph admission remain .3.
+  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'source: String|canonical:|never re-derived|Formula\('
+    expression_document.rs/ontology/id.rs/design/sewing.rs → original document buffers,stable
+    entity-id rule and actual parameter-backed amount branch,rc=0. Existing owned document lacks
+    an entity collection;canonical Derived references need actual source owners before graph work.
+    Source ownership introduces no parameter reinterpretation or numeric rounding boundary.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_sources_contract -- --nocapture
+    →four pass,rc=0. Exact buffers/spans/order/id lookup,canonical aliases with distinct ids,
+    complete separate quotas/empty draft and source-only static failures retained. All256 four-id
+    sequences match an independent authored-prefix duplicate scan,including triples/competing ids.
+    Duplicate identities always refuse with real first/earliest duplicate positions;no prefix.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc recipe::sources -- --nocapture →three pass,
+    actual E0616/E0277 guards,rc=0. Scoped strict core-lib/new-target Clippy/final native rerun/
+    changed Rust formatting pass,rc=0. Initial test panic lint refused;replace with real assertions,
+    no lint waiver. cargo test -p sc-measure --test design_inputs_contract sewing_formula_amount_
+    -- --nocapture →two pass,rc=0;actual parameter/kind/canonical-presence boundaries retained.
+    Positive book96/306/1624/2844/glossary310/9/158/0 pass,rc=0;746 retains four exact Git spans
+    and complete prior live ids/order,rc=0. Full graph/evaluation/platform suites not run here.
+  - [x] LOCKSTEP: book ownership/example/limits/identity boundaries and five API map rows,
+    task/index/MEM/DEV/CHANGE/LIVE align. Next .derived.3 actual canonical Derived source joins
+    and complete static admission;global Design registry/binding/cycle/value/currentness proof
+    remains pending. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;full families/load/replay/
+    physical and D334/D156/D223/PLANNING.5 remain owned. D339 historical capture preserved.
+    promotion: declined (existing explicit identity,original document ownership,complete admission and immutable borrowed-view rules applied;no new language or authority rule).
+- ID: `G1-SLICE.5e.2.5.derived.3`
   Status: `pending`
-  Goal: recover remaining identity/source/body binding semantics,including actual parameter-backed
-  Formula(id) contracts and canonical Derived formula references,before selecting explicit owned
-  source-registry and complete bounded dependency admission units. Retain real source,namespace,
-  actual target/kind and cycle/refusal context;no caller value or guessed statement surrogate.
+  Goal: join original canonical Derived references to actual source records,including target/kind,
+  namespace/dependency/cycle and complete explicit resource requirements before value execution.
+  Read actual static proofs and source adapters;choose bounded safe integration units without
+  changing Formula(id) parameter semantics or inventing numeric binding boundaries.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

@@ -236,7 +236,8 @@ Duplicate/unbound names and incompatible kinds remain inspectable until static c
 `FormulaExpressionDocument::new(source)` owns an original expression String and its existing typed
 canonical expression identity. It reuses the actual expression parser,literal converter and
 serializer. It supplies no fake let,name,header or statement ordinal. This is the source-ownership
-prerequisite at .5e.2.5.derived.1;actual source-id binding/dependency integration remains .derived.2.
+prerequisite at .5e.2.5.derived.1;explicit source owners follow below. Canonical joins and complete
+dependency admission remain .derived.3.
 
 | Public API | Meaning |
 | --- | --- |
@@ -279,6 +280,67 @@ syntax/literal causes,including complete branch literals and syntax-only numeric
 Three documentation tests include actual private-field E0616 and borrowed-view E0515 refusals plus
 the positive example. Existing parser/literal/kind/numeric obligations retain their own checks;
 these document controls do not independently recertify their algorithms or Derived execution.
+
+## Explicit formula source owners
+
+`FormulaSource::new(id, expression)` retains an explicitly assigned EntityId and the actual owned
+expression document. Ids come from the existing entity-creation boundary;they are never generated
+from expression text,canonical bytes or list position. Equal bodies can belong to distinct entities.
+A source has no invented variable name,output annotation,let header or stored result.
+
+`FormulaSources::new(sources, limits)` takes the complete ordered vector without cloning original
+or canonical buffers. It publishes an immutable registry only after complete content admission and
+unique-id checking. sources() borrows authored order;source(id) returns that exact original owner
+through a sorted index. Missing ids return None;labels,canonical aliases and neighboring ids supply
+no fallback. Private fields prevent rebinding through either shared view. Debug omits source text.
+
+| Public API | Meaning |
+| --- | --- |
+| `FormulaSource` | Explicit source entity id and actual original expression document |
+| `FormulaSources` | Complete immutable ordered inventory and exact-id lookup |
+| `FormulaSourceLimits` | Explicit source-count,original-byte and canonical-byte allowances |
+| `FormulaSourceResource` | Sources, OriginalBytes or CanonicalBytes population |
+| `FormulaSourcesError` | Complete quota/overflow,duplicate identity or allocation refusal |
+
+The three limits are independent. Original bytes include whitespace;canonical bytes count the
+separately retained typed identities. Every record counts,including an unused source or a repeated
+body. Count also bounds one index record per source. Zero allowances admit an empty registry.
+Construction checks count,checked byte sums,original-byte allowance and canonical-byte allowance
+before fallibly reserving that single index. Its in-place sort changes no source order or body.
+DuplicateIdentity retains the actual id,first authored position and earliest authored duplicate,
+even when numeric id order differs. Identical duplicate bodies still refuse. No accepted prefix
+escapes any refusal;Allocation retains the original TryReserveError in the standard error chain.
+
+```rust
+use sc_core::{ontology::EntityId, recipe::{FormulaExpressionDocument, FormulaSource,
+    FormulaSourceLimits, FormulaSources}};
+let expression = FormulaExpressionDocument::new(" 2.5 cm + eps_num ".into())?;
+let limits = FormulaSourceLimits::new(1, expression.source().len(),
+    expression.canonical().as_str().len());
+let id = EntityId::from_bits(9001); // explicit fixture identity, not a production allocator
+let sources = FormulaSources::new(vec![FormulaSource::new(id, expression)], limits)?;
+assert_eq!(sources.source(id).unwrap().expression().source(), " 2.5 cm + eps_num ");
+assert!(sources.source(EntityId::from_bits(9002)).is_none());
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+These are retained-content/index allowances after caller-owned document creation. They do not
+bound that earlier allocation,parser scratch,allocator overhead,numeric kernels,CPU or graph work.
+Admission policy is not stored canonical content. No canonical source-state/value cache is added.
+
+This inventory alone proves no global Design identity disjointness,namespace/kind validity,
+canonical Derived join,acyclic dependencies,currentness or evaluated result. For example,
+missing+1 mm/0 stays inspectable source;actual static checking still refuses its missing name.
+Canonical Derived { formula } needs a real source join before execution. Existing quantity
+Formula(id) continues to resolve actual DesignParameter metadata and its current canonical target
+([sewing amounts](../spec/design-inputs.md#actual-sewing-amount-declarations));source9001 cannot
+impersonate parameter5001. No extra rounding boundary is introduced for an owned expression.
+
+Four focused native contracts cover original buffers/spans/order,exact-id versus canonical alias,
+separate complete quota boundaries,empty drafts,source-only static refusals and an independent
+prefix-scan comparison over all256 four-record sequences of four ids. Three documentation guards
+reject default limits,private-registry mutation and id rebinding. Existing parsing/kind/numeric
+algorithms and full dependency execution retain their separate proof obligations.
 
 ## Verification scope
 

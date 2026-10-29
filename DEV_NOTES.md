@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — retain actual expression source before Derived identity integration
+## _(2026-10-29 UTC)_ — own explicit original formula sources before canonical graph joins
 
-0587 adds immutable original expression/canonical syntax document and source-borrowed normalization through existing factories. Actual Design inputs own whole recipe source/initial metadata;referenced formula ids still need a real source join. Preserve existing Formula(id) amount→DesignParameter contract.
-Native4/doc3(E0616/E0515)/scoped strict lint/fmt pass. Actual spans/source equality versus canonical aliases,original syntax/literal causes,complete branch literals and syntax-only failures retained. No fake let/name/entity/namespace/kind/value/graph,currentness or readiness;no new algorithm/dependency/state cache.
-Book96/301/1623/2842/glossary310/9/158/0 pass;[whole0586 recipe/search checkpoint](docs/history/stitchcad-devnotes-part745.md) retains four exact Git spans and both live task ids. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Preserve D339 capture at its0586 source boundary;never overwrite old snapshots.
-Existing source/identity/borrow rules apply;promotion declined. Next .5e.2.5.derived.2 recover actual id/body/binding/namespace contracts before owned registry/bounded dependency work. Full Derived/families/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400.
+0588 consumes actual expression entities into an immutable ordered registry with exact-id lookup. Complete explicit count/original/canonical-byte quotas precede one fallible sorted index;duplicate ids retain first/earliest authored positions. Original buffers/spans survive;canonical aliases never merge ids.
+Native4/independent256/doc3(E0616/E0277)/scoped strict lint/fmt/actual parameter2 pass. Initial explicit test panic failed lint;assertions replace it without waiver. No source-value cache,global Design/kind/graph/currentness proof or invented let/rounding;Formula(id) amounts retain actual parameter semantics.
+Book96/306/1624/2844/glossary310/9/158/0 pass;[whole0587 source-document continuity](docs/history/stitchcad-devnotes-part746.md) retains four exact Git spans/live ids. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Preserve D339 historical proof. Existing ownership/admission rules apply;promotion declined.
+Next .5e.2.5.derived.3 real canonical Derived source joins and complete static graph admission before values. Full families/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates. No source identity or runtime authority is inferred from text.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

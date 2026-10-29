@@ -300,3 +300,8 @@ formula recipe execution error cause	annexes/formula-recipe-execution.md	crates/
 formula original scalar recipe failure	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_failure.rs	FormulaScalarRecipeFailure	G1-SLICE.5e.2.5.1.2.2.2	4.1
 owned original expression document	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/expression_document.rs	FormulaExpressionDocument	G1-SLICE.5e.2.5.derived.1	4.1
 owned expression document refusal	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/expression_document.rs	FormulaExpressionDocumentError	G1-SLICE.5e.2.5.derived.1	4.1
+explicit original formula source	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/sources.rs	FormulaSource	G1-SLICE.5e.2.5.derived.2	4.1
+bounded ordered formula source registry	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/sources.rs	FormulaSources	G1-SLICE.5e.2.5.derived.2	4.1
+complete source content allowances	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/sources.rs	FormulaSourceLimits	G1-SLICE.5e.2.5.derived.2	4.1
+source population resource	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/sources.rs	FormulaSourceResource	G1-SLICE.5e.2.5.derived.2	4.1
+original source registry refusal	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/sources.rs	FormulaSourcesError	G1-SLICE.5e.2.5.derived.2	4.1
