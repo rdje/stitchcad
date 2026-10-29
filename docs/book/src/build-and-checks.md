@@ -97,6 +97,9 @@ read-only host executables; toolchains/packages and project outputs use the guar
 | `push-due` | Report whether 400 unpushed commits are reached |
 | `help` | Print the target list |
 
+The full check includes library test targets that focused library lint omits;both treat warnings
+as errors. Scope a focused result to the actual target it checked.
+
 Pushes follow the director2026-10-04 ruling:400 unpushed commits, with an earlier push only
 by explicit request. CI/doctrine/hook changes have no automatic exception. The read-only
 checker exits0 below cadence,1 when due,2 if Git metadata/count cannot be verified. It never pushes;

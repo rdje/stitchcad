@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next derive cadence after completed0535 commit. At400,activate G1-SLICE.6.5.3.2.prepush-400
-  in docs/tasks/G1-SLICE-execution.md:required full make check/gate/probes from clean completed HEAD,
-  then normal main push and observe actual hosted jobs/steps for that SHA. No early push or assumed
-  runner verdict. Keep producer logs local;consume every terminal before edits/retries/dependent work.
-- Then G1-SLICE.6.5.3.2.3.3.acceptance scoped stop component checkpoint after all implemented
-  stages,then .3.4 new live span lineage. Stop source-owner join0535 requires exact request then
-  target pointers and borrows capture/partitions;no queries/clones/value reads or new current proof.
-- Actual Design4/core+test Clippy/fmt/docs2+1 pass. Joined A/B signed weighted and retained notch
-  quantity ports preserve roots/stops/quantities;symbolic metadata stays opaque. Equal boxed request/
-  cloned equal target and both mismatches refuse actual pointer context. N0 never backfills root2
-  stops. Book93/248/1590/2770,glossary0/map,693 receipt3/retention1147 pass;whole0534 retained693.
-- LIVE/README unchanged29 suites/G1 6/18. Full PNT continues. Real formula/Profile/geometry/physical/
-  current authority/aggregate operations/lineage/paired effects/full proof remain explicit owners.
-  Native --index book authority mandatory;consume preparation/commit terminals before dependent work.
+- Next G1-SLICE.6.5.3.2.prepush-400.formula-fixture in docs/tasks/G1-SLICE-execution.md:
+  D308 fix15 denied fixture indexing sites in formula_root_value_contract.rs with checked access;
+  preserve frozen rows/assertions/numeric kernel. Focused target lint/native checks,docs and commit.
+- Required prepush-400 remains active:clean51e421cf derived400 full check refused D307 lib-test
+  layout,rc2;gate/probes did not start,push held. D307 fixed0536 by moving exact existing test block
+  to EOF;production/test bytes unchanged,actual library-test Clippy rc0/native boundary1 pass.
+  Earlier broader core-test lint exposed D308/rc101;no blanket core/full success or hosted verdict.
+- After D308 commit,derive HEAD/ahead count and rerun full check/gate/probes from clean completed
+  state,then normal main push/actual hosted jobs+steps for that SHA. Keep logs local,consume terminals.
+- Then .6.5.3.2.3.3.acceptance stop component checkpoint and .3.4 live lineage. Stop pipeline/source
+  join0535 implemented with focused checks;whole0535 retained694. Book93/248/1590/2770,glossary0/map,
+  694 receipt3/retention1148 pass. LIVE29 suites/G1 6/18;defect census D307 fixed/D308 owned.
+- Full PNT continues. Real formula/Profile/geometry/physical/current authority/aggregate operations/
+  lineage/paired effects/full proof remain explicit owners. Native --index book authority mandatory.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -375,50 +375,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0534 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part693.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.4.2`
   Status: `done`
-  Goal:0535 seal actual ease capture/ordered stop partition source-owner coherence by exact
-  request then target pointers;borrow both external owners without additional work or authority.
-  - [x] REPRODUCE / ISSUE: 0535 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_source_binding →4 passed/201 filtered,rc=0. Equal request bodies and same-ID/equal
-    cloned Design target bodies do not establish actual shared source ownership. Native callers
-    need a sealed join before using admitted capture and actual ordered stop views together.
-  - [x] ROOT CAUSE: 0535 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_source_binding →4 passed,rc=0. CommandEaseCapture retains actual original request/
-    span binding;stop partitions retain the actual input/context binding through external owners.
-    These can be compared exactly before exposing a joined view. IDs/body equality cannot identify
-    actual immutable owners or the particular admitted pipeline. Per-stage resource/current/source
-    context requirements remain distinct;joining provenance must not silently grant missing proof.
-  - [x] FIX: 0535 cargo test -p sc-core --doc CommandStopSourceBinding →2 privacy/lifetime cases
-    passed,rc=0;--doc bind_source_capture →1 public API case passed,rc=0. Private view borrows exact
-    externally owned capture/partitions. Request pointer precedes target pointer;typed mismatch
-    retains actual expected/captured objects even with equal IDs/bodies. Bounded Debug avoids full
-    owner traversal. No allocation,clone,query,inverse,narrowing,value read or lifetime extension.
-    Capture/partition/child getters retain original data and allowances;no fabricated standard cause.
-  - [x] ADDRESSED: 0535 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_source_binding →4 passed/201 filtered,rc=0. Actual A/B signed weighted callers
-    preserve original exact cumulative allocation and signed conservation through joined capture.
-    Retained A/B signed notch callers separately validate full original context and preserve exact
-    quantities while N0 child rows stay empty and root2 stops remain. Actual Formula5001/Profile98010
-    metadata joins without values. Real retained child Graphs share one actual canonical root and
-    pass candidate current metadata preflight;source state/semantic data stays unchanged. Boxed
-    equal request,cloned equal-body target and both mismatched refuse with exact original reference
-    pointers and request-before-target priority. Original capture/row/copy/source borrows stay exact.
-  - [x] NO REGRESSION: 0535 cargo clippy -p sc-core --lib -- -D warnings and cargo clippy
-    -p sc-measure --test design_inputs_contract -- -D warnings →pass,rc=0;cargo fmt --all --check
-    →pass,rc=0. Native tools use local_environment.py. mdbook build docs/book and positive publication
-    check →93 chapters/248 API rows/1590 source links/2770 rendered links,rc=0. Glossary census
-    →310 terms/9 parts/158 tokens/0 failures,rc=0;knowledge-map →pass,rc=0. Receipt693 →3 exact Git
-    spans,rc=0;retention →1147 logical/52 working/64504 decodedL/5007793 decodedB/2585130 residentB,
-    rc=0. Numeric/current/source/quantity kernels unchanged. Stop component .3.3.acceptance and whole
-    paired .6.5.3.2.acceptance retain deferred broader verification. Required push milestone has
-    explicit owner G1-SLICE.6.5.3.2.prepush-400;derive actual cadence and run all gates before push.
-  - [x] LOCKSTEP: 0535 two public routes/sealed source-join examples/source/quantity frontier
-    paragraphs/canonical decision/task parent/index/D301/MEMORY/DEV/CHANGE align. Whole0534 retained
-    693/three exact Git spans. LIVE/README reviewed unchanged29 suites/G1 6/18. Metadata capture alone
-    does not imply actual Design source preflight or full original-root currentness/quantity
-    availability;real caller uses those existing stages explicitly. No new live lineage,physical/
-    authority/aggregate runtime/atomic effect proof. After cadence milestone,stop component checkpoint
-    and live lineage remain next. Hosted verdict stays unobserved until actual push/job monitoring.
-    promotion: declined (adoption of indexed exact immutable source/current owner contracts;no new physical or export assumption).
+  Goal:0535 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part694.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.acceptance`
   Status: `pending`
   Goal: deferred scoped actual stop component checkpoint after .1–.4;full paired lineage/effect/
@@ -440,9 +397,55 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0528 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part687.md).
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400`
-  Status: `pending`
+  Status: `in_progress`
   Goal: at the next derived400-commit cadence,run required full make check/gate/probes from the
   clean completed commit before pushing this project's main normally. Observe actual hosted jobs
   and steps for the pushed SHA;record explicit pending/refusing verdicts rather than infer success.
   This required push milestone is separate from deferred stop component/whole paired acceptance.
   Keep all logs project-local;consume every producer/commit/push terminal before dependent work.
+  Attempt0535:clean51e421cf at derived400;full make check refused lib-test items_after_test_module
+  in retained.rs183,rc2. Gate/probes were not started;push held. D307 repair/layout child owns
+  immediate fix and focused verification/commit,then retry all full gates from the new clean HEAD.
+- ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
+  Status: `done`
+  Goal:0536 D307 move existing retained boundary test block after all production items;actual
+  resource arithmetic/production/test content unchanged. Required prepush remains held for D308.
+  - [x] REPRODUCE / ISSUE: 0536 scripts/run_make.sh check at51e421cf/derived400 →rc2. Native
+    Clippy denies items_after_test_module in command/bus/retained.rs183,with HistoryProjection214
+    and CommandBus impl221 after tests. Logs/baseline in target/prepush-400-0535. Gate/probes did
+    not start and nothing was pushed. This is a signoff layout failure,not a numeric/runtime change.
+  - [x] ROOT CAUSE: 0536 git diff71595c40..a8eb3250 -- crates/sc-core/src/command/bus/retained.rs
+    →only54 appended lines after the existing test module,rc=0. 0471 appended history publication
+    after0470 tests. Git-native SHA/9883B match exactly at0531 f814bf and0535 51e421cf;stop work did
+    not alter it. Focused library lint excludes library-test target;required all-target gate exposed
+    it. cargo clippy -p sc-core --tests after move progressed to separate15 fixture indexing errors
+    →rc101;D308 owns that next repair,not an all-core-test success claim.
+  - [x] FIX: 0536 existing complete cfg(test) block moved to EOF after production history items.
+    Native byte comparison of separated production/test content before/after move and after fmt
+    →exact,rc=0;proof target/prepush-400-0535/retained-layout-proof.json. No altered assertion,
+    arithmetic,behavior,lint waiver,new test or public API. cargo fmt --all --check →pass,rc=0.
+  - [x] ADDRESSED: 0536 cargo clippy -p sc-core --lib --profile test --message-format json
+    -- -D warnings →rc0. Native compiler artifact identifies sc_core library with profile.test=true;
+    the actual library-test target is accepted,including repaired module. cargo test -p sc-core
+    --lib command::bus::retained::tests →1 passed/83 filtered,rc=0. Existing usizeMAX count-boundary
+    refusal/first-error/no-wrap and normal prospective count3 assertions remain unchanged and pass.
+  - [x] NO REGRESSION: 0536 native production/test byte identity after formatting →pass,rc=0;
+    cargo fmt --all --check →pass,rc=0. Native tools use local_environment.py. mdbook build docs/book
+    and positive publication →93/248/1590/2770,rc=0;glossary →310/9/158/0 failures,rc=0;knowledge-map
+    →pass,rc=0. Receipt694 →3 exact Git spans,rc=0;retention →1148 logical/53 working/64578 decodedL/
+    5015326 decodedB/2592663 residentB,rc=0. Full prepush gate remains pending,owned by prepush-400;
+    D308 formula-fixture owns15 separate denied indexing sites before full retry. No runner verdict.
+  - [x] LOCKSTEP: 0536 D307 cause/history/move-only proof/closure and D308 next repair owned in task/
+    PLANNING. Book explains focused library versus library-test/full target scope. Whole0535 retained
+    694/three exact Git spans. MEMORY/DEV/CHANGE/index align;LIVE defect row reflects D307 fixed/D308
+    owned,29 suites/G1 6/18 unchanged. README objective/commands reviewed unchanged. Complete and
+    commit D307 before activating D308;then retry all required full gates from clean completed HEAD,
+    normal push and actual hosted job observation. Stop component/whole paired/effect owners remain.
+    promotion: declined (application of indexed target-scoped claim verification and existing strict lint contract;no new product assumption).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.formula-fixture`
+  Status: `pending`
+  Goal:D308 P1 fix15 denied panic-prone indexing sites in existing formula_root_value_contract
+  fixture reader,exposed by focused core-test Clippy after D307 move. Preserve actual frozen
+  fixture rows/assertions/numeric kernel;use explicit checked field access. Finish/commit D307
+  before activating this repair. Run this test target's lint/native checks,then commit before
+  retrying required full prepush check/gate/probes. No blanket lint suppression or fixture retune.

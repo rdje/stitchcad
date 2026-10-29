@@ -456,7 +456,6 @@ D73 and D74 are sealed in [`stitchcad-defects-part15.md`](../history/window2.md#
 G1-SLICE.5a.1 corrects ADR clause links and ASCII vertical-tab handling; lexical contracts and
 actual guard mutations verify the fixes.
 
-
 D75 and D77 are sealed in [`stitchcad-defects-part16.md`](../history/window2.md#stitchcad-defects-part16md).
 G1-SLICE.5a.2a verifies complete reference child traversal/depth refusal and fragment sibling ownership.
 D76 is sealed in [`stitchcad-defects-part17.md`](../history/window2.md#stitchcad-defects-part17md).
@@ -484,8 +483,6 @@ verification and production normalization/evaluation remain separately owned; no
 D85/D86/D87 are sealed in [`stitchcad-defects-part21.md`](../history/window2.md#stitchcad-defects-part21md).
 G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exact tan pole refusal;
 42 rows/72 controls agree with an independent standard-library math oracle, seven actual reds restore.
-
-
 
 ## Decisions
 
@@ -571,7 +568,6 @@ G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exa
   staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
 - [x] **LOCKSTEP** — defects-part9 descriptor/retrieval pointer and live census agree: 8 open /
   54 sealed. Owning G1 review, book, frontier/index, resume/live records and history align.
-
 
 ### `PLANNING.6` — a census nobody runs is a claim, and this one had gone red unnoticed
 
@@ -920,7 +916,6 @@ complete generic in actual HTML; publication producer captures/refuses actual bu
 Ten publication controls include an actual copied-book unclosed generic and warning-free repair,
 with the exact rendered generic asserted, rc=0. Existing eight topology/status refusals remain.
 
-
 D134/D135 close at G1-SLICE.5b.3a.1; original reports retained in
 [`stitchcad-defects-part56.md`](../history/window4.md#stitchcad-defects-part56md). Multiplication alone gets
 arc_length advice, independently checked for presence/absence over all operators/kinds with actual
@@ -959,9 +954,7 @@ D141–D153 closure receipts retained exactly in
   ba245998/62be6f9d/38011914); contract5.2 requires available indices. Own G1-SLICE.5b.4c,
   P1 immediate before .5b closure/arithmetic; cover syntax/literal/static and no fabricated context.
 
-
 D155 complete closure receipt retained in [part75](../history/window6.md#stitchcad-defects-part75md).
-
 
 - **D156** — ordinary Make producers inherit off-volume package/toolchain/scratch defaults when
   caller exports are absent; Makefile pins only probes scratch. Read-only `make -f
@@ -1197,3 +1190,11 @@ Focused range20/notch4 and oracle14 pass0;five genuinely wide final fractions re
 ## D306 — independent seam oracles absent from automated gates
 
 Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687. Current gate10 producers/12 fixtures/9 finite guards pass;29 suites discovered. New stop oracle registered0529;missing/unknown/status/mismatch/wiring controls retained. Hosted verdict follows push400. Stop partition .3.3 continues.
+
+## D307 — retained test block precedes later production items
+
+Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
+
+## D308 — unchecked formula root fixture fields
+
+P1 next;owner G1-SLICE.6.5.3.2.prepush-400.formula-fixture. Focused core-test Clippy after layout fix reports15 indexing_slicing errors in formula_root_value_contract.rs. Checked fixture field access scheduled immediately after clean D307 commit;preserve rows/assertions/kernel,no lint waiver. Full prepush retry remains owned before push.

@@ -3,14 +3,14 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0535 — seal captured ease and actual stop-view owners
+## STITCHCAD-G1-0536 — repair retained library-test module ordering
 
-- Join externally owned capture and ordered stops only after exact original request then actual target pointers match. Retain actual expected/captured objects on mismatch;no allocation,clone,query,inverse,narrowing,value read or new current/effect authority. Equal IDs/bodies
-  cannot substitute.
-- Actual Design4,privacy/API docs2+1,strict core/test Clippy and fmt pass. A/B signed weighted and retained notch quantities preserve original roots/stops/allocations;N0 stays empty. Symbolic metadata remains opaque. Boxed equal request/cloned equal target/both mismatches prove
-  exact owner refusal and priority.
-- Whole0534 retained693/three exact Git spans;book93/248/1590/2770,glossary0/map/retention1147 pass. LIVE/README unchanged29 suites/G1 6/18. Derive400 cadence for required full gates/push/hosted jobs;then scoped stop component checkpoint/live lineage. Physical/authority/aggregate
-  effects/full verification retain owners.
+- Fix D307 required all-target lint failure by moving the existing retained boundary test block after all production items. Production/test bytes remain exact apart from separator whitespace;no arithmetic,assertion,public API or lint-waiver change. Native Git audit attributes the
+  original ordering to0471.
+- Actual library-test Clippy with --lib --profile test passes;native compiler profile.test=true. Existing resource count-boundary unit1 and formatting pass. Broader core-test lint exposes separate15 denied fixture field accesses,D308 owned next;full check/gate/probes/push and
+  hosted verdict remain pending.
+- Whole0535 retained694/three exact Git spans;book93/248/1590/2770,glossary0/map/retention1148 pass. LIVE defect census records D307 fixed/D308 owned;29 suites/G1 6/18 unchanged. Commit this repair before checked fixture access,then retry required full gates from clean completed
+  HEAD before push.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

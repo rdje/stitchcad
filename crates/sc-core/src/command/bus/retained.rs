@@ -179,36 +179,6 @@ impl<H: DesignResourceSource, A> CommandBus<H, A> {
         Ok(())
     }
 }
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use core::num::{NonZeroU64, NonZeroUsize};
-    #[test]
-    fn appended_collection_count_boundary_preserves_exact_original_first_error_without_wrap() {
-        let original = location(EntityId::from_bits(1), "retained.journal.entries");
-        let limits = crate::design::DesignResourceLimits::new(
-            NonZeroUsize::MAX,
-            NonZeroUsize::MAX,
-            NonZeroU64::MAX,
-        );
-        let mut meter = DesignResourceMeter::new(limits);
-        let expected = DesignResourceLimitError::Count {
-            unit: crate::design::DesignResourceCount::CollectionEntries,
-            maximum: usize::MAX,
-            consumed: usize::MAX,
-            requested: 1,
-            location: original,
-        };
-        assert_eq!(
-            charge_appended_entries(usize::MAX, &mut meter, original),
-            Err(expected)
-        );
-        assert_eq!(meter.finish(), Err(expected));
-        let mut meter = DesignResourceMeter::new(limits);
-        assert_eq!(charge_appended_entries(2, &mut meter, original), Ok(()));
-        assert_eq!(meter.finish().map(|d| d.collection_entries()), Ok(3));
-    }
-}
 
 // References are the actual accepted record/current target already bound by the history lifecycle.
 pub(super) struct HistoryProjection<'a, H> {
@@ -261,5 +231,36 @@ impl<H: DesignResourceSource, A> CommandBus<H, A> {
             .map_err(CommandControlError::Retained)?;
         meter.finish().map_err(CommandControlError::Retained)?;
         checkpoint(observer, Phase::RetainedPublication, 1, 1, None)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use core::num::{NonZeroU64, NonZeroUsize};
+    #[test]
+    fn appended_collection_count_boundary_preserves_exact_original_first_error_without_wrap() {
+        let original = location(EntityId::from_bits(1), "retained.journal.entries");
+        let limits = crate::design::DesignResourceLimits::new(
+            NonZeroUsize::MAX,
+            NonZeroUsize::MAX,
+            NonZeroU64::MAX,
+        );
+        let mut meter = DesignResourceMeter::new(limits);
+        let expected = DesignResourceLimitError::Count {
+            unit: crate::design::DesignResourceCount::CollectionEntries,
+            maximum: usize::MAX,
+            consumed: usize::MAX,
+            requested: 1,
+            location: original,
+        };
+        assert_eq!(
+            charge_appended_entries(usize::MAX, &mut meter, original),
+            Err(expected)
+        );
+        assert_eq!(meter.finish(), Err(expected));
+        let mut meter = DesignResourceMeter::new(limits);
+        assert_eq!(charge_appended_entries(2, &mut meter, original), Ok(()));
+        assert_eq!(meter.finish().map(|d| d.collection_entries()), Ok(3));
     }
 }
