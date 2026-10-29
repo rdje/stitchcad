@@ -157,7 +157,8 @@ pub use execution::{
     FormulaScalarExecutionErrorCause, FormulaScalarExecutionFailure, FormulaScalarExecutionPlan,
     FormulaScalarExecutionPlanError, FormulaScalarExecutionPlanRefusal, FormulaScalarExecutionRead,
     FormulaScalarExecutionReadKind, FormulaScalarExecutionSource, FormulaScalarExecutionSourceKind,
-    FormulaScalarExecutionWorkspace,
+    FormulaScalarExecutionWorkspace, FormulaScalarRecipePlan, FormulaScalarRecipePlanError,
+    FormulaScalarRecipePlanRefusal, FormulaScalarRecipeSource, FormulaScalarRecipeSourceKind,
 };
 
 mod checked_statement;

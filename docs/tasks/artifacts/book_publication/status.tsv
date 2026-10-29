@@ -59,6 +59,11 @@ formula whole recipe runtime limits	annexes/formula-execution-plan.md	crates/sc-
 formula complete recipe runtime admission	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmission	G1-SLICE.5e.2.5.1.1	4.1
 formula whole recipe admission refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmissionRefusal	G1-SLICE.5e.2.5.1.1	4.1
 formula whole recipe admission owner	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmissionError	G1-SLICE.5e.2.5.1.1	4.1
+formula whole scalar source plan	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlan	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole prospective source occurrence	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipeSource	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole actual supplier role	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipeSourceKind	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole scalar preparation refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlanRefusal	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole scalar preparation context	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlanError	G1-SLICE.5e.2.5.1.2.1	4.1
 formula actual canonical input join	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInput	G1-SLICE.5e.2.4.2	4.1
 formula canonical input adapter view	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInputAdapter	G1-SLICE.5e.2.4.2	4.1
 formula canonical input join refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInputRefusal	G1-SLICE.5e.2.4.2	4.1

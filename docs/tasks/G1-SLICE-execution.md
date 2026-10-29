@@ -136,48 +136,61 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   recipe or missing-family language refusals;whole dependencies/replay/platform remain owned.
 - ID: `G1-SLICE.5e.2.5.1.1`
   Status: `done`
-  Goal: allocation-free complete checked-recipe admission pinned to the actual immutable proof.
-  Count all statements,let/assert outputs,all operand nodes and all dependency occurrences,
-  including assertion tolerance headers,repetitions and untaken branches. Explicit statement,
-  node,workspace and output quotas;checked arithmetic and deterministic refusal order. Reserve
-  logical 2N+D workspace and S output records;no bytes/CPU/backend/value/currentness claim.
-  ROOT CAUSE0582: actual checked_recipe.rs streams complete immutable statement proofs/real
-  ordinals and headers;execution.rs admits only individual expressions. Source/API inspection
-  rc=0;no whole admission exists in that published expression API. Checked_statement.rs and
-  normalized_recipe.rs retain real operand/header owners. Normative4.1/4.2 require static whole
-  proof before values,real ordered prior lets and once-only binding. Do not execute in this unit.
-  Completion0582: whole-proof admission only;session/executed prefix remains .1.2.
-  - [x] ROOT CAUSE (WHY + WHERE): cat checked_recipe.rs/checked_statement.rs/normalized_recipe.rs/
-    execution.rs →real whole proofs/ordinals/headers versus expression-only admission,rc=0.
-    Inspect normative4.1/4.2 and existing expression target before selecting this allocation-free
-    whole boundary. Actual original proof supplies all counts;no supplied annotation/value can
-    substitute runtime readiness or an earned prior-let result. No existing kernel changed.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test
-    formula_recipe_execution_admission_contract -- --nocapture →five pass,rc=0. Actual owners/
-    Unknown/header/prior-let/global span/ordinal preserved;complete S/N/D measured,checked2N+D
-    and S outputs separately admitted. Quota priority and exact boundaries;zero-cap empty and
-    actual4096 assertions →8192 nodes/4096 headers/20480 workspace/4096 outputs. Late static error
-    prevents whole admission;statically valid division/false assertion/missing context unevaluated.
-  - [x] NO REGRESSION: same target's native watcher invokes actual independent reference parser
-    producer recipe_execution_admission_oracle.py →four complete source/population rows match,
-    rc=0;no Rust/output read or value evaluation. cargo test -p sc-core --doc
-    recipe::execution::recipe -- --nocapture →four pass,including E0277/E0616/E0515 and positive
-    example,rc=0. Scoped strict core-lib/new-target Clippy and changed Rust formatting pass,rc=0.
-    Initial test indexing lint rejected;replace with checked access,then pass. Existing expression
-    implementation/kernel unchanged;only exports added. Book94/285/1602/2804 and glossary310/9/
-    158/0 pass,rc=0. Receipt740/four exact Git spans and diff check pass,rc=0. Full CI/platform,
-    numeric/provider/allocator/CPU bounds and complete whole execution not claimed;owned below.
-  - [x] LOCKSTEP: book whole admission/API map/checked-recipe route,task/index/MEM/DEV/CHANGE/
-    LIVE align. Next .5e.2.5.1.2 private bounded session/prefix;actual let/assert/whole accepted
-    result/replay and missing families retain owners. G1 6/18/G0 unapproved;full/hosted79bd6f6a
-    remains SHA-scoped. D334/D156/D223/PLANNING.5 stay owned;whole0581 retained740. Full PNT.
-    promotion: declined (existing complete-input,explicit-budget and real-proof ownership doctrine applied to a whole recipe;no new authority or language policy).
+  Goal:0582 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part741.md).
 - ID: `G1-SLICE.5e.2.5.1.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: use actual complete admission to construct private bounded whole-recipe session/prefix;
   read real worker/source/binding interfaces before choosing safe execution slices. No caller
   value/annotation or standalone conversion can manufacture an earned prior-let result. Track
   output/read ownership and all capacity reservations before actual statement execution.
+- ID: `G1-SLICE.5e.2.5.1.2.1`
+  Status: `done`
+  Goal: read-free whole scalar preparation after actual complete admission. Scan every real
+  operand for available capability before allocating/binding;reuse actual expression capability
+  catalog. Fallibly reserve D prospective source records and join all canonical/actual reserved
+  sources in whole dependency order,including assertion headers. Link each prior-let metadata
+  use to its actual earlier checked supplier statement;grant no executed binding/value witness.
+  Original proof/inventory/source/ordinal/role and refusals survive;no partial plan or input clone.
+  ROOT CAUSE0583: actual plan.rs scopes detached scalar execution and refuses prior-let sources;
+  worker/read.rs consumes actual plan slots. declaration.rs Recipe carries ordinal/header metadata,
+  not executed values/owner proof;initial namespaces reject Recipe injection. checked_recipe.rs
+  supplies actual complete ordered proofs/dependencies. Source/API inspections rc=0. Complete
+  real source preparation is needed before the private session can evaluate/bind prior lets.
+  Completion0583: real whole source preparation only;actual executed prefix remains .2.2.
+  - [x] ROOT CAUSE (WHY + WHERE): cat plan.rs/worker.rs/read.rs and declaration.rs/namespace.rs/
+    checked_recipe.rs →actual detached source slots,prior-let metadata-only fields and private
+    whole checked suppliers,rc=0. No fabricated header identity,value or ordinal can execute a
+    prior let. Reuse one exhaustive capability catalog;complete whole scan precedes source joins.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_recipe_plan_contract
+    --test formula_scalar_execution_plan_contract -- --nocapture →five new/five existing pass,
+    rc=0. All actual canonical/Unknown/Derived/reserved/header uses retained;original record/state
+    pointer identities and input unchanged. Real supplier ordinals1/3 include interleaved asserts.
+    Late tangent capability precedes earlier absent canonical join;untaken missing input retains
+    actual assertion-right consumer and original typed cause. Empty/max4096 header plans pass.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc recipe::execution::recipe_plan -- --nocapture
+    →three pass,actual E0616/E0515 plus positive example,rc=0. Strict core-lib/both affected-target
+    Clippy and changed Rust formatting/diff pass,rc=0. An initial export-edit assertion failed;
+    first check reported missing re-export warnings;correct actual formatted export line before
+    strict tests. Tightened a test allowance24 after an initial build started;consume then rerun
+    both actual native targets to verify final bytes. No worker/value/kernel changes. Book94/290/
+    1603/2806,glossary310/9/158/0 and retained741/four exact Git spans pass,rc=0. Policy comparison
+    of adopted neutral README/claim/containment bodies to actual read-only sources →all exact,
+    rc=0;read complete current containment guide,local partial adoption/deferred owners unchanged.
+    No allocator-failure injection,full CI/platform/whole acceptance verdict;broader owners remain.
+  - [x] LOCKSTEP: whole plan/source/refusal APIs in book/API map,checked-recipe route/task/MEM/
+    DEV/CHANGE/LIVE/index align. Next .5e.2.5.1.2.2 private bounded worker/bind/assert prefix;
+    preserve one D source/read reservation and actual S outcomes. Read original storage/error
+    lifetimes before adapting shared primitives;no invented MachineToken or copied input state.
+    Whole dependencies/accepted-result/replay/platform/physical and D334/D156/D223/PLANNING.5
+    owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;whole0582 retained741. Full PNT.
+    promotion: declined (indexed real-source/proof,complete-scope-before-values and explicit-reservation rules reused;no new language or execution-authority policy).
+- ID: `G1-SLICE.5e.2.5.1.2.2`
+  Status: `pending`
+  Goal: consume real prepared whole source plan into a private bounded runtime prefix. Reuse
+  iterative actual-node worker,perform real once-only binding,retain executed source witnesses
+  and real let/assert ordinals. Caller values/annotations must not advance or seed execution.
+  Read exact worker,read/dispatch,stored-name/error lifetimes and assertion APIs first;split safe
+  implementation units before code. Full accepted-result failure/replay remains .5e.4 work.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

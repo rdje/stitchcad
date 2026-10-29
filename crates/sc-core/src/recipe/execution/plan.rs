@@ -229,32 +229,8 @@ impl<'p, 'd> FormulaExecutionAdmission<'p, 'd> {
         for node in root.all_nodes() {
             match node.form() {
                 Form::Call { builtin, .. } => {
-                    use FormulaBuiltin as B;
-                    match builtin {
-                        B::Tan
-                        | B::X
-                        | B::Y
-                        | B::Dist
-                        | B::Dir
-                        | B::Len
-                        | B::ParamAt
-                        | B::PointAt => {
-                            return Err(refuse(node, PlanIssue::UnavailableBuiltin(builtin)));
-                        }
-                        B::Sqrt
-                        | B::Hypot
-                        | B::Abs
-                        | B::Min
-                        | B::Max
-                        | B::Clamp
-                        | B::RoundTo
-                        | B::Sin
-                        | B::Cos
-                        | B::Atan
-                        | B::Atan2
-                        | B::ArcLength
-                        | B::If
-                        | B::Within => {}
+                    if !scalar_builtin_available(builtin) {
+                        return Err(refuse(node, PlanIssue::UnavailableBuiltin(builtin)));
                     }
                 }
                 Form::Name { declaration, .. } => match declaration.source() {
@@ -323,5 +299,27 @@ impl<'p, 'd> FormulaExecutionAdmission<'p, 'd> {
             inputs,
             sources,
         })
+    }
+}
+
+// One exhaustive implementation-availability catalog shared with whole-recipe preparation.
+pub(super) fn scalar_builtin_available(builtin: FormulaBuiltin) -> bool {
+    use FormulaBuiltin as B;
+    match builtin {
+        B::Tan | B::X | B::Y | B::Dist | B::Dir | B::Len | B::ParamAt | B::PointAt => false,
+        B::Sqrt
+        | B::Hypot
+        | B::Abs
+        | B::Min
+        | B::Max
+        | B::Clamp
+        | B::RoundTo
+        | B::Sin
+        | B::Cos
+        | B::Atan
+        | B::Atan2
+        | B::ArcLength
+        | B::If
+        | B::Within => true,
     }
 }

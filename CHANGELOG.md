@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0582 — admit the complete actual checked recipe before runtime preparation
+## STITCHCAD-G1-0583 — prepare every actual whole-recipe scalar source before values
 
-- Add real whole-proof admission with explicit statement/node/workspace/output quotas. All operands/branches/repeated uses/assertion headers count;checked2N+D workspace plus S outcomes. Preserve actual owners/ordinals;no allocation,session,value/currentness/backend certificate.
-- Native5/reference4/doc4/scoped lint/fmt/book94/285/1602/2804/glossary310/9/158/0 pass. Whole0581 retained740/four Git spans. Next private session .5e.2.5.1.2;whole execution/replay/platform/physical pending. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped.
+- Shared complete capability scan precedes one fallible D reservation and ordered whole source joins. Retain actual canonical/reserved/header sources;link prior lets to original earlier checked suppliers without executed values. Typed original refusals/consumer ordinals survive;no partial plan.
+- New5/existing5/doc3/scoped lint/fmt/book94/290/1603/2806/glossary310/9/158/0 pass. Whole0582 retained741/four Git spans. Next actual private worker/bind/assert prefix .5e.2.5.1.2.2. G1 6/18/G0 unapproved;full-hosted79bd6f6a SHA-scoped;whole runtime/replay/platform/physical pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

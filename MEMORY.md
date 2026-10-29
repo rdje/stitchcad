@@ -1,14 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.1.2:private bounded whole-recipe session/prefix after complete admission.
-  Read actual scalar worker/source/binding APIs first;plan real allocation/output/read ownership
-  and prior-let witness before code. No caller value/annotation or standalone binding conversion
-  can create earned prior-let execution. Split safe source-preparation/let/assert units as needed.
-- Whole recipe admission0582 available:actual complete proof;explicit S/N/workspace/output caps;
-  all operands/branches/repeated names/assertion headers;checked2N+D workspace plus S outcomes.
-  Native5/reference4/doc4/scoped lint/fmt/book94/285/1602/2804/glossary310/9/158/0 pass.
-  No session/value/currentness/allocator/CPU/backend certificate. Whole0581 retained740/four spans.
-- D338 fixed0581;prepared scalar subset0580 closed. Whole recipe/Derived/tan/geometry/replay/
+- Next G1-SLICE.5e.2.5.1.2.2:consume actual whole source plan into private bounded execution.
+  Read complete worker/read/dispatch/stored binding/assertion APIs before code;split safe units.
+  Retain one D source/read reservation and S outcomes;real evaluated RHS then one binding/storage
+  conversion before later visibility. No caller value/annotation can seed/advance the prefix.
+- Whole source plan0583 available:complete capability scan before D allocation/ordered canonical
+  joins;actual reserved/header/Unknown/Derived sources and checked prior-let suppliers preserved.
+  Metadata links grant no executed value. New5/existing5/doc3/lint/fmt/book94/290/1603/2806 and
+  glossary310/9/158/0 pass. Whole0582 retained741/four exact Git spans;whole admission0582 ready.
+- D338 fixed0581;prepared scalar checkpoint0580 closed. Whole recipe/Derived/tan/geometry/replay/
   platform/physical still owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped.
   Lineage0574 closes47 native/21 doc;paired .2.4 providers/physical,.2.5 atomic effects open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.

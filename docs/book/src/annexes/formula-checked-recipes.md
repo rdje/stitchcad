@@ -170,8 +170,9 @@ produce14 actual assertion refusals. These are reference-consumer proofs,not pro
 The [execution sequence](formula-execution-plan.md) joins these actual static owners to sourced value
 primitives. [Actual per-node certificates](formula-checked-nodes.md) are available; expression/statement
 execution remains pending. [Whole-proof runtime admission](formula-execution-plan.md#whole-checked-recipe-admission)
-now reserves complete populations before runtime preparation. Neither static proof nor resource
-admission nor supplied-value callbacks execute a whole recipe.
+now reserves complete populations before runtime preparation. [Whole scalar source preparation](formula-execution-plan.md#prepare-every-whole-recipe-scalar-source)
+binds actual inventories/reserved roles and earlier checked suppliers without values. Neither
+static proof,resource admission,source preparation nor supplied callbacks execute a whole recipe.
 
 ```bash
 cargo test -p sc-core --test formula_checked_recipe_contract -- --nocapture

@@ -298,6 +298,67 @@ late untaken missing targets, unavailable capability priority and all 256 nodes/
 The full fixture retains the admitted 767-record logical bound and all 255 prospective source records.
 Privacy/lifetime controls accompany the API. Actual evaluation is described next.
 
+## Prepare every whole-recipe scalar source
+
+| Public API | Role |
+| --- | --- |
+| `FormulaScalarRecipePlan` | Complete read-free whole scalar preparation over actual admission and inputs |
+| `FormulaScalarRecipeSource` | One original consumer occurrence and prospective supplier |
+| `FormulaScalarRecipeSourceKind` | Actual canonical join, reserved role or earlier checked let |
+| `FormulaScalarRecipePlanRefusal` | Unavailable capability, original canonical cause or source allocation refusal |
+| `FormulaScalarRecipePlanError` | Actual whole owner/inventory and available failed statement, operand or dependency |
+
+Whole admission's prepare_scalar(inputs) is available at .5e.2.5.1.2.1. It first scans every statement
+in authored order, binding RHS or assertion left then right, with each expression's actual certified
+arena order. This uses the same exhaustive builtin-availability catalog as detached scalar
+preparation. Tangent and geometry stay explicit capability gaps; none becomes a formula-language
+diagnostic. An unavailable later operand precedes an earlier missing canonical target, because the
+whole capability scan finishes before source allocation or inventory joins. Capability scanning is
+separate from runtime source-order evaluation; no values or providers are read.
+
+After capability acceptance, one D-source vector reserves fallibly. Every original whole dependency
+then joins in its existing order: assertion header before left/right operand uses; repeats and
+untaken branches remain distinct. Canonical sources reuse the real inventory adapter, preserving
+actual borrowed owner and original typed failures. Reserved sources retain their exact role,
+including a missing optional physical tolerance header. No fallback value or provider is supplied.
+
+A PriorLet source points to the actual earlier FormulaCheckedStatement in this complete proof.
+The private join verifies the supplier ordinal, let role, name, original spans and kind against its
+original occurrence. Interleaved assertions count toward ordinals but supply no scalar. This is a
+checked metadata relationship, not a completed expression, stored integer, executed prefix or
+accepted binding. Neither caller values nor a standalone binding conversion enter preparation.
+
+```rust
+use sc_core::{recipe::*, value::CanonicalInputs};
+let inputs = CanonicalInputs::new(vec![], vec![])?;
+let recipe = FormulaRecipe::parse("let n:count=1\nassert check:eps_phys=n==n")?
+    .normalize_literals()?;
+let proof = recipe.check_kinds(FormulaNamespace::new([])?).expect("whole static proof");
+let plan = proof.admit_execution(FormulaRecipeExecutionLimits::new(2, 3, 9, 2))
+    .expect("exact allowance").prepare_scalar(&inputs).expect("sources, no values");
+assert_eq!(plan.sources().len(), 3);
+assert!(matches!(plan.sources().first().expect("header").kind(),
+    FormulaScalarRecipeSourceKind::Reserved(_)));
+assert!(std::ptr::eq(plan.admission().proof(), &proof));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The plan exposes admission(), inputs() and the complete sources() slice. Each source exposes its
+original dependency() and kind(). Private fields prevent substitution. On a capability refusal,
+error.statement(), expression_part() and node() retain the actual operand owner and node. A canonical
+join failure instead exposes dependency() with genuine consumer ordinal, role, span and declaration,
+and statement() returns that actual consumer. refusal() reconstructs the same original typed
+canonical failure from unchanged source/inventory; allocation_error() retains the original allocator
+cause. Allocation has no fabricated statement/operand. Errors expose no partial plan or source list.
+
+Five native whole-plan tests cover actual Unknown/Derived records, repeated and untaken occurrences,
+real prior suppliers at ordinals1 and3, late capability priority, exact canonical refusal context,
+empty and4096-assertion header populations. The five existing detached-plan tests still pass after
+sharing the capability catalog. Two compiler negatives enforce private input ownership and borrowed
+inventory lifetime; the positive example executes. No numerical kernel/worker changes. Private
+session, real once-only binding and executed read witnesses remain .5e.2.5.1.2.2; whole acceptance,
+Derived evaluation, missing families, replay and platform identity retain their implementation owners.
+
 ## Actual scalar expression execution
 
 | Public API | Role |

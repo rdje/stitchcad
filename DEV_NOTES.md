@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — admit complete real recipe populations before runtime preparation
+## _(2026-10-29 UTC)_ — bind complete whole-recipe sources without inventing executed lets
 
-0582 adds whole checked-proof admission;real statements/ordinals/operand owners stay borrowed. Explicit S/N/workspace/output quotas;all branches/repeated uses/assertion headers count. Checked2N+D workspace plus S outcomes;deterministic refusals. No allocation/value/session/CPU/backend/currentness certificate.
-Native5/reference4/doc4/scoped strict lint/fmt pass. Actual4096 assertions →8192 nodes/4096 headers/20480 workspace/4096 outputs. Empty0 admitted;static late error has no admission. Initial unchecked test indexing rejected/fixed. Independent existing parser reads no Rust/output and evaluates no values.
-Book94/285/1602/2804/glossary310/9/158/0 pass;[whole0581 D338 repair](docs/history/stitchcad-devnotes-part740.md) retains four exact Git spans. Existing expression/kernel code unchanged apart from exports. No full CI/platform verdict;G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
-Existing complete-proof/explicit-budget rules apply;promotion declined. Next .5e.2.5.1.2 private bounded session/prefix before actual let/assert. Whole dependencies/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
+0583 whole source plan pins actual admission/inventory. Shared exhaustive capability scan completes before one fallible D reservation/ordered joins. Header/repeated/untaken occurrences retained;prior lets point to actual earlier checked suppliers,not values. Original source/state owners and refusals survive.
+New5/existing5/doc3/scoped strict lint/fmt pass. Unknown/Derived unread;real suppliers1/3;late tangent precedes earlier missing join;actual assertion-right failure preserved. Empty/max4096 header plans pass. Export-edit draft failed/corrected;final tests rerun after exact allowance tightening. No worker/kernel change.
+Book94/290/1603/2806/glossary310/9/158/0 pass;[whole0582 admission](docs/history/stitchcad-devnotes-part741.md) retains four exact Git spans. Adopted neutral policy bodies match current read-only sources;partial containment scope unchanged. G1 6/18/G0 unapproved;full-hosted79bd6f6a SHA-scoped.
+Indexed real-source/proof/explicit-budget rules apply;promotion declined. Next .5e.2.5.1.2.2 actual bounded worker/bind/assert prefix. One D source/read reservation,S outcomes;read binding-name/error lifetimes before adapting primitives. Whole dependencies/replay/platform/physical and D334/D156/D223/PLANNING.5 owned.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

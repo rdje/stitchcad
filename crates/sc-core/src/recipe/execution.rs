@@ -26,6 +26,12 @@ pub use recipe::{
     FormulaRecipeExecutionAdmissionRefusal, FormulaRecipeExecutionLimits,
 };
 
+mod recipe_plan;
+pub use recipe_plan::{
+    FormulaScalarRecipePlan, FormulaScalarRecipePlanError, FormulaScalarRecipePlanRefusal,
+    FormulaScalarRecipeSource, FormulaScalarRecipeSourceKind,
+};
+
 /// Explicit per-expression node and logical workspace allowances, without implicit defaults.
 /// Zero is a valid allowance and refuses any nonempty complete proof.
 /// These limits do not widen the language's fixed syntax bounds or bound allocator bytes/CPU.
