@@ -1,15 +1,12 @@
 //! Iterative execution consumes actual checked node proofs and bound sources in authored order.
 use super::{
-    dispatch, read, FormulaScalarExecutionContext as Context, FormulaScalarExecutionError as Error,
+    machine::{Machine, Sources},
+    read, FormulaScalarExecutionContext as Context, FormulaScalarExecutionError as Error,
     FormulaScalarExecutionFailure as Failure, FormulaScalarExecutionPlan as Plan,
-    FormulaScalarExecutionRead, FormulaScalarExecutionWorkspace as Workspace,
+    FormulaScalarExecutionRead,
 };
 use crate::{
-    recipe::{
-        FormulaApproximationSources, FormulaBinaryOperator, FormulaBuiltin,
-        FormulaCheckedNode as Node, FormulaCheckedNodeForm as Form, FormulaEvaluatedScalar as V,
-        FormulaNumericValue, FormulaUnaryOperator,
-    },
+    recipe::{FormulaCheckedNode as Node, FormulaEvaluatedScalar as V},
     value::CanonicalInputs,
 };
 use core::fmt;
@@ -70,44 +67,6 @@ impl fmt::Debug for FormulaExecutedScalarExpression<'_> {
     }
 }
 
-#[derive(Clone, Copy, Debug)]
-enum Task<'a> {
-    Enter(Node<'a, 'a>),
-    Unary(Node<'a, 'a>, FormulaUnaryOperator),
-    Binary(Node<'a, 'a>, FormulaBinaryOperator),
-    Call(Node<'a, 'a>, FormulaBuiltin, usize),
-    Select(Node<'a, 'a>, Node<'a, 'a>, Node<'a, 'a>),
-    FinishConditional(Node<'a, 'a>, FormulaApproximationSources),
-}
-
-fn push<'a, T>(
-    buffer: &mut Vec<T>,
-    value: T,
-    admitted: usize,
-    workspace: Workspace,
-    node: Node<'a, 'a>,
-) -> Result<(), Error<'a>> {
-    if buffer.len() >= admitted {
-        return Err(Error::evaluation(
-            node,
-            Failure::WorkspaceReservation {
-                workspace,
-                admitted,
-                requested: buffer.len() + 1,
-            },
-        ));
-    }
-    // Both buffers were fallibly reserved for the full N before any value/provider read.
-    buffer.push(value);
-    Ok(())
-}
-fn pop(values: &mut Vec<V>) -> V {
-    let Some(value) = values.pop() else {
-        unreachable!("actual checked operation consumes exactly its completed child values");
-    };
-    value
-}
-
 impl<'p> Plan<'p> {
     /// Execute the actual prepared scalar subset with explicit immutable runtime contexts.
     /// Complete static/capability/canonical-source checking already succeeded. Both N buffers
@@ -142,171 +101,47 @@ impl<'p> Plan<'p> {
     {
         let mut plan: Plan<'a> = self;
         let root = plan.admission.root();
-        let n = plan.admission.node_count();
-        let mut pending = Vec::new();
-        pending
-            .try_reserve_exact(n)
-            .map_err(|error| Error::allocation(root, Workspace::Tasks, n, error))?;
-        let mut values = Vec::new();
-        values
-            .try_reserve_exact(n)
-            .map_err(|error| Error::allocation(root, Workspace::Values, n, error))?;
-        push(&mut pending, Task::Enter(root), n, Workspace::Tasks, root)?;
-        while let Some(task) = pending.pop() {
-            match task {
-                Task::Enter(node) => match node.form() {
-                    Form::Literal(literal) => {
-                        let value = FormulaNumericValue::from_literal(literal)
-                            .map(V::from_numeric)
-                            .map_err(|error| Error::evaluation(node, Failure::Numeric(error)))?;
-                        push(&mut values, value, n, Workspace::Values, node)?;
-                    }
-                    Form::Name { .. } => {
-                        let Some(index) = node.dependency_index() else {
-                            unreachable!("actual checked name retains its own source slot");
-                        };
-                        let Some(slot) = plan.sources.get_mut(index) else {
-                            unreachable!(
-                                "private complete plan retains each actual name occurrence"
-                            );
-                        };
-                        let Some(kind) = slot.kind else {
-                            unreachable!("complete plan binds every source");
-                        };
-                        if slot.read.is_some() {
-                            unreachable!("a normalized tree executes each selected node once");
-                        }
-                        let data = read::read(kind, context)
-                            .map_err(|failure| Error::evaluation(node, failure))?;
-                        slot.read = Some(data);
-                        push(&mut values, data.value, n, Workspace::Values, node)?;
-                    }
-                    Form::Negate(child) | Form::Square(child) => {
-                        let operator = if matches!(node.form(), Form::Negate(_)) {
-                            FormulaUnaryOperator::Negate
-                        } else {
-                            FormulaUnaryOperator::Square
-                        };
-                        push(
-                            &mut pending,
-                            Task::Unary(node, operator),
-                            n,
-                            Workspace::Tasks,
-                            node,
-                        )?;
-                        push(&mut pending, Task::Enter(child), n, Workspace::Tasks, child)?;
-                    }
-                    Form::Binary {
-                        operator,
-                        left,
-                        right,
-                    } => {
-                        push(
-                            &mut pending,
-                            Task::Binary(node, operator),
-                            n,
-                            Workspace::Tasks,
-                            node,
-                        )?;
-                        push(&mut pending, Task::Enter(right), n, Workspace::Tasks, right)?;
-                        push(&mut pending, Task::Enter(left), n, Workspace::Tasks, left)?;
-                    }
-                    Form::Call { builtin, arguments } => {
-                        push(
-                            &mut pending,
-                            Task::Call(node, builtin, arguments.len()),
-                            n,
-                            Workspace::Tasks,
-                            node,
-                        )?;
-                        for argument in arguments.iter().rev() {
-                            push(
-                                &mut pending,
-                                Task::Enter(argument),
-                                n,
-                                Workspace::Tasks,
-                                argument,
-                            )?;
-                        }
-                    }
-                    Form::Conditional {
-                        condition,
-                        then_branch,
-                        else_branch,
-                    } => {
-                        push(
-                            &mut pending,
-                            Task::Select(node, then_branch, else_branch),
-                            n,
-                            Workspace::Tasks,
-                            node,
-                        )?;
-                        push(
-                            &mut pending,
-                            Task::Enter(condition),
-                            n,
-                            Workspace::Tasks,
-                            condition,
-                        )?;
-                    }
-                },
-                Task::Unary(node, operator) => {
-                    let value = pop(&mut values)
-                        .checked_unary(operator)
-                        .map_err(|error| Error::evaluation(node, Failure::Numeric(error)))?;
-                    push(&mut values, value, n, Workspace::Values, node)?;
-                }
-                Task::Binary(node, operator) => {
-                    let right = pop(&mut values);
-                    let left = pop(&mut values);
-                    let value = left
-                        .checked_binary(operator, right)
-                        .map_err(|error| Error::evaluation(node, Failure::Numeric(error)))?;
-                    push(&mut values, value, n, Workspace::Values, node)?;
-                }
-                Task::Call(node, builtin, arity) => {
-                    let Some(start) = values.len().checked_sub(arity) else {
-                        unreachable!("actual checked call consumes exactly its completed operands");
-                    };
-                    let Some(arguments) = values.get(start..) else {
-                        unreachable!("private completed operand suffix");
-                    };
-                    let value = dispatch::call(&plan, node, builtin, arguments)
-                        .map_err(|failure| Error::evaluation(node, failure))?;
-                    values.truncate(start);
-                    push(&mut values, value, n, Workspace::Values, node)?;
-                }
-                Task::Select(node, then_branch, else_branch) => {
-                    let condition = pop(&mut values);
-                    let Some(choice) = condition.boolean() else {
-                        unreachable!("actual condition proof is Boolean");
-                    };
-                    let branch = if choice { then_branch } else { else_branch };
-                    push(
-                        &mut pending,
-                        Task::FinishConditional(node, condition.sources()),
-                        n,
-                        Workspace::Tasks,
-                        node,
-                    )?;
-                    push(
-                        &mut pending,
-                        Task::Enter(branch),
-                        n,
-                        Workspace::Tasks,
-                        branch,
-                    )?;
-                }
-                Task::FinishConditional(node, condition_sources) => {
-                    let value = pop(&mut values).influenced_by(condition_sources);
-                    push(&mut values, value, n, Workspace::Values, node)?;
-                }
-            }
-        }
-        let value = pop(&mut values);
-        if !values.is_empty() {
-            unreachable!("complete expression leaves exactly one root value");
-        }
+        let mut machine = Machine::new(plan.admission.node_count()).map_err(|allocation| {
+            Error::allocation(
+                root,
+                allocation.workspace,
+                allocation.requested,
+                allocation.error,
+            )
+        })?;
+        let value = machine.run(root, &mut plan, context)?;
         Ok(FormulaExecutedScalarExpression { plan, value })
+    }
+}
+
+impl<'a> Sources<'a> for Plan<'a> {
+    fn read_value(&mut self, node: Node<'a, 'a>, context: Context<'a>) -> Result<V, Failure<'a>> {
+        let Some(index) = node.dependency_index() else {
+            unreachable!("actual checked name retains its own source slot");
+        };
+        let Some(slot) = self.sources.get_mut(index) else {
+            unreachable!("private complete plan retains each actual name occurrence");
+        };
+        let Some(kind) = slot.kind else {
+            unreachable!("complete plan binds every source");
+        };
+        if slot.read.is_some() {
+            unreachable!("a normalized tree executes each selected node once");
+        }
+        let data = read::read(kind, context)?;
+        slot.read = Some(data);
+        Ok(data.value)
+    }
+    fn tolerance(&self, node: Node<'a, 'a>) -> crate::recipe::FormulaToleranceValue<'a> {
+        let Some(index) = node.dependency_index() else {
+            unreachable!("direct certified tolerance operand retains its name occurrence");
+        };
+        let Some(read) = self.sources.get(index).and_then(|slot| slot.read) else {
+            unreachable!("all actual within operands were evaluated before application");
+        };
+        let super::FormulaScalarExecutionReadKind::Tolerance(tolerance) = read.source else {
+            unreachable!("actual direct reserved class was read from its quantitative context");
+        };
+        tolerance
     }
 }

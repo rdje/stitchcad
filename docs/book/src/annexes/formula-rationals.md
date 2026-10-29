@@ -361,6 +361,11 @@ No namespace mutation or partially stored value occurs. These APIs perform conve
 annotation checking, reserved/repeated-name authority, environment publication, source/provenance
 and complete statement/recipe execution remain separate integration responsibilities.
 
+The engine shares one private numeric storage conversion and its exact typed refusal rule.
+Public named binding APIs retain the original borrowed MachineToken,kind,rounded bounds and source
+contributions. A checked statement can attach its actual source name to the same private rule
+without allocating a replacement name;whole statement execution remains a separate runtime task.
+
 Check the binding boundary with its affected native target:
 
 ```bash

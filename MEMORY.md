@@ -1,13 +1,13 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.1.2.2:consume actual whole source plan into private bounded execution.
-  Read complete worker/read/dispatch/stored binding/assertion APIs before code;split safe units.
-  Retain one D source/read reservation and S outcomes;real evaluated RHS then one binding/storage
-  conversion before later visibility. No caller value/annotation can seed/advance the prefix.
-- Whole source plan0583 available:complete capability scan before D allocation/ordered canonical
-  joins;actual reserved/header/Unknown/Derived sources and checked prior-let suppliers preserved.
-  Metadata links grant no executed value. New5/existing5/doc3/lint/fmt/book94/290/1603/2806 and
-  glossary310/9/158/0 pass. Whole0582 retained741/four exact Git spans;whole admission0582 ready.
+- Next G1-SLICE.5e.2.5.1.2.2.2:actual declaration-order scalar recipe execution.
+  Consume real whole plan;reserve N task/value scratch and S outcomes before reads,retain one
+  D source/read vector. RHS succeeds before one private storage conversion/prior-let visibility;
+  real assert names/ordinals/class/context,no caller seeds or partial accepted recipe. Split safely.
+- Shared private machine/storage0584 ready:actual scratch reuse/capacity1,binding3/sourced5/
+  controller11 incl49 independent rows/frozen bytes,scoped lint/fmt/book94/290/1603/2806 and
+  glossary310/9/158/0 pass. No copied/invented MachineToken or public source callbacks. Whole
+  source plan0583/admission0582 available;whole0583 retained742/four exact Git spans.
 - D338 fixed0581;prepared scalar checkpoint0580 closed. Whole recipe/Derived/tan/geometry/replay/
   platform/physical still owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped.
   Lineage0574 closes47 native/21 doc;paired .2.4 providers/physical,.2.5 atomic effects open.

@@ -16,6 +16,7 @@ pub use failure::{
     FormulaScalarExecutionError, FormulaScalarExecutionErrorCause, FormulaScalarExecutionFailure,
     FormulaScalarExecutionWorkspace,
 };
+mod machine;
 mod worker;
 pub use worker::FormulaExecutedScalarExpression;
 mod dispatch;

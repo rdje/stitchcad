@@ -495,6 +495,15 @@ under .5f.3. Point coordinates need separate approximation-source sets. Directio
 specific to dir; raw angle arithmetic and inverse principal answers keep their signed values. The
 parameter/geometry error budget uses actual edge length, not an inferred bounding-box guarantee.
 
+The controller now uses one shared private actual-node machine, prepared for whole-recipe reuse.
+Its source interface is internal to the engine: clients cannot supply AST values or callback
+annotations. It reserves task/value scratch fallibly before reads, guards every push against the
+actual operand population and leaves both buffers empty after a successful operand. A native test
+executes an actual conditional fraction followed by within using the same scratch addresses;
+insufficient capacity refuses before any source read. The existing binding3/sourced-value5/controller11
+tests, including49 independent reference rows and exact frozen bytes, pass after this refactor.
+This is internal reuse, not an executed recipe or prior-let result; .5e.2.5.1.2.2.2 owns that step.
+
 ## Dependencies that still prevent full runtime closure
 
 The numerical kernels cover rational arithmetic,quantization,roots,arc_length,certified sin/cos

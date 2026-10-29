@@ -1,15 +1,12 @@
 //! Existing sourced numeric kernels; no replacement backend or caller-supplied AST values.
-use super::{
-    FormulaScalarExecutionFailure as Failure, FormulaScalarExecutionPlan,
-    FormulaScalarExecutionReadKind as Read,
-};
+use super::{machine::Sources, FormulaScalarExecutionFailure as Failure};
 use crate::recipe::{
     FormulaBuiltin as B, FormulaCheckedNode, FormulaCheckedNodeForm as Form,
     FormulaEvaluatedScalar as V,
 };
 
 pub(super) fn call<'a>(
-    plan: &FormulaScalarExecutionPlan<'a>,
+    sources: &impl Sources<'a>,
     node: FormulaCheckedNode<'a, 'a>,
     builtin: B,
     values: &[V],
@@ -40,15 +37,7 @@ pub(super) fn call<'a>(
             let Some(class_node) = arguments.iter().next_back() else {
                 unreachable!("checked within retains its actual direct tolerance-name operand");
             };
-            let Some(index) = class_node.dependency_index() else {
-                unreachable!("direct certified tolerance operand retains its name occurrence");
-            };
-            let Some(read) = plan.sources.get(index).and_then(|slot| slot.read) else {
-                unreachable!("all actual within operands were evaluated before application");
-            };
-            let Read::Tolerance(tolerance) = read.source else {
-                unreachable!("actual direct reserved class was read from its quantitative context");
-            };
+            let tolerance = sources.tolerance(class_node);
             return argument(0)
                 .compare_tolerance(argument(1), tolerance)
                 .map(|comparison| comparison.value())

@@ -32,6 +32,14 @@ pub struct FormulaBindingValueError<'a> {
 }
 
 impl<'a> FormulaBindingValueError<'a> {
+    pub(super) const fn from_rule(
+        name: &'a MachineToken,
+        kind: FormulaKind,
+        rule: FormulaBindingValueRule,
+    ) -> Self {
+        Self { name, kind, rule }
+    }
+
     /// Actual attempted binding name supplied to the conversion.
     #[must_use]
     pub const fn name(self) -> &'a MachineToken {
@@ -109,17 +117,22 @@ impl FormulaBoundValue {
         name: &'a MachineToken,
         value: FormulaNumericValue,
     ) -> Result<Self, FormulaBindingValueError<'a>> {
+        Self::store_numeric(value)
+            .map_err(|rule| FormulaBindingValueError::from_rule(name, value.kind(), rule))
+    }
+
+    // One shared conversion; enclosing checked statements can attach their real borrowed source
+    // name without allocating or inventing a caller-owned MachineToken.
+    pub(super) fn store_numeric(
+        value: FormulaNumericValue,
+    ) -> Result<Self, FormulaBindingValueRule> {
         let kind = value.kind();
         let rational = value.rational();
         let magnitude = div_round_half_away_from_zero_unsigned(
             rational.numerator_magnitude(),
             rational.denominator(),
         )
-        .map_err(|error| FormulaBindingValueError {
-            name,
-            kind,
-            rule: FormulaBindingValueRule::Rounding(error),
-        })?;
+        .map_err(FormulaBindingValueRule::Rounding)?;
         let minimum = if kind == FormulaKind::Count {
             0
         } else {
@@ -127,14 +140,10 @@ impl FormulaBoundValue {
         };
         let maximum = i64::MAX;
         let negative = rational.is_negative();
-        let storage_error = || FormulaBindingValueError {
-            name,
-            kind,
-            rule: FormulaBindingValueRule::Storage {
-                minimum,
-                maximum,
-                measured: FormulaRational::from_integer_magnitude(magnitude, negative),
-            },
+        let storage_error = || FormulaBindingValueRule::Storage {
+            minimum,
+            maximum,
+            measured: FormulaRational::from_integer_magnitude(magnitude, negative),
         };
         let limit = if negative {
             minimum.unsigned_abs()

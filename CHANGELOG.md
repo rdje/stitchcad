@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0583 — prepare every actual whole-recipe scalar source before values
+## STITCHCAD-G1-0584 — share actual scalar scratch and one private binding conversion
 
-- Shared complete capability scan precedes one fallible D reservation and ordered whole source joins. Retain actual canonical/reserved/header sources;link prior lets to original earlier checked suppliers without executed values. Typed original refusals/consumer ordinals survive;no partial plan.
-- New5/existing5/doc3/scoped lint/fmt/book94/290/1603/2806/glossary310/9/158/0 pass. Whole0582 retained741/four Git spans. Next actual private worker/bind/assert prefix .5e.2.5.1.2.2. G1 6/18/G0 unapproved;full-hosted79bd6f6a SHA-scoped;whole runtime/replay/platform/physical pending.
+- Reuse one private actual-node machine/source interface and exact storage-rule path. Keep detached public APIs,once-read tolerance,original named errors,Boolean/source provenance and numeric semantics;no copied header name or supplied AST callback. Whole execution remains next .5e.2.5.1.2.2.2.
+- Scratch1/binding3/sourced5/controller11 incl49 independent rows/frozen bytes;scoped lint/fmt/book94/290/1603/2806/glossary310/9/158/0 pass. Whole0583 retained742/four Git spans. G1 6/18/G0 unapproved;full-hosted79bd6f6a SHA-scoped;whole dependencies/replay/platform/physical pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

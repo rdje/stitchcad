@@ -1,8 +1,8 @@
 //! Scalar value computation with immutable approximation sources; no AST or namespace execution.
 use super::{
     FormulaApproximationSources, FormulaBinaryOperator, FormulaBindingValueError,
-    FormulaBoundValue, FormulaBuiltin, FormulaKind, FormulaNumericError, FormulaNumericValue,
-    FormulaUnaryOperator,
+    FormulaBindingValueRule, FormulaBoundValue, FormulaBuiltin, FormulaKind, FormulaNumericError,
+    FormulaNumericValue, FormulaUnaryOperator,
 };
 use crate::name::MachineToken;
 
@@ -157,8 +157,14 @@ impl FormulaEvaluatedScalar {
         self,
         name: &MachineToken,
     ) -> Result<FormulaEvaluatedBinding, FormulaBindingValueError<'_>> {
+        self.store_binding()
+            .map_err(|rule| FormulaBindingValueError::from_rule(name, self.kind(), rule))
+    }
+
+    // Internal storage only: a real checked statement supplies its own name/ordinal on refusal.
+    pub(super) fn store_binding(self) -> Result<FormulaEvaluatedBinding, FormulaBindingValueRule> {
         let value = match self.value {
-            ScalarValue::Numeric(value) => FormulaBoundValue::from_numeric(name, value)?,
+            ScalarValue::Numeric(value) => FormulaBoundValue::store_numeric(value)?,
             ScalarValue::Boolean(value) => FormulaBoundValue::from_boolean(value),
         };
         Ok(FormulaEvaluatedBinding {
