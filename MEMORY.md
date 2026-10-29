@@ -1,14 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived:actual canonical Formula/Design/document/dependency contracts.
-  dependency contracts before choosing a safe bounded Derived integration slice. Sole formula
-  ID must join real authored source/namespace/graph;full preflight/cycle/resource admission before
-  recursive reads. No caller cached value/annotation/state clone or guessed source can execute it.
-- Admitted scalar checkpoint0586 closes .1/.1.2/.2.2 only:native9/reference18/7 refusals/4167B
-  exact;source code unchanged,scoped lint/fmt pass. D339 fixed:chapter search retains full words/
-  indexed terms,96 chapters and valid results;JSON7894324B/five refusal controls. Preserve
-  target/book_search_capture_0586_book_final;source hashes/capture/proof exact,never overwrite old runs.
-  Book96/299/1623/2841/glossary310/9/158/0 pass;whole0585 retained744/four Git spans.
+- Next G1-SLICE.5e.2.5.derived.2:actual formula-id/source/body/binding contracts before choosing
+  owned registry/dependency admission units. Preserve actual Formula(id) amount→DesignParameter
+  metadata contract;canonical Derived ids remain sole source references requiring real joins.
+  Read interfaces/namespace/rounding/identity requirements before selecting safe implementation.
+- Expression source document0587 ready:original text/canonical syntax/source-borrowed views;
+  native4/doc3(E0616/E0515)/scoped lint/fmt/book96/301/1623/2842/glossary310/9/158/0 pass. No
+  fake header/name/entity/value/graph proof. Whole0586 retained745/four Git spans/live ids intact.
+- Scalar checkpoint0586:native9/reference18/7/4167B exact,scoped only. D339 fixed0586;preserve
+  target/book_search_capture_0586_book_final at its source boundary;never overwrite old captures.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.

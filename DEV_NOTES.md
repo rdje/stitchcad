@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — independently check scalar recipes and repair complete book search
+## _(2026-10-29 UTC)_ — retain actual expression source before Derived identity integration
 
-0586 native9/reference18(11 successes/7 refusals)/4167 exact frozen bytes pass;real source/unbound/stored/source/read/assertion/refusal rows. Oracle uses original evaluator,not Rust/results. Draft Count*Ratio correctly refused;use actual Count/Ratio half case. Product source unchanged;scoped lint/fmt pass.
-D339 real book warning10003884B blocked closure. Supported chapter-level search retains96 chapters/63247 word/51431 indexed-term pairs;final native JSON10012281→7894324B. Five data refusal controls/public candidate byte equality pass;strict fixed config/full chapter/text/posting/anchor guards;warnings retained.
-Book96/299/1623/2841/glossary310/9/158/0 pass;[whole0585 execution](docs/history/stitchcad-devnotes-part744.md) retains four exact Git spans. Capture/migration tools tracked;protect target/book_search_capture_0586_book_final. .1/.1.2/.2.2 close scoped only;G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
-Existing oracle/source/bounded-publication rules apply;promotion declined. Next .5e.2.5.derived actual canonical dependency contracts before implementation. Full families/Derived/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full publication campaign/CI deferred to required broader gate. Full PNT.
+0587 adds immutable original expression/canonical syntax document and source-borrowed normalization through existing factories. Actual Design inputs own whole recipe source/initial metadata;referenced formula ids still need a real source join. Preserve existing Formula(id) amount→DesignParameter contract.
+Native4/doc3(E0616/E0515)/scoped strict lint/fmt pass. Actual spans/source equality versus canonical aliases,original syntax/literal causes,complete branch literals and syntax-only failures retained. No fake let/name/entity/namespace/kind/value/graph,currentness or readiness;no new algorithm/dependency/state cache.
+Book96/301/1623/2842/glossary310/9/158/0 pass;[whole0586 recipe/search checkpoint](docs/history/stitchcad-devnotes-part745.md) retains four exact Git spans and both live task ids. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Preserve D339 capture at its0586 source boundary;never overwrite old snapshots.
+Existing source/identity/borrow rules apply;promotion declined. Next .5e.2.5.derived.2 recover actual id/body/binding/namespace contracts before owned registry/bounded dependency work. Full Derived/families/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

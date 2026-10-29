@@ -231,6 +231,55 @@ Duplicate/unbound names and incompatible kinds remain inspectable until static c
 | `FormulaRecipeDocument` | Immutable original text and typed syntax identity |
 | `FormulaRecipeDocumentError` | Original Syntax or Literal refusal with nested source context |
 
+## Owned original expression document
+
+`FormulaExpressionDocument::new(source)` owns an original expression String and its existing typed
+canonical expression identity. It reuses the actual expression parser,literal converter and
+serializer. It supplies no fake let,name,header or statement ordinal. This is the source-ownership
+prerequisite at .5e.2.5.derived.1;actual source-id binding/dependency integration remains .derived.2.
+
+| Public API | Meaning |
+| --- | --- |
+| `FormulaExpressionDocument` | Immutable original expression source and typed canonical syntax |
+| `FormulaExpressionDocumentError` | Original expression Syntax or Literal refusal |
+
+source() returns original whitespace/text;canonical() borrows the typed identity. Exact-source
+equality remains separate from normalized identity:2.5 cm and25 mm share one identity but retain
+distinct authored documents. Cloned replacement documents do not mutate the original. Debug
+shows source/canonical byte counts,not customer names or text.
+
+normalized() derives immutable source-borrowed arenas through the same parser/converter. It keeps
+original local spans and cannot outlive the document. It stores no self-referential arena and
+never reconstructs source positions from identity bytes. Repeated views preserve source/identity.
+
+```rust
+use sc_core::recipe::FormulaExpressionDocument;
+let document = FormulaExpressionDocument::new(" (2.5 cm + eps_num) ".into())?;
+let view = document.normalized()?;
+assert_eq!(&view.canonical_form(), document.canonical());
+let span = view.root().span();
+assert_eq!(document.source().get(span.start()..span.end()), Some("(2.5 cm + eps_num)"));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+An empty source is not an expression;its original syntax refusal is retained. A let header is not
+an expression either. Original parser failures precede literal normalization. Every literal,
+including an untaken branch's,retains its existing width/domain check and source location. Errors
+retain the original typed cause through Syntax/Literal and the standard Error source chain.
+
+The document performs no name/kind checking or operator evaluation. Missing names,division by
+zero,negative roots or incompatible kinds can therefore remain syntactically inspectable until
+actual checking/execution. It grants no semantic entity id,canonical-input join,namespace proof,
+dependency/cycle admission,current Design,computed value or readiness. Canonical Derived formula
+ids remain references requiring real source integration. The existing Formula(id) amount adapter
+continues to use actual DesignParameter metadata;this document changes no such identity contract.
+
+Four focused native contracts compare actual source/span/alias/replacement behavior and original
+syntax/literal causes,including complete branch literals and syntax-only numerical failures.
+Three documentation tests include actual private-field E0616 and borrowed-view E0515 refusals plus
+the positive example. Existing parser/literal/kind/numeric obligations retain their own checks;
+these document controls do not independently recertify their algorithms or Derived execution.
+
 ## Verification scope
 
 Eight input contracts check16 statement rows/nine sources and300 independent literal-role controls,

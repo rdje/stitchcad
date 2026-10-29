@@ -93,6 +93,9 @@ pub use canonical_recipe::{FormulaCanonicalRecipe, FormulaCanonicalStatement};
 mod document;
 pub use document::{FormulaRecipeDocument, FormulaRecipeDocumentError};
 
+mod expression_document;
+pub use expression_document::{FormulaExpressionDocument, FormulaExpressionDocumentError};
+
 mod semantic;
 pub use semantic::{
     FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName, FormulaSizeName,

@@ -298,3 +298,5 @@ formula recipe runtime buffer	annexes/formula-recipe-execution.md	crates/sc-core
 formula original recipe execution error	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_failure.rs	FormulaScalarRecipeError	G1-SLICE.5e.2.5.1.2.2.2	4.1
 formula recipe execution error cause	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_failure.rs	FormulaScalarRecipeErrorCause	G1-SLICE.5e.2.5.1.2.2.2	4.1
 formula original scalar recipe failure	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_failure.rs	FormulaScalarRecipeFailure	G1-SLICE.5e.2.5.1.2.2.2	4.1
+owned original expression document	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/expression_document.rs	FormulaExpressionDocument	G1-SLICE.5e.2.5.derived.1	4.1
+owned expression document refusal	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/expression_document.rs	FormulaExpressionDocumentError	G1-SLICE.5e.2.5.derived.1	4.1

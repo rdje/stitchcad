@@ -168,85 +168,12 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0585 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part744.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.acceptance`
   Status: `done`
-  Goal: after available scalar recipe implementation,focused independent actual reference recipe
-  acceptance and source/failure/read-order checkpoint. Separate broader missing-family/Derived/
-  replay/load/platform/worked-example completion remains .5e.2.4.integration/.5e.4/.5g;no full
-  language/product acceptance implied by this available subset or its focused checks.
-  Scope0586: finite independent actual whole-recipe source/value/storage/contribution/read-order
-  and refusal rows,using existing reference parser/evaluator. Trace actual reads and binding input
-  only,without replacing evaluation or importing native results. Freeze complete source rows;
-  actual Rust whole executor compares each outcome/read/failure and watcher rederives all bytes.
-  No external Derived/geometry/tangent evaluator,full worked-example/platform/load/replay claim.
-  Completion0586: independent finite actual scalar recipe checkpoint;full language stays open.
-  - [x] ROOT CAUSE (WHY + WHERE): actual reference preflight/statement/stored/value_of_name and
-    native whole outcome/read/error interfaces inspected,rc=0. Complete static source precedes
-    reference execution;trace original read/pre-storage methods without replacing computation.
-    Available scalar subset needs independent stored-value/source/read/refusal evidence,not new
-    product annotations. A draft Count*Ratio annotated Count correctly refused;actual independent
-    signature table/reference inference prove product Ratio versus quotient Count. Use1/2.0 for
-    the intended half-Count case;no type rule or product code changed,diagnostic tools rc=0.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_recipe_execution_contract
-    -- --nocapture →nine pass,18 complete independent rows/11 successes/seven refusals,rc=0.
-    Actual original source,unbound RHS/stored result,Boolean/source contributions,assertion
-    operands/class,executed read values/order and refusal ordinal/name/token match. Native second
-    watcher rederives all4167 frozen bytes from actual independent parser/evaluator,rc=0;SHA256
-    372bbbceb712119fde85ba9b0c94f1a8dcad0f1b370a6db0115a77be3b0c9484. No Rust/fixture/native
-    result read by oracle;no accepted partial trace compared on errors. No external canonical-
-    input/Derived evaluator/geometry/tangent/platform/load/replay claim. Those keep real owners.
-  - [x] NO REGRESSION: scoped strict native-target Clippy,changed Rust formatting/Python syntax
-    and diff check pass,rc=0. git diff --exit-code HEAD -- crates/sc-core/src →unchanged,rc=0.
-    Book96/299/1623/2841/glossary310/9/158/0 and retained744/four exact Git spans pass,rc=0.
-    D339 initially blocked actual publication at10003884B search JSON;child below repairs real
-    default-index growth without suppressing warnings or dropping text. Focused native capture/
-    five data controls and exact stored-word/indexed-term migration pass,rc=0. Full publication
-    fixture/mutation campaign and CI remain the mandatory later broad gate,not claimed run here.
-  - [x] LOCKSTEP: close .1/.1.2/.2.2 for admitted scalar foundation/private prefix only;parent
-    .5e.2.5/full .5e.2.4.integration still own missing families/Derived/load/replay/platform/physical.
-    Book subset checkpoint/search policy,task/index/MEM/DEV/CHANGE/LIVE align. Next .5e.2.5.derived
-    actual canonical dependency contract recovery before a safe implementation leaf. G1 6/18/G0
-    unapproved;full/hosted79bd6f6a stays SHA-scoped. D334/D156/D223/PLANNING.5 owned. Full PNT.
-    promotion: declined (existing independent-oracle,real-source,complete-prefix and bounded-publication doctrines applied;no new language or approval policy).
+  Goal:0586 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part745.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.acceptance.search`
   Status: `done`
-  D339 P1: actual positive book build after18-row oracle documentation refuses
-  BOOK_BUILD_WARNING:search index very large10003884B. Baseline0585 book.toml had no search policy;
-  mdBook defaults produce the growing index. Own root-cause/official configuration inspection,
-  direct generated-index census and a compact full-text policy retaining complete searchable
-  content/navigation. Do not suppress warnings,raise thresholds,trim legitimate product prose
-  to fit a search limit or disable search. Verify actual generated coverage and warning-free build
-  before completing parent acceptance. Track any behavior change and durable finding in book.
-  Completion0586: D339 fixed;native chapter-level full-text search,all content retained.
-  - [x] ROOT CAUSE: actual default mdBook0.5.4 positive build raised search warning10003884B;
-    official renderer search docs confirm default heading-split-level3. No threshold/warning
-    suppression. Native same-source study3/2/1 shows section fanout drives index growth;level2
-    leaves little headroom,chapter1 preserves semantic chapter results/full content. Commands
-    search_migration_capture.py and search_migration_contract.py reproduce snapshots/census.
-  - [x] ADDRESSED: tracked native capture --output target/book_search_capture_0586_book_final plus
-    tracked migration checker --baseline .../level3 --candidate .../level1 --sources
-    .../source-sha256.json →823→96 documents,96 chapters,63247 chapter-word/51431 actual indexed-
-    term pairs exact,all complete source hashes unchanged,rc=0. Final native JSON10012281→7894324B;
-    script10024238→7906281B;chapter candidate has zero warnings. Current public index equals
-    candidate byte-for-byte,rc=0;SHA9de1188c357b6fd92333b5597a2c35070da213614ce3192bda95e218a0510fd6.
-  - [x] NO REGRESSION: actual public check and search_controls →five in-memory real data refusals
-    for duplicate/missing chapter,empty text,lost postings,bad result anchor;source/index unchanged,
-    rc=0. Publication now checks every chapter/document/actual body posting/result landing. Strict
-    config admits only integer1 search setting;initial unplanned-config refusal required explicit
-    scalar policy admission. Initial migration directory call refused absolute store components;
-    use original profile's repository-relative directory contract. Existing-output overwrite and
-    self-comparison each actually refuse rc=1;all four evidence files unchanged,control rc=0.
-    Python syntax/book96/299/1623/2841/glossary0 pass,rc=0. No extra runtime dependency;broader
-    existing publication probes deferred to required full gate,not claimed run. Preserve final
-    target capture and source hashes;capture tool requires a fresh directory,never overwrites.
-  - [x] LOCKSTEP: book.toml/source/config guard/read-only snapshot producers/build chapter explain
-    chapter-level result landing with full text and section navigation. D339 ledger/LIVE fixed;
-    normal warning rejection retained. This directly unblocks parent recipe acceptance0586.
-    promotion: declined (existing complete searchable coverage and bounded generated-publication rules applied through a supported renderer option;no canonical design or human-authority change).
-  Final authority pre-stage guard refused build-and-checks41933B>40960B;move new search text
-  intact to indexed annex,keep guide40949B and all caps. Fresh final capture/current public exact
-  with96 chapters;positive book and five controls pass,rc=0. No search text removed. Original
-  source-profile snapshots stay retained;final named capture above is the final source boundary.
+  Goal:0586 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part745.md).
 - ID: `G1-SLICE.5e.2.5.derived`
-  Status: `pending`
+  Status: `in_progress`
   Goal: recover actual canonical Formula/Design/document/value/dependency contracts and relevant
   normative/book/roadmap obligations before choosing the first safe Derived integration slice.
   Join the sole real formula identity to its actual authored source and complete namespace/graph;
@@ -254,6 +181,53 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   No caller cached value,metadata annotation,cloned state,guessed source or invented language
   refusal can substitute evaluation. Select and own concrete admission/execution units after
   reading actual interfaces;full missing families/load/replay/platform remain separate owners.
+  Recovery0587: published DesignInputs owns one whole recipe document;DesignFormulaHost yields
+  selected declaration metadata and its exhaustive host-kind enum has no formula-source owner.
+  Canonical inputs retain formula ids as references without existence/evaluation truth. Actual
+  Formula(id) amount adapters currently require real DesignParameter metadata and canonical kind;
+  preserve that contract. Census: rg formula/source/record/definition fields over core/measure
+  sources plus complete DesignInputsDefinition/host/document/value interfaces and relevant book/
+  decision source inspected,rc=0. Source identity/binding integration remains explicitly pending.
+- ID: `G1-SLICE.5e.2.5.derived.1`
+  Status: `done`
+  Goal: immutable owned original expression document with existing typed canonical syntax identity
+  and source-borrowed normalization. Reuse actual parser/converter/serializer;preserve exact text,
+  spans,syntax/literal causes,privacy and equality semantics. No fake let/header/name or new
+  syntax is needed. Document ownership does not supply namespace/kind/value,entity identity,
+  dependency graph,currentness or execution proof. Focused native/compiler/book checks then commit.
+  Existing whole-recipe document supplies the accepted ownership pattern;read its original API,
+  native contracts and canonical-state decision before implementation. No extra source/state cache.
+  Completion0587: original expression document available;actual id/graph integration stays .2.
+  - [x] ROOT CAUSE (WHY + WHERE): read document.rs/normalized.rs and actual recipe-document
+    native contracts;DesignInputsDefinition/host/value and normative source-state contracts
+    inspected,rc=0. Existing borrowed expressions need an owned raw-source boundary without a
+    fictitious let/header. Original recipe document's accepted source/canonical/borrow pattern
+    applies;no claim that referenced formula ids already identify a real expression owner.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_expression_document_contract
+    -- --nocapture →four pass,rc=0. Real caller-buffer ownership,original grouped spans,canonical
+    aliases/exact-source inequality,immutable replacement/repeated views,original syntax/literal
+    causes and whole branch literal checks retained. Empty/header/nonASCII sources keep syntax
+    refusal. Missing names/division/negative roots/kind mismatch remain syntax-only until real
+    checking;no computed result,namespace/kind proof,entity identity or graph is invented.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc recipe::expression_document -- --nocapture
+    →three pass,actual E0616/E0515 and positive example,rc=0. Strict core-lib/new-target Clippy
+    and changed Rust formatting/diff pass,rc=0. Existing parser/converter/serializer reused;
+    their complete algorithms/Derived evaluation not recertified by these wrapper checks. Book96/
+    301/1623/2842/glossary310/9/158/0 and retained745/four exact Git spans pass,rc=0. Retirement
+    preserves complete live id/order sequence,including D339 child;old whole586 scope exact.
+    No new dependency,default,value/state cache or change to actual Formula(id) parameter contracts.
+  - [x] LOCKSTEP: book source-document API/example/boundaries and API map,task/index/MEM/DEV/
+    CHANGE/LIVE align. Next .5e.2.5.derived.2 actual source-id/body/binding semantics before
+    selecting concrete owned registry/bounded dependency units. Full families/Derived/load/replay/
+    platform/physical and D334/D156/D223/PLANNING.5 remain owned. G1 6/18/G0 unapproved;full/hosted
+    79bd6f6a SHA-scoped. D339 proof retained at its0586 source boundary;never overwrite captures.
+    promotion: declined (existing original-source ownership,typed identity,no-invented-context and borrowed-proof rules applied;no new formula-id semantics or authority policy).
+- ID: `G1-SLICE.5e.2.5.derived.2`
+  Status: `pending`
+  Goal: recover remaining identity/source/body binding semantics,including actual parameter-backed
+  Formula(id) contracts and canonical Derived formula references,before selecting explicit owned
+  source-registry and complete bounded dependency admission units. Retain real source,namespace,
+  actual target/kind and cycle/refusal context;no caller value or guessed statement surrogate.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
