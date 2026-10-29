@@ -1,14 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.4.3:actual paired candidate/history/reference joins in execution tree.
-  Archive prerequisite .3.4.retention closes0569:window24 packs62 committed files;complete
-  before/candidate/installed1180 names/sizes/lines/SHA256/4144817B exact,native tar62/506939B.
-  All102 original physical files retained;installation complete. Do not rerun install/recover
-  after later edits. Protect target/history-capture-0569 and target/history-proof-0569.
-  Post-install active3/64,total24/192;whole0568 retired727/four exact spans only afterwards.
-- Graph/Design history .3.4.2 closes0568:actual leaves/retired source ancestry and complete
-  historical identity/resource ownership;legacy None unchanged. D335 policy/equality fixed.
-  Focused history6/graph5/Design2/resource4/stop29/doc8/lint/fmt pass;no bus effect.
+- Next G1-SLICE.6.5.3.2.3.4.3.2:actual source/stop/graph candidate construction and complete
+  unrelated-member/full-source retention;then .3 held Gather/reference/global integration.
+  .3.1 closes0570:with_split admits whole next counts and identities before one prefix copy;
+  exact old snapshot/order/refusal evidence. History9/doc5/scoped lint/fmt pass;book example exact.
+  No generation/reservation/global freshness/actual graph effect. Whole0569 retained728/three spans.
+- Window24 prerequisite0569 packs62 files;complete before/candidate/installed1180 records and
+  4144817B exact,native tar62/506939B;all102 originals exact. Protect target/history-capture-0569
+  and target/history-proof-0569. Installation complete;do not rerun install/recover after later edits.
+  Active3/64 after install;receipt727 followed. Graph/Design0568/D335 proof retained727/four spans.
 - Old full local/hosted79bd6f6a stays exact-SHA scoped;protected audit seam-20261029 holds proof.
   G1 6/18/G0 human unapproved;D334 P2 .15f after current G1/before G0 closure,D156/D223/
   PLANNING.5 pending. Physical/provider/authority/effects/full paired proof remains owned.

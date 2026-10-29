@@ -400,42 +400,61 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0568 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part727.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.retention`
   Status: `done`
-  Goal:0569 actual active64/64 unblocked through public v3 append/install;window24 packs62
-  committed full files at9858935f. Whole0568 retained727 only after installed-cohort comparison.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py
-    →generation2 working64/64,raw62/windows2;aggregate85/192/headroom0,rc=0. Independent
-    physical/catalog census agrees. Another raw receipt would exceed active working-file cap.
-  - [x] FIX: v2_migration.py append target/history-capture-0569 --owner this leaf,then public
-    v2_install.py install after full candidate/native tar comparison. OS-visible check_handoff.sh
-    --idle-cua →handoff:OK,rc=0 before transaction;own readers idle. Preserve all original trees.
-    Same-volume outputs;no bounds raised,no old candidate/recovery workspace reused.
-  - [x] ADDRESSED (verified): public append/install and prove-source window24 →62 exact full
-    Git files/0 missing-extra,rc=0. Public materialize before/candidate/installed plus independent
-    names/sizes/lines/SHA256 comparison →1180 records/4144817B exact,rc=0. Native /usr/bin/tar
-    list/extract →62 records/506939B exact,rc=0. All102 original physical files retained exact;
-    sealed generation1 index exact. Proof target/history-proof-0569/before.json and after.json;
-    original transaction target/history-capture-0569. Installation complete;do not rerun recovery
-    after later edits. Post-install pressure →active3/64,total24/192,headroom61,rc=0.
-  - [x] NO REGRESSION: complete published reader retention/source proofs and receipt727/four
-    exact Git spans pass,rc=0. Current task-source contract →12 pass,rc=0. Live routing and
-    positive book94/255/1595/2787 pass,rc=0. Independent routing →64 exact headings/four files,
-    zero stale captured-file links,rc=0. Initial ad hoc routing check assumed level-two headings;
-    actual catalog uses level-three. Corrected diagnostic accepts all Markdown heading levels.
-    Current retention →1181 logical/25 working/2538143 residentB;pressure →active4/64,total25/192,
-    headroom60,rc=0. Rust behavior unchanged,no broad matrix/native rebuild.
-    Full paired acceptance and pre-push CI keep their existing owners;no new power-loss claim.
-  - [x] LOCKSTEP: MEMORY/DEV/CHANGE/index/live retrieval/book synchronized;whole0568 scope/
-    lesson/changelog/ledger retained727 after capacity restored. LIVE/README reviewed unchanged,
-    G1 6/18/G0 human unapproved. D334 P2/D156/D223/PLANNING.5 still owned. Resume actual
-    paired candidate/history/reference joins .3.4.3 after this commit;full PNT continues.
-    promotion: declined (routine application of indexed bounded archive authoring,complete byte retention and live routing contracts;no new policy or feature).
-
+  Goal:0569 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part728.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: join actual sealed paired source/stop candidates to fresh child identities and history.
   Retire exact actual target,retain unrelated graph records and actual held Gather/reference IDs;
   expose explicit retired repair evidence without child selection or silent retarget. Global source/
   authority/budget/currentness and physical requirements must precede any eventual bus effect.
+  Scoped implementation order:.1 bounded immutable extension of existing accepted history;
+  .2 exact source/stop/actual-graph candidate construction and unrelated member retention;
+  .3 actual held Gather/reference retirement evidence and global identity/resource integration.
+  Child IDs are tentative supplied metadata until the trusted bus reserve/effect path publishes
+  them;no public candidate helper may claim generation,reservation or persistent global nonreuse.
+- ID: `G1-SLICE.6.5.3.2.3.4.3.1`
+  Status: `done`
+  Goal: extend the actual accepted history by one split without rewriting its prefix or original
+  snapshot. Admit complete next entry/issued-ID populations before any vector copy;preserve quota,
+  parent and first-child/second-child refusal precedence and original birth/split locations.
+  Supplied child IDs remain metadata,not generator/global freshness or execution authority.
+  Requirements ROADMAP4.1/4.4,ontology1/1.1 and entity-identity decision read;existing history,
+  graph ownership/resource,source/stop joins and native history contracts reviewed. Six current
+  history contracts establish immutable supplied history;there is no bounded extension API yet.
+  Own smallest native extension/current-history checks,scoped lint/fmt/doctest/book and commit.
+  Complete candidate/reference and full paired proof remain explicitly owned below/later.
+  Completion0570:with_split builds one new admitted immutable identity snapshot.
+  - [x] ROOT CAUSE (WHY + WHERE): rg public methods in ontology/seam_span_history.rs showed
+    only new/entries/identity_count/state;no accepted-prefix transition. Baseline local launcher
+    cargo test -p sc-core --test seam_span_history_contract →six cases pass,rc=0. Candidate
+    construction needs full next populations admitted before copying an existing history.
+  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
+    seam_span_history_contract →nine pass,rc=0. Three new extension cases preserve exact prefix,
+    old snapshot,unrelated roots,full-width descending child IDs and policy-independent equality.
+    Quota→parent→first/second child refusals retain original positions. A120-case component
+    comparison agrees with separate existing full-map validation;no new global-ID oracle claim.
+    All validation precedes one admitted vector copy;no second map/generator/current callback.
+  - [x] NO REGRESSION: original six history cases remain green,rc=0. cargo test -p sc-core
+    --doc ontology::seam_span_history →five pass,rc=0;scoped strict Clippy library/history test
+    and cargo fmt --all --check pass,rc=0 after touched-file whitespace formatting. New book
+    example byte-exact to passed doctest;positive book94/255/1595/2788 and glossary310/9/158/0
+    pass,rc=0. Receipt728 →three exact Git spans,rc=0. Full paired acceptance remains deferred.
+  - [x] LOCKSTEP: lineage book/MEMORY/DEV/CHANGE/LIVE/index/task synchronized;whole0569 scope,
+    lesson and changelog retained728. LIVE reviewed:G1 still6/18,history focused6→9;G0 human
+    closure unapproved. No generated/reserved identities,actual graph mutation or authority.
+    Next .3.2 actual source/stop/graph candidate join;then .3 held references/global integration.
+    promotion: declined (routine application of indexed immutable snapshot,complete preallocation admission and nonreuse contracts;no new cross-cutting rule).
+- ID: `G1-SLICE.6.5.3.2.3.4.3.2`
+  Status: `pending`
+  Goal: exact source/stop/actual graph joins construct both candidate child definitions and extend
+  attached actual history;retain unrelated graph members/authored order/full original ease body.
+  Require explicit complete clone/output bounds before allocation;do not fabricate legacy history
+  or confer physical/current authority on caller-selected correspondence metadata.
+- ID: `G1-SLICE.6.5.3.2.3.4.3.3`
+  Status: `pending`
+  Goal: actual held Gather/reference retirement evidence keeps old target IDs and both immediate
+  children;global current identity/resource and trusted bus reserve requirements precede effects.
+  No silent child choice or retarget;repair observations remain distinct from valid publication.
 - ID: `G1-SLICE.6.5.3.2.3.4.acceptance`
   Status: `pending`
   Goal: deferred scoped history/graph/actual candidate checkpoint after .1–.3;whole paired physical/

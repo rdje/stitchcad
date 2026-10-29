@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0569 — restore bounded active archive capacity
+## STITCHCAD-G1-0570 — extend immutable accepted span histories under explicit bounds
 
-- Public append/install packs62 committed files into window24. Complete before/candidate/installed1180 names/sizes/lines/SHA256/4144817B match;native tar62/506939B and all102 retained originals exact. Post-install active3/64,total24/192;no raised limits or lost logical identities.
-- Whole0568 graph/Design/D335 scope,lesson,changelog and ledger retained727/four exact Git spans only after installed comparison. Live retrieval/book synchronized;focused reader/source/task checks pass. LIVE/README unchanged,G1 6/18/G0 human unapproved. Resume actual paired candidate/reference joins.
+- with_split checks complete next counts,parent liveness and all issued child IDs before one prefix copy. Original history remains exact;new child order and refusal locations retained. No ID generation/reservation,global freshness or actual graph effect.
+- History9/doc5/scoped strict lint/fmt pass;120 comparisons agree with existing complete-map validation. Book example exact;book94/255/1595/2788/glossary310/9/158/0 pass. Whole0569 retained728/three exact Git spans. LIVE G1 6/18,history6→9;G0 human unapproved. Actual candidate/reference integration next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

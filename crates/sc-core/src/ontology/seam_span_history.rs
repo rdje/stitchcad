@@ -3,6 +3,8 @@ use super::EntityId;
 use core::{fmt, num::NonZeroUsize};
 use std::collections::BTreeMap;
 
+mod extension;
+
 /// One ordered birth or retirement record; child order follows the original side-A partition.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SeamSpanHistoryEntry {
@@ -51,6 +53,8 @@ impl SeamSpanHistoryLimits {
 /// Original input-limit or chronological identity refusal; no partial accepted history escapes.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SeamSpanHistoryError {
+    /// Appending the next record cannot be represented as an entry population.
+    EntryCountOverflow,
     /// Complete entry population refuses before examining semantic content or allocating a map.
     Entries {
         /// Actual complete supplied population.

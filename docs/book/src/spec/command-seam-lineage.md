@@ -85,6 +85,7 @@ Piece/copy/range,original ease-root,physical or mutation-authority certificate.
 | API token | Meaning |
 | --- | --- |
 | `SeamSpanHistoryError` | Original complete quota or chronological identity refusal |
+| `EntryCountOverflow` | Appending a record cannot be represented as a complete entry count |
 | `Entries` | Actual entry population exceeds its selected allowance |
 | `IdentityCountOverflow` | Checked complete introduction count cannot be represented |
 | `Identities` | Actual total introductions exceed their selected allowance |
@@ -104,6 +105,47 @@ checked in first/second order;equal new siblings name that same split as the fir
 Errors retain actual record,identity and original birth/split positions. No partial accepted
 history escapes a refusal. Full128-bit and zero IDs are accepted as supplied data,without numeric
 sorting or a hidden allocation policy.
+
+## Extend an accepted snapshot
+
+| API token | Meaning |
+| --- | --- |
+| `with_split` | Build one new immutable snapshot from an accepted prefix and supplied split |
+
+The complete next population counts every existing record plus one split,and every previously
+issued identity plus both children. Explicit entry quota precedes identity quota,both before any
+vector allocation or prefix copy. Missing or retired parent comes next,then first/second child
+nonreuse. Retired ancestors and unrelated roots still own their IDs;retirement refunds no capacity.
+Original refusal locations use the actual next record and original birth/retirement positions.
+
+After admission and all identity checks,the operation copies the unchanged accepted prefix once
+and appends the split. It builds no new validation map. The old snapshot remains usable and exact
+on success and refusal. Different sufficient allowances produce equal new canonical content.
+Child order stays supplied A order,including when the first ID sorts after the second.
+
+This example is compiled as the new API's native doctest:
+
+```rust
+use core::num::NonZeroUsize;
+use sc_core::ontology::{EntityId, SeamSpanHistory, SeamSpanHistoryEntry as E,
+    SeamSpanHistoryLimits, SeamSpanHistoryState as S};
+let parent = EntityId::from_bits(7);
+let children = [EntityId::from_bits(9), EntityId::from_bits(3)];
+let limits = SeamSpanHistoryLimits::new(NonZeroUsize::new(2).unwrap(),
+    NonZeroUsize::new(3).unwrap());
+let original = SeamSpanHistory::new(vec![E::Root(parent)], limits).unwrap();
+let candidate = original.with_split(parent, children, limits).unwrap();
+assert_eq!(original.state(parent), Some(S::Live { birth_entry: 0 }));
+assert!(matches!(candidate.state(parent), Some(S::RetiredSplit { children: ids, .. })
+    if *ids == children));
+assert_eq!(candidate.entries().first(), original.entries().first());
+```
+
+This is a supplied identity transition. It generates or reserves no IDs and grants no global
+freshness,actual graph edit,physical correspondence or command authority. Production creation
+continues through the trusted bus reserve. Actual source/stop/graph candidates and held-reference
+repair remain their next integration stages. Count limits bound logical populations,not allocator
+bytes or CPU. Checked count-overflow guards are separate from the realizable native boundary cases.
 
 ## Bind history to the actual graph
 
@@ -177,6 +219,12 @@ empty/full-width IDs,complete quota precedence and original refusal locations. A
 chain check uses depths1,2,17,32 and257:each split retains its old parent,two immediate children
 and the expected sibling leaves. Four doctests verify the compiled example,private owner,explicit
 limits and borrowed retirement lifetime. Scoped strict lint and formatting pass.
+
+Three extension cases verify exact snapshots/prefixes,complete quota/parent/child precedence,
+unrelated and retired ID nonreuse,empty history and descending full-width child IDs. A120-case
+comparison agrees with the existing complete map validator,which rebuilds the entire supplied
+history through a separate algorithm. This is a component comparison,not an external global-ID
+oracle. The extension doctest also compiles;full paired verification remains deferred.
 
 Five actual graph cases and two actual Design cases verify binding,source ancestry,borrowed object
 identity,canonical ownership and resource boundaries. Four existing sewing resource cases and29

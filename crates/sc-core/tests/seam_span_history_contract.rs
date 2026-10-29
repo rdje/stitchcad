@@ -271,3 +271,176 @@ fn canonical_identity_history_does_not_depend_on_selected_runtime_admission_poli
         "runtime allowance is not authored span content"
     );
 }
+
+#[test]
+fn split_extension_keeps_exact_prefix_snapshot_and_immediate_child_order() {
+    let original = SeamSpanHistory::new(nested(), limits(4, 6)).expect("actual accepted prefix");
+    let saved = original.clone();
+    let pointer = original.entries().as_ptr();
+    let children = [id(u128::MAX), id(99)];
+    let next = original
+        .with_split(id(1), children, limits(5, 8))
+        .expect("explicit complete next population");
+    let roomy = original
+        .with_split(id(1), children, limits(20, 30))
+        .expect("runtime allowance does not change canonical content");
+    assert_eq!(original, saved);
+    assert_eq!(original.entries().as_ptr(), pointer);
+    assert_eq!(next, roomy);
+    assert_eq!(next.entries().len(), 5);
+    assert_eq!(next.identity_count(), 8);
+    assert_eq!(
+        next.entries().last(),
+        Some(&Entry::Split {
+            parent: id(1),
+            children
+        })
+    );
+    assert_eq!(
+        next.entries().iter().take(4).copied().collect::<Vec<_>>(),
+        nested()
+    );
+    assert_eq!(original.state(id(1)), Some(State::Live { birth_entry: 3 }));
+    assert_eq!(
+        next.state(id(1)),
+        Some(State::RetiredSplit {
+            birth_entry: 3,
+            split_entry: 4,
+            children: &children,
+        })
+    );
+    for identity in children {
+        assert_eq!(next.state(identity), Some(State::Live { birth_entry: 4 }));
+    }
+    assert_eq!(next.state(id(8)), original.state(id(8)));
+    assert_eq!(next.state(id(0)), original.state(id(0)));
+    assert_eq!(next.state(id(5)), original.state(id(5)));
+}
+
+#[test]
+fn split_extension_preserves_complete_quota_parent_and_child_refusal_priority() {
+    let original = SeamSpanHistory::new(nested(), limits(4, 6)).expect("actual accepted prefix");
+    let saved = original.clone();
+    let cases = [
+        (
+            99,
+            [8, 8],
+            4,
+            1,
+            Error::Entries {
+                required: 5,
+                limit: 4,
+            },
+        ),
+        (
+            99,
+            [8, 8],
+            5,
+            7,
+            Error::Identities {
+                required: 8,
+                limit: 7,
+            },
+        ),
+        (
+            99,
+            [8, 8],
+            5,
+            8,
+            Error::MissingParent {
+                entry: 4,
+                parent: id(99),
+            },
+        ),
+        (
+            8,
+            [8, 8],
+            5,
+            8,
+            Error::RetiredParent {
+                entry: 4,
+                parent: id(8),
+                split_entry: 2,
+            },
+        ),
+        (
+            1,
+            [3, 8],
+            5,
+            8,
+            Error::ReusedIdentity {
+                entry: 4,
+                identity: id(3),
+                first_birth: 2,
+            },
+        ),
+        (
+            1,
+            [99, 0],
+            5,
+            8,
+            Error::ReusedIdentity {
+                entry: 4,
+                identity: id(0),
+                first_birth: 1,
+            },
+        ),
+        (
+            1,
+            [99, 99],
+            5,
+            8,
+            Error::ReusedIdentity {
+                entry: 4,
+                identity: id(99),
+                first_birth: 4,
+            },
+        ),
+    ];
+    for (parent, children, entries, identities, expected) in cases {
+        assert_eq!(
+            original.with_split(id(parent), children.map(id), limits(entries, identities)),
+            Err(expected)
+        );
+        assert_eq!(original, saved);
+    }
+    let empty = SeamSpanHistory::new(vec![], limits(1, 1)).expect("empty accepted prefix");
+    assert_eq!(
+        empty.with_split(id(7), [id(9), id(3)], limits(1, 2)),
+        Err(Error::MissingParent {
+            entry: 0,
+            parent: id(7)
+        })
+    );
+}
+
+#[test]
+fn split_extension_matches_independent_full_map_validation_without_rewriting_prior_states() {
+    let original = SeamSpanHistory::new(nested(), limits(4, 6)).expect("actual accepted prefix");
+    for parent in [8, 3, 0, 5, 1, 99] {
+        for children in [
+            [8, 3],
+            [99, 99],
+            [99, u128::MAX],
+            [0, u128::MAX],
+            [u128::MAX, 8],
+        ] {
+            let record = Entry::Split {
+                parent: id(parent),
+                children: children.map(id),
+            };
+            for (entry_limit, id_limit) in [(4, 6), (5, 7), (5, 8), (9, 16)] {
+                let cap = limits(entry_limit, id_limit);
+                let mut rebuilt = nested();
+                rebuilt.push(record);
+                assert_eq!(
+                    original.with_split(id(parent), children.map(id), cap),
+                    SeamSpanHistory::new(rebuilt, cap),
+                    "the linear accepted-prefix transition and complete map validation agree"
+                );
+            }
+        }
+    }
+    assert_eq!(original.entries(), nested());
+    assert_eq!(original.identity_count(), 6);
+}

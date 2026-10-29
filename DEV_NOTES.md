@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — pack the full active archive without losing any record
+## _(2026-10-29 UTC)_ — extend accepted span history without changing the old snapshot
 
-0569 active64/64=62 committed raw files+two catalogs blocked the next receipt. Published append packs window24;source proof62 full Git files and native tar62/506939B exact. Complete before/candidate/installed1180 names/sizes/lines/SHA256/4144817B match;all102 originals retained.
-OS-visible handoff clear before guarded install;own readers idle. Active3/64,total24/192 afterwards,no bound raised. Keep target/history-capture-0569 originals and target/history-proof-0569 comparisons;do not rerun install/recover after later edits. No new power-loss or memory certificate.
-Route live packed-record links to exact window24 headings;never rewrite sealed bodies. [Whole0568 graph/Design and D335 proof](docs/history/stitchcad-devnotes-part727.md) retained after installation,4 exact Git spans. Current reader/task-source/book checks verify this scope;no new Rust build/full CI.
-Existing indexed archive rules apply;promotion declined in leaf. LIVE/README unchanged,G1 6/18/G0 human unapproved. Resume actual paired candidate/history/reference joins .3.4.3;D334 P2/D156/D223/PLANNING.5 and physical/provider/authority/effect/full paired proof stay owned.
+0570 with_split admits complete next entry/issued populations before any copy,then parent liveness and original first/second-child nonreuse. Copy the exact accepted prefix once and append one record;no second map,generator or current/physical query. Original snapshot remains exact on success/refusal.
+Native history9/doc5 pass,including120 component comparisons against complete map validation and exact old prefix/unrelated roots/descending full-width IDs. Scoped strict Clippy/fmt pass after touched-file whitespace fixes. Limits remain runtime inputs;no reservation/global freshness/actual graph effect.
+Book example matches passed doctest byte-for-byte;positive book94/255/1595/2788 and glossary310/9/158/0 pass. [Whole0569 retention proof](docs/history/stitchcad-devnotes-part728.md) retains scope/lesson/changelog,three exact Git spans. LIVE G1 6/18,focused history6→9;G0 human closure unapproved.
+Indexed immutable admission/nonreuse rules apply;promotion declined in leaf. Resume actual source/stop/graph candidate join .3.4.3.2,then held references/global integration. Real provider/physical/authority/effect/full paired proof and D334 P2/D156/D223/PLANNING.5 remain owned;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
