@@ -44,6 +44,7 @@
 //! | [`seam_ease_amount`] | original-source uniform cumulative amounts and directed portion checks | `.6.5.3.2.3.2.3.3` |
 //! | [`seam_ease_workspace`] | explicit borrowed weighted-source workspace admission | `.6.5.3.2.3.2.4.2.2` |
 //! | [`seam_ease`] | retained original ease sources and shared source-interval portions | `.6.5.3.2.3.2.3.1` |
+//! | [`seam_span_history`] | bounded ordered span births/splits and explicit retired-parent evidence | `.6.5.3.2.3.4.1` |
 //! | [`range`] | whole-interval coverage and visible range repairs, distinct from endpoint queries | `.3c.2a` |
 //! | [`rational`] | the bounded exact rational a parameter is stored in | `.3a` |
 //! | [`reference`] | `EdgeRef`, `PointRef`, `LocalTag` and the `[0, 1]` `Param` | `.3a` |
@@ -83,6 +84,7 @@ pub mod seam_ease;
 pub mod seam_ease_amount;
 pub mod seam_ease_workspace;
 pub mod seam_notch_context;
+pub mod seam_span_history;
 pub mod sewing;
 pub mod topology;
 
@@ -141,6 +143,10 @@ pub use seam_notch_context::{
     NotchSourceAdmissionIssue, NotchSourceCollection, NotchSourceRange, NotchSourceValidation,
     NotchSourceValidationError, NotchSourceValidationIssue, OriginalNotchContext,
     OriginalNotchContextError, OriginalNotchContextIssue,
+};
+pub use seam_span_history::{
+    SeamSpanHistory, SeamSpanHistoryEntry, SeamSpanHistoryError, SeamSpanHistoryLimits,
+    SeamSpanHistoryState,
 };
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,

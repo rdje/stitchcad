@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0566 — accept the semantic stop component
+## STITCHCAD-G1-0567 — retain bounded span identity histories
 
-- Close implemented stop component:actual Design29/core semantic2/oracle32 rows pass;four shared cuts,B orientation,65-bit originals. Earlier full20 API/privacy doctests apply to byte-identical production sources. Only a stale two-line test comment changes;affected3 view cases pass again.
-- Whole0565 retained724/four spans;book/live/D301/index align. G1 6/18/G0 human unapproved;D334 P2/D156/D223/PLANNING.5 owned. Next actual span lineage. Physical/dependency/authority/bus effect and whole paired/release proof remain pending;no full rerun between slices.
+- Add immutable supplied Root/Split histories with explicit complete input/issued-ID limits,typed chronological refusals and borrowed live/retired lookup. Never reuse a retired ID or silently select a descendant. Native5/doctest4/scoped lint/fmt and independent chain expectations pass.
+- Book94/253/1593/2784 and glossary310/9/158/0 pass;five API rows/index/whole0566 record725 retained. G1 6/18/G0 human unapproved;D334 P2/D156/D223/PLANNING.5 owned. Next actual graph/Design owner/resource binding;global freshness,current sources,physical/effects and full paired proof remain pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

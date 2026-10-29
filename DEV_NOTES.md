@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — accept the implemented stop component
+## _(2026-10-29 UTC)_ — retain ordered span identity births and retirements
 
-0566 closes scoped stop .3.3 after six implemented stages. Actual Design29/core semantic2/independent32 oracle rows pass with four shared cuts,B orientation and65-bit originals. Whole input hashes exact after each. Existing refusal,copy/side/order/current/resource/owner and original source contracts retained.
-Complete crates/oracle comparison to full/pushed79bd6f6a permits only a stale two-line test comment;all executable bytes unchanged. Three affected view cases pass again. Earlier full check passed20 stop doctests:14 privacy/lifetime/default refusals/six API. Production sources remain byte-exact;no broad rerun.
-Whole0565/prior ledger retained724/four spans;book/live/index/D301 agree. LIVE G1 6/18,stop native31,G0 human unapproved;D334 P2/D156/D223/PLANNING.5 owned. No new span ID,bus handler,physical pairing,authority/effect/release proof;real dependencies/full paired acceptance retain their owners.
-[Whole0565 cleanup proof](docs/history/stitchcad-devnotes-part724.md). Promotion declined:indexed scoped component/source ownership acceptance. Next actual retired-parent/new-child span lineage .3.4. Full PNT;focused checks per implementation slice,full paired verification after feature completion.
+0567 implements bounded immutable Root/Split history:complete entry/issued count before map allocation,parent live before child nonreuse,all retired IDs retained. Fixed Debug and allocation-free state lookup lend immediate children from the actual record without descendant selection. No global/current graph authority.
+Native5 covers exact nested pointer/order/full128-bit/empty/quota/refusal causes and independent chain depths1/2/17/32/257. Doctest4/scoped strict lint/fmt pass;initial export order corrected. Book example exactly matches compiled snippet. Glossary310/9/158/0 and positive book94/253/1593/2784 pass.
+Initial publication guard named missing topic-index entry;added it and passed with checker unchanged. Whole0566/prior ledger retained725/four spans;book/index/five API rows/live docs align. LIVE G1 6/18/G0 human unapproved;old full/hosted79bd6f6a verdict scoped. D334 P2/D156/D223/PLANNING.5 owned.
+[Whole0566 stop proof](docs/history/stitchcad-devnotes-part725.md). Promotion declined:indexed immutable identity/explicit admission/currentness boundaries. Next actual graph/Design ownership/resource integration,then paired candidate/held reference joins;physical/authority/effects/full proof stay owned. Full PNT.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

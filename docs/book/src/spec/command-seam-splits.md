@@ -5,6 +5,10 @@ This is an implemented native prerequisite for the paired handler. Current copy/
 physical pairing,complete ease/stop conservation,lineage,command admission and atomic effects retain their
 execution owners. The bus still exposes its three implemented metadata handlers.
 
+The [bounded span identity history](command-seam-lineage.md) now validates ordered births/splits
+and explicit retired-parent evidence. Its actual graph/Design/resource and paired-candidate
+integration remain owned stages before publication.
+
 ## Bind the actual held source
 
 | API token | Meaning |

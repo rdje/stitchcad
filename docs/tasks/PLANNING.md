@@ -1164,7 +1164,7 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/window23.md#
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 paired prerequisite;owner G1-SLICE.6.5.3.2,in_progress before effects. Ease checkpoint0527 and bounded stop component0566 complete with scoped actual callers. Full prepush/pushed79bd6f6a local+hosted checks passed0564. Next actual span lineage .3.4;real formula/Profile/geometry,physical/authority/aggregate effects and full acceptance remain owned.
+P1 paired prerequisite;owner G1-SLICE.6.5.3.2,in_progress before effects. Ease0527/stop component0566 complete with scoped actual callers;full prepush/pushed79bd6f6a local+hosted checks passed0564. Bounded history0567 implemented;next graph/Design owner/resource integration .3.4.2. Real formula/Profile/geometry,physical/authority/aggregate effects/full acceptance remain owned.
 Actual native structural_child_graph_acceptance_is_not_parent_ease_conservation passes:copied10+10 gives20 for parent10;independently authored5+5 also passes structural validation with DeferredToG2AndG3. Root:per-span fields/validation lack an original-parent relation. No split result is published;handler unavailable.
 Implement coupled parent-aware sources/quantization/provenance for explicit/formula/profile and distributions;standalone structural acceptance is not conservation proof.
 Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];root boundaries[0,1,0],signed symmetry. Native .2 root-query watch passes with original domains/direction;nonuniform/context/stops/lineage/effects and full paired acceptance remain pending.
@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308–D334 — prepush repairs
 
-D308–D333 fixed0537–0563;[prior ledger](../history/stitchcad-devnotes-part724.md). Full clean/pushed79bd6f6a local/hosted checks pass0564;cleanup0565/stop checkpoint0566 complete. D334 parse-only verdict P2:G0-CONTRACT.15f,after current G1 activity/before G0 closure. D223/PLANNING.5 open. Next actual span lineage. LIVE G1 6/18;G0 human unapproved.
+D308–D333 fixed0537–0563;[prior ledger](../history/stitchcad-devnotes-part725.md). Full clean/pushed79bd6f6a checks pass0564;cleanup0565/stop checkpoint0566 complete. Bounded history0567;graph integration next. D334 parse-only verdict P2:G0-CONTRACT.15f,after current G1/before G0 closure. D223/PLANNING.5 open. LIVE G1 6/18;G0 human unapproved.

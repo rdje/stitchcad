@@ -1,18 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.4:actual retired-parent/new-child span lineage. Read native identity/
-  ownership/resource/current validation and exact graph/Gather references before changes. Split
-  into safe owned slices;no ID reuse,silent old-target retarget or fabricated source readiness.
-- Stop component .3.3 closes0566:actual Design29/core semantic2/independent32-row oracle pass;
-  four shared cuts,B orientation,65-bit originals. Earlier full20 stop doctests14 refusal/six
-  API pass;all production/executable bytes exact to full/pushed79bd6f6a except two-line test
-  comment. Rechecked its3 view cases pass. Logs target/stop-component-0566;no runtime feature edit.
-- Whole0565/prior ledger retained724/four spans. LIVE G1 6/18;full local/hosted79bd6f6a success
-  stays exact-SHA scoped,including WASM. Whole paired physical/formula/Profile/geometry/authority/
-  effects/undo/replay/cancel/quota/mutation/release remain pending. Full PNT;focused checks per slice.
-- Current full/hosted/D333/D334 receipts preserved under target/artifact_cleanup_audit/
-  seam-20261029/verification-evidence;all702 removed strays retained separately. D334 P2 .15f
-  after current G1/before G0 closure;normal18/1,human unapproved. D156/D223/PLANNING.5 pending.
+- Next G1-SLICE.6.5.3.2.3.4.2:bind bounded span history to actual SewingGraph and Design
+  identity/resource ownership. Reconcile original ease-source IDs with retired history owners
+  once;legacy held drafts remain inspectable without fabricated past splits. Read current graph/
+  source/Gather/resource paths again before changes;then candidate/reference joins .3.4.3.
+- History primitive .3.4.1 closes0567:immutable ordered Root/Split data,complete explicit entry/
+  issued-ID admission before map allocation;parent live and children fresh;old lookup keeps both
+  immediate children. Actual native5/doctest4/scoped lint/fmt pass;independent chains up to257.
+  Only local supplied metadata validated;no graph/global freshness/currentness/effect certificate.
+- Book94 chapters/253 scoped API rows/1593 source/2784 rendered links;glossary310/9/158/0 pass.
+  Whole0566/prior ledger retained725/four spans. Stop component0566 native31 complete;G1 6/18.
+  Full local/hosted79bd6f6a remains exact-SHA scoped. Full paired/physical/authority/effects and
+  formula/Profile/geometry dependencies remain owned;focused checks per slice. Full PNT continues.
+- Receipts:target/artifact_cleanup_audit/seam-20261029/verification-evidence. D334 P2 .15f after
+  current G1/before G0 closure;normal18/1,human unapproved. D156/D223/PLANNING.5 pending.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

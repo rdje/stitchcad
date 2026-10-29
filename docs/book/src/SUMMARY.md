@@ -54,6 +54,7 @@
     - [Admitted command source capture](spec/command-seam-capture.md)
     - [Captured seam command quantities](spec/command-seam-quantities.md)
     - [Semantic stops at paired cuts](spec/command-seam-stops.md)
+    - [Span identity histories](spec/command-seam-lineage.md)
     - [Original-frame notch context](spec/command-notch-context.md)
     - [Actual notch source context](spec/command-notch-sources.md)
     - [Scopes and core authorization](spec/command-scopes.md)

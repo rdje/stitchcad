@@ -381,53 +381,75 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0535 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part694.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.acceptance`
   Status: `done`
-  Goal: scoped actual stop component checkpoint after implemented .1–.4. Requirements:roadmap
-  4.1 stable references/4.4 atomic command boundary;book command-seam-stops reviewed in full.
-  Actual admission/ownership/current/membership/views/source modules and Design support tests
-  reviewed;preserve closed Both membership,actual copy/side/authored order,current causes,
-  conservative bounds and exact captured request/target ownership. No production change planned.
-  LOCAL COMMENT DEFECT owned here:stop_partition_views.rs still calls the already implemented
-  sealed join the next production slice. Correct its case-local explanation;this case deliberately
-  constructs children directly,while source-binding cases exercise the join. Recheck its3 existing
-  view cases;all production sources and executable test tokens remain unchanged.
-  Execute29 actual sc-measure command_stop_ cases,two core paired_stop_contract cases and
-  independent32-row/four-shared-cut/B-orientation/65-bit oracle. Compare current complete crates/
-  oracle bytes to full/pushed79bd6f6a and extract its actual stop privacy/API doctests;do not
-  repeat full CI or run the deferred whole paired mutation matrix. Logs target/stop-component-0566.
-  Close component .3.3 only after exact terminals/source restoration/book sync;actual span lineage
-  .3.4 and whole paired physical/formula/Profile/geometry/authority/bus effects/undo/replay/cancel/
-  quota/mutation/release remain separate owners under .6.5.3.2.acceptance and existing dependencies.
-  Completion0566:scoped stop component complete;all implemented stages checked together.
-  - [x] ROOT CAUSE (WHY + WHERE): .1–.4 were implemented with focused checks;the deferred
-    component checkpoint remained pending. Source/book recovery confirms six actual stages.
-    git show 79bd6f6a:crates/sc-measure/tests/support/stop_partition_views.rs identifies the
-    obsolete next-slice comment while
-    source.rs already implements the sealed join. Exact two-line diff proof,rc=0;no runtime bug.
-  - [x] ADDRESSED (verified): local_environment.py -- cargo test -p sc-measure --test
-    design_inputs_contract command_stop_ →29 pass/0 fail;core sewing_contract paired_stop_contract
-    →2 pass/0 fail;stop_partition_oracle.py --check →32 rows/four shared cuts/B orientation/
-    65-bit later control,all rc=0. Driver target/verify_stop_component_0566.py and baseline/results/
-    design/graph/oracle logs retain actual invocations;complete source hashes exact after each.
-    Six stages preserve actual owners,all selected bounds,typed refusals and original authored data.
-  - [x] NO REGRESSION: only stale two-line test comment corrected;exact full79bd6f6a comparison
-    proves all other complete crates/oracle bytes unchanged and no untracked source,rc=0.
-    Recheck affected command_stop_partitions →3 pass/0 fail,rc=0. Protected full-run check.log
-    yields20 actual stop doctests,14 compile-fail/six API examples passed,rc=0;all production
-    sources remain byte-exact to that fully checked/pushed/hosted-success SHA. No fresh full
-    CI,whole paired mutation matrix,physical/authority/effect or release verdict inferred.
-  - [x] LOCKSTEP: component .3.3 closes;book explains acceptance and remaining lineage/effects.
-    Whole0565/prior ledger retained724/four spans. MEM/DEV/CHANGE/LIVE/index/D301 ledger align;
-    G1 6/18,stop native31/G0 human unapproved remain scoped. D334 P2/D156/D223/PLANNING.5 owned.
-    Next actual retired-parent/new-child span lineage .3.4. Full paired .acceptance remains
-    pending after real dependencies/effects implementation;no new span identities or bus handler.
-    Focused book main_inputs/build/check →93 chapters/248 scoped API rows/1590 source links/
-    2772 rendered links,rc=0;retention1178 and receipt724/four exact Git spans pass,rc=0.
-    promotion: declined (application of indexed post-implementation component acceptance,independent fixtures and exact actual owner/current-source contracts;no new product policy).
-
+  Goal:0566 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part725.md).
 - ID: `G1-SLICE.6.5.3.2.3.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: canonical retired-parent/new-child span lineage with actual identity ownership and references;
   no identity reuse or silent old-target reassignment;integrate current-model validation before effects.
+  Requirements read:ROADMAP4.1/4.4,ontology1/1.1,entity-identity decision and command-seam-splits.
+  Actual graph live spans/retained roots,Design sewing/garment ownership/resource walkers and Gather
+  held-span lookup reviewed. History metadata cannot grant current graph/physical/command authority.
+  Children .1 bounded immutable birth/split history;.2 actual graph/owner/resource integration;
+  .3 actual paired candidate/history joins and explicit held reference repair evidence;.acceptance
+  scoped checkpoint after implementation. Real dependencies/effects/full paired proof stay .acceptance.
+- ID: `G1-SLICE.6.5.3.2.3.4.1`
+  Status: `done`
+  Goal: bounded immutable ordered span identity history. Explicit Root births/Split(parent,two
+  A-ordered children);each ID born once,only a currently live parent may split. Retired lookup keeps
+  immediate children even after nested splits,never silently selects a live descendant. No allocator,
+  clock,geometry/value/current graph check or command capability;records are validated supplied data.
+  Explicit positive entry/issued-identity limits;count complete input before validation-map allocation.
+  Validate parent first,then children in authored order;preserve original entry/identity/first birth/
+  prior split in typed errors. Private immutable owner retains original entries;fixed Debug and
+  allocation-free local state lookup. Empty histories valid under explicit limits;no default policy.
+  Paths:crates/sc-core/src/ontology/seam_span_history.rs and mod.rs;focused public contract test,
+  command-seam-lineage book/SUMMARY/scoped API map and live/task docs. Focus nested/sibling states,
+  quota/refusal precedence/nonreuse plus independent chain identities;privacy/API doctests and scoped
+  lint/fmt. No broad CI or whole paired mutation campaign. Graph integration remains next .2.
+  Completion0567:bounded immutable supplied span birth/split history implemented.
+  - [x] ROOT CAUSE (WHY + WHERE): roadmap4.1/nonreuse and paired .3.4 require explicit old
+    parent/two-child identity history;actual SewingGraph live spans/retained-root ownership is
+    separate integration. Native seam_span_history_contract →5 actual cases establish supplied
+    ordered data/nonreuse/quota/state contracts,rc=0;no current graph or global issuance inferred.
+  - [x] ADDRESSED (verified): local_environment.py -- cargo test -p sc-core --test
+    seam_span_history_contract →5 pass/0 fail,rc=0. Exact nested record borrows/unrelated roots/
+    unknown/empty/full128-bit IDs,complete entry/issued quotas,parent/child/retired reuse priority
+    and independent chain depths1/2/17/32/257 preserve immediate children and sibling leaves.
+    All complete counts precede map allocation;private owner keeps original entries and explicit
+    limits;lookup allocates nothing and never silently returns a chosen live descendant.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc seam_span_history →four pass/0 fail,
+    rc=0:actual public example/private owner/no Default/borrow lifetime. Scoped cargo clippy
+    -p sc-core --lib --test seam_span_history_contract -- -D warnings and cargo fmt --all
+    -- --check pass,rc=0. Initial format check requested export order;corrected and final scoped
+    lint/format pass. Book example byte-exact to compiled doctest;actual glossary310/9/158/0 and
+    positive book94/253/1593/2784 pass,rc=0. Initial publication check named missing topic-index
+    entry;added it and positive check passed without changing checker rules. Broader graph/
+    physical/command/full paired verification remains deferred to its separate owners.
+  - [x] LOCKSTEP: new history book/SUMMARY/topic index/five scoped API rows and MEM/DEV/CHANGE/
+    LIVE/index/D301 align. Whole0566/prior ledger retained725/four Git spans. G1 6/18/human G0
+    unapproved remain;old full local/hosted79bd6f6a verdict stays exact-SHA scoped. Next actual
+    graph/Design owner/resource integration .3.4.2,then candidate/reference joins .3.4.3;
+    no graph installation,ID allocator,provider value,physical match or bus command effect.
+    Retention1179 and receipt725/four exact Git spans pass,rc=0. Live-doc proposal guards refused
+    MEMORY51 lines/DEV328-byte line before tracked writes;tightened to existing caps. No cap change.
+    promotion: declined (application of indexed immutable identity/nonreuse,explicit logical admission and metadata-versus-current-source boundaries;canonical APIs are retrievable in the book).
+
+- ID: `G1-SLICE.6.5.3.2.3.4.2`
+  Status: `pending`
+  Goal: bind complete span history to actual SewingGraph and Design identity/resource ownership;
+  reconcile retained original source IDs with canonical retired owners exactly once. Keep legacy held
+  drafts inspectable without inventing historical splits. Admission/lookup must expose actual live/
+  retired state and reject inconsistent graph/issued identities before candidate effects.
+- ID: `G1-SLICE.6.5.3.2.3.4.3`
+  Status: `pending`
+  Goal: join actual sealed paired source/stop candidates to fresh child identities and history.
+  Retire exact actual target,retain unrelated graph records and actual held Gather/reference IDs;
+  expose explicit retired repair evidence without child selection or silent retarget. Global source/
+  authority/budget/currentness and physical requirements must precede any eventual bus effect.
+- ID: `G1-SLICE.6.5.3.2.3.4.acceptance`
+  Status: `pending`
+  Goal: deferred scoped history/graph/actual candidate checkpoint after .1–.3;whole paired physical/
+  dependency/authority/effect/undo/replay/cancel/quota/mutation/release proof stays separately owned.
 - ID: `G1-SLICE.6.5.3.2.acceptance`
   Status: `pending`
   Goal: after paired feature implementation,combined actual split/reference/ease/stop/lineage and bus undo/replay/cancel/quota acceptance. Include refactored rounding compiled5 signed/9 unsigned faults plus extra release remainder fault,also run by required pre-push probes;no broad suites between implementation slices.
