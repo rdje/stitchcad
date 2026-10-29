@@ -6,8 +6,8 @@ physical pairing,complete ease/stop conservation,lineage,command admission and a
 execution owners. The bus still exposes its three implemented metadata handlers.
 
 The [bounded span identity history](command-seam-lineage.md) validates ordered births/splits,
-actual graph/Design ownership and complete resource accounting. Actual paired candidate/reference
-joins remain the next stage before publication.
+actual graph/Design ownership,resource accounting and bounded actual source/stop graph candidates.
+Held-reference/global integration remains the next stage before publication.
 
 ## Bind the actual held source
 

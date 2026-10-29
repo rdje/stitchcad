@@ -1,4 +1,6 @@
 //! Actual source/capture/stop caller join with original quantity ports and strict owner controls.
+#[path = "seam_graph_candidate.rs"]
+mod seam_graph_candidate;
 use super::{
     admitted, at, command_request, id, ownership_limits, DesignSewing, DesignSewingDefinition,
     EaseAmount, SeamSideId, SeamSpanDefinition, SewingGraph, SewingGraphDefinition,

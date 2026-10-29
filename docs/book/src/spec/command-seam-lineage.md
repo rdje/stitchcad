@@ -3,8 +3,8 @@
 The native history component validates supplied span births and splits in authored order. It keeps
 retired parents and their two immediate child identities,including nested splits. This is local
 identity metadata. Optional actual graph binding,Design ownership and complete resource accounting
-are implemented below. Actual paired candidate/reference joins and the SplitSeamSpan bus handler
-remain pending.
+and bounded actual source/stop graph candidates are implemented below. Held-reference/global
+integration and the SplitSeamSpan bus handler remain pending.
 
 ## Explicit records and limits
 
@@ -212,6 +212,88 @@ intermediate parent;source/live aliases are owned once. Its three history entrie
 resource items,without changing text or counter demand. Different sufficient admission policies
 produce equal actual graph and Design content (D335).
 
+## Build the actual paired graph candidate
+
+| API token | Meaning |
+| --- | --- |
+| `CommandSeamSplitGraphLimits` | Explicit graph payload and complete next-history allowances |
+| `CommandSeamSplitGraphAdmission` | Exact actual owners,admitted payload and extended history |
+| `CommandSeamSplitGraphError` | Original owner,quota,identity,current graph or output refusal |
+| `admit_graph_candidate` | Join complete actual source admission with captured ease/stop owners |
+| `build` | Consume the admission and construct a structurally current graph candidate |
+| `source` | Exact complete source admission |
+| `stop_source` | Exact captured ease and ordered stop owners |
+| `children` | Tentative supplied child identities in original A order |
+| `limits` | Selected runtime allowances;not canonical graph content |
+| `reservation` | Conservative complete graph payload reservation before copying |
+| `resources` | Selected graph resource envelope |
+| `history` | Selected complete next-history allowances |
+| `SourceOwner` | Different actual source state,even if IDs/content compare equal |
+| `RequestOwner` | Different actual request object |
+| `TargetOwner` | Different actual target object or missing actual graph-member ownership |
+| `MissingHistory` | Legacy graph has no attached actual history;past edits are not inferred |
+| `SpanCountOverflow` | Next graph span population cannot be represented |
+| `Resources` | Original resource refusal,including field and owner |
+| `History` | Original complete next-history or child nonreuse refusal |
+| `Portion` | Original captured source-frame/interior refusal |
+| `Graph` | Original current copy/range/source/stop/namespace/distribution refusal |
+| `HistoryBinding` | Original exact live-leaf/source-ancestry refusal |
+| `ReservationExceeded` | Measured output exceeds its pre-copy reservation;no graph escapes |
+| `candidate.span_split.source` | Full captured-root reservation |
+| `candidate.span_split.stops` | Actual aggregate child stop-reference reservation |
+| `candidate.span_split.children_and_history` | Two child slots plus one appended history record |
+
+Admission requires the complete source token and actual sealed capture/stop join. It compares the
+actual state pointer,request pointer and target pointer in that order;equal IDs or equal bodies do
+not substitute. The target must be the actual graph member. Existing attached history is mandatory.
+The caller supplies tentative children;this stage generates or reserves no identities.
+
+Before copying history or graph definitions,the conservative payload reservation charges the full
+actual source graph,full captured-root population,aggregate child stop references and three extra
+entries for two children and one history record. With source graph population S,capture population
+C and child references R,this is S+C+R+3. Existing source/history content and discarded target data
+remain conservatively charged. The graph and history envelopes are independent explicit inputs.
+Then the bounded immutable transition checks complete next counts and identity rules before copying
+the exact history prefix once. No input host or landmark registry is cloned.
+
+Build replaces the target in place by its two A-ordered child definitions. Unrelated definitions
+remain exact and in authored order. Children retain exact paired source intervals,physical-copy
+identities,direction and ordered authored closed stop memberships. A shared cut stop keeps its same
+semantic ID in both children. Full original ease bodies remain shared and unchanged;child amounts
+are not new literals,and missing target stops are not filled from the original root.
+
+The actual graph constructor checks current structural sources. Exact live/history ancestry binds
+the new history,and current namespace validation checks every history birth. A final actual resource
+walk must fit both the selected envelope and pre-copy reservation. No partial graph escapes a
+refusal,and the original source state/history remain unchanged on both outcomes.
+
+This compiled API example consumes the actual externally owned prerequisites:
+
+```rust
+use sc_core::command::{CommandStopSourceBinding,CommandSeamSplitSourceAdmission,
+    CommandSeamSplitGraphError,CommandSeamSplitGraphLimits};
+use sc_core::{design::DesignReferenceHost,ontology::{EntityId,SewingGraph}};
+fn candidate<'a,H:DesignReferenceHost>(joined:&'a CommandStopSourceBinding<'a,H>,
+    source:&'a CommandSeamSplitSourceAdmission<'a,H>,children:[EntityId;2],
+    limits:CommandSeamSplitGraphLimits)->Result<SewingGraph,CommandSeamSplitGraphError>{
+    joined.admit_graph_candidate(source,children,limits)?.build()
+}
+```
+
+In the actual Design fixture,the target sits between two unrelated weighted spans. Original graph
+population18,capture5,child references2 and extra3 reserve28 entries. The final graph measures23.
+Limit27 refuses at consumed25/requested3 with the actual graph owner;limit28 admits. The history
+changes from three independent roots to four records/five issued IDs. Nested splitting appends
+another record,keeps all seven issued IDs and retains the same full original root. A Notch exactly
+at the nested cut stays in both children without cloning the semantic object or choosing a side.
+
+These are structurally checked graph candidates. They are not complete Design candidates,global
+identity-reserve certificates,original-notch or weighted quantity readiness,physical correspondence,
+provider availability,authorization or atomic effects. Symbolic formula/profile metadata remains
+symbolic. Whole-Design construction and held Gather repair must still run before publication;
+trusted production allocation continues through the bus reserve. Bounds concern logical payload
+populations,not allocator/RSS,temporary validation indices or CPU.
+
 ## Implemented scope and next integration
 
 Six native contract cases cover nested/sibling/unknown states,actual record-pointer retention,
@@ -231,6 +313,12 @@ identity,canonical ownership and resource boundaries. Four existing sewing resou
 stop cases pass as direct regressions. Eight relevant doctests cover the history and graph APIs,
 privacy and lifetimes. Scoped strict lint and formatting pass;full paired verification is deferred.
 
-Actual paired source/stop candidate joins and held Gather/reference repair evidence follow. No
-history input executes a command or retargets a Gather. Real source/provider/physical/authority/
-aggregate-effect checks and whole paired command acceptance retain their existing owners.
+Four actual candidate cases cover Same/Opposite and A/B pairing with literal/formula/profile ease,
+exact unrelated-member retention,full original root sharing,nested history and shared cut stops.
+They also verify owner substitution,legacy history,resource/history precedence,current namespace
+refusal,unchanged originals and exact-boundary retry. Four doctests verify API composition,private
+admission,borrowed source lifetime and no default policy;four existing source-join cases pass.
+
+Held Gather/reference repair and global ownership/resource integration follow. No history input
+executes a command or retargets a Gather. Real source/provider/physical/authority/aggregate-effect
+checks and whole paired command acceptance retain their existing owners.

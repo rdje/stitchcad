@@ -1164,7 +1164,7 @@ Done;owner .6.5.3.2.1. [Whole reproduction/source proof](../history/window23.md#
 
 ## D301 — parent-aware ease conservation before paired effects
 
-P1 paired prerequisite;owner G1-SLICE.6.5.3.2,in_progress before effects. Ease0527/stop0566/history0567/actual graph-Design binding0568 implemented with scoped checks. Full local/hosted79bd6f6a passed0564. Next pack active64/64,then actual candidate/reference joins .3.4.3;real formula/Profile/geometry,physical/authority/aggregate effects/full acceptance stay owned.
+P1 paired prerequisite;owner G1-SLICE.6.5.3.2,in_progress before effects. Ease0527/stop0566/history0567/graph0568/extension0570/actual candidate0571 implemented with focused checks. Window24 restores capacity0569. Next held references/global .3.4.3.3;real formula/Profile/geometry,physical/provider/authority/aggregate effects/full acceptance stay owned. Full local/hosted79bd6f6a remains SHA-scoped.
 Actual native structural_child_graph_acceptance_is_not_parent_ease_conservation passes:copied10+10 gives20 for parent10;independently authored5+5 also passes structural validation with DeferredToG2AndG3. Root:per-span fields/validation lack an original-parent relation. No split result is published;handler unavailable.
 Implement coupled parent-aware sources/quantization/provenance for explicit/formula/profile and distributions;standalone structural acceptance is not conservation proof.
 Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];root boundaries[0,1,0],signed symmetry. Native .2 root-query watch passes with original domains/direction;nonuniform/context/stops/lineage/effects and full paired acceptance remain pending.
@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D335 — prepush repairs and identity policy
+## D308–D336 — prepush repairs,identity policy and continuity
 
-D308–D333 fixed0537–0563;[prior ledger](../history/window24.md#stitchcad-devnotes-part726md). Local/hosted79bd6f6a checks pass0564;cleanup/stop/history checkpoints follow. D335 fixed0568:runtime limits excluded from canonical history. D334 P2:G0-CONTRACT.15f after current G1/before G0 closure. D223/PLANNING.5 open. Next pack active64/64,then candidate joins. G1 6/18;G0 unapproved.
+D308–D333 fixed0537–0563;[prior ledger](../history/window24.md#stitchcad-devnotes-part726md). D335 fixed0568:runtime policy excluded. D336 fixed0571:stale packing pointers;next held references/global .3.4.3.3. Local/hosted79bd6f6a stays SHA-scoped. D334 P2:G0-CONTRACT.15f after current G1/before G0. D223/PLANNING.5 open. G1 6/18;G0 unapproved.

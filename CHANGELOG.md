@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0570 — extend immutable accepted span histories under explicit bounds
+## STITCHCAD-G1-0571 — build bounded actual source/stop/history graph candidates
 
-- with_split checks complete next counts,parent liveness and all issued child IDs before one prefix copy. Original history remains exact;new child order and refusal locations retained. No ID generation/reservation,global freshness or actual graph effect.
-- History9/doc5/scoped strict lint/fmt pass;120 comparisons agree with existing complete-map validation. Book example exact;book94/255/1595/2788/glossary310/9/158/0 pass. Whole0569 retained728/three exact Git spans. LIVE G1 6/18,history6→9;G0 human unapproved. Actual candidate/reference integration next.
+- Exact owner joins and complete pre-copy reservation preserve unrelated spans/order,full original ease roots and A-ordered child stops/history. Actual candidate4/source4/doc4/scoped lint/fmt pass;reservation28/output23,limit27 refuses25+3,28 admits. Nested history/full root/shared cut stops preserved.
+- Book94/258/1595/2789/glossary310/9/158/0 pass;whole0570 retained729/three exact Git spans. D336 fixes two stale live planning packing pointers. LIVE G1 6/18/G0 human unapproved;held references/global integration next. No trusted reserve,quantity/physical/provider/authority/effect/full paired claim.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
