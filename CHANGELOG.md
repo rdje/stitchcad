@@ -3,10 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0541 — bind authority mutation to its stable permission key
+## STITCHCAD-G1-0542 — trace exact range primitives in the envelope
 
-- Fix D311 missing-level control by selecting Propose's first-cell key and requiring exactly one matching row. Refuse absent or ambiguous setup;preserve the census,five permissions and human-only approval.
-- Command probes15/0,actual K3 refusal,transport refusal/body controls,book93/248/1590/2771 and history checks pass. Whole0540 retained699/three exact Git spans. LIVE29 suites/G1 6/18 unchanged,D311 fixed,D312–D315 owned;full retry/push/hosted verdict pending.
+- Fix D312 with accurate ontology1.2/1.3 envelope rows;distinguish implemented source-frame mathematics from G3 integrated proof. Preserve dispositions,diagnostics,coverage rules and unapproved human closure.
+- Matrix107/29/0 and probes14/0 pass;dependent G0 probes10/0 restore18 met/1 not met/19. Book93/248/1590/2771 and history checks pass;whole0541 retained700/three exact Git spans.
+- LIVE29 suites/G1 6/18 unchanged,D312 fixed. Own discovered D316 stale MCP matrix policy and fix next,then D313–D315 before full gates/push/actual hosted jobs. No runtime transport approval or roadmap amendment.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

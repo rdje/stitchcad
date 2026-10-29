@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — keep authority mutation bound to the permission name
+## _(2026-10-29 UTC)_ — trace exact range primitives in the v1 envelope
 
-0541 D311:0476 correctly revised Propose semantics;old missing-level probe still matched retired prose. Select the stable first-cell permission key,require one unique match,and delete only that row. K3 and all five permissions/human-only approval remain unchanged.
-Command probes15/0,actual missing-Propose K3 refusal1,REAL17/5/5/0,prose control0,missing chapter2;transport8 refusal/body reds and positives pass. bash -n,book93/248/1590/2771,699 receipt3/retention1153 pass0. Full repository retry follows remaining four repairs.
-[Whole0540 archive repair](docs/history/stitchcad-devnotes-part699.md) retains exact scope/lesson/changelog. LIVE29 suites/G1 6/18 unchanged,D311 fixed,D312–D315 owned. G0 human unapproved;no push or hosted verdict. Next matrix-coverage D312.
-Promotion declined:indexed semantic identity and independent refusal-control contracts. No new authority assumption;book explains name-versus-description contract. Consume each terminal before edits/staging/commit or moving to the next owned leaf.
+0542 D312:0485/0488 added ontology1.2/1.3 without feature-matrix traces. Two supported rows now cite exact strict-cut/source-progress primitives and retain G3 integrated proof. No exemption,diagnostic change,runtime mutation or implied physical certificate.
+Matrix107 rows/29 diagnostics/0 failures,probes14/0;dependent G0 probes10/0 restore18 met/1 not met/19. Human closure remains unapproved. Book93/248/1590/2771,700 receipt3/retention1154 pass0. Full prepush retry remains after four owned repairs.
+[Whole0541 authority control](docs/history/stitchcad-devnotes-part700.md) retains exact scope/lesson/changelog. LIVE29 suites/G1 6/18 unchanged,D312 fixed,D313–D316 owned. New D316:matrix MCP row contradicts active four-profile policy;owned next .matrix-transport without runtime approval.
+Promotion declined:indexed normative trace coverage and proof-scope contracts;transport decision already canonical. The census checks written dispositions,not their correctness;direct normative-source review caught the stale MCP row. No new transport decision or roadmap change.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -426,37 +426,44 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0540 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part699.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.catalog-mutation`
   Status: `done`
-  Goal:0541 D311 P1 missing-authority control follows stable permission key and removes one row.
-  - [x] REPRODUCE / ISSUE: full0538 command probes →LEVEL-MISSING mutation absent and unchanged
-    book accepted,2 failures,rc1;actual catalog17 commands/5 classes/5 levels still passes.
-  - [x] ROOT CAUSE (WHY + WHERE): git log -G 'native preview uses|build a candidate group' --
-    docs/book/src/spec/command-layer.md →0476 correctly updated Propose prose;old probe retained
-    retired wording from G0,rc=0. Source K3 compares first-cell names against roadmap §7.8;
-    prose is not permission identity. Read roadmap4.4/7.8 and current chapter7 before change.
-  - [x] FIX: LEVEL-MISSING selects '| `propose` |';droprow requires one unique match before
-    writing and deletes only that line. Missing/ambiguous setup refuses3 instead of selecting an
-    arbitrary row. Checker/vocabularies/human-only approval remain unchanged. Book documents scope.
-  - [x] ADDRESSED (verified): local_environment.py -- bash
-    docs/tasks/artifacts/command_layer/run_command_layer_probes.sh →15 pass/0 fail,rc=0;
-    actual mutated Propose row removed exactly once and K3 names missing authority,exit1.
-    REAL17/5/5/0;unrelated prose control passes,exit0;missing chapter refuses2. Existing eight
-    transport refusal/body-red controls,glossary refusal,future/historical positives remain green.
-  - [x] NO REGRESSION: bash -n command probes →rc=0;mdbook build/positive publication
-    →93/248/1590/2771,rc=0;receipt699 →3 exact Git spans,rc=0;retention →1153 logical/58 working/
-    64995 decodedL/5057715 decodedB/2635052 residentB,rc=0;git diff --check →rc=0. Remaining
-    D312–D315 fixes precede full gates/push/actual hosted jobs;no broader verdict inferred.
-  - [x] LOCKSTEP: whole0540 task/lesson/changelog retained699 before curation. MEM/DEV/CHANGE/
-    LIVE/index/ledger/book align;D311 fixed,29 suites/G1 6/18 unchanged,G0 human unapproved.
-    README objective/commands unchanged. Commit before D312 matrix-coverage;all remaining owners
-    retained.
-    promotion: declined (application of indexed semantic identity/independent refusal controls;no new product permission or governance decision).
+  Goal:0541 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part700.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.matrix-coverage`
+  Status: `done`
+  Goal:0542 D312 P1 add accurate envelope traces for implemented source-frame primitives;
+  restore dependent G0 instrument baseline without approving human closure.
+  - [x] REPRODUCE / ISSUE: full0538 matrix census →105 rows/29 diagnostics/2 failures,
+    ontology1.2/1.3 missing;dependent G0 real/control17 met/2 not met instead of18/1,rc1 probes.
+  - [x] ROOT CAUSE (WHY + WHERE): git log -- ontology.md feature-matrix.md →0485/0488 added
+    exact range split/progress sections without matrix traces,rc=0. M3 correctly requires each
+    numeric object clause;G0-01 executes that census. Source review confirms strict-cut frame
+    preservation and complete reduced progress are implemented primitives,not full paired effects.
+  - [x] FIX: two supported v1 envelope rows cite ontology1.2/1.3 precisely;reason cells distinguish
+    implemented mathematics from G3 integrated sewing/topology proof. Existing dispositions,gate
+    rules,diagnostics and G0 expectations unchanged. No runtime code or proof boundary changed.
+  - [x] ADDRESSED (verified): local_environment.py -- bash
+    docs/tasks/artifacts/feature_matrix/run_feature_matrix_probes.sh →14 pass/0 fail,rc=0,
+    REAL107 rows/29 diagnostics/0 failures;uncited-clause refusal1 and proposal advisory positives
+    retained. Dependent run_g0_exit_review_probes.sh →10 pass/0 fail,rc=0;REAL/control18 met/
+    1 not met/19 clauses. Gate review completes;human closure remains unapproved.
+  - [x] NO REGRESSION: mdbook build/positive publication →93/248/1590/2771,rc=0;
+    receipt700 →3 exact Git spans,rc=0;retention →1154 logical/59 working/65045 decodedL/5062496
+    decodedB/2639833 residentB,rc=0;git diff --check →rc=0. Full repository gates remain deferred
+    until remaining repairs;no hosted verdict/push or whole paired/physical acceptance inferred.
+  - [x] LOCKSTEP: whole0541 task/lesson/changelog retained700. MEM/DEV/CHANGE/index/LIVE/ledger
+    align;D312 fixed,G0 observed18/1,29 suites/G1 6/18 unchanged. D316 matrix MCP stdio-only drift
+    discovered by direct roadmap7.8/active transport decision comparison,owned and scheduled next
+    under .matrix-transport before D313–D315. No runtime transport approval or roadmap amendment.
+    README objective/commands unchanged. Commit before next leaf.
+    promotion: declined (application of indexed normative trace coverage and implemented-versus-integrated proof scope;approved transport policy already has its canonical decision).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.matrix-transport`
   Status: `pending`
-  Goal:D312 P1 classify/trace ontology1.2 exact held-source range partition and1.3 normalized
-  source progress in normative feature matrix. Actual M3 reports missing citations;REAL/proposal
-  controls fail. Add accurate rows/citations consistent with existing foundation contracts;do not
-  exempt clauses or normalize failing counts. G0-01 depends on this checker,causing real/control
-  17 met2 not met19 clauses;restore instrument baseline18/1 while human closure stays unapproved.
+  Goal:D316 P1 normative feature-matrix MCP row still claims stdio-only after approved roadmap
+  v0.4 adopted four per-profile connections eligible from G1. Reproduce:compare feature-matrix7
+  row171 against ROADMAP7.8 and decision_mcp-transports;actual command census checks roadmap,
+  command chapter and glossary,not this row. Impact:book contradicts authorized transport scope.
+  Repair row under existing approved policy without widening runtime approval;add focused copied
+  row refusal/watch in existing command census/probes. No runtime transport is certified. Schedule
+  immediately after D312 before D313,then remaining repairs/full gates/push. No roadmap change.
 - ID: `G1-SLICE.6.5.3.2.prepush-400.cleanup-mutation`
   Status: `pending`
   Goal:D313 P1 isolate protected-store guard mutation from real package-store contents. GOOD
