@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0555 — restore complete independent recipe selector oracle
+## STITCHCAD-G1-0556 — preserve scoped receipt closure after bounded census curation
 
-- Close D324:append rational annex to expected child inputs23,retain22 original paths/strict equality/all other AST. Public shell/producer/oracle agree;actual rational-only omission refuses. Original capture/physical/body/native consumer/restoration controls pass. Production unchanged.
-- Fullc455 check0/gate0/probes2 reached29;sole recipe capture traceback. Whole0554/prior ledger retained713/four spans;book/history checks pass. Verify remaining environment entries then fresh full prepush/normal push/actual jobs;no whole verdict inferred.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D324 fixed,D156 audits open. Full PNT continues.
+- Close D325:replace obsolete global LIVE count expectation with original whole D209 Git report,unique canonical owner,current pointer/no live report and six refusal controls. All byte/receipt/shared-acceptance checks and non-census AST remain exact;actual public CLI agrees. PLANNING.5 stays open.
+- First11 remaining environment entries passed;entry12 repaired. Whole0555/prior ledger retained714/four spans;book/history checks pass. Continue environment tail,then fresh full clean prepush/normal push/actual jobs;no whole verdict inferred.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D325 fixed,D156 audits open. Full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

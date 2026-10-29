@@ -44,6 +44,21 @@ optional locks, preserving stores/caller state. Committed windows retain exact G
 needs an independent successful HEAD-tree query; failed observation/unavailable/unreadable metadata
 refuses. Initial source reconstruction remains required.
 
+The receipt continuity check also exercises the staged400-byte task-line boundary with ASCII and
+UTF-8, reconstructs the original whole D209 receipt after whitespace folding, and compares its sealed
+defect report against the original repair commit. It rejects a missing, altered or duplicate report,
+a new live D209 report, or an omitted closure pointer:
+
+```bash
+python3 -I -B scripts/local_environment.py -- python3 -I -B \
+  docs/tasks/artifacts/ci_environment/receipt_retention_contract.py
+```
+
+This is a scoped retention check. Closed live navigation entries may point to sealed reports;
+their presence does not make them open defects. The bounded status page publishes a summary rather
+than global open/sealed totals. Complete automated lifecycle classification remains owned by
+`PLANNING.5`; this check does not claim that broader census has been completed.
+
 ## Bounded generations (version3)
 
 An ordered index pins each generation's control and a domain-separated digest of every indexed

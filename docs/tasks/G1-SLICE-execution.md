@@ -417,6 +417,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   selector-oracle failure. D324 fixed0555 with actual public closure23,all original guard/native
   proofs. Next remaining environment entries after recipe fixture,then fresh full gates/normal
   push/actual jobs. Logs target/prepush-400-0554;no push/hosted verdict inferred.
+  Tail0555:published next11 entries pass0/source clean;receipt entry12 fails stale live census.
+  D325 fixed0556:original byte/continuity/non-census AST exact,scoped closure/six reds pass0.
+  Continue after receipt at signed-angle fixture;then fresh full clean gates/push/actual jobs.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
@@ -432,58 +435,53 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0554 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part713.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.recipe-selector`
   Status: `done`
-  Goal: D324,P1 blocking current prepush:restore independent exact child-selector oracle23
-  after rational annex became a public L7 input;preserve all22 old paths/strict set equality,
-  original196 reference body/11 faults,CLI/effect/physical/native consumer/restoration contracts.
-  Paths: docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py
-  Reproduce: full clean c455f929/derived419 →check0/gate0/probes2,all29 entry points reached;
-  sole unhandled traceback environment capture 'recipe child selector recheck omitted'. Logs
-  target/prepush-400-0554;root/source restored clean,brief empty,all terminals consumed.
-  Root tools: actual consumer_inputs function planned23;fixed CHILD_INPUTS oracle22,only missing
-  docs/book/src/annexes/formula-rationals.md,no oracle-only targets. Independent actual shell
-  L7 resolve function/default selectors/link closure also derives23 and requires that path,rc=0.
-  Relevant history:67e0a416 added rational link in public contract0244;597e4523 added scalar-binding
-  route0253. Recipe oracle dates0200 and retained old published population. Producer guard is
-  complete;fix only test's expected set. No production code repair or equality weakening.
-  Acceptance: add exactly one independent expected path;all old paths/every other AST exact.
-  Full six dispatches/borrowed196/12 guard reds/14 physical refusals/positive unused sidebar/
-  actual guard-disable admissions and tracked inputs unchanged. Calibrate specific rational
-  omission with actual producer dataflow;independent public shell/default and relative selectors
-  agree. Real published consumer/mutation proof remains distinct from intercepted metrics.
-  Whole0554/prior ledger retained before bounded docs replacement;book/live/index aligned;
-  commit,then focused remaining failed environment stages and fresh full prepush before push.
+  Goal:0555 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part714.md).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.receipt-census`
+  Status: `done`
+  Goal: D325,P1 current push blocker;repair receipt_retention_contract.py's obsolete live
+  global-count expectation after bounded status/ledger curation. Preserve D209 byte/archive/
+  original-admission/whole-receipt/shared-acceptance proofs,closure identity and non-overlap;
+  do not invent a current global census or close deferred PLANNING.5.
+  Reproduce: clean625be852/derived420;published environment tail first11 pass0/source clean,
+  receipt entry12 fails D209 live defect census drift after byte/continuity controls pass.
+  Evidence:target/prepush-400-0555-environment/{baseline.json,results.json,12-receipt_retention_contract.log}.
+  Root: current LIVE bounded row has no 'N open, N sealed';retained checker demands that old
+  format. Diagnose Git removal rationale/current canonical reports before choosing adaptation.
+  Repair: verify retained D209 through public archive inventory and canonical current pointer;
+  retain meaningful closure/no-overlap controls with isolated omission/overlap/duplicate reds.
+  Focus: actual receipt controller end-to-end plus independently frozen unchanged control AST,
+  original/current report bytes and actual failure controls;source restored exactly. Update book,
+  bounded live docs/ledger;commit0556 before remaining tail/full clean prepush/normal push/jobs.
+  Acceptance: ROOT CAUSE/ADDRESSED/NO REGRESSION with commands/output/rc,book/history retention,
+  no production or historical record rewrite,no inferred complete current defect census.
 
-  Completion0555:D324 exact23-target oracle/native consumer proof accepted.
-  - [x] REPRODUCE / ISSUE: full clean c455f929/419 →check0/gate0/probes2;all29 entry points
-    reached,sole traceback recipe child selector recheck. All source restored clean,brief empty;
-    terminal consumed. Logs target/prepush-400-0554. Push/hosted verdict remain pending.
-  - [x] ROOT CAUSE (WHY + WHERE): actual consumer_inputs plan and independent public shell
-    L7 resolver/default selector closure →23 inputs,retained oracle22;only missing rational annex,
-    no oracle-only path,rc=0. Link added0244/extended0253 after0200 oracle. Producer recheck is
-    complete;strict capture's independently frozen expected set lagged the public dependency.
-  - [x] FIX: append only annexes/formula-rationals.md to expected CHILD_INPUTS. All22 old paths
-    and every other controller AST/guards/classifiers/effect/selector statement remain exact.
-    Retain strict set equality and current producer/public shell behavior;no production edit.
-  - [x] ADDRESSED (verified): prepared original python_recipe_fixture_contract →six dispatches,
-    borrowed pure196/twelve actual guard reds/fourteen physical refusals/unused-sidebar positive/
-    owned no-effect guard-disable admissions,tracked inputs exact,rc=0. Original196 function and
-    eleven FAULTS AST match frozen original. Actual static_recipe_contract.py --mutations →196
-    controls,actual21-statement replay/25 ceiling,11 original +2 consumer +1 measurement =14
-    assertion reds,producer unchanged,rc=0. Intercepted child metrics remain authored/separate.
-  - [x] NO REGRESSION: target/recipe_selector_0555_focus.py →frozenc455 all other AST exact,
-    old22 paths exact prefix/one addition;producer/public shell/fixed oracle agree23,rc=0.
-    Actual producer mutant dropping only rational path from final plan hits intended strict
-    child-source assertion,tracked inputs exact,rc=0. Book93/248/1590/2771,rc=0;receipt713 →4
-    exact Git spans,rc=0;retention1167 logical/72 aggregate working/65953 decodedL/5153961
-    decodedB/2731298 residentB,rc=0;entry/shell/Rust/Cargo source diffs and git diff --check0.
-    Initial curation delimiter was new/uncommitted and refused before writes;retry used actual
-    committed layout boundary,then verified receipt. No whole environment/full prepush pass claimed.
-  - [x] LOCKSTEP: whole0554/prior ledger retained713. Book explains direct/part/link selector
-    coverage and real-versus-intercepted reference proof. MEM/DEV/CHANGE/index/ledger aligned;
-    LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D324 fixed,D156 audits open. README
-    unchanged. Commit then verify remaining environment entries from published runner after
-    recipe fixture,before fresh full check/gate/probes/normal push/exact-SHA jobs. Full PNT.
-    promotion: declined (application of indexed independent public-selector closure,exact expected populations and isolated omission controls;no new source or product authority).
+  Completion0556:D325 scoped original closure contract restored.
+  - [x] ROOT CAUSE (WHY + WHERE): target/receipt_census_0556_focus.py runs frozen625be852
+    census and reproduces exact live-census drift,rc=0. Git768aebe0 removed global LIVE totals;
+    old regex also treats explicitly Closed D70 navigation as open. Current canonical reports
+    are not a complete current lifecycle census;PLANNING.5 remains deferred,not falsely closed.
+  - [x] FIX: replace obsolete global live-format/count assumption with scoped D209 lifecycle
+    proof. Public inventory's whole report131 must equal original e45c21d3 Git bytes,have one
+    canonical owner,no live D209 report,and a current closure pointer. All canonical retained
+    report identities must be unique. Do not infer current global open/closed populations.
+  - [x] ADDRESSED (verified): actual prepared receipt_retention_contract.py →eight ASCII/UTF-8
+    byte verdicts/four original admissions/multiline positive/two evidence refusals/doc-only
+    400-positive401-refusal/whole414-byte receipt reconstruction/shared acceptance exact,rc=0.
+    Whole D209 original report/pointer/no live report pass;six isolated missing/altered/duplicate/
+    old-marker overlap/new-heading overlap/pointer omission controls refuse exactly,rc=0.
+    Log:target/receipt-census-0556-focus.log;all non-census AST frozen625be852 exact.
+  - [x] NO REGRESSION: independent actual public read equals original repair Git report
+    sha256:cbd9d3c95d316131fa51e3c3169a90b3a2a1d036411cc26fad8c33215cfab851,rc=0;
+    focus snapshots all tracked regular files exact,rc=0. Book build/publication93/248/1590/2771
+    pass0;retirement714/four exact Git spans pass0;retention1168 logical/73 aggregate working/
+    66078 decodedL/5166136 decodedB/2743473 residentB pass0;git diff --check0. No Rust,public
+    archive reader,stage checker,immutable report or product change;no full prepush verdict claimed.
+  - [x] LOCKSTEP: whole0555/prior ledger retained714. Book explains exact scoped receipt
+    checks/closed navigation/deferred global census;MEM/DEV/CHANGE/index/ledger aligned. LIVE
+    G1 6/18/29 suites/G0 human unapproved unchanged,D325 fixed,D156 audits/PLANNING.5 open.
+    Commit then remaining published environment tail after receipt,then fresh full clean
+    check/gate/probes/normal push/exact-SHA hosted jobs. Full PNT continues.
+    promotion: declined (application of indexed exact historical retention,scoped lifecycle claims and independent refusal controls;no new global census or product authority).
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

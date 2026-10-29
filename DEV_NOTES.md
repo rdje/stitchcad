@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — independent recipe selector closure stays current
+## _(2026-10-29 UTC)_ — scoped receipt retention survives bounded census summaries
 
-0555 closes D324:producer/public shell L7 plan23 while old capture oracle22 missed rational annex link added0244. Append one expected path;strict equality/22 old paths/all other controller AST exact. Actual rational-only plan omission refuses. Production entry/shell unchanged.
-Captures6/pure196/guard12/physical14/positive/owned no-effect admissions pass0. Real consumer21/25 ceiling and11 original+2 consumer+1 measurement fault reds pass0. Intercepted metrics stay authored. Fullc455 check0/gate0/probes2 reached29;sole observed recipe traceback/source restored.
-Whole0554/prior ledger retained713/four spans;book93/248/1590/2771 and retention1167 pass0. New/uncommitted curation delimiter refused before writes;committed boundary retry/receipt verified. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D324 fixed,D156 audits open.
-[Whole0554 coupled proof](docs/history/stitchcad-devnotes-part713.md). Promotion declined:indexed public-selector closure/exact oracle/omission calibration. Next remaining environment entries,then fresh full gates/normal push/actual jobs;full PNT continues.
+0556 closes D325:receipt probe demanded global LIVE totals removed0240;old open-marker regex also includes explicitly Closed D70 navigation. Freeze625 reproduces exact drift. Verify D209 whole original Git report/unique canonical owners/no live report/current pointer;six refusal controls pass0.
+All non-census AST,byte boundary/original admissions/whole414-byte folded receipt/shared acceptance remain exact and pass0. Public CLI equals original Git report;tracked bytes exact. Tail first11 passed before entry12. Complete current lifecycle census stays PLANNING.5;no total invented.
+Whole0555/prior ledger retained714/four spans;book93/248/1590/2771 and retention1168 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D325 fixed,D156 audits open. No product behavior or immutable history changed.
+[Whole0555 recipe proof](docs/history/stitchcad-devnotes-part714.md). Promotion declined:indexed exact retention/scoped claims/refusal calibration. Next remaining environment tail,then fresh full gates/normal push/actual jobs;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -129,19 +129,56 @@ def continuity():
     print('receipt continuity: whole committed .a17 reconstructs exactly sha256=' + hashlib.sha256(old.encode()).hexdigest() + '; 414-byte line folded within400; shared acceptance exact; rc=0')
 
 
-def defect_census():
-    records, _ = ARCHIVE['inventory'](ROOT)
+def retained_closure(records, planning, original):
+    """Check the retained D209 lifecycle, without classifying the whole live ledger."""
     pattern = r'^- \*\*D([0-9]+)\*\*|^### Defect D([0-9]+)\b'
-    identities = lambda text: {int(a or b) for a, b in re.findall(pattern, text, re.M)}
-    closed = set()
+    identities = lambda text: [int(a or b) for a, b in re.findall(pattern, text, re.M)]
+    owners = {}
     for name, data in records.items():
         if re.fullmatch(r'docs/history/stitchcad-defects-part[0-9]+\.md', name):
-            closed.update(identities(data.decode()))
-    opened = identities((ROOT / 'docs/tasks/PLANNING.md').read_text())
-    published = re.search(r'([0-9]+) open, ([0-9]+) sealed', (ROOT / 'LIVE_STATUS.md').read_text())
-    assert published and (len(opened), len(closed)) == (int(published[1]), int(published[2])), 'D209 live defect census drift'
-    assert 209 in closed and not opened & closed, 'D209 closure missing or overlapping'
-    print('receipt defect census:', len(opened), 'open /', len(closed), 'sealed; no overlap; D209 retained; rc=0')
+            for identity in identities(data.decode()):
+                owners.setdefault(identity, []).append(name)
+    assert all(len(names) == 1 for names in owners.values()), 'duplicate retained defect report'
+    report = 'docs/history/stitchcad-defects-part131.md'
+    assert owners.get(209) == [report], 'D209 retained closure missing'
+    assert records[report] == original, 'D209 retained closure bytes changed'
+    assert 209 not in identities(planning) and not re.search(r'^## D209\b', planning, re.M), 'D209 live report overlaps closure'
+    links = re.findall(r'^D209\b[^\n]*?\]\(([^)\n]+)\)', planning, re.M)
+    assert any(link.endswith('/stitchcad-defects-part131.md') or
+               link.endswith('#stitchcad-defects-part131md') for link in links), 'D209 closure pointer missing'
+    return len(owners)
+
+
+def defect_census():
+    records, _ = ARCHIVE['inventory'](ROOT)
+    planning = (ROOT / 'docs/tasks/PLANNING.md').read_text()
+    revision = 'e45c21d383dcd281a7a25864e1b4e77d5898f03f'
+    report = 'docs/history/stitchcad-defects-part131.md'
+    original = subprocess.check_output(['git', 'show', revision + ':' + report], cwd=ROOT)
+    count = retained_closure(records, planning, original)
+    controls = (
+        ('missing', {name: data for name, data in records.items() if name != report}, planning,
+         'D209 retained closure missing'),
+        ('altered', {**records, report: records[report] + b'\n'}, planning,
+         'D209 retained closure bytes changed'),
+        ('duplicate', {**records, 'docs/history/stitchcad-defects-part999999.md': records[report]}, planning,
+         'duplicate retained defect report'),
+        ('legacy overlap', records, planning + '\n- **D209** — independent live report\n',
+         'D209 live report overlaps closure'),
+        ('heading overlap', records, planning + '\n## D209 — independent live report\n',
+         'D209 live report overlaps closure'),
+        ('pointer omitted', records, re.sub(r'^D209\b[^\n]*\n?', '', planning, flags=re.M),
+         'D209 closure pointer missing'),
+    )
+    for label, changed_records, changed_planning, expected in controls:
+        try:
+            retained_closure(changed_records, changed_planning, original)
+        except AssertionError as error:
+            assert str(error) == expected, (label, str(error))
+        else:
+            raise AssertionError('D209 closure control admitted: ' + label)
+    print('receipt retained closure:', count, 'distinct canonical sealed reports; D209 whole original bytes/pointer/no live report; six refusal controls; rc=0')
+    print('receipt scope: current global open/closed census remains deferred to PLANNING.5; rc=0')
 
 
 if __name__ == '__main__':

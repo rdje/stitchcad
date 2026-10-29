@@ -1,15 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400 in execution sibling:verify remaining environment entries
-  from published runner after python_recipe_fixture_contract.py;start python_input_context_contract.
-  Logs target/prepush-400-0555-environment. Resolve owned failures,then fresh full check/gate/probes
-  from clean completed HEAD before normal push/actual exact-SHA hosted jobs. No push/verdict yet.
-- D324 fixed0555:one expected rational-annex path;22 old paths/all other AST exact. Public shell/
-  producer/oracle closure23;actual rational-only final-plan omission refused. Captures6/pure196/
-  guards12/physical14/positive/admission controls pass0;real consumer21/25 ceiling and14 fault reds0.
-- Full c455f929/derived419:check0/gate0/probes2;all29 reached,one recipe capture traceback;source
-  restored clean,all terminals consumed. Logs target/prepush-400-0554. Whole0554/prior ledger
-  retained713/four spans;book93/248/1590/2771,retention1167 pass. Production entry/shell unchanged.
+- Next G1-SLICE.6.5.3.2.prepush-400:remaining published environment entries after receipt;
+  start python_signed_angle_fixture_contract.py. Prior tail target/prepush-400-0555-environment:
+  first11 pass0/source clean;receipt entry12 D325 fixed0556. Continue target/prepush-400-0556-environment.
+  Resolve failures,then fresh full clean check/gate/probes before normal push/actual exact-SHA jobs.
+- D325 fixed0556:obsolete global LIVE census removed0240;Closed D70 navigation is not an open
+  report. Original non-census AST/byte/continuity checks exact;D209 whole Git report/pointer/no live
+  report/unique canonical owners and six isolated refusal controls pass0;PLANNING.5 stays deferred.
+- Whole0555/prior ledger retained714/four spans;book93/248/1590/2771,retention1168 pass0. Full
+  c455f929/419 check0/gate0/probes2 reached29;sole recipe traceback fixed0555. No push/verdict yet.
 - LIVE G1 6/18/29 suites/G0 human unapproved;D156/12 audits open. Coupled26723/28 Rust/6 ref/3
   book,expression16/statement22/archive28 scoped proofs complete. Then stop .3.3.acceptance/live
   lineage .3.4. Full PNT continues;consume all producer/commit terminals before dependent work.
