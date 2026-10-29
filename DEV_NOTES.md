@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — isolate protected-store faults and retain reviewed source identity
+## _(2026-10-29 UTC)_ — keep static status checks independent of chapter layout
 
-0544 D313:GOOD already protects the real store;removed guard was masked by a real nested Git checkout. Use an empty owned protected fixture in the actual function globals,retain all prefixes,restore on every outcome. Real store only sees intact protections;production cleanup unchanged.
-D317:companion whole-file pin0ab74212 predates reviewed certificate0285 and idle-CUA0315 changes. Source diff/log confirms only those changes;pin whole inspector explicitly35e2650b,retain original fixture AST baseline with exact declared adapter. No moving HEAD or removed identity guard.
-Cleanup15/11,fixture capture/body/physical17/link/restore/ownership/AST/root,real zero residue/six inputs,certificate omission controls pass0. Book93/248/1590/2771,702 receipt3/retention1156 pass0. Whole0543 retained;LIVE29 suites/G1 6/18 unchanged,D313/D317 fixed,D314–D315 owned.
-[Whole0543 transport repair](docs/history/stitchcad-devnotes-part702.md). Promotion declined:indexed guard isolation/exception restoration/frozen-source review. No project cleanup apply,cadence reset or source/store/certificate change. Full gates/push/actual hosted jobs after remaining repairs;G0 human unapproved.
+0545 D314:0367 curated the old status table into scoped prose/routes while the checker retained table/wording assumptions. The entire pre-curation12-row table is byte-exact518. Read current chapter and live D154 owners before changing guard;no stale status table restored.
+Guard requires12 independently authored static-scope statements and11 actual proof routes,retaining implemented stages and pending ordinal/runtime/geometry boundaries. Reflow/prose positives and25 actual copied-text refusals pass0;source unchanged. This proves documentation scope,not full routed behavior.
+Book93/248/1590/2771,703 receipt3/retention1157 pass0. Whole0544 retained before curation. LIVE29 suites/G1 6/18 unchanged,D314 fixed,D315 owned. D154/G0 human closure remain open/unapproved;full formula/repository retry and hosted verdict pending.
+[Whole0544 cleanup repair](docs/history/stitchcad-devnotes-part703.md). Promotion declined:indexed maintained proof-scope/layout-independent checks. Next complete producer candidate inventory,including new archive helpers;inventory does not certify standalone locality or runtime behavior.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

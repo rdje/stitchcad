@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0544 — isolate protected-store faults and retain reviewed source identity
+## STITCHCAD-G1-0545 — check maintained static scope independently of layout
 
-- Fix D313 using an empty owned protected fixture and guaranteed actual-prefix restoration. Preserve the genuine store refusal and all production cleanup protections. Add traversal-trap/restore-omission controls and an exact fixture AST adapter.
-- Fix discovered D317 stale whole-inspector baseline by reviewing the two later certificate/idle-CUA changes and explicitly pinning0315. Retain frozen identity and original fixture baseline;no moving HEAD comparison or policy weakening.
-- Cleanup15/11,fixture/physical17/real preservation,certificate,book/history checks pass. Whole0543 retained702/three exact Git spans. LIVE29 suites/G1 6/18 unchanged,D313/D317 fixed,D314–D315 owned;full gates/push/actual hosted jobs pending. No cleanup apply/cadence reset.
+- Fix D314 stale table requirement with12 authored scope statements and11 proof routes. Retain implemented static stages and explicit pending D154/runtime/geometry boundaries;reject obsolete prerequisite/future claims without restoring retired prose.
+- Reflow/unrelated-prose positives and25 actual copied-text refusals pass,source unchanged. Old12-row table remains byte-exact518. Book93/248/1590/2771 and history checks pass;whole0544 retained703/three exact Git spans.
+- LIVE29 suites/G1 6/18 unchanged,D314 fixed,D315 owned. Check is documentation scope;full formula/repository gates,push and actual hosted jobs remain pending. D154 and G0 human closure remain open/unapproved.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

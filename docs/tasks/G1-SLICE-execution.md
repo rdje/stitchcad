@@ -435,47 +435,37 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0543 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part702.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.cleanup-mutation`
   Status: `done`
-  Goal:0544 D313 P1 isolate protected-store mutant;D317 P1 repair stale frozen inspector pin
-  exposed by focused companion. No production cleanup code,policy or preserved data changed.
-  - [x] REPRODUCE / ISSUE: full0538 cleanup mutation failed when removed protected guard reached
-    another Git-boundary refusal in populated Cargo store. GOOD protected refusal already correct.
-    Focused companion after D313 repair →new isolation/restoration controls pass,then stale whole
-    inspector0ab74212 identity fails,rc1 (D317);target/d313-fixture-contract.log.
-  - [x] ROOT CAUSE (WHY + WHERE): actual inspect checks protected prefixes before traversal;
-    mutant's real-store input makes an unrelated guard mask the intended counterfactual. Function
-    globals are the actual namespace even when runpy returns a mapping copy. Git diff/log0ab74212
-    →current cleanup.py show only certificate protection0285/c9e6da4c and idle-CUA0315/35e2650b,
-    rc=0;companion whole-file pin predated both reviewed changes. No new production defect inferred.
-  - [x] FIX: GOOD still checks genuine store;mutant uses an empty owned fixture temporarily
-    appended to actual inspector protected prefixes. Keep every real prefix and restore in finally.
-    Companion traps package-store traversal,checks expected/unexpected restoration and actual
-    restore-omission red. Original full fixture AST comparison adapts only this operation/helper/
-    additional real refusal. Entire inspector remains frozen to explicit reviewed0315 commit
-    35e2650bb0bb20f59f2cf3d461416027682fa46a,not moving HEAD;original fixture baseline retained.
-  - [x] ADDRESSED (verified): local_environment.py -- bash artifact_cleanup/
-    run_artifact_cleanup_probes.sh →15 pass/0 fail,11 compiled guard assertion reds,rc=0.
-    local_environment.py -- python3 -I -B ci_environment/python_cleanup_fixture_contract.py
-    →capture/body omission/physical17/link/restoration/ownership/AST/root controls pass,rc=0;
-    dedicated protected-store traversal trap and restore-body assertions turn red as required.
-    Paths above are under docs/tasks/artifacts/. Frozen inspector identity now passes,rc=0.
-  - [x] NO REGRESSION: companion --real →original15/11,six source inputs exact,zero fixture
-    residue,no project cleanup apply,rc=0. certificate_store_controls.py →protected2/ordinary1/
-    actual omission-red1/restored1,data/source exact,rc=0. Book build/positive publication →
-    93/248/1590/2771,rc=0;receipt702 →3 exact Git spans,rc=0;retention1156 logical/61 working/
-    65151 decodedL/5073013 decodedB/2650350 residentB,rc=0;git diff --check →rc=0.
-  - [x] LOCKSTEP: whole0543 task/lesson/changelog retained702. Cleanup annex documents isolated
-    fixture and explicit reviewed inspector pin. MEM/DEV/CHANGE/LIVE/index/ledger align;D313/D317
-    fixed,29 suites/G1 6/18 unchanged. Cleanup cadence not reset;stores/certificates untouched.
-    README objective/commands unchanged. Next D314 static-status,then D315 inventory before full
-    gates/push/actual hosted jobs. G0 human closure remains unapproved;commit before moving.
-    promotion: declined (application of indexed independent guard isolation,exception restoration and explicit frozen-source review contracts;no new cleanup policy).
+  Goal:0544 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part703.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.static-status`
-  Status: `pending`
-  Goal:D314 P1 align static_status_contract with maintained formula-static-validation chapter.
-  Actual traceback says D152 current table missing;current chapter uses scoped prose/links instead
-  of old12-cell table. Read canonical curation/history before changing checker. Preserve independent
-  implemented-versus-pending/static-versus-runtime/geometry checks and real copied-text refusals;
-  do not restore stale claims or require retired layout. Focused status/formula controls then commit.
+  Status: `done`
+  Goal:0545 D314 P1 check maintained static scope and proof routes without requiring retired layout.
+  - [x] REPRODUCE / ISSUE: full0538 formula_structure stopped at static_status_contract.py
+    assertion D152 current table missing,rc1;current chapter already uses scoped prose/routes.
+  - [x] ROOT CAUSE (WHY + WHERE): git log -S old table header →0367/967e24e7 curation,rc=0;
+    whole twelve-row pre-curation table compares byte-exact in retained518,rc=0. Checker remained
+    pinned to old table shape/NEW_PROSE wording. Read full current chapter,history and D154 live
+    owners:implemented metadata/static stages coexist with open reference ordinal/runtime/geometry
+    work. Old table removal is not evidence that implementations disappeared or pending work closed.
+  - [x] FIX: independently authored12 scoped statements require implemented stages,name/kind/
+    both-branch/phase/prefix/provider boundaries,D154 open owner and pending runtime/geometry.
+    Eleven actual Markdown proof routes retain kinds/catalogs/limits/source/static/runtime homes.
+    Retain obsolete prerequisite/future refusals;paragraph reflow/prose organization can change.
+    This checks documentation scope,not the routed implementations or full static execution proof.
+  - [x] ADDRESSED (verified): local_environment.py -- python3 -I -B
+    docs/tasks/artifacts/formula_structure/static_status_contract.py --mutations →12 independent
+    scope clauses/11 proof routes,reflow/unrelated-prose positives,25 actual copied-text body reds,
+    source unchanged,rc=0. Each scoped statement and every occurrence of each required route is
+    independently removed in copied text;obsolete prerequisite/future contradictions also refuse.
+  - [x] NO REGRESSION: mdbook build/positive publication →93/248/1590/2771,rc=0;
+    receipt703 →3 exact Git spans,rc=0;retention1157 logical/62 working/65212 decodedL/5079337
+    decodedB/2656674 residentB,rc=0;git diff --check →rc=0. Full formula/repository suites remain
+    parent prepush-400's required fresh retry after D315,not claimed passed by this small check.
+  - [x] LOCKSTEP: whole0544 task/lesson/changelog retained703. Book explains maintained scoped
+    status guard/manual invocation;old table stays immutable518. MEM/DEV/CHANGE/LIVE/index/ledger
+    align;D314 fixed,29 suites/G1 6/18 unchanged,D154 and G0 human closure remain open/unapproved.
+    README objective/commands unchanged. Next D315 final candidate inventory,including D310 new
+    helpers;commit before moving,then full gates before normal push/actual hosted jobs.
+    promotion: declined (application of indexed maintained-proof scope and layout-independent contract checks;no new static/runtime or approval claim).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.producer-inventory`
   Status: `pending`
   Goal:D315 P1 refresh complete source candidate dispositions for producer_census_contract.

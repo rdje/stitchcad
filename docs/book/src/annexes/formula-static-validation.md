@@ -201,6 +201,13 @@ scope. D154's reference refusal ordinal repair remains OPEN under .5b.4c; the di
 arithmetic/product exception does not close it. Persisted-cycle/replay repair remains .5e/.7; physical
 geometry and computed cross-platform verification remain G2/.5g.
 
+The status guard checks current scope statements and proof routes independently of the retired table.
+It supplies no runtime/geometry proof and leaves D154 open:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/static_status_contract.py --mutations
+```
+
 D124's ruling keeps the current grammar: loop/repeat/while/fn/macro are ordinary scalar names, unknown
 calls refuse before argument semantics, malformed definitions parse-refuse, and unsupported powers/
 envelope calls keep their declared tokens. ADR-0003 retains that ruling. D125's false-assertion repair

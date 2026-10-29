@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.static-status in docs/tasks/G1-SLICE-execution.md:
-  D314 current formula-static-validation status guard;then D315 complete producer candidate
-  inventory last. Commit each repair;read current chapter/curation before changing the guard.
-- D313/D317 fixed0544:empty protected fixture isolates actual guard;restore actual globals on
-  every outcome. Frozen inspector pin35e2650b includes reviewed certificate/idle-CUA changes.
-- Cleanup15/11,fixture/physical17/real-input preservation,certificate controls pass0. Whole0543
-  retained702/3 spans;book93/248/1590/2771/retention1156 pass. No cleanup apply or cadence reset.
-- LIVE29 suites/G1 6/18 unchanged;D307–D313/D316/D317 fixed,D314–D315 P1 owned. Last G018/1
-  human unapproved. Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538,no hosted verdict.
-- After remaining repairs,full check/gate/probes from clean completed HEAD,normal push/actual
-  hosted jobs. Then stop .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/
-  Profile/current authority/aggregate/effect proof remain owned. Consume terminals before edits.
+- Next G1-SLICE.6.5.3.2.prepush-400.producer-inventory in docs/tasks/G1-SLICE-execution.md:
+  D315 inspect/classify every new candidate,including D310 helpers and ordinary current/build.rs
+  module. Inventory is inspection,not standalone locality signoff;preserve existing audit owners.
+- D314 fixed0545:current static scope12/proof routes11/copied-text reds25/reflow positives pass0;
+  old twelve-row table retained byte-exact518. D154 ordinal/runtime/geometry owners remain open.
+- Whole0544 retained703/3 spans;book93/248/1590/2771/retention1157 pass. LIVE29 suites/G1 6/18
+  unchanged;D307–D314/D316/D317 fixed,D315 P1 owned. Cleanup production/stores remain untouched.
+- Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538. Last G018/1 human unapproved;
+  no push/hosted verdict. After D315 commit,run all full gates from clean completed HEAD.
+- Normal push only after full check/gate/probes pass;observe exact-SHA hosted jobs. Then stop
+  .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/Profile/current authority/
+  aggregate/effect proof remain separately owned. Consume terminals before edits/staging/moving.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
