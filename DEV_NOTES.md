@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — verify actual scalar results against the independent book parser
+## _(2026-10-29 UTC)_ — repair reference input requirements without new language refusals
 
-0580 pure guarded reference producer imports no Rust implementation/expected fixture. Native actual ASTs match49 rows/ten intended refusals/2325B,including exact values,call sources,ordered repeated/taken reads and combined contributions. Complete frozen bytes independently reproduced;implementation unchanged0579.
-Native full11 passed initial46 rows;expanded oracle pair49 rows and scoped strict lint/fmt pass. Prior scalar9/real membership1/plan5/doc10 remain scoped evidence. Book94/281/1601/2802/glossary310/9/158/0 pass. [Whole0579 worker](docs/history/stitchcad-devnotes-part738.md) retains four exact Git spans.
-D338 P2 actual reference Derived/valueNone wrongly yields formula_unknown;normative token requires Unknown and Rust correctly needs sole formula execution. Repro/blame→b126f3c41/0080 generic external-origin branch. Owned next .5e.2.5.reference-derived before Derived integration;exclude those oracle verdicts now.
-Indexed independent-parser/watched-fixture/scoped-claim rules apply;promotion declined. Prepared subset .3 closes;whole expression .integration/recipe/derived/tan/geometry/replay/platform/physical remain owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;D334/D156/D223/PLANNING.5 pending. Full PNT continues.
+0581 D338 root0080 routed every valid absent external state to formula_unknown;old origin tests encoded it. Only Unknown now takes that canonical path. Derived and missing Known/Assumed/Preference raise reference-only context requirements,without invented token/formula/value. Rust requests already correct.
+Focus16/origin1471/four actual in-memory guard/field-loss reds/public consumer17/4/13/native oracle49 unchanged/syntax pass. Retain actual labels,None/empty distinction,zero/false/computed sources and real lazy geometry. Replace now-equivalent state-to-unknown mutant with actual missing-state-field control.
+Book94/281/1601/2802/glossary310/9/158/0 pass;outside-book draft link rejected/corrected. [Whole0580 scalar checkpoint](docs/history/stitchcad-devnotes-part739.md) retains four exact Git spans. Historical0080 receipts stay immutable;D338 fixed. No Rust/kernel/backend/full CI change or verdict.
+Indexed input-state/context/diagnostic rules apply;promotion declined. Next .5e.2.5.1 complete actual recipe admission/session boundary before real prior-let execution. Whole dependencies/replay/platform/physical owned;G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. D334/D156/D223/PLANNING.5 owned. Full PNT.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

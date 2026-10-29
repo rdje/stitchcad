@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0580 — verify actual scalar results with an independent parser oracle
+## STITCHCAD-G1-0581 — repair reference Derived and authored-value scope requirements
 
-- Independent guarded book reference yields49 rows/ten refusals/2325B;native actual values,call sources,read order and refusal families match. Full11 initially/expanded oracle pair/scoped lint/fmt/book94/281/1601/2802/glossary310/9/158/0 pass;implementation unchanged0579. Whole0579 retained738/four Git spans.
-- Scoped scalar .3 checkpoint done;full expression .integration/recipe/derived/tan/geometry/replay/platform/physical stay open. Own D338 P2:reference labels unexecuted Derived as Unknown,contrary to normative row/Rust request. Next .5e.2.5.reference-derived repair before Derived integration. G1 6/18/G0 unapproved.
+- Fix D338:only actual Unknown emits formula_unknown. Missing Derived/authored context raises nonlanguage requirement with actual name/origin/state/label;no token/formula/value invented or geometry fallback. Preserve computed bindings,zero/false and source contributions;retain historical0080 receipts.
+- Focus16/origin1471/four guard reds/public17/4/13/native oracle49 unchanged/syntax/book94/281/1601/2802/glossary310/9/158/0 pass;whole0580 retained739/four Git spans. Next actual recipe admission .5e.2.5.1. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;whole runtime/physical/release still pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

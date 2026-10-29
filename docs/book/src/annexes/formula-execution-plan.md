@@ -353,13 +353,13 @@ the2325-byte fixture is independently reproduced exactly. Existing implementatio
 unchanged from0579. This closes the prepared scalar subset's result checkpoint,not whole-language,
 all-input numerical,worked-book,platform,geometry/physical or release verification.
 
-D338 records an actual reference limitation discovered during this checkpoint:an unexecuted
-Derived parameter with no supplied value is incorrectly classified as formula_unknown. The
-normative diagnostic applies to Unknown state. The Rust adapters/worker correctly preserve the
-sole formula's RequiresEvaluation request. Reference Derived-resolution verdicts are excluded
-here;their repair is owned by .5e.2.5.reference-derived before Derived integration. No substitute
-value,formula identity or new language token is introduced. Actual available derived bindings and
-Unknown diagnostics must remain distinct when that reference boundary is repaired.
+D338 was discovered during this checkpoint and repaired0581:the reference had classified missing
+Derived and other non-Unknown external values as formula_unknown. They now raise a separate
+reference input-context requirement with no canonical language token or invented formula identity.
+Actual Unknown diagnostics and available computed bindings remain intact. Rust already preserves
+its sole formula's RequiresEvaluation request. Full Derived-resolution verdicts remain outside this
+finite checkpoint until their actual dependency executor exists;the repaired boundary supplies
+no substitute value,cache or whole-language acceptance.
 
 Name reads use the actual resolved declaration, not a fresh name-only search that could find another
 source. Canonical length/general scalar adapters retain source/state and return observation or

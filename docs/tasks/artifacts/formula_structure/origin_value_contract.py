@@ -42,17 +42,25 @@ def contracts(replacement=None, verbose=True):
     assert ref.origins == frozenset(ORIGINS) and set(ref.reserved) == set(RESERVED)
     checks = 0
 
-    def result(source, env, wanted=None, arguments=None):
+    def result(source, env, wanted=None, arguments=None, requirement=None):
         nonlocal checks
         try:
             value = ref.statement(source, env)
+        except ns['ReferenceInputRequired'] as error:
+            assert wanted is None and requirement is not None, ('origin context requirement', source, wanted, error)
+            assert error.requirement == requirement and error.arguments == arguments, (
+                'origin context requirement', source, requirement, arguments, error.arguments)
+            assert not isinstance(error, ns['FErr']) and not hasattr(error, 'token'), (
+                'origin context requirement became language diagnostic', source, error)
+            value = None
         except Exception as error:
+            assert requirement is None, ('origin context requirement misclassified', source, requirement, error)
             assert isinstance(error, ns['FErr']), ('origin read host error', source, type(error).__name__)
             assert wanted is not None and error.token == wanted, ('origin read token', source, wanted, error.token)
             assert arguments is None or error.arguments == arguments, ('origin read arguments', arguments, error.arguments)
             value = None
         else:
-            assert wanted is None, ('origin missing read accepted', source, wanted, value)
+            assert wanted is None and requirement is None, ('origin missing read accepted', source, wanted, requirement, value)
         checks += 1
         return value
 
@@ -73,7 +81,12 @@ def contracts(replacement=None, verbose=True):
                 env = {'input_value': {'kind': kind, 'origin': origin, 'state': state, 'value': None}}
                 before = deepcopy(env)
                 assert ref.static_statement('input_value', env)[:3] == ('expr', None, kind)
-                result('input_value', env, TOKENS[origin], arguments('input_value', origin, state))
+                if origin in ORIGINS[:5] and state != 'unknown':
+                    requirement = 'derived_evaluation' if state == 'derived' else 'authored_value'
+                    result('input_value', env, arguments=dict(name='input_value', origin=origin,
+                        state=state, requirement=requirement), requirement=requirement)
+                else:
+                    result('input_value', env, TOKENS[origin], arguments('input_value', origin, state))
                 assert env == before, 'origin missing read changed caller'
             for state in STATES[:4]:
                 for zero in (False, True):
@@ -104,6 +117,18 @@ def contracts(replacement=None, verbose=True):
         ref.resolve_geometry = forbidden
         result('geo', env, 'formula_unbound_name', arguments('geo', 'geometry', 'unknown'))
         assert env == before, 'origin unknown geometry changed caller'
+        ref.resolve_geometry = saved
+    # External input context never becomes geometry because a caller supplied a lazy flag.
+    for origin in ORIGINS[:5]:
+        env = {'input_value': {'kind': 'length', 'origin': origin, 'state': 'derived', 'value': None, 'lazy': True}}
+        before = deepcopy(env)
+        saved = ref.resolve_geometry
+        def forbidden(*args):
+            raise AssertionError('origin external input reached geometry fallback')
+        ref.resolve_geometry = forbidden
+        result('input_value', env, arguments=dict(name='input_value', origin=origin, state='derived',
+            requirement='derived_evaluation'), requirement='derived_evaluation')
+        assert env == before, 'origin context requirement changed caller'
         ref.resolve_geometry = saved
     # Always-visible metadata never asserts the existence of an optional context value.
     for name, (kind, provided) in RESERVED.items():
@@ -167,7 +192,7 @@ def contracts(replacement=None, verbose=True):
         result('geo', env, 'formula_unknown', arguments('missing', 'measurement', 'unknown'))
         assert env == before, 'origin failed geometry published cache or lost lazy state'
     if verbose:
-        print('origin value contract: %d cases / nine origins, eight kinds, five missing states / reserved supplied contexts / taken-only reads / malformed metadata / lazy geometry' % checks)
+        print('origin value contract: %d cases / nine origins, eight kinds, five missing states / nonlanguage input requirements / reserved contexts / taken-only reads / malformed metadata / lazy geometry' % checks)
     return checks
 
 
@@ -198,12 +223,14 @@ def consumer():
 
 
 FAULTS = (
+    ('nonunknown misclassified', 'if state != "unknown":', 'if False:'),
+    ('external input reached geometry', 'if e.get("value") is None and e["origin"] in ("measurement", "ease", "parameter", "profile", "material"):', 'if False:'),
     ('geometry misclassified', 'elif origin == "tolerance":', 'elif origin in ("tolerance", "geometry"):'),
     ('size reserved misclassified', 'else "size")', 'else "tolerance")'),
     ('provided optional value rejected', 'if value is None:', 'if not always:'),
     ('unknown token changed', 'token = "formula_unknown"', 'token = "formula_unbound_name"'),
     ('origin payload changed', 'arguments["origin"] = origin', 'arguments["origin"] = "measurement"'),
-    ('state payload changed', 'arguments["state"] = state', 'arguments["state"] = "unknown"'),
+    ('unknown state payload lost', 'arguments["state"] = state', 'pass'),
     ('search payload lost', 'tuple(sorted(self.origins))', '()'),
     ('context payload lost', 'arguments["context"] = self.context', 'arguments["context"] = "other"'),
     ('namespace type guard removed', 'or not isinstance(origin, str)', 'or False'),
@@ -223,7 +250,7 @@ if __name__ == '__main__':
                 try:
                     contracts((before, after), False)
                 except AssertionError as error:
-                    assert any(marker in str(error) for marker in ('origin read token', 'origin read arguments', 'origin missing read accepted', 'origin read host error')), (name, 'not an actual body assertion red', error)
+                    assert any(marker in str(error) for marker in ('origin read token', 'origin read arguments', 'origin missing read accepted', 'origin read host error', 'origin context requirement', 'origin external input reached geometry fallback')), (name, 'not an actual body assertion red', error)
                     print('  actual compiled origin refusal red:', name)
                 else:
                     raise AssertionError(('origin fault escaped', name))

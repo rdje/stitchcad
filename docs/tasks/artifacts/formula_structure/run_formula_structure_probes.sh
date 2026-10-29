@@ -67,5 +67,6 @@ python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py -
 rustfmt --edition 2021 --check docs/tasks/artifacts/formula_structure/static_coupled_driver.rs
 python3 -I -B docs/tasks/artifacts/formula_structure/static_coupled_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/reference_input_requirement_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mutations

@@ -243,66 +243,71 @@ Product named assertions are described below; AST execution, geometry and releas
 
 ## Missing values by origin
 
-A name's kind can be known when its value is unavailable. Preflight can accept the name and still
-leave a runtime read to refuse. The reference now follows contract3's origin rules:
+A name's static kind does not supply its runtime value. D338 repairs the reference value-model
+boundary:only an actual Unknown external input raises formula_unknown. Missing context for other
+states is separate from a canonical formula-language diagnostic:
 
-| Missing input | Runtime diagnostic |
+| Missing reference value | Outcome |
 | --- | --- |
-| A measurement, Ease, design parameter, profile or material value | formula_unknown |
-| A geometry, earlier recipe or size value | formula_unbound_name |
-| A tolerance value | formula_tolerance_unbound |
+| Unknown measurement/Ease/parameter/profile/material | formula_unknown with actual Unknown state |
+| Unexecuted Derived external input | ReferenceInputRequired: derived_evaluation |
+| Known/Assumed/Preference external value omitted by the fixture | ReferenceInputRequired: authored_value |
+| Geometry, earlier recipe or size value | formula_unbound_name |
+| Tolerance value | formula_tolerance_unbound |
 
-For example, body_width declared as an unknown length from measurement can pass the static check
-for let doubled:length=body_width*2. Executing it raises formula_unknown. Missing geometry p raises
-formula_unbound_name when read; missing eps_fmt raises formula_tolerance_unbound. None receives a
-replacement value. The original state is retained for an absent fact, even when a malformed record
-claims known but supplies no value; this routing is not approval of that record as canonical data.
+ReferenceInputRequired is an instrument-only requirement,not FErr,and has no canonical token.
+It retains name,origin,state,requirement and an explicitly supplied context label. None and an
+explicit empty label remain distinct. The port has no canonical formula identity or dependency
+executor to invent:full Derived resolution stays product integration work. Actual canonical
+adapters retain RequiresEvaluation with the sole formula identity. No value/cache,statement
+ordinal,artifact-policy context or approval is manufactured.
+
+For example,an external parameter declared Derived with value=None requests derived_evaluation;
+a Known parameter with value=None requests its authored value. An actual Unknown measurement
+still raises formula_unknown. A present zero/false remains readable. Available Derived bindings
+returned by actual reference statements remain readable,including zero/false and their original
+approximation contributions. These are reference value-port controls,not proof of a canonical
+product provider or whole recipe execution.
 
 ### Optional context values
 
-The reference's reserved tuple contains kind, always-visible metadata and a supplied value. The
-always flag records the normative availability rule; it does not prevent an optional context from
-supplying a value. A None value means unavailable. For example, eps_fmt with length/False/25 is
-readable when the fixture supplies25µm. A size context supplying is_base_size=False is readable
-and selects a conditional's else branch. False and zero are values, not absence tests.
-
-The reference accepts an optional explicit context label. A missing tolerance diagnostic includes
-that label when supplied; no label is guessed for a caller that supplies none. This label is
-instrument context, not proof of a real export target, profile, size set or authority grant.
+Reserved tuples contain kind,always-visible metadata and a supplied value. The always flag does
+not forbid an optional supplied context. For example,eps_fmt length/False/25 reads25µm;an actual
+supplied is_base_size=False selects else. Missing optional values acquire no default. A supplied
+context label is retained;no export target,profile,size-set or authority identity is inferred.
 
 ### Diagnostic arguments and malformed declarations
 
-The owned error arguments retain name and declared origin. Unknown-fact errors retain the actual
-state; unbound errors retain the reference's closed, sorted origin vocabulary as origins_searched.
-A missing undeclared name has no invented origin. Tolerance errors retain explicitly supplied
-context. Artifact-blocking policy, object evidence, statement ordinals and canonical expression
-context remain product requirements; these reference fields are not their typed production API.
+Canonical reference errors retain the actual name/origin. Unknown errors retain Unknown state;
+unbound errors retain the closed sorted origins_searched vocabulary. Tolerance errors retain an
+explicit context. Missing/invalid kinds,origins,states and record shapes raise formula_parse,
+not host KeyError/TypeError. Unknown with a supplied value is malformed. Static checking still
+observes only kind/origin;it does not consult values or uncertainty states.
 
-Missing declaration kind/origin fields, non-string or undeclared metadata and invalid record shapes
-raise formula_parse rather than leaking KeyError or TypeError. An explicit state requires one of the five authored tokens; malformed state raises formula_parse.
-An unknown record carrying a value is also malformed and refused. Unknown lazy geometry is refused
-before resolution or cache publication. An absent fact requires an explicit valid authored state. Static namespace checks
-still observe only kind/origin. They do not read values or uncertainty states. Existing populated
-numerical fixtures without state metadata remain readable; full canonical input adapters are pending.
+An external missing value stops before any geometry fallback,even with a caller lazy flag.
+Actual lazy point/edge fixtures preserve resolution,caching and upstream errors;failed resolution
+publishes no partial cache. These arithmetic geometry fixtures are not real entity references.
+Existing populated fixtures without state metadata remain supported;they supply no canonical
+source/currentness/evidence proof. Complete product contexts retain their separate owners.
 
 ```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/reference_input_requirement_contract.py
 ```
 
-Its [producer plans](formula-documentation-controls.md#origin-and-provenance-consumer-plans) preserve pure calls and guard both copied books before effects.
+The focused requirement producer passes16 controls,including no invented token/identity/value,
+actual labels,None/empty distinction and available computed bindings. The origin contract now
+passes1471 controls across nine origins,eight kinds and five missing states. Four changed
+in-memory guard/field-loss controls fail as intended;their source bytes remain unchanged. The
+registered complete fault population has15 entries and remains part of the required broad gate.
+The old state-to-Unknown payload mutation became equivalent after the repair and was replaced
+with an actual missing-state-field control.
 
-The structural runner watches1466 independent controls: nine origins/eight kinds/five missing states,
-four populated states, zero/false values, all eight reserved names, explicitly supplied contexts,
-taken-only missing reads, malformed declarations and populated-state consistency. Lazy point/edge resolution, subsequent cached
-reads and upstream failures retain their established behavior. No partial cache is published after
-a failed resolution. The reference geometry values are arithmetic fixtures, not real entity references.
-
-Two actual copied worked books pass all21 static statements, then refuse missing size_index and
-eps_fmt at runtime with their distinct tokens. Thirteen compiled predicate/payload faults require body
-assertion reds; the reference source remains unchanged during those in-memory faults. Existing
-namespace1139/thirteen fault controls still trap all numerical/state/geometry access.
-G1-SLICE.5e.1a closes D122 origin/context routing and D127 malformed-input exceptions and D128 uncertainty-state bypass. Product
-adapters and complete production diagnostic/provenance context retain their separate owners.
+Original0080 receipts at docs/history/window13.md#stitchcad-devnotes-part360md preserve the
+historical1466-control/thirteen-fault and copied-book results. The existing
+[producer plans](formula-documentation-controls.md#origin-and-provenance-consumer-plans) describe
+their guarded consumers. D338 corrects the overbroad
+all-state expectation;it does not rewrite that history. The public reference consumer still
+passes17 bindings/four assertions/thirteen refusals;the native49-row scalar fixture remains exact.
 
 ## Approximation contributions and admissible classes
 

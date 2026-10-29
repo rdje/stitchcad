@@ -231,6 +231,21 @@ class FErr(Exception):
         self.token, self.msg = token, msg
         self.arguments = dict(arguments) if arguments is not None else {}
 
+class ReferenceInputRequired(Exception):
+    """Missing reference-only input context, never a canonical formula-language diagnostic.
+
+    The value-model port has no canonical formula identity/dependency executor to invent here.
+    Actual Unknown remains FErr; available computed bindings still carry their returned values.
+    """
+    def __init__(self, name, origin, state, requirement, context=None):
+        self.name, self.origin, self.state, self.requirement = name, origin, state, requirement
+        self.context = context
+        self.arguments = dict(name=name, origin=origin, state=state, requirement=requirement)
+        if context is not None:
+            self.arguments['context'] = context
+        Exception.__init__(self, "reference input `%s` (%s, %s) requires %s" %
+                           (name, origin, state, requirement))
+
 def _atan_series(x):
     total, num, x2 = Decimal(0), x, x * x
     for k in range(600):
@@ -767,6 +782,9 @@ class Evaluator:
         if origin in ("measurement", "ease", "parameter", "profile", "material"):
             if state not in ("known", "assumed", "preference", "derived", "unknown"):
                 raise FErr("formula_parse", "missing value for `%s` has no valid authored state" % name)
+            if state != "unknown":
+                raise ReferenceInputRequired(name, origin, state,
+                    "derived_evaluation" if state == "derived" else "authored_value", self.context)
             token = "formula_unknown"
             arguments["state"] = state
             message = "`%s` is %s, so it has no value and none is invented" % (name, state)
@@ -797,6 +815,8 @@ class Evaluator:
             raise FErr("formula_parse", "value for `%s` has no valid authored state" % name)
         if state == "unknown" and e.get("value") is not None:
             raise FErr("formula_parse", "unknown `%s` cannot supply a value" % name)
+        if e.get("value") is None and e["origin"] in ("measurement", "ease", "parameter", "profile", "material"):
+            self._missing_name(name, e["origin"], state)
         if state == "unknown" and e.get("lazy"):
             self._missing_name(name, e["origin"], state)
         if e.get("lazy"):

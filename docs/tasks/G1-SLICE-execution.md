@@ -7,7 +7,9 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
 ### Execution, uncertainty and replay
 - ID: `G1-SLICE.5e.1`
   Status: `in_progress`
-  D122/D127/D128 reference child .5e.1a verified; product input adapters below remain pending.
+  D122/D127/D128 reference child .5e.1a verified0080;D338 corrects its missing-state boundary0581.
+  Canonical/scalar/tolerance/size adapters and scoped AST execution available;full Derived/source
+  dependency integration remains pending. Historical receipts stay immutable.
   Goal: explicit adapters for measurement/Ease/design/profile/material/size inputs and five
   authored states, preserving canonical identity, kind, source and provenance requirements.
   Acceptance: unknown has no value, derived reads follow their dependencies, assumed/preference
@@ -106,45 +108,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0579 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part738.md).
 - ID: `G1-SLICE.5e.2.4.3.acceptance`
   Status: `done`
-  Goal: after actual scoped scalar worker implementation,run its deferred integration/independent
-  runtime-result checks and reconcile implemented versus unavailable families. Whole worked-book,
-  platform identity,derived/geometry/tangent/statement/replay proof remains .5g/.5e.4/parent work;
-  this checkpoint cannot close those obligations or claim full formula-language execution.
-  Scope0580:reuse the independently parsed book reference and exact Fraction/Decimal evaluator
-  for a finite frozen supported scalar population;native actual AST outputs must match values,
-  approximation sources,executed name order and selected refusal families. Pure guarded stdout
-  producer/frozen fixture/native watch,not a replacement backend. No whole worked-book/platform
-  or unsupported-family campaign. D338 discovered during actual reference-port review:Derived
-  value=None currently becomes formula_unknown,contrary to normative Unknown-only diagnostic.
-  Rust correctly preserves RequiresEvaluation. Exclude reference Derived-resolution verdicts;
-  own P2 repair .5e.2.5.reference-derived before Derived integration,then revalidate that family.
-  Completion0580:finite independent scalar result checkpoint closed;whole language still open.
-  - [x] ROOT CAUSE (WHY + WHERE): actual worker feature0579 had focused checks but no separate
-    cross-parser result/trace oracle. Existing static_signature_contract.load_reference imports
-    actual book parser/Fraction/Decimal evaluator without copied native AST/kernel rules. Read
-    evaluate/value_of_name/within/call/data contracts;source/repro tools rc=0. Actual D338 repro
-    infers length then emits formula_unknown for state Derived;blame765–783→b126f3c41/0080.
-    Normative formula-language5.2 requires Unknown state;Rust already returns RequiresEvaluation.
-  - [x] ADDRESSED (verified): guarded scalar_execution_oracle.py →49 unique six-field rows,
-    ten intended refusals,2325B,rc=0. Native cargo test -p sc-core --test
-    formula_scalar_execution_contract →11 pass at initial46 rows,rc=0. After adding combined
-    condition/branch and nested multi-call contributions,cargo test same target independent_oracle::
-    -- --nocapture →two pass/nine unchanged filtered,49 exact value/source/read/refusal rows,
-    rc=0. Separate watcher reproduces complete frozen bytes;sha256
-    c2f82aeb60cba75be738a791f624a35335ea5f16590536137df14145f3a76fbc. No Rust implementation
-    imported by oracle,no supplied values become product AST proof;reference owns parse/evaluation.
-  - [x] NO REGRESSION: git diff --exit-code HEAD -- crates/sc-core/src crates/sc-measure/src
-    →all implementation unchanged from0579,rc=0. Scoped core lib/worker-target strict Clippy and
-    cargo fmt --all --check →rc=0. Book94/281/1601/2802/glossary310/9/158/0 pass,rc=0;whole0579
-    receipt738/four exact Git spans pass,rc=0. Native actual membership1/scalar feature9 remain
-    scoped previous evidence;no full CI/platform/heavy numerical certificate recomputation.
-  - [x] LOCKSTEP: scalar subset parent .3 done;full expression .5e.2.4 stays in_progress with
-    explicit pending .integration after actual missing families. Book/MEMORY/DEV/CHANGE/LIVE/
-    index/ledger align;D338 P2 logged,owned/scheduled next .5e.2.5.reference-derived before Derived
-    integration. This checkpoint excludes unsupported/unexecuted Derived reference verdicts;
-    it cannot close whole language/recipe/replay/worked-book/platform/physical/release proof.
-    G1 6/18/G0 unapproved;full local/hosted79bd6f6a remains SHA-scoped. Full PNT continues.
-    promotion: declined (reuse of indexed independent-parser/oracle,watched-fixture and explicit scoped-claim doctrine;D338 is a concrete reference-port defect,not a new policy).
+  Goal:0580 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part739.md).
 - ID: `G1-SLICE.5e.2.4.integration`
   Status: `pending`
   Goal: after real .5d tangent,.5f.3 geometry,.5e.2.5 prior-let/Derived and .5e.4 load/replay
@@ -153,12 +117,12 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   implemented scalar subset/no fake language refusals during staged delivery. Full worked-book,
   platform identity and atomic publication retain .5g/.5e.4 owners;no placeholder result/approval.
 - ID: `G1-SLICE.5e.2.5`
-  Status: `pending`
+  Status: `in_progress`
   Goal: whole checked recipe declaration-order execution and real let/assert statement context.
   Publish a binding only after successful expression/storage; retain original sources/ordinals.
   Complete accepted result/atomic failure/replay must integrate .5e.4 before whole runtime closure.
 - ID: `G1-SLICE.5e.2.5.reference-derived`
-  Status: `pending`
+  Status: `done`
   Goal: fix D338 P2 in the reference before Derived-source integration/using its verdicts there.
   Reproduce static_signature_contract.load_reference with derived_length={kind:length,
   origin:parameter,state:derived,value:None}:infer length,evaluate →formula_unknown with state
@@ -170,6 +134,52 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   identity,language token,value/cache or callback AST proof;retain actual Unknown and available
   derived-binding behavior. Schedule after current scoped scalar checkpoint,before .5e.2.5
   Derived integration;focused native/reference controls and book/live/commit own full closure.
+  Scope0581:reference-only input-context requirement outside FErr/canonical diagnostic tokens.
+  Missing external Derived requires evaluation;missing Known/Assumed/Preference requires its
+  authored reference value. Only actual Unknown emits formula_unknown. External missing inputs
+  must stop before any geometry fallback,including caller lazy flags. Preserve populated zero/
+  false/computed derived bindings and real lazy geometry. Existing origin contracts encode the
+  wrong all-state outcome;update those assertions while retaining malformed/Unknown controls.
+  Add focused before/after requirement controls,origin/provenance positive functions,actual public
+  reference consumer and native49-row watcher;no broad source-mutation campaign/full CI here.
+  Completion0581:D338 reference source-state boundary repaired,not a Derived executor.
+  - [x] ROOT CAUSE (WHY + WHERE): actual load_reference derived_length static kind length then
+    evaluate →formula_unknown,state Derived;normative5.2 requires Unknown. Source blame765–783
+    →b126f3c41/0080 generic external-origin branch;original origin contracts deliberately encoded
+    that all-state result. Original .5e.1a receipts audited in measurements/checked-recipes parts;
+    preserve history rather than rewriting old evidence. Source/repro tools rc=0. Rust already
+    retains the actual sole formula RequiresEvaluation identity;reference cannot invent that ID.
+  - [x] ADDRESSED (verified): reference_input_requirement_contract.py →16 focused controls,rc=0.
+    Missing Derived external input raises nonlanguage ReferenceInputRequired/derived_evaluation;
+    Known/Assumed/Preference missing values request authored_value. Only real Unknown emits
+    formula_unknown. Actual label/None/empty/source-state retained;no token/formula/value invented.
+    Missing external inputs stop before geometry even with lazy flag. Returned statement-derived
+    bindings retain zero/false/original sources. Actual origin contracts() →1471 pass,rc=0.
+  - [x] NO REGRESSION: actual public run_formula_language_census.sh →17 bindings/four assertions/
+    thirteen refusals/zero mismatches,rc=0. Native independent_oracle:: target →two pass,49 exact
+    rows and2325 frozen bytes unchanged,rc=0. Four focused in-memory guard/field-loss omissions
+    produce actual assertion reds;source bytes unchanged,rc=0. Old state-to-unknown mutant proved
+    equivalent under Unknown-only routing and replaced by actual state-field loss red. Register
+    focused16 watcher;complete15-fault population remains required broad gate,not claimed run here.
+    Changed shell/Python syntax and diff checks rc=0. Book94/281/1601/2802/glossary310/9/158/0 and
+    receipt739/four exact Git spans pass,rc=0. Initial outside-book history link refused;use project
+    retrieval text plus valid producer-plan link. No Rust/kernel/backend change or full CI claim.
+  - [x] LOCKSTEP: D338 fixed in book/task/ledger/LIVE;historical0080 receipts preserved. Source
+    parent .5e.1 clarifies available adapters versus pending full dependencies. MEM/DEV/CHANGE/
+    index align;next .5e.2.5.1 whole checked-recipe admission before actual prior-let execution.
+    G1 6/18/G0 unapproved;full local/hosted79bd6f6a stays SHA-scoped. Whole recipe/Derived/tan/
+    geometry/replay/platform/physical and D334/D156/D223/PLANNING.5 keep actual owners. Full PNT.
+    promotion: declined (repair of an existing source-state/diagnostic boundary under indexed actual-input and no-invented-context doctrine;no new language or authority policy).
+- ID: `G1-SLICE.5e.2.5.1`
+  Status: `pending`
+  Goal: start actual whole-recipe execution with complete-proof admission and an owned bounded
+  execution-session/prefix boundary. Read actual checked-recipe/statement/normalized/binding
+  interfaces and normative declaration-order/static-before-value contracts first. Derive complete
+  authored populations and explicit workspace/output limits before any runtime read/allocation;
+  bind original recipe/source/real ordinals and allow no caller values/annotations to impersonate
+  an earned prior let. Select a safe concrete admission/session slice with focused checks/book/
+  commit before actual let/assert worker units. No defaults,source-state cloning,partial accepted
+  recipe or missing-family language refusals;whole dependencies/replay/platform remain owned.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

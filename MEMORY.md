@@ -1,19 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.reference-derived:fix owned D338 P2 before Derived integration.
-  Actual reference state Derived/valueNone emits formula_unknown;blameb126f3c41/0080. Normative
-  Unknown-only token and Rust RequiresEvaluation disagree with reference. Repair source/context
-  boundary without invented formula ID,value/cache,new language token;retain real Unknown and
-  available derived bindings. Read affected origin/provenance/statement contracts before coding.
-- Scalar checkpoint0580 closes prepared subset .5e.2.4.3:independent actual reference49 rows,
-  ten refusals/2325B;native whole11 initially,expanded oracle pair49 rows pass,strict lint/fmt.
-  Book94/281/1601/2802/glossary310/9/158/0 pass;whole0579 retained738/four exact Git spans.
-  Implementation unchanged0579;actual worker9/membership1/plan5/doc10 remain scoped evidence.
-- Full .5e.2.4.integration remains pending tangent/geometry/prior-let/Derived;whole recipe/
-  replay/platform still owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a stays SHA-scoped.
-  Lineage0574 closes47 native/21 doc;actual paired .2.4 providers/physical,.2.5 atomic effects open.
-  Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,
-  102 originals exact;never rerun old transactions. D334 P2 after G1/before G0;D156/D223/PLANNING.5 owned. Full PNT;focused checks/commit per slice,push400 after full gates. D338 repair next.
+- Next G1-SLICE.5e.2.5.1:actual complete checked-recipe runtime admission/session boundary.
+  Read real checked-recipe/statement/normalized/binding APIs and normative order/static-before-
+  value contracts first. Explicit complete workspace/output limits and actual ordinals;no caller
+  values/annotations can impersonate earned prior lets. Choose safe implementation units/book.
+- D338 fixed0581:reference-only input requirements replace wrong non-Unknown formula_unknown.
+  Derived needs evaluation;Known/Assumed/Preference needs authored context. Real Unknown stays
+  canonical;zero/false/computed bindings/actual labels/lazy geometry preserved. No invented IDs.
+  Focus16/origin1471/four actual guard reds/public17/4/13/native oracle49 unchanged/syntax pass.
+  Book94/281/1601/2802/glossary310/9/158/0 pass;whole0580 retained739/four exact Git spans.
+- Scalar subset checkpoint0580 remains closed;whole recipe/Derived/tangent/geometry/replay/
+  platform still owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a remains SHA-scoped.
+  Lineage0574 closes47 native/21 doc;paired .2.4 providers/physical,.2.5 atomic effects open.
+  Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
