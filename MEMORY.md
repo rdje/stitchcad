@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.4.retention:active generation2 now64/64 slots,62 raw/two windows;
-  aggregate85/192. Pack window24 via published v3 authoring/transaction at new clean HEAD before
-  any more retirement. Preserve originals/source proofs;do not reuse old uninstalled fixtures.
-  Then actual paired candidate/history/reference joins .3.4.3;full PNT,focused checks per slice.
-- Graph/Design history .3.4.2 closes0568:actual live leaves and retired source ancestors bound;
-  explicit lookup/complete historical ownership/source aliases once/current namespace guards.
-  Exhaustive resource views charge actual history vector on every snapshot;legacy None unchanged.
-- D335 fixed:drop stored runtime limits,keep explicit admission inputs. Actual equality red101
-  then history6/graph5/Design2/resource4/stop29/doctest8 and scoped lint/fmt pass. No bus effect.
-  Book94/255/1595/2787,glossary310/9/158/0;whole0567/prior ledger retained726/four exact spans.
-- Old full local/hosted79bd6f6a stays exact-SHA scoped;proof in protected audit seam-20261029.
+- Next G1-SLICE.6.5.3.2.3.4.3:actual paired candidate/history/reference joins in execution tree.
+  Archive prerequisite .3.4.retention closes0569:window24 packs62 committed files;complete
+  before/candidate/installed1180 names/sizes/lines/SHA256/4144817B exact,native tar62/506939B.
+  All102 original physical files retained;installation complete. Do not rerun install/recover
+  after later edits. Protect target/history-capture-0569 and target/history-proof-0569.
+  Post-install active3/64,total24/192;whole0568 retired727/four exact spans only afterwards.
+- Graph/Design history .3.4.2 closes0568:actual leaves/retired source ancestry and complete
+  historical identity/resource ownership;legacy None unchanged. D335 policy/equality fixed.
+  Focused history6/graph5/Design2/resource4/stop29/doc8/lint/fmt pass;no bus effect.
+- Old full local/hosted79bd6f6a stays exact-SHA scoped;protected audit seam-20261029 holds proof.
   G1 6/18/G0 human unapproved;D334 P2 .15f after current G1/before G0 closure,D156/D223/
   PLANNING.5 pending. Physical/provider/authority/effects/full paired proof remains owned.
+  Full PNT continues;focused checks/commit per slice. No capacity or product-policy change.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

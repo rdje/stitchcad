@@ -118,12 +118,12 @@ paired/mutation/physical acceptance remain later owners;historical prospective w
 
 ## Exact historical source and proof retrieval
 
-The [whole pre-0512 record](../history/stitchcad-devnotes-part670.md) retains every prior statement,
+The [whole pre-0512 record](../history/window24.md#stitchcad-devnotes-part670md) retains every prior statement,
 answer,historical example,count,probe failure/fix and pending scope in one exact Git source span.
 Its strict base64 body preserves the original wide answers line without loss. The earlier whole
 pre-context record remains [658](../history/window23.md#stitchcad-devnotes-part658md);whole0501
 acceptance remains [657](../history/window23.md#stitchcad-devnotes-part657md). No question/map row
-or ceiling increases. [Whole0511](../history/stitchcad-devnotes-part669.md) preserves input proofs.
+or ceiling increases. [Whole0511](../history/window24.md#stitchcad-devnotes-part669md) preserves input proofs.
 
 ## Bounded current-point primitive0505
 

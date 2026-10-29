@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308–D335 — prepush repairs and identity policy
 
-D308–D333 fixed0537–0563;[prior ledger](../history/stitchcad-devnotes-part726.md). Local/hosted79bd6f6a checks pass0564;cleanup/stop/history checkpoints follow. D335 fixed0568:runtime limits excluded from canonical history. D334 P2:G0-CONTRACT.15f after current G1/before G0 closure. D223/PLANNING.5 open. Next pack active64/64,then candidate joins. G1 6/18;G0 unapproved.
+D308–D333 fixed0537–0563;[prior ledger](../history/window24.md#stitchcad-devnotes-part726md). Local/hosted79bd6f6a checks pass0564;cleanup/stop/history checkpoints follow. D335 fixed0568:runtime limits excluded from canonical history. D334 P2:G0-CONTRACT.15f after current G1/before G0 closure. D223/PLANNING.5 open. Next pack active64/64,then candidate joins. G1 6/18;G0 unapproved.

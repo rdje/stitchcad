@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0568 — bind span history to actual graph ownership
+## STITCHCAD-G1-0569 — restore bounded active archive capacity
 
-- Bind actual live leaves/retired source ancestry and explicit borrowed lookup;own every birth once through Design and charge each history vector per snapshot. Fix D335:runtime admission policy is not canonical identity content. History6/graph5/Design2/resource4/stop29/doc8,scoped lint/fmt pass.
-- Book94/255/1595/2787/glossary310/9/158/0 pass;whole0567 retained726/four spans. Active64/64 needs window24 packing before next candidate/reference work. G1 6/18/G0 human unapproved;D334 P2/D156/D223/PLANNING.5 owned. Physical/provider/authority/effect/full paired proof remains pending.
+- Public append/install packs62 committed files into window24. Complete before/candidate/installed1180 names/sizes/lines/SHA256/4144817B match;native tar62/506939B and all102 retained originals exact. Post-install active3/64,total24/192;no raised limits or lost logical identities.
+- Whole0568 graph/Design/D335 scope,lesson,changelog and ledger retained727/four exact Git spans only after installed comparison. Live retrieval/book synchronized;focused reader/source/task checks pass. LIVE/README unchanged,G1 6/18/G0 human unapproved. Resume actual paired candidate/reference joins.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

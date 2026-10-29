@@ -245,3 +245,13 @@ any limit. Original transaction trees remain in target/history-capture-0508 for 
 Live retrieval links route to catalog headings;sealed source bodies keep their original bytes.
 The following completed inverse receipt665 is authored only after installation/cohort comparison.
 This is verified retention and process-interruption protection,with no new power-loss claim.
+
+The0569 append reached the same active working-file cap with62 raw records and two catalogs.
+Window24 packs all62 exact committed files. Native tar extraction matches506939 bytes;complete
+before/candidate/installed materializations match all1180 logical names,sizes,line counts,SHA-256
+hashes and4144817 bytes. All102 original physical files remain exact in target/history-capture-0569;
+sealed generation1 is unchanged. Installation reduces active64→3 and aggregate85→24 without raising
+a bound. The next completed graph/Design receipt727 is authored only after these comparisons.
+Keep original transaction trees for recovery evidence;do not rerun installation or recovery after
+later edits. Live links route to window24 headings;sealed source bodies remain exact. This is
+retention and process-interruption protection,with no new power-loss claim.

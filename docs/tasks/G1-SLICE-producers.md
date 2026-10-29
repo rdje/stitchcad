@@ -338,16 +338,16 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.deep`
   Status: `done`
-  Goal:0547 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part706.md).
+  Goal:0547 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part706md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.body`
   Status: `done`
-  Goal:0548 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part707.md).
+  Goal:0548 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part707md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.physical`
   Status: `done`
-  Goal:0549 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part708.md).
+  Goal:0549 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part708md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.acceptance`
   Status: `done`
-  Goal:0550 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part709.md).
+  Goal:0550 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part709md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.3`
   Status: `pending`
   Goal: guard whole-window CLI fixtures and their complete copied/mutated/materialized/teardown populations.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — bind span history to actual graph ownership
+## _(2026-10-29 UTC)_ — pack the full active archive without losing any record
 
-0568 binds history to actual graph leaves/retired source ancestry;lookup lends exact live members or immediate retirement records. Current namespaces and Design own every issued ID once,including retired intermediates. Exhaustive resource views charge each history vector on every snapshot;legacy None stays exact.
-D335 native equality red101:identical Root7 under1/1 versus8/16 differed because limits were retained. Remove runtime policy/getter from owned data,keep explicit complete admission. Local/actual graph/Design equality now passes. Private forge doctest matches actual fields;no unrelated-field masking.
-Native history6/graph5/Design2/legacy resource4/stop29 and doctest8 pass;scoped strict lint/fmt pass after fixture clone/unwrap/export fixes. Book94/255/1595/2787,glossary310/9/158/0 and receipt726/four spans pass. LIVE G1 6/18/G0 human unapproved;D335 fixed,D334 P2/D156/D223/PLANNING.5 owned.
-[Whole0567 history proof](docs/history/stitchcad-devnotes-part726.md). Promotion declined:indexed canonical policy separation/ownership/resource contracts. Active64/64 requires window24 packing before more retirement,then candidate/reference joins .3.4.3. No physical/provider/authority/effect/full paired claim.
+0569 active64/64=62 committed raw files+two catalogs blocked the next receipt. Published append packs window24;source proof62 full Git files and native tar62/506939B exact. Complete before/candidate/installed1180 names/sizes/lines/SHA256/4144817B match;all102 originals retained.
+OS-visible handoff clear before guarded install;own readers idle. Active3/64,total24/192 afterwards,no bound raised. Keep target/history-capture-0569 originals and target/history-proof-0569 comparisons;do not rerun install/recover after later edits. No new power-loss or memory certificate.
+Route live packed-record links to exact window24 headings;never rewrite sealed bodies. [Whole0568 graph/Design and D335 proof](docs/history/stitchcad-devnotes-part727.md) retained after installation,4 exact Git spans. Current reader/task-source/book checks verify this scope;no new Rust build/full CI.
+Existing indexed archive rules apply;promotion declined in leaf. LIVE/README unchanged,G1 6/18/G0 human unapproved. Resume actual paired candidate/history/reference joins .3.4.3;D334 P2/D156/D223/PLANNING.5 and physical/provider/authority/effect/full paired proof stay owned.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
