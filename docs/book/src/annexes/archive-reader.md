@@ -127,12 +127,16 @@ Git stays project-scoped.
 python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --deep
+python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --body
 ```
 
 The native entry retains28 calibrated cases. Companion --deep verifies interrupted-copy teardown,
-HEAD evidence and ten source-body omission controls with simulated children. Complete original-body
-and physical-entry calibration remain .f.fixture-verification under the
-[checking policy](checking-policy.md);this scoped pass does not close that parent.
+HEAD evidence and ten source-body omission controls with simulated children. Companion --body
+compares complete original predicates,payload/resident builders,CLI arguments and public signatures
+with frozen pre-guard source through explicit IO,extraction,setup and HEAD-evidence adapters.
+Ten actual AST faults refuse,including redirected reader bindings;semantic reformatting passes.
+This mode uses read-only Git and executes no fixture or build. Physical-entry and final calibration
+remain .f.fixture-verification under the [checking policy](checking-policy.md).
 Capture-pinned v1 traps substitute logical bytes only for deliberate raw-read faults, retaining the
 original missing-public-read assertion. Legacy catalogs/non-changelog rows stay valid.
 

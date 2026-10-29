@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0547 — verify deferred deep archive-fixture controls
+## STITCHCAD-G1-0548 — preserve complete original archive predicate bodies
 
-- Complete existing --deep scope at the due prepush milestone:interrupted-copy teardown,HEAD evidence and10 actual source-body omission controls pass. Source/stores restored;all producer inputs stayed frozen until terminal completion.
-- Preserve existing parent obligations as separate original-body,physical-entry and acceptance leaves. No producer/reader/archive-policy change,no fresh native28 replay and no full CI verdict. Whole0546 retained705/three exact Git spans;book/history checks pass.
-- LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Continue original-body proof after this commit,then remaining archive acceptance/full gates/normal push/actual hosted jobs.
+- Add read-only --body comparison with full frozen source through explicit IO,extraction,setup,child-environment and HEAD-evidence adapters. Preserve original predicates,algorithms,CLI arguments and public signatures;validate reader/source bindings before normalization.
+- Reformat positive and10 actual AST faults pass;old trap/pure population remain green. No fixture/build execution by body mode. Book/history checks pass;whole0547 retained706/three exact Git spans. Native producer/reader/archive unchanged.
+- LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Physical-entry and parent acceptance/current watch/native28 remain before full gates/push/actual hosted jobs;no broader verdict inferred.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

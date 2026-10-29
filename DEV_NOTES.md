@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — observe the deferred deep archive-fixture controls
+## _(2026-10-29 UTC)_ — preserve complete original archive predicates through explicit adapters
 
-0547 due milestone:0243 deferred complete archive calibration until next authorized push;cadence411 reached. Read full companion/native producer and original migration diff;split existing parent into deep/body/physical/acceptance leaves. No producer source or archive policy changed.
-Existing --deep passes0:population11/1077,positive capture411 plans/203 effects/9 simulated children,interrupted15/6/0,HEAD evidence and10 compiled actual guard reds. Captured source/store restoration passes;terminal consumed. Process metadata showed active work;later sampling raced normal completion.
-Git diff confirms tracked archive/producer/companion exact;book93/248/1590/2771,705 receipt3/retention1159 pass0. Whole0546 retained. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. No fresh native28 or full CI claim.
-[Whole0546 inventory repair](docs/history/stitchcad-devnotes-part705.md). Promotion declined:indexed scope-specific capture/deferred integration/terminal rules. Next complete original-body preservation,then physical/parent acceptance before full gates/push/actual hosted jobs. Full PNT continues.
+0548 adds pure --body comparison against full frozen1b8fc23. Derive complete expected old bodies with declared guarded IO,pure payload/resident extraction,protected setup,prepared child environment and stronger HEAD evidence. Canonical binding checks prevent normalization hiding a redirected reader.
+Original semantic core/signatures match;reformat positive and10 actual AST body/interface/population/algorithm/adapter faults refuse as intended,source unchanged,rc0. --population retains old trap and11 dirs/1077 files. Body mode uses readonly Git;it executes no fixture or build and certifies no new guard behavior.
+Book93/248/1590/2771,706 receipt3/retention1160 pass0. Whole0547 retained. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Native producer/reader/archive unchanged;physical/parent acceptance/current watch and full gates remain pending.
+[Whole0547 deep proof](docs/history/stitchcad-devnotes-part706.md). Promotion declined:indexed original-body/frozen-oracle/explicit-adapter scope. Next actual physical entry refusals,then scoped parent/native28/current watch before full gates/push/actual hosted jobs. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

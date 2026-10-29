@@ -336,43 +336,43 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.deep`
   Status: `done`
-  Goal:0547 existing deep companion controls completed at due prepush milestone;parent remains
-  in progress until original-body/physical/acceptance obligations are separately verified.
-  - [x] REPRODUCE / ISSUE: parent deferred by0243 explicitly until before next authorized push;
-    cadence411 at22e1a265 now makes this integration proof due. Source CLI branches show default
-    mode excludes interrupted/metadata/omission checks;--deep selects them,source read rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): full360-line companion/332-line native producer and
-    git diff 1b8fc23..22e1a265 -- docs/tasks/artifacts/history_archive/history_archive_probes.py
-    →reviewed adapters,rc=0;distinguish actual capture/HEAD/omission proof from complete
-    original-body/physical-entry calibration. Split existing parent into bounded owned
-    deep/body/physical/acceptance slices before execution;no new runtime audit or product scope.
-  - [x] FIX: run existing --deep without source changes;keep all producer inputs frozen until
-    terminal completion. Original setup-removal trap retains old failure evidence. No native
-    producer,reader,guard,policy,archive payload or threshold changed. This is verification only.
-  - [x] ADDRESSED (verified): local_environment.py -- python3 -I -B
-    docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --deep →rc=0;
-    pure population11 directories/1077 files;positive capture411 plans/203 effects/9 simulated
-    children;interrupted copy15 plans/6 effects/0 children. Present-unreadable/unavailable HEAD
-    refuse;genuine first transition retains27 cases. Ten compiled actual source/file/directory/
-    activation/write/store/Git/teardown/HEAD assertion reds pass;captured inputs/stores restored.
-    Complete terminal consumed;log target/archive-fixture-0547-deep.log. OS metadata observed
-    owned process running;later sample raced normal completion,no process was signaled.
-  - [x] NO REGRESSION: git diff --exit-code -- .doctrine/history_archive docs/history and
-    both producer/companion sources →rc=0;only owned705/task/live changes remain. Book build/
-    positive publication93/248/1590/2771,rc=0;receipt705 →3 exact Git spans,rc=0;retention1159
-    logical/64 aggregate working/65331 decodedL/5091535 decodedB/2668872 residentB,rc=0.
-    git diff --check →rc=0. This is simulated-child capture,not fresh native28 replay or full CI.
-  - [x] LOCKSTEP: whole0546 task/lesson/changelog retained705 before curation. Archive-reader
-    book names passed deep scope and pending original-body/physical proof;MEM/DEV/CHANGE/index/
-    ledger align. LIVE reviewed unchanged:29 suites,G1 6/18,D156 audits open,G0 human unapproved.
-    README objective/commands unchanged. Next .body after clean commit;parent acceptance/full
-    check/gate/probes/normal push/exact-SHA hosted jobs remain owned and unobserved.
-    promotion: declined (application of indexed deferred integration,scope-specific capture and consume-before-edit rules;no new archive or runtime policy).
+  Goal:0547 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part706.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.body`
-  Status: `pending`
-  Goal: compare complete original cases/packer/resident/CLI predicates to frozen pre-guard source
-  through explicit reviewed adapters. Add independent critical-body omissions/changes that must
-  turn actual comparison red;retain public fixture APIs and all original refusal families.
+  Status: `done`
+  Goal:0548 complete original predicate/packer/resident/CLI/interface AST preservation against
+  immutable pre-guard source,through explicit reviewed adapters;no fixture or native build runs.
+  - [x] REPRODUCE / ISSUE: deferred parent explicitly requires complete original-body proof,
+    beyond0547 deep capture. git diff 1b8fc23..6796dfec --
+    docs/tasks/artifacts/history_archive/history_archive_probes.py →reviewed pure extraction,
+    guarded IO,protected setup and stronger HEAD-evidence adapters,rc=0. Count/signature-only checks cannot establish complete predicate/input preservation.
+  - [x] ROOT CAUSE (WHY + WHERE): full frozen/current native producer review and companion
+    source comparison,rc=0,identify original module bodies and all adapter boundaries. Original
+    pack and resident blocks are copied from frozen AST,not current implementation. Full baseline
+    is1b8fc23c7aab412d6a4602290dfcc26faceaeeb0;new source bindings must retain canonical paths.
+  - [x] FIX: pure --body mode derives the expected guarded core from complete old source;
+    preserve all original statements,constants,arguments,signatures and refusal predicates.
+    Explicitly adapt IO calls,exact pure extractions,setup inside existing finally,prepared child
+    environment and successful HEAD-absence proof. Strip only declared new guard scaffolding;
+    validate canonical bindings before substitution. AST equality ignores locations/formatting,
+    not semantic bodies. This is predicate preservation,not proof of new guard behavior/physics.
+  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- python3 -I -B
+    docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --body →full original
+    core/signatures match,reformat positive,10 actual AST predicate/interface/population/
+    algorithm/adapter assertion reds,source unchanged,rc=0. Faults change pack format,resident
+    compression,refusal/CLI tests,population,ABI,Boolean type,expected cause,reader binding and
+    remove an actual original case. Each must refuse for its intended comparison/binding reason.
+  - [x] NO REGRESSION: same prepared invocation --population →original pre-effect removal
+    trap and closed pure11-directory/1077-file population pass,rc=0. Existing flags retain their
+    route;full capture/native28 replay waits for parent acceptance. Book build/publication
+    93/248/1590/2771,rc=0;receipt706 →3 exact Git spans,rc=0;retention1160 logical/65 aggregate
+    working/65390 decodedL/5097480 decodedB/2674817 residentB,rc=0;git diff --check →rc=0.
+    Native producer/reader/archive payloads unchanged;only companion adds this read-only mode.
+  - [x] LOCKSTEP: whole0547 task/lesson/changelog retained706. Book explains exact source-body
+    scope and manual mode;MEM/DEV/CHANGE/index/ledger align. LIVE reviewed unchanged:29 suites,
+    G1 6/18,D156 audits open,G0 human unapproved. README unchanged. Next .physical from clean
+    commit,then .acceptance registers current watch and completes due parent before full gates/
+    normal push/exact-SHA hosted jobs. No complete physical/runtime or full CI verdict inferred.
+    promotion: declined (application of indexed complete original-body preservation,independent frozen oracles and explicit adapter scope;no new archive semantics).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.physical`
   Status: `pending`
   Goal: actual controlled-mirror entry refusals for unsafe inputs/workspaces/stores,with source/

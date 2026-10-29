@@ -1,6 +1,7 @@
 """Actual archive-refusal fixture plans, bounded effects and protected teardown controls."""
 import ast
 import contextlib
+import copy
 import io
 import os
 from pathlib import Path
@@ -19,7 +20,220 @@ PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 LEGACY = ROOT / 'docs/tasks/artifacts/history_archive/legacy_refusals.py'
 CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, READER, GENERATIONS, SHELL, LEGACY)
 WORK = ROOT / 'target/archive-fixture-controls' / str(os.getpid())
-BEFORE = '1b8fc23'
+BEFORE = '1b8fc23c7aab412d6a4602290dfcc26faceaeeb0'
+
+
+def ast_shape(node):
+    return ast.dump(node, include_attributes=False)
+
+
+def one_function(tree, name):
+    found = [node for node in ast.walk(tree) if isinstance(node, ast.FunctionDef) and node.name == name]
+    assert len(found) == 1, ('archive body function anchor', name)
+    return found[0]
+
+
+def original_core(source):
+    """Apply only the reviewed IO, pure-extraction, setup and HEAD-evidence adapters."""
+    tree = ast.parse(source)
+    main = next(node for node in tree.body if isinstance(node, ast.Try))
+    pack = one_function(tree, 'pack')
+    split = [i for i, node in enumerate(pack.body) if isinstance(node, ast.Expr)
+             and isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name)
+             and node.value.func.id == 'replace_payload']
+    assert len(split) == 1, 'archive original pack extraction anchor'
+    boundary = split[0]
+    payload = copy.deepcopy(pack)
+    payload.name = 'packed_payload'
+    payload.args.args.pop(0)  # The pure prefix never uses the destination root.
+    result = ast.parse('return manifest, raw').body[0]
+    result.value.elts[1] = copy.deepcopy(pack.body[boundary].value.args[1])
+    assert not any(isinstance(n, ast.Name) and n.id == 'root'
+                   for node in pack.body[:boundary] for n in ast.walk(node)), 'archive pack prefix uses destination'
+    payload.body = copy.deepcopy(pack.body[:boundary]) + [result]
+    pack.body = ast.parse('manifest, raw = packed_payload(change, extra)\nreplace_payload(root, raw)').body + pack.body[boundary + 1:]
+    tree.body.insert(tree.body.index(pack), payload)
+
+    resident = one_function(tree, 'resident_fixture')
+    begin = [i for i, node in enumerate(resident.body) if isinstance(node, ast.Assign)
+             and any(isinstance(target, ast.Name) and target.id == 'content' for target in node.targets)]
+    end = [i for i, node in enumerate(resident.body) if isinstance(node, ast.Assign)
+           and any(isinstance(target, ast.Subscript) and isinstance(target.value, ast.Name)
+                   and target.value.id == 'manifest' and isinstance(target.slice, ast.Constant)
+                   and target.slice.value == 'payload' for target in node.targets)]
+    assert len(begin) == len(end) == 1 and begin[0] <= end[0], 'archive original resident extraction anchor'
+    resident_payload = copy.deepcopy(resident)
+    resident_payload.name = 'resident_payload'
+    resident_payload.args.args.pop(0)
+    assert not any(isinstance(n, ast.Name) and n.id == 'p'
+                   for node in resident.body[begin[0]:end[0] + 1] for n in ast.walk(node)), 'archive resident prefix uses destination'
+    resident_payload.body = copy.deepcopy(resident.body[begin[0]:end[0] + 1]) + ast.parse('return manifest, raw, member').body
+    resident.body = (resident.body[:begin[0]] + ast.parse('manifest, raw, member = resident_payload(padding)').body
+                     + resident.body[end[0] + 1:])
+    tree.body.insert(tree.body.index(pack) + 1, resident_payload)
+
+    setup = [node for node in tree.body if isinstance(node, ast.Expr) and isinstance(node.value, ast.Call)
+             and (ast_shape(node.value.func) == ast_shape(ast.parse('shutil.rmtree', mode='eval').body)
+                  or ast_shape(node.value.func) == ast_shape(ast.parse('WORK.mkdir', mode='eval').body))]
+    assert len(setup) == 2, 'archive original setup anchor'
+    tree.body = [node for node in tree.body if node not in setup]
+    main.body[:0] = setup  # The guarded producer protects the original setup with the same finally.
+    tree.body = [node for node in tree.body if not (isinstance(node, ast.Assign)
+                 and any(isinstance(target, ast.Name) and target.id == 'WORK' for target in node.targets))]
+
+    class GuardedIO(ast.NodeTransformer):
+        def visit_Call(self, node):
+            self.generic_visit(node)
+            if isinstance(node.func, ast.Attribute):
+                method = node.func.attr
+                if method in {'write_text', 'write_bytes', 'unlink', 'mkdir', 'symlink_to'}:
+                    name = {'write_text': 'write_file', 'write_bytes': 'write_file',
+                            'unlink': 'unlink_file', 'mkdir': 'make_directory', 'symlink_to': 'make_link'}[method]
+                    node.args.insert(0, node.func.value)
+                    node.func = ast.Name(id=name, ctx=ast.Load())
+                elif ast_shape(node.func) == ast_shape(ast.parse('shutil.rmtree', mode='eval').body):
+                    node.func = ast.Name(id='remove_tree', ctx=ast.Load())
+                elif ast_shape(node.func) == ast_shape(ast.parse('subprocess.run', mode='eval').body):
+                    assert not any(keyword.arg == 'env' for keyword in node.keywords)
+                    node.keywords.append(ast.keyword(arg='env', value=ast.parse('child_environment()', mode='eval').body))
+            return node
+
+    tree = GuardedIO().visit(tree)
+    prior = [node for node in ast.walk(main) if isinstance(node, ast.If)
+             and ast_shape(node.test) == ast_shape(ast.parse('prior.returncode == 0', mode='eval').body)]
+    assert len(prior) == 1, 'archive original HEAD anchor'
+    evidence = ast.parse("""absence = subprocess.run(['git', 'ls-tree', '--name-only', 'HEAD', '--', history.MASTER],
+                         cwd=ROOT, capture_output=True, check=True, env=child_environment())
+PROFILE['require'](absence.stdout == b'', 'archive fixture HEAD metadata unavailable')
+""").body
+    prior[0].orelse[:0] = evidence
+    return tree
+
+
+def current_core(source):
+    """Remove declared guard scaffolding; keep every original semantic body and argument."""
+    tree = ast.parse(source)
+    bindings = {'READER': "ROOT / 'scripts/history_archive.py'", 'SHELL': "ROOT / 'scripts/history_archive.sh'",
+                'PROFILE_SOURCE': "ROOT / 'scripts/local_environment.py'",
+                'WORK': "ROOT / 'target/scratch/history_archive_probes'"}
+    for name, value in bindings.items():
+        found = [node for node in tree.body if isinstance(node, ast.Assign)
+                 and any(isinstance(target, ast.Name) and target.id == name for target in node.targets)]
+        assert len(found) == 1 and ast_shape(found[0].value) == ast_shape(ast.parse(value, mode='eval').body), \
+            'archive body binding changed: ' + name
+    helpers = {'backing_inputs', 'fixture_population', 'work_plan', 'child_environment',
+               'remove_tree', 'make_directory', 'write_file', 'unlink_file', 'make_link'}
+    added = {*bindings, 'PROFILE', 'BACKING', 'INPUT_DIRECTORIES', 'SOURCES', 'FROZEN',
+             'DIRECTORIES', 'FILES', 'OWNED_LINK'}
+    kept, preflight = [], 0
+    for node in tree.body:
+        if isinstance(node, ast.Import) and len(node.names) == 1 and node.names[0].name in {'os', 'runpy'}:
+            continue
+        if isinstance(node, ast.FunctionDef) and node.name in helpers:
+            continue
+        if isinstance(node, ast.Assign):
+            names = {child.id for target in node.targets for child in ast.walk(target) if isinstance(child, ast.Name)}
+            if names & added:
+                assert names <= added, 'archive body mixed guard binding'
+                continue
+        if isinstance(node, ast.If) and any(isinstance(child, ast.Raise) and isinstance(child.exc, ast.Call)
+                and isinstance(child.exc.func, ast.Name) and child.exc.func.id == 'ValueError'
+                and child.exc.args and isinstance(child.exc.args[0], ast.Constant)
+                and child.exc.args[0].value == 'unsafe archive fixture profile' for child in ast.walk(node)):
+            preflight += 1
+            continue
+        kept.append(node)
+    assert preflight == 1, 'archive body profile preflight anchor'
+    tree.body = kept
+
+    class Scaffolding(ast.NodeTransformer):
+        def visit_Expr(self, node):
+            if isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name) and node.value.func.id == 'work_plan':
+                return None
+            return self.generic_visit(node)
+
+        def visit_Name(self, node):
+            if node.id == 'READER' and isinstance(node.ctx, ast.Load):
+                return ast.parse(bindings['READER'], mode='eval').body
+            return node
+
+    return Scaffolding().visit(tree)
+
+
+def check_original_body(source, before):
+    assert ast_shape(current_core(source)) == ast_shape(original_core(before)), 'archive original semantic bodies changed'
+
+
+def original_body_controls():
+    PROFILE['plan_producer'](ROOT, sources=CORE)
+    reader = runpy.run_path(str(READER))
+    before = subprocess.check_output(['git', 'show', BEFORE + ':' + ENTRY.relative_to(ROOT).as_posix()],
+                                     cwd=ROOT, env=reader['metadata_environment'](ROOT)).decode()
+    original = ENTRY.read_bytes()
+    source = original.decode()
+    check_original_body(source, before)
+    check_original_body(ast.unparse(ast.parse(source)), before)
+    print('archive original bodies: complete original predicates/packer/resident/CLI and signatures match frozen source through declared adapters; reformat positive; rc=0')
+
+    reds = 0
+
+    def fault(label, select, change, expected='archive original semantic bodies changed'):
+        nonlocal reds
+        tree = ast.parse(source)
+        matches = select(tree)
+        assert len(matches) == 1, ('archive actual body fault anchor', label)
+        change(matches[0])
+        try:
+            check_original_body(ast.unparse(ast.fix_missing_locations(tree)), before)
+        except AssertionError as error:
+            assert str(error) == expected, (label, error)
+            reds += 1
+        else:
+            raise AssertionError(('archive body fault escaped', label))
+
+    fault('packer format', lambda t: [n for n in ast.walk(one_function(t, 'packed_payload'))
+          if isinstance(n, ast.keyword) and n.arg == 'format'],
+          lambda n: setattr(n, 'value', ast.parse('tarfile.GNU_FORMAT', mode='eval').body))
+    fault('resident compression', lambda t: [n for n in ast.walk(one_function(t, 'resident_payload'))
+          if isinstance(n, ast.keyword) and n.arg == 'mtime'], lambda n: setattr(n, 'value', ast.Constant(value=1)))
+    fault('refusal discrimination', lambda t: [n for n in ast.walk(one_function(t, 'arm'))
+          if isinstance(n, ast.Assert) and isinstance(n.test, ast.BoolOp)],
+          lambda n: setattr(n, 'test', ast.Constant(value=True)))
+    fault('CLI predicate', lambda t: [n for n in ast.walk(t) if isinstance(n, ast.Assert)
+          and any(isinstance(a, ast.Attribute) and a.attr == 'returncode' and isinstance(a.value, ast.Name)
+                  and a.value.id == 'result' for a in ast.walk(n.test))],
+          lambda n: setattr(n, 'test', ast.Constant(value=True)))
+    fault('resident population', lambda t: [n for n in ast.walk(one_function(t, 'resident_fixture'))
+          if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == 'range'],
+          lambda n: setattr(n.args[0], 'value', 21))
+    fault('public pack signature', lambda t: [one_function(t, 'pack')],
+          lambda n: setattr(n.args.args[1], 'arg', 'ignored_change'))
+    fault('Boolean integer fixture', lambda t: [n for n in ast.walk(one_function(t, 'bool_integer'))
+          if isinstance(n, ast.Constant) and n.value is True], lambda n: setattr(n, 'value', 1))
+    fault('expected refusal', lambda t: [n for n in ast.walk(t) if isinstance(n, ast.Constant)
+          and n.value == 'payload digest mismatch'], lambda n: setattr(n, 'value', 'unrelated refusal'))
+
+    fault('reader adapter binding', lambda t: [n for n in t.body if isinstance(n, ast.Assign)
+          and any(isinstance(a, ast.Name) and a.id == 'READER' for a in n.targets)],
+          lambda n: setattr(n, 'value', ast.parse("ROOT / 'scripts/wrong_reader.py'", mode='eval').body),
+          'archive body binding changed: READER')
+
+    tree = ast.parse(source)
+    main = next(node for node in tree.body if isinstance(node, ast.Try))
+    removed = [node for node in main.body if isinstance(node, ast.Expr) and isinstance(node.value, ast.Call)
+               and isinstance(node.value.func, ast.Name) and node.value.func.id == 'arm'
+               and isinstance(node.value.args[0], ast.Constant) and node.value.args[0].value == 'RED catalog membership']
+    assert len(removed) == 1, 'archive actual removed-case anchor'
+    main.body.remove(removed[0])
+    try:
+        check_original_body(ast.unparse(ast.fix_missing_locations(tree)), before)
+    except AssertionError as error:
+        assert str(error) == 'archive original semantic bodies changed', error
+        reds += 1
+    else:
+        raise AssertionError('archive missing original case escaped')
+    assert ENTRY.read_bytes() == original, 'archive body controls changed producer'
+    print('archive original body faults:%d actual AST predicate/interface/population/algorithm/adapter reds; source unchanged; no fixture/build execution; rc=0' % reds)
 
 
 def before_control():
@@ -342,19 +556,22 @@ def omission_controls():
 
 
 if __name__ == '__main__':
-    assert sys.argv[1:] in ([], ['--before'], ['--population'], ['--deep'])
-    PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
-    before_control()
-    if sys.argv[1:] != ['--before']:
-        with mirror('population') as root:
-            ns, _ = bootstrap(entry=root / ENTRY.relative_to(ROOT))
-            assert not ns['WORK'].exists(), 'native fixture workspace must remain absent'
-            assert ns['OWNED_LINK'] in ns['FILES']
-            print('closed pure population:', len(ns['DIRECTORIES']), 'directories /', len(ns['FILES']),
-                  'files; no effects during bootstrap; retained v1 fixture')
-        if sys.argv[1:] in ([], ['--deep']):
-            print('actual archive fixture capture:', capture('positive'))
-        if sys.argv[1:] == ['--deep']:
-            print('protected interrupted copy:', capture('interrupted', interrupt=True))
-            metadata_controls()
-            omission_controls()
+    assert sys.argv[1:] in ([], ['--before'], ['--population'], ['--deep'], ['--body'])
+    if sys.argv[1:] == ['--body']:
+        original_body_controls()
+    else:
+        PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
+        before_control()
+        if sys.argv[1:] != ['--before']:
+            with mirror('population') as root:
+                ns, _ = bootstrap(entry=root / ENTRY.relative_to(ROOT))
+                assert not ns['WORK'].exists(), 'native fixture workspace must remain absent'
+                assert ns['OWNED_LINK'] in ns['FILES']
+                print('closed pure population:', len(ns['DIRECTORIES']), 'directories /', len(ns['FILES']),
+                      'files; no effects during bootstrap; retained v1 fixture')
+            if sys.argv[1:] in ([], ['--deep']):
+                print('actual archive fixture capture:', capture('positive'))
+            if sys.argv[1:] == ['--deep']:
+                print('protected interrupted copy:', capture('interrupted', interrupt=True))
+                metadata_controls()
+                omission_controls()
