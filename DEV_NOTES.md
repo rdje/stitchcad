@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — build bounded actual paired graph candidates
+## _(2026-10-29 UTC)_ — inspect exact held Gather retirement without retargeting
 
-0571 exact actual source/stop owners and attached history precede complete graph+capture+child-reference reservation. Extend accepted history,replace target in place by two A-ordered portions/stops,keep unrelated definitions/order/full original root. No input/landmark clone or numeric/provider/authority/effect.
-Actual candidate4/source4/doc4/scoped strict lint/fmt pass. Graph18+capture5+references2+extra3 reserves28;actual output23. Limit27 refuses25+3 at original owner/field;28 retries. Nested split preserves seven IDs/full root/shared cut stops. Initial fixture field identity→actual id corrected after compiler101.
-Book example byte-exact to passed doctest;book94/258/1595/2789/glossary310/9/158/0 pass. [Whole0570 extension proof](docs/history/stitchcad-devnotes-part729.md) retains scope/lesson/changelog,three Git spans. D336 rg/blame/actual active6/64 found two stale planning packing pointers;both corrected before commit.
-Indexed exact-owner/retention/admission/current validation rules apply;promotion declined. LIVE G1 6/18/G0 human unapproved. Next actual held Gather/reference/global integration .3.4.3.3,then scoped checkpoint. Tentative IDs confer no reserve/global/quantity/physical/provider/publication certificate;full PNT continues.
+0572 inspect_span_reference checks held graph ID then lends the exact live span or original immediate retirement children. No allocation,range/provider query,copy/sign validation or repair choice. Nested split keeps original child IDs;Gather content and existing intake/current failures remain unchanged.
+Native Gather18/actual candidate5/doc4/scoped strict lint/fmt pass;two core cases and one real candidate case added. Existing16 Gather cases pass. In actual candidate,the held Gather and old split request keep the retired target;inspection exposes both children while current/intake/request still refuse it.
+Book example byte-exact to passed doctest;book94/258/1597/2792/glossary310/9/158/0 pass. [Whole0571 candidate/D336 proof](docs/history/stitchcad-devnotes-part730.md) retains scope/lesson/changelog/ledger,four Git spans. LIVE G1 6/18,G0 human unapproved;focused candidate4→5.
+Indexed identity/history/inspection rules apply;promotion declined. Next .3.4.3.3.2 whole-Design ownership/resource/current integration and trusted reserve boundary. Observation is no completed repair,current readiness or effect. Provider/physical/authority/full paired proof and D334 P2/D156/D223/PLANNING.5 stay owned.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

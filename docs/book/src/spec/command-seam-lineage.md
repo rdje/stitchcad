@@ -3,8 +3,8 @@
 The native history component validates supplied span births and splits in authored order. It keeps
 retired parents and their two immediate child identities,including nested splits. This is local
 identity metadata. Optional actual graph binding,Design ownership and complete resource accounting
-and bounded actual source/stop graph candidates are implemented below. Held-reference/global
-integration and the SplitSeamSpan bus handler remain pending.
+and bounded actual source/stop graph candidates are implemented below. Held Gather identity
+inspection is available. Whole-Design/global integration and the SplitSeamSpan bus handler remain pending.
 
 ## Explicit records and limits
 
@@ -294,6 +294,44 @@ symbolic. Whole-Design construction and held Gather repair must still run before
 trusted production allocation continues through the bus reserve. Bounds concern logical payload
 populations,not allocator/RSS,temporary validation indices or CPU.
 
+## Inspect a held Gather after retirement
+
+The Gather's identity query is available through inspect_span_reference,documented with the
+[Gather contract](ontology-constructions.md). It checks the original graph ID before inspecting
+the exact held span ID. Live results borrow the actual graph member;retired results borrow both
+immediate child IDs from the original retirement record. Later splits of those children do not
+replace the old target's children with a chosen descendant. Unknown targets and legacy source
+provenance without attached history remain missing;no history is manufactured.
+
+This native doctest compiles the public inspection API:
+
+```rust
+use sc_core::ontology::{Gather,GatherError,SewingGraph,SewingSpanLookup};
+fn inspect<'a>(gather:&Gather,graph:&'a SewingGraph)
+    ->Result<SewingSpanLookup<'a>,GatherError>{
+    gather.inspect_span_reference(graph)
+}
+```
+
+The query does not update the Gather,select a child,query geometry/providers or allocate a result
+collection. It supplies identity evidence for repair. Existing intake/current queries retain their
+original missing-span refusal for a retired target,plus original copy/sign/source checks for live
+targets. Identity inspection is separate from successful current validation or completed repair.
+Borrowed members/retirement arrays cannot outlive their actual graph.
+
+The native core case splits301 into702/701,then702 into800/799. The original held Gather still
+names301 and lends702/701 from the exact original history record on both later graphs. Its intake
+and current validation still refuse301. The actual paired Design case similarly retains the held
+Gather and old SplitSeamSpan request after real graph candidate construction:inspection reports
+the original target's immediate children,while current Gather intake and the old request refuse
+the retired target. Neither selects one of the new children or changes the held input.
+
+Two core cases also verify original live-member pointers,wrong graph,unknown/legacy absence and
+unchanged live-copy validation. All18 Gather contracts and five actual graph candidate cases pass.
+Four Gather doctests include API composition and graph lifetime;scoped strict lint/formatting
+belong to this implementation slice. Complete garment/global/resource/current and publication
+integration remains the next stage.
+
 ## Implemented scope and next integration
 
 Six native contract cases cover nested/sibling/unknown states,actual record-pointer retention,
@@ -319,6 +357,6 @@ They also verify owner substitution,legacy history,resource/history precedence,c
 refusal,unchanged originals and exact-boundary retry. Four doctests verify API composition,private
 admission,borrowed source lifetime and no default policy;four existing source-join cases pass.
 
-Held Gather/reference repair and global ownership/resource integration follow. No history input
-executes a command or retargets a Gather. Real source/provider/physical/authority/aggregate-effect
-checks and whole paired command acceptance retain their existing owners.
+Held Gather inspection is implemented;whole-Design/global ownership/resource integration follows.
+No history input executes a command or retargets a Gather. Real source/provider/physical/authority/
+aggregate-effect checks and whole paired command acceptance retain their existing owners.

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0571 — build bounded actual source/stop/history graph candidates
+## STITCHCAD-G1-0572 — inspect held Gather retirement without choosing a child
 
-- Exact owner joins and complete pre-copy reservation preserve unrelated spans/order,full original ease roots and A-ordered child stops/history. Actual candidate4/source4/doc4/scoped lint/fmt pass;reservation28/output23,limit27 refuses25+3,28 admits. Nested history/full root/shared cut stops preserved.
-- Book94/258/1595/2789/glossary310/9/158/0 pass;whole0570 retained729/three exact Git spans. D336 fixes two stale live planning packing pointers. LIVE G1 6/18/G0 human unapproved;held references/global integration next. No trusted reserve,quantity/physical/provider/authority/effect/full paired claim.
+- Gather identity inspection lends the exact live span or immediate retirement children;preserve original graph/span/copy/side/direction/operation bindings and old intake/current refusals. Nested history/legacy absence/wrong graph and actual candidate/old request behavior verified;no allocation or repair choice.
+- Gather18/actual candidate5/doc4/scoped lint/fmt pass;book example exact,book94/258/1597/2792/glossary310/9/158/0 pass. Whole0571/D336 ledger retained730/four Git spans. LIVE G1 6/18/G0 human unapproved;whole-Design/global/resource/current integration next. No physical/provider/authority/effect/full paired claim.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

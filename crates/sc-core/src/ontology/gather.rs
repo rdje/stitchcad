@@ -4,6 +4,7 @@ use super::{
     CutCopy, CutPlan, DeclaredEase, DirectedRange, DirectedRangeResolution, EaseAmount, EntityId,
     GeometricValidation, IdentityLedger, IntakeValidation, Piece, ProfileBindingValidation,
     RangeResolution, SeamEasePortion, SeamSide, SeamSideId, SeamSpan, SewingGraph,
+    SewingSpanLookup,
 };
 use core::fmt;
 use sc_units::Length;
@@ -267,6 +268,43 @@ impl Gather {
     #[must_use]
     pub const fn definition(&self) -> &GatherDefinition {
         &self.definition
+    }
+    /// Inspect this Gather's held graph/span identity without selecting a replacement or editing it.
+    /// A live result borrows the exact graph member. A retired result borrows both immediate
+    /// A-ordered child IDs from the original attached history, even after nested splits.
+    /// Graph identity is checked before span lookup; legacy source provenance cannot invent edits.
+    /// This performs no allocation, copy/sign validation, range/provider query or current-readiness
+    /// check. Use the existing intake/current APIs for those original structural obligations.
+    /// ```
+    /// use sc_core::ontology::{Gather,GatherError,SewingGraph,SewingSpanLookup};
+    /// fn inspect<'a>(gather:&Gather,graph:&'a SewingGraph)
+    ///     ->Result<SewingSpanLookup<'a>,GatherError>{
+    ///     gather.inspect_span_reference(graph)
+    /// }
+    /// ```
+    /// Borrowed retirement evidence must remain within the actual graph's lifetime:
+    /// ```compile_fail
+    /// use sc_core::ontology::{Gather,SewingGraph,SewingSpanLookup};
+    /// fn escape(gather:&Gather,graph:&SewingGraph)->SewingSpanLookup<'static>{
+    ///     gather.inspect_span_reference(graph).unwrap()
+    /// }
+    /// ```
+    /// # Errors
+    /// Preserves the original wrong-graph or unknown-span refusal. Existing current/intake APIs
+    /// still refuse a retired target as missing; observing its history never resolves that refusal.
+    pub fn inspect_span_reference<'a>(
+        &self,
+        graph: &'a SewingGraph,
+    ) -> Result<SewingSpanLookup<'a>, GatherError> {
+        if graph.id() != self.definition.graph {
+            return Err(GatherError::WrongGraph {
+                held: self.definition.graph,
+                provided: graph.id(),
+            });
+        }
+        graph
+            .lookup_span(self.definition.span)
+            .ok_or(GatherError::MissingSpan(self.definition.span))
     }
     /// Original physical copy, never reassigned to a replacement.
     /// # Errors

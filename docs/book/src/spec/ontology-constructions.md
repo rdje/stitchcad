@@ -132,6 +132,19 @@ closing operation and proves realized intake/allocation. Operation/parameter exi
 | `GatherError` | Current owner/target/sign or complete source refusal |
 | `GatherIntakeSource` | Borrowed signed canonical ease declaration and selected side |
 | `GatherReferenceRole` | Attachment or authored direction |
+| `inspect_span_reference` | Held graph/span identity inspection,including immediate retirement evidence |
+
+Held identity inspection checks the original graph ID before lookup. It borrows the exact live
+span or both immediate A-ordered children from the graph's actual attached retirement record.
+Later child splits preserve that immediate record. Unknown targets and legacy retained sources
+without history keep the original missing-span refusal;wrong graph keeps the original graph error.
+The Gather's original span,copy,side,direction and closing-operation bindings stay unchanged.
+
+Inspection performs no allocation,range/provider query,copy/sign check or repair selection. A live
+identity result supplies identity membership only. The existing intake/current APIs still enforce
+all copy/sign/source rules and still refuse a retired target as missing. Observing both children
+never authorizes retargeting or makes current validation succeed. See the compiled example and
+actual paired candidate case in [held Gather history](command-seam-lineage.md#inspect-a-held-gather-after-retirement).
 
 **Owned construction families (`G1-SLICE.6.4.5.4.d.1`).** Immutable vectors preserve exact
 objects/authored order: Dart/Tuck/Pleat/Gather/Grainline/SeamAllowance, without id sorting or kind

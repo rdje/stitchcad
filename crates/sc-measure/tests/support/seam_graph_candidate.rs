@@ -459,3 +459,91 @@ fn seam_graph_candidate_preserves_exact_resource_history_and_current_namespace_r
     });
     assert_eq!(state, saved);
 }
+
+#[test]
+fn seam_graph_candidate_actual_held_gather_and_request_observe_retirement_without_retargeting() {
+    use sc_core::{
+        command::CommandSeamSplitBindingError,
+        ontology::{DirectedRange, Direction, Gather, GatherDefinition, GatherError},
+    };
+    let state = state(
+        EaseAmount::Formula(id(5_001)),
+        SeamSideId::A,
+        SeamDirection::Opposite,
+    );
+    let request = command_request(&state, 1, at(1, 2), at(2, 3));
+    let source = state
+        .graph()
+        .spans()
+        .get(1)
+        .expect("actual original target");
+    let held = source.definition().a;
+    let structure = state.inputs().structure();
+    let piece = structure
+        .cut_plan()
+        .copy(held.copy)
+        .expect("actual held copy")
+        .piece();
+    let piece = structure
+        .pieces()
+        .pieces()
+        .iter()
+        .find(|candidate| candidate.id() == piece)
+        .expect("actual owner");
+    let definition = GatherDefinition {
+        id: id(300_001),
+        graph: state.graph().id(),
+        span: source.id(),
+        side: SeamSideId::A,
+        copy: held.copy,
+        direction: DirectedRange {
+            range: held.range,
+            direction: Direction::Original,
+        },
+        closing_operation: id(300_002),
+    };
+    let gather = Gather::new(
+        definition.clone(),
+        piece,
+        structure.cut_plan(),
+        state.graph(),
+        structure.topology(),
+    )
+    .expect("actual held Gather before splitting");
+    let children = [id(100_099), id(100_050)];
+    let graph = with_join(&state, &request, |source, joined| {
+        joined
+            .admit_graph_candidate(source, children, limits(28, 4, 5))
+            .expect("real candidate admission")
+            .build()
+            .expect("real paired graph")
+    });
+    let SewingSpanLookup::RetiredSplit {
+        children: actual,
+        birth_entry,
+        split_entry,
+    } = gather
+        .inspect_span_reference(&graph)
+        .expect("explicit old-target retirement")
+    else {
+        unreachable!("actual target must remain retired")
+    };
+    assert_eq!((birth_entry, split_entry), (1, 3));
+    assert_eq!(*actual, children);
+    assert_eq!(gather.definition(), &definition);
+    assert_eq!(
+        gather.current_intake_source(piece, structure.cut_plan(), &graph, structure.topology()),
+        Err(GatherError::MissingSpan(request.span()))
+    );
+    assert_eq!(
+        request
+            .bind_source_cuts(&graph)
+            .expect_err("old request never selects a child"),
+        CommandSeamSplitBindingError::MissingSpan {
+            span: request.span()
+        }
+    );
+    assert!(
+        matches!(gather.inspect_span_reference(state.graph()).expect("original unchanged live member"),SewingSpanLookup::Live(span) if core::ptr::eq(span,source))
+    );
+}

@@ -417,59 +417,57 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0570 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part729.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.2`
   Status: `done`
-  Goal: exact source/stop/actual graph joins construct both candidate child definitions and extend
-  attached actual history;retain unrelated graph members/authored order/full original ease body.
-  Require explicit complete clone/output bounds before allocation;do not fabricate legacy history
-  or confer physical/current authority on caller-selected correspondence metadata.
-  Design:join the exact complete source admission and stop/capture owners,require existing
-  attached history;bound the full source-graph population plus captured root,child stop references,
-  two child slots and appended history record before copying. Then extend accepted history and
-  construct a current structurally valid graph with the target replaced in place by A-ordered
-  children. Output accounting must fit the admitted reservation;no inputs/landmarks are cloned.
-  Actual Design/global ownership,held Gather repairs,physical/numeric/provider readiness and
-  trusted reserve/atomic effects remain .3 and later owners. Supplied IDs are tentative metadata.
-  Relevant actual source/stop/history/resource/current constructors,existing caller fixtures and
-  lineage/split/stop book contracts reviewed;own focused native/compiler/book evidence and commit.
-  D336 owned here,fix now:PLANNING D301 and final ledger still say next pack active64/64 after
-  committed0569 restored capacity. Reproduce rg those two lines;git blame shows0568 text carried
-  through0569 routing. Actual pressure now active6/64,total27/192,headroom58,rc=0. Earlier doc
-  finalizers omitted the bounded planning frontier. Impact:future resume can repeat closed work.
-  Replace both current pointers with held-reference/global integration .3.4.3.3,retain old source
-  receipts unchanged and verify live summaries plus pressure before commit. No new product defect.
-  Completion0571:actual bounded source/stop/history graph candidates implemented.
-  - [x] ROOT CAUSE (WHY + WHERE): existing stop_partition_source.rs actual_children manually
-    constructs two fixture definitions;no production candidate preserves unrelated members or
-    extends attached history. Baseline local_environment.py cargo test -p sc-measure --test
-    design_inputs_contract command_stop_source_binding →four pass,rc=0. D336 rg/blame/pressure
-    identifies two live planning pointers carried past committed window24 capacity restoration.
-  - [x] ADDRESSED (verified): local launcher cargo test -p sc-measure --test
-    design_inputs_contract seam_graph_candidate →four pass,rc=0. Twelve direction/side/amount
-    combinations preserve exact unrelated before/after members,A-ordered pairs,full root sharing
-    and actual current Design acceptance. Nested split preserves prefix/seven issued IDs/root
-    and one semantic cut stop in both children. Exact owner substitution/legacy/history/current
-    namespace refusals leave source unchanged. Graph18+capture5+references2+extra3 reserves28;
-    output23,limit27 refuses exact25+3 field/owner,limit28 retries successfully,rc=0. No global
-    ID reserve,quantity/physical/provider/authorization/whole Design publication certificate.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc command::seam_candidate →four pass,rc=0;
-    original four source-join cases pass,rc=0. Strict Clippy core library and measure library/
-    design_inputs_contract plus fmt --all --check pass,rc=0. Initial test used IdentityCollision
-    field identity instead of actual id;compiler101 corrected,then native four pass,rc=0.
-    Book example byte-exact to passed doctest;book94/258/1595/2789 and glossary310/9/158/0 pass,
-    rc=0. Receipt729 →three exact Git spans,rc=0. D336 Python comparison of D301/footer,
-    MEMORY and task index →both live pointers match .3.4.3.3,rc=0;source receipts untouched.
-    Current archive retention →1183 logical/27 working/2549460 residentB,rc=0. Scoped/full
-    paired acceptance keeps its existing later owners.
-  - [x] LOCKSTEP: lineage/split book/three API rows/MEMORY/DEV/CHANGE/LIVE/index/D301/D336
-    align;whole0570 scope/lesson/changelog retained729. G1 still6/18;G0 human unapproved.
-    D334 P2/D156/D223/PLANNING.5 stay owned;old full local/hosted79bd6f6a stays SHA-scoped.
-    Next .3.3 actual held Gather/reference retirement and global/resource integration;then
-    deferred component checkpoint. Full PNT continues;no broad verification between slices.
-    promotion: declined (application of indexed exact-owner joins,immutable source/history preservation,pre-copy logical admission and current structural validators;D336 repairs existing continuity obligations).
+  Goal:0571 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part730.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual held Gather/reference retirement evidence keeps old target IDs and both immediate
   children;global current identity/resource and trusted bus reserve requirements precede effects.
   No silent child choice or retarget;repair observations remain distinct from valid publication.
+  Children .1 actual held Gather identity inspection; .2 whole-Design ownership/resource/current
+  integration and explicit trusted reserve boundary. Existing DesignGarment permits held damage
+  for inspection;validate_current checks all constructions and still refuses missing Gather spans.
+  Do not substitute successful repair observation for current or atomic effect readiness.
+- ID: `G1-SLICE.6.5.3.2.3.4.3.3.1`
+  Status: `done`
+  Goal: actual Gather identity inspection returns the exact held graph's live span or borrowed
+  immediate retirement evidence without retargeting. Keep existing current/intake/copy/sign
+  refusals unchanged. Prove nested retirement,unknown/legacy/wrong graph and actual paired
+  graph candidate behavior;no allocation,provider,range query or generated repair choice.
+  ROADMAP4.1,ontology1/1.1,entity-identity/Gather/current construction contracts and lineage book
+  reviewed. Own native Gather/actual candidate checks,scoped compiler/lint/book and commit.
+  Completion0572:Gather identity inspection lends exact live/retired evidence without repair.
+  - [x] ROOT CAUSE (WHY + WHERE): rg public Gather methods and held_span in ontology/gather.rs
+    shows live-only target lookup;retirement is otherwise the original MissingSpan cause.
+    Baseline local_environment.py cargo test -p sc-core --test gather_contract →16 pass,rc=0.
+    Existing current/intake rejection must remain while repair inspection exposes exact history.
+  - [x] ADDRESSED (verified): local launcher cargo test -p sc-core --test gather_contract
+    →18 pass,rc=0. New two cases verify exact live pointer,original retirement array pointer,
+    nested301→702/701→800/799 without descendant selection,original wrong graph/unknown/legacy
+    absence,and unchanged copy/intake/current refusals. Existing original16 remain green.
+    Actual sc-measure design_inputs_contract seam_graph_candidate →five pass,rc=0,including
+    original held Gather and split request after actual candidate construction;old IDs unchanged,
+    both immediate children visible,Gather current intake/old request still refuse old target.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc ontology::gather →four pass,rc=0;strict
+    Clippy core library/Gather test and measure library/design-input target plus fmt check pass,
+    rc=0. New fixture uses existing unreachable invariant style;affected actual held case rerun
+    one pass,rc=0. Compiled inspection book example byte-exact;positive book94/258/1597/2792 and
+    glossary310/9/158/0 pass,rc=0. Receipt730 →four exact Git spans,rc=0. Full paired/global/
+    resource/current/physical/authority/effect acceptance keeps its remaining implementation owners.
+    Live-doc preflight refused325/321/416-byte draft lines before any tracked write;trimmed
+    the draft under existing DEV/CHANGE/task ceilings without changing a limit.
+  - [x] LOCKSTEP: lineage/Gather book,MEMORY/DEV/CHANGE/LIVE/index/D301 next pointers aligned;
+    whole0571 scope/lesson/changelog/D336 ledger retained730. G1 still6/18,G0 human unapproved;
+    LIVE candidate focused4→5. No repair selection,retarget,current certificate or effect.
+    Next .3.3.2 whole-Design candidate ownership/resource/current integration and explicit
+    trusted reserve boundary;then deferred component checkpoint. Full PNT continues.
+    promotion: declined (routine application of indexed persistent identity,borrowed exact history and inspection/currentness separation;no new cross-cutting rule).
+- ID: `G1-SLICE.6.5.3.2.3.4.3.3.2`
+  Status: `pending`
+  Goal: join the actual complete garment/source/graph candidate under explicit clone/output bounds;
+  preserve held constructions/references and complete namespaces,including retired history IDs.
+  Actual current validation must retain unresolved Gather evidence before production effects.
+  Trusted reserve stages remain the sole production allocator;tentative graph IDs confer no
+  reserve/global-persistence/physical/provider/authority/publication capability.
 - ID: `G1-SLICE.6.5.3.2.3.4.acceptance`
   Status: `pending`
   Goal: deferred scoped history/graph/actual candidate checkpoint after .1–.3;whole paired physical/

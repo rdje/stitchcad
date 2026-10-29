@@ -12,6 +12,8 @@ use sc_core::ontology::{
     WeightedEaseRegion,
 };
 use sc_units::Length;
+#[path = "support/gather_span_reference.rs"]
+mod gather_span_reference;
 fn id(n: u128) -> EntityId {
     EntityId::from_bits(n)
 }
