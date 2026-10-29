@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400:final published environment entry after exact static
-  loader --native argv;run push_cadence_contract.py from clean committed HEAD. Prior tail
-  target/prepush-400-0561-environment first4 pass/source clean;native5 D332 now repaired. Then
-  fresh full clean check/gate/probes under target/prepush-400-0562 before normal push/actual jobs.
-- D332 fixed0562:obsolete0200 Rust equality removed;complete current snapshot guard before
-  and after all8 consumers. Native526 inputs/415 tracked Rust/231 production sources exact and
-  current library frozen;three virtual Rust/Python drift refusals pass. Original Python pins/
-  native argv/markers/census/artifacts and other controller AST remain exact;no Rust change.
-- Whole0561/prior ledger retained720/four spans;book93/248/1590/2771,retention1174 pass0. Deep
-  archive--all watch/body/19 physical/411-plan capture/interruption/HEAD/ten omission proof pass.
-- LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits/D223/PLANNING.5 pending. After
-  full prepush/push/jobs:stop .3.3.acceptance/live lineage .3.4. Full PNT;consume all terminals.
+- Next G1-SLICE.6.5.3.2.prepush-400:fresh full clean check/gate/probes under target/
+  prepush-400-0563 after commit0563,then normal push/actual exact-SHA hosted jobs if all pass.
+  Prior clean1a51b37f/derived427 full check0/gate0/probes2 reached29 suites;G0/glossary groups
+  failed undeclared publication fields. No push/hosted verdict yet;consume all terminals.
+- D333 fixed0563:four local result-field rows;actual glossary310/9/158/0,normal G0 18 met/
+  1 human not met/19 complete. Book93/248/1590/2771,receipt721/four spans and retention1175 pass0.
+  No checker/runtime/exemption changes. Full declaration controls remain in fresh full prepush.
+- D334 P2 pending G0-CONTRACT.15f:parse-only mode skips18 checks yet says engineering met;
+  root verdict ignores skipped mode. Fix after current G1 paired activity,before G0 closure.
+  Book records limitation;normal executed review remains applicable,human closure unapproved.
+- LIVE G1 6/18/29 suites,D156/12 audits/D223/PLANNING.5 pending. After full prepush/push/jobs:
+  stop .3.3.acceptance/live lineage .3.4. Full PNT;no whole paired/physical/release claim.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

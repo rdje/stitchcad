@@ -3,10 +3,10 @@
 ## Metadata
 
 - Tree ID: `G0-CONTRACT`
-- Status: `done` for everything this repository can do — every engineering clause of gate G0 is met and
-  derived; the gate itself stays **open** on one clause the director's ruling of `2026-09-30` accepts as
-  open (evaluation-seat procurement), and its **closure is unapproved** because the reviewing party
-  authored most of what it reviews (governance §6.1 rule 2). The frontier moves to `G1-SLICE`.
+- Status: `active` for deferred instrument follow-up `.15f` (D334). Original engineering
+  specification and normal review remain complete;the gate stays **open** on evaluation-seat
+  procurement accepted by the director's `2026-09-30` ruling. Its **closure is unapproved** under
+  governance §6.1 rule2. Product execution stays at `G1-SLICE`;this follow-up waits behind it.
 - Roadmap lane: `ROADMAP.md` §11 gate **G0 — Product & semantic contract** (sources: §2, §3,
   §4.2, §5, §8, §9, §12)
 - Created: `2026-09-29`
@@ -75,7 +75,7 @@ gate removing.
 - ID: `G0-CONTRACT`
   Status: `active`
   Goal: gate G0 closed — the semantic contract written, reviewed and traceable.
-  Children: `.1` … `.18`
+  Children: `.1` … `.18`; `.15f` deferred instrument follow-up
 
 - ID: `G0-CONTRACT.1`
   Status: `done`
@@ -392,7 +392,7 @@ gate removing.
   Commit: `STITCHCAD-G0-0014`
 
 - ID: `G0-CONTRACT.15`
-  Status: `done` for everything this repository can do — the review is derived, complete and re-runnable;
+  Status: `done` for the original normal-mode review; `.15f` owns the D334 parse-only wording follow-up;
   the **gate stays open** on clause G0-12 and its **closure is unapproved** (governance §6.1 rule 2, and the
   director's ruling of `2026-09-30` which accepts both facts rather than waiting on them)
   Goal: G0 exit review — walk the gate's exit clause list, cite the deliverable and its
@@ -409,6 +409,21 @@ gate removing.
   status line is unchanged and that is the finding: it reads "remains DRAFT until the G0 exit criteria are
   met", and one criterion is not met.
   Commit: `STITCHCAD-G0-0015`
+
+- ID: `G0-CONTRACT.15f`
+  Status: `pending`
+  Goal: D334,P2;withhold an engineering-met verdict when the optional parse-only review skips
+  instrument checks. Preserve normal18-met/1-human-not-met review,structural closure validation,
+  completed-review exit semantics and the explicit unapproved human boundary.
+  Reproduce: G0_EXIT_SKIP_CHECKS=1 actual review →18 SKIPPED,0 met/1 not met/19 clauses,
+  yet says engineering clauses are met,rc=0. Evidence:target/prepush-400-0562/
+  g0-fast-path-diagnostic.log;no instrument/source effects. Normal-mode D333 is independent.
+  Paths:docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh;its existing probe suite and book.
+  Schedule:after current G1 paired-seam activity,before any G0 closure;does not block ordinary
+  feature work or the normal prepush review. Repo-local engineer owns repair and verification.
+  Acceptance:actual fast-mode verdict explicitly withholds engineering acceptance;normal review
+  and malformed/failing-check behavior unchanged;focused fast-mode/body-omission control and
+  normal review/probes prove it. Commit with book/live sync when activated;no approval inferred.
 
 - ID: `G0-CONTRACT.16`
   Status: `done`
@@ -488,7 +503,7 @@ gate removing.
 | 20 | `G0-CONTRACT.16` | `done` | one message system chosen with its evidence read: Fluent at both ends, ICU4X rejected on the boundary rather than on quality; the lint, the termbase, pseudolocalization, the locale-independent canonical file, the RTL geometry rule and three review tiers, with the message inventory derived from four chapters and the crate |
 | 21 | `G0-CONTRACT.17` | `done` | the command layer landed: five classes and seventeen commands in one machine-readable table, undo at the atomic group restoring semantics rather than contours, preview/commit with a re-checked precondition, revision preconditions and idempotency keys, the five authority levels as core-enforced permissions with `approve` unholdable by an agent, and a parity table whose columns and generation rule are normative while its rows stay G5's evidence |
 | 22 | `G0-CONTRACT.15` | `done` | the exit review is a command, not a paragraph: 18 of 19 clauses met with a check the review ran, one `not met` and accepted open by the director's ruling, and the gate's closure recorded **unapproved** under governance §6.1 because its reviewer authored most of what it reviews |
-| 23 | — | — | **gate G0 has no further leaf.** The frontier moves to `G1-SLICE.1` (the workspace crate layout), which is where the specification meets Rust for the first time since `sc-units`. G0's one open clause travels with the ruling that accepted it, and `G2-2D.15` owns the physical evidence that would close the domain questions |
+| 23 | `G0-CONTRACT.15f` | `pending` | D334 parse-only wording;P2 behind current G1 activity,before G0 closure. Product frontier remains G1;the accepted human clause and independent approval boundary remain open |
 
 ## Decisions
 

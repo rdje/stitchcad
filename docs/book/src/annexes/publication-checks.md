@@ -79,6 +79,10 @@ These identifiers belong to the publication Python module/configuration:
 | `rows` | Pure reader for the scoped tabular API/status map |
 | `formula_scope` | Pure validator for known formula availability claims and methods |
 | `PublicationResult` | Tuple-compatible checked counts with named fields and a labelled summary |
+| `chapters` | Registered book chapters |
+| `scoped_api_rows` | Rows in the explicitly scoped current API/status map |
+| `source_links` | Local Markdown links checked in chapters and SUMMARY |
+| `rendered_links` | Local links checked in rendered chapter pages |
 
 The result fields are `chapters`, `scoped_api_rows`, `source_links` and `rendered_links`, in that
 original tuple order. `summary()` names each population explicitly. The fixture's historical-body

@@ -521,11 +521,12 @@ canonical original root and successful current metadata preflight;the original D
 Four focused native cases cover those joins plus independent source-owner controls. A boxed equal
 request and a cloned equal-body Design demonstrate actual Request and Target refusals,with both
 original references retained and request-before-target priority. Privacy/lifetime/API doctests pass.
-The complete native workspace check and doctrine gate passed at95925f7b after the focused
-implementation checks. The full repository probe run remains blocked by separately owned archive,
-metadata and verification checks under G1-SLICE.6.5.3.2.prepush-400;no push or hosted verdict is
-claimed. The stop component checkpoint and whole paired/physical/authority/effect acceptance retain
-their separate owners.
+The complete native workspace check and doctrine gate passed at1a51b37f after the focused
+implementation checks. That full probe run reached all29 suites and exposed undeclared publication
+fields;their local table declarations now restore the glossary and normal G0 review. A fresh full
+pre-push run remains pending under G1-SLICE.6.5.3.2.prepush-400;no push or hosted verdict is claimed.
+The stop component checkpoint and whole paired/physical/authority/effect acceptance retain their
+separate owners.
 
 This token proves owner coherence. A metadata capture can be obtained through its own public
 admission without complete Design source preflight,so this join does not add that preflight or

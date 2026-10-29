@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — current native input baseline permits legitimate feature growth
+## _(2026-10-29 UTC)_ — declare local publication result fields
 
-0562 closes D332:native loader compared current Rust to0200,where valid0476 workflow example did not exist. Share existing complete current input hash guard before execution/after every consumer. Original Python body pin stays;all8 native argv/markers/census/artifact code otherwise exact.
-Actual native8 pass:526 inputs/415 Rust/231 production sources exact,current library frozen. Virtual new/old Rust and Python drift all refuse0. Whole other controller AST/tracked bytes exact. Earlier tail reader/archive--all/static capture/payload passed;final cadence entry/full gates remain.
-Whole0561/prior ledger retained720/four spans;book93/248/1590/2771 and retention1174 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D332 fixed,D156 audits/D223 continuity/PLANNING.5 pending. No whole prepush/hosted verdict inferred.
-[Whole0561 fixture proof](docs/history/stitchcad-devnotes-part720.md). Promotion declined:indexed current restoration/historical Python oracles/input drift calibration. Next final cadence entry,then fresh full clean gates/normal push/actual jobs;full PNT continues.
+0563 closes D333:0559 added four field code spans without local table rows. Full clean1a51b37f check0/gate0/probes2 reached29 suites;glossary/G0 groups failed. Declare four existing result fields;actual glossary310/9/158/0 and normal G0 18/1/19 complete restored. No runtime/checker/exemption change.
+D334 independent parse-only review says engineering met after18 skipped checks. Root verdict ignores mode. P2 owner G0-CONTRACT.15f deferred after current G1 activity/before G0 closure;book states limitation. Normal executed review applicable;human approval remains unapproved.
+Whole0562/prior ledger retained721/four spans;positive book93/248/1590/2771 and retention1175 pass0. Initial output diagnostic double-counted clause/detail;qualified actual rows without altering successful instruments. LIVE G1 6/18/29 suites unchanged;D156/D223/PLANNING.5 open.
+[Whole0562 baseline proof](docs/history/stitchcad-devnotes-part721.md). Promotion declined:indexed local declarations/checked-versus-skipped evidence. Next fresh full clean gates/normal push/actual jobs;stop component checkpoint/lineage follow. Full PNT;no full prepush or release verdict yet.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

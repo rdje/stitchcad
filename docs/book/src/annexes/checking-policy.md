@@ -41,3 +41,8 @@ This checks the existing consumer arguments and expected outputs, preserves ever
 and records the actual current library identity after the coupled run. Isolated new-Rust, old-Rust
 and Python-input drift controls must refuse. This scoped result leaves the full pre-push gate owned
 separately by its task-tree milestone.
+
+The G0 parse-only review currently prints an engineering-met sentence after skipping its instrument
+checks (D334). That mode provides structural inspection. Use the normal executed review for the
+engineering verdict; human closure remains separate. The wording repair is owned by
+`G0-CONTRACT.15f`, deferred behind the current G1 product activity and required before G0 closure.

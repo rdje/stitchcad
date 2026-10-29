@@ -438,6 +438,11 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Tail0561:reader/archive--all/static capture/payload entries1–4 pass0/source clean;native
   loader5 fails obsolete0200 Rust comparison. D332 fixed0562:all8 native consumers/current526
   inputs/415 Rust restored0. Next final push-cadence entry,then fresh full gates/push/actual jobs.
+  Attempt0562:clean1a51b37f/derived427 →full check0/gate0/probes2,all29 suites reached;
+  G0/glossary bad-arm groups only. D333 undeclared publication fields fixed0563;actual glossary
+  310/9/158/0 and normal G0 18/1/19 restored. Fresh full clean gates/push/jobs remain pending.
+  D334 parse-only engineering wording independently owned G0-CONTRACT.15f,P2 after current G1
+  activity/before G0 closure;normal-mode review/push remains applicable. Logs target/prepush-400-0562.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
@@ -474,49 +479,57 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0561 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part720.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.loader-native-baseline`
   Status: `done`
-  Goal: D332,P1 current prepush blocker;native static-loader preflight compares every current
-  tracked Rust file against0200 BEFORE. Legitimate0476 command_workflows example did not exist
-  then;other current Rust evolves by feature work. Frozen original Python body pin remains valid.
-  Reproduce:clean3e01ef43/derived426;tail reader/archive--all/static capture/payload entries1–4
-  pass/source clean;static --native entry5 fails Git128 on current command_workflows.rs absent
-  in a265306d22dbe6c706d4524a93d534c81f5ad38c. Evidence:target/prepush-400-0561-environment/
-  05-python_static_loader_contract.log. New example introduced47f42d4f/0476 legitimately.
-  Paths:docs/tasks/artifacts/ci_environment/python_static_loader_contract.py. Bind restoration
-  to complete current sources snapshot already computed at native entry;check before execution
-  and after every original consumer. Keep BEFORE/original Python body oracles and all8 actual
-  child argv/markers/current Rust census/source hashes/library identity/frozen output records.
-  Focus positive current snapshot and isolated new/old Rust and non-Rust drift refusals;all
-  native consumers execute with current sources unchanged. No Rust/source pin/classifier change.
-  Commit0562 with book/live/whole prior receipt;then final push-cadence entry and fresh full
-  clean check/gate/probes/normal push/actual exact-SHA jobs. No broad product verification claim.
+  Goal:0562 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part721.md).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.publication-fields`
+  Status: `done`
+  Goal: D333,P1 push blocker;declare four PublicationResult fields in their local book API
+  table. I introduced the field code spans in0559 without table rows. Preserve glossary/schema/
+  exemptions/index rules and G0 normal18/1 expectation;do not weaken either failed instrument.
+  Reproduce:full clean1a51b37f/derived427 →check0/gate0/probes2,all29 suites reached;only
+  G0/glossary bad-arm groups. G0 REAL/CONTROL show17/2;glossary identifies chapters,scoped_api_rows,
+  source_links,rendered_links as four unaccounted tokens. Source restores clean/HEAD unchanged;
+  all terminals consumed. Logs target/prepush-400-0562/{baseline,results}.json/probes.log.
+  Paths:docs/book/src/annexes/publication-checks.md;command-seam-stops prepush status;
+  deferred D334 tracking in G0-CONTRACT.md,
+  live docs/book checking-policy,ledger/index. Meanings derive actual check() and named result;
+  all four are local Python result fields,not four new domain terms or public Rust API families.
+  Focus actual glossary census0/current A–Z unchanged,actual G0 review18 met/1 human not met/
+  19 clauses and status complete,book build/publication. Existing broader declaration controls
+  stay owned by fresh full prepush after commit0563;no runtime change or full verdict inferred.
+  ROUTING EVIDENCE D334:actual G0_EXIT_SKIP_CHECKS=1 normal script returns0 with18 SKIPPED,
+  0 met/1 not met/19 yet engineering-met wording. This executes no glossary/instrument checks,
+  so bug belongs G0 reviewer independently of D333 book data. Diagnostic saved under same run.
+  Owner/schedule:G0-CONTRACT.15f,P2 after current G1 paired-seam activity,before G0 closure;
+  create pending canonical leaf,retain original completed normal-mode scope/human boundary.
+  No D334 code repair or product pivot in this unit;record actual known limitation in book.
+  Acceptance: ROOT CAUSE/ADDRESSED/NO REGRESSION with actual command/output/rc=0;whole0562
+  proof retained before curation;all fixed caps/310 terms/9 parts/status-map scope unchanged.
 
-  Completion0562:D332 complete current-run source restoration replaces obsolete source age.
-  - [x] ROOT CAUSE (WHY + WHERE): native guard compares every current Rust file to0200 tree;
-    valid0476 example is absent there. Actual published native traceback Git128 establishes
-    failure. target/loader_native_baseline_0562_focus.py verifies new example absent/old lib
-    legitimately evolved/current baseline accepted,rc=0. Original Python source pin stays exact.
-  - [x] FIX: share existing complete current-source SHA256 restoration expression before
-    execution and after every consumer. Remove obsolete per-Rust historical comparison only.
-    Keep all8 native argv/markers/current source census/outputs/library identity/frozen records
-    and all nonnative oracles unchanged;no actual Rust/library/consumer/classifier change.
-  - [x] ADDRESSED (verified): actual prepared static-loader --native →all8 consumers terminal0,
-    526 inputs/415 tracked Rust/231 production sources exact,current library frozen,rc=0.
-    Original dimension4023/3814/15,ambiguity4192/16,geometry97/12,call166/12+3,reserved3624/19,
-    locator prefixes/four faults,competing263/10,coupled26723 pass. Target/loader-native-baseline-
-    0562-native.log;all current sources restored after every actual original child.
-  - [x] NO REGRESSION: target/loader_native_baseline_0562_focus.py →new Rust/old Rust/Python
-    virtual input drift each hits original restoration refusal;current full snapshot passes,
-    tracked bytes exact,rc=0. Original post-child guard AST expression exact;all native census/
-    consumer/marker/artifact and nonnative controller AST otherwise exact,rc=0. Original BEFORE
-    unchanged. Book93/248/1590/2771,retirement720/four exact Git spans,retention1174 and diff
-    --check pass0. Archive--all/static capture/payload passed earlier clean tail;no fresh full
-    prepush/whole environment/hosted verdict yet. Deferred product acceptance retains its owner.
-  - [x] LOCKSTEP: whole0561/prior ledger retained720. Book explains current complete native
-    baseline and separate historical Python oracle. MEM/DEV/CHANGE/index/ledger align;LIVE
-    G1 6/18/29 suites/G0 human unapproved unchanged,D332 fixed,D156/D223/PLANNING.5 pending.
-    Commit then final published push-cadence entry,then fresh full clean check/gate/probes/
-    normal push/actual exact-SHA jobs. Full PNT;no product completeness or release claim.
-    promotion: declined (application of indexed current-run restoration,original immutable Python oracles and scoped input drift controls;no new product authority).
+  Completion0563:D333 local field declarations restore actual normal-mode instruments.
+  - [x] ROOT CAUSE (WHY + WHERE): full clean1a51b37f check0/gate0/probes2 reached29 suites;
+    glossary names four undeclared fields introduced in0559 publication prose. Existing C1
+    rule reads first-column local identifiers;table lacked rows. Inspection of actual
+    PublicationResult/check() confirms four meanings,rc=0;no new domain term is required.
+  - [x] FIX: declare chapters/scoped_api_rows/source_links/rendered_links in existing local
+    API table. No glossary exemptions/index/schema,checker or runtime change. Update stop
+    verification status to actual run;record D334 known parse-only limitation and future owner.
+  - [x] ADDRESSED (verified): actual run_glossary_census.sh through local_environment.py →
+    310 terms/9 parts/158 tokens/0 failures,rc=0;actual normal run_g0_exit_review.sh →18 met/
+    1 not met/19,only G0-12 human clause unmet,review complete,rc=0. Logs target/publication-
+    fields-0563-{glossary,g0,status}.log. Initial diagnostic counted both clause/detail NOT MET;
+    qualified actual clause rows without rerunning or changing successful instrument outputs.
+  - [x] NO REGRESSION: public book_publication.py main_inputs/build/check →93 chapters/248
+    scoped API rows/1590 source links/2771 rendered links,rc=0. Git diff --exit-code over crates,
+    glossary and G0 instrument trees,rc=0;no runtime/control changes. verify-retention →1175
+    logical/80 working/66908 decoded lines/5247415 decoded B/2824752 resident B,rc=0;receipt721
+    →four exact Git spans,rc=0. Existing declaration controls run in required fresh full prepush;
+    full0562 failed probes and no hosted verdict are explicit,not relabelled as a full pass.
+  - [x] LOCKSTEP: whole0562/prior ledger retained721;MEM/DEV/CHANGE/index/ledger and three
+    book pages align. D333 fixed;D334 pendingP2 G0-CONTRACT.15f after current G1 activity/before
+    G0 closure. LIVE G1 6/18/29 suites/normalG0 18/1/human unapproved;D156/D223/PLANNING.5 open.
+    Commit0563 then fresh full clean check/gate/probes/normal push/exact-SHA hosted jobs;
+    stop component checkpoint and lineage follow. No product/release completeness inferred.
+    promotion: declined (application of indexed chapter-local token declarations and explicit checked-versus-skipped evidence boundaries;no new product contract).
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

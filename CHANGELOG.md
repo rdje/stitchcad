@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0562 — bind native source restoration to the current run
+## STITCHCAD-G1-0563 — declare local publication result fields
 
-- Close D332:replace obsolete0200 Rust equality with complete current-source restoration before execution/after every native consumer. All8 argv/markers/census/artifact code and historical Python pins remain exact. Native526 inputs/415 Rust/231 production sources and three drift refusals pass.
-- Whole0561/prior ledger retained720/four spans;book/history checks pass. Earlier archive--all/static capture/payload tail passes;run final cadence entry,then fresh full clean prepush/normal push/actual jobs. Deferred D223/PLANNING.5 stay owned;no whole environment/hosted verdict claimed.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D332 fixed,D156 audits open. Full PNT continues.
+- Close D333:four field declarations restore glossary310/9/158/0 and normal G0 18/1/19 complete. Full0562 check/gate passed but probes failed these declarations;all29 suites reached. Checker/runtime/exemptions unchanged;positive book93/248/1590/2771 and retention1175 pass.
+- Own D334 parse-only verdict wording as pendingP2 G0-CONTRACT.15f after current G1 activity/before G0 closure;book records limitation. Whole0562/prior ledger retained721/four spans. Fresh full clean prepush/normal push/exact-SHA hosted jobs remain pending;no verdict inferred.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D333 fixed,D334 scheduled,D156 audits/D223/PLANNING.5 open. Full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
