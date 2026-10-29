@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — bounded actual current stop context
+## _(2026-10-29 UTC)_ — actual authored closed stop memberships
 
-0532 private context borrows actual admitted owner;C/P/M indexes retain exact objects and E*B caches retain every live/repair Piece portion. Fixed6 target points,full target ownership/self-copy overlap and4 pair coverages use exact bounded ports. Full-side buffers drop before4B pair cache;no legacy tree.
-Actual Design10/core+test Clippy/fmt/docs2+1 pass0. Choices survive rejoin,N0 missing copies/range quota refuse,lost/numeric interiors defeat point sampling,unused numeric Turn refuses,unused Piece repairs remain cached and later anchors need no original Param. Exact pointers/order;no state mutation.
-Book93/237/1590/2765,glossary0/map/690 receipt3/retention1144 pass0. Eight API routes/current chapter/source decision/index/D301 align;LIVE/README unchanged29 suites/G1 6/18. Actual stop rows next,then ordered views/integration. Whole Design/ease/physical/authority/effects/full/hosted proof remain owned.
-[Whole0531 ownership admission](docs/history/stitchcad-devnotes-part690.md) retains exact separate budgets/current boundary. Promotion declined:indexed current/resource contract adoption. Closed evidence accessors move portions/borrow actual numeric causes;no mapping kernel or value-provider change.
+0533 private rows borrow exact current context/stop/copy/semantic evidence in authored order. Closed First/Second/Both memberships use cached ranges,actual Piece ownership and original N cap;no query,inverse,narrowing,value read or new object. N0 never backfills original ease-root stops.
+Actual Design5/core+test Clippy/fmt/docs2+1 and independent32-row oracle pass0. Four shared cuts,wide later anchors,two semantic kinds/reflected/touching copies/side tags and ordinal1 errors after a valid prefix retain actual IDs/pointers/original sources. No partial accepted rows or state mutation.
+Book93/242/1590/2768,glossary0/map/691 receipt3/retention1145 pass0;LIVE/README unchanged29 suites/G1 6/18. Split/reverse/merge native+inverse confirms Both away from cut with two originals;no inverse selection/physical certificate. Ordered views/actual caller join next;full/effect checks remain owned.
+[Whole0532 current context](docs/history/stitchcad-devnotes-part691.md) retains exact point/range/cache refusal proofs. Promotion declined:indexed closed membership/inverse contracts;combined finding in book/task. Inverse diagnostic fixture explicitly admits required1270 bits for J4;stop limits unchanged.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

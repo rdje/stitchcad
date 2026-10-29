@@ -2,8 +2,8 @@
 
 Native contract cases verify the existing graph's stop membership at paired cuts,including
 closed endpoints,explicit side/copy identity,authored order and later-frame anchors. Explicit actual
-stop input/workspace,ownership-workspace and bounded current-context stages are implemented;
-membership rows and partition views remain pending. These cases construct real retained child graphs
+stop input/workspace,ownership-workspace,bounded current context and actual membership rows are
+implemented;ordered child views remain pending. These cases construct real retained child graphs
 through public APIs;they do not install a command effect or create new semantic landmark identities.
 
 | API token | Meaning |
@@ -46,6 +46,12 @@ through public APIs;they do not install a command effect or create new semantic 
 | `CommandStopContextBoundary` | Actual Start,Cut or End point on the named side |
 | `CommandStopContextPopulation` | Complete Copies,Pieces,Landmarks or OwnedPortions guard |
 | `validate_current_context` | Build bounded actual local evidence after both admissions |
+| `CommandStopMembership` | Exact authored stop,ordinal,physical copy and semantic current evidence |
+| `CommandStopMemberships` | Complete private borrowed rows over the exact current context |
+| `CommandStopPairMembership` | First,Second or Both closed current pair memberships |
+| `CommandStopMembershipError` | Actual target,failed stop ordinal/reference and original cause |
+| `CommandStopMembershipIssue` | Actual structural refusal or original N row-bound guard |
+| `derive_stop_memberships` | Classify actual authored references without additional queries |
 
 ## A stop at the cut belongs to both closed children
 
@@ -66,7 +72,8 @@ For example,with A cut1/2 and B cut2/3:
 The pair order is always lower/upper A. Same pairs those with lower/upper B;Opposite pairs them
 with upper/lower B. An arbitrary winner at a shared cut would lose a valid boundary reference.
 The current graph constructor validates supplied child stop lists;it does not itself execute this
-partition or enforce complete command conservation. The forthcoming partition stage owns that work.
+partition or enforce complete command conservation. The membership stage below derives every actual
+target reference;ordered child views and whole command conservation follow under their own owners.
 
 ## Preserve side,copy and authored order
 
@@ -121,8 +128,8 @@ stops and authored order survive. Physical Notch representation and actual geome
 deferred to their existing owners.
 
 The new independent stop oracle is registered in the closed required oracle gate. Ten producers
-match twelve frozen fixtures;the nine gate controls still pass. Actual current membership and
-ordered borrowed partition views follow the input admission below as separate owned slices.
+match twelve frozen fixtures;the nine gate controls still pass. Actual current membership follows
+the input admission below;ordered borrowed partition views remain their own implementation slice.
 Whole paired lineage/atomic effects and physical/mutation acceptance remain later work.
 
 ## Admit actual inputs before current queries
@@ -342,9 +349,78 @@ This is local registry and target evidence. A lost interval on an unused Piece i
 `piece_portions()` while the valid target can still obtain a context;that success makes no claim
 about whole Piece health. It also supplies no stop-reference conservation,original ease-root/value
 evaluation,physical correspondence,current mutation authority or atomic command effect. Actual
-authored stop rows and ordered child views follow as separately owned implementation slices.
+authored stop rows are available below;ordered child views follow in their own implementation slice.
 
 Ten actual cross-crate Design cases cover the successful and refusing paths above,including exact
 borrowed object identities,unused registry data,N0 missing copies,identity-range quota1 versus
 required peak2,touching self-seams,later anchors and original numeric sources. Privacy/lifetime and
 public API doctests pass. Component and whole paired acceptance retain their later task owners.
+
+## Derive actual authored membership rows
+
+Call `context.derive_stop_memberships()` after bounded current validation. This stage needs no host
+trait or new point/range query. It borrows the exact current context,actual target stop references,
+named physical copies and already validated semantic evidence. It compares each current point
+against the named side's two cached closed paired interval coverages. The original N reservation
+guards each row before append. No inverse,narrowed source coordinate,value evaluation,new semantic
+identity or extra lookup collection is introduced.
+
+```rust
+use sc_core::command::{CommandStopCurrentContext,CommandStopMemberships,
+    CommandStopMembershipError};
+
+fn memberships<'a,H>(context:&'a CommandStopCurrentContext<'a,H>)
+    ->Result<CommandStopMemberships<'a,H>,CommandStopMembershipError>
+{
+    context.derive_stop_memberships()
+}
+```
+
+The private result's `context()` returns that actual source borrow. Its `rows()` have unchanged
+authored order and exactly one row per actual target stop. Each row retains `ordinal()`,`stop()`,
+`copy()`,`landmark()` and `membership()`. The stop getter lends the original side/landmark pair;
+the copy getter lends the exact physical copy;the landmark view lends the original Notch or Turn,
+its held query resolution and current point. No position/kind/ID sorting changes authored order.
+The semantic object's profile/geometric obligations stay visible in that original object.
+
+Membership is First,Second or Both in A pair order. `includes_first()` and `includes_second()`
+provide the two explicit predicates. At a closed cut,Both preserves the same semantic identity in
+both children. Reflection does not complement a coordinate. Two side tags of one semantic object
+remain two separate authored rows,each with its own named physical copy. Distinct reflected copies
+of one Piece and a touching same-copy self-seam retain their different material-domain meanings.
+
+### Shared current boundaries do not prove a unique original position
+
+The existing closed current interval rule also applies after noninjective topology mappings. For
+example,split the original edge at1/2,reverse the second fragment and merge both with equal lengths.
+Its original1/2 and original1 both reach the same current1/2,with Original and Reversed mappings.
+With an original command cut at3/4,the first child's current coverage includes[0,1/2] and[3/4,1];
+the second includes[1/2,3/4]. A real later anchor at current1/2 therefore receives Both even though
+it differs from the requested cut's current3/4. Arbitrarily selecting one original would change
+that result. The native case independently invokes the inverse API and retains both exact origins;
+the membership row keeps the actual held/current anchor without selecting either.
+
+This is current membership evidence. Original-notch ease queries separately require a unique
+original context and refuse actual ambiguity. Membership success never overrides that requirement
+or supplies physical correspondence. The actual split/reverse/merge case and these boundaries are
+tracked by the membership leaf and the later paired acceptance owner.
+
+### Stop-reference refusal remains distinct from context validation
+
+Every referenced landmark must exist in the complete registry and belong to the actual named
+copy's Piece. Its current point must lie in at least one paired interval on that side. A registry
+entry can be individually valid on another Piece or elsewhere on the same Piece while the held
+target's stop reference is invalid. Such references refuse with the original MissingLandmark or
+StopOutsideSide SewingError,actual consuming target,authored ordinal and side/landmark pair.
+The standard error source borrows that concrete original error. A row-bound refusal retains actual
+retained/requested/limit values. No accepted prefix escapes,including when a later row fails after
+an earlier valid stop. Upstream point choices,repairs and numeric causes remain current-context
+refusals;this stage cannot replace them with membership success.
+
+An N0 retained target yields an empty row list even when its full original ease root has two stops.
+The original list is never backfilled. Five focused actual Design cases compare all32 frozen
+independent membership rows with four shared-cut controls,both semantic kinds,authored Turn before
+Notch order and later anchors. They also cover missing/wrong-Piece/outside-side refusals after a
+valid prefix,reflected copies,touching self-seams,shared side tags and the two-origin case above.
+Privacy/lifetime and public API doctests pass. Ordered borrowed child views and their actual caller
+join remain next;component and whole paired/physical/authority/effect verification retain owners.

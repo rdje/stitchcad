@@ -15,7 +15,12 @@ pub use current::{
     CommandStopContextPopulation, CommandStopContextRange, CommandStopCurrentContext,
     CommandStopLandmarkEvidence, CommandStopPiecePortion,
 };
+mod membership;
 mod ownership;
+pub use membership::{
+    CommandStopMembership, CommandStopMembershipError, CommandStopMembershipIssue,
+    CommandStopMemberships, CommandStopPairMembership,
+};
 pub use ownership::{
     CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits,
 };

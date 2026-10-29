@@ -3,14 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0532 — validate bounded actual current stop context
+## STITCHCAD-G1-0533 — derive actual authored closed stop memberships
 
-- Build private borrowed complete C/P/M indexes and retain all Piece live/repair portions with original query ordinals. Validate actual copies,complete semantic registry,six target points,whole range ownership/self-copy overlap and four A-ordered paired coverages under the
-  admitted limits. No legacy resolver or numeric kernel change.
-- Actual Design10/core+test Clippy/fmt/docs2+1 pass. Choices survive rejoin;N0 copy/range quota,lost and numeric interiors,unused numeric Turn,retained unrelated repairs,later anchors,actual pointers and touching self-seams are covered. Original numeric errors remain standard
-  sources;no partial context or state mutation.
-- Whole0531 retained690/three exact Git spans;book93/237/1590/2765,glossary0/map/retention1144 pass. LIVE/README unchanged29 suites/G1 6/18. Actual authored stop rows next,then ordered views/integration;physical/authority/aggregate effects/full and hosted verification remain
-  owned.
+- Borrow complete actual authored stop rows from the exact bounded current context. Preserve original ordinal/side/physical copy/semantic object and every closed First/Second/Both current membership under original N reservation. No queries,original narrowing,value reads,new
+  semantic objects or partial accepted prefix.
+- Actual Design5,32-row independent oracle,privacy/API docs2+1,strict core/test Clippy and fmt pass. Cover shared cuts,later anchors,N0 original-stop separation,authored order,reflected/touching copies,two side tags and original errors after a valid prefix. Actual inverse
+  confirms two-origin current sharing away from cut without choosing an original.
+- Whole0532 retained691/three exact Git spans;book93/242/1590/2768,glossary0/map/retention1145 pass. LIVE/README unchanged29 suites/G1 6/18. Ordered child views/actual caller integration next;physical/authority/aggregate effects/full and hosted verification retain owners.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

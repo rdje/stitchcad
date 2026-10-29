@@ -1,4 +1,6 @@
 //! Actual bounded local current context over real owned cross-crate Design inputs.
+#[path = "stop_partition_membership.rs"]
+mod stop_partition_membership;
 use super::{
     at, command_model_limits, command_request, command_stop_limits, command_weighted_state,
     expanded_ownership_state, id, ownership_limits, DesignInputs, DesignSewing,

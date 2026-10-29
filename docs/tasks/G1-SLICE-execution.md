@@ -351,64 +351,63 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0530 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part689.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.3`
-  Status: `in_progress`
-  Goal: bounded actual current pair-range coverage and unique semantic point membership;closed
-  endpoints,all repair/choice/numeric/refusal evidence and full declared frame semantics survive.
-  Children .1 actual ownership workspace admission before queries;.2 bounded complete registry/
-  Piece ownership and actual target/cut/range context;.3 actual ordered stop membership rows.
+  Status: `done`
+  Goal:0531–0533 ownership admission,bounded complete actual current context and authored closed
+  stop membership rows implemented with focused checks. All original choice/repair/numeric evidence
+  survives;current membership selects no original preimage. Ordered views/caller join remain .4;
+  deferred component and full paired/physical/authority/effect acceptance retain their owners.
 - ID: `G1-SLICE.6.5.3.2.3.3.3.1`
   Status: `done`
   Goal:0531 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part690.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.3.2`
   Status: `done`
-  Goal:0532 bounded complete actual registry/Piece ownership and target/cut/four-pair-range
-  context after both input admissions;local immutable evidence only,actual stop rows remain .3.
-  - [x] REPRODUCE / ISSUE: 0532 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_context →10 passed/183 filtered,rc=0. Actual split choices survive rejoin;actual
-    lost or numerically uncomputable internal intervals refuse despite surviving target points.
-    Unused semantic entries and N0 targets still need current validation after metadata admission.
-  - [x] ROOT CAUSE: 0532 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_context →10 passed,rc=0. Existing bounded unique-point and range-coverage ports
-    express distinct obligations;endpoint/cut uniqueness cannot prove whole interval coverage.
-    Actual immutable DesignStructure already checks CutPlan/Piece metadata at birth. Rebuilding
-    that plan would clone outside C+P indexes;use actual objects and recheck held graph references.
-    Complete current registry and Piece live/repair caches must precede local target evidence.
-  - [x] FIX: 0532 cargo test -p sc-core --doc CommandStopCurrentContext →2 privacy/lifetime
-    cases passed,rc=0;--doc validate_current_context →1 API case passed,rc=0. Private borrowed
-    context indexes actual C/P/M,guards appends/inserts,moves every Piece live/repair portion through
-    a closed crate-private consuming port and sorts in place with original provenance tie keys.
-    Named A/B copies precede queries;all semantic marks precede fixed6 target points,full target
-    ownership/self-copy overlap and four A-ordered paired coverages. Release temporary full-side
-    evidence before four pair caches. Original quotas/choices/repairs/numeric causes survive;closed
-    numeric accessors borrow actual stored errors. No mapping kernel,current callback or value read.
-  - [x] ADDRESSED: 0532 cargo test -p sc-measure --test design_inputs_contract
-    command_stop_context →10 passed/183 filtered,rc=0. Exact actual state/token/copy/Piece/semantic
-    pointers/counts/limits and directional pair order remain inspectable. Unused Turn/unused Piece
-    validation,range peak1 refusal and N0 missing-copy priority pass. Direct cut/retained endpoint
-    choices persist with/without rejoin. Lost interior retains3 portions;actual numeric unused Turn
-    and internal range retain original UnitError sources. All six target points in numeric-range
-    control are unique. Unrelated unused Piece repair remains cached with held edge/original index1
-    while valid local target succeeds. Later actual local1/MAX anchor on first-third fragment needs
-    no narrowed original Param. Touching same-copy ranges pass for Same and Opposite. No mutation.
-  - [x] NO REGRESSION: 0532 cargo clippy -p sc-core --lib -- -D warnings and cargo clippy
-    -p sc-measure --test design_inputs_contract -- -D warnings →pass,rc=0;cargo fmt --all --check
-    →pass,rc=0. Native tools use local_environment.py. mdbook build docs/book and positive publication
-    check →93 chapters/237 API rows/1590 source links/2765 rendered links,rc=0. Glossary census
-    →310 terms/9 parts/158 tokens/0 failures,rc=0;knowledge-map check →pass,rc=0. Receipt690
-    →3 exact Git spans,rc=0;retention →1144 logical/49 working/64286 decodedL/4985568 decodedB/
-    2562905 residentB,rc=0. Stop component .3.3.acceptance and paired .6.5.3.2.acceptance own broader
-    checks after implementation. Initial test spelling/lint issues corrected before final checks.
-  - [x] LOCKSTEP: 0532 eight public API routes/current-context chapter/source decision/task/index/
-    D301/MEMORY/DEV/CHANGE align. Whole0531 retained690/3 exact Git spans. LIVE/README reviewed
-    unchanged29 suites/G1 6/18. Next .3.3.3.3 actual authored stop rows,then .3.3.4 ordered views/
-    actual Design integration. Local context is not whole Piece/Design/ease-root/formula/Profile/
-    physical/current authority/aggregate runtime/effect readiness. No legacy choice trees,synthetic
-    graph or original-coordinate narrowing. Consume authority/commit terminals before dependent work.
-    promotion: declined (adoption of indexed actual schema/resource/current contracts;no new physical or export assumption).
+  Goal:0532 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part691.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.3.3`
-  Status: `pending`
-  Goal: derive actual stop rows/current points/closed paired memberships in authored order from
-  validated immutable context. Preserve side/copy/kind/source/error evidence;no partial accepted rows.
+  Status: `done`
+  Goal:0533 actual complete authored stop rows over the exact bounded current context;retain every
+  closed current membership,physical copy,semantic object and held/current evidence without queries.
+  - [x] REPRODUCE / ISSUE: 0533 cargo test -p sc-measure --test design_inputs_contract
+    command_stop_memberships →5 passed/193 filtered,rc=0. A valid complete registry/target context
+    can coexist with held missing/wrong-Piece/outside-side stop references. Closed shared boundaries
+    require both memberships;target N0 cannot inherit the full original ease-root stop list.
+  - [x] ROOT CAUSE: 0533 cargo test -p sc-measure --test design_inputs_contract
+    command_stop_memberships →5 passed,rc=0. Actual SewingGraph range_contains_point uses closed
+    current interval membership and explicit side/Piece ownership. A split/reverse/merge yields
+    current1/2 with original1/2 Original and1 Reversed. Original cut3/4 has current3/4 while child
+    coverage shares current1/2. The independent existing inverse API confirms both originals;the
+    actual membership rule must preserve Both without selecting an original or claiming physical
+    correspondence. Separate original-notch quantity contexts still require unique originals.
+  - [x] FIX: 0533 cargo test -p sc-core --doc CommandStopMemberships →2 privacy/lifetime cases
+    passed,rc=0;--doc derive_stop_memberships →1 public API case passed,rc=0. Private complete
+    result borrows exact current context;one row per authored target reference lends original stop,
+    ordinal,actual side copy and cached semantic evidence. Piece identity precedes current closed
+    pair tests;First/Second/Both retain all memberships in A order. Checked append uses original N
+    cap;no lookup collection,query,inverse,narrowing,value provider,root clone or new mark identity.
+  - [x] ADDRESSED: 0533 cargo test -p sc-measure --test design_inputs_contract
+    command_stop_memberships →5 passed/193 filtered,rc=0. All32 independent frozen rows/four
+    shared-cut controls match,including A/B,Same/Opposite,both semantic kinds and wide later anchors.
+    Actual Turn-before-Notch order,stop/mark/copy/context pointers and unchanged state pass. N0
+    returns no rows despite original2 stops. Missing/wrong-Piece/outside-side at ordinal1 after a
+    valid B row retain actual target/stop and original SewingError standard-source pointer;no
+    accepted prefix. Four reflected/touching copy/direction scenarios preserve two side tags on one
+    actual semantic object. Two-origin current-boundary case preserves Both away from requested
+    cut. Diagnostic inverse initially refused bits1000 with required1270;its fixture now explicitly
+    admits exact1270 for J4,without widening stop/current limits or altering an arithmetic kernel.
+  - [x] NO REGRESSION: 0533 cargo clippy -p sc-core --lib -- -D warnings and cargo clippy
+    -p sc-measure --test design_inputs_contract -- -D warnings →pass,rc=0;cargo fmt --all --check
+    →pass,rc=0. Native tools use local_environment.py. stop_partition_oracle.py --check →32 exact
+    rows/four shared-cut controls/B orientation/65-bit later-original control,rc=0. mdbook build
+    docs/book and positive publication check →93 chapters/242 API rows/1590 source links/2768 rendered
+    links,rc=0. Glossary →310/9/158/0 failures,rc=0;knowledge-map →pass,rc=0. Receipt691 →3 exact Git
+    spans,rc=0;retention →1145 logical/50 working/64360 decodedL/4993063 decodedB/2570400 residentB,
+    rc=0. Component .3.3.acceptance and whole paired .6.5.3.2.acceptance retain broader verification.
+  - [x] LOCKSTEP: 0533 five API routes/actual membership chapter/two-origin example/source decision/
+    parent/index/D301/MEMORY/DEV/CHANGE align. Whole0532 retained691/three exact Git spans. LIVE/
+    README reviewed unchanged29 suites/G1 6/18. Finding surfaced with actual native/inverse root
+    evidence and retained here/book;current sharing is not a defect or a unique-original/physical
+    certificate. Ordered child views/actual Design integration .3.3.4 next;whole ease-root/formula/
+    Profile/geometry/current authority/aggregate effects/full proof remain separately owned.
+    promotion: declined (adoption of indexed closed current membership and separate inverse contracts;actual combined case retained in book/task).
 - ID: `G1-SLICE.6.5.3.2.3.3.4`
   Status: `pending`
   Goal: ordered borrowed child stop partitions from actual admitted current evidence,with exact
