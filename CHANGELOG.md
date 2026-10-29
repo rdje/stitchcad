@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0573 — prepare bounded complete garment seam candidates
+## STITCHCAD-G1-0574 — close deferred local lineage and candidate checkpoint
 
-- Exact garment owner,complete reservation/current source and cross-family child-ID guards precede clones. Preserve all held components/Gather IDs and current repair;final owned/resource checks pass. Original107/888B/0bits,reserve113,candidate110/888/0;112 refuses110+3,113 admits.
-- Native garment4/graph5/doc4/scoped lint/fmt pass;actual reserve owns old/new history IDs,no authority reads. Book94/260/1597/2793/glossary310/9/158/0,exact golden/example and receipt731/four Git spans pass. G1 6/18/G0 human unapproved;deferred lineage checkpoint next. Full paired effects remain owned.
+- After implementation,47 direct history/graph/Gather/Design/candidate/source native cases and21 doctests pass. Rust exact0573,prior scoped lint/fmt applies;no new runtime/full CI/platform/mutation claim. Scoped partition/lineage components close;actual paired handler and whole acceptance stay open.
+- Book94/260/1598/2794/glossary310/9/158/0/receipt732 four Git spans pass. G1 6/18/G0 human unapproved;real provider/physical and trusted atomic tasks explicit. Resume .5e.2.4 bounded actual checked-node/source-order execution before effects. D334 P2/D156/D223/PLANNING.5 owned;full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

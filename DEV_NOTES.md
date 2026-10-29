@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — prepare bounded complete garment seam candidates
+## _(2026-10-29 UTC)_ — close deferred local lineage and candidate checkpoint
 
-0573 actual garment owner precedes full original+graph reservation,current sources and child namespace census. Clone unchanged components once,move prepared graph,use owning constructors,compare context and measure final demand. Old Gather/reference objects stay exact;current MissingSpan remains repair evidence.
-Native garment4/graph5/doc4/scoped lint/fmt pass. Original107/888B/0bits,reserve113,candidate110/888/0;112 refuses110+3,113 retries. Actual private reserve guard rejects old/new historical IDs,zero authority snapshots. Initial large embedded graph error lint101 fixed by boxed original cause;no suppression.
-Published107/888/0 golden and compiled book example exact;affected native one/lint/fmt rechecked. Book94/260/1597/2793/glossary310/9/158/0 pass. [Whole0572 Gather/D336 proof](docs/history/stitchcad-devnotes-part731.md) retains scope/lesson/changelog/ledger,four Git spans. G1 6/18;G0 human unapproved.
-Indexed exhaustive accounting/ownership/held damage/reserve rules apply;promotion declined. Next deferred .3.4.acceptance local checkpoint after completed preparation. No private cursor/persistent issuance,current repair,quantity/physical/provider/authority/atomic effect proof. D334 P2/D156/D223/PLANNING.5 owned.
+0574 after completed implementation:history9/graph5/Gather18/actual Design history2/candidates9/source joins4 pass,47 native. History5/graph4/Gather4/candidate8 doctests pass,21 total. Rust stays exact0573;its scoped lint/fmt applies. No runtime code,full CI/platform or broad mutation verdict added.
+Scoped partition/lineage components close;actual handler remains pending real quantitative/physical and trusted publication work. Future .2.4 provider joins/.2.5 atomic effects/repair/reserve/undo/replay owned. Next .5e.2.4 actual checked-node/source-order expression execution;no unavailable-family placeholder outcome.
+Book94/260/1598/2794/glossary310/9/158/0 pass. [Whole0573 ownership/resource proof](docs/history/stitchcad-devnotes-part732.md) retains scope/lesson/changelog/ledger,four Git spans. LIVE G1 6/18/G0 human unapproved;checkpoint evidence updated. Existing full local/hosted79bd6f6a stays SHA-scoped.
+Scheduled verification/real-provider rules apply;promotion declined. README unchanged. D334 P2 after paired activity/before G0 closure,D156/D223/PLANNING.5 remain owned. Full PNT continues through actual evaluator dependencies;local candidates/identity evidence never imply physical readiness or command authority.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

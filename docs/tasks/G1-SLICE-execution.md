@@ -143,9 +143,11 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0486 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part641md).
 - ID: `G1-SLICE.6.5.3.2.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact paired partition obligations from native graph/reference/amount contracts before effects.
   Children .1 direction interval pairs;.2 conserved ease sources;.3 semantic stop partition;.4 span lineage.
+  Scoped completion0574:all partition/lineage components and deferred local checkpoints pass.
+  Actual quantitative/physical joins and trusted effects remain .2.4/.2.5 before whole acceptance.
 - ID: `G1-SLICE.6.5.3.2.3.1`
   Status: `done`
   Goal:0487 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part642md).
@@ -383,7 +385,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0566 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part725md).
 - ID: `G1-SLICE.6.5.3.2.3.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: canonical retired-parent/new-child span lineage with actual identity ownership and references;
   no identity reuse or silent old-target reassignment;integrate current-model validation before effects.
   Requirements read:ROADMAP4.1/4.4,ontology1/1.1,entity-identity decision and command-seam-splits.
@@ -391,7 +393,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   held-span lookup reviewed. History metadata cannot grant current graph/physical/command authority.
   Children .1 bounded immutable birth/split history;.2 actual graph/owner/resource integration;
   .3 actual paired candidate/history joins and explicit held reference repair evidence;.acceptance
-  scoped checkpoint after implementation. Real dependencies/effects/full paired proof stay .acceptance.
+  scoped checkpoint after implementation. Real dependencies/effects/full paired proof stay G1-SLICE.6.5.3.2.acceptance.
+  Scoped completion0574:all partition/lineage components and deferred local checkpoints pass.
+  Actual quantitative/physical joins and trusted effects remain .2.4/.2.5 before whole acceptance.
 - ID: `G1-SLICE.6.5.3.2.3.4.1`
   Status: `done`
   Goal:0567 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part726md).
@@ -436,56 +440,55 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0572 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part731.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3.2`
   Status: `done`
-  Goal: join the actual complete garment/source/graph candidate under explicit clone/output bounds;
-  preserve held constructions/references and complete namespaces,including retired history IDs.
-  Actual current validation must retain unresolved Gather evidence before production effects.
-  Trusted reserve stages remain the sole production allocator;tentative graph IDs confer no
-  reserve/global-persistence/physical/provider/authority/publication capability.
-  Design:consume actual graph admission plus exact original garment owner. Charge complete
-  original garment and the same conservative graph reservation before whole-current validation,
-  full namespace census or any garment-component clone. Check proposed children in A order
-  against all original owned IDs. Build through existing owning constructors,fieldwise cloning
-  unchanged components once while moving the prepared graph;verify clone context and final
-  actual resources under the original reservation. Keep old Gather/reference objects unchanged.
-  Return an inspectable owned candidate,not current/effect authority;fresh validate_current must
-  retain actual missing retired Gather cause. Prove actual reserve constructor rejects every
-  retained old/new historical ID;do not expose/advance private cursors or invent a bus handler.
-  Relevant garment ownership/current/resources/source-host contracts,actual full fixture and
-  trusted reserve integration read. Own focused actual cross-crate cases,compiler/lint/book,
-  live pointers and commit;physical/provider/effect and later combined acceptance remain owned.
-  Completion0573:complete actual garment candidate ownership/resource preparation implemented.
-  - [x] ROOT CAUSE (WHY + WHERE): git show HEAD:crates/sc-core/src/command/seam_candidate/build.rs
-    plus rg pub fn build →returns SewingGraph only,rc=0. Cross-family IDs and whole garment
-    clone/current sources require separate admission. Baseline actual whole_current_source_success
-    →one pass,rc=0. Complete original fixture and published exhaustive accounting contracts read.
-  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-measure --test
-    design_inputs_contract seam_garment_candidate →four pass,rc=0. Exact original owner,full
-    original current source,pre-copy whole resource envelope and actual Pocket collision guards
-    pass. All original component/input/landmark content preserved;owned constructors admit new
-    history once. Original107 entries/888 textB/0 counterbits;reserve113,candidate110/888/0.
-    Limit112 refuses110+3 at actual field/owner;113 retries. Original Gather/IDs stay exact;
-    fresh candidate current validation returns actual Gather MissingSpan,not readiness. Already
-    damaged original garment refuses its complete current cause before more component clones.
-    Actual private reserve constructor rejects old parent/new children with exact history owner
-    positions;zero authority snapshots. No private cursor consumption,issuance or atomic proof.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc command::seam_candidate::garment →four
-    pass,rc=0. Original graph five pass after shared reservation factoring,rc=0;both strict core
-    and measure library/design-input Clippy plus fmt --all --check pass,rc=0. Initial lint101
-    caught128B embedded graph cause;box it,preserve concrete source chain,no suppression. Initial
-    unused fixture import now asserts exact current Gather cause. Exact107/888/0 golden added
-    for published instance;affected native one/scoped lint/fmt rerun pass,rc=0. Compiled book
-    example byte-exact;book94/260/1597/2793/glossary310/9/158/0 pass,rc=0. Receipt731/four exact
-    Git spans and current retention1185/29/2571959 residentB pass,rc=0. Full paired proof deferred.
-  - [x] LOCKSTEP: complete garment/lineage/split book/two API rows,MEMORY/DEV/CHANGE/LIVE/
-    index/D301/footer aligned;whole0572 scope/lesson/changelog/ledger retained731. G1 still6/18,
-    G0 human unapproved;README reviewed unchanged. D334 P2/D156/D223/PLANNING.5 stay owned.
-    Scoped .3.4.3/.3.3 preparation complete;next deferred .3.4.acceptance checkpoint. Actual
-    provider/physical/current repair/fresh authority/operation/runtime/atomic effects remain owned.
-    promotion: declined (application of indexed exhaustive model accounting,complete namespace ownership,immutable held damage and private trusted identity reserve boundaries;no new cross-cutting rule).
+  Goal:0573 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part732.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.acceptance`
-  Status: `pending`
+  Status: `done`
   Goal: deferred scoped history/graph/actual candidate checkpoint after .1–.3;whole paired physical/
   dependency/authority/effect/undo/replay/cancel/quota/mutation/release proof stays separately owned.
+  Activated only after0573 completed all scoped .1–.3 implementations. Verify actual local
+  history9,graph/history5,Gather18,Design history2,graph/garment candidates9 and source joins4
+  (47 native cases);history5/graph4/Gather4/candidate8 doctests (21). Keep Rust bytes exact to
+  committed0573;reuse its passing scoped strict lint/fmt unless source changes require rerun.
+  No full CI,global audit or mutation campaign here. Full paired acceptance remains .2.acceptance.
+  Existing book/API examples/ownership/resource/contracts and source cohorts reviewed. Then
+  close this local checkpoint,parent .3.4,and select the next actual dependency-aligned slice.
+  Completion0574:deferred local lineage/candidate checkpoint passes after implementation.
+  - [x] ROOT CAUSE (WHY + WHERE): task children .1–.3 all complete through0573;their previously
+    deferred checkpoint now activates under verification doctrine. git diff --exit-code HEAD
+    -- crates/ →Rust bytes exact to f6b0a0aa,rc=0;no new runtime/lint-policy edit or broad audit.
+  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
+    seam_span_history_contract →9;sewing_contract span_history →5;gather_contract →18. Actual
+    sc-measure design_inputs_contract span_history →2;seam_graph_candidate →9;command_stop_source_binding
+    →4. All47 direct native cases pass,rc=0. Full source/pointer/nonreuse/nested/cut-stop/global
+    namespace/resource/current-Gather/reserve guards pass;independent closed chain/120 map
+    comparison remain inside the actual primitive cases,not separate external-ID certification.
+  - [x] NO REGRESSION: core --doc ontology::seam_span_history →5;ontology::sewing →4;
+    ontology::gather →4;command::seam_candidate →8. All21 actual doctests pass,rc=0. All Rust
+    remains byte-exact to passing0573 scoped core/measure strict lint/fmt,rc=0. Positive book
+    →94/260/1598/2794 and glossary310/9/158/0 pass,rc=0. Receipt732 →four exact Git spans,rc=0.
+    No full CI/platform/mutation verdict claimed;whole paired acceptance remains .2.acceptance.
+  - [x] LOCKSTEP: lineage book/MEMORY/DEV/CHANGE/LIVE/index/D301/footer aligned;whole0573
+    scope/lesson/changelog/ledger retained732. Scoped .3.4 and partition components .3 closed;
+    root paired handler stays in_progress. Explicit future .4 real provider/physical joins and
+    .5 trusted atomic effects retain all remaining implementation before whole acceptance.
+    Next existing .5e.2.4 actual checked-node sourced expression execution;no unavailable math
+    family or supplied annotation may become a canonical result/refusal. G1 still6/18/G0 human
+    unapproved;D334 P2/D156/D223/PLANNING.5 owned. README reviewed unchanged. Full PNT continues.
+    promotion: declined (scheduled post-implementation component checkpoint under existing verification and real-provider/no-placeholder doctrine;no new cross-cutting rule).
+- ID: `G1-SLICE.6.5.3.2.4`
+  Status: `pending`
+  Goal: actual formula/Profile/geometry quantitative and physical correspondence joins after the
+  real provider implementations. Consume actual evaluated original/child amounts and geometry;
+  no inferred physical equality from normalized cuts,no fake provider or unavailable family
+  published as a canonical language refusal/result. G1 .5e.2/.5e.4/.5f.3b,G4 .1/resource/.3
+  and G2/G3 remain the implementation dependencies. Resume .5e.2.4 first after local .3 closure.
+- ID: `G1-SLICE.6.5.3.2.5`
+  Status: `pending`
+  Goal: actual trusted private reserve stage,fresh authority/revision,whole operation/retained
+  resources and repair policy before paired preview/publication. Retain old semantic references
+  and explicit repairs;never silently choose a child. Publish model/reserve/audit/history atomically;
+  undo/replay never rewinds issued identities. Integrate real dependency results from .4 and
+  actual progress/cancellation/quota/group boundaries;only then activate whole .2.acceptance.
 - ID: `G1-SLICE.6.5.3.2.acceptance`
   Status: `pending`
   Goal: after paired feature implementation,combined actual split/reference/ease/stop/lineage and bus undo/replay/cancel/quota acceptance. Include refactored rounding compiled5 signed/9 unsigned faults plus extra release remainder fault,also run by required pre-push probes;no broad suites between implementation slices.

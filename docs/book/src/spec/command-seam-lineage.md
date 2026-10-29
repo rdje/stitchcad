@@ -438,6 +438,15 @@ refusal,unchanged originals and exact-boundary retry. Four doctests verify API c
 admission,borrowed source lifetime and no default policy;four existing source-join cases pass.
 
 Held Gather inspection and complete garment ownership/resource preparation are implemented.
-The deferred lineage component checkpoint follows. No history input executes a command or
-retargets a Gather. Real source/provider/physical/authority/aggregate-effect checks and whole paired
-command acceptance retain their existing owners.
+The deferred lineage component checkpoint is complete after these implementation slices. It
+passes47 direct native cases:history9,actual graph/history5,Gather18,actual Design history2,
+graph/garment candidates9 and captured source joins4. Its21 doctests cover history5,graph4,
+Gather4 and candidates8,including owner/privacy/lifetime boundaries and compiled API examples.
+The Rust sources remain exact to the completed0573 implementation;its scoped strict lint and
+formatting still apply. This checkpoint changes no runtime code and runs no broad CI/mutation audit.
+
+Actual paired effects still require real formula/Profile/geometry/physical providers,current
+repair policy,fresh authority,aggregate runtime admission and atomic model/reserve/history
+publication with undo/replay/cancellation. No history input executes a command or retargets a
+Gather. Formula source-order execution resumes under the [checked runtime plan](../annexes/formula-execution-plan.md).
+The whole paired command acceptance remains separately owned until those dependencies exist.
