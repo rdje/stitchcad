@@ -29,7 +29,7 @@ pub fn charge_sewing_graph_resources(
     graph: &SewingGraph,
     sink: &mut dyn DesignResourceSink,
 ) -> Result<(), DesignResourceLimitError> {
-    let (graph_id, spans, sources) = graph.resource_spans();
+    let (graph_id, spans, sources, history) = graph.resource_spans();
     sink.charge_entries(spans.len(), location("sewing.spans", Some(graph_id), None))?;
     for (index, span) in spans.iter().enumerate() {
         let SeamSpanDefinition {
@@ -70,6 +70,15 @@ pub fn charge_sewing_graph_resources(
             stops.len(),
             location("sewing.ease_sources.stops", Some(id), Some(index)),
         )?;
+    }
+    if let Some(history) = history {
+        let (entries, identities) = history.resource_parts();
+        sink.charge_entries(
+            entries.len(),
+            location("sewing.span_history.entries", Some(graph_id), None),
+        )?;
+        fixed_slice(entries);
+        fixed_value(&identities);
     }
     Ok(())
 }

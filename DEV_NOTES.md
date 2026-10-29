@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — retain ordered span identity births and retirements
+## _(2026-10-29 UTC)_ — bind span history to actual graph ownership
 
-0567 implements bounded immutable Root/Split history:complete entry/issued count before map allocation,parent live before child nonreuse,all retired IDs retained. Fixed Debug and allocation-free state lookup lend immediate children from the actual record without descendant selection. No global/current graph authority.
-Native5 covers exact nested pointer/order/full128-bit/empty/quota/refusal causes and independent chain depths1/2/17/32/257. Doctest4/scoped strict lint/fmt pass;initial export order corrected. Book example exactly matches compiled snippet. Glossary310/9/158/0 and positive book94/253/1593/2784 pass.
-Initial publication guard named missing topic-index entry;added it and passed with checker unchanged. Whole0566/prior ledger retained725/four spans;book/index/five API rows/live docs align. LIVE G1 6/18/G0 human unapproved;old full/hosted79bd6f6a verdict scoped. D334 P2/D156/D223/PLANNING.5 owned.
-[Whole0566 stop proof](docs/history/stitchcad-devnotes-part725.md). Promotion declined:indexed immutable identity/explicit admission/currentness boundaries. Next actual graph/Design ownership/resource integration,then paired candidate/held reference joins;physical/authority/effects/full proof stay owned. Full PNT.
+0568 binds history to actual graph leaves/retired source ancestry;lookup lends exact live members or immediate retirement records. Current namespaces and Design own every issued ID once,including retired intermediates. Exhaustive resource views charge each history vector on every snapshot;legacy None stays exact.
+D335 native equality red101:identical Root7 under1/1 versus8/16 differed because limits were retained. Remove runtime policy/getter from owned data,keep explicit complete admission. Local/actual graph/Design equality now passes. Private forge doctest matches actual fields;no unrelated-field masking.
+Native history6/graph5/Design2/legacy resource4/stop29 and doctest8 pass;scoped strict lint/fmt pass after fixture clone/unwrap/export fixes. Book94/255/1595/2787,glossary310/9/158/0 and receipt726/four spans pass. LIVE G1 6/18/G0 human unapproved;D335 fixed,D334 P2/D156/D223/PLANNING.5 owned.
+[Whole0567 history proof](docs/history/stitchcad-devnotes-part726.md). Promotion declined:indexed canonical policy separation/ownership/resource contracts. Active64/64 requires window24 packing before more retirement,then candidate/reference joins .3.4.3. No physical/provider/authority/effect/full paired claim.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

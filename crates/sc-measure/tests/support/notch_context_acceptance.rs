@@ -1,4 +1,6 @@
 //! Actual owned Design integration for original-notch context; quantity/effect acceptance follows.
+#[path = "span_history.rs"]
+mod span_history;
 use super::{fixture, id, with_sewing_graph, DesignInputs, DesignSources, DesignStructure};
 use core::num::{NonZeroU64, NonZeroUsize};
 use sc_core::{

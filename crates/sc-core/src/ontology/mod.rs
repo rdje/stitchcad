@@ -150,8 +150,9 @@ pub use seam_span_history::{
 };
 pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,
-    SeamSideId, SeamSpan, SeamSpanDefinition, SewingError, SewingGraph, SewingGraphDefinition,
-    SewingLandmark, StopLandmark, TurnPoint, WeightIssue, WeightedEaseRegion,
+    SeamSideId, SeamSpan, SeamSpanDefinition, SeamSpanHistoryBindingError, SewingError,
+    SewingGraph, SewingGraphDefinition, SewingLandmark, SewingSpanLookup, StopLandmark, TurnPoint,
+    WeightIssue, WeightedEaseRegion,
 };
 
 pub use grain::{

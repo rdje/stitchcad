@@ -43,6 +43,13 @@ pub enum DesignSewingPosition {
         /// Zero-based original source inventory position.
         index: usize,
     },
+    /// Canonical history birth owns this live or retired span identity exactly once.
+    SpanHistory {
+        /// Original root or split birth record.
+        entry: usize,
+        /// None for an independent root, or original child slot0/1 in A order.
+        child: Option<usize>,
+    },
 }
 
 /// Original ownership/current-source refusal, without rewriting held sewing references.
@@ -181,7 +188,8 @@ impl<H: DesignReferenceHost> DesignSewing<H> {
     /// Complete current actual ownership positions, excluding referenced parameter/copy/anchor ids.
     #[must_use]
     pub fn identities(&self) -> Vec<(EntityId, DesignSewingPosition)> {
-        self.inputs()
+        let identities = self
+            .inputs()
             .identities()
             .into_iter()
             .map(|(id, position)| (id, DesignSewingPosition::Inputs(position)))
@@ -196,23 +204,32 @@ impl<H: DesignReferenceHost> DesignSewing<H> {
                     .map(|(index, landmark)| {
                         (landmark.id(), DesignSewingPosition::Landmark { index })
                     }),
-            )
-            .chain(
-                self.graph()
-                    .spans()
-                    .iter()
-                    .enumerate()
-                    .map(|(index, span)| (span.id(), DesignSewingPosition::Span { index })),
-            )
-            .chain(
-                self.graph()
-                    .ease_sources()
-                    .enumerate()
-                    .map(|(index, source)| {
-                        (source.span(), DesignSewingPosition::EaseSource { index })
-                    }),
-            )
-            .collect()
+            );
+        if let Some(history) = self.graph().span_history() {
+            identities
+                .chain(history.births().map(|(identity, entry, child)| {
+                    (identity, DesignSewingPosition::SpanHistory { entry, child })
+                }))
+                .collect()
+        } else {
+            identities
+                .chain(
+                    self.graph()
+                        .spans()
+                        .iter()
+                        .enumerate()
+                        .map(|(index, span)| (span.id(), DesignSewingPosition::Span { index })),
+                )
+                .chain(
+                    self.graph()
+                        .ease_sources()
+                        .enumerate()
+                        .map(|(index, source)| {
+                            (source.span(), DesignSewingPosition::EaseSource { index })
+                        }),
+                )
+                .collect()
+        }
     }
     /// Validate complete actual current root, every landmark and graph, and amount metadata.
     ///

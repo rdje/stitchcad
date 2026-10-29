@@ -1,19 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.4.2:bind bounded span history to actual SewingGraph and Design
-  identity/resource ownership. Reconcile original ease-source IDs with retired history owners
-  once;legacy held drafts remain inspectable without fabricated past splits. Read current graph/
-  source/Gather/resource paths again before changes;then candidate/reference joins .3.4.3.
-- History primitive .3.4.1 closes0567:immutable ordered Root/Split data,complete explicit entry/
-  issued-ID admission before map allocation;parent live and children fresh;old lookup keeps both
-  immediate children. Actual native5/doctest4/scoped lint/fmt pass;independent chains up to257.
-  Only local supplied metadata validated;no graph/global freshness/currentness/effect certificate.
-- Book94 chapters/253 scoped API rows/1593 source/2784 rendered links;glossary310/9/158/0 pass.
-  Whole0566/prior ledger retained725/four spans. Stop component0566 native31 complete;G1 6/18.
-  Full local/hosted79bd6f6a remains exact-SHA scoped. Full paired/physical/authority/effects and
-  formula/Profile/geometry dependencies remain owned;focused checks per slice. Full PNT continues.
-- Receipts:target/artifact_cleanup_audit/seam-20261029/verification-evidence. D334 P2 .15f after
-  current G1/before G0 closure;normal18/1,human unapproved. D156/D223/PLANNING.5 pending.
+- Next G1-SLICE.6.5.3.2.3.4.retention:active generation2 now64/64 slots,62 raw/two windows;
+  aggregate85/192. Pack window24 via published v3 authoring/transaction at new clean HEAD before
+  any more retirement. Preserve originals/source proofs;do not reuse old uninstalled fixtures.
+  Then actual paired candidate/history/reference joins .3.4.3;full PNT,focused checks per slice.
+- Graph/Design history .3.4.2 closes0568:actual live leaves and retired source ancestors bound;
+  explicit lookup/complete historical ownership/source aliases once/current namespace guards.
+  Exhaustive resource views charge actual history vector on every snapshot;legacy None unchanged.
+- D335 fixed:drop stored runtime limits,keep explicit admission inputs. Actual equality red101
+  then history6/graph5/Design2/resource4/stop29/doctest8 and scoped lint/fmt pass. No bus effect.
+  Book94/255/1595/2787,glossary310/9/158/0;whole0567/prior ledger retained726/four exact spans.
+- Old full local/hosted79bd6f6a stays exact-SHA scoped;proof in protected audit seam-20261029.
+  G1 6/18/G0 human unapproved;D334 P2 .15f after current G1/before G0 closure,D156/D223/
+  PLANNING.5 pending. Physical/provider/authority/effects/full paired proof remains owned.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

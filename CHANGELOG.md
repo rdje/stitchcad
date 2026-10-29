@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0567 — retain bounded span identity histories
+## STITCHCAD-G1-0568 — bind span history to actual graph ownership
 
-- Add immutable supplied Root/Split histories with explicit complete input/issued-ID limits,typed chronological refusals and borrowed live/retired lookup. Never reuse a retired ID or silently select a descendant. Native5/doctest4/scoped lint/fmt and independent chain expectations pass.
-- Book94/253/1593/2784 and glossary310/9/158/0 pass;five API rows/index/whole0566 record725 retained. G1 6/18/G0 human unapproved;D334 P2/D156/D223/PLANNING.5 owned. Next actual graph/Design owner/resource binding;global freshness,current sources,physical/effects and full paired proof remain pending.
+- Bind actual live leaves/retired source ancestry and explicit borrowed lookup;own every birth once through Design and charge each history vector per snapshot. Fix D335:runtime admission policy is not canonical identity content. History6/graph5/Design2/resource4/stop29/doc8,scoped lint/fmt pass.
+- Book94/255/1595/2787/glossary310/9/158/0 pass;whole0567 retained726/four spans. Active64/64 needs window24 packing before next candidate/reference work. G1 6/18/G0 human unapproved;D334 P2/D156/D223/PLANNING.5 owned. Physical/provider/authority/effect/full paired proof remains pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

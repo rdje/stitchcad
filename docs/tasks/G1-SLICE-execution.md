@@ -394,52 +394,78 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   scoped checkpoint after implementation. Real dependencies/effects/full paired proof stay .acceptance.
 - ID: `G1-SLICE.6.5.3.2.3.4.1`
   Status: `done`
-  Goal: bounded immutable ordered span identity history. Explicit Root births/Split(parent,two
-  A-ordered children);each ID born once,only a currently live parent may split. Retired lookup keeps
-  immediate children even after nested splits,never silently selects a live descendant. No allocator,
-  clock,geometry/value/current graph check or command capability;records are validated supplied data.
-  Explicit positive entry/issued-identity limits;count complete input before validation-map allocation.
-  Validate parent first,then children in authored order;preserve original entry/identity/first birth/
-  prior split in typed errors. Private immutable owner retains original entries;fixed Debug and
-  allocation-free local state lookup. Empty histories valid under explicit limits;no default policy.
-  Paths:crates/sc-core/src/ontology/seam_span_history.rs and mod.rs;focused public contract test,
-  command-seam-lineage book/SUMMARY/scoped API map and live/task docs. Focus nested/sibling states,
-  quota/refusal precedence/nonreuse plus independent chain identities;privacy/API doctests and scoped
-  lint/fmt. No broad CI or whole paired mutation campaign. Graph integration remains next .2.
-  Completion0567:bounded immutable supplied span birth/split history implemented.
-  - [x] ROOT CAUSE (WHY + WHERE): roadmap4.1/nonreuse and paired .3.4 require explicit old
-    parent/two-child identity history;actual SewingGraph live spans/retained-root ownership is
-    separate integration. Native seam_span_history_contract →5 actual cases establish supplied
-    ordered data/nonreuse/quota/state contracts,rc=0;no current graph or global issuance inferred.
-  - [x] ADDRESSED (verified): local_environment.py -- cargo test -p sc-core --test
-    seam_span_history_contract →5 pass/0 fail,rc=0. Exact nested record borrows/unrelated roots/
-    unknown/empty/full128-bit IDs,complete entry/issued quotas,parent/child/retired reuse priority
-    and independent chain depths1/2/17/32/257 preserve immediate children and sibling leaves.
-    All complete counts precede map allocation;private owner keeps original entries and explicit
-    limits;lookup allocates nothing and never silently returns a chosen live descendant.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc seam_span_history →four pass/0 fail,
-    rc=0:actual public example/private owner/no Default/borrow lifetime. Scoped cargo clippy
-    -p sc-core --lib --test seam_span_history_contract -- -D warnings and cargo fmt --all
-    -- --check pass,rc=0. Initial format check requested export order;corrected and final scoped
-    lint/format pass. Book example byte-exact to compiled doctest;actual glossary310/9/158/0 and
-    positive book94/253/1593/2784 pass,rc=0. Initial publication check named missing topic-index
-    entry;added it and positive check passed without changing checker rules. Broader graph/
-    physical/command/full paired verification remains deferred to its separate owners.
-  - [x] LOCKSTEP: new history book/SUMMARY/topic index/five scoped API rows and MEM/DEV/CHANGE/
-    LIVE/index/D301 align. Whole0566/prior ledger retained725/four Git spans. G1 6/18/human G0
-    unapproved remain;old full local/hosted79bd6f6a verdict stays exact-SHA scoped. Next actual
-    graph/Design owner/resource integration .3.4.2,then candidate/reference joins .3.4.3;
-    no graph installation,ID allocator,provider value,physical match or bus command effect.
-    Retention1179 and receipt725/four exact Git spans pass,rc=0. Live-doc proposal guards refused
-    MEMORY51 lines/DEV328-byte line before tracked writes;tightened to existing caps. No cap change.
-    promotion: declined (application of indexed immutable identity/nonreuse,explicit logical admission and metadata-versus-current-source boundaries;canonical APIs are retrievable in the book).
-
+  Goal:0567 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part726.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.2`
-  Status: `pending`
+  Status: `done`
   Goal: bind complete span history to actual SewingGraph and Design identity/resource ownership;
   reconcile retained original source IDs with canonical retired owners exactly once. Keep legacy held
   drafts inspectable without inventing historical splits. Admission/lookup must expose actual live/
   retired state and reject inconsistent graph/issued identities before candidate effects.
+  Scoped source recovery:actual sewing constructor/current validator,Design sewing/garment identity
+  walks and complete resource composition;only library graph constructor is sewing.rs,new private
+  graph resource view has one caller. Standard graph Clone must retain history. Gather keeps its
+  actual old target and existing current MissingSpan boundary;no automatic child transfer.
+  Implement optional private immutable history with pure identity binding to exact live graph leaves
+  and retired source roots;reject replacement,missing/retired live IDs,unrepresented history leaves,
+  graph-ID collisions and missing/live source roots. Actual graph lookup borrows exact live member
+  or exact immediate retirement children;legacy provenance alone supplies no invented split.
+  Include complete retired IDs in current graph external-namespace checks and Design ownership;
+  source/live aliases owned once in history birth order. Exhaustive resource views charge actual
+  history vector and fixed Copy fields on every snapshot;legacy None accounting unchanged.
+  Paths:ontology/sewing.rs and new sewing/history.rs,seam_span_history.rs private views,exports;
+  design/sewing_state.rs,design/resource/sewing.rs;focused core/actual Design/resource/native
+  privacy tests,book lineage/resource sections/scoped map and task/live docs. No bus effect/new ID
+  generator or current physical/formula/Profile certificate. Scoped lint/fmt/tests;full paired
+  verification stays deferred. Actual pressure63/64 active,84/192 aggregate;one record726 fits,
+  then pack before any further retirement. Never confuse aggregate and active slot counts.
+  CLAIM CLARIFICATION0567:commit body before-allocation wording means complete entry/issued-count
+  admission;chronological validation then uses the bounded map. Source/book already say this exactly.
+  D335,P1 owned/fix now:history stores selected runtime admission limits;derived Eq would make
+  canonical graph equality depend on caller policy after attachment. Reproduce with identical
+  valid Root records under1/1 versus8/16 allowances;expected semantic equality fails. Root is the
+  retained limits field in seam_span_history.rs,not different span content. Remove runtime policy
+  from the owned history,retain explicit constructor limits and complete pre-allocation admission;
+  update obsolete getter/tests/docs and preserve private-field doctest's intended refusal.
+  Completion0568:actual graph/Design history identity binding and resource integration complete.
+  - [x] ROOT CAUSE (WHY + WHERE): actual native D335 equality test under identical Root7
+    data/limits1/1 versus8/16 failed the intended equality assertion,rc=101. Retained limits plus
+    derived Eq in0567 made policy part of owned history. Remove stored policy/getter,retain
+    explicit constructor caps and complete admission;native same regression now passes,rc=0.
+    Private forge doctest updated to actual fields,not masked by obsolete-field compilation noise.
+  - [x] ADDRESSED (verified): local_environment.py cargo test history contract →6 pass;
+    core sewing_contract span_history →5 pass;actual sc-measure design_inputs_contract
+    span_history →2 pass,all rc=0. Exact live leaves/retired source ancestors,unrelated-family
+    refusal,borrowed pointers,history cloning,old provenance absence,typed identity refusal and
+    policy-independent actual graph/Design equality pass. Complete retired IDs participate in
+    current external namespaces and actual Design inputs;source/live aliases owned once by births.
+    Resources charge actual history vector after source bodies;graph5+history4=9,limit8 refuses
+    exact5+4 field/owner;two snapshots18. Actual Design adds3 items with text/counters unchanged.
+  - [x] NO REGRESSION: four existing sewing resource cases and29 actual stop cases pass,rc=0.
+    Relevant primitive4/graph4 doctests pass,rc=0;scoped strict Clippy core library/three test
+    targets and measure library/design-input target plus fmt --all --check pass,rc=0. Initial
+    fixture clone/two unwraps/export wrapping corrected;affected namespace case rechecked1/0.
+    Both book examples byte-exact to passed doctests;positive book94/255/1595/2787 and actual
+    glossary310/9/158/0 pass,rc=0. Receipt726/four exact Git spans and actual generation-pressure
+    census pass,rc=0:active64/64,aggregate85/192. Full paired verification remains deferred.
+  - [x] LOCKSTEP: book lineage/resource/source-binding and two scoped API rows,MEM/DEV/CHANGE/
+    LIVE/index/D301/D335 align. Whole0567/prior ledger retained726. D335 fixed;D334 P2/D156/
+    D223/PLANNING.5 remain owned;G1 6/18/G0 human unapproved. Old full/hosted79bd6f6a verdict
+    stays exact-SHA scoped. Pack window24 prerequisite next,before more retirement;then actual
+    paired candidate/reference joins .3.4.3. No actual command/physical/provider/effect proof.
+    promotion: declined (application of indexed canonical-content versus runtime-policy separation,actual identity ownership and exhaustive logical accounting;D335 root/reproduction/fix retained here and in the book).
+
+- ID: `G1-SLICE.6.5.3.2.3.4.retention`
+  Status: `pending`
+  Goal: immediate prerequisite before more proof retirement:actual generation2 now64/64 working
+  slots,62 raw records/two windows;aggregate85/192 is separate. Pack current committed raw records
+  as window24 through published v3 authoring/transaction interfaces. Freeze new clean HEAD;never
+  reuse earlier uninstalled fixture candidates or original completed window23 workspaces.
+  Preserve all logical records/prior backings/current proof,prepare same-volume candidate and
+  originals;verify exact complete source/role/hash/count/byte retention before transaction,then
+  actual native tar/current reader/source proof/continuity and book/live routes. Keep original
+  capture/install trees for recovery. Own focused checks/commit;no full matrix or native rebuild.
+  New model/candidate .3.4.3 resumes only after committed capacity is safe. No limit raises.
+
 - ID: `G1-SLICE.6.5.3.2.3.4.3`
   Status: `pending`
   Goal: join actual sealed paired source/stop candidates to fresh child identities and history.

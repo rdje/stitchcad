@@ -1,5 +1,7 @@
 //! Sewing topology/intent tests; no fixture pretends to measure geometry or certify seam lengths.
 #![allow(clippy::expect_used, clippy::unwrap_used, clippy::panic)]
+#[path = "support/sewing_span_history.rs"]
+mod sewing_span_history;
 use sc_core::command::{CommandSeamSplitBindingError as SplitError, SplitSeamSpan};
 use sc_core::ontology::{
     CopyOrientation, CutCopyDefinition, CutPlan, CutPlanError, CuttingSide, DeclaredEase,

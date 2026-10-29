@@ -210,6 +210,14 @@ carry no region vector. Fixed side, direction and Explicit/Formula/Profile amoun
 unchanged; the producer does not read a symbolic value, look up a copy/landmark, resolve an anchor,
 validate current contexts or realize ease/geometry.
 
+Optional bound span history adds its complete actual record vector after canonical ease-source
+content. The static field is sewing.span_history.entries,in Sewing scope with the actual graph
+owner and no element index. Every entry contains fixed Copy identity payloads;the private owner
+view also accounts for its fixed derived identity count. Runtime admission limits are not retained
+as canonical content. A graph without history keeps the prior accounting order and totals.
+[Span history integration](command-seam-lineage.md#bind-history-to-the-actual-graph) verifies exact
+boundary refusals and full charging again for each snapshot;shared source backing grants no discount.
+
 charge_sewing_landmark_resources charges the provided actual Notch/TurnPoint registry slice. Root
 composition must supply its exact owned vector. Exhaustive private views and fixed Copy-payload
 constraints cover each held piece/anchor/id/profile representation; bindings remain symbolic, with

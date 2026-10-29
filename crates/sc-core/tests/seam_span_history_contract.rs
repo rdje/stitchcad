@@ -38,7 +38,6 @@ fn nested_retirement_keeps_immediate_ordered_children_and_actual_record_borrows(
     assert_eq!(history.entries(), nested());
     assert_eq!(history.entries().as_ptr(), original_pointer);
     assert_eq!(history.identity_count(), 6);
-    assert_eq!(history.limits(), limits(4, 6));
     for (parent, birth, split, expected) in [(8, 0, 2, [3, 5]), (3, 2, 3, [1, 2])] {
         let state = history.state(id(parent)).expect("known retired parent");
         assert_eq!(
@@ -260,4 +259,15 @@ fn independent_chain_formula_keeps_all_ancestors_and_sibling_leaves_without_reta
         );
         assert_eq!(history.state(id(end + 1)), None);
     }
+}
+
+#[test]
+fn canonical_identity_history_does_not_depend_on_selected_runtime_admission_policy() {
+    let entries = vec![Entry::Root(id(7))];
+    let tight = SeamSpanHistory::new(entries.clone(), limits(1, 1)).expect("valid exact input");
+    let roomy = SeamSpanHistory::new(entries, limits(8, 16)).expect("same valid semantic records");
+    assert_eq!(
+        tight, roomy,
+        "runtime allowance is not authored span content"
+    );
 }

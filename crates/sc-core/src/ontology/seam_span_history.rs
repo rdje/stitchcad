@@ -127,9 +127,8 @@ pub enum SeamSpanHistoryState<'a> {
 /// Graph/Design ownership, retained-source aliases and actual split-candidate binding must follow.
 /// Private fields prevent fabricating accepted history:
 /// ```compile_fail
-/// fn forge(limits: sc_core::ontology::SeamSpanHistoryLimits)
-///     -> sc_core::ontology::SeamSpanHistory {
-///     sc_core::ontology::SeamSpanHistory { entries: Vec::new(), identities: 0, limits }
+/// fn forge() -> sc_core::ontology::SeamSpanHistory {
+///     sc_core::ontology::SeamSpanHistory { entries: Vec::new(), identities: 0 }
 /// }
 /// ```
 /// Borrowed retirement evidence cannot escape its actual history:
@@ -143,23 +142,63 @@ pub enum SeamSpanHistoryState<'a> {
 pub struct SeamSpanHistory {
     entries: Vec<SeamSpanHistoryEntry>,
     identities: usize,
-    limits: SeamSpanHistoryLimits,
 }
 impl fmt::Debug for SeamSpanHistory {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let Self {
             entries,
             identities,
-            limits,
         } = self;
         f.debug_struct("SeamSpanHistory")
             .field("entries", &entries.len())
             .field("identities", identities)
-            .field("limits", limits)
             .finish()
     }
 }
 impl SeamSpanHistory {
+    pub(crate) fn resource_parts(&self) -> (&[SeamSpanHistoryEntry], usize) {
+        let Self {
+            entries,
+            identities,
+        } = self;
+        (entries, *identities)
+    }
+
+    pub(crate) fn births(&self) -> impl Iterator<Item = (EntityId, usize, Option<usize>)> + '_ {
+        self.entries.iter().enumerate().flat_map(|(entry, record)| {
+            let births = match *record {
+                SeamSpanHistoryEntry::Root(identity) => [Some((identity, entry, None)), None],
+                SeamSpanHistoryEntry::Split {
+                    children: [first, second],
+                    ..
+                } => [
+                    Some((first, entry, Some(0))),
+                    Some((second, entry, Some(1))),
+                ],
+            };
+            births.into_iter().flatten()
+        })
+    }
+
+    // Each step moves to a strictly earlier birth record. No descendant tree or index is built.
+    pub(crate) fn is_ancestor(&self, ancestor: EntityId, descendant: EntityId) -> bool {
+        let mut current = descendant;
+        while let Some(state) = self.state(current) {
+            if current == ancestor {
+                return true;
+            }
+            let birth_entry = match state {
+                SeamSpanHistoryState::Live { birth_entry }
+                | SeamSpanHistoryState::RetiredSplit { birth_entry, .. } => birth_entry,
+            };
+            match self.entries.get(birth_entry) {
+                Some(SeamSpanHistoryEntry::Split { parent, .. }) => current = *parent,
+                _ => return false,
+            }
+        }
+        false
+    }
+
     /// Admit complete populations, then validate records in original authored order.
     /// Input-entry quota precedes full issued-ID quota; parent existence/liveness precedes child
     /// nonreuse. The temporary map retains one fixed record per introduced identity and is dropped
@@ -260,7 +299,6 @@ impl SeamSpanHistory {
         Ok(Self {
             entries,
             identities,
-            limits,
         })
     }
     /// Exact original supplied records, without reordering, rewriting or generated identities.
@@ -272,11 +310,6 @@ impl SeamSpanHistory {
     #[must_use]
     pub const fn identity_count(&self) -> usize {
         self.identities
-    }
-    /// Exact caller-selected admission limits.
-    #[must_use]
-    pub const fn limits(&self) -> SeamSpanHistoryLimits {
-        self.limits
     }
     /// Allocation-free linear lookup retaining the immediate retirement record and both children.
     /// Unknown identities return none. A later split of a child never retargets an old parent or

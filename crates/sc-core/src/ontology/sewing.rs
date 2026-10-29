@@ -5,11 +5,15 @@ use super::{
     AnchorError, CutPlan, CutPlanError, EdgeAnchor, EdgeRange, EntityId, GeometricValidation,
     IdentityLedger, Notch, Param, Piece, ProfileParameterRef, RangePortion, RangeResolution,
     Rational, Resolution, ResolvedRef, SeamEase, SeamEaseBindingIssue, SeamEaseSource,
+    SeamSpanHistory,
 };
 use core::fmt;
 use sc_units::Length;
 use std::collections::{BTreeMap, BTreeSet};
 use std::sync::Arc;
+
+mod history;
+pub use history::{SeamSpanHistoryBindingError, SewingSpanLookup};
 
 /// One born-valid semantic sewing turn, without claiming a geometric corner.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -255,6 +259,7 @@ pub struct SewingGraph {
     id: EntityId,
     spans: Vec<SeamSpan>,
     ease_sources: Vec<Arc<SeamEaseSource>>,
+    history: Option<SeamSpanHistory>,
 }
 /// Visible deferred obligation for every declared seam differential/distribution.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -495,13 +500,21 @@ struct ValidatedSide {
 }
 
 impl SewingGraph {
-    pub(crate) fn resource_spans(&self) -> (EntityId, &[SeamSpan], &[Arc<SeamEaseSource>]) {
+    pub(crate) fn resource_spans(
+        &self,
+    ) -> (
+        EntityId,
+        &[SeamSpan],
+        &[Arc<SeamEaseSource>],
+        Option<&SeamSpanHistory>,
+    ) {
         let Self {
             id,
             spans,
             ease_sources,
+            history,
         } = self;
-        (*id, spans, ease_sources)
+        (*id, spans, ease_sources, history.as_ref())
     }
 
     /// Validate copy addressing, owned complete ranges, disjoint self-seams, stops and ease domains.
@@ -531,6 +544,7 @@ impl SewingGraph {
             id: definition.id,
             spans,
             ease_sources,
+            history: None,
         };
         graph.validate_current(plan, pieces, landmarks, ledger)?;
         let mut canonical = BTreeMap::new();
@@ -585,11 +599,18 @@ impl SewingGraph {
             }
             marks.insert(landmark.id(), landmark);
         }
+        if let Some(history) = &self.history {
+            for (identity, _, _) in history.births() {
+                if !identities.insert(identity) {
+                    return Err(SewingError::IdentityCollision { id: identity });
+                }
+            }
+        }
         let mut seen_sources: BTreeMap<EntityId, (EntityId, &SeamEaseSource)> = BTreeMap::new();
         let mut claims = ClaimedIntervals::new();
         for record in &self.spans {
             let span = record.definition();
-            if !identities.insert(span.id) {
+            if self.history.is_none() && !identities.insert(span.id) {
                 return Err(SewingError::IdentityCollision { id: span.id });
             }
             let context = SpanContext {
@@ -666,7 +687,7 @@ impl SewingGraph {
             }
         }
         for source in &self.ease_sources {
-            if !identities.insert(source.span()) {
+            if self.history.is_none() && !identities.insert(source.span()) {
                 return Err(SewingError::IdentityCollision { id: source.span() });
             }
             let context = SpanContext {

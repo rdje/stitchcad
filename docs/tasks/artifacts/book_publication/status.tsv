@@ -252,3 +252,5 @@ span identity history limits	spec/command-seam-lineage.md	crates/sc-core/src/ont
 span identity history refusals	spec/command-seam-lineage.md	crates/sc-core/src/ontology/seam_span_history.rs	SeamSpanHistoryError	G1-SLICE.6.5.3.2.3.4.1	4.1
 span identity history states	spec/command-seam-lineage.md	crates/sc-core/src/ontology/seam_span_history.rs	SeamSpanHistoryState	G1-SLICE.6.5.3.2.3.4.1	4.1
 bounded span identity history	spec/command-seam-lineage.md	crates/sc-core/src/ontology/seam_span_history.rs	SeamSpanHistory	G1-SLICE.6.5.3.2.3.4.1	4.1
+actual graph span history binding refusal	spec/command-seam-lineage.md	crates/sc-core/src/ontology/sewing/history.rs	SeamSpanHistoryBindingError	G1-SLICE.6.5.3.2.3.4.2	4.1
+actual graph live or retired span lookup	spec/command-seam-lineage.md	crates/sc-core/src/ontology/sewing/history.rs	SewingSpanLookup	G1-SLICE.6.5.3.2.3.4.2	4.1
