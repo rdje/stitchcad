@@ -2,11 +2,14 @@
 import ast
 import contextlib
 import copy
+import hashlib
 import io
+import json
 import os
 from pathlib import Path
 import runpy
 import shutil
+import stat
 import subprocess
 import sys
 
@@ -555,10 +558,195 @@ def omission_controls():
     print('fixture ten compiled actual source/file/directory/activation/write/store/Git/teardown/HEAD assertion reds')
 
 
+# This child executes the unmodified entry. Its independent audit hook stops effects
+# before dispatch, including a FIFO read that would otherwise hang a broken guard.
+ENTRY_SENTRY = r'''
+import copy, gzip, hashlib, importlib.util, io, json, os, pathlib, runpy, shutil, stat, subprocess, sys, tarfile
+entry, action = sys.argv[1:]
+sys.argv = [entry]
+class EffectAttempt(BaseException):
+    pass
+def audit(event, args):
+    if event == 'open':
+        path, mode, flags = args
+        if (isinstance(mode, str) and any(c in mode for c in 'wax+')) or flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC | os.O_APPEND):
+            raise EffectAttempt(event)
+        if isinstance(path, (str, bytes)):
+            try:
+                fifo = stat.S_ISFIFO(os.lstat(path).st_mode)
+            except FileNotFoundError:
+                fifo = False
+            if fifo:
+                raise EffectAttempt('open FIFO')
+    if event in {'os.mkdir', 'os.remove', 'os.rmdir', 'os.rename', 'os.symlink', 'os.link',
+                 'os.chmod', 'os.chown', 'os.truncate', 'os.utime', 'os.putenv', 'os.unsetenv',
+                 'os.system', 'os.exec', 'os.posix_spawn', 'os.fork', 'os.forkpty',
+                 'subprocess.Popen', 'shutil.rmtree', 'shutil.copyfile', 'shutil.copytree'}:
+        raise EffectAttempt(event)
+sys.addaudithook(audit)
+try:
+    if action == 'write':
+        with open(entry + '.sentry-output', 'wb') as stream:
+            stream.write(b'forbidden')
+    elif action == 'mkdir':
+        os.mkdir(entry + '.sentry-directory')
+    elif action == 'child':
+        subprocess.run([sys.executable, '-I', '-B', '-c', 'pass'], check=True)
+    elif action == 'entry':
+        runpy.run_path(entry, run_name='__main__')
+    else:
+        raise AssertionError('unknown sentry action')
+except EffectAttempt as error:
+    result = dict(kind='effect', event=str(error))
+except BaseException as error:
+    result = dict(kind='refusal', type=type(error).__name__, message=str(error))
+else:
+    result = dict(kind='accepted')
+print('ARCHIVE_ENTRY_RESULT=' + json.dumps(result, sort_keys=True), flush=True)
+'''
+
+
+def physical_snapshot(root, *, metadata=True):
+    """No alias traversal or special-file opens; access time is deliberately excluded."""
+    result, pending = {}, [root]
+    while pending:
+        path = pending.pop()
+        info = path.lstat()
+        row = (stat.S_IFMT(info.st_mode), stat.S_IMODE(info.st_mode), info.st_nlink)
+        if metadata:
+            row += (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, info.st_ctime_ns)
+        if stat.S_ISDIR(info.st_mode):
+            pending.extend(sorted(path.iterdir()))
+        elif stat.S_ISREG(info.st_mode):
+            row += (hashlib.sha256(path.read_bytes()).hexdigest(),)
+        elif stat.S_ISLNK(info.st_mode):
+            row += (os.readlink(path),)
+        result[path.relative_to(root).as_posix()] = row
+    return result
+
+
+@contextlib.contextmanager
+def physical_fault(root, path, kind, content=None):
+    """Create one exact owned fault; undo it lexically before guarded mirror cleanup."""
+    assert path.is_relative_to(root) and path != root
+    backup = path.with_name(path.name + '.physical-original')
+    assert not backup.exists() and not backup.is_symlink()
+    existed = path.exists()
+    # The ordinary parent and replacement/backup paths are admitted before fault
+    # creation. A fake .git marker is an empty controlled fault, never a repository.
+    if path.name == '.git':
+        PROFILE['plan_producer'](ROOT, sources=CORE, directories=(path.parent,))
+    elif path.is_dir() or kind == 'directory':
+        PROFILE['plan_producer'](ROOT, sources=CORE, directories=(path, backup))
+    else:
+        PROFILE['plan_producer'](ROOT, sources=CORE, directories=(path.parent,), output_files=(path, backup))
+    if existed:
+        path.rename(backup)
+    try:
+        if kind == 'symlink':
+            path.symlink_to(os.path.relpath(backup if existed else content, path.parent))
+        elif kind == 'directory':
+            path.mkdir()
+        elif kind == 'bytes':
+            path.write_bytes(content)
+        elif kind == 'hardlink':
+            os.link(content, path)
+        elif kind == 'fifo':
+            os.mkfifo(path)
+        else:
+            assert kind == 'missing'
+        yield
+    finally:
+        if kind == 'directory':
+            path.rmdir()  # Refuse unexpected children; never recursively traverse a fault.
+        elif kind != 'missing':
+            path.unlink()  # Unlink the exact alias/FIFO without following it.
+        if existed:
+            backup.rename(path)
+
+
+def physical_controls():
+    originals = {path: path.read_bytes() for path in CORE}
+    archives = {name: physical_snapshot(ROOT / name) for name in ('.doctrine/history_archive', 'docs/history')}
+    with mirror('physical') as root:
+        entry = root / ENTRY.relative_to(ROOT)
+        work = root / 'target/scratch/history_archive_probes'
+        output = work / 'fixture/.doctrine/history_archive/orphan.json'
+        sentinel = root / 'physical-sentinel'
+        destination = root / 'physical-destination'
+        stores = {name: str(root / 'target/prepared' / name.lower()) for name in PROFILE['STORES']}
+        directories = (destination, output.parent, *(Path(value) for value in stores.values()))
+        PROFILE['prepare_producer'](ROOT, sources=CORE, directories=directories, output_files=(sentinel,))
+        sentinel.write_bytes(b'owned alias target must stay byte exact\n')
+        pristine = physical_snapshot(root, metadata=False)
+        env = dict(os.environ, **stores)
+        env.pop('RUSTUP_TOOLCHAIN', None)
+        count = 0
+
+        def invoke(label, expected, *, overrides=None, action='entry'):
+            nonlocal count
+            before = physical_snapshot(root)
+            result = subprocess.run([sys.executable, '-I', '-B', '-c', ENTRY_SENTRY, str(entry), action],
+                                    cwd=root, env=dict(env, **(overrides or {})), capture_output=True,
+                                    text=True, timeout=60, check=True)
+            assert physical_snapshot(root) == before, ('archive physical mirror changed', label)
+            lines = result.stdout.splitlines()
+            assert len(lines) == 1 and lines[0].startswith('ARCHIVE_ENTRY_RESULT='), (label, result)
+            actual = json.loads(lines[0].partition('=')[2])
+            assert actual == expected, (label, actual, expected, result.stderr)
+            count += 1
+            print('archive physical ' + label + ': ' + json.dumps(actual, sort_keys=True), flush=True)
+
+        def refusal(message, type='Refusal'):
+            return dict(kind='refusal', type=type, message=message)
+
+        # The independent sentry is calibrated separately from producer refusals.
+        for action, event in (('write', 'open'), ('mkdir', 'os.mkdir'), ('child', 'subprocess.Popen')):
+            invoke('sentry-' + action, dict(kind='effect', event=event), action=action)
+        invoke('valid-prefix', dict(kind='effect', event='os.putenv'))
+        cases = (
+            ('profile-link', root / PROFILE_SOURCE.relative_to(ROOT), 'symlink', None, refusal('unsafe archive fixture profile', 'ValueError')),
+            ('profile-parent-link', root / 'scripts', 'symlink', None, refusal('unsafe archive fixture profile', 'ValueError')),
+            ('profile-git-marker', root / 'scripts/.git', 'directory', None, refusal('unsafe archive fixture profile', 'ValueError')),
+            ('entry-link', entry, 'symlink', None, refusal('symlink producer source')),
+            ('reader-link', root / READER.relative_to(ROOT), 'symlink', None, refusal('symlink producer source')),
+            ('shell-link', root / SHELL.relative_to(ROOT), 'symlink', None, refusal('symlink producer source')),
+            ('reader-missing', root / READER.relative_to(ROOT), 'missing', None, refusal('producer source is not a local regular file')),
+            ('archive-control-link', root / '.doctrine/history_archive/window1.json', 'symlink', None, refusal('symlink archive fixture input')),
+            ('workspace-link', work, 'symlink', None, refusal('symlink store component')),
+            ('workspace-git-marker', work / '.git', 'directory', None, refusal('store crosses another Git repository')),
+            ('workspace-unknown', work / 'unknown', 'bytes', b'owned fault\n', refusal('unknown archive fixture entry')),
+            ('output-link', output, 'symlink', sentinel, refusal('unexpected archive fixture link')),
+            ('output-hardlink', output, 'hardlink', sentinel, refusal('hard-linked producer output')),
+            ('output-fifo', output, 'fifo', None, refusal('producer output is not a local regular file')),
+            ('store-link', Path(stores['CARGO_HOME']), 'symlink', None, refusal('symlink store component')),
+        )
+        for label, path, kind, content, expected in cases:
+            with physical_fault(root, path, kind, content):
+                invoke(label, expected)
+            assert physical_snapshot(root, metadata=False) == pristine, ('archive physical fault restoration', label)
+        for label, overrides, message in (
+            ('store-source-tree', dict(CARGO_HOME='crates/cache'), 'local store must be under target'),
+            ('store-traversal', dict(TMPDIR='target/../scratch'), 'invalid store components'),
+            ('store-overlap', dict(TMPDIR=str(work)), 'archive fixture workspace contains a store'),
+            ('toolchain-path', dict(RUSTUP_TOOLCHAIN='bad/toolchain'), 'toolchain override must be a name'),
+        ):
+            invoke(label, refusal(message), overrides=overrides)
+        assert physical_snapshot(root, metadata=False) == pristine, 'archive physical final restoration'
+    assert all(path.read_bytes() == data for path, data in originals.items()), 'archive physical canonical source changed'
+    assert all(physical_snapshot(ROOT / name) == data for name, data in archives.items()), 'archive physical canonical archive changed'
+    assert count == 23, count
+    print('archive physical:19 actual entry refusals; valid-prefix activation and3 independent sentry controls; '
+          'all23 children reaped; faulted mirror metadata/bytes and canonical inputs exact; owned faults restored; rc=0', flush=True)
+
+
 if __name__ == '__main__':
-    assert sys.argv[1:] in ([], ['--before'], ['--population'], ['--deep'], ['--body'])
+    assert sys.argv[1:] in ([], ['--before'], ['--population'], ['--deep'], ['--body'], ['--physical'])
     if sys.argv[1:] == ['--body']:
         original_body_controls()
+    elif sys.argv[1:] == ['--physical']:
+        PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
+        physical_controls()
     else:
         PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
         before_control()

@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308 — unchecked formula root fixture fields
 
-D308–D317 fixed0537–0546;[prior ledger](../history/stitchcad-devnotes-part697.md). Inventory333/396 and focused repairs pass;D156 audits remain open. Archive deep0547/body0548 controls pass;physical/parent acceptance remain .5b.4c.h2.b.p.o.f.fixture-verification before full gates/push. LIVE G1 6/18,G0 last18/1 human unapproved;hosted verdict unobserved.
+D308–D317 fixed0537–0546;[prior ledger](../history/stitchcad-devnotes-part697.md). Inventory333/396 and focused repairs pass;D156 audits open. Archive deep0547/body0548/physical0549 pass;parent .5b.4c.h2.b.p.o.f.fixture-verification.acceptance/current watch/native28 precedes full gates/push. LIVE G1 6/18,G0 last18/1 human unapproved;hosted verdict unobserved.

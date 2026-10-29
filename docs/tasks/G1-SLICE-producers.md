@@ -339,45 +339,41 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Goal:0547 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part706.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.body`
   Status: `done`
-  Goal:0548 complete original predicate/packer/resident/CLI/interface AST preservation against
-  immutable pre-guard source,through explicit reviewed adapters;no fixture or native build runs.
-  - [x] REPRODUCE / ISSUE: deferred parent explicitly requires complete original-body proof,
-    beyond0547 deep capture. git diff 1b8fc23..6796dfec --
-    docs/tasks/artifacts/history_archive/history_archive_probes.py →reviewed pure extraction,
-    guarded IO,protected setup and stronger HEAD-evidence adapters,rc=0. Count/signature-only checks cannot establish complete predicate/input preservation.
-  - [x] ROOT CAUSE (WHY + WHERE): full frozen/current native producer review and companion
-    source comparison,rc=0,identify original module bodies and all adapter boundaries. Original
-    pack and resident blocks are copied from frozen AST,not current implementation. Full baseline
-    is1b8fc23c7aab412d6a4602290dfcc26faceaeeb0;new source bindings must retain canonical paths.
-  - [x] FIX: pure --body mode derives the expected guarded core from complete old source;
-    preserve all original statements,constants,arguments,signatures and refusal predicates.
-    Explicitly adapt IO calls,exact pure extractions,setup inside existing finally,prepared child
-    environment and successful HEAD-absence proof. Strip only declared new guard scaffolding;
-    validate canonical bindings before substitution. AST equality ignores locations/formatting,
-    not semantic bodies. This is predicate preservation,not proof of new guard behavior/physics.
-  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- python3 -I -B
-    docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --body →full original
-    core/signatures match,reformat positive,10 actual AST predicate/interface/population/
-    algorithm/adapter assertion reds,source unchanged,rc=0. Faults change pack format,resident
-    compression,refusal/CLI tests,population,ABI,Boolean type,expected cause,reader binding and
-    remove an actual original case. Each must refuse for its intended comparison/binding reason.
-  - [x] NO REGRESSION: same prepared invocation --population →original pre-effect removal
-    trap and closed pure11-directory/1077-file population pass,rc=0. Existing flags retain their
-    route;full capture/native28 replay waits for parent acceptance. Book build/publication
-    93/248/1590/2771,rc=0;receipt706 →3 exact Git spans,rc=0;retention1160 logical/65 aggregate
-    working/65390 decodedL/5097480 decodedB/2674817 residentB,rc=0;git diff --check →rc=0.
-    Native producer/reader/archive payloads unchanged;only companion adds this read-only mode.
-  - [x] LOCKSTEP: whole0547 task/lesson/changelog retained706. Book explains exact source-body
-    scope and manual mode;MEM/DEV/CHANGE/index/ledger align. LIVE reviewed unchanged:29 suites,
-    G1 6/18,D156 audits open,G0 human unapproved. README unchanged. Next .physical from clean
-    commit,then .acceptance registers current watch and completes due parent before full gates/
-    normal push/exact-SHA hosted jobs. No complete physical/runtime or full CI verdict inferred.
-    promotion: declined (application of indexed complete original-body preservation,independent frozen oracles and explicit adapter scope;no new archive semantics).
+  Goal:0548 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part707.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.physical`
-  Status: `pending`
-  Goal: actual controlled-mirror entry refusals for unsafe inputs/workspaces/stores,with source/
-  archive/full mirror identity and no-before-refusal effects. Exercise only owned same-volume
-  fixtures;never initialize or amend another Git repository or write through source aliases.
+  Status: `done`
+  Goal:0549 actual unchanged entry refusals in owned same-volume mirrors,independent effect
+  sentry and complete faulted mirror/source/archive restoration;no native28 replay in this mode.
+  - [x] REPRODUCE / ISSUE: deferred parent physical proof remains after deep/body;read native
+    entry/common profile and mirror lifecycle,rc=0. Simulated child capture alone cannot establish
+    actual entry refusal before activation or prove unsafe aliases cause no physical changes.
+  - [x] ROOT CAUSE (WHY + WHERE): entry validates profile before import,then complete sources,
+    archive population and closed work/store/output plans before activation. Actual source review,
+    rc=0,identifies19 finite fault paths and independent pre-dispatch audit events;no source repair
+    is needed. Baseline valid entry must reach activation rather than refuse for an unrelated cause.
+  - [x] FIX: --physical invokes unchanged entry via runpy in fresh -I -B children. Independent
+    audit hook raises BaseException before writes,environment mutation or child dispatch;FIFO
+    reads also trap. Exact empty fake markers/relative aliases/missing/hardlinked/FIFO files are
+    owned faults,never another Git repo. Admit paths before setup;restore exact faults lexically
+    before ordinary guarded cleanup. No recursive alias traversal or mutation through an alias.
+  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- python3 -I -B
+    docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --physical →19 actual
+    expected-cause entry refusals;valid prefix reaches os.putenv activation;three direct write/
+    mkdir/child sentry controls trap;all23 children reaped,rc=0. Full faulted mirror lstat metadata,
+    modes,kinds,nlinks,content hashes and link targets exact before/after each child. Access time
+    excluded. Per-fault/final contents restored;canonical CORE/archive metadata/bytes exact.
+  - [x] NO REGRESSION: same prepared --body invocation →complete frozen core/signatures,
+    semantic reformat and10 actual body faults pass,rc=0. Book build/positive publication
+    93/248/1590/2771,rc=0;receipt707 →3 exact Git spans,rc=0;retention1161 logical/66 aggregate
+    working/65451 decodedL/5103805 decodedB/2681142 residentB,rc=0;git diff --check →rc=0.
+    Native producer/reader/archive bytes unchanged. --deep/native28 and current watch integration
+    belong next parent acceptance;no whole D156 locality or application signoff inferred.
+  - [x] LOCKSTEP: whole0548 task/lesson/changelog retained707;book explains actual entry scope,
+    finite faults/sentry/restoration/access-time exclusion. MEM/DEV/CHANGE/index/ledger aligned;
+    LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. README unchanged.
+    Next .acceptance registers complete watch and consumes native28 before full gates/normal
+    push/exact-SHA hosted jobs. Full PNT continues.
+    promotion: declined (application of indexed physical refusal,independent effect traps and lexical fixture restoration;no new archive or product semantics).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.acceptance`
   Status: `pending`
   Goal: after deep/body/physical slices,finish scoped parent calibration and register its current

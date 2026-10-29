@@ -3,12 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0548 — preserve complete original archive predicate bodies
+## STITCHCAD-G1-0549 — verify actual archive entry refusals before effects
 
-- Add read-only --body comparison with full frozen source through explicit IO,extraction,setup,child-environment and HEAD-evidence adapters. Preserve original predicates,algorithms,CLI arguments and public signatures;validate reader/source bindings before normalization.
-- Reformat positive and10 actual AST faults pass;old trap/pure population remain green. No fixture/build execution by body mode. Book/history checks pass;whole0547 retained706/three exact Git spans. Native producer/reader/archive unchanged.
-- LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Physical-entry and parent acceptance/current watch/native28 remain before full gates/push/actual hosted jobs;no broader verdict inferred.
-
+- Add --physical:unchanged entry in isolated children;19 expected-cause refusals,valid activation and3 direct sentry controls. Audit traps writes/environment changes/child dispatch before effects. All23 children reaped;faulted mirror metadata/bytes exact and owned faults restored.
+- Canonical source/archive exact;no native producer repair. Access times excluded. Original-body10/reformat,book/history checks pass;whole0548 retained707/three exact spans. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved.
+- Complete current watch/native28 and parent calibration remain next before full gates/push/actual hosted jobs;no full locality or product signoff inferred.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

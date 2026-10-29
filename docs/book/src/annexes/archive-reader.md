@@ -128,6 +128,7 @@ python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --deep
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --body
+python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --physical
 ```
 
 The native entry retains28 calibrated cases. Companion --deep verifies interrupted-copy teardown,
@@ -135,8 +136,14 @@ HEAD evidence and ten source-body omission controls with simulated children. Com
 compares complete original predicates,payload/resident builders,CLI arguments and public signatures
 with frozen pre-guard source through explicit IO,extraction,setup and HEAD-evidence adapters.
 Ten actual AST faults refuse,including redirected reader bindings;semantic reformatting passes.
-This mode uses read-only Git and executes no fixture or build. Physical-entry and final calibration
-remain .f.fixture-verification under the [checking policy](checking-policy.md).
+This mode uses read-only Git and executes no fixture or build. Companion --physical runs the actual
+unchanged entry in owned mirrors:19 input/profile/workspace/output/store refusals must precede any
+effect. An independent child audit hook traps writes,environment changes and child dispatch;three
+direct sentry controls and a valid-prefix activation control establish that boundary. All23 children
+are reaped. Faulted mirror bytes,kinds,modes,links and identity/change metadata remain exact;read
+access times are excluded. Exact lexical fault restoration precedes guarded cleanup;canonical
+source/archive inputs stay exact. This finite entry proof does not execute the native28 cases.
+Final calibration/watch integration remains .f.fixture-verification under the [checking policy](checking-policy.md).
 Capture-pinned v1 traps substitute logical bytes only for deliberate raw-read faults, retaining the
 original missing-public-read assertion. Legacy catalogs/non-changelog rows stay valid.
 

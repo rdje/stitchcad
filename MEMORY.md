@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.physical in docs/tasks/G1-SLICE-producers.md:
-  actual controlled-mirror entry refusals,full input/mirror snapshots,no pre-refusal effects;
-  then parent .acceptance/current watch/native28 before full check/gate/probes and normal push.
-- Body0548 passes:frozen1b8fc23 complete semantic AST through declared IO/extraction/setup/HEAD
-  adapters;10 actual faults/reformat positive. --population retains original trap/11 dirs1077 files.
-  No fixture/build execution in --body;new guard behavior/physical proof remains separate.
-- Whole0547 retained706/3 spans;book93/248/1590/2771/retention1160 pass. LIVE29 suites/G1 6/18
-  unchanged,D156 audits/G0 human unapproved. Native producer/reader/archive unchanged.
-- Deep0547 passed captured interruption/HEAD/10 omission controls. D315333-source inventory
-  committed22e1a265;12 audit groups pending. Full95925f7b check0/gate0/probes2 remains last full run.
-- After due archive acceptance,full gates from clean HEAD,normal push/actual hosted jobs;then
-  stop .3.3.acceptance/live lineage .3.4. Full PNT continues;consume terminals before edits.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.acceptance in docs/tasks/G1-SLICE-producers.md:
+  register complete current watch;native28/current deep calibration with exact restoration;then
+  full check/gate/probes from clean HEAD,normal push and actual exact-SHA hosted jobs.
+- Physical0549:19 actual expected-cause entry refusals,valid activation and3 direct audit-sentry
+  controls;all23 children reaped,full faulted mirror metadata/bytes exact and faults restored.
+  Canonical source/archive exact;no native producer/reader changes. Access time excluded.
+- Body0548 frozen1b8fc23 core/10 AST faults/reformat passes;deep0547 capture/interruption/HEAD/
+  omission controls passed. Whole0548 retained707/3 spans;book93/248/1590/2771,retention1161 pass.
+- LIVE29 suites/G1 6/18 unchanged,D156 audits/G0 human unapproved. D315333-source inventory
+  committed22e1a265;12 audit groups pending. Full95925f7b check0/gate0/probes2 is last full run.
+- After due archive acceptance/full gates/push/actual jobs,resume stop .3.3.acceptance/live
+  lineage .3.4. Full PNT continues;consume all producer/commit terminals before dependent work.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

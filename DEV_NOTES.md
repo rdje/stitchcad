@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — preserve complete original archive predicates through explicit adapters
+## _(2026-10-29 UTC)_ — actual archive entry refuses before effects
 
-0548 adds pure --body comparison against full frozen1b8fc23. Derive complete expected old bodies with declared guarded IO,pure payload/resident extraction,protected setup,prepared child environment and stronger HEAD evidence. Canonical binding checks prevent normalization hiding a redirected reader.
-Original semantic core/signatures match;reformat positive and10 actual AST body/interface/population/algorithm/adapter faults refuse as intended,source unchanged,rc0. --population retains old trap and11 dirs/1077 files. Body mode uses readonly Git;it executes no fixture or build and certifies no new guard behavior.
-Book93/248/1590/2771,706 receipt3/retention1160 pass0. Whole0547 retained. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Native producer/reader/archive unchanged;physical/parent acceptance/current watch and full gates remain pending.
-[Whole0547 deep proof](docs/history/stitchcad-devnotes-part706.md). Promotion declined:indexed original-body/frozen-oracle/explicit-adapter scope. Next actual physical entry refusals,then scoped parent/native28/current watch before full gates/push/actual hosted jobs. Full PNT continues.
+0549 adds --physical:unchanged entry in fresh isolated children,with independent pre-dispatch audit sentry. Nineteen expected-cause input/profile/workspace/output/store refusals pass. Valid prefix reaches activation;direct write/mkdir/child controls independently trap. No native producer repair needed.
+All23 children reaped;faulted mirror lstat metadata/modes/kinds/nlinks/hashes/link targets exact. Read access time excluded. Owned fake markers/aliases/hardlinks/FIFOs are undone lexically before guarded cleanup;source/archive exact. No other Git repo initialized or amended;no writes through aliases.
+Final physical/body10 controls,book93/248/1590/2771,707 receipt3/retention1161 pass0. Whole0548 retained. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Native28/current complete watch belong parent acceptance before full gates/push/actual hosted jobs.
+[Whole0548 predicate preservation](docs/history/stitchcad-devnotes-part707.md). Promotion declined:indexed physical refusal/effect traps/lexical restoration. Full PNT continues;physical entry checks do not establish whole locality or product acceptance.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
