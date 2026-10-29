@@ -3,14 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0536 — repair retained library-test module ordering
+## STITCHCAD-G1-0537 — check exact numeric fixture fields
 
-- Fix D307 required all-target lint failure by moving the existing retained boundary test block after all production items. Production/test bytes remain exact apart from separator whitespace;no arithmetic,assertion,public API or lint-waiver change. Native Git audit attributes the
-  original ordering to0471.
-- Actual library-test Clippy with --lib --profile test passes;native compiler profile.test=true. Existing resource count-boundary unit1 and formatting pass. Broader core-test lint exposes separate15 denied fixture field accesses,D308 owned next;full check/gate/probes/push and
-  hosted verdict remain pending.
-- Whole0535 retained694/three exact Git spans;book93/248/1590/2770,glossary0/map/retention1148 pass. LIVE defect census records D307 fixed/D308 owned;29 suites/G1 6/18 unchanged. Commit this repair before checked fixture access,then retry required full gates from clean completed
-  HEAD before push.
+- Fix D308 strict test-target indexing failures with checked exact eight-field patterns. Preserve original arity assertions,frozen15 sqrt/10 hypot rows,expected rounding/domain/kind outcomes and production arithmetic. No new lint waiver,fixture retune or test.
+- Focused target Clippy,all4 existing root-value tests and formatting pass. Native Git history attributes the original reads to0255/0256. D307 is already committed;required full prepush check/gate/probes,normal push and actual hosted jobs remain pending until the wider producer
+  passes.
+- Whole0536 retained695/three exact Git spans;book93/248/1590/2770,glossary0/map/retention1149 pass. LIVE defect row marks D307/D308 fixed;29 suites/G1 6/18 unchanged. Commit this repair before fresh full prepush retry;stop component and paired physical/authority/effect proof
+  retain owners.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

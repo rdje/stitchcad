@@ -28,14 +28,19 @@ fn sqrt_matches_independent_integer_root_and_exact_midpoint_fixtures() {
     {
         let cells: Vec<_> = row.split('\t').collect();
         assert_eq!(cells.len(), 8, "{row}");
-        if cells[0] != "sqrt" {
+        let &[operation, kind, numerator, denominator, _, _, expected_kind, witness] =
+            cells.as_slice()
+        else {
+            unreachable!("asserted eight-cell root fixture")
+        };
+        if operation != "sqrt" {
             continue;
         }
         rows += 1;
-        let kind = K::from_token(cells[1]).expect("fixture kind");
-        let operand = value(kind, cells[2], cells[3]);
+        let kind = K::from_token(kind).expect("fixture kind");
+        let operand = value(kind, numerator, denominator);
         let result = operand.checked_sqrt();
-        if cells[7] == "negative" {
+        if witness == "negative" {
             let error = result.expect_err("negative square root");
             assert_eq!(
                 error,
@@ -47,10 +52,10 @@ fn sqrt_matches_independent_integer_root_and_exact_midpoint_fixtures() {
             assert_eq!(error.diagnostic_code(), "formula_domain");
         } else {
             let result = result.expect("admitted rounded root");
-            let expected = cells[7]
+            let expected = witness
                 .strip_prefix("integer:")
                 .expect("integer root fixture");
-            assert_eq!(result.kind().token(), cells[6], "{row}");
+            assert_eq!(result.kind().token(), expected_kind, "{row}");
             assert_eq!(
                 result.rational(),
                 R::new(expected.parse().expect("expected integer"), 1, false)
@@ -91,16 +96,21 @@ fn hypot_matches_independent_fixtures_without_an_intermediate_area_limit() {
     {
         let cells: Vec<_> = row.split('\t').collect();
         assert_eq!(cells.len(), 8, "{row}");
-        if cells[0] != "hypot" {
+        let &[operation, _, left_n, left_d, right_n, right_d, expected_kind, witness] =
+            cells.as_slice()
+        else {
+            unreachable!("asserted eight-cell root fixture")
+        };
+        if operation != "hypot" {
             continue;
         }
         rows += 1;
-        let left = value(K::Length, cells[2], cells[3]);
-        let right = value(K::Length, cells[4], cells[5]);
+        let left = value(K::Length, left_n, left_d);
+        let right = value(K::Length, right_n, right_d);
         let result = left.checked_hypot(right);
-        if let Some(integer) = cells[7].strip_prefix("integer:") {
+        if let Some(integer) = witness.strip_prefix("integer:") {
             let result = result.expect("admitted rounded length");
-            assert_eq!(result.kind().token(), cells[6]);
+            assert_eq!(result.kind().token(), expected_kind);
             assert_eq!(
                 result.rational(),
                 R::new(integer.parse().expect("expected integer"), 1, false)
@@ -108,7 +118,7 @@ fn hypot_matches_independent_fixtures_without_an_intermediate_area_limit() {
                 "{row}"
             );
         } else {
-            let integer = cells[7]
+            let integer = witness
                 .strip_prefix("domain:")
                 .expect("exact rounded-domain witness");
             let error = result.expect_err("rounded length exceeds scalar limit");

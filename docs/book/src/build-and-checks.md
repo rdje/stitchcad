@@ -98,7 +98,8 @@ read-only host executables; toolchains/packages and project outputs use the guar
 | `help` | Print the target list |
 
 The full check includes library test targets that focused library lint omits;both treat warnings
-as errors. Scope a focused result to the actual target it checked.
+as errors. Scope a focused result to the actual target it checked. Numeric fixture readers retain
+explicit row-arity checks before destructuring fields;strict test-target lint covers those readers.
 
 Pushes follow the director2026-10-04 ruling:400 unpushed commits, with an earlier push only
 by explicit request. CI/doctrine/hook changes have no automatic exception. The read-only

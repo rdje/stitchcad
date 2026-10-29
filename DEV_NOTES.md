@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — repair retained library-test module layout
+## _(2026-10-29 UTC)_ — checked exact numeric fixture fields
 
-0536 D307:full prepush check at51e421cf/400 failed strict items-after-test-module lint. Git0471 appended history publication after0470 tests;file unchanged through0535. Move existing test block to EOF;separate production/test bytes remain exact after formatting. No arithmetic/assertion/API/lint waiver.
-Actual library-test Clippy --lib --profile test rc0,compiler profile.test=true;existing retained count-boundary unit1/fmt pass0. Broader core-test lint separately exposes15 unchecked formula fixture fields,D308 owned next. Full gates/probes/push/hosted verdict remain pending;none is claimed successful.
-Book93/248/1590/2770,glossary0/map/694 receipt3/retention1148 pass0. Book clarifies actual target scope;D307/D308 tasks/ledger/index and live defect census align. LIVE29 suites/G1 6/18 unchanged. Commit layout before checked fixture-access repair,then retry full cadence gate before normal push.
-[Whole0535 source join](docs/history/stitchcad-devnotes-part694.md) retains exact owner/quantity/current scope. Promotion declined:indexed claim-target/strict lint contract. One completed repair per commit;no dirty pivot. Core-test/full success remains withheld until the actual wider producer passes.
+0537 D308:15 direct formula-root fixture field reads violated strict indexing lint. Existing assertions already required8 columns;checked exact slice patterns now name fields without changing arity assertions,25 frozen expected rows,wrong-kind tests or production arithmetic. No new lint waiver or test.
+Focused target Clippy/native4/fmt pass0. Git attributes sqrt reader to0255 and hypot to0256;frozen TSV/kernel untouched. D307 library-test layout repair remains committed. Both prepush defects fixed;required wider check/gate/probes/push/actual hosted jobs remain pending until the fresh full producer passes.
+Book93/248/1590/2770,glossary0/map/695 receipt3/retention1149 pass0. Book target-scope/fixture guidance,task/index/PLANNING and live defect census align. LIVE29 suites/G1 6/18 unchanged. Commit before fresh full retry;first failed400 baseline and exact retained-layout proof stay project-local.
+[Whole0536 D307 repair](docs/history/stitchcad-devnotes-part695.md) retains native history/target/byte identity proof. Promotion declined:indexed strict lint/claim-target contract. Full prepush remains parent-owned;stop component/paired physical/authority/effect checks remain separately owned.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308 — unchecked formula root fixture fields
 
-P1 next;owner G1-SLICE.6.5.3.2.prepush-400.formula-fixture. Focused core-test Clippy after layout fix reports15 indexing_slicing errors in formula_root_value_contract.rs. Checked fixture field access scheduled immediately after clean D307 commit;preserve rows/assertions/kernel,no lint waiver. Full prepush retry remains owned before push.
+Done0537;owner G1-SLICE.6.5.3.2.prepush-400.formula-fixture. Fifteen denied fixture field indices replaced by checked exact eight-field patterns. Original arity assertions,15 sqrt/10 hypot rows/expectations/kernel unchanged. Target Clippy/native4/fmt pass0. Required full prepush check/gate/probes,push and actual hosted verdict remain parent-owned.

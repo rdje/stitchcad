@@ -408,44 +408,41 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   immediate fix and focused verification/commit,then retry all full gates from the new clean HEAD.
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`
-  Goal:0536 D307 move existing retained boundary test block after all production items;actual
-  resource arithmetic/production/test content unchanged. Required prepush remains held for D308.
-  - [x] REPRODUCE / ISSUE: 0536 scripts/run_make.sh check at51e421cf/derived400 →rc2. Native
-    Clippy denies items_after_test_module in command/bus/retained.rs183,with HistoryProjection214
-    and CommandBus impl221 after tests. Logs/baseline in target/prepush-400-0535. Gate/probes did
-    not start and nothing was pushed. This is a signoff layout failure,not a numeric/runtime change.
-  - [x] ROOT CAUSE: 0536 git diff71595c40..a8eb3250 -- crates/sc-core/src/command/bus/retained.rs
-    →only54 appended lines after the existing test module,rc=0. 0471 appended history publication
-    after0470 tests. Git-native SHA/9883B match exactly at0531 f814bf and0535 51e421cf;stop work did
-    not alter it. Focused library lint excludes library-test target;required all-target gate exposed
-    it. cargo clippy -p sc-core --tests after move progressed to separate15 fixture indexing errors
-    →rc101;D308 owns that next repair,not an all-core-test success claim.
-  - [x] FIX: 0536 existing complete cfg(test) block moved to EOF after production history items.
-    Native byte comparison of separated production/test content before/after move and after fmt
-    →exact,rc=0;proof target/prepush-400-0535/retained-layout-proof.json. No altered assertion,
-    arithmetic,behavior,lint waiver,new test or public API. cargo fmt --all --check →pass,rc=0.
-  - [x] ADDRESSED: 0536 cargo clippy -p sc-core --lib --profile test --message-format json
-    -- -D warnings →rc0. Native compiler artifact identifies sc_core library with profile.test=true;
-    the actual library-test target is accepted,including repaired module. cargo test -p sc-core
-    --lib command::bus::retained::tests →1 passed/83 filtered,rc=0. Existing usizeMAX count-boundary
-    refusal/first-error/no-wrap and normal prospective count3 assertions remain unchanged and pass.
-  - [x] NO REGRESSION: 0536 native production/test byte identity after formatting →pass,rc=0;
-    cargo fmt --all --check →pass,rc=0. Native tools use local_environment.py. mdbook build docs/book
-    and positive publication →93/248/1590/2770,rc=0;glossary →310/9/158/0 failures,rc=0;knowledge-map
-    →pass,rc=0. Receipt694 →3 exact Git spans,rc=0;retention →1148 logical/53 working/64578 decodedL/
-    5015326 decodedB/2592663 residentB,rc=0. Full prepush gate remains pending,owned by prepush-400;
-    D308 formula-fixture owns15 separate denied indexing sites before full retry. No runner verdict.
-  - [x] LOCKSTEP: 0536 D307 cause/history/move-only proof/closure and D308 next repair owned in task/
-    PLANNING. Book explains focused library versus library-test/full target scope. Whole0535 retained
-    694/three exact Git spans. MEMORY/DEV/CHANGE/index align;LIVE defect row reflects D307 fixed/D308
-    owned,29 suites/G1 6/18 unchanged. README objective/commands reviewed unchanged. Complete and
-    commit D307 before activating D308;then retry all required full gates from clean completed HEAD,
-    normal push and actual hosted job observation. Stop component/whole paired/effect owners remain.
-    promotion: declined (application of indexed target-scoped claim verification and existing strict lint contract;no new product assumption).
+  Goal:0536 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part695.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.formula-fixture`
-  Status: `pending`
-  Goal:D308 P1 fix15 denied panic-prone indexing sites in existing formula_root_value_contract
-  fixture reader,exposed by focused core-test Clippy after D307 move. Preserve actual frozen
-  fixture rows/assertions/numeric kernel;use explicit checked field access. Finish/commit D307
-  before activating this repair. Run this test target's lint/native checks,then commit before
-  retrying required full prepush check/gate/probes. No blanket lint suppression or fixture retune.
+  Status: `done`
+  Goal:0537 D308 checked exact eight-field destructuring removes15 denied indexed fixture reads
+  while preserving original row assertions,fixtures,expected values and root arithmetic.
+  - [x] REPRODUCE / ISSUE: 0537 cargo clippy -p sc-core --tests -- -D warnings after D307 repair
+    →rc101,15 indexing_slicing diagnostics in formula_root_value_contract.rs. Required wider lint
+    cannot accept this existing fixture reader. Original row length assertions already constrained
+    valid indices;this is strict fixture-lint compliance,no numeric/runtime defect is inferred.
+  - [x] ROOT CAUSE: 0537 git log -- crates/sc-core/tests/formula_root_value_contract.rs
+    →0255 e646da3c sqrt and0256 a67f4c30 hypot,rc=0. Original two loops assert8 columns but access
+    positions directly;the strict lint requires checked access independently of those assertions.
+    cargo clippy -p sc-core --test formula_root_value_contract -- -D warnings after checked slice
+    patterns →pass,rc=0;numeric kernel and imported formula_roots.tsv remain unchanged.
+  - [x] FIX: 0537 two exact checked eight-cell slice patterns name operation,operand components,
+    expected kind and witness. Preserve both original assert_eq!(cells.len(),8) and all existing
+    expectations/subset counts. Source inspection →no cells[index] remains,rc=0. No new test,
+    fixture retune,lint waiver,numeric kernel change or new behavior. cargo fmt --all --check
+    →pass,rc=0. Existing allowed fixture expectation policy is unchanged.
+  - [x] ADDRESSED: 0537 cargo clippy -p sc-core --test formula_root_value_contract -- -D warnings
+    →pass,rc=0. cargo test -p sc-core --test formula_root_value_contract →4 passed/0 filtered,rc=0.
+    Existing independent15 sqrt/10 hypot rows retain exact rounding/domain/kind expectations and
+    authored subset assertions;wrong-kind checks still refuse in original order. The parser's
+    arity assertion remains explicit before checked destructuring. No production code changed.
+  - [x] NO REGRESSION: 0537 cargo fmt --all --check →pass,rc=0;unchanged fixture/kernel Git diff
+    scope and both original row-arity assertions →verified,rc=0. Native tools use local_environment.py.
+    mdbook build docs/book and positive publication →93/248/1590/2770,rc=0;glossary →310/9/158/0
+    failures,rc=0;knowledge-map →pass,rc=0. Receipt695 →3 exact Git spans,rc=0;retention →1149 logical/
+    54 working/64642 decodedL/5021903 decodedB/2599240 residentB,rc=0. Required full check/gate/probes
+    and normal push/actual hosted jobs remain parent prepush-400,not implied by this focused repair.
+  - [x] LOCKSTEP: 0537 D308 cause/checked pattern/closure and full retry remain tracked. Whole0536
+    retained695/three exact Git spans. Book documents checked numeric fixture readers under strict
+    target lint;MEMORY/DEV/CHANGE/index/PLANNING align. LIVE defect row marks D307/D308 fixed;
+    29 suites/G1 6/18 unchanged. README objective/commands reviewed unchanged. Commit before full
+    retry from clean completed HEAD;first failed400 baseline/proof logs remain project-local.
+    No push or hosted success is claimed. Stop component/whole paired/physical/effect proof retain
+    their later owners. Native exact index book authority and terminal consumption remain mandatory.
+    promotion: declined (application of indexed strict fixture-lint and target-scoped claim contracts;no new product assumption).

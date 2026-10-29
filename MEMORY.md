@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.formula-fixture in docs/tasks/G1-SLICE-execution.md:
-  D308 fix15 denied fixture indexing sites in formula_root_value_contract.rs with checked access;
-  preserve frozen rows/assertions/numeric kernel. Focused target lint/native checks,docs and commit.
-- Required prepush-400 remains active:clean51e421cf derived400 full check refused D307 lib-test
-  layout,rc2;gate/probes did not start,push held. D307 fixed0536 by moving exact existing test block
-  to EOF;production/test bytes unchanged,actual library-test Clippy rc0/native boundary1 pass.
-  Earlier broader core-test lint exposed D308/rc101;no blanket core/full success or hosted verdict.
-- After D308 commit,derive HEAD/ahead count and rerun full check/gate/probes from clean completed
-  state,then normal main push/actual hosted jobs+steps for that SHA. Keep logs local,consume terminals.
+- Next G1-SLICE.6.5.3.2.prepush-400 in docs/tasks/G1-SLICE-execution.md:derive current HEAD/
+  ahead count,then rerun full make check/gate/probes from clean completed state. Normal main push
+  only after all pass;observe actual hosted jobs/steps for that SHA. Keep logs project-local and
+  consume every producer/commit/push terminal before edits/retries/dependent work. Never force push.
+- First clean51e421cf/400 check refused D307 layout,rc2;gate/probes never started,push held. D307
+  fixed0536 with exact production/test content preserved,actual library-test lint/native1 pass.
+  D308 fixed0537:15 indexed formula fixture reads become checked eight-field patterns;original
+  arity assertions/frozen rows/expectations/kernel unchanged. Focused target Clippy/native4/fmt pass.
+- Whole0536 retained695;book93/248/1590/2770,glossary0/map,695 receipt3/retention1149 pass. LIVE
+  defects D307/D308 fixed;29 suites/G1 6/18 unchanged. Wider prepush success/hosted verdict pending.
 - Then .6.5.3.2.3.3.acceptance stop component checkpoint and .3.4 live lineage. Stop pipeline/source
-  join0535 implemented with focused checks;whole0535 retained694. Book93/248/1590/2770,glossary0/map,
-  694 receipt3/retention1148 pass. LIVE29 suites/G1 6/18;defect census D307 fixed/D308 owned.
-- Full PNT continues. Real formula/Profile/geometry/physical/current authority/aggregate operations/
-  lineage/paired effects/full proof remain explicit owners. Native --index book authority mandatory.
+  join0535 implemented with focused checks;whole source join694. Full PNT continues. Real formula/
+  Profile/geometry/physical/current authority/aggregate operations/lineage/paired effects/full proof
+  remain explicit owners. Native --index book authority mandatory;consume all preparation terminals.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
