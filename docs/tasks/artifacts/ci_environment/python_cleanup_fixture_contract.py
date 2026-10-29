@@ -19,6 +19,8 @@ CORE = (ENTRY, SOURCE, PROFILE_SOURCE, ROOT / 'scripts/check_handoff.sh',
         ROOT / 'scripts/handoff_census.py', ROOT / 'README.md')
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 BEFORE = '0ab74212aa1b7cb3d3afed8e1c84b6b0e9fee600'
+# Reviewed later production changes: certificate protection0285 and idle-CUA0315.
+INSPECTOR_BASELINE = '35e2650bb0bb20f59f2cf3d461416027682fa46a'
 OLD = subprocess.check_output(['git', 'show', BEFORE + ':' + ENTRY.relative_to(ROOT).as_posix()], text=True)
 WORK = ROOT / 'target/cleanup-fixture-controls' / str(os.getpid())
 PROFILE['prepare_producer'](ROOT, sources=(*CORE, Path(__file__)), directories=(WORK,))
@@ -592,18 +594,93 @@ def ownership_controls():
     print('fixture teardown: actual unowned refusal/omission red preserve sentinel; actual nonempty fake marker stops before tree deletion')
 
 
+def protected_store_controls():
+    """Trap package-store traversal; test actual prefix restoration on every outcome."""
+    script = ENTRY.read_text()
+    root = mirror('protected-store-isolation')
+    store = root / 'target/cargo-home'
+    source = root / SOURCE.relative_to(ROOT)
+    original_iterdir = Path.iterdir
+
+    def iterdir(path):
+        caller = sys._getframe(1)
+        if path == store and caller.f_code.co_name == 'inspect' and caller.f_code.co_filename == str(source):
+            raise AssertionError('protected-store mutant reached package-store traversal')
+        return original_iterdir(path)
+
+    old_operation = "     protected_store, 'protected output/store',"
+    assert script.count(old_operation) == 1
+    try:
+        Path.iterdir = iterdir
+        module = execute(root, script)
+        faulty = script.replace(old_operation,
+                                "     lambda m, p: m['inspect']('target/cargo-home', set()), 'protected output/store',", 1)
+        try:
+            execute(root, faulty)
+        except AssertionError as error:
+            assert 'protected-store mutant reached package-store traversal' in str(error), error
+        else:
+            raise AssertionError('original store-based mutation did not reach the traversal trap')
+    finally:
+        Path.iterdir = original_iterdir
+
+    namespace = module['GOOD']['inspect'].__globals__
+    original_prefixes = namespace['PROTECTED']
+    expected = runpy.run_path(str(source))['PROTECTED']
+    assert original_prefixes == expected, 'protected fixture prefix leaked after expected refusal'
+    original_require = namespace['require']
+
+    def abort(*args):
+        raise RuntimeError('controlled inspector failure')
+
+    try:
+        namespace['require'] = abort
+        try:
+            module['protected_store'](module['GOOD'], module['BASE'] / 'protected-exception')
+        except RuntimeError as error:
+            assert str(error) == 'controlled inspector failure', error
+        else:
+            raise AssertionError('inspector failure was not injected')
+    finally:
+        namespace['require'] = original_require
+    assert namespace['PROTECTED'] is original_prefixes, 'protected prefix not restored after exception'
+
+    restore = "        namespace['PROTECTED'] = original"
+    assert script.count(restore) == 1
+    faulty = execute(mirror('protected-store-restoration-red'), script.replace(restore, '        pass', 1))
+    try:
+        assert faulty['GOOD']['inspect'].__globals__['PROTECTED'] == expected, 'protected fixture prefix leaked'
+    except AssertionError as error:
+        assert str(error) == 'protected fixture prefix leaked', error
+    else:
+        raise AssertionError('prefix restoration omission passed')
+    assert not any(module['BASE'].iterdir()) and not any(faulty['BASE'].iterdir())
+    assert all(path.read_bytes() == data for path, data in FROZEN.items())
+    print('protected-store controls: real refusal; empty-fixture isolation/traversal-trap red; expected/unexpected restoration; actual restore-body assertion red; sources exact')
+
+
 def original_body_controls():
     """Compare complete original AST after the declared plan/root/protected-setup adapters."""
     old, current = ast.parse(OLD), ast.parse(ENTRY.read_text())
     original_case = next(node for node in old.body if isinstance(node, ast.FunctionDef) and node.name == 'case')
     original_finally = next(node for node in original_case.body if isinstance(node, ast.Try)).finalbody
-    helpers = {'load_profile', 'producer_plan', 'fixture_path', 'construction_plan', 'removal_plan', 'remove_fixture'}
+    original_store = next(node for node in old.body if isinstance(node, ast.Expr)
+                          and isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name)
+                          and node.value.func.id == 'case' and node.value.args[0].value == 'protected-store')
+    real_store = ast.parse("refusal(GOOD, lambda m: m['inspect']('target/cargo-home', set()), 'protected output/store')").body[0]
+    helpers = {'load_profile', 'producer_plan', 'fixture_path', 'construction_plan', 'removal_plan', 'remove_fixture',
+               'protected_store'}
     added = {'PROFILE_SOURCE', 'PROFILE', 'SOURCES', 'NAMES', 'FILE_NAMES', 'OWNED'}
 
     class Project(ast.NodeTransformer):
         def visit_Expr(self, node):
             value = node.value
             if isinstance(value, ast.Call):
+                if ast.dump(node, include_attributes=False) == ast.dump(real_store, include_attributes=False):
+                    return None
+                if isinstance(value.func, ast.Name) and value.func.id == 'case' and value.args[0].value == 'protected-store':
+                    assert ast.dump(value.args[2], include_attributes=False) == ast.dump(ast.Name(id='protected_store', ctx=ast.Load()), include_attributes=False)
+                    value.args[2] = original_store.value.args[2]
                 if isinstance(value.func, ast.Name) and value.func.id in {'producer_plan', 'construction_plan'}:
                     return None
                 if isinstance(value.func, ast.Attribute) and isinstance(value.func.value, ast.Name) and value.func.value.id == 'OWNED':
@@ -653,8 +730,8 @@ def original_body_controls():
     protected.body.insert(0, old.body.pop(position - 1))
     projected = Project().visit(current)
     assert ast.dump(projected, include_attributes=False) == ast.dump(old, include_attributes=False), 'cleanup fixture original complete bodies/constants/signatures/argv changed'
-    assert SOURCE.read_bytes() == subprocess.check_output(['git', 'show', BEFORE + ':' + SOURCE.relative_to(ROOT).as_posix()])
-    print('fixture original AST: complete bodies/constants/signatures/cases/argv exact through declared planning/root/protected-setup/mutant-isolation adapters; inspector unchanged')
+    assert SOURCE.read_bytes() == subprocess.check_output(['git', 'show', INSPECTOR_BASELINE + ':' + SOURCE.relative_to(ROOT).as_posix()])
+    print('fixture original AST: complete bodies/constants/signatures/cases/argv exact through declared planning/root/protected-setup/mutant-isolation/protected-store adapters; inspector unchanged')
     root = mirror('root-selector')
     source = root / SOURCE.relative_to(ROOT)
     PROFILE['plan_producer'](ROOT, sources=(*CORE, Path(__file__)), output_files=(source,))
@@ -741,6 +818,7 @@ if __name__ == '__main__':
         before_alias_control()
         before_linked_input_control()
         capture_controls()
+        protected_store_controls()
         physical_controls()
         restoration_controls()
         ownership_controls()

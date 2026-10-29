@@ -280,6 +280,14 @@ original fifteen cases and eleven in-memory guard faults. Run one real fixture c
 its original base is target/scratch/artifact_cleanup_probes, and each selected child must be absent.
 A successful run leaves that base empty and preserves the inspector and all six source inputs.
 
+The real package store is checked only with all protections intact. Its guard-removal test uses an
+empty owned fixture,temporarily added to the actual inspector function's protected prefixes. Every
+original prefix remains;the list is restored on success or exception. This isolates the intended
+guard from unrelated Git checkouts inside a populated store. No mutant traverses the real store.
+The companion retains the original fixture AST baseline and pins the complete inspector to its
+reviewed0315 revision,including certificate protections and explicit idle-CUA forwarding. A later
+producer change requires explicit baseline review;this is not a moving HEAD comparison.
+
 Before the first helper executes, bounded metadata checks require a local regular profile file,
 a safe scripts parent and no Git marker there. The fixture entry derives its root from itself,
 then checks its own source, inspector, profile, canonical checker/census and README. It plans all

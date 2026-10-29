@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0543 — align and watch the approved MCP envelope
+## STITCHCAD-G1-0544 — isolate protected-store faults and retain reviewed source identity
 
-- Fix D316 stale stdio-only row using existing approved stdio-first/per-profile admission policy. K7 requires one valid envelope row and refuses the retired restriction;no runtime transport approval or roadmap change.
-- Command15/0 includes5 envelope refusals/actual checker-body assertion reds and prose positive;existing transport controls pass. Matrix107/29/0,book93/248/1590/2771 and history checks pass;whole0542 retained701/three exact Git spans.
-- LIVE29 suites/G1 6/18 unchanged,D316 fixed,D313–D315 owned. Last G0 review18/1 remains human unapproved. Full gates/push/actual hosted jobs wait for remaining repairs.
+- Fix D313 using an empty owned protected fixture and guaranteed actual-prefix restoration. Preserve the genuine store refusal and all production cleanup protections. Add traversal-trap/restore-omission controls and an exact fixture AST adapter.
+- Fix discovered D317 stale whole-inspector baseline by reviewing the two later certificate/idle-CUA changes and explicitly pinning0315. Retain frozen identity and original fixture baseline;no moving HEAD comparison or policy weakening.
+- Cleanup15/11,fixture/physical17/real preservation,certificate,book/history checks pass. Whole0543 retained702/three exact Git spans. LIVE29 suites/G1 6/18 unchanged,D313/D317 fixed,D314–D315 owned;full gates/push/actual hosted jobs pending. No cleanup apply/cadence reset.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

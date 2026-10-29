@@ -166,8 +166,23 @@ case('git-descendant', lambda p: (p / 'nested/.git').mkdir(parents=True),
 case('nonignored', lambda p: None,
      lambda m, p: m['inspect']('README.md', set()), 'not ignored',
      ("require(subprocess.run(['git', '-C', str(ROOT), 'check-ignore', '-q', '--', name], env=environment).returncode == 0,\n            'not ignored: ' + name)", 'pass'))
+def protected_store(module, fixture):
+    # runpy may return a copy of the module mapping. Change the actual function
+    # namespace, retaining every real prefix and restoring it on every outcome.
+    namespace = module['inspect'].__globals__
+    original = namespace['PROTECTED']
+    namespace['PROTECTED'] = (*original, relative(fixture))
+    try:
+        module['inspect'](relative(fixture), set())
+    finally:
+        namespace['PROTECTED'] = original
+
+
+# The genuine store still refuses with all guards intact. Never run the
+# removed-guard mutant on its uncontrolled contents (which may include Git).
+refusal(GOOD, lambda m: m['inspect']('target/cargo-home', set()), 'protected output/store')
 case('protected-store', lambda p: None,
-     lambda m, p: m['inspect']('target/cargo-home', set()), 'protected output/store',
+     protected_store, 'protected output/store',
      ("require(not any(under(name, p) for p in PROTECTED), 'protected output/store: ' + name)", 'pass'))
 case('escaping', lambda p: None,
      lambda m, p: m['local'](Path('../outside')), 'path locality',

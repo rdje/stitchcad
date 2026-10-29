@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — align and watch the approved MCP envelope
+## _(2026-10-29 UTC)_ — isolate protected-store faults and retain reviewed source identity
 
-0543 D316:matrix stdio-only row contradicted active four-profile roadmap/decision while K7 read only roadmap,command chapter and glossary. Correct the projection to stdio-first with per-profile threat model/admission from G1. No runtime approval or new policy.
-K7 requires one five-cell MCP envelope row and refuses retired restriction. Command15/0 includes5 copied-row refusals/actual body assertion reds and prose positive;existing8 transport body controls,glossary/future/history positives pass0. Before-change census17/5/5/0 accepted stale row.
-Book93/248/1590/2771,matrix107/29/0,701 receipt3/retention1155 pass0. Whole0542 retained before curation. LIVE29 suites/G1 6/18 unchanged,D316 fixed,D313–D315 owned. Last G0 review18/1/human unapproved;full gates/push/actual hosted jobs await repairs.
-[Whole0542 matrix repair](docs/history/stitchcad-devnotes-part701.md). Promotion declined:existing approved transport decision/independent projection checks. Scope is the actual K7 input gap,not a whole-tree absence claim. Next controlled protected-store mutation D313.
+0544 D313:GOOD already protects the real store;removed guard was masked by a real nested Git checkout. Use an empty owned protected fixture in the actual function globals,retain all prefixes,restore on every outcome. Real store only sees intact protections;production cleanup unchanged.
+D317:companion whole-file pin0ab74212 predates reviewed certificate0285 and idle-CUA0315 changes. Source diff/log confirms only those changes;pin whole inspector explicitly35e2650b,retain original fixture AST baseline with exact declared adapter. No moving HEAD or removed identity guard.
+Cleanup15/11,fixture capture/body/physical17/link/restore/ownership/AST/root,real zero residue/six inputs,certificate omission controls pass0. Book93/248/1590/2771,702 receipt3/retention1156 pass0. Whole0543 retained;LIVE29 suites/G1 6/18 unchanged,D313/D317 fixed,D314–D315 owned.
+[Whole0543 transport repair](docs/history/stitchcad-devnotes-part702.md). Promotion declined:indexed guard isolation/exception restoration/frozen-source review. No project cleanup apply,cadence reset or source/store/certificate change. Full gates/push/actual hosted jobs after remaining repairs;G0 human unapproved.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

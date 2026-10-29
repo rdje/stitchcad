@@ -1,14 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.cleanup-mutation in docs/tasks/G1-SLICE-execution.md:
-  D313 controlled protected-store mutant isolation;then D314 static-status guard,D315 complete
-  producer candidate inventory last. Commit each repair before moving;preserve stores/certificates.
-- D316 fixed0543:approved per-profile MCP envelope,K7 unique row/retired restriction checks.
-  Command15/0 includes5 envelope refusals/body reds;existing8 transport controls/positives pass.
-- Whole0542 retained701/3 Git spans;book93/248/1590/2771,matrix107/29/0,retention1155 pass.
-  LIVE29 suites/G1 6/18 unchanged;D307–D312/D316 fixed,D313–D315 P1 owned. No runtime approval.
-- Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538. No push/hosted verdict.
-  GitHub access verified;credentials readonly transport dependency. G0 last18/1,human unapproved.
+- Next G1-SLICE.6.5.3.2.prepush-400.static-status in docs/tasks/G1-SLICE-execution.md:
+  D314 current formula-static-validation status guard;then D315 complete producer candidate
+  inventory last. Commit each repair;read current chapter/curation before changing the guard.
+- D313/D317 fixed0544:empty protected fixture isolates actual guard;restore actual globals on
+  every outcome. Frozen inspector pin35e2650b includes reviewed certificate/idle-CUA changes.
+- Cleanup15/11,fixture/physical17/real-input preservation,certificate controls pass0. Whole0543
+  retained702/3 spans;book93/248/1590/2771/retention1156 pass. No cleanup apply or cadence reset.
+- LIVE29 suites/G1 6/18 unchanged;D307–D313/D316/D317 fixed,D314–D315 P1 owned. Last G018/1
+  human unapproved. Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538,no hosted verdict.
 - After remaining repairs,full check/gate/probes from clean completed HEAD,normal push/actual
   hosted jobs. Then stop .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/
   Profile/current authority/aggregate/effect proof remain owned. Consume terminals before edits.

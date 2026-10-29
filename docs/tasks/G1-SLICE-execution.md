@@ -432,39 +432,43 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0542 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part701.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.matrix-transport`
   Status: `done`
-  Goal:0543 D316 P1 align normative MCP envelope with already approved roadmap v0.4;
-  watch the stale restriction without approving any runtime transport or changing policy.
-  - [x] REPRODUCE / ISSUE: feature-matrix7 claimed MCP stdio-only while roadmap7.8 and active
-    decision_mcp-transports permit four profiles eligible from G1 after admission. Before-change
-    command census →17/5/5/0,rc=0,target/d316-before-census.log;the contradictory row was accepted.
-  - [x] ROOT CAUSE (WHY + WHERE): source check_transport_profiles reads roadmap,command chapter
-    and glossary;its normative-input list omitted envelope. Direct source/decision comparison
-    confirms stale row,rc=0. This is a bounded K7 input gap,not a claim about every repository
-    checker. Original policy already requires threat model/tests and explicit network/relay opt-in.
-  - [x] FIX: envelope row now says stdio-first,each profile needs its threat model/admission tests
-    from G1. K7 reads parsed MCP envelope row,requires one five-cell row and refuses retired spaced
-    or hyphenated stdio-only restriction. Actual copied-row faults remove/duplicate/malform/restore
-    old policy;removed guard bodies must admit the same faults. No policy or runtime implementation.
-  - [x] ADDRESSED (verified): local_environment.py -- bash
-    docs/tasks/artifacts/command_layer/run_command_layer_probes.sh →15 pass/0 fail,rc=0;
-    new envelope5 refusals/actual checker-body assertion reds,prose control0. Existing transport8
-    refusal/body reds,glossary refusal,future/historical positives pass;source exact. REAL17/5/5/0.
-  - [x] NO REGRESSION: bash -n both command scripts →rc=0;feature matrix census107/29/0,
-    rc=0;mdbook build/positive publication93/248/1590/2771,rc=0. Receipt701 →3 exact Git spans,
-    rc=0;retention1155 logical/60 working/65098 decodedL/5067711 decodedB/2645048 residentB,
-    rc=0;git diff --check →rc=0. Full gates/push/actual hosted jobs follow remaining D313–D315.
-  - [x] LOCKSTEP: whole0542 task/lesson/changelog retained701. MEM/DEV/CHANGE/LIVE/index/ledger/
-    book align;D316 fixed,29 suites/G1 6/18 unchanged. Last scoped G0 review18/1 remains human
-    unapproved;runtime profiles unapproved. README objective/commands unchanged. Next D313 cleanup
-    guard isolation;commit before moving. This applies existing transport decision,not a new choice.
-    promotion: declined (application of indexed approved transport policy and independently falsified normative projection checks;canonical decision already answers this scope).
+  Goal:0543 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part702.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.cleanup-mutation`
-  Status: `pending`
-  Goal:D313 P1 isolate protected-store guard mutation from real package-store contents. GOOD
-  inspect already refuses protected store before traversal. Removing that guard then encounters
-  nested Cargo Git checkout and another legitimate refusal,making expected mutant assertion fail.
-  Use controlled owned protected fixture for actual guard-body red;preserve actual store refusal,
-  all link/Git/volume/deletion guards and retained certificates. No production protection weakening.
+  Status: `done`
+  Goal:0544 D313 P1 isolate protected-store mutant;D317 P1 repair stale frozen inspector pin
+  exposed by focused companion. No production cleanup code,policy or preserved data changed.
+  - [x] REPRODUCE / ISSUE: full0538 cleanup mutation failed when removed protected guard reached
+    another Git-boundary refusal in populated Cargo store. GOOD protected refusal already correct.
+    Focused companion after D313 repair →new isolation/restoration controls pass,then stale whole
+    inspector0ab74212 identity fails,rc1 (D317);target/d313-fixture-contract.log.
+  - [x] ROOT CAUSE (WHY + WHERE): actual inspect checks protected prefixes before traversal;
+    mutant's real-store input makes an unrelated guard mask the intended counterfactual. Function
+    globals are the actual namespace even when runpy returns a mapping copy. Git diff/log0ab74212
+    →current cleanup.py show only certificate protection0285/c9e6da4c and idle-CUA0315/35e2650b,
+    rc=0;companion whole-file pin predated both reviewed changes. No new production defect inferred.
+  - [x] FIX: GOOD still checks genuine store;mutant uses an empty owned fixture temporarily
+    appended to actual inspector protected prefixes. Keep every real prefix and restore in finally.
+    Companion traps package-store traversal,checks expected/unexpected restoration and actual
+    restore-omission red. Original full fixture AST comparison adapts only this operation/helper/
+    additional real refusal. Entire inspector remains frozen to explicit reviewed0315 commit
+    35e2650bb0bb20f59f2cf3d461416027682fa46a,not moving HEAD;original fixture baseline retained.
+  - [x] ADDRESSED (verified): local_environment.py -- bash artifact_cleanup/
+    run_artifact_cleanup_probes.sh →15 pass/0 fail,11 compiled guard assertion reds,rc=0.
+    local_environment.py -- python3 -I -B ci_environment/python_cleanup_fixture_contract.py
+    →capture/body omission/physical17/link/restoration/ownership/AST/root controls pass,rc=0;
+    dedicated protected-store traversal trap and restore-body assertions turn red as required.
+    Paths above are under docs/tasks/artifacts/. Frozen inspector identity now passes,rc=0.
+  - [x] NO REGRESSION: companion --real →original15/11,six source inputs exact,zero fixture
+    residue,no project cleanup apply,rc=0. certificate_store_controls.py →protected2/ordinary1/
+    actual omission-red1/restored1,data/source exact,rc=0. Book build/positive publication →
+    93/248/1590/2771,rc=0;receipt702 →3 exact Git spans,rc=0;retention1156 logical/61 working/
+    65151 decodedL/5073013 decodedB/2650350 residentB,rc=0;git diff --check →rc=0.
+  - [x] LOCKSTEP: whole0543 task/lesson/changelog retained702. Cleanup annex documents isolated
+    fixture and explicit reviewed inspector pin. MEM/DEV/CHANGE/LIVE/index/ledger align;D313/D317
+    fixed,29 suites/G1 6/18 unchanged. Cleanup cadence not reset;stores/certificates untouched.
+    README objective/commands unchanged. Next D314 static-status,then D315 inventory before full
+    gates/push/actual hosted jobs. G0 human closure remains unapproved;commit before moving.
+    promotion: declined (application of indexed independent guard isolation,exception restoration and explicit frozen-source review contracts;no new cleanup policy).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.static-status`
   Status: `pending`
   Goal:D314 P1 align static_status_contract with maintained formula-static-validation chapter.
