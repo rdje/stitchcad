@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.3.acceptance:scoped stop component checkpoint after implemented
-  .1–.4. Full clean/pushed79bd6f6a check/gate/probes29 and actual exact-SHA hosted jobs/steps
-  all pass,including WASM. Native stop29 and independent32 rows available;keep full paired/
-  physical/authority/effect/release proof separate. Then live span lineage .3.4. Full PNT.
-- Cleanup0565 completed2026-10-29 after due cadence:4 trees/702 strays/45740 files/1472184692B
-  removed;all706 absent before regeneration,tracked exact. Original four workspaces/both full
-  numerical stores1538 entries/13185133915B byte-exact;1692 unsafe entries preserved.
-- Evidence moved safely before cleanup:target/artifact_cleanup_audit/seam-20261029 contains
-  verification-evidence/{prepush-400-0562,prepush-400-0563,hosted-0563},24 files exact;all702
-  strays copied under retired-strays. Plan/result/independent-post/preserved-before/Rust receipts.
-- Whole0564/prior ledger retained723/four spans. Proof/cleanup commits follow pushed0563;derive
-  ahead count,no hosted verdict for later commits. D334 P2/G0-CONTRACT.15f after current G1/
-  before G0 closure;normal18/1/19,human unapproved. D156/12 audits/D223/PLANNING.5 pending.
+- Next G1-SLICE.6.5.3.2.3.4:actual retired-parent/new-child span lineage. Read native identity/
+  ownership/resource/current validation and exact graph/Gather references before changes. Split
+  into safe owned slices;no ID reuse,silent old-target retarget or fabricated source readiness.
+- Stop component .3.3 closes0566:actual Design29/core semantic2/independent32-row oracle pass;
+  four shared cuts,B orientation,65-bit originals. Earlier full20 stop doctests14 refusal/six
+  API pass;all production/executable bytes exact to full/pushed79bd6f6a except two-line test
+  comment. Rechecked its3 view cases pass. Logs target/stop-component-0566;no runtime feature edit.
+- Whole0565/prior ledger retained724/four spans. LIVE G1 6/18;full local/hosted79bd6f6a success
+  stays exact-SHA scoped,including WASM. Whole paired physical/formula/Profile/geometry/authority/
+  effects/undo/replay/cancel/quota/mutation/release remain pending. Full PNT;focused checks per slice.
+- Current full/hosted/D333/D334 receipts preserved under target/artifact_cleanup_audit/
+  seam-20261029/verification-evidence;all702 removed strays retained separately. D334 P2 .15f
+  after current G1/before G0 closure;normal18/1,human unapproved. D156/D223/PLANNING.5 pending.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

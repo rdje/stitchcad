@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — clean regenerable artifacts while retaining exact proof
+## _(2026-10-29 UTC)_ — accept the implemented stop component
 
-0565 applies reviewed frozen daily plan after full/push/hosted milestone. OS-visible handoff OK;4 trees/702 strays/45740 files/1472184692B removed. Immediate independent no-launcher census proves706 absent,tracked hash exact;1538 protected entries/13185133915 regular B unchanged across4 originals/2 certificates.
-All702 strays copied/verified;24 latest full/hosted/D333/D334 files retained under protected audit seam-20261029. Package/dependency stores excluded,not wholly hashed. Unsafe1692 preserved;Rust release/deps .bin/.log0,incremental1890 bins kept because linked objects block safe whole-cache removal.
-Preparation refused directories as regular sources before outputs;correct public directory/file plans passed. Sequencing0564 staged before authority terminal consumption;later0 plus independent index gate proved exact committed authority. Consume terminal before staging/dependent changes;no bypass/retry occurred.
-[Whole0564 milestone proof](docs/history/stitchcad-devnotes-part723.md). Promotion declined:indexed preservation/residue/terminal discipline. LIVE G1 6/18/G0 human unapproved unchanged;D334 P2/D156/D223/PLANNING.5 owned. Next scoped stop component checkpoint,then lineage;full PNT.
+0566 closes scoped stop .3.3 after six implemented stages. Actual Design29/core semantic2/independent32 oracle rows pass with four shared cuts,B orientation and65-bit originals. Whole input hashes exact after each. Existing refusal,copy/side/order/current/resource/owner and original source contracts retained.
+Complete crates/oracle comparison to full/pushed79bd6f6a permits only a stale two-line test comment;all executable bytes unchanged. Three affected view cases pass again. Earlier full check passed20 stop doctests:14 privacy/lifetime/default refusals/six API. Production sources remain byte-exact;no broad rerun.
+Whole0565/prior ledger retained724/four spans;book/live/index/D301 agree. LIVE G1 6/18,stop native31,G0 human unapproved;D334 P2/D156/D223/PLANNING.5 owned. No new span ID,bus handler,physical pairing,authority/effect/release proof;real dependencies/full paired acceptance retain their owners.
+[Whole0565 cleanup proof](docs/history/stitchcad-devnotes-part724.md). Promotion declined:indexed scoped component/source ownership acceptance. Next actual retired-parent/new-child span lineage .3.4. Full PNT;focused checks per implementation slice,full paired verification after feature completion.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -101,8 +101,8 @@ fn command_stop_partitions_match_frozen_ordered_children_and_actual_design_retai
             }
         }
 
-        // Actual source admission/capture and Graph constructors independently consume the views.
-        // The sealed cross-token identity join is the next production slice,not implied here.
+        // This case independently consumes source admission/capture and the ordered stop views.
+        // The separate source-binding cases exercise the sealed cross-token identity join.
         let (model, _) = super::super::command_model_limits(&state);
         let source = request
             .admit_sewing_source(

@@ -362,7 +362,8 @@ authored stop rows and ordered child views are available below,with their own im
 Ten actual cross-crate Design cases cover the successful and refusing paths above,including exact
 borrowed object identities,unused registry data,N0 missing copies,identity-range quota1 versus
 required peak2,touching self-seams,later anchors and original numeric sources. Privacy/lifetime and
-public API doctests pass. Component and whole paired acceptance retain their later task owners.
+public API doctests pass. The scoped component checkpoint is recorded below;whole paired acceptance
+remains separately owned.
 
 ## Derive actual authored membership rows
 
@@ -431,8 +432,8 @@ independent membership rows with four shared-cut controls,both semantic kinds,au
 Notch order and later anchors. They also cover missing/wrong-Piece/outside-side refusals after a
 valid prefix,reflected copies,touching self-seams,shared side tags and the two-origin case above.
 Privacy/lifetime and public API doctests pass. Ordered borrowed child views follow below. The sealed
-actual caller join follows the views below;component and whole paired/physical/authority/effect
-verification retain their later owners.
+actual caller join follows the views below. The scoped component checkpoint is recorded below;
+whole paired/physical/authority/effect verification remains separately owned.
 
 ## Obtain two ordered borrowed child views
 
@@ -525,8 +526,8 @@ The complete native workspace check,doctrine gate and all29 repository probe sui
 79bd6f6a from the clean committed state. The same SHA was pushed normally. Its hosted
 [doctrine job](https://github.com/rdje/stitchcad/actions/runs/40887026733/job/123493403887) and
 [Rust job](https://github.com/rdje/stitchcad/actions/runs/40887026757/job/123493404119) completed
-successfully on every required step,including the actual WASM build. The stop component checkpoint
-and whole paired/physical/authority/effect acceptance retain their separate owners.
+successfully on every required step,including the actual WASM build. The scoped stop component
+checkpoint is recorded below;whole paired/physical/authority/effect acceptance remains separately owned.
 
 This token proves owner coherence. A metadata capture can be obtained through its own public
 admission without complete Design source preflight,so this join does not add that preflight or
@@ -535,3 +536,23 @@ admission and the selected original quantity/context APIs as needed. It supplies
 or Profile value,physical correspondence,aggregate runtime/snapshot budget,fresh mutation authority,
 new live child lineage,atomic command effect or release approval. The SplitSeamSpan bus handler and
 its combined undo/replay/cancellation/quota proof remain unimplemented and explicitly owned.
+
+## Scoped stop component checkpoint
+
+The stop component checkpoint is complete after all six admission/current/membership/view/join
+stages were implemented. A fresh focused run passes29 actual Design cases,two native semantic
+contract cases and the independent32-row oracle with four exact shared-cut controls,B orientation
+and65-bit later originals. The source comparison against the fully checked and pushed79bd6f6a
+revision permits only a two-line test-comment correction;all executable source bytes are unchanged.
+That full run also passed20 stop doctests:14 privacy/lifetime/default refusals and six public API
+examples. The comment now distinguishes a direct view-construction fixture from the separate
+sealed source-binding cases;its three affected view cases pass again.
+
+This accepts bounded stop inputs,complete local current evidence,authored closed memberships,
+ordered borrowed child references and exact captured request/target coherence. Shared current
+membership still selects no original preimage. Separate source admission and original quantity
+contexts remain necessary. It supplies no new live child span identities or installed command.
+
+The next implementation is retired-parent/new-child span lineage. Real formula/Profile/geometry
+providers,physical cut correspondence,fresh command authority,aggregate admission and atomic
+publication with undo/replay/cancellation/quota proof remain owned before whole paired acceptance.

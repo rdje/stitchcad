@@ -186,44 +186,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0496 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part652md).
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261029`
   Status: `done`
-  Goal: explicit daily cleanup due after2026-10-29 13:53UTC;last run2026-10-28 13:53UTC.
-  Use existing artifact_cleanup/cleanup.py frozen plan;inspect every candidate class before apply.
-  Preserve original generation/install trees,package stores,numerical certificates and current
-  verification evidence. Copy/verify current full/hosted logs into protected cleanup audit first
-  if selected;never delete uncertain/shared data. No changes outside this project or Git boundary.
-  Acceptance:OS-visible idle handoff before apply;exact selected removal and immediate independent
-  residue/tracked-byte/preservation census without reactivating scratch;Rust stray census. Own
-  ARTIFACT_CLEANUP/live docs/book sync and commit;then stop component checkpoint,not another audit.
-
-  Completion0565:reviewed daily cleanup after completed/published verification milestone.
-  - [x] ROOT CAUSE (WHY + WHERE): last cleanup2026-10-28 13:53UTC;daily cadence due during
-    prepush verification. Existing cleanup.py plan →706 selected/1692 unsafe skipped,rc=0.
-    Reviewed4 regenerable trees/702 strays;independent protected-prefix intersection0,rc=0.
-    Stores,original0450/0392g/0508 generation/install workspaces and certificates excluded.
-  - [x] ADDRESSED (verified): existing cleanup.py apply --idle-cua with OS visibility →handoff
-    OK,4 trees/702 strays/45740 files/1472184692B removed,residue0,tracked_change false,rc=0.
-    Immediate cleanup_20261029_guard.py after without launcher activation →all706 paths absent,
-    tracked hash exact,1538 protected entries/13185133915 regular B exact,rc=0. Audit seam-
-    20261029 contains frozen plan/result/preserved-before/independent-post and Rust census.
-  - [x] NO REGRESSION: all702 strays copied and byte-verified before removal;24 current full/
-    hosted/D333/D334 evidence files also independently retained and SHA256 verified afterward,
-    rc=0. Complete four original workspace/two numerical stores hashed before/after;package/
-    dependency stores excluded by independent overlap check,not claimed wholly hashed. Rust
-    release/deps .bin/.log0;1890 normal incremental bins retained because linked object files
-    make complete native/WASM incremental roots unsafe to remove. Actual census rc=0.
-  - [x] LOCKSTEP: latest cleanup record/book/MEM/DEV/CHANGE/index align;whole0564/prior ledger
-    retained723/four Git spans. Local+hosted79bd6f6a success stays exact-SHA scoped;G1 6/18/G0
-    human unapproved/D334 P2/D156/D223/PLANNING.5 unchanged. No runtime or policy producer edit.
-    Next stop component checkpoint .3.3.acceptance,then actual lineage .3.4;full PNT continues.
-    PREPARATION: first evidence helper passed directories as regular sources;planner refused
-    before output. Correct public directory validation plus actual regular-file plan passed0.
-    SEQUENCING INCIDENT0564:stage began before authority terminal was consumed. Later terminal0
-    and independent staged-object gate proved exact authority;normal commit clean,no retry.
-    Consume every terminal before staging or dependent changes;no exception or bypass is adopted.
-    Focused post-residue book build/publication →93/248/1590/2771,rc=0;retention1177 and
-    receipt723/four exact Git spans pass,rc=0. LIVE_STATUS reviewed;feature states unchanged.
-    promotion: declined (application of indexed copy/verify/delete,independent preservation and terminal-before-staging rules;no new mechanism or product authority).
-
+  Goal:0565 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part724.md).
 - ID: `G1-SLICE.6.5.3.2.tracking`
   Status: `done`
   Goal:0495 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part651md).
@@ -373,7 +336,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0527 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part686.md).
 - ID: `G1-SLICE.6.5.3.2.3.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: preserve actual semantic stops/copy ownership,cut-boundary behavior and original authored order
   in paired child partitions;use actual current anchors/range evidence rather than guessed assignment.
   Recovery0528:existing sewing range_contains_point uses closed <= endpoints;positive overlap
@@ -417,9 +380,50 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0535 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part694.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.acceptance`
-  Status: `pending`
-  Goal: deferred scoped actual stop component checkpoint after .1–.4;full paired lineage/effect/
-  physical/mutation verification remains .6.5.3.2.acceptance.
+  Status: `done`
+  Goal: scoped actual stop component checkpoint after implemented .1–.4. Requirements:roadmap
+  4.1 stable references/4.4 atomic command boundary;book command-seam-stops reviewed in full.
+  Actual admission/ownership/current/membership/views/source modules and Design support tests
+  reviewed;preserve closed Both membership,actual copy/side/authored order,current causes,
+  conservative bounds and exact captured request/target ownership. No production change planned.
+  LOCAL COMMENT DEFECT owned here:stop_partition_views.rs still calls the already implemented
+  sealed join the next production slice. Correct its case-local explanation;this case deliberately
+  constructs children directly,while source-binding cases exercise the join. Recheck its3 existing
+  view cases;all production sources and executable test tokens remain unchanged.
+  Execute29 actual sc-measure command_stop_ cases,two core paired_stop_contract cases and
+  independent32-row/four-shared-cut/B-orientation/65-bit oracle. Compare current complete crates/
+  oracle bytes to full/pushed79bd6f6a and extract its actual stop privacy/API doctests;do not
+  repeat full CI or run the deferred whole paired mutation matrix. Logs target/stop-component-0566.
+  Close component .3.3 only after exact terminals/source restoration/book sync;actual span lineage
+  .3.4 and whole paired physical/formula/Profile/geometry/authority/bus effects/undo/replay/cancel/
+  quota/mutation/release remain separate owners under .6.5.3.2.acceptance and existing dependencies.
+  Completion0566:scoped stop component complete;all implemented stages checked together.
+  - [x] ROOT CAUSE (WHY + WHERE): .1–.4 were implemented with focused checks;the deferred
+    component checkpoint remained pending. Source/book recovery confirms six actual stages.
+    git show 79bd6f6a:crates/sc-measure/tests/support/stop_partition_views.rs identifies the
+    obsolete next-slice comment while
+    source.rs already implements the sealed join. Exact two-line diff proof,rc=0;no runtime bug.
+  - [x] ADDRESSED (verified): local_environment.py -- cargo test -p sc-measure --test
+    design_inputs_contract command_stop_ →29 pass/0 fail;core sewing_contract paired_stop_contract
+    →2 pass/0 fail;stop_partition_oracle.py --check →32 rows/four shared cuts/B orientation/
+    65-bit later control,all rc=0. Driver target/verify_stop_component_0566.py and baseline/results/
+    design/graph/oracle logs retain actual invocations;complete source hashes exact after each.
+    Six stages preserve actual owners,all selected bounds,typed refusals and original authored data.
+  - [x] NO REGRESSION: only stale two-line test comment corrected;exact full79bd6f6a comparison
+    proves all other complete crates/oracle bytes unchanged and no untracked source,rc=0.
+    Recheck affected command_stop_partitions →3 pass/0 fail,rc=0. Protected full-run check.log
+    yields20 actual stop doctests,14 compile-fail/six API examples passed,rc=0;all production
+    sources remain byte-exact to that fully checked/pushed/hosted-success SHA. No fresh full
+    CI,whole paired mutation matrix,physical/authority/effect or release verdict inferred.
+  - [x] LOCKSTEP: component .3.3 closes;book explains acceptance and remaining lineage/effects.
+    Whole0565/prior ledger retained724/four spans. MEM/DEV/CHANGE/LIVE/index/D301 ledger align;
+    G1 6/18,stop native31/G0 human unapproved remain scoped. D334 P2/D156/D223/PLANNING.5 owned.
+    Next actual retired-parent/new-child span lineage .3.4. Full paired .acceptance remains
+    pending after real dependencies/effects implementation;no new span identities or bus handler.
+    Focused book main_inputs/build/check →93 chapters/248 scoped API rows/1590 source links/
+    2772 rendered links,rc=0;retention1178 and receipt724/four exact Git spans pass,rc=0.
+    promotion: declined (application of indexed post-implementation component acceptance,independent fixtures and exact actual owner/current-source contracts;no new product policy).
+
 - ID: `G1-SLICE.6.5.3.2.3.4`
   Status: `pending`
   Goal: canonical retired-parent/new-child span lineage with actual identity ownership and references;

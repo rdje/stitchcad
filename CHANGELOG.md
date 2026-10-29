@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0565 — clean generated artifacts and retain proof
+## STITCHCAD-G1-0566 — accept the semantic stop component
 
-- Reviewed daily cleanup removes4 trees/702 strays/45740 files/1472184692B. OS-visible idle check and immediate independent residue/tracked/preservation proof pass:706 absent;1538 protected entries/13185133915 regular B exact. All702 strays and24 current verification files retained in protected audit.
-- Unsafe1692 preserved;release/deps .bin/.log0,1890 incremental bins kept with linked caches. Whole0564 retained723/four spans;book/latest cleanup/live docs aligned. Local/hosted79bd6f6a verdict remains exact-SHA scoped;G1 6/18/G0 human unapproved and owned defects unchanged. Next stop checkpoint/lineage.
+- Close implemented stop component:actual Design29/core semantic2/oracle32 rows pass;four shared cuts,B orientation,65-bit originals. Earlier full20 API/privacy doctests apply to byte-identical production sources. Only a stale two-line test comment changes;affected3 view cases pass again.
+- Whole0565 retained724/four spans;book/live/D301/index align. G1 6/18/G0 human unapproved;D334 P2/D156/D223/PLANNING.5 owned. Next actual span lineage. Physical/dependency/authority/bus effect and whole paired/release proof remain pending;no full rerun between slices.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
