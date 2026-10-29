@@ -184,6 +184,17 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.6.5.3.2.cleanup`
   Status: `done`
   Goal:0496 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part652md).
+- ID: `G1-SLICE.6.5.3.2.cleanup-20261029`
+  Status: `pending`
+  Goal: explicit daily cleanup due after2026-10-29 13:53UTC;last run2026-10-28 13:53UTC.
+  Use existing artifact_cleanup/cleanup.py frozen plan;inspect every candidate class before apply.
+  Preserve original generation/install trees,package stores,numerical certificates and current
+  verification evidence. Copy/verify current full/hosted logs into protected cleanup audit first
+  if selected;never delete uncertain/shared data. No changes outside this project or Git boundary.
+  Acceptance:OS-visible idle handoff before apply;exact selected removal and immediate independent
+  residue/tracked-byte/preservation census without reactivating scratch;Rust stray census. Own
+  ARTIFACT_CLEANUP/live docs/book sync and commit;then stop component checkpoint,not another audit.
+
 - ID: `G1-SLICE.6.5.3.2.tracking`
   Status: `done`
   Goal:0495 completed scope; [whole scope/proofs](../history/window23.md#stitchcad-devnotes-part651md).
@@ -397,7 +408,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0528 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part687.md).
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400`
-  Status: `in_progress`
+  Status: `done`
   Goal: at the next derived400-commit cadence,run required full make check/gate/probes from the
   clean completed commit before pushing this project's main normally. Observe actual hosted jobs
   and steps for the pushed SHA;record explicit pending/refusing verdicts rather than infer success.
@@ -444,6 +455,29 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   D334 parse-only engineering wording independently owned G0-CONTRACT.15f,P2 after current G1
   activity/before G0 closure;normal-mode review/push remains applicable. Logs target/prepush-400-0562.
 
+  Completion0564:required400-cadence milestone closes at exact published79bd6f6a.
+  - [x] ROOT CAUSE (WHY + WHERE): clean1a51b37f full probes exposed D333 after all other
+    repaired entries;local field declarations fixed0563. Fresh target/verify_full_0563.py
+    baseline asserts clean79bd6f6a/derived428 and all three terminal records,rc=0.
+  - [x] ADDRESSED (verified): full scripts/run_make.sh check/gate/probes →0/0/0 at exact
+    79bd6f6aa383385d7e598efcffc28171e58324a8;all29 suites green,each stage source clean and
+    HEAD unchanged,rc=0. Includes actual glossary/G0 controls,239 core/31 measure/3 units
+    doctests and all29 command_stop_ native cases. Logs target/prepush-400-0563.
+  - [x] NO REGRESSION: normal git push origin main →c455b93e..79bd6f6a,rc=0;derived ahead0.
+    Actual exact-SHA job/step observer →doctrines/enforce completed/success and rust/check
+    completed/success,all required steps successful,rc=0. Includes hosted handoff/seam oracle
+    guards,format/strict Clippy/native tests and actual WASM build. Saved target/hosted-0563/
+    79bd6f6aa383385d7e598efcffc28171e58324a8/snapshot.json. Jobs123493403887/123493404119;
+    runs40887026733/40887026757. Verdicts read at job/step level;no aggregate inference.
+  - [x] LOCKSTEP: book links actual successful jobs;whole0563/four Git spans retained722.
+    MEM/DEV/CHANGE/index/ledger align. LIVE G1 6/18/29 suites/G0 human unapproved remains;
+    D333 fixed,D334 P2/D156/D223/PLANNING.5 pending. No whole paired/physical/release claim.
+    Next due cleanup owned below,then stop .3.3.acceptance and lineage .3.4. This proof commit
+    follows published SHA;do not imply it has a fresh hosted verdict or push before400.
+    Focused proof-document sync:book main_inputs/build/check →93/248/1590/2771,rc=0;
+    receipt722/four exact Git spans and verify-retention1176 pass,rc=0.
+    promotion: declined (application of indexed exact-revision full prepush verification,normal cadence and actual job/step observation;no new product acceptance).
+
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
   Goal:0551 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part710.md).
@@ -482,55 +516,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0562 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part721.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.publication-fields`
   Status: `done`
-  Goal: D333,P1 push blocker;declare four PublicationResult fields in their local book API
-  table. I introduced the field code spans in0559 without table rows. Preserve glossary/schema/
-  exemptions/index rules and G0 normal18/1 expectation;do not weaken either failed instrument.
-  Reproduce:full clean1a51b37f/derived427 →check0/gate0/probes2,all29 suites reached;only
-  G0/glossary bad-arm groups. G0 REAL/CONTROL show17/2;glossary identifies chapters,scoped_api_rows,
-  source_links,rendered_links as four unaccounted tokens. Source restores clean/HEAD unchanged;
-  all terminals consumed. Logs target/prepush-400-0562/{baseline,results}.json/probes.log.
-  Paths:docs/book/src/annexes/publication-checks.md;command-seam-stops prepush status;
-  deferred D334 tracking in G0-CONTRACT.md,
-  live docs/book checking-policy,ledger/index. Meanings derive actual check() and named result;
-  all four are local Python result fields,not four new domain terms or public Rust API families.
-  Focus actual glossary census0/current A–Z unchanged,actual G0 review18 met/1 human not met/
-  19 clauses and status complete,book build/publication. Existing broader declaration controls
-  stay owned by fresh full prepush after commit0563;no runtime change or full verdict inferred.
-  ROUTING EVIDENCE D334:actual G0_EXIT_SKIP_CHECKS=1 normal script returns0 with18 SKIPPED,
-  0 met/1 not met/19 yet engineering-met wording. This executes no glossary/instrument checks,
-  so bug belongs G0 reviewer independently of D333 book data. Diagnostic saved under same run.
-  Owner/schedule:G0-CONTRACT.15f,P2 after current G1 paired-seam activity,before G0 closure;
-  create pending canonical leaf,retain original completed normal-mode scope/human boundary.
-  No D334 code repair or product pivot in this unit;record actual known limitation in book.
-  Acceptance: ROOT CAUSE/ADDRESSED/NO REGRESSION with actual command/output/rc=0;whole0562
-  proof retained before curation;all fixed caps/310 terms/9 parts/status-map scope unchanged.
-
-  Completion0563:D333 local field declarations restore actual normal-mode instruments.
-  - [x] ROOT CAUSE (WHY + WHERE): full clean1a51b37f check0/gate0/probes2 reached29 suites;
-    glossary names four undeclared fields introduced in0559 publication prose. Existing C1
-    rule reads first-column local identifiers;table lacked rows. Inspection of actual
-    PublicationResult/check() confirms four meanings,rc=0;no new domain term is required.
-  - [x] FIX: declare chapters/scoped_api_rows/source_links/rendered_links in existing local
-    API table. No glossary exemptions/index/schema,checker or runtime change. Update stop
-    verification status to actual run;record D334 known parse-only limitation and future owner.
-  - [x] ADDRESSED (verified): actual run_glossary_census.sh through local_environment.py →
-    310 terms/9 parts/158 tokens/0 failures,rc=0;actual normal run_g0_exit_review.sh →18 met/
-    1 not met/19,only G0-12 human clause unmet,review complete,rc=0. Logs target/publication-
-    fields-0563-{glossary,g0,status}.log. Initial diagnostic counted both clause/detail NOT MET;
-    qualified actual clause rows without rerunning or changing successful instrument outputs.
-  - [x] NO REGRESSION: public book_publication.py main_inputs/build/check →93 chapters/248
-    scoped API rows/1590 source links/2771 rendered links,rc=0. Git diff --exit-code over crates,
-    glossary and G0 instrument trees,rc=0;no runtime/control changes. verify-retention →1175
-    logical/80 working/66908 decoded lines/5247415 decoded B/2824752 resident B,rc=0;receipt721
-    →four exact Git spans,rc=0. Existing declaration controls run in required fresh full prepush;
-    full0562 failed probes and no hosted verdict are explicit,not relabelled as a full pass.
-  - [x] LOCKSTEP: whole0562/prior ledger retained721;MEM/DEV/CHANGE/index/ledger and three
-    book pages align. D333 fixed;D334 pendingP2 G0-CONTRACT.15f after current G1 activity/before
-    G0 closure. LIVE G1 6/18/29 suites/normalG0 18/1/human unapproved;D156/D223/PLANNING.5 open.
-    Commit0563 then fresh full clean check/gate/probes/normal push/exact-SHA hosted jobs;
-    stop component checkpoint and lineage follow. No product/release completeness inferred.
-    promotion: declined (application of indexed chapter-local token declarations and explicit checked-versus-skipped evidence boundaries;no new product contract).
-
+  Goal:0563 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part722.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`
   Goal:0536 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part695.md).

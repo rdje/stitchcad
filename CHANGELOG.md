@@ -3,11 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0563 — declare local publication result fields
+## STITCHCAD-G1-0564 — complete full prepush and hosted verification
 
-- Close D333:four field declarations restore glossary310/9/158/0 and normal G0 18/1/19 complete. Full0562 check/gate passed but probes failed these declarations;all29 suites reached. Checker/runtime/exemptions unchanged;positive book93/248/1590/2771 and retention1175 pass.
-- Own D334 parse-only verdict wording as pendingP2 G0-CONTRACT.15f after current G1 activity/before G0 closure;book records limitation. Whole0562/prior ledger retained721/four spans. Fresh full clean prepush/normal push/exact-SHA hosted jobs remain pending;no verdict inferred.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D333 fixed,D334 scheduled,D156 audits/D223/PLANNING.5 open. Full PNT continues.
+- Full clean79bd6f6a check/gate/probes0;all29 suites green,source/HEAD exact after each. Normal push sends428 commits;actual exact-SHA doctrines/enforce and rust/check jobs/required steps successful,including WASM. Proof0564 follows that published SHA and does not inherit its hosted verdict.
+- Whole0563/prior ledger retained722/four exact spans;book links actual jobs. LIVE G1 6/18/29 suites/G0 human unapproved remains;D334 P2/D156/D223/PLANNING.5 pending. Next due cleanup,then stop component checkpoint and lineage. Full PNT;no whole paired/physical/release completion.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

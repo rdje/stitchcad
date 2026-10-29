@@ -1,17 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400:fresh full clean check/gate/probes under target/
-  prepush-400-0563 after commit0563,then normal push/actual exact-SHA hosted jobs if all pass.
-  Prior clean1a51b37f/derived427 full check0/gate0/probes2 reached29 suites;G0/glossary groups
-  failed undeclared publication fields. No push/hosted verdict yet;consume all terminals.
-- D333 fixed0563:four local result-field rows;actual glossary310/9/158/0,normal G0 18 met/
-  1 human not met/19 complete. Book93/248/1590/2771,receipt721/four spans and retention1175 pass0.
-  No checker/runtime/exemption changes. Full declaration controls remain in fresh full prepush.
-- D334 P2 pending G0-CONTRACT.15f:parse-only mode skips18 checks yet says engineering met;
-  root verdict ignores skipped mode. Fix after current G1 paired activity,before G0 closure.
-  Book records limitation;normal executed review remains applicable,human closure unapproved.
-- LIVE G1 6/18/29 suites,D156/12 audits/D223/PLANNING.5 pending. After full prepush/push/jobs:
-  stop .3.3.acceptance/live lineage .3.4. Full PNT;no whole paired/physical/release claim.
+- Next G1-SLICE.6.5.3.2.cleanup-20261029:daily cleanup due after13:53UTC2026-10-29;
+  inspect frozen plan,preserve original generation/install/stores/certificates and current full/
+  hosted evidence. Existing producer plus independent immediate residue/preservation census.
+  Commit cleanup,then stop .3.3.acceptance and lineage .3.4;full PNT continues.
+- Required prepush-400 closed0564:full clean79bd6f6aa383385d7e598efcffc28171e58324a8 at
+  derived428 →check0/gate0/probes0,all29 suites green/source clean/HEAD unchanged. Normal push
+  succeeded,ahead0. Actual exact-SHA doctrines/enforce and rust/check jobs/required steps success,
+  including WASM. Logs target/prepush-400-0563 and target/hosted-0563/<fullSHA>/snapshot.json.
+- Proof0564 follows pushed0563;derive current ahead count,no fresh hosted verdict for proof commit.
+  Whole0563/prior ledger retained722/four spans. D333 fixed;D334 P2 pending G0-CONTRACT.15f after
+  current G1 paired activity/before G0 closure. Normal G0 18/1/19,human closure unapproved.
+- LIVE G1 6/18/29 suites,D156/12 audits/D223/PLANNING.5 pending. Stop native29/independent32
+  rows passed in full run;component checkpoint remains owned. No whole paired/physical/release claim.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

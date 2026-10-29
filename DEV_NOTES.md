@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — declare local publication result fields
+## _(2026-10-29 UTC)_ — complete the required prepush milestone
 
-0563 closes D333:0559 added four field code spans without local table rows. Full clean1a51b37f check0/gate0/probes2 reached29 suites;glossary/G0 groups failed. Declare four existing result fields;actual glossary310/9/158/0 and normal G0 18/1/19 complete restored. No runtime/checker/exemption change.
-D334 independent parse-only review says engineering met after18 skipped checks. Root verdict ignores mode. P2 owner G0-CONTRACT.15f deferred after current G1 activity/before G0 closure;book states limitation. Normal executed review applicable;human approval remains unapproved.
-Whole0562/prior ledger retained721/four spans;positive book93/248/1590/2771 and retention1175 pass0. Initial output diagnostic double-counted clause/detail;qualified actual rows without altering successful instruments. LIVE G1 6/18/29 suites unchanged;D156/D223/PLANNING.5 open.
-[Whole0562 baseline proof](docs/history/stitchcad-devnotes-part721.md). Promotion declined:indexed local declarations/checked-versus-skipped evidence. Next fresh full clean gates/normal push/actual jobs;stop component checkpoint/lineage follow. Full PNT;no full prepush or release verdict yet.
+0564 records full clean79bd6f6a check0/gate0/probes0:all29 suites green,each stage sources clean/HEAD exact. Actual glossary310/9/158/0 and G0 18/1/19 restored. Core239/measure31/units3 doctests and29 native command_stop_ cases pass. Prior failed run remains explicit;no release/whole paired claim.
+Normal push sends428 committed units c455b93e..79bd6f6a,ahead0. Exact-SHA hosted jobs doctrines/enforce123493403887 and rust/check123493404119 completed/success with all required steps,including actual WASM. Observer reads job/step verdicts;no lagging aggregate assumption.
+Whole0563/prior ledger retained722/four spans. Book links actual jobs;LIVE G1 6/18/29 suites/G0 human unapproved remains. D334 P2/D156 audits/D223/PLANNING.5 stay owned. Proof0564 follows published0563;do not assign it the earlier SHA's hosted verdict.
+[Whole0563 declaration proof](docs/history/stitchcad-devnotes-part722.md). Promotion declined:indexed exact-revision checks/cadence/job verdicts. Next due daily cleanup,then stop component checkpoint/lineage. No repeated broad campaign between feature slices;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
