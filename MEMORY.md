@@ -1,19 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400 in docs/tasks/G1-SLICE-execution.md:derive current HEAD/
-  ahead count,then rerun full make check/gate/probes from clean completed state. Normal main push
-  only after all pass;observe actual hosted jobs/steps for that SHA. Keep logs project-local and
-  consume every producer/commit/push terminal before edits/retries/dependent work. Never force push.
-- First clean51e421cf/400 check refused D307 layout,rc2;gate/probes never started,push held. D307
-  fixed0536 with exact production/test content preserved,actual library-test lint/native1 pass.
-  D308 fixed0537:15 indexed formula fixture reads become checked eight-field patterns;original
-  arity assertions/frozen rows/expectations/kernel unchanged. Focused target Clippy/native4/fmt pass.
-- Whole0536 retained695;book93/248/1590/2770,glossary0/map,695 receipt3/retention1149 pass. LIVE
-  defects D307/D308 fixed;29 suites/G1 6/18 unchanged. Wider prepush success/hosted verdict pending.
+- Next G1-SLICE.6.5.3.2.prepush-400 in docs/tasks/G1-SLICE-execution.md:derive HEAD/ahead,
+  rerun full make check/gate/probes from clean completed state. Normal main push only after all
+  pass;observe actual hosted jobs/steps for that SHA. Keep logs project-local;consume every tool/
+  commit/push terminal before edits/retries/dependent work. Never force push or infer runner success.
+- Attempt51e421cf/400 refused D307 layout,rc2. D307 fixed0536,actual library-test lint/native1 pass.
+  D308 fixed0537 checked root fixture fields,target lint/native4 pass. Attempt07b4ac7a/402 then
+  refused6 rational fixture indices. One keep-going all-target census found only that error group.
+  D309 fixed0538 with checked six-cell pattern,target Clippy/native5/fmt pass;data/kernel unchanged.
+- Whole0537 and exact old defect ledger retained696/four Git spans. Book93/248/1590/2770,glossary0/
+  map,696 receipt4/retention1150 pass. LIVE D307–D309 fixed;29 suites/G1 6/18 unchanged. Required
+  full gate/probes/push/hosted verdict still pending. Both failed baselines/logs remain under target.
 - Then .6.5.3.2.3.3.acceptance stop component checkpoint and .3.4 live lineage. Stop pipeline/source
   join0535 implemented with focused checks;whole source join694. Full PNT continues. Real formula/
   Profile/geometry/physical/current authority/aggregate operations/lineage/paired effects/full proof
-  remain explicit owners. Native --index book authority mandatory;consume all preparation terminals.
+  remain explicit owners. Native --index book authority mandatory;consume preparation terminals.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

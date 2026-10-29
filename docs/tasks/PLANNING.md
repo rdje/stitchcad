@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308 — unchecked formula root fixture fields
 
-Done0537;owner G1-SLICE.6.5.3.2.prepush-400.formula-fixture. Fifteen denied fixture field indices replaced by checked exact eight-field patterns. Original arity assertions,15 sqrt/10 hypot rows/expectations/kernel unchanged. Target Clippy/native4/fmt pass0. Required full prepush check/gate/probes,push and actual hosted verdict remain parent-owned.
+D308 fixed0537;related D309 fixed0538 under G1-SLICE.6.5.3.2.prepush-400.rational-fixture. Root/rational readers use checked eight/six-field patterns;original arity/data/kernel unchanged. Target lint/native4+5 pass0. [Whole prior ledger/proof](../history/stitchcad-devnotes-part696.md). Keep-going lint isolated D309;fresh full prepush gates/push/hosted verdict remain pending.

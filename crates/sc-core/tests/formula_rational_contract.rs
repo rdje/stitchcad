@@ -203,9 +203,12 @@ fn four_operators_match_independent_fraction_fixtures() {
     {
         let cells: Vec<_> = row.split('\t').collect();
         assert_eq!(cells.len(), 6, "{row}");
-        let left = value(cells[1], cells[2]);
-        let right = value(cells[3], cells[4]);
-        let result = match cells[0] {
+        let &[operation, left_n, left_d, right_n, right_d, expected] = cells.as_slice() else {
+            unreachable!("asserted six-cell rational fixture")
+        };
+        let left = value(left_n, left_d);
+        let right = value(right_n, right_d);
+        let result = match operation {
             "add" => Some(left.checked_add(right)),
             "sub" => Some(left.checked_sub(right)),
             "mul" => Some(left.checked_mul(right)),
@@ -227,7 +230,7 @@ fn four_operators_match_independent_fraction_fixtures() {
             }) => format!("{component:?}:{measured_bits}"),
             Err(error) => format!("unexpected:{error}"),
         };
-        assert_eq!(actual, cells[5], "{row}");
+        assert_eq!(actual, expected, "{row}");
     }
 }
 

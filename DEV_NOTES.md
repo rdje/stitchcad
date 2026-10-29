@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — checked exact numeric fixture fields
+## _(2026-10-29 UTC)_ — checked exact rational fixture fields
 
-0537 D308:15 direct formula-root fixture field reads violated strict indexing lint. Existing assertions already required8 columns;checked exact slice patterns now name fields without changing arity assertions,25 frozen expected rows,wrong-kind tests or production arithmetic. No new lint waiver or test.
-Focused target Clippy/native4/fmt pass0. Git attributes sqrt reader to0255 and hypot to0256;frozen TSV/kernel untouched. D307 library-test layout repair remains committed. Both prepush defects fixed;required wider check/gate/probes/push/actual hosted jobs remain pending until the fresh full producer passes.
-Book93/248/1590/2770,glossary0/map/695 receipt3/retention1149 pass0. Book target-scope/fixture guidance,task/index/PLANNING and live defect census align. LIVE29 suites/G1 6/18 unchanged. Commit before fresh full retry;first failed400 baseline and exact retained-layout proof stay project-local.
-[Whole0536 D307 repair](docs/history/stitchcad-devnotes-part695.md) retains native history/target/byte identity proof. Promotion declined:indexed strict lint/claim-target contract. Full prepush remains parent-owned;stop component/paired physical/authority/effect checks remain separately owned.
+0538 D309:full retry07b4ac7a/402 refused6 direct rational fixture indices;one keep-going all-target lint census confirmed this sole error group. Checked six-field slice pattern preserves original arity/data/expected errors and production arithmetic. No new test,fixture retune or lint waiver.
+Target Clippy/native5/fmt pass0:full-width/sign/zero,independent four-operator rows,cross-cancellation,wide sums and total order remain exact. Existing row assertion already constrained valid indices;no numeric/runtime defect inferred. D307/D308 repairs remain committed;fresh full gates/push still pending.
+Book93/248/1590/2770,glossary0/map/696 receipt4/retention1150 pass0. Exact prior task/lesson/changelog/defect ledger retained before bounded summary. Book actual root/rational fixture guidance/task/index/LIVE align;29 suites/G1 6/18 unchanged. Commit before fresh required full retry and hosted-job observation.
+[Whole0537 and prior defect ledger](docs/history/stitchcad-devnotes-part696.md) retain exact native/source/history proof. Promotion declined:indexed strict lint/claim-target contracts. Archive helper matched actual combined D298/D299 heading after safe pre-write refusal;four-span receipt verifies capture.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
