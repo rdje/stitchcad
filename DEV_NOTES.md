@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — complete archive calibration watch and separate native replay
+## _(2026-10-29 UTC)_ — current computed-operand fault anchors and owned native followup
 
-0550 wires existing environment suite to --all:exact argv/reflow positive andfive omission/duplicate/dispatch reds,body10,physical19 plusvalid activation/three sentries,then full deep route. CORE includes watched shell. All original manual modes remain;no extra suite or native producer change.
-Complete run0:population11/1077;positive411 plans203 effects9 simulated children;interrupted15/6/0;HEAD evidence andten compiled omission reds. All physical23 children reaped;mirror/source/archive exact/restored. Separate native28/0 real CLI/Git replay0 retains original source/capture pin.
-Book93/248/1590/2771,708 receipt3/retention1162 pass0. Whole0549 retained;parent finite calibration closed. LIVE reviewed unchanged:29 suites/G1 6/18,D156/12 producer audits open,G0 human unapproved. Full prepush gates and actual hosted jobs remain pending;no application or whole-locality signoff.
-[Whole0549 physical proof](docs/history/stitchcad-devnotes-part708.md). Promotion declined:indexed complete watch/calibration/separate native scope. Next clean prepush-400 check/gate/probes,normal push/exact-SHA jobs,then stop checkpoint/live lineage. Full PNT continues.
+0551 fixes D318:0275 shared operand/certificate dataflow removed two old direct-push anchors. Adapt those two mutation literals only. Frozen57bd AST proof retains16 identities/14 tuples/all other program bodies/plans/CLI;two modes/six physical/13 mode pluslegacy classifier reds and class-only16 unique pass0.
+Exclusive native replay produces first4 real compiled assertion reds,including both repaired faults. Case5 then exposes D319:skipped else nodes lack new certificates,causing production invariant panic that strict classifier correctly rejects. Whole run1;finally source exact/all7 restored tests pass0.
+D319 P1 owned immediately next;full16/native proof remains pending. Full57bd check0/gate0/probes2 reached29;two observed suite failures share D318 root. No push/hosted verdict. Whole0550/prior ledger retained709/four spans;book93/248/1590/2771 and retention1163 pass0. Production Rust unchanged.
+[Whole0550 calibration](docs/history/stitchcad-devnotes-part709.md). LIVE:G1 6/18/29 suites/G0 human unapproved unchanged;D318 fixed,D319 owned,D156 audits open. Promotion declined:indexed source adapters/body preservation/strict evidence. Next D319,then full gates/normal push/actual jobs;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -1,17 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400 in docs/tasks/G1-SLICE-execution.md:run full check/gate/probes
-  from clean completed HEAD;normal push only after all pass,then observe actual exact-SHA hosted
-  jobs/steps. Derive ahead count;cadence already reached. No hosted verdict yet.
-- Archive deferred calibration closed0550:current suite --all watch/reflow/five controls;body10;
-  physical19/valid activation/3 sentries/23 children;positive411 plans203 effects9 simulated
-  children;interrupted15/6/0;HEAD evidence and10 compiled omissions. Exact restoration,rc0.
-- Separate actual native28/0 with unchanged source and capture-pinned real Git/CLI passes0.
-  Whole0549 retained708/3 spans;book93/248/1590/2771,retention1162 pass. Native reader/producer
-  unchanged;D156/12 producer audits remain open. LIVE29 suites/G1 6/18,G0 human unapproved.
-- Last full95925f7b check0/gate0/probes2 predates focused D310–D317 repairs. Fresh full gates
-  and actual jobs must pass before completion. Consume all producer/commit terminals first.
-- After prepush milestone resume stop .3.3.acceptance/live lineage .3.4. Full PNT continues.
+- Next G1-SLICE.6.5.3.2.prepush-400.checked-expression-certificate in execution sibling:
+  D319 P1:else-branch mutant skips nodes;0275 certificate collection panics before test assertions.
+  Adapt only mutant metadata as necessary to preserve original semantic fault;never weaken strict
+  classifier/production code. Complete current16 native proof,source restoration and mode controls.
+- D318 fixed0551:two current operand anchors;16 identities/14 tuples/all other AST exact. Two
+  modes/6 physical/13 guard +legacy classifier reds pass0;--classifier-only16 unique passes0.
+- Exclusive native first4 body reds include repaired2;case5 rejected nonassertion panic,whole1;
+  finally actual7 tests pass0/source restored. Logs target/checked-expression-0551-{native,focus}.log.
+- Full57bd5c8d/derived415:check0/gate0/probes2,all29 reached;same stale anchor in2 suites. Jobs
+  consumed/source clean. Logs target/prepush-400-0550. After D319,full retry/normal push/actual jobs.
+- Whole0550/prior ledger retained709/four spans;book93/248/1590/2771,retention1163 pass. Archive
+  calibration/current --all watch complete;native28/0 separate. LIVE G1 6/18,29 suites/G0 human
+  unapproved;D156/12 audits open. Then stop .3.3.acceptance/live lineage .3.4. Full PNT continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

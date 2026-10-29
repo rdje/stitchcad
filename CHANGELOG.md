@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0550 — accept complete archive calibration and current watch
+## STITCHCAD-G1-0551 — repair current computed-operand mutation anchors
 
-- Existing environment suite invokes --all:watch/reflow/five controls,body10,physical19/valid activation/three sentries and full deep capture/interruption/HEAD/ten omissions pass. Source/archive/mirrors exact and restored;all physical23 children reaped.
-- Separate real CLI/Git native28/0 passes with unchanged original source and explicit capture pin. Native producer/reader unchanged. Parent finite calibration closed;whole0549 retained708. Book/history checks pass.
-- LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved. Fresh full prepush gates/normal push/actual hosted jobs remain next,then stop component acceptance/live lineage;no full locality or application signoff inferred.
+- Fix D318 two stale anchors after per-node certificates. Preserve16 identities/14 other tuples/every other program AST/plan/CLI. Two-mode/six physical/14 guard-classifier negatives and classifier-only controls pass;both repaired native faults produce real body assertion reds.
+- Original native replay then exposes D319 else-fault certificate invariant panic;strict classifier rejects it. Whole run1;finally source exact/all7 tests pass0. D319 owned P1 immediately next;no full16 or full prepush pass claimed. Production Rust unchanged.
+- Full57bd check0/gate0/probes2 reached29 suites;push held. Whole0550/prior ledger retained709/four exact spans;book/history checks pass. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D318 fixed,D319 owned,D156 audits open.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -16,14 +16,14 @@ CLASSIFIER_ONLY = sys.argv[1:] == ['--classifier-only']
 CASES = (
     ('literal kind changed', (('FormulaLiteralKind::Angle => FormulaKind::Angle,',
                               'FormulaLiteralKind::Angle => FormulaKind::Length,'),)),
-    ('result kind changed', (('// Computed results never acquire the direct-name tolerance role.\n                    kinds.push(O::Value(kind));',
-                             'kinds.push(O::Value(FormulaKind::Count));'),)),
+    ('result kind changed', (('// Computed results never acquire the direct-name tolerance role.\n                    let operand = O::Value(kind);',
+                             'let operand = O::Value(FormulaKind::Count);'),)),
     ('direct class lost', ((')) => O::Tolerance(class),',
                            ')) => O::Value(FormulaKind::Length),'),)),
-    ('computed class forged', (('// Computed results never acquire the direct-name tolerance role.\n                    kinds.push(O::Value(kind));',
-                               'kinds.push(if kind == FormulaKind::Length { '
+    ('computed class forged', (('// Computed results never acquire the direct-name tolerance role.\n                    let operand = O::Value(kind);',
+                               'let operand = if kind == FormulaKind::Length { '
                                'O::Tolerance(super::FormulaToleranceName::Geometric) } '
-                               'else { O::Value(kind) });'),)),
+                               'else { O::Value(kind) };'),)),
     ('else branch replaced', (('pending.push(Action::Enter(*else_branch));',
                               'pending.push(Action::Enter(*then_branch));'),)),
     ('conditional child order', (('pending.push(Action::Enter(*then_branch));\n'

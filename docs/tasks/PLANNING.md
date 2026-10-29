@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308 — unchecked formula root fixture fields
+## D308–D319 — prepush repairs
 
-D308–D317 fixed0537–0546;[prior ledger](../history/stitchcad-devnotes-part697.md). Inventory333/396 repairs pass;D156 audits open. Archive calibration0550/current watch/native28 pass;fresh full check/gate/probes,normal push/actual hosted jobs remain .6.5.3.2.prepush-400. LIVE G1 6/18,G0 last18/1 human unapproved;no hosted verdict inferred.
+D308–D318 fixed0537–0551;[prior ledger](../history/stitchcad-devnotes-part709.md). D319 P1 owned next:else-fault skips0275 certificates/nonassertion panic;full native16 remains pending. Owner .6.5.3.2.prepush-400.checked-expression-certificate. Full57bd check0/gate0/probes2;29 reached/source restored. Push held;LIVE G1 6/18,G0 human unapproved.

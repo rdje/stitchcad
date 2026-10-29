@@ -347,41 +347,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Goal:0549 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part708.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification.acceptance`
   Status: `done`
-  Goal:0550 current complete watch and scoped parent calibration accepted;native28 remains a
-  separate real CLI/Git replay,not inferred from companion simulated children or static proof.
-  Paths: docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
-  Paths: docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
-  - [x] REPRODUCE / ISSUE: deferred parent requires current watch/native28 after deep/body/
-    physical slices. Read actual suite/producer/legacy wrapper,rc=0:existing direct default
-    invocation runs only population/positive capture;new deep/body/physical modes need --all.
-    This is completion of explicit deferred scope,not a new global unregistered-producer claim.
-  - [x] ROOT CAUSE (WHY + WHERE): rg suite entry plus full script/source review,rc=0,locates
-    the existing archive companion invocation and independent history suite legacy replay. Keep
-    both scopes distinct;extend this existing watched argv instead of adding another probe suite.
-  - [x] FIX: --all runs actual suite argv controls,body proof,physical entry controls and old
-    deep route. CORE now includes watched shell input;retain all old modes. Parse actual direct
-    argv with shlex,allow whitespace/continuation/comments;require one exact complete dispatch.
-    Missing/unknown mode,duplicate,commented and substituted dispatch all refuse independently.
-  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- python3 -I -B
-    docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py --all →watch/reflow/
-    five controls,full body/ten faults,physical19 +valid activation/three sentries/all23 children
-    reaped,population11/1077,positive411 plans/203 effects/9 simulated children,interruption15/6/0,
-    HEAD present-unreadable/unavailable refusals and genuine-absent27,ten compiled actual guard
-    omission reds,rc=0. Every mirror is restored/guardedly removed;source/archive exact.
-  - [x] NO REGRESSION: same prepared invocation of
-    docs/tasks/artifacts/history_archive/legacy_refusals.py →actual native28 pass/0 fail,
-    original source bytes unchanged and Git capture explicitly pinned,rc=0. Actual CLI children
-    are real here. bash -n changed suite →rc=0;book build/positive publication93/248/1590/2771,
-    rc=0;receipt708 →3 exact Git spans,rc=0;retention1162 logical/67 aggregate working/65509
-    decodedL/5109803 decodedB/2687140 residentB,rc=0;git diff --check and native producer/reader
-    unchanged checks →rc=0. Full check/gate/probes/exact-SHA hosted jobs remain .prepush-400.
-  - [x] LOCKSTEP: parent scoped calibration done;whole0549 task/lesson/changelog retained708.
-    Book documents --all/current suite and native-vs-companion scopes;MEM/DEV/CHANGE/index/ledger
-    align. LIVE reviewed unchanged:29 suites/G1 6/18,D156 audits open,G0 human unapproved.
-    README unchanged. Next clean .6.5.3.2.prepush-400 full gates/normal push/actual hosted jobs,
-    then stop component .3.3.acceptance/live lineage .3.4. Full PNT continues.
-    promotion: declined (application of indexed complete watch,original-body/physical/lifecycle calibration and separate native proof;no new archive or product semantics).
-
+  Goal:0550 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part709.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.3`
   Status: `pending`
   Goal: guard whole-window CLI fixtures and their complete copied/mutated/materialized/teardown populations.

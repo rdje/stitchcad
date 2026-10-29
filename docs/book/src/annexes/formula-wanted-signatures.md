@@ -242,6 +242,14 @@ arities1–3, plus fourth-argument, syntax, priority, dependency, runtime-domain
 controls. The independently authored rows match the closed call population in both directions.
 Sixteen actual compiled checker faults must fail body assertions and restore exact source:
 
+The computed-kind and forged-class faults target the current shared operand assignment,which
+feeds both the kind stack and per-node certificate. All16 ordered case identities remain;the
+other14 tuples and every program body/plan/classifier/restoration statement are unchanged.
+Both repaired faults produce compiled test-body assertions. Current exclusive replay then reaches
+D319:the else-branch fault omits certificates and hits an internal invariant rather than a test
+assertion. The strict classifier refuses that evidence;source restores and all7 tests pass.
+Its immediate repair/full16 replay is owned by .6.5.3.2.prepush-400.checked-expression-certificate.
+
 ```bash
 cargo test -p sc-core --test formula_checked_expression_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutations.py
@@ -255,16 +263,17 @@ Classifier-only mode declares zero files/mutable sources/native effects:
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutations.py --classifier-only
 ```
 
-Two complete mode captures and six physical refusals preserve all sixteen ordered case tuples,
+Two complete mode captures and six physical refusals preserve all sixteen ordered cases,
 including the two-step callee-priority fault, native arguments, prepared stores and exact restoration.
 Thirteen actual mode faults include a missing second replacement; a legacy-regex fault checks
 nonthread rejection. A thread panic must name a current assertion macro path/line/byte column.
 Custom messages pass; nonthread notes and labelled extraction/compiler/name noise refuse.
 Copied readonly mode accepts linked input/unused log aliases without native or file-write effects.
-The exclusive sixteen-case replay matches authored failed-test sets and current macros in every
+The earlier exclusive sixteen-case replay matched authored failed-test sets and current macros in every
 failed body. Two formerly unguarded dependency/conditional proof extractions now assert acceptance
 first. All seventy-two frozen inputs, unchanged production Rust, seventeen local logs and the
-restored full seven-test executable are verified. Dispatch controls and real native proof remain
+restored full seven-test executable were verified. Current full replay remains pending D319 above.
+Dispatch controls and real native proof remain
 separate. These proofs cover expression checking
 against an initial namespace. [Current-statement checking](formula-name-scopes.md#check-the-actual-current-statement)
 also applies these rows to the actual prior-binding scope and both assertion operands. [Whole recipe proofs](formula-checked-recipes.md) compose these checks. Coupled whole review is verified at .5b.4b.
