@@ -75,13 +75,14 @@ droprow() {
 import pathlib, sys
 p, needle = pathlib.Path(sys.argv[1]), sys.argv[2]
 lines = p.read_text(encoding="utf-8").splitlines(keepends=True)
-for i, ln in enumerate(lines):
-    if needle in ln:
-        del lines[i]
-        p.write_text("".join(lines), encoding="utf-8")
-        sys.exit(0)
-print("mutation REFUSED — no line contains: %r" % needle[:70], file=sys.stderr)
-sys.exit(3)
+matches = [i for i, line in enumerate(lines) if needle in line]
+if len(matches) != 1:
+    print("mutation REFUSED — expected one row for %r, found %d" %
+          (needle[:70], len(matches)), file=sys.stderr)
+    sys.exit(3)
+del lines[matches[0]]
+p.write_text("".join(lines), encoding="utf-8")
+print("mutation applied — removed exactly one row for %r" % needle[:70])
 PY
 }
 
@@ -152,7 +153,7 @@ fi
 
 # ---------------------------------------------------------------- LEVEL-MISSING (K3)
 B="$(book level_missing)"
-droprow "$(CH "$B")" '| `propose` | build a candidate group' || bad LEVEL-MISSING "the mutation did not apply" ""
+droprow "$(CH "$B")" '| `propose` |' || bad LEVEL-MISSING "the mutation did not apply" ""
 out="$(run "$B")"; rc=$?
 if [ "$rc" -eq 1 ] && grep -q 'roadmap §7.8 names the authority level `propose` and §7 does not declare it' <<<"$out"; then
   ok LEVEL-MISSING "a level the roadmap names and the chapter drops is refused (exit=$rc)"

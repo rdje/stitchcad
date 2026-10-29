@@ -352,10 +352,10 @@ A mutation is offered in two phases, because a patternmaker must see the result 
 
 ## 7. Agent authority as a command-layer concept
 
-Five named levels are distinct permissions on command classes, without an implied hierarchy.
+Five distinct command permissions imply no hierarchy. The census keys names, not descriptions.
 Core enforces each permission and scope; a tool manifest cannot widen them.
-Native mutation preview requires Inspect alone. Propose is separate proposal-workflow metadata;
-constructing typed request data grants no execution authority.
+Native mutation preview requires Inspect alone. Propose is separate proposal-workflow metadata.
+Typed requests grant no execution authority.
 
 | Level | May issue | May not |
 | --- | --- | --- |

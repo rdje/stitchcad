@@ -3,11 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0540 — preserve exact archive descriptor profiles
+## STITCHCAD-G1-0541 — bind authority mutation to its stable permission key
 
-- Fix D310 with byte-preserving raw and explicit decoded base64 identities;check hashes/line and byte counts while retaining legacy blank-EOF refusal. Keep coverage and historical source proofs independent. Never edit sealed records or normalize their bytes.
-- Focused ledger11/0,pointer16/0,descriptor4 frozen profiles/18 refusals pass;report actual failure lines without early pipe closure. Interrupted partial run discarded;final frozen producer completed successfully before dependent edits.
-- Whole0539 retained698/three exact Git spans;book93/248/1590/2771,glossary0/map/retention1152 pass. LIVE29 suites/G1 6/18 unchanged,D310 fixed,D311–D315 owned. Full gates/push/hosted verdict await remaining repairs;G0 human unapproved.
+- Fix D311 missing-level control by selecting Propose's first-cell key and requiring exactly one matching row. Refuse absent or ambiguous setup;preserve the census,five permissions and human-only approval.
+- Command probes15/0,actual K3 refusal,transport refusal/body controls,book93/248/1590/2771 and history checks pass. Whole0540 retained699/three exact Git spans. LIVE29 suites/G1 6/18 unchanged,D311 fixed,D312–D315 owned;full retry/push/hosted verdict pending.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

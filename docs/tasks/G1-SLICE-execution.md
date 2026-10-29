@@ -423,45 +423,33 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0539 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part698.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.archive-profiles`
   Status: `done`
-  Goal:0540 D310 P1 descriptor repair;exact retained/decoded identity checks with legacy refusal
-  and independent coverage controls. No sealed record edited or newline normalized.
-  - [x] REPRODUCE / ISSUE: full0538 probes at95925f7b →REAL/COVERAGE-RED failed,rc2.
-    Old descriptor uses shell substitution/readded LF and rejects raw blank EOF/no-LF/encoded
-    source records despite valid canonical inventory. Diagnostic scope/owners retained698.
-  - [x] ROOT CAUSE (WHY + WHERE): 0540 canonical inventory/header census →569 legacy,
-    580 whole-raw,2 encoded at1151 records,rc=0. Identity hashes describe retained/decoded payload,
-    not shell-normalized text. Historical interval metadata can separately describe normalized or
-    folded retrieval;descriptor checking does not assert every interval equals its Git bytes.
-    D282 raw-byte policy and current records require preserving exact EOF. Native shasum frozen
-    alpha/LF/blank/no-LF hashes match independent fixtures,rc=0. No filename-specific exception.
-  - [x] FIX: byte-reader checks unique declared identity/hash/lines/optional legacy bytes;
-    structured whole-source profiles require byte count,retain raw EOF or decode exact base64
-    fence/alphabet/width/size. Legacy exactly-one-LF refusal retained. Coverage/Git source proofs
-    stay independent. Shell consumes diagnostic streams,prints actual FAIL lines and names checker
-    failure instead of dropping it. New helpers registered for D315's final inventory repair.
-  - [x] ADDRESSED (verified): 0540 local_environment.py -- bash
-    docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh →11 pass/0 fail,rc=0,
-    REAL1462 verdicts/0fail,COVERAGE-RED sole mutated refusal;legacy blank/digest/nonledger/order/
-    pointer controls retained. Pointer contract16/0;descriptor contract4 frozen profiles/18
-    refusals/independent coverage pass,rc=0. First partial run was interrupted by editing its
-    running shell input;consumed rc2 and reran final frozen source to completion before further
-    edits. Lesson:consume terminal before changing any running producer input;no partial success.
-  - [x] NO REGRESSION: bash -n ledger script →rc=0;mdbook build/positive publication
-    →93/248/1590/2771,rc=0;glossary310/9/158/0 failures,rc=0;map →pass,rc=0. Receipt698 →3 exact
-    Git spans,rc=0;retention →1152 logical/57 working/64935 decodedL/5051627 decodedB/2628964
-    residentB,rc=0. D311–D315 remain owned;full check/gate/probes retry after those repairs,then
-    normal push and actual hosted jobs. No full repository or hosted verdict inferred here.
-  - [x] LOCKSTEP: whole0539 task/lesson/changelog retained698 before curation. Archive-reader
-    book explains three profiles/examples and descriptor-versus-source/coverage boundary. MEM/
-    DEV/CHANGE/LIVE/index/ledger align;LIVE marks D310 fixed,29 suites/G1 6/18 unchanged,G0 human
-    unapproved. README objective/commands unchanged. Commit before next .catalog-mutation D311.
-    promotion: declined (application of indexed byte-preserving archives,independent proof scope and consume-before-edit contract;no new product policy).
+  Goal:0540 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part699.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.catalog-mutation`
-  Status: `pending`
-  Goal:D311 P1 repair LEVEL-MISSING control. Actual catalog census17 commands/5 classes/5 levels
-  passes;droprow still matches obsolete prose '| `propose` | build a candidate group',so mutation
-  never applies and unchanged catalog accepts. Select actual authority row by stable semantic key,
-  prove only intended row removed and actual checker refusal;preserve five levels/human approval.
+  Status: `done`
+  Goal:0541 D311 P1 missing-authority control follows stable permission key and removes one row.
+  - [x] REPRODUCE / ISSUE: full0538 command probes →LEVEL-MISSING mutation absent and unchanged
+    book accepted,2 failures,rc1;actual catalog17 commands/5 classes/5 levels still passes.
+  - [x] ROOT CAUSE (WHY + WHERE): git log -G 'native preview uses|build a candidate group' --
+    docs/book/src/spec/command-layer.md →0476 correctly updated Propose prose;old probe retained
+    retired wording from G0,rc=0. Source K3 compares first-cell names against roadmap §7.8;
+    prose is not permission identity. Read roadmap4.4/7.8 and current chapter7 before change.
+  - [x] FIX: LEVEL-MISSING selects '| `propose` |';droprow requires one unique match before
+    writing and deletes only that line. Missing/ambiguous setup refuses3 instead of selecting an
+    arbitrary row. Checker/vocabularies/human-only approval remain unchanged. Book documents scope.
+  - [x] ADDRESSED (verified): local_environment.py -- bash
+    docs/tasks/artifacts/command_layer/run_command_layer_probes.sh →15 pass/0 fail,rc=0;
+    actual mutated Propose row removed exactly once and K3 names missing authority,exit1.
+    REAL17/5/5/0;unrelated prose control passes,exit0;missing chapter refuses2. Existing eight
+    transport refusal/body-red controls,glossary refusal,future/historical positives remain green.
+  - [x] NO REGRESSION: bash -n command probes →rc=0;mdbook build/positive publication
+    →93/248/1590/2771,rc=0;receipt699 →3 exact Git spans,rc=0;retention →1153 logical/58 working/
+    64995 decodedL/5057715 decodedB/2635052 residentB,rc=0;git diff --check →rc=0. Remaining
+    D312–D315 fixes precede full gates/push/actual hosted jobs;no broader verdict inferred.
+  - [x] LOCKSTEP: whole0540 task/lesson/changelog retained699 before curation. MEM/DEV/CHANGE/
+    LIVE/index/ledger/book align;D311 fixed,29 suites/G1 6/18 unchanged,G0 human unapproved.
+    README objective/commands unchanged. Commit before D312 matrix-coverage;all remaining owners
+    retained.
+    promotion: declined (application of indexed semantic identity/independent refusal controls;no new product permission or governance decision).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.matrix-coverage`
   Status: `pending`
   Goal:D312 P1 classify/trace ontology1.2 exact held-source range partition and1.3 normalized

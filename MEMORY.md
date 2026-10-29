@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.catalog-mutation in docs/tasks/G1-SLICE-execution.md:
-  D311 actual authority-row mutation,then D312 matrix/G0,D313 cleanup mutant isolation,D314
-  static-status guard,D315 producer candidate inventory last. Commit every scoped repair.
-- D310 fixed0540:raw/decoded identity checks,legacy EOF refusal and independent coverage pass;
-  focused ledger11/0,pointer16/0,descriptor4 profiles/18 refusals. Whole0539 retained698/3 Git spans.
-- Book93/248/1590/2771,glossary0/map/retention1152 pass. LIVE29 suites/G1 6/18 unchanged;
-  D307–D310 fixed,D311–D315 P1 owned. Never edit running producer inputs;consume terminals first.
-- Full run95925f7b:check0/gate0/probes2;logs target/prepush-400-0538. No push/hosted verdict.
+- Next G1-SLICE.6.5.3.2.prepush-400.matrix-coverage in docs/tasks/G1-SLICE-execution.md:
+  D312 ontology1.2/1.3 matrix traces and dependent G0 baseline;then D313 cleanup mutant isolation,
+  D314 static-status guard,D315 complete producer candidate inventory last. Commit each repair.
+- D311 fixed0541:unique semantic authority-row removal;command probes15/0,actual K3 refusal.
+  Five permissions/human-only approval unchanged. Whole0540 retained699/3 exact Git spans.
+- Book93/248/1590/2771,retention1153 pass. LIVE29 suites/G1 6/18 unchanged;D307–D311 fixed,
+  D312–D315 P1 owned. D310 raw/decoded descriptor/legacy/coverage controls passed0540.
+- Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538. No push/hosted verdict.
   GitHub access verified;credentials readonly transport dependency. G0 human closure unapproved.
 - After remaining repairs,full check/gate/probes from clean completed HEAD,normal push/actual
   hosted jobs. Then stop .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/
-  Profile/current authority/aggregate/effect proof remain separately owned. No producer in flight.
+  Profile/current authority/aggregate/effect proof remain owned. Consume terminals before edits.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
