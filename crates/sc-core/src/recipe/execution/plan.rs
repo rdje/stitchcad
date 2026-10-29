@@ -136,9 +136,10 @@ impl std::error::Error for FormulaScalarExecutionPlanError<'_> {
 }
 
 #[derive(Debug)]
-struct SourceSlot<'a> {
-    node: Option<FormulaCheckedNode<'a, 'a>>,
-    kind: Option<FormulaScalarExecutionSourceKind<'a>>,
+pub(super) struct SourceSlot<'a> {
+    pub(super) node: Option<FormulaCheckedNode<'a, 'a>>,
+    pub(super) kind: Option<FormulaScalarExecutionSourceKind<'a>>,
+    pub(super) read: Option<super::read::ReadData<'a>>,
 }
 
 /// Complete source-bound preparation for the implemented scalar execution subset, without values.
@@ -160,9 +161,9 @@ struct SourceSlot<'a> {
 /// ```
 #[derive(Debug)]
 pub struct FormulaScalarExecutionPlan<'a> {
-    admission: FormulaExecutionAdmission<'a, 'a>,
+    pub(super) admission: FormulaExecutionAdmission<'a, 'a>,
     inputs: &'a CanonicalInputs,
-    sources: Vec<SourceSlot<'a>>,
+    pub(super) sources: Vec<SourceSlot<'a>>,
 }
 impl<'a> FormulaScalarExecutionPlan<'a> {
     /// Original complete proof and explicit logical workspace reservation.
@@ -194,7 +195,7 @@ impl<'p, 'd> FormulaExecutionAdmission<'p, 'd> {
     /// Bind every actual scalar source after complete capability checking, before any value read.
     /// Capability order is certified arena order, separate from later source-order execution.
     /// One D-source vector is fallibly reserved within the existing logical workspace allowance;
-    /// N task/value workspaces and execution itself remain the next implementation slice.
+    /// The separate evaluate call reserves N task/value buffers and performs actual execution.
     /// ```
     /// use sc_core::{recipe::*, value::CanonicalInputs};
     /// let inputs = CanonicalInputs::new(vec![], vec![])?;
@@ -288,6 +289,7 @@ impl<'p, 'd> FormulaExecutionAdmission<'p, 'd> {
         sources.resize_with(admission.name_use_count(), || SourceSlot {
             node: None,
             kind: None,
+            read: None,
         });
         for node in root.all_nodes() {
             if let Some(index) = node.dependency_index() {

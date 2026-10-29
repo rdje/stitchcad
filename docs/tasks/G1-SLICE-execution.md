@@ -96,43 +96,9 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Whole statement/recipe/replay and platform result verification retain .5e.2.5/.5e.4/.5g owners.
 - ID: `G1-SLICE.5e.2.4.3.1`
   Status: `done`
-  Goal: prepare the actual implemented scalar machine scope and every original name occurrence
-  from .1 admission plus actual CanonicalInputs. Private same-proof complete-node iteration must
-  expose no foreign index constructor. Allocation-free capability scan rejects missing tangent,
-  geometry and prior-let support as preparation gaps,not language errors;then reserve D source
-  records fallibly and join actual canonical families/owners/kinds before any value/provider read.
-  Reserved sources remain unresolved until execution,so untaken absent optional contexts do not
-  acquire values or fail. Preserve exact failing node/owner,actual join/allocator causes,no partial
-  plan. All repeated/untaken uses stay individually bound. No computed value/backend-wide/whole
-  recipe acceptance. Own native actual scope/source/late-refusal/limits/privacy tests,scoped lint/
-  fmt/book/live/commit;then .3.2 actual worker. Broader execution verification follows that feature.
-  Completion0578:actual scalar capability/source plan prepared before values.
-  - [x] ROOT CAUSE (WHY + WHERE): actual checked nodes/admission/canonical joins retain full
-    static proofs and sourced records but no complete scalar-machine source plan. Read actual
-    evaluated/context/size-provider interfaces and normative formula3/4/5 before scoping. Private
-    same-proof arena/dependency inspection avoids a foreign public index;source readback rc=0.
-    Existing atan/atan2 kernels available;tan/geometry/prior-let integration genuinely pending.
-  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
-    formula_scalar_execution_plan_contract →five pass,rc=0. Available forms/calls,optional reserved
-    roles,actual repeated/untaken Unknown borrows,late missing target exact node/cause and full
-    256-node/255-source/767-record logical reservation pass. Native tangent root/mixed/untaken
-    cases,geometry/prior-let gaps prove preparation scope,not language refusals or computed values.
-    Allocation-free certified-arena capability scan precedes D-source fallible reserve;actual
-    joins then use original dependency order. No N task/value execution workspaces yet;no partial
-    plan escapes. Actual allocator cause retained but not forced by a fake oversized proof fixture.
-  - [x] NO REGRESSION: local_environment.py cargo test -p sc-core --test
-    formula_checked_node_contract --test formula_execution_admission_contract →six+four pass,
-    rc=0. cargo test -p sc-core --doc recipe::execution →seven pass,rc=0;cargo clippy -p sc-core
-    --lib --test formula_scalar_execution_plan_contract -- -D warnings and cargo fmt --all --check
-    →rc=0. New native5/lint/fmt rerun after adding untaken tangent control;all pass. Book94/273/
-    1601/2800 and glossary310/9/158/0 pass,rc=0;whole0577 receipt736/four exact Git spans pass,rc=0.
-  - [x] LOCKSTEP: execution book/API map/MEMORY/DEV/CHANGE/LIVE/index/ledger align. Parent .3
-    remains in_progress;next .3.2 actual N-task/N-value worker,executed reads,real contexts and
-    provenance. Whole derived/geometry/tangent/statement/replay/platform verification retain
-    existing parent owners. G1 6/18/G0 unapproved;full local/hosted79bd6f6a remains SHA-scoped.
-    promotion: declined (reuse of indexed same-proof/source ownership,explicit resources and capability-versus-language scope;no new language or provider authority policy).
+  Goal:0578 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part737.md).
 - ID: `G1-SLICE.5e.2.4.3.2`
-  Status: `pending`
+  Status: `done`
   Goal: run the real prepared scalar source plan with bounded N task/N value workspaces and
   existing exact sourced kernels,without callbacks substituting AST proof. Actual ordered reads,
   lazy condition/taken branch and all evaluated operands must determine results/provenance;
@@ -140,6 +106,55 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   quantitative/size provider contracts;use real canonical membership adapters in integration.
   Missing derived evaluation remains an actual dependency request,not an invented value or
   language refusal. Split safe worker/source/dispatch units if required;focused checks/book/commit.
+  Scope0579:consuming evaluate over the actual prepared subset;explicit immutable tolerance/size
+  context slots,fallible N-task/N-value reserves before reads and guarded logical pushes. Fill
+  each existing D source slot only when its actual node executes. Reuse actual canonical authored
+  reads/provider values and existing numeric/evaluated kernels. If selects from real condition
+  and actual branch proofs;within uses the once-read original tolerance,not a supplied annotation.
+  Seal actual result/read trace;errors retain original failed node and full borrowed cause.
+  Native focused kernel/rounding/order/lazy Unknown/context/provenance/limit/refusal tests plus
+  real sc-measure SizeFormulaContext integration;read existing operator/read contracts first.
+  Completion0579:actual prepared scalar expressions now execute with focused checks passing.
+  - [x] ROOT CAUSE (WHY + WHERE): actual source plan/evaluated/context/operator/provider code
+    and normative formula3/4/5 show prepared source metadata but no AST worker. Supplied value
+    callbacks cannot certify actual branch execution. Read SizeMembership::formula_context and
+    original numeric/input/tolerance contracts;source tools/readback rc=0. Worker now consumes
+    only the real complete prepared subset and delegates to existing certified numeric kernels.
+  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
+    formula_scalar_execution_contract →nine pass,rc=0. Exact AST operators/calls,literal-once
+    rounding/unbound fractions,actual Boolean branch selection,only-taken Unknown/optional reads,
+    condition/all-call-operand sources,actual quantitative within/T1 failures and child-error order
+    pass. Original Known/Assumed/Preference,zero/false,negative raw turns/ratios and doubled i64
+    Count beyond binding storage remain exact. Both canonical Derived families keep their sole
+    evaluation request;Unknown Boolean condition is not optimized away for equal branches.
+    Full256 fanout executes255 distinct reads under767 records;left-deep256 also fits N task/N
+    value buffers. Existing D slots fill in place;no source clone/callback AST substitution.
+  - [x] ADDRESSED provider integration: local_environment.py cargo test -p sc-measure --test
+    formula_scalar_execution_contract →one pass across three actual authored members,rc=0.
+    Actual membership pin/order/base adapter supplies size values;only condition/chosen size role
+    is read. Exact set/revision/member/base sources and unchanged membership preserved. Core
+    context/frame itself grants no canonical membership/currentness or physical approval.
+  - [x] NO REGRESSION: local_environment.py cargo test -p sc-core --test
+    formula_scalar_execution_plan_contract →five pass,rc=0. cargo test -p sc-core --doc
+    recipe::execution →ten pass,rc=0;core lib/worker test and measure worker test strict Clippy
+    plus cargo fmt --all --check →rc=0. Initial cargo check unused trait import removed;initial
+    native101 integer table inference fixed explicitly,no runtime/library semantics weakened.
+    Book94/281/1601/2801/glossary310/9/158/0 and receipt737/four exact Git spans pass,rc=0.
+    No full CI/platform/independent broader runtime verdict claimed;next .3.acceptance owns it.
+  - [x] LOCKSTEP: README/execution/node/runtime book/API map/MEMORY/DEV/CHANGE/LIVE/index/ledger
+    align. Actual result/read/context/error types retain proof/provider lifetimes and typed causes;
+    defaults/foreign values cannot forge results. Logical buffer pushes are guarded;allocator
+    bytes,kernel temporaries/error boxes/provider CPU remain explicitly outside2N+D machine bound.
+    Parent .3 remains in_progress until scoped acceptance;whole recipes/derived/tan/geometry,
+    atomic replay and full worked-book/platform evidence retain .5e.2.5/.5e.4/.5g/parent owners.
+    G1 stays6/18/G0 unapproved;full local/hosted79bd6f6a remains SHA-scoped. Continue full PNT.
+    promotion: declined (application of indexed actual-node/source ownership,exact numeric/provenance,lazy branching and explicit scoped-resource contracts;no new language or approval policy).
+- ID: `G1-SLICE.5e.2.4.3.acceptance`
+  Status: `pending`
+  Goal: after actual scoped scalar worker implementation,run its deferred integration/independent
+  runtime-result checks and reconcile implemented versus unavailable families. Whole worked-book,
+  platform identity,derived/geometry/tangent/statement/replay proof remains .5g/.5e.4/parent work;
+  this checkpoint cannot close those obligations or claim full formula-language execution.
 - ID: `G1-SLICE.5e.2.5`
   Status: `pending`
   Goal: whole checked recipe declaration-order execution and real let/assert statement context.

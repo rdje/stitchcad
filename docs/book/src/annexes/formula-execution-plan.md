@@ -1,10 +1,10 @@
 # Joining the checked formula runtime
 
-This is the bounded implementation sequence for G1-SLICE.5e.2, not an available whole evaluator.
-The value-level APIs now compute exact operators, implemented numeric calls, named tolerance
-comparisons, assertions and lazy conditional callbacks. The complete static proof APIs already
-preserve normalized source owners and resolved declaration metadata. The next work joins them
-without treating supplied value metadata as proof of an actual expression or statement.
+This records the bounded implementation sequence for G1-SLICE.5e.2. Actual sourced scalar expression
+execution is available for the prepared subset below; a whole evaluator remains pending. The worker
+joins complete static node proofs, real canonical reads and explicit tolerance/size contexts with
+existing exact kernels. Supplied values or callback annotations cannot replace an actual expression
+proof. Whole statement/recipe execution, missing families and atomic acceptance remain separate work.
 
 ## Existing contracts to reuse
 
@@ -30,7 +30,8 @@ root kind and dependencies. Runtime code can consume the selected branch's real 
    Name dependencies, wanted-kind alternatives and first static error ordering stay unchanged.
    No value, input state, tolerance provider or geometry query enters this static phase.
 2. **Bounded sourced expression execution — .5e.2.4, in progress.** Complete-proof/workspace
-   admission is available below; the source-order machine and actual reads are next. Consume node proofs in source order.
+   admission, source preparation and actual scalar execution are available below. Full family/recipe
+   integration remains open. The worker consumes real node proofs and sources in authored order.
    Use the existing exact value kernels and real declaration-source adapters. A conditional checks
    both complete branch proofs, then evaluates only its condition and selected branch. All evaluated
    call operands contribute, including candidates or bounds whose numeric value is not returned.
@@ -75,8 +76,8 @@ For N certified nodes and D name occurrences, the prospective iterative machine 
 All branches count before runtime selection. Repeated names count separately: dependencies are
 individual source occurrences, not a deduplicated inventory or a trace of reads already performed.
 This bounds logical records; it does not certify allocator bytes, CPU, numeric-kernel workspace,
-provider resources, complete recipe memory or backend availability. The later machine must use
-these capacities. No execution/result certificate follows from an admitted reservation.
+provider resources, complete recipe memory or backend availability. The scalar worker below uses
+these capacities. An admitted reservation alone is not an execution/result certificate.
 
 ```rust
 use sc_core::recipe::{FormulaExecutionLimits, FormulaExpression, FormulaNamespace};
@@ -190,8 +191,9 @@ source-order read traces and real geometry/derived dependencies remain subsequen
 
 Consume a complete workspace admission with prepare_scalar(inputs). The prepared plan retains
 that proof/reservation and the actual immutable CanonicalInputs. It binds every name occurrence,
-including repetitions and both branches, before any value or provider read. This is preparation,
-not an executed expression. No value/result accessor or whole-runtime acceptance is available.
+including repetitions and both branches, before any value or provider read. Preparing a plan
+computes no value; the separate evaluate operation below executes it. Whole-runtime acceptance
+remains pending.
 
 ```rust
 use sc_core::{recipe::*, value::CanonicalInputs};
@@ -236,9 +238,102 @@ claimed as a native fixture: D is bounded by the real 256-node proof; reservatio
 
 Five native tests cover available scalar forms, actual Unknown borrows, original reserved roles,
 late untaken missing targets, unavailable capability priority and all 256 nodes/255 name occurrences.
-They prepare the full 767-record logical reservation without deduplicating sources. Privacy/lifetime
-documentation controls accompany the API. N task/value workspaces, actual source-order evaluation,
-executed-read traces, real context/provider use and final result provenance remain .5e.2.4.3.2.
+The full fixture retains the admitted 767-record logical bound and all 255 prospective source records.
+Privacy/lifetime controls accompany the API. Actual evaluation is described next.
+
+## Actual scalar expression execution
+
+| Public API | Role |
+| --- | --- |
+| `FormulaScalarExecutionContext` | Explicit immutable tolerance/size slots; no input replacement or implicit defaults |
+| `FormulaExecutedScalarExpression` | Actual unbound scalar result, original plan/owner and executed reads |
+| `FormulaScalarExecutionRead` | One actual selected name node/value and original source witness |
+| `FormulaScalarExecutionReadKind` | Dedicated/general canonical read, quantitative tolerance or supplied size value |
+| `FormulaScalarExecutionWorkspace` | N-task or N-value logical machine population |
+| `FormulaScalarExecutionFailure` | Original numeric/input/provider/comparison or reservation cause |
+| `FormulaScalarExecutionErrorCause` | Original allocator failure or boxed full value failure |
+| `FormulaScalarExecutionError` | Actual failing certified node and complete typed cause |
+
+The prepared plan now consumes evaluate(context) and returns a sealed actual scalar result. Its
+iterative worker executes the original checked nodes. It does not call a supplied-value callback,
+reparse source or accept a supplied branch kind. A conditional evaluates its real condition, then
+only the selected actual branch proof. Both complete branches already passed static checking and
+source preparation. Root/child spans retain their original expression owner and authored locations.
+
+```rust
+use sc_core::{recipe::*, value::CanonicalInputs};
+
+let inputs = CanonicalInputs::new(vec![], vec![])?;
+let expression = FormulaExpression::parse("if(1 mm<2 mm,1 mm/3,eps_phys)")?
+    .normalize_literals()?;
+let proof = expression.check_kinds(&FormulaNamespace::new([])?).expect("static fixture");
+let plan = proof.admit_execution(FormulaExecutionLimits::new(256, 768))
+    .expect("explicit envelope").prepare_scalar(&inputs).expect("scalar scope");
+let result = plan.evaluate(FormulaScalarExecutionContext::new(
+    FormulaToleranceContext::empty(), FormulaSizeContext::empty())).expect("taken exact branch");
+assert_eq!(result.value().numeric().expect("Length").rational(),
+    FormulaRational::new(1000, 3, false)?);
+assert_eq!(result.plan().sources().len(), 1); // Prospective eps_phys source.
+assert_eq!(result.reads().count(), 0);        // Untaken: no provider read.
+assert!(std::ptr::eq(result.root().expression(), &expression));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+This result remains the exact unbound fraction 1000/3µm. No let binding/storage rounding has occurred.
+Canonical scalar reads import their stored integers exactly, preserving negative raw angle turns,
+signed ratios, zero and false. Count expression arithmetic may exceed i64 storage while staying
+inside its actual nonnegative/128-bit numeric domain. Binding storage checks remain the statement
+executor's responsibility. Unknown requires its actual observation; Derived requires its sole
+formula's evaluation. Neither becomes zero, false, a cached value or a new language refusal.
+
+| Executed source | Actual retained witness |
+| --- | --- |
+| Dedicated length | Original canonical borrow/state, including Known/Assumed/Preference labels |
+| General scalar | Actual canonical family/kind/state, including Boolean false and signed values |
+| Tolerance | Original once-read class/limit/derivation and provider borrow/source or intrinsic |
+| Size | Actual supplied pinned size-role frame/value; derive it through the canonical membership adapter |
+
+reads() contains only name occurrences actually executed, in authored order with repetitions.
+The complete prospective sources remain inspectable separately through plan().sources(). The
+worker fills existing D-source slots in place; it does not clone records or allocate another read
+trace. The result, context, read and failure Debug views omit authored names/value content; explicit
+value/source/cause inspection remains available. Actual inventory borrows and provider lifetimes
+cannot be escaped through the result.
+
+All available scalar calls dispatch to their existing sourced numeric kernels. Every evaluated
+operand contributes, including an unselected min/max candidate or clamp bound. Conditional results
+retain the condition's approximation sources plus the taken branch's sources. A within call uses
+the original quantitative tolerance read from its actual direct reserved-name operand; it does not
+query that provider again or accept a caller's replacement class annotation.
+
+| Expression | Actual result or refusal |
+| --- | --- |
+| `0.0004 mm+0.0004 mm` | 0µm: each literal rounds once before addition |
+| `1 mm/3` | Exact 1000/3µm, without a binding conversion |
+| `round_to(3 um,2 um)` | 4µm, retaining the round_to contribution |
+| `if(sin(0 deg)==0 pct,1 mm,2 mm)` | 1mm, retaining the condition's sin contribution |
+| `min(0 mm,round_to(1 mm,1 um))` | 0mm, retaining the evaluated second operand's round_to source |
+| `within(sqrt((2 mm)^2),2 mm,eps_num)` | Actual T1 approximation refusal, retaining the computed values and sqrt source |
+
+Before any value/provider read, both N task/value buffers reserve fallibly. Every push checks its
+admitted logical population, so the vectors cannot silently grow past N. This implements the
+2N+D machine-buffer reservation; it does not bound allocator bytes, existing kernel temporary
+allocations, boxed error witnesses, provider resources or CPU. Allocation failures retain their
+original allocator error without requiring another error box. A runtime refusal retains its actual
+failed name/operator/call node and complete original borrowed cause; no accepted result/read prefix
+escapes and canonical inputs remain unchanged. No statement ordinal or artifact-policy context is
+invented. Whole recipe/publication atomicity remains .5e.4 work.
+
+Focused evidence is nine native core tests, one real sc-measure membership integration test and
+the execution documentation controls. The integration derives all size values through the actual
+SizeMembership::formula_context adapter for three authored members, then verifies taken-only reads,
+original set/revision/member/base sources and unchanged membership. The full 256-node fanout reads
+all 255 original eps_num occurrences under the exact 767-record reservation; a left-deep 256-node
+expression also completes without recursive execution frames. Independent broader scalar-result
+verification is deferred to .5e.2.4.3.acceptance after this feature commit. Whole worked-book,
+platform identity, tangent/geometry/derived evaluation, prior-let statements and replay keep their
+existing .5g/.5e.4/parent owners. This scoped expression result grants no whole-language, containing
+Design/currentness, evidence-truth, geometry/physical or release approval.
 
 Name reads use the actual resolved declaration, not a fresh name-only search that could find another
 source. Canonical length/general scalar adapters retain source/state and return observation or

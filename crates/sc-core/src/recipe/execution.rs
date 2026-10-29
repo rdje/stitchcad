@@ -7,6 +7,18 @@ pub use plan::{
     FormulaScalarExecutionPlan, FormulaScalarExecutionPlanError, FormulaScalarExecutionPlanRefusal,
     FormulaScalarExecutionSource, FormulaScalarExecutionSourceKind,
 };
+mod read;
+pub use read::{
+    FormulaScalarExecutionContext, FormulaScalarExecutionRead, FormulaScalarExecutionReadKind,
+};
+mod failure;
+pub use failure::{
+    FormulaScalarExecutionError, FormulaScalarExecutionErrorCause, FormulaScalarExecutionFailure,
+    FormulaScalarExecutionWorkspace,
+};
+mod worker;
+pub use worker::FormulaExecutedScalarExpression;
+mod dispatch;
 
 /// Explicit per-expression node and logical workspace allowances, without implicit defaults.
 /// Zero is a valid allowance and refuses any nonempty complete proof.

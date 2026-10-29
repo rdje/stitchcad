@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — prepare complete actual scalar source plans before values
+## _(2026-10-29 UTC)_ — execute actual sourced scalar ASTs within admitted workspaces
 
-0578 private same-proof arena/dependency views drive capability scan then fallible D-source reservation. Join every canonical occurrence in original dependency order;reserved roles stay unresolved. Actual record/proof borrows survive repeated/untaken uses. No value/provider read or computed result.
-Native5 covers available forms,Unknown/optional contexts,late missing target actual node/cause,full256/255/767 logical bound and tangent root/mixed/untaken/geometry/prior-let gaps. Existing node6/admission4/doc7/scoped strict lint/fmt pass. Allocation cause retained;no fake oversized proof/OOM fixture.
-Book94/273/1601/2800/glossary310/9/158/0 pass. [Whole0577 source join](docs/history/stitchcad-devnotes-part736.md) retains four exact Git spans. Private complete-plan fields and actual original error nodes prevent prefix/source substitution;capability scope remains distinct from language semantics.
-Indexed source/resource/proof rules apply;promotion declined. Next .5e.2.4.3.2 actual N-task/N-value worker,executed reads and real contexts/provenance. Whole derived/geometry/tangent/recipe/replay/platform work owned. LIVE G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;D334/D156/D223/PLANNING.5 owned.
+0579 actual iterative worker reserves N tasks/N values before reads,guards pushes and fills D slots only on execution. Real condition selects actual branch;no callback annotations. Exact kernels retain evaluated operands and condition/taken sources;within reuses actual class read.
+Native core9/real membership1 across3 members/plan5/doc10/scoped strict lint/fmt pass. Exact fractions/literal-once conversion,Unknown/Derived requirements,canonical state/false/zero/raw turns,Count beyond i64 binding range,error order,T1/provider sources and full256/255/767 plus left-deep256 pass.
+Initial check unused trait import removed;native101 integer inference fixed in fixture. Book94/281/1601/2801/glossary310/9/158/0 pass. [Whole0578 preparation](docs/history/stitchcad-devnotes-part737.md) retains four Git spans. Result/context/read/error Debug omits names/values;explicit typed sources remain available.
+Indexed node/source/numeric/lazy/resource rules apply;promotion declined. Logical buffers exclude kernel/error/provider work and allocator bytes. Next .3.acceptance scoped result proof;whole recipe/derived/tan/geometry/replay/platform pending. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.3.2:actual bounded scalar worker on complete prepared source plan.
-  N task/N value workspaces,real ordered/taken-only reads and sourced existing kernels;read
-  actual plan/context/size membership provider contracts first. No supplied annotation proof.
-- Prepared scalar sources0578:actual full proof,capability scan before fallible D-source reserve,
-  exact canonical joins in dependency order;all repeated/untaken occurrences retained. No values.
-  Tangent/geometry/prior-let gaps are preparation scope,not language refusals/results. Unknown/
-  Derived and optional contexts stay unread. Native5/node6/admission4/doc7/scoped lint/fmt pass.
-  Book94/273/1601/2800/glossary310/9/158/0 pass;whole0577 retained736/four exact Git spans.
-- Actual canonical joins0577 and explicit workspace0576 implemented;full256/255 bound767.
+- Next G1-SLICE.5e.2.4.3.acceptance:after scalar feature0579,run deferred scoped independent/
+  integration result checks and reconcile supported/unavailable families. Read worker,real source/context contracts and existing oracle instruments first;whole language still open.
+- Actual scalar AST worker0579 implemented with focused checks passing:ordered actual nodes,
+  condition/taken-only branches,all evaluated operands,original input/provider read traces and
+  exact kernels. N task/N value buffers reserve fallibly/push-guarded;D slots fill in place.
+  Native core9/real membership1/plan5/doc10/scoped lint/fmt pass;full256/255 under767 and left-deep
+  256 pass. No premature binding rounding;original Unknown/Derived requests and T1 causes kept.
+  Book94/281/1601/2801/glossary310/9/158/0 pass;whole0578 retained737/four exact Git spans.
+- Whole recipes/prior-let/derived evaluation,tangent/geometry/replay/platform remain owned.
   D337 fixed0575:actual0288 inverses available;tangent .5d.1.2.2.2.d.2/.5d.3.2.2 pending.
   Lineage0574 closes47 native/21 doc;actual paired .2.4 providers/physical,.2.5 atomic effects open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,
   102 originals exact;never rerun old transactions. Full local/hosted79bd6f6a stays SHA-scoped.
-- G1 6/18/G0 unapproved;D334 P2 after current G1/before G0,D156/D223/PLANNING.5 owned. Whole runtime/derived/geometry/recipe/replay pending. Full PNT;focused checks/commit per slice,push400 after full gates.
+- G1 6/18/G0 unapproved;D334 P2 after current G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;focused checks/commit per slice,push400 after full gates. Broader scalar acceptance next,not already verified.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

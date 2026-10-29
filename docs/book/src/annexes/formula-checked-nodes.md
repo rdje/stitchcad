@@ -7,7 +7,8 @@ cannot attach another arena, supply a node index or create a checked prefix afte
 
 This is static inspection. No input value, authored state, provider, geometry or numerical operator
 is evaluated. A checked sin call has a resolved kind/callee; it is not a computed sine result.
-Whole expression and statement execution remain the next integration work.
+A separate prepared scalar worker now executes actual checked expressions in its implemented subset.
+Full family and statement execution remain integration work.
 
 ## Inspect actual branch certificates
 
@@ -84,4 +85,5 @@ Selected strict lint and the relevant privacy/lifetime documentation tests pass.
 verification remains deferred to the existing integration/pre-push owners.
 
 No runtime result, approval, geometry, statement execution or complete recipe acceptance follows
-from node inspection. The [execution sequence](formula-execution-plan.md) tracks those later slices.
+from node inspection alone. The [execution sequence](formula-execution-plan.md) documents the separate
+actual scalar worker and remaining integration slices.

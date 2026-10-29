@@ -150,10 +150,12 @@ pub use checked::{
 
 mod execution;
 pub use execution::{
-    FormulaExecutionAdmission, FormulaExecutionAdmissionError, FormulaExecutionAdmissionRefusal,
-    FormulaExecutionLimits, FormulaScalarExecutionPlan, FormulaScalarExecutionPlanError,
-    FormulaScalarExecutionPlanRefusal, FormulaScalarExecutionSource,
-    FormulaScalarExecutionSourceKind,
+    FormulaExecutedScalarExpression, FormulaExecutionAdmission, FormulaExecutionAdmissionError,
+    FormulaExecutionAdmissionRefusal, FormulaExecutionLimits, FormulaScalarExecutionContext,
+    FormulaScalarExecutionError, FormulaScalarExecutionErrorCause, FormulaScalarExecutionFailure,
+    FormulaScalarExecutionPlan, FormulaScalarExecutionPlanError, FormulaScalarExecutionPlanRefusal,
+    FormulaScalarExecutionRead, FormulaScalarExecutionReadKind, FormulaScalarExecutionSource,
+    FormulaScalarExecutionSourceKind, FormulaScalarExecutionWorkspace,
 };
 
 mod checked_statement;

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0578 — prepare actual complete scalar source plans before reads
+## STITCHCAD-G1-0579 — execute actual bounded sourced scalar expressions
 
-- Complete same-proof capability scan precedes fallible D-source reservation and actual canonical joins in dependency order. Keep repeated/untaken sources and optional reserved roles unread. Tangent/geometry/prior-let gaps stay preparation scope,no language refusal or placeholder result.
-- Native5/node6/admission4/doc7/scoped strict lint/fmt/book94/273/1601/2800/glossary310/9/158/0 pass. Whole0577 retained736/four Git spans. Next .5e.2.4.3.2 actual N-task/N-value worker and real sourced reads/contexts. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;whole runtime/paired/physical work owned.
+- Consume prepared proofs/sources with explicit tolerance/size contexts. Reserve/guard N-task/N-value buffers and fill existing D read slots. Real condition/taken branch,exact kernels,all evaluated operand sources,original errors and actual canonical/provider state survive;no binding conversion or callback proof.
+- Core9/real membership1/plan5/doc10/scoped lint/fmt/book94/281/1601/2801/glossary310/9/158/0 pass;whole0578 retained737/four Git spans. Full256/255 under767 and left-deep256 pass. Next .3.acceptance;whole runtime/recipe/derived/tan/geometry/replay/platform pending. G1 6/18/G0 unapproved.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
