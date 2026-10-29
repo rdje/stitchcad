@@ -15,8 +15,8 @@
 > records remaining product/runtime contracts; D124 recognition preserves the existing grammar.
 > Product [metadata and initial reads](../annexes/formula-declarations.md), plus [ordered name scopes](../annexes/formula-name-scopes.md), are available at .5b.2.
 > [Source-bearing call lookup](../annexes/formula-call-lookup.md) supplies exact callee refusals at .5b.3c.2a.
-> Product name/type/binding validation and evaluation remain G1-SLICE.5b–.5g work; final acceptance
-> makes every worked example a product evaluation test. Terms are defined in the
+> Complete static proofs and [admitted scalar recipes](../annexes/formula-recipe-execution.md) are available;
+> full runtime/worked-example acceptance remains .5e–.5g work. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.
 
@@ -92,15 +92,15 @@ maps the four verified numeric boundaries to their independent controls. Individ
 The [coupled normalization review](../annexes/formula-literals.md#coupled-normalization-review) is complete.
 [Canonical expression serialization](../annexes/formula-literals.md#serialize-canonical-expression-identity)
 is implemented; ordered statements also have [explicit syntax inspection](../annexes/formula-statements.md#parse-an-ordered-recipe).
-Statement and whole-recipe identity and scalar binding conversion are implemented; complete
-statement/recipe execution remains pending. Reference instruments
-supply no product execution claim.
+Statement/recipe identity,binding conversion and [admitted scalar recipe execution](../annexes/formula-recipe-execution.md)
+are implemented. Derived/tangent/geometry integration,load/replay and full acceptance remain pending.
+Reference instruments supply no product execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.
 For example, bound 360 degrees differs from zero and retains a full-turn sweep. Direction fields on
 entities normalize under [units §1.2](units-and-tolerances.md#12-angles-fixed-point-microdegrees).
 The [expert angle annex](../annexes/formula-syntax.md#reference-angle-conversion-and-direction-controls)
-records D84 reference evidence. [Scalar binding conversion](../annexes/formula-rationals.md#one-binding-conversion-and-immutable-stored-values) is available; recipe execution follows.
+records D84 reference evidence. [Scalar binding conversion](../annexes/formula-rationals.md#one-binding-conversion-and-immutable-stored-values) is available and reused by actual admitted scalar recipes.
 
 A `point` and an `edge` are values but not numbers: they may be arguments of the geometry selectors
 ([grammar §6.1](formula-language/grammar.md)) and nothing else, because only a drafting operation
@@ -252,7 +252,7 @@ the node, statement and conditional limits of §4.3.
 The book's [reference assertion controls](../annexes/formula-runtime-validation.md#reference-runtime-assertion-controls)
 verify named false-assertion diagnostics and their values/class. Product
 [named assertion outcomes](../annexes/formula-runtime-validation.md#product-named-assertion-outcomes)
-are available; whole statement execution remains pending.
+are available and joined to [actual scalar statements](../annexes/formula-recipe-execution.md#execute-actual-declarations).
 
 A static refusal rejects the recipe whole: no statement is evaluated and no geometry is produced,
 which is the property the [envelope](feature-matrix.md) §10 requires of every refusal. A runtime

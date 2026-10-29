@@ -453,7 +453,8 @@ zero-axis/exact-angle answers. Actual upstream sqrt/hypot/round_to contributions
 Cancellation, binding and reads preserve T1 refusal; T2 admits the source guard. The adapters check
 actual argument kinds before zero-vector handling, including a wrong first kind before a Boolean
 second argument. Atan2ZeroVector retains actual homogeneous kind and zero operands.
-Tangent, geometry selectors and full AST/provider/recipe execution remain open.
+[Actual scalar expressions and recipes](formula-recipe-execution.md) now consume these sourced values.
+Tangent,geometry,Derived resolution and full provider/replay integration remain open.
 
 ### Product named-tolerance comparisons
 

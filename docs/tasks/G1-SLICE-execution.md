@@ -155,50 +155,60 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   implementation units before code. Full accepted-result failure/replay remains .5e.4 work.
 - ID: `G1-SLICE.5e.2.5.1.2.2.1`
   Status: `done`
-  Goal: share the existing actual scalar iterative machine behind a private source interface and
-  reusable fallibly reserved scratch before whole execution. Detached behavior/results/read
-  provenance remain identical;no public callback or supplied AST value. Reuse one exact numeric
-  storage conversion with a private name-free rule boundary so real checked statement names
-  need no allocated/fictional MachineToken. Keep public actual-name errors/Boolean/sources intact.
-  ROOT CAUSE0584: read complete worker.rs/read.rs/dispatch.rs/evaluated.rs/bound.rs/assertion.rs
-  and existing binding/evaluated targets,rc=0. Current worker owns expression-local task/value
-  buffers and within dispatch reads plan directly. Storage errors borrow caller MachineToken;
-  normalized checked headers borrow source str. Shared private internals avoid duplicated evaluator,
-  storage math or copied header names;actual whole execution follows in .2.2.
-  Completion0584: shared actual runtime/storage internals ready;whole execution remains .2.2.
-  - [x] ROOT CAUSE (WHY + WHERE): cat full worker/read/dispatch/evaluated/bound/assertion APIs
-    and existing native contracts →expression-owned task/value buffers,direct within-plan read
-    and caller MachineToken storage lifetime,rc=0. Actual normalized header names borrow str;
-    copying/forging names or duplicating evaluator/storage would sever original source semantics.
-    Share private machine/source and exact conversion-rule boundaries without public callbacks.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --lib recipe::execution::machine --
-    --nocapture →one actual two-operand reuse/capacity-negative test pass,rc=0. Real conditional
-    fraction1000/3 then actual within share unchanged scratch pointers/empty completion. Zero
-    capacity refuses actual8 nodes before sources;missing physical branch stays unread. One
-    private storage path handles both existing named adapters and future real checked statements.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_binding_value_contract --test
-    formula_evaluated_scalar_contract --test formula_scalar_execution_contract -- --nocapture
-    →3/5/11 pass,rc=0,including all49 actual independent scalar value/source/read/refusal rows
-    and byte-exact frozen fixture. Actual endpoint/storage/name/kind/rounded cause,Boolean,source
-    and original canonical/provider semantics survive. Scoped strict core-lib/three-target Clippy,
-    changed Rust formatting,receipt742/four exact Git spans and diff check pass,rc=0. Book94/290/
-    1603/2806/glossary310/9/158/0 pass,rc=0. No public API or kernel arithmetic change. Shared
-    machine private source implementations only;no caller-injected AST values/annotations. No
-    full CI/platform/whole recipe/Derived/replay/physical verdict;separate owners remain below.
-  - [x] LOCKSTEP: book shared machine/storage scope,task/MEM/DEV/CHANGE/LIVE/index align. Next
-    .5e.2.5.1.2.2.2 real declaration-order execution using existing whole plan;one D source/read
-    vector,N task/value scratch,S outcomes before reads. Actual binding only after RHS success;
-    assertions retain real names/ordinals/class/context. No partial accepted recipe or caller seed.
-    Whole dependency families/acceptance/replay/platform/physical and D334/D156/D223/PLANNING.5
-    owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;whole0583 retained742. Full PNT.
-    promotion: declined (existing single-kernel,original-source,private-proof and explicit-reservation rules applied;no public language or execution-authority change).
+  Goal:0584 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part743.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.2`
-  Status: `pending`
+  Status: `done`
   Goal: implement real declaration-order scalar recipe execution using actual whole plan/shared
   machine/private storage. Reserve N task/value and S output buffers before reads,retain single D
   source/read vector,real successful binding prefix and assertions. No public seeding/advance APIs.
   Original let/assert/name/source/ordinal/storage/comparison failures survive;no partial accepted
   recipe escapes. Whole dependency families/replay/platform remain owned integration work.
+  Implementation0585 scope: one-shot available scalar recipe evaluation,private real output
+  prefix and actual once-rounded binding;all static/capability/canonical joins already complete.
+  Assertion order is actual left,right,then header tolerance,as existing reference statement()
+  implements. Preserve actual read order without a second D trace vector:iterate each static
+  statement block's operands then header. Actual supplier identity must match private completed
+  output at its real ordinal. Reuse private storage rule and shared actual-node machine only.
+  Runtime error returns original cause/actual whole statement and no accepted prefix;unimplemented
+  Derived/tan/geometry/load/replay/platform remain explicit owners. Partition whole-recipe book
+  contracts into a semantic annex before adding this feature,keeping links/API routes complete.
+  Completion0585: actual one-shot admitted scalar recipes implemented with focused checks.
+  - [x] ROOT CAUSE (WHY + WHERE): complete shared worker/read/storage/assertion APIs and
+    actual reference statement() →left,right,then tolerance header;source inspection rc=0.
+    Whole source plans retain metadata suppliers,not executed values. Consume actual proof with
+    a private successful outcome prefix;only real RHS/storage success can supply a later let.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_recipe_execution_contract
+    --test formula_scalar_execution_contract -- --nocapture →seven new/eleven existing pass,rc=0.
+    Real1000/3 binds333,subsequent reads stored integer;zero/false and contribution sources retained.
+    Actual supplier identity/ordinal checked against private completed prefix,including assertions.
+    Left/right/header refusal order,true/false original comparisons,T1 refusal,original physical
+    provider/label/within read,untaken optional context and canonical Unknown/Derived requests pass.
+    Wide Count2*i64MAX refuses actual let storage with full bounds/rounded witness. Empty and
+    max4096 assertion recipes return complete real outcomes;no partial constructor/prefix escapes.
+  - [x] NO REGRESSION: same affected targets include unchanged49 independent scalar rows/frozen
+    bytes,rc=0. cargo test -p sc-core --doc recipe::execution::recipe_ -- --nocapture →five pass,
+    actual private result/input/lifetime guards and positive examples,rc=0. Scoped strict core-lib/
+    new-target Clippy and changed Rust formatting/diff pass,rc=0. One D source/read vector plus
+    N task/value scratch and S outcomes reserve before reads;actual read iterator streams operand
+    blocks before assertion header without a second trace/sort. No input clone or replacement
+    MachineToken in product code. Book95/299/1620/2832/glossary310/9/158/0 and receipt743/four exact
+    Git spans pass,rc=0. Initial publication refused missing topic-index route;add actual route,
+    then green. Whole-recipe independent acceptance remains separate pending task below;no claim
+    it passed. No allocator fault injection,full CI/platform/missing-family/Derived/load/replay/
+    whole bus/physical verdict;actual owners remain .5e.2.4.integration/.5e.4/.5g and paired .2.4/.2.5.
+  - [x] LOCKSTEP: semantic scalar recipe annex retains whole admission/preparation contracts and
+    actual execution/outcome/read/refusal examples;SUMMARY/topic index/API rows route all public
+    types. README/normative/runtime/rational/static-proof scope clarifies admitted subset versus
+    full dependencies. MEM/DEV/CHANGE/LIVE/index align;next .5e.2.5.1.2.2.acceptance independent
+    available-recipe checkpoint. Parent .1/.1.2/.2.2 remain in_progress until that scoped acceptance.
+    G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped. D334/D156/D223/PLANNING.5 owned. Full PNT.
+    promotion: declined (existing actual-proof/source,once-only-storage,ordered execution and no-partial-result doctrines applied;no new grammar or approval policy).
+- ID: `G1-SLICE.5e.2.5.1.2.2.acceptance`
+  Status: `pending`
+  Goal: after available scalar recipe implementation,focused independent actual reference recipe
+  acceptance and source/failure/read-order checkpoint. Separate broader missing-family/Derived/
+  replay/load/platform/worked-example completion remains .5e.2.4.integration/.5e.4/.5g;no full
+  language/product acceptance implied by this available subset or its focused checks.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

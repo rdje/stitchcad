@@ -1,10 +1,10 @@
 # Joining the checked formula runtime
 
 This records the bounded implementation sequence for G1-SLICE.5e.2. Actual sourced scalar expression
-execution is available for the prepared subset below; a whole evaluator remains pending. The worker
+and [scalar recipe execution](formula-recipe-execution.md) are available for the admitted subset. The worker
 joins complete static node proofs, real canonical reads and explicit tolerance/size contexts with
 existing exact kernels. Supplied values or callback annotations cannot replace an actual expression
-proof. Whole statement/recipe execution, missing families and atomic acceptance remain separate work.
+proof. Derived/tangent/geometry integration,load/replay and full atomic acceptance remain owned work.
 
 ## Existing contracts to reuse
 
@@ -37,7 +37,7 @@ root kind and dependencies. Runtime code can consume the selected branch's real 
    call operands contribute, including candidates or bounds whose numeric value is not returned.
    Errors retain the actual failing node, owning expression and available canonical identity.
 3. **Whole declaration-order execution — .5e.2.5, in progress.** Whole-proof admission is available
-   below; actual statement execution remains pending. Consume the actual checked recipe. Every let
+   in the [recipe annex](formula-recipe-execution.md),including actual admitted scalar statements. Every let
    evaluates its RHS before its single numeric binding conversion; only a successful binding becomes
    visible later. Boolean bindings stay Boolean. Assertions use their actual class/name and refuse
    false comparisons. Statement ordinals include assertions and come from the real proof owner.
@@ -117,59 +117,9 @@ runtime result oracles and cross-platform identity remain the later owners below
 
 ## Whole checked-recipe admission
 
-| Public API | Role |
-| --- | --- |
-| `FormulaRecipeExecutionLimits` | Explicit statement, node, workspace and output allowances |
-| `FormulaRecipeExecutionAdmission` | Allocation-free reservation pinned to the complete actual recipe proof |
-| `FormulaRecipeExecutionAdmissionRefusal` | Complete quota/population refusal, separate from language diagnostics |
-| `FormulaRecipeExecutionAdmissionError` | Actual whole proof, selected limits and original resource refusal |
-
-`FormulaCheckedRecipe::admit_execution` is available at G1-SLICE.5e.2.5.1.1. It accepts only explicit
-limits and borrows the existing successful whole static proof. The caller cannot substitute counts,
-a statement prefix, values, ordinals or another recipe. The admission retains proof(), limits(),
-statement_count(), binding_count(), assertion_count(), node_count(), name_use_count(),
-workspace_records() and output_records(). The actual immutable statements and dependencies remain
-available through proof(); their source owners and genuine one-based ordinals include assertions.
-
-For the complete recipe, S is its statement population, N is the sum of all operand nodes and D is
-every dependency occurrence. Both assertion operands, repeated names and untaken branches count.
-Each assertion's original symbolic tolerance header adds one source record to D, without inventing
-an expression node. Reserve N task frames, N value slots and D source records: workspace is 2N+D.
-Separately reserve S outcome records, one per let or assertion. These are conservative logical
-reservations; sequential workspace reuse may use less. They do not certify allocator bytes, kernel
-or provider resources, CPU, backend availability, input currentness or accepted execution.
-
-```rust
-use sc_core::recipe::*;
-let recipe = FormulaRecipe::parse("let n:count=1\nassert check:eps_num=n==n")?
-    .normalize_literals()?;
-let proof = recipe.check_kinds(FormulaNamespace::new([])?).expect("complete static proof");
-let limits = FormulaRecipeExecutionLimits::new(2, 3, 9, 2);
-let admitted = proof.admit_execution(limits).expect("exact complete allowance");
-assert_eq!((admitted.binding_count(), admitted.assertion_count()), (1, 1));
-assert_eq!((admitted.node_count(), admitted.name_use_count()), (3, 3));
-assert_eq!((admitted.workspace_records(), admitted.output_records()), (9, 2));
-assert!(std::ptr::eq(admitted.proof(), &proof));
-# Ok::<(), Box<dyn std::error::Error>>(())
-```
-
-Refusal order is complete statements, checked population/workspace arithmetic, nodes, outputs,
-then workspace. For that example, limits (1,0,0,0) refuse Statements with actual 2; (2,2,0,0) refuse
-Nodes with actual 3; (2,3,0,1) refuse OutputRecords with required 2; (2,3,8,2) refuse WorkspaceRecords
-with required 9. Zero allowances admit an empty recipe. None widens the fixed language bounds.
-Aggregate refusals retain the actual whole proof and limits, without inventing a failed statement
-ordinal or canonical formula diagnostic. Missing runtime context and numerical failures remain
-unevaluated; a later static error prevents the complete proof needed to call admission at all.
-
-Five native tests cover actual Unknown/source owners and global spans, quota priority/exact limits,
-empty and maximum4096-statement recipes, static-before-runtime order and four independent reference
-parser rows. The largest assertion-only fixture has8192 nodes,4096 header uses,20480 workspace and
-4096 outputs; no tolerance is read. Three compiler-negative examples enforce explicit limits,
-private populations and proof lifetime; the positive example executes. The existing independent
-reference parser supplies finite source/population rows through
-`docs/tasks/artifacts/formula_structure/recipe_execution_admission_oracle.py`; it reads no Rust or
-native output and evaluates no values. This slice constructs no session or executed prior-let
-prefix. Those remain .5e.2.5.1.2; statement execution, whole-result acceptance and replay stay owned.
+[Scalar construction recipes](formula-recipe-execution.md#whole-checked-recipe-admission) now have
+complete logical admission,actual whole source preparation and declaration-order execution.
+The semantic recipe annex retains the full API contracts and examples.
 
 ## Source and provider integration
 
@@ -300,64 +250,9 @@ Privacy/lifetime controls accompany the API. Actual evaluation is described next
 
 ## Prepare every whole-recipe scalar source
 
-| Public API | Role |
-| --- | --- |
-| `FormulaScalarRecipePlan` | Complete read-free whole scalar preparation over actual admission and inputs |
-| `FormulaScalarRecipeSource` | One original consumer occurrence and prospective supplier |
-| `FormulaScalarRecipeSourceKind` | Actual canonical join, reserved role or earlier checked let |
-| `FormulaScalarRecipePlanRefusal` | Unavailable capability, original canonical cause or source allocation refusal |
-| `FormulaScalarRecipePlanError` | Actual whole owner/inventory and available failed statement, operand or dependency |
-
-Whole admission's prepare_scalar(inputs) is available at .5e.2.5.1.2.1. It first scans every statement
-in authored order, binding RHS or assertion left then right, with each expression's actual certified
-arena order. This uses the same exhaustive builtin-availability catalog as detached scalar
-preparation. Tangent and geometry stay explicit capability gaps; none becomes a formula-language
-diagnostic. An unavailable later operand precedes an earlier missing canonical target, because the
-whole capability scan finishes before source allocation or inventory joins. Capability scanning is
-separate from runtime source-order evaluation; no values or providers are read.
-
-After capability acceptance, one D-source vector reserves fallibly. Every original whole dependency
-then joins in its existing order: assertion header before left/right operand uses; repeats and
-untaken branches remain distinct. Canonical sources reuse the real inventory adapter, preserving
-actual borrowed owner and original typed failures. Reserved sources retain their exact role,
-including a missing optional physical tolerance header. No fallback value or provider is supplied.
-
-A PriorLet source points to the actual earlier FormulaCheckedStatement in this complete proof.
-The private join verifies the supplier ordinal, let role, name, original spans and kind against its
-original occurrence. Interleaved assertions count toward ordinals but supply no scalar. This is a
-checked metadata relationship, not a completed expression, stored integer, executed prefix or
-accepted binding. Neither caller values nor a standalone binding conversion enter preparation.
-
-```rust
-use sc_core::{recipe::*, value::CanonicalInputs};
-let inputs = CanonicalInputs::new(vec![], vec![])?;
-let recipe = FormulaRecipe::parse("let n:count=1\nassert check:eps_phys=n==n")?
-    .normalize_literals()?;
-let proof = recipe.check_kinds(FormulaNamespace::new([])?).expect("whole static proof");
-let plan = proof.admit_execution(FormulaRecipeExecutionLimits::new(2, 3, 9, 2))
-    .expect("exact allowance").prepare_scalar(&inputs).expect("sources, no values");
-assert_eq!(plan.sources().len(), 3);
-assert!(matches!(plan.sources().first().expect("header").kind(),
-    FormulaScalarRecipeSourceKind::Reserved(_)));
-assert!(std::ptr::eq(plan.admission().proof(), &proof));
-# Ok::<(), Box<dyn std::error::Error>>(())
-```
-
-The plan exposes admission(), inputs() and the complete sources() slice. Each source exposes its
-original dependency() and kind(). Private fields prevent substitution. On a capability refusal,
-error.statement(), expression_part() and node() retain the actual operand owner and node. A canonical
-join failure instead exposes dependency() with genuine consumer ordinal, role, span and declaration,
-and statement() returns that actual consumer. refusal() reconstructs the same original typed
-canonical failure from unchanged source/inventory; allocation_error() retains the original allocator
-cause. Allocation has no fabricated statement/operand. Errors expose no partial plan or source list.
-
-Five native whole-plan tests cover actual Unknown/Derived records, repeated and untaken occurrences,
-real prior suppliers at ordinals1 and3, late capability priority, exact canonical refusal context,
-empty and4096-assertion header populations. The five existing detached-plan tests still pass after
-sharing the capability catalog. Two compiler negatives enforce private input ownership and borrowed
-inventory lifetime; the positive example executes. No numerical kernel/worker changes. Private
-session, real once-only binding and executed read witnesses remain .5e.2.5.1.2.2; whole acceptance,
-Derived evaluation, missing families, replay and platform identity retain their implementation owners.
+The [whole source plan](formula-recipe-execution.md#prepare-every-whole-recipe-scalar-source)
+binds actual canonical/reserved/prior-let suppliers before values. Its private runtime prefix
+executes real statements;it accepts no caller-supplied results or annotations.
 
 ## Actual scalar expression execution
 
@@ -502,7 +397,7 @@ actual operand population and leaves both buffers empty after a successful opera
 executes an actual conditional fraction followed by within using the same scratch addresses;
 insufficient capacity refuses before any source read. The existing binding3/sourced-value5/controller11
 tests, including49 independent reference rows and exact frozen bytes, pass after this refactor.
-This is internal reuse, not an executed recipe or prior-let result; .5e.2.5.1.2.2.2 owns that step.
+Actual admitted scalar recipes now consume this shared machine through a private earned binding prefix.
 
 ## Dependencies that still prevent full runtime closure
 

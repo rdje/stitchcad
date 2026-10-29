@@ -241,3 +241,17 @@ impl<'e, 's, 'd> FormulaCheckedExpression<'e, 's, 'd> {
         })
     }
 }
+
+mod recipe_result;
+pub use recipe_result::{
+    FormulaExecutedScalarRecipe, FormulaExecutedScalarRecipeStatement, FormulaScalarRecipeOutcome,
+    FormulaScalarRecipeRead, FormulaScalarRecipeReadKind,
+};
+mod recipe_failure;
+pub use recipe_failure::{
+    FormulaScalarRecipeError, FormulaScalarRecipeErrorCause, FormulaScalarRecipeFailure,
+    FormulaScalarRecipeWorkspace,
+};
+
+mod recipe_read;
+mod recipe_worker;

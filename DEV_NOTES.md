@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — share actual scratch and one storage conversion before whole execution
+## _(2026-10-29 UTC)_ — execute real scalar recipes with an earned stored prefix
 
-0584 extracts existing actual-node tasks into one private reusable machine/source interface. Detached wrapper keeps actual source/read slots and typed errors. Within uses its once-read original class. One private storage rule backs named APIs and future checked headers;no invented/copied name or arithmetic.
-Scratch1/binding3/sourced5/controller11 pass;actual49 independent value/source/read/refusal rows and frozen bytes exact. Two real operands reuse identical scratch addresses;zero capacity refuses8 nodes before reads. Raw turns,endpoint/storage witnesses,Boolean and contribution/name/context semantics survive.
-Scoped strict lint/fmt/book94/290/1603/2806/glossary310/9/158/0 pass;[whole0583 source plan](docs/history/stitchcad-devnotes-part742.md) retains four exact Git spans. No public callback/API,math or whole execution change. G1 6/18/G0 unapproved;full-hosted79bd6f6a SHA-scoped.
-Existing single-kernel/source/proof/budget rules apply;promotion declined. Next .5e.2.5.1.2.2.2 actual whole scalar execution:one D source/read vector,N scratch,S outcomes before reads;real successful let prefix/assertions. Whole dependencies/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT.
+0585 consumes whole scalar source plans;one D source/read vector,N scratch,S outcomes reserve before reads. RHS then shared once-only storage precedes let visibility. Original supplier identity/ordinal joins private completed output. Assert left/right/header order;no copied name,input clone or partial accepted result.
+New7/existing11 incl49 scalar oracle rows/frozen bytes/doc5/scoped strict lint/fmt pass. Fractions/zero/false/sources,physical provider,Unknown/Derived requests,T1/false assertion and Count storage witnesses retained. Empty/max4096 complete outcomes pass;full whole-recipe oracle acceptance remains separately pending.
+Book95/299/1620/2832/glossary310/9/158/0 pass;semantic recipe annex retains admission/preparation and execution contracts. Initial topic-index omission refused/fixed. [Whole0584 shared runtime](docs/history/stitchcad-devnotes-part743.md) retains four Git spans. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
+Indexed real-proof/source/ordered-storage/atomic-result rules apply;promotion declined. Next .5e.2.5.1.2.2.acceptance actual independent subset checkpoint. Full Derived/tan/geometry/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

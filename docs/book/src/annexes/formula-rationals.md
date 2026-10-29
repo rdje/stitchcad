@@ -183,7 +183,8 @@ The normalized-literal bridge performs no new conversion. For example, a normali
 is already zero ppm; importing it cannot recover a hidden fraction. A normalized 720 deg input
 remains 720,000,000 microdegrees. The error contains actual kind/value/bounds; expression
 and statement context belongs to later evaluator integration. Scalar refusals retain the actual
-constructor/operator token. Whole-statement binding/evaluator integration remain pending features.
+constructor/operator token. [Admitted scalar statements](formula-recipe-execution.md) now supply
+actual expression/statement context;full dependency integration remains pending.
 
 ### Exact quantity operators
 
@@ -364,7 +365,8 @@ and complete statement/recipe execution remain separate integration responsibili
 The engine shares one private numeric storage conversion and its exact typed refusal rule.
 Public named binding APIs retain the original borrowed MachineToken,kind,rounded bounds and source
 contributions. A checked statement can attach its actual source name to the same private rule
-without allocating a replacement name;whole statement execution remains a separate runtime task.
+without allocating a replacement name;[actual scalar statements](formula-recipe-execution.md)
+now reuse this boundary. Full dependency/replay integration remains separate.
 
 Check the binding boundary with its affected native target:
 

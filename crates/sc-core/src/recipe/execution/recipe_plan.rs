@@ -28,8 +28,9 @@ pub enum FormulaScalarRecipeSourceKind<'a> {
 /// Private fields prevent attaching a foreign source, statement, ordinal or role.
 #[derive(Clone, Copy, Debug)]
 pub struct FormulaScalarRecipeSource<'a> {
-    dependency: FormulaRecipeNameDependency<'a>,
-    kind: FormulaScalarRecipeSourceKind<'a>,
+    pub(super) dependency: FormulaRecipeNameDependency<'a>,
+    pub(super) kind: FormulaScalarRecipeSourceKind<'a>,
+    pub(super) read: Option<super::recipe_result::RecipeReadData<'a>>,
 }
 impl<'a> FormulaScalarRecipeSource<'a> {
     /// Actual consumer position, role, span and declaration, including assertion-header metadata.
@@ -201,9 +202,9 @@ impl std::error::Error for FormulaScalarRecipePlanError<'_> {
 /// ```
 #[derive(Debug)]
 pub struct FormulaScalarRecipePlan<'a> {
-    admission: FormulaRecipeExecutionAdmission<'a, 'a>,
+    pub(super) admission: FormulaRecipeExecutionAdmission<'a, 'a>,
     inputs: &'a CanonicalInputs,
-    sources: Vec<FormulaScalarRecipeSource<'a>>,
+    pub(super) sources: Vec<FormulaScalarRecipeSource<'a>>,
 }
 impl<'a> FormulaScalarRecipePlan<'a> {
     /// Original complete proof and selected whole logical allowances.
@@ -364,7 +365,11 @@ impl<'p, 'd> FormulaRecipeExecutionAdmission<'p, 'd> {
                     "complete private admission counts this same immutable dependency iterator"
                 );
             }
-            sources.push(FormulaScalarRecipeSource { dependency, kind });
+            sources.push(FormulaScalarRecipeSource {
+                dependency,
+                kind,
+                read: None,
+            });
         }
         Ok(FormulaScalarRecipePlan {
             admission,

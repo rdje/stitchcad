@@ -39,6 +39,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Complete formula recipe proofs](annexes/formula-checked-recipes.md)
 - [Checked formula node certificates](annexes/formula-checked-nodes.md)
 - [Formula runtime execution plan](annexes/formula-execution-plan.md)
+- [Execute scalar construction recipes](annexes/formula-recipe-execution.md)
 - [Trigonometric threshold certificates](annexes/formula-trig-certificates.md)
 - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
 - [Syntax milestone and the route to execution](annexes/formula-recipe-inputs.md#syntax-milestone-and-the-route-to-execution)

@@ -55,15 +55,15 @@ formula expression workspace limits	annexes/formula-execution-plan.md	crates/sc-
 formula complete proof workspace admission	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution.rs	FormulaExecutionAdmission	G1-SLICE.5e.2.4.1	4.1
 formula expression admission refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution.rs	FormulaExecutionAdmissionRefusal	G1-SLICE.5e.2.4.1	4.1
 formula expression admission owner	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution.rs	FormulaExecutionAdmissionError	G1-SLICE.5e.2.4.1	4.1
-formula whole recipe runtime limits	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionLimits	G1-SLICE.5e.2.5.1.1	4.1
-formula complete recipe runtime admission	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmission	G1-SLICE.5e.2.5.1.1	4.1
-formula whole recipe admission refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmissionRefusal	G1-SLICE.5e.2.5.1.1	4.1
-formula whole recipe admission owner	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmissionError	G1-SLICE.5e.2.5.1.1	4.1
-formula whole scalar source plan	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlan	G1-SLICE.5e.2.5.1.2.1	4.1
-formula whole prospective source occurrence	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipeSource	G1-SLICE.5e.2.5.1.2.1	4.1
-formula whole actual supplier role	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipeSourceKind	G1-SLICE.5e.2.5.1.2.1	4.1
-formula whole scalar preparation refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlanRefusal	G1-SLICE.5e.2.5.1.2.1	4.1
-formula whole scalar preparation context	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlanError	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole recipe runtime limits	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionLimits	G1-SLICE.5e.2.5.1.1	4.1
+formula complete recipe runtime admission	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmission	G1-SLICE.5e.2.5.1.1	4.1
+formula whole recipe admission refusal	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmissionRefusal	G1-SLICE.5e.2.5.1.1	4.1
+formula whole recipe admission owner	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe.rs	FormulaRecipeExecutionAdmissionError	G1-SLICE.5e.2.5.1.1	4.1
+formula whole scalar source plan	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlan	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole prospective source occurrence	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipeSource	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole actual supplier role	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipeSourceKind	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole scalar preparation refusal	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlanRefusal	G1-SLICE.5e.2.5.1.2.1	4.1
+formula whole scalar preparation context	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_plan.rs	FormulaScalarRecipePlanError	G1-SLICE.5e.2.5.1.2.1	4.1
 formula actual canonical input join	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInput	G1-SLICE.5e.2.4.2	4.1
 formula canonical input adapter view	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInputAdapter	G1-SLICE.5e.2.4.2	4.1
 formula canonical input join refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInputRefusal	G1-SLICE.5e.2.4.2	4.1
@@ -289,3 +289,12 @@ actual paired graph candidate admission	spec/command-seam-lineage.md	crates/sc-c
 actual paired graph candidate refusal	spec/command-seam-lineage.md	crates/sc-core/src/command/seam_candidate.rs	CommandSeamSplitGraphError	G1-SLICE.6.5.3.2.3.4.3.2	4.4
 actual paired garment candidate admission	spec/command-seam-lineage.md	crates/sc-core/src/command/seam_candidate/garment.rs	CommandSeamSplitGarmentAdmission	G1-SLICE.6.5.3.2.3.4.3.3.2	4.4
 actual paired garment candidate refusal	spec/command-seam-lineage.md	crates/sc-core/src/command/seam_candidate/garment.rs	CommandSeamSplitGarmentError	G1-SLICE.6.5.3.2.3.4.3.3.2	4.4
+formula complete scalar recipe result	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_result.rs	FormulaExecutedScalarRecipe	G1-SLICE.5e.2.5.1.2.2.2	4.1
+formula actual executed recipe statement	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_result.rs	FormulaExecutedScalarRecipeStatement	G1-SLICE.5e.2.5.1.2.2.2	4.1
+formula real scalar statement outcome	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_result.rs	FormulaScalarRecipeOutcome	G1-SLICE.5e.2.5.1.2.2.2	4.1
+formula executed whole recipe read	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_result.rs	FormulaScalarRecipeRead	G1-SLICE.5e.2.5.1.2.2.2	4.1
+formula actual recipe read witness	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_result.rs	FormulaScalarRecipeReadKind	G1-SLICE.5e.2.5.1.2.2.2	4.1
+formula recipe runtime buffer	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_failure.rs	FormulaScalarRecipeWorkspace	G1-SLICE.5e.2.5.1.2.2.2	4.1
+formula original recipe execution error	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_failure.rs	FormulaScalarRecipeError	G1-SLICE.5e.2.5.1.2.2.2	4.1
+formula recipe execution error cause	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_failure.rs	FormulaScalarRecipeErrorCause	G1-SLICE.5e.2.5.1.2.2.2	4.1
+formula original scalar recipe failure	annexes/formula-recipe-execution.md	crates/sc-core/src/recipe/execution/recipe_failure.rs	FormulaScalarRecipeFailure	G1-SLICE.5e.2.5.1.2.2.2	4.1

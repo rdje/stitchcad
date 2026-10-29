@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0584 — share actual scalar scratch and one private binding conversion
+## STITCHCAD-G1-0585 — execute actual admitted scalar recipes in declaration order
 
-- Reuse one private actual-node machine/source interface and exact storage-rule path. Keep detached public APIs,once-read tolerance,original named errors,Boolean/source provenance and numeric semantics;no copied header name or supplied AST callback. Whole execution remains next .5e.2.5.1.2.2.2.
-- Scratch1/binding3/sourced5/controller11 incl49 independent rows/frozen bytes;scoped lint/fmt/book94/290/1603/2806/glossary310/9/158/0 pass. Whole0583 retained742/four Git spans. G1 6/18/G0 unapproved;full-hosted79bd6f6a SHA-scoped;whole dependencies/replay/platform/physical pending.
+- Private earned prefix joins real checked suppliers only after RHS/once-only storage success. Keep zero/Boolean/sources;assert left/right/header order and original provider/comparison/refusal context. One D read vector,N scratch,S outcomes before reads;no partial accepted result or copied header name.
+- New7/existing11 incl49 scalar oracle/doc5/scoped lint/fmt/book95/299/1620/2832/glossary310/9/158/0 pass. Whole0584 retained743/four spans. Independent whole-recipe checkpoint next .5e.2.5.1.2.2.acceptance. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;full families/replay/platform/physical pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
