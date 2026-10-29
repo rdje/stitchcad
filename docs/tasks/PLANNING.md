@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D319 — prepush repairs
+## D308–D320 — prepush repairs
 
-D308–D318 fixed0537–0551;[prior ledger](../history/stitchcad-devnotes-part709.md). D319 P1 owned next:else-fault skips0275 certificates/nonassertion panic;full native16 remains pending. Owner .6.5.3.2.prepush-400.checked-expression-certificate. Full57bd check0/gate0/probes2;29 reached/source restored. Push held;LIVE G1 6/18,G0 human unapproved.
+D308–D319 fixed0537–0552;[prior ledger](../history/stitchcad-devnotes-part709.md). D320 P1 next:two obsolete statement role anchors after0275. Owner .6.5.3.2.prepush-400.checked-statement. Expression native16/every failed body/modes pass;whole producer stops at D320. Full57bd check0/gate0/probes2;push held. LIVE G1 6/18,G0 human unapproved.

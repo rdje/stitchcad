@@ -244,11 +244,14 @@ Sixteen actual compiled checker faults must fail body assertions and restore exa
 
 The computed-kind and forged-class faults target the current shared operand assignment,which
 feeds both the kind stack and per-node certificate. All16 ordered case identities remain;the
-other14 tuples and every program body/plan/classifier/restoration statement are unchanged.
-Both repaired faults produce compiled test-body assertions. Current exclusive replay then reaches
-D319:the else-branch fault omits certificates and hits an internal invariant rather than a test
-assertion. The strict classifier refuses that evidence;source restores and all7 tests pass.
-Its immediate repair/full16 replay is owned by .6.5.3.2.prepush-400.checked-expression-certificate.
+other14 tuples and every program body/plan/classifier/restoration statement are unchanged by that
+repair. The else-branch fault additionally seeds only its mutant certificate vector with inert
+Count/None placeholders;visited nodes overwrite them. Its original duplicate-then/skip-else
+mutation remains exact. This declared bookkeeping adapter lets the original external assertions
+observe the semantic fault. Without it,the newer complete-certificate invariant panics first,
+and the strict classifier correctly rejects that evidence. Production code and classifier stay
+unchanged. Current exclusive replay passes all16 compiled assertion reds and all7 restored tests.
+All15 other case tuples and every other program AST/plan/CLI/restoration statement stay exact.
 
 ```bash
 cargo test -p sc-core --test formula_checked_expression_contract
@@ -272,7 +275,8 @@ Copied readonly mode accepts linked input/unused log aliases without native or f
 The earlier exclusive sixteen-case replay matched authored failed-test sets and current macros in every
 failed body. Two formerly unguarded dependency/conditional proof extractions now assert acceptance
 first. All seventy-two frozen inputs, unchanged production Rust, seventeen local logs and the
-restored full seven-test executable were verified. Current full replay remains pending D319 above.
+restored full seven-test executable were verified. Current certificate-aware replay above restores
+the complete sixteen-case native proof;broader pre-push verification remains separate.
 Dispatch controls and real native proof remain
 separate. These proofs cover expression checking
 against an initial namespace. [Current-statement checking](formula-name-scopes.md#check-the-actual-current-statement)

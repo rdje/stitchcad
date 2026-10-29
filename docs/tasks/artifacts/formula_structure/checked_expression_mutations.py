@@ -24,8 +24,14 @@ CASES = (
                                'let operand = if kind == FormulaKind::Length { '
                                'O::Tolerance(super::FormulaToleranceName::Geometric) } '
                                'else { O::Value(kind) };'),)),
+    # Seed only this mutant's new bookkeeping so the original skipped-else fault
+    # reaches its external assertions; visited nodes overwrite the placeholders.
     ('else branch replaced', (('pending.push(Action::Enter(*else_branch));',
-                              'pending.push(Action::Enter(*then_branch));'),)),
+                              'pending.push(Action::Enter(*then_branch));'),
+                             ('let mut certificates = vec![None; self.nodes.len()];',
+                              'let mut certificates = vec![Some(NodeCertificate { '
+                              'operand: O::Value(FormulaKind::Count), dependency: None, '
+                              'builtin: None }); self.nodes.len()];'))),
     ('conditional child order', (('pending.push(Action::Enter(*then_branch));\n'
                                  '                        pending.push(Action::Enter(*condition));',
                                  'pending.push(Action::Enter(*condition));\n'

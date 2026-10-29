@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0551 — repair current computed-operand mutation anchors
+## STITCHCAD-G1-0552 — restore certificate-aware branch mutation evidence
 
-- Fix D318 two stale anchors after per-node certificates. Preserve16 identities/14 other tuples/every other program AST/plan/CLI. Two-mode/six physical/14 guard-classifier negatives and classifier-only controls pass;both repaired native faults produce real body assertion reds.
-- Original native replay then exposes D319 else-fault certificate invariant panic;strict classifier rejects it. Whole run1;finally source exact/all7 tests pass0. D319 owned P1 immediately next;no full16 or full prepush pass claimed. Production Rust unchanged.
-- Full57bd check0/gate0/probes2 reached29 suites;push held. Whole0550/prior ledger retained709/four exact spans;book/history checks pass. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D318 fixed,D319 owned,D156 audits open.
+- Close D319:retain exact original else fault;declare mutant-only certificate seeding so external assertions observe its original semantic error. Production/classifier unchanged;15 other tuples/all other AST/plans/CLI exact. All16 compiled reds/every failed thread macro/restored7 pass.
+- Modes2/physical6/14 guard-classifier reds pass. Whole producer advances to distinct D320 statement role anchors;D320 P1 owned next,no whole pass inferred. Whole0551 retained710/three spans;book/history checks pass. Fresh full prepush gates/normal push/actual jobs remain required.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D319 fixed,D320 owned,D156 audits open. Book separates current expression proof from historical/pending statement calibration.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

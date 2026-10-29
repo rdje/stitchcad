@@ -125,6 +125,11 @@ then locally check second:length=first against that annotation. This certifies t
 scope and kinds, and supplies no whole-recipe acceptance. The [whole recipe validator](formula-checked-recipes.md) checks each
 statement successfully before staging it and returns only a complete immutable proof.
 
+Current statement-mutation replay is blocked by D320:two role anchors still target the older
+root-operand helper,which now reads its actual node certificate. The strict source census refuses
+before mutation. Repair of those two adapters and a fresh22-case native replay are owned by
+.6.5.3.2.prepush-400.checked-statement. Production statement checking is unchanged.
+
 ```bash
 cargo test -p sc-core --test formula_checked_statement_contract -- --nocapture
 python3 -I -B docs/tasks/artifacts/formula_structure/statement_owner_contract.py
@@ -149,7 +154,7 @@ precede activation. Independent controls require all seventeen files, the sole r
 current library plan and directory plans. They intercept the original six child calls and fixture
 bytes. Captures prove dispatch; separate native execution verifies the five precise diagnostics.
 The direct entry declares all four inputs, twenty-three ordinary diagnostic files and all three
-mutable sources before reads or effects. It preserves twenty-two source bindings and count-limited
+mutable sources before reads or effects. It requires twenty-two source bindings and count-limited
 replacements, including both canonical-owner sites. Children retain prepared stores and the full
 seven-test argv. Every source restores exactly before the current full target is consumed.
 
@@ -160,13 +165,15 @@ python3 -I -B docs/tasks/artifacts/formula_structure/checked_statement_mutations
 Classifier-only declares zero files/mutables/native effects. All three input sources may be read-only
 hard-linked files; unused fault/restoration aliases are outside that mode's declared file plan.
 Current thread panic path/line/byte-column must identify an assertion macro. Custom messages pass;
-nonthread/compiler/expect/test-name noise refuses. Two complete captures, ten physical refusals,
+nonthread/compiler/expect/test-name noise refuses. Historical evidence before the certified-root
+adaptation included two complete captures, ten physical refusals,
 twenty mode faults and an independent legacy-regex fault discriminate omissions, partial mutable
-plans, wrong replacement counts and restoration loss. Exclusive real replay matches authored failed
+plans, wrong replacement counts and restoration loss. Earlier exclusive real replay matched authored failed
 sets and a current macro in every failed body. Four acceptance/refusal preconditions in three public
 tests prevent extraction panics from hiding rejection. Seventy-two frozen inputs/sixty-three unchanged
-production Rust files/twenty-three local logs/current full seven-test artifact remain exact; full
-formatting/strict Clippy/seven-hundred-three native tests pass. Run mutations exclusively. Existing
+production Rust files/twenty-three local logs/full seven-test artifact were exact;full
+formatting/strict Clippy/seven-hundred-three native tests passed at that snapshot. Current replay
+is pending D320 above. Run mutations exclusively. Existing
 18 scope and16 expression fault controls remain required when their implementation changes.
 
 ## Binding refusals retain real sources

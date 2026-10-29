@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.checked-expression-certificate in execution sibling:
-  D319 P1:else-branch mutant skips nodes;0275 certificate collection panics before test assertions.
-  Adapt only mutant metadata as necessary to preserve original semantic fault;never weaken strict
-  classifier/production code. Complete current16 native proof,source restoration and mode controls.
-- D318 fixed0551:two current operand anchors;16 identities/14 tuples/all other AST exact. Two
-  modes/6 physical/13 guard +legacy classifier reds pass0;--classifier-only16 unique passes0.
-- Exclusive native first4 body reds include repaired2;case5 rejected nonassertion panic,whole1;
-  finally actual7 tests pass0/source restored. Logs target/checked-expression-0551-{native,focus}.log.
-- Full57bd5c8d/derived415:check0/gate0/probes2,all29 reached;same stale anchor in2 suites. Jobs
-  consumed/source clean. Logs target/prepush-400-0550. After D319,full retry/normal push/actual jobs.
-- Whole0550/prior ledger retained709/four spans;book93/248/1590/2771,retention1163 pass. Archive
-  calibration/current --all watch complete;native28/0 separate. LIVE G1 6/18,29 suites/G0 human
-  unapproved;D156/12 audits open. Then stop .3.3.acceptance/live lineage .3.4. Full PNT continues.
+- Next G1-SLICE.6.5.3.2.prepush-400.checked-statement in execution sibling:D320 P1 two obsolete
+  role anchors after0275 root_operand reads actual certificate. Adapt only two role mutations;
+  keep22 identities/20 other tuples/all other AST/plans/CLI. Verify modes/native22/restoration.
+- D319 fixed0552:original else mutation exact,mutant-only certificate seeds bypass only new
+  bookkeeping barrier. Production/classifier exact;all16 compiled reds/every failed thread at
+  current test macro,restored7/source exact pass0. Modes2/physical6/mode13 +legacy red pass0.
+- Whole producer now passes expression block then fails statement direct-role anchor,rc1;
+  independent22-case census finds2 missing/20 valid anchors. D320 owned immediately next.
+- Whole0551 retained710/three spans;book93/248/1590/2771,retention1164 pass. Logs target/
+  checked-expression-0552-{native,focus,producer}.log. Full57bd check0/gate0/probes2 reached29;
+  after D320,fresh full gates/normal push/actual jobs remain. No push/hosted verdict yet.
+- LIVE G1 6/18/29 suites/G0 human unapproved;D156/12 audits open. Archive calibration/current
+  watch/native28 separate complete. Then stop .3.3.acceptance/live lineage .3.4;full PNT continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
