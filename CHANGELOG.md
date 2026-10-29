@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0576 — admit complete actual checked-expression workspace
+## STITCHCAD-G1-0577 — join actual canonical input inventories before authored reads
 
-- Explicit node and checked2N+D logical workspace quotas precede any allocation/read. Private borrowed root/dependencies retain all repeated/untaken uses and actual source/span. No defaults,value/provider execution or backend certificate. Full256-node/255-name fixture requires767 records.
-- Native4/checked-node6/doc4/scoped strict lint/fmt pass;book94/264/1600/2797/glossary310/9/158/0 and whole0575 receipt734/four Git spans pass. Next .5e.2.4.2 actual canonical-registry joins,then machine/real providers/statements/replay. G1 6/18/G0 unapproved;full/hosted79bd6f6a stays SHA-scoped.
+- Sealed declaration/inventory join pins actual dedicated length pointer or general scalar target/kind. Retain missing-family positions and original scalar cause without allocation,clone,value/name search. Unknown/Derived stay unread;zero/false stay present. No containing Design/currentness/evidence/execution claim.
+- Native5/input3+5/doc3/scoped strict lint/fmt pass;book94/268/1601/2799/glossary310/9/158/0 and whole0576 receipt735/four Git spans pass. Compact error fixes strict160-byte refusal without heap/lint exemption. Next .5e.2.4.3 actual machine/real contexts;G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -115,6 +115,69 @@ runtime result oracles and cross-platform identity remain the later owners below
 
 ## Source and provider integration
 
+### Actual canonical inventory joins
+
+| Public API | Role |
+| --- | --- |
+| `FormulaCanonicalInput` | Sealed metadata-to-inventory join before an authored read |
+| `FormulaCanonicalInputAdapter` | Inspect the selected existing dedicated/general adapter |
+| `FormulaCanonicalInputRefusal` | Actual missing family, owner or scalar adapter cause |
+| `FormulaCanonicalInputError` | Refusal retaining original metadata and supplied inventory |
+
+`FormulaCanonicalInput::resolve(metadata, inputs)` matches the actual declaration source against
+the supplied CanonicalInputs. It performs no allocation, clone, numeric read or name-only search.
+Dedicated LengthInput metadata must borrow the exact record in that inventory. An independently
+owned equal record or an equal inventory clone cannot replace that borrow. General Input metadata
+carries a target id/kind instead: resolution selects the actual scalar in the supplied inventory
+and reuses the existing scalar identity/kind adapter. A general Length-kind scalar remains general.
+
+```rust
+use sc_core::{name::MachineToken, ontology::EntityId, recipe::*, value::*};
+
+let name = MachineToken::new("body_width")?;
+let inputs = CanonicalInputs::new(vec![LengthDeclaration::new(LengthDeclarationDefinition {
+    id: EntityId::from_bits(1), source: EntityId::from_bits(2),
+    state: LengthState::Unknown { observation: EntityId::from_bits(3) },
+})?], vec![])?;
+let actual = inputs.length(EntityId::from_bits(1)).expect("owned dedicated length");
+let metadata = FormulaDeclaration::length_input(&name, FormulaInputOrigin::Measurement,
+    EntityId::from_bits(4), actual);
+let joined = FormulaCanonicalInput::resolve(metadata, &inputs).expect("actual inventory owner");
+assert!(std::ptr::eq(joined.inputs(), &inputs));
+if let FormulaCanonicalInputAdapter::Length(input) = joined.adapter() {
+    assert!(std::ptr::eq(input.canonical_declaration(), actual));
+    assert!(input.read_authored().is_err()); // Still requires the actual observation.
+}
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Unknown/Derived records match without being evaluated. An explicit later authored read keeps its
+actual RequiresObservation/RequiresEvaluation request; present zero and false remain present.
+Known/Assumed/Preference provenance is preserved by the existing selected adapter. Inspecting the
+adapter enum alone is not an inventory certificate: the private joined wrapper retains membership.
+
+Source family precedes lookup. A missing dedicated target reports MissingLength and the original
+scalar index if the id belongs to that other family. MissingScalar similarly retains an actual
+dedicated length index. Absence from both families keeps that position absent. A length found by
+id still requires exact pointer ownership. Scalar kind mismatch retains the existing borrowed
+adapter error and actual canonical candidate; missing target precedes kind checking.
+
+The error retains the original metadata and immutable supplied inventory once. Its explicit
+refusal view reconstructs the full witness, including the same typed scalar cause from those
+unchanged inputs. Debug omits authored names/content. A nested borrowed cause is inspectable
+through refusal; it is not erased into a static standard-error source. Reserved names, geometry
+and prior-let sources return NotCanonicalInput, which is an adapter scope refusal, not a formula
+language diagnostic. Their actual runtime owners remain separate.
+
+This join proves membership only in the supplied canonical component. It proves no containing
+Design/revision, exposing metadata ownership, evidence registry/truth, resource envelope, source
+currentness or execution. In particular, identity-only scalar metadata can select a record in an
+equal inventory copy; this explicitly establishes membership there, not in another Design.
+The five native tests use actual inventories and checked-name declarations, all six scalar kinds
+and three origins, dedicated origins, unchanged Unknown/Derived requests, false/zero reads,
+equal-copy owner refusals, family positions and existing scalar causes. Whole expression execution,
+source-order read traces and real geometry/derived dependencies remain subsequent implementation.
+
 Name reads use the actual resolved declaration, not a fresh name-only search that could find another
 source. Canonical length/general scalar adapters retain source/state and return observation or
 dependency-evaluation requirements. Known/Assumed/Preference values remain labelled beside their

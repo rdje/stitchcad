@@ -121,9 +121,10 @@ pub use declaration::{
 
 mod input;
 pub use input::{
-    FormulaLengthInput, FormulaLengthInputError, FormulaLengthInputValue, FormulaScalarInput,
-    FormulaScalarInputAdapterError, FormulaScalarInputAdapterRule, FormulaScalarInputError,
-    FormulaScalarInputValue,
+    FormulaCanonicalInput, FormulaCanonicalInputAdapter, FormulaCanonicalInputError,
+    FormulaCanonicalInputRefusal, FormulaLengthInput, FormulaLengthInputError,
+    FormulaLengthInputValue, FormulaScalarInput, FormulaScalarInputAdapterError,
+    FormulaScalarInputAdapterRule, FormulaScalarInputError, FormulaScalarInputValue,
 };
 
 mod context;

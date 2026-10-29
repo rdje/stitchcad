@@ -12,6 +12,12 @@ pub use scalar::{
     FormulaScalarInputError, FormulaScalarInputValue,
 };
 
+mod canonical;
+pub use canonical::{
+    FormulaCanonicalInput, FormulaCanonicalInputAdapter, FormulaCanonicalInputError,
+    FormulaCanonicalInputRefusal,
+};
+
 /// Read adapter for an actual borrowed canonical length declaration, with its original metadata.
 ///
 /// General scalar metadata claiming Length cannot construct this adapter. Construction does not

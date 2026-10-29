@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.2:join actual CanonicalInputs records to declaration-source adapters
-  before authored reads;exact scalar target/kind and borrowed length owner,no name-only search.
-  Then actual bounded source-order machine/contexts/providers;whole recipe/replay remain owned.
-- Complete-proof/workspace admission0576 implemented:explicit nodes and checked2N+D records,
-  N task+N value+D source-read capacities;no allocation/read/backend/execution certificate.
-  Native4/actual checked-node6/doc4/strict scoped lint/fmt pass;full256-node/255-name requires767.
-  Book94/264/1600/2797/glossary310/9/158/0 pass;whole0575 retained734/four exact Git spans.
-- D337 fixed0575:actual0288 atan/atan2 available. Tangent .5d.1.2.2.2.d.2/.5d.3.2.2 pending.
-  Lineage checkpoint0574 closes47 native/21 doc;actual paired handler needs real .2.4 provider/
-  physical joins and .2.5 trusted atomic effects/repair/undo/replay before .2.acceptance.
-  D336 fixed0571,D335 fixed0568. Protect target/history-capture-0569 and target/history-proof-0569;
-  window24 kept1180/4144817B,native62/506939B,102 originals exact;do not rerun old transactions.
-- Full local/hosted79bd6f6a stays SHA-scoped (audit seam-20261029);G1 6/18/G0 human unapproved.
-  D334 P2 after current G1/before G0;D156/D223/PLANNING.5,real dependencies/full paired proof owned. Full PNT;focused checks/commit per slice,push400 after full gates.
+- Next G1-SLICE.5e.2.4.3:actual bounded scalar expression machine consuming true checked nodes,
+  explicit .1 workspace admission and .2 actual canonical inventory joins. Read real value/
+  context/provider contracts first;safe source-order slices,then whole recipe/replay owners.
+- Canonical input joins0577 implemented:no clone/read/name-only search;actual dedicated owner,
+  general target/kind and original missing-family positions/scalar causes. Sealed inputs borrow.
+  Native5/input regressions3+5/doc3/strict scoped lint/fmt pass;compact error,not heap exemption.
+  Book94/268/1601/2799/glossary310/9/158/0 pass;whole0576 retained735/four exact Git spans.
+- Complete proof/workspace0576 reserves N task+N value+D source-read records;full256/255 needs767.
+  D337 fixed0575:actual0288 atan/atan2 available. Tangent .5d.1.2.2.2.d.2/.5d.3.2.2 pending.
+  Lineage0574 closes47 native/21 doc;actual paired handler needs real .2.4 provider/physical
+  joins and .2.5 trusted atomic effects/repair/undo/replay. G1 6/18/G0 human unapproved.
+  Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,
+  102 originals exact. Do not rerun old transactions. Full local/hosted79bd6f6a SHA-scoped in audit.
+- D334 P2 after current G1/before G0;D156/D223/PLANNING.5,real dependencies/full paired proof stay owned. No missing implementation becomes language refusal/result. Full PNT;focused checks/commit per slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

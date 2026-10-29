@@ -114,6 +114,9 @@ uniqueness, the exposing input record's validity, source truth/evidence scope, e
 human/export approval. Provenance remains DeferredToDesignAndG4. A complete runtime lookup must
 supply the actual candidate and attach only its available expression/statement context.
 
+The [actual canonical inventory join](formula-execution-plan.md#actual-canonical-inventory-joins)
+now selects that candidate and pins dedicated length borrows before any authored read.
+
 ## Explicit tolerance contexts
 
 FormulaToleranceContext makes all five reserved tolerance reads explicit. Empty/default contexts

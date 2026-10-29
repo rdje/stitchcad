@@ -73,52 +73,16 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   inputs, exact numeric kernels, explicit source adapters. Trig/geometry remain actual dependencies.
   No absent implemented family or caller placeholder becomes a language refusal/canonical result.
   D337 readiness fixed0575;actual native inverse kernels available. Complete proof/workspace
-  admission implemented0576. Next actual canonical-registry source joins,then the bounded
-  source-order machine;no new math backend or provider substitute.
+  admission implemented0576. Actual canonical input joins implemented0577;next the bounded
+  source-order machine and real contexts,without new math backend or provider substitutes.
 - ID: `G1-SLICE.5e.2.4.availability`
   Status: `done`
   Goal:0575 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part734.md).
 - ID: `G1-SLICE.5e.2.4.1`
   Status: `done`
-  Goal: explicit complete checked-expression input and prospective iterative workspace admission
-  before runtime allocation/value/provider reads. Bind actual successful proof/root/source spans;
-  count all N certified nodes and D name uses,including untaken branches/repeated names. Reserve
-  N task frames,N value slots,D source-read records under an explicit checked2N+D allowance.
-  No defaults,source clone,callback,computed value or execution/available-backend certificate.
-  This prepares the actual source-order machine;semantic reads/operations/branch selection and
-  whole recipe/replay stay separate subsequent implementation slices. Read normative contracts,
-  actual proof/value/source interfaces and tests before coding;own focused checks/book/commit.
-  Scope0576:explicit node/workspace limits with no Default;zero allowances refuse normally.
-  Admission borrows the actual complete proof/root/dependencies;node quota precedes checked
-  workspace arithmetic and workspace quota. Typed errors retain that same owner/root span.
-  No allocation/read/provider/callback/execution or whole-recipe context is introduced. Native
-  checks cover repeated and untaken name uses,all256 nodes,quota priority,source borrows and
-  actual statement spans;privacy/lifetime/no-default doctests and scoped lint/fmt follow.
-  Completion0576:actual complete proof admitted before runtime preparation.
-  - [x] ROOT CAUSE (WHY + WHERE): source inspection of checked.rs/nodes.rs/normalized.rs,
-    existing checked-node target and normative formula-language3/4/5/9 shows complete successful
-    certificates/dependencies but no runtime workspace admission. Actual node/source interfaces
-    remain static;input/evaluated APIs cannot substitute AST acceptance. Tools/readback rc=0.
-  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
-    formula_execution_admission_contract →four pass,rc=0. Six source-shape counts/exact quotas,
-    node-before-workspace priority,foreign-owner distinction,actual repeated/untaken Unknown,
-    whole-recipe global spans/prior-let metadata and full256-node/255-name/767-record call pass.
-    Node and checked2N+D allowances are explicit/no Default;private borrowed root/dependencies
-    prevent count/source substitution. Arithmetic overflow is defensive,unreachable at256 nodes;
-    no fabricated overflow fixture or allocation/CPU/backend/execution certificate is claimed.
-  - [x] NO REGRESSION: local_environment.py cargo test -p sc-core --test
-    formula_checked_node_contract →six pass,rc=0. cargo test -p sc-core --doc recipe::execution
-    →four pass,rc=0;cargo clippy -p sc-core --lib --test formula_execution_admission_contract
-    -- -D warnings and cargo fmt --all --check →rc=0. Initial fmt1 and borrowed-error doctest101
-    fixed;no library lifetime weakening. Book94/264/1600/2797 and glossary310/9/158/0 pass,rc=0;
-    initial glossary four undeclared API names fixed by actual public API table,no exemption.
-  - [x] LOCKSTEP: book/API map/MEMORY/DEV/CHANGE/LIVE/index/ledger align. Whole0575 retained734,
-    four exact Git spans,rc=0. G1 stays6/18/G0 human unapproved;full local/hosted79bd6f6a stays
-    SHA-scoped. Next .5e.2.4.2 actual canonical registry joins before authored reads;machine,
-    real contexts/providers,statements/replay and complete acceptance remain parent owners.
-    promotion: declined (application of existing actual-proof,explicit-resource and source-lifetime contracts;no new language,provider or governance policy).
+  Goal:0576 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part735.md).
 - ID: `G1-SLICE.5e.2.4.2`
-  Status: `pending`
+  Status: `done`
   Goal: resolve actual canonical input adapters from CanonicalInputs using the exact declaration
   source/identity before authored reads. General scalar metadata must select the real registry
   record and retain kind/identity refusals;borrowed length metadata must refer to that registry's
@@ -126,6 +90,49 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   source/state borrows and explicit no-read behavior. No name-only search,clone,caller value,
   prior-let injection,currentness/evidence approval or canonical runtime result. Then implement
   the actual bounded source-order machine and its real context/provider integration under .5e.2.4.
+  Scope0577:sealed FormulaCanonicalInput joins a declaration to the actual immutable inventory
+  before returning its existing Length/Scalar adapter. Missing-family refusals retain actual
+  other-family positions;length requires exact record pointer,scalar reuses existing id/kind
+  adapter and its original borrowed cause. Metadata/inputs/refusal remain inspectable without
+  source/name/value cloning. Focused real inventory/Unknown/Derived/family/owner/kind controls,
+  existing input regressions,privacy/lifetime docs and scoped lint/fmt;book/live/commit follow.
+  Completion0577:actual canonical inventory joins available before authored reads.
+  - [x] ROOT CAUSE (WHY + WHERE): inventory.rs/input.rs/input/scalar.rs and actual input tests
+    expose immutable family ownership and existing matched read views but require the caller's
+    supplied candidate. Source inspection plus normative formula3/4/5 and measurement-inputs
+    establishes the missing actual inventory join;readback/tools rc=0. Dedicated/general Length
+    stay distinct;only an actual dedicated borrow proves that family's specific owner.
+  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
+    formula_canonical_input_contract →five pass,rc=0. Actual checked-name metadata,all six scalar
+    kinds/three origins,dedicated origins/zero/Unknown/Derived,nonzero family positions/absence,
+    kind causes,false reads and equal-copy owner refusals pass. Sealed wrapper keeps actual
+    inputs;existing adapters preserve source/state. Compact error retains metadata/inventory
+    once;explicit refusal reconstructs the same borrowed cause without allocation/value reads.
+    No containing Design/currentness,resource/evidence or expression execution certificate.
+  - [x] NO REGRESSION: local_environment.py cargo test -p sc-core --test
+    formula_length_input_contract --test formula_scalar_input_contract →three+five pass,rc=0.
+    cargo test -p sc-core --doc recipe::input::canonical →three pass,rc=0;cargo clippy -p sc-core
+    --lib --test formula_canonical_input_contract -- -D warnings and cargo fmt --all --check
+    →rc=0. Initial fixture101 used nonexistent reserved variant;corrected to actual IsBaseSize.
+    Initial strict lint101 found160-byte Err;removed duplicated detail storage,not lint or heap
+    exemption. All five new tests rerun after that change. Book94/268/1601/2799/glossary310/9/158/0
+    and whole0576 receipt735/four exact Git spans pass,rc=0. Full integration remains deferred.
+  - [x] LOCKSTEP: execution/runtime book,API map,MEMORY/DEV/CHANGE/LIVE/index/ledger align.
+    Next .5e.2.4.3 actual bounded scalar expression machine using real source/context adapters;
+    retain missing-family capability scope distinct from semantic errors. Whole statements,
+    derived/geometry/tangent/atomic replay and full acceptance keep their actual parent owners.
+    G1 stays6/18/G0 human unapproved;full local/hosted79bd6f6a stays SHA-scoped.
+    promotion: declined (reuse of indexed actual-source,immutable ownership,explicit scope and no-default contracts;no new language or source authority policy).
+- ID: `G1-SLICE.5e.2.4.3`
+  Status: `pending`
+  Goal: actual bounded source-order scalar expression machine consuming real checked nodes,
+  .1 workspace admission,.2 canonical inventory joins and existing numeric/evaluated/context
+  APIs. Complete static proof precedes values;actual condition chooses the only runtime branch.
+  Preserve executed input/source provenance and exact failing node/owner/canonical context.
+  Read real providers and dispatch contracts before implementation;split only safe implementation
+  units with focused checks/book/commit. Scope missing tangent/geometry/prior-let/derived work
+  explicitly without substituting caller annotations,canonical results or new language refusals.
+  Whole statement/recipe/replay and platform result verification retain .5e.2.5/.5e.4/.5g owners.
 - ID: `G1-SLICE.5e.2.5`
   Status: `pending`
   Goal: whole checked recipe declaration-order execution and real let/assert statement context.

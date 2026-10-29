@@ -55,6 +55,10 @@ formula expression workspace limits	annexes/formula-execution-plan.md	crates/sc-
 formula complete proof workspace admission	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution.rs	FormulaExecutionAdmission	G1-SLICE.5e.2.4.1	4.1
 formula expression admission refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution.rs	FormulaExecutionAdmissionRefusal	G1-SLICE.5e.2.4.1	4.1
 formula expression admission owner	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/execution.rs	FormulaExecutionAdmissionError	G1-SLICE.5e.2.4.1	4.1
+formula actual canonical input join	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInput	G1-SLICE.5e.2.4.2	4.1
+formula canonical input adapter view	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInputAdapter	G1-SLICE.5e.2.4.2	4.1
+formula canonical input join refusal	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInputRefusal	G1-SLICE.5e.2.4.2	4.1
+formula canonical input join context	annexes/formula-execution-plan.md	crates/sc-core/src/recipe/input/canonical.rs	FormulaCanonicalInputError	G1-SLICE.5e.2.4.2	4.1
 formula expression refusal context	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaExpressionCheckError	G1-SLICE.5b.3c.2b.2	4.1
 formula sourced name dependency	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaNameDependency	G1-SLICE.5b.3c.2b.2	4.1
 formula complete dimension refusal	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaDimensionRefusal	G1-SLICE.5b.3c.2b.2	4.1
