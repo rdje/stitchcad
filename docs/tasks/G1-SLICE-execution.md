@@ -432,6 +432,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   D330 fixed0560:all78 predecessor paths exact via published roles;10 full captures/12 refusals/
   three guard omissions and complete default pass0. Continue published tail after publication
   fixture at builder,then fresh full clean gates/normal push/actual jobs. No whole environment yet.
+  Tail0560:builder/map entries1–2 pass0/source clean;client3 fails unconditional v1 setup.
+  D331 fixed0561:default/real eight children/provenance/seven physical/seven omissions/three
+  content controls pass0. Continue six entries after client,then fresh full gates/push/actual jobs.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
@@ -462,52 +465,51 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0559 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part718.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.publication-continuity`
   Status: `done`
-  Goal: D330,P1 next after0559 before published environment continuation. Publication default
-  now passes exact approved named-result/original body and reaches continuity;prior archive
-  path .doctrine/history_archive/window1.json no longer physical after generation retirement.
-  Reproduce:target/publication-result-0559-default.log,FileNotFoundError in continuity read;
-  full original-body now passes. Existing retained reports are not assumed missing from storage.
-  Paths:docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py.
-  Resolve historical controls/payloads through published backing/logical inventory;preserve all
-  original10 captures/Git interval hashes/D219 identities,old complete archive bytes/window order
-  and predecessor graph/uniqueness/ten corruption controls/three actual omission controls.
-  Diagnose current versus frozen master semantics through public APIs before adapting schemas;
-  do not pin current layout,skip old files,move original source pins or weaken identity proofs.
-  Verify actual default continuity/refusals and full default controller;D223 ledger continuity
-  remains separate. Commit before remaining tail/fresh full clean gates/normal push/actual jobs.
+  Goal:0560 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part719.md).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.archive-client-fixture`
+  Status: `done`
+  Goal: D331,P1 current prepush blocker;packed_fixture computes a v1 window before checking
+  whether any raw records need packing. Current verified v3 authority already packs all three
+  fixed D222 records;none are raw. No new window is needed,yet unconditional windows key fails.
+  Reproduce:clean407c3f22/derived425,published builder/map entries1–2 pass/source clean;archive
+  client entry3 fails KeyError windows before output activation. Log:target/prepush-400-0560-
+  environment/03-python_archive_client_contract.log. Public inventory confirms3 logical/no raw.
+  Paths:docs/tasks/artifacts/ci_environment/python_archive_client_contract.py. Move only v1
+  window/master/manifest construction under existing members condition;retain copied current
+  packed authority unchanged when none. Explicitly bound optional raw packing to original v1
+  fixture semantics;do not add a v3 archive writer or change record/source pins.
+  Verify old failure/new default and actual --real eight provenance/read children,seven
+  physical/seven omission/three content controls,whole predecessor preservation/source cleanup.
+  Independently compare unchanged client and fixture algorithms outside conditional setup;
+  book/live/whole prior receipt sync,commit0561,then remaining six published environment entries
+  and fresh full clean prepush/normal push/actual jobs. No physical OS/runtime probe required.
 
-  Root public-API census:78 original Git paths =47 logical reports/21 retained control-payload
-  backings/10 retained physical catalogs. All nonmaster bytes exact. Historical original v1
-  master10 windows versus retained v1 master16 share exact schema/ordered prefix/unique windows;
-  active physical master is v3. Use read-backing for historical roles,not active master schema.
-  Keep10 original refusals/three guard omissions;add corrupted/unavailable backing controls.
-  Completion0560:D330 role-specific historical reads preserve full original continuity.
-  - [x] ROOT CAUSE (WHY + WHERE): actual old reader looked up retired physical window1.json.
-    target/publication_continuity_0560_focus.py →78 original Git paths:47 logical/21 backing/
-    10 catalogs;all nonmaster bytes exact,retained v1 master16 keeps original10 prefix/schema/
-    uniqueness,rc=0. Active physical v3 index is a different role from retained original master.
-  - [x] FIX: read historical reports via public read and original control/payload identities
-    via read-backing. Keep every other capture/hash/schema/window/task/identity assertion exact.
-    Add corrupted and unavailable original-backing controls;retain all ten prior refusals/three
-    original guard omissions. No source pin,archive schema,stored record or public reader change.
-  - [x] ADDRESSED (verified): actual prepared publication controller --continuity →10 whole
-    captures/public reads/prior archive bytes exact;predecessor/task/window order preserved;
-    12 independent refusals/three compiled guard-omission reds,rc=0. Full default →734 copy
-    plans/732 effects/346 files,40 mutation captures/11 omissions/12 physical/pure APIs/exact
-    original-body/complete continuity and refusals pass,rc=0. Logs target/publication-continuity-
-    0560-{native,default}.log;retained and source bytes exact. No simulated-output native claim.
-  - [x] NO REGRESSION: independent public logical/backing API versus original Git all78 roles
-    pass0;all original continuity proof AST outside read adapter,original refusal prefix/three
-    fault tuples and every noncontinuity controller node exact,rc=0. Tracked inputs exact,rc=0.
-    target/publication-continuity-0560-focus.log. Book93/248/1590/2771,retirement718/four exact
-    Git spans,retention1172 and git diff --check pass0. Whole environment/fresh full prepush/
-    hosted verdict still pending;D223 ledger continuity remains deferred.
-  - [x] LOCKSTEP: whole0559/prior ledger retained718. Book removes pending D330 and explains
-    retained historical roles/read-backing with example and exact continuity scope. MEM/DEV/
-    CHANGE/index/ledger align;LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D330 fixed,
-    D156 audits/D223/PLANNING.5 open. Commit then published tail after publication fixture at
-    builder controller;resolve failures,then fresh full clean gates/normal push/actual jobs.
-    promotion: declined (application of indexed role-specific retained byte retrieval,original Git identities and independent corruption/omission controls;no new archive or product authority).
+  Completion0561:D331 conditional original v1 setup preserves current packed authority.
+  - [x] ROOT CAUSE (WHY + WHERE): frozen407c3f22 packed_fixture computes windows before
+    existing members condition. Public v3 inventory confirms all3 fixed records logical/no raw.
+    target/archive_client_fixture_0561_focus.py reproduces old KeyError windows before output,
+    rc=0;this fixture needs no new window when current production already packs all3 records.
+  - [x] FIX: move only master/window/revision/manifest statements under members. Optional raw
+    construction requires original v1 authority explicitly;already-packed data stays byte-exact,
+    including v3 generation metadata. No generic v3 writer,record/source pin or client change.
+  - [x] ADDRESSED (verified): actual prepared archive-client controller default and --real
+    both pass original raw-only refusal/complete provenance/eight readonly children/seven physical/
+    seven compiled omission/three content refusals/whole retained predecessor proof,rc=0.
+    --real performs actual public read/Git/source-proof children;default intercepts archive
+    responses. Original five task intervals4144B/followup8170B/whole ledgers3030B remain exact.
+    Logs target/archive-client-fixture-0561-{default,real}.log;inputs exact/workspace removed.
+  - [x] NO REGRESSION: independent focused whole controller AST equals frozen407c3f22 after
+    moving exactly four original setup statements back and removing only explicit v1 guard,
+    rc=0. Original client/tracked bytes exact;all3 packed/no raw;controlled non-v1 raw builder
+    refuses before activation/no workspace,rc=0,target/archive-client-fixture-0561-focus.log.
+    Book93/248/1590/2771,retirement719/four exact Git spans,retention1173 and diff --check pass0.
+    No physical OS/runtime diagnostic activated;no whole environment/fresh full prepush claim.
+  - [x] LOCKSTEP: whole0560/prior ledger retained719. Book explains preserved packed authority,
+    optional original v1 builder and native-versus-intercepted proof scope. MEM/DEV/CHANGE/index/
+    ledger align;LIVE G1 6/18/29 suites/G0 human unapproved unchanged,D331 fixed,D156 audits/
+    D223/PLANNING.5 pending. Commit then published tail after archive client at reader controller,
+    remaining six entries/fresh full clean gates/normal push/actual jobs. Full PNT continues.
+    promotion: declined (application of indexed conditional fixture ownership,unchanged native provenance and exact legacy builder scope;no new archive or product authority).
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

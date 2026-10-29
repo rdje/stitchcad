@@ -75,15 +75,17 @@ def packed_fixture():
                                 sha256=history['digest'](content)))
     payload = gzip.compress(archive.getvalue(), mtime=0)
     sha = history['digest'](payload)
-    master = json.loads(data['.doctrine/history_archive/windows.json'])
-    window = 'window' + str(len(master['windows']) + 1)
-    revision = subprocess.check_output(['git', 'rev-parse', BEFORE], cwd=ROOT, text=True).strip()
-    manifest = dict(version=1, id=window, source_revision=revision,
-                    created='2026-10-25', owner='G1-SLICE.5b.4c.h2.b.p.o.f.archive-client',
-                    reason='Isolated D222 packed-record control; never a production window.',
-                    payload='docs/history/payloads/' + sha + '.tar.gz', payload_sha256=sha,
-                    catalog='docs/history/' + window + '.md', members=members)
+    # Already-packed authorities retain their published format and exact source bytes.
     if members:
+        master = json.loads(data['.doctrine/history_archive/windows.json'])
+        assert master['version'] == 1, 'D222 raw packing requires v1 fixture authority'
+        window = 'window' + str(len(master['windows']) + 1)
+        revision = subprocess.check_output(['git', 'rev-parse', BEFORE], cwd=ROOT, text=True).strip()
+        manifest = dict(version=1, id=window, source_revision=revision,
+                        created='2026-10-25', owner='G1-SLICE.5b.4c.h2.b.p.o.f.archive-client',
+                        reason='Isolated D222 packed-record control; never a production window.',
+                        payload='docs/history/payloads/' + sha + '.tar.gz', payload_sha256=sha,
+                        catalog='docs/history/' + window + '.md', members=members)
         control = '.doctrine/history_archive/' + window + '.json'
         master['windows'].append(control)
         data['.doctrine/history_archive/windows.json'] = (json.dumps(master) + '\n').encode()

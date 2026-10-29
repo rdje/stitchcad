@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — historical backing identities survive physical retirement
+## _(2026-10-29 UTC)_ — skip unnecessary legacy window setup for already-packed fixtures
 
-0560 closes D330:publication continuity read retired controls physically. Public read handles47 reports/read-backing21 original controls and payloads;10 retained catalogs remain exact. All78 original Git roles match,with retained v1 master schema/ordered prefix/uniqueness preserved.
-All original capture/hash/task/window AST stays exact outside role reader. Original10 refusals/three omissions plus corrupted/unavailable backing controls pass0;full publication default copy346/mutations40/omissions11/physical12/purity/body/continuity passes0. No reader/archive bytes changed.
-Whole0559/prior ledger retained718/four spans;book93/248/1590/2771 and retention1172 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D330 fixed,D156 audits/D223 continuity/PLANNING.5 pending. No complete environment/prepush/hosted verdict inferred.
-[Whole0559 named-result proof](docs/history/stitchcad-devnotes-part718.md). Promotion declined:indexed retained-byte roles/Git identity/corruption calibration. Next remaining published environment tail,then fresh full clean gates/normal push/actual jobs;full PNT continues.
+0561 closes D331:archive-client fixture used v1 windows before checking members. All3 fixed records already packed in valid v3 authority. Move original master/window/revision/manifest setup under existing condition;explicitly bound optional raw builder to v1. Packed bytes stay exact.
+Default/native --real each pass eight children/provenance/seven physical/seven omissions/three content controls. Native children use real read/Git/source-proof;fault dispatch remains intercepted. Whole controller AST except moved setup/new guard and actual client/tracked bytes exact0;no residue.
+Whole0560/prior ledger retained719/four spans;book93/248/1590/2771 and retention1173 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D331 fixed,D156 audits/D223 continuity/PLANNING.5 pending. No whole environment/prepush/hosted verdict inferred.
+[Whole0560 continuity proof](docs/history/stitchcad-devnotes-part719.md). Promotion declined:indexed conditional fixture/legacy scope/exact provenance. Next remaining six published environment entries,then fresh full clean gates/normal push/actual jobs;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

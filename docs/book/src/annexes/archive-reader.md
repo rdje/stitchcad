@@ -128,6 +128,20 @@ classifier's admission; they are separate from native verdicts. Current-body com
 the exact route-assignment adapter introduced with the public helper, then checks every remaining
 original body node. Omitting the old cohort or changing that adapter is detected.
 
+The retained-record client fixture preserves an already-packed authority byte-for-byte, including
+version3 generation metadata. It attempts the original v1 window construction only if raw members
+remain; that optional builder refuses other schemas before activation. No new window is needed for
+the three fixed diagnostic records already retained in production packing.
+
+```bash
+python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_client_contract.py --real
+```
+
+This mode executes eight real read/Git/source-proof children and checks complete original provenance.
+Companion controls cover seven physical refusals, seven body omissions and three content refusals;
+their intercepted child responses are separate from native retrieval. Source/backing bytes remain
+exact and the isolated workspace is removed.
+
 ## Independent controls
 
 ```bash

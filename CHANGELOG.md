@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0560 — preserve publication continuity through retained backing identities
+## STITCHCAD-G1-0561 — preserve already-packed archive client fixtures
 
-- Close D330:public read/read-backing resolves all78 original predecessor roles;original master schema/prefix/uniqueness and every other capture/Git/task proof stay exact. Retain ten refusals/three omissions,add two backing controls. Full publication default and independent API/Git proof pass.
-- Whole0559/prior ledger retained718/four spans;book/history checks pass. Continue published tail at builder controller,then fresh full clean prepush/normal push/actual jobs. D223/PLANNING.5 remain deferred;no whole environment or hosted verdict claimed.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D330 fixed,D156 audits open. Full PNT continues.
+- Close D331:construct original v1 fixture window only if raw members remain;already-packed v3 authority stays byte-exact. Optional raw builder refuses other schemas before activation. Original client/controller algorithms otherwise exact;default/real provenance and all existing refusal controls pass.
+- Whole0560/prior ledger retained719/four spans;book/history checks pass. Continue remaining six environment entries at archive reader,then fresh full clean prepush/normal push/actual jobs. D223/PLANNING.5 stay deferred;no whole environment/hosted verdict claimed.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D331 fixed,D156 audits open. Full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

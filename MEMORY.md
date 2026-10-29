@@ -1,15 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
 - Next G1-SLICE.6.5.3.2.prepush-400:remaining published environment entries after
-  python_publication_fixture_contract.py;start python_publication_builder_contract.py. Original
-  runner argv under target/prepush-400-0560-environment. Stop/own failures or source drift;then
-  fresh full clean check/gate/probes before normal push/actual exact-SHA hosted jobs. No push yet.
-- D330 fixed0560:historical reports read/original control+payload read-backing. All78 original
-  Git paths:47 logical/21 backings/10 catalogs exact;retained v1 master schema/ordered prefix/
-  uniqueness preserved. Original10 captures/ten refusals/three omissions intact;two added backing
-  refusals pass. Full publication default including copy346/mutations40/physical12/purity/body0.
-- Whole0559/prior ledger retained718/four spans;book93/248/1590/2771,retention1172 pass0. Prior
-  c90a0d09 tail entry1 mutation pass/source clean;entry2 publication now repaired. No whole pass.
+  python_archive_client_contract.py;start python_archive_reader_contract.py. Original runner
+  argv under target/prepush-400-0561-environment. Stop/own failures/source drift;then fresh full
+  clean check/gate/probes before normal push/actual exact-SHA hosted jobs. No push/verdict yet.
+- D331 fixed0561:all3 D222 records already packed/no raw;conditional v1 setup only if members.
+  Current v3 authority stays exact;raw non-v1 optional builder refuses before activation. Whole
+  controller AST except four moved setup statements/new guard and actual client/source exact.
+  Default/real eight children/provenance/seven physical/seven omissions/three content controls0.
+- Whole0560/prior ledger retained719/four spans;book93/248/1590/2771,retention1173 pass0. Prior
+  target/prepush-400-0560-environment builder/map pass/source clean;client3 now repaired. Six left.
 - LIVE G1 6/18/29 suites/G0 human unapproved,D156/12 audits/D223/PLANNING.5 pending. After
   full prepush/push/jobs:stop .3.3.acceptance/live lineage .3.4. Full PNT;consume all terminals.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
