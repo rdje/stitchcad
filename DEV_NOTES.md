@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — trace exact range primitives in the v1 envelope
+## _(2026-10-29 UTC)_ — align and watch the approved MCP envelope
 
-0542 D312:0485/0488 added ontology1.2/1.3 without feature-matrix traces. Two supported rows now cite exact strict-cut/source-progress primitives and retain G3 integrated proof. No exemption,diagnostic change,runtime mutation or implied physical certificate.
-Matrix107 rows/29 diagnostics/0 failures,probes14/0;dependent G0 probes10/0 restore18 met/1 not met/19. Human closure remains unapproved. Book93/248/1590/2771,700 receipt3/retention1154 pass0. Full prepush retry remains after four owned repairs.
-[Whole0541 authority control](docs/history/stitchcad-devnotes-part700.md) retains exact scope/lesson/changelog. LIVE29 suites/G1 6/18 unchanged,D312 fixed,D313–D316 owned. New D316:matrix MCP row contradicts active four-profile policy;owned next .matrix-transport without runtime approval.
-Promotion declined:indexed normative trace coverage and proof-scope contracts;transport decision already canonical. The census checks written dispositions,not their correctness;direct normative-source review caught the stale MCP row. No new transport decision or roadmap change.
+0543 D316:matrix stdio-only row contradicted active four-profile roadmap/decision while K7 read only roadmap,command chapter and glossary. Correct the projection to stdio-first with per-profile threat model/admission from G1. No runtime approval or new policy.
+K7 requires one five-cell MCP envelope row and refuses retired restriction. Command15/0 includes5 copied-row refusals/actual body assertion reds and prose positive;existing8 transport body controls,glossary/future/history positives pass0. Before-change census17/5/5/0 accepted stale row.
+Book93/248/1590/2771,matrix107/29/0,701 receipt3/retention1155 pass0. Whole0542 retained before curation. LIVE29 suites/G1 6/18 unchanged,D316 fixed,D313–D315 owned. Last G0 review18/1/human unapproved;full gates/push/actual hosted jobs await repairs.
+[Whole0542 matrix repair](docs/history/stitchcad-devnotes-part701.md). Promotion declined:existing approved transport decision/independent projection checks. Scope is the actual K7 input gap,not a whole-tree absence claim. Next controlled protected-store mutation D313.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

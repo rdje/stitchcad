@@ -316,6 +316,53 @@ result = run(tool, glossary)
 assert result.returncode == 1 and 'K7 retired stdio-only admission rule' in result.stdout
 print('  transport refusal: retired glossary definition')
 
+# The envelope is another normative projection of the approved transport policy.
+# Exercise its actual rows and remove the actual guards on identical bad copies.
+matrix = book / 'spec/feature-matrix.md'
+matrix_text = matrix.read_text()
+matrix_rows = [line for line in matrix_text.splitlines() if line.startswith('| MCP façade')]
+assert len(matrix_rows) == 1, 'envelope fixture requires one MCP row'
+matrix_row = matrix_rows[0]
+shape_guard = 'if len(envelope) != 1 or any(len(row) != 5 for row in envelope):'
+restriction_guard = r'if len(row) == 5 and re.search(r"\bstdio[ -]+only\b", " ".join(row), re.I):'
+legacy_row = ('| MCP façade, stdio only | supported | roadmap §7.8: stdio until a documented '
+              'threat model permits more | G1 onward | — |')
+envelope_cases = [
+    ('missing', matrix_text.replace(matrix_row, ''), shape_guard,
+     'MCP envelope row missing, duplicated or malformed'),
+    ('duplicate', matrix_text.replace(matrix_row, matrix_row+'\n'+matrix_row), shape_guard,
+     'MCP envelope row missing, duplicated or malformed'),
+    ('shape', matrix_text.replace(matrix_row, matrix_row+' extra |'), shape_guard,
+     'MCP envelope row missing, duplicated or malformed'),
+    ('legacy-space', matrix_text.replace(matrix_row, legacy_row), restriction_guard,
+     'retired envelope stdio-only restriction'),
+    ('legacy-hyphen', matrix_text.replace(matrix_row, legacy_row.replace('stdio only', 'stdio-only')),
+     restriction_guard, 'retired envelope stdio-only restriction'),
+]
+for label, text, guard, expected in envelope_cases:
+    destination = plane('envelope-'+label, chapter, roadmap_text)
+    (destination / 'src/spec/feature-matrix.md').write_text(text)
+    result = run(tool, destination)
+    assert result.returncode == 1 and 'K7 '+expected in result.stdout, (label, result.stdout, result.stderr)
+    assert source.decode().count(guard) == 1, ('envelope guard anchor', label)
+    mutant = destination / 'census-fault.sh'
+    mutant.write_text(source.decode().replace(guard, 'if False:', 1))
+    counterfactual = run(mutant, destination)
+    assert counterfactual.returncode == 0, ('envelope guard removal did not admit fixture', label,
+                                          counterfactual.stdout, counterfactual.stderr)
+    try:
+        assert counterfactual.returncode == 1 and 'K7 '+expected in counterfactual.stdout
+    except AssertionError:
+        print('  envelope refusal / actual checker-body assertion red:', label)
+    else:
+        raise AssertionError(('removed envelope guard escaped control', label))
+
+prose = plane('envelope-prose', chapter, roadmap_text)
+(prose / 'src/spec/feature-matrix.md').write_text(
+    matrix_text.replace(matrix_row, matrix_row.replace('stdio-first;', 'stdio-first (local baseline);')))
+result = run(tool, prose)
+assert result.returncode == 0, ('envelope prose control', result.stdout, result.stderr)
+
 # Source-derived coverage accepts a future profile when both declarations and its owner exist.
 future_ch = private+'\n| `future-http` | Synthetic client | `G1-SLICE.9.transport.remote` |'
 future_rm = '| `private-bridge` | An authenticated relay to a private stdio or HTTP server |'
@@ -328,6 +375,7 @@ result = run(tool, historical)
 assert result.returncode == 0, ('historical quotation', result.stdout, result.stderr)
 assert tool.read_bytes() == source, 'tracked checker changed'
 print('transport controls:', len(cases), 'refusals/body reds; glossary refusal; future/historical positives; source exact')
+print('envelope controls:', len(envelope_cases), 'refusals/body reds; no runtime transport approval')
 PY
 then
   ok TRANSPORT "profile refusals/body faults and future/historical controls pass"

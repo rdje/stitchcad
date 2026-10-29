@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0542 — trace exact range primitives in the envelope
+## STITCHCAD-G1-0543 — align and watch the approved MCP envelope
 
-- Fix D312 with accurate ontology1.2/1.3 envelope rows;distinguish implemented source-frame mathematics from G3 integrated proof. Preserve dispositions,diagnostics,coverage rules and unapproved human closure.
-- Matrix107/29/0 and probes14/0 pass;dependent G0 probes10/0 restore18 met/1 not met/19. Book93/248/1590/2771 and history checks pass;whole0541 retained700/three exact Git spans.
-- LIVE29 suites/G1 6/18 unchanged,D312 fixed. Own discovered D316 stale MCP matrix policy and fix next,then D313–D315 before full gates/push/actual hosted jobs. No runtime transport approval or roadmap amendment.
+- Fix D316 stale stdio-only row using existing approved stdio-first/per-profile admission policy. K7 requires one valid envelope row and refuses the retired restriction;no runtime transport approval or roadmap change.
+- Command15/0 includes5 envelope refusals/actual checker-body assertion reds and prose positive;existing transport controls pass. Matrix107/29/0,book93/248/1590/2771 and history checks pass;whole0542 retained701/three exact Git spans.
+- LIVE29 suites/G1 6/18 unchanged,D316 fixed,D313–D315 owned. Last G0 review18/1 remains human unapproved. Full gates/push/actual hosted jobs wait for remaining repairs.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

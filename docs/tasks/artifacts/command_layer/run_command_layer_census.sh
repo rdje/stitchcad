@@ -23,7 +23,7 @@
 #                        the arguments its diagnostic carries.
 #   K6 references        every link resolves, and a `§n` inside a link names a heading the target carries.
 #   K7 MCP profiles      roadmap/book profiles agree, each has a real task owner, and retired
-#                        stdio-only timing is refused in normative transport sections.
+#                        stdio-only timing is refused in normative transport sections and the envelope row.
 # ADVISORY, printed and never a failure:
 #   A1 the command table as read — per class, the commands and their authority — so a human can eyeball the
 #      whole surface instead of trusting the summary line.
@@ -299,6 +299,15 @@ def check_transport_profiles():
     mcp_rows = [row for row in glossary_rows if row and row[0] == "MCP"]
     if len(mcp_rows) != 1:
         issue("glossary MCP definition missing or duplicated")
+    matrix = pathlib.Path(CHAPTER).parent / "feature-matrix.md"
+    matrix_tables = tables(read(matrix).splitlines()) if matrix.is_file() else []
+    envelope = [row for _, rows in matrix_tables for row in rows
+                if row and row[0].startswith("MCP façade")]
+    if len(envelope) != 1 or any(len(row) != 5 for row in envelope):
+        issue("MCP envelope row missing, duplicated or malformed")
+    for row in envelope:
+        if len(row) == 5 and re.search(r"\bstdio[ -]+only\b", " ".join(row), re.I):
+            issue("retired envelope stdio-only restriction")
     normative = " ".join(RM["7.8"] + RM["10"] + CH["7"] + CH["7.1"] +
                          [" ".join(row) for row in mcp_rows])
     if re.search(r"\bstdio-only\s+until\b", normative, re.I):

@@ -170,7 +170,7 @@ callee-before-argument precedence. Requests from other interfaces retain their o
 | native shell for Windows, macOS and Linux | supported | roadmap §7.3 and ADR-0002: Tauri chrome over the Rust core | G5 | — |
 | browser shell over WASM | supported | roadmap §7.3: a documented capability subset, not a second product | G5 | — |
 | headless CLI with deterministic replay | supported | roadmap §4.4; G2's exit is the fixture drafted through the CLI | G2 | — |
-| MCP façade, stdio only | supported | roadmap §7.8: stdio until a documented threat model permits more | G1 onward | — |
+| MCP façade with admitted connection profiles | supported | roadmap §7.8: stdio-first; each profile needs its threat model and admission tests from G1 | G1 onward | — |
 | egui or iced as the product UI | rejected | roadmap ADR-0002 rules them a dev shell for engine stages only | G5 | `env_dev_shell_ui` |
 | domain logic in a TypeScript front-end | rejected | roadmap ADR-0002 bans it: one command bus, three adapters | G1 | `env_ts_domain_logic` |
 | assembly visualization: mesh, stitching, arrangement | deferred | roadmap §7.7 and the V1 track, which never blocks a G gate | V1 | `env_assembly_3d` |

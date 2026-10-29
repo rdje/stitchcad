@@ -1,14 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.matrix-transport in docs/tasks/G1-SLICE-execution.md:
-  D316 stale matrix stdio-only row versus approved four-profile roadmap;repair/watch without
-  runtime approval. Then D313 cleanup mutant,D314 static-status,D315 producer inventory last.
-- D312 fixed0542:two exact source-frame primitive traces;matrix107/29/0,probes14/0;dependent
-  G0 probes10/0 restore18 met/1 not met/19,human closure unapproved. Whole0541 retained700/3 spans.
-- Book93/248/1590/2771,retention1154 pass. LIVE29 suites/G1 6/18 unchanged;D307–D312 fixed,
-  D313–D316 P1 owned. D310 descriptors and D311 unique authority mutation passed focused checks.
+- Next G1-SLICE.6.5.3.2.prepush-400.cleanup-mutation in docs/tasks/G1-SLICE-execution.md:
+  D313 controlled protected-store mutant isolation;then D314 static-status guard,D315 complete
+  producer candidate inventory last. Commit each repair before moving;preserve stores/certificates.
+- D316 fixed0543:approved per-profile MCP envelope,K7 unique row/retired restriction checks.
+  Command15/0 includes5 envelope refusals/body reds;existing8 transport controls/positives pass.
+- Whole0542 retained701/3 Git spans;book93/248/1590/2771,matrix107/29/0,retention1155 pass.
+  LIVE29 suites/G1 6/18 unchanged;D307–D312/D316 fixed,D313–D315 P1 owned. No runtime approval.
 - Full95925f7b check0/gate0/probes2;logs target/prepush-400-0538. No push/hosted verdict.
-  GitHub access verified;credentials readonly transport dependency. No producer in flight.
+  GitHub access verified;credentials readonly transport dependency. G0 last18/1,human unapproved.
 - After remaining repairs,full check/gate/probes from clean completed HEAD,normal push/actual
   hosted jobs. Then stop .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/
   Profile/current authority/aggregate/effect proof remain owned. Consume terminals before edits.
