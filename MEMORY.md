@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.4.3.3.2:whole-Design candidate ownership/resource/current integration
-  and explicit trusted reserve boundary;then deferred .3.4.acceptance. Full PNT continues.
-- Held Gather inspection .3.3.1 closes0572:exact held graph/span live or borrowed immediate
-  retirement evidence;old IDs/intake/current refusals unchanged,no child selection or repair.
-  Native Gather18/actual candidate5/doc4/scoped lint/fmt pass;book example exact.
-  Book94/258/1597/2792,glossary310/9/158/0;whole0571/D336 ledger retained730/four spans.
-- Actual graph candidate0571 retains unrelated spans/full source/history/order;reservation28
-  covers graph23. IDs stay tentative;no global reserve/quantity/physical/provider/authority/effect.
-  D336 fixed0571,D335 fixed0568;extension0570 history9/doc5. Window24 prerequisite0569 retained
-  all1180/4144817B,native tar62/506939B and102 original files exact. Protect target/history-capture-0569
-  and target/history-proof-0569;transaction complete,do not rerun install/recover after later edits.
-- Old full local/hosted79bd6f6a stays exact-SHA scoped;protected audit seam-20261029 holds proof.
-  G1 6/18/G0 human unapproved;D334 P2 .15f after current G1/before G0 closure,D156/D223/
-  PLANNING.5 pending. Focused checks/commit per slice;real dependencies and full paired proof owned.
+- Next G1-SLICE.6.5.3.2.3.4.acceptance:deferred scoped lineage/history/graph/whole-candidate
+  checkpoint now that .1–.3 implementation is complete. Full paired/physical/effect proof stays owned.
+- Whole garment .3.3.2 closes0573:exact owner,complete pre-copy reservation/current sources and
+  cross-family child-ID guards;clone unchanged fields once,move graph,check context/final demand.
+  Actual original107/888B/0bits,reserve113,candidate110/888/0;limit112 refuses110+3,113 admits.
+  Old Gather/current repair preserved;actual reserve guard owns old/new history IDs,no snapshots.
+  Native garment4/graph5/doc4/scoped lint/fmt pass;exact published instance golden and book example.
+  Book94/260/1597/2793,glossary310/9/158/0;whole0572/D336 ledger retained731/four exact spans.
+- IDs stay tentative;no cursor use,persistent issuance,quantity/physical/provider/authority/effect.
+  D336 fixed0571,D335 fixed0568;window24 prerequisite0569 kept1180/4144817B,native62/506939B
+  and102 originals exact. Protect target/history-capture-0569 and target/history-proof-0569;
+  transaction complete,do not rerun install/recover after later edits. Full PNT continues.
+- G1 6/18/G0 human unapproved;full local/hosted79bd6f6a stays SHA-scoped (audit seam-20261029).
+  D334 P2 .15f after current G1/before G0 closure;D156/D223/PLANNING.5,real dependencies/full paired proof owned. Focused checks/commit per slice.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -4,7 +4,8 @@ The native history component validates supplied span births and splits in author
 retired parents and their two immediate child identities,including nested splits. This is local
 identity metadata. Optional actual graph binding,Design ownership and complete resource accounting
 and bounded actual source/stop graph candidates are implemented below. Held Gather identity
-inspection is available. Whole-Design/global integration and the SplitSeamSpan bus handler remain pending.
+inspection and complete garment candidate ownership/resources are available. The SplitSeamSpan
+bus handler and physical/provider/authority/effect integration remain pending.
 
 ## Explicit records and limits
 
@@ -294,6 +295,85 @@ symbolic. Whole-Design construction and held Gather repair must still run before
 trusted production allocation continues through the bus reserve. Bounds concern logical payload
 populations,not allocator/RSS,temporary validation indices or CPU.
 
+## Prepare a complete owned garment candidate
+
+| API token | Meaning |
+| --- | --- |
+| `CommandSeamSplitGarmentAdmission` | Exact complete original garment and admitted clone/output envelope |
+| `CommandSeamSplitGarmentError` | Original owner,quota,current source,namespace,clone or output refusal |
+| `DesignGarment` | Complete canonical owner,including inspectable held damage |
+| `DesignResourceLimits` | Explicit complete collection,text and counter envelope |
+| `DesignResourceSource` | Trusted host's honest exhaustive readonly accounting port |
+| `admit_garment_candidate` | Extend actual graph admission with whole original garment checks |
+| `original` | Borrow the exact full original owner |
+| `graph_admission` | Borrow the actual prepared source/stop/history graph stage |
+| `Owner` | Supplied garment does not own the exact actual source sewing state |
+| `Current` | Original complete garment's actual current-source refusal |
+| `ChildOwned` | First A-ordered proposed child already belongs to a canonical owner |
+| `Sewing` | Original candidate sewing ownership/current-input constructor refusal |
+| `Garment` | Original complete candidate ownership/current-input constructor refusal |
+| `ContextChanged` | Cloned content outside the prepared graph changed |
+
+This stage consumes graph admission and checks the actual garment's sewing-owner pointer first.
+Equal content/IDs from a different garment do not substitute. Before any garment-component clone
+or identity census,it charges the complete original garment and the same conservative graph
+reservation through one cumulative meter. All collection,text and counter demand keeps its actual
+component locations. Explicit whole-garment limits are independent of the earlier graph/history
+limits. Existing graph history was already separately admitted before this stage.
+
+Next it validates the complete original garment,including every unused component and construction.
+Then it checks both tentative children in A order against the complete original namespace. A child
+colliding with an actual Pocket is refused at that Pocket's original position;being absent from
+the sewing graph alone never proves whole-Design freshness. Previously retired history identities
+remain owned and are never refunded or reused.
+
+Build moves the prepared graph and clones the actual inputs,landmarks and every other garment
+component once. Exhaustive owner views require an explicit decision when the schema gains a field.
+Existing sewing/garment constructors validate full ownership/current inputs. Unchanged-context
+comparisons cover canonical inputs/host and every held component outside the graph. A final actual
+whole-garment resource walk must fit the selected envelope and complete pre-copy reservation.
+The actual source port must honor its honest exhaustive readonly accounting contract;Clone and
+PartialEq must preserve semantic content. This is no security claim against dishonest host code.
+
+This compiled public example constructs the complete inspectable owner:
+
+```rust
+use sc_core::command::{CommandSeamSplitGraphAdmission,CommandSeamSplitGarmentError};
+use sc_core::design::{DesignGarment,DesignResourceSource,DesignResourceLimits};
+fn candidate<'a,H:DesignResourceSource+Clone+PartialEq>(graph:CommandSeamSplitGraphAdmission<'a,H>,
+    original:&'a DesignGarment<H>,limits:DesignResourceLimits)
+    ->Result<DesignGarment<H>,CommandSeamSplitGarmentError<H::Error>>{
+    graph.admit_garment_candidate(original,limits)?.build()
+}
+```
+
+The actual full garment fixture owns Pockets,notions,Closures,layers,Hems and all six construction
+families. Its original demand is107 collection entries,888 text bytes and zero counter bits. The
+graph reserves six entries,so complete admission needs113. The built owner measures110 entries
+and the same888 text bytes/zero counter bits. Limit112 refuses at consumed110/requested3,with the
+original graph owner and field. Limit113 admits. Unchanged component equality and current original
+checks pass;the full source remains exact after successful and refused preparations.
+
+The old Gather stays in the actual construction inventory with its original target/copy/side/
+direction/closing-operation IDs. The returned candidate is globally owned and inspectable;fresh
+current validation still reports the original typed Gather missing-span cause for its now-retired
+target. Identity inspection lends both immediate children. Attempting another preparation from
+that already-damaged whole garment refuses its original current cause before further clones.
+No cached successful current certificate,repair selection or silent retarget is produced.
+
+The actual private bus reserve constructor accepts the two new terminal128-bit IDs before they
+are owned,then refuses the candidate's retired parent and both children as AlreadyOwned with
+exact history birth/child positions. It observes no authority snapshot. This verifies local
+namespace/reserve configuration only;it does not consume a cursor,authorize anything,prove atomic
+reserve/model publication or supply persistent global issuance across restarts. Production
+allocation still uses the trusted private reserve stage before effects. No new handler is enabled.
+
+Four actual garment cases verify complete content/ownership,original Gather repair,wrong owner,
+resource-before-namespace priority,Pocket collision,exact boundary retry and original current
+refusal. Four doctests cover admission/build composition,private owner and source lifetime.
+Five existing graph cases still pass after shared reservation factoring. Scoped strict lint and
+formatting pass;whole paired/physical/provider/authority/effect verification retains its later owners.
+
 ## Inspect a held Gather after retirement
 
 The Gather's identity query is available through inspect_span_reference,documented with the
@@ -329,8 +409,8 @@ the retired target. Neither selects one of the new children or changes the held 
 Two core cases also verify original live-member pointers,wrong graph,unknown/legacy absence and
 unchanged live-copy validation. All18 Gather contracts and five actual graph candidate cases pass.
 Four Gather doctests include API composition and graph lifetime;scoped strict lint/formatting
-belong to this implementation slice. Complete garment/global/resource/current and publication
-integration remains the next stage.
+pass. Complete garment preparation above preserves those held references and current refusals;
+publication and completed repair retain their separate obligations.
 
 ## Implemented scope and next integration
 
@@ -357,6 +437,7 @@ They also verify owner substitution,legacy history,resource/history precedence,c
 refusal,unchanged originals and exact-boundary retry. Four doctests verify API composition,private
 admission,borrowed source lifetime and no default policy;four existing source-join cases pass.
 
-Held Gather inspection is implemented;whole-Design/global ownership/resource integration follows.
-No history input executes a command or retargets a Gather. Real source/provider/physical/authority/
-aggregate-effect checks and whole paired command acceptance retain their existing owners.
+Held Gather inspection and complete garment ownership/resource preparation are implemented.
+The deferred lineage component checkpoint follows. No history input executes a command or
+retargets a Gather. Real source/provider/physical/authority/aggregate-effect checks and whole paired
+command acceptance retain their existing owners.

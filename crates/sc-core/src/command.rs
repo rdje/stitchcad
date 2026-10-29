@@ -96,7 +96,8 @@ pub use scope::{
     CommandScope, CommandScopeNarrowingError, CommandScopeRefusal, CommandScopeWindowError,
 };
 pub use seam_candidate::{
-    CommandSeamSplitGraphAdmission, CommandSeamSplitGraphError, CommandSeamSplitGraphLimits,
+    CommandSeamSplitGarmentAdmission, CommandSeamSplitGarmentError, CommandSeamSplitGraphAdmission,
+    CommandSeamSplitGraphError, CommandSeamSplitGraphLimits,
 };
 pub use seam_capture::{
     CommandEaseCapture, CommandEaseCaptureAdmission, CommandEaseCaptureCollection,

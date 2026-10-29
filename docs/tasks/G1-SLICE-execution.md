@@ -402,7 +402,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0569 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part728.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: join actual sealed paired source/stop candidates to fresh child identities and history.
   Retire exact actual target,retain unrelated graph records and actual held Gather/reference IDs;
   expose explicit retired repair evidence without child selection or silent retarget. Global source/
@@ -412,6 +412,8 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .3 actual held Gather/reference retirement evidence and global identity/resource integration.
   Child IDs are tentative supplied metadata until the trusted bus reserve/effect path publishes
   them;no public candidate helper may claim generation,reservation or persistent global nonreuse.
+  Scoped completion0573:actual identity/graph/whole-owner preparation complete;deferred local
+  checkpoint next. Current repair,real dependencies,trusted stage/publication effects stay owned.
 - ID: `G1-SLICE.6.5.3.2.3.4.3.1`
   Status: `done`
   Goal:0570 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part729.md).
@@ -419,7 +421,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0571 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part730.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual held Gather/reference retirement evidence keeps old target IDs and both immediate
   children;global current identity/resource and trusted bus reserve requirements precede effects.
   No silent child choice or retarget;repair observations remain distinct from valid publication.
@@ -427,47 +429,59 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   integration and explicit trusted reserve boundary. Existing DesignGarment permits held damage
   for inspection;validate_current checks all constructions and still refuses missing Gather spans.
   Do not substitute successful repair observation for current or atomic effect readiness.
+  Scoped completion0573:actual identity/graph/whole-owner preparation complete;deferred local
+  checkpoint next. Current repair,real dependencies,trusted stage/publication effects stay owned.
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3.1`
   Status: `done`
-  Goal: actual Gather identity inspection returns the exact held graph's live span or borrowed
-  immediate retirement evidence without retargeting. Keep existing current/intake/copy/sign
-  refusals unchanged. Prove nested retirement,unknown/legacy/wrong graph and actual paired
-  graph candidate behavior;no allocation,provider,range query or generated repair choice.
-  ROADMAP4.1,ontology1/1.1,entity-identity/Gather/current construction contracts and lineage book
-  reviewed. Own native Gather/actual candidate checks,scoped compiler/lint/book and commit.
-  Completion0572:Gather identity inspection lends exact live/retired evidence without repair.
-  - [x] ROOT CAUSE (WHY + WHERE): rg public Gather methods and held_span in ontology/gather.rs
-    shows live-only target lookup;retirement is otherwise the original MissingSpan cause.
-    Baseline local_environment.py cargo test -p sc-core --test gather_contract →16 pass,rc=0.
-    Existing current/intake rejection must remain while repair inspection exposes exact history.
-  - [x] ADDRESSED (verified): local launcher cargo test -p sc-core --test gather_contract
-    →18 pass,rc=0. New two cases verify exact live pointer,original retirement array pointer,
-    nested301→702/701→800/799 without descendant selection,original wrong graph/unknown/legacy
-    absence,and unchanged copy/intake/current refusals. Existing original16 remain green.
-    Actual sc-measure design_inputs_contract seam_graph_candidate →five pass,rc=0,including
-    original held Gather and split request after actual candidate construction;old IDs unchanged,
-    both immediate children visible,Gather current intake/old request still refuse old target.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc ontology::gather →four pass,rc=0;strict
-    Clippy core library/Gather test and measure library/design-input target plus fmt check pass,
-    rc=0. New fixture uses existing unreachable invariant style;affected actual held case rerun
-    one pass,rc=0. Compiled inspection book example byte-exact;positive book94/258/1597/2792 and
-    glossary310/9/158/0 pass,rc=0. Receipt730 →four exact Git spans,rc=0. Full paired/global/
-    resource/current/physical/authority/effect acceptance keeps its remaining implementation owners.
-    Live-doc preflight refused325/321/416-byte draft lines before any tracked write;trimmed
-    the draft under existing DEV/CHANGE/task ceilings without changing a limit.
-  - [x] LOCKSTEP: lineage/Gather book,MEMORY/DEV/CHANGE/LIVE/index/D301 next pointers aligned;
-    whole0571 scope/lesson/changelog/D336 ledger retained730. G1 still6/18,G0 human unapproved;
-    LIVE candidate focused4→5. No repair selection,retarget,current certificate or effect.
-    Next .3.3.2 whole-Design candidate ownership/resource/current integration and explicit
-    trusted reserve boundary;then deferred component checkpoint. Full PNT continues.
-    promotion: declined (routine application of indexed persistent identity,borrowed exact history and inspection/currentness separation;no new cross-cutting rule).
+  Goal:0572 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part731.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3.2`
-  Status: `pending`
+  Status: `done`
   Goal: join the actual complete garment/source/graph candidate under explicit clone/output bounds;
   preserve held constructions/references and complete namespaces,including retired history IDs.
   Actual current validation must retain unresolved Gather evidence before production effects.
   Trusted reserve stages remain the sole production allocator;tentative graph IDs confer no
   reserve/global-persistence/physical/provider/authority/publication capability.
+  Design:consume actual graph admission plus exact original garment owner. Charge complete
+  original garment and the same conservative graph reservation before whole-current validation,
+  full namespace census or any garment-component clone. Check proposed children in A order
+  against all original owned IDs. Build through existing owning constructors,fieldwise cloning
+  unchanged components once while moving the prepared graph;verify clone context and final
+  actual resources under the original reservation. Keep old Gather/reference objects unchanged.
+  Return an inspectable owned candidate,not current/effect authority;fresh validate_current must
+  retain actual missing retired Gather cause. Prove actual reserve constructor rejects every
+  retained old/new historical ID;do not expose/advance private cursors or invent a bus handler.
+  Relevant garment ownership/current/resources/source-host contracts,actual full fixture and
+  trusted reserve integration read. Own focused actual cross-crate cases,compiler/lint/book,
+  live pointers and commit;physical/provider/effect and later combined acceptance remain owned.
+  Completion0573:complete actual garment candidate ownership/resource preparation implemented.
+  - [x] ROOT CAUSE (WHY + WHERE): git show HEAD:crates/sc-core/src/command/seam_candidate/build.rs
+    plus rg pub fn build →returns SewingGraph only,rc=0. Cross-family IDs and whole garment
+    clone/current sources require separate admission. Baseline actual whole_current_source_success
+    →one pass,rc=0. Complete original fixture and published exhaustive accounting contracts read.
+  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-measure --test
+    design_inputs_contract seam_garment_candidate →four pass,rc=0. Exact original owner,full
+    original current source,pre-copy whole resource envelope and actual Pocket collision guards
+    pass. All original component/input/landmark content preserved;owned constructors admit new
+    history once. Original107 entries/888 textB/0 counterbits;reserve113,candidate110/888/0.
+    Limit112 refuses110+3 at actual field/owner;113 retries. Original Gather/IDs stay exact;
+    fresh candidate current validation returns actual Gather MissingSpan,not readiness. Already
+    damaged original garment refuses its complete current cause before more component clones.
+    Actual private reserve constructor rejects old parent/new children with exact history owner
+    positions;zero authority snapshots. No private cursor consumption,issuance or atomic proof.
+  - [x] NO REGRESSION: cargo test -p sc-core --doc command::seam_candidate::garment →four
+    pass,rc=0. Original graph five pass after shared reservation factoring,rc=0;both strict core
+    and measure library/design-input Clippy plus fmt --all --check pass,rc=0. Initial lint101
+    caught128B embedded graph cause;box it,preserve concrete source chain,no suppression. Initial
+    unused fixture import now asserts exact current Gather cause. Exact107/888/0 golden added
+    for published instance;affected native one/scoped lint/fmt rerun pass,rc=0. Compiled book
+    example byte-exact;book94/260/1597/2793/glossary310/9/158/0 pass,rc=0. Receipt731/four exact
+    Git spans and current retention1185/29/2571959 residentB pass,rc=0. Full paired proof deferred.
+  - [x] LOCKSTEP: complete garment/lineage/split book/two API rows,MEMORY/DEV/CHANGE/LIVE/
+    index/D301/footer aligned;whole0572 scope/lesson/changelog/ledger retained731. G1 still6/18,
+    G0 human unapproved;README reviewed unchanged. D334 P2/D156/D223/PLANNING.5 stay owned.
+    Scoped .3.4.3/.3.3 preparation complete;next deferred .3.4.acceptance checkpoint. Actual
+    provider/physical/current repair/fresh authority/operation/runtime/atomic effects remain owned.
+    promotion: declined (application of indexed exhaustive model accounting,complete namespace ownership,immutable held damage and private trusted identity reserve boundaries;no new cross-cutting rule).
 - ID: `G1-SLICE.6.5.3.2.3.4.acceptance`
   Status: `pending`
   Goal: deferred scoped history/graph/actual candidate checkpoint after .1–.3;whole paired physical/

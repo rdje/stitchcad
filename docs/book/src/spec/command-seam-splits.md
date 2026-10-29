@@ -7,7 +7,8 @@ execution owners. The bus still exposes its three implemented metadata handlers.
 
 The [bounded span identity history](command-seam-lineage.md) validates ordered births/splits,
 actual graph/Design ownership,resource accounting and bounded actual source/stop graph candidates.
-Held-reference/global integration remains the next stage before publication.
+Held Gather inspection and complete garment candidate ownership/resources are available.
+Current repair,physical/provider/authority and atomic publication retain their execution owners.
 
 ## Bind the actual held source
 

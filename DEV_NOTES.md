@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — inspect exact held Gather retirement without retargeting
+## _(2026-10-29 UTC)_ — prepare bounded complete garment seam candidates
 
-0572 inspect_span_reference checks held graph ID then lends the exact live span or original immediate retirement children. No allocation,range/provider query,copy/sign validation or repair choice. Nested split keeps original child IDs;Gather content and existing intake/current failures remain unchanged.
-Native Gather18/actual candidate5/doc4/scoped strict lint/fmt pass;two core cases and one real candidate case added. Existing16 Gather cases pass. In actual candidate,the held Gather and old split request keep the retired target;inspection exposes both children while current/intake/request still refuse it.
-Book example byte-exact to passed doctest;book94/258/1597/2792/glossary310/9/158/0 pass. [Whole0571 candidate/D336 proof](docs/history/stitchcad-devnotes-part730.md) retains scope/lesson/changelog/ledger,four Git spans. LIVE G1 6/18,G0 human unapproved;focused candidate4→5.
-Indexed identity/history/inspection rules apply;promotion declined. Next .3.4.3.3.2 whole-Design ownership/resource/current integration and trusted reserve boundary. Observation is no completed repair,current readiness or effect. Provider/physical/authority/full paired proof and D334 P2/D156/D223/PLANNING.5 stay owned.
+0573 actual garment owner precedes full original+graph reservation,current sources and child namespace census. Clone unchanged components once,move prepared graph,use owning constructors,compare context and measure final demand. Old Gather/reference objects stay exact;current MissingSpan remains repair evidence.
+Native garment4/graph5/doc4/scoped lint/fmt pass. Original107/888B/0bits,reserve113,candidate110/888/0;112 refuses110+3,113 retries. Actual private reserve guard rejects old/new historical IDs,zero authority snapshots. Initial large embedded graph error lint101 fixed by boxed original cause;no suppression.
+Published107/888/0 golden and compiled book example exact;affected native one/lint/fmt rechecked. Book94/260/1597/2793/glossary310/9/158/0 pass. [Whole0572 Gather/D336 proof](docs/history/stitchcad-devnotes-part731.md) retains scope/lesson/changelog/ledger,four Git spans. G1 6/18;G0 human unapproved.
+Indexed exhaustive accounting/ownership/held damage/reserve rules apply;promotion declined. Next deferred .3.4.acceptance local checkpoint after completed preparation. No private cursor/persistent issuance,current repair,quantity/physical/provider/authority/atomic effect proof. D334 P2/D156/D223/PLANNING.5 owned.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

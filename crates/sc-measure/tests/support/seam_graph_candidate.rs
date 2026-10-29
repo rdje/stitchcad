@@ -1,4 +1,6 @@
 //! Actual complete source/stop/history graph candidates; no bus or synthetic value providers.
+#[path = "seam_garment_candidate.rs"]
+mod seam_garment_candidate;
 use super::{
     admitted, at, command_capture_limits, command_model_limits, command_request,
     command_weighted_state, id, ownership_limits, DesignSewing, DesignSewingDefinition, EaseAmount,

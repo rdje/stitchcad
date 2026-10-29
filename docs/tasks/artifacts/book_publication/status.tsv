@@ -257,3 +257,5 @@ actual graph live or retired span lookup	spec/command-seam-lineage.md	crates/sc-
 actual paired graph candidate limits	spec/command-seam-lineage.md	crates/sc-core/src/command/seam_candidate.rs	CommandSeamSplitGraphLimits	G1-SLICE.6.5.3.2.3.4.3.2	4.4
 actual paired graph candidate admission	spec/command-seam-lineage.md	crates/sc-core/src/command/seam_candidate.rs	CommandSeamSplitGraphAdmission	G1-SLICE.6.5.3.2.3.4.3.2	4.4
 actual paired graph candidate refusal	spec/command-seam-lineage.md	crates/sc-core/src/command/seam_candidate.rs	CommandSeamSplitGraphError	G1-SLICE.6.5.3.2.3.4.3.2	4.4
+actual paired garment candidate admission	spec/command-seam-lineage.md	crates/sc-core/src/command/seam_candidate/garment.rs	CommandSeamSplitGarmentAdmission	G1-SLICE.6.5.3.2.3.4.3.3.2	4.4
+actual paired garment candidate refusal	spec/command-seam-lineage.md	crates/sc-core/src/command/seam_candidate/garment.rs	CommandSeamSplitGarmentError	G1-SLICE.6.5.3.2.3.4.3.3.2	4.4

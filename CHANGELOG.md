@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0572 — inspect held Gather retirement without choosing a child
+## STITCHCAD-G1-0573 — prepare bounded complete garment seam candidates
 
-- Gather identity inspection lends the exact live span or immediate retirement children;preserve original graph/span/copy/side/direction/operation bindings and old intake/current refusals. Nested history/legacy absence/wrong graph and actual candidate/old request behavior verified;no allocation or repair choice.
-- Gather18/actual candidate5/doc4/scoped lint/fmt pass;book example exact,book94/258/1597/2792/glossary310/9/158/0 pass. Whole0571/D336 ledger retained730/four Git spans. LIVE G1 6/18/G0 human unapproved;whole-Design/global/resource/current integration next. No physical/provider/authority/effect/full paired claim.
+- Exact garment owner,complete reservation/current source and cross-family child-ID guards precede clones. Preserve all held components/Gather IDs and current repair;final owned/resource checks pass. Original107/888B/0bits,reserve113,candidate110/888/0;112 refuses110+3,113 admits.
+- Native garment4/graph5/doc4/scoped lint/fmt pass;actual reserve owns old/new history IDs,no authority reads. Book94/260/1597/2793/glossary310/9/158/0,exact golden/example and receipt731/four Git spans pass. G1 6/18/G0 human unapproved;deferred lineage checkpoint next. Full paired effects remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

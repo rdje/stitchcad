@@ -8,11 +8,13 @@ use crate::{
     },
     ontology::{
         EntityId, SeamEasePortionError, SeamSpanHistory, SeamSpanHistoryBindingError,
-        SeamSpanHistoryError, SeamSpanHistoryLimits, SewingError,
+        SeamSpanHistoryError, SeamSpanHistoryLimits, SewingError, SewingGraph,
     },
 };
 use core::fmt;
 mod build;
+mod garment;
+pub use garment::{CommandSeamSplitGarmentAdmission, CommandSeamSplitGarmentError};
 
 /// Explicit graph payload reservation and complete next-history allowances, with no defaults.
 /// These cover logical output/copy populations, not allocator bytes, temporary indices or CPU.
@@ -258,27 +260,14 @@ impl<H: DesignReferenceHost> CommandStopSourceBinding<'_, H> {
             .checked_add(1)
             .ok_or(Error::SpanCountOverflow { graph: graph.id() })?;
         let mut meter = DesignResourceMeter::new(limits.resources);
-        charge_sewing_graph_resources(graph, &mut meter).map_err(Error::Resources)?;
-        for (field, count) in [
-            ("candidate.span_split.source", self.capture().item_count()),
-            (
-                "candidate.span_split.stops",
-                self.partitions().reference_count(),
-            ),
-            ("candidate.span_split.children_and_history", 3),
-        ] {
-            meter
-                .charge_entries(
-                    count,
-                    DesignResourceLocation {
-                        scope: DesignResourceScope::Sewing,
-                        owner: Some(graph.id()),
-                        field,
-                        index: None,
-                    },
-                )
-                .map_err(Error::Resources)?;
-        }
+        charge_graph_reservation(
+            graph,
+            self.capture().item_count(),
+            self.partitions().reference_count(),
+            children,
+            &mut meter,
+        )
+        .map_err(Error::Resources)?;
         let reservation = meter.finish().map_err(Error::Resources)?;
         let history = history
             .with_split(binding.span().id(), children, limits.history)
@@ -294,4 +283,35 @@ impl<H: DesignReferenceHost> CommandStopSourceBinding<'_, H> {
             history,
         })
     }
+}
+
+// Reuse the actual exhaustive graph walk and fixed output derivation for graph and garment
+// reservations. Adding a graph text/counter field must also flow through the cumulative sink.
+fn charge_graph_reservation(
+    graph: &SewingGraph,
+    captured_items: usize,
+    child_references: usize,
+    children: [EntityId; 2],
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    charge_sewing_graph_resources(graph, sink)?;
+    for (field, count) in [
+        ("candidate.span_split.source", captured_items),
+        ("candidate.span_split.stops", child_references),
+        (
+            "candidate.span_split.children_and_history",
+            children.len() + 1,
+        ),
+    ] {
+        sink.charge_entries(
+            count,
+            DesignResourceLocation {
+                scope: DesignResourceScope::Sewing,
+                owner: Some(graph.id()),
+                field,
+                index: None,
+            },
+        )?;
+    }
+    Ok(())
 }
