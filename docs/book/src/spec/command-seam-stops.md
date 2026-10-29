@@ -2,7 +2,8 @@
 
 Native contract cases verify the existing graph's stop membership at paired cuts,including
 closed endpoints,explicit side/copy identity,authored order and later-frame anchors. Explicit actual
-stop input/workspace admission is implemented;bounded current membership and partition views remain pending. These cases construct real retained child graphs
+stop input/workspace and ownership-workspace admission are implemented;bounded current context,
+membership and partition views remain pending. These cases construct real retained child graphs
 through public APIs;they do not install a command effect or create new semantic landmark identities.
 
 | API token | Meaning |
@@ -31,6 +32,11 @@ through public APIs;they do not install a command effect or create new semantic 
 | `Journal` | Complete journal/nested cause before workspace arithmetic |
 | `BoundOverflow` | Conservative workspace cardinality cannot be represented |
 | `Workspace` | Actual conservative reservation exceeds the selected allowance |
+| `CommandStopOwnershipLimits` | Separate explicit complete ownership index/cache allowance |
+| `CommandStopOwnershipAdmission` | Actual stop input borrow and admitted ownership bounds |
+| `CommandStopOwnershipAdmissionError` | Complete edge-count or reservation/allowance refusal |
+| `admit_ownership_workspace` | Count actual copies/Pieces/edges before any current query |
+| `EdgeCountOverflow` | Counting another canonical Piece edge cannot be represented |
 
 ## A stop at the cut belongs to both closed children
 
@@ -193,3 +199,57 @@ admit. The earlier complete current validator still refuses MissingCopy on the a
 No current callback or numeric value has been smuggled into this token. Bounded copy/point/range
 validation must follow even when N is zero;only its successful result can support later ordered
 partition views. Whole source/physical/authority/aggregate operation/effect readiness stays separate.
+
+## Admit the complete ownership workspace separately
+
+Current Piece/range ownership needs its own complete indexes and cached interval evidence.
+After stop input admission,call `inputs.admit_ownership_workspace(ownership_limits)`. This counts
+the actual immutable model's full copy population C,Piece population P and canonical held edge
+population E. Edges include every boundary,hole and construction-line entry in authored order,
+including unused Pieces and copies. No semantic/current callback,query,index,cache or clone runs.
+
+Choose the positive `CommandStopOwnershipLimits` explicitly;there is no default. Let B be the
+exact per-range peak already selected by the stop input token. Reserve C+P+(E+1)B logical items:
+
+| Population | Bound | Purpose |
+| --- | --- | --- |
+| Copy and Piece indexes | C+P | Complete actual borrowed metadata rows |
+| Retained owned interval evidence | E*B | At most B portions from every actual held edge |
+| One transient Piece-range query | B | Active bounded fold alongside the retained cache |
+
+The original M+N+2N+4B stop/registry/pair reservation remains separate and unchanged. Ownership
+admission cannot widen point/range limits or borrow a different same-ID input owner. It retains
+the exact `inputs()` borrow,selected `limits()`,actual C/P/E and checked interval/cache reservation.
+All edge increments,multiplications and additions are checked before allocation. The token has
+private fields and cannot escape its actual admitted input owner.
+
+```rust
+use sc_core::command::{CommandStopPartitionAdmission,CommandStopOwnershipAdmission,
+    CommandStopOwnershipAdmissionError,CommandStopOwnershipLimits};
+use sc_core::design::DesignReferenceHost;
+
+fn ownership<'a,H:DesignReferenceHost>(inputs:&'a CommandStopPartitionAdmission<'a,H>,
+    limits:CommandStopOwnershipLimits)
+    ->Result<CommandStopOwnershipAdmission<'a,H>,CommandStopOwnershipAdmissionError>
+{
+    inputs.admit_ownership_workspace(limits)
+}
+```
+
+With C2/P2/E2/B2,the retained interval bound is4 and the complete ownership reservation is10;
+limit9 refuses with actual target/counts/required10/limit9. This is additional to the earlier16-item
+stop input reservation. An actual unused Piece,its required physical copy and three additional
+held edges change C/P/E to3/3/5. The retained bound becomes10 and the complete reservation18;
+limit17 cannot hide that unused schema data even though target stops and registry remain2/2.
+
+The earlier stop/pair reservation can fit a huge selected B while the complete ownership cache
+cannot. Its checked E*B or total then refuses with the actual C/P/E/B and target identity before
+querying or allocating. The extra ownership cap is not inferred from model totals or silently
+subtracted from the original stop allowance. These remain conservative logical bounds,with
+allocator bytes,CPU and aggregate command/snapshot policy owned separately.
+
+A held missing copy still admits these metadata counts. The original current validator continues
+to refuse the actual child/A/copy;ownership admission supplies no current membership certificate.
+Bounded complete registry/Piece and target/cut/range validation follows,then actual stop rows and
+ordered child views. Physical geometry,current effect authority and whole paired acceptance remain
+separate. Three focused actual Design cases and privacy/default/lifetime doctests cover this stage.

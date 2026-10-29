@@ -352,3 +352,215 @@ fn command_stop_admission_keeps_held_current_copy_refusals_separate_from_input_m
     );
     assert_eq!(held, saved);
 }
+
+fn ownership_limits(items: usize) -> sc_core::command::CommandStopOwnershipLimits {
+    sc_core::command::CommandStopOwnershipLimits::new(
+        NonZeroUsize::new(items).expect("ownership workspace"),
+    )
+}
+#[test]
+fn command_stop_ownership_admission_borrows_exact_inputs_and_counts_complete_schema() {
+    use sc_core::command::CommandStopOwnershipAdmissionError as Error;
+    let state = command_weighted_state(EaseAmount::Formula(id(5_001)), SeamSideId::A);
+    let saved = state.clone();
+    let request = command_request(&state, 0, at(1, 2), at(2, 3));
+    let (model, _) = command_model_limits(&state);
+    let inputs = request
+        .admit_stop_partition_inputs(&state, model, command_stop_limits(16, 1, 2, 2))
+        .expect("complete actual stop inputs");
+    let admitted = inputs
+        .admit_ownership_workspace(ownership_limits(10))
+        .expect("C2+P2+(E2+1)*B2 =10");
+    assert!(core::ptr::eq(admitted.inputs(), &inputs));
+    assert!(core::ptr::eq(admitted.inputs().state(), &state));
+    assert_eq!(
+        (
+            admitted.copy_count(),
+            admitted.piece_count(),
+            admitted.edge_count()
+        ),
+        (2, 2, 2)
+    );
+    assert_eq!(admitted.ownership_item_bound(), 4);
+    assert_eq!(admitted.workspace_item_bound(), 10);
+    assert_eq!(admitted.limits(), ownership_limits(10));
+    assert_eq!(admitted.inputs().workspace_item_bound(), 16);
+    assert_eq!(admitted.inputs().limits().range_portions().get(), 2);
+    assert_eq!(
+        inputs
+            .admit_ownership_workspace(ownership_limits(9))
+            .expect_err("one below ownership"),
+        Error::Workspace {
+            target_span: id(97_000),
+            copies: 2,
+            pieces: 2,
+            edges: 2,
+            range_portions: 2,
+            required: 10,
+            limit: 9
+        }
+    );
+    assert_eq!(state, saved);
+}
+fn expanded_ownership_state() -> sc_core::design::DesignSewing<sc_measure::DesignSources> {
+    use sc_core::ontology::{
+        CopyOrientation, CutCopyDefinition, DeterministicIdGenerator, DirectedEdge, Direction,
+        Piece, PieceInventory,
+    };
+    let state = command_weighted_state(EaseAmount::Formula(id(5_001)), SeamSideId::A);
+    let mut inputs = state.inputs().definition().clone();
+    let mut structure = inputs.structure.definition().clone();
+    let extra = structure
+        .topology
+        .declare_edges(&mut DeterministicIdGenerator::from_start(110_000), 3)
+        .expect("actual unused edge declarations");
+    let mut pieces = structure.pieces.pieces().to_vec();
+    let first = pieces.first_mut().expect("first actual Piece");
+    let mut definition = first.definition().clone();
+    definition
+        .construction_lines
+        .extend(extra.iter().skip(1).map(|edge| DirectedEdge {
+            edge: *edge,
+            direction: Direction::Original,
+        }));
+    *first =
+        Piece::new(definition, &structure.topology).expect("actual expanded held edge inventory");
+    let mut unused = first.definition().clone();
+    unused.id = id(120_000);
+    unused.boundary = vec![DirectedEdge {
+        edge: *extra.first().expect("unused boundary"),
+        direction: Direction::Original,
+    }];
+    unused.holes.clear();
+    unused.construction_lines.clear();
+    unused.fold_edges.clear();
+    unused.cut_on_fold = false;
+    let unused = Piece::new(unused, &structure.topology).expect("actual unused Piece");
+    let mut copies = structure
+        .cut_plan
+        .copies()
+        .iter()
+        .map(|copy| *copy.definition())
+        .collect::<Vec<_>>();
+    copies.push(CutCopyDefinition {
+        id: id(120_010),
+        piece: unused.id(),
+        orientation: CopyOrientation::Authored,
+    });
+    pieces.push(unused);
+    structure.cut_plan =
+        CutPlan::new(copies, &pieces).expect("complete plan includes unused Piece's required copy");
+    structure.pieces = PieceInventory::new(pieces).expect("actual expanded Piece registry");
+    inputs.structure =
+        DesignStructure::new(structure).expect("actual born-consistent immutable root");
+    DesignSewing::new(DesignSewingDefinition {
+        inputs: DesignInputs::new(inputs).expect("actual inputs"),
+        graph: state.graph().clone(),
+        landmarks: state.landmarks().to_vec(),
+    })
+    .expect("actual expanded ownership input owner")
+}
+#[test]
+fn command_stop_ownership_admission_keeps_unused_copies_pieces_edges_and_checked_overflow() {
+    use sc_core::command::CommandStopOwnershipAdmissionError as Error;
+    let state = expanded_ownership_state();
+    let saved = state.clone();
+    let request = command_request(&state, 0, at(1, 2), at(2, 3));
+    let (model, _) = command_model_limits(&state);
+    let inputs = request
+        .admit_stop_partition_inputs(&state, model, command_stop_limits(16, 2, 5, 2))
+        .expect("actual stop inputs count unchanged target/registry plus complete journal");
+    let admitted = inputs
+        .admit_ownership_workspace(ownership_limits(18))
+        .expect("C3+P3+(E5+1)*B2 =18");
+    assert_eq!(
+        (
+            admitted.copy_count(),
+            admitted.piece_count(),
+            admitted.edge_count()
+        ),
+        (3, 3, 5)
+    );
+    assert_eq!(admitted.ownership_item_bound(), 10);
+    assert_eq!(admitted.workspace_item_bound(), 18);
+    assert_eq!((inputs.stop_count(), inputs.landmark_count()), (2, 2));
+    assert_eq!(
+        inputs
+            .admit_ownership_workspace(ownership_limits(17))
+            .expect_err("unused data cannot be omitted"),
+        Error::Workspace {
+            target_span: id(97_000),
+            copies: 3,
+            pieces: 3,
+            edges: 5,
+            range_portions: 2,
+            required: 18,
+            limit: 17
+        }
+    );
+    let peak = (usize::MAX - 8) / 4;
+    let huge = request
+        .admit_stop_partition_inputs(&state, model, command_stop_limits(usize::MAX, 2, 5, peak))
+        .expect("earlier independent stop/pair reservation still fits");
+    assert_eq!(huge.workspace_item_bound(), usize::MAX - 3);
+    assert_eq!(
+        huge.admit_ownership_workspace(ownership_limits(usize::MAX))
+            .expect_err("actual complete ownership cache multiplication must fit separately"),
+        Error::BoundOverflow {
+            target_span: id(97_000),
+            copies: 3,
+            pieces: 3,
+            edges: 5,
+            range_portions: peak
+        }
+    );
+    assert_eq!(state, saved);
+}
+#[test]
+fn command_stop_ownership_admission_is_metadata_not_current_missing_copy_acceptance() {
+    let state = state(EaseAmount::Formula(id(5_001)), SeamSideId::A);
+    let mut inputs = state.inputs().definition().clone();
+    let mut structure = inputs.structure.definition().clone();
+    structure.cut_plan = CutPlan::new(
+        structure
+            .cut_plan
+            .copies()
+            .iter()
+            .map(|copy| {
+                let mut definition = *copy.definition();
+                if definition.id == id(96_000) {
+                    definition.id = id(96_010);
+                }
+                definition
+            })
+            .collect(),
+        structure.pieces.pieces(),
+    )
+    .expect("actual current copy replacement");
+    inputs.structure = DesignStructure::new(structure).expect("actual immutable root");
+    let held = DesignSewing::new(DesignSewingDefinition {
+        inputs: DesignInputs::new(inputs).expect("actual inputs"),
+        graph: state.graph().clone(),
+        landmarks: state.landmarks().to_vec(),
+    })
+    .expect("actual held sewing state");
+    let request = command_request(&held, 0, at(3, 8), at(5, 8));
+    let (model, _) = command_model_limits(&held);
+    let inputs = request
+        .admit_stop_partition_inputs(&held, model, command_stop_limits(10, 1, 2, 2))
+        .expect("zero target stops still admits actual raw model metadata");
+    let ownership = inputs
+        .admit_ownership_workspace(ownership_limits(10))
+        .expect("ownership input budget only");
+    assert_eq!(ownership.inputs().stop_count(), 0);
+    assert_eq!(ownership.workspace_item_bound(), 10);
+    assert_eq!(
+        ownership.inputs().binding().span().definition().a.copy,
+        id(96_000)
+    );
+    assert!(
+        matches!(held.validate_current(),Err(DesignSewingError::Graph(issue))
+        if matches!(*issue,SewingError::MissingCopy {span,side:SeamSideId::A,copy}
+        if span==id(97_001) && copy==id(96_000)))
+    );
+}

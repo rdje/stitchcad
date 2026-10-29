@@ -225,3 +225,6 @@ actual owned seam source refusal	spec/command-seam-capture.md	crates/sc-core/src
 command stop partition limits	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops.rs	CommandStopPartitionLimits	G1-SLICE.6.5.3.2.3.3.2	4.4
 command stop partition input admission	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops.rs	CommandStopPartitionAdmission	G1-SLICE.6.5.3.2.3.3.2	4.4
 command stop partition input refusal	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops.rs	CommandStopPartitionAdmissionError	G1-SLICE.6.5.3.2.3.3.2	4.4
+command stop ownership limits	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/ownership.rs	CommandStopOwnershipLimits	G1-SLICE.6.5.3.2.3.3.3.1	4.4
+command stop ownership admission	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/ownership.rs	CommandStopOwnershipAdmission	G1-SLICE.6.5.3.2.3.3.3.1	4.4
+command stop ownership refusal	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/ownership.rs	CommandStopOwnershipAdmissionError	G1-SLICE.6.5.3.2.3.3.3.1	4.4

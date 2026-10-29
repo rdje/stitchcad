@@ -106,6 +106,7 @@ pub use seam_quantity::{
 pub use seam_source::{CommandSeamSplitSourceAdmission, CommandSeamSplitSourceError};
 pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};
 pub use seam_stops::{
+    CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits,
     CommandStopPartitionAdmission, CommandStopPartitionAdmissionError, CommandStopPartitionLimits,
 };
 pub use snapshot::CommandSnapshotContext;

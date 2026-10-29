@@ -3,13 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0530 — admit actual stop inputs and conservative workspace
+## STITCHCAD-G1-0531 — admit complete actual stop ownership workspace
 
-- Walk actual full model envelope,bind held target/cuts and admit complete journal/nested input,then reserve M+N+2N+4B before current callbacks/queries/indexes/clones. Private borrowed token and explicit limits preserve actual owners,model demand/counts and original typed
-  causes;metadata supplies no current proof.
-- Actual Design4/core+test Clippy/fmt/docs3+1 pass. Exact16/15,zero target/fullroot2,unused registry10→11,model/target/journal/nested/overflow precedence,unrelated journal2/nested3 and huge scalar reservation without allocation. Held copy damage stays inspectable while complete
-  current validation refuses.
-- Whole0529 retained688/three exact Git spans;book93/226/1590/2761,glossary0/map/retention1142 pass. LIVE/README unchanged29 suites/G1 6/18. Bounded actual current memberships next,then ordered views;physical/authority/aggregate effects/full and hosted verification remain owned.
+- Count actual complete C copies/P Pieces/E held edges and separately reserve C+P+(E+1)B before current callbacks/queries/indexes/caches. Private borrowed token and no-default limits retain actual input owner/counts and E*B cache/B transient;earlier stop/pair/registry and
+  point/range allowances stay unchanged.
+- Actual Design3/core+test Clippy/fmt/docs3+1 pass. Exact10/9,unused C3/P3/E5→18/17,ownership overflow despite earlier representable huge bound,exact pointers/limits and held missing-copy metadata/current refusal. No queries,current certificate,source or numeric kernel change.
+- Whole0530 retained689/three exact Git spans;book93/229/1590/2762,glossary0/map/retention1143 pass. LIVE/README unchanged29 suites/G1 6/18. Bounded actual current context next,then membership rows/views;physical/authority/aggregate effects/full and hosted verification remain
+  owned.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

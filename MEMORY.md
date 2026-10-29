@@ -1,17 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.3.3 in docs/tasks/G1-SLICE-execution.md:bounded actual current
-  copy/paired-range coverage and unique semantic point membership. Consume admitted actual inputs,
-  preserve complete repair/choice/numeric evidence,closed membership and no partial success. Validate
-  even zero target stops. Ordered borrowed views/Design integration .4,then scoped .acceptance.
-- Stop input admission0530 walks actual full model envelope,binds held target/cuts,admits complete
-  journal/nested input and checks M+N+2N+4B before any current callback/query/index/clone. N is actual
-  target stops,M full registry,B per-range peak. Token/limits retain actual owners/counts/demand.
-- Actual Design4/core+test Clippy/fmt/docs3+1 pass:16/15,zero target/fullroot2,unused registry10→11,
-  model/target/journal/nested/overflow precedence,unrelated journal2/nested3,representable huge bound
-  without allocation and held missing-copy metadata versus unchanged current refusal. No current proof.
-- Book93/226/1590/2761,glossary0/map,688 receipt3/retention1142 pass;whole0529 retained688.
-  LIVE/README unchanged29 suites/G1 6/18. Oracle gate10/12/9;D306 fixed,hosted verdict after push400.
+- Next G1-SLICE.6.5.3.2.3.3.3.2 in docs/tasks/G1-SLICE-execution.md:bounded complete actual
+  registry/Piece ownership and target/cut/range context. Consume ownership/input tokens;use bounded
+  current-point and range-coverage ports,retain all repair/choice/numeric evidence. No legacy choice
+  trees,sampling or coordinate narrowing. Then .3 actual stop rows,.3.3.4 ordered views/integration.
+- Ownership admission0531 counts complete C copies/P Pieces/E canonical held edges and separately
+  reserves C+P+(E+1)B (E*B cache plus B transient and C+P indexes) before callbacks/queries/allocation.
+  Borrow actual input token;earlier M+N+2N+4B and point/range limits remain unchanged. No current proof.
+- Actual Design3/core+test Clippy/fmt/docs3+1 pass:base10/9,unused C3/P3/E5 →18/17,huge separate
+  ownership overflow despite representable earlier bound,exact pointers/limits and held missing-copy
+  metadata/current refusal boundary. Book93/229/1590/2762,glossary0/map,689 receipt3/retention1143 pass;
+  whole0530 retained689. LIVE/README unchanged29 suites/G1 6/18;oracle gate10/12/9,hosted verdict pending.
 - Real formula/Profile/geometry/physical/current authority/aggregate operations/paired effects/full
   proof remain explicit owners. Consume preparation/commit terminals;native --index authority
   mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400 after full gates.

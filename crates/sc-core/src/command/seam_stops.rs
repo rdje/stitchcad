@@ -9,6 +9,10 @@ use crate::{
     ontology::{EntityId, PointJournalAdmissionIssue, RangeCoverageLimits, UniquePointLimits},
 };
 use core::{fmt, num::NonZeroUsize};
+mod ownership;
+pub use ownership::{
+    CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits,
+};
 
 /// Explicit logical workspace and point/range input limits;no defaults or currentness proof.
 /// Workspace covers full registry index,target stop rows,two child references per stop and four

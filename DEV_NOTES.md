@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — bounded actual stop input admission
+## _(2026-10-28 UTC)_ — separate actual stop ownership workspace admission
 
-0530 admit_stop_partition_inputs walks actual model resources,held target/cuts and complete journal/nested inputs,then reserves M+N+2N+4B before current callbacks/queries/indexes/clones. N actual target stops,M full registry,B per-range peak. Private token retains exact owners/model demand/limits and checked bounds.
-Actual Design4/core+test Clippy/fmt/docs3+1 pass0. Workspace16/15,target0/fullroot2,unused registry10→11,model/target/journal/nested/overflow order,unrelated journal2/nested3 and huge scalar bound without allocation. Held copy damage remains metadata;complete current validator still refuses. No current proof/effect.
-Book93/226/1590/2761,glossary0/map/688 receipt3/retention1142 pass0. Three API types/stop chapter/source decision/current docs align. LIVE/README unchanged29 suites/G1 6/18. Native fixtures isolated in a test child module. Existing kernels unchanged;bounded current memberships .3.3.3 next,including zero target stops.
-[Whole0529 stop contracts](docs/history/stitchcad-devnotes-part688.md) retains exact closed/copy/current/oracle proof. Promotion declined:indexed input/resource/current contract adoption. No physical/export assumption. Ordered views/component/full paired proof stay owned;consume authority/commit terminals.
+0531 admit_ownership_workspace counts actual complete C copies/P Pieces/E canonical edges and reserves C+P+(E+1)B before callback/query/index/cache allocation. Private token borrows actual stop inputs;E*B retained cache and B transient are separate from existing M+N+2N+4B and per-point/range limits. No current proof.
+Actual Design3/core+test Clippy/fmt/docs3+1 pass0. Base C2/P2/E2/B2 →10/9;unused Piece/required copy/three held edges C3/P3/E5 →18/17. Ownership overflow refuses despite earlier huge representable stop bound;input pointers/limits and held-copy metadata/current refusal remain exact. No source/numeric kernel change.
+Book93/229/1590/2762,glossary0/map/689 receipt3/retention1143 pass0. Three types/API routes/ownership section/source decision/task hierarchy/index/D301 align. LIVE/README unchanged29 suites/G1 6/18. Bounded current context .3.3.3.2 next,then stop rows/ordered views. Full/physical/hosted verdicts remain later owners.
+[Whole0530 stop input admission](docs/history/stitchcad-devnotes-part689.md) retains exact model/journal/workspace/current-boundary proof. Promotion declined:indexed schema/resource/current contract adoption. No new physical/export assumption;consume authority and commit terminals before dependent work.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
