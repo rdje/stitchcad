@@ -417,39 +417,96 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0537 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part696.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.rational-fixture`
   Status: `done`
-  Goal:0538 D309 checked six-field rational fixture parsing removes remaining six denied indices
-  without changing original arity/data/expectations/arithmetic. Full prepush retry remains parent.
-  - [x] REPRODUCE / ISSUE: 0538 scripts/run_make.sh check at07b4ac7a/402 →rc2,6 denied
-    indexing_slicing errors at formula_rational_contract.rs206–230. Gate/probes never started,push
-    held. Failed attempt/logs remain target/prepush-400-0537. Original six-column assertion already
-    constrained valid indices;this is strict fixture-lint compliance,not a numeric/runtime defect.
-  - [x] ROOT CAUSE: 0538 cargo clippy --all-targets --all-features --keep-going --message-format
-    json -- -D warnings before repair →rc101,exactly1 error group:6 indexing_slicing diagnostics
-    in this target.135 accepted artifact events are compiler evidence,not executed tests. Log set
-    target/prepush-400-0537/keep-going-clippy.*. git log -- formula_rational_contract.rs →fixture
-    integration0247 6b1de3d1,rc=0. Existing arity assertion does not satisfy denied direct indexing.
-  - [x] FIX: 0538 one checked six-cell slice pattern names operation,left/right numerator/
-    denominator and expected result. Preserve original six-column assertion,all fixture/error/
-    arithmetic expectations and current source kernel. Source check →no cells[index] remains and
-    original arity assertion remains,rc=0. No added test,fixture retune or new lint waiver.
-    cargo fmt --all --check →pass,rc=0. Archive helper first refused stale exact D298 heading before
-    any write;matching actual D298/D299 heading produced four exact Git spans,not partial history.
-  - [x] ADDRESSED: 0538 cargo clippy -p sc-core --test formula_rational_contract -- -D warnings
-    →pass,rc=0. cargo test -p sc-core --test formula_rational_contract →5 passed/0 filtered,rc=0.
-    Existing full-width/sign/zero,independent four-operator Fraction fixtures,cross-cancellation,
-    signed wide sums and total-order/reflection assertions all remain and pass. Frozen TSV and
-    production rational arithmetic unchanged;no full/native workspace verdict inferred.
-  - [x] NO REGRESSION: 0538 cargo fmt --all --check →pass,rc=0;Git diff scope confirms only this
-    test reader changes,no fixture/kernel,rc=0. Native tools use local_environment.py. mdbook build
-    docs/book and positive publication →93/248/1590/2770,rc=0;glossary →310/9/158/0 failures,rc=0;
-    knowledge-map →pass,rc=0. Receipt696 →4 exact Git spans,rc=0;retention →1150 logical/55 working/
-    64752 decodedL/5032908 decodedB/2610245 residentB,rc=0. Parent prepush-400 owns fresh complete
-    check/gate/probes before normal push and actual hosted jobs. Broader post-fix success pending.
-  - [x] LOCKSTEP: 0538 D309 closure/native census/checked reader and pending full retry tracked.
-    Whole0537 task/lesson/changelog plus exact prior defect ledger retained696/four Git spans before
-    bounded related-D309 summary. Book clarifies actual root/rational fixture arity checks;MEMORY/
-    DEV/CHANGE/index/PLANNING align. LIVE defect row marks D307–D309 fixed;29 suites/G1 6/18 unchanged.
-    README objective/commands reviewed unchanged. Commit before full retry from clean completed
-    HEAD;do not push before all required gates pass or infer unobserved hosted success. Stop
-    component/whole paired/physical/authority/effect owners remain. Consume every producer terminal.
-    promotion: declined (application of indexed strict fixture-lint and target-scoped verification contracts;no new product assumption).
+  Goal:0538 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part697.md).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.diagnostics`
+  Status: `done`
+  Goal:0539 complete full-run diagnosis/ownership at95925f7b/403;record check0/gate0/probes2,
+  distinguish verified native scope from six blocked probe areas and schedule immediate repairs.
+  - [x] REPRODUCE / ISSUE: 0539 scripts/run_make.sh check,gate,probes at clean95925f7b
+    →check rc0,gate rc0,probes rc2. All29 suite entry points reached;Git diff/status returned clean
+    after all producers completed. Logs/RC files/baseline in target/prepush-400-0538. Core239,
+    measure31 and units3 documentation cases pass;native workspace/fmt/all-target-feature lint pass.
+    No push or hosted verdict. Parent prepush-400 remains active until fixes/full retry/actual jobs.
+  - [x] ROOT CAUSE (WHY + WHERE): 0539 native log/source comparison →six actual areas. D310 legacy descriptor
+    normalization conflicts with canonical raw Git source records/encoding;inventory1150 accepts,
+    payload hashes match in diagnostic census. D311 missing-level mutation targets retired prose;
+    actual catalog17/5/5 passes. D312 matrix lacks ontology1.2/1.3 citations,causing G0-01 extra
+    failure;G0 review17/2 remains complete but failing,not approved. D313 GOOD cleanup protects
+    stores;removed-guard mutant gets another Git-boundary refusal from real Cargo contents,masking
+    the intended counterfactual. D314 old12-cell status guard reads a curated chapter without that
+    table. D315 source dispositions omit added candidates,including ordinary nested build.rs module.
+    Source/log reads and independent canonical inventory →rc=0. Diagnostic census counts are snapshot
+    observations,not durable invariants;D310 owns tracked/watched descriptor rederivation.
+  - [x] FIX: 0539 durable diagnostic record,all six P1 scoped repair leaves and parent dependency
+    order recorded before code edits;none of those repairs is falsely marked complete. Descriptor/
+    mutation/matrix/cleanup/status repairs precede final complete producer inventory. G0 baseline
+    follows matrix fix;human closure stays unapproved. No sealed archive,production code,policy,
+    gate threshold or frozen numerical fixture changed. git diff --check →pass,rc=0.
+  - [x] ADDRESSED (verified): 0539 native log section/error census →29 entry points with the six root
+    areas above;dependent G0 failures associated with actual G0-01 feature census,not normalized.
+    Readonly gh api repos/rdje/stitchcad →rc=0,push permission present;no access blocker or push.
+    Existing GitHub credential configuration is a necessary readonly transport dependency;update
+    notifications disabled and cache environment points under target. No login/configuration write.
+    Archived citation errata verified by git diff 71595c40..a8eb3250 --
+    crates/sc-core/src/command/bus/retained.rs →54-line append,rc0 (695 omitted space after diff).
+    git log -3 -- crates/sc-core/tests/formula_rational_contract.rs →0247 fixture source,rc0
+    (697 abbreviated the path). These correct current guidance without editing immutable originals.
+  - [x] NO REGRESSION: 0539 docs-only diagnostic unit;no additional runtime test required.
+    mdbook build docs/book and positive publication →93/248/1590/2770,rc=0;glossary →310/9/158/0
+    failures,rc=0;knowledge-map →pass,rc=0. Receipt697 →4 exact Git spans,rc=0;retention →1151
+    logical/56 working/64862 decodedL/5044124 decodedB/2621461 residentB,rc=0. Prior complete
+    native/doctrine run remains scoped to95925f7b;failed probes are explicitly pending repairs.
+  - [x] LOCKSTEP: 0539 actual full-run outcomes/six P1 owners/citation corrections/external
+    credential dependency recorded. Whole0538 and exact previous defect ledger retained697/four
+    Git spans. Book distinguishes passed native scope from failed repository probes;MEMORY/DEV/
+    CHANGE/index/PLANNING/LIVE align. LIVE29 suites/G1 6/18 unchanged,D310–D315 now owned. README
+    objective/commands reviewed unchanged. Next .archive-profiles D310;commit every repair before
+    moving,then complete all full gates before normal push/hosted monitoring. Stop component/paired
+    physical/authority/effect proof remain separately owned. No false safe-to-clear stopping point.
+    promotion: declined (application of indexed byte-preserving archive,target-scoped proof and defect ownership contracts;fixes remain explicitly scheduled).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.archive-profiles`
+  Status: `pending`
+  Goal:D310 P1 fix changelog ledger descriptor profiles and diagnostics. REAL/COVERAGE-RED fail;
+  legacy newline normalization rejects256 whole-source-interval records. Counts are one-time
+  diagnostics,not maintained invariants;this fix owns tracked/watched profile rederivation. Canonical1150-record
+  inventory and579 raw+2 encoded source payload hashes accept. Support exact raw EOF and decoded
+  base64 descriptors,retain legacy strict newline/corruption controls and independent coverage
+  refusals. Never edit sealed archives or waive digest checks. Report actual FAIL lines without
+  broken-pipe truncation. Focused ledger/profile controls,book/records and commit before next leaf.
+- ID: `G1-SLICE.6.5.3.2.prepush-400.catalog-mutation`
+  Status: `pending`
+  Goal:D311 P1 repair LEVEL-MISSING control. Actual catalog census17 commands/5 classes/5 levels
+  passes;droprow still matches obsolete prose '| `propose` | build a candidate group',so mutation
+  never applies and unchanged catalog accepts. Select actual authority row by stable semantic key,
+  prove only intended row removed and actual checker refusal;preserve five levels/human approval.
+- ID: `G1-SLICE.6.5.3.2.prepush-400.matrix-coverage`
+  Status: `pending`
+  Goal:D312 P1 classify/trace ontology1.2 exact held-source range partition and1.3 normalized
+  source progress in normative feature matrix. Actual M3 reports missing citations;REAL/proposal
+  controls fail. Add accurate rows/citations consistent with existing foundation contracts;do not
+  exempt clauses or normalize failing counts. G0-01 depends on this checker,causing real/control
+  17 met2 not met19 clauses;restore instrument baseline18/1 while human closure stays unapproved.
+- ID: `G1-SLICE.6.5.3.2.prepush-400.cleanup-mutation`
+  Status: `pending`
+  Goal:D313 P1 isolate protected-store guard mutation from real package-store contents. GOOD
+  inspect already refuses protected store before traversal. Removing that guard then encounters
+  nested Cargo Git checkout and another legitimate refusal,making expected mutant assertion fail.
+  Use controlled owned protected fixture for actual guard-body red;preserve actual store refusal,
+  all link/Git/volume/deletion guards and retained certificates. No production protection weakening.
+- ID: `G1-SLICE.6.5.3.2.prepush-400.static-status`
+  Status: `pending`
+  Goal:D314 P1 align static_status_contract with maintained formula-static-validation chapter.
+  Actual traceback says D152 current table missing;current chapter uses scoped prose/links instead
+  of old12-cell table. Read canonical curation/history before changing checker. Preserve independent
+  implemented-versus-pending/static-versus-runtime/geometry checks and real copied-text refusals;
+  do not restore stale claims or require retired layout. Focused status/formula controls then commit.
+- ID: `G1-SLICE.6.5.3.2.prepush-400.producer-inventory`
+  Status: `pending`
+  Goal:D315 P1 refresh complete source candidate dispositions for producer_census_contract.
+  Full CI-environment suite's later producer census refuses new paths;earlier local/CI helper controls
+  pass. Inventory is explicitly inspection work,not runtime/locality signoff. Ordinary nested
+  current/build.rs is conservatively a candidate,not thereby a Cargo entry;record accurate reference
+  disposition. Inspect/classify every new script and retain honest existing standalone audit owners.
+  Run after .archive-profiles through .static-status so any new helpers are registered too. Never
+  execute historical installers/certificate authors to classify them or blanket-label unreviewed
+  programs safe. Source set equality/AST and adversarial inventory controls must pass before commit.

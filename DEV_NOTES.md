@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — checked exact rational fixture fields
+## _(2026-10-29 UTC)_ — complete prepush diagnosis and scoped repair queue
 
-0538 D309:full retry07b4ac7a/402 refused6 direct rational fixture indices;one keep-going all-target lint census confirmed this sole error group. Checked six-field slice pattern preserves original arity/data/expected errors and production arithmetic. No new test,fixture retune or lint waiver.
-Target Clippy/native5/fmt pass0:full-width/sign/zero,independent four-operator rows,cross-cancellation,wide sums and total order remain exact. Existing row assertion already constrained valid indices;no numeric/runtime defect inferred. D307/D308 repairs remain committed;fresh full gates/push still pending.
-Book93/248/1590/2770,glossary0/map/696 receipt4/retention1150 pass0. Exact prior task/lesson/changelog/defect ledger retained before bounded summary. Book actual root/rational fixture guidance/task/index/LIVE align;29 suites/G1 6/18 unchanged. Commit before fresh required full retry and hosted-job observation.
-[Whole0537 and prior defect ledger](docs/history/stitchcad-devnotes-part696.md) retain exact native/source/history proof. Promotion declined:indexed strict lint/claim-target contracts. Archive helper matched actual combined D298/D299 heading after safe pre-write refusal;four-span receipt verifies capture.
+0539 run95925f7b/403:full check0/gate0/probes2,29 entry points/source restored clean. Six P1 repairs owned:archive byte profiles,catalog mutant,matrix trace,cleanup mutant,status guard,producer inventory. G0 extra refusal depends on matrix;human closure unapproved. No push or hosted verdict.
+Archive canonical inventory/payload digests accept;legacy checker normalizes raw/encoded records. Catalog17/5/5 passes but missing-level mutation uses old prose. Matrix omits ontology1.2/1.3. Cleanup GOOD protects stores;fault mutant hits another guard. Status guard/producer candidate ledger need current scope.
+Book93/248/1590/2770,glossary0/map/697 receipt4/retention1151 pass0. Whole0538/old ledger retained before bounded summary. LIVE29 suites/G1 6/18 unchanged;D310–D315 P1 scheduled immediately before full retry/push. GitHub push access verified through readonly existing transport credentials;no configuration write.
+[Whole0538 and ledger](docs/history/stitchcad-devnotes-part697.md) retain exact source proof. Promotion declined:indexed byte preservation/proof scope/defect ownership. Current task corrects archived695 diff spacing/697 path citation without rewriting originals. Diagnostic counts are not new maintained invariants.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

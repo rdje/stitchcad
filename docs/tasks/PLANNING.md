@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308 — unchecked formula root fixture fields
 
-D308 fixed0537;related D309 fixed0538 under G1-SLICE.6.5.3.2.prepush-400.rational-fixture. Root/rational readers use checked eight/six-field patterns;original arity/data/kernel unchanged. Target lint/native4+5 pass0. [Whole prior ledger/proof](../history/stitchcad-devnotes-part696.md). Keep-going lint isolated D309;fresh full prepush gates/push/hosted verdict remain pending.
+D308/D309 fixed0537–0538;[whole prior ledger](../history/stitchcad-devnotes-part697.md). Full run95925f7b:check0/gate0/probes2. D310–D315 P1 owned under G1-SLICE.6.5.3.2.prepush-400:archive profiles,catalog mutation,matrix traces,cleanup mutant,status checker,producer inventory. G0 refusal depends on matrix;human closure unapproved. Scoped fixes precede full retry/push.

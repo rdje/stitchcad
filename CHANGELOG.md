@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0538 — check exact rational fixture fields
+## STITCHCAD-G1-0539 — record full prepush diagnosis and owned repairs
 
-- Fix D309 with checked six-field rational fixture destructuring,preserving original arity assertions,data,expected arithmetic/errors and production kernel. One keep-going all-target lint census identified only this remaining six-diagnostic compiler error group;no executed-test
-  verdict was inferred from compiler artifacts.
-- Focused target Clippy,all5 existing rational tests and formatting pass. Native source history attributes fixture integration to0247. D307/D308 are already committed;fresh complete prepush check/gate/probes,normal push and actual hosted jobs remain pending.
-- Whole0537 plus exact prior defect ledger retained696/four Git spans;book93/248/1590/2770,glossary0/map/retention1150 pass. LIVE marks D307–D309 fixed;29 suites/G1 6/18 unchanged. Commit before full retry;stop component and paired physical/authority/effect proof retain owners.
+- Full run at95925f7b/403 passes complete native check and doctrine gate;all29 probe entry points run but aggregate probes fail. Source restored clean. Six P1 repair areas are scoped and owned;no push or hosted success is claimed.
+- Preserve archive bytes and corruption controls;repair stale authority mutation,missing ontology matrix traces,masked cleanup mutant,curated static-status guard and producer candidate dispositions. G0 extra refusal depends on matrix;human closure remains unapproved. Existing
+  GitHub push access is verified read-only.
+- Whole0538/previous ledger retained697/four exact Git spans;book93/248/1590/2770,glossary0/map/retention1151 pass. Archived citation typos corrected in current task guidance. LIVE29 suites/G1 6/18 unchanged,D310–D315 P1 owned. Commit each repair,then fresh full gates before
+  normal push and actual jobs.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

@@ -1,20 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400 in docs/tasks/G1-SLICE-execution.md:derive HEAD/ahead,
-  rerun full make check/gate/probes from clean completed state. Normal main push only after all
-  pass;observe actual hosted jobs/steps for that SHA. Keep logs project-local;consume every tool/
-  commit/push terminal before edits/retries/dependent work. Never force push or infer runner success.
-- Attempt51e421cf/400 refused D307 layout,rc2. D307 fixed0536,actual library-test lint/native1 pass.
-  D308 fixed0537 checked root fixture fields,target lint/native4 pass. Attempt07b4ac7a/402 then
-  refused6 rational fixture indices. One keep-going all-target census found only that error group.
-  D309 fixed0538 with checked six-cell pattern,target Clippy/native5/fmt pass;data/kernel unchanged.
-- Whole0537 and exact old defect ledger retained696/four Git spans. Book93/248/1590/2770,glossary0/
-  map,696 receipt4/retention1150 pass. LIVE D307–D309 fixed;29 suites/G1 6/18 unchanged. Required
-  full gate/probes/push/hosted verdict still pending. Both failed baselines/logs remain under target.
-- Then .6.5.3.2.3.3.acceptance stop component checkpoint and .3.4 live lineage. Stop pipeline/source
-  join0535 implemented with focused checks;whole source join694. Full PNT continues. Real formula/
-  Profile/geometry/physical/current authority/aggregate operations/lineage/paired effects/full proof
-  remain explicit owners. Native --index book authority mandatory;consume preparation terminals.
+- Next G1-SLICE.6.5.3.2.prepush-400.archive-profiles in docs/tasks/G1-SLICE-execution.md:
+  D310 exact raw/decoded archive descriptors,legacy corruption controls and diagnostics. Never edit
+  sealed records. Then D311 catalog mutation,D312 matrix traces/G0,D313 cleanup mutant isolation,
+  D314 static-status guard,D315 complete producer candidate inventory last. Commit every repair.
+- Completed run95925f7b/403:full check0/gate0/probes2;29 entry points,source restored clean. Logs/
+  RC/baseline/investigation in target/prepush-400-0538. No producer in flight,push or hosted verdict.
+  GitHub push access verified;existing credentials readonly transport dependency. G0 human unapproved.
+- Whole0538/old ledger retained697/four Git spans;book93/248/1590/2770,glossary0/map/retention1151
+  pass. Citation errata695/697 corrected in diagnostic leaf;originals immutable. LIVE29 suites/
+  G1 6/18;D307–D309 fixed,D310–D315 P1 owned. Native success is not full probe success.
+- After six fixes,full check/gate/probes from clean completed HEAD,normal push/actual hosted jobs.
+  Then stop .3.3.acceptance/live lineage .3.4. Full PNT continues;physical/formula/Profile/current
+  authority/aggregate/effect proof remain owned. Consume terminals;native exact-index book check.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
