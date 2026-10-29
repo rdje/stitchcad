@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D325 — prepush repairs
+## D308–D328 — prepush repairs
 
-D308–D325 fixed0537–0556;[prior ledger](../history/stitchcad-devnotes-part714.md). D325 old global census conflated Closed D70 pointer;D209 whole Git report/scoped closure/six refusals pass. PLANNING.5 open. Tail first11 pass;continue after receipt,then fresh full gates/normal push/actual jobs under .6.5.3.2.prepush-400. Fullc455 check0/gate0/probes2 reached29. LIVE G1 6/18.
+D308–D327 fixed0537–0557;[prior ledger](../history/stitchcad-devnotes-part715.md). D326 strict16/all original13+0342 additions and D327 four actual current reds/restored16 pass. D328 P1 next:original mutation control mixes old mutator/current helper;owner .6.5.3.2.prepush-400.ledger-cohort. D223/PLANNING.5 open. Then tail/fresh full gates/push/actual jobs. LIVE G1 6/18.

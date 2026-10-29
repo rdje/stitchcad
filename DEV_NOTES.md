@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — scoped receipt retention survives bounded census summaries
+## _(2026-10-29 UTC)_ — complete public ledger population and first affected assertion
 
-0556 closes D325:receipt probe demanded global LIVE totals removed0240;old open-marker regex also includes explicitly Closed D70 navigation. Freeze625 reproduces exact drift. Verify D209 whole original Git report/unique canonical owners/no live report/current pointer;six refusal controls pass0.
-All non-census AST,byte boundary/original admissions/whole414-byte folded receipt/shared acceptance remain exact and pass0. Public CLI equals original Git report;tracked bytes exact. Tail first11 passed before entry12. Complete current lifecycle census stays PLANNING.5;no total invented.
-Whole0555/prior ledger retained714/four spans;book93/248/1590/2771 and retention1168 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D325 fixed,D156 audits open. No product behavior or immutable history changed.
-[Whole0555 recipe proof](docs/history/stitchcad-devnotes-part714.md). Promotion declined:indexed exact retention/scoped claims/refusal calibration. Next remaining environment tail,then fresh full gates/normal push/actual jobs;full PNT continues.
+0557 closes D326/D327:0342 added3 cases to original13;old controller planned13 outputs. Strict16 destinations/17 children/final15 and unknown-lesson refusal now align. Full original13/current0342-case AST retained;actual default/masked16 verdicts each pass0. No source changes remain from runs.
+Current third status-ignore mutant first meets new unknown-lesson case. Expected name/NAMES only adapted;current four edits/anchors/classifiers exact. Actual four reds/restored16 baseline and focused classifier/omission controls pass0. D328 owns separately found frozen-mutator/current-helper mismatch.
+Whole0556/prior ledger retained715/four spans;book93/248/1590/2771 and retention1169 pass0. LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D326/D327 fixed,D328 next,D156 audits/D223 continuity pending. No full environment/prepush verdict inferred.
+[Whole0556 receipt proof](docs/history/stitchcad-devnotes-part715.md). Promotion declined:indexed exact populations/historical AST/first-assertion calibration. Next D328 default cohort repair,then remaining environment/fresh full gates/normal push/actual jobs;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

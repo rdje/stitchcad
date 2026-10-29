@@ -3,11 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0556 — preserve scoped receipt closure after bounded census curation
+## STITCHCAD-G1-0557 — restore complete ledger cases and native mutation evidence
 
-- Close D325:replace obsolete global LIVE count expectation with original whole D209 Git report,unique canonical owner,current pointer/no live report and six refusal controls. All byte/receipt/shared-acceptance checks and non-census AST remain exact;actual public CLI agrees. PLANNING.5 stays open.
-- First11 remaining environment entries passed;entry12 repaired. Whole0555/prior ledger retained714/four spans;book/history checks pass. Continue environment tail,then fresh full clean prepush/normal push/actual jobs;no whole verdict inferred.
-- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D325 fixed,D156 audits open. Full PNT continues.
+- Close D326/D327:strict16-case destinations/17 children/final output and unknown-lesson refusal;original13 plus0342 additions preserved. Native default/masked16 each and four current mutation reds/restored16 baseline pass. Third expected case updated;fault edits/classifier guards unchanged.
+- Whole0556/prior ledger retained715/four spans;book/history checks pass. D328 frozen-mutator/current-helper default mismatch is tracked/next before remaining tail and fresh full prepush/normal push/actual jobs. D223 continuity remains deferred;no full environment pass claimed.
+- LIVE G1 6/18/29 suites/G0 human unapproved unchanged;D326/D327 fixed,D328 owned,D156 audits open. Full PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

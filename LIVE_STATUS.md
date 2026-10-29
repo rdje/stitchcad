@@ -14,7 +14,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Roadmap → task-trees (`PLANNING`) | Done | All 10 lanes owned — 13 trees and linked evidence siblings, `0 unowned / 0 orphan(s) / 0 dead link(s)`, derived by `run_tree_coverage_census.sh` and watched by its probes |
 | Repo identity & policy (`SPINE`) | In Progress | containment, the acceptance gates, the push cadence and the table convention are enforced or written where authors look. Open: `.5`, `.13`, `.19`, `.22`; handoff .23/.23v verified; .23r captured missing OS type; strict refusal verified |
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
-| Defect census | In Progress | D156/D223/D263 audits;D285 reopen owned;D250/D293–D299/D303–D325 fixed;D300/D302 scope corrected;D301 paired P1 owned |
+| Defect census | In Progress | D156/D223/D263 audits;D285 reopen owned;D250/D293–D299/D303–D327 fixed;D300/D302 scope corrected;D301 paired P1/D328 prepush owned |
 | G0 — product & semantic contract | Mostly Done | Contract reviewed; D239 detached-approval boundary adopted and checked. Evaluation-seat exception remains; human closure **unapproved**. Exit census18 met/1 not met |
 | G1 — executable architecture slice | In Progress | 6/18 done. Inputs/numeric,17 schemas,scoped authority;metadata read/preview/commit/replay/audit/undo and admission/progress/cancel. Native metadata acceptance/probes45;3 workflows;storage/app/full integration pending |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |

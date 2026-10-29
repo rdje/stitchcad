@@ -50,7 +50,7 @@ SOURCES = (Path(__file__), shell, helper, CONTRACT, PROFILE_SOURCE,
            ROOT / 'scripts/history_archive.sh', ROOT / 'scripts/history_archive.py')
 FILES = tuple(WORK / ('mutation-%d.log' % index) for index in range(1, len(CASES) + 1))
 EXPECTED = ('catalog target, short label', 'missing catalog',
-            'valid pointer plus invalid target', 'fenced pseudo-index')
+            'valid changelog plus unknown lesson', 'fenced pseudo-index')
 
 
 def backing_inputs():

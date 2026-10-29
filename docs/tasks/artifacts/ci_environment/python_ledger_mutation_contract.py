@@ -77,7 +77,7 @@ def before_control():
 
 
 NAMES = ('catalog target, short label', 'missing catalog',
-         'valid pointer plus invalid target', 'fenced pseudo-index')
+         'valid changelog plus unknown lesson', 'fenced pseudo-index')
 
 
 def response(index, kind=None):
@@ -397,10 +397,10 @@ def real_controls():
     result = subprocess.run([sys.executable, '-I', '-B', str(ENTRY)], cwd=ROOT, env=dict(os.environ), capture_output=True, text=True)
     assert result.returncode == 0 and result.stdout.count('actual contract assertion red') == 4, result
     assert 'ledger pointer mutations: four syntax-checked actual reds; sources restored byte-identically' in result.stdout
-    assert 'ledger pointer contracts: 13 independent actual verdicts / 0 fail' in result.stdout
+    assert 'ledger pointer contracts: 16 independent actual verdicts / 0 fail' in result.stdout
     assert all(hashlib.sha256(path.read_bytes()).digest() == digest for path, digest in identities.items())
     assert not (ROOT / 'target/scratch/ledger_pointer_contract').exists()
-    print('ledger mutation real: four current expected case/site/verdict reds, native13 restored baseline; all core/archive bytes exact; zero contract residue')
+    print('ledger mutation real: four current expected case/site/verdict reds, native16 restored baseline; all core/archive bytes exact; zero contract residue')
 
 
 def continuity_controls():

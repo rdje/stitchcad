@@ -420,6 +420,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Tail0555:published next11 entries pass0/source clean;receipt entry12 fails stale live census.
   D325 fixed0556:original byte/continuity/non-census AST exact,scoped closure/six reds pass0.
   Continue after receipt at signed-angle fixture;then fresh full clean gates/push/actual jobs.
+  Tail0556:next6 pass0/source clean;ledger default fails13-versus16 destinations. D326/D327
+  fixed0557:full current fixture/native32 verdicts/four actual mutation reds pass. D328 original
+  frozen-mutable cohort owns next default repair,before remaining tail/fresh full gates/push/jobs.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.checked-expression`
   Status: `done`
@@ -438,50 +441,82 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0555 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part714.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.receipt-census`
   Status: `done`
-  Goal: D325,P1 current push blocker;repair receipt_retention_contract.py's obsolete live
-  global-count expectation after bounded status/ledger curation. Preserve D209 byte/archive/
-  original-admission/whole-receipt/shared-acceptance proofs,closure identity and non-overlap;
-  do not invent a current global census or close deferred PLANNING.5.
-  Reproduce: clean625be852/derived420;published environment tail first11 pass0/source clean,
-  receipt entry12 fails D209 live defect census drift after byte/continuity controls pass.
-  Evidence:target/prepush-400-0555-environment/{baseline.json,results.json,12-receipt_retention_contract.log}.
-  Root: current LIVE bounded row has no 'N open, N sealed';retained checker demands that old
-  format. Diagnose Git removal rationale/current canonical reports before choosing adaptation.
-  Repair: verify retained D209 through public archive inventory and canonical current pointer;
-  retain meaningful closure/no-overlap controls with isolated omission/overlap/duplicate reds.
-  Focus: actual receipt controller end-to-end plus independently frozen unchanged control AST,
-  original/current report bytes and actual failure controls;source restored exactly. Update book,
-  bounded live docs/ledger;commit0556 before remaining tail/full clean prepush/normal push/jobs.
-  Acceptance: ROOT CAUSE/ADDRESSED/NO REGRESSION with commands/output/rc,book/history retention,
-  no production or historical record rewrite,no inferred complete current defect census.
+  Goal:0556 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part715.md).
+- ID: `G1-SLICE.6.5.3.2.prepush-400.ledger-population`
+  Status: `done`
+  Goal: D326,P1 current prepush blocker;restore strict complete ledger fixture population
+  after0342 added three public retained/logical/unknown-lesson cases to original thirteen.
+  Reproduce: clean8381991a/derived421;published tail next6 pass0/source clean,entry7 default
+  ledger controller fails complete destinations omitted. Log:target/prepush-400-0556-environment/
+  07-python_ledger_fixture_contract.log. Producer's16 cases exceed frozen13-output/14-child oracle.
+  Paths:docs/tasks/artifacts/ci_environment/python_ledger_fixture_contract.py;related native
+  baseline expectations in python_ledger_mutation_contract.py if confirmed by focused native run.
+  Preserve original13 full-case AST/body/mask/assertions/argv/restoration;prove exact three
+  additions from0342 independently,strict current16 outputs/children/final output and unknown
+  lesson refusal. Preserve original omissions/physical refusals and native default/masked runs.
+  D223 --continuity raw/closed-graph repairs remain separately owned/deferred unless activated;
+  no default or native proof implies that lifecycle continuity task is complete.
+  Acceptance: actual original-body/capture/physical/default+masked checks,related native four
+  assertion reds if affected,unchanged public producer/source snapshots,book/history/live sync.
+  D327,P1 same blocking population repair:actual native mutation --real on current consumer
+  passes first two faults then strict classifier rejects fault3 'pointer red wrong case'. Actual
+  log target/ledger_pointer_mutations/mutation-3.log shows new earlier unknown-lesson case,not
+  the former later invalid-extra case. Both are expected-false POINTER mismatches of the same
+  unchanged status-ignore mutant. Sources restore exactly;no classifier relaxation authorized.
+  Also own docs/tasks/artifacts/changelog/ledger_pointer_mutations.py EXPECTED third identity:
+  adapt only actual first failing case and independent capture NAMES;keep all four original
+  edits/anchors and strict assertion site/shape/polarity/family checks,then actual four reds.
+  Evidence:target/ledger-population-0557-{real,mutation-before}.log. D223 remains deferred.
+  Commit0557 before remaining environment tail/fresh full clean gates/normal push/actual jobs.
 
-  Completion0556:D325 scoped original closure contract restored.
-  - [x] ROOT CAUSE (WHY + WHERE): target/receipt_census_0556_focus.py runs frozen625be852
-    census and reproduces exact live-census drift,rc=0. Git768aebe0 removed global LIVE totals;
-    old regex also treats explicitly Closed D70 navigation as open. Current canonical reports
-    are not a complete current lifecycle census;PLANNING.5 remains deferred,not falsely closed.
-  - [x] FIX: replace obsolete global live-format/count assumption with scoped D209 lifecycle
-    proof. Public inventory's whole report131 must equal original e45c21d3 Git bytes,have one
-    canonical owner,no live D209 report,and a current closure pointer. All canonical retained
-    report identities must be unique. Do not infer current global open/closed populations.
-  - [x] ADDRESSED (verified): actual prepared receipt_retention_contract.py →eight ASCII/UTF-8
-    byte verdicts/four original admissions/multiline positive/two evidence refusals/doc-only
-    400-positive401-refusal/whole414-byte receipt reconstruction/shared acceptance exact,rc=0.
-    Whole D209 original report/pointer/no live report pass;six isolated missing/altered/duplicate/
-    old-marker overlap/new-heading overlap/pointer omission controls refuse exactly,rc=0.
-    Log:target/receipt-census-0556-focus.log;all non-census AST frozen625be852 exact.
-  - [x] NO REGRESSION: independent actual public read equals original repair Git report
-    sha256:cbd9d3c95d316131fa51e3c3169a90b3a2a1d036411cc26fad8c33215cfab851,rc=0;
-    focus snapshots all tracked regular files exact,rc=0. Book build/publication93/248/1590/2771
-    pass0;retirement714/four exact Git spans pass0;retention1168 logical/73 aggregate working/
-    66078 decodedL/5166136 decodedB/2743473 residentB pass0;git diff --check0. No Rust,public
-    archive reader,stage checker,immutable report or product change;no full prepush verdict claimed.
-  - [x] LOCKSTEP: whole0555/prior ledger retained714. Book explains exact scoped receipt
-    checks/closed navigation/deferred global census;MEM/DEV/CHANGE/index/ledger aligned. LIVE
-    G1 6/18/29 suites/G0 human unapproved unchanged,D325 fixed,D156 audits/PLANNING.5 open.
-    Commit then remaining published environment tail after receipt,then fresh full clean
-    check/gate/probes/normal push/exact-SHA hosted jobs. Full PNT continues.
-    promotion: declined (application of indexed exact historical retention,scoped lifecycle claims and independent refusal controls;no new global census or product authority).
+  Completion0557:D326/D327 current population/native first-failure adapters accepted.
+  - [x] ROOT CAUSE (WHY + WHERE): public0342 added three cases to original13;strict controller
+    retained13 destinations/14 children. Actual source/Git diff and failing default establish
+    scope. Native mutation third fault meets earlier new unknown-lesson assertion;before log
+    names actual expected-false POINTER mismatch,not syntax/production failure. Independent
+    target/ledger_population_0557_focus.py verifies current fault/expected-name scope,rc=0.
+  - [x] FIX: strict16 destinations/17 children,last verdict15,unknown-lesson expected-negative,
+    and real16 baseline message. Current complete CASES equals frozen0342 AST;remove only three
+    additions in parsed comparison to verify all original13 and remaining body/mask/assertions.
+    Change only actual mutator EXPECTED third name and independent capture NAMES;preserve all
+    four current fault edits/anchors/classifiers exactly versus8381991a. D328 owns older cohort.
+  - [x] ADDRESSED (verified): prepared python_ledger_fixture_contract.py default →default/
+    masked100 plans/148 effects/17 children each,protected-reader failure4/4/1,seven actual
+    omission reds,twelve physical refusals,complete original body/current16 checks,rc=0.
+    --real →default/masked16 actual verdicts each,source/backings exact/no residue,rc=0.
+    Logs:target/ledger-population-0557-{capture,real}.log. No simulated-output runtime claim.
+  - [x] NO REGRESSION: target/ledger_population_0557_focus.py →current mutator AST except
+    third name exact;controller except NAMES/native baseline exact;two protected failures/six
+    unrelated-red refusals/ten omissions/profile-alias refusal and tracked snapshot pass0.
+    Actual mutation controller --real →four current case/site/verdict reds,restored16 baseline,
+    sources/backings exact/zero residue,rc=0. Book93/248/1590/2771,receipt715/four exact Git
+    spans,retention1169 and git diff --check pass0. D328 mixed-cohort default remains failing/
+    pending next;D223 --continuity remains deferred. No full environment pass claimed.
+    Initial finalizer quoting error wrote nothing;authority refused incomplete leaf before any
+    control write. Corrected direct heredoc/fail-fast workflow completes this record first.
+  - [x] LOCKSTEP: whole0556/prior ledger retained715. Book distinguishes16 native cases/four
+    actual mutants from intercepted dispatch proof. MEM/DEV/CHANGE/index/ledger align;LIVE
+    G1 6/18/29 suites/G0 human unapproved unchanged,D326/D327 fixed,D328 owned,D156 audits open.
+    Commit then D328 original cohort/default proof,remaining tail/fresh full clean gates/normal
+    push/actual exact-SHA jobs. Full PNT continues;no product/immutable history change.
+    promotion: declined (application of indexed exact public populations,independent historical AST and first failing assertion calibration;no new product authority).
+
+- ID: `G1-SLICE.6.5.3.2.prepush-400.ledger-cohort`
+  Status: `pending`
+  Goal: D328,P1 next after completed0557 before environment continuation. Ledger mutation
+  default before_control combines frozen39861d11 mutator with current0342 helper;old fault2
+  pointed.add anchor was intentionally adapted to name assignment0342. Frozen original check
+  now stops at nonunique actual mutation anchor instead of demonstrating unrelated-red admission.
+  Reproduce:prepared python_ledger_mutation_contract.py default →before_control assertion1,
+  target/ledger-population-0557-mutation-capture.log;no native source changes. Independent AST
+  diagnostic:only current fault2 replacement pair differs from frozen original;other three exact.
+  Paths:docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py. Reconstruct
+  complete original mutable helper/shell cohort in isolated same-volume mirror before original
+  classifier test;restore that cohort and preserve actual old unrelated-red admission. Current
+  original-body projection must verify exact approved0342 fault2 adapter before comparing all
+  remaining frozen original bodies. Do not move original pin or weaken current red classifier.
+  Verify default full controls and related native four-current-red/16 baseline;omission controls
+  prove old-cohort selection and current adapter preservation. D223 continuity stays deferred.
 
 - ID: `G1-SLICE.6.5.3.2.prepush-400.layout`
   Status: `done`

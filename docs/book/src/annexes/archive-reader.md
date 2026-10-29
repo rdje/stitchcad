@@ -115,6 +115,13 @@ intervals and from changelog coverage. A false coverage declaration still refuse
 python3 -I -B scripts/local_environment.py -- bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh
 ```
 
+The pointer contract has16 cases, including valid retained or logical lesson links beside a
+changelog link and refusal of an unknown lesson. Its plan controller preserves all13 original cases
+and verifies the three additions against their introducing commit. Default and reordered native
+runs each check all16 actual verdicts. Captures of child output prove dispatch and plan boundaries;
+the separate native mutation run checks four real assertion failures and the restored16-case baseline.
+Expected mutation evidence identifies the first affected case, its assertion site and verdict family.
+
 ## Independent controls
 
 ```bash
