@@ -1,15 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.1 in execution tree:explicit complete actual proof/workspace admission.
-  N certified nodes/D name uses include unused branches;reserve N task+N value+D read records
-  with explicit checked2N+D limits before allocation/value/provider reads. No execution certificate.
-  Read normative contracts/current interfaces/tests first;then actual source-order machine slices.
-- D337 fixed0575:execution plan stale since0280 wrongly called actual0288 atan/atan2 unavailable.
-  Current native inverse3 passes27+54 rows/independent81-row fixture/kind/zero/full-width cases.
-  Actual tangent plan .5d.1.2.2.2.d.2/kernel .5d.3.2.2 still pending;geometry/whole runtime open.
-  Book94/260/1600/2796/glossary310/9/158/0 pass;whole0574 retained733/four exact Git spans.
-- Lineage checkpoint0574 closes47 native/21 doc;actual paired handler still pending real .2.4
-  provider/physical joins and .2.5 trusted atomic effects/repair/undo/replay before .2.acceptance.
+- Next G1-SLICE.5e.2.4.2:join actual CanonicalInputs records to declaration-source adapters
+  before authored reads;exact scalar target/kind and borrowed length owner,no name-only search.
+  Then actual bounded source-order machine/contexts/providers;whole recipe/replay remain owned.
+- Complete-proof/workspace admission0576 implemented:explicit nodes and checked2N+D records,
+  N task+N value+D source-read capacities;no allocation/read/backend/execution certificate.
+  Native4/actual checked-node6/doc4/strict scoped lint/fmt pass;full256-node/255-name requires767.
+  Book94/264/1600/2797/glossary310/9/158/0 pass;whole0575 retained734/four exact Git spans.
+- D337 fixed0575:actual0288 atan/atan2 available. Tangent .5d.1.2.2.2.d.2/.5d.3.2.2 pending.
+  Lineage checkpoint0574 closes47 native/21 doc;actual paired handler needs real .2.4 provider/
+  physical joins and .2.5 trusted atomic effects/repair/undo/replay before .2.acceptance.
   D336 fixed0571,D335 fixed0568. Protect target/history-capture-0569 and target/history-proof-0569;
   window24 kept1180/4144817B,native62/506939B,102 originals exact;do not rerun old transactions.
 - Full local/hosted79bd6f6a stays SHA-scoped (audit seam-20261029);G1 6/18/G0 human unapproved.

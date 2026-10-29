@@ -72,40 +72,14 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Actual errors retain failing node/owner/canonical identity; taken-only if, all evaluated call
   inputs, exact numeric kernels, explicit source adapters. Trig/geometry remain actual dependencies.
   No absent implemented family or caller placeholder becomes a language refusal/canonical result.
-  Startup D337:execution-plan still calls atan/atan2 unimplemented although native0288 and the
-  certificate/runtime chapters expose real kernels. Repair actual readiness .availability first,
-  then select the first bounded actual-node/source implementation slice;no new math backend.
+  D337 readiness fixed0575;actual native inverse kernels available. Complete proof/workspace
+  admission implemented0576. Next actual canonical-registry source joins,then the bounded
+  source-order machine;no new math backend or provider substitute.
 - ID: `G1-SLICE.5e.2.4.availability`
   Status: `done`
-  Goal: fix D337 P2 source-readiness drift before AST implementation. Reproduce execution-plan
-  lines70–74 against numeric.rs checked_atan/checked_atan2,actual inverse implementation and
-  native-inverse book section. Git blame names89e0e8711;inverse kernel introduced3219d3f8/0288.
-  The old plan can repeat completed certificate/kernel work and incorrectly block the evaluator.
-  Own actual inverse native/oracle check,precise tangent pending task pointers,book/live/ledger
-  repair and commit. No numerical/kernel change or heavy certificate rerun;resume .5e.2.4 after.
-  Completion0575:D337 inverse availability corrected before actual expression work.
-  - [x] ROOT CAUSE (WHY + WHERE): git blame execution-plan70–74 →89e0e871/0280 retained
-    pre-inverse statement. git log inverse.rs →3219d3f8/0288 actual implementation;numeric.rs
-    checked_atan/checked_atan2 call real private kernel. Current recipe tree marks .5d.3.3/.1
-    done;certificate/runtime chapters already document native inverses. Tools rc=0;old plan
-    also cited nonexistent .5d.3.2.3 instead of actual inverse owner .5d.3.3/.1.
-  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
-    formula_inverse_value_contract →three pass,rc=0. Native27 atan/54 atan2 rows,byte-exact
-    independent81-row oracle,kind priority/zero-vector/full-width/principal sign cases pass.
-    Plan now lists inverse kernels/plan/wrappers as available and links actual native evidence.
-    Tangent correctly remains pending .5d.1.2.2.2.d.2 before .5d.3.2.2;geometry/whole runtime
-    still need their real implementations. No precision cutoff,backend or language rule changed.
-  - [x] NO REGRESSION: git diff --exit-code HEAD -- crates/ →all Rust unchanged,rc=0. Positive
-    book94/260/1600/2796 and glossary310/9/158/0 pass,rc=0;new native/tangent links resolve.
-    Receipt733 →four exact Git spans,rc=0. No full CI/heavy certificate rerun;retained numerical
-    stores remain protected. Native availability is distinct from AST/geometry/platform approval.
-  - [x] LOCKSTEP: execution plan/MEMORY/DEV/CHANGE/LIVE/index/D337 ledger align;whole0574
-    scope/lesson/changelog/ledger retained733. D337 fixed;G1 still6/18/G0 human unapproved.
-    Next .5e.2.4.1 actual complete-proof/workspace admission before value/provider reads. Source
-    execution/full recipe/actual dependencies remain .5e.2.4/.5e.2.5/.5e.4 and paired .2.4/.2.5.
-    promotion: declined (repair of an existing readiness record under indexed source/book alignment and real-provider doctrine;no new math or execution policy).
+  Goal:0575 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part734.md).
 - ID: `G1-SLICE.5e.2.4.1`
-  Status: `pending`
+  Status: `done`
   Goal: explicit complete checked-expression input and prospective iterative workspace admission
   before runtime allocation/value/provider reads. Bind actual successful proof/root/source spans;
   count all N certified nodes and D name uses,including untaken branches/repeated names. Reserve
@@ -114,6 +88,44 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   This prepares the actual source-order machine;semantic reads/operations/branch selection and
   whole recipe/replay stay separate subsequent implementation slices. Read normative contracts,
   actual proof/value/source interfaces and tests before coding;own focused checks/book/commit.
+  Scope0576:explicit node/workspace limits with no Default;zero allowances refuse normally.
+  Admission borrows the actual complete proof/root/dependencies;node quota precedes checked
+  workspace arithmetic and workspace quota. Typed errors retain that same owner/root span.
+  No allocation/read/provider/callback/execution or whole-recipe context is introduced. Native
+  checks cover repeated and untaken name uses,all256 nodes,quota priority,source borrows and
+  actual statement spans;privacy/lifetime/no-default doctests and scoped lint/fmt follow.
+  Completion0576:actual complete proof admitted before runtime preparation.
+  - [x] ROOT CAUSE (WHY + WHERE): source inspection of checked.rs/nodes.rs/normalized.rs,
+    existing checked-node target and normative formula-language3/4/5/9 shows complete successful
+    certificates/dependencies but no runtime workspace admission. Actual node/source interfaces
+    remain static;input/evaluated APIs cannot substitute AST acceptance. Tools/readback rc=0.
+  - [x] ADDRESSED (verified): local_environment.py cargo test -p sc-core --test
+    formula_execution_admission_contract →four pass,rc=0. Six source-shape counts/exact quotas,
+    node-before-workspace priority,foreign-owner distinction,actual repeated/untaken Unknown,
+    whole-recipe global spans/prior-let metadata and full256-node/255-name/767-record call pass.
+    Node and checked2N+D allowances are explicit/no Default;private borrowed root/dependencies
+    prevent count/source substitution. Arithmetic overflow is defensive,unreachable at256 nodes;
+    no fabricated overflow fixture or allocation/CPU/backend/execution certificate is claimed.
+  - [x] NO REGRESSION: local_environment.py cargo test -p sc-core --test
+    formula_checked_node_contract →six pass,rc=0. cargo test -p sc-core --doc recipe::execution
+    →four pass,rc=0;cargo clippy -p sc-core --lib --test formula_execution_admission_contract
+    -- -D warnings and cargo fmt --all --check →rc=0. Initial fmt1 and borrowed-error doctest101
+    fixed;no library lifetime weakening. Book94/264/1600/2797 and glossary310/9/158/0 pass,rc=0;
+    initial glossary four undeclared API names fixed by actual public API table,no exemption.
+  - [x] LOCKSTEP: book/API map/MEMORY/DEV/CHANGE/LIVE/index/ledger align. Whole0575 retained734,
+    four exact Git spans,rc=0. G1 stays6/18/G0 human unapproved;full local/hosted79bd6f6a stays
+    SHA-scoped. Next .5e.2.4.2 actual canonical registry joins before authored reads;machine,
+    real contexts/providers,statements/replay and complete acceptance remain parent owners.
+    promotion: declined (application of existing actual-proof,explicit-resource and source-lifetime contracts;no new language,provider or governance policy).
+- ID: `G1-SLICE.5e.2.4.2`
+  Status: `pending`
+  Goal: resolve actual canonical input adapters from CanonicalInputs using the exact declaration
+  source/identity before authored reads. General scalar metadata must select the real registry
+  record and retain kind/identity refusals;borrowed length metadata must refer to that registry's
+  actual record,not an equal reconstructed value. Preserve missing/wrong-family/owner causes,
+  source/state borrows and explicit no-read behavior. No name-only search,clone,caller value,
+  prior-let injection,currentness/evidence approval or canonical runtime result. Then implement
+  the actual bounded source-order machine and its real context/provider integration under .5e.2.4.
 - ID: `G1-SLICE.5e.2.5`
   Status: `pending`
   Goal: whole checked recipe declaration-order execution and real let/assert statement context.

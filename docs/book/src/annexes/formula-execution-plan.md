@@ -29,7 +29,8 @@ root kind and dependencies. Runtime code can consume the selected branch's real 
    and its original spans. Neither a foreign arena nor a supplied index may forge a certificate.
    Name dependencies, wanted-kind alternatives and first static error ordering stay unchanged.
    No value, input state, tolerance provider or geometry query enters this static phase.
-2. **Bounded sourced expression execution — .5e.2.4, next.** Consume those node proofs in source order.
+2. **Bounded sourced expression execution — .5e.2.4, in progress.** Complete-proof/workspace
+   admission is available below; the source-order machine and actual reads are next. Consume node proofs in source order.
    Use the existing exact value kernels and real declaration-source adapters. A conditional checks
    both complete branch proofs, then evaluates only its condition and selected branch. All evaluated
    call operands contribute, including candidates or bounds whose numeric value is not returned.
@@ -46,6 +47,71 @@ root kind and dependencies. Runtime code can consume the selected branch's real 
 These are implementation boundaries within one runtime. They add no language syntax, execution
 authority or exception to static-before-value validation. A detached expression scope has no recipe
 ordinal; a whole statement supplies its real ordinal. Neither invents unavailable context.
+
+## Complete proof and workspace admission
+
+| Public API | Role |
+| --- | --- |
+| `FormulaExecutionLimits` | Explicit node and complete logical workspace allowances |
+| `FormulaExecutionAdmission` | Borrowed complete proof and prospective workspace reservation |
+| `FormulaExecutionAdmissionRefusal` | Exact refused allowance and measured population |
+| `FormulaExecutionAdmissionError` | Refusal retaining the actual certified root/source extent |
+
+`FormulaCheckedExpression::admit_execution` accepts explicit `FormulaExecutionLimits` and borrows
+the complete successful proof. No raw node index, foreign expression or supplied name count enters
+this API. The returned `FormulaExecutionAdmission` retains the actual certified root, original
+expression/source spans and the exact ordered dependency slice. The admission cannot outlive its
+proof; its fields are private. It performs no allocation, source clone, value read or provider call.
+
+For N certified nodes and D name occurrences, the prospective iterative machine reserves:
+
+| Logical population | Capacity |
+| --- | --- |
+| Pending task frames | N |
+| Evaluated value slots | N |
+| Executed-source-read records | D |
+| Complete workspace | 2 × N + D |
+
+All branches count before runtime selection. Repeated names count separately: dependencies are
+individual source occurrences, not a deduplicated inventory or a trace of reads already performed.
+This bounds logical records; it does not certify allocator bytes, CPU, numeric-kernel workspace,
+provider resources, complete recipe memory or backend availability. The later machine must use
+these capacities. No execution/result certificate follows from an admitted reservation.
+
+```rust
+use sc_core::recipe::{FormulaExecutionLimits, FormulaExpression, FormulaNamespace};
+
+let expression = FormulaExpression::parse("if(is_base_size,1 mm,2 mm)")?
+    .normalize_literals()?;
+let proof = expression.check_kinds(&FormulaNamespace::new([])?).expect("static fixture");
+let limits = FormulaExecutionLimits::new(4, 9);
+let admitted = proof.admit_execution(limits).expect("exact limits");
+assert_eq!(admitted.node_count(), 4);
+assert_eq!(admitted.name_use_count(), 1);
+assert_eq!(admitted.workspace_records(), 9);
+assert!(std::ptr::eq(admitted.root().expression(), &expression));
+assert!(std::ptr::eq(admitted.dependencies(), proof.dependencies()));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The condition's value is absent here: static metadata suffices for admission. Likewise, an actual
+Unknown length input can be admitted without observing its value or choosing a branch. Later
+execution must still refuse a read of a taken Unknown and avoid reads in an untaken branch.
+
+Node quota is checked first, then checked workspace arithmetic, then workspace quota. A zero
+allowance is valid and refuses a nonempty proof; there is no Default. The typed
+`FormulaExecutionAdmissionRefusal` distinguishes Nodes, WorkspaceCountOverflow and WorkspaceRecords.
+`FormulaExecutionAdmissionError` keeps the actual certified root and original span. These resource
+refusals introduce no canonical language diagnostic or invented statement ordinal. A caller cannot
+obtain an admission from a failed static check or attach an equal-looking foreign expression.
+
+The four native tests in crates/sc-core/tests/formula_execution_admission_contract.rs cover original
+owners/spans, quota order, repeated/untaken Unknown sources and the complete 256-node arena. The
+maximum fixture is min with 255 eps_num arguments: N=256, D=255, reservation=767. An allowance of
+766 refuses; 767 admits all actual argument certificates. Private-proof arithmetic overflow is
+unreachable under today's 256-node bound; its defensive refusal is not claimed as a native fixture.
+Privacy/lifetime/no-default documentation checks accompany this API. Whole execution, independent
+runtime result oracles and cross-platform identity remain the later owners below.
 
 ## Source and provider integration
 

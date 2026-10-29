@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0575 — correct inverse readiness before checked-node execution
+## STITCHCAD-G1-0576 — admit complete actual checked-expression workspace
 
-- Fix D337:plan retained pre0288 inverse status and wrong owner. Native atan/atan2 kernels/plan/source wrappers are available;actual tangent strategy/kernel remain pending. Native inverse3/independent81-row fixture/kind/zero/full-width checks pass;no Rust/math/precision-policy change.
-- Book94/260/1600/2796/glossary310/9/158/0/receipt733 four Git spans pass. G1 6/18/G0 human unapproved;D337 fixed. Next .5e.2.4.1 bounded actual proof/workspace admission,then source-order expression execution. Full paired/provider/physical/effect and D334 P2/D156/D223/PLANNING.5 remain owned.
+- Explicit node and checked2N+D logical workspace quotas precede any allocation/read. Private borrowed root/dependencies retain all repeated/untaken uses and actual source/span. No defaults,value/provider execution or backend certificate. Full256-node/255-name fixture requires767 records.
+- Native4/checked-node6/doc4/scoped strict lint/fmt pass;book94/264/1600/2797/glossary310/9/158/0 and whole0575 receipt734/four Git spans pass. Next .5e.2.4.2 actual canonical-registry joins,then machine/real providers/statements/replay. G1 6/18/G0 unapproved;full/hosted79bd6f6a stays SHA-scoped.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

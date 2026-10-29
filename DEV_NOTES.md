@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — correct actual inverse readiness before AST execution
+## _(2026-10-29 UTC)_ — admit complete actual expression workspace before execution
 
-0575 D337:execution plan0280 still called atan/atan2 unimplemented after actual0288 kernel/plan completion. Blame/log/numeric methods/current recipe status and certificate/runtime chapters establish drift;old inverse task pointer .5d.3.2.3 did not exist. Correct plan and actual tangent pending owners.
-Native inverse3 passes27 atan/54 atan2 rows,byte-exact independent81-row oracle and kind/zero/full-width/principal sign cases. All Rust unchanged;no heavy certificate rerun or math/backend/domain change. Protected numerical stores stay exact;availability is no complete AST/geometry/platform certificate.
-Book94/260/1600/2796/glossary310/9/158/0 pass. [Whole0574 lineage checkpoint](docs/history/stitchcad-devnotes-part733.md) retains scope/lesson/changelog/ledger,four Git spans. D337 fixed;LIVE G1 6/18/G0 human unapproved. Tangent remains actual .5d.1.2.2.2.d.2/.5d.3.2.2 work.
-Indexed source/book readiness rules apply;promotion declined. Next .5e.2.4.1 complete actual proof/workspace admission before reads,then source-order execution. No supplied annotation or unfinished family becomes canonical result/refusal. D334 P2/D156/D223/PLANNING.5 owned;full PNT continues.
+0576 complete proof supplies actual certified node count N and every dependency occurrence D. Explicit node quota precedes checked2N+D workspace quota;reserve N task/N value/D source-read capacities. Borrowed private root/dependencies retain real source/span. No Default,allocation,value/provider read or execution.
+Native4 covers six source forms,exact quotas/priority,actual owners,repeated/untaken Unknown borrows,whole-recipe spans/prior-let metadata and full256-node/255-name requiring767 records. Existing node6/doc4/scoped strict lint/fmt pass. Overflow defensive/unreachable at256;no allocator/CPU/backend certificate.
+Initial fmt1 and borrowed-error example101 corrected;retain borrowed library errors,fix the example. Glossary four undeclared API names fixed by actual API table. Book94/264/1600/2797/glossary310/9/158/0 pass. [Whole0575 readiness](docs/history/stitchcad-devnotes-part734.md) retains four exact Git spans.
+Indexed actual-proof/resource/lifetime principles apply;promotion declined. Next .5e.2.4.2 actual canonical-registry adapter joins before reads,then real machine/context/provider/statement/replay integration. LIVE G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped. D334 P2/D156/D223/PLANNING.5 stay owned.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

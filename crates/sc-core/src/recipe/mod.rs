@@ -147,6 +147,12 @@ pub use checked::{
     FormulaExpressionCheckRefusal, FormulaNameDependency,
 };
 
+mod execution;
+pub use execution::{
+    FormulaExecutionAdmission, FormulaExecutionAdmissionError, FormulaExecutionAdmissionRefusal,
+    FormulaExecutionLimits,
+};
+
 mod checked_statement;
 pub use checked_statement::{
     FormulaBindingDimensionRefusal, FormulaCheckedStatement, FormulaCheckedStatementKind,
