@@ -273,6 +273,12 @@ pub struct RangeRepairTask {
 }
 
 impl RangeRepairTask {
+    pub(crate) fn numeric_cause(&self) -> Option<&UnitError> {
+        match &self.issue {
+            RangeIssue::UnknownSource => None,
+            RangeIssue::Orphaned(edit) => edit.numeric_cause(),
+        }
+    }
     /// The original authored range, rather than an intermediate identity.
     #[must_use]
     pub const fn held(&self) -> EdgeRange {

@@ -9,6 +9,12 @@ use crate::{
     ontology::{EntityId, PointJournalAdmissionIssue, RangeCoverageLimits, UniquePointLimits},
 };
 use core::{fmt, num::NonZeroUsize};
+mod current;
+pub use current::{
+    CommandStopContextBoundary, CommandStopContextError, CommandStopContextIssue,
+    CommandStopContextPopulation, CommandStopContextRange, CommandStopCurrentContext,
+    CommandStopLandmarkEvidence, CommandStopPiecePortion,
+};
 mod ownership;
 pub use ownership::{
     CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits,

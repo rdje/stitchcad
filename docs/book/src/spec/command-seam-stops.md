@@ -2,8 +2,8 @@
 
 Native contract cases verify the existing graph's stop membership at paired cuts,including
 closed endpoints,explicit side/copy identity,authored order and later-frame anchors. Explicit actual
-stop input/workspace and ownership-workspace admission are implemented;bounded current context,
-membership and partition views remain pending. These cases construct real retained child graphs
+stop input/workspace,ownership-workspace and bounded current-context stages are implemented;
+membership rows and partition views remain pending. These cases construct real retained child graphs
 through public APIs;they do not install a command effect or create new semantic landmark identities.
 
 | API token | Meaning |
@@ -37,6 +37,15 @@ through public APIs;they do not install a command effect or create new semantic 
 | `CommandStopOwnershipAdmissionError` | Complete edge-count or reservation/allowance refusal |
 | `admit_ownership_workspace` | Count actual copies/Pieces/edges before any current query |
 | `EdgeCountOverflow` | Counting another canonical Piece edge cannot be represented |
+| `CommandStopCurrentContext` | Private actual current registry/Piece/target and pair-range evidence |
+| `CommandStopLandmarkEvidence` | Exact semantic object,held query and unique current point |
+| `CommandStopPiecePortion` | Complete live or repair portion with query and original ordinals |
+| `CommandStopContextError` | Actual target and complete bounded current-context refusal |
+| `CommandStopContextIssue` | Structural,point,range,ownership or derived-population evidence |
+| `CommandStopContextRange` | Actual Piece edge,target side or paired side being queried |
+| `CommandStopContextBoundary` | Actual Start,Cut or End point on the named side |
+| `CommandStopContextPopulation` | Complete Copies,Pieces,Landmarks or OwnedPortions guard |
+| `validate_current_context` | Build bounded actual local evidence after both admissions |
 
 ## A stop at the cut belongs to both closed children
 
@@ -250,6 +259,92 @@ allocator bytes,CPU and aggregate command/snapshot policy owned separately.
 
 A held missing copy still admits these metadata counts. The original current validator continues
 to refuse the actual child/A/copy;ownership admission supplies no current membership certificate.
-Bounded complete registry/Piece and target/cut/range validation follows,then actual stop rows and
-ordered child views. Physical geometry,current effect authority and whole paired acceptance remain
+Bounded complete registry/Piece and target/cut/range validation is available below;actual stop rows and
+ordered child views follow. Physical geometry,current effect authority and whole paired acceptance remain
 separate. Three focused actual Design cases and privacy/default/lifetime doctests cover this stage.
+
+## Validate the bounded actual current context
+
+Call the ownership token's `validate_current_context()`. A successful private context borrows that
+exact token and its actual immutable input owner. It cannot be constructed from IDs or returned
+after its admitted owner expires. No value provider,current host callback or legacy choice-tree
+resolver runs. The complete journal/nested and range limits remain the exact selected allowances.
+
+```rust
+use sc_core::command::{CommandStopOwnershipAdmission,CommandStopCurrentContext,
+    CommandStopContextError};
+use sc_core::design::DesignReferenceHost;
+
+fn current<'a,H:DesignReferenceHost>(ownership:&'a CommandStopOwnershipAdmission<'a,H>)
+    ->Result<CommandStopCurrentContext<'a,H>,CommandStopContextError>
+{
+    ownership.validate_current_context()
+}
+```
+
+The stage indexes every actual copy and checks the target's named A then B copy before range
+queries. The immutable structural owner's constructor already validated its actual copy plan
+against its Piece inventory. The context uses those exact objects and checks held graph references
+against them. It does not clone a plan to reconstruct that birth proof inside the C+P index budget.
+
+Every canonical held Piece edge is queried through bounded interval coverage. All live and repair
+portions move into the admitted cache,including unknown,lost and numeric repairs on unused Pieces.
+`piece(id)` returns the actual Piece;`piece_portions(id)` exposes every retained row. Each row's
+`held()`,`source_edge_index()` and `portion_index()` preserve its whole-edge query and original
+boundary/hole/construction traversal provenance. Working order groups current edges and parameters
+for exact union containment;in-place unstable sorting uses original ordinals for deterministic ties
+and requires no extra heap index. No repair is silently filtered to make a Piece appear healthy.
+
+The complete semantic registry is then validated,including unused Notches and TurnPoints. Each
+mark must have its actual Piece,a unique bounded current point and membership in that Piece's
+surviving interval union. `landmark(id)` lends the original object and its complete held/current
+point evidence. It does not clone semantic definitions or require a stored original source Param.
+A later anchor on the first third of an old edge at local1/9223372036854775807 remains valid here,
+even though the independent inverse contract gives its original position a65-bit denominator.
+
+### Whole intervals and target points are separate obligations
+
+For each named target side,the held Start,Cut and End points must resolve uniquely. A topology
+split at the command cut refuses with the original SplitChoice evidence. Rejoining both fragments
+later does not erase that held-reference choice. The same rule applies to a retained target's
+endpoint,even if that target has no authored stops. No immediate branch candidate is chosen for it.
+
+The stage then requires nonempty,complete bounded target A/B coverage,each current portion wholly
+contained in the actual named copy's Piece. Same-copy target ranges may touch,but positive current
+overlap refuses. Full-side temporary evidence is released before four A-ordered pair-side caches
+are built. `first_pair_coverage(side)` and `second_pair_coverage(side)` retain those exact complete
+coverages;Opposite correspondence changes B pairing without changing side/copy identity.
+
+Checking surviving endpoints and the cut is insufficient. An actual offset retaining[0,2/5] and
+[3/5,1] leaves those tested points and the two quarter-position marks valid when the cut is1/4.
+The full target nevertheless refuses with all three portions,including the lost interior. A separate
+actual split/merge/offset case has all six A/B Start/Cut/End points unique but an internal range
+boundary whose final exact ratio exceeds the stored field. That refuses with the complete numeric
+range evidence and its original UnitError. The query kernel is unchanged by this context stage.
+
+### Evidence,limits and scope
+
+`CommandStopContextError` retains the actual consuming target and an inspectable issue. Structural
+errors retain original copy/Piece/identity/self-overlap causes. Point issues retain the actual mark
+or side/boundary and fixed query resolution. Coverage-limit issues retain the original query error
+and its Piece-edge/target/pair location;coverage and outside-Piece issues retain the complete query
+evidence. Standard error sources borrow the original structural,range quota or numeric error;
+choice and nonnumeric repairs remain typed evidence without an invented numeric cause.
+
+The C/P/M indexes and E*B cache use the already admitted logical populations,guarding every derived
+append or insertion. One transient Piece query fits its separate B allowance;paired query caches
+fit the original4B allowance even at peak. Actual index/cache counts are inspectable through
+`copy_count()`,`piece_count()`,`landmark_count()` and `owned_item_count()`. Fixed-size point evidence
+does not allocate a choice tree. Allocator capacity,CPU and aggregate command/snapshot policy remain
+separate obligations. Every refusal returns no partial successful context.
+
+This is local registry and target evidence. A lost interval on an unused Piece is retained in
+`piece_portions()` while the valid target can still obtain a context;that success makes no claim
+about whole Piece health. It also supplies no stop-reference conservation,original ease-root/value
+evaluation,physical correspondence,current mutation authority or atomic command effect. Actual
+authored stop rows and ordered child views follow as separately owned implementation slices.
+
+Ten actual cross-crate Design cases cover the successful and refusing paths above,including exact
+borrowed object identities,unused registry data,N0 missing copies,identity-range quota1 versus
+required peak2,touching self-seams,later anchors and original numeric sources. Privacy/lifetime and
+public API doctests pass. Component and whole paired acceptance retain their later task owners.

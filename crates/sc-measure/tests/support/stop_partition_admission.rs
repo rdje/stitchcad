@@ -564,3 +564,6 @@ fn command_stop_ownership_admission_is_metadata_not_current_missing_copy_accepta
         if span==id(97_001) && copy==id(96_000)))
     );
 }
+
+#[path = "stop_partition_context.rs"]
+mod stop_partition_context;

@@ -228,3 +228,11 @@ command stop partition input refusal	spec/command-seam-stops.md	crates/sc-core/s
 command stop ownership limits	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/ownership.rs	CommandStopOwnershipLimits	G1-SLICE.6.5.3.2.3.3.3.1	4.4
 command stop ownership admission	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/ownership.rs	CommandStopOwnershipAdmission	G1-SLICE.6.5.3.2.3.3.3.1	4.4
 command stop ownership refusal	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/ownership.rs	CommandStopOwnershipAdmissionError	G1-SLICE.6.5.3.2.3.3.3.1	4.4
+command stop current context	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/current.rs	CommandStopCurrentContext	G1-SLICE.6.5.3.2.3.3.3.2	4.4
+command stop current semantic evidence	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/current.rs	CommandStopLandmarkEvidence	G1-SLICE.6.5.3.2.3.3.3.2	4.4
+command stop complete Piece portions	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/current.rs	CommandStopPiecePortion	G1-SLICE.6.5.3.2.3.3.3.2	4.4
+command stop context refusal	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/current/error.rs	CommandStopContextError	G1-SLICE.6.5.3.2.3.3.3.2	4.4
+command stop context issue	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/current/error.rs	CommandStopContextIssue	G1-SLICE.6.5.3.2.3.3.3.2	4.4
+command stop context range location	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/current/error.rs	CommandStopContextRange	G1-SLICE.6.5.3.2.3.3.3.2	4.4
+command stop context point boundary	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/current/error.rs	CommandStopContextBoundary	G1-SLICE.6.5.3.2.3.3.3.2	4.4
+command stop context derived population	spec/command-seam-stops.md	crates/sc-core/src/command/seam_stops/current/error.rs	CommandStopContextPopulation	G1-SLICE.6.5.3.2.3.3.3.2	4.4

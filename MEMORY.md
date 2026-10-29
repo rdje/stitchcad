@@ -1,16 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.3.3.3.2 in docs/tasks/G1-SLICE-execution.md:bounded complete actual
-  registry/Piece ownership and target/cut/range context. Consume ownership/input tokens;use bounded
-  current-point and range-coverage ports,retain all repair/choice/numeric evidence. No legacy choice
-  trees,sampling or coordinate narrowing. Then .3 actual stop rows,.3.3.4 ordered views/integration.
-- Ownership admission0531 counts complete C copies/P Pieces/E canonical held edges and separately
-  reserves C+P+(E+1)B (E*B cache plus B transient and C+P indexes) before callbacks/queries/allocation.
-  Borrow actual input token;earlier M+N+2N+4B and point/range limits remain unchanged. No current proof.
-- Actual Design3/core+test Clippy/fmt/docs3+1 pass:base10/9,unused C3/P3/E5 →18/17,huge separate
-  ownership overflow despite representable earlier bound,exact pointers/limits and held missing-copy
-  metadata/current refusal boundary. Book93/229/1590/2762,glossary0/map,689 receipt3/retention1143 pass;
-  whole0530 retained689. LIVE/README unchanged29 suites/G1 6/18;oracle gate10/12/9,hosted verdict pending.
+- Next G1-SLICE.6.5.3.2.3.3.3.3 in docs/tasks/G1-SLICE-execution.md:actual authored stop
+  rows/current points/closed pair memberships over committed bounded context. Preserve original
+  side/copy/kind/order and every actual closed membership;no partial accepted rows. Then .3.3.4
+  ordered borrowed child views/actual Design integration and deferred component checkpoint.
+- Current context0532 borrows exact ownership/input owner;complete C/P/M indexes and all Piece
+  live/repair portions,actual copies,fixed6 target points,whole target ownership/self-copy overlap
+  and four A-ordered pair coverages. Exact preadmitted limits;no callback/legacy tree/value read.
+- Actual Design10/core+test Clippy/fmt/docs2+1 pass:cut/endpoint choices survive rejoin,N0 copy/
+  range quota priority,lost/numeric interiors despite unique points,unused numeric Turn and retained
+  unrelated Piece repairs,later wide-original anchors,exact pointers/order. Book93/237/1590/2765,
+  glossary0/map,690 receipt3/retention1144 pass;whole0531 retained690. LIVE/README29 suites/G1 6/18.
 - Real formula/Profile/geometry/physical/current authority/aggregate operations/paired effects/full
   proof remain explicit owners. Consume preparation/commit terminals;native --index authority
   mandatory. Full PNT continues;derive Git HEAD/ahead count,push only at400 after full gates.

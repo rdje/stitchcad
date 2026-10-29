@@ -106,8 +106,11 @@ pub use seam_quantity::{
 pub use seam_source::{CommandSeamSplitSourceAdmission, CommandSeamSplitSourceError};
 pub use seam_split::{CommandSeamSplitBinding, CommandSeamSplitBindingError, CommandSeamSplitPair};
 pub use seam_stops::{
-    CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError, CommandStopOwnershipLimits,
-    CommandStopPartitionAdmission, CommandStopPartitionAdmissionError, CommandStopPartitionLimits,
+    CommandStopContextBoundary, CommandStopContextError, CommandStopContextIssue,
+    CommandStopContextPopulation, CommandStopContextRange, CommandStopCurrentContext,
+    CommandStopLandmarkEvidence, CommandStopOwnershipAdmission, CommandStopOwnershipAdmissionError,
+    CommandStopOwnershipLimits, CommandStopPartitionAdmission, CommandStopPartitionAdmissionError,
+    CommandStopPartitionLimits, CommandStopPiecePortion,
 };
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};

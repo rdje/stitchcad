@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-28 UTC)_ — separate actual stop ownership workspace admission
+## _(2026-10-29 UTC)_ — bounded actual current stop context
 
-0531 admit_ownership_workspace counts actual complete C copies/P Pieces/E canonical edges and reserves C+P+(E+1)B before callback/query/index/cache allocation. Private token borrows actual stop inputs;E*B retained cache and B transient are separate from existing M+N+2N+4B and per-point/range limits. No current proof.
-Actual Design3/core+test Clippy/fmt/docs3+1 pass0. Base C2/P2/E2/B2 →10/9;unused Piece/required copy/three held edges C3/P3/E5 →18/17. Ownership overflow refuses despite earlier huge representable stop bound;input pointers/limits and held-copy metadata/current refusal remain exact. No source/numeric kernel change.
-Book93/229/1590/2762,glossary0/map/689 receipt3/retention1143 pass0. Three types/API routes/ownership section/source decision/task hierarchy/index/D301 align. LIVE/README unchanged29 suites/G1 6/18. Bounded current context .3.3.3.2 next,then stop rows/ordered views. Full/physical/hosted verdicts remain later owners.
-[Whole0530 stop input admission](docs/history/stitchcad-devnotes-part689.md) retains exact model/journal/workspace/current-boundary proof. Promotion declined:indexed schema/resource/current contract adoption. No new physical/export assumption;consume authority and commit terminals before dependent work.
+0532 private context borrows actual admitted owner;C/P/M indexes retain exact objects and E*B caches retain every live/repair Piece portion. Fixed6 target points,full target ownership/self-copy overlap and4 pair coverages use exact bounded ports. Full-side buffers drop before4B pair cache;no legacy tree.
+Actual Design10/core+test Clippy/fmt/docs2+1 pass0. Choices survive rejoin,N0 missing copies/range quota refuse,lost/numeric interiors defeat point sampling,unused numeric Turn refuses,unused Piece repairs remain cached and later anchors need no original Param. Exact pointers/order;no state mutation.
+Book93/237/1590/2765,glossary0/map/690 receipt3/retention1144 pass0. Eight API routes/current chapter/source decision/index/D301 align;LIVE/README unchanged29 suites/G1 6/18. Actual stop rows next,then ordered views/integration. Whole Design/ease/physical/authority/effects/full/hosted proof remain owned.
+[Whole0531 ownership admission](docs/history/stitchcad-devnotes-part690.md) retains exact separate budgets/current boundary. Promotion declined:indexed current/resource contract adoption. Closed evidence accessors move portions/borrow actual numeric causes;no mapping kernel or value-provider change.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

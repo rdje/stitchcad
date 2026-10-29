@@ -224,6 +224,30 @@ impl OrphaningEdit {
     }
 }
 
+impl OrphaningEdit {
+    pub(crate) fn numeric_cause(&self) -> Option<&UnitError> {
+        match self {
+            Self::RecomputationFailed {
+                operation: _,
+                edge: _,
+                cause,
+            } => Some(cause),
+            Self::Deleted {
+                operation: _,
+                edge: _,
+            }
+            | Self::OffsetAmbiguous {
+                operation: _,
+                source: _,
+            }
+            | Self::OffsetUnmapped {
+                operation: _,
+                source: _,
+            } => None,
+        }
+    }
+}
+
 impl fmt::Display for OrphaningEdit {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {

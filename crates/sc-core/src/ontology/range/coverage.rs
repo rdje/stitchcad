@@ -108,6 +108,11 @@ impl fmt::Debug for RangeCoverage {
     }
 }
 impl RangeCoverage {
+    // Closed consuming view:move all admitted evidence without cloning or dropping repairs.
+    pub(crate) fn into_parts(self) -> (EdgeRange, Vec<RangePortion>) {
+        let Self { held, portions } = self;
+        (held, portions)
+    }
     /// Original caller-held range.
     #[must_use]
     pub const fn held(&self) -> EdgeRange {

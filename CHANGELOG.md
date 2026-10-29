@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0531 — admit complete actual stop ownership workspace
+## STITCHCAD-G1-0532 — validate bounded actual current stop context
 
-- Count actual complete C copies/P Pieces/E held edges and separately reserve C+P+(E+1)B before current callbacks/queries/indexes/caches. Private borrowed token and no-default limits retain actual input owner/counts and E*B cache/B transient;earlier stop/pair/registry and
-  point/range allowances stay unchanged.
-- Actual Design3/core+test Clippy/fmt/docs3+1 pass. Exact10/9,unused C3/P3/E5→18/17,ownership overflow despite earlier representable huge bound,exact pointers/limits and held missing-copy metadata/current refusal. No queries,current certificate,source or numeric kernel change.
-- Whole0530 retained689/three exact Git spans;book93/229/1590/2762,glossary0/map/retention1143 pass. LIVE/README unchanged29 suites/G1 6/18. Bounded actual current context next,then membership rows/views;physical/authority/aggregate effects/full and hosted verification remain
+- Build private borrowed complete C/P/M indexes and retain all Piece live/repair portions with original query ordinals. Validate actual copies,complete semantic registry,six target points,whole range ownership/self-copy overlap and four A-ordered paired coverages under the
+  admitted limits. No legacy resolver or numeric kernel change.
+- Actual Design10/core+test Clippy/fmt/docs2+1 pass. Choices survive rejoin;N0 copy/range quota,lost and numeric interiors,unused numeric Turn,retained unrelated repairs,later anchors,actual pointers and touching self-seams are covered. Original numeric errors remain standard
+  sources;no partial context or state mutation.
+- Whole0531 retained690/three exact Git spans;book93/237/1590/2765,glossary0/map/retention1144 pass. LIVE/README unchanged29 suites/G1 6/18. Actual authored stop rows next,then ordered views/integration;physical/authority/aggregate effects/full and hosted verification remain
   owned.
 
 

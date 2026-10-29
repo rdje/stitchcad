@@ -231,6 +231,41 @@ pub struct UniquePointResolution {
     outcome: UniquePointOutcome,
 }
 impl UniquePointResolution {
+    pub(crate) fn numeric_cause(&self) -> Option<&sc_units::UnitError> {
+        match self.outcome() {
+            UniquePointOutcome::Repair {
+                cause,
+                candidates: _,
+            } => cause.numeric_cause(),
+            UniquePointOutcome::Resolved(_)
+            | UniquePointOutcome::UnknownSource
+            | UniquePointOutcome::JournalEntries {
+                required: _,
+                limit: _,
+            }
+            | UniquePointOutcome::NestedItems {
+                operation: _,
+                collection: _,
+                consumed: _,
+                requested: _,
+                limit: _,
+            }
+            | UniquePointOutcome::CountOverflow {
+                operation: _,
+                collection: _,
+                consumed: _,
+                requested: _,
+            }
+            | UniquePointOutcome::SplitChoice {
+                operation: _,
+                source: _,
+                at: _,
+                first: _,
+                second: _,
+                direction: _,
+            } => None,
+        }
+    }
     /// Original held edge,including on all admission and mapping refusals.
     #[must_use]
     pub const fn reference(self) -> EdgeRef {
