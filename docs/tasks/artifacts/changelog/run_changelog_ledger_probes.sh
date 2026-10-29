@@ -29,12 +29,12 @@
 # synthetic ledger holding exactly that pair and requires every rule to hold, so a regression in the class
 # fails here by name instead of surfacing as a mysterious duplicate three slices later.
 #
-# THE SEALED CONTENT, defined exactly because a digest is only a proof if both sides mean the same
-# bytes: everything after the segment's first `---` rule and the single blank line that follows it,
-# ending with EXACTLY ONE newline — a trailing blank line is refused by name, because bash command
-# substitution strips trailing newlines and the two honest digest methods then disagree (defect D43).
-# For part1 that is lines 17–381, 365 lines / 30452 bytes / `sha256:f4aec75a…`, which is what its
-# descriptor declares — verified, not assumed.
+# THE SEALED CONTENT: bytes after the first `---` rule and following blank line.
+# Legacy records retain D43's exactly-one-terminal-newline rule. Whole-source
+# interval records hash retained raw bytes (including blank EOF or no final LF);
+# explicitly encoded records hash decoded bytes. Neither profile normalizes data.
+# Identity line/byte counts are checked when declared; source Git proofs stay separate.
+# Part1 still reproduces 365 lines / 30452 bytes / sha256:f4aec75a… .
 #
 # HONEST LIMITS: ORDER needs the commit history, so it derives the expected order from `git log` on the
 # real tree and reads it from a file on a synthetic one — a probe that could only run where git exists
@@ -66,7 +66,7 @@ VERIFIED_HISTORY="$WORK/logical/docs/history"
 pass=0; fail=0
 ok()  { printf '  ✓ %-11s %s\n' "$1" "$2"; pass=$((pass+1)); }
 bad() { printf '  ✗ %-11s %s\n' "$1" "$2"; fail=$((fail+1))
-        [ -n "${3:-}" ] && printf '%s\n' "$3" | grep -E ' FAIL | PASS | SKIP ' | head -8 | sed 's/^/          /'; }
+        [ -n "${3:-}" ] && printf '%s\n' "$3" | grep ' FAIL ' | sed -n '1,8p' | sed 's/^/          /'; }
 
 # A coverage exemption is a claim, so it carries its reason.
 DEFAULT_EXEMPT="$WORK/coverage_exempt.tsv"
@@ -94,7 +94,7 @@ ledger_verdicts() {
   if [ -n "$order" ] && [ -f "$order" ]; then ids="$(cat "$order")"
   else
     ids="$(git log --format='%s' 2>/dev/null | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' | awk '!s[$0]++')"
-    newest="$(printf '%s\n' "$live" | head -1)"
+    newest="$(printf '%s\n' "$live" | sed -n '1p')"
     brief="$root/git_message_brief.txt"
     if [ -n "$newest" ] && ! printf '%s\n' "$ids" | grep -qx -- "$newest"; then
       if [ -n "${LEDGER_PENDING:-}" ] && [ "$LEDGER_PENDING" = "$newest" ]; then
@@ -112,7 +112,7 @@ ledger_verdicts() {
   prev=""; prevpos=0; rc=0; detail=""
   while IFS= read -r id; do
     [ -n "$id" ] || continue
-    pos="$(printf '%s\n' "$ids" | grep -nx -- "$id" | cut -d: -f1 | head -1)"
+    pos="$(printf '%s\n' "$ids" | grep -nx -- "$id" | cut -d: -f1 | sed -n '1p')"
     if [ -z "$pos" ]; then detail="$detail $id(absent-from-history)"; rc=1; continue; fi
     if [ "$prevpos" -ne 0 ] && [ "$pos" -lt "$prevpos" ]; then detail="$detail $id-older-than-$prev"; rc=1; fi
     prev="$id"; prevpos="$pos"
@@ -127,39 +127,10 @@ ledger_verdicts() {
   if [ -z "${dup// /}" ]; then printf 'NO-DUP PASS no live entry is also sealed\n'
   else printf 'NO-DUP FAIL both live and sealed: %s\n' "$dup"; fi
 
-  # DESCRIPTOR — every sealed segment under docs/history/, whatever ledger it belongs to. The rule is
-  # content-agnostic (a `---` rule, a digest, a declared line count), so it generalises; COVERAGE below is
-  # not, because only a changelog segment's descriptor names work-unit ids.
-  for f in "$hist"/*.md; do
-    [ -f "$f" ] || continue
-    base="${f##*/}"
-    local rule want_sha got_sha content want_lines have_lines
-    rule="$(grep -n '^---$' "$f" | head -1 | cut -d: -f1)"
-    if [ -z "$(tail -n 1 "$f")" ]; then
-      # Measured, not theorised (defect D43): a segment whose sealed content ends with a BLANK line hashes
-      # differently by the two honest methods — raw bytes, and `content=$(sed …)` followed by `printf '%s\n'`,
-      # which is what this rule does because bash command substitution strips every trailing newline. Sealing
-      # part6 with the raw-byte digest made this rule report a mismatch that looked like content drift and was
-      # a newline. So the cause is named instead of being reported as a digest failure.
-      printf 'DESCRIPTOR FAIL %s ends with a blank line: the sealed content must end with exactly one newline, or no $( )-based digest can represent it\n' "$base"
-    elif [ -z "$rule" ]; then printf 'DESCRIPTOR FAIL %s has no --- rule sealing its descriptor from its content\n' "$base"
-    else
-      content="$(sed -n "$((rule + 2)),\$p" "$f")"
-      want_sha="$(grep -oE 'sha256:[0-9a-f]{64}' "$f" | head -1 | cut -d: -f2)"
-      got_sha="$(printf '%s\n' "$content" | shasum -a 256 | cut -d' ' -f1)"
-      have_lines="$(printf '%s\n' "$content" | grep -c '')"
-      want_lines="$(grep -oE '\*\*Sealed identity:\*\* [0-9]+ lines' "$f" | grep -oE '^[^ ]+ [0-9]+' | grep -oE '[0-9]+')"
-      if [ -z "$want_sha" ]; then
-        printf 'DESCRIPTOR FAIL %s records no sha256\n' "$base"
-      elif [ "$got_sha" != "$want_sha" ]; then
-        printf 'DESCRIPTOR FAIL %s content hashes to %s…, its descriptor declares %s…\n' "$base" "${got_sha:0:16}" "${want_sha:0:16}"
-      elif [ -n "$want_lines" ] && [ "$want_lines" != "$have_lines" ]; then
-        printf 'DESCRIPTOR FAIL %s declares %s sealed lines; the content that hashes is %s\n' "$base" "$want_lines" "$have_lines"
-      else
-        printf 'DESCRIPTOR PASS %s: %s lines reproduce sha256:%s…\n' "$base" "$have_lines" "${want_sha:0:16}"
-      fi
-    fi
-  done
+  # DESCRIPTOR checks bytes, including raw EOF and explicitly decoded source records.
+  # Coverage and historical Git-interval proof are independent contracts.
+  python3 -I -B "$ROOT/docs/tasks/artifacts/changelog/archive_descriptors.py" "$hist" || \
+    printf 'DESCRIPTOR FAIL descriptor validation refused\n'
 
   # COVERAGE — changelog segments, whose descriptors name the work-unit ids they hold ----------------
   for f in "$hist"/stitchcad-changelog-part*.md; do
@@ -235,7 +206,7 @@ arm ORDER-RED ORDER "$D" "$D/order.txt" "$DEFAULT_EXEMPT"
 
 # ---------------------------------------------------------------- NO-DUP has teeth
 D="$WORK/dup"; mkroot "$D"
-first_sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$D"/docs/history/stitchcad-changelog-part*.md | head -1 | sed 's/^## //')"
+first_sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$D"/docs/history/stitchcad-changelog-part*.md | sed -n '1p' | sed 's/^## //')"
 printf '\n## %s — sealed, then duplicated back into the live window\n\nbody\n' "$first_sealed" >> "$D/CHANGELOG.md"
 arm DUP-RED NO-DUP "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
 
@@ -294,7 +265,7 @@ fi
 
 # ---------------------------------------------------------------- DESCRIPTOR has teeth
 D="$WORK/digest"; mkroot "$D"
-seg="$(ls "$D"/docs/history/stitchcad-changelog-part*.md | head -1)"
+seg="$(ls "$D"/docs/history/stitchcad-changelog-part*.md | sed -n '1p')"
 printf '\nOne byte of silent drift in a segment that is supposed to be immutable.\n' >> "$seg"
 arm DIGEST-RED DESCRIPTOR "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
 
@@ -345,4 +316,5 @@ echo
 printf 'probes: %d pass / %d fail\n' "$pass" "$fail"
 [ "$fail" -eq 0 ] || exit 1
 python3 -I -B "$ROOT/docs/tasks/artifacts/changelog/ledger_pointer_contract.py" || exit 1
+python3 -I -B "$ROOT/docs/tasks/artifacts/changelog/archive_descriptor_contract.py" || exit 1
 exit 0

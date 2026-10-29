@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — complete prepush diagnosis and scoped repair queue
+## _(2026-10-29 UTC)_ — preserve exact archive payload descriptor profiles
 
-0539 run95925f7b/403:full check0/gate0/probes2,29 entry points/source restored clean. Six P1 repairs owned:archive byte profiles,catalog mutant,matrix trace,cleanup mutant,status guard,producer inventory. G0 extra refusal depends on matrix;human closure unapproved. No push or hosted verdict.
-Archive canonical inventory/payload digests accept;legacy checker normalizes raw/encoded records. Catalog17/5/5 passes but missing-level mutation uses old prose. Matrix omits ontology1.2/1.3. Cleanup GOOD protects stores;fault mutant hits another guard. Status guard/producer candidate ledger need current scope.
-Book93/248/1590/2770,glossary0/map/697 receipt4/retention1151 pass0. Whole0538/old ledger retained before bounded summary. LIVE29 suites/G1 6/18 unchanged;D310–D315 P1 scheduled immediately before full retry/push. GitHub push access verified through readonly existing transport credentials;no configuration write.
-[Whole0538 and ledger](docs/history/stitchcad-devnotes-part697.md) retain exact source proof. Promotion declined:indexed byte preservation/proof scope/defect ownership. Current task corrects archived695 diff spacing/697 path citation without rewriting originals. Diagnostic counts are not new maintained invariants.
+0540 D310:old shell newline normalization conflicted with retained raw/encoded records. Byte reader checks identity/hash/lines/bytes;whole-source raw EOF survives,explicit base64 decodes strictly,legacy blank EOF still refuses. Coverage and historical Git proof remain separate;sealed records unchanged.
+Focused ledger11/0,pointer16/0,descriptor4 frozen profiles/18 corruption refusals pass0. Diagnostics consume streams/report actual failures. First partial run edited while its shell was active ended2;final frozen rerun completed0. Consume producer terminals before changing inputs.
+Book93/248/1590/2771,glossary0/map/698 receipt3/retention1152 pass0. Whole0539 retained before curation. LIVE29 suites/G1 6/18 unchanged,D310 fixed,D311–D315 P1 owned. Full retry/push/actual hosted jobs wait for remaining repairs;G0 human unapproved.
+[Whole0539 diagnostic scope](docs/history/stitchcad-devnotes-part698.md). Promotion declined:indexed archive byte preservation/proof scope/terminal discipline. Historical normalized/folded interval metadata is not a descriptor identity or an automatic exact-Git proof. Next D311 authority-row mutation.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

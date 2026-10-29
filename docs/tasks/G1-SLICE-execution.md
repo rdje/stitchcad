@@ -420,59 +420,42 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0538 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part697.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.diagnostics`
   Status: `done`
-  Goal:0539 complete full-run diagnosis/ownership at95925f7b/403;record check0/gate0/probes2,
-  distinguish verified native scope from six blocked probe areas and schedule immediate repairs.
-  - [x] REPRODUCE / ISSUE: 0539 scripts/run_make.sh check,gate,probes at clean95925f7b
-    →check rc0,gate rc0,probes rc2. All29 suite entry points reached;Git diff/status returned clean
-    after all producers completed. Logs/RC files/baseline in target/prepush-400-0538. Core239,
-    measure31 and units3 documentation cases pass;native workspace/fmt/all-target-feature lint pass.
-    No push or hosted verdict. Parent prepush-400 remains active until fixes/full retry/actual jobs.
-  - [x] ROOT CAUSE (WHY + WHERE): 0539 native log/source comparison →six actual areas. D310 legacy descriptor
-    normalization conflicts with canonical raw Git source records/encoding;inventory1150 accepts,
-    payload hashes match in diagnostic census. D311 missing-level mutation targets retired prose;
-    actual catalog17/5/5 passes. D312 matrix lacks ontology1.2/1.3 citations,causing G0-01 extra
-    failure;G0 review17/2 remains complete but failing,not approved. D313 GOOD cleanup protects
-    stores;removed-guard mutant gets another Git-boundary refusal from real Cargo contents,masking
-    the intended counterfactual. D314 old12-cell status guard reads a curated chapter without that
-    table. D315 source dispositions omit added candidates,including ordinary nested build.rs module.
-    Source/log reads and independent canonical inventory →rc=0. Diagnostic census counts are snapshot
-    observations,not durable invariants;D310 owns tracked/watched descriptor rederivation.
-  - [x] FIX: 0539 durable diagnostic record,all six P1 scoped repair leaves and parent dependency
-    order recorded before code edits;none of those repairs is falsely marked complete. Descriptor/
-    mutation/matrix/cleanup/status repairs precede final complete producer inventory. G0 baseline
-    follows matrix fix;human closure stays unapproved. No sealed archive,production code,policy,
-    gate threshold or frozen numerical fixture changed. git diff --check →pass,rc=0.
-  - [x] ADDRESSED (verified): 0539 native log section/error census →29 entry points with the six root
-    areas above;dependent G0 failures associated with actual G0-01 feature census,not normalized.
-    Readonly gh api repos/rdje/stitchcad →rc=0,push permission present;no access blocker or push.
-    Existing GitHub credential configuration is a necessary readonly transport dependency;update
-    notifications disabled and cache environment points under target. No login/configuration write.
-    Archived citation errata verified by git diff 71595c40..a8eb3250 --
-    crates/sc-core/src/command/bus/retained.rs →54-line append,rc0 (695 omitted space after diff).
-    git log -3 -- crates/sc-core/tests/formula_rational_contract.rs →0247 fixture source,rc0
-    (697 abbreviated the path). These correct current guidance without editing immutable originals.
-  - [x] NO REGRESSION: 0539 docs-only diagnostic unit;no additional runtime test required.
-    mdbook build docs/book and positive publication →93/248/1590/2770,rc=0;glossary →310/9/158/0
-    failures,rc=0;knowledge-map →pass,rc=0. Receipt697 →4 exact Git spans,rc=0;retention →1151
-    logical/56 working/64862 decodedL/5044124 decodedB/2621461 residentB,rc=0. Prior complete
-    native/doctrine run remains scoped to95925f7b;failed probes are explicitly pending repairs.
-  - [x] LOCKSTEP: 0539 actual full-run outcomes/six P1 owners/citation corrections/external
-    credential dependency recorded. Whole0538 and exact previous defect ledger retained697/four
-    Git spans. Book distinguishes passed native scope from failed repository probes;MEMORY/DEV/
-    CHANGE/index/PLANNING/LIVE align. LIVE29 suites/G1 6/18 unchanged,D310–D315 now owned. README
-    objective/commands reviewed unchanged. Next .archive-profiles D310;commit every repair before
-    moving,then complete all full gates before normal push/hosted monitoring. Stop component/paired
-    physical/authority/effect proof remain separately owned. No false safe-to-clear stopping point.
-    promotion: declined (application of indexed byte-preserving archive,target-scoped proof and defect ownership contracts;fixes remain explicitly scheduled).
+  Goal:0539 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part698.md).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.archive-profiles`
-  Status: `pending`
-  Goal:D310 P1 fix changelog ledger descriptor profiles and diagnostics. REAL/COVERAGE-RED fail;
-  legacy newline normalization rejects256 whole-source-interval records. Counts are one-time
-  diagnostics,not maintained invariants;this fix owns tracked/watched profile rederivation. Canonical1150-record
-  inventory and579 raw+2 encoded source payload hashes accept. Support exact raw EOF and decoded
-  base64 descriptors,retain legacy strict newline/corruption controls and independent coverage
-  refusals. Never edit sealed archives or waive digest checks. Report actual FAIL lines without
-  broken-pipe truncation. Focused ledger/profile controls,book/records and commit before next leaf.
+  Status: `done`
+  Goal:0540 D310 P1 descriptor repair;exact retained/decoded identity checks with legacy refusal
+  and independent coverage controls. No sealed record edited or newline normalized.
+  - [x] REPRODUCE / ISSUE: full0538 probes at95925f7b →REAL/COVERAGE-RED failed,rc2.
+    Old descriptor uses shell substitution/readded LF and rejects raw blank EOF/no-LF/encoded
+    source records despite valid canonical inventory. Diagnostic scope/owners retained698.
+  - [x] ROOT CAUSE (WHY + WHERE): 0540 canonical inventory/header census →569 legacy,
+    580 whole-raw,2 encoded at1151 records,rc=0. Identity hashes describe retained/decoded payload,
+    not shell-normalized text. Historical interval metadata can separately describe normalized or
+    folded retrieval;descriptor checking does not assert every interval equals its Git bytes.
+    D282 raw-byte policy and current records require preserving exact EOF. Native shasum frozen
+    alpha/LF/blank/no-LF hashes match independent fixtures,rc=0. No filename-specific exception.
+  - [x] FIX: byte-reader checks unique declared identity/hash/lines/optional legacy bytes;
+    structured whole-source profiles require byte count,retain raw EOF or decode exact base64
+    fence/alphabet/width/size. Legacy exactly-one-LF refusal retained. Coverage/Git source proofs
+    stay independent. Shell consumes diagnostic streams,prints actual FAIL lines and names checker
+    failure instead of dropping it. New helpers registered for D315's final inventory repair.
+  - [x] ADDRESSED (verified): 0540 local_environment.py -- bash
+    docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh →11 pass/0 fail,rc=0,
+    REAL1462 verdicts/0fail,COVERAGE-RED sole mutated refusal;legacy blank/digest/nonledger/order/
+    pointer controls retained. Pointer contract16/0;descriptor contract4 frozen profiles/18
+    refusals/independent coverage pass,rc=0. First partial run was interrupted by editing its
+    running shell input;consumed rc2 and reran final frozen source to completion before further
+    edits. Lesson:consume terminal before changing any running producer input;no partial success.
+  - [x] NO REGRESSION: bash -n ledger script →rc=0;mdbook build/positive publication
+    →93/248/1590/2771,rc=0;glossary310/9/158/0 failures,rc=0;map →pass,rc=0. Receipt698 →3 exact
+    Git spans,rc=0;retention →1152 logical/57 working/64935 decodedL/5051627 decodedB/2628964
+    residentB,rc=0. D311–D315 remain owned;full check/gate/probes retry after those repairs,then
+    normal push and actual hosted jobs. No full repository or hosted verdict inferred here.
+  - [x] LOCKSTEP: whole0539 task/lesson/changelog retained698 before curation. Archive-reader
+    book explains three profiles/examples and descriptor-versus-source/coverage boundary. MEM/
+    DEV/CHANGE/LIVE/index/ledger align;LIVE marks D310 fixed,29 suites/G1 6/18 unchanged,G0 human
+    unapproved. README objective/commands unchanged. Commit before next .catalog-mutation D311.
+    promotion: declined (application of indexed byte-preserving archives,independent proof scope and consume-before-edit contract;no new product policy).
 - ID: `G1-SLICE.6.5.3.2.prepush-400.catalog-mutation`
   Status: `pending`
   Goal:D311 P1 repair LEVEL-MISSING control. Actual catalog census17 commands/5 classes/5 levels

@@ -3,13 +3,11 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0539 — record full prepush diagnosis and owned repairs
+## STITCHCAD-G1-0540 — preserve exact archive descriptor profiles
 
-- Full run at95925f7b/403 passes complete native check and doctrine gate;all29 probe entry points run but aggregate probes fail. Source restored clean. Six P1 repair areas are scoped and owned;no push or hosted success is claimed.
-- Preserve archive bytes and corruption controls;repair stale authority mutation,missing ontology matrix traces,masked cleanup mutant,curated static-status guard and producer candidate dispositions. G0 extra refusal depends on matrix;human closure remains unapproved. Existing
-  GitHub push access is verified read-only.
-- Whole0538/previous ledger retained697/four exact Git spans;book93/248/1590/2770,glossary0/map/retention1151 pass. Archived citation typos corrected in current task guidance. LIVE29 suites/G1 6/18 unchanged,D310–D315 P1 owned. Commit each repair,then fresh full gates before
-  normal push and actual jobs.
+- Fix D310 with byte-preserving raw and explicit decoded base64 identities;check hashes/line and byte counts while retaining legacy blank-EOF refusal. Keep coverage and historical source proofs independent. Never edit sealed records or normalize their bytes.
+- Focused ledger11/0,pointer16/0,descriptor4 frozen profiles/18 refusals pass;report actual failure lines without early pipe closure. Interrupted partial run discarded;final frozen producer completed successfully before dependent edits.
+- Whole0539 retained698/three exact Git spans;book93/248/1590/2771,glossary0/map/retention1152 pass. LIVE29 suites/G1 6/18 unchanged,D310 fixed,D311–D315 owned. Full gates/push/hosted verdict await remaining repairs;G0 human unapproved.
 
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments

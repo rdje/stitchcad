@@ -1,18 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.prepush-400.archive-profiles in docs/tasks/G1-SLICE-execution.md:
-  D310 exact raw/decoded archive descriptors,legacy corruption controls and diagnostics. Never edit
-  sealed records. Then D311 catalog mutation,D312 matrix traces/G0,D313 cleanup mutant isolation,
-  D314 static-status guard,D315 complete producer candidate inventory last. Commit every repair.
-- Completed run95925f7b/403:full check0/gate0/probes2;29 entry points,source restored clean. Logs/
-  RC/baseline/investigation in target/prepush-400-0538. No producer in flight,push or hosted verdict.
-  GitHub push access verified;existing credentials readonly transport dependency. G0 human unapproved.
-- Whole0538/old ledger retained697/four Git spans;book93/248/1590/2770,glossary0/map/retention1151
-  pass. Citation errata695/697 corrected in diagnostic leaf;originals immutable. LIVE29 suites/
-  G1 6/18;D307–D309 fixed,D310–D315 P1 owned. Native success is not full probe success.
-- After six fixes,full check/gate/probes from clean completed HEAD,normal push/actual hosted jobs.
-  Then stop .3.3.acceptance/live lineage .3.4. Full PNT continues;physical/formula/Profile/current
-  authority/aggregate/effect proof remain owned. Consume terminals;native exact-index book check.
+- Next G1-SLICE.6.5.3.2.prepush-400.catalog-mutation in docs/tasks/G1-SLICE-execution.md:
+  D311 actual authority-row mutation,then D312 matrix/G0,D313 cleanup mutant isolation,D314
+  static-status guard,D315 producer candidate inventory last. Commit every scoped repair.
+- D310 fixed0540:raw/decoded identity checks,legacy EOF refusal and independent coverage pass;
+  focused ledger11/0,pointer16/0,descriptor4 profiles/18 refusals. Whole0539 retained698/3 Git spans.
+- Book93/248/1590/2771,glossary0/map/retention1152 pass. LIVE29 suites/G1 6/18 unchanged;
+  D307–D310 fixed,D311–D315 P1 owned. Never edit running producer inputs;consume terminals first.
+- Full run95925f7b:check0/gate0/probes2;logs target/prepush-400-0538. No push/hosted verdict.
+  GitHub access verified;credentials readonly transport dependency. G0 human closure unapproved.
+- After remaining repairs,full check/gate/probes from clean completed HEAD,normal push/actual
+  hosted jobs. Then stop .3.3.acceptance/live lineage .3.4;full PNT continues. Physical/formula/
+  Profile/current authority/aggregate/effect proof remain separately owned. No producer in flight.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

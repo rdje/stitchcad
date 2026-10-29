@@ -84,6 +84,22 @@ duplicate identities, links, malformed indices and reordered/removed seals refus
 schemas retain their original4MB/60000-line rules. Exhaustion requires a new retention decision. Append/seal/client/transaction checks pass. The full-decode fixture fits128MiB on Darwin/Python3.14.7;
 this regression target is no runtime OS limit or other-platform proof. Scoped component checks pass.
 
+## Sealed payload descriptors
+
+The ledger probe verifies each materialized record's payload hash and declared line/byte counts.
+Legacy seals require exactly one terminal newline; a blank final line refuses by name. Records with
+structured whole-source interval headers retain their sealed raw bytes, including a blank EOF or no
+final LF. An explicit base64 encoding declaration instead selects the decoded payload, with strict
+fence, alphabet, width and decoded-size checks. No profile trims or adds newlines.
+
+For example, raw part250 retains its blank EOF, while part639 has no final LF; encoded part658 hashes
+its decoded source text. Descriptor integrity is separate from proof against the named historical Git
+intervals and from changelog coverage. A false coverage declaration still refuses independently.
+
+```bash
+python3 -I -B scripts/local_environment.py -- bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh
+```
+
 ## Independent controls
 
 ```bash
