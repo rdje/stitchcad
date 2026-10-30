@@ -631,10 +631,11 @@ every half-ppm threshold. This proves correct rounding without platform libm, em
 cutoffs or a new input refusal. The shared compiled pi endpoint remains tied to its independent
 certificate. Result magnitudes are at most1,000,000ppm, without premature storage narrowing.
 
-Work unit0280's focused native target passes3 tests, including44 independent angles/88 outputs
-and live oracle reproduction. That oracle uses a different pi identity,768-bit direct powers and
-factorials over the full signed principal interval,128 terms and its own remainder enclosure.
-It covers exact values, signed/full turns, full-width inputs, near axes and rational neighbors
-on both sides of rounding thresholds. This is native value evidence; actual cross-platform
-execution and broader coupled checks remain .5d.4/pre-push. [Sourced sin/cos calls](formula-runtime-validation.md#product-implemented-numeric-calls)
-are available; full AST execution remains .5e. Tangent retains its separate resource owner.
+The focused native target now passes4 tests:44 independent angles/88 numeric answers,actual
+sourced storage/read and live reproduction of all2404 fixture bytes. The separate oracle uses a
+different pi identity,768-bit direct powers/factorials and128 terms over the signed principal
+interval. Real upstream sqrt/atan contributions survive all forward calls and binding,including
+exact axes;T1 remains refused. The [coupled forward review](formula-irrational-review.md#forward-sine-and-cosine-boundaries)
+records the complete certificate and remaining actual-body/platform proof. Scoped AST/source/
+recipe/Design scalar execution is available;geometry,complete resources and broad acceptance
+remain owned in the execution plan. Tangent retains its explicit independent per-call policies.

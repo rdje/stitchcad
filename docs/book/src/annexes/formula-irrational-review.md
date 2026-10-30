@@ -9,7 +9,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | --- | --- | --- |
 | sqrt/hypot | Exact integer roots and sourced calls | Native85 rows/five actual body faults pass below;shared platform review remains |
 | arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;shared platform review remains |
-| sin/cos | Exact folding and complete forward threshold certificate | Coupled actual-body/source/platform review remains .5d.4.forward |
+| sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/actual sourced88 pass below;body faults/platform remain owned |
 | atan/atan2 | Principal branches and complete inverse threshold certificate | Coupled actual-body/source/platform review remains .5d.4.inverse |
 | tan | Explicit per-call quotas,native139 and real paired24 acceptance | Coupled adaptive/error/fault review remains .5d.4.tangent |
 
@@ -172,3 +172,47 @@ The primary arc target's four tests and scoped strict lint pass after adding exp
 row context to failure assertions. This closes scoped native arc review. Complete producer runtime/
 locality remains n16;other families,mixed chains,actual platform execution and full coupled/
 resource/provider/replay/physical/production acceptance keep their separate owners.
+
+## Forward sine and cosine boundaries
+
+For an admitted signed Angle n/d in microdegrees,the phase in turns has denominator at most
+Q=360,000,000*(2^128-1). Exact period reduction,quarter-turn shifts and quadrant/octant folds
+preserve this bound without binding or narrowing the authored operand. Cosine uses the exact
+quarter-turn identity;negative sine restores the original sign after magnitude rounding.
+
+The complete original certificate covers every positive half-ppm threshold,one million bands.
+For each band,its outward asin/(2*pi) enclosure lies strictly between determinant-one neighbors
+with denominator sum greater than Q. Any intermediate rational has denominator at least that
+sum,so no admitted phase enters a band. Every true output stays more than2^-384 from a midpoint.
+The independent reader rechecks all100 contiguous chunks,encoded endpoints,hashes,strict gaps
+and source identities. It does not reconstruct inverse intervals:their derivation and independent
+known3/Fraction4/small-denominator32/negative2 controls remain a separate proof leg. Three actual
+corrupt payload controls also refuse. The original manifest and payloads remain unchanged.
+
+The directed native series uses512 fractional bits and64 terms on the first octant. Input width
+at most3 implies square width at most8 and term width at most12;the alternating sum plus tail
+has width at most770*2^-512,below2^-502 and the certified2^-384 exclusion. The64-term remainder
+is bounded by1/128!,which is smaller than2^-512. Clipping to[0,1] keeps the true value enclosed.
+Therefore the lower endpoint and true output round to the same ppm. Exact axes return immediately;
+otherwise fixed64 terms and a conservative2^1026 integer workspace bound cover every admitted
+input. No precision cutoff,adaptive refusal or platform libm is introduced. The runtime-plan
+instrument rechecks these inequalities,14 distinct Fraction enclosures,50 signed-octant comparisons
+and two deliberately insufficient profiles. Compiled pi limbs retain the separately watched640-bit
+certificate reproduced during the arc review;this review changes none of those inputs.
+
+The original44-angle fixture remains2404 bytes with SHA-256
+5ee377fefbaac4684d403f5c2a44fb00f5bf8ad3f0d873409ab13f322dffcfa1.
+Its separate768-bit,128-term direct-power/factorial oracle uses a different pi identity and signed
+principal-interval reduction. It regenerates every original byte and supplies88 native answers,
+including huge signed turns,full-width fractions,tiny values,axes and midpoint neighbors.
+The actual sourced watcher also executes all88 outcomes. A real perfect Ratio sqrt and zero atan
+produce an upstream zero Angle through multiplication;adding it preserves the original full-width
+Angle. Each successful sin/cos keeps Sqrt,Atan and its own call contribution,including exact zero
+or unit outputs. Every actual signed Ratio binding/read matches the result and all three flags;
+T1 remains refused. Four original wrong numeric kinds retain their typed actual-call/argument0
+refusal even at zero. No source flags or computed values are seeded into this watcher.
+
+The native target now passes4 tests,including independent fixture reproduction. Actual kernel
+body faults remain G1-SLICE.5d.4.forward.faults;declared native/browser execution parity remains
+G1-SLICE.5d.4.platform. These focused native/certificate checks grant no full integration,
+allocator,physical or release approval.

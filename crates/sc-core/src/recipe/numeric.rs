@@ -374,7 +374,7 @@ impl FormulaNumericValue {
     ///
     /// Exact rational period/quadrant folding preserves full input widths. A complete threshold
     /// certificate and bounded directed series determine nearest-quantum rounding without libm.
-    /// Source-call contributions belong to the later source-bearing evaluator.
+    /// FormulaEvaluatedScalar retains successful input/call contributions through storage.
     ///
     /// # Errors
     /// Returns BuiltinInputKind for an actual non-Angle operand, including zero values.

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0630 — restore bounded active archive capacity
+## STITCHCAD-G1-0631 — couple complete forward proof and sourced storage
 
-- Public append/install captures61 full committed files in window25. Independent before/candidate/installed1241 records/4831870B match;native tar61/687053B/all104 original files exact. OS-visible idle check passes before transaction;active64→4 without raised bounds.
-- Whole0628/0629 retained788/789 after installed comparison;final active6/64,total27/192. Live links/book synchronized;reader/source/task-source12/IDs/map/diff/book99/374/1659/2937/glossary0 pass. LIVE G1 6/18/G0 unapproved unchanged. Next coupled forward review.
+- Recheck1M forward certificate rows/100 chunks plus independent constructor/plan controls. Original44-angle oracle regenerates2404B;native4 pass,including all88 actual sourced sin/cos results through full-width input preservation,signed storage/read and T1 refusal.
+- Strict affected lint/fmt/book99/374/1659/2938/glossary0/history790/IDs/map/diff pass. Correct stale provenance/current execution docs;whole0630 retained790. LIVE adds forward44/sourced88;G1 6/18/G0 unapproved unchanged. Next actual kernel faults;platform/broad acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

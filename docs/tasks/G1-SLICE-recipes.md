@@ -599,33 +599,43 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0627 completed scope; [whole scope/proofs](../history/window25.md#stitchcad-devnotes-part787md).
 - ID: `G1-SLICE.5d.4.forward`
-  Status: `pending`
+  Status: `in_progress`
   Goal:coupled sin/cos folding,complete threshold certificate,rounding/provenance and actual fault
   review;preserve original full-width operands and protected certificate workspaces.
 - ID: `G1-SLICE.5d.4.forward.retention`
   Status: `done`
-  Goal:0630 restore actual active archive capacity before coupled forward review.
-  - [x] REPRODUCE / ISSUE:0629 archive64/64 blocks new whole receipts;task aggregate near1.5MB.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/history_archive/generation_pressure.py
-    →active64/64=61 raw+3 catalogs,aggregate85/192/headroom0;independent census agrees,rc=0.
-  - [x] FIX:public v2_migration.py append target/history-capture-0630 --owner this leaf;full
-    before/candidate/native-tar comparison precedes OS-visible idle check and v2_install.py install.
-    Fresh target-only identity;all old transactions untouched;no cap raised. Preserve originals.
-  - [x] ADDRESSED (verified):append/install/prove-source window25 →61 whole Git files,missing/
-    extra0,rc=0. python3 -I -B target/verify_archive_0630.py before and after →1241 complete
-    names/sizes/lines/SHA256/4831870B match before/candidate/installed;native tar61/687053B and
-    all104 original physical files exact,rc=0. Handoff OK before install;sealed generation1 exact.
-    Initial post-install active4/64,total25/192;two receipts then active6/64,total27/192,rc=0.
-  - [x] NO REGRESSION:published verify-retention/source proofs,whole788/789 four exact Git
-    spans each,task-source12,prior task IDs/order/uniqueness/map/diff pass,rc=0. Book99/374/1659/
-    2937/glossary310/9/158/0 pass,rc=0. All live captured-file links routed to exact catalog
-    headings;independent route assertion pass,rc=0. No broad CI/native rebuild or power-loss claim.
-  - [x] LOCKSTEP:MEM/DEV/CHANGE/index/book/live routing aligned;whole0628/0629 in788/789 only
-    after installed comparison. Original target/history-capture-0630 and history-proof-0630 kept;
-    do not rerun installation/recovery after later edits. LIVE/README reviewed unchanged:G1 6/18/
-    G0 human unapproved;full/hosted79bd6f6a SHA-scoped. Next coupled forward values/body faults.
-    promotion: declined (existing bounded archive authoring,preservation and routing contracts;no new policy or product authority).
-  Commit:STITCHCAD-G1-0630;Verification:61 source files/complete1241/native tar/original104/book.
+  Goal:0630 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part790.md).
+- ID: `G1-SLICE.5d.4.forward.values`
+  Status: `done`
+  Goal:0631 complete forward proof/native sourced storage review;original44 fixtures unchanged.
+  - [x] REPRODUCE / ISSUE:forward44 had native values/independent oracle but no all-row sourced
+    storage watcher;current docs still claimed later provenance/full AST pending. Own repair here.
+  - [x] ROOT CAUSE (WHY + WHERE):original native target has3 tests;trig.rs folds signed full-width
+    Angle into first octant and rounds512-bit/64-term lower endpoint. Complete1M exclusion is
+    separate from enclosure proof. sincos_runtime_plan.py →770*2^-512<2^-502<2^-384,workspace
+    <2^1026;Fraction14/octant50/insufficient2 pass,rc=0. Q=360M*(2^128-1) preserved by folds.
+  - [x] FIX:add actual sqrt/atan zero arithmetic before each original sin/cos,then real bind/read/
+    T1 checks. Keep every original Angle and fixture byte;correct Rust/book provenance/current
+    scalar execution status. Actual body faults/platform remain separate children.
+  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- cargo test --offline
+    --locked -p sc-core --test formula_sincos_value_contract →4 pass,88 sourced outputs retain
+    actual Sqrt/Atan/own flags through signed storage/read,T1 refused,rc=0. Live independent
+    oracle regenerates44 rows/2404B/SHA5ee377fe;original numeric kinds/argument0 refusals pass.
+    verify_forward_certificate.py →1M rows/100 contiguous chunks/hash/gaps/strict margins/source
+    identities exact,rc=0. Known3/Fraction4/small-Q32/negative2/reader corrupt3 controls pass0;
+    manifest unchanged. This reader does not rederive inverse intervals;separate proof leg retained.
+  - [x] NO REGRESSION:local launcher cargo clippy --offline --locked -p sc-core --lib --test
+    formula_sincos_value_contract -- -D warnings and rustfmt --check pass,rc=0. Whole790 four
+    exact Git spans/prior IDs plus2 children/map/diff/book99/374/1659/2938/glossary0 pass,rc=0.
+    Private pi/certificate inputs unchanged since independently reproduced0626;no new platform CI.
+  - [x] LOCKSTEP:canonical/book/actual native watcher/live status aligned;whole0630 retained790.
+    G1 6/18/G0 unapproved;next .forward.faults. Full/hosted79bd6f6a SHA-scoped only.
+    promotion: declined (existing independent-oracle/complete-proof/actual-source contracts applied;no new numeric policy or production authority).
+  Commit:STITCHCAD-G1-0631;Verification:4 native/1M certificate/plan/Fraction guards/lint/book.
+- ID: `G1-SLICE.5d.4.forward.faults`
+  Status: `pending`
+  Goal:compile original sin/cos baseline and actual folding/sign/scale/series/rounding body faults
+  against independent rows through guarded isolated workspace;preserve all original inputs.
 - ID: `G1-SLICE.5d.4.inverse`
   Status: `pending`
   Goal:coupled atan/atan2 whole-ratio/branch/threshold/error/provenance and actual fault review;

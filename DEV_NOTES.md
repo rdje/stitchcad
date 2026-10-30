@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — restore actual active archive capacity before forward review
+## _(2026-10-30 UTC)_ — couple complete forward proof with actual sourced storage
 
-0630 diagnoses active64/64=61 raw+3 catalogs,aggregate85/192. Published append/install captures61 committed whole files in window25. Independent before/candidate/installed1241 names/sizes/lines/SHA256/4831870B match;native tar61/687053B and all104 original physical files exact.
-OS-visible handoff clear precedes transaction;readers idle. Initial active4/64,total25/192;whole0628/0629 retained788/789 only after installed comparison,4 exact Git spans each. Final active6/64,total27/192;no limits raised. Keep original0630 transaction/proof/review trees;never rerun recovery after later edits.
-Route live captured links to exact catalog headings;sealed bodies unchanged. Reader/source/task-source12/IDs/map/diff/book99/374/1659/2937/glossary0 pass. [Whole0628 guard repair](docs/history/stitchcad-devnotes-part788.md) and [0629 cleanup](docs/history/stitchcad-devnotes-part789.md) remain self-contained.
-Promotion declined:existing retention/preservation/routing contracts. LIVE/README unchanged:G1 6/18/G0 human unapproved. Full/hosted79bd6f6a exact-SHA only;no broad CI/native rebuild/power-loss claim. Resume coupled forward proof/source/body-fault review;full PNT continues.
+0631 rechecks1M forward thresholds/100 contiguous chunks and exact source/hash/gap margins without changing proof files. Separate constructor known3/Fraction4/small-Q32/negative2/reader corrupt3 controls pass. Runtime512/64 width770*2^-512<2^-502<2^-384 and workspace<2^1026;Fraction14/octant50/weak-profile2 pass.
+Native4 pass:44 original angles/88 outputs through both numeric and actual sourced calls,then signed bind/read/T1. Real sqrt/atan zero arithmetic preserves every full-width Angle;all three actual contributions survive exact zero/unit results. Independent oracle regenerates2404B/SHA5ee377fe;typed kinds remain exact.
+Strict affected library/test lint and fmt pass;book99/374/1659/2938/glossary0/history790/IDs/map/diff pass. [Whole0630 retention](docs/history/stitchcad-devnotes-part790.md) retained. Current Rust/book provenance and available scalar execution corrected;complete kernel faults/platform stay separately owned.
+Promotion declined:existing independent proof/source contracts. LIVE adds scoped forward44/sourced88;G1 6/18/G0 human unapproved unchanged. Full/hosted79bd6f6a remains exact-SHA only. Next actual forward body faults;other coupled/platform/physical/release proof remains. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
