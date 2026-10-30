@@ -343,6 +343,26 @@ cargo test -p sc-core --test formula_scalar_source_graph_execution_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/scalar_source_execution_oracle.py
 ```
 
+## Containing Design source ownership
+
+DesignInputsDefinition now requires an explicit owned FormulaSources registry. The actual root
+census includes each expression entity,including unused ones,and refuses collisions with Design,
+canonical declarations,Pieces,copies,creating operations,parameters,Materials or higher metadata.
+Current validation reuses the complete original canonical/source join:every Derived formula
+reference must select its real owned expression,without using a provenance field as a substitute.
+Unknown/observation and other authored-state references keep their separate roles. Source bodies,
+values and graph execution are not fabricated by this ownership check.
+
+The [Design input contract](../spec/design-inputs.md#owned-core-input-composition) documents the
+required field,owned typed refusals,original census order and immutable source access. Exact clones,
+resource traversal and candidate context comparisons preserve source/index/original/canonical
+content. Source92 in the authored Measurement fixture has a real waist-plus40 mm expression,while
+source9003 in the structural fixture is distinct from actual operation1000. Both remain canonical
+Derived states until real expression execution. Current root ownership/reference checks pass;
+Design-backed runtime proof joins,actual ordered-recipe Derived reads and whole integration
+acceptance remain G1-SLICE.5e.2.5.derived.3.3.3.4.3–.5. Scoped standalone source execution above
+supplies no substitute for those remaining joins.
+
 ## Bare roots and actual let storage
 
 A bare source expression is not a let. Its entity id,canonical consumer kind or graph edge supplies

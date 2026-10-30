@@ -7,7 +7,7 @@ cumulative sink, including actual source content and its retained identity censu
 
 ## Coupled native resource acceptance
 
-At resource checkpoint0473, after implementation and D293 repair, these selected native suites passed:
+At historical resource checkpoint0473,after implementation and D293 repair,these selected native suites passed:
 
 | Actual test target | Passed cases |
 | --- | --- |
@@ -34,6 +34,13 @@ This closes the implemented logical-content resource feature's native acceptance
 acceptance, persistence/reopen, browser execution, raw ingress, numeric/file/decompression/geometry
 work, allocator peaks, arbitrary source algorithm time and physical/release proof remain separate.
 No whole-project CI or release verdict follows from these selected suites.
+
+That checkpoint predates Design-owned formula sources. Current source-ownership integration has
+focused core23/compiler5,Measurement/group preview and nonempty-source snapshot2 checks;the five
+current whole-root resource cases below include their actual added expression content. Full current
+source/recipe/Design acceptance remains G1-SLICE.5e.2.5.derived.3.3.3.4.5. The historical table grants
+no new verdict for unselected current cases.
+
 The table records that checkpoint; [two subsequent transaction cases](command-operation-control.md#mixed-transaction-checkpoint-acceptance)
 pass separately. The commands also include those later cases; current broader bus acceptance stays .6.9.
 
@@ -449,7 +456,7 @@ Actual measurement and external SizeSet component examples continue in
 ## Complete actual Inputs, Sewing and Garment roots
 
 charge_design_input_resources borrows every private DesignInputsDefinition field in schema order:
-structure, parameters, retained recipe, Materials, source metadata and provided references. Actual
+structure,parameters,retained recipe,formula sources,Materials,higher metadata and provided refs. Actual
 source metadata owns both the higher host and a separately retained vector of DesignHostEntity.
 The producer first charges the host through DesignResourceSource, then precharges that exact stored
 vector. It does not regenerate a census through the semantic entities callback. Fixed Copy guards
@@ -470,26 +477,29 @@ let represented_model = meter.finish()?;
 
 The native complete model uses actual DesignSources with both external set families. Its structure
 has6 canonical declarations,2 Piece entries,1 copy and3 topology entries; parameter1, actual host39,
-retained metadata identities26, semantic landmark1 and an unused physical notion1 bring the total
-to80 entries. Piece reason/labels11 bytes, parameter token1, retained recipe10 and source628 bring
-the total to650 UTF-8 bytes. The actual revision is the successor of u128::MAX:129 magnitude bits.
-The complete input/sewing roots count78/79 entries respectively; the garment root counts80.
+retained metadata identities26,semantic landmark1,an unused physical notion1 and the source/index
+vectors1+1 bring the total to82 entries. Piece reason/labels11 bytes,parameter token1,retained
+recipe10,higher source628 and formula source25 bring the total to675 UTF-8 bytes. Its explicitly
+authored source92 is p+40 mm:7 original bytes and canonical (+ p length:40000) at18 bytes. The
+actual factory and separate byte count confirm25. The revision is u128::MAX's successor:129 bits.
+Complete input/sewing roots count80/81 entries respectively;the garment root counts82.
 
-Maximum77 entries refuses sources.entities at52+26, with Inputs scope, actual containing Design id
-and no collection index. This catalog owns no new entity id. Maximum78 refuses sewing.landmarks
-at78+1; maximum79 refuses notions at79+1. Maximum649 bytes preserves the original source chart's
-saved measurement-token refusal641+9, chart id and entry index1. Maximum128 bits preserves the
-initial design.revision refusal0+129. None publishes partial demand or changes the original model.
-Prior2 entries/2 bytes/7 bits compose to82/652/136 under the same meter, and a prior refusal survives.
+Maximum79 entries refuses sources.entities at54+26,with Inputs scope,actual containing Design id
+and no collection index. This captured metadata census owns no additional entity. Maximum80 refuses
+sewing.landmarks at80+1;maximum81 refuses notions at81+1. Maximum674 bytes preserves the original
+source chart's saved measurement-token refusal666+9,chart id and entry index1. Maximum128 bits
+preserves initial design.revision at0+129. No partial demand or original model mutation follows.
+Prior2 entries/2 bytes/7 bits compose to84/677/136 under the same meter;a prior refusal survives.
 
 After a real edge deletion, current validation refuses the held landmark/notion source. Accounting
-still preserves the exact held model and counts80/650/129: the journal gains one entry and live-edge
+still preserves the exact held model and counts82/675/129: the journal gains one entry and live-edge
 index loses one. An explicit empty complete draft counts0 entries/8 bytes/0 bits because its retained
 canonical recipe is (recipe); a7-byte limit refuses recipe.canonical at0+8. Empty authored source
-does not imply empty canonical syntax. Five new actual cases and prior28 source cases pass33, with
-strict core-library/source-test lint and formatting. A wrong expected static token-field spelling was
-corrected against the actual chart producer before acceptance. Python/OS byte counts independently
-confirm the additional11+10+1 bytes; the retained26-record census is read from the actual owner.
+does not imply empty canonical syntax. All five affected composition cases pass with strict scoped
+core/measure lint and formatting. The former source-free fixture's650-byte total now includes the
+actual new25-byte expression and two vector entries. The first manual canonical-byte estimate was
+corrected by the actual string/native assertion and a separate byte count before acceptance;no
+production resource policy changed. The retained26-record higher census stays the actual owner.
 
 This completes implemented model accounting under the source port's honest/exhaustive integration
 contract. [Installed current-model admission](command-operation-control.md#installed-current-model-admission)

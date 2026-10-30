@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — preserve exact source snapshots and held content charges
+## _(2026-10-30 UTC)_ — own actual Design formula sources and complete current references
 
-0598 gives FormulaSources exact Clone/Eq and private exhaustive source/index/doc/canonical views. New charge_formula_source_resources charges both S vectors before original/canonical buffers,without parser,lookup,provider/value read or index rebuild. Fixed node/index metadata remain Copy;limits are not stored.
-Native3/source4+scan256/document4/input-resource5/scoped strict lint/fmt pass. Separate cloned buffers/owners,original order/node counts/lookup/equality,4 entries/51B/0bits,all vector/text boundaries,cumulative6/53/1 and empty0/0/0 preserve sources and original sink errors. No Design field added yet.
-Book97/343/1632/2871/glossary310/9/158/0 pass;[whole0597 source acceptance](docs/history/stitchcad-devnotes-part756.md) retains four exact Git spans/prior live ids. Five bridge children now owned. Independent source27/8/native8 remains scoped. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D339 proofs protected.
-Next .4.2 actual Design-owned sources/global ownership/current joins/resource reconstruction,then .4.3 current proofs/.4.4 actual recipe/.4.5 independent integration. Only actual lets store. Full graph/backend/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates.
+0599 adds required explicit FormulaSources,global original source positions and actual all-canonical joins. Owned constructor errors retain target/position/refusal. Resource/snapshot/candidate/difference fields align. Root ownership computes no values;body kind/cycle/current runtime proof remains separate.
+Core23/doc5/Measure previews1+1/names1/source-snapshot2/resource5/scoped lint/fmt pass. Actual p+40 mm7+18=25B gives model82/675/129/prior84/677/136. Initial import/test visibility,missing-source fixtures and one-byte estimate fixed by actual failures/canonical assertion/byte count;no policy ceiling changed.
+D340 legacy0347 Derived1000 aliased actual operation1000;native global source guard rejects it. Fixture explicitly owns source9003/body;Measure/resource roots author92 from their actual waist parameter+40 mm. Book97/343/1634/2875/glossary0 pass;[whole0598](docs/history/stitchcad-devnotes-part757.md) retains four spans.
+Next .4.3 actual Design-backed source/recipe/current namespace proofs/resources,then .4.4 real reads/storage/.4.5 independent acceptance. Source27/8/native8 remains scoped;only actual lets store. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D334/D156/D223/PLANNING.5 owned;D339 proofs protected. Full PNT/push400.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

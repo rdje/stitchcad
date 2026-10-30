@@ -262,49 +262,70 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   resource quotas are logical retained content,not allocator bytes or complete runtime certificates.
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.1`
   Status: `done`
-  Goal: exact immutable FormulaSources snapshot Clone/Eq and complete source/index/original/
-  canonical text resource charging before Design embedding. Private exhaustive owner/doc views;
-  no reparse,source normalization,canonical-input lookup,value/provider read or cached results.
-  Charge both logical vectors and both actual text fields,retain original identity/index/location/
-  sink failure and enforce precise boundaries. Focused clone/pointer/content/resource tests and book.
-  Completion0598:exact immutable source snapshots and complete held source/index/text accounting.
-  - [x] REPRODUCE / ISSUE: actual DesignInputsDefinition snapshots require Clone/PartialEq/Eq
-    and exhaustive retained-field charging. FormulaSources is a separate owned source/index
-    collection;root embedding must not bypass either index or original/canonical buffer costs.
-  - [x] ROOT CAUSE (WHY + WHERE): actual Design input/resource/reconstruction interfaces and
-    source/doc/canonical owners inspected. rg -n 'resource_parts|resource_text|charge_formula_source'
-    sources.rs/expression_document.rs/canonical.rs/resource/inputs.rs → exhaustive private held
-    views and both-vector/both-buffer charges,rc=0. Current source limits are not stored content;
-    node count/index tuples are fixed Copy metadata,not runtime arenas or computed source caches.
-  - [x] FIX: FormulaSources derives exact Clone/PartialEq/Eq;private exhaustive source/index/doc/
-    canonical views expose held content. New charge_formula_source_resources precharges both S
-    vectors,then real original/canonical buffers in authored order. Preserve actual identity/index/
-    field and first cumulative sink failure;no parser,normalizer,lookup,provider/value read,rebuild
-    or source result. Reexport actual helper;no Design-owned field or whole-runtime claim yet.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_source_resources_contract --
-    --nocapture →three pass,rc=0. Clone buffers/lookup owners/order/node counts exact;canonical
-    aliases and reordered snapshots remain unequal. Actual two-source/tangent-pole fixture charges
-    four entries/51 bytes/zero bits without evaluation. S/index and all original/canonical quota
-    boundaries preserve exact first source/field/position. Prior2/2/1 composes6/53/1;empty0/0/0
-    retains original earlier sink error. Original registries remain equal after success/refusal.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_sources_contract --test
-    formula_expression_document_contract -- --nocapture →four/four pass,including original256
-    independent duplicate scans,rc=0. cargo test -p sc-core --test design_resource_contract inputs::
-    -- --nocapture →five pass/42 filtered,rc=0. Scoped strict lib/new target Clippy/changed rustfmt/
-    diff pass,rc=0. Positive book97/343/1632/2871/glossary310/9/158/0 and756 four exact Git spans/
-    prior live ids/order pass,rc=0. No broad matrix/full CI or new source/recipe/platform campaign.
-  - [x] LOCKSTEP: exact source snapshots,resource buffers/examples/limits/failure locations and
-    next root boundary in book,task/index/MEM/DEV/CHANGE/LIVE align. Next .4.2 actual Design-owned
-    registry/global identities/resource reconstruction,then .4.3 namespace/currentness/proofs,
-    .4.4 real ordered recipe reads/storage and .4.5 independent integration. Full geometry/tan/
-    load/replay/backend/platform/physical and D334/D156/D223/PLANNING.5 owned. G1 6/18/G0
-    unapproved;full/hosted79bd6f6a SHA-scoped. D339/current retained proofs untouched.
-    promotion: declined (source snapshots/accounting apply existing exhaustive held-content and unbound-source rules;public behavior and exact native proof live in the linked source/resource contracts).
+  Goal:0598 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part757.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.2`
-  Status: `pending`
+  Status: `done`
   Goal: real Design-owned source registry/schema,complete global owned-id positions/collisions and
   exact snapshot/resource preservation across reconstruction. Resolve required current source joins
   against normative draft/current rules;no synthetic formula sources or values from metadata ids.
+  Concrete0599 scope:required actual Design source ownership/current joins and exact held-resource/
+  snapshot/candidate paths;completed implementation/proof constraints are recorded below.
+  D340 P2 fixture integration debt,owned/fixing in this leaf:core design_structure_contract
+  inputs() has Length40 Derived{formula:1000},while fixture() actually owns1000 as creating
+  operation0. Reproduce: cargo test -p sc-core --test design_structure_contract
+  higher_metadata_cannot_alias_design_or_retired_creating_operation -- --nocapture →one pass/18
+  filtered,rc=0;original public identity witness is Operation{index:0}. git log -S locates0347/
+  91033474 introducing this referenced id in a structural-only fixture. That historical scope
+  supplied no formula-source owner/proof;do not reinterpret its pass as real source integration.
+  Impact:an actual separately owned source1000 would collide with the operation,so it cannot fill
+  this legacy placeholder. Fix now:fixture gets an explicit distinct actual source9003/body and
+  canonical formula ref;retain a negative actual creating-operation/source collision control.
+  Fixture migration:inspect-only Measurement preview initially rc101:Length12/index2 MissingSource92.
+  mtm_fixture.rs had only waistband12 state;roots now author92 as actual waist+40 mm,and replacement
+  fixtures explicitly supply740002/750201 before proposals. No body/value inferred from metadata.
+  Resource/snapshot checks initially reject old650B expectations and missing975001. Actual canonical
+  assertion/separate byte count correct manual24B to7+18=25B;model82/675/129. Source975001 is added
+  before host wrapping;neighbor refusal offsets change only with actual retained content.
+  Commit integrity:aggregate task gate1500540/1500000 required tightening duplicated scope/migration
+  notes in this leaf. All findings/history/reproduction/proofs retained;no ceiling changed.
+  Completion0599:actual explicit Design source ownership/current joins and complete held-field wiring.
+  - [x] REPRODUCE / ISSUE: Design root lacked source ownership while standalone source execution
+    was accepted. Required Derived refs could not select real containing owners. D340 fixture
+    debt reproduced/history scoped above;older Model/Measurement fixtures also lacked source92.
+  - [x] ROOT CAUSE (WHY + WHERE): actual Design input/census/resource/bus-difference definitions,
+    SourceInputs factory/refusal and normative single assignment/source boundaries inspected.
+    rg -n 'formula_sources|FormulaSources|FormulaSourceInputs' inputs.rs/composition.rs/difference.rs
+    → required field,complete census/join,actual charging and exact context comparisons,rc=0.
+    Current nonoptional Derived refs need real owners;source/provenance/observation fields stay uses.
+  - [x] FIX: required explicit FormulaSources field/shared accessor;source positions join schema-
+    order global census before current links. Reuse complete all-canonical source join after
+    parameters;retain actual owned position/target/refusal when failed constructor input drops.
+    Full snapshot/resource/candidate/difference paths preserve sources. Explicit fixture sources
+    replace legacy placeholders;no body/value inferred from metadata. No body kind/cycle/value/
+    recipe execution or implicit binding follows current-reference acceptance.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract --
+    --nocapture →23 pass,rc=0. Four new root contracts cover unused sources,exact snapshots/all
+    global roles (including actual operation1000),dedicated/general missing sources,provenance
+    versus formula and complete source-buffer charges. D340 repaired with real source9003/body.
+    cargo test -p sc-core --doc design::inputs -- --nocapture →five pass,actual required-field
+    E0063/privacy E0616/E0308/E0624/lifetime E0515 (+E0310) guards,rc=0. No returned values invented.
+  - [x] NO REGRESSION: focused sc-measure design_inputs_contract filters for inspect-only
+    Measurement preview,final ordered group delta,selected actual formula names and
+    source_clone_footprint:: →1/1/1/2 pass,rc=0. Nonempty source975001 survives snapshots and exact
+    retained publication;D293 cache checks remain green. resource_contract composition:: →five
+    pass/28 filtered,rc=0. Actual source p+40 mm has7+18=25B;whole root82/675/129,prior84/677/136
+    and exact neighboring first failures verified. Initial E0425 import/E0446 test visibility,
+    missing-source fixtures and manual one-byte estimate corrected;actual failed checks retained
+    above. Scoped core/measure lib/affected-target strict Clippy/changed rustfmt/diff pass,rc=0.
+    Book97/343/1634/2875/glossary310/9/158/0 and757 four Git spans/prior live ids/order pass,rc=0.
+    Full current source/recipe/Design/bus/platform acceptance remains owned .4.5;no broad CI claim.
+  - [x] LOCKSTEP: new Design source field/schema order/current typed joins,675-byte resource
+    fixture,original-source snapshots/context guards/examples/boundaries in book,task/index/MEM/
+    DEV/CHANGE/LIVE align. Next .4.3 actual Design-backed namespace/source/recipe proof joins and
+    complete resource populations,then .4.4 real recipe reads/storage/.4.5 independent acceptance.
+    D340 fixed;D334/D156/D223/PLANNING.5 and full graph/tan/geometry/load/replay/backend/platform/
+    physical owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped. Protected proof unchanged.
+    promotion: declined (new owned field applies established global id/exhaustive-content/source-join rules;concrete API and D340 history/proof are retrievable in source/resource contracts and this task).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3`
   Status: `pending`
   Goal: actual Design-backed initial namespace/source graph/recipe proof joins over the same current

@@ -1,12 +1,13 @@
 //! Complete actual higher roots, preserving one cumulative sink and original component locations.
 use super::{
     charge_closure_inventory_resources, charge_construction_inventory_resources,
-    charge_hem_inventory_resources, charge_layer_inventory_resources,
-    charge_material_inventory_resources, charge_notion_placement_inventory_resources,
-    charge_parameter_resources, charge_pocket_inventory_resources,
-    charge_recipe_document_resources, charge_sewing_graph_resources, fixed_slice, fixed_value,
-    DesignResourceLimitError, DesignResourceLocation, DesignResourceScope, DesignResourceSink,
-    DesignResourceSource, ResourceProjection,
+    charge_formula_source_resources, charge_hem_inventory_resources,
+    charge_layer_inventory_resources, charge_material_inventory_resources,
+    charge_notion_placement_inventory_resources, charge_parameter_resources,
+    charge_pocket_inventory_resources, charge_recipe_document_resources,
+    charge_sewing_graph_resources, fixed_slice, fixed_value, DesignResourceLimitError,
+    DesignResourceLocation, DesignResourceScope, DesignResourceSink, DesignResourceSource,
+    ResourceProjection,
 };
 use crate::design::{
     DesignGarment, DesignGarmentDefinition, DesignInputs, DesignInputsDefinition, DesignSewing,
@@ -35,6 +36,7 @@ fn charge_inputs_projected<H: DesignResourceSource>(
         structure,
         parameters,
         recipe,
+        formula_sources,
         materials,
         sources,
         references,
@@ -42,6 +44,7 @@ fn charge_inputs_projected<H: DesignResourceSource>(
     super::structure::charge_structure_projected(structure, projection, sink)?;
     charge_parameter_resources(parameters, sink)?;
     charge_recipe_document_resources(recipe, sink)?;
+    charge_formula_source_resources(formula_sources, sink)?;
     charge_material_inventory_resources(materials, sink)?;
     let (host, entities) = sources.resource_parts();
     host.charge_resources(sink)?;

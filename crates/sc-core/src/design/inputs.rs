@@ -9,14 +9,24 @@ use crate::{
     ontology::{EntityId, MaterialInventory, MaterialInventoryError},
     recipe::{
         FormulaDeclaration, FormulaInitialDeclaration, FormulaNamespace, FormulaNamespaceError,
-        FormulaRecipeDocument,
+        FormulaRecipeDocument, FormulaSourceInputRefusal, FormulaSourceInputs, FormulaSources,
     },
-    value::CanonicalInputs,
+    value::{CanonicalInputPosition, CanonicalInputTarget, CanonicalInputs},
 };
 use core::fmt;
 use std::collections::BTreeMap;
 
 /// Exact implemented input components; this is not the complete Design schema.
+/// The original expression inventory must be supplied explicitly;omitting it cannot create a root:
+/// ```compile_fail
+/// fn omit<H>(definition:sc_core::design::DesignInputsDefinition<H>)
+///     ->sc_core::design::DesignInputsDefinition<H> {
+///     let sc_core::design::DesignInputsDefinition {
+///         structure,parameters,recipe,materials,sources,references,..
+///     }=definition;
+///     sc_core::design::DesignInputsDefinition {structure,parameters,recipe,materials,sources,references}
+/// }
+/// ```
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct DesignInputsDefinition<H> {
     /// Actual identity/revision, canonical inputs, Pieces, copies and topology owner.
@@ -25,6 +35,8 @@ pub struct DesignInputsDefinition<H> {
     pub parameters: DesignParameters,
     /// Exact original recipe text and canonical syntax identity, without a static/execution proof.
     pub recipe: FormulaRecipeDocument,
+    /// Actual separately identified original formula sources;no computed values or default registry.
+    pub formula_sources: FormulaSources,
     /// Actual Material inventory and canonical property targets.
     pub materials: MaterialInventory,
     /// Actual checked higher metadata owner; canonical declarations remain in structure only.
@@ -41,6 +53,11 @@ pub enum DesignInputsPosition {
     /// Actual parameter metadata.
     Parameter {
         /// Zero-based authored parameter position.
+        index: usize,
+    },
+    /// Actual original separately owned expression-source entity.
+    FormulaSource {
+        /// Zero-based original source position,including unused sources.
         index: usize,
     },
     /// Actual Material metadata.
@@ -66,6 +83,16 @@ pub enum DesignInputsError<E> {
     },
     /// Original parameter/current-canonical target refusal.
     Parameters(Box<DesignParameterError>),
+    /// Original all-canonical/source join refusal,with owned witnesses after construction input drops.
+    /// No source text,value or fabricated language token is copied into this structural error.
+    FormulaSources {
+        /// Actual original canonical family/position.
+        position: CanonicalInputPosition,
+        /// Actual canonical target identity/representation/kind.
+        target: CanonicalInputTarget,
+        /// Original typed missing-source or collision refusal from the existing join factory.
+        refusal: FormulaSourceInputRefusal,
+    },
     /// Original actual Material/current-property/Piece-assignment refusal.
     Materials(Box<MaterialInventoryError>),
     /// Original higher metadata/current-canonical refusal, preserving the concrete host cause.
@@ -84,6 +111,14 @@ impl<E: fmt::Display> fmt::Display for DesignInputsError<E> {
                 write!(f, "Design input identity {identity} repeats at {duplicate:?}, first supplied at {first:?}")
             }
             Self::Parameters(issue) => write!(f, "Design input parameters: {issue}"),
+            Self::FormulaSources {
+                position,
+                target,
+                refusal,
+            } => write!(
+                f,
+                "Design formula sources at {position:?} ({target:?}): {refusal:?}"
+            ),
             Self::Materials(issue) => write!(f, "Design input Materials: {issue}"),
             Self::Sources(issue) => write!(f, "Design input sources: {issue}"),
             Self::References(issue) => write!(f, "Design input references: {issue}"),
@@ -93,7 +128,7 @@ impl<E: fmt::Display> fmt::Display for DesignInputsError<E> {
 impl<E: std::error::Error + 'static> std::error::Error for DesignInputsError<E> {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
-            Self::DuplicateIdentity { .. } => None,
+            Self::DuplicateIdentity { .. } | Self::FormulaSources { .. } => None,
             Self::Parameters(issue) => Some(issue.as_ref()),
             Self::Materials(issue) => Some(issue.as_ref()),
             Self::Sources(issue) => Some(issue.as_ref()),
@@ -176,7 +211,7 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     /// Own exact implemented components after complete id and current target/assignment checks.
     ///
     /// # Errors
-    /// Returns first owned-id collision, then parameter, Material/Piece, source and reference causes.
+    /// Returns first owned-id collision,then parameter,formula-source,Material/Piece,metadata and reference causes.
     pub fn new(definition: DesignInputsDefinition<H>) -> Result<Self, DesignInputsError<H::Error>>
     where
         H: DesignReferenceHost,
@@ -224,6 +259,11 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     #[must_use]
     pub const fn recipe(&self) -> &FormulaRecipeDocument {
         &self.definition.recipe
+    }
+    /// Actual original source registry owned by this Design,including unused sources and lookup index.
+    #[must_use]
+    pub const fn formula_sources(&self) -> &FormulaSources {
+        &self.definition.formula_sources
     }
     /// Original actual Material inventory, without physical/evidence certification.
     #[must_use]
@@ -289,7 +329,7 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
             .collect::<Result<Vec<_>, _>>()?;
         FormulaNamespace::new(initial).map_err(DesignFormulaError::Namespace)
     }
-    /// Complete actual ownership positions: structure, parameters, Materials, then higher metadata.
+    /// Complete actual ownership positions:structure,parameters,formula sources,Materials,then higher metadata.
     /// Referenced source/evidence/formula/assignment ids remain uses, not additional owners.
     #[must_use]
     pub fn identities(&self) -> Vec<(EntityId, DesignInputsPosition)> {
@@ -303,6 +343,15 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
                     .enumerate()
                     .map(|(index, parameter)| {
                         (parameter.id(), DesignInputsPosition::Parameter { index })
+                    }),
+            )
+            .chain(
+                self.formula_sources()
+                    .sources()
+                    .iter()
+                    .enumerate()
+                    .map(|(index, source)| {
+                        (source.id(), DesignInputsPosition::FormulaSource { index })
                     }),
             )
             .chain(
@@ -324,12 +373,13 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
     }
     /// Recheck whole implemented ownership and actual current links against this state's canonical inputs.
     ///
-    /// Identity checks precede parameters, complete Material/current Piece assignments, then complete
+    /// Identity checks precede parameters,all actual canonical Derived/source joins,Material/current Piece
+    /// assignments,then complete
     /// higher sources and provided reference joins. Uncertain states and unresolved assignments remain intact.
     /// No namespace/kind/evaluation, geometry, physical or release readiness follows acceptance.
     ///
     /// # Errors
-    /// Returns first duplicate then original parameter, Material/assignment, current host or reference refusal.
+    /// Returns first duplicate,then original parameter,formula-source,Material/assignment,host or reference refusal.
     pub fn validate_current(&self) -> Result<(), DesignInputsError<H::Error>>
     where
         H: DesignReferenceHost,
@@ -347,6 +397,13 @@ impl<H: DesignMetadataHost> DesignInputs<H> {
         self.parameters()
             .validate_current(self.inputs())
             .map_err(|issue| DesignInputsError::Parameters(Box::new(issue)))?;
+        FormulaSourceInputs::new(self.inputs(), self.formula_sources()).map_err(|issue| {
+            DesignInputsError::FormulaSources {
+                position: issue.position(),
+                target: issue.target(),
+                refusal: issue.refusal(),
+            }
+        })?;
         self.materials()
             .assignments(self.structure().pieces(), self.inputs())
             .map_err(|issue| DesignInputsError::Materials(Box::new(issue)))?;

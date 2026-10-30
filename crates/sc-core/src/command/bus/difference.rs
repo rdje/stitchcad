@@ -114,20 +114,38 @@ pub(super) fn unchanged_noncanonical_context_at_revision<H: DesignReferenceHost 
         structure: _,
         parameters,
         recipe,
+        formula_sources,
         materials,
         sources,
         references,
     } = before.inputs().definition();
-    let original = (parameters, recipe, materials, sources, references);
+    let original = (
+        parameters,
+        recipe,
+        formula_sources,
+        materials,
+        sources,
+        references,
+    );
     let DesignInputsDefinition {
         structure: _,
         parameters,
         recipe,
+        formula_sources,
         materials,
         sources,
         references,
     } = after.inputs().definition();
-    if original != (parameters, recipe, materials, sources, references) {
+    if original
+        != (
+            parameters,
+            recipe,
+            formula_sources,
+            materials,
+            sources,
+            references,
+        )
+    {
         return Err(CommandDifferenceError::InputContext);
     }
     let DesignStructureDefinition {

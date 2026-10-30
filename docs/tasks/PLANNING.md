@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D339 — runtime continuity and book search
+## D308–D340 — runtime continuity and source ownership
 
-D308–D333 fixed0537–0563;[prior ledger](../history/window24.md#stitchcad-devnotes-part726md). D335–D339 fixed;D339 native chapter search0586 preserves full words/terms,normal warnings retained. Next .5e.2.5.derived.3.3.3.4.2 owned sources. D334 P2:G0-CONTRACT.15f after G1/before G0;D223/PLANNING.5 open. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped.
+D308–D333 fixed0537–0563;[prior ledger](../history/window24.md#stitchcad-devnotes-part726md). D335–D339 fixed;D339 proof protected. D340 P2 fixed0599:actual source9003 and operation/source collision guard;owner .5e.2.5.derived.3.3.3.4.2. D334 P2:G0-CONTRACT.15f after G1/before G0;D223/PLANNING.5 open. Full/hosted79bd6f6a SHA-scoped.

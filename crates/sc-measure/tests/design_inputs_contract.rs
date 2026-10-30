@@ -67,6 +67,22 @@ fn fixture() -> DesignInputsDefinition<DesignSources> {
         parameters,
         materials,
         sources,
+        formula_sources: {
+            // Canonical waistband12 already names92;the fixture now authors that real expression.
+            let expression =
+                sc_core::recipe::FormulaExpressionDocument::new("authored_body+40 mm".into())
+                    .expect("actual parameter-driven fixture source");
+            let limits = sc_core::recipe::FormulaSourceLimits::new(
+                1,
+                expression.source().len(),
+                expression.canonical().as_str().len(),
+            );
+            sc_core::recipe::FormulaSources::new(
+                vec![sc_core::recipe::FormulaSource::new(id(92), expression)],
+                limits,
+            )
+            .expect("actual formula92 owner")
+        },
         recipe: FormulaRecipeDocument::new("let width:length=body_waist".to_owned())
             .expect("exact owned recipe syntax"),
     }
@@ -2195,6 +2211,7 @@ fn construction_and_garment_ownership_rechecks_whole_root_before_empty_scope() {
         structure: definition.structure,
         parameters: definition.parameters,
         recipe: definition.recipe,
+        formula_sources: definition.formula_sources,
         materials: definition.materials,
         sources,
         references: definition.references,

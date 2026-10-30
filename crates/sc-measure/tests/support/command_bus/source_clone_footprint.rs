@@ -91,7 +91,8 @@ impl DesignResourceSource for CacheHost {
     }
 }
 fn owner() -> DesignGarment<CacheHost> {
-    let original = super::notch_preview::owner();
+    let original =
+        measurement_preview::with_formula_source(super::notch_preview::owner(), 975001, "1 mm/3");
     let inputs = original.inputs().definition();
     let host = CacheHost {
         actual: inputs.sources.host().clone(),
@@ -108,6 +109,7 @@ fn owner() -> DesignGarment<CacheHost> {
         structure: inputs.structure.clone(),
         parameters: inputs.parameters.clone(),
         recipe: inputs.recipe.clone(),
+        formula_sources: inputs.formula_sources.clone(),
         materials: inputs.materials.clone(),
         sources,
         references: inputs.references,
@@ -142,6 +144,20 @@ fn model_snapshots_share_actual_source_while_charging_each_logical_snapshot() {
     send_sync::<DesignGarment<DesignSources>>();
     let original = owner();
     let snapshot = original.clone();
+    assert_eq!(
+        snapshot.inputs().formula_sources(),
+        original.inputs().formula_sources()
+    );
+    assert_eq!(
+        snapshot
+            .inputs()
+            .formula_sources()
+            .source(id(975001))
+            .expect("actual retained source")
+            .expression()
+            .source(),
+        "1 mm/3"
+    );
     assert!(
         core::ptr::eq(
             original.inputs().sources().host(),

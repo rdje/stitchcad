@@ -391,7 +391,7 @@ fn group_preview_binds_actual_design_then_exact_revision_then_original_handler_f
 
 #[test]
 fn final_delta_reads_actual_declarations_and_assignments_in_original_inventory_order() {
-    let owner = notch_preview::owner();
+    let owner = measurement_preview::with_formula_source(notch_preview::owner(), 750201, "1 mm/3");
     let length = measurement_preview::original(&owner);
     let mut definition = length.definition().clone();
     definition.source = id(750200);

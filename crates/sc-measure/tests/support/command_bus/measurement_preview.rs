@@ -13,6 +13,36 @@ fn owner() -> DesignGarment<DesignSources> {
     DesignGarment::new(material_preview::definition())
         .expect("actual supported garment/material/source host")
 }
+// Explicit authored fixture source,added through the real public model constructors.
+// A Derived replacement references this owner;no body/result is inferred from its metadata id.
+pub(super) fn with_formula_source(
+    owner: DesignGarment<DesignSources>,
+    identity: u128,
+    body: &str,
+) -> DesignGarment<DesignSources> {
+    let mut inputs = owner.inputs().definition().clone();
+    let mut rows = inputs.formula_sources.sources().to_vec();
+    rows.push(sc_core::recipe::FormulaSource::new(
+        id(identity),
+        sc_core::recipe::FormulaExpressionDocument::new(body.into())
+            .expect("explicit authored fixture expression"),
+    ));
+    let limits = sc_core::recipe::FormulaSourceLimits::new(
+        rows.len(),
+        rows.iter().map(|s| s.expression().source().len()).sum(),
+        rows.iter()
+            .map(|s| s.expression().canonical().as_str().len())
+            .sum(),
+    );
+    inputs.formula_sources =
+        sc_core::recipe::FormulaSources::new(rows, limits).expect("actual source registry");
+    let mut sewing = owner.sewing().definition().clone();
+    sewing.inputs =
+        sc_core::design::DesignInputs::new(inputs).expect("actual containing source ownership");
+    let mut garment = owner.definition().clone();
+    garment.sewing = sc_core::design::DesignSewing::new(sewing).expect("actual sewing currentness");
+    DesignGarment::new(garment).expect("actual immutable source-bearing garment")
+}
 pub(super) fn original(owner: &DesignGarment<DesignSources>) -> LengthDeclaration {
     owner
         .inputs()
@@ -50,7 +80,7 @@ fn report(
 
 #[test]
 fn inspect_only_measurement_preview_preserves_exact_source_unknown_derived_and_original_owner() {
-    let owner = owner();
+    let owner = with_formula_source(owner(), 740002, "1 mm/3");
     let original = original(&owner);
     let pieces = owner.inputs().structure().pieces().pieces().to_vec();
     let design = owner.inputs().id();

@@ -157,6 +157,29 @@ fn fixture() -> DesignGarment<DesignSources> {
         })
         .expect("actual structural root"),
         parameters,
+        formula_sources: {
+            // Same authored waist-plus-ease fixture under this root's actual parameter name p.
+            let expression = sc_core::recipe::FormulaExpressionDocument::new("p+40 mm".into())
+                .expect("actual fixture expression");
+            assert_eq!(expression.canonical().as_str(), "(+ p length:40000)");
+            assert_eq!(
+                (
+                    expression.source().len(),
+                    expression.canonical().as_str().len()
+                ),
+                (7, 18)
+            );
+            let limits = sc_core::recipe::FormulaSourceLimits::new(
+                1,
+                expression.source().len(),
+                expression.canonical().as_str().len(),
+            );
+            sc_core::recipe::FormulaSources::new(
+                vec![sc_core::recipe::FormulaSource::new(id(92), expression)],
+                limits,
+            )
+            .expect("actual original source owner")
+        },
         recipe: FormulaRecipeDocument::new(" \n".into())
             .expect("exact source and empty canonical recipe"),
         materials,
@@ -199,7 +222,7 @@ fn location(scope: Scope, field: &'static str, owner: Option<u128>) -> Location 
 fn complete_actual_roots_compose_the_retained_census_host_and_each_later_owner() {
     let garment = fixture();
     let original = garment.clone();
-    let mut input_meter = Meter::new(limits(78, 650, 129));
+    let mut input_meter = Meter::new(limits(80, 675, 129));
     charge_design_input_resources(garment.inputs(), &mut input_meter)
         .expect("complete actual inputs");
     assert_eq!(
@@ -207,9 +230,9 @@ fn complete_actual_roots_compose_the_retained_census_host_and_each_later_owner()
             .finish()
             .expect("complete input demand")
             .collection_entries(),
-        78
+        80
     );
-    let mut sewing_meter = Meter::new(limits(79, 650, 129));
+    let mut sewing_meter = Meter::new(limits(81, 675, 129));
     charge_design_sewing_resources(garment.sewing(), &mut sewing_meter)
         .expect("complete actual sewing");
     assert_eq!(
@@ -217,9 +240,9 @@ fn complete_actual_roots_compose_the_retained_census_host_and_each_later_owner()
             .finish()
             .expect("complete sewing demand")
             .collection_entries(),
-        79
+        81
     );
-    let mut meter = Meter::new(limits(80, 650, 129));
+    let mut meter = Meter::new(limits(82, 675, 129));
     charge_design_garment_resources(&garment, &mut meter).expect("every actual owned root");
     let demand = meter.finish().expect("complete logical model content");
     assert_eq!(
@@ -228,7 +251,7 @@ fn complete_actual_roots_compose_the_retained_census_host_and_each_later_owner()
             demand.text_bytes(),
             demand.counter_bits()
         ),
-        (80, 650, 129)
+        (82, 675, 129)
     );
     assert_eq!(garment, original);
 }
@@ -237,7 +260,7 @@ fn whole_model_refusals_preserve_cross_root_original_locations_and_exact_first_e
     let garment = fixture();
     for (policy, expected) in [
         (
-            limits(80, 650, 128),
+            limits(82, 675, 128),
             Error::CounterBits {
                 maximum: 128,
                 consumed: 0,
@@ -246,41 +269,41 @@ fn whole_model_refusals_preserve_cross_root_original_locations_and_exact_first_e
             },
         ),
         (
-            limits(77, 650, 129),
+            limits(79, 675, 129),
             Error::Count {
                 unit: Unit::CollectionEntries,
-                maximum: 77,
-                consumed: 52,
+                maximum: 79,
+                consumed: 54,
                 requested: 26,
                 location: location(Scope::Inputs, "sources.entities", Some(50000)),
             },
         ),
         (
-            limits(78, 650, 129),
+            limits(80, 675, 129),
             Error::Count {
                 unit: Unit::CollectionEntries,
-                maximum: 78,
-                consumed: 78,
+                maximum: 80,
+                consumed: 80,
                 requested: 1,
                 location: location(Scope::Sewing, "sewing.landmarks", None),
             },
         ),
         (
-            limits(79, 650, 129),
+            limits(81, 675, 129),
             Error::Count {
                 unit: Unit::CollectionEntries,
-                maximum: 79,
-                consumed: 79,
+                maximum: 81,
+                consumed: 81,
                 requested: 1,
                 location: location(Scope::Garment, "notions", None),
             },
         ),
         (
-            limits(80, 649, 129),
+            limits(82, 674, 129),
             Error::Count {
                 unit: Unit::TextBytes,
-                maximum: 649,
-                consumed: 641,
+                maximum: 674,
+                consumed: 666,
                 requested: 9,
                 location: Location {
                     index: Some(1),
@@ -308,7 +331,7 @@ fn complete_model_keeps_prior_units_and_cannot_clear_a_prior_refusal() {
     let garment = fixture();
     let original = garment.clone();
     let prior = location(Scope::Inputs, "earlier", None);
-    let mut meter = Meter::new(limits(82, 652, 136));
+    let mut meter = Meter::new(limits(84, 677, 136));
     meter.charge_entries(2, prior).expect("prior entries");
     meter.charge_text("é", prior).expect("prior text");
     meter.charge_counter_bits(7, prior).expect("prior bits");
@@ -320,7 +343,7 @@ fn complete_model_keeps_prior_units_and_cannot_clear_a_prior_refusal() {
             demand.text_bytes(),
             demand.counter_bits()
         ),
-        (82, 652, 136)
+        (84, 677, 136)
     );
     let mut refused = Meter::new(limits(1, 1, 1));
     let first = refused
@@ -360,7 +383,7 @@ fn complete_held_model_accounting_does_not_run_semantic_repair_or_current_valida
     held.validate_current()
         .expect_err("deleted actual landmark/notion source needs repair");
     let original = held.clone();
-    let mut meter = Meter::new(limits(80, 650, 129));
+    let mut meter = Meter::new(limits(82, 675, 129));
     charge_design_garment_resources(&held, &mut meter)
         .expect("held data without repair/current lookup");
     let demand = meter
@@ -372,7 +395,7 @@ fn complete_held_model_accounting_does_not_run_semantic_repair_or_current_valida
             demand.text_bytes(),
             demand.counter_bits()
         ),
-        (80, 650, 129)
+        (82, 675, 129)
     );
     assert_eq!(held, original);
 }
@@ -441,6 +464,11 @@ fn actual_empty_draft_keeps_its_retained_canonical_recipe_and_zero_other_dynamic
         })
         .expect("actual empty structure"),
         parameters,
+        formula_sources: sc_core::recipe::FormulaSources::new(
+            vec![],
+            sc_core::recipe::FormulaSourceLimits::new(0, 0, 0),
+        )
+        .expect("explicit source-free fixture"),
         recipe: FormulaRecipeDocument::new(String::new()).expect("empty authored recipe"),
         materials,
         sources,

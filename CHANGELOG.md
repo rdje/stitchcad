@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0598 — preserve exact source snapshots and complete held content accounting
+## STITCHCAD-G1-0599 — own actual Design formula sources and required current joins
 
-- Add exact source registry Clone/Eq and exhaustive held-content views. Charge both source/index vectors and real original/canonical buffers with original owner/index/first sink failures. No reparse,provider/value read or source cache. Source/resource examples and next Design boundary documented.
-- Native3/source4+scan256/document4/input-resource5/scoped lint/fmt/book97/343/1632/2871/glossary0 pass. Actual4 entries/51B/0bits and cumulative/empty/refusal cases exact. Whole0597 retained756/four spans/live ids. Next .4.2 Design root. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. Full integration open.
+- Require explicit source registry,global source positions and actual all-canonical Derived joins. Preserve typed owned refusals/source buffers across resources,snapshots,candidates and context comparison. D340 fixture debt repaired with real distinct sources;book examples/schema/boundaries align.
+- Core23/doc5/Measure previews1+1/names1/snapshot2/resource5/scoped lint/fmt/book97/343/1634/2875/glossary0 pass. Exact model82/675/129 includes source25B. Whole0598 retained757/four spans/live ids. Next .4.3 Design-backed proofs,then recipe/integration. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

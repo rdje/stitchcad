@@ -27,7 +27,7 @@ fn inputs(length: u128, scalar: u128) -> CanonicalInputs {
         vec![LengthDeclaration::new(LengthDeclarationDefinition {
             id: id(length),
             source: id(10),
-            state: LengthState::Derived { formula: id(1_000) },
+            state: LengthState::Derived { formula: id(9_003) },
         })
         .expect("explicit derived length")],
         vec![
@@ -346,9 +346,9 @@ mod input_composition {
         },
     };
     #[derive(Clone, Debug, PartialEq, Eq)]
-    struct Markers(Vec<DesignHostEntity>);
+    pub(super) struct Markers(pub(super) Vec<DesignHostEntity>);
     #[derive(Clone, Debug, PartialEq, Eq)]
-    struct MissingFixtureRecord;
+    pub(super) struct MissingFixtureRecord;
     impl fmt::Display for MissingFixtureRecord {
         fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
             f.write_str("fixture has no measurement metadata")
@@ -418,7 +418,7 @@ mod input_composition {
         )
         .expect("actual unknown properties")
     }
-    fn definition() -> DesignInputsDefinition<Markers> {
+    pub(super) fn definition() -> DesignInputsDefinition<Markers> {
         let mut definition = structural_fixture();
         let mut scalars = definition.inputs.scalars().to_vec();
         scalars.push(
@@ -455,12 +455,25 @@ mod input_composition {
             &definition.inputs,
         )
         .expect("self-contained marker host");
+        let expression = sc_core::recipe::FormulaExpressionDocument::new("1 mm/3".into())
+            .expect("explicit actual source body");
+        let source_limits = sc_core::recipe::FormulaSourceLimits::new(
+            1,
+            expression.source().len(),
+            expression.canonical().as_str().len(),
+        );
+        let formula_sources = sc_core::recipe::FormulaSources::new(
+            vec![sc_core::recipe::FormulaSource::new(id(9003), expression)],
+            source_limits,
+        )
+        .expect("actual distinct formula owner,not operation1000");
         DesignInputsDefinition {
             references: DesignSourceReferences {
                 measurement_table: None,
                 ease_set: None,
                 size_set: None,
             },
+            formula_sources,
             structure: DesignStructure::new(definition).expect("actual historical structure"),
             parameters,
             materials,
@@ -885,3 +898,6 @@ fn topology_report_refuses_unknown_whole_sources_and_keeps_explicit_empty_drafts
     assert!(empty_report.registrations().is_empty() && empty_report.piece_edges().is_empty());
     assert!(empty_report.is_ready());
 }
+
+#[path = "support/design_formula_sources.rs"]
+mod formula_sources;

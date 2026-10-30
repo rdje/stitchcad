@@ -260,24 +260,36 @@ cargo test -p sc-measure --test design_sources_contract
 
 ## Owned core input composition
 
-DesignInputs owns structure, parameters, exact recipe, Materials and checked metadata host; only
-structure owns CanonicalInputs. Provided refs/selected names need explicit checks below;
-sewing/garment currentness/readiness remain separate.
+DesignInputs owns structure,parameters,exact recipe,explicit FormulaSources,Materials and checked
+higher metadata host;only structure owns CanonicalInputs. formula_sources is a required construction
+field,with no implicit registry or synthesized body. Source-free drafts explicitly supply an empty
+registry and cannot contain an unresolved required Derived formula reference. Provided optional
+refs/selected names need explicit checks below;sewing/garment currentness/readiness remain separate.
 
-Ownership visits structure (Design/canonical/Pieces/copies/operations), parameters, Materials, then
-higher metadata. Retired creators still own ids; evidence/formula/material refs remain uses.
-DuplicateIdentity retains both original DesignInputsPositions.
+Ownership visits structure (Design/canonical/Pieces/copies/operations),parameters,original formula
+sources,Materials,then higher metadata. Every formula source is a real separately owned entity,
+including unused sources. Retired creators still own ids. DuplicateIdentity keeps both actual
+DesignInputsPositions in this schema order. Canonical formula/provenance/evidence/material fields
+remain references;they do not create another owner or permit two owned roles to share one id.
 
-Current parameter targets, all Material properties/Piece assignments/sources are rechecked against
-this canonical owner; past checks cannot substitute. Unresolved assignments/uncertainty/held Piece
-repairs survive edited history without reconstruction. Recipe text/canonical syntax stays exact;
-unbound names need binding/checking.
+After identities,current parameter targets precede the complete existing FormulaSourceInputs join:
+every actual canonical Derived state's sole formula id must select an owned expression. Dedicated
+Length order precedes general scalar order,including unused targets. Unknown,Known,Assumed and
+Preference do not require expression sources. The separate provenance/source field never substitutes
+for formula. Original family/position,target/id/kind and FormulaSourceInputRefusal survive in the
+owned DesignInputsError::FormulaSources payload after failed construction drops its input carrier.
+
+Then all Material properties/Piece assignments,higher metadata and provided references recheck
+against this canonical owner;past checks cannot substitute. Unresolved assignments/uncertainty/held
+Piece repairs survive edited history without reconstruction. Recipe/source text,canonical syntax,
+source order and factory counts stay exact. Source body names/kinds/cycles/values need their actual
+later checking/execution;current ownership supplies no evaluated result or rounding boundary.
 
 | API or variant | Meaning |
 | --- | --- |
 | `DesignInputs`, `DesignInputsDefinition` | Private implemented-component owner and exact construction input |
-| `DesignInputsPosition` | Structure, Parameter, Material or Source original ownership position |
-| `DesignInputsError` | DuplicateIdentity or original Parameters, Materials, Sources, References typed cause |
+| `DesignInputsPosition` | Structure,Parameter,FormulaSource,Material or higher Source original position |
+| `DesignInputsError` | DuplicateIdentity or original Parameters,FormulaSources,Materials,Sources,References cause |
 
 Shared getters/identities() expose owners; validate_current() repeats checks. id()/revision() retain
 structure identity/counter. Debug omits customer content; no context is stored:
@@ -285,14 +297,15 @@ structure identity/counter. Debug omits customer content; no context is stored:
 ```rust
 use sc_core::{design::{DesignInputs, DesignInputsDefinition, DesignInputsError,
     DesignMetadata, DesignReferenceHost, DesignSourceReferences, DesignParameters, DesignStructure},
-    ontology::MaterialInventory, recipe::FormulaRecipeDocument};
+    ontology::MaterialInventory, recipe::{FormulaRecipeDocument, FormulaSources}};
 fn combine<H: DesignReferenceHost>(structure: DesignStructure, parameters: DesignParameters,
-    recipe: FormulaRecipeDocument, materials: MaterialInventory, host: H, references: DesignSourceReferences)
+    recipe: FormulaRecipeDocument, formula_sources: FormulaSources, materials: MaterialInventory,
+    host: H, references: DesignSourceReferences)
     -> Result<DesignInputs<H>, DesignInputsError<H::Error>>
 {
     let sources = DesignMetadata::new(host, structure.inputs())
         .map_err(|issue| DesignInputsError::Sources(Box::new(issue)))?;
-    DesignInputs::new(DesignInputsDefinition {structure, parameters, recipe, materials, sources, references})
+    DesignInputs::new(DesignInputsDefinition {structure, parameters, recipe, formula_sources, materials, sources, references})
 }
 ```
 
@@ -300,6 +313,28 @@ fn combine<H: DesignReferenceHost>(structure: DesignStructure, parameters: Desig
 cargo test -p sc-core --test design_structure_contract
 cargo test -p sc-measure --test design_inputs_contract
 ```
+
+### Actual formula-source ownership checks
+
+formula_sources() borrows the exact registry in definition(). Cloning the model preserves both
+source buffers,private lookup index and original ids/order. The complete resource producer charges
+both source/index vectors and all actual original/canonical text before Materials/higher sources.
+Private candidate reconstruction,revision changes and context comparisons retain this field;
+metadata commands cannot silently change source content outside their declared operation.
+
+Four focused ownership contracts cover snapshots/unused tangent bodies,all existing global roles,
+required dedicated/general sources,provenance versus formula references and whole-root content
+charges. A source1000 cannot reuse the actual creating operation1000. The old structural fixture
+now explicitly owns distinct source9003 containing1 mm/3;its canonical state still requires actual
+evaluation. Omission of formula_sources fails compilation with E0063. Existing privacy/borrow guards
+and affected current-name,Measurement/group-preview and nonempty-source snapshot checks pass.
+
+The shared Measurement fixture separately authors source92 as authored_body+40 mm;the resource
+fixture uses its own actual parameter p+40 mm. Their canonical Derived records gain no independent
+stored value. A Derived replacement must reference an already owned actual expression. The
+[scoped source worker](../annexes/formula-source-proofs.md#execute-an-actual-selected-scalar-source)
+remains separate from current Design reference validation. Design-backed runtime proof/recipe
+read integration and independent whole-source-mode acceptance remain later tasks.
 
 ## Provided source references and joint scope
 
