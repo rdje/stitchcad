@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-26`
-- **Status:** `active`; sin/cos values/sources0280/0281, inverse values/sources0288/0289; tangent open
+- **Status:** `active`; sin/cos values/sources0280/0281, inverse values/sources0288/0289; native tangent open
 - **Owner / source:** engineer proposal, G1-SLICE.5d.1.2.2.2.a; full populations remain .b/parent
 
 answers: "what finite certificate could help bound trig rounding work?" · "does the threshold cohort admit a runtime precision?"
@@ -13,7 +13,7 @@ Investigate a finite certificate over output rounding thresholds, using rigorous
 exact rational-gap predicates. Start with a bounded sin/cos cohort and independent controls.
 Only complete population coverage, a justified native-kernel error/resource bound and applicable
 integration evidence could admit a production method. This changes no input, quantum, width,
-branch, precision limit, dependency or authority rule. Tangent remains a separate resource problem.
+branch, precision limit, dependency or authority rule. Tangent uses a separate bounded-request strategy in decision_tangent-resources.md.
 
 The proposal is our derivation from the existing numerical contract. The
 [midpoint fact](fact_trig-midpoints-and-resource-bound.md) establishes qualitative termination;

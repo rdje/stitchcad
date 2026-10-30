@@ -1,4 +1,4 @@
-"""Exact tangent folding/conditioning/enclosure prerequisites;no runtime method is admitted.
+"""Exact tangent folding/conditioning/enclosure prerequisites;no native kernel is implemented.
 
 Pure standard-library arithmetic/stdout. Universal arguments live in the midpoint/resource fact;
 independent Fraction folding and finite controls support transcription,not population completeness.
@@ -144,11 +144,11 @@ def series_interval(x, cosine, bits):
 
 def enclose(numerator, denominator, bits):
     """One explicit diagnostic precision,never a language precision limit or native result."""
-    assert bits >= 128
     folded = fold(numerator, denominator)
     if folded.role in ('pole', 'zero', 'unit'):
         ppm = None if folded.role == 'pole' else (F(0), F(0)) if folded.role == 'zero' else (F(M), F(M))
         return Enclosure(folded, bits, None, None, None, None, ppm)
+    assert bits >= 128
     scale = 1 << bits
     pi = pi_interval(bits)
     divisor = 2 * A * denominator

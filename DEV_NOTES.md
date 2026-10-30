@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — prove convergent unrounded tangent enclosures at each precision
+## _(2026-10-30 UTC)_ — admit explicit-resource bounded adaptive tangent requests
 
-0613 adds fresh directed Machin pi and unrounded sine/cosine intervals. Component width<=(10B^2+20B+2)*2^-B and positive denominator floors imply quotient convergence;the rechecked rational-angle theorem supplies eventual midpoint separation. Decisions require whole-interval agreement or actual width/pole proof.
-Independent alternate-pi3/direct-power factorial42/coupled54 controls pass. A legal near-midpoint Angle remains undecided at128/256 bits;512 certifies zero,independent atan/pi confirms. Original reduction/conditioning controls retained. Per-iteration4B terms/constant slots/explicit linear bit extents proved.
-Book98/365/1645/2903/glossary0/inventory344/file231/effect109/history771 four spans/map/live ids/diff pass. [Whole0612](docs/history/stitchcad-devnotes-part771.md) retains exact prior proof/scope. Fact gains a convergent-enclosure answer;primary series/theorem rechecked. Native APIs unchanged.
-Next P1 .d.2.2.2 must admit practical production resources before kernel. Convergence supplies no uniform512-bit,allocator-byte or latency guarantee;undecided is no returned value/numerical refusal. LIVE G1 6/18/G0 unapproved unchanged;full-hosted79bd6f6a scoped,D341 fixed/other owners retained. Full PNT/push400.
+0614 selects explicit integer/series budgets. Fold156;exact zero/unit/pole need no series. Other cases preflight I(B) and4B at B128/doubling before charging/computing. Only complete certificates return values;resources preserve original input/policy/reservations/work without a new language diagnostic.
+Model19 exact cases/three actual guard-body reds pass,including early/later limits,priority and resource-independent successful values. Initial string fault anchor matched fixture text too;AST extraction selects only actual function. Existing reduction/enclosure proof retained;no native kernel claimed.
+Map containment removes decorative label code spans,keep all ordered labels/destinations;8143B/111L under unchanged8192 cap,old style8255B. Map5+2/census345/file232/effect109/book98/365/1645/2904/glossary0/history772/ids/diff pass. [Whole0613](docs/history/stitchcad-devnotes-part772.md) retained.
+Algorithm-plan parents complete;next native .5d.3.2.2.1 actual preparation,then worker/source/acceptance and real AST policy adoption. Explicit quotas are execution admission,not a precision-domain cutoff. LIVE G1 6/18/G0 unapproved unchanged;full-hosted79bd6f6a scoped. Full PNT/push400;protected proofs retained.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

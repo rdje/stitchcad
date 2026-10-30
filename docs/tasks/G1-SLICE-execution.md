@@ -117,6 +117,13 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   .5e.2.4 with complete original diagnostics/provenance and all source/provider kinds. Retain
   implemented scalar subset/no fake language refusals during staged delivery. Full worked-book,
   platform identity and atomic publication retain .5g/.5e.4 owners;no placeholder result/approval.
+- ID: `G1-SLICE.5e.2.4.integration.tangent`
+  Status: `pending`
+  Goal:after actual tangent kernel/source wrapper,select and retain explicit kernel policies through
+  real expression/source/recipe/Design plan factories before values. Preserve original typed
+  numerical/resource failures,actual read/proof/root owners and call flags. Legacy preparation
+  must represent missing policy honestly. Split safe slices after reading interfaces;independent
+  paired acceptance follows implementation,before full broader-family runtime closure.
 - ID: `G1-SLICE.5e.2.5`
   Status: `in_progress`
   Goal: whole checked recipe declaration-order execution and real let/assert statement context.
@@ -127,51 +134,31 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0581 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part740.md).
 - ID: `G1-SLICE.5e.2.5.1`
   Status: `done`
-  Goal: start actual whole-recipe execution with complete-proof admission and an owned bounded
-  execution-session/prefix boundary. Read actual checked-recipe/statement/normalized/binding
-  interfaces and normative declaration-order/static-before-value contracts first. Derive complete
-  authored populations and explicit workspace/output limits before any runtime read/allocation;
-  bind original recipe/source/real ordinals and allow no caller values/annotations to impersonate
-  an earned prior let. Select a safe concrete admission/session slice with focused checks/book/
-  commit before actual let/assert worker units. No defaults,source-state cloning,partial accepted
-  recipe or missing-family language refusals;whole dependencies/replay/platform remain owned.
-  Closure0586: actual admitted available scalar foundation/prefix checkpoint only;full missing
-  families/Derived/load/replay/platform/physical remain with parent/integration owners.
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.1.1`
   Status: `done`
-  Goal:0582 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part741.md).
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.1.2`
   Status: `done`
-  Goal: use actual complete admission to construct private bounded whole-recipe session/prefix;
-  read real worker/source/binding interfaces before choosing safe execution slices. No caller
-  value/annotation or standalone conversion can manufacture an earned prior-let result. Track
-  output/read ownership and all capacity reservations before actual statement execution.
-  Closure0586: actual admitted available scalar foundation/prefix checkpoint only;full missing
-  families/Derived/load/replay/platform/physical remain with parent/integration owners.
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.1.2.1`
   Status: `done`
-  Goal:0583 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part742.md).
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2`
   Status: `done`
-  Goal: consume real prepared whole source plan into a private bounded runtime prefix. Reuse
-  iterative actual-node worker,perform real once-only binding,retain executed source witnesses
-  and real let/assert ordinals. Caller values/annotations must not advance or seed execution.
-  Read exact worker,read/dispatch,stored-name/error lifetimes and assertion APIs first;split safe
-  implementation units before code. Full accepted-result failure/replay remains .5e.4 work.
-  Closure0586: actual admitted available scalar foundation/prefix checkpoint only;full missing
-  families/Derived/load/replay/platform/physical remain with parent/integration owners.
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.1`
   Status: `done`
-  Goal:0584 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part743.md).
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.2`
   Status: `done`
-  Goal:0585 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part744.md).
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.acceptance`
   Status: `done`
-  Goal:0586 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part745.md).
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.1.2.2.acceptance.search`
   Status: `done`
-  Goal:0586 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part745.md).
+  Goal:[whole0586](../history/stitchcad-devnotes-part773.md).
 - ID: `G1-SLICE.5e.2.5.derived`
   Status: `in_progress`
   Goal: recover actual canonical Formula/Design/document/value/dependency contracts and relevant

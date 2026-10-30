@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.1.2.2.2.d.2.2.2:practical tangent rounding/resource admission before kernel.
-  Convergent per-precision enclosure prerequisite0613 complete. Recover current fact/book/model;
-  decide a justified bounded production strategy without numerical-domain/precision cutoff/libm.
-- Model0613:fresh directed pi/radian/sine/cosine enclosures at B>=128. Component width
-  (10B^2+20B+2)*2^-B;denominator floors give convergence,original midpoint theorem eventual
-  separation. At most4B series terms/constant candidate integer slots/16B+bit_length(2B+1)+16
-  operand bits per iteration. Closed endpoints must round alike;otherwise undecided,not a value.
-  Independent pi3/component42/coupled54 controls pass;actual128/256-bit undecided witness certifies
-  zero at512,independent atan/pi confirms. No uniform512-bit or full resource/latency claim.
-- Existing reduction29928/372/3642/92,144 rectangles/two controls retained. Census344/file231/
-  effect109 controls/book98/365/1645/2903/glossary0/history771 four spans/map/live ids/diff pass.
-  Whole0612 in771,D341 in770,scalar Design checkpoint in769. Full Derived integration remains owned.
+- Next G1-SLICE.5d.3.2.2.1:native tangent preparation/limits/refusals/exact folding.
+  Bounded-request algorithm/resource plan0614 admitted in decision_tangent-resources.md. No native
+  kernel yet. Read current numeric/rational/plan interfaces;prepare only actual Angle/explicit
+  limits,retain original input/policy and exact domain/resource context. No placeholder value.
+- Selected method:156-bit fold;exact zero/unit/pole without series. Otherwise B128/doubling,
+  preflight I(B)=16B+bit_length(2B+1)+16 and4B cumulative terms before each iteration. Full closed
+  interval certifies value/actual width;budget failure gives resources,no value/new language code.
+  Caller budgets explicit/no default or fixed precision cutoff;mathematical domain/quantum unchanged.
+- Model19 exact cases/three actual guard reds;prior reduction/enclosure controls retained. Map
+  plain labels8143B/111L under8192 cap,all ordered destinations/labels exact;old style8255B.
+  Map5+2 controls/census345/file232/effect109/book98/365/1645/2904/glossary0/history772/773/map/ids/diff
+  pass. Algorithm parents .5d.1 complete;native kernel .1–.4 and real AST policy adoption remain owned.
   G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,

@@ -434,7 +434,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 ### Irrational functions
 - ID: `G1-SLICE.5d.1`
-  Status: `in_progress`
+  Status: `done`
   Goal: finalize deterministic true-value rounding algorithms and independent proof/oracle plan
   for every admitted input before its function-family implementation; no cross-family certificate.
   Acceptance: rigorous rounding-boundary/termination/resource argument over width128 inputs,
@@ -442,7 +442,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   ordinary platform libm/curated Decimal60 agreement cannot establish correct arbitrary rounding.
   Children .1 exact roots, .2 transcendentals. Each implementation requires its applicable plan;
   unresolved algorithms/dependency/license requirements stay owned before that family starts.
-  Verification: `pending`; Commit: `pending`.
+  Verification:bounded-request plan/proof/model accepted0614;Commit:STITCHCAD-G1-0614.
+  Closure0614:algorithm admission only;bounded tangent resources are selected in
+  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
 - ID: `G1-SLICE.5d.1.1`
   Status: `done`
   Goal: exact root plan and25 independent fixtures verified0254; numerical decision holds full proof.
@@ -450,11 +452,13 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part327md).
 
 - ID: `G1-SLICE.5d.1.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact deterministic transcendental algorithms and threshold/resource/license proofs.
   Acceptance: all .5d.1 obligations before each applicable .5d.3 family; no fixed libm guess.
   Children: .1 bounded arc_length pi certificate; .2 sin/cos/tan/atan/atan2 interval plan.
 
+  Closure0614:algorithm admission only;bounded tangent resources are selected in
+  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
 - ID: `G1-SLICE.5d.1.2.1`
   Status: `done`
   Goal: certified640-bit pi/arc plan and approved UI baseline/quality/full-agent-control records0257.
@@ -462,18 +466,22 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part331md).
 
 - ID: `G1-SLICE.5d.1.2.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact trig/inverse interval/resource plan before code.
   Children .1 midpoint/qualitative termination; .2 practical admitted-input resource strategy.
+  Closure0614:algorithm admission only;bounded tangent resources are selected in
+  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
 - ID: `G1-SLICE.5d.1.2.2.1`
   Status: `done`
   Goal: midpoint/conditional termination proof verified0260; practical resources P1 .2.
   Paths: docs/tasks/artifacts/formula_structure/trig_midpoint_certificate.py;docs/decisions/fact_trig-midpoints-and-resource-bound.md
   Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part338md).
 - ID: `G1-SLICE.5d.1.2.2.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: P1 practical trig/inverse interval/resource strategy over all admitted inputs before .5d.3.2/.3.
 
+  Closure0614:algorithm admission only;bounded tangent resources are selected in
+  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
 - ID: `G1-SLICE.5d.1.2.2.2.a`
   Status: `done`
   Goal:0277 finite forward certificate cohort38/controls verified; production admission remains open.
@@ -527,10 +535,12 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   - [x] ADDRESSED0291: whole source/hash exact in402/404, Python comparison rc=0.
   - [x] NO REGRESSION0291: scripts/history_archive.py --root . read402/404 whole public files exact, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5d.1.2.2.2.d.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: P1 practical all-input tangent rounding/termination/resource plan before .5d.3.2.2.
   Need sharper certified strategy or validated adaptive proof; no arbitrary cutoff/new domain.
 
+  Closure0614:algorithm admission only;bounded tangent resources are selected in
+  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1`
   Status: `done`
   Goal:0612 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part771.md).
@@ -541,46 +551,50 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0612 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part771.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.2`
-  Status: `in_progress`
+  Status: `done`
   Goal:validated whole admitted-input tangent enclosure/rounding/termination and practical resource
   strategy using exact reduction .1. Prove original width/pole diagnostics;no arbitrary cutoff,
   changed domain,borrowed fixed sine/inverse certificate or production kernel before admission.
 
+  Closure0614:algorithm admission only;bounded tangent resources are selected in
+  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.2.1`
   Status: `done`
-  Goal:rigorous unrounded per-precision tangent enclosures/convergence and iteration arithmetic.
-  - [x] REPRODUCE / ISSUE:fixed sine/inverse and640-bit pi certificates do not license an arbitrary
-    tangent precision or quotient. Need fresh proven enclosures without an invented value/refusal.
-  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'def pi_interval|def series_interval|undecided|integer_limit'
-    docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py →fresh precision-specific pi,
-    unrounded component series,positive-denominator conditioning and certificate-only decision,
-    rc=0. NIST4.19/4.24 and Calcut tangent Corollary1 independently reopened;all bounds are our proof.
-  - [x] FIX:B>=128 uses fresh directed Machin pi width20(B+1),radian width5B+7,square10B+16,
-    term10B+20 and component(10B^2+20B+2)*2^-B. Analytic floors make quotient width tend tozero;
-    original midpoint theorem proves eventual separation. At most4B series terms/constant integer
-    slots and16B+bit_length(2B+1)+16 candidate operand bits per iteration. Whole endpoints must
-    round alike;else undecided. Actual poles/whole-interval width excess remain distinct,no kernel.
-  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py
-    →three independent alternate-identity Fraction pi bounds/42 direct-power factorial component/
-    54 coupled exact endpoint,pole,width controls pass,rc=0. Original29928 finite/372 poles/3642
-    reciprocal/92 signed boundary witnesses/144 rectangles/two controls retained. Actual legal
-    near-midpoint input247385123034593398372138492992328993860/8635369834810561370044731507908276509
-    microdegrees is undecided at128/256,certified zero at512;independent atan/pi proves its side.
-  - [x] NO REGRESSION: producer_census.py →344 sources/33815 calls/73 heredocs/2892 embedded,
-    rc=0. Existing effect/file controls →109/48 and231/89/38,23 actual data refusals/19 guard reds
-    pass,rc=0. bash -n run_formula_structure_probes.sh/git diff --check/generated map compare,
-    book98/365/1645/2903/glossary310/9/158/0/history771 four Git spans/prior live ids/order/uniqueness
-    pass,rc=0. Native APIs unchanged;full CI/probes/latency/platform not inferred.
-  - [x] LOCKSTEP:fact/retrieval answer/index/book/task/index/MEM/DEV/CHANGE align. Whole0612
-    retained771. Next P1 .d.2.2.2 practical admission before kernel;no universal512-bit claim,
-    numerical-domain cutoff,allocator-byte/latency/full-runtime admission. LIVE G1 6/18/G0
-    unapproved unchanged;D341 fixed/D156/D223/PLANNING.5/D334 owned. Protected evidence retained.
-    promotion: promoted (fact_trig-midpoints-and-resource-bound.md gains convergent unrounded enclosure answer/proof and actual boundary witness).
+  Goal:0613 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part772.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.2.2`
-  Status: `pending`
-  Goal:complete practical whole-admitted-input rounding/resource admission after convergent
-  enclosures. Retain exact poles/width diagnostics and independent proof;no arbitrary cutoff,
-  changed domain or kernel until the applicable production strategy is justified.
+  Status: `done`
+  Goal:admit practical bounded adaptive tangent requests without a numerical-domain cutoff.
+  Containment614:aggregate1501679B>1500000;retain only whole committed completed recipe-prefix
+  scope in773,all nine IDs/order/proof links preserved;ceilings unchanged.
+  - [x] REPRODUCE / ISSUE:convergence alone supplies no finite selected-request resource guarantee;
+    numerical ambiguity must never become an invented value/domain failure. New decision would
+    also exceed the existing8192-byte generated-map cap with old decorative code labels.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py
+    →actual near-midpoint input needs further certification after128/256 in this model;lower
+    selected quotas refuse next work/bit reservation,larger quotas certify same result,rc=0.
+    Old generator on the same new record set gives8255B;new plain labels8143B/all ordered labels/
+    destinations exact,rc=0. No input/quantum limit or map destination needed removal/increase.
+  - [x] FIX:explicit caller per-candidate integer-bit/cumulative-series budgets;fold156 then
+    B128/doubling,preflight complete I(B) then4B before charging/computing each iteration. Preserve
+    original input/limits/prior reservations/work/next demand. Only whole certificates return values;
+    otherwise original pole/width or separate resource refusal. No default/fixed precision cutoff.
+    New retrievable decision admits strategy only;minimal generated-label formatting preserves routes.
+  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py
+    →19 exact endpoint/pole/width/early+later quota/priority/counter/original-owner/successful-value
+    invariance cases and three actual guard-body reds pass,rc=0. Initial fault anchor matched its
+    fixture string too;rg showed both,AST-selecting actual function makes faults exact. Self source
+    unchanged. Original reduction29928/372/3642/92/144/two and enclosure3/42/54 controls pass,rc=0.
+  - [x] NO REGRESSION: python3 -I -B docs/tasks/artifacts/formula_structure/knowledge_map_contract.py
+    --mutations →five header forms/current routes/two actual body reds,source exact,rc=0. Producer
+    census345/33905 calls/73 heredocs/2892 embedded and file232/effect109 controls23 refusals/19
+    guard reds pass,rc=0. Positive book98/365/1645/2904/glossary310/9/158/0,history772 four/773 one Git spans/
+    public773 read exact/prior live ids/order/uniqueness,generated map/both shell syntax/diff pass,rc=0. Native kernel,
+    complete allocator/latency/platform/full CI not inferred;no other source/profile behavior changed.
+  - [x] LOCKSTEP:decision/index/facts/book/task/index/MEM/DEV/CHANGE align. Algorithm-plan parents
+    close0614;native tangent starts .5d.3.2.2.1,then actual value/source adoption and acceptance.
+    Whole0613 retained772. LIVE G1 6/18/G0 unapproved unchanged;D341 fixed/D156/D223/PLANNING.5/D334
+    owned. Budget refusal is execution admission,not a new language diagnostic;protected proofs intact.
+    promotion: promoted (decision_tangent-resources.md records bounded request semantics,universal correctness/termination and implementation obligations).
 
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`
@@ -631,6 +645,25 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.3.2.2`
   Status: `pending`
   Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
+- ID: `G1-SLICE.5d.3.2.2.1`
+  Status: `pending`
+  Goal:actual native tangent input preparation,explicit immutable resource limits/rich refusals and
+  exact signed period/pole/zero/unit folding under the admitted bounded-request plan. No placeholder
+  numeric value or unavailable-family language error. Read current numeric/rational/source APIs
+  before code;first expose legitimate preparation only,then implement complete evaluation below.
+- ID: `G1-SLICE.5d.3.2.2.2`
+  Status: `pending`
+  Goal:bounded native unrounded pi/sine/cosine/quotient worker and actual value execution from its
+  prepared input/policy;complete preflight before each iteration,original pole/width/resource causes,
+  whole-interval rounding only and no accepted uncertain result or hidden precision ceiling.
+- ID: `G1-SLICE.5d.3.2.2.3`
+  Status: `pending`
+  Goal:source-bearing tangent wrapper preserves actual executed-call contributions through exact
+  zero/unit and numerical/resource failures;real input/policy retained. No caller-seeded provenance.
+- ID: `G1-SLICE.5d.3.2.2.4`
+  Status: `pending`
+  Goal:independent scoped native value/resource acceptance after tangent implementation. Keep
+  actual graph/recipe/Design execution-policy integration with .5e.2.4.integration.tangent.
 - ID: `G1-SLICE.5d.3.3`
   Status: `done`
   Goal: correctly rounded atan/atan2 under .5d.1.2.2 plan.

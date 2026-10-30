@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0613 — prove convergent per-precision unrounded tangent enclosures
+## STITCHCAD-G1-0614 — admit bounded adaptive tangent with explicit execution resources
 
-- Fresh pi/unrounded sine/cosine bounds converge with explicit per-iteration term/integer extents. Whole endpoints must round alike;undecided stays separate from actual pole/width refusals. Independent pi3/component42/coupled54 controls and a genuine near-midpoint witness pass.
-- Existing reduction controls/inventory344/file231/effect109/book98/365/1645/2903/glossary0/history771/map pass. Actual128/256-bit undecided input certifies zero at512;no universal precision/resource guarantee. Next P1 production admission before kernel. LIVE G1 6/18/G0 unapproved unchanged.
+- Select per-candidate integer/cumulative-series budgets and complete iteration preflight. Model19 cases/three actual guard reds preserve original input/policy/counters,certified values and distinct mathematical/resource failures. No default,hidden precision ceiling or native kernel yet.
+- Preserve all generated map routes under its unchanged cap with plain labels8143B. Map5+2/census345/file232/effect109/book98/365/1645/2904/glossary0/history772/ids/diff pass. Algorithm plan complete;next native preparation. LIVE G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

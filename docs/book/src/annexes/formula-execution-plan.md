@@ -406,14 +406,14 @@ and [native atan/atan2](formula-trig-certificates.md#native-inverse-values). The
 and their admitted all-input plan were completed in .5d.3.3/.5d.3.3.1;source-bearing scalar wrappers
 are also available. D337 corrected this plan's stale pre0288 inverse-availability statement.
 
-Tangent remains unimplemented. Its practical all-input rounding/termination/resource strategy is
-owned by .5d.1.2.2.2.d.2 before the .5d.3.2.2 kernel;see the actual
-[tangent boundary](formula-trig-certificates.md#tangent-resource-boundary). This plan selects no
-replacement math backend,precision cutoff or caller placeholder. An admitted function with an
+Tangent remains unimplemented. Its [bounded adaptive resource strategy](formula-trig-certificates.md#selected-bounded-adaptive-tangent-admission)
+now has convergent enclosures and explicit caller bit/work admission;the .5d.3.2.2 kernel remains
+pending. Resource refusal produces no numerical value or new language diagnostic. This plan
+selects no replacement math backend,precision cutoff or caller placeholder. An admitted function with an
 unfinished implementation cannot be reclassified as a language refusal or published as a
 canonical computed result.
 
-Complete source/Derived resolution,geometry selectors and full-family statement/atomic publication
+Full-family source/Derived/geometry integration and statement/atomic publication
 remain open. Admitted scalar statements are available in the recipe annex. Internal slices must state their supported scope. Public whole-runtime
 acceptance remains pending until every required family has its real implementation and evidence.
 API/MCP publication, artifact authority, browser execution and production approval retain their

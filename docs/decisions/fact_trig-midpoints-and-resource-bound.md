@@ -1,9 +1,9 @@
-# Trig midpoint exclusion establishes qualitative termination; practical resources remain open
+# Trig midpoint exclusion,convergent enclosures and bounded tangent admission
 
 - **Type:** `fact`
 - **Date:** `2026-10-25`
-- **Status:** `active`; sin/cos and inverses implemented; tangent resources remain open
-- **Owner / source:** G1-SLICE.5d.1.2.2.1; remaining tangent strategy .5d.1.2.2.2.d.2 is P1.
+- **Status:** `active`; sin/cos and inverses implemented;tangent bounded-request plan selected,kernel pending
+- **Owner / source:** G1-SLICE.5d.1.2.2.1;bounded tangent strategy .5d.1.2.2.2.d.2 selected;native .5d.3.2.2 pending.
 
 answers: "can trigonometric formula results land exactly on a rounding midpoint?" · "does convergence prove usable trig resources?" · "what bounds tangent folding and quotient conditioning?" · "how do unrounded tangent enclosures converge?"
 
@@ -78,9 +78,9 @@ These finite checks support the algebraic derivation; the cited theorem supplies
 They do not constitute an all-input runtime/performance test. No new dependency is selected.
 
 G1-SLICE.5d.1.2.2.2 owns each practical interval/termination/resource strategy before its kernel.
-Sin/cos and inverse plans/kernels are now implemented; tangent remains .d.2. A sharper certificate or validated adaptive method must meet the
-existing admitted domains and refusal contracts; changing them would require its own decision.
-Root/arc features and independent evaluator-adapter work can proceed while that obligation is open.
+Sin/cos and inverse plans/kernels are implemented;the bounded tangent strategy is selected in decision_tangent-resources.md. It preserves the
+existing numerical domains/refusals;explicit execution resources remain separate from language diagnostics.
+Native tangent implementation and full-family evaluator/resource integration remain separately owned.
 
 ## Tangent range and certificate boundary0290
 
@@ -112,8 +112,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_profile.py
 exact bounds/witnesses,8798 finite-model nonpole distances against independent direct pole
 enumeration,586 exact poles and2 negative controls, rc=0. The algebra/elementary inequalities
 provide the universal derivation; the small enumeration supports transcription only.
-P1 .5d.1.2.2.2.d.2 owns the practical rounding/termination/resource plan before .5d.3.2.2.
-Independent command-bus work can proceed while the tangent prerequisite remains open.
+The bounded-request decision now selects that logical strategy;native .5d.3.2.2 remains pending.
+This historical range profile alone still grants no numerical kernel or full execution certificate.
 
 ## Exact tangent reduction and conditioning0612
 
@@ -142,7 +142,7 @@ For numerator/denominator intervals[Nlo,Nhi],[Dlo,Dhi],0<=Nlo<=Nhi<=1 and Dlo>=L
 outward quotient is[Nlo/Dhi,Nhi/Dlo]. Its width equals epsN/Dlo+Nlo*epsD/(Dlo*Dhi),so is
 at most epsN/L+epsD/L^2. Direct mode permits L=1/2;reciprocal mode permits L=2^-128.
 The latter can amplify absolute component uncertainty by factors2^128 and2^256. This is no
-rounding-midpoint separation bound;an applicable complete precision/resource strategy remains .d.2.2.
+rounding-midpoint separation bound;the selected bounded-request strategy is in decision_tangent-resources.md.
 
 Dividing already ppm-rounded sine/cosine is unsound as a tangent implementation,even at30 degrees. Exact square inequalities
 prove cos30 rounds866025,tan30 rounds577350 and sin30 is exactly500000 ppm. The quotient of
@@ -156,7 +156,7 @@ reciprocal cases,plus92 actual full-width/signed witnesses. It verifies144 ratio
 rectangles and two wrong-composition/sign controls,rc=0. These support transcription;the identities
 and algebra above supply the universal argument. The producer is registered in existing probes
 and exact producer/file inventories. No latency,all-input precision or runtime-resource admission
-is inferred. P1 .d.2.2 remains required before tangent kernel implementation.
+is inferred from this prerequisite. The bounded-request decision now selects the logical strategy;native implementation remains pending.
 
 ## Convergent per-precision tangent model0613
 
@@ -192,4 +192,4 @@ width cases. Its independently constructed admitted near-midpoint Angle is
 At128/256 bits this model correctly remains undecided;512 certifies zero. Independent arctangent/
 alternate-pi bounds place the original angle below the true half-ppm threshold,rc=0. This is no
 lower bound on another algorithm's required precision or a universal512-bit guarantee.
-Complete practical resource/rounding admission remains P1 .d.2.2.2 before any native tangent kernel.
+Bounded-request admission is selected in decision_tangent-resources.md;native tangent .5d.3.2.2 remains pending.

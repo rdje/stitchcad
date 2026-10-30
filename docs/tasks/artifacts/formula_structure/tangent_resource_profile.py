@@ -61,7 +61,7 @@ def main():
     assert (F(1, 3) - F(1, 2)).denominator != 1  # admitted input off the inverse half-µdeg grid
     print(f'tangent profile: nonpole distance>=90M/(U+1); rounded magnitude<=148 bits; relevant positive thresholds={positive_thresholds}, rc=0')
     print(f'independent small-domain distances/bounds={rows}; exact poles={poles}; negative controls2; full-width overflow witness n={n},d={d}, rc=0')
-    print('NO runtime admission: existing1M sine/45M inverse certificates do not cover tangent rounding; practical .d.2 remains P1')
+    print('Range profile alone admits no kernel:existing1M sine/45M inverse certificates do not cover tangent rounding;bounded-request strategy is recorded separately,native tangent pending')
 
 
 if __name__ == '__main__':

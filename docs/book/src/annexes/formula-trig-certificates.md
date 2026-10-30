@@ -1,7 +1,8 @@
 # Annex: investigating bounded trig rounding certificates
 
 Native sin/cos and atan/atan2 values are implemented under the complete certificates and admitted
-plans below. Tangent remains unimplemented with a practical resource-plan obligation. Whole formula
+plans below. Tangent now has a selected bounded-request resource strategy;its native kernel remains
+unimplemented. Whole formula
 execution and platform evidence remain separate [execution-plan](formula-execution-plan.md) work.
 
 ## Why output thresholds might help
@@ -288,7 +289,8 @@ The universal integer/elementary proof is recorded in
 docs/decisions/fact_trig-midpoints-and-resource-bound.md. Its focused tangent_resource_profile.py
 checks exact width/pole witnesses,8798 independently enumerated nonpole distances,586 exact
 poles and2 negative controls. These support transcription; no practical runtime precision or
-latency bound is claimed. P1 .5d.1.2.2.2.d.2 owns the remaining tangent strategy before its kernel.
+latency bound is claimed by this range profile. The bounded-request strategy below now supplies
+logical arithmetic admission;the native kernel remains separate.
 
 ## Exact tangent folding and quotient conditioning
 
@@ -318,8 +320,8 @@ independent signed Fraction reduction,including3642 reciprocal cases,and92 actua
 signed witnesses. It also checks144 quotient rectangles and two wrong-composition/sign controls.
 Universal identities/algebra supply the argument;finite controls check its transcription. The
 producer is registered in the existing probe suite and exact source/file inventories. Full
-rounding separation,validated convergence and practical resource admission remain P1 .d.2.2;
-no kernel,precision cutoff,new domain,latency or production-readiness claim follows.
+rounding separation is not inferred from these finite checks. Convergent enclosures and selected
+request-resource admission follow below;the native kernel and full runtime readiness remain separate.
 
 ## Convergent unrounded tangent enclosures
 
@@ -352,5 +354,43 @@ component enclosures and54 coupled endpoint/pole/width cases. A separately const
 remains undecided in this model at128 and256 bits. At512 bits its whole interval certifies zero,
 matching independent arctangent/alternate-pi bounds below the actual half-ppm threshold. This does
 not prove that every algorithm needs512 bits,or that512 suffices for all inputs. The tracked pure
-model runs in the existing probe suite;complete practical resource admission remains P1 .d.2.2.2.
-Production tangent is still unavailable.
+model runs in the existing probe suite. The bounded-request strategy below now selects logical
+resource admission. Production tangent is still unavailable.
+
+## Selected bounded adaptive tangent admission
+
+The selected strategy uses explicit caller limits for the largest candidate integer and cumulative
+charged series terms. There is no default policy or fixed maximum precision. An insufficient
+execution budget produces a separate resource refusal carrying the original operand,selected
+limits,unit,maximum,prior reservation/work and next scheduled demand. It supplies no approximate
+value or formula-language precision/domain diagnostic. Valid mathematical inputs stay valid.
+Native kernel implementation and source/recipe/Design policy adoption remain pending.
+
+After the existing actual-kind check,reserve the complete156-bit folding extent. Exact zero,
+signed unit and pole cases need no approximation terms. Other cases start at B=128 to represent the2^-128 denominator floor,and double
+only after an undecided enclosure. Before each iteration,check I(B)=16B+bit_length(2B+1)+16
+candidate bits,then4B additional series terms. Charge them only after both complete demands fit.
+The bit counter retains the highest admitted reservation;the work counter retains cumulative
+charged terms. Neither measures physical heap bytes or wall-clock duration.
+
+Every finite selected request terminates:increasing reservations or positive charged work must
+exhaust a finite quota unless a certificate completes first. Actual charged work stays within the
+selected limit,and the proved integer extents stay within the admitted candidate reservation.
+Native extent/counter overflow must refuse before allocation. Successful values are the same
+under every sufficient policy;resource selections may change whether an execution is admitted.
+The convergence/midpoint proof gives eventual mathematical certification under sufficiently
+increased resources,without claiming one practical uniform precision or budget for all inputs.
+
+For the original near-midpoint witness,128/256/512-bit iterations charge512+1024+2048=3584
+terms. The largest admitted integer reservation is8219 bits. Those explicit limits certify zero.
+A4122-bit limit instead refuses the next8219-bit reservation after1536 charged terms. With8219
+bits but only1536 terms,the next2048-term reservation refuses. These are next scheduled costs,
+not minimum mathematical requirements. No accepted value/source/recipe prefix escapes refusal.
+
+The tracked tangent_budget_plan.py passes19 exact cases covering endpoint/pole/width outcomes,
+early/later bit/work refusals,priority,original operand/policy identity,counters,successful-value invariance and absence of a
+value on refusal. Three actual in-memory guard omissions fail their intended controls;source
+bytes remain unchanged. Expected near-midpoint rounding comes from the independent inverse
+oracle. The decision is recorded in docs/decisions/decision_tangent-resources.md. It licenses
+native implementation of this bounded strategy,with explicit limits and rich resource errors;
+no numerical kernel,full allocator/CPU envelope,platform proof or release approval follows here.
