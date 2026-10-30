@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0649 — preserve the later environment baseline and D352 owner
+## STITCHCAD-G1-0650 — preserve the approved origin input-requirement extension
 
-- Environment passes producer/recipe/binding/replay,then exits1 at stale origin count;1218 input hashes exact. Full probes not started. D352 owns1466→1471/exact0581 AST calibration;runtime trace proves exactly five added cases,provenance425 unchanged.
-- Protected receipt/transcript retained. Book101/374/1670/2980/glossary0/history808/IDs/map/diff pass. Full verification/coupled closure remains open;G1 6/18/G0 unapproved unchanged.
+- Fix D352 exact1471/approved0581 AST/15-fault calibration while retaining unchanged original constants and provenance425. Runtime tracing proves earlier1466+five external-input cases;two actual preservation changes refuse.
+- Real1471/15 compiled faults and full focused control32 guard reds/40 CLI+16 borrowed refusals/provider/pure checks pass;source exact. Book101/374/1670/2980/glossary0/history809/IDs+1/map/diff pass. Full environment/probes next;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -687,26 +687,30 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
   Status: `in_progress`
   Goal:finish environment/full probes after D349–D351 repairs;Rust/Wasm/doctrine pass,then scoped closure.
-  Latest0649 environment rc1;D352 next,then environment/full probes.
+  Latest0649 environment rc1;D352 fixed0650;retry environment/full probes next.
   Preserve transcripts/return codes and original source/evidence identities;no closure yet.
   Book sync:clarify trig-certificates inverse230 observed0640 pair/full matrix during closure.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.environment-baseline`
   Status: `done`
-  - [x] ISSUE:complete environment attempt reaches a later origin-control failure.
-  - [x] ROOT CAUSE (WHY + WHERE):actual contracts()/runtime result-call tracing →1471 origin,
-    earlier1466+five0581 input cases;provenance425. Old AST refusal reproduced,diagnosis rc=0.
-  - [x] FIX:retain exact terminal receipt/full transcript;own D352 before another attempt.
-  - [x] ADDRESSED:python3 -I -B JSON/SHA receipt verification →1218 inputs unchanged,
-    transcript SHA exact/full probes absent,pass,rc=0;actual environment rc=1 retained.
-  - [x] NO REGRESSION:receipt SHA941a68045fc0c853290fc6e7ad506e1c0f92587e4abfa502ca5ce0f95a85fb99
-    verified;positive book101/374/1670/2980/glossary0/history808 four spans/IDs/map/diff pass,rc=0.
-  - [x] LOCKSTEP:book/live/notes sync;D352/full verification pending;promotion declined(existing contract).
-  Commit:STITCHCAD-G1-0649;Verification:failed integration baseline retained.
+  Goal:0649 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part809.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.origin-control`
+  Status: `done`
+  - [x] ISSUE:D352 origin count/AST/fault expectations predate approved0581 extension.
+  - [x] ROOT CAUSE (WHY + WHERE):runtime result-call census →1471=earlier1466+five external
+    input cases;exact0581 Git AST/fault comparison passes;old baseline refuses,diagnosis rc=0.
+  - [x] FIX:exact approved origin contract/FAULTS;unchanged original constants/provenance;
+    independent runtime census and two actual preservation faults;book1471/15 synchronized.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_origin_provenance_contract.py
+    →1471/425,32 omission reds/40 CLI+16 borrowed refusals/two preservation reds pass,rc=0.
+  - [x] NO REGRESSION:python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py
+    --mutations →1471 cases/15 actual compiled faults/real consumers pass,source exact,rc=0;
+    book101/374/1670/2980/glossary0/history809 four spans/IDs+1/map/diff pass,rc=0.
+  - [x] LOCKSTEP:book/live/notes sync;full environment/probes pending;promotion declined(existing contract).
+  Commit:STITCHCAD-G1-0650;Verification:focused origin preservation.
+- ID: `G1-SLICE.5d.4.acceptance.gates.run.retry`
   Status: `pending`
-  D352 P1:origin expected1466/old contract AST predates0581 input-requirement extension;
-  actual pure origin1471/provenance425 pass. Reconcile exact approved additions and retain
-  approved origin semantics/faults;provenance unchanged. Sync book before full verification.
+  Goal:complete environment and full probes after D352;preserve source/evidence identities,
+    all earlier receipts and actual fault/runtime classifications before scoped closure.
 
 ### Execution, uncertainty and replay
 

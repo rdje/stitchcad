@@ -38,13 +38,15 @@ FROZEN = {path: path.read_bytes() for path in WHOLE}
 SCRIPTS = {path: FROZEN[path].decode() for path in (*ENTRIES, PROVIDER, INPUT, STRUCTURE, SIGNATURE)}
 BEFORE = '7587d669141b7b81e1a9fffe7cef60caa898a3b9'
 ORIGINALS = {path: subprocess.check_output(['git', 'show', BEFORE + ':' + path.relative_to(ROOT).as_posix()], text=True) for path in ENTRIES}
+APPROVED_ORIGIN = subprocess.check_output(['git', 'show',
+    'dac69bd3267b98b904ff3509dcf0e36fb8c0a38f:' + ENTRIES[0].relative_to(ROOT).as_posix()], text=True)
 BASES = {
     'missing_size': ROOT / 'target/formula_structure/origin_value_consumer/missing_size/src',
     'missing_tolerance': ROOT / 'target/formula_structure/origin_value_consumer/missing_tolerance/src',
     'provenance': ROOT / 'target/formula_structure/provenance_consumer/src',
 }
 LABELS = {ENTRIES[0]: ('missing_size', 'missing_tolerance'), ENTRIES[1]: ('provenance',)}
-COUNTS = dict(zip(ENTRIES, (1466, 425)))
+COUNTS = dict(zip(ENTRIES, (1471, 425)))
 
 
 def expected(labels):
@@ -248,20 +250,79 @@ def capture(entry, mode, *, scripts=None, selectors=None):
         os.environ.clear(); os.environ.update(saved); sys.argv = argv
 
 
-def original_controls():
-    for entry in ENTRIES:
-        old, new = ast.parse(ORIGINALS[entry]), ast.parse(SCRIPTS[entry])
-        def function(tree, name):
-            return next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == name)
+def preserved_bodies(entry, source):
+    """Admit only the exact approved input-requirement extension to the origin contract."""
+    old, new = ast.parse(ORIGINALS[entry]), ast.parse(source)
+    approved = ast.parse(APPROVED_ORIGIN) if entry == ENTRIES[0] else old
+    def function(tree, name):
+        return next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == name)
+    if entry == ENTRIES[0]:
+        assert ast.dump(function(new, 'contracts')) == ast.dump(function(approved, 'contracts')), 'origin approved input-requirement contract changed'
+    else:
         body = function(new, 'contracts'); body.body = body.body[1:]
         assert ast.dump(body) == ast.dump(function(old, 'contracts')), 'origin numeric contracts changed'
-        if entry == ENTRIES[1]:
-            assert ast.dump(function(old, 'entry')) == ast.dump(function(new, 'entry')), 'provenance entry contract changed'
-        names = ('ORIGINS', 'KINDS', 'STATES', 'TOLERANCES', 'RESERVED', 'FAULTS') if entry == ENTRIES[0] else ('CLASSES', 'CALLS', 'FAULTS', 'PRODUCERS')
-        for name in names:
-            def value(tree):
-                return next(node.value for node in tree.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == name for target in node.targets))
-            assert ast.dump(value(old)) == ast.dump(value(new)), ('origin authored data changed', name)
+        assert ast.dump(function(old, 'entry')) == ast.dump(function(new, 'entry')), 'provenance entry contract changed'
+    names = ('ORIGINS', 'KINDS', 'STATES', 'TOLERANCES', 'RESERVED', 'FAULTS') if entry == ENTRIES[0] else ('CLASSES', 'CALLS', 'FAULTS', 'PRODUCERS')
+    for name in names:
+        def value(tree):
+            return next(node.value for node in tree.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == name for target in node.targets))
+        expected = approved if entry == ENTRIES[0] and name == 'FAULTS' else old
+        assert ast.dump(value(expected)) == ast.dump(value(new)), ('origin authored data changed', name)
+    return old, new
+
+
+def population_controls():
+    """Observe the actual added result calls independently of the authored total."""
+    entry = ENTRIES[0]
+    ns = runpy.run_path(str(entry))
+    function = next(node for node in ast.parse(SCRIPTS[entry]).body if isinstance(node, ast.FunctionDef) and node.name == 'contracts')
+    blocks = [node for node in function.body if isinstance(node, ast.For) and ast.unparse(node.iter) == 'ORIGINS[:5]' and
+              any(isinstance(child, ast.Constant) and child.value == 'origin external input reached geometry fallback'
+                  for child in ast.walk(node))]
+    assert len(blocks) == 1
+    block = blocks[0]
+    calls = []
+    saved, argv, previous = dict(os.environ), sys.argv, sys.getprofile()
+    def observe(frame, event, argument):
+        if event == 'call' and frame.f_code.co_name == 'result' and frame.f_code.co_filename == str(entry):
+            value = frame.f_locals['env'].get('input_value')
+            calls.append((frame.f_back.f_lineno, value.get('origin') if isinstance(value, dict) else None))
+    try:
+        sys.setprofile(observe)
+        result = ns['contracts'](verbose=False)
+    finally:
+        sys.setprofile(previous)
+    added = [origin for line, origin in calls if block.lineno <= line <= block.end_lineno]
+    assert added == ['measurement', 'ease', 'parameter', 'profile', 'material'], 'origin added input population changed'
+    assert len(calls) == result == COUNTS[entry] == 1466 + len(added), 'origin retained result population changed'
+    assert dict(os.environ) == saved and sys.argv is argv and sys.getprofile() is previous
+    assert all(path.read_bytes() == data for path, data in FROZEN.items()), 'origin population control changed tracked source'
+    print('origin population:1471 actual result calls = earlier1466 + five external-input cases; source/environment/argv/profile exact')
+
+
+def preservation_controls():
+    entry = ENTRIES[0]
+    for anchor, replacement, wanted in (
+        ('assert wanted is None and requirement is not None,', 'assert True,',
+         'origin approved input-requirement contract changed'),
+        ('    (\'nonunknown misclassified\', \'if state != "unknown":\', \'if False:\'),\n', '',
+         ('origin authored data changed', 'FAULTS')),
+    ):
+        assert SCRIPTS[entry].count(anchor) == 1
+        try:
+            preserved_bodies(entry, SCRIPTS[entry].replace(anchor, replacement, 1))
+        except AssertionError as error:
+            assert error.args == (wanted,), (wanted, error)
+        else:
+            raise AssertionError(('origin approved preservation fault escaped', wanted))
+    print('origin preservation:two actual approved input-guard/fault-population changes rejected; unaffected original constants/provenance exact')
+
+
+def original_controls():
+    for entry in ENTRIES:
+        old, new = preserved_bodies(entry, SCRIPTS[entry])
+        def function(tree, name):
+            return next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == name)
         try:
             capture(entry, 'import', scripts={entry: ORIGINALS[entry]})
         except AssertionError as error:
@@ -319,7 +380,7 @@ def original_controls():
             assert wanted in str(error), ('origin unrelated copied omission', str(error))
         else:
             raise AssertionError(('origin copied omission escaped', anchor))
-    print('origin guards:32 actual omission reds/four original gaps; numeric bodies/authored data exact')
+    print('origin guards:32 actual omission reds/four original gaps; exact approved origin extension/unaffected original bodies and authored data')
 
 
 def mirror(label, index):
@@ -534,6 +595,8 @@ def provider_controls():
 
 
 def main():
+    population_controls()
+    preservation_controls()
     for entry in ENTRIES:
         for mode in ('import', 'plan', 'contracts', 'consumer', 'cli'):
             print('origin capture:', entry.name, mode, capture(entry, mode))

@@ -245,11 +245,13 @@ Scoped coupled acceptance remains open until full verification completes after t
 No complete full-probe,hosted CI,application or production-release verdict is claimed.
 
 After those focused repairs,the0649 environment run passes the producer,recipe and binding/replay
-controls but stops at a later origin control. D352 retains the old1466 count and pre0581 AST,
+controls but stops at a later origin control. D352 retained the old1466 count and pre0581 AST,
 whereas approved input-requirement cases now produce1471. Runtime tracing distinguishes the
 earlier1466 result calls from exactly five added external-input cases;provenance remains425.
 This environment attempt exits1 with all snapshotted source hashes unchanged. The subsequent
-full probe command does not start. D352 is owned before another complete verification attempt.
+full probe command does not start. The D352 focused repair now checks the exact approved0581
+origin contract/fault definitions and1471 calls;unaffected origin/provenance bodies remain checked.
+Two actual preservation changes refuse. Complete environment/full-probe verification remains open.
 
 ```text
 target/irrational_platform_certificate/coupled-0649-integration-20261030T204352575454Z-95261/environment.json

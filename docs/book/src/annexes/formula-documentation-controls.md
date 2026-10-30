@@ -148,7 +148,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mu
 python3 -I -B docs/tasks/artifacts/ci_environment/python_origin_provenance_contract.py
 ```
 
-The first two commands retain1466 origin controls and425 contribution controls, thirteen and
+The first two commands retain1471 origin controls and425 contribution controls, fifteen and
 26 intended faults, and the actual copied consumers described in the [runtime evidence](formula-runtime-validation.md).
 The watched environment control intercepts child dispatch separately from that numerical proof.
 It executes the actual bodies, removes guards to require independent assertion failures and exercises
@@ -156,3 +156,12 @@ real isolated filesystem refusals, repeated pure calls and provider identity. It
 prove that unused linked sidebars/outputs and read-only source hard links do not introduce effects.
 Python3.9 and3.14 are verified. These are documentation instruments; production execution, real
 geometry, typed API diagnostics and garment signoff remain in their roadmap lanes.
+
+The origin population includes the earlier1466 result calls plus five external Derived-input
+cases,one each for measurement,ease,parameter,profile and material. A runtime call census checks
+those additions independently of the authored total. Missing external values require input
+evaluation;an incidental lazy flag cannot send them through geometry resolution. The origin
+contract and fault definitions match the exact approved0581 change;unaffected origin constants
+and the provenance contract retain their earlier AST checks. Deliberately changing the added
+input guard or omitting its fault case fails the preservation control. D352 repaired the older
+environment wrapper's stale count/AST baseline;the underlying reference behavior is unchanged.
