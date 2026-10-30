@@ -442,7 +442,7 @@ allocator bytes,CPU latency,source execution or production readiness.
 Focused native checks cover actual kind priority,folding-before-endpoint/pole priority,inclusive
 quotas,atomic first-iteration admission and unchanged full128-bit operands. A private test compares
 actual folded signs,reciprocal choice and exact cases with873 independent signed centered residues.
-Independent combined native value/resource acceptance remains owned;
+Independent combined native value/resource acceptance is recorded below;
 whole expression/source/recipe/Design policy adoption remains separately owned.
 
 ## Certified native tangent value execution
@@ -495,8 +495,8 @@ Five focused worker tests cover exact endpoints,signed quadrants and reciprocals
 bounded tan30 rounding counterexample,tiny full128-bit inputs,actual512-bit midpoint refinement,
 later bit/work/priority refusals,policy-independent successful values and exact148-bit width.
 The earlier preparation/folding contracts remain separate. Source-bearing supplied-value calls
-are implemented below. Real expression/source/recipe/Design policy selection and independent
-combined native acceptance remain pending. No full CI,platform,physical or production approval
+are implemented below,followed by independent combined native acceptance. Real expression/source/
+recipe/Design policy selection remains pending. No full CI,platform,physical or production approval
 follows these scoped worker checks.
 
 ## Sourced native tangent calls
@@ -543,5 +543,44 @@ Five focused tests construct real upstream round_to and cos calls,without manual
 sources. They check exact zero/unit Tan contributions through cancellation,false storage/read and
 T1 refusal/T2 source admission;actual negative tan30;Boolean/prior-tan kind priority;original
 fold/pole failures;and late native resource/148-bit width failures with exact original source-chain
-identity. Combined independent native acceptance remains the next leaf. Real AST/source/recipe/
+identity. Combined independent native acceptance is recorded below. Real AST/source/recipe/
 Design policy adoption remains .5e.2.4.integration.tangent;those plans cannot execute Tan yet.
+
+## Independent native tangent acceptance
+
+The tracked tangent_value_oracle.py derives139 fixture rows using exact standard-library
+Fraction arithmetic. It centers signed rational angles directly,uses the different identity
+pi=4*(atan(1/2)+atan(1/3)),and evaluates direct powers/factorials at exact rational interval
+endpoints. Its monotone sine/cosine bounds do not reuse native Machin or fixed-point recurrences.
+It reads no Rust implementation,native output or frozen expected fixture. An unresolved selected
+fixture fails the producer;its offline term counts impose no native mathematical input limit.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/tangent_value_oracle.py --check
+python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test formula_tangent_oracle_contract
+```
+
+The population has125 certified values,10 exact poles and four exact numerator-width failures.
+It includes signed quadrants and complete turns,full128-bit components,near-pole inputs on both
+sides,tiny fractions,finite Ratio values beyond signed binding range,and actual neighboring
+inputs on both sides of the selected half-ppm boundary. Exact sqrt(3) midpoint inequalities also
+establish tan30's577350 ppm and distinguish the wrong577351 rounded-component composition.
+
+Two native watchers use the actual public preparation/worker and supplied-scalar wrapper under
+two explicit policies:16412 candidate bits/7680 series terms and70000/40000. Every outcome must
+match the independent reference. They check original operands/policies,Ratio payloads,successful
+Tan contributions,typed poles,exact width counts and native progress retained by the wrapper.
+They separately regenerate every one of7141 frozen bytes. The fixture SHA256 is
+cf1a803c1efd405dcd84d6af73340b675824c979b793bfbb6112862218a39d7b.
+
+All18 selected native tests pass across preparation,value,source-wrapper,independent-oracle and
+private admission/folding targets. This includes873 independent signed residue folds and the
+focused early/later resource-priority and counter controls. Strict affected-target lint and
+formatting pass. The pure oracle is registered in the existing formula probe suite;its source
+has explicit read-only/stdout inventory ownership. Full producer locality review remains separate.
+
+This closes scoped native tangent implementation and finite combined acceptance. The rigorous
+admitted strategy supplies result certification;these139 rows are not exhaustive128-bit input or
+cross-platform coverage. The coupled irrational review remains .5d.4. Real expression/source/
+recipe/Design tangent policies and execution remain .5e.2.4.integration.tangent. Full heap/CPU,
+provider,platform,replay,physical and production approval retain their separate owners.

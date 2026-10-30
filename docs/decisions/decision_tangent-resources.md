@@ -2,11 +2,11 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-30`
-- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;combined acceptance pending
+- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;AST/platform pending
 - **Owner / source:** engineer under the director's delegated implementation authority;
   G1-SLICE.5d.1.2.2.2.d.2.2.2, implementation G1-SLICE.5d.3.2.2
 
-answers: "how will tangent terminate within selected resources?" · "does insufficient tangent precision invalidate a formula?" · "why does tangent require explicit execution limits?" · "why can a native tangent width diagnostic require further refinement?"
+answers: "how will tangent terminate within selected resources?" · "does insufficient tangent precision invalidate a formula?" · "why does tangent require explicit execution limits?" · "why can a native tangent width diagnostic require further refinement?" · "what independently checks native tangent values?"
 
 ## Decision and scope
 
@@ -118,7 +118,7 @@ near-pole witness by rounded endpoints with142/148 bits;the model classifies exc
 but cannot supply an exact native measured_bits field. The worker refines or refuses resources
 until both bit counts agree. B256 proves148,using4122 candidate bits/1536 cumulative terms.
 Preparation/value results and failures retain the original actual plan,selected policy and progress.
-Source contributions,combined independent acceptance and AST policy adoption retain later owners.
+Source calls0617 and scoped independent acceptance0618 are implemented;AST policy adoption retains its owner.
 
 ## Actual source-bearing calls0617
 
@@ -128,3 +128,12 @@ input contributions with Tan,including exact zero/unit. Failure retains the inpu
 contributions and attempted operation metadata,but creates no successful value or successful-call
 source. An input's earlier successful Tan contribution survives even a later wrong-kind attempt.
 No caller-supplied value or source set replaces computation. Actual AST policy adoption remains owned.
+
+## Independent scoped native acceptance0618
+
+Exact Fraction signed centering,alternate atan(1/2)+atan(1/3) pi and direct factorial powers
+certify139 fixture outcomes independently of native source/output:125 values,10 poles,four exact
+widths. Actual preparation/worker and sourced wrapper match every row under two explicit policies;
+a second watcher regenerates all7141 bytes exactly. Original input/policy/progress/call sources
+remain checked. SHA256 cf1a803c1efd405dcd84d6af73340b675824c979b793bfbb6112862218a39d7b.
+This finite native acceptance closes no coupled/platform/AST/full resource or production gate.

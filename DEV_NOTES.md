@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — retain actual tangent input and call contributions
+## _(2026-10-30 UTC)_ — independently accept scoped native tangent execution
 
-0617 adds actual supplied-scalar checked_tan with explicit native limits. Successful wrapper retains original sourced operand/native execution;value unions every input dependency and Tan even exact zero/unit. It computes through the real native plan,without caller-seeded result or contributions.
-Failure retains original input/limits/attempted operation and original prep/native error chain. Existing input contributions survive;no successful output or call contribution is invented. Prior completed Tan stays on a later wrong-kind input. No Boolean coercion or resource/domain substitution.
-Five new wrapper tests use real round_to/cos kernels through false storage/T1/T2,kind/pole/fold/later quota/width failures and original chain identity. Existing numeric calls8/new doc1/scoped strict lint/fmt pass;book98/374/1646/2908/glossary0/history776 four spans/IDs/map/diff pass.
-[Whole0616](docs/history/stitchcad-devnotes-part776.md) retained. Next .4 independent combined native acceptance,then real AST policy adoption. LIVE source-bearing values,G1 6/18/G0 unapproved unchanged. No full CI/platform/physical/release approval;full PNT/push400/protected proofs retained.
+0618 independent Fraction oracle uses signed rational centering,alternate atan1/2+atan1/3 pi and direct factorial powers. No Rust/native output/frozen input is read. It certifies139 rows:125 values/10 poles/four widths,including full128-bit,wide finite,near-pole and actual midpoint-neighbor cases.
+Two native watchers compare actual preparation/worker and sourced wrapper under two explicit policies;original inputs/limits/progress/flags and exact causes survive. All7141 fixture bytes regenerate;exact sqrt(3) control rejects rounded-component tan30. Eighteen selected native tests pass.
+Scoped strict lint/fmt/shell syntax/book98/374/1647/2910/glossary0/census346/file233+15/12/history777 four spans/IDs/map/diff pass. Existing probe suite watches oracle;full transitive locality review stays owned. [Whole0617](docs/history/stitchcad-devnotes-part777.md). Independent acceptance answer promoted.
+Native tangent/.5d.3 implementation parents close;coupled .5d.4 pending. Next actual AST/source/recipe/Design tangent policies,original proof/context/error contracts and paired acceptance. LIVE Tan139,G1 6/18/G0 unapproved unchanged. No full CI/platform/production claim;full PNT/push400/proofs retained.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

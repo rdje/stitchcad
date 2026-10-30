@@ -590,7 +590,7 @@ actual poles and exact result-width causes stay distinct from execution-resource
 The mathematical input/quantum contract is unchanged. Rational-angle midpoint exclusion supplies
 eventual separation under sufficiently increased abstract resources,without a universal practical
 precision bound. Explicit finite quotas give bounded requests without inventing numerical failure.
-The source wrapper is available;independent combined acceptance and higher-level policy adoption remain owned.
+The source wrapper is available;139-row combined native acceptance passes;higher-level policy adoption remains owned.
 The full derivation is in docs/decisions/fact_trig-midpoints-and-resource-bound.md and the selected
 resource contract in docs/decisions/decision_tangent-resources.md. Forward/inverse certificates
 retain their original complete population and platform-proof boundaries.

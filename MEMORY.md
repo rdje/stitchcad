@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.3.2.2.4:independent combined native tangent value/resource acceptance. Preparation/value/source wrapper0615–0617 implemented. FormulaEvaluatedScalar.checked_tan
-  invokes actual native kernels with explicit limits. FormulaEvaluatedTangent retains input/native
-  execution;value unions all input sources and successful Tan,including zero/unit. Error retains
-  actual input/limits/attempted call and original prep/native cause,with no fabricated output/flag.
-- Read current tangent worker/API/source tests and independent Fraction model before acceptance.
-  B128/doubling;I(B)=16B+bit_length(2B+1)+16 and4B complete preflight before allocation/charge.
-  Whole-interval rounding only values. Native width certifies exact bit count:actual128 spans
-  142/148;256 proves148 with4122/1536. Smaller quotas return resources,no fake domain or value.
-- Wrapper5/earlier numeric calls8/doc1/scoped strict lint/fmt pass. Real round_to/cos contributions
-  survive false/zero storage,T1/T2 guard and original typed failures;no manually seeded sources.
-  Book98/374/1646/2908/glossary0/history776 four spans/IDs/map/diff pass. Combined acceptance and
-  real AST/source/recipe/Design tangent policy integration remain owned. LIVE G1 6/18/G0 unapproved;
-  full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/numerical/cleanup proofs;
-  never rerun old transactions. Full PNT;commit each slice,push400 after full verification.
+- Next G1-SLICE.5e.2.4.integration.tangent:actual AST/source/recipe/Design tangent policy integration.
+  Native tangent preparation/value/source/independent acceptance0615–0618 complete. Read execution
+  plan/failure/machine/source/recipe/Design interfaces,then split safe owned slices before changes.
+  Preserve actual roots/proofs/inputs/context/error chains/flags;explicit limits must survive all
+  factories/results/errors. Legacy missing-policy preflight stays honest;no placeholder value/code.
+- Native API:prepare_tangent(limits).evaluate;FormulaEvaluatedScalar.checked_tan retains sourced
+  input/native execution. Result/error preserve original limits and progress. Failed call adds no
+  successful output/flag;original contributions remain. Exact endpoints156/0;other B128/doubling.
+- Independent Fraction oracle139 rows(125 values/10 poles/four widths),7141B SHA256
+  cf1a803c1efd405dcd84d6af73340b675824c979b793bfbb6112862218a39d7b;both entry points/two policies
+  exact. Eighteen selected native tests/scoped strict lint/fmt pass;book98/374/1647/2910/glossary0,
+  census346/file233/history777/IDs/map/diff pass. Native .5d.3 parents close;coupled .5d.4 pending.
+  LIVE G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/
+  numerical/cleanup proofs;never rerun old transactions. Full PNT;commit each,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
