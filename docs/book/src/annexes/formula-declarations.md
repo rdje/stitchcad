@@ -2,8 +2,8 @@
 
 > **Status:** implemented vocabulary and immutable sourced declarations at G1-SLICE.5b.2a/.2b in sc-core::recipe.
 > Checked initial namespaces, [ordered name scopes](formula-name-scopes.md), expression/current-statement
-> checks and [whole recipe kind proofs](formula-checked-recipes.md) are implemented. Numerical binding
-> and execution remain later work. [Reference static review](formula-static-validation.md) has a separate proof scope.
+> checks and [whole recipe kind proofs](formula-checked-recipes.md) are implemented. Separate scalar
+> binding/execution is available. [Reference static review](formula-static-validation.md) retains its static scope.
 > [Reserved-name diagnostic sources](formula-static-validation.md#reserved-name-diagnostic-sources)
 > are specified, exercised in the reference and retained by the product namespace errors below.
 
@@ -69,8 +69,8 @@ assert_eq!(FormulaReservedName::SizeIndex.tolerance_name(), None);
 
 A reserved spelling is a valid reference token and may not be rebound. Initial namespace collisions
 are checked below; [ordered metadata scopes](formula-name-scopes.md), expression checks and complete
-recipe kind proofs are available. Context values,
-numerical execution, geometry and policy decisions remain later obligations.
+recipe kind proofs are available. Separate scalar evaluation reads admitted contexts;geometry and
+full application policy retain their own obligations.
 
 ## Immutable sourced declarations
 

@@ -4,7 +4,8 @@
 > G1-SLICE.5b.3c.2a. This supplies callee metadata before argument checking. The enclosing
 > [expression checker](formula-wanted-signatures.md#bounded-product-expression-checking) is available;
 > [current-statement checks](formula-name-scopes.md#check-the-actual-current-statement) and
-> [whole recipe kind proofs](formula-checked-recipes.md) are implemented separately. Execution remains later work.
+> [whole recipe kind proofs](formula-checked-recipes.md) are implemented separately. Admitted scalar
+> execution is available;geometry and full application workflows remain pending.
 
 A data name and a callee have different lookup domains. A measurement named waist can be read
 as data; it cannot be invoked as waist(...). The closed built-in catalog alone supplies ordinary

@@ -3,7 +3,8 @@
 > **Status:** implemented metadata, G1-SLICE.5b.3a. Unary and binary kind signatures match
 > [grammar5/5.1](../spec/formula-language/grammar.md#5-operators). Built-in/selector signatures,
 > complete expression checking and [whole recipe kind proofs](formula-checked-recipes.md) are
-> implemented separately; numerical execution remains .5c–.5g.
+> implemented separately. [Admitted scalar execution](formula-recipe-execution.md) is available;
+> geometry and full application acceptance retain separate owners.
 
 A declared kind can be checked before its value is known. These APIs accept only FormulaKind
 metadata and return a result kind or None when the operator has no signature for those operands.

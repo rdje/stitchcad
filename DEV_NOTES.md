@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — retain the complete green local probe milestone
+## _(2026-10-30 UTC)_ — close scoped numerical acceptance and correct current availability
 
-0654 actual scripts/run_make.sh probes finishes29 green/rc0 with1223 input hashes unchanged. Nine fresh native baselines reject48 successfully compiled numerical faults;4905 snapshot files restore exactly. Actual native/Chrome31 pass;compiled bad expectation returns101/traps during browser execution.
-Preservation passes legacy6614/old9 reports/Rust548/platform550 sources+four binaries/405 fixture rows/certificate19 copies+two manifests. Rust basis retains1635 native/372 doc/fmt/strict Clippy. Observed Rust1.99.0/b940084d7/Chrome156.0.8078.74/Darwin27 arm64;app/device matrix pending.
-Book101/374/1670/2981/glossary0/history813 four Git spans/IDs+1/map/diff/handoff OK pass. LIVE reviewed unchanged:G1 6/18/G0 unapproved. Promotion declined:existing evidence contracts. Commit before scoped review;book trig pair/matrix wording and broader remaining owners belong to .gates.review.
-[Whole0653](docs/history/stitchcad-devnotes-part813.md) retains the successful tail preflight. Full probe receipt and preservation procedure/data are protected together;no original evidence overwritten. Full PNT continues after review toward fresh search capture. Hosted approval remains previously observed SHA-scoped.
+0655 reviews root/arc/forward/inverse/tangent admitted-input arguments,actual source/storage/error contracts,mixed scalar/Design chains and observed native/Chrome scope. All43 .5d.4 nodes close;broader .5d.2/.5e.3 remain active,.5e.4/n16/a40 pending. G1 remains6/18;G0 human closure unapproved.
+D355 P2 traces recipe-inputs status table to0348 cf74a710;current availability also lagged in execution/rational/trig/composition and overview pages. 23 book parts now state admitted scalar/source/Design and explicit-policy tangent availability. Static proofs grant no execution/physical authority.
+Positive book101/374/1684/2996,glossary310/9/158/0,history814 four exact Git spans,IDs/order exact,map/diff pass. Focused retired-status census0;Rust/build548 hashes unchanged. No kernel changes or full gate rerun. Existing claim contracts retained;promotion declined. LIVE notes change;states same.
+[Whole0654](docs/history/stitchcad-devnotes-part814.md) retains complete29-suite/source1223 and independent preservation proof. Allocator/CPU/provider/replay/geometry/app/device/physical/release owners remain. PNT next:a40 fresh search capture,then n16 locality;never rerun historical captures.
 Receipt:target/irrational_platform_certificate/coupled-0654-probes-20261030T214824664186Z-24178/receipt.json SHA037ded5a5d07de1fe46373acd4b95b1dbd4a869dc3fc188b0675f17f83430376;preservation SHA1abf1475eb721a16c7a11205a931308366223bf5eb8ef294d97a71bf7f23f71a.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

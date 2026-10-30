@@ -93,7 +93,8 @@ The [coupled normalization review](../annexes/formula-literals.md#coupled-normal
 [Canonical expression serialization](../annexes/formula-literals.md#serialize-canonical-expression-identity)
 is implemented; ordered statements also have [explicit syntax inspection](../annexes/formula-statements.md#parse-an-ordered-recipe).
 Statement/recipe identity,binding conversion and [admitted scalar recipe execution](../annexes/formula-recipe-execution.md)
-are implemented. Derived/tangent/geometry integration,load/replay and full acceptance remain pending.
+are implemented,including demanded Derived suppliers and explicit-policy tangent. Geometry,
+load/replay and full application acceptance remain pending;the [scoped numerical review](../annexes/formula-irrational-review.md) passes.
 Reference instruments supply no product execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.
@@ -128,7 +129,7 @@ from and what happens when there is none:
 The book reference has [scoped origin/context read controls](../annexes/formula-runtime-validation.md#missing-values-by-origin),
 including supplied optional contexts and named missing-value refusals. Product canonical input and
 [tolerance adapters](../annexes/formula-runtime-validation.md#explicit-tolerance-contexts) are available;
-complete runtime/context resolution and execution remain pending.
+scoped scalar/source/Design evaluation is available;complete registry/context/application acceptance remains pending.
 
 Three rules make the namespace safe rather than convenient. A name is bound **once** per recipe — a
 second `let` for it is `formula_rebinding` — because a recipe is a history and a name that changes

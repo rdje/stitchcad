@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0654 — complete the green local probe gate
+## STITCHCAD-G1-0655 — close scoped numerical review and align current availability
 
-- Actual29 suites green/rc0/source1223 exact. Nine baselines/48 compiled numerical faults and native+actual Chrome31/bad expectation pass;4905 snapshots restore exactly.
-- Legacy6614/old9 reports/Rust548/platform550+four binaries/certificate19 copies+two manifests exact. Book101/374/1670/2981/glossary0/history813/IDs+1/map/diff/handoff OK pass. Final scoped review next;G1 6/18/G0 unapproved unchanged;no new hosted/release approval.
+- All43 .5d.4 nodes done;five function families/source/storage/error/mixed scalar/Design/observed native+Chrome reviewed. D355 fixes23 stale book status parts;full application/resources/geometry/physical/release owners remain.
+- Positive book101/374/1684/2996/glossary0/history814 four exact Git spans/IDs exact/map/diff/Rust548 exact pass. Complete0654 gate/protected receipts retained;no full rerun for documentation. G1 6/18/G0 unapproved;next a40 fresh search capture,then n16.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -111,11 +111,11 @@ canonical zero. Subtraction changes the right operand's sign exactly, without si
 A genuinely excessive reduced sum returns the same typed RationalWidth refusal: maximum integer
 plus one reports 129 numerator bits; 1/maximum minus 1/(maximum-1) reports 256 denominator bits.
 No intermediate rounding or partially computed value escapes. The pinned dependency and rationale
-are recorded in the repository's edge/formula rational decision; platform verification remains pending.
+are recorded in the repository's edge/formula rational decision;full application/platform coverage remains separate.
 
 This is the value kernel for the [numeric contract](../spec/formula-language.md#42-exact-arithmetic-and-the-two-places-a-value-rounds).
 It applies no quantity kind, scalar domain, signed storage conversion or source binding.
-Whole-expression numeric execution and evaluator integration remain later slices.
+Separate admitted scalar expression/source/recipe execution is available.
 The 128-bit result limit remains unchanged.
 
 ## Completed numeric values and exact domains
@@ -452,8 +452,9 @@ Hypot's raw numerator/denominator need at most513/512 bits; the conservative mid
 needs at most576 bits. These are workspace bounds, not additional language limits. Focused
 checks include exact half squares and rational neighbors, full128-bit ratio, zero/signed lengths,
 Pythagorean cases and squared sums above the area domain. Actual sourced calls retain every
-root contribution,including perfect roots. This numeric-only API supplies no source identity;
-complete coupled fault/platform review remains owned.
+root contribution,including perfect roots. This numeric-only API supplies no source identity.
+[Coupled numerical review](formula-irrational-review.md#scoped-acceptance-and-remaining-owners)
+and observed native/Chrome checks pass;whole application/resource/physical/release owners remain.
 
 checked_hypot forms the exact squared sum from its two admitted Length operands and applies the
 same integer root rule. Sign is retained in the operands; squaring gives a nonnegative result.

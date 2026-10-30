@@ -279,7 +279,7 @@ bounds, all numeric domains or stored angles on their own: the scoped boundary r
 those proofs; the signed-angle review below completes D84 reference semantics. Operator
 precision has its separate proof below. Current published example checks retain their row scope.
 Product literal normalization and [owned canonical expression identity](formula-literals.md#serialize-canonical-expression-identity)
-are implemented. The syntax API above performs no computation; recipe evaluation remains pending.
+are implemented. This syntax API performs no computation;the separate admitted scalar evaluator is available.
 
 ## Reference exact-arithmetic controls
 
@@ -359,7 +359,7 @@ it to zero. `dir` still normalizes by its explicit function contract. The durabl
 G1-SLICE.5a.3b.3c.2 removes only outer inverse modulo and updates three negative inverse rows in the
 42-row oracle set to signed principal results. The signed binding/equality/sweep controls below
 verify D84 separately from D83's numeric boundaries; the final review below closes both prerequisites.
-Scalar binding conversion is available; complete statement/recipe evaluation remains pending.
+Scalar binding and admitted scalar statement/recipe evaluation are available;geometry execution remains separate.
 
 ## Reference rational-value boundaries
 
@@ -548,7 +548,7 @@ prove effect ordering; the independent numerical assertions prove the reference 
 This is curated reference proof, not arbitrary-input correctly rounded transcendental evaluation,
 a cross-platform certificate, entity direction integration or a production formula evaluator.
 G1-SLICE.5a.3b.3c.3 completes the final D84/reference review below; individual literals now normalize
-under .5a.3c.2 and whole arenas under .5a.3c.3; execution remains pending.
+under .5a.3c.2 and whole arenas under .5a.3c.3. Separate admitted scalar execution is available.
 
 
 ## Completed angle and reference obligation review

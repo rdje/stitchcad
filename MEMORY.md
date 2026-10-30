@@ -1,18 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.review:final scoped numerical review/book sync,then a40.
-- Latest unit STITCHCAD-G1-0654;derive HEAD/ahead from Git. Actual full29-suite probes green/rc0.
-- Full1223 source hashes unchanged;nine native baselines/48 compiled faults pass;4905 snapshot
-  files exact/restored. Actual native+Chrome31 pass;compiled wrong expectation rejected both.
-- Original legacy6614/old9 reports/platform550 sources/four binaries/405 fixture rows exact;
-  certificate19 retained copies/two manifests exact. Rust548 still matches full1635/doc372 basis.
+- Next G1-SLICE.5b.4c.h2.b.p.o.a40:fresh same-source book search capture,then n16 locality groups.
+- Latest unit STITCHCAD-G1-0655;derive HEAD/ahead from Git. Scoped .5d.4 review complete/all43 nodes done.
+- D355 stale current status traced to0348 table;23 book parts now match admitted scalar/source/
+  Design and explicit-policy tangent scope. Static authority and broader remaining owners retained.
+- .5d.2/.5e.3 in_progress;.5e.4/n16/a40 pending. G1 6/18/G0 unapproved;no app/release approval.
+- Full0654 actual29 suites green/rc0/source1223 exact;nine baselines/48 faults/native+Chrome31 pass.
 - target/irrational_platform_certificate/coupled-0654-probes-20261030T214824664186Z-24178/receipt.json SHA037ded5a5d07de1fe46373acd4b95b1dbd4a869dc3fc188b0675f17f83430376.
 - Same directory preservation.json SHA1abf1475eb721a16c7a11205a931308366223bf5eb8ef294d97a71bf7f23f71a.
-- Review .5d.4 obligations/owners,correct trig-certificates230 observed pair/full matrix,then
-  close only numerical coupled scope. Full allocator/provider/replay/geometry/app/physical/release stay owned.
-- Rust/Wasm/doctrine evidence retains source-exact scope;hosted79bd6f6a remains separate.
-- Positive book101/374/1670/2981/glossary0/history813/IDs+1/map/diff/handoff OK;no job pending.
-- G1 6/18/G0 unapproved;cleanup2026-10-30 14:18 unchanged. Full PNT/push400 only.
+- Original legacy6614/old9 reports/4905 restored snapshots/platform550+four binaries/cert19 copies/
+  two manifests exact at0654. Rust/build548 still exact to full1635 native/372 doc/fmt/Clippy basis.
+- Positive book101/374/1684/2996/glossary0/history814 four spans/IDs+0/map/diff pass;no kernel changes.
+- a40 must use fresh target-relative output;never rerun historical captures or overwrite protected
+  proof. Read full producer/effects and public contracts before controls;no locality certificate inferred.
+- Cleanup2026-10-30 14:18 UTC unchanged;not due yet. Full PNT/push400 only;hosted79bd6f6a stays separate.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

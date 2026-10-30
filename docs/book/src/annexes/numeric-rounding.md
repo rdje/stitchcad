@@ -79,7 +79,8 @@ Cargo-selected restored artifacts execute all five contracts. Production arithme
 The structural suite watches the independent Decimal fixture verifier. Strict native tests and real
 WASM cross-compilation verify their stated scope; WASM compilation is not a runtime numerical
 certificate. G1-SLICE.5a.3c.1 owns this primitive. [Individual literal conversion](formula-literals.md) is implemented under .5a.3c.2. Whole-expression literal
-normalization is implemented under .5a.3c.3; serialization, binding/evaluation, geometry and API/MCP remain later work.
+normalization is implemented under .5a.3c.3;identity serialization and scalar binding/evaluation are available.
+Geometry and full API/MCP execution remain pending.
 
 ## Exact decomposed magnitude input
 

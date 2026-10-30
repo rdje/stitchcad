@@ -573,12 +573,12 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0618;[proof](../history/window25.md#stitchcad-devnotes-part778md).
 - ID: `G1-SLICE.5d.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: coupled complete irrational function proof and error/provenance review.
   Acceptance: independent correctly rounded oracle and adversarial threshold/pole/branch/domain
   cases, cross-platform determinism evidence, actual fault controls and rigorous admitted-input
   coverage; no scoped reference accuracy promoted to a general numerical certificate.
-  Verification: `pending`; Commit: `pending`.
+  Verification:scoped coupled proofs and local integration gates pass; Commit:STITCHCAD-G1-0655.
 
 - ID: `G1-SLICE.5d.4.roots`
   Status: `done`
@@ -650,10 +650,10 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0640;[proof](../history/stitchcad-devnotes-part800.md).
 - ID: `G1-SLICE.5d.4.acceptance`
-  Status: `in_progress`
+  Status: `done`
   Goal:close complete coupled irrational review only after all scoped proofs/faults/composition/
   platform children pass;retain full allocator/provider/replay/physical/release owners separately.
-  Fresh readers0641,capture preservation0642 and full probes0654 pass;scoped review remains.
+  Fresh readers0641,capture preservation0642/full probes0654 and scoped review0655 pass.
 
 - ID: `G1-SLICE.5d.4.acceptance.certificates`
   Status: `done`
@@ -662,7 +662,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0642;[proof](../history/stitchcad-devnotes-part802.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates`
-  Status: `in_progress`
+  Status: `done`
   Goal:full native/Wasm/doctrine/probes/book after certificates;fix defects,retain original
   evidence and close only scoped coupled review.
 
@@ -685,11 +685,11 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0648 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part808.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
-  Status: `in_progress`
+  Status: `done`
   Goal:finish environment/full probes after D349–D351 repairs;Rust/Wasm/doctrine pass,then scoped closure.
-  Latest0654 actual29 suites green/source1223 exact;scoped review next.
-  Preserve transcripts/return codes and original source/evidence identities;no closure yet.
-  Book sync:.gates.review owns trig-certificates observed pair/full-matrix wording before closure.
+  Latest0654 actual29 suites green/source1223 exact;scoped review0655 complete.
+  Transcripts/return codes and original source/evidence identities retained;scoped closure0655.
+  Book sync0655:observed native/Chrome pair versus full matrix explicit;wider owners retained.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.environment-baseline`
   Status: `done`
   Goal:0649 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part809.md).
@@ -711,23 +711,23 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0653 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part813.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.full`
   Status: `done`
-  - [x] ISSUE:actual full probe gate needed after focused D349–D354 repairs.
-  - [x] ROOT CAUSE (WHY + WHERE):scripts/run_make.sh probes →29 suites green/rc0,
-    all1223 source hashes unchanged;earlier environment failures no longer reproduce,rc=0.
-  - [x] FIX:retain full transcript/receipt and independent preservation evidence before review.
-  - [x] ADDRESSED:actual full command →nine baselines/48 compiled faults/native+Chrome31/
-    compiled bad expectation rejected on both runtimes,all restoration checks pass,rc=0.
-  - [x] NO REGRESSION:python3 -I -B target/verify_0654_preservation.py →legacy6614/old9 reports/
-    fresh4905 snapshot files/Rust548/platform550+four binaries/cert19 copies+two manifests exact,rc=0;
-    book101/374/1670/2981/glossary0/history813 four spans/IDs+1/map/diff/handoff OK,rc=0.
-  - [x] LOCKSTEP:book/live review/notes sync;scoped acceptance review remains;
-    promotion declined(existing proof/verification contracts). No hosted/release approval claimed.
-  Commit:STITCHCAD-G1-0654;Verification:full29-suite gate and exact original evidence.
+  Goal:0654 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part814.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.review`
-  Status: `pending`
-  Goal:review completed numerical/provenance/platform proofs and explicit remaining owners;
-    sync trig-certificates observed pair versus full matrix,then close only scoped .5d.4.
-  No new kernel behavior;retain allocator/provider/replay/geometry/application/physical/release owners.
+  Status: `done`
+  - [x] ISSUE:final scoped numerical acceptance and D355 P2 stale current book availability.
+  - [x] ROOT CAUSE (WHY + WHERE):git blame recipe-inputs status table →cf74a710f5fadb4856b289442100e9377b55fa97
+    (0348) predates scalar/source/Design and explicit-policy tangent integration;current summaries lag,rc=0.
+  - [x] FIX:review all five numerical families,source/storage/error/composition proofs and observed
+    runtime scope;sync 23 current book parts. Preserve static-only authority and wider owners.
+  - [x] ADDRESSED:positive book build/check →101 chapters/374 API rows/1684 source links/
+    2996 rendered links,rc=0;focused retired-status census →0 stale reviewed claims,rc=0.
+  - [x] NO REGRESSION:glossary →310/9/158/0 failures;history814 →four exact Git spans;
+    IDs/order exact,all43 .5d.4 nodes done;map/diff pass;Rust/build548 hashes unchanged,rc=0.
+    Full29/source1223 and preservation receipts immutable;no full gate rerun for documentation.
+  - [x] LOCKSTEP:book/live/notes/frontier sync;D355 fixed. Promotion declined(existing claim/
+    evidence contracts). .5d.2/.5e.3 remain in_progress;.5e.4/n16/a40 remain pending.
+    No full allocator/CPU/provider/replay/geometry/application/physical/release closure claimed.
+  Commit:STITCHCAD-G1-0655;Verification:scoped proof review and focused rendered publication checks.
 
 ### Execution, uncertainty and replay
 

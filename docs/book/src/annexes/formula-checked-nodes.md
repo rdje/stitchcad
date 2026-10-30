@@ -7,8 +7,8 @@ cannot attach another arena, supply a node index or create a checked prefix afte
 
 This is static inspection. No input value, authored state, provider, geometry or numerical operator
 is evaluated. A checked sin call has a resolved kind/callee; it is not a computed sine result.
-A separate prepared scalar worker now executes actual checked expressions in its implemented subset.
-Full family and statement execution remain integration work.
+A separate prepared scalar worker executes admitted checked expressions and ordered recipes,
+including explicit-policy tangent. Geometry and full application acceptance remain integration work.
 
 ## Inspect actual branch certificates
 

@@ -121,8 +121,8 @@ Installed OS/browser launchers are read-only external tool dependencies. Project
 generated workspaces,dependency stores,profiles,captures and scratch stay on the repository
 volume with repository-relative persisted paths. The final adapter passes strict affected
 Clippy and formatting. The fresh complete certificate reads below now pass. D345 capture
-preservation passes below;full coupled gates remain next;aggregate resources,provider/replay,geometry,
-physical validation and human release approval retain their separate owners.
+preservation and full probes pass below. The [scoped numerical review](formula-irrational-review.md#scoped-acceptance-and-remaining-owners)
+is complete;aggregate resources,provider/replay,geometry,physical and human release owners remain.
 
 
 ## Fresh complete certificate acceptance
@@ -161,11 +161,11 @@ target/irrational_platform_certificate/coupled-0641-20261030T180826454783Z-33211
 sha256:0670624492d132854ba8f876726a9d7734ed27bde6dffe262dfbc4c66f240596
 ```
 
-Full integration gates remain pending. D345 exposed fixed native fault-capture paths that a
+The complete local probe gate now passes below. D345 exposed fixed native fault-capture paths that a
 later replay could overwrite. The actual old writer replaced a sentinel only in an owned
 controlled copy;all nine original reports remain unchanged. The preservation repair below
-passes before full probes. Scoped coupled closure,aggregate resources,provider/replay,geometry,
-application and production approval retain their separate owners.
+passes before full probes. Scoped numerical acceptance is recorded in the coupled review;
+aggregate resources,provider/replay,geometry,application and production approval remain owned.
 
 
 ## Fresh native fault-capture identities
@@ -203,9 +203,8 @@ sha256:c9403edbcbf21eb79cb574c34823a965bfa6f24d1340d714b0bd25467d7f3065
 
 The existing root/arc/forward/inverse/tangent/resource commands and formula-structure suite use
 this shared behavior automatically. Incomplete runs stay separate;they cannot replace a complete
-receipt. This focused preservation repair does not claim a fresh full replay of all48 numerical
-faults. The deferred full integration gates run next;complete transitive runtime/locality review
-retains its separate owner.
+receipt. The0642 focused repair preceded a complete48-fault replay. The later0654 full gate is
+recorded below;complete transitive runtime/locality review retains its separate owner.
 
 
 ## Coupled verification checkpoint
@@ -241,8 +240,8 @@ target/irrational_platform_certificate/coupled-0646-baseline-20261030T2021073066
 sha256:f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b
 ```
 
-Scoped coupled acceptance remains open until full verification completes after these repairs.
-No complete full-probe,hosted CI,application or production-release verdict is claimed.
+That0646 checkpoint left scoped acceptance open;the complete milestone and final review below
+record its resolution. Hosted CI,application and production-release approval remain separate.
 
 After those focused repairs,the0649 environment run passes the producer,recipe and binding/replay
 controls but stops at a later origin control. D352 retained the old1466 count and pre0581 AST,
@@ -313,7 +312,7 @@ target/irrational_platform_certificate/coupled-0654-probes-20261030T214824664186
 sha256:1abf1475eb721a16c7a11205a931308366223bf5eb8ef294d97a71bf7f23f71a
 ```
 
-The full verification result is retained before the final scoped numerical acceptance review.
+The full verification result supports the [completed scoped numerical review](formula-irrational-review.md#scoped-acceptance-and-remaining-owners).
 Application/device coverage,complete allocator/provider/replay/geometry integration,physical
 validation and human production-release approval keep their separate owners. Hosted CI remains
 the previously observed SHA-scoped result until the authorized push cadence is reached.

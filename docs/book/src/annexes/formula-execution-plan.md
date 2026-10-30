@@ -578,5 +578,6 @@ Both actual policies survive;larger sufficient policies preserve the same comple
 The complete8748-byte fixture SHA256 is
 3133386908b679aa6b35f39b8a17b43b27c4ed6e6352c4fdef660de473dd24e3;
 an independent watcher regenerates every byte. The old23-row Design reference is unchanged.
-This closes scoped tangent AST/source/recipe/Design policy integration. The coupled irrational
-review .5d.4,complete resource/provider/replay,platform/physical and production approval remain open.
+This closes scoped tangent AST/source/recipe/Design policy integration. The [numerical coupled
+review](formula-irrational-review.md#scoped-acceptance-and-remaining-owners) is complete;full
+resource/provider/replay,application/device,physical and production approval remain open.

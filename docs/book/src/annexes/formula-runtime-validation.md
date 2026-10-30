@@ -239,7 +239,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mut
 Its [producer plan](formula-documentation-controls.md#assertion-reference-and-copied-consumer-plans) preserves pure calls and guards copied outputs.
 
 Complete262-control/eight-fault assertion receipts remain in `docs/history/stitchcad-devnotes-part490.md`.
-Product named assertions are described below; AST execution, geometry and release remain pending.
+Product named assertions are described below. Admitted scalar AST execution is available separately;
+geometry and release retain their own owners.
 
 ## Missing values by origin
 

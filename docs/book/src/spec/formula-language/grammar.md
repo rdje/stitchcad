@@ -309,7 +309,7 @@ The [static signature controls](../../annexes/formula-static-validation.md) chec
 without reading numeric values; [initial-scope product expression checking](../../annexes/formula-wanted-signatures.md#bounded-product-expression-checking)
 is available. [Current-statement checking](../../annexes/formula-name-scopes.md#check-the-actual-current-statement)
 and [whole-recipe kind proofs](../../annexes/formula-checked-recipes.md) are also available;
-numerical execution and operation-graph validation retain separate later obligations.
+admitted scalar execution is available separately;geometry operation-graph validation remains owned.
 
 ### 6.1 Geometry selectors
 

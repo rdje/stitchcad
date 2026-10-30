@@ -556,4 +556,5 @@ Six focused tests cover whole-quota/missing-policy precedence,unused/untaken cal
 full-width unbound Angle supplier,once-only shared native roots,original late quota failures,
 missing selection/unrelated errors,and source-backed recipe success/foreign-owner retention.
 Existing12 source tests,nine private execution guards and five relevant compiler/doc examples
-pass. Coupled paired acceptance,full resources/backend/platform and production approval remain separate.
+pass. Paired scalar/Design acceptance and one native/Chrome pair have separate evidence;full
+resources/backend/application/device and production approval remain owned.

@@ -4,7 +4,7 @@
 > sc-core. It converts input literals and preserves syntax metadata. Statement/recipe canonical
 > serialization is implemented at .1c. [Ordered name scopes](formula-name-scopes.md) and
 > [whole recipe kind proofs](formula-checked-recipes.md) and numeric binding conversion are available;
-> whole recipe execution remains pending.
+> admitted scalar recipe execution is available;geometry and full application acceptance remain pending.
 
 The [statement parser](formula-statements.md) records what you wrote. Input normalization then
 converts every literal to the [canonical internal units](formula-literals.md), without calculating
@@ -423,7 +423,8 @@ six scalar kinds,shared-source consumers,original late failures,complete ownersh
 non-Derived states/provenance and empty drafts. Five existing canonical-input contracts retain
 actual-owner/family/kind/read boundaries. Four documentation tests include the positive example,
 private-field E0616 and E0515 refusals for escaping either actual owner. These scoped checks
-certify source joins;complete graph/evaluation/platform verification remains pending.
+certify source joins;scalar graph execution and one native/Chrome pair have separate evidence.
+Full application/resource/device verification remains pending.
 
 ## Normalize complete original source collections
 
@@ -485,15 +486,15 @@ Parser/literal scratch,allocator overhead/capacity,CPU,numeric backends and the 
 resource envelope remain separate. Existing source-byte admission and fixed expression bounds
 still apply. No namespace/result-kind/dependency/cycle/current Design,rounding or value proof is
 created. Missing names and incompatible kinds remain inspectable until real static checking.
-Original recipe order and actual let binding rules remain requirements for later graph execution.
+Separate scalar graph execution preserves original recipe order and actual let binding rules.
 
 Four native contracts compare factory counts against the existing independent24-row shape corpus,
 actual source pointers/spans and normalized canonical identities,separate complete quota refusals,all
 branches/unused sources,maximum dynamic call arguments and empty drafts. The independent reference
 producer rechecks those same authored rows without invoking product normalization. Existing four
 document contracts retain original text/equality/parser/literal boundaries. Three compiler guards
-refuse default limits,private collection mutation and escaped arena views. Full graph/resource/
-evaluation/platform verification remains pending;these checks certify this normalization boundary.
+refuse default limits,private collection mutation and escaped arena views. These checks certify
+normalization;scalar execution has separate evidence,while full graph/resources/application coverage remains owned.
 
 ## Verification scope
 
@@ -556,16 +557,17 @@ python3 -I -B scripts/history_archive.py --root . read docs/history/stitchcad-de
 | Stage | Owner | Current boundary |
 | --- | --- | --- |
 | Names/static kinds | G1-SLICE.5b | Whole-recipe proofs and coupled static review implemented |
-| Exact arithmetic/bindings | G1-SLICE.5c | Scoped APIs implemented; coupled/platform verification remains tracked |
-| Irrational functions | G1-SLICE.5d | Root/arc/sin/cos/inverse APIs available; tangent and complete coupled proof pending |
-| Execution/replay | G1-SLICE.5e | Taken-only computation, uncertainty/tolerances and atomic results pending |
+| Exact arithmetic/bindings | G1-SLICE.5c | Scoped APIs available;product-wide arithmetic/storage review .5c.4 remains |
+| Irrational functions | G1-SLICE.5d | Root/arc/trig/inverse and explicit-policy Tan available;scoped numerical review complete |
+| Execution/replay | G1-SLICE.5e | Scoped scalar/source/Design execution available;full replay/geometry/resource closure remains |
 | Construction operations | G1-SLICE.5f | Typed operation/dependency bridge and G2/G3 selectors pending |
-| Full formula acceptance | G1-SLICE.5g | Product examples/refusals and observed two-platform bytes pending |
+| Full formula acceptance | G1-SLICE.5g | Whole-product examples,device workflows and complete G1 acceptance remain |
 
-Children in docs/tasks/G1-SLICE-recipes.md and its execution sibling own remaining work. Unknown
-inputs gain no numeric fallback. Structural SizeSet inputs exist under D70; executed size mapping,
-G4 policy, command atomicity/localization (.6), storage/digests/cycle loading (.7), API/MCP (.9),
-browser execution (.12), G2/G3 geometry and G7 human approval remain separately required.
+The [numerical acceptance](formula-irrational-review.md#scoped-acceptance-and-remaining-owners)
+records the completed scope. Recipe/execution task siblings own remaining work. Unknown inputs
+gain no numeric fallback. Structural SizeSet inputs exist;full factory-size execution/G4 policy,
+complete bus atomicity/localization (.6),storage/digests/cycle loading (.7),API/MCP (.9),browser
+application workflow (.12),G2/G3 geometry and G7 human approval remain separately required.
 
 ## Pure input-review and phase reference guards
 

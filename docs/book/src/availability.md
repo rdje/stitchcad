@@ -17,14 +17,15 @@ inputs refuse numeric fallbacks. Some complete structural inventories can still 
 values. The [implementation-status annex](annexes/implementation-status.md) links each family to its
 source, roadmap requirement and verification owner.
 
-Earlier slices have local strict native/WASM evidence. New rational values have one focused
-native contract target; broader/platform verification is deferred. Cross-compiling libraries does
-not prove a working browser application. No new remote-run verdict is claimed.
+Local strict native/WASM checks and the [scoped numerical review](annexes/formula-irrational-review.md)
+pass,including execution on one native/Chrome pair. Application/device coverage remains pending.
+Cross-compiling libraries does not prove a working browser application. No new remote-run verdict is claimed.
 
 Whole statement/recipe [literal normalization](annexes/formula-recipe-inputs.md) preserves input
 metadata and global refusal context. The same normalized owners produce owned statement/recipe
 identity bytes for comparison; [the example](annexes/formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity)
-shows alias equality and preserved order. Complete AST/recipe execution and project storage follow.
+shows alias equality and preserved order. Admitted scalar recipe execution is available;
+geometry integration and project storage remain pending.
 
 [Formula declaration metadata](annexes/formula-declarations.md) describes kinds, origins and the
 contexts that supply reserved names. Immutable declarations retain canonical input identities and
@@ -39,7 +40,7 @@ checks actual scoped operands and annotations. [Coupled static review](annexes/f
 verifies those interfaces against independent rules and the actual reference.
 [Whole recipe acceptance](annexes/formula-checked-recipes.md) returns a complete immutable static
 proof with ordered source dependencies. Independent static whole-recipe review is complete;
-remaining numeric functions and recipe execution remain pending.
+the separate scalar evaluator supplies numerical execution with explicit policies and limits.
 
 [Canonical rational values](annexes/formula-rationals.md) can now be constructed and reduced exactly,
 with full 128-bit component magnitudes, independent sign and a typed zero-denominator refusal.
@@ -49,9 +50,9 @@ normalized-literal bridge. All four quantity operators now apply exact ppm scali
 Immutable approximation-call source sets, symbolic T1 admission checks and sourced numeric/Boolean
 operators/bindings, implemented numeric calls, exact tolerance comparisons, named assertion outcomes
 and lazy conditional value control are available.
-Complete AST dependency propagation remains evaluator integration.
+The scalar evaluator propagates actual executed-call sources through admitted syntax and bindings.
 The [checked-runtime sequence](annexes/formula-execution-plan.md) names the bounded next slices and
-remaining numerical/source/geometry dependencies; it is a plan, not whole-runtime availability.
+completed scalar/source paths and remaining geometry dependencies;full runtime acceptance stays separate.
 [Actual per-node certificates](annexes/formula-checked-nodes.md) now retain kinds, symbolic roles,
 resolved source/callee identities and typed children in the same successful static owner.
 Exact unary negation/square and all six numeric comparisons are available, preserving fractional
@@ -60,7 +61,7 @@ Explicit round_to is available at exact same-kind steps. Binding value conversio
 checks signed i64 storage and preserves Boolean kind. Correctly rounded sqrt(area/ratio), signed-length
 hypot and signed/full-turn arc_length are available. Native sin/cos/atan/atan2 kernels and supplied-scalar adapters are available.
 Explicit-resource tangent values,calls and expression/source/recipe/Design policies are available;scoped24-row/both-mode acceptance passes.
-Complete AST/statement/recipe execution remains later work.
+Admitted scalar AST/statement/recipe execution is available;geometry execution remains pending.
 [Canonical length authored reads](annexes/formula-runtime-validation.md#canonical-length-authored-reads)
 now preserve source/state beside exact values or observation/evaluation requests.
 [Canonical general scalar content](spec/measurement-inputs.md#canonical-general-scalar-content)

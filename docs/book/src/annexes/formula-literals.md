@@ -6,8 +6,7 @@ conversion checks exact rational width, rounds once and checks the input scalar 
 The [whole-expression API](#normalize-every-literal-in-an-expression) converts every literal while
 retaining the syntax graph. The [canonical serializer](#serialize-canonical-expression-identity) emits
 owned expression identity bytes. [Complete recipe normalization/identity](formula-recipe-inputs.md) and
-[whole recipe kind proofs](formula-checked-recipes.md) are implemented separately; numerical binding
-and evaluation remain later work.
+[whole recipe kind proofs](formula-checked-recipes.md),scalar binding and evaluation are available.
 See the [language](../spec/formula-language.md) and [grammar](../spec/formula-language/grammar.md).
 
 ## Inspect one literal
@@ -291,8 +290,7 @@ They provide no correctly rounded arbitrary transcendental or cross-platform num
 
 Canonical serialization is [G1-SLICE.5a.3d.2](#serialize-canonical-expression-identity), with coupled
 identity review .3d.3 complete below; [ordered statement identity](formula-recipe-inputs.md) is available.
-Names/types, numeric binding/evaluation,
-entity direction integration, geometry, storage and command/API/MCP execution remain later work.
+Names/types and scalar binding/evaluation are available;geometry,storage and full API/MCP execution remain pending.
 A normalized graph contains literal inputs and unevaluated operators; it is not an executable recipe.
 
 ## Canonical expression bytes

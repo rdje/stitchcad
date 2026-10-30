@@ -2,8 +2,8 @@
 
 > **Status:** implemented metadata foundation, G1-SLICE.5b.2d.2. FormulaNameCursor and
 > FormulaStatementNameScope enforce authored declaration order and retain actual binding sources.
-> Initial, current-statement and [whole recipe proofs](formula-checked-recipes.md) are available; execution
-> remains .5c–.5g. This chapter builds on [initial declarations and exact reads](formula-declarations.md).
+> Initial,current-statement and [whole recipe proofs](formula-checked-recipes.md) are available,as is
+> separate admitted scalar execution. This chapter builds on [initial declarations and exact reads](formula-declarations.md).
 
 A formula statement sees the initial namespace and declarations above it. A current or future let
 cannot supply its own RHS, and an assertion label never declares a scalar value. The cursor derives

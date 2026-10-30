@@ -4,7 +4,8 @@
 > The complete recipe API retains authored order, the4096-statement limit and diagnostic indices.
 > Whole input normalization is [implemented](formula-recipe-inputs.md) at .3f.1b;
 > statement/recipe identity is implemented at .3f.1c. [Current scoped kind checks](formula-name-scopes.md#check-the-actual-current-statement)
-> and [whole recipe kind proofs](formula-checked-recipes.md) are implemented separately; numerical evaluation remains later work.
+> and [whole recipe kind proofs](formula-checked-recipes.md) are implemented separately.
+> [Admitted scalar recipe execution](formula-recipe-execution.md) is available;full geometry/application workflows remain pending.
 
 The [formula grammar](../spec/formula-language/grammar.md#1-the-grammar) gives two statement forms:
 let declares a name and kind; assert names a closure check and its tolerance class. The public
@@ -152,8 +153,8 @@ files/three compile-time fixtures remain exact. The current Cargo-selected execu
 contracts after restoration. Dispatch captures and real native behavior are verified separately. Run
 the native mutation mode alone; the grammar and diagnostic mapping above stay unchanged.
 The failure classifier rejects passing-test-name and expect-only noise, checking failed-test bodies.
-Native/release checks and WASM cross-compilation retain their existing scope; browser execution,
-numerical evaluation and production approval remain later. Normalized statement/recipe
+Those native/release and WASM checks retain their scope. Separate scalar execution and one
+native/Chrome pair are available;full application and production approval remain owned. Statement/recipe
 serialization is [implemented separately](formula-recipe-inputs.md).
 
 ## Parse an ordered recipe
@@ -274,15 +275,15 @@ not. Twenty-two frozen inputs/twelve Rust files/four compile-time fixtures remai
 restoration the current Cargo-selected executable passes all eleven public contracts. The shared
 controls certify dispatch separately from native behavior; the grammar is unchanged. Two explicit test cardinality assertions guard indexed fixture reads.
 Native/release and WASM cross-compilation retain their stated scope. Coupled syntax review .3e.3
-is complete below; recipe normalization/identity .3f is implemented separately. Numerical execution
-and production approval remain owned future work.
+is complete below;recipe normalization/identity .3f and admitted scalar execution are available
+separately. Full application and production approval remain owned future work.
 
 ## Coupled syntax and diagnostic review
 
 G1-SLICE.5a.3e.3 reviews the complete standalone/ordered syntax obligation set against grammar1,
 contract2/4.3/5 and the worked statements. It closes .3e for immutable syntax and available diagnostic
 context. No product parser/serializer implementation changes in this review; the public recipe suite
-now has eleven tests. Exact numerical evaluation and the full command diagnostic envelope remain later.
+has eleven tests at that review. Scalar evaluation is available separately;the full command diagnostic envelope remains owned.
 
 | Obligation | Product evidence | Independent check or remaining owner |
 | --- | --- | --- |
@@ -296,7 +297,7 @@ now has eleven tests. Exact numerical evaluation and the full command diagnostic
 | Immutability/source/view lifetimes/Clone/privacy | Private constructors, six compile-fail docs, two runnable docs, opaque Debug controls | Actual statement/recipe fault controls; explicit inspection remains customer-bearing |
 | All worked source statements and operand identity | Seventeen bindings/four assertions in order; twenty-five expression byte controls | Independently authored byte population and actual recursive reference |
 | Complete recipe normalization/identity | Syntax retains names/annotations/order/source without conversion | .3f.1b/.1c/.3f.2; exact statement/recipe bytes specified below |
-| Static names/types, numeric binding, assertion execution and geometry | Syntax accepts unevaluated expressions; it grants no result | G1-SLICE.5; later tasks decomposed before implementation |
+| Static names/types,bindings,assertions and geometry | Syntax grants no computed result | Separate scalar execution available;geometry remains G1-SLICE.5f/G2 |
 | Semantic diagnostic arguments/localized command envelope | Typed syntax refusal/source/known index only | G1-SLICE.5/.6; no invented canonical context for malformed input |
 
 ### Token boundaries need distinct tokens

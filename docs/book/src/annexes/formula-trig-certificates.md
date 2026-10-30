@@ -1,8 +1,9 @@
 # Annex: investigating bounded trig rounding certificates
 
 Native sin/cos and atan/atan2 values are implemented under the complete certificates and admitted
-plans below. Tangent has explicit-resource native preparation and certified value execution. Whole formula
-execution and platform evidence remain separate [execution-plan](formula-execution-plan.md) work.
+plans below. Tangent has explicit-resource native preparation and certified value execution.
+Scalar/source/Design execution and an [observed native/Chrome pair](formula-irrational-platform.md)
+are available;full application/device integration remains [execution-plan](formula-execution-plan.md) work.
 
 ## Why output thresholds might help
 
@@ -227,7 +228,7 @@ This focused model passes14 atan and16 atan2 comparisons against an independent7
 rational-addition/series oracle, two zero-vector refusals, four standard-library integer-root
 comparisons and two insufficient-budget controls. The oracle uses a distinct pi identity and
 no Newton/half-angle reduction. Exact inequalities support the whole admitted argument family;
-the sample checks support transcription. Native code is available below; platform evidence remains pending.
+the sample checks support transcription. Native code and the observed native/Chrome pair are available;the wider device matrix remains separately owned.
 
 ## Native inverse values
 
@@ -266,10 +267,10 @@ The native implementation follows the576-bit/five-half-angle/64-term plan above.
 shared certified pi endpoint, directed private integer arithmetic and integer Newton; no platform
 libm or new precision-refusal rule is involved. Actual sourced inverse81 and signed storage/read
 pass in the [coupled inverse review](formula-irrational-review.md#inverse-principal-and-whole-ratio-boundaries).
-Scoped AST/source/recipe/Design scalar execution is available;complete coupled/platform proof remains.
+Scoped AST/source/recipe/Design execution and numerical coupled review pass;full application/device/resource closure remains.
 
 Complete0288 native inverse/oracle/threshold-neighbor receipts remain in
-`docs/history/stitchcad-devnotes-part487.md`. Coupled/platform proof remains .5d.4/integration/pre-push.
+`docs/history/stitchcad-devnotes-part487.md`. Scoped numerical review passes;full application/platform integration remains owned.
 
 ## Tangent resource boundary
 
@@ -580,7 +581,7 @@ formatting pass. The pure oracle is registered in the existing formula probe sui
 has explicit read-only/stdout inventory ownership. Full producer locality review remains separate.
 
 This closes scoped native tangent implementation and finite combined acceptance. The rigorous
-admitted strategy supplies result certification;these139 rows are not exhaustive128-bit input or
-cross-platform coverage. The coupled irrational review remains .5d.4. Expression/source/
-recipe/Design policies are available;scoped combined24-row acceptance passes. Full heap/CPU,
-provider,platform,replay,physical and production approval retain their separate owners.
+admitted strategy supplies result certification;the139 rows remain finite implementation checks.
+The [scoped numerical review](formula-irrational-review.md#scoped-acceptance-and-remaining-owners)
+is complete. Scalar/source/recipe/Design policies and combined24-row acceptance pass. Full heap/CPU,
+provider,replay,application/device,physical and production approval retain their separate owners.

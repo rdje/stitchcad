@@ -1,22 +1,24 @@
 # Coupled irrational function review
 
-The root,trigonometric and inverse kernels are implemented. This chapter tracks their coupled
-rounding,error and provenance review under G1-SLICE.5d.4. Each function keeps its own numerical
+The root,trigonometric and inverse kernels are implemented. Their scoped coupled rounding,error
+and provenance review under G1-SLICE.5d.4 is complete. Each function keeps its own numerical
 rounding boundary;an algebraically equivalent expression need not have the same rounded result.
 Scoped fixtures do not grant platform identity,full resource bounds or production approval.
 
 | Family | Available implementation | Coupled review boundary |
 | --- | --- | --- |
-| sqrt/hypot | Exact integer roots and sourced calls | Native85 rows/five actual body faults pass below;observed native/Chrome evidence passes;full coupled acceptance remains |
-| arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;observed native/Chrome evidence passes;full coupled acceptance remains |
-| sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/sourced88/seven actual body faults pass;observed native/Chrome evidence passes;full coupled acceptance remains |
-| atan/atan2 | Principal branches and complete inverse threshold certificate | Source-gated proof/sourced81/nine actual body faults pass;observed native/Chrome evidence passes;full coupled acceptance remains |
-| tan | Explicit per-call quotas,native139 and real paired24 acceptance | Native139/resource33/paired24 and9+13 actual faults pass;observed native/Chrome evidence passes;full coupled acceptance remains |
+| sqrt/hypot | Exact integer roots and sourced calls | Exact root argument,sourced85/fault5 and observed pair pass;coupled review complete |
+| arc_length | Signed/full-turn fixed-pi certified rounding | Complete admitted pi proof,sourced23/fault5 and observed pair pass;coupled review complete |
+| sin/cos | Exact folding and complete forward threshold certificate | Complete1M certificate,sourced88/fault7 and observed pair pass;coupled review complete |
+| atan/atan2 | Principal branches and complete inverse threshold certificate | Complete45M certificate,sourced81/fault9 and observed pair pass;coupled review complete |
+| tan | Explicit per-call quotas,native139 and real paired24 acceptance | Native139/resource33/paired24,fault9+13 and observed pair pass;coupled review complete |
 
 The [canonical numerical contract](formula-rationals.md)
 records the algorithms. [Tangent resources](formula-trig-certificates.md) retain
 separate request admission. Original forward/inverse certificate stores are protected evidence;
 this review reuses them read-only and never reruns an old installation transaction.
+Per-run counts and legacy paths below identify original captures. Current commands allocate fresh
+protected runs as described in the [capture contract](formula-irrational-platform.md#fresh-native-fault-capture-identities).
 
 ## Exact root boundaries
 
@@ -62,7 +64,7 @@ The producer reads no Rust,native result or frozen expected fixture. Its explici
 verify the513/512-bit witness and the original128-bit components before emitting rows.
 These finite checks support the existing exact all-input argument;they are not exhaustive input
 coverage. Actual implementation-body faults are recorded below.
-Mixed-call and observed native/Chrome numerical checks are now available;full coupled closure remains separate.
+Mixed-call and observed native/Chrome checks join the scoped acceptance recorded below.
 
 ## Actual native root body faults
 
@@ -104,7 +106,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
 The formula-structure probe suite also runs this check. These are native POSIX process-group
 controls and finite fault witnesses. They close the scoped native root review;actual cross-platform
 numerical execution now has separate observed native/Chrome evidence. Other families and mixed chains
-are now available below;the complete coupled irrational gate remains open.
+are available below;scoped coupled acceptance is recorded at the end of this chapter.
 
 ## Arc length certificate and sourced boundaries
 
@@ -171,7 +173,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/arc_body_faults.py
 The primary arc target's four tests and scoped strict lint pass after adding explicit independent
 row context to failure assertions. This closes scoped native arc review. Complete producer runtime/
 locality remains n16. Other scoped native families and mixed chains are now available;actual
-Chrome numerical evidence is now available;full coupled/resource/provider/replay/physical/production proof remains owned.
+Chrome numerical evidence and scoped coupled acceptance pass;full resource/provider/replay/physical/production proof remains owned.
 
 ## Forward sine and cosine boundaries
 
@@ -214,7 +216,7 @@ refusal even at zero. No source flags or computed values are seeded into this wa
 
 The native target passes4 tests,including independent fixture reproduction. Seven actual kernel
 body faults pass below;observed native/Chrome numerical execution is now available separately.
-Full coupled proof remains G1-SLICE.5d.4.acceptance. These focused checks grant no full integration,
+Scoped coupled acceptance passes below. These focused checks grant no full integration,
 allocator,physical or release approval.
 
 ## Exact native fault evidence and forward body controls
@@ -256,19 +258,19 @@ All workspaces,build stores and logs remain repository-local. Fresh0632 replay i
 the original reports intact. An initial sandbox replay refused an owned process-group kill
 before copying or compiler dispatch;the OS-visible census proved no remaining descendant.
 The fresh native replay uses the access required for its POSIX timeout controls. These controls
-remain finite native evidence;transitive producer/locality and browser parity stay separately owned.
+remain finite native evidence;transitive producer/locality and complete browser workflows stay separately owned.
 
 The fresh runs pass three baselines and seventeen successfully compiled numerical faults.
 Forward rejects cosine-sign,period,quarter-shift,octant,scale,series and rounding faults at exact
 original ordinals1/4/1/1/1/7/7. Root rejects its five faults at4/9/17/24/4;arc at10/6/4/11/4.
 Each report contains one explicit failure ordinal and its complete original assertion payload.
-Current reports are under target/forward_body_faults/0632-verified-forward/,
+The0632 reports remain under target/forward_body_faults/0632-verified-forward/,
 target/root_body_faults/0632-exact-root/ and target/arc_body_faults/0632-exact-arc/.
 Their original source populations545/544/545 and542 copied files each remain byte-exact;planned
 outputs553/551/551 and both timeout controls per family pass. Original kernels/fixtures are unchanged.
 The14 affected primary tests and strict lint/formatting pass after restoration,including all three
 independent fixture regenerations. This closes scoped native forward review. Inverse,Tan and
-mixed-call and observed native/Chrome numerical reviews are available;full coupled/resource/provider/release proof remains owned.
+mixed-call,observed native/Chrome and scoped coupled reviews pass;full resource/provider/release proof remains owned.
 
 ## Inverse principal and whole-ratio boundaries
 
@@ -323,7 +325,7 @@ Five additional actual sourced checks preserve wrong-kind/second-kind priority a
 homogeneous zero-vector refusals. A failed atan2 adds no successful call contribution to its
 inputs. The complete native target passes4 tests with strict affected lint/formatting. Nine actual
 inverse body faults pass below;mixed-call and observed native/Chrome numerical checks are available.
-Complete coupled/resource/provider/physical/release acceptance remains separately owned.
+Scoped coupled acceptance passes below;full resource/provider/physical/release owners remain.
 
 ## Actual native inverse body faults
 
@@ -349,7 +351,7 @@ Mutated runs stop at their first failing assertion;they are not nine complete81-
 The unchanged baseline and primary target exercise all81 original cases. The guarded run retains
 545 original input hashes,an exact542-file snapshot and555 planned output paths,with both owned
 parent/child timeout controls passing. Original/copy bytes match after finally restoration.
-The current report at target/inverse_body_faults/0634-workspace/report.json retains full assertion
+The0634 report at target/inverse_body_faults/0634-workspace/report.json retains full assertion
 payloads,exact ordinals,compiler identity,variant source/binary hashes and observed return codes.
 
 ```bash
@@ -360,8 +362,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py
 The formula-structure suite registers this entry alongside root,arc and forward controls.
 After restoration,the primary inverse4 tests,strict affected lint and formatting pass. Original
 kernel and fixture bytes are unchanged. This closes scoped native inverse review. The original
-complete45M certificate now also passes the fresh0641 full reader. Tan and mixed-call scoped native reviews are now available. Native/browser parity,
-full resource/provider/replay and release proof remain owned;observed numerical Chrome evidence is available,while transitive locality remains n16.
+complete45M certificate also passes the fresh0641 full reader. Tan,mixed-call,observed native/Chrome
+and scoped coupled reviews pass below. Full resource/provider/replay/release and transitive locality n16 remain owned.
 
 ## Tangent adaptive and explicit-resource boundaries
 
@@ -415,7 +417,7 @@ now reflects available native/scalar policies while keeping aggregate resource c
 
 ## Actual native tangent arithmetic body faults
 
-The tangent_body_faults.py entry runs three static source configurations through the shared
+The original0636 tangent_body_faults.py runs use three static source configurations through the shared
 original-scope Cargo controller. Each copies542 original workspace files and runs the same
 139-row actual upstream/storage watcher. All three unchanged baselines pass. Each of nine
 single-body faults compiles successfully,then fails its independent numerical assertion.
@@ -451,9 +453,8 @@ After restoration,the primary13 tangent tests and strict affected lint/formattin
 formula-structure suite and native producer registries include this entry. Native file ownership
 is split into bounded4+1 groups;complete transitive compiler/build locality remains n16.
 This closes scoped arithmetic fault review. Actual reservation/charge/precedence/counter faults
-pass below;Python model reds do not substitute for them. Mixed-call behavior,
-native/browser execution parity,aggregate resources and full coupled/production acceptance
-retain their separate owners.
+pass below;Python model reds do not substitute for them. Mixed-call and observed native/browser
+checks join scoped coupled acceptance;aggregate resources and production approval remain owned.
 
 ## Independent native resource outcomes
 
@@ -534,7 +535,7 @@ retain the highest previously admitted reservation and completed charges;refused
 appear as consumed. The checked primitive-overflow path is verified separately by the original
 private excessive-extent test and the admission inequalities above.
 
-Each run preserves547 original input hashes and an exact544-file workspace snapshot. Preparation
+The original0638 runs preserve547 input hashes and an exact544-file workspace snapshot. Preparation
 plans554 outputs;execution plans555. Both owned parent/child timeout controls pass for each.
 All original and copied bytes match after finally restoration. Mutants stop on their first
 independent assertion;they are not thirteen complete33-row populations. Reports under
@@ -550,11 +551,31 @@ After restoration,the primary resource target's two tests,the private excessive-
 strict affected lint and formatting pass. The formula-structure suite and native registries
 include this entry. This completes scoped native tangent arithmetic/resource/source review.
 [Mixed irrational call chains](formula-irrational-composition.md) now pass a separate native/Design
-cohort. [Observed native/Chrome parity](formula-irrational-platform.md) now passes;full coupled acceptance,aggregate resources and probe locality remain owned;
+cohort. [Observed native/Chrome parity](formula-irrational-platform.md) and scoped coupled acceptance pass;aggregate resources and probe locality remain owned;
 no physical or production release approval follows from these finite native checks.
 
 
 The [fresh full certificate acceptance](formula-irrational-platform.md#fresh-complete-certificate-acceptance)
 records both complete readers,independent runtime controls and preserved original receipts.
 [D345 capture preservation](formula-irrational-platform.md#fresh-native-fault-capture-identities)
-now passes;full integration gates remain next.
+passes;the complete29-suite local probe gate also passes.
+
+
+## Scoped acceptance and remaining owners
+
+The available mathematical APIs and their sourced,storage and mixed scalar/Design paths now
+complete .5d.4. Exact root/arc arguments,complete forward/inverse midpoint certificates and
+convergent explicit-resource tangent enclosures cover their declared admitted inputs. Finite
+native fixtures/faults support implementation transcription;they do not replace those proofs.
+Actual contributions,error priority,storage boundaries and independent supplier/caller policies
+remain observable through the original24 paired and32 mixed recipes.
+
+Both complete certificate readers pass0641. The0654 actual local gate passes all29 suites:
+nine baselines reject48 compiled numerical faults;31 original checks pass on the observed
+native/Chrome pair and its compiled bad-expectation control fails both. Original evidence and
+all4905 fresh snapshot files remain exact. [Full results and preservation receipts](formula-irrational-platform.md#complete-local-probe-milestone)
+retain the source/runtime identities and boundaries.
+
+Complete allocator/CPU bounds,provider/replay/geometry integration,application/device matrices,
+physical validation and human release approval keep their existing G1–G7 owners. Transitive
+producer locality remains f.n16;fresh search capture a40 follows this numerical review.
