@@ -39,8 +39,8 @@ as the CLI; its directory must be under target/artifact_cleanup_audit with one r
 The census checks doctrine/scratch/tmp, Rust incremental and rendered-book trees, plus ignored
 .log, .bin, .tmp, .orig, .rej and .DS_Store strays under target. Protected stores and dependency
 binaries are pruned. Retained numerical proof stores target/trig_forward_certificate/ and
-target/inverse_threshold_certificate/ are also protected, including their .bin payloads,
-checkpoints, frozen sources and executable. Retained archive/search workspace families are
+target/inverse_threshold_certificate/ and target/irrational_platform_certificate/ are protected,
+including .bin payloads,checkpoints,frozen sources,executables and original browser captures. Retained archive/search workspace families are
 also protected below. Generic cleanup cannot retire those records;
 any later retirement needs its own task and evidence. Unsafe entries appear in skipped with a reason; they are never followed or
 removed. Nested Git markers, symlinks, foreign devices, special files, nonignored paths and tracked
@@ -65,13 +65,13 @@ whole families before traversal,including future capture identities. Package sto
 certificates,Git boundaries and all previous guards retain their existing protections. A similarly
 named folder nested under an ordinary output root stays eligible for normal review.
 
-The watched fresh fixture checks both numerical stores and all five future workspace families,
+The watched fresh fixture checks all three numerical stores and all five future workspace families,
 plus two ordinary outputs. Four compiled actual omissions independently expose numeric-store
 removal,family predicate removal,direct-inspector guard removal and census-prune removal.
 The intact inspector/census refuses the retained roots and never traverses them;all fixture and
 source bytes remain exact. These controls never call project cleanup apply. The legacy policy
 comparator admits exactly the two family guards and checks the original bodies/constants after
-those explicit adapters,plus the existing two numerical stores. It pins all five family prefixes.
+those explicit adapters,plus the three explicitly admitted numerical stores. It pins all five family prefixes.
 
 A new retained proof workspace must use one of these families or receive an explicit protected
 root before creation. Every actual cleanup still requires frozen-plan review and preservation

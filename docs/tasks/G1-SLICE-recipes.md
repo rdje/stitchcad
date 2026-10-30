@@ -642,27 +642,30 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0638 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part798.md).
 - ID: `G1-SLICE.5d.4.composition`
   Status: `done`
-  - [x] REPRODUCE / ISSUE:per-function/paired Tan controls lacked complete mixed irrational chains.
-  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/mixed_irrational_design_oracle.py
-    →32 rows/20 success/12 first refusals,12122B/SHA635d0527,rc=0. Exact per-call integer/Fraction
-    certificates and independent book Decimal calculations agree;tie/component/inverse/pole controls pass.
-  - [x] FIX:shared paired watcher runs original24 and new32 through actual native/Design modes;
-    retain each call rounding,source cache/storage/read boundaries,flags,first failure and unchanged state.
-  - [x] ADDRESSED (verified):local launcher cargo test --offline --locked -p sc-core --test
-    design_structure_contract formula_execute::independent::tangent →4 pass/64 mixed+48 original
-    comparisons/both whole-fixture regenerations exact,rc=0. All8 functions in one successful chain.
-  - [x] NO REGRESSION:strict affected Clippy/fmt/bash pass,rc=0. Initial context-name compile error
-    corrected before actual4 pass. Core/original139/resource33/paired24 bytes unchanged;prior IDs/order
-    exact. Producer355/34565calls,file242/91/40/15refusals/12reds,whole798 four spans,map/diff/
-    book100/374/1663/2960/glossary0 pass,rc=0;new chapter fully indexed under fixed bounds.
-  - [x] LOCKSTEP:book/live/task/notes/suite/registries align;platform execution next,then complete
-    coupled acceptance. Full resources/provider/replay/physical/release and locality remain owned.
-    promotion: declined (existing per-call rounding,source/storage/identity and first-failure contracts).
-  Commit:STITCHCAD-G1-0639;Verification:mixed32/64+original24/48/native4/lint/book.
+  Goal:0639 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part799.md).
 - ID: `G1-SLICE.5d.4.platform`
-  Status: `pending`
+  Status: `done`
   Goal:actual declared native/browser numerical identity with exact target/toolchain/run evidence,
   including original mathematical/resource failures;compile-only evidence is not execution parity.
+  Scope:numeric API pair;full wasm-viewer/matrix remain G1/G5.
+- ID: `G1-SLICE.5d.4.platform.execution`
+  Status: `done`
+  - [x] REPRODUCE / ISSUE:D344 exploratory Chrome inherited off-volume TMPDIR;no numerical verdict.
+  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/irrational_platform.py
+    --plan-only →9 consumers/31 checks/6 host exclusions/405 fixture rows,no dispatch,rc=0.
+    Old direct Popen missed prepared env;one ambiguous empty host directory remains untouched.
+  - [x] FIX:freeze inputs,localize child/temp/profile paths,protect captures before creation;
+    safe main/ExitCode bridge preserves unsafe forbid;owned failure writer/atomic latest publication.
+  - [x] ADDRESSED (verified):same entry without --plan-only →native31+actual Chrome31 pass104,
+    compiled wrong expectation fails native101/browser RuntimeError;rc=0. Original550 hashes/copies
+    exact;temp move/census/old-path residue exact0,new ambient Chrome entries0;OS process census OK.
+  - [x] NO REGRESSION:strict adapter Clippy/fmt/bash,protocol4/1 red,cleanup8/2/4 reds+legacy AST
+    pass,rc=0. Producer356/34892calls,file243/91/40/15refusals/12reds,whole799 four spans/IDs+1/
+    map/diff/book101/374/1667/2973/glossary0 pass,rc=0. Core/tests/fixtures/lock/toolchain unchanged.
+  - [x] LOCKSTEP:D344 fixed;observed Rust1.99/Chrome156 pair only;full app/matrix/locality remain
+    owned. Book/live/notes sync;coupled acceptance next. promotion: declined (existing actual-run,
+    same-volume,proof-retention,source-preservation and scoped numerical contracts).
+  Commit:STITCHCAD-G1-0640;Verification:31 native+Chrome/bad fixture/550 hashes/lint/book.
 - ID: `G1-SLICE.5d.4.acceptance`
   Status: `pending`
   Goal:close complete coupled irrational review only after all scoped proofs/faults/composition/

@@ -130,3 +130,4 @@ and verification material are in the annexes, at their preserved chapter URLs.
 
 - [Coupled irrational function review](annexes/formula-irrational-review.md)
 - [Mixed irrational source and recipe execution](annexes/formula-irrational-composition.md)
+- [Observed native and browser numerical execution](annexes/formula-irrational-platform.md)

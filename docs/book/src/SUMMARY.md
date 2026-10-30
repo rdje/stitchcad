@@ -79,6 +79,7 @@
   - [Trig certificate feasibility](annexes/formula-trig-certificates.md)
   - [Coupled irrational function review](annexes/formula-irrational-review.md)
     - [Mixed irrational source and recipe execution](annexes/formula-irrational-composition.md)
+    - [Observed native and browser numerical execution](annexes/formula-irrational-platform.md)
   - [Formula literal normalization](annexes/formula-literals.md)
   - [Formula statements and ordered recipe syntax](annexes/formula-statements.md)
   - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)

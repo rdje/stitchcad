@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.platform:actual declared native/browser numerical execution identity,
-  including original mathematical/resource failures;inspect available public runtime/toolchain first.
-  Compile-only evidence cannot close parity. Then .acceptance owns full coupled/fresh45M read.
-- Mixed0639:32 rows/20 success/12 first refusals,64 complete actual native+Design comparisons.
-  Original paired24/48 retained.12122B/SHA635d0527785039caff58662c806b9cbb94e490a42cc96e241d451b56dea93c25.
-  Independent exact per-call integer/Fraction enclosures plus book Decimal agree;all8 functions
-  in one successful chain. Source cache/unbound/binding/read/flags/first-failure boundaries retained.
-- Native4/both regenerations/strict affected lint/fmt/bash pass;original139/resource33/paired24/core
-  unchanged. Producer355/34565calls,file242/91/40/15refusals/12reds/history798 four spans/IDs/map/
-  diff/book100/374/1663/2960/glossary0 pass. Native family/mixed scopes done;platform/full pending.
-- Complete transitive locality remains n16;fresh45M inverse read deferred to coupled acceptance.
-  G1 6/18/G0 unapproved unchanged;no app/physical/production approval or new full/hosted verdict.
-- Protect original archive/search/numerical trees;0630 transaction complete,never rerun old
-  install/recovery. Full/hosted79bd6f6a exact-SHA only;full PNT/push400 continues.
+- Next G1-SLICE.5d.4.acceptance:complete coupled numerical acceptance;fresh45M/450 inverse read and deferred full verification.
+- Platform0640:31 unchanged ordinary checks/9 consumers run native aarch64-apple-darwin and actual
+  Chrome156.0.8078.74/wasm32-unknown-unknown under Rust1.99 b940084d7/LLVM23.1.1,Darwin27 arm64.
+  Six original fixtures405 rows/26610B;baseline104 both;compiled bad expectation native101/browser
+  RuntimeError.31 checks exclude6 host Python regenerators. Original550 hashes/copies exact.
+- Retained report target/irrational_platform_certificate/0640-20261030T173036575781Z-2055/report.json
+  SHA46a3dd7aecc9e0d5a95d4b55edf13f7ab29600d2ac881aa10c33a1479f7adf19. Atomic latest pointer.
+- D344 fixed:prepared local child/temp/profile/cache environment;temp sealed/residue0,ambient new
+  Chrome entries0,OS census OK. Initial ambiguous empty host dir untouched;failed captures retained.
+  Protected store registered first;cleanup8/2/4 reds+legacy AST exact. No daily cleanup performed.
+- Strict adapter lint/fmt/bash/protocol4/1red/producer356/34892/file243/91/40/15refusals/12reds/
+  history799/IDs+1/map/diff/book101/374/1667/2973/glossary0 pass. Core/original fixtures unchanged.
+- Numeric/mixed/observed-pair scopes done;full app/matrix/locality/resources/provider/replay/physical/
+  release remain owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA only;full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

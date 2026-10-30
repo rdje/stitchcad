@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — compose actual mixed irrational source and recipe calls
+## _(2026-10-30 UTC)_ — execute original numerical checks in actual Chrome
 
-0639 adds32 recipes:20 success/12 first failures,64 complete actual native/Design comparisons. Exact integer/Fraction certificates check each irrational result;book Decimal calculations independently agree. All8 calls contribute to one value;source/cache/storage/read/flag/failure boundaries remain exact.
-Original24 paired cases/48 comparisons and all8748 bytes stay unchanged. New12122B fixture SHA635d0527 regenerates. Native4/strict affected lint/fmt/bash pass;initial helper context-name compile error corrected first. Original139/resource33 fixtures and core unchanged;prior task IDs/order retained.
-Producer355/34565calls,file242/91/40/15refusals/12reds,book100/374/1663/2960/glossary0/history798/map/diff pass. New mixed chapter fully indexed;current review text aligned. [Whole0638](docs/history/stitchcad-devnotes-part798.md) retains scoped native tangent closure.
-Promotion declined:existing contracts. LIVE adds mixed32;G1 6/18/G0 unapproved unchanged. Next actual native/browser execution parity,then full coupled/fresh45M read. Full resource/provider/replay/physical/release/locality owners remain. Full PNT/push400 continues;no new full/hosted verdict.
+0640 runs31 unchanged public-consumer checks/9 files on native aarch64 and actual Chrome156 Wasm32,Rust1.99 b940084d7/LLVM23.1.1,Darwin27 arm64. Six fixtures405 rows/26610B. Baseline104 both;compiled bad expectation fails native101/browser RuntimeError. Original550 input/copy hashes exact.
+D344 fixed:prepared local child/temp/profile/cache paths;new retained capture store guarded before creation. Temp move/census/residue0,ambient new Chrome entries0,OS process census OK. Initial ambiguous empty host dir untouched. Failed lookup/process-admission attempts retained;no daily cleanup performed.
+Strict adapter Clippy/fmt/bash,protocol4/1 actual ownership red,cleanup8/2/4 reds+legacy AST,producer356/34892calls,file243/91/40/15refusals/12reds,book101/374/1667/2973/glossary0/history799/IDs+1/map/diff pass. Safe main/ExitCode needs no unsafe export;atomic receipt pointer preserves earlier captures.
+[Whole0639](docs/history/stitchcad-devnotes-part799.md) retains mixed-call review. Promotion declined:existing contracts. LIVE adds observed pair31/D344 fixed;G1 6/18/G0 unapproved unchanged. Next coupled/fresh45M read/full verification;app/matrix/locality/physical/release owners remain. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

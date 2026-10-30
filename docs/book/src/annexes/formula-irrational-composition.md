@@ -133,9 +133,10 @@ fixture generation refuses;there is no guessed answer or universal practical pre
 All12122 frozen bytes regenerate,SHA-256
 635d0527785039caff58662c806b9cbb94e490a42cc96e241d451b56dea93c25.
 Four native tests cover both populations and both byte regenerations;strict affected lint and
-formatting pass. These are scoped mixed-function checks. Actual native/browser execution
-identity and full coupled acceptance remain separate work,as do aggregate resources,geometry,
-provider/replay integration,physical validation and human release approval.
+formatting pass. These are scoped mixed-function checks. [Observed native/Chrome numerical
+execution](formula-irrational-platform.md) is now available separately. Complete browser source/Design
+application workflows,full coupled acceptance,aggregate resources,geometry,provider/replay integration,
+physical validation and human release approval retain their owners.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/mixed_irrational_design_oracle.py

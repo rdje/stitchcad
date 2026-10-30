@@ -19,7 +19,8 @@ TREES = ('target/doctrine_scratch', 'target/scratch', 'target/tmp',
 AUDIT = 'target/artifact_cleanup_audit'
 PROTECTED = (AUDIT, 'target/cargo-home', 'target/scaffold_backup',
              'target/debug/deps', 'target/release/deps',
-             'target/trig_forward_certificate', 'target/inverse_threshold_certificate')
+             'target/trig_forward_certificate', 'target/inverse_threshold_certificate',
+             'target/irrational_platform_certificate')
 PROOF_FAMILIES = ('history-capture-', 'history-generations-', 'history-proof-',
                   'history-review-', 'book_search_')
 SUFFIXES = ('.log', '.bin', '.tmp', '.orig', '.rej')

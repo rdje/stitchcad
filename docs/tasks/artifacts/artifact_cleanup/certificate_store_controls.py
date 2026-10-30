@@ -16,7 +16,8 @@ PROFILE_PATH = ROOT / 'scripts/local_environment.py'
 SOURCE = Path(__file__).with_name('cleanup.py')
 BASE = ROOT / 'target/cleanup_certificate_controls' / str(os.getpid())
 INPUTS = (Path(__file__), SOURCE, PROFILE_PATH, ROOT / 'scripts/check_handoff.sh', ROOT / 'scripts/handoff_census.py')
-CERTIFICATES = ('target/trig_forward_certificate', 'target/inverse_threshold_certificate')
+CERTIFICATES = ('target/trig_forward_certificate', 'target/inverse_threshold_certificate',
+                'target/irrational_platform_certificate')
 WORKSPACES = ('target/history-capture-future', 'target/history-generations-future',
     'target/history-proof-future', 'target/history-review-future', 'target/book_search_future')
 STORES = (*CERTIFICATES, *WORKSPACES)
@@ -86,12 +87,12 @@ def main():
         before = len(assignment.value.elts)
         assignment.value.elts = [item for item in assignment.value.elts
                                 if not (isinstance(item, ast.Constant) and item.value in CERTIFICATES)]
-        assert before - len(assignment.value.elts) == 2, 'fault did not remove exactly both new protections'
+        assert before - len(assignment.value.elts) == 3, 'fault did not remove exactly three certificate protections'
         faulty = {'__file__': str(copied), '__name__': 'certificate_protection_omitted'}
         exec(compile(ast.fix_missing_locations(tree), str(copied), 'exec'), faulty)
         with patch.object(subprocess, 'run', local_git):
             admitted = faulty['census']()['candidates']
-            assert {row['path'] for row in admitted} == {*(name + '/retained.bin' for name in CERTIFICATES), *ORDINARY, 'target/scratch'}, 'actual omission failed to expose both proof files'
+            assert {row['path'] for row in admitted} == {*(name + '/retained.bin' for name in CERTIFICATES), *ORDINARY, 'target/scratch'}, 'actual omission failed to expose all three proof files'
             try:
                 require_protected(faulty)
             except AssertionError as error:
@@ -153,7 +154,7 @@ def main():
                 require_protected(module)
         assert {name: hashlib.sha256((BASE / name).read_bytes()).hexdigest() for name in NAMES} == saved
         assert all(source.read_bytes() == destination.read_bytes() for source, destination in mapping.items())
-        print('retained cleanup: protected7/ordinary-strays2/actual omission-reds4/restored1; all data/source bytes unchanged, rc=0')
+        print('retained cleanup: protected8/ordinary-strays2/actual omission-reds4/restored1; all data/source bytes unchanged, rc=0')
     finally:
         if BASE.exists() or BASE.is_symlink():
             profile['plan_producer'](ROOT, directories=(BASE,))

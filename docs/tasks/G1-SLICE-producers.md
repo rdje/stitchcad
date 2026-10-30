@@ -916,5 +916,5 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
   Status: `pending`
-  Goal:tangent body-entry locality review under parent schedule/acceptance;feature evidence is scoped.
-  Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py;docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py
+  Goal:tangent/platform entry locality review under parent schedule/acceptance;feature evidence is scoped.
+  Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py;docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py;docs/tasks/artifacts/formula_structure/irrational_platform.py

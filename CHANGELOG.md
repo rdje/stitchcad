@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0639 — compose actual mixed irrational calls
+## STITCHCAD-G1-0640 — execute numerical checks natively and in actual Chrome
 
-- New32 recipes/64 actual native+Design comparisons preserve per-call rounding,shared sources,storage,reads,flags and12 first refusals. Exact per-call certificates/book Decimal agree;one value retains all8 functions. All12122 fixture bytes regenerate;original24/48 and fixtures/core remain exact.
-- Native4/strict affected lint/fmt/bash/book100/374/1663/2960/glossary0/history798/IDs/map/diff pass. New chapter/indexes and live records align. LIVE adds mixed32;G1 6/18/G0 unapproved unchanged. Actual platform execution next;full coupled/resources/release/locality remain owned.
+- Original31 checks/9 consumers pass native+Chrome Wasm;6 fixtures405 rows/26610B,550 original hashes exact. A compiled wrong expectation fails native101/browser trap. Exact Rust1.99/Chrome156/Darwin27 pair recorded;full app/browser matrix remains owned.
+- Fix D344 local child/temp/profile/cache storage;retain original captures with guarded store/atomic pointer. Cleanup8/2/4 reds+legacy AST/protocol4/1red/strict lint/fmt/bash/book101/374/1667/2973/glossary0/history799/IDs+1/map/diff pass. G1 6/18/G0 unapproved unchanged. Coupled acceptance next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
