@@ -132,46 +132,44 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0620 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part780.md).
 - ID: `G1-SLICE.5e.2.4.integration.tangent.recipes`
   Status: `done`
-  Goal:actual standalone/source-backed ordered recipes retain explicit per-call Tan policies,
-  original owners,once-only storage/assertion order and original typed first failures.
-  - [x] REPRODUCE / ISSUE:source graphs0620 could execute configured Tan suppliers,but every
-    direct recipe-owned Tan was still unavailable and recipe plans/errors retained no selected
-    native policy. Reusing a supplier policy would silently change the actual caller's allowance.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test formula_tangent_recipe_contract
-    →eight actual standalone/pair factory/runtime tests pass,rc=0. Recipe capability scanning,
-    RecipeSources and operand pause/resume need the actual recipe policy,while each supplier
-    keeps its own source plan. Source roots are not let storage boundaries.
-  - [x] FIX:prepare_scalar_with_tangent_limits selects policy before complete capability/source
-    admission. Legacy direct Tan reports MissingTangentPolicy. Recipe plans/preparation/runtime/
-    nested scalar failures retain selected limits;the actual runtime passes them across Derived
-    suspension without replay. Paired errors retain both original independent policies,including
-    pre-value foreign-owner refusal. Every native call receives its own request budget.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_recipe_contract
-    →eight pass,rc=0:complete missing-policy-before-join priority;exact Tan contributions through
-    cancellation/false storage/real T2;577350ppm divided before once-only storage and repeated
-    stored reads;left/right/header failure priority and actual T1 refusal;late8219-bit refusal
-    after1536 terms;real unbound Angle suspension with differing policies;source resource and
-    foreign-owner failures retaining both policies;finite113-bit native Ratio reaching only the
-    original signed binding refusal. No supplied value,cache,source owner or diagnostic code.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_tangent_sources_contract →six pass
-    after moving only real graph constructors to shared support,rc=0. Existing recipe execution9/
-    plan5 pass,including18 independent rows/all4167 frozen bytes;private recipe::execution:: nine
-    guards pass,rc=0. Selected Design factory-priority test passes1/51filtered,rc=0. Scoped strict
-    Clippy covers library/new recipe/source/recipe-plan and affected Design target;selected rustfmt
-    passes,rc=0. Recipe plan/worker rustdoc filters pass4+1 examples/privacy guards,rc=0.
-    Positive book98/374/1650/2916,glossary310/9/158/0,history780 four exact Git spans,prior task IDs/
-    order/uniqueness,map/diff pass,rc=0. Broader CI/platform verdict remains separately owned.
-  - [x] LOCKSTEP:README/book/status/facts/decision/task/index/MEM/DEV/CHANGE/LIVE align;
-    whole0620 retained780. Direct/source-backed recipe policy implementation complete;next actual
-    Design policy selection,then independent combined paired acceptance. G1 6/18/G0 unapproved
-    unchanged. Existing per-call policy/owner decisions cover this integration.
-    promotion: declined (existing explicit per-call policies and original owner/storage contracts already own the semantics;no new policy authority is needed).
-  Commit:STITCHCAD-G1-0621;Verification:new8/source6/old recipe14/private9/Design1/doc5/scoped lint/fmt.
+  Goal:0621 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part781.md).
 - ID: `G1-SLICE.5e.2.4.integration.tangent.design`
-  Status: `pending`
-  Goal:actual Design scope/plan/execution factories retain explicit tangent policy and original
-  complete currentness/resource/proof/context/root/error contracts before native values. No model
-  clone,host bound or cached numerical result. Split safe actual factory/runtime slices as needed.
+  Status: `done`
+  Goal:actual private Design proof/plan/execution joins retain independently selected source and
+  recipe tangent policies,original owners and complete currentness/resource/error contracts.
+  - [x] REPRODUCE / ISSUE:actual expression/source/recipe Tan policies existed,but Design
+    plan_inputs/prepare_scalar still selected only legacy native paths,so actual Design Tan
+    could not be prepared and the foreign-root join error carried neither selected Tan policy.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test design_structure_contract
+    formula_tangent:: →six actual Design tests pass,rc=0. The private same-root proof join owns
+    immutable request policies;prepare_scalar must dispatch each actual native factory under
+    that owner's policy. Fresh held-input/currentness admission must remain before native values.
+  - [x] FIX:plan_inputs_with_tangent_limits selects independent source/recipe policies before
+    actual root identity admission. Both survive foreign-root refusal and accepted private inputs.
+    Source/recipe factories receive only their own policies;legacy joins keep None. Original
+    exact graph/recipe quota/source preparation/recipe preparation order remains. Actual results
+    and fresh admission/native errors retain original inputs,owners,policies and typed causes.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract
+    formula_tangent:: →six pass,rc=0:equal-model foreign roots;alternate actual graph before zero
+    quotas;recipe-before-source quota order;source Tan30 versus direct Tan45 with independent
+    policies;unbound11547/20000 micrometre root versus real stored1/repeated2;zero-budget unused
+    pole;each owner refusing under its own smaller quota despite larger other policy;non-Clone/
+    non-Debug host fresh rejection before native pole with both policies and original root/cause.
+    Initial test accessor next_demand was rejected by the compiler;actual requested() API is used.
+  - [x] NO REGRESSION: cargo test -p sc-core --test design_structure_contract formula_plan::
+    →six existing actual owner/quota/capability/empty contracts pass,rc=0. Same command with
+    formula_execute:: →seven pass,including23 independent cases/all8841 frozen bytes,rc=0.
+    cargo clippy -p sc-core --lib --test design_structure_contract -- -D warnings and selected
+    rustfmt →pass,rc=0. cargo test -p sc-core --doc design::formula::plan:: →six public examples/
+    privacy/lifetime guards pass,rc=0. Positive book98/374/1652/2919,glossary310/9/158/0,history781
+    four exact Git spans,prior IDs/order/uniqueness,map/diff pass,rc=0. No broad CI/platform claim.
+  - [x] LOCKSTEP:README/book/status/facts/decision/task/index/MEM/DEV/CHANGE/LIVE align;
+    whole0621 retained781. Expression/source/recipe/Design policy implementation is complete;
+    next separate independent combined paired tangent acceptance. LIVE includes actual Design
+    Tan policies;G1 6/18/G0 unapproved unchanged. Coupled irrational/platform/full resources,
+    provider/replay/physical/release remain separately owned.
+    promotion: declined (existing explicit per-call policy and original actual-root ownership contracts already decide these semantics;this is their native Design integration).
+  Commit:STITCHCAD-G1-0622;Verification:new Design6/existing13/doc6/scoped strict lint/fmt.
 - ID: `G1-SLICE.5e.2.4.integration.tangent.acceptance`
   Status: `pending`
   Goal:independent paired real expression/source/recipe/Design tangent-policy acceptance after

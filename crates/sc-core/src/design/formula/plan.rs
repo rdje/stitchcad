@@ -4,7 +4,7 @@ use crate::recipe::{
     FormulaAcyclicSourceDependencies, FormulaRecipeExecutionAdmissionError,
     FormulaRecipeExecutionLimits, FormulaScalarRecipePlan, FormulaScalarRecipePlanError,
     FormulaScalarSourceGraphPlan, FormulaScalarSourceGraphPlanError,
-    FormulaSourceGraphExecutionLimits,
+    FormulaSourceGraphExecutionLimits, FormulaTangentLimits,
 };
 use core::fmt;
 
@@ -12,6 +12,8 @@ use core::fmt;
 pub struct DesignFormulaPlanInputError<'a, H> {
     sources: &'a DesignCheckedFormulaSources<'a, H>,
     recipe: &'a DesignCheckedFormulaRecipe<'a, H>,
+    source_tangent_limits: Option<FormulaTangentLimits>,
+    recipe_tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a, H> DesignFormulaPlanInputError<'a, H> {
     /// Actual source-proof owner that selected the expected containing root.
@@ -24,12 +26,24 @@ impl<'a, H> DesignFormulaPlanInputError<'a, H> {
     pub const fn recipe(&self) -> &'a DesignCheckedFormulaRecipe<'a, H> {
         self.recipe
     }
+    /// Original source-owned per-call policy,selected before the root identity check.
+    #[must_use]
+    pub const fn source_tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.source_tangent_limits
+    }
+    /// Original recipe-owned per-call policy,independent of the supplier policy.
+    #[must_use]
+    pub const fn recipe_tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.recipe_tangent_limits
+    }
 }
 impl<H> fmt::Debug for DesignFormulaPlanInputError<'_, H> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("DesignFormulaPlanInputError")
             .field("sources", &self.sources)
             .field("recipe", &self.recipe)
+            .field("source_tangent_limits", &self.source_tangent_limits)
+            .field("recipe_tangent_limits", &self.recipe_tangent_limits)
             .finish_non_exhaustive()
     }
 }
@@ -54,6 +68,8 @@ pub struct DesignFormulaPlanInputs<'a, H> {
     recipe: &'a DesignCheckedFormulaRecipe<'a, H>,
     source_limits: FormulaSourceGraphExecutionLimits,
     recipe_limits: FormulaRecipeExecutionLimits,
+    source_tangent_limits: Option<FormulaTangentLimits>,
+    recipe_tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a, H> DesignFormulaPlanInputs<'a, H> {
     /// Actual checked source owner,from which native dependencies and cycle proofs must be built.
@@ -80,6 +96,16 @@ impl<'a, H> DesignFormulaPlanInputs<'a, H> {
     #[must_use]
     pub const fn recipe_limits(&self) -> FormulaRecipeExecutionLimits {
         self.recipe_limits
+    }
+    /// Explicit per-call limits for actual Tan nodes owned by source suppliers.
+    #[must_use]
+    pub const fn source_tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.source_tangent_limits
+    }
+    /// Explicit per-call limits for actual Tan nodes owned by the ordered recipe.
+    #[must_use]
+    pub const fn recipe_tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.recipe_tangent_limits
     }
     /// Verify exact source-proof provenance,admit the whole recipe,then prepare both native plans.
     /// The graph must come from this exact checked source proof,including when another proof uses
@@ -117,12 +143,19 @@ impl<'a, H> DesignFormulaPlanInputs<'a, H> {
             .proof()
             .admit_execution(self.recipe_limits)
             .map_err(|error| refuse(DesignFormulaScalarPlanRefusal::RecipeAdmission(error)))?;
-        let sources = graph
-            .prepare_scalar_sources(self.source_limits)
-            .map_err(|error| refuse(DesignFormulaScalarPlanRefusal::Sources(error)))?;
-        let recipe = admission
-            .prepare_scalar(self.scope().source_inputs().inputs())
-            .map_err(|error| refuse(DesignFormulaScalarPlanRefusal::Recipe(error)))?;
+        let sources = match self.source_tangent_limits {
+            Some(limits) => {
+                graph.prepare_scalar_sources_with_tangent_limits(self.source_limits, limits)
+            }
+            None => graph.prepare_scalar_sources(self.source_limits),
+        }
+        .map_err(|error| refuse(DesignFormulaScalarPlanRefusal::Sources(error)))?;
+        let canonical = self.scope().source_inputs().inputs();
+        let recipe = match self.recipe_tangent_limits {
+            Some(limits) => admission.prepare_scalar_with_tangent_limits(canonical, limits),
+            None => admission.prepare_scalar(canonical),
+        }
+        .map_err(|error| refuse(DesignFormulaScalarPlanRefusal::Recipe(error)))?;
         Ok(DesignFormulaScalarPlan {
             inputs: self,
             sources,
@@ -137,6 +170,8 @@ impl<H> fmt::Debug for DesignFormulaPlanInputs<'_, H> {
             .field("recipe", &self.recipe)
             .field("source_limits", &self.source_limits)
             .field("recipe_limits", &self.recipe_limits)
+            .field("source_tangent_limits", &self.source_tangent_limits)
+            .field("recipe_tangent_limits", &self.recipe_tangent_limits)
             .finish_non_exhaustive()
     }
 }
@@ -171,10 +206,66 @@ impl<'r, H> DesignCheckedFormulaSources<'r, H> {
     where
         'r: 'a,
     {
+        self.plan_inputs_with_policy(recipe, source_limits, recipe_limits, None, None)
+    }
+
+    /// Join the actual same-root owners with two explicit,independent per-call Tan policies.
+    /// Supplier-owned calls use source_tangent_limits;direct recipe calls use recipe_tangent_limits.
+    /// Neither policy enlarges the other. Zero limits are explicit selections,not missing policies.
+    /// The policies are immutable request metadata,not authored Design state or whole-Design budgets.
+    /// ```
+    /// use sc_core::{design::{DesignCheckedFormulaSources,DesignCheckedFormulaRecipe},recipe::{
+    ///     FormulaSourceGraphExecutionLimits,FormulaRecipeExecutionLimits,FormulaTangentLimits}};
+    /// fn select<'a,H>(sources:&'a DesignCheckedFormulaSources<'a,H>,
+    ///     recipe:&'a DesignCheckedFormulaRecipe<'a,H>,source:FormulaSourceGraphExecutionLimits,
+    ///     ordered:FormulaRecipeExecutionLimits) {
+    ///     let supplier=FormulaTangentLimits::new(156,0);
+    ///     let caller=FormulaTangentLimits::new(8219,3584);
+    ///     let inputs=sources.plan_inputs_with_tangent_limits(recipe,source,ordered,supplier,caller)
+    ///         .expect("actual same-root owners");
+    ///     assert_eq!(inputs.source_tangent_limits(),Some(supplier));
+    ///     assert_eq!(inputs.recipe_tangent_limits(),Some(caller));
+    /// }
+    /// ```
+    /// # Errors
+    /// Original foreign-root refusal retains both actual checked owners and both selected policies.
+    pub fn plan_inputs_with_tangent_limits<'a>(
+        &'a self,
+        recipe: &'a DesignCheckedFormulaRecipe<'a, H>,
+        source_limits: FormulaSourceGraphExecutionLimits,
+        recipe_limits: FormulaRecipeExecutionLimits,
+        source_tangent_limits: FormulaTangentLimits,
+        recipe_tangent_limits: FormulaTangentLimits,
+    ) -> Result<DesignFormulaPlanInputs<'a, H>, DesignFormulaPlanInputError<'a, H>>
+    where
+        'r: 'a,
+    {
+        self.plan_inputs_with_policy(
+            recipe,
+            source_limits,
+            recipe_limits,
+            Some(source_tangent_limits),
+            Some(recipe_tangent_limits),
+        )
+    }
+
+    fn plan_inputs_with_policy<'a>(
+        &'a self,
+        recipe: &'a DesignCheckedFormulaRecipe<'a, H>,
+        source_limits: FormulaSourceGraphExecutionLimits,
+        recipe_limits: FormulaRecipeExecutionLimits,
+        source_tangent_limits: Option<FormulaTangentLimits>,
+        recipe_tangent_limits: Option<FormulaTangentLimits>,
+    ) -> Result<DesignFormulaPlanInputs<'a, H>, DesignFormulaPlanInputError<'a, H>>
+    where
+        'r: 'a,
+    {
         if !core::ptr::eq(self.scope().root(), recipe.scope().root()) {
             return Err(DesignFormulaPlanInputError {
                 sources: self,
                 recipe,
+                source_tangent_limits,
+                recipe_tangent_limits,
             });
         }
         Ok(DesignFormulaPlanInputs {
@@ -182,6 +273,8 @@ impl<'r, H> DesignCheckedFormulaSources<'r, H> {
             recipe,
             source_limits,
             recipe_limits,
+            source_tangent_limits,
+            recipe_tangent_limits,
         })
     }
 }

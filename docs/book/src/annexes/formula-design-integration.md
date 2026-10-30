@@ -212,8 +212,9 @@ fn prepare<'a,H>(sources:&'a DesignCheckedFormulaSources<'a,H>,
 ```
 
 An empty actual recipe fits zero statement/node/workspace/output allowances while its required
-source9003 still needs complete source admission. An unused tangent source refuses at its actual
-original source index;an actual tangent recipe call refuses with its actual statement/node cause.
+source9003 still needs complete source admission. Legacy Tan refuses at its original source/node when unconfigured.
+[Explicit Design policies](formula-execution-plan.md#explicit-tangent-policies-in-actual-design-plans)
+now configure supplier and recipe calls separately.
 Preparation never reads a context or value provider,executes a source,stores a let or publishes a
 computed result. Canonical Length40 still reports RequiresEvaluation9003 after successful planning.
 Runtime scratch/output reservation,namespace/checker/provider/kernel/allocator/CPU bounds and
@@ -570,5 +571,5 @@ canonical joins/dependencies/cycles/plans,and expression/source/recipe execution
 independent reference fixtures. The private controls include caught refusal guards for foreign
 owners,failed-runtime reuse and prefix publication. Sixteen Design formula and four paired-native
 public examples/privacy/lifetime contracts pass. This closes this available-scalar source/recipe/
-Design-input checkpoint. Tangent,geometry/operation providers,whole Design/resource/runtime bounds,
+Design-input checkpoint. Tangent policies are available;geometry/operation providers,whole resource bounds,
 load/replay,platform/physical acceptance and full G1 closure remain separately owned.

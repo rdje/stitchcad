@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — execute actual ordered recipes with explicit tangent policies
+## _(2026-10-30 UTC)_ — select actual Design tangent policies before native execution
 
-0621 selects recipe-owned per-call limits before complete capability/source admission. RecipeSources and actual operand suspension carry the original policy;each supplier keeps its independent graph policy. Legacy unconfigured Tan is typed MissingTangentPolicy. No cache/value is supplied.
-Recipe plans/preparation/runtime/nested scalar errors retain original limits;paired errors retain both scopes even before foreign-owner refusal. Once-only let storage,left/right/header order,actual unbound roots and Tan contributions survive. A larger policy in one scope cannot enlarge the other.
-New8/source6/old recipe14/private9/Design1/doc5/scoped strict lint/fmt pass;18 independent rows/all4167B exact. Cases include late8219-bit demand,actual suspension with different policies,T1/T2,false storage,first-error order and113-bit native Ratio succeeding before original signed storage refusal.
-Book98/374/1650/2916/glossary0/history780 four spans/IDs/map/diff pass. [Whole0620](docs/history/stitchcad-devnotes-part780.md) retained. LIVE direct/source-backed Tan recipes;G1 6/18/G0 unapproved unchanged. Next Design,then paired acceptance;full CI/platform/physical/production remain owned.
+0622 adds plan_inputs_with_tangent_limits at the actual same-root checked-proof join. Independent supplier/recipe per-call policies survive foreign-root refusal and accepted private inputs. Legacy joins keep absent policies;each native factory receives only its own actual selection before values.
+Exact graph identity,whole recipe quota,source preparation and recipe preparation order remains. Actual evaluate still re-admits complete held content/currentness before runtime buffers or values. Original inputs retain both policies through fresh Admission and native Execution errors;no model/host clone is required.
+New Design6/existing13/doc6/scoped strict lint/fmt pass;23 independent Design cases/all8841B exact. Cases preserve unbound roots/once-only storage,call flags,lazy unused poles,distinct smaller-policy failures and fresh non-Clone host rejection before native pole. A test-only accessor was corrected to requested().
+Book98/374/1652/2919/glossary0/history781 four spans/IDs/map/diff pass. [Whole0621](docs/history/stitchcad-devnotes-part781.md) retained. LIVE actual Design Tan policies;G1 6/18/G0 unapproved unchanged. Next independent combined paired acceptance;full CI/platform/physical/production remain owned.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

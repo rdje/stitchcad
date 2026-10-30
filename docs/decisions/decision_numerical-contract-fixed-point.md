@@ -177,7 +177,7 @@ Implementation0258: arc_length now uses the certified endpoint, exact wide round
 scalar checks. Native arc2/0 with23 independent rows, numeric6/0 and selected library67/0 pass; the
 compiled endpoint is tied to the reproduced certificate. Source provenance remains .5e.3.
 
-Remaining tangent:decision_tangent-resources.md selects bounded logical admission;native values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621;Design/platform remain pending.
+Remaining tangent:decision_tangent-resources.md selects bounded logical admission;native values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621/Design0622;paired/platform remain pending.
 
 ## Wide-ratio shared rounding0498
 

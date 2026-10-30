@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.integration.tangent.design:actual Design policy factories/execution. Expression0619/source0620/recipe0621 implemented. Read private Design plan/scope/execution and
-  actual original-resource/currentness/proof/result/error contracts. Select explicit source and
-  recipe policies before native values;retain their independent scopes. Split safe slices as needed.
-- Recipe prepare_scalar_with_tangent_limits selects each direct call's policy before complete
-  capability/source admission;legacy Tan reports MissingTangentPolicy. Actual RecipeSources/
-  operand suspension retain selected limits. Real let storage is once-only;assertions remain
-  left/right/header. Plans/errors and nested scalar failures retain policy even for unrelated
-  failure;paired errors retain both source/recipe policies before foreign-owner refusal.
-- New8/source6/old recipe14/private9/Design1/doc5/scoped strict lint/fmt pass;18 independent recipe
-  rows/all4167B exact. Real113-bit native Ratio reaches original storage refusal. Positive book
-  98/374/1650/2916,glossary0/history780/IDs/map/diff pass. LIVE direct/source-backed Tan recipes;
-  G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/
-  numerical/cleanup proofs;never rerun old transactions. Full PNT;commit each,push400. Design and
-  independent paired acceptance remain open;no full CI/platform/physical/production verdict.
+- Next G1-SLICE.5e.2.4.integration.tangent.acceptance:independent combined paired Tan cases. Expression0619/source0620/recipe0621/Design0622 implemented. Read original139-row native oracle,
+  scalar Design23-row reference and actual AST/source/recipe/Design watcher contracts. Add real combined policy/error/flag/read/storage/currentness evidence;no supplied computed value/cache.
+- Design plan_inputs_with_tangent_limits joins actual checked owners with two independent per-call
+  policies before root identity admission. Both foreign-root errors and accepted private inputs
+  retain selections. prepare_scalar keeps exact graph/recipe quota/source/recipe order and invokes
+  each native factory with its own policy. Fresh complete held-content/currentness still precedes
+  runtime buffers/values;results and admission/native errors retain original inputs/policies/scope.
+- New Design6/existing13/doc6/scoped strict lint/fmt pass;23 independent Design cases/all8841B exact.
+  Actual unbound11547/20000 micrometre source binds1 once/repeated2;unused zero-budget poles stay
+  unread and non-Clone host rejection wins before native pole. Book98/374/1652/2919,glossary0/
+  history781/IDs/map/diff pass. LIVE actual Design Tan policies;G1 6/18/G0 unapproved unchanged.
+  Full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/numerical/cleanup proofs;
+  never rerun old transactions. Full PNT;commit each,push400. Coupled irrational/platform/full
+  resources/provider/replay/physical/release remain separately owned;no production verdict.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

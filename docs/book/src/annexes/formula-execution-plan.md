@@ -4,8 +4,8 @@ This records the bounded implementation sequence for G1-SLICE.5e.2. Actual sourc
 and [scalar recipe execution](formula-recipe-execution.md) are available for the admitted subset. The worker
 joins complete static node proofs, real canonical reads and explicit tolerance/size contexts with
 existing exact kernels. Supplied values or callback annotations cannot replace an actual expression
-proof. Explicit-policy standalone tangent expressions are available below;Design
-tangent policies,geometry,load/replay and full atomic acceptance remain owned work.
+proof. Explicit-policy expression/source/recipe/Design tangent execution is available below;
+geometry,load/replay and full atomic acceptance remain owned work.
 
 ## Existing contracts to reuse
 
@@ -346,7 +346,7 @@ original set/revision/member/base sources and unchanged membership. The full 256
 all 255 original eps_num occurrences under the exact 767-record reservation; a left-deep 256-node
 expression also completes without recursive execution frames. The scoped independent result
 checkpoint below follows feature completion. Whole worked-book,
-platform identity,Design tangent policies,geometry/Derived evaluation and replay keep their
+platform identity,geometry/Derived evaluation and replay keep their
 existing .5g/.5e.4/parent owners. This scoped expression result grants no whole-language, containing
 Design/currentness, evidence-truth, geometry/physical or release approval.
 
@@ -411,7 +411,8 @@ are also available. D337 corrected this plan's stale pre0288 inverse-availabilit
 [Native tangent values](formula-trig-certificates.md#certified-native-tangent-value-execution)
 now use the admitted bounded adaptive strategy with explicit bit/work quotas. Supplied-value
 wrappers and explicit-policy standalone expression execution are available. Source-graph policies
-are available;recipe policies are implemented separately. Integrated Design adoption remains owned. Missing policy is a typed preparation
+and recipe/Design policies are available. Independent combined tangent acceptance remains owned.
+Missing policy is a typed preparation
 refusal before values,not a language diagnostic or placeholder result.
 Resource refusal returns no value or invented numerical-domain cause. Full runtime acceptance
 requires the actual selected policy and original typed causes to survive every higher-level layer.
@@ -492,5 +493,64 @@ Eight focused tests exercise real source/kind/workspace/plan/execution factories
 inventory identity,complete missing-policy precedence,per-call budgets,selected-only execution,
 T1/T2 behavior,actual poles/early and later resources/exact width,and unrelated failure policy
 retention. Existing scalar expression/reference and preparation checks remain separately watched.
-Source graphs and direct/source-backed recipes now retain their own explicit policies. Design
-factories remain the next adoption owner;independent paired acceptance follows implementation.
+Source graphs,direct/source-backed recipes and actual Design factories retain their own explicit
+policies. Independent combined paired tangent acceptance follows implementation.
+
+## Explicit tangent policies in actual Design plans
+
+DesignCheckedFormulaSources.plan_inputs_with_tangent_limits joins the actual checked source
+and recipe owners with explicit source and recipe native quotas plus two independent per-call
+Tan policies. The existing plan_inputs entry point leaves both Tan policies absent. A selected
+zero quota is present,even when the actual unused source contains a pole. Neither path computes
+an operand or supplies an intermediate result. Policies remain request metadata,not authored state.
+
+```rust
+use sc_core::{design::{DesignCheckedFormulaSources,DesignCheckedFormulaRecipe},recipe::{
+    FormulaSourceGraphExecutionLimits,FormulaRecipeExecutionLimits,FormulaTangentLimits,
+    FormulaSourceDependencyLimits,FormulaSourceCycleLimits,FormulaScalarExecutionContext,
+    FormulaToleranceContext,FormulaSizeContext}};
+fn execute<'a,H:sc_core::design::DesignResourceSource>(
+    sources:&'a DesignCheckedFormulaSources<'a,H>,
+    recipe:&'a DesignCheckedFormulaRecipe<'a,H>,source:FormulaSourceGraphExecutionLimits,
+    ordered:FormulaRecipeExecutionLimits,edges:FormulaSourceDependencyLimits,
+    cycles:FormulaSourceCycleLimits) {
+    let supplier=FormulaTangentLimits::new(2073,512);
+    let caller=FormulaTangentLimits::new(156,0);
+    let inputs=sources.plan_inputs_with_tangent_limits(recipe,source,ordered,supplier,caller)
+        .expect("actual same-root proof owners");
+    let dependencies=sources.proof().prepare_dependencies(edges).expect("actual complete relation");
+    let graph=dependencies.admit_acyclic(cycles).expect("actual cycle admission");
+    let result=inputs.prepare_scalar(&graph).expect("complete native plans")
+        .evaluate(FormulaScalarExecutionContext::new(FormulaToleranceContext::empty(),
+            FormulaSizeContext::empty())).expect("fresh actual Design and native execution");
+    assert_eq!(result.inputs().source_tangent_limits(),Some(supplier));
+    assert_eq!(result.execution().recipe_plan().tangent_limits(),Some(caller));
+}
+```
+
+An actual supplier1 mm*tan(30 deg)/1000 retains the unbound Length11547/20000 micrometres
+under2073/512. A real recipe let reads that source and stores1 micrometre once;adding that stored
+let twice gives2 micrometres. A direct recipe Tan45 uses only its separately selected156/0.
+The source graph's larger policy cannot enlarge a direct recipe call,and a larger recipe policy
+cannot enlarge a supplier. Every actually executed native call starts its own request budget.
+Actual successful Tan flags remain present through source reads,real storage and assertions.
+
+Both policies are immutable in DesignFormulaPlanInputs,exposed by source_tangent_limits() and
+recipe_tangent_limits(). A foreign-root join error retains both selected policies and both actual
+checked owners. Equal ids,revisions or complete model content cannot replace root identity.
+prepare_scalar still checks exact graph proof identity first,whole recipe quota admission second,
+complete source preparation third and recipe preparation last. Each native factory receives only
+its owner's selected policy. An error retains the original inputs and original nested typed cause;
+legacy missing policies remain setup refusals,distinct from mathematical and resource failures.
+
+Actual Design plan evaluation re-admits all held content and current input references under the
+original model limits before native buffers or values. A non-Clone/non-Debug host that starts
+refusing after planning produces Admission with no fresh accepted scope,before an authored Tan90
+pole. Both selected policies remain inspectable through the original inputs. A later native
+failure instead retains the fresh accepted scope,actual requester/supplier/node/statement and both
+native policy scopes. No earlier accepted source/statement prefix is published or model mutated.
+
+Six focused actual Design tests cover foreign roots/graphs,quota priority,independent policies,
+unbound roots versus once-only storage,unused zero-budget poles,original source/recipe resource
+refusals and fresh host rejection. Independent combined tangent acceptance is separately owned;
+full-family resources,provider/heap/CPU,replay,platform,physical and production approval remain open.

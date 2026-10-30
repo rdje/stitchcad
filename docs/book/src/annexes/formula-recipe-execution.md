@@ -317,5 +317,5 @@ Eight focused recipe checks and six shared source checks exercise actual factori
 whole admission priority,false storage/T1/T2,once-only fractions,assertion failure order,later
 native resources,wide native success/storage refusal,real source suspension with differing policies,
 and paired source/foreign-owner failures. The common fixture builds only real canonical/source/
-namespace/dependency/acyclic proofs;it supplies no computed values. Integrated Design policy
-selection and independent combined paired acceptance remain separately owned.
+namespace/dependency/acyclic proofs;it supplies no computed values. Actual Design policy
+selection is available;independent combined tangent acceptance remains separately owned.

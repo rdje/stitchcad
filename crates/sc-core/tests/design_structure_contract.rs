@@ -916,3 +916,6 @@ mod source_recipe;
 
 #[path = "support/design_formula_execute.rs"]
 mod formula_execute;
+
+#[path = "support/design_formula_tangent.rs"]
+mod formula_tangent;
