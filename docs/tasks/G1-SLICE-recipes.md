@@ -653,7 +653,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `in_progress`
   Goal:close complete coupled irrational review only after all scoped proofs/faults/composition/
   platform children pass;retain full allocator/provider/replay/physical/release owners separately.
-  Fresh complete readers pass0641,D345 capture preservation0642;full gates remain.
+  Fresh readers0641,capture preservation0642 and full probes0654 pass;scoped review remains.
 
 - ID: `G1-SLICE.5d.4.acceptance.certificates`
   Status: `done`
@@ -687,9 +687,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
   Status: `in_progress`
   Goal:finish environment/full probes after D349–D351 repairs;Rust/Wasm/doctrine pass,then scoped closure.
-  Latest0653 tail12 pass/source1222 exact;actual full make probes next.
+  Latest0654 actual29 suites green/source1223 exact;scoped review next.
   Preserve transcripts/return codes and original source/evidence identities;no closure yet.
-  Book sync:clarify trig-certificates inverse230 observed0640 pair/full matrix during closure.
+  Book sync:.gates.review owns trig-certificates observed pair/full-matrix wording before closure.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.environment-baseline`
   Status: `done`
   Goal:0649 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part809.md).
@@ -697,7 +697,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0650 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part810.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry`
-  Status: `in_progress`
+  Status: `done`
   Goal:check blocked environment tail,then full make probes(including complete environment);
     preserve earlier receipts/source identities and actual fault/runtime classifications.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.baseline`
@@ -708,20 +708,26 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0652 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part812.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.tail`
   Status: `done`
-  - [x] ISSUE:later environment controls were blocked by the now-fixed cleanup pin.
-  - [x] ROOT CAUSE (WHY + WHERE):canonical run_ci_environment_probes.sh suffix after cleanup
-    discovers12 commands;python3 -I -B target/run_0653_tail.py →12/12 pass,rc=0.
-  - [x] FIX:retain complete ordered tail outcomes/transcript/source boundary before full probes.
-  - [x] ADDRESSED:same actual runner →all12 terminal0,1222 source hashes unchanged;
-    receipt/transcript SHA verified,pass,rc=0;full probe command remains pending.
-  - [x] NO REGRESSION:Rust receipt SHA/source check →548 inputs exact,retained1635/doc372,rc=0;
-    book101/374/1670/2980/glossary0/history812 four spans/IDs/map/diff pass,rc=0.
-  - [x] LOCKSTEP:book/live review/notes sync;no full-suite verdict;promotion declined(existing contract).
-  Commit:STITCHCAD-G1-0653;Verification:complete previously blocked environment tail.
+  Goal:0653 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part813.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.full`
+  Status: `done`
+  - [x] ISSUE:actual full probe gate needed after focused D349–D354 repairs.
+  - [x] ROOT CAUSE (WHY + WHERE):scripts/run_make.sh probes →29 suites green/rc0,
+    all1223 source hashes unchanged;earlier environment failures no longer reproduce,rc=0.
+  - [x] FIX:retain full transcript/receipt and independent preservation evidence before review.
+  - [x] ADDRESSED:actual full command →nine baselines/48 compiled faults/native+Chrome31/
+    compiled bad expectation rejected on both runtimes,all restoration checks pass,rc=0.
+  - [x] NO REGRESSION:python3 -I -B target/verify_0654_preservation.py →legacy6614/old9 reports/
+    fresh4905 snapshot files/Rust548/platform550+four binaries/cert19 copies+two manifests exact,rc=0;
+    book101/374/1670/2981/glossary0/history813 four spans/IDs+1/map/diff/handoff OK,rc=0.
+  - [x] LOCKSTEP:book/live review/notes sync;scoped acceptance review remains;
+    promotion declined(existing proof/verification contracts). No hosted/release approval claimed.
+  Commit:STITCHCAD-G1-0654;Verification:full29-suite gate and exact original evidence.
+- ID: `G1-SLICE.5d.4.acceptance.gates.review`
   Status: `pending`
-  Goal:actual complete make probes after blocked-tail repairs;retain full transcript/source and
-    original evidence identities before scoped coupled closure. Rust/Wasm baselines source-exact.
+  Goal:review completed numerical/provenance/platform proofs and explicit remaining owners;
+    sync trig-certificates observed pair versus full matrix,then close only scoped .5d.4.
+  No new kernel behavior;retain allocator/provider/replay/geometry/application/physical/release owners.
 
 ### Execution, uncertainty and replay
 

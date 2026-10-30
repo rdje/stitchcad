@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D354 — focused repairs and blocked-tail preflight complete
+## D308–D354 — focused repairs and full probe gate complete
 
-D308–D354:[whole prior ledger](../history/stitchcad-devnotes-part812.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D349–D354 fixes pass;all12 previously blocked environment commands pass0653 with1222 source hashes exact. Actual full probes/coupled closure owned G1-SLICE.5d.4.acceptance.gates.run.retry.full;no complete full-suite verdict.
+D308–D354:[whole prior ledger](../history/stitchcad-devnotes-part813.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. All29 suites pass0654/source1223 exact;native48 faults/runtime31/preservation pass. Scoped numerical closure/book pair wording owned G1-SLICE.5d.4.acceptance.gates.review;full application/physical/release owners remain.

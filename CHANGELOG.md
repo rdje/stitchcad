@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0653 — complete the previously blocked environment preflight
+## STITCHCAD-G1-0654 — complete the green local probe gate
 
-- All12 canonical tail commands pass with1222 source hashes unchanged;complete ordered outcomes/transcript retained. Rust/build548 hashes still match retained full1635/native+372/doc/fmt/strict Clippy gate.
-- Book101/374/1670/2980/glossary0/history812/IDs/map/diff pass. LIVE unchanged:G1 6/18/G0 unapproved. Actual full29-suite make probes and coupled closure remain next;no new full-suite or hosted verdict.
+- Actual29 suites green/rc0/source1223 exact. Nine baselines/48 compiled numerical faults and native+actual Chrome31/bad expectation pass;4905 snapshots restore exactly.
+- Legacy6614/old9 reports/Rust548/platform550+four binaries/certificate19 copies+two manifests exact. Book101/374/1670/2981/glossary0/history813/IDs+1/map/diff/handoff OK pass. Final scoped review next;G1 6/18/G0 unapproved unchanged;no new hosted/release approval.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

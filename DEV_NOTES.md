@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — finish the previously blocked environment preflight
+## _(2026-10-30 UTC)_ — retain the complete green local probe milestone
 
-0653 runs the exact canonical twelve-command suffix after cleanup fixture. Ledger fixture/mutations,publication fixture/builder,map/handoff,archive client/reader/full fixture,static/payload/native loaders and push cadence all return0. All1222 snapshotted sources remain unchanged;full transcript/outcomes protected.
-Independent receipt/transcript SHA check passes. All548 Rust/build hashes still match the retained full0645 gate:1635 native/372 documentation tests,formatting and strict Clippy. Prior Wasm/doctrine/numerical baselines remain available. A fresh actual29-suite make probes command is still pending.
-Book101/374/1670/2980/glossary0/history812 four Git spans/IDs/map/diff pass. LIVE reviewed unchanged:G1 6/18/G0 unapproved;no complete full-probe/coupled/hosted verdict. Promotion declined:existing verification contract. Commit this completed preflight before the long full run;full PNT continues.
-[Whole0652](docs/history/stitchcad-devnotes-part812.md) retains cleanup/continuity repairs. Original inspector,numerical sources and preserved legacy data unchanged. Next actual full make probes with exclusive platform stage,then only scoped coupled closure.
-Receipt:target/irrational_platform_certificate/coupled-0653-tail-20261030T213709318829Z-87999/receipt.json SHAb116a422e29b0d8668cda662a85a93b91b7fb6193864d318e89c9d15e7ef1b4e.
+0654 actual scripts/run_make.sh probes finishes29 green/rc0 with1223 input hashes unchanged. Nine fresh native baselines reject48 successfully compiled numerical faults;4905 snapshot files restore exactly. Actual native/Chrome31 pass;compiled bad expectation returns101/traps during browser execution.
+Preservation passes legacy6614/old9 reports/Rust548/platform550 sources+four binaries/405 fixture rows/certificate19 copies+two manifests. Rust basis retains1635 native/372 doc/fmt/strict Clippy. Observed Rust1.99.0/b940084d7/Chrome156.0.8078.74/Darwin27 arm64;app/device matrix pending.
+Book101/374/1670/2981/glossary0/history813 four Git spans/IDs+1/map/diff/handoff OK pass. LIVE reviewed unchanged:G1 6/18/G0 unapproved. Promotion declined:existing evidence contracts. Commit before scoped review;book trig pair/matrix wording and broader remaining owners belong to .gates.review.
+[Whole0653](docs/history/stitchcad-devnotes-part813.md) retains the successful tail preflight. Full probe receipt and preservation procedure/data are protected together;no original evidence overwritten. Full PNT continues after review toward fresh search capture. Hosted approval remains previously observed SHA-scoped.
+Receipt:target/irrational_platform_certificate/coupled-0654-probes-20261030T214824664186Z-24178/receipt.json SHA037ded5a5d07de1fe46373acd4b95b1dbd4a869dc3fc188b0675f17f83430376;preservation SHA1abf1475eb721a16c7a11205a931308366223bf5eb8ef294d97a71bf7f23f71a.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

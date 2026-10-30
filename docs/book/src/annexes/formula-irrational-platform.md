@@ -285,3 +285,35 @@ A fresh complete29-suite make probes command remains the next verification step.
 target/irrational_platform_certificate/coupled-0653-tail-20261030T213709318829Z-87999/receipt.json
 sha256:b116a422e29b0d8668cda662a85a93b91b7fb6193864d318e89c9d15e7ef1b4e
 ```
+
+## Complete local probe milestone
+
+The0654 actual scripts/run_make.sh probes command finishes with all29 suites green and exit0.
+All1223 snapshotted project inputs are unchanged. This complete run includes the repaired
+environment controls,publication50 and fresh numerical replays. Nine native baselines pass;
+all48 successfully compiled arithmetic/resource faults are rejected at their independent
+fixture assertions. All4905 copied snapshot files are restored byte-for-byte.
+
+The fresh observed runtime pair passes the same31 public-consumer checks on native Rust and
+actual Chrome. The compiled bad expectation returns101 natively and traps during browser
+execution. All550 original sources,405 fixture rows and four retained binaries are exact;
+workspace restoration and zero new ambient Chrome temporary entries pass. Runtime identity
+remains Rust1.99.0/b940084d7 and Chrome156.0.8078.74 on Darwin27 arm64.
+
+Independent preservation checks retain all6614 original legacy files and nine earlier native
+reports unchanged. Both original certificate manifests and all19 retained0641 verification
+copies are exact. The548-input Rust/build basis still matches the retained full gate with1635
+native and372 documentation tests,formatting and strict Clippy. Wasm foundation and doctrine
+evidence retain their earlier scope;the commit-integrity gates also check each documentation update.
+
+```text
+target/irrational_platform_certificate/coupled-0654-probes-20261030T214824664186Z-24178/receipt.json
+sha256:037ded5a5d07de1fe46373acd4b95b1dbd4a869dc3fc188b0675f17f83430376
+target/irrational_platform_certificate/coupled-0654-probes-20261030T214824664186Z-24178/preservation.json
+sha256:1abf1475eb721a16c7a11205a931308366223bf5eb8ef294d97a71bf7f23f71a
+```
+
+The full verification result is retained before the final scoped numerical acceptance review.
+Application/device coverage,complete allocator/provider/replay/geometry integration,physical
+validation and human production-release approval keep their separate owners. Hosted CI remains
+the previously observed SHA-scoped result until the authorized push cadence is reached.

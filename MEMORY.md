@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.run.retry.full:actual complete29-suite make probes.
-- Latest unit STITCHCAD-G1-0653;derive HEAD/ahead from Git. All12 blocked-tail commands pass.
-- Exact canonical suffix after cleanup fixture:ledger fixture/mutations,publication fixture/
-  builder,map/handoff,archive client/reader/full fixture,static/payload/native loaders,push cadence.
-- All1222 snapshot sources unchanged;complete protected ordered outcomes/transcript retained.
-- target/irrational_platform_certificate/coupled-0653-tail-20261030T213709318829Z-87999/receipt.json SHAb116a422e29b0d8668cda662a85a93b91b7fb6193864d318e89c9d15e7ef1b4e.
-- Rust/build548 input hashes still match full0645 receipt:1635 native/372 doc/fmt/strict Clippy pass.
-  Full0646 Wasm3/doctrine13,numerical9 baselines/48 faults/native+Chrome31 remain retained.
-- D349–D354 focused fixes pass;whole0652 in part812. Full probes/coupled closure remain open.
-- Freeze all tracked/non-submodule inputs during full probes;fresh protected transcript/receipt.
-  Preserve original certificates/native logs/snapshots;actual platform stage requires exclusive census.
-- Positive book101/374/1670/2980/glossary0/history812/IDs/map/diff pass. No job pending.
+- Next G1-SLICE.5d.4.acceptance.gates.review:final scoped numerical review/book sync,then a40.
+- Latest unit STITCHCAD-G1-0654;derive HEAD/ahead from Git. Actual full29-suite probes green/rc0.
+- Full1223 source hashes unchanged;nine native baselines/48 compiled faults pass;4905 snapshot
+  files exact/restored. Actual native+Chrome31 pass;compiled wrong expectation rejected both.
+- Original legacy6614/old9 reports/platform550 sources/four binaries/405 fixture rows exact;
+  certificate19 retained copies/two manifests exact. Rust548 still matches full1635/doc372 basis.
+- target/irrational_platform_certificate/coupled-0654-probes-20261030T214824664186Z-24178/receipt.json SHA037ded5a5d07de1fe46373acd4b95b1dbd4a869dc3fc188b0675f17f83430376.
+- Same directory preservation.json SHA1abf1475eb721a16c7a11205a931308366223bf5eb8ef294d97a71bf7f23f71a.
+- Review .5d.4 obligations/owners,correct trig-certificates230 observed pair/full matrix,then
+  close only numerical coupled scope. Full allocator/provider/replay/geometry/app/physical/release stay owned.
+- Rust/Wasm/doctrine evidence retains source-exact scope;hosted79bd6f6a remains separate.
+- Positive book101/374/1670/2981/glossary0/history813/IDs+1/map/diff/handoff OK;no job pending.
 - G1 6/18/G0 unapproved;cleanup2026-10-30 14:18 unchanged. Full PNT/push400 only.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
