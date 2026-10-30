@@ -1,56 +1,45 @@
-# ARTIFACT_CLEANUP — the cleanup cadence record
+# ARTIFACT_CLEANUP — latest cleanup record
 
-One entry: the **latest** cleanup. Overwrite it each run; never append history (that is git's job).
-Read this at session startup — if the recorded run is more than 24 hours old, clean during the session.
+Read at startup;run cleanup when this record is over24 hours old. Keep only the latest entry.
+Every cleanup needs a task-tree owner,verified evidence and a commit. History remains in Git.
 
-Cleanup is a normal change: it is owned by a task-tree leaf, recorded here, and committed.
+## Selection and preservation
 
-## What is safe to remove (regenerable, gitignored, project-owned)
+- Candidates:ignored generated doctrine/scratch/tmp trees,rendered book,Rust incremental data,
+  and .log/.bin/.tmp/.orig/.rej/.DS_Store strays under target. Remove only proven safe data.
+- Preserve tracked files,package/dependency stores,scaffold backups and cleanup audit manifests.
+  Keep target/debug/deps and target/release/deps;linked incremental binaries refuse safe removal.
+- Numerical stores:target/trig_forward_certificate/,target/inverse_threshold_certificate/ and
+  target/irrational_platform_certificate/. Payloads,inputs,binaries,captures and profiles are evidence.
+- Legacy native roots:target/root_body_faults/,target/arc_body_faults/,
+  target/forward_body_faults/,target/inverse_body_faults/,target/tangent_body_faults/ and
+  target/tangent_resource_body_faults/. Their snapshots,reports and logs remain protected.
+- Retained target families:history-capture-*,history-generations-*,history-proof-*,history-review-*
+  and book_search_*. Direct inspection refuses them;the census prunes even future identities.
+  Register other retained roots before creation. Retirement requires a separately owned decision.
+- Never select shared/global caches outside this repository. Preserve ambiguous ownership.
 
-- `target/doctrine_scratch/`, `target/scratch/` — doctrine self-test and probe scratch, including the
-  regenerable fixtures. Nested repositories, symlinks and foreign-device entries are refused.
-- `target/debug/incremental/` — cargo's incremental caches (`.bin` files); `make check` rebuilds them.
-- `docs/book/book/` — mdBook output; `make book` regenerates it.
-- Ignored target strays: `*.log`, `*.bin`, `*.tmp`, `*.orig`, `*.rej`, `.DS_Store`.
-  Inspect artifact-shaped files elsewhere; retain any whose ownership/regeneration is uncertain.
+## Guarded procedure
 
-## What is never removed
+Use python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan or apply with one fresh
+run directory under target/artifact_cleanup_audit/. Review plan.json before apply. Append
+--idle-cua to apply only when no CUA call/result is pending. The OS-visible process check still
+blocks real jobs;unavailable evidence refuses. Source,HEAD or producer drift requires a fresh plan.
+No tracked/protected input,link,special file,nested Git repository or foreign volume is removed.
+Apply rechecks selected bytes,records result.json and verifies residue/tracked content. Run the
+immediate read-only residue census before activating the launcher or rebuilding scratch/book.
+Full guide:docs/book/src/annexes/artifact-cleanup.md. Probe controls never apply to the real project.
 
-- Any tracked file (`git ls-files` is the authority; the census below re-proves it each run).
-- `target/debug/deps` and the built binaries — current build cache, cheap to keep and slow to rebuild.
-- Project package stores, scaffold backups and cleanup audit manifests.
-- Retained numerical certificates: target/trig_forward_certificate/ and
-  target/inverse_threshold_certificate/ and target/irrational_platform_certificate/, including
-  payloads,checkpoints,frozen inputs,executables,browser profiles and fresh native fault captures.
-  These are proof records, not stray .bin files; retirement requires a separately owned decision.
-- Retained workspace families directly under target: history-capture-*,history-generations-*,
-  history-proof-*,history-review-* and book_search_*. The inspector refuses them and the census
-  prunes them,including future capture identities. Register other retained roots before creation.
-- Any shared/global cache outside the repository (cargo's registry, homebrew, system temp): populate a
-  project-local cache instead, and remove only records provably owned by this project.
+## Latest cleanup
 
-## Reproducible cleanup
-
-Run python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py with plan or apply and
-one run directory: target/artifact_cleanup_audit/<run>. Inspect plan.json before apply.
-Append --idle-cua to apply only when no CUA call/result is pending. The canonical checker still
-blocks real jobs or file handles; the flag is never inferred. Replan after any source/HEAD drift.
-The frozen plan covers candidate content, tracked inputs, HEAD and producer identity; any drift
-refuses. No tracked input, protected store, link, special file, Git boundary or other volume is deleted.
-Apply rechecks each path, verifies no live project job, checks residue and tracked content, then
-records result.json. Probe controls run through make probes; generated audit data stays ignored.
-Run the immediate read-only residue census without activating the local-environment launcher:
-activation recreates target/scratch. Rebuild only after that census, since regeneration recreates
-selected roots.
-
-## Latest run
-
-- **Run:** `2026-10-30 14:18 UTC` by leaf `G1-SLICE.6.5.3.2.cleanup-20261030.apply`.
-- **Summary:** removed4 ignored generated trees/66 strays,204 files (16693061B);all70 selected
-  paths absent and tracked bytes unchanged before documentation updates/regeneration.
-- **Evidence:** target/artifact_cleanup_audit/seam-20261030-safe/ plan/result/independent-post.json;
-  independent full hashes prove6496 protected entries/13380343714 regular B unchanged across
-  twelve original archive/search workspaces and both complete numerical certificate stores.
-- **Preserved:**1700 unsafe entries,package/dependency stores;all66 stray copies and26 current
-  verification receipts independently exact in protected audit. Release/deps .bin/.log0;2163 native
-  incremental bins kept with native/WASM caches because linked objects refuse safe removal.
+- Run:2026-10-30 14:18 UTC;owner G1-SLICE.6.5.3.2.cleanup-20261030.apply.
+- Removed4 generated trees/66 selected suffix files:204 files,16693061B;all70 paths then absent.
+- Evidence:target/artifact_cleanup_audit/seam-20261030-safe/ plan/result/independent-post.json.
+  All66 suffix-file copies and26 current verification receipts remain in the protected audit.
+- Preservation:6496 entries/13380343714B across12 original archive/search roots and both then-existing
+  numerical stores were exact.1700 unsafe entries and2163 linked native incremental bins stayed.
+  Package/dependency stores and original generation/install workspaces were retained.
+- D348 recovery0645:14 selected native-proof logs/97369B restored from exact audit copies.
+  All6600 pre-existing legacy files and archival copies unchanged;final6614 files. No new cleanup.
+  Receipt:target/irrational_platform_certificate/legacy-native-0645-20261030T185139231704Z-85350/restore.json.
+  The70-path absence describes the cleanup moment;the14 recovered logs now exist at original paths.

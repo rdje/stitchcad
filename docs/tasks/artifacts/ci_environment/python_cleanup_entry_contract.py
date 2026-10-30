@@ -513,15 +513,21 @@ def original_body_controls():
             expected = ast.Tuple(elts=[*baseline.elts,
                 ast.Constant(value='target/trig_forward_certificate'),
                 ast.Constant(value='target/inverse_threshold_certificate'),
-                ast.Constant(value='target/irrational_platform_certificate')], ctx=ast.Load())
-            assert constants(new)[name] == ast.dump(expected), 'cleanup protected-store delta differs from the three admitted certificates'
+                ast.Constant(value='target/irrational_platform_certificate'),
+                ast.Constant(value='target/root_body_faults'),
+                ast.Constant(value='target/arc_body_faults'),
+                ast.Constant(value='target/forward_body_faults'),
+                ast.Constant(value='target/inverse_body_faults'),
+                ast.Constant(value='target/tangent_body_faults'),
+                ast.Constant(value='target/tangent_resource_body_faults')], ctx=ast.Load())
+            assert constants(new)[name] == ast.dump(expected), 'cleanup delta differs from three certificates and six legacy native roots'
         else:
             assert constants(new)[name] == value, ('cleanup original policy constant changed', name)
     expected_families = ('history-capture-', 'history-generations-', 'history-proof-',
                         'history-review-', 'book_search_')
     assert ast.literal_eval(next(node.value for node in new.body if isinstance(node, ast.Assign)
         and isinstance(node.targets[0], ast.Name) and node.targets[0].id == 'PROOF_FAMILIES')) == expected_families
-    print('cleanup original bodies/constants exact through declared adapters, plus3 certificates/5 proof-family guards; rc=0')
+    print('cleanup original bodies/constants exact through declared adapters, plus3 certificates/6 legacy native roots/5 proof-family guards; rc=0')
     certificate = ROOT / 'docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py'
     PROFILE['plan_producer'](ROOT, sources=(certificate, SOURCE, PROFILE_SOURCE, CURRENT, CENSUS))
     subprocess.run(['python3', '-I', '-B', str(certificate)], cwd=ROOT, env=ENVIRONMENT, check=True)

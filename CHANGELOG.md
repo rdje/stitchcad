@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0644 — preserve the actual garment formula-source footprint
+## STITCHCAD-G1-0645 — protect and restore original native numerical proof logs
 
-- Fix D347 stale shared-fixture expectation:0599 formula92 adds two retained entries and49 bytes. Assert exact original/canonical buffers19/30;original109/937,candidate112/937,reservation115. Native garment4/strict affected lint/fmt pass;production accounting unchanged.
-- Book101/374/1670/2978/glossary0/history803/IDs+1/map/diff pass. Full gate passed fmt/workspace Clippy then stopped before complete native/doc verification. Full rerun next;G1 6/18/G0 unapproved unchanged;no daily cleanup.
+- Fix D348:protect six legacy native roots and restore14 audited logs/97369B exclusively. Existing6600 files and archival copies remain exact;final6614. Controls14/2/5 actual omission reds and unchanged original policy AST pass. No cleanup/deletion;date unchanged.
+- Full Rust fmt/Clippy/native1635/doc372 passes;548 build inputs match b57c93a. Producer356/34968calls,file243/91/40,book101/374/1670/2979/glossary0/history804/IDs+1/map/diff pass.67 proof routes preserved. Wasm/doctrine/probes/coupled closure next;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

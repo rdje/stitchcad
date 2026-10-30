@@ -20,7 +20,10 @@ AUDIT = 'target/artifact_cleanup_audit'
 PROTECTED = (AUDIT, 'target/cargo-home', 'target/scaffold_backup',
              'target/debug/deps', 'target/release/deps',
              'target/trig_forward_certificate', 'target/inverse_threshold_certificate',
-             'target/irrational_platform_certificate')
+             'target/irrational_platform_certificate',
+             'target/root_body_faults', 'target/arc_body_faults',
+             'target/forward_body_faults', 'target/inverse_body_faults',
+             'target/tangent_body_faults', 'target/tangent_resource_body_faults')
 PROOF_FAMILIES = ('history-capture-', 'history-generations-', 'history-proof-',
                   'history-review-', 'book_search_')
 SUFFIXES = ('.log', '.bin', '.tmp', '.orig', '.rej')

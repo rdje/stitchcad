@@ -18,11 +18,15 @@ BASE = ROOT / 'target/cleanup_certificate_controls' / str(os.getpid())
 INPUTS = (Path(__file__), SOURCE, PROFILE_PATH, ROOT / 'scripts/check_handoff.sh', ROOT / 'scripts/handoff_census.py')
 CERTIFICATES = ('target/trig_forward_certificate', 'target/inverse_threshold_certificate',
                 'target/irrational_platform_certificate')
+LEGACY_NATIVE = ('target/root_body_faults', 'target/arc_body_faults',
+    'target/forward_body_faults', 'target/inverse_body_faults',
+    'target/tangent_body_faults', 'target/tangent_resource_body_faults')
 WORKSPACES = ('target/history-capture-future', 'target/history-generations-future',
     'target/history-proof-future', 'target/history-review-future', 'target/book_search_future')
-STORES = (*CERTIFICATES, *WORKSPACES)
+STORES = (*CERTIFICATES, *LEGACY_NATIVE, *WORKSPACES)
 ORDINARY = ('target/ordinary.log', 'target/other/book_search_future/ordinary.log')
-NAMES = (*(store + '/retained.bin' for store in STORES), *ORDINARY)
+NAMES = (*(store + ('/retained.log' if store in LEGACY_NATIVE else '/retained.bin')
+           for store in STORES), *ORDINARY)
 
 
 def main():
@@ -100,6 +104,27 @@ def main():
             else:
                 raise AssertionError('omission did not fail the protection assertion')
             require_protected(module)
+        legacy_tree = ast.parse(copied.read_text())
+        assignment = next(node for node in legacy_tree.body if isinstance(node, ast.Assign)
+                          and isinstance(node.targets[0], ast.Name) and node.targets[0].id == 'PROTECTED')
+        before = len(assignment.value.elts)
+        assignment.value.elts = [item for item in assignment.value.elts
+                                if not (isinstance(item, ast.Constant) and item.value in LEGACY_NATIVE)]
+        assert before - len(assignment.value.elts) == 6, 'exact six legacy native protection omissions'
+        legacy_fault = {'__file__': str(copied), '__name__': 'legacy_native_protection_omitted'}
+        exec(compile(ast.fix_missing_locations(legacy_tree), str(copied), 'exec'), legacy_fault)
+        with patch.object(subprocess, 'run', local_git):
+            admitted = legacy_fault['census']()['candidates']
+            assert {row['path'] for row in admitted} == {
+                *(name + '/retained.log' for name in LEGACY_NATIVE), *ORDINARY, 'target/scratch'}, \
+                'actual legacy omission failed to expose original native log fixtures'
+            try:
+                require_protected(legacy_fault)
+            except AssertionError as error:
+                assert str(error) == 'retained proof deletion candidate admitted'
+            else:
+                raise AssertionError('legacy native omission survived actual protection controls')
+            require_protected(module)
         family_tree = ast.parse(copied.read_text())
         function = next(node for node in family_tree.body
                         if isinstance(node, ast.FunctionDef) and node.name == 'retained_proof')
@@ -154,7 +179,7 @@ def main():
                 require_protected(module)
         assert {name: hashlib.sha256((BASE / name).read_bytes()).hexdigest() for name in NAMES} == saved
         assert all(source.read_bytes() == destination.read_bytes() for source, destination in mapping.items())
-        print('retained cleanup: protected8/ordinary-strays2/actual omission-reds4/restored1; all data/source bytes unchanged, rc=0')
+        print('retained cleanup: protected14/ordinary-strays2/actual omission-reds5/restored1; all data/source bytes unchanged, rc=0')
     finally:
         if BASE.exists() or BASE.is_symlink():
             profile['plan_producer'](ROOT, directories=(BASE,))

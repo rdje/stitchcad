@@ -1,19 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.run:rerun full native/Wasm/doctrine/probes/book after D347.
-- Full0644 check:fmt/strict workspace Clippy pass;native stops with one stale garment fixture
-  footprint (make2/cargo101). D347 fixed0644:0599 formula92 correctly added2 vectors/49 text bytes;
-  original footprint109/937/0,candidate112/937/0,reservation115. Exact buffers19+30 now asserted.
-- Focused garment4/strict affected Clippy/fmt pass;book101/374/1670/2978/glossary0/history803/
-  IDs+1/map/diff pass. Initial fmt tuple wrap corrected. Accounting implementation unchanged.
-- D346 fixed0643:original provider Copy assignment retains equal fields/distinct addresses and
-  original borrowed provider/label refusal;private1/strict affected lint/fmt pass.
-- D345 fixed0642:all native body faults use fresh protected UTC/PID captures,exclusive reservation/
-  reports/owned publication;original9 reports/4882 snapshot files exact. Never reuse old captures.
-- Fresh0641 inverse45M/450 and forward1M/100 readers,witness/runtime controls pass;protected
-  target/irrational_platform_certificate/coupled-0641-20261030T180826454783Z-33211/receipt.json.
-- Numeric/mixed/observed native31+Chrome31 implemented;full integration verdict pending. Separate
-  app/matrix/aggregate resources/locality/provider/replay/physical/release owners remain. G1 6/18,G0 unapproved;full/hosted79bd6f6a SHA only. No daily cleanup;full PNT/push400.
+- Next G1-SLICE.5d.4.acceptance.gates.run:finish Wasm/doctrine/full probes/book;full Rust passes.
+- D348 fixed0645:protect6 legacy native roots;3 numerical stores/5 archive-search families remain.
+- Actual controls protected14/ordinary2/omission-reds5;original AST bodies/constants exact except declared adapters.
+- Restore14 audited logs/97369B;all6600 original files and archival copies exact;final6614. No cleanup/deletion.
+- Receipt target/irrational_platform_certificate/legacy-native-0645-20261030T185139231704Z-85350/restore.json SHA f85784ab4597ecaa596b5f47583f04ac8e90cf547da77240f71cf41ab5b15773.
+- Full Rust0645:fmt/strict all-target/all-feature Clippy/native1635/doc372 pass;548 Rust/build inputs match b57c93a.
+  Rust receipt target/irrational_platform_certificate/coupled-0645-rust-20261030T190605278002Z-29888/receipt.json SHA52a78a9ba946397c348a5cc7b5b253164875e5099229c7d6a8a170c2417cdeea.
+- Producer356/34968calls,file243/91/40/15refusals/12reds,book101/374/1670/2979/glossary0 pass.
+  History804 four Git spans/IDs+1/map/diff pass;67 proof labels tightened with all routes/IDs exact.
+- Fresh0641 inverse45M/450 and forward1M/100 readers,witness/runtime controls pass;protected receipts remain.
+- D345 fresh native captures and D346 provider Copy/D347 formula-source fixture repairs remain verified.
+- Full coupled integration gates pending;app/matrix/aggregate resources/locality/provider/replay/physical/release owners remain.
+  G1 6/18/G0 unapproved;last full CI/hosted79bd6f6a SHA only. Cleanup date14:18 unchanged;full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

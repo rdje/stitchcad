@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — account for the garment fixture's actual formula source
+## _(2026-10-30 UTC)_ — protect and restore original native proof logs
 
-0644 full check passes fmt/strict workspace Clippy;native stops on stale garment footprint (make2,cargo101). Scoped Git diff traces0599 formula92 plus0598 retained-source accounting:source/index add2 entries;original19/canonical30 bytes add49. Accounting is correct;old107/888 assertion/book drifted.
-D347 fixed:watcher asserts exact formula92 buffers,19/30 bytes and original107+2/888+49. Native garment4 retain candidate112/937/0,reserve115 and exact limit114 refusal/115 admission. Strict affected lint/final fmt pass;initial tuple wrap corrected. Production accounting unchanged.
-Book101/374/1670/2978/glossary0/history803 four Git spans/IDs+1/map/diff pass. No complete native/doc/Wasm/probe verdict yet;full rerun next. Current book now explains exact original/candidate/admission numbers from the shared source fixture.
-D347 receipt target/irrational_platform_certificate/coupled-0644-garment-20261030T183821540039Z-59167/receipt.json SHA b914508349f7b766bed4637b18b6fed56e6af6f1b954491a6f3cb23a1d294404 retains six exact logs.
-[Whole0643](docs/history/stitchcad-devnotes-part803.md) retains D346 Copy identity repair and failed gate boundary. Promotion declined:existing accounting. LIVE marks D347 fixed;G1 6/18/G0 unapproved unchanged. Next .acceptance.gates.run;application/resource/release owners remain. Full PNT continues.
+0645 fixes D348:actual readonly inspect admitted original0632 root baseline;6 legacy roots were absent from PROTECTED.0629 retained their deleted logs in audit. Protect all6 before exclusive recovery;preserve original policy AST bodies/constants through exact declared adapters.
+Actual controls14 protected/2 ordinary/5 omission reds pass. Restore14 logs/97369B from audited copies;all6600 pre-existing files and archival copies exact,final6614. No cleanup/deletion;last cleanup date unchanged. Published original proof locations work again.
+Full Rust check passes fmt/strict Clippy/native1635/doc372;548 Rust/build files match b57c93a. Producer356/34968calls,file243/91/40/15refusals/12reds,book101/374/1670/2979/glossary0/history804/IDs+1/map/diff pass.67 labels tightened;all proof routes/IDs exact. Cleanup record compacted45L/3345B;remaining gates next.
+[Whole0644](docs/history/stitchcad-devnotes-part804.md) retains D347 repair. Promotion declined:existing retention. LIVE marks D348 fixed;G1 6/18/G0 unapproved unchanged. Rust receipt is in MEMORY;Wasm/doctrine/probes/full coupled closure remain. Full PNT continues.
+D348 receipt target/irrational_platform_certificate/legacy-native-0645-20261030T185139231704Z-85350/restore.json SHA f85784ab4597ecaa596b5f47583f04ac8e90cf547da77240f71cf41ab5b15773 retains before/after census,controls and policy copies.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

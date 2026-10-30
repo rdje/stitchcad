@@ -40,8 +40,10 @@ The census checks doctrine/scratch/tmp, Rust incremental and rendered-book trees
 .log, .bin, .tmp, .orig, .rej and .DS_Store strays under target. Protected stores and dependency
 binaries are pruned. Retained numerical proof stores target/trig_forward_certificate/ and
 target/inverse_threshold_certificate/ and target/irrational_platform_certificate/ are protected,
-including .bin payloads,checkpoints,frozen sources,executables and original browser captures. Retained archive/search workspace families are
-also protected below. Generic cleanup cannot retire those records;
+including .bin payloads,checkpoints,frozen sources,executables and original browser captures.
+Legacy native roots root_body_faults,arc_body_faults,forward_body_faults,inverse_body_faults,
+tangent_body_faults and tangent_resource_body_faults directly under target are also protected.
+Retained archive/search workspace families are protected below. Generic cleanup cannot retire those records;
 any later retirement needs its own task and evidence. Unsafe entries appear in skipped with a reason; they are never followed or
 removed. Nested Git markers, symlinks, foreign devices, special files, nonignored paths and tracked
 descendants refuse. A regular deletion file must have exactly one hard link. Directory link counts
@@ -284,12 +286,12 @@ package switching and byte-exact rollback, without claiming unobserved UI/model/
 Actual captures execute both mode bodies: creation, two exclusive JSON writes, process dispatch
 and removal of isolated controlled artifacts. Independent omissions and unsafe physical audit,
 input and store fixtures calibrate the plans. Original policy bodies/constants remain exact through
-the declared adapters,including two numerical stores and additive retained-proof family guards. The original
+the declared adapters,including three numerical stores,six legacy native roots and retained-proof family guards. The original
 fifteen cleanup cases and eleven compiled guard-fault assertions retain their refusal families.
 
 The watched retained-store control uses fresh owned files and the actual read-only census.
-Both numerical stores and five workspace families refuse selection;ordinary .log and prepared
-scratch remain eligible. Four actual compiled guard omissions fail independent assertions,then
+Three numerical stores,six legacy native roots and five workspace families refuse selection;ordinary
+.log and prepared scratch remain eligible. Five actual compiled guard omissions fail independent assertions,then
 the intact producer passes again. File/source hashes remain unchanged; project apply is never
 called. Mirrored local stores exist before Git runs, including a same-volume TMPDIR; platform SDK
 scratch caches are allowed inside that ordinary tree and startup warnings fail the control.
@@ -298,8 +300,8 @@ scratch caches are allowed inside that ordinary tree and startup warnings fail t
 python3 -I -B docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py
 ```
 
-The existing cleanup entry suite also runs this control and permits exactly the two declared store additions
-and explicit family guards in its original-policy comparator. Other old bodies/constants stay constrained.
+The existing cleanup entry suite also runs this control and permits exactly three numerical-store
+and six legacy-root additions plus explicit family guards. Other old bodies/constants stay constrained.
 
 D210's real legacy checker returned success on unavailable lsof, and its actual apply body reached
 a trapped deletion. The canonical checker refuses that evidence; actual blocked/clear process
@@ -372,3 +374,31 @@ are modeled separately from real project consumers. Neither control path calls p
 python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py --real
 ```
+
+
+## Original native proof-log recovery
+
+D348 found that generic cleanup still admitted legacy native-fault logs as strays. A read-only
+call to the actual inspector admitted the original0632 root baseline,without changing its bytes.
+The six legacy roots above now refuse direct inspection and are pruned from the census. New native
+replays already use fresh identities under the protected numerical capture store.
+
+The0629 audit retained14 earlier native logs:complete0625 root/0627 arc runs and two initial root
+build logs. All97369 bytes match recorded sizes and SHA256 values;all original destinations were
+absent. Protection was installed before exclusive restoration. All6600 pre-existing files remain
+byte-exact;the final6614-file census is exactly the old files plus14 audited restorations. Archival
+copies remain unchanged. The latest cleanup date is unchanged;this restoration preserves evidence
+without deleting data or supplying a new numerical verdict.
+
+The protected before/after receipt retains the actual old inspector admission,original file census,
+recovery map,control output and frozen policy sources:
+
+```text
+target/irrational_platform_certificate/legacy-native-0645-20261030T185139231704Z-85350/restore.json
+sha256:f85784ab4597ecaa596b5f47583f04ac8e90cf547da77240f71cf41ab5b15773
+```
+
+The earlier70-path absence is the immediate cleanup observation;these14 logs have since been
+restored. Their original published locations work again. All other old capture contents remain
+intact;generic cleanup cannot select these native namespaces again. Four original protection
+omissions plus an actual six-root omission fail independent controls;the intact policy passes.
