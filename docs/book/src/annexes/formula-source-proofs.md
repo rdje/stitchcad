@@ -2,8 +2,8 @@
 
 > **Status:** complete initial-scope expression proofs,actual canonical dependency joins and Derived
 > consumer-kind checks and canonical Derived dependencies have focused verification. Bounded cycle
-> admission and lazy available-scalar source execution are available. Independent whole-source
-> acceptance,actual recipe/Design joins and full resource/currentness remain pending.
+> admission and lazy available-scalar source execution have scoped independent acceptance. Actual
+> recipe/Design joins,whole resource/currentness,backend/platform and physical proof remain pending.
 
 Start with the [original source owners and normalized collections](formula-recipe-inputs.md#explicit-formula-source-owners).
 FormulaNormalizedSources.check_sources(&namespace, limits) checks the complete supplied source
@@ -300,11 +300,48 @@ its real direct class:an executed cos contribution forbids T1 even if its numeri
 zero. Allocation failures retain their original inline TryReserveError without another error-box
 allocation. The private call-frame guard forbids growth beyond S.
 
-Six focused native contracts cover sharing,mixed canonical families,repeated reads,lazy missing
+Six implementation contracts cover sharing,mixed canonical families,repeated reads,lazy missing
 sources,false conditions,fractional roots,approximation/class propagation,original nested failures,
-absent/empty selection and an actual512-source chain on a thread requesting64 KiB stack. These are
-focused implementation checks. Independent whole-source reference acceptance is next;whole recipe/
-Design/currentness,geometry,load/replay,backend/platform and physical proof remain open.
+absent/empty selection and an actual512-source chain on a thread requesting64 KiB stack. Two
+independent-reference watchers below bring this native target to eight passing contracts. Whole
+recipe/Design/currentness,geometry,load/replay,backend/platform and physical proof remain open.
+
+## Independent initial-source acceptance
+
+The existing independently parsed,table-driven book reference evaluates27 curated source
+collections:19 successes and8 original refusals. Its separate recursive demand walk calls the real
+expression evaluator for suppliers and caches only actual returned unbound roots. The declared
+canonical environment stays unchanged. Actual ReferenceInputRequired requests identify Derived
+demand;they do not become formula_unknown or invented language tokens. A storage trap rejects any
+attempt to treat a bare source as an authored let. Standard-library graphlib separately admits
+all static source/branch dependencies before values. No Rust implementation,native output or
+frozen expected file is read by this producer.
+
+The native comparison checks every completed root,scalar kind/exact value/contribution set,
+actual completion ordinal and each successful read's name,canonical target,direct/Derived role,
+supplier identity and value. Error cases compare the original failing source and language token;
+no accepted partial outcome/read trace is substituted. All canonical states/provenance remain
+unchanged after success or failure. A second native watcher reruns the producer and compares all
+5350 frozen fixture bytes,including the original inputs. Both watchers run in the ordinary native
+target;adding,removing or changing a reference row cannot silently escape its frozen fixture.
+
+Cases cover all six scalar kinds,mixed dedicated/general Length,shared/diamond/alias suppliers,
+conditional/operand order,lazy unused Unknown/optional providers,false preferences,all five state
+labels,explicit direct tolerances and symbolic approximation guards. A Count source
+9223372036854775807*2 returns18446744073709551614 unbound;its consumer n/2.0 returns9223372036854775807.
+Source lookup must not first attempt i64 let storage. Negative angle sources retain raw turns;
+Area and Ratio sources retain exact arithmetic. Unknown-before-division and division-before-supplier
+cases verify the actual first failure. Numeric domains and the existing rational width remain in
+force. These results do not approve containing Design/recipe integration or platform identity.
+
+The tracked input population is docs/tasks/artifacts/formula_structure/source_execution_cases.tsv.
+The producer is docs/tasks/artifacts/formula_structure/scalar_source_execution_oracle.py;the
+frozen result is crates/sc-core/tests/fixtures/formula_scalar_source_graph_execution.tsv.
+
+```sh
+cargo test -p sc-core --test formula_scalar_source_graph_execution_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/scalar_source_execution_oracle.py
+```
 
 ## Bare roots and actual let storage
 
@@ -326,8 +363,8 @@ stored outcomes;source traversal cannot reorder forward lets. Canonical Derived 
 formula reference and no independently authored/cached result. Supplier values must be earned by
 actual source execution,not callbacks or supplied cache values. The durable canonical-input record
 is docs/decisions/decision_length-declarations-retain-state-and-provenance.md. The source worker
-preserves this boundary with focused checks;independent source acceptance and the actual recipe
-bridge remain pending. Existing expression/recipe reference fixtures retain their exact outcomes.
+preserves this boundary with scoped independent source acceptance;the actual recipe/Design bridge
+remains pending. Existing expression/recipe reference fixtures retain their exact outcomes.
 
 ## Check an actual Derived consumer
 
@@ -418,8 +455,8 @@ Only successful completion makes scratch reusable. Any value/provider or one-sho
 permanently rejects further start/resume on that private machine. Existing expression/recipe
 adapters still return their original RequiresEvaluation and missing-provider causes. Callers gain
 no public callback,continuation,computed-value constructor or cache seed. The bounded lazy
-source worker above uses this private path;independent source acceptance and recipe/Design
-integration remain pending.
+source worker above uses this private path with scoped independent acceptance;recipe/Design
+integration remains pending.
 
 ## Verification and remaining work
 

@@ -241,7 +241,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Status: `done`
   Goal:0595 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part754.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: bounded iterative lazy available-scalar source graph worker over actual plans/acyclic proof,
   complete scratch/output reservation before values. Execute actual suppliers only when demanded,
   cache only actual unbound returned roots and preserve source/state/contribution/read/failure
@@ -253,53 +253,50 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   completed roots. Derived read records retain actual canonical join/supplier proof,not authored
   value provenance. Any failure returns no partial graph result or usable cache. Existing real
   recipe storage/one-shot requirements stay exact;new graph results are scoped initial sources.
+  Scoped closure0597:actual worker0596/native6 and independent reference27/8/native watchers2
+  pass. Complete parent is the bounded lazy available-scalar initial-source component only;
+  actual recipe/Design integration remains next .4. No whole Derived/resource/platform closure.
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.1`
   Status: `done`
-  Goal: actual bounded iterative lazy source worker and private earned Derived read witnesses.
-  Full pre-reservation over real source plans;no Rust recursion,caller values,source-edge rounding
-  or partial accepted cache. Native focused tests cover sharing,laziness,original failures,empty/
-  absent selections,both canonical families and actual source/result borrows. Update book/live docs.
-  Completion0596: actual bounded lazy source roots and privately earned original Derived reads.
-  - [x] REPRODUCE / ISSUE: source plans0594 and private continuation0595 require a real source
-    walk before computed Derived values/read traces exist. Caller values,authored state mutation,
-    restarted consumer operands or source-edge storage cannot stand in for that execution.
-  - [x] ROOT CAUSE (WHY + WHERE): source graph/Sources/read/failure/result APIs and original
-    factory/let boundaries inspected. rg -n 'try_reserve_exact|Machine::new|AwaitDerived|Completed'
-    source_worker.rs/source_read.rs → full buffers before values and actual root-only cache fills,
-    rc=0. Share exhaustive canonical derived_formula() between static edges and runtime demand;
-    preserve original family/state joins. Public old expression/recipe read enums stay exact.
-  - [x] FIX: evaluate_source selects exact actual source id,prepares every source control/N task/
-    N value buffer,S call frames/S empty output slots,then walks demanded actual suppliers without
-    Rust recursion. Fill outputs only from Complete roots;reuse actual unbound values. Preserve
-    actual source proofs,completion ordinals,canonical Derived joins and selected read occurrences.
-    Original direct reads/context/class guards remain. Inline allocator causes,actual scalar source/
-    node failures and whole-result atomic refusal;no accepted prefix or caller seed. Eight APIs.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test
-    formula_scalar_source_graph_execution_contract -- --nocapture →six pass,rc=0. Shared a=1000/3,
-    b=a*6,a+b+a=8000/3 finish once with actual mixed-family/repeated read witnesses. Unused Unknown/
-    physical sources stay unread;false Boolean/cos contributions and unbound Count1/2/3/2 survive.
-    Actual within/T1 guard,direct class,nested observation/provider/numeric failures,absent/empty
-    selection and512-source chain on64 KiB requested stack pass. Canonical states/pointers retained.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_execution_contract --test
-    formula_scalar_recipe_execution_contract --test formula_source_dependencies_contract --
-    --nocapture →11/9/3 pass,independent49/18-row fixtures exact,rc=0. Private machine filter→three
-    pass,rc=0. cargo test -p sc-core --doc recipe::execution::source_ -- --nocapture →seven pass,
-    including positive source API and actual E0277/E0616/E0515 guards,rc=0. Scoped strict lib/new
-    target Clippy/changed rustfmt/diff pass,rc=0. Initial E0106/E0015 and fixture E0308 fixed through
-    actual borrow lifetime,const-compatible invariant and unsigned rational API;no numeric change.
-    Positive book97/343/1630/2867/glossary310/9/158/0 and754 four exact Git spans/prior live ids/order
-    pass,rc=0. Focused implementation only;independent whole-source acceptance belongs to next .3.2.
-  - [x] LOCKSTEP: source runtime examples/API map/boundaries,availability,README and task/index/
-    MEM/DEV/CHANGE/LIVE align. Parent .3 stays in_progress;next .3.2 independent actual reference,
-    then .4 actual recipe/Design/global namespace/currentness/resource joins. Full integration/
-    backend/platform/physical and D334/D156/D223/PLANNING.5 owned. G1 6/18/G0 unapproved;
-    full/hosted79bd6f6a SHA-scoped. D339 proof untouched;no whole feature/full verification claim.
-    promotion: declined (actual source execution applies existing unbound-root/actual-let and earned-result boundaries;public scope lives in book/API contracts,independent acceptance remains separately owned).
+  Goal:0596 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part755.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.2`
-  Status: `pending`
+  Status: `done`
   Goal: independent actual whole-source numeric/read/order/refusal acceptance with curated source
   collections and original canonical state. Reuse independent reference public interfaces;no Rust
   output or implementation-derived expected values. Close worker parent only after focused pass.
+  Completion0597:scoped independent actual whole-source acceptance;no production core changes.
+  - [x] REPRODUCE / ISSUE: current native implementation cases establish focused behavior;
+    independent complete source roots/read/ordinal/failure acceptance is needed before closing
+    worker parent .3. Caller/frozen/native values cannot supply reference supplier results.
+  - [x] ROOT CAUSE (WHY + WHERE): actual book reference load/evaluate/value_of_name and D338
+    ReferenceInputRequired inspected. rg -n 'load_reference|ReferenceInputRequired|execute|stored'
+    scalar_source_execution_oracle.py → recursive actual reference demand,real returned roots,
+    unchanged declarations and forbidden storage,rc=0. No Rust/native/frozen expected read;static
+    all-branch acyclic admission uses separate stdlib graphlib before runtime reference values.
+  - [x] FIX: track27 original case collections and independent guarded producer. Trace actual
+    reference reads,cache only returned unbound roots and retain real failing source/token. Native
+    watchers construct actual inputs/source factories and compare every success/root/contribution/
+    ordinal/read target/role/supplier/value and original refusal. Whole-prefix failure stays atomic;
+    actual Unknown alone maps formula_unknown,never unexecuted Derived. Freeze actual stdout only.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test
+    formula_scalar_source_graph_execution_contract -- --nocapture →eight pass,rc=0;actual source/
+    reference27 complete rows/8 refusals/roots,ordinals,reads,states. All six kinds,mixed Length,
+    diamond/shared/alias/repeated demand,lazy branches,wide/fractional Counts,raw negative turns,
+    computed Area,Ratio,false/preferences/all five states,approx/T1 and first failures pass.
+    Native canonical states/provenance unchanged. Second watcher reproduces all frozen bytes.
+  - [x] NO REGRESSION: independent producer python3 -I -B
+    docs/tasks/artifacts/formula_structure/scalar_source_execution_oracle.py →27/19success/8refusal
+    rows,5350 bytes,rc=0;sha256 33e51b3f1ffbed860c96fcd181fbd52d27c6db0567eb9d8224fd22ba2442dddb.
+    Actual native target includes prior six implementation contracts and both new watches,rc=0.
+    Scoped strict lib/new target Clippy/changed rustfmt/diff pass,rc=0. Positive book97/343/1630/
+    2868/glossary310/9/158/0 and755 four exact Git spans/prior live ids/order pass,rc=0. No core
+    production change,full CI/matrix campaign or new platform/whole-Design verdict claimed.
+  - [x] LOCKSTEP: scoped acceptance/input/producer/fixture/examples/boundaries in book/availability,
+    task/index/MEM/DEV/CHANGE/LIVE align. Worker parent .3 closed only for initial scalar sources;
+    next .4 actual recipe/Design source ownership,global namespace/currentness/resource joins.
+    Full Derived/tan/geometry/load/replay/backend/platform/physical and D334/D156/D223/PLANNING.5
+    owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped. D339 proof untouched.
+    promotion: declined (scoped acceptance reuses existing actual-result/unbound-source rules;retrievable behavior and finite proof are in the source contract,tracked producer and watched fixture).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4`
   Status: `pending`
   Goal: integrate earned source roots into actual canonical reads/current recipe execution while

@@ -1,16 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.3.2:independent actual whole-source numeric/read/order/
-  refusal acceptance. Reuse reference public interfaces/real returned supplier roots;no native
-  outputs or seeded values as expected results. Parent worker .3 remains in_progress until pass.
-- Lazy scalar source worker0596 implemented with focused checks:exact selected source,all S
-  controls/call frames/output slots and per-source N tasks/N values reserve before values;only
-  actual Complete roots fill private unbound cache. Real Derived/direct reads and ordinals retained.
-  Native6/machine3/old expression11+oracle49/recipe9+oracle18/deps3/doc7/scoped lint/fmt/book
-  97/343/1630/2867/glossary0 pass. Whole0595 retained754/four exact Git spans/prior live ids/order.
-- 512-source chain passes on64 KiB requested stack;shared1000/3 roots stay unbound,mixed-family
-  joins/repeated spans/lazy Unknown/providers/false/Count/approx/T1/original failures retained.
-  Independent whole-source acceptance .3.2,then real recipe/Design bridge .4;full integration open.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4:actual recipe/Design integration. Recover real Design
+  formula source ownership/schema/global identity/namespace/resource contracts and current recipe
+  plan/read/store interfaces first;decompose into bounded owned children before changing code.
+- Lazy scalar source component .3 closes0597 with independent actual reference27 rows/19success/
+  8refusals/5350B;native8 includes six implementation contracts plus two complete fixture watches.
+  Actual roots/kinds/contributions/ordinals/read target/role/supplier/value and first failures match;
+  canonical states stay unchanged. Reference recursion/graphlib uses real roots,never native values.
+  Scoped lint/fmt/book97/343/1630/2868/glossary0 pass. Whole0596 retained755/four spans/live ids.
+- Full reservation/actual unbound cache/512-chain small requested stack proof0596 retained. No
+  source-edge storage;actual lets still store once. Shared/fractional/wide Count/negative turns/
+  Area/false/Unknown/provider/T1 behavior passes. Real recipe/Design/currentness/resources open.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.

@@ -1,0 +1,28 @@
+# case	declarations	original sources	entry	complete outcomes or refusal	actual reads
+unbound_fraction	a:L:length:10:derived:9001	9004=a*3;9001=1 mm/3	9004	ok;9004@2:length:1000/1:-;9001@1:length:1000/3:-	9004:a:10:derived_9001:length:1000/3:-
+shared_mixed	a:L:length:10:derived:9001;b:S:length:11:derived:9002	9004=a+b+a;9002=a*6;9001=1 mm/3;9005=eps_phys	9004	ok;9004@3:length:8000/3:-;9002@2:length:2000/1:-;9001@1:length:1000/3:-	9004:a:10:derived_9001:length:1000/3:-;9004:b:11:derived_9002:length:2000/1:-;9004:a:10:derived_9001:length:1000/3:-;9002:a:10:derived_9001:length:1000/3:-
+diamond	a:L:length:10:derived:9001;b:S:length:11:derived:9002;c:L:length:12:derived:9003	9004=b+c;9003=a*2;9002=a*3;9001=1 mm/3	9004	ok;9004@4:length:5000/3:-;9003@3:length:2000/3:-;9002@2:length:1000/1:-;9001@1:length:1000/3:-	9004:b:11:derived_9002:length:1000/1:-;9004:c:12:derived_9003:length:2000/3:-;9003:a:10:derived_9001:length:1000/3:-;9002:a:10:derived_9001:length:1000/3:-
+repeated_alias	a:L:length:10:derived:9001;alias:L:length:10:derived:9001	9004=a+alias+a;9001=1 um/3	9004	ok;9004@2:length:1/1:-;9001@1:length:1/3:-	9004:a:10:derived_9001:length:1/3:-;9004:alias:10:derived_9001:length:1/3:-;9004:a:10:derived_9001:length:1/3:-
+prior_intrinsic	a:L:length:10:derived:9001	9004=eps_num+min(a*3,a*6);9001=1 mm/3	9004	ok;9004@2:length:1001/1:-;9001@1:length:1000/3:-	9004:eps_num:-:direct:length:1/1:-;9004:a:10:derived_9001:length:1000/3:-;9004:a:10:derived_9001:length:1000/3:-
+condition_contribution	a:L:length:10:derived:9001	9004=if(sin(0 deg)==0.0,a*3,eps_phys);9001=1 mm/3	9004	ok;9004@2:length:1000/1:sin;9001@1:length:1000/3:-	9004:a:10:derived_9001:length:1000/3:-
+supplier_contribution	a:L:length:10:derived:9001	9004=a*3;9001=1 mm/3+cos(0 deg)*0 mm	9004	ok;9004@2:length:1000/1:cos;9001@1:length:1000/3:cos	9004:a:10:derived_9001:length:1000/3:cos
+false_count	flag:S:boolean:11:derived:9002;n:S:count:10:derived:9001	9004=if(flag,n+n,3/2.0);9001=1/2.0;9002=cos(0 deg)==0.0	9004	ok;9004@2:count:3/2:cos;9002@1:boolean:false:cos	9004:flag:11:derived_9002:boolean:false:cos
+bare_count	n:S:count:10:derived:9001	9004=n+n;9001=1/2.0	9004	ok;9004@2:count:1/1:-;9001@1:count:1/2:-	9004:n:10:derived_9001:count:1/2:-;9004:n:10:derived_9001:count:1/2:-
+wide_count	n:S:count:10:derived:9001	9004=n/2.0;9001=9223372036854775807*2	9004	ok;9004@2:count:9223372036854775807/1:-;9001@1:count:18446744073709551614/1:-	9004:n:10:derived_9001:count:18446744073709551614/1:-
+signed_angle	a:S:angle:10:derived:9001	9004=a/3;9001=-720 deg	9004	ok;9004@2:angle:-240000000/1:-;9001@1:angle:-720000000/1:-	9004:a:10:derived_9001:angle:-720000000/1:-
+computed_area	a:S:area:10:derived:9001	9004=a/3;9001=(3 mm)^2/2	9004	ok;9004@2:area:1500000/1:-;9001@1:area:4500000/1:-	9004:a:10:derived_9001:area:4500000/1:-
+ratio_fraction	a:S:ratio:10:derived:9001	9004=a*3;9001=1/3	9004	ok;9004@2:ratio:1000000/1:-;9001@1:ratio:1000000/3:-	9004:a:10:derived_9001:ratio:1000000/3:-
+unused_unknown	a:L:length:10:derived:9001;obs:L:length:11:unknown:42	9004=if(1==1,1 mm,a);9001=obs;9005=eps_phys	9004	ok;9004@1:length:1000/1:-	-
+untaken_division	a:L:length:10:derived:9001	9004=if(1==1,a,1 mm/0);9001=1 um/3	9004	ok;9004@2:length:1/3:-;9001@1:length:1/3:-	9004:a:10:derived_9001:length:1/3:-
+within_exact	a:L:length:10:derived:9001	9004=if(within(a,1 mm,eps_num),2 mm,eps_phys);9001=1 mm	9004	ok;9004@2:length:2000/1:-;9001@1:length:1000/1:-	9004:a:10:derived_9001:length:1000/1:-;9004:eps_num:-:direct:length:1/1:-
+within_geometric	a:L:length:10:derived:9001	9004=within(a,3 um,eps_geo);9001=sqrt((3 um)^2)	9004	ok;9004@2:boolean:true:sqrt;9001@1:length:3/1:sqrt	9004:a:10:derived_9001:length:3/1:sqrt;9004:eps_geo:-:direct:length:10/1:-
+authored_states	a:L:length:10:derived:9001;zero:L:length:11:known:0;assumed:L:length:12:assumed:1000;preferred:L:length:13:preference:-1000	9004=a+zero+assumed+preferred;9001=1 mm/3	9004	ok;9004@2:length:1000/3:-;9001@1:length:1000/3:-	9004:a:10:derived_9001:length:1000/3:-;9004:zero:11:direct:length:0/1:-;9004:assumed:12:direct:length:1000/1:-;9004:preferred:13:direct:length:-1000/1:-
+false_preference	a:L:length:10:derived:9001;fixed:S:boolean:11:preference:false	9004=if(fixed,eps_phys,a);9001=1 mm/3	9004	ok;9004@2:length:1000/3:-;9001@1:length:1000/3:-	9004:fixed:11:direct:boolean:false:-;9004:a:10:derived_9001:length:1000/3:-
+unknown_supplier	a:L:length:10:derived:9001;obs:L:length:11:unknown:42	9004=a+1 mm;9001=obs	9004	error:9001:formula_unknown	-
+unknown_before_division	a:L:length:10:derived:9001;obs:L:length:11:unknown:42	9004=min(a,1 mm/0);9001=obs	9004	error:9001:formula_unknown	-
+division_before_supplier	a:L:length:10:derived:9001;obs:L:length:11:unknown:42	9004=1 mm/0+a;9001=obs	9004	error:9004:formula_division	-
+missing_physical	a:L:length:10:derived:9001	9004=a+1 mm;9001=eps_phys	9004	error:9001:formula_tolerance_unbound	-
+supplier_domain	a:L:length:10:derived:9001	9004=a+1 mm;9001=sqrt(-(1 um)^2)	9004	error:9001:formula_domain	-
+consumer_count_domain	n:S:count:10:derived:9001	9004=n-1;9001=1/2.0	9004	error:9004:formula_domain	-
+approximation_t1	a:L:length:10:derived:9001	9004=within(a,1 mm,eps_num);9001=1 mm+cos(0 deg)*0 mm	9004	error:9004:formula_domain	-
+unknown_boolean	flag:S:boolean:10:derived:9001;obs:S:boolean:11:unknown:42	9004=if(flag,1 mm,2 mm);9001=obs	9004	error:9001:formula_unknown	-

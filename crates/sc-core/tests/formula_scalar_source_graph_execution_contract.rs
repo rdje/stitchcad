@@ -558,3 +558,6 @@ fn actual_derived_within_operands_keep_direct_class_and_symbolic_approximation_g
         });
     }
 }
+
+#[path = "support/formula_scalar_source_graph_execution/oracle.rs"]
+mod independent_source_oracle;
