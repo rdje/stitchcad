@@ -206,3 +206,37 @@ this shared behavior automatically. Incomplete runs stay separate;they cannot re
 receipt. This focused preservation repair does not claim a fresh full replay of all48 numerical
 faults. The deferred full integration gates run next;complete transitive runtime/locality review
 retains its separate owner.
+
+
+## Coupled verification checkpoint
+
+The0646 full verification attempt preserves separate results for each scope:
+
+| Check | Observed result |
+| --- | --- |
+| Full Rust gate | Formatting,strict workspace Clippy,1635 native and372 documentation tests pass |
+| Wasm foundations | sc-units,sc-core and sc-measure compile for wasm32-unknown-unknown |
+| Doctrine gate | All13 checks pass |
+| Fresh numerical body faults | Nine baselines pass;all48 successfully compiled faults are rejected |
+| Fresh observed runtime pair | All31 selected native/Chrome checks pass;compiled bad expectation fails both |
+| Full probe command | All29 suites attempted;overall Make exit2 because verification-tool checks fail |
+
+The fresh runtime capture uses Rust1.99.0/b940084d7 and Chrome156.0.8078.74 on Darwin27 arm64.
+Its405 original fixture rows and550 source hashes remain exact. All6614 files in the legacy
+native roots,including the recovered logs,and all nine earlier native reports remain unchanged.
+
+D349 is a copied-fixture defect:the publication fixture copies HTML but omits the generated
+search index. An intended missing-source-link case therefore hits SEARCH_INDEX first. D350 is a
+stale independent selector expectation:the real recipe producer correctly checks24 inputs,the
+old control expects23 and omits the newly linked formula-recipe-execution.md chapter. The exact
+refusal families and source-plan equality checks remain requirements of their repairs.
+
+The full transcript,individual numerical captures and successful gate logs are linked by:
+
+```text
+target/irrational_platform_certificate/coupled-0646-baseline-20261030T202107306619Z-42055/receipt.json
+sha256:f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b
+```
+
+Scoped coupled acceptance remains open until both repairs and their verification complete.
+No complete full-probe,hosted CI,application or production-release verdict is claimed.

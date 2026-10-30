@@ -1,18 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.run:finish Wasm/doctrine/full probes/book;full Rust passes.
-- D348 fixed0645:protect6 legacy native roots;3 numerical stores/5 archive-search families remain.
-- Actual controls protected14/ordinary2/omission-reds5;original AST bodies/constants exact except declared adapters.
-- Restore14 audited logs/97369B;all6600 original files and archival copies exact;final6614. No cleanup/deletion.
-- Receipt target/irrational_platform_certificate/legacy-native-0645-20261030T185139231704Z-85350/restore.json SHA f85784ab4597ecaa596b5f47583f04ac8e90cf547da77240f71cf41ab5b15773.
-- Full Rust0645:fmt/strict all-target/all-feature Clippy/native1635/doc372 pass;548 Rust/build inputs match b57c93a.
-  Rust receipt target/irrational_platform_certificate/coupled-0645-rust-20261030T190605278002Z-29888/receipt.json SHA52a78a9ba946397c348a5cc7b5b253164875e5099229c7d6a8a170c2417cdeea.
-- Producer356/34968calls,file243/91/40/15refusals/12reds,book101/374/1670/2979/glossary0 pass.
-  History804 four Git spans/IDs+1/map/diff pass;67 proof labels tightened with all routes/IDs exact.
-- Fresh0641 inverse45M/450 and forward1M/100 readers,witness/runtime controls pass;protected receipts remain.
-- D345 fresh native captures and D346 provider Copy/D347 formula-source fixture repairs remain verified.
-- Full coupled integration gates pending;app/matrix/aggregate resources/locality/provider/replay/physical/release owners remain.
-  G1 6/18/G0 unapproved;last full CI/hosted79bd6f6a SHA only. Cleanup date14:18 unchanged;full PNT/push400.
+- Next G1-SLICE.5d.4.acceptance.gates.book-fixture:D349,then recipe-selector D350,then full gates.
+- Full0646 baseline:Rust fmt/strict Clippy/native1635/doc372,Wasm3 and doctrine13 pass.
+- Full make probes attempted29;Make rc2. Book and environment suites fail;coupled closure remains open.
+- Fresh native9 baselines/48 successfully compiled faults pass;native+actual Chrome31/405 rows,
+  compiled bad expectation native101/browser trap;original550 sources restored/exact.
+- All6614 legacy files and9 original native reports unchanged. Full probe entry sources33 exact.
+- Baseline target/irrational_platform_certificate/coupled-0646-baseline-20261030T202107306619Z-42055/receipt.json SHA f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b.
+- Full transcript/receipt target/irrational_platform_certificate/coupled-0646-probes-20261030T191747018262Z-21628/;receipt SHA8c59c43e89c102a7b7a6c2844d9e1fcb706de542863a2050c48322a26514f35c.
+- D349 fixture_plan/fixture in book_publication.py select only .html;check requires searchindex-*.js.
+  Plan/copy complete inputs and calibrate a valid copied baseline;keep SOURCE_LINK refusal exact.
+- D350 python_recipe_fixture_contract.py CHILD_INPUTS lacks annexes/formula-recipe-execution.md;
+  actual producer includes it through spec/formula-language.md links. No production omission found.
+- Positive book101/374/1670/2980/glossary0/history805/IDs+3/map/diff pass;68 proof phrases tightened,all routes exact.
+- No job pending. G1 6/18/G0 unapproved;full/hosted79bd6f6a only. Cleanup14:18 unchanged;full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

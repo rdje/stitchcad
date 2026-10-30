@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D348 — prior closures and original native proof protection
+## D308–D350 — prior closures and full-probe fixture repairs
 
-D308–D347:[whole prior ledger](../history/stitchcad-devnotes-part804.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D348 P0 fixed0645,owner G1-SLICE.5d.4.acceptance.gates.legacy-evidence:protect6 roots;controls14/2/5 reds;restore14/97369B,original6600/final6614 exact. Full Rust1635/doc372 passes;remaining coupled gates next. No cleanup/deletion.
+D308–D348:[whole prior ledger](../history/stitchcad-devnotes-part805.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D349/D350 P1 owned G1-SLICE.5d.4.acceptance.gates.book-fixture/recipe-selector:full probes rc2;HTML-only fixture omits search index and recipe selector recheck mismatches. Fix/calibrate each before coupled closure;Rust/Wasm/doctrine/numerical runs pass.

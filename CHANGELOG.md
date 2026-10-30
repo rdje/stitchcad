@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0645 — protect and restore original native numerical proof logs
+## STITCHCAD-G1-0646 — retain the full verification baseline and repair queue
 
-- Fix D348:protect six legacy native roots and restore14 audited logs/97369B exclusively. Existing6600 files and archival copies remain exact;final6614. Controls14/2/5 actual omission reds and unchanged original policy AST pass. No cleanup/deletion;date unchanged.
-- Full Rust fmt/Clippy/native1635/doc372 passes;548 build inputs match b57c93a. Producer356/34968calls,file243/91/40,book101/374/1670/2979/glossary0/history804/IDs+1/map/diff pass.67 proof routes preserved. Wasm/doctrine/probes/coupled closure next;G1 6/18/G0 unapproved unchanged.
+- Rust1635/native+372/doc/fmt/Clippy,Wasm3,doctrine13 and fresh9 native baselines/48 body faults pass. Native/Chrome31 and bad expectation control pass;550 original sources/6614 legacy files/9 old reports exact. Complete protected receipts retained.
+- Full probes attempt29 but exit2:book fixture omits search index;recipe control expects23 inputs instead of actual24. D349/D350 P1 owned before closure. Positive book101/374/1670/2980/glossary0/history805/IDs+3/map/diff pass. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

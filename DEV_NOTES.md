@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — protect and restore original native proof logs
+## _(2026-10-30 UTC)_ — retain complete verification outcomes before fixture repairs
 
-0645 fixes D348:actual readonly inspect admitted original0632 root baseline;6 legacy roots were absent from PROTECTED.0629 retained their deleted logs in audit. Protect all6 before exclusive recovery;preserve original policy AST bodies/constants through exact declared adapters.
-Actual controls14 protected/2 ordinary/5 omission reds pass. Restore14 logs/97369B from audited copies;all6600 pre-existing files and archival copies exact,final6614. No cleanup/deletion;last cleanup date unchanged. Published original proof locations work again.
-Full Rust check passes fmt/strict Clippy/native1635/doc372;548 Rust/build files match b57c93a. Producer356/34968calls,file243/91/40/15refusals/12reds,book101/374/1670/2979/glossary0/history804/IDs+1/map/diff pass.67 labels tightened;all proof routes/IDs exact. Cleanup record compacted45L/3345B;remaining gates next.
-[Whole0644](docs/history/stitchcad-devnotes-part804.md) retains D347 repair. Promotion declined:existing retention. LIVE marks D348 fixed;G1 6/18/G0 unapproved unchanged. Rust receipt is in MEMORY;Wasm/doctrine/probes/full coupled closure remain. Full PNT continues.
-D348 receipt target/irrational_platform_certificate/legacy-native-0645-20261030T185139231704Z-85350/restore.json SHA f85784ab4597ecaa596b5f47583f04ac8e90cf547da77240f71cf41ab5b15773 retains before/after census,controls and policy copies.
+0646 full baseline:Rust1635/native+372/doc/fmt/strict Clippy,Wasm3 and doctrine13 pass. Fresh9 native baselines reject48 actual compiled numerical faults;31 original native/Chrome checks pass and compiled bad expectation fails both. Original550 sources/6614 legacy files/9 old reports exact.
+Full make probes attempts29 but exits2. D349 publication fixture copies/plans HTML only,so missing-source mutation fails SEARCH_INDEX before SOURCE_LINK. D350 actual producer correctly checks24 files;independent23-file control omits newly linked formula-recipe-execution.md. Both P1 owners scheduled next.
+Positive book101/374/1670/2980/glossary0/history805 four Git spans/IDs+3/map/diff pass.68 complete-scope phrases tightened;all proof routes/IDs exact. No implementation changes or complete full-probe verdict. Context is crowded;committed receipts/resume state retain the complete repair queue.
+[Whole0645](docs/history/stitchcad-devnotes-part805.md) retains D348 recovery. Promotion declined:existing verification contracts. LIVE adds D349/D350;G1 6/18/G0 unapproved unchanged. Next book fixture,then selector control;full coupled acceptance remains open. Full PNT continues.
+Baseline target/irrational_platform_certificate/coupled-0646-baseline-20261030T202107306619Z-42055/receipt.json SHA f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b links all gate/capture evidence.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
