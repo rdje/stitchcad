@@ -309,6 +309,16 @@ witnesses for the forthcoming integrated worker;it cannot be published as a stan
 The complete paired worker,public Design execution entry point and independent acceptance remain
 subsequent tasks.
 
+The recipe side now stages its original admitted plan,fixed context,N task/value buffers and
+complete S outcome reservation in a shared private runtime. Construction starts no operand,read,
+provider or binding operation. The existing declaration-order statement loop lives in that same
+runtime,including actual RHS storage,prior-let visibility,assertion left/right/header order and
+original typed refusals. The standalone public adapter prepares that runtime,executes the original
+mode and publishes only its completed whole result. It introduces no second implementation of
+storage or assertion semantics. The following paired-worker slice will drive its actual source
+suspensions after both runtimes have completed reservation;that combined public operation is not
+yet available.
+
 ## Focused verification and remaining work
 
 Four actual-root native contracts check exact complete demand,original source/name pointers,

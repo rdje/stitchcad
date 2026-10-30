@@ -291,53 +291,58 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0603 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part762.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.2`
   Status: `done`
-  Goal: actual recipe Derived suspension/read adaptation using only the private earned source
-  runtime. Preserve original direct and prior-let witnesses,source/canonical identities and
-  standalone RequiresEvaluation behavior. No caller-seeded value/cache or synthetic statement.
-  Completion0604:private recipe Derived suspension/earned-read adaptation;no combined public worker.
-  - [x] REPRODUCE / ISSUE:recipe reads used only direct canonical/reserved or completed prior-let
-    values;actual Derived names returned their original requirement. Shared source runtime0603
-    needed an internal read path without inventing a value/cache or changing standalone semantics.
-  - [x] ROOT CAUSE (WHY + WHERE):actual RecipeSources/RecipeReadData/worker and source completed
-    witness construction inspected. rg -n 'completed_derived_read|read_derived|AwaitDerived|derived:
-    None|original_source' on execution/{source_read,source_runtime,recipe_read,recipe_worker,
-    recipe_result}.rs →shared earned helper,private yield/ready paths,three original-mode worker
-    sites and original-source getter,rc=0. Initial unused Derived witness warning corrected by
-    diagnostic Debug reading its actual kind;no dead-code suppression or discarded witness.
-  - [x] FIX:central actual completed-source witness factory checks exact canonical owner before
-    selecting the sole Derived supplier. Runtime offers readonly earned lookup;empty cache yields
-    actual AwaitDerived with unread slot. Recipe adapter records only returned real source root/
-    canonical join/supplier proof. Private read-source wrapper preserves original public recipe
-    read-kind enum/getter;standalone worker explicitly selects original mode. Original direct/
-    reserved/prior-let and class witnesses retain their paths;no new public API/value seed.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --lib recipe::execution::recipe_read::tests
-    -- --nocapture →one pass/88 filtered,rc=0. Actual original two-statement proof:execute first
-    RHS1 mm/3 and store its real let333. Second prior+width+width records actual prior binding,
-    suspends unread Derived slot,then resumes after real source9000 produces1000/3. Final unbound
-    RHS2999/3,three distinct reads,once source ordinal1 and original canonical RequiresEvaluation
-    remain exact. No replay or manufactured prior-let result. Equal-content foreign canonical
-    join triggers caught private owner guard before it can retrieve the cached root.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_recipe_execution_contract --
-    --nocapture →nine pass,rc=0,including18-row/7-refusal independent whole-recipe/frozen-byte
-    watchers and original Derived requirement/order. Source graph target →eight pass,rc=0,
-    including27-row/8-refusal/frozen-byte watchers and512-source requested64KiB stack. Scoped core
-    lib/both affected targets strict Clippy/changed rustfmt/diff →pass,rc=0. cargo test -p sc-core
-    --doc recipe::execution::recipe_worker -- --nocapture →one pass,rc=0. Book98/357/1642/2895,
-    glossary310/9/158/0,762 four Git spans/prior live ids/order/uniqueness pass,rc=0. Private test
-    native checked;no all-unit Clippy/full CI campaign claimed. Full feature verification .4.5.
-  - [x] LOCKSTEP:book explains actual suspension/earned witnesses,333 versus1000/3/RHS2999/3,
-    original public mode and unfinished combined worker boundary. Task/index/MEM/DEV/CHANGE align;
-    LIVE reviewed unchanged:G1 6/18/G0 unapproved. Whole0603 retained762/four spans. Next .4.4.3
-    complete source/recipe worker/reservations/once storage,then .4.4.4 actual Design execution/
-    .4.5 independent acceptance. No second-let storage/complete integrated result claimed here.
-    Namespace/parser/provider/kernel/allocator/CPU/full resources/platform/physical remain owned;
-    full local/hosted79bd6f6a only,D340 fixed,D334/D156/D223/PLANNING.5 owned.
-    promotion: declined (uses existing actual continuation and earned-source/real-let boundaries;new adapter witnesses/order and compatibility are retrievable in source/book/native contracts).
+  Goal:0604 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part763.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: complete admitted scalar recipe/source worker with both full runtimes/outcomes reserved
   before values. Actual recipe operand order/lazy reads/assertion contexts,earned shared roots,
   true RHS→once storage→prior-let visibility and atomic whole-result failure with original causes.
+  Safe slices0605+:first stage complete recipe reservation/state and original ordered loop in a
+  shared private runtime,then actual paired source demand/resume and atomic outcomes,then native
+  complete-result/read/error views. Avoid a second statement/storage/assertion implementation.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.1`
+  Status: `done`
+  Goal:complete private recipe reservation/fixed context and one original ordered loop;preserve
+  standalone storage/prior-let/assertion/error behavior before adding paired source driving.
+  Completion0605:full private recipe runtime and original public adapter.
+  Commit integrity:preflight aggregate1500039/1500000 refused. Tightened duplicated current-scope
+  prose while keeping actual commands/proofs/boundaries;no ceiling changed.
+  - [x] REPRODUCE / ISSUE:local standalone reservation/statement state must become shareable with
+    paired source execution;copying the ordered storage/assertion loop would duplicate semantics.
+  - [x] ROOT CAUSE (WHY + WHERE):read actual complete worker/error/read/result and native plan.
+    rg -n 'RecipeRuntime|fn (new|execute)|try_reserve_exact|derived: None' on
+    execution/{recipe_runtime,recipe_worker}.rs →new/reservation/execute,three original-mode sites
+    and original public adapter,rc=0. Constructor owns preparation;one unchanged loop owns values.
+  - [x] FIX:RecipeRuntime owns actual plan/fixed context,N task/value buffers/S reserved outcomes.
+    Construction runs no operand/provider/storage operation;consuming execute returns only a
+    complete private result. Original public adapter,once storage,prior lets,left/right/header
+    assertion order and typed failure paths remain exact. Paired driving is still next.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_recipe_execution_contract
+    -- --nocapture →nine pass,rc=0:actual binding/false/zero/providers/first Unknown/Derived failures,
+    interleaved assertions,empty/max recipes and independent18 rows/7 refusals/full frozen bytes.
+    Original outcomes/read order remain exact;no accepted prefix on failure.
+  - [x] NO REGRESSION: cargo clippy -p sc-core --lib --test formula_scalar_recipe_execution_contract
+    -- -D warnings →pass,rc=0 after removing unused constructor mut (lint-only;native nine passed).
+    cargo test -p sc-core --doc recipe::execution::recipe_worker -- --nocapture →one pass,rc=0.
+    Changed rustfmt/diff,book98/357/1642/2895/glossary310/9/158/0,763 four exact Git spans and prior
+    live ids/order/new uniqueness pass,rc=0. Existing independent/native checks cover extraction;
+    no duplicate test or broad verification campaign. Full feature/CI verification owner .4.5.
+  - [x] LOCKSTEP:book/task/index/MEM/DEV/CHANGE align on reservation/fixed context/shared loop and
+    pending paired driving. LIVE reviewed unchanged:G1 6/18/G0 unapproved. Whole0604 retained763/
+    four spans. Next .4.4.3.2 paired loop/.4.4.3.3 native results/.4.4.4 Design bridge/.4.5 acceptance.
+    No combined public execution or full resource/allocator/CPU/platform/physical claim. Full local/
+    hosted79bd6f6a scoped,D340 fixed,D334/D156/D223/PLANNING.5 owned.
+    promotion: declined (applies established complete reservation and one ordered recipe semantics;actual contracts/book retain evidence).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.2`
+  Status: `pending`
+  Goal: drive actual pending recipe operands through shared earned source runtime in that same
+  ordered loop. Reserve both runtimes before first values;retain real let storage/prior-let,
+  lazy/within/assertion order,source context and atomic original requester/supplier failures.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3`
+  Status: `pending`
+  Goal: native complete paired result/error/read views over actual source and ordered recipe plans,
+  strict actual canonical-owner joins and original limits/context. No fabricated entry/header/
+  source values or accepted prefix;actual containing Design bridge remains separately .4.4.4.
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.4`
   Status: `pending`
   Goal: expose actual same-root Design plan execution through private accepted result ownership,

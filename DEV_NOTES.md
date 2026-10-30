@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — suspend recipe Derived reads for actual earned source roots
+## _(2026-10-30 UTC)_ — stage complete private recipe reservation and one ordered loop
 
-0604 adds private Derived recipe read mode and shared earned witness helper with exact canonical-owner guard. Unread names yield to actual machine continuations;only actual cached supplier roots record reads. Original direct/prior-let/class paths and public recipe read enum/getter/RequiresEvaluation remain.
-Private native1/recipe9/source8/doc1/scoped lib/affected-target strict lint/fmt pass. Real first RHS/store333,source1000/3 twice,next RHS2999/3 and once ordinal1 verified;foreign equal inventory guard caught. Independent recipe18/7/source27/8 and frozen bytes retained. Unused witness warning fixed with kind-only Debug.
-Book98/357/1642/2895/glossary0 pass. No supplied cache/value or complete integrated result/second-let storage. [Whole0603](docs/history/stitchcad-devnotes-part762.md) retains four spans;prior live ids/order checked. Original standalone worker explicitly selects original mode at all operand sites.
-Next .4.4.3 complete worker/pre-reservation/real storage/.4.4.4 actual Design execution/.4.5 independent acceptance. LIVE reviewed unchanged:G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D340 fixed;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact.
+0605 extracts RecipeRuntime with actual admitted plan,fixed context,N task/value buffers and complete S outcome reservation. Construction runs no values;the original ordered RHS/storage/prior-let/assertion loop consumes that state and returns only a complete private result. Standalone public adapter stays exact.
+Recipe9/doc1/scoped lib/affected-target strict lint/fmt pass. Independent18 rows/7 refusals/frozen bytes,actual binding/false/zero/providers/first failures/empty/max recipes unchanged. Initial unused constructor mut rejected by strict lint;removed without changing behavior. Existing contracts cover the extraction.
+Book98/357/1642/2895/glossary0 pass. Full reservation/fixed context and one authoritative recipe loop documented;paired source driving remains next. [Whole0604](docs/history/stitchcad-devnotes-part763.md) retains four spans;prior live ids/order/new uniqueness checked. No new public combined execution API.
+Next .4.4.3.2 paired demand/resume/.4.4.3.3 native results/.4.4.4 actual Design bridge/.4.5 independent acceptance. LIVE reviewed unchanged:G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D340 fixed;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

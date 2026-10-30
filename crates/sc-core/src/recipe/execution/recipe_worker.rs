@@ -1,14 +1,9 @@
-//! One declaration-order pass; completed lets become visible only after real RHS/storage success.
+//! Original standalone recipe adapter over the complete shared private recipe runtime.
 use super::{
-    machine::Machine,
-    recipe_read::{self, RecipeSources},
-    FormulaExecutedScalarRecipe, FormulaExecutedScalarRecipeStatement,
-    FormulaScalarExecutionContext as Context, FormulaScalarExecutionWorkspace as Scratch,
-    FormulaScalarRecipeError as Error, FormulaScalarRecipeFailure as Failure,
-    FormulaScalarRecipeOutcome as Outcome, FormulaScalarRecipePlan as Plan,
-    FormulaScalarRecipeWorkspace as Workspace,
+    recipe_runtime::RecipeRuntime, FormulaExecutedScalarRecipe,
+    FormulaScalarExecutionContext as Context, FormulaScalarRecipeError as Error,
+    FormulaScalarRecipePlan as Plan,
 };
-use crate::recipe::{FormulaCheckedStatementKind as Statement, FormulaStatementExpression as Part};
 
 impl<'p> Plan<'p> {
     /// Execute the complete admitted available scalar recipe against its actual immutable sources.
@@ -39,134 +34,11 @@ impl<'p> Plan<'p> {
     where
         'p: 'a,
     {
-        let mut plan: Plan<'a> = self;
-        let proof = plan.admission.proof();
-        let mut machine = Machine::new(plan.admission.node_count()).map_err(|allocation| {
-            let workspace = match allocation.workspace {
-                Scratch::Tasks => Workspace::Tasks,
-                Scratch::Values => Workspace::Values,
-            };
-            Error::allocation(proof, workspace, allocation.requested, allocation.error)
-        })?;
-        let mut statements = Vec::new();
-        statements
-            .try_reserve_exact(plan.admission.output_records())
-            .map_err(|error| {
-                Error::allocation(
-                    proof,
-                    Workspace::Statements,
-                    plan.admission.output_records(),
-                    error,
-                )
-            })?;
-        let mut remaining = plan.sources.as_mut_slice();
-        for statement in proof.statements() {
-            let refuse = |failure| Error::evaluation(proof, statement, failure);
-            let count = match statement.kind() {
-                Statement::Let { expression } => expression.dependencies().len(),
-                Statement::Assert { left, right } => {
-                    1 + left.dependencies().len() + right.dependencies().len()
-                }
-            };
-            let Some((sources, rest)) = remaining.split_at_mut_checked(count) else {
-                unreachable!(
-                    "complete admitted whole source plan retains this real statement block"
-                );
-            };
-            remaining = rest;
-            let outcome = match statement.kind() {
-                Statement::Let { expression } => {
-                    let value = machine
-                        .run(
-                            expression.root(),
-                            &mut RecipeSources {
-                                sources,
-                                completed: &statements,
-                                derived: None,
-                            },
-                            context,
-                        )
-                        .map_err(|error| {
-                            refuse(Failure::Expression {
-                                part: Part::Binding,
-                                error,
-                            })
-                        })?;
-                    let binding = value.store_binding().map_err(|rule| {
-                        refuse(Failure::Binding {
-                            kind: value.kind(),
-                            rule,
-                        })
-                    })?;
-                    Outcome::Binding {
-                        expression: value,
-                        binding,
-                    }
-                }
-                Statement::Assert { left, right } => {
-                    let Some((header, sources)) = sources.split_first_mut() else {
-                        unreachable!(
-                            "actual assertion source block begins with its real tolerance header"
-                        );
-                    };
-                    let Some((left_sources, right_sources)) =
-                        sources.split_at_mut_checked(left.dependencies().len())
-                    else {
-                        unreachable!("actual assertion source block retains both original operand populations");
-                    };
-                    let a = machine
-                        .run(
-                            left.root(),
-                            &mut RecipeSources {
-                                sources: left_sources,
-                                completed: &statements,
-                                derived: None,
-                            },
-                            context,
-                        )
-                        .map_err(|error| {
-                            refuse(Failure::Expression {
-                                part: Part::AssertionLeft,
-                                error,
-                            })
-                        })?;
-                    let b = machine
-                        .run(
-                            right.root(),
-                            &mut RecipeSources {
-                                sources: right_sources,
-                                completed: &statements,
-                                derived: None,
-                            },
-                            context,
-                        )
-                        .map_err(|error| {
-                            refuse(Failure::Expression {
-                                part: Part::AssertionRight,
-                                error,
-                            })
-                        })?;
-                    let tolerance = recipe_read::header(header, context)
-                        .map_err(|error| refuse(Failure::ToleranceRead(error)))?;
-                    let comparison = a
-                        .compare_tolerance(b, tolerance)
-                        .map_err(|error| refuse(Failure::Comparison(error)))?;
-                    if !comparison.holds() {
-                        return Err(refuse(Failure::Assertion(comparison)));
-                    }
-                    Outcome::Assertion(comparison)
-                }
-            };
-            if statements.len() >= plan.admission.output_records() {
-                unreachable!(
-                    "whole private admission reserves every actual successful statement outcome"
-                );
-            }
-            statements.push(FormulaExecutedScalarRecipeStatement { statement, outcome });
-        }
-        if !remaining.is_empty() {
-            unreachable!("complete whole execution consumes exactly its original source blocks");
-        }
-        Ok(FormulaExecutedScalarRecipe { plan, statements })
+        let plan: Plan<'a> = self;
+        let completed = RecipeRuntime::new(plan, context)?.execute()?;
+        Ok(FormulaExecutedScalarRecipe {
+            plan: completed.plan,
+            statements: completed.statements,
+        })
     }
 }
