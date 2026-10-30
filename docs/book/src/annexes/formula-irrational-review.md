@@ -11,7 +11,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;shared platform review remains |
 | sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/sourced88/seven actual body faults pass;shared platform remains |
 | atan/atan2 | Principal branches and complete inverse threshold certificate | Source-gated proof/sourced81/nine actual body faults pass;shared platform remains |
-| tan | Explicit per-call quotas,native139 and real paired24 acceptance | Convergent/source/storage139 review below;arithmetic/resource faults and platform remain |
+| tan | Explicit per-call quotas,native139 and real paired24 acceptance | Convergent/source/storage139 and9 actual arithmetic faults pass;resource faults/platform remain |
 
 The [canonical numerical contract](formula-rationals.md)
 records the algorithms. [Tangent resources](formula-trig-certificates.md) retain
@@ -408,6 +408,48 @@ The focused native13 checks also retain early/later resource precedence,zero/uni
 actual width refinement and original error chains. Three independent profile/model commands
 recheck range/poles,folding/conditioning,convergent enclosures and the bounded request schedule.
 The19 diagnostic model cases/three model guard omissions are separate from upcoming compiled
-native resource-guard faults. Actual arithmetic/resource body faults,platform,mixed-call,full
+native resource-guard faults. Arithmetic body faults pass below;resource faults,platform,mixed-call,full
 allocator/provider/replay and production acceptance remain owned. Current proof/status text
 now reflects available native/scalar policies while keeping aggregate resource closure separate.
+
+## Actual native tangent arithmetic body faults
+
+The tangent_body_faults.py entry runs three static source configurations through the shared
+original-scope Cargo controller. Each copies542 original workspace files and runs the same
+139-row actual upstream/storage watcher. All three unchanged baselines pass. Each of nine
+single-body faults compiles successfully,then fails its independent numerical assertion.
+
+| Actual copied tangent fault | First independent fixture ordinal |
+| --- | --- |
+| Halve the private period | 2 |
+| Lose the reflected sign | 2 |
+| Scale the exact unit by100000 | 4 |
+| Lose reciprocal numerator/denominator exchange | 5 |
+| Scale both quotient endpoints by100000 | 2 |
+| Truncate both whole quotient endpoints | 5 |
+| Report width before exact endpoint bit agreement | 114 |
+| Lose the quotient result sign | 8 |
+| Accept an undecided representable endpoint | 110 |
+
+The D343 classifier requires the watched test's actual stderr panic,one explicit ordinal and
+the complete original row. A compiler failure,unrelated panic or matching substring cannot
+count. Mutated tests stop at their first failed assertion;they are not nine complete139-row
+populations. The unchanged baseline and primary target retain all original outcomes.
+
+Each group retains545 original input hashes,549 planned output paths,compiler identity,source/
+binary hashes and full assertion payloads. Original inputs and every copied file match after
+finally restoration. Both owned parent/child timeout controls pass for each group. Reports live
+at target/tangent_body_faults/0636-fold,0636-interval and0636-execution/report.json.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/tangent_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/tangent_body_faults.py
+```
+
+After restoration,the primary13 tangent tests and strict affected lint/formatting pass. The
+formula-structure suite and native producer registries include this entry. Native file ownership
+is split into bounded4+1 groups;complete transitive compiler/build locality remains n16.
+This closes scoped arithmetic fault review. Actual reservation/charge/precedence/counter faults
+remain a separate next unit;Python model reds cannot substitute for them. Mixed-call behavior,
+native/browser execution parity,aggregate resources and full coupled/production acceptance
+retain their separate owners.

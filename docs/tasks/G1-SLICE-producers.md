@@ -906,8 +906,15 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Status: `pending`
   Goal:complete shared numerical-body probe runtime/locality review after coupled implementation;
   retain scoped feature evidence without claiming complete transitive compiler/build locality.
-  Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
   Schedule:after .5d.4 coupled feature completion,before producer/locality signoff. Feature probes own explicit
   original inputs,complete variant files/logs/binaries and repository-local build/scratch stores.
   Acceptance:public-entry/alias/source/output/child/failure review,actual path refusals and
   omission guards,focused unchanged-source consumer;no global cache or foreign repository write.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1`
+  Status: `pending`
+  Goal:shared controller/root/arc/forward/inverse locality review under parent schedule/acceptance.
+  Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
+  Status: `pending`
+  Goal:tangent body-entry locality review under parent schedule/acceptance;feature evidence is scoped.
+  Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0635 — couple adaptive tangent proof and actual sourced storage
+## STITCHCAD-G1-0636 — reject actual native tangent arithmetic faults
 
-- Native13 pass:all139 original tangent outcomes through real upstream calls;125 values/10 poles/4 exact widths,121 signed bind/read and4 genuine storage errors. Original inputs/policies/progress/flags preserved;7141 independent fixture bytes exact. Range/fold/enclosure/budget controls and primary theorem review pass.
-- Correct stale status,diagnostic and aggregate resource wording;no numerical policy change. Strict lint/fmt/book99/374/1659/2942/glossary0/history794/IDs/map/diff pass. LIVE adds storage121;G1 6/18/G0 unapproved unchanged. Next actual arithmetic/resource faults;full/platform acceptance remains owned.
+- Three unchanged baselines pass;9 actual fold/quotient/width/sign/rounding faults compile then fail exact independent assertions. Original545/copied542 hashes exact per group;549 complete outputs and owned timeout controls pass. Original139 fixture/core unchanged.
+- Primary13/strict affected lint/fmt/bash/book99/374/1659/2943/glossary0/history795/IDs+2/map/diff pass. Native registry split4+1;transitive locality remains owned. LIVE adds Tan fault9;G1 6/18/G0 unapproved unchanged. Actual resource faults next;full/platform acceptance remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

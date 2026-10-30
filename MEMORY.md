@@ -1,19 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.tangent.faults.arithmetic:actual fold/quotient/width/rounding body faults
-  against original139 sourced rows,strict D343 panic/ordinal/whole-row evidence. Then .resources
-  owns actual reservation/charge/precedence/counter omissions;Python model reds are separate.
-- Tan0635 values:13 native pass. Real sqrt/cos upstreams before all139 original outcomes:
-  125 values/10 poles/4 exact widths;121 signed bind/read exact,4 genuine storage refusals.
-  Full-width Angle,explicit policy,original error/progress and Cos/Sqrt/Tan flags/T1 retained.
-- Independent7141B/SHAcf1a803c exact;range8798/586/2,fold29928/372/92/144,enclosures3pi/42/54,
-  budget19/3 model reds pass. Primary Calcut Cor1 rechecked;convergence has no practical universal
-  cap. Current fact/decision/profile status and diagnostic/aggregate resource wording corrected0635.
-- Whole0634 retained794/four Git spans;strict affected lint/fmt/book99/374/1659/2942/glossary0/
-  IDs/map/diff pass. Native root/arc/forward/inverse done;Tan faults/mixed/platform/full coupled
-  acceptance remain. Fresh45M read still final acceptance;G1 6/18/G0 unapproved unchanged.
-- Protect all original archive/search/numerical proof trees;0630 transaction complete,never rerun
-  old install/recovery. Full/hosted79bd6f6a exact-SHA only;full PNT/push400 continues.
+- Next G1-SLICE.5d.4.tangent.faults.resources:actual fold/first/later admission,charge,
+  precedence and counter controls;use independent resource outcomes,not generous-policy139.
+- Tan0636 arithmetic:3 actual unchanged baselines/9 compiled faults rejected by exact D343
+  named-test panic+ordinal+whole-row evidence. First rows 2/2/4/5/2/5/114/8/110;original545/copied542
+  hashes exact per group;549 planned outputs each;owned parent/child timeout controls pass.
+- Native13/strict affected lint/fmt/bash pass;original139/7141B/SHAcf1a803c and native core unchanged.
+  Actual source/storage125 values/10 poles/4 widths,121 bind/read and4 storage refusals retained.
+- Producer352/34379calls;file plans239/91/40/15refusals/12reds. n16 split4+1 without raising caps;
+  full transitive compiler/locality remains owned. Whole0635 retained795/four exact Git spans.
+- Book99/374/1659/2943/glossary0/IDs+2/map/diff pass. Root/arc/forward/inverse scoped native done;
+  Tan resources,mixed/platform/full coupled remain. Fresh45M read deferred to final acceptance.
+- Protect original archive/search/numerical proof trees;0630 transaction complete,never rerun
+  old install/recovery. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA only;full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

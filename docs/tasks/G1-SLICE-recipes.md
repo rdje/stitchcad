@@ -625,36 +625,29 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   native139 and real paired24 acceptance;no fixed practical budget or platform inference.
 - ID: `G1-SLICE.5d.4.tangent.values`
   Status: `done`
-  - [x] REPRODUCE / ISSUE:native139 lacked all-row upstream/storage checks;fact/status text
-    still said kernel pending and misnamed RationalWidth's diagnostic. Core/width tests use
-    formula_domain;Pole is a distinct cause there,while resources have no language code.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py
-    →19 outcomes/3 actual model guard reds,
-    rc=0. Calcut Cor1 primary proof rechecked;no rational-angle half-ppm ties. Native fold156,
-    I(B)=16B+bit_length(2B+1)+16/terms4B precede work. Model width is no exact native bit count.
-  - [x] FIX:real sqrt/cos zero/unit arithmetic before all139 calls;preserve original full-width
-    Angle,policy,errors/progress and successful call flags through storage/read. Add exact ordinal
-    context for later native faults. Correct status/diagnostic/aggregate-heap wording explicitly0635.
-  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- cargo test --offline --locked -p sc-core --test
-    formula_tangent_oracle_contract --test formula_tangent_value_contract --test
-    formula_evaluated_tangent_contract →13 pass,rc=0. Original139:125 values/10 poles/4 exact
-    widths;121 signed bindings/read exact,4 original storage refusals. Real Cos/Sqrt/Tan flags/T1
-    and original input/policy/cause preserved. Independent7141B/SHAcf1a803c fixture regenerates.
-  - [x] NO REGRESSION:strict affected Clippy -D warnings/rustfmt pass,rc=0. Resource profile
-    8798/586/2;fold29928/372/92/144;enclosure3pi/42 Fraction/54 cases;budget19/3 reds pass,rc=0.
-    Primary source confirms only rational tangent0/±1;proof derives convergence,not practical
-    resources. Core tangent/fixture bytes unchanged. Whole794 four Git spans/IDs/map/diff/
-    book99/374/1659/2942/glossary0 pass,rc=0. Models do not replace exact native width/resource proof.
-  - [x] LOCKSTEP:book/facts/decision/profile/live/task align;whole0634 retained794. Next arithmetic
-    faults,then actual resource guards. G1 6/18/G0 unapproved;platform/full acceptance remain owned.
-    promotion: declined (existing exact-proof/source/storage/resource contracts;current wording corrections add no numerical policy or authority).
-  Commit:STITCHCAD-G1-0635;Verification:13 native/139 outcomes/model controls/lint/book.
+  Goal:0635 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part795.md).
 - ID: `G1-SLICE.5d.4.tangent.faults`
-  Status: `pending`
+  Status: `in_progress`
   Goal:actual arithmetic and resource-guard body faults with independent complete-row evidence.
 - ID: `G1-SLICE.5d.4.tangent.faults.arithmetic`
-  Status: `pending`
-  Goal:compile actual folding/quotient/width/rounding faults against original independent cases.
+  Status: `done`
+  - [x] REPRODUCE / ISSUE:mathematical/model controls do not reject actual native body faults.
+  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/tangent_body_faults.py
+    --plan-only →3 groups/4 variants/542 snapshot files/549 outputs each,no writes/dispatch,rc=0.
+  - [x] FIX:thin original-scope controller configs for fold,interval and execution;retain original139
+    independent sourced rows and strict D343 named-test panic/ordinal/whole-row evidence.
+  - [x] ADDRESSED (verified):same entry without --plan-only →3 baselines/9 compiled faults rejected,
+    rc=0;first ordinals 2/2/4/5/2/5/114/8/110. Every original545/copied542 hash exact after restoration;
+    owned parent-only/group timeout controls pass. Compiler errors/unrelated panics cannot count.
+  - [x] NO REGRESSION:local launcher cargo test --offline --locked -p sc-core --test
+    formula_tangent_oracle_contract --test formula_tangent_value_contract --test
+    formula_evaluated_tangent_contract →13 pass,rc=0;strict affected Clippy/fmt/bash pass,rc=0.
+    Producer352/34379calls,file plans239/91/40/15refusals/12reds,whole795 four Git spans,prior IDs/
+    order/uniqueness plus2 children,map/diff/book99/374/1659/2943/glossary0 pass,rc=0.
+  - [x] LOCKSTEP:book/live/notes/registry/suite sync;native arithmetic scope only. Actual resource
+    faults remain next;platform/mixed/full coupled and n16 transitive locality remain owned.
+    promotion: declined (existing exact-proof,actual-fault,source-storage and restoration contracts).
+  Commit:STITCHCAD-G1-0636;Verification:3 baseline/9 actual faults/native13/lint/book.
 - ID: `G1-SLICE.5d.4.tangent.faults.resources`
   Status: `pending`
   Goal:compile actual reservation,charge,precedence and counter faults against independent

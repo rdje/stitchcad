@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — couple adaptive tangent proof with actual source and storage
+## _(2026-10-30 UTC)_ — reject actual native tangent arithmetic faults
 
-0635 native13 pass. Real sqrt/cos zero/unit arithmetic preserves all139 original inputs/outcomes:125 values/10 poles/4 exact widths. Actual121 signed bindings/read-backs match;4 valid wide Ratios retain original storage errors. Cos/Sqrt/Tan/T1 and original input/policy/progress/cause remain intact.
-Independent7141B/SHAcf1a803c regenerates. Range8798/586/2,fold29928/372/92/144,enclosure3pi/42/54 and budget19/3 model reds pass. Calcut Cor1 primary proof rechecked;convergence is no universal practical budget. Exact native width-bit refinement remains distinct from the model's width conclusion.
-Corrected stale kernel/policy status,aggregate heap/CPU wording and fact0290's diagnostic name with explicit0635 clarification. Actual RationalWidth/Pole both map to formula_domain with distinct causes;resources have no language code. No numeric policy or code changed;strict affected lint/fmt pass.
-Book99/374/1659/2942/glossary0/history794/IDs/map/diff pass. [Whole0634](docs/history/stitchcad-devnotes-part794.md) retained. Promotion declined:existing contracts. LIVE adds Tan storage121;G1 6/18/G0 unapproved unchanged. Next actual arithmetic/resource faults;other coupled/platform/full acceptance remain. Full PNT.
+0636 uses three static original-scope configs through the D343 controller. Three baselines pass;all9 fold,quotient,width,sign and rounding faults compile then fail exact independent row assertions. Each group retains545 original hashes,restores542 copied files and plans549 outputs;timeout controls pass.
+Original139 fixture/core bytes stay unchanged. Primary13/strict affected lint/fmt/bash pass. Producer352/34379 calls;file plans239/91/40/15 refusals/12 reds. Native ownership splits4+1 under fixed bounds;complete transitive compiler/locality review remains n16.
+Book99/374/1659/2943/glossary0/history795/IDs+2/map/diff pass. [Whole0635](docs/history/stitchcad-devnotes-part795.md) retains values/proof/wording review. Promotion declined:existing contracts. Resource faults remain separate;no platform or full coupled approval is inferred.
+LIVE adds Tan fault9;G1 remains6/18/G0 unapproved. Next actual reservation/charge/precedence/counter controls;fresh45M inverse read remains final acceptance. Full PNT continues;full/hosted79bd6f6a is exact-SHA evidence only.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
