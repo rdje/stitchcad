@@ -243,3 +243,15 @@ sha256:f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b
 
 Scoped coupled acceptance remains open until full verification completes after these repairs.
 No complete full-probe,hosted CI,application or production-release verdict is claimed.
+
+After those focused repairs,the0649 environment run passes the producer,recipe and binding/replay
+controls but stops at a later origin control. D352 retains the old1466 count and pre0581 AST,
+whereas approved input-requirement cases now produce1471. Runtime tracing distinguishes the
+earlier1466 result calls from exactly five added external-input cases;provenance remains425.
+This environment attempt exits1 with all snapshotted source hashes unchanged. The subsequent
+full probe command does not start. D352 is owned before another complete verification attempt.
+
+```text
+target/irrational_platform_certificate/coupled-0649-integration-20261030T204352575454Z-95261/environment.json
+sha256:941a68045fc0c853290fc6e7ad506e1c0f92587e4abfa502ca5ce0f95a85fb99
+```

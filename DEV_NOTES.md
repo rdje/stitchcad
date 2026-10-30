@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — preserve the complete recipe child selector population
+## _(2026-10-30 UTC)_ — retain the later environment failure and origin repair owner
 
-0648 fixes D350:the public shell follows direct contract links,including formula-recipe-execution.md at three language-contract locations. consumer_inputs correctly rechecks24 files;the independent CHILD_INPUTS retained23. Add that exact chapter and preserve strict equality;no producer logic changes.
-Fixture controls pass six intercepted dispatches,pure196,13 guard body reds and14 physical refusals. A new actual producer fault removes only the execution target from its final selected-input population;exact child equality rejects it. Original196 body/11 fault AST/source bytes/selectors/stores stay exact.
-Positive book101/374/1670/2980/glossary0/history807 four Git spans/IDs/map/diff pass. Book explains24 inputs and13 guards;coupled checkpoint distinguishes focused repairs from pending full verification. LIVE closes D350;G1 6/18/G0 human closure unapproved unchanged. No complete full-probe or hosted verdict.
-[Whole0647](docs/history/stitchcad-devnotes-part807.md) retains publication/search preservation. Promotion declined:existing selector contract. Next full environment suite and probes,then scoped coupled review. Rust/Wasm/doctrine/numerical baseline remains retained;full PNT continues.
-Log:target/coupled-0648-recipe.log,actual terminal0;positive publication in target/coupled-0648-book.log. Original producer/Rust inputs unchanged.
+0649 complete environment attempt passes producer/recipe/binding/replay controls,then exits1 at origin authored count. All1218 snapshotted source hashes remain exact. Full probes do not start. Receipt/transcript are protected under coupled-0649-integration-20261030T204352575454Z-95261.
+D352:independent COUNTS expects1466 and old AST/FAULTS predate approved0581 input requirements. Actual pure origin1471/provenance425 pass. Runtime result-call tracing proves earlier1466 plus exactly five external-input cases. Old AST refusal also reproduces. Origin faults15;provenance26 including consumer.
+Positive book101/374/1670/2980/glossary0/history808 four Git spans/IDs/map/diff pass. LIVE adds D352 P1 owned next;G1 6/18/G0 unapproved unchanged. Full verification/coupled closure remains open;promotion declined:existing origin contract. Full PNT continues with exact approved-source calibration.
+[Whole0648](docs/history/stitchcad-devnotes-part808.md) retains the selector fix. Diagnosis:target/coupled-0649-origin-diagnosis-final.log. Earlier Rust/Wasm/doctrine/numerical baselines remain retained;no new complete full-probe or hosted verdict.
+Receipt:target/irrational_platform_certificate/coupled-0649-integration-20261030T204352575454Z-95261/environment.json SHA941a68045fc0c853290fc6e7ad506e1c0f92587e4abfa502ca5ce0f95a85fb99.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

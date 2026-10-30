@@ -1,18 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.run:complete environment suite,then full probes and scoped closure.
-- Latest unit STITCHCAD-G1-0648;derive HEAD/ahead from Git. D349/D350/D351 focused fixes pass.
-- Recipe expected24-file child population retains strict equality;actual omission of linked
-  formula-recipe-execution.md is rejected. Six dispatches/pure196/13 guard reds/14 physical
-  refusals pass;original196 body/11 fault AST/source bytes/caller selectors/stores exact.
-- Publication50=original45+search5 pass;fixture40 branches/13 omission reds/12 physical
-  refusals/pure APIs/exact approved AST/three AST reds/continuity pass. Whole0647 in part807.
+- Next G1-SLICE.5d.4.acceptance.gates.run.origin-control:D352 count/approved AST calibration.
+- Latest unit STITCHCAD-G1-0649;derive HEAD/ahead from Git. Environment rc1;full probes not started.
+- D352 expected1466/pre0581 AST predates input-requirement extension. Actual origin1471;
+  runtime trace distinguishes original1466 calls+five external-input cases. Provenance425.
+- Calibrate exact approved0581 contracts/FAULTS;retain original constants and all source/alias
+  guards. Origin faults15;provenance15 data+10 producer+one consumer=26. Book counts need sync.
+- Failed environment protects all1218 source hashes unchanged;producer/recipe/binding/replay passed.
+- target/irrational_platform_certificate/coupled-0649-integration-20261030T204352575454Z-95261/environment.json SHA941a68045fc0c853290fc6e7ad506e1c0f92587e4abfa502ca5ce0f95a85fb99.
+- D349–D351 focused repairs pass;whole0648 in docs/history/stitchcad-devnotes-part808.md.
 - Full0646 Rust1635/native+372/doc/fmt/Clippy,Wasm3/doctrine13 pass;full probes29 attempted/rc2.
-- Fresh numerical9 baselines/48 compiled faults and native/Chrome31/405rows pass;bad expectation
-  native101/browser trap. Original550 sources/6614 legacy files/9 old reports exact.
-- Baseline target/irrational_platform_certificate/coupled-0646-baseline-20261030T202107306619Z-42055/receipt.json SHA f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b.
-- Positive book101/374/1670/2980/glossary0/history807/IDs/map/diff pass. No complete full-probe verdict.
-- No job pending;G1 6/18/G0 unapproved;cleanup2026-10-30 14:18 unchanged. Full PNT/push400 only.
+- Fresh numerical9 baselines/48 compiled faults/native+Chrome31/405rows passed;original550/
+  legacy6614/old9 reports exact. Baseline receipt retained in part806. No coupled/full-suite verdict.
+- Positive book101/374/1670/2980/glossary0/history808/IDs/map/diff pass. No job pending.
+- G1 6/18/G0 unapproved;cleanup2026-10-30 14:18 unchanged. Continue full PNT;push400 only.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

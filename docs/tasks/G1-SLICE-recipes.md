@@ -683,21 +683,30 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0647 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part807.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.recipe-selector`
   Status: `done`
-  - [x] ISSUE:D350 independent child-plan control expects23;real producer checks24.
-  - [x] ROOT CAUSE (WHY + WHERE):rg formula-recipe-execution docs/book/src/spec/formula-language.md
-    →three direct links;consumer_inputs includes linked execution chapter missing from CHILD_INPUTS,rc=0.
-  - [x] FIX:add exact24th expected file;retain strict equality and every original guard.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py
-    →six dispatches/pure196/13 actual guard reds/14 physical refusals pass,rc=0.
-  - [x] NO REGRESSION:same command →original196 body/11 fault AST exact;actual omission of
-    only linked execution target rejected;source bytes/caller selectors/stores exact,rc=0.
-    Positive book101/374/1670/2980/glossary0/history807 four spans/IDs/map/diff pass,rc=0.
-  - [x] LOCKSTEP:book/live/notes sync;full probes/coupled closure pending;promotion declined(existing selector contract).
-  Commit:STITCHCAD-G1-0648;Verification:focused selector scope.
+  Goal:0648 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part808.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
   Status: `in_progress`
   Goal:finish environment/full probes after D349–D351 repairs;Rust/Wasm/doctrine pass,then scoped closure.
+  Latest0649 environment rc1;D352 next,then environment/full probes.
+  Preserve transcripts/return codes and original source/evidence identities;no closure yet.
   Book sync:clarify trig-certificates inverse230 observed0640 pair/full matrix during closure.
+- ID: `G1-SLICE.5d.4.acceptance.gates.run.environment-baseline`
+  Status: `done`
+  - [x] ISSUE:complete environment attempt reaches a later origin-control failure.
+  - [x] ROOT CAUSE (WHY + WHERE):actual contracts()/runtime result-call tracing →1471 origin,
+    earlier1466+five0581 input cases;provenance425. Old AST refusal reproduced,diagnosis rc=0.
+  - [x] FIX:retain exact terminal receipt/full transcript;own D352 before another attempt.
+  - [x] ADDRESSED:python3 -I -B JSON/SHA receipt verification →1218 inputs unchanged,
+    transcript SHA exact/full probes absent,pass,rc=0;actual environment rc=1 retained.
+  - [x] NO REGRESSION:receipt SHA941a68045fc0c853290fc6e7ad506e1c0f92587e4abfa502ca5ce0f95a85fb99
+    verified;positive book101/374/1670/2980/glossary0/history808 four spans/IDs/map/diff pass,rc=0.
+  - [x] LOCKSTEP:book/live/notes sync;D352/full verification pending;promotion declined(existing contract).
+  Commit:STITCHCAD-G1-0649;Verification:failed integration baseline retained.
+- ID: `G1-SLICE.5d.4.acceptance.gates.run.origin-control`
+  Status: `pending`
+  D352 P1:origin expected1466/old contract AST predates0581 input-requirement extension;
+  actual pure origin1471/provenance425 pass. Reconcile exact approved additions and retain
+  approved origin semantics/faults;provenance unchanged. Sync book before full verification.
 
 ### Execution, uncertainty and replay
 

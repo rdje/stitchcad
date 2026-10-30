@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0648 — retain all linked recipe child inputs
+## STITCHCAD-G1-0649 — preserve the later environment baseline and D352 owner
 
-- Fix D350's independent selector population from23 to24 by retaining the directly linked execution chapter. Strict set equality and all earlier guards remain;actual omission of only that target fails.
-- Six dispatches/pure196/13 actual guard reds/14 physical refusals/original196 body and11 fault AST pass. Book101/374/1670/2980/glossary0/history807/IDs/map/diff pass. D349–D351 focused repairs done;full probes/coupled closure next. G1 6/18/G0 unapproved unchanged.
+- Environment passes producer/recipe/binding/replay,then exits1 at stale origin count;1218 input hashes exact. Full probes not started. D352 owns1466→1471/exact0581 AST calibration;runtime trace proves exactly five added cases,provenance425 unchanged.
+- Protected receipt/transcript retained. Book101/374/1670/2980/glossary0/history808/IDs/map/diff pass. Full verification/coupled closure remains open;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
