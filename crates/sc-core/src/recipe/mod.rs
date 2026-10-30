@@ -50,6 +50,12 @@ mod inverse;
 mod pi;
 mod trig;
 
+mod tangent;
+pub use tangent::{
+    FormulaTangentError, FormulaTangentLimits, FormulaTangentPlan, FormulaTangentResource,
+    FormulaTangentResourceError,
+};
+
 mod bound;
 pub use bound::{FormulaBindingValueError, FormulaBindingValueRule, FormulaBoundValue};
 

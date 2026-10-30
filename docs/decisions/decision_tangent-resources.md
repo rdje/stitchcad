@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-30`
-- **Status:** `active`; algorithm/resource contract selected, native implementation pending
+- **Status:** `active`; algorithm/resource contract selected;native preparation implemented,numerical worker pending
 - **Owner / source:** engineer under the director's delegated implementation authority;
   G1-SLICE.5d.1.2.2.2.d.2.2.2, implementation G1-SLICE.5d.3.2.2
 
@@ -26,7 +26,7 @@ This preserves the distinction already used by expression/source/recipe workspac
 An authored input remains mathematically valid when its requested execution cannot be admitted.
 The numerical contract still requires the true nearest ppm with half-away rounding and the
 original128-bit input/result boundaries. Resources cannot enlarge those numerical domains.
-This decision admits a method for native implementation; it does not claim an existing tangent API.
+This decision admits a method for native implementation; it does not claim an existing tangent value API.
 
 ## Complete bounded request
 

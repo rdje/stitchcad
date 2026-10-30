@@ -1,18 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.3.2.2.1:native tangent preparation/limits/refusals/exact folding.
-  Bounded-request algorithm/resource plan0614 admitted in decision_tangent-resources.md. No native
-  kernel yet. Read current numeric/rational/plan interfaces;prepare only actual Angle/explicit
-  limits,retain original input/policy and exact domain/resource context. No placeholder value.
-- Selected method:156-bit fold;exact zero/unit/pole without series. Otherwise B128/doubling,
-  preflight I(B)=16B+bit_length(2B+1)+16 and4B cumulative terms before each iteration. Full closed
-  interval certifies value/actual width;budget failure gives resources,no value/new language code.
-  Caller budgets explicit/no default or fixed precision cutoff;mathematical domain/quantum unchanged.
-- Model19 exact cases/three actual guard reds;prior reduction/enclosure controls retained. Map
-  plain labels8143B/111L under8192 cap,all ordered destinations/labels exact;old style8255B.
-  Map5+2 controls/census345/file232/effect109/book98/365/1645/2904/glossary0/history772/773/map/ids/diff
-  pass. Algorithm parents .5d.1 complete;native kernel .1–.4 and real AST policy adoption remain owned.
-  G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
+- Next G1-SLICE.5d.3.2.2.2:actual bounded native tangent numerical worker/value execution. Preparation0615 implemented:original Angle/explicit no-default limits/private signed folding;
+  exact zero/unit/pole need156 bits/no terms. Nontrivial first2073 bits/512 terms fit atomically.
+  FormulaTangentPlan holds original input/policy/private BigUint phase. Preparation computes no
+  series/value;resources retain original context with no language diagnostic/boxed allocation.
+- Read decision_tangent-resources.md and tangent_reduction_plan.py/budget_plan.py before worker.
+  B128/doubling;I(B)=16B+bit_length(2B+1)+16,4B cumulative terms. Complete preflight before each
+  iteration;whole closed interval alone certifies rounding/actual width. Overflow is resources,
+  no hidden precision ceiling or uncertain value. Preserve real source flags in later .3.
+- Native4 + independent signed-fold873/private1 + numeric6 + doc3/scoped strict lint/fmt pass.
+  Book98/370/1645/2905/glossary0/census345/history774 four spans/live IDs/map/diff pass. Algorithm
+  completed subtree retained774. Native worker/source/independent acceptance and real AST policy
+  adoption remain owned. LIVE G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped.
+  Protect target/history-capture-0569/history-proof-0569 and numerical stores;never rerun old
+  transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each,push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

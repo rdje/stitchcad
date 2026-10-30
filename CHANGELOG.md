@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0614 — admit bounded adaptive tangent with explicit execution resources
+## STITCHCAD-G1-0615 — prepare actual tangent operands with explicit execution quotas
 
-- Select per-candidate integer/cumulative-series budgets and complete iteration preflight. Model19 cases/three actual guard reds preserve original input/policy/counters,certified values and distinct mathematical/resource failures. No default,hidden precision ceiling or native kernel yet.
-- Preserve all generated map routes under its unchanged cap with plain labels8143B. Map5+2/census345/file232/effect109/book98/365/1645/2904/glossary0/history772/ids/diff pass. Algorithm plan complete;next native preparation. LIVE G1 6/18/G0 unapproved unchanged.
+- Add immutable no-default tangent limits,original mathematical/resource errors and a private original-Angle plan. Kind/fold/endpoint/pole/first-iteration priority is exact;no series is computed or value fabricated.
+- Native4/private independent873/numeric6/doc3/scoped lint/fmt pass. Book98/370/1645/2905/glossary0/census345/history774/IDs/map/diff pass. LIVE notes preparation,G1 6/18/G0 unapproved unchanged. Next bounded numerical worker;full feature/platform proof remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

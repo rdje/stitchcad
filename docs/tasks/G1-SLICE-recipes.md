@@ -435,173 +435,91 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 ### Irrational functions
 - ID: `G1-SLICE.5d.1`
   Status: `done`
-  Goal: finalize deterministic true-value rounding algorithms and independent proof/oracle plan
-  for every admitted input before its function-family implementation; no cross-family certificate.
-  Acceptance: rigorous rounding-boundary/termination/resource argument over width128 inputs,
-  signed/multi-turn reduction, principal branches/poles, half-away rules and declared domains;
-  ordinary platform libm/curated Decimal60 agreement cannot establish correct arbitrary rounding.
-  Children .1 exact roots, .2 transcendentals. Each implementation requires its applicable plan;
-  unresolved algorithms/dependency/license requirements stay owned before that family starts.
-  Verification:bounded-request plan/proof/model accepted0614;Commit:STITCHCAD-G1-0614.
-  Closure0614:algorithm admission only;bounded tangent resources are selected in
-  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.1`
   Status: `done`
-  Goal: exact root plan and25 independent fixtures verified0254; numerical decision holds full proof.
-  Paths: docs/tasks/artifacts/formula_structure/root_value_oracle.py;crates/sc-core/tests/fixtures/formula_roots.tsv
-  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part327md).
-
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2`
   Status: `done`
-  Goal: exact deterministic transcendental algorithms and threshold/resource/license proofs.
-  Acceptance: all .5d.1 obligations before each applicable .5d.3 family; no fixed libm guess.
-  Children: .1 bounded arc_length pi certificate; .2 sin/cos/tan/atan/atan2 interval plan.
-
-  Closure0614:algorithm admission only;bounded tangent resources are selected in
-  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.1`
   Status: `done`
-  Goal: certified640-bit pi/arc plan and approved UI baseline/quality/full-agent-control records0257.
-  Paths: docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py;crates/sc-core/tests/fixtures/pi640_certificate.tsv;knowledge-map/scripts/gen_knowledge_map.sh
-  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part331md).
-
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2`
   Status: `done`
-  Goal: exact trig/inverse interval/resource plan before code.
-  Children .1 midpoint/qualitative termination; .2 practical admitted-input resource strategy.
-  Closure0614:algorithm admission only;bounded tangent resources are selected in
-  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.1`
   Status: `done`
-  Goal: midpoint/conditional termination proof verified0260; practical resources P1 .2.
-  Paths: docs/tasks/artifacts/formula_structure/trig_midpoint_certificate.py;docs/decisions/fact_trig-midpoints-and-resource-bound.md
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part338md).
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2`
   Status: `done`
-  Goal: P1 practical trig/inverse interval/resource strategy over all admitted inputs before .5d.3.2/.3.
-
-  Closure0614:algorithm admission only;bounded tangent resources are selected in
-  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.a`
   Status: `done`
-  Goal:0277 finite forward certificate cohort38/controls verified; production admission remains open.
-  Paths: docs/tasks/artifacts/formula_structure/finite_threshold_feasibility.py;docs/decisions/decision_finite-threshold-feasibility.md
-  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part372md).
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b`
   Status: `done`
-  Goal: complete forward1M/inverse45M and inverse plan; [whole subtree/proofs](../history/window15.md#stitchcad-devnotes-part404md).
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.1`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.a`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.1`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.a`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.b`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.h`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
   Status: `done`
-  Goal: verified; whole scope/provenance in retained404 above.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.c`
   Status: `done`
-  Goal:0279 admits exact sin/cos folding/512-bit64-term error/workspace plan; native next.
-  Paths: docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py;docs/decisions/decision_finite-threshold-feasibility.md
-  Acceptance: [whole scope/six proof boxes](../history/window14.md#stitchcad-devnotes-part376md).
-
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.1`
   Status: `done`
-  Goal:0290 exact tangent pole/range/coverage characterization8798/586/2 pass0; practical .d.2 pending.
-  Acceptance: [whole scope/six proof boxes](../history/window15.md#stitchcad-devnotes-part402md).
-  Retention0291 owned .6.1:
-  - [x] ROOT CAUSE0291: git showb49128e whole0290 task/population subtree retained402/404; Python source/hash comparison rc=0.
-  - [x] ADDRESSED0291: whole source/hash exact in402/404, Python comparison rc=0.
-  - [x] NO REGRESSION0291: scripts/history_archive.py --root . read402/404 whole public files exact, Python comparison rc=0; no reader change.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2`
   Status: `done`
-  Goal: P1 practical all-input tangent rounding/termination/resource plan before .5d.3.2.2.
-  Need sharper certified strategy or validated adaptive proof; no arbitrary cutoff/new domain.
-
-  Closure0614:algorithm admission only;bounded tangent resources are selected in
-  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1`
   Status: `done`
-  Goal:0612 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part771.md).
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1.inventory`
   Status: `done`
-  Goal:0612 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part771.md).
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1.reduction`
   Status: `done`
-  Goal:0612 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part771.md).
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.2`
   Status: `done`
-  Goal:validated whole admitted-input tangent enclosure/rounding/termination and practical resource
-  strategy using exact reduction .1. Prove original width/pole diagnostics;no arbitrary cutoff,
-  changed domain,borrowed fixed sine/inverse certificate or production kernel before admission.
-
-  Closure0614:algorithm admission only;bounded tangent resources are selected in
-  decision_tangent-resources.md. Native .5d.3.2.2 and full evaluator/platform/physical proof remain owned.
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.2.1`
   Status: `done`
-  Goal:0613 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part772.md).
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.2.2`
   Status: `done`
-  Goal:admit practical bounded adaptive tangent requests without a numerical-domain cutoff.
-  Containment614:aggregate1501679B>1500000;retain only whole committed completed recipe-prefix
-  scope in773,all nine IDs/order/proof links preserved;ceilings unchanged.
-  - [x] REPRODUCE / ISSUE:convergence alone supplies no finite selected-request resource guarantee;
-    numerical ambiguity must never become an invented value/domain failure. New decision would
-    also exceed the existing8192-byte generated-map cap with old decorative code labels.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py
-    →actual near-midpoint input needs further certification after128/256 in this model;lower
-    selected quotas refuse next work/bit reservation,larger quotas certify same result,rc=0.
-    Old generator on the same new record set gives8255B;new plain labels8143B/all ordered labels/
-    destinations exact,rc=0. No input/quantum limit or map destination needed removal/increase.
-  - [x] FIX:explicit caller per-candidate integer-bit/cumulative-series budgets;fold156 then
-    B128/doubling,preflight complete I(B) then4B before charging/computing each iteration. Preserve
-    original input/limits/prior reservations/work/next demand. Only whole certificates return values;
-    otherwise original pole/width or separate resource refusal. No default/fixed precision cutoff.
-    New retrievable decision admits strategy only;minimal generated-label formatting preserves routes.
-  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py
-    →19 exact endpoint/pole/width/early+later quota/priority/counter/original-owner/successful-value
-    invariance cases and three actual guard-body reds pass,rc=0. Initial fault anchor matched its
-    fixture string too;rg showed both,AST-selecting actual function makes faults exact. Self source
-    unchanged. Original reduction29928/372/3642/92/144/two and enclosure3/42/54 controls pass,rc=0.
-  - [x] NO REGRESSION: python3 -I -B docs/tasks/artifacts/formula_structure/knowledge_map_contract.py
-    --mutations →five header forms/current routes/two actual body reds,source exact,rc=0. Producer
-    census345/33905 calls/73 heredocs/2892 embedded and file232/effect109 controls23 refusals/19
-    guard reds pass,rc=0. Positive book98/365/1645/2904/glossary310/9/158/0,history772 four/773 one Git spans/
-    public773 read exact/prior live ids/order/uniqueness,generated map/both shell syntax/diff pass,rc=0. Native kernel,
-    complete allocator/latency/platform/full CI not inferred;no other source/profile behavior changed.
-  - [x] LOCKSTEP:decision/index/facts/book/task/index/MEM/DEV/CHANGE align. Algorithm-plan parents
-    close0614;native tangent starts .5d.3.2.2.1,then actual value/source adoption and acceptance.
-    Whole0613 retained772. LIVE G1 6/18/G0 unapproved unchanged;D341 fixed/D156/D223/PLANNING.5/D334
-    owned. Budget refusal is execution admission,not a new language diagnostic;protected proofs intact.
-    promotion: promoted (decision_tangent-resources.md records bounded request semantics,universal correctness/termination and implementation obligations).
-
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`
-  Goal:0259 packed window12/whole closed scopes under fixed caps.
-  Paths: docs/history/;.doctrine/history_archive/;DEV_NOTES.md;docs/tasks/artifacts/history_archive/capture_window12.py
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part336md).
-
+  Goal:0614 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part774.md).
 - ID: `G1-SLICE.5d.2`
   Status: `in_progress`
   Goal: correctly rounded sqrt(area/ratio) and hypot(length,length) under .1's reviewed algorithm.
@@ -643,14 +561,42 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0280 native sin/cos verified3/0; original scope379, whole retention below.
   Acceptance: [whole summary/provenance](../history/window14.md#stitchcad-devnotes-part400md).
 - ID: `G1-SLICE.5d.3.2.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
 - ID: `G1-SLICE.5d.3.2.2.1`
-  Status: `pending`
-  Goal:actual native tangent input preparation,explicit immutable resource limits/rich refusals and
-  exact signed period/pole/zero/unit folding under the admitted bounded-request plan. No placeholder
-  numeric value or unavailable-family language error. Read current numeric/rational/source APIs
-  before code;first expose legitimate preparation only,then implement complete evaluation below.
+  Status: `done`
+  Goal:actual native tangent preparation with explicit immutable quotas,rich resource refusals
+  and exact signed folding. No series evaluation,placeholder value or fabricated language failure.
+  - [x] REPRODUCE / ISSUE:admitted algorithm had no actual native Angle preparation or explicit
+    policy/resource boundary;existing sin/cos output cannot substitute for tangent evaluation.
+  - [x] ROOT CAUSE (WHY + WHERE): git show HEAD:crates/sc-core/src/recipe/mod.rs
+    →no tangent module/export before0615,rc=0. Actual preparation must validate kind first,then
+    reserve156 bits before private period/reflection;exact endpoints need no approximation work.
+  - [x] FIX:private native plan owns original operand/limits/fold;explicit limits have no Default.
+    Original dimension/pole errors stay mathematical;resource error retains original input/policy,
+    unit/maximum/request/precision/prior reservation/charged terms without a diagnostic/value.
+    Complete first2073-bit/512-term demand is admitted atomically;no series is run or charged.
+    Original BigUint phase stays private,avoiding a false numerical-width conversion error.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_prepare_contract
+    →four priority/endpoint/pole/quota/full128-bit preservation tests pass,rc=0. cargo test -p
+    sc-core --lib recipe::tangent::prepare::tests →one actual fold watcher compares873 independent
+    signed centered residues including sign/reciprocal/exact cases,rc=0. Initial wide-pole test
+    rounded an even maximum quotient upward beyond128 bits;compiler/Python parity guard caught it,
+    corrected to the largest admitted odd quotient. No production arithmetic overflow occurred.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_numeric_contract →six pass,rc=0.
+    cargo clippy -p sc-core --lib --test formula_tangent_prepare_contract -- -D warnings and
+    cargo test -p sc-core --doc recipe::tangent:: →strict lint/three positive/privacy/no-default
+    docs pass,rc=0. Measured128-byte resource variant stays inline under narrow documented lint
+    allowance:resource refusal must not allocate a box. Selected rustfmt --check/diff pass,rc=0.
+    Positive book98/370/1645/2905;glossary310/9/158/0;census345/33905;history774 four exact Git
+    spans;prior task IDs/order/uniqueness/map exact,rc=0. Initial duplicate API-family labels were
+    refused by publication checker;unique descriptive labels restore all five real API rows.
+  - [x] LOCKSTEP:book/API map/decision/task/index/MEM/DEV/CHANGE/LIVE align. Whole completed
+    algorithm subtree and prior ledger retained774;caps unchanged. LIVE product notes preparation,
+    G1 6/18/G0 unapproved unchanged. Next .2 actual bounded worker,then source wrapper/independent
+    acceptance/real AST policy adoption. No full CI/platform/allocator/CPU/production claim.
+    promotion: declined (existing tangent resource decision already owns this contract;native preparation is scoped implementation).
+  Commit:STITCHCAD-G1-0615;Verification:focused checks above pass;broader feature acceptance pending.
 - ID: `G1-SLICE.5d.3.2.2.2`
   Status: `pending`
   Goal:bounded native unrounded pi/sine/cosine/quotient worker and actual value execution from its

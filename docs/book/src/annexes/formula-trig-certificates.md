@@ -1,7 +1,7 @@
 # Annex: investigating bounded trig rounding certificates
 
 Native sin/cos and atan/atan2 values are implemented under the complete certificates and admitted
-plans below. Tangent now has a selected bounded-request resource strategy;its native kernel remains
+plans below. Tangent has explicit-resource native preparation;its numerical worker remains
 unimplemented. Whole formula
 execution and platform evidence remain separate [execution-plan](formula-execution-plan.md) work.
 
@@ -298,7 +298,7 @@ A prerequisite model now reduces each actual admitted rational Angle through exa
 reflection and complement operations. It handles original odd-quarter poles,canonical zero and
 exact signed unit results separately. Other magnitudes use unrounded sin/cos in the first octant,
 with reciprocal selection near a pole;the sign is restored only after true-value ppm rounding.
-Authored signed/full-turn Angle state is unchanged. This model supplies no production tangent API.
+Authored signed/full-turn Angle state is unchanged. This model alone supplies no production tangent value API.
 
 With A=90,000,000 and input magnitude n/d,set q=A*d and r=n mod(2q). Reflect r>q to2q-r and
 flip the result sign. Exact r=q is a pole;exact r=0 is zero. For2r>q,complement to q-r and
@@ -364,7 +364,7 @@ charged series terms. There is no default policy or fixed maximum precision. An 
 execution budget produces a separate resource refusal carrying the original operand,selected
 limits,unit,maximum,prior reservation/work and next scheduled demand. It supplies no approximate
 value or formula-language precision/domain diagnostic. Valid mathematical inputs stay valid.
-Native kernel implementation and source/recipe/Design policy adoption remain pending.
+Native preparation is implemented below;the numerical worker and source/recipe/Design policy adoption remain pending.
 
 After the existing actual-kind check,reserve the complete156-bit folding extent. Exact zero,
 signed unit and pole cases need no approximation terms. Other cases start at B=128 to represent the2^-128 denominator floor,and double
@@ -394,3 +394,54 @@ bytes remain unchanged. Expected near-midpoint rounding comes from the independe
 oracle. The decision is recorded in docs/decisions/decision_tangent-resources.md. It licenses
 native implementation of this bounded strategy,with explicit limits and rich resource errors;
 no numerical kernel,full allocator/CPU envelope,platform proof or release approval follows here.
+
+## Native tangent preparation with explicit quotas
+
+FormulaNumericValue::prepare_tangent accepts an actual completed Angle and an explicit
+FormulaTangentLimits. FormulaTangentPlan privately retains that original operand,its exact folded
+metadata and the selected policy. It cannot be assembled from caller-supplied reduction data.
+Preparation validates the actual kind,reserves folding space,classifies exact cases and admits the
+complete initial approximation demand when needed. It runs no pi or component series and supplies
+no numeric result. The native value worker remains the next implementation slice.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational, FormulaTangentLimits};
+# fn main() -> Result<(), Box<dyn std::error::Error>> {
+let angle = FormulaNumericValue::new(
+    FormulaKind::Angle, FormulaRational::from_signed_integer(30_000_000),
+)?;
+let limits = FormulaTangentLimits::new(2073, 512);
+let prepared = angle.prepare_tangent(limits)?;
+assert_eq!(prepared.input(), angle);
+assert_eq!(prepared.limits(), limits);
+assert_eq!(prepared.initial_integer_bits(), 2073);
+assert_eq!(prepared.initial_series_terms(), 512);
+# Ok(())
+# }
+```
+
+The initial term count is admitted planned work,not charged work:preparation evaluates no series.
+Exact zero and signed unit inputs need only limits156/0;an exact pole with those limits returns
+FormulaTangentError::Pole with the original complete signed Angle. Even a zero or pole first
+refuses a155-bit folding quota. The actual-kind error precedes all resource checks:passing a Ratio
+with limits0/0 returns the original Tan dimension error,not a resource refusal.
+
+For a nontrivial Angle,limits2072/0 refuse2073 integer bits before considering series work.
+Limits2073/511 instead refuse512 additional terms. FormulaTangentResource selects IntegerBits or
+SeriesTerms. FormulaTangentResourceError retains the original rational,selected limits,refused
+unit and maximum,next scheduled demand,prospective precision128,prior folding reservation156 and
+zero charged terms. A folding refusal has no prospective precision and zero prior reservations.
+The whole first iteration is admitted atomically:neither its reservation nor term charge is recorded
+as completed when either quota fails. Increasing limits admits preparation without changing input.
+
+FormulaTangentError forwards an existing numerical cause or the exact pole domain family through
+its optional diagnostic_code. Resources return None;the error chain retains the original resource
+payload. No numerical width error,Unknown,approximate value or source contribution replaces a
+resource refusal. There is no default policy. Logical bit/work quotas do not certify complete
+allocator bytes,CPU latency,source execution or production readiness.
+
+Focused native checks cover actual kind priority,folding-before-endpoint/pole priority,inclusive
+quotas,atomic first-iteration admission and unchanged full128-bit operands. A private test compares
+actual folded signs,reciprocal choice and exact cases with873 independent signed centered residues.
+Independent complete native value/resource acceptance follows the worker and source wrapper;
+whole expression/source/recipe/Design policy adoption remains separately owned.

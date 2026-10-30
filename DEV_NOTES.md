@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — admit explicit-resource bounded adaptive tangent requests
+## _(2026-10-30 UTC)_ — prepare actual tangent inputs under explicit quotas
 
-0614 selects explicit integer/series budgets. Fold156;exact zero/unit/pole need no series. Other cases preflight I(B) and4B at B128/doubling before charging/computing. Only complete certificates return values;resources preserve original input/policy/reservations/work without a new language diagnostic.
-Model19 exact cases/three actual guard-body reds pass,including early/later limits,priority and resource-independent successful values. Initial string fault anchor matched fixture text too;AST extraction selects only actual function. Existing reduction/enclosure proof retained;no native kernel claimed.
-Map containment removes decorative label code spans,keep all ordered labels/destinations;8143B/111L under unchanged8192 cap,old style8255B. Map5+2/census345/file232/effect109/book98/365/1645/2904/glossary0/history772/ids/diff pass. [Whole0613](docs/history/stitchcad-devnotes-part772.md) retained.
-Algorithm-plan parents complete;next native .5d.3.2.2.1 actual preparation,then worker/source/acceptance and real AST policy adoption. Explicit quotas are execution admission,not a precision-domain cutoff. LIVE G1 6/18/G0 unapproved unchanged;full-hosted79bd6f6a scoped. Full PNT/push400;protected proofs retained.
+0615 adds private native preparation retaining original Angle and explicit immutable no-default limits. Validate actual kind,then156-bit folding admission/exact sign/pole/zero/unit. Nontrivial first2073 bits/512 terms fit atomically;preparation computes no series or value.
+Resource errors retain input/policy/unit/max/request/precision/prior reservations/work,without a language diagnostic. Original mathematical causes stay typed. Keep phase as private BigUint,avoid fake width narrowing;measured128-byte error stays inline under narrow lint allowance to avoid refusal allocation.
+Native4/private independent873/numeric6/doc3/scoped strict lint/fmt pass;book98/370/1645/2905/glossary0/census345/history774 four Git spans/IDs/map/diff pass. Over-wide odd-pole test and duplicate API labels caught and corrected. [Whole0614](docs/history/stitchcad-devnotes-part774.md).
+Next .5d.3.2.2.2 actual bounded worker,then sources/acceptance/AST policy adoption. LIVE notes preparation,G1 6/18/G0 unapproved unchanged. No full numerical/platform/allocator/CPU certificate yet. Full PNT/push400/protected evidence retained.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
