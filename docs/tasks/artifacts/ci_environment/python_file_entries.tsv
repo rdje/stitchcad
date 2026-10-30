@@ -220,3 +220,12 @@ docs/tasks/artifacts/seam_partition/reference_recomposition_oracle.py	reference	
 docs/tasks/artifacts/seam_partition/stop_partition_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/seam_partition/uniform_ease_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 scripts/history_generations.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/book_publication/search_migration_contract.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/formula_structure/recipe_execution_admission_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/formula_structure/reference_input_requirement_contract.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/formula_structure/scalar_design_recipe_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/formula_structure/scalar_execution_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/formula_structure/scalar_recipe_execution_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/formula_structure/scalar_source_execution_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/formula_structure/source_cycle_reference.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/book_publication/search_migration_capture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a40

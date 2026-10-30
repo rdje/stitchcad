@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0610 — close scoped scalar source/recipe/Design input integration
+## STITCHCAD-G1-0611 — repair exact producer inventory coverage before tangent planning
 
-- After feature completion,13 selected core targets159 pass;private execution9/measurement composition5/Design formula docs16/paired docs4 pass. Independent expression49/recipe18/source27/Design23 watchers retain exact outcomes and frozen bytes. No full CI/platform claim.
-- README/book98/365/1645/2901/glossary0/history768 four spans/live ids/diff pass. Available-scalar parent checkpoint closed;full Derived integration stays owned. Next P1 tangent resource plan before kernel. LIVE G1 6/18/G0 unapproved unchanged.
+- Fix D341:register ten earlier source additions with actual roles,nine Python file rows and one effect row;fresh diagnostic capture has a scheduled runtime-audit owner. Scanner/guard behavior unchanged;classification grants no runtime locality or approval.
+- Census343/independent405 checks/effect+file controls23 refusals/19 guard reds/book98/365/1645/2901/glossary0/history769 pass. Whole0610 product checkpoint retained. Next exact tangent reduction before full resource admission/kernel. LIVE G1 6/18/G0 unapproved unchanged,D341 fixed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

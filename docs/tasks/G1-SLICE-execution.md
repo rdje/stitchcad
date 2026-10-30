@@ -226,124 +226,76 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0593 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part752.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3`
   Status: `done`
-  Goal: integrate actual bare initial-source evaluation with real ordered recipe bindings. Bare
-  expression sources are not lets;their returned roots stay unbound with original contribution
-  flags. Only actual authored lets use once-only storage and actual earlier bindings. No new
-  header/name/rounding point,forward-let reordering or caller seeded source value/cache.
-  Recovery: formula §4.2's two rounding boundaries,actual expression result.value(),evaluated
-  bind/store_binding and actual recipe worker RHS→store→publish interfaces read. Initial namespace
-  rejects prior-let seeds. Canonical Derived has sole formula id/no authored stored result. Real
-  recipe prior-let reads consume actual returned stored bindings;preserve that separate contract.
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.1`
   Status: `done`
-  Goal:0594 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part753.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.2`
   Status: `done`
-  Goal:0595 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part754.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3`
   Status: `done`
-  Goal:0597 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part756.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.1`
   Status: `done`
-  Goal:0597 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part756.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.2`
   Status: `done`
-  Goal:0597 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part756.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4`
   Status: `done`
-  Goal: integrate earned source roots into actual canonical reads/current recipe execution while
-  retaining true let RHS→once storage→prior-let visibility,atomic whole-result failure and original
-  source/provenance/context. Complete actual Design source ownership/namespace/resource/currentness
-  joins and source-mode acceptance remain required;no metadata/caller value stands in for execution.
-  Recovery0600:actual DesignInputsDefinition explicitly owns structure/parameters/recipe/formula_sources/
-  materials/metadata/references. Exhaustive ownership/resource/context paths preserve all fields.
-  FormulaSources retains actual source/index/doc buffers without stored policy limits. The private
-  formula scope admits logical held input content before current semantics and normalizes only its
-  actual source/recipe owners. Namespace/proof/runtime admission remains staged below;no full bounds.
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.1`
   Status: `done`
-  Goal:0598 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part757.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.2`
   Status: `done`
-  Goal:0599 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part758.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3`
   Status: `done`
-  Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.1`
   Status: `done`
-  Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.2`
   Status: `done`
-  Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.3`
   Status: `done`
-  Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4`
   Status: `done`
-  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.1`
   Status: `done`
-  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.2`
   Status: `done`
-  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3`
   Status: `done`
-  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.1`
   Status: `done`
-  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.2`
   Status: `done`
-  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3`
   Status: `done`
-  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.4`
   Status: `done`
-  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5`
   Status: `done`
-  Goal: scoped independent actual Design/recipe/source-mode acceptance;preserve canonical states,
-  source ownership,currentness/resource joins and genuine first failures. Broader graph/platform/
-  physical/load/replay and missing kernel families retain existing owners before full acceptance.
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5.1`
   Status: `done`
-  Goal:0609 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part768.md).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5.2`
   Status: `done`
-  Goal:complete scoped integration checkpoint after available-scalar implementation/paired oracle.
-  Closure0610:parents .3.3.3/.4/.4.5 done for available scalar source/recipe/DesignInputs only;
-  broader Derived/graph/whole runtime parents remain in_progress,with integration owner below.
-  - [x] REPRODUCE / ISSUE:feature implementation and independent paired reference complete;
-    directly affected integration verification deferred during slices can now run. Book retained
-    one paired-pending sentence and standalone recipe status needed the actual paired entry point.
-  - [x] ROOT CAUSE (WHY + WHERE): rg -n -i 'pending|future|not yet|separate|no .*execution'
-    over formula-design-integration/source-proofs/recipe-execution book annexes →old status and
-    broader true boundaries distinguished,rc=0. Existing native targets directly cover the actual
-    source/resource/namespace/proof/graph/plan/worker/current root contracts;no new kernel needed.
-  - [x] FIX:run selected complete targets only after feature completion;close scoped checkpoint,
-    reconcile actual paired availability and keep missing-family/full Design/resource/load/replay/
-    platform/physical owners explicit. README and actual book entry points now agree.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract
-    --test design_resource_contract --test formula_source_resources_contract --test formula_sources_contract
-    --test formula_normalized_sources_contract --test formula_source_inputs_contract
-    --test formula_checked_sources_contract --test formula_source_dependencies_contract
-    --test formula_source_cycle_contract --test formula_scalar_source_graph_plan_contract
-    --test formula_scalar_source_graph_execution_contract --test formula_scalar_recipe_execution_contract
-    --test formula_scalar_execution_contract →13 targets/159 pass/zero failures,rc=0;tracked native
-    watchers include independent expression49/recipe18/source27/Design23 and exact frozen regeneration.
-    cargo test -p sc-core --lib recipe::execution:: -- --nocapture →nine pass/84 filtered,rc=0;
-    intentional caught private refusal guards retain foreign-owner/failed-reuse/no-prefix boundaries.
-  - [x] NO REGRESSION: cargo test -p sc-measure --test resource_contract composition:: -- --nocapture
-    →five pass/28 filtered,rc=0. cargo test -p sc-core --doc design::formula and scoped
-    recipe::execution::source_recipe -- --nocapture →16+four pass,rc=0. Positive book98/365/1645/2901,
-    glossary310/9/158/0,history768 four Git spans/prior live ids/order/uniqueness and git diff --check
-    pass,rc=0. No full CI/platform/current hosted verdict inferred;next full gate at push400.
-  - [x] LOCKSTEP:README/book/availability/task/index/MEM/DEV/CHANGE/LIVE align. Whole0609 retained768.
-    LIVE G1 6/18/G0 unapproved unchanged;product says scoped integration. Next P1 tangent plan
-    .5d.1.2.2.2.d.2 before kernel .5d.3.2.2;full Derived owner below. Protected proof stores retained.
-    promotion: declined (existing staged feature/independent oracle/integration boundaries;native watchers/book/task retain scope).
+  Goal:0610 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part769.md).
 - ID: `G1-SLICE.5e.2.5.derived.integration`
   Status: `pending`
   Goal:finish full Derived consumers after tangent .5d.3.2.2/geometry .5f.3 and load/replay .5e.4;

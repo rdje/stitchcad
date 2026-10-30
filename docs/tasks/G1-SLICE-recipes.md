@@ -527,9 +527,55 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   - [x] ADDRESSED0291: whole source/hash exact in402/404, Python comparison rc=0.
   - [x] NO REGRESSION0291: scripts/history_archive.py --root . read402/404 whole public files exact, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5d.1.2.2.2.d.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: P1 practical all-input tangent rounding/termination/resource plan before .5d.3.2.2.
   Need sharper certified strategy or validated adaptive proof; no arbitrary cutoff/new domain.
+
+- ID: `G1-SLICE.5d.1.2.2.2.d.2.1`
+  Status: `in_progress`
+  Goal:exact all-input tangent symmetry/pole/endpoint reduction and quotient conditioning plan.
+  Concrete next:derive bounded integer-only folding from actual128-bit rational microdegrees into
+  first-octant unrounded sin/cos or reciprocal,with exact signed zeros/units/poles. Independent
+  direct-period/octant/Fraction controls and full-width witnesses;no rounded sin/cos quotient.
+  This is a prerequisite only;complete rounding/error/termination/practical resources remain .2.
+- ID: `G1-SLICE.5d.1.2.2.2.d.2.1.inventory`
+  Status: `done`
+  Goal:D341 repair exact producer/Python-file inventory drift before tangent diagnostics.
+  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/ci_environment/producer_census.py
+    →ten source/entry differences,rc=2. Existing pre-push probes would refuse;not a product result.
+  - [x] ROOT CAUSE (WHY + WHERE): git log --oneline --diff-filter=A over all ten listed paths
+    →eight source-addition commits0571/0580/0581/0582/0586/0593/0597/0609,rc=0. Census traversal
+    and static entries diverged because these additions omitted manifest rows. Full current public
+    sources inspected:readonly/stdout references8,fresh diagnostic writer1,ordinary Rust module1.
+    Conservative build.rs basename discovery is retained;this module is not a Cargo build script.
+  - [x] FIX:register ten actual dispositions,nine Python file rows and one output/effect row.
+    Readonly references retain .p.v transitive-review ownership;fresh search writer has scheduled
+    P1 .p.o.a40 before locality signoff. No scanner/guard/source behavior changed or old capture run.
+  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/ci_environment/producer_census.py
+    →343 sources/33662 Python calls/73 heredocs/2892 embedded calls,rc=0. Existing contract
+    coverage() →343 independent Git paths/405 AST/source/bash checks pass,rc=0. Effect/file-plan
+    controls →109 paths/48 groups and230 paths/89 owners/38 native groups pass,rc=0;all ten original
+    mismatches resolved. Inspection only;destination resolution/runtime locality still pendingD156.
+  - [x] NO REGRESSION: python3 -I -B -c "import runpy;n=runpy.run_path('docs/tasks/artifacts/ci_environment/producer_census_contract.py');n['effect_plan_controls']();n['file_plan_controls']()"
+    →eight+15 actual data refusals/seven+12 actual guard-body reds,split positives/source bytes
+    unchanged,rc=0. Positive book98/365/1645/2901/glossary310/9/158/0,history769 four Git spans/prior live
+    ids/order/uniqueness/git diff --check pass,rc=0. Numerical APIs/kernels unchanged;no full CI claim.
+  - [x] LOCKSTEP:tracked D341 cause/reproduction/verified fix,producer schedules,book/live/task/
+    index/MEM/DEV/CHANGE align. Whole0610 source/recipe/Design checkpoint retained769. Next exact
+    tangent reduction .reduction;full tangent admission remains .d.2.2. G1 6/18/G0 unapproved.
+    Full-hosted79bd6f6a scoped;D156/D223/PLANNING.5/D334 owned;protected historical proof retained.
+    promotion: declined (existing exact producer/file/effect coverage rules;maintained registries,controls and book retain scope).
+- ID: `G1-SLICE.5d.1.2.2.2.d.2.1.reduction`
+  Status: `pending`
+  Goal:exact all-input tangent folding/sign/pole/zero/unit and unrounded quotient conditioning plan;
+  independent Fraction/direct period/octant controls and full-width witnesses. Register the new
+  pure reference in both maintained inventories before focused producer checks;runtime admission
+  remains .d.2.2. No rounded sin/cos quotient,arbitrary cutoff,new domain or premature kernel.
+- ID: `G1-SLICE.5d.1.2.2.2.d.2.2`
+  Status: `pending`
+  Goal:validated whole admitted-input tangent enclosure/rounding/termination and practical resource
+  strategy using exact reduction .1. Prove original width/pole diagnostics;no arbitrary cutoff,
+  changed domain,borrowed fixed sine/inverse certificate or production kernel before admission.
 
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`

@@ -46,3 +46,13 @@ The G0 parse-only review currently prints an engineering-met sentence after skip
 checks (D334). That mode provides structural inspection. Use the normal executed review for the
 engineering verdict; human closure remains separate. The wording repair is owned by
 `G0-CONTRACT.15f`, deferred behind the current G1 product activity and required before G0 closure.
+
+Adding a selected producer source also requires its exact disposition in
+producer_entries.tsv and,for Python,python_file_entries.tsv. Output/delegation entries additionally
+need python_effect_entries.tsv and a live bounded audit owner. The source census intentionally
+retains ordinary Rust modules named build.rs for conservative inspection;that name does not make
+a module a Cargo build script. Run producer_census.py and the focused file/effect-plan controls
+when adding these entries. The existing pre-push probes independently check source/path coverage
+and refuse missing/duplicate/wrong-kind/wrong-owner rows. Inventory completeness is inspection,
+not runtime locality or production approval. D341 repairs missing entries;D156 retains the
+separate complete producer/effect audits,including fresh diagnostic search captures.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — close the scoped available-scalar Design execution checkpoint
+## _(2026-10-30 UTC)_ — repair actual producer coverage before new tangent diagnostics
 
-0610 activates deferred integration only after source/recipe/DesignInputs implementation and independent paired acceptance. Thirteen selected core targets159 pass,including the actual input/resource/ownership/normalization/proof/graph/plan/execution pipeline and independent frozen watchers.
-Private execution9 pass/84 filtered,including caught refusal guards for foreign owners,failed reuse and prefix publication. Measurement composition5 pass/28 filtered;Design formula docs16 and paired-native docs4 pass. Existing expression49/recipe18/source27/Design23 independent fixtures regenerate exactly.
-Book98/365/1645/2901/glossary0/diff/history768 four spans/live ids pass. README/book/task frontier align;remaining stale paired-pending prose corrected. [Whole0609](docs/history/stitchcad-devnotes-part768.md) retains exact source/proofs. No production behavior changed or full CI inferred.
-Next P1 tangent resource plan .5d.1.2.2.2.d.2 before its kernel. Scalar .derived.3.3.3 closes;full Derived integration retains missing families/whole Design/resources/load/replay/platform/physical owners. LIVE G1 6/18/G0 unapproved unchanged;full-hosted79bd6f6a scoped. Full PNT/push400;protected proofs intact.
+0611 owns D341:the exact producer census refused ten additions from eight earlier commits. Full public entries classify eight readonly/stdout references,one fresh diagnostic writer and one ordinary build.rs Rust module. All actual paths/dispositions now exist;the conservative scanner and guards stay unchanged.
+Census343/33662 Python calls/73 heredocs/2892 embedded calls and independent343 Git paths/405 AST/source/bash checks pass. Effect109 paths/48 groups andfile230 paths/89 owners/38 native groups pass;23 actual data refusals/19 guard-body reds discriminate,split positives retain owners/source bytes.
+Book98/365/1645/2901/glossary0/history769 four spans/live ids/diff pass. D156 transitive/runtime audits stay owned;new scheduled P1 .p.o.a40 owns fresh search capture audit. No protected historical capture rerun. [Whole0610](docs/history/stitchcad-devnotes-part769.md) retains scoped product checkpoint.
+Next exact tangent reduction .d.2.1.reduction;complete practical rounding/resource admission remains .d.2.2 before kernel. LIVE G1 6/18/G0 unapproved unchanged,D341 fixed. Full-hosted79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact. No full CI/platform verdict inferred.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

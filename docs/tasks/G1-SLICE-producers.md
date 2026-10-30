@@ -485,6 +485,15 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Acceptance: ordered public-entry/effect/file/borrowed-root review above;inspect complete current
   sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
 
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a40`
+  Status: `pending`
+  Goal:D156 P1 fresh same-source mdBook search capture;role inspection0611,complete runtime audit pending.
+  Paths: docs/tasks/artifacts/book_publication/search_migration_capture.py
+  Schedule:producer/file verification milestone after active numerical feature,before locality signoff.
+  Actual public entry requires a fresh target-relative output directory,plans original book sources/
+  declared outputs before writes and dispatches mdBook under prepared stores. Never rerun historical
+  captures or modify protected proof. Complete effect/refusal/body controls remain required.
+
 ## Ordered native file-destination repairs
 
 These P1 leaves extend the verified source/directory guards with complete file plans.
