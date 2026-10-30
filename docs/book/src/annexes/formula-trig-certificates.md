@@ -264,9 +264,9 @@ formula_dimension. No source expression or statement identity is invented at thi
 
 The native implementation follows the576-bit/five-half-angle/64-term plan above. It uses the
 shared certified pi endpoint, directed private integer arithmetic and integer Newton; no platform
-libm or new precision-refusal rule is involved. Binding remains separate. [Source-bearing inverse
-calls](formula-runtime-validation.md#product-implemented-numeric-calls) are available; whole AST
-execution retains its later .5e owner.
+libm or new precision-refusal rule is involved. Actual sourced inverse81 and signed storage/read
+pass in the [coupled inverse review](formula-irrational-review.md#inverse-principal-and-whole-ratio-boundaries).
+Scoped AST/source/recipe/Design scalar execution is available;complete coupled/platform proof remains.
 
 Complete0288 native inverse/oracle/threshold-neighbor receipts remain in
 `docs/history/stitchcad-devnotes-part487.md`. Coupled/platform proof remains .5d.4/integration/pre-push.

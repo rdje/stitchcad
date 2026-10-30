@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — reject actual forward bodies and repair exact fault evidence
+## _(2026-10-30 UTC)_ — preserve inverse principal results through actual source and storage
 
-0632 detects7 forward faults,then D343:substring row matching listed1/10/19 for one negative-row panic;root4/10 duplicate bytes also misled. Cargo JSON debug_assertions was no actual assertion proof. Explicit named-test panic/ordinal/whole-row binding now passes3 exact/2 legacy ambiguity/13 refusal controls.
-Fresh forward/root/arc runs pass3 baselines and17 compiled faults with exact independent assertions. Sources545/544/545 and each542-file snapshot restore exactly;outputs553/551/551,timeout2 each pass. Initial sandbox group-kill EPERM preceded copy/native dispatch;OS census clear,fresh OS-visible replay passed.
-Primary14/strict affected lint/fmt/bash syntax pass;all numerical bodies/fixtures unchanged. Producer350/34352 calls/file-plan237/90 owners/39 groups pass,inspection only. Book99/374/1659/2939/glossary0/history791/IDs/map/diff pass. [Whole0631](docs/history/stitchcad-devnotes-part791.md) retained.
-Promotion declined:existing independent whole-witness contracts. D343 fixed;LIVE adds forward7 faults,scoped native forward closes. G1 6/18/G0 human unapproved unchanged;full/hosted79bd6f6a SHA-scoped. Next inverse;Tan/mixed/platform/full acceptance and n16 runtime/locality remain owned. Full PNT continues.
+0633 couples81 inverse rows through actual sqrt/cos zero arithmetic. Native4 pass:27 atan/54 atan2 full-width inputs,actual signed Angle binding/read,T1 retention and5 original typed kind/zero refusals. Negative180 survives storage;no direction modulo. Independent5654B/SHA902d6961 regenerates.
+Reuse original0286 complete45M/450 certificate through exact1299B/SHA6b60d154 witness,frozen build/critical-source checks. Runtime P576/half5/terms64,width<2^-564/workspace<2^1154/Newton<=13;independent14/16/zero2/root4/weak2 pass. No fresh full scan;deferred .5d.4.acceptance owns it after feature completion.
+Watcher adapter used lowercase language tokens for capitalized data;explicit original mapping repaired it before4 pass. Strict affected lint/fmt/book99/374/1659/2940/glossary0/history792/IDs/map/diff pass. [Whole0632/D343](docs/history/stitchcad-devnotes-part792.md) retained;original fixtures/kernel unchanged.
+Promotion declined:existing source-gated proof/actual-value contracts. LIVE adds inverse81;G1 6/18/G0 human unapproved unchanged. Next actual inverse faults;Tan/mixed/platform/full acceptance remain. Full/hosted79bd6f6a exact-SHA only;no product parser/tolerance policy change. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

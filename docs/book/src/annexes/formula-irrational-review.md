@@ -10,7 +10,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | sqrt/hypot | Exact integer roots and sourced calls | Native85 rows/five actual body faults pass below;shared platform review remains |
 | arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;shared platform review remains |
 | sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/sourced88/seven actual body faults pass;shared platform remains |
-| atan/atan2 | Principal branches and complete inverse threshold certificate | Coupled actual-body/source/platform review remains .5d.4.inverse |
+| atan/atan2 | Principal branches and complete inverse threshold certificate | Source-gated proof/actual sourced81 pass below;body faults/shared platform remain |
 | tan | Explicit per-call quotas,native139 and real paired24 acceptance | Coupled adaptive/error/fault review remains .5d.4.tangent |
 
 The [canonical numerical contract](formula-rationals.md)
@@ -269,3 +269,56 @@ outputs553/551/551 and both timeout controls per family pass. Original kernels/f
 The14 affected primary tests and strict lint/formatting pass after restoration,including all three
 independent fixture regenerations. This closes scoped native forward review;inverse,Tan,mixed-call,
 actual platform execution and complete coupled/resource/provider/release acceptance remain owned.
+
+## Inverse principal and whole-ratio boundaries
+
+Atan takes the real Ratio n/(1,000,000*d). Atan2 divides homogeneous Length or Ratio operands
+privately:the cross products may need256 bits,so constructing a public Ratio first would invent
+a refusal. Reciprocal reduction keeps the positive slope at most1;exact complements reconstruct
+quadrants and the sign of y. Zero y with negative x returns+180 degrees;small negative y may
+round to-180. Signed scalar Angle binding preserves that endpoint without direction modulo.
+
+The original complete proof covers45 million half-microdegree thresholds in450 chunks. Its
+minimum scaled slope gap20936389198509991007691322699578 exceeds2^104 at scale2^640.
+Determinant-one neighbors exclude every admitted slope denominator up to(2^128-1)^2. On[0,1],
+the atan turn derivative is greater than1/16,so the angular midpoint distance exceeds2^-540.
+This slice reproduces the entire source-gated1299-byte compact witness exactly:SHA-256
+6b60d154f4160b0599f0ad13731b943e3e8dbd05f29496e33a186dea2d06840b.
+Frozen producer/build inputs and all critical live math sources retain their expected identities.
+This reuses the original full0286 proof;it is not a fresh45-million-row scan. A deliberate full
+reader rerun remains owned by G1-SLICE.5d.4.acceptance after the numerical feature set is complete.
+
+The native profile uses576 fractional bits,five half-angle steps and64 alternating terms.
+Each half-angle uses x/(1+sqrt(1+x^2)). Integer Newton on[S^2,2S^2] reaches its exact floor in at
+most13 divisions;an outward upper-root correction encloses the other endpoint. Width at most11
+survives each step,and x is at most1/32 after five steps. The series width is at most328 units;
+its tail is below2^-645. Scaling by16/pi gives turn width below4096*2^-576=2^-564,smaller than
+the certified midpoint distance. Half-away rounding of the lower magnitude endpoint is therefore
+correct. Complements/signs preserve the bound;private workspace remains below2^1154,without a
+new input restriction or precision refusal. Independent addition-series controls cover14 atan/
+16 atan2 intervals,two zero-vector refusals,four integer-root comparisons and two weak budgets.
+The observed Newton maximum11 is a finite control result;13 is the analytic all-input bound.
+
+The original81-row fixture remains5654 bytes with SHA-256
+902d696133a25bfd8277f31e6a8d86eeb75cb3ef76e4f9fff03829dfb5ae0129.
+Its separate768-bit,512-term addition-reduction oracle avoids native half-angle roots and uses
+a different pi identity. Every original byte regenerates. All27 atan and54 atan2 cases also run
+through actual upstream sqrt/cos zero arithmetic,with both full-width operands unchanged.
+Atan retains Sqrt/Atan;atan2 retains Sqrt/Cos/Atan2. Every actual Angle binding/read matches the
+signed result and source flags,including zero and both180-degree endpoints;T1 remains refused.
+
+| Original operation and inputs | Stored signed microdegrees |
+| --- | --- |
+| atan(0ppm) | 0 |
+| atan(1,000,000ppm) | 45,000,000 |
+| atan(500,000ppm) | 26,565,051 |
+| atan2(0,-1) Lengths | +180,000,000 |
+| atan2(-1,-1) Lengths | -135,000,000 |
+| atan2(-1/(2^128-1),-1,000,000,000) Lengths | -180,000,000 |
+| atan2(+1/(2^128-1),-1,000,000,000) Lengths | +180,000,000 |
+
+Five additional actual sourced checks preserve wrong-kind/second-kind priority and both
+homogeneous zero-vector refusals. A failed atan2 adds no successful call contribution to its
+inputs. The complete native target passes4 tests with strict affected lint/formatting. Actual
+inverse body faults remain G1-SLICE.5d.4.inverse.faults;platform,mixed-call and complete coupled/
+resource/provider/physical/release acceptance remain separately owned.

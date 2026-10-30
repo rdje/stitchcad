@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0632 — reject actual forward faults with exact failure identity
+## STITCHCAD-G1-0633 — preserve inverse principal results through sourced storage
 
-- Forward baseline/7 compiled faults pass;fix D343 substring/JSON misclassification using exact watched-test panic,ordinal and whole original row. Fresh root/arc/forward3 baselines/17 faults pass;original/snapshot hashes exact,timeout controls pass. Old receipts remain intact.
-- Primary14/strict lint/fmt/bash syntax/producer350/file-plan237/book99/374/1659/2939/glossary0/history791/IDs/map/diff pass. Numerical bodies/fixtures unchanged. LIVE adds forward7 faults;G1 6/18/G0 unapproved unchanged. Next inverse;platform/full acceptance/locality remain owned.
+- Native4 pass:all81 original atan/atan2 rows through real upstream calls,full-width operands,signed Angle bind/read,T1 and5 typed refusals. Independent5654 fixture bytes exact. Source-gated complete45M proof witness1299B matches;runtime envelope/oracles pass. Fresh full scan deferred to coupled acceptance.
+- Strict affected lint/fmt/book99/374/1659/2940/glossary0/history792/IDs/map/diff pass. Correct stale execution docs;whole0632/D343 retained792. LIVE adds inverse81;G1 6/18/G0 unapproved unchanged. Next actual inverse faults;platform/full acceptance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

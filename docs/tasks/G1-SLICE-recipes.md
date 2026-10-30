@@ -600,48 +600,50 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0627 completed scope; [whole scope/proofs](../history/window25.md#stitchcad-devnotes-part787md).
 - ID: `G1-SLICE.5d.4.forward`
   Status: `done`
-  Goal:coupled sin/cos folding,complete threshold certificate,rounding/provenance and actual fault
-  review;preserve original full-width operands and protected certificate workspaces.
+  Goal:0632 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part792.md).
 - ID: `G1-SLICE.5d.4.forward.retention`
   Status: `done`
-  Goal:0630 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part790.md).
+  Goal:0632 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part792.md).
 - ID: `G1-SLICE.5d.4.forward.values`
   Status: `done`
-  Goal:0631 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part791.md).
+  Goal:0632 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part792.md).
 - ID: `G1-SLICE.5d.4.forward.faults`
   Status: `done`
-  Goal:0632 actual forward bodies and D343 exact independent failure proof across all3 families.
-  - [x] REPRODUCE / ISSUE:pre-fix0632 forward report lists1/10/19 for row1 panic. Root4/10
-    duplicate bytes;Cargo JSON debug_assertions also satisfies old generic assertion substring.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/forward_body_faults.py
-    --plan-only →3 exact controls/2 old false-admissions/13 refusals,rc=0. Shared controller
-    searched row/JSON substrings without ordinal or panic ownership. Old reports/logs retained.
-  - [x] FIX:three independent watchers add ordinal/full-row context without changing assertions
-    or fixtures. Shared classifier requires one named-test stderr panic and one exact original
-    ordinal/row marker;retain full independent_failure payload. Fresh root/arc/forward identities
-    replay every affected family. New forward entry registers native ownership and suite dispatch.
-  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- python3 -I -B
-    docs/tasks/artifacts/formula_structure/forward_body_faults.py,then root_body_faults.py and
-    arc_body_faults.py with OS visibility →3 baselines pass/17 faults compile then fail actual
-    independent assertions,rc=0. Forward7 rows1/4/1/1/1/7/7;root5 rows4/9/17/24/4;arc5 rows10/6/
-    4/11/4. Sources545/544/545 and each542-file snapshot exact;outputs553/551/551;timeout2 each
-    pass,rc=0. Reports:target/{forward,root,arc}_body_faults/0632-{verified-forward,exact-root,exact-arc}.
-    Preflight sandbox EPERM before copy/native dispatch left no job (OS census0);failed fixture
-    retained and fresh OS-visible replay passed. No group-cleanup guard weakened.
-  - [x] NO REGRESSION:cargo test --offline --locked -p sc-core --test formula_root_value_contract
-    --test formula_arc_value_contract --test formula_sincos_value_contract →14 pass,including
-    exact independent fixture regeneration,rc=0. Same targets/library strict Clippy,rustfmt/bash
-    syntax pass,rc=0. Producer350/34352 calls/file-plan237/90 owners/39 groups/15 refusals/12
-    guard reds pass,inspection only;runtime/locality n16 pending. Whole791 four Git spans/IDs/map/
-    diff/book99/374/1659/2939/glossary0 pass,rc=0. All original numerical bodies/fixtures unchanged.
-  - [x] LOCKSTEP:D343 fixed0632;book/ledger/live/task align. Scoped native forward parent closes;
-    shared platform/full coupled acceptance remains. Next .inverse;G1 6/18/G0 unapproved unchanged.
-    promotion: declined (existing actual independent failure-family and whole-witness contracts;explicit ordinal binding repairs their implementation without new numeric or production authority).
-  Commit:STITCHCAD-G1-0632;Verification:exact classifier3/13/actual17/primary14/restoration/book.
+  Goal:0632 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part792.md).
 - ID: `G1-SLICE.5d.4.inverse`
-  Status: `pending`
+  Status: `in_progress`
   Goal:coupled atan/atan2 whole-ratio/branch/threshold/error/provenance and actual fault review;
   preserve principal signed axes and protected complete inverse certificates.
+- ID: `G1-SLICE.5d.4.inverse.values`
+  Status: `done`
+  Goal:0633 source-gated complete inverse proof and actual81-row sourced/storage/refusal review.
+  - [x] REPRODUCE / ISSUE:original native3 watched81 values/oracle/kinds but lacked all-row actual
+    sourced storage;current inverse book still called whole AST execution a later implementation.
+  - [x] ROOT CAUSE (WHY + WHERE):inverse.rs forms private256-bit quotients before reciprocal/
+    signed-principal reconstruction. atan_runtime_plan.py →P576/half5/terms64,width<2^-564,
+    workspace<2^1154,Newton<=13;independent atan14/atan216/zero2/root4/weak-budget2 pass,rc=0.
+    Native profile matches the reviewed model;complete threshold proof is a separate source gate.
+  - [x] FIX:add actual sqrt/cos zero arithmetic before all81 original calls,then signed Angle
+    binding/read and T1 checks;five original sourced kind/zero failures retained. Include explicit
+    ordinal/whole-row failure context for later body faults. Correct current execution docs.
+  - [x] ADDRESSED (verified):local launcher cargo test --offline --locked -p sc-core --test
+    formula_inverse_value_contract →4 pass,27 atan/54 atan2 sourced/store/read exact,including
+    negative180;five typed refusals pass,rc=0. Independent original81 fixture5654B/SHA902d6961
+    regenerates byte-exact. inverse_certificate_witness.py →1299B/SHA6b60d154 matches tracked
+    complete witness exactly,rc=0;frozen build/critical live sources checked. Reuse original0286
+    full45M/450 proof;no fresh full-reader claim. Deferred full scan owned .5d.4.acceptance.
+  - [x] NO REGRESSION:same target/library strict Clippy -D warnings and rustfmt --check pass,
+    rc=0. Whole792 four exact Git spans/prior IDs plus2 children/map/diff/book99/374/1659/2940/
+    glossary0 pass,rc=0. All original fixture/kernel bytes unchanged. First new watcher used
+    lowercase language-token parser for capitalized fixture kinds;explicit original kind adapter
+    repaired that test before all4 passed. No product numeric parser or tolerance policy changed.
+  - [x] LOCKSTEP:book/live/task/MEM/DEV/CHANGE align;whole0632/D343 retained792. Inverse faults/
+    Tan/mixed/platform/full coupled acceptance remain;G1 6/18/G0 unapproved unchanged.
+    promotion: declined (existing source-gated certificate reuse and actual-source/storage contracts;no new numeric policy,dependency or production authority).
+  Commit:STITCHCAD-G1-0633;Verification:4 native/81 sourced/5 refusals/witness/plan/lint/book.
+- ID: `G1-SLICE.5d.4.inverse.faults`
+  Status: `pending`
+  Goal:actual native inverse branch/ratio/reduction/rounding faults with exact independent evidence.
 - ID: `G1-SLICE.5d.4.tangent`
   Status: `pending`
   Goal:coupled adaptive tangent proof/error/resource/provenance and actual fault review after
@@ -658,6 +660,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `pending`
   Goal:close complete coupled irrational review only after all scoped proofs/faults/composition/
   platform children pass;retain full allocator/provider/replay/physical/release owners separately.
+  Deferred verification:after numerical feature completion,rerun verify_inverse_certificate.py
+  across all45M/450 chunks;current ordinary inverse slices reuse the source-gated complete witness.
 
 ### Execution, uncertainty and replay
 
