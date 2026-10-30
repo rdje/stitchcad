@@ -453,3 +453,52 @@ This closes scoped arithmetic fault review. Actual reservation/charge/precedence
 remain a separate next unit;Python model reds cannot substitute for them. Mixed-call behavior,
 native/browser execution parity,aggregate resources and full coupled/production acceptance
 retain their separate owners.
+
+## Independent native resource outcomes
+
+A separate33-row cohort now checks complete tangent resource outcomes through both native
+preparation/execution and an actual sourced call. A real cosine unit precedes each sourced
+operand;the original full-width number and kind remain unchanged. The watcher checks66 complete
+outcomes,including success,mathematical failure and selected-resource refusal. Failure retains
+its actual preparation/execution stage,original input,limits,diagnostic and error chain.
+
+The new tangent_resource_oracle.py producer reads neither Rust nor a frozen expected fixture.
+The diagnostic dyadic enclosure determines when rounded endpoints or their exact bit counts
+agree. A different exact Fraction/alternate-pi oracle independently checks each mathematical
+conclusion. The older budget model's early width shortcut is not used. Every one of the3524
+fixture bytes,SHA-256 c698149fad3c3bf5e4b4f81c0e367684807e4e707db304bae07dcb7fee4323fd,
+regenerates independently. The original139-row mathematical fixture remains unchanged.
+
+| Input and selected bits/terms | Actual outcome | Prior reserved bits / charged terms |
+| --- | --- | --- |
+| Pole,155/0 | Preparation refuses156 folding bits before classifying the pole | 0 / 0 |
+| Wrong Length kind,0/0 | Preparation returns the original input-kind error | No tangent execution |
+| tan30 degrees,2072/511 | Preparation refuses2073 bits before512 terms | 156 / 0 |
+| tan30 degrees,2073/511 | Preparation refuses512 terms | 156 / 0 |
+| Near-midpoint original,2073/512 | Execution refuses4122 bits at precision256 before1024 terms | 2073 / 512 |
+| Near-midpoint original,4122/1536 | Execution refuses8219 bits at precision512 before2048 terms | 4122 / 1536 |
+| Near-midpoint original,8219/3584 | Certified zero at precision512 | 8219 / 3584 |
+| Original wide near-pole,2073/512 | Execution refuses4122 bits at precision256;no guessed width | 2073 / 512 |
+| Original wide near-pole,4122/1536 | Original exact numerator-width148 at precision256 | 4122 / 1536 |
+
+The cohort also covers single-quota later failures,negative exact/refined values,the adjacent
+above-midpoint rational,tiny full-width input and a valid Ratio too wide for later signed
+storage. Precision None is preserved distinctly from Some(0). A refused iteration never gains
+its proposed reservation or term charge. Resources have no formula-language diagnostic;
+Pole/RationalWidth retain formula_domain and wrong kind retains formula_dimension. No Tan
+success contribution appears on failure;successful calls retain actual Cos and Tan flags.
+
+Primitive-counter safety follows the admission inequalities. I(B)<=usize::MAX and I(B)>16B
+imply2B and4B fit. With prior charge C<=the selected maximum L,the check T<=L-C implies
+C+T<=L<=usize::MAX. Checked operations remain in the native implementation. The focused private
+excessive-extent test confirms refusal before primitive overflow or numerical allocation;
+read-only arithmetic controls cover16/32/64-bit maxima. This is no browser execution verdict.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_oracle.py
+python3 -I -B scripts/local_environment.py -- cargo test --offline --locked -p sc-core --test formula_tangent_resource_contract
+```
+
+The new target's two tests,the existing ten native/sourced tangent checks and the private
+extent test pass. Strict affected lint and formatting pass. Actual compiled resource-body
+faults are still the next unit;the positive cohort cannot substitute for those controls.

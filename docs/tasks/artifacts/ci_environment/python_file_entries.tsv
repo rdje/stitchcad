@@ -238,3 +238,4 @@ docs/tasks/artifacts/formula_structure/arc_body_faults.py	native	G1-SLICE.5b.4c.
 docs/tasks/artifacts/formula_structure/forward_body_faults.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n16.1
 docs/tasks/artifacts/formula_structure/inverse_body_faults.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n16.1
 docs/tasks/artifacts/formula_structure/tangent_body_faults.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n16.2
+docs/tasks/artifacts/formula_structure/tangent_resource_oracle.py	reference	G1-SLICE.5b.4c.h2.b.p.v

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — reject actual native tangent arithmetic faults
+## _(2026-10-30 UTC)_ — preserve independent tangent resource outcomes
 
-0636 uses three static original-scope configs through the D343 controller. Three baselines pass;all9 fold,quotient,width,sign and rounding faults compile then fail exact independent row assertions. Each group retains545 original hashes,restores542 copied files and plans549 outputs;timeout controls pass.
-Original139 fixture/core bytes stay unchanged. Primary13/strict affected lint/fmt/bash pass. Producer352/34379 calls;file plans239/91/40/15 refusals/12 reds. Native ownership splits4+1 under fixed bounds;complete transitive compiler/locality review remains n16.
-Book99/374/1659/2943/glossary0/history795/IDs+2/map/diff pass. [Whole0635](docs/history/stitchcad-devnotes-part795.md) retains values/proof/wording review. Promotion declined:existing contracts. Resource faults remain separate;no platform or full coupled approval is inferred.
-LIVE adds Tan fault9;G1 remains6/18/G0 unapproved. Next actual reservation/charge/precedence/counter controls;fresh45M inverse read remains final acceptance. Full PNT continues;full/hosted79bd6f6a is exact-SHA evidence only.
+0637 adds33 independent policy rows/66 actual native+sourced comparisons:12 values,11 preparation and10 execution outcomes. Original input/kind/limits/stage/demand/prior counters,error chains and actual Cos/Tan flags remain exact. None precision differs from Some(0).
+The3524B fixture SHA c698149f regenerates without Rust/frozen output inputs. Dyadic endpoint rounding requires exact width-bit agreement;alternate-pi Fraction conclusions independently agree. Counter bounds16/32/64 and private excessive-extent refusal pass;old width shortcut is excluded.
+Native12/private1/strict affected lint/fmt/bash pass. Initial test panic lint fixed before final2/lint pass. Producer353/34448calls,file240/91/40/15refusals/12reds,book99/374/1659/2944/glossary0/history796/IDs+2/map/diff pass. Original139 fixture and native core unchanged.
+[Whole0636](docs/history/stitchcad-devnotes-part796.md) retains arithmetic faults. Promotion declined:existing contracts. LIVE adds resource33;G1 6/18/G0 unapproved unchanged. Next actual resource bodies,then mixed/platform/full coupled acceptance;fresh45M read deferred. Full PNT/push400 continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -631,27 +631,30 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:actual arithmetic and resource-guard body faults with independent complete-row evidence.
 - ID: `G1-SLICE.5d.4.tangent.faults.arithmetic`
   Status: `done`
-  - [x] REPRODUCE / ISSUE:mathematical/model controls do not reject actual native body faults.
-  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/tangent_body_faults.py
-    --plan-only →3 groups/4 variants/542 snapshot files/549 outputs each,no writes/dispatch,rc=0.
-  - [x] FIX:thin original-scope controller configs for fold,interval and execution;retain original139
-    independent sourced rows and strict D343 named-test panic/ordinal/whole-row evidence.
-  - [x] ADDRESSED (verified):same entry without --plan-only →3 baselines/9 compiled faults rejected,
-    rc=0;first ordinals 2/2/4/5/2/5/114/8/110. Every original545/copied542 hash exact after restoration;
-    owned parent-only/group timeout controls pass. Compiler errors/unrelated panics cannot count.
-  - [x] NO REGRESSION:local launcher cargo test --offline --locked -p sc-core --test
-    formula_tangent_oracle_contract --test formula_tangent_value_contract --test
-    formula_evaluated_tangent_contract →13 pass,rc=0;strict affected Clippy/fmt/bash pass,rc=0.
-    Producer352/34379calls,file plans239/91/40/15refusals/12reds,whole795 four Git spans,prior IDs/
-    order/uniqueness plus2 children,map/diff/book99/374/1659/2943/glossary0 pass,rc=0.
-  - [x] LOCKSTEP:book/live/notes/registry/suite sync;native arithmetic scope only. Actual resource
-    faults remain next;platform/mixed/full coupled and n16 transitive locality remain owned.
-    promotion: declined (existing exact-proof,actual-fault,source-storage and restoration contracts).
-  Commit:STITCHCAD-G1-0636;Verification:3 baseline/9 actual faults/native13/lint/book.
+  Goal:0636 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part796.md).
 - ID: `G1-SLICE.5d.4.tangent.faults.resources`
-  Status: `pending`
+  Status: `in_progress`
   Goal:compile actual reservation,charge,precedence and counter faults against independent
   requested/maximum/prior-progress outcomes;no mathematical-domain substitute or guessed value.
+- ID: `G1-SLICE.5d.4.tangent.faults.resources.outcomes`
+  Status: `done`
+  - [x] REPRODUCE / ISSUE:generous math rows cannot detect quota/stage/charge omissions.
+  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_oracle.py
+    →33 independent rows/3524B/SHA c698149f,rc=0;exact endpoint bits replace old width shortcut.
+  - [x] FIX:separate native/sourced stage/input/limits/demand/prior-progress cohort;real Cos input.
+  - [x] ADDRESSED (verified):local launcher cargo test --offline --locked -p sc-core --test
+    formula_tangent_resource_contract →2 pass/66 comparisons/all frozen bytes exact,rc=0;
+    existing value/evaluated10 and private excessive-native-extent1 pass,rc=0.
+  - [x] NO REGRESSION:strict affected Clippy/fmt/bash pass,rc=0;initial test panic lint corrected.
+    Producer353/34448calls,file240/91/40/15refusals/12reds,whole796 four spans/IDs+2/map/diff/
+    book99/374/1659/2944/glossary0 pass,rc=0. Original139/core unchanged;counter bounds16/32/64.
+  - [x] LOCKSTEP:book/live/registry/suite/notes align;actual resource bodies next,platform/full
+    coupled/locality remain owned. promotion: declined (existing quota/error/progress contracts).
+  Commit:STITCHCAD-G1-0637;Verification:native12/private1/independent33/lint/book.
+- ID: `G1-SLICE.5d.4.tangent.faults.resources.bodies`
+  Status: `pending`
+  Goal:compile real quota/charge/priority/counter faults against committed resource outcomes;
+  retain exact D343 evidence,restoration and checked-extent controls before scoped tangent closure.
 - ID: `G1-SLICE.5d.4.composition`
   Status: `pending`
   Goal:independent mixed irrational-call chains through actual source/recipe/Design execution,

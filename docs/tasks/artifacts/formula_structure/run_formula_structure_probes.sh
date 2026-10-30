@@ -48,6 +48,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/angle_math_oracle.py
 python3 -I -B docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py
 python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py
 python3 -I -B docs/tasks/artifacts/formula_structure/tangent_value_oracle.py --check
+python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_oracle.py > /dev/null
 python3 -I -B docs/tasks/artifacts/formula_structure/tangent_design_recipe_oracle.py > /dev/null
 python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
 python3 -I -B docs/tasks/artifacts/formula_structure/arc_body_faults.py
