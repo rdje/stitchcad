@@ -220,6 +220,28 @@ impl<'a> FormulaCanonicalInput<'a> {
         Ok(Self { inputs, adapter })
     }
 
+    // The sole Derived source reference is shared by static edges and actual runtime demand.
+    // Exhaustive state matching keeps future states from becoming silently executable.
+    pub(in crate::recipe) fn derived_formula(self) -> Option<EntityId> {
+        use crate::value::{LengthState, ScalarInputState};
+        match self.adapter {
+            FormulaCanonicalInputAdapter::Length(input) => match input.state() {
+                LengthState::Derived { formula } => Some(*formula),
+                LengthState::Known { .. }
+                | LengthState::Assumed { .. }
+                | LengthState::Unknown { .. }
+                | LengthState::Preference { .. } => None,
+            },
+            FormulaCanonicalInputAdapter::Scalar(input) => match input.state() {
+                ScalarInputState::Derived { formula } => Some(*formula),
+                ScalarInputState::Known { .. }
+                | ScalarInputState::Assumed { .. }
+                | ScalarInputState::Unknown { .. }
+                | ScalarInputState::Preference { .. } => None,
+            },
+        }
+    }
+
     /// Exact actual canonical inventory establishing this join, without a copied record/state.
     #[must_use]
     pub const fn inputs(self) -> &'a CanonicalInputs {

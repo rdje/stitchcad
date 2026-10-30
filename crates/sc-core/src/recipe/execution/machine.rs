@@ -22,11 +22,9 @@ pub(super) trait Sources<'a> {
 }
 
 // Control flow is private: only an actual unresolved canonical Derived read may suspend.
-// The graph worker (G1-SLICE.5e.2.5.derived.3.3.3.3) will construct AwaitDerived in production.
 #[derive(Debug)]
 pub(super) enum ReadValue<'a> {
     Ready(V),
-    #[allow(dead_code)]
     AwaitDerived(FormulaCanonicalInput<'a>),
 }
 

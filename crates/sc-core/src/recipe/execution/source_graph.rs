@@ -206,7 +206,7 @@ impl std::error::Error for FormulaScalarSourceGraphPlanError<'_> {
 #[derive(Debug)]
 pub struct FormulaScalarSourceGraphSource<'a> {
     source: &'a FormulaCheckedSource<'a>,
-    plan: FormulaScalarExecutionPlan<'a>,
+    pub(super) plan: FormulaScalarExecutionPlan<'a>,
 }
 impl<'a> FormulaScalarSourceGraphSource<'a> {
     /// Actual original normalized source and complete kind proof.
@@ -223,7 +223,8 @@ impl<'a> FormulaScalarSourceGraphSource<'a> {
 
 /// Complete prepared available scalar source collection,with actual acyclic/source/input owners.
 /// No source expression has been evaluated or bound. Bare roots remain unbound;only a real let
-/// may invoke actual storage. Runtime resumption/earned caches/recipe integration remain separate.
+/// may invoke actual storage. evaluate_source executes demanded roots;recipe/Design integration
+/// remains separate from this complete preparation.
 /// ```compile_fail
 /// fn clear(plan:&mut sc_core::recipe::FormulaScalarSourceGraphPlan<'_>) {plan.sources.clear();}
 /// ```
@@ -243,7 +244,7 @@ pub struct FormulaScalarSourceGraphPlan<'a> {
     nodes: usize,
     name_uses: usize,
     workspace_records: usize,
-    sources: Vec<FormulaScalarSourceGraphSource<'a>>,
+    pub(super) sources: Vec<FormulaScalarSourceGraphSource<'a>>,
 }
 impl<'a> FormulaScalarSourceGraphPlan<'a> {
     /// Actual complete acyclic relation;no substituted input/source snapshot.

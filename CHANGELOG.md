@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0595 — retain actual scalar continuations and original one-shot behavior
+## STITCHCAD-G1-0596 — execute actual bounded lazy scalar source roots
 
-- Pin actual root/context;requeue only unresolved Derived names and retain operands/tasks/conditional contributions. Private lifecycle rejects failed reuse;old readers retain original causes. No public value seed,source cache or new binding round. Book checkpoint/examples and task ownership align.
-- Machine3/expression11+oracle49/recipe9+oracle18/scoped lint/fmt/book97/335/1629/2865/glossary0 pass. Whole0594 retained753/four spans/live ids. Next .3.3.3.3 actual graph worker,then .4 real bridge. G1 6/18/G0 unapproved;full-hosted79bd6f6a SHA-scoped. Full integration/platform remains pending.
+- Reserve complete runtime buffers before values;select exact original source and execute only demanded suppliers iteratively. Private cache earns actual unbound roots. Preserve Derived/direct witnesses,completion ordinals and original whole-result failures. Eight APIs/book/examples/availability align.
+- Native6/machine3/expression11+oracle49/recipe9+oracle18/deps3/doc7/scoped lint/fmt/book97/343/1630/2867/glossary0 pass. Whole0595 retained754/four spans/live ids. Next .3.3.3.3.2 independent source acceptance,then .4 real bridge. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. Full integration remains pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

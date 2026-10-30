@@ -66,7 +66,10 @@ now preserve source/state beside exact values or observation/evaluation requests
 also retains raw angle turns, typed scalar state/provenance and computation-only Area. The
 [general scalar read adapter](annexes/formula-runtime-validation.md#general-scalar-authored-reads)
 now verifies the supplied canonical target/kind and retains state. Full registry/context resolution
-and derived evaluation remain pending.
+and containing Design integration remain pending. [Scoped source execution](annexes/formula-source-proofs.md#execute-an-actual-selected-scalar-source)
+now evaluates a selected available-scalar source and demanded Derived suppliers with original
+read witnesses and unbound roots. Focused native checks pass;independent whole-source acceptance
+and actual recipe/Design integration remain pending.
 [Explicit tolerance contexts](annexes/formula-runtime-validation.md#explicit-tolerance-contexts)
 now provide fixed numerical/geometric values and class-checked optional format/importer/physical
 providers. Missing optional values refuse with their actual name/context label.

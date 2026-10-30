@@ -1,15 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.3:actual bounded lazy scalar source graph worker over
-  real plans/acyclic proof. Fully reserve controls/call frames/N tasks/N values/D reads/S outputs;
-  earn cache only by actual returned unbound roots. Actual source/read/failure witnesses required.
-- Private continuation0595 ready:pinned actual root/context,restore unresolved name only,retain
-  real operands/tasks/conditional contributions/read order. No public callback/cache/value seed.
-  Native machine3/expression11+oracle49/recipe9+oracle18/scoped lint/fmt/book97/335/1629/2865/
-  glossary0 pass. Whole0594 retained753/four exact Git spans/live ids. Runtime graph still pending.
-- Scalar source plans0594 precharge S/N/D/prospective2S+2N+D/S-output before capability/preparation.
-  Bare roots remain unbound;only actual lets store. Canonical input decision/book state this rule.
-  Actual lazy worker .3,then recipe/Design bridge .4;whole graph/resources/currentness remain open.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.3.2:independent actual whole-source numeric/read/order/
+  refusal acceptance. Reuse reference public interfaces/real returned supplier roots;no native
+  outputs or seeded values as expected results. Parent worker .3 remains in_progress until pass.
+- Lazy scalar source worker0596 implemented with focused checks:exact selected source,all S
+  controls/call frames/output slots and per-source N tasks/N values reserve before values;only
+  actual Complete roots fill private unbound cache. Real Derived/direct reads and ordinals retained.
+  Native6/machine3/old expression11+oracle49/recipe9+oracle18/deps3/doc7/scoped lint/fmt/book
+  97/343/1630/2867/glossary0 pass. Whole0595 retained754/four exact Git spans/prior live ids/order.
+- 512-source chain passes on64 KiB requested stack;shared1000/3 roots stay unbound,mixed-family
+  joins/repeated spans/lazy Unknown/providers/false/Count/approx/T1/original failures retained.
+  Independent whole-source acceptance .3.2,then real recipe/Design bridge .4;full integration open.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.

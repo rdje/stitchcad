@@ -143,7 +143,8 @@ impl<'a> Sources<'a> for Plan<'a> {
         let Some(read) = self.sources.get(index).and_then(|slot| slot.read) else {
             unreachable!("all actual within operands were evaluated before application");
         };
-        let super::FormulaScalarExecutionReadKind::Tolerance(tolerance) = read.source else {
+        let super::FormulaScalarExecutionReadKind::Tolerance(tolerance) = read.direct_source()
+        else {
             unreachable!("actual direct reserved class was read from its quantitative context");
         };
         tolerance

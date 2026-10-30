@@ -1,12 +1,9 @@
 //! Complete prospective canonical Derived-source relation; no cycle, operation or execution proof.
 use super::{
-    FormulaCanonicalInput, FormulaCanonicalInputAdapter, FormulaCheckedSource,
-    FormulaCheckedSources, FormulaDeclarationSource, FormulaNameDependency,
+    FormulaCanonicalInput, FormulaCheckedSource, FormulaCheckedSources, FormulaDeclarationSource,
+    FormulaNameDependency,
 };
-use crate::{
-    ontology::EntityId,
-    value::{LengthState, ScalarInputState},
-};
+use crate::ontology::EntityId;
 use core::fmt;
 use std::collections::TryReserveError;
 
@@ -385,21 +382,7 @@ fn derived<'a>(
             "complete source proofs already joined this same immutable canonical dependency"
         );
     };
-    let formula = match canonical.adapter() {
-        FormulaCanonicalInputAdapter::Length(input) => match input.state() {
-            LengthState::Derived { formula } => *formula,
-            LengthState::Known { .. }
-            | LengthState::Assumed { .. }
-            | LengthState::Unknown { .. }
-            | LengthState::Preference { .. } => return None,
-        },
-        FormulaCanonicalInputAdapter::Scalar(input) => match input.state() {
-            ScalarInputState::Derived { formula } => *formula,
-            ScalarInputState::Known { .. }
-            | ScalarInputState::Assumed { .. }
-            | ScalarInputState::Unknown { .. }
-            | ScalarInputState::Preference { .. } => return None,
-        },
-    };
-    Some((formula, canonical))
+    canonical
+        .derived_formula()
+        .map(|formula| (formula, canonical))
 }

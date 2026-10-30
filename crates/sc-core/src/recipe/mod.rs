@@ -183,22 +183,24 @@ pub use checked::{
 
 mod execution;
 pub use execution::{
-    FormulaExecutedScalarExpression, FormulaExecutedScalarRecipe,
-    FormulaExecutedScalarRecipeStatement, FormulaExecutionAdmission,
-    FormulaExecutionAdmissionError, FormulaExecutionAdmissionRefusal, FormulaExecutionLimits,
-    FormulaRecipeExecutionAdmission, FormulaRecipeExecutionAdmissionError,
-    FormulaRecipeExecutionAdmissionRefusal, FormulaRecipeExecutionLimits,
-    FormulaScalarExecutionContext, FormulaScalarExecutionError, FormulaScalarExecutionErrorCause,
-    FormulaScalarExecutionFailure, FormulaScalarExecutionPlan, FormulaScalarExecutionPlanError,
-    FormulaScalarExecutionPlanRefusal, FormulaScalarExecutionRead, FormulaScalarExecutionReadKind,
-    FormulaScalarExecutionSource, FormulaScalarExecutionSourceKind,
+    FormulaExecutedDerivedSourceRead, FormulaExecutedScalarExpression, FormulaExecutedScalarRecipe,
+    FormulaExecutedScalarRecipeStatement, FormulaExecutedScalarSource,
+    FormulaExecutedScalarSourceGraph, FormulaExecutionAdmission, FormulaExecutionAdmissionError,
+    FormulaExecutionAdmissionRefusal, FormulaExecutionLimits, FormulaRecipeExecutionAdmission,
+    FormulaRecipeExecutionAdmissionError, FormulaRecipeExecutionAdmissionRefusal,
+    FormulaRecipeExecutionLimits, FormulaScalarExecutionContext, FormulaScalarExecutionError,
+    FormulaScalarExecutionErrorCause, FormulaScalarExecutionFailure, FormulaScalarExecutionPlan,
+    FormulaScalarExecutionPlanError, FormulaScalarExecutionPlanRefusal, FormulaScalarExecutionRead,
+    FormulaScalarExecutionReadKind, FormulaScalarExecutionSource, FormulaScalarExecutionSourceKind,
     FormulaScalarExecutionWorkspace, FormulaScalarRecipeError, FormulaScalarRecipeErrorCause,
     FormulaScalarRecipeFailure, FormulaScalarRecipeOutcome, FormulaScalarRecipePlan,
     FormulaScalarRecipePlanError, FormulaScalarRecipePlanRefusal, FormulaScalarRecipeRead,
     FormulaScalarRecipeReadKind, FormulaScalarRecipeSource, FormulaScalarRecipeSourceKind,
-    FormulaScalarRecipeWorkspace, FormulaScalarSourceGraphPlan, FormulaScalarSourceGraphPlanError,
-    FormulaScalarSourceGraphPlanRefusal, FormulaScalarSourceGraphSource,
-    FormulaSourceGraphExecutionLimits,
+    FormulaScalarRecipeWorkspace, FormulaScalarSourceGraphExecutionCause,
+    FormulaScalarSourceGraphExecutionError, FormulaScalarSourceGraphPlan,
+    FormulaScalarSourceGraphPlanError, FormulaScalarSourceGraphPlanRefusal,
+    FormulaScalarSourceGraphRead, FormulaScalarSourceGraphReadKind, FormulaScalarSourceGraphSource,
+    FormulaScalarSourceGraphWorkspace, FormulaSourceGraphExecutionLimits,
 };
 
 mod checked_statement;

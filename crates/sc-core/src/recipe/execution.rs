@@ -28,6 +28,20 @@ pub use source_graph::{
     FormulaSourceGraphExecutionLimits,
 };
 
+mod source_read;
+pub use source_read::{
+    FormulaExecutedDerivedSourceRead, FormulaScalarSourceGraphRead,
+    FormulaScalarSourceGraphReadKind,
+};
+mod source_failure;
+pub use source_failure::{
+    FormulaScalarSourceGraphExecutionCause, FormulaScalarSourceGraphExecutionError,
+    FormulaScalarSourceGraphWorkspace,
+};
+mod source_result;
+pub use source_result::{FormulaExecutedScalarSource, FormulaExecutedScalarSourceGraph};
+mod source_worker;
+
 mod recipe;
 pub use recipe::{
     FormulaRecipeExecutionAdmission, FormulaRecipeExecutionAdmissionError,

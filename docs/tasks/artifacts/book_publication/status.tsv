@@ -334,3 +334,11 @@ actual prepared scalar graph source	annexes/formula-source-proofs.md	crates/sc-c
 complete scalar source graph execution allowances	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_graph.rs	FormulaSourceGraphExecutionLimits	G1-SLICE.5e.2.5.derived.3.3.3.1	4.1
 original scalar source graph preparation error	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_graph.rs	FormulaScalarSourceGraphPlanError	G1-SLICE.5e.2.5.derived.3.3.3.1	4.1
 actual scalar source graph preparation refusal	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_graph.rs	FormulaScalarSourceGraphPlanRefusal	G1-SLICE.5e.2.5.derived.3.3.3.1	4.1
+actual selected scalar source execution	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_result.rs	FormulaExecutedScalarSourceGraph	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
+actual completed scalar source root	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_result.rs	FormulaExecutedScalarSource	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
+actual computed canonical Derived witness	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_read.rs	FormulaExecutedDerivedSourceRead	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
+actual source graph name read	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_read.rs	FormulaScalarSourceGraphRead	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
+actual direct or Derived source graph read	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_read.rs	FormulaScalarSourceGraphReadKind	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
+complete source runtime workspace	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_failure.rs	FormulaScalarSourceGraphWorkspace	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
+original source execution error context	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_failure.rs	FormulaScalarSourceGraphExecutionError	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
+original source execution cause	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_failure.rs	FormulaScalarSourceGraphExecutionCause	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1

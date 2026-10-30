@@ -72,8 +72,19 @@ impl fmt::Debug for FormulaScalarExecutionReadKind<'_> {
 
 #[derive(Clone, Copy)]
 pub(super) struct ReadData<'a> {
-    pub(super) source: FormulaScalarExecutionReadKind<'a>,
+    pub(super) source: super::FormulaScalarSourceGraphReadKind<'a>,
     pub(super) value: V,
+}
+impl<'a> ReadData<'a> {
+    pub(super) const fn direct_source(self) -> FormulaScalarExecutionReadKind<'a> {
+        match self.source {
+            super::FormulaScalarSourceGraphReadKind::Direct(source) => source,
+            super::FormulaScalarSourceGraphReadKind::Derived(_) => {
+                // One-shot readers cannot publish an executed Derived source.
+                unreachable!()
+            }
+        }
+    }
 }
 impl fmt::Debug for ReadData<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -100,7 +111,7 @@ impl<'a> FormulaScalarExecutionRead<'a> {
     /// Original successful canonical/provider read with its complete source/state.
     #[must_use]
     pub const fn source(self) -> FormulaScalarExecutionReadKind<'a> {
-        self.data.source
+        self.data.direct_source()
     }
     /// Exact actual scalar read; false/zero remain values and are never coerced or defaulted.
     #[must_use]
@@ -157,5 +168,8 @@ pub(super) fn read<'a>(
             }
         }
     };
-    Ok(ReadData { source, value })
+    Ok(ReadData {
+        source: super::FormulaScalarSourceGraphReadKind::Direct(source),
+        value,
+    })
 }

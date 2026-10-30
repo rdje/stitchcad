@@ -1,9 +1,9 @@
 # Formula source validation
 
 > **Status:** complete initial-scope expression proofs,actual canonical dependency joins and Derived
-> consumer-kind checks and prospective canonical Derived dependencies are implemented with focused
-> verification. Bounded canonical Derived cycle admission is available;actual ordered-let binding,
-> full resource/currentness and execution integration remain pending.
+> consumer-kind checks and canonical Derived dependencies have focused verification. Bounded cycle
+> admission and lazy available-scalar source execution are available. Independent whole-source
+> acceptance,actual recipe/Design joins and full resource/currentness remain pending.
 
 Start with the [original source owners and normalized collections](formula-recipe-inputs.md#explicit-formula-source-owners).
 FormulaNormalizedSources.check_sources(&namespace, limits) checks the complete supplied source
@@ -203,8 +203,8 @@ remain pending. In particular,a successful cycle guard does not evaluate or roun
 
 FormulaAcyclicSourceDependencies.prepare_scalar_sources(limits) constructs a complete
 FormulaScalarSourceGraphPlan through the existing per-expression admission/source factories.
-It does not evaluate a source,read a context provider or publish a value. Resumable source execution,
-earned runtime caches and actual ordered-recipe/Design integration remain required.
+It does not evaluate a source,read a context provider or publish a value. The separate runtime
+method below earns source results;actual ordered-recipe/Design integration remains required.
 
 | Public API | Meaning |
 | --- | --- |
@@ -244,6 +244,68 @@ All five quota boundaries,late unused tangent's real call/span and zero empty al
 covered. Existing five scalar-plan contracts and three compiler guards remain green. These checks
 certify preparation;they do not certify graph execution or full backend/platform integration.
 
+## Execute an actual selected scalar source
+
+FormulaScalarSourceGraphPlan.evaluate_source(source_id,context) consumes the complete actual plan.
+The id must exist in the original source registry;canonical declaration ids,parameter ids,text
+aliases and nearby positions supply no fallback. MissingSource retains the actual graph,limits
+and requested id before runtime allocation. Even an empty graph has no valid entry.
+
+| Public API | Meaning |
+| --- | --- |
+| `FormulaExecutedScalarSourceGraph` | Actual selected entry and demanded suppliers,with private earned roots |
+| `FormulaExecutedScalarSource` | Borrowed completed source,unbound value,ordinal and selected reads |
+| `FormulaExecutedDerivedSourceRead` | Actual canonical Derived join and successfully executed supplier proof |
+| `FormulaScalarSourceGraphRead` | Original executed name,value and direct/Derived witness |
+| `FormulaScalarSourceGraphReadKind` | Existing direct authored/provider witness or actual computed Derived witness |
+| `FormulaScalarSourceGraphWorkspace` | Source-control,call-frame,output,task or value population |
+| `FormulaScalarSourceGraphExecutionError` | Actual graph,limits,entry and original complete refusal |
+| `FormulaScalarSourceGraphExecutionCause` | Missing selection,inline allocator,original scalar or frame cause |
+
+All S source controls,S call frames,S initially empty output slots and every source's N task/N
+value buffers reserve fallibly before the first literal,value or provider read. The prepared D
+slots retain actual successful name reads. Thus the admitted 2S+2N+D logical workspace and S output
+allowance now cover actual runtime buffers. These remain logical populations,not allocator bytes/
+capacity,numeric backend scratch,CPU or a full Design/resource certificate.
+
+The iterative walk starts only the selected entry. An unresolved actual canonical Derived name
+suspends its consumer with original operands/context intact. Its sole formula identity selects the
+actual supplier. Only successful supplier-root completion fills that source's private output slot;
+the consumer then resumes that exact name. Repeated reads and multiple consumers reuse this actual
+unbound result. No caller callback,value seed,authored-state replacement,source-edge storage round
+or Rust recursion is involved. Untaken branches and unused bodies are not evaluated;complete
+static/capability/cycle admission still covered them before this lazy runtime phase.
+
+For example,source a containing1 mm/3 and source b containing a*6,used by a+b+a,yield8000/3 µm.
+The shared a finishes once with1000/3 µm,b once with2000 µm,and the consumer finishes third. All
+three name occurrences retain distinct read records and their actual dedicated/general canonical
+joins. Unrelated eps_phys or Unknown sources stay unexecuted. A false Boolean source
+cos(0 deg)==0.0 selects the false branch of if(flag,n+n,3/2.0);n stays unused,the result remains
+unbound Count3/2 and the condition's cos contribution survives. A direct Count source1/2.0 likewise
+returns1/2 until a real authored let requires storage.
+
+plan()/context()/entry() retain the complete original plan,pinned contexts and successful selection.
+source(id) returns only a completed source,or None for an absent/unused source. sources() lends
+completed sources in original registry order;completion_ordinal() separately records actual
+one-based completion order. Each value() is unbound. reads() lends selected name occurrences in
+execution order,including repetitions. Direct retains existing authored/tolerance/size witnesses.
+Derived retains the real inventory join and exact successfully executed supplier proof. Private
+constructors prevent turning a supplied value or metadata annotation into an executed trace.
+
+Any source failure drops the whole private cache/output prefix and returns no accepted partial
+result. Evaluation keeps the original source position and scalar error with actual failing node,
+canonical observation requirement,quantitative provider or numeric cause. A supplier containing
+eps_phys fails at that supplier's original name,not an invented entry statement. Within consumes
+its real direct class:an executed cos contribution forbids T1 even if its numeric term cancels to
+zero. Allocation failures retain their original inline TryReserveError without another error-box
+allocation. The private call-frame guard forbids growth beyond S.
+
+Six focused native contracts cover sharing,mixed canonical families,repeated reads,lazy missing
+sources,false conditions,fractional roots,approximation/class propagation,original nested failures,
+absent/empty selection and an actual512-source chain on a thread requesting64 KiB stack. These are
+focused implementation checks. Independent whole-source reference acceptance is next;whole recipe/
+Design/currentness,geometry,load/replay,backend/platform and physical proof remain open.
+
 ## Bare roots and actual let storage
 
 A bare source expression is not a let. Its entity id,canonical consumer kind or graph edge supplies
@@ -263,9 +325,9 @@ Initial namespaces reject caller-seeded prior lets. Actual recipe reads consume 
 stored outcomes;source traversal cannot reorder forward lets. Canonical Derived keeps its sole
 formula reference and no independently authored/cached result. Supplier values must be earned by
 actual source execution,not callbacks or supplied cache values. The durable canonical-input record
-is docs/decisions/decision_length-declarations-retain-state-and-provenance.md;the graph worker and
-actual recipe bridge remain pending. Focused existing expression and numeric/Boolean binding
-controls confirm the current boundary;they are not a graph execution verdict.
+is docs/decisions/decision_length-declarations-retain-state-and-provenance.md. The source worker
+preserves this boundary with focused checks;independent source acceptance and the actual recipe
+bridge remain pending. Existing expression/recipe reference fixtures retain their exact outcomes.
 
 ## Check an actual Derived consumer
 
@@ -299,12 +361,18 @@ let acyclic = deps.admit_acyclic(FormulaSourceCycleLimits::new(1,2))
 assert!(std::ptr::eq(acyclic.dependencies(), &deps));
 let scalar = acyclic.prepare_scalar_sources(FormulaSourceGraphExecutionLimits::new(
     1,nodes,0,2+2*nodes,1)).expect("complete available scalar source preparation");
-assert_eq!(scalar.sources().len(), 1); // No source value has been computed.
+assert_eq!(scalar.sources().len(), 1); // Preparation has computed no source value.
+let executed = scalar.evaluate_source(formula, FormulaScalarExecutionContext::new(
+    FormulaToleranceContext::empty(), FormulaSizeContext::empty())).expect("actual selected root");
+assert_eq!(executed.entry().value().numeric().unwrap().rational(), FormulaRational::new(1000,1,false)?);
+assert_eq!(executed.entry().completion_ordinal(), 1);
+assert_eq!(executed.sources().count(), 1);
 assert!(canonical.length(EntityId::from_bits(10)).unwrap().authored_value().is_err());
 # Ok::<(), Box<dyn std::error::Error>>(())
 ```
 
-The original declaration still requires evaluation. A kind proof is no numeric value,storage
+The original declaration still has no authored result;execution returns its scoped unbound value
+without changing that canonical state. A kind proof alone is no numeric value,storage
 conversion,provenance propagation or release authority. Existing quantity Formula(id) still
 selects DesignParameter metadata;formula9001 remains the distinct source entity in this example.
 
@@ -349,8 +417,9 @@ zero product,and the condition's sin contribution remains present after resumpti
 Only successful completion makes scratch reusable. Any value/provider or one-shot Derived failure
 permanently rejects further start/resume on that private machine. Existing expression/recipe
 adapters still return their original RequiresEvaluation and missing-provider causes. Callers gain
-no public callback,continuation,computed-value constructor or cache seed. The actual bounded lazy
-source-graph worker,earned results/read witnesses and recipe/Design integration remain pending.
+no public callback,continuation,computed-value constructor or cache seed. The bounded lazy
+source worker above uses this private path;independent source acceptance and recipe/Design
+integration remain pending.
 
 ## Verification and remaining work
 
@@ -365,7 +434,7 @@ This certifies sources under the supplied initial namespace,not completeness/cur
 containing Design/host namespace. Geometry metadata supplies no current operation/provider proof.
 Prior lets cannot be caller-seeded into this initial scope. The actual ordered-statement/source
 relationship,binding rounding,full geometry/operation dependency and cycle integration,load/replay,
-providers,atomic value
-publication,full resource/backend bounds and platform/physical verification remain owned by
+providers,whole-Design atomic publication,full resource/backend bounds and platform/physical
+verification remain owned by
 G1-SLICE.5e.2.5.derived.3.3 and the existing execution/integration tasks. No cycle or execution
 certificate follows from successful name/kind checking.

@@ -38,11 +38,11 @@ impl<'a> Sources<'a> for RecipeSources<'_, 'a> {
         let (source, value) = match slot.kind {
             Kind::Canonical(joined) => {
                 let data = read::read(ScalarKind::Canonical(joined), context)?;
-                (ReadKind::Scalar(data.source), data.value)
+                (ReadKind::Scalar(data.direct_source()), data.value)
             }
             Kind::Reserved(name) => {
                 let data = read::read(ScalarKind::Reserved(name), context)?;
-                (ReadKind::Scalar(data.source), data.value)
+                (ReadKind::Scalar(data.direct_source()), data.value)
             }
             Kind::PriorLet(statement) => {
                 let Some(completed) = statement
