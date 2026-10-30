@@ -7,7 +7,8 @@ ordered recipe. It does not accept a substitute canonical inventory,source regis
 namespace,computed values or cache.
 
 Actual Design-backed source and ordered recipe kind checking is also implemented below.
-Dependency/cycle admission,scalar execution and real recipe storage remain separate stages.
+Native dependency/cycle admission can now feed a same-root combined scalar plan below.
+Actual integrated scalar execution and real recipe storage remain separate stages.
 A normalized expression is syntax with converted literals;it is not a checked kind,numerical
 result or stored binding. A kind proof still supplies no cycle or numerical acceptance.
 See [source validation and execution](formula-source-proofs.md) and
@@ -141,7 +142,82 @@ The namespace allocation itself need not survive either existing proof factory. 
 borrow original Design metadata;the accepted proofs remain bounded by their actual normalization
 and root lifetimes. This needs no self-reference,namespace clone or extra host Clone/Debug bound.
 There is no method parameter through which an equal-looking foreign root or supplied namespace can
-be substituted. Later APIs combining independent proof stages must still check actual root identity.
+be substituted during checking. The plan join below checks actual root and exact source-proof identity.
+
+## Join actual proofs and prepare complete scalar plans
+
+DesignCheckedFormulaSources.plan_inputs(recipe,source_execution_limits,recipe_execution_limits)
+requires both privately constructed Design proof owners to reference the same actual DesignInputs
+object. Equality of ids,revisions,source text or complete model content is insufficient. A failure
+keeps both actual proof owners in DesignFormulaPlanInputError. A successful DesignFormulaPlanInputs
+retains both owners and both explicitly selected existing policies. It is a provenance join;
+quota admission and numerical execution have not happened yet.
+
+Build the native dependency/cycle stages from inputs.sources().proof(),using explicit existing
+FormulaSourceDependencyLimits and FormulaSourceCycleLimits. All original sources/edges,complete
+quotas and cycle refusals remain those native factories' responsibility. The Design wrapper does
+not duplicate their algorithms or manufacture an accepted graph.
+
+inputs.prepare_scalar(&graph) first requires graph.dependencies().checked() to be this exact
+selected source proof. Another proof over the same actual root and normalized arenas is refused
+as ForeignGraph. This is stricter than comparing only containing root pointers. The supplied
+graph remains available in that refusal;no quota or plan factory runs before this identity check.
+
+After graph provenance passes,the order is:
+
+1. The existing whole recipe admission checks complete statements,nodes,outputs and workspace.
+2. The existing source graph factory admits complete source/node/name/output/workspace populations
+   and all-source scalar capability before its outer/per-source plan preparation.
+3. The admitted recipe's existing scalar preparation checks whole capability and joins its actual
+   dependencies against this root's actual admitted canonical inventory,including genuine prior lets.
+
+If any phase refuses,no accepted combined plan or source-only prefix escapes. The original native
+error remains in RecipeAdmission,Sources or Recipe. DesignFormulaScalarPlanError retains the
+actual joined inputs,so both original selected policies remain available even when a later phase
+fails. Allocation causes remain inline in their existing native error;the wrapper adds no box.
+The original borrowed typed causes remain available through refusal(). Standard error chaining
+forwards only the native factories' actual static causes.
+
+A successful DesignFormulaScalarPlan owns the complete native source graph and ordered recipe
+plans. inputs(),scope(),sources() and recipe() expose readonly provenance and planning facts.
+The recipe plan uses the actual containing canonical inventory and actual earlier checked let
+statements. Sources and statements retain original order;no recipe is reordered to satisfy a graph.
+Neither plan getter supplies a mutable replacement or an accepted numerical result.
+
+For the original source9003 containing1 mm/3,S=1,N=3,D=0. Its complete source workspace2S+2N+D
+is8 and source output allowance is1. For the two-statement authored/twice recipe above,S=2,N=4,
+D=3,workspace2N+D=11 and output allowance2. These are conservative native logical reservations,
+not physical allocation measurements or stored values. Source workspace7 instead keeps the
+original allowed7/required8 refusal. Recipe output1 keeps original allowed1/required2 and refuses
+before source preparation,even when the source policy would also fail.
+
+A generic caller can preserve all owners while using the existing graph factories:
+
+```rust
+use sc_core::{design::{DesignCheckedFormulaSources,DesignCheckedFormulaRecipe},recipe::{
+    FormulaSourceGraphExecutionLimits,FormulaRecipeExecutionLimits,
+    FormulaSourceDependencyLimits,FormulaSourceCycleLimits}};
+fn prepare<'a,H>(sources:&'a DesignCheckedFormulaSources<'a,H>,
+    recipe:&'a DesignCheckedFormulaRecipe<'a,H>,source_limits:FormulaSourceGraphExecutionLimits,
+    recipe_limits:FormulaRecipeExecutionLimits,edges:FormulaSourceDependencyLimits,
+    cycles:FormulaSourceCycleLimits) {
+    let inputs=sources.plan_inputs(recipe,source_limits,recipe_limits).unwrap();
+    let dependencies=inputs.sources().proof().prepare_dependencies(edges).unwrap();
+    let graph=dependencies.admit_acyclic(cycles).unwrap();
+    let plan=inputs.prepare_scalar(&graph).unwrap();
+    assert!(std::ptr::eq(plan.recipe().admission().proof(),recipe.proof()));
+    assert!(std::ptr::eq(plan.scope().root(),sources.scope().root()));
+}
+```
+
+An empty actual recipe fits zero statement/node/workspace/output allowances while its required
+source9003 still needs complete source admission. An unused tangent source refuses at its actual
+original source index;an actual tangent recipe call refuses with its actual statement/node cause.
+Preparation never reads a context or value provider,executes a source,stores a let or publishes a
+computed result. Canonical Length40 still reports RequiresEvaluation9003 after successful planning.
+Runtime scratch/output reservation,namespace/checker/provider/kernel/allocator/CPU bounds and
+whole Design authority remain separately owned. Logical quotas on these plans grant no global
+resource,physical,platform or production approval certificate.
 
 ## Public API and failure ownership
 
@@ -156,6 +232,11 @@ be substituted. Later APIs combining independent proof stages must still check a
 | `DesignFormulaSourceCheckError` | Actual namespace or whole-source failure,normalized Design owner and selected limits |
 | `DesignCheckedFormulaRecipe` | Complete original ordered recipe kind proof and actual Design owner |
 | `DesignFormulaRecipeCheckError` | Actual namespace or whole-recipe failure and normalized Design owner |
+| `DesignFormulaPlanInputs` | Actual same-root source/recipe proof owners and explicit native execution policies |
+| `DesignFormulaPlanInputError` | Both actual checked owners when containing root identity differs |
+| `DesignFormulaScalarPlan` | Complete native source/ordered recipe scalar plans and actual joined inputs |
+| `DesignFormulaScalarPlanError` | Actual joined inputs/policies and original first provenance or factory refusal |
+| `DesignFormulaScalarPlanRefusal` | ForeignGraph,RecipeAdmission,Sources or Recipe with actual witnesses |
 
 Accepted scopes,normalizations and checked wrappers have private fields and construction paths.
 root(),limits(),demand() and source_inputs() expose immutable facts on the scope. Each normalized
@@ -193,8 +274,15 @@ namespace arguments. A test fixture initially used true as a Boolean literal;the
 formula_unbound_name and grammar identified it as a name. The corrected1==1 fixture reaches the
 intended original consumer-kind mismatch without changing any production checking rule.
 
-Kind checking grants no cycle acceptance,value/provider completeness,whole runtime resource bound
-or production approval. Subsequent task-tree leaves own resource-admitted source/recipe plans,real
-Derived recipe reads and independent integration acceptance. Broad verification remains deferred
-until the agreed feature set is complete;the latest full local/hosted verdict remains scoped to
-its recorded Git revision.
+Six further actual-root plan contracts check exact complete native populations,original canonical
+and prior-let links,equal-content root rejection,same-arena alternate-proof rejection,recipe-before-
+source quota order,source workspace and original unavailable-node errors,and empty recipe plans.
+Compiler guards reject private paired-owner/recipe-plan replacement and plan lifetime escape;
+the generic preparation example compiles without a host Clone/Debug bound.
+
+Kind checking alone grants no cycle acceptance. Native dependency/cycle factories still own that
+stage before Design plan preparation. Planning grants no numerical result,provider completeness,
+whole runtime resource bound or production approval. Subsequent task-tree leaves own real Derived
+recipe reads,once-only let storage and independent integration acceptance. Broad verification
+remains deferred until the agreed feature set is complete;the latest full local/hosted verdict
+remains scoped to its recorded Git revision.

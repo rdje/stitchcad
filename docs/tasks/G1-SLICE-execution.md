@@ -267,7 +267,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Status: `done`
   Goal:0599 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part758.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual Design-backed initial namespace/source graph/recipe proof joins over the same current
   canonical inventory and owned source collection,with complete admitted resource populations.
   Staged ownership:normalization owners borrow the real Design;checked owners borrow those arenas,
@@ -279,57 +279,58 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0600 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part759.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.2`
   Status: `done`
-  Goal: actual Design-backed source and ordered recipe kind proof stages using their real initial
-  namespace and normalized owners. No caller-seeded metadata or detached equal-source proof joins;
-  retain original error/node/statement/source witnesses and genuine later prior-let visibility.
-  Completion0601:complete actual Design namespace/source/ordered recipe static proofs.
-  Commit integrity:prewrite DEV323/320 guard refused before live writes;following authority refused
-  the still-in-progress owner. Trimmed prose,then completed leaf and regenerated authority;no cap raised.
-  - [x] REPRODUCE / ISSUE:0600 pinned actual normalization owners but had no Design-backed kind
-    factories. Standalone source/recipe factories accept supplied namespaces and certify that scope;
-    current Design metadata provenance must be earned from its actual namespace factory instead.
-  - [x] ROOT CAUSE (WHY + WHERE): inspect inputs::formula_namespace,checked_sources::check_sources,
-    checked_recipe::check_kinds and actual host/parameter/declaration contracts. Existing proofs
-    borrow original declaration metadata,not namespace allocations;no self-reference/namespace clone
-    is necessary. cargo check -p sc-core --lib →pass,rc=0 for private staged owner wrappers.
-  - [x] FIX: actual normalized source/recipe methods build their real root's current namespace and
-    invoke existing complete factories. Source accepts only explicit proof limits;recipe accepts no
-    supplied namespace/metadata/values. Private checked wrappers retain actual normalization owner
-    and original proof. Typed Namespace/Sources/Recipe errors retain owner and original causes;
-    selected source limits survive namespace failure. Static causes stay borrowed;actual static
-    allocation/current causes forward through Error::source without another allocation-error box.
-    Namespace/current construction precedes source quotas;namespace/checker/allocator/CPU bounds
-    remain separate. Source kind proofs still need cycles/runtime;recipe kinds store no values.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract formula_check::
-    -- --nocapture →six pass/27 filtered,rc=0. Actual parameter8003/Length40 and real statement1
-    prior-let name/spans survive into repeated statement2 dependencies. Actual source/normalized/
-    root pointers remain original. Canonical Derived9003 still RequiresEvaluation. Full unused
-    source9004 errors retain actual source1/expression/token;Boolean1==1 versus Length40 retains
-    original TargetKind source/target. Self-dependency passes only kinds,no cycle certificate.
-  - [x] NO REGRESSION: actual forward-let refusal keeps statement1/source span/unbound token;empty
-    recipe keeps real root;source quota0 refuses required1. Non-Clone/non-Debug host current drift
-    fails both real namespace stages before checking with original Inputs/Sources/Host cause and
-    selected source limits. cargo clippy -p sc-core --lib --test design_structure_contract --
-    -D warnings and changed rustfmt/diff →pass,rc=0. cargo test -p sc-core --doc
-    design::formula::check -- --nocapture →five pass,rc=0:positive generic inspection,E0616 private
-    proof,E0515 normalization lifetime and two actual E0061 supplied-namespace guards. Initial
-    fixture true was actual IDENT/unbound name,not Boolean literal;diagnostic/grammar confirmed
-    cause,corrected1==1 reaches intended consumer failure. No production rule relaxed. Book98/352/
-    1642/2893/glossary310/9/158/0,759 four Git spans/prior live ids/order/unique ids pass,rc=0.
-    Existing27 native tests filtered;full feature/CI/matrix owner .4.5,not claimed as run here.
-  - [x] LOCKSTEP: actual Design formula annex explains real namespace/proofs/error ownership,
-    prior-let and first-failure examples,scratch/resource boundaries;source/input links/API registry
-    and task/index/MEM/DEV/CHANGE/LIVE align. Whole0600 retained759/four spans. Next .4.3.3 actual
-    dependency/cycle/scalar and whole recipe admitted plans with strict same-root joins,then .4.4
-    actual earned Derived reads/let storage/.4.5 independent integration acceptance. G1 6/18/G0
-    unapproved;full/hosted79bd6f6a only. D340 fixed;D334/D156/D223/PLANNING.5 still owned.
-    promotion: declined (applies existing actual-namespace and immutable proof/metadata lifetime contracts;new typed stage boundaries and examples are retrievable in source/book/native/compiler contracts).
+  Goal:0601 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part760.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.3`
-  Status: `pending`
+  Status: `done`
   Goal: same-real-root source dependency/cycle/scalar plans and whole recipe plans with complete
   admitted logical populations before values. Reject cross-root proof substitutions even when ids/
   revision/content agree. Keep namespace/provider/parser/kernel/full allocator bounds separately
   owned and accurately described;prepare the actual runtime bridge without fake computed inputs.
+  Concrete0602:join only actual same-root checked source/recipe owners with explicit existing source/
+  recipe execution allowances. Reuse native dependency/cycle provenance;reject any graph not built
+  from this exact checked source proof before admission. Prepare complete actual source and whole
+  recipe scalar plans through existing factories;retain original typed failures and selected limits.
+  No new duplicate graph/checker/quota logic or numerical execution;actual worker bridge stays .4.4.
+  Commit integrity:first hook refused missing fresh ADDRESSED invocation inside that bullet;
+  actual six-pass command was already in ROOT. Recorded it in ADDRESSED,then refreshed authority.
+  Completion0602:actual same-root complete scalar source/ordered recipe planning;parent .4.3 closed
+  only for content/normalization/namespace/static/native plan provenance and logical quotas.
+  - [x] REPRODUCE / ISSUE:0601 had actual source/recipe kind owners but no actual-root plan join.
+    Existing native plans certify supplied proofs/inventories;equal ids/content cannot authorize
+    mixing separate containing roots or graphs from another accepted proof over the same arenas.
+  - [x] ROOT CAUSE (WHY + WHERE): inspect native dependency/cycle/source graph/recipe admission/
+    scalar plan factories and provenance getters. They retain exact immutable proof references,
+    so native stages can be reused without new graph/quota algorithms. Initial E0599 root.inputs
+    needed an unnecessary H bound;use the already admitted actual canonical/source join instead.
+    cargo test -p sc-core --test design_structure_contract formula_plan:: -- --nocapture →six
+    pass/33 filtered,rc=0 after correction;no extra host Clone/Debug/metadata bound introduced.
+  - [x] FIX: private plan-input join requires actual root pointer equality and selects both existing
+    source/recipe policies. prepare_scalar first checks exact source-proof graph provenance,then
+    native whole-recipe admission,source plan and actual-canonical whole recipe preparation.
+    Private combined plan owns both complete native plans;errors retain inputs/both selected limits
+    and original provenance/admission/source/recipe causes. Original allocation causes stay inline;
+    no accepted source-only prefix or numerical value escapes a later refusal.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract formula_plan::
+    -- --nocapture →six pass/33 filtered,rc=0. Exact source S1/N3/D0/W8/output1 and
+    recipe S2/N4/D3/W11/output2,actual graph/proof/canonical/prior-let pointers and unchanged Derived
+    RequiresEvaluation9003. Equal complete roots reject mixed proofs;another checked source proof
+    over the same root/arenas rejects ForeignGraph before zero quotas. Original recipe output1/2
+    refusal precedes source preparation;source workspace7/8 preserves original graph/limits/cause.
+  - [x] NO REGRESSION: unused source tangent/actual recipe tangent keep original source index/node/
+    statement/canonical causes;no partial combined plan. Empty actual recipe fits all-zero recipe
+    populations while required source remains complete. Scoped core lib/affected target strict
+    Clippy/changed rustfmt/diff →pass,rc=0. cargo test -p sc-core --doc design::formula::plan --
+    --nocapture →four pass,rc=0:generic no-host-bound preparation,E0616 owner/recipe replacement
+    and E0515 plan lifetime guards. Book98/357/1642/2894/glossary310/9/158/0,760 four Git spans/
+    prior live ids/order/uniqueness pass,rc=0. Existing33 native tests filtered;no broad suite/CI
+    claim. Full integrated feature verification remains .4.5;full/hosted79bd6f6a only.
+  - [x] LOCKSTEP: actual Design formula annex/API registry,task/index/MEM/DEV/CHANGE/LIVE describe
+    root/exact-proof joins,complete plan order,original quota/capability refusals/examples and
+    runtime/provider/kernel/allocator/CPU/whole Design boundaries. Whole0601 retained760/four spans.
+    Parent .4.3 complete;next .4.4 actual earned Derived recipe reads/shared roots/once storage,
+    then .4.5 independent integration acceptance. G1 6/18/G0 unapproved;D340 fixed;D334/D156/D223/
+    PLANNING.5 and full families/platform/physical owned. No numerical/approval proof from planning.
+    promotion: declined (uses existing actual-owner identity and immutable native provenance contracts;the exact stage join/order/refusals are retrievable in source/book/native/compiler contracts).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4`
   Status: `pending`
   Goal: actual ordered recipe Derived read integration with earned unbound source results,real

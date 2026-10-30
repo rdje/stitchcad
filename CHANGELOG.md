@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0601 — check actual Design source and ordered recipe kinds
+## STITCHCAD-G1-0602 — prepare actual Design source and recipe scalar plans
 
-- Build actual current Design namespaces through real source/recipe normalization owners;retain original complete proofs,parameter/prior-let metadata and typed first refusals. No supplied namespace/value or synthetic prior let;cycles/runtime remain separate.
-- Focused native6/doc5/scoped strict lint/fmt/book98/352/1642/2893/glossary0 pass. Original parameter/prior-let pointers,source/consumer/forward-let/current failures,quota/empty recipe covered. Whole0600 retained759/four spans/live ids. Next .4.3.3 admitted plans. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped.
+- Join only actual same-root proofs;require exact source-proof graph identity before native whole recipe admission/source/recipe preparation. Retain both selected policies,original typed quota/capability causes and actual canonical/prior-let owners. No evaluated result or stored let from planning.
+- Native6/doc4/scoped strict lint/fmt/book98/357/1642/2894/glossary0 pass. Equal-content roots/alternate proofs,exact complete populations,first quota/tangent/empty recipe covered. Whole0601 retained760/four spans/live ids. Parent .4.3 closed;next .4.4 real worker. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.4.3.3:actual Design dependency/cycle/scalar and recipe plans.
-  Read native stage/admission lifetimes;strict root ptr joins,not equal ids/revision/content.
-- Design kinds0601:actual normalized sources/recipe build real current root namespaces and invoke
-  existing complete kind factories. Private checked wrappers retain normalization/root/original
-  proofs. Typed namespace/source/recipe errors keep owners,limits/causes;no caller namespace/value.
-  Focused native6/doc5/scoped strict lint/fmt/book98/352/1642/2893/glossary0 pass. Real parameter/
-  prior-let pointers/order,late unused source/consumer errors,current host failure and quota checked.
-- Whole0600 retained759/four spans/live ids. Source9003 owns1 mm/3;source1000/operation collision
-  guarded. Actual p+40 mm7+18=25B/model82/675/129/prior84/677/136. Source component27/8/native8
-  accepted;only actual lets store. Next .4.3.3 admitted plans/.4.4 real recipe/.4.5 acceptance.
-- Namespace/parser/provider/worker/kernel/allocator/CPU/whole Design bounds remain separate.
-  No cycle/value/runtime proof from kinds;self-dependency still needs actual graph admission.
-  Full Derived/tan/geometry/load/replay/platform/physical owned. G1 6/18/G0 unapproved;
-  full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4:actual Derived recipe worker integration.
+  Read private shared machine/source worker/recipe worker;one earned unbound source cache,
+  original recipe RHS→once let storage→prior-let reads. Admit/reserve all before first values.
+- Actual Design plans0602:private same-root proof join with explicit source/recipe policies;
+  exact source-proof graph identity before native recipe admission/source/recipe scalar plans.
+  No mixed equal-content roots or same-arena alternate proofs. Original typed causes/limits/
+  canonical/prior-let owners retained;no extra allocation-error box or evaluated/stored values.
+  Native6/doc4/scoped strict lint/fmt/book98/357/1642/2894/glossary0 pass. Source1/3/0/8/1 and
+  recipe2/4/3/11/2 exact;output1/2 and workspace7/8/ForeignGraph/tangent/empty recipe covered.
+- Parent .4.3 closed scoped content/namespace/proofs/plans. Whole0601 retained760/four spans/live ids.
+  Source component27/8/native8 accepted;only actual lets store. Actual p+40 mm25B/model82/675/129.
+  Next .4.4 integrated worker/.4.5 independent acceptance;namespace/parser/provider/worker/kernel/
+  allocator/CPU/whole Design bounds separate. Full Derived/tan/geometry/load/replay/platform/
+  physical owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

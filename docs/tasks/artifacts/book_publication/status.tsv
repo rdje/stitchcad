@@ -351,3 +351,8 @@ actual Design source kind proof	annexes/formula-design-integration.md	crates/sc-
 actual Design source kind checking error	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/check.rs	DesignFormulaSourceCheckError	G1-SLICE.5e.2.5.derived.3.3.3.4.3.2	4.1
 actual Design ordered recipe kind proof	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/check.rs	DesignCheckedFormulaRecipe	G1-SLICE.5e.2.5.derived.3.3.3.4.3.2	4.1
 actual Design ordered recipe kind checking error	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/check.rs	DesignFormulaRecipeCheckError	G1-SLICE.5e.2.5.derived.3.3.3.4.3.2	4.1
+actual same-root formula planning inputs	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/plan.rs	DesignFormulaPlanInputs	G1-SLICE.5e.2.5.derived.3.3.3.4.3.3	4.1
+actual formula proof root mismatch	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/plan.rs	DesignFormulaPlanInputError	G1-SLICE.5e.2.5.derived.3.3.3.4.3.3	4.1
+complete actual Design scalar plans	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/plan.rs	DesignFormulaScalarPlan	G1-SLICE.5e.2.5.derived.3.3.3.4.3.3	4.1
+actual Design scalar plan preparation error	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/plan.rs	DesignFormulaScalarPlanError	G1-SLICE.5e.2.5.derived.3.3.3.4.3.3	4.1
+original actual Design scalar planning refusal	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/plan.rs	DesignFormulaScalarPlanRefusal	G1-SLICE.5e.2.5.derived.3.3.3.4.3.3	4.1

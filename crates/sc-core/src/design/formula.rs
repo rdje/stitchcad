@@ -10,6 +10,12 @@ use crate::recipe::{
 };
 use core::fmt;
 
+mod plan;
+pub use plan::{
+    DesignFormulaPlanInputError, DesignFormulaPlanInputs, DesignFormulaScalarPlan,
+    DesignFormulaScalarPlanError, DesignFormulaScalarPlanRefusal,
+};
+
 mod check;
 pub use check::{
     DesignCheckedFormulaRecipe, DesignCheckedFormulaSources, DesignFormulaRecipeCheckError,

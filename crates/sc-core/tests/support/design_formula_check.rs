@@ -37,14 +37,14 @@ impl DesignFormulaHost for ObservedHost {
         Ok(vec![])
     }
 }
-fn content() -> DesignResourceLimits {
+pub(super) fn content() -> DesignResourceLimits {
     DesignResourceLimits::new(
         NonZeroUsize::new(10000).expect("entries"),
         NonZeroUsize::new(10000).expect("text"),
         NonZeroU64::new(10000).expect("bits"),
     )
 }
-fn registry(rows: &[(u128, &str)]) -> FormulaSources {
+pub(super) fn registry(rows: &[(u128, &str)]) -> FormulaSources {
     let sources: Vec<_> = rows
         .iter()
         .map(|(identity, body)| {
