@@ -27,12 +27,14 @@ impl<'a> RecipeRuntime<'a> {
     // Complete machine/outcome reservations precede every operand,provider or storage operation.
     pub(super) fn new(plan: Plan<'a>, context: Context<'a>) -> Result<Self, Error<'a>> {
         let proof = plan.admission.proof();
+        let tangent_limits = plan.tangent_limits();
         let machine = Machine::new(plan.admission.node_count()).map_err(|allocation| {
             let workspace = match allocation.workspace {
                 Scratch::Tasks => Workspace::Tasks,
                 Scratch::Values => Workspace::Values,
             };
             Error::allocation(proof, workspace, allocation.requested, allocation.error)
+                .with_tangent_limits(tangent_limits)
         })?;
         let mut statements = Vec::new();
         statements
@@ -44,6 +46,7 @@ impl<'a> RecipeRuntime<'a> {
                     plan.admission.output_records(),
                     error,
                 )
+                .with_tangent_limits(tangent_limits)
             })?;
         Ok(Self {
             plan,
@@ -70,10 +73,15 @@ impl<'a> RecipeRuntime<'a> {
             mut statements,
         } = self;
         let proof = plan.admission.proof();
+        let tangent_limits = plan.tangent_limits();
         let mut remaining = plan.sources.as_mut_slice();
         for statement in proof.statements() {
-            let refuse =
-                |failure| RecipeRuntimeError::Recipe(Error::evaluation(proof, statement, failure));
+            let refuse = |failure| {
+                RecipeRuntimeError::Recipe(
+                    Error::evaluation(proof, statement, failure)
+                        .with_tangent_limits(tangent_limits),
+                )
+            };
             let operand_error = |part, error| match error {
                 OperandFailure::Scalar(error) => refuse(Failure::Expression { part, error }),
                 OperandFailure::Source(error) => RecipeRuntimeError::Source {
@@ -102,6 +110,7 @@ impl<'a> RecipeRuntime<'a> {
                         sources,
                         &statements,
                         context,
+                        tangent_limits,
                         derived.as_deref_mut(),
                     )
                     .map_err(|error| operand_error(Part::Binding, error))?;
@@ -133,6 +142,7 @@ impl<'a> RecipeRuntime<'a> {
                         left_sources,
                         &statements,
                         context,
+                        tangent_limits,
                         derived.as_deref_mut(),
                     )
                     .map_err(|error| operand_error(Part::AssertionLeft, error))?;
@@ -142,6 +152,7 @@ impl<'a> RecipeRuntime<'a> {
                         right_sources,
                         &statements,
                         context,
+                        tangent_limits,
                         derived.as_deref_mut(),
                     )
                     .map_err(|error| operand_error(Part::AssertionRight, error))?;

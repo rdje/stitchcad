@@ -42,6 +42,7 @@ impl<'p> Plan<'p> {
         let source_limits = sources.limits();
         let source_tangent_limits = sources.tangent_limits();
         let recipe_limits = recipe.admission().limits();
+        let recipe_tangent_limits = recipe.tangent_limits();
         let refuse = |cause| Error {
             recipe: proof,
             inputs,
@@ -49,6 +50,7 @@ impl<'p> Plan<'p> {
             source_limits,
             source_tangent_limits,
             recipe_limits,
+            recipe_tangent_limits,
             cause,
         };
         let source_inputs = graph

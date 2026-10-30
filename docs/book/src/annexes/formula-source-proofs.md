@@ -550,7 +550,7 @@ existing error-witness boxes;allocator causes remain their original inline error
 A configured Tan supplier can already feed the existing source-backed recipe mode when the
 recipe itself has no direct Tan call. Success retains source_plan().tangent_limits();even a
 foreign-owner refusal before values retains source_tangent_limits(). Direct recipe-owned Tan
-and integrated Design policy selection remain the next implementation owners.
+now has its own explicit policy;integrated Design selection remains the next owner.
 
 Six focused tests cover whole-quota/missing-policy precedence,unused/untaken calls,an exact
 full-width unbound Angle supplier,once-only shared native roots,original late quota failures,

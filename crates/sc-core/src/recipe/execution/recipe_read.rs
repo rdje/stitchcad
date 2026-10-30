@@ -19,8 +19,13 @@ pub(super) struct RecipeSources<'s, 'a> {
     pub(super) sources: &'s mut [FormulaScalarRecipeSource<'a>],
     pub(super) completed: &'s [FormulaExecutedScalarRecipeStatement<'a>],
     pub(super) derived: Option<&'s SourceRuntime<'a>>,
+    pub(super) tangent_limits: Option<crate::recipe::FormulaTangentLimits>,
 }
 impl<'a> Sources<'a> for RecipeSources<'_, 'a> {
+    fn tangent_limits(&self) -> Option<crate::recipe::FormulaTangentLimits> {
+        self.tangent_limits
+    }
+
     fn read_value(
         &mut self,
         node: Node<'a, 'a>,

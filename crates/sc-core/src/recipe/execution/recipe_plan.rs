@@ -6,7 +6,7 @@ use crate::{
         FormulaCheckedExpression, FormulaCheckedNode, FormulaCheckedNodeForm as Form,
         FormulaCheckedRecipe, FormulaCheckedStatement, FormulaCheckedStatementKind as Statement,
         FormulaDeclarationSource, FormulaRecipeNameDependency, FormulaReservedName,
-        FormulaStatementExpression,
+        FormulaStatementExpression, FormulaTangentLimits,
     },
     value::CanonicalInputs,
 };
@@ -48,7 +48,9 @@ impl<'a> FormulaScalarRecipeSource<'a> {
 /// Whole preparation failure, separate from canonical language and numerical diagnostics.
 #[derive(Debug)]
 pub enum FormulaScalarRecipePlanRefusal<'a> {
-    /// A tangent or geometry selector is outside the actual implemented scalar capability.
+    /// Tan requires an explicitly selected per-call policy before any recipe value.
+    MissingTangentPolicy,
+    /// The built-in is outside the actual selected scalar capability.
     UnavailableBuiltin(FormulaBuiltin),
     /// Geometry source needs its actual implementation owner, even in an untaken branch.
     UnavailableSource(FormulaDeclarationSource<'a>),
@@ -84,6 +86,7 @@ pub struct FormulaScalarRecipePlanError<'a> {
     proof: &'a FormulaCheckedRecipe<'a>,
     inputs: &'a CanonicalInputs,
     issue: Issue<'a>,
+    tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a> FormulaScalarRecipePlanError<'a> {
     /// Actual whole static proof, including its suffix after this refusal.
@@ -95,6 +98,11 @@ impl<'a> FormulaScalarRecipePlanError<'a> {
     #[must_use]
     pub const fn inputs(&self) -> &'a CanonicalInputs {
         self.inputs
+    }
+    /// Original selected per-call tangent policy,including capability/source/allocation refusal.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.tangent_limits
     }
     /// Real failed operand's statement or canonical dependency's consumer; allocation has no ordinal.
     #[must_use]
@@ -142,6 +150,10 @@ impl<'a> FormulaScalarRecipePlanError<'a> {
         use FormulaScalarRecipePlanRefusal as R;
         match &self.issue {
             Issue::Capability { node, .. } => match node.form() {
+                Form::Call {
+                    builtin: FormulaBuiltin::Tan,
+                    ..
+                } if self.tangent_limits.is_none() => R::MissingTangentPolicy,
                 Form::Call { builtin, .. } => R::UnavailableBuiltin(builtin),
                 Form::Name { declaration, .. } => R::UnavailableSource(declaration.source()),
                 _ => {
@@ -205,6 +217,7 @@ pub struct FormulaScalarRecipePlan<'a> {
     pub(super) admission: FormulaRecipeExecutionAdmission<'a, 'a>,
     inputs: &'a CanonicalInputs,
     pub(super) sources: Vec<FormulaScalarRecipeSource<'a>>,
+    tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a> FormulaScalarRecipePlan<'a> {
     /// Original complete proof and selected whole logical allowances.
@@ -216,6 +229,11 @@ impl<'a> FormulaScalarRecipePlan<'a> {
     #[must_use]
     pub const fn inputs(&self) -> &'a CanonicalInputs {
         self.inputs
+    }
+    /// Policy for each actual recipe-owned Tan request;source suppliers retain their own policy.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.tangent_limits
     }
     /// Every original occurrence in whole dependency order, including headers/repetitions/branches.
     /// These are prospective sources; no executed read trace or accepted prefix is implied.
@@ -303,17 +321,67 @@ impl<'p, 'd> FormulaRecipeExecutionAdmission<'p, 'd> {
         'p: 'a,
         'd: 'a,
     {
+        self.prepare_scalar_with_policy(inputs, None)
+    }
+
+    /// Prepare the actual whole ordered recipe with an explicit policy for each direct Tan call.
+    /// Complete capability admission precedes source reservation/joins;no operand,storage or
+    /// optional provider is evaluated. Source-graph suppliers keep their own selected policy.
+    /// ```
+    /// use sc_core::{recipe::*,value::CanonicalInputs};
+    /// let inputs=CanonicalInputs::new(vec![],vec![])?;
+    /// let recipe=FormulaRecipe::parse("let first:ratio=tan(30 deg)\nlet twice:ratio=first+first\nassert checked:eps_geo=twice==1.154700")?
+    ///     .normalize_literals()?;
+    /// let proof=recipe.check_kinds(FormulaNamespace::new([])?).expect("actual whole proof");
+    /// let selected=FormulaTangentLimits::new(2073,512);
+    /// let plan=proof.admit_execution(FormulaRecipeExecutionLimits::new(3,256,768,3))
+    ///     .expect("complete allowance").prepare_scalar_with_tangent_limits(&inputs,selected)
+    ///     .expect("actual selected policy");
+    /// let result=plan.evaluate(FormulaScalarExecutionContext::new(
+    ///     FormulaToleranceContext::empty(),FormulaSizeContext::empty())).expect("actual ordered execution");
+    /// assert_eq!(result.plan().tangent_limits(),Some(selected));
+    /// assert_eq!(result.statements().len(),3);
+    /// # Ok::<(),Box<dyn std::error::Error>>(())
+    /// ```
+    /// # Errors
+    /// Original whole capability,source or allocation refusal with the selected recipe policy.
+    pub fn prepare_scalar_with_tangent_limits<'a>(
+        self,
+        inputs: &'a CanonicalInputs,
+        tangent_limits: FormulaTangentLimits,
+    ) -> Result<FormulaScalarRecipePlan<'a>, FormulaScalarRecipePlanError<'a>>
+    where
+        'p: 'a,
+        'd: 'a,
+    {
+        self.prepare_scalar_with_policy(inputs, Some(tangent_limits))
+    }
+
+    fn prepare_scalar_with_policy<'a>(
+        self,
+        inputs: &'a CanonicalInputs,
+        tangent_limits: Option<FormulaTangentLimits>,
+    ) -> Result<FormulaScalarRecipePlan<'a>, FormulaScalarRecipePlanError<'a>>
+    where
+        'p: 'a,
+        'd: 'a,
+    {
         let admission: FormulaRecipeExecutionAdmission<'a, 'a> = self;
         let proof = admission.proof();
         let refuse = |issue| FormulaScalarRecipePlanError {
             proof,
             inputs,
             issue,
+            tangent_limits,
         };
         for statement in proof.statements() {
             for (part, expression) in operands(statement) {
                 for node in expression.root().all_nodes() {
                     let unavailable = match node.form() {
+                        Form::Call {
+                            builtin: FormulaBuiltin::Tan,
+                            ..
+                        } => tangent_limits.is_none(),
                         Form::Call { builtin, .. } => !scalar_builtin_available(builtin),
                         Form::Name { declaration, .. } => matches!(
                             declaration.source(),
@@ -375,6 +443,7 @@ impl<'p, 'd> FormulaRecipeExecutionAdmission<'p, 'd> {
             admission,
             inputs,
             sources,
+            tangent_limits,
         })
     }
 }

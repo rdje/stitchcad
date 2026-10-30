@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.integration.tangent.recipes:actual direct recipe-owned tangent policies.
-  Expression0619/source0620 implemented. Read recipe_plan/recipe_runtime/recipe_read/failure and
-  paired source/recipe/result contracts,then split safe slices if needed. Preserve original root/
-  input/context/proof/once-only storage/assertion/read/flag/error contracts;no supplied plan/value.
-- Source graph prepare_scalar_sources_with_tangent_limits selects explicit per-call limits after
-  existing graph proofs;complete layout quotas precede missing-policy/capability checks. Every
-  prepared expression inherits policy;actual lazy roots stay unbound and finish once. Graph and
-  nested scalar errors retain selected limits. Pair source_tangent_limits also survives pre-value
-  foreign-owner failure;legacy recipe can read configured Tan supplier but cannot directly call Tan.
-- New6/existing source12/private9/Design1/doc5/scoped lint/fmt/two consumer checks pass;27 source
-  reference rows/5350B exact,requested64KiB/512-source chain passes. Source136/144B and Design144B
-  errors stay inline under measured narrow allowances. Book98/374/1649/2914/glossary0/history779/
-  IDs/map/diff pass. LIVE G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect original
-  archive/search/numerical/cleanup proofs;never rerun old transactions. Full PNT;commit each,push400.
+- Next G1-SLICE.5e.2.4.integration.tangent.design:actual Design policy factories/execution. Expression0619/source0620/recipe0621 implemented. Read private Design plan/scope/execution and
+  actual original-resource/currentness/proof/result/error contracts. Select explicit source and
+  recipe policies before native values;retain their independent scopes. Split safe slices as needed.
+- Recipe prepare_scalar_with_tangent_limits selects each direct call's policy before complete
+  capability/source admission;legacy Tan reports MissingTangentPolicy. Actual RecipeSources/
+  operand suspension retain selected limits. Real let storage is once-only;assertions remain
+  left/right/header. Plans/errors and nested scalar failures retain policy even for unrelated
+  failure;paired errors retain both source/recipe policies before foreign-owner refusal.
+- New8/source6/old recipe14/private9/Design1/doc5/scoped strict lint/fmt pass;18 independent recipe
+  rows/all4167B exact. Real113-bit native Ratio reaches original storage refusal. Positive book
+  98/374/1650/2916,glossary0/history780/IDs/map/diff pass. LIVE direct/source-backed Tan recipes;
+  G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/
+  numerical/cleanup proofs;never rerun old transactions. Full PNT;commit each,push400. Design and
+  independent paired acceptance remain open;no full CI/platform/physical/production verdict.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

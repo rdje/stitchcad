@@ -7,7 +7,7 @@ use super::{
 use sc_core::{
     design::{DesignFormulaScalarPlanRefusal as Refusal, DesignInputs},
     recipe::{
-        FormulaBuiltin, FormulaRecipeDocument, FormulaRecipeExecutionAdmissionRefusal,
+        FormulaRecipeDocument, FormulaRecipeExecutionAdmissionRefusal,
         FormulaRecipeExecutionLimits, FormulaScalarRecipePlanRefusal,
         FormulaScalarRecipeSourceKind, FormulaScalarSourceGraphPlanRefusal,
         FormulaSourceCheckLimits, FormulaSourceCycleLimits, FormulaSourceDependencyLimits,
@@ -271,7 +271,7 @@ fn unused_source_and_actual_recipe_unavailable_nodes_keep_original_factory_cause
         .prepare_scalar(&graph)
         .expect_err("actual recipe tangent cannot prepare");
     assert!(matches!(error.refusal(),Refusal::Recipe(cause)
-        if matches!(cause.refusal(),FormulaScalarRecipePlanRefusal::UnavailableBuiltin(FormulaBuiltin::Tan))
+        if matches!(cause.refusal(),FormulaScalarRecipePlanRefusal::MissingTangentPolicy)
         && std::ptr::eq(cause.proof(),recipe.proof()) && std::ptr::eq(cause.inputs(),actual.inputs())));
     assert_eq!(error.inputs().recipe_limits(), recipe_policy);
 }

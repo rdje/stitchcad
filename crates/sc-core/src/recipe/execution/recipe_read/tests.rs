@@ -98,6 +98,7 @@ fn actual_recipe_pause_retains_real_prior_binding_and_earns_unbound_source_witne
                 sources: &mut [],
                 completed: &[],
                 derived: Some(&runtime),
+                tangent_limits: None,
             },
             context,
         )
@@ -124,6 +125,7 @@ fn actual_recipe_pause_retains_real_prior_binding_and_earns_unbound_source_witne
             sources: &mut plan.sources,
             completed: &completed,
             derived: Some(&runtime),
+            tangent_limits: None,
         })
         .expect("only actual Derived name may pause");
     let Progress::AwaitDerived { node, input } = progress else {
@@ -168,6 +170,7 @@ fn actual_recipe_pause_retains_real_prior_binding_and_earns_unbound_source_witne
             sources: &mut plan.sources,
             completed: &completed,
             derived: Some(&runtime),
+            tangent_limits: None,
         })
         .expect("resume same pending work without replay");
     let Progress::Complete(value) = progress else {

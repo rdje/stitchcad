@@ -15,8 +15,12 @@ pub(super) fn evaluate<'a>(
     sources: &mut [FormulaScalarRecipeSource<'a>],
     completed: &[FormulaExecutedScalarRecipeStatement<'a>],
     context: Context<'a>,
+    tangent_limits: Option<crate::recipe::FormulaTangentLimits>,
     derived: Option<&mut SourceRuntime<'a>>,
 ) -> Result<FormulaEvaluatedScalar, OperandFailure<'a>> {
+    let scalar = |error: crate::recipe::FormulaScalarExecutionError<'a>| {
+        OperandFailure::Scalar(error.with_tangent_limits(tangent_limits))
+    };
     let Some(runtime) = derived else {
         return machine
             .run(
@@ -25,22 +29,22 @@ pub(super) fn evaluate<'a>(
                     sources,
                     completed,
                     derived: None,
+                    tangent_limits,
                 },
                 context,
             )
-            .map_err(OperandFailure::Scalar);
+            .map_err(scalar);
     };
-    machine
-        .start(root, context)
-        .map_err(OperandFailure::Scalar)?;
+    machine.start(root, context).map_err(scalar)?;
     loop {
         let progress = machine
             .resume(&mut RecipeSources {
                 sources,
                 completed,
                 derived: Some(runtime),
+                tangent_limits,
             })
-            .map_err(OperandFailure::Scalar)?;
+            .map_err(scalar)?;
         match progress {
             Progress::Complete(value) => return Ok(value),
             Progress::AwaitDerived { node, input } => {

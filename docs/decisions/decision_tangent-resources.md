@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-30`
-- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;expression0619/source0620;recipe/Design/platform pending
+- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621;Design/platform pending
 - **Owner / source:** engineer under the director's delegated implementation authority;
   G1-SLICE.5d.1.2.2.2.d.2.2.2, implementation G1-SLICE.5d.3.2.2
 
@@ -148,7 +148,7 @@ limits survive plan/result and every preparation/runtime error,including earlier
 Actual mathematical/resource causes retain original operand/progress and the failing proof node.
 Existing engine error-witness boxing remains outside machine/native quotas;no extra native box
 or diagnostic allocation during allocator failure is introduced. Aggregate heap/CPU and real
-source/recipe/Design policy adoption retain their existing owners.
+integrated Design policy adoption retains its existing owner.
 
 ## Actual source graph policies0620
 
@@ -158,4 +158,14 @@ win before missing-policy/capability errors. Every prepared expression and graph
 retains the same selected policy. Actual lazy suppliers remain unbound and finish once;no cache
 or edge introduces binding or a supplied computed result. Existing source-backed recipes can
 read configured Tan suppliers;graph policy also survives early ownership/preparation errors.
-Direct recipe-owned calls and integrated Design policy selection retain their separate owners.
+Direct recipe policies are available;integrated Design selection remains separately owned.
+
+## Actual ordered recipe policies0621
+
+Whole recipe preparation selects per-call limits before all-node capability/source allocation;
+legacy direct Tan without policy is a setup refusal. Real let storage remains once-only and
+assertions retain left/right/header order. Recipe plans/errors and nested scalar failures retain
+the original selected policy. In a paired request,source-owned and recipe-owned calls use their
+own independently selected policies;neither enlarges the other. Both survive even pre-value
+ownership/preparation failure. Source suspension resumes the actual recipe state and policy,
+without replay or a supplied cache/value. Integrated Design policy selection remains separately owned.

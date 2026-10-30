@@ -108,6 +108,7 @@ pub struct FormulaScalarSourceRecipeError<'a> {
     pub(super) source_limits: FormulaSourceGraphExecutionLimits,
     pub(super) source_tangent_limits: Option<crate::recipe::FormulaTangentLimits>,
     pub(super) recipe_limits: FormulaRecipeExecutionLimits,
+    pub(super) recipe_tangent_limits: Option<crate::recipe::FormulaTangentLimits>,
     pub(super) cause: FormulaScalarSourceRecipeErrorCause<'a>,
 }
 impl<'a> FormulaScalarSourceRecipeError<'a> {
@@ -141,6 +142,11 @@ impl<'a> FormulaScalarSourceRecipeError<'a> {
     pub const fn recipe_limits(&self) -> FormulaRecipeExecutionLimits {
         self.recipe_limits
     }
+    /// Original recipe-owned per-call policy,independent of the source graph's selected limits.
+    #[must_use]
+    pub const fn recipe_tangent_limits(&self) -> Option<crate::recipe::FormulaTangentLimits> {
+        self.recipe_tangent_limits
+    }
     /// Original first ownership/preparation/recipe/requester/supplier cause.
     #[must_use]
     pub const fn cause(&self) -> &FormulaScalarSourceRecipeErrorCause<'a> {
@@ -156,6 +162,7 @@ impl fmt::Debug for FormulaScalarSourceRecipeError<'_> {
             .field("source_limits", &self.source_limits)
             .field("source_tangent_limits", &self.source_tangent_limits)
             .field("recipe_limits", &self.recipe_limits)
+            .field("recipe_tangent_limits", &self.recipe_tangent_limits)
             .field("cause", &self.cause)
             .finish_non_exhaustive()
     }

@@ -101,6 +101,7 @@ pub struct FormulaScalarRecipeError<'a> {
     proof: &'a FormulaCheckedRecipe<'a>,
     statement: Option<&'a FormulaCheckedStatement<'a>>,
     cause: FormulaScalarRecipeErrorCause<'a>,
+    tangent_limits: Option<crate::recipe::FormulaTangentLimits>,
 }
 impl<'a> FormulaScalarRecipeError<'a> {
     pub(super) fn allocation(
@@ -111,6 +112,7 @@ impl<'a> FormulaScalarRecipeError<'a> {
     ) -> Self {
         Self {
             proof,
+            tangent_limits: None,
             statement: None,
             cause: FormulaScalarRecipeErrorCause::Allocation {
                 workspace,
@@ -126,9 +128,22 @@ impl<'a> FormulaScalarRecipeError<'a> {
     ) -> Self {
         Self {
             proof,
+            tangent_limits: None,
             statement: Some(statement),
             cause: FormulaScalarRecipeErrorCause::Evaluation(Box::new(failure)),
         }
+    }
+    pub(super) fn with_tangent_limits(
+        mut self,
+        limits: Option<crate::recipe::FormulaTangentLimits>,
+    ) -> Self {
+        self.tangent_limits = limits;
+        self
+    }
+    /// Original recipe-owned per-call policy,including allocation and earlier non-Tan failures.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<crate::recipe::FormulaTangentLimits> {
+        self.tangent_limits
     }
     /// Original complete whole static proof; no successful output prefix escapes.
     #[must_use]

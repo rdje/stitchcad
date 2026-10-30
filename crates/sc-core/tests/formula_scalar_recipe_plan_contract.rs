@@ -4,7 +4,7 @@ use sc_core::{
     name::MachineToken,
     ontology::EntityId,
     recipe::{
-        FormulaBindingKind, FormulaBuiltin, FormulaCanonicalInputAdapter as Adapter,
+        FormulaBindingKind, FormulaCanonicalInputAdapter as Adapter,
         FormulaCanonicalInputRefusal as JoinRefusal, FormulaCheckedStatementKind as Statement,
         FormulaDeclaration as D, FormulaInitialDeclaration, FormulaInputOrigin, FormulaNamespace,
         FormulaRecipe, FormulaRecipeDependencyRole as Role, FormulaRecipeExecutionLimits as Limits,
@@ -192,10 +192,7 @@ fn late_capability_gap_precedes_allocation_and_earlier_missing_inventory_join() 
         .expect("exact")
         .prepare_scalar(&inputs)
         .expect_err("whole capability scan before any earlier join");
-    assert!(matches!(
-        error.refusal(),
-        Refusal::UnavailableBuiltin(FormulaBuiltin::Tan)
-    ));
+    assert!(matches!(error.refusal(), Refusal::MissingTangentPolicy));
     let statement = error.statement().expect("actual failed operand owner");
     assert_eq!(statement.statement_index(), 2);
     assert!(std::ptr::eq(

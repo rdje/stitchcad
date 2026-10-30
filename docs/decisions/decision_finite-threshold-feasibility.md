@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-26`
-- **Status:** `active`; sin/cos values/sources0280/0281, inverse values/sources0288/0289; native tangent values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620;recipe/Design/platform pending
+- **Status:** `active`; sin/cos values/sources0280/0281, inverse values/sources0288/0289; native tangent values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621;Design/platform pending
 - **Owner / source:** engineer proposal, G1-SLICE.5d.1.2.2.2.a; full populations remain .b/parent
 
 answers: "what finite certificate could help bound trig rounding work?" · "does the threshold cohort admit a runtime precision?"

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0620 — execute actual source graphs with explicit tangent policies
+## STITCHCAD-G1-0621 — execute actual ordered recipes with explicit tangent policies
 
-- Select per-call limits before complete source plan allocation/values. Preserve original graph/proof/input/read/ordinal/context owners,unbound once-only supplier roots and typed causes. Graph and source-backed recipe errors retain selected limits,including pre-value owner refusal.
-- New6/source12/private9/Design1/doc5/scoped lint/fmt/two consumer checks pass. Book98/374/1649/2914/glossary0/history779/IDs/map/diff pass. LIVE source policies,G1 6/18/G0 unapproved unchanged. Next direct recipe-owned Tan,then Design/paired acceptance;full verification remains owned.
+- Select explicit direct-call limits before complete recipe admission. Preserve original roots/proofs,once-only storage,assertion order and native causes across actual source suspension. Paired outcomes/errors retain independently selected source and recipe policies.
+- New8/source6/old recipe14/private9/Design1/doc5/scoped strict lint/fmt pass. Book98/374/1650/2916/glossary0/history780/IDs/map/diff pass. LIVE direct/source-backed Tan recipes;G1 6/18/G0 unapproved unchanged. Next Design and paired acceptance;full verification remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

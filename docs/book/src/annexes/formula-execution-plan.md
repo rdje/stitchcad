@@ -4,7 +4,7 @@ This records the bounded implementation sequence for G1-SLICE.5e.2. Actual sourc
 and [scalar recipe execution](formula-recipe-execution.md) are available for the admitted subset. The worker
 joins complete static node proofs, real canonical reads and explicit tolerance/size contexts with
 existing exact kernels. Supplied values or callback annotations cannot replace an actual expression
-proof. Explicit-policy standalone tangent expressions are available below;recipe/Design
+proof. Explicit-policy standalone tangent expressions are available below;Design
 tangent policies,geometry,load/replay and full atomic acceptance remain owned work.
 
 ## Existing contracts to reuse
@@ -346,7 +346,7 @@ original set/revision/member/base sources and unchanged membership. The full 256
 all 255 original eps_num occurrences under the exact 767-record reservation; a left-deep 256-node
 expression also completes without recursive execution frames. The scoped independent result
 checkpoint below follows feature completion. Whole worked-book,
-platform identity,recipe/Design tangent policies,geometry/Derived evaluation and replay keep their
+platform identity,Design tangent policies,geometry/Derived evaluation and replay keep their
 existing .5g/.5e.4/parent owners. This scoped expression result grants no whole-language, containing
 Design/currentness, evidence-truth, geometry/physical or release approval.
 
@@ -411,7 +411,7 @@ are also available. D337 corrected this plan's stale pre0288 inverse-availabilit
 [Native tangent values](formula-trig-certificates.md#certified-native-tangent-value-execution)
 now use the admitted bounded adaptive strategy with explicit bit/work quotas. Supplied-value
 wrappers and explicit-policy standalone expression execution are available. Source-graph policies
-are available;direct recipe/Design adoption remains .5e.2.4.integration.tangent. Missing policy is a typed preparation
+are available;recipe policies are implemented separately. Integrated Design adoption remains owned. Missing policy is a typed preparation
 refusal before values,not a language diagnostic or placeholder result.
 Resource refusal returns no value or invented numerical-domain cause. Full runtime acceptance
 requires the actual selected policy and original typed causes to survive every higher-level layer.
@@ -492,5 +492,5 @@ Eight focused tests exercise real source/kind/workspace/plan/execution factories
 inventory identity,complete missing-policy precedence,per-call budgets,selected-only execution,
 T1/T2 behavior,actual poles/early and later resources/exact width,and unrelated failure policy
 retention. Existing scalar expression/reference and preparation checks remain separately watched.
-Source graphs now retain their own explicit policies. Direct recipe Tan and Design factories
-remain their next adoption owners;independent paired acceptance follows implementation.
+Source graphs and direct/source-backed recipes now retain their own explicit policies. Design
+factories remain the next adoption owner;independent paired acceptance follows implementation.

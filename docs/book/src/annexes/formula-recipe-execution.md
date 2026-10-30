@@ -4,7 +4,8 @@
 > scalar subset from its actual complete static recipe proof. It evaluates real lets/assertions in
 > declaration order,stores each successful binding once and retains actual executed source reads.
 > Derived reads now execute through [actual source-backed Design recipes](formula-design-integration.md#execute-the-private-actual-design-plan).
-> Tangent,geometry,corrupt-load validation,full replay/platform identity and complete language/bus/
+> Explicit-policy direct/source-backed Tan recipes are available below. Geometry,corrupt-load
+> validation,full replay/platform identity and complete language/bus/
 > physical acceptance retain their separate owners. No release claim follows.
 
 Start with complete [syntax/input normalization](formula-recipe-inputs.md) and
@@ -81,8 +82,8 @@ acceptance and replay remain owned integration work.
 Whole admission's prepare_scalar(inputs) is available at .5e.2.5.1.2.1. It first scans every statement
 in authored order, binding RHS or assertion left then right, with each expression's actual certified
 arena order. This uses the same exhaustive builtin-availability catalog as detached scalar
-preparation. Tangent and geometry stay explicit capability gaps; none becomes a formula-language
-diagnostic. An unavailable later operand precedes an earlier missing canonical target, because the
+preparation. Legacy Tan without an explicit selected policy reports MissingTangentPolicy;
+geometry remains an implementation gap. Neither becomes a formula-language diagnostic. An unavailable later operand precedes an earlier missing canonical target, because the
 whole capability scan finishes before source allocation or inventory joins. Capability scanning is
 separate from runtime source-order evaluation; no values or providers are read.
 
@@ -258,3 +259,63 @@ actual Unknown/Derived requests and physical-provider identity. Derived dependen
 remaining capability families remain open. Full language/worked-example/platform/load/replay/
 physical verification is not inferred from these18 rows. Next .5e.2.5.derived recovers actual
 canonical formula/document/input dependency contracts before selecting bounded Derived integration.
+
+## Explicit tangent policies in ordered recipes
+
+FormulaRecipeExecutionAdmission::prepare_scalar_with_tangent_limits selects explicit per-call
+limits for actual recipe-owned Tan nodes. The complete whole-proof capability scan still precedes
+D-source allocation and canonical joins,including later statements and untaken operands. The legacy
+entry point reports MissingTangentPolicy with the original statement,operand role and call node.
+No source/provider value,let storage or partial statement result is computed during preparation.
+
+```rust
+use sc_core::{recipe::*, value::CanonicalInputs};
+let inputs = CanonicalInputs::new(vec![], vec![])?;
+let recipe = FormulaRecipe::parse(
+    "let first:ratio=tan(30 deg)/1000000\nlet second:ratio=first+first\nassert exact:eps_geo=second==0.000002")?
+    .normalize_literals()?;
+let proof = recipe.check_kinds(FormulaNamespace::new([])?).expect("actual whole proof");
+let selected = FormulaTangentLimits::new(2073, 512);
+let plan = proof.admit_execution(FormulaRecipeExecutionLimits::new(3,256,768,3))
+    .expect("complete allowance").prepare_scalar_with_tangent_limits(&inputs,selected)
+    .expect("actual selected policy");
+let result = plan.evaluate(FormulaScalarExecutionContext::new(
+    FormulaToleranceContext::empty(),FormulaSizeContext::empty())).expect("actual ordered recipe");
+assert_eq!(result.plan().tangent_limits(),Some(selected));
+assert_eq!(result.statements().len(),3);
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+Tan30 returns577350ppm before the explicit division. The first RHS is therefore11547/20000ppm,
+which binds once to1ppm. The second let reads that actual stored1ppm twice and produces2ppm.
+Replaying the first unbound fraction would instead produce the wrong stored answer. Both real
+bindings retain the successful Tan contribution;source lookup adds no other rounding boundary.
+
+The ordered runtime uses the same selected policy for every direct call and across real Derived
+suspension/resumption. Each actual call has its own native cumulative budget. Exact zero/unit
+calls retain Tan even through stored false conditions and selected branches. T1 refuses actual
+Tan dependencies after storage;T2 still needs its real quantitative context. Assertion operands
+execute left then right,then the original header. A pole or resource refusal keeps its actual
+operand role and wins before later operands/header lookup. No accepted statement prefix escapes.
+
+Recipe plans,preparation errors and execution errors expose tangent_limits(),including source/
+allocation errors,an earlier unrelated division and a successful native value's later binding
+refusal. Native failures retain the original sourced input,selected limits,precision/work/cause
+and the actual recipe call node. A finite113-bit Ratio may succeed numerically and still fail
+only at the original signed storage boundary. Mathematical width and resource failures stay distinct.
+
+Source-backed recipes retain two independently selected scopes. A Tan node authored in the recipe
+uses recipe_plan().tangent_limits();a Tan node inside a supplier uses source_plan().tangent_limits().
+The source graph may provide a full-width unbound Angle with limits0/0 when it executes no Tan,
+while its recipe consumer uses8219/3584 to certify the actual near-midpoint Tan. A larger supplier
+policy cannot enlarge a smaller recipe policy,and a larger recipe policy cannot enlarge a supplier's.
+Both scopes survive every paired error through source_tangent_limits() and recipe_tangent_limits(),
+including foreign-owner refusal before any runtime allocation or value. Context/owner equality,
+private earned caches,once-only storage and atomic complete outcomes retain their existing contracts.
+
+Eight focused recipe checks and six shared source checks exercise actual factories and kernels:
+whole admission priority,false storage/T1/T2,once-only fractions,assertion failure order,later
+native resources,wide native success/storage refusal,real source suspension with differing policies,
+and paired source/foreign-owner failures. The common fixture builds only real canonical/source/
+namespace/dependency/acyclic proofs;it supplies no computed values. Integrated Design policy
+selection and independent combined paired acceptance remain separately owned.
