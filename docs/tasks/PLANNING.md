@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D346 — prior closures and strict provider-identity lint
+## D308–D347 — prior closures and actual formula-source footprint
 
-D308–D345:[whole prior ledger](../history/stitchcad-devnotes-part802.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D346 P1 fixed0643,owner G1-SLICE.5d.4.acceptance.gates.copy-lint:Copy assignment preserves original provider/label identity watcher;test1/strict affected lint/fmt pass. First full make check exited2 before tests;full gates rerun next.
+D308–D346:[whole prior ledger](../history/stitchcad-devnotes-part803.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D347 P1 fixed0644,owner G1-SLICE.5d.4.acceptance.gates.garment-footprint:0599 source/index adds2 entries and19+30 bytes. Exact buffers/109/937 original,112/937 candidate,reserve115;native4/lint/fmt pass. Full gates rerun next.

@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — preserve provider identity under strict Copy lint
+## _(2026-10-30 UTC)_ — account for the garment fixture's actual formula source
 
-First deferred full check stopped before tests:make check exits2 on clone_on_copy in recipe_runtime/tests.rs:268. Tolerance has derived Copy. D346 fixed0643 by plain Copy assignment;the existing test still checks equal fields/distinct addresses and rejects foreign provider/label borrows.
-The actual private identity watcher passes1;strict sc-core lib/tests Clippy and workspace formatting pass. The original provider still executes the paired recipe. Production implementation/quantitative semantics are unchanged. Full native/Wasm/doctrine/probe gates must rerun next.
-Book101/374/1670/2978/glossary0/history802 four Git spans/IDs+2/map/diff pass. Book clarifies borrowed provider identity even for Copy values. No full integration verdict or daily cleanup. Original failed/full and focused check logs remain distinct.
-D346 receipt target/irrational_platform_certificate/coupled-0643-copy-20261030T182217444630Z-15087/receipt.json SHA f538d53145670f48e8c021f982b9b83dec679861dba0c86763d471b8c23cbe88 retains five exact original logs.
-[Whole0642](docs/history/stitchcad-devnotes-part802.md) retains D345 capture preservation. Promotion declined:existing identity contract. LIVE marks D346 fixed;G1 6/18/G0 unapproved unchanged. Next .acceptance.gates.run;remaining application/resource/release owners remain. Full PNT continues.
+0644 full check passes fmt/strict workspace Clippy;native stops on stale garment footprint (make2,cargo101). Scoped Git diff traces0599 formula92 plus0598 retained-source accounting:source/index add2 entries;original19/canonical30 bytes add49. Accounting is correct;old107/888 assertion/book drifted.
+D347 fixed:watcher asserts exact formula92 buffers,19/30 bytes and original107+2/888+49. Native garment4 retain candidate112/937/0,reserve115 and exact limit114 refusal/115 admission. Strict affected lint/final fmt pass;initial tuple wrap corrected. Production accounting unchanged.
+Book101/374/1670/2978/glossary0/history803 four Git spans/IDs+1/map/diff pass. No complete native/doc/Wasm/probe verdict yet;full rerun next. Current book now explains exact original/candidate/admission numbers from the shared source fixture.
+D347 receipt target/irrational_platform_certificate/coupled-0644-garment-20261030T183821540039Z-59167/receipt.json SHA b914508349f7b766bed4637b18b6fed56e6af6f1b954491a6f3cb23a1d294404 retains six exact logs.
+[Whole0643](docs/history/stitchcad-devnotes-part803.md) retains D346 Copy identity repair and failed gate boundary. Promotion declined:existing accounting. LIVE marks D347 fixed;G1 6/18/G0 unapproved unchanged. Next .acceptance.gates.run;application/resource/release owners remain. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -91,6 +91,26 @@ fn seam_garment_candidate_preserves_complete_owners_and_exposes_original_gather_
 {
     let original = original();
     let saved = original.clone();
+    // The shared fixture gained actual formula92 in0599. Its source and lookup vectors each
+    // retain one entry;both authored and canonical buffers belong to the complete input root.
+    let sources = original.inputs().formula_sources();
+    assert_eq!(sources.sources().len(), 1);
+    let expression = sources
+        .source(id(92))
+        .expect("actual authored fixture formula")
+        .expression();
+    assert_eq!(expression.source(), "authored_body+40 mm");
+    assert_eq!(
+        expression.canonical().as_str(),
+        "(+ authored_body length:40000)"
+    );
+    assert_eq!(
+        (
+            expression.source().len(),
+            expression.canonical().as_str().len()
+        ),
+        (19, 30)
+    );
     let before = demand(&original);
     assert_eq!(
         (
@@ -98,7 +118,7 @@ fn seam_garment_candidate_preserves_complete_owners_and_exposes_original_gather_
             before.text_bytes(),
             before.counter_bits()
         ),
-        (107, 888, 0),
+        (107 + 2, 888 + 19 + 30, 0),
         "published complete garment fixture footprint stays exact"
     );
     let graph = original.sewing().graph();

@@ -663,24 +663,28 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0642 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part802.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates`
   Status: `in_progress`
-  Goal:deferred full native/Wasm/doctrine/probe/book acceptance after certificate closure;
-  fix exposed defects in owned slices,then close only scoped coupled review with original evidence.
+  Goal:full native/Wasm/doctrine/probes/book after certificates;fix defects,retain original
+  evidence and close only scoped coupled review.
 
 - ID: `G1-SLICE.5d.4.acceptance.gates.copy-lint`
   Status: `done`
-  - [x] ISSUE:D346 full make check exits2 before tests on clone_on_copy.
-  - [x] ROOT CAUSE (WHY + WHERE):Tolerance derives Copy;recipe_runtime/tests.rs used clone.
-    scripts/run_make.sh check →Clippy clone_on_copy at268,rc=2;full tests not run.
-  - [x] FIX:Copy assignment retains distinct equal provider storage and all original assertions.
-  - [x] ADDRESSED (verified):local_environment.py -- cargo test -p sc-core --lib
-    paired_runtime_requires_original_borrowed_provider_and_label_sources →1 pass,rc=0.
-  - [x] NO REGRESSION:same launcher cargo clippy -p sc-core --lib --tests -- -D warnings and
-    cargo fmt --all -- --check pass,rc=0;book101/374/1670/2978/glossary0/history802/IDs+2/map/diff0.
-  - [x] LOCKSTEP:book/live/notes sync;full gates rerun next;promotion declined(existing identity).
-  Commit:STITCHCAD-G1-0643;Verification:actual identity watcher/strict lint/fmt;full gates pending.
+  Goal:0643 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part803.md).
+- ID: `G1-SLICE.5d.4.acceptance.gates.garment-footprint`
+  Status: `done`
+  - [x] ISSUE:D347 full gate rc2;fixture107/888→109/937.
+  - [x] ROOT CAUSE (WHY + WHERE):git diff f6b0a0aa..HEAD -- crates/sc-measure/tests/design_inputs_contract.rs
+    →0599 formula92 adds2 entries/19+30B,rc=0.
+  - [x] FIX:assert actual source buffers and107+2/888+19+30;retain exact admission assertions.
+  - [x] ADDRESSED:local_environment.py -- cargo test -p sc-measure --test design_inputs_contract
+    seam_garment_candidate_ →4 pass/actual109/937→112/937,reserve115,rc=0.
+  - [x] NO REGRESSION:Clippy sc-measure/design_inputs_contract -Dwarnings/fmt --check/book101/374/1670/2978/glossary0/history803/
+    IDs+1/map/diff pass,rc=0. Full gate rerun remains.
+  - [x] LOCKSTEP:book/live/notes sync;promotion declined(existing retained-source accounting).
+  Commit:STITCHCAD-G1-0644;Verification:native4/lint/fmt/book.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
-  Status: `pending`
-  Goal:rerun full native/Wasm/doctrine/probe/book verification after D346,then scoped closure.
+  Status: `in_progress`
+  Goal:full native/Wasm/doctrine/probes/book after D347;then scoped closure.
+  Book sync:clarify trig-certificates inverse230 observed0640 pair/full matrix during closure.
 
 ### Execution, uncertainty and replay
 

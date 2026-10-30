@@ -348,10 +348,15 @@ fn candidate<'a,H:DesignResourceSource+Clone+PartialEq>(graph:CommandSeamSplitGr
 ```
 
 The actual full garment fixture owns Pockets,notions,Closures,layers,Hems and all six construction
-families. Its original demand is107 collection entries,888 text bytes and zero counter bits. The
-graph reserves six entries,so complete admission needs113. The built owner measures110 entries
-and the same888 text bytes/zero counter bits. Limit112 refuses at consumed110/requested3,with the
-original graph owner and field. Limit113 admits. Unchanged component equality and current original
+families. Its original demand is109 collection entries,937 text bytes and zero counter bits.
+The shared fixture includes formula92,authored as authored_body+40 mm. Its source and lookup
+vectors add two entries;the original19-byte expression and30-byte canonical buffer add49 bytes
+to the older107-entry/888-byte fixture. The watcher checks those exact buffers before the complete
+resource walk,so a changed shared fixture cannot silently reuse an obsolete footprint.
+
+The graph reserves six entries,so complete admission needs115. The built owner measures112 entries
+and the same937 text bytes/zero counter bits. Limit114 refuses at consumed112/requested3,with the
+original graph owner and field. Limit115 admits. Unchanged component equality and current original
 checks pass;the full source remains exact after successful and refused preparations.
 
 The old Gather stays in the actual construction inventory with its original target/copy/side/

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0643 — retain borrowed-provider identity with Copy assignment
+## STITCHCAD-G1-0644 — preserve the actual garment formula-source footprint
 
-- Fix D346 strict lint failure in the original private provider/label identity watcher:copy Tolerance directly. Its equal-value/distinct-address and foreign-provider/label assertions still pass1;strict affected lint/workspace formatting pass. Production arithmetic unchanged.
-- Book101/374/1670/2978/glossary0/history802/IDs+2/map/diff pass. First full gate exited2 before native tests;full integration must rerun next. G1 6/18/G0 unapproved unchanged;no daily cleanup.
+- Fix D347 stale shared-fixture expectation:0599 formula92 adds two retained entries and49 bytes. Assert exact original/canonical buffers19/30;original109/937,candidate112/937,reservation115. Native garment4/strict affected lint/fmt pass;production accounting unchanged.
+- Book101/374/1670/2978/glossary0/history803/IDs+1/map/diff pass. Full gate passed fmt/workspace Clippy then stopped before complete native/doc verification. Full rerun next;G1 6/18/G0 unapproved unchanged;no daily cleanup.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

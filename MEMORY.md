@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.run:rerun full native/Wasm/doctrine/probes/book gates.
-- First full check stopped at strict Clippy clone_on_copy before native tests;make rc2. D346
-  fixed0643:private borrowed-provider watcher copies Copy Tolerance instead of calling clone.
-- The original identity test passes1;equal values/distinct addresses,foreign provider/label
-  refusals and actual original context execution remain checked. Strict sc-core lib/tests lint
-  and workspace formatting pass. Book101/374/1670/2978/glossary0/history802/IDs+2/map/diff pass.
-- D345 fixed0642:all native body-fault replays allocate fresh UTC/PID protected captures under
-  target/irrational_platform_certificate/native-body-faults/. Exclusive directories/reports,
-  owned publication,guard omissions2,actual root baseline1/fault5 and original9 preservation pass.
-- Fresh0641 inverse45M/450 and forward1M/100 readers,witness/runtime controls pass;receipt
+- Next G1-SLICE.5d.4.acceptance.gates.run:rerun full native/Wasm/doctrine/probes/book after D347.
+- Full0644 check:fmt/strict workspace Clippy pass;native stops with one stale garment fixture
+  footprint (make2/cargo101). D347 fixed0644:0599 formula92 correctly added2 vectors/49 text bytes;
+  original footprint109/937/0,candidate112/937/0,reservation115. Exact buffers19+30 now asserted.
+- Focused garment4/strict affected Clippy/fmt pass;book101/374/1670/2978/glossary0/history803/
+  IDs+1/map/diff pass. Initial fmt tuple wrap corrected. Accounting implementation unchanged.
+- D346 fixed0643:original provider Copy assignment retains equal fields/distinct addresses and
+  original borrowed provider/label refusal;private1/strict affected lint/fmt pass.
+- D345 fixed0642:all native body faults use fresh protected UTC/PID captures,exclusive reservation/
+  reports/owned publication;original9 reports/4882 snapshot files exact. Never reuse old captures.
+- Fresh0641 inverse45M/450 and forward1M/100 readers,witness/runtime controls pass;protected
   target/irrational_platform_certificate/coupled-0641-20261030T180826454783Z-33211/receipt.json.
-- Numeric/mixed/observed native31+Chrome31 scopes implemented;full integration verdict pending.
-  Separate app/matrix/aggregate resources/locality/provider/replay/physical/release owners remain.
-  G1 6/18/G0 unapproved;last full/hosted79bd6f6a SHA only. No daily cleanup;full PNT/push400.
+- Numeric/mixed/observed native31+Chrome31 implemented;full integration verdict pending. Separate
+  app/matrix/aggregate resources/locality/provider/replay/physical/release owners remain. G1 6/18,G0 unapproved;full/hosted79bd6f6a SHA only. No daily cleanup;full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
