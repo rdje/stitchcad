@@ -319,3 +319,8 @@ actual original initial source kind proof	annexes/formula-source-proofs.md	crate
 complete initial source checking allowances	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/checked_sources.rs	FormulaSourceCheckLimits	G1-SLICE.5e.2.5.derived.3.2.2	4.1
 actual source check refusal context	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/checked_sources.rs	FormulaSourceCheckError	G1-SLICE.5e.2.5.derived.3.2.2	4.1
 original source kind and target refusal	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/checked_sources.rs	FormulaSourceCheckRefusal	G1-SLICE.5e.2.5.derived.3.2.2	4.1
+complete actual canonical Derived dependencies	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies.rs	FormulaSourceDependencies	G1-SLICE.5e.2.5.derived.3.3.1	4.1
+original canonical Derived name edge	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies.rs	FormulaSourceDependency	G1-SLICE.5e.2.5.derived.3.3.1	4.1
+complete source dependency allowances	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies.rs	FormulaSourceDependencyLimits	G1-SLICE.5e.2.5.derived.3.3.1	4.1
+original source dependency refusal context	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies.rs	FormulaSourceDependencyError	G1-SLICE.5e.2.5.derived.3.3.1	4.1
+complete source dependency refusal	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies.rs	FormulaSourceDependencyRefusal	G1-SLICE.5e.2.5.derived.3.3.1	4.1

@@ -1,8 +1,9 @@
-# Formula source kind proofs
+# Formula source validation
 
 > **Status:** complete initial-scope expression proofs,actual canonical dependency joins and Derived
-> consumer-kind checks are implemented with focused verification. Dependency/cycle admission,
-> actual ordered-let binding,full resource/currentness and execution integration remain pending.
+> consumer-kind checks and prospective canonical Derived dependencies are implemented with focused
+> verification. Cycle admission,actual ordered-let binding,full resource/currentness and execution
+> integration remain pending.
 
 Start with the [original source owners and normalized collections](formula-recipe-inputs.md#explicit-formula-source-owners).
 FormulaNormalizedSources.check_sources(&namespace, limits) checks the complete supplied source
@@ -72,6 +73,66 @@ and through that chain,without allocating another diagnostic box. Handle local b
 while their actual normalized/source/canonical owners exist. No source or state is copied to make
 an error outlive its context.
 
+## Prepare original canonical Derived dependencies
+
+FormulaCheckedSources.prepare_dependencies(limits) admits the complete prospective canonical
+Derived relation before allocating its edge/offset vectors. Every checked name occurrence whose
+actual canonical state is Derived becomes a distinct consumer-expression→supplier-source edge.
+It uses that state's formula field,never the separate source/provenance field,a parameter id,
+canonical text,label or list position. The original private source index selects the exact supplier.
+
+| Public API | Meaning |
+| --- | --- |
+| `FormulaSourceDependencies` | Complete admitted canonical Derived relation and original source proofs |
+| `FormulaSourceDependency` | Original consumer/supplier proofs,name occurrence and canonical adapter |
+| `FormulaSourceDependencyLimits` | Explicit complete source,edge and retained-record allowances |
+| `FormulaSourceDependencyError` | Actual source-proof owner,selected limits and complete refusal |
+| `FormulaSourceDependencyRefusal` | Source/edge/retained quota,overflow or original vector allocation cause |
+
+Every repeated or untaken Derived name use remains a separate edge in original source/dependency
+order. All source vertices remain,including unused/constant sources. Known,Assumed,Preference and
+Unknown records create no Derived edge;their original values/state/provenance remain untouched.
+Reserved and geometry metadata are not invented canonical Derived suppliers. Geometry/operation
+dependencies still need their own complete graph. This relation is prospective,not executed reads.
+
+Let E be the complete actual edge population and S the source count. Admission checks S,checked
+complete edge/offset arithmetic,E and S+E+1 retained records before either allocation. Each logical
+edge record retains original indices;S+1 source offsets include a terminal sentinel. The empty
+relation therefore requires one retained record,not zero. These are retained logical populations,
+not allocator bytes/capacity,CPU,existing proof storage or future cycle-check scratch.
+
+Only after complete admission are the S+1 offsets and E edges fallibly reserved. Source/body/state/
+index data are not cloned. OffsetAllocation and EdgeAllocation preserve their actual TryReserveError
+and standard source chain;quotas retain complete measured/selected populations without guessing a
+failing source or statement. Failure returns no accepted edge/offset prefix. Policy is not stored
+canonical content.
+
+edges() lends all edges in original order and supports reverse iteration. outgoing(source_id)
+lends that exact source's grouped edges,including Some(empty) for a constant source and None for
+an absent source id. A canonical declaration id does not impersonate an expression entity.
+consumer()/supplier() return actual source proofs;name_use() returns the original occurrence and
+span;canonical_input() returns its existing actual inventory certificate without reading a value.
+Views borrow original source-proof owners and copy only original indices,never canonical state.
+
+For example,source9001 reading a+a from dedicated declaration10 Derived{formula:9002} retains two
+separate edges9001→9002 with distinct a spans. A declaration.source of9001 does not redirect either
+edge. General Count reads n+n similarly retain both actual scalar adapters and supplier source.
+Known zero,Preference zero,Assumed and Unknown uses beside them create no extra edges or fallbacks.
+An unused source containing tan(1 deg) remains a vertex without requiring its numeric kernel.
+
+This phase deliberately retains cyclic relations for required cycle admission. For sources9001
+reading b and9002 reading a,with actual Derived bindings a→9001 and b→9002,the relation contains
+both9001→9002 and9002→9001. An unused self-reference remains present too. Preparing that relation
+supplies no acyclic proof,loader formula_cycle context,execution order,actual let/binding/rounding,
+currentness or computed result. Complete cycle checking before values remains .derived.3.3.2;
+actual authored binding and full graph/runtime integration retain their own tasks.
+
+Three native contracts check both canonical families,actual pointer/endpoints/spans,repeated and
+untaken uses,all four non-Derived states/reserved inputs,unused/constant vertices,complete quotas,
+cyclic/self relations and the empty terminal offset. Six existing source-proof contracts remain
+green. Three compiler guards reject default limits,private edge mutation and source-proof lifetime
+escape. Broader graph/runtime/platform acceptance remains deferred.
+
 ## Check an actual Derived consumer
 
 ```rust
@@ -95,6 +156,10 @@ let checked = normalized.check_sources(&namespace, FormulaSourceCheckLimits::new
     .expect("complete actual source and consumer kinds");
 assert_eq!(checked.source(formula).unwrap().proof().kind(), FormulaKind::Length);
 assert_eq!(checked.target_count(), 1);
+let deps = checked.prepare_dependencies(FormulaSourceDependencyLimits::new(1,0,2))
+    .expect("complete constant-source relation");
+assert_eq!(deps.edges().len(), 0);
+assert_eq!(deps.outgoing(formula).unwrap().len(), 0);
 assert!(canonical.length(EntityId::from_bits(10)).unwrap().authored_value().is_err());
 # Ok::<(), Box<dyn std::error::Error>>(())
 ```

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — certify actual initial source kinds and canonical consumers before graph work
+## _(2026-10-30 UTC)_ — prepare complete original canonical Derived dependencies before cycle proof
 
-0591 admits complete S/N/T/conservative S+2N retained proof records before outer allocation. Existing expression proofs precede actual used canonical joins,then original consumer-kind checks. Original source/span/target witnesses survive;reuse private source index,no copied lookup/target/value/state vector.
-Native6/source4/doc3(E0277/E0616/lifetime)/scoped strict lint/fmt pass. Actual Unknown/reserved types require no provider;namespace allocation may drop while real name/declaration owners remain. Equal external owners fail in untaken branches;late unused source errors precede mismatches. No fabricated let/token.
-Book97/320/1629/2860/glossary310/9/158/0 pass;[whole0590 source normalization](docs/history/stitchcad-devnotes-part749.md) retains four exact Git spans/prior live ids. New semantic annex/routes/API map align. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Existing factory/borrow rules;promotion declined.
-Parent .3.2 closes scoped normalized/initial-source foundation only. Next .3.3 complete dependency/cycle and actual ordered-statement/binding contracts before values. Complete Design/host namespace,currentness,resources/full integration/platform/physical and D334/D156/D223/PLANNING.5 owned. D339 proof untouched.
+0592 admits complete S/E/S+E+1 retained edge/offset records before fallible vectors. Every actual Derived name use keeps source endpoints,original metadata/span and canonical adapter;repeated/untaken uses stay distinct. Reuse original source index,no source/state/value clone. Empty relation charges its sentinel.
+Native3/source-proof6/doc3(E0277/E0616/lifetime)/scoped lint/fmt pass. Both families,all four non-Derived states/reserved roles,constant/unused vertices,original pointers/spans and quotas retained. Cyclic/self relations are prospective data,not acyclic or executed results. No fake loader token.
+Book97/325/1629/2861/glossary310/9/158/0 pass;[whole0591 initial source foundation](docs/history/stitchcad-devnotes-part750.md) retains four exact Git spans/live ids. Semantic validation title/routes/example/API map align. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Existing rules;promotion declined.
+Next .3.3.2 bounded iterative cycle admission over immutable relation. Real ordered binding .3.3.3,geometry/operation graphs,currentness,resources/full integration/platform/physical and D334/D156/D223/PLANNING.5 owned. D339 proof untouched. Full PNT;commit each slice,push400 after gates. No execution order chosen.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

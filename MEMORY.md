@@ -1,15 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3:complete original dependency/cycle admission and actual
-  source→ordered-statement/binding contract before values. Preserve real declaration order/let
-  rounding;initial source proofs grant no acyclic/current Design/host namespace/execution proof.
-- Source proofs0591 ready:complete S/N/T/conservative S+2N retained admission;actual initial
-  expression proofs,used canonical joins and all Derived target kinds. Reuse private source index;
-  no value/state clone,caller annotation,fake header or language diagnostic. Native6/source4/
-  doc3/scoped lint/fmt/book97/320/1629/2860/glossary0 pass. Whole0590 in749/four spans/live ids.
-- Normalized/initial-source foundation .3.2 closed0591 only;full graph/runtime remains .3.3.
-  New book formula-source-proofs.md;recipe-inputs578L/35966B. Formula(id) retains parameter meaning.
-  Preserve D339 target/book_search_capture_0586_book_final at its boundary;never overwrite captures.
+- Next G1-SLICE.5e.2.5.derived.3.3.2:bounded iterative cycle admission over actual canonical
+  Derived dependencies. Read source_dependencies.rs;reuse immutable edges/offsets and actual
+  source/name/span witnesses. Admit complete scratch before work;no recursion/value/execution order.
+- Dependencies0592 ready:all original Derived uses,including repeated/untaken,consumer→supplier
+  actual source proofs/canonical adapters. Complete S/E/S+E+1 precharge before vectors;empty costs
+  one sentinel. Native3/source-proof6/doc3/scoped lint/fmt/book97/325/1629/2861/glossary0 pass.
+  Cyclic/self relations deliberately retained for next required proof;no graph execution certified.
+- Whole0591/.3.2 foundation retained750/four Git spans/all live ids;source-validation book207L/
+  14077B. Actual ordered binding .3.3.3,geometry/operation graphs/currentness/resources still open.
+  Formula(id) keeps parameter meaning. Preserve D339 target/book_search_capture_0586_book_final.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.

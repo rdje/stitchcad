@@ -118,6 +118,12 @@ pub use checked_sources::{
     FormulaSourceCheckRefusal,
 };
 
+mod source_dependencies;
+pub use source_dependencies::{
+    FormulaSourceDependencies, FormulaSourceDependency, FormulaSourceDependencyError,
+    FormulaSourceDependencyLimits, FormulaSourceDependencyRefusal,
+};
+
 mod semantic;
 pub use semantic::{
     FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName, FormulaSizeName,

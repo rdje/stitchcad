@@ -205,68 +205,78 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0589 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part748.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.2`
   Status: `done`
-  Goal: actual normalized/static source proof phases under complete explicit allowances before
-  namespace/target-kind/dependency/cycle admission. Preserve real declaration-order and binding
-  semantics;source existence/normalization adds no fictitious let or rounding boundary.
-  Closure0591: normalized/initial-scope source foundation only;actual source/target witnesses
-  available. Complete containing Design namespace,graph/cycle/binding/runtime remain .3.3 and
-  existing integration owners. No whole Derived evaluator or resource/platform proof is closed.
+  Goal:0591 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part750.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.2.1`
   Status: `done`
-  Goal:0590 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part749.md).
+  Goal:0591 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part750.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.2.2`
   Status: `done`
-  Goal: complete original source expression kind proofs under the supplied immutable initial
-  namespace,actual used canonical dependency joins and each actual Derived consumer's declared
-  kind. Admit complete S/N/T/conservative S+2N retained proof records before outer allocation/
-  checking;S sources,N normalized nodes,T actual Derived targets. Retain original parser-owned
-  source/span/proof/target witnesses;do not manufacture a statement/header/name or language error.
-  Existing checked-expression factory and canonical join are authoritative. Preserve initial-scope
-  metadata lifetimes without owning a namespace/state clone;all branches/unused sources checked.
-  Every expression kind pass precedes canonical dependency joins,then all target-kind checks;
-  no accepted prefix. Geometry/reserved metadata supplies kinds,not current providers or values.
-  Actual ordered-recipe/let binding,complete dependency/cycle/current Design/resource/runtime
-  integration remains .3.3 and later owners. No new rounding/evaluation-order semantics.
-  Read checked.rs/namespace.rs/source adapters and normative static/order contracts before code.
-  Focused native/compiler/Clippy/book checks,then close this scoped static phase and commit.
-  Completion0591: complete supplied-initial-scope source proofs/canonical joins/target kinds.
-  - [x] REPRODUCE / ISSUE: complete normalized sources need real expression proofs,actual used
-    canonical joins and each consumer's kind before graph/value work. Caller annotations or a
-    valid expression prefix cannot certify the complete original source/target population.
-  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'dependencies: Vec|certificates: Vec|pub fn check_kinds'
-    checked.rs → existing actual factory node/name certificates,rc=0. Full checked factory,
-    namespace initial-source exclusion,canonical join/scalar kind mappings and normative static/
-    order contracts read. Retained proof is S+2N conservative;actual metadata owners stay borrowed.
-  - [x] FIX: complete explicit S/N/T/retained quotas precede outer reservation;all original
-    expression proofs,then all used canonical joins,then all actual target kinds. Reuse original
-    private source index without another lookup/target vector. Typed original causes/consumer/
-    spans retained;no accepted prefix,fictitious header,value read or new language diagnostic.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_checked_sources_contract
-    -- --nocapture →six pass,rc=0. All six general kinds/dedicated Length,reverse source-id order,
-    exact proof/arena/source pointers,Unknown/reserved metadata after namespace map drop,late
-    unused/untaken errors,equal external-owner refusal,actual shared-source kind mismatch and
-    complete quota precedence/empty scope pass. No context provider or numeric value is supplied.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_sources_contract -- --nocapture
-    →four pass,rc=0,including independent256-sequence duplicate scan/original buffer/index rules.
-    cargo test -p sc-core --doc recipe::checked_sources -- --nocapture →three pass,actual
-    E0277/E0616/lifetime guards,rc=0. Scoped strict lib/new-target Clippy/changed rustfmt/diff
-    pass,rc=0. Positive book97/320/1629/2860/glossary310/9/158/0 and749 four exact Git spans/all
-    prior live ids/order pass,rc=0. Existing expression algorithms unchanged;no broad campaign,
-    graph/runtime/backend/platform or complete Design/host namespace certification claimed.
-  - [x] LOCKSTEP: new semantic source-proof annex/example/refusals/limits and SUMMARY/topic/API
-    routes,source-input boundaries,task/index/MEM/DEV/CHANGE/LIVE align. Parent .3.2 closes only
-    normalized/initial-scope source proof foundation. Next .3.3 complete dependencies/cycle and
-    real ordered-statement/binding contract before values. G1 6/18/G0 unapproved;full/hosted79bd6f6a
-    SHA-scoped. Full integration/physical and D334/D156/D223/PLANNING.5 owned;D339 proof untouched.
-    promotion: declined (existing actual expression/canonical proofs,explicit retained admission,source index and borrowed metadata rules applied;no new language or authority policy).
+  Goal:0591 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part750.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3`
+  Status: `in_progress`
+  Goal: complete original canonical Derived-source dependency/cycle admission and actual authored
+  source→ordered-statement/binding contract before values. Source dependency relation can be
+  admitted without choosing execution order or inventing let/rounding semantics. Actual geometry/
+  operation/recipe currentness and full graph/runtime/resource/platform integration stay owned.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.1`
+  Status: `done`
+  Goal: prepare complete actual canonical Derived-source dependencies from accepted initial source
+  proofs. Every original repeated/untaken name use backed by an actual Derived canonical record
+  becomes a distinct consumer-expression→supplier-source edge. Keep exact source endpoints,
+  canonical adapter/metadata,original name use/span and all unused source vertices;no value reads.
+  Admit complete source/edge counts and S+E+1 retained edge/offset records before allocation.
+  Reuse original source index;one grouped edge vector/one S+1 offset vector,no cloned state/index.
+  Authored/Unknown/reserved/geometry metadata are not invented Derived edges. This is prospective
+  canonical Derived relation only,not actual reads,acyclic proof,whole operation graph,currentness,
+  recipe order,rounding or execution. Preserve original typed allocation/quota causes/no prefix.
+  Read real adapters/state/ontology/static proof contracts first;focused native/compiler/lint/book
+  checks then commit. Cycle proof .2 consumes this exact immutable relation without rebuilding it.
+  Completion0592: complete prospective canonical Derived dependencies available;cycle proof .2.
+  - [x] REPRODUCE / ISSUE: actual source proofs retain all name dependencies but supply no grouped
+    original canonical Derived relation for cycle admission. Source/target annotations or a
+    processed prefix cannot substitute complete original edge/endpoints/retained admission.
+  - [x] ROOT CAUSE (WHY + WHERE): source adapter/state interfaces and ontology §3.1/formula §4.1
+    read;rg -n 'prepare_dependencies|checked_add|try_reserve_exact|Derived|fn derived'
+    source_dependencies.rs → actual exhaustive state/family joins and complete precharge,rc=0.
+    Existing source proof already validates canonical ownership;same immutable adapter supplies
+    sole Derived formula ids. Source/provenance fields and non-Derived states are not such edges.
+  - [x] FIX: count all sources/original Derived name uses and S+E+1 records before either fallible
+    vector reservation. Reuse original index;store grouped original edges and S+1 offsets. Views
+    lend actual consumer/supplier proofs,name uses/spans and canonical certificates without state
+    clone,value read or fabricated graph edge. Original allocation causes retained;no prefix.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_source_dependencies_contract
+    -- --nocapture →three pass,rc=0,including final next_back assertion. Actual dedicated/general
+    adapters/endpoints/pointers,distinct repeated/untaken spans,all four non-Derived states/
+    reserved roles,unused/constant vertices and unchanged canonical data retained. Five sources/
+    four edges reserve10 records;cyclic/self relation3/3 reserves7;empty retains one sentinel.
+    Complete source/edge/retained quota precedence verified before allocation;no acyclicity claimed.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_source_dependencies_contract --test
+    formula_checked_sources_contract -- --nocapture →three/six pass,rc=0. Actual source kind/
+    canonical/consumer/lifetime behavior preserved. cargo test -p sc-core --doc
+    recipe::source_dependencies -- --nocapture →three pass,actual E0277/E0616/lifetime guards,
+    rc=0. Scoped strict lib/new-target Clippy/changed rustfmt/diff pass,rc=0. Positive book97/325/
+    1629/2861/glossary310/9/158/0 and750 four exact Git spans/all prior live ids/order pass,rc=0.
+    No broad graph/runtime/backend/platform campaign or source/value/state/lookup clone claimed.
+  - [x] LOCKSTEP: semantic source-validation chapter/title/routes/API/example and dependency/
+    allocation/cycle boundaries,task/index/MEM/DEV/CHANGE/LIVE align. Next .3.3.2 bounded iterative
+    cycle admission over this exact immutable canonical Derived relation;actual ordered binding
+    .3.3.3/full geometry-operation graph/resources/currentness/runtime remain open. G1 6/18/G0
+    unapproved;full/hosted79bd6f6a SHA-scoped. D334/D156/D223/PLANNING.5 owned;D339 proof untouched.
+    promotion: declined (existing actual canonical/source certificates,complete retained admission and original occurrence preservation applied;no new language or authority policy).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.2`
   Status: `pending`
-  Goal: recover and implement complete original dependency/cycle admission and the actual authored
-  source→ordered-statement/binding contract before runtime. Reconcile ontology/formula §4.1/§4.2
-  with actual source owners and whole-recipe proof;no recursive forward-let reordering,fictitious
-  header or extra rounding. All static dependencies/branches/resources before values. Select safe
-  graph/actual binding units after tool-backed contract recovery;full currentness/load/replay and
-  resource/backend/platform/physical verification retain existing integration owners.
+  Goal: complete bounded iterative cycle admission of actual canonical Derived dependencies,
+  including all unused vertices/untaken/repeated edges. Explicit full scratch before checking;
+  concrete original edge/span cycle witness on refusal,no accepted prefix or invented loader
+  token/context. Reuse actual edge/offset owner;no Rust recursion,cloned graph,value reads or
+  execution order. Whole geometry/operation graph and actual binding/currentness remain separate.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3`
+  Status: `pending`
+  Goal: reconcile actual source owners and whole-recipe proofs with normative §4.1/§4.2 before
+  execution:the formula graph induced by ordered statements,actual prior lets and once-only
+  binding rounding. Source dependency admission chooses no execution order and grants no fictitious
+  let/header. Recover or define actual authored binding joins without reordering forward lets or
+  adding rounding points. Keep full integration/load/replay/resource/platform/physical owners.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

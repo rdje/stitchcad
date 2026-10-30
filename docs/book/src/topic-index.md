@@ -43,7 +43,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Full-text book search](annexes/book-search.md)
 - [Trigonometric threshold certificates](annexes/formula-trig-certificates.md)
 - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
-- [Formula source kind proofs and actual consumer checks](annexes/formula-source-proofs.md)
+- [Formula source validation and actual consumers](annexes/formula-source-proofs.md)
 - [Syntax milestone and the route to execution](annexes/formula-recipe-inputs.md#syntax-milestone-and-the-route-to-execution)
 - [Recipe input/identity proof and remaining owners](annexes/formula-recipe-inputs.md#coupled-input-and-identity-review)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
