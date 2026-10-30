@@ -363,7 +363,7 @@ charged series terms. There is no default policy or fixed maximum precision. An 
 execution budget produces a separate resource refusal carrying the original operand,selected
 limits,unit,maximum,prior reservation/work and next scheduled demand. It supplies no approximate
 value or formula-language precision/domain diagnostic. Valid mathematical inputs stay valid.
-Native preparation/value/source execution follows below;Design policies are available;combined tangent acceptance follows.
+Native preparation/value/source execution follows below;Design policies are available;scoped combined24-row acceptance passes.
 
 After the existing actual-kind check,reserve the complete156-bit folding extent. Exact zero,
 signed unit and pole cases need no approximation terms. Other cases start at B=128 to represent the2^-128 denominator floor,and double
@@ -443,7 +443,7 @@ Focused native checks cover actual kind priority,folding-before-endpoint/pole pr
 quotas,atomic first-iteration admission and unchanged full128-bit operands. A private test compares
 actual folded signs,reciprocal choice and exact cases with873 independent signed centered residues.
 Independent combined native value/resource acceptance is recorded below;
-Expression/source/recipe policies are available;Design policies are available;combined acceptance remains owned.
+Expression/source/recipe policies are available;Design policies are available;scoped combined24-row acceptance passes.
 
 ## Certified native tangent value execution
 
@@ -496,7 +496,7 @@ bounded tan30 rounding counterexample,tiny full128-bit inputs,actual512-bit midp
 later bit/work/priority refusals,policy-independent successful values and exact148-bit width.
 The earlier preparation/folding contracts remain separate. Source-bearing supplied-value calls
 are implemented below,followed by independent combined native acceptance. Expression/source/recipe policies are available;
-Design policies are available;combined tangent acceptance follows. No full CI,platform,physical or production approval
+Design policies are available;scoped combined24-row acceptance passes. No full CI,platform,physical or production approval
 follows these scoped worker checks.
 
 ## Sourced native tangent calls
@@ -543,8 +543,8 @@ Five focused tests construct real upstream round_to and cos calls,without manual
 sources. They check exact zero/unit Tan contributions through cancellation,false storage/read and
 T1 refusal/T2 source admission;actual negative tan30;Boolean/prior-tan kind priority;original
 fold/pole failures;and late native resource/148-bit width failures with exact original source-chain
-identity. Combined independent native acceptance is recorded below. Expression/source/recipe/Design policies are available;combined
-acceptance remains .5e.2.4.integration.tangent.
+identity. Combined independent native acceptance is recorded below. Expression/source/recipe/Design policies are available;scoped
+combined24-row acceptance passes.
 
 ## Independent native tangent acceptance
 
@@ -582,5 +582,5 @@ has explicit read-only/stdout inventory ownership. Full producer locality review
 This closes scoped native tangent implementation and finite combined acceptance. The rigorous
 admitted strategy supplies result certification;these139 rows are not exhaustive128-bit input or
 cross-platform coverage. The coupled irrational review remains .5d.4. Expression/source/
-recipe/Design policies are available;combined acceptance remains .5e.2.4.integration.tangent. Full heap/CPU,
+recipe/Design policies are available;scoped combined24-row acceptance passes. Full heap/CPU,
 provider,platform,replay,physical and production approval retain their separate owners.

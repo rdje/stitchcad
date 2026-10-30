@@ -91,8 +91,9 @@ def scalar(value):
     return ':'.join((value.kind, payload, ','.join(sorted(value.sources)) or '-'))
 
 
-def evaluate_case(sources, recipe, intended):
+def evaluate_case(sources, recipe, intended, *, configure=None, extra_failures=()):
     namespace, reference = CONTRACT['load_reference']()
+    failures = (namespace['FErr'], *extra_failures)
     canonical = {name: dict(kind=kind, origin='parameter', state='derived', value=None)
                  for name, family, kind, identity, supplier in DECLARATIONS}
     canonical['flag'] = dict(kind='boolean', origin='parameter', state='unknown', value=None)
@@ -123,7 +124,7 @@ def evaluate_case(sources, recipe, intended):
         active.append(identity)
         try:
             value = reference.evaluate(trees[identity], canonical)
-        except namespace['FErr']:
+        except failures:
             if failed is None:
                 failed = identity
             raise
@@ -157,11 +158,13 @@ def evaluate_case(sources, recipe, intended):
         storage_inputs.append(value)
         return original_stored(value, operation)
     reference.value_of_name, reference.stored = read, stored
+    if configure is not None:
+        configure(namespace, reference, lambda: active[-1] if active else None)
     outcomes, error = ['ok'], None
     for ordinal, (start, end, checked) in enumerate(plan, 1):
         try:
             returned = reference.statement(recipe[start:end], environment)
-        except namespace['FErr'] as refusal:
+        except failures as refusal:
             error = '%d:%s:%s:%s' % (ordinal, checked[1], failed or 'recipe', refusal.token)
             assert error == intended, (error, intended, recipe)
             break

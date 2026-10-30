@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — select actual Design tangent policies before native execution
+## _(2026-10-30 UTC)_ — independently accept actual paired tangent policy integration
 
-0622 adds plan_inputs_with_tangent_limits at the actual same-root checked-proof join. Independent supplier/recipe per-call policies survive foreign-root refusal and accepted private inputs. Legacy joins keep absent policies;each native factory receives only its own actual selection before values.
-Exact graph identity,whole recipe quota,source preparation and recipe preparation order remains. Actual evaluate still re-admits complete held content/currentness before runtime buffers or values. Original inputs retain both policies through fresh Admission and native Execution errors;no model/host clone is required.
-New Design6/existing13/doc6/scoped strict lint/fmt pass;23 independent Design cases/all8841B exact. Cases preserve unbound roots/once-only storage,call flags,lazy unused poles,distinct smaller-policy failures and fresh non-Clone host rejection before native pole. A test-only accessor was corrected to requested().
-Book98/374/1652/2919/glossary0/history781 four spans/IDs/map/diff pass. [Whole0621](docs/history/stitchcad-devnotes-part781.md) retained. LIVE actual Design Tan policies;G1 6/18/G0 unapproved unchanged. Next independent combined paired acceptance;full CI/platform/physical/production remain owned.
+0623 composes actual book syntax/kind/recursive source execution/original storage with independent exact Fraction Tan and separate resource exceptions. Original reference hooks remain optional. No Rust/native/frozen expected input or canonical Derived seed is supplied;both actual native and Design modes run.
+All24 rows/10 successes/14 refusals match48 complete mode comparisons,including roots,flags,once-only storage,ordinals,reads and exact resource input/progress/demand. Near-midpoint zero/one,first/later quota failure,113-bit native success/storage refusal and148-bit width pass. All8748B regenerate exactly.
+New2/old2/expression8/source6/recipe8/Design6=32 selected tests and scoped strict lint/fmt pass;old23 Design cases/all8841B remain exact. The older budget model's early width-range result is restricted by an actual input/policy guard to one generous witness;it cannot infer smaller-policy width admission.
+Book98/374/1653/2921/glossary0/history782/IDs/map/diff pass;producer347/34042calls/file plans234/89owners/38groups/15refusals/12reds pass,no runtime locality signoff. [Whole0622](docs/history/stitchcad-devnotes-part782.md) retained. LIVE paired24;G1 6/18/G0 unapproved. Next coupled .5d.4.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

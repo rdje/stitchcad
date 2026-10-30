@@ -318,4 +318,4 @@ whole admission priority,false storage/T1/T2,once-only fractions,assertion failu
 native resources,wide native success/storage refusal,real source suspension with differing policies,
 and paired source/foreign-owner failures. The common fixture builds only real canonical/source/
 namespace/dependency/acyclic proofs;it supplies no computed values. Actual Design policy
-selection is available;independent combined tangent acceptance remains separately owned.
+selection and independent combined24-row tangent acceptance are available.

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0622 — select actual Design tangent policies before native execution
+## STITCHCAD-G1-0623 — independently accept actual paired tangent policy integration
 
-- Select independent supplier and recipe per-call policies at the actual checked-proof join,retaining both even on foreign-root refusal. Keep original graph/quota/currentness order;fresh admission precedes native buffers/values and every result/error retains original inputs and policies.
-- New Design6/existing13/doc6/scoped strict lint/fmt pass. Book98/374/1652/2919/glossary0/history781/IDs/map/diff pass. LIVE actual Design Tan policies;G1 6/18/G0 unapproved unchanged. Next independent combined paired acceptance;full verification remains owned.
+- Compare24 independent complete paired recipes through both native and actual Design entry points:48 mode comparisons/10 successes/14 first refusals with original roots,flags,storage,ordinals,reads and exact mathematical/resource causes. Regenerate all8748 fixture bytes independently.
+- All32 selected tests/scoped lint/fmt pass;old23 Design cases/all8841B remain exact. Book98/374/1653/2921/glossary0/history782/IDs/map/diff and producer/file-plan checks pass. LIVE paired24 acceptance;G1 6/18/G0 unapproved. Next coupled .5d.4;platform/full resources/physical/release stay owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -20,7 +20,7 @@ fn context() -> FormulaScalarExecutionContext<'static> {
         FormulaSizeContext::empty(),
     )
 }
-fn with_checked<H: DesignResourceSource + DesignFormulaHost + 'static>(
+pub(super) fn with_checked<H: DesignResourceSource + DesignFormulaHost + 'static>(
     root: &DesignInputs<H>,
     inspect: impl for<'a> FnOnce(
         &'a DesignCheckedFormulaSources<'a, H>,

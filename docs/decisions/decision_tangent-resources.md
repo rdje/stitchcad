@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-30`
-- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621/Design0622;paired/platform pending
+- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621/Design0622;paired24 acceptance0623;platform pending
 - **Owner / source:** engineer under the director's delegated implementation authority;
   G1-SLICE.5d.1.2.2.2.d.2.2.2, implementation G1-SLICE.5d.3.2.2
 
@@ -148,7 +148,7 @@ limits survive plan/result and every preparation/runtime error,including earlier
 Actual mathematical/resource causes retain original operand/progress and the failing proof node.
 Existing engine error-witness boxing remains outside machine/native quotas;no extra native box
 or diagnostic allocation during allocator failure is introduced. Aggregate heap/CPU and real
-Design policies are available;combined tangent acceptance retains its owner.
+Design policies are available;scoped combined24-row acceptance passes.
 
 ## Actual source graph policies0620
 
@@ -158,7 +158,7 @@ win before missing-policy/capability errors. Every prepared expression and graph
 retains the same selected policy. Actual lazy suppliers remain unbound and finish once;no cache
 or edge introduces binding or a supplied computed result. Existing source-backed recipes can
 read configured Tan suppliers;graph policy also survives early ownership/preparation errors.
-Direct recipe and Design policies are available;combined acceptance remains separately owned.
+Direct recipe and Design policies are available;scoped combined24-row acceptance passes.
 
 ## Actual ordered recipe policies0621
 
@@ -178,4 +178,13 @@ private inputs retain both policies across exact graph identity,recipe/source qu
 native preparation and fresh actual held-content/currentness admission before values. Every
 native plan receives only its own policy. Result and admission/execution errors keep original
 inputs;later native errors also keep the fresh scope and both native policies. No authored
-state,source cache,value or host Clone/Debug capability is supplied. Combined acceptance follows.
+state,source cache,value or host Clone/Debug capability is supplied. Scoped combined acceptance follows.
+
+## Independent combined acceptance0623
+
+The actual book parser/recursive source executor/original storage and independent exact Fraction
+Tan oracle predict24 complete paired recipes with10 successes/14 first refusals. Separate resource
+exceptions retain selected demand/progress without language codes. Both native paired and actual
+Design modes match all48 complete outcomes/first failures,roots,flags,ordinals and read witnesses.
+All8748 frozen bytes regenerate independently;original23-row Design reference remains exact.
+This closes scoped policy integration,not coupled irrational/platform/full-resource/production proof.

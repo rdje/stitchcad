@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.integration.tangent.acceptance:independent combined paired Tan cases. Expression0619/source0620/recipe0621/Design0622 implemented. Read original139-row native oracle,
-  scalar Design23-row reference and actual AST/source/recipe/Design watcher contracts. Add real combined policy/error/flag/read/storage/currentness evidence;no supplied computed value/cache.
-- Design plan_inputs_with_tangent_limits joins actual checked owners with two independent per-call
-  policies before root identity admission. Both foreign-root errors and accepted private inputs
-  retain selections. prepare_scalar keeps exact graph/recipe quota/source/recipe order and invokes
-  each native factory with its own policy. Fresh complete held-content/currentness still precedes
-  runtime buffers/values;results and admission/native errors retain original inputs/policies/scope.
-- New Design6/existing13/doc6/scoped strict lint/fmt pass;23 independent Design cases/all8841B exact.
-  Actual unbound11547/20000 micrometre source binds1 once/repeated2;unused zero-budget poles stay
-  unread and non-Clone host rejection wins before native pole. Book98/374/1652/2919,glossary0/
-  history781/IDs/map/diff pass. LIVE actual Design Tan policies;G1 6/18/G0 unapproved unchanged.
-  Full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/numerical/cleanup proofs;
-  never rerun old transactions. Full PNT;commit each,push400. Coupled irrational/platform/full
-  resources/provider/replay/physical/release remain separately owned;no production verdict.
+- Next G1-SLICE.5d.4:coupled complete irrational proof/error/provenance review. Read canonical numerical contract,all implemented kernel/admission/source records and relevant book sections;
+  split actual scoped proof/platform/fault-control work before changes. No general certificate yet.
+- Scoped tangent policy integration .5e.2.4.integration.tangent closes0623 after expression0619,
+  source0620,recipe0621,Design0622 and independent24-row/10success/14refusal paired acceptance.
+  Both native/Design modes match48 complete outputs/first failures,roots,flags,storage,ordinals,
+  reads and exact resource metadata. All8748B regenerate;original23 Design cases/all8841B unchanged.
+- New2/old2/expression8/source6/recipe8/Design6=32 selected tests/scoped strict lint/fmt pass.
+  Book98/374/1653/2921,glossary0/history782/IDs/map/diff pass. Producer347/34042calls and focused
+  file plans234/89owners/38groups/15refusals/12reds pass;transitive/runtime locality still owned.
+  Exact Fraction Tan is independent of native Machin. Width resource modeling is restricted to
+  the actual fixed generously admitted witness;never infer a smaller-policy width result.
+- LIVE paired24 acceptance passes;G1 6/18/G0 unapproved unchanged;full local/hosted79bd6f6a
+  SHA-scoped. Protect original archive/search/numerical/cleanup proofs;never rerun old transactions.
+  Full PNT;commit each,push400. Complete resources/provider/replay/platform/physical/release open.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

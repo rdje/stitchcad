@@ -419,3 +419,6 @@ fn actual_independent_book_reference_reproduces_all_frozen_design_recipe_bytes()
         "complete original source/recipe/result/read/refusal bytes"
     );
 }
+
+#[path = "design_formula_tangent_oracle.rs"]
+mod tangent;

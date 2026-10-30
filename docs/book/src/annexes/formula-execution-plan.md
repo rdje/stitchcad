@@ -411,7 +411,7 @@ are also available. D337 corrected this plan's stale pre0288 inverse-availabilit
 [Native tangent values](formula-trig-certificates.md#certified-native-tangent-value-execution)
 now use the admitted bounded adaptive strategy with explicit bit/work quotas. Supplied-value
 wrappers and explicit-policy standalone expression execution are available. Source-graph policies
-and recipe/Design policies are available. Independent combined tangent acceptance remains owned.
+and recipe/Design policies are available. Scoped independent combined tangent acceptance is available below.
 Missing policy is a typed preparation
 refusal before values,not a language diagnostic or placeholder result.
 Resource refusal returns no value or invented numerical-domain cause. Full runtime acceptance
@@ -494,7 +494,7 @@ inventory identity,complete missing-policy precedence,per-call budgets,selected-
 T1/T2 behavior,actual poles/early and later resources/exact width,and unrelated failure policy
 retention. Existing scalar expression/reference and preparation checks remain separately watched.
 Source graphs,direct/source-backed recipes and actual Design factories retain their own explicit
-policies. Independent combined paired tangent acceptance follows implementation.
+policies. Scoped independent combined paired tangent acceptance is available below.
 
 ## Explicit tangent policies in actual Design plans
 
@@ -552,5 +552,29 @@ native policy scopes. No earlier accepted source/statement prefix is published o
 
 Six focused actual Design tests cover foreign roots/graphs,quota priority,independent policies,
 unbound roots versus once-only storage,unused zero-budget poles,original source/recipe resource
-refusals and fresh host rejection. Independent combined tangent acceptance is separately owned;
+refusals and fresh host rejection. Independent combined tangent acceptance follows below;
 full-family resources,provider/heap/CPU,replay,platform,physical and production approval remain open.
+
+## Independent combined tangent acceptance
+
+The tracked tangent_design_recipe_oracle.py combines the actual book parser,kind checks,
+recursive lazy Derived execution and original recipe storage with the independent exact Fraction
+Tan oracle. That oracle uses atan(1/2)+atan(1/3) and direct factorial bounds,distinct from native
+Machin/fixed-point recurrences. The separate exact budget model predicts selected refusals;
+resource exceptions supply no computed value or formula-language diagnostic. No Rust,native
+output or frozen expected fixture is an input. Original canonical Derived states remain unvalued.
+
+All24 cases run through actual native paired and private Design entry points:48 complete mode
+comparisons,10 successful recipes and14 first refusals. Watchers compare original roots,values,
+flags,once-only storage,completion ordinals and source/recipe reads. Failures retain the actual
+statement/deepest supplier,typed numerical cause or exact resource input,precision,prior work/
+reservation,selected maximum and next demand. Empty/unused poles,signed turns,nested calls,
+false stored flags,T1/T2,left/right/header order,512-bit midpoint refinement,first/later bit/work
+refusals,finite113-bit native success/storage refusal and exact148-bit mathematical width occur.
+Both actual policies survive;larger sufficient policies preserve the same complete results.
+
+The complete8748-byte fixture SHA256 is
+3133386908b679aa6b35f39b8a17b43b27c4ed6e6352c4fdef660de473dd24e3;
+an independent watcher regenerates every byte. The old23-row Design reference is unchanged.
+This closes scoped tangent AST/source/recipe/Design policy integration. The coupled irrational
+review .5d.4,complete resource/provider/replay,platform/physical and production approval remain open.

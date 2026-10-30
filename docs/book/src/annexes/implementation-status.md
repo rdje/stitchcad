@@ -51,7 +51,8 @@ requires the named contracts and later proof owners.
 | Tangent expression policy | §4.1; G1 | sc-core recipe; G1-SLICE.5e.2.4.integration.tangent.expression | [Actual plans/calls8](formula-execution-plan.md#explicit-tangent-policies-in-actual-scalar-expressions); source/recipe/Design policies available |
 | Tangent source policies | §4.1; G1 | sc-core recipe; G1-SLICE.5e.2.4.integration.tangent.sources | [Actual source graphs6](formula-source-proofs.md#explicit-tangent-policies-in-source-graphs); recipe/Design policies available |
 | Tangent recipe policies | §4.1; G1 | sc-core recipe; G1-SLICE.5e.2.4.integration.tangent.recipes | [Actual ordered/pair calls8](formula-recipe-execution.md#explicit-tangent-policies-in-ordered-recipes); Design policies available |
-| Tangent Design policies | §4.1; G1 | sc-core Design; G1-SLICE.5e.2.4.integration.tangent.design | [Actual private joins/execution6](formula-execution-plan.md#explicit-tangent-policies-in-actual-design-plans); paired acceptance follows |
+| Tangent Design policies | §4.1; G1 | sc-core Design; G1-SLICE.5e.2.4.integration.tangent.design | [Actual private joins/execution6](formula-execution-plan.md#explicit-tangent-policies-in-actual-design-plans); paired24 acceptance available |
+| Combined tangent acceptance | §4.1/§4.2; G1 | sc-core Design/native; G1-SLICE.5e.2.4.integration.tangent.acceptance | [Independent24 rows/both modes](formula-execution-plan.md#independent-combined-tangent-acceptance); coupled/platform remain |
 | Formula wanted-kind catalogs | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.1 | [Typed expected rules](formula-wanted-signatures.md) |
 | Canonical length authored-read adapter | §2/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.1 | [Source/state reads](formula-runtime-validation.md#canonical-length-authored-reads); full execution follows |
 | Canonical scalar state/value content | §2/§4.1; G1 | sc-core value; G1-SLICE.5e.1.2 | [Scalar content](../spec/measurement-inputs.md#canonical-general-scalar-content); registry/evaluation follows |
@@ -90,7 +91,7 @@ reviewed at .4d.2; actual profile application, geometry, global truth and approv
 
 The [trig threshold certificates](formula-trig-certificates.md) cover all1M forward and45M inverse
 targets with exact full readers. Sin/cos and atan/atan2 value kernels are implemented;
-explicit-resource tangent values are implemented;139-row combined native acceptance passes;standalone policies are available;source policies are available;recipe policies are available;Design policies are available;paired acceptance and platform review remain open.
+explicit-resource tangent values are implemented;139-row combined native acceptance passes;standalone policies are available;source policies are available;recipe policies are available;Design policies are available;paired24 acceptance passes;platform review remains open.
 
 Individual named axes with explicit ordered values and canonical source/state borrows are available
 ([contract](../spec/size-axes.md#executable-individual-axes--g1-slice4c21)). [Complete member coordinates](../spec/size-axes.md#complete-axismember-points--g1-slice4c22)
