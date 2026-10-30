@@ -120,8 +120,10 @@ pub use checked_sources::{
 
 mod source_dependencies;
 pub use source_dependencies::{
-    FormulaSourceDependencies, FormulaSourceDependency, FormulaSourceDependencyError,
-    FormulaSourceDependencyLimits, FormulaSourceDependencyRefusal,
+    FormulaAcyclicSourceDependencies, FormulaSourceCycle, FormulaSourceCycleError,
+    FormulaSourceCycleLimits, FormulaSourceCycleRefusal, FormulaSourceDependencies,
+    FormulaSourceDependency, FormulaSourceDependencyError, FormulaSourceDependencyLimits,
+    FormulaSourceDependencyRefusal,
 };
 
 mod semantic;

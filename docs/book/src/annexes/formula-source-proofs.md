@@ -2,8 +2,8 @@
 
 > **Status:** complete initial-scope expression proofs,actual canonical dependency joins and Derived
 > consumer-kind checks and prospective canonical Derived dependencies are implemented with focused
-> verification. Cycle admission,actual ordered-let binding,full resource/currentness and execution
-> integration remain pending.
+> verification. Bounded canonical Derived cycle admission is available;actual ordered-let binding,
+> full resource/currentness and execution integration remain pending.
 
 Start with the [original source owners and normalized collections](formula-recipe-inputs.md#explicit-formula-source-owners).
 FormulaNormalizedSources.check_sources(&namespace, limits) checks the complete supplied source
@@ -124,7 +124,7 @@ This phase deliberately retains cyclic relations for required cycle admission. F
 reading b and9002 reading a,with actual Derived bindings a→9001 and b→9002,the relation contains
 both9001→9002 and9002→9001. An unused self-reference remains present too. Preparing that relation
 supplies no acyclic proof,loader formula_cycle context,execution order,actual let/binding/rounding,
-currentness or computed result. Complete cycle checking before values remains .derived.3.3.2;
+currentness or computed result. Separate cycle admission below is required before values;
 actual authored binding and full graph/runtime integration retain their own tasks.
 
 Three native contracts check both canonical families,actual pointer/endpoints/spans,repeated and
@@ -132,6 +132,72 @@ untaken uses,all four non-Derived states/reserved inputs,unused/constant vertice
 cyclic/self relations and the empty terminal offset. Six existing source-proof contracts remain
 green. Three compiler guards reject default limits,private edge mutation and source-proof lifetime
 escape. Broader graph/runtime/platform acceptance remains deferred.
+
+## Admit the complete canonical Derived relation as acyclic
+
+FormulaSourceDependencies.admit_acyclic(limits) checks every actual source and original outgoing
+edge over the same immutable relation. FormulaSourceCycleLimits selects a complete source allowance
+and 2S logical scratch records:one color and one active frame per source. Source quota,checked
+scratch arithmetic and complete workspace allowance precede both full fallible reservations.
+No default limits exist. An empty relation needs zero cycle scratch;its previously retained offset
+sentinel still belongs to dependency preparation.
+
+| Public API | Meaning |
+| --- | --- |
+| `FormulaAcyclicSourceDependencies` | Complete acyclic canonical Derived relation over actual owners |
+| `FormulaSourceCycleLimits` | Explicit source and complete 2S cycle-scratch allowances |
+| `FormulaSourceCycleError` | Actual relation,selected limits and original refusal |
+| `FormulaSourceCycleRefusal` | Source/scratch/overflow/allocation or concrete original cycle |
+| `FormulaSourceCycle` | Actual relation,original active path and closing edge witness |
+
+The walk uses an explicit heap frame stack and white/gray/black colors,with no Rust recursion.
+An edge to a gray active ancestor closes a cycle;an edge to an already finished black vertex is
+valid sharing,such as a diamond. Every source root participates,including an unused component.
+Every repeated or untaken edge participates too. Original source/outgoing occurrence order selects
+the first concrete cycle. No topological or recipe execution order is produced.
+
+On success,the proof borrows exactly the admitted dependency owner;dependencies()/limits()/
+workspace_records() retain its identity and selected/measured scratch allowance. Both scratch
+vectors drop. Private fields prevent substituting a different relation. No source/body/state or
+existing edge/offset vector is cloned. The proof cannot outlive the actual relation it certifies.
+
+On failure,Cycle retains the real active-frame vector and actual closing edge index. It allocates
+no separate path or graph copy. steps() lends original directed edges from the gray ancestor through
+the closing edge;step_count() excludes any earlier traversal prefix. Each step retains actual
+consumer/supplier proofs,canonical adapter and original name/span. For0→1→2→3→1,the witness is
+1→2→3→1,not the unrelated0→1 prefix. A self-reference has one original closing edge.
+
+Cycle refusal returns no accepted acyclic prefix or repaired graph. ColorAllocation and
+FrameAllocation preserve their original TryReserveError inline and in the standard source chain.
+Source/workspace refusals retain complete required/allowed populations. Cycle is a component
+witness,not an invented persisted-loader formula_cycle token or statement ordinal. The actual
+loader must retain its own real context when applying its canonical refusal contract.
+
+These are logical color/frame populations,not allocator bytes/capacity,CPU,existing proof/edge
+storage or the full operation/geometry/runtime envelope. Acyclicity covers the canonical Derived
+relation prepared here;it proves no whole operation graph,current Design/host namespace,provider
+availability,actual ordered let/binding rounding or computed value. No execution result is created.
+The actual authored binding and runtime integration remain .derived.3.3.3 and existing owners.
+
+Four native contracts compare actual verdicts and every returned original cycle edge/span/record
+against nine curated graphs:empty,constant,chain,diamond,repeated edge,self,pair,unused later cycle
+and cycle after a prefix. A separate graphlib.TopologicalSorter producer independently judges the
+tracked cases;the native target invokes it as a fixture watcher. Actual false-branch cycles remain
+visible,complete quota precedence is checked,and the cycle walk for a512-source chain succeeds
+with a64KiB requested thread stack. Fixtures are prepared outside that worker;original endpoints/
+spans remain
+exactly unchanged. Existing three dependency contracts retain original
+edge classification/order and empty-sentinel behavior. Three compiler guards reject default limits,
+private relation substitution and a certificate escaping its actual dependency owner.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/source_cycle_reference.py
+cargo test -p sc-core --test formula_source_cycle_contract
+```
+
+This is focused canonical Derived cycle verification. Full formula language/backend/resource,
+load/replay,current Design/geometry/operation integration,platform identity and physical acceptance
+remain pending. In particular,a successful cycle guard does not evaluate or round a source.
 
 ## Check an actual Derived consumer
 
@@ -160,6 +226,9 @@ let deps = checked.prepare_dependencies(FormulaSourceDependencyLimits::new(1,0,2
     .expect("complete constant-source relation");
 assert_eq!(deps.edges().len(), 0);
 assert_eq!(deps.outgoing(formula).unwrap().len(), 0);
+let acyclic = deps.admit_acyclic(FormulaSourceCycleLimits::new(1,2))
+    .expect("complete acyclic canonical Derived relation");
+assert!(std::ptr::eq(acyclic.dependencies(), &deps));
 assert!(canonical.length(EntityId::from_bits(10)).unwrap().authored_value().is_err());
 # Ok::<(), Box<dyn std::error::Error>>(())
 ```
@@ -201,7 +270,8 @@ default limits,private collection mutation and escaped proof nodes. No full veri
 This certifies sources under the supplied initial namespace,not completeness/currentness of a
 containing Design/host namespace. Geometry metadata supplies no current operation/provider proof.
 Prior lets cannot be caller-seeded into this initial scope. The actual ordered-statement/source
-relationship,binding rounding,complete dependency graph/cycles,load/replay,providers,atomic value
+relationship,binding rounding,full geometry/operation dependency and cycle integration,load/replay,
+providers,atomic value
 publication,full resource/backend bounds and platform/physical verification remain owned by
 G1-SLICE.5e.2.5.derived.3.3 and the existing execution/integration tasks. No cycle or execution
 certificate follows from successful name/kind checking.

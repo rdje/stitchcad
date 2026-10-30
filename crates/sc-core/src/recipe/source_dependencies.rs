@@ -10,6 +10,12 @@ use crate::{
 use core::fmt;
 use std::collections::TryReserveError;
 
+mod cycle;
+pub use cycle::{
+    FormulaAcyclicSourceDependencies, FormulaSourceCycle, FormulaSourceCycleError,
+    FormulaSourceCycleLimits, FormulaSourceCycleRefusal,
+};
+
 /// Explicit complete source/Derived-edge and retained-record allowances, without defaults.
 /// `sources + edges + 1` charges one source offset per vertex plus its terminal sentinel and
 /// every distinct original Derived name use. Existing proofs and future cycle scratch are separate;

@@ -220,56 +220,53 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   operation/recipe currentness and full graph/runtime/resource/platform integration stay owned.
 - ID: `G1-SLICE.5e.2.5.derived.3.3.1`
   Status: `done`
-  Goal: prepare complete actual canonical Derived-source dependencies from accepted initial source
-  proofs. Every original repeated/untaken name use backed by an actual Derived canonical record
-  becomes a distinct consumer-expression→supplier-source edge. Keep exact source endpoints,
-  canonical adapter/metadata,original name use/span and all unused source vertices;no value reads.
-  Admit complete source/edge counts and S+E+1 retained edge/offset records before allocation.
-  Reuse original source index;one grouped edge vector/one S+1 offset vector,no cloned state/index.
-  Authored/Unknown/reserved/geometry metadata are not invented Derived edges. This is prospective
-  canonical Derived relation only,not actual reads,acyclic proof,whole operation graph,currentness,
-  recipe order,rounding or execution. Preserve original typed allocation/quota causes/no prefix.
-  Read real adapters/state/ontology/static proof contracts first;focused native/compiler/lint/book
-  checks then commit. Cycle proof .2 consumes this exact immutable relation without rebuilding it.
-  Completion0592: complete prospective canonical Derived dependencies available;cycle proof .2.
-  - [x] REPRODUCE / ISSUE: actual source proofs retain all name dependencies but supply no grouped
-    original canonical Derived relation for cycle admission. Source/target annotations or a
-    processed prefix cannot substitute complete original edge/endpoints/retained admission.
-  - [x] ROOT CAUSE (WHY + WHERE): source adapter/state interfaces and ontology §3.1/formula §4.1
-    read;rg -n 'prepare_dependencies|checked_add|try_reserve_exact|Derived|fn derived'
-    source_dependencies.rs → actual exhaustive state/family joins and complete precharge,rc=0.
-    Existing source proof already validates canonical ownership;same immutable adapter supplies
-    sole Derived formula ids. Source/provenance fields and non-Derived states are not such edges.
-  - [x] FIX: count all sources/original Derived name uses and S+E+1 records before either fallible
-    vector reservation. Reuse original index;store grouped original edges and S+1 offsets. Views
-    lend actual consumer/supplier proofs,name uses/spans and canonical certificates without state
-    clone,value read or fabricated graph edge. Original allocation causes retained;no prefix.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_source_dependencies_contract
-    -- --nocapture →three pass,rc=0,including final next_back assertion. Actual dedicated/general
-    adapters/endpoints/pointers,distinct repeated/untaken spans,all four non-Derived states/
-    reserved roles,unused/constant vertices and unchanged canonical data retained. Five sources/
-    four edges reserve10 records;cyclic/self relation3/3 reserves7;empty retains one sentinel.
-    Complete source/edge/retained quota precedence verified before allocation;no acyclicity claimed.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_source_dependencies_contract --test
-    formula_checked_sources_contract -- --nocapture →three/six pass,rc=0. Actual source kind/
-    canonical/consumer/lifetime behavior preserved. cargo test -p sc-core --doc
-    recipe::source_dependencies -- --nocapture →three pass,actual E0277/E0616/lifetime guards,
-    rc=0. Scoped strict lib/new-target Clippy/changed rustfmt/diff pass,rc=0. Positive book97/325/
-    1629/2861/glossary310/9/158/0 and750 four exact Git spans/all prior live ids/order pass,rc=0.
-    No broad graph/runtime/backend/platform campaign or source/value/state/lookup clone claimed.
-  - [x] LOCKSTEP: semantic source-validation chapter/title/routes/API/example and dependency/
-    allocation/cycle boundaries,task/index/MEM/DEV/CHANGE/LIVE align. Next .3.3.2 bounded iterative
-    cycle admission over this exact immutable canonical Derived relation;actual ordered binding
-    .3.3.3/full geometry-operation graph/resources/currentness/runtime remain open. G1 6/18/G0
-    unapproved;full/hosted79bd6f6a SHA-scoped. D334/D156/D223/PLANNING.5 owned;D339 proof untouched.
-    promotion: declined (existing actual canonical/source certificates,complete retained admission and original occurrence preservation applied;no new language or authority policy).
+  Goal:0592 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part751.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.2`
-  Status: `pending`
+  Status: `done`
   Goal: complete bounded iterative cycle admission of actual canonical Derived dependencies,
   including all unused vertices/untaken/repeated edges. Explicit full scratch before checking;
   concrete original edge/span cycle witness on refusal,no accepted prefix or invented loader
   token/context. Reuse actual edge/offset owner;no Rust recursion,cloned graph,value reads or
   execution order. Whole geometry/operation graph and actual binding/currentness remain separate.
+  Implementation scope:all S actual source vertices and original edge order;iterative white/gray/
+  black walk with one color and one active frame per source. Admit S/checked2S workspace before
+  either full scratch reservation. Reuse immutable actual edges/offsets;move the real active-frame
+  path into refusal and retain the original closing edge,without copying graph or allocating a
+  separate cycle path. Success lends only an acyclic canonical Derived relation certificate;
+  publish no execution/topological order or whole geometry/operation graph/currentness claim.
+  Focused native curated graphlib oracle/original witness/quota/small-stack/compiler checks.
+  Completion0593: bounded canonical Derived cycle proof/original concrete cycle witness available.
+  - [x] REPRODUCE / ISSUE: complete prospective dependencies0592 may contain actual cyclic/self/
+    unused/untaken relations. Values require a full cycle guard;caller annotations,a processed
+    prefix,recursive traversal or graph repair cannot supply the actual acyclic certificate.
+  - [x] ROOT CAUSE (WHY + WHERE): actual grouped edge/offset/source proof contracts read;rg -n
+    'checked_mul|try_reserve_exact|Color::Gray|Color::Black|closing_edge|frames' cycle.rs → actual
+    complete precharge,iterative walk and moved original path,rc=0. Normative ontology/formula
+    cycle/order boundary retained;this component grants no persisted-loader context or execution.
+  - [x] FIX: complete S/checked2S scratch admission before both full vector reservations. Walk
+    all actual vertices/edges with explicit colors/active frames,no recursion. Success borrows
+    the same relation;failure moves actual frames/original closing edge without another path or
+    graph copy. Prefix before the actual cycle excluded. Original allocator causes retained inline.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_source_cycle_contract
+    -- --nocapture →four pass,rc=0. Actual verdicts agree on nine tracked curated graphlib cases;
+    every returned cycle edge/span/canonical record and closed direction verified. Native target
+    invokes python3 -I -B docs/tasks/artifacts/formula_structure/source_cycle_reference.py
+    →nine cases pass,rc=0;independent producer reads no Rust/native result. Untaken cycle and
+    complete source/scratch quota precedence pass. A512-source cycle walk passes on64KiB requested
+    stack;fixtures built outside worker,original endpoints/spans exact. No execution order/value.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_source_dependencies_contract
+    -- --nocapture →three pass,rc=0;original grouped/classified relation unchanged. cargo test
+    -p sc-core --doc recipe::source_dependencies::cycle -- --nocapture →three pass,actual
+    E0277/E0616/E0515,rc=0. Scoped strict lib/new-target Clippy/changed rustfmt/diff pass,rc=0.
+    Positive book97/330/1629/2862/glossary310/9/158/0 and751 four exact Git spans/all live ids/order
+    pass,rc=0. No broad language/backend/resource/platform/physical campaign or full operation/
+    geometry graph,current Design/host namespace,real binding or loader verification claimed.
+  - [x] LOCKSTEP: semantic cycle API/quota/path/example/oracle/stack/boundary text and five API
+    rows,task/index/MEM/DEV/CHANGE/LIVE align. Next .3.3.3 real authored source/ordered-statement/
+    binding contract before runtime;no added rounding point or forward-let reordering. Full
+    integration/currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned.
+    G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;D339 historical proof untouched.
+    promotion: declined (existing original dependency witnesses,complete scratch admission,iterative flat traversal and borrowed-proof rules applied;no new language or authority policy).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3`
   Status: `pending`
   Goal: reconcile actual source owners and whole-recipe proofs with normative §4.1/§4.2 before

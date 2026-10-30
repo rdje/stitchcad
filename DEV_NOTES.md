@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — prepare complete original canonical Derived dependencies before cycle proof
+## _(2026-10-30 UTC)_ — certify actual canonical Derived cycles with complete iterative scratch
 
-0592 admits complete S/E/S+E+1 retained edge/offset records before fallible vectors. Every actual Derived name use keeps source endpoints,original metadata/span and canonical adapter;repeated/untaken uses stay distinct. Reuse original source index,no source/state/value clone. Empty relation charges its sentinel.
-Native3/source-proof6/doc3(E0277/E0616/lifetime)/scoped lint/fmt pass. Both families,all four non-Derived states/reserved roles,constant/unused vertices,original pointers/spans and quotas retained. Cyclic/self relations are prospective data,not acyclic or executed results. No fake loader token.
-Book97/325/1629/2861/glossary310/9/158/0 pass;[whole0591 initial source foundation](docs/history/stitchcad-devnotes-part750.md) retains four exact Git spans/live ids. Semantic validation title/routes/example/API map align. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Existing rules;promotion declined.
-Next .3.3.2 bounded iterative cycle admission over immutable relation. Real ordered binding .3.3.3,geometry/operation graphs,currentness,resources/full integration/platform/physical and D334/D156/D223/PLANNING.5 owned. D339 proof untouched. Full PNT;commit each slice,push400 after gates. No execution order chosen.
+0593 admits S/checked2S color/frame scratch before both full reservations. Walk every actual vertex/original edge without recursion. Success borrows the same relation;cycle refusal reuses actual active frames/closing edge,excluding prior prefix. No graph/path copy,value read or execution order. Allocator causes inline.
+Native4/independent9/deps3/doc3(E0277/E0616/E0515)/scoped lint/fmt pass. Native watcher invokes graphlib oracle;original cycle edges/spans/records/direction,untaken/quota behavior verified.512-source cycle walk passes with64KiB requested stack;fixtures outside worker,original relation unchanged. No loader token.
+Book97/330/1629/2862/glossary310/9/158/0 pass;[whole0592 dependencies](docs/history/stitchcad-devnotes-part751.md) retains four exact Git spans/live ids. Scoped cycle component,not whole operation/geometry graph or execution. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Rules applied;promotion declined.
+Next .3.3.3 actual authored source/ordered-statement/binding contracts before runtime;preserve declaration order and existing rounding boundaries. Full integration/currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned. D339 proof protected. Full PNT;commit each slice,push400 after gates.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

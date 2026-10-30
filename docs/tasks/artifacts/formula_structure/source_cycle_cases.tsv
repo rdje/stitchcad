@@ -1,0 +1,10 @@
+# name	vertices	consumer>supplier occurrences	acyclic
+empty	0	-	true
+constant	1	-	true
+chain	4	0>1,1>2,2>3	true
+diamond	4	0>1,0>2,1>3,2>3	true
+repeated	3	0>1,0>1,1>2	true
+self	1	0>0	false
+pair	2	0>1,1>0	false
+unused_late	4	2>3,3>2	false
+prefix_cycle	4	0>1,1>2,2>3,3>1	false

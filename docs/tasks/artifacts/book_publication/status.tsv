@@ -324,3 +324,8 @@ original canonical Derived name edge	annexes/formula-source-proofs.md	crates/sc-
 complete source dependency allowances	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies.rs	FormulaSourceDependencyLimits	G1-SLICE.5e.2.5.derived.3.3.1	4.1
 original source dependency refusal context	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies.rs	FormulaSourceDependencyError	G1-SLICE.5e.2.5.derived.3.3.1	4.1
 complete source dependency refusal	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies.rs	FormulaSourceDependencyRefusal	G1-SLICE.5e.2.5.derived.3.3.1	4.1
+actual acyclic canonical Derived relation	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies/cycle.rs	FormulaAcyclicSourceDependencies	G1-SLICE.5e.2.5.derived.3.3.2	4.1
+complete canonical Derived cycle allowances	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies/cycle.rs	FormulaSourceCycleLimits	G1-SLICE.5e.2.5.derived.3.3.2	4.1
+original canonical Derived cycle error context	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies/cycle.rs	FormulaSourceCycleError	G1-SLICE.5e.2.5.derived.3.3.2	4.1
+actual canonical Derived cycle refusal	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies/cycle.rs	FormulaSourceCycleRefusal	G1-SLICE.5e.2.5.derived.3.3.2	4.1
+original canonical Derived cycle witness	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies/cycle.rs	FormulaSourceCycle	G1-SLICE.5e.2.5.derived.3.3.2	4.1
