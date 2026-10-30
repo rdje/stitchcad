@@ -326,12 +326,20 @@ let id = EntityId::from_bits(9001); // explicit fixture identity, not a producti
 let sources = FormulaSources::new(vec![FormulaSource::new(id, expression)], limits)?;
 assert_eq!(sources.source(id).unwrap().expression().source(), " 2.5 cm + eps_num ");
 assert!(sources.source(EntityId::from_bits(9002)).is_none());
+let snapshot = sources.clone();
+assert_eq!(snapshot, sources);
 # Ok::<(), Box<dyn std::error::Error>>(())
 ```
 
 These are retained-content/index allowances after caller-owned document creation. They do not
 bound that earlier allocation,parser scratch,allocator overhead,numeric kernels,CPU or graph work.
 Admission policy is not stored canonical content. No canonical source-state/value cache is added.
+
+Clone retains exact authored order,ids,original/canonical buffers,factory node counts and the private
+lookup index in separate owned storage. Equality keeps authored spelling/order;equal canonical
+aliases remain distinct snapshots. Admission limits are not stored content. No parser,value read
+or source result is invoked or cached by cloning. [Source snapshot accounting](../spec/model-resource-accounting.md#actual-formula-source-snapshot-and-content-accounting)
+charges both retained vectors and text buffers;containing Design ownership remains separate.
 
 This inventory alone proves no global Design identity disjointness,namespace/kind validity,
 canonical Derived join,acyclic dependencies,currentness or evaluated result. For example,
@@ -353,8 +361,8 @@ algorithms and full dependency execution retain their separate proof obligations
 FormulaSources before lending any accepted scope. It allocates no workspace,clones no state,reads
 no authored value and parses/evaluates no expression. Both owners stay borrowed and immutable.
 This is source ownership admission;[initial-scope kind/consumer checks](formula-source-proofs.md)
-are available separately. Complete dependency/cycle and execution proofs remain .derived.3.3
-and its later execution owners.
+are available separately,including scoped dependency/cycle/lazy scalar execution acceptance.
+Actual recipe/Design/currentness and complete resource integration retain later owners.
 
 | Public API | Meaning |
 | --- | --- |

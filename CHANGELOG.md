@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0597 — independently verify complete actual scalar source results
+## STITCHCAD-G1-0598 — preserve exact source snapshots and complete held content accounting
 
-- Compare real source roots/ordinals/read roles/targets/suppliers/values and original failures through independent book evaluation. Reference demand earns roots without storage or state mutation;no native values become expectations. Track curated cases,guarded producer and two frozen/native watches.
-- Native8/reference27/19success/8refusal/5350B/scoped lint/fmt/book97/343/1630/2868/glossary0 pass. Whole0596 retained755/four spans/live ids. Initial scalar worker parent closes;next .3.3.3.4 actual recipe/Design bridge. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. Full integration remains pending.
+- Add exact source registry Clone/Eq and exhaustive held-content views. Charge both source/index vectors and real original/canonical buffers with original owner/index/first sink failures. No reparse,provider/value read or source cache. Source/resource examples and next Design boundary documented.
+- Native3/source4+scan256/document4/input-resource5/scoped lint/fmt/book97/343/1632/2871/glossary0 pass. Actual4 entries/51B/0bits and cumulative/empty/refusal cases exact. Whole0597 retained756/four spans/live ids. Next .4.2 Design root. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. Full integration open.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

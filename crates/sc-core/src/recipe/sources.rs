@@ -12,6 +12,11 @@ pub struct FormulaSource {
     expression: FormulaExpressionDocument,
 }
 impl FormulaSource {
+    pub(crate) fn resource_parts(&self) -> (EntityId, &FormulaExpressionDocument) {
+        let Self { id, expression } = self;
+        (*id, expression)
+    }
+
     /// Retain the exact supplied identity and already validated original expression document.
     #[must_use]
     pub const fn new(id: EntityId, expression: FormulaExpressionDocument) -> Self {
@@ -134,12 +139,18 @@ impl std::error::Error for FormulaSourcesError {
 ///     sources.sources()[0].id = sc_core::ontology::EntityId::from_bits(2);
 /// }
 /// ```
-#[derive(Debug)]
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub struct FormulaSources {
     sources: Vec<FormulaSource>,
     index: Vec<(EntityId, usize)>,
 }
 impl FormulaSources {
+    // Both retained logical vectors count even though the index contains only fixed Copy records.
+    pub(crate) fn resource_parts(&self) -> (&[FormulaSource], &[(EntityId, usize)]) {
+        let Self { sources, index } = self;
+        (sources, index)
+    }
+
     /// Consume complete original entities without cloning their source or canonical buffers.
     /// Limits are admission policy, not stored canonical content. Content checks precede index
     /// allocation and identity checks: count, checked byte sums, original bytes, canonical bytes.

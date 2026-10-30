@@ -61,6 +61,16 @@ impl fmt::Debug for FormulaExpressionDocument {
     }
 }
 impl FormulaExpressionDocument {
+    // Charge actual buffers and classify the immutable factory node count as fixed metadata.
+    pub(crate) fn resource_parts(&self) -> (&str, &str, usize) {
+        let Self {
+            source,
+            canonical,
+            node_count,
+        } = self;
+        (source, canonical.resource_text(), *node_count)
+    }
+
     /// Own original text after existing complete parsing and input-literal conversion.
     /// Operators remain unevaluated; all branch literals still pass normalization.
     /// An empty source is not an expression and retains its original syntax refusal.

@@ -30,8 +30,8 @@ pub use garment::{
     charge_pocket_inventory_resources,
 };
 pub use inputs::{
-    charge_material_inventory_resources, charge_parameter_resources,
-    charge_recipe_document_resources,
+    charge_formula_source_resources, charge_material_inventory_resources,
+    charge_parameter_resources, charge_recipe_document_resources,
 };
 pub use layers::{charge_hem_inventory_resources, charge_layer_inventory_resources};
 pub use pieces::{charge_cut_plan_resources, charge_piece_inventory_resources};

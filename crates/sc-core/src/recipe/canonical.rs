@@ -17,6 +17,12 @@ pub struct FormulaCanonicalExpression {
     text: String,
 }
 impl FormulaCanonicalExpression {
+    // Exhaustive held-content view;new owned fields require an accounting decision.
+    pub(crate) fn resource_text(&self) -> &str {
+        let Self { text } = self;
+        text
+    }
+
     /// Explicit access to customer-bearing ASCII identity bytes, without a terminal newline.
     #[must_use]
     pub fn as_str(&self) -> &str {

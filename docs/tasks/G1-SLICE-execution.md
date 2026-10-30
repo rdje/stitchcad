@@ -242,67 +242,82 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0595 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part754.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3`
   Status: `done`
-  Goal: bounded iterative lazy available-scalar source graph worker over actual plans/acyclic proof,
-  complete scratch/output reservation before values. Execute actual suppliers only when demanded,
-  cache only actual unbound returned roots and preserve source/state/contribution/read/failure
-  witnesses. No source-edge binding round. Independent actual result checks before scoped closure.
-  Implement as two owned slices:actual worker/native boundary first,then independent whole-source
-  reference acceptance before closing this parent. Prepare every source machine,N tasks/N values,
-  S call frames and S output slots before first value. Root selection uses exact actual source id;
-  only selected dependencies execute. Private output slots start empty and fill only from actual
-  completed roots. Derived read records retain actual canonical join/supplier proof,not authored
-  value provenance. Any failure returns no partial graph result or usable cache. Existing real
-  recipe storage/one-shot requirements stay exact;new graph results are scoped initial sources.
-  Scoped closure0597:actual worker0596/native6 and independent reference27/8/native watchers2
-  pass. Complete parent is the bounded lazy available-scalar initial-source component only;
-  actual recipe/Design integration remains next .4. No whole Derived/resource/platform closure.
+  Goal:0597 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part756.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.1`
   Status: `done`
-  Goal:0596 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part755.md).
+  Goal:0597 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part756.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3.2`
   Status: `done`
-  Goal: independent actual whole-source numeric/read/order/refusal acceptance with curated source
-  collections and original canonical state. Reuse independent reference public interfaces;no Rust
-  output or implementation-derived expected values. Close worker parent only after focused pass.
-  Completion0597:scoped independent actual whole-source acceptance;no production core changes.
-  - [x] REPRODUCE / ISSUE: current native implementation cases establish focused behavior;
-    independent complete source roots/read/ordinal/failure acceptance is needed before closing
-    worker parent .3. Caller/frozen/native values cannot supply reference supplier results.
-  - [x] ROOT CAUSE (WHY + WHERE): actual book reference load/evaluate/value_of_name and D338
-    ReferenceInputRequired inspected. rg -n 'load_reference|ReferenceInputRequired|execute|stored'
-    scalar_source_execution_oracle.py → recursive actual reference demand,real returned roots,
-    unchanged declarations and forbidden storage,rc=0. No Rust/native/frozen expected read;static
-    all-branch acyclic admission uses separate stdlib graphlib before runtime reference values.
-  - [x] FIX: track27 original case collections and independent guarded producer. Trace actual
-    reference reads,cache only returned unbound roots and retain real failing source/token. Native
-    watchers construct actual inputs/source factories and compare every success/root/contribution/
-    ordinal/read target/role/supplier/value and original refusal. Whole-prefix failure stays atomic;
-    actual Unknown alone maps formula_unknown,never unexecuted Derived. Freeze actual stdout only.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test
-    formula_scalar_source_graph_execution_contract -- --nocapture →eight pass,rc=0;actual source/
-    reference27 complete rows/8 refusals/roots,ordinals,reads,states. All six kinds,mixed Length,
-    diamond/shared/alias/repeated demand,lazy branches,wide/fractional Counts,raw negative turns,
-    computed Area,Ratio,false/preferences/all five states,approx/T1 and first failures pass.
-    Native canonical states/provenance unchanged. Second watcher reproduces all frozen bytes.
-  - [x] NO REGRESSION: independent producer python3 -I -B
-    docs/tasks/artifacts/formula_structure/scalar_source_execution_oracle.py →27/19success/8refusal
-    rows,5350 bytes,rc=0;sha256 33e51b3f1ffbed860c96fcd181fbd52d27c6db0567eb9d8224fd22ba2442dddb.
-    Actual native target includes prior six implementation contracts and both new watches,rc=0.
-    Scoped strict lib/new target Clippy/changed rustfmt/diff pass,rc=0. Positive book97/343/1630/
-    2868/glossary310/9/158/0 and755 four exact Git spans/prior live ids/order pass,rc=0. No core
-    production change,full CI/matrix campaign or new platform/whole-Design verdict claimed.
-  - [x] LOCKSTEP: scoped acceptance/input/producer/fixture/examples/boundaries in book/availability,
-    task/index/MEM/DEV/CHANGE/LIVE align. Worker parent .3 closed only for initial scalar sources;
-    next .4 actual recipe/Design source ownership,global namespace/currentness/resource joins.
-    Full Derived/tan/geometry/load/replay/backend/platform/physical and D334/D156/D223/PLANNING.5
-    owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped. D339 proof untouched.
-    promotion: declined (scoped acceptance reuses existing actual-result/unbound-source rules;retrievable behavior and finite proof are in the source contract,tracked producer and watched fixture).
+  Goal:0597 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part756.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: integrate earned source roots into actual canonical reads/current recipe execution while
   retaining true let RHS→once storage→prior-let visibility,atomic whole-result failure and original
   source/provenance/context. Complete actual Design source ownership/namespace/resource/currentness
   joins and source-mode acceptance remain required;no metadata/caller value stands in for execution.
+  Recovery0598:actual DesignInputsDefinition owns structure/parameters/recipe/materials/metadata/
+  references,has no formula-source field,and derives Clone/PartialEq/Eq. Complete ownership and
+  resource-definition destructures enforce new root accounting. FormulaSources owns source/index
+  vectors with no stored limits;source/doc owners already Clone/Eq. Preserve exact caches in clone;
+  resource quotas are logical retained content,not allocator bytes or complete runtime certificates.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.1`
+  Status: `done`
+  Goal: exact immutable FormulaSources snapshot Clone/Eq and complete source/index/original/
+  canonical text resource charging before Design embedding. Private exhaustive owner/doc views;
+  no reparse,source normalization,canonical-input lookup,value/provider read or cached results.
+  Charge both logical vectors and both actual text fields,retain original identity/index/location/
+  sink failure and enforce precise boundaries. Focused clone/pointer/content/resource tests and book.
+  Completion0598:exact immutable source snapshots and complete held source/index/text accounting.
+  - [x] REPRODUCE / ISSUE: actual DesignInputsDefinition snapshots require Clone/PartialEq/Eq
+    and exhaustive retained-field charging. FormulaSources is a separate owned source/index
+    collection;root embedding must not bypass either index or original/canonical buffer costs.
+  - [x] ROOT CAUSE (WHY + WHERE): actual Design input/resource/reconstruction interfaces and
+    source/doc/canonical owners inspected. rg -n 'resource_parts|resource_text|charge_formula_source'
+    sources.rs/expression_document.rs/canonical.rs/resource/inputs.rs → exhaustive private held
+    views and both-vector/both-buffer charges,rc=0. Current source limits are not stored content;
+    node count/index tuples are fixed Copy metadata,not runtime arenas or computed source caches.
+  - [x] FIX: FormulaSources derives exact Clone/PartialEq/Eq;private exhaustive source/index/doc/
+    canonical views expose held content. New charge_formula_source_resources precharges both S
+    vectors,then real original/canonical buffers in authored order. Preserve actual identity/index/
+    field and first cumulative sink failure;no parser,normalizer,lookup,provider/value read,rebuild
+    or source result. Reexport actual helper;no Design-owned field or whole-runtime claim yet.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_source_resources_contract --
+    --nocapture →three pass,rc=0. Clone buffers/lookup owners/order/node counts exact;canonical
+    aliases and reordered snapshots remain unequal. Actual two-source/tangent-pole fixture charges
+    four entries/51 bytes/zero bits without evaluation. S/index and all original/canonical quota
+    boundaries preserve exact first source/field/position. Prior2/2/1 composes6/53/1;empty0/0/0
+    retains original earlier sink error. Original registries remain equal after success/refusal.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_sources_contract --test
+    formula_expression_document_contract -- --nocapture →four/four pass,including original256
+    independent duplicate scans,rc=0. cargo test -p sc-core --test design_resource_contract inputs::
+    -- --nocapture →five pass/42 filtered,rc=0. Scoped strict lib/new target Clippy/changed rustfmt/
+    diff pass,rc=0. Positive book97/343/1632/2871/glossary310/9/158/0 and756 four exact Git spans/
+    prior live ids/order pass,rc=0. No broad matrix/full CI or new source/recipe/platform campaign.
+  - [x] LOCKSTEP: exact source snapshots,resource buffers/examples/limits/failure locations and
+    next root boundary in book,task/index/MEM/DEV/CHANGE/LIVE align. Next .4.2 actual Design-owned
+    registry/global identities/resource reconstruction,then .4.3 namespace/currentness/proofs,
+    .4.4 real ordered recipe reads/storage and .4.5 independent integration. Full geometry/tan/
+    load/replay/backend/platform/physical and D334/D156/D223/PLANNING.5 owned. G1 6/18/G0
+    unapproved;full/hosted79bd6f6a SHA-scoped. D339/current retained proofs untouched.
+    promotion: declined (source snapshots/accounting apply existing exhaustive held-content and unbound-source rules;public behavior and exact native proof live in the linked source/resource contracts).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.2`
+  Status: `pending`
+  Goal: real Design-owned source registry/schema,complete global owned-id positions/collisions and
+  exact snapshot/resource preservation across reconstruction. Resolve required current source joins
+  against normative draft/current rules;no synthetic formula sources or values from metadata ids.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3`
+  Status: `pending`
+  Goal: actual Design-backed initial namespace/source graph/recipe proof joins over the same current
+  canonical inventory and owned source collection,with complete admitted resource populations.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4`
+  Status: `pending`
+  Goal: actual ordered recipe Derived read integration with earned unbound source results,real
+  let RHS→once storage→prior-let visibility,original contexts/read witnesses and atomic failure.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5`
+  Status: `pending`
+  Goal: scoped independent actual Design/recipe/source-mode acceptance;preserve canonical states,
+  source ownership,currentness/resource joins and genuine first failures. Broader graph/platform/
+  physical/load/replay and missing kernel families retain existing owners before full acceptance.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

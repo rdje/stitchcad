@@ -1,12 +1,12 @@
 //! Actual held input metadata, without rebinding, recipe reparse or property availability reads.
 use super::{
-    fixed_value, DesignResourceLimitError, DesignResourceLocation, DesignResourceScope,
-    DesignResourceSink,
+    fixed_slice, fixed_value, DesignResourceLimitError, DesignResourceLocation,
+    DesignResourceScope, DesignResourceSink,
 };
 use crate::{
     design::{DesignParameterDefinition, DesignParameters},
     ontology::{EntityId, MaterialDefinition, MaterialInventory},
-    recipe::FormulaRecipeDocument,
+    recipe::{FormulaRecipeDocument, FormulaSources},
 };
 fn location(
     field: &'static str,
@@ -51,6 +51,36 @@ pub fn charge_recipe_document_resources(
     let (source, canonical) = document.resource_texts();
     sink.charge_text(source, location("recipe.source", None, None))?;
     sink.charge_text(canonical, location("recipe.canonical", None, None))
+}
+/// Charge the complete actual source and lookup-index vectors,then original/canonical buffers in
+/// authored order. Cached node counts and index records are fixed Copy metadata. No parsing,
+/// normalization,namespace/canonical-input lookup,value read,provider or result cache is involved.
+/// This is logical retained-content accounting,not allocator bytes or a full Design/runtime gate.
+/// # Errors
+/// Returns the original first sink refusal with actual source identity and original authored index;
+/// collection/index reservations precede all text. Empty scopes still preserve prior sink failures.
+pub fn charge_formula_source_resources(
+    sources: &FormulaSources,
+    sink: &mut dyn DesignResourceSink,
+) -> Result<(), DesignResourceLimitError> {
+    let (sources, index) = sources.resource_parts();
+    sink.charge_entries(sources.len(), location("formula_sources", None, None))?;
+    fixed_slice(index);
+    sink.charge_entries(index.len(), location("formula_sources.index", None, None))?;
+    for (position, source) in sources.iter().enumerate() {
+        let (identity, document) = source.resource_parts();
+        let (original, canonical, node_count) = document.resource_parts();
+        fixed_value(&node_count);
+        sink.charge_text(
+            original,
+            location("formula_sources.source", Some(identity), Some(position)),
+        )?;
+        sink.charge_text(
+            canonical,
+            location("formula_sources.canonical", Some(identity), Some(position)),
+        )?;
+    }
+    Ok(())
 }
 /// Charge the actual Material collection/name/optional composition, without canonical property lookup.
 /// Targets/shrinkage remain fixed Copy metadata, not a second value/evidence cache or applied scale.

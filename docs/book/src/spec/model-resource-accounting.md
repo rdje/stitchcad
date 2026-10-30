@@ -202,6 +202,50 @@ intent. Empty parameter/Material drafts plus empty recipe source demand0 entries
 a prior meter refusal stays original across all three producers. Whole-root/source and runtime admission are implemented below; this is no binding, recipe evaluation,
 Material truth/physical, whole-model or allocator RSS/time certificate.
 
+## Actual formula-source snapshot and content accounting
+
+charge_formula_source_resources borrows an actual FormulaSources registry. It precharges the S
+source-vector entries,then the S private sorted lookup records,before visiting any member text.
+Every source then charges its actual original buffer and retained canonical expression buffer in
+authored order. The actual factory node count and lookup keys/positions are fixed Copy metadata;
+no normalized arena,value or extra node vector is retained here. Counts cover both logical vectors
+even though index entries contain only ids/positions. No parser,normalization,namespace/canonical
+lookup,provider read,source execution or rebuilt index is involved.
+
+The exact snapshot Clone/Eq traits preserve original spelling/order,ids,both buffers,the private
+index and factory node counts. Each clone owns separate vectors/strings;equal canonical aliases
+do not replace exact original text. Admission policy is not stored canonical content. These are
+logical content counts,not allocated capacities,allocator bytes or complete runtime/Design bounds.
+The [original source owners](../annexes/formula-recipe-inputs.md#explicit-formula-source-owners)
+remain distinct from canonical parameter targets and runtime source-result caches.
+
+```rust
+let mut meter = DesignResourceMeter::new(resource_limits);
+charge_formula_source_resources(&formula_sources, &mut meter)?;
+let actual_source_content = meter.finish()?;
+```
+
+Both collection locations use Inputs scope with no invented containing owner/index:
+formula_sources and formula_sources.index. Member fields formula_sources.source and
+formula_sources.canonical retain the actual source entity id and original zero-based source
+position. Exhaustive private owner/document/canonical views and Copy payload checks require an
+accounting decision when an owned field changes. A refusal preserves the original sink error;
+no partial accepted demand or source mutation follows.
+
+The native fixture has source9002 containing2.5 cm with one leading and one trailing ASCII space;
+source9001 contains tan(90 deg).
+Their original/canonical byte sizes are8/12 and11/20,so the two vectors require4 logical entries
+and all text requires51 bytes,with zero counter bits. The unavailable tangent pole is never
+evaluated. Entry maximum1 refuses the first S2;maximum3 refuses the index at2+2. Text maximum7
+refuses source9002's original8 bytes;maximum19 refuses its canonical at8+12. Maximum50 refuses
+source9001's canonical at31+20 with actual owner9001/index1. Prior2 entries/2 UTF-8 bytes/1 bit
+compose to6/53/1. Empty source/index scopes contribute0/0/0 and retain any prior sink failure.
+
+Three focused contracts cover exact cloned buffer ownership/lookup/equality and these boundaries.
+This standalone source accounting prepares actual Design snapshot integration. The Design-owned
+source field/global ownership/currentness and complete recipe/source runtime envelope remain the
+next integration tasks;this helper supplies no whole-Design or execution certificate.
+
 ## Actual sewing accounting
 
 charge_sewing_graph_resources precharges the actual graph's span vector, then each span's weighted

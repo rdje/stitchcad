@@ -1,16 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.4:actual recipe/Design integration. Recover real Design
-  formula source ownership/schema/global identity/namespace/resource contracts and current recipe
-  plan/read/store interfaces first;decompose into bounded owned children before changing code.
-- Lazy scalar source component .3 closes0597 with independent actual reference27 rows/19success/
-  8refusals/5350B;native8 includes six implementation contracts plus two complete fixture watches.
-  Actual roots/kinds/contributions/ordinals/read target/role/supplier/value and first failures match;
-  canonical states stay unchanged. Reference recursion/graphlib uses real roots,never native values.
-  Scoped lint/fmt/book97/343/1630/2868/glossary0 pass. Whole0596 retained755/four spans/live ids.
-- Full reservation/actual unbound cache/512-chain small requested stack proof0596 retained. No
-  source-edge storage;actual lets still store once. Shared/fractional/wide Count/negative turns/
-  Area/false/Unknown/provider/T1 behavior passes. Real recipe/Design/currentness/resources open.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4.2:actual Design-owned sources/global ownership/current
+  joins/resource reconstruction. Read source error,draft/current rules and bus/root destructures.
+- Source snapshot/accounting prerequisite0598 ready:FormulaSources exact Clone/Eq retains original
+  order/ids/doc buffers/factory counts/private index. Public charge_formula_source_resources charges
+  both S vectors then actual original/canonical text. No parser,provider/value read or cache rebuild.
+  Native3/source4+scan256/document4/input-resource5/scoped lint/fmt/book97/343/1632/2871/
+  glossary0 pass. Actual4 entries/51B/0bits;all exact refusals/cumulative/empty cases retain sources.
+  Whole0597 component acceptance retained756/four Git spans/prior live ids;five bridge children owned.
+- Scalar source component .3 closed:independent27/19success/8refusal/5350B/native8. Full reserve,
+  actual unbound cache/512-chain small requested stack proof0596 retained. Only actual lets store.
+  Next .4.2 root then .4.3 current proofs/.4.4 recipe/.4.5 independent integration remain pending.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
