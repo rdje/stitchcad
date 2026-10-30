@@ -446,9 +446,9 @@ performs the actual second-let storage. The public native operation below now pu
 The existing standalone recipe worker explicitly selects its original direct-read mode and still
 returns RequiresEvaluation for unresolved Derived inputs. Its public read-kind enum and direct/
 prior-let result interfaces remain unchanged. A private read record distinguishes earned Derived
-witnesses for the forthcoming integrated worker;it cannot be published as a standalone direct read.
+witnesses for the integrated worker;it cannot be published as a standalone direct read.
 The private paired loop is now implemented below. Its public native result/read/error interfaces are described below;the actual Design execution
-entry point is also implemented below. Independent paired acceptance remains pending.
+entry point and independent paired scalar acceptance are also implemented below.
 
 The recipe side now stages its original admitted plan,fixed context,N task/value buffers and
 complete S outcome reservation in a shared private runtime. Construction starts no operand,read,
@@ -537,8 +537,8 @@ Kind checking alone grants no cycle acceptance. Native dependency/cycle factorie
 stage before Design plan preparation. Planning grants no numerical result,provider completeness,
 whole runtime resource bound or production approval. Native paired execution now earns real
 Derived reads and once-only storage through both native and actual Design entry points.
-Scoped integration checks remain separately owned after the paired reference acceptance below.
-The latest full local/hosted verdict remains scoped to its recorded Git revision.
+The scoped available-scalar integration checkpoint below passes. The latest full local/hosted
+verdict remains scoped to its recorded Git revision.
 
 The actual Design executor also matches23 independent complete recipe cases:11 successes and12
 first refusals. The tracked scalar_design_recipe_oracle.py loads the existing table-driven book
@@ -562,3 +562,13 @@ regenerate all8841 frozen bytes. The23-row fixture SHA256 is
 a8b6dd80760b0e4c833d36ee51d77410b6a2ec192d22e68413fea8287def784d.
 This finite acceptance covers available scalar kernels;it grants no missing kernel,full Design,
 provider resource,allocator/CPU,persistence,platform,physical or production-approval certificate.
+
+The completed scalar integration checkpoint passes159 native tests across13 selected core targets,
+plus9 private execution guards and5 actual measurement/Design resource-composition contracts.
+The selected targets cover actual Design inputs/resources,source ownership/normalization/checking/
+canonical joins/dependencies/cycles/plans,and expression/source/recipe execution with their watched
+independent reference fixtures. The private controls include caught refusal guards for foreign
+owners,failed-runtime reuse and prefix publication. Sixteen Design formula and four paired-native
+public examples/privacy/lifetime contracts pass. This closes this available-scalar source/recipe/
+Design-input checkpoint. Tangent,geometry/operation providers,whole Design/resource/runtime bounds,
+load/replay,platform/physical acceptance and full G1 closure remain separately owned.

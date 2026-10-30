@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — independently compare actual complete Design source-backed recipes
+## _(2026-10-30 UTC)_ — close the scoped available-scalar Design execution checkpoint
 
-0609 composes the actual book evaluator with recursive lazy Derived demand and real recipe storage. Canonical facts stay unvalued;only returned bare roots enter a separate cache. Original source evaluation cannot read recipe bindings or invoke storage. No Rust/native/frozen expected inputs.
-Actual Design factories/execution match23 rows/11 successes/12 first refusals;8841 frozen bytes regenerate exactly. Both families/all six kinds,shared aliases,fractions/once storage,false/zero/negative/wide Count,lazy reads,flags,T1/T2 and source/recipe/assertion order checked. Whole model stays unchanged.
-Native2/scoped strict lint/fmt/book98/365/1644/2900/glossary0 pass. Root/proof/prior-let pointers and every value/root/ordinal/read checked. Stale bridge-pending prose fixed;inline-code SHA glossary failure fixed as plain identity text. [Whole0608](docs/history/stitchcad-devnotes-part767.md) retains four spans.
-Next .4.5.2 scoped integration checkpoint;existing50 tests filtered here. LIVE G1 6/18/G0 unapproved unchanged,paired23 recorded. Full-hosted79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned. Missing kernels/full Design/resources/persistence/platform/physical remain owned. Full PNT/push400;protected proofs intact.
+0610 activates deferred integration only after source/recipe/DesignInputs implementation and independent paired acceptance. Thirteen selected core targets159 pass,including the actual input/resource/ownership/normalization/proof/graph/plan/execution pipeline and independent frozen watchers.
+Private execution9 pass/84 filtered,including caught refusal guards for foreign owners,failed reuse and prefix publication. Measurement composition5 pass/28 filtered;Design formula docs16 and paired-native docs4 pass. Existing expression49/recipe18/source27/Design23 independent fixtures regenerate exactly.
+Book98/365/1645/2901/glossary0/diff/history768 four spans/live ids pass. README/book/task frontier align;remaining stale paired-pending prose corrected. [Whole0609](docs/history/stitchcad-devnotes-part768.md) retains exact source/proofs. No production behavior changed or full CI inferred.
+Next P1 tangent resource plan .5d.1.2.2.2.d.2 before its kernel. Scalar .derived.3.3.3 closes;full Derived integration retains missing families/whole Design/resources/load/replay/platform/physical owners. LIVE G1 6/18/G0 unapproved unchanged;full-hosted79bd6f6a scoped. Full PNT/push400;protected proofs intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

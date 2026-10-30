@@ -3,8 +3,9 @@
 > **Implemented with focused checks:** G1-SLICE.5e.2.5.1.2.2.2 executes the admitted available
 > scalar subset from its actual complete static recipe proof. It evaluates real lets/assertions in
 > declaration order,stores each successful binding once and retains actual executed source reads.
-> Derived evaluation,tangent,geometry,corrupt-load validation,full replay/platform identity and
-> complete language/bus/physical acceptance retain their separate owners. No release claim follows.
+> Derived reads now execute through [actual source-backed Design recipes](formula-design-integration.md#execute-the-private-actual-design-plan).
+> Tangent,geometry,corrupt-load validation,full replay/platform identity and complete language/bus/
+> physical acceptance retain their separate owners. No release claim follows.
 
 Start with complete [syntax/input normalization](formula-recipe-inputs.md) and
 [whole static checking](formula-checked-recipes.md),then admit the real proof and prepare every

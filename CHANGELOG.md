@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0609 — independently accept actual Design source-backed scalar recipes
+## STITCHCAD-G1-0610 — close scoped scalar source/recipe/Design input integration
 
-- Actual Design matches23 independent book-reference cases/11 successes/12 first failures:complete roots/outcomes/read traces/flags/ordinals/unchanged model. Bare sources stay unbound;only real recipe lets store once. Fresh producer reproduces8841 frozen bytes exactly.
-- Native2/scoped lint/fmt/book98/365/1644/2900/glossary0 pass. Both canonical families/all six kinds,shared/lazy/fraction/storage/flags/failure order checked;stale bridge prose fixed. Whole0608 in767/four spans. Next .4.5.2 integration checkpoint. LIVE G1 6/18/G0 unapproved unchanged.
+- After feature completion,13 selected core targets159 pass;private execution9/measurement composition5/Design formula docs16/paired docs4 pass. Independent expression49/recipe18/source27/Design23 watchers retain exact outcomes and frozen bytes. No full CI/platform claim.
+- README/book98/365/1645/2901/glossary0/history768 four spans/live ids/diff pass. Available-scalar parent checkpoint closed;full Derived integration stays owned. Next P1 tangent resource plan before kernel. LIVE G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

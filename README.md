@@ -25,8 +25,8 @@ Exact numeric and binding APIs plus canonical scalar state models are available.
 Scalar reads, tolerance/size contexts, typed requests, authorized Piece-list reads and private
 Measurement/Material/Notch previews and atomic metadata-group commits include in-memory replay/audit.
 Bounded snapshot undo/redo and explicit metadata input policy/progress/cancellation are implemented.
-Scoped scalar expression,recipe and lazy source execution are available. Derived/tangent/geometry
-integration,persistence,complete resource bounds and full bus acceptance remain pending.
+Scoped scalar expression,lazy source and source-backed Design-input recipe execution are available.
+Tangent/geometry integration,persistence,complete resource bounds and full bus acceptance remain pending.
 [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks verified progress; the mdBook explains implemented behavior and remaining proof boundaries.
 
 ## Audience and scope

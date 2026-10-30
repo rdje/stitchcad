@@ -496,9 +496,9 @@ default limits,private collection mutation and escaped proof nodes. No full veri
 
 This certifies sources under the supplied initial namespace,not completeness/currentness of a
 containing Design/host namespace. Geometry metadata supplies no current operation/provider proof.
-Prior lets cannot be caller-seeded into this initial scope. The actual ordered-statement/source
-relationship,binding rounding,full geometry/operation dependency and cycle integration,load/replay,
-providers,whole-Design atomic publication,full resource/backend bounds and platform/physical
-verification remain owned by
-G1-SLICE.5e.2.5.derived.3.3 and the existing execution/integration tasks. No cycle or execution
-certificate follows from successful name/kind checking.
+Prior lets cannot be caller-seeded into this initial scope. Actual ordered-statement/source
+execution and real binding rounding now pass the available-scalar Design integration checkpoint.
+Full geometry/operation dependency and cycle integration,load/replay,providers,whole-Design atomic
+publication,full resource/backend bounds and platform/physical verification remain owned by
+G1-SLICE.5e.2.5.derived.integration and the existing execution/integration tasks. No cycle or
+execution certificate follows from successful name/kind checking alone.

@@ -73,7 +73,8 @@ reference cases. [Native source-backed recipes](annexes/formula-design-integrati
 now combine admitted source/recipe plans,earned unbound roots and real ordered let storage with
 complete read/error views. Actual Design plans now execute after fresh whole held-input/current
 admission and retain their exact containing root/model limits. Native6/Design5 focused contracts
-and compiler guards pass;23 independent paired-mode cases pass. Complete Design readiness remains pending.
+and compiler guards pass;23 independent paired-mode cases and scoped scalar integration pass.
+Complete Design readiness remains pending.
 [Explicit tolerance contexts](annexes/formula-runtime-validation.md#explicit-tolerance-contexts)
 now provide fixed numerical/geometric values and class-checked optional format/importer/physical
 providers. Missing optional values refuse with their actual name/context label.
