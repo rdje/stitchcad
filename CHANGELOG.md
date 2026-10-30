@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0642 — preserve original native fault captures on replay
+## STITCHCAD-G1-0643 — retain borrowed-provider identity with Copy assignment
 
-- Fix D345 with fresh protected UTC/PID directories,exclusive capture/report creation and owned receipt publication. Actual sinks pass fresh1/refusals3/two guard omissions;root baseline1/fault5 and timeout2 pass. Original9 reports/4882 snapshot files remain exact;all nine wrapper plans pass.
-- Producer356/34943calls,file243/91/40/15refusals/12reds,book101/374/1670/2978/glossary0/history801/IDs/map/diff pass. Full coupled gates next;G1 6/18/G0 unapproved unchanged. No daily cleanup or full integration verdict.
+- Fix D346 strict lint failure in the original private provider/label identity watcher:copy Tolerance directly. Its equal-value/distinct-address and foreign-provider/label assertions still pass1;strict affected lint/workspace formatting pass. Production arithmetic unchanged.
+- Book101/374/1670/2978/glossary0/history802/IDs+2/map/diff pass. First full gate exited2 before native tests;full integration must rerun next. G1 6/18/G0 unapproved unchanged;no daily cleanup.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

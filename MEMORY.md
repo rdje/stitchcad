@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates:deferred full native/Wasm/doctrine/probes/book acceptance.
-- D345 fixed0642:shared root_body_faults.py allocates fresh UTC/PID captures under protected
-  target/irrational_platform_certificate/native-body-faults/<family>/<label>-<UTC>-<PID>/.
-  Exclusive directory/report creation and owned device/inode publication;old paths are labels only.
-- Actual root baseline1/fault5 first rows4,9,17,24,4;547 original hashes/545 restored files/557
-  outputs;fresh1/refusals3/two actual guard omissions/timeout2 pass. Nine wrapper plans pass.
-- New root report suffix root_body_faults/0632-exact-root-20261030T181144027386Z-78668/report.json SHA c9403edbcbf21eb79cb574c34823a965bfa6f24d1340d714b0bd25467d7f3065. Original9 reports and
-  all4882 original snapshot files match their historical receipts. No daily cleanup performed.
-- Fresh0641 inverse45M/450 and forward1M/100 readers,witness/runtime controls pass;retained
-  coupled-0641-20261030T180826454783Z-33211 receipt under same protected numerical store.
-- Producer356/34943calls,file243/91/40/15refusals/12reds,book101/374/1670/2978/glossary0/
-  history801/IDs/map/diff pass. Numerical/mixed/observed native31+Chrome31 scopes complete;
-  full gates pending. App/matrix/aggregate resources/locality/provider/replay/physical/release
-  remain owned;G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA only. Full PNT/push400.
+- Next G1-SLICE.5d.4.acceptance.gates.run:rerun full native/Wasm/doctrine/probes/book gates.
+- First full check stopped at strict Clippy clone_on_copy before native tests;make rc2. D346
+  fixed0643:private borrowed-provider watcher copies Copy Tolerance instead of calling clone.
+- The original identity test passes1;equal values/distinct addresses,foreign provider/label
+  refusals and actual original context execution remain checked. Strict sc-core lib/tests lint
+  and workspace formatting pass. Book101/374/1670/2978/glossary0/history802/IDs+2/map/diff pass.
+- D345 fixed0642:all native body-fault replays allocate fresh UTC/PID protected captures under
+  target/irrational_platform_certificate/native-body-faults/. Exclusive directories/reports,
+  owned publication,guard omissions2,actual root baseline1/fault5 and original9 preservation pass.
+- Fresh0641 inverse45M/450 and forward1M/100 readers,witness/runtime controls pass;receipt
+  target/irrational_platform_certificate/coupled-0641-20261030T180826454783Z-33211/receipt.json.
+- Numeric/mixed/observed native31+Chrome31 scopes implemented;full integration verdict pending.
+  Separate app/matrix/aggregate resources/locality/provider/replay/physical/release owners remain.
+  G1 6/18/G0 unapproved;last full/hosted79bd6f6a SHA only. No daily cleanup;full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

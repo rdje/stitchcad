@@ -383,7 +383,9 @@ numeric payloads. Derived inputs follow their sole authored formula; they do not
 authored or unlabelled cached values. Registry/currentness and evidence truth remain their existing
 owners; a readable value is not approval or evidence-scope validation.
 
-Reserved tolerances use the explicit context and its actual quantitative provider. Optional classes
+Reserved tolerances use the explicit context and its actual quantitative provider. Paired runtimes
+require the original borrowed provider and diagnostic label. A copied Tolerance retains equal
+fields but distinct storage;it cannot replace the selected provider. Optional classes
 remain absent until supplied. Size values come from actual pinned membership/order/base identity;
 axes remain .4c.2 under D70's confirmed minimum-one rule. Static availability metadata never supplies a missing runtime value.
 

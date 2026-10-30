@@ -265,7 +265,7 @@ fn paired_runtime_requires_original_borrowed_provider_and_label_sources() {
         "actual fixture factory limit",
     )
     .expect("actual tolerance");
-    let second = first.clone();
+    let second = first;
     assert_eq!(first, second);
     assert!(!core::ptr::eq(&first, &second));
     let label = "actual_fixture";

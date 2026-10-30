@@ -660,23 +660,27 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0641 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part801.md).
 - ID: `G1-SLICE.5d.4.acceptance.replay-identities`
   Status: `done`
-  - [x] ISSUE:D345 fixed native capture paths admit replacement of original reports/snapshots.
-  - [x] ROOT CAUSE (WHY + WHERE):root_body_faults.py old main unconditionally wrote fixed report;
-    actual writer replaces owned sentinel;original9 reports unchanged,rc=0 (0641 retained receipt).
-  - [x] FIX:fresh UTC/PID runs under protected store;exclusive directory reservation and report
-    creation,owned device/inode publication;historical paths remain labels only.
-  - [x] ADDRESSED (verified):python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
-    →baseline1/compiled faults5 rows4,9,17,24,4;547 original hashes/545 restored files/557 outputs;
-    capture fresh1/refusals3/actual guard omissions2 and timeout2 pass,rc=0.
-  - [x] NO REGRESSION:wrapper plans9;original9 receipts/all4882 snapshot files exact;producer356/
-    34943calls,file243/91/40/15refusals/12reds,book101/374/1670/2978/glossary0/history801
-    four spans/IDs/map/diff pass,rc=0. Full native fault replay deferred to gates.
-  - [x] LOCKSTEP:D345 fixed;book/live/notes/protection docs sync;promotion declined(existing rules).
-  Commit:STITCHCAD-G1-0642;Verification:actual fresh capture/guard omissions/native5/preservation.
+  Goal:0642 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part802.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates`
-  Status: `pending`
+  Status: `in_progress`
   Goal:deferred full native/Wasm/doctrine/probe/book acceptance after certificate closure;
   fix exposed defects in owned slices,then close only scoped coupled review with original evidence.
+
+- ID: `G1-SLICE.5d.4.acceptance.gates.copy-lint`
+  Status: `done`
+  - [x] ISSUE:D346 full make check exits2 before tests on clone_on_copy.
+  - [x] ROOT CAUSE (WHY + WHERE):Tolerance derives Copy;recipe_runtime/tests.rs used clone.
+    scripts/run_make.sh check →Clippy clone_on_copy at268,rc=2;full tests not run.
+  - [x] FIX:Copy assignment retains distinct equal provider storage and all original assertions.
+  - [x] ADDRESSED (verified):local_environment.py -- cargo test -p sc-core --lib
+    paired_runtime_requires_original_borrowed_provider_and_label_sources →1 pass,rc=0.
+  - [x] NO REGRESSION:same launcher cargo clippy -p sc-core --lib --tests -- -D warnings and
+    cargo fmt --all -- --check pass,rc=0;book101/374/1670/2978/glossary0/history802/IDs+2/map/diff0.
+  - [x] LOCKSTEP:book/live/notes sync;full gates rerun next;promotion declined(existing identity).
+  Commit:STITCHCAD-G1-0643;Verification:actual identity watcher/strict lint/fmt;full gates pending.
+- ID: `G1-SLICE.5d.4.acceptance.gates.run`
+  Status: `pending`
+  Goal:rerun full native/Wasm/doctrine/probe/book verification after D346,then scoped closure.
 
 ### Execution, uncertainty and replay
 
