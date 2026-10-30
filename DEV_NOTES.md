@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — join actual canonical Derived references to original source owners
+## _(2026-10-30 UTC)_ — admit complete actual source shape before normalized collection allocation
 
-0589 checks complete canonical/source ownership before all Derived formula refs. Allocation-free borrowed scope lends actual family/kind/position/target/source without state clone,value read or invented name/rounding. Provenance refs are not owned declarations;source fields never replace formula fields.
-Native4/canonical-owner5/doc4(E0616/E0515)/scoped strict lint/fmt pass. Initial positive example incorrectly boxed a borrowed error and failed E0597;handle the local join directly. Exhaustive state matches retain all five cases. Source existence alone supplies no output kind,graph,currentness or runtime proof.
-Book96/310/1624/2845/glossary310/9/158/0 pass;[whole0588 original source inventory](docs/history/stitchcad-devnotes-part747.md) retains four exact Git spans/all prior live ids. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Existing canonical/source/borrow rules apply;promotion declined. D339 proof untouched.
-Next .derived.3.2 actual normalized/static source phases and full resource/namespace/kind/graph admission,preserving real ordered-let binding contracts. Full families/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates. Global Design proof remains open.
+0590 retains immutable actual node counts at original document creation. Complete S/N/conservative S+2N retained quotas precede one fallible outer reservation/reparse. Actual source/arena order,spans and typed causes survive. No caller shape hint,canonical-text reconstruction,state/value cache or partial result.
+Native4/reference24/document4/doc3(E0277/E0616/lifetime)/scoped strict lint/fmt pass. Existing parser/converter algorithms unchanged. Retained-record allowance excludes earlier document creation,scratch,allocator bytes/backend/CPU/full graph resources. Original factory errors and allocation cause remain typed.
+Book96/315/1624/2846/glossary310/9/158/0 pass;[whole0589 canonical source joins](docs/history/stitchcad-devnotes-part748.md) retains four exact Git spans/all prior live ids. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. D339 proof untouched. Existing factory/admission/borrow rules apply;promotion declined.
+Next .derived.3.2.2 real namespace/target/static source phases,preserving actual ordered-let semantics before graph/value work. Recipe-inputs576L/35836B;use a new semantic annex before growth. Full integration/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

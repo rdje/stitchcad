@@ -106,6 +106,12 @@ pub use source_inputs::{
     FormulaDerivedInput, FormulaSourceInputError, FormulaSourceInputRefusal, FormulaSourceInputs,
 };
 
+mod normalized_sources;
+pub use normalized_sources::{
+    FormulaNormalizedSource, FormulaNormalizedSources, FormulaSourceNormalizationError,
+    FormulaSourceNormalizationLimits, FormulaSourceNormalizationRefusal,
+};
+
 mod semantic;
 pub use semantic::{
     FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName, FormulaSizeName,

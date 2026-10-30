@@ -247,7 +247,11 @@ and complete dependency admission remain .derived.3.2.
 source() returns original whitespace/text;canonical() borrows the typed identity. Exact-source
 equality remains separate from normalized identity:2.5 cm and25 mm share one identity but retain
 distinct authored documents. Cloned replacement documents do not mutate the original. Debug
-shows source/canonical byte counts,not customer names or text.
+shows source/canonical byte counts and factory node count,not customer names or text.
+
+node_count() retains the actual successful factory node count,including every branch/argument.
+It is immutable syntax metadata for complete preallocation admission,not a caller shape hint or
+value/state cache. No arena is cached.
 
 normalized() derives immutable source-borrowed arenas through the same parser/converter. It keeps
 original local spans and cannot outlive the document. It stores no self-referential arena and
@@ -410,6 +414,76 @@ non-Derived states/provenance and empty drafts. Five existing canonical-input co
 actual-owner/family/kind/read boundaries. Four documentation tests include the positive example,
 private-field E0616 and E0515 refusals for escaping either actual owner. These scoped checks
 certify source joins;complete graph/evaluation/platform verification remains pending.
+
+## Normalize complete original source collections
+
+FormulaSourceInputs.normalize_sources(limits) constructs FormulaNormalizedSources only after
+complete source/shape admission. It retains that actual canonical/source scope and reparses each
+original document through the existing parser/literal converter. Each FormulaNormalizedSource
+owns its actual normalized arena and borrows its original expression entity. No canonical-text
+reconstruction,reordered source,synthetic statement,source-state copy or computed value is used.
+
+| Public API | Meaning |
+| --- | --- |
+| `FormulaNormalizedSources` | Complete admitted normalized collection and original source/input scope |
+| `FormulaNormalizedSource` | Actual original source owner plus its source-borrowed normalized arena |
+| `FormulaSourceNormalizationLimits` | Explicit source,node and conservative retained-record allowances |
+| `FormulaSourceNormalizationError` | Original scope,selected limits and complete refusal |
+| `FormulaSourceNormalizationRefusal` | Source/node/retained quota,overflow,allocation or original document cause |
+
+Let S be the complete source count and N the sum of the documents' actual factory node counts.
+Every source participates,including unused entities,repeated bodies,all call arguments and untaken
+branches. Before reparsing or allocating the outer collection,admission checks S,checked population
+arithmetic,N and the conservative retained reservation S+2N against separately selected allowances.
+The reservation covers S source/arena records,N flat normalized nodes and up to N separately
+retained dynamic call-argument indices. Actual call arguments can be fewer;S+2N is an allowance,
+not a measurement of allocated bytes/capacity or exact live records. No default limits exist.
+
+Only after those checks does one fallible outer reservation occur. Original document factories
+then run in authored order;they retain actual local spans and original typed syntax/literal errors.
+Allocation keeps its original TryReserveError;Document keeps its original source index and boxed
+factory cause. Semantic diagnostic boxes compact errors;allocation refusals stay inline. The
+standard Error source chain retains the underlying causes. Any failure drops the private prefix
+and returns no accepted partial collection or invented language diagnostic.
+
+```rust
+use sc_core::{ontology::EntityId, recipe::*, value::CanonicalInputs};
+let expression = FormulaExpressionDocument::new(" (2.5 cm + eps_num) ".into())?;
+assert_eq!(expression.node_count(), 3);
+let source_limits = FormulaSourceLimits::new(1, expression.source().len(),
+    expression.canonical().as_str().len());
+let sources = FormulaSources::new(vec![FormulaSource::new(EntityId::from_bits(9001),
+    expression)], source_limits)?;
+let canonical = CanonicalInputs::new(vec![], vec![])?;
+let inputs = FormulaSourceInputs::new(&canonical, &sources).expect("actual complete joins");
+let normalized = inputs.normalize_sources(FormulaSourceNormalizationLimits::new(1,3,7))
+    .expect("complete selected retained allowance");
+assert_eq!(normalized.node_count(), 3);
+assert_eq!(normalized.retained_records(), 7);
+let source = normalized.sources().first().expect("actual original source");
+assert_eq!(&source.expression().canonical_form(), source.source().expression().canonical());
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+sources() borrows complete authored order;each source()/expression() pair keeps its actual owner.
+Arena node views cannot outlive their arena. inputs()/limits()/node_count()/retained_records()
+retain the original admission and its selected/measured populations. Debug omits source text.
+An empty registry fits zero limits;one maximum256-node expression reserves513 retained records.
+
+These quotas concern retained normalization populations after caller-owned document creation.
+Parser/literal scratch,allocator overhead/capacity,CPU,numeric backends and the full graph/runtime
+resource envelope remain separate. Existing source-byte admission and fixed expression bounds
+still apply. No namespace/result-kind/dependency/cycle/current Design,rounding or value proof is
+created. Missing names and incompatible kinds remain inspectable until real static checking.
+Original recipe order and actual let binding rules remain requirements for later graph execution.
+
+Four native contracts compare factory counts against the existing independent24-row shape corpus,
+actual source pointers/spans and normalized canonical identities,separate complete quota refusals,all
+branches/unused sources,maximum dynamic call arguments and empty drafts. The independent reference
+producer rechecks those same authored rows without invoking product normalization. Existing four
+document contracts retain original text/equality/parser/literal boundaries. Three compiler guards
+refuse default limits,private collection mutation and escaped arena views. Full graph/resource/
+evaluation/platform verification remains pending;these checks certify this normalization boundary.
 
 ## Verification scope
 

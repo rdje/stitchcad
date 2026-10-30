@@ -49,12 +49,14 @@ impl std::error::Error for FormulaExpressionDocumentError {
 pub struct FormulaExpressionDocument {
     source: String,
     canonical: FormulaCanonicalExpression,
+    node_count: usize,
 }
 impl fmt::Debug for FormulaExpressionDocument {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("FormulaExpressionDocument")
             .field("source_byte_count", &self.source.len())
             .field("canonical_byte_count", &self.canonical.as_str().len())
+            .field("node_count", &self.node_count)
             .finish_non_exhaustive()
     }
 }
@@ -74,8 +76,15 @@ impl FormulaExpressionDocument {
     /// # Errors
     /// Original syntax failure precedes literal refusal. Neither publishes partial source identity.
     pub fn new(source: String) -> Result<Self, FormulaExpressionDocumentError> {
-        let canonical = normalized(&source)?.canonical_form();
-        Ok(Self { source, canonical })
+        let (canonical, node_count) = {
+            let expression = normalized(&source)?;
+            (expression.canonical_form(), expression.node_count())
+        };
+        Ok(Self {
+            source,
+            canonical,
+            node_count,
+        })
     }
     /// Exact original authored source, deliberately exposed without rewriting to canonical text.
     #[must_use]
@@ -86,6 +95,13 @@ impl FormulaExpressionDocument {
     #[must_use]
     pub const fn canonical(&self) -> &FormulaCanonicalExpression {
         &self.canonical
+    }
+    /// Exact semantic node count from the original successful parser/converter, including all
+    /// branches and arguments. Immutable factory metadata enables preallocation admission;
+    /// it is not a caller annotation, name/kind proof, allocator byte count or evaluated state.
+    #[must_use]
+    pub const fn node_count(&self) -> usize {
+        self.node_count
     }
     /// Reuse the original parser/converter to derive immutable arenas borrowing actual source.
     /// No cached/self-referential arena or spans reconstructed from identity bytes are stored.

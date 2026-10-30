@@ -202,50 +202,62 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   No arbitrary expression binding/rounding or invented state/value/currentness certificate.
 - ID: `G1-SLICE.5e.2.5.derived.3.1`
   Status: `done`
-  Goal: allocation-free complete canonical-input/source join over both actual immutable owners.
-  First reject source entity ids colliding with any owned canonical declaration;then validate every
-  Derived formula reference in canonical length/general-scalar order,including unused targets.
-  Publish no accepted partial scope. Lend actual source/declaration borrows with original family,
-  declared kind,position and formula id;never use the separate source/provenance field as a formula
-  reference,read values,clone state or infer a parameter. Preserve non-Derived zero/false/Unknown.
-  Source existence alone supplies no namespace/kind/cycle/current Design/value proof. Existing
-  canonical family contracts and source owners are the authority;focused native/compiler/lint/
-  book checks then commit. Complete graph/resource/evaluation work stays .3.2 and later owners.
-  Completion0589: complete original canonical/source joins available;graph work stays .3.2.
-  - [x] REPRODUCE / ISSUE: existing canonical records retain Derived formula ids without source
-    existence proof. Source owners0588 exist separately;actual join admission is required before
-    any graph/value work. No authored result can be stored on an Unknown/Derived declaration.
-  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'LengthState::Derived|ScalarInputState::Derived|formula:
-    EntityId|not a complete Design' value.rs/value/scalar.rs/value/inventory.rs → actual sole ids,
-    original RequiresEvaluation and component scope,rc=0. Complete canonical getters/state-kind
-    interfaces and existing source index/native owner contracts read before implementation.
-  - [x] FIX: two allocation-free complete passes pin actual inventories:owned-id disjointness
-    first,then every Derived reference. Borrow actual targets/sources without copied state or
-    fabricated names/values. Exhaustive state matches require future variants to be considered.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_source_inputs_contract
-    -- --nocapture →four pass,rc=0,including final exhaustive-arm rerun. Dedicated/all six general
-    scalar kinds,shared-source actual pointers,original family/kind/positions,late missing formula,
-    complete collision precedence and unchanged non-Derived/provenance/empty states retained.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_canonical_input_contract →five pass,
-    rc=0;actual owner/family/kind/read boundaries remain. cargo test -p sc-core --doc
-    recipe::source_inputs -- --nocapture →four pass,actual E0616/E0515 for both owners plus positive
-    example,rc=0. Initial positive example incorrectly erased borrowed error into static Box and
-    failed E0597;handle local join directly. Scoped strict lib/new-target Clippy/final changed
-    rustfmt/diff pass,rc=0. Positive book96/310/1624/2845/glossary310/9/158/0 and747 four exact Git
-    spans/all prior live ids/order pass,rc=0. Full graph/runtime/platform checks remain deferred.
-  - [x] LOCKSTEP: book canonical/source join semantics/example/refusals and four API map rows,
-    task/index/MEM/DEV/CHANGE/LIVE align. Next .3.2 actual normalized/static source proof phases,
-    preserving real declaration-order/binding contracts before dependency/cycle/value work.
-    Global Design,currentness,kind/graph/evaluation/resource envelope not certified. G1 6/18/G0
-    unapproved;full/hosted79bd6f6a SHA-scoped. Full families/load/replay/physical and D334/D156/
-    D223/PLANNING.5 remain owned;D339 proof untouched. No new language diagnostic/rounding rule.
-    promotion: declined (existing sole formula reference,actual canonical ownership,complete admission and immutable borrowed-proof rules applied;no new language or authority policy).
+  Goal:0589 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part748.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.2`
+  Status: `in_progress`
+  Goal: actual normalized/static source proof phases under complete explicit allowances before
+  namespace/target-kind/dependency/cycle admission. Preserve real declaration-order and binding
+  semantics;source existence/normalization adds no fictitious let or rounding boundary.
+- ID: `G1-SLICE.5e.2.5.derived.3.2.1`
+  Status: `done`
+  Goal: bounded complete original-source normalized owner borrowing actual source/input admission.
+  Retain the actual node count when original document factory first normalizes;use immutable
+  factory-derived counts for complete preallocation admission,never caller shape annotations.
+  Check all sources and sum N nodes,including unused sources/branches,then S+2N conservative
+  retained records before one fallible outer reservation and any reparse. Existing per-expression
+  parser/converter constructs actual source-borrowed arenas;no canonical-text span reconstruction,
+  source/state clone,value/name/kind proof or accepted partial vector. Preserve original factory
+  and allocator errors. Bound retained populations only;parser scratch,allocator bytes,backend/CPU
+  and whole graph/resource/execution guarantees stay separate. Existing source-byte admission and
+  fixed language bounds remain in force. Focused actual/reference-shape/compiler/book checks.
+  Completion0590: complete bounded original-source normalized owners available;static proof .2.
+  - [x] REPRODUCE / ISSUE: separate document normalization lacks complete collection admission
+    before allocation/reparse. Caller shape hints and successfully processed prefixes supply no
+    complete actual population. Source/input ownership alone supplies no normalized arenas.
+  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'node_count|arguments.clone|Vec::with_capacity'
+    expression_document.rs/normalized.rs → actual successful factory nodes and converter's flat
+    nodes/dynamic arguments,rc=0. Parser/arena interfaces inspected;tree argument indices bounded
+    by N. S+2N is conservative retained allowance,not actual allocator size or parser scratch.
+  - [x] FIX: retain immutable actual node count at original document creation. Complete source/
+    checked arithmetic/node/retained quotas precede one fallible outer reservation and original
+    factories in authored order. Keep actual source/arena/context and typed causes;allocation
+    errors inline,semantic document diagnostics boxed. No accepted partial vector/state clone.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_normalized_sources_contract
+    -- --nocapture →four pass,rc=0. Actual factory counts match existing24 independent rows;
+    python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_reference.py
+    →24 reference rows pass,rc=0. Actual source pointers/spans/canonical identities/scope,complete
+    branch/unused-source quotas,256-node/255-argument call and empty allowances retained. Three/
+    nine nodes reserve7/20 records;one maximum source reserves513. Source-byte bounds stay intact.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_expression_document_contract
+    -- --nocapture →four pass,rc=0,original source/equality/parser/literal rules retained.
+    cargo test -p sc-core --doc recipe::normalized_sources -- --nocapture →three pass,actual
+    E0277/E0616/lifetime guards,rc=0. Scoped strict lib/new-target Clippy/changed rustfmt/diff pass,
+    rc=0. Positive book96/315/1624/2846/glossary310/9/158/0 and748 four exact Git spans/all prior
+    live ids/order pass,rc=0. No parser/converter algorithm change,new dependency,value/state cache
+    or invented language error. Full scratch/backend/graph/evaluation/platform proof stays pending.
+  - [x] LOCKSTEP: book factory-count/normalization API/example/quota/cause text and five API rows,
+    task/index/MEM/DEV/CHANGE/LIVE align. Next .3.2.2 actual namespace/target/static source proofs,
+    preserving ordered-recipe/let semantics before graph/runtime. G1 6/18/G0 unapproved;full/
+    hosted79bd6f6a SHA-scoped. Full integration/physical and D334/D156/D223/PLANNING.5 owned;
+    D339 proof untouched. Recipe-inputs576L/35836B:use a new semantic annex before growth.
+    Initial live-doc prewrite guard refused a404B PLANNING line;shorten before writing,not cap rise.
+    promotion: declined (existing immutable factory syntax metadata,complete explicit admission and original-source borrowed-owner rules applied;no new language or authority rule).
+- ID: `G1-SLICE.5e.2.5.derived.3.2.2`
   Status: `pending`
-  Goal: normalize actual complete original source inventory under explicit complete resource
-  allowances;join namespace/static kinds and target requirements before dependency/cycle admission.
-  Keep source/target family/span identities and both-branch checks;no fake statement,rounding or
-  caller value. Select safe proof-owner phases after reading actual factories/lifetimes/limits.
+  Goal: check every actual normalized source under the complete actual namespace and each original
+  target requirement before dependency/cycle/value work. Resolve original source/ordered-statement
+  relationship and binding-rounding semantics from canonical contracts;do not invent a let/header,
+  source order or computed value. Own safe static proof/graph phases after interface recovery.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

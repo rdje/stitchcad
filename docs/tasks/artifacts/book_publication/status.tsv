@@ -309,3 +309,8 @@ complete canonical formula source joins	annexes/formula-recipe-inputs.md	crates/
 actual Derived source and canonical target	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/source_inputs.rs	FormulaDerivedInput	G1-SLICE.5e.2.5.derived.3.1	4.1
 original complete source join error	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/source_inputs.rs	FormulaSourceInputError	G1-SLICE.5e.2.5.derived.3.1	4.1
 actual source join refusal	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/source_inputs.rs	FormulaSourceInputRefusal	G1-SLICE.5e.2.5.derived.3.1	4.1
+complete original normalized source owners	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_sources.rs	FormulaNormalizedSources	G1-SLICE.5e.2.5.derived.3.2.1	4.1
+actual source borrowed normalized arena	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_sources.rs	FormulaNormalizedSource	G1-SLICE.5e.2.5.derived.3.2.1	4.1
+complete source normalization allowances	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_sources.rs	FormulaSourceNormalizationLimits	G1-SLICE.5e.2.5.derived.3.2.1	4.1
+original source normalization refusal context	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_sources.rs	FormulaSourceNormalizationError	G1-SLICE.5e.2.5.derived.3.2.1	4.1
+complete source normalization refusal	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_sources.rs	FormulaSourceNormalizationRefusal	G1-SLICE.5e.2.5.derived.3.2.1	4.1

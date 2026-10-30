@@ -1,15 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.2:actual normalized/static source proof phases and complete
-  resource/namespace/kind/dependency/cycle contracts. Preserve actual ordered-recipe/let rounding
-  boundaries;source ownership alone supplies no binding or graph semantics. Read actual factories.
-- Canonical source joins0589 ready:complete owned-id disjointness before all Derived references;
-  actual targets/source borrows retain families/kinds/positions/ids. No state clone/value/name.
-  Native4/canonical-owner5/doc4/scoped lint/fmt/book96/310/1624/2845/glossary0 pass. No global
-  Design/currentness/output-kind/graph/runtime/resource-envelope proof. Whole0588 in747/four spans.
-- Source inventory0588 and original document0587 ready. Formula(id) amounts retain actual
-  DesignParameter metadata meaning. Preserve D339 target/book_search_capture_0586_book_final at
-  its original source boundary;never overwrite old captures. Scalar/recipe checkpoints scoped.
+- Next G1-SLICE.5e.2.5.derived.3.2.2:real complete namespace/target/static source proof phases.
+  Preserve actual ordered-recipe/let rounding semantics before dependency/cycle/value execution;
+  source ownership/normalization supplies no binding/graph semantics. Read actual checked factories.
+- Source normalization0590 ready:factory-derived immutable node counts,complete S/N/conservative
+  S+2N retained admission before outer allocation/reparse;actual original source/arena ownership.
+  Native4/reference24/document4/doc3/scoped lint/fmt/book96/315/1624/2846/glossary0 pass. No full
+  scratch/allocator/backend/graph/currentness/value proof. Whole0589 in748/four spans/live ids.
+- Canonical joins0589/source inventory0588/document0587 ready;Formula(id) amounts retain actual
+  DesignParameter meaning. Recipe-inputs book576L/35836B:use a new semantic annex for static proof.
+  Preserve D339 target/book_search_capture_0586_book_final at its boundary;never overwrite captures.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
