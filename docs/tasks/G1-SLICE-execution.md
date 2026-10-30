@@ -770,12 +770,8 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0546 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part705md).
 
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261030`
-  Status: `in_progress`
-  Goal:director-requested daily safe artifact cleanup around the24-hour cadence after arc review,
-  before forward review. Read current cleanup protocol;own frozen plan,protected proof census,
-  exact current verification-log preservation,apply and immediate independent residue census.
-  Keep package/dependency stores,linked caches,other Git repositories and original numerical/
-  archive/search proof workspaces intact. No deletion without complete safety/ownership evidence.
+  Status: `done`
+  Goal:daily safe cleanup after arc review;protected originals/stores intact;child receipts below.
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261030.proof-protection`
   Status: `done`
   Goal:D342 P1 prevent retained proof loss before any daily cleanup apply;protect current and
@@ -813,6 +809,19 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
     promotion: declined (existing immutable-proof preservation already requires this protection;the fix mechanizes retained workspace naming families and adds independent guards without new deletion authority).
   Commit:STITCHCAD-G1-0628;Verification:protected7/ordinary2/actual reds4/entry contracts/real read-only plan.
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261030.apply`
-  Status: `pending`
-  Goal:after D342 protection fix commits,freeze a fresh plan,preserve all current/retained proofs,
-  apply only safe generated artifacts and prove immediate independent residue before regeneration.
+  Status: `done`
+  - [x] REPRODUCE / ISSUE:daily cleanup due after2026-10-29 14:10UTC;old rejected plans unusable.
+  - [x] ROOT CAUSE (WHY + WHERE): cleanup.py plan target/artifact_cleanup_audit/seam-20261030-safe
+    →70 candidates/1700 unsafe skipped,HEAD c485e067;4 owned generated trees/66 strays,rc=0.
+  - [x] FIX:copy/verify66 strays/26 receipts;hash14 complete proof roots;OS-idle apply;no-launcher residue.
+  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply
+    target/artifact_cleanup_audit/seam-20261030-safe --idle-cua →handoff OK;204 files/16693061B
+    removed,residue0/tracked_change false,rc=0. Frozen plan/result/apply.out in that audit.
+  - [x] NO REGRESSION: python3 -I -B target/cleanup_20261030_guard.py after →70 absent/tracked exact;
+    6496 entries/13380343714B across12 archive/search+2 numerical roots unchanged;66 copies/26
+    receipts exact,rc=0. Store overlap0,not wholly hashed;1700 unsafe kept;Rust release/deps bin/log0,
+    incremental2163 bins kept. Public archive1241/85,book99/374/1659/2937,glossary0,IDs/map/diff pass,rc=0.
+  - [x] LOCKSTEP:cleanup record/book/live docs aligned;LIVE unchanged:G1 6/18/G0 unapproved.
+    Next forward.retention owns active64;0628 stays live. No full/hosted verdict after79bd6f6a.
+    promotion: declined (existing preservation/idle/residue contracts;no new authority).
+  Commit:STITCHCAD-G1-0629;Verification:real apply/14-root independent residue/receipts/book.

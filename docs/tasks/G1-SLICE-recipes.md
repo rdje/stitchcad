@@ -602,6 +602,11 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `pending`
   Goal:coupled sin/cos folding,complete threshold certificate,rounding/provenance and actual fault
   review;preserve original full-width operands and protected certificate workspaces.
+- ID: `G1-SLICE.5d.4.forward.retention`
+  Status: `pending`
+  Goal:active archive64 full;fresh canonical prepare/install/recovery transaction before growth.
+  Preserve all prior logical names/bytes/public reads and original proofs;no cap increase/old
+  recapture. Independently compare complete snapshots,then resume coupled forward review.
 - ID: `G1-SLICE.5d.4.inverse`
   Status: `pending`
   Goal:coupled atan/atan2 whole-ratio/branch/threshold/error/provenance and actual fault review;

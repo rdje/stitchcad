@@ -1,19 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.cleanup-20261030.apply:freeze a fresh POST-COMMIT cleanup plan.
-  Original seam-20261030 plan rejected before deletion:D342 proposed9 logs in4 retained search
-  workspaces. All9 fingerprints remain exact;rejected-before-deletion.json records it. Review plan
-  seam-20261030-protected-review is read-only/stale after commit;never apply either old plan.
-- D342 fixed0628:direct inspector/census now protect/prune five retained target-child families,
-  including future archive/search identities. Numerical stores and every old guard remain.
-  Protected7/ordinary2/actual compiled reds4/restored1 and complete entry contracts pass.
-- Actual revised plan70 has proof overlap0;extra44 are exactly victim logs from two focused
-  entry-contract fixture runs. Preserve all current proof logs and original history/search/numeric
-  stores before actual deletion;apply needs OS-visible idle census,then immediate independent
-  residue before any launcher rebuild. Last completed cleanup still2026-10-29 14:10UTC.
-- Book99/374/1659/2937/glossary0/history787/IDs/map/diff;producer349/34304calls pass. G1 6/18/
-  G0 unapproved unchanged;full/hosted79bd6f6a SHA-scoped. Native root/arc review done;after cleanup
-  resume .5d.4.forward. Protect originals;full PNT/push400;broader coupled/platform/release remain.
+- Next G1-SLICE.5d.4.forward.retention:preserve complete current archive before growth;then
+  coupled sin/cos proof,actual sourced storage and body-fault review.
+  Preserve original complete forward certificate and full-width operands;platform remains owned.
+- Cleanup0629 complete:seam-20261030-safe plan after0628/handoff OK;4 trees/66 strays/204 files/
+  16693061B removed. Immediate no-launcher census proves70 absent/tracked exact;6496 protected
+  entries/13380343714 regular B unchanged across12 archive/search roots and2 numerical stores.
+  All66 stray copies/26 verification receipts exact;1700 unsafe skipped. Native incremental2163
+  bins/native+WASM linked caches retained. Rebuild only followed immediate residue proof.
+- D342 fixed0628;old seam-20261030 and protected-review plans never apply. Retained5 workspace
+  families protected/pruned;original0586 logs remain. 0628 guard scope stays live;next forward retention owns bound64.
+- Book99/374/1659/2937/glossary0/archive64/IDs/map/diff pass. Native root85/fault5 andarc23/fault5
+  reviewed;forward/inverse/Tan/mixed/platform acceptance remain. G1 6/18/G0 unapproved unchanged.
+  Full/hosted79bd6f6a SHA-scoped;derive Git HEAD/ahead count. Full PNT/push400 continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
@@ -41,10 +40,10 @@
   source metadata and exact quantities survive portions;B/Opposite complement BEFORE shared rounding.
   Explicit region/integer limits bound arithmetic,not allocator/CPU/global authority. Actual notch
   view/command adoption,paired stops/lineage/effects/full acceptance remain owned under D301.
-- Daily artifact cleanup completed2026-10-29 14:10UTC;docs/ARTIFACT_CLEANUP.md. Audit
-  target/artifact_cleanup_audit/seam-20261029 preserves current full/hosted proof and all removed
-  strays;four original workspaces/two numerical stores1538 entries/13185133915B exact. Keep unsafe
-  linked caches,package/dependency stores and original generation/install workspaces intact.
+- Daily artifact cleanup completed2026-10-30 14:18 UTC;docs/ARTIFACT_CLEANUP.md. Audit
+  target/artifact_cleanup_audit/seam-20261030-safe preserves removed strays/current receipts;
+  14 original archive/search/numerical roots independently exact. Keep unsafe linked caches,
+  package/dependency stores and original generation/install workspaces intact.
 - Paired work is canonical in execution sibling;no duplicate IDs at root. SplitSeamSpan still has
   no native bus handler. LIVE G1 remains6/18;no app/full paired verification claimed. Derive Git HEAD
   and origin/main ahead count;push at400 only after required full pre-push gates. Full PNT continues.

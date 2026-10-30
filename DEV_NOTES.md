@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — prevent retained proof workspace deletion before daily cleanup
+## _(2026-10-30 UTC)_ — apply safe daily cleanup after proof-family repair
 
-0628 fixes D342. The actual35-candidate plan proposed9 retained0586 search logs;preservation review stopped before deletion. Generic suffix handling lacked archive/search lifecycle guards. The new first-target-child predicate protects five workspace families in direct inspect and prunes the census before traversal.
-Protected7/ordinary2/actual omission reds4/restored1 pass with bytes exact. Future family names and a nested ordinary lookalike are independent fixtures. Entry contracts retain41/9/1 captures,14 physical refusals,5 omission reds,link/process controls and old policy bodies/constants through exact additive adapters.
-Revised read-only plan70 excludes proofs;old9 fingerprints remain exact,no apply. Extra44 are two owned contract runs' victim logs. Producer349/34304calls/history787/IDs/map/diff/book99/374/1659/2937/glossary0 pass. [Whole0627/ledger](docs/history/stitchcad-devnotes-part787.md) retained.
-D342 fixed;actual daily cleanup waits for this commit and a fresh plan. Last completed cleanup date stays2026-10-29 14:10UTC. Product/native root/arc status,G1 6/18/G0 unapproved unchanged. Preserve all original proof workspaces/current verification before deletion;then resume forward review.
+0629 freezes the actual post0628 plan,checks4 generated trees/66 strays against14 retained proof roots and protected stores,then copies/byte-verifies all66 strays and26 current verification receipts. OS-visible canonical handoff OK;204 files/16693061B removed,1700 unsafe entries retained.
+Immediate no-launcher census proves all70 paths absent and tracked hash exact. All14 archive/search/numerical roots retain6496 entries/13380343714 regular B exactly. All66 copies/26 receipts match. Package/dependency stores excluded,not wholly hashed;2163 incremental bins retained with linked caches.
+Regeneration follows the immediate proof;book99/374/1659/2937/glossary0/archive64/IDs/map/diff pass. 0628 guard scope stays live;active archive64 needs retention before growth. Original D342 rejected plans remain unapplied;protected0586 logs survive. Latest cleanup record now reflects actual removal.
+Promotion declined:existing preservation/idle/residue contracts applied. LIVE reviewed unchanged:G1 6/18/G0 human unapproved;full/hosted79bd6f6a remains exact-SHA scoped. Native roots/arc reviewed;next forward retention,then coupled review. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

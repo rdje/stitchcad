@@ -102,14 +102,18 @@ that every protected dependency or numerical-proof store was hashed. Candidate s
 those stores were outside the deletion set. Regenerated book/scratch output after the immediate
 residue census is expected and does not invalidate that census.
 
-The 2026-10-29 run removed four generated trees and702 stray files after copying and verifying
-all702 strays into its protected audit. Its immediate census proved all706 selected paths absent
-and tracked bytes exact. An independent full hash comparison preserved four original archive
-workspaces and both numerical certificate stores:1538 entries,13185133915 regular-file bytes.
-Package/dependency stores were excluded by candidate separation;they were not wholly hashed.
-Native/WASM incremental trees containing linked objects remained untouched,including1890 native
-incremental binary cache files. Current full/hosted verification receipts remain under the same
-protected audit. Later book/scratch regeneration follows the completed immediate residue proof.
+The 2026-10-30 run used a fresh plan after the D342 protection fix. It removed four generated
+trees and66 stray files:204 files,16693061 bytes. The OS-visible idle check passed before removal.
+All66 strays were copied and byte-verified first;26 current full/hosted/native verification
+receipts remain independently verified in protected audit seam-20261030-safe.
+
+Its immediate independent census ran without activating the launcher:all70 selected paths were
+absent and tracked bytes exact. Full before/after hashes cover twelve original archive/search
+workspaces and both numerical certificate stores:6496 entries,13380343714 regular-file bytes,
+all unchanged. Package/dependency stores were excluded by separation,not wholly hashed.
+The1700 unsafe entries remained;2163 native incremental binary caches were kept because linked
+objects prevent safe whole-tree removal. Book/scratch regeneration followed the residue proof.
+Rejected pre-fix/review plans were never applied;all original0586 search proof logs survive.
 
 ### Incomplete runtime observations
 

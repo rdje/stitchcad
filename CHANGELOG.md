@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0628 — prevent retained proof workspace deletion before daily cleanup
+## STITCHCAD-G1-0629 — clean regenerable artifacts and preserve original proofs
 
-- Fix D342 before removal:the original plan proposed9 retained search-proof logs. Protect/prune five archive/search workspace families,including future identities,while keeping numerical stores and old policies. Project cleanup has not run;retained proofs remain intact.
-- Protected7/ordinary2/actual reds4/entry contracts/real revised plan pass;old9 fingerprints exact. Book99/374/1659/2937/glossary0/history787/IDs/map/diff and producer census pass. Latest cleanup date unchanged;next fresh plan/apply. G1 6/18/G0 unapproved unchanged.
+- Apply fresh post0628 daily plan after OS-visible idle admission:4 trees/66 strays/204 files/16693061B removed. Immediate independent census proves70 absent/tracked exact;6496 retained entries/13380343714 regular B unchanged across14 complete archive/search/numerical roots.
+- All66 stray copies/26 current verification receipts exact;1700 unsafe entries retained. Book99/374/1659/2937/glossary0/archive64/IDs/map/diff pass. Latest cleanup record aligned. LIVE G1 6/18/G0 unapproved unchanged;full/hosted79bd6f6a SHA-scoped. Next coupled forward review.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
