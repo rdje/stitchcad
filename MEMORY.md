@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.tangent.faults.resources.bodies:compile actual fold/first/later quotas,
-  charge,bit-before-work priority and counter faults against committed33-row resource cohort.
-- Resource0637:33 rows/66 native+sourced comparisons;12 values/11 preparation/10 execution
-  outcomes.3524B/SHA c698149fad3c3bf5e4b4f81c0e367684807e4e707db304bae07dcb7fee4323fd.
-  Exact dyadic endpoint bits plus independent alternate-pi Fraction conclusions;old width shortcut
-  excluded. Original input/policy/stage/demand/prior progress/chain/Cos/Tan preserved;None !=Some0.
-- Native12/private overflow1/strict affected lint/fmt/bash pass;counter bounds16/32/64. Original139
-  and core unchanged. Producer353/34448calls,file240/91/40/15refusals/12reds/history796/IDs+2/
-  map/diff/book99/374/1659/2944/glossary0 pass. n16 complete transitive locality remains pending.
-- Prior Tan0636 arithmetic3 baselines/9 actual faults pass;545 original/542 copied hashes exact.
-  Root/arc/forward/inverse scoped native done;Tan resource bodies,mixed/platform/full coupled
-  remain. Fresh45M inverse read deferred to final acceptance. G1 6/18/G0 unapproved unchanged.
+- Next G1-SLICE.5d.4.composition:independent mixed irrational chains through actual source/
+  recipe/Design calls,each own rounding boundary,first failure and successful contributions.
+- Tan0638 scoped native review done:resource2 baselines/13 actual compiled faults rejected by
+  strict D343 named-test panic/ordinal/whole-row evidence;original547/copied544 hashes exact,
+  complete554/555 outputs,owned timeout controls pass. Earlier arithmetic3 baselines/9 faults pass.
+- After restoration native resource2/private overflow1/strict affected lint/fmt/bash pass. Original
+  math139 and resource33 fixtures/core unchanged;33 resources retain66 complete comparisons.
+  Counter safety uses admitted-extent/remaining-work inequalities plus private overflow control.
+- Producer354/34461calls,file241/91/40/15refusals/12reds;whole0637 retained797/four spans;
+  IDs/map/diff/book99/374/1659/2945/glossary0 pass. n16 full transitive locality remains pending.
+- Root/arc/forward/inverse/Tan scoped native done;mixed/platform/full coupled remain. Fresh45M
+  inverse read deferred to final acceptance. G1 6/18/G0 unapproved unchanged;no production approval.
 - Protect original archive/search/numerical trees;0630 transaction complete,never rerun old
   install/recovery. Full/hosted79bd6f6a exact-SHA only;full PNT/push400 continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete

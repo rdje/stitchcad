@@ -11,7 +11,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;shared platform review remains |
 | sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/sourced88/seven actual body faults pass;shared platform remains |
 | atan/atan2 | Principal branches and complete inverse threshold certificate | Source-gated proof/sourced81/nine actual body faults pass;shared platform remains |
-| tan | Explicit per-call quotas,native139 and real paired24 acceptance | Convergent/source/storage139 and9 actual arithmetic faults pass;resource faults/platform remain |
+| tan | Explicit per-call quotas,native139 and real paired24 acceptance | Native139/resource33/paired24 and9+13 actual faults pass;shared platform remains |
 
 The [canonical numerical contract](formula-rationals.md)
 records the algorithms. [Tangent resources](formula-trig-certificates.md) retain
@@ -407,8 +407,8 @@ failure adds no successful Tan contribution. No source flags or numerical answer
 The focused native13 checks also retain early/later resource precedence,zero/unit/false storage,
 actual width refinement and original error chains. Three independent profile/model commands
 recheck range/poles,folding/conditioning,convergent enclosures and the bounded request schedule.
-The19 diagnostic model cases/three model guard omissions are separate from upcoming compiled
-native resource-guard faults. Arithmetic body faults pass below;resource faults,platform,mixed-call,full
+The19 diagnostic model cases/three model guard omissions remain separate from the compiled
+native resource-guard controls below. Arithmetic/resource body faults pass;platform,mixed-call,full
 allocator/provider/replay and production acceptance remain owned. Current proof/status text
 now reflects available native/scalar policies while keeping aggregate resource closure separate.
 
@@ -450,7 +450,7 @@ After restoration,the primary13 tangent tests and strict affected lint/formattin
 formula-structure suite and native producer registries include this entry. Native file ownership
 is split into bounded4+1 groups;complete transitive compiler/build locality remains n16.
 This closes scoped arithmetic fault review. Actual reservation/charge/precedence/counter faults
-remain a separate next unit;Python model reds cannot substitute for them. Mixed-call behavior,
+pass below;Python model reds do not substitute for them. Mixed-call behavior,
 native/browser execution parity,aggregate resources and full coupled/production acceptance
 retain their separate owners.
 
@@ -501,4 +501,53 @@ python3 -I -B scripts/local_environment.py -- cargo test --offline --locked -p s
 
 The new target's two tests,the existing ten native/sourced tangent checks and the private
 extent test pass. Strict affected lint and formatting pass. Actual compiled resource-body
-faults are still the next unit;the positive cohort cannot substitute for those controls.
+faults pass below;the positive cohort remains distinct from those controls.
+
+## Actual native tangent resource-body faults
+
+The tangent_resource_body_faults.py entry runs preparation and execution configurations through
+the same original-scope Cargo controller. Both unchanged33-row baselines pass. Each of thirteen
+single-body faults compiles successfully,then fails the independent resource watcher. The D343
+classifier requires the named test's actual stderr panic,one ordinal and the whole original row.
+
+| Actual copied resource fault | First independent fixture ordinal |
+| --- | --- |
+| Defer kind validation until quota admission | 4 |
+| Omit the fold reservation guard | 1 |
+| Omit the first bit guard | 13 |
+| Omit the first term guard | 14 |
+| Check first work before bits when both fail | 15 |
+| Charge a preparation refusal | 1 |
+| Omit later bit admission | 17 |
+| Omit later work admission | 18 |
+| Check later work before bits when both fail | 19 |
+| Charge the refused iteration before admission | 17 |
+| Report a proposed reservation as previously admitted | 17 |
+| Discard the cumulative term charge | 20 |
+| Halve the scheduled series charge | 11 |
+
+The omitted first-bit/first-term faults still encounter execution admission. The original
+preparation stage in the independent fixture rejects those faults even when the eventual
+resource unit,demand and prior counters would otherwise look identical. Later failures also
+retain the highest previously admitted reservation and completed charges;refused work cannot
+appear as consumed. The checked primitive-overflow path is verified separately by the original
+private excessive-extent test and the admission inequalities above.
+
+Each run preserves547 original input hashes and an exact544-file workspace snapshot. Preparation
+plans554 outputs;execution plans555. Both owned parent/child timeout controls pass for each.
+All original and copied bytes match after finally restoration. Mutants stop on their first
+independent assertion;they are not thirteen complete33-row populations. Reports under
+target/tangent_resource_body_faults/0638-prepare and0638-execute/report.json retain exact rows,
+full assertion payloads,compiler identity,variant source/binary hashes and observed return codes.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py
+```
+
+After restoration,the primary resource target's two tests,the private excessive-extent test,
+strict affected lint and formatting pass. The formula-structure suite and native registries
+include this entry. This completes scoped native tangent arithmetic/resource/source review.
+The next owner covers mixed irrational call chains. Actual native/browser parity,full coupled
+acceptance,aggregate resources and transitive probe locality retain their separate owners;
+no physical or production release approval follows from these finite native checks.

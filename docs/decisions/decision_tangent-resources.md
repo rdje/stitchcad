@@ -192,4 +192,4 @@ This closes scoped policy integration,not coupled irrational/platform/full-resou
 ## Current review clarification0635
 
 Current implementation/policy status and per-call versus aggregate resource scope are clarified;
-original numerical rules and resource quotas are unchanged. Coupled body/platform proof remains owned.
+original numerical rules and resource quotas are unchanged. Scoped body review0638 is complete;platform/full coupled proof remains owned.

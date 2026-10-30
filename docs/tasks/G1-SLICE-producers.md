@@ -917,4 +917,4 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
   Status: `pending`
   Goal:tangent body-entry locality review under parent schedule/acceptance;feature evidence is scoped.
-  Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py
+  Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py;docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0637 — preserve independent tangent resource outcomes
+## STITCHCAD-G1-0638 — reject actual tangent resource-body faults
 
-- Separate33-row/66-comparison cohort preserves actual native/sourced stage,input,limits,demand,prior progress,error chain and Cos/Tan contributions.3524 independent fixture bytes exact;exact width refinement and counter bounds retained. Original139/native core unchanged.
-- Native12/private overflow1/strict affected lint/fmt/bash/book99/374/1659/2944/glossary0/history796/IDs+2/map/diff pass. LIVE adds resource33;G1 6/18/G0 unapproved unchanged. Actual compiled resource bodies next;platform/full coupled/locality remain owned.
+- Two unchanged baselines pass;13 actual quota/stage/priority/charge/reservation/counter faults compile then fail exact independent assertions. Original547/copied544 hashes exact;554/555 complete outputs and owned timeout controls pass. Original139/resource33/core unchanged.
+- After restoration native3/strict affected lint/fmt/bash/book99/374/1659/2945/glossary0/history797/IDs/map/diff pass. LIVE adds13 resource faults;scoped native tangent parents done. G1 6/18/G0 unapproved unchanged. Next mixed calls;platform/full coupled/locality remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
