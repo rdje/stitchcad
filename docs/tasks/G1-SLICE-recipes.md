@@ -645,33 +645,38 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0639 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part799.md).
 - ID: `G1-SLICE.5d.4.platform`
   Status: `done`
-  Goal:actual declared native/browser numerical identity with exact target/toolchain/run evidence,
-  including original mathematical/resource failures;compile-only evidence is not execution parity.
-  Scope:numeric API pair;full wasm-viewer/matrix remain G1/G5.
+  Goal:0640 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part800.md).
 - ID: `G1-SLICE.5d.4.platform.execution`
   Status: `done`
-  - [x] REPRODUCE / ISSUE:D344 exploratory Chrome inherited off-volume TMPDIR;no numerical verdict.
-  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/irrational_platform.py
-    --plan-only →9 consumers/31 checks/6 host exclusions/405 fixture rows,no dispatch,rc=0.
-    Old direct Popen missed prepared env;one ambiguous empty host directory remains untouched.
-  - [x] FIX:freeze inputs,localize child/temp/profile paths,protect captures before creation;
-    safe main/ExitCode bridge preserves unsafe forbid;owned failure writer/atomic latest publication.
-  - [x] ADDRESSED (verified):same entry without --plan-only →native31+actual Chrome31 pass104,
-    compiled wrong expectation fails native101/browser RuntimeError;rc=0. Original550 hashes/copies
-    exact;temp move/census/old-path residue exact0,new ambient Chrome entries0;OS process census OK.
-  - [x] NO REGRESSION:strict adapter Clippy/fmt/bash,protocol4/1 red,cleanup8/2/4 reds+legacy AST
-    pass,rc=0. Producer356/34892calls,file243/91/40/15refusals/12reds,whole799 four spans/IDs+1/
-    map/diff/book101/374/1667/2973/glossary0 pass,rc=0. Core/tests/fixtures/lock/toolchain unchanged.
-  - [x] LOCKSTEP:D344 fixed;observed Rust1.99/Chrome156 pair only;full app/matrix/locality remain
-    owned. Book/live/notes sync;coupled acceptance next. promotion: declined (existing actual-run,
-    same-volume,proof-retention,source-preservation and scoped numerical contracts).
-  Commit:STITCHCAD-G1-0640;Verification:31 native+Chrome/bad fixture/550 hashes/lint/book.
+  Goal:0640 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part800.md).
 - ID: `G1-SLICE.5d.4.acceptance`
-  Status: `pending`
+  Status: `in_progress`
   Goal:close complete coupled irrational review only after all scoped proofs/faults/composition/
   platform children pass;retain full allocator/provider/replay/physical/release owners separately.
-  Deferred verification:after numerical feature completion,rerun verify_inverse_certificate.py
-  across all45M/450 chunks;current ordinary inverse slices reuse the source-gated complete witness.
+  Fresh complete readers pass0641;D345 preservation then full integration gates remain.
+
+- ID: `G1-SLICE.5d.4.acceptance.certificates`
+  Status: `done`
+  - [x] ISSUE:deferred complete certificate reads after numeric/mixed/platform implementation.
+  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/
+    verify_inverse_certificate.py →COMPLETE45M/450,source/hash/gap/order exact,rc=0.
+  - [x] FIX:verify_forward_certificate.py →1M/100 exact;original stores read-only,rc=0.
+  - [x] ADDRESSED (verified):inverse_certificate_witness.py →1299B exact;atan_runtime_plan.py
+    →14/16/2/4/2 controls;sincos_runtime_plan.py →14/50/2;trig_midpoint_certificate.py
+    →8/9/161/3+scale1 counterexample;constructor borrowed controls3/4/32/2 pass,rc=0.
+  - [x] NO REGRESSION:19 exact retained copies/original9 reports unchanged;history800 four Git
+    spans/IDs+3/map/diff/book101/374/1669/2976/glossary0 pass,rc=0. Full gates deferred.
+  - [x] LOCKSTEP:book/live/notes sync;D345 P0 next before gates;promotion declined(existing proofs).
+  Commit:STITCHCAD-G1-0641;Verification:fresh full readers/independent plans/preserved originals.
+- ID: `G1-SLICE.5d.4.acceptance.replay-identities`
+  Status: `pending`
+  D345 P0 next after read-only certificates,before gates:fixed body-fault capture directories
+  allow later probes to replace9 original reports/snapshots. Reproduce in an owned sink,then
+  allocate fresh immutable run identities and verify original receipts unchanged before full probes.
+- ID: `G1-SLICE.5d.4.acceptance.gates`
+  Status: `pending`
+  Goal:deferred full native/Wasm/doctrine/probe/book acceptance after certificate closure;
+  fix exposed defects in owned slices,then close only scoped coupled review with original evidence.
 
 ### Execution, uncertainty and replay
 

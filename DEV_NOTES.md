@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — execute original numerical checks in actual Chrome
+## _(2026-10-30 UTC)_ — freshly read both complete numerical certificates
 
-0640 runs31 unchanged public-consumer checks/9 files on native aarch64 and actual Chrome156 Wasm32,Rust1.99 b940084d7/LLVM23.1.1,Darwin27 arm64. Six fixtures405 rows/26610B. Baseline104 both;compiled bad expectation fails native101/browser RuntimeError. Original550 input/copy hashes exact.
-D344 fixed:prepared local child/temp/profile/cache paths;new retained capture store guarded before creation. Temp move/census/residue0,ambient new Chrome entries0,OS process census OK. Initial ambiguous empty host dir untouched. Failed lookup/process-admission attempts retained;no daily cleanup performed.
-Strict adapter Clippy/fmt/bash,protocol4/1 actual ownership red,cleanup8/2/4 reds+legacy AST,producer356/34892calls,file243/91/40/15refusals/12reds,book101/374/1667/2973/glossary0/history799/IDs+1/map/diff pass. Safe main/ExitCode needs no unsafe export;atomic receipt pointer preserves earlier captures.
-[Whole0639](docs/history/stitchcad-devnotes-part799.md) retains mixed-call review. Promotion declined:existing contracts. LIVE adds observed pair31/D344 fixed;G1 6/18/G0 unapproved unchanged. Next coupled/fresh45M read/full verification;app/matrix/locality/physical/release owners remain. Full PNT continues.
+0641 reads inverse45M/450 and forward1M/100 original chunks;exact gaps/hash/order/source identities and original margins pass. Readers do not reconstruct interval construction. Inverse1299B witness exact;source-locked producer/independent derivation remain separate legs.
+Atan14/16/2/4/2,sincos14/50/2,midpoint8/9/161/3+scale1 and constructor3/4/32/2 controls pass. Protected coupled-0641 receipt retains19 exact logs/manifests/witness/report copies;all9 original fault reports unchanged. Fresh readers complete the prior deferred data scan.
+D345 P0 next:actual fixed-path report writer replaces a controlled sentinel. Preserve original captures with fresh run identities before full probes. Book101/374/1669/2976/glossary0/history800 four spans/IDs+3/map/diff pass. No full integration verdict yet.
+[Whole0640](docs/history/stitchcad-devnotes-part800.md) retains observed native31/Chrome31 and D344 repair. Promotion declined:existing proofs. LIVE adds fresh readers/D345 owner;G1 6/18/G0 unapproved unchanged. Next D345 then full coupled gates;remaining app/resource/release owners remain. PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

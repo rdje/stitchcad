@@ -285,8 +285,10 @@ the atan turn derivative is greater than1/16,so the angular midpoint distance ex
 This slice reproduces the entire source-gated1299-byte compact witness exactly:SHA-256
 6b60d154f4160b0599f0ad13731b943e3e8dbd05f29496e33a186dea2d06840b.
 Frozen producer/build inputs and all critical live math sources retain their expected identities.
-This reuses the original full0286 proof;it is not a fresh45-million-row scan. A deliberate full
-reader rerun remains owned by G1-SLICE.5d.4.acceptance after the numerical feature set is complete.
+The0641 acceptance run freshly reads all45 million rows/450 chunks:exact gaps,coverage,order,
+hashes and frozen/live source identities pass. The original0284 store is unchanged. Encoded-gap
+verification does not reconstruct interval construction;original producer and independent
+derivation/runtime controls remain separate proof legs.
 
 The native profile uses576 fractional bits,five half-angle steps and64 alternating terms.
 Each half-angle uses x/(1+sqrt(1+x^2)). Integer Newton on[S^2,2S^2] reaches its exact floor in at
@@ -358,8 +360,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py
 The formula-structure suite registers this entry alongside root,arc and forward controls.
 After restoration,the primary inverse4 tests,strict affected lint and formatting pass. Original
 kernel and fixture bytes are unchanged. This closes scoped native inverse review. The original
-complete45M certificate remains source-gated;its fresh full read still belongs to final coupled
-acceptance. Tan and mixed-call scoped native reviews are now available. Native/browser parity,
+complete45M certificate now also passes the fresh0641 full reader. Tan and mixed-call scoped native reviews are now available. Native/browser parity,
 full resource/provider/replay and release proof remain owned;observed numerical Chrome evidence is available,while transitive locality remains n16.
 
 ## Tangent adaptive and explicit-resource boundaries
@@ -551,3 +552,8 @@ include this entry. This completes scoped native tangent arithmetic/resource/sou
 [Mixed irrational call chains](formula-irrational-composition.md) now pass a separate native/Design
 cohort. [Observed native/Chrome parity](formula-irrational-platform.md) now passes;full coupled acceptance,aggregate resources and probe locality remain owned;
 no physical or production release approval follows from these finite native checks.
+
+
+The [fresh full certificate acceptance](formula-irrational-platform.md#fresh-complete-certificate-acceptance)
+records both complete readers,independent runtime controls and preserved original receipts.
+D345 capture preservation and full integration gates remain next.

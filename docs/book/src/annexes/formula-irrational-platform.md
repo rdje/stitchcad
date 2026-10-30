@@ -120,6 +120,49 @@ The actual capture requires a clear project process census;finish other project 
 Installed OS/browser launchers are read-only external tool dependencies. Project sources,
 generated workspaces,dependency stores,profiles,captures and scratch stay on the repository
 volume with repository-relative persisted paths. The final adapter passes strict affected
-Clippy and formatting. Full coupled acceptance and the fresh complete inverse-certificate read
-remain next;aggregate resources,provider/replay,geometry,physical validation and human release
-approval retain their separate owners.
+Clippy and formatting. The fresh complete certificate reads below now pass. D345 capture
+preservation and full coupled gates remain next;aggregate resources,provider/replay,geometry,
+physical validation and human release approval retain their separate owners.
+
+
+## Fresh complete certificate acceptance
+
+After the numeric,mixed-call and observed-platform implementation slices,0641 reruns the full
+inverse and forward readers against their original protected stores. Both terminate successfully:
+45,000,000 inverse rows/450 chunks and1,000,000 forward rows/100 contiguous chunks. Their exact
+minimum margins match the [original proofs](formula-irrational-review.md). Every encoded strict
+gap and digest passes;source-locked producers retain the mathematical/index construction
+boundary. Readers check encoded gaps;they do not reconstruct outward interval construction.
+
+The compact inverse witness regenerates byte-for-byte:1299 bytes,SHA-256
+6b60d154f4160b0599f0ad13731b943e3e8dbd05f29496e33a186dea2d06840b.
+The atan P576/five-half-angle/64-term plan passes independent14 atan/16 atan2/two zero-vector/
+four root/two weak-budget controls. Its analytic Newton bound remains13;observed maximum is11.
+The sin/cos P512/64-term plan passes14 Fraction/50 signed-octant/two weak-profile controls.
+Forward construction passes known3/Fraction4/small-Q32/negative2 controls without rewriting the
+historical feasibility report. The qualitative midpoint checker passes8 theorem values/9 axes,
+161 exact Chebyshev identities/three known roots and the scale1 counterexample. Its huge
+conservative precision ceiling is qualitative evidence,not a practical resource promise.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py
+python3 -I -B docs/tasks/artifacts/formula_structure/verify_forward_certificate.py
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_certificate_witness.py
+python3 -I -B docs/tasks/artifacts/formula_structure/atan_runtime_plan.py
+python3 -I -B docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py
+python3 -I -B docs/tasks/artifacts/formula_structure/trig_midpoint_certificate.py
+```
+
+Original logs,manifests,witness and nine fault-report preservation baselines have19 verified
+copies beneath this protected receipt:
+
+```text
+target/irrational_platform_certificate/coupled-0641-20261030T180826454783Z-33211/receipt.json
+sha256:0670624492d132854ba8f876726a9d7734ed27bde6dffe262dfbc4c66f240596
+```
+
+Full integration gates remain pending. D345 exposes fixed native fault-capture paths that a
+later replay could overwrite. The actual report writer replaces a sentinel only in an owned
+controlled copy;all nine original reports remain unchanged. Fresh capture identities are the
+next P0 repair,before replaying the full probes. Scoped coupled closure,aggregate resources,
+provider/replay,geometry,application and production approval retain their separate owners.

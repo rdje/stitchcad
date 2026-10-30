@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance:complete coupled numerical acceptance;fresh45M/450 inverse read and deferred full verification.
-- Platform0640:31 unchanged ordinary checks/9 consumers run native aarch64-apple-darwin and actual
-  Chrome156.0.8078.74/wasm32-unknown-unknown under Rust1.99 b940084d7/LLVM23.1.1,Darwin27 arm64.
-  Six original fixtures405 rows/26610B;baseline104 both;compiled bad expectation native101/browser
-  RuntimeError.31 checks exclude6 host Python regenerators. Original550 hashes/copies exact.
-- Retained report target/irrational_platform_certificate/0640-20261030T173036575781Z-2055/report.json
-  SHA46a3dd7aecc9e0d5a95d4b55edf13f7ab29600d2ac881aa10c33a1479f7adf19. Atomic latest pointer.
-- D344 fixed:prepared local child/temp/profile/cache environment;temp sealed/residue0,ambient new
-  Chrome entries0,OS census OK. Initial ambiguous empty host dir untouched;failed captures retained.
-  Protected store registered first;cleanup8/2/4 reds+legacy AST exact. No daily cleanup performed.
-- Strict adapter lint/fmt/bash/protocol4/1red/producer356/34892/file243/91/40/15refusals/12reds/
-  history799/IDs+1/map/diff/book101/374/1667/2973/glossary0 pass. Core/original fixtures unchanged.
-- Numeric/mixed/observed-pair scopes done;full app/matrix/locality/resources/provider/replay/physical/
-  release remain owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA only;full PNT/push400.
+- Next G1-SLICE.5d.4.acceptance.replay-identities:D345 P0 fresh native probe captures,then full gates.
+- Certificates0641:fresh inverse45M/450 and forward1M/100 exact gap/hash/order/source readers pass.
+  Original stores unchanged;inverse1299B witness exact SHA6b60d154f4160b0599f0ad13731b943e3e8dbd05f29496e33a186dea2d06840b.
+- Atan14/16/2/4/2,sincos14/50/2,midpoint8/9/161/3+scale1,constructor3/4/32/2 controls pass.
+  Readers check encoded gaps;interval derivation/source-locked producers remain separate proof legs.
+- Protected target/irrational_platform_certificate/coupled-0641-20261030T180826454783Z-33211/receipt.json
+  SHA0670624492d132854ba8f876726a9d7734ed27bde6dffe262dfbc4c66f240596 retains19 exact copies.
+- D345 actual writer replaces controlled sentinel;9 original fault reports unchanged. Fix shared
+  root_body_faults.py run identity before full probes;original hashes in protected receipt.
+- Platform0640 native31/actualChrome31,compiled bad fixture rejected,Rust1.99/Chrome156 pair passes;
+  canonical original report in target/irrational_platform_certificate/0640-20261030T173036575781Z-2055/.
+- Book101/374/1669/2976/glossary0/history800/IDs+3/map/diff pass. Numeric/mixed/pair scopes done;
+  full coupled gates pending,app/matrix/aggregate resources/locality/provider/replay/physical/release
+  remain owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA only;full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

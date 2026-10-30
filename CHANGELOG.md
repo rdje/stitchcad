@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0640 — execute numerical checks natively and in actual Chrome
+## STITCHCAD-G1-0641 — freshly verify complete numerical certificate payloads
 
-- Original31 checks/9 consumers pass native+Chrome Wasm;6 fixtures405 rows/26610B,550 original hashes exact. A compiled wrong expectation fails native101/browser trap. Exact Rust1.99/Chrome156/Darwin27 pair recorded;full app/browser matrix remains owned.
-- Fix D344 local child/temp/profile/cache storage;retain original captures with guarded store/atomic pointer. Cleanup8/2/4 reds+legacy AST/protocol4/1red/strict lint/fmt/bash/book101/374/1667/2973/glossary0/history799/IDs+1/map/diff pass. G1 6/18/G0 unapproved unchanged. Coupled acceptance next.
+- Fresh inverse45M/450 and forward1M/100 readers pass exact gap/hash/order/source checks;original stores unchanged. Inverse1299B witness and independent runtime/constructor/midpoint controls pass.19 exact retained copies preserve logs/manifests and nine original fault reports.
+- Book101/374/1669/2976/glossary0/history800/IDs+3/map/diff pass. D345 fixed capture-path collision reproduced only in controlled copy;P0 repair next before full probes. Full integration pending;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
