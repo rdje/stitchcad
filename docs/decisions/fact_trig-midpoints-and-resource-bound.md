@@ -5,7 +5,7 @@
 - **Status:** `active`; sin/cos and inverses implemented; tangent resources remain open
 - **Owner / source:** G1-SLICE.5d.1.2.2.1; remaining tangent strategy .5d.1.2.2.2.d.2 is P1.
 
-answers: "can trigonometric formula results land exactly on a rounding midpoint?" · "does convergence prove usable trig resources?"
+answers: "can trigonometric formula results land exactly on a rounding midpoint?" · "does convergence prove usable trig resources?" · "what bounds tangent folding and quotient conditioning?"
 
 ## Scope and independent theorem
 
@@ -114,3 +114,46 @@ enumeration,586 exact poles and2 negative controls, rc=0. The algebra/elementary
 provide the universal derivation; the small enumeration supports transcription only.
 P1 .5d.1.2.2.2.d.2 owns the practical rounding/termination/resource plan before .5d.3.2.2.
 Independent command-bus work can proceed while the tangent prerequisite remains open.
+
+## Exact tangent reduction and conditioning0612
+
+This is a prerequisite derivation,not admission of a rounding algorithm or production kernel.
+The [NIST addition identities](https://dlmf.nist.gov/4.21),opened2026-10-30,support the exact
+period/sign/complement identities. The component and conditioning bounds below are our derivation.
+Keep A=90M,U=2^128-1 and the original admitted signed magnitude n/d,0<=n<=U,1<=d<=U.
+Set q=A*d,r=n mod(2q),negative=original sign. If r>q,replace r by2q-r and flip negative.
+Exactly r=q is an original odd-quarter pole;exactly r=0 is canonical zero. If2r>q,replace r by
+q-r and select reciprocal;otherwise select direct. The remaining r/d lies in(0,A/2]. At2r=q
+return the exact magnitude M;otherwise evaluate unrounded sin(x)/cos(x) or cos(x)/sin(x),
+x=pi*r/(2*A*d),then round its ppm magnitude once and restore the selected sign.
+
+Modulo gives r<=n. Reflection2q-r decreases r when r>q;complement q-r decreases it when2r>q.
+Thus the folded numerator never exceeds the original n and the unchanged denominator remains
+admitted128-bit data. The private period2*A*d needs at most156 bits. No authored angle is
+normalized or stored,and no intermediate public128-bit rational or binding is manufactured.
+
+For direct mode,cos(x)>=cos(pi/4)>1/2. In reciprocal mode r/d is the original nearest-pole
+distance,so the proven0290 bound gives r/d>=A/(U+1). Concavity of sin on[0,pi/2] places it
+above the chord2*x/pi. Hence sin(x)>=r/(A*d)>=1/(U+1)=2^-128. This is a strictly positive
+analytic denominator floor over every admitted finite input,not an empirical sine approximation.
+A valid enclosure may intersect this known lower bound without inventing a denominator value.
+
+For numerator/denominator intervals[Nlo,Nhi],[Dlo,Dhi],0<=Nlo<=Nhi<=1 and Dlo>=L>0,the
+outward quotient is[Nlo/Dhi,Nhi/Dlo]. Its width equals epsN/Dlo+Nlo*epsD/(Dlo*Dhi),so is
+at most epsN/L+epsD/L^2. Direct mode permits L=1/2;reciprocal mode permits L=2^-128.
+The latter can amplify absolute component uncertainty by factors2^128 and2^256. This is no
+rounding-midpoint separation bound;an applicable complete precision/resource strategy remains .d.2.2.
+
+Dividing already ppm-rounded sine/cosine is unsound as a tangent implementation,even at30 degrees. Exact square inequalities
+prove cos30 rounds866025,tan30 rounds577350 and sin30 is exactly500000 ppm. The quotient of
+these rounded components instead rounds577351. Positive120 degrees also requires a sign flip,
+so retaining only the original input sign is incorrect. Exact poles still require formula_domain;
+the existing finite nonpole overflow witness still requires formula_rational_width,not a new domain.
+
+Run python3 -I -B docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py. It compares
+29928 finite/372 pole cases against independent signed Fraction period reduction,including3642
+reciprocal cases,plus92 actual full-width/signed witnesses. It verifies144 rational quotient
+rectangles and two wrong-composition/sign controls,rc=0. These support transcription;the identities
+and algebra above supply the universal argument. The producer is registered in existing probes
+and exact producer/file inventories. No latency,all-input precision or runtime-resource admission
+is inferred. P1 .d.2.2 remains required before tangent kernel implementation.

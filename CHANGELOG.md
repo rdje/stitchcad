@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0611 — repair exact producer inventory coverage before tangent planning
+## STITCHCAD-G1-0612 — prove exact tangent reduction and quotient conditioning prerequisites
 
-- Fix D341:register ten earlier source additions with actual roles,nine Python file rows and one effect row;fresh diagnostic capture has a scheduled runtime-audit owner. Scanner/guard behavior unchanged;classification grants no runtime locality or approval.
-- Census343/independent405 checks/effect+file controls23 refusals/19 guard reds/book98/365/1645/2901/glossary0/history769 pass. Whole0610 product checkpoint retained. Next exact tangent reduction before full resource admission/kernel. LIVE G1 6/18/G0 unapproved unchanged,D341 fixed.
+- Fold original rational angles exactly with128-bit components/156-bit period;separate poles/zero/units. Prove reciprocal denominator>=2^-128 and outward quotient error accounting. Exact30-degree counterexample rejects dividing rounded sine/cosine as a tangent implementation.
+- Fraction29928/372/3642,92 actual boundary witnesses,144 quotient rectangles/two controls pass. Registered producer/inventory344/file231/effect109/book98/365/1645/2902/glossary0/history770/map pass. Next P1 full tangent rounding/resource plan before kernel. LIVE G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

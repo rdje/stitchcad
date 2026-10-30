@@ -532,7 +532,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Need sharper certified strategy or validated adaptive proof; no arbitrary cutoff/new domain.
 
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1`
-  Status: `in_progress`
+  Status: `done`
   Goal:exact all-input tangent symmetry/pole/endpoint reduction and quotient conditioning plan.
   Concrete next:derive bounded integer-only folding from actual128-bit rational microdegrees into
   first-octant unrounded sin/cos or reciprocal,with exact signed zeros/units/poles. Independent
@@ -540,37 +540,37 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   This is a prerequisite only;complete rounding/error/termination/practical resources remain .2.
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1.inventory`
   Status: `done`
-  Goal:D341 repair exact producer/Python-file inventory drift before tangent diagnostics.
-  - [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/ci_environment/producer_census.py
-    →ten source/entry differences,rc=2. Existing pre-push probes would refuse;not a product result.
-  - [x] ROOT CAUSE (WHY + WHERE): git log --oneline --diff-filter=A over all ten listed paths
-    →eight source-addition commits0571/0580/0581/0582/0586/0593/0597/0609,rc=0. Census traversal
-    and static entries diverged because these additions omitted manifest rows. Full current public
-    sources inspected:readonly/stdout references8,fresh diagnostic writer1,ordinary Rust module1.
-    Conservative build.rs basename discovery is retained;this module is not a Cargo build script.
-  - [x] FIX:register ten actual dispositions,nine Python file rows and one output/effect row.
-    Readonly references retain .p.v transitive-review ownership;fresh search writer has scheduled
-    P1 .p.o.a40 before locality signoff. No scanner/guard/source behavior changed or old capture run.
-  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/ci_environment/producer_census.py
-    →343 sources/33662 Python calls/73 heredocs/2892 embedded calls,rc=0. Existing contract
-    coverage() →343 independent Git paths/405 AST/source/bash checks pass,rc=0. Effect/file-plan
-    controls →109 paths/48 groups and230 paths/89 owners/38 native groups pass,rc=0;all ten original
-    mismatches resolved. Inspection only;destination resolution/runtime locality still pendingD156.
-  - [x] NO REGRESSION: python3 -I -B -c "import runpy;n=runpy.run_path('docs/tasks/artifacts/ci_environment/producer_census_contract.py');n['effect_plan_controls']();n['file_plan_controls']()"
-    →eight+15 actual data refusals/seven+12 actual guard-body reds,split positives/source bytes
-    unchanged,rc=0. Positive book98/365/1645/2901/glossary310/9/158/0,history769 four Git spans/prior live
-    ids/order/uniqueness/git diff --check pass,rc=0. Numerical APIs/kernels unchanged;no full CI claim.
-  - [x] LOCKSTEP:tracked D341 cause/reproduction/verified fix,producer schedules,book/live/task/
-    index/MEM/DEV/CHANGE align. Whole0610 source/recipe/Design checkpoint retained769. Next exact
-    tangent reduction .reduction;full tangent admission remains .d.2.2. G1 6/18/G0 unapproved.
-    Full-hosted79bd6f6a scoped;D156/D223/PLANNING.5/D334 owned;protected historical proof retained.
-    promotion: declined (existing exact producer/file/effect coverage rules;maintained registries,controls and book retain scope).
+  Goal:0611 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part770.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1.reduction`
-  Status: `pending`
-  Goal:exact all-input tangent folding/sign/pole/zero/unit and unrounded quotient conditioning plan;
-  independent Fraction/direct period/octant controls and full-width witnesses. Register the new
-  pure reference in both maintained inventories before focused producer checks;runtime admission
-  remains .d.2.2. No rounded sin/cos quotient,arbitrary cutoff,new domain or premature kernel.
+  Status: `done`
+  Goal:exact all-input tangent folding/sign/pole/zero/unit and unrounded quotient conditioning.
+  - [x] REPRODUCE / ISSUE:existing tangent range/pole profile admits no production resource plan;
+    a new quotient strategy needs exact admitted-input folding/positive-denominator/error bounds.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_profile.py
+    →8798 nonpoles/586 poles/two controls,148-bit range/2^128 targets and actual overflow witness,
+    rc=0. Neither existing sine nor inverse certificate supplies tangent midpoint separation.
+    NIST4.21 addition identities opened;component/conditioning proof is our explicit derivation.
+  - [x] FIX:exact period/reflection/sign/complement model;folded numerator<=original128-bit n,
+    original denominator retained,period<=156 bits. Pole/zero/unit exact. Direct denominator>1/2;
+    reciprocal sine>=2^-128 from original nearest-pole bound/chord. Outward quotient width bounded
+    by epsN/L+epsD/L^2. No rounded sine/cosine quotient or new binding/input state/production API.
+  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py
+    →29928 finite/372 poles/3642 reciprocal finite-model cases match independent signed Fraction
+    reduction;92 actual signed/full-width witnesses and144 rational quotient rectangles pass,rc=0.
+    Universal identities/algebra in the fact/book supply completeness;finite checks transcription.
+    Exact square bounds prove tan30 rounds577350 while rounded sine/cosine quotient gives577351;
+    actual120/-120 sign counterexamples discriminate. Nonpole128-bit result overflow stays distinct.
+  - [x] NO REGRESSION: bash -n docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+    →pass,rc=0;new producer registered there and in both inventories. producer_census.py →344
+    sources/33716 calls/73 heredocs/2892 embedded calls,rc=0. Existing effect/file controls →109/48
+    and231/89/38,23 data refusals/19 guard reds pass,rc=0. Book98/365/1645/2902/glossary310/9/158/0,
+    history770 four Git spans/prior live ids/order/uniqueness/diff/generated map exact pass,rc=0.
+    Native APIs unchanged;full probes/CI and complete tangent precision/resource admission unrun.
+  - [x] LOCKSTEP:fact/decision index/book/task/index/MEM/DEV/CHANGE align;whole0611 retained770.
+    Parent .d.2.1 prerequisite complete;P1 .d.2.2 still owns validated full rounding/convergence/
+    practical resource strategy before any kernel. No arbitrary cutoff/new domain/latency/full
+    readiness claim. LIVE G1 6/18/G0 unapproved unchanged;D341 fixed/D156/D223/PLANNING.5/D334 owned.
+    promotion: promoted (fact_trig-midpoints-and-resource-bound.md gains the tangent folding/conditioning answer and universal proof).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.2`
   Status: `pending`
   Goal:validated whole admitted-input tangent enclosure/rounding/termination and practical resource

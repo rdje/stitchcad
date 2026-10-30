@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.1.2.2.2.d.2.1.reduction:exact tangent symmetry/pole/endpoint/conditioning plan.
-  Parent P1 practical all-input rounding/resources .d.2;no kernel before full admission .d.2.2.
-  Read midpoint/resource fact,tangent_resource_profile.py and existing sin/cos/inverse plans.
-  Profile8798 nonpoles/586 poles/2 controls passes;range148 bits/2^128 positive thresholds.
-- D341 fixed0611:ten source additions from eight commits omitted inventories. Full public entry
-  inspection registers eight readonly refs,one diagnostic writer,one ordinary build.rs Rust module.
-  Census343/33662 calls/73 heredocs/2892 embedded calls;independent343 paths/405 checks;
-  effect109/48 groups andfile230/89 owners/38 native groups,23 data refusals/19 guard reds pass.
-  D156 .p.v retains transitive review;new P1 .p.o.a40 owns fresh search capture runtime audit after numerical feature/before locality signoff. Scanner/guards/old captures unchanged.
-  Book98/365/1645/2901/glossary0/history769 four spans/live ids/diff pass;full CI not rerun.
-- Whole0610 available-scalar source/recipe/DesignInputs checkpoint retained769;159 selected core/
-  private9/composition5/doc20 passed. Independent expression49/recipe18/source27/Design23 exact.
-  Full Derived .derived.integration retains missing families/whole Design/resources/load/replay.
+- Next G1-SLICE.5d.1.2.2.2.d.2.2:P1 validated tangent rounding/convergence/practical resources.
+  Exact reduction/conditioning prerequisite0612 complete;no kernel until full applicable plan.
+  Recover updated midpoint/resource fact,new tangent_reduction_plan.py,old tangent_resource_profile,
+  existing sin/cos/inverse plans. No arbitrary precision cutoff/new domain/borrowed certificate/libm.
+- Tangent prerequisite:integer period/reflection/complement keeps folded numerator<=original128
+  bits/denominator original;period<=156 bits. Exact poles/zero/signed units. Direct denominator>1/2;
+  reciprocal sine>=2^-128 from original pole distance. Quotient width<=epsN/L+epsD/L^2;this is
+  not a midpoint margin. At30deg rounded sine/cosine gives577351 versus actual577350 ppm.
+  Independent Fraction29928 finite/372 poles/3642 reciprocal,92 signed/full-width witnesses,
+  144 rational rectangles/two wrong-composition/sign controls pass. Universal proof in fact/book.
+  Registered pure producer;inventory344/file231/effect109 controls pass;book98/365/1645/2902/
+  glossary0/history770 four spans/map/live ids/diff pass. Full precision/resources still open.
+- D341 fixed0611 in770;D156 .p.v/.p.o.a40 retain audits. Whole0610 scalar source/recipe/DesignInputs checkpoint retained769;full Derived integration owned.
   G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,

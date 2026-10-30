@@ -289,3 +289,34 @@ docs/decisions/fact_trig-midpoints-and-resource-bound.md. Its focused tangent_re
 checks exact width/pole witnesses,8798 independently enumerated nonpole distances,586 exact
 poles and2 negative controls. These support transcription; no practical runtime precision or
 latency bound is claimed. P1 .5d.1.2.2.2.d.2 owns the remaining tangent strategy before its kernel.
+
+## Exact tangent folding and quotient conditioning
+
+A prerequisite model now reduces each actual admitted rational Angle through exact integer period,
+reflection and complement operations. It handles original odd-quarter poles,canonical zero and
+exact signed unit results separately. Other magnitudes use unrounded sin/cos in the first octant,
+with reciprocal selection near a pole;the sign is restored only after true-value ppm rounding.
+Authored signed/full-turn Angle state is unchanged. This model supplies no production tangent API.
+
+With A=90,000,000 and input magnitude n/d,set q=A*d and r=n mod(2q). Reflect r>q to2q-r and
+flip the result sign. Exact r=q is a pole;exact r=0 is zero. For2r>q,complement to q-r and
+select cos/sin;otherwise select sin/cos. Exact2r=q gives magnitude1,000,000 ppm. Modulo never
+increases n,and each selected reflection/complement decreases r. The private folded numerator
+and original denominator therefore remain at most128 bits;the period needs at most156 bits.
+These are our bounds derived from the [standard addition identities](https://dlmf.nist.gov/4.21).
+
+The direct quotient's cosine denominator is greater than1/2. For reciprocal mode,the earlier
+nearest-pole distance bound and sin(x)>=2*x/pi imply its sine denominator is at least2^-128.
+A rigorous enclosure can be tightened by that analytic floor. Given component widths epsN,epsD
+and denominator floor L>0,the outward quotient interval[Nlo/Dhi,Nhi/Dlo] has width at most
+epsN/L+epsD/L^2. Near-pole uncertainty can therefore amplify by2^128 and2^256;ordinary ppm-rounded
+sine/cosine values cannot supply tangent rounding. At30 degrees,dividing rounded500000/866025
+instead rounds577351 ppm,whereas exact square bounds prove the correct tangent rounds577350.
+
+The tracked tangent_reduction_plan.py checks29928 finite/372 pole finite-model cases against
+independent signed Fraction reduction,including3642 reciprocal cases,and92 actual full-width/
+signed witnesses. It also checks144 quotient rectangles and two wrong-composition/sign controls.
+Universal identities/algebra supply the argument;finite controls check its transcription. The
+producer is registered in the existing probe suite and exact source/file inventories. Full
+rounding separation,validated convergence and practical resource admission remain P1 .d.2.2;
+no kernel,precision cutoff,new domain,latency or production-readiness claim follows.
