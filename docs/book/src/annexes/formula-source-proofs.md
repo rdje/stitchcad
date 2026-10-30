@@ -329,6 +329,29 @@ known Length kind without a supplied physical tolerance. Missing optional provid
 later lazy execution concern. Both the namespace map and its allocation may drop after checking;
 actual borrowed name/declaration owners must survive. Proof node views cannot outlive their proof.
 
+## Private evaluator continuation
+
+The shared scalar evaluator now has a private continuation path for an actual unresolved Derived
+name. Starting pins the original checked root and immutable tolerance/size contexts. Resuming takes
+no replacement root,context or value. A suspension returns the original name node and actual
+canonical inventory join,requeues exactly that name and keeps completed operands,pending operators,
+calls and the selected conditional's contribution set. It neither restarts the expression nor
+records an unresolved occurrence as a successful read. Both buffers retain their full admitted
+N reservations;resumption adds no new buffer allocation or source-edge binding round.
+
+A supplier can therefore run between two consumer steps without repeating earlier provider reads.
+The private tests execute actual mapped supplier expressions before returning their unbound roots.
+For eps_num+min(a*3,a*6),with a supplied by1 mm/3,the result is1001 µm and eps_num is read once.
+For if(sin(0 deg)==0.0,min(a*3,2 mm),a),the chosen branch suspends at its real a;the untaken a
+stays unread. A supplier containing cos(0 deg)*0 mm retains its cos contribution despite the
+zero product,and the condition's sin contribution remains present after resumption.
+
+Only successful completion makes scratch reusable. Any value/provider or one-shot Derived failure
+permanently rejects further start/resume on that private machine. Existing expression/recipe
+adapters still return their original RequiresEvaluation and missing-provider causes. Callers gain
+no public callback,continuation,computed-value constructor or cache seed. The actual bounded lazy
+source-graph worker,earned results/read witnesses and recipe/Design integration remain pending.
+
 ## Verification and remaining work
 
 Six focused native contracts cover all six scalar kinds and dedicated Length,reversed source-id

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — prepare actual scalar sources while preserving real binding boundaries
+## _(2026-10-30 UTC)_ — retain actual scalar continuations without restarting reads
 
-0594 admits complete S/N/D/2S+2N+D/S-output populations before scalar capability/source preparation. Reuse existing factories/shared availability catalog and actual owners. Inline nested reservation causes avoid boxing on allocation failure. No values,implicit binder,caller-seeded cache or numeric kernel.
-Native4/old-plan5/doc3(E0277/E0616/E0515)/rounding1+1/scoped lint/fmt pass. Actual S2/N6/D1 reserves17 workspace/2 prospective outputs. All quotas,original pointers/Derived requirements,late unused tangent node/span and empty scopes retained. Prepared plans are not execution results;runtime remains pending.
-Book97/335/1629/2864/glossary310/9/158/0 pass;[whole0593 cycle proof](docs/history/stitchcad-devnotes-part752.md) retains four exact Git spans/live ids. Bare roots stay unbound;actual lets store. Canonical input decision/INDEX+answers promoted. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. D339 proof protected.
-Next .3.3.3.2 actual-node resumption,then lazy source worker .3 and recipe/Design bridge .4. Preserve real declaration order/rounding/read witnesses. Full integration/currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates. No runtime result claimed.
+0595 pins original root/context and restores only an unresolved Derived name. Private control keeps completed operands/tasks/selected condition contributions within N reservations. Successful scratch is reusable;failed machines reject restart/resume. Existing adapters retain original causes;no new rounding.
+Machine3/expression11+oracle49/recipe9+oracle18/scoped strict lib lint/fmt pass. Real source/proof/supplier execution checks1000/3 unbound,1001 result,actual sin/cos sources,buffer pointers and read order. Initial fixture span API and inline-context enum lint corrected;no hidden failing verdict remains.
+Book97/335/1629/2865/glossary310/9/158/0 pass;[whole0594 source plans](docs/history/stitchcad-devnotes-part753.md) retains four exact Git spans/live ids. Private checkpoint only:actual graph worker/earned results/read witnesses pending. G1 6/18/G0 unapproved;full-hosted79bd6f6a SHA-scoped. D339 proofs protected.
+Next .3.3.3.3 actual bounded lazy source worker/independent results,then .4 real recipe/Design bridge. Bare roots stay unbound;actual lets store once. Full integration/currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

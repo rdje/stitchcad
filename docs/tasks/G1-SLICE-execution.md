@@ -236,55 +236,55 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   recipe prior-let reads consume actual returned stored bindings;preserve that separate contract.
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.1`
   Status: `done`
-  Goal: record the existing unbound bare-source/actual-let storage boundary and prepare complete
-  available scalar source plans from the real acyclic relation. Explicit S/N/D/prospective
-  2S+2N+D logical workspace/S-output admission before allocation/capability/source preparation;
-  complete capability scan before any source vector. Reuse actual per-expression admission/source
-  factories and exhaustive scalar availability catalog;every branch/unused source participates.
-  Original source/proof/canonical/node/limit causes retained,not language errors for unavailable
-  implementation. No value/provider read,execution result,implicit binder or new numeric kernel.
-  Workspace covers source control records,graph call frames,task/value buffers and D read slots;
-  output allowance separately bounds at most S actual source results. Allocator bytes,backend/
-  full resource envelope remain separate. Read all affected factories/bind/read interfaces first.
-  Native focused plan/rounding/compiler/lint/book checks;then commit before resumable worker units.
-  Completion0594: complete available scalar source plans and bare-expression storage boundary.
-  - [x] REPRODUCE / ISSUE: actual acyclic source relation needs complete scalar implementation/
-    source preparation before resumable values. A bare expression id/kind/edge cannot supply an
-    actual let header or justify storage-rounding. Caller values/prefixes cannot seed execution.
-  - [x] ROOT CAUSE (WHY + WHERE): formula §4.1/§4.2,evaluated bind/store,actual expression value(),
-    recipe RHS→store→publish and actual prior-let reads inspected. rg -n 'prepare_scalar_sources|
-    checked_mul|scalar_builtin_available|into_allocation_error' source_graph.rs/plan.rs → shared
-    availability and complete precharge/inline allocator transfer,rc=0. Private machine/source
-    interfaces read;source lookup is not a new rounding boundary. Real runtime remains pending.
-  - [x] FIX: admit complete S/N/D/prospective2S+2N+D/S-output populations,then all scalar
-    capability before any plan vector/source preparation. Reuse actual per-expression factories/
-    original owners. Keep source allocation causes inline without boxing on allocation failure;
-    semantic causes remain typed. Record existing bare-root/real-let boundary in canonical input
-    decision+book. No value/provider read,implicit binder,computed result or caller-seeded cache.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_source_graph_plan_contract
-    -- --nocapture →four pass,rc=0. Actual acyclic S2/N6/D1 plans reserve17 logical workspace and2
-    prospective outputs;original source/proof/canonical pointers and Derived requirements remain.
-    All five quota boundaries,late unused tangent's actual node/span and zero empty scope pass.
-    Unavailable implementation remains typed scope refusal,not an invented language diagnostic.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_execution_plan_contract
-    -- --nocapture →five pass,rc=0. cargo test -p sc-core --doc recipe::execution::source_graph
-    -- --nocapture →three pass,actual E0277/E0616/E0515,rc=0. Focused existing expression operator
-    and numeric/Boolean binding controls →one/one pass,rc=0;1000/3 unbound and actual stored values
-    remain distinct. Scoped strict lib/new-target Clippy/changed rustfmt/diff pass,rc=0. Positive
-    book97/335/1629/2864/glossary310/9/158/0 and752 four exact Git spans/all prior live ids/order
-    pass,rc=0. No broad runtime/whole-graph/backend/resource/platform campaign or new numeric kernel.
-  - [x] LOCKSTEP: bare-source contract/decision INDEX+answers,scalar plan API/example/limits/
-    causes and five API rows,task/index/MEM/DEV/CHANGE/LIVE align. Next .3.3.3.2 private actual-node
-    resumption,then actual lazy source worker .3 and recipe/Design bridge .4. Full integration/
-    currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned. G1 6/18/G0
-    unapproved;full/hosted79bd6f6a SHA-scoped;D339 proof untouched. Prepared plans are not values.
-    promotion: promoted (canonical input decision gains bare-source/real-let storage section and answers;existing two-rounding-boundary rule applied,not a new source-edge round).
+  Goal:0594 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part753.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.2`
-  Status: `pending`
+  Status: `done`
   Goal: private resumable actual-node machine for a real unresolved Derived read. Preserve pending
   tasks/actual operand values and original read order across supplier evaluation;no restart or
   fabricated read/error/value. Existing expression/recipe execution must remain exact. Runtime
   graph source cache can be earned only by actual source execution,never caller callbacks/seeds.
+  Concrete scope:private Ready/AwaitDerived read control and Complete/AwaitDerived progress only.
+  Start pins actual root/context and node allowance;resume retains pending tasks,actual completed
+  operands and selected conditional contributions. A real unresolved name is requeued before
+  yielding,with its original node/canonical join;no value/read recorded until actual supplier
+  completion. Existing one-shot expression/recipe adapters retain original RequiresEvaluation.
+  Failed machines cannot resume/restart;successful scratch remains reusable. No new public
+  callback,source cache,value-result constructor,rounding or numeric dispatch. Focused private
+  tests use actual source definitions,canonical Derived records and actual executed supplier roots,
+  never arbitrary AST values. Existing expression/recipe native results/oracles must remain exact.
+  Completion0595: private actual-node continuation with original pinned context and unbound roots.
+  - [x] REPRODUCE / ISSUE: a real Derived supplier needs to run between consumer steps without
+    restarting earlier actual reads/operands or introducing a source-edge storage round. Existing
+    expression/recipe one-shot execution must retain original requirements and exact outcomes.
+  - [x] ROOT CAUSE (WHY + WHERE): machine.rs held root/context only in run() and could return only
+    a final V/error. Original Sources/read/provider/dispatch and real recipe store→publish paths
+    inspected;rg -n 'ReadValue|Progress|State|start|resume|Task::Enter' machine.rs → private control,
+    original-node restoration and pinned context,rc=0. No numeric kernel or binding change.
+  - [x] FIX: private Ready/AwaitDerived reads,Complete/AwaitDerived progress and Idle/Running/
+    Failed lifecycle. Pin original root/context;requeue exactly the popped unresolved name within
+    existing N reservation,retain real values/tasks/conditional contributions. Failed machines
+    cannot restart/resume;successful scratch reuses buffers. Old adapters wrap successful reads
+    only;one-shot pause fallback retains actual canonical RequiresEvaluation. No public seeds/API.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --lib recipe::execution::machine::tests --
+    --nocapture →three pass,rc=0. Actual source registry/proofs/Derived record and executed supplier
+    roots cover pending arithmetic/calls,condition contributions,repeated suspension,once-only
+    earlier reads,untaken Derived laziness,unchanged buffer pointers/state and original failures.
+    Unbound1000/3 survives supplier continuation;result1001 and sin/cos contributions remain exact.
+    Caught private guards reject failed resume/restart. Initial fixture E0599 used nonexistent span
+    range();actual start()/end() accessors fix it. No manually supplied AST result is accepted.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_execution_contract --test
+    formula_scalar_recipe_execution_contract -- --nocapture →11/9 pass with independent49/18-row
+    value/source/read/refusal fixtures exact,rc=0. Scoped cargo clippy -p sc-core --lib -- -D warnings
+    passes,rc=0;inline context enum allowance documents why boxing adds an unreserved allocation
+    after initial large_enum_variant refusal. Changed rustfmt/diff pass,rc=0. Positive book
+    97/335/1629/2865/glossary310/9/158/0 and753 four exact Git spans/prior live ids/order pass,rc=0.
+    Initial commit hook refused unrecognized promotion label;required declined syntax repaired.
+    No full CI/matrix campaign;new whole-source result oracle/worker remains owned by next .3.
+  - [x] LOCKSTEP: private checkpoint/examples/boundaries in book,task/index/MEM/DEV/CHANGE/LIVE
+    align. Next .3.3.3.3 actual lazy bounded source worker/earned read results,then .4 real recipe/
+    Design joins. Full graph/currentness/resources/platform/physical and D334/D156/D223/PLANNING.5
+    owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped. D339 captures untouched.
+    promotion: declined (private continuation applies the existing bare-root/real-let decision;no new cross-cutting rule or public source-value authority).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.3`
   Status: `pending`
   Goal: bounded iterative lazy available-scalar source graph worker over actual plans/acyclic proof,

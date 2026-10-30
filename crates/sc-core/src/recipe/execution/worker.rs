@@ -1,6 +1,6 @@
 //! Iterative execution consumes actual checked node proofs and bound sources in authored order.
 use super::{
-    machine::{Machine, Sources},
+    machine::{Machine, ReadValue, Sources},
     read, FormulaScalarExecutionContext as Context, FormulaScalarExecutionError as Error,
     FormulaScalarExecutionFailure as Failure, FormulaScalarExecutionPlan as Plan,
     FormulaScalarExecutionRead,
@@ -115,7 +115,11 @@ impl<'p> Plan<'p> {
 }
 
 impl<'a> Sources<'a> for Plan<'a> {
-    fn read_value(&mut self, node: Node<'a, 'a>, context: Context<'a>) -> Result<V, Failure<'a>> {
+    fn read_value(
+        &mut self,
+        node: Node<'a, 'a>,
+        context: Context<'a>,
+    ) -> Result<ReadValue<'a>, Failure<'a>> {
         let Some(index) = node.dependency_index() else {
             unreachable!("actual checked name retains its own source slot");
         };
@@ -130,7 +134,7 @@ impl<'a> Sources<'a> for Plan<'a> {
         }
         let data = read::read(kind, context)?;
         slot.read = Some(data);
-        Ok(data.value)
+        Ok(ReadValue::Ready(data.value))
     }
     fn tolerance(&self, node: Node<'a, 'a>) -> crate::recipe::FormulaToleranceValue<'a> {
         let Some(index) = node.dependency_index() else {

@@ -4,17 +4,54 @@ use super::{
     FormulaScalarExecutionFailure as Failure, FormulaScalarExecutionWorkspace as Workspace,
 };
 use crate::recipe::{
-    FormulaApproximationSources, FormulaBinaryOperator, FormulaBuiltin, FormulaCheckedNode as Node,
-    FormulaCheckedNodeForm as Form, FormulaEvaluatedScalar as V, FormulaNumericValue,
-    FormulaToleranceValue, FormulaUnaryOperator,
+    FormulaApproximationSources, FormulaBinaryOperator, FormulaBuiltin, FormulaCanonicalInput,
+    FormulaCheckedNode as Node, FormulaCheckedNodeForm as Form, FormulaEvaluatedScalar as V,
+    FormulaNumericValue, FormulaToleranceValue, FormulaUnaryOperator,
 };
 use std::collections::TryReserveError;
 
 // Only runtime-owned implementations can read actual checked nodes or retrieve an executed class.
 // This is private to the recipe engine; callers cannot provide AST values or callbacks.
 pub(super) trait Sources<'a> {
-    fn read_value(&mut self, node: Node<'a, 'a>, context: Context<'a>) -> Result<V, Failure<'a>>;
+    fn read_value(
+        &mut self,
+        node: Node<'a, 'a>,
+        context: Context<'a>,
+    ) -> Result<ReadValue<'a>, Failure<'a>>;
     fn tolerance(&self, node: Node<'a, 'a>) -> FormulaToleranceValue<'a>;
+}
+
+// Control flow is private: only an actual unresolved canonical Derived read may suspend.
+// The graph worker (G1-SLICE.5e.2.5.derived.3.3.3.3) will construct AwaitDerived in production.
+#[derive(Debug)]
+pub(super) enum ReadValue<'a> {
+    Ready(V),
+    #[allow(dead_code)]
+    AwaitDerived(FormulaCanonicalInput<'a>),
+}
+
+#[derive(Debug)]
+pub(super) enum Progress<'a> {
+    Complete(V),
+    AwaitDerived {
+        node: Node<'a, 'a>,
+        input: FormulaCanonicalInput<'a>,
+    },
+}
+
+#[derive(Clone, Copy)]
+struct Active<'a> {
+    root: Node<'a, 'a>,
+    context: Context<'a>,
+}
+// Keep the pinned provider context inline in the admitted machine control record. Boxing the
+// running variant would add an unreserved allocation to start/resume and obscure its ownership.
+#[allow(clippy::large_enum_variant)]
+#[derive(Clone, Copy)]
+enum State<'a> {
+    Idle,
+    Running(Active<'a>),
+    Failed,
 }
 
 #[derive(Debug)]
@@ -66,6 +103,7 @@ pub(super) struct Machine<'a> {
     pending: Vec<Task<'a>>,
     values: Vec<V>,
     admitted: usize,
+    state: State<'a>,
 }
 impl<'a> Machine<'a> {
     pub(super) fn new(admitted: usize) -> Result<Self, MachineAllocation> {
@@ -86,6 +124,7 @@ impl<'a> Machine<'a> {
             pending,
             values,
             admitted,
+            state: State::Idle,
         })
     }
     pub(super) fn run(
@@ -94,8 +133,35 @@ impl<'a> Machine<'a> {
         sources: &mut impl Sources<'a>,
         context: Context<'a>,
     ) -> Result<V, Error<'a>> {
+        self.start(root, context)?;
+        match self.resume(sources)? {
+            Progress::Complete(value) => Ok(value),
+            Progress::AwaitDerived { node, input } => {
+                // One-shot adapters still return the original canonical evaluation requirement.
+                // Never leave a resumable prefix behind after returning a one-shot error.
+                self.state = State::Failed;
+                let Err(failure) = super::read::read(
+                    super::FormulaScalarExecutionSourceKind::Canonical(input),
+                    context,
+                ) else {
+                    unreachable!("only an actual unresolved Derived source can suspend");
+                };
+                Err(Error::evaluation(node, failure))
+            }
+        }
+    }
+    pub(super) fn start(
+        &mut self,
+        root: Node<'a, 'a>,
+        context: Context<'a>,
+    ) -> Result<(), Error<'a>> {
+        if !matches!(self.state, State::Idle) || !self.pending.is_empty() || !self.values.is_empty()
+        {
+            unreachable!("only successful idle scratch can start an actual operand");
+        }
         let n = root.all_nodes().len();
         if n > self.admitted {
+            self.state = State::Failed;
             return Err(Error::evaluation(
                 root,
                 Failure::WorkspaceReservation {
@@ -105,14 +171,45 @@ impl<'a> Machine<'a> {
                 },
             ));
         }
+        // Complete N admission precedes this first task and every provider/value read.
+        if let Err(error) = push(
+            &mut self.pending,
+            Task::Enter(root),
+            n,
+            Workspace::Tasks,
+            root,
+        ) {
+            self.state = State::Failed;
+            return Err(error);
+        }
+        self.state = State::Running(Active { root, context });
+        Ok(())
+    }
+    pub(super) fn resume(
+        &mut self,
+        sources: &mut impl Sources<'a>,
+    ) -> Result<Progress<'a>, Error<'a>> {
+        let State::Running(active) = self.state else {
+            unreachable!("only an active successful machine may resume");
+        };
+        // The caller cannot replace the root or contexts while a real operand is suspended.
+        let result = self.advance(sources, active);
+        match &result {
+            Ok(Progress::Complete(_)) => self.state = State::Idle,
+            Ok(Progress::AwaitDerived { .. }) => {}
+            Err(_) => self.state = State::Failed,
+        }
+        result
+    }
+    fn advance(
+        &mut self,
+        sources: &mut impl Sources<'a>,
+        active: Active<'a>,
+    ) -> Result<Progress<'a>, Error<'a>> {
+        let n = active.root.all_nodes().len();
+        let context = active.context;
         let pending = &mut self.pending;
         let values = &mut self.values;
-        if !pending.is_empty() || !values.is_empty() {
-            unreachable!(
-                "only a completed empty scratch machine can start the next actual operand"
-            );
-        }
-        push(pending, Task::Enter(root), n, Workspace::Tasks, root)?;
         while let Some(task) = pending.pop() {
             match task {
                 Task::Enter(node) => match node.form() {
@@ -123,10 +220,20 @@ impl<'a> Machine<'a> {
                         push(values, value, n, Workspace::Values, node)?;
                     }
                     Form::Name { .. } => {
-                        let value = sources
+                        match sources
                             .read_value(node, context)
-                            .map_err(|failure| Error::evaluation(node, failure))?;
-                        push(values, value, n, Workspace::Values, node)?;
+                            .map_err(|failure| Error::evaluation(node, failure))?
+                        {
+                            ReadValue::Ready(value) => {
+                                push(values, value, n, Workspace::Values, node)?;
+                            }
+                            ReadValue::AwaitDerived(input) => {
+                                // Restore precisely the popped name,not its ancestors or already
+                                // completed operands. The freed slot fits the original N bound.
+                                push(pending, Task::Enter(node), n, Workspace::Tasks, node)?;
+                                return Ok(Progress::AwaitDerived { node, input });
+                            }
+                        }
                     }
                     Form::Negate(child) | Form::Square(child) => {
                         let operator = if matches!(node.form(), Form::Negate(_)) {
@@ -248,82 +355,9 @@ impl<'a> Machine<'a> {
         if !values.is_empty() {
             unreachable!("complete expression leaves exactly one root value");
         }
-        Ok(value)
+        Ok(Progress::Complete(value))
     }
 }
 
 #[cfg(test)]
-mod tests {
-    use super::*;
-    use crate::{recipe::*, value::CanonicalInputs};
-
-    #[test]
-    #[allow(clippy::expect_used)]
-    fn actual_operands_reuse_reserved_scratch_and_refuse_insufficient_capacity_before_reads() {
-        let inputs = CanonicalInputs::new(vec![], vec![]).expect("inventory");
-        let namespace = FormulaNamespace::new([]).expect("namespace");
-        let first = FormulaExpression::parse("if(1==1,1 mm/3,eps_phys)")
-            .expect("syntax")
-            .normalize_literals()
-            .expect("inputs");
-        let second = FormulaExpression::parse("within(1 mm,1 mm,eps_num)")
-            .expect("syntax")
-            .normalize_literals()
-            .expect("inputs");
-        let first_proof = first.check_kinds(&namespace).expect("complete");
-        let second_proof = second.check_kinds(&namespace).expect("complete");
-        let mut first_plan = first_proof
-            .admit_execution(FormulaExecutionLimits::new(8, 17))
-            .expect("exact")
-            .prepare_scalar(&inputs)
-            .expect("plan");
-        let mut second_plan = second_proof
-            .admit_execution(FormulaExecutionLimits::new(4, 9))
-            .expect("exact")
-            .prepare_scalar(&inputs)
-            .expect("plan");
-        let first_root = first_plan.admission().root();
-        let second_root = second_plan.admission().root();
-        let context = Context::new(
-            FormulaToleranceContext::empty(),
-            FormulaSizeContext::empty(),
-        );
-        let error = Machine::new(0)
-            .expect("empty allocation")
-            .run(first_root, &mut first_plan, context)
-            .expect_err("complete actual node count before source reads");
-        assert!(
-            matches!(error.cause(), FormulaScalarExecutionErrorCause::Evaluation(failure)
-            if matches!(failure.as_ref(), Failure::WorkspaceReservation {
-                workspace: Workspace::Tasks, admitted: 0, requested: 8 }))
-        );
-        assert!(first_plan.sources.iter().all(|slot| slot.read.is_none()));
-        let mut machine = Machine::new(8).expect("complete reservation");
-        let pointers = (machine.pending.as_ptr(), machine.values.as_ptr());
-        let first_value = machine
-            .run(first_root, &mut first_plan, context)
-            .expect("actual first");
-        assert_eq!(
-            first_value.numeric().expect("Length").rational(),
-            FormulaRational::new(1000, 3, false).expect("exact")
-        );
-        assert!(first_plan.sources.iter().all(|slot| slot.read.is_none()));
-        let second_value = machine
-            .run(second_root, &mut second_plan, context)
-            .expect("actual second");
-        assert_eq!(second_value.boolean(), Some(true));
-        assert_eq!(
-            second_plan
-                .sources
-                .iter()
-                .filter(|slot| slot.read.is_some())
-                .count(),
-            1
-        );
-        assert_eq!(
-            (machine.pending.as_ptr(), machine.values.as_ptr()),
-            pointers
-        );
-        assert!(machine.pending.is_empty() && machine.values.is_empty());
-    }
-}
+mod tests;

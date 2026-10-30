@@ -1,10 +1,13 @@
 //! Runtime reads only actual canonical sources or this execution's privately completed prefix.
 use super::{
-    machine::Sources, read, recipe_result::RecipeReadData, FormulaExecutedScalarRecipeStatement,
-    FormulaScalarExecutionContext as Context, FormulaScalarExecutionFailure as Failure,
-    FormulaScalarExecutionReadKind as ScalarRead, FormulaScalarExecutionSourceKind as ScalarKind,
-    FormulaScalarRecipeOutcome as Outcome, FormulaScalarRecipeReadKind as ReadKind,
-    FormulaScalarRecipeSource, FormulaScalarRecipeSourceKind as Kind,
+    machine::{ReadValue, Sources},
+    read,
+    recipe_result::RecipeReadData,
+    FormulaExecutedScalarRecipeStatement, FormulaScalarExecutionContext as Context,
+    FormulaScalarExecutionFailure as Failure, FormulaScalarExecutionReadKind as ScalarRead,
+    FormulaScalarExecutionSourceKind as ScalarKind, FormulaScalarRecipeOutcome as Outcome,
+    FormulaScalarRecipeReadKind as ReadKind, FormulaScalarRecipeSource,
+    FormulaScalarRecipeSourceKind as Kind,
 };
 use crate::recipe::{
     FormulaCheckedNode as Node, FormulaEvaluatedScalar as V, FormulaToleranceReadError,
@@ -16,7 +19,11 @@ pub(super) struct RecipeSources<'s, 'a> {
     pub(super) completed: &'s [FormulaExecutedScalarRecipeStatement<'a>],
 }
 impl<'a> Sources<'a> for RecipeSources<'_, 'a> {
-    fn read_value(&mut self, node: Node<'a, 'a>, context: Context<'a>) -> Result<V, Failure<'a>> {
+    fn read_value(
+        &mut self,
+        node: Node<'a, 'a>,
+        context: Context<'a>,
+    ) -> Result<ReadValue<'a>, Failure<'a>> {
         let Some(slot) = node
             .dependency_index()
             .and_then(|index| self.sources.get_mut(index))
@@ -66,7 +73,7 @@ impl<'a> Sources<'a> for RecipeSources<'_, 'a> {
             source,
             value,
         });
-        Ok(value)
+        Ok(ReadValue::Ready(value))
     }
     fn tolerance(&self, node: Node<'a, 'a>) -> FormulaToleranceValue<'a> {
         let Some(data) = node
