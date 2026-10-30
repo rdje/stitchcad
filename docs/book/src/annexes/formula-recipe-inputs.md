@@ -236,8 +236,8 @@ Duplicate/unbound names and incompatible kinds remain inspectable until static c
 `FormulaExpressionDocument::new(source)` owns an original expression String and its existing typed
 canonical expression identity. It reuses the actual expression parser,literal converter and
 serializer. It supplies no fake let,name,header or statement ordinal. This is the source-ownership
-prerequisite at .5e.2.5.derived.1;explicit source owners follow below. Canonical joins and complete
-dependency admission remain .derived.3.
+prerequisite at .5e.2.5.derived.1;explicit source owners follow below. Canonical input joins follow below;namespace/kind
+and complete dependency admission remain .derived.3.2.
 
 | Public API | Meaning |
 | --- | --- |
@@ -341,6 +341,75 @@ separate complete quota boundaries,empty drafts,source-only static refusals and 
 prefix-scan comparison over all256 four-record sequences of four ids. Three documentation guards
 reject default limits,private-registry mutation and id rebinding. Existing parsing/kind/numeric
 algorithms and full dependency execution retain their separate proof obligations.
+
+## Join actual canonical Derived sources
+
+`FormulaSourceInputs::new(&inputs, &sources)` checks the complete actual CanonicalInputs and
+FormulaSources before lending any accepted scope. It allocates no workspace,clones no state,reads
+no authored value and parses/evaluates no expression. Both owners stay borrowed and immutable.
+This is source ownership admission;namespace,result-kind,dependency/cycle and execution proofs
+remain required at .5e.2.5.derived.3.2 and its later execution owners.
+
+| Public API | Meaning |
+| --- | --- |
+| `FormulaSourceInputs` | Complete immutable canonical/source admission over actual owners |
+| `FormulaDerivedInput` | Actual Derived target/declaration and its exact expression owner |
+| `FormulaSourceInputError` | Original owners,target family/kind/position and refusal |
+| `FormulaSourceInputRefusal` | IdentityCollision source position or MissingSource formula id |
+
+The complete identity pass comes first. Every owned canonical declaration id must be disjoint
+from every source entity id,including unused entities and non-Derived declarations. IdentityCollision
+keeps the original source index plus canonical target/position. This checks these two inventories;
+other Design/metadata/host identities still need the complete containing ownership census.
+
+Only then does admission visit every actual Derived state in dedicated-Length order followed by
+general-scalar order. Its formula field must select an actual expression owner. MissingSource
+retains that original id and the real canonical target/kind/position,even after valid earlier joins.
+No accepted prefix escapes. The separate canonical source/provenance field is never interpreted
+as a formula id. Evidence,assumption,preference and observation ids remain references;they are not
+mistaken for additional owned canonical declarations. Known zero,false,Preference and Unknown
+states need no formula source and remain unchanged.
+
+derived_inputs() lends all and only Derived targets in original family order,also in reverse.
+Each FormulaDerivedInput exposes position(),target() and source();length()/scalar() borrow the
+actual dedicated/general canonical record. General Length remains general Length. Several targets
+can share one source without losing distinct ids,positions or declared kinds. A shared source still
+needs actual output-kind checks for each consumer;source existence supplies no such proof.
+
+```rust
+use sc_core::{ontology::EntityId, recipe::*, value::*};
+let formula = EntityId::from_bits(9001);
+let declaration = LengthDeclaration::new(LengthDeclarationDefinition {
+    id: EntityId::from_bits(10), source: EntityId::from_bits(20),
+    state: LengthState::Derived { formula },
+})?;
+let inputs = CanonicalInputs::new(vec![declaration], vec![])?;
+let expression = FormulaExpressionDocument::new("1 mm".into())?;
+let limits = FormulaSourceLimits::new(1, expression.source().len(),
+    expression.canonical().as_str().len());
+let sources = FormulaSources::new(vec![FormulaSource::new(formula, expression)], limits)?;
+let joined = FormulaSourceInputs::new(&inputs, &sources).expect("actual complete joins");
+let derived = joined.derived_inputs().next().expect("actual Derived target");
+assert_eq!(derived.target(), CanonicalInputTarget::Length(EntityId::from_bits(10)));
+assert_eq!(derived.source().id(), formula);
+assert!(derived.length().unwrap().authored_value().is_err()); // Still requires actual evaluation.
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Errors retain inputs()/sources() as actual borrowed contexts as well as target()/position()/refusal().
+They cannot outlive those owners;handle a local join error while its context exists rather than
+erasing it into a static error box. Debug/Display omit expression text and authored values.
+No current Design/revision,evidence truth,resource envelope,rounding or computed result is created.
+Quantity Formula(id) keeps its existing parameter-backed meaning. A source body such as
+missing+1 mm/0 remains inspectable until real static checking and execution;joining it does not
+make its missing name,output kind or operation valid.
+
+Four native contracts check actual canonical/source pointers,both representation families and all
+six scalar kinds,shared-source consumers,original late failures,complete ownership precedence,
+non-Derived states/provenance and empty drafts. Five existing canonical-input contracts retain
+actual-owner/family/kind/read boundaries. Four documentation tests include the positive example,
+private-field E0616 and E0515 refusals for escaping either actual owner. These scoped checks
+certify source joins;complete graph/evaluation/platform verification remains pending.
 
 ## Verification scope
 

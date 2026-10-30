@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-29 UTC)_ — own explicit original formula sources before canonical graph joins
+## _(2026-10-30 UTC)_ — join actual canonical Derived references to original source owners
 
-0588 consumes actual expression entities into an immutable ordered registry with exact-id lookup. Complete explicit count/original/canonical-byte quotas precede one fallible sorted index;duplicate ids retain first/earliest authored positions. Original buffers/spans survive;canonical aliases never merge ids.
-Native4/independent256/doc3(E0616/E0277)/scoped strict lint/fmt/actual parameter2 pass. Initial explicit test panic failed lint;assertions replace it without waiver. No source-value cache,global Design/kind/graph/currentness proof or invented let/rounding;Formula(id) amounts retain actual parameter semantics.
-Book96/306/1624/2844/glossary310/9/158/0 pass;[whole0587 source-document continuity](docs/history/stitchcad-devnotes-part746.md) retains four exact Git spans/live ids. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Preserve D339 historical proof. Existing ownership/admission rules apply;promotion declined.
-Next .5e.2.5.derived.3 real canonical Derived source joins and complete static graph admission before values. Full families/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates. No source identity or runtime authority is inferred from text.
+0589 checks complete canonical/source ownership before all Derived formula refs. Allocation-free borrowed scope lends actual family/kind/position/target/source without state clone,value read or invented name/rounding. Provenance refs are not owned declarations;source fields never replace formula fields.
+Native4/canonical-owner5/doc4(E0616/E0515)/scoped strict lint/fmt pass. Initial positive example incorrectly boxed a borrowed error and failed E0597;handle the local join directly. Exhaustive state matches retain all five cases. Source existence alone supplies no output kind,graph,currentness or runtime proof.
+Book96/310/1624/2845/glossary310/9/158/0 pass;[whole0588 original source inventory](docs/history/stitchcad-devnotes-part747.md) retains four exact Git spans/all prior live ids. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Existing canonical/source/borrow rules apply;promotion declined. D339 proof untouched.
+Next .derived.3.2 actual normalized/static source phases and full resource/namespace/kind/graph admission,preserving real ordered-let binding contracts. Full families/load/replay/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates. Global Design proof remains open.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

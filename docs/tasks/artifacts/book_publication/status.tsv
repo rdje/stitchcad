@@ -305,3 +305,7 @@ bounded ordered formula source registry	annexes/formula-recipe-inputs.md	crates/
 complete source content allowances	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/sources.rs	FormulaSourceLimits	G1-SLICE.5e.2.5.derived.2	4.1
 source population resource	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/sources.rs	FormulaSourceResource	G1-SLICE.5e.2.5.derived.2	4.1
 original source registry refusal	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/sources.rs	FormulaSourcesError	G1-SLICE.5e.2.5.derived.2	4.1
+complete canonical formula source joins	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/source_inputs.rs	FormulaSourceInputs	G1-SLICE.5e.2.5.derived.3.1	4.1
+actual Derived source and canonical target	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/source_inputs.rs	FormulaDerivedInput	G1-SLICE.5e.2.5.derived.3.1	4.1
+original complete source join error	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/source_inputs.rs	FormulaSourceInputError	G1-SLICE.5e.2.5.derived.3.1	4.1
+actual source join refusal	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/source_inputs.rs	FormulaSourceInputRefusal	G1-SLICE.5e.2.5.derived.3.1	4.1

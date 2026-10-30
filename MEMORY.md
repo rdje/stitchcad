@@ -1,14 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3:actual canonical Derived source joins,namespace/kind/dependency/
-  cycle and complete bounded admission contracts. Preserve Formula(id) amount→DesignParameter
-  metadata meaning;canonical Derived ids need real source joins,no guessed let/rounding/value.
-- Source inventory0588 ready:explicit entity ids/original documents,immutable authored order,
-  exact-id index and complete explicit count/original/canonical-byte quotas before allocation.
-  Native4/independent256/doc3/scoped lint/fmt/parameter2/book96/306/1624/2844/glossary0 pass.
-  No global Design/kind/graph/value/currentness proof. Whole0587 retained746/four Git spans/ids.
-- Scalar checkpoint0586:native9/reference18/7/4167B exact,scoped only. Preserve D339
-  target/book_search_capture_0586_book_final at its source boundary;never overwrite old captures.
+- Next G1-SLICE.5e.2.5.derived.3.2:actual normalized/static source proof phases and complete
+  resource/namespace/kind/dependency/cycle contracts. Preserve actual ordered-recipe/let rounding
+  boundaries;source ownership alone supplies no binding or graph semantics. Read actual factories.
+- Canonical source joins0589 ready:complete owned-id disjointness before all Derived references;
+  actual targets/source borrows retain families/kinds/positions/ids. No state clone/value/name.
+  Native4/canonical-owner5/doc4/scoped lint/fmt/book96/310/1624/2845/glossary0 pass. No global
+  Design/currentness/output-kind/graph/runtime/resource-envelope proof. Whole0588 in747/four spans.
+- Source inventory0588 and original document0587 ready. Formula(id) amounts retain actual
+  DesignParameter metadata meaning. Preserve D339 target/book_search_capture_0586_book_final at
+  its original source boundary;never overwrite old captures. Scalar/recipe checkpoints scoped.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.

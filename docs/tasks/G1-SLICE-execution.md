@@ -193,49 +193,59 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0587 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part746.md).
 - ID: `G1-SLICE.5e.2.5.derived.2`
   Status: `done`
-  Goal: own explicit formula-source entity ids and actual expression documents in an immutable
-  bounded registry. Preserve authored order,original buffers and exact source identity;reject
-  complete count/original-byte/canonical-byte quota breaches before allocating one fallible sorted
-  lookup index. Reject duplicate ids with first/original duplicate positions;never deduplicate by
-  equal canonical text or generate ids/names/values. Existing Formula(id) quantity parameters keep
-  their separate metadata→canonical target contract. No global Design census,namespace/kind/graph,
-  binding rounding,evaluation or currentness claim;next .3 owns real canonical Derived source joins
-  and complete static graph admission before runtime. Existing document factories remain unchanged.
-  Recovery: DesignParameter::declaration and sewing_amount_declarations enforce actual parameter
-  ids;ontology §1/§3.1 assigns stable ids to semantic entities and an expression graph to Design;
-  formula §4.2 adds no arbitrary expression rounding. Source ownership can precede graph/binding
-  semantics without guessing a let or changing quantity resolution. Focused native/compiler checks,
-  scoped lint/fmt,book/glossary and exact previous-scope retirement;full verification .5g/pre-push.
-  Completion0588: source inventory available;canonical joins/graph admission remain .3.
-  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'source: String|canonical:|never re-derived|Formula\('
-    expression_document.rs/ontology/id.rs/design/sewing.rs → original document buffers,stable
-    entity-id rule and actual parameter-backed amount branch,rc=0. Existing owned document lacks
-    an entity collection;canonical Derived references need actual source owners before graph work.
-    Source ownership introduces no parameter reinterpretation or numeric rounding boundary.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_sources_contract -- --nocapture
-    →four pass,rc=0. Exact buffers/spans/order/id lookup,canonical aliases with distinct ids,
-    complete separate quotas/empty draft and source-only static failures retained. All256 four-id
-    sequences match an independent authored-prefix duplicate scan,including triples/competing ids.
-    Duplicate identities always refuse with real first/earliest duplicate positions;no prefix.
-  - [x] NO REGRESSION: cargo test -p sc-core --doc recipe::sources -- --nocapture →three pass,
-    actual E0616/E0277 guards,rc=0. Scoped strict core-lib/new-target Clippy/final native rerun/
-    changed Rust formatting pass,rc=0. Initial test panic lint refused;replace with real assertions,
-    no lint waiver. cargo test -p sc-measure --test design_inputs_contract sewing_formula_amount_
-    -- --nocapture →two pass,rc=0;actual parameter/kind/canonical-presence boundaries retained.
-    Positive book96/306/1624/2844/glossary310/9/158/0 pass,rc=0;746 retains four exact Git spans
-    and complete prior live ids/order,rc=0. Full graph/evaluation/platform suites not run here.
-  - [x] LOCKSTEP: book ownership/example/limits/identity boundaries and five API map rows,
-    task/index/MEM/DEV/CHANGE/LIVE align. Next .derived.3 actual canonical Derived source joins
-    and complete static admission;global Design registry/binding/cycle/value/currentness proof
-    remains pending. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;full families/load/replay/
-    physical and D334/D156/D223/PLANNING.5 remain owned. D339 historical capture preserved.
-    promotion: declined (existing explicit identity,original document ownership,complete admission and immutable borrowed-view rules applied;no new language or authority rule).
+  Goal:0588 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part747.md).
 - ID: `G1-SLICE.5e.2.5.derived.3`
+  Status: `in_progress`
+  Goal: actual canonical Derived source joins and complete static graph admission before values.
+  Preserve parameter-backed Formula(id) meaning and original family/kind/source/context. Complete
+  identity/missing-source joins precede normalized source/proof/dependency/cycle allocation units.
+  No arbitrary expression binding/rounding or invented state/value/currentness certificate.
+- ID: `G1-SLICE.5e.2.5.derived.3.1`
+  Status: `done`
+  Goal: allocation-free complete canonical-input/source join over both actual immutable owners.
+  First reject source entity ids colliding with any owned canonical declaration;then validate every
+  Derived formula reference in canonical length/general-scalar order,including unused targets.
+  Publish no accepted partial scope. Lend actual source/declaration borrows with original family,
+  declared kind,position and formula id;never use the separate source/provenance field as a formula
+  reference,read values,clone state or infer a parameter. Preserve non-Derived zero/false/Unknown.
+  Source existence alone supplies no namespace/kind/cycle/current Design/value proof. Existing
+  canonical family contracts and source owners are the authority;focused native/compiler/lint/
+  book checks then commit. Complete graph/resource/evaluation work stays .3.2 and later owners.
+  Completion0589: complete original canonical/source joins available;graph work stays .3.2.
+  - [x] REPRODUCE / ISSUE: existing canonical records retain Derived formula ids without source
+    existence proof. Source owners0588 exist separately;actual join admission is required before
+    any graph/value work. No authored result can be stored on an Unknown/Derived declaration.
+  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'LengthState::Derived|ScalarInputState::Derived|formula:
+    EntityId|not a complete Design' value.rs/value/scalar.rs/value/inventory.rs → actual sole ids,
+    original RequiresEvaluation and component scope,rc=0. Complete canonical getters/state-kind
+    interfaces and existing source index/native owner contracts read before implementation.
+  - [x] FIX: two allocation-free complete passes pin actual inventories:owned-id disjointness
+    first,then every Derived reference. Borrow actual targets/sources without copied state or
+    fabricated names/values. Exhaustive state matches require future variants to be considered.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_source_inputs_contract
+    -- --nocapture →four pass,rc=0,including final exhaustive-arm rerun. Dedicated/all six general
+    scalar kinds,shared-source actual pointers,original family/kind/positions,late missing formula,
+    complete collision precedence and unchanged non-Derived/provenance/empty states retained.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_canonical_input_contract →five pass,
+    rc=0;actual owner/family/kind/read boundaries remain. cargo test -p sc-core --doc
+    recipe::source_inputs -- --nocapture →four pass,actual E0616/E0515 for both owners plus positive
+    example,rc=0. Initial positive example incorrectly erased borrowed error into static Box and
+    failed E0597;handle local join directly. Scoped strict lib/new-target Clippy/final changed
+    rustfmt/diff pass,rc=0. Positive book96/310/1624/2845/glossary310/9/158/0 and747 four exact Git
+    spans/all prior live ids/order pass,rc=0. Full graph/runtime/platform checks remain deferred.
+  - [x] LOCKSTEP: book canonical/source join semantics/example/refusals and four API map rows,
+    task/index/MEM/DEV/CHANGE/LIVE align. Next .3.2 actual normalized/static source proof phases,
+    preserving real declaration-order/binding contracts before dependency/cycle/value work.
+    Global Design,currentness,kind/graph/evaluation/resource envelope not certified. G1 6/18/G0
+    unapproved;full/hosted79bd6f6a SHA-scoped. Full families/load/replay/physical and D334/D156/
+    D223/PLANNING.5 remain owned;D339 proof untouched. No new language diagnostic/rounding rule.
+    promotion: declined (existing sole formula reference,actual canonical ownership,complete admission and immutable borrowed-proof rules applied;no new language or authority policy).
+- ID: `G1-SLICE.5e.2.5.derived.3.2`
   Status: `pending`
-  Goal: join original canonical Derived references to actual source records,including target/kind,
-  namespace/dependency/cycle and complete explicit resource requirements before value execution.
-  Read actual static proofs and source adapters;choose bounded safe integration units without
-  changing Formula(id) parameter semantics or inventing numeric binding boundaries.
+  Goal: normalize actual complete original source inventory under explicit complete resource
+  allowances;join namespace/static kinds and target requirements before dependency/cycle admission.
+  Keep source/target family/span identities and both-branch checks;no fake statement,rounding or
+  caller value. Select safe proof-owner phases after reading actual factories/lifetimes/limits.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

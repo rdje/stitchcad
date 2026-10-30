@@ -101,6 +101,11 @@ pub use sources::{
     FormulaSource, FormulaSourceLimits, FormulaSourceResource, FormulaSources, FormulaSourcesError,
 };
 
+mod source_inputs;
+pub use source_inputs::{
+    FormulaDerivedInput, FormulaSourceInputError, FormulaSourceInputRefusal, FormulaSourceInputs,
+};
+
 mod semantic;
 pub use semantic::{
     FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName, FormulaSizeName,
