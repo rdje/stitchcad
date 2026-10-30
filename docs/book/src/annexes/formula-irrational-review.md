@@ -103,8 +103,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
 
 The formula-structure probe suite also runs this check. These are native POSIX process-group
 controls and finite fault witnesses. They close the scoped native root review;actual cross-platform
-numerical execution remains .5d.4.platform. Forward/inverse,Tan and mixed-chain review remain
-owned before the complete coupled irrational gate can close.
+numerical execution remains .5d.4.platform. Other scoped native families and mixed chains
+are now available below;the complete coupled irrational gate remains open.
 
 ## Arc length certificate and sourced boundaries
 
@@ -170,8 +170,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/arc_body_faults.py
 
 The primary arc target's four tests and scoped strict lint pass after adding explicit independent
 row context to failure assertions. This closes scoped native arc review. Complete producer runtime/
-locality remains n16;other families,mixed chains,actual platform execution and full coupled/
-resource/provider/replay/physical/production acceptance keep their separate owners.
+locality remains n16. Other scoped native families and mixed chains are now available;actual
+platform execution and full coupled/resource/provider/replay/physical/production proof remain owned.
 
 ## Forward sine and cosine boundaries
 
@@ -267,8 +267,8 @@ target/root_body_faults/0632-exact-root/ and target/arc_body_faults/0632-exact-a
 Their original source populations545/544/545 and542 copied files each remain byte-exact;planned
 outputs553/551/551 and both timeout controls per family pass. Original kernels/fixtures are unchanged.
 The14 affected primary tests and strict lint/formatting pass after restoration,including all three
-independent fixture regenerations. This closes scoped native forward review;inverse,Tan,mixed-call,
-actual platform execution and complete coupled/resource/provider/release acceptance remain owned.
+independent fixture regenerations. This closes scoped native forward review. Inverse,Tan and
+mixed-call reviews are now available;actual platform and full coupled/resource/provider/release proof remain owned.
 
 ## Inverse principal and whole-ratio boundaries
 
@@ -320,8 +320,8 @@ signed result and source flags,including zero and both180-degree endpoints;T1 re
 Five additional actual sourced checks preserve wrong-kind/second-kind priority and both
 homogeneous zero-vector refusals. A failed atan2 adds no successful call contribution to its
 inputs. The complete native target passes4 tests with strict affected lint/formatting. Nine actual
-inverse body faults pass below;platform,mixed-call and complete coupled/
-resource/provider/physical/release acceptance remain separately owned.
+inverse body faults pass below;the mixed-call cohort is also available. Platform and complete
+coupled/resource/provider/physical/release acceptance remain separately owned.
 
 ## Actual native inverse body faults
 
@@ -359,8 +359,8 @@ The formula-structure suite registers this entry alongside root,arc and forward 
 After restoration,the primary inverse4 tests,strict affected lint and formatting pass. Original
 kernel and fixture bytes are unchanged. This closes scoped native inverse review. The original
 complete45M certificate remains source-gated;its fresh full read still belongs to final coupled
-acceptance. Native/browser parity,Tan,mixed-call,full resource/provider/replay and release proof
-retain their separate owners. Complete transitive probe runtime/locality remains n16.
+acceptance. Tan and mixed-call scoped native reviews are now available. Native/browser parity,
+full resource/provider/replay and release proof remain owned;transitive probe locality remains n16.
 
 ## Tangent adaptive and explicit-resource boundaries
 
@@ -408,8 +408,8 @@ The focused native13 checks also retain early/later resource precedence,zero/uni
 actual width refinement and original error chains. Three independent profile/model commands
 recheck range/poles,folding/conditioning,convergent enclosures and the bounded request schedule.
 The19 diagnostic model cases/three model guard omissions remain separate from the compiled
-native resource-guard controls below. Arithmetic/resource body faults pass;platform,mixed-call,full
-allocator/provider/replay and production acceptance remain owned. Current proof/status text
+native resource-guard controls below. Arithmetic/resource body faults and mixed-call checks pass;
+platform,full allocator/provider/replay and production acceptance remain owned. Current proof/status text
 now reflects available native/scalar policies while keeping aggregate resource closure separate.
 
 ## Actual native tangent arithmetic body faults
@@ -548,6 +548,6 @@ python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_body_fault
 After restoration,the primary resource target's two tests,the private excessive-extent test,
 strict affected lint and formatting pass. The formula-structure suite and native registries
 include this entry. This completes scoped native tangent arithmetic/resource/source review.
-The next owner covers mixed irrational call chains. Actual native/browser parity,full coupled
-acceptance,aggregate resources and transitive probe locality retain their separate owners;
+[Mixed irrational call chains](formula-irrational-composition.md) now pass a separate native/Design
+cohort. Actual native/browser parity,full coupled acceptance,aggregate resources and probe locality remain owned;
 no physical or production release approval follows from these finite native checks.

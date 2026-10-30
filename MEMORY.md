@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.composition:independent mixed irrational chains through actual source/
-  recipe/Design calls,each own rounding boundary,first failure and successful contributions.
-- Tan0638 scoped native review done:resource2 baselines/13 actual compiled faults rejected by
-  strict D343 named-test panic/ordinal/whole-row evidence;original547/copied544 hashes exact,
-  complete554/555 outputs,owned timeout controls pass. Earlier arithmetic3 baselines/9 faults pass.
-- After restoration native resource2/private overflow1/strict affected lint/fmt/bash pass. Original
-  math139 and resource33 fixtures/core unchanged;33 resources retain66 complete comparisons.
-  Counter safety uses admitted-extent/remaining-work inequalities plus private overflow control.
-- Producer354/34461calls,file241/91/40/15refusals/12reds;whole0637 retained797/four spans;
-  IDs/map/diff/book99/374/1659/2945/glossary0 pass. n16 full transitive locality remains pending.
-- Root/arc/forward/inverse/Tan scoped native done;mixed/platform/full coupled remain. Fresh45M
-  inverse read deferred to final acceptance. G1 6/18/G0 unapproved unchanged;no production approval.
+- Next G1-SLICE.5d.4.platform:actual declared native/browser numerical execution identity,
+  including original mathematical/resource failures;inspect available public runtime/toolchain first.
+  Compile-only evidence cannot close parity. Then .acceptance owns full coupled/fresh45M read.
+- Mixed0639:32 rows/20 success/12 first refusals,64 complete actual native+Design comparisons.
+  Original paired24/48 retained.12122B/SHA635d0527785039caff58662c806b9cbb94e490a42cc96e241d451b56dea93c25.
+  Independent exact per-call integer/Fraction enclosures plus book Decimal agree;all8 functions
+  in one successful chain. Source cache/unbound/binding/read/flags/first-failure boundaries retained.
+- Native4/both regenerations/strict affected lint/fmt/bash pass;original139/resource33/paired24/core
+  unchanged. Producer355/34565calls,file242/91/40/15refusals/12reds/history798 four spans/IDs/map/
+  diff/book100/374/1663/2960/glossary0 pass. Native family/mixed scopes done;platform/full pending.
+- Complete transitive locality remains n16;fresh45M inverse read deferred to coupled acceptance.
+  G1 6/18/G0 unapproved unchanged;no app/physical/production approval or new full/hosted verdict.
 - Protect original archive/search/numerical trees;0630 transaction complete,never rerun old
   install/recovery. Full/hosted79bd6f6a exact-SHA only;full PNT/push400 continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete

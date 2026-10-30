@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — reject actual tangent resource-body faults
+## _(2026-10-30 UTC)_ — compose actual mixed irrational source and recipe calls
 
-0638 two original-scope baselines pass;13 actual preparation/execution faults compile then fail strict D343 independent row assertions. Original547/copied544 hashes exact;554/555 outputs and owned parent/child timeout controls pass. Original139/resource33/core bytes unchanged.
-Faults cover kind/fold/first/later admission,bit-before-work priority,refusal precharge,proposed reservation reporting,cumulative charge and series factor. Independent stage outcomes detect omitted first guards even when execution later refuses the same demand. Primitive overflow remains separately checked.
-After restoration resource2/private overflow1/strict affected lint/fmt/bash pass. Producer354/34461calls,file241/91/40/15refusals/12reds,book99/374/1659/2945/glossary0/history797/IDs/map/diff pass. [Whole0637](docs/history/stitchcad-devnotes-part797.md) retains independent cohort construction.
-Promotion declined:existing contracts. LIVE adds13 resource faults;G1 6/18/G0 unapproved unchanged. Scoped native tangent parents done;next mixed-call composition,then actual platform and full coupled acceptance. Complete transitive locality remains n16;fresh45M read deferred. Full PNT/push400 continues.
+0639 adds32 recipes:20 success/12 first failures,64 complete actual native/Design comparisons. Exact integer/Fraction certificates check each irrational result;book Decimal calculations independently agree. All8 calls contribute to one value;source/cache/storage/read/flag/failure boundaries remain exact.
+Original24 paired cases/48 comparisons and all8748 bytes stay unchanged. New12122B fixture SHA635d0527 regenerates. Native4/strict affected lint/fmt/bash pass;initial helper context-name compile error corrected first. Original139/resource33 fixtures and core unchanged;prior task IDs/order retained.
+Producer355/34565calls,file242/91/40/15refusals/12reds,book100/374/1663/2960/glossary0/history798/map/diff pass. New mixed chapter fully indexed;current review text aligned. [Whole0638](docs/history/stitchcad-devnotes-part798.md) retains scoped native tangent closure.
+Promotion declined:existing contracts. LIVE adds mixed32;G1 6/18/G0 unapproved unchanged. Next actual native/browser execution parity,then full coupled/fresh45M read. Full resource/provider/replay/physical/release/locality owners remain. Full PNT/push400 continues;no new full/hosted verdict.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

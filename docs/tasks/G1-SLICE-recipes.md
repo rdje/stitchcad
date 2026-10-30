@@ -621,44 +621,44 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0634 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part794.md).
 - ID: `G1-SLICE.5d.4.tangent`
   Status: `done`
-  Goal:coupled adaptive tangent proof/error/resource/provenance and actual fault review after
-  native139 and real paired24 acceptance;no fixed practical budget or platform inference.
+  Goal:0638 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part798.md).
 - ID: `G1-SLICE.5d.4.tangent.values`
   Status: `done`
-  Goal:0635 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part795.md).
+  Goal:0638 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part798.md).
 - ID: `G1-SLICE.5d.4.tangent.faults`
   Status: `done`
-  Goal:actual arithmetic and resource-guard body faults with independent complete-row evidence.
+  Goal:0638 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part798.md).
 - ID: `G1-SLICE.5d.4.tangent.faults.arithmetic`
   Status: `done`
-  Goal:0636 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part796.md).
+  Goal:0638 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part798.md).
 - ID: `G1-SLICE.5d.4.tangent.faults.resources`
   Status: `done`
-  Goal:compile actual reservation,charge,precedence and counter faults against independent
-  requested/maximum/prior-progress outcomes;no mathematical-domain substitute or guessed value.
+  Goal:0638 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part798.md).
 - ID: `G1-SLICE.5d.4.tangent.faults.resources.outcomes`
   Status: `done`
-  Goal:0637 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part797.md).
+  Goal:0638 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part798.md).
 - ID: `G1-SLICE.5d.4.tangent.faults.resources.bodies`
   Status: `done`
-  - [x] REPRODUCE / ISSUE:positive resource outcomes cannot reject actual admission/counter faults.
-  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py
-    --plan-only →7/8 variants,544 snapshots,554/555 complete outputs,no writes/dispatch,rc=0.
-  - [x] FIX:two static original-scope source configs against committed independent33-row cohort.
-  - [x] ADDRESSED (verified):same entry without --plan-only →2 baselines/13 compiled faults rejected,
-    exact D343 named-test/ordinal/whole-row evidence,rc=0. Original547/copied544 hashes exact;
-    owned timeout controls pass. Actual quota/stage/priority/precharge/reservation/counter faults.
-  - [x] NO REGRESSION:local launcher cargo test --offline --locked -p sc-core --test
-    formula_tangent_resource_contract →2 pass;private excessive extent1/strict affected lint/fmt/
-    bash pass,rc=0. Producer354/34461calls,file241/91/40/15refusals/12reds,whole797 four spans/
-    IDs/map/diff/book99/374/1659/2945/glossary0 pass,rc=0;original139/resource33/core unchanged.
-  - [x] LOCKSTEP:scoped native tangent parents done;book/live/suite/registry/notes align. Mixed/
-    platform/full coupled/locality remain owned. promotion: declined (existing quota/progress contracts).
-  Commit:STITCHCAD-G1-0638;Verification:2 baseline/13 actual faults/native3/lint/book.
+  Goal:0638 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part798.md).
 - ID: `G1-SLICE.5d.4.composition`
-  Status: `pending`
-  Goal:independent mixed irrational-call chains through actual source/recipe/Design execution,
-  preserving each function's rounding boundary,first failure and successful contributions.
+  Status: `done`
+  - [x] REPRODUCE / ISSUE:per-function/paired Tan controls lacked complete mixed irrational chains.
+  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/mixed_irrational_design_oracle.py
+    →32 rows/20 success/12 first refusals,12122B/SHA635d0527,rc=0. Exact per-call integer/Fraction
+    certificates and independent book Decimal calculations agree;tie/component/inverse/pole controls pass.
+  - [x] FIX:shared paired watcher runs original24 and new32 through actual native/Design modes;
+    retain each call rounding,source cache/storage/read boundaries,flags,first failure and unchanged state.
+  - [x] ADDRESSED (verified):local launcher cargo test --offline --locked -p sc-core --test
+    design_structure_contract formula_execute::independent::tangent →4 pass/64 mixed+48 original
+    comparisons/both whole-fixture regenerations exact,rc=0. All8 functions in one successful chain.
+  - [x] NO REGRESSION:strict affected Clippy/fmt/bash pass,rc=0. Initial context-name compile error
+    corrected before actual4 pass. Core/original139/resource33/paired24 bytes unchanged;prior IDs/order
+    exact. Producer355/34565calls,file242/91/40/15refusals/12reds,whole798 four spans,map/diff/
+    book100/374/1663/2960/glossary0 pass,rc=0;new chapter fully indexed under fixed bounds.
+  - [x] LOCKSTEP:book/live/task/notes/suite/registries align;platform execution next,then complete
+    coupled acceptance. Full resources/provider/replay/physical/release and locality remain owned.
+    promotion: declined (existing per-call rounding,source/storage/identity and first-failure contracts).
+  Commit:STITCHCAD-G1-0639;Verification:mixed32/64+original24/48/native4/lint/book.
 - ID: `G1-SLICE.5d.4.platform`
   Status: `pending`
   Goal:actual declared native/browser numerical identity with exact target/toolchain/run evidence,

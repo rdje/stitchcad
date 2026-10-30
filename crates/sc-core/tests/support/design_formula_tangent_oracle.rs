@@ -114,11 +114,14 @@ fn refusal(error: &FormulaScalarSourceRecipeError<'_>) -> String {
     )
 }
 
-#[test]
-fn both_actual_paired_modes_match_independent_tangent_values_resources_storage_reads_and_failures()
-{
+fn check_paired(fixture: &str, expected_counts: (usize, usize, usize)) {
     let mut counts = (0, 0, 0);
-    for row in FIXTURE.lines().filter(|row| !row.starts_with('#')) {
+    for (index, row) in fixture
+        .lines()
+        .filter(|row| !row.starts_with('#'))
+        .enumerate()
+    {
+        let fixture_context = format!("fixture-row={};{row}", index + 1);
         let mut fields = row.splitn(6, '\t');
         let label = fields.next().expect("case");
         let supplier = limits(fields.next().expect("supplier policy"));
@@ -180,7 +183,10 @@ fn both_actual_paired_modes_match_independent_tangent_values_resources_storage_r
                     unreachable!("unchanged actual fixture remains current")
                 }
             };
-            assert_eq!(actual, expected, "actual Design case {label}");
+            assert_eq!(
+                actual, expected,
+                "{fixture_context}:actual Design case {label}"
+            );
             let sources = graph
                 .prepare_scalar_sources_with_tangent_limits(source_limits, supplier)
                 .expect("actual complete native graph");
@@ -202,19 +208,21 @@ fn both_actual_paired_modes_match_independent_tangent_values_resources_storage_r
                     refusal(&error)
                 }
             };
-            assert_eq!(actual, expected, "actual native paired case {label}");
+            assert_eq!(
+                actual, expected,
+                "{fixture_context}:actual native paired case {label}"
+            );
             counts.2 += 2;
         });
         assert_eq!(
             root, before,
-            "all actual model/canonical states unchanged:{label}"
+            "{fixture_context}:all actual model/canonical states unchanged:{label}"
         );
         counts.0 += 1;
         counts.1 += usize::from(expected.starts_with("error:"));
     }
     assert_eq!(
-        counts,
-        (24, 14, 48),
+        counts, expected_counts,
         "entire independent paired population in both actual modes"
     );
     println!(
@@ -223,17 +231,12 @@ fn both_actual_paired_modes_match_independent_tangent_values_resources_storage_r
     );
 }
 
-#[test]
-fn independent_fraction_book_composition_regenerates_every_frozen_paired_tangent_byte() {
+fn regenerate(producer: &str, fixture: &str) {
     let root = std::env::current_dir()
         .expect("Cargo package root")
         .join("../..");
     let output = std::process::Command::new("python3")
-        .args([
-            "-I",
-            "-B",
-            "docs/tasks/artifacts/formula_structure/tangent_design_recipe_oracle.py",
-        ])
+        .args(["-I", "-B", producer])
         .current_dir(root)
         .output()
         .expect("guarded independent paired tangent oracle");
@@ -244,7 +247,37 @@ fn independent_fraction_book_composition_regenerates_every_frozen_paired_tangent
     );
     assert_eq!(
         output.stdout,
-        FIXTURE.as_bytes(),
+        fixture.as_bytes(),
         "all original source/recipe/policy/result/refusal/read bytes"
+    );
+}
+
+#[test]
+fn both_actual_paired_modes_match_independent_tangent_values_resources_storage_reads_and_failures()
+{
+    check_paired(FIXTURE, (24, 14, 48));
+}
+
+#[test]
+fn independent_fraction_book_composition_regenerates_every_frozen_paired_tangent_byte() {
+    regenerate(
+        "docs/tasks/artifacts/formula_structure/tangent_design_recipe_oracle.py",
+        FIXTURE,
+    );
+}
+
+const MIXED: &str = include_str!("../fixtures/formula_mixed_irrational_design_recipe.tsv");
+
+#[test]
+fn both_actual_paired_modes_match_independent_mixed_irrational_rounding_sources_and_first_failures()
+{
+    check_paired(MIXED, (32, 12, 64));
+}
+
+#[test]
+fn independent_exact_mixed_composition_regenerates_every_frozen_byte() {
+    regenerate(
+        "docs/tasks/artifacts/formula_structure/mixed_irrational_design_oracle.py",
+        MIXED,
     );
 }

@@ -129,3 +129,4 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Publication checks and renderer authority](annexes/publication-checks.md)
 
 - [Coupled irrational function review](annexes/formula-irrational-review.md)
+- [Mixed irrational source and recipe execution](annexes/formula-irrational-composition.md)
