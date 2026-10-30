@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0652 — preserve reviewed cleanup bytes and archived continuity
+## STITCHCAD-G1-0653 — complete the previously blocked environment preflight
 
-- Fix D353 exact0645 inspector pin/actual omission refusal. Fix D354 public logical reads,three exact0224 records,prior immutable bytes/order and current linked frontier;12 refusals/four compiled guard omissions are watched by default.
-- Original fixture15/11,17 physical refusals,six exact inputs/residue0 and default/real/continuity pass. Book101/374/1670/2980/glossary0/history811/IDs+2/map/diff pass. No inspector change or cleanup apply;blocked tail/full probes next. G1 6/18/G0 unapproved unchanged.
+- All12 canonical tail commands pass with1222 source hashes unchanged;complete ordered outcomes/transcript retained. Rust/build548 hashes still match retained full1635/native+372/doc/fmt/strict Clippy gate.
+- Book101/374/1670/2980/glossary0/history812/IDs/map/diff pass. LIVE unchanged:G1 6/18/G0 unapproved. Actual full29-suite make probes and coupled closure remain next;no new full-suite or hosted verdict.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

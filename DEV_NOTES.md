@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — preserve reviewed cleanup bytes and logical continuity
+## _(2026-10-30 UTC)_ — finish the previously blocked environment preflight
 
-0652 fixes D353 by pinning the exact reviewed0645 inspector. Complete0315 delta adds only0628/0640/0645 retention protections;an actual proof-guard omission fails whole-file equality. The original fixture AST and inspector behavior stay unchanged;no project cleanup apply occurs.
-D354 uses public logical archive reads and exact0224 Git pins for three selected records. Prior logical bytes/windows and predecessor task order remain immutable while later additions are permitted. Current index/MEMORY agree with a unique owner in the bounded linked family;historical D34 and PLANNING.5 stay separate.
-Default now watches continuity. Focused default/--real/--continuity pass:original15/11,17 physical refusals,six exact inputs/residue0,12 continuity refusals/four compiled guard omissions. No retained data changes. Book101/374/1670/2980/glossary0/history811 four Git spans/IDs+2/map/diff pass.
-[Whole0651](docs/history/stitchcad-devnotes-part811.md) retains the later failed baseline. LIVE closes D353/D354;G1 6/18/G0 unapproved unchanged. Promotion declined:existing retention/continuity contracts. Next blocked environment tail,then actual full make probes;no complete full-suite verdict. Full PNT continues.
-Logs:target/coupled-0652-controls.log,target/coupled-0652-real.log,target/coupled-0652-continuity.log;all terminal0. Numerical source/evidence and last cleanup date unchanged.
+0653 runs the exact canonical twelve-command suffix after cleanup fixture. Ledger fixture/mutations,publication fixture/builder,map/handoff,archive client/reader/full fixture,static/payload/native loaders and push cadence all return0. All1222 snapshotted sources remain unchanged;full transcript/outcomes protected.
+Independent receipt/transcript SHA check passes. All548 Rust/build hashes still match the retained full0645 gate:1635 native/372 documentation tests,formatting and strict Clippy. Prior Wasm/doctrine/numerical baselines remain available. A fresh actual29-suite make probes command is still pending.
+Book101/374/1670/2980/glossary0/history812 four Git spans/IDs/map/diff pass. LIVE reviewed unchanged:G1 6/18/G0 unapproved;no complete full-probe/coupled/hosted verdict. Promotion declined:existing verification contract. Commit this completed preflight before the long full run;full PNT continues.
+[Whole0652](docs/history/stitchcad-devnotes-part812.md) retains cleanup/continuity repairs. Original inspector,numerical sources and preserved legacy data unchanged. Next actual full make probes with exclusive platform stage,then only scoped coupled closure.
+Receipt:target/irrational_platform_certificate/coupled-0653-tail-20261030T213709318829Z-87999/receipt.json SHAb116a422e29b0d8668cda662a85a93b91b7fb6193864d318e89c9d15e7ef1b4e.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

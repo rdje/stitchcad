@@ -273,3 +273,15 @@ This attempt exits1 with1220 snapshotted sources unchanged;full probes again do 
 target/irrational_platform_certificate/coupled-0651-integration-20261030T210702634267Z-10812/environment.json
 sha256:3986118ee5f11d8d9f9916d2279456d9292cc45f73748bcc0e0973593bd73c54
 ```
+
+The0653 preflight then passes all twelve previously blocked environment commands in canonical
+order:ledger fixture/mutations,publication fixture/builder,map/handoff fixture,archive client/
+reader/full fixture,static loader,payload library,native loader and push cadence. All1222
+snapshotted source hashes remain unchanged. The retained full Rust gate still has an exact
+548-input Rust/build basis:1635 native and372 documentation tests,formatting and strict Clippy.
+A fresh complete29-suite make probes command remains the next verification step.
+
+```text
+target/irrational_platform_certificate/coupled-0653-tail-20261030T213709318829Z-87999/receipt.json
+sha256:b116a422e29b0d8668cda662a85a93b91b7fb6193864d318e89c9d15e7ef1b4e
+```

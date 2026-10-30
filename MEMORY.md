@@ -1,18 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.run.retry.tail:blocked environment commands,then .full probes.
-- Latest unit STITCHCAD-G1-0652;derive HEAD/ahead from Git. D353/D354 focused fixes pass.
-- Cleanup companion pins exact reviewed0645 inspector;actual proof-guard omission refuses.
-  Original fixture AST/15 cases/11 guard reds/17 physical refusals/six inputs/residue0 pass.
-- Continuity uses public logical reads,three exact0224 records,immutable prior bytes/windows,
-  predecessor task order/current index+MEMORY+unique linked owner.12 refusals/four guard reds pass.
-- Default watches continuity;--real/--continuity pass. No project cleanup apply or inspector change.
-- Prior0651 environment rc1/source1220 exact;whole checkpoint in part811;full probes unstarted.
-- target/irrational_platform_certificate/coupled-0651-integration-20261030T210702634267Z-10812/environment.json SHA3986118ee5f11d8d9f9916d2279456d9292cc45f73748bcc0e0973593bd73c54.
-- Check canonical environment tail after python_cleanup_fixture_contract.py,then full make probes;
-  avoid another separate prefix replay. D349–D354 focused fixes pass;no full-suite/coupled verdict.
-- Full0646 Rust1635/doc372/Wasm3/doctrine13,numerical9 baselines/48 faults/native+Chrome31 pass.
-- Positive book101/374/1670/2980/glossary0/history811/IDs+2/map/diff pass. No job pending.
+- Next G1-SLICE.5d.4.acceptance.gates.run.retry.full:actual complete29-suite make probes.
+- Latest unit STITCHCAD-G1-0653;derive HEAD/ahead from Git. All12 blocked-tail commands pass.
+- Exact canonical suffix after cleanup fixture:ledger fixture/mutations,publication fixture/
+  builder,map/handoff,archive client/reader/full fixture,static/payload/native loaders,push cadence.
+- All1222 snapshot sources unchanged;complete protected ordered outcomes/transcript retained.
+- target/irrational_platform_certificate/coupled-0653-tail-20261030T213709318829Z-87999/receipt.json SHAb116a422e29b0d8668cda662a85a93b91b7fb6193864d318e89c9d15e7ef1b4e.
+- Rust/build548 input hashes still match full0645 receipt:1635 native/372 doc/fmt/strict Clippy pass.
+  Full0646 Wasm3/doctrine13,numerical9 baselines/48 faults/native+Chrome31 remain retained.
+- D349–D354 focused fixes pass;whole0652 in part812. Full probes/coupled closure remain open.
+- Freeze all tracked/non-submodule inputs during full probes;fresh protected transcript/receipt.
+  Preserve original certificates/native logs/snapshots;actual platform stage requires exclusive census.
+- Positive book101/374/1670/2980/glossary0/history812/IDs/map/diff pass. No job pending.
 - G1 6/18/G0 unapproved;cleanup2026-10-30 14:18 unchanged. Full PNT/push400 only.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,

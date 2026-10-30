@@ -687,7 +687,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
   Status: `in_progress`
   Goal:finish environment/full probes after D349–D351 repairs;Rust/Wasm/doctrine pass,then scoped closure.
-  Latest0651 environment rc1;D353/D354 fixed0652;blocked tail/full probes next.
+  Latest0653 tail12 pass/source1222 exact;actual full make probes next.
   Preserve transcripts/return codes and original source/evidence identities;no closure yet.
   Book sync:clarify trig-certificates inverse230 observed0640 pair/full matrix during closure.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.environment-baseline`
@@ -705,22 +705,19 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0651 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part811.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.cleanup-pin`
   Status: `done`
-  - [x] ISSUE:D353 inspector pin predates retention repairs;D354 continuity assumes raw/old state.
-  - [x] ROOT CAUSE (WHY + WHERE):git diff0315..0645 cleanup.py →retention-only delta;
-    exact0645 pin passes;--continuity public reads prove archived records/append-only growth,rc=0.
-  - [x] FIX:strict0645 whole inspector pin;exact0224 selected records;public logical reads,
-    immutable prior bytes/order and current index/MEMORY/linked owner;watch continuity by default.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py
-    →original15/11,17 physical refusals,12 continuity refusals/four compiled guard reds pass,rc=0.
-  - [x] NO REGRESSION:same command --real →15 cases/11 guard reds/six exact inputs/zero residue;
-    --continuity →exact prior records/task order/current owner;actual inspector omission refused,rc=0.
-    Book101/374/1670/2980/glossary0/history811 four spans/IDs+2/map/diff pass,rc=0;no cleanup apply.
-  - [x] LOCKSTEP:book/live/notes sync;blocked tail/full probes pending;promotion declined(existing contracts).
-  Commit:STITCHCAD-G1-0652;Verification:focused cleanup/continuity.
+  Goal:0652 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part812.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.tail`
-  Status: `pending`
-  Goal:check previously blocked environment commands after cleanup fixture in canonical order;
-    retain each outcome/source boundary and resolve failures before full make probes.
+  Status: `done`
+  - [x] ISSUE:later environment controls were blocked by the now-fixed cleanup pin.
+  - [x] ROOT CAUSE (WHY + WHERE):canonical run_ci_environment_probes.sh suffix after cleanup
+    discovers12 commands;python3 -I -B target/run_0653_tail.py →12/12 pass,rc=0.
+  - [x] FIX:retain complete ordered tail outcomes/transcript/source boundary before full probes.
+  - [x] ADDRESSED:same actual runner →all12 terminal0,1222 source hashes unchanged;
+    receipt/transcript SHA verified,pass,rc=0;full probe command remains pending.
+  - [x] NO REGRESSION:Rust receipt SHA/source check →548 inputs exact,retained1635/doc372,rc=0;
+    book101/374/1670/2980/glossary0/history812 four spans/IDs/map/diff pass,rc=0.
+  - [x] LOCKSTEP:book/live review/notes sync;no full-suite verdict;promotion declined(existing contract).
+  Commit:STITCHCAD-G1-0653;Verification:complete previously blocked environment tail.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.full`
   Status: `pending`
   Goal:actual complete make probes after blocked-tail repairs;retain full transcript/source and
