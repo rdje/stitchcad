@@ -1,4 +1,4 @@
-"""Actual read-only certificate/stray census and compiled protection-omission control.
+"""Actual retained-certificate/workspace census and compiled protection-omission controls.
 
 Fresh owned fixtures contain no Git repository. Project cleanup apply is never invoked.
 """
@@ -16,8 +16,12 @@ PROFILE_PATH = ROOT / 'scripts/local_environment.py'
 SOURCE = Path(__file__).with_name('cleanup.py')
 BASE = ROOT / 'target/cleanup_certificate_controls' / str(os.getpid())
 INPUTS = (Path(__file__), SOURCE, PROFILE_PATH, ROOT / 'scripts/check_handoff.sh', ROOT / 'scripts/handoff_census.py')
-STORES = ('target/trig_forward_certificate', 'target/inverse_threshold_certificate')
-NAMES = (*(store + '/retained.bin' for store in STORES), 'target/ordinary.log')
+CERTIFICATES = ('target/trig_forward_certificate', 'target/inverse_threshold_certificate')
+WORKSPACES = ('target/history-capture-future', 'target/history-generations-future',
+    'target/history-proof-future', 'target/history-review-future', 'target/book_search_future')
+STORES = (*CERTIFICATES, *WORKSPACES)
+ORDINARY = ('target/ordinary.log', 'target/other/book_search_future/ordinary.log')
+NAMES = (*(store + '/retained.bin' for store in STORES), *ORDINARY)
 
 
 def main():
@@ -58,15 +62,17 @@ def main():
             return actual_run(command, *args, **kwargs)
 
         def require_protected(selected):
-            for name in NAMES[:2]:
+            for name in NAMES[:len(STORES)]:
                 try:
                     selected['inspect'](name, set())
                 except selected['Refusal'] as error:
-                    assert 'protected output/store' in str(error)
+                    assert 'protected output/store' in str(error) or 'protected proof workspace' in str(error)
                 else:
-                    raise AssertionError('certificate deletion candidate admitted')
+                    raise AssertionError('retained proof deletion candidate admitted')
             census = selected['census']()
-            assert {row['path'] for row in census['candidates']} == {NAMES[2], 'target/scratch'}, 'certificate census was not pruned or ordinary cleanup changed'
+            assert {row['path'] for row in census['candidates']} == {*ORDINARY, 'target/scratch'}, 'certificate census was not pruned or ordinary cleanup changed'
+            assert not any(row['path'] == store or row['path'].startswith(store + '/')
+                for row in census['skipped'] for store in STORES), 'retained workspace traversed by census'
             scratch = next(row for row in census['candidates'] if row['path'] == 'target/scratch')
             # Git's platform launcher may create SDK cache data in the prepared local scratch.
             # That ordinary regenerable tree remains eligible; do not assume it stays empty.
@@ -79,23 +85,75 @@ def main():
                           and isinstance(node.targets[0], ast.Name) and node.targets[0].id == 'PROTECTED')
         before = len(assignment.value.elts)
         assignment.value.elts = [item for item in assignment.value.elts
-                                if not (isinstance(item, ast.Constant) and item.value in STORES)]
+                                if not (isinstance(item, ast.Constant) and item.value in CERTIFICATES)]
         assert before - len(assignment.value.elts) == 2, 'fault did not remove exactly both new protections'
         faulty = {'__file__': str(copied), '__name__': 'certificate_protection_omitted'}
         exec(compile(ast.fix_missing_locations(tree), str(copied), 'exec'), faulty)
         with patch.object(subprocess, 'run', local_git):
             admitted = faulty['census']()['candidates']
-            assert {row['path'] for row in admitted} == {*NAMES, 'target/scratch'}, 'actual omission failed to expose both proof files'
+            assert {row['path'] for row in admitted} == {*(name + '/retained.bin' for name in CERTIFICATES), *ORDINARY, 'target/scratch'}, 'actual omission failed to expose both proof files'
             try:
                 require_protected(faulty)
             except AssertionError as error:
-                assert str(error) == 'certificate deletion candidate admitted'
+                assert str(error) == 'retained proof deletion candidate admitted'
             else:
                 raise AssertionError('omission did not fail the protection assertion')
             require_protected(module)
+        family_tree = ast.parse(copied.read_text())
+        function = next(node for node in family_tree.body
+                        if isinstance(node, ast.FunctionDef) and node.name == 'retained_proof')
+        function.body = [ast.Return(value=ast.Constant(value=False))]
+        family_fault = {'__file__': str(copied), '__name__': 'proof_family_protection_omitted'}
+        exec(compile(ast.fix_missing_locations(family_tree), str(copied), 'exec'), family_fault)
+        with patch.object(subprocess, 'run', local_git):
+            admitted = family_fault['census']()['candidates']
+            assert {row['path'] for row in admitted} == {
+                *(name + '/retained.bin' for name in WORKSPACES), *ORDINARY, 'target/scratch'}, \
+                'actual family omission failed to expose future proof identities'
+            try:
+                require_protected(family_fault)
+            except AssertionError as error:
+                assert str(error) == 'retained proof deletion candidate admitted'
+            else:
+                raise AssertionError('family omission survived the actual protection assertion')
+            require_protected(module)
+        # Each new interface guard must matter independently: direct inspect and pruned census.
+        for operation in ('inspect', 'census'):
+            guarded_tree = ast.parse(copied.read_text())
+            function = next(node for node in guarded_tree.body
+                            if isinstance(node, ast.FunctionDef) and node.name == operation)
+            if operation == 'inspect':
+                guards = [node for node in function.body if isinstance(node, ast.Expr)
+                    and isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name)
+                    and node.value.func.id == 'require' and node.value.args
+                    and isinstance(node.value.args[0], ast.UnaryOp)
+                    and isinstance(node.value.args[0].operand, ast.Call)
+                    and isinstance(node.value.args[0].operand.func, ast.Name)
+                    and node.value.args[0].operand.func.id == 'retained_proof']
+                assert len(guards) == 1
+                function.body.remove(guards[0])
+            else:
+                guards = [node for node in ast.walk(function) if isinstance(node, ast.If)
+                    and isinstance(node.test, ast.BoolOp) and isinstance(node.test.op, ast.Or)
+                    and isinstance(node.test.values[0], ast.Call)
+                    and isinstance(node.test.values[0].func, ast.Name)
+                    and node.test.values[0].func.id == 'retained_proof']
+                assert len(guards) == 1 and len(guards[0].test.values) == 2
+                guards[0].test = guards[0].test.values[1]
+            omitted = {'__file__': str(copied), '__name__': 'proof_' + operation + '_guard_omitted'}
+            exec(compile(ast.fix_missing_locations(guarded_tree), str(copied), 'exec'), omitted)
+            with patch.object(subprocess, 'run', local_git):
+                try:
+                    require_protected(omitted)
+                except AssertionError as error:
+                    wanted = 'retained proof deletion candidate admitted' if operation == 'inspect' else 'retained workspace traversed by census'
+                    assert str(error) == wanted, ('unrelated omitted proof guard', operation, error)
+                else:
+                    raise AssertionError(('actual omitted proof guard survived', operation))
+                require_protected(module)
         assert {name: hashlib.sha256((BASE / name).read_bytes()).hexdigest() for name in NAMES} == saved
         assert all(source.read_bytes() == destination.read_bytes() for source, destination in mapping.items())
-        print('certificate cleanup: protected2/ordinary-stray1/actual omission-red1/restored1; all data/source bytes unchanged, rc=0')
+        print('retained cleanup: protected7/ordinary-strays2/actual omission-reds4/restored1; all data/source bytes unchanged, rc=0')
     finally:
         if BASE.exists() or BASE.is_symlink():
             profile['plan_producer'](ROOT, directories=(BASE,))

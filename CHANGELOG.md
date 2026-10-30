@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0627 — falsify actual arc bodies through the shared original-scope controller
+## STITCHCAD-G1-0628 — prevent retained proof workspace deletion before daily cleanup
 
-- Compile arc baseline and five original-body faults against independent rows,covering product sign,full turns,pi scale,radius and rounding. Retain545 exact original inputs/restored542-file snapshot/551 planned outputs and actual owned timeout controls.
-- Root CLI baseline/fault5/timeout2 and primary arc4/strict lint/fmt pass. Book99/374/1659/2936/glossary0/history786/IDs/map/diff and producer/file-plan checks pass. LIVE root85/fault5,arc23/fault5;G1 6/18/G0 unapproved unchanged. Next daily cleanup,then forward review;full coupled/platform remain owned.
+- Fix D342 before removal:the original plan proposed9 retained search-proof logs. Protect/prune five archive/search workspace families,including future identities,while keeping numerical stores and old policies. Project cleanup has not run;retained proofs remain intact.
+- Protected7/ordinary2/actual reds4/entry contracts/real revised plan pass;old9 fingerprints exact. Book99/374/1659/2937/glossary0/history787/IDs/map/diff and producer census pass. Latest cleanup date unchanged;next fresh plan/apply. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

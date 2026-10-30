@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.6.5.3.2.cleanup-20261030:director-requested daily safe artifact cleanup near24h.
-  Pending owner exists in execution sibling. Read full cleanup protocol/producer and last record;
-  freeze plan/preserve current proof logs and protected stores,apply with OS visibility,immediate
-  independent residue census before any launcher rebuild. Then .5d.4.forward numerical review.
-- Native arc review627 closes23 rows/18 successes/3 domain/2 width,complete compiled pi proof,
-  real sourced storage and five actual compiled faults. Arc report545 original hashes/root544
-  remain exact;both542-file snapshots restore,551 outputs planned and owned timeout2 pass each.
-- Shared original-scope controller selects source/fixture/target/watcher before writes;root CLI
-  compatibility baseline/fault5 passes. Primary arc4/strict lint/fmt pass. Book99/374/1659/2936,
-  glossary0/history786/IDs/map/diff;producer349/34232calls/file plans236/90/39/15/12 pass.
-- LIVE native root85/fault5 and arc23/fault5;G1 6/18/G0 unapproved unchanged. n16 full producer
-  locality remains owned. Full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/
-  numerical/cleanup proofs;never rerun old transactions. Full PNT/push400. Other families/
-  composition/platform/full resources/provider/replay/physical/release remain open.
+- Next G1-SLICE.6.5.3.2.cleanup-20261030.apply:freeze a fresh POST-COMMIT cleanup plan.
+  Original seam-20261030 plan rejected before deletion:D342 proposed9 logs in4 retained search
+  workspaces. All9 fingerprints remain exact;rejected-before-deletion.json records it. Review plan
+  seam-20261030-protected-review is read-only/stale after commit;never apply either old plan.
+- D342 fixed0628:direct inspector/census now protect/prune five retained target-child families,
+  including future archive/search identities. Numerical stores and every old guard remain.
+  Protected7/ordinary2/actual compiled reds4/restored1 and complete entry contracts pass.
+- Actual revised plan70 has proof overlap0;extra44 are exactly victim logs from two focused
+  entry-contract fixture runs. Preserve all current proof logs and original history/search/numeric
+  stores before actual deletion;apply needs OS-visible idle census,then immediate independent
+  residue before any launcher rebuild. Last completed cleanup still2026-10-29 14:10UTC.
+- Book99/374/1659/2937/glossary0/history787/IDs/map/diff;producer349/34304calls pass. G1 6/18/
+  G0 unapproved unchanged;full/hosted79bd6f6a SHA-scoped. Native root/arc review done;after cleanup
+  resume .5d.4.forward. Protect originals;full PNT/push400;broader coupled/platform/release remain.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

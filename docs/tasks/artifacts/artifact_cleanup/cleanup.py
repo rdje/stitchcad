@@ -20,6 +20,8 @@ AUDIT = 'target/artifact_cleanup_audit'
 PROTECTED = (AUDIT, 'target/cargo-home', 'target/scaffold_backup',
              'target/debug/deps', 'target/release/deps',
              'target/trig_forward_certificate', 'target/inverse_threshold_certificate')
+PROOF_FAMILIES = ('history-capture-', 'history-generations-', 'history-proof-',
+                  'history-review-', 'book_search_')
 SUFFIXES = ('.log', '.bin', '.tmp', '.orig', '.rej')
 
 
@@ -64,6 +66,13 @@ def under(path, prefix):
     return path == prefix or path.startswith(prefix + '/')
 
 
+def retained_proof(name):
+    """Retained workspace identities remain protected when a later capture adds a new suffix."""
+    parts = Path(name).parts
+    return len(parts) >= 2 and parts[0] == 'target' and any(
+        parts[1].startswith(prefix) for prefix in PROOF_FAMILIES)
+
+
 def local(path):
     require(not path.is_absolute() and '..' not in path.parts and bool(path.parts), 'path locality')
     full = ROOT / path
@@ -80,6 +89,7 @@ def local(path):
 def inspect(name, tracked_paths):
     """Fingerprint every selected entry; reject links, Git boundaries and tracked descendants."""
     path = local(Path(name))
+    require(not retained_proof(name), 'protected proof workspace: ' + name)
     require(not any(under(name, p) for p in PROTECTED), 'protected output/store: ' + name)
     require(not any(under(p, name) for p in tracked_paths), 'tracked descendant: ' + name)
     environment = source_plan()
@@ -143,7 +153,7 @@ def census():
     # Probe/build stores and source inputs are preserved. Walk only the project's target output.
     for directory, dirs, files in os.walk(ROOT / 'target', followlinks=False):
         rel = Path(directory).relative_to(ROOT).as_posix()
-        if any(under(rel, prefix) for prefix in (*TREES, *PROTECTED)):
+        if retained_proof(rel) or any(under(rel, prefix) for prefix in (*TREES, *PROTECTED)):
             dirs[:] = []
             continue
         if '.git' in dirs or '.git' in files:

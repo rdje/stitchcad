@@ -22,6 +22,9 @@ Cleanup is a normal change: it is owned by a task-tree leaf, recorded here, and 
 - Retained numerical certificates: target/trig_forward_certificate/ and
   target/inverse_threshold_certificate/, including payloads, checkpoints, frozen inputs and producers.
   These are proof records, not stray .bin files; retirement requires a separately owned decision.
+- Retained workspace families directly under target: history-capture-*,history-generations-*,
+  history-proof-*,history-review-* and book_search_*. The inspector refuses them and the census
+  prunes them,including future capture identities. Register other retained roots before creation.
 - Any shared/global cache outside the repository (cargo's registry, homebrew, system temp): populate a
   project-local cache instead, and remove only records provably owned by this project.
 

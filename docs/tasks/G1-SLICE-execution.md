@@ -770,9 +770,49 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0546 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part705md).
 
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261030`
-  Status: `pending`
+  Status: `in_progress`
   Goal:director-requested daily safe artifact cleanup around the24-hour cadence after arc review,
   before forward review. Read current cleanup protocol;own frozen plan,protected proof census,
   exact current verification-log preservation,apply and immediate independent residue census.
   Keep package/dependency stores,linked caches,other Git repositories and original numerical/
   archive/search proof workspaces intact. No deletion without complete safety/ownership evidence.
+- ID: `G1-SLICE.6.5.3.2.cleanup-20261030.proof-protection`
+  Status: `done`
+  Goal:D342 P1 prevent retained proof loss before any daily cleanup apply;protect current and
+  future archive/search workspace families without changing ordinary artifact eligibility.
+  - [x] REPRODUCE / ISSUE:actual seam-20261030 frozen plan35 proposed9 .log files inside4
+    retained0586 search workspaces. Independent preservation review rejected overlap before any
+    deletion. Proof logs/zero-byte markers are part of original capture identity,not generic strays.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan
+    target/artifact_cleanup_audit/seam-20261030 →35 candidates/1692 skipped,rc=0;independent
+    protected-overlap assertion fails on9 retained search logs. The generic target suffix walk
+    protected2 numerical stores but lacked archive/search workspace lifecycle protection.
+    Cleanup code last changed0315;later retained search evidence had no equivalent family guard.
+  - [x] FIX:add a bounded first-target-child predicate for history-capture-,history-generations-,
+    history-proof-,history-review- and book_search_. Direct inspect refuses retained roots and
+    census prunes them before traversal,including future identities. Keep old constants/bodies
+    exact through only the two explicit additive guards. Pin all five families in policy controls.
+    Existing2 numerical protections remain. Record rejected plan;keep prior cleanup date unchanged.
+  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py
+    →protected7/ordinary2/actual compiled omission reds4/restored1;all data/source bytes unchanged,
+    rc=0. Fresh fixtures cover2 numerical stores/five future family identities/nested ordinary
+    lookalike. Actual numeric-constant,predicate,inspect and census-prune omissions each fail its
+    independent assertion. Revised real read-only plan70 has proof overlap0;old9 fingerprints
+    remain exact and no apply/result exists,rc=0. Added44 candidates are exactly victim logs from
+    two owned entry-contract fixture runs,not newly selected retained proofs. No project deletion.
+  - [x] NO REGRESSION: python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.py
+    →default/attested/complete captures41/9/1,14 physical refusals,5 actual omission reds,legacy
+    body/constant projection exact plus2 certificates/5 explicit families,link/blocked1/clear0
+    controls pass,rc=0. Producer349/34304 calls/73 heredocs/2892 embedded,history787 four exact
+    Git spans,prior IDs/order/uniqueness plus two owned cleanup children,map/diff pass,rc=0.
+    Book99/374/1659/2937 and glossary310/9/158/0 pass,rc=0. No actual deletion or changed latest date.
+  - [x] LOCKSTEP:canonical cleanup policy/book/D342 ledger/task/index/MEM/DEV/CHANGE/LIVE align;
+    whole prior native arc/ledger scope retained787. D342 fixed before deletion;next .apply owns
+    a fresh post-commit plan,all protected/current proof preservation and immediate residue.
+    Native numerical/product status unchanged;G1 6/18/G0 unapproved. Full/hosted79bd6f6a SHA-scoped.
+    promotion: declined (existing immutable-proof preservation already requires this protection;the fix mechanizes retained workspace naming families and adds independent guards without new deletion authority).
+  Commit:STITCHCAD-G1-0628;Verification:protected7/ordinary2/actual reds4/entry contracts/real read-only plan.
+- ID: `G1-SLICE.6.5.3.2.cleanup-20261030.apply`
+  Status: `pending`
+  Goal:after D342 protection fix commits,freeze a fresh plan,preserve all current/retained proofs,
+  apply only safe generated artifacts and prove immediate independent residue before regeneration.

@@ -40,7 +40,8 @@ The census checks doctrine/scratch/tmp, Rust incremental and rendered-book trees
 .log, .bin, .tmp, .orig, .rej and .DS_Store strays under target. Protected stores and dependency
 binaries are pruned. Retained numerical proof stores target/trig_forward_certificate/ and
 target/inverse_threshold_certificate/ are also protected, including their .bin payloads,
-checkpoints, frozen sources and executable. Generic cleanup cannot retire those records;
+checkpoints, frozen sources and executable. Retained archive/search workspace families are
+also protected below. Generic cleanup cannot retire those records;
 any later retirement needs its own task and evidence. Unsafe entries appear in skipped with a reason; they are never followed or
 removed. Nested Git markers, symlinks, foreign devices, special files, nonignored paths and tracked
 descendants refuse. A regular deletion file must have exactly one hard link. Directory link counts
@@ -51,6 +52,32 @@ Apply rechecks the complete frozen census, then each candidate immediately befor
 current tracked-content digest must still agree afterward. It verifies all selected paths absent
 and records removed tree/stray/file/byte totals, zero residue, unchanged tracked inputs and skips.
 An error stops the operation; it supplies no rollback for artifacts already removed.
+
+### Retained proof workspace families
+
+D342 exposed nine proposed log deletions inside four original0586 book-search captures. The
+independent preservation review refused the frozen plan before any deletion;all nine fingerprints
+remained exact. Generic suffix matching had treated retained proof logs as disposable outputs.
+
+The inspector now refuses every root under target whose first child starts with history-capture-,
+history-generations-,history-proof-,history-review- or book_search_. The census prunes those
+whole families before traversal,including future capture identities. Package stores,numerical
+certificates,Git boundaries and all previous guards retain their existing protections. A similarly
+named folder nested under an ordinary output root stays eligible for normal review.
+
+The watched fresh fixture checks both numerical stores and all five future workspace families,
+plus two ordinary outputs. Four compiled actual omissions independently expose numeric-store
+removal,family predicate removal,direct-inspector guard removal and census-prune removal.
+The intact inspector/census refuses the retained roots and never traverses them;all fixture and
+source bytes remain exact. These controls never call project cleanup apply. The legacy policy
+comparator admits exactly the two family guards and checks the original bodies/constants after
+those explicit adapters,plus the existing two numerical stores. It pins all five family prefixes.
+
+A new retained proof workspace must use one of these families or receive an explicit protected
+root before creation. Every actual cleanup still requires frozen-plan review and preservation
+receipts. A rejected plan remains evidence and cannot authorize a later run;fixes require a fresh
+plan after their commit. The latest completed cleanup date changes only after actual safe removal
+and an immediate independent residue census.
 
 ## Process evidence is required
 
@@ -253,13 +280,13 @@ package switching and byte-exact rollback, without claiming unobserved UI/model/
 Actual captures execute both mode bodies: creation, two exclusive JSON writes, process dispatch
 and removal of isolated controlled artifacts. Independent omissions and unsafe physical audit,
 input and store fixtures calibrate the plans. Original policy bodies/constants remain exact through
-the declared adapters except the two explicitly admitted numerical certificate stores. The original
+the declared adapters,including two numerical stores and additive retained-proof family guards. The original
 fifteen cleanup cases and eleven compiled guard-fault assertions retain their refusal families.
 
-The watched certificate-store control uses fresh owned files and the actual read-only census.
-Both proof stores refuse selection; ordinary .log and prepared scratch cleanup remain eligible.
-Removing exactly the two new protections from the compiled producer makes the same assertion fail,
-then the intact producer passes again. File/source hashes remain unchanged; project apply is never
+The watched retained-store control uses fresh owned files and the actual read-only census.
+Both numerical stores and five workspace families refuse selection;ordinary .log and prepared
+scratch remain eligible. Four actual compiled guard omissions fail independent assertions,then
+the intact producer passes again. File/source hashes remain unchanged; project apply is never
 called. Mirrored local stores exist before Git runs, including a same-volume TMPDIR; platform SDK
 scratch caches are allowed inside that ordinary tree and startup warnings fail the control.
 
@@ -267,8 +294,8 @@ scratch caches are allowed inside that ordinary tree and startup warnings fail t
 python3 -I -B docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py
 ```
 
-The existing cleanup entry suite also runs this control and permits exactly the two declared
-store additions in its original-policy comparator. Every other old body/constant stays constrained.
+The existing cleanup entry suite also runs this control and permits exactly the two declared store additions
+and explicit family guards in its original-policy comparator. Other old bodies/constants stay constrained.
 
 D210's real legacy checker returned success on unavailable lsof, and its actual apply body reached
 a trapped deletion. The canonical checker refuses that evidence; actual blocked/clear process

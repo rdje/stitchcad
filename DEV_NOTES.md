@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — falsify actual arc bodies through the shared original-scope controller
+## _(2026-10-30 UTC)_ — prevent retained proof workspace deletion before daily cleanup
 
-0627 adds a guarded arc entry to the original-scope Cargo controller. Baseline passes;five faults compile and fail original rows:product sign10,discarded turns6,pi scale4,missing radius11,truncation4. Row context distinguishes actual mathematical assertions from compiler/unrelated failures.
-All545 arc input hashes/542 copied files restore;551 output paths planned and timeout2 passes. Original root CLI re-passes baseline/fault5/timeout2 with544 exact input hashes. Production kernel/fixture bytes stay untouched. Primary arc4/full1411B regeneration/strict lint/fmt pass after shared controller reuse.
-Book99/374/1659/2936/glossary0/history786/IDs/map/diff and producer349/34232calls/file plans236/90owners/39groups/15refusals/12reds pass. [Whole0626](docs/history/stitchcad-devnotes-part786.md) retained. n16 full transitive/runtime locality review remains scheduled;no platform or production verdict.
-LIVE native root85/fault5 and arc23/fault5;G1 6/18/G0 unapproved unchanged. Arc native review closes;next director-requested daily cleanup near24h,then forward review. Other families/composition/platform/full coupled acceptance remain owned;original protected proof stores stay intact.
+0628 fixes D342. The actual35-candidate plan proposed9 retained0586 search logs;preservation review stopped before deletion. Generic suffix handling lacked archive/search lifecycle guards. The new first-target-child predicate protects five workspace families in direct inspect and prunes the census before traversal.
+Protected7/ordinary2/actual omission reds4/restored1 pass with bytes exact. Future family names and a nested ordinary lookalike are independent fixtures. Entry contracts retain41/9/1 captures,14 physical refusals,5 omission reds,link/process controls and old policy bodies/constants through exact additive adapters.
+Revised read-only plan70 excludes proofs;old9 fingerprints remain exact,no apply. Extra44 are two owned contract runs' victim logs. Producer349/34304calls/history787/IDs/map/diff/book99/374/1659/2937/glossary0 pass. [Whole0627/ledger](docs/history/stitchcad-devnotes-part787.md) retained.
+D342 fixed;actual daily cleanup waits for this commit and a fresh plan. Last completed cleanup date stays2026-10-29 14:10UTC. Product/native root/arc status,G1 6/18/G0 unapproved unchanged. Preserve all original proof workspaces/current verification before deletion;then resume forward review.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

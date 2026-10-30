@@ -457,6 +457,11 @@ def original_body_controls():
             return self.generic_visit(node)
         def visit_Expr(self, node):
             if isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name):
+                if (self.function == 'inspect' and node.value.func.id == 'require'
+                        and ast.dump(node.value) == ast.dump(ast.parse(
+                            "require(not retained_proof(name), 'protected proof workspace: ' + name)",
+                            mode='eval').body)):
+                    return None
                 if (node.value.func.id == 'require' and node.value.args
                         and isinstance(node.value.args[0], ast.Compare)
                         and isinstance(node.value.args[0].left, ast.Attribute)
@@ -467,6 +472,13 @@ def original_body_controls():
                 if node.value.func.id == 'audit_plan':
                     return (ast.parse('directory.mkdir(parents=True, exist_ok=True)').body[0]
                             if self.function == 'main' else None)
+            return self.generic_visit(node)
+        def visit_If(self, node):
+            if (self.function == 'census' and isinstance(node.test, ast.BoolOp)
+                    and isinstance(node.test.op, ast.Or) and len(node.test.values) == 2
+                    and ast.dump(node.test.values[0]) == ast.dump(
+                        ast.parse('retained_proof(rel)', mode='eval').body)):
+                node.test = node.test.values[1]
             return self.generic_visit(node)
         def visit_Call(self, node):
             node = self.generic_visit(node)
@@ -504,7 +516,11 @@ def original_body_controls():
             assert constants(new)[name] == ast.dump(expected), 'cleanup protected-store delta differs from the two admitted certificates'
         else:
             assert constants(new)[name] == value, ('cleanup original policy constant changed', name)
-    print('cleanup original bodies/constants exact through declared adapters, plus exactly2 certificate stores; rc=0')
+    expected_families = ('history-capture-', 'history-generations-', 'history-proof-',
+                        'history-review-', 'book_search_')
+    assert ast.literal_eval(next(node.value for node in new.body if isinstance(node, ast.Assign)
+        and isinstance(node.targets[0], ast.Name) and node.targets[0].id == 'PROOF_FAMILIES')) == expected_families
+    print('cleanup original bodies/constants exact through declared adapters, plus2 certificates/5 proof-family guards; rc=0')
     certificate = ROOT / 'docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py'
     PROFILE['plan_producer'](ROOT, sources=(certificate, SOURCE, PROFILE_SOURCE, CURRENT, CENSUS))
     subprocess.run(['python3', '-I', '-B', str(certificate)], cwd=ROOT, env=ENVIRONMENT, check=True)
