@@ -329,3 +329,8 @@ complete canonical Derived cycle allowances	annexes/formula-source-proofs.md	cra
 original canonical Derived cycle error context	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies/cycle.rs	FormulaSourceCycleError	G1-SLICE.5e.2.5.derived.3.3.2	4.1
 actual canonical Derived cycle refusal	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies/cycle.rs	FormulaSourceCycleRefusal	G1-SLICE.5e.2.5.derived.3.3.2	4.1
 original canonical Derived cycle witness	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/source_dependencies/cycle.rs	FormulaSourceCycle	G1-SLICE.5e.2.5.derived.3.3.2	4.1
+complete prepared available scalar source graph	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_graph.rs	FormulaScalarSourceGraphPlan	G1-SLICE.5e.2.5.derived.3.3.3.1	4.1
+actual prepared scalar graph source	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_graph.rs	FormulaScalarSourceGraphSource	G1-SLICE.5e.2.5.derived.3.3.3.1	4.1
+complete scalar source graph execution allowances	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_graph.rs	FormulaSourceGraphExecutionLimits	G1-SLICE.5e.2.5.derived.3.3.3.1	4.1
+original scalar source graph preparation error	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_graph.rs	FormulaScalarSourceGraphPlanError	G1-SLICE.5e.2.5.derived.3.3.3.1	4.1
+actual scalar source graph preparation refusal	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_graph.rs	FormulaScalarSourceGraphPlanRefusal	G1-SLICE.5e.2.5.derived.3.3.3.1	4.1

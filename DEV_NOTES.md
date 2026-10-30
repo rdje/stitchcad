@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — certify actual canonical Derived cycles with complete iterative scratch
+## _(2026-10-30 UTC)_ — prepare actual scalar sources while preserving real binding boundaries
 
-0593 admits S/checked2S color/frame scratch before both full reservations. Walk every actual vertex/original edge without recursion. Success borrows the same relation;cycle refusal reuses actual active frames/closing edge,excluding prior prefix. No graph/path copy,value read or execution order. Allocator causes inline.
-Native4/independent9/deps3/doc3(E0277/E0616/E0515)/scoped lint/fmt pass. Native watcher invokes graphlib oracle;original cycle edges/spans/records/direction,untaken/quota behavior verified.512-source cycle walk passes with64KiB requested stack;fixtures outside worker,original relation unchanged. No loader token.
-Book97/330/1629/2862/glossary310/9/158/0 pass;[whole0592 dependencies](docs/history/stitchcad-devnotes-part751.md) retains four exact Git spans/live ids. Scoped cycle component,not whole operation/geometry graph or execution. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Rules applied;promotion declined.
-Next .3.3.3 actual authored source/ordered-statement/binding contracts before runtime;preserve declaration order and existing rounding boundaries. Full integration/currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned. D339 proof protected. Full PNT;commit each slice,push400 after gates.
+0594 admits complete S/N/D/2S+2N+D/S-output populations before scalar capability/source preparation. Reuse existing factories/shared availability catalog and actual owners. Inline nested reservation causes avoid boxing on allocation failure. No values,implicit binder,caller-seeded cache or numeric kernel.
+Native4/old-plan5/doc3(E0277/E0616/E0515)/rounding1+1/scoped lint/fmt pass. Actual S2/N6/D1 reserves17 workspace/2 prospective outputs. All quotas,original pointers/Derived requirements,late unused tangent node/span and empty scopes retained. Prepared plans are not execution results;runtime remains pending.
+Book97/335/1629/2864/glossary310/9/158/0 pass;[whole0593 cycle proof](docs/history/stitchcad-devnotes-part752.md) retains four exact Git spans/live ids. Bare roots stay unbound;actual lets store. Canonical input decision/INDEX+answers promoted. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. D339 proof protected.
+Next .3.3.3.2 actual-node resumption,then lazy source worker .3 and recipe/Design bridge .4. Preserve real declaration order/rounding/read witnesses. Full integration/currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates. No runtime result claimed.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

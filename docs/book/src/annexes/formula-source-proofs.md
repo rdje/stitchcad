@@ -199,6 +199,74 @@ This is focused canonical Derived cycle verification. Full formula language/back
 load/replay,current Design/geometry/operation integration,platform identity and physical acceptance
 remain pending. In particular,a successful cycle guard does not evaluate or round a source.
 
+## Prepare available scalar source execution
+
+FormulaAcyclicSourceDependencies.prepare_scalar_sources(limits) constructs a complete
+FormulaScalarSourceGraphPlan through the existing per-expression admission/source factories.
+It does not evaluate a source,read a context provider or publish a value. Resumable source execution,
+earned runtime caches and actual ordered-recipe/Design integration remain required.
+
+| Public API | Meaning |
+| --- | --- |
+| `FormulaScalarSourceGraphPlan` | Complete available scalar source plans and actual acyclic owner |
+| `FormulaScalarSourceGraphSource` | Actual original source proof and its existing scalar source plan |
+| `FormulaSourceGraphExecutionLimits` | Explicit complete source/node/name/workspace/output allowances |
+| `FormulaScalarSourceGraphPlanError` | Actual graph/source/input context,selected limits and refusal |
+| `FormulaScalarSourceGraphPlanRefusal` | Complete quota,unavailable original node,allocation or factory cause |
+
+For S sources,N actual nodes and D name uses,the prospective runtime workspace allowance is
+2S+2N+D:source control records,graph call frames,task/value buffers and original read slots.
+A separate output quota must fit at most S actual source results. All unused sources,branches and
+repeated names participate. These are logical prospective allowances,not allocated runtime values,
+allocator bytes/capacity,numeric backend scratch,CPU or the full containing resource envelope.
+
+Preparation checks source count,checked complete arithmetic,node/name/output/workspace quotas,
+then scans every original source for scalar implementation availability. Only after that complete
+scan can the outer source vector and per-expression source slots be allocated/prepared. It reuses
+the same exhaustive availability catalog as existing scalar execution;there is no second builtin
+list to drift. Late unused tangent/geometry gaps remain UnavailableBuiltin/UnavailableSource or
+UnavailableRootKind with actual source/node witnesses. They do not become language errors.
+
+Every source then passes its actual existing execution admission and canonical/reserved source
+preparation,using the same original proof and canonical inventory. Sources remain in original
+order. source()/plan() lend real source proofs/plans;graph()/limits()/node_count()/name_use_count()/
+workspace_records()/output_records() retain actual owners and complete selected/measured quotas.
+They expose no caller-seeded value,completed source cache or fake statement/header.
+
+Outer and nested read-slot allocation causes remain inline in Allocation/SourceAllocation and the
+standard source chain. Nested reservation errors are moved out of their original source-plan
+wrapper without allocating another diagnostic box. Original semantic admission/preparation errors
+retain their typed borrowed witnesses in compact boxes. No accepted source-plan prefix escapes.
+
+Four native contracts check an actual acyclic two-source relation,original proof/arena/canonical
+pointers and unchanged Derived requirements. S2/N6/D1 reserves17 workspace records and2 outputs.
+All five quota boundaries,late unused tangent's real call/span and zero empty allowances are
+covered. Existing five scalar-plan contracts and three compiler guards remain green. These checks
+certify preparation;they do not certify graph execution or full backend/platform integration.
+
+## Bare roots and actual let storage
+
+A bare source expression is not a let. Its entity id,canonical consumer kind or graph edge supplies
+no authored binding name/header. The source graph worker must retain the actual unbound scalar
+root and its contribution flags;it must not invoke binding storage at an edge or manufacture a
+let from an id. This applies to this bare initial-expression collection. Actual authored statements
+continue to use their real statement proof and once-only storage.
+
+The existing expression worker returns1 mm/3 as1000/3 micrometres. A source-reference continuation
+multiplying that root by3 must not first round it to333. In contrast,the actual recipe
+let a:length=1 mm/3 stores333,and the later let b:length=a+a stores666. Existing explicit round_to
+and irrational-call rounding remain their authored/normative operations. Domain/width limits
+still apply to every completed expression. Boolean kinds and approximation contributions survive.
+Source lookup or a private runtime cache is not an additional rounding boundary.
+
+Initial namespaces reject caller-seeded prior lets. Actual recipe reads consume only real earlier
+stored outcomes;source traversal cannot reorder forward lets. Canonical Derived keeps its sole
+formula reference and no independently authored/cached result. Supplier values must be earned by
+actual source execution,not callbacks or supplied cache values. The durable canonical-input record
+is docs/decisions/decision_length-declarations-retain-state-and-provenance.md;the graph worker and
+actual recipe bridge remain pending. Focused existing expression and numeric/Boolean binding
+controls confirm the current boundary;they are not a graph execution verdict.
+
 ## Check an actual Derived consumer
 
 ```rust
@@ -229,6 +297,9 @@ assert_eq!(deps.outgoing(formula).unwrap().len(), 0);
 let acyclic = deps.admit_acyclic(FormulaSourceCycleLimits::new(1,2))
     .expect("complete acyclic canonical Derived relation");
 assert!(std::ptr::eq(acyclic.dependencies(), &deps));
+let scalar = acyclic.prepare_scalar_sources(FormulaSourceGraphExecutionLimits::new(
+    1,nodes,0,2+2*nodes,1)).expect("complete available scalar source preparation");
+assert_eq!(scalar.sources().len(), 1); // No source value has been computed.
 assert!(canonical.length(EntityId::from_bits(10)).unwrap().authored_value().is_err());
 # Ok::<(), Box<dyn std::error::Error>>(())
 ```

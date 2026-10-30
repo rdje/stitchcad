@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0593 — admit actual canonical Derived relations as acyclic
+## STITCHCAD-G1-0594 — prepare complete actual scalar sources without invented bindings
 
-- Reserve complete S/2S cycle scratch before iterative traversal;borrow original relation on success or retain actual active path/closing edge on failure. Preserve original edge/span/record witnesses;no graph/path clone,repair,loader token,value or execution order. Semantic book/API map align.
-- Native4/independent graphlib9/deps3/doc3/scoped lint/fmt/book97/330/1629/2862/glossary0 pass.512-source walk on64KiB requested stack;fixtures outside worker,relation exact. Whole0592 retained751/four Git spans/live ids. Next .3.3.3 binding contract;G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped.
+- Admit complete S/N/D/2S+2N+D/S-output populations and all scalar capability before source preparation. Reuse real factories/owners,original scope/node causes and inline allocation failures. Bare roots remain unbound;actual lets store. Durable canonical-input contract and book/API map align.
+- Native4/old-plan5/doc3/rounding1+1/scoped lint/fmt/book97/335/1629/2864/glossary0 pass. Whole0593 retained752/four spans/live ids. Next .3.3.3.2 resumption,then worker/real bridge. Plans are not values. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;full integration/platform remains pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

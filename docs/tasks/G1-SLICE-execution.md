@@ -223,57 +223,80 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0592 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part751.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.2`
   Status: `done`
-  Goal: complete bounded iterative cycle admission of actual canonical Derived dependencies,
-  including all unused vertices/untaken/repeated edges. Explicit full scratch before checking;
-  concrete original edge/span cycle witness on refusal,no accepted prefix or invented loader
-  token/context. Reuse actual edge/offset owner;no Rust recursion,cloned graph,value reads or
-  execution order. Whole geometry/operation graph and actual binding/currentness remain separate.
-  Implementation scope:all S actual source vertices and original edge order;iterative white/gray/
-  black walk with one color and one active frame per source. Admit S/checked2S workspace before
-  either full scratch reservation. Reuse immutable actual edges/offsets;move the real active-frame
-  path into refusal and retain the original closing edge,without copying graph or allocating a
-  separate cycle path. Success lends only an acyclic canonical Derived relation certificate;
-  publish no execution/topological order or whole geometry/operation graph/currentness claim.
-  Focused native curated graphlib oracle/original witness/quota/small-stack/compiler checks.
-  Completion0593: bounded canonical Derived cycle proof/original concrete cycle witness available.
-  - [x] REPRODUCE / ISSUE: complete prospective dependencies0592 may contain actual cyclic/self/
-    unused/untaken relations. Values require a full cycle guard;caller annotations,a processed
-    prefix,recursive traversal or graph repair cannot supply the actual acyclic certificate.
-  - [x] ROOT CAUSE (WHY + WHERE): actual grouped edge/offset/source proof contracts read;rg -n
-    'checked_mul|try_reserve_exact|Color::Gray|Color::Black|closing_edge|frames' cycle.rs → actual
-    complete precharge,iterative walk and moved original path,rc=0. Normative ontology/formula
-    cycle/order boundary retained;this component grants no persisted-loader context or execution.
-  - [x] FIX: complete S/checked2S scratch admission before both full vector reservations. Walk
-    all actual vertices/edges with explicit colors/active frames,no recursion. Success borrows
-    the same relation;failure moves actual frames/original closing edge without another path or
-    graph copy. Prefix before the actual cycle excluded. Original allocator causes retained inline.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_source_cycle_contract
-    -- --nocapture →four pass,rc=0. Actual verdicts agree on nine tracked curated graphlib cases;
-    every returned cycle edge/span/canonical record and closed direction verified. Native target
-    invokes python3 -I -B docs/tasks/artifacts/formula_structure/source_cycle_reference.py
-    →nine cases pass,rc=0;independent producer reads no Rust/native result. Untaken cycle and
-    complete source/scratch quota precedence pass. A512-source cycle walk passes on64KiB requested
-    stack;fixtures built outside worker,original endpoints/spans exact. No execution order/value.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_source_dependencies_contract
-    -- --nocapture →three pass,rc=0;original grouped/classified relation unchanged. cargo test
-    -p sc-core --doc recipe::source_dependencies::cycle -- --nocapture →three pass,actual
-    E0277/E0616/E0515,rc=0. Scoped strict lib/new-target Clippy/changed rustfmt/diff pass,rc=0.
-    Positive book97/330/1629/2862/glossary310/9/158/0 and751 four exact Git spans/all live ids/order
-    pass,rc=0. No broad language/backend/resource/platform/physical campaign or full operation/
-    geometry graph,current Design/host namespace,real binding or loader verification claimed.
-  - [x] LOCKSTEP: semantic cycle API/quota/path/example/oracle/stack/boundary text and five API
-    rows,task/index/MEM/DEV/CHANGE/LIVE align. Next .3.3.3 real authored source/ordered-statement/
-    binding contract before runtime;no added rounding point or forward-let reordering. Full
-    integration/currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned.
-    G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA-scoped;D339 historical proof untouched.
-    promotion: declined (existing original dependency witnesses,complete scratch admission,iterative flat traversal and borrowed-proof rules applied;no new language or authority policy).
+  Goal:0593 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part752.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3`
+  Status: `in_progress`
+  Goal: integrate actual bare initial-source evaluation with real ordered recipe bindings. Bare
+  expression sources are not lets;their returned roots stay unbound with original contribution
+  flags. Only actual authored lets use once-only storage and actual earlier bindings. No new
+  header/name/rounding point,forward-let reordering or caller seeded source value/cache.
+  Recovery: formula §4.2's two rounding boundaries,actual expression result.value(),evaluated
+  bind/store_binding and actual recipe worker RHS→store→publish interfaces read. Initial namespace
+  rejects prior-let seeds. Canonical Derived has sole formula id/no authored stored result. Real
+  recipe prior-let reads consume actual returned stored bindings;preserve that separate contract.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.1`
+  Status: `done`
+  Goal: record the existing unbound bare-source/actual-let storage boundary and prepare complete
+  available scalar source plans from the real acyclic relation. Explicit S/N/D/prospective
+  2S+2N+D logical workspace/S-output admission before allocation/capability/source preparation;
+  complete capability scan before any source vector. Reuse actual per-expression admission/source
+  factories and exhaustive scalar availability catalog;every branch/unused source participates.
+  Original source/proof/canonical/node/limit causes retained,not language errors for unavailable
+  implementation. No value/provider read,execution result,implicit binder or new numeric kernel.
+  Workspace covers source control records,graph call frames,task/value buffers and D read slots;
+  output allowance separately bounds at most S actual source results. Allocator bytes,backend/
+  full resource envelope remain separate. Read all affected factories/bind/read interfaces first.
+  Native focused plan/rounding/compiler/lint/book checks;then commit before resumable worker units.
+  Completion0594: complete available scalar source plans and bare-expression storage boundary.
+  - [x] REPRODUCE / ISSUE: actual acyclic source relation needs complete scalar implementation/
+    source preparation before resumable values. A bare expression id/kind/edge cannot supply an
+    actual let header or justify storage-rounding. Caller values/prefixes cannot seed execution.
+  - [x] ROOT CAUSE (WHY + WHERE): formula §4.1/§4.2,evaluated bind/store,actual expression value(),
+    recipe RHS→store→publish and actual prior-let reads inspected. rg -n 'prepare_scalar_sources|
+    checked_mul|scalar_builtin_available|into_allocation_error' source_graph.rs/plan.rs → shared
+    availability and complete precharge/inline allocator transfer,rc=0. Private machine/source
+    interfaces read;source lookup is not a new rounding boundary. Real runtime remains pending.
+  - [x] FIX: admit complete S/N/D/prospective2S+2N+D/S-output populations,then all scalar
+    capability before any plan vector/source preparation. Reuse actual per-expression factories/
+    original owners. Keep source allocation causes inline without boxing on allocation failure;
+    semantic causes remain typed. Record existing bare-root/real-let boundary in canonical input
+    decision+book. No value/provider read,implicit binder,computed result or caller-seeded cache.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_source_graph_plan_contract
+    -- --nocapture →four pass,rc=0. Actual acyclic S2/N6/D1 plans reserve17 logical workspace and2
+    prospective outputs;original source/proof/canonical pointers and Derived requirements remain.
+    All five quota boundaries,late unused tangent's actual node/span and zero empty scope pass.
+    Unavailable implementation remains typed scope refusal,not an invented language diagnostic.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_execution_plan_contract
+    -- --nocapture →five pass,rc=0. cargo test -p sc-core --doc recipe::execution::source_graph
+    -- --nocapture →three pass,actual E0277/E0616/E0515,rc=0. Focused existing expression operator
+    and numeric/Boolean binding controls →one/one pass,rc=0;1000/3 unbound and actual stored values
+    remain distinct. Scoped strict lib/new-target Clippy/changed rustfmt/diff pass,rc=0. Positive
+    book97/335/1629/2864/glossary310/9/158/0 and752 four exact Git spans/all prior live ids/order
+    pass,rc=0. No broad runtime/whole-graph/backend/resource/platform campaign or new numeric kernel.
+  - [x] LOCKSTEP: bare-source contract/decision INDEX+answers,scalar plan API/example/limits/
+    causes and five API rows,task/index/MEM/DEV/CHANGE/LIVE align. Next .3.3.3.2 private actual-node
+    resumption,then actual lazy source worker .3 and recipe/Design bridge .4. Full integration/
+    currentness/resources/platform/physical and D334/D156/D223/PLANNING.5 owned. G1 6/18/G0
+    unapproved;full/hosted79bd6f6a SHA-scoped;D339 proof untouched. Prepared plans are not values.
+    promotion: promoted (canonical input decision gains bare-source/real-let storage section and answers;existing two-rounding-boundary rule applied,not a new source-edge round).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.2`
   Status: `pending`
-  Goal: reconcile actual source owners and whole-recipe proofs with normative §4.1/§4.2 before
-  execution:the formula graph induced by ordered statements,actual prior lets and once-only
-  binding rounding. Source dependency admission chooses no execution order and grants no fictitious
-  let/header. Recover or define actual authored binding joins without reordering forward lets or
-  adding rounding points. Keep full integration/load/replay/resource/platform/physical owners.
+  Goal: private resumable actual-node machine for a real unresolved Derived read. Preserve pending
+  tasks/actual operand values and original read order across supplier evaluation;no restart or
+  fabricated read/error/value. Existing expression/recipe execution must remain exact. Runtime
+  graph source cache can be earned only by actual source execution,never caller callbacks/seeds.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.3`
+  Status: `pending`
+  Goal: bounded iterative lazy available-scalar source graph worker over actual plans/acyclic proof,
+  complete scratch/output reservation before values. Execute actual suppliers only when demanded,
+  cache only actual unbound returned roots and preserve source/state/contribution/read/failure
+  witnesses. No source-edge binding round. Independent actual result checks before scoped closure.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4`
+  Status: `pending`
+  Goal: integrate earned source roots into actual canonical reads/current recipe execution while
+  retaining true let RHS→once storage→prior-let visibility,atomic whole-result failure and original
+  source/provenance/context. Complete actual Design source ownership/namespace/resource/currentness
+  joins and source-mode acceptance remain required;no metadata/caller value stands in for execution.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

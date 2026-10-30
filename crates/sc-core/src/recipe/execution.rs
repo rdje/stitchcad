@@ -21,6 +21,13 @@ mod worker;
 pub use worker::FormulaExecutedScalarExpression;
 mod dispatch;
 
+mod source_graph;
+pub use source_graph::{
+    FormulaScalarSourceGraphPlan, FormulaScalarSourceGraphPlanError,
+    FormulaScalarSourceGraphPlanRefusal, FormulaScalarSourceGraphSource,
+    FormulaSourceGraphExecutionLimits,
+};
+
 mod recipe;
 pub use recipe::{
     FormulaRecipeExecutionAdmission, FormulaRecipeExecutionAdmissionError,

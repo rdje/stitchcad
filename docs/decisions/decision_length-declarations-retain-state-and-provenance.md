@@ -141,3 +141,34 @@ owns application domains/stage/policy; signed Ratio metadata alone proves no usa
 Names/source/composition/treatment are authored claims, not sourced physical truth. Piece assignment,
 dual-grainline/layout and global Design registries remain separate checks. Shared property views borrow
 actual current canonical records; inspection and deferred provenance grant no release authority.
+
+## Bare source expressions and actual storage — G1-SLICE.5e.2.5.derived.3.3.3.1
+
+A bare FormulaExpressionDocument/FormulaSource is an expression,not an authored let. Its stable
+entity id,canonical consumer kind or dependency edge does not supply a binding name/header.
+The source graph's future scalar worker must return the actual unbound FormulaEvaluatedScalar
+with its original approximation contributions. It must not call bind/store_binding at a source
+edge or invent a let from an id. This applies to the bare initial-expression source collection;
+it does not reinterpret an actual authored statement or certify full Design/runtime integration.
+
+This follows formula §4.2,which gives implicit rounding to irrational calls and actual numeric
+let storage. Existing expression result.value() exposes an exact unbound root. The actual recipe
+worker evaluates the real RHS,then calls store_binding once before publishing that real prior let.
+Later recipe reads consume its returned stored binding. Existing explicit round_to remains an
+authored operation;source lookup/caching is not another rounding boundary. Domain/width checks
+still apply to each actual completed expression. Boolean kinds and all contributions survive.
+
+For example,1 mm/3 has the existing unbound root1000/3 micrometres. A source-reference arithmetic
+continuation multiplying that root by3 must not first round it to333. In contrast,the actual recipe
+let a:length=1 mm/3 stores333 micrometres;its later let b:length=a+a stores666,as already implemented.
+Canonical Derived remains its sole formula reference with no independently authored/cached result.
+No prior let can seed the existing initial namespace,and no source traversal may reorder real
+recipe statements. Supplier values must be earned by actual source execution,not caller callbacks.
+
+Recovery evidence: formula-language §4.1/§4.2,evaluated.rs bind/store_binding,worker.rs value(),
+recipe_worker.rs actual RHS→storage→publication and recipe_read.rs actual completed-prefix reads.
+Focused existing native expression-operator and numeric/Boolean binding controls pass before
+implementation of the graph worker. These controls establish the existing boundary,not a graph
+execution result. Runtime source resumption,earned caches and actual recipe/Design joins stay owned.
+
+answers: "do bare Derived source expressions round at references?" · "can a formula id create a let binding?" · "how do source roots differ from actual stored recipe lets?"

@@ -118,6 +118,17 @@ impl<'a> FormulaScalarExecutionPlanError<'a> {
             _ => None,
         }
     }
+    // Graph preparation preserves a nested reservation failure inline, without allocating a box
+    // while already handling allocation failure. Other original semantic errors remain intact.
+    pub(super) fn into_allocation_error(self) -> Result<TryReserveError, Self> {
+        match self {
+            Self {
+                issue: PlanIssue::Allocation { error, .. },
+                ..
+            } => Ok(error),
+            error => Err(error),
+        }
+    }
 }
 impl fmt::Display for FormulaScalarExecutionPlanError<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {

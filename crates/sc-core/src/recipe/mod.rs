@@ -196,7 +196,9 @@ pub use execution::{
     FormulaScalarRecipeFailure, FormulaScalarRecipeOutcome, FormulaScalarRecipePlan,
     FormulaScalarRecipePlanError, FormulaScalarRecipePlanRefusal, FormulaScalarRecipeRead,
     FormulaScalarRecipeReadKind, FormulaScalarRecipeSource, FormulaScalarRecipeSourceKind,
-    FormulaScalarRecipeWorkspace,
+    FormulaScalarRecipeWorkspace, FormulaScalarSourceGraphPlan, FormulaScalarSourceGraphPlanError,
+    FormulaScalarSourceGraphPlanRefusal, FormulaScalarSourceGraphSource,
+    FormulaSourceGraphExecutionLimits,
 };
 
 mod checked_statement;
