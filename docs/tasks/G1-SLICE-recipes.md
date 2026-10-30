@@ -680,25 +680,23 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0646 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part806.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.book-fixture`
   Status: `done`
-  - [x] ISSUE:D349 copied publication loses search prerequisites;D351 stale AST/count control.
-  - [x] ROOT CAUSE (WHY + WHERE):projected AST diff against retained Git sources proves
-    0586 search additions absent from older control;HTML-only planner/copier omit index,rc=0.
-  - [x] FIX:plan/copy search index;check valid baseline before every mutation;retain exact
-    approved search additions and original behavior through narrowly matched AST adapters.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py
-    →40 mutation branches/13 omission reds/12 physical refusals/pure APIs/continuity pass,rc=0.
-  - [x] NO REGRESSION:same command --real →original45 plus5 search controls pass,rc=0;
-    three actual search/copy/baseline AST changes rejected;all original source bytes exact.
-    Book101/374/1670/2980/glossary0/history806 four spans/IDs/map/diff pass,rc=0.
-  - [x] LOCKSTEP:book/live/notes sync;D350/full probes still pending;promotion declined(existing contract).
-  Commit:STITCHCAD-G1-0647;Verification:focused publication scope.
+  Goal:0647 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part807.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.recipe-selector`
-  Status: `pending`
-  D350 P1:producer correctly rechecks24 inputs;independent control expects23 and omits newly
-  linked formula-recipe-execution.md. Update exact population;retain source/alias refusals.
+  Status: `done`
+  - [x] ISSUE:D350 independent child-plan control expects23;real producer checks24.
+  - [x] ROOT CAUSE (WHY + WHERE):rg formula-recipe-execution docs/book/src/spec/formula-language.md
+    →three direct links;consumer_inputs includes linked execution chapter missing from CHILD_INPUTS,rc=0.
+  - [x] FIX:add exact24th expected file;retain strict equality and every original guard.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py
+    →six dispatches/pure196/13 actual guard reds/14 physical refusals pass,rc=0.
+  - [x] NO REGRESSION:same command →original196 body/11 fault AST exact;actual omission of
+    only linked execution target rejected;source bytes/caller selectors/stores exact,rc=0.
+    Positive book101/374/1670/2980/glossary0/history807 four spans/IDs/map/diff pass,rc=0.
+  - [x] LOCKSTEP:book/live/notes sync;full probes/coupled closure pending;promotion declined(existing selector contract).
+  Commit:STITCHCAD-G1-0648;Verification:focused selector scope.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
   Status: `in_progress`
-  Goal:finish Wasm/doctrine/probes/book after D348;Rust gate passed,then scoped closure.
+  Goal:finish environment/full probes after D349–D351 repairs;Rust/Wasm/doctrine pass,then scoped closure.
   Book sync:clarify trig-certificates inverse230 observed0640 pair/full matrix during closure.
 
 ### Execution, uncertainty and replay

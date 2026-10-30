@@ -156,12 +156,13 @@ Explicit source/name/canonical getters deliberately expose authored content to t
 The reference copied-book consumer rechecks the whole book/loaders and then its effective
 selectors before shell delegation. The selector plan contains the four selected files,every
 parts file and direct local links from the contract,grammar and examples. Its current default
-population is23,including docs/book/src/annexes/formula-rationals.md. The capture oracle retains
+population is24,including docs/book/src/annexes/formula-rationals.md and formula-recipe-execution.md.
+The latter is a direct dependency of the language contract. The capture oracle retains
 strict set equality;the public shell's actual L7 resolver and producer independently agree on
-that population. Removing only the rational target from the actual final plan is refused.
-All22 earlier oracle paths and every other capture/guard/classifier statement stay exact.
+that population. Removing only the linked execution chapter from the actual final plan is refused.
+All23 earlier oracle paths and the original capture/guard/classifier statements stay exact.
 
-The guard calibration passes six intercepted dispatches,pure196,twelve guard negatives,
+The guard calibration passes six intercepted dispatches,pure196,thirteen guard negatives,
 fourteen physical refusals and owned no-effect admission controls. Its authored child metrics
 remain separate from the real reference consumer:the actual21-statement replay and25-statement
 measurement ceiling pass,and11 original reference faults plus2 consumer/1 measurement faults

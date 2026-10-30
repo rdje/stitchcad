@@ -1,19 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.recipe-selector:D350 exact24-file control,then full probes.
-- Latest unit STITCHCAD-G1-0647;derive HEAD/ahead from Git. D349/D351 fixed with focused checks.
-- Publication copies/plans search index;each mutation starts from a valid copied baseline.
-- Actual publication50=original45+search5 pass;fixture40 branches/13 omission reds/12 physical
-  refusals/pure APIs/exact approved AST/three AST reds/continuity pass. Original sources exact.
-- D350 CHILD_INPUTS lacks annexes/formula-recipe-execution.md;producer correctly includes it
-  through spec/formula-language.md. Preserve exact set equality and all source/alias refusals.
+- Next G1-SLICE.5d.4.acceptance.gates.run:complete environment suite,then full probes and scoped closure.
+- Latest unit STITCHCAD-G1-0648;derive HEAD/ahead from Git. D349/D350/D351 focused fixes pass.
+- Recipe expected24-file child population retains strict equality;actual omission of linked
+  formula-recipe-execution.md is rejected. Six dispatches/pure196/13 guard reds/14 physical
+  refusals pass;original196 body/11 fault AST/source bytes/caller selectors/stores exact.
+- Publication50=original45+search5 pass;fixture40 branches/13 omission reds/12 physical
+  refusals/pure APIs/exact approved AST/three AST reds/continuity pass. Whole0647 in part807.
 - Full0646 Rust1635/native+372/doc/fmt/Clippy,Wasm3/doctrine13 pass;full probes29 attempted/rc2.
 - Fresh numerical9 baselines/48 compiled faults and native/Chrome31/405rows pass;bad expectation
   native101/browser trap. Original550 sources/6614 legacy files/9 old reports exact.
 - Baseline target/irrational_platform_certificate/coupled-0646-baseline-20261030T202107306619Z-42055/receipt.json SHA f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b.
-- Whole0646 in docs/history/stitchcad-devnotes-part806.md;no complete full-probe/coupled verdict.
-- Positive book101/374/1670/2980/glossary0/history806/IDs/map/diff pass. G1 6/18/G0 unapproved.
-- No job pending;cleanup2026-10-30 14:18 unchanged. Continue full PNT;push400 only.
+- Positive book101/374/1670/2980/glossary0/history807/IDs/map/diff pass. No complete full-probe verdict.
+- No job pending;G1 6/18/G0 unapproved;cleanup2026-10-30 14:18 unchanged. Full PNT/push400 only.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

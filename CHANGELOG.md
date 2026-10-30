@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0647 — preserve complete copied publication fixtures
+## STITCHCAD-G1-0648 — retain all linked recipe child inputs
 
-- Fix D349 search-index planning/copying and calibrate every valid mutation baseline. Fix D351 exact historical search AST/count adapters;all original behavior/refusal codes remain checked.
-- Actual publication50=original45+search5 and fixture40 branches/13 omission reds/12 physical refusals/three AST reds/pure APIs/continuity pass. Book101/374/1670/2980/glossary0/history806/IDs/map/diff pass. D350/full probes remain next;G1 6/18/G0 unapproved unchanged.
+- Fix D350's independent selector population from23 to24 by retaining the directly linked execution chapter. Strict set equality and all earlier guards remain;actual omission of only that target fails.
+- Six dispatches/pure196/13 actual guard reds/14 physical refusals/original196 body and11 fault AST pass. Book101/374/1670/2980/glossary0/history807/IDs/map/diff pass. D349–D351 focused repairs done;full probes/coupled closure next. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

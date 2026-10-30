@@ -56,6 +56,7 @@ CHILD_INPUTS = {BOOK / name for name in (
     'annexes/formula-checked-recipes.md',
     'spec/ontology.md',
     'annexes/formula-rationals.md',
+    'annexes/formula-recipe-execution.md',
 )}
 LABELS = ('late_kind', 'late_name', 'per_recipe_measurement')
 FILES = {WORK / label / 'src' / path.relative_to(BOOK) for label in LABELS for path in BOOK_FILES} | {WORK / (label + '.log') for label in LABELS} | {WORK / 'real.log'}
@@ -429,6 +430,9 @@ def fault_controls():
         ('initial plan', "fixture_plan(('late_kind', 'late_name', 'per_recipe_measurement'), real=True, activate=False)", 'None', 'recipe initial full plan omitted'),
         ('pure plan', "PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)", 'None', 'recipe pure reference plan incomplete'),
         ('child selectors', '        consumer_inputs(environment)\n        result = subprocess.run', '        result = subprocess.run', 'recipe child selector recheck omitted'),
+        ('linked execution target', 'sources = tuple(dict.fromkeys((*selected, *sorted(parts.glob(\'*.md\')), *references)))',
+         'sources = tuple(dict.fromkeys((*selected, *sorted(parts.glob(\'*.md\')), *(path for path in references if path.name != "formula-recipe-execution.md"))))',
+         'recipe child selector recheck omitted'),
         ('bootstrap', "PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)", 'None', 'recipe bootstrap plan omitted'),
         ('producing sources', 'plan = dict(directories=directories, output_files=outputs, sources=sources)',
          'plan = dict(directories=directories, output_files=outputs, sources=sources[:-1])', 'recipe producing source plan incomplete'),
@@ -471,7 +475,7 @@ def main():
     capture(DATA, selectors=selectors)
     fault_controls()
     physical_controls()
-    print('recipe fixture controls: six actual dispatches / borrowed pure196 / twelve actual guard reds / fourteen physical refusals / pure unused sidebar / actual guard-disable admission; intercepted child metrics are authored, numerical proof separate')
+    print('recipe fixture controls: six actual dispatches / borrowed pure196 / thirteen actual guard reds / fourteen physical refusals / pure unused sidebar / actual guard-disable admission; intercepted child metrics are authored, numerical proof separate')
 
 if __name__ == '__main__':
     main()

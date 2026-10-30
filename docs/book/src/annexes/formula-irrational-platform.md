@@ -230,8 +230,9 @@ missing-source-link case hit SEARCH_INDEX first. The repaired fixture plans/copi
 and verifies each valid copied baseline before mutation. D351's historical AST/count control
 now admits the exact approved search additions;all earlier behavior remains checked. D350 is a
 stale independent selector expectation:the real recipe producer correctly checks24 inputs,the
-old control expects23 and omits the newly linked formula-recipe-execution.md chapter. The exact
-refusal families and source-plan equality checks remain requirements of their repairs.
+old control expected23 and omitted the newly linked formula-recipe-execution.md chapter. Its
+repaired population retains exact set equality;an actual producer fault omitting only that
+chapter is rejected. The publication refusal families and all source/alias guards remain exact.
 
 The full transcript,individual numerical captures and successful gate logs are linked by:
 
@@ -240,5 +241,5 @@ target/irrational_platform_certificate/coupled-0646-baseline-20261030T2021073066
 sha256:f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b
 ```
 
-Scoped coupled acceptance remains open until the selector repair and full verification complete.
+Scoped coupled acceptance remains open until full verification completes after these repairs.
 No complete full-probe,hosted CI,application or production-release verdict is claimed.
