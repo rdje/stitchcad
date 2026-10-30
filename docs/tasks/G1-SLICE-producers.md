@@ -901,3 +901,13 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   argument-vector dispatch; test platforms rather than inferring parity from Rust alone.
   Source: https://github.com/matklad/cargo-xtask/blob/master/README.md.
   No implementation change during discussion; split migration leaves before implementation.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16`
+  Status: `pending`
+  Goal:complete native root-body probe runtime/locality review after coupled root implementation;
+  retain scoped feature evidence without claiming complete transitive compiler/build locality.
+  Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py
+  Schedule:after .5d.4.roots.faults,before producer/locality signoff. Feature probe owns explicit
+  original inputs,complete variant files/logs/binaries and repository-local build/scratch stores.
+  Acceptance:public-entry/alias/source/output/child/failure review,actual path refusals and
+  omission guards,focused unchanged-source consumer;no global cache or foreign repository write.

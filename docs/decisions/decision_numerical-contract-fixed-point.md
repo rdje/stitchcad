@@ -118,7 +118,7 @@ Implementation0255: checked_sqrt now follows this plan for area/ratio; focused n
 15 independent fixture rows. Hypot and source-bearing evaluator provenance remain later owners.
 
 Implementation0256: checked_hypot reuses the exact root kernel on its private squared sum; focused
-native4/0 covered original25 root rows. Sourced calls are available;coupled0624 adds85 rows/six native tests;body faults/platform remain .5d.4.
+native4/0 covered original25 root rows. Sourced calls are available;coupled0624 adds85 rows/six native tests;actual body faults5 pass0625;platform remains .5d.4.
 
 ## Bounded arc_length rounding certificate — 2026-10-25
 

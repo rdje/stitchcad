@@ -7,7 +7,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 
 | Family | Available implementation | Coupled review boundary |
 | --- | --- | --- |
-| sqrt/hypot | Exact integer roots and sourced calls | Admitted bounds and85 independent rows below;actual body faults/platform remain |
+| sqrt/hypot | Exact integer roots and sourced calls | Native85 rows/five actual body faults pass below;shared platform review remains |
 | arc_length | Signed/full-turn fixed-pi certified rounding | Coupled source/error/fault review remains .5d.4.arc |
 | sin/cos | Exact folding and complete forward threshold certificate | Coupled actual-body/source/platform review remains .5d.4.forward |
 | atan/atan2 | Principal branches and complete inverse threshold certificate | Coupled actual-body/source/platform review remains .5d.4.inverse |
@@ -61,5 +61,47 @@ e4b701eb22add56a126b980cced076b4b694223e71bebcdfa650f17d2145765d.
 The producer reads no Rust,native result or frozen expected fixture. Its explicit assertions
 verify the513/512-bit witness and the original128-bit components before emitting rows.
 These finite checks support the existing exact all-input argument;they are not exhaustive input
-coverage. Actual implementation-body faults are the next root review owner .5d.4.roots.faults.
+coverage. Actual implementation-body faults are recorded below.
 Mixed-call chains,cross-platform execution and complete coupled closure remain separate tasks.
+
+## Actual native root body faults
+
+The0625 root_body_faults.py run prepared an exact542-file project-local workspace snapshot and
+ran the actual sourced85-row Rust test through ordinary Cargo. The copy preserves the original
+private crate scope. The unchanged baseline passes. Each of five original-body faults compiles
+successfully,executes the watched test and fails an assertion containing an original independent
+fixture row. Compiler failure cannot count as a rejected mathematical fault.
+
+| Actual copied-body fault | Independent witness that rejects it |
+| --- | --- |
+| Half ties round toward zero | Exact9/4 Area half-square requires2 micrometres |
+| Ratio square root loses its1M scale | Fractional Ratio root requires the original ppm quantum |
+| Hypot loses its right coordinate | Signed3/4 Length inputs require5 micrometres |
+| Hypot loses the right denominator | Original full-width fractional lengths preserve both denominators |
+| Root rounds after an early quotient | Exact9/4 cannot be replaced by its integer radicand quotient |
+
+That run verified all544 original probe/workspace inputs byte-exact. A finally block restores the copied
+root body after the variants,including variant refusal. On success every copied input hash equals
+its original,and the snapshot census contains only planned files. The551 output
+paths include the complete snapshot,logs,report and owned timeout controls. Generated files and
+compiler/test scratch stay under target through the existing local producer profile. Cargo's
+reported executable identity and each variant's source/binary hashes are retained in
+target/root_body_faults/0625-workspace/report.json.
+
+Actual parent/child timeout controls also pass. A single-parent kill leaves its child able to
+write the planned marker;stopping the probe's owned process group prevents that write. Native
+compiler/test timeout or raised interruption stops owned descendants before root-body restoration.
+This repairs the probe's own cleanup boundary;it grants no transitive compiler/locality certificate.
+That complete producer review remains G1-SLICE.5b.4c.h2.b.p.o.f.n16.
+
+After normal native checks have populated the project-local dependency store,inspect or execute:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
+```
+
+The formula-structure probe suite also runs this check. These are native POSIX process-group
+controls and finite fault witnesses. They close the scoped native root review;actual cross-platform
+numerical execution remains .5d.4.platform. Arc,forward/inverse,Tan and mixed-chain review remain
+owned before the complete coupled irrational gate can close.

@@ -581,53 +581,53 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.5d.4.roots`
-  Status: `in_progress`
+  Status: `done`
   Goal:review complete admitted root-family rounding/domain/provenance bounds with independent
   exact midpoint/full-width cases and actual implementation-body fault controls. No platform claim.
+  Native closure0625:85 independent rows/real sourced storage and five actual compiled faults
+  pass. Shared cross-platform execution remains .5d.4.platform;whole coupled parent stays open.
 - ID: `G1-SLICE.5d.4.roots.values`
   Status: `done`
-  Goal:independent exact root midpoint/full-width/domain/provenance review;preserve original
-  fixture scope and typed refusals without promoting finite cases to complete platform proof.
-  - [x] REPRODUCE / ISSUE:original25 root rows preceded complete source wrappers and newer
-    full-width integration. Coupled review needed larger exact midpoint/domain/storage and real
-    upstream-call controls. formula-rationals also incorrectly called implemented root provenance
-    and higher Tan policy integration pending,misleading book-only availability review.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test formula_root_value_contract -- --nocapture
-    →six pass/85 rows/3 original mathematical refusals/5 later storage refusals,rc=0. Native roots
-    use exact private bisection/squared midpoints;independent math.isqrt/Fraction values exercise
-    the admitted integer boundary. Real sourced wrappers must retain every successful upstream/
-    root contribution through storage. Book status had not followed implemented call integration.
-  - [x] FIX:preserve all1602 bytes/original25-row prefix and append60 bounded cases:51 sqrt/
-    34 hypot rows total. Independent input assertions retain128-bit components and prove the raw
-    513/512-bit private hypot witness. Two new native watchers cover actual cos/sin zero arithmetic,
-    original roots/domain failures,successful-call flags,real binding/read and full regeneration.
-    Correct current root/Tan book availability;new bounded coupled-review chapter owns proof limits.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_root_value_contract -- --nocapture
-    →all85 independent numeric and real sourced rows pass,with3 mathematical/5 later storage
-    refusals;original kind-priority tests pass and all6476B regenerate,rc=0. Exact half squares and
-    two-sided neighbors include odd63-bit m with Ratio(m²+delta)/256 beyond signed storage,full128
-    Ratio inputs,four signs of raw513-bit hypot,maximum Length/tiny operand and exact final limits.
-    Root/Cos/Sin contributions remain through perfect/zero results and storage;T1 refuses them.
-    Fixture sha256:e4b701eb22add56a126b980cced076b4b694223e71bebcdfa650f17d2145765d.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_root_value_contract -- --nocapture →six pass,
-    including original25 cases and original wrong-kind/negative/final-domain refusals,rc=0.
-    cargo clippy -p sc-core --test formula_root_value_contract -- -D warnings and selected
-    rustfmt →pass,rc=0. Explicit git-show prefix comparison →all1602 original bytes exact,rc=0.
-    Producer census347/34067 AST calls/73 heredocs/2892 embedded,history783 four exact Git spans,
-    prior task IDs/order/uniqueness retained plus10 scoped children,map/diff pass,rc=0. Book99/
-    374/1658/2932 and glossary310/9/158/0 pass,rc=0. First publication caught missing topic-index
-    coverage for new chapter;added the actual route and used registered in-book contract links.
-  - [x] LOCKSTEP:book/new chapter/SUMMARY/topic index/status/canonical numerical decision/
-    task/index/MEM/DEV/CHANGE/LIVE align. Whole tangent policy integration0623 retained783;
-    .5d.4 remains in progress with explicit family/fault/composition/platform/acceptance children.
-    Next actual isolated root-body fault controls;no exhaustive input/platform/full resource claim.
-    LIVE root85 evidence;G1 6/18/G0 unapproved unchanged;latest full/hosted79bd6f6a SHA-scoped.
-    promotion: declined (the existing exact root-family decision already supplies the all-admitted argument;this adds independent boundary/provenance witnesses and repairs current documentation).
-  Commit:STITCHCAD-G1-0624;Verification:root6/85 rows/original25 prefix/exact6476B/scoped strict lint/fmt.
+  Goal:0624 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part784.md).
 - ID: `G1-SLICE.5d.4.roots.faults`
-  Status: `pending`
-  Goal:falsify actual native root-body guards/rounding/scale/squared sum in isolated project-local
-  probes,without altering original production sources. Own complete temporary/build plans first.
+  Status: `done`
+  Goal:falsify actual native root-body rounding/scale/squared-sum behavior in an isolated local
+  workspace,with complete source/output plans and original production bytes unchanged.
+  - [x] REPRODUCE / ISSUE:root85 values/provenance passed0624,but actual compiled root-body
+    faults had no coupled witness. The probe's initial single-parent timeout cleanup could leave
+    descendants writing after parent death and before copied-body restoration. Both are owned here.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
+    →one unchanged native baseline/five compiled fault assertions/two actual timeout outcomes
+    pass,rc=0. Original private constructor visibility prevented a standalone body build;that
+    compiler refusal counted no fault. Exact workspace copying preserves the original private
+    crate scope. An owned parent/child marker proves single-parent kill leaves its child running.
+  - [x] FIX:guard exact542-file snapshot/551 output paths before creation;ordinary locked/offline
+    Cargo compiles actual original/copied bodies and the real sourced85-row watcher. Unique actual
+    source anchors apply five isolated faults;successful compilation and an assertion containing
+    an independent fixture row are mandatory. The copied root body restores in finally. All544
+    original input hashes and complete snapshot hashes stay exact. Timeout/raised interruption
+    stops the owned process group and collects it before restoration;actual child controls calibrate.
+  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
+    →baseline compile/run0;five successful builds/run101 with independent rows pass,rc=0:
+    tie-toward-zero4/10,Ratio scale9,missing hypot coordinate17,missing denominator24,early quotient
+    rounding4/10. Every failure is an actual watched assertion,not a compile failure or fake
+    result. Parent-only child writes;owned-group child write remains absent. Original inputs and
+    snapshot restored byte-exact;relative report/log/artifact identities retain full source hashes.
+  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test formula_root_value_contract
+    →six primary-workspace tests/all85 rows/full6476B regeneration pass,rc=0. Guarded plan-only
+    entry reports6 variants/542 snapshot files/551 complete outputs without writes/compiler,rc=0.
+    Fresh report recheck →544 current input hashes/five compiled independent-row failures/two
+    timeout controls exact,rc=0. Producer348/34214 calls/73 heredocs/2892 embedded,file plans235/
+    90owners/39groups/15 actual data refusals/12 body reds,history784 four exact Git spans,prior
+    IDs/order/uniqueness plus one native producer owner,map/diff pass,rc=0. Book99/374/1658/2933
+    and glossary310/9/158/0 pass,rc=0. No full CI/cross-platform or transitive locality verdict.
+  - [x] LOCKSTEP:book/status/numerical decision/task/index/MEM/DEV/CHANGE/LIVE align;whole0624
+    retained784. Scoped native root review closes;next .5d.4.arc,then other families/composition/
+    platform/final coupled acceptance. Native producer n16 owns complete later runtime/locality
+    review before locality signoff;scoped feature controls do not grant it. LIVE root85/fault5;
+    G1 6/18/G0 unapproved unchanged. Original certificate/archive/search/cleanup proofs protected.
+    promotion: declined (existing exact-root and no-background-job contracts already require these actual body and owned-process controls;no new mathematical or platform policy is introduced).
+  Commit:STITCHCAD-G1-0625;Verification:baseline1/actual compiled faults5/timeout2/original root6/hash plans.
 - ID: `G1-SLICE.5d.4.arc`
   Status: `pending`
   Goal:coupled arc_length all-admitted pi/rounding/domain/provenance proof and actual fault review;

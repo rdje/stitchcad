@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.roots.faults:actual native root-body fault controls in isolated local probes.
-  Read roots.rs,numeric checked_sqrt/hypot,evaluated calls,root85 fixture/oracle and producer plan
-  contracts before writes/builds. Keep original sources untouched;own complete scratch/build files.
-- Coupled .5d.4/roots remain in progress;values0624 passes85 rows(51sqrt/34hypot),3 original
-  mathematical/5 later storage refusals,all6476B regeneration and original25-row/1602B prefix exact.
-  Actual Cos/Sin zero arithmetic supplies contributions;root calls preserve them through perfect/
-  zero results,real storage/read and T1 refusal. Integer proof bounds remain unchanged;no float.
-- Six root tests/scoped strict lint/fmt pass. New coupled-review chapter,root/Tan availability
-  repairs,book99/374/1658/2932,glossary0/history783/IDs+10children/map/diff pass. Producer347/
-  34067calls;pure stdlib stdout root oracle adds no writer/dispatch. Full locality still owned.
-- Scoped tangent integration closes0623:native139,actual paired24/48 comparisons and32 selected
-  tests pass. Original full/hosted79bd6f6a SHA-scoped;G1 6/18/G0 unapproved unchanged. Protect
-  original archive/search/numerical/cleanup proofs;never rerun old transactions. Full PNT/push400.
-  Coupled faults/composition/platform/full resources/provider/replay/physical/release remain open.
+- Next G1-SLICE.5d.4.arc:coupled arc_length proof/error/provenance and actual body-fault review. Read arc.rs,pi/rational rounding,canonical pi certificate/oracle and arc23/native sourced APIs.
+  Reuse protected certificates read-only. Split values/faults safely;original signed turns stay.
+- Native roots .5d.4.roots closes0625:85 rows/51sqrt/34hypot,3 mathematical/5 storage refusals,
+  exact6476B,real Cos/Sin/root flags and five actual compiled-body faults. Original25/1602B kept.
+  root_body_faults.py uses542-file original-scope snapshot/551 planned outputs;baseline passes,
+  five builds succeed then fail independent-row assertions. All544 input/snapshot hashes exact.
+- Actual parent-only timeout leaves child able to write;owned-process-group cleanup prevents it
+  before copied-body restoration. Two controls pass. Primary root6 passes. Probe suite includes
+  the native check;n16 complete transitive/runtime locality review remains scheduled separately.
+- Book99/374/1658/2933/glossary0/history784/IDs/map/diff;producer348/34214calls/file plans235/
+  90owners/39groups/15refusals/12reds pass. LIVE root85/fault5;G1 6/18/G0 unapproved unchanged.
+  Full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/numerical/cleanup proofs;
+  never rerun old transactions. Full PNT/push400. Coupled other families/composition/platform,
+  complete resources/provider/replay/physical/release remain open;no production verdict.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

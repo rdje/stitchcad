@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0624 — review exact root midpoint and sourced storage boundaries
+## STITCHCAD-G1-0625 — falsify actual native root bodies in an isolated workspace
 
-- Preserve the original25 root cases and append60 exact midpoint/full-width/domain cases. All85 rows pass through numeric and real sourced calls,including3 mathematical/5 later storage refusals,raw513-bit hypot and complete6476B regeneration. No source flags or kernel results are seeded.
-- Root6/scoped strict lint/fmt,producer inventory,book99/374/1658/2932/glossary0/history783/IDs/map/diff pass. Repair stale root/Tan availability and add bounded coupled-review chapter. LIVE root85;G1 6/18/G0 unapproved unchanged. Next isolated root faults;coupled/platform closure remains owned.
+- Compile original-scope root baseline and five isolated actual body faults against independent fixture rows;all faults build successfully before assertions reject them. Plan542 snapshot files/551 outputs and retain544 exact original input hashes. Fix owned timeout descendants before copied-body restoration.
+- Baseline1/fault5/timeout2/primary root6 pass. Book99/374/1658/2933/glossary0/history784/IDs/map/diff and producer/file-plan checks pass. LIVE root85/fault5;G1 6/18/G0 unapproved unchanged. Native root review closes;next arc_length. Platform/full coupled/locality closure stays owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

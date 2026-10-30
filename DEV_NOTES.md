@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — review exact root midpoint and sourced storage boundaries
+## _(2026-10-30 UTC)_ — falsify actual native root bodies in an isolated workspace
 
-0624 preserves all1602 original root fixture bytes and appends60 cases:85 total/51sqrt/34hypot. Independent isqrt/Fraction half-square neighbors include large exact Ratio ties and full-width inputs. Explicit assertions prove original128-bit components and a raw513/512-bit private hypot witness.
-Six native tests pass,including3 original mathematical/5 later storage refusals and all6476B regeneration. Real upstream Cos/Sin zero arithmetic supplies sources before actual root calls;no flags or kernel outputs are seeded. Perfect/zero roots keep contributions,T1 refuses,and storage/read preserves admitted values.
-Scoped strict lint/fmt,producer347/34067calls/history783/old IDs+10children/map/diff pass. Book99/374/1658/2932/glossary0 pass after adding the new chapter's topic-index route. Current root-provenance/Tan-policy pending statements were stale;actual implemented contracts and scoped limitations now align.
-[Whole0623](docs/history/stitchcad-devnotes-part783.md) retained. LIVE root85;G1 6/18/G0 unapproved unchanged. New coupled review separates root values from actual body faults,other families,composition/platform and final acceptance. Next isolated root fault controls;no full numerical/platform/production verdict.
+0625 compiles the original root body inside an exact542-file local workspace. Baseline passes;five faults compile and fail watched independent rows:half ties,Ratio scale,hypot coordinate/denominator and early quotient rounding. Compiler errors cannot count. All544 original inputs/snapshot hashes stay exact.
+A standalone prototype refused private constructor access and counted no fault. Original crate scope solves it. Actual timeout fixtures exposed a child surviving parent-only kill;owned process-group cleanup now stops descendants before copied-body restoration. Both outcomes pass;complete551 output paths are planned.
+Primary root6/all85 rows/all6476B regeneration pass. Producer348/34214calls/file plans235/90owners/39groups/15refusals/12reds/history784/IDs/map/diff pass. Book99/374/1658/2933/glossary0 pass. Native feature controls do not close n16's transitive/runtime locality review;that audit remains scheduled before signoff.
+[Whole0624](docs/history/stitchcad-devnotes-part784.md) retained. LIVE root85/fault5;G1 6/18/G0 unapproved unchanged. Scoped native root review closes;next arc_length,then other families/composition/platform/final coupled acceptance. Original proof stores protected;no full CI/platform/production verdict.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
