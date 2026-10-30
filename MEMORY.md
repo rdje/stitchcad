@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.replay-identities:D345 P0 fresh native probe captures,then full gates.
-- Certificates0641:fresh inverse45M/450 and forward1M/100 exact gap/hash/order/source readers pass.
-  Original stores unchanged;inverse1299B witness exact SHA6b60d154f4160b0599f0ad13731b943e3e8dbd05f29496e33a186dea2d06840b.
-- Atan14/16/2/4/2,sincos14/50/2,midpoint8/9/161/3+scale1,constructor3/4/32/2 controls pass.
-  Readers check encoded gaps;interval derivation/source-locked producers remain separate proof legs.
-- Protected target/irrational_platform_certificate/coupled-0641-20261030T180826454783Z-33211/receipt.json
-  SHA0670624492d132854ba8f876726a9d7734ed27bde6dffe262dfbc4c66f240596 retains19 exact copies.
-- D345 actual writer replaces controlled sentinel;9 original fault reports unchanged. Fix shared
-  root_body_faults.py run identity before full probes;original hashes in protected receipt.
-- Platform0640 native31/actualChrome31,compiled bad fixture rejected,Rust1.99/Chrome156 pair passes;
-  canonical original report in target/irrational_platform_certificate/0640-20261030T173036575781Z-2055/.
-- Book101/374/1669/2976/glossary0/history800/IDs+3/map/diff pass. Numeric/mixed/pair scopes done;
-  full coupled gates pending,app/matrix/aggregate resources/locality/provider/replay/physical/release
-  remain owned. G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA only;full PNT/push400.
+- Next G1-SLICE.5d.4.acceptance.gates:deferred full native/Wasm/doctrine/probes/book acceptance.
+- D345 fixed0642:shared root_body_faults.py allocates fresh UTC/PID captures under protected
+  target/irrational_platform_certificate/native-body-faults/<family>/<label>-<UTC>-<PID>/.
+  Exclusive directory/report creation and owned device/inode publication;old paths are labels only.
+- Actual root baseline1/fault5 first rows4,9,17,24,4;547 original hashes/545 restored files/557
+  outputs;fresh1/refusals3/two actual guard omissions/timeout2 pass. Nine wrapper plans pass.
+- New root report suffix root_body_faults/0632-exact-root-20261030T181144027386Z-78668/report.json SHA c9403edbcbf21eb79cb574c34823a965bfa6f24d1340d714b0bd25467d7f3065. Original9 reports and
+  all4882 original snapshot files match their historical receipts. No daily cleanup performed.
+- Fresh0641 inverse45M/450 and forward1M/100 readers,witness/runtime controls pass;retained
+  coupled-0641-20261030T180826454783Z-33211 receipt under same protected numerical store.
+- Producer356/34943calls,file243/91/40/15refusals/12reds,book101/374/1670/2978/glossary0/
+  history801/IDs/map/diff pass. Numerical/mixed/observed native31+Chrome31 scopes complete;
+  full gates pending. App/matrix/aggregate resources/locality/provider/replay/physical/release
+  remain owned;G1 6/18/G0 unapproved;full/hosted79bd6f6a SHA only. Full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -5,7 +5,9 @@ keeps the original private crate scope and uses only ordinary published Cargo te
 This finite native check is not transitive compiler/locality or cross-platform signoff.
 """
 from pathlib import Path
+from datetime import datetime, timezone
 import argparse
+import ast
 import hashlib
 import json
 import os
@@ -21,8 +23,6 @@ PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 SOURCE = ROOT / 'crates/sc-core/src/recipe/roots.rs'
 FIXTURE = ROOT / 'crates/sc-core/tests/fixtures/formula_roots.tsv'
 RUN = ROOT / 'target/root_body_faults/0632-exact-root'
-COPY = RUN / 'workspace'
-REPORT = RUN / 'report.json'
 FAULTS = (
     ('tie_toward_zero', 'if (numerator << 2_u8) >= denominator * &midpoint_twice * &midpoint_twice {',
      'if (numerator << 2_u8) > denominator * &midpoint_twice * &midpoint_twice {'),
@@ -40,6 +40,72 @@ TEST = 'coupled_root_rows_retain_real_upstream_calls_through_success_storage_and
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def reserve_capture(path):
+    """Only an atomically created new directory can own a replay's writes."""
+    path.mkdir()
+    identity = path.stat()
+    return identity.st_dev, identity.st_ino
+
+
+def write_report(path, report, owner):
+    identity = path.parent.lstat()
+    assert not path.parent.is_symlink() and (identity.st_dev, identity.st_ino) == owner, \
+        'capture ownership changed before publication'
+    with path.open('x') as stream:
+        stream.write(json.dumps(report, indent=2) + '\n')
+
+
+def capture_controls(profile, directory):
+    """Exercise actual sinks and actual guard omissions in separate owned control directories."""
+    bases = tuple(directory / label for label in ('guarded', 'reuse-omitted', 'exclusive-omitted'))
+    outputs = tuple(base / 'report.json' for base in bases)
+    profile['plan_producer'](ROOT, directories=(directory, *bases), output_files=outputs)
+    directory.mkdir()
+    source = ast.parse(Path(__file__).read_text())
+    def omitted(name, old, new):
+        node = next(node for node in source.body if isinstance(node, ast.FunctionDef) and node.name == name)
+        text = ast.unparse(node)
+        assert text.count(old) == 1, 'one exact capture guard anchor'
+        namespace = {'json': json}
+        exec(compile(text.replace(old, new, 1), '<actual capture guard omission>', 'exec'), namespace)
+        return namespace[name]
+    unsafe_reserve = omitted('reserve_capture', 'path.mkdir()', 'path.mkdir(exist_ok=True)')
+    unsafe_write = omitted('write_report', "path.open('x')", "path.open('w')")
+    def exercise(base, reserve, writer):
+        owner = reserve(base)
+        writer(base / 'report.json', {'sentinel': 'original receipt'}, owner)
+        original = (base / 'report.json').read_bytes()
+        for action in (lambda: reserve(base),
+                       lambda: writer(base / 'report.json', {'replacement': True}, owner)):
+            try:
+                action()
+            except FileExistsError:
+                pass
+            else:
+                raise AssertionError('existing capture/report was admitted')
+        try:
+            writer(base / 'report.json', {'replacement': True}, (owner[0], owner[1] + 1))
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('foreign capture identity was admitted')
+        assert (base / 'report.json').read_bytes() == original
+    exercise(bases[0], reserve_capture, write_report)
+    for base, reserve, writer in ((bases[1], unsafe_reserve, write_report),
+                                  (bases[2], reserve_capture, unsafe_write)):
+        try:
+            exercise(base, reserve, writer)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('actual capture guard omission survived')
+    result = {'fresh_receipt': True, 'existing_capture_refused': True,
+              'existing_report_refused': True, 'foreign_identity_refused': True,
+              'original_guarded_receipt_unchanged': True, 'actual_guard_omissions_rejected': 2}
+    print('capture controls:fresh1/refusals3/original unchanged/actual guard omissions2;rc=0', flush=True)
+    return result
 
 
 def stop_group(process):
@@ -169,28 +235,37 @@ def main(config=None):
     config = dict(entry=Path(__file__), source=SOURCE, fixture=FIXTURE, run=RUN,
         faults=FAULTS, test=TEST, target='formula_root_value_contract', rows=85, family='root') if config is None else config
     assert set(config) == {'entry','source','fixture','run','faults','test','target','rows','family'}
-    kernel_source, fixture_path, run_dir = config['source'], config['fixture'], config['run']
+    kernel_source, fixture_path, template = config['source'], config['fixture'], config['run']
+    profile = runpy.run_path(str(PROFILE_SOURCE))
+    # Legacy paths are provenance labels only; no replay writes into an earlier capture.
+    relative_template = Path(profile['producer_output_path'](ROOT, template)).relative_to('target')
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ') + '-' + str(os.getpid())
+    run_dir = ROOT / 'target/irrational_platform_certificate/native-body-faults' / \
+        relative_template.parent / (relative_template.name + '-' + stamp)
     faults, test_name, test_target = config['faults'], config['test'], config['target']
     labels = ('baseline', *(label for label, _, _ in faults))
     copy_root, report_path = run_dir / 'workspace', run_dir / 'report.json'
-    profile = runpy.run_path(str(PROFILE_SOURCE))
     initial = (Path(__file__), config['entry'], PROFILE_SOURCE, kernel_source, fixture_path, ROOT / 'Cargo.toml',
         ROOT / 'Cargo.lock', ROOT / 'rust-toolchain.toml')
     logs = tuple(run_dir / (label + '.log') for label in labels)
     negative, positive = run_dir / 'timeout-parent-only.txt', run_dir / 'timeout-group.txt'
-    # Guard the fixed roots before even read-only inventory dispatch. The full file plan below
+    control_dir = run_dir / 'capture-controls'
+    control_bases = tuple(control_dir / label for label in ('guarded', 'reuse-omitted', 'exclusive-omitted'))
+    control_outputs = tuple(base / 'report.json' for base in control_bases)
+    # Guard the fresh roots before even read-only inventory dispatch. The full file plan below
     # is derived without creation;all paths are validated again before any snapshot/build write.
     profile['plan_producer'](ROOT, sources=initial, directories=(run_dir, copy_root, ROOT / 'target'),
-        output_files=(*logs, report_path, negative, positive))
+        output_files=(*logs, report_path, negative, positive, *control_outputs))
     inventory = subprocess.run(['git', 'ls-files', 'crates'], cwd=ROOT,
         check=True, capture_output=True, text=True).stdout.splitlines()
     snapshot = tuple(sorted({ROOT / name for name in inventory} | {
         ROOT / name for name in ('Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml')}))
     sources = tuple(sorted(set(initial) | set(snapshot)))
     destinations = tuple(copy_root / path.relative_to(ROOT) for path in snapshot)
-    outputs = (*destinations, *logs, report_path, negative, positive)
+    outputs = (*destinations, *logs, report_path, negative, positive, *control_outputs)
     directories = tuple(sorted({run_dir, copy_root, ROOT / 'target', *(path.parent for path in destinations)}))
-    profile['plan_producer'](ROOT, sources=sources, directories=directories, output_files=outputs)
+    profile['plan_producer'](ROOT, sources=sources,
+        directories=(*directories, control_dir, *control_bases), output_files=outputs)
     before_hashes = {path.relative_to(ROOT).as_posix(): digest(path) for path in sources}
     original, fixture = kernel_source.read_bytes(), fixture_path.read_bytes()
     rows = fixture.decode().splitlines()[1:]
@@ -198,14 +273,15 @@ def main(config=None):
     text = original.decode()
     assert all(text.count(before) == 1 and before != after for _, before, after in faults)
     classifier_controls()
-    if copy_root.exists():
-        existing = {path for path in copy_root.rglob('*') if path.is_file()}
-        assert existing <= set(destinations), 'unplanned existing copied workspace file'
+    assert not run_dir.exists(), 'fresh capture required;existing captures are immutable'
     if args.plan_only:
         print('native %s fault plan:%d variants/%d exact snapshot files/%d complete outputs;'
             'no writes or compiler dispatch;rc=0' % (config['family'], len(labels), len(snapshot), len(outputs)))
         return
+    profile['enter_producer'](ROOT, sources=sources, directories=(run_dir.parent,), output_files=outputs)
+    owner = reserve_capture(run_dir)
     profile['enter_producer'](ROOT, sources=sources, directories=directories, output_files=outputs)
+    capture_result = capture_controls(profile, control_dir)
     timeout_result = timeout_control(profile, negative, positive)
     for source, destination in zip(snapshot, destinations):
         profile['plan_producer'](ROOT, sources=(source,), output_files=(destination,))
@@ -274,9 +350,13 @@ def main(config=None):
         'original_sources_unchanged': before_hashes, 'snapshot_restored': True,
         'compiler': compiler.stdout, 'fixture_sha256': digest(fixture_path), 'outcomes': outcomes,
         'timeout_control': timeout_result,
+        'capture_controls': capture_result,
+        'legacy_capture_label': relative_template.as_posix(),
+        'capture': run_dir.relative_to(ROOT).as_posix(),
         'planned_outputs': [path.relative_to(ROOT).as_posix() for path in outputs]}
     profile['plan_producer'](ROOT, output_files=(report_path,))
-    report_path.write_text(json.dumps(report, indent=2) + '\n')
+    write_report(report_path, report, owner)
+    print('retained native capture:' + report_path.relative_to(ROOT).as_posix(), flush=True)
     print('native %s body faults:baseline1/actual compiled faults%d/all original and snapshot hashes unchanged;rc=0' % (config['family'], len(faults)))
 
 

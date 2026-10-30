@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — freshly read both complete numerical certificates
+## _(2026-10-30 UTC)_ — preserve native probe capture identities
 
-0641 reads inverse45M/450 and forward1M/100 original chunks;exact gaps/hash/order/source identities and original margins pass. Readers do not reconstruct interval construction. Inverse1299B witness exact;source-locked producer/independent derivation remain separate legs.
-Atan14/16/2/4/2,sincos14/50/2,midpoint8/9/161/3+scale1 and constructor3/4/32/2 controls pass. Protected coupled-0641 receipt retains19 exact logs/manifests/witness/report copies;all9 original fault reports unchanged. Fresh readers complete the prior deferred data scan.
-D345 P0 next:actual fixed-path report writer replaces a controlled sentinel. Preserve original captures with fresh run identities before full probes. Book101/374/1669/2976/glossary0/history800 four spans/IDs+3/map/diff pass. No full integration verdict yet.
-[Whole0640](docs/history/stitchcad-devnotes-part800.md) retains observed native31/Chrome31 and D344 repair. Promotion declined:existing proofs. LIVE adds fresh readers/D345 owner;G1 6/18/G0 unapproved unchanged. Next D345 then full coupled gates;remaining app/resource/release owners remain. PNT continues.
+0642 fixes D345 shared-controller overwrite:legacy fixed paths become labels;UTC/PID capture roots live under protected numerical storage. Exclusive directory reservation/report creation and device/inode ownership refuse reuse before earlier snapshots or receipts can change.
+Actual sinks pass fresh1/refusals3/original bytes exact;two actual helper guard omissions are rejected. Native root baseline1/fault5 rows4,9,17,24,4;547 original hashes/545 restored files/557 outputs and both timeout controls pass. All nine wrapper plans pass.
+Original9 reports and4882 original snapshot files match original receipt hashes. Producer356/34943calls,file243/91/40/15refusals/12reds,book101/374/1670/2978/glossary0/history801 four spans/IDs/map/diff pass. No daily cleanup or full integration verdict.
+[Whole0641](docs/history/stitchcad-devnotes-part801.md) retains fresh complete certificate reads. Promotion declined:existing ownership/retention rules. LIVE marks D345 fixed;G1 6/18/G0 unapproved unchanged. Full coupled gates next;app/resources/locality/release owners remain. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

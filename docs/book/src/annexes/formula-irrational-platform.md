@@ -121,7 +121,7 @@ Installed OS/browser launchers are read-only external tool dependencies. Project
 generated workspaces,dependency stores,profiles,captures and scratch stay on the repository
 volume with repository-relative persisted paths. The final adapter passes strict affected
 Clippy and formatting. The fresh complete certificate reads below now pass. D345 capture
-preservation and full coupled gates remain next;aggregate resources,provider/replay,geometry,
+preservation passes below;full coupled gates remain next;aggregate resources,provider/replay,geometry,
 physical validation and human release approval retain their separate owners.
 
 
@@ -161,8 +161,48 @@ target/irrational_platform_certificate/coupled-0641-20261030T180826454783Z-33211
 sha256:0670624492d132854ba8f876726a9d7734ed27bde6dffe262dfbc4c66f240596
 ```
 
-Full integration gates remain pending. D345 exposes fixed native fault-capture paths that a
-later replay could overwrite. The actual report writer replaces a sentinel only in an owned
-controlled copy;all nine original reports remain unchanged. Fresh capture identities are the
-next P0 repair,before replaying the full probes. Scoped coupled closure,aggregate resources,
-provider/replay,geometry,application and production approval retain their separate owners.
+Full integration gates remain pending. D345 exposed fixed native fault-capture paths that a
+later replay could overwrite. The actual old writer replaced a sentinel only in an owned
+controlled copy;all nine original reports remain unchanged. The preservation repair below
+passes before full probes. Scoped coupled closure,aggregate resources,provider/replay,geometry,
+application and production approval retain their separate owners.
+
+
+## Fresh native fault-capture identities
+
+D345 is fixed in the shared root_body_faults.py controller used by all six native entry points.
+Each invocation keeps the wrapper's historical run path only as a provenance label. The actual
+capture receives a UTC-microsecond/process suffix beneath the already protected numerical store:
+
+```text
+target/irrational_platform_certificate/native-body-faults/<family>/<label>-<UTC>-<PID>/
+```
+
+The complete output plan is validated before effects. An exclusive directory creation reserves
+the new run;an existing directory refuses before any snapshot write. Receipt publication checks
+the reserved device/inode identity and opens the report exclusively. It refuses an existing
+report or replaced ownership. No replay writes into the earlier historical directory. Generated
+snapshots,logs,controls and reports remain on the repository volume and under cleanup protection.
+
+Actual sink controls admit one fresh receipt,refuse directory reuse,report replacement and a
+foreign ownership identity,and preserve the guarded original bytes. Two changes to the actual
+helper bodies deliberately remove exclusive directory creation or exclusive report creation;
+the same controls reject both. These are real filesystem effects inside isolated control sinks.
+Plan-only mode keeps its read-only/no-compiler contract. All nine wrapper-family plans pass.
+
+A focused actual root replay passes the original85-row baseline and all five successfully
+compiled body faults. Their first independent failure ordinals remain4,9,17,24,4. The run keeps
+547 original input hashes,545 restored snapshot files and557 planned outputs;both owned process-
+group timeout controls pass. All nine historical reports retain their original SHA256 values;
+all4882 files across those historical snapshots match their original receipt hashes.
+
+```text
+target/irrational_platform_certificate/native-body-faults/root_body_faults/0632-exact-root-20261030T181144027386Z-78668/report.json
+sha256:c9403edbcbf21eb79cb574c34823a965bfa6f24d1340d714b0bd25467d7f3065
+```
+
+The existing root/arc/forward/inverse/tangent/resource commands and formula-structure suite use
+this shared behavior automatically. Incomplete runs stay separate;they cannot replace a complete
+receipt. This focused preservation repair does not claim a fresh full replay of all48 numerical
+faults. The deferred full integration gates run next;complete transitive runtime/locality review
+retains its separate owner.

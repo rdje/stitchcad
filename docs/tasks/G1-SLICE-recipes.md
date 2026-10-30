@@ -653,26 +653,26 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `in_progress`
   Goal:close complete coupled irrational review only after all scoped proofs/faults/composition/
   platform children pass;retain full allocator/provider/replay/physical/release owners separately.
-  Fresh complete readers pass0641;D345 preservation then full integration gates remain.
+  Fresh complete readers pass0641,D345 capture preservation0642;full gates remain.
 
 - ID: `G1-SLICE.5d.4.acceptance.certificates`
   Status: `done`
-  - [x] ISSUE:deferred complete certificate reads after numeric/mixed/platform implementation.
-  - [x] ROOT CAUSE (WHY + WHERE):python3 -I -B docs/tasks/artifacts/formula_structure/
-    verify_inverse_certificate.py →COMPLETE45M/450,source/hash/gap/order exact,rc=0.
-  - [x] FIX:verify_forward_certificate.py →1M/100 exact;original stores read-only,rc=0.
-  - [x] ADDRESSED (verified):inverse_certificate_witness.py →1299B exact;atan_runtime_plan.py
-    →14/16/2/4/2 controls;sincos_runtime_plan.py →14/50/2;trig_midpoint_certificate.py
-    →8/9/161/3+scale1 counterexample;constructor borrowed controls3/4/32/2 pass,rc=0.
-  - [x] NO REGRESSION:19 exact retained copies/original9 reports unchanged;history800 four Git
-    spans/IDs+3/map/diff/book101/374/1669/2976/glossary0 pass,rc=0. Full gates deferred.
-  - [x] LOCKSTEP:book/live/notes sync;D345 P0 next before gates;promotion declined(existing proofs).
-  Commit:STITCHCAD-G1-0641;Verification:fresh full readers/independent plans/preserved originals.
+  Goal:0641 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part801.md).
 - ID: `G1-SLICE.5d.4.acceptance.replay-identities`
-  Status: `pending`
-  D345 P0 next after read-only certificates,before gates:fixed body-fault capture directories
-  allow later probes to replace9 original reports/snapshots. Reproduce in an owned sink,then
-  allocate fresh immutable run identities and verify original receipts unchanged before full probes.
+  Status: `done`
+  - [x] ISSUE:D345 fixed native capture paths admit replacement of original reports/snapshots.
+  - [x] ROOT CAUSE (WHY + WHERE):root_body_faults.py old main unconditionally wrote fixed report;
+    actual writer replaces owned sentinel;original9 reports unchanged,rc=0 (0641 retained receipt).
+  - [x] FIX:fresh UTC/PID runs under protected store;exclusive directory reservation and report
+    creation,owned device/inode publication;historical paths remain labels only.
+  - [x] ADDRESSED (verified):python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
+    →baseline1/compiled faults5 rows4,9,17,24,4;547 original hashes/545 restored files/557 outputs;
+    capture fresh1/refusals3/actual guard omissions2 and timeout2 pass,rc=0.
+  - [x] NO REGRESSION:wrapper plans9;original9 receipts/all4882 snapshot files exact;producer356/
+    34943calls,file243/91/40/15refusals/12reds,book101/374/1670/2978/glossary0/history801
+    four spans/IDs/map/diff pass,rc=0. Full native fault replay deferred to gates.
+  - [x] LOCKSTEP:D345 fixed;book/live/notes/protection docs sync;promotion declined(existing rules).
+  Commit:STITCHCAD-G1-0642;Verification:actual fresh capture/guard omissions/native5/preservation.
 - ID: `G1-SLICE.5d.4.acceptance.gates`
   Status: `pending`
   Goal:deferred full native/Wasm/doctrine/probe/book acceptance after certificate closure;

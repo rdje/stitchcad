@@ -556,4 +556,5 @@ no physical or production release approval follows from these finite native chec
 
 The [fresh full certificate acceptance](formula-irrational-platform.md#fresh-complete-certificate-acceptance)
 records both complete readers,independent runtime controls and preserved original receipts.
-D345 capture preservation and full integration gates remain next.
+[D345 capture preservation](formula-irrational-platform.md#fresh-native-fault-capture-identities)
+now passes;full integration gates remain next.

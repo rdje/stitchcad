@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0641 — freshly verify complete numerical certificate payloads
+## STITCHCAD-G1-0642 — preserve original native fault captures on replay
 
-- Fresh inverse45M/450 and forward1M/100 readers pass exact gap/hash/order/source checks;original stores unchanged. Inverse1299B witness and independent runtime/constructor/midpoint controls pass.19 exact retained copies preserve logs/manifests and nine original fault reports.
-- Book101/374/1669/2976/glossary0/history800/IDs+3/map/diff pass. D345 fixed capture-path collision reproduced only in controlled copy;P0 repair next before full probes. Full integration pending;G1 6/18/G0 unapproved unchanged.
+- Fix D345 with fresh protected UTC/PID directories,exclusive capture/report creation and owned receipt publication. Actual sinks pass fresh1/refusals3/two guard omissions;root baseline1/fault5 and timeout2 pass. Original9 reports/4882 snapshot files remain exact;all nine wrapper plans pass.
+- Producer356/34943calls,file243/91/40/15refusals/12reds,book101/374/1670/2978/glossary0/history801/IDs/map/diff pass. Full coupled gates next;G1 6/18/G0 unapproved unchanged. No daily cleanup or full integration verdict.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D345 — prior closures and capture replay identities
+## D308–D345 — prior closures and native capture preservation
 
-D308–D344:[whole prior ledger](../history/stitchcad-devnotes-part800.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D345 P0 owned G1-SLICE.5d.4.acceptance.replay-identities:body-fault replays reuse fixed capture paths and can replace9 original reports. Fix fresh immutable identities after read-only certificates,before full gates;preserve originals. D344 fixed0640.
+D308–D345:[whole prior ledger](../history/stitchcad-devnotes-part801.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D345 P0 fixed0642:owner G1-SLICE.5d.4.acceptance.replay-identities allocates protected fresh native captures and exclusive owned reports. Native baseline1/fault5/guard omissions2 pass;original9 reports/4882 snapshot files exact. Full gates next.

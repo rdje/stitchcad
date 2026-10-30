@@ -21,7 +21,7 @@ Cleanup is a normal change: it is owned by a task-tree leaf, recorded here, and 
 - Project package stores, scaffold backups and cleanup audit manifests.
 - Retained numerical certificates: target/trig_forward_certificate/ and
   target/inverse_threshold_certificate/ and target/irrational_platform_certificate/, including
-  payloads, checkpoints, frozen inputs,executables and actual browser capture/profile evidence.
+  payloads,checkpoints,frozen inputs,executables,browser profiles and fresh native fault captures.
   These are proof records, not stray .bin files; retirement requires a separately owned decision.
 - Retained workspace families directly under target: history-capture-*,history-generations-*,
   history-proof-*,history-review-* and book_search_*. The inspector refuses them and the census
