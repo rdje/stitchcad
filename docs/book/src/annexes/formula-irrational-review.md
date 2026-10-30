@@ -8,7 +8,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | Family | Available implementation | Coupled review boundary |
 | --- | --- | --- |
 | sqrt/hypot | Exact integer roots and sourced calls | Native85 rows/five actual body faults pass below;shared platform review remains |
-| arc_length | Signed/full-turn fixed-pi certified rounding | Coupled source/error/fault review remains .5d.4.arc |
+| arc_length | Signed/full-turn fixed-pi certified rounding | Complete pi proof/sourced23 pass below;actual body faults remain .5d.4.arc.faults |
 | sin/cos | Exact folding and complete forward threshold certificate | Coupled actual-body/source/platform review remains .5d.4.forward |
 | atan/atan2 | Principal branches and complete inverse threshold certificate | Coupled actual-body/source/platform review remains .5d.4.inverse |
 | tan | Explicit per-call quotas,native139 and real paired24 acceptance | Coupled adaptive/error/fault review remains .5d.4.tangent |
@@ -105,3 +105,42 @@ The formula-structure probe suite also runs this check. These are native POSIX p
 controls and finite fault witnesses. They close the scoped native root review;actual cross-platform
 numerical execution remains .5d.4.platform. Arc,forward/inverse,Tan and mixed-chain review remain
 owned before the complete coupled irrational gate can close.
+
+## Arc length certificate and sourced boundaries
+
+The complete admitted arc argument remains A*pi/B with A=n_angle*n_radius<2^256 and
+B=180000000*d_angle*d_radius>0. Zero returns canonical zero;other signs are restored after
+magnitude rounding. Signed radius and complete turns stay part of the original operands.
+Every half-output target maps to a rational pi target with reduced denominator below2^257.
+The retained640-bit pi enclosure lies strictly inside adjacent bounded-denominator fractions
+whose determinant is1 and denominator sum exceeds2^257. Any rational strictly between them
+has a larger denominator. Thus no admitted target lies inside the pi enclosure,and either exact
+endpoint rounds exactly as the true product. This proves the admitted family without input
+sampling or a runtime precision cutoff.
+
+The original993-byte pi certificate regenerates exactly. A private native watcher verifies the
+actual compiled640-bit scale and all little-endian limbs against that regenerated artifact.
+The constant producer uses Machin Fraction bounds and independent directed integer bounds
+from4*(atan(1/2)+atan(1/3)). Its145 observed continued-fraction steps belong to constant generation,
+not a runtime input bound. The private native workspace retains the existing898/924-bit
+numerator/denominator bounds. Final rational width precedes final Length-domain admission.
+
+The independent arc oracle instead evaluates the1/2+1/3 identity with exact Fraction sums and
+requires both endpoints to agree at each original fixture. All23 original rows remain unchanged:
+18 admitted integer arcs,three rounded Length-domain refusals and two exact rational-width
+refusals. They include signed/full turns,both operand signs,zeros,full128-bit components and
+hard rational neighbors around half-quanta and the final scalar bound.
+
+Every row also passes through actual cos/sin zero arithmetic,then the original sourced arc call.
+No flags or numerical outputs are seeded. Both upstream contributions and ArcLength survive
+successful zero/signed/full-turn results,real binding and later reads. T1 refuses those actual
+contributions even when the stored integer is exact. Failures retain the original typed rounded
+value or exact measured width;no successful replacement value or new diagnostic is produced.
+
+Four public native tests and the private compiled-pi watcher pass,with complete original1411-byte
+arc fixture regeneration. Arc fixture SHA256:
+af861fc5f0288f4389aea9eb4e6a1ce61ee4d064ef797f5eb0de0892e0eeffac.
+Pi certificate SHA256:
+c43023fdccac9912c0cb7adf2250492003d4c11c7a88fb3056db3b156462eb54.
+Actual copied-body arc faults remain .5d.4.arc.faults. Shared platform/full resource/provider/
+replay/physical and complete coupled acceptance stay separately owned;this grants no production approval.

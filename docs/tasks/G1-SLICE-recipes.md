@@ -582,56 +582,58 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5d.4.roots`
   Status: `done`
-  Goal:review complete admitted root-family rounding/domain/provenance bounds with independent
-  exact midpoint/full-width cases and actual implementation-body fault controls. No platform claim.
-  Native closure0625:85 independent rows/real sourced storage and five actual compiled faults
-  pass. Shared cross-platform execution remains .5d.4.platform;whole coupled parent stays open.
+  Goal:0625 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part785.md).
 - ID: `G1-SLICE.5d.4.roots.values`
   Status: `done`
-  Goal:0624 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part784.md).
+  Goal:0625 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part785.md).
 - ID: `G1-SLICE.5d.4.roots.faults`
   Status: `done`
-  Goal:falsify actual native root-body rounding/scale/squared-sum behavior in an isolated local
-  workspace,with complete source/output plans and original production bytes unchanged.
-  - [x] REPRODUCE / ISSUE:root85 values/provenance passed0624,but actual compiled root-body
-    faults had no coupled witness. The probe's initial single-parent timeout cleanup could leave
-    descendants writing after parent death and before copied-body restoration. Both are owned here.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
-    →one unchanged native baseline/five compiled fault assertions/two actual timeout outcomes
-    pass,rc=0. Original private constructor visibility prevented a standalone body build;that
-    compiler refusal counted no fault. Exact workspace copying preserves the original private
-    crate scope. An owned parent/child marker proves single-parent kill leaves its child running.
-  - [x] FIX:guard exact542-file snapshot/551 output paths before creation;ordinary locked/offline
-    Cargo compiles actual original/copied bodies and the real sourced85-row watcher. Unique actual
-    source anchors apply five isolated faults;successful compilation and an assertion containing
-    an independent fixture row are mandatory. The copied root body restores in finally. All544
-    original input hashes and complete snapshot hashes stay exact. Timeout/raised interruption
-    stops the owned process group and collects it before restoration;actual child controls calibrate.
-  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
-    →baseline compile/run0;five successful builds/run101 with independent rows pass,rc=0:
-    tie-toward-zero4/10,Ratio scale9,missing hypot coordinate17,missing denominator24,early quotient
-    rounding4/10. Every failure is an actual watched assertion,not a compile failure or fake
-    result. Parent-only child writes;owned-group child write remains absent. Original inputs and
-    snapshot restored byte-exact;relative report/log/artifact identities retain full source hashes.
-  - [x] NO REGRESSION: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test formula_root_value_contract
-    →six primary-workspace tests/all85 rows/full6476B regeneration pass,rc=0. Guarded plan-only
-    entry reports6 variants/542 snapshot files/551 complete outputs without writes/compiler,rc=0.
-    Fresh report recheck →544 current input hashes/five compiled independent-row failures/two
-    timeout controls exact,rc=0. Producer348/34214 calls/73 heredocs/2892 embedded,file plans235/
-    90owners/39groups/15 actual data refusals/12 body reds,history784 four exact Git spans,prior
-    IDs/order/uniqueness plus one native producer owner,map/diff pass,rc=0. Book99/374/1658/2933
-    and glossary310/9/158/0 pass,rc=0. No full CI/cross-platform or transitive locality verdict.
-  - [x] LOCKSTEP:book/status/numerical decision/task/index/MEM/DEV/CHANGE/LIVE align;whole0624
-    retained784. Scoped native root review closes;next .5d.4.arc,then other families/composition/
-    platform/final coupled acceptance. Native producer n16 owns complete later runtime/locality
-    review before locality signoff;scoped feature controls do not grant it. LIVE root85/fault5;
-    G1 6/18/G0 unapproved unchanged. Original certificate/archive/search/cleanup proofs protected.
-    promotion: declined (existing exact-root and no-background-job contracts already require these actual body and owned-process controls;no new mathematical or platform policy is introduced).
-  Commit:STITCHCAD-G1-0625;Verification:baseline1/actual compiled faults5/timeout2/original root6/hash plans.
+  Goal:0625 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part785.md).
 - ID: `G1-SLICE.5d.4.arc`
-  Status: `pending`
+  Status: `in_progress`
   Goal:coupled arc_length all-admitted pi/rounding/domain/provenance proof and actual fault review;
   preserve signed full turns and original failures;reuse protected certificates read-only.
+- ID: `G1-SLICE.5d.4.arc.values`
+  Status: `done`
+  Goal:re-derive complete admitted arc pi/midpoint proof and watch original signed/full-turn/
+  near-midpoint/domain/width fixtures through actual sourced calls and storage.
+  - [x] REPRODUCE / ISSUE:original23 numeric arc rows and complete pi certificate existed,but
+    coupled review needed complete real upstream/sourced/storage and full fixture regeneration
+    witnesses. Current canonical/book text still called implemented source provenance pending.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test formula_arc_value_contract
+    →four pass/23 original rows/18 admitted arcs/3 final domains/2 exact widths,rc=0. Exact
+    bounded-denominator exclusion makes one certified pi endpoint sufficient for every admitted
+    nonzero coefficient. Sourced wrappers must union both real inputs and ArcLength even at zero.
+  - [x] FIX:two new public watchers run every original row through actual Cos/Sin zero arithmetic,
+    then checked_arc_length and real binding/read. No source flags or kernel values are seeded.
+    Another watcher regenerates every original1411 arc bytes from alternate-identity exact
+    Fractions. Reuse original private compiled-pi watcher to tie full993-byte certificate and
+    actual640-bit scale/limbs to regenerated proof. Repair present arc provenance/status wording.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_arc_value_contract
+    →four pass,rc=0. Original signed/full turns,zero,radius signs/full128-bit operands,hard
+    midpoint/scalar-bound neighbors retain exact values or original typed rounded-domain/width
+    causes. All18 successes keep Cos/Sin/ArcLength through storage/read;T1 refuses them.
+    Complete1411B/23-row fixture remains byte-exact and independently regenerates. cargo test -p
+    sc-core --lib compiled_pi_endpoint_matches_the_reproduced_certificate →one pass/94filtered,
+    all993 certificate bytes and compiled limbs match,rc=0. Bound A<2^256/target denominator<2^257,
+    determinant1/strict enclosure/denominator sum>2^257 excludes all admitted midpoints.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_arc_value_contract →original two
+    numeric/kind-priority plus new sourced/regeneration tests all pass,rc=0. cargo clippy -p
+    sc-core --test formula_arc_value_contract -- -D warnings and selected rustfmt →pass,rc=0.
+    Explicit Git byte/hash comparison retains original arc1411B and pi993B,rc=0. History785 four
+    exact Git spans,prior IDs/order/uniqueness plus2 scoped children,map/diff pass,rc=0. Positive
+    book99/374/1659/2935,glossary310/9/158/0 pass,rc=0. No broad CI/platform/fault verdict.
+  - [x] LOCKSTEP:book/status/numerical decision/task/index/MEM/DEV/CHANGE/LIVE align;whole
+    native root review0625 retained785. Arc values/provenance/certificate review complete;next
+    actual arc body faults. Shared other-family/composition/platform/final coupled owners stay
+    open. LIVE arc23 sourced/pi evidence;G1 6/18/G0 unapproved unchanged. Protected original
+    certificate workspaces remain read-only;no historical installer/capture transaction rerun.
+    promotion: declined (the existing bounded arc midpoint-exclusion decision already proves the admitted family;this re-derives it and adds independent actual sourced/storage witnesses).
+  Commit:STITCHCAD-G1-0626;Verification:arc4/original23/typed3domain2width/compiled-pi1/strict lint/fmt.
+- ID: `G1-SLICE.5d.4.arc.faults`
+  Status: `pending`
+  Goal:actual copied-body arc sign/full-turn/scaling/rounding/operand fault controls through
+  original private crate scope,with complete local source/output plans and original bytes intact.
 - ID: `G1-SLICE.5d.4.forward`
   Status: `pending`
   Goal:coupled sin/cos folding,complete threshold certificate,rounding/provenance and actual fault

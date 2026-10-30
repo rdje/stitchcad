@@ -164,9 +164,9 @@ reduced128-bit and completed Length-domain checks; binding i64 remains later. Ro
 fits at most133 bits under the admitted Angle/Length domains. No intermediate width/domain refusal
 or direction modulo is introduced. Negative coefficient signs use the same magnitude certificate.
 
-Production arc_length remains `.5d.3.1`; source-call provenance remains `.5e.3`. Focused future
-fixtures must cover signed/full turns, zero, bounded rational neighbors around half quanta, scalar
-and width refusals, and invalid actual kinds. Broad/platform/mutation work remains `.5d.4`/pre-push.
+Production arc_length and source-call provenance are available. Original23 fixtures cover signed/
+full turns,zero,rational midpoint neighbors,scalar/width refusals and actual kind priority. Coupled
+values/provenance626 and compiled-pi watcher pass;actual faults/platform remain .5d.4.
 
 Research also located published correctly-rounded float APIs in dashu-float and astro-float.
 They are unselected candidates for the remaining family: exact rational input enclosures,
@@ -175,7 +175,7 @@ review before adoption. No new dependency/license or native/WASM capability is c
 
 Implementation0258: arc_length now uses the certified endpoint, exact wide rounding and final width/
 scalar checks. Native arc2/0 with23 independent rows, numeric6/0 and selected library67/0 pass; the
-compiled endpoint is tied to the reproduced certificate. Source provenance remains .5e.3.
+compiled endpoint is tied to the reproduced certificate. Sourced23/storage/certificate review0626 passes;actual faults/platform remain .5d.4.
 
 Remaining tangent:decision_tangent-resources.md selects bounded logical admission;native values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621/Design0622;paired24 acceptance0623;platform remain pending.
 

@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.arc:coupled arc_length proof/error/provenance and actual body-fault review. Read arc.rs,pi/rational rounding,canonical pi certificate/oracle and arc23/native sourced APIs.
-  Reuse protected certificates read-only. Split values/faults safely;original signed turns stay.
-- Native roots .5d.4.roots closes0625:85 rows/51sqrt/34hypot,3 mathematical/5 storage refusals,
-  exact6476B,real Cos/Sin/root flags and five actual compiled-body faults. Original25/1602B kept.
-  root_body_faults.py uses542-file original-scope snapshot/551 planned outputs;baseline passes,
-  five builds succeed then fail independent-row assertions. All544 input/snapshot hashes exact.
-- Actual parent-only timeout leaves child able to write;owned-process-group cleanup prevents it
-  before copied-body restoration. Two controls pass. Primary root6 passes. Probe suite includes
-  the native check;n16 complete transitive/runtime locality review remains scheduled separately.
-- Book99/374/1658/2933/glossary0/history784/IDs/map/diff;producer348/34214calls/file plans235/
-  90owners/39groups/15refusals/12reds pass. LIVE root85/fault5;G1 6/18/G0 unapproved unchanged.
-  Full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/numerical/cleanup proofs;
-  never rerun old transactions. Full PNT/push400. Coupled other families/composition/platform,
-  complete resources/provider/replay/physical/release remain open;no production verdict.
+- Next G1-SLICE.5d.4.arc.faults:actual copied-body arc sign/full-turn/scaling/rounding faults. Read arc.rs,original arc23/native sourced watcher and root_body_faults.py original-scope
+  snapshot/owned-process controls before reuse. Own complete source/output plans;preserve originals.
+- Arc values626 passes4 public tests/all23 original rows:18 admitted/3 final domain/2 exact width.
+  Real Cos/Sin zero arithmetic supplies original inputs;ArcLength and both contributions survive
+  zero/signed/full-turn output,storage/read and T1 refusal. All1411 arc bytes regenerate unchanged.
+- Private compiled-pi1/94filtered passes:all993 original bytes,640-bit scale/limbs and complete
+  A<2^256/target-denominator<2^257 adjacent-fraction proof reproduce. No runtime precision cutoff.
+  Scoped strict lint/fmt,book99/374/1659/2935/glossary0/history785/IDs+2children/map/diff pass.
+- Native root review625 closes85 rows/fault5/owned timeout2/primary root6;all544 inputs and copied
+  snapshot exact. n16 complete transitive/runtime locality review remains separately scheduled.
+  LIVE sourced arc23/pi;G1 6/18/G0 unapproved unchanged;full local/hosted79bd6f6a SHA-scoped.
+  Protect original archive/search/numerical/cleanup proofs;never rerun old transactions. Full PNT/
+  push400. Other coupled families/composition/platform/full resources/provider/replay/physical/
+  release remain open;no production verdict. Daily cleanup remains due2026-10-30 14:10UTC.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
