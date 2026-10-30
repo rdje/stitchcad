@@ -687,7 +687,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
   Status: `in_progress`
   Goal:finish environment/full probes after D349–D351 repairs;Rust/Wasm/doctrine pass,then scoped closure.
-  Latest0649 environment rc1;D352 fixed0650;retry environment/full probes next.
+  Latest0651 environment rc1;D353/D354 cleanup control next,then tail/full probes.
   Preserve transcripts/return codes and original source/evidence identities;no closure yet.
   Book sync:clarify trig-certificates inverse230 observed0640 pair/full matrix during closure.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.environment-baseline`
@@ -695,22 +695,33 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0649 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part809.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.origin-control`
   Status: `done`
-  - [x] ISSUE:D352 origin count/AST/fault expectations predate approved0581 extension.
-  - [x] ROOT CAUSE (WHY + WHERE):runtime result-call census →1471=earlier1466+five external
-    input cases;exact0581 Git AST/fault comparison passes;old baseline refuses,diagnosis rc=0.
-  - [x] FIX:exact approved origin contract/FAULTS;unchanged original constants/provenance;
-    independent runtime census and two actual preservation faults;book1471/15 synchronized.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_origin_provenance_contract.py
-    →1471/425,32 omission reds/40 CLI+16 borrowed refusals/two preservation reds pass,rc=0.
-  - [x] NO REGRESSION:python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py
-    --mutations →1471 cases/15 actual compiled faults/real consumers pass,source exact,rc=0;
-    book101/374/1670/2980/glossary0/history809 four spans/IDs+1/map/diff pass,rc=0.
-  - [x] LOCKSTEP:book/live/notes sync;full environment/probes pending;promotion declined(existing contract).
-  Commit:STITCHCAD-G1-0650;Verification:focused origin preservation.
+  Goal:0650 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part810.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry`
+  Status: `in_progress`
+  Goal:check blocked environment tail,then full make probes(including complete environment);
+    preserve earlier receipts/source identities and actual fault/runtime classifications.
+- ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.baseline`
+  Status: `done`
+  - [x] ISSUE:0651 retry reaches later cleanup inspector pin failure;optional continuity stale.
+  - [x] ROOT CAUSE (WHY + WHERE):git diff0315..0645 cleanup.py →retention guards only;
+    current inspector exactly0645 SHAe7a561b066c87ac03221eebc2e26f1b67d3de536cb061fcb72ca8debc4e35737;
+    --continuity →retired raw record FileNotFoundError;diagnosis verified,rc=0.
+  - [x] FIX:retain receipt/transcript;own D353/D354 before remaining tail/full probes.
+  - [x] ADDRESSED:python3 -I -B JSON/SHA receipt verification →1220 sources unchanged,
+    transcript SHA exact/full probes absent,pass,rc=0;actual environment rc=1 retained.
+  - [x] NO REGRESSION:origin/retention/cleanup-entry checks pass before pin failure;
+    book101/374/1670/2980/glossary0/history810 four spans/IDs+2/map/diff pass,rc=0;
+    134 closed execution labels tightened,all IDs/status/routes exact;no cap raised.
+  - [x] LOCKSTEP:book/live/notes sync;D353/D354 next;promotion declined(existing contract).
+  Commit:STITCHCAD-G1-0651;Verification:failed later environment baseline retained.
+- ID: `G1-SLICE.5d.4.acceptance.gates.run.cleanup-pin`
   Status: `pending`
-  Goal:complete environment and full probes after D352;preserve source/evidence identities,
-    all earlier receipts and actual fault/runtime classifications before scoped closure.
+  D353 P1:cleanup fixture pins inspector0315 bytes;reviewed0628/0640/0645 retention additions
+  changed only protected roots/family guards. Reconcile exact immutable pin after full delta
+  review;retain strict file equality and original fixture AST before full verification.
+  D354 P2 same owner:optional --continuity reads retired raw records and hardcodes old
+  exact task/frontier state. Reproduce via public reader;retain immutable logical bytes,
+  predecessor task order and current linked index/tree/MEMORY agreement through archive growth.
 
 ### Execution, uncertainty and replay
 

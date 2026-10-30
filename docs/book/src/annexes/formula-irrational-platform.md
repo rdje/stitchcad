@@ -257,3 +257,16 @@ Two actual preservation changes refuse. Complete environment/full-probe verifica
 target/irrational_platform_certificate/coupled-0649-integration-20261030T204352575454Z-95261/environment.json
 sha256:941a68045fc0c853290fc6e7ad506e1c0f92587e4abfa502ca5ce0f95a85fb99
 ```
+
+The0651 retry passes the repaired origin control and later numeric,retention and cleanup-entry
+checks. It stops at D353:the cleanup-fixture companion pins revision0315 while the inspector
+exactly matches reviewed0645. The intervening delta adds protected numerical/legacy roots and
+retained-proof family guards. Its exact baseline needs an explicit review update. D354 also
+reproduces in the optional continuity mode,which reads raw records now stored in logical
+archives and assumes an obsolete task/frontier population. Both repairs have an owner.
+This attempt exits1 with1220 snapshotted sources unchanged;full probes again do not start.
+
+```text
+target/irrational_platform_certificate/coupled-0651-integration-20261030T210702634267Z-10812/environment.json
+sha256:3986118ee5f11d8d9f9916d2279456d9292cc45f73748bcc0e0973593bd73c54
+```

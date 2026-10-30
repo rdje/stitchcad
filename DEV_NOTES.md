@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — retain the approved origin extension in environment controls
+## _(2026-10-30 UTC)_ — retain the later cleanup-control failure and exact repair owners
 
-0650 fixes D352 stale1466/old AST/FAULTS expectations. The exact0581 origin contract and15 faults now compare to their immutable approved source;unaffected origin constants and provenance425 retain original comparisons. A runtime call census independently isolates five external-input cases from earlier1466 calls.
-Focused control passes1471/425,32 omission reds/four original gaps,40 CLI+16 borrowed refusals,provider identity and pure calls. Two actual input-guard/fault-population changes fail preservation. Real origin --mutations passes1471 cases/15 compiled body faults and copied consumers;source bytes exact.
-Book101/374/1670/2980/glossary0/history809 four Git spans/IDs+1/map/diff pass. Book counts1471/15 now match behavior. LIVE closes D352;G1 6/18/G0 unapproved unchanged. Full environment/probes/coupled review remains pending;promotion declined:existing approved-source contract. Full PNT continues.
-[Whole0649](docs/history/stitchcad-devnotes-part809.md) retains the failed environment receipt and exact1218-source boundary. No producer semantics,Rust inputs or earlier numerical evidence changed;next retry is owned separately before scoped closure.
-Logs:target/coupled-0650-origin-real.log and target/coupled-0650-origin-controls.log;both actual terminal0. No complete full-suite or hosted verdict.
+0651 environment retry passes repaired origin,numeric,retention and cleanup-entry controls,then exits1 at cleanup fixture's full inspector pin. All1220 source hashes remain exact;full probes do not start. Protected receipt/transcript retain the failure;no aggregate environment/full-suite verdict.
+D353:0315 pin predates0628/0640/0645 retention guards. Complete diff adds only numerical/legacy roots and proof-family guards;actual inspector exactly matches0645. D354 optional continuity reproduces FileNotFound on archived raw293;later exact task/frontier assumptions also predate canonical append-only growth.
+Book101/374/1670/2980/glossary0/history810 four Git spans/IDs+2/map/diff pass.134 closed execution labels tightened,all IDs/status/routes exact,4020B freed;caps unchanged. LIVE owns D353 P1/D354 P2 next;G1 6/18/G0 unapproved unchanged. Promotion declined:existing cleanup/continuity contracts.
+[Whole0650](docs/history/stitchcad-devnotes-part810.md) retains the origin fix. Repair both cleanup controls,check the previously blocked environment tail,then run full make probes including environment. No real cleanup apply or numerical source/evidence changes. Full PNT continues.
+Receipt:target/irrational_platform_certificate/coupled-0651-integration-20261030T210702634267Z-10812/environment.json SHA3986118ee5f11d8d9f9916d2279456d9292cc45f73748bcc0e0973593bd73c54.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
