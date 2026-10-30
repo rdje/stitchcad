@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — re-derive complete arc proof and real sourced storage boundaries
+## _(2026-10-30 UTC)_ — falsify actual arc bodies through the shared original-scope controller
 
-0626 runs original arcs through real Cos/Sin zero arithmetic,checked_arc_length and binding/read. All23 cases pass:18 admitted,3 rounded domains,2 exact widths. Successful zero/signed/full-turn arcs retain both upstream calls and ArcLength;T1 refuses those contributions. No flags or outputs are seeded.
-Four public tests pass:numeric/kind guards and1411B regeneration. Private compiled-pi1/94filtered reproduces all993 certificate bytes and actual640-bit scale/limbs. Adjacent determinant/denominator/enclosure predicates exclude every admitted midpoint;the fixed endpoint is certified,not a precision guess.
-Strict lint/fmt,book99/374/1659/2935/glossary0/history785/IDs+2children/map/diff pass. Original arc/pi fixtures stay exact. Canonical/book pending-source wording was stale and is repaired. [Whole0625](docs/history/stitchcad-devnotes-part785.md) retains native root/fault/process-group proof.
-LIVE sourced arc23/pi;G1 6/18/G0 unapproved unchanged. Arc values/provenance complete;next actual arc faults. Other coupled families/composition/platform/final acceptance and n16 full locality review remain owned. Protected proof stores read-only;no full CI/platform/production verdict.
+0627 adds a guarded arc entry to the original-scope Cargo controller. Baseline passes;five faults compile and fail original rows:product sign10,discarded turns6,pi scale4,missing radius11,truncation4. Row context distinguishes actual mathematical assertions from compiler/unrelated failures.
+All545 arc input hashes/542 copied files restore;551 output paths planned and timeout2 passes. Original root CLI re-passes baseline/fault5/timeout2 with544 exact input hashes. Production kernel/fixture bytes stay untouched. Primary arc4/full1411B regeneration/strict lint/fmt pass after shared controller reuse.
+Book99/374/1659/2936/glossary0/history786/IDs/map/diff and producer349/34232calls/file plans236/90owners/39groups/15refusals/12reds pass. [Whole0626](docs/history/stitchcad-devnotes-part786.md) retained. n16 full transitive/runtime locality review remains scheduled;no platform or production verdict.
+LIVE native root85/fault5 and arc23/fault5;G1 6/18/G0 unapproved unchanged. Arc native review closes;next director-requested daily cleanup near24h,then forward review. Other families/composition/platform/full coupled acceptance remain owned;original protected proof stores stay intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

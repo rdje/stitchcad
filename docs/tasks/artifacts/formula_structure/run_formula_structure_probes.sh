@@ -50,6 +50,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py
 python3 -I -B docs/tasks/artifacts/formula_structure/tangent_value_oracle.py --check
 python3 -I -B docs/tasks/artifacts/formula_structure/tangent_design_recipe_oracle.py > /dev/null
 python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
+python3 -I -B docs/tasks/artifacts/formula_structure/arc_body_faults.py
 python3 -I -B docs/tasks/artifacts/formula_structure/signed_angle_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/rational_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/scalar_contract.py

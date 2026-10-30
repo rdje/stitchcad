@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.arc.faults:actual copied-body arc sign/full-turn/scaling/rounding faults. Read arc.rs,original arc23/native sourced watcher and root_body_faults.py original-scope
-  snapshot/owned-process controls before reuse. Own complete source/output plans;preserve originals.
-- Arc values626 passes4 public tests/all23 original rows:18 admitted/3 final domain/2 exact width.
-  Real Cos/Sin zero arithmetic supplies original inputs;ArcLength and both contributions survive
-  zero/signed/full-turn output,storage/read and T1 refusal. All1411 arc bytes regenerate unchanged.
-- Private compiled-pi1/94filtered passes:all993 original bytes,640-bit scale/limbs and complete
-  A<2^256/target-denominator<2^257 adjacent-fraction proof reproduce. No runtime precision cutoff.
-  Scoped strict lint/fmt,book99/374/1659/2935/glossary0/history785/IDs+2children/map/diff pass.
-- Native root review625 closes85 rows/fault5/owned timeout2/primary root6;all544 inputs and copied
-  snapshot exact. n16 complete transitive/runtime locality review remains separately scheduled.
-  LIVE sourced arc23/pi;G1 6/18/G0 unapproved unchanged;full local/hosted79bd6f6a SHA-scoped.
-  Protect original archive/search/numerical/cleanup proofs;never rerun old transactions. Full PNT/
-  push400. Other coupled families/composition/platform/full resources/provider/replay/physical/
-  release remain open;no production verdict. Daily cleanup remains due2026-10-30 14:10UTC.
+- Next G1-SLICE.6.5.3.2.cleanup-20261030:director-requested daily safe artifact cleanup near24h.
+  Pending owner exists in execution sibling. Read full cleanup protocol/producer and last record;
+  freeze plan/preserve current proof logs and protected stores,apply with OS visibility,immediate
+  independent residue census before any launcher rebuild. Then .5d.4.forward numerical review.
+- Native arc review627 closes23 rows/18 successes/3 domain/2 width,complete compiled pi proof,
+  real sourced storage and five actual compiled faults. Arc report545 original hashes/root544
+  remain exact;both542-file snapshots restore,551 outputs planned and owned timeout2 pass each.
+- Shared original-scope controller selects source/fixture/target/watcher before writes;root CLI
+  compatibility baseline/fault5 passes. Primary arc4/strict lint/fmt pass. Book99/374/1659/2936,
+  glossary0/history786/IDs/map/diff;producer349/34232calls/file plans236/90/39/15/12 pass.
+- LIVE native root85/fault5 and arc23/fault5;G1 6/18/G0 unapproved unchanged. n16 full producer
+  locality remains owned. Full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/
+  numerical/cleanup proofs;never rerun old transactions. Full PNT/push400. Other families/
+  composition/platform/full resources/provider/replay/physical/release remain open.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

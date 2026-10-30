@@ -161,7 +161,8 @@ fn actual_sourced_arcs_keep_signed_turns_original_refusals_and_real_upstream_sto
         if let Some(integer) = expected.strip_prefix("integer:") {
             let expected =
                 R::from_signed_integer(integer.parse().expect("independent signed integer"));
-            let result = actual.expect("independent admitted arc");
+            assert!(actual.is_ok(), "independent admitted arc:{row}:{actual:?}");
+            let result = actual.expect("asserted independent admitted arc");
             assert_eq!(result.kind(), K::Length);
             assert_eq!(
                 result.numeric().expect("Length").rational(),
@@ -182,7 +183,11 @@ fn actual_sourced_arcs_keep_signed_turns_original_refusals_and_real_upstream_sto
             let binding = result.bind(&name).expect("real admitted signed storage");
             assert_eq!(binding.read().expect("actual stored read"), result, "{row}");
         } else {
-            let error = actual.expect_err("original completed mathematical failure");
+            assert!(
+                actual.is_err(),
+                "original mathematical refusal:{row}:{actual:?}"
+            );
+            let error = actual.expect_err("asserted original mathematical failure");
             let expected = if let Some(integer) = expected.strip_prefix("domain:") {
                 counts.1 += 1;
                 Error::ScalarDomain {

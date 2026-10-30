@@ -1,4 +1,4 @@
-"""Compile isolated copies of actual native root faults against the independent root fixture.
+"""Compile isolated original-scope native kernel faults against independent fixtures.
 
 Tracked production sources stay untouched. A complete repository-local workspace snapshot
 keeps the original private crate scope and uses only ordinary published Cargo test commands.
@@ -100,40 +100,47 @@ def timeout_control(profile, negative, positive):
     return {'parent_only_child_wrote': True, 'guarded_group_child_write_absent': True}
 
 
-def main():
+def main(config=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--plan-only', action='store_true')
     args = parser.parse_args()
+    config = dict(entry=Path(__file__), source=SOURCE, fixture=FIXTURE, run=RUN,
+        faults=FAULTS, test=TEST, target='formula_root_value_contract', rows=85, family='root') if config is None else config
+    assert set(config) == {'entry','source','fixture','run','faults','test','target','rows','family'}
+    kernel_source, fixture_path, run_dir = config['source'], config['fixture'], config['run']
+    faults, test_name, test_target = config['faults'], config['test'], config['target']
+    labels = ('baseline', *(label for label, _, _ in faults))
+    copy_root, report_path = run_dir / 'workspace', run_dir / 'report.json'
     profile = runpy.run_path(str(PROFILE_SOURCE))
-    initial = (Path(__file__), PROFILE_SOURCE, SOURCE, FIXTURE, ROOT / 'Cargo.toml',
+    initial = (Path(__file__), config['entry'], PROFILE_SOURCE, kernel_source, fixture_path, ROOT / 'Cargo.toml',
         ROOT / 'Cargo.lock', ROOT / 'rust-toolchain.toml')
-    logs = tuple(RUN / (label + '.log') for label in LABELS)
-    negative, positive = RUN / 'timeout-parent-only.txt', RUN / 'timeout-group.txt'
+    logs = tuple(run_dir / (label + '.log') for label in labels)
+    negative, positive = run_dir / 'timeout-parent-only.txt', run_dir / 'timeout-group.txt'
     # Guard the fixed roots before even read-only inventory dispatch. The full file plan below
     # is derived without creation;all paths are validated again before any snapshot/build write.
-    profile['plan_producer'](ROOT, sources=initial, directories=(RUN, COPY, ROOT / 'target'),
-        output_files=(*logs, REPORT, negative, positive))
+    profile['plan_producer'](ROOT, sources=initial, directories=(run_dir, copy_root, ROOT / 'target'),
+        output_files=(*logs, report_path, negative, positive))
     inventory = subprocess.run(['git', 'ls-files', 'crates'], cwd=ROOT,
         check=True, capture_output=True, text=True).stdout.splitlines()
     snapshot = tuple(sorted({ROOT / name for name in inventory} | {
         ROOT / name for name in ('Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml')}))
     sources = tuple(sorted(set(initial) | set(snapshot)))
-    destinations = tuple(COPY / path.relative_to(ROOT) for path in snapshot)
-    outputs = (*destinations, *logs, REPORT, negative, positive)
-    directories = tuple(sorted({RUN, COPY, ROOT / 'target', *(path.parent for path in destinations)}))
+    destinations = tuple(copy_root / path.relative_to(ROOT) for path in snapshot)
+    outputs = (*destinations, *logs, report_path, negative, positive)
+    directories = tuple(sorted({run_dir, copy_root, ROOT / 'target', *(path.parent for path in destinations)}))
     profile['plan_producer'](ROOT, sources=sources, directories=directories, output_files=outputs)
     before_hashes = {path.relative_to(ROOT).as_posix(): digest(path) for path in sources}
-    original, fixture = SOURCE.read_bytes(), FIXTURE.read_bytes()
+    original, fixture = kernel_source.read_bytes(), fixture_path.read_bytes()
     rows = fixture.decode().splitlines()[1:]
-    assert len(rows) == 85
+    assert len(rows) == config['rows']
     text = original.decode()
-    assert all(text.count(before) == 1 and before != after for _, before, after in FAULTS)
-    if COPY.exists():
-        existing = {path for path in COPY.rglob('*') if path.is_file()}
+    assert all(text.count(before) == 1 and before != after for _, before, after in faults)
+    if copy_root.exists():
+        existing = {path for path in copy_root.rglob('*') if path.is_file()}
         assert existing <= set(destinations), 'unplanned existing copied workspace file'
     if args.plan_only:
-        print('native root fault plan:6 variants/%d exact snapshot files/%d complete outputs;'
-            'no writes or compiler dispatch;rc=0' % (len(snapshot), len(outputs)))
+        print('native %s fault plan:%d variants/%d exact snapshot files/%d complete outputs;'
+            'no writes or compiler dispatch;rc=0' % (config['family'], len(labels), len(snapshot), len(outputs)))
         return
     profile['enter_producer'](ROOT, sources=sources, directories=directories, output_files=outputs)
     timeout_result = timeout_control(profile, negative, positive)
@@ -142,22 +149,22 @@ def main():
         destination.write_bytes(source.read_bytes())
     assert all(digest(destination) == before_hashes[source.relative_to(ROOT).as_posix()]
         for source, destination in zip(snapshot, destinations)), 'exact original workspace snapshot'
-    body = COPY / SOURCE.relative_to(ROOT)
+    body = copy_root / kernel_source.relative_to(ROOT)
     compiler = run_group(['rustc', '-vV'], timeout=30)
     assert compiler.returncode == 0, 'actual compiler identity'
     outcomes = []
     try:
-        for label, log in zip(LABELS, logs):
+        for label, log in zip(labels, logs):
             variant = original
             if label != 'baseline':
-                _, before, after = next(fault for fault in FAULTS if fault[0] == label)
+                _, before, after = next(fault for fault in faults if fault[0] == label)
                 variant = text.replace(before, after, 1).encode()
             profile['plan_producer'](ROOT, sources=sources, output_files=(body, log))
             body.write_bytes(variant)
             profile['plan_producer'](ROOT, sources=destinations, output_files=(log,))
             result = run_group(['cargo', 'test', '--offline', '--locked', '--manifest-path',
-                str(COPY / 'Cargo.toml'), '-p', 'sc-core', '--test', 'formula_root_value_contract',
-                '--message-format=json', TEST, '--', '--nocapture'], timeout=180)
+                str(copy_root / 'Cargo.toml'), '-p', 'sc-core', '--test', test_target,
+                '--message-format=json', test_name, '--', '--nocapture'], timeout=180)
             transcript = result.stdout + result.stderr
             profile['plan_producer'](ROOT, output_files=(log,))
             log.write_text(transcript.replace(str(ROOT), '.'))
@@ -170,23 +177,23 @@ def main():
             builds = [item for item in messages if item.get('reason') == 'build-finished']
             assert len(builds) == 1 and builds[0]['success'], \
                 'compiler failure is not an actual root fault rejection:' + label
-            assert 'running 1 test' in transcript and TEST in transcript, 'actual watched native test'
+            assert 'running 1 test' in transcript and test_name in transcript, 'actual watched native test'
             failed_rows = [index + 1 for index, row in enumerate(rows) if row in transcript]
             if label == 'baseline':
                 assert result.returncode == 0 and '1 passed; 0 failed' in transcript
-                assert digest(body) == before_hashes[SOURCE.relative_to(ROOT).as_posix()]
+                assert digest(body) == before_hashes[kernel_source.relative_to(ROOT).as_posix()]
             else:
                 assert result.returncode != 0 and '1 failed' in transcript and 'assertion' in transcript and failed_rows, \
                     'actual compiled root fault survived or unrelated refusal:' + label
             binaries = [Path(item['executable']) for item in messages
                 if item.get('reason') == 'compiler-artifact' and item.get('target', {}).get('name') ==
-                'formula_root_value_contract' and item.get('executable')]
+                test_target and item.get('executable')]
             assert len(binaries) == 1, 'published Cargo test artifact identity'
             profile['plan_producer'](ROOT, sources=(binaries[0],))
             outcomes.append({'label': label, 'cargo_rc': result.returncode, 'compile_succeeded': True,
                 'body_sha256': digest(body), 'failed_fixture_rows': failed_rows, 'binary': binaries[0].relative_to(ROOT).as_posix(),
                 'binary_sha256': digest(binaries[0]), 'log': log.relative_to(ROOT).as_posix()})
-            print('native root body:' + label + (' baseline passes' if label == 'baseline'
+            print('native ' + config['family'] + ' body:' + label + (' baseline passes' if label == 'baseline'
                 else ' actual compiled test rejects fault'), flush=True)
     finally:
         profile['plan_producer'](ROOT, output_files=(body,))
@@ -194,16 +201,17 @@ def main():
     assert {path.relative_to(ROOT).as_posix(): digest(path) for path in sources} == before_hashes
     assert all(digest(destination) == before_hashes[source.relative_to(ROOT).as_posix()]
         for source, destination in zip(snapshot, destinations)), 'all snapshot bytes restored'
-    assert {path for path in COPY.rglob('*') if path.is_file()} == set(destinations), \
+    assert {path for path in copy_root.rglob('*') if path.is_file()} == set(destinations), \
         'complete actual snapshot output census'
-    report = {'scope': 'actual copied native root bodies;finite85-row sourced/storage fault check only',
+    report = {'scope': 'actual copied native ' + config['family'] + ' bodies;finite sourced/storage fault check only',
+        'rows': config['rows'],
         'original_sources_unchanged': before_hashes, 'snapshot_restored': True,
-        'compiler': compiler.stdout, 'fixture_sha256': digest(FIXTURE), 'outcomes': outcomes,
+        'compiler': compiler.stdout, 'fixture_sha256': digest(fixture_path), 'outcomes': outcomes,
         'timeout_control': timeout_result,
         'planned_outputs': [path.relative_to(ROOT).as_posix() for path in outputs]}
-    profile['plan_producer'](ROOT, output_files=(REPORT,))
-    REPORT.write_text(json.dumps(report, indent=2) + '\n')
-    print('native root body faults:baseline1/actual compiled faults5/all original and snapshot hashes unchanged;rc=0')
+    profile['plan_producer'](ROOT, output_files=(report_path,))
+    report_path.write_text(json.dumps(report, indent=2) + '\n')
+    print('native %s body faults:baseline1/actual compiled faults%d/all original and snapshot hashes unchanged;rc=0' % (config['family'], len(faults)))
 
 
 if __name__ == '__main__':

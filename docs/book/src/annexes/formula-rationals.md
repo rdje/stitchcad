@@ -530,7 +530,7 @@ The full derivation is in the numerical fixed-point decision. Runtime work stays
 numerator/denominator bits and uses exact quotient/remainder rounding before result-width and
 Length-domain checks. The precision is a checked internal certificate, with no added language limit,
 platform libm dependency or empirical convergence cutoff. Sourced calls and scalar recipe/Design
-execution are available;coupled body faults and platform review remain owned.
+execution are available;five actual arc body faults pass and platform review remains owned.
 
 The compiled pi limbs are checked against the retained certificate by a native library test that
 re-runs its two-identity producer. The independent arc oracle uses a different pi identity and exact
@@ -538,7 +538,7 @@ Fraction enclosures. Its23 rows cover signed/full turns, zero, full128-bit compo
 refusals, scalar excess and rational neighbors straddling half-micrometre boundaries. The native
 arc target passes four tests,including actual sourced/storage boundaries and all1411 regenerated
 bytes. The focused private compiled-pi watcher passes with all993 certificate bytes reproduced.
-Actual body faults and platform verification remain owned. Focused invocations select that check:
+Five actual arc body faults pass;platform verification remains owned. Focused invocations select that check:
 
 ```bash
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --lib compiled_pi_endpoint_matches_the_reproduced_certificate

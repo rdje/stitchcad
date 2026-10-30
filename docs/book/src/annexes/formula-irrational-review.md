@@ -8,7 +8,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | Family | Available implementation | Coupled review boundary |
 | --- | --- | --- |
 | sqrt/hypot | Exact integer roots and sourced calls | Native85 rows/five actual body faults pass below;shared platform review remains |
-| arc_length | Signed/full-turn fixed-pi certified rounding | Complete pi proof/sourced23 pass below;actual body faults remain .5d.4.arc.faults |
+| arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;shared platform review remains |
 | sin/cos | Exact folding and complete forward threshold certificate | Coupled actual-body/source/platform review remains .5d.4.forward |
 | atan/atan2 | Principal branches and complete inverse threshold certificate | Coupled actual-body/source/platform review remains .5d.4.inverse |
 | tan | Explicit per-call quotas,native139 and real paired24 acceptance | Coupled adaptive/error/fault review remains .5d.4.tangent |
@@ -103,7 +103,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
 
 The formula-structure probe suite also runs this check. These are native POSIX process-group
 controls and finite fault witnesses. They close the scoped native root review;actual cross-platform
-numerical execution remains .5d.4.platform. Arc,forward/inverse,Tan and mixed-chain review remain
+numerical execution remains .5d.4.platform. Forward/inverse,Tan and mixed-chain review remain
 owned before the complete coupled irrational gate can close.
 
 ## Arc length certificate and sourced boundaries
@@ -142,5 +142,33 @@ arc fixture regeneration. Arc fixture SHA256:
 af861fc5f0288f4389aea9eb4e6a1ce61ee4d064ef797f5eb0de0892e0eeffac.
 Pi certificate SHA256:
 c43023fdccac9912c0cb7adf2250492003d4c11c7a88fb3056db3b156462eb54.
-Actual copied-body arc faults remain .5d.4.arc.faults. Shared platform/full resource/provider/
+Actual copied-body arc faults are recorded below. Shared platform/full resource/provider/
 replay/physical and complete coupled acceptance stay separately owned;this grants no production approval.
+
+## Actual native arc body faults
+
+The arc_body_faults.py entry uses the shared original-scope workspace controller. Its actual
+23-row sourced watcher passes unchanged. Five copied arc-body faults each compile successfully
+and fail an assertion containing an original independent row:incorrect product-sign OR(row10),
+discarded full turns(row6),wrong pi scale(row4),missing radius(row11) and truncation(row4).
+The production body remains unchanged;no compiler failure can count as a mathematical fault.
+
+The guarded arc run retains545 exact original inputs,an exact542-file snapshot and551 complete
+planned outputs. Its report records actual Cargo binary identity,source/binary hashes and failing
+fixture rows at target/arc_body_faults/0627-workspace/report.json. Original and copied inputs
+match after restoration. Both owned timeout controls pass before native variants execute.
+
+The root entry retains its original CLI and re-passes baseline/five actual faults after shared
+controller reuse,including both timeout controls and all544 original input hashes. Family source,
+fixture,target,watcher and output roots are selected by tracked entry configuration and admitted
+before any copy/build write. The formula-structure probe suite runs both entries.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/arc_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/arc_body_faults.py
+```
+
+The primary arc target's four tests and scoped strict lint pass after adding explicit independent
+row context to failure assertions. This closes scoped native arc review. Complete producer runtime/
+locality remains n16;other families,mixed chains,actual platform execution and full coupled/
+resource/provider/replay/physical/production acceptance keep their separate owners.

@@ -768,3 +768,11 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.6.5.3.2.prepush-400.producer-inventory`
   Status: `done`
   Goal:0546 completed scope; [whole scope/proofs](../history/window24.md#stitchcad-devnotes-part705md).
+
+- ID: `G1-SLICE.6.5.3.2.cleanup-20261030`
+  Status: `pending`
+  Goal:director-requested daily safe artifact cleanup around the24-hour cadence after arc review,
+  before forward review. Read current cleanup protocol;own frozen plan,protected proof census,
+  exact current verification-log preservation,apply and immediate independent residue census.
+  Keep package/dependency stores,linked caches,other Git repositories and original numerical/
+  archive/search proof workspaces intact. No deletion without complete safety/ownership evidence.

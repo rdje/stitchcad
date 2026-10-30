@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0626 — re-derive complete arc proof and sourced storage boundaries
+## STITCHCAD-G1-0627 — falsify actual arc bodies through the shared original-scope controller
 
-- Run all23 original arc fixtures through real upstream/sourced calls and storage:18 admitted,3 final-domain/2 exact-width refusals. Preserve successful contributions,signs/full turns and typed failures. Regenerate all1411 arc bytes and private993-byte compiled-pi certificate/limbs.
-- Arc4/compiled-pi1/scoped strict lint/fmt,book99/374/1659/2935/glossary0/history785/IDs/map/diff pass. Repair stale current provenance wording. LIVE sourced arc23/pi;G1 6/18/G0 unapproved unchanged. Next actual arc faults;platform/full coupled acceptance stays owned.
+- Compile arc baseline and five original-body faults against independent rows,covering product sign,full turns,pi scale,radius and rounding. Retain545 exact original inputs/restored542-file snapshot/551 planned outputs and actual owned timeout controls.
+- Root CLI baseline/fault5/timeout2 and primary arc4/strict lint/fmt pass. Book99/374/1659/2936/glossary0/history786/IDs/map/diff and producer/file-plan checks pass. LIVE root85/fault5,arc23/fault5;G1 6/18/G0 unapproved unchanged. Next daily cleanup,then forward review;full coupled/platform remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
