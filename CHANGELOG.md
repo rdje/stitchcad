@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0619 — execute actual scalar Tan expressions under explicit policies
+## STITCHCAD-G1-0620 — execute actual source graphs with explicit tangent policies
 
-- Add policy-aware preparation and real sourced Tan dispatch. Legacy missing policy precedes source admission;all plans/results/prep/runtime failures retain selected limits. Lazy branches,per-call budgets,full-width inputs,original typed causes and call flags remain exact.
-- New8/existing16/private9/doc4/scoped lint/fmt/three consumer type checks pass. Book98/374/1648/2912/glossary0/history778/IDs/map/diff pass. LIVE standalone expression policies,G1 6/18/G0 unapproved unchanged. Next source graph adoption;recipe/Design/paired/full verification pending.
+- Select per-call limits before complete source plan allocation/values. Preserve original graph/proof/input/read/ordinal/context owners,unbound once-only supplier roots and typed causes. Graph and source-backed recipe errors retain selected limits,including pre-value owner refusal.
+- New6/source12/private9/Design1/doc5/scoped lint/fmt/two consumer checks pass. Book98/374/1649/2914/glossary0/history779/IDs/map/diff pass. LIVE source policies,G1 6/18/G0 unapproved unchanged. Next direct recipe-owned Tan,then Design/paired acceptance;full verification remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

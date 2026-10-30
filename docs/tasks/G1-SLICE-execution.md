@@ -126,52 +126,48 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   paired acceptance follows implementation,before full broader-family runtime closure.
 - ID: `G1-SLICE.5e.2.4.integration.tangent.expression`
   Status: `done`
-  Goal:actual standalone expression policy-aware preparation/native Tan execution with original
-  proof/input/context/error/read/flag contracts. No supplied AST values or new language code.
-  - [x] REPRODUCE / ISSUE:native tangent0618 existed but actual expression preparation rejected
-    every Tan and retained no explicit native policy. Runtime policy must also survive failures
-    before Tan;missing configuration cannot become a fabricated numerical-domain refusal.
-  - [x] ROOT CAUSE (WHY + WHERE): git show HEAD:crates/sc-core/src/recipe/execution/plan.rs
-    →no explicit tangent expression factory/selected policy before0619,rc=0;current factory and
-    field mechanically compared with HEAD. cargo clippy -p sc-core --lib --test
-    formula_tangent_expression_contract --test formula_scalar_execution_plan_contract -- -D warnings
-    →new shared native failure variant>=368B versus112B before allowances;keep full original
-    cause inline until existing outer witness box,not another native diagnostic allocation.
-  - [x] FIX:explicit per-call policy factory/common complete capability-before-source path;
-    legacy MissingTangentPolicy retains actual node before source allocation/joins/values.
-    Native sourced Tan dispatch uses real child values;selected policy survives every plan/result/
-    prep/runtime error,including allocation or earlier unrelated failure. Exact/lazy flags and
-    mathematical/resource causes stay original. Native budgets reset per actual call,not globally.
-    Existing engine error witness remains outside logical quotas;four measured narrow lint
-    allowances preserve original inline failures and the existing single outer error box.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_expression_contract
-    →eight actual AST tests pass,rc=0:root/inventory identity,complete missing-policy precedence,
-    selected-only zero-budget branches,per-call budgets,real Cos/Tan inputs,false conditions,
-    T1/T2,original pole/first/later quotas,exact148-bit width/full128-bit literal Count division,
-    original native chain and unrelated error policy. Initial test used a nonexistent normalized
-    source getter;compiler identified it,retaining original source string fixes test ownership.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_execution_plan_contract --test
-    formula_scalar_execution_contract →5+11 pass,including49-row reference/frozen regeneration,
-    rc=0. cargo test -p sc-core --lib recipe::execution:: →nine private actual-context/poison/
-    suspension/storage guards pass,rc=0. cargo test -p sc-core --doc recipe::execution::plan::
-    →four positive/privacy docs pass,rc=0. Scoped strict Clippy/selected rustfmt pass,rc=0.
-    cargo check -p sc-core --test formula_scalar_recipe_execution_contract --test
-    formula_scalar_source_graph_execution_contract --test design_structure_contract →three affected
-    targets compile,rc=0. Compiler caught three test-compatibility alias edits matched as suffixes;
-    lexical full-alias correction restores all original fixture scopes,without invented error code.
-    Positive book98/374/1648/2912/glossary310/9/158/0/history778 four exact Git spans/prior IDs/order/
-    map/diff pass,rc=0. No broader-family runtime/full CI/platform verification inferred.
-  - [x] LOCKSTEP:README/book/native-status facts/decision/task/index/MEM/DEV/CHANGE/LIVE align;
-    whole0618/native subtree retained778;new integration children own sources/recipes/Design and
-    independent paired acceptance. Next actual source graph policy adoption;legacy graph/recipe/
-    Design scopes stay unchanged until their owners. LIVE standalone policies,G1 6/18/G0 unapproved.
-    promotion: promoted (decision_tangent-resources.md gains actual expression policy retention/per-call scope answer).
-  Commit:STITCHCAD-G1-0619;Verification:new8/existing16/private9/doc4/scoped lint/three consumer type checks.
+  Goal:0619 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part779.md).
 - ID: `G1-SLICE.5e.2.4.integration.tangent.sources`
-  Status: `pending`
-  Goal:actual complete source-graph plan/runtime selects and retains tangent policy across original
-  source owners,whole capability/resource admission,lazy unbound caches and failures. Read all
-  factories first;split further if needed. No source binding round or substituted canonical roots.
+  Status: `done`
+  Goal:actual complete source-graph policy selection/native execution with original owners,
+  complete admission,lazy unbound caches,ordinals and typed first failures. No source binding round.
+  - [x] REPRODUCE / ISSUE:expression Tan0619 existed but complete source preparation still denied
+    every Tan and graph/paired errors carried no selected native policy. Defaulting or dropping
+    policy would obscure actual resource admission and source cache ownership.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test formula_tangent_sources_contract
+    →six actual graph/factory/native/pair tests pass,rc=0. Source graph builds separate actual
+    expression plans;GraphSources must use each selected plan policy and SourceRuntime must
+    retain it while attaching original supplier context. No graph edge supplies a binding boundary.
+    Strict Clippy measured new inline preparation136B/execution144B and Design wrapper144B;
+    five narrow allows preserve original allocator witnesses without diagnostic allocation.
+  - [x] FIX:explicit per-call source policy factory/common path preserves complete quota-first
+    order and all-node MissingTangentPolicy checks before scalar-plan allocations/values.
+    Every actual source plan inherits selected limits;real lazy native calls retain unbound roots,
+    original contexts/proofs/read/once-only completion metadata. All graph outcomes/prep/runtime
+    errors retain policy;paired source-backed recipe errors also retain graph policy before values.
+    Direct recipe-owned Tan remains separate;no supplied cache,value,source-id/header or code.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_sources_contract
+    →six pass,rc=0:whole quotas before missing unused-source policy,zero-budget untaken calls,
+    original full128-bit unbound Angle supplier/shared Tan finishing once,late8219-bit demand
+    after1536 terms with actual source index/node/Cos input,missing selection/unrelated error
+    policies,and source-backed recipe success/foreign-owner refusal preserving selected graph limits.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_source_graph_plan_contract
+    --test formula_scalar_source_graph_execution_contract →4+8 pass,including27 independent rows/
+    exact5350B regeneration and actual512-source chain on requested64KiB stack,rc=0. cargo test -p
+    sc-core --lib recipe::execution:: →nine original context/cache/poison/storage guards pass,rc=0.
+    Scoped strict Clippy/selected rustfmt and cargo check -p sc-core --test design_structure_contract
+    --test formula_scalar_recipe_execution_contract →lint/fmt/two consumer targets pass,rc=0.
+    cargo test -p sc-core --test design_structure_contract
+    unused_source_and_actual_recipe_unavailable_nodes_keep_original_factory_causes_without_partial_plan
+    →one actual source/recipe factory-priority test passes,rc=0. Source graph/worker doc filters
+    pass4+1 positive/privacy/no-default examples,rc=0. Positive book98/374/1649/2914,glossary310/9/158/0,
+    history779 four exact Git spans,prior IDs/order/map/diff pass,rc=0. No broader CI/platform claim.
+  - [x] LOCKSTEP:README/book/source-status facts/decision/task/index/MEM/DEV/CHANGE/LIVE align;
+    whole0619 retained779. Next actual direct recipe policy adoption,then Design and paired
+    independent acceptance. Existing source-backed recipes can read configured Tan suppliers;
+    their own direct Tan remains unconfigured. LIVE source policies,G1 6/18/G0 unapproved unchanged.
+    promotion: declined (existing tangent per-call policy and unbound-source ownership decisions already own these semantics;this is actual source integration).
+  Commit:STITCHCAD-G1-0620;Verification:new6/existing12/private9/Design1/doc5/scoped lint/two consumer checks.
 - ID: `G1-SLICE.5e.2.4.integration.tangent.recipes`
   Status: `pending`
   Goal:actual standalone and source-backed ordered recipe plans/runtimes retain selected tangent

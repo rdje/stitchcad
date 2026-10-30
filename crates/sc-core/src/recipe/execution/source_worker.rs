@@ -42,6 +42,8 @@ impl<'p> Plan<'p> {
     /// Missing exact source selection precedes runtime allocation. Preparation preserves inline
     /// allocation causes;execution preserves actual source position,node and original scalar cause.
     /// Any failure drops the entire private outcome/cache prefix and returns no accepted result.
+    // Preserve original allocation cause and selected policy inline on pre-value failure.
+    #[allow(clippy::result_large_err)]
     pub fn evaluate_source<'a>(
         self,
         source: EntityId,
@@ -53,10 +55,12 @@ impl<'p> Plan<'p> {
         let plan: Plan<'a> = self;
         let graph = plan.graph();
         let limits = plan.limits();
+        let tangent_limits = plan.tangent_limits();
         let checked = graph.dependencies().checked();
         let fail = |cause| Error {
             graph,
             limits,
+            tangent_limits,
             source,
             cause,
         };

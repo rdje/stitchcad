@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — execute actual scalar expressions with explicit tangent policies
+## _(2026-10-30 UTC)_ — execute actual source graphs with explicit tangent policies
 
-0619 policy-aware preparation selects explicit per-call native limits before complete capability/source admission. Legacy MissingTangentPolicy stays a setup refusal,not a language code. Actual sourced Tan uses completed children;plans/results/all prep/runtime failures retain policy,including earlier causes.
-Exact zero/unit and selected-only branches preserve call/condition flags and T1/T2. Full128-bit Angle literal/Count arithmetic reaches actual near-midpoint/pole-width inputs. Native quotas reset per executed call;aggregate heap/CPU and existing boxed witnesses remain outside those logical limits.
-New8/existing16/private9/doc4/scoped lint/fmt/three consumer type checks pass. Compiler caught normalized-source test getter and suffix-matched compatibility aliases;original sources/full enum aliases fix them. Measured shared failure>=368B stays inline under four narrow allows until existing outer box.
-Book98/374/1648/2912/glossary0/history778 four spans/IDs/map/diff pass. [Whole0618](docs/history/stitchcad-devnotes-part778.md) retained. Next source graphs,then recipe/Design/paired acceptance. LIVE standalone policies,G1 6/18/G0 unapproved unchanged. Full PNT/push400/proofs retained;no full CI/platform claim.
+0620 adds policy-aware complete source preparation. Original layout quotas precede all-source capability admission;legacy Tan reports missing policy. Every original expression retains selected per-call limits before values. Actual lazy suppliers stay unbound,finish once and preserve original metadata/flags.
+Graph/preparation/nested scalar failures retain selected limits and original proof/input/source context. Existing source-backed recipe mode can read configured Tan suppliers;graph policy survives even pre-value foreign-owner refusal. Direct recipe-owned calls remain next. No cache seed or edge binding round.
+New6/source12/private9/Design1/doc5/scoped strict lint/fmt/two consumer checks pass;27 independent source rows/all5350B exact and requested64KiB/512-source chain pass. Measured source136/144B and Design144B errors retain allocator witnesses under five narrow allows,without new diagnostic boxes on allocation failure.
+Book98/374/1649/2914/glossary0/history779 four spans/IDs/map/diff pass. [Whole0619](docs/history/stitchcad-devnotes-part779.md) retained. Next direct recipe policies,Design and paired acceptance. LIVE source policies,G1 6/18/G0 unapproved unchanged. Full PNT/push400/proofs retained;no full CI/platform claim.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

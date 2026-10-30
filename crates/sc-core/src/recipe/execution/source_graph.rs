@@ -6,6 +6,7 @@ use super::{
 use crate::recipe::{
     FormulaAcyclicSourceDependencies, FormulaBuiltin, FormulaCheckedNode,
     FormulaCheckedNodeForm as Form, FormulaCheckedSource, FormulaDeclarationSource, FormulaKind,
+    FormulaTangentLimits,
 };
 use core::fmt;
 use std::collections::TryReserveError;
@@ -119,7 +120,14 @@ pub enum FormulaScalarSourceGraphPlanRefusal<'a> {
         /// Actual inferred root kind.
         actual: FormulaKind,
     },
-    /// Actual tangent/geometry implementation is absent from the shared scalar catalog.
+    /// An actual Tan call requires explicitly selected limits before any source preparation.
+    MissingTangentPolicy {
+        /// Original authored source index,including unused sources.
+        source_index: usize,
+        /// Original certified Tan call node.
+        node: FormulaCheckedNode<'a, 'a>,
+    },
+    /// Actual builtin is unavailable in the selected scalar scope.
     UnavailableBuiltin {
         /// Original authored source index.
         source_index: usize,
@@ -168,6 +176,7 @@ pub struct FormulaScalarSourceGraphPlanError<'a> {
     graph: &'a FormulaAcyclicSourceDependencies<'a>,
     limits: FormulaSourceGraphExecutionLimits,
     refusal: FormulaScalarSourceGraphPlanRefusal<'a>,
+    tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a> FormulaScalarSourceGraphPlanError<'a> {
     /// Actual complete acyclic canonical Derived relation and its original source/input owners.
@@ -179,6 +188,11 @@ impl<'a> FormulaScalarSourceGraphPlanError<'a> {
     #[must_use]
     pub const fn limits(&self) -> FormulaSourceGraphExecutionLimits {
         self.limits
+    }
+    /// Original selected per-call tangent policy,including complete population failures.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.tangent_limits
     }
     /// Original complete resource/capability/source cause.
     #[must_use]
@@ -245,6 +259,7 @@ pub struct FormulaScalarSourceGraphPlan<'a> {
     name_uses: usize,
     workspace_records: usize,
     pub(super) sources: Vec<FormulaScalarSourceGraphSource<'a>>,
+    tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a> FormulaScalarSourceGraphPlan<'a> {
     /// Actual complete acyclic relation;no substituted input/source snapshot.
@@ -256,6 +271,11 @@ impl<'a> FormulaScalarSourceGraphPlan<'a> {
     #[must_use]
     pub const fn limits(&self) -> FormulaSourceGraphExecutionLimits {
         self.limits
+    }
+    /// Explicit policy for each actual Tan request,or None for legacy unconfigured sources.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.tangent_limits
     }
     /// Complete actual source node count.
     #[must_use]
@@ -293,9 +313,71 @@ impl<'s> FormulaAcyclicSourceDependencies<'s> {
     /// scanning;complete capability scanning precedes the outer vector and any per-source plan.
     /// Actual unavailable nodes and original factory causes survive;no accepted prefix or fake
     /// language refusal for an unavailable implementation is produced. Allocator causes stay inline.
+    // Original source allocation/policy causes stay inline;refusing admission must not allocate a box.
+    #[allow(clippy::result_large_err)]
     pub fn prepare_scalar_sources<'a>(
         &'a self,
         limits: FormulaSourceGraphExecutionLimits,
+    ) -> Result<FormulaScalarSourceGraphPlan<'a>, FormulaScalarSourceGraphPlanError<'a>>
+    where
+        's: 'a,
+    {
+        self.prepare_scalar_sources_with_policy(limits, None)
+    }
+
+    /// Prepare every actual source with explicit per-call tangent limits before values.
+    /// Complete source/node/name/output/workspace quotas still precede all-node capability
+    /// admission. Every source,including unused roots,retains the same actual selected policy.
+    /// Untaken calls consume no native resources;source roots remain unbound until real storage.
+    /// ```
+    /// use sc_core::{ontology::EntityId,recipe::*,value::*};
+    /// let formula=EntityId::from_bits(9001);
+    /// let expression=FormulaExpressionDocument::new("tan(30 deg)".into())?;
+    /// let n=expression.node_count();
+    /// let sources=FormulaSources::new(vec![FormulaSource::new(formula,expression)],
+    ///     FormulaSourceLimits::new(1,64,64))?;
+    /// let inputs=CanonicalInputs::new(vec![],vec![ScalarInputDeclaration::new(
+    ///     ScalarInputDeclarationDefinition { id:EntityId::from_bits(10),
+    ///         source:EntityId::from_bits(20),kind:ScalarInputKind::Ratio,
+    ///         state:ScalarInputState::Derived { formula } })?])?;
+    /// let normalized=FormulaSourceInputs::new(&inputs,&sources).expect("actual joins")
+    ///     .normalize_sources(FormulaSourceNormalizationLimits::new(1,n,1+2*n)).expect("actual arenas");
+    /// let checked=normalized.check_sources(&FormulaNamespace::new([])?,
+    ///     FormulaSourceCheckLimits::new(1,n,1,1+2*n)).expect("actual kinds");
+    /// let deps=checked.prepare_dependencies(FormulaSourceDependencyLimits::new(1,0,2)).expect("actual edges");
+    /// let graph=deps.admit_acyclic(FormulaSourceCycleLimits::new(1,2)).expect("actual acyclic proof");
+    /// let selected=FormulaTangentLimits::new(2073,512);
+    /// let plan=graph.prepare_scalar_sources_with_tangent_limits(
+    ///     FormulaSourceGraphExecutionLimits::new(1,n,0,2+2*n,1),selected).expect("actual policy");
+    /// let result=plan.evaluate_source(formula,FormulaScalarExecutionContext::new(
+    ///     FormulaToleranceContext::empty(),FormulaSizeContext::empty())).expect("actual Tan root");
+    /// assert_eq!(result.plan().tangent_limits(),Some(selected));
+    /// assert_eq!(result.entry().value().numeric().map(|v|v.rational()),
+    ///     Some(FormulaRational::from_signed_integer(577350)));
+    /// assert!(result.entry().value().sources().contains(FormulaBuiltin::Tan));
+    /// # Ok::<(),Box<dyn std::error::Error>>(())
+    /// ```
+    /// # Errors
+    /// Original complete population,capability,source or allocation cause with selected policy.
+    // Original source allocation/policy causes stay inline;refusing admission must not allocate a box.
+    #[allow(clippy::result_large_err)]
+    pub fn prepare_scalar_sources_with_tangent_limits<'a>(
+        &'a self,
+        limits: FormulaSourceGraphExecutionLimits,
+        tangent_limits: FormulaTangentLimits,
+    ) -> Result<FormulaScalarSourceGraphPlan<'a>, FormulaScalarSourceGraphPlanError<'a>>
+    where
+        's: 'a,
+    {
+        self.prepare_scalar_sources_with_policy(limits, Some(tangent_limits))
+    }
+
+    // Original source allocation/policy causes stay inline;refusing admission must not allocate a box.
+    #[allow(clippy::result_large_err)]
+    fn prepare_scalar_sources_with_policy<'a>(
+        &'a self,
+        limits: FormulaSourceGraphExecutionLimits,
+        tangent_limits: Option<FormulaTangentLimits>,
     ) -> Result<FormulaScalarSourceGraphPlan<'a>, FormulaScalarSourceGraphPlanError<'a>>
     where
         's: 'a,
@@ -306,6 +388,7 @@ impl<'s> FormulaAcyclicSourceDependencies<'s> {
             graph,
             limits,
             refusal,
+            tangent_limits,
         };
         let checked = graph.dependencies().checked();
         let count = checked.sources().len();
@@ -369,12 +452,21 @@ impl<'s> FormulaAcyclicSourceDependencies<'s> {
             }
             for node in proof.root().all_nodes() {
                 match node.form() {
-                    Form::Call { builtin, .. } if !scalar_builtin_available(builtin) => {
-                        return Err(refuse(Refusal::UnavailableBuiltin {
-                            source_index,
-                            node,
-                            builtin,
-                        }))
+                    Form::Call { builtin, .. } => {
+                        if builtin == FormulaBuiltin::Tan {
+                            if tangent_limits.is_none() {
+                                return Err(refuse(Refusal::MissingTangentPolicy {
+                                    source_index,
+                                    node,
+                                }));
+                            }
+                        } else if !scalar_builtin_available(builtin) {
+                            return Err(refuse(Refusal::UnavailableBuiltin {
+                                source_index,
+                                node,
+                                builtin,
+                            }));
+                        }
                     }
                     Form::Name { declaration, .. } => match declaration.source() {
                         FormulaDeclarationSource::Point(_)
@@ -386,8 +478,7 @@ impl<'s> FormulaAcyclicSourceDependencies<'s> {
                         | FormulaDeclarationSource::LengthInput { .. }
                         | FormulaDeclarationSource::Reserved(_) => {}
                     },
-                    Form::Call { .. }
-                    | Form::Literal(_)
+                    Form::Literal(_)
                     | Form::Negate(_)
                     | Form::Square(_)
                     | Form::Binary { .. }
@@ -416,18 +507,22 @@ impl<'s> FormulaAcyclicSourceDependencies<'s> {
                         error: Box::new(error),
                     })
                 })?;
-            let plan = admission.prepare_scalar(inputs).map_err(|error| {
-                match error.into_allocation_error() {
-                    Ok(error) => refuse(Refusal::SourceAllocation {
-                        source_index,
-                        requested: d,
-                        error,
-                    }),
-                    Err(error) => refuse(Refusal::SourcePreparation {
-                        source_index,
-                        error: Box::new(error),
-                    }),
+            let prepared = match tangent_limits {
+                Some(tangent_limits) => {
+                    admission.prepare_scalar_with_tangent_limits(inputs, tangent_limits)
                 }
+                None => admission.prepare_scalar(inputs),
+            };
+            let plan = prepared.map_err(|error| match error.into_allocation_error() {
+                Ok(error) => refuse(Refusal::SourceAllocation {
+                    source_index,
+                    requested: d,
+                    error,
+                }),
+                Err(error) => refuse(Refusal::SourcePreparation {
+                    source_index,
+                    error: Box::new(error),
+                }),
             })?;
             sources.push(FormulaScalarSourceGraphSource { source, plan });
         }
@@ -438,6 +533,7 @@ impl<'s> FormulaAcyclicSourceDependencies<'s> {
             name_uses,
             workspace_records,
             sources,
+            tangent_limits,
         })
     }
 }

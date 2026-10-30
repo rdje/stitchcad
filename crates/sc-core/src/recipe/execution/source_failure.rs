@@ -61,6 +61,7 @@ pub enum FormulaScalarSourceGraphExecutionCause<'a> {
 pub struct FormulaScalarSourceGraphExecutionError<'a> {
     pub(super) graph: &'a FormulaAcyclicSourceDependencies<'a>,
     pub(super) limits: FormulaSourceGraphExecutionLimits,
+    pub(super) tangent_limits: Option<crate::recipe::FormulaTangentLimits>,
     pub(super) source: EntityId,
     pub(super) cause: FormulaScalarSourceGraphExecutionCause<'a>,
 }
@@ -74,6 +75,11 @@ impl<'a> FormulaScalarSourceGraphExecutionError<'a> {
     #[must_use]
     pub const fn limits(&self) -> FormulaSourceGraphExecutionLimits {
         self.limits
+    }
+    /// Original selected per-call tangent policy,including selection or allocation failure.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<crate::recipe::FormulaTangentLimits> {
+        self.tangent_limits
     }
     /// Exact original requested entry id;no parameter/canonical-id or text fallback.
     #[must_use]

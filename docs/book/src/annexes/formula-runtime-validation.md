@@ -455,7 +455,7 @@ actual argument kinds before zero-vector handling, including a wrong first kind 
 second argument. Atan2ZeroVector retains actual homogeneous kind and zero operands.
 [Actual scalar expressions and recipes](formula-recipe-execution.md) now consume these sourced values.
 [Explicit-resource tangent calls](formula-trig-certificates.md#sourced-native-tangent-calls) now
-retain actual input/result/policy or original typed failure. Explicit-policy standalone Tan expressions are available;source/recipe/Design policies,geometry
+retain actual input/result/policy or original typed failure. Explicit-policy Tan expressions/sources are available;direct recipe/Design policies,geometry
 and full provider/replay integration remain open.
 
 ### Product named-tolerance comparisons

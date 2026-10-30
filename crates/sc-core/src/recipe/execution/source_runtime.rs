@@ -106,10 +106,12 @@ impl<'a> SourceRuntime<'a> {
         let context = *context;
         let s = plan.sources().len();
         let checked = plan.graph().dependencies().checked();
-        let evaluation = |source_index, error| Cause::Evaluation {
-            source_index,
-            error: Box::new(error),
-        };
+        let tangent_limits = plan.tangent_limits();
+        let evaluation =
+            |source_index, error: super::FormulaScalarExecutionError<'a>| Cause::Evaluation {
+                source_index,
+                error: Box::new(error.with_tangent_limits(tangent_limits)),
+            };
         let start = |index: usize, machines: &mut [Machine<'a>], plan: &Plan<'a>| {
             let Some(source) = plan.sources().get(index) else {
                 unreachable!("actual exact source index");

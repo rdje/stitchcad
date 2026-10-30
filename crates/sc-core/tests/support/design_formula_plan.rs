@@ -250,7 +250,7 @@ fn unused_source_and_actual_recipe_unavailable_nodes_keep_original_factory_cause
         .prepare_scalar(&graph)
         .expect_err("unused tangent cannot prepare scalar source plan");
     assert!(matches!(error.refusal(),Refusal::Sources(cause)
-        if matches!(cause.refusal(),FormulaScalarSourceGraphPlanRefusal::UnavailableBuiltin{source_index:1,builtin:FormulaBuiltin::Tan,node}
+        if matches!(cause.refusal(),FormulaScalarSourceGraphPlanRefusal::MissingTangentPolicy{source_index:1,node}
             if node.span().start()==0 && node.span().end()==10)));
     let actual = root("let authored:ratio=tan(1 deg)");
     let scope = actual.prepare_formula_scope(content()).expect("scope");

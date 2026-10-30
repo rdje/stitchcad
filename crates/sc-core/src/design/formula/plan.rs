@@ -94,6 +94,8 @@ impl<'a, H> DesignFormulaPlanInputs<'a, H> {
     /// # Errors
     /// Foreign graph precedes recipe admission,source preparation,then recipe preparation failures.
     /// Original errors and both selected policies remain available;no accepted partial plan escapes.
+    // Keep original source allocation/policy witness inline;admission failure must not allocate a box.
+    #[allow(clippy::result_large_err)]
     pub fn prepare_scalar<'p>(
         &'p self,
         graph: &'p FormulaAcyclicSourceDependencies<'p>,

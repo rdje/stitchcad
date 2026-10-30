@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-30`
-- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;expression0619;source/recipe/Design/platform pending
+- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;expression0619/source0620;recipe/Design/platform pending
 - **Owner / source:** engineer under the director's delegated implementation authority;
   G1-SLICE.5d.1.2.2.2.d.2.2.2, implementation G1-SLICE.5d.3.2.2
 
@@ -149,3 +149,13 @@ Actual mathematical/resource causes retain original operand/progress and the fai
 Existing engine error-witness boxing remains outside machine/native quotas;no extra native box
 or diagnostic allocation during allocator failure is introduced. Aggregate heap/CPU and real
 source/recipe/Design policy adoption retain their existing owners.
+
+## Actual source graph policies0620
+
+The complete actual acyclic graph selects per-call Tan limits after its original source/kind/
+dependency proofs and before per-source plan allocation or values. Complete graph quotas still
+win before missing-policy/capability errors. Every prepared expression and graph outcome/failure
+retains the same selected policy. Actual lazy suppliers remain unbound and finish once;no cache
+or edge introduces binding or a supplied computed result. Existing source-backed recipes can
+read configured Tan suppliers;graph policy also survives early ownership/preparation errors.
+Direct recipe-owned calls and integrated Design policy selection retain their separate owners.

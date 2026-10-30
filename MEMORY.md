@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.integration.tangent.sources:actual source-graph tangent policy adoption. Standalone expression0619 implemented:prepare_scalar_with_tangent_limits selects per-call limits
-  before values;legacy MissingTangentPolicy precedes source allocation/joins,even untaken calls.
-  Plan/result/prep/runtime errors retain original policy,including earlier non-Tan/allocator failure.
-  Real native sourced Tan uses completed child values;untaken calls consume no native resources/flag.
-- Read source_graph/source_runtime/source_read/failure/factories before code;split safely if needed.
-  Preserve original source/proof/input/context owners,unbound once-only caches/ordinals/first failures.
-  No source storage rounding or implicit policy. Recipe/Design/paired acceptance have pending children.
-- New AST8/existing scalar11+plan5/private9/doc4/scoped strict lint/fmt pass;three affected recipe/
-  source/Design targets compile. Original49 scalar/frozen exact. Shared full tangent failure>=368B
-  kept inline under narrow measured lint allowances until existing outer witness box,outside quotas.
-  Book98/374/1648/2912/glossary0/history778/IDs/map/diff pass. Native139/18 acceptance0618 retained;
-  whole native task subtree retired778. LIVE G1 6/18/G0 unapproved;full local/hosted79bd6f6a scoped.
-  Protect original archive/search/numerical/cleanup proofs;never rerun old transactions. Full PNT;
-  commit each slice,push400 after full gates. Coupled/platform/full resources/physical remain owned.
+- Next G1-SLICE.5e.2.4.integration.tangent.recipes:actual direct recipe-owned tangent policies.
+  Expression0619/source0620 implemented. Read recipe_plan/recipe_runtime/recipe_read/failure and
+  paired source/recipe/result contracts,then split safe slices if needed. Preserve original root/
+  input/context/proof/once-only storage/assertion/read/flag/error contracts;no supplied plan/value.
+- Source graph prepare_scalar_sources_with_tangent_limits selects explicit per-call limits after
+  existing graph proofs;complete layout quotas precede missing-policy/capability checks. Every
+  prepared expression inherits policy;actual lazy roots stay unbound and finish once. Graph and
+  nested scalar errors retain selected limits. Pair source_tangent_limits also survives pre-value
+  foreign-owner failure;legacy recipe can read configured Tan supplier but cannot directly call Tan.
+- New6/existing source12/private9/Design1/doc5/scoped lint/fmt/two consumer checks pass;27 source
+  reference rows/5350B exact,requested64KiB/512-source chain passes. Source136/144B and Design144B
+  errors stay inline under measured narrow allowances. Book98/374/1649/2914/glossary0/history779/
+  IDs/map/diff pass. LIVE G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect original
+  archive/search/numerical/cleanup proofs;never rerun old transactions. Full PNT;commit each,push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

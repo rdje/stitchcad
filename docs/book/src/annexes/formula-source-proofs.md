@@ -231,7 +231,7 @@ Preparation checks source count,checked complete arithmetic,node/name/output/wor
 then scans every original source for scalar implementation availability. Only after that complete
 scan can the outer source vector and per-expression source slots be allocated/prepared. It reuses
 the same exhaustive availability catalog as existing scalar execution;there is no second builtin
-list to drift. Late unused tangent/geometry gaps remain UnavailableBuiltin/UnavailableSource or
+list to drift. Legacy unused Tan calls report MissingTangentPolicy;geometry gaps remain UnavailableBuiltin/UnavailableSource or
 UnavailableRootKind with actual source/node witnesses. They do not become language errors.
 
 Every source then passes its actual existing execution admission and canonical/reserved source
@@ -502,3 +502,58 @@ Full geometry/operation dependency and cycle integration,load/replay,providers,w
 publication,full resource/backend bounds and platform/physical verification remain owned by
 G1-SLICE.5e.2.5.derived.integration and the existing execution/integration tasks. No cycle or
 execution certificate follows from successful name/kind checking alone.
+
+## Explicit tangent policies in source graphs
+
+The actual acyclic proof supplies prepare_scalar_sources_with_tangent_limits(layout,selected).
+The layout is the existing complete S/N/D/2S+2N+D/output allowance;selected is an explicit
+FormulaTangentLimits for each actual Tan request. Source count,population overflow and all complete
+layout quotas still precede capability admission. Every Tan occurrence,including unused roots and untaken
+branches,must have a selected policy before per-source scalar plan allocation/binding or values.
+The earlier input/namespace/kind/dependency factories remain authoritative and unchanged.
+
+```rust
+use sc_core::recipe::*;
+fn configured<'a>(graph: &'a FormulaAcyclicSourceDependencies<'a>,
+    layout: FormulaSourceGraphExecutionLimits, selected: FormulaTangentLimits)
+    -> Result<FormulaScalarSourceGraphPlan<'a>, FormulaScalarSourceGraphPlanError<'a>> {
+    graph.prepare_scalar_sources_with_tangent_limits(layout, selected)
+}
+```
+
+The resulting graph and every prepared expression retain the exact selected policy. The legacy
+entry point has no Tan policy and returns MissingTangentPolicy with the actual source index and
+call node. Complete population errors still win first. Preparation computes no source value.
+Explicit zero budgets configure the family:an unused source or untaken Tan branch performs no
+native request and adds no Tan contribution. A selected exact zero/unit requires only156 bits/0
+terms. Each executed nontrivial call has its own cumulative native iteration budget.
+
+| Actual source body | Selected bits/terms | Actual outcome |
+| --- | --- | --- |
+| `tan(0 deg)` | 156/0 | Ratio0 with Tan contribution |
+| `tan(30 deg)` | 2073/512 | Ratio577350ppm with Tan contribution |
+| `if(1==1,1.0,tan(90 deg))` | 0/0 | Ratio1M;untaken call contributes nothing |
+| `tan(90 deg)` | 156/0 | Original exact pole |
+
+The existing lazy source runtime invokes the prepared expression's policy and earns each unbound
+supplier root once. A full128-bit Angle literal divided by Count remains its exact fraction in the
+cache. A Tan consumer receives that original Angle,including actual upstream cos contributions.
+Repeated references reuse only that successfully computed supplier,with original completion
+ordinals/read witnesses. No source id,edge or cache adds storage rounding or a canonical value.
+
+Graph preparation/execution errors retain tangent_limits(),including population failures,missing
+selection,allocation or an unrelated earlier numerical cause. Nested actual scalar failures retain
+the same policy,original supplier index/call/proof and native input/progress/cause. No accepted
+cache prefix escapes failure. Logical layout/native quotas still exclude total heap/CPU and the
+existing error-witness boxes;allocator causes remain their original inline errors.
+
+A configured Tan supplier can already feed the existing source-backed recipe mode when the
+recipe itself has no direct Tan call. Success retains source_plan().tangent_limits();even a
+foreign-owner refusal before values retains source_tangent_limits(). Direct recipe-owned Tan
+and integrated Design policy selection remain the next implementation owners.
+
+Six focused tests cover whole-quota/missing-policy precedence,unused/untaken calls,an exact
+full-width unbound Angle supplier,once-only shared native roots,original late quota failures,
+missing selection/unrelated errors,and source-backed recipe success/foreign-owner retention.
+Existing12 source tests,nine private execution guards and five relevant compiler/doc examples
+pass. Coupled paired acceptance,full resources/backend/platform and production approval remain separate.

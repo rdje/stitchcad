@@ -3,7 +3,7 @@
 - **Type:** `fact`
 - **Date:** `2026-10-25`
 - **Status:** `active`; sin/cos and inverses implemented;tangent bounded-request plan selected,kernel pending
-- **Owner / source:** G1-SLICE.5d.1.2.2.1;bounded tangent strategy .5d.1.2.2.2.d.2 selected;native values0616;source calls0617;scoped139-row native acceptance0618;expression0619;source/recipe/Design/platform pending.
+- **Owner / source:** G1-SLICE.5d.1.2.2.1;bounded tangent strategy .5d.1.2.2.2.d.2 selected;native values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620;recipe/Design/platform pending.
 
 answers: "can trigonometric formula results land exactly on a rounding midpoint?" · "does convergence prove usable trig resources?" · "what bounds tangent folding and quotient conditioning?" · "how do unrounded tangent enclosures converge?"
 
@@ -192,4 +192,4 @@ width cases. Its independently constructed admitted near-midpoint Angle is
 At128/256 bits this model correctly remains undecided;512 certifies zero. Independent arctangent/
 alternate-pi bounds place the original angle below the true half-ppm threshold,rc=0. This is no
 lower bound on another algorithm's required precision or a universal512-bit guarantee.
-Bounded-request admission is selected in decision_tangent-resources.md;native tangent values0616;source calls0617;scoped139-row native acceptance0618;expression0619;source/recipe/Design/platform remain pending.
+Bounded-request admission is selected in decision_tangent-resources.md;native tangent values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620;recipe/Design/platform remain pending.

@@ -120,6 +120,10 @@ pub(super) struct GraphSources<'s, 'a> {
     pub(super) completed: &'s [Option<Completed>],
 }
 impl<'a> Sources<'a> for GraphSources<'_, 'a> {
+    fn tangent_limits(&self) -> Option<crate::recipe::FormulaTangentLimits> {
+        self.plan.tangent_limits()
+    }
+
     fn read_value(
         &mut self,
         node: Node<'a, 'a>,

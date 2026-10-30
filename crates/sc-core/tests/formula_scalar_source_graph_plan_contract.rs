@@ -4,13 +4,12 @@ use sc_core::{
     name::MachineToken,
     ontology::EntityId,
     recipe::{
-        FormulaBuiltin, FormulaCanonicalInputAdapter, FormulaDeclaration,
-        FormulaExpressionDocument, FormulaInitialDeclaration, FormulaInputOrigin, FormulaNamespace,
-        FormulaNormalizedSources, FormulaScalarExecutionSourceKind,
-        FormulaScalarSourceGraphPlanRefusal as Refusal, FormulaSource, FormulaSourceCheckLimits,
-        FormulaSourceCycleLimits, FormulaSourceDependencyLimits,
-        FormulaSourceGraphExecutionLimits as Limits, FormulaSourceInputs, FormulaSourceLimits,
-        FormulaSourceNormalizationLimits, FormulaSources,
+        FormulaCanonicalInputAdapter, FormulaDeclaration, FormulaExpressionDocument,
+        FormulaInitialDeclaration, FormulaInputOrigin, FormulaNamespace, FormulaNormalizedSources,
+        FormulaScalarExecutionSourceKind, FormulaScalarSourceGraphPlanRefusal as Refusal,
+        FormulaSource, FormulaSourceCheckLimits, FormulaSourceCycleLimits,
+        FormulaSourceDependencyLimits, FormulaSourceGraphExecutionLimits as Limits,
+        FormulaSourceInputs, FormulaSourceLimits, FormulaSourceNormalizationLimits, FormulaSources,
     },
     value::{
         CanonicalInputs, LengthDeclaration, LengthDeclarationDefinition, LengthState,
@@ -263,15 +262,10 @@ fn late_unused_unavailable_scalar_family_keeps_original_source_call_instead_of_l
     let error = graph
         .prepare_scalar_sources(Limits::new(3, 8, 1, 23, 3))
         .expect_err("actual unavailable catalog family");
-    let Refusal::UnavailableBuiltin {
-        source_index,
-        node,
-        builtin,
-    } = error.refusal()
-    else {
+    let Refusal::MissingTangentPolicy { source_index, node } = error.refusal() else {
         unreachable!("real unavailable call");
     };
-    assert_eq!((*source_index, *builtin), (2, FormulaBuiltin::Tan));
+    assert_eq!(*source_index, 2);
     let source = checked
         .sources()
         .get(2)
