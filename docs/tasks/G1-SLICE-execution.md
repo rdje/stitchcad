@@ -268,73 +268,85 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0599 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part758.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3`
   Status: `done`
-  Goal: actual Design-backed initial namespace/source graph/recipe proof joins over the same current
-  canonical inventory and owned source collection,with complete admitted resource populations.
-  Staged ownership:normalization owners borrow the real Design;checked owners borrow those arenas,
-  avoiding self-reference or caller-supplied equal-looking roots/namespaces. Actual source and recipe
-  factories remain authoritative. Root content admission is distinct from parsing/namespace/provider/
-  kernel scratch or allocator/CPU certification;do not turn a successful content meter into those.
+  Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.1`
   Status: `done`
-  Goal:0600 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part759.md).
+  Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.2`
   Status: `done`
-  Goal:0601 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part760.md).
+  Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.3`
   Status: `done`
-  Goal: same-real-root source dependency/cycle/scalar plans and whole recipe plans with complete
-  admitted logical populations before values. Reject cross-root proof substitutions even when ids/
-  revision/content agree. Keep namespace/provider/parser/kernel/full allocator bounds separately
-  owned and accurately described;prepare the actual runtime bridge without fake computed inputs.
-  Concrete0602:join only actual same-root checked source/recipe owners with explicit existing source/
-  recipe execution allowances. Reuse native dependency/cycle provenance;reject any graph not built
-  from this exact checked source proof before admission. Prepare complete actual source and whole
-  recipe scalar plans through existing factories;retain original typed failures and selected limits.
-  No new duplicate graph/checker/quota logic or numerical execution;actual worker bridge stays .4.4.
-  Commit integrity:first hook refused missing fresh ADDRESSED invocation inside that bullet;
-  actual six-pass command was already in ROOT. Recorded it in ADDRESSED,then refreshed authority.
-  Completion0602:actual same-root complete scalar source/ordered recipe planning;parent .4.3 closed
-  only for content/normalization/namespace/static/native plan provenance and logical quotas.
-  - [x] REPRODUCE / ISSUE:0601 had actual source/recipe kind owners but no actual-root plan join.
-    Existing native plans certify supplied proofs/inventories;equal ids/content cannot authorize
-    mixing separate containing roots or graphs from another accepted proof over the same arenas.
-  - [x] ROOT CAUSE (WHY + WHERE): inspect native dependency/cycle/source graph/recipe admission/
-    scalar plan factories and provenance getters. They retain exact immutable proof references,
-    so native stages can be reused without new graph/quota algorithms. Initial E0599 root.inputs
-    needed an unnecessary H bound;use the already admitted actual canonical/source join instead.
-    cargo test -p sc-core --test design_structure_contract formula_plan:: -- --nocapture →six
-    pass/33 filtered,rc=0 after correction;no extra host Clone/Debug/metadata bound introduced.
-  - [x] FIX: private plan-input join requires actual root pointer equality and selects both existing
-    source/recipe policies. prepare_scalar first checks exact source-proof graph provenance,then
-    native whole-recipe admission,source plan and actual-canonical whole recipe preparation.
-    Private combined plan owns both complete native plans;errors retain inputs/both selected limits
-    and original provenance/admission/source/recipe causes. Original allocation causes stay inline;
-    no accepted source-only prefix or numerical value escapes a later refusal.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract formula_plan::
-    -- --nocapture →six pass/33 filtered,rc=0. Exact source S1/N3/D0/W8/output1 and
-    recipe S2/N4/D3/W11/output2,actual graph/proof/canonical/prior-let pointers and unchanged Derived
-    RequiresEvaluation9003. Equal complete roots reject mixed proofs;another checked source proof
-    over the same root/arenas rejects ForeignGraph before zero quotas. Original recipe output1/2
-    refusal precedes source preparation;source workspace7/8 preserves original graph/limits/cause.
-  - [x] NO REGRESSION: unused source tangent/actual recipe tangent keep original source index/node/
-    statement/canonical causes;no partial combined plan. Empty actual recipe fits all-zero recipe
-    populations while required source remains complete. Scoped core lib/affected target strict
-    Clippy/changed rustfmt/diff →pass,rc=0. cargo test -p sc-core --doc design::formula::plan --
-    --nocapture →four pass,rc=0:generic no-host-bound preparation,E0616 owner/recipe replacement
-    and E0515 plan lifetime guards. Book98/357/1642/2894/glossary310/9/158/0,760 four Git spans/
-    prior live ids/order/uniqueness pass,rc=0. Existing33 native tests filtered;no broad suite/CI
-    claim. Full integrated feature verification remains .4.5;full/hosted79bd6f6a only.
-  - [x] LOCKSTEP: actual Design formula annex/API registry,task/index/MEM/DEV/CHANGE/LIVE describe
-    root/exact-proof joins,complete plan order,original quota/capability refusals/examples and
-    runtime/provider/kernel/allocator/CPU/whole Design boundaries. Whole0601 retained760/four spans.
-    Parent .4.3 complete;next .4.4 actual earned Derived recipe reads/shared roots/once storage,
-    then .4.5 independent integration acceptance. G1 6/18/G0 unapproved;D340 fixed;D334/D156/D223/
-    PLANNING.5 and full families/platform/physical owned. No numerical/approval proof from planning.
-    promotion: declined (uses existing actual-owner identity and immutable native provenance contracts;the exact stage join/order/refusals are retrievable in source/book/native/compiler contracts).
+  Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: actual ordered recipe Derived read integration with earned unbound source results,real
   let RHS→once storage→prior-let visibility,original contexts/read witnesses and atomic failure.
+  Staged0603+:preserve existing standalone source/recipe contracts while composing private actual
+  workers. One complete fallibly reserved source runtime caches only real unbound roots across
+  demands. Recipe continuations request actual Derived suppliers without replay or premature
+  binding. Reserve both complete workers/outcomes before values;whole failure publishes no prefix.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.1`
+  Status: `done`
+  Goal: extract shared private source runtime from existing worker. Full S/N reservations precede
+  values;real completed roots/ordinals survive repeated distinct demands without re-evaluation or
+  binding. Original one-shot selection/allocation/read/failure/result contracts remain exact.
+  Commit integrity:first hook refused ROOT's missing diagnostic invocation/result within its own
+  bullet. Recorded actual rg result there and refreshed book authority before restaging/retry.
+  Completion0603:shared private actual source runtime;standalone public contract preserved.
+  - [x] REPRODUCE / ISSUE:original source worker owns one local demand walk/cache and cannot be
+    reused across actual ordered recipe requests without replay or a separate counterfeit cache.
+    Shared source control must be reserved before values and retain only actual computed roots.
+  - [x] ROOT CAUSE (WHY + WHERE):inspect complete source worker/read/result/failure,private shared
+    machine and actual source graph plans. Original local machines/frames/outputs/ordinal become
+    one private runtime;source lookup and public selected-entry error context remain in the adapter.
+    rg -n 'struct SourceRuntime|fn (new|demand|finish)|SourceRuntime::new' on actual
+    execution/source_runtime.rs and source_worker.rs →private new/demand/finish plus existing
+    worker adapter invocation,rc=0. Full reservation is in new;real roots/poison guard are in demand.
+    Initial extraction E0425 missing EntityId import and test E0609 public source-view/read-slot
+    confusion corrected through actual import/private slot definitions;no new public data path.
+  - [x] FIX:fallibly reserve complete S controls/frames/output slots and every source's N task/value
+    buffers before starting machines. Private demand reuses actual successful roots/ordinals across
+    entries without re-evaluation or storage. Failed demand poisons the whole runtime before work;
+    neither reuse nor finish can publish an earlier prefix. Public exact-entry validation still
+    precedes allocation and original graph/limits/selection/context/read/failure/result survive.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --lib source_runtime::tests -- --nocapture
+    →one pass/87 filtered,rc=0. Actual source/namespace/canonical/graph factories,not seeded values:
+    a=1000/3,b=a*3=1000,c=a+a=2000/3. Shared a stays ordinal1,cached repeat changes no ordinal;
+    unused source stays empty,buffers retain pointers and canonical Derived stays RequiresEvaluation.
+    Actual later division failure preserves original source3/cause. Two caught private lifecycle
+    guard panics are expected:failed runtime cannot return an earlier root or publish its prefix.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_source_graph_execution_contract
+    -- --nocapture →eight pass,rc=0 including actual512-source/64KiB-requested-stack case and both
+    independent27-case/8-refusal/frozen-byte watchers. Original roots/ordinals/read traces/canonical
+    states/errors remain exact. Scoped strict core lib/affected integration-target Clippy and
+    changed rustfmt/diff →pass,rc=0. cargo test -p sc-core --doc
+    recipe::execution::source_worker -- --nocapture →one pass,rc=0. Book98/357/1642/2895,
+    glossary310/9/158/0,761 four exact Git spans/prior live ids/order/new uniqueness pass,rc=0.
+    No broad CI/matrix;new private test is native checked,not a claimed all-unit Clippy campaign.
+  - [x] LOCKSTEP:actual Design formula annex explains shared earned unbound roots/full reservation,
+    unchanged public single-entry semantics and failed-prefix ownership. Task/index/MEM/DEV/CHANGE
+    align;LIVE reviewed unchanged,G1 6/18/G0 unapproved. Whole0602 parent/child scope retained761/
+    four spans;original child links preserve0600/0601 provenance. Next .4.4.2 actual recipe Derived
+    adapter/.4.4.3 complete worker/.4.4.4 Design execution/.4.5 independent integration acceptance.
+    Namespace/parser/provider/kernel/allocator/CPU/full resource/platform/physical boundaries remain
+    owned. Full local/hosted79bd6f6a scoped;D340 fixed,D334/D156/D223/PLANNING.5 remain owned.
+    promotion: declined (internal extraction applies existing earned-unbound cache and machine lifecycle rules;actual repeated-demand/poison evidence and public compatibility remain retrievable in source/book/native contracts).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.2`
+  Status: `pending`
+  Goal: actual recipe Derived suspension/read adaptation using only the private earned source
+  runtime. Preserve original direct and prior-let witnesses,source/canonical identities and
+  standalone RequiresEvaluation behavior. No caller-seeded value/cache or synthetic statement.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3`
+  Status: `pending`
+  Goal: complete admitted scalar recipe/source worker with both full runtimes/outcomes reserved
+  before values. Actual recipe operand order/lazy reads/assertion contexts,earned shared roots,
+  true RHS→once storage→prior-let visibility and atomic whole-result failure with original causes.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.4`
+  Status: `pending`
+  Goal: expose actual same-root Design plan execution through private accepted result ownership,
+  actual original source/recipe read witnesses/contexts/errors and exact root/limits. No supplied
+  foreign plans or computed inputs. Scoped reference acceptance remains separately owned .4.5.
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5`
   Status: `pending`
   Goal: scoped independent actual Design/recipe/source-mode acceptance;preserve canonical states,

@@ -40,6 +40,7 @@ pub use source_failure::{
 };
 mod source_result;
 pub use source_result::{FormulaExecutedScalarSource, FormulaExecutedScalarSourceGraph};
+mod source_runtime;
 mod source_worker;
 
 mod recipe;

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0602 — prepare actual Design source and recipe scalar plans
+## STITCHCAD-G1-0603 — share actual earned source roots across private demands
 
-- Join only actual same-root proofs;require exact source-proof graph identity before native whole recipe admission/source/recipe preparation. Retain both selected policies,original typed quota/capability causes and actual canonical/prior-let owners. No evaluated result or stored let from planning.
-- Native6/doc4/scoped strict lint/fmt/book98/357/1642/2894/glossary0 pass. Equal-content roots/alternate proofs,exact complete populations,first quota/tangent/empty recipe covered. Whole0601 retained760/four spans/live ids. Parent .4.3 closed;next .4.4 real worker. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped.
+- Extract fully reserved private source runtime with once-only unbound roots/ordinals,unchanged public one-entry behavior and failure-poisoned reuse/publication. No caller-seeded cache or new public recipe execution API.
+- Private native1/source8/doc1/scoped lint/fmt/book98/357/1642/2895/glossary0 pass. Real repeated roots/buffer stability/failure guards and independent27/8-refusal/frozen bytes retained. Whole0602 parent/children retained761/four spans/live ids. Next .4.4.2 recipe adapter;LIVE G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

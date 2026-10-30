@@ -1,19 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4:actual Derived recipe worker integration.
-  Read private shared machine/source worker/recipe worker;one earned unbound source cache,
-  original recipe RHS→once let storage→prior-let reads. Admit/reserve all before first values.
-- Actual Design plans0602:private same-root proof join with explicit source/recipe policies;
-  exact source-proof graph identity before native recipe admission/source/recipe scalar plans.
-  No mixed equal-content roots or same-arena alternate proofs. Original typed causes/limits/
-  canonical/prior-let owners retained;no extra allocation-error box or evaluated/stored values.
-  Native6/doc4/scoped strict lint/fmt/book98/357/1642/2894/glossary0 pass. Source1/3/0/8/1 and
-  recipe2/4/3/11/2 exact;output1/2 and workspace7/8/ForeignGraph/tangent/empty recipe covered.
-- Parent .4.3 closed scoped content/namespace/proofs/plans. Whole0601 retained760/four spans/live ids.
-  Source component27/8/native8 accepted;only actual lets store. Actual p+40 mm25B/model82/675/129.
-  Next .4.4 integrated worker/.4.5 independent acceptance;namespace/parser/provider/worker/kernel/
-  allocator/CPU/whole Design bounds separate. Full Derived/tan/geometry/load/replay/platform/
-  physical owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4.2:actual recipe Derived suspension/read adapter.
+  Use private earned SourceRuntime only;preserve original direct/prior-let witnesses and one-shot
+  RequiresEvaluation. No supplied values/cache or replay;then .4.4.3 worker/.4.4.4 Design bridge.
+- Shared source runtime0603:full S/N buffers before values,private initially empty cache,actual
+  roots/ordinals shared across demands without source-edge storage. Any failed demand poisons
+  reuse/publication;original one-source exact selection/context/typed errors/results preserved.
+  Private native1/source8/doc1/scoped lint/fmt/book98/357/1642/2895/glossary0 pass. Real roots
+  a1000/3,b1000,c2000/3,once ordinals/buffer pointers;later failure rejects reuse/prefix. Existing
+  independent27 rows/8 refusals/frozen bytes and512-source requested64KiB thread stack pass.
+- Whole0602 parent/children retained761/four spans/live ids. Actual same-root/exact-source-proof
+  Design plans accepted;planning computes no values. .4.4 worker/.4.5 independent acceptance open.
+  Namespace/parser/provider/kernel/allocator/CPU/whole Design bounds separate. Full Derived/tan/
+  geometry/load/replay/platform/physical owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

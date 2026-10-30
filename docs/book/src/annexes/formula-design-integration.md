@@ -258,6 +258,28 @@ forwards only actual static factory causes,such as an allocation failure or conc
 failure;it does not erase a borrowed semantic cause into an invented static token. No diagnostic
 box is added around an original source allocation error. Failed checking returns no accepted prefix.
 
+## Shared earned source runtime before recipe execution
+
+The existing standalone source worker now delegates to a shared private runtime. It reserves all
+source controls,call frames,initially empty output slots and every source's task/value buffers
+before starting a source or reading any value. Original complete plan limits remain authoritative.
+The public one-source API still checks the exact requested source id before runtime allocation and
+returns the same original graph,selected entry,context,completed roots and read/error witnesses.
+
+Inside the engine,multiple original source demands can share one runtime. Only successfully
+executed original roots enter its private cache. Repeated demands return those actual unbound
+roots without re-entering their machines or advancing their completion ordinals. With actual
+a=1 mm/3,a later source a*3 returns1000 micrometres and a different source a+a returns2000/3.
+The original a remains1000/3 with its original completion ordinal;no source edge stores333 first.
+Unused sources remain unexecuted. Reserved control/frame/output buffers remain stable across
+these successive demands. Canonical Derived states remain unchanged.
+
+An actual later source failure poisons the private runtime. Even an earlier successfully cached
+root cannot then be requested or published as an accepted prefix. The enclosing worker returns
+its original typed failure and drops the complete private state. This supplies an internal reuse
+boundary;it introduces no caller-seeded cache or new public execution API. The actual combined
+Design recipe worker and once-only let storage bridge remain subsequent tasks.
+
 ## Focused verification and remaining work
 
 Four actual-root native contracts check exact complete demand,original source/name pointers,
