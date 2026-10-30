@@ -23,3 +23,31 @@ retain the original45 checks and add five search-data refusals. Independent cont
 actual omissions of the index plan and copy;historical AST checks retain the exact approved
 search additions and all earlier checker/copier/mutation behavior.
 
+## Capture a fresh comparison
+
+The diagnostic capture renders the same complete source twice:the section-level warning baseline
+and the supported chapter-level candidate. It records source hashes,the actual mdBook version,
+both logs and document/JSON/script sizes. It neither replaces the public book nor edits its sources.
+Choose an unused directory under target;the following example refuses if its capture already exists.
+
+```bash
+python3 -I -B docs/tasks/artifacts/book_publication/search_migration_capture.py --output target/book_search_my_new_capture
+python3 -I -B docs/tasks/artifacts/book_publication/search_migration_contract.py --baseline target/book_search_my_new_capture/level3 --candidate target/book_search_my_new_capture/level1 --sources target/book_search_my_new_capture/source-sha256.json
+```
+
+The writer validates all original inputs and five metadata/log destinations before reserving
+the capture directory exclusively. A competing creator causes refusal before any metadata is
+overwritten. Existing captures are immutable inputs;select a fresh name rather than rerunning one.
+Nested paths,symlinks,foreign volumes and Git boundaries retain the shared producer guards.
+Both renderer children use prepared local stores and disable source creation. The baseline must
+emit only the expected large-index warning;the chapter candidate must emit none. A failed child,
+unexpected warning or changed source cannot publish successful measurements;its partial capture
+remains distinct for diagnosis.
+
+The read-only comparison requires the exact current complete source hashes,all registered
+chapters and equal stored chapter words and actual indexed terms. It reads data without executing
+search JavaScript. It supplies search-coverage evidence,not browser application or release approval.
+The focused capture watcher separately intercepts dispatch and checks five writes,six failure
+paths,the original/fixed ownership collision,thirteen path/input refusals and nine actual body
+faults. Those simulated children do not count as native renderer evidence.
+

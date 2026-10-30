@@ -714,20 +714,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0654 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part814.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.review`
   Status: `done`
-  - [x] ISSUE:final scoped numerical acceptance and D355 P2 stale current book availability.
-  - [x] ROOT CAUSE (WHY + WHERE):git blame recipe-inputs status table →cf74a710f5fadb4856b289442100e9377b55fa97
-    (0348) predates scalar/source/Design and explicit-policy tangent integration;current summaries lag,rc=0.
-  - [x] FIX:review all five numerical families,source/storage/error/composition proofs and observed
-    runtime scope;sync 23 current book parts. Preserve static-only authority and wider owners.
-  - [x] ADDRESSED:positive book build/check →101 chapters/374 API rows/1684 source links/
-    2996 rendered links,rc=0;focused retired-status census →0 stale reviewed claims,rc=0.
-  - [x] NO REGRESSION:glossary →310/9/158/0 failures;history814 →four exact Git spans;
-    IDs/order exact,all43 .5d.4 nodes done;map/diff pass;Rust/build548 hashes unchanged,rc=0.
-    Full29/source1223 and preservation receipts immutable;no full gate rerun for documentation.
-  - [x] LOCKSTEP:book/live/notes/frontier sync;D355 fixed. Promotion declined(existing claim/
-    evidence contracts). .5d.2/.5e.3 remain in_progress;.5e.4/n16/a40 remain pending.
-    No full allocator/CPU/provider/replay/geometry/application/physical/release closure claimed.
-  Commit:STITCHCAD-G1-0655;Verification:scoped proof review and focused rendered publication checks.
+  Goal:0655 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part815.md).
 
 ### Execution, uncertainty and replay
 

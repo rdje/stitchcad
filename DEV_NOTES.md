@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — close scoped numerical acceptance and correct current availability
+## _(2026-10-30 UTC)_ — reserve fresh search captures and verify actual indexed coverage
 
-0655 reviews root/arc/forward/inverse/tangent admitted-input arguments,actual source/storage/error contracts,mixed scalar/Design chains and observed native/Chrome scope. All43 .5d.4 nodes close;broader .5d.2/.5e.3 remain active,.5e.4/n16/a40 pending. G1 remains6/18;G0 human closure unapproved.
-D355 P2 traces recipe-inputs status table to0348 cf74a710;current availability also lagged in execution/rational/trig/composition and overview pages. 23 book parts now state admitted scalar/source/Design and explicit-policy tangent availability. Static proofs grant no execution/physical authority.
-Positive book101/374/1684/2996,glossary310/9/158/0,history814 four exact Git spans,IDs/order exact,map/diff pass. Focused retired-status census0;Rust/build548 hashes unchanged. No kernel changes or full gate rerun. Existing claim contracts retained;promotion declined. LIVE notes change;states same.
-[Whole0654](docs/history/stitchcad-devnotes-part814.md) retains complete29-suite/source1223 and independent preservation proof. Allocator/CPU/provider/replay/geometry/app/device/physical/release owners remain. PNT next:a40 fresh search capture,then n16 locality;never rerun historical captures.
-Receipt:target/irrational_platform_certificate/coupled-0654-probes-20261030T214824664186Z-24178/receipt.json SHA037ded5a5d07de1fe46373acd4b95b1dbd4a869dc3fc188b0675f17f83430376;preservation SHA1abf1475eb721a16c7a11205a931308366223bf5eb8ef294d97a71bf7f23f71a.
+0656 closes a40's fresh public capture review. D356 P1:the original actual entry checks existence before nonexclusive profile creation;an isolated competitor reaches a trapped metadata overwrite/child0. Complete plans now precede exclusive reservation;prepared children explicitly disable source creation.
+Watcher passes five writes/three intercepted children,six calibrated failure paths,nine path/four input refusals and nine actual body reds. Sources/argv/caller stores restore exactly. Registered watcher data supplies no native verdict. D156 stays open.
+Actual mdBook0.5.4 yields897→101 documents/101 chapters/70044 chapter-word/58039 indexed-term pairs exact;candidate warnings0. Native109 inputs and public137 files remain unchanged during that capture;the later positive public build passes101/374/1684/2997. History815/census/map/diff pass;no Rust change.
+[Whole0655](docs/history/stitchcad-devnotes-part815.md) retains numerical scoped acceptance/D355. LIVE notes:D356 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing ownership/claim contracts. Full0654 gates predate this repair;.h2.b.v/pre-push pending. PNT next:n16.1 then n16.2.
+Receipt:target/book_search_0656_20261030T234938769588Z-14711/verification.json SHA3785ec5aed8e3440b582aa29ebd116f2bd7fee9bb741f91c1615a67e001e97ea. Original capture directories remain untouched;fresh logs,source hashes,tool version and exact runner retained together.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

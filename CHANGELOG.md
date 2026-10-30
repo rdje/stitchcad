@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0655 — close scoped numerical review and align current availability
+## STITCHCAD-G1-0656 — reserve fresh search captures and preserve indexed coverage
 
-- All43 .5d.4 nodes done;five function families/source/storage/error/mixed scalar/Design/observed native+Chrome reviewed. D355 fixes23 stale book status parts;full application/resources/geometry/physical/release owners remain.
-- Positive book101/374/1684/2996/glossary0/history814 four exact Git spans/IDs exact/map/diff/Rust548 exact pass. Complete0654 gate/protected receipts retained;no full rerun for documentation. G1 6/18/G0 unapproved;next a40 fresh search capture,then n16.
+- D356 fixes capture ownership race with complete plans/exclusive reservation. Focused dispatch/failure/collision controls pass13 refusals/nine body reds;registry and watched suite updated.
+- Actual mdBook0.5.4:897→101 documents/101 chapters/70044 word/58039 indexed-term pairs exact,warnings0 for candidate;109 inputs/public137 unchanged during capture. Book101/374/1684/2997/history815/census/map/diff pass. No Rust change;G1 6/18/G0 unapproved;next n16.1.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

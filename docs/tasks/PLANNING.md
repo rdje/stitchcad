@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D355 — numerical scope reviewed;current book status aligned
+## D308–D356 — fresh search ownership and coverage verified
 
-D308–D354:[whole prior ledger](../history/stitchcad-devnotes-part814.md). D355 P2 fixed0655:0348 recipe table/status summaries lagged scoped scalar/source/Design/tangent acceptance;23 book parts sync,positive book/glossary/census pass. D334 P2 after G1/before G0;D223/PLANNING.5 open. Next a40/n16;full application/physical/release owners remain.
+D308–D355:[whole prior ledger](../history/stitchcad-devnotes-part815.md). D356 P1 fixed0656:actual search entry freshness race reaches trapped overwrite;exclusive reservation/control13 refusals+nine body reds pass;fresh native897→101/all terms exact. D334 P2 after G1/before G0;D223/PLANNING.5 open. Next n16.1/.2;full D156/integration/application/release remain owned.

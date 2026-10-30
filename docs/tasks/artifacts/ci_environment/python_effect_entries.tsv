@@ -108,3 +108,4 @@ docs/tasks/artifacts/live_doc_size/task_source_contract.py	output	G1-SLICE.5b.4c
 docs/tasks/artifacts/release_contract/approval_identity_probe.py	output	G1-SLICE.5b.4c.h2.b.p.o.a38
 docs/tasks/artifacts/seam_partition/oracle_watch_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a39
 docs/tasks/artifacts/book_publication/search_migration_capture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a40
+docs/tasks/artifacts/ci_environment/python_search_capture_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a40

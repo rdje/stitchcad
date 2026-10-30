@@ -486,13 +486,23 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   sources and dependencies before repairs,calibrate refusals/body faults and verify safe consumers.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a40`
-  Status: `pending`
-  Goal:D156 P1 fresh same-source mdBook search capture;role inspection0611,complete runtime audit pending.
-  Paths: docs/tasks/artifacts/book_publication/search_migration_capture.py
-  Schedule:producer/file verification milestone after active numerical feature,before locality signoff.
-  Actual public entry requires a fresh target-relative output directory,plans original book sources/
-  declared outputs before writes and dispatches mdBook under prepared stores. Never rerun historical
-  captures or modify protected proof. Complete effect/refusal/body controls remain required.
+  Status: `done`
+  - [x] ISSUE:D156 fresh same-source search capture audit;D356 P1 capture ownership race.
+  - [x] ROOT CAUSE (WHY + WHERE):actual0655 entry checks freshness before nonexclusive
+    directory creation;controlled competing capture reaches trapped metadata overwrite/child0,rc=0.
+  - [x] FIX:complete source/three-directory/five-file plan,exclusive capture reservation before
+    activation,warn-preserving prepared children with source creation disabled;no historical recapture.
+  - [x] ADDRESSED:python_search_capture_contract.py →five writes/three intercepted dispatches,
+    six calibrated failure paths,original/fixed collision,nine path/four input refusals,
+    nine actual source-body faults rejected;original inputs/argv/environment exact,rc=0.
+  - [x] NO REGRESSION:actual mdBook0.5.4 and read-only migration contract →897→101 documents,
+    101 chapters/70044 chapter-word/58039 indexed-term pairs exact;candidate warnings0,rc=0.
+    Native109 inputs and existing public137 files unchanged during capture;receipt retained.
+    Positive book101/374/1684/2997/history815 four Git spans/census/map/diff pass,rc=0.
+  - [x] LOCKSTEP:book/registries/watched suite/live/MEM/index sync;D356 fixed. Promotion declined
+    (existing fresh ownership/source/effect contracts). n16.1 then n16.2 next;full D156/.h2.b.v
+    and pre-push verification remain pending. Complete0654 full probes predate this repair.
+  Commit:STITCHCAD-G1-0656;Verification:focused controls and fresh actual same-source comparison.
 
 ## Ordered native file-destination repairs
 

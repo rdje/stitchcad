@@ -34,9 +34,13 @@ def main():
     input_dirs, inputs = BOOK['build_inputs'](ROOT)
     outputs = (work / 'source-sha256.json', work / 'measurements.json', work / 'tool-version.txt',
                *(work / ('level%d.log' % level) for level in (3, 1)))
-    PROFILE['enter_producer'](ROOT, directories=(work, *(work / ('level%d' % level) for level in (3, 1))),
-        output_files=outputs, sources=(Path(__file__), PUBLICATION_SOURCE, *inputs))
-    work.mkdir(parents=True, exist_ok=True)
+    directories = (work, *(work / ('level%d' % level) for level in (3, 1)))
+    sources = (Path(__file__), PROFILE_SOURCE, PUBLICATION_SOURCE, *inputs)
+    PROFILE['plan_producer'](ROOT, directories=directories, output_files=outputs, sources=sources)
+    PROFILE['directory'](ROOT, relative.parent, create=True)
+    # A prior existence check cannot reserve ownership against another capture writer.
+    work.mkdir()
+    PROFILE['enter_producer'](ROOT, directories=directories, output_files=outputs, sources=sources)
     hashes = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest() for path in inputs}
     (work / 'source-sha256.json').write_text(json.dumps(hashes, sort_keys=True, indent=2) + '\n')
     version = subprocess.run(['mdbook', '--version'], cwd=ROOT, capture_output=True, text=True)
@@ -46,6 +50,7 @@ def main():
     for level in (3, 1):
         destination = work / ('level%d' % level)
         env = dict(os.environ, MDBOOK_LOG='warn', RUST_LOG='warn',
+                   MDBOOK_BUILD__CREATE_MISSING='false',
                    MDBOOK_OUTPUT__HTML__SEARCH__HEADING_SPLIT_LEVEL=str(level))
         result = subprocess.run(['mdbook', 'build', 'docs/book', '--dest-dir', str(destination)],
                                 cwd=ROOT, env=env, capture_output=True, text=True)
