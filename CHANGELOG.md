@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0590 — admit complete original formula source normalization
+## STITCHCAD-G1-0591 — certify complete actual initial formula source kinds and consumers
 
-- Retain actual factory node counts and check complete S/N/conservative S+2N retained quotas before outer allocation/reparse. Own original source-borrowed arenas in authored order;preserve typed causes/no partial prefix. No namespace/kind/graph/runtime proof or full allocator/scratch bound.
-- Native4/reference24/document4/doc3/scoped lint/fmt/book96/315/1624/2846/glossary0 pass. Whole0589 retained748/four exact Git spans/live ids. Next .derived.3.2.2 static source proof phases. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;complete graph/resource/evaluation/platform verification stays pending.
+- Admit complete retained source proofs;reuse actual expression factories,used canonical joins and original consumer-kind checks. Preserve original witnesses/metadata lifetimes and source index;no accepted prefix,state/value clone,fake header or language diagnostic. New semantic book annex/routes align.
+- Native6/source4/doc3/scoped lint/fmt/book97/320/1629/2860/glossary0 pass. Whole0590 retained749/four Git spans/live ids. Parent .3.2 closes scoped foundation only;next .3.3 graph/cycle and real binding contract. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped;complete integration remains pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

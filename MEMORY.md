@@ -1,14 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.2.2:real complete namespace/target/static source proof phases.
-  Preserve actual ordered-recipe/let rounding semantics before dependency/cycle/value execution;
-  source ownership/normalization supplies no binding/graph semantics. Read actual checked factories.
-- Source normalization0590 ready:factory-derived immutable node counts,complete S/N/conservative
-  S+2N retained admission before outer allocation/reparse;actual original source/arena ownership.
-  Native4/reference24/document4/doc3/scoped lint/fmt/book96/315/1624/2846/glossary0 pass. No full
-  scratch/allocator/backend/graph/currentness/value proof. Whole0589 in748/four spans/live ids.
-- Canonical joins0589/source inventory0588/document0587 ready;Formula(id) amounts retain actual
-  DesignParameter meaning. Recipe-inputs book576L/35836B:use a new semantic annex for static proof.
+- Next G1-SLICE.5e.2.5.derived.3.3:complete original dependency/cycle admission and actual
+  source→ordered-statement/binding contract before values. Preserve real declaration order/let
+  rounding;initial source proofs grant no acyclic/current Design/host namespace/execution proof.
+- Source proofs0591 ready:complete S/N/T/conservative S+2N retained admission;actual initial
+  expression proofs,used canonical joins and all Derived target kinds. Reuse private source index;
+  no value/state clone,caller annotation,fake header or language diagnostic. Native6/source4/
+  doc3/scoped lint/fmt/book97/320/1629/2860/glossary0 pass. Whole0590 in749/four spans/live ids.
+- Normalized/initial-source foundation .3.2 closed0591 only;full graph/runtime remains .3.3.
+  New book formula-source-proofs.md;recipe-inputs578L/35966B. Formula(id) retains parameter meaning.
   Preserve D339 target/book_search_capture_0586_book_final at its boundary;never overwrite captures.
 - Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
   unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.

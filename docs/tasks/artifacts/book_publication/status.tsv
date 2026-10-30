@@ -314,3 +314,8 @@ actual source borrowed normalized arena	annexes/formula-recipe-inputs.md	crates/
 complete source normalization allowances	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_sources.rs	FormulaSourceNormalizationLimits	G1-SLICE.5e.2.5.derived.3.2.1	4.1
 original source normalization refusal context	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_sources.rs	FormulaSourceNormalizationError	G1-SLICE.5e.2.5.derived.3.2.1	4.1
 complete source normalization refusal	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_sources.rs	FormulaSourceNormalizationRefusal	G1-SLICE.5e.2.5.derived.3.2.1	4.1
+complete initial formula source proofs	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/checked_sources.rs	FormulaCheckedSources	G1-SLICE.5e.2.5.derived.3.2.2	4.1
+actual original initial source kind proof	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/checked_sources.rs	FormulaCheckedSource	G1-SLICE.5e.2.5.derived.3.2.2	4.1
+complete initial source checking allowances	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/checked_sources.rs	FormulaSourceCheckLimits	G1-SLICE.5e.2.5.derived.3.2.2	4.1
+actual source check refusal context	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/checked_sources.rs	FormulaSourceCheckError	G1-SLICE.5e.2.5.derived.3.2.2	4.1
+original source kind and target refusal	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/checked_sources.rs	FormulaSourceCheckRefusal	G1-SLICE.5e.2.5.derived.3.2.2	4.1

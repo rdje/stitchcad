@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — admit complete actual source shape before normalized collection allocation
+## _(2026-10-30 UTC)_ — certify actual initial source kinds and canonical consumers before graph work
 
-0590 retains immutable actual node counts at original document creation. Complete S/N/conservative S+2N retained quotas precede one fallible outer reservation/reparse. Actual source/arena order,spans and typed causes survive. No caller shape hint,canonical-text reconstruction,state/value cache or partial result.
-Native4/reference24/document4/doc3(E0277/E0616/lifetime)/scoped strict lint/fmt pass. Existing parser/converter algorithms unchanged. Retained-record allowance excludes earlier document creation,scratch,allocator bytes/backend/CPU/full graph resources. Original factory errors and allocation cause remain typed.
-Book96/315/1624/2846/glossary310/9/158/0 pass;[whole0589 canonical source joins](docs/history/stitchcad-devnotes-part748.md) retains four exact Git spans/all prior live ids. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. D339 proof untouched. Existing factory/admission/borrow rules apply;promotion declined.
-Next .derived.3.2.2 real namespace/target/static source phases,preserving actual ordered-let semantics before graph/value work. Recipe-inputs576L/35836B;use a new semantic annex before growth. Full integration/platform/physical and D334/D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after gates.
+0591 admits complete S/N/T/conservative S+2N retained proof records before outer allocation. Existing expression proofs precede actual used canonical joins,then original consumer-kind checks. Original source/span/target witnesses survive;reuse private source index,no copied lookup/target/value/state vector.
+Native6/source4/doc3(E0277/E0616/lifetime)/scoped strict lint/fmt pass. Actual Unknown/reserved types require no provider;namespace allocation may drop while real name/declaration owners remain. Equal external owners fail in untaken branches;late unused source errors precede mismatches. No fabricated let/token.
+Book97/320/1629/2860/glossary310/9/158/0 pass;[whole0590 source normalization](docs/history/stitchcad-devnotes-part749.md) retains four exact Git spans/prior live ids. New semantic annex/routes/API map align. G1 6/18/G0 unapproved/full-hosted79bd6f6a SHA-scoped. Existing factory/borrow rules;promotion declined.
+Parent .3.2 closes scoped normalized/initial-source foundation only. Next .3.3 complete dependency/cycle and actual ordered-statement/binding contracts before values. Complete Design/host namespace,currentness,resources/full integration/platform/physical and D334/D156/D223/PLANNING.5 owned. D339 proof untouched.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -112,6 +112,12 @@ pub use normalized_sources::{
     FormulaSourceNormalizationLimits, FormulaSourceNormalizationRefusal,
 };
 
+mod checked_sources;
+pub use checked_sources::{
+    FormulaCheckedSource, FormulaCheckedSources, FormulaSourceCheckError, FormulaSourceCheckLimits,
+    FormulaSourceCheckRefusal,
+};
+
 mod semantic;
 pub use semantic::{
     FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName, FormulaSizeName,

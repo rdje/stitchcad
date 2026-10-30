@@ -200,9 +200,14 @@ impl FormulaSources {
     /// Borrow the actual source with the exact supplied identity; no alias, label or fallback.
     #[must_use]
     pub fn source(&self, id: EntityId) -> Option<&FormulaSource> {
+        self.sources.get(self.source_index(id)?)
+    }
+    // Reuse this exact private id→authored-position certificate for parallel derived arenas/proofs.
+    // No caller index, duplicate index allocation or lookup through canonical text is admitted.
+    pub(super) fn source_index(&self, id: EntityId) -> Option<usize> {
         let position = self.index.binary_search_by_key(&id, |(id, _)| *id).ok()?;
         let (_, authored) = self.index.get(position)?;
-        self.sources.get(*authored)
+        Some(*authored)
     }
 }
 fn add(

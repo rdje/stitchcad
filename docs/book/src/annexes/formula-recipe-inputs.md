@@ -236,8 +236,9 @@ Duplicate/unbound names and incompatible kinds remain inspectable until static c
 `FormulaExpressionDocument::new(source)` owns an original expression String and its existing typed
 canonical expression identity. It reuses the actual expression parser,literal converter and
 serializer. It supplies no fake let,name,header or statement ordinal. This is the source-ownership
-prerequisite at .5e.2.5.derived.1;explicit source owners follow below. Canonical input joins follow below;namespace/kind
-and complete dependency admission remain .derived.3.2.
+prerequisite at .5e.2.5.derived.1;explicit source owners/canonical joins follow below.
+[Initial-scope source kind proofs](formula-source-proofs.md) are available;complete dependency/
+cycle and actual binding/execution admission remain .derived.3.3.
 
 | Public API | Meaning |
 | --- | --- |
@@ -351,8 +352,9 @@ algorithms and full dependency execution retain their separate proof obligations
 `FormulaSourceInputs::new(&inputs, &sources)` checks the complete actual CanonicalInputs and
 FormulaSources before lending any accepted scope. It allocates no workspace,clones no state,reads
 no authored value and parses/evaluates no expression. Both owners stay borrowed and immutable.
-This is source ownership admission;namespace,result-kind,dependency/cycle and execution proofs
-remain required at .5e.2.5.derived.3.2 and its later execution owners.
+This is source ownership admission;[initial-scope kind/consumer checks](formula-source-proofs.md)
+are available separately. Complete dependency/cycle and execution proofs remain .derived.3.3
+and its later execution owners.
 
 | Public API | Meaning |
 | --- | --- |

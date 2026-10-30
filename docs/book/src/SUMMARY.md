@@ -80,6 +80,7 @@
   - [Formula literal normalization](annexes/formula-literals.md)
   - [Formula statements and ordered recipe syntax](annexes/formula-statements.md)
   - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
+  - [Formula source kind proofs](annexes/formula-source-proofs.md)
   - [Formula declaration metadata](annexes/formula-declarations.md)
   - [Ordered formula name scopes](annexes/formula-name-scopes.md)
   - [Formula operator kind signatures](annexes/formula-operator-signatures.md)
