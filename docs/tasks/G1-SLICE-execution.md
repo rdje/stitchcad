@@ -280,62 +280,68 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4`
   Status: `done`
-  Goal: actual ordered recipe Derived read integration with earned unbound source results,real
-  let RHS→once storage→prior-let visibility,original contexts/read witnesses and atomic failure.
-  Staged0603+:preserve existing standalone source/recipe contracts while composing private actual
-  workers. One complete fallibly reserved source runtime caches only real unbound roots across
-  demands. Recipe continuations request actual Derived suppliers without replay or premature
-  binding. Reserve both complete workers/outcomes before values;whole failure publishes no prefix.
+  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.1`
   Status: `done`
-  Goal:0603 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part762.md).
+  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.2`
   Status: `done`
-  Goal:0604 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part763.md).
+  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3`
   Status: `done`
-  Goal:0607 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part766.md).
+  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.1`
   Status: `done`
-  Goal:0607 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part766.md).
+  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.2`
   Status: `done`
-  Goal:0607 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part766.md).
+  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3`
   Status: `done`
-  Goal:0607 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part766.md).
+  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.4`
   Status: `done`
-  Goal:actual containing Design execution/fresh input admission and complete original results/errors.
-  Completion0608:parent .4.4 closed for implemented available-scalar pairing;independent owner .4.5.
-  - [x] REPRODUCE / ISSUE:native component execution alone supplied no fresh containing Design
-    input scope and accepted caller plans;private actual-root plans needed their own entry point.
-  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'pub fn evaluate|prepare_formula_scope|evaluate_with_sources|
-    Admission|Execution' on design/formula/{plan,execute}.rs →fresh actual admission before native
-    call and original typed error stages,rc=0. Reuse existing complete model/current factory.
-  - [x] FIX:consume only private same-root plan;re-admit complete actual held inputs/current state
-    under original model limits before native buffers/values. Result pins fresh scope/original
-    inputs/native whole execution;Admission/Execution retain original causes/limits. No foreign
-    plans,namespace,values,cache,model clone,host Clone/Debug or extra allocation-error box.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract formula_execute::
-    -- --nocapture →five pass/45 filtered,rc=0:exact root/model limits/fresh demand/proof pointers,
-    unbound1000/3/unchanged canonical state,no-Clone/no-Debug host,fresh current rejection before
-    native execution,original nested native failure and empty recipe containment. No accepted prefix.
-  - [x] NO REGRESSION:scoped core lib/affected target strict Clippy/changed rustfmt/diff pass,rc=0.
-    cargo test -p sc-core --doc design::formula::execute and scoped plan::DesignFormulaScalarPlan
-    -- --nocapture →two+two pass,rc=0:actual E0616 privacy,root lifetime escape and generic call.
-    Book98/365/1644/2900/glossary310/9/158/0,766 four Git spans/prior live ids/order/uniqueness pass,
-    rc=0. Existing45 native tests filtered;independent paired/broader acceptance remains .4.5.
-  - [x] LOCKSTEP:book/API catalog/availability/task/index/MEM/DEV/CHANGE/LIVE align. Whole0607 parent/
-    children retained766/four spans. Next .4.5 independent actual source/recipe/Design acceptance.
-    G1 6/18/G0 unapproved;logical input/current scope is no full namespace/provider/kernel/allocator/
-    CPU/platform/physical/approval certificate. Full-hosted79bd6f6a scoped,D334/D156/D223/PLANNING.5 owned.
-    promotion: declined (established fresh complete input admission and exact-owner execution rules;source/book/contracts retain API and evidence).
+  Goal:0608 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part767.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5`
-  Status: `pending`
+  Status: `in_progress`
   Goal: scoped independent actual Design/recipe/source-mode acceptance;preserve canonical states,
   source ownership,currentness/resource joins and genuine first failures. Broader graph/platform/
   physical/load/replay and missing kernel families retain existing owners before full acceptance.
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5.1`
+  Status: `done`
+  Goal:independent actual Design source-backed scalar recipe acceptance from the book evaluator.
+  - [x] REPRODUCE / ISSUE:paired implementation needed an independent whole-result oracle after
+    available-scalar feature completion. Book source bridge paragraphs still said pending after
+    0608;rg/read of formula-source-proofs.md and formula-design-integration.md exposed that drift.
+  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'ReferenceInputRequired|original_stored|TopologicalSorter|
+    canonical == snapshot' docs/tasks/artifacts/formula_structure/scalar_design_recipe_oracle.py
+    →original typed demand/real storage/independent whole graph/unchanged facts guards,rc=0.
+    Existing standalone oracles do not compose actual source demand with ordered recipe storage.
+  - [x] FIX:guarded independent recursive book reference;only actual Derived requirements demand
+    original suppliers. Separate unbound cache/canonical/recipe environments,real once-only stored
+    lets and deepest original failure. Actual containing Design factories watch complete results.
+    Reconcile stale bridge prose;no production API/kernel/value/read/error rule changed.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract
+    formula_execute::independent:: -- --nocapture →two pass/50 filtered,rc=0. Actual Design matches
+    all23 rows/11 successes/12 first refusals;original root/proof/prior-let pointers,all values/
+    flags/ordinals/recipe+source reads/unchanged complete models. Independent producer regenerates
+    every8841 frozen B;sha256:a8b6dd80760b0e4c833d36ee51d77410b6a2ec192d22e68413fea8287def784d.
+    Both families/all six kinds,aliases/shared roots/fractions/once storage,false/zero/negative/wide
+    Count,lazy branches,T1/T2 flags,nested source/recipe/assertion left/right/header failure checked.
+  - [x] NO REGRESSION: cargo clippy -p sc-core --lib --test design_structure_contract -- -D warnings
+    and changed rustfmt --check/git diff --check →pass,rc=0. Positive book98/365/1644/2900 and
+    glossary310/9/158/0,history767 four Git spans/prior live ids/order/uniqueness pass,rc=0.
+    Initial glossary failure treated inline-code SHA as token;plain identity text fixes formatting.
+    Existing50 tests filtered;scoped integration acceptance separately owned .4.5.2.
+  - [x] LOCKSTEP:book/availability/task/index/MEM/DEV/CHANGE/LIVE align;whole0608 parent/children
+    retained767/four spans. LIVE G1 6/18/G0 unapproved unchanged,paired23 now recorded. Finite scalar
+    acceptance grants no missing kernel/full Design/provider/allocator/CPU/persistence/platform/
+    physical/approval certificate. Full-hosted79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned.
+    promotion: declined (existing unbound-source/real-let and independent-reference rules;watched producer/native contract/book retain exact scope).
+- ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5.2`
+  Status: `pending`
+  Goal:complete scoped source/recipe/Design integration checks after independent paired acceptance;
+  reconcile parent frontier and book while preserving all broader G1/kernel/resource/platform owners.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.

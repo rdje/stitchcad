@@ -2,8 +2,8 @@
 
 > **Status:** complete initial-scope expression proofs,actual canonical dependency joins and Derived
 > consumer-kind checks and canonical Derived dependencies have focused verification. Bounded cycle
-> admission and lazy available-scalar source execution have scoped independent acceptance. Actual
-> Independent paired acceptance,full resources/backend/platform/physical proof remain pending.
+> admission and lazy available-scalar source execution have scoped independent acceptance.
+> Actual Design pairing has23 independent scalar cases;full resource/backend/platform/physical proof remains pending.
 
 [Native source-backed recipes](formula-design-integration.md#execute-an-admitted-recipe-with-actual-source-plans)
 now combine the admitted graph with real ordered storage/read/error views;actual Design execution re-admits its root.
@@ -390,8 +390,8 @@ stored outcomes;source traversal cannot reorder forward lets. Canonical Derived 
 formula reference and no independently authored/cached result. Supplier values must be earned by
 actual source execution,not callbacks or supplied cache values. The durable canonical-input record
 is docs/decisions/decision_length-declarations-retain-state-and-provenance.md. The source worker
-preserves this boundary with scoped independent source acceptance;the actual recipe/Design bridge
-remains pending. Existing expression/recipe reference fixtures retain their exact outcomes.
+preserves this boundary with scoped independent source acceptance. The actual recipe/Design bridge
+has finite paired scalar acceptance;existing expression/recipe reference fixtures retain their exact outcomes.
 
 ## Check an actual Derived consumer
 
@@ -482,8 +482,8 @@ Only successful completion makes scratch reusable. Any value/provider or one-sho
 permanently rejects further start/resume on that private machine. Existing expression/recipe
 adapters still return their original RequiresEvaluation and missing-provider causes. Callers gain
 no public callback,continuation,computed-value constructor or cache seed. The bounded lazy
-source worker above uses this private path with scoped independent acceptance;recipe/Design
-integration remains pending.
+source worker above uses this private path with scoped independent acceptance. Actual recipe/Design
+pairing now has finite scalar acceptance;broader integration remains separately owned.
 
 ## Verification and remaining work
 

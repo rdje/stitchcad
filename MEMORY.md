@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.4.5:independent actual source/recipe/Design acceptance.
-  Feature implementation is complete for available scalar kernels;use actual book reference
-  source demand/unbound cache + real recipe storage;no Rust/frozen expected-value producer input.
-- Actual Design execution0608:private plan.evaluate re-admits complete actual held inputs/current
-  state under original model limits before native buffers/values. Result pins fresh scope/root/
-  original proof/policy join/native whole execution. Typed Admission/Execution preserve causes;
-  no caller plan/value/cache,model clone,host Clone/Debug or extra allocation-error box.
-  Native5/doc4/scoped lint/fmt/book98/365/1644/2900/glossary0 pass. Exact limits/demand/pointers,
-  fresh host rejection,native failure,unbound1000/3/unchanged state and empty recipe checked.
-- Parent .4.4 implemented scoped pairing;whole0607 parent/children retained766/four spans/live ids.
-  Native paired API six cases passed0607;old reference recipe18/7/source27/8 scope retained.
-  Combined-mode independent acceptance still pending .4.5. Logical held input/current scope grants
-  no full namespace/provider/kernel/allocator/CPU/platform/physical/approval certificate. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4.5.2:scoped source/recipe/Design integration checkpoint.
+  Available scalar feature implemented;independent combined acceptance0609 passes. Run directly
+  affected integration checks,then reconcile source/recipe/Design parents and next product frontier.
+- Paired actual Design/reference23 rows:11 successes/12 first refusals,8841 frozen B sha256
+  a8b6dd80760b0e4c833d36ee51d77410b6a2ec192d22e68413fea8287def784d. Guarded producer reads actual
+  book evaluator only,recursive Derived demand/unbound cache/real recipe storage;no Rust/native/
+  expected inputs. Actual Design watchers compare all outcomes/roots/flags/ordinals/reads and
+  original root/proof/prior-let pointers,unchanged complete model;fresh frozen regeneration exact.
+  Native2/scoped strict lint/fmt/book98/365/1644/2900/glossary0/history767 four spans/live ids pass.
+- Actual Design plan0608 retains fresh whole held-input/current scope before native values;
+  native paired API0607 preserves original both policies/typed failures and real once storage.
+  Whole0608 parent/children retained767. Existing50 tests filtered0609;integration owner .4.5.2.
+  No full Design/provider/kernel/allocator/CPU/platform/physical/approval certificate. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

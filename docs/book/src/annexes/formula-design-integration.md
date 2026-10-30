@@ -9,7 +9,7 @@ namespace,computed values or cache.
 Actual Design-backed source and ordered recipe kind checking is also implemented below.
 Native dependency/cycle admission can now feed a same-root combined scalar plan below.
 Native paired source/recipe execution and real recipe storage are implemented below.
-Actual Design plan execution is implemented below;independent paired acceptance remains pending.
+Actual Design plan execution and finite independent paired scalar acceptance are implemented below.
 A normalized expression is syntax with converted literals;it is not a checked kind,numerical
 result or stored binding. A kind proof still supplies no cycle or numerical acceptance.
 See [source validation and execution](formula-source-proofs.md) and
@@ -487,7 +487,7 @@ Private paired runtimes must share the exact canonical inventory and original co
 The same quantitative bytes/id in another tolerance object cannot replace the chosen borrowed
 provider;nor can equal label text from another original buffer. Size frames retain their existing
 value/source equality. These are private composition guards,not new Factory Profile or evidence
-approval. A future public paired factory must reject foreign canonical plans before preparation.
+approval. The public paired factory rejects foreign canonical plans before preparation.
 
 Lazy selection and executed-call contributions remain authoritative. With actual Boolean source
 flag=cos(0 deg)==0.0,a false condition can select1 mm without touching an unknown-backed width.
@@ -501,8 +501,8 @@ Five further Design execution contracts check exact actual root/model limits/fre
 proof owners,unbound source roots and unchanged canonical states,a non-Clone/non-Debug host,
 fresh current-host rejection before native execution,retained native requester/supplier failures
 and empty recipe containment. Compiler guards reject result mutation/root lifetime escape and
-compile the generic actual plan call. These focused checks do not replace independent paired
-reference acceptance or the separately owned full integration/platform gates.
+compile the generic actual plan call. Independent paired reference acceptance is described below;
+the separately owned full integration/platform gates remain open.
 
 
 Six public native contracts run actual Design-owned source/recipe/namespace factories before the
@@ -510,7 +510,7 @@ component operation. They check both dedicated/general Derived families,unbound 
 values/ordinals/read witnesses,equal-model foreign inventory refusal,original nested supplier and
 recipe storage failures,empty recipes and untaken unknown-backed sources. Compiler guards reject
 private read/result mutation and source-view lifetime escape. These are focused component checks;
-independent acceptance of the combined mode remains separately owned.
+the finite combined-mode independent acceptance below adds a separate numerical oracle.
 
 
 Four actual-root native contracts check exact complete demand,original source/name pointers,
@@ -537,6 +537,28 @@ Kind checking alone grants no cycle acceptance. Native dependency/cycle factorie
 stage before Design plan preparation. Planning grants no numerical result,provider completeness,
 whole runtime resource bound or production approval. Native paired execution now earns real
 Derived reads and once-only storage through both native and actual Design entry points.
-Independent paired integration acceptance remains separately owned. Broad verification
-remains deferred until the agreed feature set is complete;the latest full local/hosted verdict
-remains scoped to its recorded Git revision.
+Scoped integration checks remain separately owned after the paired reference acceptance below.
+The latest full local/hosted verdict remains scoped to its recorded Git revision.
+
+The actual Design executor also matches23 independent complete recipe cases:11 successes and12
+first refusals. The tracked scalar_design_recipe_oracle.py loads the existing table-driven book
+reference,uses recursive lazy source demand and graphlib for whole dependency admission,and invokes
+only the original recipe storage boundary. It reads no Rust implementation,native output or frozen
+expected fixture. Canonical Derived declarations remain unvalued;only actual returned source roots
+enter a private cache. Sources cannot invoke storage or read a recipe's prior-let environment.
+
+The cases cover both canonical families,all six scalar kinds,shared supplier aliases,repeated reads,
+unbound fractions versus once-stored bindings,false/zero/negative values and wide Count roots.
+Lazy unknown/division/provider branches remain unread. Executed cosine flags survive false
+conditions and real bindings;T1 refuses while T2 succeeds. Source unknown/domain/division/provider
+failures,recipe division/storage/assertion failures and assertion left/right/header order retain
+the actual first failing statement and deepest supplier. Refusals publish no accepted prefix.
+
+Two native watchers construct real complete Design inputs,parameters,owned sources and ordered
+recipes,then use the actual scope/namespace/proof/dependency/cycle/plan/execution factories.
+They compare every successful outcome,root,completion ordinal,recipe/source read and call flag,
+check original root/proof/prior-let pointers and unchanged complete model state,and independently
+regenerate all8841 frozen bytes. The23-row fixture SHA256 is
+a8b6dd80760b0e4c833d36ee51d77410b6a2ec192d22e68413fea8287def784d.
+This finite acceptance covers available scalar kernels;it grants no missing kernel,full Design,
+provider resource,allocator/CPU,persistence,platform,physical or production-approval certificate.

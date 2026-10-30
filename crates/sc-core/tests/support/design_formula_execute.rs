@@ -240,3 +240,6 @@ fn empty_actual_recipe_keeps_fresh_containing_scope_without_an_entry_or_source_r
         assert_eq!(result.execution().reads().count(), 0);
     });
 }
+
+#[path = "design_formula_execute_oracle.rs"]
+mod independent;

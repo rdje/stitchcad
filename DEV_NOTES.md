@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — execute only actual Design plans after fresh whole input admission
+## _(2026-10-30 UTC)_ — independently compare actual complete Design source-backed recipes
 
-0608 consumes the private exact-root scalar plan,re-admits complete held input/current data under original model limits,then invokes native pairing. Result retains fresh root/scope/original policies/proofs/whole outcomes. Typed errors preserve admission/native causes;no model clone or extra allocator-error box.
-Native5/doc4/scoped strict lint/fmt pass. Exact limits/demand/proof pointers,unbound1000/3/unchanged canonical state,no-Clone/no-Debug host,fresh current refusal,native nested failure and empty recipe checked. Existing scope/native factories remain authoritative;no supplied plan/value/cache accepted.
-Book98/365/1644/2900/glossary0 pass;fresh scope/API/errors/boundaries align. [Whole0607](docs/history/stitchcad-devnotes-part766.md) retains parent/children/four spans;prior live ids/order checked. Parent .4.4 implemented with focused checks;combined-mode independent acceptance remains pending.
-Next .4.5 independent actual source/recipe/Design acceptance. LIVE G1 6/18/G0 unapproved unchanged;product row notes actual Design-backed recipes. Full-hosted79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned. Full resources/kernel/platform/physical remain owned. Full PNT/push400;protected evidence intact.
+0609 composes the actual book evaluator with recursive lazy Derived demand and real recipe storage. Canonical facts stay unvalued;only returned bare roots enter a separate cache. Original source evaluation cannot read recipe bindings or invoke storage. No Rust/native/frozen expected inputs.
+Actual Design factories/execution match23 rows/11 successes/12 first refusals;8841 frozen bytes regenerate exactly. Both families/all six kinds,shared aliases,fractions/once storage,false/zero/negative/wide Count,lazy reads,flags,T1/T2 and source/recipe/assertion order checked. Whole model stays unchanged.
+Native2/scoped strict lint/fmt/book98/365/1644/2900/glossary0 pass. Root/proof/prior-let pointers and every value/root/ordinal/read checked. Stale bridge-pending prose fixed;inline-code SHA glossary failure fixed as plain identity text. [Whole0608](docs/history/stitchcad-devnotes-part767.md) retains four spans.
+Next .4.5.2 scoped integration checkpoint;existing50 tests filtered here. LIVE G1 6/18/G0 unapproved unchanged,paired23 recorded. Full-hosted79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned. Missing kernels/full Design/resources/persistence/platform/physical remain owned. Full PNT/push400;protected proofs intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
