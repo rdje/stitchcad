@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — reject actual native inverse branch and ratio faults
+## _(2026-10-30 UTC)_ — couple adaptive tangent proof with actual source and storage
 
-0634 uses the shared original-scope controller with strict D343 panic/ordinal/whole-row evidence. Baseline passes;9 compiled inverse faults fail at original rows2/3/40/33/29/8/2/4/4. Witnesses cover ppm scaling,both signs,private denominator,quadrant/reciprocal complements,half-angle count,series and rounding.
-Original545 inputs/copied542 files restore byte-exact;555 planned outputs/timeout2 pass. Current report target/inverse_body_faults/0634-workspace/report.json. Mutants stop at first failure;the baseline/primary target runs all81. Native4/strict affected lint/fmt/bash syntax pass after restoration.
-Producer351/34365 calls/file-plan238/90 owners/39 groups pass,inspection only;n16 retains complete runtime/locality. Book99/374/1659/2941/glossary0/history793/IDs/map/diff pass. [Whole0633](docs/history/stitchcad-devnotes-part793.md) retained. Original production inverse body and fixtures unchanged.
-Promotion declined:existing compiler/independent-witness/restoration contracts. LIVE adds inverse9 faults;native inverse closes. G1 6/18/G0 human unapproved unchanged. Next Tan;fresh45M scan remains final coupled acceptance,with actual platforms/mixed/full resources/release separately owned. Full PNT continues.
+0635 native13 pass. Real sqrt/cos zero/unit arithmetic preserves all139 original inputs/outcomes:125 values/10 poles/4 exact widths. Actual121 signed bindings/read-backs match;4 valid wide Ratios retain original storage errors. Cos/Sqrt/Tan/T1 and original input/policy/progress/cause remain intact.
+Independent7141B/SHAcf1a803c regenerates. Range8798/586/2,fold29928/372/92/144,enclosure3pi/42/54 and budget19/3 model reds pass. Calcut Cor1 primary proof rechecked;convergence is no universal practical budget. Exact native width-bit refinement remains distinct from the model's width conclusion.
+Corrected stale kernel/policy status,aggregate heap/CPU wording and fact0290's diagnostic name with explicit0635 clarification. Actual RationalWidth/Pole both map to formula_domain with distinct causes;resources have no language code. No numeric policy or code changed;strict affected lint/fmt pass.
+Book99/374/1659/2942/glossary0/history794/IDs/map/diff pass. [Whole0634](docs/history/stitchcad-devnotes-part794.md) retained. Promotion declined:existing contracts. LIVE adds Tan storage121;G1 6/18/G0 unapproved unchanged. Next actual arithmetic/resource faults;other coupled/platform/full acceptance remain. Full PNT.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

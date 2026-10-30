@@ -11,7 +11,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;shared platform review remains |
 | sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/sourced88/seven actual body faults pass;shared platform remains |
 | atan/atan2 | Principal branches and complete inverse threshold certificate | Source-gated proof/sourced81/nine actual body faults pass;shared platform remains |
-| tan | Explicit per-call quotas,native139 and real paired24 acceptance | Coupled adaptive/error/fault review remains .5d.4.tangent |
+| tan | Explicit per-call quotas,native139 and real paired24 acceptance | Convergent/source/storage139 review below;arithmetic/resource faults and platform remain |
 
 The [canonical numerical contract](formula-rationals.md)
 records the algorithms. [Tangent resources](formula-trig-certificates.md) retain
@@ -361,3 +361,53 @@ kernel and fixture bytes are unchanged. This closes scoped native inverse review
 complete45M certificate remains source-gated;its fresh full read still belongs to final coupled
 acceptance. Native/browser parity,Tan,mixed-call,full resource/provider/replay and release proof
 retain their separate owners. Complete transitive probe runtime/locality remains n16.
+
+## Tangent adaptive and explicit-resource boundaries
+
+The [rational tangent theorem,Corollary1](https://www2.oberlin.edu/faculty/jcalcut/tanpap.pdf)
+restricts finite rational tangent at rational multiples of pi to0 and plus/minus1. Those values
+are integer ppm,so no admitted finite rational microdegree input lies on a half-ppm midpoint.
+Together with correct converging enclosures,this proves eventual cell separation under enough
+abstract resources. It supplies no universal practical precision,heap or latency allowance.
+The primary statement and its Gaussian-integer proof were rechecked during this review.
+
+Exact private period/reflection/complement handling keeps the full authored Angle unchanged.
+The156-bit fold reservation precedes that arithmetic. Exact zero/unit/pole cases use no series;
+a policy below156 bits refuses before classification. For other inputs,each B=128,256,512,...
+iteration preflights I(B)=16B+bit_length(2B+1)+16 candidate bits,then4B additional cumulative terms.
+Both fit before charge or numerical work. Refused iterations retain prior counters and the next
+scheduled demand. Wrong kind precedes quotas;the selected limits remain immutable and explicit.
+These quotas bound candidate extent/charged work,not aggregate live heap or wall-clock time.
+
+Each admitted iteration constructs fresh outward Machin pi and unrounded sine/cosine intervals.
+The component width is at most(10B^2+20B+2)*2^-B. Direct-mode cosine is greater than1/2;
+reciprocal-mode sine is at least2^-128 from the admitted nearest-pole distance. Those analytic
+floors bound quotient conditioning. Whole closed endpoints must round alike before any Ratio
+is returned. For excess width,the actual rounded endpoint bit counts must agree above128 first.
+Otherwise the call refines or returns a separate resource refusal. A mathematical lower-bound
+width conclusion in the diagnostic model cannot replace the native exact measured_bits field.
+The original near-pole witness has142/148 endpoint bits at B128 and requires B256 to report148.
+
+The near-midpoint original Angle remains undecided at128/256 and certifies zero at512,charging
+3584 terms/reserving8219 bits. Smaller limits preserve an original resource error with no language
+code. Exact poles use the Pole cause;excess numerators use RationalWidth. Both mathematical
+causes map to formula_domain,remaining distinct typed failures. The old fact note's contrary
+width-code wording is corrected with an explicit0635 clarification. No diagnostic policy changed.
+
+The original139-row independent Fraction fixture remains7141 bytes,SHA-256
+cf1a803c1efd405dcd84d6af73340b675824c979b793bfbb6112862218a39d7b.
+The existing watcher retains two policies and both native entry points. The new actual upstream
+watcher uses real sqrt/cos zero/unit arithmetic before all139 calls under explicit16412/7680
+limits. All full-width inputs stay unchanged. Its125 values retain Cos/Sqrt/Tan through T1;
+121 actual signed Ratio bindings/read-backs preserve values and flags. Four valid wide Ratios
+instead retain their original signed-storage refusal after numerical success. Ten poles and
+four exact numerator widths retain original input,policy,progress and native mathematical cause;
+failure adds no successful Tan contribution. No source flags or numerical answers are seeded.
+
+The focused native13 checks also retain early/later resource precedence,zero/unit/false storage,
+actual width refinement and original error chains. Three independent profile/model commands
+recheck range/poles,folding/conditioning,convergent enclosures and the bounded request schedule.
+The19 diagnostic model cases/three model guard omissions are separate from upcoming compiled
+native resource-guard faults. Actual arithmetic/resource body faults,platform,mixed-call,full
+allocator/provider/replay and production acceptance remain owned. Current proof/status text
+now reflects available native/scalar policies while keeping aggregate resource closure separate.

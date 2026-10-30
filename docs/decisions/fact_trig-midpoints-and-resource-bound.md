@@ -2,7 +2,7 @@
 
 - **Type:** `fact`
 - **Date:** `2026-10-25`
-- **Status:** `active`; sin/cos and inverses implemented;tangent bounded-request plan selected,kernel pending
+- **Status:** `active`; sin/cos/inverses/tangent kernels and scoped scalar policies implemented;coupled/platform/full resource proof remains owned
 - **Owner / source:** G1-SLICE.5d.1.2.2.1;bounded tangent strategy .5d.1.2.2.2.d.2 selected;native values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621/Design0622;paired24 acceptance0623;platform pending.
 
 answers: "can trigonometric formula results land exactly on a rounding midpoint?" · "does convergence prove usable trig resources?" · "what bounds tangent folding and quotient conditioning?" · "how do unrounded tangent enclosures converge?"
@@ -80,7 +80,7 @@ They do not constitute an all-input runtime/performance test. No new dependency 
 G1-SLICE.5d.1.2.2.2 owns each practical interval/termination/resource strategy before its kernel.
 Sin/cos and inverse plans/kernels are implemented;the bounded tangent strategy is selected in decision_tangent-resources.md. It preserves the
 existing numerical domains/refusals;explicit execution resources remain separate from language diagnostics.
-Native tangent implementation and full-family evaluator/resource integration remain separately owned.
+Native tangent/scalar policy integration is available;coupled/platform/full resource and replay proof remain separately owned.
 
 ## Tangent range and certificate boundary0290
 
@@ -98,8 +98,8 @@ This bounds output magnitude; it does not bound the precision needed to decide r
 Finite admitted tangent inputs can legitimately exceed the reduced128-bit result limit. Choose
 d=floor((U+1)/A), n=A*d-1: both components are admitted and delta=1/d. Here
 t=pi/(2A*d)<2/(A*d)<1/2. The elementary series bounds sin(t)<=t and cos(t)>=1/2 give
-M*cot(t)>A*M*d/4>U+1/2, so the rounded result requires formula_rational_width, not formula_domain.
-Exact poles retain their distinct formula_domain refusal; this adds no language restriction.
+M*cot(t)>A*M*d/4>U+1/2,so the rounded result retains its typed RationalWidth cause in formula_domain.
+Exact poles use the distinct Pole cause in that same family;resource admission has no language code.
 
 Representable positive-output midpoint levels k+1/2 cover k=0,...,U, including the final width
 boundary U+1/2:2^128 targets. Their number differs fundamentally from the1M sine thresholds.
@@ -148,7 +148,7 @@ Dividing already ppm-rounded sine/cosine is unsound as a tangent implementation,
 prove cos30 rounds866025,tan30 rounds577350 and sin30 is exactly500000 ppm. The quotient of
 these rounded components instead rounds577351. Positive120 degrees also requires a sign flip,
 so retaining only the original input sign is incorrect. Exact poles still require formula_domain;
-the existing finite nonpole overflow witness still requires formula_rational_width,not a new domain.
+the existing finite nonpole overflow witness retains its typed RationalWidth cause in formula_domain.
 
 Run python3 -I -B docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py. It compares
 29928 finite/372 pole cases against independent signed Fraction period reduction,including3642
@@ -193,3 +193,8 @@ At128/256 bits this model correctly remains undecided;512 certifies zero. Indepe
 alternate-pi bounds place the original angle below the true half-ppm threshold,rc=0. This is no
 lower bound on another algorithm's required precision or a universal512-bit guarantee.
 Bounded-request admission is selected in decision_tangent-resources.md;native tangent values0616;source calls0617;scoped139-row native acceptance0618;expression0619/source0620/recipe0621/Design0622;paired24 acceptance0623;platform remain pending.
+
+## Diagnostic clarification0635
+
+Corrected0290 wording:the actual RationalWidth and Pole causes both map to formula_domain;
+execution-resource refusal has no language diagnostic. Native139/source checks preserve this distinction.

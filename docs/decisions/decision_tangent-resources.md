@@ -26,7 +26,7 @@ This preserves the distinction already used by expression/source/recipe workspac
 An authored input remains mathematically valid when its requested execution cannot be admitted.
 The numerical contract still requires the true nearest ppm with half-away rounding and the
 original128-bit input/result boundaries. Resources cannot enlarge those numerical domains.
-Native preparation/value execution is implemented0615/0616;source calls0617;higher-level policy adoption remains pending.
+Native preparation/value execution is implemented0615/0616;source calls0617;scoped higher-level policies/paired acceptance0623 available;coupled/platform proof remains.
 
 ## Complete bounded request
 
@@ -118,7 +118,7 @@ near-pole witness by rounded endpoints with142/148 bits;the model classifies exc
 but cannot supply an exact native measured_bits field. The worker refines or refuses resources
 until both bit counts agree. B256 proves148,using4122 candidate bits/1536 cumulative terms.
 Preparation/value results and failures retain the original actual plan,selected policy and progress.
-Source calls0617 and scoped independent acceptance0618 are implemented;AST policy adoption retains its owner.
+Source calls0617/independent acceptance0618 and AST/source/recipe/Design policies0623 are available;platform remains owned.
 
 ## Actual source-bearing calls0617
 
@@ -127,7 +127,7 @@ sourced operand,explicit policy and native result or exact cause. Successful val
 input contributions with Tan,including exact zero/unit. Failure retains the input's original
 contributions and attempted operation metadata,but creates no successful value or successful-call
 source. An input's earlier successful Tan contribution survives even a later wrong-kind attempt.
-No caller-supplied value or source set replaces computation. Actual AST policy adoption remains owned.
+No caller-supplied value or source set replaces computation. Actual scalar policies are implemented below.
 
 ## Independent scoped native acceptance0618
 
@@ -147,8 +147,8 @@ Each actual call invokes the native sourced wrapper under its own fresh request 
 limits survive plan/result and every preparation/runtime error,including earlier unrelated causes.
 Actual mathematical/resource causes retain original operand/progress and the failing proof node.
 Existing engine error-witness boxing remains outside machine/native quotas;no extra native box
-or diagnostic allocation during allocator failure is introduced. Aggregate heap/CPU and real
-Design policies are available;scoped combined24-row acceptance passes.
+or diagnostic allocation during allocator failure is introduced. Aggregate heap/CPU envelopes
+remain owned;actual Design policies and scoped combined24-row acceptance are available.
 
 ## Actual source graph policies0620
 
@@ -188,3 +188,8 @@ exceptions retain selected demand/progress without language codes. Both native p
 Design modes match all48 complete outcomes/first failures,roots,flags,ordinals and read witnesses.
 All8748 frozen bytes regenerate independently;original23-row Design reference remains exact.
 This closes scoped policy integration,not coupled irrational/platform/full-resource/production proof.
+
+## Current review clarification0635
+
+Current implementation/policy status and per-call versus aggregate resource scope are clarified;
+original numerical rules and resource quotas are unchanged. Coupled body/platform proof remains owned.

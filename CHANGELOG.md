@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0634 — reject actual native inverse faults
+## STITCHCAD-G1-0635 — couple adaptive tangent proof and actual sourced storage
 
-- Original inverse baseline passes;9 actual compiled branch/ratio/sign/scale/reduction/rounding faults fail strict independent row assertions. Original545/copied542 hashes exact,555 planned outputs/timeout2 pass. Primary4/strict lint/fmt/bash syntax pass;kernel/fixtures unchanged.
-- Producer351/file-plan238/book99/374/1659/2941/glossary0/history793/IDs/map/diff pass. Whole0633 retained793;LIVE adds inverse9 faults,G1 6/18/G0 unapproved unchanged. Next tangent. Fresh45M scan/platform/mixed/full acceptance and transitive locality remain owned.
+- Native13 pass:all139 original tangent outcomes through real upstream calls;125 values/10 poles/4 exact widths,121 signed bind/read and4 genuine storage errors. Original inputs/policies/progress/flags preserved;7141 independent fixture bytes exact. Range/fold/enclosure/budget controls and primary theorem review pass.
+- Correct stale status,diagnostic and aggregate resource wording;no numerical policy change. Strict lint/fmt/book99/374/1659/2942/glossary0/history794/IDs/map/diff pass. LIVE adds storage121;G1 6/18/G0 unapproved unchanged. Next actual arithmetic/resource faults;full/platform acceptance remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

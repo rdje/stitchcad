@@ -612,45 +612,53 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0632 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part792.md).
 - ID: `G1-SLICE.5d.4.inverse`
   Status: `done`
-  Goal:coupled atan/atan2 whole-ratio/branch/threshold/error/provenance and actual fault review;
-  preserve principal signed axes and protected complete inverse certificates.
+  Goal:0634 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part794.md).
 - ID: `G1-SLICE.5d.4.inverse.values`
   Status: `done`
-  Goal:0633 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part793.md).
+  Goal:0634 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part794.md).
 - ID: `G1-SLICE.5d.4.inverse.faults`
   Status: `done`
-  Goal:0634 actual native inverse body faults with strict independent ordinal/panic evidence.
-  - [x] REPRODUCE / ISSUE:inverse proof/sourced81 passed0633;actual native branch/private-ratio/
-    reduction/scale/rounding faults remained required before scoped inverse review closure.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py
-    --plan-only →10 variants/542 exact snapshot files/555 complete outputs,no writes/compiler,
-    classifier3 exact/2 legacy ambiguities/13 refusals,rc=0. Private inverse.rs restores principal
-    signs and complements after whole256-bit quotient formation;each boundary needs a witness.
-  - [x] FIX:static native entry config selects original inverse body/81 fixtures/sourced watcher;
-    shared guarded controller admits complete local workspace/log/report plans before effects.
-    Register producer/file ownership and suite entry;complete runtime/locality stays n16.
-  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- python3 -I -B
-    docs/tasks/artifacts/formula_structure/inverse_body_faults.py with OS visibility →baseline1/
-    actual compiled faults9 pass,rc=0. Ppm scale/sign/private denominator/quadrant/y sign/
-    reciprocal axis/half count/series/truncation fail at exact original rows2/3/40/33/29/8/2/4/4.
-    Named-test panic plus whole-row ordinal payload required;compiler or unrelated failure never
-    counts. Original545 hashes/copied542 exact,555 planned outputs,timeout2 pass,rc=0. Current
-    report:target/inverse_body_faults/0634-workspace/report.json. Mutants stop at first assertion.
-  - [x] NO REGRESSION:local launcher cargo test --offline --locked -p sc-core --test
-    formula_inverse_value_contract →4 pass after restoration,including all81 sourced/storage/
-    kind failures and original fixture regeneration,rc=0. Strict library/test Clippy -D warnings,
-    rustfmt/bash syntax pass,rc=0. Producer351/34365 calls/file-plan238/90 owners/39 groups/
-    15 refusals/12 guard reds pass,inspection only. Whole793 four Git spans/IDs/map/diff/
-    book99/374/1659/2941/glossary0 pass,rc=0. Production inverse body/fixtures unchanged.
-  - [x] LOCKSTEP:book/live/task/MEM/DEV/CHANGE align;whole0633 retained793. Native inverse parent
-    closes;next .tangent. Fresh45M scan still deferred to coupled acceptance;platform/Tan/mixed/
-    full resource/provider/release remain owned. G1 6/18/G0 unapproved unchanged.
-    promotion: declined (existing exact original-scope compiler,whole-witness and restoration contracts;no new numerical policy or production authority).
-  Commit:STITCHCAD-G1-0634;Verification:baseline1/actual9/primary4/exact545+542/timeout2/book.
+  Goal:0634 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part794.md).
 - ID: `G1-SLICE.5d.4.tangent`
-  Status: `pending`
+  Status: `in_progress`
   Goal:coupled adaptive tangent proof/error/resource/provenance and actual fault review after
   native139 and real paired24 acceptance;no fixed practical budget or platform inference.
+- ID: `G1-SLICE.5d.4.tangent.values`
+  Status: `done`
+  - [x] REPRODUCE / ISSUE:native139 lacked all-row upstream/storage checks;fact/status text
+    still said kernel pending and misnamed RationalWidth's diagnostic. Core/width tests use
+    formula_domain;Pole is a distinct cause there,while resources have no language code.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py
+    →19 outcomes/3 actual model guard reds,
+    rc=0. Calcut Cor1 primary proof rechecked;no rational-angle half-ppm ties. Native fold156,
+    I(B)=16B+bit_length(2B+1)+16/terms4B precede work. Model width is no exact native bit count.
+  - [x] FIX:real sqrt/cos zero/unit arithmetic before all139 calls;preserve original full-width
+    Angle,policy,errors/progress and successful call flags through storage/read. Add exact ordinal
+    context for later native faults. Correct status/diagnostic/aggregate-heap wording explicitly0635.
+  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- cargo test --offline --locked -p sc-core --test
+    formula_tangent_oracle_contract --test formula_tangent_value_contract --test
+    formula_evaluated_tangent_contract →13 pass,rc=0. Original139:125 values/10 poles/4 exact
+    widths;121 signed bindings/read exact,4 original storage refusals. Real Cos/Sqrt/Tan flags/T1
+    and original input/policy/cause preserved. Independent7141B/SHAcf1a803c fixture regenerates.
+  - [x] NO REGRESSION:strict affected Clippy -D warnings/rustfmt pass,rc=0. Resource profile
+    8798/586/2;fold29928/372/92/144;enclosure3pi/42 Fraction/54 cases;budget19/3 reds pass,rc=0.
+    Primary source confirms only rational tangent0/±1;proof derives convergence,not practical
+    resources. Core tangent/fixture bytes unchanged. Whole794 four Git spans/IDs/map/diff/
+    book99/374/1659/2942/glossary0 pass,rc=0. Models do not replace exact native width/resource proof.
+  - [x] LOCKSTEP:book/facts/decision/profile/live/task align;whole0634 retained794. Next arithmetic
+    faults,then actual resource guards. G1 6/18/G0 unapproved;platform/full acceptance remain owned.
+    promotion: declined (existing exact-proof/source/storage/resource contracts;current wording corrections add no numerical policy or authority).
+  Commit:STITCHCAD-G1-0635;Verification:13 native/139 outcomes/model controls/lint/book.
+- ID: `G1-SLICE.5d.4.tangent.faults`
+  Status: `pending`
+  Goal:actual arithmetic and resource-guard body faults with independent complete-row evidence.
+- ID: `G1-SLICE.5d.4.tangent.faults.arithmetic`
+  Status: `pending`
+  Goal:compile actual folding/quotient/width/rounding faults against original independent cases.
+- ID: `G1-SLICE.5d.4.tangent.faults.resources`
+  Status: `pending`
+  Goal:compile actual reservation,charge,precedence and counter faults against independent
+  requested/maximum/prior-progress outcomes;no mathematical-domain substitute or guessed value.
 - ID: `G1-SLICE.5d.4.composition`
   Status: `pending`
   Goal:independent mixed irrational-call chains through actual source/recipe/Design execution,

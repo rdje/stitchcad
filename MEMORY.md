@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.tangent:coupled adaptive proof/error/resource/provenance and actual body
-  fault review after native139/real paired24. Preserve policy/input/progress;no fixed practical cap.
-- Inverse0634 native review done:source-gated complete proof/81 sourced rows/signed storage/
-  5 typed refusals plus9 actual compiled body faults. Exact ordinals2/3/40/33/29/8/2/4/4;baseline1
-  passes,original545/copied542 hashes exact,555 planned outputs/timeout2. Current report under
-  target/inverse_body_faults/0634-workspace;production inverse body/fixtures unchanged.
-- Primary inverse4/strict affected lint/fmt/bash syntax pass. Producer351/34365 calls/file-plan238
-  inspection pass;complete transitive runtime/locality remains n16 after coupled feature work.
-- Whole0633 retained793/four exact Git spans;book99/374/1659/2941/glossary0/IDs/map/diff pass.
-  Native roots/arc/forward/inverse scoped reviews done. Tan/mixed/actual platforms/full coupled
-  acceptance remain;fresh45M full reader stays .5d.4.acceptance after feature completion.
+- Next G1-SLICE.5d.4.tangent.faults.arithmetic:actual fold/quotient/width/rounding body faults
+  against original139 sourced rows,strict D343 panic/ordinal/whole-row evidence. Then .resources
+  owns actual reservation/charge/precedence/counter omissions;Python model reds are separate.
+- Tan0635 values:13 native pass. Real sqrt/cos upstreams before all139 original outcomes:
+  125 values/10 poles/4 exact widths;121 signed bind/read exact,4 genuine storage refusals.
+  Full-width Angle,explicit policy,original error/progress and Cos/Sqrt/Tan flags/T1 retained.
+- Independent7141B/SHAcf1a803c exact;range8798/586/2,fold29928/372/92/144,enclosures3pi/42/54,
+  budget19/3 model reds pass. Primary Calcut Cor1 rechecked;convergence has no practical universal
+  cap. Current fact/decision/profile status and diagnostic/aggregate resource wording corrected0635.
+- Whole0634 retained794/four Git spans;strict affected lint/fmt/book99/374/1659/2942/glossary0/
+  IDs/map/diff pass. Native root/arc/forward/inverse done;Tan faults/mixed/platform/full coupled
+  acceptance remain. Fresh45M read still final acceptance;G1 6/18/G0 unapproved unchanged.
 - Protect all original archive/search/numerical proof trees;0630 transaction complete,never rerun
-  old install/recovery. Original inverse witness1299B/SHA6b60d154 source gate still valid.
-  G1 6/18/G0 unapproved unchanged;full/hosted79bd6f6a exact-SHA only. Full PNT/push400 continues.
+  old install/recovery. Full/hosted79bd6f6a exact-SHA only;full PNT/push400 continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
