@@ -568,42 +568,41 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0615 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part775.md).
 - ID: `G1-SLICE.5d.3.2.2.2`
   Status: `done`
-  Goal:bounded native unrounded pi/sine/cosine/quotient worker and certified value execution.
-  - [x] REPRODUCE / ISSUE:preparation0615 admitted no numerical value. Existing rounded sin/cos
-    cannot implement tangent;wide-result model classification also supplies no exact native bit count.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B -c "import runpy;m=runpy.run_path('docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py');a=m['A'];d=m['U']//a;print([(b,[m['round_positive'](v).bit_length() for v in m['enclose'](a*d-1,d,b).ppm]) for b in (128,256)])"
-    →[(128,[142,148]),(256,[148,148])],rc=0. Returning a guessed width at128 would violate
-    FormulaRationalError's exact measured_bits contract. Retain whole-interval certification.
-  - [x] FIX:fresh directed Machin pi and both unrounded components at B128/doubling;exact fold
-    chooses direct/reciprocal quotient and proved positive denominator floor. Preflight complete
-    integer demand/native counters/factors/work before each allocation/charge;no precision ceiling.
-    Whole rounded endpoints alone accept a value;whole equal excessive bit counts certify width.
-    Results/errors retain original plan/input/policy/progress;exact endpoints need no series.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_value_contract
-    →five exact/signed/reciprocal/tiny/fullwidth/refinement/late-resource/bit-count tests pass,rc=0.
-    Exact square inequalities independently bound tan30;original inverse/alternate-pi control
-    owns near-midpoint zero. Small budget refuses next4122 after512;larger certifies148-bit width
-    after1536 at256. Actual near-midpoint limits8219/3584 certify zero at512;smaller bit/work
-    quotas preserve next8219/2048 demand,prior4122/1536 charges and bit-first priority. No value
-    on refusal;successful values agree under larger policies and preserve original signed input.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_tangent_prepare_contract →four pass,
-    rc=0. cargo test -p sc-core --lib recipe::tangent:: →two pass,including873 independent signed
-    folds and oversized native extent refusal before counter/allocation,rc=0. cargo clippy -p
-    sc-core --lib --test formula_tangent_value_contract -- -D warnings / selected rustfmt --check
-    / cargo test -p sc-core --doc recipe::tangent:: →strict lint/fmt/four docs pass,rc=0.
-    python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py →19 exact controls/
-    three guard-body reds pass,rc=0. Positive book98/372/1645/2906,glossary310/9/158/0,census345/33905,
-    history775 four Git spans,all prior IDs/order/map/diff pass,rc=0. No full CI/platform claim.
-  - [x] LOCKSTEP:book/API map/native-status facts/index/decision/task/MEM/DEV/CHANGE/LIVE align;
-    whole0615 retained775. Native .3 source contributions and .4 independent combined acceptance
-    precede real .5e.2.4.integration.tangent policy adoption. LIVE bounded values,G1 6/18/G0
-    unapproved unchanged. Full heap/CPU/provider/Design/platform/physical/release owners remain.
-    promotion: promoted (decision_tangent-resources.md gains exact native-width refinement answer and original plan/progress contract).
-  Commit:STITCHCAD-G1-0616;Verification:focused checks pass;independent combined feature proof pending.
+  Goal:0616 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part776.md).
 - ID: `G1-SLICE.5d.3.2.2.3`
-  Status: `pending`
-  Goal:source-bearing tangent wrapper preserves actual executed-call contributions through exact
-  zero/unit and numerical/resource failures;real input/policy retained. No caller-seeded provenance.
+  Status: `done`
+  Goal:actual supplied-scalar tangent computation with original input/policy/native metadata and
+  successful-call contributions,including exact zero/unit and original typed failures.
+  - [x] REPRODUCE / ISSUE:native values0616 carried no supplied scalar's input contributions.
+    Dropping Tan for exact zero/unit would let a completed approximation-producing dependency
+    silently pass T1. Failure also needs original input/policy without a fabricated successful value.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test formula_evaluated_tangent_contract
+    →five actual source/binding/class/first-kind/prep/native-error tests pass,rc=0. Existing
+    FormulaApproximationSources defines contributions for successful executed calls. Attempted
+    operation metadata on failure must stay distinct;actual prior input contributions remain real.
+  - [x] FIX:checked_tan calls actual native preparation/evaluation with explicit limits. Private
+    result owns actual sourced input/native execution;value unions input sources with Tan even
+    exact zero/unit. Private error retains actual input/limits/attempted Tan and original prep or
+    native error chain. No caller result/source seed,no fabricated output or successful-call flag
+    on failure;earlier successful Tan on the input survives a later refused attempt.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_evaluated_tangent_contract
+    →five pass using real upstream round_to/cos kernels,not manually attached sources,rc=0.
+    Exact zero/unit through cancellation,false comparison/storage/read preserve RoundTo/Tan and
+    T1 refusal/T2 source admission;actual negative tan30 preserves Cos/Tan. Boolean false/prior
+    successful Tan retain kind-before-empty-budget priority. Original fold/pole/late resource/
+    actual width errors preserve input/policy/progress and exact native source-chain pointer.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_evaluated_calls_contract →eight
+    existing supplied numeric-call tests pass,rc=0. cargo clippy -p sc-core --lib --test
+    formula_evaluated_tangent_contract -- -D warnings / selected rustfmt --check / cargo test -p
+    sc-core --doc recipe::evaluated::tangent:: →strict lint/fmt/one new positive doc pass,rc=0.
+    Positive book98/374/1646/2908,glossary310/9/158/0,history776 four exact Git spans,all prior
+    IDs/order/map/diff pass,rc=0. Input/source/native policies unchanged;no full CI/platform claim.
+  - [x] LOCKSTEP:book/API map/native status facts/decision/task/index/MEM/DEV/CHANGE/LIVE align;
+    whole0616 retained776. Next .4 independent combined native acceptance,then actual AST/source/
+    recipe/Design policy adoption .5e.2.4.integration.tangent. LIVE source-bearing tangent values,
+    G1 6/18/G0 unapproved unchanged. Broader provider/heap/CPU/platform/physical/release owners remain.
+    promotion: declined (existing successful-call provenance and tangent-resource decisions own these semantics;this is scoped native implementation).
+  Commit:STITCHCAD-G1-0617;Verification:focused checks pass;independent combined acceptance pending.
 - ID: `G1-SLICE.5d.3.2.2.4`
   Status: `pending`
   Goal:independent scoped native value/resource acceptance after tangent implementation. Keep

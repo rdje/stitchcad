@@ -11,6 +11,8 @@ mod calls;
 mod conditional;
 pub use assertion::{FormulaAssertionFailure, FormulaSatisfiedAssertion};
 pub use conditional::{FormulaConditionalBranch, FormulaConditionalValueError};
+mod tangent;
+pub use tangent::{FormulaEvaluatedTangent, FormulaEvaluatedTangentError};
 mod tolerance;
 pub use tolerance::{
     FormulaToleranceComparison, FormulaToleranceComparisonError, FormulaToleranceComparisonRefusal,

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — execute bounded certified native tangent values
+## _(2026-10-30 UTC)_ — retain actual tangent input and call contributions
 
-0616 consumes actual tangent plans with explicit quotas. Fresh directed Machin pi/unrounded sine+cosine and exact direct/reciprocal quotient refine B128/doubling. Whole rounding agreement alone accepts Ratio;complete integer/work/native-factor/counter preflight precedes allocation/charge.
-Results/errors retain original input/plan/policy/progress. Exact cases charge no series. Native width needs exact measured_bits:actual witness at128 spans142/148 bits,256 proves148. Refine or return resources instead of guessing width. Logical quotas imply no total allocator/CPU/Design certificate.
-Worker5/prep4/private2(873 signed folds)/doc4/scoped lint/fmt pass;model19/3 guard reds. Book98/372/1645/2906/glossary0/census345/history775 four Git spans/IDs/map/diff pass. Width-refinement answer promoted;stale native status summaries corrected. [Whole0615](docs/history/stitchcad-devnotes-part775.md).
-Next actual Tan source contributions .3,then combined independent .4 and AST policy adoption. LIVE bounded native values,G1 6/18/G0 unapproved unchanged. No full CI/platform/physical/release approval. Full PNT/push400;original proofs retained.
+0617 adds actual supplied-scalar checked_tan with explicit native limits. Successful wrapper retains original sourced operand/native execution;value unions every input dependency and Tan even exact zero/unit. It computes through the real native plan,without caller-seeded result or contributions.
+Failure retains original input/limits/attempted operation and original prep/native error chain. Existing input contributions survive;no successful output or call contribution is invented. Prior completed Tan stays on a later wrong-kind input. No Boolean coercion or resource/domain substitution.
+Five new wrapper tests use real round_to/cos kernels through false storage/T1/T2,kind/pole/fold/later quota/width failures and original chain identity. Existing numeric calls8/new doc1/scoped strict lint/fmt pass;book98/374/1646/2908/glossary0/history776 four spans/IDs/map/diff pass.
+[Whole0616](docs/history/stitchcad-devnotes-part776.md) retained. Next .4 independent combined native acceptance,then real AST policy adoption. LIVE source-bearing values,G1 6/18/G0 unapproved unchanged. No full CI/platform/physical/release approval;full PNT/push400/protected proofs retained.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

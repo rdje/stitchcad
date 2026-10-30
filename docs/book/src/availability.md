@@ -59,7 +59,7 @@ values and raw angle turns. Exact abs/min/max/clamp are available with typed arg
 Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,
 checks signed i64 storage and preserves Boolean kind. Correctly rounded sqrt(area/ratio), signed-length
 hypot and signed/full-turn arc_length are available. Native sin/cos/atan/atan2 kernels and supplied-scalar adapters are available.
-Explicit-resource tangent values are available;their source wrapper and AST policy adoption remain pending.
+Explicit-resource tangent values and supplied-scalar calls are available;AST policy adoption remains pending.
 Complete AST/statement/recipe execution remains later work.
 [Canonical length authored reads](annexes/formula-runtime-validation.md#canonical-length-authored-reads)
 now preserve source/state beside exact values or observation/evaluation requests.

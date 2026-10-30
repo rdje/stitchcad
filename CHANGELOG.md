@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0616 — execute certified tangent values under explicit resources
+## STITCHCAD-G1-0617 — retain actual tangent operands and successful call contributions
 
-- Add fresh directed pi/unrounded component/quotient refinement with complete iteration preflight. Retain original plan/policy/progress for certified Ratio or typed failure. Exact numerator width requires agreed bit count;no guessed diagnostic or uncertain value.
-- Worker5/prep4/private2/doc4/scoped lint/fmt/model19+3 pass. Book98/372/1645/2906/glossary0/census345/history775/IDs/map/diff pass. LIVE bounded values,G1 6/18/G0 unapproved unchanged. Next source contributions;combined native/AST/platform acceptance remains pending.
+- Add supplied-scalar checked_tan with original input/explicit policy/native execution. Successful zero/unit values retain Tan;failures preserve input contributions/attempted operation/original typed cause without a fabricated output or call flag.
+- Wrapper5/earlier numeric calls8/doc1/scoped lint/fmt pass. Book98/374/1646/2908/glossary0/history776/IDs/map/diff pass. LIVE source-bearing tangent values,G1 6/18/G0 unapproved unchanged. Next independent combined acceptance,then actual AST policy adoption.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

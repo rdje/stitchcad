@@ -416,10 +416,10 @@ publication remain the full evaluator's responsibilities.
 
 ### Product implemented numeric calls
 
-The sourced scalar value now executes checked_atan, checked_atan2, checked_sin, checked_cos, checked_abs, checked_sqrt, checked_hypot, checked_arc_length,
+The sourced scalar value now executes checked_atan, checked_atan2, checked_sin, checked_cos, checked_tan, checked_abs, checked_sqrt, checked_hypot, checked_arc_length,
 checked_min, checked_max, checked_clamp and checked_round_to through the existing numerical kernels.
 Successful calls automatically union every evaluated argument's sources and add their own source
-when the contract requires it. Abs/min/max/clamp add no new contribution. Atan/atan2/sin/cos/sqrt/hypot/arc_length and
+when the contract requires it. Abs/min/max/clamp add no new contribution. Atan/atan2/sin/cos/tan/sqrt/hypot/arc_length and
 round_to do, including zero, perfect roots and values unchanged by the requested step.
 
 ```rust
@@ -441,7 +441,7 @@ API. These calls operate on supplied values; the caller still evaluates argument
 Wrong input kinds retain the first actual argument position; homogeneous calls retain the wanted
 and actual kind. Empty min/max, negative sqrt, invalid clamp bounds, zero quantization step and
 numeric result refusals propagate their typed failures without a substitute value. A failed call
-produces no new sourced scalar. Eight focused native tests cover all twelve implemented call families,
+produces no new sourced scalar. Earlier focused native tests cover the original call families,
 source unions, exact-valued calls through storage, singleton/extremum cases and actual refusals.
 Sin/cos retain their own contribution even when the actual answer is exactly zero or one. A real
 upstream round_to Angle contributes its source through either call; cancelling the result to zero
@@ -454,7 +454,9 @@ Cancellation, binding and reads preserve T1 refusal; T2 admits the source guard.
 actual argument kinds before zero-vector handling, including a wrong first kind before a Boolean
 second argument. Atan2ZeroVector retains actual homogeneous kind and zero operands.
 [Actual scalar expressions and recipes](formula-recipe-execution.md) now consume these sourced values.
-Tangent,geometry,Derived resolution and full provider/replay integration remain open.
+[Explicit-resource tangent calls](formula-trig-certificates.md#sourced-native-tangent-calls) now
+retain actual input/result/policy or original typed failure. AST Tan policy,geometry and full
+provider/replay integration remain open.
 
 ### Product named-tolerance comparisons
 

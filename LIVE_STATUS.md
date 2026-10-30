@@ -25,4 +25,4 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G7 — scoped production declaration | Not Started | 7 leaves: independent review, envelope statement, semver policy, upgrade/rollback, channels, governance |
 | V1 — assembly visualization | Not Started | parallel, never blocks a G-gate; 7 leaves: mesh, ease-aware stitching, net-line binding, arrangement, viewport, blinded validation |
 | V2 — physically validated simulation | Not Started | parallel, uncapped; 6 leaves: `sc-sim` out of the default build, XPBD research, labelled approximation, calibration + observables, evidence-gated exit |
-| Product code (`crates/`) | In Progress | Units/ontology/inputs/Design scalar plans;authorized metadata groups,bounded history and audit. Design scalar recipes;oracles49/18/27/23 pass. Bounded tangent values;source/policy/full integration/app/physical/release pending |
+| Product code (`crates/`) | In Progress | Units/ontology/inputs/Design scalar plans;authorized metadata groups,bounded history and audit. Design scalar recipes;oracles49/18/27/23 pass. Sourced bounded tangent values;AST policy/full integration/app/physical/release pending |

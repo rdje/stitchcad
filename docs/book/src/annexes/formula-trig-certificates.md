@@ -442,7 +442,7 @@ allocator bytes,CPU latency,source execution or production readiness.
 Focused native checks cover actual kind priority,folding-before-endpoint/pole priority,inclusive
 quotas,atomic first-iteration admission and unchanged full128-bit operands. A private test compares
 actual folded signs,reciprocal choice and exact cases with873 independent signed centered residues.
-Independent complete native value/resource acceptance follows the source wrapper;
+Independent combined native value/resource acceptance remains owned;
 whole expression/source/recipe/Design policy adoption remains separately owned.
 
 ## Certified native tangent value execution
@@ -494,7 +494,54 @@ its smaller classification budget cannot license a false native measured_bits fi
 Five focused worker tests cover exact endpoints,signed quadrants and reciprocals,the independently
 bounded tan30 rounding counterexample,tiny full128-bit inputs,actual512-bit midpoint refinement,
 later bit/work/priority refusals,policy-independent successful values and exact148-bit width.
-The earlier preparation/folding contracts remain separate. Native source contributions and real
-expression/source/recipe/Design policy selection are still pending;the actual Tan call cannot yet
-be executed by those higher-level plans. Independent combined native acceptance follows the source
-wrapper. No full CI,platform,physical or production approval follows these scoped worker checks.
+The earlier preparation/folding contracts remain separate. Source-bearing supplied-value calls
+are implemented below. Real expression/source/recipe/Design policy selection and independent
+combined native acceptance remain pending. No full CI,platform,physical or production approval
+follows these scoped worker checks.
+
+## Sourced native tangent calls
+
+FormulaEvaluatedScalar::checked_tan takes an actual supplied sourced operand and explicit
+FormulaTangentLimits. It invokes the native preparation and worker itself;there is no caller-supplied
+numerical answer or contribution set. FormulaEvaluatedTangent retains that exact original input
+and FormulaExecutedTangent. Its value getter returns the certified Ratio with every input
+contribution plus the successful tan call. Exact zero/unit cases still contribute tan.
+
+```rust
+use sc_core::recipe::{FormulaBuiltin as B, FormulaEvaluatedScalar as V, FormulaKind as K,
+    FormulaNumericValue as N, FormulaRational as R, FormulaTangentLimits, FormulaToleranceName as T};
+# fn main() -> Result<(), Box<dyn std::error::Error>> {
+let angle = V::from_numeric(N::new(K::Angle, R::ZERO)?);
+let result = angle.checked_tan(FormulaTangentLimits::new(156, 0))?;
+let value = result.value();
+assert!(value.sources().contains(B::Tan));
+assert!(value.sources().check_tolerance(T::Numerical).is_err());
+value.sources().check_tolerance(T::Geometric)?;
+assert_eq!(result.execution().charged_series_terms(), 0);
+# Ok(())
+# }
+```
+
+The T2 check above admits only the symbolic source guard. It supplies no quantitative tolerance,
+provider,statement or physical certificate. Actual cancellation,comparison,binding and read use
+the existing scalar methods;tan survives even when the resulting stored Boolean is false or a
+numeric result is zero. No class or storage boundary erases a successful dependency.
+
+FormulaEvaluatedTangentError retains the actual original supplied operand,its existing source
+set,the explicit limits and attempted Tan operation. It exposes the original preparation error
+or borrows the original native execution error with its plan and progress. The standard error
+chain points to that original cause. Wrong-kind input,including Boolean false,precedes resources;
+folding refusal precedes actual pole classification. Later quota and exact-width causes retain
+all already executed input contributions. Resource refusal still has no language diagnostic.
+
+A failed call supplies no successful output and adds no successful tan contribution. Attempted
+operation metadata is distinct from a completed-result source set. If the input already carried
+a prior successful tan call,that original contribution remains on the retained input. This follows
+the existing successful-call source contract;failure does not fabricate or erase an input value.
+
+Five focused tests construct real upstream round_to and cos calls,without manually attaching
+sources. They check exact zero/unit Tan contributions through cancellation,false storage/read and
+T1 refusal/T2 source admission;actual negative tan30;Boolean/prior-tan kind priority;original
+fold/pole failures;and late native resource/148-bit width failures with exact original source-chain
+identity. Combined independent native acceptance remains the next leaf. Real AST/source/recipe/
+Design policy adoption remains .5e.2.4.integration.tangent;those plans cannot execute Tan yet.

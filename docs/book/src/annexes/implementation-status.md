@@ -57,7 +57,7 @@ requires the named contracts and later proof owners.
 | Canonical/stored numeric reads | §4.2; G1 | sc-core recipe; G1-SLICE.5e.1.6 | [Exact integer bridges](formula-rationals.md#canonical-and-stored-numeric-reads); source propagation follows |
 | Approximation-source set/class guard | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.1 | [Immutable sources/T1 refusal](formula-runtime-validation.md#product-source-set-primitive); full propagation follows |
 | Sourced scalar operators/bindings | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.2 | [Numeric/Boolean sources and reads](formula-runtime-validation.md#product-scalar-operators-and-bindings); AST execution follows |
-| Sourced implemented numeric calls | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.3/.6 | [Actual kernels/input unions](formula-runtime-validation.md#product-implemented-numeric-calls); tangent wrapper/AST policy follow |
+| Sourced implemented numeric calls | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.3/.6 | [Actual kernels/input unions](formula-runtime-validation.md#product-implemented-numeric-calls); tangent calls available;AST policy follows |
 | Exact named tolerance comparison | §3.1/§4.2; G1 | sc-core recipe; G1-SLICE.5e.3.4 | [Actual values/context/sources](formula-runtime-validation.md#product-named-tolerance-comparisons); assertion/AST execution follows |
 | Named assertion value outcomes | §5.1/§5.2; G1 | sc-core recipe; G1-SLICE.5e.3.5 | [Actual true/failure records](formula-runtime-validation.md#product-named-assertion-outcomes); whole statement execution follows |
 | Lazy conditional value control | grammar§7; G1 | sc-core recipe; G1-SLICE.5e.2.1 | [Selected callback/source retention](formula-runtime-validation.md#product-lazy-conditional-value-control); full AST proof/execution follows |
@@ -85,7 +85,7 @@ reviewed at .4d.2; actual profile application, geometry, global truth and approv
 
 The [trig threshold certificates](formula-trig-certificates.md) cover all1M forward and45M inverse
 targets with exact full readers. Sin/cos and atan/atan2 value kernels are implemented;
-explicit-resource tangent values are implemented;source wrapper,combined acceptance and AST policy adoption remain open.
+explicit-resource tangent values are implemented;combined acceptance and AST policy adoption remain open.
 
 Individual named axes with explicit ordered values and canonical source/state borrows are available
 ([contract](../spec/size-axes.md#executable-individual-axes--g1-slice4c21)). [Complete member coordinates](../spec/size-axes.md#complete-axismember-points--g1-slice4c22)

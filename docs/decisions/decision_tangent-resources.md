@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-30`
-- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source/combined acceptance pending
+- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;combined acceptance pending
 - **Owner / source:** engineer under the director's delegated implementation authority;
   G1-SLICE.5d.1.2.2.2.d.2.2.2, implementation G1-SLICE.5d.3.2.2
 
@@ -26,7 +26,7 @@ This preserves the distinction already used by expression/source/recipe workspac
 An authored input remains mathematically valid when its requested execution cannot be admitted.
 The numerical contract still requires the true nearest ppm with half-away rounding and the
 original128-bit input/result boundaries. Resources cannot enlarge those numerical domains.
-Native preparation/value execution is implemented0615/0616;source wrapper and higher-level policy adoption remain pending.
+Native preparation/value execution is implemented0615/0616;source calls0617;higher-level policy adoption remains pending.
 
 ## Complete bounded request
 
@@ -119,3 +119,12 @@ but cannot supply an exact native measured_bits field. The worker refines or ref
 until both bit counts agree. B256 proves148,using4122 candidate bits/1536 cumulative terms.
 Preparation/value results and failures retain the original actual plan,selected policy and progress.
 Source contributions,combined independent acceptance and AST policy adoption retain later owners.
+
+## Actual source-bearing calls0617
+
+The supplied-scalar wrapper invokes native preparation/evaluation and retains the original
+sourced operand,explicit policy and native result or exact cause. Successful values union all
+input contributions with Tan,including exact zero/unit. Failure retains the input's original
+contributions and attempted operation metadata,but creates no successful value or successful-call
+source. An input's earlier successful Tan contribution survives even a later wrong-kind attempt.
+No caller-supplied value or source set replaces computation. Actual AST policy adoption remains owned.

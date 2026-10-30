@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.3.2.2.3:actual source-bearing tangent wrapper/call contributions.
-  Native preparation/value0615/0616 implemented. Read actual evaluated/provenance/native wrapper
-  interfaces before code;preserve original supplied operand,explicit limits,result/error metadata
-  and executed Tan contribution even exact zero/unit. No caller-seeded flag/value or AST placeholder.
-- FormulaTangentPlan.evaluate uses fresh Machin pi/unrounded sine+cosine/quotient at B128/doubling.
-  Explicit I(B)=16B+bit_length(2B+1)+16 and4B preflight before allocation/charge;no fixed ceiling.
-  Result/error keeps original plan/policy/progress. Exact endpoints156/0;whole rounding only values.
-  Width must certify exact bits:actual witness128 endpoints142/148,256 both148. Limits2073/512
-  give next4122 resources;4122/1536 give original148-bit numerator width. No fake domain/bit count.
-- Worker5/prep4/private2(including873 signed folds)/doc4/scoped strict lint/fmt pass;model19/3 reds.
-  Book98/372/1645/2906/glossary0/census345/history775 four spans/IDs/map/diff pass. Source wrapper,
-  independent native acceptance and real AST/source/recipe/Design policy integration remain owned.
-  LIVE G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/
-  numerical/cleanup proofs;never rerun old transactions. Full PNT;commit each slice,push400.
+- Next G1-SLICE.5d.3.2.2.4:independent combined native tangent value/resource acceptance. Preparation/value/source wrapper0615–0617 implemented. FormulaEvaluatedScalar.checked_tan
+  invokes actual native kernels with explicit limits. FormulaEvaluatedTangent retains input/native
+  execution;value unions all input sources and successful Tan,including zero/unit. Error retains
+  actual input/limits/attempted call and original prep/native cause,with no fabricated output/flag.
+- Read current tangent worker/API/source tests and independent Fraction model before acceptance.
+  B128/doubling;I(B)=16B+bit_length(2B+1)+16 and4B complete preflight before allocation/charge.
+  Whole-interval rounding only values. Native width certifies exact bit count:actual128 spans
+  142/148;256 proves148 with4122/1536. Smaller quotas return resources,no fake domain or value.
+- Wrapper5/earlier numeric calls8/doc1/scoped strict lint/fmt pass. Real round_to/cos contributions
+  survive false/zero storage,T1/T2 guard and original typed failures;no manually seeded sources.
+  Book98/374/1646/2908/glossary0/history776 four spans/IDs/map/diff pass. Combined acceptance and
+  real AST/source/recipe/Design tangent policy integration remain owned. LIVE G1 6/18/G0 unapproved;
+  full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/numerical/cleanup proofs;
+  never rerun old transactions. Full PNT;commit each slice,push400 after full verification.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

@@ -407,8 +407,8 @@ and their admitted all-input plan were completed in .5d.3.3/.5d.3.3.1;source-bea
 are also available. D337 corrected this plan's stale pre0288 inverse-availability statement.
 
 [Native tangent values](formula-trig-certificates.md#certified-native-tangent-value-execution)
-now use the admitted bounded adaptive strategy with explicit bit/work quotas. The source wrapper
-and real AST/recipe/Design policy adoption remain owned under .5d.3.2.2.3/.5e.2.4.integration.tangent.
+now use the admitted bounded adaptive strategy with explicit bit/work quotas. Supplied-value
+source wrappers are available;real AST/recipe/Design policy adoption remains .5e.2.4.integration.tangent.
 Current expression capability admission still refuses unsupported Tan execution before values;
 this is an implementation boundary,not a new language diagnostic or placeholder numerical result.
 Resource refusal returns no value or invented numerical-domain cause. Full runtime acceptance
