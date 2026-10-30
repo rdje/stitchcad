@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4.2:actual recipe Derived suspension/read adapter.
-  Use private earned SourceRuntime only;preserve original direct/prior-let witnesses and one-shot
-  RequiresEvaluation. No supplied values/cache or replay;then .4.4.3 worker/.4.4.4 Design bridge.
-- Shared source runtime0603:full S/N buffers before values,private initially empty cache,actual
-  roots/ordinals shared across demands without source-edge storage. Any failed demand poisons
-  reuse/publication;original one-source exact selection/context/typed errors/results preserved.
-  Private native1/source8/doc1/scoped lint/fmt/book98/357/1642/2895/glossary0 pass. Real roots
-  a1000/3,b1000,c2000/3,once ordinals/buffer pointers;later failure rejects reuse/prefix. Existing
-  independent27 rows/8 refusals/frozen bytes and512-source requested64KiB thread stack pass.
-- Whole0602 parent/children retained761/four spans/live ids. Actual same-root/exact-source-proof
-  Design plans accepted;planning computes no values. .4.4 worker/.4.5 independent acceptance open.
-  Namespace/parser/provider/kernel/allocator/CPU/whole Design bounds separate. Full Derived/tan/
-  geometry/load/replay/platform/physical owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4.3:complete actual scalar recipe/source worker.
+  Reuse private source runtime/RecipeSources Derived mode;reserve both runtimes/outcomes before
+  first values,real ordered RHS→once storage→prior-let visibility and atomic typed failure.
+- Recipe adapter0604:actual unresolved canonical Derived yields without recording a read;resume
+  only after private earned source root exists. Shared witness helper requires exact canonical
+  owner. Private read wrapper retains actual supplier/canonical proof;public recipe enum unchanged.
+  Standalone mode still RequiresEvaluation. Native1/recipe9/source8/doc1/scoped lint/fmt/book98/
+  357/1642/2895/glossary0 pass. Real first let333,source1000/3 twice,RHS2999/3,once source ordinal1;
+  no replay,seeded values or second-let storage. Foreign equal inventory guard checked.
+- Whole0603 retained762/four spans/live ids. Source27/8 and recipe18/7 independent/frozen-byte
+  watchers pass. Actual same-root/exact-source-proof Design plans accepted;integrated worker/
+  .4.4.4 Design execution/.4.5 acceptance pending. Namespace/parser/provider/kernel/allocator/CPU/
+  whole Design bounds separate. Full tan/geometry/load/replay/platform/physical owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

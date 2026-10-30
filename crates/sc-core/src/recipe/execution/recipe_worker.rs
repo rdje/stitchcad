@@ -82,6 +82,7 @@ impl<'p> Plan<'p> {
                             &mut RecipeSources {
                                 sources,
                                 completed: &statements,
+                                derived: None,
                             },
                             context,
                         )
@@ -119,6 +120,7 @@ impl<'p> Plan<'p> {
                             &mut RecipeSources {
                                 sources: left_sources,
                                 completed: &statements,
+                                derived: None,
                             },
                             context,
                         )
@@ -134,6 +136,7 @@ impl<'p> Plan<'p> {
                             &mut RecipeSources {
                                 sources: right_sources,
                                 completed: &statements,
+                                derived: None,
                             },
                             context,
                         )

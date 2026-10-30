@@ -77,6 +77,36 @@ pub(super) fn source_index(
 ) -> Option<usize> {
     checked.normalized().inputs().sources().source_index(id)
 }
+// A witness can be earned only from this exact inventory and an actually completed original root.
+pub(super) fn completed_derived_read<'a>(
+    input: FormulaCanonicalInput<'a>,
+    checked: &'a FormulaCheckedSources<'a>,
+    completed: &[Option<Completed>],
+) -> Option<ReadData<'a>> {
+    if !core::ptr::eq(input.inputs(), checked.normalized().inputs().inputs()) {
+        unreachable!("private source and recipe runtimes share the actual canonical owner");
+    }
+    let Some(formula) = input.derived_formula() else {
+        unreachable!("actual unresolved Derived input");
+    };
+    let Some(index) = source_index(checked, formula) else {
+        unreachable!("actual complete source/input join retains its sole supplier");
+    };
+    let Some(slot) = completed.get(index) else {
+        unreachable!("complete output population shares original source positions");
+    };
+    let completed = (*slot)?;
+    let Some(supplier) = checked.sources().get(index) else {
+        unreachable!("original source proof position");
+    };
+    Some(ReadData {
+        source: FormulaScalarSourceGraphReadKind::Derived(FormulaExecutedDerivedSourceRead {
+            input,
+            supplier,
+        }),
+        value: completed.value,
+    })
+}
 pub(super) struct GraphSources<'s, 'a> {
     pub(super) plan: &'s mut Plan<'a>,
     pub(super) checked: &'a FormulaCheckedSources<'a>,
@@ -101,24 +131,11 @@ impl<'a> Sources<'a> for GraphSources<'_, 'a> {
             unreachable!("complete source binding");
         };
         let data = if let super::FormulaScalarExecutionSourceKind::Canonical(input) = kind {
-            if let Some(formula) = input.derived_formula() {
-                let Some(index) = source_index(self.checked, formula) else {
-                    unreachable!("actual complete source/input join retained its sole supplier");
-                };
-                let Some(completed) = self.completed.get(index).copied().flatten() else {
+            if input.derived_formula().is_some() {
+                let Some(data) = completed_derived_read(input, self.checked, self.completed) else {
                     return Ok(ReadValue::AwaitDerived(input));
                 };
-                let Some(supplier) = self.checked.sources().get(index) else {
-                    unreachable!(
-                        "original source position is shared by complete proofs and outputs"
-                    );
-                };
-                ReadData {
-                    source: FormulaScalarSourceGraphReadKind::Derived(
-                        FormulaExecutedDerivedSourceRead { input, supplier },
-                    ),
-                    value: completed.value,
-                }
+                data
             } else {
                 read::read(kind, context)?
             }

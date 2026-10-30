@@ -177,6 +177,20 @@ impl<'a> SourceRuntime<'a> {
         };
         Ok(value.value)
     }
+    // No caller supplies a value/cache:the same actual canonical join selects only earned roots.
+    pub(super) fn read_derived(
+        &self,
+        input: crate::recipe::FormulaCanonicalInput<'a>,
+    ) -> Option<super::read::ReadData<'a>> {
+        if self.failed {
+            unreachable!("a failed source runtime cannot supply a recipe read");
+        }
+        super::source_read::completed_derived_read(
+            input,
+            self.plan.graph().dependencies().checked(),
+            &self.completed,
+        )
+    }
     // Only the enclosing successful worker publishes this real plan/cache;an error drops all state.
     pub(super) fn finish(self) -> CompletedSources<'a> {
         if self.failed {

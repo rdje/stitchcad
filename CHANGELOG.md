@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0603 — share actual earned source roots across private demands
+## STITCHCAD-G1-0604 — adapt recipe Derived reads to earned original source roots
 
-- Extract fully reserved private source runtime with once-only unbound roots/ordinals,unchanged public one-entry behavior and failure-poisoned reuse/publication. No caller-seeded cache or new public recipe execution API.
-- Private native1/source8/doc1/scoped lint/fmt/book98/357/1642/2895/glossary0 pass. Real repeated roots/buffer stability/failure guards and independent27/8-refusal/frozen bytes retained. Whole0602 parent/children retained761/four spans/live ids. Next .4.4.2 recipe adapter;LIVE G1 6/18/G0 unapproved unchanged.
+- Private recipe names suspend until actual shared source runtime computes their roots;record original canonical/supplier witnesses without replay or caller values. Exact canonical owner guard and original public recipe enum/RequiresEvaluation preserved. Combined worker remains next.
+- Native1/recipe9/source8/doc1/scoped lint/fmt/book98/357/1642/2895/glossary0 pass. Real stored333/unbound1000/3/RHS2999/3 and once ordinal covered;independent18/7 and27/8/frozen bytes retained. Whole0603 retained762/four spans/live ids. Next .4.4.3 worker;LIVE G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

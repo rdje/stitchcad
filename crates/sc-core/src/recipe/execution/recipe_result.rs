@@ -29,10 +29,35 @@ impl fmt::Debug for FormulaScalarRecipeReadKind<'_> {
     }
 }
 #[derive(Clone, Copy)]
+pub(super) enum RecipeReadSource<'a> {
+    Original(FormulaScalarRecipeReadKind<'a>),
+    Derived(super::FormulaExecutedDerivedSourceRead<'a>),
+}
+impl fmt::Debug for RecipeReadSource<'_> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::Original(source) => f.debug_tuple("Original").field(source).finish(),
+            Self::Derived(source) => f
+                .debug_struct("Derived")
+                .field("kind", &source.input().metadata().kind())
+                .finish_non_exhaustive(),
+        }
+    }
+}
+#[derive(Clone, Copy)]
 pub(super) struct RecipeReadData<'a> {
     pub(super) node: Option<FormulaCheckedNode<'a, 'a>>,
-    pub(super) source: FormulaScalarRecipeReadKind<'a>,
+    pub(super) source: RecipeReadSource<'a>,
     pub(super) value: FormulaEvaluatedScalar,
+}
+impl<'a> RecipeReadData<'a> {
+    pub(super) const fn original_source(self) -> FormulaScalarRecipeReadKind<'a> {
+        match self.source {
+            RecipeReadSource::Original(source) => source,
+            // The standalone worker has no shared Derived source runtime.
+            RecipeReadSource::Derived(_) => unreachable!(),
+        }
+    }
 }
 impl fmt::Debug for RecipeReadData<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -63,7 +88,7 @@ impl<'a> FormulaScalarRecipeRead<'a> {
     /// Original successful canonical/provider/prior-binding source.
     #[must_use]
     pub const fn source(self) -> FormulaScalarRecipeReadKind<'a> {
-        self.data.source
+        self.data.original_source()
     }
     /// Actual sourced scalar read; prior lets expose their stored integer or Boolean.
     #[must_use]

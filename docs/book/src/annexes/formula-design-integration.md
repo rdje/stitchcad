@@ -280,6 +280,35 @@ its original typed failure and drops the complete private state. This supplies a
 boundary;it introduces no caller-seeded cache or new public execution API. The actual combined
 Design recipe worker and once-only let storage bridge remain subsequent tasks.
 
+The private recipe read adapter now supports actual Derived suspension against that earned runtime.
+An unresolved canonical Derived name returns the original joined input to the existing machine
+continuation. Its read slot stays empty until the actual supplier has executed. Resuming the same
+machine then records the original canonical join,actual successful source proof and unbound root.
+Source-cache access checks the exact canonical inventory;an equal-looking foreign inventory cannot
+supply that read. Direct canonical/reserved reads and genuine completed prior-let bindings retain
+their existing witnesses. No caller can supply a value or cached root to this adapter.
+
+For an actual declared_width supplied by bare source1 mm/3,the focused adapter contract uses:
+
+```text
+let prior:length=1 mm/3
+let total:length=prior+declared_width+declared_width
+```
+
+The actual first RHS executes and its real let stores333 once. The second operand records that
+prior-let read before suspending at the first declared_width. It resumes after the actual source
+computes1000/3,reads the same earned root twice and completes its unbound RHS as2999/3. The first
+read is not replayed;the source completes once. The canonical Derived state stays unchanged.
+This checks the private adapter and continuation;it does not publish a complete combined recipe
+result or claim that the second let has been stored by the new worker.
+
+The existing standalone recipe worker explicitly selects its original direct-read mode and still
+returns RequiresEvaluation for unresolved Derived inputs. Its public read-kind enum and direct/
+prior-let result interfaces remain unchanged. A private read record distinguishes earned Derived
+witnesses for the forthcoming integrated worker;it cannot be published as a standalone direct read.
+The complete paired worker,public Design execution entry point and independent acceptance remain
+subsequent tasks.
+
 ## Focused verification and remaining work
 
 Four actual-root native contracts check exact complete demand,original source/name pointers,
