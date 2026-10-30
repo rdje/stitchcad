@@ -904,3 +904,6 @@ mod formula_sources;
 
 #[path = "support/design_formula_scope.rs"]
 mod formula_scope;
+
+#[path = "support/design_formula_check.rs"]
+mod formula_check;

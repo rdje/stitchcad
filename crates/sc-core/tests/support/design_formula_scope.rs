@@ -24,7 +24,7 @@ use sc_core::{
 };
 use std::rc::Rc;
 // Neither Clone nor Debug:borrowing the actual owner must not require either host capability.
-struct ObservedHost {
+pub(super) struct ObservedHost {
     actual: Markers,
     semantic: Rc<Cell<usize>>,
     reject: Rc<Cell<bool>>,
@@ -97,7 +97,7 @@ fn exact(demand: DesignResourceDemand) -> DesignResourceLimits {
         NonZeroU64::new(demand.counter_bits()).expect("bits"),
     )
 }
-fn observed() -> (DesignInputs<ObservedHost>, Rc<Cell<usize>>, Rc<Cell<bool>>) {
+pub(super) fn observed() -> (DesignInputs<ObservedHost>, Rc<Cell<usize>>, Rc<Cell<bool>>) {
     let supplied = definition();
     let semantic = Rc::new(Cell::new(0));
     let reject = Rc::new(Cell::new(false));

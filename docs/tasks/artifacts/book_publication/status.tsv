@@ -347,3 +347,7 @@ actual Design formula admission error	annexes/formula-design-integration.md	crat
 actual Design formula admission refusal	annexes/formula-design-integration.md	crates/sc-core/src/design/formula.rs	DesignFormulaScopeRefusal	G1-SLICE.5e.2.5.derived.3.3.3.4.3.1	4.1
 actual Design normalized source owners	annexes/formula-design-integration.md	crates/sc-core/src/design/formula.rs	DesignNormalizedFormulaSources	G1-SLICE.5e.2.5.derived.3.3.3.4.3.1	4.1
 actual Design normalized recipe owner	annexes/formula-design-integration.md	crates/sc-core/src/design/formula.rs	DesignNormalizedFormulaRecipe	G1-SLICE.5e.2.5.derived.3.3.3.4.3.1	4.1
+actual Design source kind proof	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/check.rs	DesignCheckedFormulaSources	G1-SLICE.5e.2.5.derived.3.3.3.4.3.2	4.1
+actual Design source kind checking error	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/check.rs	DesignFormulaSourceCheckError	G1-SLICE.5e.2.5.derived.3.3.3.4.3.2	4.1
+actual Design ordered recipe kind proof	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/check.rs	DesignCheckedFormulaRecipe	G1-SLICE.5e.2.5.derived.3.3.3.4.3.2	4.1
+actual Design ordered recipe kind checking error	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/check.rs	DesignFormulaRecipeCheckError	G1-SLICE.5e.2.5.derived.3.3.3.4.3.2	4.1

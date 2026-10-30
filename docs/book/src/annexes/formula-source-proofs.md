@@ -3,7 +3,7 @@
 > **Status:** complete initial-scope expression proofs,actual canonical dependency joins and Derived
 > consumer-kind checks and canonical Derived dependencies have focused verification. Bounded cycle
 > admission and lazy available-scalar source execution have scoped independent acceptance. Actual
-> recipe/Design joins,whole resource/currentness,backend/platform and physical proof remain pending.
+> recipe/Design runtime joins,whole resource/currentness,backend/platform and physical proof remain pending.
 
 Start with the [original source owners and normalized collections](formula-recipe-inputs.md#explicit-formula-source-owners).
 FormulaNormalizedSources.check_sources(&namespace, limits) checks the complete supplied source
@@ -13,7 +13,8 @@ FormulaNamespace is the existing immutable initial scope;its constructor rejects
 This API supplies no fictitious statement/header/name or new binding/rounding boundary.
 
 For actual containing Design roots,start with the [admitted document scope](formula-design-integration.md).
-Its held-content/current checks and normalization precede these separate static/runtime stages.
+Its held-content/current checks and normalization precede its actual-namespace source/recipe kind
+factories. These preserve the original static rules below;Design-backed graph/runtime joins follow.
 
 ## Complete admission and validation order
 

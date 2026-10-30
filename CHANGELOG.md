@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0600 — admit and retain actual Design formula documents
+## STITCHCAD-G1-0601 — check actual Design source and ordered recipe kinds
 
-- Meter complete held input content before current semantics;pin actual root/limits/demand/source join. Normalize only original source collection and ordered recipe in private owners. Preserve original typed refusals without host Clone/Debug or invented values/proofs.
-- Focused native4/doc4/scoped strict lint/fmt/book98/348/1642/2892/glossary0 pass. Original129-bit early refusal,typed source cause,actual source/name pointers,quota0/required1 and empty recipe covered. Whole0599 retained758/four spans/live ids. Next .4.3.2 proofs. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped.
+- Build actual current Design namespaces through real source/recipe normalization owners;retain original complete proofs,parameter/prior-let metadata and typed first refusals. No supplied namespace/value or synthetic prior let;cycles/runtime remain separate.
+- Focused native6/doc5/scoped strict lint/fmt/book98/352/1642/2893/glossary0 pass. Original parameter/prior-let pointers,source/consumer/forward-let/current failures,quota/empty recipe covered. Whole0600 retained759/four spans/live ids. Next .4.3.3 admitted plans. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

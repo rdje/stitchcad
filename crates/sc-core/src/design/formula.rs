@@ -10,6 +10,12 @@ use crate::recipe::{
 };
 use core::fmt;
 
+mod check;
+pub use check::{
+    DesignCheckedFormulaRecipe, DesignCheckedFormulaSources, DesignFormulaRecipeCheckError,
+    DesignFormulaSourceCheckError,
+};
+
 /// Original held-content or complete current-input refusal;no formula-language token is invented.
 #[derive(Debug)]
 pub enum DesignFormulaScopeRefusal<E> {

@@ -318,7 +318,8 @@ cargo test -p sc-measure --test design_inputs_contract
 
 [Design formula admission](../annexes/formula-design-integration.md) checks complete held input
 content before current semantics and normalizes this actual root's source collection/ordered recipe.
-Its borrowed scope preserves original owners;kind/cycle/runtime proofs remain separate.
+Actual Design-backed kind checks rebuild its real initial namespace and preserve original owners;
+cycle/runtime/value proof remains separate.
 
 formula_sources() borrows the exact registry in definition(). Cloning the model preserves both
 source buffers,private lookup index and original ids/order. The complete resource producer charges

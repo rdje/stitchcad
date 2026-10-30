@@ -276,51 +276,54 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   kernel scratch or allocator/CPU certification;do not turn a successful content meter into those.
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.1`
   Status: `done`
-  Goal: explicit actual DesignInputs logical-content admission before current semantic checks,
-  with private root-pinned scope and actual source/recipe normalization owners. Keep original
-  resource/current/source/document causes and actual limits/owners. Scope factories take no foreign
-  root/source/recipe namespace,caller values or cache. Existing normalization limits/structural
-  syntax bounds remain explicit;no whole namespace/runtime/resource certificate or values claimed.
-  Completion0600:actual model-content admission and private normalized document ownership.
-  - [x] REPRODUCE / ISSUE: actual Design source ownership0599 lacked a root-pinned staged factory
-    for complete input admission before current semantics and actual source/recipe normalization.
-    Existing component normalization accepted detached joins;it supplied no containing Design pin.
-  - [x] ROOT CAUSE (WHY + WHERE): read actual input/current/resource factories,source normalization,
-    normalized recipe owners,host ports and normative source/binding boundary. cargo check -p sc-core
-    --lib →pass,rc=0 after correcting initial derived Debug E0277 with manual no-H-Debug wrapper.
-    Actual H::Error retains its std Error contract;host itself need not be Clone/Debug.
-  - [x] FIX: prepare_formula_scope explicitly meters all held input fields,then validates complete
-    current ownership and joins actual canonical/source owners. Private Copy scope keeps actual
-    root,limits,demand/join. Its two normalization methods accept no foreign source/recipe/namespace
-    or values. Owned arenas retain the same scope without self-reference. Original content/current
-    causes retain root/limits;original source/document errors remain their existing factory types.
-    Source allocation refusals gain no wrapper box. Resource callback itself remains required;
-    parser/namespace/provider/worker/kernel/allocator/CPU/whole Design approval are not certified.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract formula_scope::
-    -- --nocapture →four pass/23 filtered,rc=0. Actual non-Clone/non-Debug host verifies complete
-    exact demand,root/source/name pointers and unchanged Derived RequiresEvaluation9003. Counter
-    max1 refuses original129-bit revision at Structure/design1/design.revision before every current
-    semantic callback. Later host refusal retains Inputs/Sources/Host cause. Source quota0 refuses
-    actual required1 with original joined owners/limits;empty actual recipe still pins its root.
-  - [x] NO REGRESSION: scoped core lib/affected target strict Clippy and changed rustfmt/diff pass,
-    rc=0. Initial test E0616 span fields corrected to public accessors;Clippy panic replaced with
-    typed-cause assertion. cargo test -p sc-core --doc design::formula -- --nocapture →four pass,
-    rc=0:positive inspection plus actual E0616 root/arena privacy and E0515 lifetime guards.
-    Positive book publication →98 chapters/348 API rows/1642 source/2892 rendered links,rc=0;
-    glossary310/9/158/0 and758 four exact Git spans,prior live ids/order/new unique ids pass,rc=0.
-    Existing23 target tests were filtered,not rerun. Broad feature/integration/CI owner .4.5;
-    full/hosted verdict remains79bd6f6a only. No value/kind/cycle/physical claim from syntax.
-  - [x] LOCKSTEP: new Design formula annex,source/input links,API registry and book navigation,
-    task/index/MEM/DEV/CHANGE/LIVE describe actual scope/error/normalization and precise limits.
-    Next .4.3.2 actual-root namespace/source/recipe proofs,then .4.3.3 admitted actual plans/.4.4
-    true recipe reads/storage/.4.5 independent acceptance. Whole0599 retained758/four Git spans.
-    G1 6/18/G0 unapproved;D340 fixed,D334/D156/D223/PLANNING.5 and larger integration remain owned.
-    promotion: declined (applies established immutable-owner and complete-content admission rules;actual staged API and refusal evidence are retrievable in its new book annex/source/native/compiler contracts).
+  Goal:0600 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part759.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.2`
-  Status: `pending`
+  Status: `done`
   Goal: actual Design-backed source and ordered recipe kind proof stages using their real initial
   namespace and normalized owners. No caller-seeded metadata or detached equal-source proof joins;
   retain original error/node/statement/source witnesses and genuine later prior-let visibility.
+  Completion0601:complete actual Design namespace/source/ordered recipe static proofs.
+  Commit integrity:prewrite DEV323/320 guard refused before live writes;following authority refused
+  the still-in-progress owner. Trimmed prose,then completed leaf and regenerated authority;no cap raised.
+  - [x] REPRODUCE / ISSUE:0600 pinned actual normalization owners but had no Design-backed kind
+    factories. Standalone source/recipe factories accept supplied namespaces and certify that scope;
+    current Design metadata provenance must be earned from its actual namespace factory instead.
+  - [x] ROOT CAUSE (WHY + WHERE): inspect inputs::formula_namespace,checked_sources::check_sources,
+    checked_recipe::check_kinds and actual host/parameter/declaration contracts. Existing proofs
+    borrow original declaration metadata,not namespace allocations;no self-reference/namespace clone
+    is necessary. cargo check -p sc-core --lib →pass,rc=0 for private staged owner wrappers.
+  - [x] FIX: actual normalized source/recipe methods build their real root's current namespace and
+    invoke existing complete factories. Source accepts only explicit proof limits;recipe accepts no
+    supplied namespace/metadata/values. Private checked wrappers retain actual normalization owner
+    and original proof. Typed Namespace/Sources/Recipe errors retain owner and original causes;
+    selected source limits survive namespace failure. Static causes stay borrowed;actual static
+    allocation/current causes forward through Error::source without another allocation-error box.
+    Namespace/current construction precedes source quotas;namespace/checker/allocator/CPU bounds
+    remain separate. Source kind proofs still need cycles/runtime;recipe kinds store no values.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract formula_check::
+    -- --nocapture →six pass/27 filtered,rc=0. Actual parameter8003/Length40 and real statement1
+    prior-let name/spans survive into repeated statement2 dependencies. Actual source/normalized/
+    root pointers remain original. Canonical Derived9003 still RequiresEvaluation. Full unused
+    source9004 errors retain actual source1/expression/token;Boolean1==1 versus Length40 retains
+    original TargetKind source/target. Self-dependency passes only kinds,no cycle certificate.
+  - [x] NO REGRESSION: actual forward-let refusal keeps statement1/source span/unbound token;empty
+    recipe keeps real root;source quota0 refuses required1. Non-Clone/non-Debug host current drift
+    fails both real namespace stages before checking with original Inputs/Sources/Host cause and
+    selected source limits. cargo clippy -p sc-core --lib --test design_structure_contract --
+    -D warnings and changed rustfmt/diff →pass,rc=0. cargo test -p sc-core --doc
+    design::formula::check -- --nocapture →five pass,rc=0:positive generic inspection,E0616 private
+    proof,E0515 normalization lifetime and two actual E0061 supplied-namespace guards. Initial
+    fixture true was actual IDENT/unbound name,not Boolean literal;diagnostic/grammar confirmed
+    cause,corrected1==1 reaches intended consumer failure. No production rule relaxed. Book98/352/
+    1642/2893/glossary310/9/158/0,759 four Git spans/prior live ids/order/unique ids pass,rc=0.
+    Existing27 native tests filtered;full feature/CI/matrix owner .4.5,not claimed as run here.
+  - [x] LOCKSTEP: actual Design formula annex explains real namespace/proofs/error ownership,
+    prior-let and first-failure examples,scratch/resource boundaries;source/input links/API registry
+    and task/index/MEM/DEV/CHANGE/LIVE align. Whole0600 retained759/four spans. Next .4.3.3 actual
+    dependency/cycle/scalar and whole recipe admitted plans with strict same-root joins,then .4.4
+    actual earned Derived reads/let storage/.4.5 independent integration acceptance. G1 6/18/G0
+    unapproved;full/hosted79bd6f6a only. D340 fixed;D334/D156/D223/PLANNING.5 still owned.
+    promotion: declined (applies existing actual-namespace and immutable proof/metadata lifetime contracts;new typed stage boundaries and examples are retrievable in source/book/native/compiler contracts).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.3.3`
   Status: `pending`
   Goal: same-real-root source dependency/cycle/scalar plans and whole recipe plans with complete

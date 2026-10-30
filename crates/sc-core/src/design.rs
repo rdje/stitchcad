@@ -76,8 +76,9 @@ pub use host::{
 };
 mod formula;
 pub use formula::{
+    DesignCheckedFormulaRecipe, DesignCheckedFormulaSources, DesignFormulaRecipeCheckError,
     DesignFormulaScope, DesignFormulaScopeError, DesignFormulaScopeRefusal,
-    DesignNormalizedFormulaRecipe, DesignNormalizedFormulaSources,
+    DesignFormulaSourceCheckError, DesignNormalizedFormulaRecipe, DesignNormalizedFormulaSources,
 };
 pub use inputs::{
     DesignFormulaError, DesignInputs, DesignInputsDefinition, DesignInputsError,

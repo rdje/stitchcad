@@ -6,9 +6,10 @@ references. The resulting borrowed scope normalizes only this root's actual sour
 ordered recipe. It does not accept a substitute canonical inventory,source registry,recipe,
 namespace,computed values or cache.
 
-This is the first Design-backed integration stage. Source/recipe kind proofs,dependency/cycle
-admission,scalar execution and real recipe storage remain separate stages. A normalized expression
-is syntax with converted literals;it is not an accepted numerical result or a stored binding.
+Actual Design-backed source and ordered recipe kind checking is also implemented below.
+Dependency/cycle admission,scalar execution and real recipe storage remain separate stages.
+A normalized expression is syntax with converted literals;it is not a checked kind,numerical
+result or stored binding. A kind proof still supplies no cycle or numerical acceptance.
 See [source validation and execution](formula-source-proofs.md) and
 [ordered recipe execution](formula-recipe-execution.md) for the existing component contracts.
 
@@ -78,6 +79,70 @@ normalization nor source membership earns an evaluated value or a binding-round 
 A bare source1 mm/3 retains its eventual unbound1000/3 micrometre result;only an actual recipe let
 may store its result under the [existing binding rules](formula-rationals.md).
 
+## Check against the actual containing namespace
+
+DesignNormalizedFormulaSources.check_sources(explicit_check_limits) builds the namespace through
+this actual root's existing formula_namespace() factory. It rechecks current inputs,borrows real
+parameter declarations and obtains selected higher-host declarations through DesignFormulaHost.
+Reserved names and initial-namespace collisions retain the existing factory rules. No caller can
+supply a namespace,metadata seed,foreign canonical inventory or accepted source proof.
+
+The existing complete source checker then enforces its S/N/T/retained-proof allowances and checks
+every original source,all canonical dependencies and every Derived consumer kind. Namespace
+creation/current checks happen before these proof quotas;namespace allocations/checker scratch and
+allocator/CPU bounds remain separate. The wrapper does not copy quota algorithms or static rules.
+The complete accepted DesignCheckedFormulaSources borrows its actual Design normalization owner
+and owns the existing FormulaCheckedSources. normalized(),scope() and proof() preserve these
+original stages. Original source/node/name/canonical/consumer witnesses remain available.
+
+DesignNormalizedFormulaRecipe.check_kinds() independently builds the same actual root's current
+initial namespace and invokes the existing whole ordered recipe checker. Prior-let declarations
+come only from actual earlier checked statements. No caller-supplied earlier-let metadata or
+stored value seeds this stage. The accepted DesignCheckedFormulaRecipe retains the actual
+normalization owner and original whole FormulaCheckedRecipe in authored order.
+
+For an actual parameter declared_width bound to canonical Length40,these original statements
+pass kinds while Length40 can still require Derived evaluation:
+
+```text
+let authored:length=declared_width
+let twice:length=authored+authored
+```
+
+The first dependency retains the actual parameter8003 and original Length40 reference. Both second
+statement occurrences retain the real first let's name,statement1 and original whole/name spans.
+No numerical value was read and no let was stored by this static check. Reversing dependency order
+with let first:length=later followed by let later:length=1 mm instead refuses statement1 with the
+original formula_unbound_name at later;no accepted prefix or reordered recipe escapes.
+
+A source9003 containing declared_width/3 can pass kinds while that same Length40 is Derived from
+9003. That self-dependency still needs the later actual cycle stage;static kinds alone accept no
+executable graph. An unused source9004 containing missing instead refuses the whole source set at
+its original source index1. A source9003 containing1==1 refuses the actual Length consumer with
+TargetKind,expected Length/actual Boolean,without inventing a let-header diagnostic.
+
+A generic inspection can borrow both complete proof owners:
+
+```rust
+use sc_core::{design::{DesignInputs,DesignResourceLimits,DesignResourceSource,DesignFormulaHost},
+    recipe::{FormulaSourceNormalizationLimits,FormulaSourceCheckLimits}};
+fn inspect<H:DesignResourceSource+DesignFormulaHost>(root:&DesignInputs<H>,content:DesignResourceLimits,
+    syntax:FormulaSourceNormalizationLimits,source_checks:FormulaSourceCheckLimits) {
+    let scope=root.prepare_formula_scope(content).unwrap();
+    let sources=scope.normalize_sources(syntax).unwrap();
+    let checked_sources=sources.check_sources(source_checks).unwrap();
+    let recipe=scope.normalize_recipe().unwrap();
+    let checked_recipe=recipe.check_kinds().unwrap();
+    assert!(std::ptr::eq(checked_sources.scope().root(),checked_recipe.scope().root()));
+}
+```
+
+The namespace allocation itself need not survive either existing proof factory. Its declarations
+borrow original Design metadata;the accepted proofs remain bounded by their actual normalization
+and root lifetimes. This needs no self-reference,namespace clone or extra host Clone/Debug bound.
+There is no method parameter through which an equal-looking foreign root or supplied namespace can
+be substituted. Later APIs combining independent proof stages must still check actual root identity.
+
 ## Public API and failure ownership
 
 | Public API | Meaning |
@@ -87,17 +152,30 @@ may store its result under the [existing binding rules](formula-rationals.md).
 | `DesignFormulaScopeRefusal` | Resources or Inputs with original typed cause |
 | `DesignNormalizedFormulaSources` | Complete actual normalized source arenas and containing scope |
 | `DesignNormalizedFormulaRecipe` | Actual ordered normalized recipe and containing scope |
+| `DesignCheckedFormulaSources` | Complete original source kinds/canonical/consumer proofs and actual Design owner |
+| `DesignFormulaSourceCheckError` | Actual namespace or whole-source failure,normalized Design owner and selected limits |
+| `DesignCheckedFormulaRecipe` | Complete original ordered recipe kind proof and actual Design owner |
+| `DesignFormulaRecipeCheckError` | Actual namespace or whole-recipe failure and normalized Design owner |
 
-All fields and construction paths are private. root(),limits(),demand() and source_inputs()
-expose immutable facts on the scope. Each normalized wrapper exposes scope() and normalized()
-through shared access. Neither wrapper accepts a caller-created arena or proof. They own their
-normalization result without self-references;later checking must borrow these actual owners.
+Accepted scopes,normalizations and checked wrappers have private fields and construction paths.
+root(),limits(),demand() and source_inputs() expose immutable facts on the scope. Each normalized
+wrapper exposes scope() and normalized() through shared access. Neither wrapper accepts a
+caller-created arena or proof. They own their normalization result without self-references;
+checking borrows these actual owners. Checked wrappers expose their original proof() and scope().
 
 Scope preparation errors retain the original content/current cause and actual selected root/limits.
 The uncommon semantic refusal is boxed to keep the error compact. Source normalization errors
 remain the original factory type,including its inline allocation cause;the wrapper introduces no
 new allocation-error box. Recipe normalization returns the original document error type.
 A failed preparation returns no scope;failed normalization returns no accepted normalized prefix.
+
+Source checking errors expose Namespace or Sources variants with the actual Design normalization
+owner. selected limits remain available through limits(),including when namespace creation fails
+before proof quotas. Recipe errors expose Namespace or Recipe with the actual Design recipe owner.
+Their original borrowed typed causes stay inspectable in those variants. Standard Error::source()
+forwards only actual static factory causes,such as an allocation failure or concrete current-host
+failure;it does not erase a borrowed semantic cause into an invented static token. No diagnostic
+box is added around an original source allocation error. Failed checking returns no accepted prefix.
 
 ## Focused verification and remaining work
 
@@ -107,8 +185,16 @@ complete normalization refusal and empty-recipe containment. Compiler guards rej
 substitution,root lifetime escape and normalized source mutation. An initial test used private span
 fields;it was corrected to the existing public start()/end() accessors before passing.
 
-This stage grants no source/recipe kind proof,cycle acceptance,value/provider completeness,
-whole runtime resource bound or production approval. Subsequent task-tree leaves own actual-root
-namespace and proof stages,resource-admitted source/recipe plans,real Derived recipe reads and
-independent integration acceptance. Broad verification remains deferred until the agreed feature
-set is complete;the latest full local/hosted verdict remains scoped to its recorded Git revision.
+Six additional actual-root contracts cover real parameter/prior-let metadata and original pointers,
+complete late unused-source/consumer-kind errors,forward-let order,actual current namespace failure,
+source quota and empty recipe proofs. Generic inspection compiles without host Clone/Debug.
+Compiler guards reject private proof replacement,normalization-owner lifetime escape and supplied
+namespace arguments. A test fixture initially used true as a Boolean literal;the original
+formula_unbound_name and grammar identified it as a name. The corrected1==1 fixture reaches the
+intended original consumer-kind mismatch without changing any production checking rule.
+
+Kind checking grants no cycle acceptance,value/provider completeness,whole runtime resource bound
+or production approval. Subsequent task-tree leaves own resource-admitted source/recipe plans,real
+Derived recipe reads and independent integration acceptance. Broad verification remains deferred
+until the agreed feature set is complete;the latest full local/hosted verdict remains scoped to
+its recorded Git revision.

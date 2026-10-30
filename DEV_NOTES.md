@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — admit actual Design formula documents before current semantics
+## _(2026-10-30 UTC)_ — check actual Design source and ordered recipe kinds
 
-0600 adds explicit complete held-input content admission followed by current checks and actual canonical/source join. Private Copy scope pins real root/limits/demand;source/recipe normalization owners retain it without self-reference or host Clone/Debug. Original causes/limits survive;no foreign arena accepted.
-Focused actual-root4/compiler4/scoped strict lint/fmt pass:original129-bit refusal before semantics,actual pointers/typed host cause,source quota0/required1 and empty recipe containment. Initial Debug E0277,test span privacy and Clippy panic fixed with manual Debug,public accessors and typed assertion.
-Book98/348/1642/2892/glossary0 pass. New Design formula annex separates held logical content from parser/namespace/provider/worker/kernel/allocator/CPU and whole-Design authority. [Whole0599](docs/history/stitchcad-devnotes-part758.md) retains four exact spans and live task ids/order survive retirement.
-Next .4.3.2 actual-root kind proofs/.4.3.3 plans/.4.4 real recipe reads/storage/.4.5 independent acceptance. No kind/cycle/value proof from syntax. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D340 fixed;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected history/search/numeric/cleanup evidence intact.
+0601 builds current namespaces from actual normalized owners' roots and uses existing complete source/ordered recipe factories. Private proofs retain actual arenas/root;typed errors keep owners,source limits and original causes. Namespace allocations need not survive borrowed metadata;no clones/self-reference.
+Focused native6/compiler5/scoped strict lint/fmt pass. Actual parameter/prior-let pointers/order,late unused-source/consumer-kind errors,current host refusals,quota and empty recipe covered. Initial true fixture reached unbound-name error;grammar/diagnostic confirmed IDENT,corrected1==1 reaches intended mismatch.
+Book98/352/1642/2893/glossary0 pass. Actual namespace construction precedes source proof quotas;namespace/checker/allocator/CPU remain separate. No cycle/value acceptance from kinds. [Whole0600](docs/history/stitchcad-devnotes-part759.md) retains four exact spans;prior live ids/order survive retirement.
+Next .4.3.3 actual dependency/cycle/scalar/recipe plans and strict same-root joins,then .4.4 earned Derived recipe reads/once storage/.4.5 independent acceptance. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D340 fixed;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
