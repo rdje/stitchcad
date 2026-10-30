@@ -1,8 +1,7 @@
 # Annex: investigating bounded trig rounding certificates
 
 Native sin/cos and atan/atan2 values are implemented under the complete certificates and admitted
-plans below. Tangent has explicit-resource native preparation;its numerical worker remains
-unimplemented. Whole formula
+plans below. Tangent has explicit-resource native preparation and certified value execution. Whole formula
 execution and platform evidence remain separate [execution-plan](formula-execution-plan.md) work.
 
 ## Why output thresholds might help
@@ -274,7 +273,7 @@ Complete0288 native inverse/oracle/threshold-neighbor receipts remain in
 
 ## Tangent resource boundary
 
-Tangent remains unimplemented. With M=1,000,000 and U=2^128-1, an admitted nonpole rational
+Tangent uses the explicit-resource native worker below. With M=1,000,000 and U=2^128-1, an admitted nonpole rational
 microdegree input is at least90M/(U+1) microdegrees from its nearest pole. This bounds rounded
 ppm output magnitude to148 bits, while the public result component limit remains128 bits.
 For example d=floor((U+1)/(90M)), n=90M*d-1 is admitted yet its true tangent rounds beyond U:
@@ -364,7 +363,7 @@ charged series terms. There is no default policy or fixed maximum precision. An 
 execution budget produces a separate resource refusal carrying the original operand,selected
 limits,unit,maximum,prior reservation/work and next scheduled demand. It supplies no approximate
 value or formula-language precision/domain diagnostic. Valid mathematical inputs stay valid.
-Native preparation is implemented below;the numerical worker and source/recipe/Design policy adoption remain pending.
+Native preparation is implemented below;native value execution follows;source/recipe/Design policy adoption remains pending.
 
 After the existing actual-kind check,reserve the complete156-bit folding extent. Exact zero,
 signed unit and pole cases need no approximation terms. Other cases start at B=128 to represent the2^-128 denominator floor,and double
@@ -393,7 +392,7 @@ value on refusal. Three actual in-memory guard omissions fail their intended con
 bytes remain unchanged. Expected near-midpoint rounding comes from the independent inverse
 oracle. The decision is recorded in docs/decisions/decision_tangent-resources.md. It licenses
 native implementation of this bounded strategy,with explicit limits and rich resource errors;
-no numerical kernel,full allocator/CPU envelope,platform proof or release approval follows here.
+this model alone grants no native,full allocator/CPU,platform or release approval certificate.
 
 ## Native tangent preparation with explicit quotas
 
@@ -402,7 +401,7 @@ FormulaTangentLimits. FormulaTangentPlan privately retains that original operand
 metadata and the selected policy. It cannot be assembled from caller-supplied reduction data.
 Preparation validates the actual kind,reserves folding space,classifies exact cases and admits the
 complete initial approximation demand when needed. It runs no pi or component series and supplies
-no numeric result. The native value worker remains the next implementation slice.
+no numeric result. The native value worker below consumes this actual prepared plan.
 
 ```rust
 use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational, FormulaTangentLimits};
@@ -443,5 +442,59 @@ allocator bytes,CPU latency,source execution or production readiness.
 Focused native checks cover actual kind priority,folding-before-endpoint/pole priority,inclusive
 quotas,atomic first-iteration admission and unchanged full128-bit operands. A private test compares
 actual folded signs,reciprocal choice and exact cases with873 independent signed centered residues.
-Independent complete native value/resource acceptance follows the worker and source wrapper;
+Independent complete native value/resource acceptance follows the source wrapper;
 whole expression/source/recipe/Design policy adoption remains separately owned.
+
+## Certified native tangent value execution
+
+FormulaTangentPlan::evaluate consumes the actual prepared operand and its explicit limits. It
+recomputes outward pi at every admitted precision,then both unrounded sine/cosine intervals and
+the outward direct or reciprocal quotient. Whole closed-interval rounding agreement alone accepts
+a Ratio in integer parts per million. Exact zero/unit cases use their admitted folding result and
+charge no series. The plan never re-reads an authored provider or mutates canonical Angle state.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational, FormulaTangentLimits};
+# fn main() -> Result<(), Box<dyn std::error::Error>> {
+let input = FormulaNumericValue::new(
+    FormulaKind::Angle, FormulaRational::from_signed_integer(-60_000_000),
+)?;
+let result = input.prepare_tangent(FormulaTangentLimits::new(2073, 512))?.evaluate()?;
+assert_eq!(result.value().rational(), FormulaRational::from_signed_integer(-1_732_051));
+assert_eq!(result.plan().input(), input);
+assert_eq!(result.precision(), Some(128));
+assert_eq!(result.reserved_integer_bits(), 2073);
+assert_eq!(result.charged_series_terms(), 512);
+# Ok(())
+# }
+```
+
+FormulaExecutedTangent retains the original plan and explicit policy beside its certified value,
+precision,highest admitted reservation and cumulative charged terms. Exact results have no
+approximation precision. These are execution metadata,not authored model fields or binding output.
+FormulaTangentExecutionError retains that same original plan,progress and typed mathematical or
+resource cause. Its error chain forwards the actual cause;resource admission has no language
+diagnostic. No uncertain value or partial numerical result is exposed through the failure API.
+
+At B=128 and each doubling,the worker computes complete integer/work demands with wider native
+extent bookkeeping,checks native counter/factor conversions,and admits both quotas before
+allocating the iteration's integers or charging work. Only the current interval state is retained;
+there is no growing iteration history or hard-coded precision ceiling. A larger sufficient policy
+must yield the same certified value. Logical integer/work limits still grant no total heap-byte or
+wall-clock certificate. Full provider,Design and platform envelopes retain their existing owners.
+
+The native rational-width cause requires the exact bit count of the rounded integer. Merely
+proving that the entire result exceeds128 bits cannot invent that count. For the actual near-pole
+width witness above,the B128 rounded endpoints have142 and148 bits. The worker refines;B256
+proves148 at both ends and returns the original numerator RationalWidth cause. Limits2073/512
+instead return the next4122-bit resource demand after512 terms. Limits4122/1536 certify the
+148-bit width error. The diagnostic model's earlier width classification carried no bit count;
+its smaller classification budget cannot license a false native measured_bits field.
+
+Five focused worker tests cover exact endpoints,signed quadrants and reciprocals,the independently
+bounded tan30 rounding counterexample,tiny full128-bit inputs,actual512-bit midpoint refinement,
+later bit/work/priority refusals,policy-independent successful values and exact148-bit width.
+The earlier preparation/folding contracts remain separate. Native source contributions and real
+expression/source/recipe/Design policy selection are still pending;the actual Tan call cannot yet
+be executed by those higher-level plans. Independent combined native acceptance follows the source
+wrapper. No full CI,platform,physical or production approval follows these scoped worker checks.

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — prepare actual tangent inputs under explicit quotas
+## _(2026-10-30 UTC)_ — execute bounded certified native tangent values
 
-0615 adds private native preparation retaining original Angle and explicit immutable no-default limits. Validate actual kind,then156-bit folding admission/exact sign/pole/zero/unit. Nontrivial first2073 bits/512 terms fit atomically;preparation computes no series or value.
-Resource errors retain input/policy/unit/max/request/precision/prior reservations/work,without a language diagnostic. Original mathematical causes stay typed. Keep phase as private BigUint,avoid fake width narrowing;measured128-byte error stays inline under narrow lint allowance to avoid refusal allocation.
-Native4/private independent873/numeric6/doc3/scoped strict lint/fmt pass;book98/370/1645/2905/glossary0/census345/history774 four Git spans/IDs/map/diff pass. Over-wide odd-pole test and duplicate API labels caught and corrected. [Whole0614](docs/history/stitchcad-devnotes-part774.md).
-Next .5d.3.2.2.2 actual bounded worker,then sources/acceptance/AST policy adoption. LIVE notes preparation,G1 6/18/G0 unapproved unchanged. No full numerical/platform/allocator/CPU certificate yet. Full PNT/push400/protected evidence retained.
+0616 consumes actual tangent plans with explicit quotas. Fresh directed Machin pi/unrounded sine+cosine and exact direct/reciprocal quotient refine B128/doubling. Whole rounding agreement alone accepts Ratio;complete integer/work/native-factor/counter preflight precedes allocation/charge.
+Results/errors retain original input/plan/policy/progress. Exact cases charge no series. Native width needs exact measured_bits:actual witness at128 spans142/148 bits,256 proves148. Refine or return resources instead of guessing width. Logical quotas imply no total allocator/CPU/Design certificate.
+Worker5/prep4/private2(873 signed folds)/doc4/scoped lint/fmt pass;model19/3 guard reds. Book98/372/1645/2906/glossary0/census345/history775 four Git spans/IDs/map/diff pass. Width-refinement answer promoted;stale native status summaries corrected. [Whole0615](docs/history/stitchcad-devnotes-part775.md).
+Next actual Tan source contributions .3,then combined independent .4 and AST policy adoption. LIVE bounded native values,G1 6/18/G0 unapproved unchanged. No full CI/platform/physical/release approval. Full PNT/push400;original proofs retained.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

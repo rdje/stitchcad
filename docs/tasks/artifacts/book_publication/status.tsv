@@ -369,3 +369,5 @@ formula tangent resource units	annexes/formula-trig-certificates.md	crates/sc-co
 formula tangent resource refusal	annexes/formula-trig-certificates.md	crates/sc-core/src/recipe/tangent/policy.rs	FormulaTangentResourceError	G1-SLICE.5d.3.2.2.1	4.1
 formula tangent mathematical failure	annexes/formula-trig-certificates.md	crates/sc-core/src/recipe/tangent/policy.rs	FormulaTangentError	G1-SLICE.5d.3.2.2.1	4.1
 formula tangent actual preparation	annexes/formula-trig-certificates.md	crates/sc-core/src/recipe/tangent/mod.rs	FormulaTangentPlan	G1-SLICE.5d.3.2.2.1	4.1
+formula tangent certified value	annexes/formula-trig-certificates.md	crates/sc-core/src/recipe/tangent/execute.rs	FormulaExecutedTangent	G1-SLICE.5d.3.2.2.2	4.1
+formula tangent execution failure	annexes/formula-trig-certificates.md	crates/sc-core/src/recipe/tangent/execute.rs	FormulaTangentExecutionError	G1-SLICE.5d.3.2.2.2	4.1

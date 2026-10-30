@@ -52,8 +52,8 @@ mod trig;
 
 mod tangent;
 pub use tangent::{
-    FormulaTangentError, FormulaTangentLimits, FormulaTangentPlan, FormulaTangentResource,
-    FormulaTangentResourceError,
+    FormulaExecutedTangent, FormulaTangentError, FormulaTangentExecutionError,
+    FormulaTangentLimits, FormulaTangentPlan, FormulaTangentResource, FormulaTangentResourceError,
 };
 
 mod bound;

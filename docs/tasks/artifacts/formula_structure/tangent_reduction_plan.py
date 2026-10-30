@@ -1,4 +1,4 @@
-"""Exact tangent folding/conditioning/enclosure prerequisites;no native kernel is implemented.
+"""Diagnostic exact tangent folding/conditioning/enclosures;native kernel is a separate implementation.
 
 Pure standard-library arithmetic/stdout. Universal arguments live in the midpoint/resource fact;
 independent Fraction folding and finite controls support transcription,not population completeness.

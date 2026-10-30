@@ -58,8 +58,9 @@ Exact unary negation/square and all six numeric comparisons are available, prese
 values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
 Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,
 checks signed i64 storage and preserves Boolean kind. Correctly rounded sqrt(area/ratio), signed-length
-hypot and signed/full-turn arc_length are available. Native sin/cos/atan/atan2 kernels and supplied-scalar adapters are available. Tangent and complete
-AST/statement/recipe execution remain later work.
+hypot and signed/full-turn arc_length are available. Native sin/cos/atan/atan2 kernels and supplied-scalar adapters are available.
+Explicit-resource tangent values are available;their source wrapper and AST policy adoption remain pending.
+Complete AST/statement/recipe execution remains later work.
 [Canonical length authored reads](annexes/formula-runtime-validation.md#canonical-length-authored-reads)
 now preserve source/state beside exact values or observation/evaluation requests.
 [Canonical general scalar content](spec/measurement-inputs.md#canonical-general-scalar-content)

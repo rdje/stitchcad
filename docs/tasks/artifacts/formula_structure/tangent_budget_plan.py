@@ -1,4 +1,4 @@
-"""Bounded adaptive tangent request model;no native kernel or numerical-domain cutoff.
+"""Diagnostic bounded adaptive tangent request model;no numerical-domain cutoff.
 
 Selected resources bound per-candidate integer width and cumulative charged series terms.
 Original input/limits/counters survive refusal;only certified whole intervals return values.

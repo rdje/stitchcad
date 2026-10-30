@@ -1,6 +1,9 @@
-//! Explicit-resource tangent preparation; approximation belongs to the subsequent worker.
+//! Explicit-resource tangent preparation and certified unrounded adaptive numerical execution.
+mod execute;
+mod interval;
 mod policy;
 mod prepare;
+pub use execute::{FormulaExecutedTangent, FormulaTangentExecutionError};
 pub use policy::{
     FormulaTangentError, FormulaTangentLimits, FormulaTangentResource, FormulaTangentResourceError,
 };

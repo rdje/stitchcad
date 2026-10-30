@@ -583,15 +583,17 @@ five tests covering signed endpoints, all numeric kinds, stored fractions and Bo
 
 ## Remaining trig/inverse plan
 
-Sin/cos and [atan/atan2](formula-trig-certificates.md#native-inverse-values) value kernels are available; tan remains unimplemented. For the actual quanta,
-rational-value restrictions exclude exact rounding midpoints, so converging valid enclosures would
-eventually decide each finite admitted input after exact pole/axis/branch handling. This is a
-qualitative termination proof. A generic algebraic separation estimate gives an impractical upper
-bound; it does not establish actual hard inputs or justify an arbitrary precision cutoff.
-The full derivation/sources are in docs/decisions/fact_trig-midpoints-and-resource-bound.md;
-G1-SLICE.5d.1.2.2.2 still owns usable all-input resource accounting before implementation.
-The [finite-threshold study](formula-trig-certificates.md) covers all1M forward bands with exact
-gap verification. Sin/cos and inverse kernels have bounded certified plans; tangent resources remain open.
+Sin/cos and [atan/atan2](formula-trig-certificates.md#native-inverse-values) kernels are available.
+[Explicit-resource tangent values](formula-trig-certificates.md#certified-native-tangent-value-execution)
+now use fresh convergent unrounded enclosures. Whole interval agreement certifies ppm rounding;
+actual poles and exact result-width causes stay distinct from execution-resource admission.
+The mathematical input/quantum contract is unchanged. Rational-angle midpoint exclusion supplies
+eventual separation under sufficiently increased abstract resources,without a universal practical
+precision bound. Explicit finite quotas give bounded requests without inventing numerical failure.
+The source wrapper,independent combined acceptance and higher-level policy adoption remain owned.
+The full derivation is in docs/decisions/fact_trig-midpoints-and-resource-bound.md and the selected
+resource contract in docs/decisions/decision_tangent-resources.md. Forward/inverse certificates
+retain their original complete population and platform-proof boundaries.
 
 ## Correctly rounded sine and cosine
 

@@ -565,43 +565,41 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
 - ID: `G1-SLICE.5d.3.2.2.1`
   Status: `done`
-  Goal:actual native tangent preparation with explicit immutable quotas,rich resource refusals
-  and exact signed folding. No series evaluation,placeholder value or fabricated language failure.
-  - [x] REPRODUCE / ISSUE:admitted algorithm had no actual native Angle preparation or explicit
-    policy/resource boundary;existing sin/cos output cannot substitute for tangent evaluation.
-  - [x] ROOT CAUSE (WHY + WHERE): git show HEAD:crates/sc-core/src/recipe/mod.rs
-    →no tangent module/export before0615,rc=0. Actual preparation must validate kind first,then
-    reserve156 bits before private period/reflection;exact endpoints need no approximation work.
-  - [x] FIX:private native plan owns original operand/limits/fold;explicit limits have no Default.
-    Original dimension/pole errors stay mathematical;resource error retains original input/policy,
-    unit/maximum/request/precision/prior reservation/charged terms without a diagnostic/value.
-    Complete first2073-bit/512-term demand is admitted atomically;no series is run or charged.
-    Original BigUint phase stays private,avoiding a false numerical-width conversion error.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_prepare_contract
-    →four priority/endpoint/pole/quota/full128-bit preservation tests pass,rc=0. cargo test -p
-    sc-core --lib recipe::tangent::prepare::tests →one actual fold watcher compares873 independent
-    signed centered residues including sign/reciprocal/exact cases,rc=0. Initial wide-pole test
-    rounded an even maximum quotient upward beyond128 bits;compiler/Python parity guard caught it,
-    corrected to the largest admitted odd quotient. No production arithmetic overflow occurred.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_numeric_contract →six pass,rc=0.
-    cargo clippy -p sc-core --lib --test formula_tangent_prepare_contract -- -D warnings and
-    cargo test -p sc-core --doc recipe::tangent:: →strict lint/three positive/privacy/no-default
-    docs pass,rc=0. Measured128-byte resource variant stays inline under narrow documented lint
-    allowance:resource refusal must not allocate a box. Selected rustfmt --check/diff pass,rc=0.
-    Positive book98/370/1645/2905;glossary310/9/158/0;census345/33905;history774 four exact Git
-    spans;prior task IDs/order/uniqueness/map exact,rc=0. Initial duplicate API-family labels were
-    refused by publication checker;unique descriptive labels restore all five real API rows.
-  - [x] LOCKSTEP:book/API map/decision/task/index/MEM/DEV/CHANGE/LIVE align. Whole completed
-    algorithm subtree and prior ledger retained774;caps unchanged. LIVE product notes preparation,
-    G1 6/18/G0 unapproved unchanged. Next .2 actual bounded worker,then source wrapper/independent
-    acceptance/real AST policy adoption. No full CI/platform/allocator/CPU/production claim.
-    promotion: declined (existing tangent resource decision already owns this contract;native preparation is scoped implementation).
-  Commit:STITCHCAD-G1-0615;Verification:focused checks above pass;broader feature acceptance pending.
+  Goal:0615 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part775.md).
 - ID: `G1-SLICE.5d.3.2.2.2`
-  Status: `pending`
-  Goal:bounded native unrounded pi/sine/cosine/quotient worker and actual value execution from its
-  prepared input/policy;complete preflight before each iteration,original pole/width/resource causes,
-  whole-interval rounding only and no accepted uncertain result or hidden precision ceiling.
+  Status: `done`
+  Goal:bounded native unrounded pi/sine/cosine/quotient worker and certified value execution.
+  - [x] REPRODUCE / ISSUE:preparation0615 admitted no numerical value. Existing rounded sin/cos
+    cannot implement tangent;wide-result model classification also supplies no exact native bit count.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B -c "import runpy;m=runpy.run_path('docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py');a=m['A'];d=m['U']//a;print([(b,[m['round_positive'](v).bit_length() for v in m['enclose'](a*d-1,d,b).ppm]) for b in (128,256)])"
+    →[(128,[142,148]),(256,[148,148])],rc=0. Returning a guessed width at128 would violate
+    FormulaRationalError's exact measured_bits contract. Retain whole-interval certification.
+  - [x] FIX:fresh directed Machin pi and both unrounded components at B128/doubling;exact fold
+    chooses direct/reciprocal quotient and proved positive denominator floor. Preflight complete
+    integer demand/native counters/factors/work before each allocation/charge;no precision ceiling.
+    Whole rounded endpoints alone accept a value;whole equal excessive bit counts certify width.
+    Results/errors retain original plan/input/policy/progress;exact endpoints need no series.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_value_contract
+    →five exact/signed/reciprocal/tiny/fullwidth/refinement/late-resource/bit-count tests pass,rc=0.
+    Exact square inequalities independently bound tan30;original inverse/alternate-pi control
+    owns near-midpoint zero. Small budget refuses next4122 after512;larger certifies148-bit width
+    after1536 at256. Actual near-midpoint limits8219/3584 certify zero at512;smaller bit/work
+    quotas preserve next8219/2048 demand,prior4122/1536 charges and bit-first priority. No value
+    on refusal;successful values agree under larger policies and preserve original signed input.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_tangent_prepare_contract →four pass,
+    rc=0. cargo test -p sc-core --lib recipe::tangent:: →two pass,including873 independent signed
+    folds and oversized native extent refusal before counter/allocation,rc=0. cargo clippy -p
+    sc-core --lib --test formula_tangent_value_contract -- -D warnings / selected rustfmt --check
+    / cargo test -p sc-core --doc recipe::tangent:: →strict lint/fmt/four docs pass,rc=0.
+    python3 -I -B docs/tasks/artifacts/formula_structure/tangent_budget_plan.py →19 exact controls/
+    three guard-body reds pass,rc=0. Positive book98/372/1645/2906,glossary310/9/158/0,census345/33905,
+    history775 four Git spans,all prior IDs/order/map/diff pass,rc=0. No full CI/platform claim.
+  - [x] LOCKSTEP:book/API map/native-status facts/index/decision/task/MEM/DEV/CHANGE/LIVE align;
+    whole0615 retained775. Native .3 source contributions and .4 independent combined acceptance
+    precede real .5e.2.4.integration.tangent policy adoption. LIVE bounded values,G1 6/18/G0
+    unapproved unchanged. Full heap/CPU/provider/Design/platform/physical/release owners remain.
+    promotion: promoted (decision_tangent-resources.md gains exact native-width refinement answer and original plan/progress contract).
+  Commit:STITCHCAD-G1-0616;Verification:focused checks pass;independent combined feature proof pending.
 - ID: `G1-SLICE.5d.3.2.2.3`
   Status: `pending`
   Goal:source-bearing tangent wrapper preserves actual executed-call contributions through exact

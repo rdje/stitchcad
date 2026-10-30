@@ -2,11 +2,11 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-30`
-- **Status:** `active`; algorithm/resource contract selected;native preparation implemented,numerical worker pending
+- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source/combined acceptance pending
 - **Owner / source:** engineer under the director's delegated implementation authority;
   G1-SLICE.5d.1.2.2.2.d.2.2.2, implementation G1-SLICE.5d.3.2.2
 
-answers: "how will tangent terminate within selected resources?" · "does insufficient tangent precision invalidate a formula?" · "why does tangent require explicit execution limits?"
+answers: "how will tangent terminate within selected resources?" · "does insufficient tangent precision invalidate a formula?" · "why does tangent require explicit execution limits?" · "why can a native tangent width diagnostic require further refinement?"
 
 ## Decision and scope
 
@@ -26,7 +26,7 @@ This preserves the distinction already used by expression/source/recipe workspac
 An authored input remains mathematically valid when its requested execution cannot be admitted.
 The numerical contract still requires the true nearest ppm with half-away rounding and the
 original128-bit input/result boundaries. Resources cannot enlarge those numerical domains.
-This decision admits a method for native implementation; it does not claim an existing tangent value API.
+Native preparation/value execution is implemented0615/0616;source wrapper and higher-level policy adoption remain pending.
 
 ## Complete bounded request
 
@@ -110,3 +110,12 @@ Native kernel/contracts, original typed failures, budget preflight and source pr
 G1-SLICE.5d.3.2.2. Full evaluator/Design policy integration, whole resource/allocator envelopes,
 load/replay, broad/platform/physical acceptance and production approval retain their existing
 owners. This record grants no human release approval or unobserved CI verdict.
+
+## Native exact-width refinement0616
+
+The native width cause reports the exact rounded numerator bit count. B128 bounds the actual
+near-pole witness by rounded endpoints with142/148 bits;the model classifies excessive width,
+but cannot supply an exact native measured_bits field. The worker refines or refuses resources
+until both bit counts agree. B256 proves148,using4122 candidate bits/1536 cumulative terms.
+Preparation/value results and failures retain the original actual plan,selected policy and progress.
+Source contributions,combined independent acceptance and AST policy adoption retain later owners.
