@@ -263,7 +263,10 @@ checks. It stops at D353:the cleanup-fixture companion pins revision0315 while t
 exactly matches reviewed0645. The intervening delta adds protected numerical/legacy roots and
 retained-proof family guards. Its exact baseline needs an explicit review update. D354 also
 reproduces in the optional continuity mode,which reads raw records now stored in logical
-archives and assumes an obsolete task/frontier population. Both repairs have an owner.
+archives and assumes an obsolete task/frontier population. The focused repair now pins the
+exact reviewed0645 inspector and uses public logical reads,three exact0224 records,immutable
+prior bytes/order and the current linked canonical frontier. Twelve independent refusals and
+four compiled guard omissions pass;the default control watches continuity as well.
 This attempt exits1 with1220 snapshotted sources unchanged;full probes again do not start.
 
 ```text

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0651 — retain the later cleanup-control baseline
+## STITCHCAD-G1-0652 — preserve reviewed cleanup bytes and archived continuity
 
-- Environment reaches cleanup fixture pin after origin/numeric/retention/entry checks pass;exits1 with1220 source hashes exact. Full probes unstarted. D353 owns exact reviewed0645 inspector pin;D354 owns archived-record/append-only continuity repair.
-- Book101/374/1670/2980/glossary0/history810/IDs+2/map/diff pass;134 closed execution labels tightened with IDs/status/routes exact. No cap raised. G1 6/18/G0 unapproved unchanged;remaining tail/full probes next.
+- Fix D353 exact0645 inspector pin/actual omission refusal. Fix D354 public logical reads,three exact0224 records,prior immutable bytes/order and current linked frontier;12 refusals/four compiled guard omissions are watched by default.
+- Original fixture15/11,17 physical refusals,six exact inputs/residue0 and default/real/continuity pass. Book101/374/1670/2980/glossary0/history811/IDs+2/map/diff pass. No inspector change or cleanup apply;blocked tail/full probes next. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -687,7 +687,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.4.acceptance.gates.run`
   Status: `in_progress`
   Goal:finish environment/full probes after D349–D351 repairs;Rust/Wasm/doctrine pass,then scoped closure.
-  Latest0651 environment rc1;D353/D354 cleanup control next,then tail/full probes.
+  Latest0651 environment rc1;D353/D354 fixed0652;blocked tail/full probes next.
   Preserve transcripts/return codes and original source/evidence identities;no closure yet.
   Book sync:clarify trig-certificates inverse230 observed0640 pair/full matrix during closure.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.environment-baseline`
@@ -702,26 +702,29 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
     preserve earlier receipts/source identities and actual fault/runtime classifications.
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.baseline`
   Status: `done`
-  - [x] ISSUE:0651 retry reaches later cleanup inspector pin failure;optional continuity stale.
-  - [x] ROOT CAUSE (WHY + WHERE):git diff0315..0645 cleanup.py →retention guards only;
-    current inspector exactly0645 SHAe7a561b066c87ac03221eebc2e26f1b67d3de536cb061fcb72ca8debc4e35737;
-    --continuity →retired raw record FileNotFoundError;diagnosis verified,rc=0.
-  - [x] FIX:retain receipt/transcript;own D353/D354 before remaining tail/full probes.
-  - [x] ADDRESSED:python3 -I -B JSON/SHA receipt verification →1220 sources unchanged,
-    transcript SHA exact/full probes absent,pass,rc=0;actual environment rc=1 retained.
-  - [x] NO REGRESSION:origin/retention/cleanup-entry checks pass before pin failure;
-    book101/374/1670/2980/glossary0/history810 four spans/IDs+2/map/diff pass,rc=0;
-    134 closed execution labels tightened,all IDs/status/routes exact;no cap raised.
-  - [x] LOCKSTEP:book/live/notes sync;D353/D354 next;promotion declined(existing contract).
-  Commit:STITCHCAD-G1-0651;Verification:failed later environment baseline retained.
+  Goal:0651 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part811.md).
 - ID: `G1-SLICE.5d.4.acceptance.gates.run.cleanup-pin`
+  Status: `done`
+  - [x] ISSUE:D353 inspector pin predates retention repairs;D354 continuity assumes raw/old state.
+  - [x] ROOT CAUSE (WHY + WHERE):git diff0315..0645 cleanup.py →retention-only delta;
+    exact0645 pin passes;--continuity public reads prove archived records/append-only growth,rc=0.
+  - [x] FIX:strict0645 whole inspector pin;exact0224 selected records;public logical reads,
+    immutable prior bytes/order and current index/MEMORY/linked owner;watch continuity by default.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py
+    →original15/11,17 physical refusals,12 continuity refusals/four compiled guard reds pass,rc=0.
+  - [x] NO REGRESSION:same command --real →15 cases/11 guard reds/six exact inputs/zero residue;
+    --continuity →exact prior records/task order/current owner;actual inspector omission refused,rc=0.
+    Book101/374/1670/2980/glossary0/history811 four spans/IDs+2/map/diff pass,rc=0;no cleanup apply.
+  - [x] LOCKSTEP:book/live/notes sync;blocked tail/full probes pending;promotion declined(existing contracts).
+  Commit:STITCHCAD-G1-0652;Verification:focused cleanup/continuity.
+- ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.tail`
   Status: `pending`
-  D353 P1:cleanup fixture pins inspector0315 bytes;reviewed0628/0640/0645 retention additions
-  changed only protected roots/family guards. Reconcile exact immutable pin after full delta
-  review;retain strict file equality and original fixture AST before full verification.
-  D354 P2 same owner:optional --continuity reads retired raw records and hardcodes old
-  exact task/frontier state. Reproduce via public reader;retain immutable logical bytes,
-  predecessor task order and current linked index/tree/MEMORY agreement through archive growth.
+  Goal:check previously blocked environment commands after cleanup fixture in canonical order;
+    retain each outcome/source boundary and resolve failures before full make probes.
+- ID: `G1-SLICE.5d.4.acceptance.gates.run.retry.full`
+  Status: `pending`
+  Goal:actual complete make probes after blocked-tail repairs;retain full transcript/source and
+    original evidence identities before scoped coupled closure. Rust/Wasm baselines source-exact.
 
 ### Execution, uncertainty and replay
 

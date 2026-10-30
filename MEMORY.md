@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.run.cleanup-pin:D353/D354,then blocked tail/full probes.
-- Latest unit STITCHCAD-G1-0651;derive HEAD/ahead from Git. Environment rc1;full probes not started.
-- D353 fixture inspector pin0315 predates reviewed0628/0640/0645 retention-only changes.
-  Actual cleanup.py exactly0645 SHAe7a561b066c87ac03221eebc2e26f1b67d3de536cb061fcb72ca8debc4e35737.
-- D354 optional --continuity reads archived raw293 and assumes old exact task/frontier state.
-  Use public logical archive reads,immutable earlier bytes/order and current linked pointers.
-- Keep strict whole inspector equality/original fixture AST. Both repairs same owner;no cleanup apply.
-- 0651 environment passes repaired origin/numeric/retention/cleanup-entry checks,then pin fails;
-  all1220 snapshot sources exact. Remaining tail checks first,then full make probes including environment.
+- Next G1-SLICE.5d.4.acceptance.gates.run.retry.tail:blocked environment commands,then .full probes.
+- Latest unit STITCHCAD-G1-0652;derive HEAD/ahead from Git. D353/D354 focused fixes pass.
+- Cleanup companion pins exact reviewed0645 inspector;actual proof-guard omission refuses.
+  Original fixture AST/15 cases/11 guard reds/17 physical refusals/six inputs/residue0 pass.
+- Continuity uses public logical reads,three exact0224 records,immutable prior bytes/windows,
+  predecessor task order/current index+MEMORY+unique linked owner.12 refusals/four guard reds pass.
+- Default watches continuity;--real/--continuity pass. No project cleanup apply or inspector change.
+- Prior0651 environment rc1/source1220 exact;whole checkpoint in part811;full probes unstarted.
 - target/irrational_platform_certificate/coupled-0651-integration-20261030T210702634267Z-10812/environment.json SHA3986118ee5f11d8d9f9916d2279456d9292cc45f73748bcc0e0973593bd73c54.
-- Whole0650 in part810;D349–D352 focused fixes pass. Full0646 Rust1635/doc372/Wasm3/doctrine13,
-  numerical9 baselines/48 faults/native+Chrome31 passed. No full-suite/coupled verdict.
-- Positive book101/374/1670/2980/glossary0/history810/IDs+2/map/diff pass. No job pending.
+- Check canonical environment tail after python_cleanup_fixture_contract.py,then full make probes;
+  avoid another separate prefix replay. D349–D354 focused fixes pass;no full-suite/coupled verdict.
+- Full0646 Rust1635/doc372/Wasm3/doctrine13,numerical9 baselines/48 faults/native+Chrome31 pass.
+- Positive book101/374/1670/2980/glossary0/history811/IDs+2/map/diff pass. No job pending.
 - G1 6/18/G0 unapproved;cleanup2026-10-30 14:18 unchanged. Full PNT/push400 only.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,

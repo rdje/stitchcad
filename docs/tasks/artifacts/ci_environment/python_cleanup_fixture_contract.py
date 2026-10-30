@@ -4,6 +4,7 @@ import ast
 import contextlib
 import hashlib
 import io
+import json
 import os
 import re
 import runpy
@@ -19,8 +20,9 @@ CORE = (ENTRY, SOURCE, PROFILE_SOURCE, ROOT / 'scripts/check_handoff.sh',
         ROOT / 'scripts/handoff_census.py', ROOT / 'README.md')
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 BEFORE = '0ab74212aa1b7cb3d3afed8e1c84b6b0e9fee600'
-# Reviewed later production changes: certificate protection0285 and idle-CUA0315.
-INSPECTOR_BASELINE = '35e2650bb0bb20f59f2cf3d461416027682fa46a'
+# Reviewed through0645:0315 plus0628 proof families,0640 platform and0645 legacy roots.
+INSPECTOR_BASELINE = 'a6a2b356bd6fd4a6c3753ea491e6719ec27d2085'
+CONTINUITY_BASELINE = '5bde28b2f17254a31b006c5a70ba832600a59fe4'
 OLD = subprocess.check_output(['git', 'show', BEFORE + ':' + ENTRY.relative_to(ROOT).as_posix()], text=True)
 WORK = ROOT / 'target/cleanup-fixture-controls' / str(os.getpid())
 PROFILE['prepare_producer'](ROOT, sources=(*CORE, Path(__file__)), directories=(WORK,))
@@ -659,6 +661,11 @@ def protected_store_controls():
     print('protected-store controls: real refusal; empty-fixture isolation/traversal-trap red; expected/unexpected restoration; actual restore-body assertion red; sources exact')
 
 
+def inspector_preserved(data):
+    expected = subprocess.check_output(['git', 'show', INSPECTOR_BASELINE + ':' + SOURCE.relative_to(ROOT).as_posix()])
+    assert data == expected, 'fixture inspector differs from reviewed0645'
+
+
 def original_body_controls():
     """Compare complete original AST after the declared plan/root/protected-setup adapters."""
     old, current = ast.parse(OLD), ast.parse(ENTRY.read_text())
@@ -730,8 +737,16 @@ def original_body_controls():
     protected.body.insert(0, old.body.pop(position - 1))
     projected = Project().visit(current)
     assert ast.dump(projected, include_attributes=False) == ast.dump(old, include_attributes=False), 'cleanup fixture original complete bodies/constants/signatures/argv changed'
-    assert SOURCE.read_bytes() == subprocess.check_output(['git', 'show', INSPECTOR_BASELINE + ':' + SOURCE.relative_to(ROOT).as_posix()])
-    print('fixture original AST: complete bodies/constants/signatures/cases/argv exact through declared planning/root/protected-setup/mutant-isolation/protected-store adapters; inspector unchanged')
+    inspector_preserved(SOURCE.read_bytes())
+    anchor = b"    require(not retained_proof(name), 'protected proof workspace: ' + name)\n"
+    assert SOURCE.read_bytes().count(anchor) == 1
+    try:
+        inspector_preserved(SOURCE.read_bytes().replace(anchor, b'', 1))
+    except AssertionError as error:
+        assert str(error) == 'fixture inspector differs from reviewed0645'
+    else:
+        raise AssertionError('fixture inspector guard omission escaped exact pin')
+    print('fixture original AST: complete bodies/constants/signatures/cases/argv exact through declared adapters; inspector exactly reviewed0645; actual proof-guard omission refused')
     root = mirror('root-selector')
     source = root / SOURCE.relative_to(ROOT)
     PROFILE['plan_producer'](ROOT, sources=(*CORE, Path(__file__)), output_files=(source,))
@@ -761,11 +776,29 @@ def real_controls():
     print('fixture real consumer: original15 cases/11 in-memory guard reds pass; six source inputs exact; fixture residue zero; no project cleanup apply')
 
 
-def continuity_controls():
+def continuity_controls(*, observe=None):
     reader = ROOT / 'scripts/history_archive.py'
+    task_reader = ROOT / 'docs/tasks/artifacts/live_doc_size/maintained_reference.py'
+    archives = tuple(path for directory in (ROOT / 'docs/history', ROOT / '.doctrine/history_archive')
+                     for path in directory.rglob('*') if path.is_file())
+    PROFILE['plan_producer'](ROOT, sources=(*CORE, Path(__file__), reader, task_reader,
+        ROOT / 'docs/TASK_TREE.md', ROOT / 'MEMORY.md', *archives))
+
+    def read(path):
+        if path.startswith(('docs/history/stitchcad-', '.doctrine/history_archive/', 'docs/history/payloads/')):
+            operation = 'read' if path.startswith('docs/history/stitchcad-') else 'read-backing'
+            result = subprocess.run([sys.executable, '-I', '-B', str(reader), '--root', str(ROOT),
+                                     operation, path], cwd=ROOT, capture_output=True)
+            assert result.returncode == 0, ('fixture archive read failed', path, result.stderr)
+            data = result.stdout
+        else:
+            data = (ROOT / path).read_bytes()
+        return observe(path, data) if observe else data
+
     for name in ('stitchcad-devnotes-part293.md', 'stitchcad-changelog-part203.md', 'stitchcad-defects-part133.md'):
-        path = ROOT / 'docs/history' / name
-        data = path.read_bytes()
+        path = 'docs/history/' + name
+        data = read(path)
+        assert data == subprocess.check_output(['git', 'show', CONTINUITY_BASELINE + ':' + path], cwd=ROOT), 'fixture sealed record changed'
         header, body = data.split(b'\n---\n\n', 1)
         text = header.decode()
         identity = re.search(r'Sealed identity:\*\* ([0-9]+) lines, ([0-9]+) bytes, sha256:([0-9a-f]{64})', text)
@@ -780,27 +813,144 @@ def continuity_controls():
             assert b''.join(chunks).rstrip(b'\n') + b'\n' == body, 'fixture whole source intervals changed'
         else:
             assert name == 'stitchcad-defects-part133.md' and all(body.count(('- **D%d**' % number).encode()) == 1 for number in (212, 213, 214))
-        result = subprocess.run([sys.executable, '-I', '-B', str(reader), '--root', str(ROOT), 'read', path.relative_to(ROOT).as_posix()], cwd=ROOT, capture_output=True)
-        assert result.returncode == 0 and result.stdout == data, 'fixture public retained read changed'
     paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BEFORE, '--', 'docs/history', '.doctrine/history_archive'], cwd=ROOT, text=True).splitlines()
     for path in paths:
-        assert (ROOT / path).read_bytes() == subprocess.check_output(['git', 'show', BEFORE + ':' + path], cwd=ROOT), 'fixture prior immutable history changed'
+        previous = subprocess.check_output(['git', 'show', BEFORE + ':' + path], cwd=ROOT)
+        current = read(path)
+        if path == '.doctrine/history_archive/windows.json':
+            old, new = json.loads(previous), json.loads(current)
+            assert set(new) == set(old) and new['version'] == old['version'], 'fixture archive master schema changed'
+            assert new['windows'][:len(old['windows'])] == old['windows'], 'fixture prior windows changed'
+            assert len(set(new['windows'])) == len(new['windows']), 'fixture duplicate window'
+        else:
+            assert current == previous, ('fixture prior archive bytes changed', path)
     tree = 'docs/tasks/G1-SLICE-producers.md'
     old = subprocess.check_output(['git', 'show', BEFORE + ':' + tree], cwd=ROOT, text=True)
     headers = lambda text: re.findall(r'^- ID: `([^`]+)`$', text, re.M)
-    assert headers((ROOT / tree).read_text()) == headers(old), 'fixture canonical task graph changed'
-    index = (ROOT / 'docs/TASK_TREE.md').read_text()
-    activity = (ROOT / 'docs/tasks/G1-SLICE.md').read_text()
-    row = next(line for line in index.splitlines() if line.startswith('| [`G1-SLICE`]'))
-    frontier = next(line for line in activity.splitlines() if line.startswith('| current |'))
-    assert '`.5b.4c.h2.b.p.o.a23`' in row and '`G1-SLICE.5b.4c.h2.b.p.o.a23`' in frontier
-    assert 'G1-SLICE.5b.4c.h2.b.p.o.a23' in (ROOT / 'MEMORY.md').read_text(), 'fixture next frontier pointers disagree'
+    expected, current = headers(old), headers(read(tree).decode())
+    assert len(current) == len(set(current)), 'fixture duplicate task node'
+    assert [value for value in current if value in expected] == expected, 'fixture predecessor task graph changed'
+    pointer = re.search(r'^- Next ([A-Za-z0-9_.-]+)', read('MEMORY.md').decode(), re.M)
+    assert pointer, 'fixture next frontier pointer missing'
+    frontier = pointer[1]
+    family = frontier.split('.', 1)[0]
+    index = read('docs/TASK_TREE.md').decode()
+    row = next(line for line in index.splitlines() if line.startswith('| [`' + family + '`]'))
+    suffix = re.search(r'`(\.[^`]+)`', row)
+    assert suffix, 'fixture indexed frontier missing'
+    indexed = family + suffix[1]
+    assert frontier == indexed, 'fixture next frontier pointers disagree'
+    tasks = runpy.run_path(str(task_reader))
+    sources = tasks['current_tasks'](ROOT, frontier)
+    PROFILE['plan_producer'](ROOT, sources=tuple(ROOT / name for name in sources))
+    if observe:
+        sources = {name: observe(name, data) for name, data in sources.items()}
+    assert tasks['owner_status'](sources, frontier) is not None, 'fixture current canonical owner missing'
     old_index = subprocess.check_output(['git', 'show', BEFORE + ':docs/TASK_TREE.md'], cwd=ROOT, text=True)
     old_activity = subprocess.check_output(['git', 'show', BEFORE + ':docs/tasks/G1-SLICE.md'], cwd=ROOT, text=True)
     assert '`.5b.4c.h2.b.p.o.a21`' in next(line for line in old_index.splitlines() if line.startswith('| [`G1-SLICE`]'))
     assert '`G1-SLICE.5b.4c.h2.b.p.o.a22.2`' in next(line for line in old_activity.splitlines() if line.startswith('| current |'))
-    print('fixture continuity: three whole records/source intervals/public reads exact; prior archives and canonical task graph unchanged')
-    print('fixture local D34 recurrence: actual old index.a21/tree.a22.2 disagreement; current index/tree/MEMORY.a23 agree; broader PLANNING.5 stays open')
+    print('fixture continuity:three exact0224 records/source intervals/public reads; prior logical bytes/windows and predecessor task order preserved')
+    print('fixture frontier:current index/MEMORY/unique linked canonical owner agree; historical D34 index.a21/tree.a22.2 retained; broader PLANNING.5 stays open')
+
+
+def continuity_refusals():
+    """Corrupt actual public observations in memory; retained files are never amended."""
+    originals = subprocess.run, subprocess.check_output
+    run_cache, git_cache = {}, {}
+    def run(argv, **kwargs):
+        key = (*argv, kwargs.get('text', False))
+        if key not in run_cache:
+            run_cache[key] = originals[0](argv, **kwargs)
+        return run_cache[key]
+    def git(argv, **kwargs):
+        key = (tuple(argv), kwargs.get('text', False))
+        if key not in git_cache:
+            git_cache[key] = originals[1](argv, **kwargs)
+        return git_cache[key]
+    record, master, tree = ('docs/history/stitchcad-devnotes-part293.md',
+                           '.doctrine/history_archive/windows.json', 'docs/tasks/G1-SLICE-producers.md')
+    def catalog(data, mode):
+        value = json.loads(data)
+        if mode == 'remove': value['windows'].pop(0)
+        elif mode == 'reorder': value['windows'][:2] = reversed(value['windows'][:2])
+        elif mode == 'duplicate': value['windows'].append(value['windows'][0])
+        elif mode == 'schema': value['unexpected'] = True
+        return json.dumps(value).encode()
+    def nodes(data, mode):
+        text = data.decode()
+        markers = re.findall(r'^- ID: `[^`]+`$', text, re.M)
+        if mode == 'remove': text = text.replace(markers[0], '', 1)
+        elif mode == 'reorder':
+            text = text.replace(markers[0], 'CONTROL_NODE', 1).replace(markers[1], markers[0], 1).replace('CONTROL_NODE', markers[1], 1)
+        elif mode == 'duplicate': text += '\n' + markers[-1] + '\n'
+        return text.encode()
+    def refuses(checker, path, change, reason):
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                checker(observe=lambda selected, data: change(data) if selected == path else data)
+        except AssertionError as error:
+            assert error.args == (reason,), (reason, error)
+        else:
+            raise AssertionError(('fixture continuity corruption escaped', reason))
+    try:
+        subprocess.run, subprocess.check_output = run, git
+        continuity_controls()
+        paths = git(['git', 'ls-tree', '-r', '--name-only', BEFORE, '--', 'docs/history', '.doctrine/history_archive'], cwd=ROOT, text=True).splitlines()
+        prior = next(path for path in paths if path.startswith('docs/history/stitchcad-'))
+        index = (ROOT / 'docs/TASK_TREE.md').read_text()
+        frontier = re.search(r'^- Next ([A-Za-z0-9_.-]+)', (ROOT / 'MEMORY.md').read_text(), re.M)[1]
+        suffix = frontier[len(frontier.split('.', 1)[0]):]
+        anchor = '`' + suffix + '`'
+        assert index.count(anchor) == 1
+        cases = [
+            (record, lambda data: data + b'corrupt', 'fixture sealed record changed'),
+            (prior, lambda data: data + b'corrupt', ('fixture prior archive bytes changed', prior)),
+            *[(master, lambda data, mode=mode: catalog(data, mode), reason) for mode, reason in (
+                ('remove', 'fixture prior windows changed'), ('reorder', 'fixture prior windows changed'),
+                ('duplicate', 'fixture duplicate window'), ('schema', 'fixture archive master schema changed'))],
+            *[(tree, lambda data, mode=mode: nodes(data, mode), reason) for mode, reason in (
+                ('remove', 'fixture predecessor task graph changed'), ('reorder', 'fixture predecessor task graph changed'),
+                ('duplicate', 'fixture duplicate task node'))],
+            ('docs/TASK_TREE.md', lambda data: data.replace(anchor.encode(), ('`' + suffix + '.fault`').encode(), 1),
+             'fixture next frontier pointers disagree'),
+        ]
+        for path, change, reason in cases:
+            refuses(continuity_controls, path, change, reason)
+        for path in (record, master):
+            selected = next(key for key in run_cache if key[-2] == path)
+            result = run_cache[selected]
+            run_cache[selected] = subprocess.CompletedProcess(result.args, 2, b'', b'controlled unavailable archive')
+            try:
+                continuity_controls()
+            except AssertionError as error:
+                assert error.args[0][:2] == ('fixture archive read failed', path), error
+            else:
+                raise AssertionError('fixture unavailable archive accepted')
+            finally:
+                run_cache[selected] = result
+        source = Path(__file__).read_text()
+        function = next(node for node in ast.parse(source).body if isinstance(node, ast.FunctionDef) and node.name == 'continuity_controls')
+        body = ast.get_source_segment(source, function)
+        for anchor, case in (
+            ("assert current == previous, ('fixture prior archive bytes changed', path)", 1),
+            ("assert new['windows'][:len(old['windows'])] == old['windows'], 'fixture prior windows changed'", 2),
+            ("assert [value for value in current if value in expected] == expected, 'fixture predecessor task graph changed'", 6),
+            ("assert frontier == indexed, 'fixture next frontier pointers disagree'", 9),
+        ):
+            assert body.count(anchor) == 1
+            namespace = dict(globals())
+            exec(compile(body.replace(anchor, 'pass', 1), __file__, 'exec'), namespace)
+            path, change, reason = cases[case]
+            try:
+                refuses(namespace['continuity_controls'], path, change, reason)
+            except AssertionError as error:
+                assert error.args[0] == ('fixture continuity corruption escaped', reason), error
+            else:
+                raise AssertionError('fixture continuity guard omission missed')
+    finally:
+        subprocess.run, subprocess.check_output = originals
+    print('fixture continuity:12 independent refusals/four compiled guard-omission assertion reds; retained data unchanged')
 
 
 if __name__ == '__main__':
@@ -811,7 +961,7 @@ if __name__ == '__main__':
     elif sys.argv[1:] == ['--real']:
         real_controls()
     elif sys.argv[1:] == ['--continuity']:
-        continuity_controls()
+        continuity_refusals()
     else:
         assert not sys.argv[1:], 'control mode not yet implemented'
         before_control()
@@ -823,3 +973,4 @@ if __name__ == '__main__':
         restoration_controls()
         ownership_controls()
         original_body_controls()
+        continuity_refusals()

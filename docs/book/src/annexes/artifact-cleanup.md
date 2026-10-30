@@ -327,8 +327,18 @@ empty owned fixture,temporarily added to the actual inspector function's protect
 original prefix remains;the list is restored on success or exception. This isolates the intended
 guard from unrelated Git checkouts inside a populated store. No mutant traverses the real store.
 The companion retains the original fixture AST baseline and pins the complete inspector to its
-reviewed0315 revision,including certificate protections and explicit idle-CUA forwarding. A later
-producer change requires explicit baseline review;this is not a moving HEAD comparison.
+reviewed0645 revision. Relative to0315,the approved delta adds the third numerical store,six
+legacy native roots and retained-proof family guards. An actual omission of the proof guard fails
+the whole-file comparison. A later producer change requires explicit baseline review;this is not
+a moving HEAD comparison. D353 repaired the companion's older pin without changing cleanup behavior.
+
+The continuity mode reads historical records through the public logical archive reader. Three
+whole records also match their original0224 Git bytes;earlier logical archive contents,window
+order and predecessor task order remain exact while later records/nodes may be added. It checks
+the current index and resume pointer against a unique owner in the bounded linked task family.
+The original D34 index/tree disagreement remains historical evidence;the broader PLANNING.5
+census stays open. Twelve independent corruptions/unavailable reads and four compiled guard
+omissions falsify these checks without editing retained data. The default control watches them too.
 
 Before the first helper executes, bounded metadata checks require a local regular profile file,
 a safe scripts parent and no Git marker there. The fixture entry derives its root from itself,
@@ -373,6 +383,7 @@ are modeled separately from real project consumers. Neither control path calls p
 ```bash
 python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py --real
+python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py --continuity
 ```
 
 
