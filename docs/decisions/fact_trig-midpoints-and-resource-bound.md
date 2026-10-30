@@ -5,7 +5,7 @@
 - **Status:** `active`; sin/cos and inverses implemented; tangent resources remain open
 - **Owner / source:** G1-SLICE.5d.1.2.2.1; remaining tangent strategy .5d.1.2.2.2.d.2 is P1.
 
-answers: "can trigonometric formula results land exactly on a rounding midpoint?" · "does convergence prove usable trig resources?" · "what bounds tangent folding and quotient conditioning?"
+answers: "can trigonometric formula results land exactly on a rounding midpoint?" · "does convergence prove usable trig resources?" · "what bounds tangent folding and quotient conditioning?" · "how do unrounded tangent enclosures converge?"
 
 ## Scope and independent theorem
 
@@ -20,7 +20,7 @@ establish the rational-value restriction at rational multiples of pi: sine/cosin
 only at0, ±1/2, ±1; finite rational tangent values can only be0, ±1. These are theorem sources,
 not numerical samples. NIST supplies [principal inverse branches](https://dlmf.nist.gov/4.23)
 and [arctangent series/identities](https://dlmf.nist.gov/4.24); it does not certify StitchCAD's
-interval error accounting or resource bounds. Sources actually opened2026-10-25.
+interval error accounting or resource bounds. Sources opened2026-10-25;Calcut tangent Corollary1 rechecked2026-10-30.
 
 ## Consequence for the actual language quanta
 
@@ -157,3 +157,39 @@ rectangles and two wrong-composition/sign controls,rc=0. These support transcrip
 and algebra above supply the universal argument. The producer is registered in existing probes
 and exact producer/file inventories. No latency,all-input precision or runtime-resource admission
 is inferred. P1 .d.2.2 remains required before tangent kernel implementation.
+
+## Convergent per-precision tangent model0613
+
+This is a diagnostic model,not production resource admission. For integer precision B>=128,set
+S=2^B. [NIST sine/cosine series](https://dlmf.nist.gov/4.19) and
+[arctangent series](https://dlmf.nist.gov/4.24.E3),opened2026-10-30,support the identities;
+error/width/iteration bounds here are our derivation. No fixed640-bit pi certificate is extended.
+Each directed B-term atan(1/5),atan(1/239) sum has width<=B+1 scaled units:one unit per rounded
+term and at most one alternating tail unit. Machin combination16a-4b gives fresh pi width
+<=20(B+1). Intersect with3<=pi<=4. Exact first-octant conversion gives radian width<=5B+7.
+Squaring outward gives width<=10B+16. Each sine/cosine term width is at most10B+20:the next
+width is <=(old+square_width)/2+2,which preserves that bound. Magnitudes stay<=S. B alternating
+terms plus a one-unit tail on either side give component width<=10B^2+20B+2 scaled units.
+The tail bound follows from(2B)!>2^B and x<=1. Clip component enclosures to[0,1].
+
+With eps=(10B^2+20B+2)*2^-B,the prior analytic denominator floors give quotient width at most
+M*eps*(2^128+2^256),which tends to zero. Original rational-angle tangent midpoint exclusion
+then proves eventual one-cell rounding for every admitted nonpole if precision is increased.
+Both closed endpoints must round alike before a diagnostic rounded value is certified;otherwise
+it remains undecided. An entire interval above U+1/2 instead certifies actual rational-width
+excess. Exact poles remain separate. There is no substituted result or precision-domain refusal.
+
+One nontrivial precision uses at most4B series terms and a fixed number of candidate integer
+slots. Each explicit candidate arithmetic operand is bounded by16B+bit_length(2B+1)+16 bits:239<2^8
+bounds the largest atan power/denominator;term products need at most2B+1 bits and original
+angle conversion needs B+130/156 bits. The model checks these invariants. This is mathematical
+integer extent/per-iteration work,not allocator bytes,latency or an applicable full runtime budget.
+
+The registered tangent_reduction_plan.py passes three independent alternate-identity Fraction pi
+bounds,42 direct-power/factorial Fraction component controls and54 coupled exact endpoint/pole/
+width cases. Its independently constructed admitted near-midpoint Angle is
+247385123034593398372138492992328993860/8635369834810561370044731507908276509 microdegrees.
+At128/256 bits this model correctly remains undecided;512 certifies zero. Independent arctangent/
+alternate-pi bounds place the original angle below the true half-ppm threshold,rc=0. This is no
+lower bound on another algorithm's required precision or a universal512-bit guarantee.
+Complete practical resource/rounding admission remains P1 .d.2.2.2 before any native tangent kernel.

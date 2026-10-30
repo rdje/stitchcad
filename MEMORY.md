@@ -1,18 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.1.2.2.2.d.2.2:P1 validated tangent rounding/convergence/practical resources.
-  Exact reduction/conditioning prerequisite0612 complete;no kernel until full applicable plan.
-  Recover updated midpoint/resource fact,new tangent_reduction_plan.py,old tangent_resource_profile,
-  existing sin/cos/inverse plans. No arbitrary precision cutoff/new domain/borrowed certificate/libm.
-- Tangent prerequisite:integer period/reflection/complement keeps folded numerator<=original128
-  bits/denominator original;period<=156 bits. Exact poles/zero/signed units. Direct denominator>1/2;
-  reciprocal sine>=2^-128 from original pole distance. Quotient width<=epsN/L+epsD/L^2;this is
-  not a midpoint margin. At30deg rounded sine/cosine gives577351 versus actual577350 ppm.
-  Independent Fraction29928 finite/372 poles/3642 reciprocal,92 signed/full-width witnesses,
-  144 rational rectangles/two wrong-composition/sign controls pass. Universal proof in fact/book.
-  Registered pure producer;inventory344/file231/effect109 controls pass;book98/365/1645/2902/
-  glossary0/history770 four spans/map/live ids/diff pass. Full precision/resources still open.
-- D341 fixed0611 in770;D156 .p.v/.p.o.a40 retain audits. Whole0610 scalar source/recipe/DesignInputs checkpoint retained769;full Derived integration owned.
+- Next G1-SLICE.5d.1.2.2.2.d.2.2.2:practical tangent rounding/resource admission before kernel.
+  Convergent per-precision enclosure prerequisite0613 complete. Recover current fact/book/model;
+  decide a justified bounded production strategy without numerical-domain/precision cutoff/libm.
+- Model0613:fresh directed pi/radian/sine/cosine enclosures at B>=128. Component width
+  (10B^2+20B+2)*2^-B;denominator floors give convergence,original midpoint theorem eventual
+  separation. At most4B series terms/constant candidate integer slots/16B+bit_length(2B+1)+16
+  operand bits per iteration. Closed endpoints must round alike;otherwise undecided,not a value.
+  Independent pi3/component42/coupled54 controls pass;actual128/256-bit undecided witness certifies
+  zero at512,independent atan/pi confirms. No uniform512-bit or full resource/latency claim.
+- Existing reduction29928/372/3642/92,144 rectangles/two controls retained. Census344/file231/
+  effect109 controls/book98/365/1645/2903/glossary0/history771 four spans/map/live ids/diff pass.
+  Whole0612 in771,D341 in770,scalar Design checkpoint in769. Full Derived integration remains owned.
   G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,

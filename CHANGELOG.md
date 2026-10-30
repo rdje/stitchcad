@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0612 — prove exact tangent reduction and quotient conditioning prerequisites
+## STITCHCAD-G1-0613 — prove convergent per-precision unrounded tangent enclosures
 
-- Fold original rational angles exactly with128-bit components/156-bit period;separate poles/zero/units. Prove reciprocal denominator>=2^-128 and outward quotient error accounting. Exact30-degree counterexample rejects dividing rounded sine/cosine as a tangent implementation.
-- Fraction29928/372/3642,92 actual boundary witnesses,144 quotient rectangles/two controls pass. Registered producer/inventory344/file231/effect109/book98/365/1645/2902/glossary0/history770/map pass. Next P1 full tangent rounding/resource plan before kernel. LIVE G1 6/18/G0 unapproved unchanged.
+- Fresh pi/unrounded sine/cosine bounds converge with explicit per-iteration term/integer extents. Whole endpoints must round alike;undecided stays separate from actual pole/width refusals. Independent pi3/component42/coupled54 controls and a genuine near-midpoint witness pass.
+- Existing reduction controls/inventory344/file231/effect109/book98/365/1645/2903/glossary0/history771/map pass. Actual128/256-bit undecided input certifies zero at512;no universal precision/resource guarantee. Next P1 production admission before kernel. LIVE G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -533,49 +533,54 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1`
   Status: `done`
-  Goal:exact all-input tangent symmetry/pole/endpoint reduction and quotient conditioning plan.
-  Concrete next:derive bounded integer-only folding from actual128-bit rational microdegrees into
-  first-octant unrounded sin/cos or reciprocal,with exact signed zeros/units/poles. Independent
-  direct-period/octant/Fraction controls and full-width witnesses;no rounded sin/cos quotient.
-  This is a prerequisite only;complete rounding/error/termination/practical resources remain .2.
+  Goal:0612 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part771.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1.inventory`
   Status: `done`
-  Goal:0611 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part770.md).
+  Goal:0612 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part771.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.1.reduction`
   Status: `done`
-  Goal:exact all-input tangent folding/sign/pole/zero/unit and unrounded quotient conditioning.
-  - [x] REPRODUCE / ISSUE:existing tangent range/pole profile admits no production resource plan;
-    a new quotient strategy needs exact admitted-input folding/positive-denominator/error bounds.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_profile.py
-    →8798 nonpoles/586 poles/two controls,148-bit range/2^128 targets and actual overflow witness,
-    rc=0. Neither existing sine nor inverse certificate supplies tangent midpoint separation.
-    NIST4.21 addition identities opened;component/conditioning proof is our explicit derivation.
-  - [x] FIX:exact period/reflection/sign/complement model;folded numerator<=original128-bit n,
-    original denominator retained,period<=156 bits. Pole/zero/unit exact. Direct denominator>1/2;
-    reciprocal sine>=2^-128 from original nearest-pole bound/chord. Outward quotient width bounded
-    by epsN/L+epsD/L^2. No rounded sine/cosine quotient or new binding/input state/production API.
-  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py
-    →29928 finite/372 poles/3642 reciprocal finite-model cases match independent signed Fraction
-    reduction;92 actual signed/full-width witnesses and144 rational quotient rectangles pass,rc=0.
-    Universal identities/algebra in the fact/book supply completeness;finite checks transcription.
-    Exact square bounds prove tan30 rounds577350 while rounded sine/cosine quotient gives577351;
-    actual120/-120 sign counterexamples discriminate. Nonpole128-bit result overflow stays distinct.
-  - [x] NO REGRESSION: bash -n docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
-    →pass,rc=0;new producer registered there and in both inventories. producer_census.py →344
-    sources/33716 calls/73 heredocs/2892 embedded calls,rc=0. Existing effect/file controls →109/48
-    and231/89/38,23 data refusals/19 guard reds pass,rc=0. Book98/365/1645/2902/glossary310/9/158/0,
-    history770 four Git spans/prior live ids/order/uniqueness/diff/generated map exact pass,rc=0.
-    Native APIs unchanged;full probes/CI and complete tangent precision/resource admission unrun.
-  - [x] LOCKSTEP:fact/decision index/book/task/index/MEM/DEV/CHANGE align;whole0611 retained770.
-    Parent .d.2.1 prerequisite complete;P1 .d.2.2 still owns validated full rounding/convergence/
-    practical resource strategy before any kernel. No arbitrary cutoff/new domain/latency/full
-    readiness claim. LIVE G1 6/18/G0 unapproved unchanged;D341 fixed/D156/D223/PLANNING.5/D334 owned.
-    promotion: promoted (fact_trig-midpoints-and-resource-bound.md gains the tangent folding/conditioning answer and universal proof).
+  Goal:0612 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part771.md).
 - ID: `G1-SLICE.5d.1.2.2.2.d.2.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal:validated whole admitted-input tangent enclosure/rounding/termination and practical resource
   strategy using exact reduction .1. Prove original width/pole diagnostics;no arbitrary cutoff,
   changed domain,borrowed fixed sine/inverse certificate or production kernel before admission.
+
+- ID: `G1-SLICE.5d.1.2.2.2.d.2.2.1`
+  Status: `done`
+  Goal:rigorous unrounded per-precision tangent enclosures/convergence and iteration arithmetic.
+  - [x] REPRODUCE / ISSUE:fixed sine/inverse and640-bit pi certificates do not license an arbitrary
+    tangent precision or quotient. Need fresh proven enclosures without an invented value/refusal.
+  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'def pi_interval|def series_interval|undecided|integer_limit'
+    docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py →fresh precision-specific pi,
+    unrounded component series,positive-denominator conditioning and certificate-only decision,
+    rc=0. NIST4.19/4.24 and Calcut tangent Corollary1 independently reopened;all bounds are our proof.
+  - [x] FIX:B>=128 uses fresh directed Machin pi width20(B+1),radian width5B+7,square10B+16,
+    term10B+20 and component(10B^2+20B+2)*2^-B. Analytic floors make quotient width tend tozero;
+    original midpoint theorem proves eventual separation. At most4B series terms/constant integer
+    slots and16B+bit_length(2B+1)+16 candidate operand bits per iteration. Whole endpoints must
+    round alike;else undecided. Actual poles/whole-interval width excess remain distinct,no kernel.
+  - [x] ADDRESSED (verified): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_reduction_plan.py
+    →three independent alternate-identity Fraction pi bounds/42 direct-power factorial component/
+    54 coupled exact endpoint,pole,width controls pass,rc=0. Original29928 finite/372 poles/3642
+    reciprocal/92 signed boundary witnesses/144 rectangles/two controls retained. Actual legal
+    near-midpoint input247385123034593398372138492992328993860/8635369834810561370044731507908276509
+    microdegrees is undecided at128/256,certified zero at512;independent atan/pi proves its side.
+  - [x] NO REGRESSION: producer_census.py →344 sources/33815 calls/73 heredocs/2892 embedded,
+    rc=0. Existing effect/file controls →109/48 and231/89/38,23 actual data refusals/19 guard reds
+    pass,rc=0. bash -n run_formula_structure_probes.sh/git diff --check/generated map compare,
+    book98/365/1645/2903/glossary310/9/158/0/history771 four Git spans/prior live ids/order/uniqueness
+    pass,rc=0. Native APIs unchanged;full CI/probes/latency/platform not inferred.
+  - [x] LOCKSTEP:fact/retrieval answer/index/book/task/index/MEM/DEV/CHANGE align. Whole0612
+    retained771. Next P1 .d.2.2.2 practical admission before kernel;no universal512-bit claim,
+    numerical-domain cutoff,allocator-byte/latency/full-runtime admission. LIVE G1 6/18/G0
+    unapproved unchanged;D341 fixed/D156/D223/PLANNING.5/D334 owned. Protected evidence retained.
+    promotion: promoted (fact_trig-midpoints-and-resource-bound.md gains convergent unrounded enclosure answer/proof and actual boundary witness).
+- ID: `G1-SLICE.5d.1.2.2.2.d.2.2.2`
+  Status: `pending`
+  Goal:complete practical whole-admitted-input rounding/resource admission after convergent
+  enclosures. Retain exact poles/width diagnostics and independent proof;no arbitrary cutoff,
+  changed domain or kernel until the applicable production strategy is justified.
 
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`

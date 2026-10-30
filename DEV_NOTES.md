@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — establish exact tangent folding and quotient conditioning prerequisites
+## _(2026-10-30 UTC)_ — prove convergent unrounded tangent enclosures at each precision
 
-0612 derives integer period/reflection/complement reduction with original128-bit folded components and156-bit period. Pole/zero/unit classification is exact. Direct cosine>1/2;reciprocal sine>=2^-128 follows from the earlier nearest-pole distance and chord. Quotient width<=epsN/L+epsD/L^2.
-Independent signed Fraction controls pass29928 finite/372 pole/3642 reciprocal cases,92 actual signed/full-width witnesses and144 rational rectangles. Exact square inequalities prove tangent30 rounds577350 but dividing rounded sine/cosine gives577351;120/-120 refute original-sign-only composition.
-Book98/365/1645/2902/glossary0/inventory344/file231/effect109 controls/history770 four spans/live ids/diff/map pass. Pure producer registered in existing probes/inventories;native APIs unchanged. [Whole0611](docs/history/stitchcad-devnotes-part770.md) retains exact D341 repair/source scope.
-The fact gains a retrievable tangent conditioning answer. Parent .d.2.1 prerequisite complete;next P1 .d.2.2 must prove validated full rounding/convergence/practical resources before kernel. No cutoff/new domain/latency claim. LIVE G1 6/18/G0 unapproved unchanged;full-hosted79bd6f6a scoped. Full PNT/push400.
+0613 adds fresh directed Machin pi and unrounded sine/cosine intervals. Component width<=(10B^2+20B+2)*2^-B and positive denominator floors imply quotient convergence;the rechecked rational-angle theorem supplies eventual midpoint separation. Decisions require whole-interval agreement or actual width/pole proof.
+Independent alternate-pi3/direct-power factorial42/coupled54 controls pass. A legal near-midpoint Angle remains undecided at128/256 bits;512 certifies zero,independent atan/pi confirms. Original reduction/conditioning controls retained. Per-iteration4B terms/constant slots/explicit linear bit extents proved.
+Book98/365/1645/2903/glossary0/inventory344/file231/effect109/history771 four spans/map/live ids/diff pass. [Whole0612](docs/history/stitchcad-devnotes-part771.md) retains exact prior proof/scope. Fact gains a convergent-enclosure answer;primary series/theorem rechecked. Native APIs unchanged.
+Next P1 .d.2.2.2 must admit practical production resources before kernel. Convergence supplies no uniform512-bit,allocator-byte or latency guarantee;undecided is no returned value/numerical refusal. LIVE G1 6/18/G0 unapproved unchanged;full-hosted79bd6f6a scoped,D341 fixed/other owners retained. Full PNT/push400.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -320,3 +320,37 @@ Universal identities/algebra supply the argument;finite controls check its trans
 producer is registered in the existing probe suite and exact source/file inventories. Full
 rounding separation,validated convergence and practical resource admission remain P1 .d.2.2;
 no kernel,precision cutoff,new domain,latency or production-readiness claim follows.
+
+## Convergent unrounded tangent enclosures
+
+A pure diagnostic model now supplies a rigorous enclosure at each explicit precision B>=128.
+It recomputes pi through directed Machin/arctangent series,then uses the exact reduction above,
+unrounded sine/cosine series and the proved positive denominator floors. It does not divide the
+public rounded sine/cosine results or reuse a640-bit pi certificate at greater precision.
+The [arctangent series](https://dlmf.nist.gov/4.24.E3) and
+[sine/cosine series](https://dlmf.nist.gov/4.19) support the identities;the following error bounds
+are this project's derivation.
+
+At scale2^B,each B-term arctangent interval has width at most B+1;the Machin pi combination has
+width at most20(B+1). Exact radian conversion has width at most5B+7,and its square has width at
+most10B+16. The sine/cosine term recurrence preserves width at most10B+20. B alternating terms
+plus outward tails therefore enclose each component within(10B^2+20B+2)*2^-B. The tails are
+bounded by(2B)!>2^B. These widths shrink to zero;the denominator floor gives a uniformly shrinking
+quotient enclosure even near an admitted pole.
+
+A diagnostic result is certified only when both closed ppm endpoints round to the same integer.
+An interval wholly above the final U+1/2 boundary instead proves actual rational-width excess;
+exact poles are classified separately. Otherwise the status stays undecided. The midpoint theorem
+above proves eventual separation under increasing precision. It does not supply a practical uniform
+precision bound. One iteration uses at most4B series terms and a fixed number of candidate integer
+slots,with explicit operands bounded by16B+bit_length(2B+1)+16 bits. These mathematical extents
+supply neither allocator-byte nor latency guarantees,or a production runtime admission.
+
+Independent controls compare three alternate-identity Fraction pi bounds,42 direct-power/factorial
+component enclosures and54 coupled endpoint/pole/width cases. A separately constructed legal Angle
+247385123034593398372138492992328993860/8635369834810561370044731507908276509 microdegrees
+remains undecided in this model at128 and256 bits. At512 bits its whole interval certifies zero,
+matching independent arctangent/alternate-pi bounds below the actual half-ppm threshold. This does
+not prove that every algorithm needs512 bits,or that512 suffices for all inputs. The tracked pure
+model runs in the existing probe suite;complete practical resource admission remains P1 .d.2.2.2.
+Production tangent is still unavailable.
