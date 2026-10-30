@@ -255,3 +255,13 @@ a bound. The next completed graph/Design receipt727 is authored only after these
 Keep original transaction trees for recovery evidence;do not rerun installation or recovery after
 later edits. Live links route to window24 headings;sealed source bodies remain exact. This is
 retention and process-interruption protection,with no new power-loss claim.
+
+The0630 append reached active64 with61 raw records and three catalogs. Window25 captures all61
+committed whole files. Independent before/candidate/installed materializations match all1241
+logical names,sizes,line counts,SHA-256 hashes and4831870 bytes;native tar61/687053 bytes matches.
+All104 original physical files remain exact in target/history-capture-0630;sealed generation1
+is unchanged. Installation reduces active64→4 and aggregate85→25,without changing any limit.
+Whole0628/0629 receipts788/789 follow the installed comparison,leaving active6/64 and aggregate27.
+Live links route to window25 headings;sealed records stay exact. Protect the transaction/proof/
+review workspaces;never rerun install/recovery after later edits. This verifies retained bytes and
+the existing process-interruption protocol;it adds no hardware power-loss or platform guarantee.

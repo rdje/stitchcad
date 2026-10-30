@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0629 — clean regenerable artifacts and preserve original proofs
+## STITCHCAD-G1-0630 — restore bounded active archive capacity
 
-- Apply fresh post0628 daily plan after OS-visible idle admission:4 trees/66 strays/204 files/16693061B removed. Immediate independent census proves70 absent/tracked exact;6496 retained entries/13380343714 regular B unchanged across14 complete archive/search/numerical roots.
-- All66 stray copies/26 current verification receipts exact;1700 unsafe entries retained. Book99/374/1659/2937/glossary0/archive64/IDs/map/diff pass. Latest cleanup record aligned. LIVE G1 6/18/G0 unapproved unchanged;full/hosted79bd6f6a SHA-scoped. Next coupled forward review.
+- Public append/install captures61 full committed files in window25. Independent before/candidate/installed1241 records/4831870B match;native tar61/687053B/all104 original files exact. OS-visible idle check passes before transaction;active64→4 without raised bounds.
+- Whole0628/0629 retained788/789 after installed comparison;final active6/64,total27/192. Live links/book synchronized;reader/source/task-source12/IDs/map/diff/book99/374/1659/2937/glossary0 pass. LIVE G1 6/18/G0 unapproved unchanged. Next coupled forward review.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

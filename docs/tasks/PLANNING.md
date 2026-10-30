@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308–D342 — prior closures and retained-proof cleanup risk
 
-D308–D341:[whole prior ledger](../history/stitchcad-devnotes-part787.md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D342 P1 fixed0628:plan35 proposed9 retained search logs;no deletion. Owner G1-SLICE.6.5.3.2.cleanup-20261030.proof-protection adds5 future-workspace families;protected7/ordinary2/actual reds4/entry contracts pass;fresh apply remains owned.
+D308–D341:[whole prior ledger](../history/window25.md#stitchcad-devnotes-part787md). D334 P2 after G1/before G0;D223/PLANNING.5 open. D342 P1 fixed0628:plan35 proposed9 retained search logs;no deletion. Owner G1-SLICE.6.5.3.2.cleanup-20261030.proof-protection adds5 future-workspace families;protected7/ordinary2/actual reds4/entry contracts pass;apply0629 verified.

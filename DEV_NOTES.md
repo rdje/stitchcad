@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — apply safe daily cleanup after proof-family repair
+## _(2026-10-30 UTC)_ — restore actual active archive capacity before forward review
 
-0629 freezes the actual post0628 plan,checks4 generated trees/66 strays against14 retained proof roots and protected stores,then copies/byte-verifies all66 strays and26 current verification receipts. OS-visible canonical handoff OK;204 files/16693061B removed,1700 unsafe entries retained.
-Immediate no-launcher census proves all70 paths absent and tracked hash exact. All14 archive/search/numerical roots retain6496 entries/13380343714 regular B exactly. All66 copies/26 receipts match. Package/dependency stores excluded,not wholly hashed;2163 incremental bins retained with linked caches.
-Regeneration follows the immediate proof;book99/374/1659/2937/glossary0/archive64/IDs/map/diff pass. 0628 guard scope stays live;active archive64 needs retention before growth. Original D342 rejected plans remain unapplied;protected0586 logs survive. Latest cleanup record now reflects actual removal.
-Promotion declined:existing preservation/idle/residue contracts applied. LIVE reviewed unchanged:G1 6/18/G0 human unapproved;full/hosted79bd6f6a remains exact-SHA scoped. Native roots/arc reviewed;next forward retention,then coupled review. Full PNT continues.
+0630 diagnoses active64/64=61 raw+3 catalogs,aggregate85/192. Published append/install captures61 committed whole files in window25. Independent before/candidate/installed1241 names/sizes/lines/SHA256/4831870B match;native tar61/687053B and all104 original physical files exact.
+OS-visible handoff clear precedes transaction;readers idle. Initial active4/64,total25/192;whole0628/0629 retained788/789 only after installed comparison,4 exact Git spans each. Final active6/64,total27/192;no limits raised. Keep original0630 transaction/proof/review trees;never rerun recovery after later edits.
+Route live captured links to exact catalog headings;sealed bodies unchanged. Reader/source/task-source12/IDs/map/diff/book99/374/1659/2937/glossary0 pass. [Whole0628 guard repair](docs/history/stitchcad-devnotes-part788.md) and [0629 cleanup](docs/history/stitchcad-devnotes-part789.md) remain self-contained.
+Promotion declined:existing retention/preservation/routing contracts. LIVE/README unchanged:G1 6/18/G0 human unapproved. Full/hosted79bd6f6a exact-SHA only;no broad CI/native rebuild/power-loss claim. Resume coupled forward proof/source/body-fault review;full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
