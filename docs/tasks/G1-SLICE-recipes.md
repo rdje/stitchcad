@@ -573,12 +573,89 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: coupled complete irrational function proof and error/provenance review.
   Acceptance: independent correctly rounded oracle and adversarial threshold/pole/branch/domain
   cases, cross-platform determinism evidence, actual fault controls and rigorous admitted-input
   coverage; no scoped reference accuracy promoted to a general numerical certificate.
   Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5d.4.roots`
+  Status: `in_progress`
+  Goal:review complete admitted root-family rounding/domain/provenance bounds with independent
+  exact midpoint/full-width cases and actual implementation-body fault controls. No platform claim.
+- ID: `G1-SLICE.5d.4.roots.values`
+  Status: `done`
+  Goal:independent exact root midpoint/full-width/domain/provenance review;preserve original
+  fixture scope and typed refusals without promoting finite cases to complete platform proof.
+  - [x] REPRODUCE / ISSUE:original25 root rows preceded complete source wrappers and newer
+    full-width integration. Coupled review needed larger exact midpoint/domain/storage and real
+    upstream-call controls. formula-rationals also incorrectly called implemented root provenance
+    and higher Tan policy integration pending,misleading book-only availability review.
+  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test formula_root_value_contract -- --nocapture
+    →six pass/85 rows/3 original mathematical refusals/5 later storage refusals,rc=0. Native roots
+    use exact private bisection/squared midpoints;independent math.isqrt/Fraction values exercise
+    the admitted integer boundary. Real sourced wrappers must retain every successful upstream/
+    root contribution through storage. Book status had not followed implemented call integration.
+  - [x] FIX:preserve all1602 bytes/original25-row prefix and append60 bounded cases:51 sqrt/
+    34 hypot rows total. Independent input assertions retain128-bit components and prove the raw
+    513/512-bit private hypot witness. Two new native watchers cover actual cos/sin zero arithmetic,
+    original roots/domain failures,successful-call flags,real binding/read and full regeneration.
+    Correct current root/Tan book availability;new bounded coupled-review chapter owns proof limits.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_root_value_contract -- --nocapture
+    →all85 independent numeric and real sourced rows pass,with3 mathematical/5 later storage
+    refusals;original kind-priority tests pass and all6476B regenerate,rc=0. Exact half squares and
+    two-sided neighbors include odd63-bit m with Ratio(m²+delta)/256 beyond signed storage,full128
+    Ratio inputs,four signs of raw513-bit hypot,maximum Length/tiny operand and exact final limits.
+    Root/Cos/Sin contributions remain through perfect/zero results and storage;T1 refuses them.
+    Fixture sha256:e4b701eb22add56a126b980cced076b4b694223e71bebcdfa650f17d2145765d.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_root_value_contract -- --nocapture →six pass,
+    including original25 cases and original wrong-kind/negative/final-domain refusals,rc=0.
+    cargo clippy -p sc-core --test formula_root_value_contract -- -D warnings and selected
+    rustfmt →pass,rc=0. Explicit git-show prefix comparison →all1602 original bytes exact,rc=0.
+    Producer census347/34067 AST calls/73 heredocs/2892 embedded,history783 four exact Git spans,
+    prior task IDs/order/uniqueness retained plus10 scoped children,map/diff pass,rc=0. Book99/
+    374/1658/2932 and glossary310/9/158/0 pass,rc=0. First publication caught missing topic-index
+    coverage for new chapter;added the actual route and used registered in-book contract links.
+  - [x] LOCKSTEP:book/new chapter/SUMMARY/topic index/status/canonical numerical decision/
+    task/index/MEM/DEV/CHANGE/LIVE align. Whole tangent policy integration0623 retained783;
+    .5d.4 remains in progress with explicit family/fault/composition/platform/acceptance children.
+    Next actual isolated root-body fault controls;no exhaustive input/platform/full resource claim.
+    LIVE root85 evidence;G1 6/18/G0 unapproved unchanged;latest full/hosted79bd6f6a SHA-scoped.
+    promotion: declined (the existing exact root-family decision already supplies the all-admitted argument;this adds independent boundary/provenance witnesses and repairs current documentation).
+  Commit:STITCHCAD-G1-0624;Verification:root6/85 rows/original25 prefix/exact6476B/scoped strict lint/fmt.
+- ID: `G1-SLICE.5d.4.roots.faults`
+  Status: `pending`
+  Goal:falsify actual native root-body guards/rounding/scale/squared sum in isolated project-local
+  probes,without altering original production sources. Own complete temporary/build plans first.
+- ID: `G1-SLICE.5d.4.arc`
+  Status: `pending`
+  Goal:coupled arc_length all-admitted pi/rounding/domain/provenance proof and actual fault review;
+  preserve signed full turns and original failures;reuse protected certificates read-only.
+- ID: `G1-SLICE.5d.4.forward`
+  Status: `pending`
+  Goal:coupled sin/cos folding,complete threshold certificate,rounding/provenance and actual fault
+  review;preserve original full-width operands and protected certificate workspaces.
+- ID: `G1-SLICE.5d.4.inverse`
+  Status: `pending`
+  Goal:coupled atan/atan2 whole-ratio/branch/threshold/error/provenance and actual fault review;
+  preserve principal signed axes and protected complete inverse certificates.
+- ID: `G1-SLICE.5d.4.tangent`
+  Status: `pending`
+  Goal:coupled adaptive tangent proof/error/resource/provenance and actual fault review after
+  native139 and real paired24 acceptance;no fixed practical budget or platform inference.
+- ID: `G1-SLICE.5d.4.composition`
+  Status: `pending`
+  Goal:independent mixed irrational-call chains through actual source/recipe/Design execution,
+  preserving each function's rounding boundary,first failure and successful contributions.
+- ID: `G1-SLICE.5d.4.platform`
+  Status: `pending`
+  Goal:actual declared native/browser numerical identity with exact target/toolchain/run evidence,
+  including original mathematical/resource failures;compile-only evidence is not execution parity.
+- ID: `G1-SLICE.5d.4.acceptance`
+  Status: `pending`
+  Goal:close complete coupled irrational review only after all scoped proofs/faults/composition/
+  platform children pass;retain full allocator/provider/replay/physical/release owners separately.
 
 ### Execution, uncertainty and replay
 

@@ -127,3 +127,5 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Checks during feature delivery](annexes/checking-policy.md)
 - [Canonical formula rational values](annexes/formula-rationals.md)
 - [Publication checks and renderer authority](annexes/publication-checks.md)
+
+- [Coupled irrational function review](annexes/formula-irrational-review.md)

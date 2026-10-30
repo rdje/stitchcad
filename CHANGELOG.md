@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0623 — independently accept actual paired tangent policy integration
+## STITCHCAD-G1-0624 — review exact root midpoint and sourced storage boundaries
 
-- Compare24 independent complete paired recipes through both native and actual Design entry points:48 mode comparisons/10 successes/14 first refusals with original roots,flags,storage,ordinals,reads and exact mathematical/resource causes. Regenerate all8748 fixture bytes independently.
-- All32 selected tests/scoped lint/fmt pass;old23 Design cases/all8841B remain exact. Book98/374/1653/2921/glossary0/history782/IDs/map/diff and producer/file-plan checks pass. LIVE paired24 acceptance;G1 6/18/G0 unapproved. Next coupled .5d.4;platform/full resources/physical/release stay owned.
+- Preserve the original25 root cases and append60 exact midpoint/full-width/domain cases. All85 rows pass through numeric and real sourced calls,including3 mathematical/5 later storage refusals,raw513-bit hypot and complete6476B regeneration. No source flags or kernel results are seeded.
+- Root6/scoped strict lint/fmt,producer inventory,book99/374/1658/2932/glossary0/history783/IDs/map/diff pass. Repair stale root/Tan availability and add bounded coupled-review chapter. LIVE root85;G1 6/18/G0 unapproved unchanged. Next isolated root faults;coupled/platform closure remains owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

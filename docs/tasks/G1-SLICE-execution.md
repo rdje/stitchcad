@@ -119,66 +119,22 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   platform identity and atomic publication retain .5g/.5e.4 owners;no placeholder result/approval.
 - ID: `G1-SLICE.5e.2.4.integration.tangent`
   Status: `done`
-  Goal:after actual tangent kernel/source wrapper,select and retain explicit kernel policies through
-  real expression/source/recipe/Design plan factories before values. Preserve original typed
-  numerical/resource failures,actual read/proof/root owners and call flags. Legacy preparation
-  must represent missing policy honestly. Split safe slices after reading interfaces;independent
-  paired acceptance follows implementation,before full broader-family runtime closure.
-  Closure0623:implementation0619–0622 and independent24-row/both-mode acceptance pass.
-  Coupled irrational .5d.4/full broader-family runtime/resource/platform owners remain open.
+  Goal:0623 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part783.md).
 - ID: `G1-SLICE.5e.2.4.integration.tangent.expression`
   Status: `done`
-  Goal:0619 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part779.md).
+  Goal:0623 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part783.md).
 - ID: `G1-SLICE.5e.2.4.integration.tangent.sources`
   Status: `done`
-  Goal:0620 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part780.md).
+  Goal:0623 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part783.md).
 - ID: `G1-SLICE.5e.2.4.integration.tangent.recipes`
   Status: `done`
-  Goal:0621 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part781.md).
+  Goal:0623 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part783.md).
 - ID: `G1-SLICE.5e.2.4.integration.tangent.design`
   Status: `done`
-  Goal:0622 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part782.md).
+  Goal:0623 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part783.md).
 - ID: `G1-SLICE.5e.2.4.integration.tangent.acceptance`
   Status: `done`
-  Goal:independent finite combined actual source/recipe/Design Tan policy acceptance after all
-  implementation;preserve original owners,policies,errors,flags,reads,storage and currentness.
-  - [x] REPRODUCE / ISSUE:individual policy integration0619–0622 had focused actual tests,but
-    no independent combined paired Tan fixture compared complete values,roots,reads,stored
-    outcomes and first mathematical/resource refusals through both actual entry points.
-  - [x] ROOT CAUSE (WHY + WHERE): cargo test -p sc-core --test design_structure_contract formula_execute::independent::tangent::
-    →two watchers pass,rc=0. The original recursive book
-    executor supplies independent source demand/storage/order while exact Fraction Tan avoids
-    native Machin/fixed-point recurrences. Resource exceptions must remain separate from FErr.
-  - [x] FIX:optional instance configuration/custom failure hooks preserve the old book executor;
-    new guarded read-only/stdout reference joins exact Tan values and selected budget admission.
-    No Rust/native/frozen expected inputs or authored Derived values are read. Real native paired
-    and actual Design factories consume original sources/recipes/policies before each operation.
-    The older budget model's early width-range result is used only for one fixed generously
-    admitted witness;an explicit input/policy guard prevents a smaller-policy width conclusion.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract formula_execute::independent::tangent::
-    →24 rows/10 successes/14 first refusals in both
-    actual modes,48 complete comparisons plus exact8748-byte regeneration pass,rc=0. Watchers
-    compare roots,flags,storage,ordinals,reads,statement/deepest supplier and exact resource input/
-    precision/prior work/reservation/maximum/next demand. Cases include signed turns,nested Tan,
-    lazy poles,false storage,T1/T2,left/right/header priority,near-midpoint zero/one,first/later
-    bit/work refusals,finite113-bit native success/storage refusal and exact148-bit width.
-    Fixture sha256:3133386908b679aa6b35f39b8a17b43b27c4ed6e6352c4fdef660de473dd24e3.
-  - [x] NO REGRESSION: cargo test -p sc-core --test design_structure_contract
-    formula_execute::independent::actual_ →original two watchers/23 cases/all8841B exact,rc=0.
-    Focused expression8/source6/recipe8/Design6 tests pass;new2 plus old2 gives32 selected tests,
-    rc=0. Scoped strict Design Clippy/selected rustfmt pass,rc=0. Guarded oracle rerun/cmp after
-    width-profile guard →all8748B exact,rc=0. Producer census347/34042 calls/73 heredocs/2892
-    embedded;focused file plans234/89owners/38groups/15 data refusals/12 actual guard reds pass,
-    rc=0;no transitive/runtime locality signoff. Positive book98/374/1653/2921,glossary310/9/158/0,
-    history782 four exact Git spans,prior IDs/order/uniqueness,map/diff pass,rc=0. First commit
-    hook refused reused diff-context checklist headers;actual current commands now sit on new
-    bullet lines so this leaf supplies its own fresh evidence. No gate was changed or bypassed.
-  - [x] LOCKSTEP:book/status/facts/decision/task/index/MEM/DEV/CHANGE/LIVE align;whole0622
-    retained782. Scoped expression/source/recipe/Design tangent policy integration closes after
-    its implementations and deferred finite acceptance. Next coupled irrational .5d.4;platform,
-    complete provider/heap/CPU/replay/physical/release owners stay open. G1 6/18/G0 unapproved.
-    promotion: declined (existing independent-oracle,per-call policy and actual-root ownership decisions already define this finite acceptance;no new global certificate or policy is created).
-  Commit:STITCHCAD-G1-0623;Verification:24 rows/both modes,exact8748B,32 selected tests/scoped lint/fmt.
+  Goal:0623 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part783.md).
 - ID: `G1-SLICE.5e.2.5`
   Status: `in_progress`
   Goal: whole checked recipe declaration-order execution and real let/assert statement context.

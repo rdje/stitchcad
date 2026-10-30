@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — independently accept actual paired tangent policy integration
+## _(2026-10-30 UTC)_ — review exact root midpoint and sourced storage boundaries
 
-0623 composes actual book syntax/kind/recursive source execution/original storage with independent exact Fraction Tan and separate resource exceptions. Original reference hooks remain optional. No Rust/native/frozen expected input or canonical Derived seed is supplied;both actual native and Design modes run.
-All24 rows/10 successes/14 refusals match48 complete mode comparisons,including roots,flags,once-only storage,ordinals,reads and exact resource input/progress/demand. Near-midpoint zero/one,first/later quota failure,113-bit native success/storage refusal and148-bit width pass. All8748B regenerate exactly.
-New2/old2/expression8/source6/recipe8/Design6=32 selected tests and scoped strict lint/fmt pass;old23 Design cases/all8841B remain exact. The older budget model's early width-range result is restricted by an actual input/policy guard to one generous witness;it cannot infer smaller-policy width admission.
-Book98/374/1653/2921/glossary0/history782/IDs/map/diff pass;producer347/34042calls/file plans234/89owners/38groups/15refusals/12reds pass,no runtime locality signoff. [Whole0622](docs/history/stitchcad-devnotes-part782.md) retained. LIVE paired24;G1 6/18/G0 unapproved. Next coupled .5d.4.
+0624 preserves all1602 original root fixture bytes and appends60 cases:85 total/51sqrt/34hypot. Independent isqrt/Fraction half-square neighbors include large exact Ratio ties and full-width inputs. Explicit assertions prove original128-bit components and a raw513/512-bit private hypot witness.
+Six native tests pass,including3 original mathematical/5 later storage refusals and all6476B regeneration. Real upstream Cos/Sin zero arithmetic supplies sources before actual root calls;no flags or kernel outputs are seeded. Perfect/zero roots keep contributions,T1 refuses,and storage/read preserves admitted values.
+Scoped strict lint/fmt,producer347/34067calls/history783/old IDs+10children/map/diff pass. Book99/374/1658/2932/glossary0 pass after adding the new chapter's topic-index route. Current root-provenance/Tan-policy pending statements were stale;actual implemented contracts and scoped limitations now align.
+[Whole0623](docs/history/stitchcad-devnotes-part783.md) retained. LIVE root85;G1 6/18/G0 unapproved unchanged. New coupled review separates root values from actual body faults,other families,composition/platform and final acceptance. Next isolated root fault controls;no full numerical/platform/production verdict.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

@@ -432,8 +432,8 @@ assert_eq!(quarter.checked_sqrt()?.rational(), FormulaRational::from_signed_inte
 ```
 
 The recorded root-family algorithm uses exact integers with the existing private bigint dependency.
-checked_hypot is also available for two signed lengths. Transcendental functions retain a separate
-pending algorithm obligation.
+checked_hypot is also available for two signed lengths. Implemented trig/inverse kernels retain
+a separate coupled proof/platform review.
 
 For z=N/D>=0, find k=floor(sqrt(floor(N/D))) by bounded integer bisection. This is floor(sqrt(z))
 because comparing an integer square with z is equivalent to comparing it with floor(z). Round up
@@ -451,9 +451,9 @@ Input/component domains bound area, ratio and hypot bisection to30,74 and31 iter
 Hypot's raw numerator/denominator need at most513/512 bits; the conservative midpoint comparison
 needs at most576 bits. These are workspace bounds, not additional language limits. Focused
 checks include exact half squares and rational neighbors, full128-bit ratio, zero/signed lengths,
-Pythagorean cases and squared sums above the area domain. Source-call provenance and broad/platform
-proof remain later owned integration work. Every sqrt call, including perfect roots, must retain its
-contribution in the later source-bearing evaluator. This source-free value API supplies no such proof.
+Pythagorean cases and squared sums above the area domain. Actual sourced calls retain every
+root contribution,including perfect roots. This numeric-only API supplies no source identity;
+complete coupled fault/platform review remains owned.
 
 checked_hypot forms the exact squared sum from its two admitted Length operands and applies the
 same integer root rule. Sign is retained in the operands; squaring gives a nonnegative result.
@@ -474,14 +474,13 @@ For example, lengths1,000,000,000 and1 micrometre have a squared sum above the A
 hypot returns the admitted rounded1,000,000,000 micrometres. Two maximum lengths return a scalar
 refusal with rounded1,414,213,562, rather than a premature Area refusal. Near-unit fractions with
 full128-bit components also work even though their unreduced squared sum needs513/512 bits.
-Source-bearing evaluator provenance remains pending for both root methods, including perfect roots.
+Source-bearing evaluator provenance is available for both root methods,including perfect roots.
 
-The pure fixture oracle is already retained at docs/tasks/artifacts/formula_structure/root_value_oracle.py.
-It uses Python math.isqrt and Fraction arithmetic;25 expected rows live in
-crates/sc-core/tests/fixtures/formula_roots.tsv. The focused native target passes four tests, including
-all15 sqrt and ten hypot rows. Exact midpoint neighbors beyond ordinary float
-precision, full128-bit ratio, negative inputs and actual kind refusals are covered. Authored half-square,
-full-width and over-domain values check the oracle's role; no broad/platform pass is claimed.
+The pure root_value_oracle.py uses math.isqrt and exact Fractions. All85 independent rows
+preserve the original25-row prefix. Six focused native tests cover51 sqrt/34 hypot rows,actual
+kind refusals,real upstream/root contributions,original mathematical and later storage boundaries,
+and every regenerated fixture byte. [Coupled root review](formula-irrational-review.md#exact-root-boundaries)
+documents midpoint/full-width cases and the remaining actual fault/platform owners.
 
 ```bash
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_root_value_contract
@@ -590,7 +589,7 @@ actual poles and exact result-width causes stay distinct from execution-resource
 The mathematical input/quantum contract is unchanged. Rational-angle midpoint exclusion supplies
 eventual separation under sufficiently increased abstract resources,without a universal practical
 precision bound. Explicit finite quotas give bounded requests without inventing numerical failure.
-The source wrapper is available;139-row combined native acceptance passes;higher-level policy adoption remains owned.
+The source wrapper,native139 and real paired24 acceptance pass;expression/source/recipe/Design policies are available.
 The full derivation is in docs/decisions/fact_trig-midpoints-and-resource-bound.md and the selected
 resource contract in docs/decisions/decision_tangent-resources.md. Forward/inverse certificates
 retain their original complete population and platform-proof boundaries.
