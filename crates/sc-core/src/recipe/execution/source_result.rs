@@ -92,6 +92,12 @@ pub struct FormulaExecutedScalarSource<'r, 'a> {
     source: &'r FormulaScalarSourceGraphSource<'a>,
     completed: Completed,
 }
+pub(super) fn completed_source_view<'r, 'a>(
+    source: &'r FormulaScalarSourceGraphSource<'a>,
+    completed: Completed,
+) -> FormulaExecutedScalarSource<'r, 'a> {
+    FormulaExecutedScalarSource { source, completed }
+}
 impl<'r, 'a> FormulaExecutedScalarSource<'r, 'a> {
     /// Actual original checked source,not a copied body,canonical alias or substituted proof.
     #[must_use]

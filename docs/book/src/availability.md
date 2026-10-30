@@ -69,7 +69,10 @@ now verifies the supplied canonical target/kind and retains state. Full registry
 and containing Design integration remain pending. [Scoped source execution](annexes/formula-source-proofs.md#execute-an-actual-selected-scalar-source)
 now evaluates a selected available-scalar source and demanded Derived suppliers with original
 read witnesses and unbound roots. Eight native contracts pass,including27 independent whole-source
-reference cases. Actual recipe/Design integration and full verification remain pending.
+reference cases. [Native source-backed recipes](annexes/formula-design-integration.md#execute-an-admitted-recipe-with-actual-source-plans)
+now combine admitted source/recipe plans,earned unbound roots and real ordered let storage with
+complete read/error views. Six actual-root native contracts and compiler guards pass;containing
+Design execution and independent paired-mode acceptance remain pending.
 [Explicit tolerance contexts](annexes/formula-runtime-validation.md#explicit-tolerance-contexts)
 now provide fixed numerical/geometric values and class-checked optional format/importer/physical
 providers. Missing optional values refuse with their actual name/context label.

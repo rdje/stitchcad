@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — drive actual paired source demands in the original recipe loop
+## _(2026-10-30 UTC)_ — expose complete native source-backed scalar recipe execution
 
-0606 resumes actual pending operands through earned SourceRuntime roots in one recipe loop. Real lets store once;source errors retain requester statement/part/node/input and supplier cause. Exact canonical/borrowed provider/label sources guard composition. Allocation causes stay inline;semantic context boxed.
-Private4/recipe9/source8/doc1/scoped lib/affected-target strict lint/fmt pass. Real333,RHS2999/3→1000,unbound triple1000,once roots/lazy false flags/T1-T2/source failure prefix guards checked. Count/Ratio fixture fixed using oracle cos(0 deg)==0.0;unused import removed. Independent18/7/27/8/frozen bytes pass.
-Book98/357/1642/2895/glossary0 pass. Complete private composition and still-pending public views/Design bridge documented. [Whole0605](docs/history/stitchcad-devnotes-part764.md) retains four spans;prior live ids/order checked. Original standalone API/read enum/Unknown-Derived requirements unchanged.
-Next .4.4.3.3 native complete result/error/read API/.4.4.4 actual Design bridge/.4.5 paired independent acceptance. LIVE reviewed unchanged:G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D340 fixed;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact.
+0607 consumes actual native source/recipe plans and one context;canonical identity precedes full runtime allocation. Six public types retain complete roots/outcomes/read/error provenance and both policies. Original allocator causes stay inline;larger Err avoids allocating on failure.
+Native6/recipe9/source8/doc4/scoped strict lint/fmt pass. Both Derived families/unbound1000/3/stored1000/ordinals,foreign equal roots,nested source/storage errors,empty/lazy cases checked. Extracted source-chain E0599 fixed with qualified Error::source. Independent18/7/27/8/frozen bytes pass.
+Book98/363/1644/2899/glossary0 pass;native API/availability/error policy boundaries align. [Whole0606](docs/history/stitchcad-devnotes-part765.md) retains four spans;prior live ids/order checked. Shared old/new recipe read iterator and source view preserve actual original witnesses;no fake source entry/header.
+Parent .4.4.3 closed native scope. Next .4.4.4 actual Design bridge/.4.5 independent paired acceptance. LIVE G1 6/18/G0 unapproved unchanged;product row notes native source-backed recipes. Full-hosted79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

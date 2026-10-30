@@ -356,3 +356,9 @@ actual formula proof root mismatch	annexes/formula-design-integration.md	crates/
 complete actual Design scalar plans	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/plan.rs	DesignFormulaScalarPlan	G1-SLICE.5e.2.5.derived.3.3.3.4.3.3	4.1
 actual Design scalar plan preparation error	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/plan.rs	DesignFormulaScalarPlanError	G1-SLICE.5e.2.5.derived.3.3.3.4.3.3	4.1
 original actual Design scalar planning refusal	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/plan.rs	DesignFormulaScalarPlanRefusal	G1-SLICE.5e.2.5.derived.3.3.3.4.3.3	4.1
+complete native source-backed scalar recipe	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_result.rs	FormulaExecutedScalarSourceRecipe	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1
+actual source-backed recipe read	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_result.rs	FormulaScalarSourceRecipeRead	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1
+source-backed recipe read provenance	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_result.rs	FormulaScalarSourceRecipeReadKind	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1
+complete source-backed recipe error	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_failure.rs	FormulaScalarSourceRecipeError	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1
+original source-backed recipe refusal	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_failure.rs	FormulaScalarSourceRecipeErrorCause	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1
+actual recipe requester and supplier error	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_failure.rs	FormulaScalarSourceRecipeSourceError	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0606 — drive private paired source demands through actual recipe continuations
+## STITCHCAD-G1-0607 — expose complete native source-backed scalar recipe execution
 
-- One ordered loop earns shared unbound source roots,resumes pending operands and stores real lets once. Exact canonical/context-source guards,original requester/supplier causes and inline allocation errors;standalone behavior preserved. Public paired views remain next.
-- Private4/recipe9/source8/doc1/scoped lint/fmt/book98/357/1642/2895/glossary0 pass. Real binding/shared roots,lazy flags/T1-T2/source errors/original contexts checked;independent18/7/27/8/frozen bytes retained. Whole0605 retained764/four spans/live ids. Next .4.4.3.3 native API;LIVE G1 6/18/G0 unapproved unchanged.
+- Consume both actual plans/one context;reject foreign canonical owners before runtime buffers. Complete original roots/outcomes/read/error views,both policies and inline allocation causes. No fake entry,seed or prefix;containing Design bridge remains next.
+- Native6/recipe9/source8/doc4/scoped lint/fmt/book98/363/1644/2899/glossary0 pass. Both Derived families/unbound versus stored values/foreign roots/errors/empty/lazy cases checked;independent18/7/27/8/frozen bytes retained. Whole0606 in765;parent .4.4.3 closed. Next .4.4.4. LIVE G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

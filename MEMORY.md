@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3:native complete paired result/error/read API.
-  Wrap actual source/recipe plans,strict canonical owner before allocation,single real context;
-  expose earned source roots/read witnesses/whole outcomes atomically. Then .4.4.4 Design bridge.
-- Paired private loop0606:SourceRuntime actual demands resume same RecipeRuntime operands;
-  one original ordered loop stores/asserts. Exact canonical/borrowed provider/label guards;
-  original requester statement/part/node/input and supplier causes retained. Allocations inline.
-  Private4/recipe9/source8/doc1/scoped lint/fmt/book98/357/1642/2895/glossary0 pass. Real333,
-  RHS2999/3→stored1000,unbound triple1000 (not999),once ordinals/lazy flags/T1-T2/source failures.
-- Whole0605 retained764/four spans/live ids. Independent recipe18/7/source27/8/frozen bytes pass;
-  paired-mode independent acceptance pending .4.5. No public paired result API yet. Same-root/
-  exact-source-proof Design plans ready. Next .4.4.3.3 native API/.4.4.4 Design execution/.4.5.
-  Namespace/parser/provider/kernel/allocator/CPU/whole Design bounds separate. Full tan/geometry/
-  load/replay/platform/physical owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4.4:actual Design plan execution/result/error bridge.
+  Consume only private same-root Design scalar plan;fresh actual held-content/current admission
+  before values,retain root/limits/proofs and native complete results. No supplied foreign plan.
+- Native paired API0607:recipe.evaluate_with_sources consumes both actual native plans/one context,
+  rejects foreign canonical pointer before runtime allocation;returns complete source roots/recipe
+  outcomes/read witnesses without fake entry/seed/prefix. Six public types,original typed causes/
+  both policies retained;allocator errors inline. Native6/recipe9/source8/doc4/scoped lint/fmt/
+  book98/363/1644/2899/glossary0 pass. Both actual Derived families,unbound1000/3/stored1000,
+  once ordinals,original reads/foreign equal roots/nested supplier/storage/empty/lazy cases checked.
+- Parent .4.4.3 complete native only;whole0606 retained765/four spans/live ids. Independent
+  recipe18/7/source27/8/frozen bytes retained;paired reference acceptance .4.5 remains pending.
+  Native scope grants no containing Design/currentness. Next .4.4.4 bridge/.4.5 acceptance.
+  Namespace/parser/provider/kernel/allocator/CPU/full resources/platform/physical separate. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

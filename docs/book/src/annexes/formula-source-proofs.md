@@ -3,7 +3,10 @@
 > **Status:** complete initial-scope expression proofs,actual canonical dependency joins and Derived
 > consumer-kind checks and canonical Derived dependencies have focused verification. Bounded cycle
 > admission and lazy available-scalar source execution have scoped independent acceptance. Actual
-> recipe/Design runtime joins,whole resource/currentness,backend/platform and physical proof remain pending.
+> Design execution,independent paired acceptance,full resources/backend/platform/physical proof remain pending.
+
+[Native source-backed recipes](formula-design-integration.md#execute-an-admitted-recipe-with-actual-source-plans)
+now combine the actual admitted graph with real ordered recipe storage and complete read/error views.
 
 Start with the [original source owners and normalized collections](formula-recipe-inputs.md#explicit-formula-source-owners).
 FormulaNormalizedSources.check_sources(&namespace, limits) checks the complete supplied source

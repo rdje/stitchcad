@@ -8,7 +8,8 @@ namespace,computed values or cache.
 
 Actual Design-backed source and ordered recipe kind checking is also implemented below.
 Native dependency/cycle admission can now feed a same-root combined scalar plan below.
-Actual integrated scalar execution and real recipe storage remain separate stages.
+Native paired source/recipe execution and real recipe storage are implemented below.
+The containing Design execution wrapper and independent paired acceptance remain separate stages.
 A normalized expression is syntax with converted literals;it is not a checked kind,numerical
 result or stored binding. A kind proof still supplies no cycle or numerical acceptance.
 See [source validation and execution](formula-source-proofs.md) and
@@ -219,6 +220,84 @@ Runtime scratch/output reservation,namespace/checker/provider/kernel/allocator/C
 whole Design authority remain separately owned. Logical quotas on these plans grant no global
 resource,physical,platform or production approval certificate.
 
+## Execute an admitted recipe with actual source plans
+
+FormulaScalarRecipePlan.evaluate_with_sources(source_plan,context) consumes the existing complete
+recipe and source graph plans. It requires their exact canonical inventory references to match
+before allocating either runtime. Equal complete inventories in separate objects are refused as
+ForeignInputs. The method takes one explicit tolerance/size context for both runtimes. It then
+reserves all source controls/frames/output slots/per-source machines and the complete recipe
+machine/outcomes before any value or provider read. Original plan quotas and capability checks
+remain the preceding factories' responsibility.
+
+A successful FormulaExecutedScalarSourceRecipe owns both completed native plans and only actual
+executed source roots/recipe outcomes. It has no fabricated source entry,let header or selected
+source id. Its interface is:
+
+- recipe_plan() and source_plan():original complete plans,owners and selected allowances.
+- context():the actual single supplied immutable context.
+- statements():all actual successful let/assert outcomes in declaration order.
+- source(id):actual completed source by exact original id;None for absent or unused ids.
+- sources():actually completed sources in original registry order,with real completion ordinals.
+- reads():selected original recipe reads in execution order,including real assertion headers.
+
+Source views reuse FormulaExecutedScalarSource,including original checked source,value,completion
+ordinal and selected internal read witnesses. Bare roots remain unbound. Recipe reads use
+FormulaScalarSourceRecipeRead,retaining actual dependency ordinal/role/span/declaration,node or
+header absence,value and source kind. FormulaScalarSourceRecipeReadKind::Recipe preserves the
+existing canonical/reserved or real stored-prior-let witness. Derived preserves the actual
+canonical join and earned successful supplier proof. The old standalone recipe read enum remains
+unchanged;the two result modes share one original read-order iterator.
+
+For example,an actual dedicated Length parameter declared_width can reference source9003
+containing1 mm/3. An actual general Length parameter tripled_source can separately reference
+source9004 containing declared_width*3. This original ordered recipe returns real stored1000 for
+both bindings while source9003 retains its unbound1000/3 root:
+
+```text
+let a:length=declared_width*3
+let b:length=tripled_source
+assert equal:eps_num=a==b
+```
+
+The two source roots complete once with ordinals1/2. Dedicated and general canonical read families
+remain distinct,even though both have Length kind. A caller with prepared actual native plans can
+run the public operation without supplying intermediate values:
+
+```rust
+use sc_core::recipe::*;
+fn finish<'a>(recipe:FormulaScalarRecipePlan<'a>,sources:FormulaScalarSourceGraphPlan<'a>,
+    context:FormulaScalarExecutionContext<'a>)
+    ->Result<FormulaExecutedScalarSourceRecipe<'a>,FormulaScalarSourceRecipeError<'a>> {
+    recipe.evaluate_with_sources(sources,context)
+}
+```
+
+An empty actual recipe returns no source roots,statements or reads while retaining the complete
+source plans. A source in an untaken conditional branch remains unexecuted,even when its actual
+canonical input would require observation. This supplies no implicit false/zero or unknown value.
+
+Failure returns FormulaScalarSourceRecipeError with the original complete recipe proof,recipe
+canonical inventory,source graph and both selected policies. cause() distinguishes ForeignInputs,
+Sources preparation,Recipe execution,RequestedSource and RequestedSourceAllocation. A nested
+supplier refusal retains the requesting actual statement/operand/name node/canonical join plus
+its original supplier index/node/value/provider cause through FormulaScalarSourceRecipeSourceError.
+A recipe storage/comparison/assertion refusal remains its existing typed FormulaScalarRecipeError.
+No accepted earlier statement or source-root prefix is returned.
+
+Original allocator errors remain inline,including pre-read source/recipe buffers and any actual
+requested-source allocation cause. Reporting them introduces no new diagnostic box. Both policy
+sets and actual owner references stay inline as well;the public factory intentionally permits
+that larger error footprint to preserve these facts without allocating during allocation failure.
+Only uncommon semantic requester context is boxed. Borrowed semantic causes remain available
+through typed getters;standard Error::source forwards the original actual static causes.
+
+The native operation certifies its supplied canonical/proof scope. It does not establish that
+these plans came from a complete containing Design,its current host namespace or its owned source
+registry. The [actual-root plan join](#join-actual-proofs-and-prepare-complete-scalar-plans) supplies
+that stronger provenance;its direct execution wrapper remains the next stage. Persistence,missing
+kernel families,complete allocator/CPU/platform/physical bounds and approval remain separate.
+
 ## Public API and failure ownership
 
 | Public API | Meaning |
@@ -237,6 +316,12 @@ resource,physical,platform or production approval certificate.
 | `DesignFormulaScalarPlan` | Complete native source/ordered recipe scalar plans and actual joined inputs |
 | `DesignFormulaScalarPlanError` | Actual joined inputs/policies and original first provenance or factory refusal |
 | `DesignFormulaScalarPlanRefusal` | ForeignGraph,RecipeAdmission,Sources or Recipe with actual witnesses |
+| `FormulaExecutedScalarSourceRecipe` | Complete native paired source roots/recipe outcomes and original context/plans |
+| `FormulaScalarSourceRecipeRead` | Actual selected recipe dependency/node/header/value/source witness |
+| `FormulaScalarSourceRecipeReadKind` | Existing Recipe witness or earned Derived supplier |
+| `FormulaScalarSourceRecipeError` | Complete actual paired proof/inventory/graph/policies and first cause |
+| `FormulaScalarSourceRecipeErrorCause` | Original ownership,source/recipe preparation/execution or requester failure |
+| `FormulaScalarSourceRecipeSourceError` | Original requester statement/operand/node/input and supplier cause |
 
 Accepted scopes,normalizations and checked wrappers have private fields and construction paths.
 root(),limits(),demand() and source_inputs() expose immutable facts on the scope. Each normalized
@@ -300,14 +385,14 @@ prior-let read before suspending at the first declared_width. It resumes after t
 computes1000/3,reads the same earned root twice and completes its unbound RHS as2999/3. The first
 read is not replayed;the source completes once. The canonical Derived state stays unchanged.
 That focused adapter contract stops at the unbound RHS. The shared private whole loop below also
-performs the actual second-let storage. No public combined recipe result is available yet.
+performs the actual second-let storage. The public native operation below now publishes only complete paired results.
 
 The existing standalone recipe worker explicitly selects its original direct-read mode and still
 returns RequiresEvaluation for unresolved Derived inputs. Its public read-kind enum and direct/
 prior-let result interfaces remain unchanged. A private read record distinguishes earned Derived
 witnesses for the forthcoming integrated worker;it cannot be published as a standalone direct read.
-The private paired loop is now implemented below. Complete public result/read/error interfaces,
-the actual Design execution entry point and independent acceptance remain subsequent tasks.
+The private paired loop is now implemented below. Its public native result/read/error interfaces are described below;the actual Design execution
+entry point and independent acceptance remain subsequent tasks.
 
 The recipe side now stages its original admitted plan,fixed context,N task/value buffers and
 complete S outcome reservation in a shared private runtime. Construction starts no operand,read,
@@ -316,7 +401,7 @@ runtime,including actual RHS storage,prior-let visibility,assertion left/right/h
 original typed refusals. The standalone public adapter prepares that runtime,executes the original
 mode and publishes only its completed whole result. It introduces no second implementation of
 storage or assertion semantics. Its private paired mode now drives actual source suspensions
-after both runtimes have completed reservation. The combined public operation is not yet available.
+after both runtimes have completed reservation. The native public operation below consumes the completed paired state atomically.
 
 The paired loop starts each original operand once. At an actual unresolved Derived name,it keeps
 the requesting recipe statement/operand,node and canonical join,executes that original supplier
@@ -356,6 +441,14 @@ its existing Unknown/Derived requirements and its public read/result interfaces 
 
 ## Focused verification and remaining work
 
+Six public native contracts run actual Design-owned source/recipe/namespace factories before the
+component operation. They check both dedicated/general Derived families,unbound roots/stored
+values/ordinals/read witnesses,equal-model foreign inventory refusal,original nested supplier and
+recipe storage failures,empty recipes and untaken unknown-backed sources. Compiler guards reject
+private read/result mutation and source-view lifetime escape. These are focused component checks;
+independent acceptance of the combined mode remains separately owned.
+
+
 Four actual-root native contracts check exact complete demand,original source/name pointers,
 non-Clone/non-Debug hosts,first content refusal before current semantics,later typed source refusal,
 complete normalization refusal and empty-recipe containment. Compiler guards reject private root
@@ -378,7 +471,8 @@ the generic preparation example compiles without a host Clone/Debug bound.
 
 Kind checking alone grants no cycle acceptance. Native dependency/cycle factories still own that
 stage before Design plan preparation. Planning grants no numerical result,provider completeness,
-whole runtime resource bound or production approval. Subsequent task-tree leaves own real Derived
-recipe reads,once-only let storage and independent integration acceptance. Broad verification
+whole runtime resource bound or production approval. Native paired execution now earns real
+Derived reads and once-only storage;subsequent leaves own actual Design execution and independent
+paired integration acceptance. Broad verification
 remains deferred until the agreed feature set is complete;the latest full local/hosted verdict
 remains scoped to its recorded Git revision.

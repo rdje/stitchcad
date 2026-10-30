@@ -163,42 +163,8 @@ impl<'a> FormulaExecutedScalarRecipe<'a> {
     /// Actual successful read order: selected operand names left-to-right, assertion header last.
     /// Streams the same D records without allocating another trace or inventing a header node.
     pub fn reads(&self) -> impl Iterator<Item = FormulaScalarRecipeRead<'a>> + '_ {
-        let mut offset = 0usize;
-        self.plan
-            .admission()
-            .proof()
-            .statements()
-            .iter()
-            .flat_map(move |statement| {
-                let (count, assertion) = match statement.kind() {
-                    Statement::Let { expression } => (expression.dependencies().len(), false),
-                    Statement::Assert { left, right } => (
-                        1 + left.dependencies().len() + right.dependencies().len(),
-                        true,
-                    ),
-                };
-                let Some(end) = offset.checked_add(count) else {
-                    unreachable!("complete admitted source count fits");
-                };
-                let Some(block) = self.plan.sources.get(offset..end) else {
-                    unreachable!("whole source plan retains every original occurrence");
-                };
-                offset = end;
-                let (header, operands): (&[FormulaScalarRecipeSource<'a>], _) = if assertion {
-                    let Some((header, operands)) = block.split_first() else {
-                        unreachable!("actual assertion has its original tolerance header");
-                    };
-                    (core::slice::from_ref(header), operands)
-                } else {
-                    (&[], block)
-                };
-                operands.iter().chain(header.iter()).filter_map(|source| {
-                    Some(FormulaScalarRecipeRead {
-                        dependency: source.dependency(),
-                        data: source.read?,
-                    })
-                })
-            })
+        read_records(&self.plan)
+            .map(|(dependency, data)| FormulaScalarRecipeRead { dependency, data })
     }
 }
 impl fmt::Debug for FormulaExecutedScalarRecipe<'_> {
@@ -208,4 +174,42 @@ impl fmt::Debug for FormulaExecutedScalarRecipe<'_> {
             .field("read_count", &self.reads().count())
             .finish_non_exhaustive()
     }
+}
+
+pub(super) fn read_records<'r, 'a>(
+    plan: &'r FormulaScalarRecipePlan<'a>,
+) -> impl Iterator<Item = (FormulaRecipeNameDependency<'a>, RecipeReadData<'a>)> + 'r {
+    let mut offset = 0usize;
+    plan.admission()
+        .proof()
+        .statements()
+        .iter()
+        .flat_map(move |statement| {
+            let (count, assertion) = match statement.kind() {
+                Statement::Let { expression } => (expression.dependencies().len(), false),
+                Statement::Assert { left, right } => (
+                    1 + left.dependencies().len() + right.dependencies().len(),
+                    true,
+                ),
+            };
+            let Some(end) = offset.checked_add(count) else {
+                unreachable!("complete admitted source count fits");
+            };
+            let Some(block) = plan.sources.get(offset..end) else {
+                unreachable!("whole source plan retains every original occurrence");
+            };
+            offset = end;
+            let (header, operands): (&[FormulaScalarRecipeSource<'a>], _) = if assertion {
+                let Some((header, operands)) = block.split_first() else {
+                    unreachable!("actual assertion has its original tolerance header");
+                };
+                (core::slice::from_ref(header), operands)
+            } else {
+                (&[], block)
+            };
+            operands
+                .iter()
+                .chain(header.iter())
+                .filter_map(|source| Some((source.dependency(), source.read?)))
+        })
 }

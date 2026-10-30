@@ -8,7 +8,7 @@ use super::{
 };
 use crate::recipe::{FormulaCheckedStatementKind as Statement, FormulaStatementExpression as Part};
 
-mod failure;
+pub(super) mod failure;
 use failure::OperandFailure;
 pub(super) use failure::RecipeRuntimeError;
 mod operand;

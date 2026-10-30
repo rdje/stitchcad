@@ -278,3 +278,15 @@ pub use recipe_failure::{
 mod recipe_read;
 mod recipe_runtime;
 mod recipe_worker;
+
+mod source_recipe_failure;
+pub use source_recipe_failure::{
+    FormulaScalarSourceRecipeError, FormulaScalarSourceRecipeErrorCause,
+    FormulaScalarSourceRecipeSourceError,
+};
+mod source_recipe_result;
+pub use source_recipe_result::{
+    FormulaExecutedScalarSourceRecipe, FormulaScalarSourceRecipeRead,
+    FormulaScalarSourceRecipeReadKind,
+};
+mod source_recipe_worker;

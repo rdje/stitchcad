@@ -120,10 +120,18 @@ impl fmt::Display for FormulaScalarSourceGraphExecutionError<'_> {
 }
 impl std::error::Error for FormulaScalarSourceGraphExecutionError<'_> {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        match &self.cause {
-            FormulaScalarSourceGraphExecutionCause::Allocation { error, .. } => Some(error),
-            FormulaScalarSourceGraphExecutionCause::Evaluation { error, .. } => error.source(),
-            _ => None,
+        cause_source(&self.cause)
+    }
+}
+
+pub(super) fn cause_source<'e>(
+    cause: &'e FormulaScalarSourceGraphExecutionCause<'_>,
+) -> Option<&'e (dyn std::error::Error + 'static)> {
+    match cause {
+        FormulaScalarSourceGraphExecutionCause::Allocation { error, .. } => Some(error),
+        FormulaScalarSourceGraphExecutionCause::Evaluation { error, .. } => {
+            std::error::Error::source(error.as_ref())
         }
+        _ => None,
     }
 }
