@@ -2,11 +2,11 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-30`
-- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;AST/platform pending
+- **Status:** `active`; algorithm/resource contract selected;native preparation/value worker implemented;source calls0617;scoped139-row native acceptance0618;expression0619;source/recipe/Design/platform pending
 - **Owner / source:** engineer under the director's delegated implementation authority;
   G1-SLICE.5d.1.2.2.2.d.2.2.2, implementation G1-SLICE.5d.3.2.2
 
-answers: "how will tangent terminate within selected resources?" · "does insufficient tangent precision invalidate a formula?" · "why does tangent require explicit execution limits?" · "why can a native tangent width diagnostic require further refinement?" · "what independently checks native tangent values?"
+answers: "how will tangent terminate within selected resources?" · "does insufficient tangent precision invalidate a formula?" · "why does tangent require explicit execution limits?" · "why can a native tangent width diagnostic require further refinement?" · "what independently checks native tangent values?" · "how do scalar expressions retain tangent policies?"
 
 ## Decision and scope
 
@@ -137,3 +137,15 @@ widths. Actual preparation/worker and sourced wrapper match every row under two 
 a second watcher regenerates all7141 bytes exactly. Original input/policy/progress/call sources
 remain checked. SHA256 cf1a803c1efd405dcd84d6af73340b675824c979b793bfbb6112862218a39d7b.
 This finite native acceptance closes no coupled/platform/AST/full resource or production gate.
+
+## Actual standalone expression policy0619
+
+Policy-aware preparation selects explicit per-call limits before all-node capability admission,
+source reservation/joins or values. Legacy missing policy is a typed preparation refusal. Explicit
+zero quotas remain a selected policy;untaken calls consume no native budget or source.
+Each actual call invokes the native sourced wrapper under its own fresh request budget. Selected
+limits survive plan/result and every preparation/runtime error,including earlier unrelated causes.
+Actual mathematical/resource causes retain original operand/progress and the failing proof node.
+Existing engine error-witness boxing remains outside machine/native quotas;no extra native box
+or diagnostic allocation during allocator failure is introduced. Aggregate heap/CPU and real
+source/recipe/Design policy adoption retain their existing owners.

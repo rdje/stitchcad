@@ -110,7 +110,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Status: `done`
   Goal:0580 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part739.md).
 - ID: `G1-SLICE.5e.2.4.integration`
-  Status: `pending`
+  Status: `in_progress`
   Goal: prior-let scalar recipes available0585/checkpoint0586. After real .5d tangent,.5f.3
   geometry,.5e.2.5 Derived and .5e.4 load/replay
   dependencies exist,extend actual source execution to every admitted family and close parent
@@ -118,12 +118,75 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   implemented scalar subset/no fake language refusals during staged delivery. Full worked-book,
   platform identity and atomic publication retain .5g/.5e.4 owners;no placeholder result/approval.
 - ID: `G1-SLICE.5e.2.4.integration.tangent`
-  Status: `pending`
+  Status: `in_progress`
   Goal:after actual tangent kernel/source wrapper,select and retain explicit kernel policies through
   real expression/source/recipe/Design plan factories before values. Preserve original typed
   numerical/resource failures,actual read/proof/root owners and call flags. Legacy preparation
   must represent missing policy honestly. Split safe slices after reading interfaces;independent
   paired acceptance follows implementation,before full broader-family runtime closure.
+- ID: `G1-SLICE.5e.2.4.integration.tangent.expression`
+  Status: `done`
+  Goal:actual standalone expression policy-aware preparation/native Tan execution with original
+  proof/input/context/error/read/flag contracts. No supplied AST values or new language code.
+  - [x] REPRODUCE / ISSUE:native tangent0618 existed but actual expression preparation rejected
+    every Tan and retained no explicit native policy. Runtime policy must also survive failures
+    before Tan;missing configuration cannot become a fabricated numerical-domain refusal.
+  - [x] ROOT CAUSE (WHY + WHERE): git show HEAD:crates/sc-core/src/recipe/execution/plan.rs
+    →no explicit tangent expression factory/selected policy before0619,rc=0;current factory and
+    field mechanically compared with HEAD. cargo clippy -p sc-core --lib --test
+    formula_tangent_expression_contract --test formula_scalar_execution_plan_contract -- -D warnings
+    →new shared native failure variant>=368B versus112B before allowances;keep full original
+    cause inline until existing outer witness box,not another native diagnostic allocation.
+  - [x] FIX:explicit per-call policy factory/common complete capability-before-source path;
+    legacy MissingTangentPolicy retains actual node before source allocation/joins/values.
+    Native sourced Tan dispatch uses real child values;selected policy survives every plan/result/
+    prep/runtime error,including allocation or earlier unrelated failure. Exact/lazy flags and
+    mathematical/resource causes stay original. Native budgets reset per actual call,not globally.
+    Existing engine error witness remains outside logical quotas;four measured narrow lint
+    allowances preserve original inline failures and the existing single outer error box.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_expression_contract
+    →eight actual AST tests pass,rc=0:root/inventory identity,complete missing-policy precedence,
+    selected-only zero-budget branches,per-call budgets,real Cos/Tan inputs,false conditions,
+    T1/T2,original pole/first/later quotas,exact148-bit width/full128-bit literal Count division,
+    original native chain and unrelated error policy. Initial test used a nonexistent normalized
+    source getter;compiler identified it,retaining original source string fixes test ownership.
+  - [x] NO REGRESSION: cargo test -p sc-core --test formula_scalar_execution_plan_contract --test
+    formula_scalar_execution_contract →5+11 pass,including49-row reference/frozen regeneration,
+    rc=0. cargo test -p sc-core --lib recipe::execution:: →nine private actual-context/poison/
+    suspension/storage guards pass,rc=0. cargo test -p sc-core --doc recipe::execution::plan::
+    →four positive/privacy docs pass,rc=0. Scoped strict Clippy/selected rustfmt pass,rc=0.
+    cargo check -p sc-core --test formula_scalar_recipe_execution_contract --test
+    formula_scalar_source_graph_execution_contract --test design_structure_contract →three affected
+    targets compile,rc=0. Compiler caught three test-compatibility alias edits matched as suffixes;
+    lexical full-alias correction restores all original fixture scopes,without invented error code.
+    Positive book98/374/1648/2912/glossary310/9/158/0/history778 four exact Git spans/prior IDs/order/
+    map/diff pass,rc=0. No broader-family runtime/full CI/platform verification inferred.
+  - [x] LOCKSTEP:README/book/native-status facts/decision/task/index/MEM/DEV/CHANGE/LIVE align;
+    whole0618/native subtree retained778;new integration children own sources/recipes/Design and
+    independent paired acceptance. Next actual source graph policy adoption;legacy graph/recipe/
+    Design scopes stay unchanged until their owners. LIVE standalone policies,G1 6/18/G0 unapproved.
+    promotion: promoted (decision_tangent-resources.md gains actual expression policy retention/per-call scope answer).
+  Commit:STITCHCAD-G1-0619;Verification:new8/existing16/private9/doc4/scoped lint/three consumer type checks.
+- ID: `G1-SLICE.5e.2.4.integration.tangent.sources`
+  Status: `pending`
+  Goal:actual complete source-graph plan/runtime selects and retains tangent policy across original
+  source owners,whole capability/resource admission,lazy unbound caches and failures. Read all
+  factories first;split further if needed. No source binding round or substituted canonical roots.
+- ID: `G1-SLICE.5e.2.4.integration.tangent.recipes`
+  Status: `pending`
+  Goal:actual standalone and source-backed ordered recipe plans/runtimes retain selected tangent
+  policy,real prior-let storage/assertion order,original source/proof/input owners and typed first
+  failures;no partial result or caller-supplied plan/value. Split by factory/runtime when warranted.
+- ID: `G1-SLICE.5e.2.4.integration.tangent.design`
+  Status: `pending`
+  Goal:actual Design scope/plan/execution factories retain explicit tangent policy and original
+  complete currentness/resource/proof/context/root/error contracts before native values. No model
+  clone,host bound or cached numerical result. Split safe actual factory/runtime slices as needed.
+- ID: `G1-SLICE.5e.2.4.integration.tangent.acceptance`
+  Status: `pending`
+  Goal:independent paired real expression/source/recipe/Design tangent-policy acceptance after
+  all actual implementations;full policy/error/flag/read/storage/order/currentness retention.
+  Keep coupled irrational/platform/full allocator/provider/replay/physical/release owners separate.
 - ID: `G1-SLICE.5e.2.5`
   Status: `in_progress`
   Goal: whole checked recipe declaration-order execution and real let/assert statement context.

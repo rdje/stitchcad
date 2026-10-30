@@ -541,85 +541,37 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5d.3`
   Status: `done`
-  Goal: sin/cos/tan, atan, atan2 and arc_length with signed sweeps and reviewed rounding.
-  Acceptance: exact odd-quarter-turn tan poles, signed principal branches, atan2(y,x)/(0,0),
-  zero axis and near-axis rounded endpoints, complete turns and signed/multiple-turn sweeps;
-  no blanket angle normalization, quantum/source-domain errors or libm-dependent result.
-  Split functions into further owned children if this unit exceeds a safe implementation slice.
-  Verification:native implementation/scoped acceptance0618;Commit:STITCHCAD-G1-0618.
-  Closure0618:available native values/sources under explicit admitted plans;coupled irrational
-  review .5d.4 and AST policy adoption .5e.2.4.integration.tangent remain separate. No platform claim.
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.1`
   Status: `done`
-  Goal: exact signed/full-turn arc_length and23 independent cases verified0258.
-  Paths: crates/sc-core/src/recipe/arc.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_arc_value_contract.rs
-  Additional paths: docs/tasks/artifacts/formula_structure/arc_value_oracle.py;crates/sc-core/tests/fixtures/formula_arcs.tsv
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part332md); provenance .5e.3.
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.2`
   Status: `done`
-  Goal: correctly rounded sin/cos/tan under .5d.1.2.2 plan.
-  Closure0618:available native values/sources under explicit admitted plans;coupled irrational
-  review .5d.4 and AST policy adoption .5e.2.4.integration.tangent remain separate. No platform claim.
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.2.1`
   Status: `done`
-  Goal:0280 native sin/cos verified3/0; original scope379, whole retention below.
-  Acceptance: [whole summary/provenance](../history/window14.md#stitchcad-devnotes-part400md).
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.2.2`
   Status: `done`
-  Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
-  Closure0618:available native values/sources under explicit admitted plans;coupled irrational
-  review .5d.4 and AST policy adoption .5e.2.4.integration.tangent remain separate. No platform claim.
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.2.2.1`
   Status: `done`
-  Goal:0615 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part775.md).
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.2.2.2`
   Status: `done`
-  Goal:0616 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part776.md).
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.2.2.3`
   Status: `done`
-  Goal:0617 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part777.md).
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.2.2.4`
   Status: `done`
-  Goal:independent combined native tangent value/source/resource acceptance after implementation.
-  - [x] REPRODUCE / ISSUE:focused native examples alone cannot independently establish actual
-    transcribed values,original typed poles/widths or policy-independent source-bearing outcomes.
-  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/tangent_value_oracle.py --check
-    →139 independent exact Fraction rows:125 values/10 poles/four widths;7141B,rc=0. It uses signed
-    rational centering,alternate atan(1/2)+atan(1/3) pi and direct factorial powers,not native absolute
-    folding,Machin pi or fixed-point recurrences. No Rust/native output/frozen input is read.
-  - [x] FIX:guarded read-only/stdout producer and frozen independent fixture;native watchers call
-    actual preparation/worker and sourced wrapper under two explicit policies. Compare values,
-    original operands/limits/progress,Tan contributions,exact poles and exact width bits. A separate
-    watcher regenerates all frozen bytes;register producer/file ownership and existing probe suite.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_tangent_oracle_contract -- --nocapture
-    →two pass:all139 rows under16412/7680 and70000/40000 through both actual entry points;all7141
-    bytes regenerate exactly,rc=0. Full128-bit inputs,wide finite Ratios,complete turns,near-pole
-    neighbors and both sides of the actual half-ppm boundary are present. Exact sqrt(3) inequality
-    control proves tan30=577350 and rejects rounded-component577351. Fixture SHA256
-    cf1a803c1efd405dcd84d6af73340b675824c979b793bfbb6112862218a39d7b.
-  - [x] NO REGRESSION: cargo test -p sc-core --test formula_tangent_prepare_contract --test
-    formula_tangent_value_contract --test formula_evaluated_tangent_contract →14 pass,rc=0.
-    cargo test -p sc-core --lib recipe::tangent:: →two pass,including873 independent signed folds
-    and excessive native extent guard,rc=0. Together with oracle two:18 selected native tests pass.
-    cargo clippy -p sc-core --lib --test formula_tangent_oracle_contract -- -D warnings / selected
-    rustfmt --check / bash -n docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
-    →strict lint/fmt/shell syntax pass,rc=0. Producer census346/33981 calls;file233/89/38 with15
-    actual data refusals/12 guard reds pass,rc=0. Positive book98/374/1647/2910,glossary310/9/158/0,
-    history777 four exact Git spans,prior IDs/order/map/diff pass,rc=0. No full CI/platform claim.
-  - [x] LOCKSTEP:book/status/native facts/decision/task/index/MEM/DEV/CHANGE/LIVE align. Whole0617
-    retained777. Native tangent/.5d.3.2/.5d.3 implementation parents close for scoped native values;
-    coupled .5d.4 remains pending. Next real AST/source/recipe/Design policy integration owns
-    implementation and paired acceptance. LIVE Tan139,G1 6/18/G0 unapproved unchanged. Existing
-    full locality/provider/heap/CPU/platform/replay/physical/release owners remain separate.
-    promotion: promoted (decision_tangent-resources.md gains independent native acceptance answer,fixture identity and explicit scope).
-  Commit:STITCHCAD-G1-0618;Verification:18 selected native tests/139 independent rows;broader gates pending.
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.3`
   Status: `done`
-  Goal: correctly rounded atan/atan2 under .5d.1.2.2 plan.
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.3.3.1`
   Status: `done`
-  Goal:0288 native inverses verified3/0; original scope396, whole retention below.
-  Acceptance: [whole summary/provenance](../history/window14.md#stitchcad-devnotes-part401md).
+  Goal:0618 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part778.md).
 - ID: `G1-SLICE.5d.4`
   Status: `pending`
   Goal: coupled complete irrational function proof and error/provenance review.

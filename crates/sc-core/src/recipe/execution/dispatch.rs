@@ -5,6 +5,8 @@ use crate::recipe::{
     FormulaEvaluatedScalar as V,
 };
 
+// Preserve original native input/policy/progress until the existing single engine error box.
+#[allow(clippy::result_large_err)]
 pub(super) fn call<'a>(
     sources: &impl Sources<'a>,
     node: FormulaCheckedNode<'a, 'a>,
@@ -30,6 +32,16 @@ pub(super) fn call<'a>(
         B::Atan => argument(0).checked_atan(),
         B::Atan2 => argument(0).checked_atan2(argument(1)),
         B::ArcLength => argument(0).checked_arc_length(argument(1)),
+        B::Tan => {
+            let input = argument(0);
+            let Some(limits) = sources.tangent_limits() else {
+                return Err(Failure::MissingTangentPolicy { input });
+            };
+            return input
+                .checked_tan(limits)
+                .map(|result| result.value())
+                .map_err(Failure::Tangent);
+        }
         B::Within => {
             let Form::Call { arguments, .. } = node.form() else {
                 unreachable!("actual checked within call retains its own argument nodes");
@@ -44,7 +56,7 @@ pub(super) fn call<'a>(
                 .map_err(Failure::Comparison);
         }
         B::If => unreachable!("actual conditional syntax uses selected branch tasks,not callbacks"),
-        B::Tan | B::X | B::Y | B::Dist | B::Dir | B::Len | B::ParamAt | B::PointAt => {
+        B::X | B::Y | B::Dist | B::Dir | B::Len | B::ParamAt | B::PointAt => {
             unreachable!("private complete scalar plan excludes unimplemented capability families")
         }
     };

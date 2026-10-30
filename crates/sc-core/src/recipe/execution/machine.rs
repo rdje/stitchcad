@@ -13,6 +13,13 @@ use std::collections::TryReserveError;
 // Only runtime-owned implementations can read actual checked nodes or retrieve an executed class.
 // This is private to the recipe engine; callers cannot provide AST values or callbacks.
 pub(super) trait Sources<'a> {
+    // Only actual policy-aware runtime owners override this;legacy scopes remain unconfigured.
+    fn tangent_limits(&self) -> Option<crate::recipe::FormulaTangentLimits> {
+        None
+    }
+
+    // The shared failure retains original tangent data inline until its existing outer error box.
+    #[allow(clippy::result_large_err)]
     fn read_value(
         &mut self,
         node: Node<'a, 'a>,

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0618 — independently accept scoped native tangent values and sources
+## STITCHCAD-G1-0619 — execute actual scalar Tan expressions under explicit policies
 
-- Exact Fraction alternate-identity/direct-power oracle certifies139 rows. Actual native values/wrappers match125 values/10 poles/four exact widths under two policies;all7141 frozen bytes regenerate. Eighteen selected native tests pass,including real resource/source guards.
-- Scoped lint/fmt/shell syntax/book98/374/1647/2910/glossary0/census346/file233/history777/IDs/map/diff pass. LIVE Tan139,G1 6/18/G0 unapproved unchanged. Native implementation closes;coupled/platform review and real AST policy adoption remain owned. Next AST integration.
+- Add policy-aware preparation and real sourced Tan dispatch. Legacy missing policy precedes source admission;all plans/results/prep/runtime failures retain selected limits. Lazy branches,per-call budgets,full-width inputs,original typed causes and call flags remain exact.
+- New8/existing16/private9/doc4/scoped lint/fmt/three consumer type checks pass. Book98/374/1648/2912/glossary0/history778/IDs/map/diff pass. LIVE standalone expression policies,G1 6/18/G0 unapproved unchanged. Next source graph adoption;recipe/Design/paired/full verification pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

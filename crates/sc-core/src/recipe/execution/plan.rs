@@ -4,6 +4,7 @@ use crate::{
     recipe::{
         FormulaBuiltin, FormulaCanonicalInput, FormulaCanonicalInputError, FormulaCheckedNode,
         FormulaCheckedNodeForm as Form, FormulaDeclarationSource, FormulaReservedName,
+        FormulaTangentLimits,
     },
     value::CanonicalInputs,
 };
@@ -43,8 +44,10 @@ impl<'a> FormulaScalarExecutionSource<'a> {
 /// An unavailable implementation is never a language refusal or a computed result.
 #[derive(Debug)]
 pub enum FormulaScalarExecutionPlanRefusal<'a> {
-    /// Tangent or geometry selector has no implementation in this scalar execution scope.
+    /// The built-in has no implementation in this selected scalar execution scope.
     UnavailableBuiltin(FormulaBuiltin),
+    /// Tan requires an explicitly selected per-call execution policy before any values.
+    MissingTangentPolicy,
     /// Geometry or a prior-let source requires its real integration owner.
     UnavailableSource(FormulaDeclarationSource<'a>),
     /// Original actual inventory family, identity/kind or borrowed-owner refusal.
@@ -59,6 +62,7 @@ pub enum FormulaScalarExecutionPlanRefusal<'a> {
 #[derive(Debug)]
 enum PlanIssue {
     UnavailableBuiltin(FormulaBuiltin),
+    MissingTangentPolicy,
     UnavailableSource,
     CanonicalInput,
     Allocation {
@@ -74,6 +78,7 @@ pub struct FormulaScalarExecutionPlanError<'a> {
     node: FormulaCheckedNode<'a, 'a>,
     inputs: &'a CanonicalInputs,
     issue: PlanIssue,
+    tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a> FormulaScalarExecutionPlanError<'a> {
     /// Actual unavailable or refused name/call node; allocation errors retain the actual root.
@@ -86,12 +91,18 @@ impl<'a> FormulaScalarExecutionPlanError<'a> {
     pub const fn inputs(&self) -> &'a CanonicalInputs {
         self.inputs
     }
+    /// Original selected per-call tangent policy,including for capability/source/allocation failure.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.tangent_limits
+    }
     /// Detailed original capability/source cause, without reading a value or consulting a provider.
     #[must_use]
     pub fn refusal(&self) -> FormulaScalarExecutionPlanRefusal<'a> {
         use FormulaScalarExecutionPlanRefusal as Refusal;
         match self.issue {
             PlanIssue::UnavailableBuiltin(builtin) => Refusal::UnavailableBuiltin(builtin),
+            PlanIssue::MissingTangentPolicy => Refusal::MissingTangentPolicy,
             PlanIssue::UnavailableSource => {
                 let Form::Name { declaration, .. } = self.node.form() else {
                     unreachable!("private source issue retains its actual checked name");
@@ -154,7 +165,7 @@ pub(super) struct SourceSlot<'a> {
 }
 
 /// Complete source-bound preparation for the implemented scalar execution subset, without values.
-/// Tangent, geometry and prior-let integration remain unavailable; this is not a whole evaluator.
+/// Tangent requires explicit per-call limits;geometry/prior-let integration remains separate.
 /// Each original repeated/untaken occurrence is bound. Optional reserved providers stay unread.
 /// Private fields preserve the original proof, exact inventory and complete admitted population:
 /// ```compile_fail
@@ -175,6 +186,7 @@ pub struct FormulaScalarExecutionPlan<'a> {
     pub(super) admission: FormulaExecutionAdmission<'a, 'a>,
     inputs: &'a CanonicalInputs,
     pub(super) sources: Vec<SourceSlot<'a>>,
+    tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a> FormulaScalarExecutionPlan<'a> {
     /// Original complete proof and explicit logical workspace reservation.
@@ -186,6 +198,11 @@ impl<'a> FormulaScalarExecutionPlan<'a> {
     #[must_use]
     pub const fn inputs(&self) -> &'a CanonicalInputs {
         self.inputs
+    }
+    /// Explicit per-call tangent policy,or None for the legacy scope without configured Tan.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.tangent_limits
     }
     /// Every original name occurrence in static dependency order, including repetitions/branches.
     /// These are prospective sources, not a trace of executed reads.
@@ -220,11 +237,60 @@ impl<'p, 'd> FormulaExecutionAdmission<'p, 'd> {
     /// # Ok::<(), Box<dyn std::error::Error>>(())
     /// ```
     /// # Errors
-    /// Unavailable tangent/geometry/prior-let scope precedes source allocation and binding. Actual
+    /// Missing tangent policy or unavailable geometry/prior-let precedes source allocation. Actual
     /// canonical joins then run in original dependency order. No partial plan or value escapes.
     pub fn prepare_scalar<'a>(
         self,
         inputs: &'a CanonicalInputs,
+    ) -> Result<FormulaScalarExecutionPlan<'a>, FormulaScalarExecutionPlanError<'a>>
+    where
+        'p: 'a,
+        'd: 'a,
+    {
+        self.prepare_scalar_with_policy(inputs, None)
+    }
+
+    /// Prepare actual scalar execution with an explicit policy for each executed tangent call.
+    /// Whole capability admission still precedes source allocation/joins;untaken calls require
+    /// a selected policy but consume no numerical resources or contributions. Zero quotas are
+    /// explicit policies and may refuse only when the actual call is executed.
+    ///
+    /// ```
+    /// use sc_core::{recipe::*,value::CanonicalInputs};
+    /// # fn main() -> Result<(), Box<dyn std::error::Error>> {
+    /// let inputs=CanonicalInputs::new(vec![],vec![])?;
+    /// let expression=FormulaExpression::parse("tan(30 deg)")?.normalize_literals()?;
+    /// let namespace=FormulaNamespace::new([])?;
+    /// let proof=expression.check_kinds(&namespace).expect("actual checked fixture");
+    /// let limits=FormulaTangentLimits::new(2073,512);
+    /// let plan=proof.admit_execution(FormulaExecutionLimits::new(256,768)).expect("explicit workspace")
+    ///     .prepare_scalar_with_tangent_limits(&inputs,limits).expect("actual policy-aware plan");
+    /// assert_eq!(plan.tangent_limits(),Some(limits));
+    /// let result=plan.evaluate(FormulaScalarExecutionContext::new(
+    ///     FormulaToleranceContext::empty(),FormulaSizeContext::empty())).expect("actual native execution");
+    /// assert_eq!(result.value().numeric().map(|v|v.rational()),
+    ///     Some(FormulaRational::from_signed_integer(577350)));
+    /// # Ok(())
+    /// # }
+    /// ```
+    /// # Errors
+    /// Original unavailable scope,canonical source or allocator refusal with the selected policy.
+    pub fn prepare_scalar_with_tangent_limits<'a>(
+        self,
+        inputs: &'a CanonicalInputs,
+        tangent_limits: FormulaTangentLimits,
+    ) -> Result<FormulaScalarExecutionPlan<'a>, FormulaScalarExecutionPlanError<'a>>
+    where
+        'p: 'a,
+        'd: 'a,
+    {
+        self.prepare_scalar_with_policy(inputs, Some(tangent_limits))
+    }
+
+    fn prepare_scalar_with_policy<'a>(
+        self,
+        inputs: &'a CanonicalInputs,
+        tangent_limits: Option<FormulaTangentLimits>,
     ) -> Result<FormulaScalarExecutionPlan<'a>, FormulaScalarExecutionPlanError<'a>>
     where
         'p: 'a,
@@ -236,11 +302,16 @@ impl<'p, 'd> FormulaExecutionAdmission<'p, 'd> {
             node,
             inputs,
             issue,
+            tangent_limits,
         };
         for node in root.all_nodes() {
             match node.form() {
                 Form::Call { builtin, .. } => {
-                    if !scalar_builtin_available(builtin) {
+                    if builtin == FormulaBuiltin::Tan {
+                        if tangent_limits.is_none() {
+                            return Err(refuse(node, PlanIssue::MissingTangentPolicy));
+                        }
+                    } else if !scalar_builtin_available(builtin) {
                         return Err(refuse(node, PlanIssue::UnavailableBuiltin(builtin)));
                     }
                 }
@@ -309,11 +380,12 @@ impl<'p, 'd> FormulaExecutionAdmission<'p, 'd> {
             admission,
             inputs,
             sources,
+            tangent_limits,
         })
     }
 }
 
-// One exhaustive implementation-availability catalog shared with whole-recipe preparation.
+// Scope without selected tangent policy,shared with source/recipe factories until policy adoption.
 pub(super) fn scalar_builtin_available(builtin: FormulaBuiltin) -> bool {
     use FormulaBuiltin as B;
     match builtin {

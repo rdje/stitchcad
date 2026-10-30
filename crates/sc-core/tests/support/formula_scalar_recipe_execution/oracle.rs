@@ -46,6 +46,9 @@ fn token(error: &FormulaScalarRecipeError<'_>) -> &'static str {
                 ScalarFailure::LengthInput(_) | ScalarFailure::ScalarInput(_) => {
                     unreachable!("this finite recipe population has no external initial inputs")
                 }
+                ScalarFailure::Tangent(_) | ScalarFailure::MissingTangentPolicy { .. } => {
+                    unreachable!("this original independent fixture contains no tangent calls")
+                }
                 ScalarFailure::WorkspaceReservation { .. } => {
                     unreachable!("actual complete allowance fits")
                 }

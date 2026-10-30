@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.4.integration.tangent:actual AST/source/recipe/Design tangent policy integration.
-  Native tangent preparation/value/source/independent acceptance0615–0618 complete. Read execution
-  plan/failure/machine/source/recipe/Design interfaces,then split safe owned slices before changes.
-  Preserve actual roots/proofs/inputs/context/error chains/flags;explicit limits must survive all
-  factories/results/errors. Legacy missing-policy preflight stays honest;no placeholder value/code.
-- Native API:prepare_tangent(limits).evaluate;FormulaEvaluatedScalar.checked_tan retains sourced
-  input/native execution. Result/error preserve original limits and progress. Failed call adds no
-  successful output/flag;original contributions remain. Exact endpoints156/0;other B128/doubling.
-- Independent Fraction oracle139 rows(125 values/10 poles/four widths),7141B SHA256
-  cf1a803c1efd405dcd84d6af73340b675824c979b793bfbb6112862218a39d7b;both entry points/two policies
-  exact. Eighteen selected native tests/scoped strict lint/fmt pass;book98/374/1647/2910/glossary0,
-  census346/file233/history777/IDs/map/diff pass. Native .5d.3 parents close;coupled .5d.4 pending.
-  LIVE G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect original archive/search/
-  numerical/cleanup proofs;never rerun old transactions. Full PNT;commit each,push400 after full gates.
+- Next G1-SLICE.5e.2.4.integration.tangent.sources:actual source-graph tangent policy adoption. Standalone expression0619 implemented:prepare_scalar_with_tangent_limits selects per-call limits
+  before values;legacy MissingTangentPolicy precedes source allocation/joins,even untaken calls.
+  Plan/result/prep/runtime errors retain original policy,including earlier non-Tan/allocator failure.
+  Real native sourced Tan uses completed child values;untaken calls consume no native resources/flag.
+- Read source_graph/source_runtime/source_read/failure/factories before code;split safely if needed.
+  Preserve original source/proof/input/context owners,unbound once-only caches/ordinals/first failures.
+  No source storage rounding or implicit policy. Recipe/Design/paired acceptance have pending children.
+- New AST8/existing scalar11+plan5/private9/doc4/scoped strict lint/fmt pass;three affected recipe/
+  source/Design targets compile. Original49 scalar/frozen exact. Shared full tangent failure>=368B
+  kept inline under narrow measured lint allowances until existing outer witness box,outside quotas.
+  Book98/374/1648/2912/glossary0/history778/IDs/map/diff pass. Native139/18 acceptance0618 retained;
+  whole native task subtree retired778. LIVE G1 6/18/G0 unapproved;full local/hosted79bd6f6a scoped.
+  Protect original archive/search/numerical/cleanup proofs;never rerun old transactions. Full PNT;
+  commit each slice,push400 after full gates. Coupled/platform/full resources/physical remain owned.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

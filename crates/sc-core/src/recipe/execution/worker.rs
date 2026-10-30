@@ -12,7 +12,7 @@ use crate::{
 use core::fmt;
 
 /// Actual executed scalar subset result with its original proof/inventory and selected read trace.
-/// No binding rounding, statement publication, derived/geometry/tangent/whole recipe or approval
+/// No binding rounding,statement publication,derived/geometry/whole recipe or approval
 /// follows. The constructor is private; supplied values/branch annotations cannot create a result.
 /// ```compile_fail
 /// fn substitute(result: &mut sc_core::recipe::FormulaExecutedScalarExpression<'_>,
@@ -101,6 +101,7 @@ impl<'p> Plan<'p> {
     {
         let mut plan: Plan<'a> = self;
         let root = plan.admission.root();
+        let tangent_limits = plan.tangent_limits();
         let mut machine = Machine::new(plan.admission.node_count()).map_err(|allocation| {
             Error::allocation(
                 root,
@@ -108,13 +109,20 @@ impl<'p> Plan<'p> {
                 allocation.requested,
                 allocation.error,
             )
+            .with_tangent_limits(tangent_limits)
         })?;
-        let value = machine.run(root, &mut plan, context)?;
+        let value = machine
+            .run(root, &mut plan, context)
+            .map_err(|error| error.with_tangent_limits(tangent_limits))?;
         Ok(FormulaExecutedScalarExpression { plan, value })
     }
 }
 
 impl<'a> Sources<'a> for Plan<'a> {
+    fn tangent_limits(&self) -> Option<crate::recipe::FormulaTangentLimits> {
+        Plan::tangent_limits(self)
+    }
+
     fn read_value(
         &mut self,
         node: Node<'a, 'a>,

@@ -1,7 +1,8 @@
 //! Original runtime causes and bounded-workspace refusals with actual proof-node context.
 use crate::recipe::{
-    FormulaCheckedNode, FormulaLengthInputError, FormulaNumericError, FormulaScalarInputError,
-    FormulaSizeReadError, FormulaToleranceComparisonError, FormulaToleranceReadError,
+    FormulaCheckedNode, FormulaEvaluatedScalar, FormulaEvaluatedTangentError,
+    FormulaLengthInputError, FormulaNumericError, FormulaScalarInputError, FormulaSizeReadError,
+    FormulaTangentLimits, FormulaToleranceComparisonError, FormulaToleranceReadError,
 };
 use core::fmt;
 use std::collections::TryReserveError;
@@ -17,9 +18,19 @@ pub enum FormulaScalarExecutionWorkspace {
 
 /// Original value/provider refusal after an actual certified node was selected for execution.
 /// Unknown/Derived retain their canonical observation/evaluation requirements; no value is invented.
+// Retain the original tangent payload until the existing outer evaluation-error box.
+// Its measured>=368-byte variant must not introduce a second diagnostic allocation.
+#[allow(clippy::large_enum_variant)]
 pub enum FormulaScalarExecutionFailure<'a> {
     /// Existing exact operator/call/conversion refusal, without another rounding boundary.
     Numeric(FormulaNumericError),
+    /// Original supplied tangent input,selected policy and native mathematical/resource failure.
+    Tangent(FormulaEvaluatedTangentError),
+    /// Private runtime guard:actual call lacks a policy despite complete preparation requirements.
+    MissingTangentPolicy {
+        /// Actual completed operand and its original contributions;no successful Tan is invented.
+        input: FormulaEvaluatedScalar,
+    },
     /// Original dedicated length read and canonical requirement.
     LengthInput(FormulaLengthInputError<'a>),
     /// Original general scalar read and canonical requirement.
@@ -45,6 +56,8 @@ impl fmt::Debug for FormulaScalarExecutionFailure<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.write_str(match self {
             Self::Numeric(_) => "Numeric(..)",
+            Self::Tangent(_) => "Tangent(..)",
+            Self::MissingTangentPolicy { .. } => "MissingTangentPolicy(..)",
             Self::LengthInput(_) => "LengthInput(..)",
             Self::ScalarInput(_) => "ScalarInput(..)",
             Self::ToleranceRead(_) => "ToleranceRead(..)",
@@ -58,6 +71,10 @@ impl fmt::Display for FormulaScalarExecutionFailure<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
             Self::Numeric(error) => error.fmt(f),
+            Self::Tangent(error) => error.fmt(f),
+            Self::MissingTangentPolicy { .. } => {
+                f.write_str("tangent requires explicit execution limits")
+            }
             Self::LengthInput(error) => error.fmt(f),
             Self::ScalarInput(error) => error.fmt(f),
             Self::ToleranceRead(error) => error.fmt(f),
@@ -78,6 +95,8 @@ impl std::error::Error for FormulaScalarExecutionFailure<'_> {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
             Self::Numeric(error) => Some(error),
+            Self::Tangent(error) => Some(error),
+            Self::MissingTangentPolicy { .. } => None,
             Self::LengthInput(error) => error.source(),
             Self::ScalarInput(error) => error.source(),
             Self::ToleranceRead(error) => error.source(),
@@ -110,6 +129,7 @@ pub enum FormulaScalarExecutionErrorCause<'a> {
 pub struct FormulaScalarExecutionError<'a> {
     node: FormulaCheckedNode<'a, 'a>,
     cause: FormulaScalarExecutionErrorCause<'a>,
+    tangent_limits: Option<FormulaTangentLimits>,
 }
 impl<'a> FormulaScalarExecutionError<'a> {
     pub(super) fn allocation(
@@ -120,6 +140,7 @@ impl<'a> FormulaScalarExecutionError<'a> {
     ) -> Self {
         Self {
             node,
+            tangent_limits: None,
             cause: FormulaScalarExecutionErrorCause::Allocation {
                 workspace,
                 requested,
@@ -133,8 +154,18 @@ impl<'a> FormulaScalarExecutionError<'a> {
     ) -> Self {
         Self {
             node,
+            tangent_limits: None,
             cause: FormulaScalarExecutionErrorCause::Evaluation(Box::new(failure)),
         }
+    }
+    pub(super) fn with_tangent_limits(mut self, limits: Option<FormulaTangentLimits>) -> Self {
+        self.tangent_limits = limits;
+        self
+    }
+    /// Original selected per-call policy,also retained for allocation or earlier unrelated failure.
+    #[must_use]
+    pub const fn tangent_limits(&self) -> Option<FormulaTangentLimits> {
+        self.tangent_limits
     }
     /// Actual failing source/operator/call; allocation errors retain the actual expression root.
     #[must_use]

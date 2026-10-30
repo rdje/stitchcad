@@ -4,7 +4,8 @@ This records the bounded implementation sequence for G1-SLICE.5e.2. Actual sourc
 and [scalar recipe execution](formula-recipe-execution.md) are available for the admitted subset. The worker
 joins complete static node proofs, real canonical reads and explicit tolerance/size contexts with
 existing exact kernels. Supplied values or callback annotations cannot replace an actual expression
-proof. Derived/tangent/geometry integration,load/replay and full atomic acceptance remain owned work.
+proof. Explicit-policy standalone tangent expressions are available below;source/recipe/Design
+tangent policies,geometry,load/replay and full atomic acceptance remain owned work.
 
 ## Existing contracts to reuse
 
@@ -218,9 +219,10 @@ assert_eq!(plan.sources().len(), 1);
 ```
 
 The allocation-free capability scan uses private same-proof node views in certified arena order.
-It accepts the scalar shapes and available numeric/within kernels. Tangent, geometry sources/
-selectors and prior-let sources retain explicit unavailable implementation scope. These preparation
-gaps precede source binding and are not formula_unsupported or another language diagnostic. They
+It accepts the scalar shapes and available numeric/within kernels. The legacy entry point has no
+tangent policy and reports MissingTangentPolicy for every Tan occurrence. The explicit policy
+entry point below admits Tan. Geometry selectors/sources and prior-let sources retain unavailable
+scope. Preparation gaps precede source binding and are not formula_unsupported or another language diagnostic. They
 cannot produce a canonical computed result. An untaken unsupported family still lies outside this
 prepared subset; this is a capability boundary, not whole-language conditional semantics.
 
@@ -344,7 +346,7 @@ original set/revision/member/base sources and unchanged membership. The full 256
 all 255 original eps_num occurrences under the exact 767-record reservation; a left-deep 256-node
 expression also completes without recursive execution frames. The scoped independent result
 checkpoint below follows feature completion. Whole worked-book,
-platform identity,tangent/geometry/Derived evaluation and replay keep their
+platform identity,source/recipe/Design tangent policies,geometry/Derived evaluation and replay keep their
 existing .5g/.5e.4/parent owners. This scoped expression result grants no whole-language, containing
 Design/currentness, evidence-truth, geometry/physical or release approval.
 
@@ -408,9 +410,9 @@ are also available. D337 corrected this plan's stale pre0288 inverse-availabilit
 
 [Native tangent values](formula-trig-certificates.md#certified-native-tangent-value-execution)
 now use the admitted bounded adaptive strategy with explicit bit/work quotas. Supplied-value
-source wrappers are available;real AST/recipe/Design policy adoption remains .5e.2.4.integration.tangent.
-Current expression capability admission still refuses unsupported Tan execution before values;
-this is an implementation boundary,not a new language diagnostic or placeholder numerical result.
+wrappers and explicit-policy standalone expression execution are available. Source-graph/recipe/
+Design policy adoption remains .5e.2.4.integration.tangent. Missing policy is a typed preparation
+refusal before values,not a language diagnostic or placeholder result.
 Resource refusal returns no value or invented numerical-domain cause. Full runtime acceptance
 requires the actual selected policy and original typed causes to survive every higher-level layer.
 
@@ -432,3 +434,63 @@ Whole worked-book population, independent runtime oracles, replay/cache fault co
 integration and observed cross-platform byte identity remain .5g/.5e.4 milestones. Broad campaigns
 and full CI follow the feature-delivery policy and required pre-push gate. Passing a focused slice
 does not close those later obligations or the G1 gate.
+
+## Explicit tangent policies in actual scalar expressions
+
+FormulaExecutionAdmission::prepare_scalar_with_tangent_limits takes the actual immutable
+CanonicalInputs and explicit FormulaTangentLimits before any value is read. It retains that
+per-call policy on FormulaScalarExecutionPlan. Complete all-node capability admission still
+precedes D-source reservation and canonical joins. The legacy prepare_scalar entry point has
+no selected tangent policy;it returns MissingTangentPolicy at the original call,even in an untaken
+branch. This is configuration/capability admission,not mathematical invalidity or a language code.
+
+```rust
+use sc_core::{recipe::*, value::CanonicalInputs};
+let inputs = CanonicalInputs::new(vec![], vec![])?;
+let expression = FormulaExpression::parse("tan(30 deg)+tan(30 deg)")?.normalize_literals()?;
+let namespace = FormulaNamespace::new([])?;
+let proof = expression.check_kinds(&namespace).expect("complete actual kinds");
+let limits = FormulaTangentLimits::new(2073, 512);
+let plan = proof.admit_execution(FormulaExecutionLimits::new(256, 768))
+    .expect("explicit machine allowance")
+    .prepare_scalar_with_tangent_limits(&inputs, limits).expect("actual configured plan");
+let result = plan.evaluate(FormulaScalarExecutionContext::new(
+    FormulaToleranceContext::empty(), FormulaSizeContext::empty())).expect("actual calls");
+assert_eq!(result.plan().tangent_limits(), Some(limits));
+assert_eq!(result.value().numeric().map(|v| v.rational()),
+    Some(FormulaRational::from_signed_integer(1_154_700)));
+assert!(result.value().sources().contains(FormulaBuiltin::Tan));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The term allowance is cumulative across refinements within each native Tan request. Each actual
+call starts its own native budget. The example executes two calls,each charging512 terms under
+the same selected policy;512 is not an aggregate expression allowance. Neither those per-call
+limits nor the existing2N+D machine population certifies total expression heap bytes or CPU.
+
+Selected policy and value execution remain distinct. Explicit limits0/0 configure the
+family:an untaken Tan branch consumes no native work,produces no domain/resource failure and adds
+no Tan contribution. A taken exact zero still requires156 folding bits,then adds Tan with no series.
+A taken30-degree call requires the actual first2073-bit/512-term iteration. Missing policy instead
+fails complete preparation before any optional provider,source join or branch value is consulted.
+
+Successful execution uses the real sourced native wrapper on completed child values. It retains
+all input/condition contributions,including actual upstream cos,and adds Tan only on successful
+execution. Exact zero/unit calls survive false conditions and T1 refusal;T2 source admission still
+requires its actual quantitative context. Full-width Angle literals divided by Count reach the
+native input as their exact original fraction,without a binding or artificial signed narrowing.
+
+Both preparation and execution errors expose tangent_limits(),including source/allocation
+refusals and an earlier unrelated division error. Runtime Tan failures remain a distinct typed
+FormulaScalarExecutionFailure::Tangent with the original sourced operand,limits,prep/native
+cause and progress. Resource causes have no language diagnostic. Exact poles and148-bit width
+causes retain their real mathematical failures and original failing call span/proof owner.
+The engine retains its existing error-witness box outside the logical machine/native quotas;
+actual allocator failures still use their separate original unboxed allocation cause.
+
+Eight focused tests exercise real source/kind/workspace/plan/execution factories,original root/
+inventory identity,complete missing-policy precedence,per-call budgets,selected-only execution,
+T1/T2 behavior,actual poles/early and later resources/exact width,and unrelated failure policy
+retention. Existing scalar expression/reference and preparation checks remain separately watched.
+Source graphs,ordered recipes and Design factories retain their existing scope until their actual
+policy adoption;independent paired acceptance follows those implementation slices.

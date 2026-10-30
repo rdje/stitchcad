@@ -87,6 +87,9 @@ fn outcome(
                 Failure::ToleranceRead(cause) => cause.diagnostic_code(),
                 Failure::SizeRead(cause) => cause.diagnostic_code(),
                 Failure::Comparison(cause) => cause.diagnostic_code(),
+                Failure::Tangent(_) | Failure::MissingTangentPolicy { .. } => {
+                    unreachable!("this original independent fixture contains no tangent calls")
+                }
                 Failure::WorkspaceReservation { .. } => {
                     unreachable!("valid actual proof fits its admitted logical buffers")
                 }

@@ -4,7 +4,7 @@ use sc_core::{
     name::MachineToken,
     ontology::{EntityId, LocalTag, PointRef},
     recipe::{
-        FormulaBindingKind, FormulaBuiltin, FormulaCanonicalInputAdapter as Adapter,
+        FormulaBindingKind, FormulaCanonicalInputAdapter as Adapter,
         FormulaCanonicalInputRefusal as JoinRefusal, FormulaCheckedNodeForm as Form,
         FormulaCheckedStatementKind as Statement, FormulaDeclaration as D,
         FormulaDeclarationSource as Source, FormulaExecutionLimits as Limits, FormulaExpression,
@@ -242,11 +242,8 @@ fn unavailable_implementations_remain_preparation_gaps_before_registry_binding_o
             .admit_execution(Limits::new(256, 768))
             .expect("bound")
             .prepare_scalar(&inputs)
-            .expect_err("no native tangent implementation");
-        assert!(matches!(
-            error.refusal(),
-            Refusal::UnavailableBuiltin(FormulaBuiltin::Tan)
-        ));
+            .expect_err("no selected tangent policy");
+        assert!(matches!(error.refusal(), Refusal::MissingTangentPolicy));
         assert_eq!(
             source.get(error.node().span().start()..error.node().span().end()),
             Some("tan(0 deg)")

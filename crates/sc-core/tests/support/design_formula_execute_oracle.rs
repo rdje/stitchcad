@@ -118,6 +118,10 @@ fn scalar_token(error: &FormulaScalarExecutionError<'_>) -> &'static str {
             ));
             "formula_unknown"
         }
+        FormulaScalarExecutionFailure::Tangent(_)
+        | FormulaScalarExecutionFailure::MissingTangentPolicy { .. } => {
+            unreachable!("this original independent fixture contains no tangent calls")
+        }
         FormulaScalarExecutionFailure::WorkspaceReservation { .. } => {
             unreachable!("complete allowances fit")
         }

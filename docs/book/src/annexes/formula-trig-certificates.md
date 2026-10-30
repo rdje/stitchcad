@@ -495,8 +495,8 @@ Five focused worker tests cover exact endpoints,signed quadrants and reciprocals
 bounded tan30 rounding counterexample,tiny full128-bit inputs,actual512-bit midpoint refinement,
 later bit/work/priority refusals,policy-independent successful values and exact148-bit width.
 The earlier preparation/folding contracts remain separate. Source-bearing supplied-value calls
-are implemented below,followed by independent combined native acceptance. Real expression/source/
-recipe/Design policy selection remains pending. No full CI,platform,physical or production approval
+are implemented below,followed by independent combined native acceptance. Standalone expression policies are available;source/
+recipe/Design policy adoption remains pending. No full CI,platform,physical or production approval
 follows these scoped worker checks.
 
 ## Sourced native tangent calls
@@ -543,8 +543,8 @@ Five focused tests construct real upstream round_to and cos calls,without manual
 sources. They check exact zero/unit Tan contributions through cancellation,false storage/read and
 T1 refusal/T2 source admission;actual negative tan30;Boolean/prior-tan kind priority;original
 fold/pole failures;and late native resource/148-bit width failures with exact original source-chain
-identity. Combined independent native acceptance is recorded below. Real AST/source/recipe/
-Design policy adoption remains .5e.2.4.integration.tangent;those plans cannot execute Tan yet.
+identity. Combined independent native acceptance is recorded below. Standalone expression policies are available;source/recipe/Design
+adoption remains .5e.2.4.integration.tangent and those plans cannot execute Tan yet.
 
 ## Independent native tangent acceptance
 
@@ -581,6 +581,6 @@ has explicit read-only/stdout inventory ownership. Full producer locality review
 
 This closes scoped native tangent implementation and finite combined acceptance. The rigorous
 admitted strategy supplies result certification;these139 rows are not exhaustive128-bit input or
-cross-platform coverage. The coupled irrational review remains .5d.4. Real expression/source/
-recipe/Design tangent policies and execution remain .5e.2.4.integration.tangent. Full heap/CPU,
+cross-platform coverage. The coupled irrational review remains .5d.4. Standalone expression
+policies are available;source/recipe/Design adoption remains .5e.2.4.integration.tangent. Full heap/CPU,
 provider,platform,replay,physical and production approval retain their separate owners.

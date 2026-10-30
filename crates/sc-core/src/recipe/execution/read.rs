@@ -163,6 +163,8 @@ impl<'a> FormulaScalarExecutionRead<'a> {
     }
 }
 
+// The shared error enum keeps full tangent failures inline until the existing outer error box.
+#[allow(clippy::result_large_err)]
 pub(super) fn read<'a>(
     kind: Kind<'a>,
     context: FormulaScalarExecutionContext<'a>,

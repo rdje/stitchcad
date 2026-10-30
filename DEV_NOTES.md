@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — independently accept scoped native tangent execution
+## _(2026-10-30 UTC)_ — execute actual scalar expressions with explicit tangent policies
 
-0618 independent Fraction oracle uses signed rational centering,alternate atan1/2+atan1/3 pi and direct factorial powers. No Rust/native output/frozen input is read. It certifies139 rows:125 values/10 poles/four widths,including full128-bit,wide finite,near-pole and actual midpoint-neighbor cases.
-Two native watchers compare actual preparation/worker and sourced wrapper under two explicit policies;original inputs/limits/progress/flags and exact causes survive. All7141 fixture bytes regenerate;exact sqrt(3) control rejects rounded-component tan30. Eighteen selected native tests pass.
-Scoped strict lint/fmt/shell syntax/book98/374/1647/2910/glossary0/census346/file233+15/12/history777 four spans/IDs/map/diff pass. Existing probe suite watches oracle;full transitive locality review stays owned. [Whole0617](docs/history/stitchcad-devnotes-part777.md). Independent acceptance answer promoted.
-Native tangent/.5d.3 implementation parents close;coupled .5d.4 pending. Next actual AST/source/recipe/Design tangent policies,original proof/context/error contracts and paired acceptance. LIVE Tan139,G1 6/18/G0 unapproved unchanged. No full CI/platform/production claim;full PNT/push400/proofs retained.
+0619 policy-aware preparation selects explicit per-call native limits before complete capability/source admission. Legacy MissingTangentPolicy stays a setup refusal,not a language code. Actual sourced Tan uses completed children;plans/results/all prep/runtime failures retain policy,including earlier causes.
+Exact zero/unit and selected-only branches preserve call/condition flags and T1/T2. Full128-bit Angle literal/Count arithmetic reaches actual near-midpoint/pole-width inputs. Native quotas reset per executed call;aggregate heap/CPU and existing boxed witnesses remain outside those logical limits.
+New8/existing16/private9/doc4/scoped lint/fmt/three consumer type checks pass. Compiler caught normalized-source test getter and suffix-matched compatibility aliases;original sources/full enum aliases fix them. Measured shared failure>=368B stays inline under four narrow allows until existing outer box.
+Book98/374/1648/2912/glossary0/history778 four spans/IDs/map/diff pass. [Whole0618](docs/history/stitchcad-devnotes-part778.md) retained. Next source graphs,then recipe/Design/paired acceptance. LIVE standalone policies,G1 6/18/G0 unapproved unchanged. Full PNT/push400/proofs retained;no full CI/platform claim.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
