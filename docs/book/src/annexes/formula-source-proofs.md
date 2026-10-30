@@ -12,6 +12,9 @@ receives its original proof. All branches and repeated name occurrences particip
 FormulaNamespace is the existing immutable initial scope;its constructor rejects prior-let seeds.
 This API supplies no fictitious statement/header/name or new binding/rounding boundary.
 
+For actual containing Design roots,start with the [admitted document scope](formula-design-integration.md).
+Its held-content/current checks and normalization precede these separate static/runtime stages.
+
 ## Complete admission and validation order
 
 Let S be the source population,N the complete normalized node count and T the complete actual

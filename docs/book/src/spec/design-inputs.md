@@ -316,6 +316,10 @@ cargo test -p sc-measure --test design_inputs_contract
 
 ### Actual formula-source ownership checks
 
+[Design formula admission](../annexes/formula-design-integration.md) checks complete held input
+content before current semantics and normalizes this actual root's source collection/ordered recipe.
+Its borrowed scope preserves original owners;kind/cycle/runtime proofs remain separate.
+
 formula_sources() borrows the exact registry in definition(). Cloning the model preserves both
 source buffers,private lookup index and original ids/order. The complete resource producer charges
 both source/index vectors and all actual original/canonical text before Materials/higher sources.

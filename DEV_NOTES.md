@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — own actual Design formula sources and complete current references
+## _(2026-10-30 UTC)_ — admit actual Design formula documents before current semantics
 
-0599 adds required explicit FormulaSources,global original source positions and actual all-canonical joins. Owned constructor errors retain target/position/refusal. Resource/snapshot/candidate/difference fields align. Root ownership computes no values;body kind/cycle/current runtime proof remains separate.
-Core23/doc5/Measure previews1+1/names1/source-snapshot2/resource5/scoped lint/fmt pass. Actual p+40 mm7+18=25B gives model82/675/129/prior84/677/136. Initial import/test visibility,missing-source fixtures and one-byte estimate fixed by actual failures/canonical assertion/byte count;no policy ceiling changed.
-D340 legacy0347 Derived1000 aliased actual operation1000;native global source guard rejects it. Fixture explicitly owns source9003/body;Measure/resource roots author92 from their actual waist parameter+40 mm. Book97/343/1634/2875/glossary0 pass;[whole0598](docs/history/stitchcad-devnotes-part757.md) retains four spans.
-Next .4.3 actual Design-backed source/recipe/current namespace proofs/resources,then .4.4 real reads/storage/.4.5 independent acceptance. Source27/8/native8 remains scoped;only actual lets store. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D334/D156/D223/PLANNING.5 owned;D339 proofs protected. Full PNT/push400.
+0600 adds explicit complete held-input content admission followed by current checks and actual canonical/source join. Private Copy scope pins real root/limits/demand;source/recipe normalization owners retain it without self-reference or host Clone/Debug. Original causes/limits survive;no foreign arena accepted.
+Focused actual-root4/compiler4/scoped strict lint/fmt pass:original129-bit refusal before semantics,actual pointers/typed host cause,source quota0/required1 and empty recipe containment. Initial Debug E0277,test span privacy and Clippy panic fixed with manual Debug,public accessors and typed assertion.
+Book98/348/1642/2892/glossary0 pass. New Design formula annex separates held logical content from parser/namespace/provider/worker/kernel/allocator/CPU and whole-Design authority. [Whole0599](docs/history/stitchcad-devnotes-part758.md) retains four exact spans and live task ids/order survive retirement.
+Next .4.3.2 actual-root kind proofs/.4.3.3 plans/.4.4 real recipe reads/storage/.4.5 independent acceptance. No kind/cycle/value proof from syntax. G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D340 fixed;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected history/search/numeric/cleanup evidence intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

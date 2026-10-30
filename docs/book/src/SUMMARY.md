@@ -81,6 +81,7 @@
   - [Formula statements and ordered recipe syntax](annexes/formula-statements.md)
   - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
   - [Formula source validation](annexes/formula-source-proofs.md)
+  - [Formula documents in actual Design inputs](annexes/formula-design-integration.md)
   - [Formula declaration metadata](annexes/formula-declarations.md)
   - [Ordered formula name scopes](annexes/formula-name-scopes.md)
   - [Formula operator kind signatures](annexes/formula-operator-signatures.md)

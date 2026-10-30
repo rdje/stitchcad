@@ -901,3 +901,6 @@ fn topology_report_refuses_unknown_whole_sources_and_keeps_explicit_empty_drafts
 
 #[path = "support/design_formula_sources.rs"]
 mod formula_sources;
+
+#[path = "support/design_formula_scope.rs"]
+mod formula_scope;

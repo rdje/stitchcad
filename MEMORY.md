@@ -1,18 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.4.3:actual Design-backed namespace/source/recipe proofs/resources.
-  Use real root/current sources/canonical inventory;read proof/admission APIs before code.
-- Design sources0599:required explicit FormulaSources field/accessor,complete global source census,
-  existing all-canonical Derived/source join and original owned target/position/refusal. Actual
-  resources/candidate/difference/snapshot paths retain source/index/doc buffers. No values computed.
-  Core23/doc5/Measure previews1+1/names1/source-snapshot2/resource5/scoped lint/fmt/book97/343/
-  1634/2875/glossary0 pass. D340 fixture operation1000 collision repaired with actual source9003;
-  source92 explicitly authored in Measure/resource roots. Whole0598 retained757/four spans/live ids.
-- Actual p+40 mm retains7 original+18 canonical=25B;model82/675/129/prior84/677/136 exact.
-  Earlier manual24B corrected with actual canonical assertion/independent byte count. Source
-  component27/8/native8 accepted;only actual lets store. Next .4.3 proof/.4.4 recipe/.4.5 acceptance.
-- Full families/Derived/tan/geometry/load/replay/platform/physical still owned. G1 6/18/G0
-  unapproved;full local/hosted79bd6f6a SHA-scoped. Paired .2.4/.2.5 joins/effects remain open.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4.3.2:actual Design namespace/source/recipe kind-proof stages.
+  Read actual namespace/check factory lifetimes;borrow real normalized owners,never supplied namespaces.
+- Design formula0600:prepare_formula_scope meters complete held inputs before current semantics,
+  then pins actual root/limits/demand/canonical-source join. Scope normalizes only original sources
+  and ordered recipe. Five private types preserve original causes/owners;no host Clone/Debug bound.
+  Core focused4/doc4/scoped strict lint/fmt/book98/348/1642/2892/glossary0 pass. Original revision
+  129-bit refusal precedes semantic callbacks;source quota0/required1 and empty recipe keep root.
+- Whole0599 retained758/four spans/live ids. Source9003 owns1 mm/3;source1000/operation collision
+  guarded. Actual p+40 mm7+18=25B/model82/675/129/prior84/677/136. Source component27/8/native8
+  accepted;only actual lets store. Next .4.3.2 proofs/.4.3.3 plans/.4.4 real recipe/.4.5 acceptance.
+- Namespace/parser/provider/worker/kernel/allocator/CPU/whole Design bounds are separate;no values,
+  kind/cycle/runtime proof from document scope. Full families/Derived/tan/geometry/load/replay/
+  platform/physical owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped.
   Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,

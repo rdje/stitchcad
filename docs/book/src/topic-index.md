@@ -44,6 +44,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Trigonometric threshold certificates](annexes/formula-trig-certificates.md)
 - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
 - [Formula source validation and actual consumers](annexes/formula-source-proofs.md)
+- [Actual Design formula admission and documents](annexes/formula-design-integration.md)
 - [Syntax milestone and the route to execution](annexes/formula-recipe-inputs.md#syntax-milestone-and-the-route-to-execution)
 - [Recipe input/identity proof and remaining owners](annexes/formula-recipe-inputs.md#coupled-input-and-identity-review)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)

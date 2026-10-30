@@ -74,6 +74,11 @@ pub use host::{
     DesignFormulaHost, DesignHostEntity, DesignHostEntityKind, DesignMetadata, DesignMetadataError,
     DesignMetadataHost, DesignReferenceHost, DesignSizeSetHost, DesignSourceReferences,
 };
+mod formula;
+pub use formula::{
+    DesignFormulaScope, DesignFormulaScopeError, DesignFormulaScopeRefusal,
+    DesignNormalizedFormulaRecipe, DesignNormalizedFormulaSources,
+};
 pub use inputs::{
     DesignFormulaError, DesignInputs, DesignInputsDefinition, DesignInputsError,
     DesignInputsPosition,

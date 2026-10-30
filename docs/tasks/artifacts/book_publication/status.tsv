@@ -342,3 +342,8 @@ actual direct or Derived source graph read	annexes/formula-source-proofs.md	crat
 complete source runtime workspace	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_failure.rs	FormulaScalarSourceGraphWorkspace	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
 original source execution error context	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_failure.rs	FormulaScalarSourceGraphExecutionError	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
 original source execution cause	annexes/formula-source-proofs.md	crates/sc-core/src/recipe/execution/source_failure.rs	FormulaScalarSourceGraphExecutionCause	G1-SLICE.5e.2.5.derived.3.3.3.3.1	4.1
+actual admitted Design formula scope	annexes/formula-design-integration.md	crates/sc-core/src/design/formula.rs	DesignFormulaScope	G1-SLICE.5e.2.5.derived.3.3.3.4.3.1	4.1
+actual Design formula admission error	annexes/formula-design-integration.md	crates/sc-core/src/design/formula.rs	DesignFormulaScopeError	G1-SLICE.5e.2.5.derived.3.3.3.4.3.1	4.1
+actual Design formula admission refusal	annexes/formula-design-integration.md	crates/sc-core/src/design/formula.rs	DesignFormulaScopeRefusal	G1-SLICE.5e.2.5.derived.3.3.3.4.3.1	4.1
+actual Design normalized source owners	annexes/formula-design-integration.md	crates/sc-core/src/design/formula.rs	DesignNormalizedFormulaSources	G1-SLICE.5e.2.5.derived.3.3.3.4.3.1	4.1
+actual Design normalized recipe owner	annexes/formula-design-integration.md	crates/sc-core/src/design/formula.rs	DesignNormalizedFormulaRecipe	G1-SLICE.5e.2.5.derived.3.3.3.4.3.1	4.1
