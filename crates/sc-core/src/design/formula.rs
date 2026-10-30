@@ -10,6 +10,9 @@ use crate::recipe::{
 };
 use core::fmt;
 
+mod execute;
+pub use execute::{DesignExecutedFormulaRecipe, DesignFormulaExecutionError};
+
 mod plan;
 pub use plan::{
     DesignFormulaPlanInputError, DesignFormulaPlanInputs, DesignFormulaScalarPlan,

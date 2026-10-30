@@ -279,7 +279,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Status: `done`
   Goal:0602 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part761.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: actual ordered recipe Derived read integration with earned unbound source results,real
   let RHS→once storage→prior-let visibility,original contexts/read witnesses and atomic failure.
   Staged0603+:preserve existing standalone source/recipe contracts while composing private actual
@@ -294,50 +294,43 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0604 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part763.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3`
   Status: `done`
-  Goal: complete admitted scalar recipe/source worker with both full runtimes/outcomes reserved
-  before values. Actual recipe operand order/lazy reads/assertion contexts,earned shared roots,
-  true RHS→once storage→prior-let visibility and atomic whole-result failure with original causes.
-  Safe slices0605+:first stage complete recipe reservation/state and original ordered loop in a
-  shared private runtime,then actual paired source demand/resume and atomic outcomes,then native
-  complete-result/read/error views. Avoid a second statement/storage/assertion implementation.
+  Goal:0607 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part766.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.1`
   Status: `done`
-  Goal:0605 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part764.md).
+  Goal:0607 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part766.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.2`
   Status: `done`
-  Goal:0606 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part765.md).
+  Goal:0607 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part766.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3`
   Status: `done`
-  Goal:complete native paired result/read/error API;actual Design execution remains .4.4.4.
-  Completion0607:parent .4.4.3 closed for supplied-scope native scalar pairing only.
-  - [x] REPRODUCE / ISSUE:private complete paired state lacked an atomic public entry/result.
-  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'evaluate_with_sources|ForeignInputs|SourceRuntime::new|
-    RecipeRuntime::new|read_records|cause_source' on actual execution source_recipe*/recipe_result/
-    source_failure modules →owner guard/full reservation/shared read/chain helpers,rc=0.
-    Extracted error-chain E0599 fixed with qualified Error::source;no cause replaced.
-  - [x] FIX:consume both native plans/one context;canonical pointer guard precedes runtime buffers.
-    Six private-construction public types expose only complete plans/roots/outcomes/read witnesses/
-    original failures. No fake entry/header,value seed or prefix. Both policies/owner refs and
-    allocator causes stay inline;larger Err allowed locally to avoid allocation during failure.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract source_recipe::
-    -- --nocapture →six pass/39 filtered,rc=0:actual Design-owned factories,both Derived families,
-    unbound1000/3/real stored1000/ordinals,foreign equal-model owners,nested supplier/storage errors,
-    empty and untaken unknown-backed sources. Original canonical state/read/header owners retained.
-  - [x] NO REGRESSION:affected recipe9/source8 and independent18/7/27/8/frozen bytes pass,rc=0.
-    Scoped core lib/three affected-target strict Clippy/changed rustfmt/diff pass,rc=0. cargo test
-    -p sc-core --doc recipe::execution::source_recipe -- --nocapture →four pass,rc=0:positive API,
-    actual E0616 read/result privacy/E0515 source lifetime. Book98/363/1644/2899/glossary310/9/158/0,
-    765 four Git spans/prior live ids/order/uniqueness pass,rc=0. Full paired reference owner .4.5.
-  - [x] LOCKSTEP:book/API catalog/availability/task/index/MEM/DEV/CHANGE/LIVE align. Whole0606 in765.
-    Next .4.4.4 actual Design bridge/.4.5 independent acceptance. G1 6/18/G0 unapproved;no containing
-    Design/currentness/full resources/platform/physical approval from native scope. Full-hosted
-    79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned.
-    promotion: declined (existing atomic supplied-scope/earned-root rules;source/book/contracts retain concrete API and proof).
+  Goal:0607 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part766.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.4`
-  Status: `pending`
-  Goal: expose actual same-root Design plan execution through private accepted result ownership,
-  actual original source/recipe read witnesses/contexts/errors and exact root/limits. No supplied
-  foreign plans or computed inputs. Scoped reference acceptance remains separately owned .4.5.
+  Status: `done`
+  Goal:actual containing Design execution/fresh input admission and complete original results/errors.
+  Completion0608:parent .4.4 closed for implemented available-scalar pairing;independent owner .4.5.
+  - [x] REPRODUCE / ISSUE:native component execution alone supplied no fresh containing Design
+    input scope and accepted caller plans;private actual-root plans needed their own entry point.
+  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'pub fn evaluate|prepare_formula_scope|evaluate_with_sources|
+    Admission|Execution' on design/formula/{plan,execute}.rs →fresh actual admission before native
+    call and original typed error stages,rc=0. Reuse existing complete model/current factory.
+  - [x] FIX:consume only private same-root plan;re-admit complete actual held inputs/current state
+    under original model limits before native buffers/values. Result pins fresh scope/original
+    inputs/native whole execution;Admission/Execution retain original causes/limits. No foreign
+    plans,namespace,values,cache,model clone,host Clone/Debug or extra allocation-error box.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --test design_structure_contract formula_execute::
+    -- --nocapture →five pass/45 filtered,rc=0:exact root/model limits/fresh demand/proof pointers,
+    unbound1000/3/unchanged canonical state,no-Clone/no-Debug host,fresh current rejection before
+    native execution,original nested native failure and empty recipe containment. No accepted prefix.
+  - [x] NO REGRESSION:scoped core lib/affected target strict Clippy/changed rustfmt/diff pass,rc=0.
+    cargo test -p sc-core --doc design::formula::execute and scoped plan::DesignFormulaScalarPlan
+    -- --nocapture →two+two pass,rc=0:actual E0616 privacy,root lifetime escape and generic call.
+    Book98/365/1644/2900/glossary310/9/158/0,766 four Git spans/prior live ids/order/uniqueness pass,
+    rc=0. Existing45 native tests filtered;independent paired/broader acceptance remains .4.5.
+  - [x] LOCKSTEP:book/API catalog/availability/task/index/MEM/DEV/CHANGE/LIVE align. Whole0607 parent/
+    children retained766/four spans. Next .4.5 independent actual source/recipe/Design acceptance.
+    G1 6/18/G0 unapproved;logical input/current scope is no full namespace/provider/kernel/allocator/
+    CPU/platform/physical/approval certificate. Full-hosted79bd6f6a scoped,D334/D156/D223/PLANNING.5 owned.
+    promotion: declined (established fresh complete input admission and exact-owner execution rules;source/book/contracts retain API and evidence).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.5`
   Status: `pending`
   Goal: scoped independent actual Design/recipe/source-mode acceptance;preserve canonical states,

@@ -76,11 +76,12 @@ pub use host::{
 };
 mod formula;
 pub use formula::{
-    DesignCheckedFormulaRecipe, DesignCheckedFormulaSources, DesignFormulaPlanInputError,
-    DesignFormulaPlanInputs, DesignFormulaRecipeCheckError, DesignFormulaScalarPlan,
-    DesignFormulaScalarPlanError, DesignFormulaScalarPlanRefusal, DesignFormulaScope,
-    DesignFormulaScopeError, DesignFormulaScopeRefusal, DesignFormulaSourceCheckError,
-    DesignNormalizedFormulaRecipe, DesignNormalizedFormulaSources,
+    DesignCheckedFormulaRecipe, DesignCheckedFormulaSources, DesignExecutedFormulaRecipe,
+    DesignFormulaExecutionError, DesignFormulaPlanInputError, DesignFormulaPlanInputs,
+    DesignFormulaRecipeCheckError, DesignFormulaScalarPlan, DesignFormulaScalarPlanError,
+    DesignFormulaScalarPlanRefusal, DesignFormulaScope, DesignFormulaScopeError,
+    DesignFormulaScopeRefusal, DesignFormulaSourceCheckError, DesignNormalizedFormulaRecipe,
+    DesignNormalizedFormulaSources,
 };
 pub use inputs::{
     DesignFormulaError, DesignInputs, DesignInputsDefinition, DesignInputsError,

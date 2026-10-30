@@ -362,3 +362,5 @@ source-backed recipe read provenance	annexes/formula-design-integration.md	crate
 complete source-backed recipe error	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_failure.rs	FormulaScalarSourceRecipeError	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1
 original source-backed recipe refusal	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_failure.rs	FormulaScalarSourceRecipeErrorCause	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1
 actual recipe requester and supplier error	annexes/formula-design-integration.md	crates/sc-core/src/recipe/execution/source_recipe_failure.rs	FormulaScalarSourceRecipeSourceError	G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3	4.1
+complete actual Design formula execution	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/execute.rs	DesignExecutedFormulaRecipe	G1-SLICE.5e.2.5.derived.3.3.3.4.4.4	4.1
+actual Design execution admission or native error	annexes/formula-design-integration.md	crates/sc-core/src/design/formula/execute.rs	DesignFormulaExecutionError	G1-SLICE.5e.2.5.derived.3.3.3.4.4.4	4.1

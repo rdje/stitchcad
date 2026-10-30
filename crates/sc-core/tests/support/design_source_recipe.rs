@@ -13,7 +13,7 @@ use sc_core::{
     recipe::*,
     value::*,
 };
-fn root(recipe: &str, body: &str) -> DesignInputs<Markers> {
+pub(super) fn root(recipe: &str, body: &str) -> DesignInputs<Markers> {
     let mut supplied = definition();
     let mut structure = supplied.structure.definition().clone();
     let mut scalars = structure.inputs.scalars().to_vec();

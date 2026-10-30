@@ -291,3 +291,49 @@ impl<H> fmt::Debug for DesignFormulaScalarPlan<'_, H> {
             .finish_non_exhaustive()
     }
 }
+
+impl<'a, H: crate::design::DesignResourceSource> DesignFormulaScalarPlan<'a, H> {
+    /// Re-admit this actual root's complete held inputs/current references,then execute only the
+    /// already accepted actual source/recipe plans. Original model limits remain explicit in scope;
+    /// namespace/provider/kernel/allocator/CPU/whole Design readiness and approval stay separate.
+    /// No caller root,namespace,plan,value or cache can be substituted. Model/host is never cloned.
+    /// ```
+    /// use sc_core::{design::{DesignFormulaScalarPlan,DesignResourceSource,
+    ///     DesignExecutedFormulaRecipe,DesignFormulaExecutionError},recipe::FormulaScalarExecutionContext};
+    /// fn execute<'a,H:DesignResourceSource>(plan:DesignFormulaScalarPlan<'a,H>,
+    ///     context:FormulaScalarExecutionContext<'a>)
+    ///     ->Result<DesignExecutedFormulaRecipe<'a,H>,DesignFormulaExecutionError<'a,H>> {
+    ///     plan.evaluate(context)
+    /// }
+    /// ```
+    /// # Errors
+    /// Original actual admission precedes native buffer/value errors. Any failure returns no
+    /// accepted statement/source prefix;native allocation causes gain no additional wrapper box.
+    // Keep fresh scope and original rich native allocation failures inline during error reporting.
+    #[allow(clippy::result_large_err)]
+    pub fn evaluate(
+        self,
+        context: crate::recipe::FormulaScalarExecutionContext<'a>,
+    ) -> Result<super::DesignExecutedFormulaRecipe<'a, H>, super::DesignFormulaExecutionError<'a, H>>
+    {
+        let inputs = self.inputs;
+        let original_scope = inputs.scope();
+        let root = original_scope.root();
+        let scope = root
+            .prepare_formula_scope(original_scope.limits())
+            .map_err(|error| super::DesignFormulaExecutionError::Admission { inputs, error })?;
+        let execution = self
+            .recipe
+            .evaluate_with_sources(self.sources, context)
+            .map_err(|error| super::DesignFormulaExecutionError::Execution {
+                inputs,
+                scope,
+                error,
+            })?;
+        Ok(super::DesignExecutedFormulaRecipe {
+            inputs,
+            scope,
+            execution,
+        })
+    }
+}

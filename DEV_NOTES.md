@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — expose complete native source-backed scalar recipe execution
+## _(2026-10-30 UTC)_ — execute only actual Design plans after fresh whole input admission
 
-0607 consumes actual native source/recipe plans and one context;canonical identity precedes full runtime allocation. Six public types retain complete roots/outcomes/read/error provenance and both policies. Original allocator causes stay inline;larger Err avoids allocating on failure.
-Native6/recipe9/source8/doc4/scoped strict lint/fmt pass. Both Derived families/unbound1000/3/stored1000/ordinals,foreign equal roots,nested source/storage errors,empty/lazy cases checked. Extracted source-chain E0599 fixed with qualified Error::source. Independent18/7/27/8/frozen bytes pass.
-Book98/363/1644/2899/glossary0 pass;native API/availability/error policy boundaries align. [Whole0606](docs/history/stitchcad-devnotes-part765.md) retains four spans;prior live ids/order checked. Shared old/new recipe read iterator and source view preserve actual original witnesses;no fake source entry/header.
-Parent .4.4.3 closed native scope. Next .4.4.4 actual Design bridge/.4.5 independent paired acceptance. LIVE G1 6/18/G0 unapproved unchanged;product row notes native source-backed recipes. Full-hosted79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact.
+0608 consumes the private exact-root scalar plan,re-admits complete held input/current data under original model limits,then invokes native pairing. Result retains fresh root/scope/original policies/proofs/whole outcomes. Typed errors preserve admission/native causes;no model clone or extra allocator-error box.
+Native5/doc4/scoped strict lint/fmt pass. Exact limits/demand/proof pointers,unbound1000/3/unchanged canonical state,no-Clone/no-Debug host,fresh current refusal,native nested failure and empty recipe checked. Existing scope/native factories remain authoritative;no supplied plan/value/cache accepted.
+Book98/365/1644/2900/glossary0 pass;fresh scope/API/errors/boundaries align. [Whole0607](docs/history/stitchcad-devnotes-part766.md) retains parent/children/four spans;prior live ids/order checked. Parent .4.4 implemented with focused checks;combined-mode independent acceptance remains pending.
+Next .4.5 independent actual source/recipe/Design acceptance. LIVE G1 6/18/G0 unapproved unchanged;product row notes actual Design-backed recipes. Full-hosted79bd6f6a scoped;D334/D156/D223/PLANNING.5 owned. Full resources/kernel/platform/physical remain owned. Full PNT/push400;protected evidence intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

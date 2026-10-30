@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0607 — expose complete native source-backed scalar recipe execution
+## STITCHCAD-G1-0608 — execute actual Design plans after fresh complete input admission
 
-- Consume both actual plans/one context;reject foreign canonical owners before runtime buffers. Complete original roots/outcomes/read/error views,both policies and inline allocation causes. No fake entry,seed or prefix;containing Design bridge remains next.
-- Native6/recipe9/source8/doc4/scoped lint/fmt/book98/363/1644/2899/glossary0 pass. Both Derived families/unbound versus stored values/foreign roots/errors/empty/lazy cases checked;independent18/7/27/8/frozen bytes retained. Whole0606 in765;parent .4.4.3 closed. Next .4.4.4. LIVE G1 6/18/G0 unapproved unchanged.
+- Re-admit actual held inputs/current references under original model limits before native pairing. Private result retains fresh root/scope/original proof/policy owners and whole execution;typed admission/native errors keep original causes without an extra allocation-error box.
+- Native5/doc4/scoped lint/fmt/book98/365/1644/2900/glossary0 pass. Exact limits/demand/owners,no-Clone/no-Debug host,fresh rejection,native failure/empty result checked. Whole0607 in766/four spans. Parent .4.4 implemented;next .4.5 independent paired acceptance. LIVE G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

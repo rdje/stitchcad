@@ -9,7 +9,7 @@ namespace,computed values or cache.
 Actual Design-backed source and ordered recipe kind checking is also implemented below.
 Native dependency/cycle admission can now feed a same-root combined scalar plan below.
 Native paired source/recipe execution and real recipe storage are implemented below.
-The containing Design execution wrapper and independent paired acceptance remain separate stages.
+Actual Design plan execution is implemented below;independent paired acceptance remains pending.
 A normalized expression is syntax with converted literals;it is not a checked kind,numerical
 result or stored binding. A kind proof still supplies no cycle or numerical acceptance.
 See [source validation and execution](formula-source-proofs.md) and
@@ -295,8 +295,62 @@ through typed getters;standard Error::source forwards the original actual static
 The native operation certifies its supplied canonical/proof scope. It does not establish that
 these plans came from a complete containing Design,its current host namespace or its owned source
 registry. The [actual-root plan join](#join-actual-proofs-and-prepare-complete-scalar-plans) supplies
-that stronger provenance;its direct execution wrapper remains the next stage. Persistence,missing
-kernel families,complete allocator/CPU/platform/physical bounds and approval remain separate.
+that stronger provenance;its actual execution wrapper follows below. Persistence,missing kernel
+families,complete allocator/CPU/platform/physical bounds and approval remain separate.
+
+## Execute the private actual Design plan
+
+DesignFormulaScalarPlan.evaluate(context) consumes only the private same-root plan produced by
+the preceding Design proof/plan stages. It takes one explicit context and accepts no caller root,
+namespace,source/recipe plan,intermediate value or cache. The source graph still originates at the
+exact selected checked source proof;both plans still belong to the actual containing input owner.
+
+Before native runtime buffers or values,the method calls this actual root's complete
+prepare_formula_scope again with the original model-content limits. Every held input field is
+metered before current semantic callbacks. Global ownership,parameters,source references,Materials,
+higher metadata and provided references are rechecked in their original order. The honest immutable
+source-port contract remains required. This is a fresh logical held-input/current admission;
+namespace/provider/kernel/allocator/CPU and whole Design readiness remain separate bounds.
+
+Only that fresh success permits the complete native paired operation. DesignExecutedFormulaRecipe
+retains inputs(),scope() and execution(). inputs() is the original exact-root proof/policy join.
+scope() contains the actual root,original model limits and fresh measured logical demand.
+execution() exposes the complete native plans,context,source roots,real stored recipe outcomes and
+original read witnesses. Neither the model nor host is cloned or mutated. H need not implement
+Clone or Debug. Even an empty actual recipe retains its fresh containing Design scope.
+
+For a prepared actual Design plan,the complete call is:
+
+```rust
+use sc_core::{design::{DesignFormulaScalarPlan,DesignResourceSource,
+    DesignExecutedFormulaRecipe,DesignFormulaExecutionError},recipe::FormulaScalarExecutionContext};
+fn execute<'a,H:DesignResourceSource>(plan:DesignFormulaScalarPlan<'a,H>,
+    context:FormulaScalarExecutionContext<'a>)
+    ->Result<DesignExecutedFormulaRecipe<'a,H>,DesignFormulaExecutionError<'a,H>> {
+    plan.evaluate(context)
+}
+```
+
+The earlier declared_width/tripled_source recipe then executes through actual Design ownership,
+not just the native component scope. Real source9003 stays1000/3;actual recipe lets store1000 when
+their RHS completes. Source ids,canonical dedicated/general families,actual proof owners and
+selected policies remain original. Canonical Length40 still requires Derived evaluation when read
+as authored model state;the execution result is separate from that state.
+
+DesignFormulaExecutionError::Admission retains the original plan inputs and actual
+DesignFormulaScopeError before any native runtime preparation. Its scope() is None because fresh
+admission failed. A host that starts refusing current validation after plan preparation is caught
+here with the original Inputs/Sources/Host cause,actual root and selected model limits.
+Execution instead retains the fresh accepted scope and original FormulaScalarSourceRecipeError.
+Its requester/supplier/value/provider/allocation witnesses and both native policies remain intact.
+Any failure returns no accepted earlier source or statement prefix.
+
+Native allocation causes gain no additional wrapper box. Rich native errors/fresh scope stay
+inline,so the local large-error allowances avoid allocating while reporting allocation failure.
+Admission errors keep their existing compact semantic representation. Standard error chaining
+forwards original static causes;borrowed typed details remain available in the variants/getters.
+The operation grants no persistence,remaining kernel families,Factory Profile evidence truth,
+whole allocator/CPU/platform/physical certificate or human approval.
 
 ## Public API and failure ownership
 
@@ -322,6 +376,8 @@ kernel families,complete allocator/CPU/platform/physical bounds and approval rem
 | `FormulaScalarSourceRecipeError` | Complete actual paired proof/inventory/graph/policies and first cause |
 | `FormulaScalarSourceRecipeErrorCause` | Original ownership,source/recipe preparation/execution or requester failure |
 | `FormulaScalarSourceRecipeSourceError` | Original requester statement/operand/node/input and supplier cause |
+| `DesignExecutedFormulaRecipe` | Actual root/fresh logical admission and complete original native execution |
+| `DesignFormulaExecutionError` | Original Admission or Execution failure with actual plan/root/policy context |
 
 Accepted scopes,normalizations and checked wrappers have private fields and construction paths.
 root(),limits(),demand() and source_inputs() expose immutable facts on the scope. Each normalized
@@ -363,7 +419,7 @@ An actual later source failure poisons the private runtime. Even an earlier succ
 root cannot then be requested or published as an accepted prefix. The enclosing worker returns
 its original typed failure and drops the complete private state. This supplies an internal reuse
 boundary;it introduces no caller-seeded cache or new public execution API. The actual combined
-Design recipe worker and once-only let storage bridge remain subsequent tasks.
+Design recipe execution and actual once-only storage now use the completed paired loop below.
 
 The private recipe read adapter now supports actual Derived suspension against that earned runtime.
 An unresolved canonical Derived name returns the original joined input to the existing machine
@@ -392,7 +448,7 @@ returns RequiresEvaluation for unresolved Derived inputs. Its public read-kind e
 prior-let result interfaces remain unchanged. A private read record distinguishes earned Derived
 witnesses for the forthcoming integrated worker;it cannot be published as a standalone direct read.
 The private paired loop is now implemented below. Its public native result/read/error interfaces are described below;the actual Design execution
-entry point and independent acceptance remain subsequent tasks.
+entry point is also implemented below. Independent paired acceptance remains pending.
 
 The recipe side now stages its original admitted plan,fixed context,N task/value buffers and
 complete S outcome reservation in a shared private runtime. Construction starts no operand,read,
@@ -441,6 +497,14 @@ its existing Unknown/Derived requirements and its public read/result interfaces 
 
 ## Focused verification and remaining work
 
+Five further Design execution contracts check exact actual root/model limits/fresh demand,original
+proof owners,unbound source roots and unchanged canonical states,a non-Clone/non-Debug host,
+fresh current-host rejection before native execution,retained native requester/supplier failures
+and empty recipe containment. Compiler guards reject result mutation/root lifetime escape and
+compile the generic actual plan call. These focused checks do not replace independent paired
+reference acceptance or the separately owned full integration/platform gates.
+
+
 Six public native contracts run actual Design-owned source/recipe/namespace factories before the
 component operation. They check both dedicated/general Derived families,unbound roots/stored
 values/ordinals/read witnesses,equal-model foreign inventory refusal,original nested supplier and
@@ -472,7 +536,7 @@ the generic preparation example compiles without a host Clone/Debug bound.
 Kind checking alone grants no cycle acceptance. Native dependency/cycle factories still own that
 stage before Design plan preparation. Planning grants no numerical result,provider completeness,
 whole runtime resource bound or production approval. Native paired execution now earns real
-Derived reads and once-only storage;subsequent leaves own actual Design execution and independent
-paired integration acceptance. Broad verification
+Derived reads and once-only storage through both native and actual Design entry points.
+Independent paired integration acceptance remains separately owned. Broad verification
 remains deferred until the agreed feature set is complete;the latest full local/hosted verdict
 remains scoped to its recorded Git revision.

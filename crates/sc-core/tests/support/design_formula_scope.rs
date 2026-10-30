@@ -98,7 +98,11 @@ fn exact(demand: DesignResourceDemand) -> DesignResourceLimits {
     )
 }
 pub(super) fn observed() -> (DesignInputs<ObservedHost>, Rc<Cell<usize>>, Rc<Cell<bool>>) {
-    let supplied = definition();
+    observed_definition(definition())
+}
+pub(super) fn observed_definition(
+    supplied: DesignInputsDefinition<Markers>,
+) -> (DesignInputs<ObservedHost>, Rc<Cell<usize>>, Rc<Cell<bool>>) {
     let semantic = Rc::new(Cell::new(0));
     let reject = Rc::new(Cell::new(false));
     let sources = DesignMetadata::new(
