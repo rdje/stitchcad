@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.1:shared/root/arc/forward/inverse runtime/locality,then n16.2.
-- Latest unit STITCHCAD-G1-0656;derive HEAD/ahead from Git. a40 fresh search audit complete.
-- D356 ownership race reproduced with actual old entry/trapped write;fixed exclusive reservation
-  after complete plan. Five writes/three intercepted children/six failures/13 refusals/nine body reds pass.
-- Actual mdBook0.5.4:897→101 documents/101 chapters/70044 chapter-word/58039 indexed-term pairs exact;
-  candidate warnings0. Native109 inputs/public137 files unchanged during capture;public build later refreshed.
-- target/book_search_0656_20261030T234938769588Z-14711/verification.json SHA3785ec5aed8e3440b582aa29ebd116f2bd7fee9bb741f91c1615a67e001e97ea.
-- Book101/374/1684/2997/history815 four exact Git spans/IDs+0/census/map/diff pass;no Rust changes.
-- Numerical .5d.4 all43 done;D355 current status fixed. .5d.2/.5e.3 remain active;.5e.4 pending.
-- Full0654 actual29/source1223 pass predates a40 changes;broader verification .h2.b.v/pre-push remains owned.
-- Preserve native legacy6614/old9 reports/4905 restored snapshots/platform four binaries/certificates;
-  full receipts remain protected. Never rerun historical captures or overwrite old proof.
-- G1 6/18/G0 human closure unapproved. No application/allocator/CPU/provider/replay/geometry/
-  physical/release closure. Cleanup2026-10-30 14:18 UTC unchanged;full PNT/push400 only.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.effects:shared controller/three wrapper complete runtime/effect
+  capture and path/restoration guards;then .consumer fresh native acceptance,then n16.2.
+- Latest unit STITCHCAD-G1-0657;derive HEAD/ahead from Git. n16.1.inventory done;parents active.
+- D357 P1 actual old --plan-only with unrelated GIT_DIR exits128;shared Git inventory now isolates
+  all Git selectors/config/optional locks while preserving caller stores/toolchain/other values.
+- Four actual plan-only entries:6/6/8/10 variants/current545 exact files;no directory/write/compiler
+  effects. Six actual body reds pass;external CLI with unrelated GIT_DIR now passes6/545/557.
+- Book101/374/1684/2998/history816 four exact Git spans/census/map/diff pass;no Rust/kernel changes.
+- Inventory proof is not full runtime locality. .effects/.consumer/n16.2 pending;D156/.h2.b.v/
+  pre-push broader verification remains owned. Full0654 actual29/source1223 predates these changes.
+- a40 complete0656;D356 fixed;fresh native search897→101/101 chapters/70044 words/58039 terms exact
+  on its recorded source basis. Preserve target/book_search_0656_20261030T234938769588Z-14711.
+- Numerical .5d.4 all43 done;.5d.2/.5e.3 remain active;.5e.4 pending. G1 6/18/G0 unapproved.
+- Preserve original native/certificate/archive/search evidence;no old reruns or foreign writes. Cleanup2026-10-30 14:18 UTC unchanged;not due yet. Full PNT/push400 only;no app/release approval.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

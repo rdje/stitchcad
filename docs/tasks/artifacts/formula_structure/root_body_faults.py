@@ -42,6 +42,14 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def inventory_environment():
+    """Read this repository's index without borrowing unrelated Git authority."""
+    environment = {name: value for name, value in os.environ.items() if not name.startswith('GIT_')}
+    environment.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                       GIT_OPTIONAL_LOCKS='0', GIT_LITERAL_PATHSPECS='1')
+    return environment
+
+
 def reserve_capture(path):
     """Only an atomically created new directory can own a replay's writes."""
     path.mkdir()
@@ -257,7 +265,7 @@ def main(config=None):
     profile['plan_producer'](ROOT, sources=initial, directories=(run_dir, copy_root, ROOT / 'target'),
         output_files=(*logs, report_path, negative, positive, *control_outputs))
     inventory = subprocess.run(['git', 'ls-files', 'crates'], cwd=ROOT,
-        check=True, capture_output=True, text=True).stdout.splitlines()
+        env=inventory_environment(), check=True, capture_output=True, text=True).stdout.splitlines()
     snapshot = tuple(sorted({ROOT / name for name in inventory} | {
         ROOT / name for name in ('Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml')}))
     sources = tuple(sorted(set(initial) | set(snapshot)))

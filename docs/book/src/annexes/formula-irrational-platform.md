@@ -316,3 +316,24 @@ The full verification result supports the [completed scoped numerical review](fo
 Application/device coverage,complete allocator/provider/replay/geometry integration,physical
 validation and human production-release approval keep their separate owners. Hosted CI remains
 the previously observed SHA-scoped result until the authorized push cadence is reached.
+
+## Read-only numerical snapshot inventory
+
+The shared root/arc/forward/inverse controller inventories this repository's tracked crate files
+and root workspace manifests before planning its exact copied workspace. Its Git child discards
+unrelated Git selectors,disables optional index locks and reads no system/global configuration.
+The caller's local build stores,toolchain selection and other environment values stay intact.
+An unrelated GIT_DIR therefore cannot redirect this inventory to another repository.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/arc_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/forward_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py --plan-only
+```
+
+These commands validate source and destination plans and print classifier controls without
+creating directories,writing snapshots or dispatching a compiler. The focused watcher runs the
+actual four entries with unrelated Git selectors and rejects six actual inventory-body faults.
+This closes only the inventory boundary. Complete controller effects,child/runtime locality and
+fresh native-consumer acceptance remain under n16;no existing numerical receipt is overwritten.

@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0656 — reserve fresh search captures and preserve indexed coverage
+## STITCHCAD-G1-0657 — isolate read-only numerical snapshot inventory
 
-- D356 fixes capture ownership race with complete plans/exclusive reservation. Focused dispatch/failure/collision controls pass13 refusals/nine body reds;registry and watched suite updated.
-- Actual mdBook0.5.4:897→101 documents/101 chapters/70044 word/58039 indexed-term pairs exact,warnings0 for candidate;109 inputs/public137 unchanged during capture. Book101/374/1684/2997/history815/census/map/diff pass. No Rust change;G1 6/18/G0 unapproved;next n16.1.
+- D357 fixes unrelated Git selectors redirecting the shared inventory. Four actual plan-only entries/545 files and six body reds pass without snapshot/compiler effects;caller stores/toolchain/argv exact. External root CLI with unrelated GIT_DIR now passes.
+- Book101/374/1684/2998/history816/census/map/diff pass;no kernel change. n16/n16.1 remain active;next .effects,then .consumer/n16.2. Full0654 gates predate this repair;D156/integration/pre-push stay owned;G1 6/18/G0 unapproved.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

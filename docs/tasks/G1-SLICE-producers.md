@@ -487,22 +487,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a40`
   Status: `done`
-  - [x] ISSUE:D156 fresh same-source search capture audit;D356 P1 capture ownership race.
-  - [x] ROOT CAUSE (WHY + WHERE):actual0655 entry checks freshness before nonexclusive
-    directory creation;controlled competing capture reaches trapped metadata overwrite/child0,rc=0.
-  - [x] FIX:complete source/three-directory/five-file plan,exclusive capture reservation before
-    activation,warn-preserving prepared children with source creation disabled;no historical recapture.
-  - [x] ADDRESSED:python_search_capture_contract.py →five writes/three intercepted dispatches,
-    six calibrated failure paths,original/fixed collision,nine path/four input refusals,
-    nine actual source-body faults rejected;original inputs/argv/environment exact,rc=0.
-  - [x] NO REGRESSION:actual mdBook0.5.4 and read-only migration contract →897→101 documents,
-    101 chapters/70044 chapter-word/58039 indexed-term pairs exact;candidate warnings0,rc=0.
-    Native109 inputs and existing public137 files unchanged during capture;receipt retained.
-    Positive book101/374/1684/2997/history815 four Git spans/census/map/diff pass,rc=0.
-  - [x] LOCKSTEP:book/registries/watched suite/live/MEM/index sync;D356 fixed. Promotion declined
-    (existing fresh ownership/source/effect contracts). n16.1 then n16.2 next;full D156/.h2.b.v
-    and pre-push verification remain pending. Complete0654 full probes predate this repair.
-  Commit:STITCHCAD-G1-0656;Verification:focused controls and fresh actual same-source comparison.
+  Goal:0656 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part816.md).
 
 ## Ordered native file-destination repairs
 
@@ -913,7 +898,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   No implementation change during discussion; split migration leaves before implementation.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16`
-  Status: `pending`
+  Status: `in_progress`
   Goal:complete shared numerical-body probe runtime/locality review after coupled implementation;
   retain scoped feature evidence without claiming complete transitive compiler/build locality.
   Schedule:after .5d.4 coupled feature completion,before producer/locality signoff. Feature probes own explicit
@@ -921,9 +906,34 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Acceptance:public-entry/alias/source/output/child/failure review,actual path refusals and
   omission guards,focused unchanged-source consumer;no global cache or foreign repository write.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1`
-  Status: `pending`
+  Status: `in_progress`
   Goal:shared controller/root/arc/forward/inverse locality review under parent schedule/acceptance.
   Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.inventory`
+  Status: `done`
+  - [x] ISSUE:D357 P1 unrelated caller Git selectors redirect shared native snapshot inventory.
+  - [x] ROOT CAUSE (WHY + WHERE):actual prior root --plan-only with unrelated nonexistent
+    GIT_DIR →git ls-files exit128 before snapshot/compiler effects;ambient inventory child,rc=0.
+  - [x] FIX:isolate all Git selectors and system/global config;optional locks off/literal paths,
+    while preserving local stores/toolchain/unrelated caller variables;read-only index command unchanged.
+  - [x] ADDRESSED:python_numerical_inventory_contract.py →four actual plan-only entries,
+    variants6/6/8/10/current545 exact snapshot files;six actual inventory-body faults rejected,
+    no directory/write/compiler effects;original sources/environment/argv exact,rc=0.
+  - [x] NO REGRESSION:actual external root CLI with unrelated GIT_DIR →6 variants/545 files/
+    557 outputs,rc=0. Book101/374/1684/2998;history816 four exact Git spans/census/map/diff pass,rc=0.
+    No Rust/kernel/native fault changes;full native consumer deliberately deferred to .consumer.
+  - [x] LOCKSTEP:book/live/registry/watched suite/frontier sync;D357 fixed. Promotion declined
+    (existing read-only/caller-authority contract). n16/n16.1 remain active;.effects/.consumer/
+    n16.2 pending. Full0654 gate predates this repair;D156/.h2.b.v/pre-push remain owned.
+  Commit:STITCHCAD-G1-0657;Verification:actual read-only plans and focused inventory/body controls.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.effects`
+  Status: `pending`
+  Goal:complete shared controller/three wrapper path/effect/child/failure captures and omission
+  controls,including aliases,mutable snapshot bodies,artifact and restoration declarations.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.consumer`
+  Status: `pending`
+  Goal:run focused fresh native consumers after inventory/effect repairs;verify original sources,
+  full snapshot restoration and runtime identities,then close this four-entry group only.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
   Status: `pending`
   Goal:tangent/platform entry locality review under parent schedule/acceptance;feature evidence is scoped.

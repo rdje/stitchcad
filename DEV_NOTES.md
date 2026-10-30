@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — reserve fresh search captures and verify actual indexed coverage
+## _(2026-10-30 UTC)_ — isolate read-only numerical snapshot inventory
 
-0656 closes a40's fresh public capture review. D356 P1:the original actual entry checks existence before nonexclusive profile creation;an isolated competitor reaches a trapped metadata overwrite/child0. Complete plans now precede exclusive reservation;prepared children explicitly disable source creation.
-Watcher passes five writes/three intercepted children,six calibrated failure paths,nine path/four input refusals and nine actual body reds. Sources/argv/caller stores restore exactly. Registered watcher data supplies no native verdict. D156 stays open.
-Actual mdBook0.5.4 yields897→101 documents/101 chapters/70044 chapter-word/58039 indexed-term pairs exact;candidate warnings0. Native109 inputs and public137 files remain unchanged during that capture;the later positive public build passes101/374/1684/2997. History815/census/map/diff pass;no Rust change.
-[Whole0655](docs/history/stitchcad-devnotes-part815.md) retains numerical scoped acceptance/D355. LIVE notes:D356 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing ownership/claim contracts. Full0654 gates predate this repair;.h2.b.v/pre-push pending. PNT next:n16.1 then n16.2.
-Receipt:target/book_search_0656_20261030T234938769588Z-14711/verification.json SHA3785ec5aed8e3440b582aa29ebd116f2bd7fee9bb741f91c1615a67e001e97ea. Original capture directories remain untouched;fresh logs,source hashes,tool version and exact runner retained together.
+0657 closes n16.1.inventory only. D357 P1:actual original root --plan-only inherits unrelated GIT_DIR and exits128 in git ls-files before snapshots/compiler. Shared inventory now strips all Git selectors,disables system/global config/optional locks and preserves caller stores/toolchain/other values.
+Watcher runs all four actual plan-only entries,variants6/6/8/10/current545 exact snapshot files;no directories,writes or compiler effects. Six actual inventory-body faults reject;caller sources/environment/argv exact. External root CLI with unrelated GIT_DIR now passes6/545/557. No kernel change.
+Positive book101/374/1684/2998/history816 four exact Git spans/current census/map/diff pass. Register read-only watcher in the suite;no native substitution or locality claim. Full0654 gates predate this repair;full D156/.h2.b.v/pre-push remain owned. Native acceptance deferred to .consumer after .effects.
+[Whole0656](docs/history/stitchcad-devnotes-part816.md) retains actual search coverage/D356 proof. LIVE notes:D357 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing caller-authority contract. n16/n16.1 active;.effects/.consumer/n16.2 pending;full PNT continues.
+Evidence:target/inventory-0657-controls.log and target/inventory-0657-census.log. Tracked watcher derives current snapshot counts independently and rejects selector/locking/config/store/cwd faults;read-only Git argv retained. No historical report,capture or source rewritten.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
