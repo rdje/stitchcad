@@ -599,7 +599,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0627 completed scope; [whole scope/proofs](../history/window25.md#stitchcad-devnotes-part787md).
 - ID: `G1-SLICE.5d.4.forward`
-  Status: `in_progress`
+  Status: `done`
   Goal:coupled sin/cos folding,complete threshold certificate,rounding/provenance and actual fault
   review;preserve original full-width operands and protected certificate workspaces.
 - ID: `G1-SLICE.5d.4.forward.retention`
@@ -607,35 +607,37 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal:0630 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part790.md).
 - ID: `G1-SLICE.5d.4.forward.values`
   Status: `done`
-  Goal:0631 complete forward proof/native sourced storage review;original44 fixtures unchanged.
-  - [x] REPRODUCE / ISSUE:forward44 had native values/independent oracle but no all-row sourced
-    storage watcher;current docs still claimed later provenance/full AST pending. Own repair here.
-  - [x] ROOT CAUSE (WHY + WHERE):original native target has3 tests;trig.rs folds signed full-width
-    Angle into first octant and rounds512-bit/64-term lower endpoint. Complete1M exclusion is
-    separate from enclosure proof. sincos_runtime_plan.py →770*2^-512<2^-502<2^-384,workspace
-    <2^1026;Fraction14/octant50/insufficient2 pass,rc=0. Q=360M*(2^128-1) preserved by folds.
-  - [x] FIX:add actual sqrt/atan zero arithmetic before each original sin/cos,then real bind/read/
-    T1 checks. Keep every original Angle and fixture byte;correct Rust/book provenance/current
-    scalar execution status. Actual body faults/platform remain separate children.
-  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- cargo test --offline
-    --locked -p sc-core --test formula_sincos_value_contract →4 pass,88 sourced outputs retain
-    actual Sqrt/Atan/own flags through signed storage/read,T1 refused,rc=0. Live independent
-    oracle regenerates44 rows/2404B/SHA5ee377fe;original numeric kinds/argument0 refusals pass.
-    verify_forward_certificate.py →1M rows/100 contiguous chunks/hash/gaps/strict margins/source
-    identities exact,rc=0. Known3/Fraction4/small-Q32/negative2/reader corrupt3 controls pass0;
-    manifest unchanged. This reader does not rederive inverse intervals;separate proof leg retained.
-  - [x] NO REGRESSION:local launcher cargo clippy --offline --locked -p sc-core --lib --test
-    formula_sincos_value_contract -- -D warnings and rustfmt --check pass,rc=0. Whole790 four
-    exact Git spans/prior IDs plus2 children/map/diff/book99/374/1659/2938/glossary0 pass,rc=0.
-    Private pi/certificate inputs unchanged since independently reproduced0626;no new platform CI.
-  - [x] LOCKSTEP:canonical/book/actual native watcher/live status aligned;whole0630 retained790.
-    G1 6/18/G0 unapproved;next .forward.faults. Full/hosted79bd6f6a SHA-scoped only.
-    promotion: declined (existing independent-oracle/complete-proof/actual-source contracts applied;no new numeric policy or production authority).
-  Commit:STITCHCAD-G1-0631;Verification:4 native/1M certificate/plan/Fraction guards/lint/book.
+  Goal:0631 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part791.md).
 - ID: `G1-SLICE.5d.4.forward.faults`
-  Status: `pending`
-  Goal:compile original sin/cos baseline and actual folding/sign/scale/series/rounding body faults
-  against independent rows through guarded isolated workspace;preserve all original inputs.
+  Status: `done`
+  Goal:0632 actual forward bodies and D343 exact independent failure proof across all3 families.
+  - [x] REPRODUCE / ISSUE:pre-fix0632 forward report lists1/10/19 for row1 panic. Root4/10
+    duplicate bytes;Cargo JSON debug_assertions also satisfies old generic assertion substring.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/forward_body_faults.py
+    --plan-only →3 exact controls/2 old false-admissions/13 refusals,rc=0. Shared controller
+    searched row/JSON substrings without ordinal or panic ownership. Old reports/logs retained.
+  - [x] FIX:three independent watchers add ordinal/full-row context without changing assertions
+    or fixtures. Shared classifier requires one named-test stderr panic and one exact original
+    ordinal/row marker;retain full independent_failure payload. Fresh root/arc/forward identities
+    replay every affected family. New forward entry registers native ownership and suite dispatch.
+  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- python3 -I -B
+    docs/tasks/artifacts/formula_structure/forward_body_faults.py,then root_body_faults.py and
+    arc_body_faults.py with OS visibility →3 baselines pass/17 faults compile then fail actual
+    independent assertions,rc=0. Forward7 rows1/4/1/1/1/7/7;root5 rows4/9/17/24/4;arc5 rows10/6/
+    4/11/4. Sources545/544/545 and each542-file snapshot exact;outputs553/551/551;timeout2 each
+    pass,rc=0. Reports:target/{forward,root,arc}_body_faults/0632-{verified-forward,exact-root,exact-arc}.
+    Preflight sandbox EPERM before copy/native dispatch left no job (OS census0);failed fixture
+    retained and fresh OS-visible replay passed. No group-cleanup guard weakened.
+  - [x] NO REGRESSION:cargo test --offline --locked -p sc-core --test formula_root_value_contract
+    --test formula_arc_value_contract --test formula_sincos_value_contract →14 pass,including
+    exact independent fixture regeneration,rc=0. Same targets/library strict Clippy,rustfmt/bash
+    syntax pass,rc=0. Producer350/34352 calls/file-plan237/90 owners/39 groups/15 refusals/12
+    guard reds pass,inspection only;runtime/locality n16 pending. Whole791 four Git spans/IDs/map/
+    diff/book99/374/1659/2939/glossary0 pass,rc=0. All original numerical bodies/fixtures unchanged.
+  - [x] LOCKSTEP:D343 fixed0632;book/ledger/live/task align. Scoped native forward parent closes;
+    shared platform/full coupled acceptance remains. Next .inverse;G1 6/18/G0 unapproved unchanged.
+    promotion: declined (existing actual independent failure-family and whole-witness contracts;explicit ordinal binding repairs their implementation without new numeric or production authority).
+  Commit:STITCHCAD-G1-0632;Verification:exact classifier3/13/actual17/primary14/restoration/book.
 - ID: `G1-SLICE.5d.4.inverse`
   Status: `pending`
   Goal:coupled atan/atan2 whole-ratio/branch/threshold/error/provenance and actual fault review;

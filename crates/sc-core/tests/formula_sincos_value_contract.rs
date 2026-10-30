@@ -109,10 +109,12 @@ fn actual_sourced_outputs_keep_upstream_calls_full_inputs_storage_and_t1_refusal
         .expect("real zero Angle with two actual call contributions");
     let name = MachineToken::new("actual_forward_binding").expect("binding name");
     let mut outputs = 0;
-    for row in include_str!("fixtures/formula_sincos.tsv")
+    for (index, row) in include_str!("fixtures/formula_sincos.tsv")
         .lines()
         .filter(|r| !r.starts_with('#'))
+        .enumerate()
     {
+        let row_number = index + 1;
         let fields: Vec<_> = row.split('\t').collect();
         let [numerator, denominator, sine, cosine] = fields.as_slice() else {
             unreachable!("four original independent forward columns")
@@ -136,7 +138,7 @@ fn actual_sourced_outputs_keep_upstream_calls_full_inputs_storage_and_t1_refusal
         assert_eq!(
             angle.numeric(),
             Some(original),
-            "no input storage/narrowing:{row}"
+            "no input storage/narrowing:fixture-row={row_number};{row}"
         );
         assert_eq!(angle.sources().iter().count(), 2);
         for (actual, expected, call) in [
@@ -148,10 +150,13 @@ fn actual_sourced_outputs_keep_upstream_calls_full_inputs_storage_and_t1_refusal
             assert_eq!(
                 result.numeric().expect("Ratio").rational(),
                 R::from_signed_integer(expected.parse().expect("independent ppm")),
-                "{row}:{call:?}"
+                "fixture-row={row_number};{row}:{call:?}"
             );
             for source in [F::Sqrt, F::Atan, call] {
-                assert!(result.sources().contains(source), "{row}:{source:?}");
+                assert!(
+                    result.sources().contains(source),
+                    "fixture-row={row_number};{row}:{source:?}"
+                );
             }
             assert_eq!(result.sources().iter().count(), 3);
             assert!(result
@@ -159,7 +164,11 @@ fn actual_sourced_outputs_keep_upstream_calls_full_inputs_storage_and_t1_refusal
                 .check_tolerance(FormulaToleranceName::Numerical)
                 .is_err());
             let binding = result.bind(&name).expect("actual signed ppm storage");
-            assert_eq!(binding.read().expect("actual stored read"), result, "{row}");
+            assert_eq!(
+                binding.read().expect("actual stored read"),
+                result,
+                "fixture-row={row_number};{row}"
+            );
             outputs += 1;
         }
     }

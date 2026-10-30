@@ -636,6 +636,6 @@ sourced storage/read and live reproduction of all2404 fixture bytes. The separat
 different pi identity,768-bit direct powers/factorials and128 terms over the signed principal
 interval. Real upstream sqrt/atan contributions survive all forward calls and binding,including
 exact axes;T1 remains refused. The [coupled forward review](formula-irrational-review.md#forward-sine-and-cosine-boundaries)
-records the complete certificate and remaining actual-body/platform proof. Scoped AST/source/
+records the complete certificate,actual body faults and remaining platform proof. Scoped AST/source/
 recipe/Design scalar execution is available;geometry,complete resources and broad acceptance
 remain owned in the execution plan. Tangent retains its explicit independent per-call policies.

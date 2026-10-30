@@ -904,10 +904,10 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16`
   Status: `pending`
-  Goal:complete shared root/arc-body probe runtime/locality review after coupled arc implementation;
+  Goal:complete shared numerical-body probe runtime/locality review after coupled implementation;
   retain scoped feature evidence without claiming complete transitive compiler/build locality.
-  Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py
-  Schedule:after .5d.4.arc.faults,before producer/locality signoff. Feature probes own explicit
+  Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py
+  Schedule:after .5d.4 coupled feature completion,before producer/locality signoff. Feature probes own explicit
   original inputs,complete variant files/logs/binaries and repository-local build/scratch stores.
   Acceptance:public-entry/alias/source/output/child/failure review,actual path refusals and
   omission guards,focused unchanged-source consumer;no global cache or foreign repository write.

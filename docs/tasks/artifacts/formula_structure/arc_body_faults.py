@@ -10,7 +10,7 @@ PROFILE['plan_producer'](ROOT, sources=(Path(__file__), DRIVER, PROFILE_SOURCE))
 CONTROLLER = runpy.run_path(str(DRIVER))
 CONFIG = dict(entry=Path(__file__), source=ROOT / 'crates/sc-core/src/recipe/arc.rs',
     fixture=ROOT / 'crates/sc-core/tests/fixtures/formula_arcs.tsv',
-    run=ROOT / 'target/arc_body_faults/0627-workspace', rows=23, family='arc',
+    run=ROOT / 'target/arc_body_faults/0632-exact-arc', rows=23, family='arc',
     target='formula_arc_value_contract',
     test='actual_sourced_arcs_keep_signed_turns_original_refusals_and_real_upstream_storage_flags',
     faults=(

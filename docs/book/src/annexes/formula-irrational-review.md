@@ -9,7 +9,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | --- | --- | --- |
 | sqrt/hypot | Exact integer roots and sourced calls | Native85 rows/five actual body faults pass below;shared platform review remains |
 | arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;shared platform review remains |
-| sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/actual sourced88 pass below;body faults/platform remain owned |
+| sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/sourced88/seven actual body faults pass;shared platform remains |
 | atan/atan2 | Principal branches and complete inverse threshold certificate | Coupled actual-body/source/platform review remains .5d.4.inverse |
 | tan | Explicit per-call quotas,native139 and real paired24 acceptance | Coupled adaptive/error/fault review remains .5d.4.tangent |
 
@@ -212,7 +212,60 @@ or unit outputs. Every actual signed Ratio binding/read matches the result and a
 T1 remains refused. Four original wrong numeric kinds retain their typed actual-call/argument0
 refusal even at zero. No source flags or computed values are seeded into this watcher.
 
-The native target now passes4 tests,including independent fixture reproduction. Actual kernel
-body faults remain G1-SLICE.5d.4.forward.faults;declared native/browser execution parity remains
+The native target passes4 tests,including independent fixture reproduction. Seven actual kernel
+body faults pass below;declared native/browser execution parity remains
 G1-SLICE.5d.4.platform. These focused native/certificate checks grant no full integration,
 allocator,physical or release approval.
+
+## Exact native fault evidence and forward body controls
+
+D343 exposed two misleading identities in the original shared fault report. A negative forward
+row contained the entire zero and positive row strings,so substring matching reported1/10/19 for
+one row1 panic. Root rows4 and10 have identical original fixture bytes;the first panic occurred at4.
+Cargo JSON also contains debug_assertions,so finding the word assertion in combined output did
+not establish a watched-test failure. The original0625/0627 reports and the preliminary0632
+forward report remain retained;their source/binary evidence is not rewritten. Their genuine
+mathematical rejections remain distinct from the corrected ordinal-reporting claim.
+
+The independent native watchers now enumerate the unchanged fixture rows and add an explicit
+fixture-row ordinal plus complete original row to numerical assertion messages. The controller
+requires exactly one stderr panic from the named watched test,one marker,a bounded ordinal and
+the entire row at that ordinal. It permits only the documented trailing assertion context after
+a colon. Substring matches,duplicate row text,unrelated JSON,wrong-test panics,truncation and
+multiple markers cannot substitute for that evidence. Each accepted report retains the exact
+independent_failure payload as well as its single failed_fixture_rows ordinal.
+
+Three direct controls cover negative,zero and duplicate-row identities. Two original substring
+counterexamples reproduce the old ambiguity;thirteen unrelated or malformed transcripts refuse.
+Every real probe still requires a successful Cargo build,an actual one-test execution and a
+failed watched test before classifying the numerical assertion. Compiler failure never counts.
+The shared timeout controls and exact original/snapshot restoration remain mandatory.
+
+The forward entry uses the same original-scope copied-workspace controller with44 original
+angles/88 actual sourced outputs. Its seven copied trig.rs faults cover cosine evenness,
+period length,the cosine quarter shift,octant complementation,ppm scaling,series truncation and
+final integer rounding. Independent frozen fixture values reject incorrect numerical behavior;
+source contributions and actual storage/read remain part of the watched native baseline.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/forward_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/forward_body_faults.py
+```
+
+All workspaces,build stores and logs remain repository-local. Fresh0632 replay identities keep
+the original reports intact. An initial sandbox replay refused an owned process-group kill
+before copying or compiler dispatch;the OS-visible census proved no remaining descendant.
+The fresh native replay uses the access required for its POSIX timeout controls. These controls
+remain finite native evidence;transitive producer/locality and browser parity stay separately owned.
+
+The fresh runs pass three baselines and seventeen successfully compiled numerical faults.
+Forward rejects cosine-sign,period,quarter-shift,octant,scale,series and rounding faults at exact
+original ordinals1/4/1/1/1/7/7. Root rejects its five faults at4/9/17/24/4;arc at10/6/4/11/4.
+Each report contains one explicit failure ordinal and its complete original assertion payload.
+Current reports are under target/forward_body_faults/0632-verified-forward/,
+target/root_body_faults/0632-exact-root/ and target/arc_body_faults/0632-exact-arc/.
+Their original source populations545/544/545 and542 copied files each remain byte-exact;planned
+outputs553/551/551 and both timeout controls per family pass. Original kernels/fixtures are unchanged.
+The14 affected primary tests and strict lint/formatting pass after restoration,including all three
+independent fixture regenerations. This closes scoped native forward review;inverse,Tan,mixed-call,
+actual platform execution and complete coupled/resource/provider/release acceptance remain owned.

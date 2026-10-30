@@ -9,6 +9,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import runpy
 import signal
 import subprocess
@@ -19,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[4]
 PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 SOURCE = ROOT / 'crates/sc-core/src/recipe/roots.rs'
 FIXTURE = ROOT / 'crates/sc-core/tests/fixtures/formula_roots.tsv'
-RUN = ROOT / 'target/root_body_faults/0625-workspace'
+RUN = ROOT / 'target/root_body_faults/0632-exact-root'
 COPY = RUN / 'workspace'
 REPORT = RUN / 'report.json'
 FAULTS = (
@@ -100,6 +101,67 @@ def timeout_control(profile, negative, positive):
     return {'parent_only_child_wrote': True, 'guarded_group_child_write_absent': True}
 
 
+def classify_failure(stderr, test_name, rows):
+    """Bind one actual watched-test panic to its explicit ordinal and complete original row."""
+    headers = [line for line in stderr.splitlines()
+               if line.startswith("thread '") and ' panicked at ' in line]
+    assert len(headers) == 1, 'one actual watched-test panic required'
+    pattern = (r"^thread '" + re.escape(test_name)
+               + r"'(?: \([0-9]+\))? panicked at [^\n]+\n([^\n]+)$")
+    payloads = re.findall(pattern, stderr, re.MULTILINE)
+    assert len(payloads) == 1, 'actual panic belongs to a different test'
+    payload = payloads[0]
+    markers = list(re.finditer(r'fixture-row=([1-9][0-9]*);', payload))
+    assert len(markers) == 1, 'independent ordinal assertion marker required'
+    marker = markers[0]
+    ordinal = int(marker[1])
+    assert 1 <= ordinal <= len(rows), 'fixture ordinal outside original population'
+    tail = payload[marker.end():]
+    row = rows[ordinal - 1]
+    assert tail == row or tail.startswith(row + ':'), 'complete original fixture row required'
+    return ordinal, payload
+
+
+def classifier_controls():
+    negative = '-720000000\t1\t0\t1000000'
+    zero = '0\t1\t0\t1000000'
+    positive = '720000000\t1\t0\t1000000'
+    duplicate = 'sqrt\tarea\t9\t4\t0\t1\tlength\tinteger:2'
+    rows = [negative, zero, positive, duplicate, duplicate]
+    header = "thread 'watched' (123) panicked at original.rs:1:1:\n"
+    def panic(ordinal, row):
+        return header + f'assertion `left == right` failed: fixture-row={ordinal};{row}:Cos\n'
+    for ordinal in (1, 2, 5):
+        assert classify_failure(panic(ordinal, rows[ordinal - 1]), 'watched', rows)[0] == ordinal
+    legacy = header + 'assertion `left == right` failed: ' + negative + '\n'
+    assert [i + 1 for i, row in enumerate(rows) if row in legacy] == [1, 2, 3]
+    assert [i + 1 for i, row in enumerate(rows) if row in duplicate] == [4, 5]
+    refused = [
+        legacy,
+        '{"debug_assertions":true}\nunrelated assertion failure\n',
+        panic(1, negative).replace("'watched'", "'unrelated'"),
+        panic(1, negative) + panic(2, zero),
+        panic(0, negative),
+        panic(6, negative),
+        panic(1, positive),
+        panic(1, negative[:-1]),
+        panic(1, 'extra' + negative),
+        panic(1, negative + '\textra'),
+        header + 'unrelated panic\nfixture-row=1;' + negative + '\n',
+        panic(1, negative) + header,
+        panic(1, negative).replace(':Cos', ':fixture-row=1;' + negative),
+    ]
+    for transcript in refused:
+        try:
+            classify_failure(transcript, 'watched', rows)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('fault classifier accepted unrelated/ambiguous fixture evidence')
+    print('fault classifier:3 exact ordinal controls/2 legacy false-admissions/%d refusals;rc=0'
+          % len(refused), flush=True)
+
+
 def main(config=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--plan-only', action='store_true')
@@ -135,6 +197,7 @@ def main(config=None):
     assert len(rows) == config['rows']
     text = original.decode()
     assert all(text.count(before) == 1 and before != after for _, before, after in faults)
+    classifier_controls()
     if copy_root.exists():
         existing = {path for path in copy_root.rglob('*') if path.is_file()}
         assert existing <= set(destinations), 'unplanned existing copied workspace file'
@@ -178,20 +241,23 @@ def main(config=None):
             assert len(builds) == 1 and builds[0]['success'], \
                 'compiler failure is not an actual root fault rejection:' + label
             assert 'running 1 test' in transcript and test_name in transcript, 'actual watched native test'
-            failed_rows = [index + 1 for index, row in enumerate(rows) if row in transcript]
+            failed_rows, independent_failure = [], None
             if label == 'baseline':
                 assert result.returncode == 0 and '1 passed; 0 failed' in transcript
                 assert digest(body) == before_hashes[kernel_source.relative_to(ROOT).as_posix()]
             else:
-                assert result.returncode != 0 and '1 failed' in transcript and 'assertion' in transcript and failed_rows, \
-                    'actual compiled root fault survived or unrelated refusal:' + label
+                assert result.returncode != 0 and '1 failed' in transcript, \
+                    'actual compiled native fault survived:' + label
+                ordinal, independent_failure = classify_failure(result.stderr, test_name, rows)
+                failed_rows = [ordinal]
             binaries = [Path(item['executable']) for item in messages
                 if item.get('reason') == 'compiler-artifact' and item.get('target', {}).get('name') ==
                 test_target and item.get('executable')]
             assert len(binaries) == 1, 'published Cargo test artifact identity'
             profile['plan_producer'](ROOT, sources=(binaries[0],))
             outcomes.append({'label': label, 'cargo_rc': result.returncode, 'compile_succeeded': True,
-                'body_sha256': digest(body), 'failed_fixture_rows': failed_rows, 'binary': binaries[0].relative_to(ROOT).as_posix(),
+                'body_sha256': digest(body), 'failed_fixture_rows': failed_rows,
+                'independent_failure': independent_failure, 'binary': binaries[0].relative_to(ROOT).as_posix(),
                 'binary_sha256': digest(binaries[0]), 'log': log.relative_to(ROOT).as_posix()})
             print('native ' + config['family'] + ' body:' + label + (' baseline passes' if label == 'baseline'
                 else ' actual compiled test rejects fault'), flush=True)

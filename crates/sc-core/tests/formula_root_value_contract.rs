@@ -179,10 +179,12 @@ fn coupled_root_rows_retain_real_upstream_calls_through_success_storage_and_orig
     let sine = angle.checked_sin().expect("actual upstream sin");
     let name = MachineToken::new("actual_root_binding").expect("actual binding name");
     let mut counts = (0, 0, 0);
-    for row in include_str!("fixtures/formula_roots.tsv")
+    for (index, row) in include_str!("fixtures/formula_roots.tsv")
         .lines()
         .filter(|r| !r.starts_with('#'))
+        .enumerate()
     {
+        let row_number = index + 1;
         let fields: Vec<_> = row.split('\t').collect();
         let [operation, kind, left_n, left_d, right_n, right_d, expected_kind, witness] =
             fields.as_slice()
@@ -216,11 +218,15 @@ fn coupled_root_rows_retain_real_upstream_calls_through_success_storage_and_orig
         if let Some(integer) = witness.strip_prefix("integer:") {
             let expected: u128 = integer.parse().expect("independent nonnegative root");
             let result = result.expect("independent successful rooted value");
-            assert_eq!(result.kind().token(), *expected_kind, "{row}");
+            assert_eq!(
+                result.kind().token(),
+                *expected_kind,
+                "fixture-row={row_number};{row}"
+            );
             assert_eq!(
                 result.numeric().expect("numeric root").rational(),
                 R::new(expected, 1, false).expect("independent integer"),
-                "{row}"
+                "fixture-row={row_number};{row}"
             );
             assert!(result.sources().contains(F::Cos));
             assert!(result.sources().contains(if *operation == "sqrt" {
@@ -279,7 +285,10 @@ fn coupled_root_rows_retain_real_upstream_calls_through_success_storage_and_orig
                     maximum: Some(1_000_000_000),
                 }
             };
-            assert_eq!(error, expected, "actual original typed refusal:{row}");
+            assert_eq!(
+                error, expected,
+                "actual original typed refusal:fixture-row={row_number};{row}"
+            );
             counts.1 += 1;
         }
     }

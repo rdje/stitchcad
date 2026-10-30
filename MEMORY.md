@@ -1,18 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.forward.faults:actual native folding/sign/scale/series/rounding body faults
-  against original independent44 rows through guarded workspace;preserve all original inputs.
-- Forward0631 values:1M certificate/100 chunks/source hashes/gaps exact;separate constructor
-  controls known3/Fraction4/small-Q32/negative2/reader corrupt3 pass,manifest unchanged. Runtime
-  width770*2^-512<2^-502<2^-384/workspace<2^1026,14 Fraction/50 octant/2 weak-profile controls.
-- Native4 pass:original44 rows/88 numeric and actual sourced outputs;real sqrt/atan zero chain,
-  full-width Angle unchanged,successful Sqrt/Atan/own flags survive actual signed bind/read;
-  T1 refused. Oracle regenerates2404B/SHA5ee377fe. Strict affected lint/fmt pass.
-- Whole0630 retention in790/four exact Git spans. Protect original target/history-capture-0630,
-  history-proof-0630/review trees;window25 complete1241 prior logical bytes exact. Transaction
-  complete;never rerun install/recover after later edits. All earlier proofs remain protected.
-- Book99/374/1659/2938/glossary0/history790/IDs/map/diff pass. G1 6/18/G0 unapproved unchanged;
-  native roots/arc done;forward faults/inverse/Tan/mixed/platform acceptance remain. Full PNT/push400.
+- Next G1-SLICE.5d.4.inverse:coupled atan/atan2 whole-ratio,branches,complete threshold proof,
+  actual source/storage/errors and body faults;preserve principal signed axes/full-width inputs.
+- Forward0632 native review done:original44/sourced88 plus7 actual compiled kernel faults.
+  D343 fixed:strict named-test stderr panic plus explicit ordinal/complete original row;3 exact
+  controls/2 old false-admissions/13 refusals. Root duplicate4/10 now identifies4;sign overlap
+  1/10/19 now identifies1. Old reports/logs retained;all3 fresh baselines/17 faults pass.
+- Fresh reports target/forward_body_faults/0632-verified-forward,root_body_faults/0632-exact-root,
+  arc_body_faults/0632-exact-arc. Sources545/544/545/each542 copied files exact;timeout2 each;
+  primary root6/arc4/forward4,strict affected lint/fmt pass. Numerical bodies/fixtures unchanged.
+- Producer350/34352 calls/237 file plans pass:inspection only,n16 full runtime/locality pending.
+  Whole0631 retained791/four spans;book99/374/1659/2939/glossary0/IDs/map/diff pass.
+- Protect original0630 archive transaction/proof/review trees and all prior archive/search/numeric
+  proofs;never rerun old install/recovery. G1 6/18/G0 unapproved unchanged. Inverse/Tan/mixed/
+  actual platforms/full coupled acceptance remain;full/hosted79bd6f6a SHA-scoped. Full PNT/push400.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

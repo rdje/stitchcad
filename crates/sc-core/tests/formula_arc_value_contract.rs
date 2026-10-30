@@ -133,10 +133,12 @@ fn actual_sourced_arcs_keep_signed_turns_original_refusals_and_real_upstream_sto
     let radius_zero = S::from_numeric(V::new(K::Length, R::ZERO).expect("Length zero"));
     let name = MachineToken::new("actual_arc_binding").expect("actual binding name");
     let mut counts = (0, 0, 0);
-    for row in include_str!("fixtures/formula_arcs.tsv")
+    for (index, row) in include_str!("fixtures/formula_arcs.tsv")
         .lines()
         .filter(|r| !r.starts_with('#'))
+        .enumerate()
     {
+        let row_number = index + 1;
         let fields: Vec<_> = row.split('\t').collect();
         let [angle_n, angle_d, radius_n, radius_d, expected] = fields.as_slice() else {
             unreachable!("five original independent arc columns")
@@ -161,13 +163,16 @@ fn actual_sourced_arcs_keep_signed_turns_original_refusals_and_real_upstream_sto
         if let Some(integer) = expected.strip_prefix("integer:") {
             let expected =
                 R::from_signed_integer(integer.parse().expect("independent signed integer"));
-            assert!(actual.is_ok(), "independent admitted arc:{row}:{actual:?}");
+            assert!(
+                actual.is_ok(),
+                "independent admitted arc:fixture-row={row_number};{row}:{actual:?}"
+            );
             let result = actual.expect("asserted independent admitted arc");
             assert_eq!(result.kind(), K::Length);
             assert_eq!(
                 result.numeric().expect("Length").rational(),
                 expected,
-                "{row}"
+                "fixture-row={row_number};{row}"
             );
             for source in [F::Cos, F::Sin, F::ArcLength] {
                 assert!(result.sources().contains(source));
@@ -181,11 +186,15 @@ fn actual_sourced_arcs_keep_signed_turns_original_refusals_and_real_upstream_sto
                 "zero and exact outcomes retain all actual successful call contributions"
             );
             let binding = result.bind(&name).expect("real admitted signed storage");
-            assert_eq!(binding.read().expect("actual stored read"), result, "{row}");
+            assert_eq!(
+                binding.read().expect("actual stored read"),
+                result,
+                "fixture-row={row_number};{row}"
+            );
         } else {
             assert!(
                 actual.is_err(),
-                "original mathematical refusal:{row}:{actual:?}"
+                "original mathematical refusal:fixture-row={row_number};{row}:{actual:?}"
             );
             let error = actual.expect_err("asserted original mathematical failure");
             let expected = if let Some(integer) = expected.strip_prefix("domain:") {
@@ -210,7 +219,10 @@ fn actual_sourced_arcs_keep_signed_turns_original_refusals_and_real_upstream_sto
                         .expect("bits"),
                 })
             };
-            assert_eq!(error, expected, "original mathematical cause:{row}");
+            assert_eq!(
+                error, expected,
+                "original mathematical cause:fixture-row={row_number};{row}"
+            );
         }
     }
     assert_eq!(

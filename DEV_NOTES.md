@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — couple complete forward proof with actual sourced storage
+## _(2026-10-30 UTC)_ — reject actual forward bodies and repair exact fault evidence
 
-0631 rechecks1M forward thresholds/100 contiguous chunks and exact source/hash/gap margins without changing proof files. Separate constructor known3/Fraction4/small-Q32/negative2/reader corrupt3 controls pass. Runtime512/64 width770*2^-512<2^-502<2^-384 and workspace<2^1026;Fraction14/octant50/weak-profile2 pass.
-Native4 pass:44 original angles/88 outputs through both numeric and actual sourced calls,then signed bind/read/T1. Real sqrt/atan zero arithmetic preserves every full-width Angle;all three actual contributions survive exact zero/unit results. Independent oracle regenerates2404B/SHA5ee377fe;typed kinds remain exact.
-Strict affected library/test lint and fmt pass;book99/374/1659/2938/glossary0/history790/IDs/map/diff pass. [Whole0630 retention](docs/history/stitchcad-devnotes-part790.md) retained. Current Rust/book provenance and available scalar execution corrected;complete kernel faults/platform stay separately owned.
-Promotion declined:existing independent proof/source contracts. LIVE adds scoped forward44/sourced88;G1 6/18/G0 human unapproved unchanged. Full/hosted79bd6f6a remains exact-SHA only. Next actual forward body faults;other coupled/platform/physical/release proof remains. Full PNT continues.
+0632 detects7 forward faults,then D343:substring row matching listed1/10/19 for one negative-row panic;root4/10 duplicate bytes also misled. Cargo JSON debug_assertions was no actual assertion proof. Explicit named-test panic/ordinal/whole-row binding now passes3 exact/2 legacy ambiguity/13 refusal controls.
+Fresh forward/root/arc runs pass3 baselines and17 compiled faults with exact independent assertions. Sources545/544/545 and each542-file snapshot restore exactly;outputs553/551/551,timeout2 each pass. Initial sandbox group-kill EPERM preceded copy/native dispatch;OS census clear,fresh OS-visible replay passed.
+Primary14/strict affected lint/fmt/bash syntax pass;all numerical bodies/fixtures unchanged. Producer350/34352 calls/file-plan237/90 owners/39 groups pass,inspection only. Book99/374/1659/2939/glossary0/history791/IDs/map/diff pass. [Whole0631](docs/history/stitchcad-devnotes-part791.md) retained.
+Promotion declined:existing independent whole-witness contracts. D343 fixed;LIVE adds forward7 faults,scoped native forward closes. G1 6/18/G0 human unapproved unchanged;full/hosted79bd6f6a SHA-scoped. Next inverse;Tan/mixed/platform/full acceptance and n16 runtime/locality remain owned. Full PNT continues.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
