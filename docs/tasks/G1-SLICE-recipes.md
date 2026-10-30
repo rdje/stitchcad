@@ -611,39 +611,42 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal:0632 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part792.md).
 - ID: `G1-SLICE.5d.4.inverse`
-  Status: `in_progress`
+  Status: `done`
   Goal:coupled atan/atan2 whole-ratio/branch/threshold/error/provenance and actual fault review;
   preserve principal signed axes and protected complete inverse certificates.
 - ID: `G1-SLICE.5d.4.inverse.values`
   Status: `done`
-  Goal:0633 source-gated complete inverse proof and actual81-row sourced/storage/refusal review.
-  - [x] REPRODUCE / ISSUE:original native3 watched81 values/oracle/kinds but lacked all-row actual
-    sourced storage;current inverse book still called whole AST execution a later implementation.
-  - [x] ROOT CAUSE (WHY + WHERE):inverse.rs forms private256-bit quotients before reciprocal/
-    signed-principal reconstruction. atan_runtime_plan.py →P576/half5/terms64,width<2^-564,
-    workspace<2^1154,Newton<=13;independent atan14/atan216/zero2/root4/weak-budget2 pass,rc=0.
-    Native profile matches the reviewed model;complete threshold proof is a separate source gate.
-  - [x] FIX:add actual sqrt/cos zero arithmetic before all81 original calls,then signed Angle
-    binding/read and T1 checks;five original sourced kind/zero failures retained. Include explicit
-    ordinal/whole-row failure context for later body faults. Correct current execution docs.
-  - [x] ADDRESSED (verified):local launcher cargo test --offline --locked -p sc-core --test
-    formula_inverse_value_contract →4 pass,27 atan/54 atan2 sourced/store/read exact,including
-    negative180;five typed refusals pass,rc=0. Independent original81 fixture5654B/SHA902d6961
-    regenerates byte-exact. inverse_certificate_witness.py →1299B/SHA6b60d154 matches tracked
-    complete witness exactly,rc=0;frozen build/critical live sources checked. Reuse original0286
-    full45M/450 proof;no fresh full-reader claim. Deferred full scan owned .5d.4.acceptance.
-  - [x] NO REGRESSION:same target/library strict Clippy -D warnings and rustfmt --check pass,
-    rc=0. Whole792 four exact Git spans/prior IDs plus2 children/map/diff/book99/374/1659/2940/
-    glossary0 pass,rc=0. All original fixture/kernel bytes unchanged. First new watcher used
-    lowercase language-token parser for capitalized fixture kinds;explicit original kind adapter
-    repaired that test before all4 passed. No product numeric parser or tolerance policy changed.
-  - [x] LOCKSTEP:book/live/task/MEM/DEV/CHANGE align;whole0632/D343 retained792. Inverse faults/
-    Tan/mixed/platform/full coupled acceptance remain;G1 6/18/G0 unapproved unchanged.
-    promotion: declined (existing source-gated certificate reuse and actual-source/storage contracts;no new numeric policy,dependency or production authority).
-  Commit:STITCHCAD-G1-0633;Verification:4 native/81 sourced/5 refusals/witness/plan/lint/book.
+  Goal:0633 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part793.md).
 - ID: `G1-SLICE.5d.4.inverse.faults`
-  Status: `pending`
-  Goal:actual native inverse branch/ratio/reduction/rounding faults with exact independent evidence.
+  Status: `done`
+  Goal:0634 actual native inverse body faults with strict independent ordinal/panic evidence.
+  - [x] REPRODUCE / ISSUE:inverse proof/sourced81 passed0633;actual native branch/private-ratio/
+    reduction/scale/rounding faults remained required before scoped inverse review closure.
+  - [x] ROOT CAUSE (WHY + WHERE): python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py
+    --plan-only →10 variants/542 exact snapshot files/555 complete outputs,no writes/compiler,
+    classifier3 exact/2 legacy ambiguities/13 refusals,rc=0. Private inverse.rs restores principal
+    signs and complements after whole256-bit quotient formation;each boundary needs a witness.
+  - [x] FIX:static native entry config selects original inverse body/81 fixtures/sourced watcher;
+    shared guarded controller admits complete local workspace/log/report plans before effects.
+    Register producer/file ownership and suite entry;complete runtime/locality stays n16.
+  - [x] ADDRESSED (verified): python3 -I -B scripts/local_environment.py -- python3 -I -B
+    docs/tasks/artifacts/formula_structure/inverse_body_faults.py with OS visibility →baseline1/
+    actual compiled faults9 pass,rc=0. Ppm scale/sign/private denominator/quadrant/y sign/
+    reciprocal axis/half count/series/truncation fail at exact original rows2/3/40/33/29/8/2/4/4.
+    Named-test panic plus whole-row ordinal payload required;compiler or unrelated failure never
+    counts. Original545 hashes/copied542 exact,555 planned outputs,timeout2 pass,rc=0. Current
+    report:target/inverse_body_faults/0634-workspace/report.json. Mutants stop at first assertion.
+  - [x] NO REGRESSION:local launcher cargo test --offline --locked -p sc-core --test
+    formula_inverse_value_contract →4 pass after restoration,including all81 sourced/storage/
+    kind failures and original fixture regeneration,rc=0. Strict library/test Clippy -D warnings,
+    rustfmt/bash syntax pass,rc=0. Producer351/34365 calls/file-plan238/90 owners/39 groups/
+    15 refusals/12 guard reds pass,inspection only. Whole793 four Git spans/IDs/map/diff/
+    book99/374/1659/2941/glossary0 pass,rc=0. Production inverse body/fixtures unchanged.
+  - [x] LOCKSTEP:book/live/task/MEM/DEV/CHANGE align;whole0633 retained793. Native inverse parent
+    closes;next .tangent. Fresh45M scan still deferred to coupled acceptance;platform/Tan/mixed/
+    full resource/provider/release remain owned. G1 6/18/G0 unapproved unchanged.
+    promotion: declined (existing exact original-scope compiler,whole-witness and restoration contracts;no new numerical policy or production authority).
+  Commit:STITCHCAD-G1-0634;Verification:baseline1/actual9/primary4/exact545+542/timeout2/book.
 - ID: `G1-SLICE.5d.4.tangent`
   Status: `pending`
   Goal:coupled adaptive tangent proof/error/resource/provenance and actual fault review after

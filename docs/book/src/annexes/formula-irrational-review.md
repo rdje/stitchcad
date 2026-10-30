@@ -10,7 +10,7 @@ Scoped fixtures do not grant platform identity,full resource bounds or productio
 | sqrt/hypot | Exact integer roots and sourced calls | Native85 rows/five actual body faults pass below;shared platform review remains |
 | arc_length | Signed/full-turn fixed-pi certified rounding | Pi proof/sourced23/five actual body faults pass below;shared platform review remains |
 | sin/cos | Exact folding and complete forward threshold certificate | Complete certificate/sourced88/seven actual body faults pass;shared platform remains |
-| atan/atan2 | Principal branches and complete inverse threshold certificate | Source-gated proof/actual sourced81 pass below;body faults/shared platform remain |
+| atan/atan2 | Principal branches and complete inverse threshold certificate | Source-gated proof/sourced81/nine actual body faults pass;shared platform remains |
 | tan | Explicit per-call quotas,native139 and real paired24 acceptance | Coupled adaptive/error/fault review remains .5d.4.tangent |
 
 The [canonical numerical contract](formula-rationals.md)
@@ -319,6 +319,45 @@ signed result and source flags,including zero and both180-degree endpoints;T1 re
 
 Five additional actual sourced checks preserve wrong-kind/second-kind priority and both
 homogeneous zero-vector refusals. A failed atan2 adds no successful call contribution to its
-inputs. The complete native target passes4 tests with strict affected lint/formatting. Actual
-inverse body faults remain G1-SLICE.5d.4.inverse.faults;platform,mixed-call and complete coupled/
+inputs. The complete native target passes4 tests with strict affected lint/formatting. Nine actual
+inverse body faults pass below;platform,mixed-call and complete coupled/
 resource/provider/physical/release acceptance remain separately owned.
+
+## Actual native inverse body faults
+
+The inverse_body_faults.py entry copies the original private crate scope and runs the actual
+81-row sourced/storage watcher through ordinary Cargo. The baseline passes. Each of nine
+single-body faults compiles successfully,then fails an independent numerical assertion. The D343
+protocol binds the named test's stderr panic to one explicit ordinal and the complete original row.
+A compiler error,unrelated panic or coincidental row substring cannot count as rejection.
+
+| Actual copied inverse fault | First independent fixture ordinal |
+| --- | --- |
+| Atan drops the ppm input scale | 2 |
+| Atan loses the input sign | 3 |
+| Atan2 drops y's denominator in the private quotient | 40 |
+| Negative-x quadrant complements against a quarter turn | 33 |
+| Atan2 takes x's sign instead of y's | 29 |
+| Reciprocal reduction complements against a half turn | 8 |
+| Four half angles retain the five-step output scale | 2 |
+| Two series terms replace the admitted64 | 4 |
+| Final angle truncates instead of nearest rounding | 4 |
+
+Mutated runs stop at their first failing assertion;they are not nine complete81-row populations.
+The unchanged baseline and primary target exercise all81 original cases. The guarded run retains
+545 original input hashes,an exact542-file snapshot and555 planned output paths,with both owned
+parent/child timeout controls passing. Original/copy bytes match after finally restoration.
+The current report at target/inverse_body_faults/0634-workspace/report.json retains full assertion
+payloads,exact ordinals,compiler identity,variant source/binary hashes and observed return codes.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py --plan-only
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py
+```
+
+The formula-structure suite registers this entry alongside root,arc and forward controls.
+After restoration,the primary inverse4 tests,strict affected lint and formatting pass. Original
+kernel and fixture bytes are unchanged. This closes scoped native inverse review. The original
+complete45M certificate remains source-gated;its fresh full read still belongs to final coupled
+acceptance. Native/browser parity,Tan,mixed-call,full resource/provider/replay and release proof
+retain their separate owners. Complete transitive probe runtime/locality remains n16.

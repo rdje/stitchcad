@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.inverse.faults:actual atan/atan2 private ratio,branch,scale,reduction and
-  rounding body faults through original81 sourced rows;use strict D343 ordinal/panic protocol.
-- Inverse0633 values:4 native pass,27 atan/54 atan2 actual sourced/store/read including signed
-  -180;5 original typed kind/zero refusals. Independent81 fixture5654B/SHA902d6961 exact.
-  Real Sqrt/Cos dependencies and call contributions retained;full-width inputs unchanged,T1 refused.
-- Source-gated original45M/450 proof reused:witness1299B/SHA6b60d154 exact;all critical math/
-  frozen build identities checked. Runtime P576/half5/terms64,width<2^-564/workspace<2^1154,
-  Newton<=13;independent14/16/zero2/root4/weak2 controls pass. No current full population read;
-  fresh full reader stays .5d.4.acceptance after numerical feature completion.
-- Whole0632/D343 retained792/four exact Git spans;strict affected lint/fmt/book99/374/1659/2940/
-  glossary0/IDs/map/diff pass. Native root/arc/forward reviews done;inverse faults/Tan/mixed/
-  actual platforms/full acceptance remain. G1 6/18/G0 unapproved unchanged. Full PNT/push400.
+- Next G1-SLICE.5d.4.tangent:coupled adaptive proof/error/resource/provenance and actual body
+  fault review after native139/real paired24. Preserve policy/input/progress;no fixed practical cap.
+- Inverse0634 native review done:source-gated complete proof/81 sourced rows/signed storage/
+  5 typed refusals plus9 actual compiled body faults. Exact ordinals2/3/40/33/29/8/2/4/4;baseline1
+  passes,original545/copied542 hashes exact,555 planned outputs/timeout2. Current report under
+  target/inverse_body_faults/0634-workspace;production inverse body/fixtures unchanged.
+- Primary inverse4/strict affected lint/fmt/bash syntax pass. Producer351/34365 calls/file-plan238
+  inspection pass;complete transitive runtime/locality remains n16 after coupled feature work.
+- Whole0633 retained793/four exact Git spans;book99/374/1659/2941/glossary0/IDs/map/diff pass.
+  Native roots/arc/forward/inverse scoped reviews done. Tan/mixed/actual platforms/full coupled
+  acceptance remain;fresh45M full reader stays .5d.4.acceptance after feature completion.
 - Protect all original archive/search/numerical proof trees;0630 transaction complete,never rerun
-  old install/recovery. Full/hosted79bd6f6a remains exact-SHA scoped,not a verdict for later commits.
+  old install/recovery. Original inverse witness1299B/SHA6b60d154 source gate still valid.
+  G1 6/18/G0 unapproved unchanged;full/hosted79bd6f6a exact-SHA only. Full PNT/push400 continues.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

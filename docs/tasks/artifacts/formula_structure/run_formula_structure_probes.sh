@@ -52,6 +52,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/tangent_design_recipe_oracl
 python3 -I -B docs/tasks/artifacts/formula_structure/root_body_faults.py
 python3 -I -B docs/tasks/artifacts/formula_structure/arc_body_faults.py
 python3 -I -B docs/tasks/artifacts/formula_structure/forward_body_faults.py
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py
 python3 -I -B docs/tasks/artifacts/formula_structure/signed_angle_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/rational_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/scalar_contract.py

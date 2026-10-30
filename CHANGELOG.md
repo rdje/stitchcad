@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0633 — preserve inverse principal results through sourced storage
+## STITCHCAD-G1-0634 — reject actual native inverse faults
 
-- Native4 pass:all81 original atan/atan2 rows through real upstream calls,full-width operands,signed Angle bind/read,T1 and5 typed refusals. Independent5654 fixture bytes exact. Source-gated complete45M proof witness1299B matches;runtime envelope/oracles pass. Fresh full scan deferred to coupled acceptance.
-- Strict affected lint/fmt/book99/374/1659/2940/glossary0/history792/IDs/map/diff pass. Correct stale execution docs;whole0632/D343 retained792. LIVE adds inverse81;G1 6/18/G0 unapproved unchanged. Next actual inverse faults;platform/full acceptance remain owned.
+- Original inverse baseline passes;9 actual compiled branch/ratio/sign/scale/reduction/rounding faults fail strict independent row assertions. Original545/copied542 hashes exact,555 planned outputs/timeout2 pass. Primary4/strict lint/fmt/bash syntax pass;kernel/fixtures unchanged.
+- Producer351/file-plan238/book99/374/1659/2941/glossary0/history793/IDs/map/diff pass. Whole0633 retained793;LIVE adds inverse9 faults,G1 6/18/G0 unapproved unchanged. Next tangent. Fresh45M scan/platform/mixed/full acceptance and transitive locality remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
