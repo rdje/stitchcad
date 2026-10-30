@@ -225,8 +225,10 @@ The fresh runtime capture uses Rust1.99.0/b940084d7 and Chrome156.0.8078.74 on D
 Its405 original fixture rows and550 source hashes remain exact. All6614 files in the legacy
 native roots,including the recovered logs,and all nine earlier native reports remain unchanged.
 
-D349 is a copied-fixture defect:the publication fixture copies HTML but omits the generated
-search index. An intended missing-source-link case therefore hits SEARCH_INDEX first. D350 is a
+D349 was a copied-fixture defect:HTML copies omitted the generated search index,so an intended
+missing-source-link case hit SEARCH_INDEX first. The repaired fixture plans/copies that index
+and verifies each valid copied baseline before mutation. D351's historical AST/count control
+now admits the exact approved search additions;all earlier behavior remains checked. D350 is a
 stale independent selector expectation:the real recipe producer correctly checks24 inputs,the
 old control expects23 and omits the newly linked formula-recipe-execution.md chapter. The exact
 refusal families and source-plan equality checks remain requirements of their repairs.
@@ -238,5 +240,5 @@ target/irrational_platform_certificate/coupled-0646-baseline-20261030T2021073066
 sha256:f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b
 ```
 
-Scoped coupled acceptance remains open until both repairs and their verification complete.
+Scoped coupled acceptance remains open until the selector repair and full verification complete.
 No complete full-probe,hosted CI,application or production-release verdict is claimed.

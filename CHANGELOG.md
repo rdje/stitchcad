@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0646 — retain the full verification baseline and repair queue
+## STITCHCAD-G1-0647 — preserve complete copied publication fixtures
 
-- Rust1635/native+372/doc/fmt/Clippy,Wasm3,doctrine13 and fresh9 native baselines/48 body faults pass. Native/Chrome31 and bad expectation control pass;550 original sources/6614 legacy files/9 old reports exact. Complete protected receipts retained.
-- Full probes attempt29 but exit2:book fixture omits search index;recipe control expects23 inputs instead of actual24. D349/D350 P1 owned before closure. Positive book101/374/1670/2980/glossary0/history805/IDs+3/map/diff pass. G1 6/18/G0 unapproved unchanged.
+- Fix D349 search-index planning/copying and calibrate every valid mutation baseline. Fix D351 exact historical search AST/count adapters;all original behavior/refusal codes remain checked.
+- Actual publication50=original45+search5 and fixture40 branches/13 omission reds/12 physical refusals/three AST reds/pure APIs/continuity pass. Book101/374/1670/2980/glossary0/history806/IDs/map/diff pass. D350/full probes remain next;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

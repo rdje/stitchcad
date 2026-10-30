@@ -36,7 +36,7 @@ def population(root, destination):
     with (root / MAP.relative_to(ROOT)).open() as stream:
         rows = list(csv.reader((line for line in stream if not line.startswith('#')), delimiter='\t'))
     copied = {root / 'docs/book/book.toml', *source.rglob('*'), *(root / 'docs/tasks').glob('*.md'),
-              *html.rglob('*.html'), root / 'ROADMAP.md', root / MAP.relative_to(ROOT),
+              *html.rglob('*.html'), *html.glob('searchindex-*.js'), root / 'ROADMAP.md', root / MAP.relative_to(ROOT),
               root / 'crates/sc-core/tests/formula_statement_contract.rs', *(root / row[2] for row in rows)}
     copied = {path for path in copied if path.is_file()}
     files = {destination / path.relative_to(root) for path in copied}
@@ -54,8 +54,8 @@ def population(root, destination):
 
 def exact_copied(root, destination):
     copied, files, _ = population(root, destination)
+    assert {path for path in destination.rglob('*') if path.is_file()} == files, 'publication copied file population omitted'
     assert all((destination / path.relative_to(root)).read_bytes() == path.read_bytes() for path in copied)
-    assert {path for path in destination.rglob('*') if path.is_file()} == files
 
 
 def before_control():
@@ -264,6 +264,9 @@ def expect_red(action, reason):
 def omission_controls(root):
     script = ENTRY.read_text()
     faults = (
+        ('copy-search-input', '                  *(root / HTML).glob("searchindex-*.js"),\n', '', 'publication full copy plan omitted'),
+        ('copy-search-file', 'for file in [*(root / HTML).rglob("*.html"), *(root / HTML).glob("searchindex-*.js")]:',
+         'for file in (root / HTML).rglob("*.html"):', 'publication copied file population omitted'),
         ('copy-input', 'inputs = {*CORE, *copied}', 'inputs = {*CORE, *copied} - {root / "ROADMAP.md"}', 'publication full copy plan omitted'),
         ('copy-file', 'output_files=tuple(sorted(outputs)))', 'output_files=())', 'publication full copy plan omitted'),
         ('copy-dir', 'directories=tuple(sorted(directories)),\n                                 output_files=', 'directories=(),\n                                 output_files=', 'publication full copy plan omitted'),
@@ -288,7 +291,7 @@ def omission_controls(root):
     ):
         assert script.count(before) == 1
         expect_red(lambda: capture_mutation(root, name, script.replace(before, after, 1)), 'publication mutation effect before fresh activation')
-    print('publication omission controls: eleven actual input/file/directory/fresh-effect/mutable/write/append/delete/activation assertion reds; source bytes exact')
+    print('publication omission controls: thirteen actual search-input/search-copy/input/file/directory/fresh-effect/mutable/write/append/delete/activation assertion reds; source bytes exact')
 
 
 def snapshot(root):
@@ -374,8 +377,8 @@ def borrowed_controls(root):
     print('publication borrowed pure APIs: check/rows/formula_scope exact; zero profile calls/writes/environment changes')
 
 
-def original_body_controls():
-    old, current = ast.parse(OLD), ast.parse(ENTRY.read_text())
+def original_body_controls(script=None):
+    old, current = ast.parse(OLD), ast.parse(ENTRY.read_text() if script is None else script)
     approved = ast.parse(subprocess.check_output(['git', 'show',
         '25f29c8958fbfde0adfca0a528d24f6c85d22c10:' + ENTRY.relative_to(ROOT).as_posix()], text=True))
 
@@ -389,6 +392,47 @@ def original_body_controls():
 
     def function(tree, name):
         return next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == name)
+
+    # Search was independently approved after BEFORE. Match every added body and
+    # call against that immutable commit before projecting the older contract.
+    search = ast.parse(subprocess.check_output(['git', 'show',
+        '8a57432a07c0adf345c6590a3cabffe85bc1b2af:' + ENTRY.relative_to(ROOT).as_posix()], text=True))
+    search_names = {'search_data', 'search_contract', 'search_controls'}
+    selected = lambda tree: [node for node in tree.body if
+        (isinstance(node, ast.Import) and len(node.names) == 1 and node.names[0].name == 'ast') or
+        (isinstance(node, ast.FunctionDef) and node.name in search_names)]
+    assert len(selected(current)) == 4 and [dump(node) for node in selected(current)] == [
+        dump(node) for node in selected(search)], 'publication approved search bodies changed'
+    for node in selected(current):
+        current.body.remove(node)
+
+    def remove_exact(parent, expected, reason):
+        positions = [index for index, node in enumerate(parent.body) if dump(node) == dump(expected)]
+        assert len(positions) == 1, reason
+        return parent.body.pop(positions[0])
+
+    for name, needle in (
+        ('check', 'search_contract(search_data(output), registered, {path.relative_to(output).as_posix(): page.ids for path, page in pages.items()})'),
+        ('main', 'search_control_count = search_controls(ROOT)'),
+    ):
+        expected = ast.parse(needle).body[0]
+        assert any(dump(node) == dump(expected) for node in function(search, name).body)
+        remove_exact(function(current, name), expected, 'publication approved search call changed')
+    final_print = function(search, 'main').body[-1]
+    assert isinstance(final_print, ast.Expr) and 'publication probes:' in ast.unparse(final_print)
+    remove_exact(function(current, 'main'), final_print, 'publication approved search count changed')
+    function(current, 'main').body.append(function(old, 'main').body[-1])
+
+    copied = function(current, 'fixture')
+    loops = [node for node in copied.body if isinstance(node, ast.For) and
+             dump(node.iter) == dump(ast.parse('[*(root / HTML).rglob("*.html"), *(root / HTML).glob("searchindex-*.js")]', mode='eval').body)]
+    assert len(loops) == 1, 'publication complete rendered copy iterator changed'
+    loops[0].iter = ast.parse('(root / HTML).rglob("*.html")', mode='eval').body
+    case_loop = next(node for node in function(current, 'main').body if isinstance(node, ast.For) and
+                     dump(node.iter) == dump(ast.parse('cases.items()', mode='eval').body))
+    context = next(node for node in case_loop.body if isinstance(node, ast.With))
+    remove_exact(context, ast.parse('require(check(root) == result, "FIXTURE_BASELINE", "copied publication differs before mutation")').body[0],
+                 'publication copied baseline calibration changed')
 
     adapters = named_nodes(current)
     assert len(adapters) == 2 and [dump(node) for node in adapters] == [
@@ -460,7 +504,22 @@ def original_body_controls():
             return self.generic_visit(node)
 
     assert ast.dump(Project().visit(current), include_attributes=False) == ast.dump(Project().visit(old), include_attributes=False), 'publication original whole AST changed'
-    print('publication original AST: exact approved named-result adapter/original ordered payload/summary call; remaining pure/copier/mutation/main semantics exact through declared guards/owned temporary context; builder separately captured')
+    print('publication original AST: exact approved search/named-result additions and copied baseline/complete rendered iterator; remaining original pure/copier/mutation/main semantics exact through declared guards/owned temporary context')
+
+
+def preservation_controls():
+    script = ENTRY.read_text()
+    for before, after, reason in (
+        ('require(len(files) == 1, "SEARCH_INDEX",', 'require(len(files) == 0, "SEARCH_INDEX",',
+         'publication approved search bodies changed'),
+        ('    for file in [*(root / HTML).rglob("*.html"), *(root / HTML).glob("searchindex-*.js")]:',
+         '    for file in (root / HTML).rglob("*.html"):', 'publication complete rendered copy iterator changed'),
+        ('            require(check(root) == result, "FIXTURE_BASELINE", "copied publication differs before mutation")\n',
+         '', 'publication copied baseline calibration changed'),
+    ):
+        assert script.count(before) == 1
+        expect_red(lambda: original_body_controls(script.replace(before, after, 1)), reason)
+    print('publication preservation: three actual search/copy/baseline guard changes rejected by exact AST controls')
 
 
 def continuity_controls(*, observe=None):
@@ -638,13 +697,13 @@ def real_controls():
                   if not path.is_relative_to(ROOT / 'docs/book/book')}
     result = subprocess.run([sys.executable, '-I', '-B', str(ENTRY)], cwd=ROOT,
                             env=dict(os.environ), capture_output=True, text=True)
-    assert result.returncode == 0 and 'publication probes: 45 pass / 0 fail' in result.stdout, result
+    assert result.returncode == 0 and 'publication probes: 50 pass / 0 fail' in result.stdout, result
     assert 'actual malformed generic (BOOK_BUILD_WARNING); repaired rendering pass' in result.stdout
     changed = [path.relative_to(ROOT).as_posix() for path, digest in identities.items()
                if hashlib.sha256(path.read_bytes()).digest() != digest]
     assert not changed, ('publication real inputs changed during verification', changed)
     print(result.stdout, end='')
-    print('publication real: original45 current cases/rendered repair/source bytes exact; actual builder/main authority remains owned by .2')
+    print('publication real: original45 plus five approved search controls/rendered repair/source bytes exact; actual builder/main authority remains owned by .2')
 
 
 if __name__ == '__main__':
@@ -667,5 +726,6 @@ if __name__ == '__main__':
         physical_controls()
         borrowed_controls(root)
         original_body_controls()
+        preservation_controls()
         continuity_controls()
         continuity_refusals()

@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5d.4.acceptance.gates.book-fixture:D349,then recipe-selector D350,then full gates.
-- Full0646 baseline:Rust fmt/strict Clippy/native1635/doc372,Wasm3 and doctrine13 pass.
-- Full make probes attempted29;Make rc2. Book and environment suites fail;coupled closure remains open.
-- Fresh native9 baselines/48 successfully compiled faults pass;native+actual Chrome31/405 rows,
-  compiled bad expectation native101/browser trap;original550 sources restored/exact.
-- All6614 legacy files and9 original native reports unchanged. Full probe entry sources33 exact.
+- Next G1-SLICE.5d.4.acceptance.gates.recipe-selector:D350 exact24-file control,then full probes.
+- Latest unit STITCHCAD-G1-0647;derive HEAD/ahead from Git. D349/D351 fixed with focused checks.
+- Publication copies/plans search index;each mutation starts from a valid copied baseline.
+- Actual publication50=original45+search5 pass;fixture40 branches/13 omission reds/12 physical
+  refusals/pure APIs/exact approved AST/three AST reds/continuity pass. Original sources exact.
+- D350 CHILD_INPUTS lacks annexes/formula-recipe-execution.md;producer correctly includes it
+  through spec/formula-language.md. Preserve exact set equality and all source/alias refusals.
+- Full0646 Rust1635/native+372/doc/fmt/Clippy,Wasm3/doctrine13 pass;full probes29 attempted/rc2.
+- Fresh numerical9 baselines/48 compiled faults and native/Chrome31/405rows pass;bad expectation
+  native101/browser trap. Original550 sources/6614 legacy files/9 old reports exact.
 - Baseline target/irrational_platform_certificate/coupled-0646-baseline-20261030T202107306619Z-42055/receipt.json SHA f31003fadb278e69b2d9544e124118ccc0538d9204be1d686cc822b655886b4b.
-- Full transcript/receipt target/irrational_platform_certificate/coupled-0646-probes-20261030T191747018262Z-21628/;receipt SHA8c59c43e89c102a7b7a6c2844d9e1fcb706de542863a2050c48322a26514f35c.
-- D349 fixture_plan/fixture in book_publication.py select only .html;check requires searchindex-*.js.
-  Plan/copy complete inputs and calibrate a valid copied baseline;keep SOURCE_LINK refusal exact.
-- D350 python_recipe_fixture_contract.py CHILD_INPUTS lacks annexes/formula-recipe-execution.md;
-  actual producer includes it through spec/formula-language.md links. No production omission found.
-- Positive book101/374/1670/2980/glossary0/history805/IDs+3/map/diff pass;68 proof phrases tightened,all routes exact.
-- No job pending. G1 6/18/G0 unapproved;full/hosted79bd6f6a only. Cleanup14:18 unchanged;full PNT/push400.
+- Whole0646 in docs/history/stitchcad-devnotes-part806.md;no complete full-probe/coupled verdict.
+- Positive book101/374/1670/2980/glossary0/history806/IDs/map/diff pass. G1 6/18/G0 unapproved.
+- No job pending;cleanup2026-10-30 14:18 unchanged. Continue full PNT;push400 only.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

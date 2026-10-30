@@ -144,6 +144,7 @@ def fixture_plan(root, destination):
         PROFILE["directory"](ROOT, PROFILE["producer_path"](ROOT, root / "docs/tasks"))
         copied = {root / "docs/book/book.toml", *source_files,
                   *(root / "docs/tasks").glob("*.md"), *(file for file in rendered if file.suffix == ".html"),
+                  *(root / HTML).glob("searchindex-*.js"),
                   root / "ROADMAP.md", root / MAP, root / "crates/sc-core/tests/formula_statement_contract.rs",
                   *(root / row[2] for row in current_rows)}
         for file in copied:
@@ -634,7 +635,7 @@ def fixture(root, destination):
             shutil.copytree(root / directory, destination / directory)
     fixture_effect(plan, directories=(destination / HTML,))
     (destination / HTML).mkdir(parents=True)
-    for file in (root / HTML).rglob("*.html"):
+    for file in [*(root / HTML).rglob("*.html"), *(root / HTML).glob("searchindex-*.js")]:
         target = destination / HTML / file.relative_to(root / HTML)
         fixture_effect(plan, directories=(target.parent,))
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -776,6 +777,7 @@ def main():
         with temporary_root(prefix="book-publication-", dir=scratch, fixture_root=ROOT) as directory:
             root = Path(directory)
             fixture(ROOT, root)
+            require(check(root) == result, "FIXTURE_BASELINE", "copied publication differs before mutation")
             mutate(root, name)
             try:
                 check(root)

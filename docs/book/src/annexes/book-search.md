@@ -14,3 +14,12 @@ same-source migration census retained every chapter's searchable words. Focused 
 exercise actual data refusals without changing generated or source bytes. No extra runtime tool
 or external service is required by this checker.
 
+Copied publication fixtures include the generated searchindex-*.js alongside the rendered HTML.
+Both the complete copy plan and each copy effect check the index as an input/output. Before each
+intentional publication fault,the copied book must pass the same checker and match the live
+baseline. A missing index therefore cannot masquerade as an intended source-link refusal.
+The checker reads the data wrapper without executing JavaScript. Its50 publication controls
+retain the original45 checks and add five search-data refusals. Independent controls reject
+actual omissions of the index plan and copy;historical AST checks retain the exact approved
+search additions and all earlier checker/copier/mutation behavior.
+
