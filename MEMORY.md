@@ -1,16 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.2:drive complete paired recipe/source execution.
-  Reuse RecipeRuntime's single ordered loop and SourceRuntime;reserve both before first values,
-  real RHS→once storage→prior-let visibility,actual lazy/assertion context and atomic typed errors.
-- Recipe runtime0605:actual plan/fixed context,N task/value buffers/S outcomes staged before
-  values. One original ordered statement/storage/assertion loop;standalone adapter/public result
-  and Unknown/Derived requirements unchanged. Recipe9/doc1/scoped lint/fmt/book98/357/1642/2895/
-  glossary0 pass;independent18 rows/7 refusals/frozen bytes exact. Removed constructor unused mut.
-- Private Derived adapter0604 already earns source roots without replay/seeded values:stored333,
-  unbound1000/3 twice/RHS2999/3,exact canonical/supplier/once ordinal. Whole0604 retained763/four
-  spans/live ids;source27/8/reference scope remains accepted. Actual same-root Design plans ready.
-- Next .4.4.3.2 paired loop/.4.4.3.3 native results/.4.4.4 Design execution/.4.5 acceptance.
+- Next G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3:native complete paired result/error/read API.
+  Wrap actual source/recipe plans,strict canonical owner before allocation,single real context;
+  expose earned source roots/read witnesses/whole outcomes atomically. Then .4.4.4 Design bridge.
+- Paired private loop0606:SourceRuntime actual demands resume same RecipeRuntime operands;
+  one original ordered loop stores/asserts. Exact canonical/borrowed provider/label guards;
+  original requester statement/part/node/input and supplier causes retained. Allocations inline.
+  Private4/recipe9/source8/doc1/scoped lint/fmt/book98/357/1642/2895/glossary0 pass. Real333,
+  RHS2999/3→stored1000,unbound triple1000 (not999),once ordinals/lazy flags/T1-T2/source failures.
+- Whole0605 retained764/four spans/live ids. Independent recipe18/7/source27/8/frozen bytes pass;
+  paired-mode independent acceptance pending .4.5. No public paired result API yet. Same-root/
+  exact-source-proof Design plans ready. Next .4.4.3.3 native API/.4.4.4 Design execution/.4.5.
   Namespace/parser/provider/kernel/allocator/CPU/whole Design bounds separate. Full tan/geometry/
   load/replay/platform/physical owned. G1 6/18/G0 unapproved;full local/hosted79bd6f6a SHA-scoped. Protect target/history-capture-0569 and target/history-proof-0569;1180/4144817B,62/506939B,102 originals exact;never rerun old transactions. D334 after G1/before G0,D156/D223/PLANNING.5 owned. Full PNT;commit each slice,push400 after full gates.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete

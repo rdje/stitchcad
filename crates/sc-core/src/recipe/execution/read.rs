@@ -35,6 +35,49 @@ impl<'a> FormulaScalarExecutionContext<'a> {
     pub const fn new(tolerances: FormulaToleranceContext<'a>, size: FormulaSizeContext) -> Self {
         Self { tolerances, size }
     }
+    // Exact borrowed providers/label distinguish actual context sources from equal-looking copies.
+    pub(super) fn same_sources(self, other: Self) -> bool {
+        use crate::recipe::{FormulaToleranceContextDefinition, FormulaToleranceProvider};
+        fn provider(
+            a: Option<FormulaToleranceProvider<'_>>,
+            b: Option<FormulaToleranceProvider<'_>>,
+        ) -> bool {
+            match (a, b) {
+                (None, None) => true,
+                (Some(a), Some(b)) => {
+                    a.source == b.source && core::ptr::eq(a.tolerance, b.tolerance)
+                }
+                _ => false,
+            }
+        }
+        let Self { tolerances, size } = self;
+        let Self {
+            tolerances: other_tolerances,
+            size: other_size,
+        } = other;
+        let FormulaToleranceContextDefinition {
+            label,
+            format,
+            importer,
+            physical,
+        } = *tolerances.definition();
+        let FormulaToleranceContextDefinition {
+            label: other_label,
+            format: other_format,
+            importer: other_importer,
+            physical: other_physical,
+        } = *other_tolerances.definition();
+        let label = match (label, other_label) {
+            (None, None) => true,
+            (Some(a), Some(b)) => core::ptr::eq(a, b),
+            _ => false,
+        };
+        size == other_size
+            && label
+            && provider(format, other_format)
+            && provider(importer, other_importer)
+            && provider(physical, other_physical)
+    }
     /// Actual class-checked quantitative tolerance context.
     #[must_use]
     pub const fn tolerances(self) -> FormulaToleranceContext<'a> {

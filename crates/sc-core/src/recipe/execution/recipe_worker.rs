@@ -1,8 +1,8 @@
 //! Original standalone recipe adapter over the complete shared private recipe runtime.
 use super::{
-    recipe_runtime::RecipeRuntime, FormulaExecutedScalarRecipe,
-    FormulaScalarExecutionContext as Context, FormulaScalarRecipeError as Error,
-    FormulaScalarRecipePlan as Plan,
+    recipe_runtime::{RecipeRuntime, RecipeRuntimeError},
+    FormulaExecutedScalarRecipe, FormulaScalarExecutionContext as Context,
+    FormulaScalarRecipeError as Error, FormulaScalarRecipePlan as Plan,
 };
 
 impl<'p> Plan<'p> {
@@ -35,7 +35,14 @@ impl<'p> Plan<'p> {
         'p: 'a,
     {
         let plan: Plan<'a> = self;
-        let completed = RecipeRuntime::new(plan, context)?.execute()?;
+        let completed = RecipeRuntime::new(plan, context)?
+            .execute(None)
+            .map_err(|error| match error {
+                RecipeRuntimeError::Recipe(error) => error,
+                RecipeRuntimeError::Source { .. } => {
+                    unreachable!("standalone original mode cannot request source execution")
+                }
+            })?;
         Ok(FormulaExecutedScalarRecipe {
             plan: completed.plan,
             statements: completed.statements,

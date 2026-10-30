@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — stage complete private recipe reservation and one ordered loop
+## _(2026-10-30 UTC)_ — drive actual paired source demands in the original recipe loop
 
-0605 extracts RecipeRuntime with actual admitted plan,fixed context,N task/value buffers and complete S outcome reservation. Construction runs no values;the original ordered RHS/storage/prior-let/assertion loop consumes that state and returns only a complete private result. Standalone public adapter stays exact.
-Recipe9/doc1/scoped lib/affected-target strict lint/fmt pass. Independent18 rows/7 refusals/frozen bytes,actual binding/false/zero/providers/first failures/empty/max recipes unchanged. Initial unused constructor mut rejected by strict lint;removed without changing behavior. Existing contracts cover the extraction.
-Book98/357/1642/2895/glossary0 pass. Full reservation/fixed context and one authoritative recipe loop documented;paired source driving remains next. [Whole0604](docs/history/stitchcad-devnotes-part763.md) retains four spans;prior live ids/order/new uniqueness checked. No new public combined execution API.
-Next .4.4.3.2 paired demand/resume/.4.4.3.3 native results/.4.4.4 actual Design bridge/.4.5 independent acceptance. LIVE reviewed unchanged:G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D340 fixed;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact.
+0606 resumes actual pending operands through earned SourceRuntime roots in one recipe loop. Real lets store once;source errors retain requester statement/part/node/input and supplier cause. Exact canonical/borrowed provider/label sources guard composition. Allocation causes stay inline;semantic context boxed.
+Private4/recipe9/source8/doc1/scoped lib/affected-target strict lint/fmt pass. Real333,RHS2999/3→1000,unbound triple1000,once roots/lazy false flags/T1-T2/source failure prefix guards checked. Count/Ratio fixture fixed using oracle cos(0 deg)==0.0;unused import removed. Independent18/7/27/8/frozen bytes pass.
+Book98/357/1642/2895/glossary0 pass. Complete private composition and still-pending public views/Design bridge documented. [Whole0605](docs/history/stitchcad-devnotes-part764.md) retains four spans;prior live ids/order checked. Original standalone API/read enum/Unknown-Derived requirements unchanged.
+Next .4.4.3.3 native complete result/error/read API/.4.4.4 actual Design bridge/.4.5 paired independent acceptance. LIVE reviewed unchanged:G1 6/18/G0 unapproved;full-hosted79bd6f6a scoped. D340 fixed;D334/D156/D223/PLANNING.5 owned. Full PNT/push400;protected evidence intact.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

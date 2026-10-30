@@ -177,6 +177,34 @@ impl<'a> SourceRuntime<'a> {
         };
         Ok(value.value)
     }
+    pub(super) fn matches(
+        &self,
+        inputs: &crate::value::CanonicalInputs,
+        context: Context<'a>,
+    ) -> bool {
+        !self.failed
+            && core::ptr::eq(
+                inputs,
+                self.plan
+                    .graph()
+                    .dependencies()
+                    .checked()
+                    .normalized()
+                    .inputs()
+                    .inputs(),
+            )
+            && self.context.same_sources(context)
+    }
+    pub(super) fn demand_input(
+        &mut self,
+        input: crate::recipe::FormulaCanonicalInput<'a>,
+    ) -> Result<FormulaEvaluatedScalar, Cause<'a>> {
+        let index = super::source_read::derived_source_index(
+            input,
+            self.plan.graph().dependencies().checked(),
+        );
+        self.demand(index)
+    }
     // No caller supplies a value/cache:the same actual canonical join selects only earned roots.
     pub(super) fn read_derived(
         &self,

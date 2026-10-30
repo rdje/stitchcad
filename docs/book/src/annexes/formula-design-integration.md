@@ -299,15 +299,15 @@ The actual first RHS executes and its real let stores333 once. The second operan
 prior-let read before suspending at the first declared_width. It resumes after the actual source
 computes1000/3,reads the same earned root twice and completes its unbound RHS as2999/3. The first
 read is not replayed;the source completes once. The canonical Derived state stays unchanged.
-This checks the private adapter and continuation;it does not publish a complete combined recipe
-result or claim that the second let has been stored by the new worker.
+That focused adapter contract stops at the unbound RHS. The shared private whole loop below also
+performs the actual second-let storage. No public combined recipe result is available yet.
 
 The existing standalone recipe worker explicitly selects its original direct-read mode and still
 returns RequiresEvaluation for unresolved Derived inputs. Its public read-kind enum and direct/
 prior-let result interfaces remain unchanged. A private read record distinguishes earned Derived
 witnesses for the forthcoming integrated worker;it cannot be published as a standalone direct read.
-The complete paired worker,public Design execution entry point and independent acceptance remain
-subsequent tasks.
+The private paired loop is now implemented below. Complete public result/read/error interfaces,
+the actual Design execution entry point and independent acceptance remain subsequent tasks.
 
 The recipe side now stages its original admitted plan,fixed context,N task/value buffers and
 complete S outcome reservation in a shared private runtime. Construction starts no operand,read,
@@ -315,9 +315,44 @@ provider or binding operation. The existing declaration-order statement loop liv
 runtime,including actual RHS storage,prior-let visibility,assertion left/right/header order and
 original typed refusals. The standalone public adapter prepares that runtime,executes the original
 mode and publishes only its completed whole result. It introduces no second implementation of
-storage or assertion semantics. The following paired-worker slice will drive its actual source
-suspensions after both runtimes have completed reservation;that combined public operation is not
-yet available.
+storage or assertion semantics. Its private paired mode now drives actual source suspensions
+after both runtimes have completed reservation. The combined public operation is not yet available.
+
+The paired loop starts each original operand once. At an actual unresolved Derived name,it keeps
+the requesting recipe statement/operand,node and canonical join,executes that original supplier
+through SourceRuntime,and resumes the same pending work. A real completed RHS then crosses its
+actual let storage boundary once;later statements read that stored result. Assertions preserve
+left operand,right operand,actual class/header lookup and comparison order. Any recipe or source
+failure returns no accepted whole recipe or earlier source-result prefix.
+
+The complete-loop fixture uses real source width=1 mm/3 and triple=width*3:
+
+```text
+let prior:length=1 mm/3
+let total:length=prior+width+width
+let tripled:length=triple
+assert a:eps_num=total==1000 um
+assert b:eps_num=tripled==1000 um
+```
+
+Prior stores333. Total's real RHS2999/3 stores1000 once;tripled receives the actual unbound source
+result1000 rather than999. Width and triple complete once with original ordinals1/2. Unused
+Boolean sources remain unexecuted. A later supplier failure instead retains the actual requesting
+statement/operand/name/canonical join and original failing source/node/cause;the earlier successful
+source root cannot be published as a prefix. Semantic request context may be boxed for compact
+errors. Original allocation causes stay inline without an additional diagnostic allocation.
+
+Private paired runtimes must share the exact canonical inventory and original context sources.
+The same quantitative bytes/id in another tolerance object cannot replace the chosen borrowed
+provider;nor can equal label text from another original buffer. Size frames retain their existing
+value/source equality. These are private composition guards,not new Factory Profile or evidence
+approval. A future public paired factory must reject foreign canonical plans before preparation.
+
+Lazy selection and executed-call contributions remain authoritative. With actual Boolean source
+flag=cos(0 deg)==0.0,a false condition can select1 mm without touching an unknown-backed width.
+The executed cosine contribution survives both the false condition and actual let storage,so a
+T1 eps_num assertion refuses while T2 eps_geo succeeds. The standalone original mode still returns
+its existing Unknown/Derived requirements and its public read/result interfaces remain unchanged.
 
 ## Focused verification and remaining work
 

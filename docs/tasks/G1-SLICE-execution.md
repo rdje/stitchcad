@@ -302,42 +302,42 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   complete-result/read/error views. Avoid a second statement/storage/assertion implementation.
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.1`
   Status: `done`
-  Goal:complete private recipe reservation/fixed context and one original ordered loop;preserve
-  standalone storage/prior-let/assertion/error behavior before adding paired source driving.
-  Completion0605:full private recipe runtime and original public adapter.
-  Commit integrity:preflight aggregate1500039/1500000 refused. Tightened duplicated current-scope
-  prose while keeping actual commands/proofs/boundaries;no ceiling changed.
-  - [x] REPRODUCE / ISSUE:local standalone reservation/statement state must become shareable with
-    paired source execution;copying the ordered storage/assertion loop would duplicate semantics.
-  - [x] ROOT CAUSE (WHY + WHERE):read actual complete worker/error/read/result and native plan.
-    rg -n 'RecipeRuntime|fn (new|execute)|try_reserve_exact|derived: None' on
-    execution/{recipe_runtime,recipe_worker}.rs →new/reservation/execute,three original-mode sites
-    and original public adapter,rc=0. Constructor owns preparation;one unchanged loop owns values.
-  - [x] FIX:RecipeRuntime owns actual plan/fixed context,N task/value buffers/S reserved outcomes.
-    Construction runs no operand/provider/storage operation;consuming execute returns only a
-    complete private result. Original public adapter,once storage,prior lets,left/right/header
-    assertion order and typed failure paths remain exact. Paired driving is still next.
-  - [x] ADDRESSED (verified): cargo test -p sc-core --test formula_scalar_recipe_execution_contract
-    -- --nocapture →nine pass,rc=0:actual binding/false/zero/providers/first Unknown/Derived failures,
-    interleaved assertions,empty/max recipes and independent18 rows/7 refusals/full frozen bytes.
-    Original outcomes/read order remain exact;no accepted prefix on failure.
-  - [x] NO REGRESSION: cargo clippy -p sc-core --lib --test formula_scalar_recipe_execution_contract
-    -- -D warnings →pass,rc=0 after removing unused constructor mut (lint-only;native nine passed).
-    cargo test -p sc-core --doc recipe::execution::recipe_worker -- --nocapture →one pass,rc=0.
-    Changed rustfmt/diff,book98/357/1642/2895/glossary310/9/158/0,763 four exact Git spans and prior
-    live ids/order/new uniqueness pass,rc=0. Existing independent/native checks cover extraction;
-    no duplicate test or broad verification campaign. Full feature/CI verification owner .4.5.
-  - [x] LOCKSTEP:book/task/index/MEM/DEV/CHANGE align on reservation/fixed context/shared loop and
-    pending paired driving. LIVE reviewed unchanged:G1 6/18/G0 unapproved. Whole0604 retained763/
-    four spans. Next .4.4.3.2 paired loop/.4.4.3.3 native results/.4.4.4 Design bridge/.4.5 acceptance.
-    No combined public execution or full resource/allocator/CPU/platform/physical claim. Full local/
-    hosted79bd6f6a scoped,D340 fixed,D334/D156/D223/PLANNING.5 owned.
-    promotion: declined (applies established complete reservation and one ordered recipe semantics;actual contracts/book retain evidence).
+  Goal:0605 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part764.md).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.2`
-  Status: `pending`
-  Goal: drive actual pending recipe operands through shared earned source runtime in that same
-  ordered loop. Reserve both runtimes before first values;retain real let storage/prior-let,
-  lazy/within/assertion order,source context and atomic original requester/supplier failures.
+  Status: `done`
+  Goal:one complete private recipe/source loop,full reservation before values,earned roots/once
+  storage,actual context/read/error provenance and no accepted prefix. Public views remain .3.
+  Completion0606:actual paired demand/resume in the original shared statement loop.
+  - [x] REPRODUCE / ISSUE:prepared runtimes/Derived adapter lacked a whole ordered driver;replaying
+    RHS or copying statement semantics would lose prior work,round sources early or change errors.
+  - [x] ROOT CAUSE (WHY + WHERE): rg -n 'same_sources|demand_input|operand::evaluate|
+    RecipeRuntimeError::Source|fn execute' on execution/{read,source_runtime,recipe_runtime}.rs
+    →fixed-source/context guard,actual demands,three shared operand sites/typed failure,rc=0.
+    Initial Count/Ratio comparison fixture refused static kinds;existing source oracle's
+    cos(0 deg)==0.0 supplies the intended real false Ratio comparison. Unused re-export removed.
+  - [x] FIX:same actual canonical owner/borrowed provider and label sources precede private loop.
+    Operand continuation demands only actual suppliers and resumes pending work without replay;
+    one original loop stores real lets/assertions. Source errors keep actual requester statement/
+    part/node/input and original supplier cause. Allocation causes remain inline;only uncommon
+    semantic request context is boxed. Original standalone mode/interface/error paths preserved.
+  - [x] ADDRESSED (verified): cargo test -p sc-core --lib recipe::execution::recipe_runtime::tests
+    -- --nocapture →four pass/89 filtered,rc=0. Full actual recipe stores333,unbound RHS2999/3→1000,
+    triple source receives unbound width1000/3→1000 (not999),once ordinals1/2. Lazy false cosine
+    keeps flags through storage:T1 refuses/T2 passes,unknown width stays unread. Actual later
+    source failure keeps requester statement2/Binding/node/input/supplier1 and refuses prefix.
+    Equal quantitative/provider-label copies reject;actual borrowed original context succeeds.
+  - [x] NO REGRESSION:affected recipe/source integration targets →nine/eight pass,rc=0,including
+    independent18/7 and27/8/full frozen bytes plus512-source requested64KiB stack. Scoped core
+    lib/both affected-target strict Clippy/changed rustfmt/diff pass,rc=0. cargo test -p sc-core
+    --doc recipe::execution::recipe_worker -- --nocapture →one pass,rc=0. Book98/357/1642/2895,
+    glossary310/9/158/0,764 four Git spans/prior live ids/order/uniqueness pass,rc=0. Private tests
+    native checked;no all-unit Clippy/broad CI or independent paired-mode acceptance claimed.
+  - [x] LOCKSTEP:book/task/index/MEM/DEV/CHANGE align on complete private loop,real storage/lazy/
+    assertion/context/error examples and unchanged public mode. LIVE reviewed unchanged:G1 6/18/
+    G0 unapproved. Whole0605 retained764/four spans. Next .4.4.3.3 native complete public views,
+    .4.4.4 actual Design bridge/.4.5 independent paired acceptance. Full resource/allocator/CPU/
+    platform/physical bounds still owned;full-hosted79bd6f6a scoped,D334/D156/D223/PLANNING.5 owned.
+    promotion: declined (existing earned-root/real-let/actual-source identity rules;new private composition evidence is retrievable in source/book/native contracts).
 - ID: `G1-SLICE.5e.2.5.derived.3.3.3.4.4.3.3`
   Status: `pending`
   Goal: native complete paired result/error/read views over actual source and ordered recipe plans,

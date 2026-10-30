@@ -1,13 +1,17 @@
 //! Fully reserved original recipe state and one shared ordered statement/storage/assertion loop.
 use super::{
-    machine::Machine,
-    recipe_read::{self, RecipeSources},
+    machine::Machine, recipe_read, source_runtime::SourceRuntime,
     FormulaExecutedScalarRecipeStatement, FormulaScalarExecutionContext as Context,
     FormulaScalarExecutionWorkspace as Scratch, FormulaScalarRecipeError as Error,
     FormulaScalarRecipeFailure as Failure, FormulaScalarRecipeOutcome as Outcome,
     FormulaScalarRecipePlan as Plan, FormulaScalarRecipeWorkspace as Workspace,
 };
 use crate::recipe::{FormulaCheckedStatementKind as Statement, FormulaStatementExpression as Part};
+
+mod failure;
+use failure::OperandFailure;
+pub(super) use failure::RecipeRuntimeError;
+mod operand;
 
 pub(super) struct CompletedRecipe<'a> {
     pub(super) plan: Plan<'a>,
@@ -49,7 +53,16 @@ impl<'a> RecipeRuntime<'a> {
         })
     }
     // Ownership prevents publishing/reusing a successful prefix after any original failure.
-    pub(super) fn execute(self) -> Result<CompletedRecipe<'a>, Error<'a>> {
+    pub(super) fn execute(
+        self,
+        mut derived: Option<&mut SourceRuntime<'a>>,
+    ) -> Result<CompletedRecipe<'a>, RecipeRuntimeError<'a>> {
+        if derived
+            .as_deref()
+            .is_some_and(|runtime| !runtime.matches(self.plan.inputs(), self.context))
+        {
+            unreachable!("private paired runtimes share actual canonical inputs and original context sources");
+        }
         let Self {
             mut plan,
             context,
@@ -59,7 +72,16 @@ impl<'a> RecipeRuntime<'a> {
         let proof = plan.admission.proof();
         let mut remaining = plan.sources.as_mut_slice();
         for statement in proof.statements() {
-            let refuse = |failure| Error::evaluation(proof, statement, failure);
+            let refuse =
+                |failure| RecipeRuntimeError::Recipe(Error::evaluation(proof, statement, failure));
+            let operand_error = |part, error| match error {
+                OperandFailure::Scalar(error) => refuse(Failure::Expression { part, error }),
+                OperandFailure::Source(error) => RecipeRuntimeError::Source {
+                    statement,
+                    part,
+                    error,
+                },
+            };
             let count = match statement.kind() {
                 Statement::Let { expression } => expression.dependencies().len(),
                 Statement::Assert { left, right } => {
@@ -74,22 +96,15 @@ impl<'a> RecipeRuntime<'a> {
             remaining = rest;
             let outcome = match statement.kind() {
                 Statement::Let { expression } => {
-                    let value = machine
-                        .run(
-                            expression.root(),
-                            &mut RecipeSources {
-                                sources,
-                                completed: &statements,
-                                derived: None,
-                            },
-                            context,
-                        )
-                        .map_err(|error| {
-                            refuse(Failure::Expression {
-                                part: Part::Binding,
-                                error,
-                            })
-                        })?;
+                    let value = operand::evaluate(
+                        &mut machine,
+                        expression.root(),
+                        sources,
+                        &statements,
+                        context,
+                        derived.as_deref_mut(),
+                    )
+                    .map_err(|error| operand_error(Part::Binding, error))?;
                     let binding = value.store_binding().map_err(|rule| {
                         refuse(Failure::Binding {
                             kind: value.kind(),
@@ -112,38 +127,24 @@ impl<'a> RecipeRuntime<'a> {
                     else {
                         unreachable!("actual assertion source block retains both original operand populations");
                     };
-                    let a = machine
-                        .run(
-                            left.root(),
-                            &mut RecipeSources {
-                                sources: left_sources,
-                                completed: &statements,
-                                derived: None,
-                            },
-                            context,
-                        )
-                        .map_err(|error| {
-                            refuse(Failure::Expression {
-                                part: Part::AssertionLeft,
-                                error,
-                            })
-                        })?;
-                    let b = machine
-                        .run(
-                            right.root(),
-                            &mut RecipeSources {
-                                sources: right_sources,
-                                completed: &statements,
-                                derived: None,
-                            },
-                            context,
-                        )
-                        .map_err(|error| {
-                            refuse(Failure::Expression {
-                                part: Part::AssertionRight,
-                                error,
-                            })
-                        })?;
+                    let a = operand::evaluate(
+                        &mut machine,
+                        left.root(),
+                        left_sources,
+                        &statements,
+                        context,
+                        derived.as_deref_mut(),
+                    )
+                    .map_err(|error| operand_error(Part::AssertionLeft, error))?;
+                    let b = operand::evaluate(
+                        &mut machine,
+                        right.root(),
+                        right_sources,
+                        &statements,
+                        context,
+                        derived.as_deref_mut(),
+                    )
+                    .map_err(|error| operand_error(Part::AssertionRight, error))?;
                     let tolerance = recipe_read::header(header, context)
                         .map_err(|error| refuse(Failure::ToleranceRead(error)))?;
                     let comparison = a
@@ -168,3 +169,6 @@ impl<'a> RecipeRuntime<'a> {
         Ok(CompletedRecipe { plan, statements })
     }
 }
+
+#[cfg(test)]
+mod tests;

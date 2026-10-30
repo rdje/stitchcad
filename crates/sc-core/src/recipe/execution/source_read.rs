@@ -78,11 +78,10 @@ pub(super) fn source_index(
     checked.normalized().inputs().sources().source_index(id)
 }
 // A witness can be earned only from this exact inventory and an actually completed original root.
-pub(super) fn completed_derived_read<'a>(
-    input: FormulaCanonicalInput<'a>,
-    checked: &'a FormulaCheckedSources<'a>,
-    completed: &[Option<Completed>],
-) -> Option<ReadData<'a>> {
+pub(super) fn derived_source_index(
+    input: FormulaCanonicalInput<'_>,
+    checked: &FormulaCheckedSources<'_>,
+) -> usize {
     if !core::ptr::eq(input.inputs(), checked.normalized().inputs().inputs()) {
         unreachable!("private source and recipe runtimes share the actual canonical owner");
     }
@@ -92,6 +91,14 @@ pub(super) fn completed_derived_read<'a>(
     let Some(index) = source_index(checked, formula) else {
         unreachable!("actual complete source/input join retains its sole supplier");
     };
+    index
+}
+pub(super) fn completed_derived_read<'a>(
+    input: FormulaCanonicalInput<'a>,
+    checked: &'a FormulaCheckedSources<'a>,
+    completed: &[Option<Completed>],
+) -> Option<ReadData<'a>> {
+    let index = derived_source_index(input, checked);
     let Some(slot) = completed.get(index) else {
         unreachable!("complete output population shares original source positions");
     };
