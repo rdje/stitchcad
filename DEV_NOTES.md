@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain explicit two-Piece join intent and actual sources
+## _(2026-10-31 UTC)_ — separate offset candidates from geometric point correspondence
 
-0690 adds JoinPiecesAtSeam with explicit span and distinct pattern-Piece A/B roles. Local cycles/repeated Piece refuse. Actual binding resolves the graph span,then each side's copy/required Piece/unique provided record in order;duplicate named identities never receive a first-match choice or accepted prefix.
-Private source/error views borrow the actual request,graph,plan,Piece slice and original side/copy/Piece fields. Labels,unresolved material,quantity,orientation,ease and stops remain original. Source-copy inventory grants no consumption,retirement,pose,weld,metadata merge or fresh output identity.
-Join4/directly affected truing5/compiler guards3/actual book8/selected clippy/fmt/book/rendered/diff/history859 three exact Git spans pass. Extracted common fixture remains byte-identical apart from eight visibility qualifiers. A stale source still associates while actual current graph validation refuses.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source contracts). Whole0689 retained859. Explicit join output/coverage policy and actual G2/G3/bus/full replay remain owned. Next .offset.outputs;PNT continues.
+0691 recovers published offset allocation and point-step contracts before output schema code. The ledger issues fresh contiguous tags and maps interval progress affinely. Drafting needs persistent logical roles plus explicit replay/retirement handling;the current allocator does not accept arbitrary stable tags.
+For the regular cubic r(t)=300000(t,t²)um,left offset30000um,the source halfway point has normal-offset arclength fraction≈0.475794 versus affine0.5;distance along the offset differs≈9936um. Analytic/derivative quadrature agree below0.001um observationally;floating illustration is not certified geometry proof.
+Actual affine native test1/book/rendered/link/diff/history860 four exact Git spans pass. Rust unchanged. Candidate manifest,stable-tag bridge and mapping/evidence/error-budget tasks are owned before family closure. Actual G2 nonlinear geometry/mark proof remains .5f.4;existing affine primitive semantics stay intact.
+New book warning:payload10015553B/JS10030347B;build rc0. D372 P2 owned after typed feature completion;no measured latency or warning suppression. LIVE states/G1 6/18/G0 unapproved unchanged;defect note updated. promotion: declined (local recovery,bridge pending). Whole0690/closed D370/D371 ledger retained860.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

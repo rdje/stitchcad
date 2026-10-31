@@ -778,11 +778,41 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0680 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part843md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs`
-  Status: `pending`
+  Status: `active`
   Goal:typed offset output-role/manifest admission contract using the public identity-ledger
   interface;stable tags,variable cardinality and explicit ambiguity/loss. G1 schema acceptance
   needs this native contract,not an actual G2 engine. Real G2-2D.2 fragment/results proof belongs
   .5f.4.geometry;no fixed count,synthetic fragment or geometry certificate.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.recovery`
+  Status: `done`
+  Goal:recover actual public ledger tag/allocation and affine parameter-map constraints before
+  manifest code. Check one analytic curved-offset counterexample;separate candidate intervals
+  from geometric correspondence. Own stable-tag/mapping bridge work;retire whole0690 records.
+  Focused native/source/book checks only;no full audit or geometry certificate. Retire closed D370/D371 ledger;own D372.
+  - [x] ISSUE:ledger slots/affine intervals do not establish persistent roles or general normal correspondence.
+  - [x] ROOT CAUSE (offset recovery):actual reference/allocation/point-step interfaces inspected;
+    counterexample.json under target/history-proof-0691-offset-contract records analytic/quadrature agreement,rc=0.
+  - [x] FIX:book separates candidate membership,stable tags and geometric parameter mapping;three native owners below.
+  - [x] ADDRESSED (offset recovery):actual affine native test1 passes,rc=0;regular cubic example
+    normal fraction≈0.475794 vs affine0.5. Floating illustration,not certified G2/error-budget proof.
+  - [x] NO REGRESSION (offset recovery):Rust unchanged;book/rendered/link/archive860 exact spans/
+    diff pass,rc=0. New large-search-index warning D372 owned below;no latency claim or suppressed warning.
+  - [x] LOCKSTEP:book/live/frontier sync;promotion: declined (local recovery,bridge pending).
+  Verification:focused native/source/book;Commit:STITCHCAD-G1-0691. Next .manifest.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.manifest`
+  Status: `pending`
+  Goal:native explicit-tag candidate-fragment manifest,complete quota/bounds/order/unique-role
+  admission and ambiguity/gap views. Source interval membership grants no mapped output Param,
+  issued identity or G2 result. No fixed cardinality/default geometry.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.tags`
+  Status: `pending`
+  Goal:native stable-tag/replay/retirement contract and published ledger bridge. Existing offset
+  allocates fresh contiguous tags;do not treat ordinal slots as arbitrary persistent roles.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.mapping`
+  Status: `pending`
+  Goal:P1 native explicit correspondence-kind/evidence/error-budget contract before offset family
+  closure;intervals alone cannot prove normal-offset arclength positions. Preserve existing affine
+  primitive semantics;real nonlinear G2 mapping/mark proof stays .5f.4.geometry. No guessed position.
 - ID: `G1-SLICE.5f.1.c.grainline.inputs`
   Status: `done`
   Goal:0681 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part844md).
@@ -837,32 +867,16 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   any added endpoint/copy variants;no guessed solver. Native output/real geometry owners stay separate.
 - ID: `G1-SLICE.5f.1.c.join.inputs`
   Status: `done`
-  Goal:recover and implement explicit join source intent against actual Piece/seam/copy contracts;
-  retain canonical correspondence and original metadata,never infer a joined boundary from sewing.
-  Split output/semantic reconciliation policies before family acceptance;actual geometry stays G2/G3.
-  Scope:fixed two-distinct-Piece join request,explicit A/B span roles;local cycle refusal then
-  actual Graph/span/plan copies and uniquely named provided Piece association. Original metadata,
-  ease/stops/orientations stay borrowed;no weld/pose/default material/retirement/output promise.
-  Focused native/compiler/book checks;retire whole0689. Output policy/coverage need own pending tasks.
-  - [x] ISSUE:actual sewing correspondence supplies no deliberate join intent,unique Piece
-    association or authority to choose joined metadata/geometry/retirement.
-  - [x] ROOT CAUSE (join inputs):actual ontology/operation inventory and public Piece/CutPlan/
-    Graph APIs inspected;native factory and original fixture extraction comparison pass,rc=0.
-  - [x] FIX:explicit distinct-Piece A/B request;private complete span/copy/unique-Piece binding
-    and authentic side views/errors. Named duplicate identities refuse;metadata/ease stay original.
-  - [x] ADDRESSED (join inputs):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test join_input_contract →4 pass,rc=0;actual owners/roles/metadata/order,nine refusal rows,
-    local cycles/distinct variant and stale-currentness boundary. No accepted side prefix.
-  - [x] NO REGRESSION (join inputs):shared-fixture truing5/compiler guards3/actual book8/selected
-    clippy/fmt/book/rendered/diff/history859 three exact Git spans pass,rc=0. Shared fixture exact
-    apart from eight visibility qualifiers. No weld,pose,metadata merge or execution certificate.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing source contracts).
-  Verification:native9/rustdoc11;Commit:STITCHCAD-G1-0690. Next .offset.outputs.
+  Goal:0690 source intent/binding;[whole scope/proofs](../history/stitchcad-devnotes-part860.md).
 - ID: `G1-SLICE.5f.1.c.join.outputs`
   Status: `pending`
   Goal:native explicit metadata/material/mark/multiplicity/copy reconciliation and identity/
   retirement/reference manifests;define permitted join/pose/refit domains before family closure.
   Partial/eased/oriented source semantics cannot disappear. Actual geometry stays G2/G3/.5f.4.
+- ID: `G1-SLICE.5f.1.book-search`
+  Status: `pending`
+  Goal:P2 D372 after typed v1 feature completion:resolve new large-index build warning;
+  payload10015553B/JS10030347B. Preserve full-text/chapter search;no latency claim,cap raise or warning suppression.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

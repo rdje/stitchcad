@@ -27,6 +27,11 @@ certificate,and synthetic fragments or transforms cannot stand in for those resu
 architecture spike still needs real evaluation on the paths it executes;G2's entry requirement of
 G1 closure remains unchanged. This stage split applies to schema acceptance only.
 
+Candidate source-domain membership and geometric point correspondence are separate contracts.
+The [offset recovery](drafting-edit-inputs.md#offset-output-contract-recovery) records the
+published ledger's tag/affine-map boundary and a regular curved-offset counterexample. A candidate
+manifest cannot silently promote interval endpoints into a geometric parameter-map certificate.
+
 The schemas below retain unevaluated formula documents and canonical references. Parsing a formula
 does not prove its Length/Angle kind,bind a name or produce geometry. Complete static checking must
 validate every argument against its actual prior-operation/always-visible namespace before any

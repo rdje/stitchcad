@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0690 — retain explicit two-Piece join intent and actual sources
+## STITCHCAD-G1-0691 — separate offset candidates from geometric point correspondence
 
-- Distinct pattern-Piece A/B roles bind actual span/copies and uniquely named provided Pieces.
-- Private views preserve original metadata/ease/stops;duplicate identities and local cycles refuse.
-- Native9/rustdoc11/selected lint/fmt/book/rendered/diff/history859 exact spans pass.
-- Join output/coverage policies and actual pose/weld/semantics/atomic execution remain deferred.
+- Published tag/affine mapping constraints and regular curved-offset counterexample are documented.
+- Candidate manifest,stable-tag bridge and explicit geometric mapping/budget contracts are owned.
+- Native1/book/rendered/link/diff/history860 four exact Git spans pass;Rust unchanged.
+- New large search-index warning D372 owned P2;build succeeds,reader performance unmeasured.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -400,3 +400,44 @@ closure. Partial spans,declared ease and physical-copy orientation cannot be ign
 correspondence alone does not establish congruent boundaries,a valid placement or a simple
 joined Piece;no pose,weld,stretch or refit is inferred here. Those geometric/semantic choices,
 all observers and actual G2/G3/bus/undo/results remain separately owned execution work.
+
+## Offset output-contract recovery
+
+The existing public `IdentityLedger::offset` accepts positive,source-ordered,nonoverlapping
+`OffsetInterval`s. It allocates a fresh operation and contiguous tags in that interval order.
+Shared interval endpoints become ambiguous candidates;gaps become unmapped repairs. Its point
+fold uses the affine map `(source_parameter − from) / (to − from)`. Those are the declared
+structural primitive's semantics,not evidence that a geometry engine has computed an offset.
+
+Two additional contracts are required before accepting general drafting offset outputs.
+First,a logical output tag is persistent. A caller cannot silently replace it with a new vector
+position after fragment cardinality changes. Explicit roles,replay matching and retirement must
+be reconciled with the ledger's allocation interface. No arbitrary explicit-tag manifest can be
+published by assuming that interface already accepts those tags.
+
+Second,`Param` is normalized arclength,not the polynomial parameter of a Bézier. A source interval
+can identify candidate fragments without establishing a point's correct parameter on a normal
+offset. Consider the exact cubic controls in micrometres:
+`(0,0),(100000,0),(200000,100000),(300000,300000)`. Its curve is
+`r(t)=L(t,t²)`,with `L=300000µm` and `0≤t≤1`. For a left normal offset of `d=30000µm`,the regular
+offset speed factor is at least0.8,so this example does not rely on a cusp or topology change.
+
+Let `S(t)=L[t√(1+4t²)/2+asinh(2t)/4]`. The normal-offset arclength is
+`S_d(t)=S(t)−d atan(2t)`. At the source's halfway arclength point,`t≈0.610738683`:
+
+| Interpretation | Offset arclength fraction |
+| --- | --- |
+| Normal correspondence of that original point | ≈0.475793971 |
+| Whole-interval affine map | 0.5 |
+
+The offset length is about410.468396mm;the two positions differ by about9.935810mm along it.
+These are illustrative floating analytic values,checked against derivative quadrature—not a
+certified geometry implementation or numerical tolerance proof. They demonstrate that a general
+normal correspondence is not established by interval endpoints. The actual native affine-mapping
+test passes;it tests its declared primitive,not this geometric correspondence.
+
+The next native manifest stage therefore admits explicit logical candidate roles and source
+domains only. It must preserve ambiguous/gap outcomes and cannot return a geometrically certified
+mapped Param. Separate native tasks own the stable-tag bridge and explicit mapping-kind/evidence/
+error-budget contract before family closure. Actual G2 curves,nonlinear mapping accuracy and mark
+placement remain `.5f.4.geometry` proof. This recovery changes no ledger algorithm or gate status.
