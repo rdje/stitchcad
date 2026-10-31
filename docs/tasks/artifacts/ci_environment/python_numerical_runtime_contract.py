@@ -1,5 +1,6 @@
 """Controller effect controls with simulated compiler children; genuine native proof is separate."""
 from pathlib import Path
+from datetime import datetime, timezone
 import contextlib
 import hashlib
 import io
@@ -19,8 +20,9 @@ TANGENT_ENTRIES = (HERE / 'tangent_body_faults.py', HERE / 'tangent_resource_bod
 PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 CORE = (Path(__file__), PROFILE_SOURCE, *ENTRIES, *TANGENT_ENTRIES)
-WORK = ROOT / 'target/numerical-runtime-controls' / str(os.getpid())
-PROFILE['plan_producer'](ROOT, sources=CORE, directories=(WORK,))
+STAMP = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ') + '-' + str(os.getpid())
+WORK = ROOT / 'target/numerical-runtime-controls' / STAMP
+PROFILE['plan_producer'](ROOT, sources=CORE, directories=(WORK.parent, WORK))
 PREPARED = PROFILE['environment_for'](ROOT, os.environ, create=False)
 GIT_ENV = {key: value for key, value in PREPARED.items() if not key.startswith('GIT_')}
 GIT_ENV.update(GIT_OPTIONAL_LOCKS='0', GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull)
@@ -28,6 +30,8 @@ TRACKED = subprocess.check_output(['git', 'ls-files', 'crates'], cwd=ROOT, env=G
 SNAPSHOT = {ROOT / path for path in TRACKED} | {ROOT / path for path in ('Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml')}
 PROFILE['plan_producer'](ROOT, sources=(*CORE, *SNAPSHOT))
 FROZEN = {path: path.read_bytes() for path in {*CORE, *SNAPSHOT}}
+PROFILE['directory'](ROOT, WORK.parent.relative_to(ROOT).as_posix(), create=True)
+WORK.mkdir()
 PROFILE['prepare_producer'](ROOT, sources=(*CORE, *SNAPSHOT), directories=(WORK,))
 WORKSPACES = set()
 

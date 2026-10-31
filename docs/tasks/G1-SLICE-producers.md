@@ -498,36 +498,43 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Apply ordered public-entry/effect/refusal/omission and exact original-data acceptance above.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.startup`
   Status: `done`
-  Goal:complete numerical fixture input inventory before any store activation or owned setup;
-  retain isolated read-only Git metadata/caller values and calibrate late-source refusal ordering.
-  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py;docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
-  - [x] ISSUE:D364 P1 controlled late Cargo.lock refusal follows real owned store/work creation
-    and caller environment mutation;source bytes stay exact and no compiler/browser dispatched.
-  - [x] ROOT CAUSE (WHY + WHERE):numerical_fixture_startup_contract.py --diagnose
-    5ed3b373d7ece263f1381c3004cc9fa0ae18c0fd reproduces actual old bootstrap effects before late
-    input refusal,rc=0. Top-level prepare precedes Git inventory and complete source admission.
-  - [x] FIX:plan core/output root first;derive nonactivating prepared Git environment;isolate
-    selectors;admit/freeze every source before complete-source activation. Caller values survive.
-  - [x] ADDRESSED:numerical_fixture_startup_contract.py --macos-readonly-git →valid real
-    activation/late-input refusal/three actual body omissions/source bytes/caller stores pass,rc=0.
-    OS-visible /usr/bin/git returns542 exact rows with persistent writes denied;negative file
-    creation denied. Only required OS null sink exempted. No compiler/browser or source mutation.
-  - [x] NO REGRESSION:python_numerical_runtime_contract.py --tangent-only →five original
-    configurations/27 simulated variants/two failures/three wrapper omissions/full restoration,
-    rc=0. History826/827 five Git spans/book build/diff pass,rc=0. Existing n16
-    native/platform source manifests unchanged;full .h2.b.v/pre-push scopes retain their owners.
-  - [x] LOCKSTEP:book/live/notes/frontier/registry sync;D364 fixed. Promotion: declined(existing
-    input-admission/producer-store contracts). a41 remains active,effects next. G1 6/18/G0 human
-    closure unapproved unchanged;no new numerical/full-suite/app/release verdict.
-  Metadata note:inside the harness,missing planned TMPDIR triggers Darwin confstr fallback warning.
-  OS-visible read-only-enforced inventory succeeds with the same missing path and creates no temp
-  directory. The warning branch was not independently replayed under that enforcement;no universal
-  Git/transitive locality claim follows. Receipt:target/numerical-fixture-0667-startup.log.
-  Commit:STITCHCAD-G1-0667;Verification:actual bootstrap/refusal and independent metadata write-denial.
+  Goal:0667 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part828.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects`
-  Status: `pending`
+  Status: `in_progress`
   Goal:complete remaining numerical fixture-own file/lifecycle/public-entry effect review after
   startup;source/destination/alias/mutation/restoration/child omissions and focused consumers.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects.ownership`
+  Status: `done`
+  Goal:refuse reused fixture roots and preserve prior artifacts before any setup/capture.
+  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py;docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py
+  - [x] ISSUE:D365 P1 actual bootstrap adopts an existing per-PID directory;actual modeled
+    capture overwrites a prior controlled artifact. Original sources unchanged;no compiler/browser.
+  - [x] ROOT CAUSE (WHY + WHERE):numerical_fixture_startup_contract.py --diagnose-reuse
+    d440f708cce6746b784102248c47efec9889f80a →old actual modeled capture changes existing
+    controlled artifact bytes,rc=0. Nonexclusive work prepare plus reused artifact names cause it.
+  - [x] FIX:use UTC/PID work names;admit work/common-parent paths,freeze inputs,create only
+    the validated common parent,reserve work exclusively,then activate stores. Keep existing inputs.
+  - [x] ADDRESSED:numerical_fixture_startup_contract.py --macos-readonly-git →existing-root
+    refusal/two fresh default roots/three startup+three ownership omissions/source/caller values
+    pass,rc=0. Sentinel exact,no refused-run stores/env effects;metadata write-denial control passes.
+  - [x] NO REGRESSION:python_numerical_runtime_contract.py →original4/30 simulated variants/
+    seven failure paths/12 preflight/8 body faults;five tangent configurations/27 simulated variants/
+    two failures/three wrapper faults;actual timeout/group/full source+copy restoration pass,rc=0.
+    History828–830 six Git spans/book/diff pass,rc=0. No native or broader CI rerun implied.
+  - [x] LOCKSTEP:book/live/notes/frontier/registry sync;D365 fixed. Promotion: declined(existing
+    exclusive ownership/input-freeze contracts). a41/effects active;D366 emitter identity is owned
+    next before signoff. Native/Chrome proof inputs unchanged;G1 6/18/G0 unapproved unchanged.
+  Commit:STITCHCAD-G1-0668;Verification:actual root-reuse/refusal plus complete modeled fixture replay.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects.provenance`
+  Status: `pending`
+  Goal:D366 P1 bind modeled receipts to the fixture emitter as well as original controller inputs;
+  schedule immediately after ownership,before a41 signoff. Preserve all historical captures.
+  Issue:actual before-reuse modeled report records547 original inputs but omits runtime fixture
+  emitter identity;publish() changes emitted scope/results without recording its own source basis.
+  Reproduce:inspect target/irrational_platform_certificate/native-body-faults/
+  numerical-fixture-startup-controls/18977/before-reuse/work/reused-root/
+  root-20261031T021154606458Z-18977/report.json;no fixture instrument field/source key exists.
+  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
 
 ## Ordered native file-destination repairs
 
@@ -955,8 +962,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Goal:0659 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part819.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
   Status: `done`
-  Goal:tangent/platform entry locality review under parent schedule/acceptance;feature evidence is scoped.
-  Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py;docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py;docs/tasks/artifacts/formula_structure/irrational_platform.py
+  Goal:0666 scoped closure;[whole scope](../history/stitchcad-devnotes-part830.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.inventory`
   Status: `done`
   Goal:0660 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part820.md).
@@ -965,8 +971,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Goal:0661 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part821.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects`
   Status: `done`
-  Goal:complete tangent-family entry and platform source/file/mutable/child/browser/temp/failure
-  review with focused refusals/body controls;model outcomes supply no numerical/native verdict.
+  Goal:0664 scoped closure;[whole scope](../history/stitchcad-devnotes-part830.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.dispatch`
   Status: `done`
   Goal:0662 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part822.md).

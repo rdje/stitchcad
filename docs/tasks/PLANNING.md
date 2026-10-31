@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D364 — fixture input admission before activation
+## D308–D366 — fixture work-root ownership and emitter identity
 
-D308–D363:[whole prior ledger](../history/stitchcad-devnotes-part826.md). D364 P1 fixed0667;owner a41.startup:late Cargo.lock refusal previously follows owned store/work creation and caller mutation. Full input freeze now precedes activation;three body controls pass. D334 P2 after G1/before G0;D223/PLANNING.5 open. a41.effects/full D156 remain owned.
+D308–D364:[whole prior ledger](../history/stitchcad-devnotes-part829.md). D365 P1 fixed0668;owner a41.effects.ownership:existing work root adopted/prior controlled artifact overwritten;fresh exclusive roots and six omissions now pass. D366 P1 modeled emitter identity missing;owner a41.effects.provenance,next before signoff. D334 P2 after G1/before G0;D223/PLANNING.5 open.

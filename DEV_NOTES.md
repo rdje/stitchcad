@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit all fixture inputs before activation
+## _(2026-10-31 UTC)_ — reserve fresh fixture work roots exclusively
 
-0667 fixes D364 a41.startup:controlled late Cargo.lock refusal formerly follows real store/work creation and caller mutation. Plan initial roots/core,derive prepared read-only Git environment,admit/freeze complete inputs,then activate. Actual old5ed3 diagnostic preserves source bytes.
-Startup valid/refused cases/three actual omissions pass;caller stores/Git/source bytes exact. Optional macOS /usr/bin/git reads542 rows under persistent-write denial;negative file creation denied,only OS null sink exempted. Harness warning branch is not independently reproduced by this check.
-Existing tangent mode five configurations/27 simulated variants/two failures/three wrapper omissions restores all bytes. No compiler/browser numerical verdict. [Whole0666](docs/history/stitchcad-devnotes-part826.md) retains native/Chrome proof;its source manifests are unchanged.
-History826/827 five Git spans/book/diff pass;closed parents retained for aggregate containment. LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing input-admission/store contracts). a41 active;effects next;full D156/.h2.b.v/pre-push remain owned. PNT continues.
+0668 fixes D365:actual prior bootstrap adopts an existing per-PID root and modeled capture overwrites a controlled artifact. Use UTC/PID names;admit parent/work paths,freeze inputs,create validated parent,reserve work exclusively,then activate stores.
+Actual refusal preserves artifact/caller state;two default bootstraps get fresh roots. Three startup/three ownership omissions and optional metadata write-denial control pass. Complete original fixture4/30 plus tangent5/27 simulations/failures/refusals/actual timeout controls restore all bytes.
+D366 sample modeled report547 records original inputs but omits fixture-emitter identity;owned a41.effects.provenance,next before signoff. Actual native/Chrome proof basis unchanged. [Whole0667](docs/history/stitchcad-devnotes-part828.md) and ledger829 retain prior scope.
+History828–830 six Git spans/book/diff pass. LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing exclusive-root/freeze contracts). a41/effects stay active;full D156/integration/pre-push remain owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

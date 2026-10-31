@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0667 — admit all fixture inputs before activation
+## STITCHCAD-G1-0668 — reserve fresh fixture work roots exclusively
 
-- D364:complete source admission/freeze precedes fixture setup. Actual valid/refused bootstraps,
-  three omissions and caller-store/source checks pass;optional macOS metadata write denial passes.
-- Existing tangent effect consumer/history826/book/diff pass. Native/Chrome source basis unchanged;
-  a41 effects remain next;full D156/integration/pre-push owned. G1 6/18/G0 unapproved unchanged.
+- D365:existing roots refuse before stores/env changes;two default roots are fresh. Three startup/
+  three ownership omissions pass. Original4/30+tangent5/27 modeled replay restores sources/copies.
+- History828/829/book/diff pass. D366 modeled emitter identity owned next;actual native/Chrome
+  proof basis unchanged. No new numerical/full-suite verdict;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

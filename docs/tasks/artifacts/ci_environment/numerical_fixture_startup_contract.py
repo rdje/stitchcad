@@ -1,6 +1,8 @@
 """Actual fixture bootstrap ordering, caller-store retention and late-input refusal controls."""
 from pathlib import Path
 import argparse
+import contextlib
+import io
 import os
 import shutil
 import runpy
@@ -27,6 +29,13 @@ PROFILE['prepare_producer'](ROOT, sources=tuple(SOURCES), directories=(WORK,))
 SOURCE = ENTRY.read_text()
 
 
+def with_work(script):
+    lines = [line for line in script.splitlines() if line.startswith(
+        "WORK = ROOT / 'target/numerical-runtime-controls' /")]
+    assert len(lines) == 1, 'one public work-root assignment'
+    return script.replace(lines[0], 'WORK = CONTROL_WORK', 1)
+
+
 def capture(label, *, bad_source=False, script=SOURCE, diagnose=False):
     selected = WORK / label
     caller = {name:str(selected / 'stores' / name.lower()) for name in PROFILE['STORES']}
@@ -35,12 +44,10 @@ def capture(label, *, bad_source=False, script=SOURCE, diagnose=False):
         GIT_DIR=str(WORK / 'unrelated.git'), GIT_INDEX_FILE=str(WORK / 'unrelated-index'),
         GIT_WORK_TREE=str(WORK / 'unrelated-tree'))
     configured = dict(os.environ)
-    original = (runpy.run_path, Path.is_file, subprocess.Popen)
-    planned, activated, commands = set(), [], []
+    original = (runpy.run_path, Path.is_file, subprocess.Popen, Path.mkdir)
+    planned, planned_directories, activated, commands = set(), set(), [], []
     scope = dict(__file__=str(ENTRY), __name__='numerical_fixture_startup_control', CONTROL_WORK=selected / 'work')
-    anchor = "WORK = ROOT / 'target/numerical-runtime-controls' / str(os.getpid())"
-    assert script.count(anchor) == 1
-    script = script.replace(anchor, 'WORK = CONTROL_WORK')
+    script = with_work(script)
     error = None
 
     def load(path, *args, **kwargs):
@@ -52,6 +59,7 @@ def capture(label, *, bad_source=False, script=SOURCE, diagnose=False):
         def plan(root, **values):
             result = real_plan(root, **values)
             planned.update(values.get('sources', ()))
+            planned_directories.update(values.get('directories', ()))
             return result
 
         def prepare(root, **values):
@@ -82,8 +90,16 @@ def capture(label, *, bad_source=False, script=SOURCE, diagnose=False):
         commands.append(arguments)
         return original[2](arguments, **kwargs)
 
+    def mkdir(path, *args, **kwargs):
+        if not diagnose and path.is_relative_to(selected):
+            assert CORE | SNAPSHOT <= planned, 'fixture setup precedes complete input plan'
+            assert set(scope.get('FROZEN', ())) == CORE | SNAPSHOT, 'fixture setup precedes input freeze'
+            if path == scope.get('WORK'):
+                assert path in planned_directories, 'fixture work root lacks output plan'
+        return original[3](path, *args, **kwargs)
+
     try:
-        runpy.run_path, Path.is_file, subprocess.Popen = load, is_file, process
+        runpy.run_path, Path.is_file, subprocess.Popen, Path.mkdir = load, is_file, process, mkdir
         try:
             exec(compile(script, str(ENTRY), 'exec'), scope)
         except (AssertionError, ValueError) as caught:
@@ -108,7 +124,58 @@ def capture(label, *, bad_source=False, script=SOURCE, diagnose=False):
             assert os.environ['NUMERICAL_FIXTURE_CALLER'] == 'retained'
         assert len(commands) == 1
     finally:
-        runpy.run_path, Path.is_file, subprocess.Popen = original
+        runpy.run_path, Path.is_file, subprocess.Popen, Path.mkdir = original
+        os.environ.clear();os.environ.update(saved)
+    assert all(path.read_bytes() == value for path,value in FROZEN.items())
+
+
+def existing_work_control(script=SOURCE, *, diagnose=False, label='existing-work'):
+    base = WORK / label
+    selected = base / 'work'
+    artifact = selected / 'caller-stores/cargo_target_dir/SIMULATED-artifacts/reused-root/root-baseline'
+    PROFILE['prepare_producer'](ROOT, sources=tuple(SOURCES), directories=(artifact.parent,), output_files=(artifact,))
+    artifact.write_bytes(b'previous controlled verification artifact\n')
+    original = artifact.read_bytes()
+    saved = dict(os.environ)
+    stores = {name:str(base / 'bootstrap-stores' / name.lower()) for name in PROFILE['STORES']}
+    os.environ.update(stores, NUMERICAL_FIXTURE_OWNER='retained')
+    configured = dict(os.environ)
+    scope = dict(__file__=str(ENTRY), __name__='numerical_fixture_ownership_control', CONTROL_WORK=selected)
+    error = None
+    try:
+        try:
+            exec(compile(with_work(script), str(ENTRY), 'exec'), scope)
+        except FileExistsError as caught:
+            error = caught
+        if diagnose:
+            assert error is None, error
+            with contextlib.redirect_stdout(io.StringIO()):
+                scope['capture'](scope['DRIVER'], 'reused-root')
+            assert artifact.read_bytes() != original, 'old artifact overwrite not reproduced'
+            print('before:actual fixture adopts existing work root and overwrites prior controlled artifact;'
+                  'modeled compiler only/original sources unchanged;rc=0')
+        else:
+            assert isinstance(error, FileExistsError), 'fixture adopted existing work root'
+            assert artifact.read_bytes() == original, 'prior artifact changed on work-root refusal'
+            assert not (base / 'bootstrap-stores').exists(), 'work-root refusal created caller stores'
+            assert dict(os.environ) == configured, 'work-root refusal changed caller environment'
+    finally:
+        os.environ.clear();os.environ.update(saved)
+    assert all(path.read_bytes() == value for path,value in FROZEN.items())
+
+
+def default_work_control(script=SOURCE):
+    """Two actual bootstrap invocations must reserve different fresh default roots."""
+    saved = dict(os.environ)
+    roots = []
+    try:
+        for _ in range(2):
+            scope = dict(__file__=str(ENTRY), __name__='numerical_fixture_default_work_control')
+            exec(compile(script, str(ENTRY), 'exec'), scope)
+            roots.append(scope['WORK'])
+        assert roots[0] != roots[1], 'default work roots are reused'
+        assert all(path.is_dir() and not list(path.iterdir()) for path in roots)
+    finally:
         os.environ.clear();os.environ.update(saved)
     assert all(path.read_bytes() == value for path,value in FROZEN.items())
 
@@ -141,28 +208,31 @@ def readonly_git_control():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--diagnose', metavar='REVISION')
+    diagnoses = parser.add_mutually_exclusive_group()
+    diagnoses.add_argument('--diagnose', metavar='REVISION')
+    diagnoses.add_argument('--diagnose-reuse', metavar='REVISION')
     parser.add_argument('--macos-readonly-git', action='store_true')
     args = parser.parse_args()
-    if args.diagnose:
+    if args.diagnose or args.diagnose_reuse:
         import re
-        revision = args.diagnose
+        revision = args.diagnose or args.diagnose_reuse
         assert re.fullmatch('[0-9a-f]{40}', revision)
         prior = subprocess.check_output(['git', 'show', revision + ':' + ENTRY.relative_to(ROOT).as_posix()],
             cwd=ROOT, env=GIT_ENV, text=True)
-        capture('before', bad_source=True, script=prior, diagnose=True)
+        if args.diagnose_reuse:
+            existing_work_control(prior, diagnose=True, label='before-reuse')
+        else:
+            capture('before', bad_source=True, script=prior, diagnose=True)
         return
     if args.macos_readonly_git:
         readonly_git_control()
+    existing_work_control()
+    default_work_control()
     capture('valid')
     capture('late-source', bad_source=True)
     faults = (
         ('source-plan', "PROFILE['plan_producer'](ROOT, sources=(*CORE, *SNAPSHOT))", 'pass'),
-        ('early-activation',
-         "FROZEN = {path: path.read_bytes() for path in {*CORE, *SNAPSHOT}}\n"
-         "PROFILE['prepare_producer'](ROOT, sources=(*CORE, *SNAPSHOT), directories=(WORK,))",
-         "PROFILE['prepare_producer'](ROOT, sources=(*CORE, *SNAPSHOT), directories=(WORK,))\n"
-         "FROZEN = {path: path.read_bytes() for path in {*CORE, *SNAPSHOT}}"),
+        ('early-activation', "FROZEN = {path: path.read_bytes() for path in {*CORE, *SNAPSHOT}}", 'FROZEN = {}'),
         ('git-selector', "if not key.startswith('GIT_')", 'if True'),
     )
     for label, old, new in faults:
@@ -173,8 +243,32 @@ def main():
             pass
         else:
             raise AssertionError('actual fixture bootstrap omission survived: ' + label)
+    omission = SOURCE.replace('WORK.mkdir()', 'WORK.mkdir(exist_ok=True)')
+    assert omission != SOURCE
+    try:
+        existing_work_control(omission, label='fault-exclusive-root')
+    except AssertionError as error:
+        assert str(error) == 'fixture adopted existing work root', error
+    else:
+        raise AssertionError('actual exclusive work-root omission survived')
+    omission = SOURCE.replace(' / STAMP', ' / str(os.getpid())')
+    assert omission != SOURCE
+    try:
+        default_work_control(omission)
+    except FileExistsError:
+        pass
+    else:
+        raise AssertionError('actual work-name freshness omission survived')
+    omission = SOURCE.replace('directories=(WORK.parent, WORK)', 'directories=()')
+    assert omission != SOURCE
+    try:
+        capture('fault-work-plan', script=omission)
+    except AssertionError as error:
+        assert str(error) == 'fixture work root lacks output plan', error
+    else:
+        raise AssertionError('actual work-root output-plan omission survived')
     print('numerical fixture startup:valid actual activation/late-source refusal/'
-          '3 actual body omissions;caller stores/Git isolation/source bytes exact;no compiler/browser;rc=0')
+          '3 startup/3 ownership omissions;existing-root refusal/two fresh roots;caller stores/Git/source bytes exact;no compiler/browser;rc=0')
 
 
 if __name__ == '__main__':

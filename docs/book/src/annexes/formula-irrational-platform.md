@@ -548,3 +548,22 @@ python3 -I -B docs/tasks/artifacts/ci_environment/numerical_fixture_startup_cont
 # Optional macOS diagnostic;requires OS-visible sandbox/process access:
 python3 -I -B docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py --macos-readonly-git
 ```
+
+## Exclusive fixture work roots
+
+Each numerical effect fixture invocation now derives a UTC/PID work name,validates its common
+parent and work paths,freezes all inputs,then creates the common parent and reserves the work
+root exclusively before activating caller stores. An existing root refuses without changing prior
+artifact bytes,creating caller stores or changing the caller environment. Two ordinary bootstraps
+receive distinct fresh roots,so a recycled process identity cannot silently adopt an old workspace.
+
+The controls reproduce the old overwrite only inside an isolated controlled fixture. Three
+startup and three ownership omissions are rejected. The complete original four-family and
+five-configuration tangent replay retains all30+27 simulated variants,original failure/refusal
+controls,actual owned timeout/group checks and complete source/copy restoration. These outcomes
+remain explicitly simulated compiler evidence;actual numerical/Chrome proof inputs are unchanged.
+
+One modeled receipt sample records547 original controller inputs while omitting the fixture
+emitter's own identity. That separate provenance repair is owned by a41.effects.provenance before
+fixture signoff. The historical receipt remains untouched;this gap does not alter the separately
+observed actual native/Chrome verdicts.
