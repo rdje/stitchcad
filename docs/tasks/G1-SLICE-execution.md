@@ -861,21 +861,21 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0705 contours;[whole scope/proofs](../history/stitchcad-devnotes-part875.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references`
-  Status: `active`
+  Status: `done`
   Goal:explicit source coverage/retirement/repair and trim-selection contract;no copied or guessed
   point map. Actual current geometry/correspondence remains .5f.3/.5f.4.geometry/G2/G3.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.eligibility`
   Status: `done`
   Goal:0706 eligibility;[whole scope/proofs](../history/stitchcad-devnotes-part876.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition`
-  Status: `active`
+  Status: `done`
   Goal:explicit whole source coverage/retention/retirement/visible repair and trim-selection intent;
   eligibility is not a mapped/current reference. Actual G2/ledger/bus evidence stays separately owned.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.recovery`
   Status: `done`
   Goal:0707 repair scopes;[whole scope/proofs](../history/stitchcad-devnotes-part877.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan`
-  Status: `active`
+  Status: `done`
   Goal:native explicit coverage/retained-source/global-edit/registration-repair/trim intent with actual
   owner/evidence requirements;no implicit global retirement or unique-metadata-to-Param shortcut.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.sources`
@@ -892,26 +892,28 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers.requirements`
   Status: `done`
-  Goal:five mandatory explicit evidence-source requests for whole held consumers,current ownership,
-  correspondence,visible repair and authoring authority;actual registered-source context survives.
-  - [x] ISSUE:registered-source coverage cannot certify all held consumers or authority.
-  - [x] ROOT CAUSE (whole consumer evidence):published ledger/Design/semantic scopes read;
-    empty registrations and equal provider ids preserve distinct evidence obligations,rc=0.
-  - [x] FIX:all five required source fields and private authentic whole-context views;fixed traversal
-    allocates nothing and accepts no evidence,registry/currentness,repair discharge or authority.
-  - [x] ADDRESSED (whole consumer evidence):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test slash_spread_registration_plan_contract →4 pass,rc=0;actual unresolved owners
-    retain both repairs;empty registered-source scope still needs all five distinct evidence requests.
-  - [x] NO REGRESSION (whole consumer evidence):privacy2/actual slash book8/strict selected
-    clippy/fmt/book/render/diff and archive879 three exact spans pass,rc=0. All7 previous actual Rust
-    fences unchanged;nearest-heading archival preserves every31219B older live note exactly.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing source/consumer boundary).
-  Verification:native4/rustdoc10;Commit:STITCHCAD-G1-0710. Consumer declaration complete;next .plan.trim.
+  Goal:0710 evidence requests;[whole scope/proofs](../history/stitchcad-devnotes-part880.md).
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.trim`
-  Status: `pending`
-  Goal:explicit trim-selection and whole interval-coverage evidence requests tied to actual source
-  plan and policy;no guessed intersection/branch,map,output Param or full effect proof.
+  Status: `done`
+  Goal:explicit supported-domain/whole interval-coverage and policy-specific evidence requests;
+  bind actual complete consumer/source/contour context,never actual geometry or accepted evidence.
+  - [x] ISSUE:boundary policy names cannot supply selection or whole source interval coverage.
+  - [x] ROOT CAUSE (boundary evidence):actual policy/provenance/source/consumer contracts read;
+    both mode associations/mismatches and actual unresolved registration cases checked,rc=0.
+  - [x] FIX:mandatory common sources plus bridge incidence/closure or complete arrangement/unique
+    boundary selection;typed mode mismatch retains original request and actual whole context.
+  - [x] ADDRESSED (boundary evidence):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test slash_spread_boundary_requirement_contract →2 pass,rc=0;both policies,
+    original fields,actual policy borrowing and no repair discharge/output issuance/journal edit.
+  - [x] NO REGRESSION (boundary evidence):registered-source4/privacy2/actual slash book9/strict
+    selected clippy/fmt/book/render/diff and archive880 three exact spans pass,rc=0. All8 prior Rust
+    fences and31219B older live notes exact. No trim selection/map/currentness/authority certificate.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing geometry/evidence boundary).
+  Verification:native6/rustdoc11;Commit:STITCHCAD-G1-0711. Native reference-disposition declaration
+  closes;actual G2/Design/bus evidence stays owned. Next .reconciliation.semantics;book39560B needs
+  containment before metadata/effect extension,with SUMMARY120/cap120 and complete navigation.
+
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics`
   Status: `pending`
   Goal:actual Piece metadata/fold/copy/semantic-reference/effect reconciliation before native family

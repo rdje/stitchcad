@@ -1,5 +1,10 @@
 //! Declared-source eligibility and later explicit reference disposition;no geometric resolution.
+mod boundary;
 mod query;
+pub use boundary::{
+    RequiredSlashSpreadBoundary, SlashSpreadBoundaryEvidenceRequest,
+    SlashSpreadBoundaryRequirement, SlashSpreadBoundaryRequirementError,
+};
 mod requirements;
 pub use requirements::{
     RequiredSlashSpreadConsumerEvidence, SlashSpreadConsumerEvidenceKind,

@@ -404,7 +404,7 @@ those two identities need their own explicit requests too. A complete four-sourc
 without proving either external edge live. It issues no outputs and appends no ledger entry.
 
 Consumer/registration/held-object evidence requests are described below;trim interval/selection
-requirements remain the next native disposition contract. Actual geometry,maps,current whole-source and owner censuses,
+requirements are described in the boundary section below. Actual geometry,maps,current whole-source and owner censuses,
 semantic replacement,authority,identity history and atomic publication retain their G2/G3/Design/bus
 owners. This bound declaration supplies none of those certificates.
 
@@ -516,6 +516,54 @@ Neither case authorizes retirement,selects an output parameter or withdraws a he
 
 This completes the native consumer **requirement declaration**,with focused checks. Actual whole
 consumer evidence,current semantic ownership,maps,repair visibility and command authority remain
-G2/G3/Design/bus work. Trim/whole interval-coverage requests,Piece metadata/fold/copy/effect and
-explicit zero/no-new-edge outcomes remain before native slash family closure. Full verification
+G2/G3/Design/bus work. Trim/whole interval-coverage requests follow below;Piece metadata/fold/copy/effect
+and explicit zero/no-new-edge outcomes remain before native slash family closure. Full verification
 and later geometry-backed integration have not been performed by these declaration slices.
+
+## Boundary selection and whole interval-coverage requests
+
+`SlashSpreadBoundaryRequirement::new(supported_domain,source_coverage,boundary)` requires explicit
+evidence-source identities for the supported motion/region/pivot-or-axis/topology domain and whole
+source-interval coverage. Identity coverage in the source plan supplies neither proof. Whole
+interval coverage must account for retained,derived and omitted/trimmed domains and bank provenance;
+it cannot inspect only contour endpoints or silently discard a lost interior.
+
+`SlashSpreadBoundaryEvidenceRequest` requires the policy-specific source fields:
+
+| Variant | Required actual evidence |
+| --- | --- |
+| `StraightBridges { incidence,closure }` | Corresponding opened-mouth endpoints for every declared bridge;complete boundary/hole closure and supported unique topology |
+| `TrimOverlaps { arrangement,unique_selection }` | Complete bank intersections,retained ranges and overlap arrangement;unique selected boundary/holes matching the actual declared contours |
+
+A source name supplies no geometry or provider existence. A trim request names no arbitrary loop
+index and chooses no ambiguous branch. G2/G3 must refuse unsupported or ambiguous region/topology,
+prove the unique supported selection and justify all retained ranges/intersections. Actual point
+correspondence and applicable error evidence remain required by the whole consumer contract.
+
+```rust
+use sc_core::construction::*;
+fn require_boundary<'a>(consumers:&'a RequiredSlashSpreadConsumerEvidence<'a>,
+    request:&'a SlashSpreadBoundaryRequirement)
+    ->Result<RequiredSlashSpreadBoundary<'a>,SlashSpreadBoundaryRequirementError<'a>> {
+    consumers.require_boundary(request)
+}
+```
+
+`require_boundary` compares the requested bridge/trim evidence mode with the actual original
+output intent's boundary-policy field. A mismatch returns a typed error retaining the entire
+original request and actual whole consumer/source/contour/ledger context;`required_policy()`
+borrows that original field. A matching request returns a private `RequiredSlashSpreadBoundary`
+with the same authentic owners. Fixed field comparison allocates nothing and scans no geometry,
+source or consumer. It accepts no provider evidence and computes no intersection,loop or target Param.
+
+All four requested scopes remain explicit even if their source identities are equal. With two
+actual unresolved registrations,a matching trim/domain/coverage request leaves both repairs and
+registrations intact,issues no output edges and appends no journal entry. An empty registry still
+retains the whole held-consumer requirements. Earlier complete declaration/registration bounds
+keep their own scope;actual arrangement/discovery/evidence work requires its own execution budget.
+
+This closes the native source-reference **disposition requirement declaration** with focused
+checks. Actual current source/consumer coverage,maps,trim selection,semantic repair,authority and
+atomic publication remain separately owned G2/G3/Design/bus work. Piece metadata/fold/copy/effect
+and explicit zero/no-new-edge outcomes still precede native slash family closure;full verification
+and later geometry-backed integration remain deferred.

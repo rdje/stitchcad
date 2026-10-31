@@ -5,12 +5,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0710 — require whole held-consumer evidence beyond registrations
 
-- Require five explicit evidence-source scopes on the actual complete registered/source/contour context.
-- Empty registry/shared provider ids omit no obligation;actual requests repair or withdraw no holder.
-- Native4/rustdoc10/lint/fmt/book/render/diff/history879 pass;older notes and existing Rust fences exact.
-- Native consumer declaration closes;trim/coverage,semantic/zero outcomes and actual G2/authority remain owned.
+## STITCHCAD-G1-0711 — require boundary selection and whole interval-coverage evidence
+
+- Bind mandatory common and bridge/trim-specific evidence requests to the actual whole consumer context.
+- Refuse policy mismatch;compute no selection/maps and discharge no actual source-registration repairs.
+- Native6/rustdoc11/lint/fmt/book/render/diff/history880 pass;older notes/existing Rust fences exact.
+- Native reference-disposition declaration closes;metadata/effect/zero outcomes and actual G2 proof remain.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — require whole held-consumer evidence beyond registrations
+## _(2026-10-31 UTC)_ — require boundary selection and whole interval-coverage evidence
 
-0710 binds five explicit source identities to the actual complete registered/source/contour/ledger context:whole consumers,current ownership,correspondence,visible repairs,authoring authority. Private views retain original fields. Fixed five-item traversal allocates nothing;no provider evidence is accepted.
-Actual unresolved-registration tests retain both owners and repairs after requesting evidence. Empty registered-source scope still requires all five classes;shared provider ids collapse no obligation. Current ownership,whole held-consumer coverage,maps,repair discharge and authority remain later proof.
-Native4/privacy2/actual slash book8/strict selected lint/fmt/book/render/diff and archive879 three exact spans pass. All7 previous Rust fences unchanged. Nearest next heading retires only0709;all31219B older live notes remain exact. Protected target/history-proof-0710-note-boundary/. D372 persists.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source/consumer boundary). Native consumer requirement declaration closes with focused checks;trim/coverage,semantic/zero outcomes and actual G2/currentness/history/bus stay owned. Full verification deferred.
+0711 binds explicit supported-domain/whole source-interval coverage plus bridge incidence/closure or complete trim arrangement/unique selection sources. Requested mode must match the actual original boundary-policy field;typed mismatch keeps original request and authentic whole consumer/source context.
+Both modes/mismatches and actual unresolved owners pass without repair discharge,output issuance or journal edits. Equal provider identities omit no scope. Fixed comparison allocates nothing and selects no loop,intersection or target Param;source names accept no geometry/currentness/authority evidence.
+Native6/privacy2/actual slash book9/strict selected lint/fmt/book/render/diff/history880 three exact spans pass. All8 prior Rust fences and31219B older live notes exact. Protected target/history-proof-0711-note-boundary/. Native reference-disposition declaration closes;actual G2/Design/bus proof stays owned.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing geometry/evidence boundary). Next native metadata/fold/copy/effect and zero outcomes;contain39560B slash book before growth,keep SUMMARY120 ceiling/navigation. D372 persists;full verification deferred;PNT continues.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

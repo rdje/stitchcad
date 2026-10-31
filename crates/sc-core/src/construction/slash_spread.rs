@@ -8,8 +8,9 @@ use core::fmt;
 mod contours;
 mod references;
 pub use references::{
-    BoundSlashSpreadRegistrationPlan, BoundSlashSpreadSourcePlan,
-    RequiredSlashSpreadConsumerEvidence, SlashSpreadBridgeEndpoint,
+    BoundSlashSpreadRegistrationPlan, BoundSlashSpreadSourcePlan, RequiredSlashSpreadBoundary,
+    RequiredSlashSpreadConsumerEvidence, SlashSpreadBoundaryEvidenceRequest,
+    SlashSpreadBoundaryRequirement, SlashSpreadBoundaryRequirementError, SlashSpreadBridgeEndpoint,
     SlashSpreadConsumerEvidenceKind, SlashSpreadConsumerEvidenceRequirement,
     SlashSpreadConsumerEvidenceSources, SlashSpreadGlobalSourceIntent, SlashSpreadReferenceMatch,
     SlashSpreadReferenceMatchKind, SlashSpreadReferenceOrigin, SlashSpreadReferenceQuery,
