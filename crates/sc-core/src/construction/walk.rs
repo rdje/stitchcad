@@ -1,6 +1,12 @@
 //! Deliberate balance-notch requests,distinct from a seam-differential read query.
 use crate::ontology::{EdgeAnchor, EntityId, NotchProfileBindings, SeamSideId};
 use core::fmt;
+mod assignments;
+pub use assignments::{
+    AdmittedWalkNotchAssignments, BoundWalkNotchAssignment, WalkNotchAssignmentError,
+    WalkNotchAssignmentLimits, WalkNotchAssignmentManifest, WalkNotchAssignmentRefusal,
+    WalkNotchRoleAssignment,
+};
 mod roles;
 pub use roles::{BoundWalkNotchRoles, WalkNotchRoleBindingError, WalkNotchRoleBindingRefusal};
 mod copies;

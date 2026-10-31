@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind typed notch roles to the actual walk context
+## _(2026-10-31 UTC)_ — cover every original walk occurrence with explicit role attribution
 
-0743 associates actual complete walk/copy/pattern context with the distinct admitted notch catalogue under full D/A/cached key-byte allowances before operation equality. Constant work/space and no scan/allocation;actual immutable parents/fields retained.
-Matching empty/inactive metadata still keeps all original requests and supplies no complete output count,EntityId assignment or mark coalescing. Point/edge proofs cannot substitute;zero operation id is ordinary and cannot stand in for actual operation10.
-Native3+5/API4/walk book4,selected lint/fmt/build/map/render pass0;parent kernels/fixtures and all prior walk/operation Rust fences unchanged. Whole0742 spans917 exact0 and older31219B notes base retained;native role parent closes.
-Promotion: declined (existing typed metadata/actual-parent rule). Complete original occurrence assignment/identity manifest next;sharing/evidence/current Design/global issuance/geometry/all-copy effects/atomic publication/full integration remain owed. G1still6/18/G0 unapproved.
+0744 admits complete N/M/2M before operation/scans/allocation. Each original entry checks actual pair bounds,duplicate occurrence,undefined/inactive role;full source coverage then follows input pair/A/B order. No prefix or manufactured missing field escapes.
+Authentic views lend original manifest entry,pair/anchor/profile fields,role and cached copy/Piece. Manifest/source orders and repeated pair-field pointers remain distinct. Repeated role tags are grouping proposals,not admitted sharing or semantic ids;unused active metadata stays legal.
+Native5+3/API4/walk book5,selected lint/fmt/build/map/render pass0;old kernels/tests unchanged,default one-pair fixture delegates to the same parameterized constructor/body. Four old Rust fences and whole0743 spans918 exact0;older31219B notes base retained.
+Promotion: declined (existing original-field/typed-parent rule). Explicit semantic identity/retention next;sharing/currentness/provider/geometry/all-copy effects/atomic publication/full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

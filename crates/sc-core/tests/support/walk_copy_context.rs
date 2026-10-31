@@ -4,10 +4,13 @@ pub mod input;
 use input::{fixture, id, t};
 use sc_core::{construction::*, ontology::*};
 pub fn with_copies(run: impl FnOnce(BoundWalkCopyInventory<'_>)) {
+    with_pair_count(1, run);
+}
+pub fn with_pair_count(pairs: usize, run: impl FnOnce(BoundWalkCopyInventory<'_>)) {
     let f = fixture();
-    let edit = WalkSeamEdit::new(id(10), f.span().id(), vec![f.pair(t(1, 3), t(2, 5))]);
+    let edit = WalkSeamEdit::new(id(10), f.span().id(), vec![f.pair(t(1, 3), t(2, 5)); pairs]);
     let admitted = edit
-        .admit(WalkEditLimits::new(1))
+        .admit(WalkEditLimits::new(pairs))
         .expect("complete requests");
     let source = admitted.bind_source(&f.graph).expect("actual graph/span");
     let pieces = f

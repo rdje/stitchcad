@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0743;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.walk.outputs.manifest in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32 nodes complete;walk copy/pattern/typed role family complete;full mark assignments next.
-- Walk roles bind actual copy/source context to typed notch catalogue with full D/A/B before operation.
-  Empty/inactive metadata retains all requests;no complete manifest or coalescing. Native8/API4/book4,
-  lint/fmt/build/map/render pass;proof target/history-proof-0743-walk-notch-roles/;roles native parent closes.
+- Latest unit:STITCHCAD-G1-0744;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.walk.outputs.manifest.identities in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32 nodes complete;walk copy/role/occurrence attribution complete;semantic identity proposals next.
+- Walk assignments cover every original pair/A/B once under N/M/2M;dual original-order views keep
+  actual fields/roles/copies/Pieces. Repeated roles propose grouping,not semantic coalescing/ids.
+  Native8/API4/book5/lint/fmt/build/map/render pass;proof target/history-proof-0744-walk-assignments/.
 - Mirror known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.

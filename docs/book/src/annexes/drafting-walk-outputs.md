@@ -220,3 +220,73 @@ No2N-new-id rule,implicit per-copy duplication,sharing/coalescing or existing-No
 is introduced. Complete explicit assignment/identity/sharing policy and current Design/history,
 correspondence/differential/ease/profile/all-copy/effect/authority evidence remain required.
 No semantic Notch,PointRef or EdgeRef is issued and no geometry or atomic edit executes here.
+
+## Complete original occurrence-to-role attribution
+
+`WalkNotchAssignmentManifest` retains an explicit operation and ordered `WalkNotchRoleAssignment`
+entries. Each entry names an original zero-based input pair,A/B side and proposed active LocalTag.
+The pair position is an attribution coordinate into this actual immutable input,not a persistent
+semantic identity or recipe statement ordinal. A complete assignment gives every original field
+one role proposal;it does not yet admit shared-mark semantics or assign a global Notch EntityId.
+
+| API | Meaning |
+| --- | --- |
+| `WalkNotchRoleAssignment` | Original pair/side occurrence and proposed active local role |
+| `WalkNotchAssignmentManifest` | Whole original operation and ordered attribution proposal |
+| `WalkNotchAssignmentLimits::new(N,M,W)` | Whole input pairs,manifest entries and checked2M workspace allowances |
+| `WalkNotchAssignmentError`, `WalkNotchAssignmentRefusal` | Whole actual original inputs,policy and first refusal |
+| `AdmittedWalkNotchAssignments` | Complete authentic occurrence attribution with actual walk/role parents |
+| `BoundWalkNotchAssignment` | Authentic original entry,pair/request field,active role and actual copy/Piece views |
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let raw=WalkNotchAssignmentManifest::new(EntityId::from_bits(10),vec![
+    WalkNotchRoleAssignment::new(0,SeamSideId::B,LocalTag::new(9)),
+    WalkNotchRoleAssignment::new(0,SeamSideId::A,LocalTag::new(2))]);
+fn admit<'a>(raw:&'a WalkNotchAssignmentManifest,roles:&'a BoundWalkNotchRoles<'a>)
+    ->Result<AdmittedWalkNotchAssignments<'a>,WalkNotchAssignmentError<'a>> {
+    raw.admit(roles,WalkNotchAssignmentLimits::new(1,2,4))
+}
+assert_eq!(raw.assignments().len(),2);
+```
+
+Checked2M,whole N/M and workspace quotas precede operation equality,all scans and allocation.
+N includes all actual original pairs;M includes every original manifest entry. New workspace is
+an M-entry occurrence index and M-entry association vector;these count logical entries,not bytes
+or earlier owned input/catalogue/copy storage. Work is O((M+N)log(M+D+2)) for D admitted role
+definitions. Earlier source/pair/graph/resource scopes retain their own obligations.
+
+Each original entry checks pair bounds,duplicate occurrence,then undefined/inactive role,in that
+order. Repeating the same pair/A/B occurrence refuses even if its second role differs. After all
+entries,complete coverage follows original input pair/A/B order. First missing input field refuses;
+no missing assignment is manufactured and no accepted prefix escapes. With one actual pair and
+two entries,W4 is complete;N0,M1 or W3 refuses before an incorrect operation or invalid first pair.
+An empty manifest refuses missing pair0/A,despite empty role metadata being a valid earlier state.
+
+`assignments()` lends all entries in original manifest order and supports exact size/reverse
+iteration. `requests()` lends every original input field in pair/A/B order;reverse traversal
+reverses that source order. `assignment(pair,side)` selects an actual original occurrence in
+O(log(M+2)) work. Complete request traversal costs O(N log(M+2)) without allocation;repeated
+traversal retains the caller's whole-work budget. None of these positions supplies an output id.
+
+Each view keeps its actual complete `owner()`,original manifest `index()` and `assignment()`,
+whole original `pair()` and exact A/B `requested()` anchor/profile fields. `role()` lends authentic
+active membership in the same admitted notch catalogue;`copy()` and `piece()` lend the actual
+cached original side owners. Equal-looking raw values cannot reparent these private associations.
+The complete original manifest,walk input,source fields,catalogue,copy/Piece definitions and all
+symbolic profile contexts remain unchanged on success/refusal.
+
+## Grouping proposals retain every request
+
+Repeated role tags are permitted as explicit grouping proposals. For two pairs,all four original
+occurrences may propose role2 while roles7/9 remain unused active metadata. Every occurrence,
+anchor,profile field,physical-copy id and pattern owner still remains separately inspectable.
+Unused active metadata is legal;canonical active membership is not evaluated-instance presence.
+Four requests therefore certify neither four new semantic identities nor one accepted shared mark.
+
+This attribution stage can retain a grouping proposal whose occurrences have different pattern
+owners or fields. Such a proposal has not passed the later explicit semantic sharing/coalescing
+checks. Complete semantic identity/retention declarations,pattern/anchor/profile consistency,
+actual source correspondence and all currentness/provider/effect/authority requirements remain
+mandatory. No coordinate coincidence,matching tag or complete occurrence count supplies those
+proofs. The original paired requests remain intact until a supported complete atomic edit is proven.

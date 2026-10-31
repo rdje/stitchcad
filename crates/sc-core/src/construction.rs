@@ -187,11 +187,13 @@ pub use slash_spread::{
 };
 mod walk;
 pub use walk::{
-    AdmittedWalkSeamEdit, BoundWalkBalancePair, BoundWalkCopyInventory, BoundWalkNotchRoles,
-    BoundWalkSeamEdit, WalkBalanceNotch, WalkBalancePair, WalkCopyInventoryError,
-    WalkCopyInventoryLimits, WalkCopyInventoryRefusal, WalkEditAdmissionError,
-    WalkEditAdmissionRefusal, WalkEditBindingError, WalkEditBindingRefusal, WalkEditLimits,
-    WalkNotchRoleBindingError, WalkNotchRoleBindingRefusal, WalkSeamEdit,
+    AdmittedWalkNotchAssignments, AdmittedWalkSeamEdit, BoundWalkBalancePair,
+    BoundWalkCopyInventory, BoundWalkNotchAssignment, BoundWalkNotchRoles, BoundWalkSeamEdit,
+    WalkBalanceNotch, WalkBalancePair, WalkCopyInventoryError, WalkCopyInventoryLimits,
+    WalkCopyInventoryRefusal, WalkEditAdmissionError, WalkEditAdmissionRefusal,
+    WalkEditBindingError, WalkEditBindingRefusal, WalkEditLimits, WalkNotchAssignmentError,
+    WalkNotchAssignmentLimits, WalkNotchAssignmentManifest, WalkNotchAssignmentRefusal,
+    WalkNotchRoleAssignment, WalkNotchRoleBindingError, WalkNotchRoleBindingRefusal, WalkSeamEdit,
 };
 mod truing;
 pub use truing::{
