@@ -1,11 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0711;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics
-  — activate/split native Piece metadata/fold/copy/held-reference/effect and zero/no-new-edge
-  contracts. Source/reference-disposition declaration closes with focused checks,not actual proof.
-- Book slash companion39560B/569lines;contain before extension. SUMMARY120/cap120;can reclaim blank
-  lines while preserving every direct chapter link. Never raise caps. Actual maintained examples9.
+- Latest unit:STITCHCAD-G1-0712;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.copies
+  — activate actual complete CutPlan borrow/whole C quota,target quantity/orientation and all-copy
+  ids/order preservation on the actual bound metadata. No new copy ids or currentness certificate.
+- Native metadata borrows all canonical Piece fields/derived print view;explicit NoFold/retained or
+  Source-derived outer original-fold attribution. Evidence requests retained,not accepted proof.
+  Native6/rustdoc3/lint/fmt/book/render/history881 four spans pass;whole0065 protocol retained.
+- New drafting-slash-piece-contracts.md companion5222B/76lines;actual metadata example1. Original
+  slash chapter whole prefix intact with link. SUMMARY120/cap120,all old links/order+new direct entry.
+- Semantics remains active:copies/effect/outcome/closure owned. Explicit zero/no-new-edge path must
+  not fabricate candidates. Native reference-disposition closes with focused checks only.
 - Boundary requirement binds explicit domain/whole source-interval coverage plus bridge incidence/
   closure or complete trim arrangement/unique boundary selection. Actual policy mismatch refuses;
   no loop/map/Param/evidence acceptance. Native6/rustdoc11/lint/fmt/book/render/history880 pass.
@@ -19,7 +24,7 @@
   immutable Notch. Live/resolved source can still lie outside replacement Piece;0707 decision/877.
 - Eligibility Unique/Ambiguous/Gap remains metadata. Contours retain original identities and all
   occurrences. Whole0708/0709/0710 archives878/879/880 retain native scope/lessons/checks exactly.
-- All older31219B live notes exact;protected target/history-proof-0711-note-boundary/. Correction
+- All older31219B live notes exact;protected target/history-proof-0712-note-boundary/. Correction
   of overwide0708 note selection retained in0709;target/history-proof-0709-note-boundary/ protected.
 - Protected proofs:target/history-proof-0706-reference-fixture/,history-proof-0704-output-book/,
   history-proof-0703-shared-edge-roles/,history-proof-0696-role-policy/ under target/;never remove.

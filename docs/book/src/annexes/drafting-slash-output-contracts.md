@@ -567,3 +567,5 @@ checks. Actual current source/consumer coverage,maps,trim selection,semantic rep
 atomic publication remain separately owned G2/G3/Design/bus work. Piece metadata/fold/copy/effect
 and explicit zero/no-new-edge outcomes still precede native slash family closure;full verification
 and later geometry-backed integration remain deferred.
+
+[Piece metadata,fold and copy reconciliation](drafting-slash-piece-contracts.md) continues this native declaration path.

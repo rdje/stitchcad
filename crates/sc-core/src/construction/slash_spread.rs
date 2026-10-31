@@ -6,6 +6,11 @@ use crate::{
 };
 use core::fmt;
 mod contours;
+mod metadata;
+pub use metadata::{
+    BoundSlashSpreadPieceMetadata, SlashSpreadFoldIntent, SlashSpreadPieceMetadataError,
+    SlashSpreadPieceMetadataRefusal, SlashSpreadPieceMetadataRequirement,
+};
 mod references;
 pub use references::{
     BoundSlashSpreadRegistrationPlan, BoundSlashSpreadSourcePlan, RequiredSlashSpreadBoundary,

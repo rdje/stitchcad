@@ -73,7 +73,6 @@
   - [SizeSet profile transformations](spec/size-set-transformations.md)
   - [Measurement and size standards](spec/standards.md)
   - [The reference skirt](spec/reference-skirt.md)
-
 - [Formula syntax API](annexes/formula-syntax.md)
   - [Canonical formula rational values](annexes/formula-rationals.md)
   - [Trig certificate feasibility](annexes/formula-trig-certificates.md)
@@ -102,6 +101,7 @@
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
   - [Native drafting output contracts](annexes/drafting-output-contracts.md)
   - [Native slash/spread output contracts](annexes/drafting-slash-output-contracts.md)
+  - [Slash/spread Piece reconciliation](annexes/drafting-slash-piece-contracts.md)
   - [Full-text book search](annexes/book-search.md)
   - [Formula documentation controls](annexes/formula-documentation-controls.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)

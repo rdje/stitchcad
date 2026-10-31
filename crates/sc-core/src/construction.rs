@@ -11,6 +11,9 @@ mod output_examples {}
 #[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-slash-output-contracts.md")]
 mod slash_output_examples {}
+#[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-slash-piece-contracts.md")]
+mod slash_piece_examples {}
 mod arc;
 mod arguments;
 mod bezier;
@@ -92,27 +95,29 @@ pub use slash_opening::{
 mod slash_spread;
 pub use slash_spread::{
     AdmittedSlashSpreadContours, AdmittedSlashSpreadEdges, BoundSlashSpreadEdgeRoles,
-    BoundSlashSpreadRegistrationPlan, BoundSlashSpreadSourcePlan, RequiredSlashSpreadBoundary,
-    RequiredSlashSpreadConsumerEvidence, SlashSpreadBoundaryEvidenceRequest,
-    SlashSpreadBoundaryPolicy, SlashSpreadBoundaryRequirement, SlashSpreadBoundaryRequirementError,
-    SlashSpreadBridgeDirection, SlashSpreadBridgeEndpoint, SlashSpreadConstruction,
-    SlashSpreadConstructionError, SlashSpreadConsumerEvidenceKind,
+    BoundSlashSpreadPieceMetadata, BoundSlashSpreadRegistrationPlan, BoundSlashSpreadSourcePlan,
+    RequiredSlashSpreadBoundary, RequiredSlashSpreadConsumerEvidence,
+    SlashSpreadBoundaryEvidenceRequest, SlashSpreadBoundaryPolicy, SlashSpreadBoundaryRequirement,
+    SlashSpreadBoundaryRequirementError, SlashSpreadBridgeDirection, SlashSpreadBridgeEndpoint,
+    SlashSpreadConstruction, SlashSpreadConstructionError, SlashSpreadConsumerEvidenceKind,
     SlashSpreadConsumerEvidenceRequirement, SlashSpreadConsumerEvidenceSources,
     SlashSpreadContourEdge, SlashSpreadContourError, SlashSpreadContourLimits,
     SlashSpreadContourLocation, SlashSpreadContourRefusal, SlashSpreadContourUse,
     SlashSpreadContours, SlashSpreadCutEnd, SlashSpreadDependency, SlashSpreadEdge,
     SlashSpreadEdgeCandidate, SlashSpreadEdgeManifest, SlashSpreadEdgeManifestError,
     SlashSpreadEdgeManifestLimits, SlashSpreadEdgeManifestRefusal, SlashSpreadEdgeOrigin,
-    SlashSpreadFullnessIntent, SlashSpreadGlobalSourceIntent, SlashSpreadOutputIntent,
-    SlashSpreadReferenceMatch, SlashSpreadReferenceMatchKind, SlashSpreadReferenceOrigin,
-    SlashSpreadReferenceQuery, SlashSpreadReferenceQueryError, SlashSpreadReferenceQueryLimits,
-    SlashSpreadReferenceQueryRefusal, SlashSpreadRegisteredSourceRequest,
-    SlashSpreadRegistrationDisposition, SlashSpreadRegistrationIntent, SlashSpreadRegistrationPlan,
-    SlashSpreadRegistrationPlanError, SlashSpreadRegistrationPlanLimits,
-    SlashSpreadRegistrationPlanRefusal, SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal,
-    SlashSpreadSide, SlashSpreadSource, SlashSpreadSourceDisposition, SlashSpreadSourceMotion,
-    SlashSpreadSourcePlan, SlashSpreadSourcePlanError, SlashSpreadSourcePlanLimits,
-    SlashSpreadSourcePlanRefusal, SlashSpreadSourceRequest,
+    SlashSpreadFoldIntent, SlashSpreadFullnessIntent, SlashSpreadGlobalSourceIntent,
+    SlashSpreadOutputIntent, SlashSpreadPieceMetadataError, SlashSpreadPieceMetadataRefusal,
+    SlashSpreadPieceMetadataRequirement, SlashSpreadReferenceMatch, SlashSpreadReferenceMatchKind,
+    SlashSpreadReferenceOrigin, SlashSpreadReferenceQuery, SlashSpreadReferenceQueryError,
+    SlashSpreadReferenceQueryLimits, SlashSpreadReferenceQueryRefusal,
+    SlashSpreadRegisteredSourceRequest, SlashSpreadRegistrationDisposition,
+    SlashSpreadRegistrationIntent, SlashSpreadRegistrationPlan, SlashSpreadRegistrationPlanError,
+    SlashSpreadRegistrationPlanLimits, SlashSpreadRegistrationPlanRefusal,
+    SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal, SlashSpreadSide, SlashSpreadSource,
+    SlashSpreadSourceDisposition, SlashSpreadSourceMotion, SlashSpreadSourcePlan,
+    SlashSpreadSourcePlanError, SlashSpreadSourcePlanLimits, SlashSpreadSourcePlanRefusal,
+    SlashSpreadSourceRequest,
 };
 mod walk;
 pub use walk::{

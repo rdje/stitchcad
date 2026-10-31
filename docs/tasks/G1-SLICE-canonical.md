@@ -237,42 +237,7 @@ Staged make gate→=== all doctrines green ===, rc=0; all verification jobs obse
 
 - ID: `G1-SLICE.5a.3e.1`
   Status: `done`
-  Goal: parse one complete immutable source-borrowing let/assert statement without execution.
-  Scoped source: complete formula contract/grammar/examples; ADR-0003/D84/D95/D103; borrowed lexer,
-  flat expression parser/arena, literal normalization/canonical APIs and actual reference statement
-  method/separator. Clean5d8ab5b before taking this slice; no user edits or pending jobs.
-  Plan: closed FormulaBindingKind (six kinds) and FormulaToleranceName (five symbolic classes),
-  privately constructed FormulaStatement with explicit name/annotation/expression inspection and
-  opaque Debug/Clone. Preserve names/literals/spans/ordered branches, no source/string cloning or
-  AST recursion. Statement span/name/header and expression node spans refer to original whole source.
-  Reuse expression parser through a private range/rebasing helper; errors retain precise global span,
-  typed rule/expression role. Standalone syntax has no recipe ordinal; .2 supplies it. Canonical context
-  is unavailable before explicit successful input normalization; do not fabricate it or normalize
-  literals as a parsing side effect. No semantic name/type/literal/binding/tolerance-value execution.
-  Parse exact keyword/name/colon/annotation/assignment header. Unknown or unbindable kind annotation
-  follows reference formula_dimension; unknown tolerance annotation follows formula_tolerance_unbound.
-  Other malformed headers are formula_parse. Assertions require exactly one depth-zero == separator;
-  preserve original operand substrings rather than rejoining lexemes. Each side has independent256/
-  16 structural limits; grouped/call comparisons cannot be mistaken for the assertion separator.
-  A standalone statement consumes whole input; no implicit bare expression, comment, semicolon or
-  second statement is accepted. Empty recipe and keyword statement boundaries belong .2.
-  Independent authored statement fixtures cover six kinds/five tolerances/keywords/headers/operand
-  spans/unknown annotation/expression refusals. Check header tuples using actual reference with
-  inference/evaluation replaced by deliberate traps only after header inspection; recursive parser
-  independently checks each operand. Book21 statements must preserve names/annotations/full canonical
-  expression bytes via explicit normalization. Public controls cover privacy/lifetimes/no mutable
-  construction, max nodes/depth on both sides, small64KiB stacks/50000 grouping/100000-byte names.
-  Actual production keyword/name/annotation/separator/unit/span/operand/coverage faults must compile
-  and fail public assertions; exclusive runner/finally restores bytes. Focused/native/release/WASM,
-  structure/language/book/publication and record gates; synchronize current APIs/book/live/task docs.
-  New progressive annex for standalone syntax; full recipe limits/statement identity and runtime proof
-  remain explicit. Preserve completed proof/oldest ledgers exactly, no ceiling increases.
-  D106 P2 here: current literal decision still calls canonical serialization future work despite
-  reviewed public expression identity; update scoped expression versus statement/evaluation boundary.
-  Verification: nine public contracts/15 independent rows/six refusals/all21 worked statements,
-  final15 actual assertion reds/source restore/native538/release9/WASM3; D106/D107 fixed.
-  Commit: `STITCHCAD-G1-0065`.
-
+  Goal:0065 statement protocol;[whole scope/proofs](../history/stitchcad-devnotes-part881.md).
 
 ## Completed expression identity subtree — preserved from 5d8ab5b
 

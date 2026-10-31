@@ -896,30 +896,50 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.trim`
   Status: `done`
-  Goal:explicit supported-domain/whole interval-coverage and policy-specific evidence requests;
-  bind actual complete consumer/source/contour context,never actual geometry or accepted evidence.
-  - [x] ISSUE:boundary policy names cannot supply selection or whole source interval coverage.
-  - [x] ROOT CAUSE (boundary evidence):actual policy/provenance/source/consumer contracts read;
-    both mode associations/mismatches and actual unresolved registration cases checked,rc=0.
-  - [x] FIX:mandatory common sources plus bridge incidence/closure or complete arrangement/unique
-    boundary selection;typed mode mismatch retains original request and actual whole context.
-  - [x] ADDRESSED (boundary evidence):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test slash_spread_boundary_requirement_contract →2 pass,rc=0;both policies,
-    original fields,actual policy borrowing and no repair discharge/output issuance/journal edit.
-  - [x] NO REGRESSION (boundary evidence):registered-source4/privacy2/actual slash book9/strict
-    selected clippy/fmt/book/render/diff and archive880 three exact spans pass,rc=0. All8 prior Rust
-    fences and31219B older live notes exact. No trim selection/map/currentness/authority certificate.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing geometry/evidence boundary).
-  Verification:native6/rustdoc11;Commit:STITCHCAD-G1-0711. Native reference-disposition declaration
-  closes;actual G2/Design/bus evidence stays owned. Next .reconciliation.semantics;book39560B needs
-  containment before metadata/effect extension,with SUMMARY120/cap120 and complete navigation.
+  Goal:0711 boundary evidence;[whole scope/proofs](../history/stitchcad-devnotes-part881.md).
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics`
-  Status: `pending`
+  Status: `active`
   Goal:actual Piece metadata/fold/copy/semantic-reference/effect reconciliation before native family
   closure;preserve canonical owners,all-copy effects and attributed derivations. No implicit metadata loss.
   Define explicit zero/no-new-edge outcomes before closure;an unchanged plan must never fabricate
   a candidate merely to satisfy the nonempty primitive. Actual supported domain/effect remains G2/G3.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.metadata`
+  Status: `done`
+  Goal:borrow original canonical Piece metadata and explicit NoFold/retained/derived original-fold
+  attribution;require fold/all-copy evidence sources,no actual geometry/currentness certificate.
+  - [x] ISSUE:contours alone cannot retain canonical cut/label/fold metadata or all-copy obligations.
+  - [x] ROOT CAUSE (slash Piece metadata):public Piece/CutPlan/ontology/source-boundary contracts
+    read;actual cut-four paired metadata and original fold provenance cases checked,rc=0.
+  - [x] FIX:authentic borrowed source fields/derived print view;fold state,actual candidate/outer
+    membership/original-fold source admission,typed whole-context refusals and required evidence.
+  - [x] ADDRESSED (slash Piece metadata):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test slash_spread_piece_metadata_contract →4 pass,rc=0;exact metadata fields,
+    retained/derived fold and state/unknown/hole/lost-fold/bridge/other-source refusals;source unchanged.
+  - [x] NO REGRESSION (slash Piece metadata):boundary2/privacy2/actual metadata book1/strict
+    selected clippy/fmt/book/render/diff and archive881 four exact Git spans pass,rc=0. Whole old
+    slash chapter prefix and all prior SUMMARY links/order retained;new chapter within120 lines.
+    Nearest-heading retention preserves31219B older notes;whole0065 protocol/heading retained.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing canonical metadata owner).
+  Verification:native6/rustdoc3;Commit:STITCHCAD-G1-0712. Next .semantics.copies;actual complete
+  CutPlan binding/all-copy effects,effect/zero outcomes and actual G2/Design/bus proof remain owned.
+
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.copies`
+  Status: `pending`
+  Goal:actual complete CutPlan borrow and whole-copy quota before target population/orientation;
+  retain all target copy ids/order/orientations and all-copy semantic/sewing obligations,no new ids.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.effect`
+  Status: `pending`
+  Goal:attributed fullness derivation requirements from original inputs,canonical intake distinction
+  and all-copy semantic effects;no independent amount/default or achieved physical effect claim.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome`
+  Status: `pending`
+  Goal:explicit unchanged/zero/no-new-edge declaration without fabricated candidate,plus changed
+  complete path;original inputs/source metadata and actual supported-domain/effect evidence remain.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.closure`
+  Status: `pending`
+  Goal:close only native slash declaration inventory after all children,with focused checks and
+  honest remaining G2/Design/bus/geometry-integration/full verification owners.
 - ID: `G1-SLICE.5f.1.c.mirror.inputs`
   Status: `done`
   Goal:0684 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part851.md).

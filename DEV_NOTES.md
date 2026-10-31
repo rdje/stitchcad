@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — require boundary selection and whole interval-coverage evidence
+## _(2026-10-31 UTC)_ — preserve canonical slash Piece metadata and explicit fold attribution
 
-0711 binds explicit supported-domain/whole source-interval coverage plus bridge incidence/closure or complete trim arrangement/unique selection sources. Requested mode must match the actual original boundary-policy field;typed mismatch keeps original request and authentic whole consumer/source context.
-Both modes/mismatches and actual unresolved owners pass without repair discharge,output issuance or journal edits. Equal provider identities omit no scope. Fixed comparison allocates nothing and selects no loop,intersection or target Param;source names accept no geometry/currentness/authority evidence.
-Native6/privacy2/actual slash book9/strict selected lint/fmt/book/render/diff/history880 three exact spans pass. All8 prior Rust fences and31219B older live notes exact. Protected target/history-proof-0711-note-boundary/. Native reference-disposition declaration closes;actual G2/Design/bus proof stays owned.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing geometry/evidence boundary). Next native metadata/fold/copy/effect and zero outcomes;contain39560B slash book before growth,keep SUMMARY120 ceiling/navigation. D372 persists;full verification deferred;PNT continues.
+0712 borrows source identity,quantity/mirroring/cutting-side/material/layer/label and derived print fields without clones or second authority. Explicit NoFold/retained/derived intent preserves source fold state;derived output must be outer Source provenance from the original fold. Evidence remains required.
+Native4 verifies exact cut-four paired fields/material reason/labels,retained and derived folds,state/unknown/hole/lost-fold/bridge/other-source refusals and unchanged original Piece/ledger. Candidate source subrange is attribution only;actual fold coverage/geometry/currentness and all-copy effects stay owed.
+Native6/privacy2/actual metadata book1/strict selected lint/fmt/book/render/diff/history881 four exact spans pass. New5222B companion/all old SUMMARY links/order retained within120;old slash chapter prefix exact. Whole0711/0065 protocol and heading retained;all31219B older notes exact. D372 persists.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing canonical metadata owner). Next actual CutPlan/all-copy binding,then effect/zero outcomes/native closure;actual G2/Design/bus/full verification remain owned. No new Piece/copy id or physical fold proof;PNT continues.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

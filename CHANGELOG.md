@@ -6,12 +6,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0711 — require boundary selection and whole interval-coverage evidence
 
-- Bind mandatory common and bridge/trim-specific evidence requests to the actual whole consumer context.
-- Refuse policy mismatch;compute no selection/maps and discharge no actual source-registration repairs.
-- Native6/rustdoc11/lint/fmt/book/render/diff/history880 pass;older notes/existing Rust fences exact.
-- Native reference-disposition declaration closes;metadata/effect/zero outcomes and actual G2 proof remain.
+## STITCHCAD-G1-0712 — preserve canonical slash Piece metadata and explicit fold attribution
+
+- Borrow exact source metadata/derived print fields;explicitly retain or attribute the original fold.
+- Refuse changed fold state,missing outer fold and unrelated/bridge provenance;require actual evidence.
+- Native6/rustdoc3/lint/fmt/book/render/diff/history881 pass;new companion keeps all old navigation.
+- Actual CutPlan/copy effects,effect/zero outcomes and actual geometry/currentness/authority remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
