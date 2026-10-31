@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — recover constrained seam-truing source and fitting contracts
+## _(2026-10-31 UTC)_ — bind actual constrained seam-truing inputs
 
-0688 recovers actual Roadmap/ontology/G3/edit-group contracts before native truing code. First planned variant explicitly refits a named span side's pattern Piece,preserving endpoints/stops;infeasibility refuses. Shared-copy observers remain obligations rather than an implicit isolated physical-copy edit.
-Signed A-minus-B ease stays on the actual span,including retained Portion allocation. Target lengths are derived during execution,not copied client fields. Fit tolerance needs explicit source,T2 fit role,nonnegative Length and original derivation;pointwise EPSgeo alone proves no arclength bound.
-Twelve actual source clauses/four rendered links/book/diff and four exact Git archive spans pass. No Rust or operation execution changed. Native inputs,output mappings and broader v1 variant coverage have separate pending owners;full geometry/currentness/bus/undo remains G3/.5f.4 work.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (local schema policy,coverage open). Whole0687 plus closed D121 scope retained857. Next .true.inputs;PNT continues without a gate waiver.
+0689 adds explicit ConstrainedSeamTruing,span/side/Piece/fit-source fields and local self-source roles. bind_source retains the real graph/span/selected CutPlan copy and quantitative provider;exact association precedes T2 fit class/nonnegative limit checks. No copied length/ease or implicit solver enters it.
+Bound views/errors preserve actual owners;source/counterpart are original span fields and affected_copies lists real same-Piece copies in plan order. Shared reflected copies and an observed counterpart remain visible. Retained partial ease stays a Portion rather than acquiring the full parent's amount.
+Native5/compiler guards3/actual book7/selected clippy/fmt/book/rendered/diff/archive858 three exact Git spans pass. Initial fixture indexing lint repaired with checked extraction,without a waiver. Deleted-edge current validation refuses while original structural association still binds;no geometry is certified.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source contracts). Whole0688 retained858. Deterministic refit selection belongs .true.variants before schema-family closure;actual fitting/observers/atomic execution stay G3/.5f.4. Next .join.inputs;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

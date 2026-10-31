@@ -272,23 +272,24 @@ Native output contracts still need explicit semantic mark-sharing/coalescing and
 especially when physical copies share a pattern Piece. Actual mark results and atomic execution
 remain G3/bus/full `.5f.4` work. No query result or2N request count substitutes for those results.
 
-## Planned constrained seam truing
+## Native constrained seam-truing inputs
 
-This is a recovered contract for the next native schema,not an implemented truing operation.
+`construction::ConstrainedSeamTruing` retains deliberate refit intent and binds actual inputs;
+it executes no curve fitting or editing operation.
 [Ontology §3.2](../spec/ontology.md#32-drafting-operations) and Roadmap §3.1 require first-class
 `true` on a SewingGraph correspondence. The [skirt waist](../spec/reference-skirt.md#5-drafting-recipe)
 is trued as part of dart closure;its 18.5cm target does not define an independent edge-length
 variant of `true`. Dart centre,legs,intake and waist truing belong to one atomic group under the
 [command contract](../spec/command-layer.md#3-atomic-groups-and-the-granularity-of-undo).
 
-The first planned variant refits the selected side of a named canonical span while preserving
+This variant requests a refit of the selected side of a named canonical span while preserving
 both selected range endpoint positions and all declared span stops. The request must explicitly
 name the adjusted side A/B,the target pattern Piece and its length-fit tolerance source. Binding
-must retain the actual graph/span and the actual CutPlan copy for that side,and check that the
+retains the actual graph/span and the actual CutPlan copy for that side,and checks that the
 copy belongs to the requested Piece. A copy id is not a Piece id. The policy forbids automatic
 endpoint/stop movement and copy forking. An infeasible constrained fit must refuse.
 
-The canonical Piece is edited,so every physical copy of that Piece sees the change. Another
+Executing the request edits the canonical Piece,so every physical copy sees the change. Another
 span,mark or constraint may observe that geometry. Execution must preserve those obligations or
 refuse;selecting one physical copy cannot silently grant an isolated edit. Both sides can even
 refer to copies of the same Piece. Binding this association grants no current-root,observer or
@@ -305,8 +306,9 @@ supplies neither a copied target length nor a replacement ease value.
 
 The fitting budget is an explicit sourced,nonnegative Length tolerance for geometric refitting,
 classified `ToleranceClass::GeometricApproximation`,with the original derivation retained.
-Binding must check the requested source identity,class and limit domain against the actual
-borrowed quantitative provider. A nonempty derivation is inspectable metadata,not evidence that
+Binding checks the requested source identity,class and nonnegative limit against the actual
+borrowed `TruingFitProvider`. Length already enforces its magnitude domain;zero is retained as
+an explicit requirement that execution may find infeasible. A nonempty derivation is metadata,not evidence that
 the requirement or source registry is valid. T1 exact quantity/ease accounting stays separate;
 T3/T4/T5 and chordal deviation do not become a seam-fit threshold. The formula context's intrinsic
 `EPSgeo` remains unchanged. No default micrometre number is selected for this operation.
@@ -318,7 +320,34 @@ any explicit profile loosening and artifact effects follow the
 cannot grant editing authority. Execution reports achieved differential,allocated ease and any
 unexplained residual;it must never relabel unexplained mismatch as ease.
 
-Native input association,output-role/reference mappings and broader v1 variant coverage have
+The constructor refuses local self-supply in span,Piece,tolerance-source order. It does not infer
+global namespace roles from equal external ids. `bind_source` checks missing span,missing selected
+copy,Piece association,tolerance-source identity,class,then negative limit in that order. Success
+and errors retain the original request and actual graph/plan/provider;private bound fields cannot
+be forged. `source_side`/`counterpart_side` borrow original span fields. `affected_copies` returns
+actual matching CutPlan records in authored plan order;it is not a complete observer census.
+No bound result can outlive its source owners. Whole graph lookup/currentness and execution
+workspaces need their own program/command admission;this fixed-size request declares no quotas
+for those later stages. No current-fragment alias or detached replacement span is silently used.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+use sc_units::Tolerance;
+fn request_refit(operation:EntityId,span:EntityId,side:SeamSideId,piece:EntityId,
+    fit_source:EntityId)->Result<ConstrainedSeamTruing,TruingInputError> {
+    ConstrainedSeamTruing::new(operation,span,side,piece,fit_source)
+}
+fn bind_refit<'a>(edit:&'a ConstrainedSeamTruing,graph:&'a SewingGraph,plan:&'a CutPlan,
+    source:EntityId,tolerance:&'a Tolerance)->Result<BoundConstrainedTruing<'a>,TruingBindingError<'a>> {
+    edit.bind_source(graph,plan,TruingFitProvider { source,tolerance })
+}
+```
+
+These helpers retain actual error owners in the caller;they do not copy a span/ease or invent a
+budget value. Native output-role/reference mappings and broader v1 variant coverage have
 separate task owners. Endpoint-moving or copy-forking variants require explicit semantics before
-they can be accepted. Actual constrained fitting,all observers,atomic bus/undo and real result
+they can be accepted. Endpoint/stop locks specify permissions,not a unique fitted curve;
+deterministic curve/refit selection and its supported domains must be defined before accepting
+complete v1 truing schemas. No solver is inferred by this association API.
+Actual constrained fitting,all observers,atomic bus/undo and real result
 verification remain G3/full `.5f.4` work;this contract closes none of those gates.

@@ -55,3 +55,8 @@ pub use walk::{
     WalkBalancePair, WalkEditAdmissionError, WalkEditAdmissionRefusal, WalkEditBindingError,
     WalkEditBindingRefusal, WalkEditLimits, WalkSeamEdit,
 };
+mod truing;
+pub use truing::{
+    BoundConstrainedTruing, ConstrainedSeamTruing, TruingBindingError, TruingBindingRefusal,
+    TruingFitProvider, TruingInputError, TruingInputRole,
+};

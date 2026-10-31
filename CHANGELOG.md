@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0688 — recover constrained seam-truing source and fitting contracts
+## STITCHCAD-G1-0689 — bind actual constrained seam-truing inputs
 
-- Planned Piece refit retains actual span/copy/ease,explicit side and sourced length-fit tolerance.
-- Endpoint/stop preservation and all-copy observers are explicit;infeasible fits must refuse.
-- Source12/rendered links4/book/diff/history857 four exact spans pass;no native truing executes.
-- Inputs/output mappings/v1 coverage and actual G3/bus/full integration remain owned/deferred.
+- Explicit span/side/Piece/source intent binds actual graph/copy and borrowed quantitative fit budget.
+- Private source/error views preserve ease/stops,reflected copies and all-copy edit implications.
+- Native5/rustdoc10/selected lint/fmt/book/rendered/diff/history858 exact spans pass.
+- Deterministic refit coverage/output policies,geometry/currentness/observers/bus remain deferred.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

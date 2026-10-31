@@ -821,28 +821,29 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   correspondence/differential/ease/profile truth and atomic edits stay G3/G4/bus/.5f.4.geometry.
 - ID: `G1-SLICE.5f.1.c.true.contracts`
   Status: `done`
-  Goal:recover concrete truing source/adjustment/tolerance contracts from actual normative
-  seam/skirt/unit interfaces before code;define the next safe schema slice. Retire whole0687
-  scope/journals and the whole closed D121 scope for bounded task storage;focused source/book
-  checks. Define endpoint/stop-preserving Piece refit,actual span/copy/ease and sourced length-fit
-  budget;track broader variant coverage separately. No geometry or gate waiver.
-  - [x] ISSUE:truing needs actual correspondence,adjustment permission and sourced fit budget;
-    skirt dart truing alone supplies no standalone edge-target operation.
-  - [x] ROOT CAUSE (truing recovery):actual Roadmap/ontology/skirt/command/G3 and published
-    CutPlan/span/ease/unit/context clauses inspected;12 exact source clauses checked,rc=0.
-  - [x] FIX:book defines planned constrained Piece refit,explicit side/source,class/domain,
-    endpoint/stop preservation and all-copy observers;inputs/outputs/coverage separately owned.
-  - [x] ADDRESSED (truing recovery):source-and-render.json under target/history-proof-0688-contracts
-    records12 actual clauses/four valid rendered links,rc=0;no default budget or copied ease.
-  - [x] NO REGRESSION (truing recovery):mdbook build/rendered/diff/history857 four exact
-    Git spans pass,rc=0. No Rust/schema/geometry change or full integration claim.
-  - [x] LOCKSTEP:live/frontier/book sync;promotion: declined (local schema policy,coverage open).
-  Verification:focused source/book only;Commit:STITCHCAD-G1-0688. Next .true.inputs.
+  Goal:0688 contract recovery;[whole scope/proofs](../history/stitchcad-devnotes-part858.md).
 - ID: `G1-SLICE.5f.1.c.true.inputs`
-  Status: `pending`
+  Status: `done`
   Goal:native constrained span refit inputs;explicit adjusted side,Piece and fit-budget source.
   Borrow actual Graph/span/CutPlan copy and quantitative tolerance;check exact association,
   T2 fit class/nonnegative limit. Retain ease/stops;no target-length/default/fork/geometry claim.
+  Scope:explicit constrained policy type,local source checks,authentic borrowed success/error
+  owners and all-copy views;focused native/compiler/book checks. Retire whole0688 records.
+  - [x] ISSUE:deliberate constrained refit needs actual span/copy/Piece and quantitative source
+    association;query success or pointwise EPSgeo cannot grant a fit or editing permission.
+  - [x] ROOT CAUSE (truing inputs):0688 contracts and real CutPlan/span/ease/unit APIs inspected;
+    new independent native factory uses real graph,stop and retained partial source,rc=0.
+  - [x] FIX:explicit constrained request/local source roles;private borrowed bound view with
+    exact span/copy/Piece/provider identity,T2 class/nonnegative domain and authored all-copy view.
+  - [x] ADDRESSED (truing inputs):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test truing_input_contract →5 pass,rc=0. Both sides/shared reflected copies,actual pointers,
+    typed precedence/all wrong classes,zero/domain limit,retained partial ease and stale boundary.
+  - [x] NO REGRESSION (truing inputs):compiler guards3/actual editing book7/selected clippy/fmt/
+    book/rendered/diff/history858 three exact Git spans pass,rc=0. Initial fixture indexing lint
+    repaired with checked extraction;no lint waiver. No fitting/global observer/publication proof.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing source contracts).
+    .true.variants owns deterministic refit selection;constraints alone do not select a curve.
+  Verification:native5/rustdoc10;Commit:STITCHCAD-G1-0689. Next .join.inputs.
 - ID: `G1-SLICE.5f.1.c.true.outputs`
   Status: `pending`
   Goal:native refit output-role/reference/identity contract;preserved endpoints/stops,all-copy
@@ -850,7 +851,14 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.5f.1.c.true.variants`
   Status: `pending`
   Goal:review v1 truing coverage against the envelope before family closure;constrained refit
-  alone grants no complete coverage. Explicit policies for any added endpoint/copy variants.
+  association alone grants no complete coverage. Define deterministic curve/refit selection
+  and supported domains;endpoint/stop locks alone admit multiple curves. Explicit policies for
+  any added endpoint/copy variants;no guessed solver. Native output/real geometry owners stay separate.
+- ID: `G1-SLICE.5f.1.c.join.inputs`
+  Status: `pending`
+  Goal:recover and implement explicit join source intent against actual Piece/seam/copy contracts;
+  retain canonical correspondence and original metadata,never infer a joined boundary from sewing.
+  Split output/semantic reconciliation policies before family acceptance;actual geometry stays G2/G3.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.
