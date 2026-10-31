@@ -926,23 +926,36 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Goal:0658 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part818.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.consumer`
   Status: `done`
-  - [x] ISSUE:fresh actual native acceptance after shared inventory/effect/diagnostic repairs.
-  - [x] ROOT CAUSE (WHY + WHERE):modeled effects cannot certify compiled kernel outcomes;
-    actual four public root/arc/forward/inverse commands →all pass,rc=0.
-  - [x] FIX:retain fresh protected command logs/reports,source/preflight hashes and exact runner;
-    independently verify Cargo success,watched fixture rows and complete copied populations.
-  - [x] ADDRESSED:actual baseline4/compiled fault rejections26(5/5/7/9),all reports genuine;
-    real timeout/group/exclusive capture controls pass;all2180 snapshot files restored,rc=0.
-    Rust1.99.0/b940084d7/LLVM23.1.1/aarch64-apple-darwin;no wider host/device claim.
-  - [x] NO REGRESSION:all551 source hashes unchanged/legacy6614 exact/Rust548 still matched;
-    source/script receipt SHA0fee096d24b88963e434182710341cc65fd33d86c2e59118ba017d65311dfeb5,rc=0.
-    Book101/374/1684/3000/history818 four Git spans/IDs exact/map/diff pass,rc=0.
-  - [x] LOCKSTEP:book/live/notes/registry/frontier sync;n16.1 and all three children done.
-    Promotion declined(existing independent compiled/source/restoration contracts). n16 active;
-    n16.2/a41 pending;full D156/.h2.b.v/pre-push/app/physical/release owners retained.
-    Full0654 gate remains historical source-scoped;no new full-suite verdict.
-  Commit:STITCHCAD-G1-0659;Verification:fresh actual four-entry native acceptance/independent exact data.
+  Goal:0659 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part819.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal:tangent/platform entry locality review under parent schedule/acceptance;feature evidence is scoped.
   Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py;docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py;docs/tasks/artifacts/formula_structure/irrational_platform.py
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.inventory`
+  Status: `done`
+  - [x] ISSUE:D360 P1 platform plan-only inventory inherits unrelated caller Git authority.
+  - [x] ROOT CAUSE (WHY + WHERE):actual old --plan-only with unrelated GIT_DIR →ls-files128;
+    four protocol controls stay read-only;compiler/browser never dispatched,rc=0.
+  - [x] FIX:retain prepared nonactivating store profile,strip all Git selectors,disable system/
+    global configuration/optional locks;preserve NUL argv,cwd and unrelated caller values.
+  - [x] ADDRESSED:extended python_numerical_inventory_contract.py →actual platform31 checks/
+    405 rows/seven body faults pass;no directory/write/compiler/browser effects,rc=0.
+    Actual external CLI with unrelated GIT_DIR now passes original complete plan,rc=0.
+  - [x] NO REGRESSION:original four plans/545 snapshot files/six body reds stay green;
+    book101/374/1684/3001/history819 four Git spans/census/map/diff pass,rc=0.
+  - [x] LOCKSTEP:book/live/notes/registry/frontier sync;D360 fixed. Promotion declined(existing
+    caller-authority/read-only contracts). n16/n16.2 active;ownership/effects/consumer/a41 pending.
+    No native/browser verdict inferred;full D156/.h2.b.v/pre-push remain owned.
+  Commit:STITCHCAD-G1-0660;Verification:actual read-only platform plan and independent omission controls.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.ownership`
+  Status: `pending`
+  Goal:calibrate platform run/temp/pointer ownership and refuse concurrent reuse before effects;
+  preserve original captures,failure writer and latest publication semantics.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects`
+  Status: `pending`
+  Goal:complete tangent-family entry and platform source/file/mutable/child/browser/temp/failure
+  review with focused refusals/body controls;model outcomes supply no numerical/native verdict.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer`
+  Status: `pending`
+  Goal:fresh actual tangent/resource fault consumers and observed native/Chrome execution;
+  independently preserve sources/full restored artifacts and close only declared n16 scope.

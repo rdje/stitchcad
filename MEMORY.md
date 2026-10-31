@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.2:tangent/resource/platform runtime/locality review.
-- Latest unit STITCHCAD-G1-0659;derive HEAD/ahead from Git. n16.1 plus all three children done.
-- Actual four published commands pass4 baselines/26 compiled kernel rejections(5/5/7/9);
-  independent Cargo/whole-row/source/census validation passes;all2180 copied files restore.
-- All551 inputs unchanged;legacy6614 exact;Rust/build548 still matches full Rust gate basis.
-- target/irrational_platform_certificate/native-0659-20261031T003645962930Z-64800/receipt.json SHA0fee096d24b88963e434182710341cc65fd33d86c2e59118ba017d65311dfeb5.
-- Observed Rust1.99.0/b940084d7/LLVM23.1.1/aarch64-apple-darwin;not wider host/device proof.
-- Book101/374/1684/3000/history818 four exact Git spans/IDs exact/map/diff pass;no kernel changes.
-- n16 remains active;n16.2 pending;a41 fixture-own producer audit pending after active groups.
-- D357–D359 fixes retain scoped proof;full0654 actual29/source1223 predates current repairs.
-- Full D156/.h2.b.v/pre-push verification remains owned. No new full-suite/hosted/app/release verdict.
-- Preserve original numerical/certificate/archive/search evidence;never rerun historical captures.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.ownership:calibrate atomic run/temp/latest ownership,then .effects and .consumer. n16/n16.2 active;n16.1 and platform inventory complete.
+- Latest unit STITCHCAD-G1-0660;derive HEAD/ahead from Git. D360 unrelated Git inventory fixed.
+- Actual external platform --plan-only now accepts unrelated GIT_DIR without redirecting index.
+- Read-only watcher retains9 consumers/31 checks/6 exclusions/405 rows;seven platform body reds
+  reject;no directory/write/compiler/browser effects. Original four plans/current545/six reds pass.
+- Book101/374/1684/3001/history819 four exact Git spans/census/map/diff pass;no Rust/kernel changes.
+- n16.1 actual native0659 retains4 baselines/26 compiled faults/source551/legacy6614/Rust548 exact,
+  all2180 snapshots restored;receipt protected at native-0659-20261031T003645962930Z-64800.
+- Current platform inventory fix supplies no fresh native/browser verdict. Capture ownership,
+  effects and actual execution remain pending;new wrapper-own audit a41 stays scheduled.
+- D156/.h2.b.v/pre-push broad verification owned;full0654 actual29/source1223 remains historical.
+- Preserve all original numerical/certificate/archive/search evidence;never rerun old captures.
 - G1 6/18/G0 unapproved;.5d.4 all43 done;.5d.2/.5e.3 active;.5e.4 pending. Full PNT/push400 only.
-- Cleanup2026-10-30 14:18 UTC unchanged;not due. Current run terminal0 consumed;no job in flight.
+- Cleanup2026-10-30 14:18 UTC unchanged;not due yet. No job pending after focused checks.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

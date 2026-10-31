@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0659 — close fresh native four-entry acceptance
+## STITCHCAD-G1-0660 — isolate read-only platform inventory
 
-- Actual root/arc/forward/inverse baseline4/compiled fault26 pass;all2180 snapshot files restore. Independent source551/legacy6614/Rust548 exact and actual timeout/group/capture controls pass on observed Rust1.99.0/aarch64-apple-darwin.
-- Book101/374/1684/3000/history818/IDs/map/diff pass. n16.1 done;next n16.2;a41/D156/full integration remain owned. No new kernel/full-suite/hosted/app/release verdict;G1 6/18/G0 unapproved unchanged.
+- D360 fixes inherited Git selectors redirecting the platform index. Actual plan retains9 consumers/31 checks/6 exclusions/405 rows;seven platform body reds and external CLI with unrelated GIT_DIR pass without writes/compiler/browser effects.
+- Original four plans/545 files/six reds/book101/374/1684/3001/history819/census/map/diff pass. No kernel/runtime verdict;next platform ownership,then effects/consumer. Broader n16/a41/D156 remain owned;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -61,6 +61,15 @@ def relative(path):
     return path.relative_to(ROOT).as_posix()
 
 
+def inventory_environment():
+    """Inspect this project's index without borrowing unrelated Git configuration."""
+    prepared = PROFILE['environment_for'](ROOT, os.environ, create=False)
+    environment = {name: value for name, value in prepared.items() if not name.startswith('GIT_')}
+    environment.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                       GIT_OPTIONAL_LOCKS='0', GIT_LITERAL_PATHSPECS='1')
+    return environment
+
+
 def save(path, value):
     PROFILE['plan_producer'](ROOT, output_files=(path,))
     path.write_text(value)
@@ -251,7 +260,7 @@ def main():
     protocol_controls()
     PROFILE['plan_producer'](ROOT, directories=(STORE, RUN, WORK, TEMP))
     inventory = subprocess.run(['git', 'ls-files', '-z', 'crates'], cwd=ROOT,
-        env=PROFILE['environment_for'](ROOT, os.environ, create=False),
+        env=inventory_environment(),
         check=True, capture_output=True).stdout.decode().split('\0')
     sources = {ROOT / name for name in inventory if name}
     sources.update((Path(__file__), PROFILE_SOURCE, CLEANUP, ROOT / 'Cargo.toml', ROOT / 'Cargo.lock',

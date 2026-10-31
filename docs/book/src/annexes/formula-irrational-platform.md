@@ -389,3 +389,16 @@ This closes n16.1's supported four-entry inventory/effect/native boundary on the
 Tangent/resource/browser entries remain n16.2,the fixture wrapper remains a41,and complete D156
 integration retains its owner. No new full-suite,application/device,allocator,physical or human
 release verdict follows from this native acceptance. Historical captures remain immutable.
+
+## Platform inventory authority
+
+The separate platform runner's plan-only entry also isolates Git selectors and system/global
+configuration before reading this repository's index. It preserves the prepared local store
+values and unrelated caller variables without activating stores. An unrelated GIT_DIR cannot
+redirect its source inventory. NUL-separated Git output retains the existing filename boundary.
+
+The read-only watcher runs the actual entry,retains all nine consumers,31 selected checks,six
+host-only exclusions and405 fixture rows,and rejects seven actual inventory-body faults. It
+permits no directory creation,file write,compiler or browser dispatch. The original four native
+plan-only entries and their six body controls remain green. This closes platform inventory only;
+capture ownership,effects and fresh execution remain the following n16.2 leaves.

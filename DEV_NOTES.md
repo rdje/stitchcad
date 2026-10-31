@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — close fresh four-entry native controller acceptance
+## _(2026-10-31 UTC)_ — isolate the platform's read-only inventory
 
-0659 executes actual root/arc/forward/inverse commands sequentially after D357–D359 repairs. All4 baselines/26 compiled kernel faults(5/5/7/9) pass. Independent complete original-row/Cargo/report/snapshot checks distinguish real native evidence from modeled effects. All2180 copied snapshot files restore.
-All551 source hashes stay exact;legacy6614 remain unchanged during the run;Rust/build548 still matches the full Rust basis. Actual timeout/group/exclusive-capture controls pass. Observed Rust1.99.0/b940084d7/LLVM23.1.1/aarch64-apple-darwin. No wider host/device or full-suite verdict follows.
-Book101/374/1684/3000/history818 four exact Git spans/IDs/map/diff pass. n16.1 and three children done;n16 active,n16.2/a41 pending. LIVE states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing independent compiled/source/restoration contracts. Full D156/.h2.b.v/pre-push remain owned.
-[Whole0658](docs/history/stitchcad-devnotes-part818.md) retains effect/D358/D359 proof. Full PNT continues with tangent/resource/platform runtime review. Runner terminal0 consumed;evidence preserved;no kernel change. Broader platform/app/physical/release scopes stay owned.
-Receipt:target/irrational_platform_certificate/native-0659-20261031T003645962930Z-64800/receipt.json SHA0fee096d24b88963e434182710341cc65fd33d86c2e59118ba017d65311dfeb5;exact runner/preflight/logs retained together. Full local0654 probes remain historical source-scoped evidence.
+0660 closes n16.2.inventory. D360 P1:actual platform --plan-only with unrelated GIT_DIR exits128 at ls-files. Keep nonactivating prepared stores,strip all Git selectors/configuration and disable optional locks;retain NUL argv/cwd and unrelated variables. No compiler or browser effect occurs.
+Extended read-only watcher passes original4 plans/current545 files/six body reds plus platform9 consumers/31 checks/6 exclusions/405 rows/seven body reds. Actual external platform CLI with unrelated GIT_DIR now passes. Store activation,writes,directories and compiler/browser dispatch remain forbidden.
+Book101/374/1684/3001/history819 four exact Git spans/census/map/diff pass. LIVE notes:D360 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing caller-authority contracts. n16/n16.2 active;ownership/effects/consumer/a41 pending. No Rust/kernel change or new runtime verdict.
+[Whole0659](docs/history/stitchcad-devnotes-part819.md) retains actual four-entry native acceptance. Full PNT next:atomic platform capture/temp/latest ownership. Existing native/browser receipts stay immutable. Full D156/.h2.b.v/pre-push/platform/app/physical/release scopes remain separately owned.
+Evidence:target/platform-0660-inventory.log. Actual entry capture rejects seven current Python-body omissions/resets while preserving original source/store/argv bytes. Previous Root/Arc/forward/inverse controls remain required;no full gate rerun for this bounded fix.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
