@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-30 UTC)_ — isolate read-only numerical snapshot inventory
+## _(2026-10-31 UTC)_ — verify shared numerical controller effects and refusal boundaries
 
-0657 closes n16.1.inventory only. D357 P1:actual original root --plan-only inherits unrelated GIT_DIR and exits128 in git ls-files before snapshots/compiler. Shared inventory now strips all Git selectors,disables system/global config/optional locks and preserves caller stores/toolchain/other values.
-Watcher runs all four actual plan-only entries,variants6/6/8/10/current545 exact snapshot files;no directories,writes or compiler effects. Six actual inventory-body faults reject;caller sources/environment/argv exact. External root CLI with unrelated GIT_DIR now passes6/545/557. No kernel change.
-Positive book101/374/1684/2998/history816 four exact Git spans/current census/map/diff pass. Register read-only watcher in the suite;no native substitution or locality claim. Full0654 gates predate this repair;full D156/.h2.b.v/pre-push remain owned. Native acceptance deferred to .consumer after .effects.
-[Whole0656](docs/history/stitchcad-devnotes-part816.md) retains actual search coverage/D356 proof. LIVE notes:D357 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing caller-authority contract. n16/n16.1 active;.effects/.consumer/n16.2 pending;full PNT continues.
-Evidence:target/inventory-0657-controls.log and target/inventory-0657-census.log. Tracked watcher derives current snapshot counts independently and rejects selector/locking/config/store/cwd faults;read-only Git argv retained. No historical report,capture or source rewritten.
+0658 closes n16.1.effects. D358 P1:untracked borrowed kernel reaches activation without copied-body destination. Require kernel/fixture membership,distinct labels and explicit copied-body mutation/restoration. D359 P3:arc compile failure says root;actual controlled red→green now retains family.
+Four configurations/30 simulated variants,seven failure categories,twelve preflight refusals/eight Python-body reds pass. Actual owned parent/child timeout fixtures and independent source/workspace restoration pass. Reports explicitly SIMULATED;compiled numerical acceptance remains separate .consumer.
+Inventory4/current545/six reds,book101/374/1684/2999/history817 four Git spans/census/map/diff/Rust548 exact pass. No kernel change;full0654 gates predate this repair. LIVE notes:D358/D359 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing effect/restoration contracts.
+[Whole0657](docs/history/stitchcad-devnotes-part817.md) retains inventory/D357 proof. Full PNT next:.consumer,then n16.2. New fixture-own audit a41 pending after active groups;D156/.h2.b.v/pre-push remain owned. Wrapper transitive proof stays owned.
+Evidence:target/runtime-0658-controls.log/census.log;target/inventory-0657-controls.log. Compilers modeled;timeout fixtures real. Arc compilation refusal separately checked after diagnostic correction. Native fresh capture/unchanged-source acceptance follows this committed implementation.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

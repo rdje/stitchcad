@@ -337,3 +337,31 @@ creating directories,writing snapshots or dispatching a compiler. The focused wa
 actual four entries with unrelated Git selectors and rejects six actual inventory-body faults.
 This closes only the inventory boundary. Complete controller effects,child/runtime locality and
 fresh native-consumer acceptance remain under n16;no existing numerical receipt is overwritten.
+
+## Controller effects and failure boundaries
+
+The shared root/arc/forward/inverse controller validates the complete source,snapshot,log and
+receipt plan before activation. The selected kernel and fixture must belong to that copied
+workspace;an unrelated supplied file cannot become an unplanned mutation target. Baseline and
+fault labels must be distinct. Mutation and restoration explicitly declare the copied body as
+both an input and a mutable output. Original production sources remain read-only.
+
+Each Cargo dispatch uses the copied manifest,offline/locked dependencies,the original named test
+and prepared local stores. Published Cargo artifact paths undergo source validation before hashing.
+Child processes own separate sessions;timeout or interruption stops the owned group before copied
+body restoration. Compilation failure and a surviving fault cannot count as numerical rejection.
+A late log refusal,linked mutable body or foreign artifact path cannot publish acceptance.
+
+The focused runtime watcher exercises all four entry configurations with only their diagnostic
+output labels changed. Its thirty simulated variants test dispatch and copied-body effects;
+retained reports explicitly say SIMULATED and supply no compiled numerical evidence. Seven
+failure paths,twelve preflight refusals and eight actual Python-body faults calibrate the checks.
+Device and Git-marker refusals use controlled observations;source/output aliases and types use
+owned fixtures. Actual parent/child timeout fixtures verify that killing a parent alone permits a
+late child write,while group cleanup prevents it. Original inputs and complete copied workspaces
+are checked after success and failure;the watcher also cleans its intentionally broken restoration.
+
+These controls close the scoped effect review. Fresh compiled-native acceptance remains the
+separate n16.1.consumer leaf;complete n16/platform and broader D156 integration remain owned.
+The fixture wrapper's own complete producer audit is separately scheduled at a41;its scoped
+controller checks do not close that transitive boundary.

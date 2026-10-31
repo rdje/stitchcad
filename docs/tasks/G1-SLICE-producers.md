@@ -489,6 +489,14 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal:0656 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part816.md).
 
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a41`
+  Status: `pending`
+  Goal:complete producer-own file/lifecycle audit of the new numerical runtime fixture wrapper;
+  its scoped controller captures are .f.n16.1.effects,not full transitive wrapper signoff.
+  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
+  Schedule:after active numerical runtime groups,before final D156 producer/locality signoff.
+  Apply ordered public-entry/effect/refusal/omission and exact original-data acceptance above.
+
 ## Ordered native file-destination repairs
 
 These P1 leaves extend the verified source/directory guards with complete file plans.
@@ -911,25 +919,28 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.inventory`
   Status: `done`
-  - [x] ISSUE:D357 P1 unrelated caller Git selectors redirect shared native snapshot inventory.
-  - [x] ROOT CAUSE (WHY + WHERE):actual prior root --plan-only with unrelated nonexistent
-    GIT_DIR →git ls-files exit128 before snapshot/compiler effects;ambient inventory child,rc=0.
-  - [x] FIX:isolate all Git selectors and system/global config;optional locks off/literal paths,
-    while preserving local stores/toolchain/unrelated caller variables;read-only index command unchanged.
-  - [x] ADDRESSED:python_numerical_inventory_contract.py →four actual plan-only entries,
-    variants6/6/8/10/current545 exact snapshot files;six actual inventory-body faults rejected,
-    no directory/write/compiler effects;original sources/environment/argv exact,rc=0.
-  - [x] NO REGRESSION:actual external root CLI with unrelated GIT_DIR →6 variants/545 files/
-    557 outputs,rc=0. Book101/374/1684/2998;history816 four exact Git spans/census/map/diff pass,rc=0.
-    No Rust/kernel/native fault changes;full native consumer deliberately deferred to .consumer.
-  - [x] LOCKSTEP:book/live/registry/watched suite/frontier sync;D357 fixed. Promotion declined
-    (existing read-only/caller-authority contract). n16/n16.1 remain active;.effects/.consumer/
-    n16.2 pending. Full0654 gate predates this repair;D156/.h2.b.v/pre-push remain owned.
-  Commit:STITCHCAD-G1-0657;Verification:actual read-only plans and focused inventory/body controls.
+  Goal:0657 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part817.md).
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.effects`
-  Status: `pending`
-  Goal:complete shared controller/three wrapper path/effect/child/failure captures and omission
-  controls,including aliases,mutable snapshot bodies,artifact and restoration declarations.
+  Status: `done`
+  - [x] ISSUE:complete four-entry controller effect review;D358 P1 unsupported snapshot/mutation
+    plan and D359 P3 wrong-family compilation diagnostic.
+  - [x] ROOT CAUSE (WHY + WHERE):actual borrowed untracked kernel reaches trapped activation
+    without a body destination;shared arc compilation failure reports root,red calibrated,rc=0.
+  - [x] FIX:require selected kernel/fixture snapshot membership and distinct baseline/fault labels;
+    explicitly declare copied-body mutation/restoration;retain actual family in compile refusal.
+  - [x] ADDRESSED:python_numerical_runtime_contract.py →four configurations/30 simulated variants,
+    seven failure categories/twelve preflight refusals/eight actual Python-body faults;
+    real parent/child timeout controls and independent owned-workspace restoration pass,rc=0.
+    Reports explicitly SIMULATED;no compiled numerical verdict inferred. Arc diagnostic red→green,rc=0.
+  - [x] NO REGRESSION:four inventory entries/current545 files/six body reds still pass,rc=0;
+    book101/374/1684/2999/history817 four exact Git spans/census/map/diff/Rust548 exact,rc=0.
+    All original input bytes and complete owned snapshot data preserved/restored after failure.
+  - [x] LOCKSTEP:book/live/registries/watched suite/frontier sync;D358/D359 fixed. Promotion declined
+    (existing complete source/file/child/restoration contracts). Native proof remains .consumer;
+    n16/n16.1 active,n16.2 pending. New wrapper-own audit a41 pending after active groups.
+    Full0654 gate predates these repairs;D156/.h2.b.v/pre-push verification remains owned.
+  Commit:STITCHCAD-G1-0658;Verification:scoped modeled controller effects and actual owned timeout fixtures.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.consumer`
   Status: `pending`
   Goal:run focused fresh native consumers after inventory/effect repairs;verify original sources,

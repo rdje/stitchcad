@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0657 — isolate read-only numerical snapshot inventory
+## STITCHCAD-G1-0658 — verify numerical controller effects and refusal boundaries
 
-- D357 fixes unrelated Git selectors redirecting the shared inventory. Four actual plan-only entries/545 files and six body reds pass without snapshot/compiler effects;caller stores/toolchain/argv exact. External root CLI with unrelated GIT_DIR now passes.
-- Book101/374/1684/2998/history816/census/map/diff pass;no kernel change. n16/n16.1 remain active;next .effects,then .consumer/n16.2. Full0654 gates predate this repair;D156/integration/pre-push stay owned;G1 6/18/G0 unapproved.
+- D358 fixes snapshot membership/labels/copied-body mutation plans;D359 fixes wrong-family compilation diagnostic. Four configurations/30 simulated variants/7 failure categories/12 preflight refusals/8 body reds and real timeout fixtures pass;all source/snapshot data restored.
+- Inventory4/current545/six reds/book101/374/1684/2999/history817/census/map/diff/Rust548 exact pass. No kernel change;fresh native proof next .consumer,then n16.2;a41 wrapper audit pending. Full integration remains owned;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

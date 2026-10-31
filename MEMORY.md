@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.effects:shared controller/three wrapper complete runtime/effect
-  capture and path/restoration guards;then .consumer fresh native acceptance,then n16.2.
-- Latest unit STITCHCAD-G1-0657;derive HEAD/ahead from Git. n16.1.inventory done;parents active.
-- D357 P1 actual old --plan-only with unrelated GIT_DIR exits128;shared Git inventory now isolates
-  all Git selectors/config/optional locks while preserving caller stores/toolchain/other values.
-- Four actual plan-only entries:6/6/8/10 variants/current545 exact files;no directory/write/compiler
-  effects. Six actual body reds pass;external CLI with unrelated GIT_DIR now passes6/545/557.
-- Book101/374/1684/2998/history816 four exact Git spans/census/map/diff pass;no Rust/kernel changes.
-- Inventory proof is not full runtime locality. .effects/.consumer/n16.2 pending;D156/.h2.b.v/
-  pre-push broader verification remains owned. Full0654 actual29/source1223 predates these changes.
-- a40 complete0656;D356 fixed;fresh native search897→101/101 chapters/70044 words/58039 terms exact
-  on its recorded source basis. Preserve target/book_search_0656_20261030T234938769588Z-14711.
-- Numerical .5d.4 all43 done;.5d.2/.5e.3 remain active;.5e.4 pending. G1 6/18/G0 unapproved.
-- Preserve original native/certificate/archive/search evidence;no old reruns or foreign writes. Cleanup2026-10-30 14:18 UTC unchanged;not due yet. Full PNT/push400 only;no app/release approval.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.consumer:fresh root/arc/forward/inverse native acceptance,then n16.2 tangent/platform. n16/n16.1 active;controller inventory/effects complete.
+- Latest unit STITCHCAD-G1-0658;derive HEAD/ahead from Git. D358 snapshot membership/labels/copied
+  mutable-body plan fixed;D359 actual arc compilation diagnostic now retains arc family.
+- Controller captures:four configurations/30 simulated variants/seven failure categories,
+  twelve preflight refusals/eight Python-body reds;actual owned timeout fixtures pass.
+- Original sources and all owned snapshot data restore independently,including broken-restore
+  controls. Simulated reports explicitly marked;fresh compiled numerical evidence still .consumer.
+- Four inventory entries/current545 files/six reds pass;book101/374/1684/2999/history817 four Git
+  spans/census/map/diff/Rust548 exact. No kernel change or full-gate rerun.
+- New output-wrapper own audit a41 pending after active numerical groups,before D156 signoff.
+- Full0654 actual29/source1223 predates current repairs;D156/.h2.b.v/pre-push broad verification owned.
+- Preserve original numerical/certificate/archive/search proof;no historical capture reruns.
+- G1 6/18/G0 unapproved;.5d.4 all43 done;.5d.2/.5e.3 active;.5e.4 pending. No full app/release claim.
+- Cleanup2026-10-30 14:18 UTC unchanged;not due. Full PNT/push400 only;logs target/runtime-0658-*.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

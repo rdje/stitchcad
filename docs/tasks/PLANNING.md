@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D357 — read-only numerical inventory isolated
+## D308–D359 — shared controller effects and refusal boundaries verified
 
-D308–D356:[whole prior ledger](../history/stitchcad-devnotes-part816.md). D357 P1 fixed0657:actual old root plan inherits unrelated GIT_DIR/exit128;four actual plans/current545 files and six body reds pass without writes/compiler after selector isolation. D334 P2 after G1/before G0;D223/PLANNING.5 open. Next n16.1.effects/consumer,then n16.2;full integration/release owned.
+D308–D357:[whole prior ledger](../history/stitchcad-devnotes-part817.md). D358 P1 fixed0658:unsupported snapshot/labels/body mutation preflight;D359 P3 arc compilation diagnostic family corrected. Model30/failure7/refusal12/body8 and real timeout/restoration pass. D334 P2 after G1/before G0;D223/PLANNING.5 open. Next native consumer/n16.2;a41/D156/full integration owned.

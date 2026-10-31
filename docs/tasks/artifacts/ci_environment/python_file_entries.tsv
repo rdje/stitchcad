@@ -244,3 +244,4 @@ docs/tasks/artifacts/formula_structure/mixed_irrational_design_oracle.py	referen
 docs/tasks/artifacts/formula_structure/irrational_platform.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n16.2
 docs/tasks/artifacts/ci_environment/python_search_capture_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a40
 docs/tasks/artifacts/ci_environment/python_numerical_inventory_contract.py	reference	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a41

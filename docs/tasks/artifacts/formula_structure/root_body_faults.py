@@ -252,6 +252,7 @@ def main(config=None):
         relative_template.parent / (relative_template.name + '-' + stamp)
     faults, test_name, test_target = config['faults'], config['test'], config['target']
     labels = ('baseline', *(label for label, _, _ in faults))
+    assert len(labels) == len(set(labels)), 'distinct baseline and fault labels required'
     copy_root, report_path = run_dir / 'workspace', run_dir / 'report.json'
     initial = (Path(__file__), config['entry'], PROFILE_SOURCE, kernel_source, fixture_path, ROOT / 'Cargo.toml',
         ROOT / 'Cargo.lock', ROOT / 'rust-toolchain.toml')
@@ -268,6 +269,8 @@ def main(config=None):
         env=inventory_environment(), check=True, capture_output=True, text=True).stdout.splitlines()
     snapshot = tuple(sorted({ROOT / name for name in inventory} | {
         ROOT / name for name in ('Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml')}))
+    assert kernel_source in snapshot and fixture_path in snapshot, \
+        'selected kernel and fixture must belong to the copied workspace'
     sources = tuple(sorted(set(initial) | set(snapshot)))
     destinations = tuple(copy_root / path.relative_to(ROOT) for path in snapshot)
     outputs = (*destinations, *logs, report_path, negative, positive, *control_outputs)
@@ -306,7 +309,8 @@ def main(config=None):
             if label != 'baseline':
                 _, before, after = next(fault for fault in faults if fault[0] == label)
                 variant = text.replace(before, after, 1).encode()
-            profile['plan_producer'](ROOT, sources=sources, output_files=(body, log))
+            profile['plan_producer'](ROOT, sources=(*sources, body), mutable_sources=(body,),
+                output_files=(body, log))
             body.write_bytes(variant)
             profile['plan_producer'](ROOT, sources=destinations, output_files=(log,))
             result = run_group(['cargo', 'test', '--offline', '--locked', '--manifest-path',
@@ -323,7 +327,7 @@ def main(config=None):
                     pass
             builds = [item for item in messages if item.get('reason') == 'build-finished']
             assert len(builds) == 1 and builds[0]['success'], \
-                'compiler failure is not an actual root fault rejection:' + label
+                'compiler failure is not an actual ' + config['family'] + ' fault rejection:' + label
             assert 'running 1 test' in transcript and test_name in transcript, 'actual watched native test'
             failed_rows, independent_failure = [], None
             if label == 'baseline':
@@ -346,7 +350,7 @@ def main(config=None):
             print('native ' + config['family'] + ' body:' + label + (' baseline passes' if label == 'baseline'
                 else ' actual compiled test rejects fault'), flush=True)
     finally:
-        profile['plan_producer'](ROOT, output_files=(body,))
+        profile['plan_producer'](ROOT, sources=(body,), mutable_sources=(body,), output_files=(body,))
         body.write_bytes(original)
     assert {path.relative_to(ROOT).as_posix(): digest(path) for path in sources} == before_hashes
     assert all(digest(destination) == before_hashes[source.relative_to(ROOT).as_posix()]
