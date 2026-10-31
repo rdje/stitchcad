@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0699 — bind candidate occurrence to actual active offset roles
+## STITCHCAD-G1-0700 — require explicit normal correspondence and a sourced error partition
 
-- Complete candidate/catalogue counts precede owner and original tag membership checks.
-- Actual candidate/active fields retain their own orders;different result subsets retire no roles.
-- Native6/rustdoc10/selected lint/fmt/book/rendered/diff/history868 exact spans pass;D372 open.
-- Native tag metadata components complete;actual geometry/currentness/history/bus proof remains owned.
+- Authentic candidate matches retain required normal-map evidence sources and actual sourced T2 policy.
+- Four propagated output-point ceilings sum exactly;affine primitive never supplies normal-map evidence.
+- Native10/rustdoc11/selected lint/fmt/book/rendered/diff/history869 exact spans pass;D372 open.
+- Requirement admission returns no mapped Param;actual geometry/arclength/propagation remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

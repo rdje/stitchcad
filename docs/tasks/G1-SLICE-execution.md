@@ -824,29 +824,37 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0698 transition;[whole scope/proofs](../history/stitchcad-devnotes-part868.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.presence`
   Status: `done`
-  Goal:readonly admitted-manifest to actual active role-catalogue binding;conditional absence
-  never retires canonical roles. Actual instance/current Design/geometric truth stays separately owned.
-  Scope:complete N candidate/D definition/A active quotas before owner/tag lookup/allocation;
-  N retained actual pairs reuse catalogue indexes. Missing/inactive causes and authentic fields
-  preserve original inputs/orders;unused active roles remain reserved. Retire whole0698.
-  - [x] ISSUE:candidate occurrence must bind actual active metadata without retiring absence.
-  - [x] ROOT CAUSE (role presence):actual catalogue/candidate/source and 0696 policy inspected;
-    actual fields/order/subset and seven quota/owner/undefined/inactive refusal rows pass,rc=0.
-  - [x] FIX:complete N/D/A admission,owner check,unique actual active roles and private output
-    fields;direct active_role lookup reuses existing indexes without allocating a new work index.
-  - [x] ADDRESSED (role presence):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test offset_role_presence_contract →3 pass,rc=0;actual pointers/orders/causes and
-    [9]/[9,2]/[9,5] subsets leave active [2,5,9] and all definitions unchanged.
-  - [x] NO REGRESSION (role presence):catalogue3/compiler guards3/actual output book7/selected
-    clippy/fmt/book/rendered/diff/history868 three exact Git spans pass,rc=0. Initial test-only
-    Param constructor corrected to actual Rational signature. No actual instance/history/geometry proof.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (0696 identity policy already promoted).
-  Verification:native6/rustdoc10;Commit:STITCHCAD-G1-0699. Next .offset.outputs.mapping.
+  Goal:0699 presence;[whole scope/proofs](../history/stitchcad-devnotes-part869.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.mapping`
-  Status: `pending`
+  Status: `done`
   Goal:P1 native explicit correspondence-kind/evidence/error-budget contract before offset family
   closure;intervals alone cannot prove normal-offset arclength positions. Preserve existing affine
   primitive semantics;real nonlinear G2 mapping/mark proof stays .5f.4.geometry. No guessed position.
+  Scope:authentic candidate-match to explicit normal-map requirement,never a mapped Param;
+  distinguish declared affine primitive from normal correspondence. Retain required geometry/
+  arclength/correspondence evidence-source identities and actual sourced T2 tolerance. Four explicit
+  nonnegative output-positional error allocations must sum within that tolerance;zero is explicit.
+  This validates requirement arithmetic only,not evidence truth,propagation or achieved accuracy.
+  No geometry provider/response certificate introduced;actual .5f.3/.4.geometry remains owner.
+  Retire whole0699;focused native/compiler/book checks. Native empty/collapse outcome follows.
+  - [x] ISSUE:interval membership and affine primitive cannot certify a normal-offset point map.
+  - [x] ROOT CAUSE (map requirements):0691,D126,actual Param/T2/match contracts inspected;
+    normal/affine distinction,original fields and ten refusal rows pass,rc=0.
+  - [x] FIX:explicit normal evidence requests,actual sourced T2 and four propagated output-point
+    ceilings;exact i128 sum,no mapped Param/evidence acceptance,ambiguity/gaps preserved.
+  - [x] ADDRESSED (map requirements):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test offset_mapping_requirement_contract →3 pass,rc=0;class/domain/partition/law,
+    inclusive/zero/4MAX budgets,original owners and both shared-endpoint requirements.
+  - [x] NO REGRESSION (map requirements):candidate6/existing affine1/compiler3/actual book8/
+    selected clippy/fmt/book/rendered/diff/history869 three exact Git spans pass,rc=0. No geometry/
+    provider/arclength/propagation/mark/currentness certificate;actual .5f.3/.4.geometry remains owned.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: promoted (edge-parameter decision gains answers).
+  Verification:native10/rustdoc11;Commit:STITCHCAD-G1-0700. Next .offset.outputs.outcome.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.outcome`
+  Status: `pending`
+  Goal:native explicit nonempty-candidate versus complete-collapse/failure outcome contract before
+  family closure;no fabricated fallback edge or silent loss. Actual geometry/topology evidence
+  and current canonical/instance publication remain G2/.5f.3/.5f.4.geometry/.6.
 - ID: `G1-SLICE.5f.1.c.grainline.inputs`
   Status: `done`
   Goal:0681 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part844md).

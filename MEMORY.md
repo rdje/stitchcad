@@ -1,14 +1,16 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0699;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.offset.outputs.mapping — explicit correspondence-kind/evidence/error-budget
-  contract. Read recovered normal-offset counterexample0691;intervals alone never prove mapped Param.
-- Readonly candidate presence implemented:complete N/D/A quotas before owner/tag lookup;N actual pairs
-  reuse catalogue indexes. Undefined/inactive roles refuse at original indices;both sources retained.
-  Candidate/active-list orders and actual fields preserved. Different subsets leave absent roles active.
-  Native6/compiler3/actual output book7/lint/fmt/book pass;whole0698 retained868. No actual instance proof.
-- Native .tags/.continuity metadata components completed with focused checks;actual canonical issuance,
-  history/current Design,G2/G3 matching and bus publication remain separately owned. No broad gate claim.
+- Latest unit:STITCHCAD-G1-0700;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.offset.outputs.outcome — native explicit collapse/failure outcome contract.
+  Activate before code;do not fabricate a candidate edge for an empty geometric result.
+- Native normal-map requirement binds authentic candidate matches to explicit evidence-source requests,
+  sourced actual T2 tolerance and four nonnegative propagated output-point error ceilings. Exact sum
+  must fit;affine primitive refuses. No mapped Param,accepted evidence or achieved geometry certificate.
+  Native9+existing affine1/compiler3/actual output book8/lint/fmt/book pass;whole0699 retained869.
+- Source/output arclength and propagation must be proved by actual engines;D126 bbox-only bound and
+  normal-offset counterexample0691 remain relevant. Decision edge-parameter addendum promoted0700.
+- Native .tags/.continuity metadata components completed with focused checks;presence subsets leave
+  all canonical roles unchanged. Actual issuance/history/current Design/G2/bus remain separately owned.
 - OffsetRoleCatalog admission preserves raw op/key/tag/active fields with explicit complete limits;
   empty/inactive catalogues valid. Keys are local identity metadata,not geometric matching rules.
 - Native candidate/query/declaration binding and source-preserving canonical tagged declarations pass

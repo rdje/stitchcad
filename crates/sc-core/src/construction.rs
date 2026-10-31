@@ -46,9 +46,12 @@ pub use offset_manifest::{
     DeclaredOffsetCandidate, DeclaredOffsetCandidates, OffsetCandidateError,
     OffsetCandidateFragment, OffsetCandidateLimits, OffsetCandidateManifest, OffsetCandidateMatch,
     OffsetCandidateMatchKind, OffsetCandidateQuery, OffsetCandidateQueryError,
-    OffsetCandidateQueryRefusal, OffsetCandidateRefusal, OffsetDeclarationError,
-    OffsetDeclarationLimits, OffsetDeclarationRefusal, OffsetRolePresenceError,
-    OffsetRolePresenceLimits, OffsetRolePresenceRefusal,
+    OffsetCandidateQueryRefusal, OffsetCandidateRefusal, OffsetCorrespondenceKind,
+    OffsetDeclarationError, OffsetDeclarationLimits, OffsetDeclarationRefusal,
+    OffsetMappingErrorAllocation, OffsetMappingErrorPart, OffsetMappingEvidenceRequest,
+    OffsetMappingRequirement, OffsetMappingRequirementError, OffsetMappingRequirementRefusal,
+    OffsetRolePresenceError, OffsetRolePresenceLimits, OffsetRolePresenceRefusal,
+    RequiredOffsetMapping,
 };
 pub use offset_roles::{
     ActiveOffsetRole, AdmittedOffsetRoleCatalog, AdmittedOffsetRoleTransition, OffsetRoleCatalog,

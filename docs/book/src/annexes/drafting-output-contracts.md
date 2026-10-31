@@ -40,8 +40,8 @@ test passes;it tests its declared primitive,not this geometric correspondence.
 
 The native manifest admission stage below admits explicit logical candidate roles and source
 domains only. It must preserve ambiguous/gap outcomes and cannot return a geometrically certified
-mapped Param. The native stable-tag components are described below;the explicit mapping-kind/
-evidence/error-budget contract remains required before family closure. Actual G2 curves,nonlinear mapping accuracy and mark
+mapped Param. The native stable-tag components are described below;the explicit normal-map requirement
+contract is also described below. Actual G2 curves,nonlinear mapping accuracy and mark
 placement remain `.5f.4.geometry` proof. This recovery changes no ledger algorithm or gate status.
 
 ## Native offset candidate-manifest admission
@@ -85,7 +85,7 @@ retained;their admitted-only membership query is described below.
 Admission checks tag uniqueness within this manifest,not stable-role correspondence across
 replay. It allocates no ledger operation,rewrites no reference and computes no curve,coordinate,
 length or output Param. Actual allowance width/corner/inclusion stay on the bound descriptor.
-Native declaration/role associations are described below;mapping evidence and actual G2 results
+Native declaration/role associations are described below;actual mapping evidence and G2 results
 remain separate owned obligations.
 
 ## Native offset candidate membership
@@ -129,7 +129,7 @@ new ledger edge is refused. This query creates no ledger repair and certifies no
 
 `Unique` means exactly one supplied candidate domain,not a unique geometric point. The result
 contains no mapped output Param,curve coordinate,length or error-budget proof. Native declaration/role
-associations are available below. Publication and the explicit geometric mapping contract remain
+associations are available below. The explicit mapping requirement is below;publication and actual geometric mapping remain
 owned;actual G2 results still need their separately owned verification.
 
 ## Native explicit-tag edge declarations
@@ -350,3 +350,61 @@ requires its own explicit execution outcome rather than a fabricated edge.
 No curve classifier,actual instance,issued ledger declaration,current Design/liveness,geometric
 continuity or source-to-output point mapping is certified here. Historical declaration association
 is a separate existing binding;actual G2/G3 evidence and bus publication remain separately owned.
+
+## Native normal-correspondence requirements
+
+A candidate domain does not provide the point map needed by a notch or other source-anchored mark.
+`OffsetCandidateMatch::require_mapping` binds an explicit `OffsetMappingRequirement` to that authentic
+match. The result is a `RequiredOffsetMapping`:an obligation with checked requirement arithmetic.
+It contains no mapped output Param,computed geometry or accepted evidence certificate.
+
+`OffsetMappingEvidenceRequest` distinguishes `DeclaredAffinePrimitive` from `NormalOffset`.
+The former names the existing exact structural law `(t-from)/(to-from)`;it is refused for this
+normal-correspondence obligation. The latter retains explicit required evidence-source ids for
+actual source arclength,actual output arclength and normal correspondence. Those ids are requests,
+not resolved/current provider evidence. The actual engine must bind evidence to the original query,
+source/output geometry,frame,evaluated allowance and logical role. Equal ids or intervals prove none
+of those facts. The existing topology primitive's semantics and implementation remain unchanged.
+
+The requirement also retains its actual supplied T2 `Tolerance`,its explicit source id and four
+`OffsetMappingErrorAllocation` fields. Every field is an allocated ceiling in the same metric:
+propagated output-point positional deviation in micrometres.
+
+| Allocation | Required eventual justification |
+| --- | --- |
+| Curve approximation | Approximate output's deviation at the corresponding point |
+| Source parameter | Parameter conversion error propagated through the normal correspondence |
+| Correspondence | Remaining normal-map computation error at the output point |
+| Output parameter | Conversion error using the actual output-edge arclength |
+
+A source arclength error cannot simply be added without proving its propagation to that output
+metric. Likewise,a curve's Hausdorff bound alone does not establish point correspondence. Actual
+source/output lengths and propagation evidence remain G2/selector obligations;D126's long arc
+inside a10m box rules out using the box as an edge-length surrogate. No new five-micrometre or
+other accuracy promise follows from this metadata interface.
+
+Checks run in this order:actual `GeometricApproximation` class,nonnegative total tolerance,then
+nonnegative allocations in table order,then their exact sum within the inclusive tolerance,then
+normal correspondence kind. Four signed Length magnitudes sum exactly in i128 without constructing
+an out-of-domain Length. A total larger than the Length domain remains an inspectable typed budget
+refusal. Zero is an explicit requirement;no implicit EPSgeo or replacement tolerance is supplied.
+
+```rust
+use sc_core::construction::*;
+fn require_normal_map<'a>(candidate:OffsetCandidateMatch<'a>,request:&'a OffsetMappingRequirement<'a>)
+    ->Result<RequiredOffsetMapping<'a>,OffsetMappingRequirementError<'a>> {
+    candidate.require_mapping(request)
+}
+```
+
+For example,allocations4,1,4,1µm fit a supplied10µm T2 requirement;4,1,4,2µm refuse. These are
+illustrative request ceilings,not observed deviations or justified production defaults. A valid
+zero allocation does not prove exact geometry. Errors retain the authentic match and whole original
+request;success retains those same fields and the allocated sum. Fixed four-component checks
+allocate nothing;whole query-batch and geometry-engine resources remain separately admitted.
+
+At a shared source-domain endpoint,both candidates can carry separate requirements. The original
+query remains `Ambiguous`;creating an obligation chooses neither side. A gap supplies no match and
+therefore no fabricated requirement or mapped point. Actual evidence acceptance,nonlinear mapping,
+mark placement,currentness and publication stay `.5f.3`/`.5f.4.geometry`/G2/G3/bus work. The native
+empty/collapse outcome contract remains required before offset-family closure.

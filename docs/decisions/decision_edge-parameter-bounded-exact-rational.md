@@ -88,3 +88,20 @@ the signed128-bit range;actual declared merge lengths are further bounded by Len
 Five independent genuinely wide final fractions retain repairs with original reference/range and
 complete-operation cause. Focused range20/notch4/topology31 pass;broader paired acceptance remains
 separately owned. The original reference representation,choice rules and physical checks stay intact.
+
+## Normal-offset mapping requirements0700
+
+answers: "does an admitted offset mapping requirement prove a mapped Param?" · "how are source and output parameter errors budgeted?"
+
+Param is normalized edge arclength. The ledger's declared affine interval law remains an exact
+structural primitive;it cannot establish a general normal-offset point map. Native candidate
+matches may carry explicit normal-correspondence evidence requests and a sourced T2 budget,but
+admitting requirement arithmetic supplies no actual geometry/evidence certificate or mapped Param.
+
+Curve approximation,source-parameter conversion,correspondence computation and output-parameter
+conversion have separate nonnegative ceilings whose exact sum must fit the supplied tolerance.
+Every ceiling is measured as propagated output-point positional deviation. Raw source arclength
+error needs a justified propagation bound;Hausdorff closeness alone is not point correspondence.
+G2/selector execution must provide actual source/output lengths,current geometry and the achieved
+propagated bounds. No bounding-box-only length guarantee,affine shortcut or implicit EPSgeo follows.
+The native contract preserves ambiguity/gaps;actual mapping/mark integration remains .5f.3/.5f.4.geometry.

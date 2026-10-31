@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind candidate occurrence to actual active offset roles
+## _(2026-10-31 UTC)_ — require explicit normal correspondence and a sourced error partition
 
-0699 checks complete N candidates,D definitions,A active ids before owner/tag lookup or allocation. Each supplied tag must be defined and canonically active. N retained pairs reuse catalogue indexes;undefined/inactive causes keep both actual admitted inputs and the original candidate index/tag.
-Private output views retain original candidate fields and authentic active-list/definition fields in candidate order. Catalogue order can differ. Direct active_role lookup returns original membership fields. Binding [9],[9,2] and [9,5] against active [2,5,9] leaves all roles and issued definitions intact.
-Presence3/catalogue3/compiler guards3/actual output book7/selected clippy/fmt/book/rendered/diff/history868 three exact Git spans pass. Initial test helper used the wrong Param constructor;actual Rational-based signature corrected before checks passed. No evaluated instance,currentness or geometry certificate.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (0696 identity policy already promoted). Whole0698 retained868. Native tags/continuity metadata components complete with focused checks;mapping evidence is next. Actual G2/history/bus/full integration remain owned;D372 P2 persists.
+0700 binds authentic candidate matches to raw mapping requirements. Explicit evidence-source ids distinguish normal geometry/arclength/correspondence obligations from the ledger affine primitive. The actual supplied T2 tolerance/source and original allocation fields remain borrowed;ids grant no provider truth.
+Four nonnegative ceilings share one propagated output-point positional metric:curve,source parameter,correspondence,output parameter. Exact i128 sum must fit actual inclusive T2;negative class/domain/first-component,budget and wrong-law causes retain whole request/match. Zero never implies achieved exactness.
+Mapping3/candidate6/existing affine1/compiler guards3/actual output book8/selected clippy/fmt/book/rendered/diff/history869 three exact Git spans pass. Ten refusal rows include4MAX sum beyond Length domain;ambiguity/gaps and actual fields persist. No new allocation,mapped Param or evidence acceptance introduced.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (decision_edge-parameter-bounded-exact-rational.md gains answers). Whole0699 retained869. Actual arclength/propagation,G2 mapping/marks/currentness/bus remain owned. Native collapse/failure outcome follows;D372 P2 persists.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
