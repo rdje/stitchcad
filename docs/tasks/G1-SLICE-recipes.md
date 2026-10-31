@@ -722,7 +722,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 ### Construction operations and final acceptance
 - ID: `G1-SLICE.5f.1`
-  Status: `pending`
+  Status: `active`
   Goal: complete public operation/dependency/interface inventory from ontology3.1/3.2, roadmap6.1
   and feature matrix before construction code. All v1 operations must have explicit typed schemas.
   Acceptance: points, lines/arcs/Béziers, offset, slash/spread, close dart, notch/grainline,
@@ -730,6 +730,26 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   argument kinds and semantic preconditions explicit. No formula creates geometry or calls CSP.
   Concrete geometry execution stays G2/G3; missing operation contracts are repaired first.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5f.1.a`
+  Status: `done`
+  Goal:complete v1 operation/public-contract inventory before construction code;map actual native
+  schemas and missing typed fields/outputs/preconditions to owners. Book-only product prerequisite;
+  retire whole0674 scope/journals for headroom. No geometry implementation or parent closure.
+  - [x] ROOT CAUSE:public construction.rs/CommandId inspection confirms only existing request
+    scopes and WalkSeamSpan Query;Python ontology/schema correspondence check rc=0.
+  - [x] FIX:complete v1 book inventory maps typed arguments,stable outputs,preconditions and owners.
+  - [x] ADDRESSED:Python ontology/public-command/inventory correspondence passes,rc=0.
+  - [x] NO REGRESSION:mdbook build/rendered four-cell table/TOC/history837 three Git spans/diff pass,rc=0.
+  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (local operation inventory).
+  Verification:focused docs/public-contract checks;Commit:STITCHCAD-G1-0675;parent .1 remains open.
+- ID: `G1-SLICE.5f.1.b`
+  Status: `pending`
+  Goal:typed point-from-formulas declaration with actual Length arguments and persistent output
+  identity contract;no coordinate evaluation or publication. Activate after complete inventory .a.
+- ID: `G1-SLICE.5f.1.c`
+  Status: `pending`
+  Goal:remaining typed line/arc/Bezier/offset/slash-spread/dart/notch/grainline/walk/true/mirror/join
+  schemas from .a inventory;split implementation leaves before code. Parent .1 stays open until all.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

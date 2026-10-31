@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — canonicalize actual stored recipe bindings
+## _(2026-10-31 UTC)_ — recover complete v1 drafting operation contracts
 
-0674 adds private typed ASCII binding output from accepted direct/paired recipes. Declaration order,name,stored kind/integer/Boolean and lexical approximation sources survive;RHS fractions,assertions,read traces and caches are outside this identity. Ontology7 keeps derived output out of project authority.
-Complete byte measurement precedes explicit quota and one fallible output reservation;bounded writer cannot exceed measured extent. Native4/paired9/rustdoc3 pass:authored six-kind/signed/turn/false/zero bytes,sources/lazy branches,replay,all short quotas/exact allowance,owned private Debug and type guards.
-Selected clippy/fmt/book/diff/history836 three exact Git spans pass. No storage reader/hash scheme or complete-result/geometry/full-suite claim. Numerical/native/Chrome captures retain original source scopes after these product changes;no fresh broad verdict inferred.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product notes reflect replay/output. promotion: declined (existing typed identity domains). Whole0673 retained836. Scalar replay slices focused-complete;full .4/.4.v await load/geometry. Next product .5f.3b public selector/operation bridge. PNT continues.
+0675 resolves the next bridge prerequisite: .5f.1 requires all operation contracts before construction code. New book inventory covers the complete ontology3.2 families,actual/planned schemas,numerical roles,stable output/repair ownership and explicit missing geometry/physical acceptance.
+Existing CloseDart/AddNotch request schemas retain canonical targets/anchors;WalkSeamSpan is a Query and cannot perform editing walk's deliberate balance-mark mutations. Existing metadata/CutPlan/SewingGraph do not substitute for geometric grainline/mirror/join operations. Owners remain explicit.
+Python ontology/public-command correspondence,mdBook build/rendered four-cell rows/TOC,diff and history837 three exact Git spans pass. No Rust behavior changed;no native/geometry/full-suite verdict. .1.a inventory closes;parent .1 stays open for typed schemas,then .2/.3 ordered/selector execution.
+LIVE states/G1 6/18/G0 unapproved unchanged. promotion: declined (local operation inventory). Whole0674 retained837. Next .5f.1.b typed point/formula/output declaration;remaining v1 schemas .1.c. No fake geometry or implementation-inspected dependency;no submodule exists here. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

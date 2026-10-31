@@ -98,6 +98,7 @@
   - [Runtime formula validation evidence](annexes/formula-runtime-validation.md)
   - [Joining the checked formula runtime](annexes/formula-execution-plan.md)
   - [Execute scalar construction recipes](annexes/formula-recipe-execution.md)
+  - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
   - [Full-text book search](annexes/book-search.md)
   - [Formula documentation controls](annexes/formula-documentation-controls.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)

@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0674 — canonicalize actual stored recipe bindings
+## STITCHCAD-G1-0675 — recover complete v1 drafting operation contracts
 
-- Typed owned ASCII preserves actual binding order/name/kind/value/approximation sources.
-  Complete byte quota precedes fallible output reservation;derived output grants no project authority.
-- Native4/paired9/rustdoc3/targeted lint/fmt/book/history836/diff pass. Full identity/load/geometry
-  remain owned;next .5f.3b product bridge. G1 6/18/G0 unapproved unchanged;LIVE Product notes updated.
+- New book inventory maps every v1 family to actual/planned typed inputs,stable outputs and
+  execution owners. Editing walk remains distinct from the existing WalkSeamSpan query.
+- Ontology/public-contract correspondence,book/rendered table/TOC/history837/diff pass. No Rust
+  behavior change;next typed point declaration .5f.1.b. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
