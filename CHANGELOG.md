@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0686 — compile the actual native editing examples
+## STITCHCAD-G1-0687 — retain bounded deliberate walk-mark inputs and actual span binding
 
-- Fix D370 borrowed-error examples and D371 stale spatial availability;actual Markdown doctests5 pass.
-- Split13123B native-edit reference with exact owned corrections;indexed companion keeps book bounds.
-- Source/render/lint/fmt checks pass;whole0685/ledger/closed proofs retained853–855.
-- Runtime API unchanged;parent walk-edit implementation/full .5f.4 remain pending.
+- Explicit paired anchors/profiles preserve original request order and complete N/2N admission.
+- Admitted-only canonical span binding retains actual side/copy/source fields and original typed causes.
+- Native6/rustdoc11/selected lint/fmt/book pass;whole0686 retained856.
+- Output/mark-sharing policy,currentness,correspondence and actual edits remain owned/deferred.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

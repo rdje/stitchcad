@@ -49,3 +49,9 @@ pub use slash_spread::{
     SlashSpreadConstruction, SlashSpreadConstructionError, SlashSpreadDependency, SlashSpreadSide,
     SlashSpreadSource,
 };
+mod walk;
+pub use walk::{
+    AdmittedWalkSeamEdit, BoundWalkBalancePair, BoundWalkSeamEdit, WalkBalanceNotch,
+    WalkBalancePair, WalkEditAdmissionError, WalkEditAdmissionRefusal, WalkEditBindingError,
+    WalkEditBindingRefusal, WalkEditLimits, WalkSeamEdit,
+};

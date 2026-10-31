@@ -213,3 +213,61 @@ policy under `.1.c.mirror.outputs`,followed by the bus's identity allocation and
 The existing `Mirroring` cut-plan field supplies no drafting reflection result. Current coverage,
 reflection/error budgets and the stable output manifest remain actual G2/G3/execution obligations;
 full construction verification stays deferred under `.5f.4`.
+
+## Native deliberate walk-edit requests
+
+`construction::WalkSeamEdit` owns an operation id,the required canonical span id and the original
+ordered `WalkBalancePair` collection. Each pair requires two `WalkBalanceNotch` inputs:one for
+side A and one for B. Each retains its own exact `EdgeAnchor` and all `NotchProfileBindings`,with
+sample/production contexts separate. There is no caller-supplied new notch id or copied span ease,
+physical-copy identity or Piece metadata. The existing `QueryPayload::WalkSeamSpan` stays read-only.
+
+The raw constructor retains input without accepting it. `admit(WalkEditLimits)` measures complete
+N pairs and checked2N requested occurrences before source inspection. It refuses the complete
+pair quota first,then an empty edit,then local self-span or the first self-anchor in pair/A/B order.
+A report-only walk uses the read query;this edit type requests at least one pair. Admission errors
+borrow the original edit and policy,so every input remains inspectable. These quotas cover pairs
+and their request population,not earlier Vec allocation,graph lookup/currentness,profile/geometry
+workspaces or whole-command resources. Two requests per pair are not two allocated output ids.
+
+Only `AdmittedWalkSeamEdit` can call `bind_source` on an actual `SewingGraph`. Lookup selects that
+graph's real named `SeamSpan`,then checks every requested anchor against its actual A/B source.
+The edge must match the original side frame exactly,and the parameter must lie within inclusive
+original range bounds. Missing target precedes pair checks;edge mismatch precedes parameter refusal.
+No current-fragment alias,parametric remapping,sorting,deduplication or counterpart is guessed.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn request_balance_edit(operation:EntityId,span:EntityId,a:EdgeAnchor,b:EdgeAnchor,
+    a_profile:NotchProfileBindings,b_profile:NotchProfileBindings)->WalkSeamEdit {
+    let pair=WalkBalancePair::new(WalkBalanceNotch::new(a,a_profile),WalkBalanceNotch::new(b,b_profile));
+    WalkSeamEdit::new(operation,span,vec![pair])
+}
+fn admit_edit<'a>(edit:&'a WalkSeamEdit,maximum_pairs:usize)
+    ->Result<AdmittedWalkSeamEdit<'a>,WalkEditAdmissionError<'a>> {
+    edit.admit(WalkEditLimits::new(maximum_pairs))
+}
+fn bind_edit<'a>(admitted:&'a AdmittedWalkSeamEdit<'a>,graph:&'a SewingGraph)
+    ->Result<BoundWalkSeamEdit<'a>,WalkEditBindingError<'a>> {
+    admitted.bind_source(graph)
+}
+```
+
+These helpers keep actual error owners in the caller. Binding errors retain the admitted edit,
+actual graph and original missing-span or pair/side/anchor/source-range cause. Anchor/range causes
+borrow the actual original fields without an error-path allocation. Pair indices are
+actual zero-based positions in the original request Vec,not invented recipe statement positions.
+The private bound views borrow the actual graph/span and original pair fields. `source_side`
+returns the real span-side field,whose `copy` is a physical-copy id. Direction,ease and stops stay
+on that unchanged span. Repeated requests remain separate occurrences;profile origins stay symbolic.
+
+Bounds and association prove neither geometric sewing correspondence nor current Design/graph/
+ledger ownership. Different A/B source parameters can be retained as deliberate input without a
+claim that they are matching balance positions. After an edge deletion,association can still bind
+the unchanged original range while `SewingGraph::validate_current` returns its real range-repair
+cause. G3 must measure correspondence/differential/ease,validate stops and create the actual edit;
+G4 resolves profile representations. This stage reports no length and creates/publishes no notch.
+
+Native output contracts still need explicit semantic mark-sharing/coalescing and identity policy,
+especially when physical copies share a pattern Piece. Actual mark results and atomic execution
+remain G3/bus/full `.5f.4` work. No query result or2N request count substitutes for those results.

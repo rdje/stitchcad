@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — compile the actual native editing examples
+## _(2026-10-31 UTC)_ — retain bounded deliberate walk-mark inputs and actual span binding
 
-0686 splits13123B native-edit reference into indexed bounded companion,then fixes D370 boxed borrowed errors and D371 stale spatial availability. Actual included Markdown before→3 pass/2 compiler failures E0515/E0505/E0597;known-literal assertions keep owners alive. Permanent cfg(doctest) guard reads the real page.
-All5 actual example tests/selected lib clippy/fmt/book/rendered routes pass. Native body equals the complete Git source after exact owned corrections;original/fixed hashes retained in target/history-proof-0686-book. Removing only the guard recovers exact prior Rust;no runtime API or geometry changed.
-Whole0685,prior ledger and two closed proof scopes retain six exact Git spans853–855. D370/D371 fixed;book now points to implemented spatial inputs and actual geometry obligations. The native-point link remains in the main chapter;SUMMARY118 lines stays bounded.
-LIVE states/G1 6/18/G0 unapproved unchanged;defect notes updated. promotion: declined (existing source-backed checks). Parent .1.c.walk.inputs remains active for actual bounded edit requests/binding;no walk API is implemented by this book preparation. Full .5f.4 stays deferred. PNT continues.
+0687 adds owned explicit A/B anchor/profile pairs,complete N/2N admission and admitted-only real Graph/span binding. Empty edits/local self-supply refuse;all pair/side edges and inclusive original bounds precede a private bound result. Two requests/pair certify no new ids or counterpart position.
+Walk5/sewing source1/walk compiler guards5/actual book6/selected clippy/fmt/book/rendered/diff/history856 three exact Git spans pass. Original pair/span/profile/source field pointers,limits,repeats,endpoints and typed failures pass. Lint144B cause was compacted to actual borrowed anchor/range fields.
+Bounds grant neither correspondence nor currentness:after source deletion actual Graph validation refuses while unchanged original binding remains structural. Ease/stops/copy sides remain on the real span;profiles stay symbolic. No differential,notch creation or publication executes.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source-frame contracts). Whole0686 retained856. Output contracts/mark sharing and actual G3/G4/bus/full .5f.4 remain owned. Next truing contract recovery;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

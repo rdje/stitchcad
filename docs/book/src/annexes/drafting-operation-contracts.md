@@ -58,7 +58,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
 | Add notch | Piece id,EdgeAnchor,NotchProfileBindings | Fresh semantic notch id and retained source anchor | AddNotch request exists;geometry pending |
 | Place grainline | Named canonical grainline with directed arrow/alignment/print intent | Existing semantic target;G2 derived mark | Target/source binding only;geometry pending |
-| Walk seam | Actual seam correspondence and explicit balance-mark intent | Differential report plus deliberate mark edits | Query exists;editing operation pending |
+| Walk seam | Named correspondence,explicit A/B anchor/profile pairs | Differential report plus deliberate mark edits | Pair admission/source binding;execution pending |
 | True seam | Actual correspondence,declared ease and explicit adjustment policy | Attributed edge adjustment and remaining differential | Pending .1.c |
 | Mirror | Named Piece,explicit point/range axis and copy intent | Fresh copy identities and source mapping | Copy inputs only;outputs/geometry pending |
 | Join pieces | Current pieces/seam correspondence and explicit join intent | Output Piece/topology with semantic lineage | SewingGraph exists;operation pending |

@@ -17,7 +17,7 @@
 //! Notch metadata previews, atomic groups, replay/audit and bounded actual undo/redo execute through the
 //! command bus. Direct/source-backed/Design scalar recipe execution, fresh replay and canonical stored
 //! bindings have focused native acceptance. [`construction`] retains typed point/line/center-arc/Bezier declarations and offset/grainline input binding,
-//! scalar kind proofs, explicit slash/spread sources/amounts, mirror-copy inputs and original dependencies; geometry/full integration remain pending. Broader/platform
+//! scalar kind proofs, explicit slash/spread sources/amounts, mirror-copy inputs, admitted walk mark requests and original dependencies; geometry/full integration remain pending. Broader/platform
 //! verification stays source-scoped or owned by the integration and pre-push gates.
 //!
 //! What lands here, and when:
@@ -28,7 +28,7 @@
 //! | `value` | canonical length declarations with authored state/source/provenance; no unknown fallback or cached derived result | `G1-SLICE.4a.1` |
 //! | `name` | immutable ASCII lower-snake tokens, refusing grammar keywords; binding authority stays with the namespace owner | `G1-SLICE.4a.2a` |
 //! | `recipe` | syntax/identity, static checking, exact sourced scalar execution, fresh replay and canonical stored bindings; geometry/full integration pending | `G1-SLICE.5` |
-//! | `construction` | primitive/slash-spread/mirror-copy inputs and scalar proofs; semantic binding; no evaluated geometry | `G1-SLICE.5f.1` |
+//! | `construction` | drafting inputs/scalar proofs,walk mark-pair admission and semantic source binding; no evaluated geometry | `G1-SLICE.5f.1` |
 //! | `command` | typed requests, authorization, metadata preview/atomic groups/history/undo; other handlers pending | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |
 //!
