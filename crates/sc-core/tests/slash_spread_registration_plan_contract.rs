@@ -173,6 +173,37 @@ fn unresolved_registrations_are_covered_and_withdrawal_requests_close_no_repairs
             .bind(sources, &f.ledger, &policy)
             .expect("requests accept unresolved evidence without repairing it");
         assert_eq!(plan.requests().count(), 2);
+        let evidence =
+            SlashSpreadConsumerEvidenceSources::new(id(800), id(801), id(802), id(800), id(800));
+        let required = plan.require_consumer_evidence(&evidence);
+        assert!(std::ptr::eq(required.registration_plan(), &plan));
+        assert!(std::ptr::eq(required.evidence_sources(), &evidence));
+        assert_eq!(required.requirements().len(), 5);
+        assert_eq!(
+            required
+                .requirements()
+                .filter(|item| *item.source() == id(800))
+                .count(),
+            3
+        );
+        use SlashSpreadConsumerEvidenceKind as E;
+        assert_eq!(
+            required
+                .requirements()
+                .map(|item| item.kind())
+                .collect::<Vec<_>>(),
+            vec![
+                E::WholeSourceConsumers,
+                E::CurrentOwnership,
+                E::Correspondence,
+                E::VisibleRepairs,
+                E::AuthoringAuthority
+            ]
+        );
+        for item in required.requirements() {
+            assert!(std::ptr::eq(item.context(), &required));
+            assert!(std::ptr::eq(item.source(), evidence.source(item.kind())));
+        }
         assert_eq!(plan.ledger().open_repairs(), repairs);
     });
     assert_eq!(f.ledger.open_repairs(), repairs);
@@ -300,13 +331,14 @@ fn retirement_review_cannot_keep_original_global_source_but_empty_registered_sco
     with_sources(&f, false, |sources| {
         let raw = SlashSpreadRegistrationPlan::new(vec![]);
         let policy = SlashSpreadRegistrationPlanLimits::new(2, 0, 0);
-        assert_eq!(
-            raw.bind(sources, &f.ledger, &policy)
-                .expect("no registered source consumers")
-                .requests()
-                .len(),
-            0
-        );
+        let plan = raw
+            .bind(sources, &f.ledger, &policy)
+            .expect("no registered source consumers");
+        assert_eq!(plan.requests().len(), 0);
+        let evidence =
+            SlashSpreadConsumerEvidenceSources::new(id(800), id(801), id(802), id(803), id(804));
+        let required = plan.require_consumer_evidence(&evidence);
+        assert_eq!(required.requirements().len(), 5); // empty registration subset is no whole-consumer proof
     });
     let source = f.second.edge;
     register(&mut f, 200, source);

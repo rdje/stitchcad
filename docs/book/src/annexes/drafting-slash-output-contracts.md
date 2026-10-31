@@ -403,8 +403,8 @@ request. If the cut instead names external edge55 and candidate9 derives from ex
 those two identities need their own explicit requests too. A complete four-source plan can bind
 without proving either external edge live. It issues no outputs and appends no ledger entry.
 
-Consumer/registration/held-object evidence and trim interval/selection requirements remain the
-next native disposition contracts. Actual geometry,maps,current whole-source and owner censuses,
+Consumer/registration/held-object evidence requests are described below;trim interval/selection
+requirements remain the next native disposition contract. Actual geometry,maps,current whole-source and owner censuses,
 semantic replacement,authority,identity history and atomic publication retain their G2/G3/Design/bus
 owners. This bound declaration supplies none of those certificates.
 
@@ -472,3 +472,50 @@ Whole held-object/source-consumer coverage beyond registrations,current Design/P
 ownership,proved maps,visible repair reporting,semantic replacement and actual command authority
 remain explicit requirements for the next native consumer contract and later G2/G3/Design/bus work.
 A registered-source plan alone cannot authorize global retirement or hide an unregistered holder.
+
+## Whole held-consumer evidence requests
+
+`SlashSpreadConsumerEvidenceSources::new` requires five explicit evidence-source identities.
+`registered_plan.require_consumer_evidence(&sources)` binds them to the actual complete registered
+source plan,which retains its original source/contour/ledger context. This constructs required
+evidence requests;it accepts no provider evidence and returns no execution-readiness verdict.
+
+| Evidence kind | Required scope |
+| --- | --- |
+| `WholeSourceConsumers` | Whole affected-source use across actual structural and semantic holders,other Pieces and physical copies,including unregistered holders |
+| `CurrentOwnership` | Actual current Design/garment/Piece/frame/liveness and intended semantic-position ownership |
+| `Correspondence` | Actual point and interval correspondence,with explicit handling of ambiguous alternatives and applicable error evidence |
+| `VisibleRepairs` | Complete visible gaps,ambiguities and repairs;legitimate coordinated withdrawal must have evidence |
+| `AuthoringAuthority` | Actual authority for global edits,selected-holder repairs and canonical semantic-object replacement |
+
+All five are mandatory even when every source intent is Preserve or the registered-source subset
+is empty. Zero registrations do not prove zero held consumers. One provider/source identity may
+serve several scopes,but equal identities never collapse obligations. Names are original authored
+request fields;no registry lookup,currentness or provider availability follows from them.
+
+```rust
+use sc_core::construction::*;
+fn require_whole_consumers<'a>(registered:&'a BoundSlashSpreadRegistrationPlan<'a>,
+    sources:&'a SlashSpreadConsumerEvidenceSources)->RequiredSlashSpreadConsumerEvidence<'a> {
+    registered.require_consumer_evidence(sources)
+}
+```
+
+`RequiredSlashSpreadConsumerEvidence::requirements()` always exposes five distinct private
+views,in whole-consumer,ownership,correspondence,visible-repair,authority order. Each retains its
+actual parent,kind and original requested source field. `registration_plan()` and
+`evidence_sources()` expose the authentic whole contexts. This fixed traversal allocates nothing
+and performs no consumer scan or ledger fold;the earlier registration/source admission budgets
+keep their original scope. Actual whole-consumer discovery and evidence validation need their own
+complete execution resource policy.
+
+For the two unresolved registered owners,requesting all five evidence sources leaves both
+registrations and both repairs unchanged. Reusing one provider identity for three scopes still
+produces all five obligations. For an empty registered-source subset,all five requests remain.
+Neither case authorizes retirement,selects an output parameter or withdraws a held reference.
+
+This completes the native consumer **requirement declaration**,with focused checks. Actual whole
+consumer evidence,current semantic ownership,maps,repair visibility and command authority remain
+G2/G3/Design/bus work. Trim/whole interval-coverage requests,Piece metadata/fold/copy/effect and
+explicit zero/no-new-edge outcomes remain before native slash family closure. Full verification
+and later geometry-backed integration have not been performed by these declaration slices.

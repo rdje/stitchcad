@@ -1,5 +1,10 @@
 //! Declared-source eligibility and later explicit reference disposition;no geometric resolution.
 mod query;
+mod requirements;
+pub use requirements::{
+    RequiredSlashSpreadConsumerEvidence, SlashSpreadConsumerEvidenceKind,
+    SlashSpreadConsumerEvidenceRequirement, SlashSpreadConsumerEvidenceSources,
+};
 mod registrations;
 pub use registrations::{
     BoundSlashSpreadRegistrationPlan, SlashSpreadRegisteredSourceRequest,

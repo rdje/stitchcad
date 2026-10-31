@@ -883,34 +883,31 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0708 source plan;[whole scope/proofs](../history/stitchcad-devnotes-part878.md).
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers`
-  Status: `active`
+  Status: `done`
   Goal:explicit whole consumer/registration/held-object correspondence and visible-repair evidence
   requirements tied to the actual source plan;no automatic withdrawal or inferred owner authority.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers.registrations`
   Status: `done`
-  Goal:complete explicit requests for every actual ledger registration on declared sources;
-  preserve exact owner/edge/Param/split choice,other owners and unresolved registrations.
-  Actual immutable ledger and whole S/L/K policy;no inferred owner membership,authority or repair.
-  - [x] ISSUE:local source plans cannot omit other registered owners or withdraw them silently.
-  - [x] ROOT CAUSE (registered source consumers):public ledger/current Design scopes read;
-    registrations yield values;actual source/whole-ledger populations and owner keys checked,rc=0.
-  - [x] FIX:explicit keep-source/correspondence-or-visible-repair/withdrawal-review requests;
-    constant actual registration count,whole quotas and S+L+2K before indexes,complete source subset.
-  - [x] ADDRESSED (registered source consumers):local_environment.py -- cargo test --offline
-    --locked -p sc-core --test slash_spread_registration_plan_contract →4 pass,rc=0;both owners,
-    split choices,unresolved repairs,whole unrelated-registration quota and exact key coverage.
-  - [x] NO REGRESSION (registered source consumers):source-plan4/privacy2/actual book7/strict
-    selected clippy/fmt/book/render/diff and archive878 three exact spans pass,rc=0. Correct test
-    value access/use shared fixture policy without suppression;no mutation or currentness certificate.
-    Containment selection21630B narrowed to actual0708 note1236B;all31219B older live text exact.
-    Root cause:later-heading boundary selected older entries. Proof target/history-proof-0709-note-boundary/.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing byte/coverage policy).
-  Verification:native8/rustdoc9;Commit:STITCHCAD-G1-0709. Next .consumers.requirements.
+  Goal:0709 registrations;[whole scope/proofs](../history/stitchcad-devnotes-part879.md).
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers.requirements`
-  Status: `pending`
-  Goal:whole held semantic/structural consumer,current ownership,authority,correspondence and visible
-  repair evidence requirements beyond the actual registration subset;no registration-only certificate.
+  Status: `done`
+  Goal:five mandatory explicit evidence-source requests for whole held consumers,current ownership,
+  correspondence,visible repair and authoring authority;actual registered-source context survives.
+  - [x] ISSUE:registered-source coverage cannot certify all held consumers or authority.
+  - [x] ROOT CAUSE (whole consumer evidence):published ledger/Design/semantic scopes read;
+    empty registrations and equal provider ids preserve distinct evidence obligations,rc=0.
+  - [x] FIX:all five required source fields and private authentic whole-context views;fixed traversal
+    allocates nothing and accepts no evidence,registry/currentness,repair discharge or authority.
+  - [x] ADDRESSED (whole consumer evidence):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test slash_spread_registration_plan_contract →4 pass,rc=0;actual unresolved owners
+    retain both repairs;empty registered-source scope still needs all five distinct evidence requests.
+  - [x] NO REGRESSION (whole consumer evidence):privacy2/actual slash book8/strict selected
+    clippy/fmt/book/render/diff and archive879 three exact spans pass,rc=0. All7 previous actual Rust
+    fences unchanged;nearest-heading archival preserves every31219B older live note exactly.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing source/consumer boundary).
+  Verification:native4/rustdoc10;Commit:STITCHCAD-G1-0710. Consumer declaration complete;next .plan.trim.
+
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.trim`
   Status: `pending`
   Goal:explicit trim-selection and whole interval-coverage evidence requests tied to actual source

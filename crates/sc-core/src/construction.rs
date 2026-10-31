@@ -92,9 +92,11 @@ pub use slash_opening::{
 mod slash_spread;
 pub use slash_spread::{
     AdmittedSlashSpreadContours, AdmittedSlashSpreadEdges, BoundSlashSpreadEdgeRoles,
-    BoundSlashSpreadRegistrationPlan, BoundSlashSpreadSourcePlan, SlashSpreadBoundaryPolicy,
-    SlashSpreadBridgeDirection, SlashSpreadBridgeEndpoint, SlashSpreadConstruction,
-    SlashSpreadConstructionError, SlashSpreadContourEdge, SlashSpreadContourError,
+    BoundSlashSpreadRegistrationPlan, BoundSlashSpreadSourcePlan,
+    RequiredSlashSpreadConsumerEvidence, SlashSpreadBoundaryPolicy, SlashSpreadBridgeDirection,
+    SlashSpreadBridgeEndpoint, SlashSpreadConstruction, SlashSpreadConstructionError,
+    SlashSpreadConsumerEvidenceKind, SlashSpreadConsumerEvidenceRequirement,
+    SlashSpreadConsumerEvidenceSources, SlashSpreadContourEdge, SlashSpreadContourError,
     SlashSpreadContourLimits, SlashSpreadContourLocation, SlashSpreadContourRefusal,
     SlashSpreadContourUse, SlashSpreadContours, SlashSpreadCutEnd, SlashSpreadDependency,
     SlashSpreadEdge, SlashSpreadEdgeCandidate, SlashSpreadEdgeManifest,

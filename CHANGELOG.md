@@ -4,12 +4,13 @@ Newest first: one section per completed slice, in commit order. Older slices liv
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
 
-## STITCHCAD-G1-0709 — bind every actual registered slash source consumer
 
-- Require explicit treatment for every actual source registration,including other owners/unresolved points.
-- Bound whole S/L/K before indexes;preserve original requests,actual ledger and unchanged split choices.
-- Native8/rustdoc9/lint/fmt/book/render/diff/history878 pass;note boundary corrected with exact older bytes.
-- Whole held-object/ownership/authority/trim/semantic/zero-outcome and actual G2/publication remain owned.
+## STITCHCAD-G1-0710 — require whole held-consumer evidence beyond registrations
+
+- Require five explicit evidence-source scopes on the actual complete registered/source/contour context.
+- Empty registry/shared provider ids omit no obligation;actual requests repair or withdraw no holder.
+- Native4/rustdoc10/lint/fmt/book/render/diff/history879 pass;older notes and existing Rust fences exact.
+- Native consumer declaration closes;trim/coverage,semantic/zero outcomes and actual G2/authority remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

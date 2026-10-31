@@ -1,13 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0709;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers.requirements
-  — whole held-object/current-owner/correspondence/visible-repair/authority evidence beyond actual
-  registrations. Activate/split before code;trim requirements follow.
+- Latest unit:STITCHCAD-G1-0710;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.trim
+  — explicit trim-selection/whole interval-coverage evidence requests tied to actual source plan and
+  boundary policy. Activate/split before code;semantic/zero-outcome contract follows.
+- Native consumer requirement declaration complete:five mandatory original evidence-source fields
+  for whole consumers/current ownership/correspondence/visible repairs/authority. Empty registry or
+  shared provider ids omit no obligation. Actual registered/source/contour/ledger contexts retained.
+  Native4/rustdoc10/lint/fmt/book/render/history879 pass;7 old Rust fences and31219B older notes exact.
 - Native registered-source plan covers every actual source registration once,including other owners
   and unresolved ones. Explicit keep-source/correspondence-or-visible-repair/withdrawal review;
   complete S/L/K and S+L+2K before indexes,actual ledger borrowed;split choices unchanged.
-  Native8/rustdoc9/lint/fmt/book/render/history878 three exact spans pass;prior book prefix exact.
+  0709 scope/lesson/changelog now879;native8/rustdoc9 passed then.
 - Containment correction:narrow overwide note selection21630B to0708 note1236B;all31219B older live
   text restored exact. Root cause:later-heading slice. Protected target/history-proof-0709-note-boundary/.
 - Native source plan covers every exact Piece/cut/provenance identity once with explicit Preserve
@@ -18,17 +22,13 @@
   registration. Repoint does not mutate an immutable semantic notch. Source globally live/resolved can
   still be outside a replacement Piece. Ledger readiness is intentionally narrower than ownership.
   Whole0707 and0062 byte protocol now877;reference decision promoted.
-- Native eligibility query preserves retained/source/bridge endpoint alternatives under whole quotas.
-  Unique/Ambiguous/Gap are metadata only. Native7/rustdoc8 passed0706;fixture proof protected in
-  target/history-proof-0706-reference-fixture/. Published SplitFragments.first returns EdgeRef directly.
+- Eligibility Unique/Ambiguous/Gap remains metadata;protected target/history-proof-0706-reference-fixture/.
 - Contours retain original ids and borrowed policy;no geometric/current-source or publication proof.
   .semantics owns metadata/fold/copy/effect and explicit zero/no-new-edge outcomes.
 - Whole6172B slash body moved0704;proof target/history-proof-0704-output-book/. Old anchors remain.
   SUMMARY120/cap120;contain before growth. Shared edge aliases/proof0703 remain protected.
-- Native offset-output checkpoint0691–0701 completed with focused component checks,not a combined gate.
-  Empty candidate lists already refuse with typed Empty,retaining raw/bound/policy;no duplicate wrapper.
-  Catalogue emptiness and role absence are separate metadata states,never geometric collapse evidence.
-  Existing refusal1/actual output book9/book/rendered/history870 pass;native source bytes unchanged.
+- Native offset-output checkpoint0691–0701 completed with focused checks,not a combined gate.
+  Empty candidate refusal differs from valid empty/inactive role metadata;neither proves collapse.
 - Native normal-map requirement binds authentic candidates to evidence-source requests,sourced T2 and
   four propagated output-point error ceilings. No mapped Param/evidence or achieved geometry proof.
   D126 actual-length/propagation and0691 normal-offset counterexample remain G2/selector obligations.

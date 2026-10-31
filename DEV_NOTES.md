@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind every actual registered slash source consumer
+## _(2026-10-31 UTC)_ — require whole held-consumer evidence beyond registrations
 
-0709 checks complete S/L/K and S+L+2K before indexes;actual registration count is constant access. Every source registration needs explicit keep-source/correspondence-or-visible-repair/withdrawal-review intent,including other owners and unresolved points. Actual borrowed ledger preserves split choices.
-Native8/privacy2/actual slash book7/strict selected lint/fmt/book/render/diff/history878 three exact spans pass. Corrected test value access and reused shared policy without suppression. Both owners/repairs remain;unrelated registrations count toward L. No current-owner,map,authority or repair certificate.
-Containment correction:later-heading selection21630B included older notes. Narrow878 to0708 note1236B and restore all31219B older live text exact. Protected target/history-proof-0709-note-boundary/ records counts/hash. Previous complete book prefix exact;no committed archive body changed. Root cause fixed.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing byte/coverage policy). Whole0708 retired878. Whole held-object/current-owner evidence beyond registrations and trim follow;semantic/zero outcomes and actual G2/history/bus stay owned. D372 persists;PNT continues.
+0710 binds five explicit source identities to the actual complete registered/source/contour/ledger context:whole consumers,current ownership,correspondence,visible repairs,authoring authority. Private views retain original fields. Fixed five-item traversal allocates nothing;no provider evidence is accepted.
+Actual unresolved-registration tests retain both owners and repairs after requesting evidence. Empty registered-source scope still requires all five classes;shared provider ids collapse no obligation. Current ownership,whole held-consumer coverage,maps,repair discharge and authority remain later proof.
+Native4/privacy2/actual slash book8/strict selected lint/fmt/book/render/diff and archive879 three exact spans pass. All7 previous Rust fences unchanged. Nearest next heading retires only0709;all31219B older live notes remain exact. Protected target/history-proof-0710-note-boundary/. D372 persists.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source/consumer boundary). Native consumer requirement declaration closes with focused checks;trim/coverage,semantic/zero outcomes and actual G2/currentness/history/bus stay owned. Full verification deferred.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
