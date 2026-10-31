@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit original slash edge provenance and active roles
+## _(2026-10-31 UTC)_ — admit slash contours with retained source identities
 
-0704 admits nonempty explicit slash edge roles with original DirectedRange/motion or straight-bridge cut-end/direction provenance. Complete2N/N/D/A/key-byte quotas precede empty/owner/content. Tags stay explicit;unknown/inactive/duplicate/local-self/bridge-under-trim causes retain all original inputs.
-Private views retain actual candidate and active-list/definition fields in candidate order. Equal provenance never deduplicates identities;absence retires no role. Original cut Lower/Upper bounds are independent of Reversed traversal. No actual source ownership,transform,loop or point map is certified.
-Edges3/binding3/compiler4/actual offset book9/slash book3/lint/fmt/book/render/diff pass. Whole6172B slash body moved exactly;old anchors/new links work. Protected proof target/history-proof-0704-output-book/. History873 retains7 exact Git spans,including four closed parent blocks for task containment.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (API-specific;canonical book/G1-G2 boundary). Whole0703 retained873. Native contour/trim/reference/metadata/copy/effect reconciliation follows;actual G2/G3/currentness/history/bus remain owned. D372 P2 persists;PNT continues.
+0705 admits explicit boundary/hole/construction uses of new output tags or retained original DirectedEdges against the actual target Piece. Group/N/R/M and conservative2N+R+K+M bounds precede owner/content. No repeated cut identity or unused candidate;construction repetitions follow existing Piece rules.
+Actual raw uses,positions,directions,candidate fields,source Piece and borrowed policy remain inspectable. Retained references use exact original source membership without renaming or alias substitution. Initial strict large-error/index lints led to borrowed policy,derived repeated-edge data and checked test access.
+Contours3/nearest edges3/compiler3/actual slash book4/selected clippy/fmt/book/render/diff/history874 four exact Git spans pass. No boxing or lint suppression;actual source/original fields retained. Closed0078 node scope retired for containment;its separate historical receipt suffix is byte-identical.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (API-specific;existing identity/G1-G2 policy). Whole0704 retained874. Native source/trim/reference and metadata/fold/copy/effect/zero-outcome contracts follow;actual geometry/currentness/history/bus remain owned. D372 persists.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

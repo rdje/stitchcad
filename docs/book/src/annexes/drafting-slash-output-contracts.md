@@ -161,3 +161,71 @@ retirement,metadata/copy/semantic reconciliation,measured fullness or publicatio
 native reconciliation contracts remain required before family closure. Actual transformed curves,
 closure,reference maps and approximation/parameter budgets still require G2/G3 and `.5f.3`/`.5f.4.geometry`.
 No ledger edit,mapped Param or accepted geometric prefix is supplied by this admission.
+
+## Native contour uses and retained source identities
+
+`SlashSpreadContours` owns ordered boundary,hole and construction lists. Every
+`SlashSpreadContourEdge` explicitly selects an admitted `Output { tag,direction }` or a
+`Retained(DirectedEdge)`. Retention preserves the original EdgeRef;an unchanged source does not
+need a fresh identity merely to appear in the result. Partial trimmed sources use explicit new
+candidate provenance rather than pretending that part of an old edge is its whole identity.
+
+A use's Direction describes contour traversal in that edge's own parameter frame. For a new
+output,this is distinct from the source-range traversal or bridge direction that defined the
+candidate's provenance. For a retained edge,it can request opposite contour traversal without
+renaming the original edge or executing a topology reversal.
+
+`admit` requires the actual admitted candidates,actual immutable source `Piece` and explicit
+`SlashSpreadContourLimits`. The source id must match the slash input's original target. This is
+source association,not current Design/revision/operation-kind or geometric ownership authority.
+Retained references must occur exactly in that source Piece's original held edge inventory;
+a current-child alias is not silently substituted. No particular duplicate source occurrence is
+selected:membership is by stable identity and the complete original source remains available.
+
+Whole target/source hole-group quotas precede traversal of those groups. Checked complete counts
+then admit N candidates,R source occurrences and M target uses. Source and target construction
+repetitions count. With K target cut uses,the conservative peak entry bound is2N+R+K+M:the candidate index,
+used-output set,source identity set,cut identity index and retained occurrence associations.
+These are entry counts,not prior Vec/String allocation,whole bytes or whole execution guarantees.
+Source identity repetition can make its set smaller than R;R still counts every original source
+occurrence. No index or association allocation precedes complete quota admission.
+
+After quotas,source identity and nonempty boundary,the complete source inventory must contain no
+same-operation output dependency. Target checks follow boundary order,hole order and construction
+order. Every hole must be nonempty. Output tags must name actual admitted candidates;retained
+references cannot name this same operation or a foreign source edge. No cut-edge identity can
+repeat across boundary and holes,even with opposite traversal. Construction uses may repeat cut
+edges or one another,matching the existing `Piece` structural rules. Finally,every original candidate
+must have at least one declared use;the first unused original candidate refuses rather than vanishes.
+
+```rust
+use sc_core::{construction::*,ontology::Piece};
+fn admit_slash_contours<'a>(contours:&'a SlashSpreadContours,edges:&'a AdmittedSlashSpreadEdges<'a>,
+    source:&'a Piece,limits:&'a SlashSpreadContourLimits)
+    ->Result<AdmittedSlashSpreadContours<'a>,SlashSpreadContourError<'a>> {
+    contours.admit(edges,source,limits)
+}
+```
+
+Private `SlashSpreadContourUse` views retain the actual raw occurrence,its original
+`SlashSpreadContourLocation` and either the authentic candidate view or actual retained field in
+the contour declaration. `edge()` returns the explicit logical output reference or unchanged
+retained identity. `direction()` retains authored traversal. Iteration visits boundary,each hole,
+then construction without sorting or deduplication;reverse iteration preserves those same identities.
+Errors retain the entire original plan,candidate proof,provided source,policy and typed cause.
+The contour policy is borrowed unchanged on both success and refusal;keep that policy owner alive
+with the other inputs. No error-path boxing or copied five-field policy is needed. A repeated-cut
+refusal retains both original positions;`error.repeated_edge()` reads that identity from the actual
+first occurrence instead of duplicating it in the refusal payload.
+
+For example,a boundary can retain an old source edge and use output9 in reverse,a hole can name
+output2,and construction can explicitly use9 twice plus an original construction edge. All six
+occurrences remain distinct;both new candidates are used and the retained ids stay unchanged.
+With N2,R2,K3,M6,the peak population is15 entries. This example is structural only:a one-edge
+hole still needs real endpoint closure,shape,winding and containment proof from G2.
+
+This stage publishes no replacement Piece,retirement,reference map,fold/copy/metadata change or
+measured fullness. Missing original source portions and dependent semantic references still require
+explicit reconciliation. Actual trim selection,closure,current sources,geometry/error bounds and
+bus authority remain separately owned. Zero/no-new-edge outcome policy is also owned by semantic
+reconciliation;the nonempty candidate primitive must never be satisfied with fabricated geometry.

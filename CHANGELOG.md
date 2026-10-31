@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0704 — admit original slash edge provenance and active roles
+## STITCHCAD-G1-0705 — admit slash contours with retained source identities
 
-- Retain explicit source range/motion or bridge provenance with complete resource/role admission.
-- Preserve original candidate/active fields,explicit tags and absence without canonical retirement.
-- Native6/rustdoc16/lint/fmt/book/render/diff/history873 seven exact spans and whole book move pass.
-- Native contour/trim/reference/semantic reconciliation and actual G2/G3/currentness/bus remain owned.
+- Admit ordered new/retained contour uses with whole resource/source/member/coverage checks.
+- Preserve actual source ids/directions/occurrences;repeat construction uses without repeated cut ids.
+- Native6/rustdoc7/selected lint/fmt/book/render/diff/history874 exact spans pass;compact borrowed errors.
+- Source/trim/reference and semantic/zero-outcome reconciliation plus actual G2/currentness/bus remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -852,31 +852,44 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   explicit lineage/retirement/metadata/effect obligations. Actual G2/G3 results remain separately owned.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.edges`
   Status: `done`
-  Goal:nonempty explicit edge candidates with source range/motion or straight-bridge cut-end/
-  direction provenance;complete role/resource/owner/local source admission and authentic views.
-  Scope:2N workspace and complete N/D/A/key-byte quotas before empty/owner/content;original tags/
-  active definitions preserved,no prefix. Source is Stationary/Moving;bridge endpoints name original
-  lower/upper cut bounds and explicit bank direction. TrimOverlaps cannot acquire an implicit bridge.
-  Actual source ownership/frame,region/loop completeness,geometry/maps and effect remain G2/G3.
-  Split whole slash book section;retire whole0703 and four closed offset-output parent blocks
-  exactly for task containment. Focused native/compiler/book checks;no history audit.
-  - [x] ISSUE:role metadata alone supplies no source/motion/bridge provenance manifest.
-  - [x] ROOT CAUSE (slash edges):actual intent/role binding and original range contracts read;
-    both modes/policies,authentic fields and eleven quota/empty/owner/content refusal rows pass,rc=0.
-  - [x] FIX:raw edge provenance,complete 2N/N/D/A/key-byte admission and private original
-    candidate/active-role views;local self-source and bridge-under-trim refuse without prefix.
-  - [x] ADDRESSED (slash edges):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test slash_spread_edge_manifest_contract →3 pass,rc=0;original frames/orders,
-    explicit bridge ends/directions,repeated provenance and no canonical retirement on absence.
-  - [x] NO REGRESSION (slash edges):nearest binding3/compiler4/actual offset book9/slash book3/
-    selected clippy/fmt/book/render/diff pass,rc=0;history873 seven exact Git spans and whole6172B
-    book move verified. Original and new anchors work;actual contour/reference/effect proof stays owned.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (API-specific;canonical book/G1-G2 boundary).
-  Verification:native6/rustdoc16;Commit:STITCHCAD-G1-0704. Next .declaration.reconciliation.
+  Goal:0704 provenance;[whole scope/proofs](../history/stitchcad-devnotes-part874.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation`
-  Status: `pending`
+  Status: `active`
   Goal:explicit contour/trim selection,source coverage/reference retirement and Piece metadata/copy/
   semantic-effect reconciliation before family closure;actual geometry/authority remains separately owned.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.contours`
+  Status: `done`
+  Goal:explicit ordered boundary/hole/construction uses of admitted output tags or retained original
+  DirectedEdges,with actual source Piece association;no forced fresh identities for unchanged edges.
+  Scope:complete nested-group/edge/use/workspace quotas before owner/content;nonempty cut loops,
+  no repeated cut identity,known outputs/exact retained-source membership and every candidate used.
+  Construction occurrences may repeat as existing Piece rules allow. Preserve actual fields/positions;
+  no currentness,geometric closure,trim uniqueness or reference/effect certificate. Retire whole0704
+  and closed0078 node scope exactly for containment;separate historical receipts stay unchanged.
+  - [x] ISSUE:edge provenance alone neither specifies contours nor retains unchanged edge ids.
+  - [x] ROOT CAUSE (slash contours):actual Piece/DirectedEdge rules and admitted-edge contracts
+    read;whole quota/owner/loop/member/coverage cases and authentic source/use fields pass,rc=0.
+  - [x] FIX:explicit output/retained uses,complete group/N/R/M/conservative workspace admission,
+    exact source membership,cut uniqueness and candidate coverage;construction repetitions preserved.
+  - [x] ADDRESSED (slash contours):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test slash_spread_contour_contract →3 pass,rc=0;actual mixed fields/orders,
+    original retained ids/directions,all refusals and repeated construction occurrences.
+  - [x] NO REGRESSION (slash contours):nearest edges3/compiler3/actual slash book4/selected
+    clippy/fmt/book/render/diff/history874 four exact Git spans pass,rc=0. Initial large-error and
+    test-index lints fixed by borrowed policy,derived repeated-edge diagnostic and checked test access;
+    no boxing/suppression. Separate historical receipt suffix unchanged;no geometry/currentness proof.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (API-specific;existing identity/G1-G2 policy).
+  Verification:native6/rustdoc7;Commit:STITCHCAD-G1-0705. Next .reconciliation.references.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references`
+  Status: `pending`
+  Goal:explicit source coverage/retirement/repair and trim-selection contract;no copied or guessed
+  point map. Actual current geometry/correspondence remains .5f.3/.5f.4.geometry/G2/G3.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics`
+  Status: `pending`
+  Goal:actual Piece metadata/fold/copy/semantic-reference/effect reconciliation before native family
+  closure;preserve canonical owners,all-copy effects and attributed derivations. No implicit metadata loss.
+  Define explicit zero/no-new-edge outcomes before closure;an unchanged plan must never fabricate
+  a candidate merely to satisfy the nonempty primitive. Actual supported domain/effect remains G2/G3.
 - ID: `G1-SLICE.5f.1.c.mirror.inputs`
   Status: `done`
   Goal:0684 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part851.md).

@@ -5,7 +5,13 @@ use crate::{
     recipe::FormulaExpressionDocument,
 };
 use core::fmt;
+mod contours;
 mod edges;
+pub use contours::{
+    AdmittedSlashSpreadContours, SlashSpreadContourEdge, SlashSpreadContourError,
+    SlashSpreadContourLimits, SlashSpreadContourLocation, SlashSpreadContourRefusal,
+    SlashSpreadContourUse, SlashSpreadContours,
+};
 mod output;
 mod roles;
 pub use edges::{

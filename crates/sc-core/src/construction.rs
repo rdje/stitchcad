@@ -91,13 +91,16 @@ pub use slash_opening::{
 };
 mod slash_spread;
 pub use slash_spread::{
-    AdmittedSlashSpreadEdges, BoundSlashSpreadEdgeRoles, SlashSpreadBoundaryPolicy,
-    SlashSpreadBridgeDirection, SlashSpreadConstruction, SlashSpreadConstructionError,
-    SlashSpreadCutEnd, SlashSpreadDependency, SlashSpreadEdge, SlashSpreadEdgeCandidate,
-    SlashSpreadEdgeManifest, SlashSpreadEdgeManifestError, SlashSpreadEdgeManifestLimits,
-    SlashSpreadEdgeManifestRefusal, SlashSpreadEdgeOrigin, SlashSpreadFullnessIntent,
-    SlashSpreadOutputIntent, SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal,
-    SlashSpreadSide, SlashSpreadSource, SlashSpreadSourceMotion,
+    AdmittedSlashSpreadContours, AdmittedSlashSpreadEdges, BoundSlashSpreadEdgeRoles,
+    SlashSpreadBoundaryPolicy, SlashSpreadBridgeDirection, SlashSpreadConstruction,
+    SlashSpreadConstructionError, SlashSpreadContourEdge, SlashSpreadContourError,
+    SlashSpreadContourLimits, SlashSpreadContourLocation, SlashSpreadContourRefusal,
+    SlashSpreadContourUse, SlashSpreadContours, SlashSpreadCutEnd, SlashSpreadDependency,
+    SlashSpreadEdge, SlashSpreadEdgeCandidate, SlashSpreadEdgeManifest,
+    SlashSpreadEdgeManifestError, SlashSpreadEdgeManifestLimits, SlashSpreadEdgeManifestRefusal,
+    SlashSpreadEdgeOrigin, SlashSpreadFullnessIntent, SlashSpreadOutputIntent,
+    SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal, SlashSpreadSide, SlashSpreadSource,
+    SlashSpreadSourceMotion,
 };
 mod walk;
 pub use walk::{

@@ -828,31 +828,7 @@ Current frontier remains in [G1-SLICE](G1-SLICE.md#current-frontier).
 
 - ID: `G1-SLICE.5b.1c.1`
   Status: `done`
-  Goal: map static obligations and reproduce undefined excluded-construct recognition before
-  implementing product .5b.2–.4. Parent .1c owns complete review; this child owns D124 diagnosis,
-  reproducible baseline producer, concrete decision proposal and synchronized book/live records.
-  Pre-code evidence: actual static_statement with numerical/storage/geometry callbacks trapped:
-  loop(width), repeat(2,width), while(width>0 um) raise formula_unbound_name; fn/macro definition
-  shapes raise formula_parse; width^3 raises formula_unsupported; spline/solve preserve envelope
-  tokens. Declared scalar name loop is accepted. Contract6 requires unsupported loops/functions,
-  while grammar1.1 reserves only let/assert/if and grammar6 requires unknown calls unbound.
-  Protocol: compare closed populations/clauses and existing4032/1139/196 matrices in both directions;
-  independently retain these actual baseline source/token results and envelope precedence faults.
-  All21 worked static headers and13 independently authored refusal sources/outcomes are checked
-  against actual book rows, including static acceptance of runtime-only failures. D125 actual false
-  assertion returns a Boolean verdict, equal control returns True; schedule runtime repair .5e.3.
-  D126: public arc radius5m/sweep270deg fits10m square; actual reference length23561945um,
-  half-ratio-quantum distance11.7809725um; pi>3 proves>11.25um>T2. Repair grammar6.1's false
-  bbox-to-edge-length implication; add independent arithmetic counterexample, no geometry claim.
-  Do not pretend example spellings define v1 excluded syntax. Record recommended diagnostic policy
-  and alternative with compatibility effects; obtain director clarification before changing it.
-  Acceptance: pending boundary explicitly owned, producer/fault controls green, all remaining
-  static proof owners mapped, book/task/live records honest, commit completed diagnostic child.
-  Verification:67 actual static cases/four compiled guard assertion reds;21/13 book populations
-  exact, execution/value/geometry trapped. D126 independent exact chord bound and current reference
-  arithmetic control pass0. Full reference/language16/publication9 pass0; D124/D125 remain open.
-  Commit: `STITCHCAD-G1-0078`; .1c.2 awaits director ruling, parent not complete.
-
+  Goal:0078 diagnostic scope;[whole historical node](../history/stitchcad-devnotes-part874.md).
 
 ## Completed static review receipts — preserved fromac7f0bf
 
