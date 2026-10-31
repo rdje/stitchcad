@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — query original mirror point candidates
+## _(2026-10-31 UTC)_ — admit original mirror edge candidates
 
-0728 admits whole N then full match count M;exact original PointRef identity yields Unique/Ambiguous/Gap without a selected prefix or new workspace.
-Actual owner/query/limits and all original candidate roles remain inspectable;ambiguous order differs from catalogue order. Gap does not retire or resolve an original.
-Native4+5/mirror API25/book11,selected clippy/fmt/build/map/render pass0;parent admission unchanged,whole0727 spans899 exact0. Native identity/point parents close.
-Promotion: declined (existing metadata/geometry boundary). Complete edge attribution next;actual source/frame/currentness/issuance/reflection/copy/semantic/full CI remain owed. G1still6/18/G0 unapproved.
+0729 admits whole N/2N before original operation/role/source checks under the actual canonical Piece declaration. Edge and point proof domains remain distinct.
+Authentic candidate fields/order and logical EdgeRef tuples retained;both proposal orders checked independently of catalogue order. Shared sources/N0 remain intermediate metadata.
+Native5+4/edge API4/book12,selected clippy/fmt/build/map/render pass0;parent implementations unchanged,whole0728 spans900 exact0. No source coverage,reflection or issuance proof.
+Promotion: declined (existing metadata/geometry boundary). Complete unique source attribution and every original occurrence next,then contours;broader integration remains deferred. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

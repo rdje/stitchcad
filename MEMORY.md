@@ -1,14 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0728;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs.manifest.edges in docs/tasks/G1-SLICE-mirror.md.
-  Native identity/point declarations complete;bounded complete source-edge attribution next.
-- Point query admits full N then complete matches M,exact original identity;Unique/Ambiguous/Gap
-  retain actual owner/query/candidates/order. No prefix,ambiguous selection or new workspace.
-  Native9/mirror API25/book11/lint/fmt/build/map/render pass;proof target/history-proof-0728-mirror-point-query/.
-  No source existence/membership/frame/currentness,coordinates,issued identity or physical-copy proof.
-- Point candidates retain canonical logical tuples/repeated sources;N0 is presence metadata,
-  not no-op/completeness/retirement. Actual correspondence stays .manifest.correspondence/.5f.4.geometry.
+- Latest unit:STITCHCAD-G1-0729;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs.manifest.edges.coverage in docs/tasks/G1-SLICE-mirror.md.
+  Native identity/point declarations complete;edge candidates admitted;complete coverage and contours next.
+- Edge candidates admit full N/2N before operation/role/source checks under actual Piece declaration.
+  Authentic EdgeRef/role fields and proposal order retained;logical outputs are canonical tuples.
+  Native9/edge API4/book12/lint/fmt/build/map/render pass;proof target/history-proof-0729-mirror-edge-candidates/.
+  Duplicate sources/N0 are intermediate metadata,not unique/complete coverage or executable geometry.
+- Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
+  candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.
 - bind_point_roles retains actual canonical Piece/typed catalogue under full D/A/key-byte limits.
   Point catalogue/member/transition domains stay distinct;actual history/undo/global issuance stays owed.
 - Native mirror metadata choices complete:bind_metadata uses explicit PreserveSource/Replace for
@@ -25,7 +25,7 @@
 - Scoped family result:15 slash contract suites51 pass;actual slash API/book docs53 pass. Source
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
-- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained;whole0727 now899;0726 now898;0725 now897;closed0064 protocol894;older source spans/notes base exact.
+- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained;whole0728 now900;0727 now899;0726 now898;closed0064 protocol894;older source spans/notes base exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation

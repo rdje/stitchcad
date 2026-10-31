@@ -515,3 +515,55 @@ zero-work/zero-match Gap while canonical role history stays intact. Unique likew
 only one proposed attribution;source existence,Piece membership,current frame/registry,
 geometric correspondence,registration repair and actual identity issuance remain separate work.
 
+## Original-edge candidate attribution
+
+`MirrorPieceEdgeManifest` proposes ordered persistent edge-role tags with exact original EdgeRefs.
+Admission borrows the actual DeclaredMirrorPieceIdentity and its original edge-role catalogue,
+metadata and source Piece. Point-role membership and PointRefs cannot substitute for these types.
+An admitted candidate set is an intermediate declaration;complete source occurrence coverage and
+reflected contour mapping remain the following steps.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceEdgeCandidate` | Explicit persistent tag and original EdgeRef field |
+| `MirrorPieceEdgeManifest` | Original operation and whole candidate proposal |
+| `MirrorPieceEdgeManifestLimits::new(N,W)` | Complete candidate and workspace-entry allowances |
+| `AdmittedMirrorPieceEdges` | Actual canonical Piece declaration and admitted candidate associations |
+| `MirrorPieceOutputEdge` | Authentic output candidate,edge-role view and original source field |
+| `MirrorPieceEdgeManifestError`, `MirrorPieceEdgeManifestRefusal` | Original proposal,parent,limits and first cause |
+
+The checked workspace count2N,whole N quota and whole workspace quota precede operation comparison
+and allocation. Workspace is one N-entry tag index and one N-entry association collection;these
+are entry counts,not allocated bytes or earlier storage. The original edge catalogue retains its
+separate definition/active/key-byte limits. Each candidate then checks duplicate tag,undefined or
+inactive role,self-supply,and known source/result Piece or assigned Material creator aliases.
+No accepted prefix escapes. Views and errors retain actual parents and original fields.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let raw=MirrorPieceEdgeManifest::new(EntityId::from_bits(10),vec![
+    MirrorPieceEdgeCandidate::new(LocalTag::new(9),
+        EdgeRef::new(EntityId::from_bits(40),LocalTag::FIRST))]);
+fn admit<'a>(raw:&'a MirrorPieceEdgeManifest,piece:&'a DeclaredMirrorPieceIdentity<'a>)
+    ->Result<AdmittedMirrorPieceEdges<'a>,MirrorPieceEdgeManifestError<'a>> {
+    raw.admit(piece,MirrorPieceEdgeManifestLimits::new(100,200))
+}
+assert_eq!(raw.candidates().first().expect("original").tag(),LocalTag::new(9));
+```
+
+`edges()` retains original proposal order and supports reverse iteration. `edge(tag)` uses the
+persistent tag even when candidate order differs from catalogue active order. `logical_output()`
+constructs the declared EdgeRef from the actual mirror operation and canonical role tag;it does
+not issue an identity,insert an edge into a registry or evaluate reflected geometry.
+
+Two distinct roles may still propose the same source at this intermediate stage. Neither is
+silently selected or merged. Admission also permits sources not yet established as members of
+the Piece;the complete-coverage stage must resolve those cases against every actual boundary,
+hole,construction and fold occurrence. Repeated occurrences must remain distinct authored uses
+even when their original EdgeRef identity is shared. No direction or contour order is inferred here.
+
+An empty proposal admits under N0/W0 without retiring active or inactive canonical roles. This
+is candidate presence metadata,not an executable empty Piece,complete copy,no-op or unchanged
+result. Actual source coverage,currentness,frame,geometric correspondence,global freshness,
+physical-copy/semantic effects and publication remain separate requirements.
+

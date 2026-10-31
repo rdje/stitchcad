@@ -62,22 +62,29 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Goal:0727 point candidates;[whole scope/proofs](../history/stitchcad-devnotes-part899.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.outputs.query`
   Status: `done`
-  Goal:bounded exact original PointRef eligibility;native identity/point parents complete.
-  - [x] ISSUE:point attribution needs complete source eligibility.
-  - [x] ROOT CAUSE (point query):actual candidate/role/source paths reviewed;whole N before scan,
-    full M before result;no index/vector or parent changes;rc=0.
-  - [x] FIX:authentic Unique/Ambiguous/Gap views never choose an ambiguous role.
-  - [x] ADDRESSED (point query):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test mirror_piece_point_query_contract --test mirror_piece_point_manifest_contract:4+5 pass;rc=0.
-  - [x] NO REGRESSION (point query):mirror API25/book11,selected lint/fmt/build/map/render/
-    899 exact Git spans pass;rc=0. Both quotas,tag identity,original order and N0 checked.
-  - [x] LOCKSTEP:book/live/frontier align;promotion: declined (existing metadata/geometry boundary).
-    Native parents close;actual source/frame/currentness/issuance/correspondence remain owned.
-  Proof:target/history-proof-0728-mirror-point-query/;Commit:STITCHCAD-G1-0728.
+  Goal:0728 point query;[whole scope/proofs](../history/stitchcad-devnotes-part900.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bounded complete source-edge attribution,stable candidate roles and exact copied contour/
   construction/fold occurrence mapping;deduplicate identities without dropping authored occurrences.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges.candidates`
+  Status: `done`
+  Goal:bounded original EdgeRef/role attribution.
+  - [x] ISSUE:copy edges need typed attribution.
+  - [x] ROOT CAUSE (edge candidates):actual Piece/role APIs reviewed;whole N/2N before scans;
+    parents unchanged;rc=0.
+  - [x] FIX:authentic candidates retain original fields/order.
+  - [x] ADDRESSED (edge candidates):cargo test --test mirror_piece_edge_manifest_contract
+    --test mirror_piece_identity_contract:5+4 pass;rc=0. Full invocation in proof receipt.
+  - [x] NO REGRESSION (edge candidates):edge API4/book12,clippy/fmt/build/map/render/900 spans pass;rc=0.
+  - [x] LOCKSTEP:book/live align;promotion: declined (existing metadata/geometry boundary).
+  Proof:target/history-proof-0729-mirror-edge-candidates/;Commit:STITCHCAD-G1-0729.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges.coverage`
+  Status: `pending`
+  Goal:complete unique source-edge attribution preserving all actual source occurrences.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges.contours`
+  Status: `pending`
+  Goal:explicit reflected contour winding/direction and construction/fold mapping from actual source.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.correspondence`
   Status: `pending`
   Goal:explicit supported reflection/reference-map requirements in original frames;no source retirement

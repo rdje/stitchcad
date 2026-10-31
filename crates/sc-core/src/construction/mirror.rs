@@ -38,6 +38,12 @@ pub use points::{
     MirrorPiecePointQuery, MirrorPiecePointQueryError, MirrorPiecePointQueryLimits,
     MirrorPiecePointQueryRefusal,
 };
+mod edges;
+pub use edges::{
+    AdmittedMirrorPieceEdges, MirrorPieceEdgeCandidate, MirrorPieceEdgeManifest,
+    MirrorPieceEdgeManifestError, MirrorPieceEdgeManifestLimits, MirrorPieceEdgeManifestRefusal,
+    MirrorPieceOutputEdge,
+};
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
 /// Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks.

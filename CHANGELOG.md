@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0728 — query original mirror point candidates
+## STITCHCAD-G1-0729 — admit original mirror edge candidates
 
-- Exact original identity produces complete Unique/Ambiguous/Gap views under whole N/M quotas.
-- Authentic candidates retain proposal order;ambiguous matches never silently choose a role.
-- Native9/mirror API25/book11 and focused lint/fmt/build/map/render/history899 checks pass.
-- Native identity/point declarations close;actual source/frame/geometry/issuance remain separate.
+- Whole candidate/workspace quotas precede original owner,edge-role and typed-source checks.
+- Authentic source fields/order and logical output tuples retained;point references cannot substitute.
+- Native9/edge API4/book12 and focused lint/fmt/build/map/render/history900 checks pass.
+- Shared sources and N0 are intermediate metadata;complete source/occurrence coverage remains next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
