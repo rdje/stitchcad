@@ -335,8 +335,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/inverse_body_faults.py --pl
 These commands validate source and destination plans and print classifier controls without
 creating directories,writing snapshots or dispatching a compiler. The focused watcher runs the
 actual four entries with unrelated Git selectors and rejects six actual inventory-body faults.
-This closes only the inventory boundary. Complete controller effects,child/runtime locality and
-fresh native-consumer acceptance remain under n16;no existing numerical receipt is overwritten.
+The separate effect and fresh native results below complete this four-entry boundary. Remaining
+n16/platform,fixture-wrapper and broader integration scopes retain their owners;no old receipt is overwritten.
 
 ## Controller effects and failure boundaries
 
@@ -361,7 +361,31 @@ owned fixtures. Actual parent/child timeout fixtures verify that killing a paren
 late child write,while group cleanup prevents it. Original inputs and complete copied workspaces
 are checked after success and failure;the watcher also cleans its intentionally broken restoration.
 
-These controls close the scoped effect review. Fresh compiled-native acceptance remains the
-separate n16.1.consumer leaf;complete n16/platform and broader D156 integration remain owned.
+These controls close the scoped effect review. Separate fresh compiled-native acceptance now
+passes below;complete n16/platform and broader D156 integration remain owned.
 The fixture wrapper's own complete producer audit is separately scheduled at a41;its scoped
 controller checks do not close that transitive boundary.
+
+## Fresh native controller acceptance
+
+The0659 run executes all four original public commands sequentially after the inventory and
+effect repairs. Actual Rust1.99.0 (b940084d7),LLVM23.1.1,on aarch64-apple-darwin passes four
+baselines and rejects all26 successfully compiled kernel faults:root5,arc5,forward7,inverse9.
+Every rejection retains an actual watched-test panic and a complete independent fixture row.
+Compiler failure never counts as a numerical fault rejection.
+
+All551 recorded input files remain byte-exact. All four545-file copied workspaces restore
+completely,2180 snapshot files in total;the6614 legacy evidence files remain unchanged during
+the run. The548 Rust/build inputs still match the retained full Rust gate's source basis.
+Actual timeout-group and exclusive-capture controls also pass. An independent reader checks
+report/log identities,compiled outcomes,original rows and complete restored file populations.
+
+```text
+target/irrational_platform_certificate/native-0659-20261031T003645962930Z-64800/receipt.json
+sha256:0fee096d24b88963e434182710341cc65fd33d86c2e59118ba017d65311dfeb5
+```
+
+This closes n16.1's supported four-entry inventory/effect/native boundary on the observed host.
+Tangent/resource/browser entries remain n16.2,the fixture wrapper remains a41,and complete D156
+integration retains its owner. No new full-suite,application/device,allocator,physical or human
+release verdict follows from this native acceptance. Historical captures remain immutable.

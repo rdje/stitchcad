@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.consumer:fresh root/arc/forward/inverse native acceptance,then n16.2 tangent/platform. n16/n16.1 active;controller inventory/effects complete.
-- Latest unit STITCHCAD-G1-0658;derive HEAD/ahead from Git. D358 snapshot membership/labels/copied
-  mutable-body plan fixed;D359 actual arc compilation diagnostic now retains arc family.
-- Controller captures:four configurations/30 simulated variants/seven failure categories,
-  twelve preflight refusals/eight Python-body reds;actual owned timeout fixtures pass.
-- Original sources and all owned snapshot data restore independently,including broken-restore
-  controls. Simulated reports explicitly marked;fresh compiled numerical evidence still .consumer.
-- Four inventory entries/current545 files/six reds pass;book101/374/1684/2999/history817 four Git
-  spans/census/map/diff/Rust548 exact. No kernel change or full-gate rerun.
-- New output-wrapper own audit a41 pending after active numerical groups,before D156 signoff.
-- Full0654 actual29/source1223 predates current repairs;D156/.h2.b.v/pre-push broad verification owned.
-- Preserve original numerical/certificate/archive/search proof;no historical capture reruns.
-- G1 6/18/G0 unapproved;.5d.4 all43 done;.5d.2/.5e.3 active;.5e.4 pending. No full app/release claim.
-- Cleanup2026-10-30 14:18 UTC unchanged;not due. Full PNT/push400 only;logs target/runtime-0658-*.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.2:tangent/resource/platform runtime/locality review.
+- Latest unit STITCHCAD-G1-0659;derive HEAD/ahead from Git. n16.1 plus all three children done.
+- Actual four published commands pass4 baselines/26 compiled kernel rejections(5/5/7/9);
+  independent Cargo/whole-row/source/census validation passes;all2180 copied files restore.
+- All551 inputs unchanged;legacy6614 exact;Rust/build548 still matches full Rust gate basis.
+- target/irrational_platform_certificate/native-0659-20261031T003645962930Z-64800/receipt.json SHA0fee096d24b88963e434182710341cc65fd33d86c2e59118ba017d65311dfeb5.
+- Observed Rust1.99.0/b940084d7/LLVM23.1.1/aarch64-apple-darwin;not wider host/device proof.
+- Book101/374/1684/3000/history818 four exact Git spans/IDs exact/map/diff pass;no kernel changes.
+- n16 remains active;n16.2 pending;a41 fixture-own producer audit pending after active groups.
+- D357–D359 fixes retain scoped proof;full0654 actual29/source1223 predates current repairs.
+- Full D156/.h2.b.v/pre-push verification remains owned. No new full-suite/hosted/app/release verdict.
+- Preserve original numerical/certificate/archive/search evidence;never rerun historical captures.
+- G1 6/18/G0 unapproved;.5d.4 all43 done;.5d.2/.5e.3 active;.5e.4 pending. Full PNT/push400 only.
+- Cleanup2026-10-30 14:18 UTC unchanged;not due. Current run terminal0 consumed;no job in flight.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,

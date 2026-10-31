@@ -914,8 +914,8 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Acceptance:public-entry/alias/source/output/child/failure review,actual path refusals and
   omission guards,focused unchanged-source consumer;no global cache or foreign repository write.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1`
-  Status: `in_progress`
-  Goal:shared controller/root/arc/forward/inverse locality review under parent schedule/acceptance.
+  Status: `done`
+  Goal:scoped four-entry inventory/effect/native boundary verified0659;broader n16/D156 remains.
   Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.inventory`
   Status: `done`
@@ -923,28 +923,25 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.effects`
   Status: `done`
-  - [x] ISSUE:complete four-entry controller effect review;D358 P1 unsupported snapshot/mutation
-    plan and D359 P3 wrong-family compilation diagnostic.
-  - [x] ROOT CAUSE (WHY + WHERE):actual borrowed untracked kernel reaches trapped activation
-    without a body destination;shared arc compilation failure reports root,red calibrated,rc=0.
-  - [x] FIX:require selected kernel/fixture snapshot membership and distinct baseline/fault labels;
-    explicitly declare copied-body mutation/restoration;retain actual family in compile refusal.
-  - [x] ADDRESSED:python_numerical_runtime_contract.py →four configurations/30 simulated variants,
-    seven failure categories/twelve preflight refusals/eight actual Python-body faults;
-    real parent/child timeout controls and independent owned-workspace restoration pass,rc=0.
-    Reports explicitly SIMULATED;no compiled numerical verdict inferred. Arc diagnostic red→green,rc=0.
-  - [x] NO REGRESSION:four inventory entries/current545 files/six body reds still pass,rc=0;
-    book101/374/1684/2999/history817 four exact Git spans/census/map/diff/Rust548 exact,rc=0.
-    All original input bytes and complete owned snapshot data preserved/restored after failure.
-  - [x] LOCKSTEP:book/live/registries/watched suite/frontier sync;D358/D359 fixed. Promotion declined
-    (existing complete source/file/child/restoration contracts). Native proof remains .consumer;
-    n16/n16.1 active,n16.2 pending. New wrapper-own audit a41 pending after active groups.
-    Full0654 gate predates these repairs;D156/.h2.b.v/pre-push verification remains owned.
-  Commit:STITCHCAD-G1-0658;Verification:scoped modeled controller effects and actual owned timeout fixtures.
+  Goal:0658 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part818.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.consumer`
-  Status: `pending`
-  Goal:run focused fresh native consumers after inventory/effect repairs;verify original sources,
-  full snapshot restoration and runtime identities,then close this four-entry group only.
+  Status: `done`
+  - [x] ISSUE:fresh actual native acceptance after shared inventory/effect/diagnostic repairs.
+  - [x] ROOT CAUSE (WHY + WHERE):modeled effects cannot certify compiled kernel outcomes;
+    actual four public root/arc/forward/inverse commands →all pass,rc=0.
+  - [x] FIX:retain fresh protected command logs/reports,source/preflight hashes and exact runner;
+    independently verify Cargo success,watched fixture rows and complete copied populations.
+  - [x] ADDRESSED:actual baseline4/compiled fault rejections26(5/5/7/9),all reports genuine;
+    real timeout/group/exclusive capture controls pass;all2180 snapshot files restored,rc=0.
+    Rust1.99.0/b940084d7/LLVM23.1.1/aarch64-apple-darwin;no wider host/device claim.
+  - [x] NO REGRESSION:all551 source hashes unchanged/legacy6614 exact/Rust548 still matched;
+    source/script receipt SHA0fee096d24b88963e434182710341cc65fd33d86c2e59118ba017d65311dfeb5,rc=0.
+    Book101/374/1684/3000/history818 four Git spans/IDs exact/map/diff pass,rc=0.
+  - [x] LOCKSTEP:book/live/notes/registry/frontier sync;n16.1 and all three children done.
+    Promotion declined(existing independent compiled/source/restoration contracts). n16 active;
+    n16.2/a41 pending;full D156/.h2.b.v/pre-push/app/physical/release owners retained.
+    Full0654 gate remains historical source-scoped;no new full-suite verdict.
+  Commit:STITCHCAD-G1-0659;Verification:fresh actual four-entry native acceptance/independent exact data.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
   Status: `pending`
   Goal:tangent/platform entry locality review under parent schedule/acceptance;feature evidence is scoped.

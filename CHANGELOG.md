@@ -3,10 +3,10 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0658 — verify numerical controller effects and refusal boundaries
+## STITCHCAD-G1-0659 — close fresh native four-entry acceptance
 
-- D358 fixes snapshot membership/labels/copied-body mutation plans;D359 fixes wrong-family compilation diagnostic. Four configurations/30 simulated variants/7 failure categories/12 preflight refusals/8 body reds and real timeout fixtures pass;all source/snapshot data restored.
-- Inventory4/current545/six reds/book101/374/1684/2999/history817/census/map/diff/Rust548 exact pass. No kernel change;fresh native proof next .consumer,then n16.2;a41 wrapper audit pending. Full integration remains owned;G1 6/18/G0 unapproved unchanged.
+- Actual root/arc/forward/inverse baseline4/compiled fault26 pass;all2180 snapshot files restore. Independent source551/legacy6614/Rust548 exact and actual timeout/group/capture controls pass on observed Rust1.99.0/aarch64-apple-darwin.
+- Book101/374/1684/3000/history818/IDs/map/diff pass. n16.1 done;next n16.2;a41/D156/full integration remain owned. No new kernel/full-suite/hosted/app/release verdict;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
