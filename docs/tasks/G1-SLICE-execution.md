@@ -862,27 +862,27 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0740 actual side copy/pattern owners;[whole scope/proofs](../history/stitchcad-devnotes-part915.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.roles`
-  Status: `in_progress`
+  Status: `done`
   Goal:distinct bounded semantic-notch role metadata and actual walk operation binding.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.roles.catalog`
   Status: `done`
   Goal:0741 typed notch metadata;[whole scope/proofs](../history/stitchcad-devnotes-part916.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.roles.transition`
   Status: `done`
-  Goal:preserve all supplied notch-role definitions under explicit bounded membership transition.
-  - [x] ISSUE:membership restoration cannot forget later supplied role definitions.
-  - [x] ROOT CAUSE (notch history):published shared/point transition APIs reviewed;
-    combined D/A/key bytes precede owner/definition scans;rc=0.
-  - [x] FIX:typed actual notch before/after and introduced/activated/deactivated views.
-  - [x] ADDRESSED (notch history):cargo test --test notch_output_role_transition_contract
-    --test point_output_role_transition_contract:3+3 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (notch history):API5/book3,lint/fmt/build/map/render;
-    shared/point/walk/catalogue kernels and prior fences/916 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing metadata/history/private witness rule).
-  Proof:target/history-proof-0742-notch-role-transition/;Commit:STITCHCAD-G1-0742.
+  Goal:0742 typed notch history;[whole scope/proofs](../history/stitchcad-devnotes-part917.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.roles.binding`
-  Status: `pending`
-  Goal:bind actual walk copy context and typed role catalogue under whole D/A/key-byte limits.
+  Status: `done`
+  Goal:actual walk copy/pattern context and distinct notch catalogue under whole D/A/B limits.
+  - [x] ISSUE:admitted notch metadata alone names no actual walk/copy/source context.
+  - [x] ROOT CAUSE (walk roles):actual parent getters/shared catalogue API reviewed;
+    whole D/A/cached key bytes precede operation equality;rc=0.
+  - [x] FIX:authentic borrowed copy/catalogue parents;constant work/space,no output inference.
+  - [x] ADDRESSED (walk roles):cargo test --test walk_notch_role_binding_contract
+    --test walk_copy_inventory_contract:3+5 pass;rc=0;full invocation in receipt.
+  - [x] NO REGRESSION (walk roles):API4/book4,lint/fmt/build/map/render;
+    parent kernels/fixtures and prior fences/917 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing typed metadata/actual-parent rule).
+  Proof:target/history-proof-0743-walk-notch-roles/;Commit:STITCHCAD-G1-0743.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest`
   Status: `pending`
   Goal:complete original pair/side-to-output assignment and explicit semantic identities.

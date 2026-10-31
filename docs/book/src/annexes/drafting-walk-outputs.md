@@ -172,5 +172,51 @@ each complete delta traversal are bounded by the already counted metadata popula
 bytes,conservatively O((D+A+B)log(D+A+2)). Repeated view traversal retains the caller's whole-work
 budget. Definition/quota/refusal aliases are raw shared data;the admitted transition and its
 membership views have distinct notch owners and no conversion to point/edge transition proofs.
-Actual history/undo/currentness,walk-parent association,semantic assignment/sharing,provider
+Actual history/undo/currentness,current walk-parent validity,semantic assignment/sharing,provider
 truth,all-copy effects and atomic publication remain their separate required execution work.
+
+## Bind notch roles to the actual walk context
+
+`BoundWalkCopyInventory::bind_notch_roles` associates the actual complete walk/copy/pattern
+context with an `AdmittedNotchOutputRoleCatalog` under an explicit fresh D/A/B association policy.
+Only the distinct notch catalogue type is accepted;point or edge catalogue proofs cannot substitute.
+Complete definitions,active occurrences and cached whole machine-key bytes are checked before the
+catalogue operation is compared with the original actual WalkSeamEdit operation.
+
+| API | Meaning |
+| --- | --- |
+| `BoundWalkNotchRoles` | Actual complete copy/source context and typed notch catalogue association |
+| `WalkNotchRoleBindingError`, `WalkNotchRoleBindingRefusal` | Whole original parents,policy and first quota/operation cause |
+
+```rust
+use sc_core::construction::*;
+fn bind<'a>(copies:&'a BoundWalkCopyInventory<'a>,catalog:&'a AdmittedNotchOutputRoleCatalog<'a>,
+    limits:NotchOutputRoleCatalogLimits)
+    ->Result<BoundWalkNotchRoles<'a>,WalkNotchRoleBindingError<'a>> {
+    copies.bind_notch_roles(catalog,limits)
+}
+let limits=NotchOutputRoleCatalogLimits::new(3,2,16);
+assert_eq!(limits.key_bytes(),16);
+```
+
+The selected association limits may be lower than the catalogue's earlier admission policy.
+For definitions `[9 balance,2 end,7 latent]`,active `[2,9]`,whole B is16. D2,A1 or B15 refuses
+before discovering that catalogue operation99 differs from actual walk operation10. Ordinary
+operation id0 receives the same equality check;it cannot act as an omitted-operation sentinel.
+Errors lend the actual whole original copy context,catalogue,policy and first cause without any
+accepted prefix. Cached original counts make association constant work/space with no scan or
+allocation;earlier whole graph/input/copy/inventory/catalogue bounds retain their own scope.
+
+`copies()` lends the same actual copy/source/Piece context;`catalog()` lends the same distinct
+notch catalogue and authentic original membership fields;`limits()` retains the original explicit
+association policy. Role views keep their actual admitted notch owner,not an equal-looking clone.
+The original pair anchors,all profile contexts,span direction/ease/stops,physical-copy/Piece fields,
+metadata definitions and original orders remain unchanged on success/refusal.
+
+Empty or inactive metadata can bind a matching operation without dropping any original requested
+occurrence. A bound empty catalogue still retains the original one pair/two requests. This is
+neither a complete mark-assignment manifest nor proof that the walk creates zero semantic marks.
+No2N-new-id rule,implicit per-copy duplication,sharing/coalescing or existing-Notch reassignment
+is introduced. Complete explicit assignment/identity/sharing policy and current Design/history,
+correspondence/differential/ease/profile/all-copy/effect/authority evidence remain required.
+No semantic Notch,PointRef or EdgeRef is issued and no geometry or atomic edit executes here.

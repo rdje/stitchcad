@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0742 — preserve supplied semantic-notch role history
+## STITCHCAD-G1-0743 — bind typed notch roles to the actual walk context
 
-- Distinct notch transition types retain actual before/after owners under complete combined metadata bounds.
-- All supplied definitions keep tags/keys;membership restoration cannot forget later definitions.
-- Introduced/activated/deactivated views retain actual original fields,indices and canonical parent domains.
-- Native6/API5/walk book3 and focused lint/fmt/build/map/render/history916 checks pass.
-- No undo/global issuance/semantic retirement/effect proof;actual walk role binding follows.
+- Whole D/A/key-byte allowances precede matching actual walk and distinct notch catalogue operations.
+- Actual complete copy/source and typed catalogue parents retained;constant work/space without allocation.
+- Empty/inactive metadata retains all requested occurrences;no output count,semantic identity or coalescing inferred.
+- Native8/API4/walk book4 and focused lint/fmt/build/map/render/history917 checks pass.
+- Native role branch closes;complete explicit occurrence assignment/identity manifest follows.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

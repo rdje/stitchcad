@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0742;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.walk.outputs.roles.binding in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32 nodes complete;walk copy/pattern and notch catalogue/history complete;actual role binding next.
-- Notch role transitions retain all supplied definitions under combined D/A/B;restoring membership
-  cannot forget later tags. Native6/API5/walk book3/lint/fmt/build/map/render pass;proof target/history-proof-0742-notch-role-transition/.
-  Actual history/undo/EntityId issuance/effects stay owed. Walk copy context and mirror80+80 remain complete.
+- Latest unit:STITCHCAD-G1-0743;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.walk.outputs.manifest in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32 nodes complete;walk copy/pattern/typed role family complete;full mark assignments next.
+- Walk roles bind actual copy/source context to typed notch catalogue with full D/A/B before operation.
+  Empty/inactive metadata retains all requests;no complete manifest or coalescing. Native8/API4/book4,
+  lint/fmt/build/map/render pass;proof target/history-proof-0743-walk-notch-roles/;roles native parent closes.
 - Mirror known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.
