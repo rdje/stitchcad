@@ -885,17 +885,17 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 - ID: `G1-SLICE.5e.3b`
   Status: `done`
-  Goal:D121 scope completed0081;[whole scope](../history/stitchcad-devnotes-part857.md).
+  Goal:D121 scope completed0081;[whole scope](../history/window27.md#stitchcad-devnotes-part857md).
 
 ## Completed namespace checklist — preserved from b2c4d6e
 
 ### `G1-SLICE.5b.1b.1` — reference namespace and static headers
 
-[Whole completed checklist](../history/stitchcad-devnotes-part863.md).
+[Whole completed checklist](../history/window27.md#stitchcad-devnotes-part863md).
 
 ### D121 recording receipts — G1-SLICE.5e.3b
 
-[Whole closed receipts](../history/stitchcad-devnotes-part861.md).
+[Whole closed receipts](../history/window27.md#stitchcad-devnotes-part861md).
 
 ### Current-grammar closure receipts — .5b.1c.2,2026-10-03 (UTC)
 

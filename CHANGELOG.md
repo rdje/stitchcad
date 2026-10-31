@@ -13,13 +13,14 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0733 — preserve actual mirror source physical copies
+## STITCHCAD-G1-0734 — index known physical-copy identity exclusions
 
-- Complete CutPlan quota precedes original source quantity,orientation and paired-population association.
-- Preserve every original source copy id/definition/order;new result quantity supplies no source default.
-- Native7/API3/output book7 and focused lint/fmt/build/map/render/history904-905 checks pass.
-- Whole historical Dart0014 protocol remains exact in905;its original verification scope is retained.
-- Result-copy intents and companion association remain next;currentness/issuance/geometry/effects stay owned.
+- Whole plan/source/point/workspace limits precede actual copy indexing and typed identity exclusions.
+- Original copy borrows retained;known Piece/operation/Material conflicts refuse completely.
+- Unlisted identities are not freshness proof;existing copies remain excluded from new issuance.
+- Native7/API3/copy book2/output book6 and focused lint/fmt/build/map/render/history906 checks pass.
+- Copy book companion preserves whole source section/old anchor;result-copy intents remain next.
+- Guarded window27 preserves1359 logical records;71 live links route to its catalog;whole0015 protocol907 retained.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

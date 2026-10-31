@@ -1173,9 +1173,9 @@ Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];roo
 
 Done0490;owner G1-SLICE.6.5.3.2.retention. [Whole cause/reproduction/verified fix](../history/window23.md#stitchcad-devnotes-part659md).
 
-D303–D306:[whole closed ledger](../history/stitchcad-devnotes-part865.md).
+D303–D306:[whole closed ledger](../history/window27.md#stitchcad-devnotes-part865md).
 
-D307–D369:[whole prior ledger](../history/stitchcad-devnotes-part854.md). D334/D223/D156 remain owned.
+D307–D369:[whole prior ledger](../history/window27.md#stitchcad-devnotes-part854md). D334/D223/D156 remain owned.
 
 ## D372 — large book-search index warning
 

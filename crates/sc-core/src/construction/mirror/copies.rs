@@ -2,6 +2,11 @@
 use super::RequiredMirrorPieceCorrespondence;
 use crate::ontology::{CopyOrientation, CutCopy, CutPlan, EntityId, Mirroring, PieceDefinition};
 use core::fmt;
+mod identities;
+pub use identities::{
+    BoundMirrorPieceCopyIdentities, MirrorPieceCopyIdentityError, MirrorPieceCopyIdentityLimits,
+    MirrorPieceCopyIdentityRefusal,
+};
 
 fn original<'a>(context: &RequiredMirrorPieceCorrespondence<'a>) -> &'a PieceDefinition {
     context

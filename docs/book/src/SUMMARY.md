@@ -10,7 +10,6 @@
 - [Working with agents](learn/agents-and-workflows.md)
 - [Made-to-measure input charts](spec/mtm-input-charts.md)
 - [What you can use today](availability.md)
-
 # Glossary
 
 - [Glossary](spec/glossary.md)
@@ -100,6 +99,7 @@
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
   - [Mirror Piece-copy contracts](annexes/drafting-mirror-contracts.md)
   - [Mirror output attribution and contours](annexes/drafting-mirror-outputs.md)
+  - [Mirror physical-copy contracts](annexes/drafting-mirror-copies.md)
   - [Native drafting output contracts](annexes/drafting-output-contracts.md)
   - [Native slash/spread output contracts](annexes/drafting-slash-output-contracts.md)
   - [Slash/spread Piece reconciliation](annexes/drafting-slash-piece-contracts.md)

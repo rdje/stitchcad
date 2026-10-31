@@ -17,7 +17,7 @@ Historical verification/commit/changelog tables stay in [the evidence sibling](G
 
 - ID: `G1-SLICE.3c.4a.1`
   Status: `done`
-  Goal:0014 Dart;[whole goals/acceptance/proofs](../history/stitchcad-devnotes-part905.md).
+  Goal:0014 Dart;[whole goals/acceptance/proofs](../history/window27.md#stitchcad-devnotes-part905md).
 
 - ID: `G1-SLICE.3c.4a.2`
   Status: `done`
@@ -32,21 +32,7 @@ Historical verification/commit/changelog tables stay in [the evidence sibling](G
 
 - ID: `G1-SLICE.3c.4a.2a`
   Status: `done`
-  Goal: immutable, distinctly typed Tuck and Pleat with nonempty directed fold-line geometry,
-  intake origin, explicit folding direction and closing-operation identity.
-  Acceptance: all lines/direction are owned complete ranges with unique endpoints; empty or duplicate
-  held fold intervals and negative explicit intake refused; symbolic intake supplies no default;
-  queries preserve direction/repairs; physical fold shape/conserved intake remains G2/G3.
-  Design before code: shared FoldDefinition input/validation, separate immutable Tuck/Pleat wrappers
-  preserve semantic kind. A nonempty list supports one or multiple authored fold lines without
-  inventing a physical pleat-count rule. Exact duplicate held intervals ignore traversal direction.
-  Reuse IntakeAmount and whole-interval ownership; folding operation existence/kind is `.5`/`.6`.
-  Broader actual geometry tests remain G2/G3, including coincidence between distinct held names.
-  Extend the existing structural/geometric record before code. Live-window rollover is part of
-  this slice's doc sync if the next entry crosses CHANGELOG/DEV_NOTES health targets.
-  Verification: nine shared tuck/pleat contracts + two privacy doctests; ownership mutation red;
-  strict Rust, wasm, book, focused censuses, ledger and staged doctrine gate green.
-  Commit: `STITCHCAD-G1-0015`
+  Goal:0015 Tuck/Pleat;[whole goals/acceptance/proofs](../history/stitchcad-devnotes-part907.md).
 
 - ID: `G1-SLICE.3c.4a.2b`
   Status: `done`

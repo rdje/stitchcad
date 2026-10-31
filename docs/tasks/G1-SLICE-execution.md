@@ -40,7 +40,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.6`
   Status: `done`
-  Goal:verified scope;[whole scope/proofs](../history/stitchcad-devnotes-part855.md).
+  Goal:verified scope;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part855md).
 - ID: `G1-SLICE.5e.2`
   Status: `in_progress`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.
@@ -59,7 +59,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part416md).
 - ID: `G1-SLICE.5e.2.h13`
   Status: `done`
-  Goal:verified scope;[whole scope/proofs](../history/stitchcad-devnotes-part855.md).
+  Goal:verified scope;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part855md).
 - ID: `G1-SLICE.5e.2.4`
   Status: `in_progress`
   Goal: bounded source-order expression execution consuming actual node proofs and sourced values.
@@ -345,7 +345,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
 
 ## Window15 retrieval routing —0305
 
-[Whole0305 retrieval proof boxes](../history/stitchcad-devnotes-part850.md).
+[Whole0305 retrieval proof boxes](../history/window27.md#stitchcad-devnotes-part850md).
 
 ## Paired seam command execution
 
@@ -559,7 +559,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0527;[proof](../history/window24.md#stitchcad-devnotes-part686md).
 - ID: `G1-SLICE.6.5.3.2.3.3`
   Status: `done`
-  Goal:completed stop scope;[whole scope/proofs](../history/stitchcad-devnotes-part849.md).
+  Goal:completed stop scope;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part849md).
 - ID: `G1-SLICE.6.5.3.2.3.3.1`
   Status: `done`
   Goal:0529;[proof](../history/window24.md#stitchcad-devnotes-part688md).
@@ -619,7 +619,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0571;[proof](../history/window25.md#stitchcad-devnotes-part730md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3`
   Status: `done`
-  Goal:completed held-reference scope;[whole scope/proofs](../history/stitchcad-devnotes-part852.md).
+  Goal:completed held-reference scope;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part852md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3.1`
   Status: `done`
   Goal:0572;[proof](../history/window25.md#stitchcad-devnotes-part731md).
@@ -743,10 +743,10 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261031`
   Status: `done`
-  Goal:0718;[whole scope/proofs](../history/stitchcad-devnotes-part888.md).
+  Goal:0718;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part888md).
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261031.apply`
   Status: `done`
-  Goal:0718 guarded cleanup;[whole scope/proofs](../history/stitchcad-devnotes-part888.md).
+  Goal:0718 guarded cleanup;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part888md).
 
 ## Drafting operation contracts
 
@@ -786,49 +786,49 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0680 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part843md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs`
   Status: `done`
-  Goal:completed native scope;[whole closure](../history/stitchcad-devnotes-part873.md).
+  Goal:completed native scope;[whole closure](../history/window27.md#stitchcad-devnotes-part873md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.recovery`
   Status: `done`
-  Goal:0691 recovery;[whole scope/proofs](../history/stitchcad-devnotes-part861.md).
+  Goal:0691 recovery;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part861md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.manifest`
   Status: `done`
-  Goal:completed native scope;[whole closure](../history/stitchcad-devnotes-part873.md).
+  Goal:completed native scope;[whole closure](../history/window27.md#stitchcad-devnotes-part873md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.manifest.admission`
   Status: `done`
-  Goal:0692 admission;[whole scope/proofs](../history/stitchcad-devnotes-part862.md).
+  Goal:0692 admission;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part862md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.manifest.query`
   Status: `done`
-  Goal:0693 membership;[whole scope/proofs](../history/stitchcad-devnotes-part863.md).
+  Goal:0693 membership;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part863md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags`
   Status: `done`
-  Goal:completed native scope;[whole closure](../history/stitchcad-devnotes-part873.md).
+  Goal:completed native scope;[whole closure](../history/window27.md#stitchcad-devnotes-part873md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.declaration`
   Status: `done`
-  Goal:0694 declaration;[whole scope/proofs](../history/stitchcad-devnotes-part864.md).
+  Goal:0694 declaration;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part864md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.binding`
   Status: `done`
-  Goal:0695 binding;[whole scope/proofs](../history/stitchcad-devnotes-part865.md).
+  Goal:0695 binding;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part865md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity`
   Status: `done`
-  Goal:completed native scope;[whole closure](../history/stitchcad-devnotes-part873.md).
+  Goal:completed native scope;[whole closure](../history/window27.md#stitchcad-devnotes-part873md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.recovery`
   Status: `done`
-  Goal:0696 recovery/D373/D374;[whole scope/proofs](../history/stitchcad-devnotes-part866.md).
+  Goal:0696 recovery/D373/D374;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part866md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.catalog`
   Status: `done`
-  Goal:0697 catalogue;[whole scope/proofs](../history/stitchcad-devnotes-part867.md).
+  Goal:0697 catalogue;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part867md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.transition`
   Status: `done`
-  Goal:0698 transition;[whole scope/proofs](../history/stitchcad-devnotes-part868.md).
+  Goal:0698 transition;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part868md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.presence`
   Status: `done`
-  Goal:0699 presence;[whole scope/proofs](../history/stitchcad-devnotes-part869.md).
+  Goal:0699 presence;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part869md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.mapping`
   Status: `done`
-  Goal:0700 map requirements;[whole scope/proofs](../history/stitchcad-devnotes-part870.md).
+  Goal:0700 map requirements;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part870md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.outcome`
   Status: `done`
-  Goal:0701 empty refusal;[whole scope/proofs](../history/stitchcad-devnotes-part871.md).
+  Goal:0701 empty refusal;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part871md).
 - ID: `G1-SLICE.5f.1.c.grainline.inputs`
   Status: `done`
   Goal:0681 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part844md).
@@ -837,7 +837,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0682 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part845md).
 - ID: `G1-SLICE.5f.1.c.slash.sources`
   Status: `done`
-  Goal:0683 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part847.md).
+  Goal:0683 completed scope;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part847md).
 [Native slash output declarations and focused checkpoint](G1-SLICE-slash.md#native-slash-output-declarations)
 retain their complete task branch,original goals and proof links in the bounded sibling.
 
@@ -846,13 +846,13 @@ retain their complete task branch,original goals and proof links in the bounded 
 
 - ID: `G1-SLICE.5f.1.c.stage-order`
   Status: `done`
-  Goal:0685 D369 fixed;[whole scope/proofs](../history/stitchcad-devnotes-part853.md).
+  Goal:0685 D369 fixed;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part853md).
 - ID: `G1-SLICE.5f.1.c.walk.inputs`
   Status: `done`
-  Goal:0687 completed input stages;[whole scope/proofs](../history/stitchcad-devnotes-part857.md).
+  Goal:0687 completed input stages;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part857md).
 - ID: `G1-SLICE.5f.1.c.walk.inputs.examples`
   Status: `done`
-  Goal:0686 D370/D371 fixed;[whole scope/proofs](../history/stitchcad-devnotes-part856.md).
+  Goal:0686 D370/D371 fixed;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part856md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs`
   Status: `pending`
   Goal:native output-role/manifest and explicit semantic mark-sharing/coalescing/identity policy,
@@ -860,10 +860,10 @@ retain their complete task branch,original goals and proof links in the bounded 
   correspondence/differential/ease/profile truth and atomic edits stay G3/G4/bus/.5f.4.geometry.
 - ID: `G1-SLICE.5f.1.c.true.contracts`
   Status: `done`
-  Goal:0688 contract recovery;[whole scope/proofs](../history/stitchcad-devnotes-part858.md).
+  Goal:0688 contract recovery;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part858md).
 - ID: `G1-SLICE.5f.1.c.true.inputs`
   Status: `done`
-  Goal:0689 input association;[whole scope/proofs](../history/stitchcad-devnotes-part859.md).
+  Goal:0689 input association;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part859md).
 - ID: `G1-SLICE.5f.1.c.true.outputs`
   Status: `pending`
   Goal:native refit output-role/reference/identity contract;preserved endpoints/stops,all-copy
@@ -876,7 +876,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   any added endpoint/copy variants;no guessed solver. Native output/real geometry owners stay separate.
 - ID: `G1-SLICE.5f.1.c.join.inputs`
   Status: `done`
-  Goal:0690 source intent/binding;[whole scope/proofs](../history/stitchcad-devnotes-part860.md).
+  Goal:0690 source intent/binding;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part860md).
 - ID: `G1-SLICE.5f.1.c.join.outputs`
   Status: `pending`
   Goal:native explicit metadata/material/mark/multiplicity/copy reconciliation and identity/

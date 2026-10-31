@@ -337,51 +337,5 @@ policies remain native work.
 
 ## Preserve the actual source physical copies
 
-`context.preserve_source_copies(&plan,&limits)` associates an actual complete CutPlan with the
-original source Piece held by RequiredMirrorPieceCorrespondence. It preserves every source
-copy's actual id,definition,orientation and authored plan order. Copy ids never come from list
-positions,and the method creates no result copies or physical transforms.
-
-| API | Meaning |
-| --- | --- |
-| `MirrorPieceSourceCopyLimits::new(C)` | Explicit complete CutPlan population allowance |
-| `BoundMirrorPieceSourceCopies` | Actual complete source-copy inventory under original source metadata |
-| `MirrorPieceSourceCopyError`, `MirrorPieceSourceCopyRefusal` | Original context,whole plan,borrowed limits and first refusal |
-
-C counts every actual plan entry,including unrelated Pieces and any existing result copies. It
-must fit before any source-copy scan. Admission then checks the first unexpected source reflection,
-the complete source quantity,and paired-population balance. MirroredPairs requires equal authored
-and reflected source populations. Single and separately handed PairMember sources require authored
-copies only. These checks use the actual original source Piece fields;the requested result's cut
-quantity or mirroring cannot replace them. A plan's structural validity at birth does not prove
-its association with this actual source metadata or current Design.
-
-```rust
-use sc_core::{construction::*,ontology::CutPlan};
-fn preserve<'a>(context:&'a RequiredMirrorPieceCorrespondence<'a>,plan:&'a CutPlan,
-    limits:&'a MirrorPieceSourceCopyLimits)
-    ->Result<BoundMirrorPieceSourceCopies<'a>,MirrorPieceSourceCopyError<'a>> {
-    context.preserve_source_copies(plan,limits)
-}
-```
-
-For source quantity4/MirroredPairs,copies410 authored,207 reflected,900 authored and805 reflected
-all remain. A separately chosen result quantity1/Single still requires these four original source
-copies. Two unrelated copies raise C to6 without joining the returned source set. C5 then refuses
-before source association. A valid birth plan with only two source copies cannot satisfy this
-source quantity4;a valid authored-only birth plan of four copies cannot satisfy paired metadata.
-
-`copies()` lends every actual source CutCopy in original order and supports reverse iteration.
-Reordering records preserves their identities and orientations. Cached copy_count,authored_count
-and reflected_count are immutable admission summaries,not another authored cut quantity. The
-whole plan remains inspectable through plan(),including unrelated copies. Admission scans O(C)
-with constant auxiliary space;each later iterator pass has its own scan responsibility. These
-are population/work bounds,not allocation bytes or a complete execution budget.
-
-No missing source copy is manufactured,and no source copy is selected for conversion into a result
-copy. Existing source definitions,Piece,plan and held references stay unchanged. Current ownership,
-global namespace/history,companion truth,actual reflection and all-copy/semantic effects remain
-required execution evidence. The correspondence providers remain requested rather than accepted.
-Explicit result-copy retention/retirement/issuance and complete companion association are the
-following native steps;this source binding supplies no new identity or publication authority.
+See [the complete source-copy contract](drafting-mirror-copies.md#preserve-the-actual-source-physical-copies).
 

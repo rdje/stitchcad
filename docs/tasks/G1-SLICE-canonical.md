@@ -70,20 +70,20 @@ Staged make gate→=== all doctrines green ===, rc=0; all scoped jobs observed t
 
 - ID: `G1-SLICE.5a.3d.1`
   Status: `done`
-  Goal:0062 byte protocol;[whole scope/proofs](../history/stitchcad-devnotes-part877.md).
+  Goal:0062 byte protocol;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part877md).
 
 ## Serializer pre-code protocol — completed in G1-0063
 
 - ID: `G1-SLICE.5a.3d.2`
   Status: `in_progress`
-  Goal:historical pre-code status only;[whole0063 protocol](../history/stitchcad-devnotes-part889.md).
+  Goal:historical pre-code status only;[whole0063 protocol](../history/window27.md#stitchcad-devnotes-part889md).
   Completed implementation/proofs remain below;this preserved proposal is not an active frontier.
 
 ## Coupled identity review pre-change protocol
 
 - ID: `G1-SLICE.5a.3d.3`
   Status: `done`
-  Goal:completed0064 protocol;[whole scope/proofs](../history/stitchcad-devnotes-part894.md).
+  Goal:completed0064 protocol;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part894md).
 
 ## Serializer proof — preserved from 8ed2893
 
@@ -192,7 +192,7 @@ Staged make gate→=== all doctrines green ===, rc=0; all verification jobs obse
 
 - ID: `G1-SLICE.5a.3e.1`
   Status: `done`
-  Goal:0065 statement protocol;[whole scope/proofs](../history/stitchcad-devnotes-part881.md).
+  Goal:0065 statement protocol;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part881md).
 
 ## Completed expression identity subtree — preserved from 5d8ab5b
 
@@ -737,7 +737,7 @@ Current frontier remains in [G1-SLICE](G1-SLICE.md#current-frontier).
 
 - ID: `G1-SLICE.5b.1c.1`
   Status: `done`
-  Goal:0078 diagnostic scope;[whole historical node](../history/stitchcad-devnotes-part874.md).
+  Goal:0078 diagnostic scope;[whole historical node](../history/window27.md#stitchcad-devnotes-part874md).
 
 ## Completed static review receipts — preserved fromac7f0bf
 

@@ -277,3 +277,16 @@ stay raw. Transaction trees under target/history-capture-0684 and independent ma
 target/history-proof-0684 remain protected;never rerun installation/recovery after later edits.
 Packing changes no capacity,source proof or platform guarantee. Existing generation1 is unchanged;
 active working files fall to5 before new raw drafts are restored.
+
+The0734 append was required when one new draft took active working files64→65. Draft906 was
+copied/hash-verified in protected target/history-capture-0734-drafts,then temporarily removed.
+Window27 captures59 complete committed files from3a942a80. Before/candidate/installed native
+inventories match1359 logical names,sizes,line counts,SHA-256 hashes and5482089 bytes. Native tar
+inspection matches59 records/242636 bytes;47 unchanged physical inputs and generation1 stay exact.
+The guarded installer retains original transaction trees in target/history-capture-0734;independent
+manifests/materializations remain in protected proof/review directories. Draft906 was restored only
+after complete readback. Live navigation routes71 links in seven task files to window27 headings.
+Whole historical Tuck/Pleat0015 protocol907 remains a new exact record,keeping longer catalog links
+within the task collection bound. With both new drafts retained,active working files are8 and
+aggregate29. No limit,policy,source-proof or platform guarantee changes. This retains the existing
+process-interruption protocol;no new power-loss claim. Never rerun install/recovery after later edits.

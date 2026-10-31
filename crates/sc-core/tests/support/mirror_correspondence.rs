@@ -44,6 +44,14 @@ pub fn with_context_piece(
     let metadata = cut
         .bind_metadata(&fields, &field_limits)
         .expect("actual fields");
+    with_context_metadata(metadata, point_candidates, run);
+}
+
+pub fn with_context_metadata(
+    metadata: BoundMirrorPieceMetadata<'_>,
+    point_candidates: Vec<MirrorPiecePointCandidate>,
+    run: impl FnOnce(MirrorPieceContours<'_>, AdmittedMirrorPiecePoints<'_>),
+) {
     edges::with_edges_metadata(metadata, |identity| {
         complete_context(identity, point_candidates, run)
     });

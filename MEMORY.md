@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0733;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs.copies.plan in docs/tasks/G1-SLICE-mirror.md.
-  Native identity/point declarations complete;native manifest requests complete;actual source copies bound;result plan and companion association next.
-- Source physical-copy association admits whole C then actual source quantity/orientation/pairing;
-  all original ids/fields/order retained. New result cut quantity is independent;no new copy issued.
-  Native7/API3/output book7/lint/fmt/build/map/render pass;proof target/history-proof-0733-mirror-source-copies/.
+- Latest unit:STITCHCAD-G1-0734;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs.copies.plan.entries in docs/tasks/G1-SLICE-mirror.md.
+  Native identity/point declarations complete;native manifest requests complete;known copy identities indexed;result entries and companion next.
+- Copy identity index checks full C/R/P/2C+R+P+A+7 before scans. Actual record borrows and known
+  Piece/operation/Material exclusions retained;unlisted is not fresh. Source ids/orientations preserved.
+  Native7/API3/copy book2/output book6/lint/fmt/build/map/render pass;proof target/history-proof-0734-mirror-copy-identities/.
 - Correspondence whole E/P/R,parent/mode and six mandatory common obligations remain requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.
@@ -25,7 +25,7 @@
 - Scoped family result:15 slash contract suites51 pass;actual slash API/book docs53 pass. Source
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
-- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained;whole0732 now904;0731 now903;Dart0014 protocol905;closed0064 protocol894;older source spans/notes base exact.
+- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained;whole0733 now906;0732 nowwindow27;Dart0014 protocol905 packed;Tuck0015 protocol907;closed0064 protocol894;older source spans/notes base exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation
@@ -44,7 +44,7 @@
   .true.variants remain owned. Full scalar/storage/app/platform/integration verification deferred.
 - D372 P2 book search .5f.1.book-search after typed v1 completion;build rc0. First0691 payload
   10015553B/JS10030347B;preserve complete search,no latency claim or warning suppression.
-- Window26/0684:target/history-capture-0684 and target/history-proof-0684;never rerun installer.
+- Window26/0684:target/history-capture-0684+target/history-proof-0684;window27/0734:target/history-capture-0734+target/history-proof-0734-mirror-copy-identities;never rerun install/recover after later edits.
 - Original receipt:target/irrational_platform_certificate/acceptance-0665-21696/receipt.json;
   original source/platform scopes retained. G1 6/18/G0 closure unapproved.
 - Full PNT continues;no user pause. Consume every tool terminal result before edits/retries.

@@ -57,8 +57,9 @@ pub use correspondence::{
 };
 mod copies;
 pub use copies::{
-    BoundMirrorPieceSourceCopies, MirrorPieceSourceCopyError, MirrorPieceSourceCopyLimits,
-    MirrorPieceSourceCopyRefusal,
+    BoundMirrorPieceCopyIdentities, BoundMirrorPieceSourceCopies, MirrorPieceCopyIdentityError,
+    MirrorPieceCopyIdentityLimits, MirrorPieceCopyIdentityRefusal, MirrorPieceSourceCopyError,
+    MirrorPieceSourceCopyLimits, MirrorPieceSourceCopyRefusal,
 };
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
