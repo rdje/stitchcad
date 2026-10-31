@@ -797,29 +797,41 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0692 admission;[whole scope/proofs](../history/stitchcad-devnotes-part862.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.manifest.query`
   Status: `done`
-  Goal:admitted-only original-anchor candidate membership,gap/ambiguity and authentic fragment
-  views. No exact geometric output Param;mapping proof and stable-tag ledger bridge stay separate.
-  Scope:exact original edge/inclusive selected bounds;all containing candidates and Unique/
-  Ambiguous/Gap with original query/proof/field owners. No alias/default candidate or mapped Param.
-  Retire whole0692;focused native/compiler/book checks. Parent .outputs stays open.
-  - [x] ISSUE:candidate membership must retain gaps/ambiguity without inventing a mapped output position.
-  - [x] ROOT CAUSE (candidate query):actual admitted manifest/source/public ledger interfaces
-    inspected;native alias case preserves distinct original and current meanings,rc=0.
-  - [x] FIX:admitted-only exact original edge/inclusive domain query;all matching actual fields,
-    Unique/Ambiguous/Gap and original query/proof owners. No alias/default choice or mapped Param.
-  - [x] ADDRESSED (candidate query):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test offset_candidate_contract →6 pass,rc=0;endpoints/shared bounds/gaps,source-error
-    precedence,authentic field/index/tag/reverse views and actual current-alias refusal.
-  - [x] NO REGRESSION (candidate query):compiler guards6/actual book10/selected clippy/fmt/book/
-    rendered/diff/history862 three exact Git spans pass,rc=0. D372 warning remains owned/P2;
-    no full replay,ledger publication or actual geometric mapping proof.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing source-frame contracts).
-  Verification:native6/rustdoc16;Commit:STITCHCAD-G1-0693. Next .tags.
+  Goal:0693 membership;[whole scope/proofs](../history/stitchcad-devnotes-part863.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags`
-  Status: `pending`
+  Status: `active`
   Goal:native stable-tag/replay/retirement contract and published ledger bridge. Existing offset
   allocates fresh contiguous tags;do not treat ordinal slots as arbitrary persistent roles.
   Recover allocation identity and source-retention/partial-range semantics before choosing a ledger mutation.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.tags.declaration`
+  Status: `done`
+  Goal:native explicit-tag declaration of an already named canonical operation;preflight count,
+  unique tags and prior journal operation identity before state changes. No IdGenerator call or
+  source retirement;net/allowance meanings remain distinct. Caller issuance/global/bus authority
+  stays separate. Exact output-book split/compiler guard before growth;retire whole0693/closed
+  namespace checklist;focused checks.
+  - [x] ISSUE:canonical sparse output tags cannot be inferred from a contiguous slot count;
+    derived allowance outputs need declarations that preserve source meaning.
+  - [x] ROOT CAUSE (tagged declaration):actual net/allowance/profile/replay and public journal/
+    id APIs inspected;native source/registration preservation and old allocator checks pass,rc=0.
+  - [x] FIX:provided canonical operation/tag declarations;count/uniqueness/full-journal id checks
+    before mutation. No allocator call or source retirement;LocalTag docs/source authority aligned.
+  - [x] ADDRESSED (tagged declaration):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test tagged_declaration_contract →3 pass,rc=0;sparse tags,actual journal/source/
+    registrations,fresh replay,capacity/duplicate/order and retired/noncreating operation nonreuse.
+  - [x] NO REGRESSION (tagged declaration):old allocator3/actual input book8/output book3/selected
+    clippy/fmt/build/rendered/diff/archive863 four exact spans pass,rc=0. Exact7985B output suffix
+    retained;SUMMARY119. D372 warning remains P2;no global issuance/geometry/role continuity proof.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing identity/source contracts).
+  Verification:native6/book11;Commit:STITCHCAD-G1-0694. Next .tags.binding.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.tags.binding`
+  Status: `pending`
+  Goal:actual admitted roles to public journal declaration binding,with exact operation/tags and
+  authentic original fields. No destructive offset shortcut or geometric point-map certificate.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity`
+  Status: `pending`
+  Goal:native role/replay/retirement contract distinguishing canonical edits from instance evaluation;
+  explicit tags and fresh ledger declaration alone do not prove role continuity across revisions/sizes.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.mapping`
   Status: `pending`
   Goal:P1 native explicit correspondence-kind/evidence/error-budget contract before offset family

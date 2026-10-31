@@ -711,14 +711,22 @@ pub enum LedgerError {
         /// The offending length.
         length: Length,
     },
-    /// An operation was asked to create no edges at all — a declaration of zero, or an offset with no
-    /// intervals. An operation that creates nothing has no identity to mint and nothing to resolve
-    /// through.
+    /// An edge declaration or offset result was empty;these operations require at least one edge.
     NoEdges,
     /// More edges than one operation may create ([`MAX_EDGES_PER_OPERATION`]).
     TooManyEdges {
         /// The requested count.
         count: usize,
+    },
+    /// Explicit output roles repeat a tag within one creating operation.
+    DuplicateLocalTag {
+        /// Actual repeated role identity,not an inferred vector position.
+        tag: LocalTag,
+    },
+    /// Canonical replay/declaration attempted to reuse a recorded operation identity.
+    OperationAlreadyRecorded {
+        /// Actual operation identity,including one whose outputs have all been retired.
+        operation: EntityId,
     },
     /// An offset interval was empty or reversed (`from >= to`).
     IntervalEmpty {
@@ -768,6 +776,8 @@ impl fmt::Display for LedgerError {
             Self::TooManyEdges { count } => {
                 write!(f, "{count} edges exceed the {MAX_EDGES_PER_OPERATION} one operation may create")
             }
+            Self::DuplicateLocalTag { tag } => write!(f, "declared output tag {tag} occurs more than once"),
+            Self::OperationAlreadyRecorded { operation } => write!(f, "operation {operation} is already recorded in this ledger"),
             Self::IntervalEmpty { from, to } => {
                 write!(f, "an offset interval must be non-empty; [{from}, {to}] is not")
             }
@@ -883,6 +893,55 @@ impl IdentityLedger {
                 param: *param,
                 split_choice: *choice,
             })
+    }
+
+    /// Record explicit output tags for an already identified canonical operation,including replay.
+    /// This does not issue an operation identity or call an IdGenerator. The host supplies the
+    /// canonical identity and remains responsible for allocation authority/global namespace checks.
+    /// Every tag is retained in caller order. Existing edges and registrations remain unchanged;
+    /// this is a declaration,not a destructive offset or a geometric correspondence certificate.
+    ///
+    /// Checks complete count,tag uniqueness,then operation nonreuse across the whole journal.
+    /// A previously recorded noncreating edit or fully retired declaration still reserves its id.
+    /// Lookup/whole-command resources and cross-revision logical-role continuity remain separate.
+    /// # Errors
+    /// NoEdges,TooManyEdges,DuplicateLocalTag or OperationAlreadyRecorded before ledger mutation.
+    pub fn declare_tagged_edges(
+        &mut self,
+        operation: EntityId,
+        tags: &[LocalTag],
+    ) -> Result<Vec<EdgeRef>, LedgerError> {
+        if tags.is_empty() {
+            return Err(LedgerError::NoEdges);
+        }
+        if tags.len() > MAX_EDGES_PER_OPERATION {
+            return Err(LedgerError::TooManyEdges { count: tags.len() });
+        }
+        let mut seen = BTreeSet::new();
+        for tag in tags {
+            if !seen.insert(*tag) {
+                return Err(LedgerError::DuplicateLocalTag { tag: *tag });
+            }
+        }
+        if self
+            .journal
+            .iter()
+            .any(|entry| entry.operation() == operation)
+        {
+            return Err(LedgerError::OperationAlreadyRecorded { operation });
+        }
+        let edges = tags
+            .iter()
+            .map(|tag| EdgeRef::new(operation, *tag))
+            .collect::<Vec<_>>();
+        self.live.extend(edges.iter().copied());
+        self.push(
+            operation,
+            TopologyEdit::Declared {
+                edges: edges.clone(),
+            },
+        );
+        Ok(edges)
     }
 
     /// Records a drafting operation creating `count` edges (tags `0..count` of one operation id).

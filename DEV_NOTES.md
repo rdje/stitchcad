@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain admitted offset candidate membership and ambiguity
+## _(2026-10-31 UTC)_ — declare canonical explicit output tags without retiring sources
 
-0693 adds admitted-only original-anchor queries:exact edge precedes inclusive selected-source bounds. Query/errors own the exact anchor value and borrow actual admitted proof. All matching original candidates remain visible as Unique/Ambiguous/Gap;source order and explicit tags survive reversed iteration.
-Private candidate views borrow actual query/original fields and retain real Vec indices. Each classification/iterator scans the admitted population without query-path allocation;whole batch resources stay separate. Gap is in-domain coverage absence,not an out-of-range error or guessed geometric loss/position.
-Native6/compiler guards6/actual book10/selected clippy/fmt/book/rendered table3/diff/history862 three exact Git spans pass. Actual current ledger alias is refused while original candidate metadata remains inspectable. Source-frame membership produces no mapped Param,coordinate,repair or current-geometry certificate.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source-frame contracts). Whole0692 retained862. Candidate component closes focused only;stable-tag/replay/publication and geometric mapping/evidence stay owned. D372 P2 persists. Next .tags;PNT continues.
+0694 adds IdentityLedger::declare_tagged_edges for already identified canonical operations. Complete count/capacity,unique tags and full-journal operation nonreuse precede mutation;retired/noncreating operations still reserve ids. No IdGenerator call occurs;host issuance/global namespace/authority stay separate.
+Sparse tags/caller order remain actual Declared journal outputs;existing live sources,registrations and resolutions remain unchanged. This preserves net/derived allowance meaning instead of using destructive offset automatically. Fresh-ledger equality proves replayed metadata,not cross-revision logical-role continuity.
+Native declaration3/old allocator3/actual input book8/output book3/selected clippy/fmt/build/rendered/diff/history863 four exact Git spans pass. Exact7985B output suffix moved to drafting-output-contracts.md with its own compiler guard;SUMMARY119. Proof:target/history-proof-0694-output-book/proof.json.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing identity/source contracts). Whole0693/closed namespace checklist retained863. D372 P2 persists;actual declaration binding,continuity,G2 maps and bus publication remain owned. Next .tags.binding;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

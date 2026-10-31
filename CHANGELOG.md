@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0693 — retain admitted offset candidate membership and ambiguity
+## STITCHCAD-G1-0694 — declare canonical explicit output tags without retiring sources
 
-- Exact original frame/inclusive source queries retain every Unique/Ambiguous/Gap candidate.
-- Authentic field/index/tag views preserve original order;current aliases and wrong domains refuse.
-- Native6/rustdoc16/selected lint/fmt/book/rendered table/diff/history862 exact spans pass;D372 open.
-- Candidate component closes focused only;stable-tag/publication/geometric mapping remain owned.
+- Provided canonical operation ids and sparse tags register exact logical outputs without minting ids.
+- Count/capacity/duplicate/prior-operation checks preserve complete state on refusal and retain sources.
+- Native6/book11/selected lint/fmt/rendered/diff/history863 exact spans pass;output book split exact.
+- Global issuance,declaration binding,role continuity,geometry/publication remain owned;D372 P2 open.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

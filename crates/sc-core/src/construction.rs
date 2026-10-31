@@ -5,6 +5,9 @@
 #[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-edit-inputs.md")]
 mod editing_examples {}
+#[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-output-contracts.md")]
+mod output_examples {}
 mod arc;
 mod arguments;
 mod bezier;

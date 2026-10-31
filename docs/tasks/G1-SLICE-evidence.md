@@ -891,22 +891,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 ### `G1-SLICE.5b.1b.1` — reference namespace and static headers
 
-- [x] **REPRODUCE / ISSUE** — actual predecessor accepts four reserved/shadow/assertion defects;
-  table-loaded statement baselines print ACCEPT, exit=0. Original D116/D117/D118/D120 retained.
-- [x] **ROOT CAUSE (WHY + WHERE)** — statement's recipe-only collision, all-reserved tolerance
-  and equal-kind-only assertion guards miss normative roles. static_namespace_contract.py
-  --mutations →1139 cases/13 actual body assertion reds, rc=0, with execution/metadata traps.
-- [x] **FIX** — checked declaration pairs; actual syntax/static/runtime phases; preserve source
-  identity fixtures and runtime tuple shapes. Canonical fixture origins replace computed_fixture.
-- [x] **ADDRESSED (verified)** — static_namespace_contract.py --mutations →1139 cases/13 reds,
-  rc=0; runtime adapter refuses four original defects before numerical callbacks. Source unchanged
-  during controls; D119/D121/D122 separately owned, no full static/evaluation approval claimed.
-- [x] **NO REGRESSION** — full reference suite/static signatures4032/12reds green; language16/
-  publication9 pass, rc=0; cargo test statement/recipe/canonical-recipe →30passed/three groups.
-- [x] **LOCKSTEP** — book/annex/index/live/task/ledgers agree, G1 stays5/18, defects13open/108sealed;
-  .1b.2 next. Old record bytes preserved; product namespace/type/graph remain .5b.2–.4.
-  promotion: declined (existing flat namespace, single-assignment and independent-evidence principles).
-
+[Whole completed checklist](../history/stitchcad-devnotes-part863.md).
 
 ### D121 recording receipts — G1-SLICE.5e.3b
 

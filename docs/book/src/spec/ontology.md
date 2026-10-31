@@ -47,6 +47,12 @@ and preserves valid operation identities; command-level transactions remain a se
 The focused exhaustion target checks terminal boundaries, all six edits with two actual allocator
 errors, unchanged complete state and precondition-before-allocation ordering.
 
+Canonical explicit-tag declarations use `IdentityLedger::declare_tagged_edges` with an already
+identified operation. Count/duplicate-tag/prior-operation checks precede journal mutation;the
+method issues no operation id and preserves existing sources. The
+[native output contract](../annexes/drafting-output-contracts.md#native-explicit-tag-edge-declarations)
+separates registration from host issuance/global authority and cross-replay role continuity.
+
 Geometric sub-entities are addressed through **stable topological references**, not indices:
 
 - `EdgeRef` — an edge of a piece boundary, of a hole, or of an internal construction line, identified

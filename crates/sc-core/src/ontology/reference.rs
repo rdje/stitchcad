@@ -17,8 +17,9 @@ use super::rational::Rational;
 
 /// A local, persistent tag distinguishing the sub-entities one creating operation produced.
 ///
-/// It is *local* to the operation (the first edge an operation draws is tag `0`, the second `1`, and so on)
-/// and *persistent* (assigned once, never reused, never renumbered by a later edit). It is deliberately not
+/// It is *local* to the operation: sequential declarations start at `0`,while canonical output roles
+/// may retain explicit non-contiguous tags. It is *persistent*:assigned once to a logical role,never
+/// reused for another role or renumbered by a later edit. It is deliberately not
 /// a global index: a global index would shift when anything before it changes, which is exactly the
 /// instability §1 forbids.
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq, PartialOrd, Ord, Hash)]

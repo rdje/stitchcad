@@ -28,7 +28,7 @@ architecture spike still needs real evaluation on the paths it executes;G2's ent
 G1 closure remains unchanged. This stage split applies to schema acceptance only.
 
 Candidate source-domain membership and geometric point correspondence are separate contracts.
-The [offset recovery](drafting-edit-inputs.md#offset-output-contract-recovery) records the
+The [offset recovery](drafting-output-contracts.md#offset-output-contract-recovery) records the
 published ledger's tag/affine-map boundary and a regular curved-offset counterexample. A candidate
 manifest cannot silently promote interval endpoints into a geometric parameter-map certificate.
 
