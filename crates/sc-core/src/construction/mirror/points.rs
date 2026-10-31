@@ -6,6 +6,11 @@ use crate::{
 };
 use core::fmt;
 use std::collections::BTreeMap;
+mod query;
+pub use query::{
+    MirrorPiecePointMatch, MirrorPiecePointMatchKind, MirrorPiecePointQuery,
+    MirrorPiecePointQueryError, MirrorPiecePointQueryLimits, MirrorPiecePointQueryRefusal,
+};
 
 /// Original unadmitted point-role/source declaration;neither field supplies geometry evidence.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

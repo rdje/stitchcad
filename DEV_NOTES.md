@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit original mirror point candidates
+## _(2026-10-31 UTC)_ — query original mirror point candidates
 
-0727 admits full N/2N before owner/role/source checks and indexing;authentic candidate/role/source borrows retain stable logical operation/tag tuples.
-Repeated sources retain distinct roles;both candidate orders checked independently of active order. N0 is presence metadata,not no-op/coverage/retirement evidence.
-Native5+3/mirror API22/book10,selected clippy/fmt/build/map/render pass0;parent implementations unchanged,whole0726 spans898 exact0. No source geometry or issued identity proof.
-Promotion: declined (existing metadata/role boundary). Bounded provenance query next;actual source/frame/currentness/reflection/copy/semantic/full CI remain owed. G1still6/18/G0 unapproved.
+0728 admits whole N then full match count M;exact original PointRef identity yields Unique/Ambiguous/Gap without a selected prefix or new workspace.
+Actual owner/query/limits and all original candidate roles remain inspectable;ambiguous order differs from catalogue order. Gap does not retire or resolve an original.
+Native4+5/mirror API25/book11,selected clippy/fmt/build/map/render pass0;parent admission unchanged,whole0727 spans899 exact0. Native identity/point parents close.
+Promotion: declined (existing metadata/geometry boundary). Complete edge attribution next;actual source/frame/currentness/issuance/reflection/copy/semantic/full CI remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

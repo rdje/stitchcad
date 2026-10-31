@@ -34,16 +34,14 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Status: `done`
   Goal:0722 edge roles/book split;[whole scope/proofs](../history/stitchcad-devnotes-part893.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit new Piece identity and separately typed point-role policy;read actual Design/recipe
   namespaces first. Edge-role metadata grants no PointRef namespace,global freshness or issuance.
-  Next:.identity.piece local canonical result-id declaration under actual parents;point roles
-  separate. Split mirror task branch preserving original ids/goals/proofs;retire whole0722 before growth.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.piece`
   Status: `done`
   Goal:0723 canonical Piece id;[whole scope/proofs](../history/stitchcad-devnotes-part895.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points`
-  Status: `in_progress`
+  Status: `done`
   Goal:separately typed persistent PointRef roles and bounded source/output point attribution;
   edge-role metadata grants no point namespace. Actual containing frame/currentness remains .5f.2/G2.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.catalog`
@@ -56,27 +54,26 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Status: `done`
   Goal:0726 point-role binding;[whole scope/proofs](../history/stitchcad-devnotes-part898.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.outputs`
-  Status: `in_progress`
+  Status: `done`
   Goal:bounded original PointRef-to-new-role attribution/eligibility requests without guessed source
   membership,frame,currentness or geometric correspondence;complete manifest remains required.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.outputs.admission`
   Status: `done`
-  Goal:whole N/2N point/role/source attribution;logical tuples only.
-  - [x] ISSUE:point candidates need typed roles and original sources.
-  - [x] ROOT CAUSE (point candidates):actual point/identity/source APIs reviewed;whole bounds precede
-    owner,original role and local source-kind checks;parent implementations unchanged;rc=0.
-  - [x] FIX:private views preserve repeated sources and empty metadata.
-  - [x] ADDRESSED (point candidates):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test mirror_piece_point_manifest_contract --test mirror_piece_point_roles_contract:5+3 pass;rc=0.
-  - [x] NO REGRESSION (point candidates):mirror API22/book10,selected lint/fmt/build/map/render/
-    898 exact Git spans pass;rc=0. Both candidate orders,logical tags,known aliases and N0 covered.
-  - [x] LOCKSTEP:book/live/frontier align;promotion: declined (existing role/metadata/geometry boundary).
-    No source/frame/currentness,issued identity,coordinates or no-op/completeness proof;query next.
-  Proof:target/history-proof-0727-mirror-point-candidates/;Commit:STITCHCAD-G1-0727.
+  Goal:0727 point candidates;[whole scope/proofs](../history/stitchcad-devnotes-part899.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.outputs.query`
-  Status: `pending`
-  Goal:bounded original PointRef eligibility query with Unique/Ambiguous/Gap and authentic candidates;
-  no coordinate coincidence,source rewriting,currentness or geometric correspondence inference.
+  Status: `done`
+  Goal:bounded exact original PointRef eligibility;native identity/point parents complete.
+  - [x] ISSUE:point attribution needs complete source eligibility.
+  - [x] ROOT CAUSE (point query):actual candidate/role/source paths reviewed;whole N before scan,
+    full M before result;no index/vector or parent changes;rc=0.
+  - [x] FIX:authentic Unique/Ambiguous/Gap views never choose an ambiguous role.
+  - [x] ADDRESSED (point query):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test mirror_piece_point_query_contract --test mirror_piece_point_manifest_contract:4+5 pass;rc=0.
+  - [x] NO REGRESSION (point query):mirror API25/book11,selected lint/fmt/build/map/render/
+    899 exact Git spans pass;rc=0. Both quotas,tag identity,original order and N0 checked.
+  - [x] LOCKSTEP:book/live/frontier align;promotion: declined (existing metadata/geometry boundary).
+    Native parents close;actual source/frame/currentness/issuance/correspondence remain owned.
+  Proof:target/history-proof-0728-mirror-point-query/;Commit:STITCHCAD-G1-0728.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges`
   Status: `pending`
   Goal:bounded complete source-edge attribution,stable candidate roles and exact copied contour/

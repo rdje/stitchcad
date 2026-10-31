@@ -50,10 +50,11 @@ pub use mirror::{
     MirrorPieceIdentityRefusal, MirrorPieceMetadataError, MirrorPieceMetadataLimits,
     MirrorPieceMetadataPolicy, MirrorPieceMetadataRefusal, MirrorPiecePoint,
     MirrorPiecePointCandidate, MirrorPiecePointManifest, MirrorPiecePointManifestError,
-    MirrorPiecePointManifestLimits, MirrorPiecePointManifestRefusal,
-    MirrorPiecePointRoleBindingError, MirrorPiecePointRoleBindingRefusal,
-    MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal, MirrorPieceSourceError,
-    MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
+    MirrorPiecePointManifestLimits, MirrorPiecePointManifestRefusal, MirrorPiecePointMatch,
+    MirrorPiecePointMatchKind, MirrorPiecePointQuery, MirrorPiecePointQueryError,
+    MirrorPiecePointQueryLimits, MirrorPiecePointQueryRefusal, MirrorPiecePointRoleBindingError,
+    MirrorPiecePointRoleBindingRefusal, MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal,
+    MirrorPieceSourceError, MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
 };
 mod offset;
 pub use offset::{

@@ -34,7 +34,9 @@ mod points;
 pub use points::{
     AdmittedMirrorPiecePoints, MirrorPiecePoint, MirrorPiecePointCandidate,
     MirrorPiecePointManifest, MirrorPiecePointManifestError, MirrorPiecePointManifestLimits,
-    MirrorPiecePointManifestRefusal,
+    MirrorPiecePointManifestRefusal, MirrorPiecePointMatch, MirrorPiecePointMatchKind,
+    MirrorPiecePointQuery, MirrorPiecePointQueryError, MirrorPiecePointQueryLimits,
+    MirrorPiecePointQueryRefusal,
 };
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.

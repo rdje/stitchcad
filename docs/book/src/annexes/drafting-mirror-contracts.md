@@ -463,7 +463,7 @@ coordinates,registry insertion,global freshness or publication authority.
 Distinct output roles may explicitly name the same original PointRef. Both original candidates
 remain present;no role is coalesced or chosen by coordinates or ordering. This metadata does not
 prove physical duplication or unique geometric correspondence. Read-only provenance querying
-remains the next native step;actual source/frame/role continuity and whole correspondence remain
+below preserves that ambiguity;actual source/frame/role continuity and whole correspondence remain
 required under the existing manifest/copy/semantic/execution owners.
 
 An explicitly empty candidate proposal admits with N0/W0 under the actual operation. Existing
@@ -471,4 +471,47 @@ active/inactive role definitions remain unchanged;no missing point is manufactur
 empty candidate presence metadata. It does not establish an unchanged result,no-op,complete
 source/consumer coverage or executable reflected Piece. Actual source-point ownership/currentness,
 common frame,supported reflection domain and semantic/geometry effects remain separate proof.
+
+## Querying original point candidates
+
+`points.query_source(&query,limits)` compares the exact original PointRef creator and tag
+against every admitted candidate. It answers which proposed roles name that identity. It does
+not resolve the source,compare coordinates or map a point through a reflection.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPiecePointQuery::new(source)` | Exact original source identity request |
+| `MirrorPiecePointQueryLimits::new(N,M)` | Explicit whole candidate and complete match allowances |
+| `MirrorPiecePointMatch` | Actual owner,query,limits,count and authentic candidate views |
+| `MirrorPiecePointMatchKind` | Unique,Ambiguous or Gap in this admitted proposal |
+| `MirrorPiecePointQueryError`, `MirrorPiecePointQueryRefusal` | Original owner/query/policy and whole refusal |
+
+The full actual candidate count must fit N before any source scan,including candidates unrelated
+to the query. Admission then counts all matches and refuses if their complete population exceeds
+M. Neither quota returns a truncated prefix. This pass uses O(N) work and constant auxiliary
+space without a new index or array. `matches()` scans original candidate order,including reverse
+iteration;each repeated caller pass performs its own scan. The limits bound this query admission,
+not arbitrary subsequent caller work,earlier input allocation or complete mirror execution.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let query=MirrorPiecePointQuery::new(PointRef::new(EntityId::from_bits(90),LocalTag::new(7)));
+fn inspect<'a>(points:&'a AdmittedMirrorPiecePoints<'a>,query:&'a MirrorPiecePointQuery)
+    ->Result<MirrorPiecePointMatch<'a>,MirrorPiecePointQueryError<'a>> {
+    points.query_source(query,MirrorPiecePointQueryLimits::new(100,4))
+}
+assert_eq!(*query.source(),PointRef::new(EntityId::from_bits(90),LocalTag::new(7)));
+```
+
+With candidates `[role9 -> 90:7,role2 -> 90:7]`,query90:7 is Ambiguous with two matches in
+that exact order. `unique()` returns none;the API never chooses the first role. With candidates
+`[role9 -> 90:7,role2 -> 91:3]`,query90:7 is Unique and lends the actual role9 candidate.
+Query90:8 is Gap even though its creator matches90:7. Querying the declared output10:9 is also
+Gap unless an original source explicitly names that identity;this API is not output-tag lookup.
+
+Gap means no candidate in this proposal names the original identity. It does not mean the
+original is globally missing,retired or geometrically unmappable. An empty proposal admits a
+zero-work/zero-match Gap while canonical role history stays intact. Unique likewise establishes
+only one proposed attribution;source existence,Piece membership,current frame/registry,
+geometric correspondence,registration repair and actual identity issuance remain separate work.
 
