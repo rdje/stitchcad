@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain real typed point formula arguments
+## _(2026-10-31 UTC)_ — retain directed line reference dependencies
 
-0676 adds owned/normalized/checked point stages:two original documents,persistent FIRST output,complete N/2+2N admission and actual Length proofs before values. Typed failures keep real coordinate/span/source context;Unknown data stays unread. No frame,currentness,coordinates or geometry are certified.
-Point5/replay3/rustdoc6/selected clippy/fmt and warning-free cargo doc/book/diff pass. Cases retain original owners,untaken-branch errors and later static refusal before earlier divide-by-zero. Initial positive doc example boxed a borrowed error;fixed owner-scope handling. Semantic document errors compacted.
-D367 stale scalar/transaction availability corrected;D368 ambiguous reference link qualified. Rendered public availability/point API confirmed. Operation tasks moved byte-exact to execution sibling before leaf changes;history838 six whole Git spans retain0675,two closed runtime scopes and prior defect tail.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product/defect notes updated. promotion: declined (existing owner-normalize-check staging). Next .5f.1.c.line typed line/reference roles. Remaining schemas/frame/graph/geometry and full .5f.4 verification stay owned. No fresh broad/platform verdict. PNT continues.
+0677 adds private line declarations with ordered PointRef inputs and a persistent FIRST EdgeRef role. Definite same-operation suppliers refuse start before end,retaining actual operation/role/reference. Borrowed dependency views derive only from their exact original record and field.
+Line4/point5/rustdoc10/selected clippy/fmt/book/diff and history839 three exact Git spans pass. Duplicate uses remain distinct,unsorted ids infer no chronology,and reversed intent preserves the logical output while changing dependencies. Compiler guards cover point type,view privacy and lifetime.
+No coordinates,current/prior suppliers,frame,nonzero edge,identity issuance or geometric result is certified. Repeated endpoints remain declarative input;actual degeneracy belongs to geometry. Whole reference/frame/operation-graph validation remains .5f.2;trusted effects remain bus-owned.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (local typed reference schema). Whole0676 retained839. Next .5f.1.c.arc explicit center/radius/start/sweep variant;remaining schemas/geometry/full .5f.4 stay owned. No fresh broad/platform verdict. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

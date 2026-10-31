@@ -2,7 +2,7 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Typed point declarations and static Length argument proofs are available below;remaining schemas,ordered
+> geometry. Typed point/line declarations and point Length argument proofs are available below;remaining schemas,ordered
 > dependencies and actual geometry execution are pending. This page grants no geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -42,7 +42,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Family | Required inputs | Output/intent boundary | Native schema today |
 | --- | --- | --- | --- |
 | Construct point | x,y Length formulas in a named drafting frame | One persistent point output | Typed documents/Length proofs;geometry pending |
-| Draw line | Two prior PointRefs | Persistent edge and explicit endpoint provenance | Pending .1.c |
+| Draw line | Two prior PointRefs | Persistent edge and explicit endpoint provenance | Typed references/dependencies;geometry pending |
 | Draw arc | Explicit arc construction variant;Length/Angle arguments and prior points | Persistent curved edge and declared point outputs | Pending .1.c |
 | Draw Bézier | Explicit degree and ordered prior control PointRefs | Persistent curved edge;control order retained | Pending .1.c |
 | Offset edge | Current EdgeRef/range,canonical allowance and explicit side/corner policy | New edge lineage;no hidden width/default join | Pending .1.c |
@@ -210,3 +210,39 @@ These declarations/proofs do not allocate identities,bind geometry names,choose 
 execute selectors or publish through the command bus. Containing frame/current registry/order and
 operation-wide execution are .5f.2/.3 work. Remaining primitive/edit schemas finish .1 first.
 Full geometry,physical behavior,storage and complete operation replay remain owned milestones.
+
+## Native line declarations and dependency views
+
+`LineConstruction::new(operation,start,end)` retains the two original PointRefs in their declared
+direction. Its logical output is EdgeRef(operation,LocalTag::FIRST). Inputs are PointRefs by type;
+an EdgeRef is not coerced into an endpoint. Neither id magnitude nor ULID sort order determines
+whether an input operation is earlier in the actual program.
+
+```rust
+use sc_core::{construction::*,ontology::{EntityId,PointRef,LocalTag}};
+let start=PointRef::new(EntityId::from_bits(99),LocalTag::FIRST);
+let end=PointRef::new(EntityId::from_bits(80),LocalTag::new(7));
+let line=LineConstruction::new(EntityId::from_bits(10),start,end)?;
+let uses=line.dependencies().map(|use_|(use_.endpoint(),use_.point())).collect::<Vec<_>>();
+assert_eq!(uses,vec![(LineEndpoint::Start,start),(LineEndpoint::End,end)]);
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+The constructor rejects a definite local self-supply:an endpoint whose creator is this same line
+operation cannot be a prior supplier. It checks Start before End. `LineConstructionError` retains
+the original operation,first refused LineEndpoint and complete PointRef/local tag. It invents no
+formula name,source span or global cycle path. This check does not prove that another creator is
+earlier,current or even registered;those actual program checks remain .5f.2 work.
+
+`dependencies()` yields two LinePointDependency views in Start/End order. Each privately retains
+this exact line and its actual field role. `line()`,`endpoint()` and `point()` expose that same
+source relationship. A foreign line/point cannot be attached to a view,and a view cannot outlive
+its declaration. Equal repeated PointRefs remain two source occurrences with distinct roles;
+there is no sorting or deduplication. Reversing the declaration changes its source meaning while
+preserving the declared logical output role. Actual topology repair/publication still has to
+account for an edit's changed direction before any existing reference can be used.
+
+A declaration can retain the same point in both fields. It does not thereby certify a nonzero
+line or accept a degenerate geometric edge. No coordinate,distance,frame,registry state,identity
+issuance or geometric result is computed. The containing program and actual geometry executor
+must validate those properties before acceptance. Remaining curve/edit schemas are still pending.

@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0676 — retain real typed point formula arguments
+## STITCHCAD-G1-0677 — retain directed line reference dependencies
 
-- Own/normalize/check actual point coordinates with explicit complete retained-shape quotas,
-  Length proofs and persistent output role. No values,frame/currentness or geometry claim.
-- Point5/replay3/rustdoc6/lint/fmt/docs/book/history838/diff pass. D367/D368 fixed;operation tasks
-  routed to execution sibling. G1 6/18/G0 unapproved unchanged;next typed line/reference roles.
+- Typed line declaration preserves original ordered/repeated PointRefs and stable edge role.
+  Local self-supply refuses with actual context;dependency views borrow their exact source fields.
+- Line4/point5/rustdoc10/lint/fmt/book/history839/diff pass. Global graph/frame/geometry remain
+  owned;next explicit arc schema. G1 6/18/G0 unapproved unchanged;LIVE Product notes updated.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

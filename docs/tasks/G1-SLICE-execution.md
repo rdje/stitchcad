@@ -795,39 +795,36 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.5f.1.b`
   Status: `done`
-  Goal:typed point-from-formulas declaration with actual Length arguments and persistent output
-  identity contract;no coordinate evaluation or publication. Activate after complete inventory .a.
-  Scope:owned/normalized/checked point argument stages,complete retained-node admission and actual
-  Length proofs;move operation task section to execution sibling and retire sealed evidence for
-  blocking live bounds. D367 P2:lib.rs falsely says scalar recipe execution/transactions pending;
-  reproduce against existing native APIs/tests,fix public docs with new construction module.
-  D368 P2:Cargo doc warns ontology/mod.rs reference link is ambiguous with a primitive;qualify
-  the actual module link and verify warning-free docs. Both documentation defects owned here.
-  - [x] ISSUE:point arguments need owned documents/real Length proofs without geometry claims;
-    D367/D368 public availability/link defects are fixed in this same affected surface.
-  - [x] ROOT CAUSE (WHY + WHERE):public expression document/normalized/check APIs inspected;
-    Python HEAD29d977b2 before/after confirms stale execution/transaction text and ambiguous module
-    link,rc=0. No construction module existed;operation inventory .a precedes this schema.
-  - [x] FIX:private owned/normalized/checked point stages,persistent FIRST output,complete N/
-    2+2N admission and actual x/y proofs;retain original typed role/span/source causes. Correct
-    crate availability and qualify reference module. Semantic document errors boxed for size.
-  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
-    point_construction_contract →5 pass,rc=0;original pointers/Unknown input/later static failure/
-    untaken branch/whole quotas and privacy. No coordinate value or registry/frame proof produced.
-  - [x] NO REGRESSION:formula_scalar_recipe_replay_contract →3 pass,rc=0;selected clippy,
-    construction rustdoc6,warning-free cargo doc/rendered availability,book/fmt/diff/history838
-    six exact Git spans pass,rc=0. Initial borrowed-error example fixed within owner lifetime.
-  - [x] LOCKSTEP:operation section moved to this sibling,unique IDs preserved;book/live/notes
-    sync. promotion: declined (existing owner-normalize-check staging). D367/D368 fixed;G1/G0 unchanged.
-  Verification:focused native8/rustdoc6;Commit:STITCHCAD-G1-0676. Next .1.c.line;full .5f.4 deferred.
+  Goal:0676 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part839.md).
 - ID: `G1-SLICE.5f.1.c`
-  Status: `pending`
+  Status: `active`
   Goal:remaining typed line/arc/Bezier/offset/slash-spread/dart/notch/grainline/walk/true/mirror/join
   schemas from .a inventory;split implementation leaves before code. Parent .1 stays open until all.
 - ID: `G1-SLICE.5f.1.c.line`
-  Status: `pending`
+  Status: `done`
   Goal:typed line declaration retaining ordered prior PointRefs,persistent EdgeRef output and
   actual dependency roles;no coordinate calculation/currentness/publication. Curves/edits follow.
+  Scope:reject definite same-operation point suppliers,preserve endpoint order/repeated uses and
+  borrowed original-field dependency views. No global prior-order/frame/geometry proof;retire
+  whole0676 scope/journals for live bounds. Focused refusal/ordering/ownership/compiler checks.
+  - [x] ISSUE:ordered line reference declarations/dependencies have no native owned schema yet.
+  - [x] ROOT CAUSE (WHY + WHERE):Python HEADd93b5493 line-module census empty;actual PointRef/
+    EdgeRef/LocalTag contracts and .1.a inventory inspected,rc=0. References retain addresses only.
+  - [x] FIX:private directed line record,stable FIRST edge role,known local self-supply refusal
+    and borrowed original-field dependency views. Preserve ordering/repeats;grant no prior/current proof.
+  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
+    line_construction_contract →4 pass,rc=0;actual owner/order,first self-refusal,duplicates/reversal
+    and unsorted creator ids. No formula names/spans or valid edge are invented.
+  - [x] NO REGRESSION:point_construction_contract →5 pass,rc=0;selected clippy/construction
+    rustdoc10/fmt/book/rendered line boundary/diff/history839 three exact Git spans pass,rc=0.
+  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (local typed reference schema).
+    Whole graph/frame/currentness/degeneracy and full .5f.4 remain deferred. Parent .1.c stays active.
+  Verification:focused native9/rustdoc10;Commit:STITCHCAD-G1-0677. Next .1.c.arc.
+- ID: `G1-SLICE.5f.1.c.arc`
+  Status: `pending`
+  Goal:explicit center/radius/start/sweep arc schema with PointRef center and Length/Angle formula
+  roles;single logical EdgeRef output,no inferred endpoint entities or geometric execution.
+  Reuse argument staging where warranted;preserve original sources,limits and actual kind errors.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.
