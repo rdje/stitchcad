@@ -1,19 +1,19 @@
 //! Structural role-history preservation only;not command/history authority or geometric continuity.
-use super::{ActiveOffsetRole, AdmittedOffsetRoleCatalog, OffsetRoleDefinition};
+use super::{ActiveEdgeOutputRole, AdmittedEdgeOutputRoleCatalog, EdgeOutputRoleDefinition};
 use crate::ontology::LocalTag;
 use core::fmt;
 
 /// Explicit combined metadata work allowances across both original catalogues.
 /// ```compile_fail
-/// let limits:sc_core::construction::OffsetRoleTransitionLimits=Default::default();
+/// let limits:sc_core::construction::EdgeOutputRoleTransitionLimits=Default::default();
 /// ```
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub struct OffsetRoleTransitionLimits {
+pub struct EdgeOutputRoleTransitionLimits {
     definitions: usize,
     active: usize,
     key_bytes: usize,
 }
-impl OffsetRoleTransitionLimits {
+impl EdgeOutputRoleTransitionLimits {
     /// Bound combined definitions,active occurrences and key bytes before content comparisons.
     #[must_use]
     pub const fn new(definitions: usize, active: usize, key_bytes: usize) -> Self {
@@ -41,7 +41,7 @@ impl OffsetRoleTransitionLimits {
 }
 /// Complete resource admission or first original owner/definition preservation cause.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OffsetRoleTransitionRefusal {
+pub enum EdgeOutputRoleTransitionRefusal {
     /// Complete combined populations cannot be counted.
     CountOverflow,
     /// Complete combined definitions exceed policy.
@@ -83,84 +83,84 @@ pub enum OffsetRoleTransitionRefusal {
     },
 }
 /// Actual admitted before/after catalogues,policy and first preservation refusal.
-pub struct OffsetRoleTransitionError<'a> {
-    before: &'a AdmittedOffsetRoleCatalog<'a>,
-    after: &'a AdmittedOffsetRoleCatalog<'a>,
-    limits: OffsetRoleTransitionLimits,
-    refusal: OffsetRoleTransitionRefusal,
+pub struct EdgeOutputRoleTransitionError<'a> {
+    before: &'a AdmittedEdgeOutputRoleCatalog<'a>,
+    after: &'a AdmittedEdgeOutputRoleCatalog<'a>,
+    limits: EdgeOutputRoleTransitionLimits,
+    refusal: EdgeOutputRoleTransitionRefusal,
 }
-impl<'a> OffsetRoleTransitionError<'a> {
+impl<'a> EdgeOutputRoleTransitionError<'a> {
     /// Actual complete before catalogue.
     #[must_use]
-    pub const fn before(&self) -> &'a AdmittedOffsetRoleCatalog<'a> {
+    pub const fn before(&self) -> &'a AdmittedEdgeOutputRoleCatalog<'a> {
         self.before
     }
     /// Actual complete proposed after catalogue.
     #[must_use]
-    pub const fn after(&self) -> &'a AdmittedOffsetRoleCatalog<'a> {
+    pub const fn after(&self) -> &'a AdmittedEdgeOutputRoleCatalog<'a> {
         self.after
     }
     /// Original explicit combined resource policy.
     #[must_use]
-    pub const fn limits(&self) -> OffsetRoleTransitionLimits {
+    pub const fn limits(&self) -> EdgeOutputRoleTransitionLimits {
         self.limits
     }
     /// Complete quota or first original owner/definition cause.
     #[must_use]
-    pub const fn refusal(&self) -> OffsetRoleTransitionRefusal {
+    pub const fn refusal(&self) -> EdgeOutputRoleTransitionRefusal {
         self.refusal
     }
 }
-impl fmt::Debug for OffsetRoleTransitionError<'_> {
+impl fmt::Debug for EdgeOutputRoleTransitionError<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        f.debug_struct("OffsetRoleTransitionError")
+        f.debug_struct("EdgeOutputRoleTransitionError")
             .field("limits", &self.limits)
             .field("refusal", &self.refusal)
             .finish_non_exhaustive()
     }
 }
-impl fmt::Display for OffsetRoleTransitionError<'_> {
+impl fmt::Display for EdgeOutputRoleTransitionError<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "offset role transition: {:?}", self.refusal)
+        write!(f, "edge output role transition: {:?}", self.refusal)
     }
 }
-impl std::error::Error for OffsetRoleTransitionError<'_> {}
+impl std::error::Error for EdgeOutputRoleTransitionError<'_> {}
 
 /// Complete readonly structural transition intent;no catalogue,Design or history is mutated.
 /// ```compile_fail
-/// fn escape(before:sc_core::construction::AdmittedOffsetRoleCatalog<'_>,after:sc_core::construction::AdmittedOffsetRoleCatalog<'_>)
-///     ->sc_core::construction::AdmittedOffsetRoleTransition<'static> {
-///     before.admit_transition(&after,sc_core::construction::OffsetRoleTransitionLimits::new(0,0,0)).unwrap()
+/// fn escape(before:sc_core::construction::AdmittedEdgeOutputRoleCatalog<'_>,after:sc_core::construction::AdmittedEdgeOutputRoleCatalog<'_>)
+///     ->sc_core::construction::AdmittedEdgeOutputRoleTransition<'static> {
+///     before.admit_transition(&after,sc_core::construction::EdgeOutputRoleTransitionLimits::new(0,0,0)).unwrap()
 /// }
 /// ```
 /// ```compile_fail
-/// fn replace<'a>(mut transition:sc_core::construction::AdmittedOffsetRoleTransition<'a>,after:&'a sc_core::construction::AdmittedOffsetRoleCatalog<'a>) {
+/// fn replace<'a>(mut transition:sc_core::construction::AdmittedEdgeOutputRoleTransition<'a>,after:&'a sc_core::construction::AdmittedEdgeOutputRoleCatalog<'a>) {
 ///     transition.after=after;
 /// }
 /// ```
 #[derive(Clone, Copy, Debug)]
-pub struct AdmittedOffsetRoleTransition<'a> {
-    before: &'a AdmittedOffsetRoleCatalog<'a>,
-    after: &'a AdmittedOffsetRoleCatalog<'a>,
-    limits: OffsetRoleTransitionLimits,
+pub struct AdmittedEdgeOutputRoleTransition<'a> {
+    before: &'a AdmittedEdgeOutputRoleCatalog<'a>,
+    after: &'a AdmittedEdgeOutputRoleCatalog<'a>,
+    limits: EdgeOutputRoleTransitionLimits,
     definitions: usize,
     active: usize,
     key_bytes: usize,
 }
-impl<'a> AdmittedOffsetRoleTransition<'a> {
+impl<'a> AdmittedEdgeOutputRoleTransition<'a> {
     /// Actual complete before source,including inactive issued definitions.
     #[must_use]
-    pub const fn before(self) -> &'a AdmittedOffsetRoleCatalog<'a> {
+    pub const fn before(self) -> &'a AdmittedEdgeOutputRoleCatalog<'a> {
         self.before
     }
     /// Actual complete proposed after source.
     #[must_use]
-    pub const fn after(self) -> &'a AdmittedOffsetRoleCatalog<'a> {
+    pub const fn after(self) -> &'a AdmittedEdgeOutputRoleCatalog<'a> {
         self.after
     }
     /// Selected original work policy.
     #[must_use]
-    pub const fn limits(self) -> OffsetRoleTransitionLimits {
+    pub const fn limits(self) -> EdgeOutputRoleTransitionLimits {
         self.limits
     }
     /// Complete combined definition population,not an accepted prefix.
@@ -179,7 +179,9 @@ impl<'a> AdmittedOffsetRoleTransition<'a> {
         self.key_bytes
     }
     /// Actual newly introduced definition fields in original after order,with their real indices.
-    pub fn introduced(&self) -> impl DoubleEndedIterator<Item = (usize, &OffsetRoleDefinition)> {
+    pub fn introduced(
+        &self,
+    ) -> impl DoubleEndedIterator<Item = (usize, &EdgeOutputRoleDefinition)> {
         self.after
             .catalog()
             .definitions()
@@ -189,19 +191,19 @@ impl<'a> AdmittedOffsetRoleTransition<'a> {
     }
     /// Actual after membership views newly active here,in original after active-list order.
     /// This describes intent,not authority to reactivate a role or geometric matching evidence.
-    pub fn activated(&self) -> impl DoubleEndedIterator<Item = ActiveOffsetRole<'_>> {
+    pub fn activated(&self) -> impl DoubleEndedIterator<Item = ActiveEdgeOutputRole<'_>> {
         self.after
             .active_roles()
             .filter(move |role| !self.before.is_active(*role.tag()))
     }
     /// Actual before membership views becoming inactive,in original before active-list order.
-    pub fn deactivated(&self) -> impl DoubleEndedIterator<Item = ActiveOffsetRole<'_>> {
+    pub fn deactivated(&self) -> impl DoubleEndedIterator<Item = ActiveEdgeOutputRole<'_>> {
         self.before
             .active_roles()
             .filter(move |role| !self.after.is_active(*role.tag()))
     }
 }
-impl<'s> AdmittedOffsetRoleCatalog<'s> {
+impl<'s> AdmittedEdgeOutputRoleCatalog<'s> {
     /// Admit complete combined counts/text before owner and all original definition checks.
     /// Every prior tag/key must remain,even if inactive;membership may change explicitly without
     /// rewinding definitions. Neither source is mutated and no new work index is allocated.
@@ -211,20 +213,20 @@ impl<'s> AdmittedOffsetRoleCatalog<'s> {
     /// Count overflow,definition quota,active quota,key-byte quota,owner,then first forgotten/reassigned role.
     pub fn admit_transition<'a>(
         &'a self,
-        after: &'a AdmittedOffsetRoleCatalog<'a>,
-        limits: OffsetRoleTransitionLimits,
-    ) -> Result<AdmittedOffsetRoleTransition<'a>, OffsetRoleTransitionError<'a>>
+        after: &'a AdmittedEdgeOutputRoleCatalog<'a>,
+        limits: EdgeOutputRoleTransitionLimits,
+    ) -> Result<AdmittedEdgeOutputRoleTransition<'a>, EdgeOutputRoleTransitionError<'a>>
     where
         's: 'a,
     {
-        let before: &AdmittedOffsetRoleCatalog<'a> = self;
-        let refuse = |refusal| OffsetRoleTransitionError {
+        let before: &AdmittedEdgeOutputRoleCatalog<'a> = self;
+        let refuse = |refusal| EdgeOutputRoleTransitionError {
             before,
             after,
             limits,
             refusal,
         };
-        let overflow = || refuse(OffsetRoleTransitionRefusal::CountOverflow);
+        let overflow = || refuse(EdgeOutputRoleTransitionRefusal::CountOverflow);
         let definitions = before
             .catalog()
             .definitions()
@@ -242,41 +244,41 @@ impl<'s> AdmittedOffsetRoleCatalog<'s> {
             .checked_add(after.key_bytes())
             .ok_or_else(overflow)?;
         if definitions > limits.definitions {
-            return Err(refuse(OffsetRoleTransitionRefusal::Definitions {
+            return Err(refuse(EdgeOutputRoleTransitionRefusal::Definitions {
                 required: definitions,
                 allowed: limits.definitions,
             }));
         }
         if active > limits.active {
-            return Err(refuse(OffsetRoleTransitionRefusal::Active {
+            return Err(refuse(EdgeOutputRoleTransitionRefusal::Active {
                 required: active,
                 allowed: limits.active,
             }));
         }
         if key_bytes > limits.key_bytes {
-            return Err(refuse(OffsetRoleTransitionRefusal::KeyBytes {
+            return Err(refuse(EdgeOutputRoleTransitionRefusal::KeyBytes {
                 required: key_bytes,
                 allowed: limits.key_bytes,
             }));
         }
         if before.catalog().operation() != after.catalog().operation() {
-            return Err(refuse(OffsetRoleTransitionRefusal::Owner));
+            return Err(refuse(EdgeOutputRoleTransitionRefusal::Owner));
         }
         for (index, role) in before.catalog().definitions().iter().enumerate() {
             let Some(retained) = after.definition(role.tag()) else {
-                return Err(refuse(OffsetRoleTransitionRefusal::Forgotten {
+                return Err(refuse(EdgeOutputRoleTransitionRefusal::Forgotten {
                     index,
                     tag: role.tag(),
                 }));
             };
             if retained.key() != role.key() {
-                return Err(refuse(OffsetRoleTransitionRefusal::ReassignedKey {
+                return Err(refuse(EdgeOutputRoleTransitionRefusal::ReassignedKey {
                     index,
                     tag: role.tag(),
                 }));
             }
         }
-        Ok(AdmittedOffsetRoleTransition {
+        Ok(AdmittedEdgeOutputRoleTransition {
             before,
             after,
             limits,

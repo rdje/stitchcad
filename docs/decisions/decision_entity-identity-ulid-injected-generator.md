@@ -91,3 +91,18 @@ admission will check metadata and authentic owners only. G2/G3 must establish ac
 continuity and source-to-derived correspondence;equal keys,intervals or coordinates are not that
 evidence. Canonical operation/current-Design integration remains .5f.2,publication .6 and storage .7.
 The native leaves are .tags.continuity.catalog/.transition/.presence;none closes a geometry gate.
+
+## Shared edge-role metadata0703
+
+answers: "can slash/spread reuse offset role issuance and membership contracts?"
+
+EdgeOutputRoleCatalog and its definition/active/transition types provide one shared edge-role
+metadata implementation for offset and slash/spread declarations. Existing OffsetRole names
+remain aliases of those same Rust types;there is no second role history or conversion. Native
+slash association checks complete catalogue counts/key bytes before matching its actual operation.
+Generic diagnostic names replace offset-specific labels;typed variants and field data remain intact.
+
+This sharing introduces no PointRef role namespace,geometric classifier,current operation-kind
+certificate or global authority. Actual recipe/Design checks,issued-history completeness,G2/G3
+role matching and bus publication retain their existing owners. Empty/inactive catalogues remain
+metadata states rather than executable output manifests.

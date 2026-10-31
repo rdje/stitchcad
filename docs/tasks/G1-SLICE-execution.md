@@ -846,28 +846,35 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   fullness/topology and source maps belong .5f.4.geometry/G2/G3. No default connector/guessed region.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.policy`
   Status: `done`
-  Goal:owned actual slash input plus explicit straight-bridge/overlap-trim and added/removed/
-  unchanged fullness intent;no default,measured intake copy,transform or geometric-validity proof.
-  Scope:move original input intact into required output-intent declaration;retain actual input/
-  policy fields and embedded amount/dependencies. All explicit combinations stay raw requests;
-  actual G2/G3 validates supported region/topology/effect. Retire whole0701;focused native/book checks.
-  - [x] ISSUE:slash boundary/fullness choices must not be inferred from angle/distance.
-  - [x] ROOT CAUSE (slash policy):actual spatial/opening,book/ontology/feature contracts read;
-    both modes/all policy fields and original dependency/kind-proof owners pass,rc=0.
-  - [x] FIX:owned original input plus required StraightBridges/TrimOverlaps and Added/Removed/
-    Unchanged intent;no Default,implicit conversion,executed effect or new allocation in constructor.
-  - [x] ADDRESSED (slash policy):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test slash_spread_output_intent_contract →2 pass,rc=0;both modes/all choices,
-    authentic nested dependencies/amount proofs and distinct zero-input intentions retained.
-  - [x] NO REGRESSION (slash policy):nearest spatial4/compiler guards3/actual output book10/
-    selected clippy/fmt/book/rendered companion link/diff/history871 three exact Git spans pass,rc=0.
-    Actual endpoints/trim selection/region/manifest/intake/currentness/G2/G3/publication remain owned.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (API-specific;canonical book and G1/G2 policy).
-  Verification:native6/rustdoc13;Commit:STITCHCAD-G1-0702. Next .slash.outputs.manifest.
+  Goal:0702 intent;[whole scope/proofs](../history/stitchcad-devnotes-part872.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest`
-  Status: `pending`
+  Status: `active`
   Goal:native output-role/source/transform/trim selection and complete manifest admission;
   explicit lineage/retirement/metadata/effect obligations. No ambiguous-loop pick or synthetic geometry.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.roles`
+  Status: `done`
+  Goal:reuse canonical edge-output role catalogue/transition semantics for slash declarations,
+  preserving all existing offset public names as aliases. No duplicate role-history implementation.
+  Scope:shared edge types/legacy aliases;exact extraction proof and generic diagnostics documented.
+  Bind actual slash/catalogue under complete D/A/key-byte quotas before operation;no new allocation.
+  Retire whole0702;focused lifecycle/presence/new binding/compiler/book checks,no geometry certificate.
+  - [x] ISSUE:slash edge roles need shared issued-definition/membership semantics and actual owners.
+  - [x] ROOT CAUSE (shared edge roles):actual catalogue/transition and EdgeRef contract read;
+    two files exactly prescribed token/header/diagnostic replacements plus rustfmt,rc=0.
+  - [x] FIX:shared edge types with source-compatible Offset aliases;complete D/A/key-byte
+    admission before slash-operation association,private authentic owners,no new work allocation.
+  - [x] ADDRESSED (shared edge roles):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test slash_spread_edge_roles_contract →3 pass,rc=0;actual owners/order/legacy type
+    identity,four quota/owner refusal rows and empty/inactive metadata retained.
+  - [x] NO REGRESSION (shared edge roles):old catalogue3/transition3/presence3/compiler8/actual
+    book11/selected clippy/fmt/book/render/diff/history872 three exact spans pass,rc=0. Initial test
+    declaration typo fixed before compilation;extraction proof target/history-proof-0703-shared-edge-roles/.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: promoted (identity decision gains answers).
+  Verification:native12/rustdoc19;Commit:STITCHCAD-G1-0703. Next .manifest.declaration.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration`
+  Status: `pending`
+  Goal:raw output source/transform/trim selection and complete admission against shared edge roles;
+  explicit lineage/retirement/metadata/effect obligations. Actual G2/G3 results remain separately owned.
 - ID: `G1-SLICE.5f.1.c.mirror.inputs`
   Status: `done`
   Goal:0684 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part851.md).

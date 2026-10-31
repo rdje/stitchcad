@@ -39,8 +39,28 @@ pub use offset::{
     BoundOffsetConstruction, OffsetBindingError, OffsetConstruction, OffsetConstructionError,
     OffsetSide,
 };
+mod edge_output_roles;
 mod offset_manifest;
-mod offset_roles;
+pub use edge_output_roles::{
+    ActiveEdgeOutputRole, AdmittedEdgeOutputRoleCatalog, AdmittedEdgeOutputRoleTransition,
+    EdgeOutputRoleCatalog, EdgeOutputRoleCatalogError, EdgeOutputRoleCatalogLimits,
+    EdgeOutputRoleCatalogRefusal, EdgeOutputRoleDefinition, EdgeOutputRoleTransitionError,
+    EdgeOutputRoleTransitionLimits, EdgeOutputRoleTransitionRefusal,
+};
+/// Existing offset names remain aliases of the shared edge-output role metadata types.
+pub use edge_output_roles::{
+    ActiveEdgeOutputRole as ActiveOffsetRole,
+    AdmittedEdgeOutputRoleCatalog as AdmittedOffsetRoleCatalog,
+    AdmittedEdgeOutputRoleTransition as AdmittedOffsetRoleTransition,
+    EdgeOutputRoleCatalog as OffsetRoleCatalog,
+    EdgeOutputRoleCatalogError as OffsetRoleCatalogError,
+    EdgeOutputRoleCatalogLimits as OffsetRoleCatalogLimits,
+    EdgeOutputRoleCatalogRefusal as OffsetRoleCatalogRefusal,
+    EdgeOutputRoleDefinition as OffsetRoleDefinition,
+    EdgeOutputRoleTransitionError as OffsetRoleTransitionError,
+    EdgeOutputRoleTransitionLimits as OffsetRoleTransitionLimits,
+    EdgeOutputRoleTransitionRefusal as OffsetRoleTransitionRefusal,
+};
 pub use offset_manifest::{
     ActiveOffsetCandidate, ActiveOffsetCandidates, AdmittedOffsetCandidates,
     DeclaredOffsetCandidate, DeclaredOffsetCandidates, OffsetCandidateError,
@@ -52,12 +72,6 @@ pub use offset_manifest::{
     OffsetMappingRequirement, OffsetMappingRequirementError, OffsetMappingRequirementRefusal,
     OffsetRolePresenceError, OffsetRolePresenceLimits, OffsetRolePresenceRefusal,
     RequiredOffsetMapping,
-};
-pub use offset_roles::{
-    ActiveOffsetRole, AdmittedOffsetRoleCatalog, AdmittedOffsetRoleTransition, OffsetRoleCatalog,
-    OffsetRoleCatalogError, OffsetRoleCatalogLimits, OffsetRoleCatalogRefusal,
-    OffsetRoleDefinition, OffsetRoleTransitionError, OffsetRoleTransitionLimits,
-    OffsetRoleTransitionRefusal,
 };
 mod point;
 pub use point::{
@@ -74,9 +88,10 @@ pub use slash_opening::{
 };
 mod slash_spread;
 pub use slash_spread::{
-    SlashSpreadBoundaryPolicy, SlashSpreadConstruction, SlashSpreadConstructionError,
-    SlashSpreadDependency, SlashSpreadFullnessIntent, SlashSpreadOutputIntent, SlashSpreadSide,
-    SlashSpreadSource,
+    BoundSlashSpreadEdgeRoles, SlashSpreadBoundaryPolicy, SlashSpreadConstruction,
+    SlashSpreadConstructionError, SlashSpreadDependency, SlashSpreadFullnessIntent,
+    SlashSpreadOutputIntent, SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal,
+    SlashSpreadSide, SlashSpreadSource,
 };
 mod walk;
 pub use walk::{

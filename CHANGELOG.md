@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0702 — retain explicit slash boundary and fullness intent
+## STITCHCAD-G1-0703 — share edge-role lifecycle and bind actual slash intent
 
-- Own original slash input with required bridge/trim and added/removed/unchanged fullness choices.
-- Retain actual nested source/amount proofs;no default,measured intake copy or executed geometry.
-- Native6/rustdoc13/selected lint/fmt/book/rendered link/diff/history871 exact spans pass;D372 open.
-- Output manifest/trim selection/lineage and actual G2/G3 effects/publication remain owned.
+- Share edge-output catalogue/transitions;existing Offset names remain identical-type aliases.
+- Bind actual slash intent/catalogue with whole quotas before operation;generic diagnostics documented.
+- Native12/rustdoc19/selected lint/fmt/book/render/diff/history872 and exact extraction checks pass.
+- Actual source/transform/trim manifest,semantic effects,G2/currentness/history/publication stay owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

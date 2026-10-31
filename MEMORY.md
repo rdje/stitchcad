@@ -1,13 +1,18 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0702;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest — explicit roles/source/transform/trim selection,
-  complete admission and lineage/retirement/metadata/effect contracts. Activate/split before code.
-- SlashSpreadOutputIntent owns original spatial/amount input plus explicit StraightBridges/TrimOverlaps
-  and Added/Removed/Unchanged requests. No Default/implicit conversion/evaluation or measured intake copy.
-  Both modes/all choices preserve authentic nested dependencies and amount proof owners;zero remains
-  authored intent. Native6/compiler3/actual output book10/lint/fmt/book/rendered pass;whole0701 retained871.
-  No actual closure/region/trim selection/output manifest/effect/identity/publication proof yet.
+- Latest unit:STITCHCAD-G1-0703;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration — source/transform/trim selection,
+  complete admission and lineage/retirement/metadata/effect contract. Activate/split before code.
+  Book output part36163B;split whole slash section before growth if needed;SUMMARY119/cap120.
+- Shared EdgeOutputRole catalogue/transition metadata replaces offset-specific implementation;
+  old Offset names remain same-type aliases. Typed variants/fields unchanged;generic diagnostic labels.
+  Exact prescribed rename/header/label changes plus rustfmt verified on2 files;proof protected in
+  target/history-proof-0703-shared-edge-roles/. No algorithm/identity-rule change or geometry certificate.
+- Actual slash intent/catalogue association checks complete D/A/key-byte quotas before operation.
+  Actual owners and active fields retained;empty/inactive remains non-executable metadata.
+  Native12/compiler8/actual output book11/lint/fmt/book/rendered pass;whole0702 retained872.
+- SlashSpreadOutputIntent retains explicit bridge/trim/fullness requests and original inputs/amount.
+  Native manifest/source transforms/trim selection/lineage/effect/currentness/publication still owned.
 - Native offset-output checkpoint0691–0701 completed with focused component checks,not a combined gate.
   Empty candidate lists already refuse with typed Empty,retaining raw/bound/policy;no duplicate wrapper.
   Catalogue emptiness and role absence are separate metadata states,never geometric collapse evidence.

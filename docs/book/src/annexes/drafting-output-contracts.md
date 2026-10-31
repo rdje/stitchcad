@@ -237,8 +237,8 @@ primitive and runtime algorithms remain unchanged.
 
 ## Native declared-role catalogue admission
 
-`construction::OffsetRoleCatalog` owns an operation id,all supplied `OffsetRoleDefinition`s and a
-separate active-tag list. Each definition retains an explicit `LocalTag` and validated `MachineToken`
+The shared `construction::EdgeOutputRoleCatalog` (also exported as `OffsetRoleCatalog`) owns an
+operation id,all supplied `EdgeOutputRoleDefinition`s and a separate active-tag list. Each definition retains an explicit `LocalTag` and validated `MachineToken`
 local key. These are declared identity keys,not global recipe-variable bindings or geometric matching
 rules. The raw constructor owns both original lists without accepting them or issuing identities.
 
@@ -505,3 +505,50 @@ embedded opening document;they execute neither division nor a geometric transfor
 continue to borrow that actual nested construction and its original cut/pivot/axis fields. No
 output Piece,contour,reference retirement,canonical metadata reconciliation or command publication
 is performed. Actual G2/G3 sources/results and the later `.5f.4.geometry` integration remain owned.
+
+## Shared edge roles and slash operation binding
+
+Edge-role catalogue and issuance-preserving transition implementation is shared by offset and
+slash/spread declarations. The canonical names are `EdgeOutputRoleDefinition`,`EdgeOutputRoleCatalog`,
+`AdmittedEdgeOutputRoleCatalog`,`ActiveEdgeOutputRole` and the corresponding catalogue/transition
+policy,error and refusal types. These are edge-role metadata types;they introduce no PointRef role
+namespace or geometric classifier. The previous `OffsetRole*`,`AdmittedOffsetRole*` and
+`ActiveOffsetRole` names remain aliases of the same Rust types. Existing offset examples continue
+to compile,without conversion,copied metadata or a second role-history implementation.
+
+The implementation's algorithms and fields are preserved by the extraction. Debug type names and
+Display prefixes now say edge-output roles rather than offset roles;typed variants and their
+original field data are unchanged. Explicit count/key-byte admission,issued-definition preservation,
+active membership and readonly evaluated-candidate presence retain their existing meanings.
+
+`SlashSpreadOutputIntent::bind_edge_roles` requires the actual admitted shared catalogue and
+explicit `EdgeOutputRoleCatalogLimits` for this association stage. Complete definitions,active ids
+and original key bytes are checked in that order before operation identity. All definitions count,
+including inactive ones. The association allocates no workspace;the catalogue's earlier admission
+and owned storage retain their own policies. These entry/text allowances are not whole-execution
+or allocation-byte guarantees.
+
+```rust
+use sc_core::construction::*;
+fn bind_slash_roles<'a>(intent:&'a SlashSpreadOutputIntent,catalog:&'a AdmittedEdgeOutputRoleCatalog<'a>,
+    limits:EdgeOutputRoleCatalogLimits)->Result<BoundSlashSpreadEdgeRoles<'a>,SlashSpreadRoleBindingError<'a>> {
+    intent.bind_edge_roles(catalog,limits)
+}
+```
+
+Success and errors retain both actual complete owners and the selected policy. Operation mismatch
+refuses;it cannot borrow a foreign operation's role catalogue. `BoundSlashSpreadEdgeRoles` exposes
+its original `intent()`,`catalog()` and `limits()`. The catalogue's own active views still retain
+actual active-list tag and definition fields in their original orders. Those views prove catalogue
+membership;the complete binding supplies the checked slash-operation association.
+
+For definitions `[9:moving,2:stationary,7:latent]` and active ids `[2,9]`,the original active order
+remains2,9 while definitions remain9,2,7. Nothing renumbers tags or removes latent7. Empty initial
+or fully inactive catalogues can also bind as metadata;they supply no executable contour or complete
+output manifest. Changing membership still requires the existing issuance-preserving transition
+checks and actual authoring/history authority.
+
+A numeric operation match does not prove its actual ordered recipe kind,current Design membership,
+global namespace,issuance or geometric continuity. Native source/transform/trim-selection manifest
+admission remains the next component;actual G2/G3 contours,effects,mappings and bus publication
+retain their separate owners. No catalogue alias or binding creates a Piece or retires an edge.

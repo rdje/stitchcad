@@ -6,7 +6,11 @@ use crate::{
 };
 use core::fmt;
 mod output;
+mod roles;
 pub use output::{SlashSpreadBoundaryPolicy, SlashSpreadFullnessIntent, SlashSpreadOutputIntent};
+pub use roles::{
+    BoundSlashSpreadEdgeRoles, SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal,
+};
 
 /// Moving bank relative to the explicitly directed straight cut in the Piece's drafting frame.
 /// A geometry executor must prove a unique applicable region; no fabric-face or winding default.

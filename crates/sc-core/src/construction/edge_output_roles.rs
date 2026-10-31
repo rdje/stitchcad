@@ -1,4 +1,4 @@
-//! Declared local role identities and canonical membership;not geometric matching or issuance authority.
+//! Declared edge-output role identities and membership;not geometric matching or issuance authority.
 use crate::{
     name::MachineToken,
     ontology::{EntityId, LocalTag},
@@ -7,17 +7,17 @@ use core::fmt;
 use std::collections::BTreeMap;
 mod transition;
 pub use transition::{
-    AdmittedOffsetRoleTransition, OffsetRoleTransitionError, OffsetRoleTransitionLimits,
-    OffsetRoleTransitionRefusal,
+    AdmittedEdgeOutputRoleTransition, EdgeOutputRoleTransitionError,
+    EdgeOutputRoleTransitionLimits, EdgeOutputRoleTransitionRefusal,
 };
 
 /// One explicit local machine key/tag declaration,not a curve classifier or allocated identity.
 #[derive(Clone, Debug, PartialEq, Eq)]
-pub struct OffsetRoleDefinition {
+pub struct EdgeOutputRoleDefinition {
     tag: LocalTag,
     key: MachineToken,
 }
-impl OffsetRoleDefinition {
+impl EdgeOutputRoleDefinition {
     /// Retain the actual validated machine key and explicit local tag without normalization.
     #[must_use]
     pub const fn new(tag: LocalTag, key: MachineToken) -> Self {
@@ -36,15 +36,15 @@ impl OffsetRoleDefinition {
 }
 /// Explicit complete catalogue allowances,without default admission or prior-allocation guarantees.
 /// ```compile_fail
-/// let limits:sc_core::construction::OffsetRoleCatalogLimits=Default::default();
+/// let limits:sc_core::construction::EdgeOutputRoleCatalogLimits=Default::default();
 /// ```
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub struct OffsetRoleCatalogLimits {
+pub struct EdgeOutputRoleCatalogLimits {
     definitions: usize,
     active: usize,
     key_bytes: usize,
 }
-impl OffsetRoleCatalogLimits {
+impl EdgeOutputRoleCatalogLimits {
     /// Select complete definition,active-occurrence and total machine-key byte allowances.
     #[must_use]
     pub const fn new(definitions: usize, active: usize, key_bytes: usize) -> Self {
@@ -72,7 +72,7 @@ impl OffsetRoleCatalogLimits {
 }
 /// Complete count/text admission or first original declaration/membership cause.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OffsetRoleCatalogRefusal {
+pub enum EdgeOutputRoleCatalogRefusal {
     /// The two N-entry plus two A-entry workspace populations cannot be counted.
     WorkspaceOverflow,
     /// Complete definition population exceeds policy.
@@ -128,59 +128,63 @@ pub enum OffsetRoleCatalogRefusal {
     },
 }
 /// Every original input,selected policy and typed cause remain inspectable after refusal.
-pub struct OffsetRoleCatalogError<'a> {
-    catalog: &'a OffsetRoleCatalog,
-    limits: OffsetRoleCatalogLimits,
-    refusal: OffsetRoleCatalogRefusal,
+pub struct EdgeOutputRoleCatalogError<'a> {
+    catalog: &'a EdgeOutputRoleCatalog,
+    limits: EdgeOutputRoleCatalogLimits,
+    refusal: EdgeOutputRoleCatalogRefusal,
 }
-impl<'a> OffsetRoleCatalogError<'a> {
+impl<'a> EdgeOutputRoleCatalogError<'a> {
     /// Actual complete original catalogue,including all unaccepted fields.
     #[must_use]
-    pub const fn catalog(&self) -> &'a OffsetRoleCatalog {
+    pub const fn catalog(&self) -> &'a EdgeOutputRoleCatalog {
         self.catalog
     }
     /// Original explicit resource policy.
     #[must_use]
-    pub const fn limits(&self) -> OffsetRoleCatalogLimits {
+    pub const fn limits(&self) -> EdgeOutputRoleCatalogLimits {
         self.limits
     }
     /// Complete resource or first original metadata cause.
     #[must_use]
-    pub const fn refusal(&self) -> OffsetRoleCatalogRefusal {
+    pub const fn refusal(&self) -> EdgeOutputRoleCatalogRefusal {
         self.refusal
     }
 }
-impl fmt::Debug for OffsetRoleCatalogError<'_> {
+impl fmt::Debug for EdgeOutputRoleCatalogError<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        f.debug_struct("OffsetRoleCatalogError")
+        f.debug_struct("EdgeOutputRoleCatalogError")
             .field("operation", &self.catalog.operation)
             .field("limits", &self.limits)
             .field("refusal", &self.refusal)
             .finish_non_exhaustive()
     }
 }
-impl fmt::Display for OffsetRoleCatalogError<'_> {
+impl fmt::Display for EdgeOutputRoleCatalogError<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "offset role catalogue admission: {:?}", self.refusal)
+        write!(
+            f,
+            "edge output role catalogue admission: {:?}",
+            self.refusal
+        )
     }
 }
-impl std::error::Error for OffsetRoleCatalogError<'_> {}
+impl std::error::Error for EdgeOutputRoleCatalogError<'_> {}
 
 /// Owned unadmitted declared-role inventory and explicit canonical active membership.
 /// All issued definitions,including inactive ones,belong here;cross-edit completeness and actual
 /// issuance/history/current Design truth require their separate owners. Empty initial input is valid.
 #[derive(Clone, Debug, PartialEq, Eq)]
-pub struct OffsetRoleCatalog {
+pub struct EdgeOutputRoleCatalog {
     operation: EntityId,
-    definitions: Vec<OffsetRoleDefinition>,
+    definitions: Vec<EdgeOutputRoleDefinition>,
     active: Vec<LocalTag>,
 }
-impl OffsetRoleCatalog {
+impl EdgeOutputRoleCatalog {
     /// Retain all original fields in both authored orders without admitting or issuing them.
     #[must_use]
     pub const fn new(
         operation: EntityId,
-        definitions: Vec<OffsetRoleDefinition>,
+        definitions: Vec<EdgeOutputRoleDefinition>,
         active: Vec<LocalTag>,
     ) -> Self {
         Self {
@@ -196,7 +200,7 @@ impl OffsetRoleCatalog {
     }
     /// Complete original role definitions,including those not canonically active.
     #[must_use]
-    pub fn definitions(&self) -> &[OffsetRoleDefinition] {
+    pub fn definitions(&self) -> &[EdgeOutputRoleDefinition] {
         &self.definitions
     }
     /// Complete original canonical active-id list,not evaluated-instance presence.
@@ -213,9 +217,9 @@ impl OffsetRoleCatalog {
     /// Complete count/quota/text refusal,then first original duplicate/undefined metadata cause.
     pub fn admit(
         &self,
-        limits: OffsetRoleCatalogLimits,
-    ) -> Result<AdmittedOffsetRoleCatalog<'_>, OffsetRoleCatalogError<'_>> {
-        let refuse = |refusal| OffsetRoleCatalogError {
+        limits: EdgeOutputRoleCatalogLimits,
+    ) -> Result<AdmittedEdgeOutputRoleCatalog<'_>, EdgeOutputRoleCatalogError<'_>> {
+        let refuse = |refusal| EdgeOutputRoleCatalogError {
             catalog: self,
             limits,
             refusal,
@@ -225,15 +229,15 @@ impl OffsetRoleCatalog {
         let workspace_entries = n
             .checked_add(a)
             .and_then(|total| total.checked_mul(2))
-            .ok_or_else(|| refuse(OffsetRoleCatalogRefusal::WorkspaceOverflow))?;
+            .ok_or_else(|| refuse(EdgeOutputRoleCatalogRefusal::WorkspaceOverflow))?;
         if n > limits.definitions {
-            return Err(refuse(OffsetRoleCatalogRefusal::Definitions {
+            return Err(refuse(EdgeOutputRoleCatalogRefusal::Definitions {
                 required: n,
                 allowed: limits.definitions,
             }));
         }
         if a > limits.active {
-            return Err(refuse(OffsetRoleCatalogRefusal::Active {
+            return Err(refuse(EdgeOutputRoleCatalogRefusal::Active {
                 required: a,
                 allowed: limits.active,
             }));
@@ -242,9 +246,9 @@ impl OffsetRoleCatalog {
             .definitions
             .iter()
             .try_fold(0usize, |sum, role| sum.checked_add(role.key.as_str().len()))
-            .ok_or_else(|| refuse(OffsetRoleCatalogRefusal::KeyBytesOverflow))?;
+            .ok_or_else(|| refuse(EdgeOutputRoleCatalogRefusal::KeyBytesOverflow))?;
         if key_bytes > limits.key_bytes {
-            return Err(refuse(OffsetRoleCatalogRefusal::KeyBytes {
+            return Err(refuse(EdgeOutputRoleCatalogRefusal::KeyBytes {
                 required: key_bytes,
                 allowed: limits.key_bytes,
             }));
@@ -253,13 +257,13 @@ impl OffsetRoleCatalog {
         let mut by_key = BTreeMap::new();
         for (index, role) in self.definitions.iter().enumerate() {
             if let Some((first, _)) = by_tag.insert(role.tag, (index, role)) {
-                return Err(refuse(OffsetRoleCatalogRefusal::DuplicateTag {
+                return Err(refuse(EdgeOutputRoleCatalogRefusal::DuplicateTag {
                     first,
                     second: index,
                 }));
             }
             if let Some(first) = by_key.insert(role.key.as_str(), index) {
-                return Err(refuse(OffsetRoleCatalogRefusal::DuplicateKey {
+                return Err(refuse(EdgeOutputRoleCatalogRefusal::DuplicateKey {
                     first,
                     second: index,
                 }));
@@ -269,13 +273,13 @@ impl OffsetRoleCatalog {
         let mut active_roles = Vec::with_capacity(a);
         for (index, tag) in self.active.iter().enumerate() {
             if let Some(first) = active_by_tag.insert(*tag, index) {
-                return Err(refuse(OffsetRoleCatalogRefusal::DuplicateActive {
+                return Err(refuse(EdgeOutputRoleCatalogRefusal::DuplicateActive {
                     first,
                     second: index,
                 }));
             }
             let (_, definition) = by_tag.get(tag).copied().ok_or_else(|| {
-                refuse(OffsetRoleCatalogRefusal::UndefinedActive { index, tag: *tag })
+                refuse(EdgeOutputRoleCatalogRefusal::UndefinedActive { index, tag: *tag })
             })?;
             active_roles.push(ActiveAssociation {
                 index,
@@ -283,7 +287,7 @@ impl OffsetRoleCatalog {
                 definition,
             });
         }
-        Ok(AdmittedOffsetRoleCatalog {
+        Ok(AdmittedEdgeOutputRoleCatalog {
             catalog: self,
             limits,
             key_bytes,
@@ -298,34 +302,34 @@ impl OffsetRoleCatalog {
 struct ActiveAssociation<'a> {
     index: usize,
     tag: &'a LocalTag,
-    definition: &'a OffsetRoleDefinition,
+    definition: &'a EdgeOutputRoleDefinition,
 }
 
 /// Complete structural catalogue admission,not issuance history,global namespace or geometric truth.
 /// ```compile_fail
-/// fn escape(catalog:sc_core::construction::OffsetRoleCatalog)->sc_core::construction::AdmittedOffsetRoleCatalog<'static> {
-///     catalog.admit(sc_core::construction::OffsetRoleCatalogLimits::new(0,0,0)).unwrap()
+/// fn escape(catalog:sc_core::construction::EdgeOutputRoleCatalog)->sc_core::construction::AdmittedEdgeOutputRoleCatalog<'static> {
+///     catalog.admit(sc_core::construction::EdgeOutputRoleCatalogLimits::new(0,0,0)).unwrap()
 /// }
 /// ```
 #[derive(Debug)]
-pub struct AdmittedOffsetRoleCatalog<'a> {
-    catalog: &'a OffsetRoleCatalog,
-    limits: OffsetRoleCatalogLimits,
+pub struct AdmittedEdgeOutputRoleCatalog<'a> {
+    catalog: &'a EdgeOutputRoleCatalog,
+    limits: EdgeOutputRoleCatalogLimits,
     key_bytes: usize,
     workspace_entries: usize,
-    by_tag: BTreeMap<LocalTag, (usize, &'a OffsetRoleDefinition)>,
+    by_tag: BTreeMap<LocalTag, (usize, &'a EdgeOutputRoleDefinition)>,
     active_by_tag: BTreeMap<LocalTag, usize>,
     active_roles: Vec<ActiveAssociation<'a>>,
 }
-impl<'a> AdmittedOffsetRoleCatalog<'a> {
+impl<'a> AdmittedEdgeOutputRoleCatalog<'a> {
     /// Actual complete original catalogue and both original field orders.
     #[must_use]
-    pub const fn catalog(&self) -> &'a OffsetRoleCatalog {
+    pub const fn catalog(&self) -> &'a EdgeOutputRoleCatalog {
         self.catalog
     }
     /// Selected original admission policy.
     #[must_use]
-    pub const fn limits(&self) -> OffsetRoleCatalogLimits {
+    pub const fn limits(&self) -> EdgeOutputRoleCatalogLimits {
         self.limits
     }
     /// Complete actual machine-key bytes,not an approved memory footprint.
@@ -340,7 +344,7 @@ impl<'a> AdmittedOffsetRoleCatalog<'a> {
     }
     /// Actual original definition for an explicit tag,including inactive definitions.
     #[must_use]
-    pub fn definition(&self, tag: LocalTag) -> Option<&'a OffsetRoleDefinition> {
+    pub fn definition(&self, tag: LocalTag) -> Option<&'a EdgeOutputRoleDefinition> {
         self.by_tag.get(&tag).map(|(_, definition)| *definition)
     }
     /// Canonical active membership only,not presence or liveness in an evaluated geometry instance.
@@ -350,11 +354,11 @@ impl<'a> AdmittedOffsetRoleCatalog<'a> {
     }
     /// Authentic original active membership and definition for this explicit tag,if active.
     #[must_use]
-    pub fn active_role(&self, tag: LocalTag) -> Option<ActiveOffsetRole<'_>> {
+    pub fn active_role(&self, tag: LocalTag) -> Option<ActiveEdgeOutputRole<'_>> {
         self.active_by_tag
             .get(&tag)
             .and_then(|index| self.active_roles.get(*index))
-            .map(|association| ActiveOffsetRole {
+            .map(|association| ActiveEdgeOutputRole {
                 catalog: self,
                 association,
             })
@@ -362,10 +366,10 @@ impl<'a> AdmittedOffsetRoleCatalog<'a> {
     /// Every actual active membership/definition pair,in original active-list order.
     pub fn active_roles(
         &self,
-    ) -> impl ExactSizeIterator<Item = ActiveOffsetRole<'_>> + DoubleEndedIterator {
+    ) -> impl ExactSizeIterator<Item = ActiveEdgeOutputRole<'_>> + DoubleEndedIterator {
         self.active_roles
             .iter()
-            .map(move |association| ActiveOffsetRole {
+            .map(move |association| ActiveEdgeOutputRole {
                 catalog: self,
                 association,
             })
@@ -373,19 +377,19 @@ impl<'a> AdmittedOffsetRoleCatalog<'a> {
 }
 /// Authentic original membership tag and its actual definition,without cloned metadata.
 /// ```compile_fail
-/// fn reparent<'a>(mut role:sc_core::construction::ActiveOffsetRole<'a>,catalog:&'a sc_core::construction::AdmittedOffsetRoleCatalog<'a>) {
+/// fn reparent<'a>(mut role:sc_core::construction::ActiveEdgeOutputRole<'a>,catalog:&'a sc_core::construction::AdmittedEdgeOutputRoleCatalog<'a>) {
 ///     role.catalog=catalog;
 /// }
 /// ```
 #[derive(Clone, Copy, Debug)]
-pub struct ActiveOffsetRole<'a> {
-    catalog: &'a AdmittedOffsetRoleCatalog<'a>,
+pub struct ActiveEdgeOutputRole<'a> {
+    catalog: &'a AdmittedEdgeOutputRoleCatalog<'a>,
     association: &'a ActiveAssociation<'a>,
 }
-impl<'a> ActiveOffsetRole<'a> {
+impl<'a> ActiveEdgeOutputRole<'a> {
     /// Actual complete admitted catalogue supplying this view.
     #[must_use]
-    pub const fn catalog(self) -> &'a AdmittedOffsetRoleCatalog<'a> {
+    pub const fn catalog(self) -> &'a AdmittedEdgeOutputRoleCatalog<'a> {
         self.catalog
     }
     /// Actual zero-based original active-list index,not a recipe ordinal or persistent identity.
@@ -400,7 +404,7 @@ impl<'a> ActiveOffsetRole<'a> {
     }
     /// Actual original definition field for that tag.
     #[must_use]
-    pub const fn definition(self) -> &'a OffsetRoleDefinition {
+    pub const fn definition(self) -> &'a EdgeOutputRoleDefinition {
         self.association.definition
     }
 }

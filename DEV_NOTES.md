@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain explicit slash boundary and fullness intent
+## _(2026-10-31 UTC)_ — share edge-role lifecycle and bind actual slash intent
 
-0702 adds SlashSpreadOutputIntent owning the original spatial input and explicit StraightBridges/TrimOverlaps plus Added/Removed/Unchanged requests. No policy comes from amount text,sign,zero or Angle turns. Constructor moves fields without allocation/evaluation;no Default or implicit conversion supplies a choice.
-Actual nested construction,cut/pivot/axis and embedded opening remain available through original borrowed fields. Both modes/all explicit choices remain raw intent,not geometric support. Removed is not a Dart closure or copied intake;Unchanged supplies no measured effect. Trim naming selects no loop or retained range.
-Intent2/spatial4/compiler guards3/actual output book10/selected clippy/fmt/book/rendered companion link/diff/history871 three exact Git spans pass. Nested dependency and kind proofs retain actual owners;zero-input policies stay distinct. Actual roles/trim endpoints/region/effect/currentness/publication remain owned.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (API-specific;canonical book and G1/G2 boundary). Whole0701 retained871. Slash manifest/lineage/retirement/metadata/effect contracts follow;actual G2/G3 geometry/intake and bus integration remain separate;D372 P2 persists.
+0703 extracts shared EdgeOutputRole catalogue/transition metadata with same-type Offset aliases. Two source files exactly match prescribed token/header/diagnostic changes plus rustfmt;algorithms/fields unchanged. Generic diagnostic labels are documented. No PointRef role namespace is introduced.
+Slash intent binds the actual admitted catalogue under complete D/A/key-byte quotas before operation identity. Actual complete owners and active fields remain authentic;no work allocation or accepted prefix. Empty/inactive catalogue is metadata,not executable output. Actual kind/currentness stays separately owned.
+New binding3/old catalogue3/transition3/presence3/compiler8/actual book11/selected clippy/fmt/book/render/diff/history872 exact spans pass. Initial test declaration typo fixed before compilation. Exact extraction proof retained target/history-proof-0703-shared-edge-roles/;no geometry/effect/issuance certificate.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (identity decision gains answers). Whole0702 retained872. Native slash source/transform/trim manifest and semantic reconciliation follow;actual G2/G3/history/bus remain owned. D372 persists;full PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
