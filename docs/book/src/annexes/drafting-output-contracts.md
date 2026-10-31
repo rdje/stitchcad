@@ -167,6 +167,40 @@ consume unselected parts of a source. The new declaration path changes no existi
 registration or reference resolution. Export inclusion remains the actual profile's explicit
 policy;this primitive selects neither an export layer nor an allowance geometry.
 
-Candidate-to-actual-declaration binding and cross-replay role/retirement policy remain pending
-native contracts. Fresh declarations alone do not establish those facts. Actual derived geometry,
+Candidate-to-actual-declaration binding is available below;cross-replay role/retirement policy
+remains pending. Fresh declarations alone do not establish those facts. Actual derived geometry,
 source-to-output parameter correspondence and atomic bus publication stay separately owned.
+
+## Native candidate-to-declaration binding
+
+An admitted manifest's `bind_declaration` reads an actual provided `IdentityLedger`;it never
+allocates a journal operation or edits source geometry. `OffsetDeclarationLimits` explicitly
+bounds complete N candidate roles and J supplied journal entries. Checked2N counts the N-entry
+temporary tag index plus N retained associations before lookup/allocation. These are entry
+populations,not a complete allocation-byte,earlier-storage or whole-execution budget.
+
+```rust
+use sc_core::{construction::*,ontology::IdentityLedger};
+fn bind_recorded_roles<'a>(admitted:&'a AdmittedOffsetCandidates<'a>,ledger:&'a IdentityLedger,
+    limits:OffsetDeclarationLimits)->Result<DeclaredOffsetCandidates<'a>,OffsetDeclarationError<'a>> {
+    admitted.bind_declaration(ledger,limits)
+}
+```
+
+Quota refusal precedes operation lookup. Binding then requires one uniquely named operation
+record,`TopologyEdit::Declared`,the same complete output count and every original explicit tag.
+Missing and ambiguous records,wrong kind/count and the first absent tag retain actual admitted
+owner,ledger,policy and cause. Journal indices identify actual records,not recipe statement
+ordinals. No first-match choice or accepted association prefix escapes. In particular,a
+destructive `Offset` entry cannot masquerade as the required declaration.
+
+`DeclaredOffsetCandidates` retains the actual record. Its private output views borrow that
+complete association,original candidate fields and actual `EdgeRef` fields in the journal's
+Declared Vec. Matching uses explicit tags;the journal can list tag4294967295,2,9 while candidate
+views remain in original source order9,2,4294967295. Neither sequence is rewritten. The view's
+index remains its original candidate occurrence index,not the persistent edge identity.
+
+This is historical declaration association. An output can have been retired by a later journal
+edit while its original declaration remains authentic. Callers still need current liveness/
+reference resolution,current Design membership,role continuity,actual G2 geometry/mapping and
+command authority before use or publication. The binding supplies none of those certificates.

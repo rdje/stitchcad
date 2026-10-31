@@ -3,7 +3,12 @@ use super::BoundOffsetConstruction;
 use crate::ontology::{DirectedRange, EdgeRef, EntityId, LocalTag, OffsetInterval};
 use core::fmt;
 use std::collections::BTreeMap;
+mod declaration;
 mod query;
+pub use declaration::{
+    DeclaredOffsetCandidate, DeclaredOffsetCandidates, OffsetDeclarationError,
+    OffsetDeclarationLimits, OffsetDeclarationRefusal,
+};
 pub use query::{
     OffsetCandidateMatch, OffsetCandidateMatchKind, OffsetCandidateQuery,
     OffsetCandidateQueryError, OffsetCandidateQueryRefusal,

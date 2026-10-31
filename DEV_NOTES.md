@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — declare canonical explicit output tags without retiring sources
+## _(2026-10-31 UTC)_ — bind admitted candidates to actual canonical declaration fields
 
-0694 adds IdentityLedger::declare_tagged_edges for already identified canonical operations. Complete count/capacity,unique tags and full-journal operation nonreuse precede mutation;retired/noncreating operations still reserve ids. No IdGenerator call occurs;host issuance/global namespace/authority stay separate.
-Sparse tags/caller order remain actual Declared journal outputs;existing live sources,registrations and resolutions remain unchanged. This preserves net/derived allowance meaning instead of using destructive offset automatically. Fresh-ledger equality proves replayed metadata,not cross-revision logical-role continuity.
-Native declaration3/old allocator3/actual input book8/output book3/selected clippy/fmt/build/rendered/diff/history863 four exact Git spans pass. Exact7985B output suffix moved to drafting-output-contracts.md with its own compiler guard;SUMMARY119. Proof:target/history-proof-0694-output-book/proof.json.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing identity/source contracts). Whole0693/closed namespace checklist retained863. D372 P2 persists;actual declaration binding,continuity,G2 maps and bus publication remain owned. Next .tags.binding;PNT continues.
+0695 adds explicit complete N/2N/J binding admission before lookup/index allocation. One actual operation record must be Declared,have the same count and contain every explicit tag. Missing/ambiguous/kind/count/tag causes retain actual admitted owner,ledger,policy and source positions;no prefix escapes.
+Private views borrow actual entry/candidate/EdgeRef fields. Tag association preserves candidate source order even when the actual journal has another order;neither list is rewritten. Historical declarations remain inspectable after retirement,so association certifies no liveness,current Design or geometric map.
+Binding3/candidate6/compiler guards3/actual output book4/selected clippy/fmt/final build/rendered/diff/history864 three exact spans pass. Both role/journal quotas fail in the precedence fixture;an uncertified duplicate-id journal refuses both records. Retired-role resolution remains actually unresolved.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing actual-owner contracts). Whole0694 retained864. D372 P2 persists. Native continuity still needs canonical-edit/instance semantics;actual G2 maps/observers/bus publication stay owned. Next continuity recovery;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

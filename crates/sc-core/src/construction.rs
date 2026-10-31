@@ -41,9 +41,11 @@ pub use offset::{
 };
 mod offset_manifest;
 pub use offset_manifest::{
-    AdmittedOffsetCandidates, OffsetCandidateError, OffsetCandidateFragment, OffsetCandidateLimits,
-    OffsetCandidateManifest, OffsetCandidateMatch, OffsetCandidateMatchKind, OffsetCandidateQuery,
+    AdmittedOffsetCandidates, DeclaredOffsetCandidate, DeclaredOffsetCandidates,
+    OffsetCandidateError, OffsetCandidateFragment, OffsetCandidateLimits, OffsetCandidateManifest,
+    OffsetCandidateMatch, OffsetCandidateMatchKind, OffsetCandidateQuery,
     OffsetCandidateQueryError, OffsetCandidateQueryRefusal, OffsetCandidateRefusal,
+    OffsetDeclarationError, OffsetDeclarationLimits, OffsetDeclarationRefusal,
 };
 mod point;
 pub use point::{

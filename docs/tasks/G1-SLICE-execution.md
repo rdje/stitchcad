@@ -805,29 +805,29 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Recover allocation identity and source-retention/partial-range semantics before choosing a ledger mutation.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.declaration`
   Status: `done`
-  Goal:native explicit-tag declaration of an already named canonical operation;preflight count,
-  unique tags and prior journal operation identity before state changes. No IdGenerator call or
-  source retirement;net/allowance meanings remain distinct. Caller issuance/global/bus authority
-  stays separate. Exact output-book split/compiler guard before growth;retire whole0693/closed
-  namespace checklist;focused checks.
-  - [x] ISSUE:canonical sparse output tags cannot be inferred from a contiguous slot count;
-    derived allowance outputs need declarations that preserve source meaning.
-  - [x] ROOT CAUSE (tagged declaration):actual net/allowance/profile/replay and public journal/
-    id APIs inspected;native source/registration preservation and old allocator checks pass,rc=0.
-  - [x] FIX:provided canonical operation/tag declarations;count/uniqueness/full-journal id checks
-    before mutation. No allocator call or source retirement;LocalTag docs/source authority aligned.
-  - [x] ADDRESSED (tagged declaration):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test tagged_declaration_contract →3 pass,rc=0;sparse tags,actual journal/source/
-    registrations,fresh replay,capacity/duplicate/order and retired/noncreating operation nonreuse.
-  - [x] NO REGRESSION (tagged declaration):old allocator3/actual input book8/output book3/selected
-    clippy/fmt/build/rendered/diff/archive863 four exact spans pass,rc=0. Exact7985B output suffix
-    retained;SUMMARY119. D372 warning remains P2;no global issuance/geometry/role continuity proof.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing identity/source contracts).
-  Verification:native6/book11;Commit:STITCHCAD-G1-0694. Next .tags.binding.
+  Goal:0694 declaration;[whole scope/proofs](../history/stitchcad-devnotes-part864.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.binding`
-  Status: `pending`
+  Status: `done`
   Goal:actual admitted roles to public journal declaration binding,with exact operation/tags and
   authentic original fields. No destructive offset shortcut or geometric point-map certificate.
+  Scope:explicit complete journal/role/workspace admission,unique actual operation record,
+  Declared kind/count/tag association;actual entry/edge/source-field views and typed errors.
+  Historical declaration association grants no current liveness/Design/geometry proof. No
+  source edit or accepted prefix;retire whole0694;focused native/compiler/book checks.
+  - [x] ISSUE:logical candidates need actual declaration association without treating intervals,
+    reconstructed refs or a destructive topology record as accepted geometry/currentness.
+  - [x] ROOT CAUSE (declaration binding):actual admitted/public journal/declaration interfaces
+    inspected;native cases use real records/retirement and deliberately uncertified id-stream ambiguity,rc=0.
+  - [x] FIX:explicit N/2N/J admission,unique operation/Declared/count/tag checks and complete
+    private actual field pairs. Original declaration/source order remain independently preserved.
+  - [x] ADDRESSED (declaration binding):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test offset_declaration_binding_contract →3 pass,rc=0;actual owner/field pointers,
+    quotas before lookup,seven typed refusal rows,permuted declaration order and retired-role scope.
+  - [x] NO REGRESSION (declaration binding):candidate6/compiler guards3/actual output book4/
+    selected clippy/fmt/final book/rendered/diff/archive864 three exact Git spans pass,rc=0.
+    D372 remains P2;no liveness/Design/role-continuity/geometric map or publication certificate.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing actual-owner contracts).
+  Verification:native9/rustdoc7;Commit:STITCHCAD-G1-0695. Next .tags.continuity recovery.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity`
   Status: `pending`
   Goal:native role/replay/retirement contract distinguishing canonical edits from instance evaluation;

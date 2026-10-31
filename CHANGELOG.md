@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0694 — declare canonical explicit output tags without retiring sources
+## STITCHCAD-G1-0695 — bind admitted candidates to actual canonical declaration fields
 
-- Provided canonical operation ids and sparse tags register exact logical outputs without minting ids.
-- Count/capacity/duplicate/prior-operation checks preserve complete state on refusal and retain sources.
-- Native6/book11/selected lint/fmt/rendered/diff/history863 exact spans pass;output book split exact.
-- Global issuance,declaration binding,role continuity,geometry/publication remain owned;D372 P2 open.
+- Complete role/workspace/journal admission precedes actual unique record/kind/count/tag association.
+- Private views preserve actual entry/candidate/edge fields and both original ordering contexts.
+- Native9/rustdoc7/selected lint/fmt/final book/rendered/diff/history864 exact spans pass;D372 open.
+- Historical association grants no currentness,role continuity,geometric map or publication proof.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
