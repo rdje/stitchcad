@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain all declared slash source-reference alternatives
+## _(2026-10-31 UTC)_ — distinguish global topology from owner and semantic repair
 
-0706 checks complete N/R/M and2N+1 slots before exact declared source/frame scopes. Retained identity appears once with all occurrence evidence;source candidates remain authentic;both bridge bank Start/End alternatives stay distinct. No mapped Param,ledger fold,alias substitution or repair discharge.
-Contour proof records actual R including source repetitions,not membership-set size. Query/error retain original anchor,context and borrowed policy. Whole fixture moved with9 functions/4 fields exposed;old contour test suffix unchanged. Protected target/history-proof-0706-reference-fixture/.
-Query4/contours3/compiler3/actual slash book5/clippy/fmt/book/render/diff/history875 three exact spans and fixture proof pass. Test SplitFragments accessor/panic paths corrected to actual return type/checked extraction. Both bridge directions,reversed cut,gaps,external scope and later aliases verified.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (reference journal decision gains answers). Whole0705 retained875. Source disposition/trim/semantic/zero-outcome contracts follow;actual G2/maps/currentness/history/bus stay owned. D372 persists;PNT continues.
+0707 recovers global topology versus owner registration/semantic source scope. An actual delete derives repairs for both registered owners;explicit repoint/retire changes only the selected registration. It cannot infer piece-local authority or another holder's consent. No runtime algorithm changes.
+Two actual Pieces may share a source edge. Replacing one contour can leave its old notch outside the target despite global liveness,resolved registrations and narrow ledger readiness. Repointing registration leaves the immutable notch unchanged. Birth validation is used only as a membership diagnostic.
+Public boundary2/strict selected clippy/fmt/book/render/diff/history876 three exact Git spans pass. Production source/Cargo files unchanged;prior maintained chapter/Rust fences remain an exact prefix. No actual geometry,map,semantic repair or publication is supplied. The ledger boundary is intentional.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (reference journal decision gains answers). Whole0706 retained876. Native coverage/global-source/registration/trim intent follows;semantic/zero outcomes and actual G2/currentness/history/bus remain owned. D372 persists.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

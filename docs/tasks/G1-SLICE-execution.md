@@ -866,31 +866,36 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   point map. Actual current geometry/correspondence remains .5f.3/.5f.4.geometry/G2/G3.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.eligibility`
   Status: `done`
-  Goal:readonly exact declared-source query with all retained/source/bridge-endpoint eligibility;
-  preserve ambiguity/gaps,no output Param,ledger fold,geometry/liveness or repair-discharge proof.
-  Scope:complete N/R/M and maximum-match counts before frame/scope scans;borrow original policy.
-  Retained identities coalesce with all occurrence evidence;each source candidate keeps its original
-  field;bridge start/end bank occurrences stay distinct. Record actual source count on contour proof.
-  Share whole existing contour fixture with only access qualifiers changed. Retire whole0705;
-  focused native/current contour/compiler/book checks;actual disposition/trim contracts follow.
-  - [x] ISSUE:source eligibility includes retained ids and both bridge endpoints,not only ranges.
-  - [x] ROOT CAUSE (slash eligibility):actual source/contour/provenance contracts and published
-    SplitFragments accessor read;both bridge directions/reversed cut and exact frame cases pass,rc=0.
-  - [x] FIX:complete N/R/M and2N+1 admission before frame/scope scans;retained identity once
-    with all occurrences,original source candidates and distinct bridge Start/End bank alternatives.
-  - [x] ADDRESSED (slash eligibility):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test slash_spread_reference_query_contract →4 pass,rc=0;authentic fields/both directions,
-    quota/scope/gap/alias cases and R counts source repetitions,not deduplicated index entries.
-  - [x] NO REGRESSION (slash eligibility):contours3/compiler3/actual slash book5/selected clippy/
-    fmt/book/render/diff/history875 three exact spans and fixture move pass,rc=0. Corrected test-only
-    SplitFragments accessor and explicit panic paths;no lint suppression. Whole original contour
-    test suffix unchanged;fixture differs only by access qualifiers/format. No geometry/currentness proof.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: promoted (reference journal decision gains answers).
-  Verification:native7/rustdoc8;Commit:STITCHCAD-G1-0706. Next .references.disposition.
+  Goal:0706 eligibility;[whole scope/proofs](../history/stitchcad-devnotes-part876.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition`
-  Status: `pending`
+  Status: `active`
   Goal:explicit whole source coverage/retention/retirement/visible repair and trim-selection intent;
   eligibility is not a mapped/current reference. Actual G2/ledger/bus evidence stays separately owned.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.recovery`
+  Status: `done`
+  Goal:recover global edge-edit versus per-owner registration repair and semantic source ownership
+  before native disposition policy. Intended ledger behavior is a boundary,not a defect/permission.
+  Scope:public actual two-owner delete/retire/repoint cases and retained-notch source membership;
+  preserve original objects and expose resolved-but-outside-target distinction. No runtime algorithm
+  change,automatic repair or geometry claim. Track explicit native plan next;retire whole0706.
+  - [x] ISSUE:piece-local eligibility cannot authorize global edits or discharge registrations.
+  - [x] ROOT CAUSE (disposition boundary):published ledger/anchor/Piece contracts read;actual
+    two-owner delete/retire/repoint and resolved-but-outside-target cases pass,rc=0.
+  - [x] FIX:public-interface evidence plus book/decision boundary;native plan separately owns
+    coverage/global-source/owner-repair/trim intent,without automatic mutation or false permission.
+  - [x] ADDRESSED (disposition boundary):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test slash_spread_disposition_boundary_contract →2 pass,rc=0;global edit affects
+    both owners,repairs selected owner only;repoint leaves immutable notch definition unchanged.
+  - [x] NO REGRESSION (disposition boundary):selected strict clippy/fmt/book/render/diff and
+    history876 three exact Git spans pass,rc=0. git diff --exit-code -- crates/sc-core/src
+    Cargo.toml Cargo.lock →0;previous maintained chapter/Rust fences are an exact unchanged prefix.
+    Primitive ledger behavior is intentional;no source/geometry/currentness/authority certificate.
+  - [x] LOCKSTEP:book/live/frontier sync;promotion: promoted (reference journal decision gains answers).
+  Verification:native2;Commit:STITCHCAD-G1-0707. Next .disposition.plan.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan`
+  Status: `pending`
+  Goal:native explicit coverage/retained-source/global-edit/registration-repair/trim intent with actual
+  owner/evidence requirements;no implicit global retirement or unique-metadata-to-Param shortcut.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics`
   Status: `pending`
   Goal:actual Piece metadata/fold/copy/semantic-reference/effect reconciliation before native family

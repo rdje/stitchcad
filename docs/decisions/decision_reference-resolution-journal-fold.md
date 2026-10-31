@@ -100,3 +100,20 @@ Unique/Ambiguous/Gap classify those declarations only. No output Param,journal f
 physical point equivalence,canonical retirement or repair discharge follows. Later ledger changes
 leave the original metadata inspectable while undeclared child aliases refuse. Actual mapping,
 current frame/liveness,trim/source coverage and authorized repair/publication remain separate owners.
+
+## Local plans and global/owner repair scopes0707
+
+answers: "can a piece-local result authorize global source-edge retirement?" · "does a registration repair update the held semantic object?"
+
+A topology edge edit is global to that ledger's reference fold. Registration retire/repoint instead
+addresses an exact owner/edge/parameter key;neither operation supplies piece-local geometry authority.
+Native public-interface cases show one deletion affecting two registered owners while explicit
+registration repairs affect only their selected owner. Source absence in one Piece must not infer
+global retirement or consent to withdraw registrations.
+
+Global liveness and point resolution do not establish semantic Piece membership. A replacement
+contour can exclude an old anchor while another Piece still uses its live source edge. Repointing
+one registration does not mutate an immutable Notch holding the old anchor. Disposition must retain
+whole source/consumer coverage,actual mapping and coordinated semantic repair/publication obligations.
+The scoped ledger readiness verdict remains valid in its documented narrower domain;this is no
+ledger algorithm defect or geometry/currentness certificate.

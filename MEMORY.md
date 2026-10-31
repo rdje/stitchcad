@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0706;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition —
-  explicit source coverage/retention/retirement/visible repair and trim-selection intent. Activate/split
-  before code;eligibility gives no actual mapped/current reference or repair discharge.
-- Native declared-source query checks complete N/R/M and2N+1 slots before exact frame/scope scans.
-  Retained identity once with all occurrence evidence;source candidates original;bridge bank Start/End
-  alternatives distinct even with one EdgeRef. Unique/Ambiguous/Gap are metadata classifications only.
-  Actual source R recorded on contour proof,including repetitions. Native7/compiler3/actual slash book5/
-  clippy/fmt/book/render pass;whole0705 retained875. Reference decision promoted;no world/live certificate.
-- Whole contour fixture shared with9 functions/4 fields made public;original test suffix unchanged.
-  Protected proof target/history-proof-0706-reference-fixture/. Published SplitFragments.first returns
-  EdgeRef directly;test paths use checked expectation extraction. No lint suppression or query allocation.
-- Contour plan retains original source ids and borrowed policy;no geometric closure,currentness or
-  publication authority. .semantics owns metadata/fold/copy/effect and explicit zero/no-new-edge outcomes.
+- Latest unit:STITCHCAD-G1-0707;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan
+  — explicit whole coverage/global-source/registration-repair/trim intent with actual owner/evidence
+  requirements. Activate/split before code;piece-local eligibility authorizes no global retirement.
+- Public boundary recovered:delete affects every registration owner;retire/repoint changes one exact
+  registration. Repoint does not mutate an immutable semantic notch. Source globally live/resolved can
+  still be outside a replacement Piece. Ledger readiness is intentionally narrower than ownership.
+  Native2/lint/fmt/book/render/history876 pass;runtime source/Cargo and previous book prefix unchanged.
+  Reference decision promoted;native disposition implementation remains next,actual G2/bus stay owned.
+- Native eligibility query preserves retained/source/bridge endpoint alternatives under whole quotas.
+  Unique/Ambiguous/Gap are metadata only. Native7/rustdoc8 passed0706;fixture proof protected in
+  target/history-proof-0706-reference-fixture/. Published SplitFragments.first returns EdgeRef directly.
+- Contours retain original ids and borrowed policy;no geometric/current-source or publication proof.
+  .semantics owns metadata/fold/copy/effect and explicit zero/no-new-edge outcomes.
 - Whole6172B slash body moved0704;proof target/history-proof-0704-output-book/. Old anchors remain.
   SUMMARY120/cap120;contain before growth. Shared edge aliases/proof0703 remain protected.
 - Native offset-output checkpoint0691–0701 completed with focused component checks,not a combined gate.

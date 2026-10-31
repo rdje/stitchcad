@@ -302,3 +302,48 @@ reverses occurrence order without changing tags or bank/endpoint declarations. T
 slots are a conservative bound,not an observed count or allocation footprint. Actual source maps,
 current resolution,trim coverage/retirement/visible repair,semantic ownership and atomic publication
 still need their separately owned disposition/G2/G3/bus contracts before use or family closure.
+
+## Global topology,registration repair and semantic ownership
+
+The source-eligibility query does not authorize disposition. The published native ledger has
+separate scopes that a local slash plan must retain:
+
+| Public action | Actual scope | Additional obligation |
+| --- | --- | --- |
+| `IdentityLedger::delete` | Remove a global live edge and append its edit;every held reference folds through it | Whole affected-source/consumer evidence and actual command authority |
+| `retire(owner,edge,param)` | Withdraw that owner's exact registration | Legitimate holder withdrawal and coordinated semantic state;this is not edge deletion |
+| `repoint(owner,old_edge,old_param,new_edge,new_param)` | Change that owner's exact registration to an explicitly supplied live target | Actual correspondence and coordinated held-object repair |
+| Replace a Piece contour while keeping old global edges | Change the proposed Piece's membership | Current semantic anchors must still belong to their intended Piece |
+
+A focused public-interface case registers two owners at the same original source point. Deleting
+the edge leaves both registrations unchanged and derives two repairs. Explicitly repointing one
+owner leaves the other's repair open. Withdrawing the second registration removes that registration's
+repair;the deleted source edge stays deleted. Registration repair appends no topology edit and
+silently fixes no other owner. The selected new parameter in this test is caller data,not a computed
+slash correspondence or permission to choose a point in production.
+
+The other case constructs two actual structural Pieces that share one original edge and gives
+each a born-valid notch on it. This is accepted by the scoped Piece inventory. A detached replacement
+for the first Piece uses a newly declared edge while the other Piece keeps the original. The
+original source remains live,both ledger point resolutions succeed and the ledger's narrow
+`release_readiness` reports Releasable. The old notch definition nevertheless fails public anchor
+membership validation against the proposed replacement with `AnchorOutsidePiece`.
+
+That membership check uses the public birth validator solely as a diagnostic;rebuilding a held
+object is not offered as its current-source repair procedure. The original objects remain unchanged.
+Even explicitly repointing the first registration leaves its immutable notch definition holding the
+old anchor;the other owner's original registration remains intact. A registration edit and a
+canonical semantic-object replacement must be coordinated by their actual authoring/repair authority.
+
+This is expected primitive behavior,not a discovered ledger defect. The ledger's point verdict
+has the [documented narrower scope](../spec/ontology-implementation.md#executable-ontology-at-g1)
+than complete Piece/garment/current-source validation. A stable or globally live EdgeRef alone
+cannot establish that the intended Piece still owns its semantic position.
+
+The native disposition plan therefore must state whole source coverage and the intended treatment
+of global geometry,held owner references and visible repairs separately. It cannot infer global
+retirement from a source's absence in one Piece result,withdraw a consumer registration to hide
+loss,or turn `Unique` eligibility into an unproved target Param. Shared source geometry and other
+owners remain explicit dependencies. Actual maps,trim selection,current semantic/registry checks,
+identity history and atomic publication keep their G2/G3/Design/bus owners. No command or runtime
+algorithm changes in this contract-recovery slice.
