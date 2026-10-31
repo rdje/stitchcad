@@ -11,6 +11,11 @@ pub use coverage::{
     MirrorPieceEdgeCoverage, MirrorPieceEdgeCoverageError, MirrorPieceEdgeCoverageLimits,
     MirrorPieceEdgeCoverageRefusal, MirrorPieceMappedEdgeOccurrence,
 };
+mod contours;
+pub use contours::{
+    MirrorPieceContourError, MirrorPieceContourLimits, MirrorPieceContourPolicy,
+    MirrorPieceContourRefusal, MirrorPieceContours, MirrorPieceEdgeParameterization,
+};
 /// Original unadmitted edge-role/source declaration;neither field supplies geometry evidence.
 /// ```compile_fail
 /// use sc_core::{construction::MirrorPieceEdgeCandidate,ontology::*};

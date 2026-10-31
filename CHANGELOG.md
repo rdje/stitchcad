@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0730 — cover every original mirror source-edge occurrence
+## STITCHCAD-G1-0731 — declare reflected mirror contours
 
-- Whole candidate/occurrence/workspace quotas precede source indexing and attribution.
-- Exactly one candidate covers each original source identity;all repeated directed/fold uses retained.
-- Ambiguous,missing and unused sources refuse completely in their documented original orders.
-- Native9/API3/book13 and focused lint/fmt/build/map/render/history901 checks pass.
-- Source snapshot attribution is complete;actual reflection,output contours/currentness/issuance remain owned.
+- Explicit per-edge parameter directions compose with reversed boundary/hole traversal.
+- Original construction order/repeated uses retained;folds derive from actual cut policy.
+- Complete quotas precede all scans/allocation;native8/API3/book14 and focused checks pass.
+- Output book companion preserves original anchors and four existing Rust fences;whole0730 proof902 retained.
+- Native edge declarations close;actual correspondence/geometry/currentness/issuance remain separate.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -9,6 +9,9 @@ mod editing_examples {}
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-mirror-contracts.md")]
 mod mirror_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-mirror-outputs.md")]
+mod mirror_output_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-output-contracts.md")]
 mod output_examples {}
 #[cfg(doctest)]
@@ -44,21 +47,23 @@ pub use mirror::{
     AdmittedMirrorPieceEdges, AdmittedMirrorPiecePoints, BoundMirrorPieceCopy,
     BoundMirrorPieceCutPolicy, BoundMirrorPieceEdgeRoles, BoundMirrorPieceMetadata,
     BoundMirrorPiecePointRoles, DeclaredMirrorPieceIdentity, MirrorAxis, MirrorAxisDependency,
-    MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError, MirrorPieceCutPolicy,
-    MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
+    MirrorAxisSource, MirrorPieceContourError, MirrorPieceContourLimits, MirrorPieceContourPolicy,
+    MirrorPieceContourRefusal, MirrorPieceContours, MirrorPieceCopy, MirrorPieceCopyError,
+    MirrorPieceCutPolicy, MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
     MirrorPieceEdgeCandidate, MirrorPieceEdgeCoverage, MirrorPieceEdgeCoverageError,
     MirrorPieceEdgeCoverageLimits, MirrorPieceEdgeCoverageRefusal, MirrorPieceEdgeLocation,
     MirrorPieceEdgeManifest, MirrorPieceEdgeManifestError, MirrorPieceEdgeManifestLimits,
-    MirrorPieceEdgeManifestRefusal, MirrorPieceEdgeSource, MirrorPieceFieldIntent,
-    MirrorPieceFoldIntent, MirrorPieceIdentityError, MirrorPieceIdentityRefusal,
-    MirrorPieceMappedEdgeOccurrence, MirrorPieceMetadataError, MirrorPieceMetadataLimits,
-    MirrorPieceMetadataPolicy, MirrorPieceMetadataRefusal, MirrorPieceOutputEdge, MirrorPiecePoint,
-    MirrorPiecePointCandidate, MirrorPiecePointManifest, MirrorPiecePointManifestError,
-    MirrorPiecePointManifestLimits, MirrorPiecePointManifestRefusal, MirrorPiecePointMatch,
-    MirrorPiecePointMatchKind, MirrorPiecePointQuery, MirrorPiecePointQueryError,
-    MirrorPiecePointQueryLimits, MirrorPiecePointQueryRefusal, MirrorPiecePointRoleBindingError,
-    MirrorPiecePointRoleBindingRefusal, MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal,
-    MirrorPieceSourceError, MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
+    MirrorPieceEdgeManifestRefusal, MirrorPieceEdgeParameterization, MirrorPieceEdgeSource,
+    MirrorPieceFieldIntent, MirrorPieceFoldIntent, MirrorPieceIdentityError,
+    MirrorPieceIdentityRefusal, MirrorPieceMappedEdgeOccurrence, MirrorPieceMetadataError,
+    MirrorPieceMetadataLimits, MirrorPieceMetadataPolicy, MirrorPieceMetadataRefusal,
+    MirrorPieceOutputEdge, MirrorPiecePoint, MirrorPiecePointCandidate, MirrorPiecePointManifest,
+    MirrorPiecePointManifestError, MirrorPiecePointManifestLimits, MirrorPiecePointManifestRefusal,
+    MirrorPiecePointMatch, MirrorPiecePointMatchKind, MirrorPiecePointQuery,
+    MirrorPiecePointQueryError, MirrorPiecePointQueryLimits, MirrorPiecePointQueryRefusal,
+    MirrorPiecePointRoleBindingError, MirrorPiecePointRoleBindingRefusal,
+    MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal, MirrorPieceSourceError,
+    MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
 };
 mod offset;
 pub use offset::{

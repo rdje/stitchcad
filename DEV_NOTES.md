@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — cover every original mirror source-edge occurrence
+## _(2026-10-31 UTC)_ — declare reflected mirror contours
 
-0730 admits full N/R/N+R then requires one candidate per distinct actual source EdgeRef. Ambiguous,missing and unused sources refuse without partial coverage.
-Original locations/directions/field borrows retained across all occurrences;four identities map eight uses including repeats/fold. Unused failure follows proposal order,not sorted keys.
-Native4+5/API3/book13,selected clippy/fmt/build/map/render pass0;candidate kernel unchanged,whole0729 spans901 exact0. Fixture shadowing/invalid machine key fixed under this leaf;final checks pass.
-Promotion: declined (existing identity/geometry boundary). Explicit reflected contour/direction mapping next;actual currentness/frame/reflection/issuance/physical/semantic and broad integration remain owed. G1still6/18/G0 unapproved.
+0731 requires explicit per-edge parameter directions;desired boundary/hole traversal reverses original loops,construction order remains,and folds derive only from actual cut intent.
+Whole K/N/H/R/2K+H+R quotas precede scans/allocation. Original fields/parents retained;both directions,mixed frames,multi-edge hole,repeated construction and both fold intents covered.
+Native4+4/API3/book14,selected lint/fmt/build/map/render pass0. Whole12912B output book block moved with old anchors;four Rust fences unchanged;coverage/candidate kernels and whole0730 spans902 exact0.
+Promotion: declined (existing original-frame/geometry boundary). Native edge declarations close;correspondence requirements next. Actual winding/frame/reflection/currentness/issuance/copy/semantic and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
