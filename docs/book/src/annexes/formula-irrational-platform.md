@@ -522,3 +522,29 @@ profile/temp/child boundary on this host. The fixture wrapper's own producer aud
 complete transitive compiler/browser locality,full D156 integration and broader application,
 physical and human release acceptance retain their separate owners. No fresh full-suite verdict
 follows from these focused commands.
+
+## Fixture input admission before setup
+
+The numerical effect fixture now validates its core inputs and planned work root before its
+read-only Git inventory. Metadata receives prepared local store values without creating them,
+with Git selectors and system/global configuration isolated. Complete snapshot inputs are then
+admitted and frozen before any store activation or fixture-owned directory creation. Caller
+store values and unrelated variables survive. A controlled late Cargo.lock refusal causes no
+owned setup or caller-environment change.
+
+The startup watcher exercises real valid activation,that late refusal,and three actual Python-body
+omissions. The existing five-configuration tangent effect consumer remains green. This closes
+only the fixture's startup child;the remaining fixture-own file/lifecycle review remains a41.effects.
+
+An optional macOS diagnostic pins the selected Git executable and denies persistent file writes,
+with the required OS null-device sink exception. It reads the observed542 index rows and proves
+that an actual file-creation control is denied. Inside this harness,Git can warn about Darwin
+confstr fallback when a planned temporary directory does not yet exist. The OS-visible enforced
+run succeeds without creating that directory;it does not independently reproduce the warning
+branch or certify every Git implementation. No compiler or browser is run by these controls.
+
+```bash
+python3 -I -B docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py
+# Optional macOS diagnostic;requires OS-visible sandbox/process access:
+python3 -I -B docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py --macos-readonly-git
+```

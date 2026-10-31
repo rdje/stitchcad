@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0666 — fresh actual native and Chrome platform acceptance
+## STITCHCAD-G1-0667 — admit all fixture inputs before activation
 
-- Actual31 native/Chrome checks pass;both bad-expectation builds compile,then native101/Chrome
-  execution trap. Independent DOM/binary/source/copy/temp/version proof and8+8 report refusals pass.
-- Earlier native/source/legacy/snapshot evidence stays exact. History825/book/diff pass. Scoped n16
-  closes;next a41 fixture-own audit. No new full-suite/app/release verdict;G1 6/18/G0 unapproved unchanged.
+- D364:complete source admission/freeze precedes fixture setup. Actual valid/refused bootstraps,
+  three omissions and caller-store/source checks pass;optional macOS metadata write denial passes.
+- Existing tangent effect consumer/history826/book/diff pass. Native/Chrome source basis unchanged;
+  a41 effects remain next;full D156/integration/pre-push owned. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

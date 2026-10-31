@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — fresh actual native and Chrome platform acceptance
+## _(2026-10-31 UTC)_ — admit all fixture inputs before activation
 
-0666 runs actual platform native/Chrome after repairs:31 checks/405 fixture rows pass;both bad-expectation builds compile,then native101 and Chrome execution RuntimeError trap. Observed Rust1.99.0/b940084d7/LLVM23.1.1,Chrome156.0.8078.74,Darwin27 arm64.
-Independent --platform reader checks DOMs/four binaries/original consumer bodies/copy membership/versions/temp seal/handoff. Native550/platform550 source manifests,legacy6614/snapshot2725/restored native artifacts stay exact. Eight native/eight platform defective reports refuse.
-Receipt:target/irrational_platform_certificate/acceptance-0665-21696/receipt.json SHA6ec359292fac03fffccdd994ea171c838d0375d8865250f7ea0f3a9aa8a306b2. Native4dd288 unchanged;[whole0665](docs/history/stitchcad-devnotes-part825.md) retained.
-History825 three Git spans/book build/diff pass. LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing actual-platform/evidence contracts). Scoped n16 closes;next a41 fixture-own audit. Full D156/transitive/integration/pre-push/app/release remain owned;PNT continues.
+0667 fixes D364 a41.startup:controlled late Cargo.lock refusal formerly follows real store/work creation and caller mutation. Plan initial roots/core,derive prepared read-only Git environment,admit/freeze complete inputs,then activate. Actual old5ed3 diagnostic preserves source bytes.
+Startup valid/refused cases/three actual omissions pass;caller stores/Git/source bytes exact. Optional macOS /usr/bin/git reads542 rows under persistent-write denial;negative file creation denied,only OS null sink exempted. Harness warning branch is not independently reproduced by this check.
+Existing tangent mode five configurations/27 simulated variants/two failures/three wrapper omissions restores all bytes. No compiler/browser numerical verdict. [Whole0666](docs/history/stitchcad-devnotes-part826.md) retains native/Chrome proof;its source manifests are unchanged.
+History826/827 five Git spans/book/diff pass;closed parents retained for aggregate containment. LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing input-admission/store contracts). a41 active;effects next;full D156/.h2.b.v/pre-push remain owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

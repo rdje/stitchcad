@@ -490,12 +490,44 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Goal:0656 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part816.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41`
-  Status: `pending`
+  Status: `in_progress`
   Goal:complete producer-own file/lifecycle audit of the new numerical runtime fixture wrapper;
   its scoped controller captures are .f.n16.1.effects,not full transitive wrapper signoff.
   Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
   Schedule:after active numerical runtime groups,before final D156 producer/locality signoff.
   Apply ordered public-entry/effect/refusal/omission and exact original-data acceptance above.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.startup`
+  Status: `done`
+  Goal:complete numerical fixture input inventory before any store activation or owned setup;
+  retain isolated read-only Git metadata/caller values and calibrate late-source refusal ordering.
+  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py;docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
+  - [x] ISSUE:D364 P1 controlled late Cargo.lock refusal follows real owned store/work creation
+    and caller environment mutation;source bytes stay exact and no compiler/browser dispatched.
+  - [x] ROOT CAUSE (WHY + WHERE):numerical_fixture_startup_contract.py --diagnose
+    5ed3b373d7ece263f1381c3004cc9fa0ae18c0fd reproduces actual old bootstrap effects before late
+    input refusal,rc=0. Top-level prepare precedes Git inventory and complete source admission.
+  - [x] FIX:plan core/output root first;derive nonactivating prepared Git environment;isolate
+    selectors;admit/freeze every source before complete-source activation. Caller values survive.
+  - [x] ADDRESSED:numerical_fixture_startup_contract.py --macos-readonly-git →valid real
+    activation/late-input refusal/three actual body omissions/source bytes/caller stores pass,rc=0.
+    OS-visible /usr/bin/git returns542 exact rows with persistent writes denied;negative file
+    creation denied. Only required OS null sink exempted. No compiler/browser or source mutation.
+  - [x] NO REGRESSION:python_numerical_runtime_contract.py --tangent-only →five original
+    configurations/27 simulated variants/two failures/three wrapper omissions/full restoration,
+    rc=0. History826/827 five Git spans/book build/diff pass,rc=0. Existing n16
+    native/platform source manifests unchanged;full .h2.b.v/pre-push scopes retain their owners.
+  - [x] LOCKSTEP:book/live/notes/frontier/registry sync;D364 fixed. Promotion: declined(existing
+    input-admission/producer-store contracts). a41 remains active,effects next. G1 6/18/G0 human
+    closure unapproved unchanged;no new numerical/full-suite/app/release verdict.
+  Metadata note:inside the harness,missing planned TMPDIR triggers Darwin confstr fallback warning.
+  OS-visible read-only-enforced inventory succeeds with the same missing path and creates no temp
+  directory. The warning branch was not independently replayed under that enforcement;no universal
+  Git/transitive locality claim follows. Receipt:target/numerical-fixture-0667-startup.log.
+  Commit:STITCHCAD-G1-0667;Verification:actual bootstrap/refusal and independent metadata write-denial.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects`
+  Status: `pending`
+  Goal:complete remaining numerical fixture-own file/lifecycle/public-entry effect review after
+  startup;source/destination/alias/mutation/restoration/child omissions and focused consumers.
 
 ## Ordered native file-destination repairs
 
@@ -907,16 +939,10 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16`
   Status: `done`
-  Goal:complete shared numerical-body probe runtime/locality review after coupled implementation;
-  retain scoped feature evidence without claiming complete transitive compiler/build locality.
-  Schedule:after .5d.4 coupled feature completion,before producer/locality signoff. Feature probes own explicit
-  original inputs,complete variant files/logs/binaries and repository-local build/scratch stores.
-  Acceptance:public-entry/alias/source/output/child/failure review,actual path refusals and
-  omission guards,focused unchanged-source consumer;no global cache or foreign repository write.
+  Goal:0666 scoped closure;[whole parent scope](../history/stitchcad-devnotes-part827.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1`
   Status: `done`
-  Goal:scoped four-entry inventory/effect/native boundary verified0659;broader D156 remains.
-  Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
+  Goal:0659 four-entry closure;[whole parent scope](../history/stitchcad-devnotes-part827.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.inventory`
   Status: `done`
   Goal:0657 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part817.md).
@@ -959,27 +985,4 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Goal:0665 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part825.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer.platform`
   Status: `done`
-  Goal:fresh actual platform native/Chrome baseline and bad-expectation rejection after native child;
-  independently retain immutable artifacts,source/temp restoration and tool versions.
-  Paths: docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py
-  - [x] ISSUE:effect models and native-only results cannot certify fresh actual browser execution.
-  - [x] ROOT CAUSE (WHY + WHERE):actual irrational_platform.py completes31 checks/native+Chrome,
-    baseline104/pass and successfully compiled wrong-fixture101/execution RuntimeError trap,rc=0.
-    OS-visible handoff passes;actual direct source/artifact/profile/temp scope only.
-  - [x] FIX:retain fresh immutable platform report/binaries/DOMs/logs/temp seal;extend read-only
-    independent acceptance reader with --platform and complete original consumer-body checks.
-  - [x] ADDRESSED:numerical_acceptance_reader.py --platform --self-test
-    target/irrational_platform_certificate/acceptance-0665-21696 →all native and platform proofs
-    pass;reject eight native/eight platform defective reports,rc=0. Both550-input manifests,
-    legacy6614/snapshots2725/restored native artifacts exact;31 checks/405 rows/six fixtures restore.
-    Receipt6ec359292fac03fffccdd994ea171c838d0375d8865250f7ea0f3a9aa8a306b2.
-  - [x] NO REGRESSION:actual Rust1.99.0/b940084d7/LLVM23.1.1 and Chrome156.0.8078.74,
-    Darwin27.0.0 arm64;four retained native/Wasm binary digests and DOMs exact,rc=0. Original
-    assertion bodies/copy membership/version logs/temp seal/handoff pass;default native evidence
-    fields remain exact with explicit platform-outside-scope label. Native receipt4dd288 unchanged.
-    History825 three Git spans/book build/git diff --check pass,rc=0. No new full-suite verdict.
-  - [x] LOCKSTEP:book/live/notes/frontier/producer registry sync. Promotion: declined(existing
-    actual-platform/independent-evidence contracts). n16.2/consumer/n16 supported direct scope
-    close;next a41 fixture-own audit. Full transitive compiler/browser locality,D156/.h2.b.v/
-    pre-push/app/physical/release retain owners. G1 6/18/G0 unapproved unchanged.
-  Commit:STITCHCAD-G1-0666;Verification:actual native/Chrome capture and independent exact data reader.
+  Goal:0666 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part826.md).

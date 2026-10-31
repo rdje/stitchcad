@@ -20,13 +20,15 @@ PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 CORE = (Path(__file__), PROFILE_SOURCE, *ENTRIES, *TANGENT_ENTRIES)
 WORK = ROOT / 'target/numerical-runtime-controls' / str(os.getpid())
-PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
-GIT_ENV = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+PROFILE['plan_producer'](ROOT, sources=CORE, directories=(WORK,))
+PREPARED = PROFILE['environment_for'](ROOT, os.environ, create=False)
+GIT_ENV = {key: value for key, value in PREPARED.items() if not key.startswith('GIT_')}
 GIT_ENV.update(GIT_OPTIONAL_LOCKS='0', GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull)
 TRACKED = subprocess.check_output(['git', 'ls-files', 'crates'], cwd=ROOT, env=GIT_ENV, text=True).splitlines()
 SNAPSHOT = {ROOT / path for path in TRACKED} | {ROOT / path for path in ('Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml')}
 PROFILE['plan_producer'](ROOT, sources=(*CORE, *SNAPSHOT))
 FROZEN = {path: path.read_bytes() for path in {*CORE, *SNAPSHOT}}
+PROFILE['prepare_producer'](ROOT, sources=(*CORE, *SNAPSHOT), directories=(WORK,))
 WORKSPACES = set()
 
 
