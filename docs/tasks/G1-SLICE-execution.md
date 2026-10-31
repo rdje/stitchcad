@@ -878,20 +878,29 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:complete original pair/side-to-output assignment and explicit semantic identities.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.assignments`
   Status: `done`
-  Goal:complete original pair/A/B-to-active-role attribution;grouping is not semantic sharing.
-  - [x] ISSUE:role metadata alone cannot cover every original requested occurrence.
-  - [x] ROOT CAUSE (walk assignments):actual input/copy/role APIs reviewed;
-    whole N/M/2M before operation and all scans/allocation;rc=0.
-  - [x] FIX:complete authentic occurrence attribution and dual original-order views.
-  - [x] ADDRESSED (walk assignments):cargo test --test walk_notch_assignment_contract
-    --test walk_notch_role_binding_contract:5+3 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (walk assignments):API4/book5,lint/fmt/build/map/render;
-    old kernels/tests/prior fences/918 spans exact;default fixture path preserved;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing original-field/typed-parent rule).
-  Proof:target/history-proof-0744-walk-assignments/;Commit:STITCHCAD-G1-0744.
+  Goal:0744 complete occurrence attribution;[whole scope/proofs](../history/stitchcad-devnotes-part919.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities`
-  Status: `pending`
+  Status: `in_progress`
   Goal:explicit proposed semantic Notch identities/retention and complete assigned-role association.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.existing`
+  Status: `done`
+  Goal:whole provided existing canonical Notch collection and actual stable-id lookup.
+  - [x] ISSUE:retention proposals need actual supplied objects and unambiguous semantic ids.
+  - [x] ROOT CAUSE (existing Notches):canonical Notch and current collection interfaces reviewed;
+    whole K before all id scans/allocation,not current registry completeness;rc=0.
+  - [x] FIX:unique provided-object index with authentic original objects/order/parent.
+  - [x] ADDRESSED (existing Notches):cargo test --test walk_existing_notch_contract
+    --test walk_notch_assignment_contract:4+5 pass;rc=0;full invocation in receipt.
+  - [x] NO REGRESSION (existing Notches):API3/identity book1,lint/fmt/build/map/render;
+    old kernels/tests/fixtures,prior fences/Summary order/919 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing scoped membership/currentness rule).
+  Proof:target/history-proof-0745-walk-existing-notches/;Commit:STITCHCAD-G1-0745.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.known`
+  Status: `pending`
+  Goal:bounded explicit known identity exclusions from actual context/supplied Notches;unlisted is not fresh.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.entries`
+  Status: `pending`
+  Goal:complete assigned-role retention/host identity proposals;no client new-id request or actual issuance.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.sharing`
   Status: `pending`
   Goal:explicit mark sharing/coalescing under actual pattern owners/anchors/profile fields.

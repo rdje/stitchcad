@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — cover every original walk occurrence with explicit role attribution
+## _(2026-10-31 UTC)_ — index actual supplied existing walk Notches
 
-0744 admits complete N/M/2M before operation/scans/allocation. Each original entry checks actual pair bounds,duplicate occurrence,undefined/inactive role;full source coverage then follows input pair/A/B order. No prefix or manufactured missing field escapes.
-Authentic views lend original manifest entry,pair/anchor/profile fields,role and cached copy/Piece. Manifest/source orders and repeated pair-field pointers remain distinct. Repeated role tags are grouping proposals,not admitted sharing or semantic ids;unused active metadata stays legal.
-Native5+3/API4/walk book5,selected lint/fmt/build/map/render pass0;old kernels/tests unchanged,default one-pair fixture delegates to the same parameterized constructor/body. Four old Rust fences and whole0743 spans918 exact0;older31219B notes base retained.
-Promotion: declined (existing original-field/typed-parent rule). Explicit semantic identity/retention next;sharing/currentness/provider/geometry/all-copy effects/atomic publication/full integration remain owed. G1still6/18/G0 unapproved.
+0745 bounds whole provided K before id scans/allocation,then indexes actual canonical Notch objects and rejects first repeated semantic id even for equal objects. Original collection order,ids,born owners,held anchors/profile fields and complete attribution parent remain unchanged.
+Lookup lends actual objects by stable id;unlisted is not globally absent/fresh. Empty input preserves all requested occurrences. Unrelated provided objects keep their actual owners,without retargeting or current Design/registry/retention/liveness certification.
+Native4+5/API3/identity book1,selected lint/fmt/build/map/render pass0;parent kernels/tests/fixtures and five walk output fences unchanged. Summary120 prior rows/order retained;whole0744 spans919 exact0 and older31219B notes base retained.
+Promotion: declined (existing scoped membership/currentness rule). Bounded known identity exclusions next,then host identity/retention proposals. No client new-id request,reservation/issuance/sharing/geometry/all-copy effects/atomic publication/full integration proof. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

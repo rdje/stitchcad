@@ -290,3 +290,5 @@ checks. Complete semantic identity/retention declarations,pattern/anchor/profile
 actual source correspondence and all currentness/provider/effect/authority requirements remain
 mandatory. No coordinate coincidence,matching tag or complete occurrence count supplies those
 proofs. The original paired requests remain intact until a supported complete atomic edit is proven.
+
+[Semantic identity and retention](drafting-walk-identities.md) continue the complete attribution context.

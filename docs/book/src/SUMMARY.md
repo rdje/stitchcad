@@ -11,7 +11,6 @@
 - [Made-to-measure input charts](spec/mtm-input-charts.md)
 - [What you can use today](availability.md)
 # Glossary
-
 - [Glossary](spec/glossary.md)
   - [Measurements, ease and sizes](spec/glossary/measurements-and-fit.md)
   - [The recipe and the piece](spec/glossary/recipe-and-pieces.md)
@@ -97,6 +96,7 @@
   - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
   - [Walk output and shared-mark contracts](annexes/drafting-walk-outputs.md)
+  - [Walk semantic identity and retention](annexes/drafting-walk-identities.md)
   - [Mirror Piece-copy contracts](annexes/drafting-mirror-contracts.md)
   - [Mirror output attribution and contours](annexes/drafting-mirror-outputs.md)
   - [Mirror physical-copy contracts](annexes/drafting-mirror-copies.md)

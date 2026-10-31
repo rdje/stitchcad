@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0744 — cover every original walk occurrence with explicit role attribution
+## STITCHCAD-G1-0745 — index actual supplied existing walk Notches
 
-- Whole N/M/2M precede operation,original-entry checks and complete source pair/A/B coverage.
-- Authentic views preserve original assignment/source orders,all field borrows and actual role/copy/Piece parents.
-- Repeated tags propose grouping;unused active metadata stays legal;no semantic identity or shared mark inferred.
-- Native8/API4/walk book5 and focused lint/fmt/build/map/render/history918 checks pass.
-- Explicit semantic identity/retention and sharing/evidence remain owned next stages.
+- Whole provided K precedes scans/allocation;duplicate semantic ids refuse even when fields are equal.
+- Actual objects,stable ids,born owners,held fields,collection order and complete attribution parent retained.
+- Empty/unrelated supplied objects grant no current registry,retention suitability or freshness proof.
+- Native9/API3/identity book1 and focused lint/fmt/build/map/render/history919 checks pass.
+- New bounded identity chapter;known exclusions and host identity/retention proposals follow.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

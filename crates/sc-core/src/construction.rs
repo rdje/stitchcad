@@ -9,6 +9,9 @@ mod editing_examples {}
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-walk-outputs.md")]
 mod walk_output_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-walk-identities.md")]
+mod walk_identity_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-mirror-contracts.md")]
 mod mirror_examples {}
 #[cfg(doctest)]
@@ -188,12 +191,14 @@ pub use slash_spread::{
 mod walk;
 pub use walk::{
     AdmittedWalkNotchAssignments, AdmittedWalkSeamEdit, BoundWalkBalancePair,
-    BoundWalkCopyInventory, BoundWalkNotchAssignment, BoundWalkNotchRoles, BoundWalkSeamEdit,
-    WalkBalanceNotch, WalkBalancePair, WalkCopyInventoryError, WalkCopyInventoryLimits,
-    WalkCopyInventoryRefusal, WalkEditAdmissionError, WalkEditAdmissionRefusal,
-    WalkEditBindingError, WalkEditBindingRefusal, WalkEditLimits, WalkNotchAssignmentError,
-    WalkNotchAssignmentLimits, WalkNotchAssignmentManifest, WalkNotchAssignmentRefusal,
-    WalkNotchRoleAssignment, WalkNotchRoleBindingError, WalkNotchRoleBindingRefusal, WalkSeamEdit,
+    BoundWalkCopyInventory, BoundWalkExistingNotches, BoundWalkNotchAssignment,
+    BoundWalkNotchRoles, BoundWalkSeamEdit, WalkBalanceNotch, WalkBalancePair,
+    WalkCopyInventoryError, WalkCopyInventoryLimits, WalkCopyInventoryRefusal,
+    WalkEditAdmissionError, WalkEditAdmissionRefusal, WalkEditBindingError, WalkEditBindingRefusal,
+    WalkEditLimits, WalkExistingNotchError, WalkExistingNotchLimits, WalkExistingNotchRefusal,
+    WalkNotchAssignmentError, WalkNotchAssignmentLimits, WalkNotchAssignmentManifest,
+    WalkNotchAssignmentRefusal, WalkNotchRoleAssignment, WalkNotchRoleBindingError,
+    WalkNotchRoleBindingRefusal, WalkSeamEdit,
 };
 mod truing;
 pub use truing::{
