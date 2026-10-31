@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0731 — declare reflected mirror contours
+## STITCHCAD-G1-0732 — require complete mirror reflection and reference-map evidence
 
-- Explicit per-edge parameter directions compose with reversed boundary/hole traversal.
-- Original construction order/repeated uses retained;folds derive from actual cut policy.
-- Complete quotas precede all scans/allocation;native8/API3/book14 and focused checks pass.
-- Output book companion preserves original anchors and four existing Rust fences;whole0730 proof902 retained.
-- Native edge declarations close;actual correspondence/geometry/currentness/issuance remain separate.
+- Whole E/P/R quotas precede actual shared Piece lineage and original axis-mode checks.
+- Axis-specific and six mandatory common evidence requests retain original fields and complete parents.
+- Empty point metadata and shared provider identities discharge no actual correspondence obligation.
+- Native8/API4/output book6 and focused lint/fmt/build/map/render/history903 checks pass.
+- Native manifest requests close;provider/currentness/geometry/issuance/physical/semantic proof remains owed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

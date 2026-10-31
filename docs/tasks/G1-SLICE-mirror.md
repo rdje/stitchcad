@@ -27,7 +27,7 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Status: `done`
   Goal:0721 metadata fields;[whole scope/proofs](../history/stitchcad-devnotes-part892.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest`
-  Status: `in_progress`
+  Status: `done`
   Goal:bounded fresh Piece/edge/point identity/output-role manifest and complete source-contour/
   construction/fold attribution;explicit reflection winding/direction mapping,not a geometry certificate.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.roles`
@@ -75,20 +75,19 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Goal:0730 source coverage;[whole scope/proofs](../history/stitchcad-devnotes-part902.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges.contours`
   Status: `done`
-  Goal:explicit logical reflected contour/direction declarations.
-  - [x] ISSUE:coverage alone supplies no desired contour traversal.
-  - [x] ROOT CAUSE (mirror contours):original frame/direction/cut APIs reviewed;full quotas before
-    scans/allocation;old kernels unchanged;rc=0.
-  - [x] FIX:explicit edge parameters,reverse loops,retain construction,derive folds.
-  - [x] ADDRESSED (mirror contours):cargo test --test mirror_piece_contour_contract
-    --test mirror_piece_edge_coverage_contract:4+4 pass;rc=0. Full invocation in receipt.
-  - [x] NO REGRESSION (mirror contours):API3/book14,lint/fmt/build/map/render/902 spans pass;rc=0.
-  - [x] LOCKSTEP:book/live align;promotion: declined (existing original-frame/geometry boundary).
-  Proof:target/history-proof-0731-mirror-contours/;Commit:STITCHCAD-G1-0731.
+  Goal:0731 mirror contours;[whole scope/proofs](../history/stitchcad-devnotes-part903.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.correspondence`
-  Status: `pending`
-  Goal:explicit supported reflection/reference-map requirements in original frames;no source retirement
-  or repair of held objects from copy intent. Actual geometric correspondence stays .5f.4.geometry.
+  Status: `done`
+  Goal:complete native original-frame reflection/map evidence requests.
+  - [x] ISSUE:point/contour proposals need one actual parent and complete requests.
+  - [x] ROOT CAUSE (mirror requests):actual source/axis/map APIs reviewed;whole E/P/R before parent/
+    mode checks;old kernels unchanged;rc=0.
+  - [x] FIX:same actual Piece,axis-specific and six mandatory common sources.
+  - [x] ADDRESSED (mirror requests):cargo test --test mirror_piece_correspondence_contract
+    --test mirror_piece_contour_contract:4+4 pass;rc=0. Full invocation in receipt.
+  - [x] NO REGRESSION (mirror requests):API4/output book6,lint/fmt/build/map/render/903 spans pass;rc=0.
+  - [x] LOCKSTEP:book/live align;promotion: declined (existing original-frame/evidence boundary).
+  Proof:target/history-proof-0732-mirror-correspondence/;Commit:STITCHCAD-G1-0732.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies`
   Status: `pending`
   Goal:explicit actual source/result physical-copy policy and complete CutPlan/companion association;

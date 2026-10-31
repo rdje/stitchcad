@@ -1,12 +1,12 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0731;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs.manifest.correspondence in docs/tasks/G1-SLICE-mirror.md.
-  Native identity/point declarations complete;native edge declarations complete;correspondence requirements next.
-- Contours require explicit per-edge parameter direction;reverse each loop,retain construction order,
-  derive fold only from actual cut. Full K/N/H/R/2K+H+R before scans. Actual geometry remains owed.
-  Native8/API3/book14/lint/fmt/build/map/render pass;proof target/history-proof-0731-mirror-contours/.
-- Complete source coverage retains all original locations/directions/fields;four identities/eight uses.
+- Latest unit:STITCHCAD-G1-0732;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs.copies in docs/tasks/G1-SLICE-mirror.md.
+  Native identity/point declarations complete;native manifest requests complete;physical-copy policy next.
+- Correspondence requests check whole E/P/R before actual shared Piece parent and axis mode.
+  Axis-specific plus six common source/frame/edge/point/contour/accuracy/preservation obligations
+  remain mandatory even with empty points/shared provider ids;no accepted evidence or authority.
+  Native8/API4/output book6/lint/fmt/build/map/render pass;proof target/history-proof-0732-mirror-correspondence/.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.
 - bind_point_roles retains actual canonical Piece/typed catalogue under full D/A/key-byte limits.
@@ -25,7 +25,7 @@
 - Scoped family result:15 slash contract suites51 pass;actual slash API/book docs53 pass. Source
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
-- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained;whole0730 now902;0729 now901;0728 now900;closed0064 protocol894;older source spans/notes base exact.
+- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained;whole0731 now903;0730 now902;0729 now901;closed0064 protocol894;older source spans/notes base exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation

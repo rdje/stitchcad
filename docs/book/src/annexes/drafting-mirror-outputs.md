@@ -262,5 +262,75 @@ The result is a logical declaration rather than an evaluated Piece or registry m
 current sources,common/original frames,supported axis/reflection,geometric winding/closure and
 error bounds,identity issuance,physical-copy associations and semantic/sewing effects remain
 separate requirements. Native edge declarations are complete through this stage;the manifest's
-supported correspondence requirements remain the next owner.
+supported correspondence requirements follow below.
+
+## Complete reflection and reference-map requirements
+
+`contours.require_correspondence(&points,&request,limits)` binds the actual contour and point
+proposals to one canonical Piece declaration. Their complete edge-candidate,point-candidate and
+original source-occurrence counts must fit explicit E/P/R limits before parent comparison.
+Both proposals must borrow the same actual DeclaredMirrorPieceIdentity;equal operation/Piece ids
+or a separately reconstructed declaration cannot substitute for that parent. All prior original
+source,metadata,roles,parameter directions and candidate fields remain inspectable.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceAxisEvidenceRequest` | Explicit point-axis or range-axis provider requirements |
+| `MirrorPieceCorrespondenceRequirement` | Whole original axis and six mandatory common evidence sources |
+| `MirrorPieceCorrespondenceLimits::new(E,P,R)` | Complete edge,point and original occurrence allowances |
+| `RequiredMirrorPieceCorrespondence` | Authentic complete-context requests,with no accepted evidence |
+| `RequiredMirrorPieceCorrespondenceSource` | Actual original provider field and its mandatory role |
+| `MirrorPieceCorrespondenceError`, `MirrorPieceCorrespondenceRefusal` | Complete parents/request/limits and first refusal |
+
+The requested axis mode must match the actual original MirrorAxis field. ThroughPoints requires
+actual nondegeneracy and supported reflection-domain evidence from supported_axis. AlongRange
+additionally requires straight_axis evidence for the whole selected original range. A curved
+range's tangent or chord cannot silently become the axis. This association checks the mode only;
+distinct identities do not prove noncoincident points,and a range declaration does not prove a
+straight geometric segment. The original axis source order,direction and parameter bounds remain.
+
+Every request also names all six complete-context sources:
+
+| Required source | Required actual evidence |
+| --- | --- |
+| SourceFrames | Current source ownership/liveness and all original/common frames |
+| EdgeCorrespondence | Whole original source-domain maps matching every explicit output parameter direction |
+| PointCorrespondence | Complete actual point attribution/maps,including endpoints and dependencies absent from proposals |
+| Contours | Actual reflected winding,closure,hole containment and construction/fold correspondence |
+| Accuracy | Actual sourced T2 and propagated output-position error bounds over the supported domain |
+| SourcePreservation | Original source and held references preserved,without source retirement or silent reassignment |
+
+Accuracy requires actual quantitative tolerances and propagated errors from source positions,axis
+uncertainty,reflection evaluation,curve approximation and parameter conversions where applicable.
+A provider id is not a budget or an achieved error. Endpoint agreement,coordinate equality,
+an affine structural parameter map or a normal-offset certificate cannot replace actual supported
+reflection correspondence in the original frames. Current geometry and numerical providers must
+establish these obligations before any map is used or any result is published.
+
+```rust
+use sc_core::{construction::*,ontology::EntityId};
+let id=EntityId::from_bits(700);
+let request=MirrorPieceCorrespondenceRequirement::new(
+    MirrorPieceAxisEvidenceRequest::ThroughPoints { supported_axis:id },id,id,id,id,id,id);
+fn require<'a>(contours:&'a MirrorPieceContours<'a>,points:&'a AdmittedMirrorPiecePoints<'a>,
+    request:&'a MirrorPieceCorrespondenceRequirement)
+    ->Result<RequiredMirrorPieceCorrespondence<'a>,MirrorPieceCorrespondenceError<'a>> {
+    contours.require_correspondence(points,request,MirrorPieceCorrespondenceLimits::new(100,100,200))
+}
+assert_eq!(*request.source(MirrorPieceCorrespondenceEvidenceKind::Accuracy),id);
+```
+
+`requirements()` lends all six actual common source fields in the listed order,including reverse
+iteration. One provider may be requested for several roles;equal ids do not remove any obligation
+or merge their field occurrences. Zero is retained as an explicit identity rather than treated as
+a missing-provider sentinel. Provider existence,kind,currentness,scope and proof validity remain
+unresolved. Axis-specific provider fields remain on the original request alongside these six.
+
+Empty point-candidate metadata still requires complete PointCorrespondence evidence. It neither
+proves that the evaluated copy has no points nor discharges endpoint/source coverage. Success
+allocates nothing and uses cached whole counts plus fixed parent/mode comparisons;it scans no
+geometry,computes no coordinate/Param,accepts no evidence and edits no registry or held object.
+Native manifest requests are complete through this stage. Actual ordered Design,issued history,
+reflection/maps/accuracy,physical-copy association,semantic/sewing effects and publication remain
+their separate execution owners. Physical-copy and semantic policies follow as native work.
 

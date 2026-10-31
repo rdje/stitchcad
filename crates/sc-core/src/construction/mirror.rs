@@ -48,6 +48,14 @@ pub use edges::{
     MirrorPieceEdgeParameterization, MirrorPieceMappedEdgeOccurrence, MirrorPieceOutputEdge,
 };
 
+mod correspondence;
+pub use correspondence::{
+    MirrorPieceAxisEvidenceRequest, MirrorPieceCorrespondenceError,
+    MirrorPieceCorrespondenceEvidenceKind, MirrorPieceCorrespondenceLimits,
+    MirrorPieceCorrespondenceRefusal, MirrorPieceCorrespondenceRequirement,
+    RequiredMirrorPieceCorrespondence, RequiredMirrorPieceCorrespondenceSource,
+};
+
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
 /// Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

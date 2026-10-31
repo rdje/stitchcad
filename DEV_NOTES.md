@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — declare reflected mirror contours
+## _(2026-10-31 UTC)_ — require complete mirror reflection and reference-map evidence
 
-0731 requires explicit per-edge parameter directions;desired boundary/hole traversal reverses original loops,construction order remains,and folds derive only from actual cut intent.
-Whole K/N/H/R/2K+H+R quotas precede scans/allocation. Original fields/parents retained;both directions,mixed frames,multi-edge hole,repeated construction and both fold intents covered.
-Native4+4/API3/book14,selected lint/fmt/build/map/render pass0. Whole12912B output book block moved with old anchors;four Rust fences unchanged;coverage/candidate kernels and whole0730 spans902 exact0.
-Promotion: declined (existing original-frame/geometry boundary). Native edge declarations close;correspondence requirements next. Actual winding/frame/reflection/currentness/issuance/copy/semantic and full integration remain owed. G1still6/18/G0 unapproved.
+0732 binds actual point/contour proposals to one actual canonical Piece parent under complete E/P/R quotas,then matches axis mode. Equal ids or reconstructed parents cannot substitute.
+Axis-specific requests and all six common source/frame/edge/point/contour/accuracy/preservation obligations remain mandatory. Shared/zero provider ids and N0 point metadata remove none.
+Native4+4/API4/output book6,selected lint/fmt/build/map/render pass0;old kernels unchanged,whole0731 spans903 exact0. Fixture reuses prior default path and explicit range-axis path without unused helpers.
+Promotion: declined (existing original-frame/evidence boundary). Native manifest requests close;physical-copy policy next. No accepted provider,map,accuracy,currentness,issuance,repair or geometry proof. Actual execution/full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

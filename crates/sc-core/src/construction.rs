@@ -47,9 +47,12 @@ pub use mirror::{
     AdmittedMirrorPieceEdges, AdmittedMirrorPiecePoints, BoundMirrorPieceCopy,
     BoundMirrorPieceCutPolicy, BoundMirrorPieceEdgeRoles, BoundMirrorPieceMetadata,
     BoundMirrorPiecePointRoles, DeclaredMirrorPieceIdentity, MirrorAxis, MirrorAxisDependency,
-    MirrorAxisSource, MirrorPieceContourError, MirrorPieceContourLimits, MirrorPieceContourPolicy,
-    MirrorPieceContourRefusal, MirrorPieceContours, MirrorPieceCopy, MirrorPieceCopyError,
-    MirrorPieceCutPolicy, MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
+    MirrorAxisSource, MirrorPieceAxisEvidenceRequest, MirrorPieceContourError,
+    MirrorPieceContourLimits, MirrorPieceContourPolicy, MirrorPieceContourRefusal,
+    MirrorPieceContours, MirrorPieceCopy, MirrorPieceCopyError, MirrorPieceCorrespondenceError,
+    MirrorPieceCorrespondenceEvidenceKind, MirrorPieceCorrespondenceLimits,
+    MirrorPieceCorrespondenceRefusal, MirrorPieceCorrespondenceRequirement, MirrorPieceCutPolicy,
+    MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
     MirrorPieceEdgeCandidate, MirrorPieceEdgeCoverage, MirrorPieceEdgeCoverageError,
     MirrorPieceEdgeCoverageLimits, MirrorPieceEdgeCoverageRefusal, MirrorPieceEdgeLocation,
     MirrorPieceEdgeManifest, MirrorPieceEdgeManifestError, MirrorPieceEdgeManifestLimits,
@@ -63,7 +66,8 @@ pub use mirror::{
     MirrorPiecePointQueryError, MirrorPiecePointQueryLimits, MirrorPiecePointQueryRefusal,
     MirrorPiecePointRoleBindingError, MirrorPiecePointRoleBindingRefusal,
     MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal, MirrorPieceSourceError,
-    MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
+    MirrorPieceSourceLimits, MirrorPieceSourceRefusal, RequiredMirrorPieceCorrespondence,
+    RequiredMirrorPieceCorrespondenceSource,
 };
 mod offset;
 pub use offset::{
