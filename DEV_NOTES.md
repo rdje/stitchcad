@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — require explicit mirror result cut policy
+## _(2026-10-31 UTC)_ — choose mirror result fields and derive print metadata
 
-0720 binds canonical requested quantity/mirroring/fold/cutting side to actual source;no default,identity allocation or source-cut mutation.
-Zero/even-pair/source-fold admission preserves actual request/error pointers;fold attribution remains original,not new geometry or edge.
-Native4+5+4/API9/editing-book10,selected clippy/fmt/build/render pass0;whole0719 spans890 exact. Shared0719 bodies exact,one EOF separator normalized.
-Promotion: declined (existing cut/copy contract). Material/layer/label/print next;actual companion/copy/output/geometry/semantic proofs remain owned. G1still6/18/G0 unapproved.
+0721 requires explicit PreserveSource/Replace for actual material/layer/label fields;whole resolved UTF-8 B quota precedes blank scans.
+Selected fields borrow exact source/request values;print cut indicators derive from the one admitted result cut policy. Shared label rule preserves Piece birth order.
+Native5+4+5+4/label1/API12/editing-book11,selected clippy/fmt/build/render pass0;whole0720 spans891 exact. B bounds resolved text,not unselected source/policy storage.
+Promotion: declined (existing canonical metadata boundary). Fresh manifest/copy/semantic policy next;material/size/currentness/geometry/physical/full CI remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

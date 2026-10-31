@@ -12,6 +12,11 @@ pub use cut::{
     BoundMirrorPieceCutPolicy, MirrorPieceCutPolicy, MirrorPieceCutPolicyError,
     MirrorPieceCutPolicyRefusal, MirrorPieceFoldIntent,
 };
+mod metadata;
+pub use metadata::{
+    BoundMirrorPieceMetadata, MirrorPieceFieldIntent, MirrorPieceMetadataError,
+    MirrorPieceMetadataLimits, MirrorPieceMetadataPolicy, MirrorPieceMetadataRefusal,
+};
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
 /// Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks.

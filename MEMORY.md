@@ -1,17 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0720;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs.metadata.fields — explicit material/layer/label policy and
-  print data derived from the one canonical result cut request. No defaults from source names/face.
-- bind_cut_policy retains explicit quantity/mirroring/fold/cutting side;positive/even-pair/source-fold
-  checks only. Fold source is original attribution,not a new edge. Companion reciprocity/output/copy/
-  geometry/semantics still required. Native13/API9/book10/lint/fmt/build pass;proof target/history-proof-0720-mirror-cut/.
-- bind_piece admits whole H/R first;original fields/roles/order/directions/repeats/fold retained.
-  Shared0719 helper/test bodies exact;pub/import wiring plus one EOF separator normalization only.
-- Daily cleanup2026-10-31 14:26 UTC complete;target/artifact_cleanup_audit/daily-20261031-native/.
-  Removed4 trees/824 logs,18579 files/622525303B;all828 paths absent before launcher/book rebuild.
-  All824 log copies exact;57 evidence roots/136020 entries/14743246609B preserved.2243 unsafe
-  entries kept;dependency stores excluded by separation,not wholly hashed. Strict OS idle passed.
+- Latest unit:STITCHCAD-G1-0721;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs.manifest — split bounded fresh identity/role/source-contour
+  admission before code. Copy/companion and semantic/sewing policies remain next;actual geometry G2/G3.
+- Native mirror metadata choices complete:bind_metadata uses explicit PreserveSource/Replace for
+  material/layer/label;whole resolved UTF-8 B quota precedes canonical label/material blank scans.
+  Borrow actual source/replacement fields;print quantity/mirroring/fold derives from actual cut policy.
+  Native18/label1/API12/book11/lint/fmt/build pass;proof target/history-proof-0721-mirror-metadata/.
+  B is selected-result text only;no whole storage,material/size/currentness/physical/output certificate.
+- bind_cut_policy retains explicit quantity/mirroring/fold/face;positive/even/source-fold checks.
+  bind_piece bounds H/R and preserves every original role/direction/repeated/fold field. No new ids.
+- Cleanup2026-10-31 14:26 UTC complete;see docs/ARTIFACT_CLEANUP.md and protected audit
+  target/artifact_cleanup_audit/daily-20261031-native/. Residue preceded regeneration;proofs preserved.
 - Native slash declaration checkpoint closes .slash.outputs and all native children. Completed
   26-node branch is docs/tasks/G1-SLICE-slash.md;live execution retains a direct pointer.
   All original goals/proof links preserved,only closure/status updates. Knowledge Map8178B/cap8192;
@@ -20,7 +20,7 @@
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
 - Tree census10 lanes/13 trees/18 siblings/0 unowned/orphans/dead links;all old map paths/ids/links
-  retained. Whole0719 now890;whole0718 now888;closed0063 pre-code now889;older31219B notes exact.
+  retained. Whole0720 now891;0719 now890;0718 now888;closed0063 pre-code now889;older notes base exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation

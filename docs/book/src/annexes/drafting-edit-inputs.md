@@ -308,8 +308,67 @@ pattern geometry;geometric recipe reflection and a CutPlan copy's reflected orie
 separate. PairMember retains explicit handedness and companion id without name-based inference.
 New Piece identity,companion existence/reciprocity/opposite hand/equal quantity,the complete
 result CutPlan and actual geometric hand/face/fold correspondence still require later evidence.
-Material,layer,label and a cut-derived print view remain the next metadata slice;the current cut
-association cannot stand in for complete output metadata or sewing policy.
+Material,layer,label and the cut-derived print view are selected explicitly below. The cut
+association alone cannot stand in for complete output metadata or sewing policy.
+
+### Explicit material,layer,label and print data
+
+`cut.bind_metadata(&policy,&limits)` completes the local result-metadata choices against the
+actual bound source and canonical cut request. Every field deliberately selects PreserveSource
+or Replace;there is no implicit inheritance and no name-based handedness or face inference.
+The original source remains unchanged,and no Piece,physical copy or geometric output is created.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceFieldIntent<T>` | Explicit PreserveSource or Replace for a typed field |
+| `MirrorPieceMetadataPolicy` | Required independent material,layer-index and label-text choices |
+| `MirrorPieceMetadataLimits::new(B)` | Complete resolved result-text allowance in UTF-8 bytes |
+| `BoundMirrorPieceMetadata` | Authentic selected field borrows and canonical cut context |
+| `MirrorPieceMetadataError`, `MirrorPieceMetadataRefusal` | Original cut/policy/limits and first complete refusal |
+
+PreserveSource borrows the actual original field. Replace borrows the actual caller-supplied
+value. These choices are independent:for example,preserve the source material and assembly
+layer while supplying a new label,or replace an unresolved material while keeping the text.
+Unresolved reason spelling,label whitespace and Unicode text remain exact;checking a blank
+field does not trim the stored value. Layer index remains an explicit integer,not a placement.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let policy=MirrorPieceMetadataPolicy::new(
+    MirrorPieceFieldIntent::PreserveSource,
+    MirrorPieceFieldIntent::Replace(2),
+    MirrorPieceFieldIntent::PreserveSource);
+fn bind_fields<'a>(cut:&'a BoundMirrorPieceCutPolicy<'a>,policy:&'a MirrorPieceMetadataPolicy,
+    limits:&'a MirrorPieceMetadataLimits)
+    ->Result<BoundMirrorPieceMetadata<'a>,MirrorPieceMetadataError<'a>> {
+    let metadata=cut.bind_metadata(policy,limits)?;
+    assert_eq!(metadata.printed_label().quantity,*cut.quantity());
+    Ok(metadata)
+}
+assert_eq!(policy.layer_index(),&MirrorPieceFieldIntent::Replace(2));
+```
+
+B counts all four resolved label fields plus the resolved unresolved-material reason,if any.
+Assigned material has no reason text. Lengths are checked and summed before scanning any text;
+the whole B quota precedes completeness checks. The canonical label order is name,size,fabric,
+colorway,then the unresolved material reason. Piece birth and mirror-result metadata share that
+label rule. Admission uses O(1+B) work and constant auxiliary space without cloning strings.
+This allowance covers resolved result text;it does not claim to bound unselected original fields,
+already allocated source/policy storage or whole-operation memory. Material existence/kind/state,
+size-set truth and physical meaning remain separate from local nonblank completeness.
+
+For example,the label fields ` 左 `,`L`,`绸`,`赤` total12 UTF-8 bytes. An unresolved reason
+` 待定 ` contributes8 more,so B20 admits the complete20-byte selection and B19 refuses before
+any blank scan. An assigned material plus four one-byte label fields costs4 bytes,even if the
+unselected source material carries a longer reason. All original selected spelling is retained.
+
+`printed_label()` borrows the selected label text and derives quantity,mirroring/hand and fold
+from the same admitted result cut policy. A source cut-four mirrored Piece can preserve its text
+while the explicit result policy prints cut one,Single,no fold. The source print view remains
+cut four with its original fold. Neither print quantity nor hand/fold is authored in label text
+again. No print layout,output identity,companion reciprocity,complete CutPlan,material readiness,
+source-output fold correspondence,geometry or sewing effect is certified by this local metadata
+stage;the manifest,copy and semantic-policy slices remain required before native family closure.
 
 ## Native deliberate walk-edit requests
 

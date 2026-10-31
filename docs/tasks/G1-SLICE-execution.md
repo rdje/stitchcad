@@ -853,32 +853,32 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0719 actual source;[whole scope/proofs](../history/stitchcad-devnotes-part890.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.metadata`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit result quantity/handedness/companion/fold/face/material/layer/label policy bound to
   actual source;no name-based inference,duplicate cut authority or silent source replacement.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.metadata.cut`
   Status: `done`
-  Goal:explicit canonical result quantity/mirroring/fold/cutting-side request bound to actual source.
-  - [x] ISSUE:source cut data cannot silently become a reflected Piece's chosen result cut policy.
-  - [x] ROOT CAUSE (mirror cut policy):actual source/cut/companion contracts and book reviewed;
-    de359d5a source binding supplies original fields but no result cut policy;rc=0.
-  - [x] FIX:explicit no-default raw policy;zero/even-pair/source-fold admission,authentic borrowed
-    canonical fields and actual source-fold requirement. No output identity,copy list or geometry.
-  - [x] ADDRESSED (mirror cut policy):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test mirror_piece_cut_policy_contract --test mirror_piece_source_contract
-    --test mirror_piece_copy_contract:4+5+4 pass;rc=0. Canonical pointers,explicit differing result
-    fields,u32::MAX Single,fold/no-fold,refusal order and source immutability covered.
-  - [x] NO REGRESSION (mirror cut policy):mirror API9/actual editing-book10,selected clippy/fmt/
-    book/render/diff/890 exact source spans pass;rc=0. Shared0719 helper/test bodies exact;only pub/
-    import wiring and one EOF separator normalized. Source/cut quantities remain separate authorities.
-    No current Design/companion reciprocity/output correspondence/physical or full CI certificate.
-  - [x] LOCKSTEP:book/inventory/live/frontier align;whole0719 retained890;proof target/history-proof-0720-mirror-cut/.
-    promotion: declined (existing explicit physical-copy/cut metadata contract);next .metadata.fields.
-  Verification:native13/API9/book10 plus focused checks;Commit:STITCHCAD-G1-0720.
+  Goal:0720 explicit cut policy;[whole scope/proofs](../history/stitchcad-devnotes-part891.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.metadata.fields`
-  Status: `pending`
-  Goal:explicit source-preserve/replacement material,layer,label policy with canonical cut-derived
-  print data;actual result/fold manifest,companion/copy and semantic-effect evidence stay required.
+  Status: `done`
+  Goal:explicit source-preserve/replacement material,layer,label policy and canonical cut-derived print.
+  - [x] ISSUE:copy metadata must select actual values without inferred inheritance or duplicate cut data.
+  - [x] ROOT CAUSE (mirror fields):48125ece cut/source interfaces and actual Piece/label/material
+    contracts reviewed;canonical label rule shared with unchanged birth refusal order;rc=0.
+  - [x] FIX:explicit typed PreserveSource/Replace policies;whole resolved UTF-8 B sum/quota before
+    blank scans,then canonical label/material checks;authentic field borrows and derived print view.
+  - [x] ADDRESSED (mirror fields):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test mirror_piece_metadata_contract --test mirror_piece_cut_policy_contract
+    --test mirror_piece_source_contract --test mirror_piece_copy_contract:5+4+5+4 pass;rc=0.
+    Source/replacement pointers,Unicode bytes,quota/refusal order,mixed fields and print authority covered.
+  - [x] NO REGRESSION (mirror fields):piece_contract every_print_text_field_must_be_nonblank1,
+    mirror API12/actual editing-book11,selected clippy/fmt/book/render/891 exact Git spans pass;rc=0.
+    No whole source/policy storage bound,material/size truth,current Design,copy/companion,reflection,
+    output/fold correspondence,semantic/physical/release or full CI certificate. B covers resolved text.
+  - [x] LOCKSTEP:book/native inventory/live/frontier align;whole0720 retained891;metadata parent closes
+    only local native choices. promotion: declined (existing canonical metadata/geometry boundary).
+  Verification:native18/label1/API12/book11;proof target/history-proof-0721-mirror-metadata/.
+  Commit:STITCHCAD-G1-0721;next bounded fresh-output manifest,copy/semantic policy still owned.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest`
   Status: `pending`
   Goal:bounded fresh Piece/edge/point identity/output-role manifest and complete source-contour/

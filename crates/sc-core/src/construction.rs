@@ -38,11 +38,13 @@ pub use join::{
 };
 mod mirror;
 pub use mirror::{
-    BoundMirrorPieceCopy, BoundMirrorPieceCutPolicy, MirrorAxis, MirrorAxisDependency,
-    MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError, MirrorPieceCutPolicy,
-    MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
-    MirrorPieceEdgeLocation, MirrorPieceEdgeSource, MirrorPieceFoldIntent, MirrorPieceSourceError,
-    MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
+    BoundMirrorPieceCopy, BoundMirrorPieceCutPolicy, BoundMirrorPieceMetadata, MirrorAxis,
+    MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError,
+    MirrorPieceCutPolicy, MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
+    MirrorPieceEdgeLocation, MirrorPieceEdgeSource, MirrorPieceFieldIntent, MirrorPieceFoldIntent,
+    MirrorPieceMetadataError, MirrorPieceMetadataLimits, MirrorPieceMetadataPolicy,
+    MirrorPieceMetadataRefusal, MirrorPieceSourceError, MirrorPieceSourceLimits,
+    MirrorPieceSourceRefusal,
 };
 mod offset;
 pub use offset::{

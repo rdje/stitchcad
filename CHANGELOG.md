@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0720 — require explicit mirror result cut policy
+## STITCHCAD-G1-0721 — choose mirror result fields and derive print metadata
 
-- Explicit canonical quantity/mirroring/fold/cutting-side fields replace inferred source defaults.
-- Positive/even-pair/source-fold checks preserve actual request/source and original fold attribution.
-- Native13/API9/book10,focused lint/fmt/build/render and exact history890/source fixture pass.
-- No new Piece/copy identity,companion reciprocity,reflected edge,physical or sewing proof claimed.
+- Explicit preservation/replacement retains actual material/layer/label values and canonical print data.
+- Whole resolved UTF-8 byte allowance precedes shared label/material completeness checks.
+- Native18/label1/API12/book11 and focused lint/fmt/build/render/history891 checks pass.
+- Native metadata choices close;fresh manifest,copy/companion,semantic and actual geometry proof remain.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

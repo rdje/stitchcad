@@ -117,6 +117,20 @@ pub enum LabelField {
     Colorway,
 }
 
+impl LabelText {
+    // One local completeness rule for Piece birth and proposed drafting metadata.
+    pub(crate) fn first_incomplete_field(&self) -> Option<LabelField> {
+        [
+            (LabelField::Name, &self.name),
+            (LabelField::Size, &self.size),
+            (LabelField::Fabric, &self.fabric),
+            (LabelField::Colorway, &self.colorway),
+        ]
+        .into_iter()
+        .find_map(|(field, text)| text.trim().is_empty().then_some(field))
+    }
+}
+
 /// Complete label view, using the cut plan's authoritative quantity, mirroring and fold state.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct PrintedLabel<'a> {
@@ -316,15 +330,8 @@ impl Piece {
                 return Err(PieceError::FoldNotOnBoundary { edge: *edge });
             }
         }
-        for (field, text) in [
-            (LabelField::Name, &definition.label.name),
-            (LabelField::Size, &definition.label.size),
-            (LabelField::Fabric, &definition.label.fabric),
-            (LabelField::Colorway, &definition.label.colorway),
-        ] {
-            if text.trim().is_empty() {
-                return Err(PieceError::IncompleteLabel { field });
-            }
+        if let Some(field) = definition.label.first_incomplete_field() {
+            return Err(PieceError::IncompleteLabel { field });
         }
         if !definition.material.has_required_reason() {
             return Err(PieceError::UnexplainedMaterial);
