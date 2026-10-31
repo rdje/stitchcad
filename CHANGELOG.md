@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0748 — require explicit walk field sharing and retained revisions
+## STITCHCAD-G1-0749 — require complete native walk evidence requests
 
-- Explicit single/coalesce and new/unchanged/revised fields cover all present roles under E+2F.
-- Common fields escape after every occurrence agrees on actual Piece,anchor and all profiles.
-- Two actual copies may share one pattern mark proposal;retained revisions preserve the prior Piece.
-- Prior objects stay immutable;currentness,physical effects and authorized replacement stay owed.
-- Native7+6/API4/book4,lint/fmt/build/map/render pass0;old kernels/tests/helpers/fences and922 spans exact.
+- All ten explicit current/history/canonical/repair/sewing/profile/copy/authority scopes stay mandatory.
+- Actual complete field/identity/source parents and original provider-request fields remain borrowed.
+- Shared/zero provider ids or fewer semantic groups remove no obligation;no evidence verdict is inferred.
+- Native3+7/API4/book5,lint/fmt/build/map/render pass0;old kernels/tests/helpers/fences and923 spans exact.
+- Actual current Design,reservation,canonical effects,geometry,physical suitability and publication stay owed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

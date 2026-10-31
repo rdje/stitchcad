@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — explicit walk field sharing and retained revisions
+## _(2026-10-31 UTC)_ — require complete native walk evidence requests
 
-0748 requires explicit SingleOccurrence/CoalesceIdentical and NewRequested/RetainUnchanged/ReviseRetained. CheckedE+2F and M/E/F/W quotas precede operation/policy/source-order checks. Every occurrence agrees on actual Piece,anchor and all profiles before common field views escape.
-Retained identity stays on its prior Piece;unchanged fields compare exactly,revision proposes requested anchor/profiles. Prior objects stay immutable. Two copies of one Piece can share one identity;different owners/anchors/any of six profiles refuse. No geometry/all-copy suitability accepted.
-Native7+6/API4/identity book4,selected lint/fmt/build/map/render pass0. Old kernels/tests/helpers/three fences,whole0747 spans922 and older31219B notes base exact0. Proof target/history-proof-0748-walk-field-sharing/;no canonical Notch,currentness,global reserve or atomic effect manufactured.
-Promotion: declined (existing explicit identity/field policy). Mandatory evidence requests next,then native checkpoint. Actual Design/history/private reserve,correspondence/differential/ease/profile/all-copy/authority effects and full integration remain owed. G1still6/18/G0 unapproved.
+0749 binds every explicit context/effect source to the actual complete field/identity/assignment/copy/role/source owner. Fixed ten scopes cover currentness,history,canonical Notches,visible repairs,correspondence,differential,ease/stops,profiles,all-copy effects and authoring authority.
+Shared/zero source ids remain ordinary references;all ten original fields/scopes persist. Actual provider existence/results,global reserve/history,current Design,geometry,physical suitability and atomic effects remain mandatory execution work. Constant native request association allocates nothing.
+Native3+7/API4/identity book5,selected lint/fmt/build/map/render pass0. Old kernels/tests/helpers/four fences,whole0748 spans923 and older31219B notes base exact0. Initial export delimiter corrected;final check0. Proof target/history-proof-0749-walk-evidence/.
+Promotion: declined (existing requested-evidence boundary). Native walk checkpoint next;actual Design/history/private reserve,canonical Notch/revision/provider/geometry/all-copy/authority effects and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

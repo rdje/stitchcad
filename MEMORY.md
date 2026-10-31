@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0748;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.walk.outputs.requirements in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32 nodes complete;walk manifest/field/sharing choices complete;evidence requests next.
-- Walk explicit single/coalesce policy proves common actual Piece/anchor/all profiles under E+2F.
-  RetainUnchanged checks prior fields;ReviseRetained proposes anchor/profiles on same Piece,not replacement.
-  Native13/API4/identity book4/lint/fmt/build/map/render pass;proof target/history-proof-0748-walk-field-sharing/.
+- Latest unit:STITCHCAD-G1-0749;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.walk.outputs.checkpoint in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32 nodes complete;walk copy/roles/manifest/field/sharing/evidence requests implemented.
+- Walk evidence requires ten distinct current/history/canonical/repair/correspondence/differential/
+  ease/profile/all-copy/authority scopes. Shared/zero ids skip none;provider acceptance stays owed.
+  Native10/API4/identity book5/lint/fmt/build/map/render pass;proof target/history-proof-0749-walk-evidence/.
 - Mirror known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.

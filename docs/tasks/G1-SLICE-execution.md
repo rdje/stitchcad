@@ -893,20 +893,20 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0747 explicit identity choices;[whole scope/proofs](../history/stitchcad-devnotes-part922.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.sharing`
   Status: `done`
-  Goal:explicit exact mark sharing and unchanged/revised retained-field proposals.
-  - [x] ISSUE:grouping alone accepts no shared fields or retained revision.
-  - [x] ROOT CAUSE (walk fields):actual copy/Piece/Notch contracts reviewed;
-    checkedE+2F then M/E/F/W,operation/policy/source-order checks;rc=0.
-  - [x] FIX:single/coalesce opt-in;exact Piece/anchor/profiles;same-Piece retained revisions.
-  - [x] ADDRESSED (walk fields):cargo test --test walk_notch_field_contract
-    --test walk_notch_identity_plan_contract:7+6 pass;rc=0;full commands in receipt.
-  - [x] NO REGRESSION (walk fields):API4/book4,lint/fmt/build/map/render;
-    old kernels/tests/helpers/three fences,922 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing explicit identity/field policy).
-  Proof:target/history-proof-0748-walk-field-sharing/;Commit:STITCHCAD-G1-0748.
+  Goal:0748 explicit field/sharing proposals;[whole scope/proofs](../history/stitchcad-devnotes-part923.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.requirements`
-  Status: `pending`
-  Goal:mandatory currentness/correspondence/differential/ease/profile/all-copy/authority evidence.
+  Status: `done`
+  Goal:all ten explicit required evidence-source scopes on actual native walk fields.
+  - [x] ISSUE:field agreement supplies no provider/currentness/effect/authority verdict.
+  - [x] ROOT CAUSE (walk evidence):actual walk/copy/Notch/reserve contracts reviewed;
+    ten distinct original scopes stay mandatory with shared/zero source ids;rc=0.
+  - [x] FIX:complete explicit context/effect policy;actual complete field/source parents.
+  - [x] ADDRESSED (walk evidence):cargo test --test walk_notch_evidence_contract
+    --test walk_notch_field_contract:3+7 pass;rc=0;full commands in receipt.
+  - [x] NO REGRESSION (walk evidence):API4/book5,lint/fmt/build/map/render;
+    old kernels/tests/helpers/four fences,923 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing requested-evidence boundary).
+  Proof:target/history-proof-0749-walk-evidence/;Commit:STITCHCAD-G1-0749.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.checkpoint`
   Status: `pending`
   Goal:close only native walk declarations after focused family checks;actual effects stay owned.

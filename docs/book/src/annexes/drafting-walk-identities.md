@@ -270,3 +270,59 @@ sewing copies. Exact field agreement therefore grants no all-copy suitability or
 certificate. Complete current Design/registry/history,private reserve/nonreuse,visible repair,
 correspondence/differential/ease,profile resolution and all-copy/authority evidence remain mandatory
 before canonical construction or atomic publication. Native policy agreement executes no edit.
+
+## Mandatory walk evidence requests
+
+`AdmittedWalkNotchFields::require_evidence` binds a complete `WalkNotchEvidencePolicy` to the
+actual field/identity/attribution/copy/role/source context. This creates `RequiredWalkNotchEvidence`,
+an authentic association of pending obligations. It accepts no provider result and performs no
+registry lookup,geometry work,canonical Notch construction or edit.
+
+| Mandatory scope | Evidence still required from execution |
+| --- | --- |
+| `CurrentOwnership` | Actual complete current Design/revision,graph,plan,Pieces,ledger and semantic registries |
+| `IdentityHistory` | Global issued/nonreused identities,private reservation and retained role/entity history |
+| `CanonicalNotches` | Canonical birth/revision,prior holder preservation and complete result semantics |
+| `VisibleRepairs` | All affected consumers,held references,ambiguity choices,gaps and visible repairs |
+| `Correspondence` | Actual paired source positions and physical sewing correspondence |
+| `Differential` | Actual measured lengths and signed differential under declared error budgets |
+| `EaseAndStops` | Original copy-addressed direction,ease distribution,stops/turns and conservation |
+| `Profiles` | Style,sample/production dimensions and encoding resolved with actual profile evidence |
+| `AllCopyEffects` | Every affected pattern copy and its semantic/sewing neighbours and effects |
+| `AuthoringAuthority` | Actual authoring authority,selected-holder repair and atomic publication/history |
+
+Four source fields are explicit in `WalkNotchContextSources`;six in `WalkNotchEffectSources`.
+`WalkNotchEvidencePolicy::new` requires both complete records. There are no optional or defaulted
+scopes. `context_sources()` and `effect_sources()` borrow the actual embedded records;
+`source(kind)` lends the actual original requested identity field,not a resolved provider.
+
+```rust
+use sc_core::{construction::*,ontology::EntityId};
+let source=EntityId::from_bits(0);
+let policy=WalkNotchEvidencePolicy::new(
+    WalkNotchContextSources::new(source,source,source,source),
+    WalkNotchEffectSources::new(source,source,source,source,source,source),
+);
+fn require<'a>(fields:&'a AdmittedWalkNotchFields<'a>,policy:&'a WalkNotchEvidencePolicy)
+    ->RequiredWalkNotchEvidence<'a> {
+    fields.require_evidence(policy)
+}
+assert_eq!(*policy.source(WalkNotchEvidenceKind::AllCopyEffects),source);
+```
+
+Zero is an ordinary source value,not an absent/satisfied sentinel. Shared values also leave every
+field and scope distinct. `requirements()` returns all ten obligations in the table's fixed order,
+with exact-size forward/reverse traversal. Each item lends its actual complete `context()`,distinct
+`kind()` and original `source()` field. `fields()` and `policy()` retain the same actual complete
+parents. Borrowing and fixed ten-item traversal take constant work/auxiliary space and allocate
+nothing;this bound covers the native request association,not future provider execution.
+
+Two shared field groups covering four original requests still require all ten scopes. One provider
+may eventually serve several scopes,but its existence or success cannot be inferred from equal
+ids. Retaining prior marks,unchanged fields,unlisted proposed ids or exact group agreement discharges
+none of these obligations. Registry completeness and all-copy effects include unselected copies,
+other sewing neighbours and consumers of revised prior marks;the two selected sides are no census.
+
+Actual source/currentness checks,global private-reserve/nonreuse,Notch construction/revision,
+profile and geometry providers,visible repair,atomic execution and broader integration remain
+separately owned. This native request association is not an execution-readiness or release token.
