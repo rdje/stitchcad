@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0740 — bind actual walk physical-copy and pattern owners
+## STITCHCAD-G1-0741 — admit distinct semantic-notch role metadata
 
-- Whole C/I/I+3C precede canonical actual inventory checks and original A/B identity lookup.
-- Actual copy and pattern owners are cached;shared Piece ownership supplies no mark coalescing.
-- Original pairs,profile bindings,span/copy/Piece definitions and authored orders remain unchanged.
-- Native10/API3/walk book1 and focused lint/fmt/build/map/render/history913/914 checks pass.
-- Bounded walk-output chapter added;typed roles and explicit semantic sharing policies follow.
+- Typed notch catalogue/admitted/member owners reuse bounded raw metadata without point/edge proof conversion.
+- Whole D/A/key-byte admission retains authentic original fields,orders and inactive definitions.
+- Local role tags create no semantic Notch EntityId,PointRef or EdgeRef;empty/inactive states remain metadata.
+- Native8/API8/walk book2 and focused lint/fmt/build/map/render/history915 checks pass.
+- Typed role history and actual walk binding/assignment/sharing/evidence remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

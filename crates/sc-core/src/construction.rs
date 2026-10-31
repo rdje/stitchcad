@@ -95,6 +95,12 @@ pub use offset::{
     OffsetSide,
 };
 mod edge_output_roles;
+mod notch_output_roles;
+pub use notch_output_roles::{
+    ActiveNotchOutputRole, AdmittedNotchOutputRoleCatalog, NotchOutputRoleCatalog,
+    NotchOutputRoleCatalogError, NotchOutputRoleCatalogLimits, NotchOutputRoleCatalogRefusal,
+    NotchOutputRoleDefinition,
+};
 mod point_output_roles;
 pub use point_output_roles::{
     ActivePointOutputRole, AdmittedPointOutputRoleCatalog, AdmittedPointOutputRoleTransition,

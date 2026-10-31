@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0740;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.walk.outputs.roles in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32 nodes complete;walk actual copy/pattern association complete;typed roles next.
-- Walk actual copy inventory caches real A/B CutCopy/Piece under whole C/I/I+3C;shared pattern
-  infers no coalescing. Native10/API3/walk book1/lint/fmt/build/map/render pass;proof target/history-proof-0740-walk-copy-context/.
-  Mirror80+80/source d2126ec5 remains target/history-proof-0739-mirror-checkpoint/;actual execution pending.
+- Latest unit:STITCHCAD-G1-0741;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.walk.outputs.roles.transition in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32 nodes complete;walk copy/pattern and typed notch catalogue complete;role history next.
+- Semantic-notch catalogues/members stay distinct from point/edge proofs;raw metadata aliases only.
+  Native8/API8/walk book2/lint/fmt/build/map/render pass;proof target/history-proof-0741-notch-role-catalogue/.
+  Walk copy context complete;mirror80+80 remains target/history-proof-0739-mirror-checkpoint/;execution pending.
 - Known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.

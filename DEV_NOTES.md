@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind actual walk physical-copy and pattern owners
+## _(2026-10-31 UTC)_ — admit distinct semantic-notch role metadata
 
-0740 admits whole C/I/I+3C before canonical CutPlan validation against actual PieceInventory,then caches original A/B copies and actual pattern owners by identity. Temporary proof drops;original graph/span/pairs remain the actual parent.
-Distinct copies sharing one Piece,MirroredPairs orientation and disjoint self-seams remain explicit. Shared pattern identity supplies no mark coalescing,anchor/profile equivalence,currentness or geometric correspondence;future native output slices own these policies.
-Native5+5/API3/walk book1,selected lint/fmt/build/map/render pass0;old kernels and shared fixture/test bodies retained,all old input book fences unchanged. Summary120 old rows/order retained;whole0739 spans913/whole0017 protocol914 exact0 and older31219B notes base retained.
-Promotion: declined (existing copy/holder boundary). Typed semantic-notch roles next. Actual held/current Design/global issuance/profile/geometry/all-copy effects and atomic execution remain owed. G1still6/18/G0 unapproved.
+0741 adds distinct raw/admitted/member notch catalogue owners through private composition of the published shared metadata kernel. Raw definition/limit/refusal aliases carry no membership proof;no public conversion yields point/edge witnesses.
+Whole D/A/key bytes precede indexes;authentic original owners/fields/order and inactive definitions survive. Local tags name semantic roles,not Notch EntityIds or PointRef/EdgeRef outputs. Byte-comparison costs remain in the documented work bound.
+Native3+5/API8/walk book2,selected lint/fmt/build/map/render pass0;shared/point/walk kernels and original point tests unchanged. Prior walk Rust fence retained;whole0740 spans915 exact0 and older31219B notes base retained.
+Promotion: declined (existing raw metadata/private witness rule). Typed role-history transition next,then actual walk binding/assignments/sharing/evidence. No global issuance/history completeness/currentness/geometry/publication proof. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

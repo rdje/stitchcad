@@ -860,20 +860,29 @@ retain their complete task branch,original goals and proof links in the bounded 
   correspondence/differential/ease/profile truth and atomic edits stay G3/G4/bus/.5f.4.geometry.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.copies`
   Status: `done`
-  Goal:actual complete plan/inventory and both cached side copies/pattern owners.
-  - [x] ISSUE:span-side physical ids alone cannot establish actual pattern owners.
-  - [x] ROOT CAUSE (walk copies):canonical CutPlan/Inventory contracts reviewed;
-    whole C/I/I+3C before scans;rc=0.
-  - [x] FIX:actual whole association and authentic A/B copy/Piece caches;no mark coalescing.
-  - [x] ADDRESSED (walk copies):cargo test --test walk_copy_inventory_contract
-    --test walk_edit_contract:5+5 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (walk copies):API3/book1,lint/fmt/build/map/render;
-    old fixture/test bodies/book fences and913/914 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing copy/holder boundary).
-  Proof:target/history-proof-0740-walk-copy-context/;Commit:STITCHCAD-G1-0740.
+  Goal:0740 actual side copy/pattern owners;[whole scope/proofs](../history/stitchcad-devnotes-part915.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.roles`
-  Status: `pending`
+  Status: `in_progress`
   Goal:distinct bounded semantic-notch role metadata and actual walk operation binding.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.roles.catalog`
+  Status: `done`
+  Goal:distinct bounded semantic-notch catalogue/member metadata,without entity issuance.
+  - [x] ISSUE:raw shared role values cannot supply notch-domain membership.
+  - [x] ROOT CAUSE (notch roles):published shared/point metadata APIs reviewed;
+    whole D/A/key-byte bounds and authentic private parents retained;rc=0.
+  - [x] FIX:typed notch catalogue/admitted/member wrappers;raw data aliases only.
+  - [x] ADDRESSED (notch roles):cargo test --test notch_output_role_catalog_contract
+    --test point_output_role_catalog_contract:3+5 pass;rc=0;full invocation in receipt.
+  - [x] NO REGRESSION (notch roles):API8/book2,lint/fmt/build/map/render;
+    shared/point/walk kernels and prior book fence/915 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing raw metadata/private witness rule).
+  Proof:target/history-proof-0741-notch-role-catalogue/;Commit:STITCHCAD-G1-0741.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.roles.transition`
+  Status: `pending`
+  Goal:preserve supplied prior notch-role definitions under complete bounded transition metadata.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.roles.binding`
+  Status: `pending`
+  Goal:bind actual walk copy context and typed role catalogue under whole D/A/key-byte limits.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest`
   Status: `pending`
   Goal:complete original pair/side-to-output assignment and explicit semantic identities.

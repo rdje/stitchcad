@@ -2,8 +2,8 @@
 
 Deliberate [walk-edit inputs](drafting-edit-inputs.md#native-deliberate-walk-edit-requests) retain
 original A/B anchors,profile bindings and the actual canonical SewingGraph/span. They request two
-mark occurrences per pair,without asserting two new semantic notch identities. The native output
-family begins by associating actual physical copies and pattern Pieces. Typed roles,complete
+mark occurrences per pair,without asserting two new semantic notch identities. Actual physical
+copy/pattern association and distinct declared notch-role metadata are available below. Complete
 assignments,explicit mark sharing/coalescing and evidence requirements follow in owned slices.
 Actual marks,walking correspondence/differential/ease,profile truth and atomic edits remain G3/G4/bus.
 
@@ -68,3 +68,58 @@ it. Neither association nor shared ownership establishes current Design/graph/le
 held-anchor liveness or owned intervals,global namespace/issuance,mark-sharing permission,all-copy
 consumer effects,geometric correspondence,profile values or publication authority. Original pairs,
 profiles,span direction/ease/stops,plans,Pieces and held objects remain unchanged.
+
+## Distinct semantic-notch role catalogue
+
+`NotchOutputRoleCatalog` retains an explicit operation,all supplied role definitions and a separate
+ordered active-tag list. Each `NotchOutputRoleDefinition` pairs a persistent LocalTag with a validated
+MachineToken key. These tags name semantic output roles;they are not Notch EntityIds,PointRefs or
+EdgeRefs. No catalogue or membership call allocates an entity id,constructs a Notch or decides how
+many distinct semantic marks the original requested occurrences require.
+
+| API | Meaning |
+| --- | --- |
+| `NotchOutputRoleCatalog`, `NotchOutputRoleDefinition` | Whole raw semantic-role metadata and original fields |
+| `NotchOutputRoleCatalogLimits::new(D,A,B)` | Whole definitions,active occurrences and machine-key-byte allowances |
+| `AdmittedNotchOutputRoleCatalog`, `ActiveNotchOutputRole` | Distinct authentic notch catalogue/member owners |
+| `NotchOutputRoleCatalogError`, `NotchOutputRoleCatalogRefusal` | Actual original notch catalogue,policy and first refusal |
+
+```rust
+use sc_core::{construction::*,name::MachineToken,ontology::{EntityId,LocalTag}};
+let raw=NotchOutputRoleCatalog::new(EntityId::from_bits(10),vec![
+    NotchOutputRoleDefinition::new(LocalTag::new(9),MachineToken::new("balance")?)],
+    vec![LocalTag::new(9)]);
+let roles=raw.admit(NotchOutputRoleCatalogLimits::new(1,1,7))
+    .expect("complete local metadata;borrowed errors stay with their catalogue");
+let member=roles.active_role(LocalTag::new(9)).expect("actual active role");
+assert_eq!(member.definition().key().as_str(),"balance");
+assert_eq!(roles.workspace_entries(),4);
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+Private composition reuses the published bounded raw edge-role metadata algorithm. Definition,
+quota and refusal records are aliases shared with point/edge metadata;they carry no membership
+proof themselves. Catalogue,admitted catalogue and active-member types remain distinct. There
+is no public conversion to an admitted point or edge catalogue/member witness. Equal raw tags,
+keys or operation ids cannot reparent an authentic notch member to another equal-looking owner.
+
+Admission checks complete D/A populations and checked2D+2A workspace arithmetic,then D/A/B quotas
+before indexes. Original duplicate-tag precedes duplicate-key checks;active occurrences retain
+original duplicate/undefined diagnostics. These are bounded logical entries,not allocator bytes
+or earlier owned Vec storage. Work is O((D+A+B)log(D+A+2)),including key-comparison byte costs.
+All original input remains available on
+refusal;no accepted prefix escapes. The existing shared kernel and point catalogue are unchanged.
+
+`definition(tag)` lends actual original definitions,including inactive ones. `active_role(tag)`
+and `active_roles()` lend only actual active-tag fields and their associated original definitions;
+iteration follows authored active order and supports reverse traversal. `catalog()`, `index()`,
+`tag()` and `definition()` retain the authentic owner and original field positions;an index never
+supplies a persistent tag or semantic identity. Empty/inactive catalogues are metadata states,
+not an executable empty walk edit,proof of no semantic outputs or permission to retire a role.
+
+For original definitions `[9 balance,2 end,7 latent]` and active `[2,9]`,whole B is16 and workspace10.
+Active iteration gives end then balance,while latent remains an inspectable inactive definition.
+The exact original request fields and all metadata orders survive success/refusal. All supplied
+issued definitions,including inactive ones,remain required input. Actual issued-history completeness,
+current operation kind/Design/global namespace,role transitions,actual walk-parent binding,
+semantic EntityId assignment,mark sharing and geometry/publication remain separate obligations.
