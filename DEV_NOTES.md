@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind actual mirror candidate Piece inventory
+## _(2026-10-31 UTC)_ — bind complete actual mirror candidate CutPlan
 
-0736 bounds whole I then four-form H/R/B before original source equality and canonical result cut/metadata/contour fields. Authentic source/result/inventory/policy borrows retain complete fields/order.
-Actual separate companions resolve by explicit id;inventory birth supplies reciprocity/opposite hands/equal quantity. No ordinal or physical-copy pairing inference;other Piece-content authorization remains execution work.
-Native4+6/API3/copy book4,selected lint/fmt/build/map/render pass0;parent kernels and three old book examples unchanged. Whole0735 task/lesson/changelog909 Git spans exact0;older notes base31219B retained.
-Promotion: declined (existing Piece/cut/effect boundary). Actual candidate CutPlan association next;currentness/global issuance/geometry/whole consumers and publication remain owed. G1still6/18/G0 unapproved.
+0737 bounds whole B/C/I/N/I+3C before scans/allocation;reuses canonical CutPlan constructor against actual inventory because immutable CutPlan retains no birth Piece collection. Temporary proof drops before authentic candidate index.
+Every active result matches exact retained/proposed fields;retirements absent. Every original source/other copy remains exact and present;no retargeting/new unrelated copy or ordinal pairing. Actual parents/order retained.
+Native6+4/API3/copy book5,selected lint/fmt/build/map/render pass0;old kernels and extracted fixture/test bodies exact,whole0736 spans910 exact0. Native copy/companion parents close;semantic evidence next.
+Promotion: declined (existing canonical cut/effect boundary). Current Design/global issuance/unrelated Piece-content authorization/physical pairing/sewing/geometry/atomic publication and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

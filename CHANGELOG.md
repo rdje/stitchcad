@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0736 — bind actual mirror candidate Piece inventory
+## STITCHCAD-G1-0737 — bind complete actual mirror candidate CutPlan
 
-- Whole inventory and complete inspected source/result H/R/B precede original field comparisons.
-- Candidate source is exact;result cut,metadata and ordered contours match the native declaration.
-- Actual reciprocal companion resolves by explicit id;no ordinal or physical-copy pairing inference.
-- Native10/API3/book4 and focused lint/fmt/build/map/render/history909 checks pass.
-- Candidate CutPlan,current Design/global issuance/geometry and atomic effects remain owned.
+- Whole B/C/I/N and checked I+3C precede canonical actual inventory validation and candidate indexing.
+- Every retained/issued result definition matches;retired results are absent;source/other copies stay exact.
+- Actual candidate inventory/plan/records and authored order retained;no ordinal pairing or applied effects.
+- Native10/API3/book5 and focused lint/fmt/build/map/render/history910 checks pass.
+- Native copy/companion association closes;semantic evidence and actual execution remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -1,9 +1,9 @@
 //! Exact bounded candidate source/result fields and actual pair-consistent inventory membership.
 #![allow(clippy::expect_used)]
-#[path = "support/mirror_result_copies.rs"]
+#[path = "support/mirror_copy_inventory.rs"]
 mod common;
-use common::context::edges::metadata::source as sources;
-use common::{with_cut, with_ids};
+use common::copies::{with_cut, with_ids};
+use common::inventory;
 use sc_core::{construction::*, ontology::*};
 fn id(bits: u128) -> EntityId {
     EntityId::from_bits(bits)
@@ -19,72 +19,6 @@ fn proposal() -> MirrorPieceResultCopyManifest {
     )
 }
 fn keep(_: &mut PieceDefinition) {}
-fn inventory(
-    copies: &AdmittedMirrorPieceResultCopies<'_>,
-    source_change: fn(&mut PieceDefinition),
-    result_change: fn(&mut PieceDefinition),
-) -> PieceInventory {
-    let (mut ledger, _) = sources::fixture();
-    let contours = copies.identities().source().context().contours();
-    let identity = contours.coverage().edges().identity();
-    let metadata = identity.roles().metadata();
-    let cut = metadata.cut();
-    let tags = contours
-        .coverage()
-        .edges()
-        .edges()
-        .map(|edge| edge.candidate().tag())
-        .collect::<Vec<_>>();
-    ledger
-        .declare_tagged_edges(id(10), &tags)
-        .expect("explicit fixture registration,not global issuance");
-    ledger
-        .declare_tagged_edges(id(70), &[LocalTag::FIRST])
-        .expect("extra structural fixture edge");
-    let mut source = cut.source().piece().definition().clone();
-    source_change(&mut source);
-    let source = Piece::new(source, &ledger).expect("actual structural candidate source");
-    let mut result = PieceDefinition {
-        id: *identity.piece_id(),
-        boundary: contours.boundary().to_vec(),
-        holes: contours.holes().to_vec(),
-        construction_lines: contours.construction_lines().to_vec(),
-        quantity: *cut.quantity(),
-        mirroring: *cut.mirroring(),
-        cut_on_fold: cut.cut_on_fold(),
-        fold_edges: contours.fold_edges().to_vec(),
-        cutting_side: *cut.cutting_side(),
-        material: metadata.material().clone(),
-        layer_index: *metadata.layer_index(),
-        label: metadata.label().clone(),
-    };
-    result_change(&mut result);
-    let mut other = cut.source().piece().definition().clone();
-    other.id = id(300);
-    other.quantity = 1;
-    other.mirroring = Mirroring::Single;
-    if let Mirroring::PairMember {
-        handedness,
-        companion,
-    } = result.mirroring
-    {
-        assert_eq!(companion, id(300));
-        other.quantity = result.quantity;
-        other.mirroring = Mirroring::PairMember {
-            handedness: match handedness {
-                Handedness::Left => Handedness::Right,
-                Handedness::Right => Handedness::Left,
-            },
-            companion: result.id,
-        };
-    }
-    PieceInventory::new(vec![
-        Piece::new(result, &ledger).expect("structural candidate result"),
-        Piece::new(other, &ledger).expect("actual other/companion"),
-        source,
-    ])
-    .expect("whole pair-consistent candidate inventory")
-}
 
 #[test]
 fn actual_candidate_members_keep_complete_fields_order_and_inspected_counts_for_both_fold_intents()

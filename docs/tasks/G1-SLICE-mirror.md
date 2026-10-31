@@ -80,7 +80,7 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Status: `done`
   Goal:0732 correspondence requests;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part904md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit actual source/result physical-copy policy and complete CutPlan/companion association;
   retain existing copy identities,separate newly issued copies,no ordinal-derived or reused identity.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.source`
@@ -96,24 +96,24 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Status: `done`
   Goal:0735 result-copy intents;[whole scope/proofs](../history/stitchcad-devnotes-part909.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion`
-  Status: `in_progress`
+  Status: `done`
   Goal:actual complete companion/CutPlan association;no ordinal pairing or transfer of source neighbours.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion.inventory`
   Status: `done`
-  Goal:actual candidate inventory;source exact,result canonical,companions by identity.
-  - [x] ISSUE:native intent alone cannot establish actual candidate Piece fields.
-  - [x] ROOT CAUSE (copy inventory):actual Piece/Inventory contracts reviewed;
-    whole I/four-form H/R/B before comparisons;rc=0.
-  - [x] FIX:actual borrowed members,exact fields,identity-selected reciprocal companion.
-  - [x] ADDRESSED (copy inventory):cargo test --test mirror_piece_copy_inventory_contract
-    --test mirror_piece_result_copy_contract:4+6 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (copy inventory):API3/book4,lint/fmt/build/map/render;
-    unchanged parent kernels,909 Git spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing Piece/cut/effect boundary).
-  Proof:target/history-proof-0736-mirror-copy-inventory/;Commit:STITCHCAD-G1-0736.
+  Goal:0736 actual inventory;[whole scope/proofs](../history/stitchcad-devnotes-part910.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion.plan`
-  Status: `pending`
-  Goal:complete actual candidate CutPlan matches proposed result choices and unchanged source/other copies.
+  Status: `done`
+  Goal:actual complete candidate inventory/plan association,exact native and preserved definitions.
+  - [x] ISSUE:CutPlan birth retains no actual candidate Piece collection.
+  - [x] ROOT CAUSE (copy plan):actual canonical CutPlan contract reviewed;
+    whole B/C/I/N/I+3C precedes scans/allocation;rc=0.
+  - [x] FIX:canonical actual inventory check,authentic candidate index,complete exact choices.
+  - [x] ADDRESSED (copy plan):cargo test --test mirror_piece_copy_plan_contract
+    --test mirror_piece_copy_inventory_contract:6+4 pass;rc=0;full invocation in receipt.
+  - [x] NO REGRESSION (copy plan):API3/book5,lint/fmt/build/map/render;
+    original kernels,fixture/test bodies and910 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing canonical cut/effect boundary).
+  Proof:target/history-proof-0737-mirror-copy-plan/;Commit:STITCHCAD-G1-0737.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.semantics`
   Status: `pending`
   Goal:explicit complete semantic/mark/reference/sewing consumer policy and required original source

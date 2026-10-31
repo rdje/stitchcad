@@ -19,6 +19,12 @@ pub use inventory::{
     MirrorPieceCopyInventoryLimits, MirrorPieceCopyInventoryRefusal,
 };
 
+mod plan;
+pub use plan::{
+    BoundMirrorPieceCopyPlan, MirrorPieceCopyPlanError, MirrorPieceCopyPlanLimits,
+    MirrorPieceCopyPlanRefusal,
+};
+
 fn original<'a>(context: &RequiredMirrorPieceCorrespondence<'a>) -> &'a PieceDefinition {
     context
         .contours()

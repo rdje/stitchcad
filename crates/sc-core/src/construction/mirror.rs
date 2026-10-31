@@ -58,12 +58,14 @@ pub use correspondence::{
 mod copies;
 pub use copies::{
     AdmittedMirrorPieceResultCopies, BoundMirrorPieceCopyIdentities, BoundMirrorPieceCopyInventory,
-    BoundMirrorPieceSourceCopies, MirrorPieceCopyIdentityError, MirrorPieceCopyIdentityLimits,
-    MirrorPieceCopyIdentityRefusal, MirrorPieceCopyInventoryError, MirrorPieceCopyInventoryField,
-    MirrorPieceCopyInventoryLimits, MirrorPieceCopyInventoryRefusal, MirrorPieceResultCopyAction,
-    MirrorPieceResultCopyError, MirrorPieceResultCopyIntent, MirrorPieceResultCopyLimits,
-    MirrorPieceResultCopyManifest, MirrorPieceResultCopyRefusal, MirrorPieceResultCopySource,
-    MirrorPieceSourceCopyError, MirrorPieceSourceCopyLimits, MirrorPieceSourceCopyRefusal,
+    BoundMirrorPieceCopyPlan, BoundMirrorPieceSourceCopies, MirrorPieceCopyIdentityError,
+    MirrorPieceCopyIdentityLimits, MirrorPieceCopyIdentityRefusal, MirrorPieceCopyInventoryError,
+    MirrorPieceCopyInventoryField, MirrorPieceCopyInventoryLimits, MirrorPieceCopyInventoryRefusal,
+    MirrorPieceCopyPlanError, MirrorPieceCopyPlanLimits, MirrorPieceCopyPlanRefusal,
+    MirrorPieceResultCopyAction, MirrorPieceResultCopyError, MirrorPieceResultCopyIntent,
+    MirrorPieceResultCopyLimits, MirrorPieceResultCopyManifest, MirrorPieceResultCopyRefusal,
+    MirrorPieceResultCopySource, MirrorPieceSourceCopyError, MirrorPieceSourceCopyLimits,
+    MirrorPieceSourceCopyRefusal,
 };
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.

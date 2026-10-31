@@ -236,3 +236,67 @@ It does not authorize unrelated Piece-content changes,assert current Design owne
 identities,transfer neighbours or sew anything. Complete actual candidate CutPlan association,
 whole consumer/effect evidence and atomic authorized publication remain separate requirements.
 
+## Complete actual candidate CutPlan
+
+`BoundMirrorPieceCopyInventory::bind_cut_plan` checks an actual detached candidate CutPlan against
+that actual whole inventory and all native copy choices. A CutPlan retains immutable copy records,
+not the Piece collection used at birth. Birth against a different collection therefore cannot
+substitute for this association. The canonical `CutPlan::new` contract rechecks copied definitions
+against the actual candidate inventory;the temporary proof is dropped before authentic candidate
+records are indexed. No temporary object becomes the returned plan or an identity-issuance effect.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceCopyPlanLimits::new(B,C,I,N,W)` | Whole before/after copies,inventory,intents and workspace allowances |
+| `BoundMirrorPieceCopyPlan` | Actual complete candidate inventory/plan/native-proposal association |
+| `MirrorPieceCopyPlanError`, `MirrorPieceCopyPlanRefusal` | Actual whole parents,policy and first refusal |
+
+```rust
+use sc_core::{construction::*,ontology::CutPlan};
+fn bind<'a>(inventory:&'a BoundMirrorPieceCopyInventory<'a>,plan:&'a CutPlan,
+    limits:&'a MirrorPieceCopyPlanLimits)
+    ->Result<BoundMirrorPieceCopyPlan<'a>,MirrorPieceCopyPlanError<'a>> {
+    inventory.bind_cut_plan(plan,limits)
+}
+let limits=MirrorPieceCopyPlanLimits::new(100,100,50,100,350);
+assert_eq!(limits.workspace_entries(),350);
+```
+
+Checked I+3C precedes B,C,I,N and workspace quotas,then all scans and allocations. B includes every
+before copy;C includes every actual candidate copy;I includes every actual candidate Piece;N
+includes every original native intent,even Retire. The workspace upper bound covers the canonical
+I-entry Piece map,C-entry copy-id set,C input definitions and at most C output records. That
+transient validation completes and is dropped before the C-entry candidate index is built.
+These are logical entries,not allocator bytes,prior immutable storage or a whole execution budget.
+With B5,C6,I3,N1,the bound is W21;B4,C5,I2,N0 or W20 refuses before an invalid result identity.
+
+Canonical inventory association retains the canonical constructor's error ordering and original
+`CutPlanError`. It checks actual Piece references,copy/Piece namespace collisions,cut quantities,
+authored-only orientations and paired balance for every candidate Piece,including unrelated
+members and companions. A five-copy plan born without result200 refuses when the actual inventory
+requires one result copy. A plan born against other300 as MirroredPairs cannot supply a reflected
+copy when the actual candidate other300 is Single. An extra actual Piece500 also collides with a
+candidate copy500,even if that copy was valid against its different birth collection.
+
+Each actual candidate record then matches an explicit active result choice or an original
+non-result copy. Retain and Issue require the whole original/proposed definition,including
+orientation;Retire must be absent. No unlisted result or new unrelated copy is accepted,and no
+original source/unrelated copy can be retargeted or change orientation. These refusals follow
+candidate authored order. Complete preserved-copy coverage then follows original before-plan
+order;complete active-result coverage follows original native proposal order. No accepted prefix
+escapes. Candidate order may differ:identity and exact fields establish membership,never ordinal.
+
+For old result550 authored/551 reflected and desired quantity2/Single,the explicit choices
+`[Retire551,Issue500 authored,Retain550]` admit a complete candidate containing original source
+copies410/207/900/805,unchanged other333,then500/550. Copy551 is absent;550 retains its complete
+old definition. The source still has its original two authored/two reflected copies. Swapping
+source410/207 orientations preserves counts but refuses changed source fields. Removing other333
+and its Piece from an otherwise canonical candidate still refuses complete preservation.
+
+`inventory()`, `plan()` and `limits()` lend actual whole parents;`copy(id)` returns an actual
+candidate record in O(log(C+2)) work. Admission takes
+O((B+C+I+N)log(B+C+I+K+N+2)) work for K prior indexed identities,with I+3C bounded temporary
+workspace and C retained index entries. Candidate records,original plans and held borrows remain
+unchanged on success and refusal. The complete native copy/companion association is established;
+actual current Design/global reservation,unrelated Piece-content authorization,physical-copy
+pairing,neighbour/sewing effects,reflection geometry and atomic publication remain execution work.
