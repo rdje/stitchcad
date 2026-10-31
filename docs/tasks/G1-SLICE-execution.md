@@ -906,28 +906,29 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   a candidate merely to satisfy the nonempty primitive. Actual supported domain/effect remains G2/G3.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.metadata`
   Status: `done`
-  Goal:borrow original canonical Piece metadata and explicit NoFold/retained/derived original-fold
-  attribution;require fold/all-copy evidence sources,no actual geometry/currentness certificate.
-  - [x] ISSUE:contours alone cannot retain canonical cut/label/fold metadata or all-copy obligations.
-  - [x] ROOT CAUSE (slash Piece metadata):public Piece/CutPlan/ontology/source-boundary contracts
-    read;actual cut-four paired metadata and original fold provenance cases checked,rc=0.
-  - [x] FIX:authentic borrowed source fields/derived print view;fold state,actual candidate/outer
-    membership/original-fold source admission,typed whole-context refusals and required evidence.
-  - [x] ADDRESSED (slash Piece metadata):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test slash_spread_piece_metadata_contract →4 pass,rc=0;exact metadata fields,
-    retained/derived fold and state/unknown/hole/lost-fold/bridge/other-source refusals;source unchanged.
-  - [x] NO REGRESSION (slash Piece metadata):boundary2/privacy2/actual metadata book1/strict
-    selected clippy/fmt/book/render/diff and archive881 four exact Git spans pass,rc=0. Whole old
-    slash chapter prefix and all prior SUMMARY links/order retained;new chapter within120 lines.
-    Nearest-heading retention preserves31219B older notes;whole0065 protocol/heading retained.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing canonical metadata owner).
-  Verification:native6/rustdoc3;Commit:STITCHCAD-G1-0712. Next .semantics.copies;actual complete
-  CutPlan binding/all-copy effects,effect/zero outcomes and actual G2/Design/bus proof remain owned.
+  Goal:0712 metadata;[whole scope/proofs](../history/stitchcad-devnotes-part882.md).
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.copies`
-  Status: `pending`
-  Goal:actual complete CutPlan borrow and whole-copy quota before target population/orientation;
-  retain all target copy ids/order/orientations and all-copy semantic/sewing obligations,no new ids.
+  Status: `done`
+  Goal:actual complete CutPlan borrow/whole C quota,target population/orientation association;
+  retain all actual target copy ids/order/orientations,no allocation,new id or current Design proof.
+  - [x] ISSUE:source quantity cannot replace actual distinct physical-copy identities.
+  - [x] ROOT CAUSE (slash physical copies):published CutPlan/metadata/D57 scopes read;actual
+    reordered paired ids,unrelated whole population and incompatible birth metadata checked,rc=0.
+  - [x] FIX:whole C quota before scans;first unexpected reflection,complete quantity,then pair
+    balance;authentic original copy borrows and actual whole metadata/plan/policy on refusal.
+  - [x] ADDRESSED (slash physical copies):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test slash_spread_copy_contract →3 pass,rc=0;all actual ids/orientations/order,
+    unrelated C allowance,quantity/pair/Single/PairMember refusals and source/ledger nonmutation.
+  - [x] NO REGRESSION (slash physical copies):metadata4/privacy2/actual metadata book2/selected
+    strict clippy/fmt/book/render/diff/archive882 three exact spans and helper proof pass,rc=0.
+    Whole helper differs only by pub/import wiring;old test suffix exact. Iterator captures actual
+    source id value and original plan borrow,fixing E0700 without weakening lifetimes/suppressions.
+    Prior actual book example and31219B older live notes exact;no all-copy effect/currentness proof.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing copy identity/lifetime boundary).
+  Verification:native7/rustdoc4;Commit:STITCHCAD-G1-0713. Next .semantics.effect;actual current
+  Design/namespace/companion/copy-sewing effects,G2 geometry and atomic publication remain owned.
+
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.effect`
   Status: `pending`
   Goal:attributed fullness derivation requirements from original inputs,canonical intake distinction

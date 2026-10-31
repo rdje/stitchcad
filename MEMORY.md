@@ -1,15 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0712;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.copies
-  — activate actual complete CutPlan borrow/whole C quota,target quantity/orientation and all-copy
-  ids/order preservation on the actual bound metadata. No new copy ids or currentness certificate.
+- Latest unit:STITCHCAD-G1-0713;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.effect
+  — explicit attributed fullness/effect derivation requirements from original inputs,canonical intake
+  distinction and every actual copy/semantic/sewing consumer. Activate/split before code;zero follows.
+- Native actual CutPlan binding checks whole C before target orientation/quantity/pair balance;
+  all actual target copy borrows/ids/order preserved,no allocation/new ids/currentness certificate.
+  Native7/rustdoc4/lint/fmt/book/render/history882 pass. Shared whole boundary helper/body proof:
+  target/history-proof-0713-metadata-fixture/;old metadata tests and31219B older notes exact.
 - Native metadata borrows all canonical Piece fields/derived print view;explicit NoFold/retained or
   Source-derived outer original-fold attribution. Evidence requests retained,not accepted proof.
-  Native6/rustdoc3/lint/fmt/book/render/history881 four spans pass;whole0065 protocol retained.
-- New drafting-slash-piece-contracts.md companion5222B/76lines;actual metadata example1. Original
+  0712 native6/rustdoc3 passed;whole scope/lesson/changelog now882;whole0065 protocol retained881.
+- New drafting-slash-piece-contracts.md companion8719B;actual metadata/copy examples2. Original
   slash chapter whole prefix intact with link. SUMMARY120/cap120,all old links/order+new direct entry.
-- Semantics remains active:copies/effect/outcome/closure owned. Explicit zero/no-new-edge path must
+- Semantics remains active:effect/outcome/closure owned. Explicit zero/no-new-edge path must
   not fabricate candidates. Native reference-disposition closes with focused checks only.
 - Boundary requirement binds explicit domain/whole source-interval coverage plus bridge incidence/
   closure or complete trim arrangement/unique boundary selection. Actual policy mismatch refuses;

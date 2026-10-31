@@ -6,6 +6,10 @@ use crate::{
 };
 use core::fmt;
 mod contours;
+mod copies;
+pub use copies::{
+    BoundSlashSpreadCopies, SlashSpreadCopyError, SlashSpreadCopyLimits, SlashSpreadCopyRefusal,
+};
 mod metadata;
 pub use metadata::{
     BoundSlashSpreadPieceMetadata, SlashSpreadFoldIntent, SlashSpreadPieceMetadataError,

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — preserve canonical slash Piece metadata and explicit fold attribution
+## _(2026-10-31 UTC)_ — preserve every actual slash physical-copy identity
 
-0712 borrows source identity,quantity/mirroring/cutting-side/material/layer/label and derived print fields without clones or second authority. Explicit NoFold/retained/derived intent preserves source fold state;derived output must be outer Source provenance from the original fold. Evidence remains required.
-Native4 verifies exact cut-four paired fields/material reason/labels,retained and derived folds,state/unknown/hole/lost-fold/bridge/other-source refusals and unchanged original Piece/ledger. Candidate source subrange is attribution only;actual fold coverage/geometry/currentness and all-copy effects stay owed.
-Native6/privacy2/actual metadata book1/strict selected lint/fmt/book/render/diff/history881 four exact spans pass. New5222B companion/all old SUMMARY links/order retained within120;old slash chapter prefix exact. Whole0711/0065 protocol and heading retained;all31219B older notes exact. D372 persists.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing canonical metadata owner). Next actual CutPlan/all-copy binding,then effect/zero outcomes/native closure;actual G2/Design/bus/full verification remain owned. No new Piece/copy id or physical fold proof;PNT continues.
+0713 binds actual CutPlan after whole C allowance,including unrelated copies;target orientation/quantity/pair association uses inherited canonical metadata. All target copy ids/definitions/order remain borrowed;reverse/reordered traversal supplies no identity. No allocation,new copy id or all-copy effect.
+Native3 covers paired reorder,unrelated whole quota,quantity/pair/Single/PairMember incompatibility and no mutation. Matching population does not prove current Design/namespace/companion or semantic/sewing ownership. Iterator captures source id value plus original plan borrow,fixing E0700 without suppression.
+Native7/privacy2/actual metadata book2/selected strict clippy/fmt/book/render/diff/history882 three spans/helper proof pass. Whole boundary helper moved with only pub/import wiring;old metadata test suffix and31219B older notes exact. Protected target/history-proof-0713-metadata-fixture/. D372 persists.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing copy identity/lifetime boundary). Next attributed effect,then zero/no-new-edge/native closure;actual G2/current Design/copy-sewing effects/authority/publication and full verification stay owned. PNT continues.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

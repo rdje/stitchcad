@@ -7,12 +7,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0712 — preserve canonical slash Piece metadata and explicit fold attribution
 
-- Borrow exact source metadata/derived print fields;explicitly retain or attribute the original fold.
-- Refuse changed fold state,missing outer fold and unrelated/bridge provenance;require actual evidence.
-- Native6/rustdoc3/lint/fmt/book/render/diff/history881 pass;new companion keeps all old navigation.
-- Actual CutPlan/copy effects,effect/zero outcomes and actual geometry/currentness/authority remain owned.
+## STITCHCAD-G1-0713 — preserve every actual slash physical-copy identity
+
+- Bind whole actual CutPlan under explicit C quota,target orientation/quantity/pair association.
+- Keep every actual target copy id/orientation/order;refuse incompatible populations without new ids.
+- Native7/rustdoc4/lint/fmt/book/render/diff/history882/shared-helper proof pass;old test bodies exact.
+- Attributed effect/zero outcomes and actual current Design/copy-sewing/G2/authority proof remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
