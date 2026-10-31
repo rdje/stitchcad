@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — index actual supplied existing walk Notches
+## _(2026-10-31 UTC)_ — exclude scoped known walk semantic identity references
 
-0745 bounds whole provided K before id scans/allocation,then indexes actual canonical Notch objects and rejects first repeated semantic id even for equal objects. Original collection order,ids,born owners,held anchors/profile fields and complete attribution parent remain unchanged.
-Lookup lends actual objects by stable id;unlisted is not globally absent/fresh. Empty input preserves all requested occurrences. Unrelated provided objects keep their actual owners,without retargeting or current Design/registry/retention/liveness certification.
-Native4+5/API3/identity book1,selected lint/fmt/build/map/render pass0;parent kernels/tests/fixtures and five walk output fences unchanged. Summary120 prior rows/order retained;whole0744 spans919 exact0 and older31219B notes base retained.
-Promotion: declined (existing scoped membership/currentness rule). Bounded known identity exclusions next,then host identity/retention proposals. No client new-id request,reservation/issuance/sharing/geometry/all-copy effects/atomic publication/full integration proof. G1still6/18/G0 unapproved.
+0746 checks complete C/I/N/K,then whole H before child lengths,R before creator reads,and checked C+2I+R+14N+9K+3 before id scans/allocation. Set covers supplied copy/Piece/creator/Material refs,original mark creators/six profiles,provided Notch id/owner/creator/six profiles,and operation/graph/selected span.
+Exhaustive profile-field patterns couple6-id accounting to canonical records. Repeated fields consume full allowances;set keys may deduplicate. False lookup means scoped unlisted,not global freshness,kind consistency/history/reservation or reuse authority;all actual parents remain borrowed.
+Native4+4/API3/identity book2,selected lint/fmt/build/map/render pass0;C2/I2/H0/R3/N1/K2 givesW44/distinct24;hole/fold/Materials H1/R5/W46/distinct26;unrelatedK3 W53/distinct33. Old kernels/tests/fixtures/prior fence and whole0745 spans920 exact0;older31219B notes base retained.
+Promotion: declined (existing scoped known-id/nonreuse rule). Explicit host identity/retention plan next;actual current namespace/history/private-reserve/sharing/provider/geometry/all-copy effects/atomic publication/full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

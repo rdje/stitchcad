@@ -192,12 +192,13 @@ mod walk;
 pub use walk::{
     AdmittedWalkNotchAssignments, AdmittedWalkSeamEdit, BoundWalkBalancePair,
     BoundWalkCopyInventory, BoundWalkExistingNotches, BoundWalkNotchAssignment,
-    BoundWalkNotchRoles, BoundWalkSeamEdit, WalkBalanceNotch, WalkBalancePair,
-    WalkCopyInventoryError, WalkCopyInventoryLimits, WalkCopyInventoryRefusal,
+    BoundWalkNotchIdentityExclusions, BoundWalkNotchRoles, BoundWalkSeamEdit, WalkBalanceNotch,
+    WalkBalancePair, WalkCopyInventoryError, WalkCopyInventoryLimits, WalkCopyInventoryRefusal,
     WalkEditAdmissionError, WalkEditAdmissionRefusal, WalkEditBindingError, WalkEditBindingRefusal,
     WalkEditLimits, WalkExistingNotchError, WalkExistingNotchLimits, WalkExistingNotchRefusal,
     WalkNotchAssignmentError, WalkNotchAssignmentLimits, WalkNotchAssignmentManifest,
-    WalkNotchAssignmentRefusal, WalkNotchRoleAssignment, WalkNotchRoleBindingError,
+    WalkNotchAssignmentRefusal, WalkNotchIdentityExclusionError, WalkNotchIdentityExclusionLimits,
+    WalkNotchIdentityExclusionRefusal, WalkNotchRoleAssignment, WalkNotchRoleBindingError,
     WalkNotchRoleBindingRefusal, WalkSeamEdit,
 };
 mod truing;

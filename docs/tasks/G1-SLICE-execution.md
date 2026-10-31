@@ -884,20 +884,20 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:explicit proposed semantic Notch identities/retention and complete assigned-role association.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.existing`
   Status: `done`
-  Goal:whole provided existing canonical Notch collection and actual stable-id lookup.
-  - [x] ISSUE:retention proposals need actual supplied objects and unambiguous semantic ids.
-  - [x] ROOT CAUSE (existing Notches):canonical Notch and current collection interfaces reviewed;
-    whole K before all id scans/allocation,not current registry completeness;rc=0.
-  - [x] FIX:unique provided-object index with authentic original objects/order/parent.
-  - [x] ADDRESSED (existing Notches):cargo test --test walk_existing_notch_contract
-    --test walk_notch_assignment_contract:4+5 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (existing Notches):API3/identity book1,lint/fmt/build/map/render;
-    old kernels/tests/fixtures,prior fences/Summary order/919 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing scoped membership/currentness rule).
-  Proof:target/history-proof-0745-walk-existing-notches/;Commit:STITCHCAD-G1-0745.
+  Goal:0745 supplied existing Notch objects;[whole scope/proofs](../history/stitchcad-devnotes-part920.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.known`
-  Status: `pending`
-  Goal:bounded explicit known identity exclusions from actual context/supplied Notches;unlisted is not fresh.
+  Status: `done`
+  Goal:explicit bounded inspected EntityId exclusions;unlisted is not globally fresh.
+  - [x] ISSUE:new identity proposals must avoid definite supplied identity references.
+  - [x] ROOT CAUSE (walk exclusions):actual Piece/Notch/profile/source APIs reviewed;
+    C/I/N/K then H/R and C+2I+R+14N+9K+3 before ids/allocation;rc=0.
+  - [x] FIX:scoped actual-reference set;exhaustive profile accounting,actual parents retained.
+  - [x] ADDRESSED (walk exclusions):cargo test --test walk_notch_identity_exclusion_contract
+    --test walk_existing_notch_contract:4+4 pass;rc=0;full invocation in receipt.
+  - [x] NO REGRESSION (walk exclusions):API3/identity book2,lint/fmt/build/map/render;
+    old kernels/tests/fixtures,prior fence/920 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing scoped known-id/nonreuse rule).
+  Proof:target/history-proof-0746-walk-id-exclusions/;Commit:STITCHCAD-G1-0746.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.entries`
   Status: `pending`
   Goal:complete assigned-role retention/host identity proposals;no client new-id request or actual issuance.
