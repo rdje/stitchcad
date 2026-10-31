@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0678 — retain explicit center-based arc argument proofs
+## STITCHCAD-G1-0679 — retain explicit Bezier control declarations
 
-- Own/normalize/check actual center/radius/start/sweep fields with complete quotas,real scalar
-  kinds and a single edge manifest. Share private argument kernels while preserving point's API.
-- Arc6/point5/line4/rustdoc18/lint/fmt/book/history840/diff pass. Geometry/domain/registry and full
-  verification remain owned;next quadratic/cubic schemas. G1 6/18/G0 unapproved unchanged.
+- Closed quadratic/cubic layouts retain every original control role and ordered/repeated source use.
+- Authentic field borrows,one logical edge and first local self-supply refusal;no synthetic controls.
+- Bezier4/line4/rustdoc27/selected lint/fmt/book/rendered boundaries pass;whole0678 retained841.
+- Exact G2 elevation,remaining schemas/frame/currentness/geometry and full .5f.4 remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

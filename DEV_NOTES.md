@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain explicit center-based arc argument proofs
+## _(2026-10-31 UTC)_ — retain explicit Bezier control declarations
 
-0678 adds center/radius/start/sweep declaration and normalized/checked stages,one FIRST edge and authentic center dependency. Complete3+2N formula shape admission precedes reparse;real Length/Angle/Angle proofs retain actual source/role/span failures. No endpoint entities are inferred.
-Arc6/point5/line4/rustdoc18/selected clippy/fmt/book/diff/history840 three exact Git spans pass. Raw turns/Unknown radius,late static refusal before earlier division,local self-supply and exact quotas pass. Private measurement/check kernels now shared with point;its public API/policy/errors remain unchanged.
-Static proofs accept kinds only;negative radius or zero/unsupported sweep remain geometry obligations. No center frame/currentness,curve length/error budget,coordinates,geometry or command publication is certified. Through-points intent is not silently treated as this explicit center variant.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing argument staging). Whole0677 retained840. Next .5f.1.c.bezier explicit quadratic/cubic controls;remaining schemas/global frame/graph/geometry and full .5f.4 stay owned. No fresh broad/platform verdict. PNT continues.
+0679 adds closed quadratic/cubic named control layouts,one FIRST edge and authentic original field-borrow dependencies. First local self-supply retains role/reference;degree,source order and repeated uses remain explicit. No controls or identities are synthesized for quadratic elevation.
+Bezier4/line4/construction rustdoc27/selected clippy/fmt/book/rendered boundaries/diff/history841 three exact Git spans pass. Lint caught a redundant implied iterator bound;the corrected bound passes. Source absence at HEAD and units§4 exact G2 promotion contract confirmed.
+These are authored declarations. Coordinates,exact elevation,degeneracy,current frames/registries and geometry remain owned;the same logical output role does not certify an edited curve or publish a topology change.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing typed references). Whole0678 retained841. Next remaining .1.c offset input/source binding;full .5f.4 stays deferred. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

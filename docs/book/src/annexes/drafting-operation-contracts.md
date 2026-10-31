@@ -2,7 +2,7 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Typed point/line/center-arc declarations and real scalar argument proofs are available below;remaining schemas,ordered
+> geometry. Typed point/line/center-arc/Bézier declarations and real scalar argument proofs are available below;remaining schemas,ordered
 > dependencies and actual geometry execution are pending. This page grants no geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -44,7 +44,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Construct point | x,y Length formulas in a named drafting frame | One persistent point output | Typed documents/Length proofs;geometry pending |
 | Draw line | Two prior PointRefs | Persistent edge and explicit endpoint provenance | Typed references/dependencies;geometry pending |
 | Draw arc | Center PointRef,radius Length,start/sweep Angle formulas | One edge role;no inferred point outputs | Center-based declaration/proofs;geometry pending |
-| Draw Bézier | Explicit degree and ordered prior control PointRefs | Persistent curved edge;control order retained | Pending .1.c |
+| Draw Bézier | Explicit quadratic/cubic named PointRefs | One edge role;original controls retained | Typed controls/dependencies;geometry pending |
 | Offset edge | Current EdgeRef/range,canonical allowance and explicit side/corner policy | New edge lineage;no hidden width/default join | Pending .1.c |
 | Slash/spread | Current Piece/cut/pivot references and explicit opening mode | New/retired topology and an attributable opening | Pending .1.c |
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
@@ -89,8 +89,8 @@ length and approximation accuracy remain actual geometry obligations. A sampled 
 silently substituted for the authored curve.
 
 The center-based variant below declares one edge role and no endpoint entities. A through-points
-intent has no native schema and cannot be silently substituted for it. The Bézier degree domain
-remains .1.c schema work;no degree or construction mode is inferred from runtime float values.
+intent has no native schema and cannot be silently substituted for it. The Bézier source degree
+is explicitly quadratic or cubic;no degree or construction mode is inferred from runtime values.
 
 ## Edits and garment semantics
 
@@ -311,3 +311,50 @@ sweep can have valid static kinds. Actual geometry must enforce positive radius,
 sweep,center/frame/currentness and its approximation budget before acceptance. The D126
 actual-edge-length/parameter budget remains mandatory. No curve length,endpoint coordinates,
 geometry,identity issuance or command publication is computed by this declaration API.
+
+## Native quadratic and cubic source declarations
+
+`BezierConstruction::new(operation,controls)` retains a closed BezierControlPoints variant:
+Quadratic has named start/control/end PointRefs;Cubic has start/first_control/second_control/end.
+No integer degree or arbitrary vector is interpreted to choose a mode. Each field is a PointRef
+by type. The chosen input BezierDegree survives even when control references coincide.
+
+```rust
+use sc_core::{construction::*,ontology::{EntityId,PointRef,LocalTag}};
+let point=|id|PointRef::new(EntityId::from_bits(id),LocalTag::FIRST);
+let curve=BezierConstruction::new(EntityId::from_bits(10),BezierControlPoints::Quadratic {
+    start:point(99),control:point(80),end:point(70) })?;
+assert_eq!(curve.degree(),BezierDegree::Quadratic);
+assert_eq!(curve.dependency_count(),3);
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+The declaration's only output role is EdgeRef(operation,LocalTag::FIRST). It creates no endpoint or
+control-point entities. `controls()` exposes the actual original layout. `dependency_count()` is
+three or four from that explicit variant,not a caller annotation. `dependencies()` yields the real
+fields in their authored order. Roles are Start/FirstControl/End for a quadratic and
+Start/FirstControl/SecondControl/End for a cubic. Quadratic input has no SecondControl occurrence.
+
+Each private BezierPointDependency borrows this exact declaration and its actual underlying field.
+`construction()`,`role()`,`point()` and `point_ref()` expose that same source relationship.
+No foreign point can be attached to a view and no view can outlive its declaration. Equal repeated
+PointRefs remain separate original uses. Reversing a declaration changes the ordered source intent
+while preserving the logical output role;actual topology/reference repair before publication
+remains a program/geometry obligation.
+
+A source created by this same operation cannot be a prior control. The constructor checks real
+field order and returns BezierConstructionError with the actual operation,first refused role and
+original PointRef/local tag. This definite local refusal proves no other supplier's order,
+currentness or frame. It invents no formula span/name or global cycle path.
+
+The [curve representation contract](../spec/units-and-tolerances.md#4-curve-representation) remains
+cubic. G2 must promote actual quadratic geometry exactly,with no approximation. This authored
+declaration preserves the three original quadratic source references;it does not fabricate four
+cubic source references or compute degree-elevated coordinates. Cubic declarations retain all four
+original sources. Higher-order/NURBS support remains deferred with the existing typed refusal/loss
+contract;no fallback degree or polyline is silently chosen.
+
+Repeated/coincident controls can form declarative input without proving a nondegenerate geometric
+curve. No coordinates,length,continuity,frame,registry state,exact elevation,approximation budget,
+identity issuance or command publication is computed here. Remaining editing schemas and the
+whole operation graph/geometry integration remain owned work.

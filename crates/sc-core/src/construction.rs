@@ -3,11 +3,16 @@
 //! operation ordering, containing frames, current registries, geometry and publication stay owned.
 mod arc;
 mod arguments;
+mod bezier;
 pub use arc::{
     CenterArcArgument, CenterArcCheckError, CenterArcCheckRefusal, CenterArcConstruction,
     CenterArcConstructionError, CenterArcNormalizationError, CenterArcNormalizationLimits,
     CenterArcNormalizationRefusal, CenterArcPointDependency, CheckedCenterArcConstruction,
     NormalizedCenterArcConstruction,
+};
+pub use bezier::{
+    BezierConstruction, BezierConstructionError, BezierControlPoints, BezierDegree,
+    BezierPointDependency, BezierPointRole,
 };
 mod line;
 pub use line::{LineConstruction, LineConstructionError, LineEndpoint, LinePointDependency};
