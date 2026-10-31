@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — close the native offset-output checkpoint with explicit empty refusal
+## _(2026-10-31 UTC)_ — retain explicit slash boundary and fullness intent
 
-0701 recovers the existing Empty admission guard and whole raw/bound/policy error. Quota precedes Empty,then owner/source;even an empty wrong-owner/source proposal reports Empty. Retaining a bound descriptor in an error grants no association proof. No new outcome wrapper or runtime change needed.
-Examples distinguish empty refusal,absence within a nonempty manifest,valid empty/inactive catalogue and actual G2 failure. Empty never becomes an admitted edge,default role,geometric-collapse diagnosis or canonical retirement. Actual engine diagnostics retain units6's source/deviation/bound obligations.
-Focused empty/precedence native1 and actual output book9 pass;book/final render/diff/history870 three exact Git spans pass. Native sources/Cargo files unchanged. First rendered read overlapped rebuild and found no page;sequential post-build check passed. Known D372 warning remains separately owned.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (0696/0700 policies already promoted). Whole0700 retained870. Native offset-output checkpoint complete with focused component checks;actual G2/current Design/history/bus/full integration remain owned. Next slash outputs.
+0702 adds SlashSpreadOutputIntent owning the original spatial input and explicit StraightBridges/TrimOverlaps plus Added/Removed/Unchanged requests. No policy comes from amount text,sign,zero or Angle turns. Constructor moves fields without allocation/evaluation;no Default or implicit conversion supplies a choice.
+Actual nested construction,cut/pivot/axis and embedded opening remain available through original borrowed fields. Both modes/all explicit choices remain raw intent,not geometric support. Removed is not a Dart closure or copied intake;Unchanged supplies no measured effect. Trim naming selects no loop or retained range.
+Intent2/spatial4/compiler guards3/actual output book10/selected clippy/fmt/book/rendered companion link/diff/history871 three exact Git spans pass. Nested dependency and kind proofs retain actual owners;zero-input policies stay distinct. Actual roles/trim endpoints/region/effect/currentness/publication remain owned.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (API-specific;canonical book and G1/G2 boundary). Whole0701 retained871. Slash manifest/lineage/retirement/metadata/effect contracts follow;actual G2/G3 geometry/intake and bus integration remain separate;D372 P2 persists.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

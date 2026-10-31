@@ -829,29 +829,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0700 map requirements;[whole scope/proofs](../history/stitchcad-devnotes-part870.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.outcome`
   Status: `done`
-  Goal:native explicit nonempty-candidate versus complete-collapse/failure outcome contract before
-  family closure;no fabricated fallback edge or silent loss. Actual geometry/topology evidence
-  and current canonical/instance publication remain G2/.5f.3/.5f.4.geometry/.6.
-  Scope:recover and document existing typed Empty candidate refusal,actual raw/bound/policy
-  diagnostics and precedence;do not add a duplicate outcome wrapper or infer a geometric cause.
-  Empty role catalogue is a different valid metadata state. Native nonempty declaration admission
-  cannot turn collapse into success or retire roles. Actual geometric failure diagnostics require
-  achieved/requested bound and source evidence under units6/G2;no geometry result accepted here.
-  Update inventory/current API map and close only native offset-output checkpoint. Retire whole0700;
-  focused existing empty-refusal test,compiled example and book build. Runtime bytes unchanged.
-  - [x] ISSUE:empty declaration refusal,canonical absence and actual collapse must stay distinct.
-  - [x] ROOT CAUSE (empty outcome):actual Empty guard precedes owner/source after quota;
-    existing focused test retains whole raw/bound/policy and proves that precedence,rc=0.
-  - [x] FIX:document existing explicit Empty refusal and stage distinctions;update current
-    native inventory and closure scope without a duplicate wrapper or fabricated geometric cause.
-  - [x] ADDRESSED (empty outcome):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test offset_candidate_contract complete_quota_then_empty_and_actual_operation_source_association_precede_fragment_checks
-    →1 pass,rc=0;empty wrong-owner/source retains originals and reports Empty,no output accepted.
-  - [x] NO REGRESSION (empty outcome):actual output book9/book/final rendered page/diff and
-    history870 three exact Git spans pass,rc=0;git diff --exit-code -- crates Cargo.toml Cargo.lock
-    →0. First render read overlapped rebuild;sequential post-build check passed. Actual G2 proof stays owned.
-  - [x] LOCKSTEP:book/live/frontier sync;promotion: declined (0696/0700 policies already promoted).
-  Verification:native1/actual book9;Commit:STITCHCAD-G1-0701. Next .c.slash.outputs.
+  Goal:0701 empty refusal;[whole scope/proofs](../history/stitchcad-devnotes-part871.md).
 - ID: `G1-SLICE.5f.1.c.grainline.inputs`
   Status: `done`
   Goal:0681 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part844md).
@@ -862,10 +840,34 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0683 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part847.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs`
-  Status: `pending`
+  Status: `active`
   Goal:typed explicit bridge/trim/fullness intent and output-role/manifest admission contract.
   G1 schema acceptance does not wait for geometric results. Actual unique region/incidence/domain,
   fullness/topology and source maps belong .5f.4.geometry/G2/G3. No default connector/guessed region.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.policy`
+  Status: `done`
+  Goal:owned actual slash input plus explicit straight-bridge/overlap-trim and added/removed/
+  unchanged fullness intent;no default,measured intake copy,transform or geometric-validity proof.
+  Scope:move original input intact into required output-intent declaration;retain actual input/
+  policy fields and embedded amount/dependencies. All explicit combinations stay raw requests;
+  actual G2/G3 validates supported region/topology/effect. Retire whole0701;focused native/book checks.
+  - [x] ISSUE:slash boundary/fullness choices must not be inferred from angle/distance.
+  - [x] ROOT CAUSE (slash policy):actual spatial/opening,book/ontology/feature contracts read;
+    both modes/all policy fields and original dependency/kind-proof owners pass,rc=0.
+  - [x] FIX:owned original input plus required StraightBridges/TrimOverlaps and Added/Removed/
+    Unchanged intent;no Default,implicit conversion,executed effect or new allocation in constructor.
+  - [x] ADDRESSED (slash policy):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test slash_spread_output_intent_contract →2 pass,rc=0;both modes/all choices,
+    authentic nested dependencies/amount proofs and distinct zero-input intentions retained.
+  - [x] NO REGRESSION (slash policy):nearest spatial4/compiler guards3/actual output book10/
+    selected clippy/fmt/book/rendered companion link/diff/history871 three exact Git spans pass,rc=0.
+    Actual endpoints/trim selection/region/manifest/intake/currentness/G2/G3/publication remain owned.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (API-specific;canonical book and G1/G2 policy).
+  Verification:native6/rustdoc13;Commit:STITCHCAD-G1-0702. Next .slash.outputs.manifest.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest`
+  Status: `pending`
+  Goal:native output-role/source/transform/trim selection and complete manifest admission;
+  explicit lineage/retirement/metadata/effect obligations. No ambiguous-loop pick or synthetic geometry.
 - ID: `G1-SLICE.5f.1.c.mirror.inputs`
   Status: `done`
   Goal:0684 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part851.md).

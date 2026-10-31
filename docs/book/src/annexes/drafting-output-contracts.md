@@ -459,3 +459,49 @@ transition/presence contracts,normal-map requirements and explicit empty refusal
 metadata/declaration checks. Actual curve production,role matching,nonlinear point mapping,error
 propagation,current Design/history and atomic publication remain `.5f.2`/`.5f.3`/`.5f.4.geometry`/G2/G3/bus
 work. This checkpoint changes no G1/G2 gate status and grants no geometry or integration certificate.
+
+## Native slash/spread boundary and fullness intent
+
+`SlashSpreadOutputIntent::new(input,boundary,fullness)` owns the actual
+`SlashSpreadConstruction` and requires both output choices. Moving the input preserves its original
+operation,Piece,directed cut,moving bank,pivot or movement axis,and embedded amount document. The
+constructor performs no new allocation,evaluation,identity issuance or model edit. It declares
+intent;an accepted output manifest and actual geometry remain separate stages.
+
+`SlashSpreadBoundaryPolicy` has two explicit requests:
+
+| Policy | Intent and remaining proof |
+| --- | --- |
+| `StraightBridges` | Straight connectors at corresponding opened cut mouths;actual endpoints/incidence and supported closed contour must be proved |
+| `TrimOverlaps` | Trim overlapping banks;actual retained ranges/intersections and boundary selection must be explicit |
+
+Neither policy supplies a default connector count,generated edge tag,intersection,loop choice or
+geometric repair. A trim policy name cannot select an arbitrary loop. Unsupported or ambiguous
+region/topology must refuse through the actual G2/G3 execution path;policy construction is not that
+validation. The following manifest task owns explicit output roles,source/transform provenance and
+trim-selection obligations before native family closure.
+
+`SlashSpreadFullnessIntent::{Added,Removed,Unchanged}` records the intended effect separately from
+boundary treatment. It stores no independently authored intake,Length/Area amount or solved fullness.
+G2/G3 must derive the actual effect from the same original inputs and attribute it to this operation.
+`Removed` neither closes a canonical Dart nor substitutes for its conserved intake. `Unchanged` is
+an explicit request,not a conclusion inferred from a zero formula or a full Angle turn.
+
+```rust
+use sc_core::construction::*;
+fn request_bridged_fullness(input:SlashSpreadConstruction)->SlashSpreadOutputIntent {
+    SlashSpreadOutputIntent::new(input,SlashSpreadBoundaryPolicy::StraightBridges,
+        SlashSpreadFullnessIntent::Added)
+}
+```
+
+There is no Default or implicit input-to-output conversion. Every boundary/fullness combination
+remains authored intent;its applicability depends on actual mode,amount,region and topology. A
+negative rotation,zero distance or statically valid `1 mm/0` is preserved rather than normalized
+into another policy or accepted geometric result. Original kind proofs remain attached to the
+embedded opening document;they execute neither division nor a geometric transform.
+
+`input()`,`boundary_policy()` and `fullness()` borrow actual owned fields. Input dependency views
+continue to borrow that actual nested construction and its original cut/pivot/axis fields. No
+output Piece,contour,reference retirement,canonical metadata reconciliation or command publication
+is performed. Actual G2/G3 sources/results and the later `.5f.4.geometry` integration remain owned.

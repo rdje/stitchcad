@@ -173,10 +173,11 @@ applicable moving bank,pivot incidence or a nondegenerate straight movement axis
 numerical/geometric domains. Selecting Left or Right does not prove that such a region exists or
 resolve multiple candidates. Failed geometry cannot be replaced with a guessed region or axis.
 
-This stage issues no new Piece or geometric output tags and mutates nothing. Explicit bridge/trim
-policy,fullness/intake effects and actual new/retired topology remain `.1.c.slash.outputs` work;
-there is no default connector across an opened cut. G2/G3 must supply those results and their
-source mappings before command publication. Full operation integration remains `.5f.4` work.
+This stage issues no new Piece or geometric output tags and mutates nothing. Explicit boundary/
+fullness intent is available in the [output reference](drafting-output-contracts.md#native-slashspread-boundary-and-fullness-intent).
+Output-role/manifest admission remains `.1.c.slash.outputs.manifest` work;actual fullness/intake,
+new/retired topology and source mappings require G2/G3 before publication. No default connector
+crosses an opened cut. Full operation integration remains `.5f.4` work.
 
 ## Native reflected Piece-copy inputs
 

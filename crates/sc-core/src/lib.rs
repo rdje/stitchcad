@@ -17,7 +17,7 @@
 //! Notch metadata previews, atomic groups, replay/audit and bounded actual undo/redo execute through the
 //! command bus. Direct/source-backed/Design scalar recipe execution, fresh replay and canonical stored
 //! bindings have focused native acceptance. [`construction`] retains typed point/line/center-arc/Bezier declarations and offset/grainline input binding,
-//! scalar kind proofs, explicit slash/spread sources/amounts, mirror-copy inputs, admitted walk mark requests,
+//! scalar kind proofs, explicit slash/spread sources/amounts/boundary/fullness intent, mirror-copy inputs, admitted walk mark requests,
 //! constrained truing/join input association,offset candidate/declaration binding and declared-role catalogue/transition admission and active-role presence/mapping-requirement binding;
 //! original dependencies remain explicit and geometry/full integration pending. Broader/platform
 //! verification stays source-scoped or owned by the integration and pre-push gates.

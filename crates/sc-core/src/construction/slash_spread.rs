@@ -5,6 +5,8 @@ use crate::{
     recipe::FormulaExpressionDocument,
 };
 use core::fmt;
+mod output;
+pub use output::{SlashSpreadBoundaryPolicy, SlashSpreadFullnessIntent, SlashSpreadOutputIntent};
 
 /// Moving bank relative to the explicitly directed straight cut in the Piece's drafting frame.
 /// A geometry executor must prove a unique applicable region; no fabric-face or winding default.

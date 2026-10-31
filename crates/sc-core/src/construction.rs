@@ -74,7 +74,8 @@ pub use slash_opening::{
 };
 mod slash_spread;
 pub use slash_spread::{
-    SlashSpreadConstruction, SlashSpreadConstructionError, SlashSpreadDependency, SlashSpreadSide,
+    SlashSpreadBoundaryPolicy, SlashSpreadConstruction, SlashSpreadConstructionError,
+    SlashSpreadDependency, SlashSpreadFullnessIntent, SlashSpreadOutputIntent, SlashSpreadSide,
     SlashSpreadSource,
 };
 mod walk;

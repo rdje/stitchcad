@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0701 — close the native offset-output checkpoint with explicit empty refusal
+## STITCHCAD-G1-0702 — retain explicit slash boundary and fullness intent
 
-- Document existing Empty refusal,actual diagnostic owners and checked quota/empty/owner precedence.
-- Distinguish candidate failure,canonical metadata absence and actual G2 collapse;no fabricated output.
-- Existing native1/actual book9/book/final render/diff/history870 exact spans pass;runtime unchanged.
-- Native offset-output checkpoint complete with focused checks;actual geometry/maps/bus remain owned.
+- Own original slash input with required bridge/trim and added/removed/unchanged fullness choices.
+- Retain actual nested source/amount proofs;no default,measured intake copy or executed geometry.
+- Native6/rustdoc13/selected lint/fmt/book/rendered link/diff/history871 exact spans pass;D372 open.
+- Output manifest/trim selection/lineage and actual G2/G3 effects/publication remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
