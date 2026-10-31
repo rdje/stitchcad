@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0692 — admit explicit offset candidate roles and source domains
+## STITCHCAD-G1-0693 — retain admitted offset candidate membership and ambiguity
 
-- Complete quota precedes actual operation/source and unique-tag/bounds/order metadata checks.
-- Original fields/owners and sparse logical roles remain authentic;no curve or mapped Param is produced.
-- Native7/rustdoc12/selected lint/fmt/book/rendered/diff/history861 exact spans pass;D372 remains P2.
-- Candidate membership,stable-tag bridge,geometric mapping/evidence and execution remain owned.
+- Exact original frame/inclusive source queries retain every Unique/Ambiguous/Gap candidate.
+- Authentic field/index/tag views preserve original order;current aliases and wrong domains refuse.
+- Native6/rustdoc16/selected lint/fmt/book/rendered table/diff/history862 exact spans pass;D372 open.
+- Candidate component closes focused only;stable-tag/publication/geometric mapping remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

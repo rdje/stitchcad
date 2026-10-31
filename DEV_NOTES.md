@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit explicit offset candidate roles and source domains
+## _(2026-10-31 UTC)_ — retain admitted offset candidate membership and ambiguity
 
-0692 adds owned candidate manifests with actual operation/directed-source identity,explicit tags and positive intervals. Complete fragment quota precedes field checks/tag-index allocation;then empty/operation/source and each original tag/bounds/order refuse. No sorted tags,renumbering or admitted prefix escapes.
-Private admitted/error views borrow original manifest,bound input/allowance and policy. Logical unissued refs retain sparse tags in source order,including reversed traversal,gaps and shared endpoints. No coordinate,length,mapped Param,curve,ledger allocation or stable-role replay proof is produced.
-Candidate3/directly affected offset-input4/compiler guards3/actual book9/selected clippy/fmt/book/rendered/diff/history861 four exact Git spans pass. Common fixture code unchanged apart from seven visibility qualifiers/one terminal blank. Metadata allowance bounds its own tag index,not earlier Vec/whole execution.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing typed source contracts). Whole0691/closed D121 receipts retained861. D372 search-size warning remains owned P2. Next admitted candidate gap/ambiguity queries;stable-tag/mapping/G2 proof stay separate. PNT continues.
+0693 adds admitted-only original-anchor queries:exact edge precedes inclusive selected-source bounds. Query/errors own the exact anchor value and borrow actual admitted proof. All matching original candidates remain visible as Unique/Ambiguous/Gap;source order and explicit tags survive reversed iteration.
+Private candidate views borrow actual query/original fields and retain real Vec indices. Each classification/iterator scans the admitted population without query-path allocation;whole batch resources stay separate. Gap is in-domain coverage absence,not an out-of-range error or guessed geometric loss/position.
+Native6/compiler guards6/actual book10/selected clippy/fmt/book/rendered table3/diff/history862 three exact Git spans pass. Actual current ledger alias is refused while original candidate metadata remains inspectable. Source-frame membership produces no mapped Param,coordinate,repair or current-geometry certificate.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source-frame contracts). Whole0692 retained862. Candidate component closes focused only;stable-tag/replay/publication and geometric mapping/evidence stay owned. D372 P2 persists. Next .tags;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

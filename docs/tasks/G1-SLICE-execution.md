@@ -787,38 +787,39 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0691 recovery;[whole scope/proofs](../history/stitchcad-devnotes-part861.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.manifest`
-  Status: `active`
-  Goal:native explicit-tag candidate-fragment manifest,complete quota/bounds/order/unique-role
+  Status: `done`
+  Goal:native explicit-tag candidate-fragment manifest,complete quota/bounds/order/unique-tag
   admission and ambiguity/gap views. Source interval membership grants no mapped output Param,
   issued identity or G2 result. No fixed cardinality/default geometry.
+  Components0692/0693 focused native6/rustdoc16 pass;tag/map/real G2 remain separate.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.manifest.admission`
   Status: `done`
-  Goal:owned explicit-tag/source-domain manifest;complete quota before actual bound-input
-  operation/source association,then unique tags/bounds/order. Authentic borrowed result/error
-  owners and logical refs only;no mapped Param/ledger mutation. Retire whole0691/closed D121
-  receipts;focused checks.
-  - [x] ISSUE:variable candidate roles need explicit tags/domains and complete admission;
-    ordinal slots or intervals alone grant neither persistent replay identity nor geometry.
-  - [x] ROOT CAUSE (candidate admission):0691 recovery and actual bound-offset/interval/tag APIs
-    inspected;real allowance factory reused with exact code comparison,rc=0.
-  - [x] FIX:owned raw manifest,explicit quota before checks/tag index,actual input association,
-    unique tags/bounds/order and private complete borrowed proof/error;logical unissued refs only.
-  - [x] ADDRESSED (candidate admission):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test offset_candidate_contract →3 pass,rc=0;variable sparse tags,actual fields,
-    complete quota/empty/operation/source and original duplicate/bounds/order refusal indices.
-  - [x] NO REGRESSION (candidate admission):offset-input4/compiler guards3/actual book9/selected
-    clippy/fmt/book/rendered/diff/archive861 four exact Git spans pass,rc=0. Fixture code unchanged
-    apart from seven visibility qualifiers/one EOF blank. D372 size warning remains owned/P2.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing typed source contracts).
-  Verification:native7/rustdoc12;Commit:STITCHCAD-G1-0692. Next .manifest.query.
+  Goal:0692 admission;[whole scope/proofs](../history/stitchcad-devnotes-part862.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.manifest.query`
-  Status: `pending`
+  Status: `done`
   Goal:admitted-only original-anchor candidate membership,gap/ambiguity and authentic fragment
   views. No exact geometric output Param;mapping proof and stable-tag ledger bridge stay separate.
+  Scope:exact original edge/inclusive selected bounds;all containing candidates and Unique/
+  Ambiguous/Gap with original query/proof/field owners. No alias/default candidate or mapped Param.
+  Retire whole0692;focused native/compiler/book checks. Parent .outputs stays open.
+  - [x] ISSUE:candidate membership must retain gaps/ambiguity without inventing a mapped output position.
+  - [x] ROOT CAUSE (candidate query):actual admitted manifest/source/public ledger interfaces
+    inspected;native alias case preserves distinct original and current meanings,rc=0.
+  - [x] FIX:admitted-only exact original edge/inclusive domain query;all matching actual fields,
+    Unique/Ambiguous/Gap and original query/proof owners. No alias/default choice or mapped Param.
+  - [x] ADDRESSED (candidate query):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test offset_candidate_contract →6 pass,rc=0;endpoints/shared bounds/gaps,source-error
+    precedence,authentic field/index/tag/reverse views and actual current-alias refusal.
+  - [x] NO REGRESSION (candidate query):compiler guards6/actual book10/selected clippy/fmt/book/
+    rendered/diff/history862 three exact Git spans pass,rc=0. D372 warning remains owned/P2;
+    no full replay,ledger publication or actual geometric mapping proof.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing source-frame contracts).
+  Verification:native6/rustdoc16;Commit:STITCHCAD-G1-0693. Next .tags.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags`
   Status: `pending`
   Goal:native stable-tag/replay/retirement contract and published ledger bridge. Existing offset
   allocates fresh contiguous tags;do not treat ordinal slots as arbitrary persistent roles.
+  Recover allocation identity and source-retention/partial-range semantics before choosing a ledger mutation.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.mapping`
   Status: `pending`
   Goal:P1 native explicit correspondence-kind/evidence/error-budget contract before offset family

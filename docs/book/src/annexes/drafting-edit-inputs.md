@@ -478,9 +478,53 @@ admitted view cannot outlive those owners. `fragments` exposes the original fiel
 pairs each with its logical `EdgeRef(operation,explicit_tag)` in original source order. For
 example,tags9,2 and4294967295 stay in that order rather than becoming0,1,2. Traversal can be
 Reversed while domains remain ascending in their original frame. Gaps and shared endpoints are
-retained;their admitted-only membership query is a separate pending stage.
+retained;their admitted-only membership query is described below.
 
 Admission checks tag uniqueness within this manifest,not stable-role correspondence across
 replay. It allocates no ledger operation,rewrites no reference and computes no curve,coordinate,
 length or output Param. Actual allowance width/corner/inclusion stay on the bound descriptor.
 The stable-tag bridge,mapping evidence and actual G2 results remain separate owned obligations.
+
+## Native offset candidate membership
+
+Only `AdmittedOffsetCandidates` can call `query_source(EdgeAnchor)`. The exact original edge is
+checked before inclusive selected-range bounds. An alias/current fragment is not silently
+substituted. The provided anchor value is owned unchanged by the resulting query or typed error;
+both retain the actual admitted proof. An out-of-range position is an error;an uncovered position
+inside the selected source is a valid `Gap` outcome.
+
+```rust
+use sc_core::{construction::*,ontology::EdgeAnchor};
+fn query_candidates<'a>(admitted:&'a AdmittedOffsetCandidates<'a>,anchor:EdgeAnchor)
+    ->Result<OffsetCandidateQuery<'a>,OffsetCandidateQueryError<'a>> {
+    admitted.query_source(anchor)
+}
+```
+
+`kind()` reports `Unique`,`Ambiguous` or `Gap` from all containing source domains. `candidates()`
+returns every original containing occurrence in source order;shared interval endpoints retain
+both sides. Each private `OffsetCandidateMatch` borrows the actual query and original fragment
+field. Its index is the occurrence's original Vec position;`logical_output()` uses the explicit
+tag rather than that index. Reversed iteration preserves those tags. A gap has no guessed
+candidate and ambiguity has no default choice. No accepted candidate prefix is returned.
+
+For declared domains `[1/4,1/3]` at tag9,`[1/3,1/2]` at tag2 and `[2/3,3/4]` at tag4294967295:
+
+| Original source parameter | Membership | Logical tags |
+| --- | --- | --- |
+| 1/4 | Unique | 9 |
+| 1/3 | Ambiguous | 9,2 |
+| 7/12 | Gap | none |
+
+These are metadata declarations,not a geometry-engine result or a choice of output position.
+
+Each classification/iteration scans the admitted population without query-path allocation;whole
+query-batch resources are a separate caller obligation. Traversal Reversed does not change the
+original source parameters used for membership. After a real structural ledger offset,the
+unchanged candidate metadata remains inspectable in its original frame while a query using the
+new ledger edge is refused. This query creates no ledger repair and certifies no current geometry.
+
+`Unique` means exactly one supplied candidate domain,not a unique geometric point. The result
+contains no mapped output Param,curve coordinate,length or error-budget proof. Stable-tag
+reconciliation/publication and the explicit geometric mapping contract remain pending before
+offset-family closure;actual G2 results still need their separately owned verification.

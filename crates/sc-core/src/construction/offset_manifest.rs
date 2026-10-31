@@ -3,6 +3,11 @@ use super::BoundOffsetConstruction;
 use crate::ontology::{DirectedRange, EdgeRef, EntityId, LocalTag, OffsetInterval};
 use core::fmt;
 use std::collections::BTreeMap;
+mod query;
+pub use query::{
+    OffsetCandidateMatch, OffsetCandidateMatchKind, OffsetCandidateQuery,
+    OffsetCandidateQueryError, OffsetCandidateQueryRefusal,
+};
 
 /// One declared logical output role and positive original-source domain,not a computed curve.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
