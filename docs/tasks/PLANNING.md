@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D366 — modeled fixture emitter identity
+## D308–D368 — public crate availability and module-link drift
 
-D308–D365:[whole prior ledger](../history/stitchcad-devnotes-part831.md). D366 P1 fixed0669;owner a41.effects.provenance:modeled receipt lacked fixture emitter identity;source/runtime identity and changed-basis publication refusal now pass. Original numerical proofs unchanged. D334 P2 after G1/before G0;D223/PLANNING.5 open. a41 scoped0670 done;full D156 remains owned/deferred.
+D308–D366:[whole prior ledger](../history/stitchcad-devnotes-part838.md). D367/D368 P2 fixed0676;owner .5f.1.b:crate availability matched actual scalar/replay/metadata APIs;ontology reference link qualified. Source/render/native8/doc6/lint checks pass. D334/D223 and D156 remain scheduled/owned.

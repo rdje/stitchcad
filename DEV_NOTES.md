@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — recover complete v1 drafting operation contracts
+## _(2026-10-31 UTC)_ — retain real typed point formula arguments
 
-0675 resolves the next bridge prerequisite: .5f.1 requires all operation contracts before construction code. New book inventory covers the complete ontology3.2 families,actual/planned schemas,numerical roles,stable output/repair ownership and explicit missing geometry/physical acceptance.
-Existing CloseDart/AddNotch request schemas retain canonical targets/anchors;WalkSeamSpan is a Query and cannot perform editing walk's deliberate balance-mark mutations. Existing metadata/CutPlan/SewingGraph do not substitute for geometric grainline/mirror/join operations. Owners remain explicit.
-Python ontology/public-command correspondence,mdBook build/rendered four-cell rows/TOC,diff and history837 three exact Git spans pass. No Rust behavior changed;no native/geometry/full-suite verdict. .1.a inventory closes;parent .1 stays open for typed schemas,then .2/.3 ordered/selector execution.
-LIVE states/G1 6/18/G0 unapproved unchanged. promotion: declined (local operation inventory). Whole0674 retained837. Next .5f.1.b typed point/formula/output declaration;remaining v1 schemas .1.c. No fake geometry or implementation-inspected dependency;no submodule exists here. PNT continues.
+0676 adds owned/normalized/checked point stages:two original documents,persistent FIRST output,complete N/2+2N admission and actual Length proofs before values. Typed failures keep real coordinate/span/source context;Unknown data stays unread. No frame,currentness,coordinates or geometry are certified.
+Point5/replay3/rustdoc6/selected clippy/fmt and warning-free cargo doc/book/diff pass. Cases retain original owners,untaken-branch errors and later static refusal before earlier divide-by-zero. Initial positive doc example boxed a borrowed error;fixed owner-scope handling. Semantic document errors compacted.
+D367 stale scalar/transaction availability corrected;D368 ambiguous reference link qualified. Rendered public availability/point API confirmed. Operation tasks moved byte-exact to execution sibling before leaf changes;history838 six whole Git spans retain0675,two closed runtime scopes and prior defect tail.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product/defect notes updated. promotion: declined (existing owner-normalize-check staging). Next .5f.1.c.line typed line/reference roles. Remaining schemas/frame/graph/geometry and full .5f.4 verification stay owned. No fresh broad/platform verdict. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

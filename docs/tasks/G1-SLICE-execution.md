@@ -89,17 +89,8 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0577;[proof](../history/window25.md#stitchcad-devnotes-part736md).
 - ID: `G1-SLICE.5e.2.4.3`
   Status: `done`
-  Goal: actual bounded source-order scalar expression machine consuming real checked nodes,
-  .1 workspace admission,.2 canonical inventory joins and existing numeric/evaluated/context
-  APIs. Complete static proof precedes values;actual condition chooses the only runtime branch.
-  Preserve executed input/source provenance and exact failing node/owner/canonical context.
-  Read real providers and dispatch contracts before implementation;split only safe implementation
-  units with focused checks/book/commit. Scope missing tangent/geometry/prior-let/derived work
-  explicitly without substituting caller annotations,canonical results or new language refusals.
-  Whole statement/recipe/replay and platform result verification retain .5e.2.5/.5e.4/.5g owners.
-  Closure0580:implemented prepared scalar subset/source controller verified by focused native,
-  actual membership and finite independent result checks. This closes no missing family or full
-  formula-language execution;parent .5e.2.4/integration retains those requirements.
+  Goal:completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part838.md).
+
 - ID: `G1-SLICE.5e.2.4.3.1`
   Status: `done`
   Goal:0578;[proof](../history/window25.md#stitchcad-devnotes-part737md).
@@ -647,17 +638,8 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0569;[proof](../history/window25.md#stitchcad-devnotes-part728md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3`
   Status: `done`
-  Goal: join actual sealed paired source/stop candidates to fresh child identities and history.
-  Retire exact actual target,retain unrelated graph records and actual held Gather/reference IDs;
-  expose explicit retired repair evidence without child selection or silent retarget. Global source/
-  authority/budget/currentness and physical requirements must precede any eventual bus effect.
-  Scoped implementation order:.1 bounded immutable extension of existing accepted history;
-  .2 exact source/stop/actual-graph candidate construction and unrelated member retention;
-  .3 actual held Gather/reference retirement evidence and global identity/resource integration.
-  Child IDs are tentative supplied metadata until the trusted bus reserve/effect path publishes
-  them;no public candidate helper may claim generation,reservation or persistent global nonreuse.
-  Scoped completion0573:actual identity/graph/whole-owner preparation complete;deferred local
-  checkpoint next. Current repair,real dependencies,trusted stage/publication effects stay owned.
+  Goal:completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part838.md).
+
 - ID: `G1-SLICE.6.5.3.2.3.4.3.1`
   Status: `done`
   Goal:0570;[proof](../history/window25.md#stitchcad-devnotes-part729md).
@@ -795,3 +777,96 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261030.apply`
   Status: `done`
   Goal:0629;[proof](../history/stitchcad-devnotes-part789.md).
+
+## Drafting operation contracts
+
+- ID: `G1-SLICE.5f.1`
+  Status: `active`
+  Goal: complete public operation/dependency/interface inventory from ontology3.1/3.2, roadmap6.1
+  and feature matrix before construction code. All v1 operations must have explicit typed schemas.
+  Acceptance: points, lines/arcs/Béziers, offset, slash/spread, close dart, notch/grainline,
+  walk/true, mirror and join covered; stable output identities/reference contracts, numerical
+  argument kinds and semantic preconditions explicit. No formula creates geometry or calls CSP.
+  Concrete geometry execution stays G2/G3; missing operation contracts are repaired first.
+  Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5f.1.a`
+  Status: `done`
+  Goal:completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part838.md).
+
+- ID: `G1-SLICE.5f.1.b`
+  Status: `done`
+  Goal:typed point-from-formulas declaration with actual Length arguments and persistent output
+  identity contract;no coordinate evaluation or publication. Activate after complete inventory .a.
+  Scope:owned/normalized/checked point argument stages,complete retained-node admission and actual
+  Length proofs;move operation task section to execution sibling and retire sealed evidence for
+  blocking live bounds. D367 P2:lib.rs falsely says scalar recipe execution/transactions pending;
+  reproduce against existing native APIs/tests,fix public docs with new construction module.
+  D368 P2:Cargo doc warns ontology/mod.rs reference link is ambiguous with a primitive;qualify
+  the actual module link and verify warning-free docs. Both documentation defects owned here.
+  - [x] ISSUE:point arguments need owned documents/real Length proofs without geometry claims;
+    D367/D368 public availability/link defects are fixed in this same affected surface.
+  - [x] ROOT CAUSE (WHY + WHERE):public expression document/normalized/check APIs inspected;
+    Python HEAD29d977b2 before/after confirms stale execution/transaction text and ambiguous module
+    link,rc=0. No construction module existed;operation inventory .a precedes this schema.
+  - [x] FIX:private owned/normalized/checked point stages,persistent FIRST output,complete N/
+    2+2N admission and actual x/y proofs;retain original typed role/span/source causes. Correct
+    crate availability and qualify reference module. Semantic document errors boxed for size.
+  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
+    point_construction_contract →5 pass,rc=0;original pointers/Unknown input/later static failure/
+    untaken branch/whole quotas and privacy. No coordinate value or registry/frame proof produced.
+  - [x] NO REGRESSION:formula_scalar_recipe_replay_contract →3 pass,rc=0;selected clippy,
+    construction rustdoc6,warning-free cargo doc/rendered availability,book/fmt/diff/history838
+    six exact Git spans pass,rc=0. Initial borrowed-error example fixed within owner lifetime.
+  - [x] LOCKSTEP:operation section moved to this sibling,unique IDs preserved;book/live/notes
+    sync. promotion: declined (existing owner-normalize-check staging). D367/D368 fixed;G1/G0 unchanged.
+  Verification:focused native8/rustdoc6;Commit:STITCHCAD-G1-0676. Next .1.c.line;full .5f.4 deferred.
+- ID: `G1-SLICE.5f.1.c`
+  Status: `pending`
+  Goal:remaining typed line/arc/Bezier/offset/slash-spread/dart/notch/grainline/walk/true/mirror/join
+  schemas from .a inventory;split implementation leaves before code. Parent .1 stays open until all.
+- ID: `G1-SLICE.5f.1.c.line`
+  Status: `pending`
+  Goal:typed line declaration retaining ordered prior PointRefs,persistent EdgeRef output and
+  actual dependency roles;no coordinate calculation/currentness/publication. Curves/edits follow.
+- ID: `G1-SLICE.5f.2`
+  Status: `pending`
+  Goal: typed ordered operation declarations and formula/geometry graph dependencies.
+  Acceptance: every argument sees only prior/always-visible names, output provenance/identity,
+  Pocket logical opening kind/domain/state and component dependencies, Buttonhole dependency on
+  canonical button-size declaration. No separately authored hole length or approximation.
+  Retain the actual containing drafting frame and current output registries;schema/kind proofs grant neither.
+  Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5f.3`
+  Status: `pending`
+  Goal: operation execution/geometry-selector bridge through published typed contracts.
+  Acceptance: operation formulas evaluate at their actual position, x/y/dist/dir/len/param_at/
+  point_at domains and direction-only normalization, stable current references and envelope
+  refusal; G2 supplies geometry and G3 physical construction/positive hole-length acceptance.
+  Parameter quantization and geometry approximation share an explicit error budget based on actual
+  edge length; D126's270deg/radius5m counterexample must not inherit a bbox-only5um guarantee.
+  Core interfaces cannot read upstream submodule implementation or silently fake selectors.
+  Verification: `pending`; Commit: `pending`.
+
+  Children: .a P0 D140 reference coordinate-kind validation, .b product selectors/budget proof.
+- ID: `G1-SLICE.5f.3a`
+  Status: `done`
+  Goal: D140 point/edge Length preflight; [exact protocol](G1-SLICE-names.md#d140-geometry-argument-protocol).
+  Verified97cases/75payloads/12body reds, reference/language16/book10/ledger9+13→0; `STITCHCAD-G1-0102`.
+- ID: `G1-SLICE.5f.3a.t1`
+  Status: `done`
+  Goal: D144 honest reference source locations; preserve stripped header offset, mark fault variants.
+  Acceptance: independent original def/code positions and actual traceback lines; reference regressions.
+  Verified86locations/2body reds, full reference/language16/book10/ledger9+13→0; `STITCHCAD-G1-0103`.
+- ID: `G1-SLICE.5f.3b`
+  Status: `pending`
+  Goal: product ordered operation/selector bridge and combined parameter/geometry budgets.
+  Acceptance: parent .3 contracts, actual stable references and complete argument dependencies;
+  published interfaces only, no fake geometry or unproved approximation bounds.
+  Verification/Commit: `pending`.
+- ID: `G1-SLICE.5f.4`
+  Status: `pending`
+  Goal: coupled operation replay/dependency/construction integration review.
+  Acceptance: all v1 schemas/execution owners, canonical result identity, no partial geometry,
+  operation-order/cycle/stale-reference failures and Pocket/Buttonhole obligations accounted for.
+  Bus .6 remains the mutation boundary; missing G2/G3 execution is not a G1 geometry certificate.
+  Verification: `pending`; Commit: `pending`.

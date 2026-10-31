@@ -93,8 +93,10 @@ The [coupled normalization review](../annexes/formula-literals.md#coupled-normal
 [Canonical expression serialization](../annexes/formula-literals.md#serialize-canonical-expression-identity)
 is implemented; ordered statements also have [explicit syntax inspection](../annexes/formula-statements.md#parse-an-ordered-recipe).
 Statement/recipe identity,binding conversion and [admitted scalar recipe execution](../annexes/formula-recipe-execution.md)
-are implemented,including demanded Derived suppliers and explicit-policy tangent. Geometry,
-load/replay and full application acceptance remain pending;the [scoped numerical review](../annexes/formula-irrational-review.md) passes.
+are implemented,including demanded Derived suppliers,explicit-policy tangent and fresh direct/paired/
+Design scalar replay. [Typed point formulas and static Length proofs](../annexes/drafting-operation-contracts.md#native-point-declarations-and-argument-proofs)
+are available. Geometry execution,corrupt-load/full replay and application acceptance remain pending;
+the [scoped numerical review](../annexes/formula-irrational-review.md) passes.
 Reference instruments supply no product execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.

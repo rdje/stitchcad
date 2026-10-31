@@ -47,7 +47,7 @@
 //! | [`seam_span_history`] | bounded ordered span births/splits and explicit retired-parent evidence | `.6.5.3.2.3.4.1` |
 //! | [`range`] | whole-interval coverage and visible range repairs, distinct from endpoint queries | `.3c.2a` |
 //! | [`rational`] | the bounded exact rational a parameter is stored in | `.3a` |
-//! | [`reference`] | `EdgeRef`, `PointRef`, `LocalTag` and the `[0, 1]` `Param` | `.3a` |
+//! | [`mod@reference`] | `EdgeRef`, `PointRef`, `LocalTag` and the `[0, 1]` `Param` | `.3a` |
 //! | [`sewing`] | copy-addressed spans, disjoint self-seams, declared ease and semantic stops | `.3c.2b.2` |
 //! | [`topology`] | the persistent-identity contract: the edit journal, resolution, `RepairTask`s | `.3b` |
 

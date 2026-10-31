@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0675 — recover complete v1 drafting operation contracts
+## STITCHCAD-G1-0676 — retain real typed point formula arguments
 
-- New book inventory maps every v1 family to actual/planned typed inputs,stable outputs and
-  execution owners. Editing walk remains distinct from the existing WalkSeamSpan query.
-- Ontology/public-contract correspondence,book/rendered table/TOC/history837/diff pass. No Rust
-  behavior change;next typed point declaration .5f.1.b. G1 6/18/G0 unapproved unchanged.
+- Own/normalize/check actual point coordinates with explicit complete retained-shape quotas,
+  Length proofs and persistent output role. No values,frame/currentness or geometry claim.
+- Point5/replay3/rustdoc6/lint/fmt/docs/book/history838/diff pass. D367/D368 fixed;operation tasks
+  routed to execution sibling. G1 6/18/G0 unapproved unchanged;next typed line/reference roles.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

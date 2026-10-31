@@ -2,7 +2,7 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Typed point declarations are the next slice;the remaining operation schemas,ordered
+> geometry. Typed point declarations and static Length argument proofs are available below;remaining schemas,ordered
 > dependencies and actual geometry execution are pending. This page grants no geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -41,7 +41,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 
 | Family | Required inputs | Output/intent boundary | Native schema today |
 | --- | --- | --- | --- |
-| Construct point | x,y Length formulas in a named drafting frame | One persistent point output | Pending .1.b |
+| Construct point | x,y Length formulas in a named drafting frame | One persistent point output | Typed documents/Length proofs;geometry pending |
 | Draw line | Two prior PointRefs | Persistent edge and explicit endpoint provenance | Pending .1.c |
 | Draw arc | Explicit arc construction variant;Length/Angle arguments and prior points | Persistent curved edge and declared point outputs | Pending .1.c |
 | Draw Bézier | Explicit degree and ordered prior control PointRefs | Persistent curved edge;control order retained | Pending .1.c |
@@ -153,10 +153,60 @@ fitting the10m box. Neither that box nor the fixed Ratio quantum proves placemen
 The bridge must retain actual length/parameter bounds and geometry approximation contribution
 before accepting a placement;G2 supplies the concrete evidence.
 
-## What is next
+## Native point declarations and argument proofs
 
-The next native slice is a typed point-from-formulas declaration,with private retained fields,
-original expression ownership and a stable point-output identity. It will retain syntax and
-expected Length roles;it will not evaluate coordinates,publish a mutation or introduce a geometry
-kernel. Remaining primitive/edit schemas finish .1 before ordered construction/selector work.
+`sc_core::construction::PointConstruction` owns a creating-operation EntityId and two original
+FormulaExpressionDocuments. `coordinate(PointCoordinate::X)` and Y expose the actual documents;
+`output()` is always PointRef(operation,LocalTag::FIRST). It is a stable logical output role,not an
+issued identity,a registered current point or a geometric value. The constructor retains already
+syntax/input-validated documents;it does not infer their kinds or read their values.
+
+```rust
+use sc_core::{construction::*,ontology::{EntityId,LocalTag,PointRef},recipe::*};
+let point=PointConstruction::new(EntityId::from_bits(42),
+    FormulaExpressionDocument::new("25 mm+eps_num".into())?,
+    FormulaExpressionDocument::new("0 mm".into())?);
+let limits=PointConstructionNormalizationLimits::new(4,10);
+let normalized=point.normalized(limits).expect("complete shapes");
+let checked=normalized.check_arguments(&FormulaNamespace::new([])?).expect("actual Length proofs");
+assert_eq!(checked.coordinate(PointCoordinate::X).kind(),FormulaKind::Length);
+assert_eq!(point.output(),PointRef::new(EntityId::from_bits(42),LocalTag::FIRST));
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+The two normalized arenas borrow their original document text and preserve actual root/node spans.
+`PointConstructionNormalizationLimits` explicitly admits complete N nodes and conservative2+2N
+retained records:two argument owners,N normalized nodes and at most N call-argument indices. Both
+arguments,every branch and every call argument count before either document is reparsed. Node
+quota precedes retained-record quota. An exact allowance accepts. Population overflow,Nodes,
+RetainedRecords and original document causes remain typed in the normalization error,with the
+actual declaration and selected limits. No normalized argument prefix escapes.
+
+This is a logical retained-shape allowance. Earlier document creation,parser/checker scratch,
+allocator capacity,CPU and geometry/runtime resources remain separate. The normalized owner exposes
+its actual point,limits,node_count(),retained_records() and coordinate arenas;none can be replaced
+by caller annotations or an unrelated expression.
+
+`check_arguments(namespace)` checks x then y with the existing whole expression checker. Each real
+proof must have a Length root before a private CheckedPointConstruction can exist. Its coordinate
+getters expose those actual proofs,including original declarations,dependencies and checked nodes.
+No integer/Angle/Boolean is coerced to Length. A Count root in x refuses before a later missing y
+name. An untaken branch with incompatible kinds keeps its original expression refusal.
+
+Checking performs no numerical/provider read:an Unknown measurement remains Unknown. For example,
+x=`1 um/0`,y=`1 deg` refuses y's actual Angle root before any division. With y=`2 mm`,both static
+Length proofs accept while that division remains unevaluated. A successful proof therefore grants
+neither a coordinate value nor an accepted point.
+
+`PointConstructionCheckError` retains the actual normalized owner,PointCoordinate role,required
+Length kind,original span and Expression or Kind cause. An expression refusal keeps its original
+typed name/operator/call error;only a completed wrong-kind root uses the coordinate-kind refusal.
+The canonical family remains the original token,or formula_dimension for that actual wrong root.
+No recipe statement ordinal,geometry registration or frame context is invented. Debug omits
+authored source text;explicit document/proof getters retain it when requested. The owned declaration,
+normalized arenas and checked proofs enforce their actual borrowing lifetimes and private fields.
+
+These declarations/proofs do not allocate identities,bind geometry names,choose a drafting frame,
+execute selectors or publish through the command bus. Containing frame/current registry/order and
+operation-wide execution are .5f.2/.3 work. Remaining primitive/edit schemas finish .1 first.
 Full geometry,physical behavior,storage and complete operation replay remain owned milestones.

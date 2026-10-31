@@ -15,8 +15,10 @@
 //! implemented in [`recipe`]. Complete static recipe validation, exact numeric operators and binding
 //! conversion, typed command requests and authorized Piece-list reads are available. Measurement/Material/
 //! Notch metadata previews, atomic groups, replay/audit and bounded actual undo/redo execute through the
-//! command bus; recipe/geometry execution and full integration remain pending. New numeric features carry focused
-//! native evidence; broader/platform verification remains owned by G1-SLICE.5c.4 and the pre-push gate.
+//! command bus. Direct/source-backed/Design scalar recipe execution, fresh replay and canonical stored
+//! bindings have focused native acceptance. [`construction`] retains typed point formulas and static
+//! Length argument proofs; geometry execution and full integration remain pending. Broader/platform
+//! verification stays source-scoped or owned by the integration and pre-push gates.
 //!
 //! What lands here, and when:
 //!
@@ -25,31 +27,35 @@
 //! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural pieces/copy plans, semantic notches, grainlines, allowances, construction/closure/pocket intent and sewing graphs; all four structural families complete | `G1-SLICE.3a`/`.3b`/`.3c` |
 //! | `value` | canonical length declarations with authored state/source/provenance; no unknown fallback or cached derived result | `G1-SLICE.4a.1` |
 //! | `name` | immutable ASCII lower-snake tokens, refusing grammar keywords; binding authority stays with the namespace owner | `G1-SLICE.4a.2a` |
-//! | `recipe` | syntax/identity, sourced metadata, whole static recipe checking, exact numeric operators and binding conversion; execution follows | `G1-SLICE.5a/.5b/.5c`; remaining `G1-SLICE.5` |
-//! | `command` | typed catalog/requests, trusted-host authorization, private actual owner and Piece-list read; transactions follow | `G0-CONTRACT.17`, `G1-SLICE.6` |
+//! | `recipe` | syntax/identity, static checking, exact sourced scalar execution, fresh replay and canonical stored bindings; geometry/full integration pending | `G1-SLICE.5` |
+//! | `construction` | owned/normalized/checked point formulas and persistent output role; no evaluated geometry | `G1-SLICE.5f.1.b` |
+//! | `command` | typed requests, authorization, metadata preview/atomic groups/history/undo; other handlers pending | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |
 //!
 //! Entity numerical storage uses [`sc_units`]: lengths are signed `i64` micrometres and entity
 //! directions are normalized `i64` microdegrees. Formula literals instead retain unsigned `u128`
 //! canonical magnitudes with separate unary syntax and raw angle turns. Numeric binding conversion
-//! checks signed `i64` after one rounding; tolerance-aware recipe execution remains a separate contract.
+//! checks signed `i64` after one rounding; admitted scalar recipes reuse this exact binding contract.
 
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
 pub mod ontology;
 
-/// Immutable structural Design ownership; complete aggregate and execution follow.
+/// Actual structural/input ownership and scalar formula execution; whole application readiness remains owned.
 pub mod design;
 
-/// Typed inputs, trusted-host authorization and private owned execution; mutation handlers follow.
+/// Typed inputs, authorization and atomic metadata execution/history; other handlers remain owned.
 pub mod command;
 
 /// Stable machine identifiers, distinct from localized display names and scalar text values.
 pub mod name;
 
-/// Formula syntax/identity, static checking, exact numeric operations and binding conversion.
+/// Formula syntax/identity, static checking, sourced scalar execution, replay and stored-binding bytes.
 pub mod recipe;
+
+/// Typed drafting declarations and static argument proofs, without geometric execution.
+pub mod construction;
 
 /// Canonical length declarations with authored state and required provenance references.
 pub mod value;
