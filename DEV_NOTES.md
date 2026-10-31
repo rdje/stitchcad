@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit distinct point-role catalogue metadata
+## _(2026-10-31 UTC)_ — preserve point role history metadata
 
-0724 wraps unchanged bounded role metadata admission with distinct point catalogue/admitted/member owners;raw tag/key/quota/refusal data may share.
-Original fields/order and quota/duplicate causes remain exact;empty/inactive metadata is valid. No public point proof converts to an edge proof or generates PointRefs.
-Native5+3/point API6/mirror-book7,selected lint/fmt/build/map/render pass0;old edge/transition bytes unchanged,type-use census scoped,whole0723 spans895 exact0.
-Promotion: existing identity decision gains answers on shared raw data/distinct proof domains. Point history/binding/output attribution next;currentness/geometry/global issuance/full CI remain owed. G1still6/18/G0 unapproved.
+0725 privately reuses unchanged transition checks with point-typed before/after/introduced/membership views;complete combined D/A/key bytes precede comparisons.
+Native3+3/point API10/mirror-book8,selected clippy/fmt/build/map/render pass0. Old metadata/transition source unchanged;no new index or source mutation.
+Restoring active membership retains later-issued definitions;old snapshots that forget a supplied tag refuse. Whole0724 spans896 exact0;actual history completeness/undo authority remain separate.
+Promotion: declined (existing role-history/type boundary). Actual mirror/point binding then source-output attribution next;PointRef generation,currentness/geometry/issuance/full CI remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

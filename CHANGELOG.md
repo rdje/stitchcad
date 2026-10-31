@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0724 — admit distinct point-role catalogue metadata
+## STITCHCAD-G1-0725 — preserve point role history metadata
 
-- Point catalogue/admitted/member types remain distinct while private composition reuses metadata checks.
-- Whole quota/order/original-field rules retained;raw shared records grant no membership proof.
-- Native8/point API6/book7 and focused lint/fmt/build/map/render/history895 checks pass.
-- No PointRef generation,currentness or history completeness;point transition/binding/outputs stay owned.
+- Point-typed transition retains actual before/after and original introduced/active/inactive fields.
+- Complete combined quotas precede owner and prior-definition preservation;no new index or mutation.
+- Native6/point API10/book8 and focused lint/fmt/build/map/render/history896 checks pass.
+- Actual issued history/undo authority remain separate;mirror point binding/output attribution stay owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

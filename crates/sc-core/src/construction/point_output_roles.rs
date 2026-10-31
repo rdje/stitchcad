@@ -5,6 +5,11 @@ use super::edge_output_roles::{
 };
 use crate::ontology::{EntityId, LocalTag};
 use core::fmt;
+mod transition;
+pub use transition::{
+    AdmittedPointOutputRoleTransition, PointOutputRoleTransitionError,
+    PointOutputRoleTransitionLimits, PointOutputRoleTransitionRefusal,
+};
 
 /// Raw tag/key records and count/refusal data carry no geometric membership proof themselves.
 /// Reusing them does not make point and edge catalogue/admitted membership types interchangeable.

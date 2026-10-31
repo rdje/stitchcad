@@ -118,5 +118,7 @@ only their actual point owner,never the private admitted edge component. No publ
 makes a point membership usable as an edge membership. Equal tag/key values do not change that.
 
 This admits declared point metadata only,without PointRef generation,source lookup,current
-namespace,issued-history completeness or geometry. Point history/mirror binding/source-output
-attribution remain separate native steps;actual registry/frame/authority/publication stay owned.
+namespace,issued-history completeness or geometry. Point-typed transitions preserve all supplied
+prior definitions under combined bounds,while allowing explicit active-membership changes. Actual
+history completeness/undo authority remain separate;mirror binding/source-output attribution and
+actual registry/frame/publication stay owned. Shared transition data grants no edge-domain proof.

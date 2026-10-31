@@ -329,3 +329,49 @@ transitions,mirror operation association,source/output point attribution,current
 geometric correspondence,nonreuse and publication remain separate requirements. The existing
 PointConstruction's fixed logical point role is unchanged;this catalogue does not rewrite it.
 
+## Point-role history-preserving metadata transitions
+
+`before.admit_transition(&after,limits)` compares actual admitted point catalogues while retaining
+both original owners. Its transition and activated/deactivated membership views are point-typed;
+no public conversion exposes the private shared edge transition. Raw count/refusal data remains
+shared metadata,not authority to change canonical history.
+
+| API | Meaning |
+| --- | --- |
+| `PointOutputRoleTransitionLimits`, `PointOutputRoleTransitionRefusal` | Shared combined-bound/typed-cause records |
+| `AdmittedPointOutputRoleCatalog::admit_transition` | Preserve every supplied prior point definition |
+| `AdmittedPointOutputRoleTransition` | Actual before/after owners,counts and point-domain field views |
+| `PointOutputRoleTransitionError` | Original point parents,limits and first actual refusal |
+
+Complete combined D definitions,A active occurrences and key bytes B are checked before owner
+and definition comparisons. Count overflow refuses first,then D/A/B quotas,operation mismatch,
+then the first original before-definition whose tag was forgotten or key reassigned. Inactive
+prior definitions count and must remain. No work index is allocated by this comparison;the
+existing catalogue indexes retain their own admission scope.
+
+```rust
+use sc_core::construction::*;
+fn transition<'a>(before:&'a AdmittedPointOutputRoleCatalog<'a>,
+    after:&'a AdmittedPointOutputRoleCatalog<'a>,limits:PointOutputRoleTransitionLimits)
+    ->Result<AdmittedPointOutputRoleTransition<'a>,PointOutputRoleTransitionError<'a>> {
+    before.admit_transition(after,limits)
+}
+```
+
+`introduced()` returns actual new after-definition fields with original after indices and order.
+`activated()` returns actual after point-membership views in after order;`deactivated()` returns
+actual before views in before order. Reverse iteration preserves those original positions.
+Neither source changes,and no accepted prefix or synthesized role escapes a refusal.
+
+For example,definitions9/main and2/end with active9 may become definitions7/new,2/end,9/main
+with active2,7. Combined counts are D5,A3,B17;introduced7 keeps after index0,activation reports2,7,
+and deactivation reports9. Restoring active9 later must retain all three definitions,including
+inactive7. Replaying the older two-definition snapshot would forget7 and refuses even though
+its former active list was valid. An absent evaluated point is not a retirement instruction.
+
+This checks supplied structural transition intent. It does not establish that either caller
+supplied the complete actual issued history,that an undo is authorized,or that role geometry is
+continuous. Actual canonical history/maximum-issued retention,current Design,point registry/frame,
+mirror/source-output association,nonreuse and atomic publication remain separate owners. No
+PointRef or coordinates are generated,and catalogue sources remain immutable.
+
