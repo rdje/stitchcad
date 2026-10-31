@@ -854,10 +854,38 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0686 D370/D371 fixed;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part856md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs`
-  Status: `pending`
+  Status: `in_progress`
   Goal:native output-role/manifest and explicit semantic mark-sharing/coalescing/identity policy,
   including physical copies sharing one pattern Piece. No2N-new-id assumption. Actual marks,
   correspondence/differential/ease/profile truth and atomic edits stay G3/G4/bus/.5f.4.geometry.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.copies`
+  Status: `done`
+  Goal:actual complete plan/inventory and both cached side copies/pattern owners.
+  - [x] ISSUE:span-side physical ids alone cannot establish actual pattern owners.
+  - [x] ROOT CAUSE (walk copies):canonical CutPlan/Inventory contracts reviewed;
+    whole C/I/I+3C before scans;rc=0.
+  - [x] FIX:actual whole association and authentic A/B copy/Piece caches;no mark coalescing.
+  - [x] ADDRESSED (walk copies):cargo test --test walk_copy_inventory_contract
+    --test walk_edit_contract:5+5 pass;rc=0;full invocation in receipt.
+  - [x] NO REGRESSION (walk copies):API3/book1,lint/fmt/build/map/render;
+    old fixture/test bodies/book fences and913/914 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing copy/holder boundary).
+  Proof:target/history-proof-0740-walk-copy-context/;Commit:STITCHCAD-G1-0740.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.roles`
+  Status: `pending`
+  Goal:distinct bounded semantic-notch role metadata and actual walk operation binding.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.manifest`
+  Status: `pending`
+  Goal:complete original pair/side-to-output assignment and explicit semantic identities.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.sharing`
+  Status: `pending`
+  Goal:explicit mark sharing/coalescing under actual pattern owners/anchors/profile fields.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.requirements`
+  Status: `pending`
+  Goal:mandatory currentness/correspondence/differential/ease/profile/all-copy/authority evidence.
+- ID: `G1-SLICE.5f.1.c.walk.outputs.checkpoint`
+  Status: `pending`
+  Goal:close only native walk declarations after focused family checks;actual effects stay owned.
 - ID: `G1-SLICE.5f.1.c.true.contracts`
   Status: `done`
   Goal:0688 contract recovery;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part858md).

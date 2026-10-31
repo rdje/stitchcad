@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — complete native mirror declaration checkpoint
+## _(2026-10-31 UTC)_ — bind actual walk physical-copy and pattern owners
 
-0739 selects all19 actual mirror contract suites and the actual construction::mirror API/book filter;80 native+80 doctests pass0. Source d2126ec5/core pinned;runtime/tests/Cargo and all21 prior Rust book fences unchanged.
-All32 native mirror nodes close with original goals/proof links retained. Covers source/cut/metadata/typed roles,complete attribution/contours,correspondence requests,explicit copy choices,actual candidate inventory/plan/companions and semantic/sewing requirements.
-Focused fmt/build/map/render pass0;whole0738 task/lesson/changelog912 spans exact0,older31219B notes base retained. Original source/axis/currentness/global issuance/geometry/provider/physical and semantic execution owners remain pending.
-Promotion: declined (existing declaration/execution boundary). Walk outputs next;typed-v1 integration/full CI remain their milestone. G1still6/18/G0 unapproved;this native checkpoint grants no execution or publication certificate.
+0740 admits whole C/I/I+3C before canonical CutPlan validation against actual PieceInventory,then caches original A/B copies and actual pattern owners by identity. Temporary proof drops;original graph/span/pairs remain the actual parent.
+Distinct copies sharing one Piece,MirroredPairs orientation and disjoint self-seams remain explicit. Shared pattern identity supplies no mark coalescing,anchor/profile equivalence,currentness or geometric correspondence;future native output slices own these policies.
+Native5+5/API3/walk book1,selected lint/fmt/build/map/render pass0;old kernels and shared fixture/test bodies retained,all old input book fences unchanged. Summary120 old rows/order retained;whole0739 spans913/whole0017 protocol914 exact0 and older31219B notes base retained.
+Promotion: declined (existing copy/holder boundary). Typed semantic-notch roles next. Actual held/current Design/global issuance/profile/geometry/all-copy effects and atomic execution remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

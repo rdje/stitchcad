@@ -109,14 +109,13 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Goal:0738 semantic requirements;[whole scope/proofs](../history/stitchcad-devnotes-part912.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.checkpoint`
   Status: `done`
-  Goal:close only native declaration family;actual currentness/issuance/geometry/effects remain owned.
-  - [x] ISSUE:native mirror family needed a scoped completion checkpoint.
-  - [x] ROOT CAUSE (mirror checkpoint):all19 native suites and actual API/book filter selected;
-    original core/source pinned,all21 prior book Rust fences retained;rc=0.
-  - [x] FIX:32-node native branch closed,original goals/proofs and execution owners retained.
-  - [x] ADDRESSED (mirror checkpoint):cargo test selected mirror suites:80 pass;
-    --doc construction::mirror:80 pass;rc=0;full invocations/source in receipt.
-  - [x] NO REGRESSION (mirror checkpoint):runtime/tests/Cargo unchanged,fmt/book/map/render;
-    whole0738/912 Git spans and prior notes base exact;rc=0.
-  - [x] LOCKSTEP:book/live/frontier aligned;promotion: declined (existing declaration/execution boundary).
-  Proof:target/history-proof-0739-mirror-checkpoint/;Commit:STITCHCAD-G1-0739.
+  Goal:0739 native checkpoint80+80;[whole scope/proofs](../history/stitchcad-devnotes-part913.md).
+  - [x] ISSUE:retain live checkpoint acceptance after whole protocol retirement to913.
+  - [x] ROOT CAUSE (mirror retention):original913 Git intervals retained;
+    Python check_source_spans:3 exact;rc=0.
+  - [x] FIX:whole checkpoint913;all32 original nodes/goals/proof links retained.
+  - [x] ADDRESSED (mirror retention):original19 suites80/API-book80 in0739;
+    scoped receipt retained in913,not rerun;original rc=0.
+  - [x] NO REGRESSION (mirror retention):913 spans match7242d730;
+    native closure/execution owners retained;rc=0.
+  - [x] LOCKSTEP:original checkpoint/book/source scope retained.

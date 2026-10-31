@@ -6,6 +6,9 @@
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-edit-inputs.md")]
 mod editing_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-walk-outputs.md")]
+mod walk_output_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-mirror-contracts.md")]
 mod mirror_examples {}
 #[cfg(doctest)]
@@ -177,9 +180,10 @@ pub use slash_spread::{
 };
 mod walk;
 pub use walk::{
-    AdmittedWalkSeamEdit, BoundWalkBalancePair, BoundWalkSeamEdit, WalkBalanceNotch,
-    WalkBalancePair, WalkEditAdmissionError, WalkEditAdmissionRefusal, WalkEditBindingError,
-    WalkEditBindingRefusal, WalkEditLimits, WalkSeamEdit,
+    AdmittedWalkSeamEdit, BoundWalkBalancePair, BoundWalkCopyInventory, BoundWalkSeamEdit,
+    WalkBalanceNotch, WalkBalancePair, WalkCopyInventoryError, WalkCopyInventoryLimits,
+    WalkCopyInventoryRefusal, WalkEditAdmissionError, WalkEditAdmissionRefusal,
+    WalkEditBindingError, WalkEditBindingRefusal, WalkEditLimits, WalkSeamEdit,
 };
 mod truing;
 pub use truing::{

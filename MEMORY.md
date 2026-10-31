@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0739;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.walk.outputs in docs/tasks/G1-SLICE-execution.md.
-  Native mirror declaration checkpoint closes all32 nodes;walk output sharing/coalescing/identity next.
-- Mirror scoped checkpoint19 suites/80 native+80 actual API/book pass;all21 prior Rust fences unchanged.
-  Runtime/tests/Cargo unchanged;source d2126ec5/core pinned in target/history-proof-0739-mirror-checkpoint/.
-  Actual Design/identity issuance/provider/geometry/copy-physical/semantic/publication/full CI stay owed.
+- Latest unit:STITCHCAD-G1-0740;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.walk.outputs.roles in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32 nodes complete;walk actual copy/pattern association complete;typed roles next.
+- Walk actual copy inventory caches real A/B CutCopy/Piece under whole C/I/I+3C;shared pattern
+  infers no coalescing. Native10/API3/walk book1/lint/fmt/build/map/render pass;proof target/history-proof-0740-walk-copy-context/.
+  Mirror80+80/source d2126ec5 remains target/history-proof-0739-mirror-checkpoint/;actual execution pending.
 - Known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.

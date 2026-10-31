@@ -1,6 +1,11 @@
 //! Deliberate balance-notch requests,distinct from a seam-differential read query.
 use crate::ontology::{EdgeAnchor, EntityId, NotchProfileBindings, SeamSideId};
 use core::fmt;
+mod copies;
+pub use copies::{
+    BoundWalkCopyInventory, WalkCopyInventoryError, WalkCopyInventoryLimits,
+    WalkCopyInventoryRefusal,
+};
 mod binding;
 pub use binding::{
     BoundWalkBalancePair, BoundWalkSeamEdit, WalkEditBindingError, WalkEditBindingRefusal,

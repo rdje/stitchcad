@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0739 — complete native mirror declaration checkpoint
+## STITCHCAD-G1-0740 — bind actual walk physical-copy and pattern owners
 
-- All19 mirror contract suites pass80;actual mirror API/book doctests pass80,with21 original examples unchanged.
-- All32 native mirror task nodes close;original goals/proofs and execution ownership remain intact.
-- Runtime/tests/Cargo unchanged;original source/core pinned;fmt/book/map/render/history912 checks pass.
-- Native metadata/manifest/copy/companion/semantic requirements complete;actual effects remain pending.
-- Walk output sharing/coalescing/identity is next;G1 remains6/18 and G0 closure unapproved.
+- Whole C/I/I+3C precede canonical actual inventory checks and original A/B identity lookup.
+- Actual copy and pattern owners are cached;shared Piece ownership supplies no mark coalescing.
+- Original pairs,profile bindings,span/copy/Piece definitions and authored orders remain unchanged.
+- Native10/API3/walk book1 and focused lint/fmt/build/map/render/history913/914 checks pass.
+- Bounded walk-output chapter added;typed roles and explicit semantic sharing policies follow.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

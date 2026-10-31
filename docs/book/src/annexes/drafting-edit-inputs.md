@@ -253,6 +253,8 @@ G4 resolves profile representations. This stage reports no length and creates/pu
 Native output contracts still need explicit semantic mark-sharing/coalescing and identity policy,
 especially when physical copies share a pattern Piece. Actual mark results and atomic execution
 remain G3/bus/full `.5f.4` work. No query result or2N request count substitutes for those results.
+[Actual physical-copy/pattern association](drafting-walk-outputs.md) now supplies both real side
+copies and owners before those output policies;shared ownership alone coalesces no mark.
 
 ## Native constrained seam-truing inputs
 

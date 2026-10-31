@@ -96,6 +96,7 @@
   - [Execute scalar construction recipes](annexes/formula-recipe-execution.md)
   - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
+  - [Walk output and shared-mark contracts](annexes/drafting-walk-outputs.md)
   - [Mirror Piece-copy contracts](annexes/drafting-mirror-contracts.md)
   - [Mirror output attribution and contours](annexes/drafting-mirror-outputs.md)
   - [Mirror physical-copy contracts](annexes/drafting-mirror-copies.md)
@@ -116,5 +117,4 @@
 - [Build and check the project](build-and-checks.md)
 - [Checks during feature delivery](annexes/checking-policy.md)
 # Index
-
 - [Topic index](topic-index.md)
