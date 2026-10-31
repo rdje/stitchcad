@@ -432,3 +432,13 @@ refusals,four simulated timeout/interruption cleanup paths and four actual Pytho
 These controls prove helper ordering and dispatch behavior. Tangent configuration coverage,
 complete platform mutable/temp/failure review and fresh compiled native/browser acceptance remain
 separate leaves. Earlier numerical captures retain their original scope and identity.
+
+## Tangent controller configuration coverage
+
+The controller effect watcher now observes both tangent wrappers through their actual public
+entry dispatch. It captures all three arithmetic and both resource configurations with the original
+source,fixture,test and fault sets. Only the owned diagnostic output labels change.
+The focused run checks27 simulated variants,two failure paths and three actual wrapper-body
+omissions,with complete original/copy restoration and actual owned timeout/group/capture controls.
+Simulated compiler outcomes remain explicitly marked;fresh compiled acceptance is still separate.
+Complete platform mutable/temp/failure review also remains open.

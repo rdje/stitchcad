@@ -943,29 +943,29 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   review with focused refusals/body controls;model outcomes supply no numerical/native verdict.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.dispatch`
   Status: `done`
-  Goal:validate platform child logs and effective stores before compiler/browser dispatch;
-  retain process-group cleanup and test actual late-path refusals plus omission controls.
-  Paths: docs/tasks/artifacts/formula_structure/irrational_platform.py;docs/tasks/artifacts/ci_environment/platform_dispatch_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
-  - [x] ISSUE:D362 P1 invalid log aliases/stores reach platform child/page effects;owned here.
-  - [x] ROOT CAUSE (WHY + WHERE):platform_dispatch_contract.py --diagnose
-    22b8983c1806f41bb7719db6418b04f748afd9e9 reproduces eight original boundary failures,rc=0.
-    command checks its log only after Popen;chromium writes HTML before complete output plan;
-    neither helper verifies the supplied effective stores. No real compiler/browser dispatched.
-  - [x] FIX:verify effective stores and complete log/page/DOM destinations before child/page effects;
-    preserve explicit child environment/session,timeout/interruption cleanup and post-write checks.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/platform_dispatch_contract.py
-    →two simulated successes/eight alias+store refusals/four simulated failure cleanups/four actual
-    body omissions rejected,rc=0. Sentinels exact;modeled children supply no native verdict.
-  - [x] NO REGRESSION:python_numerical_inventory_contract.py →four plans/545 files/six reds;
-    platform31/405/seven reds/three ownership omissions pass,rc=0. History821 four Git spans exact;
-    git diff --check passes0. Broader checks remain .h2.b.v/pre-push after feature completion.
-  - [x] LOCKSTEP:book/live/notes/frontier/census sync;D362 fixed. Promotion: declined(existing
-    producer preflight/effective-store contracts). Tangent/full-platform effects and fresh execution
-    remain pending;G1 6/18/G0 unapproved unchanged. Policy neutral bodies compared equal.
-  Commit:STITCHCAD-G1-0662;Verification:actual helper boundaries with simulated child dispatch.
+  Goal:0662 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part822.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.tangent`
-  Status: `pending`
+  Status: `done`
   Goal:extend unchanged shared-controller effect captures to every tangent/resource configuration.
+  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
+  - [x] ISSUE:existing four-entry fixture only accepts CONFIG;actual tangent configuration raises
+    KeyError 'CONFIG' before any native child. Multi-family wrappers require public dispatch capture.
+  - [x] ROOT CAUSE (WHY + WHERE):configuration() assumes one module CONFIG;actual wrapper main
+    yields three tangent/two resource dictionaries. Trapped actual public dispatch independently
+    checks source/fixture/test/family/row/fault populations,rc=0;wrappers/controller unchanged.
+  - [x] FIX:observe actual wrapper entry dispatch,then pass each complete original configuration
+    through the existing effect capture;only its owned output label changes. Keep modeled receipts.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
+    --tangent-only →five actual configurations/27 simulated variants/two failure paths/three actual
+    wrapper omissions rejected;all sources and complete snapshots restored,rc=0.
+  - [x] NO REGRESSION:original shared-controller/source/test/fixture/fault contracts unchanged;
+    actual timeout/group/capture controls run per configuration. History822 three exact Git spans
+    and git diff --check pass,rc=0;original four configuration captures retain6/6/8/10. Full .h2.b.v/
+    pre-push checks and fresh numerical acceptance remain their later owners.
+  - [x] LOCKSTEP:book/live/notes/frontier/producer registry sync. Promotion: declined(existing
+    actual-dispatch/simulated-versus-native contracts). n16.2 effects.platform next;consumer remains
+    pending. G1 6/18/G0 unapproved unchanged;no new numerical/compiler/browser verdict.
+  Commit:STITCHCAD-G1-0663;Verification:five actual wrapper configurations and modeled effect capture.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.platform`
   Status: `pending`
   Goal:finish platform full-entry mutable/copy/browser/temp/failure controls after dispatch repair.

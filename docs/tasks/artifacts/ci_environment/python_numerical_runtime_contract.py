@@ -15,9 +15,10 @@ ROOT = Path(__file__).resolve().parents[4]
 HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
 DRIVER = HERE / 'root_body_faults.py'
 ENTRIES = tuple(HERE / (name + '_body_faults.py') for name in ('root', 'arc', 'forward', 'inverse'))
+TANGENT_ENTRIES = (HERE / 'tangent_body_faults.py', HERE / 'tangent_resource_body_faults.py')
 PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
-CORE = (Path(__file__), PROFILE_SOURCE, *ENTRIES)
+CORE = (Path(__file__), PROFILE_SOURCE, *ENTRIES, *TANGENT_ENTRIES)
 WORK = ROOT / 'target/numerical-runtime-controls' / str(os.getpid())
 PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
 GIT_ENV = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
@@ -35,8 +36,58 @@ def module(path, script=None):
     return ns
 
 
-def configuration(entry, label, script=None):
-    if entry == DRIVER:
+def public_configurations(entry, script=None):
+    """Observe actual wrapper dispatch rather than reconstructing its family configuration."""
+    cases = []
+    original_loader = runpy.run_path
+
+    def load(path, *args, **kwargs):
+        namespace = original_loader(path, *args, **kwargs)
+        if Path(path) == DRIVER:
+            namespace['main'] = lambda config: cases.append(dict(config))
+        return namespace
+
+    try:
+        runpy.run_path = load
+        scope = dict(__file__=str(entry), __name__='__main__')
+        exec(compile(entry.read_text() if script is None else script, str(entry), 'exec'), scope)
+    finally:
+        runpy.run_path = original_loader
+    return cases
+
+
+def tangent_configurations(entry, script=None):
+    cases = public_configurations(entry, script)
+    expected = {
+        TANGENT_ENTRIES[0]: (
+            ('tangent-fold', 'prepare.rs', 139, 3),
+            ('tangent-interval', 'interval.rs', 139, 3),
+            ('tangent-execution', 'execute.rs', 139, 3)),
+        TANGENT_ENTRIES[1]: (
+            ('tangent-resource-prepare', 'prepare.rs', 33, 6),
+            ('tangent-resource-execute', 'execute.rs', 33, 7)),
+    }[entry]
+    observed = [(case['family'], case['source'].name, case['rows'], len(case['faults'])) for case in cases]
+    assert observed == list(expected), 'tangent public family dispatch drift'
+    for case in cases:
+        assert case['entry'] == entry and case['source'].parent == ROOT / 'crates/sc-core/src/recipe/tangent'
+        resource = entry == TANGENT_ENTRIES[1]
+        fixture, target, test = (
+            ('formula_tangent_resources.tsv', 'formula_tangent_resource_contract',
+             'independent_resource_rows_preserve_actual_stages_limits_demands_and_prior_progress') if resource else
+            ('formula_tangent.tsv', 'formula_tangent_oracle_contract',
+             'actual_upstream_sources_preserve_all_original_tangent_outcomes_through_signed_storage'))
+        assert case['fixture'] == ROOT / 'crates/sc-core/tests/fixtures' / fixture
+        assert (case['target'], case['test']) == (target, test), 'tangent original consumer binding drift'
+    return cases
+
+
+def configuration(entry, label, script=None, *, family=None):
+    if family is not None:
+        cases = tangent_configurations(entry)
+        config = next(case for case in cases if case['family'] == family)
+        ns = module(DRIVER, script)
+    elif entry == DRIVER:
         ns = module(entry, script)
         config = dict(entry=entry, source=ns['SOURCE'], fixture=ns['FIXTURE'], run=ns['RUN'],
                       faults=ns['FAULTS'], test=ns['TEST'], target='formula_root_value_contract', rows=85, family='root')
@@ -49,8 +100,8 @@ def configuration(entry, label, script=None):
     return ns, config
 
 
-def capture(entry, label, script=None, *, outcome='success'):
-    ns, config = configuration(entry, label, script)
+def capture(entry, label, script=None, *, outcome='success', family=None):
+    ns, config = configuration(entry, label, script, family=family)
     original_profile = runpy.run_path
     original_writer = ns['write_report']
     original = (Path.write_bytes, Path.write_text, Path.read_bytes, Path.mkdir,
@@ -433,7 +484,44 @@ def faults():
     return len(variants) + 2
 
 
+def tangent_controls():
+    results = []
+    for entry in TANGENT_ENTRIES:
+        for case in tangent_configurations(entry):
+            family = case['family']
+            results.append(capture(entry, 'complete-' + family, family=family))
+    for entry, family, outcome in (
+        (TANGENT_ENTRIES[0], 'tangent-execution', 'compile-failure'),
+        (TANGENT_ENTRIES[1], 'tangent-resource-execute', 'late-log-refusal')):
+        capture(entry, family + '-' + outcome, family=family, outcome=outcome)
+    rejected = 0
+    for entry, old, new in (
+        (TANGENT_ENTRIES[0], "for family, source, faults in FAMILIES:",
+         "for family, source, faults in FAMILIES[:1]:"),
+        (TANGENT_ENTRIES[1], "rows=33,", "rows=32,"),
+        (TANGENT_ENTRIES[1], "target='formula_tangent_resource_contract'",
+         "target='unrelated_contract'")):
+        source = entry.read_text()
+        assert source.count(old) == 1
+        try:
+            tangent_configurations(entry, source.replace(old, new))
+        except AssertionError as error:
+            assert str(error) in ('tangent public family dispatch drift', 'tangent original consumer binding drift')
+            rejected += 1
+        else:
+            raise AssertionError('actual tangent dispatch omission survived')
+    assert all(path.read_bytes() == data for path, data in FROZEN.items())
+    print('tangent runtime:5 actual public configurations/27 simulated variants/'
+          '2 failure paths/3 actual wrapper body omissions;complete source+snapshot restoration;'
+          'native numerical evidence separate;rc=0')
+    return results
+
+
 def main():
+    if '--tangent-only' in sys.argv:
+        tangent_controls()
+        return
+    tangent_controls()
     results = [capture(entry, 'complete-' + entry.stem) for entry in ENTRIES]
     outcomes = ('compile-failure', 'surviving-fault', 'timeout', 'interruption', 'late-log-refusal',
                 'body-hardlink', 'artifact-outside')

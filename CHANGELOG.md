@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0662 — preflight platform child dispatch
+## STITCHCAD-G1-0663 — capture all tangent controller effects
 
-- D362:validate helper stores/log/page/DOM paths before child or page effects. Two simulated
-  successes/eight physical refusals/four simulated cleanup paths/four actual body omissions pass.
-- Inventory/ownership and history821 four Git spans pass. No fresh numerical/browser verdict;
-  tangent/full-platform effects and native acceptance remain owned. G1 6/18/G0 unapproved unchanged.
+- Observe all five actual tangent/resource public configurations;27 simulated variants/two
+  failure paths/three wrapper omissions and complete source/snapshot restoration pass.
+- History822 three exact Git spans pass. No new numerical/compiler/browser verdict;full platform
+  effects and fresh native acceptance remain owned. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — preflight platform child dispatch
+## _(2026-10-31 UTC)_ — capture all tangent controller effects
 
-0662 fixes D362 under n16.2.effects.dispatch:old command dispatch preceded linked-log refusal;browser HTML preceded its full plan;both accepted unverified stores. Eight failures reproduce against22b8983c.
-Verify stores/destinations before child/page effects. Two simulated successes/eight alias+store refusals/four simulated cleanups/four actual body omissions pass;sentinels exact. No new compiler/browser/numeric verdict.
-Inventory four plans/545 files/six reds/platform31/405/seven reds/three ownership omissions pass. History821 four Git spans exact;[whole0661](docs/history/stitchcad-devnotes-part821.md) retained. Broader gates stay .h2.b.v/pre-push.
-LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing producer boundary rules). External README/claim/containment neutral bodies match. Next tangent/full-platform effects,then fresh native/Chrome acceptance;PNT continues.
+0663 extends n16.2.effects.tangent:the old effect fixture raises CONFIG KeyError for multi-family wrappers. Observe actual wrapper dispatch,then run all three tangent/two resource configurations with their unchanged source/fixture/test/fault populations.
+Focused --tangent-only passes five configurations/27 simulated variants/two failure paths/three wrapper omissions;all original and copied snapshot bytes restore. Actual timeout/group/capture controls run separately from simulated compiler children.
+History822 retains three exact prior Git spans;[whole0662](docs/history/stitchcad-devnotes-part822.md) preserves dispatch repair. No new numerical/compiler/browser verdict. Full .h2.b.v/pre-push checks remain owned.
+LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing actual-dispatch/model-evidence contracts). Next full platform effects,then fresh native/Chrome;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
