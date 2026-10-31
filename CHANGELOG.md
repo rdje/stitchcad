@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0669 — bind modeled receipts to fixture emitter identity
+## STITCHCAD-G1-0670 — complete focused fixture-own acceptance
 
-- D366:record fixture source/runtime identity and refuse changed basis before publication. Actual
-  publication/four field refusals/two body omissions and unchanged-source controls pass.
-- Startup/ownership/history831/book/diff pass. Historical captures stay intact;simulated compiler
-  scope remains explicit. a41 signoff next;no new numerical/full-suite verdict;G1 6/18/G0 unchanged.
+- Four physical alias refusals/two actual guard omissions/current30+27 modeled variants and nine
+  emitter-bound receipts pass. Source/copies exact;one named empty before-copy session refusal valid.
+- History832/book/diff pass;a41 supported boundary closes. No new numerical/full-suite verdict.
+  Next product atomic replay;nonblocking D156 audits stay owned. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

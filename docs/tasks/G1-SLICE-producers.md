@@ -490,7 +490,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Goal:0656 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part816.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete producer-own file/lifecycle audit of the new numerical runtime fixture wrapper;
   its scoped controller captures are .f.n16.1.effects,not full transitive wrapper signoff.
   Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
@@ -500,7 +500,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal:0667 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part828.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete remaining numerical fixture-own file/lifecycle/public-entry effect review after
   startup;source/destination/alias/mutation/restoration/child omissions and focused consumers.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects.ownership`
@@ -508,30 +508,31 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Goal:0668 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part831.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects.provenance`
   Status: `done`
-  Goal:D366 bind modeled receipts to their fixture emitter;keep historical captures immutable.
-  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py;docs/tasks/artifacts/ci_environment/numerical_fixture_provenance_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
-  - [x] ISSUE:D366 P1 modeled receipt lists547 controller inputs but omits fixture emitter basis.
-  - [x] ROOT CAUSE (WHY + WHERE):numerical_fixture_provenance_contract.py --diagnose on the
-    before-reuse controlled report →emitter identity absent,rc=0. publish() adds scope/results
-    after controller assembly without recording its own source/runtime inputs. Actual proofs separate.
-  - [x] FIX:bind modeled report to repository-relative fixture path,frozen source SHA256 and
-    Python version/implementation;refuse source-basis drift before exclusive receipt publication.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/numerical_fixture_provenance_contract.py
-    →actual identity/four field refusals/changed-basis no publication/two actual body omissions
-    pass,rc=0. In-memory frozen-basis changes only;no source file is amended. Receipts stay SIMULATED.
-  - [x] NO REGRESSION:numerical_fixture_startup_contract.py →valid/late refusal/existing-root
-    refusal/two fresh roots/three startup+three ownership omissions pass,rc=0. Source/caller state
-    exact;history831 four whole Git intervals/book build/git diff --check pass,rc=0. Full current
-    fixture/own alias acceptance remains signoff;no numerical/full-suite verdict implied.
-  - [x] LOCKSTEP:book/live/notes/frontier/registry sync;D366 fixed. Promotion: declined(existing
-    artifact-emitter identity/immutable evidence contracts). a41/effects active;signoff next.
-    Historical modeled/native/Chrome captures stay untouched;G1 6/18/G0 unapproved unchanged.
-  Commit:STITCHCAD-G1-0669;Verification:actual modeled publication and source-basis guard controls.
+  Goal:0669 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part832.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.signoff`
-  Status: `pending`
-  Goal:focused complete fixture-own public-entry/file/alias/lifecycle acceptance after all repairs;
-  verify current full modeled replay/source preservation,then close only a41's supported boundary.
-  Full D156/integration/pre-push and actual numerical/application verdicts remain separate owners.
+  Status: `done`
+  Goal:complete supported fixture-own public-entry/file/alias/lifecycle acceptance after repairs.
+  Paths: docs/tasks/artifacts/ci_environment/numerical_fixture_alias_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
+  - [x] ISSUE:controller controls alone do not certify fixture-owned destinations or current receipts.
+  - [x] ROOT CAUSE (WHY + WHERE):actual complete replay passes;new signoff census initially
+    treated deliberate fault-session before-copy refusal as a complete snapshot. Filesystem census
+    →22 workspaces/one empty/no accepted receipt there;all other copies complete,rc=0. Classify that
+    explicit empty failure separately;never weaken accepted/copy membership to an arbitrary subset.
+  - [x] FIX:retain independent physical fixture-owned alias guards and exact complete-copy/emitter
+    validation;permit only the named empty session refusal with no report. Keep full replay scoped.
+  - [x] ADDRESSED:numerical_fixture_alias_contract.py --full →four physical first/last artifact/
+    kernel/fixture refusals,two actual guard omissions,current30+27 modeled variants/nine accepted
+    modeled receipts with current emitter identity pass,rc=0. Caller/sentinels/original inputs/copies
+    exact;actual timeout/group guards retained. Both omissions demonstrably change controlled bytes.
+  - [x] NO REGRESSION:full current original4-family/tangent5 configurations retain all prior
+    failure/refusal/body controls;all copied files exact and only fault-session empty before-copy,
+    rc=0. Current log target/numerical-fixture-0670-signoff-final.log;history832 three Git spans/
+    book build/git diff --check pass,rc=0. No new actual numerical,full-suite or platform verdict.
+  - [x] LOCKSTEP:book/live/notes/frontier/registry sync;a41/effects supported boundary closes.
+    Promotion: declined(existing independent population/fixture ownership contracts). D156/.p.v/
+    .b.s/.b.v and pre-push stay owned/deferred. Director2026-10-25:next product .5e.4 atomic replay;
+    further nonblocking producer audits wait for integration. G1 6/18/G0 unapproved unchanged.
+  Commit:STITCHCAD-G1-0670;Verification:physical fixture aliases/current complete modeled acceptance.
 
 ## Ordered native file-destination repairs
 

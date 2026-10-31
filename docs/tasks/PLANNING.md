@@ -1197,4 +1197,4 @@ Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf r
 
 ## D308–D366 — modeled fixture emitter identity
 
-D308–D365:[whole prior ledger](../history/stitchcad-devnotes-part831.md). D366 P1 fixed0669;owner a41.effects.provenance:modeled receipt lacked fixture emitter identity;source/runtime identity and changed-basis publication refusal now pass. Original numerical proofs unchanged. D334 P2 after G1/before G0;D223/PLANNING.5 open. a41 signoff/full D156 remain owned.
+D308–D365:[whole prior ledger](../history/stitchcad-devnotes-part831.md). D366 P1 fixed0669;owner a41.effects.provenance:modeled receipt lacked fixture emitter identity;source/runtime identity and changed-basis publication refusal now pass. Original numerical proofs unchanged. D334 P2 after G1/before G0;D223/PLANNING.5 open. a41 scoped0670 done;full D156 remains owned/deferred.

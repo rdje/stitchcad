@@ -386,7 +386,7 @@ sha256:0fee096d24b88963e434182710341cc65fd33d86c2e59118ba017d65311dfeb5
 ```
 
 This closes n16.1's supported four-entry inventory/effect/native boundary on the observed host.
-Tangent/resource/browser acceptance passes below;the fixture wrapper remains a41,and complete D156
+Tangent/resource/browser and supported fixture-own acceptance pass below;complete D156
 integration retains its owner. No new full-suite,application/device,allocator,physical or human
 release verdict follows from this native acceptance. Historical captures remain immutable.
 
@@ -518,7 +518,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/numerical_acceptance_reader
 
 Without --platform,the reader validates native evidence only and explicitly excludes platform
 acceptance from its scope. These results close n16's supported direct entry/source/artifact/
-profile/temp/child boundary on this host. The fixture wrapper's own producer audit remains a41;
+profile/temp/child boundary on this host. The fixture wrapper's supported producer audit is completed below;
 complete transitive compiler/browser locality,full D156 integration and broader application,
 physical and human release acceptance retain their separate owners. No fresh full-suite verdict
 follows from these focused commands.
@@ -534,7 +534,7 @@ owned setup or caller-environment change.
 
 The startup watcher exercises real valid activation,that late refusal,and three actual Python-body
 omissions. The existing five-configuration tangent effect consumer remains green. This closes
-only the fixture's startup child;the remaining fixture-own file/lifecycle review remains a41.effects.
+only the fixture's startup child;the complete fixture-own acceptance follows below.
 
 An optional macOS diagnostic pins the selected Git executable and denies persistent file writes,
 with the required OS null-device sink exception. It reads the observed542 index rows and proves
@@ -585,5 +585,23 @@ SIMULATED and supplies no compiled numerical or browser verdict.
 python3 -I -B docs/tasks/artifacts/ci_environment/numerical_fixture_provenance_contract.py
 ```
 
-The remaining a41 signoff owns complete fixture-own alias/lifecycle acceptance and the current
+The focused a41 signoff below completes fixture-own alias/lifecycle acceptance and the current
 full modeled replay. Actual numerical/Chrome acceptance remains the separate observed proof above.
+
+## Focused fixture-own acceptance
+
+The0670 signoff exercises physical symlink/hard-link refusals at the first and last simulated
+artifact destinations and at fixture-owned kernel/fixture outputs. Four alias cases preserve
+controlled sentinels,caller state and source/copy bytes without an accepted failed receipt.
+Two actual admission omissions change the controlled bytes and are rejected by the checker.
+
+The current complete replay retains all30 original-family and27 tangent simulated variants,
+prior failure/refusal/body controls and actual owned timeout/group fixtures. All nine accepted
+modeled receipts bind the current emitter. Copied workspaces retain exact complete membership
+and bytes. The deliberate session-guard omission refuses before copying;its explicitly named
+empty directory has no receipt and is classified separately from accepted or populated copies.
+
+This closes a41's supported fixture-own boundary. Simulated compiler outcomes supply no actual
+numerical or browser verdict. Full transitive/D156 integration and pre-push checks remain owned.
+Following the director's feature-delivery ruling,the next product work is atomic recipe replay;
+remaining nonblocking producer audits wait for their integration milestone.

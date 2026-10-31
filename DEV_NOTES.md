@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind modeled receipts to fixture emitter identity
+## _(2026-10-31 UTC)_ — complete focused fixture-own acceptance
 
-0669 fixes D366:modeled receipt records controller inputs but omits fixture emitter identity. publish() now records repository-relative path,frozen source SHA256 and Python version/implementation;changed source basis refuses before exclusive publication.
-Actual modeled publication/four field refusals/changed-basis no publication/two actual body omissions pass. Only in-memory basis changes;source files remain exact. Startup/root-refusal/freshness/six omission controls remain green. Simulations provide no native numerical verdict.
-[Whole0668](docs/history/stitchcad-devnotes-part831.md) preserves prior scope/ledger;history831 four Git spans/book/diff pass. Historical captures untouched;actual native/Chrome source basis unchanged.
-LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing emitter identity/evidence contracts). a41/effects active;focused own alias/full modeled signoff next. Full D156/integration/pre-push remain owned;PNT continues.
+0670 passes four physical first/last artifact/kernel/fixture aliases and two actual guard omissions. Controlled sentinels/caller/source/copy bytes stay exact;failed receipts cannot publish. Complete replay retains original30+tangent27 modeled variants and nine current emitter-bound receipts.
+New checker initially overclaimed complete population for a deliberate session fault. Filesystem census pins one empty before-copy refusal among22 workspaces,no receipt there;all others complete. Only that named empty refusal is exempted from complete-copy membership;every created file stays exact.
+History832 three Git spans/book/diff pass;[whole0669](docs/history/stitchcad-devnotes-part832.md) retained. Actual timeout/group controls remain real;compiler outcomes remain SIMULATED. Native/Chrome proof basis unchanged;no fresh full-suite verdict.
+LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing independent population/ownership contracts). a41/effects close;D156/.p.v/.b.s/.b.v/pre-push remain owned. Per director2026-10-25,next product .5e.4 atomic replay;nonblocking audits defer. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

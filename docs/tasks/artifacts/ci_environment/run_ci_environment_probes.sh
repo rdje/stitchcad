@@ -35,6 +35,7 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_search_capture_c
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_numerical_inventory_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/numerical_fixture_provenance_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/numerical_fixture_alias_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/platform_dispatch_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/platform_runtime_contract.py"
