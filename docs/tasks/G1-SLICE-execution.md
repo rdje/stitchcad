@@ -40,11 +40,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
 - ID: `G1-SLICE.5e.1.6`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part421md).
-  Retention0297 owned .4c.2.1:
-  - [x] ROOT CAUSE0297: git show3c85204 whole completed input-adapter summaries retained421; Python byte/hash comparison rc=0.
-  - [x] ADDRESSED0297: whole source/hash exact in421, Python comparison rc=0.
-  - [x] NO REGRESSION0297: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part421.md whole public file exact, Python comparison rc=0; no reader change.
+  Goal:verified scope;[whole scope/proofs](../history/stitchcad-devnotes-part855.md).
 - ID: `G1-SLICE.5e.2`
   Status: `in_progress`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.
@@ -63,11 +59,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part416md).
 - ID: `G1-SLICE.5e.2.h13`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part416md).
-  Retention0295 owned .6.2.2.b.2.a:
-  - [x] ROOT CAUSE0295: git showe95fa7a whole four execution-prerequisite summaries retained416; Python byte/hash comparison rc=0.
-  - [x] ADDRESSED0295: whole source/hash exact in416, Python comparison rc=0.
-  - [x] NO REGRESSION0295: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part416.md whole public file exact, Python comparison rc=0; no reader change.
+  Goal:verified scope;[whole scope/proofs](../history/stitchcad-devnotes-part855.md).
 - ID: `G1-SLICE.5e.2.4`
   Status: `in_progress`
   Goal: bounded source-order expression execution consuming actual node proofs and sourced values.
@@ -815,26 +807,41 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   native contract acceptance needs no completed geometry engine. No metadata/default-id shortcut.
 - ID: `G1-SLICE.5f.1.c.stage-order`
   Status: `done`
-  Goal:P1 D369 fix immediately after0684. Repro:offset.outputs waits for actual G2.2 before
-  G1 .5f.1 closure;G2 entry waits for G1 closure. Root0680 conflated contract and geometry.
-  Split native output contract/schema acceptance from later actual G2/G3 execution/integration;
-  preserve all deferred obligations and verify exact dependency/roadmap/book alignment.
-  Scope:native output-contract tasks remain pending but do not wait for actual geometry engines;
-  real G2/G3 result/integration proof retains a separate follow-up. Preserve G1 real spike and
-  G2 entry criteria;no gate/proof waiver or synthetic output. Retire whole0684 and closed held-reference parent for live bounds.
-  - [x] ISSUE:D369 creates G1 schema→G2 engine→G1 closure dependency cycle.
-  - [x] ROOT CAUSE (WHY + WHERE):Python Git0383ded3^/0383ded3/HEAD confirms0680 introduced
-    actual-G2 fragment prerequisite and parent-schema closure condition;cycle reproduced,rc=0.
-  - [x] FIX:all three output owners define native typed contracts;actual G2/G3 results and
-    mappings retain pending .5f.4.geometry. G1 spike/G2 entry/declared acceptance stay exact.
-  - [x] ADDRESSED (D369):Python scoped stage-order assertions →15 pass,rc=0;old route fault
-    recreates cycle,missing real-integration owner refuses;all output contracts remain pending.
-  - [x] NO REGRESSION (D369):actual G1/G2 requirements and Rust bytes unchanged;book/rendered
-    stage-only boundary/diff/history851+852 four exact Git spans pass,rc=0. No geometry/runtime
-    implementation or gate closure claimed. Checked snapshot retained in target/history-proof-0685-stage-order.
-  - [x] LOCKSTEP:ledger/live/book/frontier sync;promotion: declined (existing stage boundary).
-    Output contract implementation and real later geometry verification remain owned.
-  Verification:focused15 and fault controls;Commit:STITCHCAD-G1-0685. Next walk-edit inputs.
+  Goal:0685 D369 fixed;[whole scope/proofs](../history/stitchcad-devnotes-part853.md).
+- ID: `G1-SLICE.5f.1.c.walk.inputs`
+  Status: `active`
+  Goal:typed walk-edit balance-notch inputs with actual span/side/anchor/profile contracts.
+  No geometry or query-as-edit substitute. Retire whole0685;split native-edit book reference
+  for bounds;focused checks. Full .5f.4 stays deferred.
+  Scope:owned non-defaulted side-A/B anchor/profile pairs;explicit complete pair quota and2N
+  request population admission before source inspection. Raw input remains inspectable on refusal.
+  Admitted-only actual SewingGraph span binding checks exact original edge and inclusive bounds;
+  authentic borrowed pair/source views preserve order/repeats and physical-copy sides. No value,
+  correspondence/current-root/profile/geometry proof or created ids;actual edits remain execution.
+  Admission rejects empty edits;two requests/pair do not assert two fresh semantic ids.
+  Bounds are structural;actual correspondence/ease/currentness remain G3/whole execution checks.
+  Book setup/D370/D371 repairs belong to .examples;commit that child before API work.
+- ID: `G1-SLICE.5f.1.c.walk.inputs.examples`
+  Status: `done`
+  Goal:complete the native-edit reference split and fix D370 compiler lifetimes/D371 stale
+  spatial availability before walk API work. Parent owned all changes before decomposition.
+  Scope:actual maintained Markdown included in cfg(doctest),known-literal owner assertions,
+  source-status correction,exact pre-fix move/native before-after/compiler guard and book sync.
+  Retire whole0685/old ledger under parent scope and completed .5e.1.6/.5e.2.h13 proof boxes
+  for live bounds;focused checks only,no geometry/runtime claim.
+  - [x] ISSUE:D370 two borrowed-error examples fail compilation;D371 spatial status is stale.
+  - [x] ROOT CAUSE (WHY + WHERE):actual included Markdown before→3 pass/2 fail,rc=101,
+    E0515/E0505/E0597;Python Git/body/API/status census confirms0682/0683 causes,rc=0.
+  - [x] FIX:known-literal owner assertions,actual Markdown doctest guard,accurate spatial status;
+    move13123B intact except exact owned corrections into indexed bounded companion.
+  - [x] ADDRESSED (book):local_environment.py -- cargo test --offline --locked -p sc-core --doc
+    construction::editing_examples →all5 pass,rc=0;actual five source fences,not copied fixtures.
+  - [x] NO REGRESSION (book):selected lib clippy/fmt/book/rendered routes/native-point anchor/
+    exact move-with-corrections/history853–855 six Git spans pass,rc=0. Removing only the
+    doctest guard recovers exact prior Rust;no runtime behavior/API/geometry or walk implementation.
+  - [x] LOCKSTEP:book/live/ledger sync;promotion: declined (existing source-backed checks).
+    Parent walk API/full .5f.4 remain pending. Evidence:target/history-proof-0686-book.
+  Verification:book compiler5 and source/render checks;Commit:STITCHCAD-G1-0686. Next parent API.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

@@ -1,6 +1,10 @@
 //! Typed authored drafting declarations, separate from evaluated geometry and command authority.
 //! Records retain original formula documents and persistent logical output references. Complete
 //! operation ordering, containing frames, current registries, geometry and publication stay owned.
+// Compile the actual maintained examples, so rendered prose cannot drift from public Rust APIs.
+#[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-edit-inputs.md")]
+mod editing_examples {}
 mod arc;
 mod arguments;
 mod bezier;

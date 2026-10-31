@@ -1191,10 +1191,10 @@ Focused range20/notch4 and oracle14 pass0;five genuinely wide final fractions re
 
 Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687. Current gate10 producers/12 fixtures/9 finite guards pass;29 suites discovered. New stop oracle registered0529;missing/unknown/status/mismatch/wiring controls retained. Hosted verdict follows push400. Stop partition .3.3 continues.
 
-D307–D368:[whole prior ledger](../history/stitchcad-devnotes-part848.md). D334/D223/D156 remain owned.
+D307–D369:[whole prior ledger](../history/stitchcad-devnotes-part854.md). D334/D223/D156 remain owned.
 
-## D369 — G1 schema completion incorrectly waits for G2 geometry
+## D370/D371 — native-edit compiler lifetimes and stale spatial availability
 
-P1 fixed0685;owner G1-SLICE.5f.1.c.stage-order. Repro:0680 offset.outputs required actual G2 fragments before G1 schema closure;G2 entry requires G1 closed.
-Root:0680 conflated output contract with geometry execution. Impact:cycle can strand product delivery.
-Fix:native contract acceptance separate from actual G2/G3 integration (.5f.4.geometry). Focused15/fault controls/book pass;G1 spike/G2 entry and runtime unchanged.
+P2 fixed0686;owner G1-SLICE.5f.1.c.walk.inputs.examples. D370 native Markdown:3 pass/2 fail,E0515/E0505/E0597;D371 called implemented spatial inputs pending.
+Root:D3700682/0683 boxed local-owner errors;D3710683 added spatial inputs without updating component text. Impact:uncompilable examples/stale availability.
+Fix:assert known literal stages;actual Markdown cfg(doctest)5 pass. Spatial status now matches real declaration;source/render/lint checks pass. Walk API/geometry pending.

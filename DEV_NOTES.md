@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — separate G1 output contracts from later geometry proof
+## _(2026-10-31 UTC)_ — compile the actual native editing examples
 
-0685 fixes D369. Git0680 introduced actual G2 fragment results as a G1 schema prerequisite,while G2 entry requires G1 closed. Offset/slash/mirror output owners now require typed native contracts;actual engine results/mappings retain pending .5f.4.geometry. No geometry or gate criterion is waived.
-Focused Python15 checks pass with original-route and missing-integration-owner fault controls. G1 native declaration acceptance,real architecture spike and G2 entry remain exact;all three output contracts stay pending. Rust is unchanged. Book/rendered/diff/history851/852 four exact Git spans pass.
-Evidence:target/history-proof-0685-stage-order retains actual hashes/check names and exact checked dependency snapshot. This is a targeted planning repair,not implementation/full geometry verification. Output contracts still need native code;real G2/G3 effects and broader .5f.4 remain owned.
-LIVE states/G1 6/18/G0 unapproved unchanged;D369 marked fixed. promotion: declined (existing stage boundary). Whole0684 retained851;closed held-reference scope852. Next remaining .1.c walk-edit inputs;bus remains sole mutation boundary. Keep0684 packing proof;never rerun installer. PNT continues.
+0686 splits13123B native-edit reference into indexed bounded companion,then fixes D370 boxed borrowed errors and D371 stale spatial availability. Actual included Markdown before→3 pass/2 compiler failures E0515/E0505/E0597;known-literal assertions keep owners alive. Permanent cfg(doctest) guard reads the real page.
+All5 actual example tests/selected lib clippy/fmt/book/rendered routes pass. Native body equals the complete Git source after exact owned corrections;original/fixed hashes retained in target/history-proof-0686-book. Removing only the guard recovers exact prior Rust;no runtime API or geometry changed.
+Whole0685,prior ledger and two closed proof scopes retain six exact Git spans853–855. D370/D371 fixed;book now points to implemented spatial inputs and actual geometry obligations. The native-point link remains in the main chapter;SUMMARY118 lines stays bounded.
+LIVE states/G1 6/18/G0 unapproved unchanged;defect notes updated. promotion: declined (existing source-backed checks). Parent .1.c.walk.inputs remains active for actual bounded edit requests/binding;no walk API is implemented by this book preparation. Full .5f.4 stays deferred. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

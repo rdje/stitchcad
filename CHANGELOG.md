@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0685 — separate G1 output contracts from later geometry proof
+## STITCHCAD-G1-0686 — compile the actual native editing examples
 
-- D369 fixed:typed output contracts precede actual engine-backed results;explicit later integration stays owned.
-- Focused15/original-route and missing-owner controls pass;all output tasks remain pending.
-- G1 real spike,G2 entry and Rust runtime remain unchanged;book/ledger/live sync.
-- Whole0684 retained851;full geometry/operation verification stays deferred.
+- Fix D370 borrowed-error examples and D371 stale spatial availability;actual Markdown doctests5 pass.
+- Split13123B native-edit reference with exact owned corrections;indexed companion keeps book bounds.
+- Source/render/lint/fmt checks pass;whole0685/ledger/closed proofs retained853–855.
+- Runtime API unchanged;parent walk-edit implementation/full .5f.4 remain pending.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
