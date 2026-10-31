@@ -330,6 +330,7 @@ def main():
     environment = PROFILE['prepare_producer'](ROOT, sources=tuple(sources),
         directories=tuple(directories), output_files=outputs)
     environment['TMPDIR'] = str(TEMP)
+    environment['MAKE_TMPDIR'] = str(TEMP)
     environment['TMP'] = str(TEMP)
     environment['TEMP'] = str(TEMP)
     assert TEMP.stat().st_dev == ROOT.stat().st_dev
@@ -381,6 +382,7 @@ unsafe_code = "forbid"
     assert {item for item in resolved if item[0] != 'sc-irrational-platform'} <= pinned, 'adapter dependency version drift'
     print('platform capture:31 unchanged public-API checks;compiler and Chrome identified', flush=True)
     wrong = WORK / 'consumers/fixtures/formula_tangent.tsv'
+    PROFILE['plan_producer'](ROOT, sources=(wrong,), mutable_sources=(wrong,), output_files=(wrong,))
     original = wrong.read_bytes()
     anchor = b'degree_-720\t-720000000\t1\tvalue\t0\n'
     assert original.count(anchor) == 1
@@ -388,7 +390,7 @@ unsafe_code = "forbid"
     try:
         for label in ('baseline', 'wrong-fixture'):
             if label == 'wrong-fixture':
-                PROFILE['plan_producer'](ROOT, output_files=(wrong,))
+                PROFILE['plan_producer'](ROOT, sources=(wrong,), mutable_sources=(wrong,), output_files=(wrong,))
                 wrong.write_bytes(original.replace(anchor, anchor.replace(b'\t0\n', b'\t1\n'), 1))
             binaries = {}
             for kind, target, suffix in (('native', None, '.native'), ('wasm', 'wasm32-unknown-unknown', '.wasm')):
@@ -422,7 +424,7 @@ unsafe_code = "forbid"
             print('platform:' + label + (' native+actual Chrome pass' if label == 'baseline'
                 else ' compiled wrong expectation rejected natively+actual browser trap'), flush=True)
     finally:
-        PROFILE['plan_producer'](ROOT, output_files=(wrong,))
+        PROFILE['plan_producer'](ROOT, sources=(wrong,), mutable_sources=(wrong,), output_files=(wrong,))
         wrong.write_bytes(original)
     assert all(path.read_text() == text for path, text in copied.items())
     assert all(path.read_bytes() == data for path, data in fixtures.items())

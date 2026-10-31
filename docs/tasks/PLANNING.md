@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D362 — platform child dispatch preflight
+## D308–D363 — coherent full platform entry environment
 
-D308–D361:[whole prior ledger](../history/stitchcad-devnotes-part821.md). D362 P1 fixed0662;owner n16.2.effects.dispatch:invalid logs/stores previously reached child/page effects. Eight refusals/four body omissions now pass. D334 P2 after G1/before G0;D223/PLANNING.5 open. Tangent/full-platform effects and fresh execution remain owned.
+D308–D362:[whole prior ledger](../history/stitchcad-devnotes-part823.md). D363 P1 fixed0664;owner n16.2.effects.platform:new dispatch guard exposes stale MAKE_TMPDIR after TEMP selection. Full-entry model and six failure/omission controls pass;explicit copied-fixture mutable plan retained. D334 P2 after G1/before G0;D223/PLANNING.5 open. Fresh native/browser next.

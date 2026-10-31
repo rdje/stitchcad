@@ -938,7 +938,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal:0661 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part821.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete tangent-family entry and platform source/file/mutable/child/browser/temp/failure
   review with focused refusals/body controls;model outcomes supply no numerical/native verdict.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.dispatch`
@@ -946,29 +946,32 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Goal:0662 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part822.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.tangent`
   Status: `done`
-  Goal:extend unchanged shared-controller effect captures to every tangent/resource configuration.
-  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
-  - [x] ISSUE:existing four-entry fixture only accepts CONFIG;actual tangent configuration raises
-    KeyError 'CONFIG' before any native child. Multi-family wrappers require public dispatch capture.
-  - [x] ROOT CAUSE (WHY + WHERE):configuration() assumes one module CONFIG;actual wrapper main
-    yields three tangent/two resource dictionaries. Trapped actual public dispatch independently
-    checks source/fixture/test/family/row/fault populations,rc=0;wrappers/controller unchanged.
-  - [x] FIX:observe actual wrapper entry dispatch,then pass each complete original configuration
-    through the existing effect capture;only its owned output label changes. Keep modeled receipts.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
-    --tangent-only →five actual configurations/27 simulated variants/two failure paths/three actual
-    wrapper omissions rejected;all sources and complete snapshots restored,rc=0.
-  - [x] NO REGRESSION:original shared-controller/source/test/fixture/fault contracts unchanged;
-    actual timeout/group/capture controls run per configuration. History822 three exact Git spans
-    and git diff --check pass,rc=0;original four configuration captures retain6/6/8/10. Full .h2.b.v/
-    pre-push checks and fresh numerical acceptance remain their later owners.
-  - [x] LOCKSTEP:book/live/notes/frontier/producer registry sync. Promotion: declined(existing
-    actual-dispatch/simulated-versus-native contracts). n16.2 effects.platform next;consumer remains
-    pending. G1 6/18/G0 unapproved unchanged;no new numerical/compiler/browser verdict.
-  Commit:STITCHCAD-G1-0663;Verification:five actual wrapper configurations and modeled effect capture.
+  Goal:0663 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part823.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.platform`
-  Status: `pending`
-  Goal:finish platform full-entry mutable/copy/browser/temp/failure controls after dispatch repair.
+  Status: `done`
+  Goal:finish scoped platform full-entry mutable/copy/browser/temp/failure controls.
+  Paths: docs/tasks/artifacts/formula_structure/irrational_platform.py;docs/tasks/artifacts/ci_environment/platform_runtime_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
+  - [x] ISSUE:D363 P1 new helper guard refuses full entry:TMPDIR changes without MAKE_TMPDIR.
+  - [x] ROOT CAUSE (WHY + WHERE):platform_runtime_contract.py --diagnose
+    254e136a84ea1d7922214ba92211d4dc8cf44393 →actual full main refuses first child with
+    effective MAKE_TMPDIR is not local;no compiler/browser dispatched,rc=0. Helper-only model
+    missed entry preparation. Existing owned fixture reads/mutations also need explicit admission.
+  - [x] FIX:align MAKE_TMPDIR with selected TEMP;declare copied fixture input/mutable/output
+    before reads,mutation and restoration. Retain full actual-entry watcher with simulated children.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/platform_runtime_contract.py
+    →full-entry success/six failures/six actual omissions pass,rc=0. Complete source/output/dir
+    plans precede activation;caller stores/argv/versions/copied bytes/temp seal/latest are checked.
+    Build failure,surviving bad expectation,interruption,version drift,temp replacement and early
+    log alias cannot publish acceptance. Receipts explicitly identify simulated compiler/browser.
+  - [x] NO REGRESSION:platform_dispatch_contract.py →two successes/eight refusals/four simulated
+    cleanups/four omissions;python_numerical_inventory_contract.py →four545/six reds/platform31/
+    405/seven reds/three ownership controls pass,rc=0. History823 four Git spans exact;book build
+    and git diff --check pass,rc=0. Complete native/browser verdict remains .consumer.
+  - [x] LOCKSTEP:book/live/notes/frontier/producer registry sync;D363 fixed. Promotion: declined
+    (existing environment consistency/producer admission contracts). effects children complete;
+    n16/n16.2 and consumer active/pending. G1 6/18/G0 unapproved unchanged. Complete transitive
+    compiler/browser locality and full D156/.h2.b.v/pre-push/app/release retain separate owners.
+  Commit:STITCHCAD-G1-0664;Verification:actual full-entry plans/effects with simulated children.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer`
   Status: `pending`
   Goal:fresh actual tangent/resource fault consumers and observed native/Chrome execution;

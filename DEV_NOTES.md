@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — capture all tangent controller effects
+## _(2026-10-31 UTC)_ — complete full platform entry effects
 
-0663 extends n16.2.effects.tangent:the old effect fixture raises CONFIG KeyError for multi-family wrappers. Observe actual wrapper dispatch,then run all three tangent/two resource configurations with their unchanged source/fixture/test/fault populations.
-Focused --tangent-only passes five configurations/27 simulated variants/two failure paths/three wrapper omissions;all original and copied snapshot bytes restore. Actual timeout/group/capture controls run separately from simulated compiler children.
-History822 retains three exact prior Git spans;[whole0662](docs/history/stitchcad-devnotes-part822.md) preserves dispatch repair. No new numerical/compiler/browser verdict. Full .h2.b.v/pre-push checks remain owned.
-LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing actual-dispatch/model-evidence contracts). Next full platform effects,then fresh native/Chrome;PNT continues.
+0664 fixes D363:new helper verification exposes stale MAKE_TMPDIR after full entry chooses TEMP. Actual main diagnostic against254e136a refuses before compiler/browser. Align both values;explicitly admit copied fixture reads/mutation/restoration.
+Full actual-entry watcher passes modeled success/six failure paths/six actual body omissions;plans/caller stores/argv/versions/source+fixture restoration/temp sealing/latest are checked. Receipts identify simulated compiler/browser;no numerical verdict.
+Dispatch two successes/eight refusals/four cleanups/four omissions and original inventory/ownership remain green. History823 four exact Git spans and book build pass;[whole0663](docs/history/stitchcad-devnotes-part823.md) retained.
+LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing environment/producer contracts). Effects children complete;next fresh native/Chrome. Full D156/.h2.b.v/pre-push/transitive/app/release scopes remain owned;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0663 — capture all tangent controller effects
+## STITCHCAD-G1-0664 — complete full platform entry effects
 
-- Observe all five actual tangent/resource public configurations;27 simulated variants/two
-  failure paths/three wrapper omissions and complete source/snapshot restoration pass.
-- History822 three exact Git spans pass. No new numerical/compiler/browser verdict;full platform
-  effects and fresh native acceptance remain owned. G1 6/18/G0 unapproved unchanged.
+- D363:align browser temporary store aliases and explicitly admit copied fixture mutation. Actual
+  full-entry model/six failure paths/six body omissions pass with source/copy/temp/latest controls.
+- Dispatch/inventory/ownership/history823/book checks pass. Receipts explicitly simulate children;
+  fresh numerical native/Chrome acceptance remains next. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

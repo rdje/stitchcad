@@ -401,7 +401,7 @@ The read-only watcher runs the actual entry,retains all nine consumers,31 select
 host-only exclusions and405 fixture rows,and rejects seven actual inventory-body faults. It
 permits no directory creation,file write,compiler or browser dispatch. The original four native
 plan-only entries and their six body controls remain green. Ownership has separate controls below;
-complete effects and fresh execution remain the following n16.2 leaves.
+the scoped effect controls below pass;fresh execution remains the following n16.2 leaf.
 
 ## Exclusive platform capture ownership
 
@@ -415,8 +415,8 @@ file cannot be overwritten;the existing validated latest pointer still changes b
 The temporary root's original device/inode identity must also survive until sealing.
 Actual collision fixtures preserve competing bytes and perform no compiler/browser execution.
 The read-only watcher independently rejects exclusive-directory,exclusive-file and stale-owner
-reset omissions. These ownership controls are separate from the pending complete effect review
-and fresh native/browser acceptance.
+reset omissions. These ownership controls are separate from the full-entry effect controls below
+and the pending fresh native/browser acceptance.
 
 ## Preflight at the platform child boundary
 
@@ -429,9 +429,8 @@ stops the owned group before returning control to restoration.
 
 The focused dispatch watcher checks two simulated successes,eight physical log-alias/store
 refusals,four simulated timeout/interruption cleanup paths and four actual Python-body omissions.
-These controls prove helper ordering and dispatch behavior. Tangent configuration coverage,
-complete platform mutable/temp/failure review and fresh compiled native/browser acceptance remain
-separate leaves. Earlier numerical captures retain their original scope and identity.
+These controls prove helper ordering and dispatch behavior. Tangent configuration coverage and
+full-entry controls pass below;fresh compiled native/browser acceptance remains a separate leaf. Earlier numerical captures retain their original scope and identity.
 
 ## Tangent controller configuration coverage
 
@@ -441,4 +440,22 @@ source,fixture,test and fault sets. Only the owned diagnostic output labels chan
 The focused run checks27 simulated variants,two failure paths and three actual wrapper-body
 omissions,with complete original/copy restoration and actual owned timeout/group/capture controls.
 Simulated compiler outcomes remain explicitly marked;fresh compiled acceptance is still separate.
-Complete platform mutable/temp/failure review also remains open.
+The full-entry platform effect controls follow below;fresh native/browser execution remains open.
+
+## Full platform entry effect controls
+
+The actual entry keeps MAKE_TMPDIR aligned with its selected owned browser temporary directory,
+so helper verification sees one consistent store profile. The copied bad-expectation fixture is
+explicitly admitted as a mutable input before reading,mutation and restoration. Original project
+inputs remain read-only and must retain their exact digests.
+
+The full-entry watcher uses modeled compiler/browser children and labels its receipts accordingly.
+It checks complete plans before activation,caller stores,child arguments/tool identities,exact
+copy restoration,temporary-root identity and sealing,and atomic latest publication. Six failure
+paths cover compilation failure,a surviving bad expectation,interruption,version drift,temporary
+root replacement and a linked late log destination. Six actual Python-body omissions calibrate
+its checks. No failed path can publish acceptance;the linked-log case refuses before activation.
+
+This completes the scoped tangent/platform effects review. Fresh actual tangent/resource kernel
+faults and native/Chrome execution remain the next acceptance leaf. Complete transitive compiler/
+browser locality and the full D156 integration scope retain their separate owners.
