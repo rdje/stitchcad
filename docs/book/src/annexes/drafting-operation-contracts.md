@@ -2,7 +2,7 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Typed point/line declarations and point Length argument proofs are available below;remaining schemas,ordered
+> geometry. Typed point/line/center-arc declarations and real scalar argument proofs are available below;remaining schemas,ordered
 > dependencies and actual geometry execution are pending. This page grants no geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -43,7 +43,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | --- | --- | --- | --- |
 | Construct point | x,y Length formulas in a named drafting frame | One persistent point output | Typed documents/Length proofs;geometry pending |
 | Draw line | Two prior PointRefs | Persistent edge and explicit endpoint provenance | Typed references/dependencies;geometry pending |
-| Draw arc | Explicit arc construction variant;Length/Angle arguments and prior points | Persistent curved edge and declared point outputs | Pending .1.c |
+| Draw arc | Center PointRef,radius Length,start/sweep Angle formulas | One edge role;no inferred point outputs | Center-based declaration/proofs;geometry pending |
 | Draw Bézier | Explicit degree and ordered prior control PointRefs | Persistent curved edge;control order retained | Pending .1.c |
 | Offset edge | Current EdgeRef/range,canonical allowance and explicit side/corner policy | New edge lineage;no hidden width/default join | Pending .1.c |
 | Slash/spread | Current Piece/cut/pivot references and explicit opening mode | New/retired topology and an attributable opening | Pending .1.c |
@@ -88,9 +88,9 @@ It preserves endpoint/control roles and source provenance. Curve parameterizatio
 length and approximation accuracy remain actual geometry obligations. A sampled polyline is not
 silently substituted for the authored curve.
 
-The unresolved arc variants/output manifest and Bézier degree domain are owned schema work in
-.1.c,not a choice made by a caller's float values at runtime. Their implementation leaves must
-finish those public contracts before exposing construction or selector execution.
+The center-based variant below declares one edge role and no endpoint entities. A through-points
+intent has no native schema and cannot be silently substituted for it. The Bézier degree domain
+remains .1.c schema work;no degree or construction mode is inferred from runtime float values.
 
 ## Edits and garment semantics
 
@@ -246,3 +246,68 @@ A declaration can retain the same point in both fields. It does not thereby cert
 line or accept a degenerate geometric edge. No coordinate,distance,frame,registry state,identity
 issuance or geometric result is computed. The containing program and actual geometry executor
 must validate those properties before acceptance. Remaining curve/edit schemas are still pending.
+
+## Native center-based arc declaration and scalar proofs
+
+`CenterArcConstruction` explicitly retains a prior center PointRef and three original expression
+documents. It is the center/radius/start/sweep variant;it cannot silently become an arc through
+points. The logical output manifest contains only EdgeRef(operation,LocalTag::FIRST). No endpoint
+PointRefs are issued or inferred,including for a closed sweep. Later point_at queries remain
+read-only observations of actual geometry,not new persistent entity identities.
+
+| Scalar role | Required kind | Meaning before geometry |
+| --- | --- | --- |
+| Radius | Length | Actual expression retained;positive radius not proved |
+| StartAngle | Angle | Original sign and complete turns retained |
+| SweepAngle | Angle | Signed sweep retained;no modulo/nonzero/supported-domain proof |
+
+The constructor receives already syntax/input-validated FormulaExpressionDocuments. It rejects a
+center created by that same operation,retaining the actual operation and PointRef/local tag in
+CenterArcConstructionError. Another creator's id,however large or small,is not evidence of prior
+order or currentness. `center_dependency()` returns an authentic borrowed CenterArcPointDependency;
+its `arc()` and `point()` identify this exact original declaration/field. No foreign center or
+declaration can be substituted and the view cannot outlive its owner.
+
+```rust
+use sc_core::{construction::*,ontology::{EntityId,PointRef,LocalTag},recipe::*};
+let arc=CenterArcConstruction::new(EntityId::from_bits(10),
+    PointRef::new(EntityId::from_bits(1),LocalTag::FIRST),
+    FormulaExpressionDocument::new("1 mm/0".into())?,
+    FormulaExpressionDocument::new("90 deg".into())?,
+    FormulaExpressionDocument::new("-450 deg".into())?)?;
+let limits=CenterArcNormalizationLimits::new(6,15);
+let normalized=arc.normalized(limits).expect("complete formula shapes");
+let checked=normalized.check_arguments(&FormulaNamespace::new([])?).expect("actual field kinds");
+assert_eq!(checked.argument(CenterArcArgument::Radius).kind(),FormulaKind::Length);
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+`normalized(limits)` measures complete N nodes and3+2N conservative formula-normalization records
+before reparsing any argument:three argument owners,N normalized nodes and at most N call-argument
+indices. Every argument/branch participates. Node quota precedes retained-record quota. It retains
+the actual arc,selected limits,complete counts and original argument arenas. Complete population/
+quota or original document failure exposes no normalized prefix. Earlier input documents/center
+metadata,parser/checker scratch,allocator capacity,CPU and geometry/runtime are outside this quota.
+
+`check_arguments(namespace)` obtains each real whole expression proof in Radius/StartAngle/
+SweepAngle order,then enforces that field's required root kind. Only complete success constructs
+CheckedCenterArcConstruction. Both point and arc factories use the same private measurement/static
+checking kernels;their public owner/policy/role/error types remain separate. A caller cannot supply
+an expected-kind annotation or a detached proof to this constructor.
+
+Radius=`1 mm/0`,start=`0 deg`,sweep=`1` refuses the actual Count sweep before any radius division.
+An untaken incompatible branch retains its original expression error. An Unknown radius remains
+Unknown;successful static Length proof supplies no number. Signed sweeps beyond a full turn retain
+their original formula bytes and are never silently reduced modulo360 at this stage.
+
+CenterArcCheckError retains the actual normalized owner,argument role,required kind,original span
+and Expression or Kind cause. It preserves the existing canonical formula token,including
+formula_dimension for an actual wrong root. No program ordinal,cycle path,center frame or current
+reference is invented. Private fields and borrowing lifetimes keep all proofs with their actual
+source owners;Debug omits authored formula text.
+
+These proofs do not accept a geometric arc. For example,a negative Length radius or zero Angle
+sweep can have valid static kinds. Actual geometry must enforce positive radius,nonzero/supported
+sweep,center/frame/currentness and its approximation budget before acceptance. The D126
+actual-edge-length/parameter budget remains mandatory. No curve length,endpoint coordinates,
+geometry,identity issuance or command publication is computed by this declaration API.

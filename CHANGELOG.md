@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0677 — retain directed line reference dependencies
+## STITCHCAD-G1-0678 — retain explicit center-based arc argument proofs
 
-- Typed line declaration preserves original ordered/repeated PointRefs and stable edge role.
-  Local self-supply refuses with actual context;dependency views borrow their exact source fields.
-- Line4/point5/rustdoc10/lint/fmt/book/history839/diff pass. Global graph/frame/geometry remain
-  owned;next explicit arc schema. G1 6/18/G0 unapproved unchanged;LIVE Product notes updated.
+- Own/normalize/check actual center/radius/start/sweep fields with complete quotas,real scalar
+  kinds and a single edge manifest. Share private argument kernels while preserving point's API.
+- Arc6/point5/line4/rustdoc18/lint/fmt/book/history840/diff pass. Geometry/domain/registry and full
+  verification remain owned;next quadratic/cubic schemas. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

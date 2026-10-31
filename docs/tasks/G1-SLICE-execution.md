@@ -802,29 +802,35 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   schemas from .a inventory;split implementation leaves before code. Parent .1 stays open until all.
 - ID: `G1-SLICE.5f.1.c.line`
   Status: `done`
-  Goal:typed line declaration retaining ordered prior PointRefs,persistent EdgeRef output and
-  actual dependency roles;no coordinate calculation/currentness/publication. Curves/edits follow.
-  Scope:reject definite same-operation point suppliers,preserve endpoint order/repeated uses and
-  borrowed original-field dependency views. No global prior-order/frame/geometry proof;retire
-  whole0676 scope/journals for live bounds. Focused refusal/ordering/ownership/compiler checks.
-  - [x] ISSUE:ordered line reference declarations/dependencies have no native owned schema yet.
-  - [x] ROOT CAUSE (WHY + WHERE):Python HEADd93b5493 line-module census empty;actual PointRef/
-    EdgeRef/LocalTag contracts and .1.a inventory inspected,rc=0. References retain addresses only.
-  - [x] FIX:private directed line record,stable FIRST edge role,known local self-supply refusal
-    and borrowed original-field dependency views. Preserve ordering/repeats;grant no prior/current proof.
-  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
-    line_construction_contract →4 pass,rc=0;actual owner/order,first self-refusal,duplicates/reversal
-    and unsorted creator ids. No formula names/spans or valid edge are invented.
-  - [x] NO REGRESSION:point_construction_contract →5 pass,rc=0;selected clippy/construction
-    rustdoc10/fmt/book/rendered line boundary/diff/history839 three exact Git spans pass,rc=0.
-  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (local typed reference schema).
-    Whole graph/frame/currentness/degeneracy and full .5f.4 remain deferred. Parent .1.c stays active.
-  Verification:focused native9/rustdoc10;Commit:STITCHCAD-G1-0677. Next .1.c.arc.
+  Goal:0677 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part840.md).
 - ID: `G1-SLICE.5f.1.c.arc`
-  Status: `pending`
+  Status: `done`
   Goal:explicit center/radius/start/sweep arc schema with PointRef center and Length/Angle formula
   roles;single logical EdgeRef output,no inferred endpoint entities or geometric execution.
   Reuse argument staging where warranted;preserve original sources,limits and actual kind errors.
+  Scope:CenterArcConstruction with radius Length/start+sweep Angle documents,complete 3+2N
+  normalization and actual proofs;center self-supply refusal/authentic dependency view. Extract
+  private measurement/check kernels shared with point while preserving its public API/behavior.
+  No radius/sweep positivity,frame/registry,curve-length/budget or geometry certificate. Retire
+  whole0677 scope/journals for live bounds;focused point/line/arc and compiler checks only.
+  - [x] ISSUE:center-based arc needs explicit scalar roles/output manifest and actual source proofs.
+  - [x] ROOT CAUSE (WHY + WHERE):Python HEADb3b23122 arc-module census empty;point measured/
+    checked stages inspected,then confirmed shared private calls in current point sources,rc=0.
+  - [x] FIX:owned/normalized/checked center variant,single FIRST edge,real center dependency and
+    local self-supply refusal;private complete measurement/static kernels preserve point's API.
+  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
+    center_arc_construction_contract →6 pass,rc=0;actual owners/turns/Unknown radius,later sweep
+    refusal before runtime division,original causes,complete3+2N quotas and no domain/geometry claim.
+  - [x] NO REGRESSION:point5/line4 plus construction rustdoc18/selected clippy/fmt/book/rendered
+    center boundaries/diff/history840 three exact Git spans pass,rc=0. Point API/policy/error types
+    unchanged;shared kernels used by actual schemas. No full integration/platform verdict.
+  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (existing argument staging).
+    .1.c remains active;frame/order/currentness/geometry/budgets and full .5f.4 stay owned/deferred.
+  Verification:focused native15/rustdoc18;Commit:STITCHCAD-G1-0678. Next .1.c.bezier.
+- ID: `G1-SLICE.5f.1.c.bezier`
+  Status: `pending`
+  Goal:explicit quadratic/cubic Bézier declarations with fixed ordered PointRef controls,single
+  logical edge output and authentic dependency roles;no inferred degree/currentness/geometry.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

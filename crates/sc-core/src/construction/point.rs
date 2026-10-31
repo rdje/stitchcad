@@ -89,27 +89,17 @@ impl PointConstruction {
             limits,
             refusal,
         };
-        let nodes = self
-            .x
-            .node_count()
-            .checked_add(self.y.node_count())
-            .ok_or_else(|| refuse(R::PopulationOverflow))?;
-        let records = nodes
-            .checked_mul(2)
-            .and_then(|n| n.checked_add(2))
-            .ok_or_else(|| refuse(R::PopulationOverflow))?;
-        if nodes > limits.nodes {
-            return Err(refuse(R::Nodes {
-                allowed: limits.nodes,
-                required: nodes,
-            }));
-        }
-        if records > limits.retained_records {
-            return Err(refuse(R::RetainedRecords {
-                allowed: limits.retained_records,
-                required: records,
-            }));
-        }
+        use super::arguments::{measure, PopulationRefusal as P};
+        let (nodes, records) = measure([&self.x, &self.y], limits.nodes, limits.retained_records)
+            .map_err(|cause| {
+            refuse(match cause {
+                P::Overflow => R::PopulationOverflow,
+                P::Nodes { allowed, required } => R::Nodes { allowed, required },
+                P::RetainedRecords { allowed, required } => {
+                    R::RetainedRecords { allowed, required }
+                }
+            })
+        })?;
         let x = self.x.normalized().map_err(|error| {
             refuse(R::Document {
                 coordinate: PointCoordinate::X,

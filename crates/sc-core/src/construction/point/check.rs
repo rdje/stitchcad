@@ -119,21 +119,20 @@ fn check<'a>(
     namespace: &FormulaNamespace<'a>,
     coordinate: PointCoordinate,
 ) -> Result<FormulaCheckedExpression<'a, 'a, 'a>, PointConstructionCheckError<'a>> {
-    let refuse = |refusal| PointConstructionCheckError {
+    use crate::construction::arguments::{check_expression, CheckRefusal as R};
+    check_expression(
+        normalized.coordinate(coordinate),
+        namespace,
+        coordinate.required_kind(),
+    )
+    .map_err(|cause| PointConstructionCheckError {
         normalized,
         coordinate,
-        refusal,
-    };
-    let proof = normalized
-        .coordinate(coordinate)
-        .check_kinds(namespace)
-        .map_err(|error| refuse(PointConstructionCheckRefusal::Expression(error)))?;
-    if proof.kind() != coordinate.required_kind() {
-        return Err(refuse(PointConstructionCheckRefusal::Kind {
-            actual: proof.kind(),
-        }));
-    }
-    Ok(proof)
+        refusal: match cause {
+            R::Expression(error) => PointConstructionCheckRefusal::Expression(error),
+            R::Kind { actual } => PointConstructionCheckRefusal::Kind { actual },
+        },
+    })
 }
 impl<'s> NormalizedPointConstruction<'s> {
     /// Check x then y against the actual supplied metadata namespace before any value read.
