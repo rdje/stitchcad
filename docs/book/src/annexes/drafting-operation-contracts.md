@@ -2,8 +2,8 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Typed point/line/center-arc/Bézier declarations and real scalar argument proofs are available below;remaining schemas,ordered
-> dependencies and actual geometry execution are pending. This page grants no geometry certificate.
+> geometry. Primitive declarations,real scalar argument proofs and offset input binding are available
+> below;remaining schemas,ordered dependencies and geometry execution are pending. No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
 from scalar lets/assertions. A formula can read a prior point or edge through a selector;only a
@@ -45,7 +45,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Draw line | Two prior PointRefs | Persistent edge and explicit endpoint provenance | Typed references/dependencies;geometry pending |
 | Draw arc | Center PointRef,radius Length,start/sweep Angle formulas | One edge role;no inferred point outputs | Center-based declaration/proofs;geometry pending |
 | Draw Bézier | Explicit quadratic/cubic named PointRefs | One edge role;original controls retained | Typed controls/dependencies;geometry pending |
-| Offset edge | Current EdgeRef/range,canonical allowance and explicit side/corner policy | New edge lineage;no hidden width/default join | Pending .1.c |
+| Offset edge | Directed range,allowance identity and explicit side;canonical corner | G2 fragment lineage;no hidden width/default join | Input binding only;outputs/geometry pending |
 | Slash/spread | Current Piece/cut/pivot references and explicit opening mode | New/retired topology and an attributable opening | Pending .1.c |
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
 | Add notch | Piece id,EdgeAnchor,NotchProfileBindings | Fresh semantic notch id and retained source anchor | AddNotch request exists;geometry pending |
@@ -358,3 +358,47 @@ Repeated/coincident controls can form declarative input without proving a nondeg
 curve. No coordinates,length,continuity,frame,registry state,exact elevation,approximation budget,
 identity issuance or command publication is computed here. Remaining editing schemas and the
 whole operation graph/geometry integration remain owned work.
+
+## Native offset input/source association
+
+`construction::OffsetConstruction` retains an operation id,the existing `DirectedRange`
+(positive `EdgeRange` plus explicit `Direction`),explicit `OffsetSide::{Left,Right}` and the required `SeamAllowance` identity.
+The range's exact ascending bounds stay in its original edge frame. Traversal controls which way
+it is followed;left/right are relative to that traversal. They do not mean inside/outside a Piece,
+fabric face or cutting side. Nothing chooses a winding-based side or join automatically.
+
+The constructor refuses definite self-supply:an edge created by this operation first,then a
+required allowance with that same identity. Numeric id order supplies no prior-operation proof.
+
+`bind_allowance` checks the provided actual descriptor's identity,then its original source edge.
+It returns a private `BoundOffsetConstruction` view borrowing that exact declaration and descriptor.
+Its width,corner and inclusion accessors borrow the actual descriptor fields. Formula and Profile
+origins stay symbolic;there is no copied client width,zero fallback or corner override.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn prepare_left_offset(operation:EntityId,allowance:&SeamAllowance)
+    ->Result<OffsetConstruction,Box<dyn std::error::Error>> {
+    let input=OffsetConstruction::new(operation,
+        DirectedRange { range:EdgeRange::whole(allowance.definition().edge),
+            direction:Direction::Original },OffsetSide::Left,allowance.id())?;
+    let bound=input.bind_allowance(allowance)?;
+    assert!(std::ptr::eq(bound.allowance(),allowance));
+    assert!(std::ptr::eq(bound.width(),&allowance.definition().width));
+    Ok(input)
+}
+```
+
+This is an association check against the supplied record. It does not prove that record belongs
+to the containing current Design or inventory. A same-id record holding a different source edge
+is refused;no current fragment is silently substituted for an authored historical edge. Matching
+ids and edges alone do not validate the current Piece/ledger coverage. For example,after source
+deletion this association can still succeed while `SeamAllowance::validate_current` reports its
+original missing-interval repair evidence. The program must perform current-root and dependency
+checks before execution;the bound view certifies neither values nor geometry.
+
+This input stage declares no fixed output count or tags. G2 must derive the actual fragment
+intervals and use the published identity-ledger contract for unambiguous mappings and visible
+repair tasks. Source geometry,width resolution,corner construction,loops,error bounds,output
+manifest and command publication remain pending. A Bézier offset cannot be assumed to be one
+exact Bézier,or certified from a bounding box. Full operation integration remains `.5f.4` work.

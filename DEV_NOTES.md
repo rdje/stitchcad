@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain explicit Bezier control declarations
+## _(2026-10-31 UTC)_ — bind offset inputs to actual allowance intent
 
-0679 adds closed quadratic/cubic named control layouts,one FIRST edge and authentic original field-borrow dependencies. First local self-supply retains role/reference;degree,source order and repeated uses remain explicit. No controls or identities are synthesized for quadratic elevation.
-Bezier4/line4/construction rustdoc27/selected clippy/fmt/book/rendered boundaries/diff/history841 three exact Git spans pass. Lint caught a redundant implied iterator bound;the corrected bound passes. Source absence at HEAD and units§4 exact G2 promotion contract confirmed.
-These are authored declarations. Coordinates,exact elevation,degeneracy,current frames/registries and geometry remain owned;the same logical output role does not certify an edited curve or publish a topology change.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing typed references). Whole0678 retained841. Next remaining .1.c offset input/source binding;full .5f.4 stays deferred. PNT continues.
+0680 reuses DirectedRange and explicit left/right traversal side with a canonical allowance id. Binding checks actual id then exact original edge and borrows both owners;actual width/corner/inclusion fields remain attached. No copied value,default join or synthetic fragment output.
+Offset4/allowance11/rustdoc3/selected clippy/fmt/book/rendered boundaries/diff/history842 three exact Git spans pass. Fixture constructor name/indexing were corrected before final checks. Formula/Profile remain symbolic;wrong-id precedes wrong-edge;original bounds/direction survive.
+Association alone grants no root/currentness proof:after source deletion it still binds held intent while existing current allowance validation returns real interval repair. G2 owns width evaluation,bounded curves/fragments and topology mappings;outputs remain explicitly scheduled.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing allowance contracts). Whole0679 retained842. Next .1.c grainline input binding;frame/graph/geometry/full .5f.4 remain owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

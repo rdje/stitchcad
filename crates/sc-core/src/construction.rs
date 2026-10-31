@@ -16,6 +16,11 @@ pub use bezier::{
 };
 mod line;
 pub use line::{LineConstruction, LineConstructionError, LineEndpoint, LinePointDependency};
+mod offset;
+pub use offset::{
+    BoundOffsetConstruction, OffsetBindingError, OffsetConstruction, OffsetConstructionError,
+    OffsetSide,
+};
 mod point;
 pub use point::{
     CheckedPointConstruction, NormalizedPointConstruction, PointConstruction,

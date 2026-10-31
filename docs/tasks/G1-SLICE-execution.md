@@ -808,26 +808,33 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0678 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part841.md).
 - ID: `G1-SLICE.5f.1.c.bezier`
   Status: `done`
-  Goal:explicit quadratic/cubic Bézier declarations with fixed ordered PointRef controls,single
-  logical edge output and authentic dependency roles;no inferred degree/currentness/geometry.
-  Scope:fixed named control variants,known local self-supply refusal and original borrowed field
-  views;preserve quadratic source uses without fabricating cubic controls. Units4 requires exact
-  promotion in G2 geometry,not this declaration. Retire whole0678 scope/journals for live bounds;
-  focused arity/order/refusal/ownership/compiler checks,full .5f.4 remains deferred.
-  - [x] ISSUE:authored curves need fixed degree/control roles without invented evaluated controls.
-  - [x] ROOT CAUSE (WHY + WHERE):Python HEAD e70f23aa has no Bezier module;units§4 requires
-    exact quadratic elevation in G2;actual named fields/source layout inspected,rc=0.
-  - [x] FIX:closed quadratic/cubic layouts,one FIRST edge,actual field-borrow dependencies and
-    first local self-supply refusal;repeated uses and original control order remain unchanged.
-  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
-    bezier_construction_contract →4 pass,rc=0;both variants,all7 self roles,first refusal,repeated
-    uses,owner/field pointer identity and reversed intent retain exact original references.
-  - [x] NO REGRESSION:line4/construction rustdoc27/selected clippy/fmt/book/rendered source
-    boundaries/diff/history841 three exact Git spans pass,rc=0. Redundant implied iterator bound
-    corrected after lint refusal. No full integration/platform/geometry verdict.
-  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (existing typed references).
-    Exact elevation,current frames/registries,remaining schemas and full .5f.4 remain owned.
-  Verification:focused native8/rustdoc27;Commit:STITCHCAD-G1-0679. Next offset input binding.
+  Goal:0679 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part842.md).
+- ID: `G1-SLICE.5f.1.c.offset.inputs`
+  Status: `done`
+  Goal:typed directed source range/side and canonical allowance identity binding;retain actual
+  width/corner/profile intent without copied values. Refuse definite self-supply/wrong allowance
+  or source edge;borrow authentic bound owners. No fragment/output-count,currentness or geometry
+  claim. Recover public contracts;retire whole0679 scope/journals,focused checks and book sync.
+  Remaining output lineage/execution belongs .1.c/.5f.3/G2;full .5f.4 stays deferred.
+  - [x] ISSUE:offset inputs need actual canonical allowance intent without a fake single output.
+  - [x] ROOT CAUSE (WHY + WHERE):Python HEAD5e7559a1 offset module absent;public allowance
+    owns width/corner/inclusion and ledger delegates fragment intervals to G2,rc=0.
+  - [x] FIX:reuse DirectedRange,explicit side and allowance id;local self-supply refusal and
+    authentic actual descriptor binding preserve original source/width/corner/profile fields.
+  - [x] ADDRESSED (offset inputs):local_environment.py -- cargo test --offline --locked -p sc-core --test
+    offset_construction_contract →4 pass,rc=0;actual borrows/all width origins/corners,typed first
+    mismatches,directed partial ranges and deleted-source association/currentness distinction.
+  - [x] NO REGRESSION:allowance11/offset rustdoc3/selected clippy/fmt/book/rendered boundaries/
+    diff/history842 three exact Git spans pass,rc=0. Fixture constructor name and unchecked
+    indexing corrected before final native/lint runs;no broad/platform/geometry verdict.
+  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (existing allowance contracts).
+    Root/currentness .5f.2,outputs below,G2 execution and full .5f.4 remain owned/deferred.
+  Verification:focused native15/rustdoc3;Commit:STITCHCAD-G1-0680. Next grainline input binding.
+- ID: `G1-SLICE.5f.1.c.offset.outputs`
+  Status: `pending`
+  Goal:complete offset output manifest/lineage from actual G2-2D.2 fragment intervals via the
+  published identity-ledger contract;stable tags,unambiguous maps and visible ambiguity/loss.
+  No fixed count or synthetic fragments. Integrate .5f.3;parent .1 remains open until covered.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

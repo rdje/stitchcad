@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0679 — retain explicit Bezier control declarations
+## STITCHCAD-G1-0680 — bind offset inputs to actual allowance intent
 
-- Closed quadratic/cubic layouts retain every original control role and ordered/repeated source use.
-- Authentic field borrows,one logical edge and first local self-supply refusal;no synthetic controls.
-- Bezier4/line4/rustdoc27/selected lint/fmt/book/rendered boundaries pass;whole0678 retained841.
-- Exact G2 elevation,remaining schemas/frame/currentness/geometry and full .5f.4 remain owned.
+- Reuse directed ranges and explicit side;bind exact allowance identity/source without cached width.
+- Authentic field borrows retain all width/corner/profile intent;currentness remains separate.
+- Offset4/allowance11/rustdoc3/selected lint/fmt/book pass;whole0679 retained842.
+- Fragment output lineage,G2 geometry/current-root integration and full .5f.4 remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
