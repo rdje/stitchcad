@@ -810,29 +810,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0685 D369 fixed;[whole scope/proofs](../history/stitchcad-devnotes-part853.md).
 - ID: `G1-SLICE.5f.1.c.walk.inputs`
   Status: `done`
-  Goal:typed walk-edit balance-notch inputs with actual span/side/anchor/profile contracts.
-  No geometry or query-as-edit substitute. Retire whole0686;split native-edit book reference
-  for bounds;focused checks. Full .5f.4 stays deferred.
-  Scope:owned A/B anchors/profiles,complete N/2N borrowed admission before actual Graph/span
-  binding;original edges/inclusive bounds and authentic fields. Empty/local self-supply refuses.
-  Request counts are not output ids;correspondence/currentness/geometry remain pending.
-  Book/D370/D371 preparation completed0686 in .examples;whole0686 retained856.
-  - [x] ISSUE:deliberate walk marks need actual paired anchors/profiles and complete admission;
-    read-only WalkSeamSpan cannot create edit intent or certify source/correspondence.
-  - [x] ROOT CAUSE (WHY + WHERE):HEADd0e3be65 walk module absent;actual query,Graph/span/
-    anchor/profile interfaces and source-frame contracts inspected/native factory used,rc=0.
-  - [x] FIX:owned pairs,explicit N/2N admission and admitted-only actual graph/span binding;
-    original field/pair/side views/errors preserve context without inferred counterpart or ids.
-  - [x] ADDRESSED (walk):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test walk_edit_contract →5 pass,rc=0;owners/profiles/order/repeats/endpoints,quota/empty/
-    local sources,missing/edge/position causes and currentness/correspondence boundary.
-  - [x] NO REGRESSION (walk):sewing source1/walk guards5/actual book6/selected clippy/fmt/
-    book/rendered/diff/history856 three exact Git spans pass,rc=0. Lint144B cause compacted to
-    actual borrowed anchor/range fields;native pointer checks confirm original causes. No full
-    replay,profile,geometry,mark creation or publication proof.
-  - [x] LOCKSTEP:book/live/frontier sync;promotion: declined (existing source-frame contracts).
-    Native output contract below,current global graph/.5f.4 geometry/actual edits stay owned.
-  Verification:native6/rustdoc11;Commit:STITCHCAD-G1-0687. Next truing contract recovery.
+  Goal:0687 completed input stages;[whole scope/proofs](../history/stitchcad-devnotes-part857.md).
 - ID: `G1-SLICE.5f.1.c.walk.inputs.examples`
   Status: `done`
   Goal:0686 D370/D371 fixed;[whole scope/proofs](../history/stitchcad-devnotes-part856.md).
@@ -841,6 +819,38 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:native output-role/manifest and explicit semantic mark-sharing/coalescing/identity policy,
   including physical copies sharing one pattern Piece. No2N-new-id assumption. Actual marks,
   correspondence/differential/ease/profile truth and atomic edits stay G3/G4/bus/.5f.4.geometry.
+- ID: `G1-SLICE.5f.1.c.true.contracts`
+  Status: `done`
+  Goal:recover concrete truing source/adjustment/tolerance contracts from actual normative
+  seam/skirt/unit interfaces before code;define the next safe schema slice. Retire whole0687
+  scope/journals and the whole closed D121 scope for bounded task storage;focused source/book
+  checks. Define endpoint/stop-preserving Piece refit,actual span/copy/ease and sourced length-fit
+  budget;track broader variant coverage separately. No geometry or gate waiver.
+  - [x] ISSUE:truing needs actual correspondence,adjustment permission and sourced fit budget;
+    skirt dart truing alone supplies no standalone edge-target operation.
+  - [x] ROOT CAUSE (truing recovery):actual Roadmap/ontology/skirt/command/G3 and published
+    CutPlan/span/ease/unit/context clauses inspected;12 exact source clauses checked,rc=0.
+  - [x] FIX:book defines planned constrained Piece refit,explicit side/source,class/domain,
+    endpoint/stop preservation and all-copy observers;inputs/outputs/coverage separately owned.
+  - [x] ADDRESSED (truing recovery):source-and-render.json under target/history-proof-0688-contracts
+    records12 actual clauses/four valid rendered links,rc=0;no default budget or copied ease.
+  - [x] NO REGRESSION (truing recovery):mdbook build/rendered/diff/history857 four exact
+    Git spans pass,rc=0. No Rust/schema/geometry change or full integration claim.
+  - [x] LOCKSTEP:live/frontier/book sync;promotion: declined (local schema policy,coverage open).
+  Verification:focused source/book only;Commit:STITCHCAD-G1-0688. Next .true.inputs.
+- ID: `G1-SLICE.5f.1.c.true.inputs`
+  Status: `pending`
+  Goal:native constrained span refit inputs;explicit adjusted side,Piece and fit-budget source.
+  Borrow actual Graph/span/CutPlan copy and quantitative tolerance;check exact association,
+  T2 fit class/nonnegative limit. Retain ease/stops;no target-length/default/fork/geometry claim.
+- ID: `G1-SLICE.5f.1.c.true.outputs`
+  Status: `pending`
+  Goal:native refit output-role/reference/identity contract;preserved endpoints/stops,all-copy
+  observer obligations and unexplained differential attribution. Actual fit stays G3/.5f.4.
+- ID: `G1-SLICE.5f.1.c.true.variants`
+  Status: `pending`
+  Goal:review v1 truing coverage against the envelope before family closure;constrained refit
+  alone grants no complete coverage. Explicit policies for any added endpoint/copy variants.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

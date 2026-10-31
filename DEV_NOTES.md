@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain bounded deliberate walk-mark inputs and actual span binding
+## _(2026-10-31 UTC)_ — recover constrained seam-truing source and fitting contracts
 
-0687 adds owned explicit A/B anchor/profile pairs,complete N/2N admission and admitted-only real Graph/span binding. Empty edits/local self-supply refuse;all pair/side edges and inclusive original bounds precede a private bound result. Two requests/pair certify no new ids or counterpart position.
-Walk5/sewing source1/walk compiler guards5/actual book6/selected clippy/fmt/book/rendered/diff/history856 three exact Git spans pass. Original pair/span/profile/source field pointers,limits,repeats,endpoints and typed failures pass. Lint144B cause was compacted to actual borrowed anchor/range fields.
-Bounds grant neither correspondence nor currentness:after source deletion actual Graph validation refuses while unchanged original binding remains structural. Ease/stops/copy sides remain on the real span;profiles stay symbolic. No differential,notch creation or publication executes.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source-frame contracts). Whole0686 retained856. Output contracts/mark sharing and actual G3/G4/bus/full .5f.4 remain owned. Next truing contract recovery;PNT continues.
+0688 recovers actual Roadmap/ontology/G3/edit-group contracts before native truing code. First planned variant explicitly refits a named span side's pattern Piece,preserving endpoints/stops;infeasibility refuses. Shared-copy observers remain obligations rather than an implicit isolated physical-copy edit.
+Signed A-minus-B ease stays on the actual span,including retained Portion allocation. Target lengths are derived during execution,not copied client fields. Fit tolerance needs explicit source,T2 fit role,nonnegative Length and original derivation;pointwise EPSgeo alone proves no arclength bound.
+Twelve actual source clauses/four rendered links/book/diff and four exact Git archive spans pass. No Rust or operation execution changed. Native inputs,output mappings and broader v1 variant coverage have separate pending owners;full geometry/currentness/bus/undo remains G3/.5f.4 work.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (local schema policy,coverage open). Whole0687 plus closed D121 scope retained857. Next .true.inputs;PNT continues without a gate waiver.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

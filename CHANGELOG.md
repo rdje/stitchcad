@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0687 — retain bounded deliberate walk-mark inputs and actual span binding
+## STITCHCAD-G1-0688 — recover constrained seam-truing source and fitting contracts
 
-- Explicit paired anchors/profiles preserve original request order and complete N/2N admission.
-- Admitted-only canonical span binding retains actual side/copy/source fields and original typed causes.
-- Native6/rustdoc11/selected lint/fmt/book pass;whole0686 retained856.
-- Output/mark-sharing policy,currentness,correspondence and actual edits remain owned/deferred.
+- Planned Piece refit retains actual span/copy/ease,explicit side and sourced length-fit tolerance.
+- Endpoint/stop preservation and all-copy observers are explicit;infeasible fits must refuse.
+- Source12/rendered links4/book/diff/history857 four exact spans pass;no native truing executes.
+- Inputs/output mappings/v1 coverage and actual G3/bus/full integration remain owned/deferred.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

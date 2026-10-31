@@ -271,3 +271,54 @@ G4 resolves profile representations. This stage reports no length and creates/pu
 Native output contracts still need explicit semantic mark-sharing/coalescing and identity policy,
 especially when physical copies share a pattern Piece. Actual mark results and atomic execution
 remain G3/bus/full `.5f.4` work. No query result or2N request count substitutes for those results.
+
+## Planned constrained seam truing
+
+This is a recovered contract for the next native schema,not an implemented truing operation.
+[Ontology §3.2](../spec/ontology.md#32-drafting-operations) and Roadmap §3.1 require first-class
+`true` on a SewingGraph correspondence. The [skirt waist](../spec/reference-skirt.md#5-drafting-recipe)
+is trued as part of dart closure;its 18.5cm target does not define an independent edge-length
+variant of `true`. Dart centre,legs,intake and waist truing belong to one atomic group under the
+[command contract](../spec/command-layer.md#3-atomic-groups-and-the-granularity-of-undo).
+
+The first planned variant refits the selected side of a named canonical span while preserving
+both selected range endpoint positions and all declared span stops. The request must explicitly
+name the adjusted side A/B,the target pattern Piece and its length-fit tolerance source. Binding
+must retain the actual graph/span and the actual CutPlan copy for that side,and check that the
+copy belongs to the requested Piece. A copy id is not a Piece id. The policy forbids automatic
+endpoint/stop movement and copy forking. An infeasible constrained fit must refuse.
+
+The canonical Piece is edited,so every physical copy of that Piece sees the change. Another
+span,mark or constraint may observe that geometry. Execution must preserve those obligations or
+refuse;selecting one physical copy cannot silently grant an isolated edit. Both sides can even
+refer to copies of the same Piece. Binding this association grants no current-root,observer or
+independent-counterpart proof. G3 must handle the coupled constraints rather than freezing a
+counterpart that the same edit would change.
+
+Keep the actual span's direction,ease allocation and stops. Signed ease means `length(A) −
+length(B)`,independent of traversal direction. If the counterpart is fixed,adjusting A seeks
+`length(B) + allocated_ease`;adjusting B seeks `length(A) − allocated_ease`. For example,at B=300mm
+and allocated ease=12mm,the A target is312mm;at A=312mm,the B target is300mm. A child span consumes
+its actual `SeamEase::Portion`,never the parent's full declared ease. Formula/profile resolution,
+length-domain refusal and the actual feasible curve remain execution obligations. The caller
+supplies neither a copied target length nor a replacement ease value.
+
+The fitting budget is an explicit sourced,nonnegative Length tolerance for geometric refitting,
+classified `ToleranceClass::GeometricApproximation`,with the original derivation retained.
+Binding must check the requested source identity,class and limit domain against the actual
+borrowed quantitative provider. A nonempty derivation is inspectable metadata,not evidence that
+the requirement or source registry is valid. T1 exact quantity/ease accounting stays separate;
+T3/T4/T5 and chordal deviation do not become a seam-fit threshold. The formula context's intrinsic
+`EPSgeo` remains unchanged. No default micrometre number is selected for this operation.
+
+G3 must derive a length-fit error budget from actual curves and length evaluation;pointwise
+distance or a bounding box alone does not establish an arclength bound. Source/evidence approval,
+any explicit profile loosening and artifact effects follow the
+[tolerance policy](../spec/units-and-tolerances.md#3-the-five-tolerance-classes). A tolerance check
+cannot grant editing authority. Execution reports achieved differential,allocated ease and any
+unexplained residual;it must never relabel unexplained mismatch as ease.
+
+Native input association,output-role/reference mappings and broader v1 variant coverage have
+separate task owners. Endpoint-moving or copy-forking variants require explicit semantics before
+they can be accepted. Actual constrained fitting,all observers,atomic bus/undo and real result
+verification remain G3/full `.5f.4` work;this contract closes none of those gates.

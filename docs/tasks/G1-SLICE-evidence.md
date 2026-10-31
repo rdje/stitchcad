@@ -885,29 +885,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 - ID: `G1-SLICE.5e.3b`
   Status: `done`
-  Goal: repair D121 reference irrational-result provenance through reads/bindings/operators and
-  named within/assertion tolerances before product provenance execution proof.
-  Acceptance: T1 refuses when an irrational result contributes; T2-or-looser remains admissible;
-  exact operations retain existing behavior, independent controls and actual fault reds.
-  Verification:425 cases/26 actual body reds/copied-book refusal/full reference green.
-  Commit: `STITCHCAD-G1-0081`.
-  Pre-code protocol: contract4.2/5.2/9, grammar6/6.1/7 and actual numeric/read/binding/lazy
-  geometry/book-consumer paths reviewed. Director selected formula_domain for inadmissible T1;
-  record the ruling in ADR-0003 and normative diagnostics before the guard. Propagate immutable
-  source-call sets through executed numeric/Boolean operators, stored bindings, reads and lazy
-  geometry. Keep coordinate-specific sources so unrelated point coordinates do not taint x/y;
-  retain cached evidence only after successful complete resolution. Untaken branches contribute
-  nothing; executed arguments/conditions contribute even if arithmetic cancels their value.
-  Irrational built-ins plus dist/dir create approximation sources; explicit round_to follows
-  contract4.2's authored quantization rule. Input/binding rounding alone introduces no such source.
-  Preserve numeric values, successful tuple/representation, static metadata isolation and exact
-  comparison behavior. Retain returned value provenance at the actual
-  book consumer publication site alongside the existing stored binding. Refuse named T1 after operands and
-  tolerance have evaluated, preserving earlier errors, with comparison/class/source arguments.
-  Independently author function/operator/storage/lazy/cache/selection/conditional matrices and
-  copied-book consumer refusal; actual compiled faults must fail body assertions, source unchanged.
-  Own exact completed-task/oldest-ledger retention before live surfaces cross their targets;
-  synchronize runtime annex/live/task/ADR; run focused reference/language/publication/ledger/gates.
+  Goal:D121 scope completed0081;[whole scope](../history/stitchcad-devnotes-part857.md).
 
 ## Completed namespace checklist — preserved from b2c4d6e
 
