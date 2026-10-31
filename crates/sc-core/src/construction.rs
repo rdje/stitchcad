@@ -22,6 +22,11 @@ mod grainline;
 pub use grainline::{BoundGrainlinePlacement, GrainlinePlacement, GrainlinePlacementError};
 mod line;
 pub use line::{LineConstruction, LineConstructionError, LineEndpoint, LinePointDependency};
+mod join;
+pub use join::{
+    BoundJoinPiecesAtSeam, BoundJoinSide, JoinBindingError, JoinBindingRefusal, JoinInputError,
+    JoinPiecesAtSeam,
+};
 mod mirror;
 pub use mirror::{
     MirrorAxis, MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError,

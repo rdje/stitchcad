@@ -824,26 +824,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0688 contract recovery;[whole scope/proofs](../history/stitchcad-devnotes-part858.md).
 - ID: `G1-SLICE.5f.1.c.true.inputs`
   Status: `done`
-  Goal:native constrained span refit inputs;explicit adjusted side,Piece and fit-budget source.
-  Borrow actual Graph/span/CutPlan copy and quantitative tolerance;check exact association,
-  T2 fit class/nonnegative limit. Retain ease/stops;no target-length/default/fork/geometry claim.
-  Scope:explicit constrained policy type,local source checks,authentic borrowed success/error
-  owners and all-copy views;focused native/compiler/book checks. Retire whole0688 records.
-  - [x] ISSUE:deliberate constrained refit needs actual span/copy/Piece and quantitative source
-    association;query success or pointwise EPSgeo cannot grant a fit or editing permission.
-  - [x] ROOT CAUSE (truing inputs):0688 contracts and real CutPlan/span/ease/unit APIs inspected;
-    new independent native factory uses real graph,stop and retained partial source,rc=0.
-  - [x] FIX:explicit constrained request/local source roles;private borrowed bound view with
-    exact span/copy/Piece/provider identity,T2 class/nonnegative domain and authored all-copy view.
-  - [x] ADDRESSED (truing inputs):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test truing_input_contract →5 pass,rc=0. Both sides/shared reflected copies,actual pointers,
-    typed precedence/all wrong classes,zero/domain limit,retained partial ease and stale boundary.
-  - [x] NO REGRESSION (truing inputs):compiler guards3/actual editing book7/selected clippy/fmt/
-    book/rendered/diff/history858 three exact Git spans pass,rc=0. Initial fixture indexing lint
-    repaired with checked extraction;no lint waiver. No fitting/global observer/publication proof.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing source contracts).
-    .true.variants owns deterministic refit selection;constraints alone do not select a curve.
-  Verification:native5/rustdoc10;Commit:STITCHCAD-G1-0689. Next .join.inputs.
+  Goal:0689 input association;[whole scope/proofs](../history/stitchcad-devnotes-part859.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs`
   Status: `pending`
   Goal:native refit output-role/reference/identity contract;preserved endpoints/stops,all-copy
@@ -855,10 +836,33 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   and supported domains;endpoint/stop locks alone admit multiple curves. Explicit policies for
   any added endpoint/copy variants;no guessed solver. Native output/real geometry owners stay separate.
 - ID: `G1-SLICE.5f.1.c.join.inputs`
-  Status: `pending`
+  Status: `done`
   Goal:recover and implement explicit join source intent against actual Piece/seam/copy contracts;
   retain canonical correspondence and original metadata,never infer a joined boundary from sewing.
   Split output/semantic reconciliation policies before family acceptance;actual geometry stays G2/G3.
+  Scope:fixed two-distinct-Piece join request,explicit A/B span roles;local cycle refusal then
+  actual Graph/span/plan copies and uniquely named provided Piece association. Original metadata,
+  ease/stops/orientations stay borrowed;no weld/pose/default material/retirement/output promise.
+  Focused native/compiler/book checks;retire whole0689. Output policy/coverage need own pending tasks.
+  - [x] ISSUE:actual sewing correspondence supplies no deliberate join intent,unique Piece
+    association or authority to choose joined metadata/geometry/retirement.
+  - [x] ROOT CAUSE (join inputs):actual ontology/operation inventory and public Piece/CutPlan/
+    Graph APIs inspected;native factory and original fixture extraction comparison pass,rc=0.
+  - [x] FIX:explicit distinct-Piece A/B request;private complete span/copy/unique-Piece binding
+    and authentic side views/errors. Named duplicate identities refuse;metadata/ease stay original.
+  - [x] ADDRESSED (join inputs):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test join_input_contract →4 pass,rc=0;actual owners/roles/metadata/order,nine refusal rows,
+    local cycles/distinct variant and stale-currentness boundary. No accepted side prefix.
+  - [x] NO REGRESSION (join inputs):shared-fixture truing5/compiler guards3/actual book8/selected
+    clippy/fmt/book/rendered/diff/history859 three exact Git spans pass,rc=0. Shared fixture exact
+    apart from eight visibility qualifiers. No weld,pose,metadata merge or execution certificate.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing source contracts).
+  Verification:native9/rustdoc11;Commit:STITCHCAD-G1-0690. Next .offset.outputs.
+- ID: `G1-SLICE.5f.1.c.join.outputs`
+  Status: `pending`
+  Goal:native explicit metadata/material/mark/multiplicity/copy reconciliation and identity/
+  retirement/reference manifests;define permitted join/pose/refit domains before family closure.
+  Partial/eased/oriented source semantics cannot disappear. Actual geometry stays G2/G3/.5f.4.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.
@@ -904,7 +908,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5f.4.geometry`
   Status: `pending`
-  Goal:after actual G2-2D.2/G3-GRADING.1/.3 engines exist,verify offset fragments,slash region/
-  fullness/topology,mirror copies and original source/output maps in real replay/publication.
+  Goal:after actual G2-2D.2/G3-GRADING.1/.2/.3 engines exist,verify offset fragments,slash region/
+  fullness/topology,mirror copies,walk marks,truing/joins and original source/output maps in real replay/publication.
   This is later geometry-backed integration,not a prerequisite for G1 .5f.1 schema acceptance.
   No synthetic results,physical/domain proof or whole integration closure before those engines.

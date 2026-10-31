@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0689 — bind actual constrained seam-truing inputs
+## STITCHCAD-G1-0690 — retain explicit two-Piece join intent and actual sources
 
-- Explicit span/side/Piece/source intent binds actual graph/copy and borrowed quantitative fit budget.
-- Private source/error views preserve ease/stops,reflected copies and all-copy edit implications.
-- Native5/rustdoc10/selected lint/fmt/book/rendered/diff/history858 exact spans pass.
-- Deterministic refit coverage/output policies,geometry/currentness/observers/bus remain deferred.
+- Distinct pattern-Piece A/B roles bind actual span/copies and uniquely named provided Pieces.
+- Private views preserve original metadata/ease/stops;duplicate identities and local cycles refuse.
+- Native9/rustdoc11/selected lint/fmt/book/rendered/diff/history859 exact spans pass.
+- Join output/coverage policies and actual pose/weld/semantics/atomic execution remain deferred.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

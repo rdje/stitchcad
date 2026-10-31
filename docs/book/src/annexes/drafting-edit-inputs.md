@@ -351,3 +351,52 @@ deterministic curve/refit selection and its supported domains must be defined be
 complete v1 truing schemas. No solver is inferred by this association API.
 Actual constrained fitting,all observers,atomic bus/undo and real result
 verification remain G3/full `.5f.4` work;this contract closes none of those gates.
+
+## Native two-Piece join source intent
+
+`construction::JoinPiecesAtSeam` retains an operation id,a canonical span id and two explicit
+pattern-Piece ids in that span's A/B roles. This variant requires distinct pattern Pieces;
+it does not mean two physical copies or two ranges of one Piece. Those SewingGraph relations
+remain legal in their own domains. The request declares join intent without selecting output
+metadata,copy consumption,source retirement,pose or a geometric weld/refit algorithm.
+
+Local checks refuse self-span,then self-Piece A/B,then a repeated Piece. Input order is not sorted
+or inferred from seam direction. `bind_source` reads the actual named span in the provided graph,
+then handles A completely before B. For each side it requires the actual CutPlan copy,checks its
+Piece id against the requested role,and finds exactly one matching Piece in the provided slice.
+Missing span precedes all side checks;within a side,missing copy precedes Piece mismatch,then
+missing or duplicate named Piece. Equal content cannot make duplicate identities unambiguous.
+Duplicate indices name actual positions in that original slice,not recipe statement ordinals.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn request_join(operation:EntityId,span:EntityId,a_piece:EntityId,b_piece:EntityId)
+    ->Result<JoinPiecesAtSeam,JoinInputError> {
+    JoinPiecesAtSeam::new(operation,span,a_piece,b_piece)
+}
+fn bind_join<'a>(edit:&'a JoinPiecesAtSeam,graph:&'a SewingGraph,plan:&'a CutPlan,
+    pieces:&'a [Piece])->Result<BoundJoinPiecesAtSeam<'a>,JoinBindingError<'a>> {
+    edit.bind_source(graph,plan,pieces)
+}
+```
+
+Success and errors retain the actual request,graph,plan and whole provided Piece slice. The
+private `BoundJoinSide` view borrows its complete bound join,original span-side field,actual copy
+and uniquely named provided Piece. Its `source_copies` iterator returns actual matching plan
+records in authored order. Labels,material assignments including unresolved reasons,quantity,
+mirroring,fold intent,face,layer,boundaries and construction content remain on those original
+Pieces. No field from A silently overrides B. Direction,ease including retained portions,and
+stops remain on the actual span. No joined identity or boundary is produced.
+
+This proves supplied-source association only. Unrelated duplicate Piece ids,complete inventory
+resources,current Design membership and source-edge/boundary ownership need their own admission
+and current graph/ledger validation. After source deletion the unchanged association can still
+bind while current validation refuses. Original-frame references are not silently replaced with
+current fragments. The provided Piece records are not thereby certified as a current Design.
+
+Output contracts must explicitly reconcile metadata,material/mark ownership,multiplicity and
+copy mappings,source retirement/reference lineage and the permitted join variant before family
+closure. Partial spans,declared ease and physical-copy orientation cannot be ignored. Sewing
+correspondence alone does not establish congruent boundaries,a valid placement or a simple
+joined Piece;no pose,weld,stretch or refit is inferred here. Those geometric/semantic choices,
+all observers and actual G2/G3/bus/undo/results remain separately owned execution work.

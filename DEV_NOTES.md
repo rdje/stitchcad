@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind actual constrained seam-truing inputs
+## _(2026-10-31 UTC)_ — retain explicit two-Piece join intent and actual sources
 
-0689 adds explicit ConstrainedSeamTruing,span/side/Piece/fit-source fields and local self-source roles. bind_source retains the real graph/span/selected CutPlan copy and quantitative provider;exact association precedes T2 fit class/nonnegative limit checks. No copied length/ease or implicit solver enters it.
-Bound views/errors preserve actual owners;source/counterpart are original span fields and affected_copies lists real same-Piece copies in plan order. Shared reflected copies and an observed counterpart remain visible. Retained partial ease stays a Portion rather than acquiring the full parent's amount.
-Native5/compiler guards3/actual book7/selected clippy/fmt/book/rendered/diff/archive858 three exact Git spans pass. Initial fixture indexing lint repaired with checked extraction,without a waiver. Deleted-edge current validation refuses while original structural association still binds;no geometry is certified.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source contracts). Whole0688 retained858. Deterministic refit selection belongs .true.variants before schema-family closure;actual fitting/observers/atomic execution stay G3/.5f.4. Next .join.inputs;PNT continues.
+0690 adds JoinPiecesAtSeam with explicit span and distinct pattern-Piece A/B roles. Local cycles/repeated Piece refuse. Actual binding resolves the graph span,then each side's copy/required Piece/unique provided record in order;duplicate named identities never receive a first-match choice or accepted prefix.
+Private source/error views borrow the actual request,graph,plan,Piece slice and original side/copy/Piece fields. Labels,unresolved material,quantity,orientation,ease and stops remain original. Source-copy inventory grants no consumption,retirement,pose,weld,metadata merge or fresh output identity.
+Join4/directly affected truing5/compiler guards3/actual book8/selected clippy/fmt/book/rendered/diff/history859 three exact Git spans pass. Extracted common fixture remains byte-identical apart from eight visibility qualifiers. A stale source still associates while actual current graph validation refuses.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source contracts). Whole0689 retained859. Explicit join output/coverage policy and actual G2/G3/bus/full replay remain owned. Next .offset.outputs;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
