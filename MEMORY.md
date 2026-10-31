@@ -1,15 +1,14 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0698;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.offset.outputs.tags.continuity.presence — readonly admitted candidate
-  manifest to active catalogue roles;conditional result absence never retires definitions.
-  Activate before code;actual evaluated instance/current Design/geometric truth remain separate.
-- Role transition metadata implemented:combined definition/active/key-byte admission before owner/
-  all-old-definition checks. No forgetting issued tag/key records or retargeting;membership may change.
-  Actual introduced/activation/deactivation fields preserve original orders/owners. Native6/rustdoc9/
-  lint/fmt/book pass;whole0697 retained867. No mutation/issuance/undo authority/geometry certificate.
-- Old whole-snapshot restore refuses forgotten later roles;current issued definitions plus restored
-  active subset pass structural intent. Actual history execution remains the bus's responsibility.
+- Latest unit:STITCHCAD-G1-0699;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.offset.outputs.mapping — explicit correspondence-kind/evidence/error-budget
+  contract. Read recovered normal-offset counterexample0691;intervals alone never prove mapped Param.
+- Readonly candidate presence implemented:complete N/D/A quotas before owner/tag lookup;N actual pairs
+  reuse catalogue indexes. Undefined/inactive roles refuse at original indices;both sources retained.
+  Candidate/active-list orders and actual fields preserved. Different subsets leave absent roles active.
+  Native6/compiler3/actual output book7/lint/fmt/book pass;whole0698 retained868. No actual instance proof.
+- Native .tags/.continuity metadata components completed with focused checks;actual canonical issuance,
+  history/current Design,G2/G3 matching and bus publication remain separately owned. No broad gate claim.
 - OffsetRoleCatalog admission preserves raw op/key/tag/active fields with explicit complete limits;
   empty/inactive catalogues valid. Keys are local identity metadata,not geometric matching rules.
 - Native candidate/query/declaration binding and source-preserving canonical tagged declarations pass

@@ -42,11 +42,13 @@ pub use offset::{
 mod offset_manifest;
 mod offset_roles;
 pub use offset_manifest::{
-    AdmittedOffsetCandidates, DeclaredOffsetCandidate, DeclaredOffsetCandidates,
-    OffsetCandidateError, OffsetCandidateFragment, OffsetCandidateLimits, OffsetCandidateManifest,
-    OffsetCandidateMatch, OffsetCandidateMatchKind, OffsetCandidateQuery,
-    OffsetCandidateQueryError, OffsetCandidateQueryRefusal, OffsetCandidateRefusal,
-    OffsetDeclarationError, OffsetDeclarationLimits, OffsetDeclarationRefusal,
+    ActiveOffsetCandidate, ActiveOffsetCandidates, AdmittedOffsetCandidates,
+    DeclaredOffsetCandidate, DeclaredOffsetCandidates, OffsetCandidateError,
+    OffsetCandidateFragment, OffsetCandidateLimits, OffsetCandidateManifest, OffsetCandidateMatch,
+    OffsetCandidateMatchKind, OffsetCandidateQuery, OffsetCandidateQueryError,
+    OffsetCandidateQueryRefusal, OffsetCandidateRefusal, OffsetDeclarationError,
+    OffsetDeclarationLimits, OffsetDeclarationRefusal, OffsetRolePresenceError,
+    OffsetRolePresenceLimits, OffsetRolePresenceRefusal,
 };
 pub use offset_roles::{
     ActiveOffsetRole, AdmittedOffsetRoleCatalog, AdmittedOffsetRoleTransition, OffsetRoleCatalog,

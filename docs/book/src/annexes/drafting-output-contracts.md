@@ -40,8 +40,8 @@ test passes;it tests its declared primitive,not this geometric correspondence.
 
 The native manifest admission stage below admits explicit logical candidate roles and source
 domains only. It must preserve ambiguous/gap outcomes and cannot return a geometrically certified
-mapped Param. Separate native tasks own the stable-tag bridge and explicit mapping-kind/evidence/
-error-budget contract before family closure. Actual G2 curves,nonlinear mapping accuracy and mark
+mapped Param. The native stable-tag components are described below;the explicit mapping-kind/
+evidence/error-budget contract remains required before family closure. Actual G2 curves,nonlinear mapping accuracy and mark
 placement remain `.5f.4.geometry` proof. This recovery changes no ledger algorithm or gate status.
 
 ## Native offset candidate-manifest admission
@@ -85,7 +85,8 @@ retained;their admitted-only membership query is described below.
 Admission checks tag uniqueness within this manifest,not stable-role correspondence across
 replay. It allocates no ledger operation,rewrites no reference and computes no curve,coordinate,
 length or output Param. Actual allowance width/corner/inclusion stay on the bound descriptor.
-The stable-tag bridge,mapping evidence and actual G2 results remain separate owned obligations.
+Native declaration/role associations are described below;mapping evidence and actual G2 results
+remain separate owned obligations.
 
 ## Native offset candidate membership
 
@@ -127,9 +128,9 @@ unchanged candidate metadata remains inspectable in its original frame while a q
 new ledger edge is refused. This query creates no ledger repair and certifies no current geometry.
 
 `Unique` means exactly one supplied candidate domain,not a unique geometric point. The result
-contains no mapped output Param,curve coordinate,length or error-budget proof. Stable-tag
-reconciliation/publication and the explicit geometric mapping contract remain pending before
-offset-family closure;actual G2 results still need their separately owned verification.
+contains no mapped output Param,curve coordinate,length or error-budget proof. Native declaration/role
+associations are available below. Publication and the explicit geometric mapping contract remain
+owned;actual G2 results still need their separately owned verification.
 
 ## Native explicit-tag edge declarations
 
@@ -167,8 +168,9 @@ consume unselected parts of a source. The new declaration path changes no existi
 registration or reference resolution. Export inclusion remains the actual profile's explicit
 policy;this primitive selects neither an export layer nor an allowance geometry.
 
-Candidate-to-actual-declaration binding is available below;cross-replay role/retirement policy
-remains pending. Fresh declarations alone do not establish those facts. Actual derived geometry,
+Candidate-to-actual-declaration binding and role/membership metadata checks are available below.
+Actual cross-replay history authority is separately owned. Fresh declarations alone do not
+establish it. Actual derived geometry,
 source-to-output parameter correspondence and atomic bus publication stay separately owned.
 
 ## Native candidate-to-declaration binding
@@ -205,9 +207,9 @@ edit while its original declaration remains authentic. Callers still need curren
 reference resolution,current Design membership,role continuity,actual G2 geometry/mapping and
 command authority before use or publication. The binding supplies none of those certificates.
 
-## Planned canonical role continuity
+## Canonical role continuity
 
-The next native component separates three different facts. A canonical catalogue retains all issued
+The native components separate three different facts. A canonical catalogue retains all issued
 local role-key/tag definitions for its operation. Active canonical membership is an explicit subset
 controlled by authoring/history operations. An evaluated manifest reports which roles occur in that
 particular result;it does not rewrite either of the first two.
@@ -223,9 +225,8 @@ active subset. This follows the existing
 [private reserve and issued-revision separation](../spec/command-execution.md#private-identity-reserve-and-actual-notch-preview).
 Actual history authority and publication are not supplied by a metadata proposal.
 
-Native catalogue admission and structural transitions are implemented below;readonly
-manifest-presence binding remains pending. Local machine
-keys identify declared roles;they are not geometric matching rules. Unknown/ambiguous geometric roles
+Native catalogue admission,structural transitions and readonly candidate-presence binding are
+implemented below. Local machine keys identify declared roles;they are not geometric matching rules. Unknown/ambiguous geometric roles
 must not acquire a false continuity certificate from matching names or source intervals. Actual
 G2/G3 evidence,current operation/Design ownership,storage and bus integration remain separately owned.
 
@@ -271,7 +272,7 @@ valid metadata states;neither creates an implicit `main` role or proof that an o
 
 This validates current supplied metadata only. It cannot prove the list includes all previously
 issued roles,an actual canonical operation owns it,an instance contains a role,or any geometry
-matches its key. Native transition checks are described below;readonly manifest-presence binding is next;
+matches its key. Native transition and manifest-presence checks are described below;
 current Design/namespace,actual history authority,G2/G3 matching and publication remain separate.
 
 ## Native issuance-preserving transition intent
@@ -306,3 +307,46 @@ that snapshot and is refused. A proposal retaining the complete current issued d
 restoring the earlier active subset passes these structural checks. Applying an actual recorded
 history action still requires the bus's real history/authority evidence. Equal key/tag metadata
 proves no geometric role continuity,current Design ownership or source-to-derived point map.
+
+## Native candidate presence in active role metadata
+
+`AdmittedOffsetCandidates::bind_active_roles` associates every candidate occurrence with the actual
+`AdmittedOffsetRoleCatalog`. This is a readonly metadata relation. The candidate manifest is still
+an authored declaration,not proof of an evaluated geometry instance. The catalogue can contain
+canonically active roles absent from this manifest;that absence never retires or deletes them.
+
+`OffsetRolePresenceLimits` explicitly bounds complete N candidates,D definitions and A active ids.
+All three population checks precede owner/tag lookup or allocation. The stage retains N association
+pairs and reuses the catalogue's existing indexes. These are entry counts,not prior Vec/String
+allocation,key-byte,whole-memory or whole-execution guarantees;catalogue admission retains its own
+separate resource policy. No new lookup index is allocated for this binding.
+
+```rust
+use sc_core::construction::*;
+fn bind_candidate_presence<'a>(candidates:&'a AdmittedOffsetCandidates<'a>,
+    catalog:&'a AdmittedOffsetRoleCatalog<'a>,limits:OffsetRolePresenceLimits)
+    ->Result<ActiveOffsetCandidates<'a>,OffsetRolePresenceError<'a>> {
+    candidates.bind_active_roles(catalog,limits)
+}
+```
+
+The operation ids must agree. Each original candidate tag must have a definition and active
+canonical membership. Undefined and defined-but-inactive tags are distinct typed causes carrying
+the actual candidate index/tag. Checks follow candidate order;no accepted prefix escapes. Errors
+retain both actual complete admitted owners and the selected policy without changing any input.
+
+`ActiveOffsetCandidates::outputs()` returns private views in original candidate order,independent
+of the catalogue's definition and active-list orders. Each view retains the original candidate
+field and an authentic `ActiveOffsetRole` with its original active-list tag field and definition.
+`index()` is the original candidate position;`logical_output()` uses its explicit tag. Direct
+catalogue `active_role(tag)` lookup returns the same authentic membership fields without allocation.
+
+For example,a catalogue active list `[2,5,9]` can bind manifests containing `[9]`,`[9,2]` or `[9,5]`.
+All three bindings leave roles2,5 and9 active and retain every issued definition,including inactive
+ones. They do not compact tags or derive identity from fragment position. The existing nonempty
+candidate admission still refuses an empty candidate list;an actual complete geometric collapse
+requires its own explicit execution outcome rather than a fabricated edge.
+
+No curve classifier,actual instance,issued ledger declaration,current Design/liveness,geometric
+continuity or source-to-output point mapping is certified here. Historical declaration association
+is a separate existing binding;actual G2/G3 evidence and bus publication remain separately owned.

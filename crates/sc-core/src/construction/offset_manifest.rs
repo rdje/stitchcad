@@ -4,10 +4,15 @@ use crate::ontology::{DirectedRange, EdgeRef, EntityId, LocalTag, OffsetInterval
 use core::fmt;
 use std::collections::BTreeMap;
 mod declaration;
+mod presence;
 mod query;
 pub use declaration::{
     DeclaredOffsetCandidate, DeclaredOffsetCandidates, OffsetDeclarationError,
     OffsetDeclarationLimits, OffsetDeclarationRefusal,
+};
+pub use presence::{
+    ActiveOffsetCandidate, ActiveOffsetCandidates, OffsetRolePresenceError,
+    OffsetRolePresenceLimits, OffsetRolePresenceRefusal,
 };
 pub use query::{
     OffsetCandidateMatch, OffsetCandidateMatchKind, OffsetCandidateQuery,

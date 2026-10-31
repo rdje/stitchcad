@@ -348,6 +348,17 @@ impl<'a> AdmittedOffsetRoleCatalog<'a> {
     pub fn is_active(&self, tag: LocalTag) -> bool {
         self.active_by_tag.contains_key(&tag)
     }
+    /// Authentic original active membership and definition for this explicit tag,if active.
+    #[must_use]
+    pub fn active_role(&self, tag: LocalTag) -> Option<ActiveOffsetRole<'_>> {
+        self.active_by_tag
+            .get(&tag)
+            .and_then(|index| self.active_roles.get(*index))
+            .map(|association| ActiveOffsetRole {
+                catalog: self,
+                association,
+            })
+    }
     /// Every actual active membership/definition pair,in original active-list order.
     pub fn active_roles(
         &self,

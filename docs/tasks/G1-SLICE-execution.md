@@ -799,10 +799,10 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0693 membership;[whole scope/proofs](../history/stitchcad-devnotes-part863.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags`
-  Status: `active`
-  Goal:native stable-tag/replay/retirement contract and published ledger bridge. Existing offset
-  allocates fresh contiguous tags;do not treat ordinal slots as arbitrary persistent roles.
-  Recover allocation identity and source-retention/partial-range semantics before choosing a ledger mutation.
+  Status: `done`
+  Goal:native explicit-tag source-preserving declaration/historical association and role catalogue/
+  transition/presence metadata contracts. Components0694–0699 have focused checks;no combined gate claim.
+  Actual current Design/issuance/history/publication and geometric matching remain .5f.2/.6/.5f.4.geometry.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.declaration`
   Status: `done`
   Goal:0694 declaration;[whole scope/proofs](../history/stitchcad-devnotes-part864.md).
@@ -810,9 +810,9 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0695 binding;[whole scope/proofs](../history/stitchcad-devnotes-part865.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity`
-  Status: `active`
-  Goal:native role/replay/retirement contract distinguishing canonical edits from instance evaluation;
-  explicit tags and fresh ledger declaration alone do not prove role continuity across revisions/sizes.
+  Status: `done`
+  Goal:0696–0699 separate issued definitions,canonical membership and readonly candidate occurrence;
+  focused catalogue/transition/presence checks completed. No actual history/currentness/geometry certificate.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.recovery`
   Status: `done`
   Goal:0696 recovery/D373/D374;[whole scope/proofs](../history/stitchcad-devnotes-part866.md).
@@ -821,30 +821,27 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0697 catalogue;[whole scope/proofs](../history/stitchcad-devnotes-part867.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.transition`
   Status: `done`
-  Goal:native structural issuance-preserving canonical edit/membership-restore contract;old role
-  definitions/tags cannot disappear or be reassigned. Metadata intent grants no actual undo authority.
-  Scope:complete combined definition/active/key-byte policy before owner/definition checks;
-  preserve every actual old tag/key,permit explicit membership changes and expose actual added/
-  activated/deactivated fields readonly. No issuance,mutation or geometric continuity proof.
-  Retire whole0697;focused native/compiler/book checks.
-  - [x] ISSUE:restoring membership must not drop later-issued definitions or reassign old tags;
-    metadata changes must not masquerade as actual history authority/geometric continuity.
-  - [x] ROOT CAUSE (role transition):actual 0696 policy and admitted-catalogue interfaces read;
-    native inactive-definition/old-snapshot counterexamples and actual-field reports pass,rc=0.
-  - [x] FIX:complete combined definition/active/key-byte admission before same-owner/all-old-role
-    checks;private readonly transition and original introduced/activation/deactivation fields.
-  - [x] ADDRESSED (role transition):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test offset_role_transition_contract →3 pass,rc=0;actual sources/counts/order,
-    six refusal rows,retarget/drop protection and membership restoration preserving later definitions.
-  - [x] NO REGRESSION (role transition):catalogue3/compiler guards3/actual output book6/selected
-    clippy/fmt/book/rendered/diff/history867 three exact Git spans pass,rc=0. No catalogue mutation,
-    actual issuance/history/current Design/geometric continuity/publication proof. D372 remains P2.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (0696 identity policy already promoted).
-  Verification:native6/rustdoc9;Commit:STITCHCAD-G1-0698. Next .continuity.presence.
+  Goal:0698 transition;[whole scope/proofs](../history/stitchcad-devnotes-part868.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.presence`
-  Status: `pending`
-  Goal:readonly admitted-manifest to active role-catalogue binding;conditional absence never
-  retires a canonical role. Actual instance/current Design/geometric role truth stays separately owned.
+  Status: `done`
+  Goal:readonly admitted-manifest to actual active role-catalogue binding;conditional absence
+  never retires canonical roles. Actual instance/current Design/geometric truth stays separately owned.
+  Scope:complete N candidate/D definition/A active quotas before owner/tag lookup/allocation;
+  N retained actual pairs reuse catalogue indexes. Missing/inactive causes and authentic fields
+  preserve original inputs/orders;unused active roles remain reserved. Retire whole0698.
+  - [x] ISSUE:candidate occurrence must bind actual active metadata without retiring absence.
+  - [x] ROOT CAUSE (role presence):actual catalogue/candidate/source and 0696 policy inspected;
+    actual fields/order/subset and seven quota/owner/undefined/inactive refusal rows pass,rc=0.
+  - [x] FIX:complete N/D/A admission,owner check,unique actual active roles and private output
+    fields;direct active_role lookup reuses existing indexes without allocating a new work index.
+  - [x] ADDRESSED (role presence):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test offset_role_presence_contract →3 pass,rc=0;actual pointers/orders/causes and
+    [9]/[9,2]/[9,5] subsets leave active [2,5,9] and all definitions unchanged.
+  - [x] NO REGRESSION (role presence):catalogue3/compiler guards3/actual output book7/selected
+    clippy/fmt/book/rendered/diff/history868 three exact Git spans pass,rc=0. Initial test-only
+    Param constructor corrected to actual Rational signature. No actual instance/history/geometry proof.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (0696 identity policy already promoted).
+  Verification:native6/rustdoc10;Commit:STITCHCAD-G1-0699. Next .offset.outputs.mapping.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.mapping`
   Status: `pending`
   Goal:P1 native explicit correspondence-kind/evidence/error-budget contract before offset family
