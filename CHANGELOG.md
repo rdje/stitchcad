@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0672 — replay actual paired recipe and source plans
+## STITCHCAD-G1-0673 — re-admit containing Designs before fresh replay
 
-- Borrow both plans,preserve exact input owner/proofs/independent policies and execute fresh.
-  No prior cache/read slots cross attempts;late failure leaves earlier accepted results intact.
-- Actual paired9/rustdoc1/targeted lint/fmt/book/history834/diff pass. Native scope only;
-  containing Design/storage/geometry/full identity stay owned. G1 6/18/G0 unapproved unchanged.
+- Borrow actual Design plan/result,recheck original complete content/current scope,then replay
+  fresh native pair. Typed admission/runtime failures preserve earlier accepted results.
+- Design14/rustdoc1/targeted lint/fmt/book/history835/diff pass. Full result identity/storage/
+  geometry remain owned;G1 6/18/G0 unapproved unchanged. PNT continues with deterministic identity.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

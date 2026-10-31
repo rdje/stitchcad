@@ -12,6 +12,8 @@ use core::fmt;
 
 mod execute;
 pub use execute::{DesignExecutedFormulaRecipe, DesignFormulaExecutionError};
+mod replay;
+pub use replay::DesignFormulaReplayError;
 
 mod plan;
 pub use plan::{

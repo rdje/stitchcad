@@ -4,7 +4,7 @@
 > scalar subset from its actual complete static recipe proof. It evaluates real lets/assertions in
 > declaration order,stores each successful binding once and retains actual executed source reads.
 > Derived reads now execute through [actual source-backed Design recipes](formula-design-integration.md#execute-the-private-actual-design-plan).
-> Explicit-policy direct/source-backed Tan recipes and fresh direct/paired scalar replay are available
+> Explicit-policy direct/source-backed Tan recipes and fresh direct/paired/Design replay are available
 > below. Geometry,corrupt-load validation,full replay/platform identity and complete language/bus/
 > physical acceptance retain their separate owners. No release claim follows.
 
@@ -94,6 +94,46 @@ Focused tests use actual Design-owned sources,original fractional roots,changed-
 cache,late assertion failure,foreign-owner refusal and both independent tangent policies. This API
 returns native formula execution;fresh containing-Design admission/currentness,geometry replacement,
 storage/load validation and complete persisted result identity remain separate obligations.
+
+## Replay a containing Design
+
+`DesignFormulaScalarPlan::replay(context)` borrows an actual prepared Design plan.
+`DesignExecutedFormulaRecipe::replay(context)` borrows an earlier accepted Design result.
+Both return a fresh `DesignExecutedFormulaRecipe` after complete held-input/current admission,
+then fresh native paired replay. Neither consumes the earlier plan or result.
+
+```rust
+use sc_core::{design::*,recipe::FormulaScalarExecutionContext};
+fn again<'a,H:DesignResourceSource>(first:&DesignExecutedFormulaRecipe<'a,H>,
+    context:FormulaScalarExecutionContext<'a>)
+    ->Result<DesignExecutedFormulaRecipe<'a,H>,DesignFormulaReplayError<'a,H>> {
+    first.replay(context)
+}
+```
+
+Every attempt recharges the actual containing root's complete held input content under the
+original model limits and rechecks its current host references. Only success reaches native
+preparation or values. The original source/recipe proof join,graph and independent native policies
+remain pinned. Replay uses fresh source completion slots and read records,with the same unbound
+source/once-stored binding distinction as native paired replay. The model and host are borrowed;
+the host needs neither Clone nor Debug.
+
+An earlier accepted input scope does not authorize a later attempt. If the host now refuses a
+current reference,replay returns `DesignFormulaReplayError::Admission` with the actual root,
+model limits and original typed cause. Its `scope()` is absent. The earlier accepted result remains
+available. If that host later accepts again,a new replay repeats admission and can succeed.
+
+After fresh admission,a native preparation or execution failure returns `DesignFormulaReplayError::Replay`.
+Its `inputs()` retains the original joined proof owners and selected policies;`scope()` exposes the
+new accepted logical input scope. The nested native replay error preserves its original stage,
+statement/requester/supplier/provider context. For example,a named physical-tolerance assertion can
+succeed with a supplied provider,then refuse atomically when replay receives a context without
+that provider. The earlier accepted statements remain intact. Empty recipes also obtain fresh
+containing admission while producing no source or statement outputs.
+
+These APIs add fresh logical input/current checks to native replay. They do not publish a Design
+replacement or define storage bytes,geometry integration,whole allocator/CPU bounds or production
+approval. Full accepted-result identity and corrupt-load integration remain owned work.
 
 ## Whole checked-recipe admission
 

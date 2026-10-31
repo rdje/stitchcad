@@ -341,29 +341,35 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0671 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part834.md).
 - ID: `G1-SLICE.5e.4.2`
   Status: `done`
-  Goal:fresh paired recipe/source replay preserving graph/input/policy identity and empty cache;
-  failures leave earlier accepted results intact. Activate after .1 focused acceptance.
-  Scope:borrow prepared pair,rebuild both original plans,retain early foreign-owner refusal and
-  typed preparation/runtime causes. Focus actual Design fixture/cache/context/failure acceptance;
-  retire whole0671 closed scope/journals for headroom. No storage/geometry/full-identity claim.
-  - [x] ISSUE:paired fresh replay requires rebuilding both consumed plans without prior cache.
-  - [x] ROOT CAUSE (WHY + WHERE):Python Git-source assertion at a81da54c confirms paired
-    evaluate consumes both plans and checks exact canonical owner before runtime,rc=0.
-  - [x] FIX:borrow both plans,retain early owner refusal,re-admit/prepare original proofs and
-    independent policies,then execute new paired runtimes;typed stage errors retain actual causes.
-  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
-    design_structure_contract source_recipe:: →9 pass,rc=0;includes three fresh replay cases,
-    foreign refusal,fractional roots/new ordinals,empty cache/late failure and separate Tan policies.
-  - [x] NO REGRESSION:same focused9 retain original six paired cases,rc=0;new rustdoc1,
-    selected clippy/fmt/book/history834 three exact Git spans and git diff --check pass,rc=0.
-    Initial fixture count4 missed assertion header;now checks exact five names. Full CI deferred.
-  - [x] LOCKSTEP:book/live/notes/frontier sync;promotion: declined (existing private-result/cache doctrine).
-    Native result only;Design/currentness/storage/geometry/byte identity open. Literal marker fixed.
-  Verification:focused paired9/rustdoc1;Commit:STITCHCAD-G1-0672.
+  Goal:0672 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part835.md).
 - ID: `G1-SLICE.5e.4.3`
+  Status: `done`
+  Goal:replay borrowed containing-Design plans/results with original proof/policies and fresh
+  root/model admission before native values;earlier accepted results survive all failures.
+  Scope:actual Design replay/error APIs,focused host/failure/empty acceptance;retire whole0672
+  scope/journals to835. Storage/geometry,full byte identity/verification remain owned.
+  - [x] ISSUE:containing Design replay needs fresh held-content/current admission before values.
+  - [x] ROOT CAUSE (WHY + WHERE):Python Git-source assertion at6925aaec confirms consuming
+    Design evaluate re-admits root before native execution and has no replay method,rc=0.
+  - [x] FIX:borrow actual plan/result,re-admit original root/model limits,then fresh native pair;
+    Admission/Replay errors retain original proof join and actual absent/fresh scope without prefix.
+  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
+    design_structure_contract formula_execute:: →14 pass,rc=0;three new replay cases plus empty
+    extension verify actual owners,host refusal/retry,late provider failure and unchanged held result.
+  - [x] NO REGRESSION:same14 include existing Design and independent book/tangent/mixed reference
+    and frozen-byte regeneration,rc=0;selected rustdoc1/clippy/fmt/book/diff/history835 three Git
+    spans pass,rc=0. Initial test used nonexistent Current;corrected to actual Host variant.
+  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (existing fresh-admission doctrine).
+    G1 6/18/G0 unapproved unchanged;full byte identity/storage/geometry verification remains owned.
+  Verification:focused Design14/rustdoc1;Commit:STITCHCAD-G1-0673.
+- ID: `G1-SLICE.5e.4.4`
   Status: `pending`
-  Goal:recover actual Design replay/admission interfaces and implement the first safe containing
-  Design replay slice;preserve fresh logical admission and native pair scope. Full .4 remains open.
+  Goal:recover accepted-result/canonical serialization contracts and implement the first safe
+  deterministic replay identity slice. Storage loader remains .7;native replay is implemented.
+- ID: `G1-SLICE.5e.4.v`
+  Status: `pending`
+  Goal:after full replay feature/storage integration,run combined cache/byte/corrupt-load/platform
+  verification. Deferred during implementation slices;pre-push full gate remains separately required.
 
 - ID: `G1-SLICE.5e.3.6`
   Status: `done`

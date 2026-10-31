@@ -109,6 +109,142 @@ fn observed(
     observed_definition(supplied)
 }
 #[test]
+fn borrowed_plan_and_accepted_result_replay_keep_actual_scope_and_fresh_native_results() {
+    let root = root(
+        "let a:length=declared_width*3\nlet b:length=tripled_source\nassert equal:eps_num=a==b",
+        "1 mm/3",
+    );
+    let before = root.clone();
+    let limits = model_limits(&root);
+    with_plan(&root, limits, |plan, inputs, original| {
+        let first = plan.replay(context()).expect("borrowed Design plan replay");
+        let second = first
+            .replay(context())
+            .expect("held accepted Design result replay");
+        let fresh = plan
+            .evaluate(context())
+            .expect("ordinary fresh Design execution");
+        for result in [&first, &second, &fresh] {
+            assert!(std::ptr::eq(result.inputs(), inputs));
+            assert!(std::ptr::eq(result.scope().root(), &root));
+            assert_eq!(result.scope().limits(), limits);
+            assert_eq!(result.scope().demand(), original.demand());
+            assert!(std::ptr::eq(
+                result.execution().recipe_plan().admission().proof(),
+                inputs.recipe().proof()
+            ));
+            assert_eq!(
+                result
+                    .execution()
+                    .source(id(9003))
+                    .expect("actual unbound root")
+                    .value()
+                    .numeric()
+                    .expect("Length")
+                    .rational(),
+                FormulaRational::new(1000, 3, false).expect("exact fractional root")
+            );
+            assert_eq!(
+                result
+                    .execution()
+                    .sources()
+                    .map(|s| s.completion_ordinal())
+                    .collect::<Vec<_>>(),
+                [1, 2]
+            );
+            assert_eq!(result.execution().statements().len(), 3);
+            for statement in result.execution().statements().iter().take(2) {
+                assert!(
+                    matches!(statement.outcome(), FormulaScalarRecipeOutcome::Binding { binding, .. }
+                    if binding.value().numeric_integer()==Some(1000))
+                );
+            }
+        }
+    });
+    assert_eq!(root, before);
+}
+#[test]
+fn accepted_replay_rechecks_non_clone_host_and_recovers_after_current_refusal() {
+    let (root, semantic, reject) = observed("let actual:length=declared_width*3");
+    let limits = model_limits(&root);
+    with_plan(&root, limits, |plan, inputs, original| {
+        let first = plan.replay(context()).expect("initial current admission");
+        reject.set(true);
+        semantic.set(0);
+        let error = first
+            .replay(context())
+            .expect_err("prior accepted scope cannot authorize replay");
+        assert!(semantic.get() > 0);
+        assert!(std::ptr::eq(error.inputs(), inputs));
+        assert!(error.scope().is_none());
+        assert!(
+            matches!(&error, DesignFormulaReplayError::Admission { error, .. }
+            if std::ptr::eq(error.root(), &root) && error.limits()==limits
+            && matches!(error.refusal(), DesignFormulaScopeRefusal::Inputs(DesignInputsError::Sources(cause))
+            if matches!(cause.as_ref(), DesignMetadataError::Host(MissingFixtureRecord))))
+        );
+        assert_eq!(first.execution().statements().len(), 1);
+        reject.set(false);
+        semantic.set(0);
+        let second = first
+            .replay(context())
+            .expect("fresh current admission on retry");
+        assert!(semantic.get() > 0);
+        assert!(std::ptr::eq(second.inputs(), inputs));
+        assert_eq!(second.scope().demand(), original.demand());
+        assert_eq!(second.execution().statements().len(), 1);
+        assert_eq!(first.execution().statements().len(), 1);
+    });
+}
+#[test]
+fn replay_native_failure_retains_fresh_scope_and_leaves_earlier_accepted_result_intact() {
+    use sc_units::{Length, Tolerance, ToleranceClass};
+    let root = root("let a:length=1 um\nassert check:eps_phys=a==2 um", "1 mm/3");
+    let limits = model_limits(&root);
+    let physical = Tolerance::new(
+        ToleranceClass::PhysicalAcceptance,
+        Length::from_micrometres(1).expect("length"),
+        "Design replay fixture",
+    )
+    .expect("tolerance");
+    let supplied = FormulaScalarExecutionContext::new(
+        FormulaToleranceContext::new(FormulaToleranceContextDefinition {
+            label: Some("Design replay"),
+            format: None,
+            importer: None,
+            physical: Some(FormulaToleranceProvider {
+                source: id(90),
+                tolerance: &physical,
+            }),
+        })
+        .expect("actual checked provider"),
+        FormulaSizeContext::empty(),
+    );
+    with_plan(&root, limits, |plan, inputs, original| {
+        let first = plan.replay(supplied).expect("actual inclusive assertion");
+        let error = first
+            .replay(context())
+            .expect_err("new attempt has no physical provider");
+        assert!(std::ptr::eq(error.inputs(), inputs));
+        let scope = error.scope().expect("fresh containing admission succeeded");
+        assert!(std::ptr::eq(scope.root(), &root));
+        assert_eq!(scope.limits(), limits);
+        assert_eq!(scope.demand(), original.demand());
+        assert!(matches!(&error, DesignFormulaReplayError::Replay {
+            error: FormulaScalarSourceRecipeReplayError::Execution(error), .. }
+            if matches!(error.cause(), FormulaScalarSourceRecipeErrorCause::Recipe(error)
+                if error.statement().expect("actual failed assertion").statement_index()==2
+                && matches!(error.cause(), FormulaScalarRecipeErrorCause::Evaluation(failure)
+                if matches!(failure.as_ref(), FormulaScalarRecipeFailure::ToleranceRead(_))))));
+        assert_eq!(first.execution().statements().len(), 2);
+        assert_eq!(first.execution().reads().count(), 2);
+        let again = first
+            .replay(supplied)
+            .expect("new attempt can use original provider");
+        assert_eq!(again.execution().statements().len(), 2);
+    });
+}
+#[test]
 fn exact_actual_root_scope_limits_original_plans_and_complete_execution_survive_without_model_values(
 ) {
     let root = root(
@@ -238,6 +374,11 @@ fn empty_actual_recipe_keeps_fresh_containing_scope_without_an_entry_or_source_r
         assert!(result.execution().statements().is_empty());
         assert_eq!(result.execution().sources().count(), 0);
         assert_eq!(result.execution().reads().count(), 0);
+        let replay = result.replay(context()).expect("fresh empty Design replay");
+        assert!(std::ptr::eq(replay.scope().root(), &root));
+        assert_eq!(replay.scope().demand(), original_scope.demand());
+        assert!(replay.execution().statements().is_empty());
+        assert_eq!(replay.execution().sources().count(), 0);
     });
 }
 

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — replay actual paired recipe and source plans
+## _(2026-10-31 UTC)_ — re-admit containing Designs before fresh replay
 
-0672 adds replay_with_sources borrowing both plans,with exact canonical owner checked before fresh preparation. Original whole proof/graph,logical quotas and independent tangent policies stay pinned;new runtimes own an empty source cache and new recipe/source read slots.
-Actual Design fixture paired9 pass:three new replay cases plus existing six. Original unbound1000/3 root,stored1000,new ordinals,changed-context empty cache and late assertion isolation pass;foreign clone and recipe/supplier zero Tan policies retain actual failures.
-Targeted rustdoc1/clippy/fmt/book/diff and history834 three exact Git spans pass. Initial expected count4 omitted the real assertion header;fixture now checks all five read names. Returned result is native scope;no fresh containing-Design,storage/geometry or full byte identity claim.
-LIVE states/G1 6/18/G0 unapproved unchanged. Promotion:declined(existing private-result/cache doctrine). Whole0671 retained834. Next .5e.4.3 recover containing-Design replay/fresh-admission interfaces;full integration/pre-push and nonblocking D156 audits remain owned. PNT continues.
+0673 adds replay on borrowed Design plans and accepted results. Shared path recharges complete held content/current host under original model limits before fresh native pair preparation. Original proof join/policies stay pinned;Admission/Replay errors retain actual absent/fresh scope.
+Focused Design14 pass,including three new replay cases,empty extension and existing independent recipe/tangent/mixed reference and byte regeneration. Non-Clone/non-Debug host refusal/recovery,real fractional roots/new ordinals and late missing-provider isolation leave prior accepted results intact.
+Targeted rustdoc1/clippy/fmt/book/diff/history835 three exact Git spans pass. New test initially used nonexistent Current variant;corrected to actual Host cause. No model mutation,storage bytes,geometry publication or complete replay identity/full-suite claim.
+LIVE states/G1 6/18/G0 unapproved unchanged. promotion: declined (existing fresh-admission doctrine). Whole0672 retained835. Next .5e.4.4 recover deterministic accepted-result identity;full .4.v/storage/geometry/pre-push owners stay pending. D156 nonblocking audits deferred. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
