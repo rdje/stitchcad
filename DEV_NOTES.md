@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — complete explicit walk semantic identity proposals
+## _(2026-10-31 UTC)_ — explicit walk field sharing and retained revisions
 
-0747 binds every present role to one explicit retained/proposed semantic id;checked3E+M precedes complete M/E/W quotas,operation,original-entry checks and source pair/A/B coverage. Unused active roles need no choice;duplicate ids across both choice kinds refuse. All actual parents/fields remain borrowed.
-Retain lends the actual supplied prior Notch without field/replacement authority;Propose carries trusted-host metadata,never a new-id client request or reservation. Repeated requests may propose two identities for four occurrences;no sharing accepted. Unmentioned objects stay untouched;absence retires nothing.
-Native6+4/API4/identity book3,selected lint/fmt/build/map/render pass0. Old kernels/tests/two fences,whole0746 spans921 and older31219B notes base exact0. Pair-count helper extension reruns original one-pair exclusion behavior. Proof target/history-proof-0747-walk-identity-plan/.
-Promotion: declined (existing private host identity policy). Native manifest closes;explicit field/sharing policy next. Current namespace/history/private reserve,actual Notch/geometry/profile/all-copy effects/atomic publication/full integration remain owed. G1still6/18/G0 unapproved.
+0748 requires explicit SingleOccurrence/CoalesceIdentical and NewRequested/RetainUnchanged/ReviseRetained. CheckedE+2F and M/E/F/W quotas precede operation/policy/source-order checks. Every occurrence agrees on actual Piece,anchor and all profiles before common field views escape.
+Retained identity stays on its prior Piece;unchanged fields compare exactly,revision proposes requested anchor/profiles. Prior objects stay immutable. Two copies of one Piece can share one identity;different owners/anchors/any of six profiles refuse. No geometry/all-copy suitability accepted.
+Native7+6/API4/identity book4,selected lint/fmt/build/map/render pass0. Old kernels/tests/helpers/three fences,whole0747 spans922 and older31219B notes base exact0. Proof target/history-proof-0748-walk-field-sharing/;no canonical Notch,currentness,global reserve or atomic effect manufactured.
+Promotion: declined (existing explicit identity/field policy). Mandatory evidence requests next,then native checkpoint. Actual Design/history/private reserve,correspondence/differential/ease/profile/all-copy/authority effects and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

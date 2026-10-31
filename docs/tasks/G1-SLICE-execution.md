@@ -890,21 +890,20 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0746 scoped known ids;[whole scope/proofs](../history/stitchcad-devnotes-part921.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.entries`
   Status: `done`
-  Goal:complete present-role host identity choices;no field/sharing/issuance acceptance.
-  - [x] ISSUE:assigned roles need complete distinct semantic identity choices.
-  - [x] ROOT CAUSE (walk identities):actual source/existing/reserve contracts reviewed;
-    checked3E+M precedes M/E/W,operation,entry and coverage checks;rc=0.
-  - [x] FIX:explicit retain/propose;actual parents/fields;no2N-id assumption.
-  - [x] ADDRESSED (walk identities):cargo test --test walk_notch_identity_plan_contract
-    --test walk_notch_identity_exclusion_contract:6+4 pass;rc=0.
-  - [x] NO REGRESSION (walk identities):API4/book3,lint/fmt/build/map/render;
-    old kernels/tests/fences,921 spans exact;rc=0;full commands in receipt.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing private host identity policy).
-  Proof:target/history-proof-0747-walk-identity-plan/;Commit:STITCHCAD-G1-0747.
+  Goal:0747 explicit identity choices;[whole scope/proofs](../history/stitchcad-devnotes-part922.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.sharing`
-  Status: `pending`
-  Goal:explicit mark sharing/coalescing under actual pattern owners/anchors/profile fields.
-  Retained identities also require explicit unchanged/revised field policy;no replacement authority inferred.
+  Status: `done`
+  Goal:explicit exact mark sharing and unchanged/revised retained-field proposals.
+  - [x] ISSUE:grouping alone accepts no shared fields or retained revision.
+  - [x] ROOT CAUSE (walk fields):actual copy/Piece/Notch contracts reviewed;
+    checkedE+2F then M/E/F/W,operation/policy/source-order checks;rc=0.
+  - [x] FIX:single/coalesce opt-in;exact Piece/anchor/profiles;same-Piece retained revisions.
+  - [x] ADDRESSED (walk fields):cargo test --test walk_notch_field_contract
+    --test walk_notch_identity_plan_contract:7+6 pass;rc=0;full commands in receipt.
+  - [x] NO REGRESSION (walk fields):API4/book4,lint/fmt/build/map/render;
+    old kernels/tests/helpers/three fences,922 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing explicit identity/field policy).
+  Proof:target/history-proof-0748-walk-field-sharing/;Commit:STITCHCAD-G1-0748.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.requirements`
   Status: `pending`
   Goal:mandatory currentness/correspondence/differential/ease/profile/all-copy/authority evidence.

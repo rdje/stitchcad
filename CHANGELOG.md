@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0747 — complete explicit walk semantic identity proposals
+## STITCHCAD-G1-0748 — require explicit walk field sharing and retained revisions
 
-- Complete present-role Retain/Propose host choices require distinct ids under checked3E+M quotas.
-- Actual prior Notches,original proposal fields and complete parents stay borrowed;coverage is pair/A/B.
-- Four occurrences can propose two identities;no implicit new-id count,sharing or retirement.
-- Retained identity grants no unchanged-field/replacement authority;global reservation remains owed.
-- Native6+4/API4/book3,lint/fmt/build/map/render pass0;old kernels/tests/fences and whole921 spans exact.
+- Explicit single/coalesce and new/unchanged/revised fields cover all present roles under E+2F.
+- Common fields escape after every occurrence agrees on actual Piece,anchor and all profiles.
+- Two actual copies may share one pattern mark proposal;retained revisions preserve the prior Piece.
+- Prior objects stay immutable;currentness,physical effects and authorized replacement stay owed.
+- Native7+6/API4/book4,lint/fmt/build/map/render pass0;old kernels/tests/helpers/fences and922 spans exact.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

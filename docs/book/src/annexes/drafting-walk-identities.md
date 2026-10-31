@@ -194,3 +194,79 @@ untouched;absence from this plan retires no entity or role. Repeated role tags a
 coalescing across different Pieces,anchors or profiles. An unlisted proposed id,including ordinary
 zero,still needs actual global reservation/nonreuse validation before any publication. Geometry,
 physical-copy correspondence,profile truth,visible repair and authorized atomic edits remain owed.
+
+## Explicit exact-field sharing and retained revisions
+
+`WalkNotchFieldManifest` supplies one `WalkNotchFieldIntent` for every present semantic identity
+role. Each intent explicitly selects both an occurrence policy and an identity-field policy.
+There is no default and repeated tags never choose a policy automatically.
+
+| Policy | Required meaning |
+| --- | --- |
+| `SingleOccurrence` | Exactly one original occurrence uses this role |
+| `CoalesceIdentical` | One or more occurrences share the same actual pattern Piece,exact anchor and all profile fields |
+| `NewRequested` | A proposed new identity takes the common requested fields |
+| `RetainUnchanged` | An actual supplied prior Notch already has the exact requested owner,anchor and profiles |
+| `ReviseRetained` | An actual supplied prior identity explicitly proposes requested anchor/profile revisions on its same Piece |
+
+`NewRequested` requires an actual prior `Propose` choice;the two retained policies require `Retain`.
+Neither retained policy changes the prior semantic owner's Piece. A proposed anchor/profile revision
+is plan metadata,not permission to replace a Notch or a certificate that its requested anchor is
+current. Original immutable objects and all held references remain unchanged.
+
+```rust
+use sc_core::{construction::*,ontology::{EntityId,LocalTag}};
+fn bind<'a>(raw:&'a WalkNotchFieldManifest,ids:&'a AdmittedWalkNotchIdentities<'a>)
+    ->Result<AdmittedWalkNotchFields<'a>,WalkNotchFieldError<'a>> {
+    raw.admit(ids,WalkNotchFieldLimits::new(2,4,2,6))
+}
+let raw=WalkNotchFieldManifest::new(EntityId::from_bits(10),vec![
+    WalkNotchFieldIntent::new(LocalTag::new(9),WalkNotchSharingPolicy::CoalesceIdentical,
+        WalkNotchFieldPolicy::RetainUnchanged),
+    WalkNotchFieldIntent::new(LocalTag::new(2),WalkNotchSharingPolicy::CoalesceIdentical,
+        WalkNotchFieldPolicy::NewRequested),
+]);
+assert_eq!(raw.intents().len(),2);
+```
+
+For E complete identity choices,M complete original assignments and F original field policies,
+checked E+2F precedes whole M,E,F and workspace quotas,then actual walk-operation equality.
+Original policy order checks duplicate role,present identity membership and identity-field kind.
+Only then does source pair/A/B order check complete policy coverage and field agreement. Single
+occurrence refuses a second use even when its fields are identical. Coalescing compares Piece,
+anchor,then complete profile bindings against the first original occurrence. Exact equality covers
+style,sample depth/width,production depth/width and encoding. Coordinate coincidence alone is
+irrelevant. At the first use of a retained identity,the actual prior Piece must match;unchanged
+policy also checks its actual prior anchor and complete profile bindings.
+
+The temporary logical upper bound covers F policy-index entries,at most E group entries,and F
+associations. It excludes earlier storage and allocator bytes. Work is
+O((M+E+F)log(M+E+F+2));there are no string keys. Temporary groups disappear after complete
+admission. No representative fields escape until every original occurrence has passed.
+
+`AdmittedWalkNotchFields` retains the actual `manifest()`, `identities()` and `limits()`.
+`groups()` follows original policy order in both directions;`group(role)` queries in
+O(log(F+2)) work. A group lends its actual original intent,authentic identity choice and complete
+owner. `first()` identifies the first original pair/A/B occurrence after full agreement;
+`piece()`, `anchor()` and `representation()` borrow its actual now-proven common fields.
+`occurrence_count()` counts every original occurrence in that group,not newly issued entities.
+No replacement definition,canonical Notch,geometry or profile value is manufactured.
+
+For copies200/201 of the same actual Piece100,two requests can deliberately share role2/id500
+when both requested anchors and all profiles are identical. The native result has one group with
+two occurrences;both physical-copy identities remain separately inspectable in the actual parents.
+With different Pieces,the same role refuses Piece disagreement. On one Piece,different parameters
+or any one of the six profile fields refuse their exact cause. Four repeated requests can instead
+form two deliberately shared groups. Choosing `SingleOccurrence` refuses those repeated uses.
+
+If retained700 has prior anchor1/4 but the request is1/3,`RetainUnchanged` refuses Anchor.
+`ReviseRetained` can accept the explicit requested-field proposal on the same Piece while lending
+the original unchanged700 as prior context. The same distinction applies to profile bindings.
+Trying to retain a Notch born on another Piece refuses Piece even with revision selected.
+Unmentioned supplied Notches remain untouched;absence never retires an entity or active role.
+
+A semantic Notch belongs to a pattern Piece;its physical uses are not limited to the two selected
+sewing copies. Exact field agreement therefore grants no all-copy suitability or correspondence
+certificate. Complete current Design/registry/history,private reserve/nonreuse,visible repair,
+correspondence/differential/ease,profile resolution and all-copy/authority evidence remain mandatory
+before canonical construction or atomic publication. Native policy agreement executes no edit.

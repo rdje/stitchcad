@@ -250,8 +250,9 @@ the unchanged original range while `SewingGraph::validate_current` returns its r
 cause. G3 must measure correspondence/differential/ease,validate stops and create the actual edit;
 G4 resolves profile representations. This stage reports no length and creates/publishes no notch.
 
-Native output contracts still need explicit semantic mark-sharing/coalescing and identity policy,
-especially when physical copies share a pattern Piece. Actual mark results and atomic execution
+[Native output contracts](drafting-walk-identities.md#explicit-exact-field-sharing-and-retained-revisions)
+now declare explicit semantic identity,field and coalescing policies,including physical copies
+sharing a pattern Piece. Actual mark results and atomic execution
 remain G3/bus/full `.5f.4` work. No query result or2N request count substitutes for those results.
 [Actual physical-copy/pattern association](drafting-walk-outputs.md) now supplies both real side
 copies and owners before those output policies;shared ownership alone coalesces no mark.

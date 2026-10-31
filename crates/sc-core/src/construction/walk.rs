@@ -1,6 +1,12 @@
 //! Deliberate balance-notch requests,distinct from a seam-differential read query.
 use crate::ontology::{EdgeAnchor, EntityId, NotchProfileBindings, SeamSideId};
 use core::fmt;
+mod sharing;
+pub use sharing::{
+    AdmittedWalkNotchFields, WalkNotchField, WalkNotchFieldError, WalkNotchFieldGroup,
+    WalkNotchFieldIntent, WalkNotchFieldLimits, WalkNotchFieldManifest, WalkNotchFieldPolicy,
+    WalkNotchFieldRefusal, WalkNotchSharingPolicy,
+};
 mod identities;
 pub use identities::{
     AdmittedWalkNotchIdentities, WalkNotchIdentityAction, WalkNotchIdentityError,
