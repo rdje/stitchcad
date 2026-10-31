@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — complete native walk declaration checkpoint
+## _(2026-10-31 UTC)_ — bind actual complete truing copy and Piece context
 
-0750 closes17 native walk nodes:copy/Piece context,typed role/history,complete attribution,explicit host identity,field/sharing/retained revision policy and all ten evidence requests. Original goals/proof links stay intact;actual effects remain separate. Source59fd89e9/core tree pinned in receipt.
-Eleven native suites48 pass;actual walk API/book44,Notch-role API13 and shared native-edit input book7 pass,64 total,no compiler warnings. Shared input chapter includes other edit families. This is a scoped native declaration component checkpoint,not full CI/platform/actual geometry or publication proof.
-Fmt/build/map/render pass0;runtime/tests/Cargo,seventeen prior Rust fences,whole0749 spans924 and older31219B notes base exact0. Proof target/history-proof-0750-walk-checkpoint/. No provider result,current Design/global reservation/history or all-copy suitability inferred from native declarations.
-Promotion: declined (existing native/execution boundary). Truing output metadata then explicit variant coverage next. Ordered Design/history/private reserve .5f.2,selectors/budgets .5f.3,actual geometry/replay .5f.4.geometry and broader typed-v1 integration remain owed. G1still6/18/G0 unapproved.
+0751 binds the original source-retained CutPlan to the actual whole PieceInventory under checkedI+3C then C/I/W quotas,before canonical validation and original A/B lookups. Temporary canonical proof is dropped;actual complete source/plan/inventory/policy and both side owners remain borrowed.
+Selected/counterpart Piece getters follow original adjusted side;shared authored/reflected copies retain actual owners/order without freezing a coupled counterpart. Missing other-side copies and unrelated unplanned Pieces refuse. Original quantitative fit provider,span/ease/stops and input scopes stay intact.
+Native5+5/API3/book1,selected lint/fmt/build/map/render pass0. Old input/kernel/fixture/tests/seven fences,whole0750 spans925 and older31219B notes base exact0. New chapter/SUMMARY preserve all old nonempty index rows. Proof target/history-proof-0751-truing-copy-context/.
+Promotion: declined (existing actual-copy association rule). Edge roles next;native manifest/reference/variant policy,actual fit/currentness/observer/all-copy/geometry/authority/atomic execution and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

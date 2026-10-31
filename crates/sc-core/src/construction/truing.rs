@@ -2,6 +2,11 @@
 use crate::ontology::{EntityId, SeamSideId};
 use core::fmt;
 use sc_units::Tolerance;
+mod copies;
+pub use copies::{
+    BoundTruingCopyInventory, TruingCopyInventoryError, TruingCopyInventoryLimits,
+    TruingCopyInventoryRefusal,
+};
 mod binding;
 pub use binding::{BoundConstrainedTruing, TruingBindingError, TruingBindingRefusal};
 

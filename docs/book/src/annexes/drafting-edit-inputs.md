@@ -329,7 +329,8 @@ fn bind_refit<'a>(edit:&'a ConstrainedSeamTruing,graph:&'a SewingGraph,plan:&'a 
 ```
 
 These helpers retain actual error owners in the caller;they do not copy a span/ease or invent a
-budget value. Native output-role/reference mappings and broader v1 variant coverage have
+budget value. [Actual complete copy/Piece association](drafting-truing-outputs.md) now binds both
+original sides and preserves shared-Piece coupling. Native output-role/reference mappings and broader v1 variant coverage have
 separate task owners. Endpoint-moving or copy-forking variants require explicit semantics before
 they can be accepted. Endpoint/stop locks specify permissions,not a unique fitted curve;
 deterministic curve/refit selection and its supported domains must be defined before accepting

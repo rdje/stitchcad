@@ -899,17 +899,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0749 all ten required evidence requests;[whole scope/proofs](../history/stitchcad-devnotes-part924.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.checkpoint`
   Status: `done`
-  Goal:native declarations only;actual effects/integration stay owned.
-  - [x] ISSUE:completed native walk declarations need a scoped family checkpoint.
-  - [x] ROOT CAUSE (walk checkpoint):source59fd89e9/core tree pinned in receipt;
-    eleven native suites and actual API/book filters inventoried;rc=0.
-  - [x] FIX:native17-node closure;prior goals/examples/scopes preserved.
-  - [x] ADDRESSED (walk checkpoint):cargo selected eleven suites48 pass;
-    --doc walk44/notch roles13/shared input book7 pass;rc=0;commands in receipt.
-  - [x] NO REGRESSION (walk checkpoint):fmt/book/map/render;runtime/Cargo,
-    seventeen Rust fences,924 spans/older notes exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing native/execution boundary).
-  Proof:target/history-proof-0750-walk-checkpoint/;Commit:STITCHCAD-G1-0750.
+  Goal:0750 native17-node checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part925.md).
 - ID: `G1-SLICE.5f.1.c.true.contracts`
   Status: `done`
   Goal:0688 contract recovery;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part858md).
@@ -917,9 +907,25 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0689 input association;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part859md).
 - ID: `G1-SLICE.5f.1.c.true.outputs`
-  Status: `pending`
+  Status: `in_progress`
   Goal:native refit output-role/reference/identity contract;preserved endpoints/stops,all-copy
   observer obligations and unexplained differential attribution. Actual fit stays G3/.5f.4.
+- ID: `G1-SLICE.5f.1.c.true.outputs.copies`
+  Status: `done`
+  Goal:complete actual truing copy/Piece binding.
+  - [x] ISSUE:truing input binds selected copy;output needs actual whole Pieces.
+  - [x] ROOT CAUSE (truing copies):source/CutPlan/Piece reviewed;
+    checkedI+3C then C/I/W precede canonical validation and A/B lookup;rc=0.
+  - [x] FIX:actual plan/inventory;A/B owners cached.
+  - [x] ADDRESSED (truing copies):cargo test --test truing_copy_inventory_contract
+    --test truing_input_contract:5+5 pass;rc=0;commands in receipt.
+  - [x] NO REGRESSION (truing copies):API3/book1,lint/fmt/build/map/render;
+    old kernels/fixture/tests/seven fences,925 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing actual-copy association rule).
+  Proof:target/history-proof-0751-truing-copy-context/;Commit:STITCHCAD-G1-0751.
+- ID: `G1-SLICE.5f.1.c.true.outputs.roles`
+  Status: `pending`
+  Goal:bounded edge roles on actual truing context.
 - ID: `G1-SLICE.5f.1.c.true.variants`
   Status: `pending`
   Goal:review v1 truing coverage against the envelope before family closure;constrained refit

@@ -1,5 +1,4 @@
 # Summary
-
 [Introduction](introduction.md)
 # Learning path
 
@@ -97,6 +96,7 @@
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
   - [Walk output and shared-mark contracts](annexes/drafting-walk-outputs.md)
   - [Walk semantic identity and retention](annexes/drafting-walk-identities.md)
+  - [Truing output and source contracts](annexes/drafting-truing-outputs.md)
   - [Mirror Piece-copy contracts](annexes/drafting-mirror-contracts.md)
   - [Mirror output attribution and contours](annexes/drafting-mirror-outputs.md)
   - [Mirror physical-copy contracts](annexes/drafting-mirror-copies.md)

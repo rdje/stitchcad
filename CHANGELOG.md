@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0750 — complete native walk declaration checkpoint
+## STITCHCAD-G1-0751 — bind actual complete truing copy and Piece context
 
-- Close17 native walk nodes with original scopes/goals/proof links preserved;source59fd89e9 pinned.
-- Eleven native suites48 and actual walk API/book44,Notch-role API13,shared input book7 pass,64 total.
-- Runtime/tests/Cargo and all seventeen prior Rust examples unchanged;no compiler warnings.
-- Fmt/book/map/render,whole0749 spans924 and older notes base exact0;no full CI or actual-effect claim.
-- Current Design/history/private reserve,geometry/provider/copy/semantic effects and atomic execution stay owed.
+- Revalidate source-retained CutPlan against actual whole Pieces under complete C/I/I+3C limits.
+- Borrow actual A/B and selected/counterpart owners;shared Piece does not imply a fixed counterpart.
+- Missing counterparts,canonical quantity mismatches and unrelated unplanned Pieces refuse whole context.
+- Native5+5/API3/book1,lint/fmt/build/map/render pass0;old kernels/input tests/fixture/fences and925 exact.
+- Actual fit/currentness/reference repair/all-copy effects/geometry/authority and atomic execution stay owed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -6,6 +6,9 @@
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-edit-inputs.md")]
 mod editing_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-truing-outputs.md")]
+mod truing_output_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-walk-outputs.md")]
 mod walk_output_examples {}
 #[cfg(doctest)]
@@ -210,6 +213,7 @@ pub use walk::{
 };
 mod truing;
 pub use truing::{
-    BoundConstrainedTruing, ConstrainedSeamTruing, TruingBindingError, TruingBindingRefusal,
-    TruingFitProvider, TruingInputError, TruingInputRole,
+    BoundConstrainedTruing, BoundTruingCopyInventory, ConstrainedSeamTruing, TruingBindingError,
+    TruingBindingRefusal, TruingCopyInventoryError, TruingCopyInventoryLimits,
+    TruingCopyInventoryRefusal, TruingFitProvider, TruingInputError, TruingInputRole,
 };
