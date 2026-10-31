@@ -854,7 +854,7 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0686 D370/D371 fixed;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part856md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs`
-  Status: `in_progress`
+  Status: `done`
   Goal:native output-role/manifest and explicit semantic mark-sharing/coalescing/identity policy,
   including physical copies sharing one pattern Piece. No2N-new-id assumption. Actual marks,
   correspondence/differential/ease/profile truth and atomic edits stay G3/G4/bus/.5f.4.geometry.
@@ -896,20 +896,20 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0748 explicit field/sharing proposals;[whole scope/proofs](../history/stitchcad-devnotes-part923.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.requirements`
   Status: `done`
-  Goal:all ten explicit required evidence-source scopes on actual native walk fields.
-  - [x] ISSUE:field agreement supplies no provider/currentness/effect/authority verdict.
-  - [x] ROOT CAUSE (walk evidence):actual walk/copy/Notch/reserve contracts reviewed;
-    ten distinct original scopes stay mandatory with shared/zero source ids;rc=0.
-  - [x] FIX:complete explicit context/effect policy;actual complete field/source parents.
-  - [x] ADDRESSED (walk evidence):cargo test --test walk_notch_evidence_contract
-    --test walk_notch_field_contract:3+7 pass;rc=0;full commands in receipt.
-  - [x] NO REGRESSION (walk evidence):API4/book5,lint/fmt/build/map/render;
-    old kernels/tests/helpers/four fences,923 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing requested-evidence boundary).
-  Proof:target/history-proof-0749-walk-evidence/;Commit:STITCHCAD-G1-0749.
+  Goal:0749 all ten required evidence requests;[whole scope/proofs](../history/stitchcad-devnotes-part924.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.checkpoint`
-  Status: `pending`
-  Goal:close only native walk declarations after focused family checks;actual effects stay owned.
+  Status: `done`
+  Goal:native declarations only;actual effects/integration stay owned.
+  - [x] ISSUE:completed native walk declarations need a scoped family checkpoint.
+  - [x] ROOT CAUSE (walk checkpoint):source59fd89e9/core tree pinned in receipt;
+    eleven native suites and actual API/book filters inventoried;rc=0.
+  - [x] FIX:native17-node closure;prior goals/examples/scopes preserved.
+  - [x] ADDRESSED (walk checkpoint):cargo selected eleven suites48 pass;
+    --doc walk44/notch roles13/shared input book7 pass;rc=0;commands in receipt.
+  - [x] NO REGRESSION (walk checkpoint):fmt/book/map/render;runtime/Cargo,
+    seventeen Rust fences,924 spans/older notes exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing native/execution boundary).
+  Proof:target/history-proof-0750-walk-checkpoint/;Commit:STITCHCAD-G1-0750.
 - ID: `G1-SLICE.5f.1.c.true.contracts`
   Status: `done`
   Goal:0688 contract recovery;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part858md).

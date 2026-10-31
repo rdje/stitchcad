@@ -326,3 +326,27 @@ other sewing neighbours and consumers of revised prior marks;the two selected si
 Actual source/currentness checks,global private-reserve/nonreuse,Notch construction/revision,
 profile and geometry providers,visible repair,atomic execution and broader integration remain
 separately owned. This native request association is not an execution-readiness or release token.
+
+## Native walk declaration checkpoint
+
+The native declaration component passes48 tests across11 walk/typed-Notch-role suites and64
+actual API/book tests:44 walk API/output-book checks,13 typed Notch-role checks,and7 shared
+native-edit input examples. That shared input chapter also covers other editing families.
+The exact source commit and core tree are pinned in
+`target/history-proof-0750-walk-checkpoint/receipt.json`;these are focused component results.
+
+This closes native copy/Piece association,typed role metadata/history,complete original occurrence
+attribution,explicit semantic identity choices,exact-field sharing/retained revision policy,and
+mandatory evidence-source requests. All17 walk task nodes are done at this native boundary.
+The [original walk inputs](drafting-edit-inputs.md#native-deliberate-walk-edit-requests) and all17
+prior Rust examples remain unchanged. The checkpoint adds no runtime behavior or new permission.
+
+Actual ordered current Design/registry/history/private reservation integration remains `.5f.2`;
+selectors/parameter error budgets remain `.5f.3`;actual geometry and copy/semantic replay remain
+`.5f.4.geometry`,G2/G3/G4. Native identity plans are trusted-host proposals,not client requests
+that name new ids. Canonical Notch construction/revision,complete provider acceptance,all-copy
+suitability,visible repair,authoring authority and atomic bus/undo publication are still required.
+
+This is not full CI,platform verification or a physical/geometry certificate. Broader typed-v1
+integration remains separately owned. A complete native declaration does not authorize an edit,
+prove global identity freshness or discharge any of the ten mandatory evidence scopes.

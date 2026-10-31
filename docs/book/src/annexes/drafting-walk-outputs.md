@@ -292,3 +292,6 @@ mandatory. No coordinate coincidence,matching tag or complete occurrence count s
 proofs. The original paired requests remain intact until a supported complete atomic edit is proven.
 
 [Semantic identity and retention](drafting-walk-identities.md) continue the complete attribution context.
+
+The [native walk declaration checkpoint](drafting-walk-identities.md#native-walk-declaration-checkpoint)
+records the completed metadata boundary and the separate actual execution obligations.

@@ -3,8 +3,8 @@
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
 > geometry. Primitive/slash-spread/mirror-copy inputs,amount proofs and semantic binding are available
-> here and in the native-edit companion. Offset/slash/mirror native output requirements are available;
-> walk/truing/join outputs and geometry execution remain owned. No geometry certificate.
+> here and in the native-edit companion. Offset/slash/mirror/walk native output requirements are available;
+> truing/join outputs and geometry execution remain owned. No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
 from scalar lets/assertions. A formula can read a prior point or edge through a selector;only a
@@ -64,7 +64,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
 | Add notch | Piece id,EdgeAnchor,NotchProfileBindings | Fresh semantic notch id and retained source anchor | AddNotch request exists;geometry pending |
 | Place grainline | Named canonical grainline with directed arrow/alignment/print intent | Existing semantic target;G2 derived mark | Target/source binding only;geometry pending |
-| Walk seam | Named correspondence,explicit A/B anchor/profile pairs | Differential report plus deliberate mark edits | Native evidence requests;effects pending |
+| Walk seam | Named correspondence,explicit A/B anchor/profile pairs | Differential report plus deliberate mark edits | Native declaration checkpoint;effects pending |
 | True seam | Actual correspondence,ease,adjusted side/Piece and sourced fit budget | Attributed edge adjustment and remaining differential | Constrained input binding;outputs/coverage pending |
 | Mirror | Named Piece,explicit point/range axis and copy intent | Fresh copy identities and source mapping | Native manifest/copy/semantic requests;geometry pending |
 | Join pieces | Piece/seam/copy correspondence and explicit join intent | Output Piece/topology with semantic lineage | Distinct-Piece source binding;outputs/coverage pending |

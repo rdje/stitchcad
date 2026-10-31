@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0749;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.walk.outputs.checkpoint in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32 nodes complete;walk copy/roles/manifest/field/sharing/evidence requests implemented.
-- Walk evidence requires ten distinct current/history/canonical/repair/correspondence/differential/
-  ease/profile/all-copy/authority scopes. Shared/zero ids skip none;provider acceptance stays owed.
-  Native10/API4/identity book5/lint/fmt/build/map/render pass;proof target/history-proof-0749-walk-evidence/.
+- Latest unit:STITCHCAD-G1-0750;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.true.outputs in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32/walk17 nodes complete;truing output metadata next,then explicit variant coverage.
+- Walk native checkpoint:eleven suites48 pass;walk API/book44,Notch-role API13,shared input book7
+  pass. Source59fd89e9/core tree pinned;runtime/tests/Cargo and seventeen original Rust fences unchanged.
+  Fmt/build/map/render pass;proof target/history-proof-0750-walk-checkpoint/;not full CI/actual effects.
 - Mirror known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.

@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0749 — require complete native walk evidence requests
+## STITCHCAD-G1-0750 — complete native walk declaration checkpoint
 
-- All ten explicit current/history/canonical/repair/sewing/profile/copy/authority scopes stay mandatory.
-- Actual complete field/identity/source parents and original provider-request fields remain borrowed.
-- Shared/zero provider ids or fewer semantic groups remove no obligation;no evidence verdict is inferred.
-- Native3+7/API4/book5,lint/fmt/build/map/render pass0;old kernels/tests/helpers/fences and923 spans exact.
-- Actual current Design,reservation,canonical effects,geometry,physical suitability and publication stay owed.
+- Close17 native walk nodes with original scopes/goals/proof links preserved;source59fd89e9 pinned.
+- Eleven native suites48 and actual walk API/book44,Notch-role API13,shared input book7 pass,64 total.
+- Runtime/tests/Cargo and all seventeen prior Rust examples unchanged;no compiler warnings.
+- Fmt/book/map/render,whole0749 spans924 and older notes base exact0;no full CI or actual-effect claim.
+- Current Design/history/private reserve,geometry/provider/copy/semantic effects and atomic execution stay owed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
