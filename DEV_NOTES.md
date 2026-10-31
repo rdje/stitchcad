@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit declared offset role catalogues and active membership
+## _(2026-10-31 UTC)_ — preserve issued roles through structural membership transition intent
 
-0697 adds owned operation/local key-tag definitions and a separate active-id list. Complete N/A/key-byte/2(N+A) admission precedes indexes,then original tag/key and active duplicate/undefined checks. Both orders and all original fields survive;no sorting,renaming,deduplication or implicit role is introduced.
-Private admitted/active views retain actual raw owner,policy,membership tag and definition fields. Inactive definitions remain addressable;empty initial and wholly inactive catalogues are valid metadata states. Keys are local declarations,not global recipe bindings,issuance evidence or geometric classifiers.
-Native3/compiler guards3/actual output book5/selected clippy/fmt/book/rendered/diff/history866 three exact Git spans pass. Seven resource/content refusals preserve all original input/policy;workspace counts are entry populations,not total memory or earlier String/Vec allocation guarantees.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (0696 identity policy already promoted). Whole0696 retained866. D372 P2 persists;canonical transition/history and readonly result-presence binding remain owned. Actual G2 matching/current-root/bus proof separate. PNT continues.
+0698 admits combined before/after definition,active and key-byte populations before owner/content checks. Every prior tag/key must remain,including inactive definitions. Missing definitions and retargeted keys refuse at actual before indices;neither catalogue changes and no new work index is allocated.
+Private transition reports retain actual admitted sources/policy and expose original introduced,activated and deactivated fields in their own source orders. Copying an old whole catalogue forgets later-issued roles and refuses;keeping current definitions with restored membership passes structural intent checks.
+Transition3/catalogue3/compiler guards3/actual output book6/selected clippy/fmt/book/rendered/diff/history867 three exact Git spans pass. Complete quota precedence,owner/drop/retarget causes and actual-field order/pointers verified. No issuance,actual undo authority,geometric matching or publication proof.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (0696 identity policy already promoted). Whole0697 retained867. D372 P2 persists;readonly manifest-presence binding is next. Actual G2 continuity/current root/history/bus integration remain separate;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

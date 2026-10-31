@@ -223,8 +223,8 @@ active subset. This follows the existing
 [private reserve and issued-revision separation](../spec/command-execution.md#private-identity-reserve-and-actual-notch-preview).
 Actual history authority and publication are not supplied by a metadata proposal.
 
-Native catalogue admission is implemented below;issuance-preserving transitions and readonly
-manifest binding remain pending. Local machine
+Native catalogue admission and structural transitions are implemented below;readonly
+manifest-presence binding remains pending. Local machine
 keys identify declared roles;they are not geometric matching rules. Unknown/ambiguous geometric roles
 must not acquire a false continuity certificate from matching names or source intervals. Actual
 G2/G3 evidence,current operation/Design ownership,storage and bus integration remain separately owned.
@@ -271,5 +271,38 @@ valid metadata states;neither creates an implicit `main` role or proof that an o
 
 This validates current supplied metadata only. It cannot prove the list includes all previously
 issued roles,an actual canonical operation owns it,an instance contains a role,or any geometry
-matches its key. Native transition and readonly manifest-presence binding are the next owners;
+matches its key. Native transition checks are described below;readonly manifest-presence binding is next;
 current Design/namespace,actual history authority,G2/G3 matching and publication remain separate.
+
+## Native issuance-preserving transition intent
+
+`AdmittedOffsetRoleCatalog::admit_transition` compares two actual admitted catalogues under an
+explicit `OffsetRoleTransitionLimits` policy. Complete combined definitions,active occurrences
+and key bytes are checked before operation identity or role content. It allocates no new work
+index and changes neither source. Earlier catalogue allocation and whole execution remain separate.
+
+```rust
+use sc_core::construction::*;
+fn check_role_edit<'a>(before:&'a AdmittedOffsetRoleCatalog<'a>,after:&'a AdmittedOffsetRoleCatalog<'a>,
+    limits:OffsetRoleTransitionLimits)->Result<AdmittedOffsetRoleTransition<'a>,OffsetRoleTransitionError<'a>> {
+    before.admit_transition(after,limits)
+}
+```
+
+Both catalogues must name the same operation. Every original before-definition,including inactive
+ones,must remain in the after catalogue with the same explicit tag and exact local key. A missing
+old definition or changed key refuses at its actual original before index. After admission has
+already established unique keys/tags,so an old key cannot silently move to another tag. Complete
+resource failures precede these content failures;errors retain both original admitted owners,
+selected policy and typed cause. No accepted prefix is returned.
+
+The private transition view exposes actual introduced after-definition fields with original indices.
+`activated()` and `deactivated()` return actual membership views in their respective original list
+orders. Active membership may explicitly change while all issued definitions remain reserved.
+These iterators describe a proposal;they mint no identity and authorize no mutation or undo.
+
+For a membership restore,copying an older entire catalogue can forget definitions issued after
+that snapshot and is refused. A proposal retaining the complete current issued definitions while
+restoring the earlier active subset passes these structural checks. Applying an actual recorded
+history action still requires the bus's real history/authority evidence. Equal key/tag metadata
+proves no geometric role continuity,current Design ownership or source-to-derived point map.

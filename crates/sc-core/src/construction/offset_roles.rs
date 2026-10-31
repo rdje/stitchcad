@@ -5,6 +5,11 @@ use crate::{
 };
 use core::fmt;
 use std::collections::BTreeMap;
+mod transition;
+pub use transition::{
+    AdmittedOffsetRoleTransition, OffsetRoleTransitionError, OffsetRoleTransitionLimits,
+    OffsetRoleTransitionRefusal,
+};
 
 /// One explicit local machine key/tag declaration,not a curve classifier or allocated identity.
 #[derive(Clone, Debug, PartialEq, Eq)]

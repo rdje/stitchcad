@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0697 — admit declared offset role catalogues and active membership
+## STITCHCAD-G1-0698 — preserve issued roles through structural membership transition intent
 
-- Explicit role keys/tags and active ids retain both original orders with complete resource admission.
-- Unique keys/tags and defined unique active membership precede private authentic field views.
-- Native3/rustdoc8/selected lint/fmt/book/rendered/diff/history866 exact spans pass;D372 open.
-- Issuance history,transitions,result presence and actual G2/current-root/authority proof remain owned.
+- Combined resource admission precedes same-owner and all-prior-definition preservation checks.
+- Actual added/activated/deactivated fields remain readonly;old snapshots cannot forget later issuance.
+- Native6/rustdoc9/selected lint/fmt/book/rendered/diff/history867 exact spans pass;D372 open.
+- Actual history authority,currentness,geometric continuity and publication remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -49,8 +49,10 @@ pub use offset_manifest::{
     OffsetDeclarationError, OffsetDeclarationLimits, OffsetDeclarationRefusal,
 };
 pub use offset_roles::{
-    ActiveOffsetRole, AdmittedOffsetRoleCatalog, OffsetRoleCatalog, OffsetRoleCatalogError,
-    OffsetRoleCatalogLimits, OffsetRoleCatalogRefusal, OffsetRoleDefinition,
+    ActiveOffsetRole, AdmittedOffsetRoleCatalog, AdmittedOffsetRoleTransition, OffsetRoleCatalog,
+    OffsetRoleCatalogError, OffsetRoleCatalogLimits, OffsetRoleCatalogRefusal,
+    OffsetRoleDefinition, OffsetRoleTransitionError, OffsetRoleTransitionLimits,
+    OffsetRoleTransitionRefusal,
 };
 mod point;
 pub use point::{
