@@ -21,8 +21,8 @@ intent;an accepted output manifest and actual geometry remain separate stages.
 Neither policy supplies a default connector count,generated edge tag,intersection,loop choice or
 geometric repair. A trim policy name cannot select an arbitrary loop. Unsupported or ambiguous
 region/topology must refuse through the actual G2/G3 execution path;policy construction is not that
-validation. The following manifest task owns explicit output roles,source/transform provenance and
-trim-selection obligations before native family closure.
+validation. The following native contracts retain explicit output roles,source/transform provenance
+and trim-selection evidence obligations;actual geometry remains separate.
 
 `SlashSpreadFullnessIntent::{Added,Removed,Unchanged}` records the intended effect separately from
 boundary treatment. It stores no independently authored intake,Length/Area amount or solved fullness.
@@ -92,8 +92,8 @@ output manifest. Changing membership still requires the existing issuance-preser
 checks and actual authoring/history authority.
 
 A numeric operation match does not prove its actual ordered recipe kind,current Design membership,
-global namespace,issuance or geometric continuity. Native source/transform/trim-selection manifest
-admission remains the next component;actual G2/G3 contours,effects,mappings and bus publication
+global namespace,issuance or geometric continuity. Native source/transform/trim-selection admission
+is described below;actual G2/G3 contours,effects,mappings and bus publication
 retain their separate owners. No catalogue alias or binding creates a Piece or retires an edge.
 
 ## Native edge candidate provenance and admission
@@ -160,7 +160,7 @@ Actual role matching remains G2/G3 work and must not infer continuity from equal
 This component admits edge-role/provenance declarations only. It does not establish a complete
 boundary/hole loop,trim intersection choice,source ownership/frame,current reference coverage or
 retirement,metadata/copy/semantic reconciliation,measured fullness or publication authority. Those
-native reconciliation contracts remain required before family closure. Actual transformed curves,
+native reconciliation requirements are described below and in the Piece companion. Actual curves,
 closure,reference maps and approximation/parameter budgets still require G2/G3 and `.5f.3`/`.5f.4.geometry`.
 No ledger edit,mapped Param or accepted geometric prefix is supplied by this admission.
 
@@ -305,7 +305,7 @@ Private match views retain their actual query and original candidate fields. Rev
 reverses occurrence order without changing tags or bank/endpoint declarations. The maximum2N+1
 slots are a conservative bound,not an observed count or allocation footprint. Actual source maps,
 current resolution,trim coverage/retirement/visible repair,semantic ownership and atomic publication
-still need their separately owned disposition/G2/G3/bus contracts before use or family closure.
+still need actual G2/G3/Design/bus evidence before use;native disposition requirements follow below.
 
 ## Global topology,registration repair and semantic ownership
 
@@ -474,7 +474,7 @@ not evidence that the proposed treatment has happened or that publication is rea
 
 Whole held-object/source-consumer coverage beyond registrations,current Design/Piece/garment
 ownership,proved maps,visible repair reporting,semantic replacement and actual command authority
-remain explicit requirements for the next native consumer contract and later G2/G3/Design/bus work.
+remain explicit requirements in the consumer contract below and later G2/G3/Design/bus work.
 A registered-source plan alone cannot authorize global retirement or hide an unregistered holder.
 
 ## Whole held-consumer evidence requests
@@ -521,7 +521,7 @@ Neither case authorizes retirement,selects an output parameter or withdraws a he
 This completes the native consumer **requirement declaration**,with focused checks. Actual whole
 consumer evidence,current semantic ownership,maps,repair visibility and command authority remain
 G2/G3/Design/bus work. Trim/whole interval-coverage requests follow below;Piece metadata/fold/copy/effect
-and explicit zero/no-new-edge outcomes remain before native slash family closure. Full verification
+and explicit zero/no-new-edge outcome requirements are in the Piece companion. Full verification
 and later geometry-backed integration have not been performed by these declaration slices.
 
 ## Boundary selection and whole interval-coverage requests
@@ -569,7 +569,7 @@ keep their own scope;actual arrangement/discovery/evidence work requires its own
 This closes the native source-reference **disposition requirement declaration** with focused
 checks. Actual current source/consumer coverage,maps,trim selection,semantic repair,authority and
 atomic publication remain separately owned G2/G3/Design/bus work. Piece metadata/fold/copy/effect
-and explicit zero/no-new-edge outcomes still precede native slash family closure;full verification
-and later geometry-backed integration remain deferred.
+and outcome requirements are in the companion;full verification and later geometry-backed integration
+remain deferred.
 
 [Piece metadata,fold and copy reconciliation](drafting-slash-piece-contracts.md) continues this native declaration path.

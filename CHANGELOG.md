@@ -11,12 +11,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0716 — require explicit source-preserving or reconciled slash outcomes
 
-- Require N0,Unchanged and exact source contour order/directions for explicit source preservation.
-- Keep reconciled declarations available with either population;infer no physical/effect/readiness result.
-- Native8/rustdoc7/lint/fmt/book/render/diff/history885 pass;old N0 test bodies/prior examples exact.
-- Native outcome declaration closes;family checkpoint and actual G2/Design/history/authority remain owned.
+## STITCHCAD-G1-0717 — close only the native slash declaration checkpoint
+
+- Map complete native slash requirements to actual APIs/book;15 slash suites51 and API/book53 pass.
+- Keep runtime/tests/Cargo/examples exact;move whole26-node branch into a bounded completed sibling.
+- Book/render/map/tree census/history886/branch proof pass;all goals/paths/links and old notes retained.
+- Next mirror outputs;actual geometry/current Design/history/semantic effects/authority/full CI remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

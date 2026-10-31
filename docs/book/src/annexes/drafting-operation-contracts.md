@@ -3,7 +3,8 @@
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
 > geometry. Primitive/slash-spread/mirror-copy inputs,amount proofs and semantic binding are available
-> here and in the native-edit companion;remaining schemas and geometry execution are pending. No geometry certificate.
+> here and in the native-edit companion. Offset/slash native output requirements are available;
+mirror/walk/truing/join outputs and geometry execution remain owned. No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
 from scalar lets/assertions. A formula can read a prior point or edge through a selector;only a
@@ -59,7 +60,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Draw arc | Center PointRef,radius Length,start/sweep Angle formulas | One edge role;no inferred point outputs | Center-based declaration/proofs;geometry pending |
 | Draw Bézier | Explicit quadratic/cubic named PointRefs | One edge role;original controls retained | Typed controls/dependencies;geometry pending |
 | Offset edge | Directed range,allowance identity and explicit side;canonical corner | G2 fragment lineage;no hidden width/default join | Candidate/role contracts and normal-map requirements;actual mapping/geometry pending |
-| Slash/spread | Piece,directed cut,moving bank and explicit pivot/axis/amount | New/retired topology and attributable opening | Output/reference/metadata/copy/effect/outcome requirements;native closure/geometry pending |
+| Slash/spread | Piece,directed cut,moving bank and explicit pivot/axis/amount | New/retired topology and attributable opening | Native declaration checkpoint;actual geometry/history/integration pending |
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
 | Add notch | Piece id,EdgeAnchor,NotchProfileBindings | Fresh semantic notch id and retained source anchor | AddNotch request exists;geometry pending |
 | Place grainline | Named canonical grainline with directed arrow/alignment/print intent | Existing semantic target;G2 derived mark | Target/source binding only;geometry pending |

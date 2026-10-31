@@ -4,7 +4,8 @@ This companion continues the [output and reference-disposition contracts](drafti
 Native declarations retain original owners and request evidence. They do not create a geometrically
 valid replacement Piece,change canonical metadata or authorize publication. The nonempty changed
 contour/copy/effect paths,explicit no-new-edge admission and source-preserving/reconciled outcome
-requirements are available. Native family closure remains separately owned. Actual geometry/current Design/semantic repair stays G2/G3/Design/bus.
+requirements are available. The native contract checkpoint is below;actual geometry/current Design/
+semantic repair stays G2/G3/Design/bus.
 
 ## Canonical source-metadata preservation
 
@@ -73,7 +74,7 @@ The scan uses the already admitted complete N candidates and M contour occurrenc
 nothing. Earlier source/contour bounds retain their scope;this grants no whole-operation CPU/memory
 or currentness guarantee. Actual fold geometry,copy inventory/copy effects,current semantic ownership,
 material registry,identity history and atomic publication remain separate obligations. Physical-copy
-binding follows below;effect derivation and explicit zero/no-new-edge outcomes remain before native closure.
+binding,effect and zero/no-new-edge outcome requirements follow below.
 
 ## Preserve the actual physical-copy inventory
 
@@ -123,7 +124,7 @@ edits no sewing graph,copy definition,Piece or ledger. The explicit all-copy-eff
 remains required for every actual copy and semantic/sewing consumer. Pattern edits affect their
 shared Piece;they cannot silently select one physical copy or transfer its neighbours. Actual
 current ownership,all-copy effects,fold geometry and publication authority remain G2/G3/Design/bus
-proof. Attributed fullness/effect requests follow below;explicit zero/no-new-edge outcomes remain before native closure.
+proof. Attributed fullness/effect and explicit zero/no-new-edge outcome requests follow below.
 
 ## Attributed fullness and canonical intake requirements
 
@@ -166,7 +167,7 @@ opening fields after requesting effect evidence. Its Piece,copy inventory and le
 This completes only the native effect **requirement declaration**. Actual supported domain/effect,
 canonical intake conservation,all-copy semantic/sewing effects,current ownership and atomic publication
 keep their G2/G3/Design/bus owners. Explicit no-new-edge admission follows;source-preserving/reconciled
-outcome choice remains before native family closure.
+outcome choice follows below.
 
 ## Explicit no-new-edge admission
 
@@ -273,5 +274,32 @@ original caller choice;`new_edge_count()` derives the actual complete original c
 The comparison allocates nothing and uses already admitted whole N/R/M populations. It grants no
 whole-operation execution budget or currentness proof. Actual supported domain,zero/fullness effect,
 canonical intake conservation,copy/sewing effects,current identity history/ownership,visible repair,
-authority and atomic publication remain G2/G3/Design/bus proof. Native family closure is separately
-owned;full verification and geometry-backed integration have not passed in these declaration slices.
+authority and atomic publication remain G2/G3/Design/bus proof. The native checkpoint below has
+component scope;full verification and geometry-backed integration have not passed in these slices.
+
+## Native slash contract checkpoint
+
+The native slash/spread declaration inventory covers the following boundaries. These are usable
+structural declarations and required-evidence associations;they do not execute a geometry engine.
+
+| Native contract | Available behavior | Remaining proof |
+| --- | --- | --- |
+| Spatial inputs/opening | Actual Piece/cut/bank,pivot or direction and Angle/Length documents;normalization/root-kind checks | Ordered current frame/registry and actual region/motion |
+| Shared roles/edge manifest | Persistent definitions/active ids,actual operation association,source/bridge provenance;ordinary nonempty or explicit N0 admission | Issuance/current history,geometric role continuity |
+| Contours/source eligibility | Exact retained/new occurrences,source membership,all declared alternatives and visible gaps | Actual closure/trim,maps and current semantic ownership |
+| Source/registered consumers | Whole source-identity intent and actual registered-source requests;original owner/anchor/choice preserved | Whole held-consumer census,actual correspondence and repair |
+| Consumer/boundary evidence | Five mandatory consumer scopes;domain/interval and bridge/trim selection requests | Accepted provider evidence,unique supported geometry,authority |
+| Piece/fold/copies | Borrowed canonical fields/print view,explicit fold attribution,every actual target copy and population association | Physical fold/copy geometry,current Design/namespace and sewing effects |
+| Fullness/outcome | Original-input/all-copy derivation requests;explicit source-preserving or reconciled declarations | Achieved effect/canonical intake,actual zero effect and atomic publication |
+
+The scoped component checkpoint passed51 native contracts across15 slash suites and53 actual slash
+API/book doctests. Runtime Rust/tests/Cargo bytes are unchanged in this checkpoint;the checked source
+is the0716 implementation. This is not workspace/full-CI,platform parity or a physical verdict.
+
+The declaration checkpoint closes only this native family's schema/association scope. Actual
+ordered declarations,containing frames,current registries and issuance/history binding remain
+G1-SLICE.5f.2;real selector/current-geometry and actual-length error budgets remain .5f.3;geometry-backed
+replay of trim/fullness/fold/copy/semantic effects remains .5f.4.geometry after the real G2/G3 engines.
+Actual command authority,repair coordination and atomic publication retain their Design/bus owners.
+Storage/app/platform/full-project checks keep their separate owners. This component checkpoint
+grants neither whole G1/G0 closure nor release approval.
