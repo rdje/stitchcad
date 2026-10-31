@@ -9,7 +9,23 @@ pub fn with_ids(
     existing: bool,
     run: impl FnOnce(BoundMirrorPieceCopyIdentities<'_>),
 ) {
-    if quantity == 1 && mirroring == Mirroring::Single {
+    with_cut(
+        quantity,
+        mirroring,
+        MirrorPieceFoldIntent::NoFold,
+        existing,
+        run,
+    );
+}
+
+pub fn with_cut(
+    quantity: u32,
+    mirroring: Mirroring,
+    fold: MirrorPieceFoldIntent,
+    existing: bool,
+    run: impl FnOnce(BoundMirrorPieceCopyIdentities<'_>),
+) {
+    if quantity == 1 && mirroring == Mirroring::Single && fold == MirrorPieceFoldIntent::NoFold {
         return context::with_context(sources::axis(), vec![], |contours, points| {
             inventory(contours, points, existing, run)
         });
@@ -20,12 +36,7 @@ pub fn with_ids(
     let source = input
         .bind_piece(&piece, &source_limits)
         .expect("actual source");
-    let cut_policy = MirrorPieceCutPolicy::new(
-        quantity,
-        mirroring,
-        MirrorPieceFoldIntent::NoFold,
-        CuttingSide::Face,
-    );
+    let cut_policy = MirrorPieceCutPolicy::new(quantity, mirroring, fold, CuttingSide::Face);
     let cut = source
         .bind_cut_policy(&cut_policy)
         .expect("explicit desired result cut");

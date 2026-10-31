@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — declare complete mirror result-copy intents
+## _(2026-10-31 UTC)_ — bind actual mirror candidate Piece inventory
 
-0735 admits whole N/C/2N before operation/intent scans. Every actual old result copy requires explicit Retain/Retire;Issue retains raw definitions with explicit result Piece/id/orientation.
-Source/other copies cannot transfer or retire;known ids and retirement cannot permit reuse. Authentic fields/order retained;active counts obey actual result cut policy,independent of original source copies.
-Native6+4/API4/copy book3,selected lint/fmt/build/map/render pass0;old kernels unchanged,whole0734 including window27 dependency spans908 exact0. Source/plan/input definitions remain unchanged;no immutable copy minted.
-Promotion: declined (existing identity/cut/effect boundary). Native result plan closes;complete companion association next. Actual currentness/global reservation/issuance/retirement/consumer/physical/geometry effects and full integration remain owed. G1still6/18/G0 unapproved.
+0736 bounds whole I then four-form H/R/B before original source equality and canonical result cut/metadata/contour fields. Authentic source/result/inventory/policy borrows retain complete fields/order.
+Actual separate companions resolve by explicit id;inventory birth supplies reciprocity/opposite hands/equal quantity. No ordinal or physical-copy pairing inference;other Piece-content authorization remains execution work.
+Native4+6/API3/copy book4,selected lint/fmt/build/map/render pass0;parent kernels and three old book examples unchanged. Whole0735 task/lesson/changelog909 Git spans exact0;older notes base31219B retained.
+Promotion: declined (existing Piece/cut/effect boundary). Actual candidate CutPlan association next;currentness/global issuance/geometry/whole consumers and publication remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

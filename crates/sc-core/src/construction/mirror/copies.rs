@@ -13,6 +13,11 @@ pub use entries::{
     MirrorPieceResultCopyIntent, MirrorPieceResultCopyLimits, MirrorPieceResultCopyManifest,
     MirrorPieceResultCopyRefusal, MirrorPieceResultCopySource,
 };
+mod inventory;
+pub use inventory::{
+    BoundMirrorPieceCopyInventory, MirrorPieceCopyInventoryError, MirrorPieceCopyInventoryField,
+    MirrorPieceCopyInventoryLimits, MirrorPieceCopyInventoryRefusal,
+};
 
 fn original<'a>(context: &RequiredMirrorPieceCorrespondence<'a>) -> &'a PieceDefinition {
     context

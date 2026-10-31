@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0735;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs.copies.companion in docs/tasks/G1-SLICE-mirror.md.
+- Latest unit:STITCHCAD-G1-0736;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.mirror.outputs.copies.companion.plan in docs/tasks/G1-SLICE-mirror.md.
   Native identity/point declarations complete;native manifest requests complete;native result-copy plans complete;companion association next.
-- Result-copy intents admit whole N/C/2N;every old result requires explicit Retain/Retire. Source/
-  other copies cannot transfer/retire. Issue holds raw definitions,not issued CutCopy;ids never reused.
-  Native10/API4/copy book3/lint/fmt/build/map/render pass;proof target/history-proof-0735-mirror-result-copies/.
+- Candidate PieceInventory preserves entire source and exact desired result under whole I/four-form
+  H/R/B. Actual reciprocal companion lookup uses identity;no ordinal/physical pair inference.
+  Native10/API3/copy book4/lint/fmt/build/map/render pass;proof target/history-proof-0736-mirror-copy-inventory/.
 - Known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.

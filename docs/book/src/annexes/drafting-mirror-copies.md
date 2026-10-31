@@ -180,5 +180,59 @@ Counters summarize proposed retention,retirement,issuance and resulting orientat
 an applied effect. Original Piece,plan,copy definitions,source ids and held references remain
 unchanged on success and refusal. Actual global reservation/nonreuse,current Design/ownership,
 companion truth,all affected consumers,physical/geometry/semantic effects and publication remain
-mandatory execution work. Native result-copy intents are complete;companion association follows.
+mandatory execution work. Native result-copy intents are complete;actual candidate inventory association follows below.
+
+## Actual candidate Piece inventory
+
+`AdmittedMirrorPieceResultCopies::bind_piece_inventory` associates the native proposal with an
+actual immutable `PieceInventory`. Its original source member must equal the complete original
+source definition. Its result member must match every canonical cut,material,layer,label and
+contour field selected by the native declaration. This also checks construction repetitions,
+hole groups,directed traversal and the cut-derived fold edge;no field is silently copied later.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceCopyInventoryLimits::new(I,H,R,B)` | Whole inventory and complete inspected four-form allowances |
+| `BoundMirrorPieceCopyInventory` | Actual candidate inventory,source/result members and native proposal |
+| `MirrorPieceCopyInventoryField` | First mismatching canonical result field |
+| `MirrorPieceCopyInventoryError`, `MirrorPieceCopyInventoryRefusal` | Whole original inputs,policy and refusal |
+
+```rust
+use sc_core::{construction::*,ontology::PieceInventory};
+fn bind<'a>(copies:&'a AdmittedMirrorPieceResultCopies<'a>,inventory:&'a PieceInventory,
+    limits:&'a MirrorPieceCopyInventoryLimits)
+    ->Result<BoundMirrorPieceCopyInventory<'a>,MirrorPieceCopyInventoryError<'a>> {
+    copies.bind_piece_inventory(inventory,limits)
+}
+let limits=MirrorPieceCopyInventoryLimits::new(100,1000,10000,100000);
+assert_eq!(limits.pieces(),100);
+```
+
+I counts every actual candidate inventory member,including unrelated Pieces,and precedes member
+lookup. Missing source then missing result precede content inspection. H,R and UTF-8 B cover four
+forms:original source,candidate source,native desired result and actual candidate result. H counts
+all hole groups before their child lengths are scanned. R counts every outer,hole,construction
+and fold occurrence,including repetitions. B includes all four label fields and unresolved
+Material reason text in all four forms. Checked totals and their quotas precede field comparisons.
+Other inventory members' content and prior allocation retain their own resource obligations.
+
+After resources,the complete original source definition is compared first. Result mismatches
+report Quantity,Mirroring,CutOnFold,CuttingSide,Material,Layer,Label,Boundary,Holes,Construction,
+then FoldEdges. No accepted prefix escapes. Admission allocates nothing,uses constant auxiliary
+space and takes O(I+H+R+B) work. Whole inventory order and all original fields remain unchanged.
+For the documented asymmetric fixture,three candidate Pieces consume I3,H8,R30,B220 with NoFold;
+ReflectedSource consumes R32. Adding an actual source hole gives H9/R31 before SourceChanged.
+
+`source_piece()` and `result_piece()` lend the actual candidate members;`copies()`, `inventory()`
+and `limits()` retain actual whole parents. `source_companion()` and `result_companion()` resolve
+the actual member's explicit companion id in that same inventory,with O(I) work per lookup.
+Inventory birth already establishes reciprocal declarations,opposite hands and equal quantity.
+An authored order `[result200,companion300,source100]` therefore resolves companion300 by identity,
+without pairing list positions. MirroredPairs remains one pattern Piece with two orientations;
+PairMember is a separate reciprocal pattern Piece and accepts authored physical copies only.
+
+This stage establishes structural association,not reflected geometry or physical-copy pairing.
+It does not authorize unrelated Piece-content changes,assert current Design ownership,reserve
+identities,transfer neighbours or sew anything. Complete actual candidate CutPlan association,
+whole consumer/effect evidence and atomic authorized publication remain separate requirements.
 
