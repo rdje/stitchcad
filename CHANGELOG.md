@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0737 — bind complete actual mirror candidate CutPlan
+## STITCHCAD-G1-0738 — require complete mirror semantic and sewing evidence
 
-- Whole B/C/I/N and checked I+3C precede canonical actual inventory validation and candidate indexing.
-- Every retained/issued result definition matches;retired results are absent;source/other copies stay exact.
-- Actual candidate inventory/plan/records and authored order retained;no ordinal pairing or applied effects.
-- Native10/API3/book5 and focused lint/fmt/build/map/render/history910 checks pass.
-- Native copy/companion association closes;semantic evidence and actual execution remain owned.
+- Explicit SourceOnly/ExplicitResultMappings retains nine mandatory original evidence-source fields.
+- Actual complete candidate plan/correspondence borrowed;shared/zero ids omit no obligation.
+- Canonical source holders and copy-specific neighbours cannot transfer automatically;no evidence accepted.
+- Native9/API4/semantic book1 and focused lint/fmt/build/map/render/history911 checks pass.
+- New bounded book chapter documents complete requests;native family checkpoint next.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

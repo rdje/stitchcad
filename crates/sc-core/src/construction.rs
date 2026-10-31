@@ -15,6 +15,9 @@ mod mirror_output_examples {}
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-mirror-copies.md")]
 mod mirror_copy_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-mirror-semantics.md")]
+mod mirror_semantic_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-output-contracts.md")]
 mod output_examples {}
 #[cfg(doctest)]
@@ -76,9 +79,12 @@ pub use mirror::{
     MirrorPieceResultCopyAction, MirrorPieceResultCopyError, MirrorPieceResultCopyIntent,
     MirrorPieceResultCopyLimits, MirrorPieceResultCopyManifest, MirrorPieceResultCopyRefusal,
     MirrorPieceResultCopySource, MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal,
-    MirrorPieceSourceCopyError, MirrorPieceSourceCopyLimits, MirrorPieceSourceCopyRefusal,
-    MirrorPieceSourceError, MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
-    RequiredMirrorPieceCorrespondence, RequiredMirrorPieceCorrespondenceSource,
+    MirrorPieceSemanticConsumerSources, MirrorPieceSemanticEffectSources,
+    MirrorPieceSemanticEvidenceKind, MirrorPieceSemanticEvidenceRequirement,
+    MirrorPieceSemanticIntent, MirrorPieceSemanticPolicy, MirrorPieceSourceCopyError,
+    MirrorPieceSourceCopyLimits, MirrorPieceSourceCopyRefusal, MirrorPieceSourceError,
+    MirrorPieceSourceLimits, MirrorPieceSourceRefusal, RequiredMirrorPieceCorrespondence,
+    RequiredMirrorPieceCorrespondenceSource, RequiredMirrorPieceSemantics,
 };
 mod offset;
 pub use offset::{

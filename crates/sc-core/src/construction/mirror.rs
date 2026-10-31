@@ -275,3 +275,10 @@ impl<'a> MirrorAxisDependency<'a> {
         self.source
     }
 }
+
+mod semantics;
+pub use semantics::{
+    MirrorPieceSemanticConsumerSources, MirrorPieceSemanticEffectSources,
+    MirrorPieceSemanticEvidenceKind, MirrorPieceSemanticEvidenceRequirement,
+    MirrorPieceSemanticIntent, MirrorPieceSemanticPolicy, RequiredMirrorPieceSemantics,
+};

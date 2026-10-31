@@ -22,7 +22,6 @@
   - [Interchange and the envelope](spec/glossary/interchange-and-envelope.md)
   - [Commands and agent authority](spec/glossary/commands-and-authority.md)
   - [Localization](spec/glossary/localization.md)
-
 # Annexes — detailed contracts
 
 - [Specification and reference](spec/index.md)
@@ -100,6 +99,7 @@
   - [Mirror Piece-copy contracts](annexes/drafting-mirror-contracts.md)
   - [Mirror output attribution and contours](annexes/drafting-mirror-outputs.md)
   - [Mirror physical-copy contracts](annexes/drafting-mirror-copies.md)
+  - [Mirror semantic and sewing requirements](annexes/drafting-mirror-semantics.md)
   - [Native drafting output contracts](annexes/drafting-output-contracts.md)
   - [Native slash/spread output contracts](annexes/drafting-slash-output-contracts.md)
   - [Slash/spread Piece reconciliation](annexes/drafting-slash-piece-contracts.md)

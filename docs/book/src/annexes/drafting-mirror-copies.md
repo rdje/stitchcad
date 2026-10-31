@@ -300,3 +300,5 @@ workspace and C retained index entries. Candidate records,original plans and hel
 unchanged on success and refusal. The complete native copy/companion association is established;
 actual current Design/global reservation,unrelated Piece-content authorization,physical-copy
 pairing,neighbour/sewing effects,reflection geometry and atomic publication remain execution work.
+
+[Semantic and sewing requirements](drafting-mirror-semantics.md) continue this actual complete context.

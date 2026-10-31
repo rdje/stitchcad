@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind complete actual mirror candidate CutPlan
+## _(2026-10-31 UTC)_ — require complete mirror semantic and sewing evidence
 
-0737 bounds whole B/C/I/N/I+3C before scans/allocation;reuses canonical CutPlan constructor against actual inventory because immutable CutPlan retains no birth Piece collection. Temporary proof drops before authentic candidate index.
-Every active result matches exact retained/proposed fields;retirements absent. Every original source/other copy remains exact and present;no retargeting/new unrelated copy or ordinal pairing. Actual parents/order retained.
-Native6+4/API3/copy book5,selected lint/fmt/build/map/render pass0;old kernels and extracted fixture/test bodies exact,whole0736 spans910 exact0. Native copy/companion parents close;semantic evidence next.
-Promotion: declined (existing canonical cut/effect boundary). Current Design/global issuance/unrelated Piece-content authorization/physical pairing/sewing/geometry/atomic publication and full integration remain owed. G1still6/18/G0 unapproved.
+0738 binds explicit SourceOnly/ExplicitResultMappings plus nine mandatory original source fields to actual complete candidate plan and prior correspondence. Fixed borrowed association/traversal takes constant work/space and allocates/scans no registry.
+Source holders/ids/references stay canonical;result mappings,visible repairs,intake provenance,copy-addressed sewing,all-copy effects/currentness/authority remain evidence obligations even for SourceOnly,retirements or shared/zero provider ids.
+Native3+6/API4/semantic book1,selected lint/fmt/build/map/render pass0;old kernels/fixtures/five copy book fences unchanged. Summary120 old rows/order retained;whole0737 spans911 exact0. Initial missing public re-export corrected before final checks.
+Promotion: declined (existing holder/copy/effect boundary). Native semantic request declaration complete;family checkpoint next. Actual providers/global issuance/geometry/physical effects/atomic publication and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

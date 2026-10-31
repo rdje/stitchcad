@@ -103,21 +103,20 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Goal:0736 actual inventory;[whole scope/proofs](../history/stitchcad-devnotes-part910.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion.plan`
   Status: `done`
-  Goal:actual complete candidate inventory/plan association,exact native and preserved definitions.
-  - [x] ISSUE:CutPlan birth retains no actual candidate Piece collection.
-  - [x] ROOT CAUSE (copy plan):actual canonical CutPlan contract reviewed;
-    whole B/C/I/N/I+3C precedes scans/allocation;rc=0.
-  - [x] FIX:canonical actual inventory check,authentic candidate index,complete exact choices.
-  - [x] ADDRESSED (copy plan):cargo test --test mirror_piece_copy_plan_contract
-    --test mirror_piece_copy_inventory_contract:6+4 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (copy plan):API3/book5,lint/fmt/build/map/render;
-    original kernels,fixture/test bodies and910 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing canonical cut/effect boundary).
-  Proof:target/history-proof-0737-mirror-copy-plan/;Commit:STITCHCAD-G1-0737.
+  Goal:0737 actual complete CutPlan;[whole scope/proofs](../history/stitchcad-devnotes-part911.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.semantics`
-  Status: `pending`
-  Goal:explicit complete semantic/mark/reference/sewing consumer policy and required original source
-  evidence;no automatic copy of spans or reassignment of held objects. Actual effects stay G2/G3/bus.
+  Status: `done`
+  Goal:explicit complete semantic/mark/reference/sewing policy and original source requests.
+  - [x] ISSUE:copy/contour association cannot authorize semantic or sewing effects.
+  - [x] ROOT CAUSE (mirror semantics):actual canonical holder/copy decisions reviewed;
+    fixed nine fields retain distinct original scopes under both explicit intents;rc=0.
+  - [x] FIX:SourceOnly/ExplicitResultMappings with complete borrowed plan/correspondence parents.
+  - [x] ADDRESSED (mirror semantics):cargo test --test mirror_piece_semantic_requirement_contract
+    --test mirror_piece_copy_plan_contract:3+6 pass;rc=0;full invocation in receipt.
+  - [x] NO REGRESSION (mirror semantics):API4/semantic book1,lint/fmt/build/map/render;
+    old kernels/fixtures/book fences,Summary order/120 lines,911 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing holder/copy/effect boundary).
+  Proof:target/history-proof-0738-mirror-semantic-requirements/;Commit:STITCHCAD-G1-0738.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.checkpoint`
   Status: `pending`
   Goal:close only native declaration family after metadata/manifest/copy/sewing requirements and
