@@ -2,7 +2,7 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Primitive declarations,opening amount proofs and offset/grainline input binding are available
+> geometry. Primitive/slash-spread inputs,amount proofs and offset/grainline binding are available
 > below;remaining schemas,ordered dependencies and geometry execution are pending. No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -46,7 +46,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Draw arc | Center PointRef,radius Length,start/sweep Angle formulas | One edge role;no inferred point outputs | Center-based declaration/proofs;geometry pending |
 | Draw Bézier | Explicit quadratic/cubic named PointRefs | One edge role;original controls retained | Typed controls/dependencies;geometry pending |
 | Offset edge | Directed range,allowance identity and explicit side;canonical corner | G2 fragment lineage;no hidden width/default join | Input binding only;outputs/geometry pending |
-| Slash/spread | Piece/cut/pivot/moving region and explicit opening mode | New/retired topology and attributable opening | Amount component/proofs only;full schema pending |
+| Slash/spread | Piece,directed cut,moving bank and explicit pivot/axis/amount | New/retired topology and attributable opening | Spatial inputs/amount proofs;outputs/geometry pending |
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
 | Add notch | Piece id,EdgeAnchor,NotchProfileBindings | Fresh semantic notch id and retained source anchor | AddNotch request exists;geometry pending |
 | Place grainline | Named canonical grainline with directed arrow/alignment/print intent | Existing semantic target;G2 derived mark | Target/source binding only;geometry pending |
@@ -481,3 +481,47 @@ or output manifest. Those required inputs and their explicit geometric meaning r
 under `.1.c.slash.sources` and `.5f.3`;none is guessed from the amount. Actual transform evaluation,
 intake/fullness effects,source/output mappings and command publication require the complete
 operation and G2/G3 executors. Full construction verification remains deferred under `.5f.4`.
+
+## Native slash/spread spatial inputs
+
+`construction::SlashSpreadConstruction` joins the actual amount component to explicit spatial
+inputs. Both constructors require an operation id,the target Piece id,an original `DirectedRange`
+cut and `SlashSpreadSide::{Left,Right}` for the moving bank relative to that cut traversal. This
+side is neither fabric face nor an inferred winding choice. The other bank remains stationary.
+Reversing the cut without changing the selected side changes authored intent;no side swap occurs.
+
+`rotation` additionally requires an actual `PointRef` pivot and an Angle document. `separation`
+requires an actual `DirectedRange` movement axis and a Length document. Positive separation follows
+that directed axis;the cut's normal is never invented. Constructors create the matching explicit
+opening component,so a wrong-kind amount remains a kind error for the originally selected mode.
+Rotation has no translation-axis field;separation has no pivot field. Neither gets a default.
+
+```rust
+use sc_core::{construction::*,ontology::*,recipe::*};
+fn declare_separation(operation:EntityId,piece:EntityId,cut:DirectedRange,axis:DirectedRange)
+    ->Result<SlashSpreadConstruction,Box<dyn std::error::Error>> {
+    let input=SlashSpreadConstruction::separation(operation,piece,cut,SlashSpreadSide::Right,
+        axis,FormulaExpressionDocument::new("10 mm".into())?)?;
+    let normalized=input.opening().normalized(SlashSpreadNormalizationLimits::new(1,3))?;
+    let checked=normalized.check_argument(&FormulaNamespace::new([])?)?;
+    assert_eq!(checked.expression().kind(),FormulaKind::Length);
+    Ok(input)
+}
+```
+
+Definite local self-supply is refused in original Piece,cut,then pivot/axis order. Each geometry
+`dependencies` view is private,borrows the original declaration and exposes the actual underlying
+cut/pivot/axis field with its role. There are exactly two such occurrences,including repeated range
+uses. The target Piece and actual amount formula dependencies remain separate parts of the whole
+program graph;this iterator does not claim to enumerate that complete graph.
+
+These are spatial input declarations. A current geometry executor must validate the target Piece
+and common drafting frame,the complete current source coverage,a straight supported cut,a unique
+applicable moving bank,pivot incidence or a nondegenerate straight movement axis,and supported
+numerical/geometric domains. Selecting Left or Right does not prove that such a region exists or
+resolve multiple candidates. Failed geometry cannot be replaced with a guessed region or axis.
+
+This stage issues no new Piece or geometric output tags and mutates nothing. Explicit bridge/trim
+policy,fullness/intake effects and actual new/retired topology remain `.1.c.slash.outputs` work;
+there is no default connector across an opened cut. G2/G3 must supply those results and their
+source mappings before command publication. Full operation integration remains `.5f.4` work.

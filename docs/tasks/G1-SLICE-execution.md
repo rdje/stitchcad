@@ -617,16 +617,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0566;[proof](../history/window24.md#stitchcad-devnotes-part725md).
 - ID: `G1-SLICE.6.5.3.2.3.4`
   Status: `done`
-  Goal: canonical retired-parent/new-child span lineage with actual identity ownership and references;
-  no identity reuse or silent old-target reassignment;integrate current-model validation before effects.
-  Requirements read:ROADMAP4.1/4.4,ontology1/1.1,entity-identity decision and command-seam-splits.
-  Actual graph live spans/retained roots,Design sewing/garment ownership/resource walkers and Gather
-  held-span lookup reviewed. History metadata cannot grant current graph/physical/command authority.
-  Children .1 bounded immutable birth/split history;.2 actual graph/owner/resource integration;
-  .3 actual paired candidate/history joins and explicit held reference repair evidence;.acceptance
-  scoped checkpoint after implementation. Real dependencies/effects/full paired proof stay G1-SLICE.6.5.3.2.acceptance.
-  Scoped completion0574:all partition/lineage components and deferred local checkpoints pass.
-  Actual quantitative/physical joins and trusted effects remain .2.4/.2.5 before whole acceptance.
+  Goal:completed lineage scope;[whole scope/proofs](../history/stitchcad-devnotes-part846.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.1`
   Status: `done`
   Goal:0567;[proof](../history/window24.md#stitchcad-devnotes-part726md).
@@ -822,27 +813,36 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0681 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part844.md).
 - ID: `G1-SLICE.5f.1.c.slash.opening`
   Status: `done`
-  Goal:explicit rotation Angle/separation Length documents,complete bounded normalization and
-  authentic static proofs without values. Cut/pivot/moving-region/output policy stays pending.
-  Retire whole0681 scope/journals;focused checks/book sync. Full .5f.4 deferred.
-  - [x] ISSUE:opening amount requires explicit mode,original source and actual kind proof.
-  - [x] ROOT CAUSE (WHY + WHERE):HEAD8a8e14fd component absent;book inventory requires
-    Angle rotation versus Length separation;actual shared staging kernels inspected,rc=0.
-  - [x] FIX:owned explicit amount,complete1+2N admission and authentic normalized/static proof;
-    preserve source/mode/span;no inferred cut/region/direction or value.
-  - [x] ADDRESSED (opening):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test slash_spread_opening_contract →5 pass,rc=0;real sources/Unknown,wrong modes,all
-    branches,original causes and exact complete quota boundaries retain owners.
-  - [x] NO REGRESSION (opening):arc6/rustdoc5/selected clippy/fmt/book/rendered boundaries/
-    diff/history844 three exact Git spans pass,rc=0;shared kernel callers retain behavior.
-  - [x] LOCKSTEP:book/live sync;promotion: declined (existing argument staging).
-    Spatial inputs below,geometry .5f.3/G2/G3 and full .5f.4 remain owned/deferred.
-  Verification:native11/rustdoc5;Commit:STITCHCAD-G1-0682. Next .slash.sources.
+  Goal:0682 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part845.md).
 - ID: `G1-SLICE.5f.1.c.slash.sources`
-  Status: `pending`
+  Status: `done`
   Goal:recover and implement explicit Piece/cut/pivot/moving-region/movement source contract;
   join actual opening variant,retain original dependencies and output/geometry obligations.
+  Scope:explicit left/right moving bank relative to directed straight cut;rotation requires actual
+  PointRef pivot,separation requires actual directed axis. Original opening constructors enforce
+  their mode;complete geometry-source occurrences/local self-supply checks,not currentness.
+  G2 must validate a unique moving region,straight cut/pivot/axis and actual output topology;
+  bridging/fullness/output policy remains pending. Retire whole0682 and closed .6.5.3.2.3.4
+  scope for live bounds;focused checks/book sync.
   No inferred region or solver/default transform. Full .5f.4 stays deferred.
+  - [x] ISSUE:opening amounts need explicit actual Piece/cut/bank/pivot-or-axis sources.
+  - [x] ROOT CAUSE (WHY + WHERE):HEAD590da323 source module absent;glossary line-cut and
+    inventory requirements plus public reference/range/opening contracts inspected,rc=0.
+  - [x] FIX:explicit source variants,actual embedded amount,borrowed dependency fields and first
+    local self-supply;no inferred movement axis,pivot or output tags.
+  - [x] ADDRESSED (spatial):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test slash_spread_construction_contract →4 pass,rc=0;actual mode/field owners,source order,
+    self-refusals,repeated ranges,explicit bank/traversal and original amount proofs.
+  - [x] NO REGRESSION (spatial):opening5/rustdoc3/selected clippy/fmt/book/rendered boundaries/
+    diff/history845+846 four exact Git spans pass,rc=0. No global frame/currentness/geometry proof.
+  - [x] LOCKSTEP:book/live sync;promotion: declined (existing typed sources/amount staging).
+    Geometry/output policy below,.5f.2/.3 and full .5f.4 remain owned/deferred.
+  Verification:native9/rustdoc3;Commit:STITCHCAD-G1-0683. Next mirror inputs.
+- ID: `G1-SLICE.5f.1.c.slash.outputs`
+  Status: `pending`
+  Goal:explicit bridge/trim/fullness policy and actual new/retired topology/output manifest;
+  unique region/linearity/incidence/domain checks and source mappings via .5f.3/G2/G3.
+  No default connector or guessed region. Full .5f.4 remains deferred.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

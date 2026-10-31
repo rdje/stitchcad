@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0682 — retain explicit slash/spread opening amount proofs
+## STITCHCAD-G1-0683 — retain explicit slash/spread spatial source declarations
 
-- Explicit Rotation Angle/Separation Length components retain original sources and actual static proofs.
-- Complete1+2N admission precedes reparse;wrong kinds never reinterpret authored modes.
-- Opening5/arc6/rustdoc5/selected lint/fmt/book pass;whole0681 retained844.
-- Spatial source/output contracts,values,G2/G3 execution and full .5f.4 remain owned.
+- Explicit Piece/cut/moving bank and required pivot-or-axis join the actual authored amount component.
+- Authentic field dependencies retain source order/repetitions and first local self-supply causes.
+- Spatial4/opening5/rustdoc3/selected lint/fmt/book pass;exact retired scopes retained845/846.
+- Region/frame/currentness,bridge/fullness/output topology and full .5f.4 remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

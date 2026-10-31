@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain explicit slash/spread opening amount proofs
+## _(2026-10-31 UTC)_ — retain explicit slash/spread spatial source declarations
 
-0682 adds explicit Rotation Angle/Separation Length document components,complete1+2N normalization admission and actual static proofs. Required kind comes from the original mode;wrong text cannot reinterpret intent. Owners,canonical source,real spans and typed causes survive;no values execute.
-Opening5/arc6/rustdoc5/selected clippy/fmt/book/rendered boundaries/diff/history844 three exact Git spans pass. Wrong modes,untaken branch failures,original Unknown canonical supplier,exact quotas,raw angle turns and division-free static checks pass. Shared staging kernels remain used by actual callers.
-This component supplies no operation id,Piece,cut,pivot,moving-region,direction or output. It cannot certify numerical/geometric domains or fullness/intake effects. Required spatial contracts remain explicitly owned under .slash.sources and actual executors;no implicit solver is introduced.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing argument staging). Whole0681 retained844. Next .1.c.slash.sources;remaining schemas/frame/geometry and full .5f.4 remain owned. PNT continues.
+0683 joins actual amount components to Piece,directed cut and explicit moving bank. Rotation requires PointRef pivot;separation requires directed movement axis. Authentic source views borrow exact original fields;first local self-supply preserves original roles/references. No implicit normal or pivot.
+Spatial4/opening5/rustdoc3/selected clippy/fmt/book/rendered boundaries/diff/history845+846 four exact Git spans pass. Both mode/amount owners,field pointers,ordered/repeated sources,side/traversal intent and all local refusal roles pass. Whole0682 and the closed lineage-parent scope remain byte-exact.
+These are input declarations,not a region/transform certificate. G2 must validate current Piece/frame/coverage,straight cut,unique moving bank,pivot or axis and domains. Bridge/trim/fullness/output topology is explicitly scheduled;there is no default connector or source reassignment.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing typed sources/amount staging). Next remaining .1.c mirror inputs;global graph/geometry/full .5f.4 stay owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

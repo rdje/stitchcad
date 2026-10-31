@@ -36,3 +36,8 @@ pub use slash_opening::{
     SlashSpreadCheckRefusal, SlashSpreadNormalizationError, SlashSpreadNormalizationLimits,
     SlashSpreadNormalizationRefusal, SlashSpreadOpening, SlashSpreadOpeningMode,
 };
+mod slash_spread;
+pub use slash_spread::{
+    SlashSpreadConstruction, SlashSpreadConstructionError, SlashSpreadDependency, SlashSpreadSide,
+    SlashSpreadSource,
+};
