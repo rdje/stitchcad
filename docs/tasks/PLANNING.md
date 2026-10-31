@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D366 — fixture work-root ownership and emitter identity
+## D308–D366 — modeled fixture emitter identity
 
-D308–D364:[whole prior ledger](../history/stitchcad-devnotes-part829.md). D365 P1 fixed0668;owner a41.effects.ownership:existing work root adopted/prior controlled artifact overwritten;fresh exclusive roots and six omissions now pass. D366 P1 modeled emitter identity missing;owner a41.effects.provenance,next before signoff. D334 P2 after G1/before G0;D223/PLANNING.5 open.
+D308–D365:[whole prior ledger](../history/stitchcad-devnotes-part831.md). D366 P1 fixed0669;owner a41.effects.provenance:modeled receipt lacked fixture emitter identity;source/runtime identity and changed-basis publication refusal now pass. Original numerical proofs unchanged. D334 P2 after G1/before G0;D223/PLANNING.5 open. a41 signoff/full D156 remain owned.

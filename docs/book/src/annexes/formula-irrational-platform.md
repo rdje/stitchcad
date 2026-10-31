@@ -563,7 +563,27 @@ five-configuration tangent replay retains all30+27 simulated variants,original f
 controls,actual owned timeout/group checks and complete source/copy restoration. These outcomes
 remain explicitly simulated compiler evidence;actual numerical/Chrome proof inputs are unchanged.
 
-One modeled receipt sample records547 original controller inputs while omitting the fixture
-emitter's own identity. That separate provenance repair is owned by a41.effects.provenance before
+One historical modeled receipt sample records547 original controller inputs while omitting the
+fixture emitter's own identity. The separate provenance repair below closes that omission before
 fixture signoff. The historical receipt remains untouched;this gap does not alter the separately
 observed actual native/Chrome verdicts.
+
+## Modeled receipt emitter identity
+
+New modeled receipts additionally retain fixture_instrument with the repository-relative fixture
+path,frozen source SHA256,Python version and implementation name. The producer verifies that its
+source file still matches the frozen basis before publishing the exclusive receipt. A changed
+basis cannot publish acceptance. These fields identify the model's emitter;the existing original
+controller-input map continues to describe its own inputs.
+
+The focused control checks actual publication,four wrong identity fields,a controlled in-memory
+basis change and two actual Python-body omissions. Source files stay unchanged. Older receipts
+remain immutable and retain their historical scope. Every modeled receipt still explicitly says
+SIMULATED and supplies no compiled numerical or browser verdict.
+
+```bash
+python3 -I -B docs/tasks/artifacts/ci_environment/numerical_fixture_provenance_contract.py
+```
+
+The remaining a41 signoff owns complete fixture-own alias/lifecycle acceptance and the current
+full modeled replay. Actual numerical/Chrome acceptance remains the separate observed proof above.

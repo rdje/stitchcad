@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0668 — reserve fresh fixture work roots exclusively
+## STITCHCAD-G1-0669 — bind modeled receipts to fixture emitter identity
 
-- D365:existing roots refuse before stores/env changes;two default roots are fresh. Three startup/
-  three ownership omissions pass. Original4/30+tangent5/27 modeled replay restores sources/copies.
-- History828/829/book/diff pass. D366 modeled emitter identity owned next;actual native/Chrome
-  proof basis unchanged. No new numerical/full-suite verdict;G1 6/18/G0 unapproved unchanged.
+- D366:record fixture source/runtime identity and refuse changed basis before publication. Actual
+  publication/four field refusals/two body omissions and unchanged-source controls pass.
+- Startup/ownership/history831/book/diff pass. Historical captures stay intact;simulated compiler
+  scope remains explicit. a41 signoff next;no new numerical/full-suite verdict;G1 6/18/G0 unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

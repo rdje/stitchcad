@@ -505,36 +505,33 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   startup;source/destination/alias/mutation/restoration/child omissions and focused consumers.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects.ownership`
   Status: `done`
-  Goal:refuse reused fixture roots and preserve prior artifacts before any setup/capture.
-  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py;docs/tasks/artifacts/ci_environment/numerical_fixture_startup_contract.py
-  - [x] ISSUE:D365 P1 actual bootstrap adopts an existing per-PID directory;actual modeled
-    capture overwrites a prior controlled artifact. Original sources unchanged;no compiler/browser.
-  - [x] ROOT CAUSE (WHY + WHERE):numerical_fixture_startup_contract.py --diagnose-reuse
-    d440f708cce6746b784102248c47efec9889f80a →old actual modeled capture changes existing
-    controlled artifact bytes,rc=0. Nonexclusive work prepare plus reused artifact names cause it.
-  - [x] FIX:use UTC/PID work names;admit work/common-parent paths,freeze inputs,create only
-    the validated common parent,reserve work exclusively,then activate stores. Keep existing inputs.
-  - [x] ADDRESSED:numerical_fixture_startup_contract.py --macos-readonly-git →existing-root
-    refusal/two fresh default roots/three startup+three ownership omissions/source/caller values
-    pass,rc=0. Sentinel exact,no refused-run stores/env effects;metadata write-denial control passes.
-  - [x] NO REGRESSION:python_numerical_runtime_contract.py →original4/30 simulated variants/
-    seven failure paths/12 preflight/8 body faults;five tangent configurations/27 simulated variants/
-    two failures/three wrapper faults;actual timeout/group/full source+copy restoration pass,rc=0.
-    History828–830 six Git spans/book/diff pass,rc=0. No native or broader CI rerun implied.
-  - [x] LOCKSTEP:book/live/notes/frontier/registry sync;D365 fixed. Promotion: declined(existing
-    exclusive ownership/input-freeze contracts). a41/effects active;D366 emitter identity is owned
-    next before signoff. Native/Chrome proof inputs unchanged;G1 6/18/G0 unapproved unchanged.
-  Commit:STITCHCAD-G1-0668;Verification:actual root-reuse/refusal plus complete modeled fixture replay.
+  Goal:0668 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part831.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects.provenance`
+  Status: `done`
+  Goal:D366 bind modeled receipts to their fixture emitter;keep historical captures immutable.
+  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py;docs/tasks/artifacts/ci_environment/numerical_fixture_provenance_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
+  - [x] ISSUE:D366 P1 modeled receipt lists547 controller inputs but omits fixture emitter basis.
+  - [x] ROOT CAUSE (WHY + WHERE):numerical_fixture_provenance_contract.py --diagnose on the
+    before-reuse controlled report →emitter identity absent,rc=0. publish() adds scope/results
+    after controller assembly without recording its own source/runtime inputs. Actual proofs separate.
+  - [x] FIX:bind modeled report to repository-relative fixture path,frozen source SHA256 and
+    Python version/implementation;refuse source-basis drift before exclusive receipt publication.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/numerical_fixture_provenance_contract.py
+    →actual identity/four field refusals/changed-basis no publication/two actual body omissions
+    pass,rc=0. In-memory frozen-basis changes only;no source file is amended. Receipts stay SIMULATED.
+  - [x] NO REGRESSION:numerical_fixture_startup_contract.py →valid/late refusal/existing-root
+    refusal/two fresh roots/three startup+three ownership omissions pass,rc=0. Source/caller state
+    exact;history831 four whole Git intervals/book build/git diff --check pass,rc=0. Full current
+    fixture/own alias acceptance remains signoff;no numerical/full-suite verdict implied.
+  - [x] LOCKSTEP:book/live/notes/frontier/registry sync;D366 fixed. Promotion: declined(existing
+    artifact-emitter identity/immutable evidence contracts). a41/effects active;signoff next.
+    Historical modeled/native/Chrome captures stay untouched;G1 6/18/G0 unapproved unchanged.
+  Commit:STITCHCAD-G1-0669;Verification:actual modeled publication and source-basis guard controls.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.signoff`
   Status: `pending`
-  Goal:D366 P1 bind modeled receipts to the fixture emitter as well as original controller inputs;
-  schedule immediately after ownership,before a41 signoff. Preserve all historical captures.
-  Issue:actual before-reuse modeled report records547 original inputs but omits runtime fixture
-  emitter identity;publish() changes emitted scope/results without recording its own source basis.
-  Reproduce:inspect target/irrational_platform_certificate/native-body-faults/
-  numerical-fixture-startup-controls/18977/before-reuse/work/reused-root/
-  root-20261031T021154606458Z-18977/report.json;no fixture instrument field/source key exists.
-  Paths: docs/tasks/artifacts/ci_environment/python_numerical_runtime_contract.py
+  Goal:focused complete fixture-own public-entry/file/alias/lifecycle acceptance after all repairs;
+  verify current full modeled replay/source preservation,then close only a41's supported boundary.
+  Full D156/integration/pre-push and actual numerical/application verdicts remain separate owners.
 
 ## Ordered native file-destination repairs
 

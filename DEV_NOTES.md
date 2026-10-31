@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — reserve fresh fixture work roots exclusively
+## _(2026-10-31 UTC)_ — bind modeled receipts to fixture emitter identity
 
-0668 fixes D365:actual prior bootstrap adopts an existing per-PID root and modeled capture overwrites a controlled artifact. Use UTC/PID names;admit parent/work paths,freeze inputs,create validated parent,reserve work exclusively,then activate stores.
-Actual refusal preserves artifact/caller state;two default bootstraps get fresh roots. Three startup/three ownership omissions and optional metadata write-denial control pass. Complete original fixture4/30 plus tangent5/27 simulations/failures/refusals/actual timeout controls restore all bytes.
-D366 sample modeled report547 records original inputs but omits fixture-emitter identity;owned a41.effects.provenance,next before signoff. Actual native/Chrome proof basis unchanged. [Whole0667](docs/history/stitchcad-devnotes-part828.md) and ledger829 retain prior scope.
-History828–830 six Git spans/book/diff pass. LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing exclusive-root/freeze contracts). a41/effects stay active;full D156/integration/pre-push remain owned. PNT continues.
+0669 fixes D366:modeled receipt records controller inputs but omits fixture emitter identity. publish() now records repository-relative path,frozen source SHA256 and Python version/implementation;changed source basis refuses before exclusive publication.
+Actual modeled publication/four field refusals/changed-basis no publication/two actual body omissions pass. Only in-memory basis changes;source files remain exact. Startup/root-refusal/freshness/six omission controls remain green. Simulations provide no native numerical verdict.
+[Whole0668](docs/history/stitchcad-devnotes-part831.md) preserves prior scope/ledger;history831 four Git spans/book/diff pass. Historical captures untouched;actual native/Chrome source basis unchanged.
+LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing emitter identity/evidence contracts). a41/effects active;focused own alias/full modeled signoff next. Full D156/integration/pre-push remain owned;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

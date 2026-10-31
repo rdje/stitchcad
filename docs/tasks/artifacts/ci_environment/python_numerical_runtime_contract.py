@@ -295,7 +295,13 @@ def capture(entry, label, script=None, *, outcome='success', family=None):
         if path != paths['report']:
             return original_writer(path, value, owner)
         # Retained fixtures must never masquerade as compiled numerical evidence.
-        value = dict(value, scope='SIMULATED compiler dispatch control;no native numerical evidence', simulated_children=True)
+        fixture_source = Path(__file__)
+        assert fixture_source.read_bytes() == FROZEN[fixture_source], 'fixture emitter source changed before publication'
+        instrument = dict(path=fixture_source.relative_to(ROOT).as_posix(),
+                          sha256=hashlib.sha256(FROZEN[fixture_source]).hexdigest(),
+                          python=sys.version, implementation=sys.implementation.name)
+        value = dict(value, scope='SIMULATED compiler dispatch control;no native numerical evidence',
+                     simulated_children=True, fixture_instrument=instrument)
         original_writer(path, value, owner)
         report = value
 
