@@ -38,7 +38,9 @@ pub use join::{
 };
 mod mirror;
 pub use mirror::{
-    MirrorAxis, MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError,
+    BoundMirrorPieceCopy, MirrorAxis, MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy,
+    MirrorPieceCopyError, MirrorPieceEdge, MirrorPieceEdgeLocation, MirrorPieceEdgeSource,
+    MirrorPieceSourceError, MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
 };
 mod offset;
 pub use offset::{

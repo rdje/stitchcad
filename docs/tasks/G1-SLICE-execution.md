@@ -743,23 +743,10 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261031`
   Status: `done`
-  Goal:daily cleanup0718 complete under unchanged guards;product frontier remains .5f.1.c.mirror.outputs.
+  Goal:0718;[whole scope/proofs](../history/stitchcad-devnotes-part888.md).
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261031.apply`
   Status: `done`
-  Goal:guarded frozen plan/review/apply and immediate independent residue/tracked-content proof.
-  Evidence:target/artifact_cleanup_audit/daily-20261031-native/;verify_post.py uses stdlib only.
-  - [x] ISSUE:daily disposable outputs accumulated;safe cleanup due2026-10-31 14:18 UTC.
-  - [x] ROOT CAUSE (daily cleanup):published guards/census reviewed;824 log copies verified first.
-    Canonical plan828 candidates/2243 skips;review separates all protected roots;rc=0.
-  - [x] FIX:strict OS idle0 then exact apply removes4 trees/824 logs,18579 files/622525303B.
-  - [x] ADDRESSED (daily cleanup):apply then verify_post.py before any launcher/rebuild.
-    All828 paths absent,1340 tracked files exact,824 saved logs/781356B exact;rc=0.
-  - [x] NO REGRESSION (daily cleanup):57 roots/136020 entries/14743246609B exact before/after.
-    Package stores excluded by separation,not fully hashed;2243 unsafe entries kept;book build rc=0.
-  - [x] LOCKSTEP:latest cleanup/book/live/frontier aligned;whole0717 Git spans exact0.
-    promotion: declined (existing guarded cleanup policy);compact slash acceptance retained.
-  Verification:plan/apply/verify_post.py/source spans/book build rc=0;no runtime/guard/full CI claim.
-  Commit:STITCHCAD-G1-0718.
+  Goal:0718 guarded cleanup;[whole scope/proofs](../history/stitchcad-devnotes-part888.md).
 
 ## Drafting operation contracts
 
@@ -858,10 +845,48 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0684 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part851.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs`
-  Status: `pending`
+  Status: `in_progress`
   Goal:typed copy metadata/cut-plan/sewing policy,fresh identity/output-role and manifest admission
   contract for G1 schemas. Real current reflection/reference mappings stay .5f.4.geometry/G2/G3;
   native contract acceptance needs no completed geometry engine. No metadata/default-id shortcut.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.source`
+  Status: `done`
+  Goal:actual immutable source Piece association under explicit whole H/R bounds;all original
+  boundary/hole/construction/fold fields retain role/order/direction/repetition and authentic owner.
+  - [x] ISSUE:mirror input names a Piece but needs actual bounded source before output policies.
+  - [x] ROOT CAUSE (mirror source):855b4773 mirror.rs exposes authored id/axis only;actual Piece
+    contracts/ontology/cut-plan/sewing decisions/book reviewed;public source association added;rc=0.
+  - [x] FIX:private borrowed binding/field views;identity then H/checked R quotas then local source
+    order. Fold/repeats charged separately;no allocation,metadata policy,identity or geometry result.
+  - [x] ADDRESSED (mirror source):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test mirror_piece_source_contract --test mirror_piece_copy_contract:5+4 pass;rc=0.
+    Actual field/parent pointers,both axes,reversal,repeats,quota precedence/refusal context checked.
+  - [x] NO REGRESSION (mirror source):mirror API docs6/actual editing-book docs9,selected clippy/
+    fmt/book/render/source spans888–889 exact pass;rc=0. Fixture direct indexes replaced before final
+    lint;minimal no-hole/no-fold source passes. No full CI/current Design/reflection/semantic proof.
+  - [x] LOCKSTEP:book/native inventory/live/frontier aligned;whole0718 and0063 pre-code preserved.
+    promotion: declined (existing actual-source/geometry boundary);receipt target/history-proof-0719-mirror-source/.
+  Verification:native9/API6/book9 plus focused lint/fmt/render;Commit:STITCHCAD-G1-0719.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.metadata`
+  Status: `pending`
+  Goal:explicit result quantity/handedness/companion/fold/face/material/layer/label policy bound to
+  actual source;no name-based inference,duplicate cut authority or silent source replacement.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest`
+  Status: `pending`
+  Goal:bounded fresh Piece/edge/point identity/output-role manifest and complete source-contour/
+  construction/fold attribution;explicit reflection winding/direction mapping,not a geometry certificate.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.copies`
+  Status: `pending`
+  Goal:explicit actual source/result physical-copy policy and complete CutPlan/companion association;
+  retain existing copy identities,separate newly issued copies,no ordinal-derived or reused identity.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.semantics`
+  Status: `pending`
+  Goal:explicit complete semantic/mark/reference/sewing consumer policy and required original source
+  evidence;no automatic copy of spans or reassignment of held objects. Actual effects stay G2/G3/bus.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.checkpoint`
+  Status: `pending`
+  Goal:close only native declaration family after metadata/manifest/copy/sewing requirements and
+  focused contract/book checks;actual currentness/identity issuance/reflection/whole proof stay owned.
 - ID: `G1-SLICE.5f.1.c.stage-order`
   Status: `done`
   Goal:0685 D369 fixed;[whole scope/proofs](../history/stitchcad-devnotes-part853.md).

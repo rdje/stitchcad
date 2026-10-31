@@ -66,7 +66,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Place grainline | Named canonical grainline with directed arrow/alignment/print intent | Existing semantic target;G2 derived mark | Target/source binding only;geometry pending |
 | Walk seam | Named correspondence,explicit A/B anchor/profile pairs | Differential report plus deliberate mark edits | Pair admission/source binding;execution pending |
 | True seam | Actual correspondence,ease,adjusted side/Piece and sourced fit budget | Attributed edge adjustment and remaining differential | Constrained input binding;outputs/coverage pending |
-| Mirror | Named Piece,explicit point/range axis and copy intent | Fresh copy identities and source mapping | Copy inputs only;outputs/geometry pending |
+| Mirror | Named Piece,explicit point/range axis and copy intent | Fresh copy identities and source mapping | Copy inputs/source binding;outputs/geometry pending |
 | Join pieces | Piece/seam/copy correspondence and explicit join intent | Output Piece/topology with semantic lineage | Distinct-Piece source binding;outputs/coverage pending |
 
 The last column is an availability boundary. Stable reference types,structural inventories or a

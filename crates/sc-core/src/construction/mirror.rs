@@ -2,6 +2,12 @@
 use crate::ontology::{DirectedRange, EntityId, PointRef};
 use core::fmt;
 
+mod source;
+pub use source::{
+    BoundMirrorPieceCopy, MirrorPieceEdge, MirrorPieceEdgeLocation, MirrorPieceEdgeSource,
+    MirrorPieceSourceError, MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
+};
+
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
 /// Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

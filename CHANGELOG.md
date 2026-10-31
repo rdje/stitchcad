@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0718 — preserve evidence during daily artifact cleanup
+## STITCHCAD-G1-0719 — bind the actual mirror source Piece
 
-- Removed4 regenerable trees/824 logs:18579 files/622525303B;strict OS idle check passed.
-- Independent immediate census proved828 paths absent and tracked bytes exact before regeneration.
-- All824 saved logs and57 evidence roots/136020 entries/14743246609B exact;2243 unsafe entries kept.
-- Cleanup record/book updated;whole0717 source spans exact. No guard/runtime change or full CI claim.
+- Explicit whole hole/edge-occurrence bounds precede original source scanning;fold/repeats count.
+- Actual source/input/field borrows retain roles,order,direction and refusal context unchanged.
+- Native9/API6/book9,focused clippy/fmt/build/render and exact history888–889 pass.
+- No output metadata choice,copy identity,currentness,reflected geometry or sewing effect is certified.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

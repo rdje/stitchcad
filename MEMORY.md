@@ -1,7 +1,10 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0718;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs — read native input/source/book contracts,split safely first.
+- Latest unit:STITCHCAD-G1-0719;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs.metadata — explicit result metadata policy from actual source.
+  Source bound via bind_piece under whole H/R;authentic original fields/roles retained,fold/repeats
+  charged separately. Native9/API6/book9,selected lint/fmt/build pass;proof target/history-proof-0719-mirror-source/.
+  Next fresh roles/manifests/copy/sewing policy;actual reflection/current Design/issuance stays G2/G3/.5f.2.
 - Daily cleanup2026-10-31 14:26 UTC complete;target/artifact_cleanup_audit/daily-20261031-native/.
   Removed4 trees/824 logs,18579 files/622525303B;all828 paths absent before launcher/book rebuild.
   All824 log copies exact;57 evidence roots/136020 entries/14743246609B preserved.2243 unsafe
@@ -14,7 +17,7 @@
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
 - Tree census10 lanes/13 trees/18 siblings/0 unowned/orphans/dead links;all old map paths/ids/links
-  retained. Whole0717 now887;whole0716 now886;all31219B older live notes remain exact.
+  retained. Whole0718 now888;closed0063 pre-code now889;all31219B older live notes remain exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation

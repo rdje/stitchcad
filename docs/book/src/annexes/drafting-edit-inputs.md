@@ -215,6 +215,58 @@ The existing `Mirroring` cut-plan field supplies no drafting reflection result. 
 reflection/error budgets and the stable output manifest remain actual G2/G3/execution obligations;
 full construction verification stays deferred under `.5f.4`.
 
+### Binding the actual mirror source Piece
+
+`MirrorPieceCopy::bind_piece(&piece,&limits)` binds the actual immutable source before later
+result policies. It requires an explicitly supplied `MirrorPieceSourceLimits`;there is no default.
+The bound view retains the original input,axis,Piece and policy by reference. It copies no Piece,
+metadata,physical cut copy or geometry,and creates no output identity.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceSourceLimits::new(H,R)` | Whole hole groups and all original edge-field occurrences |
+| `BoundMirrorPieceCopy` | Private association of the actual input,Piece,limits and admitted R |
+| `MirrorPieceEdgeLocation` | Boundary,hole/construction/fold role and original field position |
+| `MirrorPieceEdgeSource` | Actual directed field or undirected fold declaration |
+| `MirrorPieceEdge` | Authentic field occurrence borrowing its bound owner and source |
+| `MirrorPieceSourceError`, `MirrorPieceSourceRefusal` | Original context and first actual admission cause |
+
+Identity mismatch refuses first. The whole H quota precedes reading individual hole lengths.
+A checked sum then counts every boundary,hole,construction and fold field;the complete R quota
+precedes any edge-source scan. A repeated construction edge counts each time,and a fold declared
+on the boundary counts again as a separate field. For two boundary edges,two one-edge holes,
+three construction uses and one fold declaration,R is8 even when some identities are shared.
+The constructor uses O(H+R) work and constant auxiliary space;this bounds source association,
+not whole-operation execution or already allocated Piece storage.
+
+```rust
+use sc_core::{construction::*,ontology::Piece};
+fn bind_source<'a>(input:&'a MirrorPieceCopy,piece:&'a Piece,
+    limits:&'a MirrorPieceSourceLimits)
+    ->Result<BoundMirrorPieceCopy<'a>,MirrorPieceSourceError<'a>> {
+    input.bind_piece(piece,limits)
+}
+let limits=MirrorPieceSourceLimits::new(2,8);
+assert_eq!((limits.holes(),limits.edges()),(2,8));
+```
+
+After complete population admission,definite self-supply refuses the first source edge created
+by this mirror operation,in boundary order,then holes and their edge order,construction uses,
+and fold declarations. No accepted prefix escapes. Errors retain the actual input,Piece,policy,
+original location and edge identity/tag. The immutable source is unchanged on success or refusal.
+
+`bound.edges()` enumerates every original occurrence in that same order,including repeats.
+Reverse iteration retains original positions. Directed fields keep their actual authored
+traversal;fold fields have no invented direction. These positions locate fields and never become
+persistent identities. Borrowing the complete Piece retains its original quantities,handedness,
+companion,fold,face,material,layer and label;it does not select those fields as result metadata.
+
+This association establishes neither a current Design member nor current edge ownership/coverage,
+axis validity,common frame,reflection/winding,source-output correspondence or sewing effects.
+A structurally valid Piece retains its original geometric deferral. Explicit result metadata,
+fresh output roles/manifests,physical-copy and whole semantic/sewing policies remain the next
+native output slices;actual reflection/currentness/publication retain their existing owners.
+
 ## Native deliberate walk-edit requests
 
 `construction::WalkSeamEdit` owns an operation id,the required canonical span id and the original

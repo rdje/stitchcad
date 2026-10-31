@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — guarded daily artifact cleanup
+## _(2026-10-31 UTC)_ — bind the actual mirror source Piece
 
-0718 removes4 regenerable trees/824 logs,18579 files/622525303B after frozen-plan review and strict OS idle0.
-Independent pre-launcher census:828 paths absent,tracked bytes exact;all824 saved logs/781356B verified0.
-Before/after57 evidence roots/136020 entries/14743246609B exact0;2243 unsafe entries kept. Book rebuild0.
-No guard/runtime change;package stores excluded by separation,not wholly hashed. Promotion: declined (existing cleanup policy).
+0719 adds actual immutable Piece association under explicit whole H/R bounds before local source scans;fold/repeated uses count separately.
+Original field/owner borrows retain axis,roles,order,direction and all source metadata. No output identity or reflected result is created.
+Native5+4/API6/actual editing-book9,selected clippy/fmt/build/render pass0;fixture direct indexes corrected before final lint. Whole0718/0063 spans888–889 exact0.
+Promotion: declined (existing source/geometry boundary). Explicit result metadata next;G1still6/18/G0 unapproved,full CI/currentness/geometry/sewing effects remain owned.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
