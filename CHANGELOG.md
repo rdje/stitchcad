@@ -3,10 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0661 — earn exclusive platform capture ownership
+## STITCHCAD-G1-0662 — preflight platform child dispatch
 
-- D361 fixes concurrent run/temp adoption and stale ownership. Actual collisions preserve competing bytes;failure stays in new owned run;pending overwrite refuses. Exclusive directory/file/reset body controls reject3 omissions;latest rename stays atomic.
-- Inventory4/current545/six reds/platform31/405/seven reds/book101/374/1684/3002/history820/census/map/diff pass. No fresh runtime verdict;next effects/consumer. a41/D156/full integration remain owned;G1 6/18/G0 unapproved unchanged.
+- D362:validate helper stores/log/page/DOM paths before child or page effects. Two simulated
+  successes/eight physical refusals/four simulated cleanup paths/four actual body omissions pass.
+- Inventory/ownership and history821 four Git spans pass. No fresh numerical/browser verdict;
+  tangent/full-platform effects and native acceptance remain owned. G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

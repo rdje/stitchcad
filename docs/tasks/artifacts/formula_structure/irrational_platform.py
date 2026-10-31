@@ -141,6 +141,8 @@ def protocol_controls():
 
 
 def command(arguments, log, environment, *, timeout=180):
+    PROFILE['verify'](ROOT, environment)
+    PROFILE['plan_producer'](ROOT, output_files=(log,))
     process = subprocess.Popen(arguments, cwd=ROOT, env=environment, stdout=subprocess.PIPE,
         stderr=subprocess.PIPE, text=True, start_new_session=True)
     try:
@@ -223,11 +225,12 @@ def ambient_census(path):
 
 
 def chromium(executable, label, wasm, marker, environment):
+    PROFILE['verify'](ROOT, environment)
     html, dom, log = (RUN / (label + suffix) for suffix in ('.html', '-dom.html', '-chrome.log'))
-    save(html, page(wasm, marker))
     profile, cache, crashes = (RUN / (label + suffix) for suffix in ('-profile', '-cache', '-crashes'))
-    PROFILE['plan_producer'](ROOT, sources=(wasm, html), directories=(profile, cache, crashes, TEMP),
-        output_files=(dom, log))
+    PROFILE['plan_producer'](ROOT, sources=(wasm,), directories=(profile, cache, crashes, TEMP),
+        output_files=(html, dom, log))
+    save(html, page(wasm, marker))
     arguments = [str(executable), '--headless', '--no-first-run', '--no-default-browser-check',
         '--disable-background-networking', '--disable-component-update', '--disable-sync',
         '--disable-crash-reporter', '--disable-breakpad', '--disable-gpu',

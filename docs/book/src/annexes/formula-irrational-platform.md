@@ -417,3 +417,18 @@ Actual collision fixtures preserve competing bytes and perform no compiler/brows
 The read-only watcher independently rejects exclusive-directory,exclusive-file and stale-owner
 reset omissions. These ownership controls are separate from the pending complete effect review
 and fresh native/browser acceptance.
+
+## Preflight at the platform child boundary
+
+The compiler-command helper verifies the supplied effective local stores and log destination
+before starting a child. The browser helper verifies its stores,WASM input,profile/cache/crash
+and temporary directories,and HTML/DOM/log destinations before writing the generated page or
+starting Chrome. Linked log destinations and external supplied stores refuse at this boundary.
+Both helpers keep explicit child environments and separate process sessions;timeout or interruption
+stops the owned group before returning control to restoration.
+
+The focused dispatch watcher checks two simulated successes,eight physical log-alias/store
+refusals,four simulated timeout/interruption cleanup paths and four actual Python-body omissions.
+These controls prove helper ordering and dispatch behavior. Tangent configuration coverage,
+complete platform mutable/temp/failure review and fresh compiled native/browser acceptance remain
+separate leaves. Earlier numerical captures retain their original scope and identity.

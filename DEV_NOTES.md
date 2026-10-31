@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — earn exclusive platform capture ownership
+## _(2026-10-31 UTC)_ — preflight platform child dispatch
 
-0661 closes n16.2.ownership. D361 P1:actual old prepare admits a concurrent run and reaches trapped foreign failure publication. Reset stale owner before preflight;reserve run/temp exclusively. Report/failure/pending files use exclusive creation;temp identity survives sealing and latest rename stays atomic.
-Actual run collision refuses before receipt/browser/compiler. Actual temp collision preserves competing sentinel;failure stays in the new owned run. Existing pending pointer refuses overwrite. Independent pure helper/reset controls reject three actual body omissions. No source/capture bytes overwritten.
-Four plans/current545/six reds and platform31/405/seven reds remain green. Book101/374/1684/3002/history820 four exact Git spans/census/map/diff pass. LIVE notes:D361 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing immutable ownership contracts. No fresh native/browser verdict.
-[Whole0660](docs/history/stitchcad-devnotes-part820.md) retains D360 inventory proof. n16/n16.2 active;next effects,then actual consumer;a41/D156/.h2.b.v/pre-push remain owned. Session health flagged:long review/fresh context recommended;durable pointer names next slice. No user pause inferred.
-Evidence:target/platform-0661-ownership.log plus actual controlled run/temp/pending red→green. Shared read-only watcher remains nonproducing. Native/Chrome execution stays separate;original reports and historical capture roots remain immutable.
+0662 fixes D362 under n16.2.effects.dispatch:old command dispatch preceded linked-log refusal;browser HTML preceded its full plan;both accepted unverified stores. Eight failures reproduce against22b8983c.
+Verify stores/destinations before child/page effects. Two simulated successes/eight alias+store refusals/four simulated cleanups/four actual body omissions pass;sentinels exact. No new compiler/browser/numeric verdict.
+Inventory four plans/545 files/six reds/platform31/405/seven reds/three ownership omissions pass. History821 four Git spans exact;[whole0661](docs/history/stitchcad-devnotes-part821.md) retained. Broader gates stay .h2.b.v/pre-push.
+LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing producer boundary rules). External README/claim/containment neutral bodies match. Next tangent/full-platform effects,then fresh native/Chrome acceptance;PNT continues.
+
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
