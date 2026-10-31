@@ -3,8 +3,8 @@
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
 > geometry. Primitive/slash-spread/mirror-copy inputs,amount proofs and semantic binding are available
-> here and in the native-edit companion. Offset/slash native output requirements are available;
-mirror/walk/truing/join outputs and geometry execution remain owned. No geometry certificate.
+> here and in the native-edit companion. Offset/slash/mirror native output requirements are available;
+> walk/truing/join outputs and geometry execution remain owned. No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
 from scalar lets/assertions. A formula can read a prior point or edge through a selector;only a

@@ -9,7 +9,7 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Status: `done`
   Goal:0684 completed scope;[whole scope/proofs](../history/window27.md#stitchcad-devnotes-part851md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs`
-  Status: `in_progress`
+  Status: `done`
   Goal:typed copy metadata/cut-plan/sewing policy,fresh identity/output-role and manifest admission
   contract for G1 schemas. Real current reflection/reference mappings stay .5f.4.geometry/G2/G3;
   native contract acceptance needs no completed geometry engine. No metadata/default-id shortcut.
@@ -106,18 +106,17 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Goal:0737 actual complete CutPlan;[whole scope/proofs](../history/stitchcad-devnotes-part911.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.semantics`
   Status: `done`
-  Goal:explicit complete semantic/mark/reference/sewing policy and original source requests.
-  - [x] ISSUE:copy/contour association cannot authorize semantic or sewing effects.
-  - [x] ROOT CAUSE (mirror semantics):actual canonical holder/copy decisions reviewed;
-    fixed nine fields retain distinct original scopes under both explicit intents;rc=0.
-  - [x] FIX:SourceOnly/ExplicitResultMappings with complete borrowed plan/correspondence parents.
-  - [x] ADDRESSED (mirror semantics):cargo test --test mirror_piece_semantic_requirement_contract
-    --test mirror_piece_copy_plan_contract:3+6 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (mirror semantics):API4/semantic book1,lint/fmt/build/map/render;
-    old kernels/fixtures/book fences,Summary order/120 lines,911 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing holder/copy/effect boundary).
-  Proof:target/history-proof-0738-mirror-semantic-requirements/;Commit:STITCHCAD-G1-0738.
+  Goal:0738 semantic requirements;[whole scope/proofs](../history/stitchcad-devnotes-part912.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.checkpoint`
-  Status: `pending`
-  Goal:close only native declaration family after metadata/manifest/copy/sewing requirements and
-  focused contract/book checks;actual currentness/identity issuance/reflection/whole proof stay owned.
+  Status: `done`
+  Goal:close only native declaration family;actual currentness/issuance/geometry/effects remain owned.
+  - [x] ISSUE:native mirror family needed a scoped completion checkpoint.
+  - [x] ROOT CAUSE (mirror checkpoint):all19 native suites and actual API/book filter selected;
+    original core/source pinned,all21 prior book Rust fences retained;rc=0.
+  - [x] FIX:32-node native branch closed,original goals/proofs and execution owners retained.
+  - [x] ADDRESSED (mirror checkpoint):cargo test selected mirror suites:80 pass;
+    --doc construction::mirror:80 pass;rc=0;full invocations/source in receipt.
+  - [x] NO REGRESSION (mirror checkpoint):runtime/tests/Cargo unchanged,fmt/book/map/render;
+    whole0738/912 Git spans and prior notes base exact;rc=0.
+  - [x] LOCKSTEP:book/live/frontier aligned;promotion: declined (existing declaration/execution boundary).
+  Proof:target/history-proof-0739-mirror-checkpoint/;Commit:STITCHCAD-G1-0739.

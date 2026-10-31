@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0738 — require complete mirror semantic and sewing evidence
+## STITCHCAD-G1-0739 — complete native mirror declaration checkpoint
 
-- Explicit SourceOnly/ExplicitResultMappings retains nine mandatory original evidence-source fields.
-- Actual complete candidate plan/correspondence borrowed;shared/zero ids omit no obligation.
-- Canonical source holders and copy-specific neighbours cannot transfer automatically;no evidence accepted.
-- Native9/API4/semantic book1 and focused lint/fmt/build/map/render/history911 checks pass.
-- New bounded book chapter documents complete requests;native family checkpoint next.
+- All19 mirror contract suites pass80;actual mirror API/book doctests pass80,with21 original examples unchanged.
+- All32 native mirror task nodes close;original goals/proofs and execution ownership remain intact.
+- Runtime/tests/Cargo unchanged;original source/core pinned;fmt/book/map/render/history912 checks pass.
+- Native metadata/manifest/copy/companion/semantic requirements complete;actual effects remain pending.
+- Walk output sharing/coalescing/identity is next;G1 remains6/18 and G0 closure unapproved.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

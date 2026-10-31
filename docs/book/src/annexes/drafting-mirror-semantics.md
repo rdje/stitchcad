@@ -84,3 +84,25 @@ whole-Design work budget or complete registry census is inferred. All original o
 held borrows remain unchanged. This completes native semantic/sewing requirement declaration;
 actual supported mappings,provider evidence,currentness,global issuance,physical effects,geometry
 and atomic authorized publication remain G2/G3/Design/bus obligations.
+
+## Native declaration checkpoint
+
+The scoped mirror-family checkpoint runs all19 mirror contract suites:80 native tests pass.
+The actual `construction::mirror` API/book filter passes80 doctests,including the21 unchanged
+examples across the input,output,physical-copy and semantic companions. Source commit
+`d2126ec598a13922eb23dc580b350233e12642aa` and its core tree are pinned in the local
+`target/history-proof-0739-mirror-checkpoint/receipt.json`. This checkpoint changes no Rust source,
+test,Cargo input or prior Rust example. All32 native mirror task nodes are complete.
+
+The native family now covers original inputs/source/cut/metadata,typed identity/output roles,
+complete point/edge attribution and contours,correspondence requests,explicit Retain/Retire/Issue,
+actual candidate inventory/CutPlan/companion association,and mandatory semantic/sewing requirements.
+The tests include refusal,ownership/lifetime and immutable-parent cases;they establish the scoped
+native contracts. They do not establish full CI,platform parity,current Design ownership,global
+identity reservation/issuance,accepted provider evidence,actual reflection/physical-copy/semantic
+or sewing effects,or authorized publication. Those execution owners remain pending.
+
+The next native output family is walk,with explicit mark sharing/coalescing and physical-copy
+identity policy. Ordered Design/registry/history integration remains .5f.2,selector/parameter/error
+budget integration .5f.3,and actual geometry-backed replay .5f.4.geometry/G2/G3. Broader typed-v1
+integration and the mandatory pre-push gate retain their own milestone;this result does not close G1.

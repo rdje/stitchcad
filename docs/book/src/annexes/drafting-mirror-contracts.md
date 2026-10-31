@@ -1,5 +1,9 @@
 # Native mirror Piece-copy contracts
 
+The [native declaration checkpoint](drafting-mirror-semantics.md#native-declaration-checkpoint) covers
+this input family and its output,copy/companion and semantic-requirement companions. Actual execution
+remains separate;native declarations do not certify geometry,current Design or publication.
+
 ## Native reflected Piece-copy inputs
 
 `construction::MirrorPieceCopy` declares a reflected copy of the named existing Piece. The type

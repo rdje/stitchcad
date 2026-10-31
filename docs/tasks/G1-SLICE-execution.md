@@ -841,7 +841,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 [Native slash output declarations and focused checkpoint](G1-SLICE-slash.md#native-slash-output-declarations)
 retain their complete task branch,original goals and proof links in the bounded sibling.
 
-[Native mirror Piece-copy declarations](G1-SLICE-mirror.md#native-mirror-piece-copy-declarations)
+[Native mirror declarations and focused checkpoint](G1-SLICE-mirror.md#native-mirror-piece-copy-declarations)
 retain their complete task branch,original goals and proof links in the bounded sibling.
 
 - ID: `G1-SLICE.5f.1.c.stage-order`
