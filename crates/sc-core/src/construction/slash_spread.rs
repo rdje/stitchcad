@@ -6,6 +6,8 @@ use crate::{
 };
 use core::fmt;
 mod contours;
+mod effect;
+pub use effect::{RequiredSlashSpreadEffect, SlashSpreadEffectRequirement};
 mod copies;
 pub use copies::{
     BoundSlashSpreadCopies, SlashSpreadCopyError, SlashSpreadCopyLimits, SlashSpreadCopyRefusal,

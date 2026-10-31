@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — preserve every actual slash physical-copy identity
+## _(2026-10-31 UTC)_ — require attributed fullness without a second authored amount
 
-0713 binds actual CutPlan after whole C allowance,including unrelated copies;target orientation/quantity/pair association uses inherited canonical metadata. All target copy ids/definitions/order remain borrowed;reverse/reordered traversal supplies no identity. No allocation,new copy id or all-copy effect.
-Native3 covers paired reorder,unrelated whole quota,quantity/pair/Single/PairMember incompatibility and no mutation. Matching population does not prove current Design/namespace/companion or semantic/sewing ownership. Iterator captures source id value plus original plan borrow,fixing E0700 without suppression.
-Native7/privacy2/actual metadata book2/selected strict clippy/fmt/book/render/diff/history882 three spans/helper proof pass. Whole boundary helper moved with only pub/import wiring;old metadata test suffix and31219B older notes exact. Protected target/history-proof-0713-metadata-fixture/. D372 persists.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing copy identity/lifetime boundary). Next attributed effect,then zero/no-new-edge/native closure;actual G2/current Design/copy-sewing effects/authority/publication and full verification stay owned. PNT continues.
+0714 binds mandatory derivation/attribution/canonical-intake evidence sources to actual complete copies. Original fullness,input and embedded opening remain borrowed;the metadata all-copy-effect source is reused. No second Length/Area/intake,copy selection,evaluation or accepted provider evidence exists.
+Actual cut-four case retains all copy ids/orientations and exact Added/input/opening/all-copy-source owners. Removed never substitutes for canonical Dart closure;intake and conservation keep their original semantic owners. No achieved effect,currentness,authority or atomic publication proof follows.
+Native3/privacy2/actual metadata book3/strict selected clippy/fmt/book/render/diff/history883 three exact spans pass. Both prior actual examples and31219B older notes exact. Original Piece/copy inventory/ledger unchanged. Protected target/history-proof-0714-note-boundary/. D372 persists.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing canonical intake boundary). Next explicit zero/no-new-edge outcome preserving metadata/copies/roles,then native closure;actual G2/effects/canonical intake/copy-sewing/Design/bus/full verification stay owned.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

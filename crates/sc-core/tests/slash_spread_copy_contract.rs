@@ -95,6 +95,49 @@ fn every_actual_copy_keeps_its_identity_orientation_and_authored_order_through_r
             assert_eq!(Some(copy), plan.copy(copy.id()));
         }
         assert_eq!(bound.metadata().requirement().all_copy_effects(), &id(931));
+        let request = SlashSpreadEffectRequirement::new(id(940), id(941), id(942));
+        let effect = bound.require_attributed_effect(&request);
+        assert!(std::ptr::eq(effect.copies(), &bound));
+        assert!(std::ptr::eq(effect.requirement(), &request));
+        let original_intent = bound
+            .metadata()
+            .boundary()
+            .consumers()
+            .registration_plan()
+            .sources()
+            .contours()
+            .edges()
+            .bound_roles()
+            .intent();
+        assert!(std::ptr::eq(effect.output_intent(), original_intent));
+        assert!(std::ptr::eq(
+            effect.requested_fullness(),
+            original_intent.fullness()
+        ));
+        assert!(std::ptr::eq(effect.input(), original_intent.input()));
+        assert!(std::ptr::eq(
+            effect.opening(),
+            original_intent.input().opening()
+        ));
+        assert!(std::ptr::eq(
+            effect.all_copy_effects_source(),
+            bound.metadata().requirement().all_copy_effects()
+        ));
+        assert_eq!(effect.requirement().derivation(), &id(940));
+        assert_eq!(effect.requirement().attribution(), &id(941));
+        assert_eq!(effect.requirement().canonical_intakes(), &id(942));
+        assert_eq!(
+            effect.requested_fullness(),
+            &SlashSpreadFullnessIntent::Added
+        );
+        assert_eq!(
+            effect
+                .copies()
+                .copies()
+                .map(|copy| *copy.definition())
+                .collect::<Vec<_>>(),
+            rows
+        );
     });
     assert_eq!(f.ledger.journal().len(), journal);
     assert_eq!(

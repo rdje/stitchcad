@@ -3,8 +3,8 @@
 This companion continues the [output and reference-disposition contracts](drafting-slash-output-contracts.md).
 Native declarations retain original owners and request evidence. They do not create a geometrically
 valid replacement Piece,change canonical metadata or authorize publication. The nonempty changed
-contour path and structural copy association are available;effect and zero/no-new-edge outcomes
-remain separately owned native work. Actual geometry/current Design/semantic repair stays G2/G3/Design/bus.
+contour path,structural copy association and effect requirements are available;zero/no-new-edge
+outcomes remain separately owned native work. Actual geometry/current Design/semantic repair stays G2/G3/Design/bus.
 
 ## Canonical source-metadata preservation
 
@@ -123,4 +123,46 @@ edits no sewing graph,copy definition,Piece or ledger. The explicit all-copy-eff
 remains required for every actual copy and semantic/sewing consumer. Pattern edits affect their
 shared Piece;they cannot silently select one physical copy or transfer its neighbours. Actual
 current ownership,all-copy effects,fold geometry and publication authority remain G2/G3/Design/bus
-proof. Attributed fullness/effect and explicit zero/no-new-edge outcomes still precede native family closure.
+proof. Attributed fullness/effect requests follow below;explicit zero/no-new-edge outcomes remain before native closure.
+
+## Attributed fullness and canonical intake requirements
+
+`SlashSpreadEffectRequirement::new(derivation,attribution,canonical_intakes)` requires three explicit
+evidence-source identities. Derivation must establish the actual effect and its supported observable/
+domain;attribution must connect it to this operation's same original inputs;canonical-intake evidence
+must reconcile affected Dart/Tuck/Pleat/Gather owners and their closing/conservation obligations.
+These are requested sources,not supplied evidence,registry resolution or an achieved result.
+
+`bound_copies.require_attributed_effect(&request)` binds them to the actual complete copy/metadata/
+boundary/source context. It allocates nothing and performs no formula evaluation,geometry,closure,
+copy selection or semantic edit. There is no independently authored Length,Area or intake field.
+The original all-copy-effect evidence source remains on the canonical metadata requirement rather
+than being entered again. Every actual admitted target copy and its semantic/sewing consumers remains
+in scope;one selected copy cannot substitute for the complete inventory.
+
+```rust
+use sc_core::construction::*;
+fn require_effect<'a>(copies:&'a BoundSlashSpreadCopies<'a>,request:&'a SlashSpreadEffectRequirement)
+    ->RequiredSlashSpreadEffect<'a> {
+    copies.require_attributed_effect(request)
+}
+```
+
+The private `RequiredSlashSpreadEffect` exposes the actual original `output_intent()`,
+`requested_fullness()`,spatial `input()` and embedded `opening()` by reference. It stores no duplicate
+fullness policy or solved opening. `copies()` retains every actual target-copy identity;
+`all_copy_effects_source()` borrows the original metadata request field. `requirement()` retains
+all three original derivation/attribution/canonical-intake source fields. Shared provider identities
+would not merge these scopes or certify the provider.
+
+Added/Removed/Unchanged remain the original intended effect. No angle sign,separation direction,
+zero formula or full turn establishes the actual result here. A Removed request neither closes a
+canonical Dart nor substitutes for its conserved intake. Existing intake parameter/formula/profile
+owners remain authoritative;actual closing operations must satisfy their own conservation checks.
+A provider must justify the effect,not copy an independently entered amount into a successful report.
+
+The actual cut-four copy case retains all four ids/orientations and the exact original Added/input/
+opening fields after requesting effect evidence. Its Piece,copy inventory and ledger remain unchanged.
+This completes only the native effect **requirement declaration**. Actual supported domain/effect,
+canonical intake conservation,all-copy semantic/sewing effects,current ownership and atomic publication
+keep their G2/G3/Design/bus owners. Explicit zero/no-new-edge outcomes remain before native family closure.

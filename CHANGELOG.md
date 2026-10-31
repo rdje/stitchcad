@@ -8,12 +8,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0713 — preserve every actual slash physical-copy identity
 
-- Bind whole actual CutPlan under explicit C quota,target orientation/quantity/pair association.
-- Keep every actual target copy id/orientation/order;refuse incompatible populations without new ids.
-- Native7/rustdoc4/lint/fmt/book/render/diff/history882/shared-helper proof pass;old test bodies exact.
-- Attributed effect/zero outcomes and actual current Design/copy-sewing/G2/authority proof remain owned.
+## STITCHCAD-G1-0714 — require attributed fullness without a second authored amount
+
+- Bind explicit derivation/attribution/canonical-intake sources to original inputs and all actual copies.
+- Reuse canonical all-copy source;preserve declared fullness/opening without another amount or closure.
+- Native3/rustdoc5/lint/fmt/book/render/diff/history883 pass;old examples/notes and all original owners exact.
+- Explicit zero/no-new-edge outcome and actual G2/canonical intake/copy-sewing/currentness proof remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

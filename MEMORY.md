@@ -1,23 +1,23 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0713;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.effect
-  — explicit attributed fullness/effect derivation requirements from original inputs,canonical intake
-  distinction and every actual copy/semantic/sewing consumer. Activate/split before code;zero follows.
-- Native actual CutPlan binding checks whole C before target orientation/quantity/pair balance;
-  all actual target copy borrows/ids/order preserved,no allocation/new ids/currentness certificate.
-  Native7/rustdoc4/lint/fmt/book/render/history882 pass. Shared whole boundary helper/body proof:
-  target/history-proof-0713-metadata-fixture/;old metadata tests and31219B older notes exact.
+- Latest unit:STITCHCAD-G1-0714;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome
+  — activate/split explicit zero/no-new-edge path and changed/unchanged outcome declaration.
+  Preserve original inputs/Piece metadata/actual copies/canonical roles;no fabricated candidate,
+  inferred effect,implicit role retirement or currentness certificate. Actual evidence remains owed.
+- Native effect requirement binds derivation/attribution/canonical-intake requests to all actual
+  copies;original fullness/input/opening and existing all-copy source borrowed,no second amount.
+  Native3/rustdoc5/lint/fmt/book/render/history883 pass;2 prior actual examples/older31219B notes exact.
+- Actual CutPlan whole C precedes target orientation/quantity/pair association;all ids/order retained.
+  Whole0713 scope/lesson now883. Protected target/history-proof-0713-metadata-fixture/ retains exact
+  moved helper and old metadata test-body proof;target/history-proof-0714-note-boundary/ protected.
 - Native metadata borrows all canonical Piece fields/derived print view;explicit NoFold/retained or
-  Source-derived outer original-fold attribution. Evidence requests retained,not accepted proof.
-  0712 native6/rustdoc3 passed;whole scope/lesson/changelog now882;whole0065 protocol retained881.
-- New drafting-slash-piece-contracts.md companion8719B;actual metadata/copy examples2. Original
-  slash chapter whole prefix intact with link. SUMMARY120/cap120,all old links/order+new direct entry.
-- Semantics remains active:effect/outcome/closure owned. Explicit zero/no-new-edge path must
-  not fabricate candidates. Native reference-disposition closes with focused checks only.
-- Boundary requirement binds explicit domain/whole source-interval coverage plus bridge incidence/
-  closure or complete trim arrangement/unique boundary selection. Actual policy mismatch refuses;
-  no loop/map/Param/evidence acceptance. Native6/rustdoc11/lint/fmt/book/render/history880 pass.
+  Source-derived outer original-fold attribution;whole0712 now882/0065 protocol881. No accepted proof.
+- drafting-slash-piece-contracts.md has metadata/copy/effect examples3;old output chapter retained.
+  SUMMARY120/cap120;all direct navigation retained. Native declarations remain focused-check scope.
+- Semantics outcome/closure remain owned;native reference-disposition has focused-check closure only.
+- Boundary requirements:domain/whole interval coverage plus bridge incidence/closure or trim
+  arrangement/unique selection. Policy mismatch refuses;no geometry/evidence accepted;whole0711 now881.
 - Whole consumer requirements five mandatory sources,even empty registry/equal providers;actual
   registered/source/contour/ledger contexts retained. Current ownership/authority remain evidence.
 - Registered-source plan covers all actual source registrations,other owners/unresolved points;
@@ -28,8 +28,7 @@
   immutable Notch. Live/resolved source can still lie outside replacement Piece;0707 decision/877.
 - Eligibility Unique/Ambiguous/Gap remains metadata. Contours retain original identities and all
   occurrences. Whole0708/0709/0710 archives878/879/880 retain native scope/lessons/checks exactly.
-- All older31219B live notes exact;protected target/history-proof-0712-note-boundary/. Correction
-  of overwide0708 note selection retained in0709;target/history-proof-0709-note-boundary/ protected.
+- Older31219B notes exact;overwide0708 selection correction retained0709;protect all history-proof prefixes.
 - Protected proofs:target/history-proof-0706-reference-fixture/,history-proof-0704-output-book/,
   history-proof-0703-shared-edge-roles/,history-proof-0696-role-policy/ under target/;never remove.
   Whole6172B slash body moved0704;old anchors/offset type aliases remain. Preserve all proof prefixes.

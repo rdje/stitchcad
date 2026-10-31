@@ -910,29 +910,28 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.copies`
   Status: `done`
-  Goal:actual complete CutPlan borrow/whole C quota,target population/orientation association;
-  retain all actual target copy ids/order/orientations,no allocation,new id or current Design proof.
-  - [x] ISSUE:source quantity cannot replace actual distinct physical-copy identities.
-  - [x] ROOT CAUSE (slash physical copies):published CutPlan/metadata/D57 scopes read;actual
-    reordered paired ids,unrelated whole population and incompatible birth metadata checked,rc=0.
-  - [x] FIX:whole C quota before scans;first unexpected reflection,complete quantity,then pair
-    balance;authentic original copy borrows and actual whole metadata/plan/policy on refusal.
-  - [x] ADDRESSED (slash physical copies):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test slash_spread_copy_contract →3 pass,rc=0;all actual ids/orientations/order,
-    unrelated C allowance,quantity/pair/Single/PairMember refusals and source/ledger nonmutation.
-  - [x] NO REGRESSION (slash physical copies):metadata4/privacy2/actual metadata book2/selected
-    strict clippy/fmt/book/render/diff/archive882 three exact spans and helper proof pass,rc=0.
-    Whole helper differs only by pub/import wiring;old test suffix exact. Iterator captures actual
-    source id value and original plan borrow,fixing E0700 without weakening lifetimes/suppressions.
-    Prior actual book example and31219B older live notes exact;no all-copy effect/currentness proof.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing copy identity/lifetime boundary).
-  Verification:native7/rustdoc4;Commit:STITCHCAD-G1-0713. Next .semantics.effect;actual current
-  Design/namespace/companion/copy-sewing effects,G2 geometry and atomic publication remain owned.
+  Goal:0713 actual copies;[whole scope/proofs](../history/stitchcad-devnotes-part883.md).
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.effect`
-  Status: `pending`
-  Goal:attributed fullness derivation requirements from original inputs,canonical intake distinction
-  and all-copy semantic effects;no independent amount/default or achieved physical effect claim.
+  Status: `done`
+  Goal:mandatory derivation/attribution/canonical-intake evidence requests bound to actual complete
+  copies;borrow original fullness/input/opening and existing all-copy source,no second amount.
+  - [x] ISSUE:Added/Removed/Unchanged is not an attributed effect or canonical intake closure.
+  - [x] ROOT CAUSE (slash attributed effect):actual input/output/copy and canonical Dart/Tuck/
+    Pleat/Gather intake/closure contracts read;original Added/input/opening owner checked,rc=0.
+  - [x] FIX:mandatory explicit source requests with private whole-copy/original-input context;
+    fixed association allocates/evaluates nothing,selects no copy and accepts no provider evidence.
+  - [x] ADDRESSED (slash attributed effect):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test slash_spread_copy_contract →3 pass,rc=0;actual cut-four context,all original
+    copy ids/orientations and exact input/opening/fullness/all-copy-source fields preserved.
+  - [x] NO REGRESSION (slash attributed effect):privacy2/actual metadata book3/strict selected
+    clippy/fmt/book/render/diff and archive883 three exact spans pass,rc=0. Both prior actual book
+    examples and31219B older live notes unchanged;Piece/copy inventory/ledger remain unchanged.
+    No achieved effect,intake conservation,provider/currentness/authority or publication certificate.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing canonical intake boundary).
+  Verification:native3/rustdoc5;Commit:STITCHCAD-G1-0714. Next .semantics.outcome;explicit zero/
+  no-new-edge path must preserve original metadata/copies/roles without fabricating a candidate.
+
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome`
   Status: `pending`
   Goal:explicit unchanged/zero/no-new-edge declaration without fabricated candidate,plus changed
