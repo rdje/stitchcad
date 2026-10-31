@@ -2,7 +2,7 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Primitive declarations,real scalar argument proofs and offset input binding are available
+> geometry. Primitive declarations,scalar proofs and offset/grainline input binding are available
 > below;remaining schemas,ordered dependencies and geometry execution are pending. No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -49,7 +49,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Slash/spread | Current Piece/cut/pivot references and explicit opening mode | New/retired topology and an attributable opening | Pending .1.c |
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
 | Add notch | Piece id,EdgeAnchor,NotchProfileBindings | Fresh semantic notch id and retained source anchor | AddNotch request exists;geometry pending |
-| Place grainline | Current Piece and canonical grain direction/anchor intent | Persistent semantic placement and derived mark | Canonical intent exists;operation pending |
+| Place grainline | Named canonical grainline with directed arrow/alignment/print intent | Existing semantic target;G2 derived mark | Target/source binding only;geometry pending |
 | Walk seam | Actual seam correspondence and explicit balance-mark intent | Differential report plus deliberate mark edits | Query exists;editing operation pending |
 | True seam | Actual correspondence,declared ease and explicit adjustment policy | Attributed edge adjustment and remaining differential | Pending .1.c |
 | Mirror | Current source geometry and explicit reflection axis/mode | Declared output identities and source mapping | Cut orientation exists;operation pending |
@@ -402,3 +402,41 @@ intervals and use the published identity-ledger contract for unambiguous mapping
 repair tasks. Source geometry,width resolution,corner construction,loops,error bounds,output
 manifest and command publication remain pending. A Bézier offset cannot be assumed to be one
 exact Bézier,or certified from a bounding box. Full operation integration remains `.5f.4` work.
+
+## Native grainline placement input binding
+
+`construction::GrainlinePlacement` retains an operation id and the required existing semantic
+`Grainline` identity. It supplies no copied direction,default angle or replacement print axis.
+`bind_grainline` checks the actual target identity,then every original arrow/alignment/stripe/plaid
+source in that order for definite local self-supply. The constructor also refuses a target with
+this operation's own identity. Numeric ids do not establish global prior-operation order.
+
+The private `BoundGrainlinePlacement` view borrows the exact placement and supplied semantic
+record. Its `alignment` accessor borrows the actual `GrainAlignment` field;`references` delegates
+to that record's directed sources. Parallel alignment stays distinct from an explicit Angle,
+Formula id or Profile parameter. No angular value is read or inferred. Stripe and plaid remain
+independent optional roles;absent references stay absent,and repeated sources retain every use.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+fn prepare_grainline(operation:EntityId,grainline:&Grainline)
+    ->Result<GrainlinePlacement,Box<dyn std::error::Error>> {
+    let input=GrainlinePlacement::new(operation,grainline.id())?;
+    let bound=input.bind_grainline(grainline)?;
+    assert!(std::ptr::eq(bound.grainline(),grainline));
+    assert!(std::ptr::eq(bound.alignment(),&grainline.definition().alignment));
+    Ok(input)
+}
+```
+
+The semantic target retains its Piece owner and directed arrow. This stage issues no new semantic
+identity or geometric edge tags and performs no mutation. Straightness,actual angular relation,
+material/profile constraints and the derived visible mark remain G2/G4/execution obligations.
+
+Association is checked against the supplied record;it does not prove membership in the actual
+current Design/inventory or current ledger coverage. A later deleted plaid source can still pass
+this association while `Grainline::validate_current` reports its original Plaid repair cause.
+Existing `DesignInputs::grain_allowance_declarations` checks actual canonical Angle metadata for
+formula alignment without supplying a value. The eventual ordered operation program must join
+those current-root,namespace/frame and evaluation checks before placement/publication. Full
+construction integration and platform verification remain deferred under `.5f.4`.

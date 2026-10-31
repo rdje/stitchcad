@@ -811,30 +811,31 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0679 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part842.md).
 - ID: `G1-SLICE.5f.1.c.offset.inputs`
   Status: `done`
-  Goal:typed directed source range/side and canonical allowance identity binding;retain actual
-  width/corner/profile intent without copied values. Refuse definite self-supply/wrong allowance
-  or source edge;borrow authentic bound owners. No fragment/output-count,currentness or geometry
-  claim. Recover public contracts;retire whole0679 scope/journals,focused checks and book sync.
-  Remaining output lineage/execution belongs .1.c/.5f.3/G2;full .5f.4 stays deferred.
-  - [x] ISSUE:offset inputs need actual canonical allowance intent without a fake single output.
-  - [x] ROOT CAUSE (WHY + WHERE):Python HEAD5e7559a1 offset module absent;public allowance
-    owns width/corner/inclusion and ledger delegates fragment intervals to G2,rc=0.
-  - [x] FIX:reuse DirectedRange,explicit side and allowance id;local self-supply refusal and
-    authentic actual descriptor binding preserve original source/width/corner/profile fields.
-  - [x] ADDRESSED (offset inputs):local_environment.py -- cargo test --offline --locked -p sc-core --test
-    offset_construction_contract →4 pass,rc=0;actual borrows/all width origins/corners,typed first
-    mismatches,directed partial ranges and deleted-source association/currentness distinction.
-  - [x] NO REGRESSION:allowance11/offset rustdoc3/selected clippy/fmt/book/rendered boundaries/
-    diff/history842 three exact Git spans pass,rc=0. Fixture constructor name and unchecked
-    indexing corrected before final native/lint runs;no broad/platform/geometry verdict.
-  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (existing allowance contracts).
-    Root/currentness .5f.2,outputs below,G2 execution and full .5f.4 remain owned/deferred.
-  Verification:focused native15/rustdoc3;Commit:STITCHCAD-G1-0680. Next grainline input binding.
+  Goal:0680 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part843.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs`
   Status: `pending`
   Goal:complete offset output manifest/lineage from actual G2-2D.2 fragment intervals via the
   published identity-ledger contract;stable tags,unambiguous maps and visible ambiguity/loss.
   No fixed count or synthetic fragments. Integrate .5f.3;parent .1 remains open until covered.
+- ID: `G1-SLICE.5f.1.c.grainline.inputs`
+  Status: `done`
+  Goal:bind actual grainline target/angle/directed sources;refuse local self-supply,retain
+  original owners and roles. No currentness/geometry claim. Retire whole0680 scope/journals;
+  focused checks/book sync. Full .5f.4 deferred.
+  - [x] ISSUE:placement needs actual semantic grain/angle/print sources without copied directions.
+  - [x] ROOT CAUSE (WHY + WHERE):Python HEAD0383ded3 placement module absent;actual Grainline
+    definitions/references/current validator and Design grain-angle adapter inspected,rc=0.
+  - [x] FIX:typed operation/target and authentic borrowed record/alignment;identity precedes
+    first actual self-source refusal in arrow/alignment/stripe/plaid order. No default angle.
+  - [x] ADDRESSED (grainline placement):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test grainline_placement_contract →4 pass,rc=0;all angle origins/role refusals,
+    first mismatch,repeated/absent roles and deleted-plaid association/currentness distinction.
+  - [x] NO REGRESSION (grainline):grain12/placement rustdoc3/selected clippy/fmt/book/rendered
+    boundaries/diff/history843 three exact Git spans pass,rc=0;actual semantic records unchanged.
+    No full integration/platform or alignment/geometry verdict.
+  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (existing semantic grain API).
+    Current-root/frame/values/derived marks and full .5f.4 remain owned/deferred.
+  Verification:focused native16/rustdoc3;Commit:STITCHCAD-G1-0681. Next slash/spread contracts.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

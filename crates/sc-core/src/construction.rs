@@ -14,6 +14,8 @@ pub use bezier::{
     BezierConstruction, BezierConstructionError, BezierControlPoints, BezierDegree,
     BezierPointDependency, BezierPointRole,
 };
+mod grainline;
+pub use grainline::{BoundGrainlinePlacement, GrainlinePlacement, GrainlinePlacementError};
 mod line;
 pub use line::{LineConstruction, LineConstructionError, LineEndpoint, LinePointDependency};
 mod offset;

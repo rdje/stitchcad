@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0680 — bind offset inputs to actual allowance intent
+## STITCHCAD-G1-0681 — bind placement to actual semantic grainline intent
 
-- Reuse directed ranges and explicit side;bind exact allowance identity/source without cached width.
-- Authentic field borrows retain all width/corner/profile intent;currentness remains separate.
-- Offset4/allowance11/rustdoc3/selected lint/fmt/book pass;whole0679 retained842.
-- Fragment output lineage,G2 geometry/current-root integration and full .5f.4 remain owned.
+- Named placement target binds actual arrow/alignment/stripe/plaid sources;first local self-supply refuses.
+- Authentic owners/alignment preserve angle origins,optional roles and repeated uses without defaults.
+- Placement4/grain12/rustdoc3/selected lint/fmt/book pass;whole0680 retained843.
+- Current root/frame/value resolution,derived marks and full .5f.4 remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

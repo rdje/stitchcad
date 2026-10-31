@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind offset inputs to actual allowance intent
+## _(2026-10-31 UTC)_ — bind placement to actual semantic grainline intent
 
-0680 reuses DirectedRange and explicit left/right traversal side with a canonical allowance id. Binding checks actual id then exact original edge and borrows both owners;actual width/corner/inclusion fields remain attached. No copied value,default join or synthetic fragment output.
-Offset4/allowance11/rustdoc3/selected clippy/fmt/book/rendered boundaries/diff/history842 three exact Git spans pass. Fixture constructor name/indexing were corrected before final checks. Formula/Profile remain symbolic;wrong-id precedes wrong-edge;original bounds/direction survive.
-Association alone grants no root/currentness proof:after source deletion it still binds held intent while existing current allowance validation returns real interval repair. G2 owns width evaluation,bounded curves/fragments and topology mappings;outputs remain explicitly scheduled.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing allowance contracts). Whole0679 retained842. Next .1.c grainline input binding;frame/graph/geometry/full .5f.4 remain owned. PNT continues.
+0681 retains placement operation/target and binds the actual semantic Grainline. Target identity precedes first local self-source in arrow/alignment/stripe/plaid order. Borrowed owners/alignment and delegated actual references preserve symbolic angle origins,optional print roles and repeated uses.
+Placement4/grain12/rustdoc3/selected clippy/fmt/book/rendered boundaries/diff/history843 three exact Git spans pass. All source roles,first refusal,original field pointers and absent/repeated roles pass. Later plaid deletion stays an actual currentness refusal without changing bound intent.
+This stage issues no semantic identity or geometric tags,reads no angle and draws no mark. Current Design/inventory membership,Piece/ledger coverage,global frames/order and physical angular alignment remain explicit obligations. Existing Design grain-angle declarations retain metadata ownership.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing semantic grain API). Whole0680 retained843. Next .1.c slash/spread mode/source contract;remaining schemas and full .5f.4 stay owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
