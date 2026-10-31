@@ -1173,23 +1173,7 @@ Independent Fraction±1 diagnostic:rounded-child orders[0,1,0] versus[1,0,0];roo
 
 Done0490;owner G1-SLICE.6.5.3.2.retention. [Whole cause/reproduction/verified fix](../history/window23.md#stitchcad-devnotes-part659md).
 
-## D303 — repeated retained-source interval claims
-
-Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history/window23.md#stitchcad-devnotes-part659md).
-
-## D304 — equal source content retained as multiple actual bodies
-
-Done0492;owner G1-SLICE.6.5.3.2.3.2.3.2. [Whole red/fix/verification](../history/window23.md#stitchcad-devnotes-part659md).
-
-## D305 — premature bounded intermediates in reference recomputation
-
-P1 fixed0503;owner G1-SLICE.6.5.3.2.3.2.4.3.numeric. Independent Fraction14/public point+range native watch first failed1/rc101:nine representable final results falsely repaired. Split1/3 held1537228672809129301/4611686018427387902 now correctly resolves1/9223372036854775804.
-Root:bounded differences/products before complete ratios in split-second/offset/merge point+range maps. Reuse exact complete relative progress;share one complete arc-length merge kernel. Reduce before narrowing;no reference width increase or rounding.
-Focused range20/notch4 and oracle14 pass0;five genuinely wide final fractions retain original reference/range and actual numeric cause. Topology unit/scoped lint results belong owning leaf;projection/context and deferred broader paired acceptance remain separate.
-
-## D306 — independent seam oracles absent from automated gates
-
-Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687. Current gate10 producers/12 fixtures/9 finite guards pass;29 suites discovered. New stop oracle registered0529;missing/unknown/status/mismatch/wiring controls retained. Hosted verdict follows push400. Stop partition .3.3 continues.
+D303–D306:[whole closed ledger](../history/stitchcad-devnotes-part865.md).
 
 D307–D369:[whole prior ledger](../history/stitchcad-devnotes-part854.md). D334/D223/D156 remain owned.
 
@@ -1198,3 +1182,9 @@ D307–D369:[whole prior ledger](../history/stitchcad-devnotes-part854.md). D334
 P2 pending;owner G1-SLICE.5f.1.book-search after typed v1 feature completion. Repro:local_environment.py -- mdbook build docs/book →rc0 plus new large-index warning,payload10015553B;JS10030347B.
 Root:full-text/chapter indexing grew across the builder's size warning at0691. Impact:build no longer warning-free;reader latency not measured. Existing heading-split-level1/full-text policy retained.
 Resolve index containment with actual search checks;no warning suppression/cap raise. Native output-contract work continues;no search failure or performance certificate claimed.
+
+## D373/D374 — active journal documentation scope/storage drift
+
+P1/P2 fixed0696;owner G1-SLICE.5f.1.c.offset.outputs.tags.continuity.recovery. D373 active decision said no stored lengths/general G2 interval handoff;D374 Declared Rustdoc said contiguous tags after0694.
+Root:D373 a6d465f9 already stored merge Length evidence;affine primitive is not general normal correspondence. D37491ebe554 added sparse caller-order declarations without updating the enum comment. Impact:misleading planner/API guidance;runtime unaffected.
+Fix:stored-evidence/caller-order wording and geometry handoff scoped. Original source/history and three exact Rustdoc-only replacements/book/render/fmt pass;algorithms unchanged. No geometry/role-continuity certificate.

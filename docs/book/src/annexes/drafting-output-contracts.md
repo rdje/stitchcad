@@ -204,3 +204,32 @@ This is historical declaration association. An output can have been retired by a
 edit while its original declaration remains authentic. Callers still need current liveness/
 reference resolution,current Design membership,role continuity,actual G2 geometry/mapping and
 command authority before use or publication. The binding supplies none of those certificates.
+
+## Planned canonical role continuity
+
+The next native component separates three different facts. A canonical catalogue retains all issued
+local role-key/tag definitions for its operation. Active canonical membership is an explicit subset
+controlled by authoring/history operations. An evaluated manifest reports which roles occur in that
+particular result;it does not rewrite either of the first two.
+
+For example,roles `main` at tag9 and `trimmed_end` at tag2 can both be canonically active. One size
+may produce only tag9 and another both9 and2. The first result cannot retire tag2. Repeated evaluation
+cannot compact those values into0,1 or silently assign an old tag to a new branch.
+
+Undo/history restoration may reactivate the same declared role while restoring membership,but it
+must not rewind the issued definition history. If an earlier membership snapshot predates a newly
+issued role,the current issued definition remains reserved even when absent from the restored
+active subset. This follows the existing
+[private reserve and issued-revision separation](../spec/command-execution.md#private-identity-reserve-and-actual-notch-preview).
+Actual history authority and publication are not supplied by a metadata proposal.
+
+Native catalogue admission,issuance-preserving transition requests and readonly manifest binding
+have separate task owners. These are planned contracts,not implemented catalogue APIs. Local machine
+keys identify declared roles;they are not geometric matching rules. Unknown/ambiguous geometric roles
+must not acquire a false continuity certificate from matching names or source intervals. Actual
+G2/G3 evidence,current operation/Design ownership,storage and bus integration remain separately owned.
+
+The active journal guidance was also corrected under D373:merge events retain the supplied Length
+evidence;the ledger does not compute curve length. D374 corrects the old `Declared` Rustdoc to match
+the existing explicit sparse/caller-order tag API. Both are documentation corrections;the affine
+primitive and runtime algorithms remain unchanged.

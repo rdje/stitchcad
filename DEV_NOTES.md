@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind admitted candidates to actual canonical declaration fields
+## _(2026-10-31 UTC)_ — separate role issuance from membership and correct journal guidance
 
-0695 adds explicit complete N/2N/J binding admission before lookup/index allocation. One actual operation record must be Declared,have the same count and contain every explicit tag. Missing/ambiguous/kind/count/tag causes retain actual admitted owner,ledger,policy and source positions;no prefix escapes.
-Private views borrow actual entry/candidate/EdgeRef fields. Tag association preserves candidate source order even when the actual journal has another order;neither list is rewritten. Historical declarations remain inspectable after retirement,so association certifies no liveness,current Design or geometric map.
-Binding3/candidate6/compiler guards3/actual output book4/selected clippy/fmt/final build/rendered/diff/history864 three exact spans pass. Both role/journal quotas fail in the precedence fixture;an uncertified duplicate-id journal refuses both records. Retired-role resolution remains actually unresolved.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing actual-owner contracts). Whole0694 retained864. D372 P2 persists. Native continuity still needs canonical-edit/instance semantics;actual G2 maps/observers/bus publication stay owned. Next continuity recovery;PNT continues.
+0696 recovers canonical identity/instance/undo/private reserve contracts. Planned roles retain all issued local key/tag definitions;active canonical membership and readonly evaluated presence are separate. Undo may restore membership without forgetting later-issued definitions;keys alone prove no geometric matching.
+D373 a6d465f9/0005 already stored merge Length evidence despite the active decision's no-storage claim;affine handoff wording was overbroad. D374 came from0694:the new sparse/caller-order API left Declared enum docs unchanged. Correct both active guidance and Rustdoc;runtime algorithms stay unchanged.
+Original history/source hashes,exactly three Rustdoc-only replacements,fmt/book/rendered reserve anchor/diff/archive865 four exact Git spans pass. All other Rust source bytes equal. Planned catalogue/transition/presence owners retain G2 matching/current-root/history authority boundaries. D372 warning remains P2.
+LIVE states/G1 6/18/G0 unapproved unchanged;D373/D374 fixed. promotion: promoted (docs/decisions/decision_entity-identity-ulid-injected-generator.md). Journal correction stays retrievable in its existing decision. Whole0695/closed D303–D306 ledger retained865. Next native catalogue admission;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

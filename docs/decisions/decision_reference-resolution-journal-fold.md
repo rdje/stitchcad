@@ -20,9 +20,10 @@ no identity. **Unresolved state is a derived view** (`resolve`, `open_repairs`, 
 stored mutation state: the journal plus the registration set are the only truth, and a `RepairTask` is what
 a fold *returns*, not a record an edit writes. The offset-fragmentation contract consumes **declared
 source-parameter intervals** at G1 — which fragment covers which `[from, to]` of the source edge — because
-the identity layer decides mapping and ambiguity exactly while the geometry that produces the intervals is
-`G2-2D`'s offset engine. Arc lengths enter only at merge, as caller-declared `sc-units::Length` evidence
-recomputed with exact `Rational` arithmetic; the ledger stores no lengths and rounds nothing.
+interval membership and the primitive's declared affine parameter law are exact structural operations.
+G2 must justify any geometric correspondence separately. Arc lengths enter merge as caller-declared
+`sc-units::Length` evidence retained in the event and used by exact `Rational` arithmetic;the ledger
+does not measure curves and rounds nothing.
 
 ## Why
 
@@ -46,7 +47,8 @@ recomputed with exact `Rational` arithmetic; the ledger stores no lengths and ro
    `decision_ontology-invariants-structural-g1-geometric-g2.md` splits structural (G1) from geometric (G2);
    "the mapping is unambiguous" is structural — exactly one interval contains `t` — while *which* intervals
    an offset produces is geometric. G1 tests the whole ambiguity/refusal machinery against declared intervals;
-   G2 supplies real ones and inherits the contract unchanged.
+   G2 supplies real source domains and must justify the chosen parameter law against actual geometry.
+   Interval endpoints alone do not establish general normal-offset arclength correspondence.
 
 ## How to apply
 
@@ -67,3 +69,19 @@ recomputed with exact `Rational` arithmetic; the ledger stores no lengths and ro
 - Related: [[decision_entity-identity-ulid-injected-generator]] (the ids the journal mints),
   [[decision_edge-parameter-bounded-exact-rational]] (the parameter the fold recomputes),
   [[decision_ontology-invariants-structural-g1-geometric-g2]] (the G1/G2 boundary the intervals sit on).
+
+## Scope/storage correction0696
+
+answers: "does the identity journal store merge lengths?" · "does interval membership prove a normal-offset point map?"
+
+D373 checked the original a6d465f9/0005 source:Merge already retained `first_length` and
+`second_length`. The former no-length-storage sentence omitted the distinction between supplied
+event evidence and computed geometry. The original affine primitive remains unchanged;the
+[regular curved-offset counterexample](../book/src/annexes/drafting-output-contracts.md#offset-output-contract-recovery)
+shows why it cannot be promoted to a general normal-offset certificate.
+
+Destructive offset-fragmentation and nonretiring derived allowance declaration are different
+operations. Canonical explicit-tag declarations can record an already identified operation without
+minting a new EntityId or retiring net geometry. This clarification changes neither stored-reference
+immutability nor the primitive's exact ambiguity/gap/repair semantics. Actual derived mapping and
+role continuity remain separately owned contracts and G2/G3 evidence.

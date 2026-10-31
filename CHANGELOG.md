@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0695 — bind admitted candidates to actual canonical declaration fields
+## STITCHCAD-G1-0696 — separate role issuance from membership and correct journal guidance
 
-- Complete role/workspace/journal admission precedes actual unique record/kind/count/tag association.
-- Private views preserve actual entry/candidate/edge fields and both original ordering contexts.
-- Native9/rustdoc7/selected lint/fmt/final book/rendered/diff/history864 exact spans pass;D372 open.
-- Historical association grants no currentness,role continuity,geometric map or publication proof.
+- Issued definitions,canonical active membership and readonly evaluated presence have distinct planned owners.
+- D373 merge-evidence/affine-scope decision and D374 sparse Declared Rustdoc corrected;algorithms unchanged.
+- Source/history/fmt/book/rendered/diff/history865 exact spans pass;role policy promoted to identity decision.
+- Native catalogue/transition/presence and actual G2 matching remain pending;D372 P2 open.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

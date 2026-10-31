@@ -462,9 +462,9 @@ impl OffsetFragment {
 /// replay reproduce every identity byte-for-byte.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum TopologyEdit {
-    /// A drafting operation created these edges (tags `0..n` of one operation id).
+    /// A drafting operation declared these explicit logical edge roles under its operation id.
     Declared {
-        /// The edges the operation created, in tag order.
+        /// The edges in caller-authored declaration order;tags need not be contiguous or ascending.
         edges: Vec<EdgeRef>,
     },
     /// An edge was split at `at` into `first` (`[0, at)`) and `second` (`(at, 1]`); the source is gone.
@@ -481,8 +481,8 @@ pub enum TopologyEdit {
         second: EdgeRef,
     },
     /// Two live edges were merged end to end, first then second, into `merged`; both sources are gone.
-    /// The lengths are the caller-declared arc-length evidence the parameter recomputation divides by —
-    /// the ledger stores no length of its own.
+    /// Caller-declared arc lengths are retained as edit evidence for parameter recomputation;
+    /// the ledger does not measure curves itself.
     Merge {
         /// The edge that comes first in the merged direction.
         first: EdgeRef,

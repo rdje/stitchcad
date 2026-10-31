@@ -65,3 +65,29 @@ unchanged, including its last128-bit identity. AddNotch preview proves this on a
 Empty reserves refuse with original IdError::Exhausted; no silent refill or substitute sequence.
 Production host integration and persistent global nonreuse across buses/restarts remain later owners.
 Atomic publication must advance model/reserve together; undo must never rewind issued identities.
+
+## Canonical output-role identity0696
+
+answers: "can size evaluation retire a canonical output role?" · "does undo rewind output-role issuance?"
+
+Persistent output roles keep explicit LocalTags under their canonical creating operation,with stable
+local machine keys. A canonical catalogue records all issued key/tag associations;current active
+membership is a separate subset. Tags or keys cannot be retargeted to another declared role or
+reconstructed from coordinates,array rank or the current fragment count.
+
+An authoring edit or recorded-history restoration may change active membership of the same declared
+roles. It must preserve the issued definition history instead of replacing it with an older snapshot
+that forgets later-issued tags. This applies the existing private-reserve/maximum-issued revision
+separation to local roles:undo restores semantics without making a previously issued identity fresh.
+Actual undo authority and canonical publication still belong to the command bus.
+
+An evaluated candidate manifest is readonly presence data against that catalogue. A role absent from
+one size/body evaluation is not thereby retired;another instance may still contain it. Evaluation
+cannot silently mutate canonical membership or mint replacement role identities. Unknown or
+ambiguous roles require visible unresolved/reconciliation handling through the appropriate authority.
+
+Machine keys are declarations,not geometric classifiers. Native catalogue/transition/presence
+admission will check metadata and authentic owners only. G2/G3 must establish actual geometric role
+continuity and source-to-derived correspondence;equal keys,intervals or coordinates are not that
+evidence. Canonical operation/current-Design integration remains .5f.2,publication .6 and storage .7.
+The native leaves are .tags.continuity.catalog/.transition/.presence;none closes a geometry gate.

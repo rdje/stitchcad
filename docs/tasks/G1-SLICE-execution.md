@@ -808,30 +808,42 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0694 declaration;[whole scope/proofs](../history/stitchcad-devnotes-part864.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.binding`
   Status: `done`
-  Goal:actual admitted roles to public journal declaration binding,with exact operation/tags and
-  authentic original fields. No destructive offset shortcut or geometric point-map certificate.
-  Scope:explicit complete journal/role/workspace admission,unique actual operation record,
-  Declared kind/count/tag association;actual entry/edge/source-field views and typed errors.
-  Historical declaration association grants no current liveness/Design/geometry proof. No
-  source edit or accepted prefix;retire whole0694;focused native/compiler/book checks.
-  - [x] ISSUE:logical candidates need actual declaration association without treating intervals,
-    reconstructed refs or a destructive topology record as accepted geometry/currentness.
-  - [x] ROOT CAUSE (declaration binding):actual admitted/public journal/declaration interfaces
-    inspected;native cases use real records/retirement and deliberately uncertified id-stream ambiguity,rc=0.
-  - [x] FIX:explicit N/2N/J admission,unique operation/Declared/count/tag checks and complete
-    private actual field pairs. Original declaration/source order remain independently preserved.
-  - [x] ADDRESSED (declaration binding):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test offset_declaration_binding_contract →3 pass,rc=0;actual owner/field pointers,
-    quotas before lookup,seven typed refusal rows,permuted declaration order and retired-role scope.
-  - [x] NO REGRESSION (declaration binding):candidate6/compiler guards3/actual output book4/
-    selected clippy/fmt/final book/rendered/diff/archive864 three exact Git spans pass,rc=0.
-    D372 remains P2;no liveness/Design/role-continuity/geometric map or publication certificate.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing actual-owner contracts).
-  Verification:native9/rustdoc7;Commit:STITCHCAD-G1-0695. Next .tags.continuity recovery.
+  Goal:0695 binding;[whole scope/proofs](../history/stitchcad-devnotes-part865.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity`
-  Status: `pending`
+  Status: `active`
   Goal:native role/replay/retirement contract distinguishing canonical edits from instance evaluation;
   explicit tags and fresh ledger declaration alone do not prove role continuity across revisions/sizes.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.recovery`
+  Status: `done`
+  Goal:recover actual identity/replay/instance/undo contracts;own/fix D373 active journal-decision
+  storage/affine-scope wording and D374 stale contiguous Declared Rustdoc from0694. Promote
+  issuance/membership/presence separation in existing identity decision;plan safe native leaves.
+  Retire whole0695/closed D303–D306 ledger;focused source/history/book checks,no runtime change.
+  - [x] ISSUE:D373/D374 active journal guidance misstates stored merge evidence,normal-map
+    handoff and new sparse declaration order;role issuance/membership/presence need distinct scope.
+  - [x] ROOT CAUSE (role recovery):a6d465f9/0005 already stores merge lengths;91ebe554/0694
+    added sparse declarations without the enum-doc update. Actual reserve/undo/instance contracts read,rc=0.
+  - [x] FIX:active decision/Rustdoc corrected;identity decision promotes immutable issued-role
+    definitions,separate active membership/readonly result presence. Native leaves owned below.
+  - [x] ADDRESSED (role recovery):target/history-proof-0696-role-policy/proof.json records
+    original commit/source hashes and exactly three Rustdoc replacements;all other Rust bytes equal,rc=0.
+  - [x] NO REGRESSION (role recovery):fmt/book/rendered reserve anchor/diff/archive865 four
+    exact Git spans pass,rc=0. D372 warning remains P2;no new runtime or geometric matching proof.
+  - [x] LOCKSTEP:book/live/defects/frontier sync;promotion: promoted
+    ([identity decision](../decisions/decision_entity-identity-ulid-injected-generator.md)).
+  Verification:focused source/history/book;Commit:STITCHCAD-G1-0696. Next .continuity.catalog.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.catalog`
+  Status: `pending`
+  Goal:native declared role catalogue with explicit local key/tag and active membership;complete
+  quota/name-byte/workspace admission and actual field views. Keys are not geometric classifiers.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.transition`
+  Status: `pending`
+  Goal:native structural issuance-preserving canonical edit/membership-restore contract;old role
+  definitions/tags cannot disappear or be reassigned. Metadata intent grants no actual undo authority.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.presence`
+  Status: `pending`
+  Goal:readonly admitted-manifest to active role-catalogue binding;conditional absence never
+  retires a canonical role. Actual instance/current Design/geometric role truth stays separately owned.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.mapping`
   Status: `pending`
   Goal:P1 native explicit correspondence-kind/evidence/error-budget contract before offset family
