@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0707 — distinguish global topology from owner and semantic repair
 
-- Verify actual global edge deletion versus explicit per-owner registration retire/repoint behavior.
-- Demonstrate live/resolved source outside replacement Piece and unchanged held notch after repoint.
-- Native2/lint/fmt/book/render/diff/history876 exact spans pass;runtime/prior book content unchanged.
-- Native source/global/owner/trim intent and actual geometry/currentness/semantic publication stay owned.
+## STITCHCAD-G1-0708 — bind complete declared slash source-identity intent
+
+- Require explicit global Preserve/retirement-review intent for every original Piece/cut/provenance identity.
+- Check whole quotas before indexes;retain original requests and all occurrence evidence without global edits.
+- Native8/rustdoc8/lint/fmt/book/render/diff/history877 pass;whole0707/0062 protocol retained exactly.
+- Consumer/registration/trim/semantic/zero-outcome and actual geometry/authority/publication remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

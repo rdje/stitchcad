@@ -8,9 +8,12 @@ use core::fmt;
 mod contours;
 mod references;
 pub use references::{
-    SlashSpreadBridgeEndpoint, SlashSpreadReferenceMatch, SlashSpreadReferenceMatchKind,
-    SlashSpreadReferenceOrigin, SlashSpreadReferenceQuery, SlashSpreadReferenceQueryError,
-    SlashSpreadReferenceQueryLimits, SlashSpreadReferenceQueryRefusal,
+    BoundSlashSpreadSourcePlan, SlashSpreadBridgeEndpoint, SlashSpreadGlobalSourceIntent,
+    SlashSpreadReferenceMatch, SlashSpreadReferenceMatchKind, SlashSpreadReferenceOrigin,
+    SlashSpreadReferenceQuery, SlashSpreadReferenceQueryError, SlashSpreadReferenceQueryLimits,
+    SlashSpreadReferenceQueryRefusal, SlashSpreadSourceDisposition, SlashSpreadSourcePlan,
+    SlashSpreadSourcePlanError, SlashSpreadSourcePlanLimits, SlashSpreadSourcePlanRefusal,
+    SlashSpreadSourceRequest,
 };
 mod edges;
 pub use contours::{

@@ -873,29 +873,42 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   eligibility is not a mapped/current reference. Actual G2/ledger/bus evidence stays separately owned.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.recovery`
   Status: `done`
-  Goal:recover global edge-edit versus per-owner registration repair and semantic source ownership
-  before native disposition policy. Intended ledger behavior is a boundary,not a defect/permission.
-  Scope:public actual two-owner delete/retire/repoint cases and retained-notch source membership;
-  preserve original objects and expose resolved-but-outside-target distinction. No runtime algorithm
-  change,automatic repair or geometry claim. Track explicit native plan next;retire whole0706.
-  - [x] ISSUE:piece-local eligibility cannot authorize global edits or discharge registrations.
-  - [x] ROOT CAUSE (disposition boundary):published ledger/anchor/Piece contracts read;actual
-    two-owner delete/retire/repoint and resolved-but-outside-target cases pass,rc=0.
-  - [x] FIX:public-interface evidence plus book/decision boundary;native plan separately owns
-    coverage/global-source/owner-repair/trim intent,without automatic mutation or false permission.
-  - [x] ADDRESSED (disposition boundary):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test slash_spread_disposition_boundary_contract →2 pass,rc=0;global edit affects
-    both owners,repairs selected owner only;repoint leaves immutable notch definition unchanged.
-  - [x] NO REGRESSION (disposition boundary):selected strict clippy/fmt/book/render/diff and
-    history876 three exact Git spans pass,rc=0. git diff --exit-code -- crates/sc-core/src
-    Cargo.toml Cargo.lock →0;previous maintained chapter/Rust fences are an exact unchanged prefix.
-    Primitive ledger behavior is intentional;no source/geometry/currentness/authority certificate.
-  - [x] LOCKSTEP:book/live/frontier sync;promotion: promoted (reference journal decision gains answers).
-  Verification:native2;Commit:STITCHCAD-G1-0707. Next .disposition.plan.
+  Goal:0707 repair scopes;[whole scope/proofs](../history/stitchcad-devnotes-part877.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan`
-  Status: `pending`
+  Status: `active`
   Goal:native explicit coverage/retained-source/global-edit/registration-repair/trim intent with actual
   owner/evidence requirements;no implicit global retirement or unique-metadata-to-Param shortcut.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.sources`
+  Status: `done`
+  Goal:explicit whole declared source-identity plan bound to actual contours;every original Piece,
+  cut and candidate-source identity covered once,including external frames. Preserve global source
+  or request retirement review explicitly;retained contour identity forbids retirement request.
+  Complete N/R/M/P quotas and checked workspace precede indexing/semantic scans;original requests,
+  policies and all source/retained/provenance occurrences survive. No interval-map/authority proof.
+  Retire whole0707 and whole0062 byte protocol for containment;preserve original heading/receipts.
+  Consumer/registration and trim children remain next.
+  - [x] ISSUE:source absence in one result grants no global retirement or consumer consent.
+  - [x] ROOT CAUSE (source identity plan):public source/query/global-scope contracts read;
+    actual Piece/cut/provenance populations and original occurrences checked,rc=0.
+  - [x] FIX:complete explicit identity requests,borrowed policies,whole quotas before indexes;
+    unknown/duplicate/retained-retirement/missing typed refusals preserve actual whole inputs.
+  - [x] ADDRESSED (source identity plan):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test slash_spread_source_plan_contract →4 pass,rc=0;external identities,complete
+    quotas,original fields,all repeated occurrences and ledger nonmutation verified.
+  - [x] NO REGRESSION (source identity plan):nearest source query4/selected strict clippy/fmt,
+    native privacy2/actual slash book6/book/render/diff and archive877 four exact spans pass,rc=0.
+    Previous complete slash chapter is an unchanged prefix;actual G2/authority proof stays owned.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (scoped implementation of0707).
+  Verification:native8/rustdoc8;Commit:STITCHCAD-G1-0708. Next .plan.consumers.
+
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers`
+  Status: `pending`
+  Goal:explicit whole consumer/registration/held-object correspondence and visible-repair evidence
+  requirements tied to the actual source plan;no automatic withdrawal or inferred owner authority.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.trim`
+  Status: `pending`
+  Goal:explicit trim-selection and whole interval-coverage evidence requests tied to actual source
+  plan and policy;no guessed intersection/branch,map,output Param or full effect proof.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics`
   Status: `pending`
   Goal:actual Piece metadata/fold/copy/semantic-reference/effect reconciliation before native family

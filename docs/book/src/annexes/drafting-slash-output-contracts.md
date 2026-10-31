@@ -347,3 +347,63 @@ loss,or turn `Unique` eligibility into an unproved target Param. Shared source g
 owners remain explicit dependencies. Actual maps,trim selection,current semantic/registry checks,
 identity history and atomic publication keep their G2/G3/Design/bus owners. No command or runtime
 algorithm changes in this contract-recovery slice.
+
+## Complete declared source-identity intent
+
+`SlashSpreadSourcePlan` owns an ordered list of `SlashSpreadSourceDisposition`s. Each request
+names an exact original EdgeRef and an explicit `SlashSpreadGlobalSourceIntent`:
+
+| Intent | Required meaning |
+| --- | --- |
+| `Preserve` | Keep the global source;reconcile local Piece membership and held semantic references separately |
+| `RequestRetirementReview` | Require whole affected-source/consumer evidence and actual command authority before any global retirement |
+
+There is no inferred intent for a source omitted from the proposed contours. A retirement-review
+request grants no edit permission,withdraws no registration and changes no held object. Other
+Pieces may share the source. Even a Preserve request cannot prove that a notch still belongs to
+the proposed Piece. Actual global treatment remains a later authorized publication decision.
+
+`plan.bind(&contours,&limits)` requires the actual admitted contour/source context and borrowed
+`SlashSpreadSourcePlanLimits::new(N,R,M,P)`:complete candidates,original Piece occurrences,target
+contour occurrences and authored requests. It counts conservative `R+1+N+P` temporary index entries
+and checks all four quotas before allocating indexes or scanning source/request fields. The source
+identity index has at most R Piece occurrences,one cut and N candidate sources;the request index
+has at most P entries. These bounds describe entries,not allocation bytes or a global consumer census.
+
+Every distinct identity from the original Piece edges,the input cut and every candidate Source
+range must have exactly one explicit request. External cuts and provenance sources are included
+even when absent from the Piece. Original repeated construction occurrences need no duplicate
+request. This is complete **identity coverage**,not whole interval coverage or source existence.
+A declaration may still name an external source whose current liveness has not been checked.
+
+```rust
+use sc_core::construction::*;
+fn bind_source_intent<'a>(plan:&'a SlashSpreadSourcePlan,contours:&'a AdmittedSlashSpreadContours<'a>,
+    policy:&'a SlashSpreadSourcePlanLimits)
+    ->Result<BoundSlashSpreadSourcePlan<'a>,SlashSpreadSourcePlanError<'a>> {
+    plan.bind(contours,policy)
+}
+```
+
+After whole-resource checks,binding inspects requests in authored order:unknown exact source,
+duplicate source,then retirement review of an identity retained by a target contour. That last
+request contradicts the proposed retained identity and refuses. It then reports the first missing
+identity in original Piece,cut,candidate order. Aliases are not followed. Errors retain the actual
+whole plan,contours and caller-owned policy;no accepted prefix escapes.
+
+`BoundSlashSpreadSourcePlan::sources()` preserves authored request order. Private request views
+retain their actual parent,index and original fields. `piece_uses()` returns every original Piece
+occurrence and direction;`cut()` borrows the actual cut field when applicable;`derived_outputs()`
+returns all authentic Source-provenance candidates;`retained_uses()` returns every original retained
+contour occurrence. No occurrence is silently selected as an owner or correspondence. Repeated
+output uses do not invent extra candidates,and distinct declared source tags are not coalesced.
+
+For the earlier example,the first source and retained construction edge each need a Preserve
+request. If the cut instead names external edge55 and candidate9 derives from external edge56,
+those two identities need their own explicit requests too. A complete four-source plan can bind
+without proving either external edge live. It issues no outputs and appends no ledger entry.
+
+Consumer/registration/held-object evidence and trim interval/selection requirements remain the
+next native disposition contracts. Actual geometry,maps,current whole-source and owner censuses,
+semantic replacement,authority,identity history and atomic publication retain their G2/G3/Design/bus
+owners. This bound declaration supplies none of those certificates.

@@ -3,146 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — distinguish global topology from owner and semantic repair
+## _(2026-10-31 UTC)_ — bind complete declared slash source-identity intent
 
-0707 recovers global topology versus owner registration/semantic source scope. An actual delete derives repairs for both registered owners;explicit repoint/retire changes only the selected registration. It cannot infer piece-local authority or another holder's consent. No runtime algorithm changes.
-Two actual Pieces may share a source edge. Replacing one contour can leave its old notch outside the target despite global liveness,resolved registrations and narrow ledger readiness. Repointing registration leaves the immutable notch unchanged. Birth validation is used only as a membership diagnostic.
-Public boundary2/strict selected clippy/fmt/book/render/diff/history876 three exact Git spans pass. Production source/Cargo files unchanged;prior maintained chapter/Rust fences remain an exact prefix. No actual geometry,map,semantic repair or publication is supplied. The ledger boundary is intentional.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (reference journal decision gains answers). Whole0706 retained876. Native coverage/global-source/registration/trim intent follows;semantic/zero outcomes and actual G2/currentness/history/bus remain owned. D372 persists.
-
-[Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
-[Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
-[Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
-[Whole0467 accepted-record lesson](docs/history/window23.md#stitchcad-devnotes-part621md) retains exact counter/history/replay ownership proof.
-[Whole0466 report lesson](docs/history/window23.md#stitchcad-devnotes-part620md) retains exact alias/net/restored ownership proof.
-[Whole0465 owned-request lesson](docs/history/window23.md#stitchcad-devnotes-part619md) retains exact request/resource/alias proof.
-[Whole0464 publication lesson](docs/history/window23.md#stitchcad-devnotes-part618md) retains exact carry/undo/API/retirement proof.
-[Whole0463 Notch lesson](docs/history/window23.md#stitchcad-devnotes-part616md) retains exact peek/precedence/rollback proof.
-[Whole0462 Material lesson](docs/history/window23.md#stitchcad-devnotes-part615md) retains exact Unicode/selected/oracle proof.
-[Whole0461 Measurement lesson](docs/history/window23.md#stitchcad-devnotes-part614md) retains exact evidence/oracle/fixture correction proof.
-[Whole0460 current-admission lesson](docs/history/window23.md#stitchcad-devnotes-part613md) retains original authority/telemetry/privacy proof.
-[Whole0459 root-composition lesson](docs/history/window23.md#stitchcad-devnotes-part612md) retains exact cache/held/empty proof.
-[Whole0458 source-port lesson](docs/history/window23.md#stitchcad-devnotes-part611md) retains original trust/census and independent byte-correction proof.
-
-[Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
-
-[Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
-
-[Whole0419 private-owner/read lesson](docs/history/stitchcad-devnotes-part569.md) retains original native5/privacy2/source and execution boundaries.
-
-[Whole0418 byte-storage/adoption lesson](docs/history/stitchcad-devnotes-part568.md) retains original native before/after and scoped acceptance.
-
-[Whole0417 installation/D278 lesson](docs/history/stitchcad-devnotes-part567.md) retains complete guarded authoring, native source and integration proof.
-
-[Whole0416 reader lesson](docs/history/stitchcad-devnotes-part566.md) retains original candidate/native/O2/calibration proof and uninstalled boundary.
-
-[Whole0415 staging/book design lesson](docs/history/stitchcad-devnotes-part565.md) retains capacity evidence, D277 and implementation ownership.
-
-[Whole0414 aggregate lesson](docs/history/stitchcad-devnotes-part564.md) retains native2/privacy12 and unused-Piece repair proof.
-
-[Whole0413 garment acceptance lesson](docs/history/stitchcad-devnotes-part563.md) retains native17/privacy3 and independent census.
-
-[Whole0412 envelope lesson](docs/history/stitchcad-devnotes-part562.md) retains original scope/cause and pre-birth Fly proofs.
-
-[Whole0411 unified declarations lesson](docs/history/stitchcad-devnotes-part561.md) retains actual roles, pairs, borrows and late-cause proofs.
-
-[Whole0410 Pocket opening lesson](docs/history/stitchcad-devnotes-part560.md) retains logical-role, root-priority and borrowing proofs.
-
-[Whole0409 D276 lesson](docs/history/stitchcad-devnotes-part559.md) retains original introduced claims, unchanged constructor and native before/after proof.
-
-[Whole0408 cleanup lesson](docs/history/stitchcad-devnotes-part558.md) retains preservation/residue proofs and D276 discovery/capture.
-
-[Whole0407 current garment lesson](docs/history/stitchcad-devnotes-part557.md) retains full source/assignment order and original error proofs.
-
-[Whole0406 garment ownership lesson](docs/history/stitchcad-devnotes-part556.md) retains exact components, global namespace and current-input priority proofs.
-
-[Whole0404/0405 construction lessons](docs/history/stitchcad-devnotes-part555.md) retain joined Gather and scoped87-native/13-lifetime acceptance.
-
-[Whole0403 grain/allowance lesson](docs/history/stitchcad-devnotes-part554.md) retains actual roles, D274/D275 and native red/green proofs.
-
-[Whole0402 intake lesson](docs/history/stitchcad-devnotes-part552.md) retains actual fields, current metadata and logical-role proofs.
-
-[Whole0401 current-scope lesson](docs/history/stitchcad-devnotes-part551.md) retains complete context, typed causes and D273 proofs.
-
-[Whole0400 ownership lesson](docs/history/stitchcad-devnotes-part550.md) retains order, actual borrows and scope proofs.
-
-[Whole0399 grain/allowance lesson](docs/history/stitchcad-devnotes-part549.md) retains held-owner, source and book preservation proofs.
-
-[Whole0398 Gather lesson](docs/history/stitchcad-devnotes-part548.md) retains source/lifetime scope and book preservation evidence.
-
-[Whole0397 current Dart/fold lesson](docs/history/stitchcad-devnotes-part547.md) retains source/priority/chain fixes and census evidence.
-
-[Whole0396 feature lesson](docs/history/stitchcad-devnotes-part546.md) retains scoped acceptance and remaining integration ownership.
-
-[Whole0395 resource lesson](docs/history/stitchcad-devnotes-part545.md) retains full topology, units and scoped memory evidence.
-
-[Whole0394 client lesson](docs/history/stitchcad-devnotes-part544.md) retains predicates, source scope and transaction proofs.
-
-[Whole0393 authoring lesson](docs/history/stitchcad-devnotes-part543.md) retains bounded cohort/seal and D268 proofs.
-
-[Whole0391 lesson](docs/history/stitchcad-devnotes-part541.md) retains its scope, budget proof and authority.
-
-[Whole0392 cutover lesson](docs/history/stitchcad-devnotes-part542.md) retains source/guard repairs and acceptance limits.
-
-[Whole0390 policy-boundary lesson](docs/history/stitchcad-devnotes-part571.md) retains original measured capacity and authority boundary.
-
-[Whole0388/0389 layer/Hem lesson](docs/history/window23.md#stitchcad-devnotes-part617md) retains original scope, checks and containment facts.
-
-[Complete bounded append lesson](docs/history/stitchcad-devnotes-part539.md) retains its original source, transaction proof and retention limits.
-
-[Complete Hem declaration lesson](docs/history/stitchcad-devnotes-part538.md) retains its original scope, checks and promotion decision.
-
-[Complete Hem collection lesson](docs/history/window21.md#stitchcad-devnotes-part537md) retains its original scope, checks and promotion decision.
-
-[Complete layer Material lesson](docs/history/window21.md#stitchcad-devnotes-part536md) retains its original scope, checks and promotion decision.
-
-[Complete layer inventory lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains its original scope, checks and promotion decision.
-
-[Complete current layer/Hem lesson](docs/history/window21.md#stitchcad-devnotes-part534md) retains its original scope, checks and promotion decision.
-
-[Complete D261 Hem cause lesson](docs/history/window21.md#stitchcad-devnotes-part533md) retains its original scope, checks and promotion decision.
-
-[Complete Closure declaration lesson](docs/history/window21.md#stitchcad-devnotes-part532md) retains its original scope, checks and promotion decision.
-
-[Complete Closure collection lesson](docs/history/window21.md#stitchcad-devnotes-part531md) retains its original scope, checks and promotion decision.
-
-[Complete notion collection lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains its original scope, checks and promotion decision.
-
-[Complete D260 Closure-cause lesson](docs/history/window21.md#stitchcad-devnotes-part529md) retains its original scope, checks and promotion decision.
-
-[Complete Pocket collection/component lesson](docs/history/window21.md#stitchcad-devnotes-part528md) retains its original scope, checks and promotion decision.
-
-[Complete D258/D259 anchor-cause lesson](docs/history/window21.md#stitchcad-devnotes-part527md) retains its original scope, checks and promotion decision.
-
-[Complete sewing-component acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part526md) retains its original scope, checks and promotion decision.
-
-[Complete current sewing-source lesson](docs/history/window21.md#stitchcad-devnotes-part525md) retains its original scope, checks and promotion decision.
-
-[Complete private sewing/input lesson](docs/history/window21.md#stitchcad-devnotes-part524md) retains its original scope, checks and promotion decision.
-
-[Complete amount-declaration lesson](docs/history/window21.md#stitchcad-devnotes-part523md) retains its original scope, checks and promotion decision.
-
-[Complete current-sewing graph lesson](docs/history/window21.md#stitchcad-devnotes-part522md) retains its original scope, checks and promotion decision.
-
-[Complete combined-topology lesson](docs/history/window21.md#stitchcad-devnotes-part521md) retains its original scope, checks and promotion decision.
-
-[Complete input-composition acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part520md) retains its original scope, checks and promotion decision.
-
-[Complete selected-input namespace lesson](docs/history/window21.md#stitchcad-devnotes-part519md) retains its original scope, checks and promotion decision.
-
-[Complete authored-reference lesson](docs/history/window21.md#stitchcad-devnotes-part518md) retains its original scope, checks and promotion decision.
-
-[Complete private Design-input composition lesson](docs/history/window21.md#stitchcad-devnotes-part517md) retains its original scope, checks and promotion decision.
-
-[Complete native authority review lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains its original scope, checks and promotion decision.
-
-[Complete authorization/scope lessons](docs/history/window21.md#stitchcad-devnotes-part531md) retain
-their original scopes, checks and promotion decisions.
-
-[Complete command-input lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains its original scope, checks and promotion decision.
-
-[Complete release-input/approval lessons](docs/history/window21.md#stitchcad-devnotes-part537md) retain
-their original scopes, checks and promotion decisions.
+0708 covers every exact Piece/cut/provenance identity once with explicit Preserve or retirement-review request. All N/R/M/P quotas and checked R+1+N+P workspace precede indexes. Original-order unknown/duplicate/retained-retirement then missing refusals retain whole inputs and borrowed policy.
+Private views preserve original requests,all Piece/retained occurrences,actual cut and authentic source candidates. Identity coverage supplies no interval/current-source/consumer/authority proof. External declarations can bind without liveness evidence;no output issuance or ledger mutation follows.
+Native8/privacy2/actual slash book6/strict selected lint/fmt/book/render/diff and archive877 four exact Git spans pass. Previous complete slash chapter remains an exact prefix. Whole0707 plus0062 byte protocol retired without altering the original heading or remaining canonical receipts. D372 persists.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (scoped implementation of0707). Consumer/registration and trim requirements follow;semantic/zero outcomes and actual G2/currentness/history/bus remain owned. PNT continues.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
@@ -393,6 +259,140 @@ their original exact interval/source/format boundaries, checks and promotion dec
 [Complete certified arc implementation lesson](docs/history/window14.md#stitchcad-devnotes-part382md) retains its original scope, verification and promotion decision.
 
 [Complete bounded arc certificate/approved UI lesson](docs/history/window14.md#stitchcad-devnotes-part380md) retains its full proof, director requirements, verification and promotion decisions.
+
+[Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
+[Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
+[Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.
+[Whole0467 accepted-record lesson](docs/history/window23.md#stitchcad-devnotes-part621md) retains exact counter/history/replay ownership proof.
+[Whole0466 report lesson](docs/history/window23.md#stitchcad-devnotes-part620md) retains exact alias/net/restored ownership proof.
+[Whole0465 owned-request lesson](docs/history/window23.md#stitchcad-devnotes-part619md) retains exact request/resource/alias proof.
+[Whole0464 publication lesson](docs/history/window23.md#stitchcad-devnotes-part618md) retains exact carry/undo/API/retirement proof.
+[Whole0463 Notch lesson](docs/history/window23.md#stitchcad-devnotes-part616md) retains exact peek/precedence/rollback proof.
+[Whole0462 Material lesson](docs/history/window23.md#stitchcad-devnotes-part615md) retains exact Unicode/selected/oracle proof.
+[Whole0461 Measurement lesson](docs/history/window23.md#stitchcad-devnotes-part614md) retains exact evidence/oracle/fixture correction proof.
+[Whole0460 current-admission lesson](docs/history/window23.md#stitchcad-devnotes-part613md) retains original authority/telemetry/privacy proof.
+[Whole0459 root-composition lesson](docs/history/window23.md#stitchcad-devnotes-part612md) retains exact cache/held/empty proof.
+[Whole0458 source-port lesson](docs/history/window23.md#stitchcad-devnotes-part611md) retains original trust/census and independent byte-correction proof.
+
+[Whole0428/0429 schema and D283/D284 scope/lesson/ledgers](docs/history/stitchcad-devnotes-part581.md) retain exact source proofs and correction facts.
+
+[Whole0420 held-reference replacement lesson](docs/history/stitchcad-devnotes-part570.md) retains original native3/currentness/publication boundaries.
+
+[Whole0419 private-owner/read lesson](docs/history/stitchcad-devnotes-part569.md) retains original native5/privacy2/source and execution boundaries.
+
+[Whole0418 byte-storage/adoption lesson](docs/history/stitchcad-devnotes-part568.md) retains original native before/after and scoped acceptance.
+
+[Whole0417 installation/D278 lesson](docs/history/stitchcad-devnotes-part567.md) retains complete guarded authoring, native source and integration proof.
+
+[Whole0416 reader lesson](docs/history/stitchcad-devnotes-part566.md) retains original candidate/native/O2/calibration proof and uninstalled boundary.
+
+[Whole0415 staging/book design lesson](docs/history/stitchcad-devnotes-part565.md) retains capacity evidence, D277 and implementation ownership.
+
+[Whole0414 aggregate lesson](docs/history/stitchcad-devnotes-part564.md) retains native2/privacy12 and unused-Piece repair proof.
+
+[Whole0413 garment acceptance lesson](docs/history/stitchcad-devnotes-part563.md) retains native17/privacy3 and independent census.
+
+[Whole0412 envelope lesson](docs/history/stitchcad-devnotes-part562.md) retains original scope/cause and pre-birth Fly proofs.
+
+[Whole0411 unified declarations lesson](docs/history/stitchcad-devnotes-part561.md) retains actual roles, pairs, borrows and late-cause proofs.
+
+[Whole0410 Pocket opening lesson](docs/history/stitchcad-devnotes-part560.md) retains logical-role, root-priority and borrowing proofs.
+
+[Whole0409 D276 lesson](docs/history/stitchcad-devnotes-part559.md) retains original introduced claims, unchanged constructor and native before/after proof.
+
+[Whole0408 cleanup lesson](docs/history/stitchcad-devnotes-part558.md) retains preservation/residue proofs and D276 discovery/capture.
+
+[Whole0407 current garment lesson](docs/history/stitchcad-devnotes-part557.md) retains full source/assignment order and original error proofs.
+
+[Whole0406 garment ownership lesson](docs/history/stitchcad-devnotes-part556.md) retains exact components, global namespace and current-input priority proofs.
+
+[Whole0404/0405 construction lessons](docs/history/stitchcad-devnotes-part555.md) retain joined Gather and scoped87-native/13-lifetime acceptance.
+
+[Whole0403 grain/allowance lesson](docs/history/stitchcad-devnotes-part554.md) retains actual roles, D274/D275 and native red/green proofs.
+
+[Whole0402 intake lesson](docs/history/stitchcad-devnotes-part552.md) retains actual fields, current metadata and logical-role proofs.
+
+[Whole0401 current-scope lesson](docs/history/stitchcad-devnotes-part551.md) retains complete context, typed causes and D273 proofs.
+
+[Whole0400 ownership lesson](docs/history/stitchcad-devnotes-part550.md) retains order, actual borrows and scope proofs.
+
+[Whole0399 grain/allowance lesson](docs/history/stitchcad-devnotes-part549.md) retains held-owner, source and book preservation proofs.
+
+[Whole0398 Gather lesson](docs/history/stitchcad-devnotes-part548.md) retains source/lifetime scope and book preservation evidence.
+
+[Whole0397 current Dart/fold lesson](docs/history/stitchcad-devnotes-part547.md) retains source/priority/chain fixes and census evidence.
+
+[Whole0396 feature lesson](docs/history/stitchcad-devnotes-part546.md) retains scoped acceptance and remaining integration ownership.
+
+[Whole0395 resource lesson](docs/history/stitchcad-devnotes-part545.md) retains full topology, units and scoped memory evidence.
+
+[Whole0394 client lesson](docs/history/stitchcad-devnotes-part544.md) retains predicates, source scope and transaction proofs.
+
+[Whole0393 authoring lesson](docs/history/stitchcad-devnotes-part543.md) retains bounded cohort/seal and D268 proofs.
+
+[Whole0391 lesson](docs/history/stitchcad-devnotes-part541.md) retains its scope, budget proof and authority.
+
+[Whole0392 cutover lesson](docs/history/stitchcad-devnotes-part542.md) retains source/guard repairs and acceptance limits.
+
+[Whole0390 policy-boundary lesson](docs/history/stitchcad-devnotes-part571.md) retains original measured capacity and authority boundary.
+
+[Whole0388/0389 layer/Hem lesson](docs/history/window23.md#stitchcad-devnotes-part617md) retains original scope, checks and containment facts.
+
+[Complete bounded append lesson](docs/history/stitchcad-devnotes-part539.md) retains its original source, transaction proof and retention limits.
+
+[Complete Hem declaration lesson](docs/history/stitchcad-devnotes-part538.md) retains its original scope, checks and promotion decision.
+
+[Complete Hem collection lesson](docs/history/window21.md#stitchcad-devnotes-part537md) retains its original scope, checks and promotion decision.
+
+[Complete layer Material lesson](docs/history/window21.md#stitchcad-devnotes-part536md) retains its original scope, checks and promotion decision.
+
+[Complete layer inventory lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains its original scope, checks and promotion decision.
+
+[Complete current layer/Hem lesson](docs/history/window21.md#stitchcad-devnotes-part534md) retains its original scope, checks and promotion decision.
+
+[Complete D261 Hem cause lesson](docs/history/window21.md#stitchcad-devnotes-part533md) retains its original scope, checks and promotion decision.
+
+[Complete Closure declaration lesson](docs/history/window21.md#stitchcad-devnotes-part532md) retains its original scope, checks and promotion decision.
+
+[Complete Closure collection lesson](docs/history/window21.md#stitchcad-devnotes-part531md) retains its original scope, checks and promotion decision.
+
+[Complete notion collection lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains its original scope, checks and promotion decision.
+
+[Complete D260 Closure-cause lesson](docs/history/window21.md#stitchcad-devnotes-part529md) retains its original scope, checks and promotion decision.
+
+[Complete Pocket collection/component lesson](docs/history/window21.md#stitchcad-devnotes-part528md) retains its original scope, checks and promotion decision.
+
+[Complete D258/D259 anchor-cause lesson](docs/history/window21.md#stitchcad-devnotes-part527md) retains its original scope, checks and promotion decision.
+
+[Complete sewing-component acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part526md) retains its original scope, checks and promotion decision.
+
+[Complete current sewing-source lesson](docs/history/window21.md#stitchcad-devnotes-part525md) retains its original scope, checks and promotion decision.
+
+[Complete private sewing/input lesson](docs/history/window21.md#stitchcad-devnotes-part524md) retains its original scope, checks and promotion decision.
+
+[Complete amount-declaration lesson](docs/history/window21.md#stitchcad-devnotes-part523md) retains its original scope, checks and promotion decision.
+
+[Complete current-sewing graph lesson](docs/history/window21.md#stitchcad-devnotes-part522md) retains its original scope, checks and promotion decision.
+
+[Complete combined-topology lesson](docs/history/window21.md#stitchcad-devnotes-part521md) retains its original scope, checks and promotion decision.
+
+[Complete input-composition acceptance lesson](docs/history/window21.md#stitchcad-devnotes-part520md) retains its original scope, checks and promotion decision.
+
+[Complete selected-input namespace lesson](docs/history/window21.md#stitchcad-devnotes-part519md) retains its original scope, checks and promotion decision.
+
+[Complete authored-reference lesson](docs/history/window21.md#stitchcad-devnotes-part518md) retains its original scope, checks and promotion decision.
+
+[Complete private Design-input composition lesson](docs/history/window21.md#stitchcad-devnotes-part517md) retains its original scope, checks and promotion decision.
+
+[Complete native authority review lesson](docs/history/window21.md#stitchcad-devnotes-part530md) retains its original scope, checks and promotion decision.
+
+[Complete authorization/scope lessons](docs/history/window21.md#stitchcad-devnotes-part531md) retain
+their original scopes, checks and promotion decisions.
+
+[Complete command-input lesson](docs/history/window21.md#stitchcad-devnotes-part535md) retains its original scope, checks and promotion decision.
+
+[Complete release-input/approval lessons](docs/history/window21.md#stitchcad-devnotes-part537md) retain
+their original scopes, checks and promotion decisions.
 
 ## Retained engineering continuity
 

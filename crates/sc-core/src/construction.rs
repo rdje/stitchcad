@@ -92,17 +92,20 @@ pub use slash_opening::{
 mod slash_spread;
 pub use slash_spread::{
     AdmittedSlashSpreadContours, AdmittedSlashSpreadEdges, BoundSlashSpreadEdgeRoles,
-    SlashSpreadBoundaryPolicy, SlashSpreadBridgeDirection, SlashSpreadBridgeEndpoint,
-    SlashSpreadConstruction, SlashSpreadConstructionError, SlashSpreadContourEdge,
-    SlashSpreadContourError, SlashSpreadContourLimits, SlashSpreadContourLocation,
-    SlashSpreadContourRefusal, SlashSpreadContourUse, SlashSpreadContours, SlashSpreadCutEnd,
-    SlashSpreadDependency, SlashSpreadEdge, SlashSpreadEdgeCandidate, SlashSpreadEdgeManifest,
-    SlashSpreadEdgeManifestError, SlashSpreadEdgeManifestLimits, SlashSpreadEdgeManifestRefusal,
-    SlashSpreadEdgeOrigin, SlashSpreadFullnessIntent, SlashSpreadOutputIntent,
+    BoundSlashSpreadSourcePlan, SlashSpreadBoundaryPolicy, SlashSpreadBridgeDirection,
+    SlashSpreadBridgeEndpoint, SlashSpreadConstruction, SlashSpreadConstructionError,
+    SlashSpreadContourEdge, SlashSpreadContourError, SlashSpreadContourLimits,
+    SlashSpreadContourLocation, SlashSpreadContourRefusal, SlashSpreadContourUse,
+    SlashSpreadContours, SlashSpreadCutEnd, SlashSpreadDependency, SlashSpreadEdge,
+    SlashSpreadEdgeCandidate, SlashSpreadEdgeManifest, SlashSpreadEdgeManifestError,
+    SlashSpreadEdgeManifestLimits, SlashSpreadEdgeManifestRefusal, SlashSpreadEdgeOrigin,
+    SlashSpreadFullnessIntent, SlashSpreadGlobalSourceIntent, SlashSpreadOutputIntent,
     SlashSpreadReferenceMatch, SlashSpreadReferenceMatchKind, SlashSpreadReferenceOrigin,
     SlashSpreadReferenceQuery, SlashSpreadReferenceQueryError, SlashSpreadReferenceQueryLimits,
     SlashSpreadReferenceQueryRefusal, SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal,
-    SlashSpreadSide, SlashSpreadSource, SlashSpreadSourceMotion,
+    SlashSpreadSide, SlashSpreadSource, SlashSpreadSourceDisposition, SlashSpreadSourceMotion,
+    SlashSpreadSourcePlan, SlashSpreadSourcePlanError, SlashSpreadSourcePlanLimits,
+    SlashSpreadSourcePlanRefusal, SlashSpreadSourceRequest,
 };
 mod walk;
 pub use walk::{

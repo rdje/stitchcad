@@ -70,18 +70,7 @@ Staged make gate→=== all doctrines green ===, rc=0; all scoped jobs observed t
 
 - ID: `G1-SLICE.5a.3d.1`
   Status: `done`
-  Goal: settle exact canonical expression byte contract before product serializer implementation.
-  Protocol: [complete prior inventory/proposal plan](G1-SLICE-formulas.md#canonical-byte-contract-pre-change-protocol--completed-in-g1-0062).
-  Verification: seven actual reference roles/ten binary symbols/two distinct call collisions/six
-  authored canonical examples. Director D103 ruling: unary (- child), square (^2 child); complete
-  contract adopted in grammar/expert annex/canonical decision. Scoped structural/language/book pass.
-  Containment protocol: derive Knowledge Map after the new decision, compact existing curated
-  labels while retaining canonical paths/owners; no budget or doctrine configuration change.
-  Final falsification protocol: four actual inventory-renderer tag/branch/argument faults must fail
-  authored-byte assertions; record interpreter refusals distinctly from product compiled proof,
-  restore exact tracked producer before checks/commit.
-  Commit: `STITCHCAD-G1-0062`; production serializer .3d.2 remains pending.
-
+  Goal:0062 byte protocol;[whole scope/proofs](../history/stitchcad-devnotes-part877.md).
 
 ## Serializer pre-code protocol — completed in G1-0063
 
