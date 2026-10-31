@@ -87,25 +87,25 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Status: `done`
   Goal:0733 source copies;[whole scope/proofs](../history/stitchcad-devnotes-part906.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.plan`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit result-copy retention/retirement/issuance proposals under actual canonical result cut policy.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.plan.identities`
   Status: `done`
-  Goal:bounded actual copy lookup/known typed exclusions.
-  - [x] ISSUE:result-copy intents need actual ids and scoped typed exclusions.
-  - [x] ROOT CAUSE (copy identities):actual source/axis/point/plan APIs reviewed;full C/R/P/workspace
-    before scans/allocation;old kernels unchanged;rc=0.
-  - [x] FIX:actual copy borrows and Piece/operation/Material exclusions;unlisted is not fresh.
-  - [x] ADDRESSED (copy identities):cargo test --test mirror_piece_copy_identity_contract
-    --test mirror_piece_source_copy_contract:4+3 pass;rc=0. Full invocation in receipt.
-  - [x] NO REGRESSION (copy identities):API3/copy book2/output book6,lint/fmt/build/map/render/906-907/window27 pass;rc=0.
-  - [x] LOCKSTEP:book/live align;promotion: declined (existing typed identity/nonreuse boundary).
-  Proof:target/history-proof-0734-mirror-copy-identities/;Commit:STITCHCAD-G1-0734.
-  Archive:window27 packs59 committed files;1359 logical records/5482089B before/candidate/installed exact.
-  Native tar59/242636B and47 unchanged inputs exact;draft906 restored;71 links routed;907 whole0015 retained.
+  Goal:0734 copy identities/retention;[whole scope/proofs](../history/stitchcad-devnotes-part908.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.plan.entries`
-  Status: `pending`
-  Goal:complete explicit existing-result retention/retirement and new-copy definitions;source copies untouched.
+  Status: `done`
+  Goal:explicit complete result-copy choices;no applied effects.
+  Design:Retain/Retire borrow actual result copies;Issue borrows raw definitions,not issued CutCopy.
+  Every old result copy is explicit;source/other copies cannot transfer or retire. No id reuse.
+  - [x] ISSUE:result-copy quantities need complete explicit choices.
+  - [x] ROOT CAUSE (result copies):actual copy/cut APIs reviewed;whole N/C/2N before scans;
+    actual result quantity/mirroring used;old kernels unchanged;rc=0.
+  - [x] FIX:complete Retain/Retire/Issue plan with authentic original fields/order.
+  - [x] ADDRESSED (result copies):cargo test --test mirror_piece_result_copy_contract
+    --test mirror_piece_copy_identity_contract:6+4 pass;rc=0. Full invocation in receipt.
+  - [x] NO REGRESSION (result copies):API4/copy book3,lint/fmt/build/map/render/908 spans pass;rc=0.
+  - [x] LOCKSTEP:book/live align;promotion: declined (existing identity/cut/effect boundary).
+  Proof:target/history-proof-0735-mirror-result-copies/;Commit:STITCHCAD-G1-0735.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion`
   Status: `pending`
   Goal:actual complete companion/CutPlan association;no ordinal pairing or transfer of source neighbours.

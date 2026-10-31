@@ -47,14 +47,14 @@ pub use join::{
 };
 mod mirror;
 pub use mirror::{
-    AdmittedMirrorPieceEdges, AdmittedMirrorPiecePoints, BoundMirrorPieceCopy,
-    BoundMirrorPieceCopyIdentities, BoundMirrorPieceCutPolicy, BoundMirrorPieceEdgeRoles,
-    BoundMirrorPieceMetadata, BoundMirrorPiecePointRoles, BoundMirrorPieceSourceCopies,
-    DeclaredMirrorPieceIdentity, MirrorAxis, MirrorAxisDependency, MirrorAxisSource,
-    MirrorPieceAxisEvidenceRequest, MirrorPieceContourError, MirrorPieceContourLimits,
-    MirrorPieceContourPolicy, MirrorPieceContourRefusal, MirrorPieceContours, MirrorPieceCopy,
-    MirrorPieceCopyError, MirrorPieceCopyIdentityError, MirrorPieceCopyIdentityLimits,
-    MirrorPieceCopyIdentityRefusal, MirrorPieceCorrespondenceError,
+    AdmittedMirrorPieceEdges, AdmittedMirrorPiecePoints, AdmittedMirrorPieceResultCopies,
+    BoundMirrorPieceCopy, BoundMirrorPieceCopyIdentities, BoundMirrorPieceCutPolicy,
+    BoundMirrorPieceEdgeRoles, BoundMirrorPieceMetadata, BoundMirrorPiecePointRoles,
+    BoundMirrorPieceSourceCopies, DeclaredMirrorPieceIdentity, MirrorAxis, MirrorAxisDependency,
+    MirrorAxisSource, MirrorPieceAxisEvidenceRequest, MirrorPieceContourError,
+    MirrorPieceContourLimits, MirrorPieceContourPolicy, MirrorPieceContourRefusal,
+    MirrorPieceContours, MirrorPieceCopy, MirrorPieceCopyError, MirrorPieceCopyIdentityError,
+    MirrorPieceCopyIdentityLimits, MirrorPieceCopyIdentityRefusal, MirrorPieceCorrespondenceError,
     MirrorPieceCorrespondenceEvidenceKind, MirrorPieceCorrespondenceLimits,
     MirrorPieceCorrespondenceRefusal, MirrorPieceCorrespondenceRequirement, MirrorPieceCutPolicy,
     MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
@@ -70,10 +70,12 @@ pub use mirror::{
     MirrorPiecePointMatch, MirrorPiecePointMatchKind, MirrorPiecePointQuery,
     MirrorPiecePointQueryError, MirrorPiecePointQueryLimits, MirrorPiecePointQueryRefusal,
     MirrorPiecePointRoleBindingError, MirrorPiecePointRoleBindingRefusal,
-    MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal, MirrorPieceSourceCopyError,
-    MirrorPieceSourceCopyLimits, MirrorPieceSourceCopyRefusal, MirrorPieceSourceError,
-    MirrorPieceSourceLimits, MirrorPieceSourceRefusal, RequiredMirrorPieceCorrespondence,
-    RequiredMirrorPieceCorrespondenceSource,
+    MirrorPieceResultCopyAction, MirrorPieceResultCopyError, MirrorPieceResultCopyIntent,
+    MirrorPieceResultCopyLimits, MirrorPieceResultCopyManifest, MirrorPieceResultCopyRefusal,
+    MirrorPieceResultCopySource, MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal,
+    MirrorPieceSourceCopyError, MirrorPieceSourceCopyLimits, MirrorPieceSourceCopyRefusal,
+    MirrorPieceSourceError, MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
+    RequiredMirrorPieceCorrespondence, RequiredMirrorPieceCorrespondenceSource,
 };
 mod offset;
 pub use offset::{

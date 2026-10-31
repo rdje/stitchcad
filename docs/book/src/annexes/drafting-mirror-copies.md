@@ -107,5 +107,78 @@ true for these known conflicts. False means only unlisted in this local context;
 freshness,issued-history completeness or permission to allocate. Zero is an ordinary explicit id,
 not a missing-value sentinel. Unresolved evidence-provider ids remain requests rather than typed
 entity declarations. The trusted host/current Design must still establish global namespace and
-nonreuse before issuance. Explicit result retention/retirement/issuance entries follow next.
+nonreuse before issuance. Explicit result retention/retirement/issuance entries follow below.
+
+## Explicit result-copy intents
+
+`MirrorPieceResultCopyManifest` declares an original operation and ordered Retain,Retire or Issue
+choices. Admission against BoundMirrorPieceCopyIdentities produces a complete native proposal.
+It issues no immutable CutCopy,retires no existing copy and edits no CutPlan or held object.
+
+| Choice | Meaning |
+| --- | --- |
+| `Retain(id)` | Keep the actual old result copy's complete original definition and identity |
+| `Retire(id)` | Explicitly request retirement of an actual old result copy;effects remain required |
+| `Issue(CutCopyDefinition)` | Propose an explicit new id,canonical result Piece and physical orientation |
+
+Retain and Retire must resolve to actual copies whose pattern Piece is the declared result.
+Source and unrelated copies cannot transfer into the result,be selected for conversion or be
+retired through this proposal. Issue must name the actual canonical result Piece and avoid every
+known local identity exclusion. Unlisted still does not mean globally fresh or reserved.
+Every actual old result copy needs one explicit Retain/Retire choice. Omission cannot silently
+mean preservation or retirement,and an empty proposal cannot manufacture an initial result copy.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceResultCopyIntent`, `MirrorPieceResultCopyManifest` | Whole original explicit choices and operation |
+| `MirrorPieceResultCopyLimits::new(N,C,W)` | Complete intent,actual plan and workspace-entry allowances |
+| `AdmittedMirrorPieceResultCopies` | Complete native proposal with actual inventory/context parents |
+| `MirrorPieceResultCopyAction` | Authentic original intent and associated before/proposed definition |
+| `MirrorPieceResultCopySource` | Borrowed payload data;the enum alone is no plan-membership proof |
+| `MirrorPieceResultCopyError`, `MirrorPieceResultCopyRefusal` | Whole original proposal/parents/policy and first refusal |
+
+Checked2N,whole N,whole actual C and workspace quotas precede operation comparison,all intent scans
+and allocation. C includes source and unrelated copies. New workspace is an N-entry id index plus
+N-entry associations;these count entries,not bytes or earlier inventory/index storage. Work is
+O((N+C)log(N+K+2)) for K previously indexed identities. No accepted prefix escapes a refusal.
+
+Each original intent first checks duplicate id across all choice kinds,then existing membership/
+Piece or proposed Piece/known-id constraints. Active retained/new orientations use the actual
+result cut policy. Single and PairMember accept authored copies only;MirroredPairs needs equal
+authored/reflected populations. Retire contributes no active copy,so an old reflected copy may
+be explicitly retired while changing to an authored-only result policy. First unmentioned old
+result follows original plan order,then complete result quantity and pair balance are checked.
+The source's different quantity/mirroring stays authoritative for its unchanged source copies.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let raw=MirrorPieceResultCopyManifest::new(EntityId::from_bits(10),vec![
+    MirrorPieceResultCopyIntent::Issue(CutCopyDefinition { id:EntityId::from_bits(500),
+        piece:EntityId::from_bits(200),orientation:CopyOrientation::Authored })]);
+fn admit<'a>(raw:&'a MirrorPieceResultCopyManifest,ids:&'a BoundMirrorPieceCopyIdentities<'a>)
+    ->Result<AdmittedMirrorPieceResultCopies<'a>,MirrorPieceResultCopyError<'a>> {
+    raw.admit(ids,MirrorPieceResultCopyLimits::new(100,1000,200))
+}
+assert_eq!(raw.intents().first().expect("explicit").id(),EntityId::from_bits(500));
+```
+
+An initial result quantity1/Single can propose Issue500 authored against a plan with no old
+result copies. If old result copies550 authored and551 reflected exist,a new quantity2/Single
+proposal `[Issue500 authored,Retire551,Retain550]` has one retention,one retirement,one issuance
+and two proposed authored copies. All original source copies remain unchanged. Leaving551
+unmentioned refuses even if the retained population otherwise matches the desired quantity.
+`[Retire551,Issue551]` refuses repeated id;retirement never frees an old identity for reuse.
+
+`actions()` retains every original choice and supports reverse iteration. `result_actions()`
+excludes retirements while retaining request order;`action(id)` uses the persistent copy id,
+independent of both proposal and old plan positions. Views lend actual original raw intent fields,
+actual old CutCopy borrows for Retain/Retire,and the original raw CutCopyDefinition for Issue.
+Issue never manufactures an immutable CutCopy. Request order is metadata,not permission to apply
+intermediate mutations;actual publication must validate and commit the complete change atomically.
+
+Counters summarize proposed retention,retirement,issuance and resulting orientations;none records
+an applied effect. Original Piece,plan,copy definitions,source ids and held references remain
+unchanged on success and refusal. Actual global reservation/nonreuse,current Design/ownership,
+companion truth,all affected consumers,physical/geometry/semantic effects and publication remain
+mandatory execution work. Native result-copy intents are complete;companion association follows.
 

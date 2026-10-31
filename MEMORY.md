@@ -1,12 +1,12 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0734;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs.copies.plan.entries in docs/tasks/G1-SLICE-mirror.md.
-  Native identity/point declarations complete;native manifest requests complete;known copy identities indexed;result entries and companion next.
-- Copy identity index checks full C/R/P/2C+R+P+A+7 before scans. Actual record borrows and known
-  Piece/operation/Material exclusions retained;unlisted is not fresh. Source ids/orientations preserved.
-  Native7/API3/copy book2/output book6/lint/fmt/build/map/render pass;proof target/history-proof-0734-mirror-copy-identities/.
-- Correspondence whole E/P/R,parent/mode and six mandatory common obligations remain requested evidence.
+- Latest unit:STITCHCAD-G1-0735;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs.copies.companion in docs/tasks/G1-SLICE-mirror.md.
+  Native identity/point declarations complete;native manifest requests complete;native result-copy plans complete;companion association next.
+- Result-copy intents admit whole N/C/2N;every old result requires explicit Retain/Retire. Source/
+  other copies cannot transfer/retire. Issue holds raw definitions,not issued CutCopy;ids never reused.
+  Native10/API4/copy book3/lint/fmt/build/map/render pass;proof target/history-proof-0735-mirror-result-copies/.
+- Known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.
 - bind_point_roles retains actual canonical Piece/typed catalogue under full D/A/key-byte limits.
@@ -25,7 +25,7 @@
 - Scoped family result:15 slash contract suites51 pass;actual slash API/book docs53 pass. Source
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
-- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained;whole0733 now906;0732 nowwindow27;Dart0014 protocol905 packed;Tuck0015 protocol907;closed0064 protocol894;older source spans/notes base exact.
+- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained;whole0734 now908;0733 now906;older847-905 nowwindow27;Tuck0015 protocol907;closed0064 protocol894;older source spans/notes base exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation

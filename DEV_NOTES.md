@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — index known physical-copy identity exclusions
+## _(2026-10-31 UTC)_ — declare complete mirror result-copy intents
 
-0734 checks full C/R/P/2C+R+P+A+7 before scans/allocation;actual copy lookup includes unrelated Pieces. Known source/result/companions,creating operations and assigned Materials exclude new copy ids. Archive cap required guarded window27.
-Copy/Piece identity-kind conflicts refuse with original context/plan positions;every existing copy stays excluded from reissuance. Unlisted ids supply no global freshness or history proof. Before/candidate/installed1359 records/5482089B and native tar59/242636B exact;47 prior inputs unchanged.
-Native4+3/API3/copy book2/output book6,selected lint/fmt/build/map/render pass0;old kernels unchanged,whole0733 spans906/historical0015 protocol907 exact0. Whole3359B source-copy book block/one Rust fence moved;old anchor retained.
-Promotion: declined (existing typed identity/nonreuse boundary). Explicit result-copy retention/retirement/issuance entries next;actual currentness/global reservation/companion/geometry/effects and full integration remain owed. G1still6/18/G0 unapproved.
+0735 admits whole N/C/2N before operation/intent scans. Every actual old result copy requires explicit Retain/Retire;Issue retains raw definitions with explicit result Piece/id/orientation.
+Source/other copies cannot transfer or retire;known ids and retirement cannot permit reuse. Authentic fields/order retained;active counts obey actual result cut policy,independent of original source copies.
+Native6+4/API4/copy book3,selected lint/fmt/build/map/render pass0;old kernels unchanged,whole0734 including window27 dependency spans908 exact0. Source/plan/input definitions remain unchanged;no immutable copy minted.
+Promotion: declined (existing identity/cut/effect boundary). Native result plan closes;complete companion association next. Actual currentness/global reservation/issuance/retirement/consumer/physical/geometry effects and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

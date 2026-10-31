@@ -7,6 +7,12 @@ pub use identities::{
     BoundMirrorPieceCopyIdentities, MirrorPieceCopyIdentityError, MirrorPieceCopyIdentityLimits,
     MirrorPieceCopyIdentityRefusal,
 };
+mod entries;
+pub use entries::{
+    AdmittedMirrorPieceResultCopies, MirrorPieceResultCopyAction, MirrorPieceResultCopyError,
+    MirrorPieceResultCopyIntent, MirrorPieceResultCopyLimits, MirrorPieceResultCopyManifest,
+    MirrorPieceResultCopyRefusal, MirrorPieceResultCopySource,
+};
 
 fn original<'a>(context: &RequiredMirrorPieceCorrespondence<'a>) -> &'a PieceDefinition {
     context

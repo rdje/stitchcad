@@ -13,14 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0734 — index known physical-copy identity exclusions
+## STITCHCAD-G1-0735 — declare complete mirror result-copy intents
 
-- Whole plan/source/point/workspace limits precede actual copy indexing and typed identity exclusions.
-- Original copy borrows retained;known Piece/operation/Material conflicts refuse completely.
-- Unlisted identities are not freshness proof;existing copies remain excluded from new issuance.
-- Native7/API3/copy book2/output book6 and focused lint/fmt/build/map/render/history906 checks pass.
-- Copy book companion preserves whole source section/old anchor;result-copy intents remain next.
-- Guarded window27 preserves1359 logical records;71 live links route to its catalog;whole0015 protocol907 retained.
+- Whole N/C/2N precede operation/intent validation;actual old results require explicit retention or retirement.
+- Proposed new definitions use explicit ids/result Piece/orientation;known or retired ids cannot be reused.
+- Authentic original fields/order retained;actual result cut quantity/orientations govern active proposed copies.
+- Native10/API4/copy book3 and focused lint/fmt/build/map/render/history908 checks pass.
+- Native result plan closes;actual model/physical effects and complete companion association remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
