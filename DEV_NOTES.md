@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind complete declared slash source-identity intent
+## _(2026-10-31 UTC)_ — bind every actual registered slash source consumer
 
-0708 covers every exact Piece/cut/provenance identity once with explicit Preserve or retirement-review request. All N/R/M/P quotas and checked R+1+N+P workspace precede indexes. Original-order unknown/duplicate/retained-retirement then missing refusals retain whole inputs and borrowed policy.
-Private views preserve original requests,all Piece/retained occurrences,actual cut and authentic source candidates. Identity coverage supplies no interval/current-source/consumer/authority proof. External declarations can bind without liveness evidence;no output issuance or ledger mutation follows.
-Native8/privacy2/actual slash book6/strict selected lint/fmt/book/render/diff and archive877 four exact Git spans pass. Previous complete slash chapter remains an exact prefix. Whole0707 plus0062 byte protocol retired without altering the original heading or remaining canonical receipts. D372 persists.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (scoped implementation of0707). Consumer/registration and trim requirements follow;semantic/zero outcomes and actual G2/currentness/history/bus remain owned. PNT continues.
+0709 checks complete S/L/K and S+L+2K before indexes;actual registration count is constant access. Every source registration needs explicit keep-source/correspondence-or-visible-repair/withdrawal-review intent,including other owners and unresolved points. Actual borrowed ledger preserves split choices.
+Native8/privacy2/actual slash book7/strict selected lint/fmt/book/render/diff/history878 three exact spans pass. Corrected test value access and reused shared policy without suppression. Both owners/repairs remain;unrelated registrations count toward L. No current-owner,map,authority or repair certificate.
+Containment correction:later-heading selection21630B included older notes. Narrow878 to0708 note1236B and restore all31219B older live text exact. Protected target/history-proof-0709-note-boundary/ records counts/hash. Previous complete book prefix exact;no committed archive body changed. Root cause fixed.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing byte/coverage policy). Whole0708 retired878. Whole held-object/current-owner evidence beyond registrations and trim follow;semantic/zero outcomes and actual G2/history/bus stay owned. D372 persists;PNT continues.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

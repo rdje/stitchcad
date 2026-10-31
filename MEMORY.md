@@ -1,18 +1,23 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0708;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers
-  — explicit consumer/registration/held-object correspondence and visible-repair requirements tied
-  to actual source plan. Activate/split before code;trim requirements follow.
+- Latest unit:STITCHCAD-G1-0709;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers.requirements
+  — whole held-object/current-owner/correspondence/visible-repair/authority evidence beyond actual
+  registrations. Activate/split before code;trim requirements follow.
+- Native registered-source plan covers every actual source registration once,including other owners
+  and unresolved ones. Explicit keep-source/correspondence-or-visible-repair/withdrawal review;
+  complete S/L/K and S+L+2K before indexes,actual ledger borrowed;split choices unchanged.
+  Native8/rustdoc9/lint/fmt/book/render/history878 three exact spans pass;prior book prefix exact.
+- Containment correction:narrow overwide note selection21630B to0708 note1236B;all31219B older live
+  text restored exact. Root cause:later-heading slice. Protected target/history-proof-0709-note-boundary/.
 - Native source plan covers every exact Piece/cut/provenance identity once with explicit Preserve
   or RequestRetirementReview. Complete N/R/M/P and workspace before indexes;retained identity
   forbids retirement request. Views retain original fields/all repeated occurrences. No authority.
-  Native8/rustdoc8/lint/fmt/book/render/history877 four exact spans pass. Previous book prefix exact.
+  Whole0708 scope/lesson/changelog now878.
 - Public boundary recovered:delete affects every registration owner;retire/repoint changes one exact
   registration. Repoint does not mutate an immutable semantic notch. Source globally live/resolved can
   still be outside a replacement Piece. Ledger readiness is intentionally narrower than ownership.
-  0707 native2 passed;runtime unchanged then. Whole0707 and0062 byte protocol now877.
-  Reference decision promoted;consumer/trim implementation next,actual G2/bus stay owned.
+  Whole0707 and0062 byte protocol now877;reference decision promoted.
 - Native eligibility query preserves retained/source/bridge endpoint alternatives under whole quotas.
   Unique/Ambiguous/Gap are metadata only. Native7/rustdoc8 passed0706;fixture proof protected in
   target/history-proof-0706-reference-fixture/. Published SplitFragments.first returns EdgeRef directly.

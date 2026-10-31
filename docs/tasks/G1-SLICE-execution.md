@@ -880,31 +880,37 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   owner/evidence requirements;no implicit global retirement or unique-metadata-to-Param shortcut.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.sources`
   Status: `done`
-  Goal:explicit whole declared source-identity plan bound to actual contours;every original Piece,
-  cut and candidate-source identity covered once,including external frames. Preserve global source
-  or request retirement review explicitly;retained contour identity forbids retirement request.
-  Complete N/R/M/P quotas and checked workspace precede indexing/semantic scans;original requests,
-  policies and all source/retained/provenance occurrences survive. No interval-map/authority proof.
-  Retire whole0707 and whole0062 byte protocol for containment;preserve original heading/receipts.
-  Consumer/registration and trim children remain next.
-  - [x] ISSUE:source absence in one result grants no global retirement or consumer consent.
-  - [x] ROOT CAUSE (source identity plan):public source/query/global-scope contracts read;
-    actual Piece/cut/provenance populations and original occurrences checked,rc=0.
-  - [x] FIX:complete explicit identity requests,borrowed policies,whole quotas before indexes;
-    unknown/duplicate/retained-retirement/missing typed refusals preserve actual whole inputs.
-  - [x] ADDRESSED (source identity plan):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test slash_spread_source_plan_contract →4 pass,rc=0;external identities,complete
-    quotas,original fields,all repeated occurrences and ledger nonmutation verified.
-  - [x] NO REGRESSION (source identity plan):nearest source query4/selected strict clippy/fmt,
-    native privacy2/actual slash book6/book/render/diff and archive877 four exact spans pass,rc=0.
-    Previous complete slash chapter is an unchanged prefix;actual G2/authority proof stays owned.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (scoped implementation of0707).
-  Verification:native8/rustdoc8;Commit:STITCHCAD-G1-0708. Next .plan.consumers.
+  Goal:0708 source plan;[whole scope/proofs](../history/stitchcad-devnotes-part878.md).
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers`
-  Status: `pending`
+  Status: `active`
   Goal:explicit whole consumer/registration/held-object correspondence and visible-repair evidence
   requirements tied to the actual source plan;no automatic withdrawal or inferred owner authority.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers.registrations`
+  Status: `done`
+  Goal:complete explicit requests for every actual ledger registration on declared sources;
+  preserve exact owner/edge/Param/split choice,other owners and unresolved registrations.
+  Actual immutable ledger and whole S/L/K policy;no inferred owner membership,authority or repair.
+  - [x] ISSUE:local source plans cannot omit other registered owners or withdraw them silently.
+  - [x] ROOT CAUSE (registered source consumers):public ledger/current Design scopes read;
+    registrations yield values;actual source/whole-ledger populations and owner keys checked,rc=0.
+  - [x] FIX:explicit keep-source/correspondence-or-visible-repair/withdrawal-review requests;
+    constant actual registration count,whole quotas and S+L+2K before indexes,complete source subset.
+  - [x] ADDRESSED (registered source consumers):local_environment.py -- cargo test --offline
+    --locked -p sc-core --test slash_spread_registration_plan_contract →4 pass,rc=0;both owners,
+    split choices,unresolved repairs,whole unrelated-registration quota and exact key coverage.
+  - [x] NO REGRESSION (registered source consumers):source-plan4/privacy2/actual book7/strict
+    selected clippy/fmt/book/render/diff and archive878 three exact spans pass,rc=0. Correct test
+    value access/use shared fixture policy without suppression;no mutation or currentness certificate.
+    Containment selection21630B narrowed to actual0708 note1236B;all31219B older live text exact.
+    Root cause:later-heading boundary selected older entries. Proof target/history-proof-0709-note-boundary/.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing byte/coverage policy).
+  Verification:native8/rustdoc9;Commit:STITCHCAD-G1-0709. Next .consumers.requirements.
+
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.consumers.requirements`
+  Status: `pending`
+  Goal:whole held semantic/structural consumer,current ownership,authority,correspondence and visible
+  repair evidence requirements beyond the actual registration subset;no registration-only certificate.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition.plan.trim`
   Status: `pending`
   Goal:explicit trim-selection and whole interval-coverage evidence requests tied to actual source

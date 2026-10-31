@@ -8,12 +8,15 @@ use core::fmt;
 mod contours;
 mod references;
 pub use references::{
-    BoundSlashSpreadSourcePlan, SlashSpreadBridgeEndpoint, SlashSpreadGlobalSourceIntent,
-    SlashSpreadReferenceMatch, SlashSpreadReferenceMatchKind, SlashSpreadReferenceOrigin,
-    SlashSpreadReferenceQuery, SlashSpreadReferenceQueryError, SlashSpreadReferenceQueryLimits,
-    SlashSpreadReferenceQueryRefusal, SlashSpreadSourceDisposition, SlashSpreadSourcePlan,
-    SlashSpreadSourcePlanError, SlashSpreadSourcePlanLimits, SlashSpreadSourcePlanRefusal,
-    SlashSpreadSourceRequest,
+    BoundSlashSpreadRegistrationPlan, BoundSlashSpreadSourcePlan, SlashSpreadBridgeEndpoint,
+    SlashSpreadGlobalSourceIntent, SlashSpreadReferenceMatch, SlashSpreadReferenceMatchKind,
+    SlashSpreadReferenceOrigin, SlashSpreadReferenceQuery, SlashSpreadReferenceQueryError,
+    SlashSpreadReferenceQueryLimits, SlashSpreadReferenceQueryRefusal,
+    SlashSpreadRegisteredSourceRequest, SlashSpreadRegistrationDisposition,
+    SlashSpreadRegistrationIntent, SlashSpreadRegistrationPlan, SlashSpreadRegistrationPlanError,
+    SlashSpreadRegistrationPlanLimits, SlashSpreadRegistrationPlanRefusal,
+    SlashSpreadSourceDisposition, SlashSpreadSourcePlan, SlashSpreadSourcePlanError,
+    SlashSpreadSourcePlanLimits, SlashSpreadSourcePlanRefusal, SlashSpreadSourceRequest,
 };
 mod edges;
 pub use contours::{

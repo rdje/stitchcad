@@ -883,6 +883,12 @@ impl IdentityLedger {
         self.live.iter().copied()
     }
 
+    /// Complete actual registration population,without folding references or scanning their fields.
+    #[must_use]
+    pub fn registration_count(&self) -> usize {
+        self.registrations.len()
+    }
+
     /// The registered references, in a deterministic order.
     pub fn registrations(&self) -> impl Iterator<Item = Registration> + '_ {
         self.registrations

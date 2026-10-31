@@ -4,12 +4,12 @@ Newest first: one section per completed slice, in commit order. Older slices liv
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
 
-## STITCHCAD-G1-0708 — bind complete declared slash source-identity intent
+## STITCHCAD-G1-0709 — bind every actual registered slash source consumer
 
-- Require explicit global Preserve/retirement-review intent for every original Piece/cut/provenance identity.
-- Check whole quotas before indexes;retain original requests and all occurrence evidence without global edits.
-- Native8/rustdoc8/lint/fmt/book/render/diff/history877 pass;whole0707/0062 protocol retained exactly.
-- Consumer/registration/trim/semantic/zero-outcome and actual geometry/authority/publication remain owned.
+- Require explicit treatment for every actual source registration,including other owners/unresolved points.
+- Bound whole S/L/K before indexes;preserve original requests,actual ledger and unchanged split choices.
+- Native8/rustdoc9/lint/fmt/book/render/diff/history878 pass;note boundary corrected with exact older bytes.
+- Whole held-object/ownership/authority/trim/semantic/zero-outcome and actual G2/publication remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

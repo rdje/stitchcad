@@ -407,3 +407,68 @@ Consumer/registration/held-object evidence and trim interval/selection requireme
 next native disposition contracts. Actual geometry,maps,current whole-source and owner censuses,
 semantic replacement,authority,identity history and atomic publication retain their G2/G3/Design/bus
 owners. This bound declaration supplies none of those certificates.
+
+## Complete actual registered-source requests
+
+`SlashSpreadRegistrationPlan` owns ordered `SlashSpreadRegistrationDisposition` requests. Each
+request holds the exact original owner and EdgeAnchor plus an explicit `SlashSpreadRegistrationIntent`:
+
+| Intent | Remaining obligation |
+| --- | --- |
+| `KeepOriginalGlobalSource` | Keep the global source and prove current held-object ownership/membership separately |
+| `RequireCorrespondenceOrVisibleRepair` | Supply actual correspondence or retain an explicit visible repair;metadata uniqueness selects no target |
+| `RequestWithdrawalReview` | Establish legitimate holder withdrawal,coordinated semantic state and actual authority before any registration removal |
+
+A withdrawal-review request never calls `retire` or discharges a repair. A correspondence request
+contains no guessed output Param. Keeping a global source does not prove that it remains in a
+particular replacement Piece. The request owner is an actual registration key here,not a claim
+that this owner belongs to the edited Piece or has authorized the requested action.
+
+`plan.bind(&sources,&ledger,&limits)` requires the actual complete bound source plan,an immutable
+IdentityLedger and borrowed `SlashSpreadRegistrationPlanLimits::new(S,L,K)`. S counts all bound
+source identities,L counts **every** actual ledger registration including unrelated edges,and K
+counts all authored requests. `IdentityLedger::registration_count()` exposes that actual complete
+population without folding references or scanning registration fields. Checked `S+L+2K` workspace
+and all quotas precede indexing or request-field checks.
+
+The temporary indexes contain S source views,at most L source registrations and at most K request
+keys;K authentic source/registration pairs are retained. The bound is in entries,not allocation
+bytes. An unrelated ledger registration consumes L allowance even though it needs no request in
+this source scope. Earlier declarations and whole-operation resource policy remain separate.
+
+```rust
+use sc_core::{construction::*,ontology::IdentityLedger};
+fn bind_registered_sources<'a>(plan:&'a SlashSpreadRegistrationPlan,sources:&'a BoundSlashSpreadSourcePlan<'a>,
+    ledger:&'a IdentityLedger,policy:&'a SlashSpreadRegistrationPlanLimits)
+    ->Result<BoundSlashSpreadRegistrationPlan<'a>,SlashSpreadRegistrationPlanError<'a>> {
+    plan.bind(sources,ledger,policy)
+}
+```
+
+Every actual registration whose exact stored EdgeRef is in the bound source plan needs exactly
+one request,including registrations held by other owners and those currently unresolved. An
+empty request list binds when this actual registered-source subset is empty. This grants no
+claim that all held structural or semantic references have been registered.
+
+After whole-resource checks,binding examines requests in original order:unknown source,unknown
+exact owner/edge/Param registration,duplicate exact key,then KeepOriginalGlobalSource conflicting
+with that source's RequestRetirementReview intent. It then returns the first uncovered source
+registration in actual ledger order. Different owners at the same source point are separate keys.
+Aliases and other parameters are not substituted. Every refusal keeps the actual complete plans,
+ledger and caller-owned policy;no accepted prefix escapes.
+
+Private `SlashSpreadRegisteredSourceRequest` views preserve authored request order and fields,
+the actual source request and the actual registration value including its unchanged split choice.
+The parent retains an immutable borrow of that ledger. Two owners at a later split therefore keep
+their distinct explicit/absent choices. The plan does not resolve the point,select a split side or
+transfer another owner's choice. It makes no current-liveness certificate.
+
+If a later global deletion leaves both owners unresolved,complete correspondence/withdrawal-review
+requests can still bind:the two original repairs remain open and both registrations remain present.
+No journal entry is appended. These are requests about the actual current registration inventory,
+not evidence that the proposed treatment has happened or that publication is ready.
+
+Whole held-object/source-consumer coverage beyond registrations,current Design/Piece/garment
+ownership,proved maps,visible repair reporting,semantic replacement and actual command authority
+remain explicit requirements for the next native consumer contract and later G2/G3/Design/bus work.
+A registered-source plan alone cannot authorize global retirement or hide an unregistered holder.
