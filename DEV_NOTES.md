@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind the actual mirror source Piece
+## _(2026-10-31 UTC)_ — require explicit mirror result cut policy
 
-0719 adds actual immutable Piece association under explicit whole H/R bounds before local source scans;fold/repeated uses count separately.
-Original field/owner borrows retain axis,roles,order,direction and all source metadata. No output identity or reflected result is created.
-Native5+4/API6/actual editing-book9,selected clippy/fmt/build/render pass0;fixture direct indexes corrected before final lint. Whole0718/0063 spans888–889 exact0.
-Promotion: declined (existing source/geometry boundary). Explicit result metadata next;G1still6/18/G0 unapproved,full CI/currentness/geometry/sewing effects remain owned.
+0720 binds canonical requested quantity/mirroring/fold/cutting side to actual source;no default,identity allocation or source-cut mutation.
+Zero/even-pair/source-fold admission preserves actual request/error pointers;fold attribution remains original,not new geometry or edge.
+Native4+5+4/API9/editing-book10,selected clippy/fmt/build/render pass0;whole0719 spans890 exact. Shared0719 bodies exact,one EOF separator normalized.
+Promotion: declined (existing cut/copy contract). Material/layer/label/print next;actual companion/copy/output/geometry/semantic proofs remain owned. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

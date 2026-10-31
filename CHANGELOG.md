@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0719 — bind the actual mirror source Piece
+## STITCHCAD-G1-0720 — require explicit mirror result cut policy
 
-- Explicit whole hole/edge-occurrence bounds precede original source scanning;fold/repeats count.
-- Actual source/input/field borrows retain roles,order,direction and refusal context unchanged.
-- Native9/API6/book9,focused clippy/fmt/build/render and exact history888–889 pass.
-- No output metadata choice,copy identity,currentness,reflected geometry or sewing effect is certified.
+- Explicit canonical quantity/mirroring/fold/cutting-side fields replace inferred source defaults.
+- Positive/even-pair/source-fold checks preserve actual request/source and original fold attribution.
+- Native13/API9/book10,focused lint/fmt/build/render and exact history890/source fixture pass.
+- No new Piece/copy identity,companion reciprocity,reflected edge,physical or sewing proof claimed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

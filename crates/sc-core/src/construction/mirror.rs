@@ -7,6 +7,11 @@ pub use source::{
     BoundMirrorPieceCopy, MirrorPieceEdge, MirrorPieceEdgeLocation, MirrorPieceEdgeSource,
     MirrorPieceSourceError, MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
 };
+mod cut;
+pub use cut::{
+    BoundMirrorPieceCutPolicy, MirrorPieceCutPolicy, MirrorPieceCutPolicyError,
+    MirrorPieceCutPolicyRefusal, MirrorPieceFoldIntent,
+};
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
 /// Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks.

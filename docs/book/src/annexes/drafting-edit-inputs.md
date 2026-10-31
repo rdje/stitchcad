@@ -267,6 +267,50 @@ A structurally valid Piece retains its original geometric deferral. Explicit res
 fresh output roles/manifests,physical-copy and whole semantic/sewing policies remain the next
 native output slices;actual reflection/currentness/publication retain their existing owners.
 
+### Explicit result cut policy
+
+After binding the actual source,`source.bind_cut_policy(&policy)` associates four explicitly
+chosen result cut fields. Nothing defaults from source geometry,names,labels or cutting side.
+This stage retains a request for a new Piece;it does not construct that Piece or physical copies.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceCutPolicy::new(quantity,mirroring,fold,cutting_side)` | One canonical set of requested result cut fields |
+| `MirrorPieceFoldIntent::NoFold` | Explicitly request no result fold,including when the source has one |
+| `MirrorPieceFoldIntent::ReflectedSource` | Require later output attribution to the actual original source fold |
+| `BoundMirrorPieceCutPolicy` | Private association of actual source and locally admitted cut request |
+| `MirrorPieceCutPolicyError`, `MirrorPieceCutPolicyRefusal` | Original source/policy and first local refusal |
+
+The raw policy has no default and retains caller fields unchanged. Binding refuses zero quantity,
+then an odd MirroredPairs total,then a requested reflected source fold when the actual source has
+none. Single and separate PairMember quantities need only be positive at this stage. Quantity
+counts all requested physical copies;MirroredPairs includes both hands. No upper cut quantity is
+invented by this declaration,and no copy list is allocated from it.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let policy=MirrorPieceCutPolicy::new(1,Mirroring::Single,
+    MirrorPieceFoldIntent::NoFold,CuttingSide::Face);
+assert_eq!(*policy.quantity(),1);
+assert_eq!(*policy.fold(),MirrorPieceFoldIntent::NoFold);
+```
+
+The bound quantity,mirroring and cutting-side accessors borrow the original policy fields.
+`cut_on_fold()` derives from the one explicit fold policy;it is not authored a second time.
+`fold_source()` borrows the original source fold field only for ReflectedSource. It supplies no
+new output edge or reflected geometry. Requesting NoFold explicitly drops the result fold
+instruction;the source Piece and its fold stay unchanged,and semantic effects remain required.
+
+A source cut-four mirrored Piece may explicitly request a new Single Piece cut once with a
+chosen cutting side. This declaration neither edits the source quantity nor silently expands,
+removes or transfers its existing physical copies. Single refers to authored copies of the new
+pattern geometry;geometric recipe reflection and a CutPlan copy's reflected orientation remain
+separate. PairMember retains explicit handedness and companion id without name-based inference.
+New Piece identity,companion existence/reciprocity/opposite hand/equal quantity,the complete
+result CutPlan and actual geometric hand/face/fold correspondence still require later evidence.
+Material,layer,label and a cut-derived print view remain the next metadata slice;the current cut
+association cannot stand in for complete output metadata or sewing policy.
+
 ## Native deliberate walk-edit requests
 
 `construction::WalkSeamEdit` owns an operation id,the required canonical span id and the original

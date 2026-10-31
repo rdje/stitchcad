@@ -851,26 +851,34 @@ retain their complete task branch,original goals and proof links in the bounded 
   native contract acceptance needs no completed geometry engine. No metadata/default-id shortcut.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.source`
   Status: `done`
-  Goal:actual immutable source Piece association under explicit whole H/R bounds;all original
-  boundary/hole/construction/fold fields retain role/order/direction/repetition and authentic owner.
-  - [x] ISSUE:mirror input names a Piece but needs actual bounded source before output policies.
-  - [x] ROOT CAUSE (mirror source):855b4773 mirror.rs exposes authored id/axis only;actual Piece
-    contracts/ontology/cut-plan/sewing decisions/book reviewed;public source association added;rc=0.
-  - [x] FIX:private borrowed binding/field views;identity then H/checked R quotas then local source
-    order. Fold/repeats charged separately;no allocation,metadata policy,identity or geometry result.
-  - [x] ADDRESSED (mirror source):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test mirror_piece_source_contract --test mirror_piece_copy_contract:5+4 pass;rc=0.
-    Actual field/parent pointers,both axes,reversal,repeats,quota precedence/refusal context checked.
-  - [x] NO REGRESSION (mirror source):mirror API docs6/actual editing-book docs9,selected clippy/
-    fmt/book/render/source spans888–889 exact pass;rc=0. Fixture direct indexes replaced before final
-    lint;minimal no-hole/no-fold source passes. No full CI/current Design/reflection/semantic proof.
-  - [x] LOCKSTEP:book/native inventory/live/frontier aligned;whole0718 and0063 pre-code preserved.
-    promotion: declined (existing actual-source/geometry boundary);receipt target/history-proof-0719-mirror-source/.
-  Verification:native9/API6/book9 plus focused lint/fmt/render;Commit:STITCHCAD-G1-0719.
+  Goal:0719 actual source;[whole scope/proofs](../history/stitchcad-devnotes-part890.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.metadata`
-  Status: `pending`
+  Status: `in_progress`
   Goal:explicit result quantity/handedness/companion/fold/face/material/layer/label policy bound to
   actual source;no name-based inference,duplicate cut authority or silent source replacement.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.metadata.cut`
+  Status: `done`
+  Goal:explicit canonical result quantity/mirroring/fold/cutting-side request bound to actual source.
+  - [x] ISSUE:source cut data cannot silently become a reflected Piece's chosen result cut policy.
+  - [x] ROOT CAUSE (mirror cut policy):actual source/cut/companion contracts and book reviewed;
+    de359d5a source binding supplies original fields but no result cut policy;rc=0.
+  - [x] FIX:explicit no-default raw policy;zero/even-pair/source-fold admission,authentic borrowed
+    canonical fields and actual source-fold requirement. No output identity,copy list or geometry.
+  - [x] ADDRESSED (mirror cut policy):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test mirror_piece_cut_policy_contract --test mirror_piece_source_contract
+    --test mirror_piece_copy_contract:4+5+4 pass;rc=0. Canonical pointers,explicit differing result
+    fields,u32::MAX Single,fold/no-fold,refusal order and source immutability covered.
+  - [x] NO REGRESSION (mirror cut policy):mirror API9/actual editing-book10,selected clippy/fmt/
+    book/render/diff/890 exact source spans pass;rc=0. Shared0719 helper/test bodies exact;only pub/
+    import wiring and one EOF separator normalized. Source/cut quantities remain separate authorities.
+    No current Design/companion reciprocity/output correspondence/physical or full CI certificate.
+  - [x] LOCKSTEP:book/inventory/live/frontier align;whole0719 retained890;proof target/history-proof-0720-mirror-cut/.
+    promotion: declined (existing explicit physical-copy/cut metadata contract);next .metadata.fields.
+  Verification:native13/API9/book10 plus focused checks;Commit:STITCHCAD-G1-0720.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.metadata.fields`
+  Status: `pending`
+  Goal:explicit source-preserve/replacement material,layer,label policy with canonical cut-derived
+  print data;actual result/fold manifest,companion/copy and semantic-effect evidence stay required.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest`
   Status: `pending`
   Goal:bounded fresh Piece/edge/point identity/output-role manifest and complete source-contour/
