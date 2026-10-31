@@ -1195,6 +1195,6 @@ Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687
 
 Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
 
-## D308–D360 — platform read-only inventory isolated
+## D308–D361 — exclusive platform capture ownership earned
 
-D308–D359:[whole prior ledger](../history/stitchcad-devnotes-part819.md). D360 P1 fixed0660:actual old platform plan inherits GIT_DIR/ls-files128;now31 checks/405 rows/seven body reds pass read-only with isolated Git authority. D334 P2 after G1/before G0;D223/PLANNING.5 open. Next platform ownership/effects/consumer;a41/D156/full integration retain owners.
+D308–D360:[whole prior ledger](../history/stitchcad-devnotes-part820.md). D361 P1 fixed0661:actual competing run adopted by nonexclusive prepare;exclusive roots/receipts/reset/temp identity controls pass,three body omissions rejected;competing bytes preserved. D334 P2 after G1/before G0;D223/PLANNING.5 open. Next effects/consumer;a41/D156/full integration owned.

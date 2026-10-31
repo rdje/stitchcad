@@ -203,15 +203,117 @@ def platform_faults():
     return len(changes)
 
 
+def ownership_cases(script=None):
+    """Actual exclusive helper bodies run against independent in-memory directory/file sinks."""
+    ns = module(PLATFORM, script)
+
+    class Directory:
+        def __init__(self):
+            self.exists = False
+
+        def mkdir(self, *, exist_ok=False):
+            if self.exists and not exist_ok:
+                raise FileExistsError('occupied directory')
+            self.exists = True
+
+        def stat(self):
+            return type('Identity', (), dict(st_dev=7, st_ino=13))()
+
+    class File:
+        def __init__(self):
+            self.value = None
+
+        def open(self, mode):
+            assert mode in ('x', 'w')
+            if mode == 'x' and self.value is not None:
+                raise FileExistsError('occupied immutable file')
+            self.value = ''
+            return self
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            return False
+
+        def write(self, value):
+            self.value += value
+
+    directory = Directory()
+    assert ns['reserve_directory'](directory) == (7, 13)
+    try:
+        ns['reserve_directory'](directory)
+    except FileExistsError:
+        pass
+    else:
+        raise AssertionError('directory reuse admitted')
+    file = File()
+    plans = []
+
+    def plan(root, **kwargs):
+        assert root == ROOT and kwargs == dict(output_files=(file,))
+        plans.append(True)
+
+    ns['PROFILE'] = dict(ns['PROFILE'], plan_producer=plan)
+    ns['save_new'](file, 'original immutable receipt')
+    try:
+        ns['save_new'](file, 'replacement')
+    except FileExistsError:
+        pass
+    else:
+        raise AssertionError('immutable file overwrite admitted')
+    assert file.value == 'original immutable receipt' and len(plans) == 2
+
+
+def ownership_controls():
+    ownership_cases()
+    source = PLATFORM.read_text()
+    for old, new in (('    path.mkdir()\n', '    path.mkdir(exist_ok=True)\n'),
+                     ("    with path.open('x') as stream:", "    with path.open('w') as stream:")):
+        assert source.count(old) == 1
+        try:
+            ownership_cases(source.replace(old, new))
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('actual exclusive ownership omission survived')
+    def stale_case(script=None):
+        original = dict(os.environ), sys.argv
+        ns = module(PLATFORM, script)
+        ns['OWNED_RUN_ID'] = (7, 13)
+        try:
+            sys.argv = [str(PLATFORM), '--plan-only']
+            with contextlib.redirect_stdout(io.StringIO()):
+                ns['main']()
+            assert ns['OWNED_RUN_ID'] is None, 'preflight retained stale capture ownership'
+            assert dict(os.environ) == original[0]
+        finally:
+            sys.argv = original[1]
+            os.environ.clear();os.environ.update(original[0])
+
+    stale_case()
+    anchor = '    OWNED_RUN_ID = None\n'
+    assert source.count(anchor) == 1
+    try:
+        stale_case(source.replace(anchor, ''))
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError('actual stale-ownership reset omission survived')
+    return 3
+
+
 def main():
     plans = [capture(entry) for entry in ENTRIES]
     rejected = faults()
     platform_capture()
     platform_rejected = platform_faults()
+    exclusive_rejected = ownership_controls()
     assert all(hashlib.sha256(path.read_bytes()).digest() == value for path, value in FROZEN.items())
     print('numerical inventory:4 actual plan-only entries;variants6/6/8/10;'
           f'{plans[0][2]} exact snapshot files;{rejected} actual body faults;'
           f'platform31 checks/405 rows/{platform_rejected} platform body faults;'
+          f'exclusive directory/file omissions{exclusive_rejected};stale ownership reset;'
           'Git selectors isolated;caller stores/argv/sources exact;no directory/write/compiler/browser effects;rc=0')
 
 

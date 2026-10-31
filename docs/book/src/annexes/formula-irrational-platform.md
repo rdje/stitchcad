@@ -400,5 +400,20 @@ redirect its source inventory. NUL-separated Git output retains the existing fil
 The read-only watcher runs the actual entry,retains all nine consumers,31 selected checks,six
 host-only exclusions and405 fixture rows,and rejects seven actual inventory-body faults. It
 permits no directory creation,file write,compiler or browser dispatch. The original four native
-plan-only entries and their six body controls remain green. This closes platform inventory only;
-capture ownership,effects and fresh execution remain the following n16.2 leaves.
+plan-only entries and their six body controls remain green. Ownership has separate controls below;
+complete effects and fresh execution remain the following n16.2 leaves.
+
+## Exclusive platform capture ownership
+
+The platform runner resets stale ownership before preflight. After validating its complete plan,
+it reuses only the common store parent;run and short temporary directories require exclusive
+creation. A competing run never becomes owned by this invocation. A competing temporary root
+remains untouched;the new owned run may retain its own incomplete-failure record.
+
+Reports,failure records and pending latest pointers use exclusive file creation. A prior pending
+file cannot be overwritten;the existing validated latest pointer still changes by atomic rename.
+The temporary root's original device/inode identity must also survive until sealing.
+Actual collision fixtures preserve competing bytes and perform no compiler/browser execution.
+The read-only watcher independently rejects exclusive-directory,exclusive-file and stale-owner
+reset omissions. These ownership controls are separate from the pending complete effect review
+and fresh native/browser acceptance.

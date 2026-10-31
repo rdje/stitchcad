@@ -933,24 +933,23 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py;docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py;docs/tasks/artifacts/formula_structure/irrational_platform.py
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.inventory`
   Status: `done`
-  - [x] ISSUE:D360 P1 platform plan-only inventory inherits unrelated caller Git authority.
-  - [x] ROOT CAUSE (WHY + WHERE):actual old --plan-only with unrelated GIT_DIR →ls-files128;
-    four protocol controls stay read-only;compiler/browser never dispatched,rc=0.
-  - [x] FIX:retain prepared nonactivating store profile,strip all Git selectors,disable system/
-    global configuration/optional locks;preserve NUL argv,cwd and unrelated caller values.
-  - [x] ADDRESSED:extended python_numerical_inventory_contract.py →actual platform31 checks/
-    405 rows/seven body faults pass;no directory/write/compiler/browser effects,rc=0.
-    Actual external CLI with unrelated GIT_DIR now passes original complete plan,rc=0.
-  - [x] NO REGRESSION:original four plans/545 snapshot files/six body reds stay green;
-    book101/374/1684/3001/history819 four Git spans/census/map/diff pass,rc=0.
-  - [x] LOCKSTEP:book/live/notes/registry/frontier sync;D360 fixed. Promotion declined(existing
-    caller-authority/read-only contracts). n16/n16.2 active;ownership/effects/consumer/a41 pending.
-    No native/browser verdict inferred;full D156/.h2.b.v/pre-push remain owned.
-  Commit:STITCHCAD-G1-0660;Verification:actual read-only platform plan and independent omission controls.
+  Goal:0660 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part820.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.ownership`
-  Status: `pending`
-  Goal:calibrate platform run/temp/pointer ownership and refuse concurrent reuse before effects;
-  preserve original captures,failure writer and latest publication semantics.
+  Status: `done`
+  - [x] ISSUE:D361 P1 platform freshness check can adopt a concurrent run and amend its receipts.
+  - [x] ROOT CAUSE (WHY + WHERE):actual old main's nonexclusive prepare adopts competing inode;
+    write_failure reaches trapped foreign failure publication;sentinel exact/no compiler/browser,rc=0.
+  - [x] FIX:reset stale owner before preflight,reserve run/temp exclusively,retain temp identity
+    until sealing;create report/failure/pending files exclusively and retain atomic latest rename.
+  - [x] ADDRESSED:actual run collision refused before receipt/browser/compiler;actual temp
+    collision leaves competing bytes exact and failure only in newly owned run;pending overwrite
+    refused. Read-only watcher rejects three actual directory/file/reset omissions,rc=0.
+  - [x] NO REGRESSION:four native plans/545 files/six reds and platform31/405/seven reds stay
+    green;book101/374/1684/3002/history820 four Git spans/census/map/diff pass,rc=0.
+  - [x] LOCKSTEP:book/live/notes/registry/frontier sync;D361 fixed. Promotion declined(existing
+    immutable ownership/file contracts). n16/n16.2 active;effects/consumer/a41 pending.
+    No fresh compiler/browser verdict;full D156/.h2.b.v/pre-push/app/release remain owned.
+  Commit:STITCHCAD-G1-0661;Verification:actual controlled collisions and independent pure ownership guards.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects`
   Status: `pending`
   Goal:complete tangent-family entry and platform source/file/mutable/child/browser/temp/failure

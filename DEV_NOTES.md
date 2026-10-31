@@ -3,13 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — isolate the platform's read-only inventory
+## _(2026-10-31 UTC)_ — earn exclusive platform capture ownership
 
-0660 closes n16.2.inventory. D360 P1:actual platform --plan-only with unrelated GIT_DIR exits128 at ls-files. Keep nonactivating prepared stores,strip all Git selectors/configuration and disable optional locks;retain NUL argv/cwd and unrelated variables. No compiler or browser effect occurs.
-Extended read-only watcher passes original4 plans/current545 files/six body reds plus platform9 consumers/31 checks/6 exclusions/405 rows/seven body reds. Actual external platform CLI with unrelated GIT_DIR now passes. Store activation,writes,directories and compiler/browser dispatch remain forbidden.
-Book101/374/1684/3001/history819 four exact Git spans/census/map/diff pass. LIVE notes:D360 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing caller-authority contracts. n16/n16.2 active;ownership/effects/consumer/a41 pending. No Rust/kernel change or new runtime verdict.
-[Whole0659](docs/history/stitchcad-devnotes-part819.md) retains actual four-entry native acceptance. Full PNT next:atomic platform capture/temp/latest ownership. Existing native/browser receipts stay immutable. Full D156/.h2.b.v/pre-push/platform/app/physical/release scopes remain separately owned.
-Evidence:target/platform-0660-inventory.log. Actual entry capture rejects seven current Python-body omissions/resets while preserving original source/store/argv bytes. Previous Root/Arc/forward/inverse controls remain required;no full gate rerun for this bounded fix.
+0661 closes n16.2.ownership. D361 P1:actual old prepare admits a concurrent run and reaches trapped foreign failure publication. Reset stale owner before preflight;reserve run/temp exclusively. Report/failure/pending files use exclusive creation;temp identity survives sealing and latest rename stays atomic.
+Actual run collision refuses before receipt/browser/compiler. Actual temp collision preserves competing sentinel;failure stays in the new owned run. Existing pending pointer refuses overwrite. Independent pure helper/reset controls reject three actual body omissions. No source/capture bytes overwritten.
+Four plans/current545/six reds and platform31/405/seven reds remain green. Book101/374/1684/3002/history820 four exact Git spans/census/map/diff pass. LIVE notes:D361 fixed;states/G1 6/18/G0 unapproved unchanged. Promotion declined:existing immutable ownership contracts. No fresh native/browser verdict.
+[Whole0660](docs/history/stitchcad-devnotes-part820.md) retains D360 inventory proof. n16/n16.2 active;next effects,then actual consumer;a41/D156/.h2.b.v/pre-push remain owned. Session health flagged:long review/fresh context recommended;durable pointer names next slice. No user pause inferred.
+Evidence:target/platform-0661-ownership.log plus actual controlled run/temp/pending red→green. Shared read-only watcher remains nonproducing. Native/Chrome execution stays separate;original reports and historical capture roots remain immutable.
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
 [Whole0468 policy/filter lesson](docs/history/window23.md#stitchcad-devnotes-part622md) retains exact setup/privacy/diagnostic proof.

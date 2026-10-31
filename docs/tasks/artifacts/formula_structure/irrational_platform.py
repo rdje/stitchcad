@@ -75,12 +75,26 @@ def save(path, value):
     path.write_text(value)
 
 
+def save_new(path, value):
+    """An immutable receipt or pending pointer must never replace an earlier writer's file."""
+    PROFILE['plan_producer'](ROOT, output_files=(path,))
+    with path.open('x') as stream:
+        stream.write(value)
+
+
+def reserve_directory(path):
+    """Only exclusive creation earns ownership of a capture or temporary root."""
+    path.mkdir()
+    info = path.stat()
+    return info.st_dev, info.st_ino
+
+
 def write_failure(error):
     """A reused PID or refused preflight must never amend an earlier retained capture."""
     if RUN.is_dir() and not RUN.is_symlink():
         current = RUN.stat()
         if (current.st_dev, current.st_ino) == OWNED_RUN_ID:
-            save(RUN / 'failure.json', json.dumps(dict(status='incomplete',error_type=type(error).__name__,
+            save_new(RUN / 'failure.json', json.dumps(dict(status='incomplete',error_type=type(error).__name__,
                 error=str(error).replace(str(ROOT),'.'),temporary_root=relative(TEMP),
                 scope='failed capture;no numerical verdict'),indent=2)+'\n')
 
@@ -105,7 +119,7 @@ def protocol_controls():
         for owner, link, expected in ((None,False,0), ((1,99),False,0), ((1,2),True,0), ((1,2),False,1)):
             writes = []
             scope = dict(globals(), RUN=Capture(link), OWNED_RUN_ID=owner,
-                save=lambda path,value: writes.append((path,value)))
+                save_new=lambda path,value: writes.append((path,value)))
             exec(compile(ast.fix_missing_locations(ast.Module(body=[body],type_ignores=[])),__file__,'exec'),scope)
             scope['write_failure'](AssertionError('controlled'))
             assert len(writes) == expected, 'capture ownership refusal bypassed'
@@ -254,6 +268,7 @@ def chromium(executable, label, wasm, marker, environment):
 
 def main():
     global OWNED_RUN_ID
+    OWNED_RUN_ID = None
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--plan-only', action='store_true')
     args = parser.parse_args()
@@ -304,9 +319,13 @@ def main():
         return
     cleanup = runpy.run_path(str(CLEANUP))
     assert 'target/irrational_platform_certificate' in cleanup['PROTECTED'], 'register retained capture before creation'
+    # The complete plan above precedes store activation;only the common parent may be reused.
+    environment = PROFILE['prepare_producer'](ROOT, sources=tuple(sources),
+        directories=(STORE,), output_files=outputs)
+    OWNED_RUN_ID = reserve_directory(RUN)
+    temp_owner = reserve_directory(TEMP)
     environment = PROFILE['prepare_producer'](ROOT, sources=tuple(sources),
         directories=tuple(directories), output_files=outputs)
-    OWNED_RUN_ID = (RUN.stat().st_dev, RUN.stat().st_ino)
     environment['TMPDIR'] = str(TEMP)
     environment['TMP'] = str(TEMP)
     environment['TEMP'] = str(TEMP)
@@ -424,6 +443,8 @@ unsafe_code = "forbid"
                 sha256=digest(path) if not path.is_symlink() and path.is_file() else None,
                 link=os.readlink(path) if path.is_symlink() else None))
         return entries
+    assert not TEMP.is_symlink() and (TEMP.stat().st_dev, TEMP.stat().st_ino) == temp_owner, \
+        'owned temporary root changed before sealing'
     temp_entries = temp_census(TEMP)
     PROFILE['plan_producer'](ROOT, directories=(TEMP, sealed_temp))
     assert sealed_temp.is_dir() and not list(sealed_temp.iterdir()), 'owned empty temp destination changed'
@@ -439,8 +460,8 @@ unsafe_code = "forbid"
         outcomes=outcomes,temporary_root=relative(TEMP),temporary_sealed_at=relative(sealed_temp),temporary_entries=temp_entries,
         new_ambient_chrome_entries=added_ambient,workspace_restored=True,
         locality_scope='direct source/artifact/profile/temp boundaries;complete transitive compiler/browser review remains n16')
-    save(RUN / 'report.json', json.dumps(report, indent=2) + '\n')
-    save(PENDING, json.dumps(dict(report=relative(RUN / 'report.json'),sha256=digest(RUN / 'report.json')),indent=2)+'\n')
+    save_new(RUN / 'report.json', json.dumps(report, indent=2) + '\n')
+    save_new(PENDING, json.dumps(dict(report=relative(RUN / 'report.json'),sha256=digest(RUN / 'report.json')),indent=2)+'\n')
     PROFILE['plan_producer'](ROOT, sources=(PENDING,), output_files=(LATEST,))
     PENDING.replace(LATEST)
     print('irrational platform:31 checks/native+actual Chrome/bad expectation rejected/originals restored;report='

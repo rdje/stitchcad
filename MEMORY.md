@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.ownership:calibrate atomic run/temp/latest ownership,then .effects and .consumer. n16/n16.2 active;n16.1 and platform inventory complete.
-- Latest unit STITCHCAD-G1-0660;derive HEAD/ahead from Git. D360 unrelated Git inventory fixed.
-- Actual external platform --plan-only now accepts unrelated GIT_DIR without redirecting index.
-- Read-only watcher retains9 consumers/31 checks/6 exclusions/405 rows;seven platform body reds
-  reject;no directory/write/compiler/browser effects. Original four plans/current545/six reds pass.
-- Book101/374/1684/3001/history819 four exact Git spans/census/map/diff pass;no Rust/kernel changes.
-- n16.1 actual native0659 retains4 baselines/26 compiled faults/source551/legacy6614/Rust548 exact,
-  all2180 snapshots restored;receipt protected at native-0659-20261031T003645962930Z-64800.
-- Current platform inventory fix supplies no fresh native/browser verdict. Capture ownership,
-  effects and actual execution remain pending;new wrapper-own audit a41 stays scheduled.
-- D156/.h2.b.v/pre-push broad verification owned;full0654 actual29/source1223 remains historical.
-- Preserve all original numerical/certificate/archive/search evidence;never rerun old captures.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects:complete tangent/platform effect/child/temp/mutable review and focused controls,then .consumer fresh native/Chrome acceptance.
+- Latest unit STITCHCAD-G1-0661;derive HEAD/ahead from Git. Platform inventory/ownership done.
+- D361 concurrent run/temp admission fixed:exclusive directories,stale owner reset,exclusive
+  report/failure/pending files and temp device/inode check;latest rename remains atomic.
+- Actual run/temp collision fixtures preserve competing bytes;failure stays in new owned run;
+  existing pending pointer refuses overwrite. No compiler/browser executed by those fixtures.
+- Pure ownership watcher rejects3 omissions;four plans/545 files/six reds and platform31/405/
+  seven inventory reds pass read-only. Book101/374/1684/3002/history820/census/map/diff pass.
+- n16/n16.2 active;effects/consumer/a41 pending. No fresh platform execution verdict yet.
+- n16.1 actual native0659 remains4 baselines/26 faults/source551/legacy6614/Rust548 exact,
+  all2180 snapshots restored. Full0654 suite remains historical;D156/.h2.b.v/pre-push owned.
+- Preserve original numerical/certificate/archive/search proof;no historical capture reruns.
 - G1 6/18/G0 unapproved;.5d.4 all43 done;.5d.2/.5e.3 active;.5e.4 pending. Full PNT/push400 only.
-- Cleanup2026-10-30 14:18 UTC unchanged;not due yet. No job pending after focused checks.
+- Cleanup2026-10-30 14:18 UTC unchanged;not due yet. Session is long;fresh context recommended.
 - Archive prerequisite .2.retention closed0508:window23 packs63 committed raw files;complete
   candidate/post1118 names/sizes/SHA256/3637878B exact,native tar63/378790B exact. Whole0507 in665,
   3 exact Git spans;94 live links/6 files routed;task-source12 pass. At0508:1119 logical,active3/64,
