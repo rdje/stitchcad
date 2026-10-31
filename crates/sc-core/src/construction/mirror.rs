@@ -30,6 +30,12 @@ pub use point_roles::{
     BoundMirrorPiecePointRoles, MirrorPiecePointRoleBindingError,
     MirrorPiecePointRoleBindingRefusal,
 };
+mod points;
+pub use points::{
+    AdmittedMirrorPiecePoints, MirrorPiecePoint, MirrorPiecePointCandidate,
+    MirrorPiecePointManifest, MirrorPiecePointManifestError, MirrorPiecePointManifestLimits,
+    MirrorPiecePointManifestRefusal,
+};
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
 /// Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks.

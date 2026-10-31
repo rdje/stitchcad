@@ -41,13 +41,16 @@ pub use join::{
 };
 mod mirror;
 pub use mirror::{
-    BoundMirrorPieceCopy, BoundMirrorPieceCutPolicy, BoundMirrorPieceEdgeRoles,
-    BoundMirrorPieceMetadata, BoundMirrorPiecePointRoles, DeclaredMirrorPieceIdentity, MirrorAxis,
-    MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError,
-    MirrorPieceCutPolicy, MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
-    MirrorPieceEdgeLocation, MirrorPieceEdgeSource, MirrorPieceFieldIntent, MirrorPieceFoldIntent,
-    MirrorPieceIdentityError, MirrorPieceIdentityRefusal, MirrorPieceMetadataError,
-    MirrorPieceMetadataLimits, MirrorPieceMetadataPolicy, MirrorPieceMetadataRefusal,
+    AdmittedMirrorPiecePoints, BoundMirrorPieceCopy, BoundMirrorPieceCutPolicy,
+    BoundMirrorPieceEdgeRoles, BoundMirrorPieceMetadata, BoundMirrorPiecePointRoles,
+    DeclaredMirrorPieceIdentity, MirrorAxis, MirrorAxisDependency, MirrorAxisSource,
+    MirrorPieceCopy, MirrorPieceCopyError, MirrorPieceCutPolicy, MirrorPieceCutPolicyError,
+    MirrorPieceCutPolicyRefusal, MirrorPieceEdge, MirrorPieceEdgeLocation, MirrorPieceEdgeSource,
+    MirrorPieceFieldIntent, MirrorPieceFoldIntent, MirrorPieceIdentityError,
+    MirrorPieceIdentityRefusal, MirrorPieceMetadataError, MirrorPieceMetadataLimits,
+    MirrorPieceMetadataPolicy, MirrorPieceMetadataRefusal, MirrorPiecePoint,
+    MirrorPiecePointCandidate, MirrorPiecePointManifest, MirrorPiecePointManifestError,
+    MirrorPiecePointManifestLimits, MirrorPiecePointManifestRefusal,
     MirrorPiecePointRoleBindingError, MirrorPiecePointRoleBindingRefusal,
     MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal, MirrorPieceSourceError,
     MirrorPieceSourceLimits, MirrorPieceSourceRefusal,

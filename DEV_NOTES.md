@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind point roles to actual mirror declaration
+## _(2026-10-31 UTC)_ — admit original mirror point candidates
 
-0726 associates actual canonical Piece declaration and admitted point catalogue under complete D/A/key bytes before the actual mirror operation id.
-Native3+4/mirror API19/book9,selected clippy/fmt/build/map/render pass0;prior point catalogue/history/Piece identity code unchanged. Whole0725 spans897 exact0.
-Actual parent/field pointers and original membership order retained;empty/inactive stays metadata. Shared quota/cause data provides no edge-proof or Piece-id substitution.
-Promotion: declined (existing typed-owner/data boundary). Source-point attribution next;PointRef generation,current source/frame/geometry/issued history/global freshness/full CI remain owed. G1still6/18/G0 unapproved.
+0727 admits full N/2N before owner/role/source checks and indexing;authentic candidate/role/source borrows retain stable logical operation/tag tuples.
+Repeated sources retain distinct roles;both candidate orders checked independently of active order. N0 is presence metadata,not no-op/coverage/retirement evidence.
+Native5+3/mirror API22/book10,selected clippy/fmt/build/map/render pass0;parent implementations unchanged,whole0726 spans898 exact0. No source geometry or issued identity proof.
+Promotion: declined (existing metadata/role boundary). Bounded provenance query next;actual source/frame/currentness/reflection/copy/semantic/full CI remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

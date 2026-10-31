@@ -415,3 +415,60 @@ source-point attribution,current registry/membership/common frame,geometric corr
 canonical issued-history completeness,global freshness and publication still require their
 separate owners. This binding cannot be used as point-source or actual reflection evidence.
 
+## Original-point candidate attribution
+
+`MirrorPiecePointManifest` retains an original operation and ordered `MirrorPiecePointCandidate`
+records. Each candidate declares a persistent point-role tag and an original PointRef. Admission
+against actual BoundMirrorPiecePointRoles checks metadata attribution;it does not evaluate a
+reflection or certify that a source exists in the Piece,current registry or common frame.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPiecePointCandidate` | Original explicit tag and PointRef field |
+| `MirrorPiecePointManifest` | Whole unadmitted operation/candidate proposal |
+| `MirrorPiecePointManifestLimits::new(N,W)` | Explicit whole candidate and workspace-entry allowances |
+| `AdmittedMirrorPiecePoints` | Complete locally admitted candidate/role associations |
+| `MirrorPiecePoint` | Authentic original candidate,source field and point-role view |
+| `MirrorPiecePointManifestError`, `MirrorPiecePointManifestRefusal` | Original proposal/parents/limits and first actual cause |
+
+The checked workspace count2N precedes N and workspace quotas,then operation identity. Only after
+those complete checks does indexing begin. The workspace is one N-entry tag index and one
+N-entry association collection;these are entry counts,not allocation bytes or prior input-storage
+bounds. Existing catalogue D/A/key-byte limits retain their separate scope.
+
+Each original candidate checks duplicate tag,undefined/inactive point role,same-operation source,
+then known source/result Piece and assigned Material aliases,in that order. A Piece or Material
+identity cannot silently become a point-creating operation. Error fields retain the actual source
+PointRef/tag,original candidate position and relevant typed identity. No accepted prefix escapes.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let raw=MirrorPiecePointManifest::new(EntityId::from_bits(10),
+    vec![MirrorPiecePointCandidate::new(LocalTag::new(9),
+        PointRef::new(EntityId::from_bits(90),LocalTag::new(7)))]);
+assert_eq!(raw.candidates().first().expect("original field").tag(),LocalTag::new(9));
+fn admit<'a>(raw:&'a MirrorPiecePointManifest,roles:&'a BoundMirrorPiecePointRoles<'a>,
+    limits:MirrorPiecePointManifestLimits)
+    ->Result<AdmittedMirrorPiecePoints<'a>,MirrorPiecePointManifestError<'a>> {
+    raw.admit(roles,limits)
+}
+```
+
+Candidate order and original source fields remain exact,including reverse iteration. Explicit
+lookup uses the persistent tag,not its candidate position. A view's point role belongs to the
+actual admitted point catalogue. `logical_output()` constructs the declared PointRef tuple from
+the actual mirror operation and canonical persistent role tag. This supplies no generated entity,
+coordinates,registry insertion,global freshness or publication authority.
+
+Distinct output roles may explicitly name the same original PointRef. Both original candidates
+remain present;no role is coalesced or chosen by coordinates or ordering. This metadata does not
+prove physical duplication or unique geometric correspondence. Read-only provenance querying
+remains the next native step;actual source/frame/role continuity and whole correspondence remain
+required under the existing manifest/copy/semantic/execution owners.
+
+An explicitly empty candidate proposal admits with N0/W0 under the actual operation. Existing
+active/inactive role definitions remain unchanged;no missing point is manufactured. This is
+empty candidate presence metadata. It does not establish an unchanged result,no-op,complete
+source/consumer coverage or executable reflected Piece. Actual source-point ownership/currentness,
+common frame,supported reflection domain and semantic/geometry effects remain separate proof.
+

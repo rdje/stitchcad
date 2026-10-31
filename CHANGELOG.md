@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0726 — bind point roles to actual mirror declaration
+## STITCHCAD-G1-0727 — admit original mirror point candidates
 
-- Actual canonical Piece and point catalogue parents bind under complete metadata limits before owner checks.
-- Point proof domain remains distinct;raw quota/cause data may share without edge or Piece-id substitution.
-- Native7/mirror API19/book9 and focused lint/fmt/build/map/render/history897 checks pass.
-- No point generation/source/frame/geometry/history authority;complete source/output attribution stays owned.
+- Whole candidate/workspace quotas precede original owner,role and local typed-source checks.
+- Authentic fields/order and canonical logical tuples retained;shared sources do not coalesce roles.
+- Native8/mirror API22/book10 and focused lint/fmt/build/map/render/history898 checks pass.
+- Empty proposal is metadata;actual source/geometry/issuance/completeness proof and query remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
