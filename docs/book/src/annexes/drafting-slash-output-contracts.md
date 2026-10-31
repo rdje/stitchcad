@@ -128,8 +128,10 @@ under `TrimOverlaps` refuses rather than changing the authored policy.
 
 The workspace count is one N-entry temporary tag index plus N retained candidate/active-role pairs.
 The catalogue's prior allocation and whole storage/memory/geometry/query-batch resources retain their
-own admission. Limits bound complete populations,never an accepted prefix. Empty input refuses;
-a role catalogue's valid empty state does not supply a successful edge manifest.
+own admission. Limits bound complete populations,never an accepted prefix. Empty input refuses
+through ordinary `admit`;a role catalogue's valid empty state does not automatically admit a manifest.
+[Explicit no-new-edge admission](drafting-slash-piece-contracts.md#explicit-no-new-edge-admission)
+uses a separate population choice under the same resource and owner checks.
 
 ```rust
 use sc_core::construction::*;
@@ -227,8 +229,9 @@ hole still needs real endpoint closure,shape,winding and containment proof from 
 This stage publishes no replacement Piece,retirement,reference map,fold/copy/metadata change or
 measured fullness. Missing original source portions and dependent semantic references still require
 explicit reconciliation. Actual trim selection,closure,current sources,geometry/error bounds and
-bus authority remain separately owned. Zero/no-new-edge outcome policy is also owned by semantic
-reconciliation;the nonempty candidate primitive must never be satisfied with fabricated geometry.
+bus authority remain separately owned. Explicit no-new-edge admission is described in the
+[Piece companion](drafting-slash-piece-contracts.md#explicit-no-new-edge-admission);source-preserving
+outcome choice remains owned. The ordinary nonempty primitive never needs fabricated geometry.
 
 ## Native declared-source reference eligibility
 

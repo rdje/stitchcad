@@ -3,8 +3,8 @@
 This companion continues the [output and reference-disposition contracts](drafting-slash-output-contracts.md).
 Native declarations retain original owners and request evidence. They do not create a geometrically
 valid replacement Piece,change canonical metadata or authorize publication. The nonempty changed
-contour path,structural copy association and effect requirements are available;zero/no-new-edge
-outcomes remain separately owned native work. Actual geometry/current Design/semantic repair stays G2/G3/Design/bus.
+contour/copy/effect paths and explicit no-new-edge admission are available;source-preserving versus
+reconciled outcome choice remains separately owned native work. Actual geometry/current Design/semantic repair stays G2/G3/Design/bus.
 
 ## Canonical source-metadata preservation
 
@@ -165,4 +165,61 @@ The actual cut-four copy case retains all four ids/orientations and the exact or
 opening fields after requesting effect evidence. Its Piece,copy inventory and ledger remain unchanged.
 This completes only the native effect **requirement declaration**. Actual supported domain/effect,
 canonical intake conservation,all-copy semantic/sewing effects,current ownership and atomic publication
-keep their G2/G3/Design/bus owners. Explicit zero/no-new-edge outcomes remain before native family closure.
+keep their G2/G3/Design/bus owners. Explicit no-new-edge admission follows;source-preserving/reconciled
+outcome choice remains before native family closure.
+
+## Explicit no-new-edge admission
+
+An explicit zero-candidate declaration needs no fabricated edge. Construct
+`SlashSpreadEdgeManifest::new(operation,vec![])` and explicitly call
+`admit_no_new_edges(&bound_roles,limits)`. Ordinary `admit` continues to require a nonempty candidate
+list and returns Empty for that same raw manifest. Both entry points share the complete resource/
+operation/candidate kernel;the population choice is explicit rather than a fallback.
+
+The no-new-edge entry checks complete2N workspace,N/D/A/key-byte quotas first,then requires N0,
+then requires the actual bound operation. CandidatesPresent refuses any supplied candidate without
+discarding it. Quotas precede that population cause;population precedes the operation cause. Errors
+retain the original complete manifest,bound owners and explicit policy. At N0,no candidate or index
+entry is allocated and no identity is issued. Prior catalogue/storage and whole-operation resources
+retain their existing scope.
+
+```rust
+use sc_core::construction::*;
+fn admit_no_new_edges<'a>(manifest:&'a SlashSpreadEdgeManifest,roles:&'a BoundSlashSpreadEdgeRoles<'a>,
+    policy:SlashSpreadEdgeManifestLimits)->Result<AdmittedSlashSpreadEdges<'a>,SlashSpreadEdgeManifestError<'a>> {
+    manifest.admit_no_new_edges(roles,policy)
+}
+```
+
+The authentic `AdmittedSlashSpreadEdges` has zero outputs and zero2N workspace,while retaining
+its actual raw manifest and bound role/intent owners. Empty catalogues and catalogues with active
+unused roles are both valid metadata. This admission deactivates no role,retires no canonical
+identity and edits no previously issued edge. Historical output/current-role reconciliation remains
+required by its actual operation-history,consumer and publication owners.
+
+Pass that actual empty edge proof into the existing contour admission with N0. Every target use
+must be an exact retained source identity:an Output tag names no admitted candidate and refuses.
+All complete source/group/use quotas,source association,self-cycle checks,cut uniqueness and
+nonempty boundary/hole rules remain. Zero new edges do not make an empty or collapsed Piece valid.
+Unsupported physical collapse must follow the actual domain/refusal contract.
+
+Source identity coverage,reference eligibility,actual registration plans,the five whole-consumer
+evidence requests,boundary/domain/interval requirements,canonical metadata,actual copies and
+attributed effect all retain their existing admission paths. Nothing bypasses those checks. A retained
+source query has at most one identity match at N0;Unique remains metadata rather than physical/current
+proof. Gaps and actual registrations remain visible;no registration is withdrawn to hide absence.
+
+For example,retain the original outer edge and original construction edge. The complete path can
+bind with zero new candidates while keeping both registered owners and all physical-copy identities.
+Already issued role2/role9 edges remain globally live,and their catalogue membership is unchanged.
+No journal edit or geometry result is supplied by this declaration.
+
+Alternatively,retain the outer edge but omit the original construction edge. This also uses no new
+edges,but its contours changed. The omitted source's eligibility query returns Gap while its global
+edge and registration can still resolve. All current semantic-ownership/repair evidence remains
+required. Zero candidate count leaves the original Added/Removed/Unchanged request untouched.
+
+No-new-edge admission therefore proves neither source preservation nor an achieved zero effect.
+The next native outcome choice separately owns exact source-contour/order/direction preservation
+and required Unchanged intent. Actual geometry,current ownership,effect,canonical history/retirement,
+repair/authority and atomic publication keep their G2/G3/Design/bus proof owners.

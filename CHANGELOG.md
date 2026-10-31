@@ -9,12 +9,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0714 — require attributed fullness without a second authored amount
 
-- Bind explicit derivation/attribution/canonical-intake sources to original inputs and all actual copies.
-- Reuse canonical all-copy source;preserve declared fullness/opening without another amount or closure.
-- Native3/rustdoc5/lint/fmt/book/render/diff/history883 pass;old examples/notes and all original owners exact.
-- Explicit zero/no-new-edge outcome and actual G2/canonical intake/copy-sewing/currentness proof remain owned.
+## STITCHCAD-G1-0715 — admit explicit no-new-edge declarations without fabricated geometry
+
+- Share whole resource/owner kernel between ordinary nonempty and explicit zero-candidate admission.
+- Reuse complete reconciliation at N0;retain active/issued roles and visible retained-source gaps.
+- Native7/rustdoc8/lint/fmt/book/render/diff/history884/shared-kernel proof pass;old examples/notes exact.
+- No-new-edges differs from source preservation;explicit choice and actual G2/history/authority remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

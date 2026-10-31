@@ -1,19 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0714;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome
-  — activate/split explicit zero/no-new-edge path and changed/unchanged outcome declaration.
-  Preserve original inputs/Piece metadata/actual copies/canonical roles;no fabricated candidate,
-  inferred effect,implicit role retirement or currentness certificate. Actual evidence remains owed.
-- Native effect requirement binds derivation/attribution/canonical-intake requests to all actual
-  copies;original fullness/input/opening and existing all-copy source borrowed,no second amount.
-  Native3/rustdoc5/lint/fmt/book/render/history883 pass;2 prior actual examples/older31219B notes exact.
-- Actual CutPlan whole C precedes target orientation/quantity/pair association;all ids/order retained.
-  Whole0713 scope/lesson now883. Protected target/history-proof-0713-metadata-fixture/ retains exact
-  moved helper and old metadata test-body proof;target/history-proof-0714-note-boundary/ protected.
+- Latest unit:STITCHCAD-G1-0715;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome.choice
+  — explicit PreserveSource versus ReconcileContours requirement on actual complete effect context.
+  PreserveSource needs N0,original Unchanged intent and exact boundary/hole/construction order/
+  directions. No-new-edges alone proves none of these;geometry/effect/currentness stay evidence.
+- admit_no_new_edges explicitly admits N0 under shared quotas/owner;ordinary admit still Empty.
+  Existing contours/reference/metadata/copy/effect pipeline works without fake candidates. Active/
+  issued roles remain intact;retained-only omission yields Gap without removing live registration.
+  Native7/rustdoc8/lint/fmt/book/render/history884 pass. Protected shared kernel/old notes proof:
+  target/history-proof-0715-shared-population/. Reference journal decision promoted with answers.
+- Native effect binds derivation/attribution/canonical-intake sources,no second amount;whole0714 now884.
+- Whole0713/copy fixture proof:archive883 and target/history-proof-0713-metadata-fixture/.
 - Native metadata borrows all canonical Piece fields/derived print view;explicit NoFold/retained or
   Source-derived outer original-fold attribution;whole0712 now882/0065 protocol881. No accepted proof.
-- drafting-slash-piece-contracts.md has metadata/copy/effect examples3;old output chapter retained.
+- drafting-slash-piece-contracts.md has metadata/copy/effect/no-new-edge examples4;old output chapter retained.
   SUMMARY120/cap120;all direct navigation retained. Native declarations remain focused-check scope.
 - Semantics outcome/closure remain owned;native reference-disposition has focused-check closure only.
 - Boundary requirements:domain/whole interval coverage plus bridge incidence/closure or trim

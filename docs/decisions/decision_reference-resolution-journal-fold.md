@@ -117,3 +117,19 @@ one registration does not mutate an immutable Notch holding the old anchor. Disp
 whole source/consumer coverage,actual mapping and coordinated semantic repair/publication obligations.
 The scoped ledger readiness verdict remains valid in its documented narrower domain;this is no
 ledger algorithm defect or geometry/currentness certificate.
+
+## No-new-edge declarations and source preservation0715
+
+answers: "does a no-new-edge declaration mean nothing changed?" · "do unused active roles retire automatically?"
+
+An explicit N0 slash edge declaration states only that this manifest creates no candidate edges.
+It can still omit or reorder retained contour uses. An omitted source may remain globally live and
+registered while its proposed Piece eligibility becomes Gap. No-new-edges therefore proves neither
+source preservation nor a zero physical/fullness effect. The source-preserving outcome must separately
+require exact original contour orders/directions and original Unchanged intent,with actual evidence.
+
+Ordinary nonempty admission keeps its Empty refusal. Explicit no-new-edge admission shares the whole
+resource/owner kernel and feeds the same contour/reference/metadata/copy/effect requirement pipeline.
+Unused catalogue roles are not deactivated;already issued global edges are not retired. Actual current
+history/consumer coverage,semantic repairs,geometry/effect and authorized atomic publication remain
+separate obligations. No absent candidate is invented to satisfy the ordinary primitive.

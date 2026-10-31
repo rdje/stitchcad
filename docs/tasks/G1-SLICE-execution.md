@@ -914,28 +914,38 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.effect`
   Status: `done`
-  Goal:mandatory derivation/attribution/canonical-intake evidence requests bound to actual complete
-  copies;borrow original fullness/input/opening and existing all-copy source,no second amount.
-  - [x] ISSUE:Added/Removed/Unchanged is not an attributed effect or canonical intake closure.
-  - [x] ROOT CAUSE (slash attributed effect):actual input/output/copy and canonical Dart/Tuck/
-    Pleat/Gather intake/closure contracts read;original Added/input/opening owner checked,rc=0.
-  - [x] FIX:mandatory explicit source requests with private whole-copy/original-input context;
-    fixed association allocates/evaluates nothing,selects no copy and accepts no provider evidence.
-  - [x] ADDRESSED (slash attributed effect):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test slash_spread_copy_contract →3 pass,rc=0;actual cut-four context,all original
-    copy ids/orientations and exact input/opening/fullness/all-copy-source fields preserved.
-  - [x] NO REGRESSION (slash attributed effect):privacy2/actual metadata book3/strict selected
-    clippy/fmt/book/render/diff and archive883 three exact spans pass,rc=0. Both prior actual book
-    examples and31219B older live notes unchanged;Piece/copy inventory/ledger remain unchanged.
-    No achieved effect,intake conservation,provider/currentness/authority or publication certificate.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing canonical intake boundary).
-  Verification:native3/rustdoc5;Commit:STITCHCAD-G1-0714. Next .semantics.outcome;explicit zero/
-  no-new-edge path must preserve original metadata/copies/roles without fabricating a candidate.
+  Goal:0714 effect requests;[whole scope/proofs](../history/stitchcad-devnotes-part884.md).
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome`
-  Status: `pending`
+  Status: `active`
   Goal:explicit unchanged/zero/no-new-edge declaration without fabricated candidate,plus changed
   complete path;original inputs/source metadata and actual supported-domain/effect evidence remain.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome.admission`
+  Status: `done`
+  Goal:explicit N0 admission through shared complete resource/owner kernel;ordinary admit remains
+  nonempty. No fabricated candidate,id,implicit catalogue deactivation or global edge retirement.
+  Finding:no-new-edges can change retained-only contours;source-preserving choice is separate.
+  - [x] ISSUE:ordinary nonempty primitive cannot represent a zero-output declaration honestly.
+  - [x] ROOT CAUSE (no-new-edge admission):actual manifest/contour/source/effect contracts and
+    admitted-edge consumers read;N0 retained eligibility/gaps and original whole rules checked,rc=0.
+  - [x] FIX:explicit admit_no_new_edges;whole quotas before required N0/owner,typed
+    CandidatesPresent retains supplied candidates. Same authentic reconciliation pipeline reused.
+  - [x] ADDRESSED (no-new-edge admission):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test slash_spread_no_new_edges_contract →4 pass,rc=0;full N0 pipeline,active/issued
+    roles intact,retained-only omission/registration visibility,empty-boundary/output/self-cycle refusal.
+  - [x] NO REGRESSION (no-new-edge admission):ordinary manifest3/compiler4/actual metadata book4/
+    strict selected clippy/fmt/book/render/diff and archive884 three exact spans pass,rc=0. Original
+    quota prefix/owner-candidate suffix exact;only population guard generalized. All prior Rust fences
+    and31219B older notes exact. No unchanged/fullness/currentness/authority/history certificate.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: promoted (reference journal decision gains answers).
+  Verification:native7/rustdoc8;Commit:STITCHCAD-G1-0715. Next .outcome.choice:exact original
+  contours/order/directions and Unchanged intent for source preservation;actual G2/Design/bus owned.
+
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome.choice`
+  Status: `pending`
+  Goal:explicit source-preserving versus reconciled-contour outcome requirement. PreserveSource
+  requires zero new candidates,original Unchanged intent and exact source boundary/hole/construction
+  order/directions;no-new-edges alone proves none of these. Actual geometry/effect remains required.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.closure`
   Status: `pending`
   Goal:close only native slash declaration inventory after all children,with focused checks and

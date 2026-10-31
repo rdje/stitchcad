@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — require attributed fullness without a second authored amount
+## _(2026-10-31 UTC)_ — admit explicit no-new-edge declarations without fabricated geometry
 
-0714 binds mandatory derivation/attribution/canonical-intake evidence sources to actual complete copies. Original fullness,input and embedded opening remain borrowed;the metadata all-copy-effect source is reused. No second Length/Area/intake,copy selection,evaluation or accepted provider evidence exists.
-Actual cut-four case retains all copy ids/orientations and exact Added/input/opening/all-copy-source owners. Removed never substitutes for canonical Dart closure;intake and conservation keep their original semantic owners. No achieved effect,currentness,authority or atomic publication proof follows.
-Native3/privacy2/actual metadata book3/strict selected clippy/fmt/book/render/diff/history883 three exact spans pass. Both prior actual examples and31219B older notes exact. Original Piece/copy inventory/ledger unchanged. Protected target/history-proof-0714-note-boundary/. D372 persists.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing canonical intake boundary). Next explicit zero/no-new-edge outcome preserving metadata/copies/roles,then native closure;actual G2/effects/canonical intake/copy-sewing/Design/bus/full verification stay owned.
+0715 adds explicit N0 manifest admission under shared whole quotas/owner checks;ordinary admit remains nonempty. CandidatesPresent rejects supplied candidates without discarding them. Same contour/reference/metadata/copy/effect pipeline accepts actual N0;active catalogue roles and issued global edges stay intact.
+No-new-edges can omit retained construction geometry:Gap remains visible while its global edge/registration resolves. Exact source preservation therefore needs separate original contour/order/direction and Unchanged intent checks. Empty boundary,undeclared Output and source self-cycle still refuse;no effect inferred.
+Native7/compiler4/actual metadata book4/strict selected lint/fmt/book/render/diff/history884 three spans pass. Quota prefix/owner-candidate suffix exact apart from population guard;all prior Rust fences/31219B older notes exact. Protected target/history-proof-0715-shared-population/. D372 persists.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (reference journal decision gains answers). Next source-preserving/reconciled outcome choice/native closure;actual G2/current role-history/semantic repairs/copy effects/authority/publication and full verification stay owned.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

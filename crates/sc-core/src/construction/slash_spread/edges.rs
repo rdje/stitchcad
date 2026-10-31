@@ -134,8 +134,10 @@ pub enum SlashSpreadEdgeManifestRefusal {
         /// Explicit allowance.
         allowed: usize,
     },
-    /// This edge manifest requires a nonempty declaration;no fallback output is fabricated.
+    /// Ordinary admit requires a nonempty declaration;no fallback output is fabricated.
     Empty,
+    /// Explicit no-new-edge admission received candidates;none is silently discarded.
+    CandidatesPresent,
     /// Manifest operation differs from the actual bound slash intent.
     Operation,
     /// Explicit tag repeated in original candidate order.
@@ -225,6 +227,10 @@ pub struct SlashSpreadEdgeManifest {
     operation: EntityId,
     candidates: Vec<SlashSpreadEdgeCandidate>,
 }
+enum CandidatePopulation {
+    NewEdges,
+    NoNewEdges,
+}
 impl SlashSpreadEdgeManifest {
     /// Own all original candidates in authored order without accepting or issuing them.
     #[must_use]
@@ -254,6 +260,27 @@ impl SlashSpreadEdgeManifest {
         &'a self,
         bound: &'a BoundSlashSpreadEdgeRoles<'a>,
         limits: SlashSpreadEdgeManifestLimits,
+    ) -> Result<AdmittedSlashSpreadEdges<'a>, SlashSpreadEdgeManifestError<'a>> {
+        self.admit_population(bound, limits, CandidatePopulation::NewEdges)
+    }
+    /// Explicitly declare no new edges using the actual empty manifest and bound role owners.
+    /// Complete 2N/N/D/A/key-byte quotas precede the required empty population and matching operation.
+    /// Active/issued roles are neither retired nor deactivated. No candidate,index entry or identity
+    /// is fabricated. This does not prove unchanged contours,effect,currentness or geometric validity.
+    /// # Errors
+    /// Complete resource,CandidatesPresent,then Operation. Ordinary admit still refuses empty input.
+    pub fn admit_no_new_edges<'a>(
+        &'a self,
+        bound: &'a BoundSlashSpreadEdgeRoles<'a>,
+        limits: SlashSpreadEdgeManifestLimits,
+    ) -> Result<AdmittedSlashSpreadEdges<'a>, SlashSpreadEdgeManifestError<'a>> {
+        self.admit_population(bound, limits, CandidatePopulation::NoNewEdges)
+    }
+    fn admit_population<'a>(
+        &'a self,
+        bound: &'a BoundSlashSpreadEdgeRoles<'a>,
+        limits: SlashSpreadEdgeManifestLimits,
+        population: CandidatePopulation,
     ) -> Result<AdmittedSlashSpreadEdges<'a>, SlashSpreadEdgeManifestError<'a>> {
         let refuse = |refusal| SlashSpreadEdgeManifestError {
             manifest: self,
@@ -292,8 +319,14 @@ impl SlashSpreadEdgeManifest {
                 allowed: limits.catalog.key_bytes(),
             }));
         }
-        if n == 0 {
-            return Err(refuse(SlashSpreadEdgeManifestRefusal::Empty));
+        match population {
+            CandidatePopulation::NewEdges if n == 0 => {
+                return Err(refuse(SlashSpreadEdgeManifestRefusal::Empty));
+            }
+            CandidatePopulation::NoNewEdges if n != 0 => {
+                return Err(refuse(SlashSpreadEdgeManifestRefusal::CandidatesPresent));
+            }
+            _ => {}
         }
         if self.operation != bound.intent().input().operation() {
             return Err(refuse(SlashSpreadEdgeManifestRefusal::Operation));
