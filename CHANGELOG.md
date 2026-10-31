@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0721 — choose mirror result fields and derive print metadata
+## STITCHCAD-G1-0722 — bind mirror metadata to shared edge roles
 
-- Explicit preservation/replacement retains actual material/layer/label values and canonical print data.
-- Whole resolved UTF-8 byte allowance precedes shared label/material completeness checks.
-- Native18/label1/API12/book11 and focused lint/fmt/build/render/history891 checks pass.
-- Native metadata choices close;fresh manifest,copy/companion,semantic and actual geometry proof remain.
+- Whole shared catalogue bounds precede actual mirror operation association;authentic owners retained.
+- Native8/API14/mirror-book5/editing-book7 and focused lint/fmt/build/map/render pass.
+- Whole mirror book block/fences,old anchors and Summary links retained in bounded companion.
+- Empty/inactive metadata issues no outputs;point/fresh identity/correspondence and full proof remain.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

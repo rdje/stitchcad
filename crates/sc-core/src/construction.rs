@@ -6,6 +6,9 @@
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-edit-inputs.md")]
 mod editing_examples {}
 #[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-mirror-contracts.md")]
+mod mirror_examples {}
+#[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-output-contracts.md")]
 mod output_examples {}
 #[cfg(doctest)]
@@ -38,13 +41,14 @@ pub use join::{
 };
 mod mirror;
 pub use mirror::{
-    BoundMirrorPieceCopy, BoundMirrorPieceCutPolicy, BoundMirrorPieceMetadata, MirrorAxis,
-    MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError,
-    MirrorPieceCutPolicy, MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
-    MirrorPieceEdgeLocation, MirrorPieceEdgeSource, MirrorPieceFieldIntent, MirrorPieceFoldIntent,
-    MirrorPieceMetadataError, MirrorPieceMetadataLimits, MirrorPieceMetadataPolicy,
-    MirrorPieceMetadataRefusal, MirrorPieceSourceError, MirrorPieceSourceLimits,
-    MirrorPieceSourceRefusal,
+    BoundMirrorPieceCopy, BoundMirrorPieceCutPolicy, BoundMirrorPieceEdgeRoles,
+    BoundMirrorPieceMetadata, MirrorAxis, MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy,
+    MirrorPieceCopyError, MirrorPieceCutPolicy, MirrorPieceCutPolicyError,
+    MirrorPieceCutPolicyRefusal, MirrorPieceEdge, MirrorPieceEdgeLocation, MirrorPieceEdgeSource,
+    MirrorPieceFieldIntent, MirrorPieceFoldIntent, MirrorPieceMetadataError,
+    MirrorPieceMetadataLimits, MirrorPieceMetadataPolicy, MirrorPieceMetadataRefusal,
+    MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal, MirrorPieceSourceError,
+    MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
 };
 mod offset;
 pub use offset::{

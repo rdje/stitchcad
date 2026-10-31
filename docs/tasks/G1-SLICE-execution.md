@@ -861,28 +861,37 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0720 explicit cut policy;[whole scope/proofs](../history/stitchcad-devnotes-part891.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.metadata.fields`
   Status: `done`
-  Goal:explicit source-preserve/replacement material,layer,label policy and canonical cut-derived print.
-  - [x] ISSUE:copy metadata must select actual values without inferred inheritance or duplicate cut data.
-  - [x] ROOT CAUSE (mirror fields):48125ece cut/source interfaces and actual Piece/label/material
-    contracts reviewed;canonical label rule shared with unchanged birth refusal order;rc=0.
-  - [x] FIX:explicit typed PreserveSource/Replace policies;whole resolved UTF-8 B sum/quota before
-    blank scans,then canonical label/material checks;authentic field borrows and derived print view.
-  - [x] ADDRESSED (mirror fields):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test mirror_piece_metadata_contract --test mirror_piece_cut_policy_contract
-    --test mirror_piece_source_contract --test mirror_piece_copy_contract:5+4+5+4 pass;rc=0.
-    Source/replacement pointers,Unicode bytes,quota/refusal order,mixed fields and print authority covered.
-  - [x] NO REGRESSION (mirror fields):piece_contract every_print_text_field_must_be_nonblank1,
-    mirror API12/actual editing-book11,selected clippy/fmt/book/render/891 exact Git spans pass;rc=0.
-    No whole source/policy storage bound,material/size truth,current Design,copy/companion,reflection,
-    output/fold correspondence,semantic/physical/release or full CI certificate. B covers resolved text.
-  - [x] LOCKSTEP:book/native inventory/live/frontier align;whole0720 retained891;metadata parent closes
-    only local native choices. promotion: declined (existing canonical metadata/geometry boundary).
-  Verification:native18/label1/API12/book11;proof target/history-proof-0721-mirror-metadata/.
-  Commit:STITCHCAD-G1-0721;next bounded fresh-output manifest,copy/semantic policy still owned.
+  Goal:0721 metadata fields;[whole scope/proofs](../history/stitchcad-devnotes-part892.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest`
-  Status: `pending`
+  Status: `in_progress`
   Goal:bounded fresh Piece/edge/point identity/output-role manifest and complete source-contour/
   construction/fold attribution;explicit reflection winding/direction mapping,not a geometry certificate.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.roles`
+  Status: `done`
+  Goal:actual mirror metadata/shared edge-catalogue association;bounded companion retains old book.
+  - [x] ISSUE:mirror manifest needs actual edge-role owners without a second history or PointRef claim.
+  - [x] ROOT CAUSE (mirror roles):shared role/C0696–0703 contracts and actual metadata reviewed;
+    whole D/A/B bounds precede operation check,with private actual-owner views;rc=0.
+  - [x] FIX:borrow authentic metadata/catalogue;empty/inactive states valid,without issuing outputs.
+  - [x] ADDRESSED (mirror roles):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test mirror_piece_edge_roles_contract --test mirror_piece_metadata_contract:3+5 pass;rc=0.
+  - [x] NO REGRESSION (mirror roles):API14/mirror-book5/editing-book7,selected lint/fmt/build/map/
+    render/892 Git spans pass;12376B block/4 moved and7 remaining Rust fences/4 old anchors exact;rc=0.
+  - [x] LOCKSTEP:all old Summary links/order retained120 lines;explicit shared-record/book/live sync.
+    promotion: declined (existing shared edge-role boundary);no geometry/currentness/point/issuance proof.
+  Verification:target/history-proof-0722-mirror-roles/;Commit:STITCHCAD-G1-0722;next .manifest.identity.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity`
+  Status: `pending`
+  Goal:explicit new Piece identity and separately typed point-role policy;read actual Design/recipe
+  namespaces first. Edge-role metadata grants no PointRef namespace,global freshness or issuance.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges`
+  Status: `pending`
+  Goal:bounded complete source-edge attribution,stable candidate roles and exact copied contour/
+  construction/fold occurrence mapping;deduplicate identities without dropping authored occurrences.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.correspondence`
+  Status: `pending`
+  Goal:explicit supported reflection/reference-map requirements in original frames;no source retirement
+  or repair of held objects from copy intent. Actual geometric correspondence stays .5f.4.geometry.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies`
   Status: `pending`
   Goal:explicit actual source/result physical-copy policy and complete CutPlan/companion association;

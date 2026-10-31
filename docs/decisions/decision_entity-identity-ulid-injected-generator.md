@@ -97,9 +97,9 @@ The native leaves are .tags.continuity.catalog/.transition/.presence;none closes
 answers: "can slash/spread reuse offset role issuance and membership contracts?"
 
 EdgeOutputRoleCatalog and its definition/active/transition types provide one shared edge-role
-metadata implementation for offset and slash/spread declarations. Existing OffsetRole names
+metadata implementation for offset,slash/spread and mirror-copy declarations. Existing OffsetRole names
 remain aliases of those same Rust types;there is no second role history or conversion. Native
-slash association checks complete catalogue counts/key bytes before matching its actual operation.
+slash and mirror association check complete catalogue counts/key bytes before matching their actual operation.
 Generic diagnostic names replace offset-specific labels;typed variants and field data remain intact.
 
 This sharing introduces no PointRef role namespace,geometric classifier,current operation-kind

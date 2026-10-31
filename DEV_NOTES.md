@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — choose mirror result fields and derive print metadata
+## _(2026-10-31 UTC)_ — bind mirror metadata to shared edge roles
 
-0721 requires explicit PreserveSource/Replace for actual material/layer/label fields;whole resolved UTF-8 B quota precedes blank scans.
-Selected fields borrow exact source/request values;print cut indicators derive from the one admitted result cut policy. Shared label rule preserves Piece birth order.
-Native5+4+5+4/label1/API12/editing-book11,selected clippy/fmt/build/render pass0;whole0720 spans891 exact. B bounds resolved text,not unselected source/policy storage.
-Promotion: declined (existing canonical metadata boundary). Fresh manifest/copy/semantic policy next;material/size/currentness/geometry/physical/full CI remain owed. G1still6/18/G0 unapproved.
+0722 associates actual mirror metadata with the shared edge catalogue under whole D/A/key-byte quotas before operation identity;no allocation or issuance.
+Native3+5/API14/mirror-book5/editing-book7,selected lint/fmt/build/map/render pass0. Empty/inactive metadata remains valid;legacy offset aliases stay identical.
+Whole12376B mirror book block/4 Rust fences moved exact;4 old anchors and7 remaining editing fences retained. All prior Summary links/order kept within120 lines;whole0721 spans892 exact0.
+Promotion: declined (existing shared edge-role boundary). Fresh Piece/point identity policy next;actual point namespace,source correspondence,currentness/geometry/copy/semantic/full CI remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
