@@ -917,20 +917,23 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:candidate/domain/coverage and refit/no-op policies;actual maps/fit/variant policy stay owned.
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.entries`
   Status: `done`
-  Goal:candidate attribution.
-  - [x] ISSUE:refit tags need explicit original source ranges.
-  - [x] ROOT CAUSE (truing candidates):source/role/range contracts inspected;
-    N/2N before operation and original entry checks;rc=0.
-  - [x] FIX:actual ranges/roles/parents.
-  - [x] ADDRESSED (truing candidates):cargo test --test truing_edge_manifest_contract
-    --test truing_edge_role_binding_contract:4+3 pass;rc=0;commands in receipt.
-  - [x] NO REGRESSION (truing candidates):API5/book3,lint/fmt/build/map/render;
-    old kernels/tests/fences,927/928 Git spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing role-attribution rule).
-  Proof:target/history-proof-0753-truing-candidate-entries/;Commit:STITCHCAD-G1-0753.
+  Goal:0753 candidate attribution;[whole scope/proofs](../history/stitchcad-devnotes-part929.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest.domain`
+  Status: `done`
+  Goal:membership.
+  - [x] ISSUE:range-domain binding.
+  - [x] ROOT CAUSE (truing domain):Param/Range inspected;
+    N then exact edge/bounds;rc=0.
+  - [x] FIX:domain/parents.
+  - [x] ADDRESSED (truing domain):cargo test --test truing_source_domain_contract
+    --test truing_edge_manifest_contract:4+4 pass;rc=0;commands in receipt.
+  - [x] NO REGRESSION (truing domain):API4/book4,lint/fmt/build/map/render;
+    kernels/tests/fences/929 exact;rc=0.
+  - [x] LOCKSTEP:aligned;promotion: declined (existing domain scope).
+  Proof:target/history-proof-0754-truing-source-domain/;Commit:STITCHCAD-G1-0754.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.coverage`
   Status: `pending`
-  Goal:selected-source domain.
+  Goal:selected-domain coverage.
 - ID: `G1-SLICE.5f.1.c.true.variants`
   Status: `pending`
   Goal:review v1 truing coverage against the envelope before family closure;constrained refit

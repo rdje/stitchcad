@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0753;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.true.outputs.manifest.domain in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32/walk17 nodes complete;truing source-range attribution complete;selected-domain binding next.
-- Truing candidates retain original tags/positive ranges under N/2N,owner and ordered entry checks.
-  Empty/unowned proposals are metadata,not coverage/no-op/fit;logical output tuples issue no topology.
-  Native7/API5/book3/lint/fmt/build/map/render pass;proof target/history-proof-0753-truing-candidate-entries/.
+- Latest unit:STITCHCAD-G1-0754;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.true.outputs.manifest.coverage in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32/walk17 nodes complete;truing held-domain membership complete;coverage next.
+- Truing complete N quota then exact held edge/from/to checks bind the actual selected source range.
+  Empty/overlapping membership proves no coverage/no-op/currentness/fit;original fields/parents unchanged.
+  Native8/API4/book4/lint/fmt/build/map/render pass;proof target/history-proof-0754-truing-source-domain/.
 - Mirror known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.
@@ -47,4 +47,4 @@
 - Window26/0684:target/history-capture-0684+target/history-proof-0684;window27/0734:target/history-capture-0734+target/history-proof-0734-mirror-copy-identities;never rerun install/recover after later edits.
 - Original receipt:target/irrational_platform_certificate/acceptance-0665-21696/receipt.json;
   original source/platform scopes retained. G1 6/18/G0 closure unapproved.
-- Full PNT continues;no user pause. Consume every tool terminal result before edits/retries.
+- User requested checkpoint stop after0754;PNT stopped. Resume only on new instruction;consume tool terminals.

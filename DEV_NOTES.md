@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — attribute original truing role and source-range candidates
+## _(2026-10-31 UTC)_ — bind the original selected truing held source domain
 
-0753 admits ordered tag/positive source ranges under checked2N,whole N/W,operation and duplicate/undefined/inactive/self/Piece/Material checks. Known aliases cover the two actual owners only;source existence/domain/coverage and geometry stay required.
-Views borrow original ranges/active roles/complete parents;logical tuples issue nothing. Empty/unowned proposals prove no no-op/retirement. Clippy128B error fixed:creator refusals carry EdgeRef/index;whole original manifest keeps ranges,no error boxing.
-Final native4+3/API5/book3,lint/fmt/build/map/render pass0. Old kernels/tests/two fences/older31219B notes base exact0;helper defaults rerun role3. Whole0752 spans927/closed0294 receipt928 exact Git4 spans;old checks not rerun. Proof target/history-proof-0753-truing-candidate-entries/.
-Promotion: declined (existing role-attribution rule). Receipt retirement makes task-cap room. Selected domain next;coverage/refit-no-op/reference/variant policy and actual currentness/fit/geometry/all-copy/authority/atomic effects/full integration remain owed. G1still6/18/G0 unapproved.
+0754 binds every original candidate to the actual selected span-side held range under whole N quota,then exact creator/tag,lower and upper comparisons. Original candidate/source/domain fields stay borrowed unchanged. Bounded rational ordering supplies exact membership;no rescaling,ledger/geometry query or allocation.
+Both adjusted sides retain actual partial domains and original source/provider parents. Closed endpoint touches pass;edge then lower/upper failures follow original order,including a later index1 refusal with no prefix context. Empty/overlapping members prove no coverage,no-op,retirement or fitted output.
+Final native4+4/API4/truing book4,selected lint/fmt/build/map/render pass0. Parent kernels/tests/helpers/three fences,whole0753 spans929 and older31219B notes base exact0. Proof target/history-proof-0754-truing-source-domain/;source-domain membership grants no current ledger/Piece or geometry certificate.
+Promotion: declined (existing domain scope). User requested stop at this committed handoff checkpoint. Selected-domain coverage is next;refit-no-op/reference/variant policy,actual currentness/fit/geometry/all-copy/authority/atomic effects and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

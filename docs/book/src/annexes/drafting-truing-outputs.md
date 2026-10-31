@@ -163,3 +163,46 @@ curve/refit variant policy and actual current geometry remain required. None fol
 source parameters,complete candidate admission,an active output role or a declared logical tuple.
 Actual current Design/history,all-copy/observer effects,authoring authority and atomic publication
 retain their separate execution owners.
+
+## Bind the original selected held source domain
+
+`AdmittedTruingEdges::bind_source_domain` checks every original candidate against the actual range
+field of the selected original span side. The caller supplies only
+`TruingSourceDomainLimits::new(N)`,not a replacement domain. The result is
+`BoundTruingSourceDomain`,which retains the complete original candidates and exact selected field.
+
+```rust
+use sc_core::construction::*;
+fn bind<'a>(edges:&'a AdmittedTruingEdges<'a>,maximum:usize)
+    ->Result<BoundTruingSourceDomain<'a>,TruingSourceDomainError<'a>> {
+    edges.bind_source_domain(TruingSourceDomainLimits::new(maximum))
+}
+let limits=TruingSourceDomainLimits::new(2);
+assert_eq!(limits.candidates(),2);
+```
+
+The whole N quota precedes any range/parameter inspection. Original candidate order checks exact
+edge creator **and tag**,then lower bound,then upper bound. `Param` ordering uses the canonical
+bounded exact rational comparison;there is no epsilon,rescaling or coordinate/length calculation.
+Binding takes O(N) work and constant auxiliary space,with no allocation or ledger/geometry query.
+Equality at either selected interval endpoint is accepted for a positive candidate range.
+
+For selected domain1/4–3/4,the same edge's1/4–1/2,1/2–3/4 and whole1/4–3/4 intervals pass.
+A0–1 candidate refuses `BeforeStart` first,even though its upper bound also lies outside. A1/2–7/8
+candidate refuses `AfterEnd`. The counterpart's edge refuses `Edge` even when both edges share the
+same creator;their persistent tags differ. A later invalid candidate returns its original index
+and no prefix domain context. Whole quota failure precedes any of these field causes.
+
+`candidates()`, `domain()` and `limits()` retain the actual complete parents,original selected
+range and explicit policy. `edge_count()` counts all original candidates. `edges()` lends authentic
+members in original order and reverse;`edge(tag)` queries in O(log(N+2)) work. A member retains
+its actual whole `context()`,original `candidate()`,actual `source()` range and original `domain()`
+field. Errors lend the same whole original candidate/source context,domain,policy and first cause.
+Neither success nor refusal mutates or normalizes any original field.
+
+This is membership in the **held original parameter domain**. It is not current ledger resolution,
+current Piece membership,coverage,nonoverlap,an output parameter map,endpoint/stop preservation or
+a fitted curve. Two equal middle3/8–5/8 candidates may both be members of1/4–3/4 while overlapping
+and leaving gaps. N0 can likewise bind while the actual selected domain remains positive and roles
+remain active;that proves no empty result,no-op or retirement. Mandatory coverage/refit-no-op,
+reference/variant,currentness,geometry/all-copy and atomic execution obligations remain separate.

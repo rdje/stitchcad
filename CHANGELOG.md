@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0753 — attribute original truing role and source-range candidates
+## STITCHCAD-G1-0754 — bind the original selected truing held source domain
 
-- Admit explicit ordered role/positive-range metadata under N/2N,actual operation and first-entry checks.
-- Borrow original ranges/active roles/whole context;logical tuples and empty proposals grant no fitted result.
-- Compact creator diagnostics preserve whole raw ranges through the actual manifest without error boxing.
-- Native4+3/API5/book3,lint/fmt/build/map/render pass0;prior kernels/tests/fences and927/928 Git spans exact.
-- Selected-domain/coverage/refit-no-op/reference/variant policy and actual geometry/atomic effects stay owed.
+- Whole N quota precedes exact original candidate edge/from/to membership in actual selected span range.
+- Preserve actual domain/candidate/source/role parents and original fields;no allocation or geometry query.
+- Both sides,closed endpoints and later invalid candidates checked;no prefix or coverage/no-op/fit inferred.
+- Native4+4/API4/book4,lint/fmt/build/map/render pass0;prior kernels/tests/helpers/fences and929 spans exact.
+- Stop at user-requested committed checkpoint;coverage next,actual fit/currentness/effects remain owed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

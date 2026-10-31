@@ -14,6 +14,11 @@ pub use manifest::{
     AdmittedTruingEdges, TruingEdgeCandidate, TruingEdgeManifest, TruingEdgeManifestError,
     TruingEdgeManifestLimits, TruingEdgeManifestRefusal, TruingOutputEdge,
 };
+mod domain;
+pub use domain::{
+    BoundTruingSourceDomain, TruingSourceDomainEdge, TruingSourceDomainError,
+    TruingSourceDomainLimits, TruingSourceDomainRefusal,
+};
 mod binding;
 pub use binding::{BoundConstrainedTruing, TruingBindingError, TruingBindingRefusal};
 
