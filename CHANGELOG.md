@@ -10,12 +10,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0715 — admit explicit no-new-edge declarations without fabricated geometry
 
-- Share whole resource/owner kernel between ordinary nonempty and explicit zero-candidate admission.
-- Reuse complete reconciliation at N0;retain active/issued roles and visible retained-source gaps.
-- Native7/rustdoc8/lint/fmt/book/render/diff/history884/shared-kernel proof pass;old examples/notes exact.
-- No-new-edges differs from source preservation;explicit choice and actual G2/history/authority remain owned.
+## STITCHCAD-G1-0716 — require explicit source-preserving or reconciled slash outcomes
+
+- Require N0,Unchanged and exact source contour order/directions for explicit source preservation.
+- Keep reconciled declarations available with either population;infer no physical/effect/readiness result.
+- Native8/rustdoc7/lint/fmt/book/render/diff/history885 pass;old N0 test bodies/prior examples exact.
+- Native outcome declaration closes;family checkpoint and actual G2/Design/history/authority remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

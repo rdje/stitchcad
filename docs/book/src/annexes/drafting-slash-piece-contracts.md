@@ -3,8 +3,8 @@
 This companion continues the [output and reference-disposition contracts](drafting-slash-output-contracts.md).
 Native declarations retain original owners and request evidence. They do not create a geometrically
 valid replacement Piece,change canonical metadata or authorize publication. The nonempty changed
-contour/copy/effect paths and explicit no-new-edge admission are available;source-preserving versus
-reconciled outcome choice remains separately owned native work. Actual geometry/current Design/semantic repair stays G2/G3/Design/bus.
+contour/copy/effect paths,explicit no-new-edge admission and source-preserving/reconciled outcome
+requirements are available. Native family closure remains separately owned. Actual geometry/current Design/semantic repair stays G2/G3/Design/bus.
 
 ## Canonical source-metadata preservation
 
@@ -220,6 +220,58 @@ edge and registration can still resolve. All current semantic-ownership/repair e
 required. Zero candidate count leaves the original Added/Removed/Unchanged request untouched.
 
 No-new-edge admission therefore proves neither source preservation nor an achieved zero effect.
-The next native outcome choice separately owns exact source-contour/order/direction preservation
+The explicit outcome choice below separately checks exact source-contour/order/direction preservation
 and required Unchanged intent. Actual geometry,current ownership,effect,canonical history/retirement,
 repair/authority and atomic publication keep their G2/G3/Design/bus proof owners.
+
+## Explicit source-preserving or reconciled outcome
+
+`required_effect.require_outcome(intent)` requires an explicit `SlashSpreadOutcomeIntent` on the
+actual complete effect/copy/metadata/boundary/source context. There is no default or automatic
+choice based on zero candidates. Both modes return a private `RequiredSlashSpreadOutcome` carrying
+the original intent and actual whole context;this is a requirement declaration,not execution.
+
+| Intent | Structural requirement and meaning |
+| --- | --- |
+| `PreserveSource` | N0,original authored Unchanged fullness and exact original boundary,hole groups/holes and construction occurrences,including order and traversal |
+| `ReconcileContours` | Use the actual admitted contour declaration with either candidate population;infer neither physical change nor no-change |
+
+Canonical Piece metadata/fold state and every actual target-copy identity are already retained by
+the preceding owners. PreserveSource adds exact contour preservation. Merely keeping the same edge
+membership is insufficient:a reversed boundary edge,missing/repeated construction occurrence or
+reordered hole group does not match the source declaration. Aliases are not substituted and lists
+are not sorted to manufacture a match.
+
+```rust
+use sc_core::construction::*;
+fn require_source_preservation<'a>(effect:&'a RequiredSlashSpreadEffect<'a>)
+    ->Result<RequiredSlashSpreadOutcome<'a>,SlashSpreadOutcomeError<'a>> {
+    effect.require_outcome(SlashSpreadOutcomeIntent::PreserveSource)
+}
+```
+
+PreserveSource refuses in this order:NewEdges,Fullness,Boundary,HoleGroups,the first differing
+ordered Hole,then Construction. Hole diagnostics retain the actual group position,not an invented
+persistent hole identity. Errors keep the original explicit intent and actual whole effect context.
+No partially accepted preservation state escapes. ReconcileContours still retains all earlier
+source,semantic,geometry/effect and authority evidence requirements.
+
+For exact retained original contours at N0 and authored Unchanged,either mode can be explicitly
+requested. PreserveSource establishes those structural associations;ReconcileContours leaves its
+meaning at reconciliation. A candidate-bearing plan may request ReconcileContours but cannot claim
+PreserveSource. An N0 plan with Added or Removed likewise cannot claim source preservation. No angle,
+zero formula or full turn changes the original fullness declaration to satisfy this check.
+
+Two actual original hole groups remain distinguishable even if their geometric validity is still
+deferred. Swapping them refuses source preservation at the first differing group;omitting one refuses
+HoleGroups;reversing one hole edge refuses that Hole. Omitting,repeating or reversing a construction
+occurrence refuses Construction. These may remain explicit reconciled declarations with their own
+required evidence;none is silently relabelled unchanged.
+
+`RequiredSlashSpreadOutcome::effect()` retains the actual whole context;`intent()` retains the
+original caller choice;`new_edge_count()` derives the actual complete original candidate population.
+The comparison allocates nothing and uses already admitted whole N/R/M populations. It grants no
+whole-operation execution budget or currentness proof. Actual supported domain,zero/fullness effect,
+canonical intake conservation,copy/sewing effects,current identity history/ownership,visible repair,
+authority and atomic publication remain G2/G3/Design/bus proof. Native family closure is separately
+owned;full verification and geometry-backed integration have not passed in these declaration slices.

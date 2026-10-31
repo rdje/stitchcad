@@ -1,22 +1,22 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0715;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.outcome.choice
-  — explicit PreserveSource versus ReconcileContours requirement on actual complete effect context.
-  PreserveSource needs N0,original Unchanged intent and exact boundary/hole/construction order/
-  directions. No-new-edges alone proves none of these;geometry/effect/currentness stay evidence.
-- admit_no_new_edges explicitly admits N0 under shared quotas/owner;ordinary admit still Empty.
-  Existing contours/reference/metadata/copy/effect pipeline works without fake candidates. Active/
-  issued roles remain intact;retained-only omission yields Gap without removing live registration.
-  Native7/rustdoc8/lint/fmt/book/render/history884 pass. Protected shared kernel/old notes proof:
-  target/history-proof-0715-shared-population/. Reference journal decision promoted with answers.
-- Native effect binds derivation/attribution/canonical-intake sources,no second amount;whole0714 now884.
-- Whole0713/copy fixture proof:archive883 and target/history-proof-0713-metadata-fixture/.
+- Latest unit:STITCHCAD-G1-0716;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.closure
+  — native slash declaration inventory/focused family checkpoint after all code children. Close only
+  native contracts;actual G2/Design/bus/full integration remain owned. Contain execution file if needed.
+- Outcome requires explicit PreserveSource or ReconcileContours. PreserveSource checks N0,original
+  Unchanged and exact boundary/hole/construction order/directions;no geometry/effect inferred.
+  Native8/rustdoc7/lint/fmt/book/render/history885 pass;old N0 test bodies and older31219B notes exact.
+  Protected target/history-proof-0716-zero-fixture/;only test source/hole/identity setup generalized.
+- admit_no_new_edges uses shared quota/owner kernel;ordinary admit remains nonempty. Active/issued
+  roles are not retired;retained-only changes remain visible. Whole0715 now885;0714 now884.
+- Source preservation versus N0 decision promoted0715;actual canonical history/repair/authority proof
+  remains .5f.2/.5f.4/G2/G3/bus. Protected target/history-proof-0715-shared-population/.
 - Native metadata borrows all canonical Piece fields/derived print view;explicit NoFold/retained or
   Source-derived outer original-fold attribution;whole0712 now882/0065 protocol881. No accepted proof.
-- drafting-slash-piece-contracts.md has metadata/copy/effect/no-new-edge examples4;old output chapter retained.
+- drafting-slash-piece-contracts.md has metadata/copy/effect/outcome examples5;old output chapter retained.
   SUMMARY120/cap120;all direct navigation retained. Native declarations remain focused-check scope.
-- Semantics outcome/closure remain owned;native reference-disposition has focused-check closure only.
+- Semantics closure remains owned;native reference/outcome contracts have focused-check closure only.
 - Boundary requirements:domain/whole interval coverage plus bridge incidence/closure or trim
   arrangement/unique selection. Policy mismatch refuses;no geometry/evidence accepted;whole0711 now881.
 - Whole consumer requirements five mandatory sources,even empty registry/equal providers;actual

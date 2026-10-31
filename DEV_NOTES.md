@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit explicit no-new-edge declarations without fabricated geometry
+## _(2026-10-31 UTC)_ — require explicit source-preserving or reconciled slash outcomes
 
-0715 adds explicit N0 manifest admission under shared whole quotas/owner checks;ordinary admit remains nonempty. CandidatesPresent rejects supplied candidates without discarding them. Same contour/reference/metadata/copy/effect pipeline accepts actual N0;active catalogue roles and issued global edges stay intact.
-No-new-edges can omit retained construction geometry:Gap remains visible while its global edge/registration resolves. Exact source preservation therefore needs separate original contour/order/direction and Unchanged intent checks. Empty boundary,undeclared Output and source self-cycle still refuse;no effect inferred.
-Native7/compiler4/actual metadata book4/strict selected lint/fmt/book/render/diff/history884 three spans pass. Quota prefix/owner-candidate suffix exact apart from population guard;all prior Rust fences/31219B older notes exact. Protected target/history-proof-0715-shared-population/. D372 persists.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (reference journal decision gains answers). Next source-preserving/reconciled outcome choice/native closure;actual G2/current role-history/semantic repairs/copy effects/authority/publication and full verification stay owned.
+0716 binds explicit PreserveSource/ReconcileContours to actual complete effect/copy/source context. PreserveSource requires N0,original Unchanged and exact boundary/hole/construction occurrences/order/directions. ReconcileContours accepts either population without inferring physical change or no-change.
+Actual4 cases verify both modes/populations,new-edge/fullness precedence,reversed/missing/repeated construction and real two-hole count/order/direction. Error retains caller intent/context;source data remains intact. No formula evaluation,geometry,currentness,canonical history or atomic readiness is supplied.
+Native8/privacy2/actual metadata book5/strict selected lint/fmt/book/render/diff/history885 three spans pass. Old N0 test bodies exact;helper invariant sections exact apart from EOF newline,only source/hole identity setup generalized. Prior examples/31219B notes exact. Protected target/history-proof-0716-zero-fixture/.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing source-preservation boundary). Native outcome declaration closes;next family inventory/focused checkpoint,then next output family. Actual G2/effects/current Design/role history/repairs/bus/full proof stay owned.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

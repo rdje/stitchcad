@@ -231,7 +231,8 @@ measured fullness. Missing original source portions and dependent semantic refer
 explicit reconciliation. Actual trim selection,closure,current sources,geometry/error bounds and
 bus authority remain separately owned. Explicit no-new-edge admission is described in the
 [Piece companion](drafting-slash-piece-contracts.md#explicit-no-new-edge-admission);source-preserving
-outcome choice remains owned. The ordinary nonempty primitive never needs fabricated geometry.
+[outcome choice](drafting-slash-piece-contracts.md#explicit-source-preserving-or-reconciled-outcome)
+checks source preservation separately. The ordinary nonempty primitive never needs fabricated geometry.
 
 ## Native declared-source reference eligibility
 
