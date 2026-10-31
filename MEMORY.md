@@ -1,19 +1,19 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0696;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.offset.outputs.tags.continuity.catalog — native declared local key/tag
-  catalogue and active membership;explicit complete quota/name-byte/workspace admission and actual fields.
-  Activate before code. Machine keys are identity metadata,not geometric matching rules.
-- Promoted policy:docs/decisions/decision_entity-identity-ulid-injected-generator.md#canonical-output-role-identity0696.
-  Preserve all issued definitions across author edits/undo;active membership can restore without
-  rewinding issuance. Evaluation presence is readonly;one size's absence never retires a role.
-  .transition/.presence own next native components;actual G2 role truth/currentness/authority separate.
-- D373 original active decision misstated retained merge Length evidence/general affine handoff;
-  D3740694 sparse declaration left contiguous enum docs. Both fixed0696. Exactly three Rustdoc
-  replacements;all other Rust source bytes unchanged. Proof:target/history-proof-0696-role-policy/.
-  Whole0695/closed D303–D306 ledger retained865. Book planned policy,not implemented catalogue APIs.
-- Native offset candidate admission/query and actual declaration binding available;canonical tagged
-  declarations preserve sources without minting ids. No current Design/geometric map/continuity certificate.
+- Latest unit:STITCHCAD-G1-0697;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.offset.outputs.tags.continuity.transition — native structural canonical
+  edit/membership-restore checks:preserve every issued local key/tag definition;no reassignment/drop.
+  Activate before code. Metadata intent grants no actual history authority or geometric continuity.
+- OffsetRoleCatalog admission now implemented:owned op/definitions/active ids,explicit N/A/key-byte/
+  2(N+A) entry admission before indexes,unique keys/tags and defined unique active ids. Actual field
+  views preserve both orders;empty/inactive catalogues valid. Native3/rustdoc8/lint/fmt/book pass.
+  Whole0696 retained866. Keys are declarations,not classifiers/global recipe bindings/issuance truth.
+- Role policy:decision_entity-identity-ulid-injected-generator.md#canonical-output-role-identity0696.
+  Issued definitions survive undo;active membership can restore. Evaluation presence is readonly;
+  absence in one size never retires a role. .presence owns next readonly candidate/catalogue binding.
+- D373/D374 fixed0696;source/history proof target/history-proof-0696-role-policy/;algorithms unchanged.
+- Native offset candidate admission/query/declaration binding available;canonical tagged declarations
+  preserve sources without minting ids. No current Design/geometric map/continuity certificate.
 - D372 P2 book-search warning remains .5f.1.book-search after typed feature completion;build rc0.
   First0691 payload10015553B/JS10030347B;preserve full-text chapter search,no latency/suppression claim.
 - Walk/truing/join inputs available;output/coverage/observers/G3/bus/full integration remain owned.

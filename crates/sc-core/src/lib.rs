@@ -18,7 +18,8 @@
 //! command bus. Direct/source-backed/Design scalar recipe execution, fresh replay and canonical stored
 //! bindings have focused native acceptance. [`construction`] retains typed point/line/center-arc/Bezier declarations and offset/grainline input binding,
 //! scalar kind proofs, explicit slash/spread sources/amounts, mirror-copy inputs, admitted walk mark requests,
-//! constrained truing/join input association,offset candidate admission/queries/declaration binding and original dependencies; geometry/full integration remain pending. Broader/platform
+//! constrained truing/join input association,offset candidate/declaration binding and declared-role catalogue admission;
+//! original dependencies remain explicit and geometry/full integration pending. Broader/platform
 //! verification stays source-scoped or owned by the integration and pre-push gates.
 //!
 //! What lands here, and when:

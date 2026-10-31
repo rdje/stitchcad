@@ -223,8 +223,8 @@ active subset. This follows the existing
 [private reserve and issued-revision separation](../spec/command-execution.md#private-identity-reserve-and-actual-notch-preview).
 Actual history authority and publication are not supplied by a metadata proposal.
 
-Native catalogue admission,issuance-preserving transition requests and readonly manifest binding
-have separate task owners. These are planned contracts,not implemented catalogue APIs. Local machine
+Native catalogue admission is implemented below;issuance-preserving transitions and readonly
+manifest binding remain pending. Local machine
 keys identify declared roles;they are not geometric matching rules. Unknown/ambiguous geometric roles
 must not acquire a false continuity certificate from matching names or source intervals. Actual
 G2/G3 evidence,current operation/Design ownership,storage and bus integration remain separately owned.
@@ -233,3 +233,43 @@ The active journal guidance was also corrected under D373:merge events retain th
 evidence;the ledger does not compute curve length. D374 corrects the old `Declared` Rustdoc to match
 the existing explicit sparse/caller-order tag API. Both are documentation corrections;the affine
 primitive and runtime algorithms remain unchanged.
+
+## Native declared-role catalogue admission
+
+`construction::OffsetRoleCatalog` owns an operation id,all supplied `OffsetRoleDefinition`s and a
+separate active-tag list. Each definition retains an explicit `LocalTag` and validated `MachineToken`
+local key. These are declared identity keys,not global recipe-variable bindings or geometric matching
+rules. The raw constructor owns both original lists without accepting them or issuing identities.
+
+`OffsetRoleCatalogLimits` explicitly bounds N definitions,A active occurrences and total key bytes.
+Admission checks complete workspace counts,definition quota,active quota and checked total key bytes
+before allocating indexes. Peak entry populations are two N-entry definition indexes and two
+A-entry membership collections. These are count bounds,not prior String/Vec allocation,whole memory
+or execution guarantees. Machine-token lexical validation occurred before this catalogue stage.
+
+Only after complete resource admission are definitions checked in original order,tag before key.
+Active ids follow in original list order,duplicate before undefined. Exact duplicate keys/tags or
+membership ids refuse;no renaming,sorting,deduplication or accepted prefix is returned. Errors retain
+the actual whole raw catalogue,selected policy and original cause indices.
+
+```rust
+use sc_core::{construction::*,name::MachineToken,ontology::*};
+let tag=LocalTag::new(9);
+let role=OffsetRoleDefinition::new(tag,MachineToken::new("main").expect("literal local key"));
+let raw=OffsetRoleCatalog::new(EntityId::from_bits(10),vec![role],vec![tag]);
+let admitted=raw.admit(OffsetRoleCatalogLimits::new(1,1,4)).expect("complete literal metadata");
+assert!(admitted.is_active(tag));
+assert_eq!(admitted.definition(tag).expect("declared role").key().as_str(),"main");
+```
+
+`AdmittedOffsetRoleCatalog` borrows the actual raw owner and policy. `definition(tag)` returns the
+original definition,including inactive ones. `active_roles()` returns private views pairing each
+actual active-list tag field with its original definition in active-list order,which can differ
+from definition order. The active-list index is an occurrence position,not persistent identity.
+All declared keys/tags remain unchanged. Empty initial catalogues and fully inactive catalogues are
+valid metadata states;neither creates an implicit `main` role or proof that an offset can execute.
+
+This validates current supplied metadata only. It cannot prove the list includes all previously
+issued roles,an actual canonical operation owns it,an instance contains a role,or any geometry
+matches its key. Native transition and readonly manifest-presence binding are the next owners;
+current Design/namespace,actual history authority,G2/G3 matching and publication remain separate.

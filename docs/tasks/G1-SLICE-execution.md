@@ -815,27 +815,29 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   explicit tags and fresh ledger declaration alone do not prove role continuity across revisions/sizes.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.recovery`
   Status: `done`
-  Goal:recover actual identity/replay/instance/undo contracts;own/fix D373 active journal-decision
-  storage/affine-scope wording and D374 stale contiguous Declared Rustdoc from0694. Promote
-  issuance/membership/presence separation in existing identity decision;plan safe native leaves.
-  Retire whole0695/closed D303–D306 ledger;focused source/history/book checks,no runtime change.
-  - [x] ISSUE:D373/D374 active journal guidance misstates stored merge evidence,normal-map
-    handoff and new sparse declaration order;role issuance/membership/presence need distinct scope.
-  - [x] ROOT CAUSE (role recovery):a6d465f9/0005 already stores merge lengths;91ebe554/0694
-    added sparse declarations without the enum-doc update. Actual reserve/undo/instance contracts read,rc=0.
-  - [x] FIX:active decision/Rustdoc corrected;identity decision promotes immutable issued-role
-    definitions,separate active membership/readonly result presence. Native leaves owned below.
-  - [x] ADDRESSED (role recovery):target/history-proof-0696-role-policy/proof.json records
-    original commit/source hashes and exactly three Rustdoc replacements;all other Rust bytes equal,rc=0.
-  - [x] NO REGRESSION (role recovery):fmt/book/rendered reserve anchor/diff/archive865 four
-    exact Git spans pass,rc=0. D372 warning remains P2;no new runtime or geometric matching proof.
-  - [x] LOCKSTEP:book/live/defects/frontier sync;promotion: promoted
-    ([identity decision](../decisions/decision_entity-identity-ulid-injected-generator.md)).
-  Verification:focused source/history/book;Commit:STITCHCAD-G1-0696. Next .continuity.catalog.
+  Goal:0696 recovery/D373/D374;[whole scope/proofs](../history/stitchcad-devnotes-part866.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.catalog`
-  Status: `pending`
+  Status: `done`
   Goal:native declared role catalogue with explicit local key/tag and active membership;complete
   quota/name-byte/workspace admission and actual field views. Keys are not geometric classifiers.
+  Scope:owned operation/definition/active-id inputs;explicit complete N/A/text/index admission,
+  unique keys/tags and defined unique active ids. Preserve both input orders and actual fields.
+  Empty initial catalogue valid;no issuance/transition/instance/geometry authority. Retire whole0696;
+  focused native/compiler/book checks;global operation/recipe namespaces remain .5f.2.
+  - [x] ISSUE:declared role keys/tags and canonical active membership need complete admission,
+    distinct from result presence,issuance history and actual geometric matching.
+  - [x] ROOT CAUSE (role catalogue):0696 identity policy and actual MachineToken/source
+    contracts inspected;native fields/empty/inactive/resource/refusal cases pass,rc=0.
+  - [x] FIX:owned raw definitions/active ids;complete N/A/key-byte/2(N+A) admission before
+    indexes,unique keys/tags/defined active ids and private actual field/member views.
+  - [x] ADDRESSED (role catalogue):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test offset_role_catalog_contract →3 pass,rc=0;both orders,actual pointers,
+    seven resource/content refusal rows,empty initial and inactive sparse definitions.
+  - [x] NO REGRESSION (role catalogue):compiler guards3/actual output book5/selected clippy/
+    fmt/book/rendered/diff/history866 three exact Git spans pass,rc=0. D372 remains P2;
+    no actual issuance history/global namespace/current Design or geometric classification proof.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (0696 identity policy already promoted).
+  Verification:native3/rustdoc8;Commit:STITCHCAD-G1-0697. Next .continuity.transition.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags.continuity.transition`
   Status: `pending`
   Goal:native structural issuance-preserving canonical edit/membership-restore contract;old role

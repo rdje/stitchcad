@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — separate role issuance from membership and correct journal guidance
+## _(2026-10-31 UTC)_ — admit declared offset role catalogues and active membership
 
-0696 recovers canonical identity/instance/undo/private reserve contracts. Planned roles retain all issued local key/tag definitions;active canonical membership and readonly evaluated presence are separate. Undo may restore membership without forgetting later-issued definitions;keys alone prove no geometric matching.
-D373 a6d465f9/0005 already stored merge Length evidence despite the active decision's no-storage claim;affine handoff wording was overbroad. D374 came from0694:the new sparse/caller-order API left Declared enum docs unchanged. Correct both active guidance and Rustdoc;runtime algorithms stay unchanged.
-Original history/source hashes,exactly three Rustdoc-only replacements,fmt/book/rendered reserve anchor/diff/archive865 four exact Git spans pass. All other Rust source bytes equal. Planned catalogue/transition/presence owners retain G2 matching/current-root/history authority boundaries. D372 warning remains P2.
-LIVE states/G1 6/18/G0 unapproved unchanged;D373/D374 fixed. promotion: promoted (docs/decisions/decision_entity-identity-ulid-injected-generator.md). Journal correction stays retrievable in its existing decision. Whole0695/closed D303–D306 ledger retained865. Next native catalogue admission;PNT continues.
+0697 adds owned operation/local key-tag definitions and a separate active-id list. Complete N/A/key-byte/2(N+A) admission precedes indexes,then original tag/key and active duplicate/undefined checks. Both orders and all original fields survive;no sorting,renaming,deduplication or implicit role is introduced.
+Private admitted/active views retain actual raw owner,policy,membership tag and definition fields. Inactive definitions remain addressable;empty initial and wholly inactive catalogues are valid metadata states. Keys are local declarations,not global recipe bindings,issuance evidence or geometric classifiers.
+Native3/compiler guards3/actual output book5/selected clippy/fmt/book/rendered/diff/history866 three exact Git spans pass. Seven resource/content refusals preserve all original input/policy;workspace counts are entry populations,not total memory or earlier String/Vec allocation guarantees.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (0696 identity policy already promoted). Whole0696 retained866. D372 P2 persists;canonical transition/history and readonly result-presence binding remain owned. Actual G2 matching/current-root/bus proof separate. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

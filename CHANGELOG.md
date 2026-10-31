@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0696 — separate role issuance from membership and correct journal guidance
+## STITCHCAD-G1-0697 — admit declared offset role catalogues and active membership
 
-- Issued definitions,canonical active membership and readonly evaluated presence have distinct planned owners.
-- D373 merge-evidence/affine-scope decision and D374 sparse Declared Rustdoc corrected;algorithms unchanged.
-- Source/history/fmt/book/rendered/diff/history865 exact spans pass;role policy promoted to identity decision.
-- Native catalogue/transition/presence and actual G2 matching remain pending;D372 P2 open.
+- Explicit role keys/tags and active ids retain both original orders with complete resource admission.
+- Unique keys/tags and defined unique active membership precede private authentic field views.
+- Native3/rustdoc8/selected lint/fmt/book/rendered/diff/history866 exact spans pass;D372 open.
+- Issuance history,transitions,result presence and actual G2/current-root/authority proof remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
