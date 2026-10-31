@@ -213,7 +213,8 @@ pub use walk::{
 };
 mod truing;
 pub use truing::{
-    BoundConstrainedTruing, BoundTruingCopyInventory, ConstrainedSeamTruing, TruingBindingError,
-    TruingBindingRefusal, TruingCopyInventoryError, TruingCopyInventoryLimits,
-    TruingCopyInventoryRefusal, TruingFitProvider, TruingInputError, TruingInputRole,
+    BoundConstrainedTruing, BoundTruingCopyInventory, BoundTruingEdgeRoles, ConstrainedSeamTruing,
+    TruingBindingError, TruingBindingRefusal, TruingCopyInventoryError, TruingCopyInventoryLimits,
+    TruingCopyInventoryRefusal, TruingEdgeRoleBindingError, TruingEdgeRoleBindingRefusal,
+    TruingFitProvider, TruingInputError, TruingInputRole,
 };

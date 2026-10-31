@@ -66,3 +66,45 @@ move endpoints/stops or replace ease. Complete current Design/graph/plan/ledger 
 held-reference repair,observer/all-copy effects,deterministic output/curve policy,actual fit and
 length-error evidence,authoring authority and atomic publication remain required. This stage
 constructs no output topology and certifies no endpoint,stop,geometry or physical result.
+
+## Bind explicit edge-output roles
+
+`BoundTruingCopyInventory::bind_edge_roles` associates the actual complete source/copy/Piece
+context with an `AdmittedEdgeOutputRoleCatalog`. It produces `BoundTruingEdgeRoles` under explicit
+`EdgeOutputRoleCatalogLimits`. These are edge-role declarations;Point and semantic-Notch
+catalogues are different types and cannot supply this binding.
+
+```rust
+use sc_core::{construction::*,name::MachineToken,ontology::{EntityId,LocalTag}};
+fn bind<'a>(copies:&'a BoundTruingCopyInventory<'a>,catalog:&'a AdmittedEdgeOutputRoleCatalog<'a>,
+    limits:EdgeOutputRoleCatalogLimits)->Result<BoundTruingEdgeRoles<'a>,TruingEdgeRoleBindingError<'a>> {
+    copies.bind_edge_roles(catalog,limits)
+}
+let raw=EdgeOutputRoleCatalog::new(EntityId::from_bits(1000),
+    [(9,"refit"),(2,"retained"),(7,"inactive")].into_iter().map(|(tag,key)|
+        EdgeOutputRoleDefinition::new(LocalTag::new(tag),MachineToken::new(key).expect("literal key"))
+    ).collect(),vec![LocalTag::new(2),LocalTag::new(9)]);
+let catalog=raw.admit(EdgeOutputRoleCatalogLimits::new(3,2,21)).expect("bounded literal metadata");
+assert_eq!(catalog.key_bytes(),21);
+```
+
+The whole D-definition,A-active-occurrence and B-key-byte quotas precede operation equality.
+D includes inactive definitions;A counts every original active occurrence;B is the catalogue's
+complete cached original machine-key byte count. A valid catalogue for operation1001 still
+refuses binding to actual truing operation1000. D2 refuses required3 before A1,B20 or operation
+inspection;with D3/A2,B20 refuses required21 before that owner mismatch.
+
+Association reads cached counts and original operation fields only. It takes constant work and
+space,scans no keys,allocates nothing and mutates neither original input. Earlier catalogue
+admission and owned storage retain their separate full-population/workspace obligations.
+`copies()`, `catalog()` and `limits()` lend the actual complete parents and original explicit
+policy. Catalogue definition/active order,machine keys,local tags and authentic member borrows
+stay unchanged. Errors retain the same whole copy/Piece/source and catalogue context,policy and
+first complete quota or operation cause;no accepted prefix escapes.
+
+Empty metadata and a catalogue containing only inactive definitions can both bind. They do not
+prove an empty refit result or erase either physical copy,shared-Piece coupling,stops or the actual
+fit provider. Active membership likewise supplies no evaluated curve or issued identity. Complete
+output manifests,reference/endpoint/stop mappings,deterministic variant/refit policy,actual history,
+geometry/length-fit evidence,current Design,all-copy effects and atomic authoring authority remain
+required. A caller-supplied role tag cannot grant topology issuance or canonical publication.

@@ -912,20 +912,23 @@ retain their complete task branch,original goals and proof links in the bounded 
   observer obligations and unexplained differential attribution. Actual fit stays G3/.5f.4.
 - ID: `G1-SLICE.5f.1.c.true.outputs.copies`
   Status: `done`
-  Goal:complete actual truing copy/Piece binding.
-  - [x] ISSUE:truing input binds selected copy;output needs actual whole Pieces.
-  - [x] ROOT CAUSE (truing copies):source/CutPlan/Piece reviewed;
-    checkedI+3C then C/I/W precede canonical validation and A/B lookup;rc=0.
-  - [x] FIX:actual plan/inventory;A/B owners cached.
-  - [x] ADDRESSED (truing copies):cargo test --test truing_copy_inventory_contract
-    --test truing_input_contract:5+5 pass;rc=0;commands in receipt.
-  - [x] NO REGRESSION (truing copies):API3/book1,lint/fmt/build/map/render;
-    old kernels/fixture/tests/seven fences,925 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing actual-copy association rule).
-  Proof:target/history-proof-0751-truing-copy-context/;Commit:STITCHCAD-G1-0751.
+  Goal:0751 actual copy/Piece binding;[whole scope/proofs](../history/stitchcad-devnotes-part926.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.roles`
+  Status: `done`
+  Goal:truing edge roles.
+  - [x] ISSUE:edge roles need actual truing owner.
+  - [x] ROOT CAUSE (truing roles):catalogue/copy contracts reviewed;
+    cached D/A/B quotas then operation;rc=0.
+  - [x] FIX:actual parents;no scanning.
+  - [x] ADDRESSED (truing roles):cargo test --test truing_edge_role_binding_contract
+    --test truing_copy_inventory_contract:3+5 pass;rc=0;commands in receipt.
+  - [x] NO REGRESSION (truing roles):API4/book2,lint/fmt/build/map/render;
+    old kernels/tests/fixture/fence/926 exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing role-association rule).
+  Proof:target/history-proof-0752-truing-edge-roles/;Commit:STITCHCAD-G1-0752.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest`
   Status: `pending`
-  Goal:bounded edge roles on actual truing context.
+  Goal:refit manifest.
 - ID: `G1-SLICE.5f.1.c.true.variants`
   Status: `pending`
   Goal:review v1 truing coverage against the envelope before family closure;constrained refit

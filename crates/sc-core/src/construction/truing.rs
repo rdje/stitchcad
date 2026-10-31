@@ -7,6 +7,8 @@ pub use copies::{
     BoundTruingCopyInventory, TruingCopyInventoryError, TruingCopyInventoryLimits,
     TruingCopyInventoryRefusal,
 };
+mod roles;
+pub use roles::{BoundTruingEdgeRoles, TruingEdgeRoleBindingError, TruingEdgeRoleBindingRefusal};
 mod binding;
 pub use binding::{BoundConstrainedTruing, TruingBindingError, TruingBindingRefusal};
 

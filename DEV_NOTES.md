@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind actual complete truing copy and Piece context
+## _(2026-10-31 UTC)_ — bind native truing edge-output role metadata
 
-0751 binds the original source-retained CutPlan to the actual whole PieceInventory under checkedI+3C then C/I/W quotas,before canonical validation and original A/B lookups. Temporary canonical proof is dropped;actual complete source/plan/inventory/policy and both side owners remain borrowed.
-Selected/counterpart Piece getters follow original adjusted side;shared authored/reflected copies retain actual owners/order without freezing a coupled counterpart. Missing other-side copies and unrelated unplanned Pieces refuse. Original quantitative fit provider,span/ease/stops and input scopes stay intact.
-Native5+5/API3/book1,selected lint/fmt/build/map/render pass0. Old input/kernel/fixture/tests/seven fences,whole0750 spans925 and older31219B notes base exact0. New chapter/SUMMARY preserve all old nonempty index rows. Proof target/history-proof-0751-truing-copy-context/.
-Promotion: declined (existing actual-copy association rule). Edge roles next;native manifest/reference/variant policy,actual fit/currentness/observer/all-copy/geometry/authority/atomic execution and full integration remain owed. G1still6/18/G0 unapproved.
+0752 associates the actual complete truing copy/Piece/source context with admitted typed edge-role metadata. Whole cached D/A/key-byte quotas precede actual operation equality;constant work/no scan/allocation. Actual parents,original policy and first error context stay borrowed unchanged.
+Empty/inactive metadata may bind without omitting either copy,shared-Piece coupling,stops or quantitative fit provider. Point/Notch catalogues cannot substitute. Role declaration/membership proves no evaluated curve,manifest,history,reference preservation,current Design,fit or issued topology.
+Native3+5/API4/truing book2,selected lint/fmt/build/map/render pass0. Prior kernels/tests/fixture/first book fence,whole0751 spans926 and older31219B notes base exact0. D3/A2/B21 fixture checks quota-before-operation order and complete actual parents. Proof target/history-proof-0752-truing-edge-roles/.
+Promotion: declined (existing role-association rule). Refit manifest next;endpoint/stop/reference maps,deterministic variant/refit selection,actual currentness/fit/geometry/observer/all-copy/authority/atomic execution and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

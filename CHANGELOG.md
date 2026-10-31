@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0751 — bind actual complete truing copy and Piece context
+## STITCHCAD-G1-0752 — bind native truing edge-output role metadata
 
-- Revalidate source-retained CutPlan against actual whole Pieces under complete C/I/I+3C limits.
-- Borrow actual A/B and selected/counterpart owners;shared Piece does not imply a fixed counterpart.
-- Missing counterparts,canonical quantity mismatches and unrelated unplanned Pieces refuse whole context.
-- Native5+5/API3/book1,lint/fmt/build/map/render pass0;old kernels/input tests/fixture/fences and925 exact.
-- Actual fit/currentness/reference repair/all-copy effects/geometry/authority and atomic execution stay owed.
+- Bind admitted typed edge roles to actual complete truing copy/Piece/source under whole D/A/key-byte quotas.
+- Cached counts precede actual operation equality;constant no-scan association preserves actual parents.
+- Empty/inactive metadata keeps full source obligations and grants no output,history,fit or issuance proof.
+- Native3+5/API4/book2,lint/fmt/build/map/render pass0;prior kernels/tests/fixture/fence and926 spans exact.
+- Complete refit manifest,reference/variant policy and actual geometry/all-copy/atomic execution stay owed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

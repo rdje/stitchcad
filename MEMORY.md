@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0751;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.true.outputs.roles in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32/walk17 nodes complete;actual truing copy/Piece context complete;edge roles next.
-- Truing retained-source CutPlan/actual whole Piece inventory bind under C/I/I+3C quotas;both A/B
-  and selected/counterpart actual owners cached. Shared Piece grants no fixed-counterpart/fit proof.
-  Native10/API3/book1/lint/fmt/build/map/render pass;proof target/history-proof-0751-truing-copy-context/.
+- Latest unit:STITCHCAD-G1-0752;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.true.outputs.manifest in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32/walk17 nodes complete;truing copy/Piece/edge-role context complete;refit manifest next.
+- Truing edge roles bind cached whole D/A/key-byte limits then actual operation;constant work,
+  actual complete parents,empty/inactive metadata legal. No fitted result,history or issuance implied.
+  Native8/API4/book2/lint/fmt/build/map/render pass;proof target/history-proof-0752-truing-edge-roles/.
 - Mirror known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.
