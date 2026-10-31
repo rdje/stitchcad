@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — preserve point role history metadata
+## _(2026-10-31 UTC)_ — bind point roles to actual mirror declaration
 
-0725 privately reuses unchanged transition checks with point-typed before/after/introduced/membership views;complete combined D/A/key bytes precede comparisons.
-Native3+3/point API10/mirror-book8,selected clippy/fmt/build/map/render pass0. Old metadata/transition source unchanged;no new index or source mutation.
-Restoring active membership retains later-issued definitions;old snapshots that forget a supplied tag refuse. Whole0724 spans896 exact0;actual history completeness/undo authority remain separate.
-Promotion: declined (existing role-history/type boundary). Actual mirror/point binding then source-output attribution next;PointRef generation,currentness/geometry/issuance/full CI remain owed. G1still6/18/G0 unapproved.
+0726 associates actual canonical Piece declaration and admitted point catalogue under complete D/A/key bytes before the actual mirror operation id.
+Native3+4/mirror API19/book9,selected clippy/fmt/build/map/render pass0;prior point catalogue/history/Piece identity code unchanged. Whole0725 spans897 exact0.
+Actual parent/field pointers and original membership order retained;empty/inactive stays metadata. Shared quota/cause data provides no edge-proof or Piece-id substitution.
+Promotion: declined (existing typed-owner/data boundary). Source-point attribution next;PointRef generation,current source/frame/geometry/issued history/global freshness/full CI remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

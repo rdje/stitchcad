@@ -375,3 +375,43 @@ continuous. Actual canonical history/maximum-issued retention,current Design,poi
 mirror/source-output association,nonreuse and atomic publication remain separate owners. No
 PointRef or coordinates are generated,and catalogue sources remain immutable.
 
+## Binding point roles to the actual mirror declaration
+
+`identity.bind_point_roles(&points,limits)` associates an actual canonical Piece declaration
+with an actual admitted point catalogue. The declaration already retains its original mirror
+input,source Piece,cut/field metadata and edge-role parents. The point catalogue remains a
+distinct domain:an admitted edge catalogue cannot substitute for this argument.
+
+| API | Meaning |
+| --- | --- |
+| `DeclaredMirrorPieceIdentity::bind_point_roles` | Complete point bounds before actual mirror-operation association |
+| `BoundMirrorPiecePointRoles` | Authentic declared Piece and typed point-catalogue parents |
+| `MirrorPiecePointRoleBindingError` | Original declaration,catalogue,limits and first refusal |
+| `MirrorPiecePointRoleBindingRefusal` | Shared D/A/key-byte/operation cause data,not a membership proof |
+
+All point definitions D,including inactive ones,all active ids A and complete original key bytes
+B must fit the explicit PointOutputRoleCatalogLimits before operation comparison. The expected
+operation comes from the actual original MirrorPieceCopy input,not the new Piece id or a caller
+substitute. The earlier catalogue admission supplies cached byte counts,so this association uses
+constant work and no new workspace. It grants no prior-allocation or whole-execution bound.
+
+```rust
+use sc_core::construction::*;
+fn bind_points<'a>(piece:&'a DeclaredMirrorPieceIdentity<'a>,
+    points:&'a AdmittedPointOutputRoleCatalog<'a>,limits:PointOutputRoleCatalogLimits)
+    ->Result<BoundMirrorPiecePointRoles<'a>,MirrorPiecePointRoleBindingError<'a>> {
+    piece.bind_point_roles(points,limits)
+}
+```
+
+The declaration chain is bind_piece,bind_cut_policy,bind_metadata,bind_edge_roles,
+declare_piece_identity,then bind_point_roles. Every stage borrows the actual prior context.
+Success and refusal preserve the actual canonical identity field and complete point catalogue;
+active views still borrow their original point fields in authored order. Neither parent changes.
+
+Empty and fully inactive point catalogues remain metadata states. They generate no PointRef,
+retire no issued role and supply no executable source/output point manifest. Actual original
+source-point attribution,current registry/membership/common frame,geometric correspondence,
+canonical issued-history completeness,global freshness and publication still require their
+separate owners. This binding cannot be used as point-source or actual reflection evidence.
+

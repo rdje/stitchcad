@@ -42,12 +42,13 @@ pub use join::{
 mod mirror;
 pub use mirror::{
     BoundMirrorPieceCopy, BoundMirrorPieceCutPolicy, BoundMirrorPieceEdgeRoles,
-    BoundMirrorPieceMetadata, DeclaredMirrorPieceIdentity, MirrorAxis, MirrorAxisDependency,
-    MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError, MirrorPieceCutPolicy,
-    MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
+    BoundMirrorPieceMetadata, BoundMirrorPiecePointRoles, DeclaredMirrorPieceIdentity, MirrorAxis,
+    MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError,
+    MirrorPieceCutPolicy, MirrorPieceCutPolicyError, MirrorPieceCutPolicyRefusal, MirrorPieceEdge,
     MirrorPieceEdgeLocation, MirrorPieceEdgeSource, MirrorPieceFieldIntent, MirrorPieceFoldIntent,
     MirrorPieceIdentityError, MirrorPieceIdentityRefusal, MirrorPieceMetadataError,
     MirrorPieceMetadataLimits, MirrorPieceMetadataPolicy, MirrorPieceMetadataRefusal,
+    MirrorPiecePointRoleBindingError, MirrorPiecePointRoleBindingRefusal,
     MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal, MirrorPieceSourceError,
     MirrorPieceSourceLimits, MirrorPieceSourceRefusal,
 };

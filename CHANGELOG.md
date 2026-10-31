@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0725 — preserve point role history metadata
+## STITCHCAD-G1-0726 — bind point roles to actual mirror declaration
 
-- Point-typed transition retains actual before/after and original introduced/active/inactive fields.
-- Complete combined quotas precede owner and prior-definition preservation;no new index or mutation.
-- Native6/point API10/book8 and focused lint/fmt/build/map/render/history896 checks pass.
-- Actual issued history/undo authority remain separate;mirror point binding/output attribution stay owned.
+- Actual canonical Piece and point catalogue parents bind under complete metadata limits before owner checks.
+- Point proof domain remains distinct;raw quota/cause data may share without edge or Piece-id substitution.
+- Native7/mirror API19/book9 and focused lint/fmt/build/map/render/history897 checks pass.
+- No point generation/source/frame/geometry/history authority;complete source/output attribution stays owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

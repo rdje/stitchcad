@@ -25,4 +25,4 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G7 — scoped production declaration | Not Started | 7 leaves: independent review, envelope statement, semver policy, upgrade/rollback, channels, governance |
 | V1 — assembly visualization | Not Started | parallel, never blocks a G-gate; 7 leaves: mesh, ease-aware stitching, net-line binding, arrangement, viewport, blinded validation |
 | V2 — physically validated simulation | Not Started | parallel, uncapped; 6 leaves: `sc-sim` out of the default build, XPBD research, labelled approximation, calibration + observables, evidence-gated exit |
-| Product code (`crates/`) | In Progress | Scalar/drafting/offset and slash checkpoint51+53 scoped. Point history6/API10/book8 scoped. Actual geometry/maps pending;captures retain original scopes. Full app/resources/provider/replay/storage/physical/release owners remain |
+| Product code (`crates/`) | In Progress | Scalar/drafting/offset and slash checkpoint51+53 scoped. Mirror point binding7/API19/book9 scoped. Actual geometry/maps pending;captures retain original scopes. Full app/resources/provider/replay/storage/physical/release owners remain |

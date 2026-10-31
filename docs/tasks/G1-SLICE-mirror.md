@@ -51,22 +51,21 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Goal:0724 point catalogue;[whole scope/proofs](../history/stitchcad-devnotes-part896.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.transition`
   Status: `done`
-  Goal:point-typed supplied-definition preservation and original membership views under combined bounds.
-  - [x] ISSUE:point history intent must preserve supplied issued definitions without crossing proof domains.
-  - [x] ROOT CAUSE (point transition):published shared transition/C0696 history rules reviewed;
-    private composition retains actual point before/after owners;old edge metadata/transition unchanged;rc=0.
-  - [x] FIX:combined bounds before owner/old definitions;introduced/activated/deactivated views stay point-typed.
-  - [x] ADDRESSED (point transition):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test point_output_role_transition_contract --test offset_role_transition_contract:3+3 pass;rc=0.
-  - [x] NO REGRESSION (point transition):point API10/mirror-book8,selected lint/fmt/build/map/render/
-    896 exact Git spans pass;rc=0. Prior-definition restoration checked;actual issued history/undo stays owed.
-  - [x] LOCKSTEP:book/C record/live/frontier align;promotion: declined (existing role-history/type boundary).
-    No source mutation,new index,PointRef/currentness/geometry or publication authority claim.
-  Verification:target/history-proof-0725-point-role-transition/;Commit:STITCHCAD-G1-0725;next .points.binding.
+  Goal:0725 point history metadata;[whole scope/proofs](../history/stitchcad-devnotes-part897.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.binding`
-  Status: `pending`
-  Goal:actual declared mirror Piece/metadata operation to point catalogue association under whole
-  bounds;source point attribution remains separate and no edge-role proof can substitute.
+  Status: `done`
+  Goal:actual declared mirror Piece and point-catalogue association under complete bounds.
+  - [x] ISSUE:typed point roles must bind actual mirror parents without edge-proof or Piece-id substitution.
+  - [x] ROOT CAUSE (mirror point binding):actual declared Piece/point APIs and prior owner contracts
+    inspected;full D/A/B precedes actual input operation equality,with private authentic parents;rc=0.
+  - [x] FIX:borrow original declaration/point catalogue and reuse only quota/cause data;no new workspace.
+  - [x] ADDRESSED (mirror point binding):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test mirror_piece_point_roles_contract --test mirror_piece_identity_contract:3+4 pass;rc=0.
+  - [x] NO REGRESSION (mirror point binding):mirror API19/book9,selected lint/fmt/build/map/render/
+    897 exact Git spans pass;rc=0. Point catalogue/history and Piece identity source unchanged.
+  - [x] LOCKSTEP:book/live/frontier align;promotion: declined (existing typed-owner/data boundary).
+    Empty/inactive valid metadata;no PointRef/source/currentness/geometry/issued-history proof.
+  Verification:target/history-proof-0726-mirror-point-binding/;Commit:STITCHCAD-G1-0726;next .points.outputs.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.outputs`
   Status: `pending`
   Goal:bounded original PointRef-to-new-role attribution/eligibility requests without guessed source
