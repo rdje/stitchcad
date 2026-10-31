@@ -21,6 +21,10 @@ mod roles;
 pub use roles::{
     BoundMirrorPieceEdgeRoles, MirrorPieceRoleBindingError, MirrorPieceRoleBindingRefusal,
 };
+mod identity;
+pub use identity::{
+    DeclaredMirrorPieceIdentity, MirrorPieceIdentityError, MirrorPieceIdentityRefusal,
+};
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
 /// Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks.

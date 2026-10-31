@@ -1,6 +1,6 @@
 //! Actual immutable source/cut/field association for focused mirror manifest contracts.
 #[path = "mirror_source.rs"]
-mod source;
+pub mod source;
 use sc_core::{construction::*, ontology::*};
 
 pub fn with_metadata(run: impl FnOnce(BoundMirrorPieceMetadata<'_>)) {

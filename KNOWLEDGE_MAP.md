@@ -5,17 +5,11 @@
      knowledge-map/subsystems.md, docs/tasks/, docs/decisions/. -->
 
 ## Key subsystems
-
-- crates/sc-units/;docs/book/src/spec/units-and-tolerances.md. G0-CONTRACT.2/.18
-- crates/sc-core/,crates/sc-measure/;G1-SLICE.3/.4/.5
+- crates/sc-units/;docs/book/src/spec/units-and-tolerances.md;G0-CONTRACT.2/.18;crates/sc-core/,crates/sc-measure/;G1-SLICE.3/.4/.5
 - docs/book/src/SUMMARY.md;G0-CONTRACT/G1-SLICE.4d.1
-- docs/book/src/spec/formula-language.md;G0-CONTRACT.9/G1-SLICE.5;TOOLBOX.md
-- docs/book/src/spec/interchange-dialects.md;G0-CONTRACT.10/G2-2D;TOOLBOX.md
-- docs/book/src/spec/feature-matrix.md;G0-CONTRACT.4;TOOLBOX.md
+- docs/book/src/spec/formula-language.md;G0-CONTRACT.9/G1-SLICE.5;TOOLBOX.md;docs/book/src/spec/interchange-dialects.md;G0-CONTRACT.10/G2-2D;docs/book/src/spec/feature-matrix.md;G0-CONTRACT.4
 - docs/book/src/spec/glossary/;docs/tasks/artifacts/glossary/run_glossary_census.sh;G0-CONTRACT.1
-- .doctrine/live_document_size/;scripts/check_live_doc_size.sh. SPINE.4
-- docs/tasks/artifacts/;`make probes`;ROADMAP.md §11
-- .github/workflows/rust.yml;scripts/ci_environment.py
+- .doctrine/live_document_size/;scripts/check_live_doc_size.sh;SPINE.4;docs/tasks/artifacts/;make probes;ROADMAP.md;.github/workflows/rust.yml;scripts/ci_environment.py
 
 ## Active task-trees
 
@@ -30,6 +24,7 @@
 - [`G1-SLICE-formulas`](docs/tasks/G1-SLICE-formulas.md)
 - [`G1-SLICE-garment`](docs/tasks/G1-SLICE-garment.md)
 - [`G1-SLICE-measurements`](docs/tasks/G1-SLICE-measurements.md)
+- [`G1-SLICE-mirror`](docs/tasks/G1-SLICE-mirror.md)
 - [`G1-SLICE-names`](docs/tasks/G1-SLICE-names.md)
 - [`G1-SLICE-producer-proof`](docs/tasks/G1-SLICE-producer-proof.md)
 - [`G1-SLICE-producers`](docs/tasks/G1-SLICE-producers.md)

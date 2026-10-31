@@ -231,3 +231,54 @@ source-contour correspondence and point-role policy remain later manifest steps.
 catalogue grants no PointRef role namespace,global freshness,canonical issued-history completeness,
 geometric role continuity,current Design/operation-kind proof or command publication authority.
 
+## Canonical result Piece identity declaration
+
+`roles.declare_piece_identity(&canonical_piece_id)` associates an explicit canonical result
+Piece identity with the actual role/catalogue/source/metadata parents. It allocates no id and
+creates no Piece. The result is deliberately a declaration,not a fresh or issued identity proof.
+
+| API | Meaning |
+| --- | --- |
+| `BoundMirrorPieceEdgeRoles::declare_piece_identity` | Local typed-identity checks against the actual bound parents |
+| `DeclaredMirrorPieceIdentity` | Authentic canonical identity-field and parent borrows |
+| `MirrorPieceIdentityError`, `MirrorPieceIdentityRefusal` | Original field/parents and first intrinsic or typed-source alias |
+
+The [Design structural contract](../spec/ontology-implementation.md) gives Piece and topology
+operations separate owned identities. Copy intent requires a different result Piece from the
+actual source. A separately handed result must also name a distinct companion. These three
+checks run first:mirror operation,actual source Piece,then requested self-companion.
+
+The declaration then rejects a result id used as an original source-edge creator,in original
+boundary/hole/construction/fold order;then the first authored axis-source creator;then the source
+and selected result assigned Material ids. Errors preserve the exact original source edge/tag/
+location or axis dependency position through their actual parents. A missing typed source cannot
+be repaired by silently using its operation/Material identity for a Piece. The source population
+R was already admitted,so this stage uses O(R+1) work and constant auxiliary space.
+
+```rust
+use sc_core::{construction::*,ontology::EntityId};
+fn declare<'a>(roles:&'a BoundMirrorPieceEdgeRoles<'a>,canonical_piece_id:&'a EntityId)
+    ->Result<DeclaredMirrorPieceIdentity<'a>,MirrorPieceIdentityError<'a>> {
+    roles.declare_piece_identity(canonical_piece_id)
+}
+```
+
+A source companion reference is a use,not another owned declaration. For example,a native right
+source100 may already name planned left companion200;the explicit left result200 names100 as its
+companion. That reference alone does not prove200 already has an owner,and must not be rejected
+as a duplicate owner. The result still cannot name200 as its own companion. Complete inventory
+reciprocity,opposite hands/equal quantities,actual current ownership and geometric mirroring remain
+later checks. If200 is already owned or was previously issued,the complete namespace/nonreuse
+check must refuse it;this local declaration does not establish its absence.
+
+The bound view borrows the actual canonical identity field. Identity is never inferred from
+ordinal,label,coordinate or numerical ordering. Zero is not an absence sentinel:the existing
+injected deterministic generator supports an explicit zero-start sequence. None is generated here.
+
+This API represents canonical native declaration data. It adds no new-id field to a creation
+command request. Production identity supply remains the trusted injected host/bus reserve;preview
+must not mint identities or let request callers choose them. Actual current/historical namespace,
+reserved-id nonreuse,operation-kind/ordering,canonical issued-role history and atomic publication
+remain required under the existing .5f.2/.6 owners. Point-role identity,complete source/output
+correspondence,copy and semantic policies remain separate manifest/family steps.
+

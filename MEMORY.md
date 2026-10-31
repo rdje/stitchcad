@@ -1,13 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0722;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs.manifest.identity — read actual Design/recipe namespaces
-  before fresh Piece/point policy. Then complete source-edge/contour/reference attribution and copies/semantics.
-- bind_edge_roles borrows actual metadata/shared catalogue;whole D/A/key bytes precede owner.
-  Empty/inactive remains metadata,no point namespace/issuance. Native8/API14/mirror-book5/edit7 pass;
-  lint/fmt/build/map/render exact. Proof target/history-proof-0722-mirror-roles/.
-- Book:whole12376B mirror block/4 Rust fences now drafting-mirror-contracts.md;all4 old anchors
-  retained;7 remaining editing fences exact. SUMMARY120;all old links/order kept,new direct companion.
+- Latest unit:STITCHCAD-G1-0723;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points in docs/tasks/G1-SLICE-mirror.md.
+  Separately typed point roles;existing shared edge catalogue grants no PointRef namespace.
+- declare_piece_identity borrows canonical id/actual role parents. Operation/source/self-companion,
+  original source-edge/axis creators and source/result Material aliases refuse. Source companion
+  may name planned result;uses are not owners. No host request id,allocation/global nonreuse proof.
+- Native7/API16/mirror-book6/lint/fmt/build/map/render/tree pass;proof target/history-proof-0723-mirror-identity/.
+  Whole14-node mirror branch copied exact before scoped updates;16 current ids unique in new sibling.
+  All old goals/proofs and map links/curated paths/owner ids retained. Map8189B/cap8192;trim before growth.
+- Mirror book:input/source/cut/field/roles/Piece identity;all prior anchors/examples retained.
 - Native mirror metadata choices complete:bind_metadata uses explicit PreserveSource/Replace for
   material/layer/label;whole resolved UTF-8 B quota precedes canonical label/material blank scans.
   Borrow actual source/replacement fields;print quantity/mirroring/fold derives from actual cut policy.
@@ -18,13 +20,12 @@
   target/artifact_cleanup_audit/daily-20261031-native/. Residue preceded regeneration;proofs preserved.
 - Native slash declaration checkpoint closes .slash.outputs and all native children. Completed
   26-node branch is docs/tasks/G1-SLICE-slash.md;live execution retains a direct pointer.
-  All original goals/proof links preserved,only closure/status updates. Knowledge Map8178B/cap8192;
-  trim curated labels before any new sibling/decision filename,never raise caps.
+  Original goals/proof links preserved;only closure/status updates. Never raise containment caps.
 - Scoped family result:15 slash contract suites51 pass;actual slash API/book docs53 pass. Source
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
-- Tree census10 lanes/13 trees/18 siblings/0 unowned/orphans/dead links;all old map paths/ids/links
-  retained. Whole0721 now892;0720 now891;0719 now890;closed0063 pre-code889;older notes base exact.
+- Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained.
+  Whole0722 now893;closed0064 protocol894;prior0721/0720/0719 in892/891/890;older notes base exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation
@@ -35,7 +36,6 @@
   Source can be live/resolved yet outside replacement Piece;registration repair never mutates a held Notch.
 - Protected proofs:all target/history-proof-* families,including original slash/offset/native receipts.
   Keep capture/review/generation/numerical evidence roots too. Original6172B slash move/old anchors intact.
-- Slash book:output/reference and drafting-slash-piece-contracts.md;native declaration scopes retained.
 - Offset native0691–0701 focused checkpoint:empty-candidate refusal differs from valid empty/inactive
   role metadata. Normal-map requirements demand sourced T2/four propagated output-point ceilings;
   actual-length D126/0691 counterexample remain G2. No generic affine normal-map certificate.
