@@ -104,18 +104,19 @@ that every protected dependency or numerical-proof store was hashed. Candidate s
 those stores were outside the deletion set. Regenerated book/scratch output after the immediate
 residue census is expected and does not invalidate that census.
 
-The 2026-10-30 run used a fresh plan after the D342 protection fix. It removed four generated
-trees and66 stray files:204 files,16693061 bytes. The OS-visible idle check passed before removal.
-All66 strays were copied and byte-verified first;26 current full/hosted/native verification
-receipts remain independently verified in protected audit seam-20261030-safe.
+The 2026-10-31 run used a fresh frozen plan and the unchanged strict guards. It removed four
+regenerable trees and824 logs:18579 files,622525303 bytes. The OS-visible idle check passed
+before removal. All824 logs/781356 bytes were copied and byte-verified first and verified again
+afterward in protected audit daily-20261031-native. No tracked Markdown/JSON referenced their
+exact selected paths;retained numerical,legacy-native and proof families remained outside the plan.
 
-Its immediate independent census ran without activating the launcher:all70 selected paths were
-absent and tracked bytes exact. Full before/after hashes cover twelve original archive/search
-workspaces and both numerical certificate stores:6496 entries,13380343714 regular-file bytes,
-all unchanged. Package/dependency stores were excluded by separation,not wholly hashed.
-The1700 unsafe entries remained;2163 native incremental binary caches were kept because linked
-objects prevent safe whole-tree removal. Book/scratch regeneration followed the residue proof.
-Rejected pre-fix/review plans were never applied;all original0586 search proof logs survive.
+The immediate independent census ran without activating the launcher:all828 selected paths were
+absent and tracked bytes exact. Before/after content and entry metadata cover57 numerical,
+legacy-native and retained-proof roots:136020 entries,14743246609 regular-file bytes,all unchanged.
+Package/dependency stores were excluded by separation,not wholly hashed. The2243 unsafe or
+ambiguous census entries remained,including linked incremental trees,nested repositories,links
+and special files. Book/scratch regeneration followed the immediate residue proof,so regenerated
+paths do not invalidate that recorded cleanup moment. Guards and runtime code were unchanged.
 
 ### Incomplete runtime observations
 

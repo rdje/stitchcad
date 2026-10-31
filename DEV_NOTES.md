@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — close only the native slash declaration checkpoint
+## _(2026-10-31 UTC)_ — guarded daily artifact cleanup
 
-0717 maps native input/opening,roles,edge/contour/source/reference,consumer/boundary,metadata/fold/copy,effect and explicit outcome requirements to actual APIs/book. All15 slash suites51 cases and actual slash API/book53 doctests pass. This is scoped native declaration evidence,not actual G2/Design/physical proof.
-Runtime Rust/tests/Cargo and all existing Rust fences unchanged. Whole26-node native branch copied exact into bounded G1-SLICE-slash.md,then only five parent statuses/closure proof updated. Execution935 lines;all goals/proof links retained. Native output/manifest/reconciliation/semantics parents close.
-Book/render/diff/map/archive886 three exact spans/branch proof pass. Tree census10 lanes/13 trees/18 siblings/0 unowned/orphans/dead links;all old curated paths/owner ids/map links retained within8178B. Old31219B notes exact. Protected target/history-proof-0717-slash-checkpoint/. D372 remains after typed completion.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing native/G2 boundary). Next mirror outputs;actual current graph/registry/history,selectors/budgets,geometry/copy/semantic effects,repairs/authority/bus/platform/full CI retain separate owners. PNT continues.
+0718 removes4 regenerable trees/824 logs,18579 files/622525303B after frozen-plan review and strict OS idle0.
+Independent pre-launcher census:828 paths absent,tracked bytes exact;all824 saved logs/781356B verified0.
+Before/after57 evidence roots/136020 entries/14743246609B exact0;2243 unsafe entries kept. Book rebuild0.
+No guard/runtime change;package stores excluded by separation,not wholly hashed. Promotion: declined (existing cleanup policy).
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

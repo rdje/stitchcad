@@ -1,18 +1,20 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0717;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs — activate/split native metadata/cut-plan/sewing policy,
-  fresh identity/roles/manifests after published mirror input contracts. Read relevant sources/book;
-  actual reflection/reference maps remain .5f.4.geometry/G2/G3. No need completed G2 for G1 schemas.
+- Latest unit:STITCHCAD-G1-0718;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs — read native input/source/book contracts,split safely first.
+- Daily cleanup2026-10-31 14:26 UTC complete;target/artifact_cleanup_audit/daily-20261031-native/.
+  Removed4 trees/824 logs,18579 files/622525303B;all828 paths absent before launcher/book rebuild.
+  All824 log copies exact;57 evidence roots/136020 entries/14743246609B preserved.2243 unsafe
+  entries kept;dependency stores excluded by separation,not wholly hashed. Strict OS idle passed.
 - Native slash declaration checkpoint closes .slash.outputs and all native children. Completed
-  26-node branch is docs/tasks/G1-SLICE-slash.md;live execution935 lines retains a direct pointer.
+  26-node branch is docs/tasks/G1-SLICE-slash.md;live execution retains a direct pointer.
   All original goals/proof links preserved,only closure/status updates. Knowledge Map8178B/cap8192;
   trim curated labels before any new sibling/decision filename,never raise caps.
 - Scoped family result:15 slash contract suites51 pass;actual slash API/book docs53 pass. Source
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
 - Tree census10 lanes/13 trees/18 siblings/0 unowned/orphans/dead links;all old map paths/ids/links
-  retained. Whole0716 scope/lesson/changelog now886;all31219B older live notes remain exact.
+  retained. Whole0717 now887;whole0716 now886;all31219B older live notes remain exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation
@@ -39,5 +41,4 @@
 - Window26/0684:target/history-capture-0684 and target/history-proof-0684;never rerun installer.
 - Original receipt:target/irrational_platform_certificate/acceptance-0665-21696/receipt.json;
   original source/platform scopes retained. G1 6/18/G0 closure unapproved.
-- Cleanup:last2026-10-30 14:18 UTC;due around2026-10-31 14:18 UTC;read cleanup record/preserve evidence.
-- Full PNT continues;no user pause. No background job pending.
+- Full PNT continues;no user pause. Consume every tool terminal result before edits/retries.

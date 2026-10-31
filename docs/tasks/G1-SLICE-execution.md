@@ -741,6 +741,26 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0629;[proof](../history/window26.md#stitchcad-devnotes-part789md).
 
+- ID: `G1-SLICE.6.5.3.2.cleanup-20261031`
+  Status: `done`
+  Goal:daily cleanup0718 complete under unchanged guards;product frontier remains .5f.1.c.mirror.outputs.
+- ID: `G1-SLICE.6.5.3.2.cleanup-20261031.apply`
+  Status: `done`
+  Goal:guarded frozen plan/review/apply and immediate independent residue/tracked-content proof.
+  Evidence:target/artifact_cleanup_audit/daily-20261031-native/;verify_post.py uses stdlib only.
+  - [x] ISSUE:daily disposable outputs accumulated;safe cleanup due2026-10-31 14:18 UTC.
+  - [x] ROOT CAUSE (daily cleanup):published guards/census reviewed;824 log copies verified first.
+    Canonical plan828 candidates/2243 skips;review separates all protected roots;rc=0.
+  - [x] FIX:strict OS idle0 then exact apply removes4 trees/824 logs,18579 files/622525303B.
+  - [x] ADDRESSED (daily cleanup):apply then verify_post.py before any launcher/rebuild.
+    All828 paths absent,1340 tracked files exact,824 saved logs/781356B exact;rc=0.
+  - [x] NO REGRESSION (daily cleanup):57 roots/136020 entries/14743246609B exact before/after.
+    Package stores excluded by separation,not fully hashed;2243 unsafe entries kept;book build rc=0.
+  - [x] LOCKSTEP:latest cleanup/book/live/frontier aligned;whole0717 Git spans exact0.
+    promotion: declined (existing guarded cleanup policy);compact slash acceptance retained.
+  Verification:plan/apply/verify_post.py/source spans/book build rc=0;no runtime/guard/full CI claim.
+  Commit:STITCHCAD-G1-0718.
+
 ## Drafting operation contracts
 
 - ID: `G1-SLICE.5f.1`

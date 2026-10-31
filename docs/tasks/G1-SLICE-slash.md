@@ -107,21 +107,10 @@ records the scope. The task nodes below retain their original goals and proof li
 
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics.closure`
   Status: `done`
-  Goal:close native slash declaration inventory only,with focused component checks and honest
-  G2/Design/bus/geometry-integration/full verification owners. Next .mirror.outputs.
-  - [x] ISSUE:native family needs an inventory/checkpoint without claiming geometry closure.
-  - [x] ROOT CAUSE (native slash checkpoint):parent goals/public APIs/book mapped;15 actual
-    slash suites and all slash API/book docs selected;unrelated ontology inventory excluded,rc=0.
-  - [x] FIX:book family inventory and bounded completed sibling;whole26-node branch moved with
-    every original goal/proof link retained,only final status/closure updates. No runtime change.
-  - [x] ADDRESSED (native slash checkpoint):local_environment.py -- cargo test --offline --locked
-    -p sc-core with all15 slash_spread*_contract test targets →51 pass;--doc construction::slash_
-    →53 pass,rc=0. Receipt target/history-proof-0717-slash-checkpoint/ pins c5d5294d/core tree.
-  - [x] NO REGRESSION (native slash checkpoint):runtime Rust/tests/Cargo diff empty;prior actual
-    Rust fences exact;book/render/Knowledge Map/diff/archive886 three Git spans/branch proof pass,
-    rc=0. Tree census10 lanes/13 trees/18 siblings/0 unowned/orphans/dead links;all old map links/
-    curated paths/owner ids retained. Execution935 lines;new sibling below existing part/collection caps.
-    No full CI,platform parity,current Design/issuance/history,actual geometry/effect/physical proof.
-  - [x] LOCKSTEP:book/live/frontier/map/history align;promotion: declined (existing native/G2 boundary).
-  Verification:native51/rustdoc53;Commit:STITCHCAD-G1-0717. Native output/manifest/reconciliation/
-  semantics parents close. Actual .5f.2/.5f.3/.5f.4.geometry/G2/G3/Design/bus owners stay pending.
+  Goal:0717 native checkpoint;[whole scope/proofs](../history/stitchcad-devnotes-part887.md).
+  - [x] ISSUE:native inventory needed a scoped checkpoint;whole original evidence in887.
+  - [x] ROOT CAUSE (slash checkpoint):15 actual slash suites/API-book scope selected;rc=0.
+  - [x] FIX:26-node native branch closed;actual Design/geometry owners remain pending.
+  - [x] ADDRESSED (slash checkpoint):native51/rustdoc53 pass in0717 pinned receipt;rc=0.
+  - [x] NO REGRESSION (slash checkpoint):887 exact Git source spans verified in0718;rc=0.
+  - [x] LOCKSTEP:0717 inventory/book/frontier and original proof links retained.

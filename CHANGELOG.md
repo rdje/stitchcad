@@ -12,12 +12,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0717 — close only the native slash declaration checkpoint
 
-- Map complete native slash requirements to actual APIs/book;15 slash suites51 and API/book53 pass.
-- Keep runtime/tests/Cargo/examples exact;move whole26-node branch into a bounded completed sibling.
-- Book/render/map/tree census/history886/branch proof pass;all goals/paths/links and old notes retained.
-- Next mirror outputs;actual geometry/current Design/history/semantic effects/authority/full CI remain owned.
+## STITCHCAD-G1-0718 — preserve evidence during daily artifact cleanup
+
+- Removed4 regenerable trees/824 logs:18579 files/622525303B;strict OS idle check passed.
+- Independent immediate census proved828 paths absent and tracked bytes exact before regeneration.
+- All824 saved logs and57 evidence roots/136020 entries/14743246609B exact;2243 unsafe entries kept.
+- Cleanup record/book updated;whole0717 source spans exact. No guard/runtime change or full CI claim.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

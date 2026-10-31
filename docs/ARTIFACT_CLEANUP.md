@@ -32,14 +32,13 @@ Full guide:docs/book/src/annexes/artifact-cleanup.md. Probe controls never apply
 
 ## Latest cleanup
 
-- Run:2026-10-30 14:18 UTC;owner G1-SLICE.6.5.3.2.cleanup-20261030.apply.
-- Removed4 generated trees/66 selected suffix files:204 files,16693061B;all70 paths then absent.
-- Evidence:target/artifact_cleanup_audit/seam-20261030-safe/ plan/result/independent-post.json.
-  All66 suffix-file copies and26 current verification receipts remain in the protected audit.
-- Preservation:6496 entries/13380343714B across12 original archive/search roots and both then-existing
-  numerical stores were exact.1700 unsafe entries and2163 linked native incremental bins stayed.
-  Package/dependency stores and original generation/install workspaces were retained.
-- D348 recovery0645:14 selected native-proof logs/97369B restored from exact audit copies.
-  All6600 pre-existing legacy files and archival copies unchanged;final6614 files. No new cleanup.
-  Receipt:target/irrational_platform_certificate/legacy-native-0645-20261030T185139231704Z-85350/restore.json.
-  The70-path absence describes the cleanup moment;the14 recovered logs now exist at original paths.
+- Run:2026-10-31 14:26 UTC;owner G1-SLICE.6.5.3.2.cleanup-20261031.apply.
+- Removed4 generated trees/824 selected logs:18579 files,622525303B;all828 paths then absent.
+- Evidence:target/artifact_cleanup_audit/daily-20261031-native/ plan/result/independent-post.json.
+  All824 logs/781356B were copied and byte-verified before removal and verified again afterward.
+- Preservation:57 numerical/legacy/retained-proof roots,136020 entries/14743246609 regular-file bytes,
+  all exact before/after. Package/dependency stores were excluded by separation,not wholly hashed.
+- Kept2243 unsafe/ambiguous entries,including linked native incremental trees,nested repositories,
+  links and special files. OS-visible strict idle check passed;no guard/policy changes.
+- Immediate residue/tracked-byte proof preceded launcher/book regeneration. Regenerated outputs
+  afterward are expected;the828-path absence describes the cleanup moment.
