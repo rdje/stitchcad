@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — re-admit containing Designs before fresh replay
+## _(2026-10-31 UTC)_ — canonicalize actual stored recipe bindings
 
-0673 adds replay on borrowed Design plans and accepted results. Shared path recharges complete held content/current host under original model limits before fresh native pair preparation. Original proof join/policies stay pinned;Admission/Replay errors retain actual absent/fresh scope.
-Focused Design14 pass,including three new replay cases,empty extension and existing independent recipe/tangent/mixed reference and byte regeneration. Non-Clone/non-Debug host refusal/recovery,real fractional roots/new ordinals and late missing-provider isolation leave prior accepted results intact.
-Targeted rustdoc1/clippy/fmt/book/diff/history835 three exact Git spans pass. New test initially used nonexistent Current variant;corrected to actual Host cause. No model mutation,storage bytes,geometry publication or complete replay identity/full-suite claim.
-LIVE states/G1 6/18/G0 unapproved unchanged. promotion: declined (existing fresh-admission doctrine). Whole0672 retained835. Next .5e.4.4 recover deterministic accepted-result identity;full .4.v/storage/geometry/pre-push owners stay pending. D156 nonblocking audits deferred. PNT continues.
+0674 adds private typed ASCII binding output from accepted direct/paired recipes. Declaration order,name,stored kind/integer/Boolean and lexical approximation sources survive;RHS fractions,assertions,read traces and caches are outside this identity. Ontology7 keeps derived output out of project authority.
+Complete byte measurement precedes explicit quota and one fallible output reservation;bounded writer cannot exceed measured extent. Native4/paired9/rustdoc3 pass:authored six-kind/signed/turn/false/zero bytes,sources/lazy branches,replay,all short quotas/exact allowance,owned private Debug and type guards.
+Selected clippy/fmt/book/diff/history836 three exact Git spans pass. No storage reader/hash scheme or complete-result/geometry/full-suite claim. Numerical/native/Chrome captures retain original source scopes after these product changes;no fresh broad verdict inferred.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product notes reflect replay/output. promotion: declined (existing typed identity domains). Whole0673 retained836. Scalar replay slices focused-complete;full .4/.4.v await load/geometry. Next product .5f.3b public selector/operation bridge. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

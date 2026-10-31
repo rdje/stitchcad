@@ -190,7 +190,8 @@ pub use checked::{
 
 mod execution;
 pub use execution::{
-    FormulaExecutedDerivedSourceRead, FormulaExecutedScalarExpression, FormulaExecutedScalarRecipe,
+    FormulaCanonicalBindings, FormulaCanonicalBindingsError, FormulaExecutedDerivedSourceRead,
+    FormulaExecutedScalarExpression, FormulaExecutedScalarRecipe,
     FormulaExecutedScalarRecipeStatement, FormulaExecutedScalarSource,
     FormulaExecutedScalarSourceGraph, FormulaExecutedScalarSourceRecipe, FormulaExecutionAdmission,
     FormulaExecutionAdmissionError, FormulaExecutionAdmissionRefusal, FormulaExecutionLimits,

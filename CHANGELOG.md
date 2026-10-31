@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0673 — re-admit containing Designs before fresh replay
+## STITCHCAD-G1-0674 — canonicalize actual stored recipe bindings
 
-- Borrow actual Design plan/result,recheck original complete content/current scope,then replay
-  fresh native pair. Typed admission/runtime failures preserve earlier accepted results.
-- Design14/rustdoc1/targeted lint/fmt/book/history835/diff pass. Full result identity/storage/
-  geometry remain owned;G1 6/18/G0 unapproved unchanged. PNT continues with deterministic identity.
+- Typed owned ASCII preserves actual binding order/name/kind/value/approximation sources.
+  Complete byte quota precedes fallible output reservation;derived output grants no project authority.
+- Native4/paired9/rustdoc3/targeted lint/fmt/book/history836/diff pass. Full identity/load/geometry
+  remain owned;next .5f.3b product bridge. G1 6/18/G0 unapproved unchanged;LIVE Product notes updated.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

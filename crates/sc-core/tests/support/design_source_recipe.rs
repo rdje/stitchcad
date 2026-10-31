@@ -190,6 +190,15 @@ fn fresh_paired_replay_recomputes_unbound_sources_and_once_stored_bindings() {
             .evaluate_with_sources(sources, context())
             .expect("ordinary fresh pair");
         for result in [&first, &second, &fresh] {
+            let expected =
+                "(bindings (bind a length:1000 (sources)) (bind b length:1000 (sources)))";
+            assert_eq!(
+                result
+                    .canonical_bindings(expected.len())
+                    .expect("exact bound output allowance")
+                    .as_str(),
+                expected
+            );
             assert_eq!(stored_values(result), [1000, 1000]);
             assert_eq!(source_ordinals(result), [(id(9003), 1), (id(9004), 2)]);
             assert_eq!(

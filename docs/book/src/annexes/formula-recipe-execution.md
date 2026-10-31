@@ -135,6 +135,66 @@ These APIs add fresh logical input/current checks to native replay. They do not 
 replacement or define storage bytes,geometry integration,whole allocator/CPU bounds or production
 approval. Full accepted-result identity and corrupt-load integration remain owned work.
 
+## Canonical stored-binding output
+
+Accepted direct and paired scalar results expose `canonical_bindings(max_bytes)`,returning an owned
+`FormulaCanonicalBindings`. A containing Design result uses
+`result.execution().canonical_bindings(max_bytes)`. The output compares stored bindings across
+fresh runs;it is derived data and does not become authoritative project content.
+
+The exact ASCII contract is `(bindings (bind name kind:value (sources ...))...)`,with one space
+between parts,no padding or terminal newline. Bindings retain declaration order and actual names.
+The empty output is `(bindings)`,also for an accepted recipe containing only assertions. Every
+binding has its actual stored kind and signed decimal integer or lowercase `true`/`false`.
+
+| Kind | Stored payload |
+| --- | --- |
+| length | signed integer micrometres |
+| angle | signed integer microdegrees,including complete turns |
+| area | integer square micrometres |
+| ratio | signed integer parts per million |
+| count | nonnegative integer |
+| boolean | `true` or `false`,with no numeric coercion |
+
+Every `(sources ...)` lists the stored binding's distinct approximation-producing calls in the
+existing lexical machine-token order. An exact binding has `(sources)`. Contributions survive a
+false Boolean or numerical cancellation;untaken branches contribute nothing. These source bytes
+distinguish exact ratio1.0 from `sin(90 deg)`,even though both store1000000 parts per million.
+
+```text
+let a:length=1 um/3
+let b:length=a+1 um
+```
+
+After complete accepted execution,the exact bytes are:
+
+```text
+(bindings (bind a length:0 (sources)) (bind b length:1 (sources)))
+```
+
+The serializer reads the actual once-stored bindings. It does not serialize the fractional RHS,
+round again,normalize an angle direction or evaluate a provider. Replaying that recipe from
+statement one produces identical binding bytes. Both native direct and paired modes use the same
+serializer. For example,an unbound Derived width1000/3 multiplied by three stores1000 and emits
+`length:1000`,while its unbound source root remains outside these bytes.
+
+The caller selects the complete output-byte allowance explicitly. The serializer first measures
+all framing,names,values and source tokens without allocating an output. An insufficient allowance
+returns `FormulaCanonicalBindingsError::Bytes { allowed,required }` with the complete requirement.
+An exact allowance succeeds. One fallible output reservation follows admission;the writer refuses
+to exceed that measured extent. Byte population overflow and original allocation errors remain
+separate typed causes. No partial owned output escapes and the accepted result stays unchanged.
+This bounds logical output bytes,not allocator capacity or whole runtime memory.
+
+The private constructor accepts only complete accepted results. `as_str()` explicitly reveals
+customer-bearing bytes;Debug reports only their count. `into_string()` transfers independent owned
+bytes that can outlive the source,proof and execution. Its Rust type is distinct from canonical
+expression,statement and recipe identities. Raw bytes define neither a hash framing scheme nor a
+reader/project envelope. Assertions,RHS expressions,read traces,source caches,policies and containing
+Design approval are outside this identity. Recipes with the same stored bindings can therefore
+have equal binding output while differing in those other facts. Full accepted-result identity,
+geometry and corrupt-load integration remain separately owned.
+
 ## Whole checked-recipe admission
 
 | Public API | Role |

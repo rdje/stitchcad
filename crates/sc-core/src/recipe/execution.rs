@@ -280,6 +280,8 @@ mod recipe_replay;
 mod recipe_runtime;
 mod recipe_worker;
 pub use recipe_replay::FormulaScalarRecipeReplayError;
+mod canonical_bindings;
+pub use canonical_bindings::{FormulaCanonicalBindings, FormulaCanonicalBindingsError};
 
 mod source_recipe_failure;
 pub use source_recipe_failure::{
