@@ -785,25 +785,36 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   .5f.4.geometry;no fixed count,synthetic fragment or geometry certificate.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.recovery`
   Status: `done`
-  Goal:recover actual public ledger tag/allocation and affine parameter-map constraints before
-  manifest code. Check one analytic curved-offset counterexample;separate candidate intervals
-  from geometric correspondence. Own stable-tag/mapping bridge work;retire whole0690 records.
-  Focused native/source/book checks only;no full audit or geometry certificate. Retire closed D370/D371 ledger;own D372.
-  - [x] ISSUE:ledger slots/affine intervals do not establish persistent roles or general normal correspondence.
-  - [x] ROOT CAUSE (offset recovery):actual reference/allocation/point-step interfaces inspected;
-    counterexample.json under target/history-proof-0691-offset-contract records analytic/quadrature agreement,rc=0.
-  - [x] FIX:book separates candidate membership,stable tags and geometric parameter mapping;three native owners below.
-  - [x] ADDRESSED (offset recovery):actual affine native test1 passes,rc=0;regular cubic example
-    normal fraction≈0.475794 vs affine0.5. Floating illustration,not certified G2/error-budget proof.
-  - [x] NO REGRESSION (offset recovery):Rust unchanged;book/rendered/link/archive860 exact spans/
-    diff pass,rc=0. New large-search-index warning D372 owned below;no latency claim or suppressed warning.
-  - [x] LOCKSTEP:book/live/frontier sync;promotion: declined (local recovery,bridge pending).
-  Verification:focused native/source/book;Commit:STITCHCAD-G1-0691. Next .manifest.
+  Goal:0691 recovery;[whole scope/proofs](../history/stitchcad-devnotes-part861.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.manifest`
-  Status: `pending`
+  Status: `active`
   Goal:native explicit-tag candidate-fragment manifest,complete quota/bounds/order/unique-role
   admission and ambiguity/gap views. Source interval membership grants no mapped output Param,
   issued identity or G2 result. No fixed cardinality/default geometry.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.manifest.admission`
+  Status: `done`
+  Goal:owned explicit-tag/source-domain manifest;complete quota before actual bound-input
+  operation/source association,then unique tags/bounds/order. Authentic borrowed result/error
+  owners and logical refs only;no mapped Param/ledger mutation. Retire whole0691/closed D121
+  receipts;focused checks.
+  - [x] ISSUE:variable candidate roles need explicit tags/domains and complete admission;
+    ordinal slots or intervals alone grant neither persistent replay identity nor geometry.
+  - [x] ROOT CAUSE (candidate admission):0691 recovery and actual bound-offset/interval/tag APIs
+    inspected;real allowance factory reused with exact code comparison,rc=0.
+  - [x] FIX:owned raw manifest,explicit quota before checks/tag index,actual input association,
+    unique tags/bounds/order and private complete borrowed proof/error;logical unissued refs only.
+  - [x] ADDRESSED (candidate admission):local_environment.py -- cargo test --offline --locked
+    -p sc-core --test offset_candidate_contract →3 pass,rc=0;variable sparse tags,actual fields,
+    complete quota/empty/operation/source and original duplicate/bounds/order refusal indices.
+  - [x] NO REGRESSION (candidate admission):offset-input4/compiler guards3/actual book9/selected
+    clippy/fmt/book/rendered/diff/archive861 four exact Git spans pass,rc=0. Fixture code unchanged
+    apart from seven visibility qualifiers/one EOF blank. D372 size warning remains owned/P2.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (existing typed source contracts).
+  Verification:native7/rustdoc12;Commit:STITCHCAD-G1-0692. Next .manifest.query.
+- ID: `G1-SLICE.5f.1.c.offset.outputs.manifest.query`
+  Status: `pending`
+  Goal:admitted-only original-anchor candidate membership,gap/ambiguity and authentic fragment
+  views. No exact geometric output Param;mapping proof and stable-tag ledger bridge stay separate.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.tags`
   Status: `pending`
   Goal:native stable-tag/replay/retirement contract and published ledger bridge. Existing offset

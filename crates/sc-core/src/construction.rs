@@ -36,6 +36,11 @@ pub use offset::{
     BoundOffsetConstruction, OffsetBindingError, OffsetConstruction, OffsetConstructionError,
     OffsetSide,
 };
+mod offset_manifest;
+pub use offset_manifest::{
+    AdmittedOffsetCandidates, OffsetCandidateError, OffsetCandidateFragment, OffsetCandidateLimits,
+    OffsetCandidateManifest, OffsetCandidateRefusal,
+};
 mod point;
 pub use point::{
     CheckedPointConstruction, NormalizedPointConstruction, PointConstruction,

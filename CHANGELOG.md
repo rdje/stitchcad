@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0691 — separate offset candidates from geometric point correspondence
+## STITCHCAD-G1-0692 — admit explicit offset candidate roles and source domains
 
-- Published tag/affine mapping constraints and regular curved-offset counterexample are documented.
-- Candidate manifest,stable-tag bridge and explicit geometric mapping/budget contracts are owned.
-- Native1/book/rendered/link/diff/history860 four exact Git spans pass;Rust unchanged.
-- New large search-index warning D372 owned P2;build succeeds,reader performance unmeasured.
+- Complete quota precedes actual operation/source and unique-tag/bounds/order metadata checks.
+- Original fields/owners and sparse logical roles remain authentic;no curve or mapped Param is produced.
+- Native7/rustdoc12/selected lint/fmt/book/rendered/diff/history861 exact spans pass;D372 remains P2.
+- Candidate membership,stable-tag bridge,geometric mapping/evidence and execution remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — separate offset candidates from geometric point correspondence
+## _(2026-10-31 UTC)_ — admit explicit offset candidate roles and source domains
 
-0691 recovers published offset allocation and point-step contracts before output schema code. The ledger issues fresh contiguous tags and maps interval progress affinely. Drafting needs persistent logical roles plus explicit replay/retirement handling;the current allocator does not accept arbitrary stable tags.
-For the regular cubic r(t)=300000(t,t²)um,left offset30000um,the source halfway point has normal-offset arclength fraction≈0.475794 versus affine0.5;distance along the offset differs≈9936um. Analytic/derivative quadrature agree below0.001um observationally;floating illustration is not certified geometry proof.
-Actual affine native test1/book/rendered/link/diff/history860 four exact Git spans pass. Rust unchanged. Candidate manifest,stable-tag bridge and mapping/evidence/error-budget tasks are owned before family closure. Actual G2 nonlinear geometry/mark proof remains .5f.4;existing affine primitive semantics stay intact.
-New book warning:payload10015553B/JS10030347B;build rc0. D372 P2 owned after typed feature completion;no measured latency or warning suppression. LIVE states/G1 6/18/G0 unapproved unchanged;defect note updated. promotion: declined (local recovery,bridge pending). Whole0690/closed D370/D371 ledger retained860.
+0692 adds owned candidate manifests with actual operation/directed-source identity,explicit tags and positive intervals. Complete fragment quota precedes field checks/tag-index allocation;then empty/operation/source and each original tag/bounds/order refuse. No sorted tags,renumbering or admitted prefix escapes.
+Private admitted/error views borrow original manifest,bound input/allowance and policy. Logical unissued refs retain sparse tags in source order,including reversed traversal,gaps and shared endpoints. No coordinate,length,mapped Param,curve,ledger allocation or stable-role replay proof is produced.
+Candidate3/directly affected offset-input4/compiler guards3/actual book9/selected clippy/fmt/book/rendered/diff/history861 four exact Git spans pass. Common fixture code unchanged apart from seven visibility qualifiers/one terminal blank. Metadata allowance bounds its own tag index,not earlier Vec/whole execution.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (existing typed source contracts). Whole0691/closed D121 receipts retained861. D372 search-size warning remains owned P2. Next admitted candidate gap/ambiguity queries;stable-tag/mapping/G2 proof stay separate. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

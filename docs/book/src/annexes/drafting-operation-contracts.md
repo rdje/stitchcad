@@ -58,7 +58,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Draw line | Two prior PointRefs | Persistent edge and explicit endpoint provenance | Typed references/dependencies;geometry pending |
 | Draw arc | Center PointRef,radius Length,start/sweep Angle formulas | One edge role;no inferred point outputs | Center-based declaration/proofs;geometry pending |
 | Draw Bézier | Explicit quadratic/cubic named PointRefs | One edge role;original controls retained | Typed controls/dependencies;geometry pending |
-| Offset edge | Directed range,allowance identity and explicit side;canonical corner | G2 fragment lineage;no hidden width/default join | Input binding only;outputs/geometry pending |
+| Offset edge | Directed range,allowance identity and explicit side;canonical corner | G2 fragment lineage;no hidden width/default join | Input binding/candidate admission;mapping/geometry pending |
 | Slash/spread | Piece,directed cut,moving bank and explicit pivot/axis/amount | New/retired topology and attributable opening | Spatial inputs/amount proofs;outputs/geometry pending |
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
 | Add notch | Piece id,EdgeAnchor,NotchProfileBindings | Fresh semantic notch id and retained source anchor | AddNotch request exists;geometry pending |

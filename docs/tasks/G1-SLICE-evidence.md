@@ -910,16 +910,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 ### D121 recording receipts — G1-SLICE.5e.3b
 
--425 independently authored cases/26 actual compiled body reds/copied-book named refusal pass0;
-  full structural reference and language16 terminal0. No source mutation during the new fault controls.
-- Publication9 terminal0; source/rendered links and warning-free build verified. Tree census10lanes/
-  13trees/10siblings/0unowned-orphan-deadlinks terminal0. Final ledger/defect/gate receipts follow.
-- Final publication54chapters/25APIrows/1126source/1745rendered links and ledger9/pointer13
-  terminal0. Archive materialize212 records; independent recursive report census11open/116sealed.
-  Four complete relocated task blocks match Git predecessor byte-exact; three original sealed
-  payloads match predecessor text with the canonical single terminal newline. Rust bytes unchanged.
-- Initial gate refuses TOOLBOX34123B; remove obsolete scaffold placeholder, final33867B.
-  Final staged make gate prints all doctrines green, terminal0; hook repeats this record.
+[Whole closed receipts](../history/stitchcad-devnotes-part861.md).
 
 ### Current-grammar closure receipts — .5b.1c.2,2026-10-03 (UTC)
 

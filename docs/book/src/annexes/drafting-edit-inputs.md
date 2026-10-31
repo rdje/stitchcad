@@ -436,8 +436,51 @@ certified geometry implementation or numerical tolerance proof. They demonstrate
 normal correspondence is not established by interval endpoints. The actual native affine-mapping
 test passes;it tests its declared primitive,not this geometric correspondence.
 
-The next native manifest stage therefore admits explicit logical candidate roles and source
+The native manifest admission stage below admits explicit logical candidate roles and source
 domains only. It must preserve ambiguous/gap outcomes and cannot return a geometrically certified
 mapped Param. Separate native tasks own the stable-tag bridge and explicit mapping-kind/evidence/
 error-budget contract before family closure. Actual G2 curves,nonlinear mapping accuracy and mark
 placement remain `.5f.4.geometry` proof. This recovery changes no ledger algorithm or gate status.
+
+## Native offset candidate-manifest admission
+
+`construction::OffsetCandidateManifest` owns the required operation id,original `DirectedRange`
+and all declared `OffsetCandidateFragment`s. Each retains an explicit `LocalTag` and positive
+`OffsetInterval` in the original source frame. The raw constructor retains input without accepting
+it. These are candidate-role declarations,not G2-computed fragments or an issued identity list.
+
+`admit` requires the actual `BoundOffsetConstruction` and explicit `OffsetCandidateLimits`.
+It checks complete N against the selected quota before inspecting fields or allocating its
+temporary tag index. Then it refuses empty input,wrong operation or any source edge/bounds/
+traversal mismatch. Fragment checks follow original order:duplicate tag,selected-source bounds,
+then overlap/descending interval order. Duplicate/order indices identify actual original Vec
+positions. There is no sorting,renumbering,equal-content deduplication or accepted prefix.
+
+The count bounds this metadata admission and its temporary tag index. Earlier owned Vec
+allocation,native ledger capacity,current-root/replay checks and geometry/execution workspaces
+need separate admission. A zero-output geometric collapse cannot be replaced with one invented
+edge to satisfy this nonempty manifest. Its execution outcome still requires an explicit contract.
+
+```rust
+use sc_core::construction::*;
+fn declare_candidates(input:&OffsetConstruction,fragments:Vec<OffsetCandidateFragment>)
+    ->OffsetCandidateManifest {
+    OffsetCandidateManifest::new(input.operation(),*input.source(),fragments)
+}
+fn admit_candidates<'a>(manifest:&'a OffsetCandidateManifest,bound:&'a BoundOffsetConstruction<'a>,
+    maximum:usize)->Result<AdmittedOffsetCandidates<'a>,OffsetCandidateError<'a>> {
+    manifest.admit(bound,OffsetCandidateLimits::new(maximum))
+}
+```
+
+Success and errors retain actual manifest,bound input/allowance and selected policy. The private
+admitted view cannot outlive those owners. `fragments` exposes the original fields;`outputs`
+pairs each with its logical `EdgeRef(operation,explicit_tag)` in original source order. For
+example,tags9,2 and4294967295 stay in that order rather than becoming0,1,2. Traversal can be
+Reversed while domains remain ascending in their original frame. Gaps and shared endpoints are
+retained;their admitted-only membership query is a separate pending stage.
+
+Admission checks tag uniqueness within this manifest,not stable-role correspondence across
+replay. It allocates no ledger operation,rewrites no reference and computes no curve,coordinate,
+length or output Param. Actual allowance width/corner/inclusion stay on the bound descriptor.
+The stable-tag bridge,mapping evidence and actual G2 results remain separate owned obligations.
