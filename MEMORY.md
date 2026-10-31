@@ -1,16 +1,17 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0700;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.offset.outputs.outcome — native explicit collapse/failure outcome contract.
-  Activate before code;do not fabricate a candidate edge for an empty geometric result.
-- Native normal-map requirement binds authentic candidate matches to explicit evidence-source requests,
-  sourced actual T2 tolerance and four nonnegative propagated output-point error ceilings. Exact sum
-  must fit;affine primitive refuses. No mapped Param,accepted evidence or achieved geometry certificate.
-  Native9+existing affine1/compiler3/actual output book8/lint/fmt/book pass;whole0699 retained869.
-- Source/output arclength and propagation must be proved by actual engines;D126 bbox-only bound and
-  normal-offset counterexample0691 remain relevant. Decision edge-parameter addendum promoted0700.
-- Native .tags/.continuity metadata components completed with focused checks;presence subsets leave
-  all canonical roles unchanged. Actual issuance/history/current Design/G2/bus remain separately owned.
+- Latest unit:STITCHCAD-G1-0701;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs — native explicit bridge/trim/fullness and output-role contract.
+  Activate/split bounded implementation scope before code;read recovered slash input/source contracts.
+- Native offset-output checkpoint0691–0701 completed with focused component checks,not a combined gate.
+  Empty candidate lists already refuse with typed Empty,retaining raw/bound/policy;no duplicate wrapper.
+  Catalogue emptiness and role absence are separate metadata states,never geometric collapse evidence.
+  Existing refusal1/actual output book9/book/rendered/history870 pass;native source bytes unchanged.
+- Native normal-map requirement binds authentic candidates to evidence-source requests,sourced T2 and
+  four propagated output-point error ceilings. No mapped Param/evidence or achieved geometry proof.
+  D126 actual-length/propagation and0691 normal-offset counterexample remain G2/selector obligations.
+- Actual current Design/issuance/history,geometric roles/maps/marks and atomic publication remain
+  .5f.2/.5f.3/.5f.4.geometry/G2/G3/bus owners. G1 whole declaration inventory still active.
 - OffsetRoleCatalog admission preserves raw op/key/tag/active fields with explicit complete limits;
   empty/inactive catalogues valid. Keys are local identity metadata,not geometric matching rules.
 - Native candidate/query/declaration binding and source-preserving canonical tagged declarations pass

@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0700 — require explicit normal correspondence and a sourced error partition
+## STITCHCAD-G1-0701 — close the native offset-output checkpoint with explicit empty refusal
 
-- Authentic candidate matches retain required normal-map evidence sources and actual sourced T2 policy.
-- Four propagated output-point ceilings sum exactly;affine primitive never supplies normal-map evidence.
-- Native10/rustdoc11/selected lint/fmt/book/rendered/diff/history869 exact spans pass;D372 open.
-- Requirement admission returns no mapped Param;actual geometry/arclength/propagation remain owned.
+- Document existing Empty refusal,actual diagnostic owners and checked quota/empty/owner precedence.
+- Distinguish candidate failure,canonical metadata absence and actual G2 collapse;no fabricated output.
+- Existing native1/actual book9/book/final render/diff/history870 exact spans pass;runtime unchanged.
+- Native offset-output checkpoint complete with focused checks;actual geometry/maps/bus remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -345,7 +345,7 @@ For example,a catalogue active list `[2,5,9]` can bind manifests containing `[9]
 All three bindings leave roles2,5 and9 active and retain every issued definition,including inactive
 ones. They do not compact tags or derive identity from fragment position. The existing nonempty
 candidate admission still refuses an empty candidate list;an actual complete geometric collapse
-requires its own explicit execution outcome rather than a fabricated edge.
+requires an actual failure diagnosis rather than a fabricated edge,as described below.
 
 No curve classifier,actual instance,issued ledger declaration,current Design/liveness,geometric
 continuity or source-to-output point mapping is certified here. Historical declaration association
@@ -406,5 +406,56 @@ allocate nothing;whole query-batch and geometry-engine resources remain separate
 At a shared source-domain endpoint,both candidates can carry separate requirements. The original
 query remains `Ambiguous`;creating an obligation chooses neither side. A gap supplies no match and
 therefore no fabricated requirement or mapped point. Actual evidence acceptance,nonlinear mapping,
-mark placement,currentness and publication stay `.5f.3`/`.5f.4.geometry`/G2/G3/bus work. The native
-empty/collapse outcome contract remains required before offset-family closure.
+mark placement,currentness and publication stay `.5f.3`/`.5f.4.geometry`/G2/G3/bus work. The explicit
+empty/failure boundary is described below.
+
+## Empty candidates and explicit failure
+
+The native candidate admission already has an explicit empty outcome:
+`Err(OffsetCandidateError)` with `OffsetCandidateRefusal::Empty`. No empty
+`AdmittedOffsetCandidates` can be constructed through its public API. An empty manifest therefore
+cannot reach candidate queries,declaration association,active-role binding or mapping requirements
+as a successful result. There is no fallback edge,default tag or accepted fragment prefix.
+
+```rust
+use sc_core::construction::*;
+fn empty_candidates_refuse<'a>(bound:&'a BoundOffsetConstruction<'a>) {
+    let input=bound.construction();
+    let raw=OffsetCandidateManifest::new(input.operation(),*input.source(),vec![]);
+    let limits=OffsetCandidateLimits::new(0);
+    let error=raw.admit(bound,limits).expect_err("empty is an explicit declaration refusal");
+    assert_eq!(error.refusal(),OffsetCandidateRefusal::Empty);
+    assert!(std::ptr::eq(error.manifest(),&raw));
+    assert!(std::ptr::eq(error.bound_input(),bound));
+    assert_eq!(error.limits(),limits);
+}
+```
+
+Admission first checks the complete candidate quota,then emptiness,then operation/source association.
+Thus an empty list with zero allowance is `Empty`,and even an empty wrong-owner/source proposal
+reports `Empty` before those content checks. Error references retain the actual original inputs;
+retaining a bound descriptor in an error is not proof that the rejected manifest matches it.
+A nonempty list above quota reports `Fragments` before any empty/owner/domain inspection.
+
+These states have different meanings:
+
+| State | Native contract |
+| --- | --- |
+| Empty candidate declaration | Explicit `Empty` refusal;no admitted output |
+| Some active roles absent from a nonempty manifest | Readonly subset binding;canonical roles remain active |
+| Empty or fully inactive role catalogue | Valid admitted metadata;no implied executable offset |
+| A real geometric collapse or other offset failure | Actual G2 diagnosis required;never infer a cause from `Empty` |
+
+The [offset engine contract](../spec/units-and-tolerances.md#6-the-offset-error-budget) requires
+explicit failure when the declared bound cannot be met. The actual engine must report its source,
+cause,achieved deviation and requested bound under that contract;native candidate refusal measures
+none of them. It must not invent a curve to turn complete collapse into a nonempty success,discard
+failed fragments silently,or infer canonical retirement from one evaluation's absence. Actual
+loss/repair and publication handling retain their separate G2/selector/bus owners.
+
+The native offset-output checkpoint now covers nonempty candidate admission,source membership and
+ambiguity/gaps,explicit canonical declarations,historical declaration binding,role catalogue/
+transition/presence contracts,normal-map requirements and explicit empty refusal. These are focused
+metadata/declaration checks. Actual curve production,role matching,nonlinear point mapping,error
+propagation,current Design/history and atomic publication remain `.5f.2`/`.5f.3`/`.5f.4.geometry`/G2/G3/bus
+work. This checkpoint changes no G1/G2 gate status and grants no geometry or integration certificate.

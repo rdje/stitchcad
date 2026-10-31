@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — require explicit normal correspondence and a sourced error partition
+## _(2026-10-31 UTC)_ — close the native offset-output checkpoint with explicit empty refusal
 
-0700 binds authentic candidate matches to raw mapping requirements. Explicit evidence-source ids distinguish normal geometry/arclength/correspondence obligations from the ledger affine primitive. The actual supplied T2 tolerance/source and original allocation fields remain borrowed;ids grant no provider truth.
-Four nonnegative ceilings share one propagated output-point positional metric:curve,source parameter,correspondence,output parameter. Exact i128 sum must fit actual inclusive T2;negative class/domain/first-component,budget and wrong-law causes retain whole request/match. Zero never implies achieved exactness.
-Mapping3/candidate6/existing affine1/compiler guards3/actual output book8/selected clippy/fmt/book/rendered/diff/history869 three exact Git spans pass. Ten refusal rows include4MAX sum beyond Length domain;ambiguity/gaps and actual fields persist. No new allocation,mapped Param or evidence acceptance introduced.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (decision_edge-parameter-bounded-exact-rational.md gains answers). Whole0699 retained869. Actual arclength/propagation,G2 mapping/marks/currentness/bus remain owned. Native collapse/failure outcome follows;D372 P2 persists.
+0701 recovers the existing Empty admission guard and whole raw/bound/policy error. Quota precedes Empty,then owner/source;even an empty wrong-owner/source proposal reports Empty. Retaining a bound descriptor in an error grants no association proof. No new outcome wrapper or runtime change needed.
+Examples distinguish empty refusal,absence within a nonempty manifest,valid empty/inactive catalogue and actual G2 failure. Empty never becomes an admitted edge,default role,geometric-collapse diagnosis or canonical retirement. Actual engine diagnostics retain units6's source/deviation/bound obligations.
+Focused empty/precedence native1 and actual output book9 pass;book/final render/diff/history870 three exact Git spans pass. Native sources/Cargo files unchanged. First rendered read overlapped rebuild and found no page;sequential post-build check passed. Known D372 warning remains separately owned.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (0696/0700 policies already promoted). Whole0700 retained870. Native offset-output checkpoint complete with focused component checks;actual G2/current Design/history/bus/full integration remain owned. Next slash outputs.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

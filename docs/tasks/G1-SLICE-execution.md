@@ -778,11 +778,10 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Status: `done`
   Goal:0680 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part843md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs`
-  Status: `active`
-  Goal:typed offset output-role/manifest admission contract using the public identity-ledger
-  interface;stable tags,variable cardinality and explicit ambiguity/loss. G1 schema acceptance
-  needs this native contract,not an actual G2 engine. Real G2-2D.2 fragment/results proof belongs
-  .5f.4.geometry;no fixed count,synthetic fragment or geometry certificate.
+  Status: `done`
+  Goal:0691–0701 native candidate/declaration/role/mapping-requirement and explicit empty-refusal
+  contracts completed with focused component checks. No actual geometry/result or unified gate claim.
+  Real G2 fragments/maps and role matching remain .5f.3/.5f.4.geometry;current Design/history/bus stay owned.
 - ID: `G1-SLICE.5f.1.c.offset.outputs.recovery`
   Status: `done`
   Goal:0691 recovery;[whole scope/proofs](../history/stitchcad-devnotes-part861.md).
@@ -827,34 +826,32 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0699 presence;[whole scope/proofs](../history/stitchcad-devnotes-part869.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.mapping`
   Status: `done`
-  Goal:P1 native explicit correspondence-kind/evidence/error-budget contract before offset family
-  closure;intervals alone cannot prove normal-offset arclength positions. Preserve existing affine
-  primitive semantics;real nonlinear G2 mapping/mark proof stays .5f.4.geometry. No guessed position.
-  Scope:authentic candidate-match to explicit normal-map requirement,never a mapped Param;
-  distinguish declared affine primitive from normal correspondence. Retain required geometry/
-  arclength/correspondence evidence-source identities and actual sourced T2 tolerance. Four explicit
-  nonnegative output-positional error allocations must sum within that tolerance;zero is explicit.
-  This validates requirement arithmetic only,not evidence truth,propagation or achieved accuracy.
-  No geometry provider/response certificate introduced;actual .5f.3/.4.geometry remains owner.
-  Retire whole0699;focused native/compiler/book checks. Native empty/collapse outcome follows.
-  - [x] ISSUE:interval membership and affine primitive cannot certify a normal-offset point map.
-  - [x] ROOT CAUSE (map requirements):0691,D126,actual Param/T2/match contracts inspected;
-    normal/affine distinction,original fields and ten refusal rows pass,rc=0.
-  - [x] FIX:explicit normal evidence requests,actual sourced T2 and four propagated output-point
-    ceilings;exact i128 sum,no mapped Param/evidence acceptance,ambiguity/gaps preserved.
-  - [x] ADDRESSED (map requirements):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test offset_mapping_requirement_contract →3 pass,rc=0;class/domain/partition/law,
-    inclusive/zero/4MAX budgets,original owners and both shared-endpoint requirements.
-  - [x] NO REGRESSION (map requirements):candidate6/existing affine1/compiler3/actual book8/
-    selected clippy/fmt/book/rendered/diff/history869 three exact Git spans pass,rc=0. No geometry/
-    provider/arclength/propagation/mark/currentness certificate;actual .5f.3/.4.geometry remains owned.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: promoted (edge-parameter decision gains answers).
-  Verification:native10/rustdoc11;Commit:STITCHCAD-G1-0700. Next .offset.outputs.outcome.
+  Goal:0700 map requirements;[whole scope/proofs](../history/stitchcad-devnotes-part870.md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs.outcome`
-  Status: `pending`
+  Status: `done`
   Goal:native explicit nonempty-candidate versus complete-collapse/failure outcome contract before
   family closure;no fabricated fallback edge or silent loss. Actual geometry/topology evidence
   and current canonical/instance publication remain G2/.5f.3/.5f.4.geometry/.6.
+  Scope:recover and document existing typed Empty candidate refusal,actual raw/bound/policy
+  diagnostics and precedence;do not add a duplicate outcome wrapper or infer a geometric cause.
+  Empty role catalogue is a different valid metadata state. Native nonempty declaration admission
+  cannot turn collapse into success or retire roles. Actual geometric failure diagnostics require
+  achieved/requested bound and source evidence under units6/G2;no geometry result accepted here.
+  Update inventory/current API map and close only native offset-output checkpoint. Retire whole0700;
+  focused existing empty-refusal test,compiled example and book build. Runtime bytes unchanged.
+  - [x] ISSUE:empty declaration refusal,canonical absence and actual collapse must stay distinct.
+  - [x] ROOT CAUSE (empty outcome):actual Empty guard precedes owner/source after quota;
+    existing focused test retains whole raw/bound/policy and proves that precedence,rc=0.
+  - [x] FIX:document existing explicit Empty refusal and stage distinctions;update current
+    native inventory and closure scope without a duplicate wrapper or fabricated geometric cause.
+  - [x] ADDRESSED (empty outcome):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test offset_candidate_contract complete_quota_then_empty_and_actual_operation_source_association_precede_fragment_checks
+    →1 pass,rc=0;empty wrong-owner/source retains originals and reports Empty,no output accepted.
+  - [x] NO REGRESSION (empty outcome):actual output book9/book/final rendered page/diff and
+    history870 three exact Git spans pass,rc=0;git diff --exit-code -- crates Cargo.toml Cargo.lock
+    →0. First render read overlapped rebuild;sequential post-build check passed. Actual G2 proof stays owned.
+  - [x] LOCKSTEP:book/live/frontier sync;promotion: declined (0696/0700 policies already promoted).
+  Verification:native1/actual book9;Commit:STITCHCAD-G1-0701. Next .c.slash.outputs.
 - ID: `G1-SLICE.5f.1.c.grainline.inputs`
   Status: `done`
   Goal:0681 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part844md).
