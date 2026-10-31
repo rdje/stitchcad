@@ -1191,10 +1191,10 @@ Focused range20/notch4 and oracle14 pass0;five genuinely wide final fractions re
 
 Done0528;owner G1-SLICE.6.5.3.2.oracle-watch. Baseline9-producer fix retained687. Current gate10 producers/12 fixtures/9 finite guards pass;29 suites discovered. New stop oracle registered0529;missing/unknown/status/mismatch/wiring controls retained. Hosted verdict follows push400. Stop partition .3.3 continues.
 
-## D307 — retained test block precedes later production items
+D307–D368:[whole prior ledger](../history/stitchcad-devnotes-part848.md). D334/D223/D156 remain owned.
 
-Done0536;owner G1-SLICE.6.5.3.2.prepush-400.layout. Full make check at51e421cf rc2 exposed0471 production append after0470 tests. Existing test block moved to EOF;production/test content exact. Actual library-test Clippy/native boundary1/fmt pass0. D308 fixture lint and parent prepush-400 full gates/push/hosted verdict remain pending.
+## D369 — G1 schema completion incorrectly waits for G2 geometry
 
-## D308–D368 — public crate availability and module-link drift
-
-D308–D366:[whole prior ledger](../history/stitchcad-devnotes-part838.md). D367/D368 P2 fixed0676;owner .5f.1.b:crate availability matched actual scalar/replay/metadata APIs;ontology reference link qualified. Source/render/native8/doc6/lint checks pass. D334/D223 and D156 remain scheduled/owned.
+P1 owned,next G1-SLICE.5f.1.c.stage-order. Repro:offset.outputs requires actual G2-2D.2 fragments before .5f.1 closes;G2 entry requires G1 closed.
+Root:0680 conflated output contract with geometry execution. Impact:cycle can strand product delivery.
+Fix:native contract acceptance separate from actual G2/G3 execution/integration;focused dependency/book checks before resuming schemas.

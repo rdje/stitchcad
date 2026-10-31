@@ -3,12 +3,13 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0683 — retain explicit slash/spread spatial source declarations
+## STITCHCAD-G1-0684 — retain explicit mirrored Piece-copy inputs
 
-- Explicit Piece/cut/moving bank and required pivot-or-axis join the actual authored amount component.
-- Authentic field dependencies retain source order/repetitions and first local self-supply causes.
-- Spatial4/opening5/rustdoc3/selected lint/fmt/book pass;exact retired scopes retained845/846.
-- Region/frame/currentness,bridge/fullness/output topology and full .5f.4 remain owned.
+- Explicit copy source/two-point-or-range axis preserves original fields and authentic dependencies.
+- Mirror4/line4/rustdoc3/selected lint/fmt/book pass;exact retired scopes retained847/848.
+- Window26 retains59 raw files;native tar and full1300-record before/candidate/installed identities match.
+- Copy metadata/identity policy,current geometry and full .5f.4 remain pending.
+- D369 output-contract/G2 dependency cycle reproduced,logged P1 and owned for immediate repair.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -265,3 +265,15 @@ Whole0628/0629 receipts788/789 follow the installed comparison,leaving active6/6
 Live links route to window25 headings;sealed records stay exact. Protect the transaction/proof/
 review workspaces;never rerun install/recovery after later edits. This verifies retained bytes and
 the existing process-interruption protocol;it adds no hardware power-loss or platform guarantee.
+
+The0684 append was required when two uncommitted drafts took active working files from63 to65.
+Both drafts were copied/hash-verified in protected target/history-capture-0684-drafts before removal
+from the archive;they were restored only after installation and complete cohort comparison.
+Window26 captures all59 committed raw records. Before/candidate/installed native inventories match
+all1300 original logical names,sizes,line counts,SHA-256 hashes and5239453 bytes. Independent tar
+inspection matches59 records/407583 bytes;all44 unchanged physical backings/catalogs remain exact.
+Live navigation routes69 links in three task files to window26 headings. Whole current retirements
+stay raw. Transaction trees under target/history-capture-0684 and independent manifests under
+target/history-proof-0684 remain protected;never rerun installation/recovery after later edits.
+Packing changes no capacity,source proof or platform guarantee. Existing generation1 is unchanged;
+active working files fall to5 before new raw drafts are restored.

@@ -18,6 +18,10 @@ mod grainline;
 pub use grainline::{BoundGrainlinePlacement, GrainlinePlacement, GrainlinePlacementError};
 mod line;
 pub use line::{LineConstruction, LineConstructionError, LineEndpoint, LinePointDependency};
+mod mirror;
+pub use mirror::{
+    MirrorAxis, MirrorAxisDependency, MirrorAxisSource, MirrorPieceCopy, MirrorPieceCopyError,
+};
 mod offset;
 pub use offset::{
     BoundOffsetConstruction, OffsetBindingError, OffsetConstruction, OffsetConstructionError,

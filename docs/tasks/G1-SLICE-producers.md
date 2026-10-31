@@ -487,7 +487,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a40`
   Status: `done`
-  Goal:0656 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part816.md).
+  Goal:0656 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part816md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41`
   Status: `done`
@@ -498,20 +498,20 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Apply ordered public-entry/effect/refusal/omission and exact original-data acceptance above.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.startup`
   Status: `done`
-  Goal:0667 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part828.md).
+  Goal:0667 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part828md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects`
   Status: `done`
   Goal:complete remaining numerical fixture-own file/lifecycle/public-entry effect review after
   startup;source/destination/alias/mutation/restoration/child omissions and focused consumers.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects.ownership`
   Status: `done`
-  Goal:0668 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part831.md).
+  Goal:0668 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part831md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.effects.provenance`
   Status: `done`
-  Goal:0669 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part832.md).
+  Goal:0669 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part832md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.signoff`
   Status: `done`
-  Goal:0670 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part833.md).
+  Goal:0670 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part833md).
 
 ## Ordered native file-destination repairs
 
@@ -923,48 +923,48 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16`
   Status: `done`
-  Goal:0666 scoped closure;[whole parent scope](../history/stitchcad-devnotes-part827.md).
+  Goal:0666 scoped closure;[whole parent scope](../history/window26.md#stitchcad-devnotes-part827md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1`
   Status: `done`
-  Goal:0659 four-entry closure;[whole parent scope](../history/stitchcad-devnotes-part827.md).
+  Goal:0659 four-entry closure;[whole parent scope](../history/window26.md#stitchcad-devnotes-part827md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.inventory`
   Status: `done`
-  Goal:0657 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part817.md).
+  Goal:0657 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part817md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.effects`
   Status: `done`
-  Goal:0658 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part818.md).
+  Goal:0658 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part818md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.consumer`
   Status: `done`
-  Goal:0659 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part819.md).
+  Goal:0659 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part819md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
   Status: `done`
-  Goal:0666 scoped closure;[whole scope](../history/stitchcad-devnotes-part830.md).
+  Goal:0666 scoped closure;[whole scope](../history/window26.md#stitchcad-devnotes-part830md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.inventory`
   Status: `done`
-  Goal:0660 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part820.md).
+  Goal:0660 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part820md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.ownership`
   Status: `done`
-  Goal:0661 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part821.md).
+  Goal:0661 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part821md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects`
   Status: `done`
-  Goal:0664 scoped closure;[whole scope](../history/stitchcad-devnotes-part830.md).
+  Goal:0664 scoped closure;[whole scope](../history/window26.md#stitchcad-devnotes-part830md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.dispatch`
   Status: `done`
-  Goal:0662 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part822.md).
+  Goal:0662 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part822md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.tangent`
   Status: `done`
-  Goal:0663 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part823.md).
+  Goal:0663 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part823md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.platform`
   Status: `done`
-  Goal:0664 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part824.md).
+  Goal:0664 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part824md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer`
   Status: `done`
   Goal:fresh actual tangent/resource fault consumers and observed native/Chrome execution;
   independently preserve sources/full restored artifacts and close only declared n16 scope.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer.native`
   Status: `done`
-  Goal:0665 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part825.md).
+  Goal:0665 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part825md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer.platform`
   Status: `done`
-  Goal:0666 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part826.md).
+  Goal:0666 completed scope; [whole scope/proofs](../history/window26.md#stitchcad-devnotes-part826md).

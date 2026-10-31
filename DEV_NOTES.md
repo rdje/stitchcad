@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain explicit slash/spread spatial source declarations
+## _(2026-10-31 UTC)_ — retain explicit mirrored Piece-copy inputs
 
-0683 joins actual amount components to Piece,directed cut and explicit moving bank. Rotation requires PointRef pivot;separation requires directed movement axis. Authentic source views borrow exact original fields;first local self-supply preserves original roles/references. No implicit normal or pivot.
-Spatial4/opening5/rustdoc3/selected clippy/fmt/book/rendered boundaries/diff/history845+846 four exact Git spans pass. Both mode/amount owners,field pointers,ordered/repeated sources,side/traversal intent and all local refusal roles pass. Whole0682 and the closed lineage-parent scope remain byte-exact.
-These are input declarations,not a region/transform certificate. G2 must validate current Piece/frame/coverage,straight cut,unique moving bank,pivot or axis and domains. Bridge/trim/fullness/output topology is explicitly scheduled;there is no default connector or source reassignment.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing typed sources/amount staging). Next remaining .1.c mirror inputs;global graph/geometry/full .5f.4 stay owned. PNT continues.
+0684 adds named Piece-copy intent,two-point/range axes,authentic field dependencies and first local self-supply. Mirror4/line4/rustdoc3/lint/fmt/book pass. No output ids,copy policy,current axis or geometry is certified;the fixture signature typo was corrected before checks.
+Window26 packs59 committed raw records after active65/64 blocked commit. Native tar59/407583B and before/candidate/installed1300 logical records/5239453B match;44 original physical files stay exact. Two hash-verified drafts were restored after installation;69 live links route in3 task files.
+Protected target/history-capture-0684 and target/history-proof-0684 retain transaction/independent evidence. Never rerun install after later edits. Whole0683/old ledger/closed source scopes retained847–850. Full geometry/metadata/output policy stays pending.
+LIVE states/G1 6/18/G0 unapproved unchanged. promotion: declined (existing typed source contracts). D369 P1 stage-order cycle is owned and immediate next .1.c.stage-order;remaining schemas/full .5f.4 stay owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

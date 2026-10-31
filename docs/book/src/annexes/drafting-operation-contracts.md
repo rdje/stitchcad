@@ -2,7 +2,7 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Primitive/slash-spread inputs,amount proofs and offset/grainline binding are available
+> geometry. Primitive/slash-spread/mirror-copy inputs,amount proofs and semantic binding are available
 > below;remaining schemas,ordered dependencies and geometry execution are pending. No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -52,7 +52,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Place grainline | Named canonical grainline with directed arrow/alignment/print intent | Existing semantic target;G2 derived mark | Target/source binding only;geometry pending |
 | Walk seam | Actual seam correspondence and explicit balance-mark intent | Differential report plus deliberate mark edits | Query exists;editing operation pending |
 | True seam | Actual correspondence,declared ease and explicit adjustment policy | Attributed edge adjustment and remaining differential | Pending .1.c |
-| Mirror | Current source geometry and explicit reflection axis/mode | Declared output identities and source mapping | Cut orientation exists;operation pending |
+| Mirror | Named Piece,explicit point/range axis and copy intent | Fresh copy identities and source mapping | Copy inputs only;outputs/geometry pending |
 | Join pieces | Current pieces/seam correspondence and explicit join intent | Output Piece/topology with semantic lineage | SewingGraph exists;operation pending |
 
 The last column is an availability boundary. Stable reference types,structural inventories or a
@@ -525,3 +525,39 @@ This stage issues no new Piece or geometric output tags and mutates nothing. Exp
 policy,fullness/intake effects and actual new/retired topology remain `.1.c.slash.outputs` work;
 there is no default connector across an opened cut. G2/G3 must supply those results and their
 source mappings before command publication. Full operation integration remains `.5f.4` work.
+
+## Native reflected Piece-copy inputs
+
+`construction::MirrorPieceCopy` declares a reflected copy of the named existing Piece. The type
+makes copy intent explicit. It retains an operation id,source Piece id and the authored `MirrorAxis`:
+`ThroughPoints { start,end }` uses two actual PointRefs;`AlongRange` uses an actual DirectedRange.
+No axis mode is inferred from geometry or formula values.
+
+```rust
+use sc_core::{construction::*,ontology::*};
+let point=|id|PointRef::new(EntityId::from_bits(id),LocalTag::FIRST);
+let input=MirrorPieceCopy::new(EntityId::from_bits(10),EntityId::from_bits(50),
+    MirrorAxis::ThroughPoints { start:point(99),end:point(80) })?;
+assert_eq!(input.source_piece(),EntityId::from_bits(50));
+assert_eq!(input.dependency_count(),2);
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+Local self-supply refuses the source Piece first,then start/end or range in original field order.
+Private dependency views borrow the actual input and underlying axis fields. Repeated point uses
+remain separate occurrences;directed range bounds/traversal and point source order stay authored.
+The iterator covers axis occurrences only;the source Piece is a separate program dependency.
+Reversing a valid geometric axis may preserve its eventual reflection,but this input stage does
+not rewrite authored sources to establish that equality.
+
+The constructor certifies neither a current Piece nor a usable axis. G2/program checks must prove
+source existence/common frame and axis nondegeneracy/straightness. Repeated point references can
+be retained as authored input without proving a valid reflection axis. A curved range cannot be
+silently replaced with its chord or tangent.
+
+No new Piece identity,edge/point tags or geometry is produced. Copy metadata,labels,materials,
+handedness,cut quantities,pair reciprocity and sewing/reference mappings require explicit output
+policy under `.1.c.mirror.outputs`,followed by the bus's identity allocation and atomic publication.
+The existing `Mirroring` cut-plan field supplies no drafting reflection result. Current coverage,
+reflection/error budgets and the stable output manifest remain actual G2/G3/execution obligations;
+full construction verification stays deferred under `.5f.4`.

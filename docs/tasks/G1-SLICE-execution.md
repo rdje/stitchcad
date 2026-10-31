@@ -89,7 +89,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal:0577;[proof](../history/window25.md#stitchcad-devnotes-part736md).
 - ID: `G1-SLICE.5e.2.4.3`
   Status: `done`
-  Goal:completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part838.md).
+  Goal:completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part838md).
 
 - ID: `G1-SLICE.5e.2.4.3.1`
   Status: `done`
@@ -329,16 +329,16 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
 
 - ID: `G1-SLICE.5e.4.1`
   Status: `done`
-  Goal:0671 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part834.md).
+  Goal:0671 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part834md).
 - ID: `G1-SLICE.5e.4.2`
   Status: `done`
-  Goal:0672 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part835.md).
+  Goal:0672 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part835md).
 - ID: `G1-SLICE.5e.4.3`
   Status: `done`
-  Goal:0673 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part836.md).
+  Goal:0673 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part836md).
 - ID: `G1-SLICE.5e.4.4`
   Status: `done`
-  Goal:0674 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part837.md).
+  Goal:0674 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part837md).
 - ID: `G1-SLICE.5e.4.v`
   Status: `pending`
   Goal:after full replay feature/storage integration,run combined cache/byte/corrupt-load/platform
@@ -353,10 +353,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
 
 ## Window15 retrieval routing —0305
 
-- [x] ROOT CAUSE0305: stable ba41e9a capture has50 raw records at64 working files; capture_window15.py rc=0.
-- [x] ADDRESSED0305: source proof50 byte-identical/0 missing-extra and all50 public reads exact, rc=0; links route to the new catalog.
-- [x] NO REGRESSION0305: prior14 backing byte-equal; materialized851 logical records/public bodies exact, rc=0; semantic task/evidence unchanged.
-
+[Whole0305 retrieval proof boxes](../history/stitchcad-devnotes-part850.md).
 
 ## Paired seam command execution
 
@@ -570,16 +567,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0527;[proof](../history/window24.md#stitchcad-devnotes-part686md).
 - ID: `G1-SLICE.6.5.3.2.3.3`
   Status: `done`
-  Goal: preserve actual semantic stops/copy ownership,cut-boundary behavior and original authored order
-  in paired child partitions;use actual current anchors/range evidence rather than guessed assignment.
-  Recovery0528:existing sewing range_contains_point uses closed <= endpoints;positive overlap
-  uses strict <. A stop at the cut can reference both closed children without cloning its semantic
-  object. Same/Opposite changes B pair order,not side/copy ownership. Native contract cases must
-  preserve this actual behavior,authored order and later-frame/current evidence before partition.
-  Begin only after the committed D306 oracle-watch prerequisite;then own bounded stop sub-slices.
-  Children .1 actual closed membership/copy/current contract;.2 bounded actual stop admission;
-  .3 bounded paired range/unique point membership;.4 ordered borrowed stop partitions and actual
-  Design integration;.acceptance deferred scoped component checkpoint after implementation.
+  Goal:completed stop scope;[whole scope/proofs](../history/stitchcad-devnotes-part849.md).
 - ID: `G1-SLICE.6.5.3.2.3.3.1`
   Status: `done`
   Goal:0529;[proof](../history/window24.md#stitchcad-devnotes-part688md).
@@ -617,7 +605,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0566;[proof](../history/window24.md#stitchcad-devnotes-part725md).
 - ID: `G1-SLICE.6.5.3.2.3.4`
   Status: `done`
-  Goal:completed lineage scope;[whole scope/proofs](../history/stitchcad-devnotes-part846.md).
+  Goal:completed lineage scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part846md).
 - ID: `G1-SLICE.6.5.3.2.3.4.1`
   Status: `done`
   Goal:0567;[proof](../history/window24.md#stitchcad-devnotes-part726md).
@@ -629,7 +617,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0569;[proof](../history/window25.md#stitchcad-devnotes-part728md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3`
   Status: `done`
-  Goal:completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part838.md).
+  Goal:completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part838md).
 
 - ID: `G1-SLICE.6.5.3.2.3.4.3.1`
   Status: `done`
@@ -761,13 +749,13 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
 
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261030`
   Status: `done`
-  Goal:0629;[proof](../history/stitchcad-devnotes-part789.md).
+  Goal:0629;[proof](../history/window26.md#stitchcad-devnotes-part789md).
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261030.proof-protection`
   Status: `done`
-  Goal:0629;[proof](../history/stitchcad-devnotes-part789.md).
+  Goal:0629;[proof](../history/window26.md#stitchcad-devnotes-part789md).
 - ID: `G1-SLICE.6.5.3.2.cleanup-20261030.apply`
   Status: `done`
-  Goal:0629;[proof](../history/stitchcad-devnotes-part789.md).
+  Goal:0629;[proof](../history/window26.md#stitchcad-devnotes-part789md).
 
 ## Drafting operation contracts
 
@@ -782,27 +770,27 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5f.1.a`
   Status: `done`
-  Goal:completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part838.md).
+  Goal:completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part838md).
 
 - ID: `G1-SLICE.5f.1.b`
   Status: `done`
-  Goal:0676 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part839.md).
+  Goal:0676 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part839md).
 - ID: `G1-SLICE.5f.1.c`
   Status: `active`
   Goal:remaining typed line/arc/Bezier/offset/slash-spread/dart/notch/grainline/walk/true/mirror/join
   schemas from .a inventory;split implementation leaves before code. Parent .1 stays open until all.
 - ID: `G1-SLICE.5f.1.c.line`
   Status: `done`
-  Goal:0677 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part840.md).
+  Goal:0677 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part840md).
 - ID: `G1-SLICE.5f.1.c.arc`
   Status: `done`
-  Goal:0678 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part841.md).
+  Goal:0678 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part841md).
 - ID: `G1-SLICE.5f.1.c.bezier`
   Status: `done`
-  Goal:0679 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part842.md).
+  Goal:0679 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part842md).
 - ID: `G1-SLICE.5f.1.c.offset.inputs`
   Status: `done`
-  Goal:0680 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part843.md).
+  Goal:0680 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part843md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs`
   Status: `pending`
   Goal:complete offset output manifest/lineage from actual G2-2D.2 fragment intervals via the
@@ -810,39 +798,53 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   No fixed count or synthetic fragments. Integrate .5f.3;parent .1 remains open until covered.
 - ID: `G1-SLICE.5f.1.c.grainline.inputs`
   Status: `done`
-  Goal:0681 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part844.md).
+  Goal:0681 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part844md).
 - ID: `G1-SLICE.5f.1.c.slash.opening`
   Status: `done`
-  Goal:0682 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part845.md).
+  Goal:0682 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part845md).
 - ID: `G1-SLICE.5f.1.c.slash.sources`
   Status: `done`
-  Goal:recover and implement explicit Piece/cut/pivot/moving-region/movement source contract;
-  join actual opening variant,retain original dependencies and output/geometry obligations.
-  Scope:explicit left/right moving bank relative to directed straight cut;rotation requires actual
-  PointRef pivot,separation requires actual directed axis. Original opening constructors enforce
-  their mode;complete geometry-source occurrences/local self-supply checks,not currentness.
-  G2 must validate a unique moving region,straight cut/pivot/axis and actual output topology;
-  bridging/fullness/output policy remains pending. Retire whole0682 and closed .6.5.3.2.3.4
-  scope for live bounds;focused checks/book sync.
-  No inferred region or solver/default transform. Full .5f.4 stays deferred.
-  - [x] ISSUE:opening amounts need explicit actual Piece/cut/bank/pivot-or-axis sources.
-  - [x] ROOT CAUSE (WHY + WHERE):HEAD590da323 source module absent;glossary line-cut and
-    inventory requirements plus public reference/range/opening contracts inspected,rc=0.
-  - [x] FIX:explicit source variants,actual embedded amount,borrowed dependency fields and first
-    local self-supply;no inferred movement axis,pivot or output tags.
-  - [x] ADDRESSED (spatial):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test slash_spread_construction_contract →4 pass,rc=0;actual mode/field owners,source order,
-    self-refusals,repeated ranges,explicit bank/traversal and original amount proofs.
-  - [x] NO REGRESSION (spatial):opening5/rustdoc3/selected clippy/fmt/book/rendered boundaries/
-    diff/history845+846 four exact Git spans pass,rc=0. No global frame/currentness/geometry proof.
-  - [x] LOCKSTEP:book/live sync;promotion: declined (existing typed sources/amount staging).
-    Geometry/output policy below,.5f.2/.3 and full .5f.4 remain owned/deferred.
-  Verification:native9/rustdoc3;Commit:STITCHCAD-G1-0683. Next mirror inputs.
+  Goal:0683 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part847.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs`
   Status: `pending`
   Goal:explicit bridge/trim/fullness policy and actual new/retired topology/output manifest;
   unique region/linearity/incidence/domain checks and source mappings via .5f.3/G2/G3.
   No default connector or guessed region. Full .5f.4 remains deferred.
+- ID: `G1-SLICE.5f.1.c.mirror.inputs`
+  Status: `done`
+  Goal:explicit Piece mirror-copy source and two-point/directed-range axis modes,actual borrowed
+  dependencies/local self-supply refusal. No in-place transform/output/geometry claim. Retire
+  whole0683 scope/journals;focused checks/book sync. Full .5f.4 deferred.
+  Record newly reproduced D369 and its immediate stage-order repair owner;retain old ledger tail.
+  Archive65/64 gate required guarded window26 append;drafts retained/restored after exact
+  native cohort/payload comparison. Retire closed stop/retrieval scopes for live bounds.
+  - [x] ISSUE:mirror copy needs actual source/axis mode without implicit result/metadata policy.
+  - [x] ROOT CAUSE (WHY + WHERE):HEADb16dfa9d module absent;glossary mirror/real Piece
+    cut-plan contracts inspected;current native axis/copy inputs retain original fields,rc=0.
+  - [x] FIX:explicit copy/two-point-or-range axis,authentic field views and first local self-supply;
+    no guessed chord/tangent or output identity. D369 logged P1 with next repair owner below.
+  - [x] ADDRESSED (mirror):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test mirror_piece_copy_contract →4 pass,rc=0;both modes,actual field/owner pointers,
+    original self-refusals,source order/repeats and unnormalized traversal remain intact.
+  - [x] NO REGRESSION (mirror):line4/rustdoc3/selected clippy/fmt/book/rendered boundaries/
+    diff/archive gate/history847–850 six exact Git spans pass,rc=0. Fixture signature typo corrected before checks.
+    Window26:native59/407583B payload and before/candidate/installed1300 logical records/5239453B
+    match;44 original physical files exact,rc=0. Drafts restored;69 live routes in3 files verified.
+    Keep target/history-capture-0684 and target/history-proof-0684;never rerun install after edits.
+    No global source/axis/geometry/copy-policy verdict.
+  - [x] LOCKSTEP:book/live/ledger sync;promotion: declined (existing typed source contracts).
+    Current graph/output/geometry/full .5f.4 stay owned;D369 is immediate next,not unowned risk.
+  Verification:native8/rustdoc3;Commit:STITCHCAD-G1-0684. Next stage-order D369.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs`
+  Status: `pending`
+  Goal:explicit copy metadata/cut-plan/sewing policy and stable fresh Piece/geometry manifest;
+  real current geometry/reference mappings stay .5f.3/G2/G3. No implicit metadata copy/default ids.
+- ID: `G1-SLICE.5f.1.c.stage-order`
+  Status: `pending`
+  Goal:P1 D369 fix immediately after0684. Repro:offset.outputs waits for actual G2.2 before
+  G1 .5f.1 closure;G2 entry waits for G1 closure. Root0680 conflated contract and geometry.
+  Split native output contract/schema acceptance from later actual G2/G3 execution/integration;
+  preserve all deferred obligations and verify exact dependency/roadmap/book alignment.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

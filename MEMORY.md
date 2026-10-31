@@ -1,11 +1,12 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0683;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c — recover explicit mirror source/axis/mode inputs and own a leaf before
-  code. Offset and slash/spread output policies remain separate pending owners.
-- Canonical operation tasks:docs/tasks/G1-SLICE-execution.md. Primitive/offset/grainline and
-  explicit slash/spread inputs/amount proofs focused-implemented. Spatial4/opening5/rustdoc3/lint pass.
-- History845 retains whole0682;846 retains whole closed lineage parent. D367/D368 fixed.
+- Latest unit:STITCHCAD-G1-0684;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.stage-order — fix P1 D369 immediately:offset output task requires actual
+  G2 geometry before G1 schema closure,but G2 entry waits for G1. Split contract/execution owners.
+- Canonical tasks:docs/tasks/G1-SLICE-execution.md. Primitive/offset/grainline/slash-spread and
+  mirror-copy inputs focused-implemented. Mirror4/line4/rustdoc3/lint pass;outputs/geometry pending.
+- Window26 packs59 raw files;1300-record cohort exact. Keep target/history-capture-0684 and
+  target/history-proof-0684;never rerun install after later edits. Whole0683/ledger/scopes retained847–850.
   Remaining schemas,frame/graph .5f.2,geometry/exact elevation .5f.3/full .5f.4 stay owned.
 - Scalar replay/binding bytes focused-implemented;full .5e.4/.4.v/storage .7/integration/pre-push
   and D156 nonblocking audits stay deferred. Retain original numerical/archive/search proofs.
