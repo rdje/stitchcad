@@ -97,9 +97,10 @@ pub use offset::{
 mod edge_output_roles;
 mod notch_output_roles;
 pub use notch_output_roles::{
-    ActiveNotchOutputRole, AdmittedNotchOutputRoleCatalog, NotchOutputRoleCatalog,
-    NotchOutputRoleCatalogError, NotchOutputRoleCatalogLimits, NotchOutputRoleCatalogRefusal,
-    NotchOutputRoleDefinition,
+    ActiveNotchOutputRole, AdmittedNotchOutputRoleCatalog, AdmittedNotchOutputRoleTransition,
+    NotchOutputRoleCatalog, NotchOutputRoleCatalogError, NotchOutputRoleCatalogLimits,
+    NotchOutputRoleCatalogRefusal, NotchOutputRoleDefinition, NotchOutputRoleTransitionError,
+    NotchOutputRoleTransitionLimits, NotchOutputRoleTransitionRefusal,
 };
 mod point_output_roles;
 pub use point_output_roles::{

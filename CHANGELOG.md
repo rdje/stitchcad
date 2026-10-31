@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0741 — admit distinct semantic-notch role metadata
+## STITCHCAD-G1-0742 — preserve supplied semantic-notch role history
 
-- Typed notch catalogue/admitted/member owners reuse bounded raw metadata without point/edge proof conversion.
-- Whole D/A/key-byte admission retains authentic original fields,orders and inactive definitions.
-- Local role tags create no semantic Notch EntityId,PointRef or EdgeRef;empty/inactive states remain metadata.
-- Native8/API8/walk book2 and focused lint/fmt/build/map/render/history915 checks pass.
-- Typed role history and actual walk binding/assignment/sharing/evidence remain owned.
+- Distinct notch transition types retain actual before/after owners under complete combined metadata bounds.
+- All supplied definitions keep tags/keys;membership restoration cannot forget later definitions.
+- Introduced/activated/deactivated views retain actual original fields,indices and canonical parent domains.
+- Native6/API5/walk book3 and focused lint/fmt/build/map/render/history916 checks pass.
+- No undo/global issuance/semantic retirement/effect proof;actual walk role binding follows.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

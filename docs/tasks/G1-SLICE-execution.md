@@ -866,20 +866,20 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:distinct bounded semantic-notch role metadata and actual walk operation binding.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.roles.catalog`
   Status: `done`
-  Goal:distinct bounded semantic-notch catalogue/member metadata,without entity issuance.
-  - [x] ISSUE:raw shared role values cannot supply notch-domain membership.
-  - [x] ROOT CAUSE (notch roles):published shared/point metadata APIs reviewed;
-    whole D/A/key-byte bounds and authentic private parents retained;rc=0.
-  - [x] FIX:typed notch catalogue/admitted/member wrappers;raw data aliases only.
-  - [x] ADDRESSED (notch roles):cargo test --test notch_output_role_catalog_contract
-    --test point_output_role_catalog_contract:3+5 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (notch roles):API8/book2,lint/fmt/build/map/render;
-    shared/point/walk kernels and prior book fence/915 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing raw metadata/private witness rule).
-  Proof:target/history-proof-0741-notch-role-catalogue/;Commit:STITCHCAD-G1-0741.
+  Goal:0741 typed notch metadata;[whole scope/proofs](../history/stitchcad-devnotes-part916.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.roles.transition`
-  Status: `pending`
-  Goal:preserve supplied prior notch-role definitions under complete bounded transition metadata.
+  Status: `done`
+  Goal:preserve all supplied notch-role definitions under explicit bounded membership transition.
+  - [x] ISSUE:membership restoration cannot forget later supplied role definitions.
+  - [x] ROOT CAUSE (notch history):published shared/point transition APIs reviewed;
+    combined D/A/key bytes precede owner/definition scans;rc=0.
+  - [x] FIX:typed actual notch before/after and introduced/activated/deactivated views.
+  - [x] ADDRESSED (notch history):cargo test --test notch_output_role_transition_contract
+    --test point_output_role_transition_contract:3+3 pass;rc=0;full invocation in receipt.
+  - [x] NO REGRESSION (notch history):API5/book3,lint/fmt/build/map/render;
+    shared/point/walk/catalogue kernels and prior fences/916 spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing metadata/history/private witness rule).
+  Proof:target/history-proof-0742-notch-role-transition/;Commit:STITCHCAD-G1-0742.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.roles.binding`
   Status: `pending`
   Goal:bind actual walk copy context and typed role catalogue under whole D/A/key-byte limits.

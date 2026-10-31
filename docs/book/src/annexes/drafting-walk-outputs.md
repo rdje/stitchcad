@@ -121,5 +121,56 @@ For original definitions `[9 balance,2 end,7 latent]` and active `[2,9]`,whole B
 Active iteration gives end then balance,while latent remains an inspectable inactive definition.
 The exact original request fields and all metadata orders survive success/refusal. All supplied
 issued definitions,including inactive ones,remain required input. Actual issued-history completeness,
-current operation kind/Design/global namespace,role transitions,actual walk-parent binding,
+current operation kind/Design/global namespace,transition authority,actual walk-parent binding,
 semantic EntityId assignment,mark sharing and geometry/publication remain separate obligations.
+
+## Preserve supplied notch-role history
+
+`before.admit_transition(&after,NotchOutputRoleTransitionLimits::new(D,A,B))` requires both actual
+notch catalogues to be admitted already. D,A and B are their complete combined definition,active
+occurrence and machine-key-byte counts. Checked sums and their quotas precede operation-owner
+comparison and any definition scan. Source parents and their earlier storage/admission scopes
+remain unchanged;private composition reuses the published metadata-preservation algorithm.
+
+| API | Meaning |
+| --- | --- |
+| `NotchOutputRoleTransitionLimits`, `NotchOutputRoleTransitionRefusal` | Explicit combined policy and original refusal data |
+| `NotchOutputRoleTransitionError` | Actual complete notch before/after parents,policy and first cause |
+| `AdmittedNotchOutputRoleTransition` | Distinct authentic notch-domain structural transition intent |
+
+```rust
+use sc_core::construction::*;
+fn transition<'a>(before:&'a AdmittedNotchOutputRoleCatalog<'a>,
+    after:&'a AdmittedNotchOutputRoleCatalog<'a>,limits:NotchOutputRoleTransitionLimits)
+    ->Result<AdmittedNotchOutputRoleTransition<'a>,NotchOutputRoleTransitionError<'a>> {
+    before.admit_transition(after,limits)
+}
+let limits=NotchOutputRoleTransitionLimits::new(5,3,17);
+assert_eq!(limits.key_bytes(),17);
+```
+
+Every supplied before definition,including inactive roles,must retain its tag and exact machine
+key in the after catalogue. Refusal order is combined count overflow,D/A/B quotas,operation owner,
+then first forgotten or reassigned definition in original before order. No accepted prefix escapes.
+Neither parent changes. This validates supplied metadata intent,not actual issued-history
+completeness,canonical operation kind,current Design membership or geometric role continuity.
+
+For before definitions `[9 main,2 end]`,active `[9]`,and after definitions `[7 new,2 end,9 main]`,
+active `[2,7]`,combined D5/A3/B17 admits. `introduced()` lends new's actual after index0/definition;
+`activated()` lends end then new from the actual after owner;`deactivated()` lends main from the
+actual before owner. Reverse iteration reverses each original order. Counts summarize complete
+combined metadata,not semantic output entities or a transition execution result.
+
+A later membership restoration to `[9]` must still retain definition7 even when inactive. Reusing
+an old snapshot that forgets7 refuses;preserving all three definitions while restoring active9
+can be structurally admitted. This grants no recorded undo or reactivation authority. Deactivated
+roles retain their definitions;no semantic Notch is removed,retargeted,reused or transferred by
+this call,and an introduced role tag supplies no new global semantic identity.
+
+Admission allocates no additional index and uses constant new auxiliary storage. Its work and
+each complete delta traversal are bounded by the already counted metadata populations and string
+bytes,conservatively O((D+A+B)log(D+A+2)). Repeated view traversal retains the caller's whole-work
+budget. Definition/quota/refusal aliases are raw shared data;the admitted transition and its
+membership views have distinct notch owners and no conversion to point/edge transition proofs.
+Actual history/undo/currentness,walk-parent association,semantic assignment/sharing,provider
+truth,all-copy effects and atomic publication remain their separate required execution work.

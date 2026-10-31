@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit distinct semantic-notch role metadata
+## _(2026-10-31 UTC)_ — preserve supplied semantic-notch role history
 
-0741 adds distinct raw/admitted/member notch catalogue owners through private composition of the published shared metadata kernel. Raw definition/limit/refusal aliases carry no membership proof;no public conversion yields point/edge witnesses.
-Whole D/A/key bytes precede indexes;authentic original owners/fields/order and inactive definitions survive. Local tags name semantic roles,not Notch EntityIds or PointRef/EdgeRef outputs. Byte-comparison costs remain in the documented work bound.
-Native3+5/API8/walk book2,selected lint/fmt/build/map/render pass0;shared/point/walk kernels and original point tests unchanged. Prior walk Rust fence retained;whole0740 spans915 exact0 and older31219B notes base retained.
-Promotion: declined (existing raw metadata/private witness rule). Typed role-history transition next,then actual walk binding/assignments/sharing/evidence. No global issuance/history completeness/currentness/geometry/publication proof. G1still6/18/G0 unapproved.
+0742 wraps the published shared metadata transition in distinct notch before/after/error/view types. Complete checked combined D/A/key bytes precede owner and original-definition comparisons;all supplied definitions retain exact tags/keys.
+Introduced fields keep original after indices;activated/deactivated members keep actual after/before notch owners and orders. Membership restoration must retain later definitions;this grants no actual history completeness,undo/reactivation authority or semantic Notch retirement/issuance.
+Native3+3/API5/walk book3,selected lint/fmt/build/map/render pass0;shared/point/walk kernels and prior catalogue body unchanged except module exports. Both prior Rust fences retained;whole0741 spans916 exact0 and older31219B notes base retained.
+Promotion: declined (existing metadata/history/private witness rule). Actual walk role binding next,then complete assignment/sharing/evidence. Actual current Design/identity/geometry/all-copy effects/atomic publication and full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

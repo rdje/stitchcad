@@ -12,6 +12,11 @@ pub use super::edge_output_roles::{
 };
 use crate::ontology::{EntityId, LocalTag};
 use core::fmt;
+mod transition;
+pub use transition::{
+    AdmittedNotchOutputRoleTransition, NotchOutputRoleTransitionError,
+    NotchOutputRoleTransitionLimits, NotchOutputRoleTransitionRefusal,
+};
 
 /// Original notch catalogue,explicit policy and first shared metadata cause remain inspectable.
 pub struct NotchOutputRoleCatalogError<'a> {
