@@ -1,18 +1,21 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0703;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration — source/transform/trim selection,
-  complete admission and lineage/retirement/metadata/effect contract. Activate/split before code.
-  Book output part36163B;split whole slash section before growth if needed;SUMMARY119/cap120.
-- Shared EdgeOutputRole catalogue/transition metadata replaces offset-specific implementation;
-  old Offset names remain same-type aliases. Typed variants/fields unchanged;generic diagnostic labels.
-  Exact prescribed rename/header/label changes plus rustfmt verified on2 files;proof protected in
-  target/history-proof-0703-shared-edge-roles/. No algorithm/identity-rule change or geometry certificate.
-- Actual slash intent/catalogue association checks complete D/A/key-byte quotas before operation.
-  Actual owners and active fields retained;empty/inactive remains non-executable metadata.
-  Native12/compiler8/actual output book11/lint/fmt/book/rendered pass;whole0702 retained872.
-- SlashSpreadOutputIntent retains explicit bridge/trim/fullness requests and original inputs/amount.
-  Native manifest/source transforms/trim selection/lineage/effect/currentness/publication still owned.
+- Latest unit:STITCHCAD-G1-0704;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation — explicit contours/trim
+  selection,source coverage/reference retirement and Piece metadata/copy/semantic-effect contracts.
+  Activate/split bounded scope before code;actual geometry/currentness/authority remains separately owned.
+- Native slash edge manifest admits explicit source DirectedRange+Stationary/Moving or straight bridge
+  at original Lower/Upper cut bound with explicit bank direction. Complete 2N/N/D/A/key-byte quotas
+  precede empty/owner/duplicate/defined/active/local-source/policy checks. No prefix,sort or retirement.
+  Actual candidate/active fields retain both original orders;logical tags remain explicit. Native6/
+  compiler4/actual offset book9/slash book3/lint/fmt/book/rendered pass;whole0703+four parents retained873.
+- Whole6172B slash section moved exactly to drafting-slash-output-contracts.md;proof protected in
+  target/history-proof-0704-output-book/. Old anchors retained;actual book examples guarded separately.
+  SUMMARY120/cap120;contain before adding another line. Offset part30487B/slash11019B observed.
+- Shared edge catalogue retains same-type Offset aliases and generic diagnostics;0703 extraction proof
+  target/history-proof-0703-shared-edge-roles/. No algorithm/identity-rule or PointRef namespace change.
+- Slash boundary/fullness/roles/edge provenance are declarations,not complete loops,source/current
+  ownership,actual role matching,reference maps/retirement,measured effects or publication authority.
 - Native offset-output checkpoint0691–0701 completed with focused component checks,not a combined gate.
   Empty candidate lists already refuse with typed Empty,retaining raw/bound/policy;no duplicate wrapper.
   Catalogue emptiness and role absence are separate metadata states,never geometric collapse evidence.

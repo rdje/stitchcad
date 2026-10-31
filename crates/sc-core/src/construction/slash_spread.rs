@@ -5,8 +5,15 @@ use crate::{
     recipe::FormulaExpressionDocument,
 };
 use core::fmt;
+mod edges;
 mod output;
 mod roles;
+pub use edges::{
+    AdmittedSlashSpreadEdges, SlashSpreadBridgeDirection, SlashSpreadCutEnd, SlashSpreadEdge,
+    SlashSpreadEdgeCandidate, SlashSpreadEdgeManifest, SlashSpreadEdgeManifestError,
+    SlashSpreadEdgeManifestLimits, SlashSpreadEdgeManifestRefusal, SlashSpreadEdgeOrigin,
+    SlashSpreadSourceMotion,
+};
 pub use output::{SlashSpreadBoundaryPolicy, SlashSpreadFullnessIntent, SlashSpreadOutputIntent};
 pub use roles::{
     BoundSlashSpreadEdgeRoles, SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal,

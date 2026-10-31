@@ -8,6 +8,9 @@ mod editing_examples {}
 #[cfg(doctest)]
 #[doc = include_str!("../../../docs/book/src/annexes/drafting-output-contracts.md")]
 mod output_examples {}
+#[cfg(doctest)]
+#[doc = include_str!("../../../docs/book/src/annexes/drafting-slash-output-contracts.md")]
+mod slash_output_examples {}
 mod arc;
 mod arguments;
 mod bezier;
@@ -88,10 +91,13 @@ pub use slash_opening::{
 };
 mod slash_spread;
 pub use slash_spread::{
-    BoundSlashSpreadEdgeRoles, SlashSpreadBoundaryPolicy, SlashSpreadConstruction,
-    SlashSpreadConstructionError, SlashSpreadDependency, SlashSpreadFullnessIntent,
+    AdmittedSlashSpreadEdges, BoundSlashSpreadEdgeRoles, SlashSpreadBoundaryPolicy,
+    SlashSpreadBridgeDirection, SlashSpreadConstruction, SlashSpreadConstructionError,
+    SlashSpreadCutEnd, SlashSpreadDependency, SlashSpreadEdge, SlashSpreadEdgeCandidate,
+    SlashSpreadEdgeManifest, SlashSpreadEdgeManifestError, SlashSpreadEdgeManifestLimits,
+    SlashSpreadEdgeManifestRefusal, SlashSpreadEdgeOrigin, SlashSpreadFullnessIntent,
     SlashSpreadOutputIntent, SlashSpreadRoleBindingError, SlashSpreadRoleBindingRefusal,
-    SlashSpreadSide, SlashSpreadSource,
+    SlashSpreadSide, SlashSpreadSource, SlashSpreadSourceMotion,
 };
 mod walk;
 pub use walk::{

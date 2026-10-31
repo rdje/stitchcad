@@ -101,6 +101,7 @@
   - [Drafting operation contracts](annexes/drafting-operation-contracts.md)
   - [Native editing operation inputs](annexes/drafting-edit-inputs.md)
   - [Native drafting output contracts](annexes/drafting-output-contracts.md)
+  - [Native slash/spread output contracts](annexes/drafting-slash-output-contracts.md)
   - [Full-text book search](annexes/book-search.md)
   - [Formula documentation controls](annexes/formula-documentation-controls.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)

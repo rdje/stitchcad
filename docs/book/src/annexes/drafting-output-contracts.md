@@ -460,95 +460,12 @@ metadata/declaration checks. Actual curve production,role matching,nonlinear poi
 propagation,current Design/history and atomic publication remain `.5f.2`/`.5f.3`/`.5f.4.geometry`/G2/G3/bus
 work. This checkpoint changes no G1/G2 gate status and grants no geometry or integration certificate.
 
-## Native slash/spread boundary and fullness intent
+<a id="native-slashspread-boundary-and-fullness-intent"></a>
 
-`SlashSpreadOutputIntent::new(input,boundary,fullness)` owns the actual
-`SlashSpreadConstruction` and requires both output choices. Moving the input preserves its original
-operation,Piece,directed cut,moving bank,pivot or movement axis,and embedded amount document. The
-constructor performs no new allocation,evaluation,identity issuance or model edit. It declares
-intent;an accepted output manifest and actual geometry remain separate stages.
+Slash/spread [boundary/fullness intent](drafting-slash-output-contracts.md#native-slashspread-boundary-and-fullness-intent)
+has its own native output reference.
 
-`SlashSpreadBoundaryPolicy` has two explicit requests:
+<a id="shared-edge-roles-and-slash-operation-binding"></a>
 
-| Policy | Intent and remaining proof |
-| --- | --- |
-| `StraightBridges` | Straight connectors at corresponding opened cut mouths;actual endpoints/incidence and supported closed contour must be proved |
-| `TrimOverlaps` | Trim overlapping banks;actual retained ranges/intersections and boundary selection must be explicit |
-
-Neither policy supplies a default connector count,generated edge tag,intersection,loop choice or
-geometric repair. A trim policy name cannot select an arbitrary loop. Unsupported or ambiguous
-region/topology must refuse through the actual G2/G3 execution path;policy construction is not that
-validation. The following manifest task owns explicit output roles,source/transform provenance and
-trim-selection obligations before native family closure.
-
-`SlashSpreadFullnessIntent::{Added,Removed,Unchanged}` records the intended effect separately from
-boundary treatment. It stores no independently authored intake,Length/Area amount or solved fullness.
-G2/G3 must derive the actual effect from the same original inputs and attribute it to this operation.
-`Removed` neither closes a canonical Dart nor substitutes for its conserved intake. `Unchanged` is
-an explicit request,not a conclusion inferred from a zero formula or a full Angle turn.
-
-```rust
-use sc_core::construction::*;
-fn request_bridged_fullness(input:SlashSpreadConstruction)->SlashSpreadOutputIntent {
-    SlashSpreadOutputIntent::new(input,SlashSpreadBoundaryPolicy::StraightBridges,
-        SlashSpreadFullnessIntent::Added)
-}
-```
-
-There is no Default or implicit input-to-output conversion. Every boundary/fullness combination
-remains authored intent;its applicability depends on actual mode,amount,region and topology. A
-negative rotation,zero distance or statically valid `1 mm/0` is preserved rather than normalized
-into another policy or accepted geometric result. Original kind proofs remain attached to the
-embedded opening document;they execute neither division nor a geometric transform.
-
-`input()`,`boundary_policy()` and `fullness()` borrow actual owned fields. Input dependency views
-continue to borrow that actual nested construction and its original cut/pivot/axis fields. No
-output Piece,contour,reference retirement,canonical metadata reconciliation or command publication
-is performed. Actual G2/G3 sources/results and the later `.5f.4.geometry` integration remain owned.
-
-## Shared edge roles and slash operation binding
-
-Edge-role catalogue and issuance-preserving transition implementation is shared by offset and
-slash/spread declarations. The canonical names are `EdgeOutputRoleDefinition`,`EdgeOutputRoleCatalog`,
-`AdmittedEdgeOutputRoleCatalog`,`ActiveEdgeOutputRole` and the corresponding catalogue/transition
-policy,error and refusal types. These are edge-role metadata types;they introduce no PointRef role
-namespace or geometric classifier. The previous `OffsetRole*`,`AdmittedOffsetRole*` and
-`ActiveOffsetRole` names remain aliases of the same Rust types. Existing offset examples continue
-to compile,without conversion,copied metadata or a second role-history implementation.
-
-The implementation's algorithms and fields are preserved by the extraction. Debug type names and
-Display prefixes now say edge-output roles rather than offset roles;typed variants and their
-original field data are unchanged. Explicit count/key-byte admission,issued-definition preservation,
-active membership and readonly evaluated-candidate presence retain their existing meanings.
-
-`SlashSpreadOutputIntent::bind_edge_roles` requires the actual admitted shared catalogue and
-explicit `EdgeOutputRoleCatalogLimits` for this association stage. Complete definitions,active ids
-and original key bytes are checked in that order before operation identity. All definitions count,
-including inactive ones. The association allocates no workspace;the catalogue's earlier admission
-and owned storage retain their own policies. These entry/text allowances are not whole-execution
-or allocation-byte guarantees.
-
-```rust
-use sc_core::construction::*;
-fn bind_slash_roles<'a>(intent:&'a SlashSpreadOutputIntent,catalog:&'a AdmittedEdgeOutputRoleCatalog<'a>,
-    limits:EdgeOutputRoleCatalogLimits)->Result<BoundSlashSpreadEdgeRoles<'a>,SlashSpreadRoleBindingError<'a>> {
-    intent.bind_edge_roles(catalog,limits)
-}
-```
-
-Success and errors retain both actual complete owners and the selected policy. Operation mismatch
-refuses;it cannot borrow a foreign operation's role catalogue. `BoundSlashSpreadEdgeRoles` exposes
-its original `intent()`,`catalog()` and `limits()`. The catalogue's own active views still retain
-actual active-list tag and definition fields in their original orders. Those views prove catalogue
-membership;the complete binding supplies the checked slash-operation association.
-
-For definitions `[9:moving,2:stationary,7:latent]` and active ids `[2,9]`,the original active order
-remains2,9 while definitions remain9,2,7. Nothing renumbers tags or removes latent7. Empty initial
-or fully inactive catalogues can also bind as metadata;they supply no executable contour or complete
-output manifest. Changing membership still requires the existing issuance-preserving transition
-checks and actual authoring/history authority.
-
-A numeric operation match does not prove its actual ordered recipe kind,current Design membership,
-global namespace,issuance or geometric continuity. Native source/transform/trim-selection manifest
-admission remains the next component;actual G2/G3 contours,effects,mappings and bus publication
-retain their separate owners. No catalogue alias or binding creates a Piece or retires an edge.
+[Shared edge-role metadata and slash binding](drafting-slash-output-contracts.md#shared-edge-roles-and-slash-operation-binding)
+also live in that reference. These retained anchors preserve earlier chapter links.
