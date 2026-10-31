@@ -276,8 +276,10 @@ pub use recipe_failure::{
 };
 
 mod recipe_read;
+mod recipe_replay;
 mod recipe_runtime;
 mod recipe_worker;
+pub use recipe_replay::FormulaScalarRecipeReplayError;
 
 mod source_recipe_failure;
 pub use source_recipe_failure::{

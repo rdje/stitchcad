@@ -42,7 +42,9 @@ root kind and dependencies. Runtime code can consume the selected branch's real 
    evaluates its RHS before its single numeric binding conversion; only a successful binding becomes
    visible later. Boolean bindings stay Boolean. Assertions use their actual class/name and refuse
    false comparisons. Statement ordinals include assertions and come from the real proof owner.
-4. **Atomic acceptance and replay — .5e.4.** A later runtime failure yields no accepted partial
+4. **Atomic acceptance and replay — .5e.4,in progress.** Fresh direct scalar replay is available
+   from the [prepared recipe plan](formula-recipe-execution.md#replay-a-prepared-scalar-recipe).
+   A later runtime failure yields no accepted partial
    recipe, geometry or replacement result. Dependency validation must cover persisted corruption and
    actual derived-input edges before execution can recurse. Fresh replay starts at statement one;
    cache equivalence and full accepted-result identity are integration obligations.

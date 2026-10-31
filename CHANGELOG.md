@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0670 — complete focused fixture-own acceptance
+## STITCHCAD-G1-0671 — replay scalar recipes from fresh state
 
-- Four physical alias refusals/two actual guard omissions/current30+27 modeled variants and nine
-  emitter-bound receipts pass. Source/copies exact;one named empty before-copy session refusal valid.
-- History832/book/diff pass;a41 supported boundary closes. No new numerical/full-suite verdict.
-  Next product atomic replay;nonblocking D156 audits stay owned. G1 6/18/G0 unapproved unchanged.
+- Borrow prepared plan,re-admit original proof/limits/inputs/tangent policy and evaluate fresh.
+  Typed stage errors expose no accepted prefix;late failure leaves earlier held results intact.
+- Replay3/existing recipe9/rustdoc1/targeted lint/fmt/book/history833/diff pass. Paired,storage,
+  geometry/full replay identity remain owned;G1 6/18/G0 unapproved unchanged. PNT continues.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

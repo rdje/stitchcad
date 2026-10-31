@@ -4,14 +4,55 @@
 > scalar subset from its actual complete static recipe proof. It evaluates real lets/assertions in
 > declaration order,stores each successful binding once and retains actual executed source reads.
 > Derived reads now execute through [actual source-backed Design recipes](formula-design-integration.md#execute-the-private-actual-design-plan).
-> Explicit-policy direct/source-backed Tan recipes are available below. Geometry,corrupt-load
-> validation,full replay/platform identity and complete language/bus/
+> Explicit-policy direct/source-backed Tan recipes and fresh direct scalar replay are available
+> below. Geometry,corrupt-load validation,full replay/platform identity and complete language/bus/
 > physical acceptance retain their separate owners. No release claim follows.
 
 Start with complete [syntax/input normalization](formula-recipe-inputs.md) and
 [whole static checking](formula-checked-recipes.md),then admit the real proof and prepare every
 source before values. The [expression controller](formula-execution-plan.md#actual-scalar-expression-execution)
 and recipe executor share one actual-node machine and existing exact sourced kernels.
+
+## Replay a prepared scalar recipe
+
+`FormulaScalarRecipePlan::replay(context)` starts a complete fresh execution at statement one.
+It borrows the prepared plan,so the same plan can be retried and a plan retained by an accepted
+result can be replayed while that earlier result stays available. Every attempt repeats whole
+admission and source preparation with the original checked proof,actual canonical inventory,
+logical limits and optional tangent policy. It allocates new runtime state and copies no prior
+binding,read slot or cached value. The supplied context belongs to this attempt.
+
+```rust
+use sc_core::{recipe::*,value::CanonicalInputs};
+let inputs=CanonicalInputs::new(vec![],vec![])?;
+let recipe=FormulaRecipe::parse("let a:length=1 um/3\nlet b:length=a+1 um")?
+    .normalize_literals()?;
+let proof=recipe.check_kinds(FormulaNamespace::new([])?).expect("whole proof");
+let plan=proof.admit_execution(FormulaRecipeExecutionLimits::new(2,6,13,2))
+    .expect("explicit limits").prepare_scalar(&inputs).expect("whole sources");
+let context=FormulaScalarExecutionContext::new(FormulaToleranceContext::empty(),
+    FormulaSizeContext::empty());
+let first=plan.replay(context).expect("first run");
+let second=first.plan().replay(context).expect("fresh replay");
+assert_eq!(first.statements().len(),2);
+assert_eq!(second.reads().count(),1);
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+Here `a` stores the rounded value zero micrometres,and `b` reads that stored zero and stores one
+micrometre on every attempt. Replay does not reuse the earlier fractional RHS as a binding.
+Changing a physical tolerance context can select another branch;only that attempt's executed
+dependencies appear in its read trace. For example,`if(eps_phys<5 um,a,9 um)` reads `a` only when
+the supplied physical tolerance is below five micrometres.
+
+`FormulaScalarRecipeReplayError` preserves the original `Admission`,`Preparation` or `Execution`
+cause. A late assertion failure returns an error with its actual statement and quantitative
+comparison. It exposes no accepted statement/read prefix and leaves the original plan,canonical
+inputs and any earlier accepted result unchanged. Replaying an empty recipe accepts zero outputs
+with zero allowances. Tangent replay preserves the explicitly selected per-call limits;zero limits
+still refuse an executed tangent call. Derived execution uses the source-backed worker;fresh
+paired-source replay remains the next slice. This focused implementation does not define persisted
+result bytes,corrupt-load validation,geometry replacement or cross-platform result identity.
 
 ## Whole checked-recipe admission
 

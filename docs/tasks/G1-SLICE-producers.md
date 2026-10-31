@@ -511,28 +511,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Goal:0669 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part832.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a41.signoff`
   Status: `done`
-  Goal:complete supported fixture-own public-entry/file/alias/lifecycle acceptance after repairs.
-  Paths: docs/tasks/artifacts/ci_environment/numerical_fixture_alias_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
-  - [x] ISSUE:controller controls alone do not certify fixture-owned destinations or current receipts.
-  - [x] ROOT CAUSE (WHY + WHERE):actual complete replay passes;new signoff census initially
-    treated deliberate fault-session before-copy refusal as a complete snapshot. Filesystem census
-    →22 workspaces/one empty/no accepted receipt there;all other copies complete,rc=0. Classify that
-    explicit empty failure separately;never weaken accepted/copy membership to an arbitrary subset.
-  - [x] FIX:retain independent physical fixture-owned alias guards and exact complete-copy/emitter
-    validation;permit only the named empty session refusal with no report. Keep full replay scoped.
-  - [x] ADDRESSED:numerical_fixture_alias_contract.py --full →four physical first/last artifact/
-    kernel/fixture refusals,two actual guard omissions,current30+27 modeled variants/nine accepted
-    modeled receipts with current emitter identity pass,rc=0. Caller/sentinels/original inputs/copies
-    exact;actual timeout/group guards retained. Both omissions demonstrably change controlled bytes.
-  - [x] NO REGRESSION:full current original4-family/tangent5 configurations retain all prior
-    failure/refusal/body controls;all copied files exact and only fault-session empty before-copy,
-    rc=0. Current log target/numerical-fixture-0670-signoff-final.log;history832 three Git spans/
-    book build/git diff --check pass,rc=0. No new actual numerical,full-suite or platform verdict.
-  - [x] LOCKSTEP:book/live/notes/frontier/registry sync;a41/effects supported boundary closes.
-    Promotion: declined(existing independent population/fixture ownership contracts). D156/.p.v/
-    .b.s/.b.v and pre-push stay owned/deferred. Director2026-10-25:next product .5e.4 atomic replay;
-    further nonblocking producer audits wait for integration. G1 6/18/G0 unapproved unchanged.
-  Commit:STITCHCAD-G1-0670;Verification:physical fixture aliases/current complete modeled acceptance.
+  Goal:0670 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part833.md).
 
 ## Ordered native file-destination repairs
 

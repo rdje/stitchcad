@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — complete focused fixture-own acceptance
+## _(2026-10-31 UTC)_ — replay scalar recipes from fresh state
 
-0670 passes four physical first/last artifact/kernel/fixture aliases and two actual guard omissions. Controlled sentinels/caller/source/copy bytes stay exact;failed receipts cannot publish. Complete replay retains original30+tangent27 modeled variants and nine current emitter-bound receipts.
-New checker initially overclaimed complete population for a deliberate session fault. Filesystem census pins one empty before-copy refusal among22 workspaces,no receipt there;all others complete. Only that named empty refusal is exempted from complete-copy membership;every created file stays exact.
-History832 three Git spans/book/diff pass;[whole0669](docs/history/stitchcad-devnotes-part832.md) retained. Actual timeout/group controls remain real;compiler outcomes remain SIMULATED. Native/Chrome proof basis unchanged;no fresh full-suite verdict.
-LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing independent population/ownership contracts). a41/effects close;D156/.p.v/.b.s/.b.v/pre-push remain owned. Per director2026-10-25,next product .5e.4 atomic replay;nonblocking audits defer. PNT continues.
+0671 adds plan.replay(context):re-admit original whole proof/limits,prepare original inputs/tangent policy,then execute new private runtime. The plan remains borrowable,including one retained by an earlier accepted result;no prior read slot,binding or cache is copied.
+Native replay3/existing recipe9 pass,including independent reference regeneration. Fractional binding stores once;changed physical context changes branch/read trace;late assertion refuses without altering held results. Explicit tangent zero/success and empty zero-allowance recipes pass.
+Targeted rustdoc1/clippy/fmt/book/diff and history833 three exact Git spans pass. Initial indexing lint in the new fixture corrected with first(). No persistence bytes,paired/geometry/storage replay or full-suite acceptance claimed;those owners remain live.
+LIVE states/G1 6/18/G0 unapproved unchanged. Promotion:declined(existing private-result/fresh-runtime doctrine). Whole0670 retained833. Next .5e.4.2 paired source replay;D156 nonblocking audits remain deferred. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
