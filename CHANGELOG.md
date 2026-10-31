@@ -13,12 +13,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0723 — declare canonical mirror Piece identity
+## STITCHCAD-G1-0724 — admit distinct point-role catalogue metadata
 
-- Actual canonical id/parent association rejects intrinsic and typed source-owner aliases without allocation.
-- Companion references stay uses;current/historical nonreuse and trusted issuance remain host/bus checks.
-- Native7/API16/book6 and focused lint/fmt/build/render/map/tree/source-span checks pass.
-- Mirror task sibling preserves every old goal/proof;all old map paths/links/owner ids retained within caps.
+- Point catalogue/admitted/member types remain distinct while private composition reuses metadata checks.
+- Whole quota/order/original-field rules retained;raw shared records grant no membership proof.
+- Native8/point API6/book7 and focused lint/fmt/build/map/render/history895 checks pass.
+- No PointRef generation,currentness or history completeness;point transition/binding/outputs stay owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

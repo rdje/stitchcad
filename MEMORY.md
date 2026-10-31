@@ -1,15 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0723;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points in docs/tasks/G1-SLICE-mirror.md.
-  Separately typed point roles;existing shared edge catalogue grants no PointRef namespace.
-- declare_piece_identity borrows canonical id/actual role parents. Operation/source/self-companion,
-  original source-edge/axis creators and source/result Material aliases refuse. Source companion
-  may name planned result;uses are not owners. No host request id,allocation/global nonreuse proof.
-- Native7/API16/mirror-book6/lint/fmt/build/map/render/tree pass;proof target/history-proof-0723-mirror-identity/.
-  Whole14-node mirror branch copied exact before scoped updates;16 current ids unique in new sibling.
-  All old goals/proofs and map links/curated paths/owner ids retained. Map8189B/cap8192;trim before growth.
-- Mirror book:input/source/cut/field/roles/Piece identity;all prior anchors/examples retained.
+- Latest unit:STITCHCAD-G1-0724;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.transition in docs/tasks/G1-SLICE-mirror.md.
+  Then point binding/source-output attribution;all child scopes tracked in that bounded sibling.
+- PointOutputRoleCatalog/Admitted/ActivePoint views are distinct from edge proofs. Private composition
+  reuses unchanged metadata admission;raw definition/quota/refusal data aliases carry no membership.
+  Native8/point API6/mirror-book7/lint/fmt/build/map/render pass;proof target/history-proof-0724-point-role-catalog/.
+  Empty/inactive remains metadata;no PointRef/geometry/history/currentness certificate. Identity decision answers added.
+- declare_piece_identity retains actual canonical id/parents;intrinsic/source-kind aliases refuse,
+  source companion remains a use. Global nonreuse/trusted host supply and actual namespace stay owed.
+- Mirror book/old anchors/examples retained;all original14 task goals/proofs durable in new sibling/history.
 - Native mirror metadata choices complete:bind_metadata uses explicit PreserveSource/Replace for
   material/layer/label;whole resolved UTF-8 B quota precedes canonical label/material blank scans.
   Borrow actual source/replacement fields;print quantity/mirroring/fold derives from actual cut policy.
@@ -25,7 +25,7 @@
   c5d5294d/core tree pinned in target/history-proof-0717-slash-checkpoint/. Runtime/tests/Cargo and
   every prior Rust fence unchanged. This is not full CI,current Design,platform or geometry proof.
 - Tree census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all old map links retained.
-  Whole0722 now893;closed0064 protocol894;prior0721/0720/0719 in892/891/890;older notes base exact.
+  Whole0723 now895;0722 now893;closed0064 protocol894;older source spans/notes base remain exact.
 - Native outcome explicit PreserveSource/ReconcileContours. PreserveSource requires N0,original
   Unchanged and exact source contour order/directions;no actual zero geometry/effect inference.
 - admit_no_new_edges shares quota/owner kernel;ordinary admit remains nonempty. Reconciliation

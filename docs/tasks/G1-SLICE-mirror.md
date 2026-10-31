@@ -41,28 +41,37 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   separate. Split mirror task branch preserving original ids/goals/proofs;retire whole0722 before growth.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.piece`
   Status: `done`
-  Goal:canonical new Piece identity association with actual parents;local intrinsic/source-kind
-  aliases refuse. Source companion references remain uses;no global freshness or host-request id.
-  - [x] ISSUE:copy output needs a distinct canonical Piece owner without minting or reusing source ids.
-  - [x] ROOT CAUSE (mirror Piece identity):actual DesignStructure/reference/host/identity contracts
-    inspected;Piece/operation are separate owners,companion references are uses;rc=0.
-  - [x] FIX:private borrowed declaration;operation/source/self-companion then original edge/axis/
-    Material aliases. Source companion can name planned result;global/issued/current namespace stays owed.
-  - [x] ADDRESSED (mirror Piece identity):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test mirror_piece_identity_contract --test mirror_piece_edge_roles_contract:4+3 pass;rc=0.
-    Actual parents/id pointers,both axis modes,typed aliases,zero id and companion distinction covered.
-  - [x] NO REGRESSION (mirror Piece identity):API16/mirror-book6,selected lint/fmt/build/map/render/
-    tree/893–894 Git spans pass;rc=0. Duplicate fixture module corrected by existing-module reuse.
-    Census10 lanes/13 trees/19 siblings/0 unowned/orphans/dead links;all14 old mirror ids/goals/proofs
-    retained,16 current ids unique. All old map links/paths/owner ids retained;map8189B/cap8192 unchanged.
-  - [x] LOCKSTEP:book/live/frontier/new task sibling/history align;closed0722 and0064 retained893–894.
-    promotion: declined (existing owned-id/reference/host boundary);no allocation/global freshness proof.
-  Verification:native7/API16/book6;proof target/history-proof-0723-mirror-identity/.
-  Commit:STITCHCAD-G1-0723;next separately typed point-role policy.
+  Goal:0723 canonical Piece id;[whole scope/proofs](../history/stitchcad-devnotes-part895.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points`
-  Status: `pending`
+  Status: `in_progress`
   Goal:separately typed persistent PointRef roles and bounded source/output point attribution;
   edge-role metadata grants no point namespace. Actual containing frame/currentness remains .5f.2/G2.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.catalog`
+  Status: `done`
+  Goal:distinct point catalogue/admitted/member types over private shared raw metadata admission.
+  - [x] ISSUE:point namespace proofs must remain distinct from shared edge catalogue membership.
+  - [x] ROOT CAUSE (point catalogue):existing public metadata API inspected;whole type-use census
+    confines new point proofs to dedicated module/reexports,old edge/transition bytes unchanged;rc=0.
+  - [x] FIX:private composition shares raw tag/key/quota/cause data;authentic point owners/fields only.
+  - [x] ADDRESSED (point catalogue):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test point_output_role_catalog_contract --test offset_role_catalog_contract:5+3 pass;rc=0.
+  - [x] NO REGRESSION (point catalogue):point API6/mirror-book7,selected lint/fmt/build/map/render/
+    895 exact Git spans pass;rc=0. Empty/inactive metadata valid;no PointRef/currentness/history proof.
+  - [x] LOCKSTEP:book/live/frontier align;history/binding/point outputs remain owned.
+    promotion: promoted ([identity record](../decisions/decision_entity-identity-ulid-injected-generator.md) gains answers on raw data/proof domains).
+  Verification:target/history-proof-0724-point-role-catalog/;Commit:STITCHCAD-G1-0724;next .points.transition.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.transition`
+  Status: `pending`
+  Goal:point-typed before/after issuance-metadata preservation under complete combined bounds;
+  no forgotten/reassigned definitions,undo issuance rewind or geometric/currentness claim.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.binding`
+  Status: `pending`
+  Goal:actual declared mirror Piece/metadata operation to point catalogue association under whole
+  bounds;source point attribution remains separate and no edge-role proof can substitute.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.identity.points.outputs`
+  Status: `pending`
+  Goal:bounded original PointRef-to-new-role attribution/eligibility requests without guessed source
+  membership,frame,currentness or geometric correspondence;complete manifest remains required.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges`
   Status: `pending`
   Goal:bounded complete source-edge attribution,stable candidate roles and exact copied contour/

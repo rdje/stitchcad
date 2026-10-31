@@ -106,3 +106,17 @@ This sharing introduces no PointRef role namespace,geometric classifier,current 
 certificate or global authority. Actual recipe/Design checks,issued-history completeness,G2/G3
 role matching and bus publication retain their existing owners. Empty/inactive catalogues remain
 metadata states rather than executable output manifests.
+
+## Distinct point catalogue metadata0724
+
+answers: "can raw output-role metadata be shared without mixing point and edge membership proofs?"
+
+PointOutputRoleCatalog and its admitted/member views are distinct types. Private composition
+reuses the existing bounded metadata algorithm through its published API. Raw definition,quota
+and refusal records may be shared aliases;they carry no membership proof. Point views expose
+only their actual point owner,never the private admitted edge component. No public conversion
+makes a point membership usable as an edge membership. Equal tag/key values do not change that.
+
+This admits declared point metadata only,without PointRef generation,source lookup,current
+namespace,issued-history completeness or geometry. Point history/mirror binding/source-output
+attribution remain separate native steps;actual registry/frame/authority/publication stay owned.

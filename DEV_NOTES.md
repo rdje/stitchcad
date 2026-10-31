@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — declare canonical mirror Piece identity
+## _(2026-10-31 UTC)_ — admit distinct point-role catalogue metadata
 
-0723 binds canonical Piece id to actual role/metadata parents;intrinsic and typed edge/axis/Material aliases refuse,while source companion remains a use.
-Native4+3/API16/mirror-book6,selected lint/fmt/build/map/render/tree pass0;duplicate test fixture inclusion corrected through existing-module reuse.
-Whole14-node mirror branch copied exact before scoped updates;all16 current ids unique. Tree10/13/19/0;old map links/paths/owner ids kept within8189B. Whole0722/0064 spans893–894 exact0.
-Promotion: declined (existing owned-id/host boundary). Typed point roles next;global nonreuse/reserve,current Design/recipe,copy/semantic/geometry/full CI remain owed. G1still6/18/G0 unapproved.
+0724 wraps unchanged bounded role metadata admission with distinct point catalogue/admitted/member owners;raw tag/key/quota/refusal data may share.
+Original fields/order and quota/duplicate causes remain exact;empty/inactive metadata is valid. No public point proof converts to an edge proof or generates PointRefs.
+Native5+3/point API6/mirror-book7,selected lint/fmt/build/map/render pass0;old edge/transition bytes unchanged,type-use census scoped,whole0723 spans895 exact0.
+Promotion: existing identity decision gains answers on shared raw data/distinct proof domains. Point history/binding/output attribution next;currentness/geometry/global issuance/full CI remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

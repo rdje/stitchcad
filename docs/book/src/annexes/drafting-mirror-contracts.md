@@ -282,3 +282,50 @@ reserved-id nonreuse,operation-kind/ordering,canonical issued-role history and a
 remain required under the existing .5f.2/.6 owners. Point-role identity,complete source/output
 correspondence,copy and semantic policies remain separate manifest/family steps.
 
+## Typed point-role catalogue metadata
+
+Point output roles have their own catalogue and membership types. They share raw tag/key data
+and bounded metadata admission with edge roles,but a point-domain proof cannot be used as an
+edge-domain proof. The implementation keeps its shared admission component private;there is no
+public admitted-edge getter or conversion. This stage generates no PointRef or coordinates.
+
+| API | Meaning |
+| --- | --- |
+| `PointOutputRoleDefinition` | Shared raw machine-key/tag record;not a membership witness |
+| `PointOutputRoleCatalogLimits`, `PointOutputRoleCatalogRefusal` | Shared explicit quota/typed-cause data |
+| `PointOutputRoleCatalog` | Distinct owned original point definitions and active membership |
+| `AdmittedPointOutputRoleCatalog` | Private point-domain admission with original owner/field views |
+| `ActivePointOutputRole` | Authentic point membership and original definition/tag fields |
+| `PointOutputRoleCatalogError` | Actual point owner,limits and original shared refusal |
+
+D counts every declared definition,including inactive roles;A counts every supplied active-tag
+occurrence. The complete checked workspace count2D+2A and D/A/key-byte quotas precede index
+allocation. Definitions are checked in original order,tag before key;active entries retain
+original order,duplicate before undefined. Counts bound index entries,not prior String/Vec
+allocation,all allocation bytes or complete operation work. No default allowance is supplied.
+
+```rust
+use sc_core::{construction::*,name::MachineToken,ontology::*};
+let raw=PointOutputRoleCatalog::new(EntityId::from_bits(10),
+    vec![PointOutputRoleDefinition::new(LocalTag::new(9),MachineToken::new("pivot").expect("valid key")),
+         PointOutputRoleDefinition::new(LocalTag::new(2),MachineToken::new("tip").expect("valid key"))],
+    vec![LocalTag::new(2),LocalTag::new(9)]);
+let catalog=raw.admit(PointOutputRoleCatalogLimits::new(2,2,8)).expect("complete metadata");
+assert_eq!(catalog.workspace_entries(),8);
+let role=catalog.active_role(LocalTag::new(9)).expect("actual canonical membership");
+assert!(std::ptr::eq(role.catalog(),&catalog));
+assert_eq!(role.definition().key().as_str(),"pivot");
+```
+
+Definitions and active tags remain borrowed from the actual original point catalogue. Lookups
+include inactive definitions;active lookups/forward/reverse iteration return point-typed views
+only. Equal contents in a second catalogue do not reparent a view. Explicit point and edge
+catalogues may contain equal raw tags/keys,but their admitted membership types remain distinct.
+Sharing a raw record does not supply either domain's ownership proof.
+
+Empty and fully inactive point catalogues remain legal metadata states. They neither generate
+points nor retire issued roles. Actual canonical issued-definition completeness,history-preserving
+transitions,mirror operation association,source/output point attribution,current registry/frame,
+geometric correspondence,nonreuse and publication remain separate requirements. The existing
+PointConstruction's fixed logical point role is unchanged;this catalogue does not rewrite it.
+

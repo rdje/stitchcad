@@ -57,6 +57,12 @@ pub use offset::{
     OffsetSide,
 };
 mod edge_output_roles;
+mod point_output_roles;
+pub use point_output_roles::{
+    ActivePointOutputRole, AdmittedPointOutputRoleCatalog, PointOutputRoleCatalog,
+    PointOutputRoleCatalogError, PointOutputRoleCatalogLimits, PointOutputRoleCatalogRefusal,
+    PointOutputRoleDefinition,
+};
 mod offset_manifest;
 pub use edge_output_roles::{
     ActiveEdgeOutputRole, AdmittedEdgeOutputRoleCatalog, AdmittedEdgeOutputRoleTransition,
