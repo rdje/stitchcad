@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0681 — bind placement to actual semantic grainline intent
+## STITCHCAD-G1-0682 — retain explicit slash/spread opening amount proofs
 
-- Named placement target binds actual arrow/alignment/stripe/plaid sources;first local self-supply refuses.
-- Authentic owners/alignment preserve angle origins,optional roles and repeated uses without defaults.
-- Placement4/grain12/rustdoc3/selected lint/fmt/book pass;whole0680 retained843.
-- Current root/frame/value resolution,derived marks and full .5f.4 remain owned.
+- Explicit Rotation Angle/Separation Length components retain original sources and actual static proofs.
+- Complete1+2N admission precedes reparse;wrong kinds never reinterpret authored modes.
+- Opening5/arc6/rustdoc5/selected lint/fmt/book pass;whole0681 retained844.
+- Spatial source/output contracts,values,G2/G3 execution and full .5f.4 remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0681;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c — recover slash/spread explicit opening/source/moving-region contracts;
-  own the next safe input/schema leaf before code. No implicit geometry or solver policy.
-- Canonical operation tasks:docs/tasks/G1-SLICE-execution.md. Primitive declarations and offset/
-  grainline input association focused-implemented. Placement4/grain12/rustdoc3/lint pass.
-- History843 retains whole0680. D367/D368 fixed. Offset outputs pending;remaining .1.c schemas,
+- Latest unit:STITCHCAD-G1-0682;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.sources — explicit Piece/cut/pivot/moving-region/movement contract;
+  recover spatial semantics before code;no inferred region,solver or output fragments.
+- Canonical operation tasks:docs/tasks/G1-SLICE-execution.md. Primitive/offset/grainline inputs
+  and explicit slash/spread amount components focused-implemented. Opening5/arc6/rustdoc5/lint pass.
+- History844 retains whole0681. D367/D368 fixed. Offset outputs/remaining .1.c schemas,
   frame/graph .5f.2,geometry/exact elevation .5f.3/full .5f.4 stay owned.
 - Scalar replay/binding bytes focused-implemented;full .5e.4/.4.v/storage .7/integration/pre-push
   and D156 nonblocking audits stay deferred. Retain original numerical/archive/search proofs.

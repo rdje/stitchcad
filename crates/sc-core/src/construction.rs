@@ -30,3 +30,9 @@ pub use point::{
     PointConstructionNormalizationError, PointConstructionNormalizationLimits,
     PointConstructionNormalizationRefusal, PointCoordinate,
 };
+mod slash_opening;
+pub use slash_opening::{
+    CheckedSlashSpreadOpening, NormalizedSlashSpreadOpening, SlashSpreadCheckError,
+    SlashSpreadCheckRefusal, SlashSpreadNormalizationError, SlashSpreadNormalizationLimits,
+    SlashSpreadNormalizationRefusal, SlashSpreadOpening, SlashSpreadOpeningMode,
+};

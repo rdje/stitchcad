@@ -819,23 +819,30 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   No fixed count or synthetic fragments. Integrate .5f.3;parent .1 remains open until covered.
 - ID: `G1-SLICE.5f.1.c.grainline.inputs`
   Status: `done`
-  Goal:bind actual grainline target/angle/directed sources;refuse local self-supply,retain
-  original owners and roles. No currentness/geometry claim. Retire whole0680 scope/journals;
-  focused checks/book sync. Full .5f.4 deferred.
-  - [x] ISSUE:placement needs actual semantic grain/angle/print sources without copied directions.
-  - [x] ROOT CAUSE (WHY + WHERE):Python HEAD0383ded3 placement module absent;actual Grainline
-    definitions/references/current validator and Design grain-angle adapter inspected,rc=0.
-  - [x] FIX:typed operation/target and authentic borrowed record/alignment;identity precedes
-    first actual self-source refusal in arrow/alignment/stripe/plaid order. No default angle.
-  - [x] ADDRESSED (grainline placement):local_environment.py -- cargo test --offline --locked
-    -p sc-core --test grainline_placement_contract →4 pass,rc=0;all angle origins/role refusals,
-    first mismatch,repeated/absent roles and deleted-plaid association/currentness distinction.
-  - [x] NO REGRESSION (grainline):grain12/placement rustdoc3/selected clippy/fmt/book/rendered
-    boundaries/diff/history843 three exact Git spans pass,rc=0;actual semantic records unchanged.
-    No full integration/platform or alignment/geometry verdict.
-  - [x] LOCKSTEP:book/live/frontier/notes sync;promotion: declined (existing semantic grain API).
-    Current-root/frame/values/derived marks and full .5f.4 remain owned/deferred.
-  Verification:focused native16/rustdoc3;Commit:STITCHCAD-G1-0681. Next slash/spread contracts.
+  Goal:0681 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part844.md).
+- ID: `G1-SLICE.5f.1.c.slash.opening`
+  Status: `done`
+  Goal:explicit rotation Angle/separation Length documents,complete bounded normalization and
+  authentic static proofs without values. Cut/pivot/moving-region/output policy stays pending.
+  Retire whole0681 scope/journals;focused checks/book sync. Full .5f.4 deferred.
+  - [x] ISSUE:opening amount requires explicit mode,original source and actual kind proof.
+  - [x] ROOT CAUSE (WHY + WHERE):HEAD8a8e14fd component absent;book inventory requires
+    Angle rotation versus Length separation;actual shared staging kernels inspected,rc=0.
+  - [x] FIX:owned explicit amount,complete1+2N admission and authentic normalized/static proof;
+    preserve source/mode/span;no inferred cut/region/direction or value.
+  - [x] ADDRESSED (opening):local_environment.py -- cargo test --offline --locked -p sc-core
+    --test slash_spread_opening_contract →5 pass,rc=0;real sources/Unknown,wrong modes,all
+    branches,original causes and exact complete quota boundaries retain owners.
+  - [x] NO REGRESSION (opening):arc6/rustdoc5/selected clippy/fmt/book/rendered boundaries/
+    diff/history844 three exact Git spans pass,rc=0;shared kernel callers retain behavior.
+  - [x] LOCKSTEP:book/live sync;promotion: declined (existing argument staging).
+    Spatial inputs below,geometry .5f.3/G2/G3 and full .5f.4 remain owned/deferred.
+  Verification:native11/rustdoc5;Commit:STITCHCAD-G1-0682. Next .slash.sources.
+- ID: `G1-SLICE.5f.1.c.slash.sources`
+  Status: `pending`
+  Goal:recover and implement explicit Piece/cut/pivot/moving-region/movement source contract;
+  join actual opening variant,retain original dependencies and output/geometry obligations.
+  No inferred region or solver/default transform. Full .5f.4 stays deferred.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.

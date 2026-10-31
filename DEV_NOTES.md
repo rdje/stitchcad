@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — bind placement to actual semantic grainline intent
+## _(2026-10-31 UTC)_ — retain explicit slash/spread opening amount proofs
 
-0681 retains placement operation/target and binds the actual semantic Grainline. Target identity precedes first local self-source in arrow/alignment/stripe/plaid order. Borrowed owners/alignment and delegated actual references preserve symbolic angle origins,optional print roles and repeated uses.
-Placement4/grain12/rustdoc3/selected clippy/fmt/book/rendered boundaries/diff/history843 three exact Git spans pass. All source roles,first refusal,original field pointers and absent/repeated roles pass. Later plaid deletion stays an actual currentness refusal without changing bound intent.
-This stage issues no semantic identity or geometric tags,reads no angle and draws no mark. Current Design/inventory membership,Piece/ledger coverage,global frames/order and physical angular alignment remain explicit obligations. Existing Design grain-angle declarations retain metadata ownership.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing semantic grain API). Whole0680 retained843. Next .1.c slash/spread mode/source contract;remaining schemas and full .5f.4 stay owned. PNT continues.
+0682 adds explicit Rotation Angle/Separation Length document components,complete1+2N normalization admission and actual static proofs. Required kind comes from the original mode;wrong text cannot reinterpret intent. Owners,canonical source,real spans and typed causes survive;no values execute.
+Opening5/arc6/rustdoc5/selected clippy/fmt/book/rendered boundaries/diff/history844 three exact Git spans pass. Wrong modes,untaken branch failures,original Unknown canonical supplier,exact quotas,raw angle turns and division-free static checks pass. Shared staging kernels remain used by actual callers.
+This component supplies no operation id,Piece,cut,pivot,moving-region,direction or output. It cannot certify numerical/geometric domains or fullness/intake effects. Required spatial contracts remain explicitly owned under .slash.sources and actual executors;no implicit solver is introduced.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product notes updated. promotion: declined (existing argument staging). Whole0681 retained844. Next .1.c.slash.sources;remaining schemas/frame/geometry and full .5f.4 remain owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

@@ -2,7 +2,7 @@
 
 > **Inventory complete; implementation remains owned.** This is the v1 operation boundary required
 > by G1-SLICE.5f.1 before construction code. The existing scalar formula executor creates no
-> geometry. Primitive declarations,scalar proofs and offset/grainline input binding are available
+> geometry. Primitive declarations,opening amount proofs and offset/grainline input binding are available
 > below;remaining schemas,ordered dependencies and geometry execution are pending. No geometry certificate.
 
 The [ontology](../spec/ontology.md#32-drafting-operations) separates the ordered drafting history
@@ -46,7 +46,7 @@ geometry and G3 owns the construction/physical behavior assigned to it by the fe
 | Draw arc | Center PointRef,radius Length,start/sweep Angle formulas | One edge role;no inferred point outputs | Center-based declaration/proofs;geometry pending |
 | Draw Bézier | Explicit quadratic/cubic named PointRefs | One edge role;original controls retained | Typed controls/dependencies;geometry pending |
 | Offset edge | Directed range,allowance identity and explicit side;canonical corner | G2 fragment lineage;no hidden width/default join | Input binding only;outputs/geometry pending |
-| Slash/spread | Current Piece/cut/pivot references and explicit opening mode | New/retired topology and an attributable opening | Pending .1.c |
+| Slash/spread | Piece/cut/pivot/moving region and explicit opening mode | New/retired topology and attributable opening | Amount component/proofs only;full schema pending |
 | Close dart | Canonical Dart id with held intake/closing references | One semantic closure group | CloseDart request exists;geometry pending |
 | Add notch | Piece id,EdgeAnchor,NotchProfileBindings | Fresh semantic notch id and retained source anchor | AddNotch request exists;geometry pending |
 | Place grainline | Named canonical grainline with directed arrow/alignment/print intent | Existing semantic target;G2 derived mark | Target/source binding only;geometry pending |
@@ -440,3 +440,44 @@ Existing `DesignInputs::grain_allowance_declarations` checks actual canonical An
 formula alignment without supplying a value. The eventual ordered operation program must join
 those current-root,namespace/frame and evaluation checks before placement/publication. Full
 construction integration and platform verification remain deferred under `.5f.4`.
+
+## Native slash/spread opening component
+
+`construction::SlashSpreadOpening` is the numerical amount component of a later full operation.
+`rotation(angle_document)` explicitly requires Angle;`separation(distance_document)` explicitly
+requires Length. The mode is chosen by the author,not inferred from formula text or runtime values.
+A rotation containing `1 mm` is a dimension error;it cannot silently become a separation request.
+
+Each component retains its exact original owned expression document. `normalized` first measures
+all actual formula nodes N and admits explicit `SlashSpreadNormalizationLimits` for N and the
+conservative `1 + 2N` normalization records:one amount owner,N nodes and at most N call-argument
+indices. Complete arithmetic/node/record admission precedes reparse. These quotas exclude earlier
+owned documents,parser/checker scratch,allocator/CPU and whole-operation/geometry/runtime usage.
+
+`check_argument` checks the actual normalized amount against the supplied real namespace,then
+requires the root kind selected by that actual original mode. Both branches undergo static checks.
+The private checked result borrows the normalized owner and retains its real expression proof;
+errors retain that owner,mode,actual failing span and typed language or wrong-root-kind cause.
+No statement/operation ordinal is invented for this standalone component.
+
+```rust
+use sc_core::{construction::*,recipe::*};
+let opening=SlashSpreadOpening::separation(
+    FormulaExpressionDocument::new("1 mm/0".into())?);
+let normalized=opening.normalized(SlashSpreadNormalizationLimits::new(3,7))?;
+let checked=normalized.check_argument(&FormulaNamespace::new([])?)?;
+assert_eq!(checked.expression().kind(),FormulaKind::Length);
+// No division or geometric separation has executed.
+# Ok::<(),Box<dyn std::error::Error>>(())
+```
+
+Original signs and full Angle turns remain authored. An Unknown canonical Length source is still
+statically Length,and its actual supplier remains attached;no observation or zero is supplied.
+A successful kind proof grants neither a supported geometric domain nor a usable numeric value.
+For example,`1 mm/0` has Length kind but still needs normal numerical execution and its refusal.
+
+This component supplies no operation id,Piece,cut,pivot,moving-region selector,translation direction
+or output manifest. Those required inputs and their explicit geometric meaning remain pending
+under `.1.c.slash.sources` and `.5f.3`;none is guessed from the amount. Actual transform evaluation,
+intake/fullness effects,source/output mappings and command publication require the complete
+operation and G2/G3 executors. Full construction verification remains deferred under `.5f.4`.
