@@ -13,12 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0729 — admit original mirror edge candidates
+## STITCHCAD-G1-0730 — cover every original mirror source-edge occurrence
 
-- Whole candidate/workspace quotas precede original owner,edge-role and typed-source checks.
-- Authentic source fields/order and logical output tuples retained;point references cannot substitute.
-- Native9/edge API4/book12 and focused lint/fmt/build/map/render/history900 checks pass.
-- Shared sources and N0 are intermediate metadata;complete source/occurrence coverage remains next.
+- Whole candidate/occurrence/workspace quotas precede source indexing and attribution.
+- Exactly one candidate covers each original source identity;all repeated directed/fold uses retained.
+- Ambiguous,missing and unused sources refuse completely in their documented original orders.
+- Native9/API3/book13 and focused lint/fmt/build/map/render/history901 checks pass.
+- Source snapshot attribution is complete;actual reflection,output contours/currentness/issuance remain owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

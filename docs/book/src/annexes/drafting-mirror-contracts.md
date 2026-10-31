@@ -567,3 +567,48 @@ is candidate presence metadata,not an executable empty Piece,complete copy,no-op
 result. Actual source coverage,currentness,frame,geometric correspondence,global freshness,
 physical-copy/semantic effects and publication remain separate requirements.
 
+## Complete source-edge coverage
+
+`edges.admit_source_coverage(limits)` requires exactly one candidate for each distinct EdgeRef
+in the actual bound source Piece. It accounts for every original boundary,hole,construction and
+fold occurrence. Two roles proposing the same source refuse as AmbiguousSource;an uncovered
+original field refuses as MissingSource. After all occurrences match,any candidate unused by
+the Piece refuses as UnusedCandidate. Nothing is selected by coordinates or a tag alone.
+
+| API | Meaning |
+| --- | --- |
+| `MirrorPieceEdgeCoverageLimits::new(N,R,W)` | Complete candidates,source occurrences and workspace entries |
+| `MirrorPieceEdgeCoverage` | Whole unique source attribution with all original occurrences |
+| `MirrorPieceMappedEdgeOccurrence` | Authentic original source field and unique output candidate |
+| `MirrorPieceEdgeCoverageError`, `MirrorPieceEdgeCoverageRefusal` | Actual owner/policy and first whole failure |
+
+Checked N+R,whole N,whole R and workspace quotas precede source inspection and allocation. The
+workspace has an N-entry source index and R-entry occurrence association vector;these count
+entries,not bytes or prior storage. Work is O((N+R)log(N+2)). Earlier source and catalogue quotas
+retain their separate scope. Duplicate-source refusal follows original proposal order,missing
+sources follow actual boundary/hole/construction/fold order,and unused candidates follow proposal
+order rather than the source index's sorted keys. No partial coverage escapes a refusal.
+
+```rust
+use sc_core::construction::*;
+fn cover<'a>(edges:&'a AdmittedMirrorPieceEdges<'a>)
+    ->Result<MirrorPieceEdgeCoverage<'a>,MirrorPieceEdgeCoverageError<'a>> {
+    edges.admit_source_coverage(MirrorPieceEdgeCoverageLimits::new(4,8,12))
+}
+```
+
+For original identities `[40,41,42,43,41,41,43,40]`,a proposal mapping40→role9,41→role2,
+42→role4 and43→role6 produces eight occurrence views with roles `[9,2,4,6,2,2,6,9]`.
+The four source identities share output candidates across repeated uses. Every occurrence keeps
+its original location,actual source field and directed/fold distinction;no authored use disappears.
+`occurrences()` supports reverse iteration,while `edge_for_source(&original)` returns the unique
+actual candidate for that exact original EdgeRef. Proposal order may differ from both source
+occurrence order and catalogue active order;none becomes a persistent identity.
+
+An empty candidate proposal can pass intermediate admission but fails this stage at the first
+actual source occurrence. This does not retire canonical roles. Success establishes complete
+identity attribution against the supplied immutable Piece snapshot. It does not prove current
+registry membership,original/common frames,supported reflection,output winding or directions,
+geometric validity,identity issuance,physical copies or semantic effects. Reflected contour and
+construction/fold mapping remains the next native declaration step.
+

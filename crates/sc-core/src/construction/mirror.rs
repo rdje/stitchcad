@@ -40,9 +40,10 @@ pub use points::{
 };
 mod edges;
 pub use edges::{
-    AdmittedMirrorPieceEdges, MirrorPieceEdgeCandidate, MirrorPieceEdgeManifest,
-    MirrorPieceEdgeManifestError, MirrorPieceEdgeManifestLimits, MirrorPieceEdgeManifestRefusal,
-    MirrorPieceOutputEdge,
+    AdmittedMirrorPieceEdges, MirrorPieceEdgeCandidate, MirrorPieceEdgeCoverage,
+    MirrorPieceEdgeCoverageError, MirrorPieceEdgeCoverageLimits, MirrorPieceEdgeCoverageRefusal,
+    MirrorPieceEdgeManifest, MirrorPieceEdgeManifestError, MirrorPieceEdgeManifestLimits,
+    MirrorPieceEdgeManifestRefusal, MirrorPieceMappedEdgeOccurrence, MirrorPieceOutputEdge,
 };
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.

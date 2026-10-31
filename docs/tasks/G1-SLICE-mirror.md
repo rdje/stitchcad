@@ -69,19 +69,19 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   construction/fold occurrence mapping;deduplicate identities without dropping authored occurrences.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges.candidates`
   Status: `done`
-  Goal:bounded original EdgeRef/role attribution.
-  - [x] ISSUE:copy edges need typed attribution.
-  - [x] ROOT CAUSE (edge candidates):actual Piece/role APIs reviewed;whole N/2N before scans;
-    parents unchanged;rc=0.
-  - [x] FIX:authentic candidates retain original fields/order.
-  - [x] ADDRESSED (edge candidates):cargo test --test mirror_piece_edge_manifest_contract
-    --test mirror_piece_identity_contract:5+4 pass;rc=0. Full invocation in proof receipt.
-  - [x] NO REGRESSION (edge candidates):edge API4/book12,clippy/fmt/build/map/render/900 spans pass;rc=0.
-  - [x] LOCKSTEP:book/live align;promotion: declined (existing metadata/geometry boundary).
-  Proof:target/history-proof-0729-mirror-edge-candidates/;Commit:STITCHCAD-G1-0729.
+  Goal:0729 edge candidates;[whole scope/proofs](../history/stitchcad-devnotes-part901.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges.coverage`
-  Status: `pending`
-  Goal:complete unique source-edge attribution preserving all actual source occurrences.
+  Status: `done`
+  Goal:complete unique source/occurrence attribution.
+  - [x] ISSUE:candidate admission alone does not cover actual source.
+  - [x] ROOT CAUSE (edge coverage):actual source/role APIs reviewed;N/R/N+R before allocation/scans;
+    candidate kernel unchanged;rc=0.
+  - [x] FIX:unique source index retains every original occurrence.
+  - [x] ADDRESSED (edge coverage):cargo test --test mirror_piece_edge_coverage_contract
+    --test mirror_piece_edge_manifest_contract:4+5 pass;rc=0. Full invocation in proof receipt.
+  - [x] NO REGRESSION (edge coverage):API3/book13,clippy/fmt/build/map/render/901 spans pass;rc=0.
+  - [x] LOCKSTEP:book/live align;promotion: declined (existing identity/geometry boundary).
+  Proof:target/history-proof-0730-mirror-edge-coverage/;Commit:STITCHCAD-G1-0730.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.edges.contours`
   Status: `pending`
   Goal:explicit reflected contour winding/direction and construction/fold mapping from actual source.

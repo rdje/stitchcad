@@ -13,6 +13,8 @@ pub fn with_edges(run: impl FnOnce(DeclaredMirrorPieceIdentity<'_>)) {
                 (7, "latent"),
                 (4, "hole"),
                 (6, "other"),
+                (8, "spare"),
+                (5, "spare_b"),
             ]
             .into_iter()
             .map(|(tag, key)| {
@@ -22,9 +24,9 @@ pub fn with_edges(run: impl FnOnce(DeclaredMirrorPieceIdentity<'_>)) {
                 )
             })
             .collect(),
-            [2, 9, 4, 6].into_iter().map(LocalTag::new).collect(),
+            [2, 9, 4, 6, 8, 5].into_iter().map(LocalTag::new).collect(),
         );
-        let limits = EdgeOutputRoleCatalogLimits::new(5, 4, 22);
+        let limits = EdgeOutputRoleCatalogLimits::new(7, 6, 34);
         let catalog = raw.admit(limits).expect("complete edge catalogue");
         let roles = metadata
             .bind_edge_roles(&catalog, limits)

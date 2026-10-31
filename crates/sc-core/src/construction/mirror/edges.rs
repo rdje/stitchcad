@@ -6,6 +6,11 @@ use crate::{
 };
 use core::fmt;
 use std::collections::BTreeMap;
+mod coverage;
+pub use coverage::{
+    MirrorPieceEdgeCoverage, MirrorPieceEdgeCoverageError, MirrorPieceEdgeCoverageLimits,
+    MirrorPieceEdgeCoverageRefusal, MirrorPieceMappedEdgeOccurrence,
+};
 /// Original unadmitted edge-role/source declaration;neither field supplies geometry evidence.
 /// ```compile_fail
 /// use sc_core::{construction::MirrorPieceEdgeCandidate,ontology::*};
