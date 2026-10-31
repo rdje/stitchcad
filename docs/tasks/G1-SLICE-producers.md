@@ -906,7 +906,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   No implementation change during discussion; split migration leaves before implementation.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete shared numerical-body probe runtime/locality review after coupled implementation;
   retain scoped feature evidence without claiming complete transitive compiler/build locality.
   Schedule:after .5d.4 coupled feature completion,before producer/locality signoff. Feature probes own explicit
@@ -915,7 +915,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   omission guards,focused unchanged-source consumer;no global cache or foreign repository write.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1`
   Status: `done`
-  Goal:scoped four-entry inventory/effect/native boundary verified0659;broader n16/D156 remains.
+  Goal:scoped four-entry inventory/effect/native boundary verified0659;broader D156 remains.
   Paths: docs/tasks/artifacts/formula_structure/root_body_faults.py;docs/tasks/artifacts/formula_structure/arc_body_faults.py;docs/tasks/artifacts/formula_structure/forward_body_faults.py;docs/tasks/artifacts/formula_structure/inverse_body_faults.py
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.1.inventory`
   Status: `done`
@@ -928,7 +928,7 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal:0659 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part819.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2`
-  Status: `in_progress`
+  Status: `done`
   Goal:tangent/platform entry locality review under parent schedule/acceptance;feature evidence is scoped.
   Paths: docs/tasks/artifacts/formula_structure/tangent_body_faults.py;docs/tasks/artifacts/formula_structure/tangent_resource_body_faults.py;docs/tasks/artifacts/formula_structure/irrational_platform.py
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.inventory`
@@ -951,33 +951,35 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal:0664 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part824.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer`
-  Status: `in_progress`
+  Status: `done`
   Goal:fresh actual tangent/resource fault consumers and observed native/Chrome execution;
   independently preserve sources/full restored artifacts and close only declared n16 scope.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer.native`
   Status: `done`
-  Goal:fresh actual tangent/resource faults and restored original native artifacts;independent
-  read-only receipt checks and exact source/legacy/snapshot preservation before browser acceptance.
-  Paths: docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py
-  - [x] ISSUE:effect models cannot certify actual tangent/resource compiled faults or restoration.
-  - [x] ROOT CAUSE (WHY + WHERE):actual original tangent_body_faults.py and
-    tangent_resource_body_faults.py commands each complete,rc=0;five baseline/22 compiled failures
-    bind complete independent original fixture rows. Modeled receipts are a different proof scope.
-  - [x] FIX:retain unique protected captures,source/legacy preflight and fresh restored native
-    artifacts. Add read-only independent report/log/input/population/snapshot/artifact reader.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py
-    target/irrational_platform_certificate/acceptance-0665-21696 →baseline5/fault22/source550/
-    legacy6614/snapshot2725 exact,rc=0. Receipt4dd2880262f84d41564940b62ba73b0d9d8fe6e9246f0ce1322a4389f3be8297.
-    Reader --self-test refuses eight defective reports;actual group/exclusive capture controls pass.
-  - [x] NO REGRESSION:cargo test --offline --locked -p sc-core --test formula_tangent_oracle_contract
-    --test formula_tangent_resource_contract via local_environment.py →native3+2 pass,rc=0;
-    retained original artifacts exact. Rust1.99.0/b940084d7/LLVM23.1.1/aarch64-apple-darwin.
-    History824 three exact Git spans/book build/git diff --check pass,rc=0. Full .h2.b.v/pre-push owned.
-  - [x] LOCKSTEP:book/live/notes/frontier/producer registry sync. Promotion: declined(existing
-    actual-native/source/restoration contracts). n16/n16.2/consumer remain active;platform child
-    pending. No fresh Chrome/full-suite/app/physical/release verdict;G1 6/18/G0 unapproved unchanged.
-  Commit:STITCHCAD-G1-0665;Verification:actual native faults/independent receipt/restored native artifacts.
+  Goal:0665 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part825.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer.platform`
-  Status: `pending`
+  Status: `done`
   Goal:fresh actual platform native/Chrome baseline and bad-expectation rejection after native child;
   independently retain immutable artifacts,source/temp restoration and tool versions.
+  Paths: docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py
+  - [x] ISSUE:effect models and native-only results cannot certify fresh actual browser execution.
+  - [x] ROOT CAUSE (WHY + WHERE):actual irrational_platform.py completes31 checks/native+Chrome,
+    baseline104/pass and successfully compiled wrong-fixture101/execution RuntimeError trap,rc=0.
+    OS-visible handoff passes;actual direct source/artifact/profile/temp scope only.
+  - [x] FIX:retain fresh immutable platform report/binaries/DOMs/logs/temp seal;extend read-only
+    independent acceptance reader with --platform and complete original consumer-body checks.
+  - [x] ADDRESSED:numerical_acceptance_reader.py --platform --self-test
+    target/irrational_platform_certificate/acceptance-0665-21696 →all native and platform proofs
+    pass;reject eight native/eight platform defective reports,rc=0. Both550-input manifests,
+    legacy6614/snapshots2725/restored native artifacts exact;31 checks/405 rows/six fixtures restore.
+    Receipt6ec359292fac03fffccdd994ea171c838d0375d8865250f7ea0f3a9aa8a306b2.
+  - [x] NO REGRESSION:actual Rust1.99.0/b940084d7/LLVM23.1.1 and Chrome156.0.8078.74,
+    Darwin27.0.0 arm64;four retained native/Wasm binary digests and DOMs exact,rc=0. Original
+    assertion bodies/copy membership/version logs/temp seal/handoff pass;default native evidence
+    fields remain exact with explicit platform-outside-scope label. Native receipt4dd288 unchanged.
+    History825 three Git spans/book build/git diff --check pass,rc=0. No new full-suite verdict.
+  - [x] LOCKSTEP:book/live/notes/frontier/producer registry sync. Promotion: declined(existing
+    actual-platform/independent-evidence contracts). n16.2/consumer/n16 supported direct scope
+    close;next a41 fixture-own audit. Full transitive compiler/browser locality,D156/.h2.b.v/
+    pre-push/app/physical/release retain owners. G1 6/18/G0 unapproved unchanged.
+  Commit:STITCHCAD-G1-0666;Verification:actual native/Chrome capture and independent exact data reader.

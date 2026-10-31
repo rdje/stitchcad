@@ -1,4 +1,4 @@
-"""Read fresh tangent/resource native evidence independently; no compiler/browser or writes."""
+"""Read fresh native evidence and optional Chrome captures; no compiler/browser or writes."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -98,14 +98,30 @@ def refusal_controls(run, snapshot):
     path = recorded_path(paths[0])
     original = json.loads(read(path))
     cases = []
-    value = copy.deepcopy(original);value['scope'] = 'SIMULATED';cases.append(value)
-    value = copy.deepcopy(original);value['simulated_children'] = True;cases.append(value)
-    value = copy.deepcopy(original);value['outcomes'][1]['compile_succeeded'] = False;cases.append(value)
-    value = copy.deepcopy(original);value['outcomes'][1]['cargo_rc'] = 0;cases.append(value)
-    value = copy.deepcopy(original);value['outcomes'][1]['failed_fixture_rows'] = [0];cases.append(value)
-    value = copy.deepcopy(original);value['outcomes'][1]['independent_failure'] = 'unrelated';cases.append(value)
-    value = copy.deepcopy(original);value['snapshot_restored'] = False;cases.append(value)
-    value = copy.deepcopy(original);value['outcomes'] = value['outcomes'][:1];cases.append(value)
+    value = copy.deepcopy(original)
+    value['scope'] = 'SIMULATED'
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['simulated_children'] = True
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'][1]['compile_succeeded'] = False
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'][1]['cargo_rc'] = 0
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'][1]['failed_fixture_rows'] = [0]
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'][1]['independent_failure'] = 'unrelated'
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['snapshot_restored'] = False
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'] = value['outcomes'][:1]
+    cases.append(value)
     reader = globals()['read']
     try:
         for value in cases:
@@ -121,9 +137,179 @@ def refusal_controls(run, snapshot):
     print('acceptance reader:8 defective native reports refused;no writes;rc=0')
 
 
+def platform_report(run, snapshot):
+    """Bind retained DOMs, binaries and complete copied consumers to the actual platform report."""
+    from html.parser import HTMLParser
+    text = read(run / 'platform.log').decode()
+    paths = re.findall(r'(?m)^irrational platform:31 checks/native\+actual Chrome/'
+                       r'bad expectation rejected/originals restored;report=(.+/report\.json);rc=0$', text)
+    assert len(paths) == 1, 'one actual completed platform report required'
+    path = recorded_path(paths[0])
+    platform = json.loads(read(path))
+    assert not platform.get('simulated_children') and 'SIMULATED' not in json.dumps(platform)
+    assert platform['selected_checks'] == 31 and platform['original_fixture_rows'] == 405
+    assert platform['workspace_restored'] and not platform['new_ambient_chrome_entries']
+    expected_sources = snapshot | {'docs/tasks/artifacts/formula_structure/irrational_platform.py',
+        'scripts/local_environment.py', 'docs/tasks/artifacts/artifact_cleanup/cleanup.py',
+        'scripts/check_handoff.sh', 'scripts/handoff_census.py'}
+    assert set(platform['original_sources_unchanged']) == expected_sources
+    verify_hashes(platform['original_sources_unchanged'])
+    verify_hashes(platform['fixtures'])
+    baseline, wrong = platform['outcomes']
+    assert baseline['label'] == 'baseline' and baseline['native_rc'] == 104
+    assert baseline['browser']['status'] == 'pass' and baseline['browser']['marker'] == 104
+    assert baseline['browser']['phase'] == 'completed' and baseline['browser']['imports'] == []
+    assert wrong['label'] == 'wrong-fixture' and wrong['native_rc'] == 101
+    assert wrong['browser']['status'] == 'trap' and wrong['browser']['phase'] == 'executing'
+    assert wrong['browser']['name'] == 'RuntimeError'
+
+    class Result(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.active, self.count, self.parts = False, 0, []
+
+        def handle_starttag(self, tag, attributes):
+            if tag == 'pre' and dict(attributes).get('id') == 'result':
+                self.active = True
+                self.count += 1
+
+        def handle_endtag(self, tag):
+            if tag == 'pre':
+                self.active = False
+
+        def handle_data(self, value):
+            if self.active:
+                self.parts.append(value)
+
+    for outcome in (baseline, wrong):
+        assert set(outcome['binaries']) == {'native', 'wasm'}
+        for artifact in outcome['binaries'].values():
+            assert digest(recorded_path(artifact['path'])) == artifact['sha256']
+        parsed = Result()
+        parsed.feed(read(path.parent / (outcome['label'] + '-dom.html')).decode())
+        assert parsed.count == 1 and json.loads(''.join(parsed.parts)) == outcome['browser']
+        for kind in ('native', 'wasm'):
+            log = read(path.parent / (outcome['label'] + '-' + kind + '-build.log')).decode()
+            messages = [json.loads(line) for line in log.splitlines() if line.startswith('{')]
+            finished = [item for item in messages if item.get('reason') == 'build-finished']
+            assert len(finished) == 1 and finished[0]['success'] is True
+    assert 'degree_-720' in read(path.parent / 'wrong-fixture-native-run.log').decode()
+    assert 'handoff: OK' in read(path.parent / 'handoff.log').decode()
+    for name, expected in (('rustc', platform['rustc']), ('chrome-version', platform['chrome'])):
+        for suffix in ('.log', '-final.log'):
+            assert expected.strip() in read(path.parent / (name + suffix)).decode()
+
+    excluded = {
+        'independent_isqrt_fraction_reference_regenerates_the_entire_root_fixture',
+        'independent_fraction_pi_reference_regenerates_every_original_arc_fixture_byte',
+        'retained_oracle_is_reproduced_without_native_folding_or_pi_input',
+        'independent_oracle_reproduces_the_retained_fixture',
+        'independent_fraction_producer_regenerates_every_frozen_byte',
+        'independent_resource_producer_regenerates_every_frozen_byte',
+    }
+    consumers = ('formula_root_value_contract.rs', 'formula_arc_value_contract.rs',
+        'formula_sincos_value_contract.rs', 'formula_inverse_value_contract.rs',
+        'formula_tangent_oracle_contract.rs', 'formula_tangent_value_contract.rs',
+        'formula_evaluated_tangent_contract.rs', 'formula_tangent_resource_contract.rs',
+        'formula_tangent_prepare_contract.rs')
+    assert set(platform['consumers']) == set(consumers) and set(platform['excluded_host_only']) == excluded
+    copied = path.parent / 'workspace/consumers'
+    expected_files, fixtures = set(consumers), set()
+    for name in consumers:
+        original = read(ROOT / 'crates/sc-core/tests' / name).decode()
+        lines = original.splitlines()
+        functions = []
+        for index, line in enumerate(lines):
+            if line != '#[test]':
+                continue
+            following = index + 1
+            while lines[following].startswith('#['):
+                following += 1
+            match = re.fullmatch(r'fn ([a-z0-9_]+)\(\) \{', lines[following])
+            assert match, 'original test syntax changed;review reader'
+            if match[1] not in excluded:
+                functions.append(match[1])
+        assert platform['consumers'][name] == functions
+        retained = read(copied / name).decode()
+        body, wrapper = retained.removeprefix('#![allow(dead_code)]\n').rsplit('\npub fn platform_check()', 1)
+        assert body == original.replace('#[test]\n', ''), 'original assertion bodies changed'
+        assert re.findall(r'(?m)^    ([a-z0-9_]+)\(\);$', wrapper) == functions
+        for fixture in re.findall(r'include_str!\("([^"\n]+)"\)', original):
+            fixtures.add(fixture)
+            assert read(copied / fixture) == read(ROOT / 'crates/sc-core/tests' / fixture)
+    expected_files.update(fixtures)
+    assert {item.relative_to(copied).as_posix() for item in copied.rglob('*') if item.is_file()} == expected_files
+    assert len(fixtures) == 6 and set(platform['fixtures']) == {
+        'crates/sc-core/tests/' + fixture for fixture in fixtures}
+    assert not recorded_path(platform['temporary_root']).exists()
+    sealed = recorded_path(platform['temporary_sealed_at'])
+    assert sealed.is_dir() and sealed.stat().st_dev == ROOT.stat().st_dev
+    actual_temp = []
+    for item in sorted(sealed.rglob('*')):
+        assert '.git' not in item.relative_to(sealed).parts
+        info = item.lstat()
+        assert info.st_dev == ROOT.stat().st_dev
+        actual_temp.append(dict(path=item.relative_to(sealed).as_posix(), bytes=info.st_size,
+            kind='link' if item.is_symlink() else 'directory' if item.is_dir() else 'file',
+            sha256=digest(item) if not item.is_symlink() and item.is_file() else None,
+            link=os.readlink(item) if item.is_symlink() else None))
+    assert actual_temp == platform['temporary_entries']
+    return dict(platform_report=paths[0], platform_sha256=digest(path),
+                platform_source_files=len(platform['original_sources_unchanged']), platform_checks=31,
+                platform_rows=405, rustc=platform['rustc'], chrome=platform['chrome'], host=platform['host'])
+
+
+def platform_refusal_controls(run, snapshot):
+    import copy
+    paths = re.findall(r'(?m)^irrational platform:.*;report=(.+/report\.json);rc=0$',
+                       read(run / 'platform.log').decode())
+    assert len(paths) == 1
+    path = recorded_path(paths[0])
+    original = json.loads(read(path))
+    cases = []
+    value = copy.deepcopy(original)
+    value['simulated_children'] = True
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'][0]['browser']['marker'] = 0
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'][1]['browser']['phase'] = 'compiled'
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'][1]['native_rc'] = 0
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['original_sources_unchanged'].pop(next(iter(value['original_sources_unchanged'])))
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['workspace_restored'] = False
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['outcomes'][0]['binaries']['wasm']['sha256'] = '0' * 64
+    cases.append(value)
+    value = copy.deepcopy(original)
+    value['temporary_entries'] = [dict(unexpected=True)]
+    cases.append(value)
+    reader = globals()['read']
+    try:
+        for value in cases:
+            globals()['read'] = lambda selected, value=value: json.dumps(value).encode() if selected == path else reader(selected)
+            try:
+                platform_report(run, snapshot)
+            except AssertionError:
+                pass
+            else:
+                raise AssertionError('independent platform reader admitted defective evidence')
+    finally:
+        globals()['read'] = reader
+    print('platform reader:8 defective platform reports refused;no writes;rc=0')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--self-test', action='store_true')
+    parser.add_argument('--platform', action='store_true')
     parser.add_argument('run', help='repository-relative owned acceptance directory')
     args = parser.parse_args()
     run = recorded_path(args.run)
@@ -165,12 +351,18 @@ def main():
         paths = re.findall(r'Running tests/' + target + r'\.rs \(([^)]+)\)', restored)
         assert len(paths) == 1 and digest(artifact) == digest(recorded_path(paths[0]))
         restored_artifacts[target] = dict(path=artifact.relative_to(ROOT).as_posix(), sha256=digest(artifact))
-    print(json.dumps(dict(scope='fresh actual tangent/resource native acceptance;platform pending',
+    result = dict(scope='fresh actual tangent/resource native acceptance;platform outside scope',
         restored_artifacts=restored_artifacts,
         source_files=len(before['sources']), legacy_files_unchanged=len(before['legacy']),
         records=records, baselines=sum(item['baselines'] for item in records),
         compiled_fault_rejections=sum(item['compiled_fault_rejections'] for item in records),
-        restored_snapshot_files=sum(item['restored_snapshot_files'] for item in records), rc=0), indent=2))
+        restored_snapshot_files=sum(item['restored_snapshot_files'] for item in records), rc=0)
+    if args.platform:
+        result.update(platform_report(run, snapshot), scope='fresh actual tangent/resource/native+Chrome acceptance')
+        result['native_source_files'] = result.pop('source_files')
+        if args.self_test:
+            platform_refusal_controls(run, snapshot)
+    print(json.dumps(result, indent=2))
 
 
 if __name__ == '__main__':

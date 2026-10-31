@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0665 — fresh tangent/resource native acceptance
+## STITCHCAD-G1-0666 — fresh actual native and Chrome platform acceptance
 
-- Actual five baselines/22 compiled faults pass;independent source550/legacy6614/snapshot2725 exact.
-  Reader refuses eight defective reports. Restored tangent3/resource2 tests and retained binaries pass.
-- History824/book/diff pass. No fresh Chrome/full-suite verdict;platform acceptance remains next.
-  G1 6/18/G0 unapproved unchanged;full D156/integration/pre-push scopes retain owners.
+- Actual31 native/Chrome checks pass;both bad-expectation builds compile,then native101/Chrome
+  execution trap. Independent DOM/binary/source/copy/temp/version proof and8+8 report refusals pass.
+- Earlier native/source/legacy/snapshot evidence stays exact. History825/book/diff pass. Scoped n16
+  closes;next a41 fixture-own audit. No new full-suite/app/release verdict;G1 6/18/G0 unapproved unchanged.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

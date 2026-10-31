@@ -90,7 +90,7 @@ clear process census,the owned temporary tree moves into the retained run with e
 size/hash census and zero old-path residue. This run's final temporary tree is empty. The first
 probe's empty,time-correlated host directory has ambiguous ownership and is left untouched under
 the shared-cache policy. No outside cache is deleted. Complete transitive compiler/browser
-runtime-locality review remains owned by n16.
+direct runtime-locality review is completed below;complete transitive proof remains D156.
 
 The capture store target/irrational_platform_certificate/ was explicitly protected before
 creation. Generic cleanup refuses it directly and prunes it from the census. The focused cleanup
@@ -386,7 +386,7 @@ sha256:0fee096d24b88963e434182710341cc65fd33d86c2e59118ba017d65311dfeb5
 ```
 
 This closes n16.1's supported four-entry inventory/effect/native boundary on the observed host.
-Tangent/resource/browser entries remain n16.2,the fixture wrapper remains a41,and complete D156
+Tangent/resource/browser acceptance passes below;the fixture wrapper remains a41,and complete D156
 integration retains its owner. No new full-suite,application/device,allocator,physical or human
 release verdict follows from this native acceptance. Historical captures remain immutable.
 
@@ -416,7 +416,7 @@ The temporary root's original device/inode identity must also survive until seal
 Actual collision fixtures preserve competing bytes and perform no compiler/browser execution.
 The read-only watcher independently rejects exclusive-directory,exclusive-file and stale-owner
 reset omissions. These ownership controls are separate from the full-entry effect controls below
-and the pending fresh native/browser acceptance.
+and the fresh native/browser acceptance below.
 
 ## Preflight at the platform child boundary
 
@@ -440,7 +440,7 @@ source,fixture,test and fault sets. Only the owned diagnostic output labels chan
 The focused run checks27 simulated variants,two failure paths and three actual wrapper-body
 omissions,with complete original/copy restoration and actual owned timeout/group/capture controls.
 Simulated compiler outcomes remain explicitly marked;fresh compiled acceptance is still separate.
-The full-entry platform effect controls follow below;fresh native/browser execution remains open.
+The full-entry platform effect controls and fresh native/browser acceptance follow below.
 
 ## Full platform entry effect controls
 
@@ -457,7 +457,7 @@ root replacement and a linked late log destination. Six actual Python-body omiss
 its checks. No failed path can publish acceptance;the linked-log case refuses before activation.
 
 This completes the scoped tangent/platform effects review. Fresh actual tangent/resource kernel
-faults pass below;fresh native/Chrome platform execution remains the next acceptance leaf. Complete transitive compiler/
+faults and fresh native/Chrome platform execution pass below. Complete transitive compiler/
 browser locality and the full D156 integration scope retain their separate owners.
 
 ## Fresh tangent and resource native acceptance
@@ -485,4 +485,40 @@ sha256:4dd2880262f84d41564940b62ba73b0d9d8fe6e9246f0ce1322a4389f3be8297
 The reader is reproducible with python3 -I -B
 followed by docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py and the owned
 acceptance directory above. Add --self-test to exercise the defective-report controls without
-changing any capture. Actual platform native/Chrome acceptance remains the next child leaf.
+changing any capture. The fresh actual platform native/Chrome acceptance follows below.
+
+## Fresh actual platform acceptance after effect repairs
+
+The0666 actual capture again completes all31 original checks natively and in installed Chrome
+WebAssembly. Both wrong-expectation builds compile;native execution then returns101 and actual
+Chrome traps during execution with WebAssembly.RuntimeError. Baseline native execution returns104
+and Chrome reports the complete104 marker with no imports. A compile/protocol error cannot count.
+
+The independent --platform reader verifies both retained DOM results,four retained native/Wasm
+binary digests,all original consumer assertion bodies,the complete copied consumer/fixture set,
+version logs,temporary sealing and the OS-visible handoff result. All six fixtures restore;both
+the native and platform550-input manifests remain exact,alongside the6614 legacy evidence files
+and2725 restored native snapshot files. Eight deliberately defective platform reports are refused,
+in addition to the eight native report controls. The earlier native receipt stays byte-exact.
+
+Observed versions remain Rust1.99.0,b940084d7,LLVM23.1.1,and Chrome156.0.8078.74,on Darwin27.0.0
+arm64. No new ambient Chrome temporary entries appear in the capture's bounded census.
+
+```text
+target/irrational_platform_certificate/0640-20261031T013514679084Z-88934/report.json
+sha256:36bf632ede7579160c2cd88838949ef371525e7ec882f9eca52599bc1f1cad6f
+
+target/irrational_platform_certificate/acceptance-0665-21696/receipt.json
+sha256:6ec359292fac03fffccdd994ea171c838d0375d8865250f7ea0f3a9aa8a306b2
+```
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py --platform --self-test target/irrational_platform_certificate/acceptance-0665-21696
+```
+
+Without --platform,the reader validates native evidence only and explicitly excludes platform
+acceptance from its scope. These results close n16's supported direct entry/source/artifact/
+profile/temp/child boundary on this host. The fixture wrapper's own producer audit remains a41;
+complete transitive compiler/browser locality,full D156 integration and broader application,
+physical and human release acceptance retain their separate owners. No fresh full-suite verdict
+follows from these focused commands.
