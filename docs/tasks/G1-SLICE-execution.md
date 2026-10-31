@@ -859,31 +859,38 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   semantic-effect reconciliation before family closure;actual geometry/authority remains separately owned.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.contours`
   Status: `done`
-  Goal:explicit ordered boundary/hole/construction uses of admitted output tags or retained original
-  DirectedEdges,with actual source Piece association;no forced fresh identities for unchanged edges.
-  Scope:complete nested-group/edge/use/workspace quotas before owner/content;nonempty cut loops,
-  no repeated cut identity,known outputs/exact retained-source membership and every candidate used.
-  Construction occurrences may repeat as existing Piece rules allow. Preserve actual fields/positions;
-  no currentness,geometric closure,trim uniqueness or reference/effect certificate. Retire whole0704
-  and closed0078 node scope exactly for containment;separate historical receipts stay unchanged.
-  - [x] ISSUE:edge provenance alone neither specifies contours nor retains unchanged edge ids.
-  - [x] ROOT CAUSE (slash contours):actual Piece/DirectedEdge rules and admitted-edge contracts
-    read;whole quota/owner/loop/member/coverage cases and authentic source/use fields pass,rc=0.
-  - [x] FIX:explicit output/retained uses,complete group/N/R/M/conservative workspace admission,
-    exact source membership,cut uniqueness and candidate coverage;construction repetitions preserved.
-  - [x] ADDRESSED (slash contours):local_environment.py -- cargo test --offline --locked -p
-    sc-core --test slash_spread_contour_contract →3 pass,rc=0;actual mixed fields/orders,
-    original retained ids/directions,all refusals and repeated construction occurrences.
-  - [x] NO REGRESSION (slash contours):nearest edges3/compiler3/actual slash book4/selected
-    clippy/fmt/book/render/diff/history874 four exact Git spans pass,rc=0. Initial large-error and
-    test-index lints fixed by borrowed policy,derived repeated-edge diagnostic and checked test access;
-    no boxing/suppression. Separate historical receipt suffix unchanged;no geometry/currentness proof.
-  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: declined (API-specific;existing identity/G1-G2 policy).
-  Verification:native6/rustdoc7;Commit:STITCHCAD-G1-0705. Next .reconciliation.references.
+  Goal:0705 contours;[whole scope/proofs](../history/stitchcad-devnotes-part875.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references`
-  Status: `pending`
+  Status: `active`
   Goal:explicit source coverage/retirement/repair and trim-selection contract;no copied or guessed
   point map. Actual current geometry/correspondence remains .5f.3/.5f.4.geometry/G2/G3.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.eligibility`
+  Status: `done`
+  Goal:readonly exact declared-source query with all retained/source/bridge-endpoint eligibility;
+  preserve ambiguity/gaps,no output Param,ledger fold,geometry/liveness or repair-discharge proof.
+  Scope:complete N/R/M and maximum-match counts before frame/scope scans;borrow original policy.
+  Retained identities coalesce with all occurrence evidence;each source candidate keeps its original
+  field;bridge start/end bank occurrences stay distinct. Record actual source count on contour proof.
+  Share whole existing contour fixture with only access qualifiers changed. Retire whole0705;
+  focused native/current contour/compiler/book checks;actual disposition/trim contracts follow.
+  - [x] ISSUE:source eligibility includes retained ids and both bridge endpoints,not only ranges.
+  - [x] ROOT CAUSE (slash eligibility):actual source/contour/provenance contracts and published
+    SplitFragments accessor read;both bridge directions/reversed cut and exact frame cases pass,rc=0.
+  - [x] FIX:complete N/R/M and2N+1 admission before frame/scope scans;retained identity once
+    with all occurrences,original source candidates and distinct bridge Start/End bank alternatives.
+  - [x] ADDRESSED (slash eligibility):local_environment.py -- cargo test --offline --locked -p
+    sc-core --test slash_spread_reference_query_contract →4 pass,rc=0;authentic fields/both directions,
+    quota/scope/gap/alias cases and R counts source repetitions,not deduplicated index entries.
+  - [x] NO REGRESSION (slash eligibility):contours3/compiler3/actual slash book5/selected clippy/
+    fmt/book/render/diff/history875 three exact spans and fixture move pass,rc=0. Corrected test-only
+    SplitFragments accessor and explicit panic paths;no lint suppression. Whole original contour
+    test suffix unchanged;fixture differs only by access qualifiers/format. No geometry/currentness proof.
+  - [x] LOCKSTEP:book/native/live/frontier sync;promotion: promoted (reference journal decision gains answers).
+  Verification:native7/rustdoc8;Commit:STITCHCAD-G1-0706. Next .references.disposition.
+- ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition`
+  Status: `pending`
+  Goal:explicit whole source coverage/retention/retirement/visible repair and trim-selection intent;
+  eligibility is not a mapped/current reference. Actual G2/ledger/bus evidence stays separately owned.
 - ID: `G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.semantics`
   Status: `pending`
   Goal:actual Piece metadata/fold/copy/semantic-reference/effect reconciliation before native family

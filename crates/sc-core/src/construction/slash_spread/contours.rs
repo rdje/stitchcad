@@ -479,6 +479,7 @@ impl SlashSpreadContours {
             source,
             limits,
             workspace_entries,
+            source_edge_count: r,
             uses,
         })
     }
@@ -517,6 +518,7 @@ pub struct AdmittedSlashSpreadContours<'a> {
     source: &'a Piece,
     limits: &'a SlashSpreadContourLimits,
     workspace_entries: usize,
+    source_edge_count: usize,
     uses: Vec<Use<'a>>,
 }
 impl<'a> AdmittedSlashSpreadContours<'a> {
@@ -544,6 +546,11 @@ impl<'a> AdmittedSlashSpreadContours<'a> {
     #[must_use]
     pub const fn workspace_entries(&self) -> usize {
         self.workspace_entries
+    }
+    /// Complete actual original source occurrences,including repetitions;not unique index entries.
+    #[must_use]
+    pub const fn source_edge_count(&self) -> usize {
+        self.source_edge_count
     }
     /// All original occurrences:boundary,holes in order,then construction;no deduplication.
     pub fn uses(

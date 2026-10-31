@@ -6,6 +6,12 @@ use crate::{
 };
 use core::fmt;
 mod contours;
+mod references;
+pub use references::{
+    SlashSpreadBridgeEndpoint, SlashSpreadReferenceMatch, SlashSpreadReferenceMatchKind,
+    SlashSpreadReferenceOrigin, SlashSpreadReferenceQuery, SlashSpreadReferenceQueryError,
+    SlashSpreadReferenceQueryLimits, SlashSpreadReferenceQueryRefusal,
+};
 mod edges;
 pub use contours::{
     AdmittedSlashSpreadContours, SlashSpreadContourEdge, SlashSpreadContourError,

@@ -85,3 +85,18 @@ operations. Canonical explicit-tag declarations can record an already identified
 minting a new EntityId or retiring net geometry. This clarification changes neither stored-reference
 immutability nor the primitive's exact ambiguity/gap/repair semantics. Actual derived mapping and
 role continuity remain separately owned contracts and G2/G3 evidence.
+
+## Declared source eligibility0706
+
+answers: "does slash source eligibility prove a current mapped reference?" · "can both bridge endpoints share an edge id?"
+
+Native slash eligibility queries read exact declared source frames and retain all reference
+alternatives. A retained identity contributes once with every original use available as evidence;
+source candidates retain explicit tags. A bridge contributes distinct stationary/moving Start/End
+occurrences at its original cut bound. Both share an EdgeRef but are different position alternatives;
+an EdgeRef-only deduplication cannot establish unique point correspondence.
+
+Unique/Ambiguous/Gap classify those declarations only. No output Param,journal fold,implicit alias,
+physical point equivalence,canonical retirement or repair discharge follows. Later ledger changes
+leave the original metadata inspectable while undeclared child aliases refuse. Actual mapping,
+current frame/liveness,trim/source coverage and authorized repair/publication remain separate owners.

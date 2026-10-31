@@ -229,3 +229,76 @@ measured fullness. Missing original source portions and dependent semantic refer
 explicit reconciliation. Actual trim selection,closure,current sources,geometry/error bounds and
 bus authority remain separately owned. Zero/no-new-edge outcome policy is also owned by semantic
 reconciliation;the nonempty candidate primitive must never be satisfied with fabricated geometry.
+
+## Native declared-source reference eligibility
+
+`AdmittedSlashSpreadContours::query_source_reference` classifies declared eligibility for an
+original `EdgeAnchor`. It is a readonly metadata query,not a journal fold,actual geometry result
+or permission to repoint a semantic reference. The exact provided anchor is owned unchanged by
+success or error;the complete contour/source context and caller-owned policy remain borrowed.
+
+`SlashSpreadReferenceQueryLimits` explicitly bounds complete N candidates,R original source
+occurrences and M contour occurrences. All quotas and checked2N+1 potential match slots precede
+source/frame scans. The contour proof records actual R at admission,including duplicate source
+construction uses;queries check it without rebuilding or undercounting a deduplicated index.
+There is no query-path allocation. Repeated calls/iteration and whole query batches keep their
+own caller work budget;these counts do not certify whole storage or geometry execution resources.
+
+Source frames and scope are explicit:
+
+| Original frame | Admitted query scope |
+| --- | --- |
+| An edge held by the actual original source Piece | Its whole normalized unit interval |
+| An external input cut edge | Its declared selected cut interval |
+| An external candidate source edge | Union of its declared source intervals |
+| An alias or any undeclared source identity | Typed SourceEdge refusal |
+
+Unknown source identity precedes outside-scope refusal. A known external frame queried outside
+all its declared domains returns `SourcePosition`. An uncovered point inside valid scope returns
+a `Gap` query. Membership uses exact original edge ids and normalized arclength parameters;
+Reversed traversal changes neither interval bounds nor original Lower/Upper cut-end names.
+No current-child alias is silently followed and no registered source existence is proved by a name.
+
+```rust
+use sc_core::{construction::*,ontology::EdgeAnchor};
+fn query_slash_source<'a>(contours:&'a AdmittedSlashSpreadContours<'a>,anchor:EdgeAnchor,
+    limits:&'a SlashSpreadReferenceQueryLimits)
+    ->Result<SlashSpreadReferenceQuery<'a>,SlashSpreadReferenceQueryError<'a>> {
+    contours.query_source_reference(anchor,limits)
+}
+```
+
+`matches()` returns the retained original identity once,then candidate matches in original edge
+manifest order. A positive `Source` domain contributes its authentic candidate view when it contains
+the query. A straight bridge at the exact queried original cut bound contributes two bank endpoint
+occurrences,one Stationary and one Moving,in that bridge's declared Start/End order. These are
+`SlashSpreadBridgeEndpoint` declarations,not computed output Params or proof of a nonzero bridge.
+Both directions are explicit:StationaryToMoving starts at Stationary;MovingToStationary starts at Moving.
+
+A source candidate used in several contours still contributes one candidate identity. Multiple
+uses of a retained edge likewise contribute one retained identity,while `match.retained_uses()`
+returns every original retained occurrence in its authored order. No first occurrence substitutes
+for that evidence. Different candidate tags remain distinct even with equal source data;coordinate,
+name or numeric-amount equality does not authorize coalescing. Both endpoints of one bridge share
+an EdgeRef but remain different eligibility occurrences;edge identity alone is not a match key.
+
+`kind()` counts all matches as `Unique`,`Ambiguous` or `Gap`. For a retained original source,an
+output9 using that source,and output2 bridging its upper cut end:
+
+| Query | Declared matches | Classification |
+| --- | --- | --- |
+| Interior of the first source | Retained original,source candidate9 | Ambiguous |
+| Exact upper cut bound | Retained original,source9,bridge2 Start and End | Ambiguous |
+| Repeatedly retained second source | One retained identity with all occurrence evidence | Unique |
+| Original second source omitted from the result | none | Gap |
+
+These are declared reference alternatives,not physical point-equivalence or current-liveness
+certificates. Coincident bridge/fragment endpoints are not silently equated. A later real ledger
+split leaves the original metadata query inspectable;querying its new child as an undeclared alias
+refuses. Gap/ambiguity creates no ledger edit,canonical role retirement or repair discharge.
+
+Private match views retain their actual query and original candidate fields. Reverse iteration
+reverses occurrence order without changing tags or bank/endpoint declarations. The maximum2N+1
+slots are a conservative bound,not an observed count or allocation footprint. Actual source maps,
+current resolution,trim coverage/retirement/visible repair,semantic ownership and atomic publication
+still need their separately owned disposition/G2/G3/bus contracts before use or family closure.

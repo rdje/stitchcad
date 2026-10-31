@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — admit slash contours with retained source identities
+## _(2026-10-31 UTC)_ — retain all declared slash source-reference alternatives
 
-0705 admits explicit boundary/hole/construction uses of new output tags or retained original DirectedEdges against the actual target Piece. Group/N/R/M and conservative2N+R+K+M bounds precede owner/content. No repeated cut identity or unused candidate;construction repetitions follow existing Piece rules.
-Actual raw uses,positions,directions,candidate fields,source Piece and borrowed policy remain inspectable. Retained references use exact original source membership without renaming or alias substitution. Initial strict large-error/index lints led to borrowed policy,derived repeated-edge data and checked test access.
-Contours3/nearest edges3/compiler3/actual slash book4/selected clippy/fmt/book/render/diff/history874 four exact Git spans pass. No boxing or lint suppression;actual source/original fields retained. Closed0078 node scope retired for containment;its separate historical receipt suffix is byte-identical.
-LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: declined (API-specific;existing identity/G1-G2 policy). Whole0704 retained874. Native source/trim/reference and metadata/fold/copy/effect/zero-outcome contracts follow;actual geometry/currentness/history/bus remain owned. D372 persists.
+0706 checks complete N/R/M and2N+1 slots before exact declared source/frame scopes. Retained identity appears once with all occurrence evidence;source candidates remain authentic;both bridge bank Start/End alternatives stay distinct. No mapped Param,ledger fold,alias substitution or repair discharge.
+Contour proof records actual R including source repetitions,not membership-set size. Query/error retain original anchor,context and borrowed policy. Whole fixture moved with9 functions/4 fields exposed;old contour test suffix unchanged. Protected target/history-proof-0706-reference-fixture/.
+Query4/contours3/compiler3/actual slash book5/clippy/fmt/book/render/diff/history875 three exact spans and fixture proof pass. Test SplitFragments accessor/panic paths corrected to actual return type/checked extraction. Both bridge directions,reversed cut,gaps,external scope and later aliases verified.
+LIVE states/G1 6/18/G0 unapproved unchanged;Product note updated. promotion: promoted (reference journal decision gains answers). Whole0705 retained875. Source disposition/trim/semantic/zero-outcome contracts follow;actual G2/maps/currentness/history/bus stay owned. D372 persists;PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

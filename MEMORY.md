@@ -1,22 +1,21 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0705;derive HEAD/ahead from Git;push cadence400.
-- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references — explicit
-  source coverage/retirement/repair and trim-selection contract. Activate/split before code.
-  .semantics owns metadata/fold/copy/effect reconciliation and explicit zero/no-new-edge outcomes.
-- Native contour plan combines admitted output tags with retained original DirectedEdges. Actual
-  source Piece/borrowed limit policy retained;complete group/N/R/M/conservative workspace bounds
-  before owner/member/cut/coverage checks. Cut identities unique;construction repetitions remain.
-  Original uses/directions/positions and source ids preserved. Native6/compiler3/actual slash book4/
-  clippy/fmt/book/render pass;whole0704+closed0078 node retained874;separate receipt suffix unchanged.
-- Repeated-cut diagnostic derives identity from the original occurrence;no boxing/lint suppression.
-  Limits are borrowed unchanged. Contour admission is not geometric closure/currentness/authority.
-- Whole6172B slash body moved0704 to drafting-slash-output-contracts.md;protected exact-move proof
-  target/history-proof-0704-output-book/. Old anchors remain. SUMMARY120/cap120;contain before growth.
-- Shared edge catalogue keeps same-type Offset aliases;0703 extraction proof protected in
-  target/history-proof-0703-shared-edge-roles/. Actual role matching/history/G2/maps/bus still owned.
-- Slash contour admission leaves source coverage/trim/reference retirement,fold/copy/metadata/effect
-  reconciliation,actual current geometry and publication unresolved under their specific owners.
+- Latest unit:STITCHCAD-G1-0706;derive HEAD/ahead from Git;push cadence400.
+- Next:G1-SLICE.5f.1.c.slash.outputs.manifest.declaration.reconciliation.references.disposition —
+  explicit source coverage/retention/retirement/visible repair and trim-selection intent. Activate/split
+  before code;eligibility gives no actual mapped/current reference or repair discharge.
+- Native declared-source query checks complete N/R/M and2N+1 slots before exact frame/scope scans.
+  Retained identity once with all occurrence evidence;source candidates original;bridge bank Start/End
+  alternatives distinct even with one EdgeRef. Unique/Ambiguous/Gap are metadata classifications only.
+  Actual source R recorded on contour proof,including repetitions. Native7/compiler3/actual slash book5/
+  clippy/fmt/book/render pass;whole0705 retained875. Reference decision promoted;no world/live certificate.
+- Whole contour fixture shared with9 functions/4 fields made public;original test suffix unchanged.
+  Protected proof target/history-proof-0706-reference-fixture/. Published SplitFragments.first returns
+  EdgeRef directly;test paths use checked expectation extraction. No lint suppression or query allocation.
+- Contour plan retains original source ids and borrowed policy;no geometric closure,currentness or
+  publication authority. .semantics owns metadata/fold/copy/effect and explicit zero/no-new-edge outcomes.
+- Whole6172B slash body moved0704;proof target/history-proof-0704-output-book/. Old anchors remain.
+  SUMMARY120/cap120;contain before growth. Shared edge aliases/proof0703 remain protected.
 - Native offset-output checkpoint0691–0701 completed with focused component checks,not a combined gate.
   Empty candidate lists already refuse with typed Empty,retaining raw/bound/policy;no duplicate wrapper.
   Catalogue emptiness and role absence are separate metadata states,never geometric collapse evidence.
