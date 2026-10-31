@@ -13,10 +13,20 @@ pub fn with_context(
         return edges::with_edges(|identity| complete_context(identity, point_candidates, run));
     }
     let (_, piece) = sources::fixture();
-    let input = sources::input(10, 100, axis);
+    with_context_piece(&piece, axis, point_candidates, run);
+}
+
+pub fn with_context_piece(
+    piece: &Piece,
+    axis: MirrorAxis,
+    point_candidates: Vec<MirrorPiecePointCandidate>,
+    run: impl FnOnce(MirrorPieceContours<'_>, AdmittedMirrorPiecePoints<'_>),
+) {
+    let input = MirrorPieceCopy::new(EntityId::from_bits(10), piece.id(), axis)
+        .expect("explicit source/axis");
     let source_limits = MirrorPieceSourceLimits::new(2, 8);
     let source = input
-        .bind_piece(&piece, &source_limits)
+        .bind_piece(piece, &source_limits)
         .expect("whole source");
     let cut_policy = MirrorPieceCutPolicy::new(
         1,

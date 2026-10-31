@@ -55,6 +55,11 @@ pub use correspondence::{
     MirrorPieceCorrespondenceRefusal, MirrorPieceCorrespondenceRequirement,
     RequiredMirrorPieceCorrespondence, RequiredMirrorPieceCorrespondenceSource,
 };
+mod copies;
+pub use copies::{
+    BoundMirrorPieceSourceCopies, MirrorPieceSourceCopyError, MirrorPieceSourceCopyLimits,
+    MirrorPieceSourceCopyRefusal,
+};
 
 /// Deliberately authored reflection-axis mode,not inferred from selected geometry.
 /// Actual nondegeneracy,straightness,common frame and current sources remain G2/program checks.

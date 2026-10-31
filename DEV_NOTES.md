@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — require complete mirror reflection and reference-map evidence
+## _(2026-10-31 UTC)_ — preserve actual mirror source physical copies
 
-0732 binds actual point/contour proposals to one actual canonical Piece parent under complete E/P/R quotas,then matches axis mode. Equal ids or reconstructed parents cannot substitute.
-Axis-specific requests and all six common source/frame/edge/point/contour/accuracy/preservation obligations remain mandatory. Shared/zero provider ids and N0 point metadata remove none.
-Native4+4/API4/output book6,selected lint/fmt/build/map/render pass0;old kernels unchanged,whole0731 spans903 exact0. Fixture reuses prior default path and explicit range-axis path without unused helpers.
-Promotion: declined (existing original-frame/evidence boundary). Native manifest requests close;physical-copy policy next. No accepted provider,map,accuracy,currentness,issuance,repair or geometry proof. Actual execution/full integration remain owed. G1still6/18/G0 unapproved.
+0733 admits whole CutPlan C before source association. Original source quantity/mirroring governs every copy;separate result cut choices never replace it. Actual ids/fields/orientations/order retained.
+Source quantity4/pairs and result quantity1 remain distinct;unrelated copies consume C. Actual source Single/PairMember reflection refusal precedes a simultaneous quantity mismatch;quantity precedes pair balance.
+Native3+4/API3/output book7,selected lint/fmt/build/map/render pass0;old kernels unchanged,whole0732 spans904 and whole historical Dart0014 task905 exact0. Original historical proof retained without rerun.
+Promotion: declined (existing cut/source/evidence boundary). Result retention/retirement/issuance plan and companion association next. No new copies,source mutation,current Design/global freshness,accepted providers,physical/semantic effects or full integration proof. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

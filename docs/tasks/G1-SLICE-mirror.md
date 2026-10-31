@@ -78,20 +78,29 @@ All original mirror goals/ids/proof links copied exactly before the scoped chang
   Goal:0731 mirror contours;[whole scope/proofs](../history/stitchcad-devnotes-part903.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.manifest.correspondence`
   Status: `done`
-  Goal:complete native original-frame reflection/map evidence requests.
-  - [x] ISSUE:point/contour proposals need one actual parent and complete requests.
-  - [x] ROOT CAUSE (mirror requests):actual source/axis/map APIs reviewed;whole E/P/R before parent/
-    mode checks;old kernels unchanged;rc=0.
-  - [x] FIX:same actual Piece,axis-specific and six mandatory common sources.
-  - [x] ADDRESSED (mirror requests):cargo test --test mirror_piece_correspondence_contract
-    --test mirror_piece_contour_contract:4+4 pass;rc=0. Full invocation in receipt.
-  - [x] NO REGRESSION (mirror requests):API4/output book6,lint/fmt/build/map/render/903 spans pass;rc=0.
-  - [x] LOCKSTEP:book/live align;promotion: declined (existing original-frame/evidence boundary).
-  Proof:target/history-proof-0732-mirror-correspondence/;Commit:STITCHCAD-G1-0732.
+  Goal:0732 correspondence requests;[whole scope/proofs](../history/stitchcad-devnotes-part904.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.copies`
-  Status: `pending`
+  Status: `in_progress`
   Goal:explicit actual source/result physical-copy policy and complete CutPlan/companion association;
   retain existing copy identities,separate newly issued copies,no ordinal-derived or reused identity.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.source`
+  Status: `done`
+  Goal:actual complete source-copy association.
+  - [x] ISSUE:new result cut choices cannot replace original source-copy obligations.
+  - [x] ROOT CAUSE (source copies):actual CutPlan/source APIs reviewed;whole C before target scan;
+    original source quantity/mirroring used;old kernels unchanged;rc=0.
+  - [x] FIX:all original source ids/orientations/order retained without copying or mutation.
+  - [x] ADDRESSED (source copies):cargo test --test mirror_piece_source_copy_contract
+    --test mirror_piece_correspondence_contract:3+4 pass;rc=0. Full invocation in receipt.
+  - [x] NO REGRESSION (source copies):API3/output book7,lint/fmt/build/map/render/904-905 spans pass;rc=0.
+  - [x] LOCKSTEP:book/live align;promotion: declined (existing cut/source/evidence boundary).
+  Proof:target/history-proof-0733-mirror-source-copies/;Commit:STITCHCAD-G1-0733.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.plan`
+  Status: `pending`
+  Goal:explicit result-copy retention/retirement/issuance proposals under actual canonical result cut policy.
+- ID: `G1-SLICE.5f.1.c.mirror.outputs.copies.companion`
+  Status: `pending`
+  Goal:actual complete companion/CutPlan association;no ordinal pairing or transfer of source neighbours.
 - ID: `G1-SLICE.5f.1.c.mirror.outputs.semantics`
   Status: `pending`
   Goal:explicit complete semantic/mark/reference/sewing consumer policy and required original source

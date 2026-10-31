@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0732 — require complete mirror reflection and reference-map evidence
+## STITCHCAD-G1-0733 — preserve actual mirror source physical copies
 
-- Whole E/P/R quotas precede actual shared Piece lineage and original axis-mode checks.
-- Axis-specific and six mandatory common evidence requests retain original fields and complete parents.
-- Empty point metadata and shared provider identities discharge no actual correspondence obligation.
-- Native8/API4/output book6 and focused lint/fmt/build/map/render/history903 checks pass.
-- Native manifest requests close;provider/currentness/geometry/issuance/physical/semantic proof remains owed.
+- Complete CutPlan quota precedes original source quantity,orientation and paired-population association.
+- Preserve every original source copy id/definition/order;new result quantity supplies no source default.
+- Native7/API3/output book7 and focused lint/fmt/build/map/render/history904-905 checks pass.
+- Whole historical Dart0014 protocol remains exact in905;its original verification scope is retained.
+- Result-copy intents and companion association remain next;currentness/issuance/geometry/effects stay owned.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 
