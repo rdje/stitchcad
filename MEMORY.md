@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0752;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.true.outputs.manifest in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32/walk17 nodes complete;truing copy/Piece/edge-role context complete;refit manifest next.
-- Truing edge roles bind cached whole D/A/key-byte limits then actual operation;constant work,
-  actual complete parents,empty/inactive metadata legal. No fitted result,history or issuance implied.
-  Native8/API4/book2/lint/fmt/build/map/render pass;proof target/history-proof-0752-truing-edge-roles/.
+- Latest unit:STITCHCAD-G1-0753;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.true.outputs.manifest.domain in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32/walk17 nodes complete;truing source-range attribution complete;selected-domain binding next.
+- Truing candidates retain original tags/positive ranges under N/2N,owner and ordered entry checks.
+  Empty/unowned proposals are metadata,not coverage/no-op/fit;logical output tuples issue no topology.
+  Native7/API5/book3/lint/fmt/build/map/render pass;proof target/history-proof-0753-truing-candidate-entries/.
 - Mirror known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.

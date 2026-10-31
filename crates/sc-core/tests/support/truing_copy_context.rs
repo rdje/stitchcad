@@ -7,6 +7,13 @@ pub fn id(bits: u128) -> EntityId {
 #[path = "seam_edit_sources.rs"]
 pub mod sources;
 pub fn with_copies(shared: bool, run: impl FnOnce(BoundTruingCopyInventory<'_>)) {
+    with_materials(shared, None, run);
+}
+pub fn with_materials(
+    shared: bool,
+    materials: Option<[EntityId; 2]>,
+    run: impl FnOnce(BoundTruingCopyInventory<'_>),
+) {
     let f = sources::fixture(shared);
     assert_eq!(f.marks.len(), 1);
     let fit = Tolerance::new(
@@ -31,9 +38,13 @@ pub fn with_copies(shared: bool, run: impl FnOnce(BoundTruingCopyInventory<'_>))
     let inventory = PieceInventory::new(
         f.pieces
             .iter()
-            .map(|p| {
-                Piece::new(p.definition().clone(), &f.ledger)
-                    .expect("actual independently born Piece")
+            .enumerate()
+            .map(|(index, p)| {
+                let mut definition = p.definition().clone();
+                if let Some(material) = materials.and_then(|ids| ids.get(index).copied()) {
+                    definition.material = MaterialAssignment::Assigned(material);
+                }
+                Piece::new(definition, &f.ledger).expect("actual independently born Piece")
             })
             .collect(),
     )

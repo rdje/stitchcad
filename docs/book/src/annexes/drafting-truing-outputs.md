@@ -108,3 +108,58 @@ fit provider. Active membership likewise supplies no evaluated curve or issued i
 output manifests,reference/endpoint/stop mappings,deterministic variant/refit policy,actual history,
 geometry/length-fit evidence,current Design,all-copy effects and atomic authoring authority remain
 required. A caller-supplied role tag cannot grant topology issuance or canonical publication.
+
+## Original candidate roles and source ranges
+
+`TruingEdgeManifest` owns an explicit operation and ordered `TruingEdgeCandidate` collection.
+Each candidate retains an original local output tag and positive held `EdgeRange`. The range's
+edge and exact from/to parameters are metadata,not a curve fit or a geometric parameter map.
+`admit` binds this whole proposal to actual `BoundTruingEdgeRoles` under
+`TruingEdgeManifestLimits::new(N,W)`,producing `AdmittedTruingEdges`.
+
+```rust
+use sc_core::{construction::*,ontology::{EntityId,EdgeRange,LocalTag}};
+fn proposal(source:EdgeRange)->TruingEdgeManifest {
+    TruingEdgeManifest::new(EntityId::from_bits(1000),vec![
+        TruingEdgeCandidate::new(LocalTag::new(9),source),
+        TruingEdgeCandidate::new(LocalTag::new(2),source),
+    ])
+}
+fn admit<'a>(raw:&'a TruingEdgeManifest,roles:&'a BoundTruingEdgeRoles<'a>)
+    ->Result<AdmittedTruingEdges<'a>,TruingEdgeManifestError<'a>> {
+    raw.admit(roles,TruingEdgeManifestLimits::new(2,4))
+}
+```
+
+Checked2N,whole candidate and workspace quotas,and actual original operation equality precede
+candidate scans/index allocation. Original candidate order checks duplicate tag,undefined role,
+inactive role,self-supplied edge creator,then actual selected/counterpart Piece and assigned-Material
+creator aliases. A PointRef cannot substitute for the required EdgeRange. The known Piece/Material
+checks inspect those two actual cached owners only;they are not a complete namespace census.
+No registry lookup,geometry evaluation or whole inventory scan occurs here.
+
+A tag index and original association list use2N new logical entries,not allocator bytes or earlier
+owned storage. Work is O(N log(N+D+2)),for D admitted catalogue definitions. Repeated source ranges
+with distinct roles remain separate proposals. For roles9/2 both naming source interval1/4–3/4,
+admission retains both original ranges and their order. It proves no coverage or admissible sharing
+of those overlapping attributions. Missing active catalogue roles are not automatically retired.
+
+`manifest()`, `roles()` and `limits()` retain the actual whole original parents and policy.
+`edges()` traverses original candidate order in both directions;`edge(tag)` queries in
+O(log(N+2)) work. Each authentic `TruingOutputEdge` lends its complete `owner()`,original
+`index()`,actual `candidate()`,active catalogue `role()` and actual original `source()` range.
+`logical_output()` declares the actual operation/tag EdgeRef tuple;it neither mints topology nor
+authorizes reuse or publication. No accepted prefix escapes any quota/owner/original-entry refusal.
+
+An explicitly empty manifest can admit with N0/W0 as presence metadata while active roles remain
+in the same actual catalogue. This does not certify an empty refit,no-op or retired entity/role.
+An unlisted creator555 can likewise remain an attributed range without source-existence or selected-
+domain proof. Mandatory later domain/coverage checks must refuse unsuitable sources before any
+complete result can be accepted. Original source owners,span/ease/stops,quantitative fit provider,
+role metadata and raw candidates remain unchanged on success/refusal.
+
+Source-domain coverage,explicit refit/no-op semantics,endpoint/stop/reference mappings,deterministic
+curve/refit variant policy and actual current geometry remain required. None follows from positive
+source parameters,complete candidate admission,an active output role or a declared logical tuple.
+Actual current Design/history,all-copy/observer effects,authoring authority and atomic publication
+retain their separate execution owners.

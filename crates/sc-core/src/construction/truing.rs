@@ -9,6 +9,11 @@ pub use copies::{
 };
 mod roles;
 pub use roles::{BoundTruingEdgeRoles, TruingEdgeRoleBindingError, TruingEdgeRoleBindingRefusal};
+mod manifest;
+pub use manifest::{
+    AdmittedTruingEdges, TruingEdgeCandidate, TruingEdgeManifest, TruingEdgeManifestError,
+    TruingEdgeManifestLimits, TruingEdgeManifestRefusal, TruingOutputEdge,
+};
 mod binding;
 pub use binding::{BoundConstrainedTruing, TruingBindingError, TruingBindingRefusal};
 

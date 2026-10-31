@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0752 — bind native truing edge-output role metadata
+## STITCHCAD-G1-0753 — attribute original truing role and source-range candidates
 
-- Bind admitted typed edge roles to actual complete truing copy/Piece/source under whole D/A/key-byte quotas.
-- Cached counts precede actual operation equality;constant no-scan association preserves actual parents.
-- Empty/inactive metadata keeps full source obligations and grants no output,history,fit or issuance proof.
-- Native3+5/API4/book2,lint/fmt/build/map/render pass0;prior kernels/tests/fixture/fence and926 spans exact.
-- Complete refit manifest,reference/variant policy and actual geometry/all-copy/atomic execution stay owed.
+- Admit explicit ordered role/positive-range metadata under N/2N,actual operation and first-entry checks.
+- Borrow original ranges/active roles/whole context;logical tuples and empty proposals grant no fitted result.
+- Compact creator diagnostics preserve whole raw ranges through the actual manifest without error boxing.
+- Native4+3/API5/book3,lint/fmt/build/map/render pass0;prior kernels/tests/fences and927/928 Git spans exact.
+- Selected-domain/coverage/refit-no-op/reference/variant policy and actual geometry/atomic effects stay owed.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

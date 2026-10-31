@@ -306,11 +306,7 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
   Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part413md).
 - ID: `G1-SLICE.5e.3.5`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/window15.md#stitchcad-devnotes-part413md).
-  Retention0294 owned .6.2.2.b.1:
-  - [x] ROOT CAUSE0294: git show4e98649 whole five completed adapter summaries retained413; Python byte/hash comparison rc=0.
-  - [x] ADDRESSED0294: whole source/hash exact in413, Python comparison rc=0.
-  - [x] NO REGRESSION0294: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part413.md whole public file exact, Python comparison rc=0; no reader change.
+  Goal:whole retained scope/proofs in [record928](../history/stitchcad-devnotes-part928.md).
 - ID: `G1-SLICE.5e.4`
   Status: `active`
   Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.
@@ -915,20 +911,26 @@ retain their complete task branch,original goals and proof links in the bounded 
   Goal:0751 actual copy/Piece binding;[whole scope/proofs](../history/stitchcad-devnotes-part926.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.roles`
   Status: `done`
-  Goal:truing edge roles.
-  - [x] ISSUE:edge roles need actual truing owner.
-  - [x] ROOT CAUSE (truing roles):catalogue/copy contracts reviewed;
-    cached D/A/B quotas then operation;rc=0.
-  - [x] FIX:actual parents;no scanning.
-  - [x] ADDRESSED (truing roles):cargo test --test truing_edge_role_binding_contract
-    --test truing_copy_inventory_contract:3+5 pass;rc=0;commands in receipt.
-  - [x] NO REGRESSION (truing roles):API4/book2,lint/fmt/build/map/render;
-    old kernels/tests/fixture/fence/926 exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing role-association rule).
-  Proof:target/history-proof-0752-truing-edge-roles/;Commit:STITCHCAD-G1-0752.
+  Goal:0752 actual edge-role binding;[whole scope/proofs](../history/stitchcad-devnotes-part927.md).
 - ID: `G1-SLICE.5f.1.c.true.outputs.manifest`
+  Status: `in_progress`
+  Goal:candidate/domain/coverage and refit/no-op policies;actual maps/fit/variant policy stay owned.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.entries`
+  Status: `done`
+  Goal:candidate attribution.
+  - [x] ISSUE:refit tags need explicit original source ranges.
+  - [x] ROOT CAUSE (truing candidates):source/role/range contracts inspected;
+    N/2N before operation and original entry checks;rc=0.
+  - [x] FIX:actual ranges/roles/parents.
+  - [x] ADDRESSED (truing candidates):cargo test --test truing_edge_manifest_contract
+    --test truing_edge_role_binding_contract:4+3 pass;rc=0;commands in receipt.
+  - [x] NO REGRESSION (truing candidates):API5/book3,lint/fmt/build/map/render;
+    old kernels/tests/fences,927/928 Git spans exact;rc=0.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing role-attribution rule).
+  Proof:target/history-proof-0753-truing-candidate-entries/;Commit:STITCHCAD-G1-0753.
+- ID: `G1-SLICE.5f.1.c.true.outputs.manifest.domain`
   Status: `pending`
-  Goal:refit manifest.
+  Goal:selected-source domain.
 - ID: `G1-SLICE.5f.1.c.true.variants`
   Status: `pending`
   Goal:review v1 truing coverage against the envelope before family closure;constrained refit
