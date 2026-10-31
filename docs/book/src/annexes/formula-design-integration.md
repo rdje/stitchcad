@@ -10,6 +10,8 @@ Actual Design-backed source and ordered recipe kind checking is also implemented
 Native dependency/cycle admission can now feed a same-root combined scalar plan below.
 Native paired source/recipe execution and real recipe storage are implemented below.
 Actual Design plan execution and finite independent paired scalar acceptance are implemented below.
+Native [fresh paired replay](formula-recipe-execution.md#replay-with-actual-derived-sources) preserves
+formula scope;it grants no fresh containing-Design admission.
 A normalized expression is syntax with converted literals;it is not a checked kind,numerical
 result or stored binding. A kind proof still supplies no cycle or numerical acceptance.
 See [source validation and execution](formula-source-proofs.md) and

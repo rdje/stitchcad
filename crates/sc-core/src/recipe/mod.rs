@@ -211,8 +211,8 @@ pub use execution::{
     FormulaScalarSourceGraphReadKind, FormulaScalarSourceGraphSource,
     FormulaScalarSourceGraphWorkspace, FormulaScalarSourceRecipeError,
     FormulaScalarSourceRecipeErrorCause, FormulaScalarSourceRecipeRead,
-    FormulaScalarSourceRecipeReadKind, FormulaScalarSourceRecipeSourceError,
-    FormulaSourceGraphExecutionLimits,
+    FormulaScalarSourceRecipeReadKind, FormulaScalarSourceRecipeReplayError,
+    FormulaScalarSourceRecipeSourceError, FormulaSourceGraphExecutionLimits,
 };
 
 mod checked_statement;

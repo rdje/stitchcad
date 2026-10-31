@@ -338,31 +338,32 @@ Paired seam command execution joins this canonical sibling under .6.5.3.2.tracki
 
 - ID: `G1-SLICE.5e.4.1`
   Status: `done`
-  Goal: reusable fresh scalar recipe replay from the original prepared plan,without prior values,
-  read slots or cached bindings. Preserve proof/input identity,explicit limits and tangent policy.
-  Scope:actual scalar plan/worker/error API and focused replay tests;retire whole0670 live proof
-  to immutable history for task/journal headroom. Paired source replay follows in .2;storage .7,
-  geometry .5f.3 and full integration/pre-push verification remain separately owned.
-  Acceptance:statement-one execution on every attempt;changed context earns only current reads;
-  late failure exposes no accepted prefix and cannot alter an earlier accepted result.
-  - [x] ISSUE:whole scalar replay requires rebuilding consumed admission/preparation by hand.
-  - [x] ROOT CAUSE (WHY + WHERE):Python Git-source assertion at23ac0e43 confirms evaluate(self)
-    consumes plan and no execution/replay module existed,rc=0;actual worker already atomic.
-  - [x] FIX:borrow plan,re-admit whole proof,prepare original inputs/policy and evaluate fresh;
-    typed Admission/Preparation/Execution errors preserve actual causes without accepted prefix.
-  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
-    formula_scalar_recipe_replay_contract →3 pass,rc=0;independent expected stored values/current
-    reads,late failure with held result,tangent zero/success and empty recipe. No byte-format claim.
-  - [x] NO REGRESSION:formula_scalar_recipe_execution_contract →9 pass including independent
-    reference regeneration,rc=0;targeted replay rustdoc1,clippy/fmt/book/history833 three Git spans
-    and diff checks pass,rc=0. Initial test indexing lint corrected with first();full CI deferred.
-  - [x] LOCKSTEP:book/live/frontier/notes sync;no G1/G0 approval change. Promotion:declined(local
-    API uses existing private-result/fresh-runtime doctrine). Paired replay .2 next;full .4 pending.
-  Verification:focused native12/rustdoc1;Commit:STITCHCAD-G1-0671.
+  Goal:0671 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part834.md).
 - ID: `G1-SLICE.5e.4.2`
-  Status: `pending`
+  Status: `done`
   Goal:fresh paired recipe/source replay preserving graph/input/policy identity and empty cache;
   failures leave earlier accepted results intact. Activate after .1 focused acceptance.
+  Scope:borrow prepared pair,rebuild both original plans,retain early foreign-owner refusal and
+  typed preparation/runtime causes. Focus actual Design fixture/cache/context/failure acceptance;
+  retire whole0671 closed scope/journals for headroom. No storage/geometry/full-identity claim.
+  - [x] ISSUE:paired fresh replay requires rebuilding both consumed plans without prior cache.
+  - [x] ROOT CAUSE (WHY + WHERE):Python Git-source assertion at a81da54c confirms paired
+    evaluate consumes both plans and checks exact canonical owner before runtime,rc=0.
+  - [x] FIX:borrow both plans,retain early owner refusal,re-admit/prepare original proofs and
+    independent policies,then execute new paired runtimes;typed stage errors retain actual causes.
+  - [x] ADDRESSED:local_environment.py -- cargo test --offline --locked -p sc-core --test
+    design_structure_contract source_recipe:: →9 pass,rc=0;includes three fresh replay cases,
+    foreign refusal,fractional roots/new ordinals,empty cache/late failure and separate Tan policies.
+  - [x] NO REGRESSION:same focused9 retain original six paired cases,rc=0;new rustdoc1,
+    selected clippy/fmt/book/history834 three exact Git spans and git diff --check pass,rc=0.
+    Initial fixture count4 missed assertion header;now checks exact five names. Full CI deferred.
+  - [x] LOCKSTEP:book/live/notes/frontier sync;promotion: declined (existing private-result/cache doctrine).
+    Native result only;Design/currentness/storage/geometry/byte identity open. Literal marker fixed.
+  Verification:focused paired9/rustdoc1;Commit:STITCHCAD-G1-0672.
+- ID: `G1-SLICE.5e.4.3`
+  Status: `pending`
+  Goal:recover actual Design replay/admission interfaces and implement the first safe containing
+  Design replay slice;preserve fresh logical admission and native pair scope. Full .4 remains open.
 
 - ID: `G1-SLICE.5e.3.6`
   Status: `done`

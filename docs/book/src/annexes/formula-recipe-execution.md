@@ -4,7 +4,7 @@
 > scalar subset from its actual complete static recipe proof. It evaluates real lets/assertions in
 > declaration order,stores each successful binding once and retains actual executed source reads.
 > Derived reads now execute through [actual source-backed Design recipes](formula-design-integration.md#execute-the-private-actual-design-plan).
-> Explicit-policy direct/source-backed Tan recipes and fresh direct scalar replay are available
+> Explicit-policy direct/source-backed Tan recipes and fresh direct/paired scalar replay are available
 > below. Geometry,corrupt-load validation,full replay/platform identity and complete language/bus/
 > physical acceptance retain their separate owners. No release claim follows.
 
@@ -50,9 +50,50 @@ cause. A late assertion failure returns an error with its actual statement and q
 comparison. It exposes no accepted statement/read prefix and leaves the original plan,canonical
 inputs and any earlier accepted result unchanged. Replaying an empty recipe accepts zero outputs
 with zero allowances. Tangent replay preserves the explicitly selected per-call limits;zero limits
-still refuse an executed tangent call. Derived execution uses the source-backed worker;fresh
-paired-source replay remains the next slice. This focused implementation does not define persisted
+still refuse an executed tangent call. Derived replay uses the paired entry below.
+This focused implementation does not define persisted
 result bytes,corrupt-load validation,geometry replacement or cross-platform result identity.
+
+## Replay with actual Derived sources
+
+`FormulaScalarRecipePlan::replay_with_sources(&sources,context)` borrows both prepared plans and
+returns a fresh `FormulaExecutedScalarSourceRecipe`. Plans retained by an earlier paired result
+can supply the same operation:
+
+```rust
+use sc_core::recipe::*;
+fn replay<'a>(first:&FormulaExecutedScalarSourceRecipe<'a>,
+    context:FormulaScalarExecutionContext<'a>)
+    ->Result<FormulaExecutedScalarSourceRecipe<'a>,FormulaScalarSourceRecipeReplayError<'a>> {
+    first.recipe_plan().replay_with_sources(first.source_plan(),context)
+}
+```
+
+The exact canonical input owner must match before either fresh preparation. Equal cloned input
+content is insufficient. Replay then repeats whole recipe admission and source preparation with
+their original proof/graph owners,complete logical quotas and independently selected recipe/source
+tangent policies. Both runtimes use the supplied context. Each attempt starts at statement one
+with empty source completion slots and fresh read records. Within that attempt,repeated supplier
+demands still share the once-completed unbound source root;only actual lets store a rounded binding.
+
+For a Derived length `width=1 mm/3`,a Derived general Length `triple=width*3` still yields1000
+micrometres. Repeated replay keeps the original unbound width1000/3 and restarts its completion
+ordinal at one. If a new context selects a branch that reads neither source,the new result has no
+completed sources;the earlier result keeps its original two completed sources. A subsequent attempt
+that demands them recomputes them and restarts their ordinals. Nothing seeds the new cache.
+
+`FormulaScalarSourceRecipeReplayError` distinguishes `RecipeAdmission`,`RecipePreparation`,
+`SourcePreparation` and the original `Execution` cause. That last variant also retains the early
+foreign-owner refusal with both actual inventories,proof/graph and selected policies. A later
+supplier or assertion failure exposes no accepted source/statement prefix and leaves both borrowed
+plans and earlier accepted results intact. A zero tangent policy in the recipe can fail its own
+call while the supplier policy remains sufficient;the reverse preserves the real requesting recipe
+statement and supplier failure. No policy is silently substituted for the other.
+
+Focused tests use actual Design-owned sources,original fractional roots,changed-context empty
+cache,late assertion failure,foreign-owner refusal and both independent tangent policies. This API
+returns native formula execution;fresh containing-Design admission/currentness,geometry replacement,
+storage/load validation and complete persisted result identity remain separate obligations.
 
 ## Whole checked-recipe admission
 

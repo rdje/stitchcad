@@ -291,4 +291,6 @@ pub use source_recipe_result::{
     FormulaExecutedScalarSourceRecipe, FormulaScalarSourceRecipeRead,
     FormulaScalarSourceRecipeReadKind,
 };
+mod source_recipe_replay;
 mod source_recipe_worker;
+pub use source_recipe_replay::FormulaScalarSourceRecipeReplayError;

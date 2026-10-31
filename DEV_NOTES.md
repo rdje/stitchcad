@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — replay scalar recipes from fresh state
+## _(2026-10-31 UTC)_ — replay actual paired recipe and source plans
 
-0671 adds plan.replay(context):re-admit original whole proof/limits,prepare original inputs/tangent policy,then execute new private runtime. The plan remains borrowable,including one retained by an earlier accepted result;no prior read slot,binding or cache is copied.
-Native replay3/existing recipe9 pass,including independent reference regeneration. Fractional binding stores once;changed physical context changes branch/read trace;late assertion refuses without altering held results. Explicit tangent zero/success and empty zero-allowance recipes pass.
-Targeted rustdoc1/clippy/fmt/book/diff and history833 three exact Git spans pass. Initial indexing lint in the new fixture corrected with first(). No persistence bytes,paired/geometry/storage replay or full-suite acceptance claimed;those owners remain live.
-LIVE states/G1 6/18/G0 unapproved unchanged. Promotion:declined(existing private-result/fresh-runtime doctrine). Whole0670 retained833. Next .5e.4.2 paired source replay;D156 nonblocking audits remain deferred. PNT continues.
+0672 adds replay_with_sources borrowing both plans,with exact canonical owner checked before fresh preparation. Original whole proof/graph,logical quotas and independent tangent policies stay pinned;new runtimes own an empty source cache and new recipe/source read slots.
+Actual Design fixture paired9 pass:three new replay cases plus existing six. Original unbound1000/3 root,stored1000,new ordinals,changed-context empty cache and late assertion isolation pass;foreign clone and recipe/supplier zero Tan policies retain actual failures.
+Targeted rustdoc1/clippy/fmt/book/diff and history834 three exact Git spans pass. Initial expected count4 omitted the real assertion header;fixture now checks all five read names. Returned result is native scope;no fresh containing-Design,storage/geometry or full byte identity claim.
+LIVE states/G1 6/18/G0 unapproved unchanged. Promotion:declined(existing private-result/cache doctrine). Whole0671 retained834. Next .5e.4.3 recover containing-Design replay/fresh-admission interfaces;full integration/pre-push and nonblocking D156 audits remain owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
