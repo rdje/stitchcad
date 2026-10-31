@@ -3,12 +3,12 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0664 — complete full platform entry effects
+## STITCHCAD-G1-0665 — fresh tangent/resource native acceptance
 
-- D363:align browser temporary store aliases and explicitly admit copied fixture mutation. Actual
-  full-entry model/six failure paths/six body omissions pass with source/copy/temp/latest controls.
-- Dispatch/inventory/ownership/history823/book checks pass. Receipts explicitly simulate children;
-  fresh numerical native/Chrome acceptance remains next. G1 6/18/G0 unapproved unchanged.
+- Actual five baselines/22 compiled faults pass;independent source550/legacy6614/snapshot2725 exact.
+  Reader refuses eight defective reports. Restored tangent3/resource2 tests and retained binaries pass.
+- History824/book/diff pass. No fresh Chrome/full-suite verdict;platform acceptance remains next.
+  G1 6/18/G0 unapproved unchanged;full D156/integration/pre-push scopes retain owners.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

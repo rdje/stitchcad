@@ -949,30 +949,35 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Goal:0663 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part823.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.effects.platform`
   Status: `done`
-  Goal:finish scoped platform full-entry mutable/copy/browser/temp/failure controls.
-  Paths: docs/tasks/artifacts/formula_structure/irrational_platform.py;docs/tasks/artifacts/ci_environment/platform_runtime_contract.py;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh
-  - [x] ISSUE:D363 P1 new helper guard refuses full entry:TMPDIR changes without MAKE_TMPDIR.
-  - [x] ROOT CAUSE (WHY + WHERE):platform_runtime_contract.py --diagnose
-    254e136a84ea1d7922214ba92211d4dc8cf44393 →actual full main refuses first child with
-    effective MAKE_TMPDIR is not local;no compiler/browser dispatched,rc=0. Helper-only model
-    missed entry preparation. Existing owned fixture reads/mutations also need explicit admission.
-  - [x] FIX:align MAKE_TMPDIR with selected TEMP;declare copied fixture input/mutable/output
-    before reads,mutation and restoration. Retain full actual-entry watcher with simulated children.
-  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/ci_environment/platform_runtime_contract.py
-    →full-entry success/six failures/six actual omissions pass,rc=0. Complete source/output/dir
-    plans precede activation;caller stores/argv/versions/copied bytes/temp seal/latest are checked.
-    Build failure,surviving bad expectation,interruption,version drift,temp replacement and early
-    log alias cannot publish acceptance. Receipts explicitly identify simulated compiler/browser.
-  - [x] NO REGRESSION:platform_dispatch_contract.py →two successes/eight refusals/four simulated
-    cleanups/four omissions;python_numerical_inventory_contract.py →four545/six reds/platform31/
-    405/seven reds/three ownership controls pass,rc=0. History823 four Git spans exact;book build
-    and git diff --check pass,rc=0. Complete native/browser verdict remains .consumer.
-  - [x] LOCKSTEP:book/live/notes/frontier/producer registry sync;D363 fixed. Promotion: declined
-    (existing environment consistency/producer admission contracts). effects children complete;
-    n16/n16.2 and consumer active/pending. G1 6/18/G0 unapproved unchanged. Complete transitive
-    compiler/browser locality and full D156/.h2.b.v/pre-push/app/release retain separate owners.
-  Commit:STITCHCAD-G1-0664;Verification:actual full-entry plans/effects with simulated children.
+  Goal:0664 completed scope; [whole scope/proofs](../history/stitchcad-devnotes-part824.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer`
-  Status: `pending`
+  Status: `in_progress`
   Goal:fresh actual tangent/resource fault consumers and observed native/Chrome execution;
   independently preserve sources/full restored artifacts and close only declared n16 scope.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer.native`
+  Status: `done`
+  Goal:fresh actual tangent/resource faults and restored original native artifacts;independent
+  read-only receipt checks and exact source/legacy/snapshot preservation before browser acceptance.
+  Paths: docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py
+  - [x] ISSUE:effect models cannot certify actual tangent/resource compiled faults or restoration.
+  - [x] ROOT CAUSE (WHY + WHERE):actual original tangent_body_faults.py and
+    tangent_resource_body_faults.py commands each complete,rc=0;five baseline/22 compiled failures
+    bind complete independent original fixture rows. Modeled receipts are a different proof scope.
+  - [x] FIX:retain unique protected captures,source/legacy preflight and fresh restored native
+    artifacts. Add read-only independent report/log/input/population/snapshot/artifact reader.
+  - [x] ADDRESSED:python3 -I -B docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py
+    target/irrational_platform_certificate/acceptance-0665-21696 →baseline5/fault22/source550/
+    legacy6614/snapshot2725 exact,rc=0. Receipt4dd2880262f84d41564940b62ba73b0d9d8fe6e9246f0ce1322a4389f3be8297.
+    Reader --self-test refuses eight defective reports;actual group/exclusive capture controls pass.
+  - [x] NO REGRESSION:cargo test --offline --locked -p sc-core --test formula_tangent_oracle_contract
+    --test formula_tangent_resource_contract via local_environment.py →native3+2 pass,rc=0;
+    retained original artifacts exact. Rust1.99.0/b940084d7/LLVM23.1.1/aarch64-apple-darwin.
+    History824 three exact Git spans/book build/git diff --check pass,rc=0. Full .h2.b.v/pre-push owned.
+  - [x] LOCKSTEP:book/live/notes/frontier/producer registry sync. Promotion: declined(existing
+    actual-native/source/restoration contracts). n16/n16.2/consumer remain active;platform child
+    pending. No fresh Chrome/full-suite/app/physical/release verdict;G1 6/18/G0 unapproved unchanged.
+  Commit:STITCHCAD-G1-0665;Verification:actual native faults/independent receipt/restored native artifacts.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n16.2.consumer.platform`
+  Status: `pending`
+  Goal:fresh actual platform native/Chrome baseline and bad-expectation rejection after native child;
+  independently retain immutable artifacts,source/temp restoration and tool versions.

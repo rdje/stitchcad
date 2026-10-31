@@ -457,5 +457,32 @@ root replacement and a linked late log destination. Six actual Python-body omiss
 its checks. No failed path can publish acceptance;the linked-log case refuses before activation.
 
 This completes the scoped tangent/platform effects review. Fresh actual tangent/resource kernel
-faults and native/Chrome execution remain the next acceptance leaf. Complete transitive compiler/
+faults pass below;fresh native/Chrome platform execution remains the next acceptance leaf. Complete transitive compiler/
 browser locality and the full D156 integration scope retain their separate owners.
+
+## Fresh tangent and resource native acceptance
+
+The0665 capture runs both original tangent wrappers after the effect repairs. All five baselines
+pass,and all22 successfully compiled faults are rejected against their original independent rows:
+three folding,three interval,three execution,six preparation-resource and seven execution-resource
+faults. Compilation failure never counts as a numerical rejection.
+
+The independent read-only reader checks exact source and report membership,Cargo success,
+watched-test panics,complete original rows and all copied file names/bytes. All550 original inputs,
+6614 legacy evidence files and2725 copied snapshot files remain exact. Eight deliberately defective
+reports are refused. Actual owned process-group and exclusive-capture controls also pass.
+
+Fresh tests from the restored original sources pass all three tangent and two resource checks.
+Both resulting native binaries are retained byte-exact. The observed compiler remains Rust1.99.0,
+b940084d7,LLVM23.1.1,on aarch64-apple-darwin. This native acceptance supplies no fresh Chrome,
+full-suite,application,physical or release verdict.
+
+```text
+target/irrational_platform_certificate/acceptance-0665-21696/native-receipt.json
+sha256:4dd2880262f84d41564940b62ba73b0d9d8fe6e9246f0ce1322a4389f3be8297
+```
+
+The reader is reproducible with python3 -I -B
+followed by docs/tasks/artifacts/formula_structure/numerical_acceptance_reader.py and the owned
+acceptance directory above. Add --self-test to exercise the defective-report controls without
+changing any capture. Actual platform native/Chrome acceptance remains the next child leaf.

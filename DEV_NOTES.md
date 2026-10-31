@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — complete full platform entry effects
+## _(2026-10-31 UTC)_ — fresh tangent/resource native acceptance
 
-0664 fixes D363:new helper verification exposes stale MAKE_TMPDIR after full entry chooses TEMP. Actual main diagnostic against254e136a refuses before compiler/browser. Align both values;explicitly admit copied fixture reads/mutation/restoration.
-Full actual-entry watcher passes modeled success/six failure paths/six actual body omissions;plans/caller stores/argv/versions/source+fixture restoration/temp sealing/latest are checked. Receipts identify simulated compiler/browser;no numerical verdict.
-Dispatch two successes/eight refusals/four cleanups/four omissions and original inventory/ownership remain green. History823 four exact Git spans and book build pass;[whole0663](docs/history/stitchcad-devnotes-part823.md) retained.
-LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing environment/producer contracts). Effects children complete;next fresh native/Chrome. Full D156/.h2.b.v/pre-push/transitive/app/release scopes remain owned;PNT continues.
+0665 runs both original native wrappers after effect repairs:five baselines/22 compiled faults pass. Read-only independent reader verifies complete original rows,source550/legacy6614/snapshot2725 exact;its eight defective-report controls refuse.
+Fresh original tangent3/resource2 tests pass;both native artifacts are retained byte-exact. Observed Rust1.99.0/b940084d7/LLVM23.1.1/aarch64-apple-darwin. Actual group/exclusive capture controls pass;no Chrome or broader full-suite verdict.
+Receipt:target/irrational_platform_certificate/acceptance-0665-21696/native-receipt.json SHA4dd2880262f84d41564940b62ba73b0d9d8fe6e9246f0ce1322a4389f3be8297. [Whole0664](docs/history/stitchcad-devnotes-part824.md) retains full-entry effect repair.
+History824 three Git spans/book build/diff pass. LIVE states/G1 6/18/G0 unapproved unchanged. Promotion: declined(existing actual-native/restoration contracts). Next actual platform native/Chrome;full D156/.h2.b.v/pre-push scopes remain owned. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.
