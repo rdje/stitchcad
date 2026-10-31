@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — retain explicit mirrored Piece-copy inputs
+## _(2026-10-31 UTC)_ — separate G1 output contracts from later geometry proof
 
-0684 adds named Piece-copy intent,two-point/range axes,authentic field dependencies and first local self-supply. Mirror4/line4/rustdoc3/lint/fmt/book pass. No output ids,copy policy,current axis or geometry is certified;the fixture signature typo was corrected before checks.
-Window26 packs59 committed raw records after active65/64 blocked commit. Native tar59/407583B and before/candidate/installed1300 logical records/5239453B match;44 original physical files stay exact. Two hash-verified drafts were restored after installation;69 live links route in3 task files.
-Protected target/history-capture-0684 and target/history-proof-0684 retain transaction/independent evidence. Never rerun install after later edits. Whole0683/old ledger/closed source scopes retained847–850. Full geometry/metadata/output policy stays pending.
-LIVE states/G1 6/18/G0 unapproved unchanged. promotion: declined (existing typed source contracts). D369 P1 stage-order cycle is owned and immediate next .1.c.stage-order;remaining schemas/full .5f.4 stay owned. PNT continues.
+0685 fixes D369. Git0680 introduced actual G2 fragment results as a G1 schema prerequisite,while G2 entry requires G1 closed. Offset/slash/mirror output owners now require typed native contracts;actual engine results/mappings retain pending .5f.4.geometry. No geometry or gate criterion is waived.
+Focused Python15 checks pass with original-route and missing-integration-owner fault controls. G1 native declaration acceptance,real architecture spike and G2 entry remain exact;all three output contracts stay pending. Rust is unchanged. Book/rendered/diff/history851/852 four exact Git spans pass.
+Evidence:target/history-proof-0685-stage-order retains actual hashes/check names and exact checked dependency snapshot. This is a targeted planning repair,not implementation/full geometry verification. Output contracts still need native code;real G2/G3 effects and broader .5f.4 remain owned.
+LIVE states/G1 6/18/G0 unapproved unchanged;D369 marked fixed. promotion: declined (existing stage boundary). Whole0684 retained851;closed held-reference scope852. Next remaining .1.c walk-edit inputs;bus remains sole mutation boundary. Keep0684 packing proof;never rerun installer. PNT continues.
 
 [Whole0470 authoring lesson](docs/history/window23.md#stitchcad-devnotes-part624md) retains exact projection/counter/alias proofs.
 [Whole0469 current-retained lesson](docs/history/window23.md#stitchcad-devnotes-part623md) retains exact composition/phase/boundary proof.

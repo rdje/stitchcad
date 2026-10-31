@@ -1195,6 +1195,6 @@ D307–D368:[whole prior ledger](../history/stitchcad-devnotes-part848.md). D334
 
 ## D369 — G1 schema completion incorrectly waits for G2 geometry
 
-P1 owned,next G1-SLICE.5f.1.c.stage-order. Repro:offset.outputs requires actual G2-2D.2 fragments before .5f.1 closes;G2 entry requires G1 closed.
+P1 fixed0685;owner G1-SLICE.5f.1.c.stage-order. Repro:0680 offset.outputs required actual G2 fragments before G1 schema closure;G2 entry requires G1 closed.
 Root:0680 conflated output contract with geometry execution. Impact:cycle can strand product delivery.
-Fix:native contract acceptance separate from actual G2/G3 execution/integration;focused dependency/book checks before resuming schemas.
+Fix:native contract acceptance separate from actual G2/G3 integration (.5f.4.geometry). Focused15/fault controls/book pass;G1 spike/G2 entry and runtime unchanged.

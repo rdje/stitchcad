@@ -19,6 +19,14 @@ Tags identify logical outputs,not positions in a mutable geometry vector. Replay
 operation keeps those references. A topology-changing edit uses the existing retirement/repair
 protocol;it cannot silently reuse an old tag for a different output.
 
+G1's declaration checkpoint implements typed arguments,persistent output roles and manifest
+admission contracts before geometry execution. It does not wait for actual G2/G3 result geometry.
+Offset fragment production,slash region/fullness effects and reflected-copy geometry require their
+real engines and the separate `.5f.4.geometry` integration follow-up. Typed metadata is no geometry
+certificate,and synthetic fragments or transforms cannot stand in for those results. G1's running
+architecture spike still needs real evaluation on the paths it executes;G2's entry requirement of
+G1 closure remains unchanged. This stage split applies to schema acceptance only.
+
 The schemas below retain unevaluated formula documents and canonical references. Parsing a formula
 does not prove its Length/Angle kind,bind a name or produce geometry. Complete static checking must
 validate every argument against its actual prior-operation/always-visible namespace before any

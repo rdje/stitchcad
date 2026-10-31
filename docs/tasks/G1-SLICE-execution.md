@@ -627,15 +627,7 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0571;[proof](../history/window25.md#stitchcad-devnotes-part730md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3`
   Status: `done`
-  Goal: actual held Gather/reference retirement evidence keeps old target IDs and both immediate
-  children;global current identity/resource and trusted bus reserve requirements precede effects.
-  No silent child choice or retarget;repair observations remain distinct from valid publication.
-  Children .1 actual held Gather identity inspection; .2 whole-Design ownership/resource/current
-  integration and explicit trusted reserve boundary. Existing DesignGarment permits held damage
-  for inspection;validate_current checks all constructions and still refuses missing Gather spans.
-  Do not substitute successful repair observation for current or atomic effect readiness.
-  Scoped completion0573:actual identity/graph/whole-owner preparation complete;deferred local
-  checkpoint next. Current repair,real dependencies,trusted stage/publication effects stay owned.
+  Goal:completed held-reference scope;[whole scope/proofs](../history/stitchcad-devnotes-part852.md).
 - ID: `G1-SLICE.6.5.3.2.3.4.3.3.1`
   Status: `done`
   Goal:0572;[proof](../history/window25.md#stitchcad-devnotes-part731md).
@@ -767,6 +759,8 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   walk/true, mirror and join covered; stable output identities/reference contracts, numerical
   argument kinds and semantic preconditions explicit. No formula creates geometry or calls CSP.
   Concrete geometry execution stays G2/G3; missing operation contracts are repaired first.
+  .1 closes on implemented typed declarations/output contracts,not future G2/G3 geometric results;
+  this grants no G1 running-spike waiver or geometry certificate.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5f.1.a`
   Status: `done`
@@ -793,9 +787,10 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0680 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part843md).
 - ID: `G1-SLICE.5f.1.c.offset.outputs`
   Status: `pending`
-  Goal:complete offset output manifest/lineage from actual G2-2D.2 fragment intervals via the
-  published identity-ledger contract;stable tags,unambiguous maps and visible ambiguity/loss.
-  No fixed count or synthetic fragments. Integrate .5f.3;parent .1 remains open until covered.
+  Goal:typed offset output-role/manifest admission contract using the public identity-ledger
+  interface;stable tags,variable cardinality and explicit ambiguity/loss. G1 schema acceptance
+  needs this native contract,not an actual G2 engine. Real G2-2D.2 fragment/results proof belongs
+  .5f.4.geometry;no fixed count,synthetic fragment or geometry certificate.
 - ID: `G1-SLICE.5f.1.c.grainline.inputs`
   Status: `done`
   Goal:0681 completed scope;[whole scope/proofs](../history/window26.md#stitchcad-devnotes-part844md).
@@ -807,44 +802,39 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Goal:0683 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part847.md).
 - ID: `G1-SLICE.5f.1.c.slash.outputs`
   Status: `pending`
-  Goal:explicit bridge/trim/fullness policy and actual new/retired topology/output manifest;
-  unique region/linearity/incidence/domain checks and source mappings via .5f.3/G2/G3.
-  No default connector or guessed region. Full .5f.4 remains deferred.
+  Goal:typed explicit bridge/trim/fullness intent and output-role/manifest admission contract.
+  G1 schema acceptance does not wait for geometric results. Actual unique region/incidence/domain,
+  fullness/topology and source maps belong .5f.4.geometry/G2/G3. No default connector/guessed region.
 - ID: `G1-SLICE.5f.1.c.mirror.inputs`
   Status: `done`
-  Goal:explicit Piece mirror-copy source and two-point/directed-range axis modes,actual borrowed
-  dependencies/local self-supply refusal. No in-place transform/output/geometry claim. Retire
-  whole0683 scope/journals;focused checks/book sync. Full .5f.4 deferred.
-  Record newly reproduced D369 and its immediate stage-order repair owner;retain old ledger tail.
-  Archive65/64 gate required guarded window26 append;drafts retained/restored after exact
-  native cohort/payload comparison. Retire closed stop/retrieval scopes for live bounds.
-  - [x] ISSUE:mirror copy needs actual source/axis mode without implicit result/metadata policy.
-  - [x] ROOT CAUSE (WHY + WHERE):HEADb16dfa9d module absent;glossary mirror/real Piece
-    cut-plan contracts inspected;current native axis/copy inputs retain original fields,rc=0.
-  - [x] FIX:explicit copy/two-point-or-range axis,authentic field views and first local self-supply;
-    no guessed chord/tangent or output identity. D369 logged P1 with next repair owner below.
-  - [x] ADDRESSED (mirror):local_environment.py -- cargo test --offline --locked -p sc-core
-    --test mirror_piece_copy_contract →4 pass,rc=0;both modes,actual field/owner pointers,
-    original self-refusals,source order/repeats and unnormalized traversal remain intact.
-  - [x] NO REGRESSION (mirror):line4/rustdoc3/selected clippy/fmt/book/rendered boundaries/
-    diff/archive gate/history847–850 six exact Git spans pass,rc=0. Fixture signature typo corrected before checks.
-    Window26:native59/407583B payload and before/candidate/installed1300 logical records/5239453B
-    match;44 original physical files exact,rc=0. Drafts restored;69 live routes in3 files verified.
-    Keep target/history-capture-0684 and target/history-proof-0684;never rerun install after edits.
-    No global source/axis/geometry/copy-policy verdict.
-  - [x] LOCKSTEP:book/live/ledger sync;promotion: declined (existing typed source contracts).
-    Current graph/output/geometry/full .5f.4 stay owned;D369 is immediate next,not unowned risk.
-  Verification:native8/rustdoc3;Commit:STITCHCAD-G1-0684. Next stage-order D369.
+  Goal:0684 completed scope;[whole scope/proofs](../history/stitchcad-devnotes-part851.md).
 - ID: `G1-SLICE.5f.1.c.mirror.outputs`
   Status: `pending`
-  Goal:explicit copy metadata/cut-plan/sewing policy and stable fresh Piece/geometry manifest;
-  real current geometry/reference mappings stay .5f.3/G2/G3. No implicit metadata copy/default ids.
+  Goal:typed copy metadata/cut-plan/sewing policy,fresh identity/output-role and manifest admission
+  contract for G1 schemas. Real current reflection/reference mappings stay .5f.4.geometry/G2/G3;
+  native contract acceptance needs no completed geometry engine. No metadata/default-id shortcut.
 - ID: `G1-SLICE.5f.1.c.stage-order`
-  Status: `pending`
+  Status: `done`
   Goal:P1 D369 fix immediately after0684. Repro:offset.outputs waits for actual G2.2 before
   G1 .5f.1 closure;G2 entry waits for G1 closure. Root0680 conflated contract and geometry.
   Split native output contract/schema acceptance from later actual G2/G3 execution/integration;
   preserve all deferred obligations and verify exact dependency/roadmap/book alignment.
+  Scope:native output-contract tasks remain pending but do not wait for actual geometry engines;
+  real G2/G3 result/integration proof retains a separate follow-up. Preserve G1 real spike and
+  G2 entry criteria;no gate/proof waiver or synthetic output. Retire whole0684 and closed held-reference parent for live bounds.
+  - [x] ISSUE:D369 creates G1 schema→G2 engine→G1 closure dependency cycle.
+  - [x] ROOT CAUSE (WHY + WHERE):Python Git0383ded3^/0383ded3/HEAD confirms0680 introduced
+    actual-G2 fragment prerequisite and parent-schema closure condition;cycle reproduced,rc=0.
+  - [x] FIX:all three output owners define native typed contracts;actual G2/G3 results and
+    mappings retain pending .5f.4.geometry. G1 spike/G2 entry/declared acceptance stay exact.
+  - [x] ADDRESSED (D369):Python scoped stage-order assertions →15 pass,rc=0;old route fault
+    recreates cycle,missing real-integration owner refuses;all output contracts remain pending.
+  - [x] NO REGRESSION (D369):actual G1/G2 requirements and Rust bytes unchanged;book/rendered
+    stage-only boundary/diff/history851+852 four exact Git spans pass,rc=0. No geometry/runtime
+    implementation or gate closure claimed. Checked snapshot retained in target/history-proof-0685-stage-order.
+  - [x] LOCKSTEP:ledger/live/book/frontier sync;promotion: declined (existing stage boundary).
+    Output contract implementation and real later geometry verification remain owned.
+  Verification:focused15 and fault controls;Commit:STITCHCAD-G1-0685. Next walk-edit inputs.
 - ID: `G1-SLICE.5f.2`
   Status: `pending`
   Goal: typed ordered operation declarations and formula/geometry graph dependencies.
@@ -886,4 +876,11 @@ Copied byte-exact after closed0494 retirement in649;later live plans/statuses ev
   Acceptance: all v1 schemas/execution owners, canonical result identity, no partial geometry,
   operation-order/cycle/stale-reference failures and Pocket/Buttonhole obligations accounted for.
   Bus .6 remains the mutation boundary; missing G2/G3 execution is not a G1 geometry certificate.
+  Declaration checkpoint .5f.1 is separate;actual later geometry-backed proof stays below.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5f.4.geometry`
+  Status: `pending`
+  Goal:after actual G2-2D.2/G3-GRADING.1/.3 engines exist,verify offset fragments,slash region/
+  fullness/topology,mirror copies and original source/output maps in real replay/publication.
+  This is later geometry-backed integration,not a prerequisite for G1 .5f.1 schema acceptance.
+  No synthetic results,physical/domain proof or whole integration closure before those engines.
