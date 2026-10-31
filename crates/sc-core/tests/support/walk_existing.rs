@@ -27,11 +27,19 @@ pub fn supplied(source: &AdmittedWalkNotchAssignments<'_>) -> Vec<Notch> {
         .collect()
 }
 pub fn with_existing(run: impl FnOnce(BoundWalkExistingNotches<'_>)) {
-    assignments::with_assignments(|assignments| {
+    with_existing_pairs(1, run);
+}
+pub fn with_existing_pairs(pairs: usize, run: impl FnOnce(BoundWalkExistingNotches<'_>)) {
+    let bind = |assignments: AdmittedWalkNotchAssignments<'_>| {
         let notches = supplied(&assignments);
         let existing = assignments
             .bind_existing_notches(&notches, WalkExistingNotchLimits::new(2))
             .expect("complete provided objects");
         run(existing);
-    });
+    };
+    if pairs == 1 {
+        assignments::with_assignments(bind)
+    } else {
+        assignments::with_assignment_pairs(pairs, bind)
+    }
 }

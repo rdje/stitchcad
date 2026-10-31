@@ -66,7 +66,7 @@ this index supplies none of those permissions. Original Notches,owners,fields,co
 held references remain unchanged on success/refusal.
 
 The scoped known-identity exclusions below precede explicit role-to-semantic-identity/retention
-proposals,which remain owned next work. Actual current Design/registry/history,global reservation/nonreuse,
+proposals below. Actual current Design/registry/history,global reservation/nonreuse,
 semantic sharing/correspondence,profile and all-copy effects,geometry and atomic authorized
 publication retain their separate required execution owners.
 
@@ -134,3 +134,63 @@ profile identities are references,not accepted profile values or existence evide
 therefore cannot certify global freshness,absence,kind consistency or reservation,and it cannot
 authorize reuse after retirement. Explicit host identity/retention proposals must still pass the
 complete current Design/private-reserve and semantic sharing/effect/publication requirements.
+
+## Complete present-role host identity proposals
+
+`WalkNotchIdentityManifest` supplies one explicit identity choice for every role actually used by
+an original assigned occurrence. `Retain { role, notch }` names a supplied existing canonical Notch;
+`Propose { role, id }` carries a trusted-host identity proposal from the private reservation workflow.
+This is host plan metadata. A client mutation request cannot name a new id,and native admission
+neither consults that private reserve nor issues an identity.
+
+```rust
+use sc_core::{construction::*,ontology::{EntityId,LocalTag}};
+fn bind<'a>(raw:&'a WalkNotchIdentityManifest,known:&'a BoundWalkNotchIdentityExclusions<'a>)
+    ->Result<AdmittedWalkNotchIdentities<'a>,WalkNotchIdentityError<'a>> {
+    raw.admit(known,WalkNotchIdentityLimits::new(2,4,10))
+}
+let choices=WalkNotchIdentityManifest::new(EntityId::from_bits(10),vec![
+    WalkNotchIdentityIntent::Retain {role:LocalTag::new(9),notch:EntityId::from_bits(701)},
+    WalkNotchIdentityIntent::Propose {role:LocalTag::new(2),id:EntityId::from_bits(500)},
+]);
+assert_eq!(choices.intents().len(),2);
+```
+
+For E original identity entries and M complete original assignments,checked 3E+M precedes the
+whole M,E and workspace quotas,then actual original walk-operation equality. Only then may scans
+and allocation begin. The temporary upper bound covers an M-entry source-role map,E role-index
+entries,E semantic-id entries and E original associations. It counts logical entries,not bytes or
+prior object/index storage. The temporary source-role and semantic-id maps are dropped after
+complete admission;the role index and associations remain. Source-role indexing selects the
+unique authentic catalogue member,never a representative mark,anchor or physical copy.
+
+Each original entry checks duplicate role,actual assigned-role membership,duplicate semantic id,
+then supplied existing-object lookup or scoped known-id exclusion,in that order. Both choice
+kinds participate in the same semantic-id uniqueness check. Complete coverage then follows the
+original source pair/A/B order. Unused active catalogue roles need no choice;an entry naming one
+refuses as unassigned. With only role9 supplied,the first original pair0/A role2 is missing.
+A refusal retains the whole original plan,actual complete parents,explicit policy and first cause;
+no accepted prefix escapes.
+
+`AdmittedWalkNotchIdentities` lends `manifest()`, `known()` and `limits()` unchanged.
+`actions()` traverses original identity-entry order in both directions;`action(role)` returns the
+authentic choice in O(log(E+2)) work. Each action retains its actual owner,index,original intent
+and id field,and actual active catalogue member. `source()` lends either the actual provided
+prior Notch or the actual original proposed id field. No replacement Notch is manufactured.
+Whole admission takes O((E+M)log(E+M+K+X+2)) work,where K is the supplied-Notch index size and
+X the scoped known-id set size. Local tags and EntityIds introduce no string-key comparison cost.
+
+Four original requests in two pairs may explicitly use roles2/9 with proposed ids500/501.
+That is two identity proposals,not four automatically generated ids,and it still proves no shared
+semantic mark. `group_count()`, `retention_count()` and `proposal_count()` report complete choices;
+`workspace_bound()` reports the conservative temporary upper bound. Reordering choices preserves
+identity while changing only original-entry iteration and duplicate positions.
+
+Retaining701 keeps that semantic identity and lends its actual prior object as context. It does
+not decide whether result fields stay unchanged or are explicitly revised,and it grants no
+replacement authority. Pattern owner,anchor and every profile binding still need the explicit
+field/sharing policy and subsequent currentness/effect checks. Unmentioned supplied Notches remain
+untouched;absence from this plan retires no entity or role. Repeated role tags alone accept no
+coalescing across different Pieces,anchors or profiles. An unlisted proposed id,including ordinary
+zero,still needs actual global reservation/nonreuse validation before any publication. Geometry,
+physical-copy correspondence,profile truth,visible repair and authorized atomic edits remain owed.

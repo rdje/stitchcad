@@ -190,16 +190,19 @@ pub use slash_spread::{
 };
 mod walk;
 pub use walk::{
-    AdmittedWalkNotchAssignments, AdmittedWalkSeamEdit, BoundWalkBalancePair,
-    BoundWalkCopyInventory, BoundWalkExistingNotches, BoundWalkNotchAssignment,
-    BoundWalkNotchIdentityExclusions, BoundWalkNotchRoles, BoundWalkSeamEdit, WalkBalanceNotch,
-    WalkBalancePair, WalkCopyInventoryError, WalkCopyInventoryLimits, WalkCopyInventoryRefusal,
-    WalkEditAdmissionError, WalkEditAdmissionRefusal, WalkEditBindingError, WalkEditBindingRefusal,
-    WalkEditLimits, WalkExistingNotchError, WalkExistingNotchLimits, WalkExistingNotchRefusal,
+    AdmittedWalkNotchAssignments, AdmittedWalkNotchIdentities, AdmittedWalkSeamEdit,
+    BoundWalkBalancePair, BoundWalkCopyInventory, BoundWalkExistingNotches,
+    BoundWalkNotchAssignment, BoundWalkNotchIdentityExclusions, BoundWalkNotchRoles,
+    BoundWalkSeamEdit, WalkBalanceNotch, WalkBalancePair, WalkCopyInventoryError,
+    WalkCopyInventoryLimits, WalkCopyInventoryRefusal, WalkEditAdmissionError,
+    WalkEditAdmissionRefusal, WalkEditBindingError, WalkEditBindingRefusal, WalkEditLimits,
+    WalkExistingNotchError, WalkExistingNotchLimits, WalkExistingNotchRefusal,
     WalkNotchAssignmentError, WalkNotchAssignmentLimits, WalkNotchAssignmentManifest,
-    WalkNotchAssignmentRefusal, WalkNotchIdentityExclusionError, WalkNotchIdentityExclusionLimits,
-    WalkNotchIdentityExclusionRefusal, WalkNotchRoleAssignment, WalkNotchRoleBindingError,
-    WalkNotchRoleBindingRefusal, WalkSeamEdit,
+    WalkNotchAssignmentRefusal, WalkNotchIdentityAction, WalkNotchIdentityError,
+    WalkNotchIdentityExclusionError, WalkNotchIdentityExclusionLimits,
+    WalkNotchIdentityExclusionRefusal, WalkNotchIdentityIntent, WalkNotchIdentityLimits,
+    WalkNotchIdentityManifest, WalkNotchIdentityRefusal, WalkNotchIdentitySource,
+    WalkNotchRoleAssignment, WalkNotchRoleBindingError, WalkNotchRoleBindingRefusal, WalkSeamEdit,
 };
 mod truing;
 pub use truing::{

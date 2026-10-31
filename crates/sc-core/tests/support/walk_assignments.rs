@@ -4,16 +4,26 @@ pub mod roles;
 use roles::copies::input::id;
 use sc_core::{construction::*, ontology::*};
 pub fn with_assignments(run: impl FnOnce(AdmittedWalkNotchAssignments<'_>)) {
-    roles::with_roles(1, &[2, 9], |roles| {
+    with_assignment_pairs(1, run);
+}
+pub fn with_assignment_pairs(pairs: usize, run: impl FnOnce(AdmittedWalkNotchAssignments<'_>)) {
+    roles::with_roles(pairs, &[2, 9], |roles| {
         let raw = WalkNotchAssignmentManifest::new(
             id(10),
-            vec![
-                WalkNotchRoleAssignment::new(0, SeamSideId::A, LocalTag::new(2)),
-                WalkNotchRoleAssignment::new(0, SeamSideId::B, LocalTag::new(9)),
-            ],
+            (0..pairs)
+                .flat_map(|pair| {
+                    [
+                        WalkNotchRoleAssignment::new(pair, SeamSideId::A, LocalTag::new(2)),
+                        WalkNotchRoleAssignment::new(pair, SeamSideId::B, LocalTag::new(9)),
+                    ]
+                })
+                .collect(),
         );
         let assignments = raw
-            .admit(&roles, WalkNotchAssignmentLimits::new(1, 2, 4))
+            .admit(
+                &roles,
+                WalkNotchAssignmentLimits::new(pairs, 2 * pairs, 4 * pairs),
+            )
             .expect("complete original occurrences");
         run(assignments);
     });

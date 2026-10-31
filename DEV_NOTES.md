@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-31 UTC)_ — exclude scoped known walk semantic identity references
+## _(2026-10-31 UTC)_ — complete explicit walk semantic identity proposals
 
-0746 checks complete C/I/N/K,then whole H before child lengths,R before creator reads,and checked C+2I+R+14N+9K+3 before id scans/allocation. Set covers supplied copy/Piece/creator/Material refs,original mark creators/six profiles,provided Notch id/owner/creator/six profiles,and operation/graph/selected span.
-Exhaustive profile-field patterns couple6-id accounting to canonical records. Repeated fields consume full allowances;set keys may deduplicate. False lookup means scoped unlisted,not global freshness,kind consistency/history/reservation or reuse authority;all actual parents remain borrowed.
-Native4+4/API3/identity book2,selected lint/fmt/build/map/render pass0;C2/I2/H0/R3/N1/K2 givesW44/distinct24;hole/fold/Materials H1/R5/W46/distinct26;unrelatedK3 W53/distinct33. Old kernels/tests/fixtures/prior fence and whole0745 spans920 exact0;older31219B notes base retained.
-Promotion: declined (existing scoped known-id/nonreuse rule). Explicit host identity/retention plan next;actual current namespace/history/private-reserve/sharing/provider/geometry/all-copy effects/atomic publication/full integration remain owed. G1still6/18/G0 unapproved.
+0747 binds every present role to one explicit retained/proposed semantic id;checked3E+M precedes complete M/E/W quotas,operation,original-entry checks and source pair/A/B coverage. Unused active roles need no choice;duplicate ids across both choice kinds refuse. All actual parents/fields remain borrowed.
+Retain lends the actual supplied prior Notch without field/replacement authority;Propose carries trusted-host metadata,never a new-id client request or reservation. Repeated requests may propose two identities for four occurrences;no sharing accepted. Unmentioned objects stay untouched;absence retires nothing.
+Native6+4/API4/identity book3,selected lint/fmt/build/map/render pass0. Old kernels/tests/two fences,whole0746 spans921 and older31219B notes base exact0. Pair-count helper extension reruns original one-pair exclusion behavior. Proof target/history-proof-0747-walk-identity-plan/.
+Promotion: declined (existing private host identity policy). Native manifest closes;explicit field/sharing policy next. Current namespace/history/private reserve,actual Notch/geometry/profile/all-copy effects/atomic publication/full integration remain owed. G1still6/18/G0 unapproved.
 
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 

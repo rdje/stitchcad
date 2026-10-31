@@ -1,11 +1,11 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-- Latest unit:STITCHCAD-G1-0746;derive HEAD/ahead from Git;push cadence400.
-- Active:G1-SLICE.5f.1.c.walk.outputs.manifest.identities.entries in docs/tasks/G1-SLICE-execution.md.
-  Native mirror32 nodes complete;walk copy/role/attribution/existing/known references complete;host id plans next.
-- Walk scoped id exclusions bound C/I/N/K,H/R then W=C+2I+R+14N+9K+3;all supplied Piece creators/
-  Materials and original request/provided Notch profile refs counted. False is unlisted,not fresh.
-  Native8/API3/identity book2/lint/fmt/build/map/render pass;proof target/history-proof-0746-walk-id-exclusions/.
+- Latest unit:STITCHCAD-G1-0747;derive HEAD/ahead from Git;push cadence400.
+- Active:G1-SLICE.5f.1.c.walk.outputs.sharing in docs/tasks/G1-SLICE-execution.md.
+  Native mirror32 nodes complete;walk manifest/host identity choices complete;field/sharing policy next.
+- Walk explicit present-role Retain/Propose choices use checked3E+M;retain lends actual prior Notch,
+  not unchanged fields/replacement authority. No2N-new-id assumption;unmentioned objects stay intact.
+  Native10/API4/identity book3/lint/fmt/build/map/render pass;proof target/history-proof-0747-walk-identity-plan/.
 - Mirror known copy index excludes scoped typed ids;unlisted is not fresh. Correspondence remains requested evidence.
 - Point query full N/M exact original identity gives Unique/Ambiguous/Gap with actual owner/query/
   candidates/order. No source existence/frame/currentness,issued identity or physical-copy proof.

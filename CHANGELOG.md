@@ -13,13 +13,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 
 
-## STITCHCAD-G1-0746 — exclude scoped known walk semantic identity references
+## STITCHCAD-G1-0747 — complete explicit walk semantic identity proposals
 
-- Complete C/I/N/K,H/R and checked C+2I+R+14N+9K+3 bound known-id scans and index allocation.
-- Supplied Piece creators/Materials,original request and provided Notch fields stay excluded with actual parents.
-- Exhaustive profile accounting;shared values retain whole allowances;unlisted never means globally fresh.
-- Native8/API3/identity book2 and focused lint/fmt/build/map/render/history920 checks pass.
-- Host identity/retention proposals and actual global/semantic/effect/geometry authority remain owned.
+- Complete present-role Retain/Propose host choices require distinct ids under checked3E+M quotas.
+- Actual prior Notches,original proposal fields and complete parents stay borrowed;coverage is pair/A/B.
+- Four occurrences can propose two identities;no implicit new-id count,sharing or retirement.
+- Retained identity grants no unchanged-field/replacement authority;global reservation remains owed.
+- Native6+4/API4/book3,lint/fmt/build/map/render pass0;old kernels/tests/fences and whole921 spans exact.
 
 ## STITCHCAD-G1-0422 — preview actual private Material assignments
 

@@ -874,36 +874,37 @@ retain their complete task branch,original goals and proof links in the bounded 
   Status: `done`
   Goal:0743 actual walk/notch-role binding;[whole scope/proofs](../history/stitchcad-devnotes-part918.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest`
-  Status: `in_progress`
+  Status: `done`
   Goal:complete original pair/side-to-output assignment and explicit semantic identities.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.assignments`
   Status: `done`
   Goal:0744 complete occurrence attribution;[whole scope/proofs](../history/stitchcad-devnotes-part919.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities`
-  Status: `in_progress`
+  Status: `done`
   Goal:explicit proposed semantic Notch identities/retention and complete assigned-role association.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.existing`
   Status: `done`
   Goal:0745 supplied existing Notch objects;[whole scope/proofs](../history/stitchcad-devnotes-part920.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.known`
   Status: `done`
-  Goal:explicit bounded inspected EntityId exclusions;unlisted is not globally fresh.
-  - [x] ISSUE:new identity proposals must avoid definite supplied identity references.
-  - [x] ROOT CAUSE (walk exclusions):actual Piece/Notch/profile/source APIs reviewed;
-    C/I/N/K then H/R and C+2I+R+14N+9K+3 before ids/allocation;rc=0.
-  - [x] FIX:scoped actual-reference set;exhaustive profile accounting,actual parents retained.
-  - [x] ADDRESSED (walk exclusions):cargo test --test walk_notch_identity_exclusion_contract
-    --test walk_existing_notch_contract:4+4 pass;rc=0;full invocation in receipt.
-  - [x] NO REGRESSION (walk exclusions):API3/identity book2,lint/fmt/build/map/render;
-    old kernels/tests/fixtures,prior fence/920 spans exact;rc=0.
-  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing scoped known-id/nonreuse rule).
-  Proof:target/history-proof-0746-walk-id-exclusions/;Commit:STITCHCAD-G1-0746.
+  Goal:0746 scoped known ids;[whole scope/proofs](../history/stitchcad-devnotes-part921.md).
 - ID: `G1-SLICE.5f.1.c.walk.outputs.manifest.identities.entries`
-  Status: `pending`
-  Goal:complete assigned-role retention/host identity proposals;no client new-id request or actual issuance.
+  Status: `done`
+  Goal:complete present-role host identity choices;no field/sharing/issuance acceptance.
+  - [x] ISSUE:assigned roles need complete distinct semantic identity choices.
+  - [x] ROOT CAUSE (walk identities):actual source/existing/reserve contracts reviewed;
+    checked3E+M precedes M/E/W,operation,entry and coverage checks;rc=0.
+  - [x] FIX:explicit retain/propose;actual parents/fields;no2N-id assumption.
+  - [x] ADDRESSED (walk identities):cargo test --test walk_notch_identity_plan_contract
+    --test walk_notch_identity_exclusion_contract:6+4 pass;rc=0.
+  - [x] NO REGRESSION (walk identities):API4/book3,lint/fmt/build/map/render;
+    old kernels/tests/fences,921 spans exact;rc=0;full commands in receipt.
+  - [x] LOCKSTEP:book/live aligned;promotion: declined (existing private host identity policy).
+  Proof:target/history-proof-0747-walk-identity-plan/;Commit:STITCHCAD-G1-0747.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.sharing`
   Status: `pending`
   Goal:explicit mark sharing/coalescing under actual pattern owners/anchors/profile fields.
+  Retained identities also require explicit unchanged/revised field policy;no replacement authority inferred.
 - ID: `G1-SLICE.5f.1.c.walk.outputs.requirements`
   Status: `pending`
   Goal:mandatory currentness/correspondence/differential/ease/profile/all-copy/authority evidence.
